@@ -1,0 +1,1 @@
+{"name":"run-demo","type":"module","scripts":{"dev":"node -e \"console.log(\\\"ran-dev\\\")\""}}

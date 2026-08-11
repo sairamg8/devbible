@@ -1,0 +1,12 @@
+{
+  "name": "dual-pkg",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.cjs",
+      "default": "./esm/index.js"
+    }
+  }
+}

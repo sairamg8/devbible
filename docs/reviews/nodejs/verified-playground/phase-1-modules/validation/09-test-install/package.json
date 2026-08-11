@@ -1,0 +1,14 @@
+{
+  "name": "09-test-install",
+  "version": "1.0.1-beta.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "ms": "^2.1.3"
+  }
+}

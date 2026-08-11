@@ -1,0 +1,12 @@
+b: start
+file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/06-circular-esm/b.js:3
+console.log('b: aValue =', aValue);
+                           ^
+
+ReferenceError: Cannot access 'aValue' before initialization
+    at file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/06-circular-esm/b.js:3:28
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

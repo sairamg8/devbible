@@ -1,0 +1,4 @@
+allSettled [ 'fulfilled', 'rejected' ]
+all reject b
+race fast
+any AggregateError AggregateError

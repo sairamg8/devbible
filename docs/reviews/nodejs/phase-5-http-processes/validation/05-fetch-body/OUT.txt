@@ -1,0 +1,2 @@
+globalAgent.keepAlive true
+skip full cluster in CI time; keepAlive default above

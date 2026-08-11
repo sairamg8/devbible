@@ -1,0 +1,17 @@
+=== wrapper ===
+function object object string string
+module.exports === exports? true
+arguments.length in wrapper: 5
+=== exports ===
+broken.js → {}
+works.js  → { hello: 'world' }
+works2.js → { hello: 'world' }
+=== main ===
+[1] from a
+[2] from main
+same object? true | calls: 2
+=== cachekeys ===
+[ 'cachekeys.js', 'logger.js' ]
+is node:path in require.cache? false
+=== recache ===
+same after delete? false

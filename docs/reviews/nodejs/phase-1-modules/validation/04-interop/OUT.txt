@@ -1,0 +1,27 @@
+=== from-esm ===
+hello world | 1.0.0
+hello again
+=== fails named ===
+file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/04-interop/fails.js:1
+import { computedName } from './dynamic.cjs';
+         ^^^^^^^^^^^^
+SyntaxError: Named export 'computedName' not found. The requested module './dynamic.cjs' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+
+import pkg from './dynamic.cjs';
+const { computedName } = pkg;
+=== fixed ===
+built at runtime | visible
+=== require-esm ===
+keys: [ '__esModule', 'answer', 'default' ]
+answer: 42 | default(): from esm
+__esModule marker: true
+=== require-tla ===
+ERR_REQUIRE_ASYNC_MODULE — require() cannot be used on an ESM graph with top-level await. Use import() instead. To see where the top-level await comes from, use --experimental-print-required-tla.
+=== works-anyway ===
+resolved
+=== createreq ===
+via createRequire: config 8080
+resolve: legacy.cjs
+=== json-esm ===
+via import attribute: config 8080

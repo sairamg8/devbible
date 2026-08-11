@@ -1,0 +1,3 @@
+startsWith ROOT only true
+startsWith ROOT+sep false
+resolved /var/app/uploads-evil/x

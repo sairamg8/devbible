@@ -1,0 +1,8 @@
+=== typeless MODULE_TYPELESS ===
+(node:13773) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/07-package-json/mod2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/07-package-json/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+this file has no "type": "module" and still ran as ESM
+=== node --run ===
+ran-dev

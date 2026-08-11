@@ -1,0 +1,2 @@
+drained 5 nextTicks then timer can run
+timer

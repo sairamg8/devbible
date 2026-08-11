@@ -1,0 +1,183 @@
+/* Progress indicator — approved palette only, no new colours. */
+
+.wrap {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  background: var(--db-surface);
+  border: 1px solid var(--db-rule);
+  border-radius: 10px;
+  box-shadow: var(--db-shadow);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.label {
+  margin: 0;
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--db-ink-3);
+}
+
+.pct {
+  margin: 0;
+  font-family: var(--db-serif);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--db-accent-ink);
+}
+
+.bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--db-surface-3);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--db-accent);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.counters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.9rem 1.4rem;
+  margin: 1.1rem 0 0;
+}
+
+.counter dt {
+  font-family: var(--db-mono);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--db-ink-3);
+  margin-bottom: 0.2rem;
+}
+
+.counter dd {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--db-ink);
+}
+
+.of {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--db-ink-3);
+}
+
+.next {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: var(--db-ink-2) !important;
+}
+
+.phases {
+  list-style: none;
+  margin: 1.35rem 0 0;
+  padding: 0.9rem 0 0;
+  border-top: 1px solid var(--db-rule);
+  display: grid;
+  gap: 1px;
+  background: var(--db-rule);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--db-rule);
+  margin-top: 1.2rem;
+  padding-top: 0;
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--db-surface);
+  font-size: 0.88rem;
+}
+
+.phaseTodo {
+  background: var(--db-surface-2);
+  color: var(--db-ink-3);
+}
+
+.phaseNum {
+  font-family: var(--db-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--db-ink-3);
+}
+
+.phaseDone .phaseNum {
+  color: var(--db-accent-ink);
+}
+
+.phaseName a {
+  color: var(--db-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--db-rule-strong);
+}
+
+.phaseName a:hover {
+  color: var(--db-accent-ink);
+  border-bottom-color: var(--db-accent);
+}
+
+.phaseMeta {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  color: var(--db-ink-3);
+  white-space: nowrap;
+}
+
+.phaseState {
+  font-family: var(--db-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.16em 0.5em;
+  border-radius: 4px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.phaseDone .phaseState {
+  background: var(--db-accent-soft);
+  color: var(--db-accent-ink);
+  border-color: var(--db-accent);
+}
+
+/* Mid-flight phase: amber, the palette's "in motion" colour */
+.phaseDone .phaseStateWriting {
+  background: var(--db-amber-soft);
+  color: var(--db-amber);
+  border-color: var(--db-amber-soft);
+}
+
+.phaseTodo .phaseState {
+  background: var(--db-surface-3);
+  color: var(--db-ink-3);
+  border-color: var(--db-rule);
+}
+
+@media (max-width: 560px) {
+  .phase {
+    grid-template-columns: 2.2rem 1fr auto;
+  }
+
+  .phaseMeta {
+    display: none;
+  }
+}

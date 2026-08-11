@@ -1,0 +1,2 @@
+lookup localhost { address: '::1', family: 6 } ms 11
+resolve4 1.0.0.1 ms 10

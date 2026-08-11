@@ -1,0 +1,4 @@
+1 aborted → AbortError | The operation was aborted | reason: user cancelled
+2 default reason → AbortError | 20
+3 timeout → AbortError | ABORT_ERR
+4 any → AbortError | aborted: true

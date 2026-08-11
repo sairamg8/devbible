@@ -1,0 +1,372 @@
+/* Homepage — language picker. Tokens come from src/css/custom.css. */
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 6rem;
+}
+
+/* ------------------------------------------------------------------ hero */
+
+.hero {
+  border-bottom: 1px solid var(--db-rule);
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  font-family: var(--db-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--db-accent-ink);
+  margin: 0 0 0.9rem;
+}
+
+.title {
+  font-family: var(--db-serif);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.026em;
+  margin: 0 0 1rem;
+  color: var(--db-ink);
+}
+
+.lede {
+  font-size: 1.1rem;
+  line-height: 1.62;
+  color: var(--db-ink-2);
+  max-width: 60ch;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ----------------------------------------------------------------- focus */
+
+.focus {
+  display: flex;
+  border: 1px solid var(--db-rule);
+  border-radius: 10px;
+  background: var(--db-surface);
+  box-shadow: var(--db-shadow);
+  overflow: hidden;
+  margin-bottom: 3.5rem;
+}
+
+.focusBar {
+  width: 4px;
+  flex: none;
+  background: var(--db-accent);
+}
+
+.focusBody {
+  padding: 1.6rem 1.8rem;
+}
+
+.focusLabel {
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--db-accent-ink);
+  margin: 0 0 0.5rem;
+}
+
+.focusTitle {
+  font-family: var(--db-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  margin: 0 0 0.6rem;
+  color: var(--db-ink);
+}
+
+.focusText {
+  color: var(--db-ink-2);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  max-width: 62ch;
+  margin: 0 0 1.15rem;
+}
+
+.focusCta {
+  display: inline-block;
+  font-family: var(--db-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  background: var(--db-accent);
+  color: var(--db-surface);
+  transition: opacity 0.15s;
+}
+
+[data-theme='dark'] .focusCta {
+  color: #0f161c;
+}
+
+.focusCta:hover {
+  opacity: 0.88;
+  text-decoration: none;
+  color: var(--db-surface);
+}
+
+[data-theme='dark'] .focusCta:hover {
+  color: #0f161c;
+}
+
+/* Second entry point: the explanation pages, alongside the syllabus. */
+.focusCtaAlt {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--db-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--db-rule-strong);
+  color: var(--db-ink);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.focusCtaAlt:hover {
+  text-decoration: none;
+  border-color: var(--db-accent);
+  color: var(--db-accent);
+}
+
+/* ----------------------------------------------------------------- tiers */
+
+.tiers {
+  margin-bottom: 3.5rem;
+}
+
+.sectionLabel,
+.layerNote {
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--db-ink-3);
+  margin: 0;
+}
+
+.sectionLabel {
+  margin-bottom: 0.9rem;
+}
+
+.tierRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7rem;
+}
+
+.tierItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--db-rule);
+  border-radius: 8px;
+  background: var(--db-surface);
+  font-size: 0.83rem;
+  color: var(--db-ink-3);
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------------- layers */
+
+.layer {
+  margin-bottom: 2.75rem;
+}
+
+.layerParked {
+  margin-top: 3.5rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--db-rule);
+}
+
+.layerParked .layerTitle {
+  color: var(--db-ink-3);
+  font-size: 1.1rem;
+}
+
+.layerHead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--db-rule);
+}
+
+.layerTitle {
+  font-family: var(--db-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  margin: 0;
+  color: var(--db-ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+  gap: 0.75rem;
+}
+
+/* ----------------------------------------------------------------- cards */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.05rem 1.15rem 1.15rem;
+  border: 1px solid var(--db-rule);
+  border-radius: 9px;
+  background: var(--db-surface);
+  text-decoration: none;
+}
+
+.cardLive {
+  border-color: var(--db-accent);
+  background: var(--db-accent-soft);
+  transition: box-shadow 0.16s, transform 0.16s;
+}
+
+.cardLive:hover {
+  text-decoration: none;
+  box-shadow: var(--db-shadow);
+  transform: translateY(-1px);
+}
+
+.cardDim {
+  opacity: 0.62;
+}
+
+/* Parked cards sit a step further back than "Planned" — dashed and unfilled,
+   so the committed eleven stay visually dominant. */
+.cardParked {
+  opacity: 0.5;
+  background: transparent;
+  border-style: dashed;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.cardNum {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  color: var(--db-ink-3);
+}
+
+.pillActive,
+.pillSoon {
+  font-family: var(--db-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.pillActive {
+  background: var(--db-accent);
+  color: var(--db-surface);
+}
+
+[data-theme='dark'] .pillActive {
+  color: #0f161c;
+}
+
+.pillSoon {
+  background: var(--db-surface-3);
+  color: var(--db-ink-3);
+}
+
+/* Parked work reads as a note, not a queue slot: outline instead of fill. */
+.pillParked {
+  background: transparent;
+  color: var(--db-ink-3);
+  border: 1px solid var(--db-rule-strong);
+}
+
+.cardTitle {
+  font-size: 1.02rem;
+  font-weight: 640;
+  letter-spacing: -0.008em;
+  margin: 0.15rem 0 0;
+  color: var(--db-ink);
+}
+
+.cardDesc {
+  font-size: 0.845rem;
+  line-height: 1.5;
+  color: var(--db-ink-3);
+  margin: 0;
+}
+
+.cardStats {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  color: var(--db-accent-ink);
+  margin: 0.2rem 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* Thin completion bar on the one live card */
+.cardBar {
+  height: 4px;
+  margin: 0.6rem 0 0.1rem;
+  border-radius: 999px;
+  background: var(--db-surface-3);
+  overflow: hidden;
+}
+
+.cardBarFill {
+  height: 100%;
+  background: var(--db-accent);
+  border-radius: 999px;
+}
+
+.cardGo {
+  font-family: var(--db-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--db-accent-ink);
+  margin-top: 0.45rem;
+}
+
+/* ------------------------------------------------------------------ foot */
+
+.foot {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--db-rule);
+  font-family: var(--db-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: var(--db-ink-3);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 2.5rem 1rem 4rem;
+  }
+  .layerHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}

@@ -1,0 +1,6 @@
+poolSize 65536
+alloc zeros? true
+allocUnsafe length 10
+Readable.from string chunks 1 [ 'abc' ]
+default hwm 65536
+Readable.from hwm 1

@@ -1,0 +1,37 @@
+=== phases (3 runs for race) ===
+run 1:
+sync
+1 timers
+2 check
+3 poll — I/O callback
+4 nextTick — before anything else
+5 microtask
+6 check — always next from poll
+7 timers — a full lap later
+
+run 2:
+sync
+1 timers
+2 check
+3 poll — I/O callback
+4 nextTick — before anything else
+5 microtask
+6 check — always next from poll
+7 timers — a full lap later
+
+run 3:
+sync
+1 timers
+2 check
+3 poll — I/O callback
+4 nextTick — before anything else
+5 microtask
+6 check — always next from poll
+7 timers — a full lap later
+
+=== close ===
+check phase: setImmediate
+close phase: socket close event
+=== alive ===
+[ 'Timeout' ]
+after unref: []

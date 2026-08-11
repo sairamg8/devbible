@@ -1,0 +1,29 @@
+=== app.js ===
+3.14159 12.566 12.566
+[ 'PI', 'area', 'default' ]
+function
+=== hoist.js ===
+2 — side.js body
+1 — this logs SECOND, not first
+3 — from side
+=== live.js ===
+before 0
+after  1
+=== readonly.js ===
+file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/01-esm/readonly.js:2
+count = 5;
+      ^
+
+TypeError: Assignment to constant variable.
+    at file:///mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/01-esm/readonly.js:2:7
+=== tla.js ===
+top-level await worked after >=50ms
+=== dyn.js math ===
+loaded math → [ 'PI', 'area', 'default' ]
+=== dyn.js counter ===
+loaded counter → [ 'bump', 'count' ]
+=== twice.js ===
+once.js evaluated
+same module object? true | same timestamp? true
+=== missing-ext ===
+ERR_MODULE_NOT_FOUND

@@ -1,0 +1,1 @@
+Node v24.19.0 | examples: static review + prior measurements in memory

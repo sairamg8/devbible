@@ -1,0 +1,3 @@
+toolkit | [ 'a', 'b', 'c' ]
+deep import blocked → ERR_PACKAGE_PATH_NOT_EXPORTED
+even the real path is blocked → ERR_PACKAGE_PATH_NOT_EXPORTED

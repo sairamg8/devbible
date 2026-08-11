@@ -1,0 +1,4 @@
+stat isFile true isSymbolicLink false
+lstat isSymbolicLink true
+stat broken ENOENT
+lstat broken isSymbolicLink true
