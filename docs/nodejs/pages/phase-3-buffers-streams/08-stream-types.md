@@ -188,7 +188,7 @@ HELLO WORLD
 ```
 
 Transforms are the composable middle of every pipeline: gzip, cipher, CSV
-formatter, redactor, line splitter. [Page 13](13-transform-streams.md) covers
+formatter, redactor, line splitter. [Page 13](./transform-streams/) covers
 writing them properly.
 
 **`PassThrough`** is a Transform that changes nothing. It is useful for tapping a

@@ -179,7 +179,7 @@ chunks:
 
 The fix is a Transform that holds an incomplete tail — usually by splitting on
 newlines and keeping the last partial line. That pattern is on
-[page 13](13-transform-streams.md).
+[page 13](./transform-streams/).
 
 ## Gotchas
 

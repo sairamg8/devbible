@@ -33,7 +33,7 @@ guarantees nothing about how bytes are grouped. The kernel coalesces small write
 arrive as five events, or five writes as one.
 
 This is the same fact behind the secret that spans two chunks in
-[Phase 3](../phase-3-buffers-streams/13-transform-streams.md), and behind an HTTP
+[Phase 3](../phase-3-buffers-streams/transform-streams/), and behind an HTTP
 body arriving in 49 pieces ([page 02](02-request-bodies.md)). Anything that parses
 a socket per `'data'` event is broken; it just happens to work on localhost with
 small payloads.
@@ -78,7 +78,7 @@ reallocating per chunk if throughput matters.
 
 Better still, do not hand-roll the decoder: a `Transform` in object mode gives
 you backpressure and `pipeline` cleanup for free
-([Phase 3, page 13](../phase-3-buffers-streams/13-transform-streams.md)).
+([Phase 3, page 13](../phase-3-buffers-streams/transform-streams/)).
 
 ## The rest of `node:net`
 

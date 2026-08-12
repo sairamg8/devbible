@@ -241,4 +241,4 @@ generator does not prefetch.
 
 ---
 
-← Prev: [Transform streams](13-transform-streams.md) · Next → [Web Streams](15-web-streams.md)
+← Prev: [Transform streams](./transform-streams/) · Next → [Web Streams](15-web-streams.md)

@@ -214,4 +214,4 @@ immutable log cannot be edited later.
 
 ---
 
-← Prev: [Encryption, signing and key management](./26-encryption-and-keys.md) · Phase complete — next: Phase 9, Testing
+← Prev: [Encryption, signing and key management](./26-encryption-and-keys.md) · Next → [Phase 9 · Testing](../phase-9-testing/)

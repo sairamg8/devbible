@@ -44,40 +44,67 @@ POST post book
 Same as separate `app.get` / `app.post` calls — fewer path string repetitions.
 Use when several methods share one path and little middleware variance.
 
-## `mountpath` awareness
+## Knowing where you were mounted
+
+**`mountpath` is a property of an *app*, not of a `Router`.** This trips people up
+constantly, because the two are otherwise interchangeable. A `Router` never gets a
+`mountpath` — mounted or not.
 
 ```js
 // mountpath.mjs
 import express from 'express';
 
-const admin = express.Router();
-admin.get('/dashboard', (req, res) => {
-  res.json({
-    mountpath: admin.mountpath, // set after mount
-    baseUrl: req.baseUrl,
-  });
-});
-
 const app = express();
+
+const admin = express.Router();              // a Router
+admin.get('/dashboard', (req, res) => {
+  res.json({baseUrl: req.baseUrl, path: req.path, originalUrl: req.originalUrl});
+});
 app.use('/admin', admin);
 
-// After use(), router.mountpath reflects the mount
-console.log('after mount, admin.mountpath =', admin.mountpath);
+const reports = express();                   // a sub-APP
+reports.get('/daily', (req, res) => {
+  res.json({mountpath: req.app.mountpath, baseUrl: req.baseUrl, path: req.path});
+});
+app.use('/reports', reports);
 
-const server = app.listen(0, async () => {
+console.log('Router.mountpath  :', admin.mountpath);
+console.log('sub-app.mountpath :', reports.mountpath);
+
+const server = app.listen(0, '127.0.0.1', async () => {
   const {port} = server.address();
-  console.log(await (await fetch(`http://127.0.0.1:${port}/admin/dashboard`)).json());
+  const base = `http://127.0.0.1:${port}`;
+  console.log('router   ', await (await fetch(`${base}/admin/dashboard`)).json());
+  console.log('sub-app  ', await (await fetch(`${base}/reports/daily`)).json());
   server.close();
 });
 ```
 
 ```console
 $ node mountpath.mjs
-after mount, admin.mountpath = /admin
-{ mountpath: '/admin', baseUrl: '/admin' }
+Router.mountpath  : undefined
+sub-app.mountpath : /reports
+router    { baseUrl: '/admin', path: '/dashboard', originalUrl: '/admin/dashboard' }
+sub-app   { mountpath: '/reports', baseUrl: '/reports', path: '/daily' }
 ```
 
-Useful when a shared router must know where it was mounted (generating links).
+So there are two different answers depending on what you mounted:
+
+| You have | Ask for | Value |
+|---|---|---|
+| A `Router` | `req.baseUrl` | `/admin` |
+| A sub-app | `req.app.mountpath` **or** `subApp.mountpath` | `/reports` |
+| Either, need the full path | `req.originalUrl` | `/admin/dashboard` |
+
+**Use `req.baseUrl`.** It works for both, it is available during the request when you
+actually need it, and it does not depend on whether a colleague reached for
+`express.Router()` or `express()`. Reserve `mountpath` for the rare case of a sub-app
+that must know its own prefix outside a request — generating absolute links at boot,
+for example.
+
+`req.path` is the part *after* the mount, and `req.originalUrl` is everything —
+including the query string. Logging `req.path` from inside a mounted router is the
+usual reason a log line is missing its prefix.
 
 ## Host-based routing
 
@@ -94,9 +121,15 @@ use separate registrations when handlers grow.
 
 ## Gotchas
 
-**Symptom:** `mountpath` empty when logged at router definition  
-**Cause:** Read before `app.use`  
-**Fix:** Read after mount, or use `req.baseUrl` inside a request
+**Symptom:** `router.mountpath` is `undefined` even after `app.use('/x', router)`  
+**Cause:** `mountpath` exists on **apps**, not on `Router` instances. Measured: it stays
+`undefined` before *and* after mounting  
+**Fix:** Use `req.baseUrl` inside the request, or mount a sub-app (`express()`) if you
+genuinely need the property
+
+**Symptom:** Log lines are missing the `/admin` prefix  
+**Cause:** Logging `req.path`, which is the portion *after* the mount  
+**Fix:** `req.originalUrl` for the full path, or `req.baseUrl + req.path`
 
 **Symptom:** Host routing works locally but not behind proxy  
 **Cause:** Wrong hostname / `trust proxy`  
@@ -111,8 +144,16 @@ Chain HTTP verbs on a single path without repeating the path string.
 Multi-tenant hostnames or separate sites in one app — uncommon for simple APIs;
 often better at the reverse proxy.
 
-**What is `router.mountpath`?**  
-The path pattern where the router was mounted on its parent.
+**★ What is `router.mountpath`?**  
+A trick question — it does not exist. `mountpath` is an **app** property. Measured on
+Express 5.2.1, a `Router` reports `undefined` both before and after `app.use`, while a
+mounted sub-app reports `/reports`. Inside a request, `req.baseUrl` gives you the mount
+prefix for either.
+
+**What is the difference between `req.path`, `req.baseUrl` and `req.originalUrl`?**  
+Inside a router mounted at `/admin` handling `/dashboard`: `req.path` is `/dashboard`,
+`req.baseUrl` is `/admin`, and `req.originalUrl` is `/admin/dashboard` plus any query
+string. Logging `req.path` alone is why prefixes go missing from logs.
 
 **Is `route()` required?**  
 No — purely organizational sugar.

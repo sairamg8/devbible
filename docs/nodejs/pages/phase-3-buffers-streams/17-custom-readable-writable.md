@@ -212,7 +212,7 @@ delete a temp file. `pipeline` calls `destroy()` on every stream, so implementin
 | An array/iterable as a stream | `Readable.from(iterable)` |
 | A paged API or cursor as a stream | `Readable.from(asyncGenerator())` |
 | Per-chunk transformation | a generator stage in `pipeline` |
-| A reusable, composable transform | `Transform` subclass ([page 13](13-transform-streams.md)) |
+| A reusable, composable transform | `Transform` subclass ([page 13](./transform-streams/)) |
 | A push-based source (events, a socket library) | `Readable` with manual `push` + backpressure checks |
 | A sink that batches | `Writable` with `_writev` and `_final` |
 | Anything holding a resource | any of the above, plus `_destroy` |

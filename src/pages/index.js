@@ -8,6 +8,7 @@ import styles from './index.module.css';
 /** Live counts, so the homepage can never drift from what is actually written. */
 const node = summarise('nodejs');
 const express = summarise('expressjs');
+const postgres = summarise('postgresql');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -58,7 +59,15 @@ const LAYERS = [
     note: 'Where state lives',
     items: [
       {n: '07', name: 'MongoDB', desc: 'Document model, aggregation, indexes, Mongoose'},
-      {n: '08', name: 'PostgreSQL', desc: 'SQL, indexes, MVCC, window functions, ORMs'},
+      {
+        n: '08',
+        name: 'PostgreSQL',
+        desc: 'SQL, psql, indexes, MVCC, raw pg from Node',
+        to: '/docs/postgresql',
+        active: true,
+        stats: `${postgres.topicsTotal} topics · ${postgres.phasesTotal} phases · ${postgres.phasesDone} phases explained · ${postgres.pagesWritten} pages`,
+        progress: postgres.percent,
+      },
       {n: '09', name: 'Redis', desc: 'Data types, caching patterns, sessions, streams'},
     ],
   },

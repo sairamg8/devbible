@@ -239,4 +239,4 @@ When you need an exact number of bytes — a fixed-size protocol header — sinc
 
 ---
 
-← Prev: [Consuming with for await](11-for-await-of.md) · Next → [Transform streams](13-transform-streams.md)
+← Prev: [Consuming with for await](11-for-await-of.md) · Next → [Transform streams](./transform-streams/)

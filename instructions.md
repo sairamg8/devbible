@@ -107,8 +107,9 @@ file splits.
 
 ## 6. File size and chunking
 
-- **Maximum 300 lines per file.** This keeps files clean, diffable, and loadable
-  in one screen or one context window.
+- **Maximum 300 lines per file. This is a hard limit, not a target.** It keeps
+  every file clean, diffable, and loadable in one screen or one context window.
+  A file at 301 lines gets chunked — there is no "close enough".
 - If a topic needs more, **chunk it into multiple files and import/link them
   individually**. Up to roughly **1000 lines total per topic** is fine — split
   across files, never in one.
@@ -119,6 +120,41 @@ file splits.
 - Anything past ~1000 lines is not one topic — promote it to its own section.
 - **The UI must surface the chunking**: a chunked topic reads as one document with
   chapters, not as five loose files.
+
+**The cap is a file-size rule, never a content budget.** It caps how much lives in
+one file; it does not cap how much a topic is explained. If the explanation, the
+examples, the gotchas or the interview questions need more room, **chunk — never
+condense, never drop a section, never trade depth for line count.** A topic that
+would be 500 good lines becomes two files of 250, not one file of 300 with the
+detail cut out. Coverage is the fixed requirement; file count is the variable.
+
+### How a chunked topic is laid out
+
+The topic becomes a **directory** in place of its file, keeping the same numeric
+prefix so sidebar order is unchanged:
+
+```
+phase-8-schema-from-node/
+├── 01-ddl-from-node/          ← was 01-ddl-from-node.md
+│   ├── _category_.json        {"label":"01 · DDL from Node","position":1,"collapsed":true}
+│   ├── README.md              topic index: tier, one-liner, chunk table,
+│   │                          phase gate, "Where this connects"
+│   ├── 01-issuing-ddl.md
+│   └── 02-locks-and-concurrency.md
+└── 02-migrations.md
+```
+
+- The **`README.md` carries the topic's tier badge and `> Verified:` line**; each
+  chunk repeats both, so a chunk opened directly still states its provenance.
+- Chunks link `← Prev` / `Next →` to each other; the first links back to the topic
+  index, the last forward to the next topic.
+- **Routes drop the numeric prefix, for directories as well as files.**
+  `01-ddl-from-node/` serves at `…/phase-8-schema-from-node/ddl-from-node/`, so
+  inbound links must be `./ddl-from-node/` — not `./01-ddl-from-node/`. The same
+  applies to cross-language absolute links:
+  `/docs/nodejs/pages/phase-6-data-access/parameterized-queries`.
+- Update the phase `README.md` and the neighbouring pages' footer links to the
+  directory form when converting a file to a chunked topic.
 
 ## 7. Delivery — Docusaurus
 

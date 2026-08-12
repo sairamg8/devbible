@@ -27,11 +27,10 @@ import Progress from '@site/src/components/Progress';
 | **[6 — Data access](phase-6-data-access/)** | Pooling, parameterized queries, `pg`, MongoDB, transactions, N+1, ORMs, Mongoose, migrations, replicas, cursors |
 | **[7 — Background work and resilience](phase-7-background-work/)** | Queues, workers, idempotency, the outbox, scheduling, graceful shutdown, timeouts, backoff, concurrency limits |
 | **[8 — Security](phase-8-security/)** | Passwords, sessions and JWT, OAuth, injection, XSS, SSRF, ReDoS, validation, secrets, TLS, crypto, rate limiting, headers, supply chain, permissions |
+| **[9 — Testing](phase-9-testing/)** | `node:test`, `node:assert`, test boundaries, dependency injection, API tests, mocking, coverage, Testcontainers, contract testing |
 | **[10 — Observability and performance](phase-10-observability/)** | Structured logs, correlation, OTel, lag, health, golden signals, caching, leaks, profiling |
 | **[11 — Deployment and operations](phase-11-deployment/)** | Containers, config, process management, zero-downtime deploys, resource limits |
 | **[12 — Native and advanced](phase-12-native/)** | N-API and addons, WASM, `vm`, V8 internals, the edges of the runtime |
-| 9 | Testing |
 
-Phases are written one at a time, in order, on request. The syllabus for all 13
-already exists — see [Part 1 — Foundations](../syllabus/01-foundations.md) and the
-parts that follow.
+All 13 phases are now written. The syllabus they follow starts at
+[Part 1 — Foundations](../syllabus/01-foundations.md).

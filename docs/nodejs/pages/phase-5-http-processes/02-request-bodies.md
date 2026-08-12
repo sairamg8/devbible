@@ -35,7 +35,7 @@ $ node count.mjs             # client POSTs 3 MB
 
 Three facts in that output. The body arrives in **49 chunks**, not one — anything
 that regex-matches a single chunk is broken ([Phase 3, page
-13](../phase-3-buffers-streams/13-transform-streams.md)). Chunks are **Buffers**,
+13](../phase-3-buffers-streams/transform-streams/)). Chunks are **Buffers**,
 so `chunks.join('')` corrupts multi-byte UTF-8; concat then decode. And a body-less
 GET is still a valid stream that ends immediately, so the loop is always safe.
 

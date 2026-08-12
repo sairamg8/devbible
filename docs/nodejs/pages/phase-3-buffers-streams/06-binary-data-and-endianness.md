@@ -173,7 +173,7 @@ implementations fail:
    *before* allocating — this is the classic memory-exhaustion DoS.
 
 Over a real socket, wrap it in a Transform that keeps the leftover tail; the
-structure is the same as the line splitter on [page 13](13-transform-streams.md).
+structure is the same as the line splitter on [page 13](./transform-streams/).
 
 ## When to use DataView instead
 
