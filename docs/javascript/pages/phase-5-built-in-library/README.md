@@ -27,7 +27,7 @@ topics deliberately, and those are *deferred*, not forgotten.
 | 04 | **[Array iteration methods](./04-array-iteration-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[`reduce`](./05-reduce/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[`sort`](./06-sort/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 07 | String methods | <span className="db-tier t-master">Master</span> | planned |
+| 07 | **[String methods](./07-string-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | Template literals | <span className="db-tier t-understand">Understand</span> | deferred |
 | 09 | `JSON.parse` and `JSON.stringify` | <span className="db-tier t-master">Master</span> | planned |
 | 10 | `Map` vs a plain object | <span className="db-tier t-master">Master</span> | planned |
