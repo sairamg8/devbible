@@ -6,8 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-know">Know</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08-13. The size table is produced by
+> Verified: 2026-08-13. The size table is produced by
 > `sandbox/react-p0/ex13-renderers-and-alternatives.mjs`, which bundles the
 > **same counter app** with each library through the **same** esbuild settings.
 

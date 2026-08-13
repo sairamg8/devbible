@@ -6,8 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-know">Know</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **@babel/preset-react 7.29.7** and **react-dom
+> Verified: 2026-08 against **@babel/preset-react 7.29.7** and **react-dom
 > 19.2.8** in **Firefox 153.0**. The compiled children arrays and the rendered
 > text both come from `sandbox/react-p1/ex13-whitespace.mjs`.
 

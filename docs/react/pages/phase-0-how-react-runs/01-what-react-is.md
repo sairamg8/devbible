@@ -6,8 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react 19.2.8** and **react-dom 19.2.8** on Node
+> Verified: 2026-08 against **react 19.2.8** and **react-dom 19.2.8** on Node
 > 24.19.0. Every number below is printed by
 > `sandbox/react-p0/ex01-two-packages.mjs`.
 

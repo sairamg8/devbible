@@ -6,8 +6,7 @@ sidebar_position: 4
 
 <span className="db-tier t-master">Master</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, production
+> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, production
 > build. The log is printed by `sandbox/react-p0/ex04-reconciliation.mjs`.
 
 **Reconciliation is how React decides which components keep their state and

@@ -6,8 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-master">Master</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**. Both builds
+> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**. Both builds
 > below come from `sandbox/react-p0/ex07-strictmode.mjs`, which bundles the
 > **same source twice**, changing only `process.env.NODE_ENV`.
 

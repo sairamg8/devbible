@@ -6,8 +6,7 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**. Markup
+> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**. Markup
 > and warnings are printed by `sandbox/react-p1/ex07-fragments.mjs`.
 
 **A fragment groups children for React without putting anything in the DOM. It

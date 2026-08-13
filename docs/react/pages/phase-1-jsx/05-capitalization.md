@@ -6,8 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react 19.2.8**, **@babel/preset-react 7.29.7** and
+> Verified: 2026-08 against **react 19.2.8**, **@babel/preset-react 7.29.7** and
 > **Firefox 153.0**. Compiler output and rendered markup both come from
 > `sandbox/react-p1/ex04-capitalization.mjs`.
 

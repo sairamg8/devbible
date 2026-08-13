@@ -6,8 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-understand">Understand</span>
 
-> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
-> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, both a
+> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, both a
 > production and a development bundle. Error strings are quoted from the run of
 > `sandbox/react-p1/ex02-what-renders.mjs` — the dev build for the readable
 > text, the prod build for the minified code.
