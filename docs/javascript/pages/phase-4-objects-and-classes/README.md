@@ -26,7 +26,7 @@ demand once the Master topics of every phase are done.
 | 01 | **[Object literals](./01-object-literals/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | Property access | <span className="db-tier t-understand">Understand</span> | deferred |
 | 03 | **[Existence checks and `delete`](./03-existence-checks-and-delete/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04 | Shallow vs deep copy | <span className="db-tier t-master">Master</span> | planned |
+| 04 | **[Shallow vs deep copy](./04-shallow-vs-deep-copy/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | The prototype chain | <span className="db-tier t-master">Master</span> | planned |
 | 06 | `class` | <span className="db-tier t-master">Master</span> | planned |
 | 07 | `this` inside methods, and losing it | <span className="db-tier t-master">Master</span> | planned |
