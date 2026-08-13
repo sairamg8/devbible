@@ -13,11 +13,15 @@ behaviour hangs off: how a property is found, what `class` desugars to, and why
 "copying" an object is four different operations with four different failure
 modes.
 
-## Status — **in progress** (2026-08-13)
+## Status — **Master tier COMPLETE** (2026-08-13)
 
-**Master tier first.** The seven Master topics are written in syllabus order;
-Understand and Know tiers are *deferred*, not forgotten — they are filled in on
-demand once the Master topics of every phase are done.
+**All seven Master topics are written** — 01, 03, 04, 05, 06, 07, 08 in syllabus
+order. (02 is an Understand topic, which is why the Master numbering skips it.)
+
+Understand and Know tiers are marked *deferred*, not forgotten: the standing plan is
+**Master-first across all phases**, so they are filled in on demand once every
+phase's Master topics are done. The next unit of work in JavaScript is
+**Phase 5 · The built-in library**, not topic 02.
 
 ## Topics
 
@@ -30,7 +34,7 @@ demand once the Master topics of every phase are done.
 | 05 | **[The prototype chain](./05-the-prototype-chain/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[`class`](./06-class/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07 | **[`this` inside methods, and losing it](./07-this-in-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 08 | `Object.keys` / `values` / `entries` / `fromEntries` | <span className="db-tier t-master">Master</span> | planned |
+| 08 | **[`Object.keys` / `values` / `entries` / `fromEntries`](./08-keys-values-entries/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 09 | `extends` and `super` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 10 | Getters and setters | <span className="db-tier t-understand">Understand</span> | deferred |
 | 11 | Property descriptors | <span className="db-tier t-understand">Understand</span> | deferred |

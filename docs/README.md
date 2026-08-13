@@ -12,9 +12,9 @@ and add your own row when you claim something.**
 
 | Area | Claimed by | Since | State |
 |---|---|---|---|
-| **React** — all of `docs/react/` | session `52a29103` | 2026-08-13 | 🔴 **Active.** Phases 0–2 done; **Phase 3 in progress**. See the [React claim notice](react/pages/README.md) |
+| **React** — all of `docs/react/` | session `52a29103` | 2026-08-13 | 🔴 **Active.** **Phases 0–3 COMPLETE** (79 files); starting **Phase 4 · Effects**. See the [React claim notice](react/pages/README.md) |
 | **PostgreSQL** — all of `docs/postgresql/` | session `052a10c2` | 2026-08-13 | 🟢 **COMPLETE, releasing.** Phase 13 finished 18/18 (every stamp gone), plus new phase-2 topic 17 (money) and phase-3 topic 20 (multi-tenancy). **289 pages, all carrying `> Verified:`.** Topics 07–18 are doc-validated under the no-new-sandboxes rule |
-| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** Phase 3 Master **done** (01–08); **Phase 4 Master in progress** — 01, 03, 04, 05, 06 done, 07 in progress, 08 next. See the [JavaScript claim notice](javascript/pages/README.md) |
+| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3 and 4 Master tiers COMPLETE** — P3 01–08 (topic 08 in 6 chunks), P4 01/03/04/05/06/07/08. Starting **Phase 5 · The built-in library**. See the [JavaScript claim notice](javascript/pages/README.md) |
 | **Unclaimed** | — | — | **MongoDB, Docker, Redis, Nginx have zero pages** — good places to start |
 
 **Rules for a shared checkout:** never `git add -A` — stage explicit paths only.
@@ -95,7 +95,7 @@ Ordered by how far the explanations have got, not alphabetically.
 | **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [45 pages](./javascript/pages/README.md), phases 0–3                   |
 | **[TypeScript](./typescript/README.md)** | 4 parts · 187 topics | In progress — [37 pages](./typescript/pages/README.md), phases 0–2                   |
 | **[CSS](./css/README.md)**               | 4 parts · 119 topics | In progress — [28 pages](./css/pages/README.md), phases 0–1                          |
-| **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [60+ pages](./react/pages/README.md), **phases 0–2 complete**, phase 3 active |
+| **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [79 pages](./react/pages/README.md), **phases 0–3 complete**, phase 4 next |
 | **[Git](./git/README.md)**               | 4 parts · 191 topics | In progress — [14 pages](./git/pages/README.md), phase 0                             |
 | **[Express](./expressjs/README.md)**     | 4 parts · 114 topics | **Draft** — [78 pages](./expressjs/pages/README.md) cover all 11 phases, but they are outlines awaiting depth and measurement |
 | MongoDB                       | Not started           | —                                                                                   |

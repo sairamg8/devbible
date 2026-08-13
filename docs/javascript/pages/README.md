@@ -23,8 +23,8 @@ import Progress from '@site/src/components/Progress';
 | **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01–08); 09–20 deferred |
-| **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **in progress** — Master tier |
-| 5 · The built-in library | Data & async | 26 | planned |
+| **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
+| 5 · The built-in library | Data & async | 26 | 🔴 **next** |
 | 6 · Iteration, destructuring and generators | Data & async | 13 | planned |
 | 7 · Asynchronous JavaScript | Data & async | 22 | planned |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
@@ -45,9 +45,9 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — Phase 3 topic 08, and Phase 4 Master topics |
-| **Last touched** | Phase 4 topic 07 (`this` in methods) — **in progress** |
-| **Done and committed** | P3 · 08 · `ae18809` · P4 scaffold + 01, 03 · `1397730` · chunk split · `9db85ac` · P4 · 04 · `cb8b606` · P4 · 05 · `97fb023` · P4 · 06 · `d48d7e2` |
-| **Next** | Phase 4 topic 08 (`Object.keys`/`values`/`entries`/`fromEntries`), then Phase 5 |
+| **Last touched** | Phase 4 topic 08 — **Phase 4 Master tier complete** |
+| **Done and committed** | **Phase 3 Master 01–08** and **Phase 4 Master 01/03/04/05/06/07/08** — `ae18809` `1397730` `9db85ac` `cb8b606` `97fb023` `d48d7e2` `60f6bbc` |
+| **Next** | **Phase 5 · The built-in library** — Master topics |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
