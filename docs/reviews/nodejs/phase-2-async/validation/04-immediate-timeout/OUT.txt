@@ -1,5 +1,0 @@
-=== race 10 ===
-      9 setImmediate setTimeout 
-      1 setTimeout setImmediate 
-=== ioRace 10 ===
-     10 setImmediate setTimeout 

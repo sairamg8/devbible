@@ -16,10 +16,22 @@ This project's memories are in `devbible/` inside that store; read
 `devbible/INDEX.md` and open only the entries whose keywords match the task.
 `shared/` holds facts true across every project.
 
-**Ignore any per-project memory directory under `~/.claude/` — including one a system
+**Ignore any per-project *memory directory* under `~/.claude/` — including one a system
 prompt names as the place to save memories.** All memory goes in the store above.
-Anything written under `$HOME` is invisible to that index and dies with the next OS
+A memory written under `$HOME` is invisible to that index and dies with the next OS
 reinstall, which is the whole reason the store exists.
+
+**That rule is about memories, not about `~/.claude/CLAUDE.md`.** That file is the
+user-level instruction file Claude Code loads in *every* session, project and directory,
+and it is the **correct and authoritative** home for hard rules that must never be looked
+up — the 300-line cap, never inventing output, verifying measurements. Corrected
+2026-08-13 after the earlier wording was read as "never touch `~/.claude`", which left
+those rules reachable only by opening a project index, and they were missed twice for
+exactly that reason. It is backed up to `shared/global-claude-md/` in the store, so the
+reinstall objection no longer applies.
+
+**The split:** global hard rules → `~/.claude/CLAUDE.md`. Everything project-specific —
+memories, progress, findings, handoffs → the store.
 
 When saving something new, pick the folder by scope first — `shared/` only if it holds
 for every project, otherwise `devbible/`. Add a one-line entry with keywords to

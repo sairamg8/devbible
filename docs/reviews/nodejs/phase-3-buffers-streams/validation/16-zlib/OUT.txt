@@ -1,2 +1,0 @@
-gzip ms 3 brotli default ms 21 brotli q4 ms 1
-default quality is expensive: true

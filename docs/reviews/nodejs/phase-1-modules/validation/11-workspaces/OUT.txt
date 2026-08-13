@@ -1,6 +1,0 @@
-=== workspace links ===
-total 0
-lrwxrwxrwx. 1 sairam sairam 18 Aug 10 19:22 api -> ../../packages/api
-lrwxrwxrwx. 1 sairam sairam 21 Aug 10 19:22 shared -> ../../packages/shared
-=== run api ===
-api resolved workspace sibling → acme

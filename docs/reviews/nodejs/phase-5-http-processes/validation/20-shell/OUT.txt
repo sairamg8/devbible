@@ -1,3 +1,0 @@
-quoted still expands shell metachar: true
-"file=report.txt\nINJECTED"
-dollar-paren inside quotes: x=SUBST

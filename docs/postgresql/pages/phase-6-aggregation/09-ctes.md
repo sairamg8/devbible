@@ -71,4 +71,4 @@ Use the phase index and the Part file “Where this connects” sections; do not
 
 ---
 
-← [lag lead first_value](08-lag-lead.md) · Next → [Data-modifying CTEs](10-modifying-ctes.md)
+← [lag, lead, first/last_value](lag-lead/) · Next → [Data-modifying CTEs](10-modifying-ctes.md)

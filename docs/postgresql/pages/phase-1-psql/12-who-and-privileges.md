@@ -1,82 +1,213 @@
 ---
-title: "conninfo, du, dp"
-sidebar_label: "12 · conninfo du dp"
+title: "\\conninfo, \\du and \\dp — who am I, what can I touch"
+sidebar_label: "12 · Who and privileges"
 sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
-**Who am I, what can I touch.**
+> Verified: 2026-08 on **PostgreSQL 18.4** (`postgres:18-alpine`, `127.0.0.1:55432`),
+> **psql 18.4**. Script: `sandbox/pg-api/ex32-psql-io.sh`.
 
-## Why it matters
+**"It works in psql but not from the app" is nearly always this page. You are connected as
+a different role, to a different database, with different privileges — and three commands
+tell you exactly which.**
 
-`psql` is how you prove every later claim. conninfo, du, dp is daily operator skill.
+## Who am I
 
-## How it works
+```console
+$ ./ex32-psql-io.sh
+=== 12a. \conninfo and the identity functions ===
+      Connection Information
+      Parameter       |   Value
+----------------------+-----------
+ Database             | devbible
+ Client User          | devbible
+ Host                 | 127.0.0.1
+ Server Port          | 55432
+ Backend PID          | 1495
+ SSL Connection       | false
+ Superuser            | on
 
-Who am I, what can I touch.
+ current_user | session_user | current_database | current_schema | inet_server_port
+--------------+--------------+------------------+----------------+------------------
+ devbible     | devbible     | devbible         | public         |             5432
+```
 
-Hold the model in your head before memorizing syntax.
+**`Superuser | on` is the field that explains most "works here, not there" reports.** A
+superuser bypasses every privilege check, so testing permissions from a superuser session
+proves nothing about what your application role can do.
 
-## In SQL / psql
+Two subtleties in that output:
+
+- **`current_user` vs `session_user`.** `session_user` is who authenticated;
+  `current_user` is who you are acting as *right now*, which differs after `SET ROLE` or
+  inside a `SECURITY DEFINER` function. Privilege checks use `current_user`.
+- **`inet_server_port` says 5432 while `\conninfo` says 55432.** Both are right:
+  55432 is the published host port, 5432 is the port the server itself listens on inside
+  the container. `\conninfo` reports the client's view, `inet_server_port()` the server's.
+
+## `\du` — the roles
+
+```console
+=== 12b. \du — roles and their attributes ===
+                             List of roles
+ Role name |                         Attributes
+-----------+------------------------------------------------------------
+ devbible  | Superuser, Create role, Create DB, Replication, Bypass RLS
+```
+
+Attributes are role-level powers: `Superuser`, `Create DB`, `Create role`, `Replication`,
+`Bypass RLS`, `Cannot login` (a group role rather than a user). `\du+` adds the
+description and the list of member roles.
+
+**In PostgreSQL there is no distinction between a "user" and a "group"** — both are roles;
+one simply has `LOGIN`. Membership is how permissions are grouped:
 
 ```sql
--- run in psql against the sandbox database
-SELECT current_setting('server_version') AS version;
+CREATE ROLE app_read;                      -- a group role, no LOGIN
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO app_read;
+CREATE ROLE reporting LOGIN PASSWORD '…';
+GRANT app_read TO reporting;               -- reporting inherits app_read's rights
 ```
+
+## `\dp` — the table privileges
 
 ```console
-$ psql -h 127.0.0.1 -p 55432 -U devbible -d devbible -c "show server_version;"
- server_version
-----------------
- 18.4
+=== 12d. \dp / \z — who has what on which table ===
+                                   Access privileges
+ Schema |   Name    | Type  |     Access privileges      | Column privileges | Policies
+--------+-----------+-------+----------------------------+-------------------+----------
+ public | p1_import | table | devbible=arwdDxtm/devbible+|                   |
+        |           |       | p1_reader=r/devbible       |                   |
 ```
 
-## From Node
+The notation is `grantee=privileges/grantor`:
 
-```js
-import pg from 'pg';
+| Letter | Privilege |
+|---|---|
+| `r` | SELECT (**r**ead) |
+| `w` | UPDATE (**w**rite) |
+| `a` | INSERT (**a**ppend) |
+| `d` | DELETE |
+| `D` | TRUNCATE |
+| `x` | REFERENCES |
+| `t` | TRIGGER |
+| `m` | MAINTAIN (PostgreSQL 17+ — VACUUM, ANALYZE, REINDEX) |
 
-const pool = new pg.Pool({
-  connectionString:
-    process.env.DATABASE_URL ??
-    'postgresql://devbible:devbible@127.0.0.1:55432/devbible',
-});
+So `p1_reader=r/devbible` reads as "`p1_reader` has SELECT, granted by `devbible`", and
+`devbible=arwdDxtm/devbible` is the owner with everything. **An empty `Access privileges`
+column means no grants have ever been made** — the owner still has everything implicitly.
 
-// Prefer $1 placeholders — never concatenate user input into SQL.
-const {rows} = await pool.query('select $1::text as topic', ['conninfo, du, dp']);
-console.log(rows[0]);
-await pool.end();
-```
+`\dp` and `\z` are the same command.
+
+## What a limited role actually experiences
 
 ```console
-$ node example.mjs
-{ topic: 'conninfo, du, dp' }
+=== 12e. what the limited role can and cannot do ===
+3
+ERROR:  permission denied for table p1_import
+ERROR:  permission denied for table p1_orders
 ```
+
+The same role: `SELECT` on `p1_import` succeeded (3 rows), `DELETE` on it was refused, and
+`SELECT` on a table it was never granted was refused. That is the shape of every
+permission bug — and reproducing it takes one command:
+
+```bash
+psql -h 127.0.0.1 -p 55432 -U app_role -d devbible -c 'SELECT * FROM some_table'
+```
+
+**Test as the application's role, not as yourself.** It is the only reliable way to find a
+missing grant before the deploy does.
+
+## The grants a new role actually needs
+
+A common failure is granting table privileges and stopping there:
+
+```sql
+GRANT CONNECT ON DATABASE devbible TO app_role;     -- reach the database
+GRANT USAGE ON SCHEMA public TO app_role;           -- see inside the schema  ← the forgotten one
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO app_role;
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO app_role;   -- for identity/serial inserts
+
+-- and for tables created later
+ALTER DEFAULT PRIVILEGES IN SCHEMA public
+  GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO app_role;
+```
+
+Two of these catch people repeatedly. **`USAGE ON SCHEMA`** — without it every table is
+invisible however many table grants exist. And **`ALTER DEFAULT PRIVILEGES`** — `GRANT … ON
+ALL TABLES` applies only to tables that exist at that moment, so the next migration's table
+is unreadable until someone re-runs the grant.
+
+Related pages: [roles and GRANT](../phase-13-ops/01-roles-grant.md) and
+[why the app role should not own the schema](../phase-13-ops/03-app-role-not-owner.md).
+
+## Trade-off
+
+**Working as a superuser is fast and hides every privilege problem until production.**
+Developing against a role with production-like grants costs you occasional `permission
+denied` errors during development — which is precisely the point, since each one is a bug
+found early. Keep a superuser connection for administration and a second, restricted one
+that matches the application, and do ordinary work in the restricted one.
 
 ## Gotchas
 
-**Symptom:** It works in a tutorial and fails in your app  
-**Cause:** Different database, search_path, role, or missing parameters  
-**Fix:** Reproduce in `psql` with the same role/database as the app, then match the `pg` call
+**Symptom:** A query works in psql and fails from the application
+**Cause:** Your psql session is superuser; the app role is not
+**Fix:** Check `Superuser` in `\conninfo`, then retest as the app role
 
-**Symptom:** "It is slow" with no evidence  
-**Cause:** Guessing  
-**Fix:** `EXPLAIN (ANALYZE, BUFFERS)` for plans; `\timing` for shell latency; measure API time separately
+**Symptom:** `permission denied for schema public` despite table grants
+**Cause:** Missing `GRANT USAGE ON SCHEMA`
+**Fix:** Grant schema usage first; table grants are inert without it
+
+**Symptom:** A new table is unreadable although the role was granted "all tables"
+**Cause:** `ON ALL TABLES` applies only to tables existing at grant time
+**Fix:** `ALTER DEFAULT PRIVILEGES … GRANT … ON TABLES`
+
+**Symptom:** `permission denied for sequence …` on insert
+**Cause:** Identity/serial columns need `USAGE` on the sequence
+**Fix:** `GRANT USAGE ON ALL SEQUENCES IN SCHEMA public`
+
+**Symptom:** `\dp` shows an empty privileges column
+**Cause:** No explicit grants have been made; the owner's implicit rights are not listed
+**Fix:** Normal — the owner has everything regardless
+
+**Symptom:** `current_user` and `session_user` differ unexpectedly
+**Cause:** `SET ROLE`, or a `SECURITY DEFINER` function
+**Fix:** Remember privilege checks use `current_user`
 
 ## Interview questions
 
-**★ What is the core idea of “conninfo, du, dp”?**  
-Who am I, what can I touch.
+**★ Why does a query work in psql but fail in the application?**
+Usually a different role. `\conninfo` shows `Superuser: on` for your session; the app role
+has real privilege checks. Also check the database and schema, which may differ too.
 
-**★ How do you verify it?**  
-Reproduce in `psql` on PostgreSQL 18, then issue the same statement from Node with `$1` parameters (or confirm it is intentionally shell-only).
+**★ What is the difference between `current_user` and `session_user`?**
+`session_user` is the authenticated role; `current_user` is the effective one after
+`SET ROLE` or inside a `SECURITY DEFINER` function. Privileges are checked against
+`current_user`.
 
-**What breaks in production if you ignore this?**  
-Wrong data, silent wrong results, pool exhaustion, or multi-second list endpoints — depending on the topic. Measure before guessing.
+**★ How do you read `\dp` output?**
+`grantee=privileges/grantor`. Measured: `p1_reader=r/devbible` means `p1_reader` has SELECT
+granted by `devbible`. `r` read, `w` update, `a` insert, `d` delete, `D` truncate.
 
-**How does this connect to the rest of the syllabus?**  
-Use the phase index and the Part file “Where this connects” sections; do not re-learn pool sizing here if Node Phase 6 already owns it.
+**★ Which grant is most often forgotten?**
+`GRANT USAGE ON SCHEMA` — without it, table grants have no effect and every table appears
+not to exist.
+
+**★ Why do tables created later become unreadable to a granted role?**
+`GRANT … ON ALL TABLES` is a one-time operation over existing tables. `ALTER DEFAULT
+PRIVILEGES` is what covers future ones.
+
+**Is there a difference between users and groups?**
+No. Both are roles; a "user" is simply a role with `LOGIN`. Grouping is done by granting
+one role to another.
+
+**What is the fastest way to verify a role's permissions?**
+Connect as it: `psql -U app_role -c 'SELECT …'`. Measured — SELECT succeeded, DELETE
+returned `permission denied for table`.
 
 ---
 

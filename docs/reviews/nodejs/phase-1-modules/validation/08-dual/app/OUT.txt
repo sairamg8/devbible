@@ -1,4 +1,0 @@
-=== from-cjs ===
-require() got: CJS build
-=== from-esm ===
-import  got: ESM build

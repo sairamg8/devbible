@@ -1,1 +1,0 @@
-registerHooks → production

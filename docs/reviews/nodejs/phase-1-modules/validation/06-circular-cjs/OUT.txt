@@ -1,8 +1,0 @@
-a: start
-b: start
-b: a.aReady = true | a.aDone = undefined
-b: done
-a: b.bReady = true
-a: done
-(node:11773) Warning: Accessing non-existent property 'aDone' of module exports inside circular dependency
-(Use `node --trace-warnings ...` to show where the warning was created)

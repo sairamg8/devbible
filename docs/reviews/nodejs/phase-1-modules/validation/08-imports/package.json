@@ -1,8 +1,0 @@
-{
-  "name": "internal-demo",
-  "type": "module",
-  "imports": {
-    "#config": "./src/config.js",
-    "#db/*": "./src/db/*.js"
-  }
-}

@@ -1,8 +1,0 @@
-=== npm run test -- --watch ===
-npm notice run npm-demo@1.0.0 test
-npm notice run node -e "console.log(process.argv)" --watch
-node: either --watch or --eval can be used, not both
-=== npm ls depth0 ===
-npm-demo@1.0.0 /mnt/Storage/Backup/Knowledge/devbible/docs/reviews/nodejs/phase-1-modules/validation/10-npm
-└── (empty)
-

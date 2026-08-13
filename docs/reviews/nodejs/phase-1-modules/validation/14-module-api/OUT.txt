@@ -1,9 +1,0 @@
-=== cache ===
-status: ENABLED | dir: true
-=== NODE_COMPILE_CACHE ===
-app ran
-v24.19.0-x64-cf738c9d-1000
-=== register ===
-custom specifier resolved → production
-=== isbuiltin ===
-true true false
