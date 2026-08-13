@@ -20,8 +20,10 @@ why those three are worth a Master-tier topic.
 
 | # | Chunk | Covers |
 |---|---|---|
-| 1 | **[Building an object literal](./01-building-an-object.md)** | Shorthand and computed keys, the conditional-key idiom, why method shorthand is *not* `prop: function () {}`, getters and setters, what spread copies, `Object.assign` triggering setters, and silent duplicate keys |
-| 2 | **[Keys, order and `__proto__`](./02-keys-order-and-proto.md)** | Keys are strings or symbols only, the three-tier enumeration order and what counts as an integer index, the enumeration-method comparison table, the `__proto__` prototype setter and its three look-alike forms, prototype pollution, and `Object.create(null)` |
+| 1 | **[Shorthand and computed keys](./01-shorthand-and-computed-keys.md)** | `{ a }`, computed key expressions and their evaluation order, symbol keys, and the `...(cond && { k })` conditional-key idiom |
+| 2 | **[Methods, accessors and spread](./02-methods-accessors-and-spread.md)** | Why method shorthand is *not* `prop: function () {}`, getters and setters, what spread actually copies, `Object.assign` triggering setters, and silent duplicate keys |
+| 3 | **[Keys and enumeration order](./03-keys-and-order.md)** | Keys are strings or symbols only, the three-tier order and what counts as an integer index, where the rule bites, and the enumeration-method comparison table |
+| 4 | **[`__proto__` and null-prototype objects](./04-proto-and-null-prototype.md)** | The prototype setter and its three look-alike forms, JSON vs object literals, prototype pollution and three defences, and `Object.create(null)` |
 
 ## The three surprises, in one place
 
@@ -47,4 +49,4 @@ explain the difference between `{ __proto__: p }`, `{ __proto__ }` and
 
 ---
 
-Start → [Building an object literal](./01-building-an-object.md)
+Start → [Shorthand and computed keys](./01-shorthand-and-computed-keys.md)

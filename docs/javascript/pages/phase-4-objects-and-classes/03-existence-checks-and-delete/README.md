@@ -20,8 +20,9 @@ other things people expect it to do.
 
 | # | Chunk | Covers |
 |---|---|---|
-| 1 | **[The four existence checks](./01-the-four-checks.md)** | `in` vs `Object.hasOwn` vs `hasOwnProperty` vs `!== undefined`, the two cases where `hasOwnProperty` is broken, why `in` throws on primitives, `?.`/`??` as value checks, the three states of an array index, and `#field in obj` brand checks |
-| 2 | **[`delete` and what it really costs](./02-delete-and-its-cost.md)** | What `delete` removes and what it cannot touch, why `true` is uninformative, strict-mode `TypeError`, holes in arrays, the memory misconception, V8's documented shape cost stated precisely, and the four alternatives |
+| 1 | **[`in` and `Object.hasOwn`](./01-in-and-hasown.md)** | The prototype-chain axis: why `in` finds `toString`, where `in` is the *right* answer, why it throws on primitives, and the two documented cases where `hasOwnProperty` is broken |
+| 2 | **[`undefined`, holes and brand checks](./02-undefined-holes-and-brand-checks.md)** | The `undefined` axis: `!== undefined` conflating two states, `?.`/`??` as value rather than existence checks, `??` vs `||`, the three states of an array index, and `#field in obj` |
+| 3 | **[`delete` and what it really costs](./03-delete-and-its-cost.md)** | What `delete` removes and what it cannot touch, why `true` is uninformative, strict-mode `TypeError`, holes in arrays, the memory misconception, V8's documented shape cost stated precisely, and the four alternatives |
 
 ## The decision table
 
@@ -49,4 +50,4 @@ what `delete arr[3]` does to `arr.length`.
 
 ---
 
-Start → [The four existence checks](./01-the-four-checks.md)
+Start → [`in` and `Object.hasOwn`](./01-in-and-hasown.md)

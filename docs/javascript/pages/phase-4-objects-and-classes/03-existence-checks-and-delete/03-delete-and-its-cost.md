@@ -101,7 +101,7 @@ console.log(3 in trees); // false
 
 MDN: *"When you delete an array element, the array `length` is not affected."*
 The array is still length 5, with a **hole** at index 3 — the third state from
-[chunk 1](./01-the-four-checks.md), distinguishable from a stored `undefined` only
+[chunk 2](./02-undefined-holes-and-brand-checks.md), distinguishable from a stored `undefined` only
 by `in` or `Object.hasOwn`.
 
 The correct tool:
@@ -273,4 +273,4 @@ wanted a `Map`.
 
 ---
 
-← [The four existence checks](./01-the-four-checks.md) · [Topic index](./README.md) · Next → [Phase index](../README.md)
+← [`undefined`, holes and brand checks](./02-undefined-holes-and-brand-checks.md) · [Topic index](./README.md) · Next → [Phase index](../README.md)

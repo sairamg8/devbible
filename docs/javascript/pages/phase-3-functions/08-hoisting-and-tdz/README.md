@@ -22,9 +22,12 @@ time**, not a region of source code.
 
 | # | Chunk | Covers |
 |---|---|---|
-| 1 | **[What hoisting actually is](./01-what-hoisting-actually-is.md)** | The two-step scope entry, MDN's four hoisting kinds, `var` declaration vs initialisation, value hoisting for functions, function expressions, the `var`-plus-function precedence rule, and script-vs-module globals |
-| 2 | **[The temporal dead zone](./02-the-temporal-dead-zone.md)** | Why "temporal" is literal, the execution-order example, `typeof` no longer being safe, the three engines' error messages, self-reference, and the three things the TDZ buys you |
-| 3 | **[Where hoisting and the TDZ actually bite](./03-where-hoisting-bites.md)** | Block-level function declarations in strict vs sloppy mode, the parameter list's own TDZ and its parent scope, class TDZ and `extends` ordering, and circular ES module imports |
+| 1 | **[The two-step scope entry](./01-the-two-step-scope-entry.md)** | Why nothing moves, MDN's four hoisting kinds, the one table, why `let` *is* hoisted, why the spec has no "hoisting", and the three error types |
+| 2 | **[`var` and function declarations](./02-var-and-function-declarations.md)** | `var`'s declaration/initialisation split, redeclaration, value hoisting, function expressions failing differently, the `var`-plus-function precedence rule, and script vs module globals |
+| 3 | **[The temporal dead zone](./03-the-temporal-dead-zone.md)** | The definition, why "temporal" is literal, MDN's execution-order example, when the zone closes, self-reference, and per-iteration bindings |
+| 4 | **[`typeof`, error messages and why it's a feature](./04-typeof-and-why-its-a-feature.md)** | `typeof` no longer being a safe probe, the three engines' error strings, and the three things the TDZ buys you |
+| 5 | **[Block functions and the parameter list](./05-block-functions-and-parameters.md)** | Block-level function declarations in strict vs Annex B sloppy mode, and the parameter list's own TDZ and parent-scope relationship to the body |
+| 6 | **[Classes and circular imports](./06-classes-and-circular-imports.md)** | Class TDZ, the const-like inner binding, `extends` ordering, import hoisting, and circular ESM imports vs CommonJS |
 
 ## The one table
 
@@ -52,4 +55,4 @@ local `x` in the file.
 
 ---
 
-Start → [What hoisting actually is](./01-what-hoisting-actually-is.md)
+Start → [The two-step scope entry](./01-the-two-step-scope-entry.md)
