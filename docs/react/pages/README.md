@@ -13,8 +13,15 @@ tight group, each with runnable code, gotchas written symptom → cause → fix,
 interview questions with answers.
 
 **Every console block on every page came from a script that was actually run.**
-The scripts live in `sandbox/react-p0/` and each page names the one behind it in
-its `> Verified:` line.
+Phases 0 and 1 are measured — their scripts live in `sandbox/react-p0/` and
+`sandbox/react-p1/`, and each page names the one behind it in its `> Verified:`
+line.
+
+**From Phase 2 onward there are no sandboxes and no console blocks.** Those
+pages are validated against primary documentation — react.dev, the React 19
+release notes and upgrade guide, MDN — and each `> Verified:` line names the
+sources instead of a script. A claim documentation cannot settle is stated as
+uncertain or left out; nothing is reconstructed from memory.
 
 ## Phases
 
@@ -22,7 +29,7 @@ its `> Verified:` line.
 |---|---|---|
 | **[0 — How React runs](./phase-0-how-react-runs/README.md)** | ✅ **Written** | 14 pages, 17 topics |
 | **[1 — JSX and what a component returns](./phase-1-jsx/README.md)** | ✅ **Written** | 15 pages, 15 topics |
-| 2 — Components, props and composition | Not started | — |
+| **[2 — Components, props and composition](./phase-2-components/README.md)** | ✅ **Written** | 16 pages, 16 topics |
 | 3 — State and the render cycle | Not started | — |
 | 4 — Effects and synchronization | Not started | — |
 | 5 — Refs, context and reducers | Not started | — |

@@ -204,4 +204,4 @@ handle. A file compiled that way and never passed downstream ships literal JSX.
 
 ---
 
-← Prev: [Whitespace and text](14-whitespace-and-text.md) · Index: [Phase 1](README.md)
+← Prev: [Whitespace and text](14-whitespace-and-text.md) · Index: [Phase 1](README.md) · Next → [Phase 2 — Components, props and composition](../phase-2-components/README.md)

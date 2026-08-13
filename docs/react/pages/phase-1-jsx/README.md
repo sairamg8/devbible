@@ -101,4 +101,6 @@ Move on to Phase 2 when you can:
 
 ---
 
-← Index: [React — Explanations](../README.md) · Start → [JSX is a function call](01-jsx-is-a-function-call.md)
+← Index: [React — Explanations](../README.md) ·
+Start → [JSX is a function call](01-jsx-is-a-function-call.md) ·
+Next phase → [Phase 2 — Components, props and composition](../phase-2-components/README.md)
