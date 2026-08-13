@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Allows publishing by hand from the Actions tab without a push.
+  workflow_dispatch:
+
+# GITHUB_TOKEN needs these to hand the built site to the Pages service.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time. In-progress runs finish rather than being cancelled,
+# so a half-uploaded artifact never becomes the live site.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      # pipefail matters: without it the exit status would come from tee.
+      - name: Build
+        shell: bash
+        run: |
+          set -o pipefail
+          yarn build 2>&1 | tee build.log
+
+      # onBrokenLinks is 'warn', so dead links never fail the build on their
+      # own. Surface them in the job summary. There are known pre-existing
+      # ones, so this reports rather than blocks — flip to `exit 1` once the
+      # count is zero to keep it that way.
+      - name: Report broken links
+        if: always()
+        shell: bash
+        run: |
+          if grep -iE "couldn't be resolved|broken link|broken anchor" build.log > links.txt; then
+            echo "::warning::$(wc -l < links.txt) unresolved link warning(s)."
+            { echo '### Unresolved links'; echo '```'; cat links.txt; echo '```'; } \
+              >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '### No broken links' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

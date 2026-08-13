@@ -9,8 +9,13 @@ const config = {
 
   future: {v4: true},
 
-  url: 'https://devbible.local',
-  baseUrl: '/',
+  // Published to GitHub Pages as a project site, so the repo name is part of
+  // the path: https://sairamg8.github.io/devbible/
+  url: 'https://sairamg8.github.io',
+  baseUrl: '/devbible/',
+  organizationName: 'sairamg8',
+  projectName: 'devbible',
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
 
