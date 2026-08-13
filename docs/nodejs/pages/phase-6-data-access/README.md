@@ -38,12 +38,12 @@ MongoDB sections.
 
 ## Where this connects
 
-- **[Phase 1 — modules](../phase-1-modules/)** explains why `import pg from 'pg'`
+- **[Phase 1 — modules](../phase-1-modules/README.md)** explains why `import pg from 'pg'`
   is the safe form for a CommonJS driver.
-- **[Phase 2 — async](../phase-2-async/)** supplies `AsyncLocalStorage` for
+- **[Phase 2 — async](../phase-2-async/README.md)** supplies `AsyncLocalStorage` for
   transaction propagation and the concurrency limiting that an N+1 "fixed" with
   `Promise.all` needs.
-- **[Phase 5 — HTTP and processes](../phase-5-http-processes/)** owns graceful
+- **[Phase 5 — HTTP and processes](../phase-5-http-processes/README.md)** owns graceful
   shutdown; `pool.end()` hangs off the end of it.
 - **Phase 7 — background work** depends on transactions: the transactional outbox
   is "write the job in the same transaction".
@@ -52,4 +52,4 @@ MongoDB sections.
 
 ---
 
-← Phase 5: [Networking, HTTP, processes](../phase-5-http-processes/) · Start → [Connection pooling](./01-connection-pooling.md)
+← Phase 5: [Networking, HTTP, processes](../phase-5-http-processes/README.md) · Start → [Connection pooling](./01-connection-pooling.md)

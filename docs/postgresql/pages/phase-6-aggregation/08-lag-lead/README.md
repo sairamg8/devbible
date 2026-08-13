@@ -39,9 +39,9 @@ frame while `first_value` does not.
 
 ## Where this connects
 
-- **[Window functions](../windows-intro/)** — the `OVER` mechanics
-- **[Window frames](../frames/)** — the frame clause these depend on, in full
-- **[Ranking functions](../ranking/)** — the other window-only family
+- **[Window functions](../06-windows-intro/README.md)** — the `OVER` mechanics
+- **[Window frames](../14-frames/README.md)** — the frame clause these depend on, in full
+- **[Ranking functions](../07-ranking/README.md)** — the other window-only family
 - **[generate_series](../../phase-4-crud/18-generate-series.md)** — the calendar spine that
   fixes the gap problem
 - **[CROSS JOIN](../../phase-5-joins/07-cross-join.md)** — how that spine is joined on

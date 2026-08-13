@@ -31,7 +31,7 @@ have either a runtime error or an injection hole.
 
 ## Where this connects
 
-- **[Sort and filter allowlists](../allowlists/)** handles the other half of the
+- **[Sort and filter allowlists](../04-allowlists/README.md)** handles the other half of the
   endpoint — identifiers, which can never be parameters.
 - **[`list` with filtering, sorting and pagination](../02-list-endpoint.md)**
   assembles filters, sort and pagination into one query.

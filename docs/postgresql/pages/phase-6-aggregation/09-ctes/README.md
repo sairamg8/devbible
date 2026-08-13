@@ -43,10 +43,10 @@ referenced twice — without guessing.
 
 ## Where this connects
 
-- **[Data-modifying CTEs](../modifying-ctes/)** — the `INSERT`/`UPDATE`/`DELETE`
+- **[Data-modifying CTEs](../10-modifying-ctes/README.md)** — the `INSERT`/`UPDATE`/`DELETE`
   variant, which is always a fence and has its own snapshot rules
-- **[Recursive CTEs](../recursive-cte/)** — `WITH RECURSIVE`, the other always-fenced form
-- **[Subqueries](../subqueries/)** — the same job without the name, and when a
+- **[Recursive CTEs](../15-recursive-cte/README.md)** — `WITH RECURSIVE`, the other always-fenced form
+- **[Subqueries](../11-subqueries/README.md)** — the same job without the name, and when a
   correlated one becomes an N+1 inside a single statement
 - **[DELETE](../../phase-4-crud/11-delete.md)** — why `DELETE` needs a CTE to get a `LIMIT`
 - **[Expression indexes](../../phase-10-indexes/10-expression.md)** — the volatility classes

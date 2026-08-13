@@ -30,9 +30,9 @@ belonging in `ON` or `WHERE` without thinking, and when you can explain why
 
 ## Where this connects
 
-- **[INNER JOIN](../inner-join/)** — the pair semantics this builds on; fan-out applies
+- **[INNER JOIN](../01-inner-join/README.md)** — the pair semantics this builds on; fan-out applies
   here unchanged
-- **[Semi and anti joins](../semi-anti/)** — `NOT EXISTS` states the anti-join intent
+- **[Semi and anti joins](../03-semi-anti/README.md)** — `NOT EXISTS` states the anti-join intent
   directly and cannot be broken by a nullable test column
 - **[RIGHT and FULL OUTER](../06-outer-joins.md)** — the same rules with the sides swapped
 - **[NULL semantics](../../phase-2-types/06-null.md)** — the three-valued logic every trap

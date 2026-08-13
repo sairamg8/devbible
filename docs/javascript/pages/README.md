@@ -19,9 +19,9 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Part | Topics | Status |
 |---|---|---|---|
-| **[0 · How JavaScript runs](./phase-0-how-javascript-runs/)** | Language core | 12 | ✅ written |
-| **[1 · Values, types and coercion](./phase-1-values-and-coercion/)** | Language core | 17 | ✅ written |
-| **[2 · Operators, expressions and control flow](./phase-2-operators/)** | Language core | 15 | ✅ written |
+| **[0 · How JavaScript runs](./phase-0-how-javascript-runs/README.md)** | Language core | 12 | ✅ written |
+| **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
+| **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | 3 · Functions, scope and closures | Language core | 20 | planned |
 | 4 · Objects, prototypes and classes | Language core | 20 | planned |
 | 5 · The built-in library | Data & async | 26 | planned |
@@ -51,4 +51,4 @@ claim without a script gets a marker, not a plausible-looking transcript.
 
 ---
 
-Start → [Phase 0 — How JavaScript runs](./phase-0-how-javascript-runs/)
+Start → [Phase 0 — How JavaScript runs](./phase-0-how-javascript-runs/README.md)

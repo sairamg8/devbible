@@ -34,7 +34,7 @@ row count — and when you know which of your backups contains the roles.
 - [Disaster drill](../18-disaster-drill.md) is this topic practised on a schedule.
 - [Major version upgrades](../17-major-upgrades.md) uses dump/restore as one of
   its paths — the portable one.
-- [Roles, GRANT and REVOKE](../roles-grant/) explains why the roles are missing:
+- [Roles, GRANT and REVOKE](../01-roles-grant/README.md) explains why the roles are missing:
   they are cluster-wide, and a dump covers one database.
 
 ---

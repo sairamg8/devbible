@@ -61,11 +61,11 @@ generalises it.
 
 ## Where this connects
 
-- **[Phase 4 — filesystem](../phase-4-filesystem/)** first covered path traversal;
+- **[Phase 4 — filesystem](../phase-4-filesystem/README.md)** first covered path traversal;
   this phase revisits it as an attack rather than an API detail.
-- **[Phase 6 — data access](../phase-6-data-access/)** owns parameterized queries and
+- **[Phase 6 — data access](../phase-6-data-access/README.md)** owns parameterized queries and
   NoSQL operator injection.
-- **[Phase 7 — background work](../phase-7-background-work/)** promised this phase the
+- **[Phase 7 — background work](../phase-7-background-work/README.md)** promised this phase the
   webhook-signing and SSRF halves of
   [its outbound side-effects page](../phase-7-background-work/09-outbound-side-effects.md);
   the SSRF half is now [page 12](./12-ssrf.md).
@@ -76,4 +76,4 @@ generalises it.
 
 ---
 
-← Phase 7: [Background work and resilience](../phase-7-background-work/) · Start → [Password storage](./01-password-storage.md)
+← Phase 7: [Background work and resilience](../phase-7-background-work/README.md) · Start → [Password storage](./01-password-storage.md)

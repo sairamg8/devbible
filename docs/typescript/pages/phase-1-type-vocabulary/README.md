@@ -79,4 +79,4 @@ so no claim about inference rests on a tooltip.
 
 ---
 
-← [Phase 0](../phase-0-how-typescript-runs/) · Next → [01 · Primitives and inference](./01-primitives-and-inference.md)
+← [Phase 0](../phase-0-how-typescript-runs/README.md) · Next → [01 · Primitives and inference](./01-primitives-and-inference.md)

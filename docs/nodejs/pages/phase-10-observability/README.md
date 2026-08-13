@@ -52,9 +52,9 @@ and the performance workflow that turns a 3 a.m. page into a measured change.
 
 ## Where this connects
 
-- **[Phase 0](../phase-0-runtime-model/)** — one thread, blocking, the thread pool  
-- **[Phase 2](../phase-2-async/)** — AsyncLocalStorage for correlation  
-- **[Phase 6](../phase-6-data-access/)** — pool wait as saturation  
-- **[Phase 7](../phase-7-background-work/)** — queues, drain, timeout budgets  
+- **[Phase 0](../phase-0-runtime-model/README.md)** — one thread, blocking, the thread pool  
+- **[Phase 2](../phase-2-async/README.md)** — AsyncLocalStorage for correlation  
+- **[Phase 6](../phase-6-data-access/README.md)** — pool wait as saturation  
+- **[Phase 7](../phase-7-background-work/README.md)** — queues, drain, timeout budgets  
 - **Phase 11** (deployment, when written) — boot order, probes, containers  
 

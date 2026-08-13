@@ -68,7 +68,7 @@ The three absences, and what each one is for:
 
 | Absence | What it exposes |
 |---|---|
-| **Eve has no orders** | `count(*)` returning **1** instead of 0 across a `LEFT JOIN` — see [count variants](../count-variants/) |
+| **Eve has no orders** | `count(*)` returning **1** instead of 0 across a `LEFT JOIN` — see [count variants](../02-count-variants/README.md) |
 | **Order 15 has `total` `NULL`** | `sum`/`avg`/`min`/`max` skipping the row while `count(*)` counts it |
 | **`coupon` is `NULL` on three orders** | `count(coupon)` = 3 while `count(*)` = 6, and `count(DISTINCT coupon)` = 2 |
 
@@ -94,7 +94,7 @@ INSERT INTO agg_orders    VALUES (17, 6, 'paid', 70, NULL, '2026-03-07 09:00+00'
 So a `count(*)` of `agg_orders` reads **6** on topics 01–08 and **8** from topic 09 on.
 If you are following along by hand, run `ex36` alone to match the early pages and both
 scripts to match the later ones. Same arrangement as
-[the fifth order in phase 5](../../phase-5-joins/inner-join/) — the alternative was
+[the fifth order in phase 5](../../phase-5-joins/01-inner-join/README.md) — the alternative was
 freezing the fixture and losing the `NULL`-bearing cases the later topics need.
 
 ### The big table
@@ -143,11 +143,11 @@ whether a zero should have been a `NULL`, and which of `HashAggregate` or
 
 ## Where this connects
 
-- **[count variants](../count-variants/)** — the three counts, and the `LEFT JOIN`
+- **[count variants](../02-count-variants/README.md)** — the three counts, and the `LEFT JOIN`
   trap that starts here
-- **[HAVING vs WHERE](../having/)** — filtering the groups this page produces
-- **[FILTER](../filter-clause/)** — several different aggregations over one scan
-- **[Window functions](../windows-intro/)** — the same aggregates without the collapse
+- **[HAVING vs WHERE](../03-having/README.md)** — filtering the groups this page produces
+- **[FILTER](../04-filter-clause/README.md)** — several different aggregations over one scan
+- **[Window functions](../06-windows-intro/README.md)** — the same aggregates without the collapse
 - **[INNER JOIN fan-out](../../phase-5-joins/01-inner-join/02-fan-out-and-aggregates.md)** —
   the join-side cause of a `sum()` that comes back too big
 - **[EXPLAIN](../../phase-10-indexes/03-explain.md)** — reading the plans in chunk 05

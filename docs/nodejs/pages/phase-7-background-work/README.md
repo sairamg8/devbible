@@ -43,12 +43,12 @@ correct.
 
 ## Where this connects
 
-- **[Phase 2 — async](../phase-2-async/)** owns `AsyncLocalStorage` and the
+- **[Phase 2 — async](../phase-2-async/README.md)** owns `AsyncLocalStorage` and the
   `Promise.all` outage that [page 16](./16-concurrency-limiting.md) is the production
   fix for.
-- **[Phase 5 — HTTP and processes](../phase-5-http-processes/)** owns signals and
+- **[Phase 5 — HTTP and processes](../phase-5-http-processes/README.md)** owns signals and
   graceful HTTP shutdown; [page 11](./11-graceful-shutdown.md) is the worker half.
-- **[Phase 6 — data access](../phase-6-data-access/)** supplies transactions for the
+- **[Phase 6 — data access](../phase-6-data-access/README.md)** supplies transactions for the
   outbox, `skip locked` for the queue, and the database-specific retry codes that
   [page 14](./14-retry-safe-failures.md) generalises.
 - **Phase 8 — security** covers signing outbound webhooks and the SSRF risk in a
@@ -58,4 +58,4 @@ correct.
 
 ---
 
-← Phase 6: [Data access](../phase-6-data-access/) · Start → [Sync vs background](./01-sync-vs-background.md)
+← Phase 6: [Data access](../phase-6-data-access/README.md) · Start → [Sync vs background](./01-sync-vs-background.md)

@@ -3,7 +3,8 @@
     "allow": [
       "WebSearch",
       "Bash(mkdir -p /tmp/claude-1000/-mnt-Storage-Backup-Knowledge-devbible/cc14e68f-1238-4f1c-9841-33f1d764585f/scratchpad/p2)",
-      "Bash(echo '{\"name\":\"p2\",\"type\":\"module\"}')"
+      "Bash(echo '{\"name\":\"p2\",\"type\":\"module\"}')",
+      "Bash(git fetch *)"
     ]
   }
 }

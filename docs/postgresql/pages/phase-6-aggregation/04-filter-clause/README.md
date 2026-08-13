@@ -44,15 +44,15 @@ that differs from `sum(CASE … ELSE 0)`.
 
 ## Where this connects
 
-- **[count variants](../count-variants/)** — `count(*)` vs `count(col)` behaves
+- **[count variants](../02-count-variants/README.md)** — `count(*)` vs `count(col)` behaves
   differently *inside* a `FILTER` too
-- **[GROUP BY and aggregates](../group-by/)** — where the empty-group `NULL` rule
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — where the empty-group `NULL` rule
   comes from
-- **[HAVING vs WHERE](../having/)** — `FILTER` restricts one aggregate; `WHERE`
+- **[HAVING vs WHERE](../03-having/README.md)** — `FILTER` restricts one aggregate; `WHERE`
   restricts the whole query
-- **[GROUPING SETS](../grouping-sets/)** — the other way to get several
+- **[GROUPING SETS](../16-grouping-sets/README.md)** — the other way to get several
   aggregations out of one scan
-- **[Window functions](../windows-intro/)** — `FILTER` works there as well
+- **[Window functions](../06-windows-intro/README.md)** — `FILTER` works there as well
 
 ---
 

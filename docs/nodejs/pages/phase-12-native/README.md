@@ -28,7 +28,7 @@ days never open this folder — until they do.**
 
 ## Where this connects
 
-- **[Phase 1](../phase-1-modules/)** — resolution and `node:module`  
-- **[Phase 5](../phase-5-http-processes/)** — worker threads, SEA  
-- **[Phase 10](../phase-10-observability/)** — profiles before native rewrites  
-- **[Phase 11](../phase-11-deployment/)** — shipping native addons in images  
+- **[Phase 1](../phase-1-modules/README.md)** — resolution and `node:module`  
+- **[Phase 5](../phase-5-http-processes/README.md)** — worker threads, SEA  
+- **[Phase 10](../phase-10-observability/README.md)** — profiles before native rewrites  
+- **[Phase 11](../phase-11-deployment/README.md)** — shipping native addons in images  

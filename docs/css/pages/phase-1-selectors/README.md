@@ -72,4 +72,4 @@ no JavaScript, no extra markup — and say what specificity the result has.
 
 ---
 
-← [Phase 0 · How CSS runs](../phase-0-how-css-runs/) · Next: **Phase 2 · The cascade** →
+← [Phase 0 · How CSS runs](../phase-0-how-css-runs/README.md) · Next: **Phase 2 · The cascade** →

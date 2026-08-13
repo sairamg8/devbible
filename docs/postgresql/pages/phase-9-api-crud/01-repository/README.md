@@ -31,7 +31,7 @@ called standalone and inside a transaction without knowing which is happening.
 
 ## Where this connects
 
-- **[Transactions in a request](../transactions-request/)** is the other half:
+- **[Transactions in a request](../05-transactions-request/README.md)** is the other half:
   this topic says repository functions accept a client, that one says who opens
   and closes it.
 - **[Passing a client through services](../12-client-propagation.md)** shows what

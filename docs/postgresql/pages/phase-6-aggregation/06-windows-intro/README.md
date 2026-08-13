@@ -42,11 +42,11 @@ what a second window function costs.
 
 ## Where this connects
 
-- **[GROUP BY and aggregates](../group-by/)** — the collapsing version of the same aggregates
-- **[Ranking functions](../ranking/)** — `row_number`, `rank`, `ntile`, top-N per group
-- **[lag and lead](../lag-lead/)** — reaching into neighbouring rows
-- **[Window frames](../frames/)** — the third line of `OVER (…)`, in full
-- **[HAVING](../having/)** — the filter that runs *before* windows, which is why `42P20` exists
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — the collapsing version of the same aggregates
+- **[Ranking functions](../07-ranking/README.md)** — `row_number`, `rank`, `ntile`, top-N per group
+- **[lag and lead](../08-lag-lead/README.md)** — reaching into neighbouring rows
+- **[Window frames](../14-frames/README.md)** — the third line of `OVER (…)`, in full
+- **[HAVING](../03-having/README.md)** — the filter that runs *before* windows, which is why `42P20` exists
 - **[EXPLAIN](../../phase-10-indexes/03-explain.md)** — reading `WindowAgg` and its `Sort`
 
 ---

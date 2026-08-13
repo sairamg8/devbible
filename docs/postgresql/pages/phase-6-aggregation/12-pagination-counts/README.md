@@ -37,9 +37,9 @@ You are done when you can explain why `count(*) OVER ()` defeats `LIMIT`, write 
 
 ## Where this connects
 
-- **[count variants](../count-variants/)** — `count(*)` vs `count(col)` vs
+- **[count variants](../02-count-variants/README.md)** — `count(*)` vs `count(col)` vs
   `count(DISTINCT)`, and what each costs
-- **[Window functions](../windows-intro/)** — why `count(*) OVER ()` must see every row
+- **[Window functions](../06-windows-intro/README.md)** — why `count(*) OVER ()` must see every row
 - **[LIMIT and OFFSET](../../phase-4-crud/03-limit-offset.md)** — deep `OFFSET` at 105.85 ms,
   and keyset pagination as the fix
 - **[Statistics](../../phase-10-indexes/16-statistics.md)** — what the planner's estimate is

@@ -46,14 +46,14 @@ faster choice.
 
 ## Where this connects
 
-- **[GROUP BY and aggregates](../group-by/)** — the single-level form, and the `NULL` rules
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — the single-level form, and the `NULL` rules
   these inherit
-- **[count variants](../count-variants/)** — what the aggregate inside each set costs
-- **[FILTER](../filter-clause/)** — the other way to get several aggregations from one scan,
+- **[count variants](../02-count-variants/README.md)** — what the aggregate inside each set costs
+- **[FILTER](../04-filter-clause/README.md)** — the other way to get several aggregations from one scan,
   when the *columns* differ rather than the grouping
 - **[Subqueries](../11-subqueries/03-in-exists-and-not-in.md)** — `NOT IN`, the other bug that
   waits for the first `NULL`
-- **[Window functions](../windows-intro/)** — totals alongside detail rows without collapsing
+- **[Window functions](../06-windows-intro/README.md)** — totals alongside detail rows without collapsing
   them, which is often what a report actually wanted
 
 ---

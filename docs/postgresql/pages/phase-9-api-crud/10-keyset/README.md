@@ -37,7 +37,7 @@ depth in a 500 000-row table.
   statement-level treatment of deep offsets and drift.
 - **[Phase 4 · Tuple comparison](../../phase-4-crud/20-tuple-comparison.md)** owns
   the row-constructor operator itself.
-- **[Phase 10 · Indexes](../../phase-10-indexes/)** explains why the index column
+- **[Phase 10 · Indexes](../../phase-10-indexes/README.md)** explains why the index column
   order has to match the `ORDER BY`.
 
 ---

@@ -53,7 +53,7 @@ the Node process holding the pool*.
 
 ## Explanations
 
-The explanations live in **[Explanations](pages/)** — one page per topic (or
+The explanations live in **[Explanations](./pages/README.md)** — one page per topic (or
 tight group), with code, gotchas, and interview questions.
 
 import Progress from '@site/src/components/Progress';

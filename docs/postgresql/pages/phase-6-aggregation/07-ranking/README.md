@@ -42,12 +42,12 @@ question about the data.
 
 ## Where this connects
 
-- **[Window functions](../windows-intro/)** — the `OVER` mechanics these are built on
-- **[lag and lead](../lag-lead/)** — the other window-only function family
+- **[Window functions](../06-windows-intro/README.md)** — the `OVER` mechanics these are built on
+- **[lag and lead](../08-lag-lead/README.md)** — the other window-only function family
 - **[DISTINCT ON](../../phase-4-crud/12-distinct-on.md)** — the PostgreSQL shortcut for top-**1**
 - **[LATERAL](../../phase-5-joins/10-lateral.md)** — the join-shaped alternative, and where
   it won instead
-- **[Window frames](../frames/)** — why ranking functions ignore the frame clause
+- **[Window frames](../14-frames/README.md)** — why ranking functions ignore the frame clause
 
 ---
 

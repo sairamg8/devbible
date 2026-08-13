@@ -8,9 +8,9 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[INNER JOIN](inner-join/)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | one row per pair; fan-out and the wrong `sum()` |
-| 02 | **[LEFT JOIN](left-join/)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | manufactured NULLs; the `ON` vs `WHERE` bug |
-| 03 | **[Semi and anti joins](semi-anti/)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | `EXISTS` beats `JOIN`+`DISTINCT`; the `NOT IN` trap |
+| 01 | **[INNER JOIN](./01-inner-join/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | one row per pair; fan-out and the wrong `sum()` |
+| 02 | **[LEFT JOIN](./02-left-join/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | manufactured NULLs; the `ON` vs `WHERE` bug |
+| 03 | **[Semi and anti joins](./03-semi-anti/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | `EXISTS` beats `JOIN`+`DISTINCT`; the `NOT IN` trap |
 | 04 | **[Multi-table joins](04-multi-join.md)** | <span className="db-tier t-understand">Understand</span> | chains, reordering, compounding fan-out |
 | 05 | **[Reading N-N relationships](05-nn-join-table.md)** | <span className="db-tier t-understand">Understand</span> | junction tables and `array_agg` |
 | 06 | **[RIGHT and FULL OUTER](06-outer-joins.md)** | <span className="db-tier t-understand">Understand</span> | reconciliation, both-sides gaps |
@@ -30,4 +30,4 @@ a join and a `sum()` is double-counting before you run it.
 
 ---
 
-← Syllabus: [Part 2](../../syllabus/02-sql.md) · Start → [INNER JOIN](inner-join/)
+← Syllabus: [Part 2](../../syllabus/02-sql.md) · Start → [INNER JOIN](./01-inner-join/README.md)

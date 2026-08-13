@@ -37,7 +37,7 @@ itself is April 2027.
 
 ## Explanations
 
-The explanations live separately, in **[Explanations](pages/)** —
+The explanations live separately, in **[Explanations](./pages/README.md)** —
 one page per topic, with code, gotchas and interview questions.
 
 import Progress from '@site/src/components/Progress';

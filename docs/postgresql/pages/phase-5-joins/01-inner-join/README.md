@@ -53,7 +53,7 @@ to fill.
 
 ### The fifth order, added part-way through
 
-**From [semi and anti joins](../semi-anti/) onward the fixture has five orders**, not four.
+**From [semi and anti joins](../03-semi-anti/README.md) onward the fixture has five orders**, not four.
 `sandbox/pg-api/ex35-joins.mjs` adds one more row in the middle of that section:
 
 ```sql
@@ -83,11 +83,11 @@ whether the total is wrong before running it.
 
 ## Where this connects
 
-- **[LEFT JOIN](../left-join/)** — the same mechanics when the relationship is optional
-- **[Semi and anti joins](../semi-anti/)** — the shape to use when you only need existence,
+- **[LEFT JOIN](../02-left-join/README.md)** — the same mechanics when the relationship is optional
+- **[Semi and anti joins](../03-semi-anti/README.md)** — the shape to use when you only need existence,
   which cannot fan out at all
 - **[Multi-table joins](../04-multi-join.md)** — fan-out compounding across branches
-- **[Aggregation](../../phase-6-aggregation/)** — the aggregate side of the same problem
+- **[Aggregation](../../phase-6-aggregation/README.md)** — the aggregate side of the same problem
 
 ---
 

@@ -73,4 +73,4 @@ it at random to find out.
 
 ---
 
-Next: [Phase 1 · Selectors](../phase-1-selectors/) →
+Next: [Phase 1 · Selectors](../phase-1-selectors/README.md) →

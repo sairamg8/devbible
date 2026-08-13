@@ -36,7 +36,7 @@ You are done when you can write the archive pattern from memory, say what a sibl
 
 ## Where this connects
 
-- **[CTEs (WITH)](../ctes/)** — the read-only form, and the inlining rule that data-modifying
+- **[CTEs (WITH)](../09-ctes/README.md)** — the read-only form, and the inlining rule that data-modifying
   CTEs are permanently excluded from
 - **[ON CONFLICT](../../phase-4-crud/06-on-conflict.md)** — the upsert, and `xmax = 0` for
   telling insert from update
@@ -45,7 +45,7 @@ You are done when you can write the archive pattern from memory, say what a sibl
   `MERGE` reports and this one does not
 - **[Lost updates](../../phase-11-mvcc/04-lost-update.md)** — the concurrent cousin, and the
   four fixes that work there but not here
-- **[Transactions](../../phase-11-mvcc/)** — where to go when a later step must read an
+- **[Transactions](../../phase-11-mvcc/README.md)** — where to go when a later step must read an
   earlier one's write
 
 ---

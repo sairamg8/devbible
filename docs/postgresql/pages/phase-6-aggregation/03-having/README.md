@@ -34,9 +34,9 @@ and say which of the two `HAVING` forms the planner can rewrite into a `WHERE`.
 
 ## Where this connects
 
-- **[GROUP BY and aggregates](../group-by/)** — what `HAVING` is filtering
-- **[count variants](../count-variants/)** — the `LEFT JOIN` trap in full
-- **[Window functions](../windows-intro/)** — the filter `HAVING` *cannot* express,
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — what `HAVING` is filtering
+- **[count variants](../02-count-variants/README.md)** — the `LEFT JOIN` trap in full
+- **[Window functions](../06-windows-intro/README.md)** — the filter `HAVING` *cannot* express,
   and the subquery that can
 - **[Semi joins](../../phase-5-joins/03-semi-anti/01-semi-joins.md)** — usually what a
   `HAVING count(…) > 0` was really trying to say

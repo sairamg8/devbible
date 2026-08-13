@@ -31,8 +31,8 @@ and when you can explain — from the expansion of the predicate, not from memor
 
 ## Where this connects
 
-- **[INNER JOIN](../inner-join/)** — the fan-out that semi joins structurally avoid
-- **[LEFT JOIN](../left-join/)** — the `LEFT JOIN … IS NULL` idiom that these replace
+- **[INNER JOIN](../01-inner-join/README.md)** — the fan-out that semi joins structurally avoid
+- **[LEFT JOIN](../02-left-join/README.md)** — the `LEFT JOIN … IS NULL` idiom that these replace
 - **[NULL semantics](../../phase-2-types/06-null.md)** — the three-valued logic behind the
   `NOT IN` trap
 - **[LATERAL](../10-lateral.md)** — what to use when you need the matched row's columns,

@@ -10,7 +10,7 @@ sidebar_position: 0
 
 **Complete — all 14 pages written.**
 
-Where the bytes from [Phase 3](../phase-3-buffers-streams/) come from and go. The
+Where the bytes from [Phase 3](../phase-3-buffers-streams/README.md) come from and go. The
 API surface is small; the difficulty is entirely in the failure modes — races,
 traversal, partial writes, leaked descriptors — and every one of them is a
 production incident rather than a compile error.
@@ -91,4 +91,4 @@ nothing behind.
 
 ---
 
-← Phase 3: [Buffers and streams](../phase-3-buffers-streams/) · Start → [node:fs/promises](01-fs-promises.md)
+← Phase 3: [Buffers and streams](../phase-3-buffers-streams/README.md) · Start → [node:fs/promises](01-fs-promises.md)

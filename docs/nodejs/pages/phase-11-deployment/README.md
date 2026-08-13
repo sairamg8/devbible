@@ -32,7 +32,7 @@ configure, package, signal, and roll out the process.**
 
 ## Where this connects
 
-- **[Phase 5](../phase-5-http-processes/)** — signals, graceful HTTP shutdown, cluster  
-- **[Phase 7](../phase-7-background-work/)** — worker drain on deploy  
-- **[Phase 10](../phase-10-observability/)** — readiness, lag, golden signals during rollout  
+- **[Phase 5](../phase-5-http-processes/README.md)** — signals, graceful HTTP shutdown, cluster  
+- **[Phase 7](../phase-7-background-work/README.md)** — worker drain on deploy  
+- **[Phase 10](../phase-10-observability/README.md)** — readiness, lag, golden signals during rollout  
 - **Docker & Nginx** (stack tracks) — deep container and proxy detail beyond Node  

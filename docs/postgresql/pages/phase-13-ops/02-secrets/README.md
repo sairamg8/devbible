@@ -29,14 +29,14 @@ file.
 
 ## Where this connects
 
-- [Roles, GRANT and REVOKE](../roles-grant/) — the credential this page protects
+- [Roles, GRANT and REVOKE](../01-roles-grant/README.md) — the credential this page protects
   should be least-privileged in the first place; a leak of a `SELECT`-only role is
   a different incident from a leak of an owner.
 - [pg_hba.conf](../05-pg-hba.md) decides which credentials are even accepted, and
   from where.
 - [TLS to the database](../06-tls.md) protects the credential in flight; this page
   is about it at rest and in logs.
-- [The pg driver](../../phase-7-pg-driver/) owns connection-string parsing and
+- [The pg driver](../../phase-7-pg-driver/README.md) owns connection-string parsing and
   config precedence in detail.
 
 ---

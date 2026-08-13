@@ -30,12 +30,12 @@ once.** Get the wrapper right and everything inside it composes; get it wrong an
 
 ## Where this connects
 
-- **[A repository module per resource](../repository/)** establishes the
+- **[A repository module per resource](../01-repository/README.md)** establishes the
   contract this relies on: every repository function takes the client as its
   first argument.
 - **[Passing a client through services](../12-client-propagation.md)** is the
   failure mode when one function in the chain ignores that contract.
-- **[Phase 11 · Transactions and MVCC](../../phase-11-mvcc/)** owns isolation
+- **[Phase 11 · Transactions and MVCC](../../phase-11-mvcc/README.md)** owns isolation
   levels, lost updates and locking. This topic is only about the request-shaped
   wrapper around them.
 - **[Phase 11 · Idle in transaction](../../phase-11-mvcc/14-idle-in-transaction.md)**

@@ -41,7 +41,7 @@ arrives.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 12 | **[Events, flowing and paused](12-stream-events-and-modes.md)** | <span className="db-tier t-understand">Understand</span> | Attach a `'data'` handler one tick late and you get nothing |
-| 13 | **[Transform streams](./transform-streams/)** | <span className="db-tier t-understand">Understand</span> | The redaction that fails because the secret spanned two chunks |
+| 13 | **[Transform streams](./13-transform-streams/README.md)** | <span className="db-tier t-understand">Understand</span> | The redaction that fails because the secret spanned two chunks |
 | 14 | **[Object mode](14-object-mode.md)** | <span className="db-tier t-understand">Understand</span> | 16 items, not 65 536 bytes — and `null` still means "the end" |
 | 15 | **[Web Streams](15-web-streams.md)** | <span className="db-tier t-understand">Understand</span> | What `fetch` hands you, and the four conversion functions |
 | 16 | **[zlib](16-zlib.md)** | <span className="db-tier t-know">Know</span> | Brotli's default quality costs 75 s where quality 4 costs 0.7 |
@@ -98,4 +98,4 @@ the redaction would silently fail without `SplitLines`.
 
 ---
 
-← Phase 2: [Async and the event loop](../phase-2-async/) · Start → [Buffer basics](01-buffer-basics.md)
+← Phase 2: [Async and the event loop](../phase-2-async/README.md) · Start → [Buffer basics](01-buffer-basics.md)

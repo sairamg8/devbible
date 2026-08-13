@@ -40,8 +40,8 @@ You are done when you can spot a correlated subquery in a plan without being tol
 
 ## Where this connects
 
-- **[CTEs (WITH)](../ctes/)** — the same job with a name attached, and the inlining rule
-- **[Semi and anti joins](../../phase-5-joins/semi-anti/)** — `EXISTS` beating `JOIN` +
+- **[CTEs (WITH)](../09-ctes/README.md)** — the same job with a name attached, and the inlining rule
+- **[Semi and anti joins](../../phase-5-joins/03-semi-anti/README.md)** — `EXISTS` beating `JOIN` +
   `DISTINCT` by 2.5×, and the `NOT IN` trap from the join side
 - **[LATERAL](../../phase-5-joins/10-lateral.md)** — the derived table that *can* see its
   siblings, and the top-N-per-group pattern

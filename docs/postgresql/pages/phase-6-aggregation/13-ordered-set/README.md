@@ -47,12 +47,12 @@ than an average, and name what `mode()` and `bool_and` each hide.
 
 ## Where this connects
 
-- **[GROUP BY and aggregates](../group-by/)** — the empty-set `NULL` rule these inherit
-- **[Ranking functions](../ranking/)** — the window versions of `rank` and `percent_rank`,
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — the empty-set `NULL` rule these inherit
+- **[Ranking functions](../07-ranking/README.md)** — the window versions of `rank` and `percent_rank`,
   which rank rows that exist rather than one that does not
-- **[FILTER](../filter-clause/)** — pairing a boolean aggregate with a count that
+- **[FILTER](../04-filter-clause/README.md)** — pairing a boolean aggregate with a count that
   cross-checks it
-- **[Window frames](../frames/)** — the other place an explicit ordering changes the
+- **[Window frames](../14-frames/README.md)** — the other place an explicit ordering changes the
   answer
 - **[Subqueries](../11-subqueries/02-correlated-and-cost.md)** — `count()` 0 versus `sum()`
   `NULL`, the same asymmetry `bool_and` follows

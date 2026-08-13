@@ -8,16 +8,16 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[Repository module per resource](./repository/)** | <span className="db-tier t-master">Master</span> | plain functions |
+| 01 | **[Repository module per resource](./01-repository/README.md)** | <span className="db-tier t-master">Master</span> | plain functions |
 | 02 | **[list with filter sort page](02-list-endpoint.md)** | <span className="db-tier t-master">Master</span> | every resource |
-| 03 | **[Safe dynamic WHERE](./safe-dynamic-where/)** | <span className="db-tier t-master">Master</span> | param array |
-| 04 | **[Sort and filter allowlists](./allowlists/)** | <span className="db-tier t-master">Master</span> | identifier injection |
-| 05 | **[Transactions in a request](./transactions-request/)** | <span className="db-tier t-master">Master</span> | try catch finally |
+| 03 | **[Safe dynamic WHERE](./03-safe-dynamic-where/README.md)** | <span className="db-tier t-master">Master</span> | param array |
+| 04 | **[Sort and filter allowlists](./04-allowlists/README.md)** | <span className="db-tier t-master">Master</span> | identifier injection |
+| 05 | **[Transactions in a request](./05-transactions-request/README.md)** | <span className="db-tier t-master">Master</span> | try catch finally |
 | 06 | **[create INSERT RETURNING](06-create.md)** | <span className="db-tier t-understand">Understand</span> | map to domain |
 | 07 | **[findById](07-find-by-id.md)** | <span className="db-tier t-understand">Understand</span> | null vs throw |
 | 08 | **[Partial updates](08-update-partial.md)** | <span className="db-tier t-understand">Understand</span> | COALESCE vs dynamic SET |
 | 09 | **[delete hard vs soft](09-delete-soft-hard.md)** | <span className="db-tier t-understand">Understand</span> | return removed |
-| 10 | **[Keyset pagination](./keyset/)** | <span className="db-tier t-understand">Understand</span> | tuple + index |
+| 10 | **[Keyset pagination](./10-keyset/README.md)** | <span className="db-tier t-understand">Understand</span> | tuple + index |
 | 11 | **[Idempotent writes](11-idempotent-writes.md)** | <span className="db-tier t-understand">Understand</span> | upsert flows |
 | 12 | **[Passing client through services](12-client-propagation.md)** | <span className="db-tier t-understand">Understand</span> | one TX many repos |
 | 13 | **[Optimistic concurrency](13-optimistic.md)** | <span className="db-tier t-understand">Understand</span> | version column |
@@ -33,4 +33,4 @@ Move on when list/filter/sort is allowlisted and transactions use try/catch/fina
 
 ---
 
-← Syllabus: [Part 3](../../syllabus/03-node-and-pg.md) · Start → [Repository module per resource](./repository/)
+← Syllabus: [Part 3](../../syllabus/03-node-and-pg.md) · Start → [Repository module per resource](./01-repository/README.md)

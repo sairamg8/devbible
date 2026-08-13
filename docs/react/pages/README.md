@@ -20,7 +20,7 @@ its `> Verified:` line.
 
 | Phase | Status | Pages |
 |---|---|---|
-| **[0 — How React runs](phase-0-how-react-runs/)** | ✅ **Written** | 14 pages, 17 topics |
+| **[0 — How React runs](./phase-0-how-react-runs/README.md)** | ✅ **Written** | 14 pages, 17 topics |
 | 1 — JSX and what a component returns | Not started | — |
 | 2 — Components, props and composition | Not started | — |
 | 3 — State and the render cycle | Not started | — |
@@ -50,4 +50,4 @@ that was one update behind — traces back to it.
 
 ---
 
-← Index: [React](../README.md) · Start → [Phase 0 — How React runs](phase-0-how-react-runs/)
+← Index: [React](../README.md) · Start → [Phase 0 — How React runs](./phase-0-how-react-runs/README.md)

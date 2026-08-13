@@ -47,12 +47,12 @@ rolling 7-day window that survives a day with no data, and explain `EXCLUDE GROU
 
 ## Where this connects
 
-- **[Window functions](../windows-intro/)** — `OVER`, `PARTITION BY`, and what windows cost
-- **[lag, lead, first/last_value](../lag-lead/)** — `first_value`/`last_value` depend on the
+- **[Window functions](../06-windows-intro/README.md)** — `OVER`, `PARTITION BY`, and what windows cost
+- **[lag, lead, first/last_value](../08-lag-lead/README.md)** — `first_value`/`last_value` depend on the
   frame; `lag`/`lead` do not, which is why `last_value` needs an explicit one
-- **[Ranking functions](../ranking/)** — defined over the partition, and they ignore any
+- **[Ranking functions](../07-ranking/README.md)** — defined over the partition, and they ignore any
   frame you write
-- **[Ordered-set aggregates](../ordered-set/)** — the other place an explicit ordering
+- **[Ordered-set aggregates](../13-ordered-set/README.md)** — the other place an explicit ordering
   changes the answer
 - **[generate_series](../../phase-4-crud/18-generate-series.md)** — the calendar spine for
   when missing days need to exist as rows

@@ -40,7 +40,7 @@ that can run your app's queries and **cannot** drop a table, and when you can re
   columns*. RLS is only consulted after the grant check passes.
 - [pg_hba.conf](../05-pg-hba.md) decides who may connect at all — it runs before
   any privilege here is considered.
-- [Schema from Node](../../phase-8-schema-from-node/) creates the objects whose
+- [Schema from Node](../../phase-8-schema-from-node/README.md) creates the objects whose
   ownership this topic governs; the migration role there is the owner role here.
 
 ---

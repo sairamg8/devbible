@@ -17,8 +17,8 @@ to be confounded, the correction is on the page rather than quietly removed.
 
 | Phase | Part | Pages | Status |
 |---|---|---|---|
-| [0 · How TypeScript runs](./phase-0-how-typescript-runs/) | The type system | 13 | ✅ written |
-| [1 · The type vocabulary](./phase-1-type-vocabulary/) | The type system | 17 | ✅ written |
+| [0 · How TypeScript runs](./phase-0-how-typescript-runs/README.md) | The type system | 13 | ✅ written |
+| [1 · The type vocabulary](./phase-1-type-vocabulary/README.md) | The type system | 17 | ✅ written |
 | 2 · Narrowing and control flow analysis | The type system | — | planned |
 | 3 · Generics | The type system | — | planned |
 | 4 · Classes, objects and declaration merging | Types at scale | — | planned |
@@ -37,4 +37,4 @@ import Progress from '@site/src/components/Progress';
 
 ---
 
-Start → [Phase 0 — How TypeScript runs](./phase-0-how-typescript-runs/)
+Start → [Phase 0 — How TypeScript runs](./phase-0-how-typescript-runs/README.md)

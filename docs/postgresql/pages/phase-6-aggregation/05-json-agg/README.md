@@ -42,8 +42,8 @@ and can say why `FILTER` on its own does not achieve that.
 
 ## Where this connects
 
-- **[FILTER](../filter-clause/)** — used here to exclude the `LEFT JOIN` `NULL` row
-- **[GROUP BY and aggregates](../group-by/)** — the empty-group `NULL` rule these inherit
+- **[FILTER](../04-filter-clause/README.md)** — used here to exclude the `LEFT JOIN` `NULL` row
+- **[GROUP BY and aggregates](../01-group-by/README.md)** — the empty-group `NULL` rule these inherit
 - **[LATERAL](../../phase-5-joins/10-lateral.md)** — how the nested payload is assembled
 - **[jsonb](../../phase-2-types/08-jsonb.md)** — the type itself, its operators and indexes
 - **[N+1 queries](/docs/nodejs/pages/phase-6-data-access/n-plus-1)** — the problem one

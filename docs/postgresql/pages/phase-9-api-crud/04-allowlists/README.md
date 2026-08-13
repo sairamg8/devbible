@@ -30,7 +30,7 @@ text you wrote yourself.
 
 ## Where this connects
 
-- **[Safe dynamic `WHERE`](../safe-dynamic-where/)** handles the other half of
+- **[Safe dynamic `WHERE`](../03-safe-dynamic-where/README.md)** handles the other half of
   the same endpoint — filter *values*, which can be parameters.
 - **[`list` with filtering, sorting and pagination](../02-list-endpoint.md)**
   assembles both, and explains the tiebreaker `orderClause` appends.
@@ -39,4 +39,4 @@ text you wrote yourself.
 
 ---
 
-← [Safe dynamic `WHERE`](../safe-dynamic-where/) · Start → [The two failure modes](01-two-failure-modes.md)
+← [Safe dynamic `WHERE`](../03-safe-dynamic-where/README.md) · Start → [The two failure modes](01-two-failure-modes.md)

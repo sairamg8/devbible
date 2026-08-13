@@ -21,8 +21,8 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| [0 · How CSS runs](./phase-0-how-css-runs/) | 12 | ✅ written |
-| [1 · Selectors](./phase-1-selectors/) | 16 | ✅ written |
+| [0 · How CSS runs](./phase-0-how-css-runs/README.md) | 12 | ✅ written |
+| [1 · Selectors](./phase-1-selectors/README.md) | 16 | ✅ written |
 | 2 · Cascade control | 7 | — |
 | 3 · Custom properties and modern values | 8 | — |
 | 4 · **Flexbox, deeply** | 12 | — |
@@ -60,4 +60,4 @@ the other engine's answer.
 
 ---
 
-Start → [Phase 0 · How CSS runs](./phase-0-how-css-runs/)
+Start → [Phase 0 · How CSS runs](./phase-0-how-css-runs/README.md)

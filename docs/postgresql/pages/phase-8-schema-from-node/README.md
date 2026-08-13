@@ -8,7 +8,7 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[Creating tables from Node](./ddl-from-node/)** | <span className="db-tier t-master">Master</span> | when legitimate |
+| 01 | **[Creating tables from Node](./01-ddl-from-node/README.md)** | <span className="db-tier t-master">Master</span> | when legitimate |
 | 02 | **[Migrations](02-migrations.md)** | <span className="db-tier t-master">Master</span> | forward-only files |
 | 03 | **[Seeding](03-seeding.md)** | <span className="db-tier t-master">Master</span> | deterministic fixtures |
 | 04 | **[Bulk insert that scales](04-bulk-insert.md)** | <span className="db-tier t-master">Master</span> | unnest vs loop |
@@ -29,4 +29,4 @@ Move on when you can migrate forward-only and seed idempotently without runtime 
 
 ---
 
-← Syllabus: [Part 3](../../syllabus/03-node-and-pg.md) · Start → [Creating tables from Node](./ddl-from-node/)
+← Syllabus: [Part 3](../../syllabus/03-node-and-pg.md) · Start → [Creating tables from Node](./01-ddl-from-node/README.md)

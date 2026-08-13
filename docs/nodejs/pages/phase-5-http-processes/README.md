@@ -11,8 +11,8 @@ sidebar_position: 0
 **Complete — all 26 pages written.** The largest phase in the book, and the one
 that finishes **Part 2 — Core I/O**.
 
-Where the bytes of [Phase 3](../phase-3-buffers-streams/) and the files of
-[Phase 4](../phase-4-filesystem/) meet the network. Three subjects that share one
+Where the bytes of [Phase 3](../phase-3-buffers-streams/README.md) and the files of
+[Phase 4](../phase-4-filesystem/README.md) meet the network. Three subjects that share one
 theme: **your process does not run alone.** It answers clients, calls services
 that fail, and is stopped by an orchestrator that will not wait long.
 
@@ -130,4 +130,4 @@ dropping — which needs `closeIdleConnections()` on an interval, not just
 
 ---
 
-← Phase 4: [Filesystem, paths and URLs](../phase-4-filesystem/) · Start → [The HTTP server](01-http-server.md)
+← Phase 4: [Filesystem, paths and URLs](../phase-4-filesystem/README.md) · Start → [The HTTP server](01-http-server.md)

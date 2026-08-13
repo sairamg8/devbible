@@ -40,13 +40,13 @@ cycle with the trade-off of each.
 
 ## Where this connects
 
-- **[CTEs (WITH)](../ctes/)** — the non-recursive form, and why `RECURSIVE` also lifts the
+- **[CTEs (WITH)](../09-ctes/README.md)** — the non-recursive form, and why `RECURSIVE` also lifts the
   forward-reference restriction for every CTE in the list
 - **[generate_series](../../phase-4-crud/18-generate-series.md)** — the better tool when the
   next value is a pure function of the last
 - **[Timeouts](../../phase-7-pg-driver/11-timeouts.md)** — `statement_timeout` as the
   backstop for a runaway recursion, and why the driver's own timeout is not one
-- **[Indexes](../../phase-10-indexes/)** — why the parent column needs one: the recursive
+- **[Indexes](../../phase-10-indexes/README.md)** — why the parent column needs one: the recursive
   term joins on it once per iteration
 
 ---

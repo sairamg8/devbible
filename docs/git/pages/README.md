@@ -17,7 +17,7 @@ answers.
 
 | Phase | Topics | Pages | Status |
 |---|---|---|---|
-| **[00 · How Git stores things](phase-0-how-git-stores-things/)** | 14 | 14 | ✅ **Complete** |
+| **[00 · How Git stores things](./phase-0-how-git-stores-things/README.md)** | 14 | 14 | ✅ **Complete** |
 | 01 · The everyday loop | 16 | 0 | Not started |
 | 02 · Branching, merging and rebasing | 17 | 0 | Not started |
 | 03 · Reading history | 14 | 0 | Not started |
@@ -56,4 +56,4 @@ here — the never-invent-output rule does not bend for a missing dependency.
 
 ---
 
-← [Syllabus overview](../README.md) · Start → [Phase 0 — How Git stores things](phase-0-how-git-stores-things/)
+← [Syllabus overview](../README.md) · Start → [Phase 0 — How Git stores things](./phase-0-how-git-stores-things/README.md)

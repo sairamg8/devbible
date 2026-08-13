@@ -30,19 +30,32 @@ Tiers are assigned **for fullstack application development** — this bible's
 purpose. `worker_threads` is <span className="db-tier t-know">Know</span> for a CRUD API and would be <span className="db-tier t-master">Master</span> at a
 media-processing company. Where a tier is context-dependent, the syllabus says so.
 
-## Available syllabus
+## Coverage
 
-| Technology             | Status      | Files   |
-| ---------------------- | ----------- | ------- |
-| **[Node.js](nodejs/)** | Complete    | 4 parts · [explanations](nodejs/pages/) |
-| **[Express](expressjs/)** | Syllabus complete | 4 parts · 114 topics · [explanations](expressjs/pages/) in progress |
-| **[CSS](css/)**        | Syllabus complete | 4 parts · 230 topics · explanations not started |
-| **[JavaScript](javascript/)** | Syllabus complete | 5 parts · 337 topics · [explanations](javascript/pages/) in progress |
-| **[TypeScript](typescript/)** | Syllabus complete | 4 parts · 187 topics · explanations not started |
-| **[React](react/)**    | Syllabus complete | 4 parts · 244 topics · explanations not started |
-| **[Git](git/)**        | Syllabus complete | 4 parts · 191 topics · [explanations](git/pages/) in progress (phase 0 done) |
-| MongoDB                | Not started | —       |
-| PostgreSQL             | Not started | —       |
-| Docker & Podman        | Not started | —       |
-| Redis                  | Not started | —       |
-| Nginx                  | Not started | —       |
+Ordered by how far the explanations have got, not alphabetically.
+
+| Technology                    | Syllabus              | Explanations                                                                      |
+| ----------------------------- | --------------------- | --------------------------------------------------------------------------------- |
+| **[Node.js](./nodejs/README.md)**        | 4 parts · 248 topics | **Complete** — [232 pages](./nodejs/pages/README.md) across 13 phases                |
+| **[PostgreSQL](./postgresql/README.md)** | 4 parts · 229 topics | **Near complete** — [270 pages](./postgresql/pages/README.md) across 14 phases; 13 topics outstanding in phase 13 |
+| **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [45 pages](./javascript/pages/README.md), phases 0–3                   |
+| **[TypeScript](./typescript/README.md)** | 4 parts · 187 topics | In progress — [37 pages](./typescript/pages/README.md), phases 0–2                   |
+| **[CSS](./css/README.md)**               | 4 parts · 119 topics | In progress — [28 pages](./css/pages/README.md), phases 0–1                          |
+| **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [14 pages](./react/pages/README.md), phase 0                           |
+| **[Git](./git/README.md)**               | 4 parts · 191 topics | In progress — [14 pages](./git/pages/README.md), phase 0                             |
+| **[Express](./expressjs/README.md)**     | 4 parts · 114 topics | **Draft** — [78 pages](./expressjs/pages/README.md) cover all 11 phases, but they are outlines awaiting depth and measurement |
+| MongoDB                       | Not started           | —                                                                                   |
+| Docker & Podman               | Not started           | —                                                                                   |
+| Redis                         | Not started           | —                                                                                   |
+| Nginx                         | Not started           | —                                                                                   |
+
+Express is listed last on purpose: every phase has a file, so the sidebar looks
+finished, but the pages average a third the depth of the rest and have not been
+run against a sandbox yet.
+
+## What "Verified" means
+
+Every number, timing, error string and console block on a page comes from a script
+that was actually executed — never from memory or plausibility. A page that has
+been through that carries a `> Verified:` line under its title naming the versions
+it was measured on. A page without one has not cleared that bar yet.

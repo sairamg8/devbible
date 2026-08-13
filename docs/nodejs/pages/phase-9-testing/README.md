@@ -69,13 +69,13 @@ reproduced before it was written down:
 
 ## Where this connects
 
-- **[Phase 6 · Data access](../phase-6-data-access/)** — repositories take a database
+- **[Phase 6 · Data access](../phase-6-data-access/README.md)** — repositories take a database
   handle as a parameter, which is what makes both dependency injection (page 04) and
   the per-test transaction rollback (pages 10 and 13) possible.
-- **[Phase 7 · Background work](../phase-7-background-work/)** — every job handler
+- **[Phase 7 · Background work](../phase-7-background-work/README.md)** — every job handler
   should be run twice in its own test; mock timers (page 07) replace waiting for a
   retry backoff.
-- **[Phase 8 · Security](../phase-8-security/)** — validation schemas double as
+- **[Phase 8 · Security](../phase-8-security/README.md)** — validation schemas double as
   contracts (pages 19 and 20).
 - **[Phase 10 · Observability](../phase-10-observability/20-benchmarking.md)** — the
   benchmarking methodology behind page 18.
@@ -84,5 +84,5 @@ reproduced before it was written down:
 
 ---
 
-← Prev: [Phase 8 · Security](../phase-8-security/) ·
-Next → [Phase 10 · Observability](../phase-10-observability/)
+← Prev: [Phase 8 · Security](../phase-8-security/README.md) ·
+Next → [Phase 10 · Observability](../phase-10-observability/README.md)
