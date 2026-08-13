@@ -22,22 +22,30 @@ interviews actually probe.
 | 02 | **[Parameters](./02-parameters/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[`this`](./03-this/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Arrow functions and `this`](./04-arrow-functions-and-this/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05 | `call`, `apply` and `bind` | <span className="db-tier t-master">Master</span> | planned |
-| 06 | Closures | <span className="db-tier t-master">Master</span> | planned |
-| 07 | Lexical scope and the scope chain | <span className="db-tier t-master">Master</span> | planned |
-| 08 | Hoisting and the temporal dead zone | <span className="db-tier t-master">Master</span> | planned |
-| 09 | Higher-order functions | <span className="db-tier t-understand">Understand</span> | planned |
-| 10 | Debounce and throttle | <span className="db-tier t-understand">Understand</span> | planned |
-| 11 | Currying and partial application | <span className="db-tier t-understand">Understand</span> | planned |
-| 12 | Composition | <span className="db-tier t-understand">Understand</span> | planned |
-| 13 | Memoization | <span className="db-tier t-understand">Understand</span> | planned |
-| 14 | Recursion | <span className="db-tier t-understand">Understand</span> | planned |
-| 15 | Pure functions and side effects | <span className="db-tier t-understand">Understand</span> | planned |
-| 16 | There is no function overloading | <span className="db-tier t-understand">Understand</span> | planned |
-| 17 | Closure and default-parameter gotchas | <span className="db-tier t-understand">Understand</span> | planned |
-| 18 | IIFE and the module pattern | <span className="db-tier t-know">Know</span> | planned |
-| 19 | Function properties | <span className="db-tier t-know">Know</span> | planned |
-| 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | planned |
+| 05 | **[`call`, `apply` and `bind`](./05-call-apply-bind/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 06 | **[Closures](./06-closures/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 07 | **[Lexical scope and the scope chain](./07-lexical-scope/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 08 | **[Hoisting and the temporal dead zone](./08-hoisting-and-tdz/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 09 | Higher-order functions | <span className="db-tier t-understand">Understand</span> | deferred |
+| 10 | Debounce and throttle | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | Currying and partial application | <span className="db-tier t-understand">Understand</span> | deferred |
+| 12 | Composition | <span className="db-tier t-understand">Understand</span> | deferred |
+| 13 | Memoization | <span className="db-tier t-understand">Understand</span> | deferred |
+| 14 | Recursion | <span className="db-tier t-understand">Understand</span> | deferred |
+| 15 | Pure functions and side effects | <span className="db-tier t-understand">Understand</span> | deferred |
+| 16 | There is no function overloading | <span className="db-tier t-understand">Understand</span> | deferred |
+| 17 | Closure and default-parameter gotchas | <span className="db-tier t-understand">Understand</span> | deferred |
+| 18 | IIFE and the module pattern | <span className="db-tier t-know">Know</span> | deferred |
+| 19 | Function properties | <span className="db-tier t-know">Know</span> | deferred |
+| 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | deferred |
+
+## Status — **Master tier complete** (2026-08-13)
+
+**All eight Master topics (01–08) are written.** Topics 09–20 are marked *deferred*
+deliberately, not forgotten: the standing plan is **Master-first across all
+phases**, so Understand and Know tiers are filled in on demand once the Master
+topics of every phase are done. The next unit of work in JavaScript is
+**Phase 4 · Objects, prototypes and classes**, not topic 09.
 
 ## Phase gate
 
@@ -46,11 +54,20 @@ empty file, and say what each closes over.
 
 ## How these pages are verified
 
-Every console block on these pages was produced by a script in
-`sandbox/js-p3/`, run on **Node 24.19.0** (V8 13.6). Where a behaviour only
-exists in sloppy mode or CommonJS, there is a `.cjs` companion script — an ES
-module cannot demonstrate it, and presenting module output as if it showed
-sloppy-mode behaviour would be wrong.
+Two provenances, both named in each page's `> Verified:` line — read that line to
+know which one you are looking at.
+
+- **Topics 01–07** were measured. Every console block on those pages was produced
+  by a script in `sandbox/js-p3/`, run on **Node 24.19.0** (V8 13.6). Where a
+  behaviour only exists in sloppy mode or CommonJS, there is a `.cjs` companion
+  script — an ES module cannot demonstrate it, and presenting module output as if
+  it showed sloppy-mode behaviour would be wrong.
+- **Topic 08 onward is validated against documentation** — MDN and the
+  specification, cited by name and link. No new measurement sandboxes are built,
+  and **no run means no console block**: where there is no script, the page
+  explains the behaviour in prose rather than showing output nobody produced.
+  Where such a page needs a measured fact that an *existing* run already covers,
+  it links to the page that owns that output instead of reproducing it.
 
 ## Where this connects
 

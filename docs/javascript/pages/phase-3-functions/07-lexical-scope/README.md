@@ -29,7 +29,7 @@ which binding a name resolves to in nested blocks, and explain why
 ## Where this connects
 
 - [06 · Closures](../06-closures/README.md) — a closure is a function plus the scope chain it kept
-- [08 · Hoisting and the temporal dead zone](../08-hoisting-and-tdz.md) — *when* a binding becomes usable within its scope
+- [08 · Hoisting and the temporal dead zone](../08-hoisting-and-tdz/README.md) — *when* a binding becomes usable within its scope
 - [18 · IIFE and the module pattern](../18-iife-and-module-pattern.md) — scope used deliberately as a privacy boundary
 
 ---

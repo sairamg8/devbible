@@ -55,7 +55,7 @@ function add(a, b) { return a + b; }
 A `const`/`let` function expression is hoisted **into the temporal dead zone** —
 the binding exists but cannot be touched, hence *Cannot access before
 initialization*. Covered fully in
-[Hoisting and the TDZ](./08-hoisting-and-tdz.md).
+[Hoisting and the TDZ](./08-hoisting-and-tdz/README.md).
 
 The `var` row is the one worth memorising, because it is the only one whose error
 does not mention hoisting at all. `var f` is initialised to `undefined`, so the

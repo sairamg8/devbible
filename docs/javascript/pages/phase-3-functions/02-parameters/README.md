@@ -31,7 +31,7 @@ things that make a parameter list non-simple.
 ## Where this connects
 
 - [01 · Declarations, expressions and arrow functions](../01-declarations-expressions-arrows.md) — arrows have no `arguments`, which is why rest parameters are the portable answer
-- [08 · Hoisting and the temporal dead zone](../08-hoisting-and-tdz.md) — the parameter list has its own TDZ, measured here
+- [08 · Hoisting and the temporal dead zone](../08-hoisting-and-tdz/README.md) — the parameter list has its own TDZ, measured here
 - [17 · Closure and default-parameter gotchas](../17-closure-and-default-gotchas.md) — the defaults that capture something they should not
 
 ---
