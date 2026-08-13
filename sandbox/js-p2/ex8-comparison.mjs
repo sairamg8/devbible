@@ -1,0 +1,18 @@
+console.log('--- strings compare lexicographically by CODE UNIT ---');
+console.log("  '2' > '10'        =", '2' > '10', '<- string compare, not numeric');
+console.log("  'Z' < 'a'         =", 'Z' < 'a', '(code units: Z=90, a=97)');
+console.log("  'é' > 'z'         =", 'é' > 'z');
+console.log("  localeCompare     =", ['b','a','Z','é'].sort((x,y)=>x.localeCompare(y,'en')));
+console.log("  plain sort()      =", ['b','a','Z','é'].sort());
+console.log('\n--- Dates ---');
+const d1 = new Date('2026-01-01'), d2 = new Date('2026-01-01');
+console.log('  d1 < d2  =', d1 < d2, '| d1 > d2 =', d1 > d2, '| d1 == d2 =', d1 == d2, '| d1 === d2 =', d1 === d2);
+console.log('  +d1 === +d2 =', +d1 === +d2, '| getTime equal =', d1.getTime() === d2.getTime());
+console.log('  d1 <= d2 && d1 >= d2 =', d1 <= d2 && d1 >= d2, '<- both true, yet == is false');
+console.log('\n--- objects never compare usefully ---');
+console.log('  {} < {}   =', {} < {}, '| {} > {} =', {} > {}, '| {} <= {} =', {} <= {});
+console.log('\n--- NaN poisons every comparison ---');
+console.log('  NaN < 1 =', NaN < 1, '| NaN > 1 =', NaN > 1, '| NaN >= 1 =', NaN >= 1);
+console.log('\n--- mixed types coerce to number ---');
+console.log("  '10' > 9  =", '10' > 9, "| '10' > '9' =", '10' > '9');
+console.log('  true > 0  =', true > 0, '| null >= 0 =', null >= 0, '| undefined >= 0 =', undefined >= 0);

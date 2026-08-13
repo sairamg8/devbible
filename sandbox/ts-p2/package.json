@@ -1,0 +1,9 @@
+{
+  "name": "ts-p2",
+  "private": true,
+  "type": "module",
+  "description": "Phase 2 — Narrowing and control flow analysis.",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

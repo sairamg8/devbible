@@ -1,0 +1,13 @@
+console.log('Math.max()          =', Math.max());
+console.log('Math.min()          =', Math.min());
+console.log('Math.max(...[])     =', Math.max(...[]));
+console.log('Number.MAX_VALUE*2  =', Number.MAX_VALUE * 2);
+console.log('-1/Infinity is -0?  =', Object.is(-1 / Infinity, -0));
+console.log('0 * -1 is -0?       =', Object.is(0 * -1, -0));
+console.log('String(-0)          =', JSON.stringify(String(-0)));
+console.log('JSON.stringify(-0)  =', JSON.stringify(-0));
+console.log('-0 < 0              =', -0 < 0, '| -0 + 0 =', -0 + 0);
+console.log('1/-0 === -Infinity  =', 1 / -0 === -Infinity);
+console.log('atan2(0,-1)         =', Math.atan2(0, -1));
+console.log('atan2(-0,-1)        =', Math.atan2(-0, -1));
+console.log('isFinite(Infinity)  =', Number.isFinite(Infinity), '| isNaN(Infinity) =', Number.isNaN(Infinity));

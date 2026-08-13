@@ -1,0 +1,10 @@
+{
+  "name": "devbible-css-sandbox",
+  "private": true,
+  "type": "module",
+  "description": "Every number on the CSS pages was produced here, in a real Firefox render.",
+  "dependencies": {
+    "puppeteer-core": "^25.6.0",
+    "web-features": "^3.34.3"
+  }
+}

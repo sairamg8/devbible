@@ -78,7 +78,7 @@ TypeScript problem.
 | Topic | Tier |
 |---|---|
 | **Type checking in CI** — `tsc --noEmit` as a required gate, and why a transpile-only build **cannot** replace it | <span className="db-tier t-master">Master</span> |
-| **What TypeScript 7 changed for tooling** — the native compiler's speed, and the removal of the JavaScript `ts.*` API that AST tools were built on; auditing your toolchain before upgrading | <span className="db-tier t-understand">Understand</span> |
+| **What TypeScript 7 changed for tooling** — the native compiler's speed, and the classic root `ts.*` API moving to an explicitly `unstable/` surface that AST tools must be ported to; auditing your toolchain before upgrading | <span className="db-tier t-understand">Understand</span> |
 | **Build pipelines** — `tsc` vs esbuild/swc/Rollup/Vite, who checks and who only strips, and where declaration emit fits | <span className="db-tier t-understand">Understand</span> |
 | **Testing types** — `expectTypeOf`/`assertType` in Vitest, `tsd`, and `@ts-expect-error` as an assertion that a wrong call is rejected | <span className="db-tier t-understand">Understand</span> |
 | **Typing tests** — typed fixtures, `satisfies` on test data, typing mocks and spies, and keeping test types honest instead of `as any` | <span className="db-tier t-understand">Understand</span> |

@@ -8,10 +8,10 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[Roles GRANT REVOKE](01-roles-grant.md)** | <span className="db-tier t-master">Master</span> | least privilege |
-| 02 | **[Secrets](02-secrets.md)** | <span className="db-tier t-master">Master</span> | no URI in logs |
+| 01 | **[Roles, GRANT and REVOKE](roles-grant/)** | <span className="db-tier t-master">Master</span> | least privilege |
+| 02 | **[Secrets](secrets/)** | <span className="db-tier t-master">Master</span> | no URI in logs |
 | 03 | **[App role should not own schema](03-app-role-not-owner.md)** | <span className="db-tier t-understand">Understand</span> | what it prevents |
-| 04 | **[pg_dump and pg_restore](04-pg-dump-restore.md)** | <span className="db-tier t-understand">Understand</span> | logical backups |
+| 04 | **[pg_dump and pg_restore](pg-dump-restore/)** | <span className="db-tier t-understand">Understand</span> | logical backups |
 | 05 | **[pg_hba.conf](05-pg-hba.md)** | <span className="db-tier t-understand">Understand</span> | scram host rules |
 | 06 | **[TLS to the database](06-tls.md)** | <span className="db-tier t-understand">Understand</span> | sslmode |
 | 07 | **[Connection limits and PgBouncer](07-pgbouncer.md)** | <span className="db-tier t-understand">Understand</span> | tx vs session pool |
@@ -33,4 +33,4 @@ Move on when secrets are safe, privileges are least, and you have restored a bac
 
 ---
 
-← Syllabus: [Part 4](../../syllabus/04-performance-and-production.md) · Start → [Roles GRANT REVOKE](01-roles-grant.md)
+← Syllabus: [Part 4](../../syllabus/04-performance-and-production.md) · Start → [Roles, GRANT and REVOKE](roles-grant/)

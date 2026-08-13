@@ -27,6 +27,7 @@ fullstack application, frontend through deployment, across both **MERN** and
 | 9 | **Docker & Podman** | Both |
 | 10 | **Redis** | — |
 | 11 | **Nginx** | — |
+| 12 | **Git** | Moved into scope 2026-08-13 (was parked). Version control as it is actually used on a fullstack team |
 
 Each technology is taught **toward mastery for efficient fullstack development** —
 not as isolated trivia. Gather all the concepts a topic actually requires.
@@ -39,7 +40,6 @@ until all eleven are done.
 
 | Technology | Why it is parked rather than in scope |
 |---|---|
-| **Git** | Universal tooling rather than part of the MERN/PERN stack itself |
 | **GraphQL** | API-design layer — would overlap Express if pulled in early |
 | **tRPC** | Same, and only pays off in an end-to-end TypeScript stack |
 | **Kubernetes** | A layer above Docker & Nginx; only earns its place at real scale |

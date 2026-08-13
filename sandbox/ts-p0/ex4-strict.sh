@@ -1,31 +1,17 @@
 #!/usr/bin/env bash
-# ex4 — what `strict` actually turns on: the same file, checked both ways.
+# ex4 — what `strict` turns on.
+# CORRECTED: the first version of this script used "no flag" as the loose baseline.
+# That is wrong on TypeScript 7 — `strict` DEFAULTS TO TRUE there, so both sides
+# were identical. The loose baseline must be an explicit `--strict false`.
 set -u; cd "$(dirname "$0")"; TSC="node node_modules/typescript/bin/tsc"
-mkdir -p src-ex4
-cat > src-ex4/loose.ts <<'TS'
-function findUser(id) {
-  return id === 1 ? { name: 'Asha' } : null;
-}
-
-const user = findUser(1);
-console.log(user.name.toUpperCase());
-
-class Session {
-  token: string;
-  start() { this.token = 'abc'; }
-}
-
-try { start(); } catch (err) { console.log(err.message); }
-function start() { throw new Error('nope'); }
-TS
-echo "=== tsc --noEmit (no strict) ==="
+echo "=== declared default for --strict ==="
+$TSC --help --all 2>&1 | grep -A4 -- "^--strict$" | head -4
+echo "=== --strict false (the old default) ==="
+$TSC --noEmit --strict false --target es2022 src-ex4/loose.ts; echo "exit=$?"
+echo "=== default (strict on, TS 7) ==="
 $TSC --noEmit --target es2022 src-ex4/loose.ts; echo "exit=$?"
-echo
-echo "=== tsc --noEmit --strict ==="
-$TSC --noEmit --strict --target es2022 src-ex4/loose.ts; echo "exit=$?"
-echo
-echo "=== which sub-flag produces which error ==="
+echo "=== one sub-flag at a time, from the loose baseline ==="
 for f in noImplicitAny strictNullChecks strictPropertyInitialization useUnknownInCatchVariables; do
-  printf -- "--- --%s ---\n" "$f"
-  $TSC --noEmit --target es2022 --$f src-ex4/loose.ts 2>&1 | head -3
+  printf -- "--- --strict false --%s ---\n" "$f"
+  $TSC --noEmit --strict false --$f --target es2022 src-ex4/loose.ts 2>&1 | head -3
 done

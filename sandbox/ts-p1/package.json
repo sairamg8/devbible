@@ -1,0 +1,9 @@
+{
+  "name": "ts-p1",
+  "private": true,
+  "type": "module",
+  "description": "Phase 1 — The type vocabulary. Measurements for docs/typescript/pages/phase-1-type-vocabulary/",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

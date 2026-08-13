@@ -1,0 +1,20 @@
+const show = (label, v) => console.log(label.padEnd(24), '->', typeof v === 'string' ? JSON.stringify(v) : String(v), `(${typeof v})`);
+show('[] + {}', [] + {});
+show('({}) + []  expression', ({}) + []);
+console.log('{} + [] as a STATEMENT ->', eval('{} + []'), '(block, then unary + on [])');
+show('[] + []', [] + []);
+show('1 + "2"', 1 + '2');
+show('1 - "2"', 1 - '2');
+show('"3" * "4"', '3' * '4');
+show('true + true', true + true);
+show('[1,2] + [3]', [1,2] + [3]);
+show('null + 1', null + 1);
+show('undefined + 1', undefined + 1);
+show('"5" - - "2"', '5' - - '2');
+console.log('\nexplicit conversion:');
+for (const v of ['42', '42px', '', '  7 ', 'abc', null, undefined, [], ['9'], true])
+  console.log(`  ${String(JSON.stringify(v)).padEnd(8)} Number=${String(Number(v)).padEnd(6)} parseInt=${String(parseInt(v)).padEnd(6)} parseFloat=${String(parseFloat(v)).padEnd(6)} Boolean=${Boolean(v)}`);
+console.log('\nparseInt radix:');
+console.log('  parseInt("08")   =', parseInt('08'), ' parseInt("0x1F") =', parseInt('0x1F'), ' parseInt("1F",16) =', parseInt('1F', 16));
+console.log('  ["1","2","3"].map(parseInt) =', ['1','2','3'].map(parseInt));
+console.log('  ["1","2","3"].map(Number)   =', ['1','2','3'].map(Number));

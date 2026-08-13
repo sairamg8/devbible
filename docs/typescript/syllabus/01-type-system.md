@@ -20,6 +20,8 @@ Nothing here is React-specific, Node-specific or browser-specific.
 three different programs that might be reading your `.ts` file. The erasure row
 is the one that makes the rest of the language stop being surprising.
 
+📖 **Explanation written:** [Phase 0 — How TypeScript runs](../pages/phase-0-how-typescript-runs/)
+
 | Topic | Tier |
 |---|---|
 | **TypeScript is a static checker, not a runtime** — it type-checks, then throws the types away; there is no TypeScript at runtime, ever | <span className="db-tier t-master">Master</span> |
@@ -47,6 +49,8 @@ of the three cases.
 *17 topics.* Every type you will write for the next year. Dense on Master
 because this is the part you use without looking anything up — ten of the
 seventeen rows appear in almost every file you touch.
+
+📖 **Explanation written:** [Phase 1 — The type vocabulary](../pages/phase-1-type-vocabulary/)
 
 | Topic | Tier |
 |---|---|

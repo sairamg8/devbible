@@ -1,0 +1,184 @@
+
+=== 1. an object is content, addressed by the hash of header+content ===
+$ git hash-object greeting.txt
+ce013625030ba8dba906f756967f9e9ca394464a
+$ printf "blob 6\\0hello\\n" | sha1sum        # the header Git prepends
+ce013625030ba8dba906f756967f9e9ca394464a
+# identical: the name "greeting.txt" is nowhere in the hash
+$ git hash-object copy-of-greeting.txt        # same bytes, same object
+ce013625030ba8dba906f756967f9e9ca394464a
+
+=== 2. nothing is stored until you write it ===
+$ git cat-file -t ce013625030ba8dba906f756967f9e9ca394464a
+fatal: git cat-file: could not get object info
+$ git hash-object -w greeting.txt             # -w actually writes
+ce013625030ba8dba906f756967f9e9ca394464a
+$ git cat-file -t ce013625030ba8dba906f756967f9e9ca394464a
+blob
+$ git cat-file -s ce013625030ba8dba906f756967f9e9ca394464a   # size
+6
+$ find .git/objects -type f
+.git/objects/ce/013625030ba8dba906f756967f9e9ca394464a
+
+=== 3. the three trees: working tree, index, HEAD ===
+$ git status --short          # ?? = in the working tree only
+?? greeting.txt
+?? src/
+$ git add greeting.txt src/math.js && git status --short   # A = in the index
+A  greeting.txt
+A  src/math.js
+$ git ls-files --stage        # the index is a real file with real blobs
+100644 ce013625030ba8dba906f756967f9e9ca394464a 0	greeting.txt
+100644 d0f87bf2ef282c7a997d8c88e5d2539bbfe562db 0	src/math.js
+
+=== 4. editing after add leaves the OLD content staged ===
+$ git status --short          # staged AND modified, at the same time
+AM greeting.txt
+A  src/math.js
+$ git diff --stat             # working tree vs index
+ greeting.txt | 1 +
+ 1 file changed, 1 insertion(+)
+$ git diff --staged --stat    # index vs HEAD
+ greeting.txt | 1 +
+ src/math.js  | 1 +
+ 2 files changed, 2 insertions(+)
+
+=== 5. a commit is a snapshot: a tree, parents, and metadata ===
+$ git cat-file -p HEAD
+tree 867606d725142c531644a7572a2b400a9160e51e
+author dev <dev@example.com> 1786615200 +0000
+committer dev <dev@example.com> 1786615200 +0000
+
+Add greeting and math helper
+$ git cat-file -p HEAD^{tree}   # the root tree
+100644 blob 94954abda49de8615a048f8d2e64b5de848e27a1	greeting.txt
+040000 tree 451e85bb5416042fc0bec926639f9f1f31f4d220	src
+$ git cat-file -p HEAD:src      # a subdirectory is its own tree object
+100644 blob d0f87bf2ef282c7a997d8c88e5d2539bbfe562db	math.js
+
+=== 6. the four object types, counted ===
+$ git cat-file --batch-all-objects --batch-check="%(objecttype)" | sort | uniq -c
+      3 blob
+      1 commit
+      2 tree
+$ git tag -a v0.1 -m "first tag" && (recount)
+      3 blob
+      1 commit
+      1 tag
+      2 tree
+$ git cat-file -p v0.1          # an annotated tag is an object; lightweight tags are not
+object 107d81646dd232e7933d4e373f98528714900d12
+type commit
+tag v0.1
+tagger dev <dev@example.com> 1786615200 +0000
+
+first tag
+
+=== 7. refs and HEAD are plain files ===
+$ cat .git/HEAD
+ref: refs/heads/main
+$ cat .git/refs/heads/main
+69dccb02fbe9f498e7373e6498a8fac400c3d1eb
+$ git rev-parse HEAD            # the same 40 characters
+69dccb02fbe9f498e7373e6498a8fac400c3d1eb
+$ git symbolic-ref HEAD
+refs/heads/main
+$ ls -R .git/refs
+.git/refs:
+heads
+tags
+
+.git/refs/heads:
+main
+
+.git/refs/tags:
+v0.1
+
+=== 8. a branch costs 41 bytes ===
+$ git branch feature/pricing && wc -c .git/refs/heads/feature/pricing
+41 .git/refs/heads/feature/pricing
+$ git cat-file --batch-all-objects --batch-check | wc -l   # object count unchanged
+8
+
+=== 9. the commit graph: parents, not timestamps ===
+$ git log --format="%h %p %ad %s" --date=short
+69dccb0 107d816 2026-08-13 Second commit
+107d816  2026-08-13 Add greeting and math helper
+$ git rev-list --count HEAD
+2
+# a commit with a FUTURE author date is still the child of its parent
+87f476c 2030-01-01 Dated 2030, still a child
+69dccb0 2026-08-13 Second commit
+107d816 2026-08-13 Add greeting and math helper
+$ git log --format="%h %s" --reverse   # ancestry order, not date order
+107d816 Add greeting and math helper
+69dccb0 Second commit
+87f476c Dated 2030, still a child
+
+=== 10. what is actually in .git/ ===
+$ ls -1 .git
+COMMIT_EDITMSG
+config
+description
+HEAD
+hooks
+index
+info
+logs
+objects
+refs
+$ file .git/index
+.git/index: Git index, version 2, 2 entries
+$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+
+=== 11. loose objects become a packfile ===
+$ find .git/objects -type f | wc -l      # loose objects before gc
+51
+$ du -sh .git/objects
+204K	.git/objects
+$ git gc && find .git/objects -type f -not -path "*/pack/*" | wc -l
+2
+$ ls .git/objects/pack
+pack-2a55cefce47b131f3cdf41e7923e631150231cc8.idx
+pack-2a55cefce47b131f3cdf41e7923e631150231cc8.pack
+pack-2a55cefce47b131f3cdf41e7923e631150231cc8.rev
+pack-de0412401f4a9e5f05411f44eaf9c86d46096746.idx
+pack-de0412401f4a9e5f05411f44eaf9c86d46096746.mtimes
+pack-de0412401f4a9e5f05411f44eaf9c86d46096746.pack
+pack-de0412401f4a9e5f05411f44eaf9c86d46096746.rev
+$ du -sh .git/objects
+36K	.git/objects
+$ git count-objects -vH
+count: 0
+size: 0 bytes
+in-pack: 51
+packs: 2
+size-pack: 6.03 KiB
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+
+=== 12. config layers and precedence ===
+$ git config --list --show-origin --show-scope | grep user.email
+local	file:.git/config	user.email=work@example.com
+$ git -c user.email=once@example.com config --show-scope user.email
+command	once@example.com
+
+=== 13. plumbing vs porcelain: commit built by hand ===
+blob   = a4379ca776a504350a29e5cb7b7125156051d466
+tree   = e5d1d6a334b32f833bbff720d07b4acac8576908
+commit = 45c50f31a190cd2cfa4d8cb3f2610a5b0fa01d75
+$ git cat-file -p $commit
+tree e5d1d6a334b32f833bbff720d07b4acac8576908
+parent 2fa89ac4afc1da87555bc8c1a6275c7815defb4f
+author dev <dev@example.com> 1786615200 +0000
+committer dev <dev@example.com> 1786615200 +0000
+
+Made with plumbing only
+$ git log --oneline -1 $commit   # a real commit, reachable from no branch
+45c50f3 Made with plumbing only

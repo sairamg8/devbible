@@ -6,11 +6,14 @@ import {summarise} from '@site/src/data/progress';
 import styles from './index.module.css';
 
 /** Live counts, so the homepage can never drift from what is actually written. */
+const css = summarise('css');
 const javascript = summarise('javascript');
 const typescript = summarise('typescript');
 const node = summarise('nodejs');
 const express = summarise('expressjs');
+const react = summarise('react');
 const postgres = summarise('postgresql');
+const git = summarise('git');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -26,7 +29,15 @@ const LAYERS = [
     name: 'Frontend',
     note: 'What the browser runs',
     items: [
-      {n: '01', name: 'CSS', desc: 'Flexbox, Grid, container queries, and the 2026 feature set'},
+      {
+        n: '01',
+        name: 'CSS',
+        desc: 'Flexbox, Grid, container queries, and the 2026 feature set',
+        to: '/docs/css',
+        active: true,
+        stats: `${css.topicsTotal} topics · ${css.phasesTotal} phases · ${css.phasesDone} phases explained · ${css.pagesWritten} pages`,
+        progress: css.percent,
+      },
       {
         n: '02',
         name: 'JavaScript',
@@ -45,7 +56,15 @@ const LAYERS = [
         stats: `${typescript.topicsTotal} topics · ${typescript.phasesTotal} phases · ${typescript.phasesDone} phases explained · ${typescript.pagesWritten} pages`,
         progress: typescript.percent,
       },
-      {n: '04', name: 'React', desc: 'Hooks, Server Components, Actions, Suspense'},
+      {
+        n: '04',
+        name: 'React',
+        desc: 'Every hook, the render cycle, Suspense, Actions, Server Components',
+        to: '/docs/react',
+        active: true,
+        stats: `${react.topicsTotal} topics · ${react.phasesTotal} phases · ${react.phasesDone} phases explained · ${react.pagesWritten} pages`,
+        progress: react.percent,
+      },
     ],
   },
   {
@@ -98,11 +117,25 @@ const LAYERS = [
     ],
   },
   {
+    name: 'Workflow',
+    note: 'How the code gets there',
+    items: [
+      {
+        n: '12',
+        name: 'Git',
+        desc: 'The object model, rebase vs merge, recovery, review workflow',
+        to: '/docs/git',
+        active: true,
+        stats: `${git.topicsTotal} topics · ${git.phasesTotal} phases · ${git.phasesDone} phases explained · ${git.pagesWritten} pages`,
+        progress: git.percent,
+      },
+    ],
+  },
+  {
     name: 'Beyond the core stack',
     note: 'Not committed — parked for later',
     parked: true,
     items: [
-      {n: '12', name: 'Git', desc: 'Branching, rebase vs merge, history repair, workflows'},
       {n: '13', name: 'GraphQL', desc: 'Schema design, resolvers, N+1 and DataLoader'},
       {n: '14', name: 'tRPC', desc: 'End-to-end typed RPC for TypeScript stacks'},
       {n: '15', name: 'Kubernetes', desc: 'Pods, services, probes, scaling, rollouts'},

@@ -141,7 +141,7 @@ invisible however many table grants exist. And **`ALTER DEFAULT PRIVILEGES`** â€
 ALL TABLES` applies only to tables that exist at that moment, so the next migration's table
 is unreadable until someone re-runs the grant.
 
-Related pages: [roles and GRANT](../phase-13-ops/01-roles-grant.md) and
+Related pages: [roles and GRANT](../phase-13-ops/roles-grant/) and
 [why the app role should not own the schema](../phase-13-ops/03-app-role-not-owner.md).
 
 ## Trade-off

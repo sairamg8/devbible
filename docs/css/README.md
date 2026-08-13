@@ -9,15 +9,21 @@ sidebar_position: 0
 > (1 186 features). Every version fact and Baseline date in this file came from
 > a command run here, not from memory.
 
-The complete topic inventory for CSS, tiered for **mastery in fullstack
-application development**. **15 phases, 230 topics**, split into 4 parts to stay
-under the 300-line file cap.
+The topic inventory for CSS, tiered for **mastery in fullstack application
+development**. **12 phases, 119 topics**, split into 4 parts to stay under the
+300-line file cap.
 
-The bar is **no knowledge gaps**: every CSS construct you would meet building a
-full commerce front end — a page shell, a card grid that reflows, a design-token
-system, a themable dark mode, an animated dialog, a form that shows its own
-validation state, and a stylesheet that survives a year of other people editing
-it — has a row here.
+**This is an advanced syllabus, not a CSS course.** It deliberately does not
+explain every CSS concept. It covers the parts that make a real difference to
+real work: **Flexbox and Grid in depth (28 topics between them)**, the modern
+selectors that replaced whole categories of JavaScript, cascade control with
+`@layer`, custom properties as runtime machinery, container queries, the
+animation cost model, **SCSS and what it still earns in 2026**, and how styles
+actually reach a React component.
+
+Assumed, not taught: basic syntax, the box model, typography, print stylesheets,
+form-control styling. Scoped down from an earlier 230-topic draft on the user's
+instruction — *"only advanced concepts… which would really be helpful"*.
 
 Architectural role: **the layer that decides what the browser paints.** CSS is
 declarative and it is *resolved*, not executed — you write constraints, and the
@@ -70,10 +76,10 @@ recalling "I think Safari lagged on that" would have produced the date.
 
 | # | Part | Covers | Phases | Topics |
 |---|---|---|---|---|
-| 1 | **[How CSS works](syllabus/01-how-css-works.md)** | The pipeline, selectors, the cascade, values and custom properties | 0–3 | 56 |
-| 2 | **[Layout](syllabus/02-layout.md)** | The box model, flexbox, grid, positioning and stacking | 4–7 | 62 |
-| 3 | **[Adaptive and visual](syllabus/03-adaptive-and-visual.md)** | Responsive and container queries, typography, color, motion | 8–11 | 63 |
-| 4 | **[CSS in a real application](syllabus/04-at-scale.md)** | Native UI and state, architecture and the stack, performance and accessibility | 12–14 | 49 |
+| 1 | **[How CSS resolves](syllabus/01-how-css-works.md)** | The engine's model, the modern selectors, cascade control with `@layer` | 0–2 | 35 |
+| 2 | **[Values and layout](syllabus/02-layout.md)** | Custom properties, **Flexbox deeply, Grid deeply** | 3–5 | 36 |
+| 3 | **[Adaptive, visual, motion](syllabus/03-adaptive-and-visual.md)** | Container queries, stacking, OkLCh colour, the animation cost model | 6–9 | 30 |
+| 4 | **[SCSS and architecture](syllabus/04-at-scale.md)** | **SCSS in 2026**, layers, tokens, CSS Modules, Tailwind, React | 10–11 | 18 |
 
 ## Progress
 
@@ -85,16 +91,20 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 66 | 29 % |
-| <span className="db-tier t-understand">Understand</span> | 116 | 50 % |
-| <span className="db-tier t-know">Know</span> | 45 | 20 % |
-| <span className="db-tier t-when">When Needed</span> | 3 | 1 % |
+| <span className="db-tier t-master">Master</span> | 50 | 42 % |
+| <span className="db-tier t-understand">Understand</span> | 57 | 48 % |
+| <span className="db-tier t-know">Know</span> | 12 | 10 % |
 
-Master sits inside the brief's 25–30 % band. It concentrates in Parts 1 and 2 —
-the cascade and the two layout systems are what you use with no documentation
-open, in every file, every day. Part 3 is deliberately lighter: `oklch`,
-scroll-driven animation and OpenType features are things you look up, and
-pretending otherwise would make the badge meaningless.
+**Master is 42 %, above the brief's 25–30 % band, and that is a deliberate
+deviation worth stating rather than fudging.** The band assumes a syllabus that
+covers a whole technology, where most rows are things you look up. This one has
+had the look-up material removed on purpose — typography, print, form controls,
+the box model — so what remains is disproportionately core. A 28 % Master share
+here would mean demoting `minmax(0, 1fr)` or the flex minimum size, which are
+exactly the rows that earn the badge.
+
+If the band matters more than the scope, the fix is to add back the intermediate
+material, not to relabel these rows.
 
 ## Prerequisites
 
@@ -134,9 +144,9 @@ inventing the other engine's result.
 2. **Do visual topics get checked-in screenshots?** Firefox headless produces
    PNGs, verified working. Gradients, `mix-blend-mode` and `clip-path` are hard
    to convey as numbers — but images add repo weight and cannot be diffed.
-3. **How deep does Phase 13 go on Tailwind, Sass and CSS-in-JS?** Currently
-   scoped as "enough to choose between them and use the chosen one well", with
-   the React-specific half deferred to the React syllabus.
+3. **Resolved:** Sass now has its own phase (10) rather than one row. Tailwind
+   and CSS-in-JS stay at "enough to choose between them and use the chosen one
+   well", with the React-specific half deferred to the React syllabus.
 
 ## Explanations
 

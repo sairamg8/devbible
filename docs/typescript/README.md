@@ -55,7 +55,7 @@ All measured on this machine, 2026-08-13:
 |---|---|
 | Target compiler | **TypeScript 7.0.2** — the `latest` dist-tag |
 | What TS 7 is | The **native (Go) compiler**. `typescript@7.0.2` ships platform binaries as optional deps (`@typescript/typescript-linux-x64`, …); the package is 3.6 MB installed |
-| The JS compiler API is **gone** | `require('typescript')` in 7.0.2 exports exactly **two** keys — `version` and `versionMajorMinor`. `ts.createProgram` is `undefined`. Anything built on the old `ts.*` API (ts-morph, custom transformers, type-aware lint plugins) must be checked against this before you upgrade |
+| The classic `ts.*` API **moved** | `require('typescript')` in 7.0.2 exports exactly **two** keys — `version` and `versionMajorMinor` — so `ts.createProgram` is `undefined`. It was not deleted: the package exports `typescript/unstable/sync`, `/async` and a 409-export `/ast` surface. Anything built on the old root API (ts-morph, custom transformers, type-aware lint plugins) must be ported before you upgrade |
 | Previous line | **`typescript@5.9.3`** is the last 5.x; **6.0** is the JS-based deprecation bridge (`beta` tag), 7.0 is the rewrite |
 | Runtime | **Node 24.19.0**, the Active LTS — the same target as the Node syllabus |
 | Running `.ts` in Node 24 | **Works with no flag.** `node demo.ts` executed and printed output |

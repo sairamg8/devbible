@@ -1,0 +1,9 @@
+{"timestamp":34803378,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"glean_timestamp":"1786621002559","path_key":"clean","loadfail_reason":"N/A","can_load":"true"}}
+{"timestamp":34803378,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"path_key":"clean","glean_timestamp":"1786621002559","loadfail_reason":"N/A","can_load":"true"}}
+{"timestamp":34803378,"category":"session_restore","name":"shutdown_success_session_startup","extra":{"glean_timestamp":"1786621002559","shutdown_ok":"false","shutdown_reason":"N/A"}}
+{"timestamp":34804077,"category":"jsonfile","name":"load_logins","extra":{"value":"error_notfounderror","glean_timestamp":"1786621003258"}}
+{"timestamp":34804245,"category":"nimbus_events","name":"startup_database_consistency","extra":{"trigger":"startup","total_store_count":"23","db_active_count":"23","store_active_count":"23","primary":"database","total_db_count":"23","glean_timestamp":"1786621003426"}}
+{"timestamp":34804292,"category":"jsonfile","name":"load_autofillprofiles","extra":{"value":"error_notfounderror","glean_timestamp":"1786621003473"}}
+{"timestamp":34804349,"category":"containers","name":"container_profile_loaded","extra":{"glean_timestamp":"1786621003530","containers":"4"}}
+{"timestamp":34804974,"category":"nimbus_events","name":"is_ready","extra":{"glean_timestamp":"1786621004155"}}
+{"timestamp":34804987,"category":"upgrade_dialog","name":"trigger_reason","extra":{"value":"not-major","glean_timestamp":"1786621004168"}}
