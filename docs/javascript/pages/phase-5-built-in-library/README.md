@@ -25,7 +25,7 @@ topics deliberately, and those are *deferred*, not forgotten.
 | 02 | **[Adding and removing](./02-adding-and-removing/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | `slice` vs `splice` vs `at` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 04 | **[Array iteration methods](./04-array-iteration-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05 | `reduce` | <span className="db-tier t-master">Master</span> | planned |
+| 05 | **[`reduce`](./05-reduce/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | `sort` | <span className="db-tier t-master">Master</span> | planned |
 | 07 | String methods | <span className="db-tier t-master">Master</span> | planned |
 | 08 | Template literals | <span className="db-tier t-understand">Understand</span> | deferred |
