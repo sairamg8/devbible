@@ -6,6 +6,8 @@ import {summarise} from '@site/src/data/progress';
 import styles from './index.module.css';
 
 /** Live counts, so the homepage can never drift from what is actually written. */
+const javascript = summarise('javascript');
+const typescript = summarise('typescript');
 const node = summarise('nodejs');
 const express = summarise('expressjs');
 const postgres = summarise('postgresql');
@@ -25,8 +27,24 @@ const LAYERS = [
     note: 'What the browser runs',
     items: [
       {n: '01', name: 'CSS', desc: 'Flexbox, Grid, container queries, and the 2026 feature set'},
-      {n: '02', name: 'JavaScript', desc: 'Language core, Web APIs, and a full DSA track'},
-      {n: '03', name: 'TypeScript', desc: 'Narrowing, generics, mapped and conditional types'},
+      {
+        n: '02',
+        name: 'JavaScript',
+        desc: 'Language core, Web APIs, a full DSA track, and an applied storefront',
+        to: '/docs/javascript',
+        active: true,
+        stats: `${javascript.topicsTotal} topics · ${javascript.phasesTotal} phases · ${javascript.phasesDone} phases explained · ${javascript.pagesWritten} pages`,
+        progress: javascript.percent,
+      },
+      {
+        n: '03',
+        name: 'TypeScript',
+        desc: 'Narrowing, generics, mapped and conditional types, typed at every layer',
+        to: '/docs/typescript',
+        active: true,
+        stats: `${typescript.topicsTotal} topics · ${typescript.phasesTotal} phases · ${typescript.phasesDone} phases explained · ${typescript.pagesWritten} pages`,
+        progress: typescript.percent,
+      },
       {n: '04', name: 'React', desc: 'Hooks, Server Components, Actions, Suspense'},
     ],
   },
@@ -153,20 +171,22 @@ export default function Home() {
           <div className={styles.focusBar} />
           <div className={styles.focusBody}>
             <p className={styles.focusLabel}>Current focus</p>
-            <h2 className={styles.focusTitle}>Node.js explanations · Express syllabus</h2>
+            <h2 className={styles.focusTitle}>JavaScript explanations</h2>
             <p className={styles.focusText}>
-              Node.js: {node.topicsTotal} topics ·{' '}
+              JavaScript: {javascript.topicsTotal} topics across{' '}
+              {javascript.phasesTotal} phases ·{' '}
               <strong>
-                {node.phasesDone} of {node.phasesTotal} phases explained
+                {javascript.phasesDone} of {javascript.phasesTotal} phases
+                explained
               </strong>
-              ({node.pagesWritten} pages). Express.js syllabus is live:{' '}
-              {express.topicsTotal} topics across {express.phasesTotal} phases —
-              explanations start at Phase 0. Other technologies stay planned.
+              ({javascript.pagesWritten} pages). Node.js is complete at{' '}
+              {node.pagesWritten} pages; Express and PostgreSQL are live too.
             </p>
+            <Progress lang="javascript" compact />
             <Progress lang="nodejs" compact />
             <Progress lang="expressjs" compact />
-            <Link className={styles.focusCta} to="/docs/nodejs">
-              Node.js syllabus →
+            <Link className={styles.focusCta} to="/docs/javascript">
+              JavaScript syllabus →
             </Link>
             <Link className={styles.focusCtaAlt} to="/docs/expressjs">
               Express.js syllabus →

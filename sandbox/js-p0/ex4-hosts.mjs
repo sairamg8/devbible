@@ -1,0 +1,11 @@
+const languageGlobals = ['Object','Array','Promise','Map','Symbol','JSON','Math','Intl','globalThis'];
+const webPlatform = ['fetch','URL','URLSearchParams','AbortController','Headers','Request','Response','structuredClone','queueMicrotask','TextEncoder','crypto','Blob','FormData','EventTarget','ReadableStream','WebSocket','performance','setTimeout'];
+const browserOnly = ['window','document','localStorage','history','navigator','IntersectionObserver','requestAnimationFrame','XMLHttpRequest','alert'];
+const nodeOnly = ['process','Buffer','require','__dirname','module'];
+const show = (label, names) => console.log(label + '\n  ' + names.map(n => `${n}=${typeof globalThis[n] !== 'undefined'}`).join(' '));
+show('language (spec):', languageGlobals);
+show('web platform in node 24:', webPlatform);
+show('browser-only:', browserOnly);
+show('node-only (in ESM):', nodeOnly);
+console.log('\nnode version:', process.version, '| v8:', process.versions.v8);
+console.log('globalThis === global:', globalThis === global);
