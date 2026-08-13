@@ -22,7 +22,7 @@ topics deliberately, and those are *deferred*, not forgotten.
 | # | Topic | Tier | Status |
 |---|---|---|---|
 | 01 | **[Array creation and shape](./01-array-creation-and-shape/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 02 | Adding and removing | <span className="db-tier t-master">Master</span> | planned |
+| 02 | **[Adding and removing](./02-adding-and-removing/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | `slice` vs `splice` vs `at` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 04 | Array iteration methods | <span className="db-tier t-master">Master</span> | planned |
 | 05 | `reduce` | <span className="db-tier t-master">Master</span> | planned |
