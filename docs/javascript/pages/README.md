@@ -22,8 +22,8 @@ import Progress from '@site/src/components/Progress';
 | **[0 · How JavaScript runs](./phase-0-how-javascript-runs/README.md)** | Language core | 12 | ✅ written |
 | **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
-| 3 · Functions, scope and closures | Language core | 20 | planned |
-| 4 · Objects, prototypes and classes | Language core | 20 | planned |
+| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01–08); 09–20 deferred |
+| **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **in progress** — Master tier |
 | 5 · The built-in library | Data & async | 26 | planned |
 | 6 · Iteration, destructuring and generators | Data & async | 13 | planned |
 | 7 · Asynchronous JavaScript | Data & async | 22 | planned |
@@ -39,15 +39,29 @@ import Progress from '@site/src/components/Progress';
 | 17 · Machine coding: implement it yourself | DSA | 18 | planned |
 | 18 · Building the store front end | Applied | 18 | planned |
 
+## Working order — Master-first
+
+Phases are written **Master tier first, across all phases**, rather than one phase
+to completion. Understand and Know tiers are filled in on demand afterwards. So a
+phase marked *Master tier ✅* is finished for now and the next unit of work is the
+**next phase's Master topics**, not that phase's topic 09.
+
 ## How these pages are verified
 
-| Parts | Host | Provenance |
-|---|---|---|
-| 1, 2, 4 | **Node 24.19.0** (V8 13.6) | Scripts in `sandbox/js-*/`; pages carry `> Verified:` |
-| 3, 5 | Browser | Node-runnable APIs are measured and marked; DOM, event and CORS output carries a `VERIFY` marker until run in a real browser |
+Every page names its provenance in its own `> Verified:` line. There are two, and
+they are not mixed on a single page:
 
-**No page carries a `> Verified:` line for output that was not produced.** A
-claim without a script gets a marker, not a plausible-looking transcript.
+| Provenance | Which pages | What it means |
+|---|---|---|
+| **Measured** | Phases 0–2, and Phase 3 topics 01–07 | Console blocks were produced by a script in `sandbox/js-*/`, run on **Node 24.19.0** (V8 13.6). Sloppy-mode and CommonJS behaviours have `.cjs` companion scripts |
+| **Documentation-validated** | Phase 3 topic 08 onward | Claims are checked against MDN and the specification, cited by name and link. **No new sandboxes are built** |
+
+**No run means no console block.** A documentation-validated page explains the
+behaviour in prose rather than printing output nobody produced; where it needs a
+measured fact that an existing run already covers, it links to the page that owns
+that output. A claim documentation cannot settle is stated as uncertain or left
+out. Browser-only behaviour (DOM, events, CORS) carries a `VERIFY` marker until
+run in a real browser.
 
 ---
 
