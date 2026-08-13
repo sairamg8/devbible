@@ -17,7 +17,7 @@ three in syllabus order. The remaining topics are *deferred*, not forgotten.
 | # | Topic | Tier | Status |
 |---|---|---|---|
 | 01 | **[Destructuring](./01-destructuring/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 02 | `for…of` vs `for…in` vs `forEach` | <span className="db-tier t-master">Master</span> | planned |
+| 02 | **[`for…of` vs `for…in` vs `forEach`](./02-loop-forms/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | Spread with iterables | <span className="db-tier t-master">Master</span> | planned |
 | 04 | The iteration protocols | <span className="db-tier t-understand">Understand</span> | deferred |
 | 05 | Generators | <span className="db-tier t-understand">Understand</span> | deferred |
