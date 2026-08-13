@@ -6,7 +6,8 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-13 against the npm registry. Every version and date is
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08-13 against the npm registry. Every version and date is
 > printed by `sandbox/react-p0/ex08-versions-channels.mjs`, which queries
 > `npm view` directly.
 

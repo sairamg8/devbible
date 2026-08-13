@@ -6,7 +6,8 @@ sidebar_position: 2
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 against **react 19.2.8** with **@babel/preset-react 7.29.7**.
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08 against **react 19.2.8** with **@babel/preset-react 7.29.7**.
 > Every console block is printed by `sandbox/react-p0/ex02-the-element.mjs`.
 
 **A React element is a frozen plain object describing what you want on screen.

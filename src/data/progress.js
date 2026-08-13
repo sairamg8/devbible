@@ -84,7 +84,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/react/pages',
     phases: [
       {n: 0, slug: 'phase-0-how-react-runs', name: 'How React runs', part: 'The React model', topics: 17, pages: 14},
-      {n: 1, slug: 'phase-1-jsx', name: 'JSX and what a component returns', part: 'The React model', topics: 15, pages: 0},
+      {n: 1, slug: 'phase-1-jsx', name: 'JSX and what a component returns', part: 'The React model', topics: 15, pages: 15},
       {n: 2, slug: 'phase-2-components', name: 'Components, props and composition', part: 'The React model', topics: 16, pages: 0},
       {n: 3, slug: 'phase-3-state', name: 'State and the render cycle', part: 'The React model', topics: 17, pages: 0},
       {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 0},

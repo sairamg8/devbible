@@ -6,7 +6,8 @@ sidebar_position: 10
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-13. The scaffold, the install and the build below were really
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08-13. The scaffold, the install and the build below were really
 > executed by `sandbox/react-p0/ex10-starting-a-project.mjs` — the file tree,
 > pinned versions and byte counts are its output, not a description of it.
 

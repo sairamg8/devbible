@@ -6,7 +6,8 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, development
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, development
 > build. The log is printed by `sandbox/react-p0/ex05-fiber.mjs`.
 >
 > **Nothing on this page is a public API.** `__reactFiber$…` is an internal

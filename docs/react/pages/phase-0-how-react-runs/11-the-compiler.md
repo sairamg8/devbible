@@ -6,7 +6,8 @@ sidebar_position: 11
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 against **babel-plugin-react-compiler 1.0.0** (stable since
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08 against **babel-plugin-react-compiler 1.0.0** (stable since
 > 7 Oct 2025) with **@babel/core 7.29.7**. Every transform below is the real
 > output of `sandbox/react-p0/ex11-compiler.mjs`.
 

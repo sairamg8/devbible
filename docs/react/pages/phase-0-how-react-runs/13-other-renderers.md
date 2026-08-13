@@ -6,7 +6,8 @@ sidebar_position: 13
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-08-13 against the npm registry.
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08-13 against the npm registry.
 > `sandbox/react-p0/ex13-renderers-and-alternatives.mjs`.
 
 **`react-dom` is one renderer. The `react` package is renderer-agnostic, and

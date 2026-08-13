@@ -6,7 +6,8 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, production
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08 against **react-dom 19.2.8** in **Firefox 153.0**, production
 > build. The log is printed by `sandbox/react-p0/ex03-render-commit.mjs`.
 
 **An update runs in three phases: React calls your components (*render*),

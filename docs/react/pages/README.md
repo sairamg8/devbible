@@ -21,7 +21,7 @@ its `> Verified:` line.
 | Phase | Status | Pages |
 |---|---|---|
 | **[0 — How React runs](./phase-0-how-react-runs/README.md)** | ✅ **Written** | 14 pages, 17 topics |
-| 1 — JSX and what a component returns | Not started | — |
+| **[1 — JSX and what a component returns](./phase-1-jsx/README.md)** | ✅ **Written** | 15 pages, 15 topics |
 | 2 — Components, props and composition | Not started | — |
 | 3 — State and the render cycle | Not started | — |
 | 4 — Effects and synchronization | Not started | — |

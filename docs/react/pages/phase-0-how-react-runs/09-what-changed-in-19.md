@@ -6,7 +6,8 @@ sidebar_position: 9
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 by installing **react 18.3.1, 19.0.8 and 19.2.8** side by
+> 🧪 **Sandbox-proven** — every console block on this page came from a script that was
+> actually run. Verified: 2026-08 by installing **react 18.3.1, 19.0.8 and 19.2.8** side by
 > side and diffing `Object.keys()` on each entry point.
 > `sandbox/react-p0/ex09-what-changed.mjs`.
 >
