@@ -1,0 +1,51 @@
+---
+title: "Phase 7 — Asynchronous JavaScript"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+*22 topics.* **The centre of gravity of the whole syllabus.** As the syllabus puts it:
+*"If you only ever finish one phase to Master depth, finish that one — it is what every
+interview probes and what every production incident traces back to."*
+
+## Status — **in progress** (2026-08-13)
+
+**Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
+any other phase. They are being written in syllabus order.
+
+## Topics
+
+| # | Topic | Tier | Status |
+|---|---|---|---|
+| 01 | **[Synchronous vs asynchronous](./01-sync-vs-async/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 02 | **[The event loop](./02-the-event-loop/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 03 | Microtasks vs macrotasks | <span className="db-tier t-master">Master</span> | planned |
+| 04 | Callbacks | <span className="db-tier t-master">Master</span> | planned |
+| 05 | Promises | <span className="db-tier t-master">Master</span> | planned |
+| 06 | Chaining | <span className="db-tier t-master">Master</span> | planned |
+| 07 | `async`/`await` | <span className="db-tier t-master">Master</span> | planned |
+| 08 | Error handling in async code | <span className="db-tier t-master">Master</span> | planned |
+| 09 | Sequential vs parallel `await` | <span className="db-tier t-master">Master</span> | planned |
+| 10 | `Promise.all` vs `allSettled` vs `race` vs `any` | <span className="db-tier t-master">Master</span> | planned |
+| 11 | Promise anti-patterns | <span className="db-tier t-master">Master</span> | planned |
+| 12–22 | Cancellation, timers, generators-as-async, workers, and the rest | Understand / Know | deferred |
+
+## How these pages are verified
+
+**Documentation-validated** — no new measurement sandboxes. Each page's `> Verified:`
+line names the MDN pages and specification sections it was checked against.
+
+🔴 **Ordering claims are held to the documentation.** Where Node and the browser
+implement different event loops, these pages assert only what both agree on — "microtasks
+drain before tasks" — and name the runtime explicitly for anything narrower. **No run
+means no console block**, so no page here prints an interleaving nobody produced.
+
+## Where this connects
+
+- [Phase 0 · How JavaScript runs](../phase-0-how-javascript-runs/README.md) — the engine and the runtime underneath
+- [Phase 6 · 02 · Control flow and choosing](../phase-6-iteration-and-destructuring/02-loop-forms/02-control-flow-and-choosing.md) — sequential vs concurrent `await`, introduced there
+- [Phase 5 · 04 · Callbacks, holes and async](../phase-5-built-in-library/04-array-iteration-methods/02-callbacks-holes-and-async.md) — the `forEach(async …)` trap
+
+---
+
+Start → [01 · Synchronous vs asynchronous](./01-sync-vs-async/README.md)

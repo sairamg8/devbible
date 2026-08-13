@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
-| 7 · Asynchronous JavaScript | Data & async | 22 | 🔴 **next** — the syllabus's centre of gravity |
+| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **in progress** — Master tier (01, 02 done; 03–11 to go). The syllabus's centre of gravity |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
 | 9 · The DOM | Web APIs | 19 | planned |
 | 10 · Events and user input | Web APIs | 14 | planned |
