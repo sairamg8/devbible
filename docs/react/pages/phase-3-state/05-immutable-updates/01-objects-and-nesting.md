@@ -58,8 +58,8 @@ function onMove(e) {
 
 **Failure 2 — the bail-out.** A setter *was* called, but `position` is the same
 object it always was. React compares with `Object.is`, finds them identical, and
-skips the re-render as an optimisation ([topic 11](11-bailing-out.md)). The data
-changed; the screen did not.
+skips the re-render as an optimisation ([topic 11](../11-bailing-out.md)). The
+data changed; the screen did not.
 
 Failure 2 is much worse than failure 1, because the code looks correct. It is
 also the failure that survives review.
@@ -173,7 +173,7 @@ This is correct, and it is a warning. Both remedies are documented:
 you control the shape:
 
 > If your state is deeply nested, you might want to consider
-> [flattening it.](/learn/choosing-the-state-structure#avoid-deeply-nested-state)
+> [flattening it.](https://react.dev/learn/choosing-the-state-structure#avoid-deeply-nested-state)
 
 [Structuring state](../10-structuring-state.md) covers this — a normalised
 `{byId, allIds}` shape turns the update above into a two-level spread.

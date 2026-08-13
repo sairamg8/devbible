@@ -18,8 +18,9 @@ holds unpushed work in progress and updates `src/data/progress.js` per phase.
 |---|---|
 | 0, 1 | ✅ Done earlier (measured, `sandbox/react-p0` and `react-p1`) |
 | 2 | ✅ **Done** — committed `c462cc8` |
-| 3 | 🔴 **IN PROGRESS right now** — topics 01–12 of 17 written |
-| 4–14 | ⬜ Not started, claimed by this session |
+| 3 | ✅ **Done** — 17 topics, 19 files |
+| 4 | 🔴 **Next up** — Effects and synchronization (18 topics) |
+| 5–14 | ⬜ Not started, claimed by this session |
 
 **Shared-checkout rules while this is live:** never `git add -A` — stage explicit
 paths only, because at least three sessions have uncommitted work in this tree.
@@ -58,7 +59,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[0 — How React runs](./phase-0-how-react-runs/README.md)** | ✅ **Written** | 14 pages, 17 topics |
 | **[1 — JSX and what a component returns](./phase-1-jsx/README.md)** | ✅ **Written** | 15 pages, 15 topics |
 | **[2 — Components, props and composition](./phase-2-components/README.md)** | ✅ **Written** | 16 pages, 16 topics |
-| 3 — State and the render cycle | Not started | — |
+| **[3 — State and the render cycle](./phase-3-state/README.md)** | ✅ **Written** | 17 pages, 17 topics |
 | 4 — Effects and synchronization | Not started | — |
 | 5 — Refs, context and reducers | Not started | — |
 | 6 — Rendering performance and the Compiler | Not started | — |
