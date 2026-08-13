@@ -24,7 +24,7 @@ import Progress from '@site/src/components/Progress';
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01–08); 09–20 deferred |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
-| 5 · The built-in library | Data & async | 26 | 🔴 **next** |
+| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **in progress** — Master tier (01 done; 02, 04–07, 09, 10 to go) |
 | 6 · Iteration, destructuring and generators | Data & async | 13 | planned |
 | 7 · Asynchronous JavaScript | Data & async | 22 | planned |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
