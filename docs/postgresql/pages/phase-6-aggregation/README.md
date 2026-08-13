@@ -16,18 +16,20 @@ sidebar_position: 0
 | 06 | **[Window functions](windows-intro/)** | <span className="db-tier t-understand">Understand</span> | aggregates that keep the rows |
 | 07 | **[Ranking functions](ranking/)** | <span className="db-tier t-understand">Understand</span> | ties, and top-N per group |
 | 08 | **[lag, lead, first/last_value](lag-lead/)** | <span className="db-tier t-understand">Understand</span> | reaching into neighbouring rows |
-| 09 | **[CTEs WITH](09-ctes.md)** | <span className="db-tier t-understand">Understand</span> | readability MATERIALIZED |
-| 10 | **[Data-modifying CTEs](10-modifying-ctes.md)** | <span className="db-tier t-understand">Understand</span> | DELETE RETURNING chain |
-| 11 | **[Subqueries](11-subqueries.md)** | <span className="db-tier t-understand">Understand</span> | correlated cost |
-| 12 | **[Counting for pagination](12-pagination-counts.md)** | <span className="db-tier t-understand">Understand</span> | limit plus one |
-| 13 | **[Ordered-set aggregates](13-ordered-set.md)** | <span className="db-tier t-know">Know</span> | percentile_cont |
-| 14 | **[Window frames](14-frames.md)** | <span className="db-tier t-know">Know</span> | ROWS BETWEEN |
-| 15 | **[Recursive CTEs](15-recursive-cte.md)** | <span className="db-tier t-know">Know</span> | trees graphs |
-| 16 | **[GROUPING SETS ROLLUP CUBE](16-grouping-sets.md)** | <span className="db-tier t-when">When Needed</span> | multi aggregates |
+| 09 | **[CTEs (WITH)](ctes/)** | <span className="db-tier t-understand">Understand</span> | a name for a subquery — and when it is a fence |
+| 10 | **[Data-modifying CTEs](modifying-ctes/)** | <span className="db-tier t-understand">Understand</span> | several writes in one atomic statement, and the write one of them loses |
+| 11 | **[Subqueries](subqueries/)** | <span className="db-tier t-understand">Understand</span> | scalar, correlated, and the `NOT IN` that returns nothing |
+| 12 | **[Counting for pagination](pagination-counts/)** | <span className="db-tier t-understand">Understand</span> | the page costs 2 ms and the total costs 49 |
+| 13 | **[Ordered-set aggregates](ordered-set/)** | <span className="db-tier t-know">Know</span> | percentiles, and what `mode()` hides |
+| 14 | **[Window frames](frames/)** | <span className="db-tier t-know">Know</span> | `ROWS` vs `RANGE`, and the default that merges peers |
+| 15 | **[Recursive CTEs](recursive-cte/)** | <span className="db-tier t-know">Know</span> | trees, graphs, and the cycle that never terminates |
+| 16 | **[GROUPING SETS ROLLUP CUBE](grouping-sets/)** | <span className="db-tier t-when">When Needed</span> | subtotals in one pass — which is not always faster |
 
 ## Phase gate
 
-Move on when you can GROUP BY correctly and write a basic window.
+Move on when you can `GROUP BY` correctly, write a window function with a deliberate frame,
+say whether a CTE is inlined or fenced, and explain why `NOT IN` over a nullable subquery
+returns nothing.
 
 ---
 

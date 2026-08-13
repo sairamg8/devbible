@@ -1,0 +1,17 @@
+/*
+ * The theme's sidebar fills the sticky aside. Adding the control bar above it means the
+ * two have to share that height, so this becomes the flex column and the sidebar takes
+ * the remainder.
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.wrapper > :global(.theme-doc-sidebar-container),
+.wrapper > div:last-child {
+  flex: 1 1 auto;
+  min-height: 0;
+}

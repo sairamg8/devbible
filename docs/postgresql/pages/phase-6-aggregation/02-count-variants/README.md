@@ -51,7 +51,7 @@ table by asking one question about its indexes.
 ## Where this connects
 
 - **[GROUP BY and aggregates](../group-by/)** — where the `NULL`-skipping rule comes from
-- **[Counting for pagination](../12-pagination-counts.md)** — when *not* to count at all
+- **[Counting for pagination](../pagination-counts/)** — when *not* to count at all
 - **[FILTER](../filter-clause/)** — counting several conditions in one pass
 - **[Fan-out and aggregates](../../phase-5-joins/01-inner-join/02-fan-out-and-aggregates.md)** —
   the join-side view of the same problem

@@ -241,4 +241,4 @@ second window instead.
 
 ---
 
-← [lag and lead](01-lag-and-lead.md) · Next topic → [CTEs](../09-ctes.md)
+← [lag and lead](01-lag-and-lead.md) · Next topic → [CTEs](../ctes/)

@@ -50,7 +50,7 @@ that differs from `sum(CASE … ELSE 0)`.
   comes from
 - **[HAVING vs WHERE](../having/)** — `FILTER` restricts one aggregate; `WHERE`
   restricts the whole query
-- **[GROUPING SETS](../16-grouping-sets.md)** — the other way to get several
+- **[GROUPING SETS](../grouping-sets/)** — the other way to get several
   aggregations out of one scan
 - **[Window functions](../windows-intro/)** — `FILTER` works there as well
 

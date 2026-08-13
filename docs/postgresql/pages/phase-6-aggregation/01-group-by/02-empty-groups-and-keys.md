@@ -80,7 +80,7 @@ SELECT coalesce(sum(total), 0) + 500 AS with_shipping FROM agg_orders WHERE stat
 `count` is the exception that returns `0` rather than `NULL`. The asymmetry is worth
 memorising because it flips whether "no data" looks like zero or like missing,
 depending purely on which aggregate you reached for. The same asymmetry appears again
-with [`bool_and` over an empty set](../13-ordered-set.md), which is `NULL` rather than
+with [`bool_and` over an empty set](../ordered-set/), which is `NULL` rather than
 the vacuous `true` most people predict.
 
 ## `NULL` as a grouping key
@@ -115,7 +115,7 @@ FROM agg_orders GROUP BY 1 ORDER BY 1;
 Be careful with that specific trick when the column can legitimately contain the
 placeholder string — `coalesce(country, 'unknown')` merges genuine `'unknown'` values
 into the `NULL` bucket. When the distinction matters, keep them apart with a boolean
-flag, or use [`GROUPING()`](../16-grouping-sets.md), which exists precisely to tell a
+flag, or use [`GROUPING()`](../grouping-sets/), which exists precisely to tell a
 data `NULL` from a synthetic one.
 
 ## Grouping by more than one column

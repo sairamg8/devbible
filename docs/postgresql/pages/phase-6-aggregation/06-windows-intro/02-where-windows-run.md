@@ -62,7 +62,7 @@ SELECT id FROM numbered WHERE rn <= 2;
 ```
 
 Since PostgreSQL 12 a single-reference CTE is inlined by default, so this is not an
-optimisation fence — see [CTEs](../09-ctes.md). Use whichever reads better; the corpus
+optimisation fence — see [CTEs](../ctes/). Use whichever reads better; the corpus
 uses the subquery for two-line cases and a CTE when there are several stages.
 
 **This is not a workaround, it is the shape of the answer.** "Top 3 per group" is

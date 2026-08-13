@@ -1,0 +1,51 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem 0.4rem;
+  border-bottom: 1px solid var(--db-rule);
+}
+
+.button {
+  flex: 1;
+  padding: 0.28rem 0.4rem;
+  border-radius: 4px;
+  font-family: var(--db-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--db-ink-soft, var(--db-ink));
+  opacity: 0.75;
+  cursor: pointer;
+  transition: background-color 120ms ease, opacity 120ms ease, color 120ms ease;
+}
+
+.button:hover {
+  background-color: var(--db-accent-soft);
+  color: var(--db-accent-ink);
+  opacity: 1;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--db-accent);
+  outline-offset: 1px;
+}
+
+.active {
+  color: var(--db-accent-ink);
+  background-color: var(--db-accent-soft);
+  opacity: 1;
+}
+
+.divider {
+  width: 1px;
+  height: 0.9rem;
+  background-color: var(--db-rule);
+}
+
+/* The mobile sidebar is a full-width drawer with its own padding. */
+@media (max-width: 996px) {
+  .bar {
+    padding: 0.5rem 0.5rem 0.4rem;
+  }
+}

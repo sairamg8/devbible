@@ -155,7 +155,7 @@ large filtered set is `O(matching rows)` no matter how it is planned, and the mo
 common reason to run one — a "showing 1–20 of N" footer — has cheaper answers:
 planner estimates, `limit + 1` for a has-more flag, or an exact count capped at some
 threshold. Measured, including the `limit+1` probe at **2.37 ms** against an exact
-count at 52.59 ms, on [counting for pagination](../12-pagination-counts.md).
+count at 52.59 ms, on [counting for pagination](../pagination-counts/).
 
 ## Trade-off
 

@@ -47,7 +47,7 @@ question about the data.
 - **[DISTINCT ON](../../phase-4-crud/12-distinct-on.md)** — the PostgreSQL shortcut for top-**1**
 - **[LATERAL](../../phase-5-joins/10-lateral.md)** — the join-shaped alternative, and where
   it won instead
-- **[Window frames](../14-frames.md)** — why ranking functions ignore the frame clause
+- **[Window frames](../frames/)** — why ranking functions ignore the frame clause
 
 ---
 

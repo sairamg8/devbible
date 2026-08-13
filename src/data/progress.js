@@ -62,7 +62,7 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-ddl', name: 'DDL: tables, constraints, schema design', part: 'Foundations', topics: 19, pages: 19},
       {n: 4, slug: 'phase-4-crud', name: 'CRUD and DML', part: 'SQL', topics: 20, pages: 20},
       {n: 5, slug: 'phase-5-joins', name: 'Joins and set operations', part: 'SQL', topics: 13, pages: 13},
-      {n: 6, slug: 'phase-6-aggregation', name: 'Aggregation, windows and CTEs', part: 'SQL', topics: 16, pages: 0},
+      {n: 6, slug: 'phase-6-aggregation', name: 'Aggregation, windows and CTEs', part: 'SQL', topics: 16, pages: 16},
       {n: 7, slug: 'phase-7-pg-driver', name: 'The pg driver, end to end', part: 'Node + raw pg', topics: 16, pages: 16},
       {n: 8, slug: 'phase-8-schema-from-node', name: 'Schema and data from Node', part: 'Node + raw pg', topics: 14, pages: 14},
       {n: 9, slug: 'phase-9-api-crud', name: 'CRUD patterns for a real API', part: 'Node + raw pg', topics: 18, pages: 4, pagesPlanned: 18},

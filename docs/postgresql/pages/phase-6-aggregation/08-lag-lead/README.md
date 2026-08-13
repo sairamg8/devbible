@@ -40,7 +40,7 @@ frame while `first_value` does not.
 ## Where this connects
 
 - **[Window functions](../windows-intro/)** — the `OVER` mechanics
-- **[Window frames](../14-frames.md)** — the frame clause these depend on, in full
+- **[Window frames](../frames/)** — the frame clause these depend on, in full
 - **[Ranking functions](../ranking/)** — the other window-only family
 - **[generate_series](../../phase-4-crud/18-generate-series.md)** — the calendar spine that
   fixes the gap problem

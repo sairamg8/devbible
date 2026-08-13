@@ -105,7 +105,7 @@ total of the partition" to "the total so far".
 **Why:** an `ORDER BY` inside a window implies a default *frame* of `RANGE BETWEEN
 UNBOUNDED PRECEDING AND CURRENT ROW` — "from the start of the partition up to this row".
 Without `ORDER BY` the default frame is the whole partition. That default is also the
-source of two classic surprises, both covered on [window frames](../14-frames.md): rows
+source of two classic surprises, both covered on [window frames](../frames/): rows
 with equal `ORDER BY` values (peers) share a running total, and `last_value` returns the
 current row rather than the last one.
 
@@ -135,7 +135,7 @@ by region, and every "running X within Y" report.
 ## What a window can be built from
 
 Any aggregate works with `OVER`: `sum`, `count`, `avg`, `min`, `max`, `array_agg`,
-`jsonb_agg`, `string_agg`, and the [ordered-set aggregates](../13-ordered-set.md). So do
+`jsonb_agg`, `string_agg`, and the [ordered-set aggregates](../ordered-set/). So do
 the window-only functions — `row_number`, `rank`, `lag`, `lead` — which exist *only* in
 this context and are covered in [ranking](../ranking/) and
 [lag/lead](../lag-lead/).
@@ -205,7 +205,7 @@ partition total, remove the inner `ORDER BY`
 **Symptom:** rows with the same `ORDER BY` value share a running total instead of stepping
 **Cause:** the default frame is `RANGE`, which includes all peers of the current row
 **Fix:** `ROWS UNBOUNDED PRECEDING` for a strict row-by-row accumulation — see
-[frames](../14-frames.md)
+[frames](../frames/)
 
 **Symptom:** `sum(total) OVER (PARTITION BY customer_id)` differs from the `GROUP BY`
 version of the same report

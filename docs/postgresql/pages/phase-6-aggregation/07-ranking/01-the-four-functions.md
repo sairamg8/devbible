@@ -110,7 +110,7 @@ Ranking functions **ignore the frame clause**. `rank() OVER (ORDER BY x ROWS BET
 PRECEDING AND CURRENT ROW)` is accepted and the frame has no effect, because rank is
 defined over the whole partition by peer group. Only aggregate window functions and the
 positional ones (`first_value`, `last_value`, `nth_value`) respond to a frame — see
-[frames](../14-frames.md).
+[frames](../frames/).
 
 ## `ntile`
 
@@ -143,7 +143,7 @@ different buckets, and which one is arbitrary in exactly the way `row_number` is
 
 That makes `ntile` unsuitable for anything where equal values must be treated equally —
 grading, tiering, commission bands. For those, compute the thresholds with
-[`percentile_cont`](../13-ordered-set.md) and compare values against them, which puts
+[`percentile_cont`](../ordered-set/) and compare values against them, which puts
 equal values in the same band by construction.
 
 Fewer rows than buckets is legal and gives one row each, with the empty buckets simply
