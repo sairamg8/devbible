@@ -38,14 +38,12 @@ show('((a = 1, b) => 0).length', ((a = 1, b) => 0).length + '  ← counts up to 
 show('((a, ...r) => 0).length', ((a, ...r) => 0).length + '  ← rest is not counted');
 show('((a, {b}) => 0).length', ((a, {b}) => 0).length + '  ← destructuring IS counted');
 
-line('arguments is live for simple params, decoupled once a default exists');
+line('arguments aliasing: NOT here — this file is an ES module, so it is strict');
 function simple(a) { a = 99; return arguments[0]; }
-show('simple(1): a = 99 then arguments[0]', simple(1) + '  ← linked (sloppy-mode aliasing)');
+show('simple(1): a = 99 then arguments[0]', simple(1) + '  ← unlinked: strict mode');
 function withDefault(a, b = 2) { a = 99; return arguments[0]; }
-show('withDefault(1): a = 99 then arguments[0]', withDefault(1) + '  ← NOT linked');
-function strictFn(a) { 'use strict'; a = 99; return arguments[0]; }
-show('strict mode, a = 99 then arguments[0]', strictFn(1) + '  ← never linked in strict mode');
-show('this file is an ES module, so it is', 'strict by default');
+show('withDefault(1): a = 99 then arguments[0]', withDefault(1) + '  ← unlinked: has a default');
+show('all rows read 1 because a module is strict', 'see ex2b-arguments-sloppy.cjs for the aliased case');
 
 line('arguments is not an array');
 function args() {
@@ -58,6 +56,8 @@ function args() {
   };
 }
 console.log(' ', args(1, 2, 3));
+function callMap() { try { arguments.map((x) => x); } catch (e) { return `${e.constructor.name}: ${e.message}`; } }
+show('arguments.map(x => x)', callMap(1, 2));
 
 line('rest parameters');
 function rest(first, ...others) { return {first, others, isArray: Array.isArray(others)}; }
@@ -82,9 +82,12 @@ console.log(' ', req({}));
 console.log(' ', req());
 
 line('argument count is never enforced');
-function two(a, b) { return [a, b, arguments.length]; }
-show('two(1)', JSON.stringify(two(1)));
-show('two(1, 2, 3, 4)', JSON.stringify(two(1, 2, 3, 4)));
+// NOTE: printed with util.inspect, not JSON.stringify — the latter turns
+// `undefined` into `null` and would misreport the missing argument.
+const {inspect} = await import('node:util');
+function two(a, b) { return {a, b, argumentsLength: arguments.length}; }
+show('two(1)', inspect(two(1)));
+show('two(1, 2, 3, 4)', inspect(two(1, 2, 3, 4)));
 show('  ↑ no error either way', 'JavaScript has no arity checking');
 
 line('parameters are in their own scope, separate from the body');

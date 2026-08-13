@@ -139,13 +139,20 @@ one genuinely useful reason to name a function expression beyond stack traces.
 ```
 
 An arrow function has **no `prototype` property** and cannot be called with
-`new`. It is a callable object and nothing more. Four things it lacks:
+`new`. It is a callable object and nothing more.
+
+Precisely: an arrow has no **own binding** for `this`, `arguments`, `super` or
+`new.target` — it inherits all four from the enclosing scope — and it genuinely
+has no `prototype` at all.
 
 1. **`this`** of its own — it uses the enclosing scope's. This is the big one, and
-   it has [its own page](./04-arrow-functions-and-this.md).
+   it has [its own page](./04-arrow-functions-and-this/README.md).
 2. **`arguments`** — measured below.
 3. **`prototype`** — so `new` throws `TypeError: A is not a constructor`.
-4. **`super`** and `new.target`.
+4. **`super`** and **`new.target`** — inherited, not absent. `super.greet()`
+   inside an arrow in a class method works; `new.target` in an arrow with no
+   enclosing function is a `SyntaxError`. Both measured on
+   [the arrow page](./04-arrow-functions-and-this/README.md).
 
 ## `arguments`
 
@@ -178,7 +185,7 @@ A short and genuinely defensible default:
   reference-before-use functions** — hoisting is a feature there, and the name is
   free.
 - **Never an arrow as an object method** if the method needs `this` — see
-  [Arrow functions and `this`](./04-arrow-functions-and-this.md).
+  [Arrow functions and `this`](./04-arrow-functions-and-this/README.md).
 - **Never `var fn = function () {}`.** It combines the worst hoisting behaviour
   with the least informative error.
 
@@ -269,4 +276,4 @@ a feature there, not a hazard.
 
 ---
 
-← [Phase index](./README.md) · Next → [Parameters](./02-parameters.md)
+← [Phase index](./README.md) · Next → [Parameters](./02-parameters/README.md)
