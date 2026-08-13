@@ -1,0 +1,197 @@
+[
+  {
+    "id": "phase-0-express-basics_01-what-express-is_md__1",
+    "file": "phase-0-express-basics/01-what-express-is.md",
+    "expected": "$ node what-express-is.mjs\nexpress export is a function: true\napp is a function (request listener): true\napp.handle exists: true"
+  },
+  {
+    "id": "phase-0-express-basics_02-app-router-server_md__1",
+    "file": "phase-0-express-basics/02-app-router-server.md",
+    "expected": "$ node object-graph.mjs\n{ mountpath: '/users', path: '/' }\nserver is http.Server: true\napp === users? false"
+  },
+  {
+    "id": "phase-0-express-basics_03-request-lifecycle_md__1",
+    "file": "phase-0-express-basics/03-request-lifecycle.md",
+    "expected": "$ node lifecycle.mjs\n1 middleware GET /ok\n2 handler\nstatus 200\n1 middleware GET /missing\n3 404\nstatus 404"
+  },
+  {
+    "id": "phase-0-express-basics_04-creating-an-app_md__1",
+    "file": "phase-0-express-basics/04-creating-an-app.md",
+    "expected": "$ node create-app.mjs\n200 { ok: true }"
+  },
+  {
+    "id": "phase-0-express-basics_04-creating-an-app_md__2",
+    "file": "phase-0-express-basics/04-creating-an-app.md",
+    "expected": ""
+  },
+  {
+    "id": "phase-0-express-basics_05-application-settings_md__1",
+    "file": "phase-0-express-basics/05-application-settings.md",
+    "expected": "$ node settings.mjs\nenv = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = false\ncase sensitive routing = false"
+  },
+  {
+    "id": "phase-0-express-basics_05-application-settings_md__2",
+    "file": "phase-0-express-basics/05-application-settings.md",
+    "expected": "$ node harden-basics.mjs\nx-powered-by false"
+  },
+  {
+    "id": "phase-0-express-basics_06-express-5-vs-4_md__1",
+    "file": "phase-0-express-basics/06-express-5-vs-4.md",
+    "expected": "$ node path-break.mjs\napp.get('*') → THREW: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info\napp.get('/*splat') → accepted\napp.get('/user/:id?') → THREW: Unexpected ? at index 9: /user/:id?; visit https://git.new/pathToRegexpError for info"
+  },
+  {
+    "id": "phase-0-express-basics_06-express-5-vs-4_md__2",
+    "file": "phase-0-express-basics/06-express-5-vs-4.md",
+    "expected": "$ node async-error.mjs\n500 { error: 'async boom' }"
+  },
+  {
+    "id": "phase-1-routing_01-http-methods_md__1",
+    "file": "phase-1-routing/01-http-methods.md",
+    "expected": "$ node methods.mjs\nPOST /items 200 create\nDELETE /items (no handler) 404\nall /ping OPTIONS OPTIONS"
+  },
+  {
+    "id": "phase-1-routing_02-params-and-query_md__1",
+    "file": "phase-1-routing/02-params-and-query.md",
+    "expected": "$ node params.mjs\n{ params: { userId: 'u1', bookId: 'b9' }, path: '/users/u1/books/b9' }"
+  },
+  {
+    "id": "phase-1-routing_02-params-and-query_md__2",
+    "file": "phase-1-routing/02-params-and-query.md",
+    "expected": "$ node query.mjs\n{ a: [ '1', '2' ], 'a[b]': '1', q: 'hello world' }"
+  },
+  {
+    "id": "phase-1-routing_03-router-composition_md__1",
+    "file": "phase-1-routing/03-router-composition.md",
+    "expected": "$ node routers.mjs\n{ baseUrl: '/api/users', path: '/', url: '/' }\n{ id: '7', baseUrl: '/api/users' }"
+  },
+  {
+    "id": "phase-1-routing_03-router-composition_md__2",
+    "file": "phase-1-routing/03-router-composition.md",
+    "expected": "$ node nested.mjs\n{ postId: '1', commentId: '2' }"
+  },
+  {
+    "id": "phase-1-routing_04-route-ordering_md__1",
+    "file": "phase-1-routing/04-route-ordering.md",
+    "expected": "$ node order.mjs\nstatic first → export\nparam first → id=export"
+  },
+  {
+    "id": "phase-1-routing_05-path-matching-express5_md__1",
+    "file": "phase-1-routing/05-path-matching-express5.md",
+    "expected": "$ node path-v5.mjs\n'*' → THREW: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info\n'/*splat' → accepted\n'/user/:id?' → THREW: Unexpected ? at index 9: /user/:id?; visit https://git.new/pathToRegexpError for info\n'/users/:userId' → accepted"
+  },
+  {
+    "id": "phase-1-routing_06-router-param_md__1",
+    "file": "phase-1-routing/06-router-param.md",
+    "expected": "$ node param.mjs\nok { item: { id: '42', name: 'Widget' } }\nedit { editing: { id: '42', name: 'Widget' } }\nmissing 404"
+  },
+  {
+    "id": "phase-1-routing_07-app-route-and-hosts_md__1",
+    "file": "phase-1-routing/07-app-route-and-hosts.md",
+    "expected": "$ node route-chain.mjs\nGET get book\nPOST post book"
+  },
+  {
+    "id": "phase-1-routing_07-app-route-and-hosts_md__2",
+    "file": "phase-1-routing/07-app-route-and-hosts.md",
+    "expected": "$ node mountpath.mjs\nafter mount, admin.mountpath = /admin\n{ mountpath: '/admin', baseUrl: '/admin' }"
+  },
+  {
+    "id": "phase-10-app-factory_06-shutdown-and-entrypoint_md__1",
+    "file": "phase-10-app-factory/06-shutdown-and-entrypoint.md",
+    "expected": ""
+  },
+  {
+    "id": "phase-2-middleware_01-middleware-contract_md__1",
+    "file": "phase-2-middleware/01-middleware-contract.md",
+    "expected": "$ node contract.mjs\n{ seen: [ 'A', 'B' ] }"
+  },
+  {
+    "id": "phase-2-middleware_02-execution-order_md__1",
+    "file": "phase-2-middleware/02-execution-order.md",
+    "expected": "$ node order-mw.mjs\n{ trace: [ 'app', 'router', 'route' ] }"
+  },
+  {
+    "id": "phase-2-middleware_03-next-semantics_md__1",
+    "file": "phase-2-middleware/03-next-semantics.md",
+    "expected": "$ node hang.mjs\nok ok\nhang: client aborted (server never responded)"
+  },
+  {
+    "id": "phase-2-middleware_03-next-semantics_md__2",
+    "file": "phase-2-middleware/03-next-semantics.md",
+    "expected": "$ node next-err.mjs\nnope"
+  },
+  {
+    "id": "phase-2-middleware_03-next-semantics_md__3",
+    "file": "phase-2-middleware/03-next-semantics.md",
+    "expected": "$ node double.mjs\nerror: Cannot set headers after they are sent to the client\nbody: first"
+  },
+  {
+    "id": "phase-2-middleware_04-middleware-factories_md__1",
+    "file": "phase-2-middleware/04-middleware-factories.md",
+    "expected": "$ node factory.mjs\nno key 400\nkey ok"
+  },
+  {
+    "id": "phase-2-middleware_06-mutating-req-res_md__1",
+    "file": "phase-2-middleware/06-mutating-req-res.md",
+    "expected": ""
+  },
+  {
+    "id": "phase-3-requests_01-req-anatomy_md__1",
+    "file": "phase-3-requests/01-req-anatomy.md",
+    "expected": "$ node anatomy.mjs\n{\n  method: 'POST',\n  path: '/echo',\n  query: { x: '1' },\n  body: undefined,\n  hasCookieParser: 'undefined'\n}"
+  },
+  {
+    "id": "phase-3-requests_02-json-and-urlencoded_md__1",
+    "file": "phase-3-requests/02-json-and-urlencoded.md",
+    "expected": "$ node json-parse.mjs\njson { body: { a: 1 } }\nwrong type { body: undefined }"
+  },
+  {
+    "id": "phase-3-requests_03-size-limits_md__1",
+    "file": "phase-3-requests/03-size-limits.md",
+    "expected": "$ node limit.mjs\n413 { type: 'entity.too.large', message: 'request entity too large' }"
+  },
+  {
+    "id": "phase-3-requests_04-query-parser_md__1",
+    "file": "phase-3-requests/04-query-parser.md",
+    "expected": "$ node query-simple.mjs\ndefault simple\n{ a: [ '1', '2' ], 'a[b]': '1' }"
+  },
+  {
+    "id": "phase-3-requests_05-malformed-bodies_md__1",
+    "file": "phase-3-requests/05-malformed-bodies.md",
+    "expected": "$ node malformed.mjs\n400 {\n  type: 'entity.parse.failed',\n  message: \"Expected property name or '}' in JSON at position 1 (line 1 column 2)\"\n}"
+  },
+  {
+    "id": "phase-3-requests_06-raw-and-text_md__1",
+    "file": "phase-3-requests/06-raw-and-text.md",
+    "expected": "$ node raw.mjs\n{ isBuffer: true, len: 13 }"
+  },
+  {
+    "id": "phase-4-responses_01-res-methods_md__1",
+    "file": "phase-4-responses/01-res-methods.md",
+    "expected": "$ node res-methods.mjs\njson 201 { created: true }\nsend plain\nredirect 302 /j"
+  },
+  {
+    "id": "phase-4-responses_04-headers-already-sent_md__1",
+    "file": "phase-4-responses/04-headers-already-sent.md",
+    "expected": "$ node double-res.mjs\nerror: Cannot set headers after they are sent to the client\nbody { a: 1 }"
+  },
+  {
+    "id": "phase-4-responses_06-spa-fallback_md__1",
+    "file": "phase-4-responses/06-spa-fallback.md",
+    "expected": "$ node spa.mjs\napi { ok: true }\nspa <html>hi</html>"
+  },
+  {
+    "id": "phase-4-responses_07-cookies-out_md__1",
+    "file": "phase-4-responses/07-cookies-out.md",
+    "expected": "$ node set-cookie.mjs\n[ 'sid=abc; Path=/; HttpOnly; SameSite=Lax' ]"
+  },
+  {
+    "id": "phase-5-errors_01-error-middleware_md__1",
+    "file": "phase-5-errors/01-error-middleware.md",
+    "expected": "$ node error-mw.mjs\n{ error: 'nope' }"
+  },
+  {
+    "id": "phase-5-errors_02-async-errors_md__1",
+    "file": "phase-5-errors/02-async-errors.md",
+    "expected": "$ node async-err.mjs\n{ error: 'async boom' }"
+  }
+]

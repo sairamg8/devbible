@@ -1,0 +1,1 @@
+{"name":"ex13-tc","private":true,"type":"module","dependencies":{"@testcontainers/postgresql":"^12.1.0","pg":"^8.23.0"}}

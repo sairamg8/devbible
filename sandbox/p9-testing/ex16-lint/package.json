@@ -1,0 +1,1 @@
+{"name":"ex16","private":true,"type":"module","dependencies":{"@biomejs/biome":"^2.5.8","@eslint/js":"^10.0.1","eslint":"^10.8.1","prettier":"^3.9.6"}}

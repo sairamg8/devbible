@@ -18,4 +18,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-sandbox
+
+# The measurement scripts ARE committed — every `> Verified:` line on a page names
+# one, and a reviewer must be able to re-run it. Only dependencies and run
+# artifacts are ignored; lockfiles are kept so a re-run pins the same versions.
+sandbox/**/node_modules/
+sandbox/**/.stryker-tmp/
+sandbox/**/*.log

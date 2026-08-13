@@ -1,0 +1,16 @@
+{
+  "name": "p7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "bullmq": "^6.0.10",
+    "ioredis": "^6.0.0",
+    "pg": "^8.23.0"
+  }
+}
