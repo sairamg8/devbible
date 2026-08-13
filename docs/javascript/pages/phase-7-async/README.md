@@ -19,7 +19,7 @@ any other phase. They are being written in syllabus order.
 |---|---|---|---|
 | 01 | **[Synchronous vs asynchronous](./01-sync-vs-async/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[The event loop](./02-the-event-loop/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03 | Microtasks vs macrotasks | <span className="db-tier t-master">Master</span> | planned |
+| 03 | **[Microtasks vs macrotasks](./03-microtasks-vs-macrotasks/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | Callbacks | <span className="db-tier t-master">Master</span> | planned |
 | 05 | Promises | <span className="db-tier t-master">Master</span> | planned |
 | 06 | Chaining | <span className="db-tier t-master">Master</span> | planned |
