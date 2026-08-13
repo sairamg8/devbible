@@ -4,6 +4,34 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::caution 🔒 CLAIMED — React is being actively written by another session
+
+**Owner:** session `52a29103` · **Since:** 2026-08-13 · **Scope:** the whole of
+`docs/react/` — every phase, in order.
+
+**If you are a different session, do not write React pages.** Pick another
+technology (MongoDB, Docker, Redis and Nginx still have zero pages) or an
+existing parked one. Editing React pages concurrently will collide: this session
+holds unpushed work in progress and updates `src/data/progress.js` per phase.
+
+| Phase | State |
+|---|---|
+| 0, 1 | ✅ Done earlier (measured, `sandbox/react-p0` and `react-p1`) |
+| 2 | ✅ **Done** — committed `c462cc8` |
+| 3 | 🔴 **IN PROGRESS right now** — topics 01–12 of 17 written |
+| 4–14 | ⬜ Not started, claimed by this session |
+
+**Shared-checkout rules while this is live:** never `git add -A` — stage explicit
+paths only, because at least three sessions have uncommitted work in this tree.
+`src/data/progress.js` is edited by every session; change only your own
+language's rows.
+
+Concepts for each finished phase are recorded in the memory store at
+`/mnt/Storage/my-learning/claude/devbible/` — see `INDEX.md`, entries
+`reference_react_concepts_*`.
+
+:::
+
 > **Target: React 19.2.8 / react-dom 19.2.8**, the `latest` dist-tag as of
 > August 2026. Browser experiments run in **Firefox 153.0**; Node work on
 > **Node 24.19.0** (Active LTS).
