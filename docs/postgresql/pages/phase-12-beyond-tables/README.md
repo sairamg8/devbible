@@ -8,11 +8,11 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[jsonb operators](01-jsonb-operators.md)** | <span className="db-tier t-master">Master</span> | arrow and containment |
+| 01 | **[jsonb operators](./jsonb-operators/)** | <span className="db-tier t-master">Master</span> | arrow and containment |
 | 02 | **[When a column beats JSON](02-column-vs-json.md)** | <span className="db-tier t-master">Master</span> | early decision |
 | 03 | **[Indexing jsonb](03-index-jsonb.md)** | <span className="db-tier t-understand">Understand</span> | GIN path ops |
 | 04 | **[Building JSON in SQL](04-build-json-sql.md)** | <span className="db-tier t-understand">Understand</span> | jsonb_build_object |
-| 05 | **[Full-text search](05-full-text.md)** | <span className="db-tier t-understand">Understand</span> | tsvector |
+| 05 | **[Full-text search](./full-text/)** | <span className="db-tier t-understand">Understand</span> | tsvector |
 | 06 | **[pg_trgm fuzzy](06-pg-trgm.md)** | <span className="db-tier t-understand">Understand</span> | ILIKE without full scan |
 | 07 | **[Views](07-views.md)** | <span className="db-tier t-understand">Understand</span> | named queries |
 | 08 | **[Triggers](08-triggers.md)** | <span className="db-tier t-understand">Understand</span> | updated_at |
@@ -32,4 +32,4 @@ Move on when you can choose columns vs jsonb and know when FTS/partitioning is j
 
 ---
 
-← Syllabus: [Part 4](../../syllabus/04-performance-and-production.md) · Start → [jsonb operators](01-jsonb-operators.md)
+← Syllabus: [Part 4](../../syllabus/04-performance-and-production.md) · Start → [jsonb operators](./jsonb-operators/)

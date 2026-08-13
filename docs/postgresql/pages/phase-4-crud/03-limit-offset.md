@@ -63,7 +63,7 @@ what the first page costs.
 
 The mechanics — including what to do when the sort key is not unique — are
 [Row constructors and keyset pagination](20-tuple-comparison.md) and
-[Keyset pagination](../phase-9-api-crud/10-keyset.md).
+[Keyset pagination](../phase-9-api-crud/keyset/).
 
 ## `OFFSET` pages drift under concurrent writes
 

@@ -196,4 +196,4 @@ supplying a column name. Both the column and the operator come from the map.
 
 ---
 
-← [The two failure modes](01-two-failure-modes.md) · Next → [Transactions in a request](../05-transactions-request.md)
+← [The two failure modes](01-two-failure-modes.md) · Next → [Transactions in a request](../transactions-request/)

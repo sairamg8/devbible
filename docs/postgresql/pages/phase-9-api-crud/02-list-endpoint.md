@@ -123,7 +123,7 @@ and they see a row twice; a delete makes them miss one. The tiebreaker fixes the
 *unstable sort*, not the *shifting window*.
 
 Keyset pagination — remembering the last row's sort key instead of counting rows —
-fixes both, and is covered in [Keyset pagination](10-keyset.md). Use `OFFSET` for
+fixes both, and is covered in [Keyset pagination](./keyset/). Use `OFFSET` for
 an admin screen with a page-number UI; use keyset for infinite scroll, public APIs,
 and anything crawlable.
 
@@ -246,4 +246,4 @@ on one checked-out client inside a transaction gives them the same snapshot.
 
 ---
 
-← [A repository module per resource](01-repository.md) · Next → [Safe dynamic `WHERE`](./safe-dynamic-where/)
+← [A repository module per resource](./repository/) · Next → [Safe dynamic `WHERE`](./safe-dynamic-where/)

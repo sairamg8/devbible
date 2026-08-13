@@ -65,7 +65,7 @@ export const LANGUAGES = {
       {n: 6, slug: 'phase-6-aggregation', name: 'Aggregation, windows and CTEs', part: 'SQL', topics: 16, pages: 16},
       {n: 7, slug: 'phase-7-pg-driver', name: 'The pg driver, end to end', part: 'Node + raw pg', topics: 16, pages: 16},
       {n: 8, slug: 'phase-8-schema-from-node', name: 'Schema and data from Node', part: 'Node + raw pg', topics: 14, pages: 14},
-      {n: 9, slug: 'phase-9-api-crud', name: 'CRUD patterns for a real API', part: 'Node + raw pg', topics: 18, pages: 4, pagesPlanned: 18},
+      {n: 9, slug: 'phase-9-api-crud', name: 'CRUD patterns for a real API', part: 'Node + raw pg', topics: 18, pages: 18},
       {n: 10, slug: 'phase-10-indexes', name: 'Indexes and the query planner', part: 'Performance & production', topics: 18, pages: 18},
       {n: 11, slug: 'phase-11-mvcc', name: 'Transactions, MVCC and concurrency', part: 'Performance & production', topics: 16, pages: 16},
       {n: 12, slug: 'phase-12-beyond-tables', name: 'Beyond plain tables', part: 'Performance & production', topics: 17, pages: 0},

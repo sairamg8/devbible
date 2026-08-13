@@ -64,7 +64,7 @@ test('creates a user', async () => {
 client.** Code that reaches for a module-level pool internally will run outside the
 transaction, so its writes commit and leak into the next test. This is exactly why
 the repository functions in
-[A repository module per resource](../phase-9-api-crud/01-repository.md) take a
+[A repository module per resource](../phase-9-api-crud/repository/) take a
 client as their first argument — testability is the main reason that shape is worth
 the extra parameter.
 

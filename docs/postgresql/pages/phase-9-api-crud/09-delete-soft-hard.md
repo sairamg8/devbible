@@ -120,7 +120,7 @@ deleted rows reappearing in a list, a dashboard counting three users where there
 one. There is no error to grep for. Two defences hold:
 
 1. **One place that builds the base query** ([A repository module per
-   resource](01-repository.md)), so the predicate is applied once, not remembered
+   resource](./repository/)), so the predicate is applied once, not remembered
    40 times.
 2. **A view** — rename the table to `sd_users_all` and
    `CREATE VIEW sd_users AS SELECT * FROM sd_users_all WHERE deleted_at IS NULL`.
@@ -242,4 +242,4 @@ corrupt any retention window measured from it.
 
 ---
 
-← [Partial updates](08-update-partial.md) · Next → [Keyset pagination](10-keyset.md)
+← [Partial updates](08-update-partial.md) · Next → [Keyset pagination](./keyset/)
