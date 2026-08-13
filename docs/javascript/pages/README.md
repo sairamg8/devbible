@@ -39,6 +39,58 @@ import Progress from '@site/src/components/Progress';
 | 17 · Machine coding: implement it yourself | DSA | 18 | planned |
 | 18 · Building the store front end | Applied | 18 | planned |
 
+## 🔒 Active work claim — read before editing anything under `docs/javascript/`
+
+| | |
+|---|---|
+| **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
+| **Claim** | **all of `docs/javascript/`** — Phase 3 topic 08, and Phase 4 Master topics |
+| **Last touched** | Phase 4 topic 07 (`this` in methods) — **in progress** |
+| **Done and committed** | P3 · 08 · `ae18809` · P4 scaffold + 01, 03 · `1397730` · chunk split · `9db85ac` · P4 · 04 · `cb8b606` · P4 · 05 · `97fb023` · P4 · 06 · `d48d7e2` |
+| **Next** | Phase 4 topic 08 (`Object.keys`/`values`/`entries`/`fromEntries`), then Phase 5 |
+
+**If you are another session:** please do not write under `docs/javascript/` while
+this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
+are free). If you must, say so here first and take a *different phase*.
+
+**We share one working tree.** During this session the broken-link count moved
+21 → 31 → 19 → 26 → 31 purely from other sessions' **uncommitted** edits under
+`docs/postgresql/` and `docs/react/`. So:
+
+- `git add` **only your own paths**. Never `git add -A`.
+- When a build reports broken links, **check whose page they are on** before assuming
+  you caused them.
+- Clean-rebuild and grep rather than trusting `[SUCCESS]`:
+  `rm -rf .docusaurus build && yarn build 2>&1 | grep -iE 'warning|broken'`
+
+## 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget
+
+**300 lines per file, hard. It says nothing about how much a topic gets explained.**
+
+- A Master topic may run **900–1400 lines in total**, across as many chunks as it
+  takes. That is normal and expected.
+- **Write the explanation the topic deserves first, then split** on a concept
+  boundary into `NN-topic/` with `_category_.json`, a `README.md` index and numbered
+  chunks. Never size a page to fit the cap; never trim a gotcha or an interview
+  answer to save lines.
+- Every chunk repeats the tier badge and `> Verified:` line and carries **its own**
+  Gotchas and Interview questions.
+- **The tell that you got it wrong:** a run of pages all landing just under the cap.
+  Real topic lengths vary.
+
+🔴 **Run the check before every commit — knowing the rule is not enough.** Five files
+shipped in this session at 315–411 lines and had to be re-split, because nothing ever
+counted them:
+
+```bash
+find docs/javascript -name '*.md' -exec wc -l {} + | awk '$1>300 && $2!="total"'
+```
+
+**Links:** always link the `.md` file and keep every numeric prefix —
+`../05-the-prototype-chain/README.md`, `../05-the-prototype-chain/02-…md`. Never the
+directory slug. **Chunking a topic is not done until you grep for inbound links to
+its old flat path.**
+
 ## Working order — Master-first
 
 Phases are written **Master tier first, across all phases**, rather than one phase

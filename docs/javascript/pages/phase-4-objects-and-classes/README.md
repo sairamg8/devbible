@@ -29,7 +29,7 @@ demand once the Master topics of every phase are done.
 | 04 | **[Shallow vs deep copy](./04-shallow-vs-deep-copy/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[The prototype chain](./05-the-prototype-chain/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[`class`](./06-class/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 07 | `this` inside methods, and losing it | <span className="db-tier t-master">Master</span> | planned |
+| 07 | **[`this` inside methods, and losing it](./07-this-in-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | `Object.keys` / `values` / `entries` / `fromEntries` | <span className="db-tier t-master">Master</span> | planned |
 | 09 | `extends` and `super` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 10 | Getters and setters | <span className="db-tier t-understand">Understand</span> | deferred |
