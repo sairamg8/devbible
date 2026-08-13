@@ -32,7 +32,7 @@ of the four rules applies before running it — and explain why
 ## Where this connects
 
 - [04 · Arrow functions and `this`](../04-arrow-functions-and-this/README.md) — the fifth case: no binding of its own at all
-- [05 · `call`, `apply` and `bind`](../05-call-apply-bind.md) — the explicit rule in full
+- [05 · `call`, `apply` and `bind`](../05-call-apply-bind/README.md) — the explicit rule in full
 - [01 · Declarations, expressions and arrow functions](../01-declarations-expressions-arrows.md) — which form to reach for
 - Phase 4 · Objects, prototypes and classes — where `new` and the prototype chain are covered in depth
 

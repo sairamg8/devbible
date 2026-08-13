@@ -211,4 +211,4 @@ Because it is an expression position, and `if` is a statement — measured
 
 ---
 
-← [Lexical `this` and the missing bindings](./01-lexical-this.md) · [Topic index](./README.md) · Next → [`call`, `apply` and `bind`](../05-call-apply-bind.md)
+← [Lexical `this` and the missing bindings](./01-lexical-this.md) · [Topic index](./README.md) · Next → [`call`, `apply` and `bind`](../05-call-apply-bind/README.md)

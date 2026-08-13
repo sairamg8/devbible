@@ -254,4 +254,4 @@ before drawing a conclusion from it.
 
 ---
 
-← [What is captured](./01-what-is-captured.md) · [Topic index](./README.md) · Next → [Lexical scope and the scope chain](../07-lexical-scope.md)
+← [What is captured](./01-what-is-captured.md) · [Topic index](./README.md) · Next → [Lexical scope and the scope chain](../07-lexical-scope/README.md)

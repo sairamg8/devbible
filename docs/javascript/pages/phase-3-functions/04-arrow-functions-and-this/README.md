@@ -31,7 +31,7 @@ what `n => { value: n }` returns.
 ## Where this connects
 
 - [03 · `this`](../03-this/README.md) — the four binding rules an arrow opts out of
-- [05 · `call`, `apply` and `bind`](../05-call-apply-bind.md) — the methods that arrows ignore for `this` but still honour for arguments
+- [05 · `call`, `apply` and `bind`](../05-call-apply-bind/README.md) — the methods that arrows ignore for `this` but still honour for arguments
 - [01 · Declarations, expressions and arrow functions](../01-declarations-expressions-arrows.md) — which form to reach for by default
 
 ---

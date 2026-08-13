@@ -138,7 +138,7 @@ Two measured details worth carrying:
   gift in stack traces — a frame reading `bound handleClick` tells you the
   function was bound at some point.
 
-Full treatment in [`call`, `apply` and `bind`](../05-call-apply-bind.md).
+Full treatment in [`call`, `apply` and `bind`](../05-call-apply-bind/README.md).
 
 ## Rule 1 — `new` binding
 
