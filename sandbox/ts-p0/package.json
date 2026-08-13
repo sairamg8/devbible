@@ -1,0 +1,11 @@
+{
+  "name": "ts-p0",
+  "private": true,
+  "type": "module",
+  "description": "Phase 0 — How TypeScript runs. Measurements for docs/typescript/pages/phase-0-how-typescript-runs/",
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "typescript5": "npm:typescript@^5.9.3"
+  }
+}

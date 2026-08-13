@@ -37,8 +37,8 @@ media-processing company. Where a tier is context-dependent, the syllabus says s
 | **[Node.js](nodejs/)** | Complete    | 4 parts · [explanations](nodejs/pages/) |
 | **[Express](expressjs/)** | Syllabus complete | 4 parts · 114 topics · [explanations](expressjs/pages/) in progress |
 | CSS                    | Not started | —       |
-| JavaScript (+ DSA)     | Not started | —       |
-| TypeScript             | Not started | —       |
+| **[JavaScript](javascript/)** | Syllabus complete | 5 parts · 337 topics · [explanations](javascript/pages/) in progress |
+| **[TypeScript](typescript/)** | Syllabus complete | 4 parts · 187 topics · explanations not started |
 | React                  | Not started | —       |
 | MongoDB                | Not started | —       |
 | PostgreSQL             | Not started | —       |

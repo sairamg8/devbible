@@ -1,0 +1,13 @@
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/verification-claude-pages.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/proposed-syllabus/01-foundations.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/proposed-syllabus/02-sql.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/proposed-syllabus/03-node-and-pg.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/proposed-syllabus/04-performance-and-production.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/reviews/proposed-syllabus/README.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/syllabus/01-foundations.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/syllabus/02-sql.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/syllabus/03-node-and-pg.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/postgresql/syllabus/04-performance-and-production.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/reviews/review-prompt.md
+/mnt/Storage/Backup/Knowledge/devbible/docs/reviews/postgresql/2026-08-13-cross-phase-correctness.md
+/mnt/Storage/Backup/Knowledge/devbible/drafts/GROK-PROMPT.md

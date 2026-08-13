@@ -18,7 +18,7 @@ export const LANGUAGES = {
     docsPath: '/docs/javascript',
     pagesPath: '/docs/javascript/pages',
     phases: [
-      {n: 0, slug: 'phase-0-how-javascript-runs', name: 'How JavaScript runs', part: 'Language core', topics: 12, pages: 0},
+      {n: 0, slug: 'phase-0-how-javascript-runs', name: 'How JavaScript runs', part: 'Language core', topics: 12, pages: 12},
       {n: 1, slug: 'phase-1-values-and-coercion', name: 'Values, types and coercion', part: 'Language core', topics: 17, pages: 0},
       {n: 2, slug: 'phase-2-operators', name: 'Operators, expressions and control flow', part: 'Language core', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-functions', name: 'Functions, scope and closures', part: 'Language core', topics: 20, pages: 0},

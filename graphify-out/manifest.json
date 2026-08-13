@@ -1,0 +1,5197 @@
+{
+  "docusaurus.config.js": {
+    "mtime": 1786288482.268039,
+    "ast_hash": "d1159283a8afdcf74a089594c3594492",
+    "semantic_hash": "d1159283a8afdcf74a089594c3594492"
+  },
+  "package.json": {
+    "mtime": 1786282296.6110222,
+    "ast_hash": "c47a07de051fa5a9aace2246c585f047",
+    "semantic_hash": "c47a07de051fa5a9aace2246c585f047"
+  },
+  "sidebars.js": {
+    "mtime": 1786616884.5264027,
+    "ast_hash": "b60657f8953c194228c316f97815bc83",
+    "semantic_hash": ""
+  },
+  "src/components/Progress/index.js": {
+    "mtime": 1786327741.706608,
+    "ast_hash": "518199f2c3fcddc3ef4e83b3cc888465",
+    "semantic_hash": "518199f2c3fcddc3ef4e83b3cc888465"
+  },
+  "src/components/SidebarCollapseAll/index.js": {
+    "mtime": 1786613629.5153143,
+    "ast_hash": "e415b58a1fb6b0ea28edacc0ee7a1916",
+    "semantic_hash": "e415b58a1fb6b0ea28edacc0ee7a1916"
+  },
+  "src/components/SidebarCollapseAll/store.js": {
+    "mtime": 1786613629.5167863,
+    "ast_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae",
+    "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
+  },
+  "src/data/progress.js": {
+    "mtime": 1786616444.5975547,
+    "ast_hash": "00eec9893f291067d7d8e2dd1c0fed70",
+    "semantic_hash": ""
+  },
+  "src/pages/index.js": {
+    "mtime": 1786453841.3841128,
+    "ast_hash": "c64b02c92b3b749b640d43ea0b537ce9",
+    "semantic_hash": "c64b02c92b3b749b640d43ea0b537ce9"
+  },
+  "src/theme/DocSidebar/index.js": {
+    "mtime": 1786613629.5171108,
+    "ast_hash": "63f2631c2bbc164a2a95c4cb4fc2228f",
+    "semantic_hash": "63f2631c2bbc164a2a95c4cb4fc2228f"
+  },
+  "src/theme/DocSidebarItems/index.js": {
+    "mtime": 1786613629.5172248,
+    "ast_hash": "acc752fc480fa2f86baa1241a6673178",
+    "semantic_hash": "acc752fc480fa2f86baa1241a6673178"
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1786607041.9735267,
+    "ast_hash": "f1e53ecc9194573d3c28fc116c743a2e",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1786607041.973988,
+    "ast_hash": "6d73634a678cf1e1c71930adf80bd1f0",
+    "semantic_hash": ""
+  },
+  ".yarnrc.yml": {
+    "mtime": 1786282354.085367,
+    "ast_hash": "ca23c4bdcc938a0b3075d5568926304f",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1786411995.6411,
+    "ast_hash": "6deaacfe91a7b82d3294651c462538e6",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1786613629.4773142,
+    "ast_hash": "1fb64d30e839797bc9e9a3561388eaf3",
+    "semantic_hash": ""
+  },
+  "docs/README.md": {
+    "mtime": 1786616885.9844089,
+    "ast_hash": "08aa463abfbc399cbd203ba65b035875",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/README.md": {
+    "mtime": 1786412151.8236077,
+    "ast_hash": "421e04021608ef2c6d0966d50872110c",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/README.md": {
+    "mtime": 1786414245.4082925,
+    "ast_hash": "02e8797f76bba4c482bb65c27b49652e",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/01-what-express-is.md": {
+    "mtime": 1786412274.1280358,
+    "ast_hash": "52a1eedb0fd409a9ca550e71ad06b01c",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/02-app-router-server.md": {
+    "mtime": 1786412274.1280358,
+    "ast_hash": "cf2b335bb03e59991fa442ca190be719",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/03-request-lifecycle.md": {
+    "mtime": 1786412274.1280358,
+    "ast_hash": "096eb2c7f2f0751e02507339671fb904",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/04-creating-an-app.md": {
+    "mtime": 1786412415.0967374,
+    "ast_hash": "4daba1ff86a4050f37ccc3e995f732fc",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/05-application-settings.md": {
+    "mtime": 1786412415.0967374,
+    "ast_hash": "6f2e6201fbd6f3ee76648d3853934836",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/06-express-5-vs-4.md": {
+    "mtime": 1786412415.0967374,
+    "ast_hash": "6dc7a62b98581279c213fb4f4364b8c3",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/07-when-not-to-use-express.md": {
+    "mtime": 1786412415.0967374,
+    "ast_hash": "c31d04ac32017914a52f57634169e13e",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/README.md": {
+    "mtime": 1786412274.1280358,
+    "ast_hash": "696c1e87b86aff0b896a1537b6db8460",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/01-http-methods.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "75ebd00a4b2915eb36c1623eaf411a2f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/02-params-and-query.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "0bffa7a65ceb68cc18ec349d493f5824",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/03-router-composition.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "2194cc0e47927a603a7a86426324b674",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/04-route-ordering.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "ea27256bd211b7ff4cc2ea67a6ac85fd",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/05-path-matching-express5.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "ff7f02a08f71c75cdadf0d7d68ebaf70",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/06-router-param.md": {
+    "mtime": 1786412636.1430247,
+    "ast_hash": "1f0fb81f7bc86a304a371e7afa3e50c5",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/07-app-route-and-hosts.md": {
+    "mtime": 1786456867.2697961,
+    "ast_hash": "e0357f1ab6a7213aad6d8224fad7a08b",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/README.md": {
+    "mtime": 1786412636.141323,
+    "ast_hash": "6aee6281ad7ca5ccb4ae01d42e14a16a",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/01-create-app.md": {
+    "mtime": 1786414222.8063247,
+    "ast_hash": "6f7bf02209f9b0e6d58747078fc9aac8",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/02-request-id.md": {
+    "mtime": 1786414222.8064623,
+    "ast_hash": "b4e46d54bd3b6ed4378685e5b805f1fd",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/03-supertest.md": {
+    "mtime": 1786414222.8065906,
+    "ast_hash": "dc6582f67faca525ff4d356e5b4d4c2b",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/04-auth-in-tests.md": {
+    "mtime": 1786414222.8067124,
+    "ast_hash": "60eebcfb7a575c7d461f3c69b3036471",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/05-health-and-boot.md": {
+    "mtime": 1786414222.806826,
+    "ast_hash": "a586f6196da3a9b4986a05245754e4ff",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/06-shutdown-and-entrypoint.md": {
+    "mtime": 1786414222.806944,
+    "ast_hash": "f791503cae100e09f43016bdc6878024",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/README.md": {
+    "mtime": 1786414222.8061855,
+    "ast_hash": "9ff8db6d13fbf44d8effc79d715ff4d3",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/01-middleware-contract.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "d6e8dc60de13f2310e197973586ffaf1",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/02-execution-order.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "88ca28c6b87925439182061f1e13fe03",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/03-next-semantics.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "0dcf622f1bd9d66b900bfa49b32db410",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/04-middleware-factories.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "5550ec6a7438094e92f18c4a76d43b31",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/05-first-and-last.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "76b2e32350325903fced2de96cbb3b08",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/06-mutating-req-res.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "2a57c5b8adad0ff1621c99564bb7ce16",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/07-builtin-and-third-party.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "f7904d94be6cc61859e3ccc6bd2d2a56",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/README.md": {
+    "mtime": 1786412791.85444,
+    "ast_hash": "840f26be8c6769a789736d409361497b",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/01-req-anatomy.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "5a021a39a1576a987586132b052b2760",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/02-json-and-urlencoded.md": {
+    "mtime": 1786413144.5739703,
+    "ast_hash": "8098bac0a3031cd36d774d2f50d7afe0",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/03-size-limits.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "3110a6dfc874f6022354c47195c3fca3",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/04-query-parser.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "06150bcfb868c87d3d7aa77af2dfa988",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/05-malformed-bodies.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "c70d2512b283484cd5a8e8e54693222e",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/06-raw-and-text.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "0994bb950b528eb4847840be64a0aba7",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/07-multipart-uploads.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "3d136cce1d2edefb9a5c2042477e5627",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/08-cookies-and-helpers.md": {
+    "mtime": 1786413144.5749702,
+    "ast_hash": "3d96017032c1966c051d1179ff9cb8db",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/README.md": {
+    "mtime": 1786413144.5739703,
+    "ast_hash": "bcf5fa7f2d6d8a7e028de673dfc5e2d6",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/01-res-methods.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "cd290e4a89b0881e6134e7700bead32f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/02-status-and-headers.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "366defb36f8f9083c380977527023be6",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/03-response-shapes.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "b58df8c185ec830f9cee7fc43c205ce9",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/04-headers-already-sent.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "ef130b5222d86daf2b5a38a1d80d9175",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/05-static-files.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "fd3bc5789204798efde6dd66a5389ad3",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/06-spa-fallback.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "4790f39c0dc8a8717b59d69017600a2d",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/07-cookies-out.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "de3dd0e39b0b3737b9b21e44f3ba8813",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/08-streaming-and-downloads.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "2acd87a932f638b334674bb719f6d3aa",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/README.md": {
+    "mtime": 1786413981.9170866,
+    "ast_hash": "9e86c9883446d806fa867bfc7aff0cb4",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/01-error-middleware.md": {
+    "mtime": 1786414026.660298,
+    "ast_hash": "633d096dee00224435fa8e1201468a48",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/02-async-errors.md": {
+    "mtime": 1786414026.6601117,
+    "ast_hash": "b3c22ce16b5d3bd56e644a75870e7a02",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/03-error-contract.md": {
+    "mtime": 1786414026.6592982,
+    "ast_hash": "c4cb315ea3020c9d7a11a49f310e8a7d",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/04-mapping-to-http.md": {
+    "mtime": 1786414026.6609128,
+    "ast_hash": "46a9404198365e96ff297a3f8424c97f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/05-operational-vs-programmer.md": {
+    "mtime": 1786414026.6609128,
+    "ast_hash": "15c1f6001da35d2b625650f22850afcb",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/06-not-found-and-process.md": {
+    "mtime": 1786414026.6610162,
+    "ast_hash": "a2803e9708bb0ad35e47e8b3a9ef59b5",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/README.md": {
+    "mtime": 1786414026.6601117,
+    "ast_hash": "fd4749d56bf697b661ce01607aa6223d",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/01-rest-resources.md": {
+    "mtime": 1786414115.3622031,
+    "ast_hash": "605533b0adad40dabd4d857c911a328c",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/02-status-mapping.md": {
+    "mtime": 1786414115.362356,
+    "ast_hash": "67161f9b3dad655f1afad64b99e007cb",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/03-pagination.md": {
+    "mtime": 1786414115.362496,
+    "ast_hash": "65c519c59bbeb768e89641ff0c1c951d",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/04-filter-sort-search.md": {
+    "mtime": 1786414115.3626676,
+    "ast_hash": "7dd7f97ae76fcd2b93fe09bc3bf6dea7",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/05-versioning.md": {
+    "mtime": 1786414115.3628166,
+    "ast_hash": "c7b801afe4fbfeb29293c0883f318150",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/06-idempotency-keys.md": {
+    "mtime": 1786414115.3629699,
+    "ast_hash": "49e9fe1913ea8b08b816550a3c93f2c5",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/07-etag-and-cache.md": {
+    "mtime": 1786414115.3630972,
+    "ast_hash": "9e065f2f72ccb65c927109da5f2c73ad",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/08-openapi.md": {
+    "mtime": 1786414115.363228,
+    "ast_hash": "a1757f98263e27da5cdfdf920df0c995",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/09-webhooks.md": {
+    "mtime": 1786414115.3633783,
+    "ast_hash": "9ff4e39c6e9692bfee1280195bf9b3fa",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/README.md": {
+    "mtime": 1786414115.3620236,
+    "ast_hash": "a8ad3e3cb2b98030999affd6d275d75f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/01-controller-service-repository.md": {
+    "mtime": 1786414173.5167553,
+    "ast_hash": "19b230b8faaea2b9f7897c2bd123f97e",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/02-domain-vs-transport.md": {
+    "mtime": 1786414173.5168931,
+    "ast_hash": "7b97d9064ccf13d863bc1f9f19472e31",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/03-fat-controllers.md": {
+    "mtime": 1786414173.5170076,
+    "ast_hash": "e5efc586ab964f1d7a5558b0dd741275",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/04-di-without-framework.md": {
+    "mtime": 1786414173.5171416,
+    "ast_hash": "de28ea317c8d045f2ae37d53421f3acd",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/05-jobs-from-routes.md": {
+    "mtime": 1786414173.5172753,
+    "ast_hash": "7ec925af34a49b2dd347b9297fcc2e6f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/06-folders-and-dtos.md": {
+    "mtime": 1786414173.5174406,
+    "ast_hash": "a921bd5f4010db9dd845c1ce81e8bb66",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/README.md": {
+    "mtime": 1786414173.51657,
+    "ast_hash": "ada27e1c614f5226c710069d609436ac",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/01-validate-at-boundary.md": {
+    "mtime": 1786414173.5176718,
+    "ast_hash": "01b0eaa2d41ebac25291f499797a8d34",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/02-validation-factory.md": {
+    "mtime": 1786414173.5178053,
+    "ast_hash": "655fb8d057d62e4c47d57d7821354082",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/03-coercion-traps.md": {
+    "mtime": 1786414173.517932,
+    "ast_hash": "deb46dfbe9cc69c65fc8307d2e1a5d55",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/04-authn-middleware.md": {
+    "mtime": 1786414173.5180511,
+    "ast_hash": "f9463480fc0ac2d24a54965bcc0f5725",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/05-cookies-sessions-wireup.md": {
+    "mtime": 1786414173.5181863,
+    "ast_hash": "4d025e6ba20919407448d95c40df7cb7",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/06-rbac-middleware.md": {
+    "mtime": 1786414173.5182917,
+    "ast_hash": "9f176deef89d92735e4079dfd020d75d",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/07-ownership.md": {
+    "mtime": 1786414245.5195825,
+    "ast_hash": "b862beff5059905bc6033363ef4e515f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/08-tenant-and-logout.md": {
+    "mtime": 1786414173.5185418,
+    "ast_hash": "6d18ace9436e6408d413dc925ad6c55e",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/README.md": {
+    "mtime": 1786414173.517564,
+    "ast_hash": "37713c7b242db4c70551a36587f29dc0",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/01-trust-proxy.md": {
+    "mtime": 1786414222.8053024,
+    "ast_hash": "9c1c3261c2ff80897b0bfb34a27780cd",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/02-cors.md": {
+    "mtime": 1786414222.8054597,
+    "ast_hash": "8ba0bdde5d41bfbaaa1d0cc18b3f7006",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/03-helmet.md": {
+    "mtime": 1786414222.80561,
+    "ast_hash": "6dba4e4cde9cca4305ea1415f87200db",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/04-rate-limiting.md": {
+    "mtime": 1786414222.8057778,
+    "ast_hash": "4fdd069c61afce609595870d9dd46bfb",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/05-csrf-and-injection.md": {
+    "mtime": 1786414222.8059182,
+    "ast_hash": "b94bcbbd3530be7922a632143ab68f64",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/06-timeouts-and-secrets.md": {
+    "mtime": 1786414222.8060613,
+    "ast_hash": "587e7b65a23985bd5b37586734c9a7fb",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/README.md": {
+    "mtime": 1786414222.8051283,
+    "ast_hash": "f99921c192e1a0f253ced12d77e83333",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/proposed-syllabus/01-foundations.md": {
+    "mtime": 1786411669.6402667,
+    "ast_hash": "351f38913b3c58039b1eb02b1b94b7cb",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/proposed-syllabus/02-http-surface.md": {
+    "mtime": 1786411669.6402667,
+    "ast_hash": "2be9d54f44c9cea9d8abb7c426219f48",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/proposed-syllabus/03-api-product.md": {
+    "mtime": 1786410484.3097894,
+    "ast_hash": "6b915b9309c17123b3426d19dc005728",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/proposed-syllabus/04-edge-and-ops.md": {
+    "mtime": 1786411669.6692667,
+    "ast_hash": "d711418b183f29bbb48991400529c129",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/proposed-syllabus/README.md": {
+    "mtime": 1786411669.6692667,
+    "ast_hash": "3bb1e58294d4febce7e3e9f7fd4c96f1",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/syllabus-review.md": {
+    "mtime": 1786361855.266485,
+    "ast_hash": "d8476e258db116b1ea49acdd9c2668d9",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/verdict-claude.md": {
+    "mtime": 1786411374.3527164,
+    "ast_hash": "56a0e131c5c35caf00fc4004a2c0e8b2",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/reviews/verification-claude-pages.md": {
+    "mtime": 1786456711.1944556,
+    "ast_hash": "f332c9156eb8cf426095dc2e583c85a7",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/syllabus/01-foundations.md": {
+    "mtime": 1786412808.7905614,
+    "ast_hash": "853a59640ad6f5a5ef7acb4ee2a62a62",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/syllabus/02-http-surface.md": {
+    "mtime": 1786414026.6942983,
+    "ast_hash": "16d29fe0f8fef65884bd420d27a5de47",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/syllabus/03-api-product.md": {
+    "mtime": 1786414245.4358675,
+    "ast_hash": "0715459770a512dfa66f0d7d3c777e9f",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/syllabus/04-edge-and-ops.md": {
+    "mtime": 1786414245.4618676,
+    "ast_hash": "dabb81915b315a7ef7eed1673403486f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/README.md": {
+    "mtime": 1786362809.6813323,
+    "ast_hash": "8828741cff724fe841ac130dc7853be5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/README.md": {
+    "mtime": 1786455531.2598915,
+    "ast_hash": "9c901c7c11b4b172f19641091cdc8828",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/01-what-node-is.md": {
+    "mtime": 1786286283.133997,
+    "ast_hash": "138825f4ebcaf66e6633a7c88c51ceca",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/02-single-thread-and-io.md": {
+    "mtime": 1786286349.7922325,
+    "ast_hash": "39acfc79ff9d766920eb2e3256f53266",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/03-blocking-the-event-loop.md": {
+    "mtime": 1786286425.995502,
+    "ast_hash": "ccbdd5eca0c099367464eb0609691e37",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/04-libuv-thread-pool.md": {
+    "mtime": 1786286503.3177752,
+    "ast_hash": "0177709a271b10c8cc077bba2f57aa31",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/05-node-vs-browser.md": {
+    "mtime": 1786362760.1311033,
+    "ast_hash": "c26c8fca21ee6afc6b63619772cf7af4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/06-globals.md": {
+    "mtime": 1786287239.1853979,
+    "ast_hash": "e68be9f25e01299a0a9ea3aa23b37b29",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/07-choosing-a-version.md": {
+    "mtime": 1786287253.6874497,
+    "ast_hash": "63a8b6824e2e50dc12702fcd98577247",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/08-running-node.md": {
+    "mtime": 1786362734.4449847,
+    "ast_hash": "e932039c2bf129c4f23e5eac66019f30",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/09-node-deno-bun.md": {
+    "mtime": 1786286887.6551385,
+    "ast_hash": "0cf054ddfba939b6a86a16d5b286c532",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/10-how-v8-optimizes.md": {
+    "mtime": 1786362750.8040602,
+    "ast_hash": "c1aad410c0bf88caa3a0fd3fb1a215a4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/README.md": {
+    "mtime": 1786288012.4409451,
+    "ast_hash": "9fff3f83abddd036710e65e165ae49ea",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/01-esm.md": {
+    "mtime": 1786291242.2091277,
+    "ast_hash": "287aedbb55cd5bc3a993c6f022a1362b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/02-commonjs.md": {
+    "mtime": 1786291284.3832772,
+    "ast_hash": "d213603a70b57c4eda62e398558efad0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/03-node-prefix.md": {
+    "mtime": 1786291325.9364245,
+    "ast_hash": "d2e95706c24d00649e8b2d4a1a4849eb",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/04-cjs-esm-interop.md": {
+    "mtime": 1786291431.4987984,
+    "ast_hash": "c2b2dcd0e5b5a8f3d6e6141558c02684",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/05-module-resolution.md": {
+    "mtime": 1786291548.1692119,
+    "ast_hash": "a5962d1f2956a1e2450f3d46bf6092db",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/06-circular-dependencies.md": {
+    "mtime": 1786291527.4551384,
+    "ast_hash": "5cbf791c6a185d8708be9316ee602dfd",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/07-package-json.md": {
+    "mtime": 1786291596.762384,
+    "ast_hash": "205c7e0f6528e6d10b53248a61b5a67f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/08-exports-map.md": {
+    "mtime": 1786291654.86359,
+    "ast_hash": "3538f90982f1f443e426a384c844a0e8",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/09-semver-and-lockfiles.md": {
+    "mtime": 1786291727.5948477,
+    "ast_hash": "c0dd71f8a7a9e73fae88f60ec03cc1a8",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/10-npm-day-to-day.md": {
+    "mtime": 1786291766.7179863,
+    "ast_hash": "a9e0e2041057e1a99f4cb2a202ff4447",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/11-package-managers.md": {
+    "mtime": 1786291819.4561732,
+    "ast_hash": "87a6e5108fed31f2b33065358a947815",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/12-typescript-natively.md": {
+    "mtime": 1786291906.927483,
+    "ast_hash": "d8899ceba2c1ad5e71bc5873218aaf97",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/13-publishing.md": {
+    "mtime": 1786291966.3806937,
+    "ast_hash": "e2ca9eaf82c765d56b9c170082af1889",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/14-node-module-api.md": {
+    "mtime": 1786292003.6548262,
+    "ast_hash": "fa138e20430db290fdeb103a0c9d08a7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/README.md": {
+    "mtime": 1786292055.2220094,
+    "ast_hash": "3d3fbe34c36df810711fdd329098e954",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/01-structured-logging.md": {
+    "mtime": 1786379272.1980608,
+    "ast_hash": "e46e1ec78911215067cd1383058ed4d6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/02-pino-in-practice.md": {
+    "mtime": 1786379272.1985185,
+    "ast_hash": "d5df2114eb6ea521c0db8e5fa7982ab7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/03-correlation-ids.md": {
+    "mtime": 1786379272.198823,
+    "ast_hash": "f34d9c4a1163a1fff0754ce38a40c752",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/04-what-to-log.md": {
+    "mtime": 1786379272.1991253,
+    "ast_hash": "d84fcfa2ca263ac4092c1be2413f3052",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/05-opentelemetry.md": {
+    "mtime": 1786379272.1994214,
+    "ast_hash": "f638a35aaeda08a70ee4e51cacfa922a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/06-error-tracking.md": {
+    "mtime": 1786379272.199676,
+    "ast_hash": "e56dd943d976283e7327fa8523c6744e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/07-diagnostics-channel.md": {
+    "mtime": 1786379272.1999242,
+    "ast_hash": "a9ec79f9bda9b138b759b09e6f522cfc",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/08-trace-events-and-reports.md": {
+    "mtime": 1786379541.7270575,
+    "ast_hash": "a0d7a146984c05b11e4bf5289c87bbc0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/09-event-loop-lag.md": {
+    "mtime": 1786379272.2004442,
+    "ast_hash": "9296592ca3e007dc6a6c0d4a5d2fa5aa",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/10-health-checks.md": {
+    "mtime": 1786379272.2006893,
+    "ast_hash": "0e33fc989a2f099f4695562d80d4bd7d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/11-golden-signals.md": {
+    "mtime": 1786379272.200961,
+    "ast_hash": "9d1da6f64a5809361fddd6e191818463",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/12-perf-hooks.md": {
+    "mtime": 1786379272.201382,
+    "ast_hash": "cc0ce916dd1c1718bb94e404457d235e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/13-process-metrics.md": {
+    "mtime": 1786379347.6762674,
+    "ast_hash": "71723451aafa2fedb901e6c8bf66ab42",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/14-prometheus-metrics.md": {
+    "mtime": 1786379584.7392325,
+    "ast_hash": "fe32d9968f1fe2fb76a54871ee4e835d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/15-finding-the-bottleneck.md": {
+    "mtime": 1786379553.116104,
+    "ast_hash": "8be5f152c43f6086f150c8a1d7f74333",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/16-caching-strategy.md": {
+    "mtime": 1786379347.6762674,
+    "ast_hash": "dfd5be1a7b6af42b145a2aa29c6f65b6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/17-memory-leaks.md": {
+    "mtime": 1786379470.346767,
+    "ast_hash": "a6996b704f96359351f97d2888258c9b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/18-common-leak-sources.md": {
+    "mtime": 1786379470.346767,
+    "ast_hash": "765870c5520e9eefbbd64f084abdb900",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/19-cpu-heap-profiling.md": {
+    "mtime": 1786379470.346767,
+    "ast_hash": "211baf231dd7aa2e7d604cd7d07fc5eb",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/20-benchmarking.md": {
+    "mtime": 1786379584.7392325,
+    "ast_hash": "c8be51364da5cc597e01ada2e7d95c5b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/21-gc-basics.md": {
+    "mtime": 1786379553.116104,
+    "ast_hash": "4cbf37295c70552dc9197c476e42af35",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/22-flame-graphs.md": {
+    "mtime": 1786379584.7392325,
+    "ast_hash": "feafbc47de2201495ea409d91fc697cb",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/23-startup-time.md": {
+    "mtime": 1786379541.7270575,
+    "ast_hash": "a05e978355b29d27b2cd1cf2d6952ef6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/README.md": {
+    "mtime": 1786379613.9263513,
+    "ast_hash": "c989ddd4933a8304d42333eee11e3392",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/01-twelve-factor-config.md": {
+    "mtime": 1786379831.6452377,
+    "ast_hash": "9b32de36bd9c1984683a940f124c937d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/02-boot-sequence.md": {
+    "mtime": 1786379831.6452377,
+    "ast_hash": "32a3237777b2bcb7a108764eb8eb0e26",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/03-dockerizing-node.md": {
+    "mtime": 1786379831.6452377,
+    "ast_hash": "3aad5392de6dcae767dcbc6c15d19a3b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/04-pid1-and-signals.md": {
+    "mtime": 1786379831.6452377,
+    "ast_hash": "913a749db995aa321d718b16264bf6cf",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/05-environment-parity.md": {
+    "mtime": 1786379831.6462376,
+    "ast_hash": "69273c5e10b15a7a9a104e89196c6059",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/06-reverse-proxy.md": {
+    "mtime": 1786379921.7206,
+    "ast_hash": "256290155516661c7068184d60af4a3e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/07-zero-downtime-deploys.md": {
+    "mtime": 1786379921.7206,
+    "ast_hash": "5019319a47be68fad0cc74105ad00d65",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/08-cicd.md": {
+    "mtime": 1786379921.7216,
+    "ast_hash": "f98b7803762d8ba76782d39ee747a7d3",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/09-image-size-hardening.md": {
+    "mtime": 1786379921.7216,
+    "ast_hash": "a749bc8e97ee1f23675633d33ca48741",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/10-process-managers.md": {
+    "mtime": 1786379921.7216,
+    "ast_hash": "09c6f0a6012cea394a1fdedbe94635ad",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/11-scaling.md": {
+    "mtime": 1786380006.3749397,
+    "ast_hash": "b1e495342bb0c43986c5a79242097df7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/12-semantic-release.md": {
+    "mtime": 1786380006.3749397,
+    "ast_hash": "e59641ead67897acb6635cc55e39ed52",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/13-blue-green-canary.md": {
+    "mtime": 1786380006.3749397,
+    "ast_hash": "dff33c23f21a30a7fd262f9109c79062",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/14-serverless-node.md": {
+    "mtime": 1786380006.3749397,
+    "ast_hash": "f70d569f2e8baee9fbeccc5712240198",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/README.md": {
+    "mtime": 1786380006.3749397,
+    "ast_hash": "104a72a990c617b059c10fa1e900267b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/01-node-vm.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "18f229640d1ed00603a22a662c19815b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/02-webassembly.md": {
+    "mtime": 1786380067.1311834,
+    "ast_hash": "92c637c9955ff4bbb1bcd7ffe4ad9107",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/03-v8-flags.md": {
+    "mtime": 1786380067.1311834,
+    "ast_hash": "9e3de5d9f89c858a8bc1fb06211abe46",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/04-node-api.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "f41d3dcbd233bb1e49912bf546753fd4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/05-cpp-addons.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "f3946b8578b54987f8788831cd1b5752",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/06-ffi.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "385c79accd74e88aee3c2c798742917c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/07-wasi.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "8155f0536b0a82cecf899c7c26b2d74b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/08-custom-loaders.md": {
+    "mtime": 1786380160.3325572,
+    "ast_hash": "50a2580bb85ef20eec394419051a40d6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/09-startup-snapshots.md": {
+    "mtime": 1786380211.1407611,
+    "ast_hash": "d54dc7939febdc70a5ed199a3e37fb49",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/10-contributing-to-node.md": {
+    "mtime": 1786380211.1407611,
+    "ast_hash": "db8d20a50c44196619d6cba1e2a5766a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/README.md": {
+    "mtime": 1786380211.141761,
+    "ast_hash": "650c7338c7c2f589cd6ea9fe4ab8bd0a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/01-event-loop-phases.md": {
+    "mtime": 1786325007.5223083,
+    "ast_hash": "113a7442dc283f13ba171ec640c020d1",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/02-poll-phase.md": {
+    "mtime": 1786325007.5225809,
+    "ast_hash": "e9d614270b9b8a1cc49ed9082174e5a1",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/03-microtasks-and-macrotasks.md": {
+    "mtime": 1786325007.5228364,
+    "ast_hash": "8ca03968cc3b6b56360158e5e924f8b7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/04-setimmediate-vs-settimeout.md": {
+    "mtime": 1786325007.5231612,
+    "ast_hash": "a4dc2713880eb8f63ba2f39945e4e2eb",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/05-nexttick-starvation.md": {
+    "mtime": 1786325007.5234063,
+    "ast_hash": "594486ceba3f0c13aeb547d36501e01f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/06-timers.md": {
+    "mtime": 1786325007.523691,
+    "ast_hash": "8196ee8160acc4d95626e152846c652f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/07-promise-states.md": {
+    "mtime": 1786325007.5324693,
+    "ast_hash": "dc6277b1e09c83865e1def1fc241c03c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/08-async-await.md": {
+    "mtime": 1786325007.5243897,
+    "ast_hash": "0fdaf25cdb47f6434c8013dec3fcef52",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/09-combinators.md": {
+    "mtime": 1786325007.5246184,
+    "ast_hash": "f6c01d6b3921275fd02c175969e8ff93",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/10-sequential-vs-parallel.md": {
+    "mtime": 1786325007.5248663,
+    "ast_hash": "f2015247a7d08feb4827f053bf94280c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/11-error-handling.md": {
+    "mtime": 1786325007.5250478,
+    "ast_hash": "22926b2a4d9b19c3e64b8e5388408411",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/12-floating-promises.md": {
+    "mtime": 1786325007.5253177,
+    "ast_hash": "7985a66aa43f4e9434452479d4f3ce0c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/13-callbacks-and-promisify.md": {
+    "mtime": 1786325007.525556,
+    "ast_hash": "d06a0b06def41ba91d61e3737113ebab",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/14-concurrency-control.md": {
+    "mtime": 1786325007.5257933,
+    "ast_hash": "55fbffdbcb83dc4ad5ff607a1b975610",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/15-unhandled-rejections.md": {
+    "mtime": 1786325007.5260534,
+    "ast_hash": "cdde9ec9fc5f32da080acce2d861507d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/16-error-design.md": {
+    "mtime": 1786325007.5265954,
+    "ast_hash": "e5beec71afdab0df2ff9d7e1d2603d44",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/17-promise-antipatterns.md": {
+    "mtime": 1786325007.5270312,
+    "ast_hash": "5f49fc8c3d722aaf258ef9e8f815b293",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/18-async-iterators.md": {
+    "mtime": 1786325007.5274482,
+    "ast_hash": "ad93a6214e6ec28f809bc2fe78a5c427",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/19-abortcontroller.md": {
+    "mtime": 1786325007.5278435,
+    "ast_hash": "8302983773d50477901dcb3dfa98e145",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/20-asynclocalstorage.md": {
+    "mtime": 1786325007.5282133,
+    "ast_hash": "7cc65609d635b7763563c87e70677a27",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/21-async-hooks.md": {
+    "mtime": 1786325007.528555,
+    "ast_hash": "e84a5233a13dc9d8879a33e27db24ee3",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/22-cpu-bound-work.md": {
+    "mtime": 1786325078.0399916,
+    "ast_hash": "6571760758eb35ba58a1d95baf503fe1",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/README.md": {
+    "mtime": 1786325038.2198281,
+    "ast_hash": "caa96385ed19466a76d70cdcc7907fea",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/01-buffer-basics.md": {
+    "mtime": 1786328529.6230965,
+    "ast_hash": "900344787daa5adb20911155ce0afdfd",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/02-encodings.md": {
+    "mtime": 1786328589.4782894,
+    "ast_hash": "691d139ff9eab66d7561fe56225b1f27",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/03-alloc-vs-allocunsafe.md": {
+    "mtime": 1786328589.4823732,
+    "ast_hash": "4496fe8bbf3a573773ee61abed345d49",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/04-buffer-as-uint8array.md": {
+    "mtime": 1786327144.8479438,
+    "ast_hash": "bf18b2f5b521b4c476e4550939b8cec9",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/05-string-decoder.md": {
+    "mtime": 1786500368.8197489,
+    "ast_hash": "ce04080a5900b1d61298ece32dbe389d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/06-binary-data-and-endianness.md": {
+    "mtime": 1786500368.819491,
+    "ast_hash": "394eaf985251dc323e67661ea7f5a20f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/07-why-streams.md": {
+    "mtime": 1786327327.604768,
+    "ast_hash": "449d1168a1152e6155d2890394978aef",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/08-stream-types.md": {
+    "mtime": 1786500368.8181407,
+    "ast_hash": "3f6eb0d50870fea498094f87d2efa1d5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/09-backpressure.md": {
+    "mtime": 1786327450.9363186,
+    "ast_hash": "37ffbf7bfff6627456839bd5e9cf5fc7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/10-pipeline.md": {
+    "mtime": 1786327496.6965227,
+    "ast_hash": "9e957504cb1f8781f5b4fca2d82102d8",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/11-for-await-of.md": {
+    "mtime": 1786327593.6748517,
+    "ast_hash": "319594d7430fc284a601a6b1394bf7d4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/12-stream-events-and-modes.md": {
+    "mtime": 1786500368.819243,
+    "ast_hash": "38b2c04a2930b739ee6ba693689114a3",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/13-transform-streams/01-transform-and-boundaries.md": {
+    "mtime": 1786500472.2765753,
+    "ast_hash": "09f7b98ee965f42058d3eeef41a2981d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/13-transform-streams/02-encodings-and-async.md": {
+    "mtime": 1786500472.2771084,
+    "ast_hash": "e5f4cc3216f6b20ada6f56c249a35053",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/13-transform-streams/README.md": {
+    "mtime": 1786500383.7238865,
+    "ast_hash": "fea7af637b90d826585dd5443d8fc1c0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/14-object-mode.md": {
+    "mtime": 1786500368.8185873,
+    "ast_hash": "a324f99d8d05f49a921c7941ed00c5ab",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/15-web-streams.md": {
+    "mtime": 1786327969.0286133,
+    "ast_hash": "91366a81c522f11d014d35e32fe9a90d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/16-zlib.md": {
+    "mtime": 1786328054.9839933,
+    "ast_hash": "9e3aabcd17ab04ec8f84040daa7b7724",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/17-custom-readable-writable.md": {
+    "mtime": 1786500368.8199685,
+    "ast_hash": "c5f80e2f390c3fae300f29a0684c3a4e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/18-stream-promises-and-compose.md": {
+    "mtime": 1786328263.5919178,
+    "ast_hash": "0d56035419211da9062f53315d4b0a0b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/19-highwatermark-tuning.md": {
+    "mtime": 1786328309.2001197,
+    "ast_hash": "b20e207edf55e6dd5646539558b14fec",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/README.md": {
+    "mtime": 1786500368.8188498,
+    "ast_hash": "dcae0a1dc38468c34076b3fb0016fb27",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/01-fs-promises.md": {
+    "mtime": 1786328820.1663826,
+    "ast_hash": "37f92fa9867f203613e9fd987c02ee0e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/02-the-three-flavors.md": {
+    "mtime": 1786328863.889576,
+    "ast_hash": "42acc2b5587a3cbb04d7e24293b236c5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/03-path.md": {
+    "mtime": 1786328913.399795,
+    "ast_hash": "b343a29378c35c492bbfe0a61d042e05",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/04-path-traversal.md": {
+    "mtime": 1786328982.5771012,
+    "ast_hash": "6eee4830c8bb4b6de4bb9912b9afe8d4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/05-url.md": {
+    "mtime": 1786329044.0193732,
+    "ast_hash": "603207cc2397e4b1d8536da8cef4545a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/06-file-streams.md": {
+    "mtime": 1786329102.3006299,
+    "ast_hash": "c14d9d9b57d448e337fd53caeb05139e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/07-directories.md": {
+    "mtime": 1786329147.228821,
+    "ast_hash": "4665e08a4b0607773df2d35bc9daca8a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/08-stat-and-existence.md": {
+    "mtime": 1786329213.2851024,
+    "ast_hash": "54b4e71f23e7e3155a017f38e070b7ac",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/09-file-handles.md": {
+    "mtime": 1786329307.2095025,
+    "ast_hash": "343eaef97424e6cfc637bdda076bc4f7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/10-atomic-writes-and-temp-files.md": {
+    "mtime": 1786329364.5357466,
+    "ast_hash": "30d2f4af2d784c53c4b758aad1f35e18",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/11-os.md": {
+    "mtime": 1786329435.0230467,
+    "ast_hash": "3b73e6ec7d91bdfb555dc8d1b1b88927",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/12-watching.md": {
+    "mtime": 1786329510.9683702,
+    "ast_hash": "abd31023d3562763929f0bfa38b660b9",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/13-permissions-and-symlinks.md": {
+    "mtime": 1786329563.517594,
+    "ast_hash": "89d9d6869f1a1625ae939f40944bb24b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/14-virtual-filesystems.md": {
+    "mtime": 1786329700.1391587,
+    "ast_hash": "b97fe65f96525618b8e4809c5b881b18",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/README.md": {
+    "mtime": 1786329736.262306,
+    "ast_hash": "2b2fc32e106de39c4d71c3bb9d63505a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/01-http-server.md": {
+    "mtime": 1786359819.677896,
+    "ast_hash": "a3d8d80991b502873f7b1d3bfbb1b399",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/02-request-bodies.md": {
+    "mtime": 1786500383.6832407,
+    "ast_hash": "ed96e772107c4918766b45fb7125cd53",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/03-http-fundamentals.md": {
+    "mtime": 1786359936.3223798,
+    "ast_hash": "bcd0ee6fc168abfb86cb6eb50d292249",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/04-cookies.md": {
+    "mtime": 1786359980.2585464,
+    "ast_hash": "0dd6bac5cfe11a1795dd1a2a5de4aee5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/05-fetch.md": {
+    "mtime": 1786360206.1133897,
+    "ast_hash": "ccb58eff8deb665996d247bc8a4ec352",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/06-outbound-timeouts.md": {
+    "mtime": 1786360249.1555235,
+    "ast_hash": "e2abc79287476e96cf2ae6d030083da0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/07-keep-alive-and-agents.md": {
+    "mtime": 1786360439.8501525,
+    "ast_hash": "52789f7227ffabeff23468dae2a07e1a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/08-outbound-client-discipline.md": {
+    "mtime": 1786360445.2491748,
+    "ast_hash": "2b4ceb064ca0b475b3c6ff3f3eed35ad",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/09-https-and-tls.md": {
+    "mtime": 1786360497.4913905,
+    "ast_hash": "d6204948a315113b285b366db0453f1c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/10-streaming-and-sse.md": {
+    "mtime": 1786360617.6119196,
+    "ast_hash": "fb43353ad9c1abfc63eb5afba1d0eeaa",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/11-websockets.md": {
+    "mtime": 1786362001.7747114,
+    "ast_hash": "0eb75ab5f47559fb5b22566e400f7845",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/12-net-and-dgram.md": {
+    "mtime": 1786500383.6837375,
+    "ast_hash": "242cffed37976b0e62db37aa5fa5aa96",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/13-dns.md": {
+    "mtime": 1786360865.4273713,
+    "ast_hash": "5940423769fb6034118e9c16ac15ed3b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/14-http2.md": {
+    "mtime": 1786362001.7719915,
+    "ast_hash": "e400148278131256f4c65ac145220c68",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/15-process.md": {
+    "mtime": 1786361165.544211,
+    "ast_hash": "1e300b0f7b73462def17bf68452d5523",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/16-signals.md": {
+    "mtime": 1786361207.7213988,
+    "ast_hash": "2d4cc7aba8bdfad34ce79989c91d30a6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/17-graceful-shutdown.md": {
+    "mtime": 1786361251.3956103,
+    "ast_hash": "58d83736c139a519689587f9db62e067",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/18-crash-handlers.md": {
+    "mtime": 1786361292.6368103,
+    "ast_hash": "57fa7212a10d0b88f04e09f69ef37d21",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/19-child-process.md": {
+    "mtime": 1786361533.2305038,
+    "ast_hash": "7b9ac01d38689d10d378eb5cdb2fd37f",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/20-shell-injection.md": {
+    "mtime": 1786361375.594212,
+    "ast_hash": "5860623d6e439cd90fd594ab97a6622d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/21-ipc.md": {
+    "mtime": 1786361547.0034888,
+    "ast_hash": "b75b909859355ab4973ab9f0cf7d8eca",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/22-parseargs.md": {
+    "mtime": 1786361444.8675475,
+    "ast_hash": "d34ded0be8cb6a294c89547da6c82426",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/23-cluster.md": {
+    "mtime": 1786361688.445334,
+    "ast_hash": "597a37810968b8b4f6c684a42c91cc61",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/24-worker-threads.md": {
+    "mtime": 1786361733.9383502,
+    "ast_hash": "33398d1ef87e02a532603d9b6b6571e6",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/25-shared-memory.md": {
+    "mtime": 1786361776.25402,
+    "ast_hash": "2c1e5714ef2dd48aea8ae3558699f9ff",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/26-single-executable-applications.md": {
+    "mtime": 1786361818.1053946,
+    "ast_hash": "c0da730bcd5ec7b2656e48dc9e46dd7b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/README.md": {
+    "mtime": 1786361859.6714957,
+    "ast_hash": "a4a71f6d6b6a54339849821c2b48fe5b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/01-connection-pooling.md": {
+    "mtime": 1786373741.5097709,
+    "ast_hash": "78d395d71e27670e96f7c2c15fd7e5c8",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/02-parameterized-queries.md": {
+    "mtime": 1786365247.652608,
+    "ast_hash": "2feabaf9fc7faab1acbfc87d76733978",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/03-driver-lifecycle.md": {
+    "mtime": 1786373741.5104902,
+    "ast_hash": "e90c8162a7b589b62b2c08d2d6768219",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/04-postgresql-from-node.md": {
+    "mtime": 1786373741.5110126,
+    "ast_hash": "50c6131f78cec73b576c9100b2529fb0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/05-mongodb-from-node.md": {
+    "mtime": 1786373741.511604,
+    "ast_hash": "44ba5b8743785c40b2ea8b71dfe390d2",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/06-transactions.md": {
+    "mtime": 1786365074.0228038,
+    "ast_hash": "73498171eb05041eb89df36b7c35defa",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/07-n-plus-1.md": {
+    "mtime": 1786365137.6130416,
+    "ast_hash": "7ff2af463aa4ec43e63d7d1bbaaf7b24",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/08-drivers-builders-orms.md": {
+    "mtime": 1786373751.898953,
+    "ast_hash": "e0cd8cd0f42eeb0c74af9745a3a4643a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/09-mongoose.md": {
+    "mtime": 1786373718.6558132,
+    "ast_hash": "d94fd0b8e4cf5e741a80e9387abb8be9",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/10-repository-pattern.md": {
+    "mtime": 1786373191.1884248,
+    "ast_hash": "749676b73771b3947932510ca38d3f91",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/11-migrations.md": {
+    "mtime": 1786373252.7907073,
+    "ast_hash": "b8db121dab6de03b79233fe977d93685",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/12-node-sqlite.md": {
+    "mtime": 1786373359.7541978,
+    "ast_hash": "a5c617f4fb457778e2a02895e4b3e5c7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/13-prisma-drizzle.md": {
+    "mtime": 1786373419.583472,
+    "ast_hash": "49370ce42a2b8d294d8da09445714187",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/14-retry-backoff.md": {
+    "mtime": 1786373482.3307598,
+    "ast_hash": "fa58684322e94b3a978b35f7df445be2",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/15-read-replicas.md": {
+    "mtime": 1786373539.8900237,
+    "ast_hash": "c81ce539286221501fbf93d0e7b34f41",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/16-cursors.md": {
+    "mtime": 1786373596.1252816,
+    "ast_hash": "22c977f899240a3f0fc927e3d53cbea5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/README.md": {
+    "mtime": 1786373775.9120538,
+    "ast_hash": "86a51750e1d2e0136891d1d4886e7135",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/01-sync-vs-background.md": {
+    "mtime": 1786374299.7362547,
+    "ast_hash": "6147a7078c04c4254c8e4b66b4701905",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/02-job-queues.md": {
+    "mtime": 1786374348.62846,
+    "ast_hash": "8c9a6470472a7b188390079ff7f99b91",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/03-worker-processes.md": {
+    "mtime": 1786374394.6466534,
+    "ast_hash": "e3fb9a120477ac0097888ede85ebc3b2",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/04-retries-and-stalled-jobs.md": {
+    "mtime": 1786374438.6828384,
+    "ast_hash": "62420764b4edd420d4d002e384e0bef7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/05-job-idempotency.md": {
+    "mtime": 1786374485.5040352,
+    "ast_hash": "b3baddeb0f1150d2153169fb884e23b8",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/06-transactional-outbox.md": {
+    "mtime": 1786374528.2602148,
+    "ast_hash": "d114f60250500fa1772aa1089c665771",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/07-dead-letter-queues.md": {
+    "mtime": 1786374569.480388,
+    "ast_hash": "6125630ec4b3cacecae909b7a65b2bf0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/08-scheduled-jobs.md": {
+    "mtime": 1786374615.8615828,
+    "ast_hash": "04b91393b1a06534fc7836a5b7b6e4a2",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/09-outbound-side-effects.md": {
+    "mtime": 1786374660.6947713,
+    "ast_hash": "5aba71800bb02fdc932b1b592f2e9fc3",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/10-time-on-the-server.md": {
+    "mtime": 1786374725.4230454,
+    "ast_hash": "5e0042a6fb64434742057bf17ef6af3c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/11-graceful-shutdown.md": {
+    "mtime": 1786374771.1002393,
+    "ast_hash": "8ef0e3956c154da8edf43fced612dc7e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/12-timeout-budgets.md": {
+    "mtime": 1786374818.3924403,
+    "ast_hash": "ea0977cbeb9a0fe9b14a2ca5bb1a53be",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/13-deadline-propagation.md": {
+    "mtime": 1786374863.8596334,
+    "ast_hash": "4b8ebf84b7f0d1666af9debce99f37f0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/14-retry-safe-failures.md": {
+    "mtime": 1786374910.17383,
+    "ast_hash": "454d580a40832fdb0e41aa0a9bdf0a2d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/15-backoff-and-jitter.md": {
+    "mtime": 1786374953.969016,
+    "ast_hash": "c7d28dc97114206e39a5aa0a2fd8e616",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/16-concurrency-limiting.md": {
+    "mtime": 1786375001.755219,
+    "ast_hash": "bbd13a895a9b0c638e18af40f561628d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/README.md": {
+    "mtime": 1786375024.811317,
+    "ast_hash": "80c8a8d412a83e22104be7b872dc7d1e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/01-password-storage.md": {
+    "mtime": 1786413582.8390758,
+    "ast_hash": "0872e1d946578acb4c89f1dd8c391cdc",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/02-sessions-vs-jwt.md": {
+    "mtime": 1786378930.1998382,
+    "ast_hash": "9b1122aaa91e768b7375966aaa8f6b92",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/03-token-storage.md": {
+    "mtime": 1786410519.7739592,
+    "ast_hash": "f13c833fb7da3f83ffa4bfde17736025",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/04-authentication-vs-authorization.md": {
+    "mtime": 1786378930.2008946,
+    "ast_hash": "ae15804356ce4567588e06ee5ed9e13d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/05-session-management.md": {
+    "mtime": 1786378930.2014058,
+    "ast_hash": "e140b4656ca13d403e6f17e05c4be112",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/06-oauth-oidc.md": {
+    "mtime": 1786410519.7717693,
+    "ast_hash": "78ca5d01fcfcc6bb61ff5e3b60bd1696",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/07-mfa-totp.md": {
+    "mtime": 1786410519.777175,
+    "ast_hash": "3f431814bde62b22e46808a0749edc92",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/08-injection.md": {
+    "mtime": 1786412364.6897743,
+    "ast_hash": "034550cf6398eeaeca4f9076564479f9",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/09-xss.md": {
+    "mtime": 1786413710.5837965,
+    "ast_hash": "7cd837244b7a64b157cc6357a9ba3fee",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/10-path-traversal.md": {
+    "mtime": 1786410519.7822866,
+    "ast_hash": "4180095c8ca4f713c52130f3f71f6657",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/11-csrf.md": {
+    "mtime": 1786410100.5978944,
+    "ast_hash": "6e6268383a9545458b2ebebb6f219a0a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/12-ssrf.md": {
+    "mtime": 1786414170.406209,
+    "ast_hash": "8561078b55e14d4f1c3a0c0d5dd1fc97",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/13-prototype-pollution.md": {
+    "mtime": 1786412364.6901367,
+    "ast_hash": "23e60ac9124f645631b69a1d77eda18b",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/14-redos.md": {
+    "mtime": 1786410333.8480158,
+    "ast_hash": "a1e5a76128cbf6d7c4b32b2a1ab4b2ec",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/15-deserialization-redirects-mass-assignment.md": {
+    "mtime": 1786412364.6906626,
+    "ast_hash": "1cea474d33d41cfca96f2c2c82748b92",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/16-timing-attacks.md": {
+    "mtime": 1786413582.8416739,
+    "ast_hash": "14a134807e0edff7b79f0df7dbd8e2fd",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/17-input-validation.md": {
+    "mtime": 1786412340.8102045,
+    "ast_hash": "a9619fc727e6f58c32a5885749caa951",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/18-secrets.md": {
+    "mtime": 1786413189.713294,
+    "ast_hash": "0c2e8ee78ea86e6cce335d4bab4b0035",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/19-https-hsts-cookies.md": {
+    "mtime": 1786413407.3688555,
+    "ast_hash": "1c2f158bbe28a8c10618f4f6216af3a1",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/20-node-crypto.md": {
+    "mtime": 1786414396.1479487,
+    "ast_hash": "3a40ce2a5037aa2b9f308b4672233811",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/21-rate-limiting.md": {
+    "mtime": 1786413697.2988448,
+    "ast_hash": "44c2afceffa44491591cca655cb177c7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/22-security-headers.md": {
+    "mtime": 1786414033.7205915,
+    "ast_hash": "021bc80a085254aa914a593897f0d11a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/23-supply-chain.md": {
+    "mtime": 1786414160.9767246,
+    "ast_hash": "271ca540d05fb8a5d43a5424214ee382",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/24-permission-model.md": {
+    "mtime": 1786414152.1951985,
+    "ast_hash": "c498e8476b9bcd4e0c6d1c0785a76112",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/25-web-crypto.md": {
+    "mtime": 1786414451.6392796,
+    "ast_hash": "9894276c30e0042104afba32e51d6eb5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/26-encryption-and-keys.md": {
+    "mtime": 1786414622.5907412,
+    "ast_hash": "ea2c2781a47005f4d48ccbc5fbba36f7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/27-audit-logging.md": {
+    "mtime": 1786455509.605606,
+    "ast_hash": "9ba2be7794ac52ed0ef873c5aa5e5875",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/README.md": {
+    "mtime": 1786414652.8927903,
+    "ast_hash": "355e3d8636652c14706ec411a56b1947",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/01-node-test-runner.md": {
+    "mtime": 1786454503.8515618,
+    "ast_hash": "f334814a009876467e11c6aafc83fb7a",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/02-node-assert.md": {
+    "mtime": 1786454555.692832,
+    "ast_hash": "0ccdb874d77b789b66f266d5a3031202",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/03-unit-integration-e2e.md": {
+    "mtime": 1786454605.4090912,
+    "ast_hash": "3b8efa42a8154f821403acbec120c07e",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/04-testable-code.md": {
+    "mtime": 1786454673.0563262,
+    "ast_hash": "cf0f85d44d9d9ac495f4afd19095c7a5",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/05-api-testing.md": {
+    "mtime": 1786454730.3107398,
+    "ast_hash": "0562d6cecefa6c9175454386eb615cd3",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/06-async-testing.md": {
+    "mtime": 1786454774.906914,
+    "ast_hash": "619275f6867c72cda1c47c5b3fc13274",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/07-mocking.md": {
+    "mtime": 1786454821.492096,
+    "ast_hash": "9fb5cd2c630df1ae99c5caa28b8bf70c",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/08-module-mocking.md": {
+    "mtime": 1786454866.612272,
+    "ast_hash": "e39f3a8765483918991bee29568b86e9",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/09-test-doubles.md": {
+    "mtime": 1786454917.3161454,
+    "ast_hash": "82a097bf10152b9e2feb8688f908b2bc",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/10-fixtures-and-factories.md": {
+    "mtime": 1786454963.665651,
+    "ast_hash": "15c62b8cd28c4074a67f19cc9bbe4a02",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/11-coverage.md": {
+    "mtime": 1786455088.1597042,
+    "ast_hash": "b4135258ebfbea2e944823285d764822",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/12-vitest-and-jest.md": {
+    "mtime": 1786455049.1370115,
+    "ast_hash": "6554d268c8e60d351fa5c01a9b11a3bc",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/13-testcontainers.md": {
+    "mtime": 1786455093.2191572,
+    "ast_hash": "16caf6c3bc181eca8f76485b76b03bcf",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/14-runner-flags.md": {
+    "mtime": 1786455143.840355,
+    "ast_hash": "7ab7585dc06b3a10c9313b67448d7bd2",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/15-snapshot-testing.md": {
+    "mtime": 1786455183.264509,
+    "ast_hash": "8123e150dd4f1f0abd9f555f75b3bef7",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/16-lint-and-format.md": {
+    "mtime": 1786455224.0336683,
+    "ast_hash": "159cc50643e1af918adadd6ce157f812",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/17-property-and-mutation.md": {
+    "mtime": 1786455272.3021386,
+    "ast_hash": "051f57eb16460fe1c9142cf9678c5486",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/18-load-testing.md": {
+    "mtime": 1786455355.075298,
+    "ast_hash": "8a7c0f272a227984be16ea0dfb1653e1",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/19-contract-testing.md": {
+    "mtime": 1786455395.9625046,
+    "ast_hash": "4fce7c1273bfb7e8a92c00ab7dc2f9fc",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/20-schema-compatibility.md": {
+    "mtime": 1786455441.7137358,
+    "ast_hash": "cf854cb839045acf9e60b23dca653536",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/README.md": {
+    "mtime": 1786455482.7579432,
+    "ast_hash": "9bfa0662ec220b892265a08a1ac09b7d",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/reviews/syllabus-review.md": {
+    "mtime": 1786288343.321102,
+    "ast_hash": "4a5fa8a8498f347923ba50744acfe8e4",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/syllabus/01-foundations.md": {
+    "mtime": 1786362800.7782912,
+    "ast_hash": "6930c8784c34170f7b54eb515007ae79",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/syllabus/02-core-io.md": {
+    "mtime": 1786288012.4317155,
+    "ast_hash": "201778f0cd52df29df0305d9cdefdf54",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/syllabus/03-application.md": {
+    "mtime": 1786375706.768213,
+    "ast_hash": "d8f4b3db2a4f5a304f4fecdfae8337b0",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/syllabus/04-production.md": {
+    "mtime": 1786288012.4324212,
+    "ast_hash": "2098fae8f4531ec29a9f175ff918ee9f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/README.md": {
+    "mtime": 1786454992.0453217,
+    "ast_hash": "ad9e7b76689c5b879be56e53d04c38fc",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/README.md": {
+    "mtime": 1786454791.7345438,
+    "ast_hash": "08c6c6a2babda2a1ed513f2a30910ecf",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/01-what-postgresql-is.md": {
+    "mtime": 1786453940.142507,
+    "ast_hash": "ee6f2d86e831e8044ab951415fbbdf02",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/02-client-server-model.md": {
+    "mtime": 1786453940.142507,
+    "ast_hash": "62d6fef00847dd1afd8be1b3931a229c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/03-namespace.md": {
+    "mtime": 1786453940.142507,
+    "ast_hash": "3165ae74d710d21f8c2ed86c8a7bb5e9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/04-shared-buffers.md": {
+    "mtime": 1786454110.5675128,
+    "ast_hash": "6ceac78a64b366adfc94d85e88b1c9fd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/05-wal.md": {
+    "mtime": 1786454028.348156,
+    "ast_hash": "acfd662d33a19cceb3753eade4d35936",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/06-roles.md": {
+    "mtime": 1786454028.348156,
+    "ast_hash": "b60c5cec78bfcde9402263bb0725fb7a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/07-local-install.md": {
+    "mtime": 1786454028.348156,
+    "ast_hash": "8f22b2ece01ac4855696f02186b50cfd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/08-connection-and-auth.md": {
+    "mtime": 1786454028.3488636,
+    "ast_hash": "58bb11a59a0d1b57a3cd6eed0aa70252",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/09-process-model.md": {
+    "mtime": 1786454097.0296426,
+    "ast_hash": "62516481cb802df6d82b4e29c84f787b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/10-version-policy.md": {
+    "mtime": 1786454097.0296426,
+    "ast_hash": "3ab5da22a89e0bd197d08b4732b87d6d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/11-vs-other-databases.md": {
+    "mtime": 1786498271.3682625,
+    "ast_hash": "55943d79e1492b1974be3598ec345705",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/12-templates.md": {
+    "mtime": 1786454097.0304482,
+    "ast_hash": "05827aa0f2b4bc7394c77ce061297f5f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/README.md": {
+    "mtime": 1786453940.142507,
+    "ast_hash": "6bd2443d3af32aa80ed7cbc8e75e4ab4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/01-connecting.md": {
+    "mtime": 1786537758.5163026,
+    "ast_hash": "dc6e259f627bc8d3640abb31c1083638",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/02-daily-meta-commands.md": {
+    "mtime": 1786537800.4124885,
+    "ast_hash": "8b9b66e9ffab49973502483ec8ec6c9f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/03-describe-table.md": {
+    "mtime": 1786537844.8246853,
+    "ast_hash": "e24a1ccc100b3c8b54759dda8278c542",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/04-output-control.md": {
+    "mtime": 1786537886.1818788,
+    "ast_hash": "fa850e5cbcf867fc67180cd47f3903f9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/05-help.md": {
+    "mtime": 1786537927.6420739,
+    "ast_hash": "549b1a62940f6db280747373f615a8a3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/06-scripting.md": {
+    "mtime": 1786537972.7672865,
+    "ast_hash": "b5afb116c06d4306af08113a573e26be",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/07-query-buffer.md": {
+    "mtime": 1786538015.4864876,
+    "ast_hash": "8e07d884b1a5a205571fd30658edfb7e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/08-variables.md": {
+    "mtime": 1786538060.775701,
+    "ast_hash": "7cee84bc2f3a23ab8ffbafc8a2b93745",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/09-copy.md": {
+    "mtime": 1786538126.102308,
+    "ast_hash": "4bdcf2733be2f2f57c64dbc1bd5c0e61",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/10-timing-watch.md": {
+    "mtime": 1786538176.6802468,
+    "ast_hash": "17fe45768002bab9125a915cf098caa7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/11-include-files.md": {
+    "mtime": 1786538216.0914326,
+    "ast_hash": "4f096368909e91898352f3d9f82b50d8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/12-who-and-privileges.md": {
+    "mtime": 1786538260.8176432,
+    "ast_hash": "5feb9a06c4a334f107b1620ca9d66b12",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/13-psqlrc.md": {
+    "mtime": 1786538311.0258796,
+    "ast_hash": "4eb9a88fddb74baa4ae6495254342b7b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/14-errverbose.md": {
+    "mtime": 1786538380.111205,
+    "ast_hash": "91b538174093023e5aa16349ea4edba0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/15-piping.md": {
+    "mtime": 1786538428.4464328,
+    "ast_hash": "e92b9301db64ed9a4fb404e667734d14",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/README.md": {
+    "mtime": 1786454401.1340263,
+    "ast_hash": "a5254eda4c4f2711ed0b74ae3ba0e065",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/01-what-index.md": {
+    "mtime": 1786525299.3459184,
+    "ast_hash": "00617efc5316f34b66cba41cd1a10829",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/02-btree.md": {
+    "mtime": 1786525339.725099,
+    "ast_hash": "ea0ebb601e0f04ddf5aa2e2275290152",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/03-explain.md": {
+    "mtime": 1786525383.282294,
+    "ast_hash": "51f5ef3aad3ac9483c702ae93c79704c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/04-scan-types.md": {
+    "mtime": 1786525429.6235015,
+    "ast_hash": "80d0046ca1f9c8ce159ee4192d3d2946",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/05-index-not-used.md": {
+    "mtime": 1786525484.339753,
+    "ast_hash": "ba1754730c8ba5a4c0f143738f2dec8a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/06-multicolumn.md": {
+    "mtime": 1786525529.7899766,
+    "ast_hash": "8c67bf2e8b905f6ea932f0fad8a7fcf2",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/07-explain-buffers.md": {
+    "mtime": 1786525577.2982101,
+    "ast_hash": "bd0c631d015f8f7196d07869ab4edf8d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/08-index-only.md": {
+    "mtime": 1786525625.435447,
+    "ast_hash": "56b493ffff684c5f4b9402da01c0ebe2",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/09-partial.md": {
+    "mtime": 1786525926.0649261,
+    "ast_hash": "cd074ed7acecec20a30146186c4bb41a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/10-expression.md": {
+    "mtime": 1786525715.867892,
+    "ast_hash": "2a9a685f57ba255382e0d0b1f7ac76b3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/11-gin-trgm.md": {
+    "mtime": 1786525770.8701625,
+    "ast_hash": "da22abd1f11546698534d10804bd3fdd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/12-concurrently.md": {
+    "mtime": 1786525926.0679576,
+    "ast_hash": "7e68865229c6f656a8662e2921a234e4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/13-unused-indexes.md": {
+    "mtime": 1786525865.3636274,
+    "ast_hash": "cdf224122e38e600e12f7f31cfb5c0eb",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/14-pg-stat-statements.md": {
+    "mtime": 1786525926.0630612,
+    "ast_hash": "cd547335af5244489f5334a25b470ec8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/15-gist-brin-hash.md": {
+    "mtime": 1786525980.7411952,
+    "ast_hash": "3dce409cda9174aebd18d1762a7d006d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/16-statistics.md": {
+    "mtime": 1786526035.7104657,
+    "ast_hash": "737ebf72ca666a21982c3bfd85a283ed",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/17-bloat-reindex.md": {
+    "mtime": 1786526086.243714,
+    "ast_hash": "c2d3e9dc2790386123c18054bb7f22cb",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/18-fk-indexes.md": {
+    "mtime": 1786526298.411758,
+    "ast_hash": "1bcf87f639a0674f5ea47321cd26453a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/README.md": {
+    "mtime": 1786455032.45692,
+    "ast_hash": "106a9d9b6178d3154a41cb245543f6f5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/01-acid.md": {
+    "mtime": 1786536485.1526616,
+    "ast_hash": "834567cce6243bc6c5372a14755a1dda",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/02-begin-commit.md": {
+    "mtime": 1786536526.6438446,
+    "ast_hash": "c7fa331235d37487dcaf673cd82d9c8f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/03-read-committed.md": {
+    "mtime": 1786536569.340033,
+    "ast_hash": "777695f5bb5c074231f79c61c11632e1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/04-lost-update.md": {
+    "mtime": 1786593706.8429658,
+    "ast_hash": "0812c8c2c9299eb54018795baea1b9c8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/05-mvcc.md": {
+    "mtime": 1786536668.47147,
+    "ast_hash": "9179fd5681da096d2e6bc562822d8aff",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/06-isolation-levels.md": {
+    "mtime": 1786594110.9166074,
+    "ast_hash": "5c8e9bf72af7836ae35ddf55759c9091",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/07-row-locks.md": {
+    "mtime": 1786536772.4309285,
+    "ast_hash": "fa1b0eab80d804ed77565c83aabec8be",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/08-skip-locked.md": {
+    "mtime": 1786536818.0811298,
+    "ast_hash": "b5d7003be77344ddce0d5fb80027180e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/09-savepoints.md": {
+    "mtime": 1786536874.076378,
+    "ast_hash": "c4bff26daae07a0f7bc19659345def22",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/10-table-locks-ddl.md": {
+    "mtime": 1786536922.3425922,
+    "ast_hash": "97160264172668c48bb1700cdb373ac9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/11-deadlocks.md": {
+    "mtime": 1786593607.5465627,
+    "ast_hash": "7115443882d9968775e716eaad90c4f3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/12-long-transactions.md": {
+    "mtime": 1786537070.3852491,
+    "ast_hash": "c82ac262435d9e5ce651a8375429773a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/13-vacuum.md": {
+    "mtime": 1786537121.9014778,
+    "ast_hash": "e042145c70f932b1572c844a305092de",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/14-idle-in-transaction.md": {
+    "mtime": 1786537170.7386944,
+    "ast_hash": "2a16a30b505fa61461e5048e1f998230",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/15-advisory-locks.md": {
+    "mtime": 1786593670.7548194,
+    "ast_hash": "193588aebfc53f2f2c79698754e2e954",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/16-xid-wraparound.md": {
+    "mtime": 1786593649.9297347,
+    "ast_hash": "279a06afd56a624962a1ad6b0c9b0986",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/README.md": {
+    "mtime": 1786454751.6475463,
+    "ast_hash": "5acfe46084029ddd314f4dcf14bf87f7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/02-column-vs-json.md": {
+    "mtime": 1786613629.4806857,
+    "ast_hash": "b68902dd01736d7d2c153e1cf78364bf",
+    "semantic_hash": "b68902dd01736d7d2c153e1cf78364bf"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/03-index-jsonb.md": {
+    "mtime": 1786613629.4811099,
+    "ast_hash": "9f4894883119472e47fdde5de1e8e6b4",
+    "semantic_hash": "9f4894883119472e47fdde5de1e8e6b4"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/04-build-json-sql.md": {
+    "mtime": 1786613629.4812908,
+    "ast_hash": "f1754188fca39b989101702d326b6ba6",
+    "semantic_hash": "f1754188fca39b989101702d326b6ba6"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/06-pg-trgm.md": {
+    "mtime": 1786613629.4816122,
+    "ast_hash": "c837f4362da5579920490112040adbef",
+    "semantic_hash": "c837f4362da5579920490112040adbef"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/07-views.md": {
+    "mtime": 1786615333.37606,
+    "ast_hash": "075509e4becaf47109b3bbdc8247a52b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/08-triggers.md": {
+    "mtime": 1786615396.206313,
+    "ast_hash": "527ca1a45bcd5c3358d0d2c37c07ff19",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/09-extensions.md": {
+    "mtime": 1786498271.380067,
+    "ast_hash": "995363dab5e80b38b816687648a862c8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/10-srf.md": {
+    "mtime": 1786616248.586485,
+    "ast_hash": "11f3ae954152cd6a237dfae5ad417901",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/11-matviews.md": {
+    "mtime": 1786615681.5142224,
+    "ast_hash": "2b0e012f9cab3813db93bfe6d62eb8db",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/12-plpgsql.md": {
+    "mtime": 1786616305.228711,
+    "ast_hash": "cd1a9cfef7e8cd87d5f16a9ee268135c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/13-listen-notify.md": {
+    "mtime": 1786498271.3807473,
+    "ast_hash": "12f343beb7c84cdbe5115dd180aaa3f6",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/14-partitioning.md": {
+    "mtime": 1786498271.3809142,
+    "ast_hash": "772c9fbb366f45f410d4f747315d3611",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/15-procedures.md": {
+    "mtime": 1786616339.7048485,
+    "ast_hash": "3e8afac05a5c177fb648659b0de6a3b7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/16-fdw.md": {
+    "mtime": 1786498271.3812413,
+    "ast_hash": "213ab5ae838eb8ede7440d28cda678ba",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/17-pgvector.md": {
+    "mtime": 1786498271.3814063,
+    "ast_hash": "92d15fa1c56667a2f8d9001866fdae9b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/README.md": {
+    "mtime": 1786613629.4821033,
+    "ast_hash": "2bb256fa9efe753d6ede84bcd4ade1ba",
+    "semantic_hash": "2bb256fa9efe753d6ede84bcd4ade1ba"
+  },
+  "docs/postgresql/pages/phase-13-ops/01-roles-grant.md": {
+    "mtime": 1786454992.1487625,
+    "ast_hash": "33dfaa6ca98da136d10a1076ea8e7795",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/02-secrets.md": {
+    "mtime": 1786454992.1497624,
+    "ast_hash": "132fb4a35a487682c5f9f5022c92b287",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/03-app-role-not-owner.md": {
+    "mtime": 1786454992.1497624,
+    "ast_hash": "3bb58dbd3d7696bf26e20de9046fee47",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/04-pg-dump-restore.md": {
+    "mtime": 1786455032.5201888,
+    "ast_hash": "2d763760d9ff83260d35c68e6fe37baa",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/05-pg-hba.md": {
+    "mtime": 1786454992.1497624,
+    "ast_hash": "524eadc59ab100de4df2047aac07c973",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/06-tls.md": {
+    "mtime": 1786454992.1507626,
+    "ast_hash": "a69d7f15498b650682df59f92b60ecf5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/07-pgbouncer.md": {
+    "mtime": 1786454992.1507626,
+    "ast_hash": "446847549cf6ce024c223c83910438db",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/08-replication.md": {
+    "mtime": 1786454992.1507626,
+    "ast_hash": "8835935ac39da1fbc29a48d8afa910f8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/09-monitoring.md": {
+    "mtime": 1786454992.1507626,
+    "ast_hash": "0745e626d684f9286049ef348492112a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/10-config-keys.md": {
+    "mtime": 1786454992.1507626,
+    "ast_hash": "0501ea614a7c1c356db0bd1959f45ea3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/11-logging.md": {
+    "mtime": 1786454992.1517625,
+    "ast_hash": "8d9fa5ae6ab08e3fdeb685d30645f8d8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/12-zero-downtime-ddl.md": {
+    "mtime": 1786454992.1517625,
+    "ast_hash": "698bb3418913bb95c7e6e3dd50d472b0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/13-managed-postgres.md": {
+    "mtime": 1786454992.1517625,
+    "ast_hash": "df19bd1d536ce3c7c7fd232ca0f4fc8b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/14-rls.md": {
+    "mtime": 1786454992.1517625,
+    "ast_hash": "c25e196e3c08182823b775827eba140f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/15-physical-backup.md": {
+    "mtime": 1786454992.1517625,
+    "ast_hash": "adb436184345d2100d35345324bc3db0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/16-logical-replication.md": {
+    "mtime": 1786454992.1527624,
+    "ast_hash": "3d9e733a8fa73b1dde5c0a347a803720",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/17-major-upgrades.md": {
+    "mtime": 1786454992.1527624,
+    "ast_hash": "23d15636a8748c81ebe59b2da3798159",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/18-disaster-drill.md": {
+    "mtime": 1786454992.1527624,
+    "ast_hash": "d779db73e1323e415381b237210dc4a7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/README.md": {
+    "mtime": 1786454751.6518004,
+    "ast_hash": "f1787ca0b79f038211149d0bee618a41",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/01-integers.md": {
+    "mtime": 1786538947.975527,
+    "ast_hash": "b2c049cf17c629e9c3ac54baafdcfee4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/02-numeric-vs-float.md": {
+    "mtime": 1786538998.2130837,
+    "ast_hash": "4c2802953619be8b799c11a687324624",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/03-text.md": {
+    "mtime": 1786539044.97629,
+    "ast_hash": "cca845f02b30a2e964855cb8c5222f0f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/04-timestamptz.md": {
+    "mtime": 1786539102.0415418,
+    "ast_hash": "fe7882a00b509253704178228a911953",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/05-time-zones.md": {
+    "mtime": 1786593596.6585183,
+    "ast_hash": "d2c104688e5c90322a7365aa7ec0c5ed",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/06-null.md": {
+    "mtime": 1786539224.392178,
+    "ast_hash": "e29ed05f7d53c78ca7fa2da44cfbcdc4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/07-uuid.md": {
+    "mtime": 1786539271.7902908,
+    "ast_hash": "21c7ae49b159342af1845237d253e90a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/08-jsonb.md": {
+    "mtime": 1786539326.4485319,
+    "ast_hash": "858644e0abc76d2a8e3dd0bf2ba55666",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/09-boolean-dates.md": {
+    "mtime": 1786539404.463876,
+    "ast_hash": "6a2fa807508eea98bdfccb9e63f52026",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/10-arrays.md": {
+    "mtime": 1786539453.6780932,
+    "ast_hash": "4442f1680d40ce1b0bed147f92d88248",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/11-enum-check-lookup.md": {
+    "mtime": 1786539501.8283057,
+    "ast_hash": "d140f6b5bd592139a0b7ea48d439b4ff",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/12-casting.md": {
+    "mtime": 1786539548.4705114,
+    "ast_hash": "eb6f5464c74e5ca3d6ebc9a8f3547855",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/13-bytea.md": {
+    "mtime": 1786539595.4557188,
+    "ast_hash": "87a56f05ecc1bd7ffd2c28dc241c6a01",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/14-network-geo-citext.md": {
+    "mtime": 1786539646.8909457,
+    "ast_hash": "90c37244d65f7167d78fd3fabe397552",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/15-domains-composites.md": {
+    "mtime": 1786539695.246159,
+    "ast_hash": "b1d2fe1cc417f5ab8cb7c88d4d51c016",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/16-ranges.md": {
+    "mtime": 1786539745.8643823,
+    "ast_hash": "97fec06231f9b4017d0f5351f7206e29",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/README.md": {
+    "mtime": 1786454480.3505561,
+    "ast_hash": "c05c251a1c2288e1cde429aba6142275",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/01-create-table.md": {
+    "mtime": 1786506329.1764898,
+    "ast_hash": "a8b2ba989d96b26f74393a0f64c2d12b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/02-primary-keys.md": {
+    "mtime": 1786503971.9902854,
+    "ast_hash": "845dc2042ace5bedc41e3f09230337f7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/03-foreign-keys.md": {
+    "mtime": 1786503915.6540477,
+    "ast_hash": "302a90eccb42dfcb16cb9d681dc686e4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/04-constraints.md": {
+    "mtime": 1786505845.1691747,
+    "ast_hash": "00f51b2f6b72935db5a7e92509daf6de",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/05-alter-table.md": {
+    "mtime": 1786503867.7148457,
+    "ast_hash": "3777458ee5a1833cbe78d6adedc6405e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/06-relationships.md": {
+    "mtime": 1786505893.354377,
+    "ast_hash": "c8b977d24f1182a76d62ff866b4dabc1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/07-transactional-ddl.md": {
+    "mtime": 1786506126.618357,
+    "ast_hash": "f1e8508bb89faacd881441c41f9ca124",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/08-unique-nulls.md": {
+    "mtime": 1786504067.5686882,
+    "ast_hash": "42ef86ea4f5349cc2a47c82298c85eea",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/09-add-not-null.md": {
+    "mtime": 1786504024.0075045,
+    "ast_hash": "482ff26e385d3fedba31af52201c6532",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/10-schemas-tenancy.md": {
+    "mtime": 1786505988.9879024,
+    "ast_hash": "2204cd345228b723b5fb09018118904b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/11-naming.md": {
+    "mtime": 1786506214.6776352,
+    "ast_hash": "a98a8422145e314078e47baa92a84457",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/12-normalization.md": {
+    "mtime": 1786506268.4699528,
+    "ast_hash": "4d3ded39f6193768554777005f25c3ce",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/13-drop-cascade.md": {
+    "mtime": 1786504371.2332165,
+    "ast_hash": "fc9ab218dac18bc5e7ea4718de0d2919",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/14-sequences.md": {
+    "mtime": 1786504116.3158937,
+    "ast_hash": "f7346e7a327dd7f6e95890e789499b2e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/15-generated-columns.md": {
+    "mtime": 1786504163.5190928,
+    "ast_hash": "24057e25557f317890554918471d594c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/16-temp-unlogged.md": {
+    "mtime": 1786505941.3965788,
+    "ast_hash": "b77bf24c580a95e81142f460e9b20ade",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/17-comments.md": {
+    "mtime": 1786506033.078964,
+    "ast_hash": "507ec41394741a35f6eab77ae1abf35e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/18-deferrable.md": {
+    "mtime": 1786504304.7206879,
+    "ast_hash": "420d2e5275a72b916ecf284f927eca1f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/19-inheritance.md": {
+    "mtime": 1786504206.8342752,
+    "ast_hash": "6b455366232d3142e347a61952b9f46f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/README.md": {
+    "mtime": 1786454480.3532805,
+    "ast_hash": "77efb9580476670abe53b3b1c1a1b920",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/01-select-shape.md": {
+    "mtime": 1786518485.5975428,
+    "ast_hash": "d74431b9fec05ce25aec381c8080425f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/02-where-predicates.md": {
+    "mtime": 1786518538.7084653,
+    "ast_hash": "0164f5563b62c48c488b13923d57a7af",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/03-limit-offset.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "e61721e6aefdc38f7010938c37b9eb55",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/04-insert.md": {
+    "mtime": 1786518485.598576,
+    "ast_hash": "cc3e92311033b8fa38d6bce8a1ff6e15",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/05-returning.md": {
+    "mtime": 1786518485.5988572,
+    "ast_hash": "af84f8bf63ac45081d180af72928f719",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/06-on-conflict.md": {
+    "mtime": 1786518485.5991998,
+    "ast_hash": "b1b963fb0fde364c6bb3e1733f3e0c08",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/07-update.md": {
+    "mtime": 1786518485.599492,
+    "ast_hash": "e48dffd017687be7b34f8edfed0e733c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/08-parameters.md": {
+    "mtime": 1786518485.5998077,
+    "ast_hash": "84c13706705608de90248c1388e8600f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/09-logical-order.md": {
+    "mtime": 1786518485.6002088,
+    "ast_hash": "dd9ebe01e3c46fe9c6ef37b134d8ba6b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/10-order-by.md": {
+    "mtime": 1786518485.6004639,
+    "ast_hash": "fd9da29d31a51b7076cdf428864ed302",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/11-delete.md": {
+    "mtime": 1786518485.6007967,
+    "ast_hash": "c3001cda62dd170f0ecc8cd3ba4652a4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/12-distinct-on.md": {
+    "mtime": 1786518485.6010718,
+    "ast_hash": "e9cad756cd0f4dd1526a4227e40c0f38",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/13-merge.md": {
+    "mtime": 1786518485.601342,
+    "ast_hash": "5c8ad6ce6bde27dd774d8b6df447eaf0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/14-truncate.md": {
+    "mtime": 1786518485.6015754,
+    "ast_hash": "dc7828621f013d7b4eb1d0c57e94a3f6",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/15-expressions.md": {
+    "mtime": 1786518485.6018348,
+    "ast_hash": "7605423a748818cacab48b5430f2cc4b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/16-string-functions.md": {
+    "mtime": 1786518485.6020823,
+    "ast_hash": "b06541ad9417e95c0d7688b65d1e1ddd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/17-datetime-functions.md": {
+    "mtime": 1786518485.6023362,
+    "ast_hash": "91447bdd645fe399a6254fd5b940ba20",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/18-generate-series.md": {
+    "mtime": 1786518485.6025872,
+    "ast_hash": "a2021f0b11dcb78a3d342d4aa157a593",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/19-values-unnest.md": {
+    "mtime": 1786518485.6028638,
+    "ast_hash": "ef54c5a3c5f11c19ec32f811a99d39c3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/20-tuple-comparison.md": {
+    "mtime": 1786518485.603124,
+    "ast_hash": "30c51154ccb374e01ba7f09450693d62",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/README.md": {
+    "mtime": 1786518485.603346,
+    "ast_hash": "9b1c6a1b49687ac91f63b7a9264b8518",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/01-inner-join/01-matching-pairs.md": {
+    "mtime": 1786593719.5860176,
+    "ast_hash": "ab7f7256f2fac3b03988904b08dd70c2",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/01-inner-join/02-fan-out-and-aggregates.md": {
+    "mtime": 1786593743.6041152,
+    "ast_hash": "e4b43cf88943a2fc5e0bacefa63696a5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/01-inner-join/README.md": {
+    "mtime": 1786594221.5300567,
+    "ast_hash": "5bc92f7ba32fa64f6c3db3c7fa99d732",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/02-left-join/01-null-extension.md": {
+    "mtime": 1786588167.481413,
+    "ast_hash": "0c4de5fbf0fe221e6a2d3da262e5813c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/02-left-join/02-on-vs-where.md": {
+    "mtime": 1786593816.6974123,
+    "ast_hash": "b76762efadd24daa709604a954b0c109",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/02-left-join/README.md": {
+    "mtime": 1786587574.0266829,
+    "ast_hash": "cf8c1d07e989cafa96ceb898794e99ff",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/03-semi-anti/01-semi-joins.md": {
+    "mtime": 1786588167.4836826,
+    "ast_hash": "b994dc348ad3150dc0588918a10f27e8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/03-semi-anti/02-anti-joins.md": {
+    "mtime": 1786594226.274076,
+    "ast_hash": "2e2f70ef04c805a0213f0ad27f4e0a96",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/03-semi-anti/README.md": {
+    "mtime": 1786587695.8191783,
+    "ast_hash": "ff2e76ec262299c8931e31619e2f39e3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/04-multi-join.md": {
+    "mtime": 1786587871.7499046,
+    "ast_hash": "5faf88bde79a01faf2952a38c128d635",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/05-nn-join-table.md": {
+    "mtime": 1786587953.2832475,
+    "ast_hash": "5235d3212b92e09f61270f13a4a03053",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/06-outer-joins.md": {
+    "mtime": 1786587994.851422,
+    "ast_hash": "7e424d5b4ba1085a27fba473d3448744",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/07-cross-join.md": {
+    "mtime": 1786594298.2563684,
+    "ast_hash": "85cbd826d34fde3d534861530499b127",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/08-on-using-natural.md": {
+    "mtime": 1786593805.5153668,
+    "ast_hash": "feaeb3b07ce093ba301e96777a36fb5f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/09-self-join.md": {
+    "mtime": 1786588056.1116796,
+    "ast_hash": "f53ead789e4abc7e4d677d122efe8015",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/10-lateral.md": {
+    "mtime": 1786587027.0783994,
+    "ast_hash": "949bcb9d219b9f25ee0cacb42ab2b021",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/11-set-ops.md": {
+    "mtime": 1786588074.308756,
+    "ast_hash": "6652f710c3f3663fa0a7e82f280b8a37",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/12-alias-discipline.md": {
+    "mtime": 1786588091.3568277,
+    "ast_hash": "490ba0c76519cdd0e535a6cf58f7be40",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/13-join-expressions.md": {
+    "mtime": 1786593731.4140658,
+    "ast_hash": "9e78a42cdd53fa196d6885fc99d70037",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/README.md": {
+    "mtime": 1786587898.990019,
+    "ast_hash": "9eb7d9effd2653599df37a38028bf03f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/01-collapsing-rows.md": {
+    "mtime": 1786601984.2238624,
+    "ast_hash": "3e79cc0cfae0abf5d556e27c541fcd0b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/02-empty-groups-and-keys.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "4bfdc02d29a4691a2d682b977d10cb45",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/03-what-you-can-select.md": {
+    "mtime": 1786603196.906318,
+    "ast_hash": "b8fcdc461076ebcef2148bf7ffee90af",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/04-ordinals-and-distinct.md": {
+    "mtime": 1786603196.9058163,
+    "ast_hash": "0ad62b27f71bf0fd94c083c8990d6e59",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/05-how-it-executes.md": {
+    "mtime": 1786602569.3998306,
+    "ast_hash": "3f0350b9c97cbf61674520341dba7cf0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/README.md": {
+    "mtime": 1786603196.9060414,
+    "ast_hash": "814bb047ef447a83bb535a5eb04bd44f",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/02-count-variants/01-three-questions.md": {
+    "mtime": 1786601830.7260735,
+    "ast_hash": "ebcc85cd319de840e53f08b570a022d7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/02-count-variants/02-left-join-and-fan-out.md": {
+    "mtime": 1786600944.2953727,
+    "ast_hash": "b046f68ca78b00289037e60836823754",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/02-count-variants/03-what-counting-costs.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "a666f5fb88b127d49048ccea71192648",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/02-count-variants/README.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "df7be7c97b1297330c2ed19d57eb57d9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/03-having/01-groups-vs-rows.md": {
+    "mtime": 1786603196.9050415,
+    "ast_hash": "60a2349fdb54c4cd7c2db28ed3516fa5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/03-having/02-what-having-costs.md": {
+    "mtime": 1786603196.9048035,
+    "ast_hash": "46a4b429a27f0907758e6d7f48a07911",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/03-having/README.md": {
+    "mtime": 1786603196.9045541,
+    "ast_hash": "95d10add5843a6256a4a712a02cc933d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/04-filter-clause/01-conditional-aggregation.md": {
+    "mtime": 1786601459.744339,
+    "ast_hash": "27865046baa397f24ee1b6a44a8feb15",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/04-filter-clause/02-when-it-pays.md": {
+    "mtime": 1786603196.9070663,
+    "ast_hash": "0984d00b678bfe1769fe683e1d6f4247",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/04-filter-clause/README.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "71527cb23e93bee4947cf75b96be33ce",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/05-json-agg/01-arrays-and-strings.md": {
+    "mtime": 1786602398.7009206,
+    "ast_hash": "508006bbcf56cb9e3f1b4bb7ef3f1e0d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/05-json-agg/02-json-shapes.md": {
+    "mtime": 1786603196.9017715,
+    "ast_hash": "a3aa01ef918db6fe4af239a2e045d3da",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/05-json-agg/03-the-empty-array-trap.md": {
+    "mtime": 1786603267.2835522,
+    "ast_hash": "a441571b0d54363b086468c685def6f7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/05-json-agg/README.md": {
+    "mtime": 1786603267.2830465,
+    "ast_hash": "69d692126e23bcc721c1642451a39222",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/06-windows-intro/01-over-vs-group-by.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "6e011b101b5963807880762610e5ba53",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/06-windows-intro/02-where-windows-run.md": {
+    "mtime": 1786613629.4823608,
+    "ast_hash": "7dbedebf3e42f2fb457968e7173932cd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/06-windows-intro/03-what-windows-cost.md": {
+    "mtime": 1786603196.903683,
+    "ast_hash": "5d628ebe519c5ad9307fc77a7954f0df",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/06-windows-intro/README.md": {
+    "mtime": 1786613629.4833143,
+    "ast_hash": "cd0227a4deaa583565ca1e4e736cbbed",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/07-ranking/01-the-four-functions.md": {
+    "mtime": 1786613629.4833143,
+    "ast_hash": "9f63dc5e71aafd3900bdb7cb3b012d30",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/07-ranking/02-top-n-per-group.md": {
+    "mtime": 1786603196.9023511,
+    "ast_hash": "ae6f87c526299a82a291a41ae0e5b08e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/07-ranking/README.md": {
+    "mtime": 1786613629.4833143,
+    "ast_hash": "768f31bc50de5afc2ca3ff2bb743ef48",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/08-lag-lead/01-lag-and-lead.md": {
+    "mtime": 1786603196.904225,
+    "ast_hash": "4001c7a71155e9b2f1eea8a1e730aae1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/08-lag-lead/02-first-and-last.md": {
+    "mtime": 1786613629.4833143,
+    "ast_hash": "7d8215451415cf779731eb372b19368a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/08-lag-lead/README.md": {
+    "mtime": 1786613629.4833143,
+    "ast_hash": "18d884961c43eff8eaa49e030bc60aa1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/09-ctes/01-naming-a-subquery.md": {
+    "mtime": 1786613629.4843144,
+    "ast_hash": "c039bd821ea68ab240cbd953a75456ed",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/09-ctes/02-the-inlining-rule.md": {
+    "mtime": 1786613629.4843144,
+    "ast_hash": "5798a502974c4720ec4d5baf31a5e6be",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/09-ctes/03-references-and-hints.md": {
+    "mtime": 1786613629.4843144,
+    "ast_hash": "d99084196f9a0e852875bd8f4a3184e1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/09-ctes/README.md": {
+    "mtime": 1786613629.4843144,
+    "ast_hash": "eddf41016650f5f38cc73e3ed9a71566",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/01-one-statement-many-writes.md": {
+    "mtime": 1786613629.4843144,
+    "ast_hash": "921ee5d92105ef44f9d23db521e44b7e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/02-the-snapshot-rule.md": {
+    "mtime": 1786613629.486025,
+    "ast_hash": "1b43c9b34edd9cdf52b3fa9da3ed7a24",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/README.md": {
+    "mtime": 1786613629.486025,
+    "ast_hash": "87a16b93a3ee3c17e88f6b288a9c6f6e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/11-subqueries/01-scalar-and-row.md": {
+    "mtime": 1786613629.486025,
+    "ast_hash": "27e8c5e5c2bd60369a40ed2c04992083",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/11-subqueries/02-correlated-and-cost.md": {
+    "mtime": 1786613629.486589,
+    "ast_hash": "a7120d943148d933e9ba88a8e3dc479e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/11-subqueries/03-in-exists-and-not-in.md": {
+    "mtime": 1786613629.486589,
+    "ast_hash": "be34308017933a29911d34422fbd2629",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/11-subqueries/README.md": {
+    "mtime": 1786613629.486589,
+    "ast_hash": "3e985d107de5ab6d3071e451d2afe9d7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/01-what-total-costs.md": {
+    "mtime": 1786613629.486589,
+    "ast_hash": "437f7038df107dbd4575faefa89f118b",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/02-estimates-and-caps.md": {
+    "mtime": 1786613629.48733,
+    "ast_hash": "e93bead7fc0789f171326aed938efe42",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/README.md": {
+    "mtime": 1786613629.48733,
+    "ast_hash": "3d0029435e59203d41de0916291a48cb",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/13-ordered-set/01-percentiles.md": {
+    "mtime": 1786613629.48733,
+    "ast_hash": "9f734955ee08d223b3d6d59f8f10c2a6",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/13-ordered-set/02-mode-and-booleans.md": {
+    "mtime": 1786613629.4878833,
+    "ast_hash": "72fbd5ca9f6bb5bd59715a4387f785cd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/13-ordered-set/README.md": {
+    "mtime": 1786613629.4878833,
+    "ast_hash": "c3346990c5bf7894928473753c778b24",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/14-frames/01-rows-vs-range.md": {
+    "mtime": 1786613629.4878833,
+    "ast_hash": "8b1a5f3b0c2d67186421f50a6eaa82a2",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/14-frames/02-range-groups-exclude.md": {
+    "mtime": 1786613629.488445,
+    "ast_hash": "45758b6876bb05ca0ac83249b2908b52",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/14-frames/README.md": {
+    "mtime": 1786613629.488445,
+    "ast_hash": "8967a7671501b210c9a68e2cfd1198b9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/01-walking-a-tree.md": {
+    "mtime": 1786613629.488445,
+    "ast_hash": "6aea46de5710d890ec98e2f6403048aa",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/02-cycles-and-limits.md": {
+    "mtime": 1786613629.488928,
+    "ast_hash": "4db49c030533f5ac98f81a18ebce2289",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/README.md": {
+    "mtime": 1786613629.488928,
+    "ast_hash": "061ba408d8807b75bb23e0a1636ddaeb",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/01-sets-rollup-cube.md": {
+    "mtime": 1786613629.488928,
+    "ast_hash": "bf4de682001451a507ad9c01f5bc6678",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/02-grouping-and-labels.md": {
+    "mtime": 1786613629.4893403,
+    "ast_hash": "3d600110f50d16afabd0265092e7a27d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/README.md": {
+    "mtime": 1786613629.4893403,
+    "ast_hash": "831012d14f5622caf54a844b0574519a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/README.md": {
+    "mtime": 1786613629.4893403,
+    "ast_hash": "c86374559bf4e5aea3ba9316bd260b94",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/01-install-wire.md": {
+    "mtime": 1786522120.3887575,
+    "ast_hash": "c2c27220b0bc5bd823d8083f08b655aa",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/02-pool-vs-client.md": {
+    "mtime": 1786522163.173955,
+    "ast_hash": "12801219ba43b7fc6f7ba3abfaaba64c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/03-connection-config.md": {
+    "mtime": 1786522270.3484495,
+    "ast_hash": "7f92213299ce6430e0028b46a366bf5d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/04-query-placeholders.md": {
+    "mtime": 1786522314.013651,
+    "ast_hash": "dafc5c8865405133af1a250ffb45faee",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/05-errors.md": {
+    "mtime": 1786522386.300979,
+    "ast_hash": "912e8a7cf20a3928d4af84e6e5b64120",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/06-result-object.md": {
+    "mtime": 1786522465.247331,
+    "ast_hash": "a10adf2899910dfab99ca7d3b9a25492",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/07-connect-release.md": {
+    "mtime": 1786522513.1665444,
+    "ast_hash": "3cab3c1ee20c7ddd0f002a403188db93",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/08-type-parsing.md": {
+    "mtime": 1786522577.0928295,
+    "ast_hash": "b89b218435b26982e31a139132a194b7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/09-pg-types.md": {
+    "mtime": 1786522634.4180849,
+    "ast_hash": "284382da50126cde8135cd27f7dda8a4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/10-prepared.md": {
+    "mtime": 1786522687.16432,
+    "ast_hash": "b7bff3f9a86d0d6a18ef80b16ddcb9d9",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/11-timeouts.md": {
+    "mtime": 1786522741.3915617,
+    "ast_hash": "cfc0f168266223b1bbaebcd5fea0f583",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/12-one-statement.md": {
+    "mtime": 1786522787.0607653,
+    "ast_hash": "0f253e132e335d6b2e609414d29ac8c7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/13-pool-end.md": {
+    "mtime": 1786522827.0569434,
+    "ast_hash": "d26cc0cead96c44c0f5c507f2b2b23f7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/14-listen-notify.md": {
+    "mtime": 1786522882.7261918,
+    "ast_hash": "8bef03fcd3171c06c1cbdc999c5aabd5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/15-cursors.md": {
+    "mtime": 1786522929.3003993,
+    "ast_hash": "146bc82682f04323b837179f054b5769",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/16-postgres-js.md": {
+    "mtime": 1786522990.0836701,
+    "ast_hash": "5253d7fd024a1b96cec72c550b251eca",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/README.md": {
+    "mtime": 1786454672.7678688,
+    "ast_hash": "aef3558918a84ba1a665bfec7ff56c25",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/01-issuing-ddl.md": {
+    "mtime": 1786500226.4091733,
+    "ast_hash": "6d839bb67b2ef060cb8385976885bd29",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/02-locks-and-blocking.md": {
+    "mtime": 1786500124.2160382,
+    "ast_hash": "ae74fd73e1f3344f1e4a88ff8013a515",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/03-startup-races.md": {
+    "mtime": 1786500148.4581482,
+    "ast_hash": "48e055828149c91d5a552f3a0a12d566",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/README.md": {
+    "mtime": 1786500166.2064931,
+    "ast_hash": "bdd1e79c8a98949e5f6c18e6116d39ff",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/02-migrations.md": {
+    "mtime": 1786503145.968075,
+    "ast_hash": "af194cae3dd73404c485bb785024d99c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/03-seeding.md": {
+    "mtime": 1786503145.9672928,
+    "ast_hash": "e84d29d59752c7fb3ee159663503ea1e",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/04-bulk-insert.md": {
+    "mtime": 1786502401.8557754,
+    "ast_hash": "28e85cf04d9191e22a1eb2a8b972c8b8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/05-sql-files.md": {
+    "mtime": 1786503145.9676135,
+    "ast_hash": "ab8791072d190fdeae754ead5e60e872",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/06-tx-migration.md": {
+    "mtime": 1786503145.9684105,
+    "ast_hash": "ff241b43943b64a2bb8d59b07e553b4c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/07-if-not-exists.md": {
+    "mtime": 1786503145.9648275,
+    "ast_hash": "e75c55a81ada564d23e4a404b2e2c8ce",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/08-minimal-runner.md": {
+    "mtime": 1786503145.9669278,
+    "ast_hash": "4d02f29407961dfbff0edb6e1114cafe",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md": {
+    "mtime": 1786502867.2216842,
+    "ast_hash": "ffbb76b3a4bf984a77aec5e83396ed9a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/10-local-dev-db.md": {
+    "mtime": 1786502984.459165,
+    "ast_hash": "e0cdccc8a041b74fdd114f34b88e5044",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/11-test-reset.md": {
+    "mtime": 1786613629.4893403,
+    "ast_hash": "e65607e2f8e476405914fa36f7d2fa6c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/12-migration-tools.md": {
+    "mtime": 1786503145.968755,
+    "ast_hash": "1b9e6acc4ea4ef975c95877e00beb4db",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/13-schema-drift.md": {
+    "mtime": 1786503145.9661913,
+    "ast_hash": "950969e3aadee6560a4eef0fe48dc984",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/14-codegen-types.md": {
+    "mtime": 1786503080.1305575,
+    "ast_hash": "88bec67284c8b04680d5e0964983b2d0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/README.md": {
+    "mtime": 1786499368.5173302,
+    "ast_hash": "3d0a1c3d50ac4ad9d45f95e3dad5f40c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/01-repository/01-the-executor-contract.md": {
+    "mtime": 1786613629.4893403,
+    "ast_hash": "aff4a3b189e40eb2f2b885243ad0bd92",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/01-repository/02-rows-to-domain.md": {
+    "mtime": 1786613629.4902549,
+    "ast_hash": "311184b2abf3123ed1ab0db3b7ea9b97",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/01-repository/03-errors-to-http.md": {
+    "mtime": 1786613629.4902549,
+    "ast_hash": "30d13c084afdd9324f557db89e02bfb4",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/01-repository/README.md": {
+    "mtime": 1786613629.4902549,
+    "ast_hash": "9a403224013f24e8a7060295fdd0cbdd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/02-list-endpoint.md": {
+    "mtime": 1786613629.4902549,
+    "ast_hash": "eb3989c76c818a30e9d341a510a06ed7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/01-predicates-and-params.md": {
+    "mtime": 1786500226.4084988,
+    "ast_hash": "310f57da84cd30250a310728c88b2b18",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/02-patterns-and-composition.md": {
+    "mtime": 1786500270.7043464,
+    "ast_hash": "976f788766d673e3748b312481f9b7b0",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/README.md": {
+    "mtime": 1786500270.7045856,
+    "ast_hash": "e913647cbaf62ceb5800635935bc93d8",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/04-allowlists/01-two-failure-modes.md": {
+    "mtime": 1786500226.4089124,
+    "ast_hash": "5aa78cbc58cde17e3556e4e73652651c",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/04-allowlists/02-building-the-allowlist.md": {
+    "mtime": 1786613629.4902549,
+    "ast_hash": "712247a0db26f5100a5e69cfc48be1fe",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/04-allowlists/README.md": {
+    "mtime": 1786500226.4087112,
+    "ast_hash": "4aa73528dedfeb4894ae448a1960b9c5",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/05-transactions-request/01-the-wrapper.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "e30b58c592658c279e17061e48427763",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/05-transactions-request/02-savepoints-and-duration.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "ecca58344f380a47525e7a85c6b224b6",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/05-transactions-request/README.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "574b7a90f05e0a1363eddb6751954dc6",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/06-create.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "e85ba4a393031edc90e1cb9f425cf16a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/07-find-by-id.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "1f48afcc823dcf27ceb75aa6038dd187",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/08-update-partial.md": {
+    "mtime": 1786613629.4903142,
+    "ast_hash": "afeb98bbb28c9474457da5177349e6b3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/09-delete-soft-hard.md": {
+    "mtime": 1786613629.4913144,
+    "ast_hash": "57be87e28359fb3f0895a44bb64a62c1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/10-keyset/01-the-tuple-comparison.md": {
+    "mtime": 1786613629.4913144,
+    "ast_hash": "ca3a03897ae36ae8b61688ced527ddad",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/10-keyset/02-cursors-and-traps.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "e70bc80f1d9e8e09c42ac355dc83d9e7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/10-keyset/README.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "d70cc0af3e1ce646cd88c8d6e9428f72",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/11-idempotent-writes.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "2205f9681f7ceed3ced6c7f507b8c2ea",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/12-client-propagation.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "96156b7b8e7913e921169919b2ec722d",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/13-optimistic.md": {
+    "mtime": 1786614960.2745776,
+    "ast_hash": "5bd3b931b54606d8bbf9922e45ce2bfd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/14-for-update.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "7a155f31e9c28ba292ce7bad3dee4a38",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/15-shape-sql-vs-js.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "ae3f5a3c89c94abc20870282c2c5c2cb",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/16-testing-real-pg.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "6cdc4457bd5bcd0e00e3162af7f09d48",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/17-timestamps-trigger.md": {
+    "mtime": 1786613629.4923935,
+    "ast_hash": "721e1f7f9f1317679f4e531f3849bb73",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/18-snake-camel.md": {
+    "mtime": 1786615001.3687403,
+    "ast_hash": "b80ea58fd97add13559449dacd9cab73",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/README.md": {
+    "mtime": 1786613629.4933143,
+    "ast_hash": "762a4dffd2cb0f1cc8464d7c78eb7168",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/proposed-syllabus/01-foundations.md": {
+    "mtime": 1786452097.0017476,
+    "ast_hash": "12a8bf46a21c453aff546a0a3f0de2d2",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/proposed-syllabus/02-sql.md": {
+    "mtime": 1786451972.1050987,
+    "ast_hash": "2ad02cb9950aa034026e1c2e09e8baa1",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/proposed-syllabus/03-node-and-pg.md": {
+    "mtime": 1786452015.7873209,
+    "ast_hash": "75e18f748bcbb01537274557b5c21336",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/proposed-syllabus/04-performance-and-production.md": {
+    "mtime": 1786452107.2020307,
+    "ast_hash": "58f37473ef2b23a97446ec1983785ff7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/proposed-syllabus/README.md": {
+    "mtime": 1786452107.2014143,
+    "ast_hash": "073f066a01a8790057c8e4354b359ff3",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/reviews/verification-claude-pages.md": {
+    "mtime": 1786457441.9037192,
+    "ast_hash": "49c9d97c89eddf8a05b73101f20896a7",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/syllabus/01-foundations.md": {
+    "mtime": 1786454926.8869917,
+    "ast_hash": "db046d5320f4a892312539fe41ffa21a",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/syllabus/02-sql.md": {
+    "mtime": 1786454926.8872962,
+    "ast_hash": "f85ad54a6c61536327fc9a98d865d256",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/syllabus/03-node-and-pg.md": {
+    "mtime": 1786454791.9135056,
+    "ast_hash": "059c4460824eebac6bbc6eb5f2e8ccbd",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/syllabus/04-performance-and-production.md": {
+    "mtime": 1786454926.8877163,
+    "ast_hash": "e19324e47cf432b0bdde68451c1e525b",
+    "semantic_hash": ""
+  },
+  "docs/reviews/postgresql/2026-08-13-cross-phase-correctness.md": {
+    "mtime": 1786594418.7148578,
+    "ast_hash": "19b9b80ff7874ba50069e52c185ca116",
+    "semantic_hash": ""
+  },
+  "docs/reviews/review-prompt.md": {
+    "mtime": 1786589570.2790878,
+    "ast_hash": "7aef05b24f1c8e7f974f21c56e6de353",
+    "semantic_hash": ""
+  },
+  "drafts/GROK-PROMPT.md": {
+    "mtime": 1786379012.3789024,
+    "ast_hash": "44e7006256e7efe0eafbce6c99eaa9a1",
+    "semantic_hash": ""
+  },
+  "instructions.md": {
+    "mtime": 1786499874.383894,
+    "ast_hash": "a0e92f002d379cf8554e10301515fc97",
+    "semantic_hash": ""
+  },
+  "static/img/docusaurus-social-card.jpg": {
+    "mtime": 1786282169.8035636,
+    "ast_hash": "000de4a48405bd21b7eec1abc07ede6c",
+    "semantic_hash": ""
+  },
+  "static/img/docusaurus.png": {
+    "mtime": 1786282169.8036647,
+    "ast_hash": "7fa1a026116afe175cae818030d4ffc4",
+    "semantic_hash": ""
+  },
+  "static/img/logo.svg": {
+    "mtime": 1786282169.8037243,
+    "ast_hash": "aa4fa2cdc39d33f2ee3b8f245b6d30d9",
+    "semantic_hash": ""
+  },
+  "static/img/undraw_docusaurus_mountain.svg": {
+    "mtime": 1786282169.8038,
+    "ast_hash": "a6b83d7b4c3cf36cb21eb7a9721716dd",
+    "semantic_hash": ""
+  },
+  "static/img/undraw_docusaurus_react.svg": {
+    "mtime": 1786282169.8039038,
+    "ast_hash": "b64ae8e3c10e5ff2ec85a653cfe6edf8",
+    "semantic_hash": ""
+  },
+  "static/img/undraw_docusaurus_tree.svg": {
+    "mtime": 1786282169.8039832,
+    "ast_hash": "8fa6e79a15c385d7b2dc4bb761a2e9e3",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1786607109.0119843,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1786324551.531584,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/_category_.json": {
+    "mtime": 1786605055.5124826,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/_category_.json": {
+    "mtime": 1786605055.523751,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-0-express-basics/_category_.json": {
+    "mtime": 1786605055.5395782,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-1-routing/_category_.json": {
+    "mtime": 1786605055.5645804,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-10-app-factory/_category_.json": {
+    "mtime": 1786605055.5535443,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-2-middleware/_category_.json": {
+    "mtime": 1786605055.5569024,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-3-requests/_category_.json": {
+    "mtime": 1786605055.5595484,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-4-responses/_category_.json": {
+    "mtime": 1786605055.5619335,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-5-errors/_category_.json": {
+    "mtime": 1786605055.570082,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-6-rest-surface/_category_.json": {
+    "mtime": 1786605055.5515275,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-7-layering/_category_.json": {
+    "mtime": 1786605055.5425525,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-8-validation-authz/_category_.json": {
+    "mtime": 1786605055.5457563,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/pages/phase-9-hardening/_category_.json": {
+    "mtime": 1786605055.5665443,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/expressjs/syllabus/_category_.json": {
+    "mtime": 1786605055.520872,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/_category_.json": {
+    "mtime": 1786605055.514544,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/_category_.json": {
+    "mtime": 1786605055.5289092,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-0-runtime-model/_category_.json": {
+    "mtime": 1786605055.5487108,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-1-modules/_category_.json": {
+    "mtime": 1786605055.5745444,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-10-observability/_category_.json": {
+    "mtime": 1786605055.5995092,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-11-deployment/_category_.json": {
+    "mtime": 1786605055.582443,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-12-native/_category_.json": {
+    "mtime": 1786605055.5845444,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-2-async/_category_.json": {
+    "mtime": 1786605055.5900528,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/13-transform-streams/_category_.json": {
+    "mtime": 1786605055.640359,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-3-buffers-streams/_category_.json": {
+    "mtime": 1786605055.5915444,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-4-filesystem/_category_.json": {
+    "mtime": 1786605055.5798008,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-5-http-processes/_category_.json": {
+    "mtime": 1786605055.5876765,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-6-data-access/_category_.json": {
+    "mtime": 1786605055.5965555,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-7-background-work/_category_.json": {
+    "mtime": 1786605055.5944035,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-8-security/_category_.json": {
+    "mtime": 1786605055.5774307,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/pages/phase-9-testing/_category_.json": {
+    "mtime": 1786605055.5726612,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/nodejs/syllabus/_category_.json": {
+    "mtime": 1786605055.5264175,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/_category_.json": {
+    "mtime": 1786605055.5178404,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/_category_.json": {
+    "mtime": 1786605055.5335443,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-0-architecture/_category_.json": {
+    "mtime": 1786605055.6313574,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-1-psql/_category_.json": {
+    "mtime": 1786605055.6146286,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-10-indexes/_category_.json": {
+    "mtime": 1786605055.6075442,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-11-mvcc/_category_.json": {
+    "mtime": 1786605055.6165445,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/_category_.json": {
+    "mtime": 1786611624.2303352,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/05-full-text/_category_.json": {
+    "mtime": 1786612571.6383789,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/_category_.json": {
+    "mtime": 1786605055.6275444,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-13-ops/_category_.json": {
+    "mtime": 1786605055.5371137,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-2-types/_category_.json": {
+    "mtime": 1786605055.6121154,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-3-ddl/_category_.json": {
+    "mtime": 1786605055.634126,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-4-crud/_category_.json": {
+    "mtime": 1786605055.61984,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/01-inner-join/_category_.json": {
+    "mtime": 1786605055.6438754,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/02-left-join/_category_.json": {
+    "mtime": 1786605055.6367657,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/03-semi-anti/_category_.json": {
+    "mtime": 1786605055.6466215,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-5-joins/_category_.json": {
+    "mtime": 1786605055.6050608,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/01-group-by/_category_.json": {
+    "mtime": 1786605055.6765447,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/02-count-variants/_category_.json": {
+    "mtime": 1786605055.6749258,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/03-having/_category_.json": {
+    "mtime": 1786605055.672529,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/04-filter-clause/_category_.json": {
+    "mtime": 1786605055.6519308,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/05-json-agg/_category_.json": {
+    "mtime": 1786605055.659996,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/06-windows-intro/_category_.json": {
+    "mtime": 1786605055.6650946,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/07-ranking/_category_.json": {
+    "mtime": 1786605055.6626794,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/08-lag-lead/_category_.json": {
+    "mtime": 1786605055.6677053,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/09-ctes/_category_.json": {
+    "mtime": 1786605055.6703262,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/_category_.json": {
+    "mtime": 1786605320.1028655,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/11-subqueries/_category_.json": {
+    "mtime": 1786605551.0375369,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/_category_.json": {
+    "mtime": 1786605959.7874842,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/13-ordered-set/_category_.json": {
+    "mtime": 1786606119.0117178,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/14-frames/_category_.json": {
+    "mtime": 1786606419.051082,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/_category_.json": {
+    "mtime": 1786606594.6986835,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/_category_.json": {
+    "mtime": 1786606844.6555629,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-6-aggregation/_category_.json": {
+    "mtime": 1786605055.6098855,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-7-pg-driver/_category_.json": {
+    "mtime": 1786605055.6015444,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/_category_.json": {
+    "mtime": 1786605055.6485445,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-8-schema-from-node/_category_.json": {
+    "mtime": 1786605055.6254637,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/01-repository/_category_.json": {
+    "mtime": 1786608650.2204797,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/_category_.json": {
+    "mtime": 1786605055.6545038,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/04-allowlists/_category_.json": {
+    "mtime": 1786605055.657071,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/05-transactions-request/_category_.json": {
+    "mtime": 1786608864.2808836,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/10-keyset/_category_.json": {
+    "mtime": 1786609159.9590106,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-9-api-crud/_category_.json": {
+    "mtime": 1786605055.6225576,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/syllabus/_category_.json": {
+    "mtime": 1786605055.531589,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/01-accessors-and-paths.md": {
+    "mtime": 1786613629.4793143,
+    "ast_hash": "982920974bd7e8cc62a71322fa5cb5b9",
+    "semantic_hash": "982920974bd7e8cc62a71322fa5cb5b9"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/02-containment-and-jsonpath.md": {
+    "mtime": 1786613629.4806857,
+    "ast_hash": "17dfc262dae52d117bfd02347ba34480",
+    "semantic_hash": "17dfc262dae52d117bfd02347ba34480"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/README.md": {
+    "mtime": 1786613629.4806857,
+    "ast_hash": "c71ce9f31eae67d60bc15b10bbd20fbd",
+    "semantic_hash": "c71ce9f31eae67d60bc15b10bbd20fbd"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/05-full-text/01-tsvector-and-queries.md": {
+    "mtime": 1786613629.4812908,
+    "ast_hash": "128e46df7bb0cdac139325104bcffd87",
+    "semantic_hash": "128e46df7bb0cdac139325104bcffd87"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/05-full-text/02-indexing-and-ranking.md": {
+    "mtime": 1786613629.4816122,
+    "ast_hash": "dcaf1164927d6003d08da39989848b68",
+    "semantic_hash": "dcaf1164927d6003d08da39989848b68"
+  },
+  "docs/postgresql/pages/phase-12-beyond-tables/05-full-text/README.md": {
+    "mtime": 1786613629.4816122,
+    "ast_hash": "65a6d12bcaae2dccccc2209e117f0ca4",
+    "semantic_hash": "65a6d12bcaae2dccccc2209e117f0ca4"
+  },
+  "sandbox/express-phase0/package.json": {
+    "mtime": 1786613629.4953144,
+    "ast_hash": "25196dea6950922ef01bfc59e218c303",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extract.mjs": {
+    "mtime": 1786613629.4953144,
+    "ast_hash": "d9a17c1064a79eb6387b7dbaa0e1c89b",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_01-what-express-is_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "1977b0d0a694ded569c7fe1a5c4b778f",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_02-app-router-server_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "48e2622ee79f400d485e0f2a865bac16",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_03-request-lifecycle_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "45d89843355904fb0c8d38e44b5dc383",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_04-creating-an-app_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "1fd36ed8b273f9ef3a4fd24c3333f051",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_04-creating-an-app_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "807496f3e94e4eedf96bf2a8ff7c26ff",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_05-application-settings_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "32646e5ba22b472e4082344c63abed33",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_05-application-settings_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "d81808321e48639230bfe19b583c4a26",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_06-express-5-vs-4_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "c7e64eae48f4d59004f3558fc349f019",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-0-express-basics_06-express-5-vs-4_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "1fb582769c4da156c1ddd27dfa611137",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_01-http-methods_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "27e2d03289352cbd9d47e3f3f1faf611",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_02-params-and-query_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "872ecee46f20598303d07cd5ca4ca904",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_02-params-and-query_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "43440672641b0733efe5291170ff7134",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_03-router-composition_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "0a3d2ed5dc85cf01c8c803c5b39761f6",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_03-router-composition_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "64de17d4e08ae5399aac4d62739cb5ef",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_04-route-ordering_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "3910c5ecc9064127e0a10caeb82db08a",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_05-path-matching-express5_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "27bf2f1330651e1b48cdeb197b65bf29",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_06-router-param_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "243864d43cbef248934ccdcf0104ec4f",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_07-app-route-and-hosts_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "932f3659a079c32b445c731980654521",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-1-routing_07-app-route-and-hosts_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "f6c1095dc4f61ee1dd8463bb2a485a7b",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-10-app-factory_06-shutdown-and-entrypoint_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "ff9886225ea3d588a6d2295248ab9a52",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_01-middleware-contract_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "414e2ec6c17c5bfd8a8704e0aa7538e2",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_02-execution-order_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "d76fc19aa0a46fbf02aa3992d3e37dcd",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_03-next-semantics_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "6eb291688680fdfe5afd4bf1849c5014",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_03-next-semantics_md__2.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "e06ef2f66902dd4084ca1cfc80b62864",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_03-next-semantics_md__3.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "bb15545c26006c60146f2cf7c38232f7",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_04-middleware-factories_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "f8d1e5b8a196e896cf364e99fbcec9f2",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-2-middleware_06-mutating-req-res_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "af1dde479e8d0ea4d83c029ed5fc881e",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_01-req-anatomy_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "06bb4280801cf87e3daaf7ba4b72af72",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_02-json-and-urlencoded_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "bac905700e7b27fe577f4e949f16e2dc",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_03-size-limits_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "5b99789520415c38a49cb4d2c8d857a4",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_04-query-parser_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "a7ccffd808f86521e75f028317427b30",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_05-malformed-bodies_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "49c07669a4b0a5984ab8ae2db24054bd",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-3-requests_06-raw-and-text_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "826ee19c3e13e69ef328533f8c3b65b9",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-4-responses_01-res-methods_md__1.mjs": {
+    "mtime": 1786613629.4964035,
+    "ast_hash": "48afadb2391af67ed085cb1fa485e1ea",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-4-responses_04-headers-already-sent_md__1.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "ab0a527dbd31d0fc23aeeb99666b63a0",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-4-responses_06-spa-fallback_md__1.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "235dc737cd9ab03b2ab824b6edfa9554",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-4-responses_07-cookies-out_md__1.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "b363b900d216cbaddd352c417dbb30e0",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-5-errors_01-error-middleware_md__1.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "07c22293dba65b683e05cf21d79cf592",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/extracted/phase-5-errors_02-async-errors_md__1.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "4bc65752c53903eb1b12f8d66bc8c8c9",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/package.json": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "6207e3954221f250995be3f70c8f6b82",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/run-all.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "c120e6a9b0771c5e2af1fcaf45ae748d",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v1-settings.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "884b05aa7e8a206e74f3e31abfe83069",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v10-mount.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "0299a341080ec108240c0c3655a4f0e3",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v2-errors.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "2b2a2d9eb335e9509913e3428807ddf7",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v3-body.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "70eacd77bd7c5a345a573f7b3a8cd61e",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v4-query-routing.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "9a743ef952ea8a2fb086ecd3e60bf5fb",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v5-responses.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "8fe8fa22967e90df7ced9bf571fcc49d",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v6-etag.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "906703fa82c18ac3df36a208586e1852",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v7-ifmatch.mjs": {
+    "mtime": 1786613629.4973145,
+    "ast_hash": "aad4f2c217cf729216d74d914a3e7fb6",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v8-trustproxy.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "7dfd85c2b000815bb486a8c7ae1de624",
+    "semantic_hash": ""
+  },
+  "sandbox/express-verify/v9-mountpath.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "714f1799988cc7630ce44a969d30b56f",
+    "semantic_hash": ""
+  },
+  "sandbox/express5-check/check.cjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "5273a65965c4ff024e0c87f4460db985",
+    "semantic_hash": ""
+  },
+  "sandbox/express5-check/package.json": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "5b4033dfe3dc10299d49c74eb36627a5",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex1-builtins.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "54b93daebb0157aa0826852c8d7eb496",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex2-lag.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "01898bc6b890ae925a733840e4759d02",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex3-diag.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "43039b9cff10768aadf2dfec2ccbc63d",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex4-reports.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "5c44f77b5d2a16d6d73c11de14a243d8",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex5-trace.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "0e925649956a99cbe24034d874ae0788",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex6-logging.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "6e3459bff4952f2edeac7dbb59fdbbca",
+    "semantic_hash": ""
+  },
+  "sandbox/p10-observability/ex7-pipe.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "9280621c20b24fda486a88d5fd5ba762",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex1-outbox.mjs": {
+    "mtime": 1786613629.4983144,
+    "ast_hash": "89df09d8db4e4d558bb2db0e281fa55f",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex2-skiplocked.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "f0db09ee72567f1d7da2faf4d87583cb",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex3-bullmq.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "01e3644ad75bf22668d7d95ff2c20a55",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex4-shutdown.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "b65fe219e2c2727d66ec3d64d785088c",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex5-sync-vs-bg.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "7a706fddecf199eddd0320a899a89945",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex6-time.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "5f2d570d6f0142f389716bbe565a098d",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex7-overlap.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "74f589fb604c871efe9a09af91734e74",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/ex7b-lock.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "9d76e3695c7f8c44a5c87756c8adc5de",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/package.json": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "d4c485de78fbc0be17d90e306dfbe870",
+    "semantic_hash": ""
+  },
+  "sandbox/p7-background-work/worker.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "8ccd1acb977c0bf872da31a0add76ca8",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex1-crypto.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "31430eae5d661eef3a6305f1bf3157b8",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex10-ssrf-guard.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "6f440af35b52c80538b5b32d869e05d7",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex11-deser-redirect-massassign.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "2f05ec0f6cf054f0545e683803e17c87",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex12-redos.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "765b58f98f45d4bf186b2ef67a89f0ab",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex13-timing.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "575afbb70f08e89bc0c8991e6db0f440",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex14-validation.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "d4c822f7ff58b9a83db9318c167bf169",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex15-validation-followups.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "992cf324189a80cc175484b58db271b9",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex16-validation-boundary.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "37a55762d96cf8f32a7c3370431f3bb5",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex17-secrets.mjs": {
+    "mtime": 1786613629.4998987,
+    "ast_hash": "8aa2facc717ce5f8aefee71596ec6e06",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex18-https-cookies.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "7c7e617aced0dbcbb5e02c18d408f809",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex19-crypto.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "142c53cf0ff00d3d45ee0cce792205dc",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex2-vulns.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "51e49d0c2a599c46b5d16be93b158a6e",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex20-rate-limiting.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "fc64fff50f203bb21192462f5309a277",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex21-headers.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "58dc85ce96fee1fa1a3932dc8739cf91",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex22-permission-model.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "acdf6e7b8469268c1532f483b82540d5",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex23-webcrypto.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "335265ab7cc251063b53d9202affe9f4",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex24-encryption-keys.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "00e43cf2561b5f7b7e6040b701017f87",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex25-audit-log.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "f144d1b2cd51d53a5f67733a58b21db0",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex3-permission.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "4e0a60b0dfff441c1848802550dd2702",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex4-throughput.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "337ce8266272fe34655855f68d7d8e42",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex5-totp.mjs": {
+    "mtime": 1786613629.5003145,
+    "ast_hash": "38eb8f9a4ef975dc0dbbcda16bc3aabd",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex6-cmdinj.mjs": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "bf1a94bf24a6b5990110845bbec5e574",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex7-xss.mjs": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "653c437311b5f8b290b8af5d7b5ec80d",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex8-ssrf.mjs": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "56e6e214d652add35469f1cc82ccf551",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/ex9-csrf.mjs": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "7549e8cd251be2af58f5fbf3355f78e2",
+    "semantic_hash": ""
+  },
+  "sandbox/p8-security/package.json": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "2bed35f5a7ee9f8c1b4b90a3351f9046",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/basic.test.mjs": {
+    "mtime": 1786613629.5013144,
+    "ast_hash": "636be48bec87172595b88b13edfc0a0c",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/disc/c.test.mjs": {
+    "mtime": 1786613629.503109,
+    "ast_hash": "da71b64fbcc72f8cdc368e52524cb23e",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/package.json": {
+    "mtime": 1786613629.503109,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/src/other.spec.mjs": {
+    "mtime": 1786613629.503109,
+    "ast_hash": "90d9ccc5dfdd434db657806ef9e9cb0f",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/src/thing-test.mjs": {
+    "mtime": 1786613629.5032945,
+    "ast_hash": "2aaa31084e3c2254c7ebe1d78015a44b",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/src/thing.test.mjs": {
+    "mtime": 1786613629.5032945,
+    "ast_hash": "2458e0b442d0a2ac52c203af04ef0006",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/test/a.test.mjs": {
+    "mtime": 1786613629.5032945,
+    "ast_hash": "0839c66f43c2be684cf7b0206540a274",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/test/nested/b.test.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "cc0ea2efc0726a1756b241c87b5c9d69",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/test/plain.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "342b58272e778de1f944401f6236a729",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/api.test.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "b52eef422da5a0e4f329fd6c2eafe0f2",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/app.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "943808477a44e9a91e6b7570d4086bea",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/express-app.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "b09dfd61180d464da107738b61c6f2ec",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/package.json": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "27a74f645bb0025d88937602ea916a02",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/portclash/a.test.mjs": {
+    "mtime": 1786613629.5034535,
+    "ast_hash": "3655ca7278c7516ef01f87808fced4ce",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/portclash/b.test.mjs": {
+    "mtime": 1786613629.5040052,
+    "ast_hash": "3655ca7278c7516ef01f87808fced4ce",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/portclash/package.json": {
+    "mtime": 1786613629.5040052,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex10-api/supertest.test.mjs": {
+    "mtime": 1786613629.5040052,
+    "ast_hash": "9448c41e5502b9b88e4b2be5bff94323",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex11-di/config.mjs": {
+    "mtime": 1786613629.5040052,
+    "ast_hash": "a91b82540ad31f17502263462f094ca7",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex11-di/di.test.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "a0d346884f57baab48fdbc5f20c47620",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex11-di/easy.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "244b100e400cfdc8003aa9248fd0fd5a",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex11-di/hard.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "7f17a2b817ed6b388449083e32aff9a7",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex11-di/package.json": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/jest-t/sum.test.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "f2463a734bcd7eb24a861bc6bbd2574e",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/jest.config.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "652654aaa39b0b4271aaab83d8783e9c",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/node-t/sum.test.mjs": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "69f57abd83242531be7579fa797e53fc",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/package.json": {
+    "mtime": 1786613629.5042584,
+    "ast_hash": "29f7a13952a6a249a3a1207abaf5a37b",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/sum.mjs": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "b3a7d1748a2dbfe745f55e2e952c60e0",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex12-runners/vitest-t/sum.test.mjs": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "c25fe7b7bcd2b9346439aaee420a3ca1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex13-testcontainers/package.json": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "db133fab8b3c39a29eae3e2c10e5c670",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex13-testcontainers/tc.test.mjs": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "31d39aec47ddee562bfb89aad6d60e2f",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex14-property/package.json": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "b1638ad65363cba9e2e9687d5a64abd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex14-property/prop.test.mjs": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "c35fe79a51045eb9c14105f46d1c4ba7",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex14-property/slugify.mjs": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "37c607a0000b2fb7ca3026d84280960b",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex15-mutation/package.json": {
+    "mtime": 1786613629.5043144,
+    "ast_hash": "705815e0a0721df0d7c32dab88867a42",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex15-mutation/src/discount.mjs": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "5f08417683c06974cb06112eb0753fee",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex15-mutation/stryker.config.json": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "9bd65ccf23a58e3d6a04e9eed39ddf6a",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex15-mutation/test/discount.test.mjs": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "a2dc08ccc695cda3d136e8465e70ed0c",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/eslint.config.mjs": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "3ebd87f721f4d4f558aef76d104f88e4",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/package.json": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "53efc320fcb36d13a13d1c635885ff41",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/src/f1.mjs": {
+    "mtime": 1786613629.5053144,
+    "ast_hash": "f73c65751722f26e1232b0b8bb984839",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/src/f2.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "f73c65751722f26e1232b0b8bb984839",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/src/f3.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "f73c65751722f26e1232b0b8bb984839",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex16-lint/src/messy.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "f73c65751722f26e1232b0b8bb984839",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex17-contract/compat.test.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "c655c86c7a2a855ea6d834aa9ea20704",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex17-contract/contract.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "774876ac746fb5b22fdd6bb2afdbfb09",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex17-contract/package.json": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "35da717913e65ce602affd53a9ac3252",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex17-contract/provider-verify.test.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "63ec6c26b1ad04f61eea12925aa98fc1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex17-contract/provider.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "044b0ab281f91e38f11bccbede6db73c",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/f1.test.mjs": {
+    "mtime": 1786613629.5065675,
+    "ast_hash": "e35cf4e71ae69f153765c38d6fc8bbd8",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/f2.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "733815812880e082adc9561ae2aa58b1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/f3.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "a31a8686ce2781f3b49801c661d15ada",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/f4.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "d2e6a1b5573b464c3776ae6b942fde4a",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/package.json": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/parallel.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "7a4ea27f8442a3e464af2c293dc1d0c2",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex18-concurrency/serial.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "e2d57b232d143a8ac711a112c22f0fa7",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex2-runner/fail.test.mjs": {
+    "mtime": 1786613629.5071647,
+    "ast_hash": "bddd6885b32ad7d7b64143651922b9a4",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex2-runner/hooks.test.mjs": {
+    "mtime": 1786613629.5075264,
+    "ast_hash": "86bbe04022b8d647a0cc3a5a49cbfafd",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex2-runner/package.json": {
+    "mtime": 1786613629.5075264,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3-isolation/f1.test.mjs": {
+    "mtime": 1786613629.5075264,
+    "ast_hash": "de30ff1356980a1022709a95f8ea46e8",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3-isolation/f2.test.mjs": {
+    "mtime": 1786613629.507698,
+    "ast_hash": "64378ad0c72f6744f9c47ce2cfd7f62f",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3-isolation/f3.test.mjs": {
+    "mtime": 1786613629.507698,
+    "ast_hash": "dbbb0382daec5db28d27c35bc7f47cfd",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3-isolation/f4.test.mjs": {
+    "mtime": 1786613629.507698,
+    "ast_hash": "0f87c729db54000f68407a41e6126e0a",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3-isolation/package.json": {
+    "mtime": 1786613629.507698,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex3b-dirprobe/sub/x.test.mjs": {
+    "mtime": 1786613629.5078783,
+    "ast_hash": "cc4b7db15e165f3f0262d2ab0b4ba8ca",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex4-assert/package.json": {
+    "mtime": 1786613629.5078783,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex4-assert/probe.mjs": {
+    "mtime": 1786613629.508016,
+    "ast_hash": "c2077d31777ebca947fb3764e07289b4",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex5-async/package.json": {
+    "mtime": 1786613629.508016,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex5-async/trap2-alone.test.mjs": {
+    "mtime": 1786613629.5082302,
+    "ast_hash": "d048ed7705c1a00ba11c2571200c5073",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex5-async/traps.test.mjs": {
+    "mtime": 1786613629.5082302,
+    "ast_hash": "0dff8ebe3ffdbb46d3cfbcdf9b3a9a64",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/convert.mjs": {
+    "mtime": 1786613629.5082302,
+    "ast_hash": "01b1522131b46a2ed3411d96fbcd0143",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/localmock.test.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "1ddfbf19548342851517741da6f44de2",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/localmock2.test.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "961e08f4a5fb74274a67072499776523",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/mocking.test.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "c320ebddd2ac77388f8e2a4d0e4d4a41",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/modmock.test.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "711325a30fc37c9ec4739599c916d467",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/package.json": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/rates.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "b89dc03db2a6317c7391f42dfe5c7808",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex6-mocking/toplevel.test.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "04cc12af87ac7bc73715ba5ed014601f",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex7-coverage/discount.mjs": {
+    "mtime": 1786613629.508485,
+    "ast_hash": "cc800ae69fd105f56b52ba4ab3ea267e",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex7-coverage/discount.test.mjs": {
+    "mtime": 1786613629.5090635,
+    "ast_hash": "21b5146d88643755cc676b91a3f282f6",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex7-coverage/package.json": {
+    "mtime": 1786613629.5090635,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex7-coverage/vat.mjs": {
+    "mtime": 1786613629.5090635,
+    "ast_hash": "ee6a8aaa43673a83c83f5139fa540fd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex7-coverage/vat.test.mjs": {
+    "mtime": 1786613629.5090635,
+    "ast_hash": "1f3d96d2a556ff930b1c5f51735c07e6",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex8-snapshots/package.json": {
+    "mtime": 1786613629.5090635,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex8-snapshots/render.mjs": {
+    "mtime": 1786613629.5094032,
+    "ast_hash": "128a958f7bb30b998a9d7f5195572b6c",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex8-snapshots/render.test.mjs": {
+    "mtime": 1786613629.5094032,
+    "ast_hash": "5d2688e64d816dbaaa708f39cef5f577",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/coupled.test.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "a01fa97bac4851747e6a78018ab97f5d",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/flaky.test.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "4ee0273e31bb94efdbad16de5a220026",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/globalsetup.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "2ee634ddcafc33ef27a2d9c156e2dbb9",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/handle.test.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "a8166d6e7fb63728d2425c78b87ccb46",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/package.json": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "0209924a20de23601919c26068b8cfd1",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex9-flags/tagged.test.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "f0bb016c3ff83dc2a9dd93ce774c965a",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/package.json": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "b6509c4e47684edb9b6ba3b67a2decca",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex1-ddl-from-node.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "7b514963046ff232c4ce6c7f5555f1e7",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex10-migrations.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "053bbed0d48f596dec8cfe900d582bfb",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex11-ddl-alter.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "1ab58806b4f039d5dfcff8ede96c43ff",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex12-ddl-rest.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "edf0dcf2b2aa1ceb9e111a146a71302f",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex13-constraints-rel.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "b1a6dc35366240af82372e549b8fc6fd",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex14-crud.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "cddb932ec7d1b97ca1e6fdaa91ededdd",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex15-pagination.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "f04311884226645c1432601b32f7732c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex16-returning.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "db36e97bf4bd7ae23cd86f433543889d",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex17-update.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "4f30075aae7fd2ec77f1af08f6f6d885",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex18-delete.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "6314bb41081f6e2f7c7e3c44ba220e39",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex19-series-values.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "8726b0cdfbaa61ca203891aa9a4f5cb3",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex2-ddl-edges.mjs": {
+    "mtime": 1786613629.5096889,
+    "ast_hash": "16c7c8b33f18935c047b2172303b5e95",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex20-driver.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "33855fed6da1cf538ba62a27f3a8e7f5",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex21-types-prepared.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "8f663106d6af2a252271a02057f545f4",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex22-notify-cursor-pgjs.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "f5d2fd8e10d0bf7fd116698204de045c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex23-index-basics.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "80f2e12e58a762df2bb0ecda4295df7c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex24-index-not-used.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "7a077ee10c4e519cb1e830a1939955ef",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex25-index-kinds.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "34c5dd4f387c0528aeebaa5ddcc22c2a",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex26-index-ops.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "72777661ee759f9ee21504873dc2e2bd",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex27-tx-basics.mjs": {
+    "mtime": 1786613629.5103145,
+    "ast_hash": "769136a5e29947fdeec5f0ef96246745",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex28-mvcc-isolation.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "8948ee60443baf0899f3c4fa28db1e1f",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex29-locks.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "c570c125e5c52b73ea21e1f32af261e5",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex3-advisory-fix.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "aa4098a7c0eb703b995a9ba604fe0cfc",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex30-vacuum-horizon.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "4a5c4e8d1947c9f6981a492fdb805f2a",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex31-psql-basics.sh": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "a78d1401979b945124c7c524082195fe",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex32-psql-io.sh": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "77b8a12f341aec1e9cea2c8514d5e8b6",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex33-types-core.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "e93e8e93127c31c241a13c9f4cfa0723",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex34-types-more.mjs": {
+    "mtime": 1786613629.5113144,
+    "ast_hash": "655ca34495b7f7fc419cc3e7a947b7d9",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex35-joins.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "c4843f3a85941c6a0d6f4b28bf0cb8f1",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex36-aggregation.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "467aab42173a8660b0b855f74de02e8c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex36b-agg-plans.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "e16cb481669e59f92bc871be9bad38f3",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex36c-agg-checks.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "709b86afbf310dc6eab2152b55fb1063",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex36d-count-having.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "b09a8daa8517e49a1209cebf64a6bd68",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex36e-shaping.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "f1dcc4426fd12751d61faffdfaaba79f",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37-cte-subquery.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "7c56996bc1d520c1fd05c3dbfc92ea4e",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37b-cte-inlining.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "8e26e3d99b56da01be08a0cf30fb9236",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37c-correlated-cost.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "22e3d3d945929886ab30fa1e87fcd131",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37d-pagination-counts.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "7e986adaf2f2e734b6288670e25cc3e3",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37e-ordered-set-checks.mjs": {
+    "mtime": 1786613629.5123143,
+    "ast_hash": "4573a9d0e8c6758d7825f9fb9f2a56ed",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37f-frame-extras.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "78285a9d81f7f153a4f471bef1048e9c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex37g-grouping-sets-cost.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "c2da9d7875d9d4d79c86217124c74223",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex38-repository.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "f3f209f5aa238076ac74f534c4c1c83a",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex39-tx-request.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "08e623ca0a686a1469a5f56b57ceca5c",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex4-soft-delete.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "6c3428323b05ffd24cd120338d128acb",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex40-api-concurrency.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "e1c986ebb12692abedc5e62fc26242f2",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex41-shaping-mapping.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "c8feb7806fc0bbe541fd2f1deb1995cb",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex42-testing-rollback.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "e0e0e041a03179da7b48275227fde055",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex43-keyset-patch.mjs": {
+    "mtime": 1786613629.5133145,
+    "ast_hash": "1ac834bd9c8fd8f38cc8a1cd180aaaf3",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex44-jsonb-ops.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "e5e5c4c9a08f4cdd0d807ab1bae41d05",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex45-search.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "1b8816a5878f87d0c0e9123a59cef835",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex46-views-triggers.mjs": {
+    "mtime": 1786615050.887936,
+    "ast_hash": "754bfec7430ba3cc19aa549d46a42563",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex47-functions.mjs": {
+    "mtime": 1786616164.2321484,
+    "ast_hash": "fffef64da145d54854356be38445b0c6",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex48-extensions-partitioning.mjs": {
+    "mtime": 1786617098.8963227,
+    "ast_hash": "0de1ba9909bde55dd326e3a9b010a92b",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex5-filter-sort.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "2f9b2c4107f9c2ccb1778551edac3040",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex6-collation.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "c51a693ef0fbf25a998ee64104e0112b",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex7-ddl-locks.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "9d93e8362a1c2cdf130ebe3c66bc4b79",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex8-bulk-and-seed.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "be9a983d934b10f082d13f786f5ce0a7",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/ex9-bulk-at-scale.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "d8475d54c19556b1f84ae6386a629675",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-api/package.json": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "e5aff978f653a764710a5694bde5da35",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-phase-0/gen-phases-b.mjs": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "dfb05c342b37e4d88d26ab178c3670fe",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-phase-0/gen-phases-c.mjs": {
+    "mtime": 1786613629.5153143,
+    "ast_hash": "6a298a2a81c94df4882923822853408e",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-phase-0/gen-phases.mjs": {
+    "mtime": 1786613629.5153143,
+    "ast_hash": "e8594867afc16c6b7cf7f54fa8c2e7e8",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-phase-0/package.json": {
+    "mtime": 1786613629.5153143,
+    "ast_hash": "38e4d33edf48e07ad0e4f2c46a574511",
+    "semantic_hash": ""
+  },
+  "docs/javascript/README.md": {
+    "mtime": 1786616869.8393395,
+    "ast_hash": "5bc79fd355225440213f3a2558c18845",
+    "semantic_hash": ""
+  },
+  "docs/javascript/syllabus/01-language-core.md": {
+    "mtime": 1786616834.725883,
+    "ast_hash": "9a44ed3b24014b6f9167eae36f652bfa",
+    "semantic_hash": ""
+  },
+  "docs/javascript/syllabus/02-data-and-async.md": {
+    "mtime": 1786616811.0519123,
+    "ast_hash": "8dbd7ec701c8c35c14033f38aaa5084d",
+    "semantic_hash": ""
+  },
+  "docs/javascript/syllabus/03-web-apis.md": {
+    "mtime": 1786616811.0526097,
+    "ast_hash": "109e3d986af27a02ef92ffab3cf049b1",
+    "semantic_hash": ""
+  },
+  "docs/javascript/syllabus/04-dsa-and-machine-coding.md": {
+    "mtime": 1786616835.6631927,
+    "ast_hash": "449ec4c74398d845f301143ff54cc6cf",
+    "semantic_hash": ""
+  },
+  "docs/typescript/README.md": {
+    "mtime": 1786617089.7892838,
+    "ast_hash": "f101219521d6b3495dd874b2b3dea993",
+    "semantic_hash": ""
+  },
+  "sandbox/README.md": {
+    "mtime": 1786613629.4933143,
+    "ast_hash": "950c865e546d13917ed7544a0f8ee755",
+    "semantic_hash": ""
+  },
+  "sandbox/p9-testing/ex1-discovery/disc/README.txt": {
+    "mtime": 1786613629.5030313,
+    "ast_hash": "aa092e45bcad7c3eab611bb8e49c06ff",
+    "semantic_hash": ""
+  },
+  "sandbox/pg-phase-0/README.md": {
+    "mtime": 1786613629.5143144,
+    "ast_hash": "c27461efd1e71e42f525790e9b44d2f0",
+    "semantic_hash": ""
+  }
+}
