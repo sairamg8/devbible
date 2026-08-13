@@ -11,11 +11,14 @@ example and its own gotcha.
 This is the phase you use every day. Phases 3 and 4 explained the language; this one
 is the standard library built on top of it.
 
-## Status — **in progress** (2026-08-13)
+## Status — **Master tier COMPLETE** (2026-08-13)
 
-**Master tier first**, as in phases 3 and 4. The eight Master topics are **01, 02,
-04, 05, 06, 07, 09, 10** in syllabus order — the numbering skips Understand and Know
-topics deliberately, and those are *deferred*, not forgotten.
+**All eight Master topics are written** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
+order. The numbering skips Understand and Know topics deliberately.
+
+Those are marked *deferred*, not forgotten: the standing plan is **Master-first across
+all phases**, so they are filled in on demand once every phase's Master topics are
+done. The next unit of work is **Phase 6 · Iteration, destructuring and generators**.
 
 ## Topics
 
@@ -30,7 +33,7 @@ topics deliberately, and those are *deferred*, not forgotten.
 | 07 | **[String methods](./07-string-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | Template literals | <span className="db-tier t-understand">Understand</span> | deferred |
 | 09 | **[`JSON.parse` and `JSON.stringify`](./09-json/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 10 | `Map` vs a plain object | <span className="db-tier t-master">Master</span> | planned |
+| 10 | **[`Map` vs a plain object](./10-map-vs-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 11 | `Number` and `Math` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 12 | String searching | <span className="db-tier t-understand">Understand</span> | deferred |
 | 13 | Non-mutating array counterparts | <span className="db-tier t-understand">Understand</span> | deferred |

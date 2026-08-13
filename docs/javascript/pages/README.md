@@ -24,8 +24,8 @@ import Progress from '@site/src/components/Progress';
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01–08); 09–20 deferred |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
-| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **in progress** — Master tier (01 done; 02, 04–07, 09, 10 to go) |
-| 6 · Iteration, destructuring and generators | Data & async | 13 | planned |
+| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
+| 6 · Iteration, destructuring and generators | Data & async | 13 | 🔴 **next** |
 | 7 · Asynchronous JavaScript | Data & async | 22 | planned |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
 | 9 · The DOM | Web APIs | 19 | planned |
@@ -45,9 +45,9 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — Phase 3 topic 08, and Phase 4 Master topics |
-| **Last touched** | Phase 4 topic 08 — **Phase 4 Master tier complete** |
+| **Last touched** | Phase 5 topic 10 — **Phase 5 Master tier complete** |
 | **Done and committed** | **Phase 3 Master 01–08** and **Phase 4 Master 01/03/04/05/06/07/08** — `ae18809` `1397730` `9db85ac` `cb8b606` `97fb023` `d48d7e2` `60f6bbc` |
-| **Next** | **Phase 5 · The built-in library** — Master topics |
+| **Next** | **Phase 6 · Iteration, destructuring and generators** — Master topics |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
