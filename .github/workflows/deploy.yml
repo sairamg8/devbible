@@ -24,6 +24,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Must precede setup-node: its `cache: yarn` shells out to `yarn cache
+      # dir`, which the runner's global Yarn 1 refuses to answer once
+      # package.json pins packageManager to yarn 4.
+      - name: Enable corepack
+        run: corepack enable
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
