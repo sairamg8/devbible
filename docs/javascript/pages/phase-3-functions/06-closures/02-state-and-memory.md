@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex6-closures.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex6-closures.mjs`.
 
 **A closure is the oldest way to have private state in JavaScript**, and the
 oldest way to leak memory. Both come from the same property: the variables stay

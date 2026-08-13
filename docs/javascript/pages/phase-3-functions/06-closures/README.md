@@ -6,7 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex6-closures.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex6-closures.mjs`.
 
 **A closure is a function together with the variables it still has access to.**
 Every function in JavaScript is one — the word only becomes interesting when the

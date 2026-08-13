@@ -6,7 +6,7 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex5-call-apply-bind.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex5-call-apply-bind.mjs`.
 
 **What these methods are actually *for*.** Setting `this` explicitly is the
 mechanism; borrowing methods, checking types and pre-filling arguments are the

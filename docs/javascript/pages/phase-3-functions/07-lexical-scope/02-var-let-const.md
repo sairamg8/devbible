@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex7-scope.mjs`, `sandbox/js-p3/ex7b-scope-sloppy.cjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts: `sandbox/js-p3/ex7-scope.mjs`, `sandbox/js-p3/ex7b-scope-sloppy.cjs`.
 
 **Three declaration keywords, and the differences are not stylistic.** They scope
 differently, they redeclare differently, and one of them silently leaks out of

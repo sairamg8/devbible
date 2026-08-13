@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex4-arrows.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex4-arrows.mjs`.
 
 **The concise body is where arrows earn their keep and where they bite.** One
 pair of braces changes an expression into a block, and the failure is a silent

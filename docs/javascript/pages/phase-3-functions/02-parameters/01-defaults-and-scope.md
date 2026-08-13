@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex2-parameters.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex2-parameters.mjs`.
 
 **A default parameter is an expression, not a value.** It is stored unevaluated
 and runs at call time — every call, left to right, only for the arguments that

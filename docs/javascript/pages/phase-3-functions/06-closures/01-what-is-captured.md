@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex6-closures.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex6-closures.mjs`.
 
 **A closure captures the variable, not the value.** Not a snapshot, not a copy —
 a live reference to the binding. Everything surprising about closures follows

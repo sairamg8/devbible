@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex3-this.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex3-this.mjs`.
 
 **Implicit binding is a property of the call site, not the function.** Take the
 function out of the call site — assign it, pass it, schedule it — and the binding

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex1-declarations.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script: `sandbox/js-p3/ex1-declarations.mjs`.
 
 **Three ways to write a function, and the differences are not stylistic.** They
 hoist differently, they name themselves differently in stack traces, and one of

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex2-parameters.mjs`, `sandbox/js-p3/ex2b-arguments-sloppy.cjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts: `sandbox/js-p3/ex2-parameters.mjs`, `sandbox/js-p3/ex2b-arguments-sloppy.cjs`.
 
 **JavaScript never checks how many arguments you passed.** Extra ones are
 collected or discarded; missing ones become `undefined`. Everything on this page

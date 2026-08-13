@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex7-scope.mjs`, `sandbox/js-p3/ex7b-scope-sloppy.cjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts: `sandbox/js-p3/ex7-scope.mjs`, `sandbox/js-p3/ex7b-scope-sloppy.cjs`.
 
 **Lexical scope means a function's scope is fixed by where it appears in the
 source**, before anything runs. The alternative — dynamic scope, where a function
