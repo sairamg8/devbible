@@ -100,21 +100,35 @@ if (!rows[0]) throw new NotFoundError('account', id);       // 404
 throw new ConflictError('account', {expected: version, actual: rows[0].version});  // 409
 ```
 
-Or in one statement, so there is no window between the two:
+That works, but the two statements run on different snapshots: between them the
+row can change again, or be deleted, so the *reason* you report may not be the
+one that actually applied. A data-modifying CTE closes that window by evaluating
+both branches against one snapshot:
 
 ```sql
-UPDATE c_accounts SET balance = $1, version = version + 1
- WHERE id = $2 AND version = $3
-RETURNING version, 'updated' AS outcome
-```
-```sql
--- when that returns nothing:
-SELECT version, 'conflict' AS outcome FROM c_accounts WHERE id = $2
+WITH updated AS (
+  UPDATE c_accounts SET balance = $2, version = version + 1
+   WHERE id = $1 AND version = $3
+  RETURNING version
+)
+SELECT version, 'updated'  AS outcome FROM updated
+UNION ALL
+SELECT version, 'conflict' AS outcome FROM c_accounts
+ WHERE id = $1 AND NOT EXISTS (SELECT 1 FROM updated)
 ```
 
-The two-statement form is fine in practice: by the time you are reporting an
-error, a slightly stale reading of *why* is acceptable. What is not acceptable is
-reporting 404 for a conflict.
+```console
+correct version  → [ { version: 2, outcome: 'updated' } ]
+stale version    → [ { version: 2, outcome: 'conflict' } ]
+missing row      → []
+```
+
+Three outcomes, one round trip: a row saying `updated`, a row saying `conflict`
+carrying the version that actually won, or **zero rows** — which is the 404.
+
+The two-statement form above is still fine in practice: by the time you are
+reporting an error, a slightly stale reading of *why* is acceptable. What is not
+acceptable is reporting 404 for a conflict.
 
 ## Retrying
 

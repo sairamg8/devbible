@@ -104,11 +104,13 @@ Speed is the smaller objection. The real one is that it is not a mapping, it is 
 - A column added by a migration appears in the API response the moment it exists,
   camel-cased. That is the same failure as `SELECT *`, described in
   [Rows to domain objects](./01-repository/02-rows-to-domain.md).
-- The transformation is lossy in both directions. `user_id` → `userId` → back to
-  `user_id` works, but `api_key` → `apiKey` → `api_key` and `oauth2_token` →
-  `oauth2Token` → `oauth_2_token` do not round-trip. Anything that reverses the
-  mapping — a sort parameter, a filter field — breaks on exactly the columns with
-  digits or acronyms.
+- The transformation is not reversible for every name. `user_id` → `userId` →
+  back to `user_id` works, and so does `api_key` → `apiKey` → `api_key`. But a
+  digit breaks it: `oauth2_token` → `oauth2Token` → **`oauth_2_token`**, because
+  the reverse pass splits on the digit boundary. So does an acronym, once a
+  converter preserves runs of capitals: `html_url` → `htmlUrl` round-trips, while
+  a `HTMLUrl` convention gives back `h_t_m_l_url`. Anything that reverses the
+  mapping — a sort parameter, a filter field — breaks on exactly those columns.
 - It applies to nested objects only if you write it to, and then it rewrites keys
   inside `jsonb` payloads that were never column names.
 
@@ -185,9 +187,9 @@ PostgreSQL folded it to lower case.
 **Cause:** A generic key rewriter publishes whatever the query returned.
 **Fix:** An explicit mapper, which names the fields it exposes.
 
-**Symptom:** `?sort=apiKey` fails while `?sort=customerName` works
-**Cause:** An algorithmic camel→snake reverse mapping; `apiKey` does not round-trip
-to `api_key`.
+**Symptom:** `?sort=oauth2Token` fails while `?sort=customerName` works
+**Cause:** An algorithmic camel→snake reverse mapping; the digit boundary makes
+`oauth2Token` come back as `oauth_2_token`, which is not a column.
 **Fix:** A lookup map, which is also the sort allowlist.
 
 **Symptom:** Serialising large result sets is slower than expected
@@ -214,8 +216,9 @@ allowlist so new columns are not published automatically.
 
 **★ What is wrong with a generic snake→camel rewriter?**
 It publishes every column the query returns, so a migration changes the API. It
-does not round-trip — `api_key` → `apiKey` → `api_key` fails on anything with
-digits or acronyms — so reverse mapping for sort and filter parameters breaks. And
+also fails to round-trip on names with digits or acronyms — `oauth2_token` →
+`oauth2Token` → **`oauth_2_token`** — so reverse mapping for sort and filter
+parameters breaks on exactly those columns. And
 measured, it is 2.3× slower than an explicit mapper: 75.3 ms against 31.6 ms over
 20 000 rows.
 
