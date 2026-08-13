@@ -14,7 +14,7 @@ and add your own row when you claim something.**
 |---|---|---|---|
 | **React** — all of `docs/react/` | session `52a29103` | 2026-08-13 | 🔴 **Active.** **Phases 0–3 COMPLETE** (79 files); starting **Phase 4 · Effects**. See the [React claim notice](react/pages/README.md) |
 | **PostgreSQL** — all of `docs/postgresql/` | session `052a10c2` | 2026-08-13 | ✅ **COMPLETE — RELEASED, free to pick up.** Phase 13 finished 18/18 (every stamp gone), plus new phase-2 topic 17 (money) and phase-3 topic 20 (multi-tenancy). **298 pages, 298 carrying `> Verified:`, 0 files over 300 lines, 0 broken links.** Topics 07–18 are documentation-validated under the no-new-sandboxes rule and say so inline. Remaining PG work is *review only* — the rubric pass and `/code-review ultra`. |
-| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3, 4 and 5 Master tiers COMPLETE** — P3 01–08, P4 01/03–08, P5 01/02/04–07/09/10. Next: **Phase 6 · Iteration, destructuring and generators**. See the [JavaScript claim notice](javascript/pages/README.md) |
+| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3–6 Master tiers COMPLETE** — P3 01–08, P4 01/03–08, P5 01/02/04–07/09/10, P6 01–03. Next: **Phase 7 · Asynchronous JavaScript**. See the [JavaScript claim notice](javascript/pages/README.md) |
 | **Unclaimed** | — | — | **MongoDB, Docker, Redis, Nginx have zero pages** — good places to start |
 
 **Rules for a shared checkout:** never `git add -A` — stage explicit paths only.

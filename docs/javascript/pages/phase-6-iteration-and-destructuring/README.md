@@ -7,10 +7,13 @@ sidebar_position: 0
 *13 topics.* The protocol layer. Small phase, but it is what lets `for…of`, spread,
 destructuring and `Promise.all` all work on the same objects.
 
-## Status — **in progress** (2026-08-13)
+## Status — **Master tier COMPLETE** (2026-08-13)
 
-**Master tier first.** The three Master topics are **01, 02, 03** — unusually, the first
-three in syllabus order. The remaining topics are *deferred*, not forgotten.
+**All three Master topics are written** — 01, 02, 03, unusually the first three in
+syllabus order. The remaining topics are *deferred*, not forgotten: under Master-first
+they are filled in on demand once every phase's Master topics are done. The next unit of
+work is **Phase 7 · Asynchronous JavaScript** — the syllabus calls it the centre of
+gravity of the whole thing.
 
 ## Topics
 
@@ -18,7 +21,7 @@ three in syllabus order. The remaining topics are *deferred*, not forgotten.
 |---|---|---|---|
 | 01 | **[Destructuring](./01-destructuring/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[`for…of` vs `for…in` vs `forEach`](./02-loop-forms/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03 | Spread with iterables | <span className="db-tier t-master">Master</span> | planned |
+| 03 | **[Spread with iterables](./03-spread-with-iterables/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | The iteration protocols | <span className="db-tier t-understand">Understand</span> | deferred |
 | 05 | Generators | <span className="db-tier t-understand">Understand</span> | deferred |
 | 06 | Async iterators | <span className="db-tier t-understand">Understand</span> | deferred |
