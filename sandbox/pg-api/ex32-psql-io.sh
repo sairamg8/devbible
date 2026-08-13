@@ -5,7 +5,7 @@ export PGPASSWORD=devbible
 H=127.0.0.1; P=55432; U=devbible; D=devbible
 PSQL="psql -h $H -p $P -U $U -d $D"
 line() { printf '\n=== %s ===\n' "$1"; }
-WORK=/tmp/p1_work; rm -rf $WORK; mkdir -p $WORK/sub
+WORK="$(cd "$(dirname "$0")" && pwd)/tmp/p1_work"; rm -rf $WORK; mkdir -p $WORK/sub
 
 $PSQL -q -v ON_ERROR_STOP=1 <<'SQL'
 DROP TABLE IF EXISTS p1_import;

@@ -205,4 +205,4 @@ duplicates and the work.
 
 ---
 
-← [`DELETE`](11-delete.md) · Next → [`MERGE`](13-merge.md)
+← [`DELETE`](11-delete.md) · Next → [`MERGE`](13-merge/README.md)

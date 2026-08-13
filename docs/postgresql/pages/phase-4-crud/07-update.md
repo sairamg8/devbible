@@ -101,7 +101,7 @@ Three candidate prices, one row updated, **one value chosen arbitrarily** and th
 two silently dropped. Nothing in the result tells you this happened — `rowCount: 1` looks
 exactly like a clean single-row update.
 
-[`MERGE`](13-merge.md) rejects the same input outright with `21000`. That difference is
+[`MERGE`](13-merge/README.md) rejects the same input outright with `21000`. That difference is
 the strongest argument for `MERGE` when the source is data you did not generate: it
 turns a silent wrong answer into an error.
 

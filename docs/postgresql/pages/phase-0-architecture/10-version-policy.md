@@ -105,4 +105,4 @@ Major 18, minor 4 (`server_version_num`).
 
 ---
 
-← [Process model](09-process-model.md) · Next → [vs other databases](11-vs-other-databases.md)
+← [Process model](09-process-model.md) · Next → [vs other databases](11-vs-other-databases/README.md)

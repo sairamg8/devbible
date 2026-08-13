@@ -25,7 +25,7 @@ Twelve pages, one syllabus row each. The first two are Master.
 | 08 | **[Connections and auth](08-connection-and-auth.md)** | <span className="db-tier t-understand">Understand</span> | URIs, `PG*` env vars, auth modes |
 | 09 | **[Process model](09-process-model.md)** | <span className="db-tier t-know">Know</span> | Postmaster, backends, workers |
 | 10 | **[Version policy](10-version-policy.md)** | <span className="db-tier t-know">Know</span> | Majors, minors, five-year window, 18 |
-| 11 | **[vs MySQL and SQLite](11-vs-other-databases.md)** | <span className="db-tier t-know">Know</span> | Differences that change design |
+| 11 | **[vs MySQL and SQLite](11-vs-other-databases/README.md)** | <span className="db-tier t-know">Know</span> | Differences that change design |
 | 12 | **[Templates](12-templates.md)** | <span className="db-tier t-when">When Needed</span> | `template0` / `template1` / `postgres` |
 
 ## Coverage

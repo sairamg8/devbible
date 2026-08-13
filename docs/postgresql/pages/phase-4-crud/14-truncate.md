@@ -242,4 +242,4 @@ footprint small and are interruptible.
 
 ---
 
-← [`MERGE`](13-merge.md) · Next → [Expressions and operators](15-expressions.md)
+← [`MERGE`](13-merge/README.md) · Next → [Expressions and operators](15-expressions.md)

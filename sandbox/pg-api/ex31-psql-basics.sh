@@ -5,6 +5,8 @@
 export PGPASSWORD=devbible
 H=127.0.0.1; P=55432; U=devbible; D=devbible
 PSQL="psql -h $H -p $P -U $U -d $D"
+# scratch stays INSIDE the project, never the host /tmp
+SCRATCH="$(cd "$(dirname "$0")" && pwd)/tmp"; mkdir -p "$SCRATCH"
 line() { printf '\n=== %s ===\n' "$1"; }
 
 # --- fixture ---------------------------------------------------------------
@@ -135,24 +137,24 @@ $PSQL -c 'SELECT 1 AS ok;' ; echo "exit=$?"
 $PSQL -c 'SELECT * FROM no_such_table;' 2>&1 | head -2 ; echo "exit=${PIPESTATUS[0]}"
 
 line "06b. WITHOUT ON_ERROR_STOP a script keeps going after an error"
-cat > /tmp/p1_script.sql <<'SQL'
+cat > $SCRATCH/p1_script.sql <<'SQL'
 CREATE TEMP TABLE s1 (id int);
 INSERT INTO s1 VALUES (1);
 SELECT * FROM no_such_table;
 INSERT INTO s1 VALUES (2);
 SELECT count(*) AS rows_inserted FROM s1;
 SQL
-$PSQL -f /tmp/p1_script.sql 2>&1 ; echo "exit=${PIPESTATUS[0]}"
+$PSQL -f $SCRATCH/p1_script.sql 2>&1 ; echo "exit=${PIPESTATUS[0]}"
 
 line "06c. WITH ON_ERROR_STOP=1 it stops at the first error"
-$PSQL -v ON_ERROR_STOP=1 -f /tmp/p1_script.sql 2>&1 | tail -4 ; echo "exit=${PIPESTATUS[0]}"
+$PSQL -v ON_ERROR_STOP=1 -f $SCRATCH/p1_script.sql 2>&1 | tail -4 ; echo "exit=${PIPESTATUS[0]}"
 
 line "06d. --single-transaction makes the whole file atomic"
-cat > /tmp/p1_atomic.sql <<'SQL'
+cat > $SCRATCH/p1_atomic.sql <<'SQL'
 INSERT INTO p1_customers (email, name) VALUES ('atomic@example.com','Atomic');
 SELECT * FROM no_such_table;
 SQL
-$PSQL -v ON_ERROR_STOP=1 --single-transaction -f /tmp/p1_atomic.sql 2>&1 | tail -3
+$PSQL -v ON_ERROR_STOP=1 --single-transaction -f $SCRATCH/p1_atomic.sql 2>&1 | tail -3
 $PSQL -tAc "SELECT count(*) AS atomic_rows_left FROM p1_customers WHERE email='atomic@example.com'"
 
 line "06e. -e echoes the SQL, -a echoes everything (for logs)"
@@ -222,8 +224,8 @@ $PSQL -v status=shipped -tA <<'SQL'
 SELECT count(*) FROM p1_orders WHERE status = :'status';
 SQL
 echo '--- and via -f (works) ---'
-echo "SELECT count(*) FROM p1_orders WHERE status = :'status';" > /tmp/p1_var.sql
-$PSQL -v status=shipped -tA -f /tmp/p1_var.sql
+echo "SELECT count(*) FROM p1_orders WHERE status = :'status';" > $SCRATCH/p1_var.sql
+$PSQL -v status=shipped -tA -f $SCRATCH/p1_var.sql
 
 line "08e. built-in variables and \\unset"
 $PSQL <<'SQL'

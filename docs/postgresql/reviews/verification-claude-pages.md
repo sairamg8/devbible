@@ -81,6 +81,11 @@ costs sequential write I/O on every commit), carries a topic-specific note about
 Note that **`phase-0-architecture/11-vs-other-databases.md` is a stamp** sitting inside
 an otherwise hand-written phase. Phase 0 is 11 real pages, not 12.
 
+> ✅ **Resolved 2026-08-13.** That stamp was rewritten from measurements against
+> PostgreSQL 18.4, MySQL 8.4.11 and SQLite 3.53.3 (`ex56-vs-sqlite.mjs`,
+> `ex57-vs-mysql.sh`) and, at 316 lines, became the chunked directory
+> `11-vs-other-databases/`. Phase 0 is now 12 of 12 topics written.
+
 ---
 
 ## 3. The five templates

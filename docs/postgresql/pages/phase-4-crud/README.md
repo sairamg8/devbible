@@ -20,7 +20,7 @@ sidebar_position: 0
 | 10 | **[ORDER BY](10-order-by.md)** | <span className="db-tier t-understand">Understand</span> | NULLS FIRST LAST |
 | 11 | **[DELETE](11-delete.md)** | <span className="db-tier t-understand">Understand</span> | soft vs hard |
 | 12 | **[DISTINCT and DISTINCT ON](12-distinct-on.md)** | <span className="db-tier t-understand">Understand</span> | PostgreSQL DISTINCT ON |
-| 13 | **[MERGE](13-merge.md)** | <span className="db-tier t-understand">Understand</span> | SQL-standard upsert |
+| 13 | **[MERGE](13-merge/README.md)** | <span className="db-tier t-understand">Understand</span> | SQL-standard upsert |
 | 14 | **[TRUNCATE vs DELETE](14-truncate.md)** | <span className="db-tier t-understand">Understand</span> | speed and FKs |
 | 15 | **[Expressions and CASE](15-expressions.md)** | <span className="db-tier t-understand">Understand</span> | CASE COALESCE |
 | 16 | **[String functions](16-string-functions.md)** | <span className="db-tier t-understand">Understand</span> | lower trim split_part |

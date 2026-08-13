@@ -142,7 +142,7 @@ application-side fix; only the unique index sees all the attempts.
 
 ## `ON CONFLICT` and `MERGE`
 
-`MERGE` (Phase 4's [MERGE](13-merge.md)) is the SQL-standard multi-action form and
+`MERGE` (Phase 4's [MERGE](13-merge/README.md)) is the SQL-standard multi-action form and
 can also `DELETE`. But `ON CONFLICT` is the one with the concurrency guarantee:
 `MERGE` can still raise a unique violation under concurrent inserts, because it does
 not use the index as an arbiter the same way. **For concurrent upsert, use

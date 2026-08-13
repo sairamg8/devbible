@@ -60,7 +60,7 @@ Three things follow:
 `rowCount` counts rows the statement *acted on*, which is not always what a user would
 count: an `UPDATE` setting a column to the value it already holds still counts the row,
 and `MERGE` reports inserts, updates and deletes summed together
-([`MERGE`](../phase-4-crud/13-merge.md)).
+([`MERGE`](../phase-4-crud/13-merge/README.md)).
 
 ## `fields` and `dataTypeID`
 

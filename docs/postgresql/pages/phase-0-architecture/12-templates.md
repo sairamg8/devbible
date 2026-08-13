@@ -101,4 +101,4 @@ migrations with a migrator role).
 
 ---
 
-← [vs other databases](11-vs-other-databases.md) · [Phase 0 index](README.md)
+← [vs other databases](11-vs-other-databases/README.md) · [Phase 0 index](README.md)

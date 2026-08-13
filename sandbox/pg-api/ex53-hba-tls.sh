@@ -11,6 +11,8 @@ PORT=55435
 HBA=/var/lib/postgresql/18/docker/pg_hba.conf
 DATA=/var/lib/postgresql/18/docker
 export PGPASSWORD=devbible
+# scratch stays INSIDE the project, never the host /tmp
+SCRATCH="$(cd "$(dirname "$0")" && pwd)/tmp"; mkdir -p "$SCRATCH"
 line() { printf '\n=== %s ===\n' "$1"; }
 psqlc() { psql -h 127.0.0.1 -p $PORT -U "${2:-devbible}" -d devbible -tAc "$1" 2>&1 | head -20; }
 # pg_reload_conf() returns before the postmaster has re-read the file; a short
@@ -115,10 +117,10 @@ line "12. generate a self-signed certificate and turn ssl on"
 # NOTE: postgres:18-alpine has no openssl binary, so the certificate is generated
 # on the host and copied in. CN is deliberately NOT 127.0.0.1 — section 15 needs
 # a hostname mismatch to show what verify-full checks that verify-ca does not.
-openssl req -new -x509 -days 365 -nodes -text -out /tmp/p13-server.crt \
-  -keyout /tmp/p13-server.key -subj '/CN=devbible-pg-hba' 2>/dev/null
-podman cp /tmp/p13-server.crt $C:$DATA/server.crt
-podman cp /tmp/p13-server.key $C:$DATA/server.key
+openssl req -new -x509 -days 365 -nodes -text -out "$SCRATCH/p13-server.crt" \
+  -keyout "$SCRATCH/p13-server.key" -subj '/CN=devbible-pg-hba' 2>/dev/null
+podman cp "$SCRATCH/p13-server.crt" $C:$DATA/server.crt
+podman cp "$SCRATCH/p13-server.key" $C:$DATA/server.key
 podman exec --user root $C sh -c "chown postgres:postgres $DATA/server.key $DATA/server.crt && \
   chmod 600 $DATA/server.key && grep -q '^ssl = on' $DATA/postgresql.conf || echo 'ssl = on' >> $DATA/postgresql.conf"
 podman restart $C >/dev/null; sleep 6
@@ -147,7 +149,7 @@ echo "    need a root certificate the client trusts"
 
 line "15. verify-ca vs verify-full — the hostname check"
 for m in verify-ca verify-full; do
-  out=$(PGSSLMODE=$m PGSSLROOTCERT=/tmp/p13-server.crt psql -h 127.0.0.1 -p $PORT -U devbible \
+  out=$(PGSSLMODE=$m PGSSLROOTCERT="$SCRATCH/p13-server.crt" psql -h 127.0.0.1 -p $PORT -U devbible \
         -d devbible -tAc "SELECT 'ssl='||ssl FROM pg_stat_ssl WHERE pid=pg_backend_pid()" 2>&1 | head -2 | tr '\n' ' ')
   printf '  sslmode=%-12s + root cert   %s\n' "$m" "$out"
 done

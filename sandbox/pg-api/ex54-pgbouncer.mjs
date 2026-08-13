@@ -104,11 +104,28 @@ show('client 1 took a session advisory lock', `on pid ${await backendPid(l1)}`);
 const got = await l2.query('SELECT pg_try_advisory_lock(918273) AS got');
 show('client 2 pg_try_advisory_lock', got.rows[0].got);
 show('  client 2 is on pid', await backendPid(l2));
-console.log((await admin.query(`SELECT count(*) AS holders FROM pg_locks WHERE locktype='advisory'`)).rows[0]);
-console.log('↑ if client 2 got the lock, the two clients were on DIFFERENT server');
-console.log('  connections; if it did not, they shared one. Either way the result is');
-console.log('  luck, not logic: session advisory locks are unusable behind transaction');
-console.log('  pooling. pg_advisory_xact_lock() is the form that works.');
+console.log((await admin.query(`SELECT count(*) AS rows_in_pg_locks FROM pg_locks WHERE locktype='advisory'`)).rows[0]);
+console.log('↑ READ THIS CAREFULLY — the obvious reading is wrong.');
+console.log('  Client 2 got the lock AND is on the same backend pid as client 1.');
+console.log('  That is not "the lock was free": an advisory lock is RE-ENTRANT within');
+console.log('  a session, and pgbouncer put both clients on ONE postgres session.');
+console.log('  Proof, on a single direct connection (no pgbouncer involved):');
+{
+  const solo = mkClient(DIRECT); await solo.connect();
+  await solo.query('SELECT pg_advisory_lock(424242)');
+  const again = await solo.query('SELECT pg_try_advisory_lock(424242) AS got');
+  // filter to THIS key — an unfiltered count also sees the pooled clients' lock
+  // above and would read as a refcount of 2, which it is not.
+  const n = await solo.query(
+    `SELECT count(*) AS n FROM pg_locks WHERE locktype='advisory' AND objid = 424242`);
+  show('  same session re-takes its own lock',
+       `${again.rows[0].got}  (pg_locks rows for THIS key: ${n.rows[0].n} — one row for a lock held twice)`);
+  await solo.query('SELECT pg_advisory_unlock_all()'); await solo.end();
+}
+console.log('  So mutual exclusion did not fail loudly — it failed SILENTLY. Two');
+console.log('  independent clients both believe they hold an exclusive lock.');
+console.log('  Session advisory locks are unusable behind transaction pooling;');
+console.log('  pg_advisory_xact_lock() is the form that works.');
 await l1.query('SELECT pg_advisory_unlock_all()');
 await l2.query('SELECT pg_advisory_unlock_all()');
 await l1.end(); await l2.end();

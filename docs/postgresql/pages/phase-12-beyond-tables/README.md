@@ -25,6 +25,8 @@ sidebar_position: 0
 | 15 | **[Procedures vs functions](15-procedures.md)** | <span className="db-tier t-when">When Needed</span> | tx control |
 | 16 | **[Foreign data wrappers](16-fdw.md)** | <span className="db-tier t-when">When Needed</span> | postgres_fdw |
 | 17 | **[pgvector](17-pgvector.md)** | <span className="db-tier t-when">When Needed</span> | embeddings |
+| 18 | **[The transactional outbox](18-transactional-outbox.md)** | <span className="db-tier t-understand">Understand</span> | events that cannot be lost |
+| 19 | **[Audit and history tables](19-audit-history-tables.md)** | <span className="db-tier t-understand">Understand</span> | who changed this row |
 
 ## Phase gate
 

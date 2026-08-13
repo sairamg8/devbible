@@ -268,4 +268,4 @@ and is exactly correct — no build time, no index storage, no recall question.
 
 ---
 
-← [Foreign data wrappers](16-fdw.md) · Next → [Phase index](README.md)
+← [Foreign data wrappers](16-fdw.md) · Next → [The transactional outbox](18-transactional-outbox.md)
