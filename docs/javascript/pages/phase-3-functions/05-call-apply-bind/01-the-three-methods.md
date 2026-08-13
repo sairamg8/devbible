@@ -6,9 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts:
-> `sandbox/js-p3/ex5-call-apply-bind.mjs`, `sandbox/js-p3/ex5b-thisarg-sloppy.cjs`,
-> `sandbox/js-p3/ex5c-write-bind.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex5-call-apply-bind.mjs`, `sandbox/js-p3/ex5b-thisarg-sloppy.cjs`.
 
 **All three set `this` explicitly. Only `bind` defers the call.** That is the
 whole distinction, and everything else follows from it.

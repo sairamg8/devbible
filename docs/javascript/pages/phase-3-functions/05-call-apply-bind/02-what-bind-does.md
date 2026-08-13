@@ -6,8 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts:
-> `sandbox/js-p3/ex5-call-apply-bind.mjs`, `sandbox/js-p3/ex5c-write-bind.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex5-call-apply-bind.mjs`, `sandbox/js-p3/ex5c-write-bind.mjs`.
 
 **`bind` does not just set `this`.** It returns a new exotic object with a
 different name, a different arity, no `prototype` of its own, and a binding that
@@ -106,7 +105,7 @@ Function.prototype.myBind = function (thisArg, ...boundArgs) {
 ```
 
 Both versions were run against the native one
-(`sandbox/js-p3/ex5c-write-bind.mjs`) rather than assumed correct:
+ rather than assumed correct:
 
 ```
 --- ordinary calls: both implementations match native bind ---

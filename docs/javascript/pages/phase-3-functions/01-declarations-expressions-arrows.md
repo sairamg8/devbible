@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0**. Script: `sandbox/js-p3/ex1-declarations.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex1-declarations.mjs`.
 
 **Three ways to write a function, and the differences are not stylistic.** They
 hoist differently, they name themselves differently in stack traces, and one of
@@ -100,9 +100,9 @@ example — ends up with `""`.
 That matters for stack traces:
 
 ```
-  anonymous expression    at file:///…/ex1-declarations.mjs:44:56
-  named expression        at myNamedFn (file:///…/ex1-declarations.mjs:45:61)
-  arrow assigned to a const  at file:///…/ex1-declarations.mjs:46:55
+  anonymous expression       at file:///…/declarations.mjs:44:56
+  named expression           at myNamedFn (file:///…/declarations.mjs:45:61)
+  arrow assigned to a const  at file:///…/declarations.mjs:46:55
 ```
 
 The named function expression is the only one that puts a **name** in the trace.

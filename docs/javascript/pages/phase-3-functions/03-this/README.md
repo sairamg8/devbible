@@ -6,8 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script:
-> `sandbox/js-p3/ex3-this.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex3-this.mjs`.
 
 **`this` is an argument, not a variable.** It is decided by *how a function is
 called*, not where it was written — which is why the same function body returns

@@ -6,8 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts:
-> `sandbox/js-p3/ex2-parameters.mjs`, `sandbox/js-p3/ex2b-arguments-sloppy.cjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex2-parameters.mjs`, `sandbox/js-p3/ex2b-arguments-sloppy.cjs`.
 
 **The parameter list is a small language of its own.** It has its own scope, its
 own temporal dead zone, its own evaluation order, and a rule about *simple* vs

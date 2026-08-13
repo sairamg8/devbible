@@ -6,8 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script:
-> `sandbox/js-p3/ex4-arrows.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex4-arrows.mjs`.
 
 **An arrow function is not "shorter function syntax".** It is a different kind of
 callable: it has no binding of its own for `this`, `arguments`, `super` or

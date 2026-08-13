@@ -6,8 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Scripts:
-> `sandbox/js-p3/ex3-this.mjs`, `sandbox/js-p3/ex3b-this-sloppy.cjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Scripts: `sandbox/js-p3/ex3-this.mjs`, `sandbox/js-p3/ex3b-this-sloppy.cjs`.
 
 **`this` is bound at call time.** Reading the function body tells you nothing;
 reading the call site tells you everything. Four rules decide it, and they have a
@@ -64,7 +63,7 @@ mode it is `globalThis`.
 
 **Assume strict.** ES modules, class bodies and anything with `'use strict'` are
 all strict, which is essentially all modern code. The sloppy behaviour and why
-strict is the improvement, measured in `sandbox/js-p3/ex3b-this-sloppy.cjs`:
+strict is the improvement, measured in an inline check:
 
 ```
 --- sloppy mode: default binding is globalThis, not undefined ---

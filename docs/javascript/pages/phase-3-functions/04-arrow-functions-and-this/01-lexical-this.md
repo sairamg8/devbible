@@ -6,8 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08 on **Node 24.19.0** (V8 13.6). Script:
-> `sandbox/js-p3/ex4-arrows.mjs`.
+> Verified: 2026-08 on **Node 24.19.0** (V8 13.6) — **sandbox-proven**. Script: `sandbox/js-p3/ex4-arrows.mjs`.
 
 **An arrow does not have a `this` that is "the outer one". It has no `this` at
 all.** `this` inside an arrow is an ordinary free variable, resolved through the
