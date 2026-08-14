@@ -145,7 +145,8 @@ a cache, a framework loader, or a Server Component that created it and passed it
 
 Which is the pattern the API is really designed around: the server starts the work and
 hands the client component a promise to read, rather than the client creating one during
-render. Phase 10 and Phase 12 cover the mechanics; the point here is that the caching
+render. Phase 10 covers the mechanics (Phase 12 would have covered the client-side half
+and was **dropped**); the point here is that the caching
 requirement is not an optimisation — an uncached promise is a broken component.
 
 ## `use` versus `useContext`

@@ -76,7 +76,7 @@ own loading state, exactly as it did before Suspense existed
 ([Phase 4 · 07](../phase-4-effects/07-fetching-data.md)) — and the honest fix is usually
 to stop fetching in an effect at all
 ([Phase 4 · 06](../phase-4-effects/06-you-might-not-need-an-effect/README.md)), which is
-Phase 12's subject.
+the subject of the planned Phase 12, which was **dropped** — so it is not covered.
 
 Two more that are not on the list and get assumed:
 

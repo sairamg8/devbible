@@ -4,76 +4,40 @@ sidebar_label: "4 · Building a real app"
 sidebar_position: 4
 ---
 
-> Phases 12–14 · 48 topics · Data and state, routing and structure, correctness
-> and delivery
+> Phase 14 · 18 topics · Correctness and delivery.
+> 🔴 **Phases 12 and 13 were dropped on 2026-08-14** — see below.
 
-React ships a rendering library and almost nothing else. Every real application
-still has to answer four questions React refuses to answer for you: where data
-lives, how the URL maps to the screen, how it fails, and how it gets to a user.
-This part covers those, with the honest trade-offs rather than a recommended
-stack.
+React ships a rendering library and almost nothing else. This part was planned to
+cover the four questions React refuses to answer — where data lives, how the URL
+maps to the screen, how it fails, and how it gets to a user.
 
-These three phases are **parallelizable** — testing and accessibility can run
-alongside whatever you are building.
-
----
-
-## Phase 12 — Data and state in a real app
-
-*16 topics.* Most "global state" is a cache of somebody else's data. Sorting
-state into the right bucket removes more complexity than any library.
-
-| Topic | Tier |
-|---|---|
-| **Server state is a cache, not state** — data owned by your API is borrowed, may be stale, and needs invalidation rather than mutation. The reframing that deletes half of a typical Redux store | <span className="db-tier t-master">Master</span> |
-| **The four buckets** — server state, URL state, form state and UI state. Which tool each one wants, and the bugs that come from putting one in the wrong bucket | <span className="db-tier t-master">Master</span> |
-| **The URL as state** — filters, sorting, pagination and the open tab belong in the query string: shareable, restorable on reload, and free undo through the back button | <span className="db-tier t-master">Master</span> |
-| **TanStack Query** — queries, mutations, query keys, `staleTime` vs `gcTime`, invalidation, and what it removes from your code (loading flags, dedupe, retries, refetch-on-focus, race conditions) | <span className="db-tier t-understand">Understand</span> |
-| **Client state managers** — Zustand, Jotai and Redux Toolkit compared on the axes that matter: selector granularity, boilerplate, devtools, SSR support, and how each behaves under concurrent rendering | <span className="db-tier t-understand">Understand</span> |
-| **Context versus a store** — the concrete re-render and selector argument, with the measurement; and the size of app at which context genuinely stops being enough | <span className="db-tier t-understand">Understand</span> |
-| **Optimistic updates outside forms** — mutating a query cache and rolling back on error, versus `useOptimistic` inside an action. Choosing by whether the change outlives the interaction | <span className="db-tier t-understand">Understand</span> |
-| **Real-time data** — WebSocket and SSE feeds pushed into a query cache or exposed through `useSyncExternalStore`; reconnection, backfill and the ordering problem | <span className="db-tier t-understand">Understand</span> |
-| **Pagination and infinite lists** — offset versus cursor from the client's point of view, keeping scroll position stable, and why cursor pagination is the one your database wanted anyway | <span className="db-tier t-understand">Understand</span> |
-| **Caching vocabulary** — fresh, stale, revalidate, invalidate, refetch; mapping the client cache onto the `Cache-Control` and `ETag` your API already sends instead of fighting it | <span className="db-tier t-understand">Understand</span> |
-| **Local persistence** — `localStorage`, `sessionStorage` and IndexedDB in a React app; reading them without breaking SSR, and doing it through `useSyncExternalStore` so two tabs agree | <span className="db-tier t-understand">Understand</span> |
-| **Authentication state on the client** — where the token lives (and why not `localStorage`), the hydration problem for "am I logged in", the flash of the wrong UI, and refresh handling | <span className="db-tier t-understand">Understand</span> |
-| **Derive, don't store** — the client-side restatement of the derived-state rule: a `useMemo` over the source data beats a second state that has to be kept in sync | <span className="db-tier t-understand">Understand</span> |
-| **Talking to your own Express + PostgreSQL API** — a typed client, one error contract, mapping HTTP status to UI, retries and timeouts, and exactly where React's responsibility ends | <span className="db-tier t-understand">Understand</span> |
-| SWR and framework loaders — the alternatives to a query library, and recognising when the framework has already solved this and you are adding a second cache | <span className="db-tier t-know">Know</span> |
-| Redux Toolkit specifically — slices, the store, RTK Query, and why hand-written Redux (actions, constants, `connect`) is no longer recommended by anyone including Redux | <span className="db-tier t-know">Know</span> |
-
-**Gate — deliverable:** a product list whose filters and page number live in the
-URL, whose data comes from a cache that dedupes and revalidates, which updates
-optimistically on "add to cart", and which shows a real error state when the API
-returns 500.
+**Two of those four are no longer in scope.** Data and state (Phase 12) and routing
+(Phase 13) were dropped; what remains here is **Phase 14 — correctness, errors,
+accessibility, testing and delivery**, which is parallelizable with everything else.
 
 ---
 
-## Phase 13 — Routing, structure and the app shell
+## Phases 12 and 13 — dropped
 
-*14 topics.* The router is where Suspense, code splitting and data loading stop
-being features and start being the shape of your application.
+> 🔴 **Abandoned on 2026-08-14, on the maintainer's instruction.** These two phases —
+> **12 · Data and state in a real app** (16 topics) and **13 · Routing, structure and the
+> app shell** (14 topics) — were planned and never written. No page of either exists, so
+> nothing was removed except the plan itself.
 
-| Topic | Tier |
+The headings are kept so the numbering of Phase 14 stays stable and so the gap is
+explained rather than mysterious. **React's scope is now Phases 0–11 and 14 — 214 topics.**
+
+What their subjects meant, and where the material now lives or does not:
+
+| Was going to cover | Where it stands now |
 |---|---|
-| **React Router 8** — routes, nested routes, layout routes and `<Outlet>`; the three modes (declarative, data, framework) and which one a given project should use | <span className="db-tier t-master">Master</span> |
-| **Navigation** — `<Link>`, `<NavLink>`, `useNavigate`, `replace` vs `push`, relative routes, and the cases where a real page load is the correct answer | <span className="db-tier t-master">Master</span> |
-| **Protected routes** — the layout-route guard, redirecting with the intended destination preserved, and the rule that a client-side guard is **UI, not security** — the API authorizes | <span className="db-tier t-master">Master</span> |
-| **What a router does** — map the URL to a component tree and keep history in sync; why React does not ship one, and what that means for portability | <span className="db-tier t-understand">Understand</span> |
-| **URL parameters and search params** — `useParams`, `useSearchParams`, the read/write cycle, and typing both safely | <span className="db-tier t-understand">Understand</span> |
-| **Data routers** — `loader` and `action` per route, `useLoaderData`, deferred data with `Await`, and how they remove the fetch-on-mount waterfall | <span className="db-tier t-understand">Understand</span> |
-| **Route-level code splitting** — lazy routes, where the Suspense boundary goes, prefetching on hover, and avoiding a spinner on every navigation | <span className="db-tier t-understand">Understand</span> |
-| **Scroll restoration, focus and announcements** — what a client-side route change breaks for keyboard and screen-reader users, and the three fixes a router will not do for you | <span className="db-tier t-understand">Understand</span> |
-| **Next.js App Router** — file-based routing, nested layouts, the server/client split, and where its conventions differ from React Router's | <span className="db-tier t-understand">Understand</span> |
-| **Choosing: Vite SPA, React Router framework mode, or Next.js** — a decision table for a MERN/PERN app, weighing SEO, hosting, an existing Express API, and team familiarity | <span className="db-tier t-understand">Understand</span> |
-| **Project structure** — feature folders versus type folders, where hooks and shared components live, barrel files and what they cost in build time and circular imports | <span className="db-tier t-understand">Understand</span> |
-| **The app shell** — providers, error boundaries and Suspense at the root, the order they must nest in, and keeping the root from becoming a fifteen-deep pyramid | <span className="db-tier t-understand">Understand</span> |
-| **Environment configuration** — `import.meta.env.VITE_*` and `NEXT_PUBLIC_*`, build-time substitution, and the rule with no exceptions: anything in the client bundle is public | <span className="db-tier t-understand">Understand</span> |
-| Migrating an SPA into a framework — the incremental paths, what breaks first (`window` at module scope, client-only libraries), and how to decide it is worth it | <span className="db-tier t-know">Know</span> |
+| Server state as a cache, the four state buckets, the URL as state | **Not covered.** Earlier pages that point forward to "Phase 12" state the idea and stop there |
+| Data-fetching libraries, caching and invalidation | **Not covered.** [Phase 10 · 15](../pages/phase-10-server-components/15-data-fetching-in-rsc.md) covers fetching on the server only |
+| Routing, code splitting and the app shell | **Not covered.** The framework comparison in [Phase 10 · 16](../pages/phase-10-server-components/16-nextjs-vs-react-router.md) is the closest thing |
 
-**Gate — deliverable:** a routed app with a shared layout, a protected section
-that redirects to login and returns to the intended page after, route-level code
-splitting, and filters that survive a reload and a back-button press.
+⚠️ **Some written pages in Phases 2, 7 and 8 still name "Phase 12" in prose.** Those
+sentences were rewritten when the phases were dropped; if you find one that was missed,
+it is a stale forward reference, not a page that exists somewhere.
 
 ---
 
@@ -112,13 +76,13 @@ and a production build served with correct cache headers.
 
 ## Where this connects
 
-- **Phase 12 → Express** — the API contract, status codes, pagination and
-  idempotency are **Express** topics. React consumes the contract; it does not
-  design it.
-- **Phase 12 → PostgreSQL** — cursor pagination is a client concern here and a
-  keyset-index concern there; the two pages link to each other.
-- **Phase 13 → Phase 10** — the framework choice made here decides whether
-  Server Components are available to you at all.
+- **The Express and PostgreSQL handoffs move with Phase 12.** The API contract,
+  status codes, pagination and idempotency were always **Express** topics, and
+  cursor pagination a **PostgreSQL** one; with Phase 12 dropped, React simply
+  never states the React half. Both remain covered on their own side.
+- **The framework choice that Phase 13 would have made** is covered as a choice,
+  not as a routing syllabus, in
+  [Phase 10 · 16](../pages/phase-10-server-components/16-nextjs-vs-react-router.md).
 - **Phase 14 → Nginx** — the SPA fallback, gzip/brotli and cache headers are
   configured in **Nginx**; this phase states the requirement and links out.
 - **Phase 14 → Node** — the process that serves an SSR build, its graceful

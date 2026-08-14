@@ -43,9 +43,10 @@ to CSS. The rule is: *if removing React would remove the topic, it is React's.*
 
 Two deliberate overlaps, both handled by linking rather than re-explaining:
 
-- **Routing** (Phase 13) is not React, but no React application exists without
-  it, and the router is where Suspense, code splitting and data loading actually
-  get used. React owns the integration; the router owns its own API.
+- **Routing** is not React, and the phase that would have covered it (13) was
+  **dropped on 2026-08-14**. Routers are still discussed where they intersect
+  React — as a framework *choice* in Phase 10 — but this syllabus does not teach
+  one.
 - **Server Components** (Phase 10) sit on a bundler and usually a framework.
   React owns the model and the directives; the framework owns the plumbing.
 
@@ -136,7 +137,7 @@ of React is genuinely "look it up the day you need it", which is why
 | Required | The **DOM and events** (JavaScript Phases 9–10) before React Phase 5 — refs and portals assume it |
 | Strongly recommended | **TypeScript** Phases 0–3. Every real React codebase in 2026 is typed; the pages use TS in examples and explain the React-specific types |
 | Required for Part 3 | **Node** Phase 0 (the runtime model). Server Components run in Node; "it runs on the server" is meaningless without knowing what that means |
-| Pairs with | **Express** and **PostgreSQL** for Phase 12 — the React half of talking to your own API |
+| Pairs with | **Express** and **PostgreSQL** — for Server Components reaching a database directly (Phase 10). The planned Phase 12 on the React half of talking to your own API was **dropped** |
 | Not required | Any bundler expertise. Phase 0 sets up Vite and moves on |
 
 ## Reading order

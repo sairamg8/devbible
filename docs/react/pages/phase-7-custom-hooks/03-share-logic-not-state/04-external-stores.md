@@ -182,7 +182,8 @@ in-flight requests, invalidation, retries and garbage collection.
 
 That is precisely the "state lives in a store, the hook is a reader" shape of this
 chunk. React's own docs stop short of endorsing a particular library, and the
-comparison belongs with data fetching rather than here — Phase 12 covers it properly.
+comparison belongs with data fetching rather than here. ⚠️ Phase 12 was going to cover it
+and was **dropped**, so it is not covered elsewhere in this bible.
 
 The point for *this* topic is narrow but load-bearing: **"these two components need the
 same data" is frequently not a shared-state problem at all.** Lifting a fetch into a

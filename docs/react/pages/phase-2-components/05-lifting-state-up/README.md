@@ -36,7 +36,8 @@ ordered cheapest-first.
 - **→ Phase 5** — context, for when lifting has to cross too many layers.
 - **→ Phase 6** — `memo`, the Compiler, and the measured version of the
   re-render cost described here.
-- **→ Phase 12** — server data is a cache, not lifted UI state.
+- **Server data is a cache, not lifted UI state** — the point Phase 12 was going to
+  develop. That phase was **dropped**; the idea is stated here and not built on.
 
 ---
 

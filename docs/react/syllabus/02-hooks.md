@@ -144,12 +144,15 @@ hook inside `if (loading)` corrupts state — and write `useDebouncedValue` and
 
 ## Where this connects
 
-- **Phase 4 → Phase 12** — "fetching in an effect is a poor default" is stated
-  here and answered there, with a query cache or a framework loader.
+- **Phase 4 → nowhere, now** — "fetching in an effect is a poor default" is
+  stated here, and Phase 12 was going to answer it with a query cache or a
+  framework loader. **Phase 12 was dropped**; the server-side answer is in
+  Phase 10, and the client-side one is not covered.
 - **Phase 5 → Phase 8** — `useSyncExternalStore` exists because of tearing, and
   tearing only exists because rendering is concurrent.
-- **Phase 5 → Phase 12** — context is compared against real state managers once
-  there is an application around it.
+- **Phase 5 → nowhere, now** — context was going to be compared against real
+  state managers in Phase 12, which was **dropped**. The comparison is not
+  covered.
 - **Phase 6 → Phase 11** — the other half of performance is what happens before
   JavaScript runs at all: server rendering, streaming and hydration cost.
 - **Phase 7 → Phase 6** — the Compiler can only optimise code that obeys the

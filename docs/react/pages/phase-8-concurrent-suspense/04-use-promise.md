@@ -119,7 +119,8 @@ function Profile({ id }) {
 This is the minimum viable version and it is deliberately naive — it never evicts, never
 revalidates, and never retries. It is here to show the *shape*, not as something to ship;
 a real query library is the honest answer
-([topic 05](05-request-waterfalls.md) and Phase 12).
+([topic 05](05-request-waterfalls.md); the planned Phase 12 on client-side caching was
+dropped, so the server-side answer in Phase 10 is the one this bible gives).
 
 **3. A framework loader.** Which, per the docs, is option 2 with the hard parts written.
 
