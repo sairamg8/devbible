@@ -201,8 +201,10 @@ processing microtasks"*.
 
 **Symptom:** Code before the first `await` ran synchronously and surprised you
 **Cause:** An `async` function is an ordinary call until its first `await`.
-**Fix:** Expected — and useful. Put validation before the first `await` so it throws
-synchronously.
+**Fix:** Expected — and useful. Validation placed before the first `await` runs
+immediately, so an invalid argument is detected before any work starts. ⚠️ It still does
+not *throw* synchronously: an `async` function converts a throw into a **rejected
+promise** — see [07 · 01](../07-async-await/01-always-a-promise.md).
 
 **Symptom:** `await null` behaves differently from no `await` at all
 **Cause:** `await` on a non-promise **still suspends** and resumes in a microtask.
@@ -232,8 +234,10 @@ recursive `setTimeout` yields between each callback; a recursive `.then` does no
 
 **★ Does `await` on a non-promise still yield?**
 Yes — `await null` suspends and resumes in a **microtask**. And everything before the
-first `await` runs **synchronously**, which is why validation placed there throws
-synchronously.
+first `await` runs **synchronously**, which is why validation placed there runs before any
+work starts. Note it still does not *throw* synchronously — an `async` function always
+returns a promise, so the throw becomes a rejection
+([07 · 01](../07-async-await/01-always-a-promise.md)).
 
 **How do you yield so the browser can paint?**
 Yield to the **task** queue — `await new Promise(r => setTimeout(r, 0))`, or

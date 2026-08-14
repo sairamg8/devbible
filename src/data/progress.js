@@ -43,7 +43,7 @@ export const LANGUAGES = {
       {n: 4, slug: 'phase-4-objects-and-classes', name: 'Objects, prototypes and classes', part: 'Language core', topics: 20, pages: 7, pagesPlanned: 20},
       {n: 5, slug: 'phase-5-built-in-library', name: 'The built-in library', part: 'Data & async', topics: 26, pages: 8, pagesPlanned: 26},
       {n: 6, slug: 'phase-6-iteration-and-destructuring', name: 'Iteration, destructuring and generators', part: 'Data & async', topics: 13, pages: 3, pagesPlanned: 13},
-      {n: 7, slug: 'phase-7-async', name: 'Asynchronous JavaScript', part: 'Data & async', topics: 22, pages: 6, pagesPlanned: 22},
+      {n: 7, slug: 'phase-7-async', name: 'Asynchronous JavaScript', part: 'Data & async', topics: 22, pages: 7, pagesPlanned: 22},
       {n: 8, slug: 'phase-8-modules-errors', name: 'Modules, errors, memory and the toolchain', part: 'Data & async', topics: 18, pages: 0},
       {n: 9, slug: 'phase-9-dom', name: 'The DOM', part: 'Web APIs', topics: 19, pages: 0},
       {n: 10, slug: 'phase-10-events', name: 'Events and user input', part: 'Web APIs', topics: 14, pages: 0},
