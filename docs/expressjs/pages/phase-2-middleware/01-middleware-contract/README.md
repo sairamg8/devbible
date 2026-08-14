@@ -51,7 +51,7 @@ authorization question middleware structurally cannot answer.
   dependency chunk 02 warns about.
 - **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — the four-argument half of the contract.
-- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
+- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   the authorization question chunk 03 says middleware cannot answer.
 - **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**
   — where the mount order becomes readable.

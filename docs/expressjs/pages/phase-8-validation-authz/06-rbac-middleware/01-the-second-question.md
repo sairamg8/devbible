@@ -37,7 +37,7 @@ authorization into three questions. This page is the middle one:
 |---|---|---|
 | Who is this? | middleware | 401 |
 | **What may this role do?** | **middleware — this page** | **403** |
-| May they touch *this row*? | **the service**, after the load | 404 ([page 07](../07-ownership.md)) |
+| May they touch *this row*? | **the service**, after the load | 404 ([page 07](../07-ownership/README.md)) |
 
 The middle question is the one middleware is actually good at, for a precise
 reason: **it needs nothing but `req.user`**. No database, no route parameters, no
@@ -99,7 +99,7 @@ error for an expired session.
 admitting the resource exists is itself the leak — another tenant's order,
 another user's document — the honest 403 tells the caller their guess was
 correct. That reasoning belongs to ownership, where the record is in hand
-([page 07](../07-ownership.md)); at this layer, the caller's *own* permissions
+([page 07](../07-ownership/README.md)); at this layer, the caller's *own* permissions
 are not a secret from them, so 403 is right.
 
 ## Fail closed, in four places

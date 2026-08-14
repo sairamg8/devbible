@@ -98,7 +98,7 @@ that only ever uses one user's ids.
 The fix is not more middleware. **Scope the query**:
 `orders.findOwned(req.params.id, req.user.orgId)`, so the unauthorised row never
 enters the process and list endpoints inherit the same defence.
-[Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md).
+[Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md).
 
 ## 5 · Never swallow an error
 

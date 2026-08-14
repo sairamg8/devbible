@@ -155,7 +155,7 @@ Four things fall out of a table like that which are invisible in code: **the
 non-idempotent rows** are exactly the ones needing idempotency keys
 ([Phase 6 · 06](../06-idempotency-keys.md)); **the "owner" rows** are exactly the
 ones needing a scoped query rather than a load-then-compare
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)); the 404s show
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)); the 404s show
 where you have decided existence is hidden; and the missing rows are obvious.
 
 Then generate or hand-write the OpenAPI from the same table, so the contract is

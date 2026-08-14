@@ -55,7 +55,7 @@ list endpoint must never return a bare array.
 - **→ [10 · PATCH and bulk](../10-patch-and-bulk.md)** — the shapes with no honest
   status code.
 - **→ [11 · Hypermedia](../11-hypermedia.md)** — how far to take `Link`.
-- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
+- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   the authorization the URL implies and does not perform.
 
 ---

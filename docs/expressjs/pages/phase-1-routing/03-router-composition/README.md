@@ -55,7 +55,7 @@ does not authorize `:projectId`.
   what the per-version parent router is for.
 - **→ [Phase 7 · 04 · DI without a framework](../../phase-7-layering/04-di-without-framework.md)**
   — why a router takes its dependencies as an argument.
-- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
+- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   the nested-resource authorization gap, in full.
 - **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**
   — the factory chunk 03 sketches.

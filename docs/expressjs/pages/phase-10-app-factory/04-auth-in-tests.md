@@ -72,7 +72,7 @@ it('404s for another user\'s order', () => authed(app, otherUser).get('/api/orde
 ```
 
 The last two are the ones that catch real vulnerabilities — the RBAC and ownership
-gaps from [Phase 8](../phase-8-validation-authz/07-ownership.md). **Write the 404
+gaps from [Phase 8](../phase-8-validation-authz/07-ownership/README.md). **Write the 404
 test for someone else's record on every resource**; it is the only automated defence
 against the IDOR class, and it is a one-line test once the helper exists.
 

@@ -49,7 +49,7 @@ else's record, which is the test nobody writes
 
 RBAC and ownership are **complementary, not alternatives**: the first narrows who
 gets through the door, the second decides which rows they may touch
-([page 07](../07-ownership.md)).
+([page 07](../07-ownership/README.md)).
 
 ## Why you cannot just load it earlier
 
@@ -204,7 +204,7 @@ Why this table rather than unit tests on the guard:
 
 ⚠️ **It still does not catch ownership**, because every row uses a record the
 test user owns. That test lives with the rule it protects
-([page 07](../07-ownership.md)).
+([page 07](../07-ownership/README.md)).
 
 ## Log the denials
 
@@ -227,7 +227,7 @@ usually a permission that should have been granted.
 
 **Symptom:** Any authenticated user can read any record by changing the id
 **Cause:** RBAC present, ownership check absent — the classic IDOR
-**Fix:** Ownership belongs in the service, next to the load ([page 07](../07-ownership.md))
+**Fix:** Ownership belongs in the service, next to the load ([page 07](../07-ownership/README.md))
 
 **Symptom:** Authorization tests are green and the API is exposed
 **Cause:** Every test uses ids the test user owns
@@ -295,4 +295,4 @@ mounted, and because the table reads as policy — a widening change shows up as
 
 ---
 
-← Prev: [Permissions, not role names](02-permissions-not-roles.md) · Index: [RBAC middleware](README.md) · Next → [Ownership checks](../07-ownership.md)
+← Prev: [Permissions, not role names](02-permissions-not-roles.md) · Index: [RBAC middleware](README.md) · Next → [Ownership checks](../07-ownership/README.md)

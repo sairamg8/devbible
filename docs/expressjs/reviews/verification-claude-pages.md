@@ -204,7 +204,7 @@ Same brief governs both trees:
 
 Corpus-wide, 42 of 78 pages have **exactly one** interview question and 19 have no
 runnable JavaScript — but both figures are concentrated almost entirely in Phases 6–10.
-The shortest pages are 22 lines: `phase-8/07-ownership.md`, `phase-8/08-tenant-and-logout.md`
+The shortest pages are 22 lines: `phase-8/07-ownership/README.md`, `phase-8/08-tenant-and-logout.md`
 and `phase-9/06-timeouts-and-secrets.md`. Ownership and multi-tenant isolation are the
 two authorization bugs most likely to reach production.
 

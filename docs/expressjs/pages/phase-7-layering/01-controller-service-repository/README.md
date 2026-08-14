@@ -60,7 +60,7 @@ where this pattern is the wrong choice.
   things wrong with the version chunk 02 warns about.
 - **→ [Phase 5 · 04 · Mapping to HTTP](../../phase-5-errors/04-mapping-to-http.md)**
   — the translation layer that lets services throw domain errors.
-- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
+- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   the scoped query, in full.
 - **→ [Phase 10 · 03 · Supertest](../../phase-10-app-factory/03-supertest.md)** —
   why a throwaway app proves less than it looks.

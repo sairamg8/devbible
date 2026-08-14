@@ -53,7 +53,7 @@ why middleware can never check ownership.
   — status as a contract with the client.
 - **← [Phase 5 · 03](../../phase-5-errors/03-error-contract/README.md)** — the
   envelope a 403 shares with every other failure.
-- **→ [07 · Ownership](../07-ownership.md)** — the third question, in the service,
+- **→ [07 · Ownership](../07-ownership/README.md)** — the third question, in the service,
   answered with 404.
 - **→ [08 · Tenant and logout](../08-tenant-and-logout.md)** — the uniform scoping
   case where a router-level check does earn its place.

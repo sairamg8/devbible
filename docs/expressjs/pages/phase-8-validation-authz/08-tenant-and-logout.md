@@ -48,7 +48,7 @@ Two strengthenings worth having:
   set per transaction ([Phase 7](../phase-7-layering/07-transaction-middleware.md)),
   turn "someone remembered" into "the query cannot run otherwise".
 
-This is the same shape of defence as [ownership](07-ownership.md), one level up:
+This is the same shape of defence as [ownership](07-ownership/README.md), one level up:
 scope the data access, do not audit each call site.
 
 ## Logout has to clear both halves
@@ -179,4 +179,4 @@ lookup the token was chosen to avoid.
 
 ---
 
-← Prev: [Ownership checks](07-ownership.md) · Next → [Type inference](09-type-inference.md)
+← Prev: [Ownership checks](07-ownership/README.md) · Next → [Type inference](09-type-inference.md)

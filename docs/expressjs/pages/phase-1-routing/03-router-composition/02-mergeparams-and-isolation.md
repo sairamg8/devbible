@@ -148,7 +148,7 @@ belongs to `orgId` and stop. But `projectId` is independently attacker-chosen �
 nothing in the route guarantees the project is *in* that org. The check must be
 `findProject(projectId, callerOrgId)`, scoping the query, not comparing after the
 load. That is the highest-consequence gap in most APIs and it is
-[Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md).
+[Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md).
 
 ## Trade-off
 

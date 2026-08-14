@@ -120,7 +120,7 @@ if (!order) throw new NotFoundError('ORDER_NOT_FOUND');
 
 Putting the scope **in the repository signature** — so the method cannot be
 called without it — is what makes this structural rather than a habit
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)). Note the 404
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)). Note the 404
 rather than a 403: confirming existence to someone who may not see it is an
 enumeration oracle.
 

@@ -131,7 +131,7 @@ matched in multiple routes."* Full treatment on
 🔴 **Note `findOwned(id, req.user.orgId)` rather than a load-then-compare.**
 Scoping the query is what makes the whole router safe by construction; comparing
 after the load leaves the unauthorised row inside the process and leaves list
-endpoints unprotected. [Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md).
+endpoints unprotected. [Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md).
 
 ## Testing a router in isolation
 

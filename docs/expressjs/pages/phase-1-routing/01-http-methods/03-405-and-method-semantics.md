@@ -54,7 +54,7 @@ development, and the status code it produced is irrelevant.
 **Where 404 is actively the right answer even though the path exists:** when the
 resource is real but the caller must not learn that. Cross-tenant access should
 answer 404, not 403 and not 405 — anything that confirms existence is an
-information leak. [Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)
+information leak. [Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)
 makes that argument in full.
 
 ## Writing 405 yourself

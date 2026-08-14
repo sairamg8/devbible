@@ -58,7 +58,7 @@ resource that exists, and what happens if you set a header after the first write
   — CRUD operations to status codes.
 - **→ [Phase 6 · 07 · ETag and cache](../../phase-6-rest-surface/07-etag-and-cache.md)**
   — `Cache-Control` and the conditional-request headers.
-- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
+- **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   why cross-tenant access answers 404.
 
 ---

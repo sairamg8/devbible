@@ -87,7 +87,7 @@ distinction leaks the existence of deleted records.
 **Where a 404 on DELETE is right:** when the resource is one the caller must be
 able to see to delete, and hiding non-existence is the security requirement
 anyway — in which case *both* "not yours" and "not there" are 404
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)).
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)).
 
 ## Idempotency is a promise, not an observation
 

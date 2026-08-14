@@ -11,7 +11,7 @@ sidebar_position: 0
 > eight** — and the highest-consequence. All written, plus the missing type-inference
 > topic (09). **Documentation-validated, not sandbox-measured** — nothing was run.
 >
-> 🔴 **The one to read if you read nothing else: [ownership checks](07-ownership.md).**
+> 🔴 **The one to read if you read nothing else: [ownership checks](07-ownership/README.md).**
 > RBAC present and ownership absent is IDOR — every line looks correct, a valid token and
 > a correct permission, and any authenticated user reads any record by changing an id. It
 > survives review because each line is individually right, and survives tests because
@@ -31,7 +31,7 @@ sidebar_position: 0
 | 04 | **[Authn middleware](04-authn-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Attach `req.user` or 401; where the truth lives and what that costs; opt-out mounting and the deny-path tests |
 | 05 | **[Cookies and sessions wire-up](05-cookies-sessions-wireup.md)** | <span className="db-tier t-understand">Understand</span> | Flags + store; theory in Node |
 | 06 | **[RBAC middleware](06-rbac-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Role checks → 403, failing closed; capabilities rather than role names; and the row-level question this layer can never answer |
-| 07 | **[Ownership checks](07-ownership.md)** | <span className="db-tier t-master">Master</span> | Is this row mine? |
+| 07 | **[Ownership checks](07-ownership/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Is this row mine? The bug that survives review, scoping the query instead of checking the row, and 404-vs-403 by what the caller may learn |
 | 08 | **[Multi-tenant and logout](08-tenant-and-logout.md)** | <span className="db-tier t-know">Know</span> | Scope tenantId; revoke surface; optional auth |
 | 09 | **[Type inference](09-type-inference.md)** | <span className="db-tier t-know">Know</span> | `z.infer`, and typing `req.validated` without lying |
 
@@ -53,7 +53,7 @@ schemas had no coverage at all. This README had no Coverage table; that is phase
 | Session store vs JWT wire-up | 05, and the trade in 04 (chunk [02](04-authn-middleware/02-tokens-sessions-and-cost.md)) |
 | Cookie flags on the auth path | 05 |
 | RBAC middleware | 06 (chunks [01](06-rbac-middleware/01-the-second-question.md) · [02](06-rbac-middleware/02-permissions-not-roles.md) · [03](06-rbac-middleware/03-what-rbac-cannot-do.md)) |
-| Resource ownership checks | 07 |
+| Resource ownership checks | 07 (chunks [01](07-ownership/01-the-bug-that-survives-review.md) · [02](07-ownership/02-scope-the-query.md) · [03](07-ownership/03-status-and-proving-it.md)) |
 | Multi-tenant scoping | 08 |
 | Logout and revocation surface | 08 |
 | Optional auth middleware | 08 |

@@ -59,7 +59,7 @@ before authentication.
   the packages and flags behind chunk 02's choice.
 - **→ [06 · RBAC middleware](../06-rbac-middleware/README.md)** — the second question,
   and the 403 that goes with it.
-- **→ [07 · Ownership](../07-ownership.md)** — the third question, in the
+- **→ [07 · Ownership](../07-ownership/README.md)** — the third question, in the
   service, answered with 404.
 - **→ [08 · Tenant and logout](../08-tenant-and-logout.md)** — what revocation
   has to mean in practice.

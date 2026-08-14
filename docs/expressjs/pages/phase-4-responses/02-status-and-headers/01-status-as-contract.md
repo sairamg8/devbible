@@ -110,7 +110,7 @@ same way anyway.
 🔴 **404 vs 403 is a security decision, not a semantic one.** A 403 confirms the
 resource exists. For anything cross-tenant, **answer 404** — the caller must not
 be able to enumerate what they cannot see
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)).
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)).
 
 ## Why "always 200 with `{success: false}`" fails
 

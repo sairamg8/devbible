@@ -128,7 +128,7 @@ treated as the whole of input security:
 
 | Not a schema's job | Whose it is |
 |---|---|
-| "this id belongs to the caller" | the service, as a **scoped query** — [Phase 8 · 07](../07-ownership.md) |
+| "this id belongs to the caller" | the service, as a **scoped query** — [Phase 8 · 07](../07-ownership/README.md) |
 | "this user may perform this action" | authorization middleware, then the service |
 | "this value is unique" | the database constraint, mapped to a 409 |
 | "this URL is safe to redirect to" | an allow-list, not a pattern — [Phase 9 · 05](../../phase-9-hardening/05-csrf-and-injection.md) |

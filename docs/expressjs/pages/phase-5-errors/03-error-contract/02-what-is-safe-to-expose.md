@@ -63,7 +63,7 @@ attacker their token was once real is information.
 
 **Existence is a leak.** A 403 confirms the resource is there. Cross-tenant and
 cross-user access should answer **404**
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)).
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)).
 
 ## Never forward a driver error
 

@@ -52,7 +52,7 @@ for.
   that makes this the default rather than a habit.
 - **→ [03 · Coercion traps](../03-coercion-traps.md)** — `z.coerce.number()`
   accepting `''` as `0`, and friends.
-- **→ [07 · Ownership](../07-ownership.md)** — the check a schema structurally
+- **→ [07 · Ownership](../07-ownership/README.md)** — the check a schema structurally
   cannot make.
 - **→ [09 · Type inference](../09-type-inference.md)** — removing the duplication
   rather than the check.

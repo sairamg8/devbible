@@ -63,7 +63,7 @@ returned function is **named**, so `DEBUG=router` shows `requireAuth` rather tha
 |---|---|---|
 | **Who is this?** | authentication — this page | 401, `req.user` or nothing |
 | What may this role do? | RBAC — [page 06](../06-rbac-middleware/README.md) | 403 |
-| May they touch **this row**? | ownership — [page 07](../07-ownership.md), **in the service** | 404 (not 403) |
+| May they touch **this row**? | ownership — [page 07](../07-ownership/README.md), **in the service** | 404 (not 403) |
 
 🔴 **Collapsing any two of those is where the bugs are.** The third cannot be done
 in middleware at all, because the record has not been loaded yet — which is the

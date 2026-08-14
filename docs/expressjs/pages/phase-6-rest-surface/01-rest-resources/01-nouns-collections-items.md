@@ -82,7 +82,7 @@ not do.** `/orgs/:orgId/projects/:projectId` looks like it guarantees the projec
 is in the org. It does not — both ids come from the caller. Checking access to
 `orgId` and then loading `projectId` by id alone is broken object-level
 authorization, and it is the highest-consequence bug in most APIs
-([Phase 8 · 07](../../phase-8-validation-authz/07-ownership.md)). The fix is to
+([Phase 8 · 07](../../phase-8-validation-authz/07-ownership/README.md)). The fix is to
 scope the query — `findProject(projectId, callerOrgId)` — which also means the
 nesting was never doing the work you thought.
 
