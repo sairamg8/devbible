@@ -225,4 +225,4 @@ not reproduce, so it is not used as a reason to prefer one.
 
 ---
 
-← Prev: [01 · Parameterising a type](./01-parameterising-a-type.md) · Next → **04 · `keyof`** *(not written yet)*
+← Prev: [01 · Parameterising a type](./01-parameterising-a-type.md) · Next → [04 · `keyof`](../04-keyof/README.md)

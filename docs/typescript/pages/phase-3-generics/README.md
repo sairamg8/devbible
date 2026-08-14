@@ -35,7 +35,7 @@ found the wrong equation.
 | 01 | [Generic functions and inference](./01-generic-functions-and-inference/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The parameter is usually *inferred*, not passed — and what it is inferred *from* |
 | 02 | [Constraints — `T extends …`](./02-constraints/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | Why an unconstrained `T` gives you nothing to work with |
 | 03 | [Generic interfaces and type aliases](./03-generic-interfaces-and-aliases/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | `ApiResult<T>`, `Repository<T>` — parameterising your own structures |
-| 04 | `keyof` | <span className="db-tier t-master">Master</span> | The union of an object type's keys, and the entry point to every advanced type |
+| 04 | [`keyof`](./04-keyof/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The union of an object type's keys, and the entry point to every advanced type |
 | 05 | The `getProp` pattern | <span className="db-tier t-master">Master</span> | `<T, K extends keyof T>(obj: T, key: K) => T[K]` — the shape behind every typed accessor |
 | 06 | Indexed access types — `T[K]` | <span className="db-tier t-understand">Understand</span> | Reading a property's type out of a type, including `T[number]` |
 | 07 | The `typeof` type operator | <span className="db-tier t-understand">Understand</span> | Lifting a runtime value into the type world |

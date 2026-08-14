@@ -57,4 +57,4 @@ can explain from its declaration why `Omit<User, 'nmae'>` compiles.
 
 ---
 
-← Prev: [02 · Constraints](../02-constraints/README.md) · Next → **04 · `keyof`** *(not written yet)*
+← Prev: [02 · Constraints](../02-constraints/README.md) · Next → [04 · `keyof`](../04-keyof/README.md)
