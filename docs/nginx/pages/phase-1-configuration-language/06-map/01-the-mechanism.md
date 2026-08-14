@@ -1,20 +1,18 @@
 ---
-title: "map"
-sidebar_label: "06 · map"
-sidebar_position: 6
+title: "map — the mechanism"
+sidebar_label: "01 · The mechanism"
+sidebar_position: 1
 ---
 
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08-15 against [ngx_http_map_module](https://nginx.org/en/docs/http/ngx_http_map_module.html)
-> — the example, the search order, the special parameters (`default`, `hostnames`,
-> `include`, `volatile`), `map_hash_max_size` (2048) and `map_hash_bucket_size`
-> (32|64|128, depending on the processor's cache line size) are all quoted from it.
+> — the example, the five-step search order and the special parameters (`default`,
+> `hostnames`, `include`, `volatile`) are quoted from it.
 > **No sandbox run** — nothing on this page was executed, and it carries no console output.
 
-**`map` creates a variable whose value depends on another variable. It is a
-lookup table, it costs nothing until read, and it is the correct answer to almost
-every question that starts "how do I put an `if` in my nginx config?"**
+**A `map` is a lookup table with documented, exact matching rules. Learn the
+search order and the four special parameters and there is nothing else to it.**
 
 ## The shape
 
@@ -47,7 +45,8 @@ you will meet properly in Phase 4. Read it now as a `map`: *look at
 `upgrade`.*
 
 Note the context: **`http`**. A `map` is a declaration that sits beside your
-`server` blocks, not inside one (page 01).
+`server` blocks, not inside one
+([page 01](../01-directives-and-contexts.md)).
 
 ## The search order
 
@@ -66,9 +65,7 @@ the same asymmetry you will meet again in Phase 2's location matching.
 
 Also documented: **plain string keys are matched ignoring case.**
 
-## The special parameters
-
-### `default`
+## `default`
 
 ```nginx
 map $http_user_agent $mobile {
@@ -82,7 +79,7 @@ explicitly. An empty string is falsy in an `if`, is an empty header value if you
 forward it, and is indistinguishable from "the variable does not exist" when you
 are debugging.
 
-### `hostnames`
+## `hostnames`
 
 ```nginx
 map $http_host $name {
@@ -102,7 +99,7 @@ map $http_host $name {
 subdomain. Without it, `*.example.com` is just a literal string that will never
 match anything.
 
-### `include`
+## `include`
 
 ```nginx
 map $http_user_agent $is_bot {
@@ -112,10 +109,10 @@ map $http_user_agent $is_bot {
 ```
 
 Multiple `include`s are supported. This is how a genuinely large table — bot user
-agents, country codes, redirect maps of thousands of old URLs — stays out of your
-main config.
+agents, country codes, a redirect map of thousands of retired URLs — stays out of
+your main config.
 
-### `volatile`
+## `volatile`
 
 ```nginx
 map $uri $cache_key_part {
@@ -139,113 +136,18 @@ value:
 
 ```nginx
 map $request_uri $version {
-    default        "";
-    "~^/api/v(\d+)/"  $1;         # positional capture
+    default           "";
+    "~^/api/v(\d+)/"  $1;                    # positional capture
 }
 
 map $http_accept_language $lang {
-    default            en;
-    "~*^(?<primary>[a-z]{2})"  $primary;   # named capture
+    default                    en;
+    "~*^(?<primary>[a-z]{2})"  $primary;     # named capture
 }
 ```
 
 A value starting with `~` that you want treated as a *literal* must be escaped
 with a backslash — otherwise nginx reads it as a regex.
-
-## Why `map` instead of `if`
-
-This is the point of the page, and page 07 argues it fully. The short version:
-
-```nginx
-# ✗ the way people reach for first
-location / {
-    if ($http_user_agent ~* "bot") {
-        set $limit_rate 10k;
-    }
-    proxy_pass http://app;
-}
-
-# ✓ the way that is correct and cheaper
-map $http_user_agent $rate {
-    default 0;
-    "~*bot" 10k;
-}
-location / {
-    limit_rate $rate;
-    proxy_pass http://app;
-}
-```
-
-Four concrete advantages:
-
-| | `map` | `if` in `location` |
-|---|---|---|
-| Cost when unused | **zero** — evaluated only when read | evaluated per request |
-| Where it can live | `http`, shared by every server | duplicated per location |
-| Semantics | a pure lookup | creates a nested configuration context with surprising inheritance |
-| Multi-way branching | natural — one entry per case | nested `if`s, and nginx has no `else` |
-
-The documentation is explicit about the first: *"Since variables are evaluated
-only when they are used, the mere declaration even of a large number of 'map'
-variables does not add any extra costs to request processing."* You can declare
-fifty maps and pay for none of them.
-
-## Patterns worth stealing
-
-**Exclude health checks and assets from the access log** (Phase 10):
-
-```nginx
-map $request_uri $loggable {
-    default            1;
-    ~^/healthz$        0;
-    ~^/assets/         0;
-}
-access_log /var/log/nginx/access.log main if=$loggable;
-```
-
-**Bypass the cache for logged-in users** (Phase 6):
-
-```nginx
-map $http_cookie $skip_cache {
-    default        0;
-    "~*sessionid=" 1;
-}
-proxy_cache_bypass $skip_cache;
-proxy_no_cache     $skip_cache;
-```
-
-**Choose a backend by path prefix** (Phase 8):
-
-```nginx
-map $uri $backend {
-    default        app_web;
-    ~^/api/        app_api;
-    ~^/admin/      app_admin;
-}
-proxy_pass http://$backend;    # note: a variable in proxy_pass changes the rules — Phase 4
-```
-
-**Long-lived caching for hashed assets only** (Phase 3):
-
-```nginx
-map $uri $asset_cache {
-    default                       "no-cache";
-    "~\.[0-9a-f]{8,}\.(js|css)$"  "public, max-age=31536000, immutable";
-}
-add_header Cache-Control $asset_cache always;
-```
-
-## Sizing the hash
-
-Two directives exist and nginx tells you when it needs them:
-
-| Directive | Default |
-|---|---|
-| `map_hash_max_size` | `2048` |
-| `map_hash_bucket_size` | `32`, `64` or `128` — *"depends on the processor's cache line size"* |
-
-You will only meet these with a large `include`d map — a redirect table with
-thousands of entries. The error log names the directive and the value to use.
 
 ## Gotchas
 
@@ -271,8 +173,7 @@ variable changed after the first read.
 the recomputation, because caching is the right default.
 
 **Symptom:** Two regex keys both match and the wrong one wins.
-**Cause:** Among regexes, the **first match in file order** wins — same rule as
-location matching.
+**Cause:** Among regexes, the **first match in file order** wins.
 **Fix:** Order most specific first. Exact and wildcard keys are unaffected: they
 are ranked by specificity, not position.
 
@@ -282,31 +183,22 @@ are ranked by specificity, not position.
 
 ## Trade-off
 
-**`map` is a lookup table and refuses to be anything more.** It maps one source
-value to one result, with no combining of inputs, no arithmetic, no conditionals
-beyond matching. Expressing "logged in **and** not on the admin path" means
-chaining maps — mapping into an intermediate variable and mapping again — which
-gets opaque quickly.
+**The matching rules are fixed and generous, which makes them easy to get subtly
+wrong.** Case-insensitive literals, three kinds of wildcard, two kinds of regex
+and a documented precedence order mean a `map` almost always matches *something* —
+just not always what you intended, and never with an error.
 
-That limitation is the feature. A `map` chain three deep is a signal that the
-decision belongs in Node, where it can be tested. Everything up to two levels is
-comfortably within what nginx should be doing, and it costs nothing on requests
-that never read the result.
+The defence is to make the fallback explicit. `default` on every block turns "no
+key matched" from an invisible empty string into a value you chose, and that alone
+removes most of the debugging.
 
 ## Interview questions
 
-**★ What does `map` do, and why is it preferred over `if`?**
-It declares a variable whose value is looked up from another variable. It is
-preferred because it is a pure lookup with no configuration-context side effects,
-it lives once in `http` rather than being repeated per location, it handles
-multi-way branching naturally, and it costs nothing on requests that never read
-it — variables are evaluated only when used.
-
 **★ What is the matching order inside a `map`?**
 Exact string, then longest prefix mask, then longest suffix mask, then the first
-matching regular expression **in file order**, then `default`. So literal keys
-rank by specificity regardless of position, but among regexes the first match
-wins — order matters there and only there.
+matching regular expression **in file order**, then `default`. Literal keys rank
+by specificity regardless of position; among regexes the first match wins, so
+order matters there and only there.
 
 **★ What happens if a `map` has no `default` and nothing matches?**
 The variable is an empty string. That is falsy in every test, produces an empty
@@ -321,19 +213,18 @@ block is declared `volatile`.
 
 **What does the `hostnames` parameter enable?**
 Hostname-aware matching: prefix masks (`*.example.com`), suffix masks (`mail.*`),
-and the `.example.net` shorthand that covers both the bare domain and all its
+and the `.example.net` shorthand covering both the bare domain and all its
 subdomains. Without it those keys are matched as literal strings and never fire.
 
-**Is declaring many `map` blocks expensive?**
-No. The documentation states that because variables are evaluated only when used,
-declaring even a large number of map variables adds no cost to request processing.
-The cost is paid per read, on requests that actually read them.
+**In which context does a `map` block go?**
+`http` — beside your `server` blocks, not inside one. It is a declaration that
+names a variable, which any `server` or `location` can then read.
 
 **How do you keep a very large map out of your main config?**
 `include` a file of `key value;` pairs inside the map block; multiple includes are
-supported. That is how redirect tables with thousands of entries, or bot user-agent
-lists, are managed.
+supported. That is how redirect tables with thousands of entries, or bot
+user-agent lists, are managed.
 
 ---
 
-← Prev: [Units, quoting and comments](05-syntax-details.md) · Index: [Phase 1](README.md) · Next → ["If is evil"](07-if-is-evil.md)
+← Index: [`map`](README.md) · Next → [Using it instead of `if`](02-using-it.md)

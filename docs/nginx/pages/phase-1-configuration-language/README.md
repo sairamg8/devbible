@@ -29,7 +29,7 @@ Nine pages. Pages 02, 06 and 07 are the ones that change how you write configs.
 | 03 | **[`include` and the file layout](03-include-and-files/README.md)** *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | How a config is assembled from many files, and MIME types as the worked example |
 | 04 | **[Variables](04-variables.md)** | <span className="db-tier t-master">Master</span> | Where they come from, when they are evaluated, and `$uri` vs `$request_uri` |
 | 05 | **[Units, quoting and comments](05-syntax-details.md)** | <span className="db-tier t-understand">Understand</span> | `k`/`m`/`g`, `ms`/`s`/`h`/`d`, when a value needs quotes, and the stray semicolon |
-| 06 | **[`map`](06-map.md)** | <span className="db-tier t-master">Master</span> | The lookup table that replaces most `if` blocks, evaluated only when used |
+| 06 | **[`map`](06-map/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | The lookup table that replaces most `if` blocks, evaluated only when used |
 | 07 | **["If is evil"](07-if-is-evil.md)** | <span className="db-tier t-master">Master</span> | What `if` really does inside a `location`, and the three things to use instead |
 | 08 | **[`rewrite`, `return` and regular expressions](08-rewrite-and-return.md)** | <span className="db-tier t-understand">Understand</span> | The rewrite module's stack machine, the four flags, and PCRE in nginx |
 | 09 | **[`geo` and `split_clients`](09-geo-and-split-clients.md)** | <span className="db-tier t-know">Know</span> | IP-range lookups and percentage bucketing for canaries |
@@ -49,7 +49,7 @@ already own the material; nothing is dropped.
 | `$uri` vs `$request_uri` vs `$document_uri` | 04 |
 | Measurement units | 05 |
 | Comments, quoting, and the stray `;` | 05 |
-| `map` — `default`, `hostnames`, regex keys, `volatile`, lazy evaluation | 06 |
+| `map` — `default`, `hostnames`, regex keys, `volatile`, lazy evaluation | 06 · 2 chunks |
 | "If is evil" | 07 |
 | `set`, `return` and `rewrite` | 08 |
 | `return` vs `rewrite` for redirects | 08 |

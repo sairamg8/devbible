@@ -237,4 +237,4 @@ matching.
 
 ---
 
-← Prev: [Variables](04-variables.md) · Index: [Phase 1](README.md) · Next → [`map`](06-map.md)
+← Prev: [Variables](04-variables.md) · Index: [Phase 1](README.md) · Next → [`map`](06-map/README.md)
