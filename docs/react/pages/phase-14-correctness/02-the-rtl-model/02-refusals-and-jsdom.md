@@ -241,10 +241,10 @@ journeys, plus fast jsdom tests for logic and wiring, is the split that pays.
 **Why can't you select a component by its type in RTL?**
 Because component identity is an implementation detail — it changes when a component is
 renamed, split or wrapped, none of which the user experiences. Queries address the
-accessible output instead: role, name, label, text ([topic 03](../03-the-query-families.md)).
+accessible output instead: role, name, label, text ([topic 03](../03-the-query-families/README.md)).
 
 ---
 
 ← Prev: [`render`, `screen` and the document](01-render-and-screen.md) ·
 Index: [React Testing Library's model](README.md) ·
-Next → [The query families](../03-the-query-families.md)
+Next → [The query families](../03-the-query-families/README.md)

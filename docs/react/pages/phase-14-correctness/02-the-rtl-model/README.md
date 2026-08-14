@@ -41,7 +41,7 @@ from a test that mysteriously does not work.
 
 - **[Topic 01 · What to test](../01-what-to-test/README.md)** — the principle this
   library is built to enforce.
-- **[Topic 03 · The query families](../03-the-query-families.md)** — the queries `screen`
+- **[Topic 03 · The query families](../03-the-query-families/README.md)** — the queries `screen`
   exposes, in priority order.
 - **[Topic 07 · Jest or Vitest](../07-jest-or-vitest.md)** — RTL is not a runner; that
   topic picks one and configures the jsdom environment this topic describes.

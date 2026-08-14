@@ -117,7 +117,7 @@ expect(within(row).getByRole("button", { name: /cancel/i })).toBeEnabled();
 ```
 
 That is the right answer for "the second table's third row" — not a `querySelector` on
-`container`, and not a test id ([topic 03](../03-the-query-families.md)).
+`container`, and not a test id ([topic 03](../03-the-query-families/README.md)).
 
 ## Cleanup is automatic, and why that matters
 
