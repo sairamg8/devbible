@@ -99,4 +99,4 @@ Mount it only on the sub-tree that needs it, or branch inside the function.
 
 ---
 
-← Prev: [The middleware contract](01-middleware-contract.md) · Next → [next semantics](03-next-semantics.md)
+← Prev: [The middleware contract](01-middleware-contract/README.md) · Next → [next semantics](03-next-semantics.md)

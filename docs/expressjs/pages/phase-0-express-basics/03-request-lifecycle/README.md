@@ -45,7 +45,7 @@ a response; say at what stage `req.body` starts existing; and explain why
 - **← [02 · app, Router and `http.Server`](../02-app-router-server/README.md)** —
   the object graph and the router walk. Chunk 01 here is that walk placed in the
   wider journey.
-- **→ [Phase 2 · 01 · The middleware contract](../../phase-2-middleware/01-middleware-contract.md)**
+- **→ [Phase 2 · 01 · The middleware contract](../../phase-2-middleware/01-middleware-contract/README.md)**
   — the `(req, res, next)` contract in full.
 - **→ [Phase 2 · 03 · `next` semantics](../../phase-2-middleware/03-next-semantics.md)**
   — `next()`, `next(err)`, `next('route')`, and calling it twice.
