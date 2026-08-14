@@ -148,7 +148,7 @@ in a different environment**, which is exactly why it survives for months:
    `useSyncExternalStore` is a built-in hook and not a userland pattern. Fails rarely,
    under load, and is close to undebuggable from a bug report.
 3. **It reads a mutable value during render**, which breaks the Rules of React — render
-   must be pure and idempotent ([Phase 7 · 04](../04-rules-of-react-beyond-hooks.md)).
+   must be pure and idempotent ([Phase 7 · 04](../04-rules-of-react-beyond-hooks/README.md)).
    Code the Compiler cannot prove pure is not reported, it is **silently skipped**
    ([Phase 6 · 09](../../phase-6-performance/09-how-the-compiler-bails-out.md)), so
    this quietly opts the component out of the optimisation everyone else gets. Fails
@@ -287,4 +287,4 @@ the honest model, and `useSyncExternalStore` is how React reads it without teari
 
 ← Prev: [When you actually wanted shared state](03-when-you-wanted-shared-state.md) ·
 Index: [Share logic, not state](README.md) ·
-Next → [The Rules of React beyond hooks](../04-rules-of-react-beyond-hooks.md)
+Next → [The Rules of React beyond hooks](../04-rules-of-react-beyond-hooks/README.md)

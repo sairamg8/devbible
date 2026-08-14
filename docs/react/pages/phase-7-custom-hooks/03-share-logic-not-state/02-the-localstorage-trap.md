@@ -180,7 +180,7 @@ corrects itself on navigation or reload.
 state, "so it is always fresh".
 **Cause:** trying to make the read authoritative.
 **Fix:** that is a side-effectful, non-idempotent read during render
-([Phase 7 · 04](../04-rules-of-react-beyond-hooks.md)) and it still does not
+([Phase 7 · 04](../04-rules-of-react-beyond-hooks/README.md)) and it still does not
 re-render anyone when the value changes. It trades a stale value for a rules
 violation.
 
