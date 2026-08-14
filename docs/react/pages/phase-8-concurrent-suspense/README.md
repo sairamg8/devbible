@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 12 of 18 topics written.**
+🚧 **In progress — 13 of 18 topics written.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -29,7 +29,7 @@ advice and became a correctness requirement.
 | 10 | **[Suspense boundary placement](10-boundary-placement.md)** | <span className="db-tier t-understand">Understand</span> | Granularity, layout shift, and getting the shell out first |
 | 11 | **[Suspense inside a transition](11-suspense-inside-a-transition.md)** | <span className="db-tier t-understand">Understand</span> | The fallback is deliberately *not* shown — the phase's biggest surprise |
 | 12 | **[`use(context)`](12-use-context.md)** | <span className="db-tier t-understand">Understand</span> | Reading context conditionally, the one legal exception |
-| 13 | `cache` and `cacheSignal` | <span className="db-tier t-understand">Understand</span> | Deduplicating across one server render, and aborting a discarded one |
+| 13 | **[`cache` and `cacheSignal`](13-cache-and-cachesignal.md)** | <span className="db-tier t-understand">Understand</span> | Deduplicating across one server render, and aborting a discarded one |
 | 14 | `<Activity>` (19.2) | <span className="db-tier t-understand">Understand</span> | Hiding a subtree while keeping its state |
 | 15 | Tearing | <span className="db-tier t-understand">Understand</span> | One render, two values, because it was interrupted |
 | 16 | Error boundaries and Suspense together | <span className="db-tier t-understand">Understand</span> | The loading/error pair, and the order they nest in |
@@ -69,7 +69,7 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 12 written so far → 16 files. Both are chunked into two parts each — topic
+**18 topics.** 13 written so far → 17 files. Both are chunked into two parts each — topic
 01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
 (511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
