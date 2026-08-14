@@ -26,7 +26,7 @@ sidebar_position: 0
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Validate at the boundary](01-validate-at-boundary/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | Every request surface and its trap; why the parse *output* is what matters; and what a schema cannot do |
-| 02 | **[Validation factory](02-validation-factory.md)** | <span className="db-tier t-master">Master</span> | Zod schemas → 400 → typed `req` |
+| 02 | **[Validation factory](02-validation-factory/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | One middleware collecting every issue, where it mounts and why, and schemas that hold up per operation |
 | 03 | **[Coercion traps](03-coercion-traps.md)** | <span className="db-tier t-understand">Understand</span> | Query strings are strings |
 | 04 | **[Authn middleware](04-authn-middleware.md)** | <span className="db-tier t-master">Master</span> | Attach `req.user` or 401 |
 | 05 | **[Cookies and sessions wire-up](05-cookies-sessions-wireup.md)** | <span className="db-tier t-understand">Understand</span> | Flags + store; theory in Node |
@@ -45,8 +45,8 @@ schemas had no coverage at all. This README had no Coverage table; that is phase
 | Syllabus topic | Page |
 |---|---|
 | Why validate at the HTTP boundary | 01 (chunks [01](01-validate-at-boundary/01-what-untrusted-means.md) · [02](01-validate-at-boundary/02-parse-dont-validate.md)) |
-| Zod (or equivalent) schemas for `body`, `params`, `query` | 02 |
-| A reusable validation middleware factory | 02 |
+| Zod (or equivalent) schemas for `body`, `params`, `query` | 02 (chunk [03](02-validation-factory/03-schemas-that-hold-up.md)) |
+| A reusable validation middleware factory | 02 (chunks [01](02-validation-factory/01-the-factory.md) · [02](02-validation-factory/02-mounting-and-order.md)) |
 | Coercion traps | 03 |
 | Type inference from schemas into handlers | **09** |
 | Authentication middleware | 04 |

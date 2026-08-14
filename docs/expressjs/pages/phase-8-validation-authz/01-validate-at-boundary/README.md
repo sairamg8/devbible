@@ -48,7 +48,7 @@ for.
   how `req.body` comes to exist, and the empty body that parses to `{}`.
 - **← [Phase 3 · 03 · chunk 03](../../phase-3-requests/03-size-limits/03-what-it-does-not-protect.md)**
   — why a body limit says nothing about a field.
-- **→ [02 · Validation factory](../02-validation-factory.md)** — the middleware
+- **→ [02 · Validation factory](../02-validation-factory/README.md)** — the middleware
   that makes this the default rather than a habit.
 - **→ [03 · Coercion traps](../03-coercion-traps.md)** — `z.coerce.number()`
   accepting `''` as `0`, and friends.

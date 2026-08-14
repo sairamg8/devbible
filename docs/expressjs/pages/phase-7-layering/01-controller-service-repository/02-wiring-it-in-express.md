@@ -63,7 +63,7 @@ somewhere better:
 
 | Not doing | Where it lives instead |
 |---|---|
-| validating input | a `validate(schema)` middleware, so `req.validated` is already safe — [Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory.md) |
+| validating input | a `validate(schema)` middleware, so `req.validated` is already safe — [Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory/README.md) |
 | a `try`/`catch` | Express 5 forwards the rejection of the promise the handler returns |
 | choosing a status for `NotFoundError` | the error middleware's mapping table |
 | checking ownership | the scoped repository call inside the service |

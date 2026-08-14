@@ -48,7 +48,7 @@ bug classes die with that one property:
 looks like it did something; the value that continues is the raw object. Whatever
 library you use, **use its parse output** — and if it is easy to forget, that is
 an argument for the factory in
-[page 02](../02-validation-factory.md), which puts the result somewhere the
+[page 02](../02-validation-factory/README.md), which puts the result somewhere the
 handler has to read.
 
 ## Where the parsed value goes
@@ -229,4 +229,4 @@ work, so every string and array needs its own `.max()`.
 
 ---
 
-← Prev: [What untrusted means](01-what-untrusted-means.md) · Index: [Validate at the boundary](README.md) · Next topic → [Validation factory](../02-validation-factory.md)
+← Prev: [What untrusted means](01-what-untrusted-means.md) · Index: [Validate at the boundary](README.md) · Next topic → [Validation factory](../02-validation-factory/README.md)

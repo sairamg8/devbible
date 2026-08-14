@@ -111,7 +111,7 @@ Three decisions in that shape:
   highlights differently for "too short" and "already taken" needs a stable value.
 - **All the issues at once.** A validator that stops at the first failure makes the
   user fix one field per round trip, which is why `safeParse` beats `parse`
-  ([Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory.md)).
+  ([Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory/README.md)).
 
 ## Or use the standard: RFC 9457
 

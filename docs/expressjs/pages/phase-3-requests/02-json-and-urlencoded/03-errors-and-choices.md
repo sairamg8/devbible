@@ -84,7 +84,7 @@ type — so the check above treats both as "not JSON", which is usually right.
 The alternative, and the better one for most APIs: **let the schema do it.** A
 `safeParse` on `req.body` fails identically for `undefined` and for `{}`, and
 returns per-field messages instead of a generic one
-([Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory.md)).
+([Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory/README.md)).
 
 ## What Express 5 changed here
 

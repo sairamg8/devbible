@@ -52,7 +52,7 @@ the migration guide — *"the `req.query` property is no longer a writable prope
 and is instead a getter"*. The Express 4 validation pattern
 `req.query = schema.parse(req.query)` **throws**. Put the parsed value somewhere
 of your own — `req.validated` — which is
-[Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory.md).
+[Phase 8 · 02](../../phase-8-validation-authz/02-validation-factory/README.md).
 
 **3 · Disabling the parser gives you a null-prototype empty object**, not
 `undefined`. `app.set('query parser', false)` means `req.query` is always `{}`

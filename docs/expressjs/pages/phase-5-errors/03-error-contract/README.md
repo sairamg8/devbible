@@ -52,7 +52,7 @@ usually leaks.
   the response, and why a naive serialiser logs `{}`.
 - **→ [Phase 6 · 08 · OpenAPI](../../phase-6-rest-surface/08-openapi.md)** — where
   the codes are documented.
-- **→ [Phase 8 · 02 · Validation factory](../../phase-8-validation-authz/02-validation-factory.md)**
+- **→ [Phase 8 · 02 · Validation factory](../../phase-8-validation-authz/02-validation-factory/README.md)**
   — `safeParse` and the per-issue `details` array.
 - **→ [Phase 10 · 02 · Request id](../../phase-10-app-factory/02-request-id.md)** —
   the one field that makes a terse error acceptable.

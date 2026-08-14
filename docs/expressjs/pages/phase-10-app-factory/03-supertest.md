@@ -49,7 +49,7 @@ the handler directly skips routing, body parsing, validation middleware,
 authentication, the 404 handler and the error handler — which is to say it skips
 every layer where the bugs in this bible actually live. Route ordering
 ([Phase 1](../phase-1-routing/04-route-ordering.md)), a validation factory that was
-never mounted ([Phase 8](../phase-8-validation-authz/02-validation-factory.md)), an
+never mounted ([Phase 8](../phase-8-validation-authz/02-validation-factory/README.md)), an
 error handler with three parameters ([Phase 5](../phase-5-errors/01-error-middleware/01-arity-and-placement.md))
 — none of them are visible to a handler called as a function.
 
