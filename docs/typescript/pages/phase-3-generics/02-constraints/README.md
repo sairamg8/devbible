@@ -42,7 +42,7 @@ thinking about it, and name the case `NoInfer<T>` was added for.
 - **← [Phase 1 · Structural typing](../../phase-1-type-vocabulary/09-structural-typing.md)**
   — a constraint is an assignability check, so structural rules decide what
   satisfies it.
-- **→ 04 · `keyof`** and **05 · The `getProp` pattern** *(not written yet)* —
+- **→ 04 · `keyof`** and [05 · The `getProp` pattern](../05-getprop-pattern/README.md) —
   `K extends keyof T` is the constraint that makes generics compose.
 - **→ 08 · Default type parameters** *(not written yet)* — the mechanism a
   constraint is repeatedly mistaken for.

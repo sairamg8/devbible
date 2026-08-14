@@ -52,4 +52,4 @@ query-string `string` into a key is a guard rather than an `as`.
 
 ---
 
-← Prev: [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md) · Next → **05 · The `getProp` pattern** *(not written yet)*
+← Prev: [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md) · Next → [05 · The `getProp` pattern](../05-getprop-pattern/README.md)

@@ -248,4 +248,4 @@ config; declare for contracts.
 
 ---
 
-← Prev: [01 · What `keyof` produces](./01-what-keyof-produces.md) · Next → **05 · The `getProp` pattern** *(not written yet)*
+← Prev: [01 · What `keyof` produces](./01-what-keyof-produces.md) · Next → [05 · The `getProp` pattern](../05-getprop-pattern/README.md)

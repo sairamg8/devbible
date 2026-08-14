@@ -67,7 +67,7 @@ function merge<A extends object, B extends object>(a: A, b: B): A & B { … }
 `K extends keyof T` is the workhorse. It says *"K is one of T's keys"*, so the
 compiler can reject `getProp(user, 'nmae')` at the call site and compute the
 return type as `T[K]`. Full treatment in [topic 04 · `keyof`](../04-keyof/README.md) and
-**topic 05 · The `getProp` pattern** *(not written yet)*.
+[topic 05 · The `getProp` pattern](../05-getprop-pattern/README.md).
 
 ## Self-referential constraints for recursive shapes
 

@@ -150,7 +150,7 @@ function pluck<T, K extends keyof T>(items: T[], key: K): T[K][] { … }
 `K extends keyof T` says "K is one of T's keys" — a constraint whose bound is
 *computed from another parameter*. That is a genuinely different level of
 expressiveness from `K extends string`, and it is the whole content of
-**topic 05 · The `getProp` pattern** *(not written yet)*.
+[topic 05 · The `getProp` pattern](../05-getprop-pattern/README.md).
 
 What you may **not** do is have the constraints refer to each other in a loop:
 
