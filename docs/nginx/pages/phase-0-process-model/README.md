@@ -9,7 +9,7 @@ sidebar_position: 0
 > documentation for the current release and the page names its source. **Nothing
 > here was executed**: this track has no sandbox, so where a real run would have
 > produced a console block, the explanation carries the documented behaviour
-> instead. See the [no-new-sandboxes rule](../../../README.md#the-critical-rule--do-not-violate-this).
+> instead. See the no-new-sandboxes rule on the [Contents page](../../../README.md).
 
 nginx is not a request handler you write code into. It is a small C program with
 a fixed lifecycle — a master, some workers, and a set of signals — and that

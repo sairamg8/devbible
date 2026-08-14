@@ -14,6 +14,10 @@ in the bible (the other is Docker & Podman) and had zero pages.
 not in the shared checkout, so a build failure here is genuinely this track's
 fault rather than another session's uncommitted edit.
 
+**State: syllabus complete (12 phases, 210 topics). ✅ Phase 0 written — 14/14
+topics, 10 pages.** Next unit: **Phase 1 · The configuration language (14
+topics)**.
+
 Documentation-validated against nginx.org under the no-new-sandboxes rule: every
 claim names its source in a `> Verified:` line, and **no console block is added
 unless a run actually produced it**. There is no nginx sandbox in this repo and
@@ -36,7 +40,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Covers |
 |---|---|
-| **0 — The nginx process model** | Master and workers, the per-worker event loop, signals, reload vs restart, `nginx -t`/`-T`/`-V`, mainline vs stable, dynamic modules |
+| ✅ **[0 — The nginx process model](phase-0-process-model/README.md)** | **Written — 14/14 topics, 10 pages.** Master and workers, the per-worker event loop, signals, reload vs restart, `nginx -t`/`-T`/`-V`, mainline vs stable, dynamic modules |
 | **1 — The configuration language** | Contexts and inheritance, the replace-not-merge rule, variables, `map`, why `if` is evil, `return` vs `rewrite` |
 | **2 — Server and location selection** | `listen` and `server_name` matching, the default server, the location algorithm and its modifiers, internal redirects, the request phases |
 | **3 — Static files and SPAs** | `root` vs `alias`, `try_files`, the SPA fallback, caching a hashed bundle, MIME types, `sendfile`, `X-Accel-Redirect` |
