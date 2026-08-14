@@ -140,7 +140,7 @@ should be state.
 ## The two legitimate uses
 
 **A handle to a DOM node** — the case with dedicated support, covered in
-[topic 02](02-dom-refs.md).
+[topic 02](02-dom-refs/README.md).
 
 **An instance variable React does not need to know about** — a timeout id, a
 previous value kept for comparison, a WebSocket, a third-party player, a flag
@@ -226,4 +226,4 @@ belongs in an effect with a cleanup.
 
 ---
 
-Index: [Phase 5](README.md) · Next → [DOM refs](02-dom-refs.md)
+Index: [Phase 5](README.md) · Next → [DOM refs](02-dom-refs/README.md)

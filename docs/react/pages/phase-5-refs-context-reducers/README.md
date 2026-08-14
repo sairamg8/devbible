@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 1 of 16 topics written.** The table below links what exists;
+🚧 **In progress — 3 of 16 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The three escape hatches from pure top-down state, and the two hooks that connect
@@ -19,8 +19,8 @@ default model rather than to supplement it.
 | # | Topic | Tier | In one line |
 |---|---|---|---|
 | 01 | **[`useRef`](01-useref.md)** | <span className="db-tier t-master">Master</span> | A mutable box that survives renders and never causes one |
-| 02 | DOM refs | <span className="db-tier t-master">Master</span> | Attaching, measuring, focusing, and `.current` being `null` during render |
-| 03 | `useReducer` | <span className="db-tier t-master">Master</span> | State transitions as data, and why that makes them testable |
+| 02 | **[DOM refs](02-dom-refs/README.md)** | <span className="db-tier t-master">Master</span> | Attaching, focusing, scrolling, and what you may not do to the node |
+| 03 | **[`useReducer`](03-usereducer.md)** | <span className="db-tier t-master">Master</span> | State transitions as data, and why that makes them testable |
 | 04 | `createContext` and `useContext` | <span className="db-tier t-master">Master</span> | Dependency injection for a subtree |
 | 05 | The context re-render problem | <span className="db-tier t-master">Master</span> | Every consumer re-renders when the `value` identity changes |
 | 06 | Ref callbacks | <span className="db-tier t-understand">Understand</span> | Tied to the node, not the component — and React 19 cleanup |
@@ -37,7 +37,11 @@ default model rather than to supplement it.
 
 ## Coverage so far
 
-**1 topic → 1 content file.** No topic has needed chunking yet.
+**3 topics → 5 content files.** One topic runs past the 300-line cap and becomes a topic directory:
+
+| Topic | Chunks | Split at |
+|---|---|---|
+| 02 DOM refs | 2 | getting a node ↔ passing it around and the rules for using it |
 
 ## Where this phase connects backwards
 
