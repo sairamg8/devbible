@@ -165,7 +165,7 @@ likely to contain something you have not committed.
 The cheap alternatives cost seconds and are nearly always available:
 
 - **`git stash`** instead of `git reset --hard` when you only want the tree clean
-  — same result, and the changes are still there (topic 11).
+  — same result, and the changes are still there ([topic 11](11-git-stash.md)).
 - **`git reset --keep`** instead of `--hard` when moving between commits — same
   result if nothing would be lost, an error if something would.
 - **`git status` first**, every time. `--hard` on a tree you have just read is a

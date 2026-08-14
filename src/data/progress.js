@@ -209,7 +209,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/git/pages',
     phases: [
       {n: 0, slug: 'phase-0-how-git-stores-things', name: 'How Git stores things', part: 'How Git works', topics: 14, pages: 14},
-      {n: 1, slug: 'phase-1-everyday-loop', name: 'The everyday loop', part: 'How Git works', topics: 12, pages: 9, pagesPlanned: 12},
+      {n: 1, slug: 'phase-1-everyday-loop', name: 'The everyday loop', part: 'How Git works', topics: 12, pages: 12},
       {n: 2, slug: 'phase-2-branching-merging', name: 'Branching, merging and rebasing', part: 'How Git works', topics: 10, pages: 0},
       {n: 4, slug: 'phase-4-remotes', name: 'Remotes and syncing', part: 'Working with other people', topics: 8, pages: 0},
       {n: 5, slug: 'phase-5-undo-recover', name: 'Undo, recover and rewrite', part: 'Working with other people', topics: 8, pages: 0},

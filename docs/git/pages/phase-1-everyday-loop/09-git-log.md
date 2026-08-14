@@ -188,4 +188,4 @@ archaeology (`bisect`, `blame`, pickaxe search) is deliberately out of scope.
 
 ---
 
-← Prev: [Undo before you push](08-undo-before-you-push.md) · Next → [Phase 1 index](README.md)
+← Prev: [Undo before you push](08-undo-before-you-push.md) · Next → [Commit messages](10-commit-messages.md)
