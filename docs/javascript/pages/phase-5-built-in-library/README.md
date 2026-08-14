@@ -11,14 +11,16 @@ example and its own gotcha.
 This is the phase you use every day. Phases 3 and 4 explained the language; this one
 is the standard library built on top of it.
 
-## Status — **Master tier COMPLETE** (2026-08-13)
+## Status — **Understand tier under way** (2026-08-15)
 
-**All eight Master topics are written** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
-order. The numbering skips Understand and Know topics deliberately.
+🚧 **9 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+10 in syllabus order — and the Master-first plan is finished across every phase, so the
+work here is now the **Understand and Know tiers**, in that order.
 
-Those are marked *deferred*, not forgotten: the standing plan is **Master-first across
-all phases**, so they are filled in on demand once every phase's Master topics are
-done. The next unit of work is **Phase 6 · Iteration, destructuring and generators**.
+**Next here: 08 · Template literals**, then the rest of the Understand tier
+(11–22), then the four Know topics (23–26).
+
+**Coverage:** Master **8 / 8** ✅ · Understand **1 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -26,7 +28,7 @@ done. The next unit of work is **Phase 6 · Iteration, destructuring and generat
 |---|---|---|---|
 | 01 | **[Array creation and shape](./01-array-creation-and-shape/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Adding and removing](./02-adding-and-removing/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03 | `slice` vs `splice` vs `at` | <span className="db-tier t-understand">Understand</span> | deferred |
+| 03 | **[`slice` vs `splice` vs `at`](./03-slice-splice-at.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 04 | **[Array iteration methods](./04-array-iteration-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[`reduce`](./05-reduce/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[`sort`](./06-sort/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
