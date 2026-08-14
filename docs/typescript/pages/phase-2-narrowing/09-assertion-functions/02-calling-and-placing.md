@@ -283,4 +283,4 @@ functions for invariants whose failure means the program is already broken.
 
 ---
 
-← Prev: [01 · What an assertion function is](./01-the-two-forms.md) · Next → [10 · `satisfies`](../10-satisfies.md)
+← Prev: [01 · What an assertion function is](./01-the-two-forms.md) · Next → [10 · `satisfies`](../10-satisfies/README.md)

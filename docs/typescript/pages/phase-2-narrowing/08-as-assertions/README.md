@@ -33,7 +33,7 @@ own codebase where an assertion is load-bearing.
   plus a claim; an assertion is the claim alone.
 - **→ [09 · Assertion functions](../09-assertion-functions/README.md)** — the version
   that actually throws.
-- **→ [10 · `satisfies`](../10-satisfies.md)** — what most `as` on an object
+- **→ [10 · `satisfies`](../10-satisfies/README.md)** — what most `as` on an object
   literal should have been.
 - **→ [13 · The non-null assertion `!`](../13-non-null-assertion.md)** — `as`
   narrowed to nullability, with the same trade-off.

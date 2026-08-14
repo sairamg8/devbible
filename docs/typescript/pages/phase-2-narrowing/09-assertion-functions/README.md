@@ -58,4 +58,4 @@ an assertion is wrong and a type guard is right.
 
 ---
 
-← Prev: [08 · `as` assertions](../08-as-assertions/README.md) · Next → [10 · `satisfies`](../10-satisfies.md)
+← Prev: [08 · `as` assertions](../08-as-assertions/README.md) · Next → [10 · `satisfies`](../10-satisfies/README.md)

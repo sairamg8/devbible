@@ -105,7 +105,7 @@ damage in ordinary code** — not an exotic cast, just someone silencing a
 complaint about an object literal.
 
 When the goal is "check this literal against `Options` but keep the literal's own
-type", the answer is [`satisfies`](../10-satisfies.md), which was added for
+type", the answer is [`satisfies`](../10-satisfies/README.md), which was added for
 precisely this and keeps the excess-property check.
 
 ## The angle-bracket form
@@ -152,7 +152,7 @@ that every assertion left in the tree is deliberate and someone can say why.
 **Symptom:** A typo'd property in a config object was never reported
 **Cause:** `as Options` on an object literal turns off the excess property check.
 **Fix:** Annotate (`const cfg: Options = …`) or use
-[`satisfies`](../10-satisfies.md), both of which keep the check.
+[`satisfies`](../10-satisfies/README.md), both of which keep the check.
 
 **Symptom:** `<T>value` breaks in a `.tsx` file
 **Cause:** The angle-bracket form is unparseable alongside JSX.
