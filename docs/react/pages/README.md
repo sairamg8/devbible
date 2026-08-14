@@ -72,7 +72,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
 | **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | ✅ **Written** | 12 topics, 25 files |
-| **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | 🚧 **Writing** | 5 of 18 topics, 9 files |
+| **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | 🚧 **Writing** | 6 of 18 topics, 10 files |
 | 9 — Forms, Actions and optimistic UI | Not started | — |
 | 10 — Server Components and Server Functions | Not started | — |
 | 11 — Server rendering, hydration and the DOM APIs | Not started | — |
