@@ -13,15 +13,14 @@ behaviour hangs off: how a property is found, what `class` desugars to, and why
 "copying" an object is four different operations with four different failure
 modes.
 
-## Status — ✅ **Understand tier COMPLETE** (2026-08-14)
+## Status — ✅🎉 **PHASE COMPLETE — 20 of 20, every tier** (2026-08-15)
 
-🚧 **19 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
-08 in syllabus order — and the **Master-first plan is finished across every phase**,
-so the work here is now the **Understand and Know tiers**, in that order.
+✅ **20 of 20 written — every tier.** Master 7/7 (01, 03–08), Understand 9/9
+(02, 09–16), Know 4/4 (17–20). **Nothing in this phase is deferred.**
 
-✅ **The Understand tier is now complete, 9 of 9** (02, 09–16). **Next here: 20 · Private state before `#`** — the last topic in the phase.
+**Next: [Phase 5 · The built-in library](../phase-5-built-in-library/README.md).**
 
-**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **3 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **4 / 4** ✅.
 
 ## Topics
 
@@ -46,7 +45,7 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 17 | **[`toString`, `valueOf`, `Symbol.toPrimitive`](./17-tostring-valueof-toprimitive/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 18 | **[Mixins and composition over inheritance](./18-mixins-and-composition/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 19 | **[`Proxy` and `Reflect`](./19-proxy-and-reflect/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 20 | Private state before `#` | <span className="db-tier t-know">Know</span> | deferred |
+| 20 | **[Private state before `#`](./20-private-state-before-hash/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## Phase gate
 
