@@ -15,13 +15,13 @@ modes.
 
 ## Status — **Understand tier under way** (2026-08-14)
 
-🚧 **10 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
+🚧 **11 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
 08 in syllabus order — and the **Master-first plan is finished across every phase**,
 so the work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 11 · Property descriptors**, then 12–16 (Understand), then 17–20 (Know).
+**Next here: 12 · `Object.freeze` and `seal`**, then 13–16 (Understand), then 17–20 (Know).
 
-**Coverage:** Master **7 / 7** ✅ · Understand **3 / 9** · Know **0 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **4 / 9** · Know **0 / 4**.
 
 ## Topics
 
@@ -37,7 +37,7 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 08 | **[`Object.keys` / `values` / `entries` / `fromEntries`](./08-keys-values-entries/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 09 | **[`extends` and `super`](./09-extends-and-super/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 10 | **[Getters and setters](./10-getters-and-setters.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 11 | Property descriptors | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | **[Property descriptors](./11-property-descriptors.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | `Object.freeze` and `seal` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 13 | `instanceof` and `Symbol.hasInstance` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 14 | Object creation patterns | <span className="db-tier t-understand">Understand</span> | deferred |
