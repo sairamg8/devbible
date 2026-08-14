@@ -109,7 +109,7 @@ server-rendered to HTML for the first paint
 | RSC + SSG | ✅ | Server Components at build time, output to a CDN |
 | **RSC instead of hydration** | ✖ | Client Components still hydrate |
 | **SSR instead of a bundle** | ✖ | SSR sends the same JavaScript |
-| **SSG + per-request data** | ✖ | that is SSR — or partial pre-rendering ([topic 09](09-partial-prerendering.md)) |
+| **SSG + per-request data** | ✖ | that is SSR — or partial pre-rendering ([topic 09](09-partial-prerendering/README.md)) |
 
 ⚠️ **The last row is the one worth knowing**, because "static, but with some dynamic bits"
 sounds like a contradiction and is exactly what `prerender`'s `postponed` /`resume` pair

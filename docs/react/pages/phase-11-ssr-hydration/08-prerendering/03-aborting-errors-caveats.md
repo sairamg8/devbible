@@ -16,7 +16,7 @@ sidebar_position: 3
 Chunks [01](01-the-static-apis.md) and [02](02-calling-them.md) described a prerender that
 finishes. This one is about the
 prerender that does not — which is not a failure mode, it is a **feature**, and it is the
-mechanism the whole of [topic 09](../09-partial-prerendering.md) is built on.
+mechanism the whole of [topic 09](../09-partial-prerendering/README.md) is built on.
 
 ## Waiting for all data is also the risk
 
@@ -97,7 +97,7 @@ different partners** — the same Node/Web split as everything else in this fami
 
 Two different verbs for two different destinations: *resume* finishes the render **for a
 request**, streaming the rest to a live client; *resumeAndPrerender* finishes it **into more
-static output**. [Topic 09](../09-partial-prerendering.md) takes that apart properly —
+static output**. [Topic 09](../09-partial-prerendering/README.md) takes that apart properly —
 here it is enough to know that `postponed` is what you must keep, and that it is
 JSON-serializeable precisely so a build can write it to disk and a server can read it back
 later.
@@ -236,4 +236,4 @@ fallbacks.
 
 ← Prev: [Calling them](02-calling-them.md) ·
 Index: [08 · Prerendering](README.md) ·
-Next → [Partial pre-rendering (19.2)](../09-partial-prerendering.md)
+Next → [Partial pre-rendering (19.2)](../09-partial-prerendering/README.md)

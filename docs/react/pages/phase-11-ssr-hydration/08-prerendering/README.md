@@ -30,7 +30,7 @@ comparison — five renderers, one property that separates this family from the 
 **How do you call it** is an API surface: the document requirement, the two consumption
 patterns, the options. **What if it never finishes** is a design decision rather than a
 feature, and it is where `postponed` appears and where
-[topic 09](../09-partial-prerendering.md) begins.
+[topic 09](../09-partial-prerendering/README.md) begins.
 
 Splitting there keeps the abort machinery out of the introduction, and keeps the option table
 out of the argument about what prerendering *is*.
@@ -41,7 +41,7 @@ out of the argument about what prerendering *is*.
   Node-streams-versus-Web-streams split governs which static API you get.
 - **[Topic 06 · Streaming SSR](../06-streaming-ssr.md)** — the direct opposite trade: send a
   shell now and fill it in, rather than wait and send everything.
-- **[Topic 09 · Partial pre-rendering](../09-partial-prerendering.md)** — what `postponed` is
+- **[Topic 09 · Partial pre-rendering](../09-partial-prerendering/README.md)** — what `postponed` is
   for, and the two ways to finish an aborted prerender.
 - **[Topic 04 · `hydrateRoot`](../04-hydrateroot.md)** — the client half, including hydrating
   the entire `document` as these APIs expect.

@@ -11,7 +11,7 @@ are disjoint; neither writes in the other's.
 
 | Part | Scope | Owner | Since |
 |---|---|---|---|
-| **A** | **Phase 11 topics 08–17 + the phase close** — `phase-11-ssr-hydration/` | session `688ea14a` | 2026-08-14 |
+| **A** | **Phase 11 topics 08–17 + the phase close** — `phase-11-ssr-hydration/` | session `bfcb390b` | 2026-08-14 |
 | **B** | **Phase 14 · Testing React** — `phase-14-correctness/`, 14 topics | session `05921047` | 2026-08-14 |
 
 Previous owner of the whole of `docs/react/`: session `33f8be33`, itself taken
@@ -33,7 +33,7 @@ over from `2ee7a9a3` (from `6ffd754d`).
 | 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10 | ✅ **Done — 19 topics, 21 files, 4,780 lines, 0 over cap** |
-| 11 | 🚧 **In progress — 8 of 17 topics, 10 files** (Part A) |
+| 11 | 🚧 **In progress — 9 of 17 topics, 13 files** (Part A) |
 | 14 | 🚧 **Part B — in progress, 1 of 14 topics** (session `05921047`) |
 
 **If you are a different session, do not write React pages.** Pick something with
@@ -84,7 +84,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | ✅ **Written** | 18 topics, 20 files |
 | **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
 | **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | ✅ **Written** | 19 topics, 21 files |
-| **[11 — Server rendering, hydration and the DOM APIs](./phase-11-ssr-hydration/README.md)** | 🚧 **Writing** | 8 of 17 topics, 10 files |
+| **[11 — Server rendering, hydration and the DOM APIs](./phase-11-ssr-hydration/README.md)** | 🚧 **Writing** | 9 of 17 topics, 13 files |
 | **[14 — Testing React](./phase-14-correctness/README.md)** | 🚧 **Writing** | 1 of 14 topics |
 
 ## Progress

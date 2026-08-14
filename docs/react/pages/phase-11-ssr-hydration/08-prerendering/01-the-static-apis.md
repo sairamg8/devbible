@@ -70,7 +70,7 @@ shell.
 🔴 **`postponed` is `null` on the happy path.** A complete prerender needs no resume, and
 that is how you tell the two cases apart in code. The non-null case is
 [chunk 03](03-aborting-errors-caveats.md) and, beyond it,
-[topic 09](../09-partial-prerendering.md); nothing else in this chunk depends on it.
+[topic 09](../09-partial-prerendering/README.md); nothing else in this chunk depends on it.
 
 ## The defining property: it waits for all data
 
