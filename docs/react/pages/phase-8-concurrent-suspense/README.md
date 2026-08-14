@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 3 of 18 topics written.**
+🚧 **In progress — 4 of 18 topics written.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -20,7 +20,7 @@ advice and became a correctness requirement.
 | 01 | **[`startTransition` and `useTransition`](01-usetransition/README.md)** | <span className="db-tier t-master">Master</span> | Marking an update non-urgent, and what `isPending` really tells you |
 | 02 | **[`<Suspense>`](02-suspense/README.md)** | <span className="db-tier t-master">Master</span> | The boundary, the fallback, and what "suspending" means |
 | 03 | **[What can actually suspend](03-what-can-suspend.md)** | <span className="db-tier t-master">Master</span> | `lazy`, `use`, server data — and why a `fetch` in an effect never will |
-| 04 | `use(promise)` | <span className="db-tier t-master">Master</span> | Reading a promise during render, and the stability requirement |
+| 04 | **[`use(promise)`](04-use-promise.md)** | <span className="db-tier t-master">Master</span> | Reading a promise during render, and the stability requirement |
 | 05 | Request waterfalls | <span className="db-tier t-master">Master</span> | Three boundaries, three sequential round trips — and the fixes |
 | 06 | What concurrent rendering means | <span className="db-tier t-understand">Understand</span> | Interruptible, prioritised, discardable renders |
 | 07 | Urgent vs transition updates | <span className="db-tier t-understand">Understand</span> | Which interactions belong in which bucket |
@@ -69,7 +69,7 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 3 written so far → 7 files. Both are chunked into two parts each — topic
+**18 topics.** 4 written so far → 8 files. Both are chunked into two parts each — topic
 01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
 (511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
