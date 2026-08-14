@@ -6,16 +6,17 @@ sidebar_position: 0
 
 :::caution 🟠 Claim stale — session `6f020813`, 2026-08-14
 
-All of `docs/mongodb/` was claimed by session `6f020813` (the session that
-finished [CSS](../../css/pages/README.md)). **That session is no longer running,
-and it stopped mid-phase without writing this index.** Phase 0 is finished and on
-disk; nothing after it has been started.
+All of `docs/mongodb/` is claimed by session `05921047`, which picked it up on
+2026-08-14 after finishing React Phase 14. Work happens in the worktree
+**`devbible-mongodb`, branch `mongodb-pages`** — not on `main` — so other live
+sessions' builds are unaffected until it merges.
 
-**State: Phase 0 COMPLETE (5 of 5 topics, 5 pages).**
-Next unit: **Phase 1 · Documents, BSON types and `_id` (6 topics)** — not started.
+**State: Phase 0 COMPLETE (5/5). Phase 1 in flight — 2 of 6 topics.**
+Next: **03 · `ObjectId`**.
 
-If you pick this up, take the claim: update the row in
-[`docs/README.md`](../../README.md) and replace this notice.
+The earlier claim by session `6f020813` was stale: that session finished Phase 0
+and stopped without writing this index; session `632ebd35` repaired two
+uncommitted pages without taking the claim.
 
 :::
 
@@ -40,7 +41,7 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | [0 · How MongoDB runs](./phase-0-how-mongodb-runs/README.md) | 5 | ✅ written |
-| 1 · Documents, BSON types and `_id` | 6 | ⬜ planned |
+| [1 · Documents, BSON types and `_id`](./phase-1-documents-and-bson/README.md) | 6 | 🚧 **writing — 2 of 6** |
 | 2 · `mongosh`, mastered | 5 | ⬜ planned |
 | 3 · Schema design and modelling | 6 | ⬜ planned |
 | 4 · CRUD and DML | 6 | ⬜ planned |
