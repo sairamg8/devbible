@@ -10,7 +10,7 @@ sidebar_position: 0
 > lives on [Phase 0 · 11](../phase-0-how-react-runs/11-the-compiler.md) and is
 > linked rather than repeated.
 
-🚧 **In progress — 3 of 17 topics written.** The table below links what exists;
+🚧 **In progress — 6 of 17 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 **Memoization is the most cargo-culted area of React.** This phase is ordered
@@ -26,9 +26,9 @@ The single most important sentence in the phase comes from the `memo` reference:
 | 01 | **[Why did this component re-render?](01-why-did-this-re-render.md)** | <span className="db-tier t-master">Master</span> | The four causes, and telling them apart instead of guessing |
 | 02 | **[`memo`](02-memo.md)** | <span className="db-tier t-master">Master</span> | A shallow prop comparison — useless when the parent passes fresh objects |
 | 03 | **[`useMemo`](03-usememo.md)** | <span className="db-tier t-master">Master</span> | Two distinct reasons, only one of which is "it's slow" |
-| 04 | `useCallback` | <span className="db-tier t-master">Master</span> | The same thing for functions, and whether yours does anything |
-| 05 | Measure before you optimise | <span className="db-tier t-understand">Understand</span> | The Profiler, `<Profiler>`, and Performance Tracks |
-| 06 | The memoization trap | <span className="db-tier t-understand">Understand</span> | Fixed by composition, not by more `useMemo` |
+| 04 | **[`useCallback`](04-usecallback.md)** | <span className="db-tier t-master">Master</span> | The same thing for functions, and whether yours does anything |
+| 05 | **[Measure before you optimise](05-measure-before-you-optimise.md)** | <span className="db-tier t-understand">Understand</span> | The Profiler, `<Profiler>`, and Performance Tracks |
+| 06 | **[The memoization trap](06-the-memoization-trap.md)** | <span className="db-tier t-understand">Understand</span> | Fixed by composition, not by more `useMemo` |
 | 07 | The React Compiler v1.0 | <span className="db-tier t-understand">Understand</span> | Build-time automatic memoization |
 | 08 | Installing and configuring the Compiler | <span className="db-tier t-understand">Understand</span> | Babel plugin, `target`, and the runtime for 17/18 |
 | 09 | How the Compiler bails out | <span className="db-tier t-understand">Understand</span> | The rules it must be able to prove |
