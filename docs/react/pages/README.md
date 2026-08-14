@@ -6,10 +6,10 @@ sidebar_position: 0
 
 :::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** session `2ee7a9a3` · **Since:** 2026-08-14 · **Scope:** the whole of
-`docs/react/`, straight through to Phase 14. Taken over from session `6ffd754d`
-on the user's direct instruction — *work React and nothing else* — not claimed
-silently.
+**Owner:** session `33f8be33` · **Since:** 2026-08-14 · **Scope:** the whole of
+`docs/react/`, straight through to Phase 14. Taken over from session `2ee7a9a3`
+(itself from `6ffd754d`) on the user's direct instruction to work React — not
+claimed silently.
 
 **Written in a worktree**, not this checkout:
 `/mnt/Storage/Backup/Knowledge/devbible-react`, branch `react-phase-7`. If React
@@ -26,7 +26,8 @@ pages look missing here, they are on that branch and not yet merged.
 | 7 | ✅ **Done — 12 topics, 25 files, 7,084 lines, 0 over cap, build-verified** |
 | 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
-| 10–14 | ⬜ Claimed by this session |
+| 10 | 🚧 **In progress — 1 of 19 topics, 3 files** |
+| 11–14 | ⬜ Claimed by this session |
 
 **If you are a different session, do not write React pages.** Pick something with
 no owner — **TypeScript, Git and MongoDB are all idle**, and Docker & Podman and
@@ -75,7 +76,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | ✅ **Written** | 12 topics, 25 files |
 | **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | ✅ **Written** | 18 topics, 20 files |
 | **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
-| 10 — Server Components and Server Functions | Not started | — |
+| **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | 🚧 **Writing** | 1 of 19 topics, 3 files |
 | 11 — Server rendering, hydration and the DOM APIs | Not started | — |
 | 12 — Data and state in a real app | Not started | — |
 | 13 — Routing, structure and the app shell | Not started | — |
