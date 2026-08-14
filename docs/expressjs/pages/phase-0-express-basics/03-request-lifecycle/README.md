@@ -51,7 +51,7 @@ a response; say at what stage `req.body` starts existing; and explain why
   — `next()`, `next(err)`, `next('route')`, and calling it twice.
 - **→ [Phase 3 · 02 · JSON and urlencoded](../../phase-3-requests/02-json-and-urlencoded/README.md)**
   — stage 6, and the content-type gate that decides whether it happens.
-- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
+- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — the arity rule chunk 02 derives, applied.
 - **→ [Phase 5 · 02 · Async errors](../../phase-5-errors/02-async-errors.md)** —
   the four things Express 5 still does not catch.

@@ -54,7 +54,7 @@ What it does not buy, and must not be assumed:
 - The external HTTP call continues, still consuming a socket.
 - The handler will eventually try to respond and hit `headersSent` — hence the
   guard, and the `res.headersSent` check in the error handler
-  ([Phase 5](../phase-5-errors/01-error-middleware.md)).
+  ([Phase 5](../phase-5-errors/01-error-middleware/README.md)).
 - **Under sustained overload the process gets worse, not better**: you have added
   timeouts while the work continues to accumulate.
 

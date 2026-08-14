@@ -58,7 +58,7 @@ middleware.
   — where the `router.mountpath` error was corrected.
 - **→ [Phase 2 · 02 · Execution order](../../phase-2-middleware/02-execution-order/01-the-four-levels.md)**
   — registration order as an array walk, applied.
-- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
+- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — the arity check that chunk 03's error mode reaches.
 - **→ [Phase 10 · 06 · Shutdown](../../phase-10-app-factory/06-shutdown-and-entrypoint.md)**
   — everything hanging off the server object.

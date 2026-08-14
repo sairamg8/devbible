@@ -47,7 +47,7 @@ would find out what actually ran for a request that hung.
   rules as a checklist.
 - **→ [Phase 1 · 04 · Route ordering](../../phase-1-routing/04-route-ordering.md)** —
   the same fact applied to two routes that could both match.
-- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
+- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — why an error handler is reachable only from below it.
 - **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy.md)** and
   **[· 02 · CORS](../../phase-9-hardening/02-cors.md)** — the two ordering mistakes

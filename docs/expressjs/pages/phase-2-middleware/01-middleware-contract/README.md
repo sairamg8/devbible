@@ -49,7 +49,7 @@ authorization question middleware structurally cannot answer.
   chunk 02 leans on, in full.
 - **→ [06 · Mutating `req`/`res`](../06-mutating-req-res.md)** — the undeclared
   dependency chunk 02 warns about.
-- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
+- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — the four-argument half of the contract.
 - **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership.md)** —
   the authorization question chunk 03 says middleware cannot answer.

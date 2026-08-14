@@ -53,7 +53,7 @@ the documented first line of an error handler.
   makes named layers, which is what makes the debug output readable.
 - **→ [Phase 1 · 04 · Route ordering](../../phase-1-routing/04-route-ordering.md)** —
   usually the better answer than `next('route')`.
-- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
+- **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   and **[· 02 · Async errors](../../phase-5-errors/02-async-errors.md)** — what
   happens once `next(err)` is called, and what Express 5 does not catch.
 - **→ [Phase 9 · 06 · Timeouts](../../phase-9-hardening/06-timeouts-and-secrets.md)**

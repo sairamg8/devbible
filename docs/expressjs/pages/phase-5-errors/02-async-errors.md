@@ -150,4 +150,4 @@ decision, not merely to call `next(err)` with the same error.
 
 ---
 
-← Prev: [Four-arg error middleware](01-error-middleware.md) · Next → [Error response contract](03-error-contract.md)
+← Prev: [Four-arg error middleware](01-error-middleware/README.md) · Next → [Error response contract](03-error-contract.md)

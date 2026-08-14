@@ -154,7 +154,7 @@ mechanism behind the documented caveat that `app.get` covers `HEAD` **unless
 **Cause:** The walk only moves forward; by the time `next(err)` is called the
 handler's index is already behind the cursor
 **Fix:** Error handlers go last, below every route —
-[Phase 5 · 01](../../phase-5-errors/01-error-middleware.md)
+[Phase 5 · 01](../../phase-5-errors/01-error-middleware/01-arity-and-placement.md)
 
 **Symptom:** A route with a matching path is skipped and you cannot see why
 **Cause:** Something upstream called `next(err)`. Route layers refuse to match

@@ -129,7 +129,7 @@ level-based precedence.
   `Route`'s per-method stack, which the route layer dispatches into.
 - **An error handler is reachable only from below it.** The walk moves forward,
   so a four-argument handler at index 2 is behind the cursor by the time a route
-  at index 7 fails ([Phase 5 · 01](../../phase-5-errors/01-error-middleware.md)).
+  at index 7 fails ([Phase 5 · 01](../../phase-5-errors/01-error-middleware/01-arity-and-placement.md)).
 
 ## The order that actually matters, in one list
 

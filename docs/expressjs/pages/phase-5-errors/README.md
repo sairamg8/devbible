@@ -23,7 +23,7 @@ the envelope.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[Four-arg error middleware](01-error-middleware.md)** | <span className="db-tier t-master">Master</span> | `(err, req, res, next)` last in the stack |
+| 01 | **[Four-arg error middleware](01-error-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Arity as the whole detection mechanism; `finalhandler` in full; and the handler design, line by line |
 | 02 | **[Async errors on Express 5](02-async-errors.md)** | <span className="db-tier t-master">Master</span> | Rejected handlers → error middleware |
 | 03 | **[Error response contract](03-error-contract.md)** | <span className="db-tier t-master">Master</span> | Stable JSON; no stacks in production |
 | 04 | **[Mapping to HTTP](04-mapping-to-http.md)** | <span className="db-tier t-understand">Understand</span> | 400/401/403/404/409/422/429/503 |
@@ -56,4 +56,4 @@ envelope without stack traces when `NODE_ENV=production`.
 
 ---
 
-← Syllabus: [Part 2](../../syllabus/02-http-surface.md) · Start → [Four-arg error middleware](01-error-middleware.md)
+← Syllabus: [Part 2](../../syllabus/02-http-surface.md) · Start → [Four-arg error middleware](01-error-middleware/README.md)
