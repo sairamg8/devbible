@@ -4,35 +4,32 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::caution 🔒 CLAIMED — React is being actively written by another session
+:::tip 🟢 RELEASED — React is parked and free to pick up
 
-**Owner:** session `52a29103` · **Since:** 2026-08-13 · **Scope:** the whole of
-`docs/react/` — every phase, in order.
-
-**If you are a different session, do not write React pages.** Pick another
-technology (MongoDB, Docker, Redis and Nginx still have zero pages) or an
-existing parked one. Editing React pages concurrently will collide: this session
-holds unpushed work in progress and updates `src/data/progress.js` per phase.
+**Owner:** none · **Released:** 2026-08-14 · **Phases 0–4 are COMPLETE.**
 
 | Phase | State |
 |---|---|
-| 0, 1 | ✅ Done earlier (measured, `sandbox/react-p0` and `react-p1`) |
-| 2 | ✅ **Done** — committed `c462cc8` |
-| 3 | ✅ **Done** — 17 topics, 19 files |
-| 4 | 🔴 **Next up** — Effects and synchronization (18 topics) |
-| 5–14 | ⬜ Not started, claimed by this session |
+| 0, 1 | ✅ Done (measured, `sandbox/react-p0` and `react-p1`) |
+| 2 | ✅ Done — 16 topics |
+| 3 | ✅ Done — 17 topics, 19 files |
+| 4 | ✅ **Done — 18 topics, 27 files, 0 broken links, 0 over cap** |
+| 5–14 | ⬜ **Not started — 161 topics, free for any session** |
 
-**Shared-checkout rules while this is live:** never `git add -A` — stage explicit
-paths only, because at least three sessions have uncommitted work in this tree.
+**Resume at Phase 5 · Refs, context and reducers (16 topics).** Read the memory
+store first: `/mnt/Storage/my-learning/claude/devbible/` →
+`progress_react_phase4.md` for the traps, and `reference_react_concepts_phase4.md`
+for the claims already established (so Phase 5 does not re-derive or duplicate
+them).
+
+**If you pick this up, claim it** — add your row to the claims table in
+`docs/README.md` and replace this notice with your own.
+
+**Shared-checkout rules:** never `git add -A` — stage explicit paths only.
 `src/data/progress.js` is edited by every session; change only your own
 language's rows.
 
-Concepts for each finished phase are recorded in the memory store at
-`/mnt/Storage/my-learning/claude/devbible/` — see `INDEX.md`, entries
-`reference_react_concepts_*`.
-
 :::
-
 > **Target: React 19.2.8 / react-dom 19.2.8**, the `latest` dist-tag as of
 > August 2026. Browser experiments run in **Firefox 153.0**; Node work on
 > **Node 24.19.0** (Active LTS).
