@@ -224,4 +224,4 @@ you will inevitably need thirty seconds later.
 
 ---
 
-← Prev: [`git add` in full](02-git-add/README.md) · Next → [Phase 1 index](README.md)
+← Prev: [`git add` in full](02-git-add/README.md) · Next → [`git diff`](04-git-diff.md)

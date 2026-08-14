@@ -25,7 +25,7 @@ the right tool for a particular sentence you can say out loud.
 | 01 | **[`git status` is the instrument panel](01-git-status/README.md)** | <span className="db-tier t-master">Master</span> | Three sections, two columns — each one a comparison between two trees |
 | 02 | **[`git add` in full](02-git-add/README.md)** | <span className="db-tier t-master">Master</span> | Staging is a content copy; pathspecs; and the `-p` habit |
 | 03 | **[`git commit`](03-git-commit.md)** | <span className="db-tier t-master">Master</span> | The index is committed, never the working tree; `--amend` makes a new hash |
-| 04 | `git diff` and its three questions | <span className="db-tier t-master">Master</span> | Bare, `--staged`, `HEAD` — picking wrong is why "my change disappeared" |
+| 04 | **[`git diff` and its three questions](04-git-diff.md)** | <span className="db-tier t-master">Master</span> | Bare, `--staged`, `HEAD` — picking wrong is why "my change disappeared" |
 | 05 | `.gitignore` | <span className="db-tier t-master">Master</span> | Pattern syntax, negation's one hard limit, and `check-ignore -v` |
 | 06 | Ignoring does not untrack | <span className="db-tier t-understand">Understand</span> | Why a committed `.env` keeps being committed |
 | 07 | `git switch` and `git restore` | <span className="db-tier t-master">Master</span> | The two halves the old `checkout` was split into |
@@ -37,14 +37,15 @@ the right tool for a particular sentence you can say out loud.
 
 ## Coverage
 
-**3 of 12 topics written, as 10 files.** Rows without a link have no page yet.
+**4 of 12 topics written, as 11 files.** Rows without a link have no page yet.
 
 | Topic | Files | Lines | Status |
 |---|---|---|---|
 | 01 · `git status` | `README.md` + 4 chunks | 66 · 278 · 250 · 244 · 268 = **1,106** | ✅ Complete |
 | 02 · `git add` | `README.md` + 3 chunks | 51 · 243 · 235 · 258 = **787** | ✅ Complete |
 | 03 · `git commit` | one file | **227** | ✅ Complete |
-| 04–12 | — | — | Not started |
+| 04 · `git diff` | one file | **225** | ✅ Complete |
+| 05–12 | — | — | Not started |
 
 ## What changed on 2026-08-14
 
