@@ -22,13 +22,13 @@ import Progress from '@site/src/components/Progress';
 | **[0 · How JavaScript runs](./phase-0-how-javascript-runs/README.md)** | Language core | 12 | ✅ written |
 | **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
-| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master ✅** (01–08) · **Understand ✅** (09–17) · Know 18–19 done, 20 left |
+| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | ✅ **complete — every tier** |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
-| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · Understand under way (**07–09** ✅) |
+| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · Understand under way (**07–10** ✅) |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | 🟡 **Master tier ✅** (01–04 — all four); 05–14 deferred |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–05 — all five); 06–21 deferred |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–02 — both); 03–21 deferred |
@@ -46,8 +46,8 @@ split by phase. Take your lane's phases and **never write in the other lane's**.
 
 | Lane | Phases | Topics left | Held by |
 |---|---|---|---|
-| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **67** | session `ec7d13f7` |
-| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **72** | session `b4ffc223` |
+| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **66** | session `ec7d13f7` |
+| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **71** | session `b4ffc223` |
 
 **The seam is the language itself versus the browser platform**, so the two lanes barely
 cross-reference each other. Where a page needs the other lane's topic, **write it as bold plain
@@ -71,11 +71,11 @@ build, and the other lane may not have written it yet.
 |---|---|
 | **Claimed by** | session `ec7d13f7` (Opus 5), from 2026-08-14 — took over from `016cfc46` ← `c5329658` ← `01ECVvH5` |
 | **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** Master is **closed at 99/99** and is not to be reopened for depth. 🔴 **SCOPE CUT 2026-08-14:** phase 16 (Dynamic programming) **dropped** beyond its 3 Master topics; phase 18 trimmed to **11, 12 and 15 only**; the whole DSA block **parked** — 13 (Complexity), 14 (Data structures) and 15 (Algorithmic patterns) — *"mostly language focus"*. **21 dropped, 34 parked.** 17 · Machine coding stays **in scope**: it implements JavaScript's own library functions, which is language work. Nothing already written was deleted.** |
-| **Last touched** | **Phase 3 topic 19 · Function properties** — 2026-08-14, 236 lines. 🔴 **Phase 3 Understand is COMPLETE (09–17); Know is 2 of 3** |
+| **Last touched** | **Phase 3 topic 20 · `new.target` and constructor guards** — 2026-08-14, 244 lines. ✅ **PHASE 3 IS COMPLETE at every tier, 20 of 20** |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 3 topic 20 · `new.target` and constructor guards** — closes phase 3. Then phase 4. Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **142 topics in the active queue** — Understand **97**, Know **42**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
-| **Totals** | **140 of 316 in scope** (337 syllabus rows − 21 dropped) · **244 pages** (non-`README.md` `.md` files; 352 counting every README — includes lane B's), 328 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links under `docs/javascript/`**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
+| **Next** | **Phase 4 · Objects, prototypes and classes — topic 02**, then 09–20. Master 01 and 03–08 are already written. Inside each phase: **Understand → Know → When Needed** |
+| **Remaining** | **141 topics in the active queue** — Understand **97**, Know **41**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
+| **Totals** | **141 of 316 in scope** (337 syllabus rows − 21 dropped) · **244 pages** (non-`README.md` `.md` files; 352 counting every README — includes lane B's), 328 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links under `docs/javascript/`**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
@@ -97,9 +97,9 @@ are free). If you must, say so here first and take a *different phase*.
 |---|---|
 | **Claimed by** | session `b4ffc223` (Opus 5), from 2026-08-14 — first holder of lane B |
 | **Claim** | **phases 9, 10, 11, 12, 17 and 18 only** — DOM, events, network/storage, browser platform, machine coding, and the three kept storefront topics. 🔴 **TIER-LOCKED to Understand and Know**; Master is closed at 99/99 and is not reopened for depth. The 2026-08-14 scope cut applies: phase 18 keeps **only topics 11, 12 and 15**; phases 13, 14, 15 are parked and 16 is dropped — none of them are in either lane |
-| **Last touched** | **Phase 9 topic 09 · Forms** — 2026-08-14, 4 files |
-| **Next** | **Phase 9 topic 10 · Removing and replacing**, then 11–15 (Understand), 16–18 (Know), 19 (When Needed); then phase 10 from topic 05 |
-| **Remaining** | **72 topics** — 9 (10), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
+| **Last touched** | **Phase 9 topic 10 · Removing and replacing** — 2026-08-14, 3 files |
+| **Next** | **Phase 9 topic 11 · Batching DOM work**, then 12–15 (Understand), 16–18 (Know), 19 (When Needed); then phase 10 from topic 05 |
+| **Remaining** | **71 topics** — 9 (9), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
 | **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
 
 ⛔ **Lane B never writes in phases 3–8** — those are lane A's, live in another session
