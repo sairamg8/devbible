@@ -48,7 +48,7 @@ $ node params.mjs
 ```
 
 Params are **strings**, always. Coerce and validate at the edge
-([Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary.md)) —
+([Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary/README.md)) —
 never hand `req.params.id` to a query as though it were a number, and never
 assume it is even a plausible one.
 

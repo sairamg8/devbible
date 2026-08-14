@@ -55,7 +55,7 @@ an empty JSON body parses to, and which `err.type` codes body-parser emits.
   sketches.
 - **→ [Phase 6 · 09 · Webhooks](../../phase-6-rest-surface/09-webhooks.md)** — the
   raw-bytes requirement, and why `verify` returns 403.
-- **→ [Phase 8 · 01 · Validate at the boundary](../../phase-8-validation-authz/01-validate-at-boundary.md)**
+- **→ [Phase 8 · 01 · Validate at the boundary](../../phase-8-validation-authz/01-validate-at-boundary/README.md)**
   — the schema that has to reject the `{}` the parser accepts.
 
 ---

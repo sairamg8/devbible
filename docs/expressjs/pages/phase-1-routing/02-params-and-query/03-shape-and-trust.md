@@ -94,7 +94,7 @@ closes it.
    schema's **output** — a new object containing only the keys you described.
    Passing `req.query` onward after validating it leaves every unexpected key in
    place. That distinction is the whole of
-   [Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary.md).
+   [Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary/README.md).
 2. **Allow-list every field name that reaches a query.** Sorting and filtering
    are the two places where a query key becomes an identifier in SQL or a Mongo
    path. `?sort=-created_at` must be looked up in a map, never interpolated —

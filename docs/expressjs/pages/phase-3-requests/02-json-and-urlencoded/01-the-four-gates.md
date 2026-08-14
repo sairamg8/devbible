@@ -182,7 +182,7 @@ client is correct and you are not
 **Cause:** Express 5 assigns `req.body = undefined` when no parser ran; Express 4
 gave `{}`
 **Fix:** Validate at the boundary so a missing body is a 400 with a message —
-[Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary.md)
+[Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary/README.md)
 
 **Symptom:** A webhook's signature check fails on every delivery
 **Cause:** `express.raw()` defaults to `application/octet-stream`; the provider

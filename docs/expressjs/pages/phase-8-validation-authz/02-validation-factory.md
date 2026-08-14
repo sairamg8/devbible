@@ -197,4 +197,4 @@ missing check that is visible in the route line.
 
 ---
 
-← Prev: [Validate at boundary](01-validate-at-boundary.md) · Next → [Coercion traps](03-coercion-traps.md)
+← Prev: [Validate at boundary](01-validate-at-boundary/README.md) · Next → [Coercion traps](03-coercion-traps.md)

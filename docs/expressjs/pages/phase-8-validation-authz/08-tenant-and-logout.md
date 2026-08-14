@@ -41,7 +41,7 @@ Two strengthenings worth having:
 
 - **Never accept a tenant id in a schema.** If it is not in the validation schema,
   it cannot arrive through the parse output at all
-  ([page 01](01-validate-at-boundary.md)) — the boundary removes the field rather
+  ([page 01](01-validate-at-boundary/README.md)) — the boundary removes the field rather
   than trusting a later check.
 - **Make it structurally impossible to forget.** Repository methods that require a
   tenant id, or a database-level control such as row-level security with the tenant

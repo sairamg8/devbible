@@ -115,7 +115,7 @@ object. This is a deliberate leniency, and it means **"the client sent nothing" 
 indistinguishable from "the client sent `{}`"** at the parser level. Your schema
 has to be the thing that rejects it — which it will, if required fields are
 actually marked required
-([Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary.md)).
+([Phase 8 · 01](../../phase-8-validation-authz/01-validate-at-boundary/README.md)).
 
 ## `express.urlencoded()`'s `extended`
 

@@ -56,7 +56,7 @@ why `req.query = parsed` throws on Express 5.
   the parser choice from the request-handling side.
 - **→ [Phase 6 · 04 · Filter, sort, search](../../phase-6-rest-surface/04-filter-sort-search.md)**
   — the allow-list chunk 03 insists on.
-- **→ [Phase 8 · 01 · Validate at the boundary](../../phase-8-validation-authz/01-validate-at-boundary.md)**
+- **→ [Phase 8 · 01 · Validate at the boundary](../../phase-8-validation-authz/01-validate-at-boundary/README.md)**
   — parse-don't-validate, in full.
 - **→ [Phase 8 · 03 · Coercion traps](../../phase-8-validation-authz/03-coercion-traps.md)**
   — `z.coerce.number()` accepting `''` as `0`, and friends.
