@@ -25,7 +25,7 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[REST resources](01-rest-resources.md)** | <span className="db-tier t-master">Master</span> | Nouns, collections, when RPC is honest |
+| 01 | **[REST resources](01-rest-resources/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The four shapes and why nesting stops at one level; the two-question test for action vs sub-resource; and one resource designed end to end |
 | 02 | **[Status mapping](02-status-mapping.md)** | <span className="db-tier t-master">Master</span> | CRUD → 200/201/204/404/409 |
 | 03 | **[Pagination](03-pagination.md)** | <span className="db-tier t-master">Master</span> | Offset vs cursor; cap limits |
 | 04 | **[Filter sort search](04-filter-sort-search.md)** | <span className="db-tier t-understand">Understand</span> | Allow-lists only |
@@ -46,7 +46,7 @@ negotiation and [Phase 5](../phase-5-errors/README.md) lost error logging.
 
 | Syllabus topic | Page |
 |---|---|
-| REST resource modeling | 01 |
+| REST resource modeling | 01 (chunks [01](01-rest-resources/01-nouns-collections-items.md) · [02](01-rest-resources/02-when-rest-stops-fitting.md) · [03](01-rest-resources/03-designing-a-surface.md)) |
 | HTTP semantics and status mapping | 02 |
 | Pagination | 03 |
 | Filtering and sorting safely | 04 |
@@ -68,4 +68,4 @@ POST, and an OpenAPI path that matches handlers.
 
 ---
 
-← Syllabus: [Part 3](../../syllabus/03-api-product.md) · Start → [REST resources](01-rest-resources.md)
+← Syllabus: [Part 3](../../syllabus/03-api-product.md) · Start → [REST resources](01-rest-resources/README.md)

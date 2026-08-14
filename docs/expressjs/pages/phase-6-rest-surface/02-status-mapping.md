@@ -126,4 +126,4 @@ the number; clients branch on the code.
 
 ---
 
-← Prev: [REST resources](01-rest-resources.md) · Next → [Pagination](03-pagination.md)
+← Prev: [REST resources](01-rest-resources/README.md) · Next → [Pagination](03-pagination.md)
