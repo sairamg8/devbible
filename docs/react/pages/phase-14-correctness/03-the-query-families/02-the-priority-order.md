@@ -234,4 +234,4 @@ making only where profiling shows the cost — not as a default posture.
 
 ← Prev: [`getBy`, `queryBy`, `findBy`](01-get-query-find.md) ·
 Index: [The query families](README.md) ·
-Next → [`user-event` over `fireEvent`](../04-user-event-over-fireevent.md)
+Next → [`user-event` over `fireEvent`](../04-user-event-over-fireevent/README.md)

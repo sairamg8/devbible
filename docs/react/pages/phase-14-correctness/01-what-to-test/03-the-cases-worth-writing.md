@@ -94,7 +94,7 @@ describe("OrdersPage", () => {
 Four tests, and not one of them mentions a state variable, a hook, a handler name or a
 class. Every query is by role and accessible name
 ([topic 03](../03-the-query-families/README.md)); every interaction goes through `user-event`
-([topic 04](../04-user-event-over-fireevent.md)); every wait is a `findBy*`
+([topic 04](../04-user-event-over-fireevent/README.md)); every wait is a `findBy*`
 ([topic 05](../05-async-testing-and-act.md)). Rename everything inside `OrdersPage` and
 this file stays green.
 

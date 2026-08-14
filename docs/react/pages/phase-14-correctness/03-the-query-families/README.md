@@ -38,7 +38,7 @@ different mistakes, learned at different times.
 
 - **[Topic 02 · RTL's model](../02-the-rtl-model/README.md)** — `screen` is where all of
   these live, pre-bound to `document.body`.
-- **[Topic 04 · `user-event` over `fireEvent`](../04-user-event-over-fireevent.md)** —
+- **[Topic 04 · `user-event` over `fireEvent`](../04-user-event-over-fireevent/README.md)** —
   queries find the element; `user-event` is how you then interact with it.
 - **[Topic 05 · Async testing and `act()`](../05-async-testing-and-act.md)** — `findBy` is
   the async half of this topic, taken further.
