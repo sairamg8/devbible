@@ -194,4 +194,4 @@ browser history.
 
 ---
 
-← Prev: [The query parser](02-the-query-parser.md) · Index: [Params and query](README.md) · Next topic → [Router composition](../03-router-composition.md)
+← Prev: [The query parser](02-the-query-parser.md) · Index: [Params and query](README.md) · Next topic → [Router composition](../03-router-composition/README.md)

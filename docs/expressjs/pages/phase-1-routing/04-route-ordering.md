@@ -114,4 +114,4 @@ Integration tests for every static sibling of a param route.
 
 ---
 
-← Prev: [Router composition](03-router-composition.md) · Next → [Path matching on Express 5](05-path-matching-express5.md)
+← Prev: [Router composition](03-router-composition/README.md) · Next → [Path matching on Express 5](05-path-matching-express5.md)

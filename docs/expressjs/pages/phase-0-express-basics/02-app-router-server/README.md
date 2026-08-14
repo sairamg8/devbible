@@ -51,7 +51,7 @@ middleware.
 - **→ [03 · The request lifecycle](../03-request-lifecycle/README.md)** — the same journey
   end to end, including body parsing and the response. Chunks 03 and 04 here are
   only the router's part of it.
-- **→ [Phase 1 · 03 · Router composition](../../phase-1-routing/03-router-composition.md)**
+- **→ [Phase 1 · 03 · Router composition](../../phase-1-routing/03-router-composition/README.md)**
   — `mergeParams` and nesting, which chunk 03's `restore` and chunk 04's
   `trimPrefix` explain between them.
 - **→ [Phase 1 · 07 · `app.route` and hosts](../../phase-1-routing/07-app-route-and-hosts.md)**

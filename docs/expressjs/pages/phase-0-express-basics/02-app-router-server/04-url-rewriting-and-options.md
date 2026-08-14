@@ -108,7 +108,7 @@ have had the mount prefix stripped
 **Cause:** `handle` sets `req.params = layer.params` unless `mergeParams` is on,
 and `restore` puts the parent's back on the way out
 **Fix:** `express.Router({mergeParams: true})` —
-[Phase 1 · 03](../../phase-1-routing/03-router-composition.md)
+[Phase 1 · 03](../../phase-1-routing/03-router-composition/02-mergeparams-and-isolation.md)
 
 **Symptom:** An `OPTIONS` request 404s for a path that clearly has middleware on it
 **Cause:** Only **routes** contribute methods to the responder; `use` layers

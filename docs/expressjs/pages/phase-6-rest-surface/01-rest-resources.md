@@ -49,7 +49,7 @@ survives contact with real APIs:
 
 Deep nesting also makes every URL a compound key, so a client must remember the
 whole ancestry to build a link, and every route needs `mergeParams`
-([Phase 1](../phase-1-routing/03-router-composition.md)) to see the ids above it.
+([Phase 1](../phase-1-routing/03-router-composition/02-mergeparams-and-isolation.md)) to see the ids above it.
 
 ## Plural, singular, and the small decisions
 
