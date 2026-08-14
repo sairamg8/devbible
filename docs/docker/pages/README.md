@@ -34,7 +34,7 @@ answers.
 
 | Phase | Topics | Written | Status |
 |---|---|---|---|
-| **00 · What a container actually is** | 14 | 0 | ⏳ Not started |
+| **[00 · What a container actually is](./phase-0-what-a-container-is/README.md)** | 14 | 14 | ✅ **Complete** |
 | **01 · Running containers** | 16 | 0 | ⏳ Not started |
 | **02 · Images, layers and registries** | 15 | 0 | ⏳ Not started |
 | **03 · The Dockerfile** | 18 | 0 | ⏳ Not started |
@@ -47,7 +47,7 @@ answers.
 | **10 · Running containers in production** | 16 | 0 | ⏳ Not started |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started |
-| **Total** | **192** | **0** | |
+| **Total** | **192** | **14** | |
 
 import Progress from '@site/src/components/Progress';
 
