@@ -48,4 +48,4 @@ say immediately what is wrong with it.
 
 ---
 
-← [Phase 3 index](../README.md) · Next → **02 · Constraints** *(not written yet)*
+← [Phase 3 index](../README.md) · Next → [02 · Constraints](../02-constraints/README.md)

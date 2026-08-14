@@ -33,7 +33,7 @@ found the wrong equation.
 | # | Page | Tier | What it settles |
 |---|---|---|---|
 | 01 | [Generic functions and inference](./01-generic-functions-and-inference/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The parameter is usually *inferred*, not passed — and what it is inferred *from* |
-| 02 | Constraints — `T extends …` | <span className="db-tier t-master">Master</span> | Why an unconstrained `T` gives you nothing to work with |
+| 02 | [Constraints — `T extends …`](./02-constraints/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | Why an unconstrained `T` gives you nothing to work with |
 | 03 | Generic interfaces and type aliases | <span className="db-tier t-master">Master</span> | `ApiResult<T>`, `Repository<T>` — parameterising your own structures |
 | 04 | `keyof` | <span className="db-tier t-master">Master</span> | The union of an object type's keys, and the entry point to every advanced type |
 | 05 | The `getProp` pattern | <span className="db-tier t-master">Master</span> | `<T, K extends keyof T>(obj: T, key: K) => T[K]` — the shape behind every typed accessor |

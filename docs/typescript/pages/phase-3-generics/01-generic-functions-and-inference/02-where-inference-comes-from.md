@@ -265,4 +265,4 @@ Constrain the parameter to the primitive: `<T extends string>(s: T) => T` infers
 
 ---
 
-← Prev: [01 · What a type parameter is](./01-what-a-type-parameter-is.md) · Next → **02 · Constraints** *(not written yet)*
+← Prev: [01 · What a type parameter is](./01-what-a-type-parameter-is.md) · Next → [02 · Constraints](../02-constraints/README.md)

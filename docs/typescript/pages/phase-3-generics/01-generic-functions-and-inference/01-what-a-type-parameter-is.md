@@ -122,7 +122,7 @@ every caller who passed a number.
 So an unconstrained type parameter lets you do exactly three things: **pass the
 value around, store it, and return it**. That is enough for `first`, `identity`,
 `pipe` and every container type — and it is not enough for anything that
-inspects the value, which is what **02 · Constraints** *(not written yet)* exists to fix.
+inspects the value, which is what [02 · Constraints](../02-constraints/README.md) exists to fix.
 
 The tell that you have this wrong: writing `<T>` and then immediately writing
 `as` inside the body to get at a property. That is a type parameter pretending
@@ -208,7 +208,7 @@ error TS2344: Type 'number' does not satisfy the constraint '{ length: number; }
 
 Two codes for the same idea, and which one you see tells you where the mismatch
 was found: **TS2345 is an argument that did not fit; TS2344 is a type argument
-that did not fit.** **02 · Constraints** *(not written yet)* is the full treatment.
+that did not fit.** [02 · Constraints](../02-constraints/README.md) is the full treatment.
 
 ## Gotchas
 
