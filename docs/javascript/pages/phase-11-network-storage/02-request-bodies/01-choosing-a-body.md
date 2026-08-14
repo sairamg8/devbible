@@ -69,7 +69,7 @@ you looking in the wrong place.
 **This is the single most common `FormData` bug**, and it is especially likely when a shared
 `fetch` wrapper sets `Content-Type: application/json` for every request. A wrapper must skip
 the header when the body is a `FormData` — covered in
-[03 · A `fetch` wrapper worth reusing](../README.md).
+[03 · A `fetch` wrapper worth reusing](../03-fetch-wrapper/README.md).
 
 Building one from a form is the whole point of the type:
 
