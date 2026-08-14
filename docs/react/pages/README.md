@@ -60,7 +60,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[2 — Components, props and composition](./phase-2-components/README.md)** | ✅ **Written** | 16 pages, 16 topics |
 | **[3 — State and the render cycle](./phase-3-state/README.md)** | ✅ **Written** | 17 pages, 17 topics |
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
-| **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | 🚧 **Writing** | 3 of 16 topics, 5 files |
+| **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | 🚧 **Writing** | 4 of 16 topics, 6 files |
 | 6 — Rendering performance and the Compiler | Not started | — |
 | 7 — Custom hooks and the Rules of React | Not started | — |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |

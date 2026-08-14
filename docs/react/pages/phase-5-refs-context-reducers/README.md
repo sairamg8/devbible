@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 3 of 16 topics written.** The table below links what exists;
+🚧 **In progress — 4 of 16 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The three escape hatches from pure top-down state, and the two hooks that connect
@@ -21,7 +21,7 @@ default model rather than to supplement it.
 | 01 | **[`useRef`](01-useref.md)** | <span className="db-tier t-master">Master</span> | A mutable box that survives renders and never causes one |
 | 02 | **[DOM refs](02-dom-refs/README.md)** | <span className="db-tier t-master">Master</span> | Attaching, focusing, scrolling, and what you may not do to the node |
 | 03 | **[`useReducer`](03-usereducer.md)** | <span className="db-tier t-master">Master</span> | State transitions as data, and why that makes them testable |
-| 04 | `createContext` and `useContext` | <span className="db-tier t-master">Master</span> | Dependency injection for a subtree |
+| 04 | **[`createContext` and `useContext`](04-createcontext-usecontext.md)** | <span className="db-tier t-master">Master</span> | Dependency injection for a subtree |
 | 05 | The context re-render problem | <span className="db-tier t-master">Master</span> | Every consumer re-renders when the `value` identity changes |
 | 06 | Ref callbacks | <span className="db-tier t-understand">Understand</span> | Tied to the node, not the component — and React 19 cleanup |
 | 07 | `useImperativeHandle` | <span className="db-tier t-understand">Understand</span> | A deliberately narrow imperative API instead of the raw node |
@@ -37,7 +37,7 @@ default model rather than to supplement it.
 
 ## Coverage so far
 
-**3 topics → 5 content files.** One topic runs past the 300-line cap and becomes a topic directory:
+**4 topics → 6 content files.** One topic runs past the 300-line cap and becomes a topic directory:
 
 | Topic | Chunks | Split at |
 |---|---|---|
