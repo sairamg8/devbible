@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 7 of 12 topics written.**
+🚧 **In progress — 8 of 12 topics written.**
 
 **The shortest phase in the syllabus and the highest ratio of understanding to
 material.** Everything in phases 0–6 works because of the rules written down here.
@@ -26,7 +26,7 @@ debugging session.
 | 05 | **[Why the rules exist](05-why-the-rules-exist/README.md)** | <span className="db-tier t-understand">Understand</span> | Hooks are positional; a conditional hook shifts the list |
 | 06 | **[Designing a hook's API](06-designing-a-hooks-api/README.md)** | <span className="db-tier t-understand">Understand</span> | Tuple vs object, one hook one job, naming what it synchronizes with |
 | 07 | **[The standard set, written out](07-the-standard-set/README.md)** | <span className="db-tier t-understand">Understand</span> | Ten hooks, each with the gotcha that makes the naive version wrong |
-| 08 | Hooks that wrap effects | <span className="db-tier t-understand">Understand</span> | Honest dependencies across the boundary, and not re-subscribing |
+| 08 | **[Hooks that wrap effects](08-hooks-that-wrap-effects/README.md)** | <span className="db-tier t-understand">Understand</span> | Honest dependencies across the boundary, and not re-subscribing |
 | 09 | Conditional hooks and the correct restructure | <span className="db-tier t-understand">Understand</span> | Split the component instead of skipping the hook |
 | 10 | `use` breaks the rule on purpose | <span className="db-tier t-understand">Understand</span> | Why it may sit in a condition when `useState` may not |
 | 11 | Testing a custom hook | <span className="db-tier t-understand">Understand</span> | `renderHook` vs a throwaway component; test behaviour |
@@ -55,14 +55,15 @@ harder than "the linter prefers it".
 
 ## Coverage
 
-**12 topics.** 7 written so far → 24 files. Five topics are chunked: 07 into five parts
-(1,337 lines), 03 and 04 into four each (1,055 and 1,147), 05 and 06 into two each (555
-and 575). Topic 03 splits into the behaviour, the bug it causes and the three homes for
+**12 topics.** 8 written so far → 27 files. Six topics are chunked: 07 into five parts
+(1,337 lines), 03 and 04 into four each (1,055 and 1,147), 05, 06 and 08 into two each
+(555, 575 and 551). Topic 03 splits into the behaviour, the bug it causes and the three homes for
 shared state; topic 04 because the Rules of React are three separate families plus the
 two escape hatches where purity is easiest to break; topic 05 into the mechanism and its
 application to the forbidden list; topic 06 into the signature going in and the contract
 coming out; topic 07 by what each hook talks to — values, browser state, listeners, an
-observed element, timers — because the failure modes cluster that way.
+observed element, timers — because the failure modes cluster that way; topic 08 into
+values and functions, because the fix for each is completely different.
 
 ## Gate
 

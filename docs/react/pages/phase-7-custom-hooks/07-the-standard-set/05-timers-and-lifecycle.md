@@ -240,4 +240,4 @@ Hooks, because the hook count would then depend on whether the timer is running.
 
 ← Prev: [Observing an element](04-observing-an-element.md) ·
 Index: [The standard set](README.md) ·
-Next → [Hooks that wrap effects](../08-hooks-that-wrap-effects.md)
+Next → [Hooks that wrap effects](../08-hooks-that-wrap-effects/README.md)

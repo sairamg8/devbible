@@ -64,7 +64,7 @@ Read the pages for the specifics; these are the patterns they keep landing on.
   contracts most of these depend on.
 - **↔ [Phase 5 · `useSyncExternalStore`](../../phase-5-refs-context-reducers/15-usesyncexternalstore.md)**
   — the reference treatment of chunk 02's base.
-- **→ [Hooks that wrap effects](../08-hooks-that-wrap-effects.md)** — the general rules
+- **→ [Hooks that wrap effects](../08-hooks-that-wrap-effects/README.md)** — the general rules
   these are ten instances of.
 
 ---

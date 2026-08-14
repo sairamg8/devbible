@@ -47,7 +47,7 @@ second is the payoff: `useOnlineStatus` was rewritten from `useState` + `useEffe
   arguments and return values are immutable in both directions.
 - **→ [The standard set, written out](../07-the-standard-set/README.md)** — ten hooks whose
   APIs are worth reading as design decisions, not just implementations.
-- **→ [Hooks that wrap effects](../08-hooks-that-wrap-effects.md)** — honest
+- **→ [Hooks that wrap effects](../08-hooks-that-wrap-effects/README.md)** — honest
   dependencies across the boundary, in full.
 - **→ [Extracting too early](../12-extracting-too-early.md)** — the failure this topic's
   "some duplication is fine" is guarding against.
