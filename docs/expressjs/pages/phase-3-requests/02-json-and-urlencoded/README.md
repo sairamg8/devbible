@@ -46,7 +46,7 @@ an empty JSON body parses to, and which `err.type` codes body-parser emits.
   — stage 6, and why the body does not exist before it.
 - **← [01 · req anatomy](../01-req-anatomy/README.md)** — `req.is`, and what
   `req.body` is before any of this.
-- **→ [03 · Size limits](../03-size-limits.md)** — the `limit` option as a
+- **→ [03 · Size limits](../03-size-limits/README.md)** — the `limit` option as a
   denial-of-service control.
 - **→ [04 · Query parser](../04-query-parser.md)** — the same `simple`/`extended`
   split, on the query string.

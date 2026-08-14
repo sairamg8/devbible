@@ -181,7 +181,7 @@ outcome here
 does not support
 **Fix:** Leave `inflate` at its default `true` unless you have a specific reason —
 and remember a compressed body's *decompressed* size is what `limit` applies to
-([page 03](../03-size-limits.md))
+([page 03](../03-size-limits/01-two-paths-to-413.md))
 
 ## Interview questions
 

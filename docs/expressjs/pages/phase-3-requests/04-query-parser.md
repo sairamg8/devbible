@@ -88,4 +88,4 @@ Nested query parsing + object merge bugs → pollution; keep parsers boring.
 
 ---
 
-← Prev: [Size limits](03-size-limits.md) · Next → [Malformed bodies](05-malformed-bodies.md)
+← Prev: [Size limits](03-size-limits/README.md) · Next → [Malformed bodies](05-malformed-bodies.md)

@@ -31,12 +31,20 @@ process down.
 |---|---|---|---|
 | 01 | **[req anatomy](01-req-anatomy/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The prototype chain and what each layer contributes; the twelve getters and the six that read `trust proxy`; and reading headers correctly |
 | 02 | **[JSON and urlencoded](02-json-and-urlencoded/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The four gates before a byte is read; every option with its real default; and the status + `err.type` table |
-| 03 | **[Size limits](03-size-limits.md)** | <span className="db-tier t-master">Master</span> | 413 too large — DoS control, not optional polish |
+| 03 | **[Size limits](03-size-limits/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The two paths to 413 and why a compressed body only takes one; the five layers a body crosses; and what a size limit does not protect |
 | 04 | **[Query parser](04-query-parser.md)** | <span className="db-tier t-understand">Understand</span> | Express 5 `simple` vs `extended` |
 | 05 | **[Malformed bodies](05-malformed-bodies.md)** | <span className="db-tier t-understand">Understand</span> | 400 parse failures into error middleware |
 | 06 | **[raw and text](06-raw-and-text.md)** | <span className="db-tier t-understand">Understand</span> | Webhooks and signatures over bytes |
 | 07 | **[Multipart uploads](07-multipart-uploads.md)** | <span className="db-tier t-understand">Understand</span> | Multer 2.x boundary, MIME, size |
 | 08 | **[Cookies and helpers](08-cookies-and-helpers.md)** | <span className="db-tier t-know">Know</span> | cookie-parser asymmetry; `accepts` / `is` |
+
+> 🔴 **Master-tier depth pass complete for this phase** (session `ffadd057`,
+> 2026-08-14). Topics 01–03 were written at 89–123 lines with none chunked — sized
+> to the 300-line cap rather than to the topic — and have been rewritten to full
+> depth as `NN-topic/` directories: **01 is 3 chunks (741 lines), 02 is 3 chunks
+> (706), 03 is 3 chunks (~700)**. Still no runs: the new mechanism claims are read
+> from the installed `express@5.2.1`, `body-parser@2.3.0` and `raw-body` source,
+> cited by function, and the two known-wrong console blocks stay flagged in place.
 
 ## Coverage
 
@@ -44,7 +52,7 @@ process down.
 |---|---|
 | `req` anatomy | 01 (chunks [01](01-req-anatomy/01-two-objects-in-one.md) · [02](01-req-anatomy/02-the-twelve-getters.md) · [03](01-req-anatomy/03-reading-headers-and-content.md)) |
 | Body parsers json/urlencoded | 02 (chunks [01](02-json-and-urlencoded/01-the-four-gates.md) · [02](02-json-and-urlencoded/02-the-parsers-and-their-options.md) · [03](02-json-and-urlencoded/03-errors-and-choices.md)) |
-| Body size limits | 03 |
+| Body size limits | 03 (chunks [01](03-size-limits/01-two-paths-to-413.md) · [02](03-size-limits/02-choosing-and-layering.md) · [03](03-size-limits/03-what-it-does-not-protect.md)) |
 | query parser simple vs extended | 04 |
 | Malformed payloads | 05 |
 | raw / text | 06 |

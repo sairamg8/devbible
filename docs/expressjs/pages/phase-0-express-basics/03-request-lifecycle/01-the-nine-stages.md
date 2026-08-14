@@ -43,7 +43,7 @@ So your first middleware runs while the request is, in the literal sense,
 unfinished. That is why body parsing is a middleware and not something that
 happened before Express was called, and it is why a body-size limit can only be
 enforced *while reading*, never up front
-([Phase 3 · 03](../../phase-3-requests/03-size-limits.md)).
+([Phase 3 · 03](../../phase-3-requests/03-size-limits/01-two-paths-to-413.md)).
 
 There is no parallel "Express event loop". It is still Node's single JS thread;
 Express is synchronous scheduling of your functions on it until one of them
