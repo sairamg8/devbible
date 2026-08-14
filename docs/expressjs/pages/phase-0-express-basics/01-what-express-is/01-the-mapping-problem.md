@@ -163,7 +163,7 @@ it produces `Invalid URL`
 the `Host` header, and Express exposes it as `req.hostname`
 **Fix:** Build the base from `req.protocol` and `req.get('host')` and resolve
 `req.originalUrl` against it with `new URL(target, base)`. See
-[Phase 3 · req anatomy](../../phase-3-requests/01-req-anatomy.md) for which of these
+[Phase 3 · req anatomy](../../phase-3-requests/01-req-anatomy/02-the-twelve-getters.md) for which of these
 Express derives and which it passes straight through
 
 **Symptom:** `req.body` is `undefined` and no error was thrown

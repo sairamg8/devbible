@@ -14,7 +14,7 @@ than either choice.**
 > `JSON.stringify` ([response reference](https://expressjs.com/en/5x/api/response/)).
 > The conventions below are this bible's guidance, not upstream rules — the only
 > Express-level fact that constrains them is the one from
-> [Phase 3](../phase-3-requests/01-req-anatomy.md): `JSON.stringify` **omits `undefined`
+> [Phase 3](../phase-3-requests/01-req-anatomy/03-reading-headers-and-content.md): `JSON.stringify` **omits `undefined`
 > properties**, so an envelope field you set to `undefined` disappears from the response
 > rather than appearing as `null`
 > ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)).

@@ -21,7 +21,7 @@ error.**
 > **`"application/x-www-form-urlencoded"`**, `extended` **`false`** (an Express 5 change),
 > `inflate` `true`.
 >
-> ⚠️ **Same known error as [page 01](01-req-anatomy.md): the block below prints
+> ⚠️ **Same known error as [page 01](01-req-anatomy/03-reading-headers-and-content.md): the block below prints
 > `body: undefined`, which a real run cannot produce** — `res.json` serializes with
 > `JSON.stringify`, which omits `undefined` properties, so the key is **absent**. Left
 > unrewritten because this pass ran nothing; the corrected reading is here.
@@ -107,4 +107,4 @@ JSON APIs vs HTML form bodies.
 
 ---
 
-← Prev: [req anatomy](01-req-anatomy.md) · Next → [Size limits](03-size-limits.md)
+← Prev: [req anatomy](01-req-anatomy/README.md) · Next → [Size limits](03-size-limits.md)
