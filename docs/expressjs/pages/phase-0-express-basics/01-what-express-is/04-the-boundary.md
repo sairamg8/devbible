@@ -27,7 +27,7 @@ question is the difference between fixing it and guessing at it.**
 | Auth as a product | You mount session or token middleware; the cryptography, the token format and the threat model are Node and security topics |
 | A validation system | `req.body` is whatever a parser produced. Express never inspects its shape |
 | A replacement for understanding `node:http` | Debugging hangs, truncated responses, timeouts and streams still happens at the substrate |
-| An application architecture | There are no controllers, services, repositories or modules in Express — [Phase 7](../../phase-7-layering/01-controller-service-repository.md) is entirely a set of conventions |
+| An application architecture | There are no controllers, services, repositories or modules in Express — [Phase 7](../../phase-7-layering/01-controller-service-repository/README.md) is entirely a set of conventions |
 
 The last one is worth dwelling on, because it is the most expensive
 misunderstanding. Express has **no opinion** on how you organise code. A folder
@@ -137,7 +137,7 @@ it is Node's, and [the Node track](/docs/nodejs/pages/README.md) owns it
 **Symptom:** A team argues about folder structure and cites "the Express way"
 **Cause:** There isn't one. Express ships no architecture and validates none
 **Fix:** Pick a convention deliberately and write it down —
-[Phase 7](../../phase-7-layering/01-controller-service-repository.md) is the
+[Phase 7](../../phase-7-layering/01-controller-service-repository/README.md) is the
 argument, not the framework
 
 **Symptom:** Choosing a framework on a benchmark chart

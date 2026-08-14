@@ -167,4 +167,4 @@ checks `body.id === 42` passes happily while `password_hash` sits beside it.
 
 ---
 
-← Prev: [CSR wiring](01-controller-service-repository.md) · Next → [Fat controllers](03-fat-controllers.md)
+← Prev: [CSR wiring](01-controller-service-repository/README.md) · Next → [Fat controllers](03-fat-controllers.md)

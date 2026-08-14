@@ -19,13 +19,18 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[Controller service repository](01-controller-service-repository.md)** | <span className="db-tier t-master">Master</span> | HTTP in, domain out, drivers down |
+| 01 | **[Controller service repository](01-controller-service-repository/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | HTTP in, domain out, drivers down — the test that says whether the boundary is real, the wiring, and whether to adopt it at all |
 | 02 | **[Domain vs transport](02-domain-vs-transport.md)** | <span className="db-tier t-understand">Understand</span> | No `Request` types in domain |
 | 03 | **[Fat controllers](03-fat-controllers.md)** | <span className="db-tier t-understand">Understand</span> | Validation/auth as middleware |
 | 04 | **[DI without a framework](04-di-without-framework.md)** | <span className="db-tier t-understand">Understand</span> | Pass `deps` into routers |
 | 05 | **[Jobs from routes](05-jobs-from-routes.md)** | <span className="db-tier t-understand">Understand</span> | Enqueue, do not await side effects |
 | 06 | **[Folders and DTOs](06-folders-and-dtos.md)** | <span className="db-tier t-know">Know</span> | Feature folders; map shapes at edge |
 | 07 | **[Transaction middleware](07-transaction-middleware.md)** | <span className="db-tier t-know">Know</span> | The per-request wrapper, and why the service usually owns the boundary |
+
+> 🔴 **Master-tier depth pass complete for this phase** (session `ffadd057`,
+> 2026-08-14). Phase 7's only Master topic was written at 185 lines and unchunked;
+> it is now **3 chunks (~740 lines)**. None of this phase is an Express feature, so
+> the chunks say per page which recommendations are this bible's. Still no runs.
 
 ## Coverage
 
@@ -52,4 +57,4 @@ Handlers stay short; services unit-test without `req`/`res`; one slow side effec
 
 ---
 
-← Syllabus: [Part 3](../../syllabus/03-api-product.md) · Start → [CSR wiring](01-controller-service-repository.md)
+← Syllabus: [Part 3](../../syllabus/03-api-product.md) · Start → [CSR wiring](01-controller-service-repository/README.md)

@@ -128,7 +128,7 @@ invisible to anyone reading the service.
 
 **The test:** could you call this logic from a script with no `req`? If not, and
 if it is a domain rule rather than a transport concern, it is in the wrong place.
-[Phase 7 · 01](../../phase-7-layering/01-controller-service-repository.md).
+[Phase 7 · 01](../../phase-7-layering/01-controller-service-repository/README.md).
 
 Transport concerns that legitimately belong in middleware: parsing, correlation
 ids, authentication, coarse authorization, content negotiation, compression,

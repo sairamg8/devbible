@@ -96,7 +96,7 @@ diagnose.
 They are also the only tests that see the stack as a stack. **Use them for
 integration concerns — status codes, response shape, middleware order, auth
 behaviour — and push rule-level assertions into service tests**, which is possible
-precisely because [Phase 7](../phase-7-layering/01-controller-service-repository.md)
+precisely because [Phase 7](../phase-7-layering/01-controller-service-repository/README.md)
 made services callable without HTTP.
 
 The other cost is fidelity: mocked services can drift from real ones, so a suite
