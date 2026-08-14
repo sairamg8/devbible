@@ -39,7 +39,33 @@ import Progress from '@site/src/components/Progress';
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | 🟡 **Master tier ✅** (01–04 — all four); rest deferred |
 | **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🟡 **Master tier ✅** (01–07 — all seven); rest deferred |
 
-## 🔒 Active work claim — read before editing anything under `docs/javascript/`
+## 🔒 TWO LANES — `docs/javascript/` is split between two sessions (2026-08-14)
+
+🔴 **Read this before writing anything.** JavaScript is worked by **two sessions at once**,
+split by phase. Take your lane's phases and **never write in the other lane's**.
+
+| Lane | Phases | Topics left | Held by |
+|---|---|---|---|
+| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **70** | session `016cfc46` |
+| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **75** | *(open — claim it here)* |
+
+**The seam is the language itself versus the browser platform**, so the two lanes barely
+cross-reference each other. Where a page needs the other lane's topic, **write it as bold plain
+text with *(not written yet)*** rather than a link — a link to an unwritten page breaks the
+build, and the other lane may not have written it yet.
+
+**Shared files, and the rule for each:**
+
+| File | Rule |
+|---|---|
+| `src/data/progress.js` | Edit **only your own phases' rows**. Expect the other lane's rows in your `git diff` — leave them. |
+| `docs/README.md` | Two JavaScript rows, one per lane. Touch only yours. |
+| this file | The lane table above, and your lane's block below. |
+| a phase `README.md` | Belongs to whichever lane owns that phase. |
+
+**Never `git add -A`.** Stage explicit paths, every time.
+
+## 🔒 Lane A claim — phases 3–8
 
 | | |
 |---|---|
