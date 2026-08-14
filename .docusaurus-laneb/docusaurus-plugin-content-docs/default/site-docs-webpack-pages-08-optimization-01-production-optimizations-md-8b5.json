@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/optimization/production-optimizations",
+  "title": "Production Optimization: Minification, Tree Shaking & Scope Hoisting",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/08-optimization/01-production-optimizations.md",
+  "sourceDirName": "webpack/pages/08-optimization",
+  "slug": "/webpack/pages/optimization/production-optimizations",
+  "permalink": "/devbible/docs/webpack/pages/optimization/production-optimizations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Production Optimization: Minification, Tree Shaking & Scope Hoisting",
+    "sidebar_label": "Production Optimization",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Code Splitting",
+    "permalink": "/devbible/docs/webpack/pages/code-splitting/splitting-strategies"
+  },
+  "next": {
+    "title": "`webpack-dev-server` & Hot Module Replacem",
+    "permalink": "/devbible/docs/webpack/pages/dev-server-and-hmr/dev-server-and-hot-module-replacement"
+  }
+}

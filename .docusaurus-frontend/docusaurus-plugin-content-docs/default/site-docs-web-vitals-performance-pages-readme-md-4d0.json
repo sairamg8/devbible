@@ -1,0 +1,28 @@
+{
+  "id": "web-vitals-performance/pages/README",
+  "title": "Web Vitals & Performance — Explanations",
+  "description": "The 11 imported pages for Web Vitals & Performance, in their original section order.",
+  "source": "@site/docs/web-vitals-performance/pages/README.md",
+  "sourceDirName": "web-vitals-performance/pages",
+  "slug": "/web-vitals-performance/pages/",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Web Vitals & Performance — Explanations",
+    "sidebar_label": "Explanations",
+    "sidebar_position": 0
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/web-vitals-performance/"
+  },
+  "next": {
+    "title": "Core Web Vitals",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/core-web-vitals/lcp-inp-cls-fundamentals"
+  }
+}

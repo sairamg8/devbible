@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/json/parse-and-the-reviver",
+  "title": "09.2 · `JSON.parse` and the reviver",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/09-json/02-parse-and-the-reviver.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/09-json",
+  "slug": "/javascript/pages/phase-5-built-in-library/json/parse-and-the-reviver",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/json/parse-and-the-reviver",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "09.2 · `JSON.parse` and the reviver",
+    "sidebar_label": "02 · parse and the reviver",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · stringify",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/json/stringify"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/map-vs-object/"
+  }
+}

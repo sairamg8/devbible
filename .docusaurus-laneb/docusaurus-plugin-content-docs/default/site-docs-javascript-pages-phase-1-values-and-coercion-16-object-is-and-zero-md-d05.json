@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/object-is-and-zero",
+  "title": "16 · `Object.is`, `-0` and `Infinity`",
+  "description": "Know",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/16-object-is-and-zero.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/object-is-and-zero",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/object-is-and-zero",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "16 · `Object.is`, `-0` and `Infinity`",
+    "sidebar_label": "16 · Object.is, -0, Infinity",
+    "sidebar_position": 16
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "15 · Object wrappers",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/object-wrappers"
+  },
+  "next": {
+    "title": "17 · Numeric literals",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/numeric-literals"
+  }
+}

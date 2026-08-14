@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/performance-and-scalability-patterns/architecting-for-scale",
+  "title": "Performance & Scalability Patterns: Rendering Strategy & Caching Layers",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/14-performance-and-scalability-patterns/01-architecting-for-scale.md",
+  "sourceDirName": "frontend-architecture/pages/14-performance-and-scalability-patterns",
+  "slug": "/frontend-architecture/pages/performance-and-scalability-patterns/architecting-for-scale",
+  "permalink": "/devbible/docs/frontend-architecture/pages/performance-and-scalability-patterns/architecting-for-scale",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Performance & Scalability Patterns: Rendering Strategy & Caching Layers",
+    "sidebar_label": "Performance & Scalability Patterns",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Testing Strategy",
+    "permalink": "/devbible/docs/frontend-architecture/pages/testing-strategy/the-real-world-testing-pyramid"
+  },
+  "next": {
+    "title": "Team & Collaboration Practices",
+    "permalink": "/devbible/docs/frontend-architecture/pages/team-and-collaboration-practices/process-as-architecture"
+  }
+}

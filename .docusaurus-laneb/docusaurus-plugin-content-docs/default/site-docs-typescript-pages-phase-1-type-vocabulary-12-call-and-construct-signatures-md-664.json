@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/call-and-construct-signatures",
+  "title": "Call and construct signatures",
+  "description": "Understand",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/12-call-and-construct-signatures.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/call-and-construct-signatures",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/call-and-construct-signatures",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Call and construct signatures",
+    "sidebar_label": "12 · Call and construct signatures",
+    "sidebar_position": 12
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "11 · Intersection types",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/intersection-types"
+  },
+  "next": {
+    "title": "13 · enum vs union",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/enum-vs-union"
+  }
+}

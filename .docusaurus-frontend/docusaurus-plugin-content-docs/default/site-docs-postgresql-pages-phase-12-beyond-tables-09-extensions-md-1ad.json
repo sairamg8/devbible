@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/extensions",
+  "title": "Extensions",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/09-extensions.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/extensions",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/extensions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Extensions",
+    "sidebar_label": "09 · Extensions",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · Triggers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/triggers"
+  },
+  "next": {
+    "title": "10 · Set-returning functions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/srf"
+  }
+}

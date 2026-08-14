@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/unique-nulls",
+  "title": "Unique constraints vs unique indexes, and NULLs",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/08-unique-nulls.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/unique-nulls",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/unique-nulls",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Unique constraints vs unique indexes, and NULLs",
+    "sidebar_label": "08 · Unique and NULLs",
+    "sidebar_position": 8
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "07 · Transactional DDL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/transactional-ddl"
+  },
+  "next": {
+    "title": "09 · Adding NOT NULL safely",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/add-not-null"
+  }
+}

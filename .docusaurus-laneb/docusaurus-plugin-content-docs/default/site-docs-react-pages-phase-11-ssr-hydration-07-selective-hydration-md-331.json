@@ -1,0 +1,24 @@
+{
+  "id": "react/pages/phase-11-ssr-hydration/selective-hydration",
+  "title": "Selective hydration",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-11-ssr-hydration/07-selective-hydration.md",
+  "sourceDirName": "react/pages/phase-11-ssr-hydration",
+  "slug": "/react/pages/phase-11-ssr-hydration/selective-hydration",
+  "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/selective-hydration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Selective hydration",
+    "sidebar_label": "07 · Selective hydration",
+    "sidebar_position": 7
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "06 · Streaming SSR",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/streaming-ssr"
+  }
+}

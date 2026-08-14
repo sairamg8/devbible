@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/expensive-initial-mount",
+  "title": "Expensive initial mount",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-6-performance/15-expensive-initial-mount.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/expensive-initial-mount",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/expensive-initial-mount",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Expensive initial mount",
+    "sidebar_label": "15 · Expensive initial mount",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · List virtualization",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/list-virtualization"
+  },
+  "next": {
+    "title": "16 · Bundle size",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/bundle-size"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/schema-drift",
+  "title": "Schema drift",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/13-schema-drift.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/schema-drift",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/schema-drift",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Schema drift",
+    "sidebar_label": "13 · Schema drift",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · Migration tools",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/migration-tools"
+  },
+  "next": {
+    "title": "14 · Type generation",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/codegen-types"
+  }
+}

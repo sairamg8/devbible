@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-0-how-git-stores-things/git-directory-tour",
+  "title": "A tour of .git/",
+  "description": "Understand",
+  "source": "@site/docs/git/pages/phase-0-how-git-stores-things/09-git-directory-tour.md",
+  "sourceDirName": "git/pages/phase-0-how-git-stores-things",
+  "slug": "/git/pages/phase-0-how-git-stores-things/git-directory-tour",
+  "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/git-directory-tour",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "A tour of .git/",
+    "sidebar_label": "09 · Inside .git/",
+    "sidebar_position": 9
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "08 · Config layers",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/config-layers"
+  },
+  "next": {
+    "title": "10 · Identity and setup",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/identity-setup"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/oxlint-fixes-ignores-and-diagnostics/fixes-ignores-and-diagnostics",
+  "title": "Oxlint Fixes, Ignore Comments & Diagnostics",
+  "description": "Covers syllabus §17.1 Automatic Fixes, §17.2 Ignore Comments, and §17.3 Ignore Files & Patterns.",
+  "source": "@site/docs/eslint-oxlint/pages/17-oxlint-fixes-ignores-and-diagnostics/01-fixes-ignores-and-diagnostics.md",
+  "sourceDirName": "eslint-oxlint/pages/17-oxlint-fixes-ignores-and-diagnostics",
+  "slug": "/eslint-oxlint/pages/oxlint-fixes-ignores-and-diagnostics/fixes-ignores-and-diagnostics",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-fixes-ignores-and-diagnostics/fixes-ignores-and-diagnostics",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Oxlint Fixes, Ignore Comments & Diagnostics",
+    "sidebar_label": "Oxlint Fixes, Ignore Comments & Diagnostic",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "Oxlint JS Plugins (Alpha) & Custom Rules S",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-js-plugins-and-extensibility/js-plugins-and-custom-rules"
+  },
+  "next": {
+    "title": "Coexistence",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/coexistence-eslint-and-oxlint/dual-run-overlap-and-retirement"
+  }
+}

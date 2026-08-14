@@ -1,0 +1,24 @@
+{
+  "id": "vite/pages/migration-recipes/cra-to-vite-migration",
+  "title": "Migration Recipe: Create React App → Vite",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/16-migration-recipes/01-cra-to-vite-migration.md",
+  "sourceDirName": "vite/pages/16-migration-recipes",
+  "slug": "/vite/pages/migration-recipes/cra-to-vite-migration",
+  "permalink": "/devbible/docs/vite/pages/migration-recipes/cra-to-vite-migration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Migration Recipe: Create React App → Vite",
+    "sidebar_label": "Migration Recipe: Create React App → Vite",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Deployment Considerations",
+    "permalink": "/devbible/docs/vite/pages/deployment-considerations/shipping-the-build"
+  }
+}

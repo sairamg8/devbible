@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/websockets",
+  "title": "WebSockets",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/11-websockets.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/websockets",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/websockets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "WebSockets",
+    "sidebar_label": "11 · WebSockets",
+    "sidebar_position": 11
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "10 · Streaming and SSE",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/streaming-and-sse"
+  },
+  "next": {
+    "title": "12 · net and dgram",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/net-and-dgram"
+  }
+}

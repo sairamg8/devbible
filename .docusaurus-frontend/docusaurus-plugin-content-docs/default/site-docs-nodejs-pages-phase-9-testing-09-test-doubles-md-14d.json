@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/test-doubles",
+  "title": "Test doubles — stub, spy, mock, fake, and over-mocking",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/09-test-doubles.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/test-doubles",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/test-doubles",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Test doubles — stub, spy, mock, fake, and over-mocking",
+    "sidebar_label": "09 · Test doubles",
+    "sidebar_position": 9
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "08 · Module mocking",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/module-mocking"
+  },
+  "next": {
+    "title": "10 · Fixtures and factories",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/fixtures-and-factories"
+  }
+}

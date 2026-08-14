@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/async-await/reading-the-ordering",
+  "title": "07.3 · Reading the ordering",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/07-async-await/03-reading-the-ordering.md",
+  "sourceDirName": "javascript/pages/phase-7-async/07-async-await",
+  "slug": "/javascript/pages/phase-7-async/async-await/reading-the-ordering",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/reading-the-ordering",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "07.3 · Reading the ordering",
+    "sidebar_label": "03 · Reading the ordering",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Where it suspends",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/where-it-suspends"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/"
+  }
+}

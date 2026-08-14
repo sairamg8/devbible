@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/call-apply-bind/bind",
+  "title": "02.2 · bind, including with new",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/02-call-apply-bind/02-bind.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/02-call-apply-bind",
+  "slug": "/javascript/pages/phase-17-machine-coding/call-apply-bind/bind",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/bind",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02.2 · bind, including with new",
+    "sidebar_label": "02 · bind",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · call and apply",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/call-and-apply"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/debounce-throttle/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/usetransition/README",
+  "title": "startTransition and useTransition",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/01-usetransition/README.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense/01-usetransition",
+  "slug": "/react/pages/phase-8-concurrent-suspense/usetransition/",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/usetransition/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "startTransition and useTransition",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/"
+  },
+  "next": {
+    "title": "01 · Marking an update non-urgent",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/usetransition/marking-an-update-non-urgent"
+  }
+}

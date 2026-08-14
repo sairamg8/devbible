@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-2-operators/arithmetic",
+  "title": "01 · Arithmetic operators",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-2-operators/01-arithmetic.md",
+  "sourceDirName": "javascript/pages/phase-2-operators",
+  "slug": "/javascript/pages/phase-2-operators/arithmetic",
+  "permalink": "/devbible/docs/javascript/pages/phase-2-operators/arithmetic",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01 · Arithmetic operators",
+    "sidebar_label": "01 · Arithmetic",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/"
+  },
+  "next": {
+    "title": "02 · Assignment",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/assignment"
+  }
+}

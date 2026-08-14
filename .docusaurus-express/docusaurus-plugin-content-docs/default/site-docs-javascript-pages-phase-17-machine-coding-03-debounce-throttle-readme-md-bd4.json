@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/debounce-throttle/README",
+  "title": "03 · debounce and throttle",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/03-debounce-throttle/README.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/03-debounce-throttle",
+  "slug": "/javascript/pages/phase-17-machine-coding/debounce-throttle/",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/debounce-throttle/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "03 · debounce and throttle",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · bind",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/bind"
+  },
+  "next": {
+    "title": "01 · debounce",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/debounce-throttle/debounce"
+  }
+}

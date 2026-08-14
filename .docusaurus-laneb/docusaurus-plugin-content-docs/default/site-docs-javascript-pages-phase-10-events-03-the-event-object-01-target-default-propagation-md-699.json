@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-10-events/the-event-object/target-default-propagation",
+  "title": "03.1 · Target, default and propagation",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-10-events/03-the-event-object/01-target-default-propagation.md",
+  "sourceDirName": "javascript/pages/phase-10-events/03-the-event-object",
+  "slug": "/javascript/pages/phase-10-events/the-event-object/target-default-propagation",
+  "permalink": "/devbible/docs/javascript/pages/phase-10-events/the-event-object/target-default-propagation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · Target, default and propagation",
+    "sidebar_label": "01 · Target, default, propagation",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-10-events/the-event-object/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-10-events/event-delegation/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/subqueries/correlated-and-cost",
+  "title": "Correlated subqueries and what they cost",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/11-subqueries/02-correlated-and-cost.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/11-subqueries",
+  "slug": "/postgresql/pages/phase-6-aggregation/subqueries/correlated-and-cost",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/subqueries/correlated-and-cost",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Correlated subqueries and what they cost",
+    "sidebar_label": "02 · Correlated subqueries",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Scalar and row subqueries",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/subqueries/scalar-and-row"
+  },
+  "next": {
+    "title": "03 · IN, EXISTS, NOT IN",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/subqueries/in-exists-and-not-in"
+  }
+}

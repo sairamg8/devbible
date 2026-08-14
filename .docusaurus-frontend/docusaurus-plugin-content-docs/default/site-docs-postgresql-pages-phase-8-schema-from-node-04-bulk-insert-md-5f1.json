@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/bulk-insert",
+  "title": "Bulk insert that scales",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/04-bulk-insert.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/bulk-insert",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/bulk-insert",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Bulk insert that scales",
+    "sidebar_label": "04 · Bulk insert",
+    "sidebar_position": 4
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Seeding",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/seeding"
+  },
+  "next": {
+    "title": "05 · SQL in .sql files",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/sql-files"
+  }
+}

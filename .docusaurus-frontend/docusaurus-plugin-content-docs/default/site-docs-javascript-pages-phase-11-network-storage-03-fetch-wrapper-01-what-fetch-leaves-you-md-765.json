@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/fetch-wrapper/what-fetch-leaves-you",
+  "title": "03.1 · What fetch leaves you with",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/03-fetch-wrapper/01-what-fetch-leaves-you.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/03-fetch-wrapper",
+  "slug": "/javascript/pages/phase-11-network-storage/fetch-wrapper/what-fetch-leaves-you",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/what-fetch-leaves-you",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · What fetch leaves you with",
+    "sidebar_label": "01 · What fetch leaves you",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/"
+  },
+  "next": {
+    "title": "02 · URLs and parsing",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/urls-and-parsing"
+  }
+}

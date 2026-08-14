@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/express-5-vs-4",
+  "title": "Express 5 vs 4",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/06-express-5-vs-4.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics",
+  "slug": "/expressjs/pages/phase-0-express-basics/express-5-vs-4",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/express-5-vs-4",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Express 5 vs 4",
+    "sidebar_label": "06 · Express 5 vs 4",
+    "sidebar_position": 6
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "05 · Application settings",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/application-settings"
+  },
+  "next": {
+    "title": "07 · When not Express",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/when-not-to-use-express"
+  }
+}

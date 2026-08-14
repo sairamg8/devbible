@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/error-middleware/designing-the-handler",
+  "title": "Designing the handler",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/01-error-middleware/03-designing-the-handler.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors/01-error-middleware",
+  "slug": "/expressjs/pages/phase-5-errors/error-middleware/designing-the-handler",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/designing-the-handler",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Designing the handler",
+    "sidebar_label": "03 · Designing the handler",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · The default handler",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/the-default-handler"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/async-errors/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-0-how-git-stores-things/commit-graph",
+  "title": "The commit graph is a DAG, not a timeline",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-0-how-git-stores-things/07-commit-graph.md",
+  "sourceDirName": "git/pages/phase-0-how-git-stores-things",
+  "slug": "/git/pages/phase-0-how-git-stores-things/commit-graph",
+  "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/commit-graph",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "The commit graph is a DAG, not a timeline",
+    "sidebar_label": "07 · The commit graph",
+    "sidebar_position": 7
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "06 · Refs and HEAD",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/refs-and-head"
+  },
+  "next": {
+    "title": "08 · Config layers",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/config-layers"
+  }
+}

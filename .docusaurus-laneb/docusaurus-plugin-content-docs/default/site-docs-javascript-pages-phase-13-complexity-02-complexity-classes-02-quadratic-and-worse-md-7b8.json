@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-13-complexity/complexity-classes/quadratic-and-worse",
+  "title": "02.2 · O(n²) and worse",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-13-complexity/02-complexity-classes/02-quadratic-and-worse.md",
+  "sourceDirName": "javascript/pages/phase-13-complexity/02-complexity-classes",
+  "slug": "/javascript/pages/phase-13-complexity/complexity-classes/quadratic-and-worse",
+  "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/complexity-classes/quadratic-and-worse",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02.2 · O(n²) and worse",
+    "sidebar_label": "02 · O(n²) and worse",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · O(1) to O(n log n)",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/complexity-classes/constant-to-linearithmic"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/choosing-a-structure/"
+  }
+}

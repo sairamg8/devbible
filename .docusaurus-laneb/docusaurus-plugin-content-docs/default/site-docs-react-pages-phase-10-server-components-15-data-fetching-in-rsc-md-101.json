@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/data-fetching-in-rsc",
+  "title": "Data fetching in RSC",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-10-server-components/15-data-fetching-in-rsc.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/data-fetching-in-rsc",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/data-fetching-in-rsc",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Data fetching in RSC",
+    "sidebar_label": "15 · Data fetching in RSC",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · The renderer packages",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/renderer-packages"
+  },
+  "next": {
+    "title": "16 · Next.js vs React Router",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/nextjs-vs-react-router"
+  }
+}

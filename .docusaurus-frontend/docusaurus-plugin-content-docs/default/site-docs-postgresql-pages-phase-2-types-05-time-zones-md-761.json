@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/time-zones",
+  "title": "Time zones and the session",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/05-time-zones.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/time-zones",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/time-zones",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Time zones and the session",
+    "sidebar_label": "05 · Time zones",
+    "sidebar_position": 5
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "04 · timestamptz",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/timestamptz"
+  },
+  "next": {
+    "title": "06 · NULL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/null"
+  }
+}

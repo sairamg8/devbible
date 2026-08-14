@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-13-complexity/README",
+  "title": "Phase 13 — Complexity and JavaScript's real costs",
+  "description": "10 topics. Big-O first, then the part most courses skip: what the notation means once V8 is",
+  "source": "@site/docs/javascript/pages/phase-13-complexity/README.md",
+  "sourceDirName": "javascript/pages/phase-13-complexity",
+  "slug": "/javascript/pages/phase-13-complexity/",
+  "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 13 — Complexity and JavaScript's real costs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Storage and dependencies",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/client-side-security/storage-and-dependencies"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/big-o/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/custom-loaders",
+  "title": "Custom module loaders and resolution hooks",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-12-native/08-custom-loaders.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/custom-loaders",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/custom-loaders",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Custom module loaders and resolution hooks",
+    "sidebar_label": "08 · Custom loaders",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · WASI",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/wasi"
+  },
+  "next": {
+    "title": "09 · Startup snapshots",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/startup-snapshots"
+  }
+}

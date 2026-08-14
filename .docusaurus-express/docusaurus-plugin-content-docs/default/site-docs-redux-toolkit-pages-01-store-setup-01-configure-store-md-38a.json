@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/store-setup/configure-store",
+  "title": "`configureStore`: Store Assembly & Default Middleware Stack",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/01-store-setup/01-configure-store.md",
+  "sourceDirName": "redux-toolkit/pages/01-store-setup",
+  "slug": "/redux-toolkit/pages/store-setup/configure-store",
+  "permalink": "/devbible/docs/redux-toolkit/pages/store-setup/configure-store",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "`configureStore`: Store Assembly & Default Middleware Stack",
+    "sidebar_label": "`configureStore`",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "Explanations",
+    "permalink": "/devbible/docs/redux-toolkit/pages/"
+  },
+  "next": {
+    "title": "`createSlice`",
+    "permalink": "/devbible/docs/redux-toolkit/pages/slices-and-actions/create-slice"
+  }
+}

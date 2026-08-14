@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/feature-detection",
+  "title": "10 · Feature detection",
+  "description": "Know",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/10-feature-detection.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/feature-detection",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/feature-detection",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "10 · Feature detection",
+    "sidebar_label": "10 · Feature detection",
+    "sidebar_position": 10
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "09 · Transpilation, polyfills",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/transpilation-polyfills"
+  },
+  "next": {
+    "title": "11 · The JIT",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/the-jit"
+  }
+}

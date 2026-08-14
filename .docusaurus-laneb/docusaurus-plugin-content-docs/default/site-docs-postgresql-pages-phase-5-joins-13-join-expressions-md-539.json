@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/join-expressions",
+  "title": "Joining on expressions",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/13-join-expressions.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/join-expressions",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/join-expressions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Joining on expressions",
+    "sidebar_label": "13 · Join expressions",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · Aliases",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/alias-discipline"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/"
+  }
+}

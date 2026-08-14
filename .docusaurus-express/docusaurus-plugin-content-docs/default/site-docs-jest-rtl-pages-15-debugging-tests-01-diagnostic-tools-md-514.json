@@ -1,0 +1,28 @@
+{
+  "id": "jest-rtl/pages/debugging-tests/diagnostic-tools",
+  "title": "Debugging Tests: `screen.debug()`, `logRoles()` & Testing Playground",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/jest-rtl/pages/15-debugging-tests/01-diagnostic-tools.md",
+  "sourceDirName": "jest-rtl/pages/15-debugging-tests",
+  "slug": "/jest-rtl/pages/debugging-tests/diagnostic-tools",
+  "permalink": "/devbible/docs/jest-rtl/pages/debugging-tests/diagnostic-tools",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Debugging Tests: `screen.debug()`, `logRoles()` & Testing Playground",
+    "sidebar_label": "Debugging Tests",
+    "sidebar_position": 1
+  },
+  "sidebar": "jestRtlSidebar",
+  "previous": {
+    "title": "Accessibility Testing",
+    "permalink": "/devbible/docs/jest-rtl/pages/accessibility-testing/a11y-assertions"
+  },
+  "next": {
+    "title": "Wiring Up a Testing Environment From Zero ",
+    "permalink": "/devbible/docs/jest-rtl/pages/real-world-workflows-and-recipes/testing-setup-from-zero"
+  }
+}

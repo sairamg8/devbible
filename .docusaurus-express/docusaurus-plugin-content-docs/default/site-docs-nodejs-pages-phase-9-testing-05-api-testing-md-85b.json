@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/api-testing",
+  "title": "API testing — an ephemeral real server, or supertest",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/05-api-testing.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/api-testing",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/api-testing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "API testing — an ephemeral real server, or supertest",
+    "sidebar_label": "05 · API testing",
+    "sidebar_position": 5
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "04 · Testable code",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/testable-code"
+  },
+  "next": {
+    "title": "06 · Async testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/async-testing"
+  }
+}

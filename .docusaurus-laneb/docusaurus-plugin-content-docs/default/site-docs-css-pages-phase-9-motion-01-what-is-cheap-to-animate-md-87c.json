@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-9-motion/what-is-cheap-to-animate",
+  "title": "What is cheap to animate",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-9-motion/01-what-is-cheap-to-animate.md",
+  "sourceDirName": "css/pages/phase-9-motion",
+  "slug": "/css/pages/phase-9-motion/what-is-cheap-to-animate",
+  "permalink": "/devbible/docs/css/pages/phase-9-motion/what-is-cheap-to-animate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What is cheap to animate",
+    "sidebar_label": "01 · What is cheap to animate",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-9-motion/"
+  },
+  "next": {
+    "title": "02 · Transition traps",
+    "permalink": "/devbible/docs/css/pages/phase-9-motion/transition-traps"
+  }
+}

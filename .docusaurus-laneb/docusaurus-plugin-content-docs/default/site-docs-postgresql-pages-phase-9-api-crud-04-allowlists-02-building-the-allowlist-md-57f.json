@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/allowlists/building-the-allowlist",
+  "title": "Building the allowlist",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/04-allowlists/02-building-the-allowlist.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/04-allowlists",
+  "slug": "/postgresql/pages/phase-9-api-crud/allowlists/building-the-allowlist",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/allowlists/building-the-allowlist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Building the allowlist",
+    "sidebar_label": "02 · Building the allowlist",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · The two failure modes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/allowlists/two-failure-modes"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/transactions-request/"
+  }
+}

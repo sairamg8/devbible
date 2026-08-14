@@ -1,0 +1,24 @@
+{
+  "id": "storybook/pages/theming-colors-and-fonts/custom-fonts-and-typography",
+  "title": "Storybook Custom Fonts & Typography",
+  "description": "Goal: Storybook loads the same font files and font stacks as production so layout, truncation, and Chromatic diffs match the app.",
+  "source": "@site/docs/storybook/pages/17-theming-colors-and-fonts/02-custom-fonts-and-typography.md",
+  "sourceDirName": "storybook/pages/17-theming-colors-and-fonts",
+  "slug": "/storybook/pages/theming-colors-and-fonts/custom-fonts-and-typography",
+  "permalink": "/devbible/docs/storybook/pages/theming-colors-and-fonts/custom-fonts-and-typography",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Storybook Custom Fonts & Typography",
+    "sidebar_label": "Storybook Custom Fonts & Typography",
+    "sidebar_position": 2
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Storybook Colors",
+    "permalink": "/devbible/docs/storybook/pages/theming-colors-and-fonts/global-colors-themes-and-tokens"
+  }
+}

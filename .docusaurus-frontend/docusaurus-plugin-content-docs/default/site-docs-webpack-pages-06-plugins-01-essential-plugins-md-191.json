@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/plugins/essential-plugins",
+  "title": "Plugins In-Depth: The Essential Build-Extension Toolkit",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/06-plugins/01-essential-plugins.md",
+  "sourceDirName": "webpack/pages/06-plugins",
+  "slug": "/webpack/pages/plugins/essential-plugins",
+  "permalink": "/devbible/docs/webpack/pages/plugins/essential-plugins",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Plugins In-Depth: The Essential Build-Extension Toolkit",
+    "sidebar_label": "Plugins In-Depth",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Asset Modules (Webpack 5+)",
+    "permalink": "/devbible/docs/webpack/pages/asset-modules/built-in-asset-types"
+  },
+  "next": {
+    "title": "Code Splitting",
+    "permalink": "/devbible/docs/webpack/pages/code-splitting/splitting-strategies"
+  }
+}

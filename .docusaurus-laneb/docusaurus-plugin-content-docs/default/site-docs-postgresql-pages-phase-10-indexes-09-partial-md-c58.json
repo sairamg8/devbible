@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/partial",
+  "title": "Partial indexes",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/09-partial.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/partial",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/partial",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Partial indexes",
+    "sidebar_label": "09 · Partial indexes",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · Index-only scans",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/index-only"
+  },
+  "next": {
+    "title": "10 · Expression indexes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/expression"
+  }
+}

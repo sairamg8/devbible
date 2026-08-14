@@ -1,0 +1,28 @@
+{
+  "id": "vite/pages/plugin-system/plugin-api",
+  "title": "Plugin System: Rollup Compatibility, Vite-Specific Hooks & Ordering",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/08-plugin-system/01-plugin-api.md",
+  "sourceDirName": "vite/pages/08-plugin-system",
+  "slug": "/vite/pages/plugin-system/plugin-api",
+  "permalink": "/devbible/docs/vite/pages/plugin-system/plugin-api",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Plugin System: Rollup Compatibility, Vite-Specific Hooks & Ordering",
+    "sidebar_label": "Plugin System",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Env Variables & Modes",
+    "permalink": "/devbible/docs/vite/pages/env-variables-and-modes/environment-system"
+  },
+  "next": {
+    "title": "CSS Handling",
+    "permalink": "/devbible/docs/vite/pages/css-handling/styling-pipeline"
+  }
+}

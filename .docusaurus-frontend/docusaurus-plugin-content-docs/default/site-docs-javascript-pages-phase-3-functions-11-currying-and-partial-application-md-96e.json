@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/currying-and-partial-application",
+  "title": "11 · Currying and partial application",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-3-functions/11-currying-and-partial-application.md",
+  "sourceDirName": "javascript/pages/phase-3-functions",
+  "slug": "/javascript/pages/phase-3-functions/currying-and-partial-application",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/currying-and-partial-application",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "11 · Currying and partial application",
+    "sidebar_label": "11 · Currying and partial application",
+    "sidebar_position": 11
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "10 · Debounce and throttle",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/debounce-and-throttle"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/"
+  }
+}

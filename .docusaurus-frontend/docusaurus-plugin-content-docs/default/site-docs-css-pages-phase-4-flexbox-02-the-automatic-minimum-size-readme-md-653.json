@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/the-automatic-minimum-size/README",
+  "title": "The automatic minimum size",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/02-the-automatic-minimum-size/README.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/02-the-automatic-minimum-size",
+  "slug": "/css/pages/phase-4-flexbox/the-automatic-minimum-size/",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-automatic-minimum-size/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "The automatic minimum size",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "03 · The alignment stage",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/the-alignment-stage"
+  },
+  "next": {
+    "title": "01 · Why items refuse to shrink",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-automatic-minimum-size/why-items-refuse-to-shrink"
+  }
+}

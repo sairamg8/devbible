@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-6-container-queries/README",
+  "title": "Phase 6 — Container queries and intrinsic responsive",
+  "description": "Verified: 2026-08-14 against MDN and the W3C CSS Containment Level 3",
+  "source": "@site/docs/css/pages/phase-6-container-queries/README.md",
+  "sourceDirName": "css/pages/phase-6-container-queries",
+  "slug": "/css/pages/phase-6-container-queries/",
+  "permalink": "/devbible/docs/css/pages/phase-6-container-queries/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 6 — Container queries and intrinsic responsive",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "10 · Grid vs flexbox vs flow",
+    "permalink": "/devbible/docs/css/pages/phase-5-grid/grid-vs-flexbox-vs-flow"
+  },
+  "next": {
+    "title": "01 · Container queries",
+    "permalink": "/devbible/docs/css/pages/phase-6-container-queries/container-queries"
+  }
+}

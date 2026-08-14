@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-1-routing/params-and-query/README",
+  "title": "Params and query",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-1-routing/02-params-and-query/README.md",
+  "sourceDirName": "expressjs/pages/phase-1-routing/02-params-and-query",
+  "slug": "/expressjs/pages/phase-1-routing/params-and-query/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/params-and-query/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Params and query",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · 405 and method semantics",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/http-methods/03-405-and-method-semantics"
+  },
+  "next": {
+    "title": "01 · Path params",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/params-and-query/path-params"
+  }
+}

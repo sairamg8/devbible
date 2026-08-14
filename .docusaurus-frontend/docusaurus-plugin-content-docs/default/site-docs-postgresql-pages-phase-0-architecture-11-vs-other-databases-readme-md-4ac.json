@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/vs-other-databases/README",
+  "title": "PostgreSQL vs MySQL vs SQLite",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/11-vs-other-databases/README.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture/11-vs-other-databases",
+  "slug": "/postgresql/pages/phase-0-architecture/vs-other-databases/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/vs-other-databases/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "PostgreSQL vs MySQL vs SQLite",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "10 · Version policy",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/version-policy"
+  },
+  "next": {
+    "title": "01 · Outdated folklore",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/vs-other-databases/outdated-folklore"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/sort/stability-and-mutation",
+  "title": "06.2 · Stability, mutation and `toSorted`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/06-sort/02-stability-and-mutation.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/06-sort",
+  "slug": "/javascript/pages/phase-5-built-in-library/sort/stability-and-mutation",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/stability-and-mutation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "06.2 · Stability, mutation and `toSorted`",
+    "sidebar_label": "02 · Stability and mutation",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The default and comparator",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/the-default-and-the-comparator"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/string-methods/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/gist-brin-hash",
+  "title": "GiST, BRIN and hash",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/15-gist-brin-hash.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/gist-brin-hash",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/gist-brin-hash",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "GiST, BRIN and hash",
+    "sidebar_label": "15 · GiST, BRIN, hash",
+    "sidebar_position": 15
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "14 · pg_stat_statements",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/pg-stat-statements"
+  },
+  "next": {
+    "title": "16 · Statistics",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/statistics"
+  }
+}

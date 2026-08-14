@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/what-express-is/the-mapping-problem",
+  "title": "The mapping problem Express solves",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/01-what-express-is/01-the-mapping-problem.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/01-what-express-is",
+  "slug": "/expressjs/pages/phase-0-express-basics/what-express-is/the-mapping-problem",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/the-mapping-problem",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The mapping problem Express solves",
+    "sidebar_label": "01 · The mapping problem",
+    "sidebar_position": 1
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/"
+  },
+  "next": {
+    "title": "02 · The app is a function",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/the-app-is-a-function"
+  }
+}

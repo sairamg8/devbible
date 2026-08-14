@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/shape-sql-vs-js",
+  "title": "Shaping the response in SQL vs in JavaScript",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/15-shape-sql-vs-js.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud",
+  "slug": "/postgresql/pages/phase-9-api-crud/shape-sql-vs-js",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/shape-sql-vs-js",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Shaping the response in SQL vs in JavaScript",
+    "sidebar_label": "15 · Shape in SQL vs JS",
+    "sidebar_position": 15
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "14 · SELECT FOR UPDATE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/for-update"
+  },
+  "next": {
+    "title": "16 · Testing against real PG",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/testing-real-pg"
+  }
+}

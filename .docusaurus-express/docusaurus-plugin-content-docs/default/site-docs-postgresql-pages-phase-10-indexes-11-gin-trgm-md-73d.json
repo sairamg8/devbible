@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/gin-trgm",
+  "title": "GIN for jsonb, arrays and full text; pg_trgm for LIKE",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/11-gin-trgm.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/gin-trgm",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/gin-trgm",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "GIN for jsonb, arrays and full text; pg_trgm for LIKE",
+    "sidebar_label": "11 · GIN and trigrams",
+    "sidebar_position": 11
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "10 · Expression indexes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/expression"
+  },
+  "next": {
+    "title": "12 · CONCURRENTLY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/concurrently"
+  }
+}

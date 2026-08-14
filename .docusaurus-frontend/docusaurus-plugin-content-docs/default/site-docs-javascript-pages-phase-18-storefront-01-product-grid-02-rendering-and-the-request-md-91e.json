@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/product-grid/rendering-and-the-request",
+  "title": "01.2 · Rendering and the request",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/01-product-grid/02-rendering-and-the-request.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/01-product-grid",
+  "slug": "/javascript/pages/phase-18-storefront/product-grid/rendering-and-the-request",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/rendering-and-the-request",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "01.2 · Rendering and the request",
+    "sidebar_label": "02 · Rendering and the request",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · URL as state",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/url-as-state"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/render-order",
+  "title": "Render order",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-3-state/12-render-order.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/render-order",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/render-order",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Render order",
+    "sidebar_label": "12 · Render order",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · Bailing out",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/bailing-out"
+  },
+  "next": {
+    "title": "13 · The update queue",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/the-update-queue"
+  }
+}

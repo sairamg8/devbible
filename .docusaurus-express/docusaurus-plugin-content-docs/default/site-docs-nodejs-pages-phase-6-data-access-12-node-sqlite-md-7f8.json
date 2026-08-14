@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-6-data-access/node-sqlite",
+  "title": "node:sqlite — SQL with zero setup",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-6-data-access/12-node-sqlite.md",
+  "sourceDirName": "nodejs/pages/phase-6-data-access",
+  "slug": "/nodejs/pages/phase-6-data-access/node-sqlite",
+  "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/node-sqlite",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "node:sqlite — SQL with zero setup",
+    "sidebar_label": "12 · node:sqlite",
+    "sidebar_position": 12
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "11 · Migrations as code",
+    "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/migrations"
+  },
+  "next": {
+    "title": "13 · Prisma and Drizzle",
+    "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/prisma-drizzle"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-2-operators/logical-operators",
+  "title": "03 · Logical operators return operands",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-2-operators/03-logical-operators.md",
+  "sourceDirName": "javascript/pages/phase-2-operators",
+  "slug": "/javascript/pages/phase-2-operators/logical-operators",
+  "permalink": "/devbible/docs/javascript/pages/phase-2-operators/logical-operators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · Logical operators return operands",
+    "sidebar_label": "03 · Logical operators",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Assignment",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/assignment"
+  },
+  "next": {
+    "title": "04 · Optional chaining",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/optional-chaining"
+  }
+}

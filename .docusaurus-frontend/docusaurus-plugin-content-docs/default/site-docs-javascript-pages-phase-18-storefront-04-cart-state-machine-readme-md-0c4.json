@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/cart-state-machine/README",
+  "title": "04 · The cart as a state machine",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/04-cart-state-machine/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/04-cart-state-machine",
+  "slug": "/javascript/pages/phase-18-storefront/cart-state-machine/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/cart-state-machine/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "04 · The cart as a state machine",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Failing well",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/failing-well"
+  },
+  "next": {
+    "title": "01 · The state machine",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/cart-state-machine/the-state-machine"
+  }
+}

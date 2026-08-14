@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/async-await/always-a-promise",
+  "title": "07.1 · An async function always returns a promise",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/07-async-await/01-always-a-promise.md",
+  "sourceDirName": "javascript/pages/phase-7-async/07-async-await",
+  "slug": "/javascript/pages/phase-7-async/async-await/always-a-promise",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/always-a-promise",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "07.1 · An async function always returns a promise",
+    "sidebar_label": "01 · Always a promise",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/"
+  },
+  "next": {
+    "title": "02 · Where it suspends",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/where-it-suspends"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/what-css-is",
+  "title": "What CSS is",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/01-what-css-is.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/what-css-is",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/what-css-is",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What CSS is",
+    "sidebar_label": "01 · What CSS is",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/"
+  },
+  "next": {
+    "title": "02 · The rendering pipeline",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/the-rendering-pipeline"
+  }
+}

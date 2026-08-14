@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-16-dynamic-programming/memoization/README",
+  "title": "02 · Memoization, top-down",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-16-dynamic-programming/02-memoization/README.md",
+  "sourceDirName": "javascript/pages/phase-16-dynamic-programming/02-memoization",
+  "slug": "/javascript/pages/phase-16-dynamic-programming/memoization/",
+  "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/memoization/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Memoization, top-down",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Spotting the state",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/spotting-the-state"
+  },
+  "next": {
+    "title": "01 · The transformation",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/memoization/the-transformation"
+  }
+}

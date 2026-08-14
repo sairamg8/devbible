@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/call-apply-bind/call-and-apply",
+  "title": "02.1 · call and apply",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/02-call-apply-bind/01-call-and-apply.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/02-call-apply-bind",
+  "slug": "/javascript/pages/phase-17-machine-coding/call-apply-bind/call-and-apply",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/call-and-apply",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · call and apply",
+    "sidebar_label": "01 · call and apply",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/"
+  },
+  "next": {
+    "title": "02 · bind",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/call-apply-bind/bind"
+  }
+}

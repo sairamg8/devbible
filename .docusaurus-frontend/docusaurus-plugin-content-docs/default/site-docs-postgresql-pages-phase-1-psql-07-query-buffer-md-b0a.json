@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/query-buffer",
+  "title": "The query buffer and the editor",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/07-query-buffer.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/query-buffer",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/query-buffer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "The query buffer and the editor",
+    "sidebar_label": "07 · Query buffer",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · Scripting",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/scripting"
+  },
+  "next": {
+    "title": "08 · Variables",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/variables"
+  }
+}

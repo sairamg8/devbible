@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/sync-vs-async/one-thread",
+  "title": "01.1 · One thread, and what runs elsewhere",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/01-sync-vs-async/01-one-thread.md",
+  "sourceDirName": "javascript/pages/phase-7-async/01-sync-vs-async",
+  "slug": "/javascript/pages/phase-7-async/sync-vs-async/one-thread",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/one-thread",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · One thread, and what runs elsewhere",
+    "sidebar_label": "01 · One thread",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/the-event-loop/"
+  }
+}

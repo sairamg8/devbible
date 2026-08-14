@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/selecting-elements/README",
+  "title": "02 · Selecting elements",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-9-dom/02-selecting-elements/README.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/02-selecting-elements",
+  "slug": "/javascript/pages/phase-9-dom/selecting-elements/",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/selecting-elements/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Selecting elements",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · A tree of nodes",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/what-the-dom-is/a-tree-of-nodes"
+  },
+  "next": {
+    "title": "01 · The selector methods",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/selecting-elements/the-selector-methods"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/function-components/what-makes-a-component",
+  "title": "What makes a function a component",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/01-function-components/01-what-makes-a-component.md",
+  "sourceDirName": "react/pages/phase-2-components/01-function-components",
+  "slug": "/react/pages/phase-2-components/function-components/what-makes-a-component",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/what-makes-a-component",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What makes a function a component",
+    "sidebar_label": "01 · What makes a component",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/"
+  },
+  "next": {
+    "title": "02 · Identity and nesting",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/identity-and-nesting"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/cookies-sessions-wireup",
+  "title": "Cookies and session wire-up",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/05-cookies-sessions-wireup.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz",
+  "slug": "/expressjs/pages/phase-8-validation-authz/cookies-sessions-wireup",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/cookies-sessions-wireup",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Cookies and session wire-up",
+    "sidebar_label": "05 · Sessions wire-up",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Mounting and testing",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/mounting-and-testing"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/rbac-middleware/"
+  }
+}

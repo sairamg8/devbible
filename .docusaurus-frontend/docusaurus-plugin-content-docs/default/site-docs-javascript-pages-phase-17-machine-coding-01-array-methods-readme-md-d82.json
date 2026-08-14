@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/array-methods/README",
+  "title": "01 · map, filter, reduce, forEach on Array.prototype",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/01-array-methods/README.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/01-array-methods",
+  "slug": "/javascript/pages/phase-17-machine-coding/array-methods/",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/array-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · map, filter, reduce, forEach on Array.prototype",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/"
+  },
+  "next": {
+    "title": "01 · The callback contract",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/array-methods/the-callback-contract"
+  }
+}

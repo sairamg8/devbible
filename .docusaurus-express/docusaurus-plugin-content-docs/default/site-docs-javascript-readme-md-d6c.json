@@ -1,0 +1,24 @@
+{
+  "id": "javascript/README",
+  "title": "JavaScript — Syllabus",
+  "description": "The complete topic inventory for JavaScript, tiered for mastery in fullstack",
+  "source": "@site/docs/javascript/README.md",
+  "sourceDirName": "javascript",
+  "slug": "/javascript/",
+  "permalink": "/devbible/docs/javascript/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "JavaScript — Syllabus",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "next": {
+    "title": "1 · Language core",
+    "permalink": "/devbible/docs/javascript/syllabus/language-core"
+  }
+}

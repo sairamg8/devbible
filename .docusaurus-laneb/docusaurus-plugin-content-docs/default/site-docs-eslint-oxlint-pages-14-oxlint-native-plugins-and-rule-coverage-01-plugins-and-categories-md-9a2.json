@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/oxlint-native-plugins-and-rule-coverage/plugins-and-categories",
+  "title": "Oxlint Native Plugins & Category Strategy",
+  "description": "Covers syllabus §14.1 Built-in Plugin Families and §14.2 Categories Strategy.",
+  "source": "@site/docs/eslint-oxlint/pages/14-oxlint-native-plugins-and-rule-coverage/01-plugins-and-categories.md",
+  "sourceDirName": "eslint-oxlint/pages/14-oxlint-native-plugins-and-rule-coverage",
+  "slug": "/eslint-oxlint/pages/oxlint-native-plugins-and-rule-coverage/plugins-and-categories",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-native-plugins-and-rule-coverage/plugins-and-categories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Oxlint Native Plugins & Category Strategy",
+    "sidebar_label": "Oxlint Native Plugins & Category Strategy",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "Oxlint Install, CLI & Config Schema",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-installation-cli-and-config-files/install-cli-and-config-schema"
+  },
+  "next": {
+    "title": "Oxlint Type-Aware Linting & Multi-File Ana",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-type-aware-linting-and-multi-file-analysis/type-aware-and-multi-file"
+  }
+}

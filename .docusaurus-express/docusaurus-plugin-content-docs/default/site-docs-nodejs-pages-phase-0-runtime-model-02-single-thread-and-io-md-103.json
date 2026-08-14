@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-0-runtime-model/single-thread-and-io",
+  "title": "Single-threaded JavaScript, multi-threaded I/O",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-0-runtime-model/02-single-thread-and-io.md",
+  "sourceDirName": "nodejs/pages/phase-0-runtime-model",
+  "slug": "/nodejs/pages/phase-0-runtime-model/single-thread-and-io",
+  "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/single-thread-and-io",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Single-threaded JavaScript, multi-threaded I/O",
+    "sidebar_label": "02 · One thread, many I/O",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · What Node.js is",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/what-node-is"
+  },
+  "next": {
+    "title": "03 · Blocking the loop",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/blocking-the-event-loop"
+  }
+}

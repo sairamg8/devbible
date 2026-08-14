@@ -1,0 +1,28 @@
+{
+  "id": "css/syllabus/layout",
+  "title": "Part 2 — Values and layout",
+  "description": "Phases 3–5 · 21 topics · 17 Master",
+  "source": "@site/docs/css/syllabus/02-layout.md",
+  "sourceDirName": "css/syllabus",
+  "slug": "/css/syllabus/layout",
+  "permalink": "/devbible/docs/css/syllabus/layout",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Part 2 — Values and layout",
+    "sidebar_label": "2 · Values and layout",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "1 · How CSS resolves",
+    "permalink": "/devbible/docs/css/syllabus/how-css-works"
+  },
+  "next": {
+    "title": "3 · Adaptive and visual",
+    "permalink": "/devbible/docs/css/syllabus/adaptive-and-visual"
+  }
+}

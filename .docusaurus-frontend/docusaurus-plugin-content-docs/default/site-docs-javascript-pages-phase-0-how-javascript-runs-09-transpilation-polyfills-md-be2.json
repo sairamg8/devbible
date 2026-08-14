@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/transpilation-polyfills",
+  "title": "09 · Transpilation and polyfills",
+  "description": "Know",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/09-transpilation-polyfills.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/transpilation-polyfills",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/transpilation-polyfills",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "09 · Transpilation and polyfills",
+    "sidebar_label": "09 · Transpilation, polyfills",
+    "sidebar_position": 9
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "08 · Running and inspecting",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/running-and-inspecting"
+  },
+  "next": {
+    "title": "10 · Feature detection",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/feature-detection"
+  }
+}

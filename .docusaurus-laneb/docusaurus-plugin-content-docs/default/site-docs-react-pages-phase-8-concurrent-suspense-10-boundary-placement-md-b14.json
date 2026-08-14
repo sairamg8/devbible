@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/boundary-placement",
+  "title": "Suspense boundary placement",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/10-boundary-placement.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/boundary-placement",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/boundary-placement",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Suspense boundary placement",
+    "sidebar_label": "10 · Boundary placement",
+    "sidebar_position": 10
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "09 · Async transitions",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/async-transitions"
+  },
+  "next": {
+    "title": "11 · Suspense inside a transition",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspense-inside-a-transition"
+  }
+}

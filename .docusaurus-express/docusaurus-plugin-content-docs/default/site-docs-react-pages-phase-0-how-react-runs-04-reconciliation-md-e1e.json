@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/reconciliation",
+  "title": "Reconciliation",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/04-reconciliation.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/reconciliation",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/reconciliation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Reconciliation",
+    "sidebar_label": "04 · Reconciliation",
+    "sidebar_position": 4
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · Render, reconcile, commit",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/render-reconcile-commit"
+  },
+  "next": {
+    "title": "05 · Fiber",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/fiber"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/how-the-compiler-bails-out",
+  "title": "How the Compiler bails out",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-6-performance/09-how-the-compiler-bails-out.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/how-the-compiler-bails-out",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/how-the-compiler-bails-out",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "How the Compiler bails out",
+    "sidebar_label": "09 · How the Compiler bails out",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · Installing the Compiler",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/installing-the-compiler"
+  },
+  "next": {
+    "title": "10 · eslint-plugin-react-hooks",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/eslint-plugin-react-hooks"
+  }
+}

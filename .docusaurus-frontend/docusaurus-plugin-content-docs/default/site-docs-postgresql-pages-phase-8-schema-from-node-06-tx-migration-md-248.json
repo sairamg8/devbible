@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/tx-migration",
+  "title": "Wrapping a migration in BEGIN/COMMIT",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/06-tx-migration.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/tx-migration",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/tx-migration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Wrapping a migration in BEGIN/COMMIT",
+    "sidebar_label": "06 · Transactional migration",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · SQL in .sql files",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/sql-files"
+  },
+  "next": {
+    "title": "07 · IF NOT EXISTS",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/if-not-exists"
+  }
+}

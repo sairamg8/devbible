@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-15-algorithm-patterns/two-pointers/same-direction",
+  "title": "01.2 · Same direction",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-15-algorithm-patterns/01-two-pointers/02-same-direction.md",
+  "sourceDirName": "javascript/pages/phase-15-algorithm-patterns/01-two-pointers",
+  "slug": "/javascript/pages/phase-15-algorithm-patterns/two-pointers/same-direction",
+  "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/two-pointers/same-direction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "01.2 · Same direction",
+    "sidebar_label": "02 · Same direction",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Opposite ends",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/two-pointers/opposite-ends"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/"
+  }
+}

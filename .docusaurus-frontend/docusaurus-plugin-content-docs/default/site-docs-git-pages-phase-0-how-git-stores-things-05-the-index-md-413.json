@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-0-how-git-stores-things/the-index",
+  "title": "The index is a real file",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-0-how-git-stores-things/05-the-index.md",
+  "sourceDirName": "git/pages/phase-0-how-git-stores-things",
+  "slug": "/git/pages/phase-0-how-git-stores-things/the-index",
+  "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/the-index",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "The index is a real file",
+    "sidebar_label": "05 · The index",
+    "sidebar_position": 5
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "04 · The three trees",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/three-trees"
+  },
+  "next": {
+    "title": "06 · Refs and HEAD",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/refs-and-head"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/windows-intro/README",
+  "title": "Window functions",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/06-windows-intro/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/06-windows-intro",
+  "slug": "/postgresql/pages/phase-6-aggregation/windows-intro/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Window functions",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · The empty-array trap",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/json-agg/the-empty-array-trap"
+  },
+  "next": {
+    "title": "01 · OVER keeps the rows",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/over-vs-group-by"
+  }
+}

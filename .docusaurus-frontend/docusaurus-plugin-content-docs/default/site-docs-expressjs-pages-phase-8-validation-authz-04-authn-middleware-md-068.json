@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/authn-middleware",
+  "title": "Authentication middleware",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/04-authn-middleware.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz",
+  "slug": "/expressjs/pages/phase-8-validation-authz/authn-middleware",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Authentication middleware",
+    "sidebar_label": "04 · Authn middleware",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · One question only",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/one-question-only"
+  },
+  "next": {
+    "title": "05 · Sessions wire-up",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/cookies-sessions-wireup"
+  }
+}

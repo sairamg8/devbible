@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-2-narrowing/exhaustiveness",
+  "title": "Exhaustiveness with `never`",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-2-narrowing/06-exhaustiveness.md",
+  "sourceDirName": "typescript/pages/phase-2-narrowing",
+  "slug": "/typescript/pages/phase-2-narrowing/exhaustiveness",
+  "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/exhaustiveness",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Exhaustiveness with `never`",
+    "sidebar_label": "06 · Exhaustiveness",
+    "sidebar_position": 6
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "05 · Discriminated unions",
+    "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/discriminated-unions"
+  },
+  "next": {
+    "title": "07 · Type guards",
+    "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/type-guards"
+  }
+}

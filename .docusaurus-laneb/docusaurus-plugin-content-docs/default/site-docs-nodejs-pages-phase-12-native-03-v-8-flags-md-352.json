@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/v8-flags",
+  "title": "V8 flags — what they actually control",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-12-native/03-v8-flags.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/v8-flags",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/v8-flags",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "V8 flags — what they actually control",
+    "sidebar_label": "03 · V8 flags",
+    "sidebar_position": 3
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "02 · WebAssembly",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/webassembly"
+  },
+  "next": {
+    "title": "04 · Node-API",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/node-api"
+  }
+}

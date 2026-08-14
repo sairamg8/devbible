@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/controlled-vs-uncontrolled/README",
+  "title": "Controlled vs uncontrolled components",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/04-controlled-vs-uncontrolled/README.md",
+  "sourceDirName": "react/pages/phase-2-components/04-controlled-vs-uncontrolled",
+  "slug": "/react/pages/phase-2-components/controlled-vs-uncontrolled/",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/controlled-vs-uncontrolled/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Controlled vs uncontrolled components",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · Slots and children",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/composition/slots-and-children"
+  },
+  "next": {
+    "title": "01 · Who owns the value",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/controlled-vs-uncontrolled/who-owns-the-value"
+  }
+}

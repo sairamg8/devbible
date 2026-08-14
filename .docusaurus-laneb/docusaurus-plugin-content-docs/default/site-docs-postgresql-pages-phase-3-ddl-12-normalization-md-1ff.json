@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/normalization",
+  "title": "Normalization to 3NF, and when to denormalize on purpose",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/12-normalization.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/normalization",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/normalization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Normalization to 3NF, and when to denormalize on purpose",
+    "sidebar_label": "12 · Normalization",
+    "sidebar_position": 12
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "11 · Naming conventions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/naming"
+  },
+  "next": {
+    "title": "13 · DROP and CASCADE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/drop-cascade"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/ownership/status-and-proving-it",
+  "title": "Status, and proving it",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/07-ownership/03-status-and-proving-it.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz/07-ownership",
+  "slug": "/expressjs/pages/phase-8-validation-authz/ownership/status-and-proving-it",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/ownership/status-and-proving-it",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Status, and proving it",
+    "sidebar_label": "03 · Status, and proving it",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Scope the query",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/ownership/scope-the-query"
+  },
+  "next": {
+    "title": "08 · Tenant · logout",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/tenant-and-logout"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/hoisting-and-tdz/the-temporal-dead-zone",
+  "title": "08.3 · The temporal dead zone",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/08-hoisting-and-tdz/03-the-temporal-dead-zone.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/08-hoisting-and-tdz",
+  "slug": "/javascript/pages/phase-3-functions/hoisting-and-tdz/the-temporal-dead-zone",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/the-temporal-dead-zone",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "08.3 · The temporal dead zone",
+    "sidebar_label": "03 · The temporal dead zone",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · var and function declarations",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/var-and-function-declarations"
+  },
+  "next": {
+    "title": "04 · typeof and why it's a feature",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/typeof-and-why-its-a-feature"
+  }
+}

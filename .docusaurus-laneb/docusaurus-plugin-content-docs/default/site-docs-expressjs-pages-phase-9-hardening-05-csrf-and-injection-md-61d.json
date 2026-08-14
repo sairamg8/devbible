@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-9-hardening/csrf-and-injection",
+  "title": "CSRF and injection surfaces",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-9-hardening/05-csrf-and-injection.md",
+  "sourceDirName": "expressjs/pages/phase-9-hardening",
+  "slug": "/expressjs/pages/phase-9-hardening/csrf-and-injection",
+  "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/csrf-and-injection",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "CSRF and injection surfaces",
+    "sidebar_label": "05 · CSRF · injection",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Rate limiting",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/rate-limiting"
+  },
+  "next": {
+    "title": "06 · Timeouts · secrets",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/timeouts-and-secrets"
+  }
+}

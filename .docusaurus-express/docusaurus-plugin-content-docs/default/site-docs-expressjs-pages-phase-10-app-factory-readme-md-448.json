@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/README",
+  "title": "Phase 10 — Testable app and ops boundary",
+  "description": "Composition root for HTTP. Docker/Nginx depth lives in their syllabi.",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/README.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory",
+  "slug": "/expressjs/pages/phase-10-app-factory/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 10 — Testable app and ops boundary",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "06 · Timeouts · secrets",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/timeouts-and-secrets"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/"
+  }
+}

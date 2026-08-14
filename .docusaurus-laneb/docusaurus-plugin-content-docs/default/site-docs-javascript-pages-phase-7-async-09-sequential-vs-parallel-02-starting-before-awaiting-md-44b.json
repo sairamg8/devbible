@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/sequential-vs-parallel/starting-before-awaiting",
+  "title": "09.2 · Starting work before awaiting it",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/09-sequential-vs-parallel/02-starting-before-awaiting.md",
+  "sourceDirName": "javascript/pages/phase-7-async/09-sequential-vs-parallel",
+  "slug": "/javascript/pages/phase-7-async/sequential-vs-parallel/starting-before-awaiting",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/starting-before-awaiting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "09.2 · Starting work before awaiting it",
+    "sidebar_label": "02 · Starting before awaiting",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The accidental waterfall",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/the-accidental-waterfall"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/combinators/"
+  }
+}

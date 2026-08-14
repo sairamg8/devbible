@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/README",
+  "title": "Phase 6 — REST surface and API features",
+  "description": "Target: Express 5.2.1 on Node 24. Product surface clients depend on — Node",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/README.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface",
+  "slug": "/expressjs/pages/phase-6-rest-surface/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 6 — REST surface and API features",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Programmer errors and the fallback",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/every-error-that-arrives/programmer-errors-and-the-fallback"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/"
+  }
+}

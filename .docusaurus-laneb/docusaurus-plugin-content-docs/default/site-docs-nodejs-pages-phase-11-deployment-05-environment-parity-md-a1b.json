@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-11-deployment/environment-parity",
+  "title": "Environment parity — dev, staging, production",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-11-deployment/05-environment-parity.md",
+  "sourceDirName": "nodejs/pages/phase-11-deployment",
+  "slug": "/nodejs/pages/phase-11-deployment/environment-parity",
+  "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/environment-parity",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Environment parity — dev, staging, production",
+    "sidebar_label": "05 · Environment parity",
+    "sidebar_position": 5
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "04 · PID 1 and signals",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/pid1-and-signals"
+  },
+  "next": {
+    "title": "06 · Reverse proxy",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/reverse-proxy"
+  }
+}

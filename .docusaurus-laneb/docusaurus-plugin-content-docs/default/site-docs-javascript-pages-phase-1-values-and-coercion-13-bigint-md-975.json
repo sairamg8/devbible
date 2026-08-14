@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/bigint",
+  "title": "13 · `BigInt`",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/13-bigint.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/bigint",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/bigint",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "13 · `BigInt`",
+    "sidebar_label": "13 · BigInt",
+    "sidebar_position": 13
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "12 · Symbol",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/symbol"
+  },
+  "next": {
+    "title": "14 · Value equality",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/value-equality"
+  }
+}

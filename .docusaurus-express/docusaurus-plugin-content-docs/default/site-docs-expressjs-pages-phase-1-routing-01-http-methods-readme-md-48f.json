@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-1-routing/http-methods/README",
+  "title": "HTTP methods",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-1-routing/01-http-methods/README.md",
+  "sourceDirName": "expressjs/pages/phase-1-routing/01-http-methods",
+  "slug": "/expressjs/pages/phase-1-routing/http-methods/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/http-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "HTTP methods",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/"
+  },
+  "next": {
+    "title": "01 · The verb table",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/http-methods/the-verb-table"
+  }
+}

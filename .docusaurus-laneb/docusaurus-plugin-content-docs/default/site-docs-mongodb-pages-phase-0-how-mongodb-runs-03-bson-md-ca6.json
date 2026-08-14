@@ -1,0 +1,19 @@
+{
+  "id": "mongodb/pages/phase-0-how-mongodb-runs/bson",
+  "title": "BSON",
+  "description": "Master",
+  "source": "@site/docs/mongodb/pages/phase-0-how-mongodb-runs/03-bson.md",
+  "sourceDirName": "mongodb/pages/phase-0-how-mongodb-runs",
+  "slug": "/mongodb/pages/phase-0-how-mongodb-runs/bson",
+  "permalink": "/devbible/docs/mongodb/pages/phase-0-how-mongodb-runs/bson",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "BSON",
+    "sidebar_label": "03 · BSON",
+    "sidebar_position": 3
+  }
+}

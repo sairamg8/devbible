@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/suspenselist",
+  "title": "⚠ SuspenseList",
+  "description": "When Needed",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/18-suspenselist.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/suspenselist",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspenselist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "title": "⚠ SuspenseList",
+    "sidebar_label": "18 · ⚠ SuspenseList",
+    "sidebar_position": 18
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "17 · ⚠ ViewTransition",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/view-transitions"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/"
+  }
+}

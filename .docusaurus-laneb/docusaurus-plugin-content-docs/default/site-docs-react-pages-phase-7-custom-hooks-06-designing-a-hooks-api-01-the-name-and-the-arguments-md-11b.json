@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/designing-a-hooks-api/the-name-and-the-arguments",
+  "title": "The name and the arguments",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/06-designing-a-hooks-api/01-the-name-and-the-arguments.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/06-designing-a-hooks-api",
+  "slug": "/react/pages/phase-7-custom-hooks/designing-a-hooks-api/the-name-and-the-arguments",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/designing-a-hooks-api/the-name-and-the-arguments",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The name and the arguments",
+    "sidebar_label": "01 · The name and the arguments",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/designing-a-hooks-api/"
+  },
+  "next": {
+    "title": "02 · The return value and the seam",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/designing-a-hooks-api/the-return-value-and-the-seam"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/the-event-loop/README",
+  "title": "02 · The event loop",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/02-the-event-loop/README.md",
+  "sourceDirName": "javascript/pages/phase-7-async/02-the-event-loop",
+  "slug": "/javascript/pages/phase-7-async/the-event-loop/",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/the-event-loop/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · The event loop",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · One thread",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/one-thread"
+  },
+  "next": {
+    "title": "01 · Stack, queue, heap",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/the-event-loop/stack-queue-heap"
+  }
+}

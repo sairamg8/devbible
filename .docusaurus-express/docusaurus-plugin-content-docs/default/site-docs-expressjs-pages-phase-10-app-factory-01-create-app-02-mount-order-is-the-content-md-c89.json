@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/create-app/mount-order-is-the-content",
+  "title": "Mount order is the content",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/01-create-app/02-mount-order-is-the-content.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory/01-create-app",
+  "slug": "/expressjs/pages/phase-10-app-factory/create-app/mount-order-is-the-content",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/mount-order-is-the-content",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Mount order is the content",
+    "sidebar_label": "02 · Mount order is the content",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · A function of its dependencies",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/a-function-of-its-dependencies"
+  },
+  "next": {
+    "title": "03 · What it buys",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/what-it-buys"
+  }
+}

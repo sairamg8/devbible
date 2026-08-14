@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/pgbouncer/node-and-observing",
+  "title": "07.4 · The Node side, observing, and alternatives",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/07-pgbouncer/04-node-and-observing.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/07-pgbouncer",
+  "slug": "/postgresql/pages/phase-13-ops/pgbouncer/node-and-observing",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/node-and-observing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "07.4 · The Node side, observing, and alternatives",
+    "sidebar_label": "04 · Node, observing, alternatives",
+    "sidebar_position": 4
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Exhaustion & sizing",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/exhaustion-and-sizing"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/"
+  }
+}

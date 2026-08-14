@@ -1,0 +1,24 @@
+{
+  "id": "postgresql/README",
+  "title": "PostgreSQL — Syllabus",
+  "description": "Verified: 2026-08 against PostgreSQL 18.4 from Node 24.19.0 with pg.",
+  "source": "@site/docs/postgresql/README.md",
+  "sourceDirName": "postgresql",
+  "slug": "/postgresql/",
+  "permalink": "/devbible/docs/postgresql/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "PostgreSQL — Syllabus",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "next": {
+    "title": "1 · Foundations",
+    "permalink": "/devbible/docs/postgresql/syllabus/foundations"
+  }
+}

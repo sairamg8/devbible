@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/inner-join/fan-out-and-aggregates",
+  "title": "Fan-out and aggregates",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/01-inner-join/02-fan-out-and-aggregates.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins/01-inner-join",
+  "slug": "/postgresql/pages/phase-5-joins/inner-join/fan-out-and-aggregates",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/inner-join/fan-out-and-aggregates",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Fan-out and aggregates",
+    "sidebar_label": "02 · Fan-out",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Matching pairs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/inner-join/matching-pairs"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/left-join/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/lazy-loading",
+  "title": "Lazy loading components",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-6-performance/12-lazy-loading.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/lazy-loading",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/lazy-loading",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Lazy loading components",
+    "sidebar_label": "12 · Lazy loading components",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · Do you still write useMemo?",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/do-you-still-write-usememo"
+  },
+  "next": {
+    "title": "13 · Moving state down",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/moving-state-down"
+  }
+}

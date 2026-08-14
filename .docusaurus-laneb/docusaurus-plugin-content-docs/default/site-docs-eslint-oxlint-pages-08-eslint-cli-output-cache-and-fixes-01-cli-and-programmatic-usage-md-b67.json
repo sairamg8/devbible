@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/eslint-cli-output-cache-and-fixes/cli-and-programmatic-usage",
+  "title": "ESLint CLI, Output, Cache, Fixes & Programmatic API",
+  "description": "Covers syllabus §8.1 CLI Essentials and §8.2 Programmatic & Advanced Usage.",
+  "source": "@site/docs/eslint-oxlint/pages/08-eslint-cli-output-cache-and-fixes/01-cli-and-programmatic-usage.md",
+  "sourceDirName": "eslint-oxlint/pages/08-eslint-cli-output-cache-and-fixes",
+  "slug": "/eslint-oxlint/pages/eslint-cli-output-cache-and-fixes/cli-and-programmatic-usage",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-cli-output-cache-and-fixes/cli-and-programmatic-usage",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "ESLint CLI, Output, Cache, Fixes & Programmatic API",
+    "sidebar_label": "ESLint CLI, Output, Cache, Fixes & Program",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "typescript-eslint",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/typescript-eslint/architecture-type-aware-and-stacks"
+  },
+  "next": {
+    "title": "Suppressions, Ignores & Lint Governance",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-suppressions-ignores-and-governance/disables-ignores-and-governance"
+  }
+}

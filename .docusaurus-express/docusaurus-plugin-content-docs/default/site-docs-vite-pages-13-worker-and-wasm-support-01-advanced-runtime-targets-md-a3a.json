@@ -1,0 +1,28 @@
+{
+  "id": "vite/pages/worker-and-wasm-support/advanced-runtime-targets",
+  "title": "Worker & WASM Support: Native Web Worker Bundling & WebAssembly Imports",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/13-worker-and-wasm-support/01-advanced-runtime-targets.md",
+  "sourceDirName": "vite/pages/13-worker-and-wasm-support",
+  "slug": "/vite/pages/worker-and-wasm-support/advanced-runtime-targets",
+  "permalink": "/devbible/docs/vite/pages/worker-and-wasm-support/advanced-runtime-targets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Worker & WASM Support: Native Web Worker Bundling & WebAssembly Imports",
+    "sidebar_label": "Worker & WASM Support",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Path Resolution & Aliases",
+    "permalink": "/devbible/docs/vite/pages/path-resolution-and-aliases/resolve-options"
+  },
+  "next": {
+    "title": "Testing Integration",
+    "permalink": "/devbible/docs/vite/pages/testing-integration/vitest-relationship"
+  }
+}

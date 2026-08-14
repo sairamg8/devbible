@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-0-runtime-model/globals",
+  "title": "Globals worth knowing",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-0-runtime-model/06-globals.md",
+  "sourceDirName": "nodejs/pages/phase-0-runtime-model",
+  "slug": "/nodejs/pages/phase-0-runtime-model/globals",
+  "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/globals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Globals worth knowing",
+    "sidebar_label": "06 · Globals",
+    "sidebar_position": 6
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "05 · Node vs the browser",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/node-vs-browser"
+  },
+  "next": {
+    "title": "07 · Choosing a version",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/choosing-a-version"
+  }
+}

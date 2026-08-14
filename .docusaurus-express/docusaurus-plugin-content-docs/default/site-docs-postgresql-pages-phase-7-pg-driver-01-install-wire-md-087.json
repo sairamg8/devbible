@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/install-wire",
+  "title": "Installing and wiring pg",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/01-install-wire.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/install-wire",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/install-wire",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Installing and wiring pg",
+    "sidebar_label": "01 · Install and wire",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/"
+  },
+  "next": {
+    "title": "02 · Pool vs Client",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/pool-vs-client"
+  }
+}

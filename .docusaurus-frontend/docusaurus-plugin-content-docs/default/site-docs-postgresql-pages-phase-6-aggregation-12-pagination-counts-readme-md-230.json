@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/pagination-counts/README",
+  "title": "Counting for pagination",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/12-pagination-counts/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/12-pagination-counts",
+  "slug": "/postgresql/pages/phase-6-aggregation/pagination-counts/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/pagination-counts/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Counting for pagination",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · IN, EXISTS, NOT IN",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/subqueries/in-exists-and-not-in"
+  },
+  "next": {
+    "title": "01 · What \"total\" costs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/pagination-counts/what-total-costs"
+  }
+}

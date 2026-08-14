@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/es-modules/README",
+  "title": "01 · ES modules",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/01-es-modules/README.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/01-es-modules",
+  "slug": "/javascript/pages/phase-8-modules-errors/es-modules/",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · ES modules",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/"
+  },
+  "next": {
+    "title": "01 · import and export",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/import-and-export"
+  }
+}

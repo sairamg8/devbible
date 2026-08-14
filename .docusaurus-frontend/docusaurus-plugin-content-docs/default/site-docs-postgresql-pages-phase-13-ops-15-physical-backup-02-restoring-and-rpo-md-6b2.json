@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/physical-backup/restoring-and-rpo",
+  "title": "15.2 · Restoring, timelines and RPO/RTO",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/15-physical-backup/02-restoring-and-rpo.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/15-physical-backup",
+  "slug": "/postgresql/pages/phase-13-ops/physical-backup/restoring-and-rpo",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/physical-backup/restoring-and-rpo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "15.2 · Restoring, timelines and RPO/RTO",
+    "sidebar_label": "02 · Restoring & RPO/RTO",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Base backups & archiving",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/physical-backup/archiving"
+  },
+  "next": {
+    "title": "16 · Logical replication",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logical-replication"
+  }
+}

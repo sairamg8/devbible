@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/addons-ecosystem/actions-panel-in-depth",
+  "title": "Actions Panel: Callback Logging, Spies & Event Verification",
+  "description": "What you see: Bottom panel tab Actions on every story.",
+  "source": "@site/docs/storybook/pages/03-addons-ecosystem/02-actions-panel-in-depth.md",
+  "sourceDirName": "storybook/pages/03-addons-ecosystem",
+  "slug": "/storybook/pages/addons-ecosystem/actions-panel-in-depth",
+  "permalink": "/devbible/docs/storybook/pages/addons-ecosystem/actions-panel-in-depth",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Actions Panel: Callback Logging, Spies & Event Verification",
+    "sidebar_label": "Actions Panel",
+    "sidebar_position": 2
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Addons Ecosystem",
+    "permalink": "/devbible/docs/storybook/pages/addons-ecosystem/essential-addons"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/"
+  }
+}

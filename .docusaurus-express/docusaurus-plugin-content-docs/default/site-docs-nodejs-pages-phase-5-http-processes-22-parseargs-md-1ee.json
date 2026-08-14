@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/parseargs",
+  "title": "util.parseArgs",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/22-parseargs.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/parseargs",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/parseargs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "title": "util.parseArgs",
+    "sidebar_label": "22 · util.parseArgs",
+    "sidebar_position": 22
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "21 · IPC",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/ipc"
+  },
+  "next": {
+    "title": "23 · cluster",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/cluster"
+  }
+}

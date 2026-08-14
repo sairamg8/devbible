@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/children",
+  "title": "children",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-1-jsx/09-children.md",
+  "sourceDirName": "react/pages/phase-1-jsx",
+  "slug": "/react/pages/phase-1-jsx/children",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/children",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "children",
+    "sidebar_label": "09 · children",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · Fragments",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/fragments"
+  },
+  "next": {
+    "title": "10 · Spreading props",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/spreading-props"
+  }
+}

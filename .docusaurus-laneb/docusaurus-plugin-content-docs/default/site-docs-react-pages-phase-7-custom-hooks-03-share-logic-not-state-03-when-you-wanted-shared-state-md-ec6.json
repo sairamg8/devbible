@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/share-logic-not-state/when-you-wanted-shared-state",
+  "title": "When you actually wanted shared state",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/03-share-logic-not-state/03-when-you-wanted-shared-state.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/03-share-logic-not-state",
+  "slug": "/react/pages/phase-7-custom-hooks/share-logic-not-state/when-you-wanted-shared-state",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/when-you-wanted-shared-state",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "When you actually wanted shared state",
+    "sidebar_label": "03 · When you wanted shared state",
+    "sidebar_position": 3
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · The useLocalStorage trap",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/the-localstorage-trap"
+  },
+  "next": {
+    "title": "04 · State outside React",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/external-stores"
+  }
+}

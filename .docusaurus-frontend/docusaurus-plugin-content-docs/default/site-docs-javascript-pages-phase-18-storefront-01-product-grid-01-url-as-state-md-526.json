@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/product-grid/url-as-state",
+  "title": "01.1 · The URL as the single source of truth",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/01-product-grid/01-url-as-state.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/01-product-grid",
+  "slug": "/javascript/pages/phase-18-storefront/product-grid/url-as-state",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/url-as-state",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · The URL as the single source of truth",
+    "sidebar_label": "01 · URL as state",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/"
+  },
+  "next": {
+    "title": "02 · Rendering and the request",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/rendering-and-the-request"
+  }
+}

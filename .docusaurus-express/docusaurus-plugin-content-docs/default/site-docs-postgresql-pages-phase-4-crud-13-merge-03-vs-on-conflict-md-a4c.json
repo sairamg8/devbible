@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/merge/vs-on-conflict",
+  "title": "Against ON CONFLICT",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/13-merge/03-vs-on-conflict.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud/13-merge",
+  "slug": "/postgresql/pages/phase-4-crud/merge/vs-on-conflict",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/vs-on-conflict",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Against ON CONFLICT",
+    "sidebar_label": "03 · vs ON CONFLICT",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · RETURNING",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/returning-and-merge-action"
+  },
+  "next": {
+    "title": "14 · TRUNCATE vs DELETE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/truncate"
+  }
+}

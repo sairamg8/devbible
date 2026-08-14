@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/microtasks-vs-macrotasks/the-drain-order",
+  "title": "03.1 · The drain order",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/03-microtasks-vs-macrotasks/01-the-drain-order.md",
+  "sourceDirName": "javascript/pages/phase-7-async/03-microtasks-vs-macrotasks",
+  "slug": "/javascript/pages/phase-7-async/microtasks-vs-macrotasks/the-drain-order",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/the-drain-order",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · The drain order",
+    "sidebar_label": "01 · The drain order",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/"
+  },
+  "next": {
+    "title": "02 · Using microtasks",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/using-microtasks"
+  }
+}

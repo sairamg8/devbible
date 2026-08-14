@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/fetch-wrapper/retries",
+  "title": "03.6 · Retries",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/03-fetch-wrapper/06-retries.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/03-fetch-wrapper",
+  "slug": "/javascript/pages/phase-11-network-storage/fetch-wrapper/retries",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/retries",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "03.6 · Retries",
+    "sidebar_label": "06 · Retries",
+    "sidebar_position": 6
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "05 · Timeouts and cancellation",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/timeouts-and-cancellation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/url-and-searchparams/"
+  }
+}

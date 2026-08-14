@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/merge/returning-and-merge-action",
+  "title": "RETURNING and merge_action()",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/13-merge/02-returning-and-merge-action.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud/13-merge",
+  "slug": "/postgresql/pages/phase-4-crud/merge/returning-and-merge-action",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/returning-and-merge-action",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "RETURNING and merge_action()",
+    "sidebar_label": "02 · RETURNING",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Three actions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/three-actions"
+  },
+  "next": {
+    "title": "03 · vs ON CONFLICT",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/vs-on-conflict"
+  }
+}

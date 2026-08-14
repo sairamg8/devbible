@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/syllabus/foundations",
+  "title": "Part 1 — Foundations",
+  "description": "Phases 0–2 · Runtime model, modules, async and the event loop",
+  "source": "@site/docs/nodejs/syllabus/01-foundations.md",
+  "sourceDirName": "nodejs/syllabus",
+  "slug": "/nodejs/syllabus/foundations",
+  "permalink": "/devbible/docs/nodejs/syllabus/foundations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Part 1 — Foundations",
+    "sidebar_label": "1 · Foundations",
+    "sidebar_position": 1
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/"
+  },
+  "next": {
+    "title": "2 · Core I/O",
+    "permalink": "/devbible/docs/nodejs/syllabus/core-io"
+  }
+}

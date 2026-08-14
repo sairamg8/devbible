@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/abortcontroller",
+  "title": "AbortController and cancellation",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/19-abortcontroller.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/abortcontroller",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/abortcontroller",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "title": "AbortController and cancellation",
+    "sidebar_label": "19 · AbortController",
+    "sidebar_position": 19
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "18 · Async iterators",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-iterators"
+  },
+  "next": {
+    "title": "20 · AsyncLocalStorage",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/asynclocalstorage"
+  }
+}

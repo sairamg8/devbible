@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/optimistic-updates/README",
+  "title": "06 · Optimistic updates with rollback",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/06-optimistic-updates/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/06-optimistic-updates",
+  "slug": "/javascript/pages/phase-18-storefront/optimistic-updates/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/optimistic-updates/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "06 · Optimistic updates with rollback",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Rounding and order",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/money-and-rounding/rounding-and-order"
+  },
+  "next": {
+    "title": "01 · Apply and reconcile",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/optimistic-updates/apply-and-reconcile"
+  }
+}

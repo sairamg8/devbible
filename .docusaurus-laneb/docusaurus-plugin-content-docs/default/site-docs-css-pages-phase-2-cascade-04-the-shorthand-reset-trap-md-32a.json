@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-2-cascade/the-shorthand-reset-trap",
+  "title": "The shorthand reset trap",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-2-cascade/04-the-shorthand-reset-trap.md",
+  "sourceDirName": "css/pages/phase-2-cascade",
+  "slug": "/css/pages/phase-2-cascade/the-shorthand-reset-trap",
+  "permalink": "/devbible/docs/css/pages/phase-2-cascade/the-shorthand-reset-trap",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "The shorthand reset trap",
+    "sidebar_label": "04 · The shorthand reset trap",
+    "sidebar_position": 4
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "03 · Specificity",
+    "permalink": "/devbible/docs/css/pages/phase-2-cascade/specificity-counted-properly"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/"
+  }
+}

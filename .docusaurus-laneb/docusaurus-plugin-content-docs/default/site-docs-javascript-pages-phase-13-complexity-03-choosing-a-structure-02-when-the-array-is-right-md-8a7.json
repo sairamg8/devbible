@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-13-complexity/choosing-a-structure/when-the-array-is-right",
+  "title": "03.2 · When the array is right",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-13-complexity/03-choosing-a-structure/02-when-the-array-is-right.md",
+  "sourceDirName": "javascript/pages/phase-13-complexity/03-choosing-a-structure",
+  "slug": "/javascript/pages/phase-13-complexity/choosing-a-structure/when-the-array-is-right",
+  "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/choosing-a-structure/when-the-array-is-right",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · When the array is right",
+    "sidebar_label": "02 · When the array is right",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The decision table",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/choosing-a-structure/the-decision-table"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/"
+  }
+}

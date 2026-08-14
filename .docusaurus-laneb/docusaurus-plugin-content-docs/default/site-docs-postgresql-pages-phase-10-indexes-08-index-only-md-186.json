@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/index-only",
+  "title": "Index-only scans, INCLUDE and the visibility map",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/08-index-only.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/index-only",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/index-only",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Index-only scans, INCLUDE and the visibility map",
+    "sidebar_label": "08 · Index-only scans",
+    "sidebar_position": 8
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "07 · BUFFERS",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/explain-buffers"
+  },
+  "next": {
+    "title": "09 · Partial indexes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/partial"
+  }
+}

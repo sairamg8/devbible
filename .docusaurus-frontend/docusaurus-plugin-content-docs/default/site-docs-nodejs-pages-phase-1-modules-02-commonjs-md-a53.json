@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/commonjs",
+  "title": "CommonJS — require and the module cache",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/02-commonjs.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/commonjs",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/commonjs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "CommonJS — require and the module cache",
+    "sidebar_label": "02 · CommonJS",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · ESM",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/esm"
+  },
+  "next": {
+    "title": "03 · The node: prefix",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/node-prefix"
+  }
+}

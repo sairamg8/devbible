@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/not-re-subscribing",
+  "title": "Not re-subscribing",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/08-hooks-that-wrap-effects/02-not-re-subscribing.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/08-hooks-that-wrap-effects",
+  "slug": "/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/not-re-subscribing",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/not-re-subscribing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Not re-subscribing",
+    "sidebar_label": "02 · Not re-subscribing",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Dependencies across the boundary",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/dependencies-across-the-boundary"
+  },
+  "next": {
+    "title": "09 · Conditional hooks",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/conditional-hooks"
+  }
+}

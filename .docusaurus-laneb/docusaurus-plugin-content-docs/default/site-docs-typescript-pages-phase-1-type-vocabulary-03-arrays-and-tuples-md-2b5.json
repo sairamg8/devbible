@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/arrays-and-tuples",
+  "title": "Arrays and tuples",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/03-arrays-and-tuples.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/arrays-and-tuples",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/arrays-and-tuples",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Arrays and tuples",
+    "sidebar_label": "03 · Arrays and tuples",
+    "sidebar_position": 3
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "02 · Literal types and as const",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/literal-types-and-as-const"
+  },
+  "next": {
+    "title": "04 · Object types",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/object-types"
+  }
+}

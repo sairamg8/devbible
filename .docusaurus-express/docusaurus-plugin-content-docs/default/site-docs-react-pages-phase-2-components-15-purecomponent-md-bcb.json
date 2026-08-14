@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/purecomponent",
+  "title": "Component vs PureComponent and shouldComponentUpdate",
+  "description": "Know",
+  "source": "@site/docs/react/pages/phase-2-components/15-purecomponent.md",
+  "sourceDirName": "react/pages/phase-2-components",
+  "slug": "/react/pages/phase-2-components/purecomponent",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/purecomponent",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Component vs PureComponent and shouldComponentUpdate",
+    "sidebar_label": "15 · PureComponent",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · Lifecycle and hooks",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/class-components/lifecycle-and-hooks"
+  },
+  "next": {
+    "title": "16 · Element manipulation",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/element-manipulation"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/limit-offset",
+  "title": "LIMIT and OFFSET",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/03-limit-offset.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/limit-offset",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/limit-offset",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "LIMIT and OFFSET",
+    "sidebar_label": "03 · LIMIT / OFFSET",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · WHERE predicates",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/where-predicates"
+  },
+  "next": {
+    "title": "04 · INSERT",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/insert"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/immutable-updates/arrays-and-tools",
+  "title": "Arrays, and the tools",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-3-state/05-immutable-updates/02-arrays-and-tools.md",
+  "sourceDirName": "react/pages/phase-3-state/05-immutable-updates",
+  "slug": "/react/pages/phase-3-state/immutable-updates/arrays-and-tools",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/arrays-and-tools",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Arrays, and the tools",
+    "sidebar_label": "02 · Arrays and tools",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Objects and nesting",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/objects-and-nesting"
+  },
+  "next": {
+    "title": "06 · Derived state",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/derived-state"
+  }
+}

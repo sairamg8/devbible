@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/callbacks/the-pattern",
+  "title": "04.1 · The pattern",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/04-callbacks/01-the-pattern.md",
+  "sourceDirName": "javascript/pages/phase-7-async/04-callbacks",
+  "slug": "/javascript/pages/phase-7-async/callbacks/the-pattern",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/the-pattern",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "04.1 · The pattern",
+    "sidebar_label": "01 · The pattern",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/"
+  },
+  "next": {
+    "title": "02 · Error-first",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/error-first"
+  }
+}

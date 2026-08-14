@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/publishing",
+  "title": "Publishing a package",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/13-publishing.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/publishing",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/publishing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Publishing a package",
+    "sidebar_label": "13 · Publishing",
+    "sidebar_position": 13
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "12 · TypeScript natively",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/typescript-natively"
+  },
+  "next": {
+    "title": "14 · node:module",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/node-module-api"
+  }
+}

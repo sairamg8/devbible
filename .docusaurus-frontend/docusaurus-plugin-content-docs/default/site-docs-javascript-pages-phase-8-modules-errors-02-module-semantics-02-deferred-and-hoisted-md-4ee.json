@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/module-semantics/deferred-and-hoisted",
+  "title": "02.2 · Deferred and hoisted",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/02-module-semantics/02-deferred-and-hoisted.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/02-module-semantics",
+  "slug": "/javascript/pages/phase-8-modules-errors/module-semantics/deferred-and-hoisted",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/module-semantics/deferred-and-hoisted",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02.2 · Deferred and hoisted",
+    "sidebar_label": "02 · Deferred and hoisted",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Singletons and strict",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/module-semantics/singletons-and-strict"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/error-and-subclasses/"
+  }
+}

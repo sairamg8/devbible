@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/structural-pseudo-classes",
+  "title": "Structural pseudo-classes",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-1-selectors/07-structural-pseudo-classes.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/structural-pseudo-classes",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/structural-pseudo-classes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Structural pseudo-classes",
+    "sidebar_label": "07 · Structural pseudo-classes",
+    "sidebar_position": 7
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "06 · :has()",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/has"
+  },
+  "next": {
+    "title": "08 · State pseudo-classes",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/state-pseudo-classes"
+  }
+}

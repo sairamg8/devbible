@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/nesting",
+  "title": "CSS Nesting",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-1-selectors/12-nesting.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/nesting",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/nesting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "CSS Nesting",
+    "sidebar_label": "12 · Nesting",
+    "sidebar_position": 12
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "11 · :not(), :empty, :root",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/not-empty-root"
+  },
+  "next": {
+    "title": "13 · Styling hooks",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/styling-hooks"
+  }
+}

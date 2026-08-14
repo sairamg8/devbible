@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-12-browser-platform/devtools/the-console-api",
+  "title": "01.1 · The console API in full",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-12-browser-platform/01-devtools/01-the-console-api.md",
+  "sourceDirName": "javascript/pages/phase-12-browser-platform/01-devtools",
+  "slug": "/javascript/pages/phase-12-browser-platform/devtools/the-console-api",
+  "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/devtools/the-console-api",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · The console API in full",
+    "sidebar_label": "01 · The console API",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/devtools/"
+  },
+  "next": {
+    "title": "02 · The panels",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/devtools/the-panels"
+  }
+}

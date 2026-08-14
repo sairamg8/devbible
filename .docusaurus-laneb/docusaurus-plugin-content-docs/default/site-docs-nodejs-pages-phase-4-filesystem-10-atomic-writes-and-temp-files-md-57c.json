@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-4-filesystem/atomic-writes-and-temp-files",
+  "title": "Atomic writes and temp files",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-4-filesystem/10-atomic-writes-and-temp-files.md",
+  "sourceDirName": "nodejs/pages/phase-4-filesystem",
+  "slug": "/nodejs/pages/phase-4-filesystem/atomic-writes-and-temp-files",
+  "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/atomic-writes-and-temp-files",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Atomic writes and temp files",
+    "sidebar_label": "10 · Atomic writes, temp files",
+    "sidebar_position": 10
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "09 · File handles",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/file-handles"
+  },
+  "next": {
+    "title": "11 · node:os",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/os"
+  }
+}

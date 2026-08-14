@@ -1,0 +1,28 @@
+{
+  "id": "playwright/pages/test-runner/playwright-test-fixtures",
+  "title": "Test Runner: `@playwright/test`, Built-In Fixtures & the Projects Matrix",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/playwright/pages/02-test-runner/01-playwright-test-fixtures.md",
+  "sourceDirName": "playwright/pages/02-test-runner",
+  "slug": "/playwright/pages/test-runner/playwright-test-fixtures",
+  "permalink": "/devbible/docs/playwright/pages/test-runner/playwright-test-fixtures",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Test Runner: `@playwright/test`, Built-In Fixtures & the Projects Matrix",
+    "sidebar_label": "Test Runner",
+    "sidebar_position": 1
+  },
+  "sidebar": "playwrightSidebar",
+  "previous": {
+    "title": "Core Architecture",
+    "permalink": "/devbible/docs/playwright/pages/core-architecture/browser-automation-model"
+  },
+  "next": {
+    "title": "Locators",
+    "permalink": "/devbible/docs/playwright/pages/locators/locator-api"
+  }
+}

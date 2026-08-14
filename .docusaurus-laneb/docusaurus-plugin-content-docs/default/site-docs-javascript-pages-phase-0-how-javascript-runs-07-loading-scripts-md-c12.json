@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/loading-scripts",
+  "title": "07 · Loading scripts",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/07-loading-scripts.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/loading-scripts",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/loading-scripts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "07 · Loading scripts",
+    "sidebar_label": "07 · Loading scripts",
+    "sidebar_position": 7
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "06 · Hosts and globals",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/hosts-and-globals"
+  },
+  "next": {
+    "title": "08 · Running and inspecting",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/running-and-inspecting"
+  }
+}

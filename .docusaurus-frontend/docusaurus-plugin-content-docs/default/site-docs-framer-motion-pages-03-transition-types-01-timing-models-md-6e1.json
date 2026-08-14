@@ -1,0 +1,28 @@
+{
+  "id": "framer-motion/pages/transition-types/timing-models",
+  "title": "Transition Types: `tween`, `spring` & `inertia`",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/framer-motion/pages/03-transition-types/01-timing-models.md",
+  "sourceDirName": "framer-motion/pages/03-transition-types",
+  "slug": "/framer-motion/pages/transition-types/timing-models",
+  "permalink": "/devbible/docs/framer-motion/pages/transition-types/timing-models",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Transition Types: `tween`, `spring` & `inertia`",
+    "sidebar_label": "Transition Types",
+    "sidebar_position": 1
+  },
+  "sidebar": "framerMotionSidebar",
+  "previous": {
+    "title": "Basic Animation Props",
+    "permalink": "/devbible/docs/framer-motion/pages/basic-animation-props/the-core-prop-triad"
+  },
+  "next": {
+    "title": "Variants",
+    "permalink": "/devbible/docs/framer-motion/pages/variants/reusable-named-states"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/real-world-workflows-and-recipes/bootstrapping-into-an-existing-app",
+  "title": "Bootstrapping Storybook Into an Existing App With Providers Already Wired In",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/storybook/pages/16-real-world-workflows-and-recipes/01-bootstrapping-into-an-existing-app.md",
+  "sourceDirName": "storybook/pages/16-real-world-workflows-and-recipes",
+  "slug": "/storybook/pages/real-world-workflows-and-recipes/bootstrapping-into-an-existing-app",
+  "permalink": "/devbible/docs/storybook/pages/real-world-workflows-and-recipes/bootstrapping-into-an-existing-app",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Bootstrapping Storybook Into an Existing App With Providers Already Wired In",
+    "sidebar_label": "Bootstrapping Storybook Into an Existing A",
+    "sidebar_position": 1
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Advanced Patterns",
+    "permalink": "/devbible/docs/storybook/pages/advanced-patterns/component-driven-workflow"
+  },
+  "next": {
+    "title": "Recipe",
+    "permalink": "/devbible/docs/storybook/pages/real-world-workflows-and-recipes/wiring-colors-and-custom-fonts"
+  }
+}

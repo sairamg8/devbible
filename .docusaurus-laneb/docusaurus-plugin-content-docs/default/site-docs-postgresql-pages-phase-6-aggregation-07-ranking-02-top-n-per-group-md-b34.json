@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/ranking/top-n-per-group",
+  "title": "Top-N per group",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/07-ranking/02-top-n-per-group.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/07-ranking",
+  "slug": "/postgresql/pages/phase-6-aggregation/ranking/top-n-per-group",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ranking/top-n-per-group",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Top-N per group",
+    "sidebar_label": "02 · Top-N per group",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · The four functions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ranking/the-four-functions"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/lag-lead/"
+  }
+}

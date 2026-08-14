@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/README",
+  "title": "Explanations",
+  "description": "The explanation pages for JavaScript — one page per syllabus topic (or tight",
+  "source": "@site/docs/javascript/pages/README.md",
+  "sourceDirName": "javascript/pages",
+  "slug": "/javascript/pages/",
+  "permalink": "/devbible/docs/javascript/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Explanations",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "5 · Applied storefront",
+    "permalink": "/devbible/docs/javascript/syllabus/applied-storefront"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/"
+  }
+}

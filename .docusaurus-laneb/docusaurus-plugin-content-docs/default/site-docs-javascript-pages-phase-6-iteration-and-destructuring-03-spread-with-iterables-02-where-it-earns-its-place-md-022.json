@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/where-it-earns-its-place",
+  "title": "03.2 · Where spread earns its place",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-6-iteration-and-destructuring/03-spread-with-iterables/02-where-it-earns-its-place.md",
+  "sourceDirName": "javascript/pages/phase-6-iteration-and-destructuring/03-spread-with-iterables",
+  "slug": "/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/where-it-earns-its-place",
+  "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/where-it-earns-its-place",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · Where spread earns its place",
+    "sidebar_label": "02 · Where it earns its place",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Two operations, one syntax",
+    "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/two-operations-one-syntax"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/"
+  }
+}

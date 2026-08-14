@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/health-checks",
+  "title": "Health checks — liveness vs readiness",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/10-health-checks.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/health-checks",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/health-checks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Health checks — liveness vs readiness",
+    "sidebar_label": "10 · Health checks",
+    "sidebar_position": 10
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "09 · Event loop lag",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/event-loop-lag"
+  },
+  "next": {
+    "title": "11 · Golden signals",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/golden-signals"
+  }
+}

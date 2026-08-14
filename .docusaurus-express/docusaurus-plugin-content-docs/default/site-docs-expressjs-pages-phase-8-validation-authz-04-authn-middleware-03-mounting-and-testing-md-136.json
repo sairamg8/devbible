@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/authn-middleware/mounting-and-testing",
+  "title": "Mounting and testing",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/04-authn-middleware/03-mounting-and-testing.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz/04-authn-middleware",
+  "slug": "/expressjs/pages/phase-8-validation-authz/authn-middleware/mounting-and-testing",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/mounting-and-testing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Mounting and testing",
+    "sidebar_label": "03 · Mounting and testing",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Tokens, sessions and cost",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/tokens-sessions-and-cost"
+  },
+  "next": {
+    "title": "05 · Sessions wire-up",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/cookies-sessions-wireup"
+  }
+}

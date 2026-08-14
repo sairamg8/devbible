@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/README",
+  "title": "Phase 8 — Concurrent rendering, Suspense and transitions",
+  "description": "Target: React 19.2.8. No sandbox and no console blocks — every claim is",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/README.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 8 — Concurrent rendering, Suspense and transitions",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "12 · Extracting too early",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/extracting-too-early"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/usetransition/"
+  }
+}

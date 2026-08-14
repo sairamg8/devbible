@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-5-undo-recover/reset-in-depth",
+  "title": "`reset` in terms of the three trees",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-5-undo-recover/02-reset-in-depth.md",
+  "sourceDirName": "git/pages/phase-5-undo-recover",
+  "slug": "/git/pages/phase-5-undo-recover/reset-in-depth",
+  "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/reset-in-depth",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "`reset` in terms of the three trees",
+    "sidebar_label": "02 · reset in depth",
+    "sidebar_position": 2
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "01 · The decision table",
+    "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/the-undo-decision-table"
+  },
+  "next": {
+    "title": "03 · git revert",
+    "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/revert"
+  }
+}

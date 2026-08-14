@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/primary-keys",
+  "title": "Primary keys",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/02-primary-keys.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/primary-keys",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/primary-keys",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Primary keys",
+    "sidebar_label": "02 · Primary keys",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · CREATE TABLE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/create-table"
+  },
+  "next": {
+    "title": "03 · Foreign keys",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/foreign-keys"
+  }
+}

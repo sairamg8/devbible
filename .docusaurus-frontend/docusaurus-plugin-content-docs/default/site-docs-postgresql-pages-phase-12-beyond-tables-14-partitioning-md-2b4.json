@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/partitioning",
+  "title": "Partitioning",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/14-partitioning.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/partitioning",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/partitioning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "Partitioning",
+    "sidebar_label": "14 · Partitioning",
+    "sidebar_position": 14
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "13 · LISTEN/NOTIFY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/listen-notify"
+  },
+  "next": {
+    "title": "15 · Procedures",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/procedures"
+  }
+}

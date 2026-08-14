@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/graceful-shutdown",
+  "title": "Graceful worker shutdown — finish the in-flight job",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/11-graceful-shutdown.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/graceful-shutdown",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/graceful-shutdown",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Graceful worker shutdown — finish the in-flight job",
+    "sidebar_label": "11 · Graceful worker shutdown",
+    "sidebar_position": 11
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "10 · Time on the server",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/time-on-the-server"
+  },
+  "next": {
+    "title": "12 · Timeout budgets",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/timeout-budgets"
+  }
+}

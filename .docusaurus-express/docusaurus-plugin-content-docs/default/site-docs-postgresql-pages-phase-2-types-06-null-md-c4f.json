@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/null",
+  "title": "NULL semantics",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/06-null.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/null",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/null",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "NULL semantics",
+    "sidebar_label": "06 · NULL",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · Time zones",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/time-zones"
+  },
+  "next": {
+    "title": "07 · uuid",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/uuid"
+  }
+}

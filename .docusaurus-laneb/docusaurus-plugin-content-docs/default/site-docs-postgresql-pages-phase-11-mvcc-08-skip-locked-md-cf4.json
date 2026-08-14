@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-11-mvcc/skip-locked",
+  "title": "SKIP LOCKED and the job queue",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-11-mvcc/08-skip-locked.md",
+  "sourceDirName": "postgresql/pages/phase-11-mvcc",
+  "slug": "/postgresql/pages/phase-11-mvcc/skip-locked",
+  "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/skip-locked",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "SKIP LOCKED and the job queue",
+    "sidebar_label": "08 · SKIP LOCKED",
+    "sidebar_position": 8
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "07 · Row locks FOR UPDATE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/row-locks"
+  },
+  "next": {
+    "title": "09 · Savepoints",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/savepoints"
+  }
+}

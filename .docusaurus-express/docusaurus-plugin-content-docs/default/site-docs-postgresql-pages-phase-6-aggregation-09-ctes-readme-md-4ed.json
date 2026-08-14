@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/ctes/README",
+  "title": "CTEs (WITH)",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/09-ctes/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/09-ctes",
+  "slug": "/postgresql/pages/phase-6-aggregation/ctes/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ctes/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "CTEs (WITH)",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · first_value and last_value",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/lag-lead/first-and-last"
+  },
+  "next": {
+    "title": "01 · Naming a subquery",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ctes/naming-a-subquery"
+  }
+}

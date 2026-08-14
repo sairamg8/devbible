@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/testing-strategy/the-real-world-testing-pyramid",
+  "title": "Testing Strategy: The Real-World Pyramid & Contract Testing",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/13-testing-strategy/01-the-real-world-testing-pyramid.md",
+  "sourceDirName": "frontend-architecture/pages/13-testing-strategy",
+  "slug": "/frontend-architecture/pages/testing-strategy/the-real-world-testing-pyramid",
+  "permalink": "/devbible/docs/frontend-architecture/pages/testing-strategy/the-real-world-testing-pyramid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Testing Strategy: The Real-World Pyramid & Contract Testing",
+    "sidebar_label": "Testing Strategy",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "CI/CD Pipeline Design",
+    "permalink": "/devbible/docs/frontend-architecture/pages/ci-cd-pipeline-design/shipping-safely"
+  },
+  "next": {
+    "title": "Performance & Scalability Patterns",
+    "permalink": "/devbible/docs/frontend-architecture/pages/performance-and-scalability-patterns/architecting-for-scale"
+  }
+}

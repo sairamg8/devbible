@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-15-algorithm-patterns/hash-map-patterns/signatures-and-index-maps",
+  "title": "04.2 · Signatures and index maps",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-15-algorithm-patterns/04-hash-map-patterns/02-signatures-and-index-maps.md",
+  "sourceDirName": "javascript/pages/phase-15-algorithm-patterns/04-hash-map-patterns",
+  "slug": "/javascript/pages/phase-15-algorithm-patterns/hash-map-patterns/signatures-and-index-maps",
+  "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/hash-map-patterns/signatures-and-index-maps",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "04.2 · Signatures and index maps",
+    "sidebar_label": "02 · Signatures and index maps",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Complement and seen",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/hash-map-patterns/complement-and-seen"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/bfs/"
+  }
+}

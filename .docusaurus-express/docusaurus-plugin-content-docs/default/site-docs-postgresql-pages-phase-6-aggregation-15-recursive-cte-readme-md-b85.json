@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/recursive-cte/README",
+  "title": "Recursive CTEs",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/15-recursive-cte/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/15-recursive-cte",
+  "slug": "/postgresql/pages/phase-6-aggregation/recursive-cte/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/recursive-cte/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Recursive CTEs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · RANGE offsets, GROUPS, EXCLUDE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/range-groups-exclude"
+  },
+  "next": {
+    "title": "01 · Walking a tree",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/recursive-cte/walking-a-tree"
+  }
+}

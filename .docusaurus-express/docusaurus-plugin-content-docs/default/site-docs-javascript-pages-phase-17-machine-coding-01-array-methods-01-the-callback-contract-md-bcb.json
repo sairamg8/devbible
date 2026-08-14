@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/array-methods/the-callback-contract",
+  "title": "01.1 · The callback contract",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/01-array-methods/01-the-callback-contract.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/01-array-methods",
+  "slug": "/javascript/pages/phase-17-machine-coding/array-methods/the-callback-contract",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/array-methods/the-callback-contract",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · The callback contract",
+    "sidebar_label": "01 · The callback contract",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/array-methods/"
+  },
+  "next": {
+    "title": "02 · The rest of the family",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/array-methods/the-rest-of-the-family"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/README",
+  "title": "Phase 0 — How JavaScript runs",
+  "description": "Verified: 2026-08 on Node 24.19.0 (V8 13.6.233.17, ICU 78.3, Unicode 17.0).",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/README.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 0 — How JavaScript runs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/"
+  },
+  "next": {
+    "title": "01 · Engine, runtime, spec",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/engine-runtime-spec"
+  }
+}

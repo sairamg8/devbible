@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/adding-and-removing/splice",
+  "title": "02.2 · `splice`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/02-adding-and-removing/02-splice.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/02-adding-and-removing",
+  "slug": "/javascript/pages/phase-5-built-in-library/adding-and-removing/splice",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/splice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02.2 · `splice`",
+    "sidebar_label": "02 · splice",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · push, pop, shift, unshift",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/push-pop-shift-unshift"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-iteration-methods/"
+  }
+}

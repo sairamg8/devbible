@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/why-streams",
+  "title": "Why streams exist",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/07-why-streams.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/why-streams",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/why-streams",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Why streams exist",
+    "sidebar_label": "07 · Why streams exist",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · Binary data, endianness",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/binary-data-and-endianness"
+  },
+  "next": {
+    "title": "08 · The four types",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/stream-types"
+  }
+}

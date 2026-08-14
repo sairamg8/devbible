@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-7-layering/folders-and-dtos",
+  "title": "Folders and DTOs",
+  "description": "Know",
+  "source": "@site/docs/expressjs/pages/phase-7-layering/06-folders-and-dtos.md",
+  "sourceDirName": "expressjs/pages/phase-7-layering",
+  "slug": "/expressjs/pages/phase-7-layering/folders-and-dtos",
+  "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/folders-and-dtos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Folders and DTOs",
+    "sidebar_label": "06 · Folders · DTOs",
+    "sidebar_position": 6
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "05 · Jobs from routes",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/jobs-from-routes"
+  },
+  "next": {
+    "title": "07 · Transaction middleware",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/transaction-middleware"
+  }
+}

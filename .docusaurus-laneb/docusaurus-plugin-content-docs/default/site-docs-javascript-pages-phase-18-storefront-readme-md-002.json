@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/README",
+  "title": "Phase 18 — Building the store front end",
+  "description": "✂️ Only three of the unwritten storefront topics are still in scope, on the user's",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront",
+  "slug": "/javascript/pages/phase-18-storefront/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 18 — Building the store front end",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · race and any",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/promise-combinators/race-and-any"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/"
+  }
+}

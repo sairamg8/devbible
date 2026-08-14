@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/traversal/README",
+  "title": "07 · Traversal",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-9-dom/07-traversal/README.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/07-traversal",
+  "slug": "/javascript/pages/phase-9-dom/traversal/",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/traversal/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "07 · Traversal",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Sinks and sanitisers",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/sanitising-html/sinks-and-sanitisers"
+  },
+  "next": {
+    "title": "01 · The two families",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/traversal/the-two-families"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/ddl-from-node/locks-and-blocking",
+  "title": "DDL locks and the blocking they cause",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/02-locks-and-blocking.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node/01-ddl-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/ddl-from-node/locks-and-blocking",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/locks-and-blocking",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "DDL locks and the blocking they cause",
+    "sidebar_label": "02 · Locks and blocking",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Issuing DDL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/issuing-ddl"
+  },
+  "next": {
+    "title": "03 · Startup races",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/startup-races"
+  }
+}

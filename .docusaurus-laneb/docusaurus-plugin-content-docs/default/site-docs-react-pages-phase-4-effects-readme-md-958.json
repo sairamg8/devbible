@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/README",
+  "title": "Phase 4 — Effects and synchronization",
+  "description": "Target: React 19.2.8. No sandbox and no console blocks — every claim is",
+  "source": "@site/docs/react/pages/phase-4-effects/README.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 4 — Effects and synchronization",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "17 · Infinite render loops",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/infinite-render-loops"
+  },
+  "next": {
+    "title": "01 · What an effect is for",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/what-an-effect-is-for"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/README",
+  "title": "03 · Spread with iterables",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-6-iteration-and-destructuring/03-spread-with-iterables/README.md",
+  "sourceDirName": "javascript/pages/phase-6-iteration-and-destructuring/03-spread-with-iterables",
+  "slug": "/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/",
+  "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "03 · Spread with iterables",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Control flow and choosing",
+    "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/loop-forms/control-flow-and-choosing"
+  },
+  "next": {
+    "title": "01 · Two operations, one syntax",
+    "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/spread-with-iterables/two-operations-one-syntax"
+  }
+}

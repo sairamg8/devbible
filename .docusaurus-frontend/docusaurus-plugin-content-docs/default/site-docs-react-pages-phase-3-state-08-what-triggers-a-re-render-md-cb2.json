@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/what-triggers-a-re-render",
+  "title": "What triggers a re-render",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-3-state/08-what-triggers-a-re-render.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/what-triggers-a-re-render",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/what-triggers-a-re-render",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "What triggers a re-render",
+    "sidebar_label": "08 · What triggers a re-render",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · Resetting state with key",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/resetting-state-with-key"
+  },
+  "next": {
+    "title": "09 · Lazy initial state",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/lazy-initial-state"
+  }
+}

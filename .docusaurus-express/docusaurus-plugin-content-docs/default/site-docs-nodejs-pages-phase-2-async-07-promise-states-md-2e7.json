@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/promise-states",
+  "title": "Promise states and chaining",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/07-promise-states.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/promise-states",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/promise-states",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Promise states and chaining",
+    "sidebar_label": "07 · Promise states",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · Timers",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/timers"
+  },
+  "next": {
+    "title": "08 · async and await",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-await"
+  }
+}

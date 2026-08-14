@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/testing-real-pg",
+  "title": "Testing against a real PostgreSQL",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/16-testing-real-pg.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud",
+  "slug": "/postgresql/pages/phase-9-api-crud/testing-real-pg",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/testing-real-pg",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Testing against a real PostgreSQL",
+    "sidebar_label": "16 · Testing against real PG",
+    "sidebar_position": 16
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "15 · Shape in SQL vs JS",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/shape-sql-vs-js"
+  },
+  "next": {
+    "title": "17 · created_at / updated_at",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/timestamps-trigger"
+  }
+}

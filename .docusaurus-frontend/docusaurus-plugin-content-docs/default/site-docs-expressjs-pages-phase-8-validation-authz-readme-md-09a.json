@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/README",
+  "title": "Phase 8 — Validation and authorization at the edge",
+  "description": "Concepts (passwords, JWT structure) live in Node Phase 8. Here: middleware surface.",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/README.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz",
+  "slug": "/expressjs/pages/phase-8-validation-authz/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 8 — Validation and authorization at the edge",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "07 · Transaction middleware",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/transaction-middleware"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validate-at-boundary/"
+  }
+}

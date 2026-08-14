@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-2-cascade/README",
+  "title": "Phase 2 — Cascade control",
+  "description": "Verified: 2026-08-14 against the W3C CSS Cascading and Inheritance Level 5",
+  "source": "@site/docs/css/pages/phase-2-cascade/README.md",
+  "sourceDirName": "css/pages/phase-2-cascade",
+  "slug": "/css/pages/phase-2-cascade/",
+  "permalink": "/devbible/docs/css/pages/phase-2-cascade/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 2 — Cascade control",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "16 · Shadow DOM selectors",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/shadow-dom-selectors"
+  },
+  "next": {
+    "title": "01 · What the cascade compares",
+    "permalink": "/devbible/docs/css/pages/phase-2-cascade/what-the-cascade-compares"
+  }
+}

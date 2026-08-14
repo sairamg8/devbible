@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/stack/monotonic-stacks",
+  "title": "04.2 · Monotonic stacks and expressions",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/04-stack/02-monotonic-stacks.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures/04-stack",
+  "slug": "/javascript/pages/phase-14-data-structures/stack/monotonic-stacks",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/stack/monotonic-stacks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "04.2 · Monotonic stacks and expressions",
+    "sidebar_label": "02 · Monotonic stacks",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The structure",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/stack/the-structure"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/queue-and-deque/"
+  }
+}

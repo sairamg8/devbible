@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/useimperativehandle",
+  "title": "useImperativeHandle",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/07-useimperativehandle.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/useimperativehandle",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/useimperativehandle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "useImperativeHandle",
+    "sidebar_label": "07 · useImperativeHandle",
+    "sidebar_position": 7
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "06 · Ref callbacks",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/ref-callbacks"
+  },
+  "next": {
+    "title": "08 · When a ref is the wrong tool",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/when-a-ref-is-wrong"
+  }
+}

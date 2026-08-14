@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/app-router-server/url-rewriting-and-options",
+  "title": "URL rewriting and OPTIONS",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/02-app-router-server/04-url-rewriting-and-options.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/02-app-router-server",
+  "slug": "/expressjs/pages/phase-0-express-basics/app-router-server/url-rewriting-and-options",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/url-rewriting-and-options",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "URL rewriting and OPTIONS",
+    "sidebar_label": "04 · URL rewriting and OPTIONS",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Inside router.handle",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/inside-router-handle"
+  },
+  "next": {
+    "title": "05 · Sub-apps and the server",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/sub-apps-and-the-server"
+  }
+}

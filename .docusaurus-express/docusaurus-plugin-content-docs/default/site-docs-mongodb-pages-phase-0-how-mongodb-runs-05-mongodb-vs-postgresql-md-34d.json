@@ -1,0 +1,19 @@
+{
+  "id": "mongodb/pages/phase-0-how-mongodb-runs/mongodb-vs-postgresql",
+  "title": "MongoDB vs PostgreSQL — the actual trade",
+  "description": "Master",
+  "source": "@site/docs/mongodb/pages/phase-0-how-mongodb-runs/05-mongodb-vs-postgresql.md",
+  "sourceDirName": "mongodb/pages/phase-0-how-mongodb-runs",
+  "slug": "/mongodb/pages/phase-0-how-mongodb-runs/mongodb-vs-postgresql",
+  "permalink": "/devbible/docs/mongodb/pages/phase-0-how-mongodb-runs/mongodb-vs-postgresql",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "MongoDB vs PostgreSQL — the actual trade",
+    "sidebar_label": "05 · MongoDB vs PostgreSQL",
+    "sidebar_position": 5
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/hoisting-and-tdz/var-and-function-declarations",
+  "title": "08.2 · `var` and function declarations",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/08-hoisting-and-tdz/02-var-and-function-declarations.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/08-hoisting-and-tdz",
+  "slug": "/javascript/pages/phase-3-functions/hoisting-and-tdz/var-and-function-declarations",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/var-and-function-declarations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "08.2 · `var` and function declarations",
+    "sidebar_label": "02 · var and function declarations",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The two-step scope entry",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/the-two-step-scope-entry"
+  },
+  "next": {
+    "title": "03 · The temporal dead zone",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/the-temporal-dead-zone"
+  }
+}

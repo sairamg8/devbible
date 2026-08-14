@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/encryption-and-keys",
+  "title": "Encryption, signing and key management",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-8-security/26-encryption-and-keys.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/encryption-and-keys",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/encryption-and-keys",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 26,
+  "frontMatter": {
+    "title": "Encryption, signing and key management",
+    "sidebar_label": "26 · Encryption and keys",
+    "sidebar_position": 26
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "25 · Web Crypto",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/web-crypto"
+  },
+  "next": {
+    "title": "27 · Audit logging",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/audit-logging"
+  }
+}

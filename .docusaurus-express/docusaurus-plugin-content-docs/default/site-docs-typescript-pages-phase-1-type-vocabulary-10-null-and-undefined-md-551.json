@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/null-and-undefined",
+  "title": "`null` and `undefined`",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/10-null-and-undefined.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/null-and-undefined",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/null-and-undefined",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "`null` and `undefined`",
+    "sidebar_label": "10 · null and undefined",
+    "sidebar_position": 10
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "09 · Structural typing",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/structural-typing"
+  },
+  "next": {
+    "title": "11 · Intersection types",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/intersection-types"
+  }
+}

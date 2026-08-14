@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-2-operators/bitwise",
+  "title": "14 · Bitwise operators",
+  "description": "Know",
+  "source": "@site/docs/javascript/pages/phase-2-operators/14-bitwise.md",
+  "sourceDirName": "javascript/pages/phase-2-operators",
+  "slug": "/javascript/pages/phase-2-operators/bitwise",
+  "permalink": "/devbible/docs/javascript/pages/phase-2-operators/bitwise",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "14 · Bitwise operators",
+    "sidebar_label": "14 · Bitwise",
+    "sidebar_position": 14
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "13 · break, continue, labels",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/break-continue-labels"
+  },
+  "next": {
+    "title": "15 · Comma, void, in, delete",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/comma-void-in-delete"
+  }
+}

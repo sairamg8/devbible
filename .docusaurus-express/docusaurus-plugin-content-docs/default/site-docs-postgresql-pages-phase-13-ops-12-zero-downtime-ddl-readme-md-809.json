@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/zero-downtime-ddl/README",
+  "title": "Zero-downtime schema changes",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/12-zero-downtime-ddl/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/12-zero-downtime-ddl",
+  "slug": "/postgresql/pages/phase-13-ops/zero-downtime-ddl/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Zero-downtime schema changes",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Parameters & auto_explain",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/parameters-and-auto-explain"
+  },
+  "next": {
+    "title": "01 · The lock queue",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/the-lock-queue"
+  }
+}

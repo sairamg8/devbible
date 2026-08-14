@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/lifting-state-up/the-procedure",
+  "title": "The procedure",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/05-lifting-state-up/01-the-procedure.md",
+  "sourceDirName": "react/pages/phase-2-components/05-lifting-state-up",
+  "slug": "/react/pages/phase-2-components/lifting-state-up/the-procedure",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/lifting-state-up/the-procedure",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The procedure",
+    "sidebar_label": "01 · The procedure",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/lifting-state-up/"
+  },
+  "next": {
+    "title": "02 · The cost",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/lifting-state-up/the-cost"
+  }
+}

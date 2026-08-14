@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/useoptimistic",
+  "title": "useOptimistic",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/07-useoptimistic.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/useoptimistic",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useoptimistic",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "useOptimistic",
+    "sidebar_label": "07 · useOptimistic",
+    "sidebar_position": 7
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "06 · useFormStatus",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useformstatus"
+  },
+  "next": {
+    "title": "08 · Multiple actions in one form",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/multiple-actions"
+  }
+}

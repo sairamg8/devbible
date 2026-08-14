@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/cors-client-side/what-the-browser-is-doing",
+  "title": "05.1 · What the browser is actually doing",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/05-cors-client-side/01-what-the-browser-is-doing.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/05-cors-client-side",
+  "slug": "/javascript/pages/phase-11-network-storage/cors-client-side/what-the-browser-is-doing",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/what-the-browser-is-doing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "05.1 · What the browser is actually doing",
+    "sidebar_label": "01 · What the browser does",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/"
+  },
+  "next": {
+    "title": "02 · Simple vs preflighted",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/simple-vs-preflighted"
+  }
+}

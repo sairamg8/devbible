@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-0-runtime-model/node-deno-bun",
+  "title": "Node vs Deno vs Bun",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-0-runtime-model/09-node-deno-bun.md",
+  "sourceDirName": "nodejs/pages/phase-0-runtime-model",
+  "slug": "/nodejs/pages/phase-0-runtime-model/node-deno-bun",
+  "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/node-deno-bun",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Node vs Deno vs Bun",
+    "sidebar_label": "09 · Deno and Bun",
+    "sidebar_position": 9
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "08 · Running node",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/running-node"
+  },
+  "next": {
+    "title": "10 · How V8 optimizes",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/how-v8-optimizes"
+  }
+}

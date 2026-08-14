@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/what-express-is/the-boundary",
+  "title": "Where Express stops",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/01-what-express-is/04-the-boundary.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/01-what-express-is",
+  "slug": "/expressjs/pages/phase-0-express-basics/what-express-is/the-boundary",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/the-boundary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Where Express stops",
+    "sidebar_label": "04 · Where Express stops",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · What Express delegates",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/what-express-delegates"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/middleware-factories",
+  "title": "Middleware factories",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/04-middleware-factories.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware",
+  "slug": "/expressjs/pages/phase-2-middleware/middleware-factories",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-factories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Middleware factories",
+    "sidebar_label": "04 · Factories",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Double send and guards",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/next-semantics/double-send-and-guards"
+  },
+  "next": {
+    "title": "05 · First and last",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/first-and-last"
+  }
+}

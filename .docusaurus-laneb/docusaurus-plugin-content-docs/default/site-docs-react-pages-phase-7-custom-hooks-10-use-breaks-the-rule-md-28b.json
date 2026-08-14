@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/use-breaks-the-rule",
+  "title": "`use` breaks the rule on purpose",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/10-use-breaks-the-rule.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks",
+  "slug": "/react/pages/phase-7-custom-hooks/use-breaks-the-rule",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/use-breaks-the-rule",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "`use` breaks the rule on purpose",
+    "sidebar_label": "10 · `use` breaks the rule",
+    "sidebar_position": 10
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "09 · Conditional hooks",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/conditional-hooks"
+  },
+  "next": {
+    "title": "11 · Testing a custom hook",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/testing-a-custom-hook"
+  }
+}

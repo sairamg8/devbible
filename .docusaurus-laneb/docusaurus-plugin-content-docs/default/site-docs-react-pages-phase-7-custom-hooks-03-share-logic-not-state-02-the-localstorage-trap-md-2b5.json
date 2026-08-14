@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/share-logic-not-state/the-localstorage-trap",
+  "title": "The useLocalStorage trap",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/03-share-logic-not-state/02-the-localstorage-trap.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/03-share-logic-not-state",
+  "slug": "/react/pages/phase-7-custom-hooks/share-logic-not-state/the-localstorage-trap",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/the-localstorage-trap",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The useLocalStorage trap",
+    "sidebar_label": "02 · The useLocalStorage trap",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Two callers, two states",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/two-callers-two-states"
+  },
+  "next": {
+    "title": "03 · When you wanted shared state",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/when-you-wanted-shared-state"
+  }
+}

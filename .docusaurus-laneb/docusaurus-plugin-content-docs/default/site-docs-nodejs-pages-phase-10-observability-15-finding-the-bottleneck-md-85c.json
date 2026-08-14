@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/finding-the-bottleneck",
+  "title": "Finding the bottleneck before optimizing",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/15-finding-the-bottleneck.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/finding-the-bottleneck",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/finding-the-bottleneck",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Finding the bottleneck before optimizing",
+    "sidebar_label": "15 · Finding the bottleneck",
+    "sidebar_position": 15
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "14 · Prometheus metrics",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/prometheus-metrics"
+  },
+  "next": {
+    "title": "16 · Caching strategy",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/caching-strategy"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/monitoring/reading-pg-stat-statements",
+  "title": "09.3 · Reading pg_stat_statements",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/09-monitoring/03-reading-pg-stat-statements.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/09-monitoring",
+  "slug": "/postgresql/pages/phase-13-ops/monitoring/reading-pg-stat-statements",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/reading-pg-stat-statements",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "09.3 · Reading pg_stat_statements",
+    "sidebar_label": "03 · Reading it",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · pg_stat_statements",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/pg-stat-statements"
+  },
+  "next": {
+    "title": "04 · Table health",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/table-health"
+  }
+}

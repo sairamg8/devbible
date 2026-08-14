@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/srf",
+  "title": "Set-returning functions in FROM",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/10-srf.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/srf",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/srf",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Set-returning functions in FROM",
+    "sidebar_label": "10 · Set-returning functions",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · Extensions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/extensions"
+  },
+  "next": {
+    "title": "11 · Materialized views",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/matviews"
+  }
+}

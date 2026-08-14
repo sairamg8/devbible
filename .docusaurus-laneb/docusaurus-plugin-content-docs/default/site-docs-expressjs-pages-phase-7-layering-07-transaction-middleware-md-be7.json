@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-7-layering/transaction-middleware",
+  "title": "Transaction-per-request middleware",
+  "description": "Know",
+  "source": "@site/docs/expressjs/pages/phase-7-layering/07-transaction-middleware.md",
+  "sourceDirName": "expressjs/pages/phase-7-layering",
+  "slug": "/expressjs/pages/phase-7-layering/transaction-middleware",
+  "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/transaction-middleware",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Transaction-per-request middleware",
+    "sidebar_label": "07 · Transaction middleware",
+    "sidebar_position": 7
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "06 · Folders · DTOs",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/folders-and-dtos"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/"
+  }
+}

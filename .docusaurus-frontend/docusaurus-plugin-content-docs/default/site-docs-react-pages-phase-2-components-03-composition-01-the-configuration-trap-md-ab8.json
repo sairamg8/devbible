@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/composition/the-configuration-trap",
+  "title": "The configuration trap",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/03-composition/01-the-configuration-trap.md",
+  "sourceDirName": "react/pages/phase-2-components/03-composition",
+  "slug": "/react/pages/phase-2-components/composition/the-configuration-trap",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/composition/the-configuration-trap",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The configuration trap",
+    "sidebar_label": "01 · The configuration trap",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/composition/"
+  },
+  "next": {
+    "title": "02 · Slots and children",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/composition/slots-and-children"
+  }
+}

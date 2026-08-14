@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/modelling-money/README",
+  "title": "Modelling money",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/17-modelling-money/README.md",
+  "sourceDirName": "postgresql/pages/phase-2-types/17-modelling-money",
+  "slug": "/postgresql/pages/phase-2-types/modelling-money/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/modelling-money/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Modelling money",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "16 · Range types",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/ranges"
+  },
+  "next": {
+    "title": "01 · Storing money",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/modelling-money/storing-money"
+  }
+}

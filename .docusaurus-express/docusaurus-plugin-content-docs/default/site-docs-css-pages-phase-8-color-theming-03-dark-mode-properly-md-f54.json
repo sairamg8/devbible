@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-8-color-theming/dark-mode-properly",
+  "title": "Dark mode properly",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-8-color-theming/03-dark-mode-properly.md",
+  "sourceDirName": "css/pages/phase-8-color-theming",
+  "slug": "/css/pages/phase-8-color-theming/dark-mode-properly",
+  "permalink": "/devbible/docs/css/pages/phase-8-color-theming/dark-mode-properly",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Dark mode properly",
+    "sidebar_label": "03 · Dark mode properly",
+    "sidebar_position": 3
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "02 · color-mix()",
+    "permalink": "/devbible/docs/css/pages/phase-8-color-theming/color-mix"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-9-motion/"
+  }
+}

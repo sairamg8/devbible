@@ -9,7 +9,9 @@
       "Read(//mnt/Storage/my-learning/claude/devbible/**)",
       "Read(//mnt/Storage/my-learning/claude/shared/**)",
       "Bash(git check-ignore *)",
-      "WebFetch(domain:www.pgbouncer.org)"
+      "WebFetch(domain:www.pgbouncer.org)",
+      "Bash(sort -t: -k2 -rn)",
+      "WebFetch(domain:testing-library.com)"
     ]
   }
 }

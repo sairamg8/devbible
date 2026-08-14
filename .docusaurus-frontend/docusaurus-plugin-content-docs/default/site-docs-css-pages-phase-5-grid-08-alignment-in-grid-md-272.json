@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-5-grid/alignment-in-grid",
+  "title": "Alignment in grid",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-5-grid/08-alignment-in-grid.md",
+  "sourceDirName": "css/pages/phase-5-grid",
+  "slug": "/css/pages/phase-5-grid/alignment-in-grid",
+  "permalink": "/devbible/docs/css/pages/phase-5-grid/alignment-in-grid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Alignment in grid",
+    "sidebar_label": "08 · Alignment in grid",
+    "sidebar_position": 8
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "07 · Grid patterns",
+    "permalink": "/devbible/docs/css/pages/phase-5-grid/grid-patterns"
+  },
+  "next": {
+    "title": "09 · Explicit vs implicit grid",
+    "permalink": "/devbible/docs/css/pages/phase-5-grid/explicit-vs-implicit-grid"
+  }
+}

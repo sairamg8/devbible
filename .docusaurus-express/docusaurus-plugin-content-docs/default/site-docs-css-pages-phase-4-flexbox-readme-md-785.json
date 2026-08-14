@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/README",
+  "title": "Phase 4 — Flexbox, deeply",
+  "description": "Verified: 2026-08-14 against the W3C CSS Flexible Box Layout Level 1",
+  "source": "@site/docs/css/pages/phase-4-flexbox/README.md",
+  "sourceDirName": "css/pages/phase-4-flexbox",
+  "slug": "/css/pages/phase-4-flexbox/",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 4 — Flexbox, deeply",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "04 · Units that matter for layout",
+    "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/units-that-matter"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/"
+  }
+}

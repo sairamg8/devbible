@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/safe-dynamic-where/predicates-and-params",
+  "title": "Building predicates and parameters",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/01-predicates-and-params.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/03-safe-dynamic-where",
+  "slug": "/postgresql/pages/phase-9-api-crud/safe-dynamic-where/predicates-and-params",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/predicates-and-params",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Building predicates and parameters",
+    "sidebar_label": "01 · Predicates and params",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/"
+  },
+  "next": {
+    "title": "02 · Patterns and composition",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/patterns-and-composition"
+  }
+}

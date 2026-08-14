@@ -1,0 +1,24 @@
+{
+  "id": "framer-motion/pages/real-world-workflows-and-recipes/diagnosing-janky-animations",
+  "title": "Diagnosing Janky, Dropped-Frame Animations in Production",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/framer-motion/pages/16-real-world-workflows-and-recipes/01-diagnosing-janky-animations.md",
+  "sourceDirName": "framer-motion/pages/16-real-world-workflows-and-recipes",
+  "slug": "/framer-motion/pages/real-world-workflows-and-recipes/diagnosing-janky-animations",
+  "permalink": "/devbible/docs/framer-motion/pages/real-world-workflows-and-recipes/diagnosing-janky-animations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Diagnosing Janky, Dropped-Frame Animations in Production",
+    "sidebar_label": "Diagnosing Janky, Dropped-Frame Animations",
+    "sidebar_position": 1
+  },
+  "sidebar": "framerMotionSidebar",
+  "previous": {
+    "title": "Advanced Patterns",
+    "permalink": "/devbible/docs/framer-motion/pages/advanced-patterns/production-grade-motion-design"
+  }
+}

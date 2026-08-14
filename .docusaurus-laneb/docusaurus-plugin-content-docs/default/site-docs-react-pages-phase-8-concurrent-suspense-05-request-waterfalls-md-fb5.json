@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/request-waterfalls",
+  "title": "Request waterfalls",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/05-request-waterfalls.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/request-waterfalls",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/request-waterfalls",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Request waterfalls",
+    "sidebar_label": "05 · Request waterfalls",
+    "sidebar_position": 5
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · use(promise)",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/use-promise"
+  },
+  "next": {
+    "title": "06 · What concurrent rendering means",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/what-concurrent-rendering-means"
+  }
+}

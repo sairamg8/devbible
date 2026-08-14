@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-11-deployment/process-managers",
+  "title": "Process managers — pm2, systemd, or the orchestrator",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-11-deployment/10-process-managers.md",
+  "sourceDirName": "nodejs/pages/phase-11-deployment",
+  "slug": "/nodejs/pages/phase-11-deployment/process-managers",
+  "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/process-managers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Process managers — pm2, systemd, or the orchestrator",
+    "sidebar_label": "10 · Process managers",
+    "sidebar_position": 10
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "09 · Image size and hardening",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/image-size-hardening"
+  },
+  "next": {
+    "title": "11 · Scaling",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/scaling"
+  }
+}

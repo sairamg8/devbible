@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/tearing",
+  "title": "Tearing",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/15-tearing.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/tearing",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/tearing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Tearing",
+    "sidebar_label": "15 · Tearing",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · <Activity>",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/activity"
+  },
+  "next": {
+    "title": "16 · Error boundaries and Suspense",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/error-boundaries-and-suspense"
+  }
+}

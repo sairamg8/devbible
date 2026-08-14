@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/commit-messages",
+  "title": "Commit messages, and what belongs in one commit",
+  "description": "Understand",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/10-commit-messages.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop",
+  "slug": "/git/pages/phase-1-everyday-loop/commit-messages",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/commit-messages",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Commit messages, and what belongs in one commit",
+    "sidebar_label": "10 · Messages and scope",
+    "sidebar_position": 10
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "09 · git log",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-log"
+  },
+  "next": {
+    "title": "11 · git stash",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-stash"
+  }
+}

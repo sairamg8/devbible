@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/list-endpoint",
+  "title": "list with filtering, sorting and pagination",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/02-list-endpoint.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud",
+  "slug": "/postgresql/pages/phase-9-api-crud/list-endpoint",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/list-endpoint",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "list with filtering, sorting and pagination",
+    "sidebar_label": "02 · list endpoint",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Errors to HTTP",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/repository/errors-to-http"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/"
+  }
+}

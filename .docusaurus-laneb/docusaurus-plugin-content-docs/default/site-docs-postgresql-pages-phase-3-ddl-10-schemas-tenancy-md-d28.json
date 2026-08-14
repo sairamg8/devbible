@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/schemas-tenancy",
+  "title": "Schemas as namespaces, search_path, and multi-tenancy",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/10-schemas-tenancy.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/schemas-tenancy",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/schemas-tenancy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Schemas as namespaces, search_path, and multi-tenancy",
+    "sidebar_label": "10 · Schemas and tenancy",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · Adding NOT NULL safely",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/add-not-null"
+  },
+  "next": {
+    "title": "11 · Naming conventions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/naming"
+  }
+}

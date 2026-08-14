@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/eslint-editor-and-local-workflow/ide-hooks-and-scripts",
+  "title": "ESLint Editor Integration, Git Hooks & Scripts",
+  "description": "Covers syllabus §11.1 VS Code / IDE Integration and §11.2 Git Hooks & Local Scripts.",
+  "source": "@site/docs/eslint-oxlint/pages/11-eslint-editor-and-local-workflow/01-ide-hooks-and-scripts.md",
+  "sourceDirName": "eslint-oxlint/pages/11-eslint-editor-and-local-workflow",
+  "slug": "/eslint-oxlint/pages/eslint-editor-and-local-workflow/ide-hooks-and-scripts",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-editor-and-local-workflow/ide-hooks-and-scripts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "ESLint Editor Integration, Git Hooks & Scripts",
+    "sidebar_label": "ESLint Editor Integration, Git Hooks & Scr",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "Custom ESLint Rules, Testing & Processors",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/custom-eslint-rules-and-processors/authoring-testing-and-processors"
+  },
+  "next": {
+    "title": "Oxlint Core Architecture",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/oxlint-core-architecture/what-oxlint-is-and-vs-eslint"
+  }
+}

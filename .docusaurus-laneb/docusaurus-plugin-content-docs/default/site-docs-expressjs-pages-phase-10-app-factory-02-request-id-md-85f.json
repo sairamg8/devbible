@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/request-id",
+  "title": "Request-id middleware",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/02-request-id.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory",
+  "slug": "/expressjs/pages/phase-10-app-factory/request-id",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/request-id",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Request-id middleware",
+    "sidebar_label": "02 · Request id",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · What it buys",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/what-it-buys"
+  },
+  "next": {
+    "title": "03 · Supertest",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/supertest"
+  }
+}

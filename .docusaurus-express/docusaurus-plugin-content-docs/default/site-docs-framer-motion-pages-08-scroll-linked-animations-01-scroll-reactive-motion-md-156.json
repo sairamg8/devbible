@@ -1,0 +1,28 @@
+{
+  "id": "framer-motion/pages/scroll-linked-animations/scroll-reactive-motion",
+  "title": "Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/framer-motion/pages/08-scroll-linked-animations/01-scroll-reactive-motion.md",
+  "sourceDirName": "framer-motion/pages/08-scroll-linked-animations",
+  "slug": "/framer-motion/pages/scroll-linked-animations/scroll-reactive-motion",
+  "permalink": "/devbible/docs/framer-motion/pages/scroll-linked-animations/scroll-reactive-motion",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax",
+    "sidebar_label": "Scroll-Linked Animations",
+    "sidebar_position": 1
+  },
+  "sidebar": "framerMotionSidebar",
+  "previous": {
+    "title": "Layout Animations",
+    "permalink": "/devbible/docs/framer-motion/pages/layout-animations/automatic-layout-transitions"
+  },
+  "next": {
+    "title": "Motion Values",
+    "permalink": "/devbible/docs/framer-motion/pages/motion-values/imperative-value-tracking"
+  }
+}

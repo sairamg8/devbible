@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/resilient-api-client/composing-the-client",
+  "title": "03.1 · Composing the client",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/03-resilient-api-client/01-composing-the-client.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/03-resilient-api-client",
+  "slug": "/javascript/pages/phase-18-storefront/resilient-api-client/composing-the-client",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/composing-the-client",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · Composing the client",
+    "sidebar_label": "01 · Composing the client",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/"
+  },
+  "next": {
+    "title": "02 · Failing well",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/failing-well"
+  }
+}

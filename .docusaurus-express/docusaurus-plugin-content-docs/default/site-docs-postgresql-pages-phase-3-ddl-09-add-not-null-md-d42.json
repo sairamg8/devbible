@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/add-not-null",
+  "title": "Adding a NOT NULL column to a large table",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/09-add-not-null.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/add-not-null",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/add-not-null",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Adding a NOT NULL column to a large table",
+    "sidebar_label": "09 · Adding NOT NULL safely",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · Unique and NULLs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/unique-nulls"
+  },
+  "next": {
+    "title": "10 · Schemas and tenancy",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/schemas-tenancy"
+  }
+}

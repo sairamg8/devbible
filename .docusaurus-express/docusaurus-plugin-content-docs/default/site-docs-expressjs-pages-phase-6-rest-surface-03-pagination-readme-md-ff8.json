@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/pagination/README",
+  "title": "Pagination",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/03-pagination/README.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/03-pagination",
+  "slug": "/expressjs/pages/phase-6-rest-surface/pagination/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/pagination/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Pagination",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Conflicts and preconditions",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/conflicts-and-preconditions"
+  },
+  "next": {
+    "title": "01 · Offset and its drift",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/pagination/offset-and-its-drift"
+  }
+}

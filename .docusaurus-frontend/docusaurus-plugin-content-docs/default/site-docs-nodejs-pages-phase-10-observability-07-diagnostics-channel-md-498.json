@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/diagnostics-channel",
+  "title": "Diagnostics Channel — built-in pub/sub for instrumentation",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/07-diagnostics-channel.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/diagnostics-channel",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/diagnostics-channel",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Diagnostics Channel — built-in pub/sub for instrumentation",
+    "sidebar_label": "07 · Diagnostics Channel",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · Error tracking",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/error-tracking"
+  },
+  "next": {
+    "title": "08 · Trace events and reports",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/trace-events-and-reports"
+  }
+}

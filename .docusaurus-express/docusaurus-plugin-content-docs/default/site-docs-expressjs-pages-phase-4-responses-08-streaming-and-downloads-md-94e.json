@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/streaming-and-downloads",
+  "title": "Streaming and downloads",
+  "description": "Know",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/08-streaming-and-downloads.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses",
+  "slug": "/expressjs/pages/phase-4-responses/streaming-and-downloads",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/streaming-and-downloads",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Streaming and downloads",
+    "sidebar_label": "08 · Streams · downloads",
+    "sidebar_position": 8
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "07 · Cookies out",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/cookies-out"
+  },
+  "next": {
+    "title": "09 · Content negotiation",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/content-negotiation"
+  }
+}

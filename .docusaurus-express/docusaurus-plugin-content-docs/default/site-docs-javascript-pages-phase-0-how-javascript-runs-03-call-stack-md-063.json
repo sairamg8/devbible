@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/call-stack",
+  "title": "03 · Execution contexts and the call stack",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/03-call-stack.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/call-stack",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/call-stack",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · Execution contexts and the call stack",
+    "sidebar_label": "03 · The call stack",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Parse, compile, execute",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/parse-compile-execute"
+  },
+  "next": {
+    "title": "04 · Strict mode",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/strict-mode"
+  }
+}

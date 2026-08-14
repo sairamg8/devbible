@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/composition/slots-and-children",
+  "title": "Slots, children and the context hole",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/03-composition/02-slots-and-children.md",
+  "sourceDirName": "react/pages/phase-2-components/03-composition",
+  "slug": "/react/pages/phase-2-components/composition/slots-and-children",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/composition/slots-and-children",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Slots, children and the context hole",
+    "sidebar_label": "02 · Slots and children",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The configuration trap",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/composition/the-configuration-trap"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/controlled-vs-uncontrolled/"
+  }
+}

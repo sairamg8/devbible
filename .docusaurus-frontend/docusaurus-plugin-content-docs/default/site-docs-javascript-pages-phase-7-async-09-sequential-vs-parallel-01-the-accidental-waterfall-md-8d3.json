@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/sequential-vs-parallel/the-accidental-waterfall",
+  "title": "09.1 · The accidental waterfall",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/09-sequential-vs-parallel/01-the-accidental-waterfall.md",
+  "sourceDirName": "javascript/pages/phase-7-async/09-sequential-vs-parallel",
+  "slug": "/javascript/pages/phase-7-async/sequential-vs-parallel/the-accidental-waterfall",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/the-accidental-waterfall",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "09.1 · The accidental waterfall",
+    "sidebar_label": "01 · The accidental waterfall",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/"
+  },
+  "next": {
+    "title": "02 · Starting before awaiting",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/starting-before-awaiting"
+  }
+}

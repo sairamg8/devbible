@@ -1,0 +1,24 @@
+{
+  "id": "react/README",
+  "title": "React — Syllabus",
+  "description": "Verified: 2026-08 against React 19.2.8 (npm view react dist-tags, published",
+  "source": "@site/docs/react/README.md",
+  "sourceDirName": "react",
+  "slug": "/react/",
+  "permalink": "/devbible/docs/react/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "React — Syllabus",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "next": {
+    "title": "1 · The React model",
+    "permalink": "/devbible/docs/react/syllabus/the-react-model"
+  }
+}

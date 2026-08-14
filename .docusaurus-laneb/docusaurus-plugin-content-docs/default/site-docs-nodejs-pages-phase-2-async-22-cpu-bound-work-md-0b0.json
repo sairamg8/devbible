@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/cpu-bound-work",
+  "title": "CPU-bound work",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/22-cpu-bound-work.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/cpu-bound-work",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/cpu-bound-work",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "title": "CPU-bound work",
+    "sidebar_label": "22 · CPU-bound work",
+    "sidebar_position": 22
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "21 · async_hooks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-hooks"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/"
+  }
+}

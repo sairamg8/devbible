@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/custom-readable-writable",
+  "title": "Custom Readable and Writable",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/17-custom-readable-writable.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/custom-readable-writable",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/custom-readable-writable",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Custom Readable and Writable",
+    "sidebar_label": "17 · Custom streams",
+    "sidebar_position": 17
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "16 · zlib",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/zlib"
+  },
+  "next": {
+    "title": "18 · promises & compose",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/stream-promises-and-compose"
+  }
+}

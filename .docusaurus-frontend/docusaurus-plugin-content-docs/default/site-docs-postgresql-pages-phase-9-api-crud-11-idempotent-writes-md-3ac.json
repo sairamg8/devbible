@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/idempotent-writes",
+  "title": "Idempotent writes",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/11-idempotent-writes.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud",
+  "slug": "/postgresql/pages/phase-9-api-crud/idempotent-writes",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/idempotent-writes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Idempotent writes",
+    "sidebar_label": "11 · Idempotent writes",
+    "sidebar_position": 11
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Cursors and traps",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/keyset/cursors-and-traps"
+  },
+  "next": {
+    "title": "12 · Client propagation",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/client-propagation"
+  }
+}

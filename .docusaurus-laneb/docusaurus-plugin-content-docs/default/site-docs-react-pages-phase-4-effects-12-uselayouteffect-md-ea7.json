@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/uselayouteffect",
+  "title": "useLayoutEffect",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/12-uselayouteffect.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/uselayouteffect",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/uselayouteffect",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "useLayoutEffect",
+    "sidebar_label": "12 · useLayoutEffect",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · The illegitimate fixes",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/the-illegitimate-fixes"
+  },
+  "next": {
+    "title": "13 · Effect ordering",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/effect-ordering"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/microtasks-vs-macrotasks/README",
+  "title": "03 · Microtasks vs macrotasks",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/03-microtasks-vs-macrotasks/README.md",
+  "sourceDirName": "javascript/pages/phase-7-async/03-microtasks-vs-macrotasks",
+  "slug": "/javascript/pages/phase-7-async/microtasks-vs-macrotasks/",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "03 · Microtasks vs macrotasks",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Stack, queue, heap",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/the-event-loop/stack-queue-heap"
+  },
+  "next": {
+    "title": "01 · The drain order",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/the-drain-order"
+  }
+}

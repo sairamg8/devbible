@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/scripting",
+  "title": "Scripting psql",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/06-scripting.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/scripting",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/scripting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Scripting psql",
+    "sidebar_label": "06 · Scripting",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · \\? and \\h",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/help"
+  },
+  "next": {
+    "title": "07 · Query buffer",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/query-buffer"
+  }
+}

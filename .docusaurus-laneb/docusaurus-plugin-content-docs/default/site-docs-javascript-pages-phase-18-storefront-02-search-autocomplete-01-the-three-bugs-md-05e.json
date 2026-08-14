@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/search-autocomplete/the-three-bugs",
+  "title": "02.1 · The three bugs every search box ships with",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/02-search-autocomplete/01-the-three-bugs.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/02-search-autocomplete",
+  "slug": "/javascript/pages/phase-18-storefront/search-autocomplete/the-three-bugs",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/the-three-bugs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · The three bugs every search box ships with",
+    "sidebar_label": "01 · The three bugs",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/"
+  },
+  "next": {
+    "title": "02 · The dropdown",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/the-dropdown"
+  }
+}

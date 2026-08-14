@@ -1,0 +1,28 @@
+{
+  "id": "web-vitals-performance/pages/core-web-vitals/lcp-inp-cls-fundamentals",
+  "title": "Core Web Vitals: LCP, INP & CLS Fundamentals",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/web-vitals-performance/pages/01-core-web-vitals/01-lcp-inp-cls-fundamentals.md",
+  "sourceDirName": "web-vitals-performance/pages/01-core-web-vitals",
+  "slug": "/web-vitals-performance/pages/core-web-vitals/lcp-inp-cls-fundamentals",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/core-web-vitals/lcp-inp-cls-fundamentals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Core Web Vitals: LCP, INP & CLS Fundamentals",
+    "sidebar_label": "Core Web Vitals",
+    "sidebar_position": 1
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "Explanations",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/"
+  },
+  "next": {
+    "title": "Legacy & Supporting Metrics + Lab Measurem",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/legacy-and-lab-measurement/legacy-metrics-and-lab-tools"
+  }
+}

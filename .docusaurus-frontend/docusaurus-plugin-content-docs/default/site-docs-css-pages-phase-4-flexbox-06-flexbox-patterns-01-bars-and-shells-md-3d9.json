@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/flexbox-patterns/bars-and-shells",
+  "title": "Bars, shells and the pushed group",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/06-flexbox-patterns/01-bars-and-shells.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/06-flexbox-patterns",
+  "slug": "/css/pages/phase-4-flexbox/flexbox-patterns/bars-and-shells",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flexbox-patterns/bars-and-shells",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Bars, shells and the pushed group",
+    "sidebar_label": "01 · Bars and shells",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flexbox-patterns/"
+  },
+  "next": {
+    "title": "02 · Truncation and the squeeze",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flexbox-patterns/truncation-and-the-squeeze"
+  }
+}

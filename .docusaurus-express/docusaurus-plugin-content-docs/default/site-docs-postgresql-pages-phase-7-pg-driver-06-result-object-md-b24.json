@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/result-object",
+  "title": "The result object",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/06-result-object.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/result-object",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/result-object",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "The result object",
+    "sidebar_label": "06 · The result object",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · Errors",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/errors"
+  },
+  "next": {
+    "title": "07 · connect and release",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/connect-release"
+  }
+}

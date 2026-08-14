@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/jsonb-operators/accessors-and-paths",
+  "title": "Accessors and paths",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/01-accessors-and-paths.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables/01-jsonb-operators",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/jsonb-operators/accessors-and-paths",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/accessors-and-paths",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Accessors and paths",
+    "sidebar_label": "01 · Accessors and paths",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/"
+  },
+  "next": {
+    "title": "02 · Containment and jsonpath",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/containment-and-jsonpath"
+  }
+}

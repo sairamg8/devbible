@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-2-operators/switch",
+  "title": "09 · `switch`",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-2-operators/09-switch.md",
+  "sourceDirName": "javascript/pages/phase-2-operators",
+  "slug": "/javascript/pages/phase-2-operators/switch",
+  "permalink": "/devbible/docs/javascript/pages/phase-2-operators/switch",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "09 · `switch`",
+    "sidebar_label": "09 · switch",
+    "sidebar_position": 9
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "08 · Conditionals",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/conditionals"
+  },
+  "next": {
+    "title": "10 · Precedence",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/precedence"
+  }
+}

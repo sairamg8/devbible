@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/authn-middleware/README",
+  "title": "Authentication middleware",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/04-authn-middleware/README.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz/04-authn-middleware",
+  "slug": "/expressjs/pages/phase-8-validation-authz/authn-middleware/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Authentication middleware",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Coercion traps",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/coercion-traps"
+  },
+  "next": {
+    "title": "01 · One question only",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/authn-middleware/one-question-only"
+  }
+}

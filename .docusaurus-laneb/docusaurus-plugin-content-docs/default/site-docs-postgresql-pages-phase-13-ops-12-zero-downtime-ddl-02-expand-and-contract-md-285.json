@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/zero-downtime-ddl/expand-and-contract",
+  "title": "12.2 · Expand and contract",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/12-zero-downtime-ddl/02-expand-and-contract.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/12-zero-downtime-ddl",
+  "slug": "/postgresql/pages/phase-13-ops/zero-downtime-ddl/expand-and-contract",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/expand-and-contract",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "12.2 · Expand and contract",
+    "sidebar_label": "02 · Expand & contract",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · The lock queue",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/the-lock-queue"
+  },
+  "next": {
+    "title": "03 · Indexes & the checklist",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/indexes-and-checklist"
+  }
+}

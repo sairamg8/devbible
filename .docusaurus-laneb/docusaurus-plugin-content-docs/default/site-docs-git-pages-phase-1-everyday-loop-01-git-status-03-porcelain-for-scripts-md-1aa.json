@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/git-status/porcelain-for-scripts",
+  "title": "Porcelain, for scripts",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/01-git-status/03-porcelain-for-scripts.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop/01-git-status",
+  "slug": "/git/pages/phase-1-everyday-loop/git-status/porcelain-for-scripts",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-status/porcelain-for-scripts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Porcelain, for scripts",
+    "sidebar_label": "03 · Porcelain for scripts",
+    "sidebar_position": 3
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "02 · The short format",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-status/the-short-format"
+  },
+  "next": {
+    "title": "04 · Untracked and performance",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-status/untracked-and-performance"
+  }
+}

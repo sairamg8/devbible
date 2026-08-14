@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/flexbox-patterns/README",
+  "title": "Flexbox patterns that carry real applications",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/06-flexbox-patterns/README.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/06-flexbox-patterns",
+  "slug": "/css/pages/phase-4-flexbox/flexbox-patterns/",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flexbox-patterns/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Flexbox patterns that carry real applications",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "05 · Main and cross axis",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/main-and-cross-axis"
+  },
+  "next": {
+    "title": "01 · Bars and shells",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flexbox-patterns/bars-and-shells"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/stream-promises-and-compose",
+  "title": "stream/promises, consumers and compose",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/18-stream-promises-and-compose.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/stream-promises-and-compose",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/stream-promises-and-compose",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "title": "stream/promises, consumers and compose",
+    "sidebar_label": "18 · promises & compose",
+    "sidebar_position": 18
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "17 · Custom streams",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/custom-readable-writable"
+  },
+  "next": {
+    "title": "19 · High water marks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/highwatermark-tuning"
+  }
+}

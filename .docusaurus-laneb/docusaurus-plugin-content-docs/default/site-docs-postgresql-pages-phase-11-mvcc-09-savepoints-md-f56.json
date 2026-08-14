@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-11-mvcc/savepoints",
+  "title": "Savepoints and partial rollback",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-11-mvcc/09-savepoints.md",
+  "sourceDirName": "postgresql/pages/phase-11-mvcc",
+  "slug": "/postgresql/pages/phase-11-mvcc/savepoints",
+  "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/savepoints",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Savepoints and partial rollback",
+    "sidebar_label": "09 · Savepoints",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · SKIP LOCKED",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/skip-locked"
+  },
+  "next": {
+    "title": "10 · Table locks and DDL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/table-locks-ddl"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/infinite-render-loops",
+  "title": "Infinite render loops",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-3-state/17-infinite-render-loops.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/infinite-render-loops",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/infinite-render-loops",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Infinite render loops",
+    "sidebar_label": "17 · Infinite render loops",
+    "sidebar_position": 17
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "16 · Updating state during render",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/updating-state-during-render"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/"
+  }
+}

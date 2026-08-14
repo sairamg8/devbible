@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-6-data-access/README",
+  "title": "Phase 6 — Data access",
+  "description": "Target runtime: Node 24 — the Active LTS as of August 2026.",
+  "source": "@site/docs/nodejs/pages/phase-6-data-access/README.md",
+  "sourceDirName": "nodejs/pages/phase-6-data-access",
+  "slug": "/nodejs/pages/phase-6-data-access/",
+  "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 6 — Data access",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "26 · Single executables",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/single-executable-applications"
+  },
+  "next": {
+    "title": "01 · Connection pooling",
+    "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/connection-pooling"
+  }
+}

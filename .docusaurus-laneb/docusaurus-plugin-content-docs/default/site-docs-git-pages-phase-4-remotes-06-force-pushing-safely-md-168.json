@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-4-remotes/force-pushing-safely",
+  "title": "Force-pushing safely",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-4-remotes/06-force-pushing-safely.md",
+  "sourceDirName": "git/pages/phase-4-remotes",
+  "slug": "/git/pages/phase-4-remotes/force-pushing-safely",
+  "permalink": "/devbible/docs/git/pages/phase-4-remotes/force-pushing-safely",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Force-pushing safely",
+    "sidebar_label": "06 · Force-pushing safely",
+    "sidebar_position": 6
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "05 · Divergent branches",
+    "permalink": "/devbible/docs/git/pages/phase-4-remotes/divergent-branches"
+  },
+  "next": {
+    "title": "07 · git push",
+    "permalink": "/devbible/docs/git/pages/phase-4-remotes/git-push"
+  }
+}

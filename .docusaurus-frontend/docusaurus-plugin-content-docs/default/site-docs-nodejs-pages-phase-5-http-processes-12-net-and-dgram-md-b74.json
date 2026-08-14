@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/net-and-dgram",
+  "title": "node:net, node:dgram and framing",
+  "description": "Know · custom binary protocols are When Needed",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/12-net-and-dgram.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/net-and-dgram",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/net-and-dgram",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "node:net, node:dgram and framing",
+    "sidebar_label": "12 · net and dgram",
+    "sidebar_position": 12
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "11 · WebSockets",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/websockets"
+  },
+  "next": {
+    "title": "13 · node:dns",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/dns"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/property-and-mutation",
+  "title": "Property-based and mutation testing",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/17-property-and-mutation.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/property-and-mutation",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/property-and-mutation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Property-based and mutation testing",
+    "sidebar_label": "17 · Property and mutation",
+    "sidebar_position": 17
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "16 · ESLint, Prettier, Biome",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/lint-and-format"
+  },
+  "next": {
+    "title": "18 · Load testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/load-testing"
+  }
+}

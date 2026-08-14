@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/error-and-subclasses/custom-errors",
+  "title": "03.2 · Custom error classes",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/03-error-and-subclasses/02-custom-errors.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/03-error-and-subclasses",
+  "slug": "/javascript/pages/phase-8-modules-errors/error-and-subclasses/custom-errors",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/error-and-subclasses/custom-errors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · Custom error classes",
+    "sidebar_label": "02 · Custom error classes",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The Error object",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/error-and-subclasses/the-error-object"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/leaks/"
+  }
+}

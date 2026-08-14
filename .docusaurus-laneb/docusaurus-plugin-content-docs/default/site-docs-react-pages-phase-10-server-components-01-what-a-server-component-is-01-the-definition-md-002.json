@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/what-a-server-component-is/the-definition",
+  "title": "The definition, clause by clause",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-10-server-components/01-what-a-server-component-is/01-the-definition.md",
+  "sourceDirName": "react/pages/phase-10-server-components/01-what-a-server-component-is",
+  "slug": "/react/pages/phase-10-server-components/what-a-server-component-is/the-definition",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/what-a-server-component-is/the-definition",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The definition, clause by clause",
+    "sidebar_label": "01 · The definition",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/what-a-server-component-is/"
+  },
+  "next": {
+    "title": "02 · The default and the limits",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/what-a-server-component-is/defaults-and-limits"
+  }
+}

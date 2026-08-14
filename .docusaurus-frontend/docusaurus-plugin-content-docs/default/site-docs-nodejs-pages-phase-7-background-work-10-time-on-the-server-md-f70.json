@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/time-on-the-server",
+  "title": "Time on the server — store UTC, convert at the edge",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/10-time-on-the-server.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/time-on-the-server",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/time-on-the-server",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Time on the server — store UTC, convert at the edge",
+    "sidebar_label": "10 · Time on the server",
+    "sidebar_position": 10
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "09 · Outbound side-effects",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/outbound-side-effects"
+  },
+  "next": {
+    "title": "11 · Graceful worker shutdown",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/graceful-shutdown"
+  }
+}

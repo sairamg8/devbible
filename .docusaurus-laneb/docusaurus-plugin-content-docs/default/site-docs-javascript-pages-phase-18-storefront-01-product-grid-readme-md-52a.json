@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/product-grid/README",
+  "title": "01 · The product grid",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/01-product-grid/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/01-product-grid",
+  "slug": "/javascript/pages/phase-18-storefront/product-grid/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · The product grid",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/"
+  },
+  "next": {
+    "title": "01 · URL as state",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/url-as-state"
+  }
+}

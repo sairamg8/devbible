@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/pure-functions",
+  "title": "15 · Pure functions and side effects",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-3-functions/15-pure-functions.md",
+  "sourceDirName": "javascript/pages/phase-3-functions",
+  "slug": "/javascript/pages/phase-3-functions/pure-functions",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/pure-functions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "15 · Pure functions and side effects",
+    "sidebar_label": "15 · Pure functions and side effects",
+    "sidebar_position": 15
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "14 · Recursion",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/recursion"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/"
+  }
+}

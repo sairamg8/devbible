@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/use-context",
+  "title": "use(context)",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/12-use-context.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/use-context",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/use-context",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "use(context)",
+    "sidebar_label": "12 · use(context)",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · Suspense inside a transition",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspense-inside-a-transition"
+  },
+  "next": {
+    "title": "13 · cache and cacheSignal",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/cache-and-cachesignal"
+  }
+}

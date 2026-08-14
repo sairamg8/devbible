@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/callbacks/README",
+  "title": "04 · Callbacks",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/04-callbacks/README.md",
+  "sourceDirName": "javascript/pages/phase-7-async/04-callbacks",
+  "slug": "/javascript/pages/phase-7-async/callbacks/",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "04 · Callbacks",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Using microtasks",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/using-microtasks"
+  },
+  "next": {
+    "title": "01 · The pattern",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/the-pattern"
+  }
+}

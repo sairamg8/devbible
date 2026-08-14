@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-9-hardening/cors",
+  "title": "CORS in Express",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-9-hardening/02-cors.md",
+  "sourceDirName": "expressjs/pages/phase-9-hardening",
+  "slug": "/expressjs/pages/phase-9-hardening/cors",
+  "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/cors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "CORS in Express",
+    "sidebar_label": "02 · CORS",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · What else it changes",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/what-else-it-changes"
+  },
+  "next": {
+    "title": "03 · Helmet",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/helmet"
+  }
+}

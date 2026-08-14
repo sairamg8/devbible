@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/procedures",
+  "title": "Procedures versus functions",
+  "description": "Learn When Needed",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/15-procedures.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/procedures",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/procedures",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Procedures versus functions",
+    "sidebar_label": "15 · Procedures",
+    "sidebar_position": 15
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "14 · Partitioning",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/partitioning"
+  },
+  "next": {
+    "title": "16 · Foreign data wrappers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/fdw"
+  }
+}

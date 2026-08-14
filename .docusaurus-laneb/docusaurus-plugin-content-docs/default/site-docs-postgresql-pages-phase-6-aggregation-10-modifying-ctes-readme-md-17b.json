@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/modifying-ctes/README",
+  "title": "Data-modifying CTEs",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/10-modifying-ctes",
+  "slug": "/postgresql/pages/phase-6-aggregation/modifying-ctes/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/modifying-ctes/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Data-modifying CTEs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · References, hints and the plan",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ctes/references-and-hints"
+  },
+  "next": {
+    "title": "01 · One statement, several writes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/modifying-ctes/one-statement-many-writes"
+  }
+}

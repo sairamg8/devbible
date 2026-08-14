@@ -1,0 +1,28 @@
+{
+  "id": "web-vitals-performance/pages/cls-optimization/preventing-cls",
+  "title": "CLS Optimization: Reserved Space, Font Loading & Safe DOM Insertion",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/web-vitals-performance/pages/06-cls-optimization/01-preventing-cls.md",
+  "sourceDirName": "web-vitals-performance/pages/06-cls-optimization",
+  "slug": "/web-vitals-performance/pages/cls-optimization/preventing-cls",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/cls-optimization/preventing-cls",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "CLS Optimization: Reserved Space, Font Loading & Safe DOM Insertion",
+    "sidebar_label": "CLS Optimization",
+    "sidebar_position": 1
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "INP Optimization",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/inp-optimization/reducing-inp"
+  },
+  "next": {
+    "title": "Loading & Rendering Performance",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/loading-and-rendering-performance/delivery-and-runtime-rendering"
+  }
+}

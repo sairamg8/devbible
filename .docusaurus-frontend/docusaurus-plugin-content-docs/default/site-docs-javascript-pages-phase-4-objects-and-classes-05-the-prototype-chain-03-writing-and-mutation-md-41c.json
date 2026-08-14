@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/the-prototype-chain/writing-and-mutation",
+  "title": "05.3 · Writing, shadowing and mutating the chain",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/05-the-prototype-chain/03-writing-and-mutation.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/05-the-prototype-chain",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/writing-and-mutation",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/writing-and-mutation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "05.3 · Writing, shadowing and mutating the chain",
+    "sidebar_label": "03 · Writing and mutation",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · prototype vs [[Prototype]]",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/prototype-vs-the-slot"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/class/"
+  }
+}

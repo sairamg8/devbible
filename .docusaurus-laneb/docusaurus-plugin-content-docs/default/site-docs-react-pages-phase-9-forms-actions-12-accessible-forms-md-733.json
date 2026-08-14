@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/accessible-forms",
+  "title": "Accessible forms",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/12-accessible-forms.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/accessible-forms",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/accessible-forms",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Accessible forms",
+    "sidebar_label": "12 · Accessible forms",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · Progressive enhancement",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/progressive-enhancement"
+  },
+  "next": {
+    "title": "13 · ⚠ useFormState",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useformstate"
+  }
+}

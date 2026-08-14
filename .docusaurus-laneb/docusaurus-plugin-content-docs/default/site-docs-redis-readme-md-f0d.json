@@ -1,0 +1,19 @@
+{
+  "id": "redis/README",
+  "title": "Redis — Syllabus",
+  "description": "Verified: 2026-08-14 against redis.io's release index",
+  "source": "@site/docs/redis/README.md",
+  "sourceDirName": "redis",
+  "slug": "/redis/",
+  "permalink": "/devbible/docs/redis/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Redis — Syllabus",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  }
+}

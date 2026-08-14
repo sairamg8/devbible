@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/call-apply-bind/what-bind-does",
+  "title": "05.2 · What `bind` does",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/05-call-apply-bind/02-what-bind-does.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/05-call-apply-bind",
+  "slug": "/javascript/pages/phase-3-functions/call-apply-bind/what-bind-does",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/what-bind-does",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "05.2 · What `bind` does",
+    "sidebar_label": "02 · What bind does",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The three methods",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/the-three-methods"
+  },
+  "next": {
+    "title": "03 · Borrowing and cost",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/borrowing-and-cost"
+  }
+}

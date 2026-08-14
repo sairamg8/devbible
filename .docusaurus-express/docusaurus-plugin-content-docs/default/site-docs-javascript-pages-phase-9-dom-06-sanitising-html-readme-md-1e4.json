@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/sanitising-html/README",
+  "title": "06 · Sanitising HTML",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-9-dom/06-sanitising-html/README.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/06-sanitising-html",
+  "slug": "/javascript/pages/phase-9-dom/sanitising-html/",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/sanitising-html/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "06 · Sanitising HTML",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Two parallel worlds",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/attributes-vs-properties/two-parallel-worlds"
+  },
+  "next": {
+    "title": "01 · Sinks and sanitisers",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/sanitising-html/sinks-and-sanitisers"
+  }
+}

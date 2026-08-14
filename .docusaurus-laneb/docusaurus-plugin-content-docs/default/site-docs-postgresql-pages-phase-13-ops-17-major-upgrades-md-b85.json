@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/major-upgrades",
+  "title": "Major version upgrades",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/17-major-upgrades.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops",
+  "slug": "/postgresql/pages/phase-13-ops/major-upgrades",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/major-upgrades",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Major version upgrades",
+    "sidebar_label": "17 · Major upgrades",
+    "sidebar_position": 17
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "16 · Logical replication",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logical-replication"
+  },
+  "next": {
+    "title": "18 · Disaster drill",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/disaster-drill"
+  }
+}

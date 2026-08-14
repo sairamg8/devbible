@@ -1,0 +1,24 @@
+{
+  "id": "frontend-architecture/README",
+  "title": "Frontend Architecture — Overview",
+  "description": "These pages were moved in from the separate frontend-bible repo as-is, on",
+  "source": "@site/docs/frontend-architecture/README.md",
+  "sourceDirName": "frontend-architecture",
+  "slug": "/frontend-architecture/",
+  "permalink": "/devbible/docs/frontend-architecture/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Frontend Architecture — Overview",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "next": {
+    "title": "Explanations",
+    "permalink": "/devbible/docs/frontend-architecture/pages/"
+  }
+}

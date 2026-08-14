@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-0-how-storybook-runs/renderers-and-builders",
+  "title": "03 · The renderer architecture",
+  "description": "Know",
+  "source": "@site/docs/storybook/pages/phase-0-how-storybook-runs/03-renderers-and-builders.md",
+  "sourceDirName": "storybook/pages/phase-0-how-storybook-runs",
+  "slug": "/storybook/pages/phase-0-how-storybook-runs/renderers-and-builders",
+  "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/renderers-and-builders",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · The renderer architecture",
+    "sidebar_label": "03 · Renderer architecture",
+    "sidebar_position": 3
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "02 · Manager and preview",
+    "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/manager-and-preview"
+  },
+  "next": {
+    "title": "04 · Installing into an app",
+    "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/installing-into-an-existing-app"
+  }
+}

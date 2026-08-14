@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/rest-resources/README",
+  "title": "REST resource modeling",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/01-rest-resources/README.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/01-rest-resources",
+  "slug": "/expressjs/pages/phase-6-rest-surface/rest-resources/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "REST resource modeling",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/"
+  },
+  "next": {
+    "title": "01 · Nouns, collections, items",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/nouns-collections-items"
+  }
+}

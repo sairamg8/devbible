@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/connection-and-auth",
+  "title": "Connection strings and authentication",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/08-connection-and-auth.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture",
+  "slug": "/postgresql/pages/phase-0-architecture/connection-and-auth",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/connection-and-auth",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Connection strings and authentication",
+    "sidebar_label": "08 · Connection and auth",
+    "sidebar_position": 8
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "07 · Local install",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/local-install"
+  },
+  "next": {
+    "title": "09 · Process model",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/process-model"
+  }
+}

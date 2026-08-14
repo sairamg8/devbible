@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/full-text/tsvector-and-queries",
+  "title": "tsvector and tsquery",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/05-full-text/01-tsvector-and-queries.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables/05-full-text",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/full-text/tsvector-and-queries",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/full-text/tsvector-and-queries",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "tsvector and tsquery",
+    "sidebar_label": "01 · tsvector and tsquery",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/full-text/"
+  },
+  "next": {
+    "title": "02 · Indexing and ranking",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/full-text/indexing-and-ranking"
+  }
+}

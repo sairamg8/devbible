@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/strings-are-utf16",
+  "title": "10 · Strings are UTF-16",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/10-strings-are-utf16.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/strings-are-utf16",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/strings-are-utf16",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "10 · Strings are UTF-16",
+    "sidebar_label": "10 · Strings are UTF-16",
+    "sidebar_position": 10
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "09 · Explicit conversion",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/explicit-conversion"
+  },
+  "next": {
+    "title": "11 · NaN",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/nan"
+  }
+}

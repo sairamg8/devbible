@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/count-variants/three-questions",
+  "title": "Three different questions",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/02-count-variants/01-three-questions.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/02-count-variants",
+  "slug": "/postgresql/pages/phase-6-aggregation/count-variants/three-questions",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/three-questions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Three different questions",
+    "sidebar_label": "01 · Three questions",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/"
+  },
+  "next": {
+    "title": "02 · LEFT JOIN and fan-out",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/left-join-and-fan-out"
+  }
+}

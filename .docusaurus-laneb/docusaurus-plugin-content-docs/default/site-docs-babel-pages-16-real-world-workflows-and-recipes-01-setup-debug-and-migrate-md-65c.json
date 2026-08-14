@@ -1,0 +1,24 @@
+{
+  "id": "babel/pages/real-world-workflows-and-recipes/setup-debug-and-migrate",
+  "title": "Babel Real-World Workflows & Recipes",
+  "description": "Covers syllabus §16.1 Setup, §16.2 Debugging, and §16.3 Migration recipes.",
+  "source": "@site/docs/babel/pages/16-real-world-workflows-and-recipes/01-setup-debug-and-migrate.md",
+  "sourceDirName": "babel/pages/16-real-world-workflows-and-recipes",
+  "slug": "/babel/pages/real-world-workflows-and-recipes/setup-debug-and-migrate",
+  "permalink": "/devbible/docs/babel/pages/real-world-workflows-and-recipes/setup-debug-and-migrate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Babel Real-World Workflows & Recipes",
+    "sidebar_label": "Babel Real-World Workflows & Recipes",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Migration & Decision Recipes",
+    "permalink": "/devbible/docs/babel/pages/migration-and-decision-recipes/swc-esbuild-keep-or-audit"
+  }
+}

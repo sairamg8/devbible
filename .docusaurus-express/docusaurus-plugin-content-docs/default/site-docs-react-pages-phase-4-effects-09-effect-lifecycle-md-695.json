@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/effect-lifecycle",
+  "title": "An effect has its own lifecycle",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/09-effect-lifecycle.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/effect-lifecycle",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/effect-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "An effect has its own lifecycle",
+    "sidebar_label": "09 · An effect has its own lifecycle",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · Race conditions",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/race-conditions"
+  },
+  "next": {
+    "title": "10 · useEffectEvent",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/useeffectevent"
+  }
+}

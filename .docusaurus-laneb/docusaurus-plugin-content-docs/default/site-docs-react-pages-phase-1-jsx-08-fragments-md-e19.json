@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/fragments",
+  "title": "Fragments",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-1-jsx/08-fragments.md",
+  "sourceDirName": "react/pages/phase-1-jsx",
+  "slug": "/react/pages/phase-1-jsx/fragments",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/fragments",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Fragments",
+    "sidebar_label": "08 · Fragments",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · Lists and key",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/lists-and-keys"
+  },
+  "next": {
+    "title": "09 · children",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/children"
+  }
+}

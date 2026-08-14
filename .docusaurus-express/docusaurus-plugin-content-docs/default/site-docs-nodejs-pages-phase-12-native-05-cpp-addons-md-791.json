@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/cpp-addons",
+  "title": "C++ addons and the embedder API",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-12-native/05-cpp-addons.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/cpp-addons",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/cpp-addons",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "C++ addons and the embedder API",
+    "sidebar_label": "05 · C++ addons",
+    "sidebar_position": 5
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "04 · Node-API",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/node-api"
+  },
+  "next": {
+    "title": "06 · FFI",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/ffi"
+  }
+}

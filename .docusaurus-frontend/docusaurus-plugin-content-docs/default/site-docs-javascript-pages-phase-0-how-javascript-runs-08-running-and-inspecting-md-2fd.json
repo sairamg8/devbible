@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/running-and-inspecting",
+  "title": "08 · Running and inspecting code",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/08-running-and-inspecting.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/running-and-inspecting",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/running-and-inspecting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "08 · Running and inspecting code",
+    "sidebar_label": "08 · Running and inspecting",
+    "sidebar_position": 8
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "07 · Loading scripts",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/loading-scripts"
+  },
+  "next": {
+    "title": "09 · Transpilation, polyfills",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/transpilation-polyfills"
+  }
+}

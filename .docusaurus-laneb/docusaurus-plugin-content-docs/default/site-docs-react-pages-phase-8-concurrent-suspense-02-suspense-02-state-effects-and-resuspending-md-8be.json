@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/suspense/state-effects-and-resuspending",
+  "title": "State, effects and re-suspending",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/02-suspense/02-state-effects-and-resuspending.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense/02-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/suspense/state-effects-and-resuspending",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspense/state-effects-and-resuspending",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "State, effects and re-suspending",
+    "sidebar_label": "02 · State, effects, re-suspending",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The boundary and the fallback",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspense/the-boundary-and-the-fallback"
+  },
+  "next": {
+    "title": "03 · What can actually suspend",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/what-can-suspend"
+  }
+}

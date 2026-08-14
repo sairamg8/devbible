@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-7-layering/domain-vs-transport",
+  "title": "Domain vs transport",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-7-layering/02-domain-vs-transport.md",
+  "sourceDirName": "expressjs/pages/phase-7-layering",
+  "slug": "/expressjs/pages/phase-7-layering/domain-vs-transport",
+  "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/domain-vs-transport",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Domain vs transport",
+    "sidebar_label": "02 · Domain vs transport",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · When to adopt it",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/controller-service-repository/when-to-adopt"
+  },
+  "next": {
+    "title": "03 · Fat controllers",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/fat-controllers"
+  }
+}

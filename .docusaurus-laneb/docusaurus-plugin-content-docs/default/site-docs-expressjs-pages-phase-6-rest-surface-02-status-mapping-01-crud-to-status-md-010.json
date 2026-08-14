@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/status-mapping/crud-to-status",
+  "title": "CRUD to status",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/02-status-mapping/01-crud-to-status.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/02-status-mapping",
+  "slug": "/expressjs/pages/phase-6-rest-surface/status-mapping/crud-to-status",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/crud-to-status",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "CRUD to status",
+    "sidebar_label": "01 · CRUD to status",
+    "sidebar_position": 1
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/"
+  },
+  "next": {
+    "title": "02 · Conflicts and preconditions",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/conflicts-and-preconditions"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/values-unnest",
+  "title": "VALUES and unnest",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/19-values-unnest.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/values-unnest",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/values-unnest",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "title": "VALUES and unnest",
+    "sidebar_label": "19 · VALUES and unnest",
+    "sidebar_position": 19
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "18 · generate_series",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/generate-series"
+  },
+  "next": {
+    "title": "20 · Tuple comparison",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/tuple-comparison"
+  }
+}

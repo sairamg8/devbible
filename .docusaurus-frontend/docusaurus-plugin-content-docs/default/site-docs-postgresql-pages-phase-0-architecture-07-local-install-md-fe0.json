@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/local-install",
+  "title": "Local install with Podman/Docker",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/07-local-install.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture",
+  "slug": "/postgresql/pages/phase-0-architecture/local-install",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/local-install",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Local install with Podman/Docker",
+    "sidebar_label": "07 · Local install",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · Roles",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/roles"
+  },
+  "next": {
+    "title": "08 · Connection and auth",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/connection-and-auth"
+  }
+}

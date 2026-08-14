@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/purity/README",
+  "title": "Purity",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/02-purity/README.md",
+  "sourceDirName": "react/pages/phase-2-components/02-purity",
+  "slug": "/react/pages/phase-2-components/purity/",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/purity/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Purity",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · Identity and nesting",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/identity-and-nesting"
+  },
+  "next": {
+    "title": "01 · The two rules",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/purity/the-two-rules"
+  }
+}

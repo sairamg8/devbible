@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/safe-dynamic-where/patterns-and-composition",
+  "title": "Pattern matching and composition",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/02-patterns-and-composition.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/03-safe-dynamic-where",
+  "slug": "/postgresql/pages/phase-9-api-crud/safe-dynamic-where/patterns-and-composition",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/patterns-and-composition",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Pattern matching and composition",
+    "sidebar_label": "02 · Patterns and composition",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Predicates and params",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/predicates-and-params"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/allowlists/"
+  }
+}

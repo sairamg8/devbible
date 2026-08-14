@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/hash-maps-and-sets/README",
+  "title": "02 · Hash maps and hash sets",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/02-hash-maps-and-sets/README.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures/02-hash-maps-and-sets",
+  "slug": "/javascript/pages/phase-14-data-structures/hash-maps-and-sets/",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/hash-maps-and-sets/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Hash maps and hash sets",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Copying and methods",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/dynamic-arrays/copying-and-modern-methods"
+  },
+  "next": {
+    "title": "01 · Using the built-ins",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/hash-maps-and-sets/using-the-built-ins"
+  }
+}

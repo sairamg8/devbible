@@ -1,0 +1,28 @@
+{
+  "id": "css/syllabus/at-scale",
+  "title": "Part 4 — SCSS",
+  "description": "Phase 10 · 8 topics · 5 Master",
+  "source": "@site/docs/css/syllabus/04-at-scale.md",
+  "sourceDirName": "css/syllabus",
+  "slug": "/css/syllabus/at-scale",
+  "permalink": "/devbible/docs/css/syllabus/at-scale",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Part 4 — SCSS",
+    "sidebar_label": "4 · SCSS",
+    "sidebar_position": 4
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "3 · Adaptive and visual",
+    "permalink": "/devbible/docs/css/syllabus/adaptive-and-visual"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/"
+  }
+}

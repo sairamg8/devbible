@@ -1,0 +1,28 @@
+{
+  "id": "babel/pages/authoring-custom-plugins/visitors-paths-types-and-testing",
+  "title": "Authoring Custom Babel Plugins",
+  "description": "Covers syllabus §6.1 Visitor Pattern, §6.2 Path & Scope, §6.3 @babel/types, and §6.4 Testing.",
+  "source": "@site/docs/babel/pages/06-authoring-custom-plugins/01-visitors-paths-types-and-testing.md",
+  "sourceDirName": "babel/pages/06-authoring-custom-plugins",
+  "slug": "/babel/pages/authoring-custom-plugins/visitors-paths-types-and-testing",
+  "permalink": "/devbible/docs/babel/pages/authoring-custom-plugins/visitors-paths-types-and-testing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Authoring Custom Babel Plugins",
+    "sidebar_label": "Authoring Custom Babel Plugins",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Babel Plugin Ecosystem",
+    "permalink": "/devbible/docs/babel/pages/plugin-ecosystem/syntax-transform-stage-macros"
+  },
+  "next": {
+    "title": "TypeScript & JSX in Babel",
+    "permalink": "/devbible/docs/babel/pages/typescript-and-jsx-handling/type-stripping-unsupported-and-jsx-runtime"
+  }
+}

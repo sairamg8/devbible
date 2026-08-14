@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-1-story-format/csf-factories",
+  "title": "04 · CSF factories",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-1-story-format/04-csf-factories.md",
+  "sourceDirName": "storybook/pages/phase-1-story-format",
+  "slug": "/storybook/pages/phase-1-story-format/csf-factories",
+  "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/csf-factories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "04 · CSF factories",
+    "sidebar_label": "04 · CSF factories",
+    "sidebar_position": 4
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "03 · Typing stories",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/typing-stories"
+  },
+  "next": {
+    "title": "05 · Naming and the sidebar",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/naming-and-the-sidebar"
+  }
+}

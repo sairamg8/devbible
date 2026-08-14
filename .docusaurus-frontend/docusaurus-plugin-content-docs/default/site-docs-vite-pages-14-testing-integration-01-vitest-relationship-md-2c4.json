@@ -1,0 +1,28 @@
+{
+  "id": "vite/pages/testing-integration/vitest-relationship",
+  "title": "Testing Integration: Vitest's Shared Config & Transform Pipeline",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/14-testing-integration/01-vitest-relationship.md",
+  "sourceDirName": "vite/pages/14-testing-integration",
+  "slug": "/vite/pages/testing-integration/vitest-relationship",
+  "permalink": "/devbible/docs/vite/pages/testing-integration/vitest-relationship",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Testing Integration: Vitest's Shared Config & Transform Pipeline",
+    "sidebar_label": "Testing Integration",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Worker & WASM Support",
+    "permalink": "/devbible/docs/vite/pages/worker-and-wasm-support/advanced-runtime-targets"
+  },
+  "next": {
+    "title": "Deployment Considerations",
+    "permalink": "/devbible/docs/vite/pages/deployment-considerations/shipping-the-build"
+  }
+}

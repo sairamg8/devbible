@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/size-limits/what-it-does-not-protect",
+  "title": "What a limit does not protect",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/03-size-limits/03-what-it-does-not-protect.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests/03-size-limits",
+  "slug": "/expressjs/pages/phase-3-requests/size-limits/what-it-does-not-protect",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/size-limits/what-it-does-not-protect",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "What a limit does not protect",
+    "sidebar_label": "03 · What it does not protect",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Choosing and layering",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/size-limits/choosing-and-layering"
+  },
+  "next": {
+    "title": "04 · Query parser",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/query-parser"
+  }
+}

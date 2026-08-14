@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/createroot",
+  "title": "createRoot and root.render",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/06-createroot.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/createroot",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/createroot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "createRoot and root.render",
+    "sidebar_label": "06 · createRoot",
+    "sidebar_position": 6
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "05 · Fiber",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/fiber"
+  },
+  "next": {
+    "title": "07 · StrictMode",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/strictmode"
+  }
+}

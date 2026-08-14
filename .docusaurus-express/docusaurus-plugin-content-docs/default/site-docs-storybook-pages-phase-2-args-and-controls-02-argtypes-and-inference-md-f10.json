@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-2-args-and-controls/argtypes-and-inference",
+  "title": "02 · argTypes and control inference",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-2-args-and-controls/02-argtypes-and-inference.md",
+  "sourceDirName": "storybook/pages/phase-2-args-and-controls",
+  "slug": "/storybook/pages/phase-2-args-and-controls/argtypes-and-inference",
+  "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/argtypes-and-inference",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02 · argTypes and control inference",
+    "sidebar_label": "02 · argTypes",
+    "sidebar_position": 2
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "01 · Args",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/args-as-the-source-of-truth"
+  },
+  "next": {
+    "title": "03 · Controls",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/the-controls-panel"
+  }
+}

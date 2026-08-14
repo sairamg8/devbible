@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/temp-unlogged",
+  "title": "TEMPORARY and UNLOGGED tables",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/16-temp-unlogged.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/temp-unlogged",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/temp-unlogged",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "TEMPORARY and UNLOGGED tables",
+    "sidebar_label": "16 · TEMP and UNLOGGED",
+    "sidebar_position": 16
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "15 · Generated columns",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/generated-columns"
+  },
+  "next": {
+    "title": "17 · COMMENT ON",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/comments"
+  }
+}

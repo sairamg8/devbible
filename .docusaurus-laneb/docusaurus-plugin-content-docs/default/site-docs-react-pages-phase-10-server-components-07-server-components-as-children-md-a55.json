@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/server-components-as-children",
+  "title": "Passing Server Components as children",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-10-server-components/07-server-components-as-children.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/server-components-as-children",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/server-components-as-children",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Passing Server Components as children",
+    "sidebar_label": "07 · Server Components as children",
+    "sidebar_position": 7
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · What the framework does",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/server-function-security/what-the-framework-does"
+  },
+  "next": {
+    "title": "08 · Async components",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/async-components"
+  }
+}

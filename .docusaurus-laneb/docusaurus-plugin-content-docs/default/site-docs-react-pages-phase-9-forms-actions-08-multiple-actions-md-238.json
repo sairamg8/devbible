@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/multiple-actions",
+  "title": "Multiple actions in one form",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/08-multiple-actions.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/multiple-actions",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/multiple-actions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Multiple actions in one form",
+    "sidebar_label": "08 · Multiple actions in one form",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · useOptimistic",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useoptimistic"
+  },
+  "next": {
+    "title": "09 · Form reset semantics",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/form-reset"
+  }
+}

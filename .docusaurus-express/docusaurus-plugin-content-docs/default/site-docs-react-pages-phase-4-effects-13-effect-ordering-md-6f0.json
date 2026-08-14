@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/effect-ordering",
+  "title": "Effect ordering",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/13-effect-ordering.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/effect-ordering",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/effect-ordering",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Effect ordering",
+    "sidebar_label": "13 · Effect ordering",
+    "sidebar_position": 13
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "12 · useLayoutEffect",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/uselayouteffect"
+  },
+  "next": {
+    "title": "14 · Timers, listeners and observers",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/timers-listeners-observers"
+  }
+}

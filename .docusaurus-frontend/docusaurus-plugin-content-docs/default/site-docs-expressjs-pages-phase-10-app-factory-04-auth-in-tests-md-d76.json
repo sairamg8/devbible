@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/auth-in-tests",
+  "title": "Auth in tests",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/04-auth-in-tests.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory",
+  "slug": "/expressjs/pages/phase-10-app-factory/auth-in-tests",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/auth-in-tests",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Auth in tests",
+    "sidebar_label": "04 · Auth in tests",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Supertest",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/supertest"
+  },
+  "next": {
+    "title": "05 · Health · boot",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/health-and-boot"
+  }
+}

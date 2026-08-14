@@ -1,0 +1,28 @@
+{
+  "id": "babel/pages/migration-and-decision-recipes/swc-esbuild-keep-or-audit",
+  "title": "Migration & Decision Recipes: SWC, esbuild, Keep Babel, Audit Config",
+  "description": "Covers syllabus §15.1 Babel → SWC, §15.2 Babel → esbuild/Vite, §15.3 Keeping Babel Deliberately, and §15.4 Auditing Inherited Config.",
+  "source": "@site/docs/babel/pages/15-migration-and-decision-recipes/01-swc-esbuild-keep-or-audit.md",
+  "sourceDirName": "babel/pages/15-migration-and-decision-recipes",
+  "slug": "/babel/pages/migration-and-decision-recipes/swc-esbuild-keep-or-audit",
+  "permalink": "/devbible/docs/babel/pages/migration-and-decision-recipes/swc-esbuild-keep-or-audit",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Migration & Decision Recipes: SWC, esbuild, Keep Babel, Audit Config",
+    "sidebar_label": "Migration & Decision Recipes",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Node.js / Backend Babel Usage",
+    "permalink": "/devbible/docs/babel/pages/nodejs-backend-usage/register-and-esm-cjs"
+  },
+  "next": {
+    "title": "Babel Real-World Workflows & Recipes",
+    "permalink": "/devbible/docs/babel/pages/real-world-workflows-and-recipes/setup-debug-and-migrate"
+  }
+}

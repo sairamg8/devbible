@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/golden-signals",
+  "title": "The four golden signals — latency, traffic, errors, saturation",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/11-golden-signals.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/golden-signals",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/golden-signals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "The four golden signals — latency, traffic, errors, saturation",
+    "sidebar_label": "11 · Golden signals",
+    "sidebar_position": 11
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "10 · Health checks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/health-checks"
+  },
+  "next": {
+    "title": "12 · perf_hooks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/perf-hooks"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/progressive-enhancement",
+  "title": "Progressive enhancement",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/11-progressive-enhancement.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/progressive-enhancement",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/progressive-enhancement",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Progressive enhancement",
+    "sidebar_label": "11 · Progressive enhancement",
+    "sidebar_position": 11
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "10 · Errors in actions",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/errors-in-actions"
+  },
+  "next": {
+    "title": "12 · Accessible forms",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/accessible-forms"
+  }
+}

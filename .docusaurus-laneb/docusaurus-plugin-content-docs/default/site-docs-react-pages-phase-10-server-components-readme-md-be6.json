@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/README",
+  "title": "Phase 10 — Server Components and Server Functions",
+  "description": "Target: React 19.2.8. No sandbox and no console blocks — every claim is",
+  "source": "@site/docs/react/pages/phase-10-server-components/README.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 10 — Server Components and Server Functions",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · Form libraries",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/form-libraries"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/what-a-server-component-is/"
+  }
+}

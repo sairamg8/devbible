@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/render-blocking-css",
+  "title": "Render-blocking CSS",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/04-render-blocking-css.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/render-blocking-css",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/render-blocking-css",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Render-blocking CSS",
+    "sidebar_label": "04 · Render-blocking CSS",
+    "sidebar_position": 4
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "03 · Getting CSS to the page",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/how-stylesheets-reach-the-page"
+  },
+  "next": {
+    "title": "05 · CSS fails silently",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/css-fails-silently"
+  }
+}

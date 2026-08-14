@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/zero-downtime-ddl/the-lock-queue",
+  "title": "12.1 · The lock queue — how one migration stops everything",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/12-zero-downtime-ddl/01-the-lock-queue.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/12-zero-downtime-ddl",
+  "slug": "/postgresql/pages/phase-13-ops/zero-downtime-ddl/the-lock-queue",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/the-lock-queue",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "12.1 · The lock queue — how one migration stops everything",
+    "sidebar_label": "01 · The lock queue",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/"
+  },
+  "next": {
+    "title": "02 · Expand & contract",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/expand-and-contract"
+  }
+}

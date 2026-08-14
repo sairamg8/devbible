@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/static-checker-not-runtime",
+  "title": "TypeScript is a checker, not a runtime",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/01-static-checker-not-runtime.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/static-checker-not-runtime",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/static-checker-not-runtime",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "TypeScript is a checker, not a runtime",
+    "sidebar_label": "01 · Checker, not a runtime",
+    "sidebar_position": 1
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "Phase 0 · How TypeScript runs",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/"
+  },
+  "next": {
+    "title": "02 · Erasure",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/erasure"
+  }
+}

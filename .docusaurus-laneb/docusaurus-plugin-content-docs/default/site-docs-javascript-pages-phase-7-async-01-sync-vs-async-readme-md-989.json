@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/sync-vs-async/README",
+  "title": "01 · Synchronous vs asynchronous",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/01-sync-vs-async/README.md",
+  "sourceDirName": "javascript/pages/phase-7-async/01-sync-vs-async",
+  "slug": "/javascript/pages/phase-7-async/sync-vs-async/",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · Synchronous vs asynchronous",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Reading the ordering",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/reading-the-ordering"
+  },
+  "next": {
+    "title": "01 · One thread",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sync-vs-async/one-thread"
+  }
+}

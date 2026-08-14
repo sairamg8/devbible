@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/roles",
+  "title": "Roles, users, and groups",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/06-roles.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture",
+  "slug": "/postgresql/pages/phase-0-architecture/roles",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/roles",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Roles, users, and groups",
+    "sidebar_label": "06 · Roles",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · WAL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/wal"
+  },
+  "next": {
+    "title": "07 · Local install",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/local-install"
+  }
+}

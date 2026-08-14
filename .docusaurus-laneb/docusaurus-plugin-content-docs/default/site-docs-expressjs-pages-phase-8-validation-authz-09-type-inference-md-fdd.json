@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/type-inference",
+  "title": "Type inference from schemas",
+  "description": "Know",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/09-type-inference.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz",
+  "slug": "/expressjs/pages/phase-8-validation-authz/type-inference",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/type-inference",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Type inference from schemas",
+    "sidebar_label": "09 · Type inference",
+    "sidebar_position": 9
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "08 · Tenant · logout",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/tenant-and-logout"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/coverage",
+  "title": "Coverage — and why 100% is a bad target",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/11-coverage.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/coverage",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/coverage",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Coverage — and why 100% is a bad target",
+    "sidebar_label": "11 · Coverage",
+    "sidebar_position": 11
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "10 · Fixtures and factories",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/fixtures-and-factories"
+  },
+  "next": {
+    "title": "12 · Vitest and Jest",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/vitest-and-jest"
+  }
+}

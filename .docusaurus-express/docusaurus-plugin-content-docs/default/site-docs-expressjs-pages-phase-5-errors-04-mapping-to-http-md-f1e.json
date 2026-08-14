@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/mapping-to-http",
+  "title": "Mapping to HTTP",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/04-mapping-to-http.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors",
+  "slug": "/expressjs/pages/phase-5-errors/mapping-to-http",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/mapping-to-http",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Mapping to HTTP",
+    "sidebar_label": "04 · HTTP mapping",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Making it stick",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-contract/making-it-stick"
+  },
+  "next": {
+    "title": "05 · Error kinds",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/operational-vs-programmer"
+  }
+}

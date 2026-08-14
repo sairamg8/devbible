@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/module-resolution/the-resolve-object",
+  "title": "Module Resolution: The `resolve` Object",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/03-module-resolution/01-the-resolve-object.md",
+  "sourceDirName": "webpack/pages/03-module-resolution",
+  "slug": "/webpack/pages/module-resolution/the-resolve-object",
+  "permalink": "/devbible/docs/webpack/pages/module-resolution/the-resolve-object",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Module Resolution: The `resolve` Object",
+    "sidebar_label": "Module Resolution: The `resolve` Object",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Configuration Deep Dive: Entry & Output",
+    "permalink": "/devbible/docs/webpack/pages/configuration/entry-and-output-deep-dive"
+  },
+  "next": {
+    "title": "Loaders In-Depth",
+    "permalink": "/devbible/docs/webpack/pages/loaders/transpilation-and-style-loaders"
+  }
+}

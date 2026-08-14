@@ -1,0 +1,28 @@
+{
+  "id": "babel/pages/linter-and-type-checker-interop/babel-eslint-parser-and-tsc",
+  "title": "Linter & Type-Checker Interop with Babel",
+  "description": "Covers syllabus §9.1 @babel/eslint-parser and §9.2 Coexisting with tsc.",
+  "source": "@site/docs/babel/pages/09-linter-and-type-checker-interop/01-babel-eslint-parser-and-tsc.md",
+  "sourceDirName": "babel/pages/09-linter-and-type-checker-interop",
+  "slug": "/babel/pages/linter-and-type-checker-interop/babel-eslint-parser-and-tsc",
+  "permalink": "/devbible/docs/babel/pages/linter-and-type-checker-interop/babel-eslint-parser-and-tsc",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Linter & Type-Checker Interop with Babel",
+    "sidebar_label": "Linter & Type-Checker Interop with Babel",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Build Tool Integration",
+    "permalink": "/devbible/docs/babel/pages/build-tool-integration/webpack-vite-jest-rollup"
+  },
+  "next": {
+    "title": "Source Maps & Debugging Babel Output",
+    "permalink": "/devbible/docs/babel/pages/source-maps-and-debugging/maps-and-inspecting-output"
+  }
+}

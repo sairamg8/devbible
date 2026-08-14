@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/promise-antipatterns",
+  "title": "Promise anti-patterns",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-2-async/17-promise-antipatterns.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/promise-antipatterns",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/promise-antipatterns",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Promise anti-patterns",
+    "sidebar_label": "17 · Promise anti-patterns",
+    "sidebar_position": 17
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "16 · Error design",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/error-design"
+  },
+  "next": {
+    "title": "18 · Async iterators",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-iterators"
+  }
+}

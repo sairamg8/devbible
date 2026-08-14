@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/test-reset",
+  "title": "Resetting to a known state between test runs",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/11-test-reset.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/test-reset",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/test-reset",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Resetting to a known state between test runs",
+    "sidebar_label": "11 · Test reset",
+    "sidebar_position": 11
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "10 · Local dev database",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/local-dev-db"
+  },
+  "next": {
+    "title": "12 · Migration tools",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/migration-tools"
+  }
+}

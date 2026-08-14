@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/anti-patterns/explicit-construction",
+  "title": "11.1 · The explicit-construction anti-pattern",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/11-anti-patterns/01-explicit-construction.md",
+  "sourceDirName": "javascript/pages/phase-7-async/11-anti-patterns",
+  "slug": "/javascript/pages/phase-7-async/anti-patterns/explicit-construction",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/anti-patterns/explicit-construction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "11.1 · The explicit-construction anti-pattern",
+    "sidebar_label": "01 · Explicit construction",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/anti-patterns/"
+  },
+  "next": {
+    "title": "02 · Floating promises",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/anti-patterns/floating-promises"
+  }
+}

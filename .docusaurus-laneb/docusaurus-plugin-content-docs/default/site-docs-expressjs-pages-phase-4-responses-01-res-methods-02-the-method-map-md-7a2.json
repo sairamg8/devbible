@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/res-methods/the-method-map",
+  "title": "The method map",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/01-res-methods/02-the-method-map.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses/01-res-methods",
+  "slug": "/expressjs/pages/phase-4-responses/res-methods/the-method-map",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/the-method-map",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The method map",
+    "sidebar_label": "02 · The method map",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · What res.send does",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/what-res-send-does"
+  },
+  "next": {
+    "title": "03 · Choosing and shaping",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/choosing-and-shaping"
+  }
+}

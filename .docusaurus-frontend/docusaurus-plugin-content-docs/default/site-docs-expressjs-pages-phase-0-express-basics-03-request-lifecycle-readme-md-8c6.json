@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/request-lifecycle/README",
+  "title": "The request lifecycle",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/03-request-lifecycle/README.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/03-request-lifecycle",
+  "slug": "/expressjs/pages/phase-0-express-basics/request-lifecycle/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/request-lifecycle/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "The request lifecycle",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "05 · Sub-apps and the server",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/sub-apps-and-the-server"
+  },
+  "next": {
+    "title": "01 · The nine stages",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/request-lifecycle/the-nine-stages"
+  }
+}

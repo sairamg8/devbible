@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/fixtures-and-factories",
+  "title": "Fixtures, factories, and test data that doesn't rot",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/10-fixtures-and-factories.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/fixtures-and-factories",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/fixtures-and-factories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Fixtures, factories, and test data that doesn't rot",
+    "sidebar_label": "10 · Fixtures and factories",
+    "sidebar_position": 10
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "09 · Test doubles",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/test-doubles"
+  },
+  "next": {
+    "title": "11 · Coverage",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/coverage"
+  }
+}

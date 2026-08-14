@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/validation",
+  "title": "Validation",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/04-validation.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/validation",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/validation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Validation",
+    "sidebar_label": "04 · Validation",
+    "sidebar_position": 4
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · useActionState",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useactionstate"
+  },
+  "next": {
+    "title": "05 · Uncontrolled forms and FormData",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/uncontrolled-and-formdata"
+  }
+}

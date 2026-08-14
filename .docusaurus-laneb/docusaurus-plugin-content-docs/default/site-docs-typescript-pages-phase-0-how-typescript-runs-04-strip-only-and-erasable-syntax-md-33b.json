@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/strip-only-and-erasable-syntax",
+  "title": "Strip-only mode and erasableSyntaxOnly",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/04-strip-only-and-erasable-syntax.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/strip-only-and-erasable-syntax",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/strip-only-and-erasable-syntax",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Strip-only mode and erasableSyntaxOnly",
+    "sidebar_label": "04 · Strip-only and erasableSyntaxOnly",
+    "sidebar_position": 4
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "03 · Three ways to run it",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/three-ways-to-run"
+  },
+  "next": {
+    "title": "05 · strict",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/strict"
+  }
+}

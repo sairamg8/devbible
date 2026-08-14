@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/devtools-and-profiler",
+  "title": "DevTools and the Profiler",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/12-devtools-and-profiler.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/devtools-and-profiler",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/devtools-and-profiler",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "DevTools and the Profiler",
+    "sidebar_label": "12 · DevTools and Profiler",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · The React Compiler",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/the-compiler"
+  },
+  "next": {
+    "title": "13 · Other renderers",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/other-renderers"
+  }
+}

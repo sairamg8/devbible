@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/count-variants/left-join-and-fan-out",
+  "title": "The LEFT JOIN trap and fan-out",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/02-count-variants/02-left-join-and-fan-out.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/02-count-variants",
+  "slug": "/postgresql/pages/phase-6-aggregation/count-variants/left-join-and-fan-out",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/left-join-and-fan-out",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The LEFT JOIN trap and fan-out",
+    "sidebar_label": "02 · LEFT JOIN and fan-out",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Three questions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/three-questions"
+  },
+  "next": {
+    "title": "03 · What counting costs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/what-counting-costs"
+  }
+}

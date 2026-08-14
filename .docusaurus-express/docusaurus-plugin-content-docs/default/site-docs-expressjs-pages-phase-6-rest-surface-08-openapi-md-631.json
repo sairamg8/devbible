@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/openapi",
+  "title": "OpenAPI",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/08-openapi.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface",
+  "slug": "/expressjs/pages/phase-6-rest-surface/openapi",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/openapi",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "OpenAPI",
+    "sidebar_label": "08 · OpenAPI",
+    "sidebar_position": 8
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "07 · ETag · Cache-Control",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/etag-and-cache"
+  },
+  "next": {
+    "title": "09 · Webhooks",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/webhooks"
+  }
+}

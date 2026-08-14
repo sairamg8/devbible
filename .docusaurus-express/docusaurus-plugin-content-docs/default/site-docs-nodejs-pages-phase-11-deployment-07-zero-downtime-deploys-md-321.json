@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-11-deployment/zero-downtime-deploys",
+  "title": "Zero-downtime deploys — rolling restarts, drain, readiness",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-11-deployment/07-zero-downtime-deploys.md",
+  "sourceDirName": "nodejs/pages/phase-11-deployment",
+  "slug": "/nodejs/pages/phase-11-deployment/zero-downtime-deploys",
+  "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/zero-downtime-deploys",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Zero-downtime deploys — rolling restarts, drain, readiness",
+    "sidebar_label": "07 · Zero-downtime deploys",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · Reverse proxy",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/reverse-proxy"
+  },
+  "next": {
+    "title": "08 · CI/CD",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/cicd"
+  }
+}

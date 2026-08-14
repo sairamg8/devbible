@@ -1,0 +1,28 @@
+{
+  "id": "babel/pages/monorepo-and-multi-package-strategies/shared-root-and-cross-package",
+  "title": "Monorepo & Multi-Package Babel Strategies",
+  "description": "Covers syllabus §12.1 Shared Root Config and §12.2 Cross-Package Compilation.",
+  "source": "@site/docs/babel/pages/12-monorepo-and-multi-package-strategies/01-shared-root-and-cross-package.md",
+  "sourceDirName": "babel/pages/12-monorepo-and-multi-package-strategies",
+  "slug": "/babel/pages/monorepo-and-multi-package-strategies/shared-root-and-cross-package",
+  "permalink": "/devbible/docs/babel/pages/monorepo-and-multi-package-strategies/shared-root-and-cross-package",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Monorepo & Multi-Package Babel Strategies",
+    "sidebar_label": "Monorepo & Multi-Package Babel Strategies",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Babel Performance & Caching",
+    "permalink": "/devbible/docs/babel/pages/performance-and-caching/cost-caching-and-surface-reduction"
+  },
+  "next": {
+    "title": "babel/cli & Codemods on Babel’s Parser",
+    "permalink": "/devbible/docs/babel/pages/cli-and-programmatic-tooling/cli-and-codemods"
+  }
+}

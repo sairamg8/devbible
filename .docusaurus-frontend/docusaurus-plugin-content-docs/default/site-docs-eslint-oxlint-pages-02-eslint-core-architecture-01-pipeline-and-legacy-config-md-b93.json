@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/eslint-core-architecture/pipeline-and-legacy-config",
+  "title": "ESLint Core Architecture: Pipeline & Legacy Config",
+  "description": "Covers syllabus §2.1 How ESLint Works Under the Hood and §2.2 Legacy Config Era.",
+  "source": "@site/docs/eslint-oxlint/pages/02-eslint-core-architecture/01-pipeline-and-legacy-config.md",
+  "sourceDirName": "eslint-oxlint/pages/02-eslint-core-architecture",
+  "slug": "/eslint-oxlint/pages/eslint-core-architecture/pipeline-and-legacy-config",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-core-architecture/pipeline-and-legacy-config",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "ESLint Core Architecture: Pipeline & Legacy Config",
+    "sidebar_label": "ESLint Core Architecture",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "Linting Landscape",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/linting-landscape-and-tooling-decisions/why-choose-and-boundaries"
+  },
+  "next": {
+    "title": "ESLint Flat Config",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-flat-config/forms-fields-and-composition"
+  }
+}

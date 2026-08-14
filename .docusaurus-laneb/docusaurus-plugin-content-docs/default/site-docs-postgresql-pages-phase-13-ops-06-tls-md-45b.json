@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/tls",
+  "title": "TLS to the database",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/06-tls.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops",
+  "slug": "/postgresql/pages/phase-13-ops/tls",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/tls",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "TLS to the database",
+    "sidebar_label": "06 · TLS",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · pg_hba.conf",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pg-hba"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/"
+  }
+}

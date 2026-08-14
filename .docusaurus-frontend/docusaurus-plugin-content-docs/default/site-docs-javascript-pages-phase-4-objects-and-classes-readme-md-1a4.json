@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/README",
+  "title": "Phase 4 — Objects, prototypes and classes",
+  "description": "20 topics. Everything non-primitive in JavaScript is here. The prototype rows",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/README.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 4 — Objects, prototypes and classes",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "11 · Currying and partial application",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/currying-and-partial-application"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/object-literals/"
+  }
+}

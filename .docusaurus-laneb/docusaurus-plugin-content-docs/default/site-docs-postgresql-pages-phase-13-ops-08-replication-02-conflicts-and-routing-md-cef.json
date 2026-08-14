@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/replication/conflicts-and-routing",
+  "title": "08.2 · Query conflicts, and routing reads safely",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/08-replication/02-conflicts-and-routing.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/08-replication",
+  "slug": "/postgresql/pages/phase-13-ops/replication/conflicts-and-routing",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/conflicts-and-routing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "08.2 · Query conflicts, and routing reads safely",
+    "sidebar_label": "02 · Conflicts & routing",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Lag & read-your-writes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/lag-and-read-your-writes"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/"
+  }
+}

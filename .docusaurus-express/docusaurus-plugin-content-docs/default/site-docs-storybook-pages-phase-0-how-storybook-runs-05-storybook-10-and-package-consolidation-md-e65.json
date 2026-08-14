@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-0-how-storybook-runs/storybook-10-and-package-consolidation",
+  "title": "05 · Storybook 10 and the package consolidation",
+  "description": "Master",
+  "source": "@site/docs/storybook/pages/phase-0-how-storybook-runs/05-storybook-10-and-package-consolidation.md",
+  "sourceDirName": "storybook/pages/phase-0-how-storybook-runs",
+  "slug": "/storybook/pages/phase-0-how-storybook-runs/storybook-10-and-package-consolidation",
+  "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/storybook-10-and-package-consolidation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "05 · Storybook 10 and the package consolidation",
+    "sidebar_label": "05 · Storybook 10 and packages",
+    "sidebar_position": 5
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "04 · Installing into an app",
+    "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/installing-into-an-existing-app"
+  },
+  "next": {
+    "title": "Core Concepts",
+    "permalink": "/devbible/docs/storybook/pages/core-concepts/component-driven-development"
+  }
+}

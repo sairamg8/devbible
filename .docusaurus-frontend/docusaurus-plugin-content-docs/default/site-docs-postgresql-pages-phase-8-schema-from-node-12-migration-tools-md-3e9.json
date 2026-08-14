@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/migration-tools",
+  "title": "node-pg-migrate, graphile-migrate, Prisma Migrate",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/12-migration-tools.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/migration-tools",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/migration-tools",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "node-pg-migrate, graphile-migrate, Prisma Migrate",
+    "sidebar_label": "12 · Migration tools",
+    "sidebar_position": 12
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "11 · Test reset",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/test-reset"
+  },
+  "next": {
+    "title": "13 · Schema drift",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/schema-drift"
+  }
+}

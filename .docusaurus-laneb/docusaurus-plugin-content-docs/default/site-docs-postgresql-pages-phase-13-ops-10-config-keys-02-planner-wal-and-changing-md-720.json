@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/config-keys/planner-wal-and-changing",
+  "title": "10.2 · Planner costs, WAL, and changing a setting",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/10-config-keys/02-planner-wal-and-changing.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/10-config-keys",
+  "slug": "/postgresql/pages/phase-13-ops/config-keys/planner-wal-and-changing",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/config-keys/planner-wal-and-changing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "10.2 · Planner costs, WAL, and changing a setting",
+    "sidebar_label": "02 · Planner, WAL, changing",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Memory",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/config-keys/memory"
+  },
+  "next": {
+    "title": "03 · Changing a setting",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/config-keys/changing-a-setting"
+  }
+}

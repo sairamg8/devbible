@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-2-args-and-controls/globals-and-toolbars",
+  "title": "05 · Globals and toolbars",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-2-args-and-controls/05-globals-and-toolbars.md",
+  "sourceDirName": "storybook/pages/phase-2-args-and-controls",
+  "slug": "/storybook/pages/phase-2-args-and-controls/globals-and-toolbars",
+  "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/globals-and-toolbars",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "05 · Globals and toolbars",
+    "sidebar_label": "05 · Globals and toolbars",
+    "sidebar_position": 5
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "04 · Actions and spies",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/actions-and-spies"
+  },
+  "next": {
+    "title": "06 · Parameters",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/parameters-and-merge-order"
+  }
+}

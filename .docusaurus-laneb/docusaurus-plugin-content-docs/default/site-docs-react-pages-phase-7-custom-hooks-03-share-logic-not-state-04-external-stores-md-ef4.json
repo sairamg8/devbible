@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/share-logic-not-state/external-stores",
+  "title": "State outside React",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/03-share-logic-not-state/04-external-stores.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/03-share-logic-not-state",
+  "slug": "/react/pages/phase-7-custom-hooks/share-logic-not-state/external-stores",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/external-stores",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "State outside React",
+    "sidebar_label": "04 · State outside React",
+    "sidebar_position": 4
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · When you wanted shared state",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/when-you-wanted-shared-state"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/rules-of-react-beyond-hooks/"
+  }
+}

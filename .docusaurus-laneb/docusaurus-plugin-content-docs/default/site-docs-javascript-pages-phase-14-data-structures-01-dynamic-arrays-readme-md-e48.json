@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/dynamic-arrays/README",
+  "title": "01 · Dynamic arrays",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/01-dynamic-arrays/README.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures/01-dynamic-arrays",
+  "slug": "/javascript/pages/phase-14-data-structures/dynamic-arrays/",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/dynamic-arrays/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · Dynamic arrays",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/"
+  },
+  "next": {
+    "title": "01 · The cost table",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/dynamic-arrays/the-real-cost-table"
+  }
+}

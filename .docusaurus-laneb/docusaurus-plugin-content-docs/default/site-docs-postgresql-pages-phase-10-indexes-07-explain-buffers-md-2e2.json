@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/explain-buffers",
+  "title": "EXPLAIN (ANALYZE, BUFFERS)",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/07-explain-buffers.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/explain-buffers",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/explain-buffers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "EXPLAIN (ANALYZE, BUFFERS)",
+    "sidebar_label": "07 · BUFFERS",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · Multicolumn",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/multicolumn"
+  },
+  "next": {
+    "title": "08 · Index-only scans",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/index-only"
+  }
+}

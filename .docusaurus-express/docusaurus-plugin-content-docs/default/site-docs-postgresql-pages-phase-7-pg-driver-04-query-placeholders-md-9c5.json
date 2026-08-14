@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/query-placeholders",
+  "title": "pool.query and placeholders",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/04-query-placeholders.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/query-placeholders",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/query-placeholders",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "pool.query and placeholders",
+    "sidebar_label": "04 · query and placeholders",
+    "sidebar_position": 4
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Connection config",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/connection-config"
+  },
+  "next": {
+    "title": "05 · Errors",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/errors"
+  }
+}

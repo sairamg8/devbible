@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/column-vs-json",
+  "title": "When a column beats JSON",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/02-column-vs-json.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/column-vs-json",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/column-vs-json",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "When a column beats JSON",
+    "sidebar_label": "02 · Column vs JSON",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Containment and jsonpath",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/containment-and-jsonpath"
+  },
+  "next": {
+    "title": "03 · Indexing jsonb",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/index-jsonb"
+  }
+}

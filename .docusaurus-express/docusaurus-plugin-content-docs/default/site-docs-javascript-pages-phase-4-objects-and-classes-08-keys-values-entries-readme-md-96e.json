@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/keys-values-entries/README",
+  "title": "08 · `Object.keys` / `values` / `entries` / `fromEntries`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/08-keys-values-entries/README.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/08-keys-values-entries",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/keys-values-entries/",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/keys-values-entries/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "08 · `Object.keys` / `values` / `entries` / `fromEntries`",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · The fixes",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/the-fixes"
+  },
+  "next": {
+    "title": "01 · What they include",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/keys-values-entries/what-they-include"
+  }
+}

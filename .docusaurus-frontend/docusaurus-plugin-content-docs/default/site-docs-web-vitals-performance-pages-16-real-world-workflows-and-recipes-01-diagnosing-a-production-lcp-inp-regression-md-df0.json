@@ -1,0 +1,24 @@
+{
+  "id": "web-vitals-performance/pages/real-world-workflows-and-recipes/diagnosing-a-production-lcp-inp-regression",
+  "title": "Diagnosing a Production LCP/INP Regression, End-to-End",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/web-vitals-performance/pages/16-real-world-workflows-and-recipes/01-diagnosing-a-production-lcp-inp-regression.md",
+  "sourceDirName": "web-vitals-performance/pages/16-real-world-workflows-and-recipes",
+  "slug": "/web-vitals-performance/pages/real-world-workflows-and-recipes/diagnosing-a-production-lcp-inp-regression",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/real-world-workflows-and-recipes/diagnosing-a-production-lcp-inp-regression",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Diagnosing a Production LCP/INP Regression, End-to-End",
+    "sidebar_label": "Diagnosing a Production LCP/INP Regression",
+    "sidebar_position": 1
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "Performance Budgets & Advanced Diagnostics",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/budgets-and-advanced-diagnostics/performance-budgets-and-deep-profiling"
+  }
+}

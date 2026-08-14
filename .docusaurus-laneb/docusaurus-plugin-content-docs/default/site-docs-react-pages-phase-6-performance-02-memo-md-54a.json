@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/memo",
+  "title": "memo",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-6-performance/02-memo.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/memo",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/memo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "memo",
+    "sidebar_label": "02 · memo",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Why did this re-render?",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/why-did-this-re-render"
+  },
+  "next": {
+    "title": "03 · useMemo",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/usememo"
+  }
+}

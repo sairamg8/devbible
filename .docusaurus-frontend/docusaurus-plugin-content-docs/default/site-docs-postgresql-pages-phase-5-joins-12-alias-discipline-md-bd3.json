@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/alias-discipline",
+  "title": "Alias discipline",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/12-alias-discipline.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/alias-discipline",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/alias-discipline",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Alias discipline",
+    "sidebar_label": "12 · Aliases",
+    "sidebar_position": 12
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "11 · Set ops",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/set-ops"
+  },
+  "next": {
+    "title": "13 · Join expressions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/join-expressions"
+  }
+}

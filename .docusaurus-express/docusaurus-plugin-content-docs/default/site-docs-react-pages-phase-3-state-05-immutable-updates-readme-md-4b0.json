@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/immutable-updates/README",
+  "title": "Immutable updates",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-3-state/05-immutable-updates/README.md",
+  "sourceDirName": "react/pages/phase-3-state/05-immutable-updates",
+  "slug": "/react/pages/phase-3-state/immutable-updates/",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Immutable updates",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · Automatic batching",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/automatic-batching"
+  },
+  "next": {
+    "title": "01 · Objects and nesting",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/objects-and-nesting"
+  }
+}

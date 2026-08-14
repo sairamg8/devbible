@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/devtools-and-debugging/redux-devtools",
+  "title": "Redux DevTools: Time-Travel, Action Replay & Trace Mode",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/10-devtools-and-debugging/01-redux-devtools.md",
+  "sourceDirName": "redux-toolkit/pages/10-devtools-and-debugging",
+  "slug": "/redux-toolkit/pages/devtools-and-debugging/redux-devtools",
+  "permalink": "/devbible/docs/redux-toolkit/pages/devtools-and-debugging/redux-devtools",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Redux DevTools: Time-Travel, Action Replay & Trace Mode",
+    "sidebar_label": "Redux DevTools",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "TypeScript Integration",
+    "permalink": "/devbible/docs/redux-toolkit/pages/typescript-integration/type-inference-patterns"
+  },
+  "next": {
+    "title": "Code Splitting",
+    "permalink": "/devbible/docs/redux-toolkit/pages/code-splitting/dynamic-reducer-injection"
+  }
+}

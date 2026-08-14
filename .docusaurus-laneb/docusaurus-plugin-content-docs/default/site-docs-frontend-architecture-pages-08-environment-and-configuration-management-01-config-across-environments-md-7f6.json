@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/environment-and-configuration-management/config-across-environments",
+  "title": "Environment & Configuration Management: Build-Time vs Runtime Config & Secrets",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/08-environment-and-configuration-management/01-config-across-environments.md",
+  "sourceDirName": "frontend-architecture/pages/08-environment-and-configuration-management",
+  "slug": "/frontend-architecture/pages/environment-and-configuration-management/config-across-environments",
+  "permalink": "/devbible/docs/frontend-architecture/pages/environment-and-configuration-management/config-across-environments",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Environment & Configuration Management: Build-Time vs Runtime Config & Secrets",
+    "sidebar_label": "Environment & Configuration Management",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Monorepo & Multi-App Strategy",
+    "permalink": "/devbible/docs/frontend-architecture/pages/monorepo-and-multi-app-strategy/scaling-beyond-one-app"
+  },
+  "next": {
+    "title": "Authentication & Authorization",
+    "permalink": "/devbible/docs/frontend-architecture/pages/authentication-and-authorization-architecture/real-world-auth-concerns"
+  }
+}

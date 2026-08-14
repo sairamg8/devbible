@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/external-store",
+  "title": "Subscribing to an external store",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/16-external-store.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/external-store",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/external-store",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Subscribing to an external store",
+    "sidebar_label": "16 · Subscribing to an external store",
+    "sidebar_position": 16
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "15 · Effects and refs together",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/effects-and-refs"
+  },
+  "next": {
+    "title": "17 · useInsertionEffect",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/useinsertioneffect"
+  }
+}

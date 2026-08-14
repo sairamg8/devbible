@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/zlib",
+  "title": "zlib — gzip and brotli as streams",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/16-zlib.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/zlib",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/zlib",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "zlib — gzip and brotli as streams",
+    "sidebar_label": "16 · zlib",
+    "sidebar_position": 16
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "15 · Web Streams",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/web-streams"
+  },
+  "next": {
+    "title": "17 · Custom streams",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/custom-readable-writable"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/in-and-hasown",
+  "title": "03.1 · `in` and `Object.hasOwn`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/03-existence-checks-and-delete/01-in-and-hasown.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/03-existence-checks-and-delete",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/in-and-hasown",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/in-and-hasown",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · `in` and `Object.hasOwn`",
+    "sidebar_label": "01 · in and Object.hasOwn",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/"
+  },
+  "next": {
+    "title": "02 · undefined, holes, brand checks",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/undefined-holes-and-brand-checks"
+  }
+}

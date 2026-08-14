@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/array-creation-and-shape/README",
+  "title": "01 · Array creation and shape",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/01-array-creation-and-shape/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/01-array-creation-and-shape",
+  "slug": "/javascript/pages/phase-5-built-in-library/array-creation-and-shape/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-creation-and-shape/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · Array creation and shape",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/"
+  },
+  "next": {
+    "title": "01 · Making arrays",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-creation-and-shape/making-arrays"
+  }
+}

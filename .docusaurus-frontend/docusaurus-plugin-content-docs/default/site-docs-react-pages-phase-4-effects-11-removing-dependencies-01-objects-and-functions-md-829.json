@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/removing-dependencies/objects-and-functions",
+  "title": "Objects and functions",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/11-removing-dependencies/01-objects-and-functions.md",
+  "sourceDirName": "react/pages/phase-4-effects/11-removing-dependencies",
+  "slug": "/react/pages/phase-4-effects/removing-dependencies/objects-and-functions",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/objects-and-functions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Objects and functions",
+    "sidebar_label": "01 · Objects and functions",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/"
+  },
+  "next": {
+    "title": "02 · Restructuring the effect",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/restructuring-the-effect"
+  }
+}

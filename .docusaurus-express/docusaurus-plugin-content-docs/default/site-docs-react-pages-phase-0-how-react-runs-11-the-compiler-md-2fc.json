@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/the-compiler",
+  "title": "The React Compiler",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/11-the-compiler.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/the-compiler",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/the-compiler",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "The React Compiler",
+    "sidebar_label": "11 · The React Compiler",
+    "sidebar_position": 11
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "10 · Starting a project",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/starting-a-project"
+  },
+  "next": {
+    "title": "12 · DevTools and Profiler",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/devtools-and-profiler"
+  }
+}

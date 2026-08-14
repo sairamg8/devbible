@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/trace-events-and-reports",
+  "title": "trace_events and diagnostic reports",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/08-trace-events-and-reports.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/trace-events-and-reports",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/trace-events-and-reports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "trace_events and diagnostic reports",
+    "sidebar_label": "08 · Trace events and reports",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · Diagnostics Channel",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/diagnostics-channel"
+  },
+  "next": {
+    "title": "09 · Event loop lag",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/event-loop-lag"
+  }
+}

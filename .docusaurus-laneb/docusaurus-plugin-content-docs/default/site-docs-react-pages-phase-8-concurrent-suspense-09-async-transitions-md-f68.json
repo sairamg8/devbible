@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/async-transitions",
+  "title": "Async transitions (React 19)",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/09-async-transitions.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/async-transitions",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/async-transitions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Async transitions (React 19)",
+    "sidebar_label": "09 · Async transitions",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · useDeferredValue",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/usedeferredvalue"
+  },
+  "next": {
+    "title": "10 · Boundary placement",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/boundary-placement"
+  }
+}

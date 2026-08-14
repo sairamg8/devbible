@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/queue-and-deque/README",
+  "title": "05 · Queue and deque",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/05-queue-and-deque/README.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures/05-queue-and-deque",
+  "slug": "/javascript/pages/phase-14-data-structures/queue-and-deque/",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/queue-and-deque/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · Queue and deque",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Monotonic stacks",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/stack/monotonic-stacks"
+  },
+  "next": {
+    "title": "01 · Making dequeue O(1)",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/queue-and-deque/making-dequeue-o1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/webassembly",
+  "title": "WebAssembly in Node — CPU-bound work when it fits",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-12-native/02-webassembly.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/webassembly",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/webassembly",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "WebAssembly in Node — CPU-bound work when it fits",
+    "sidebar_label": "02 · WebAssembly",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · node:vm",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/node-vm"
+  },
+  "next": {
+    "title": "03 · V8 flags",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/v8-flags"
+  }
+}

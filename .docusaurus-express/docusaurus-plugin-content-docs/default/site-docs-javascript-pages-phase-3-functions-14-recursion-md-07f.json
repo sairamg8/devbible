@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/recursion",
+  "title": "14 · Recursion",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-3-functions/14-recursion.md",
+  "sourceDirName": "javascript/pages/phase-3-functions",
+  "slug": "/javascript/pages/phase-3-functions/recursion",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/recursion",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "14 · Recursion",
+    "sidebar_label": "14 · Recursion",
+    "sidebar_position": 14
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "13 · Memoization",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/memoization"
+  },
+  "next": {
+    "title": "15 · Pure functions and side effects",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/pure-functions"
+  }
+}

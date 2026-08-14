@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/source-maps/devtool-options",
+  "title": "Source Maps: The `devtool` Speed/Quality/Production Tradeoff",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/12-source-maps/01-devtool-options.md",
+  "sourceDirName": "webpack/pages/12-source-maps",
+  "slug": "/webpack/pages/source-maps/devtool-options",
+  "permalink": "/devbible/docs/webpack/pages/source-maps/devtool-options",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Source Maps: The `devtool` Speed/Quality/Production Tradeoff",
+    "sidebar_label": "Source Maps",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Module Federation",
+    "permalink": "/devbible/docs/webpack/pages/module-federation/production-ops-and-troubleshooting"
+  },
+  "next": {
+    "title": "Multi-Config & Environment",
+    "permalink": "/devbible/docs/webpack/pages/multi-config-and-environment/config-composition"
+  }
+}

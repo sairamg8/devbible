@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/allowlists/README",
+  "title": "Sort and filter allowlists",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/04-allowlists/README.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/04-allowlists",
+  "slug": "/postgresql/pages/phase-9-api-crud/allowlists/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/allowlists/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Sort and filter allowlists",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Patterns and composition",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/patterns-and-composition"
+  },
+  "next": {
+    "title": "01 · The two failure modes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/allowlists/two-failure-modes"
+  }
+}

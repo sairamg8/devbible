@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/naming",
+  "title": "Naming conventions that survive",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/11-naming.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/naming",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/naming",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Naming conventions that survive",
+    "sidebar_label": "11 · Naming conventions",
+    "sidebar_position": 11
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "10 · Schemas and tenancy",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/schemas-tenancy"
+  },
+  "next": {
+    "title": "12 · Normalization",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/normalization"
+  }
+}

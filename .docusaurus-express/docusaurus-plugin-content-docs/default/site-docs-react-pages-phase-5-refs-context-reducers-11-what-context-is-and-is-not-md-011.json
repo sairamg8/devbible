@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/what-context-is-and-is-not",
+  "title": "What context is and is not",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/11-what-context-is-and-is-not.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/what-context-is-and-is-not",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/what-context-is-and-is-not",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "What context is and is not",
+    "sidebar_label": "11 · What context is and is not",
+    "sidebar_position": 11
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "10 · Reducer patterns",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/reducer-patterns"
+  },
+  "next": {
+    "title": "12 · Context plus reducer",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/context-plus-reducer"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/chaining/error-propagation",
+  "title": "06.2 · Error propagation",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/06-chaining/02-error-propagation.md",
+  "sourceDirName": "javascript/pages/phase-7-async/06-chaining",
+  "slug": "/javascript/pages/phase-7-async/chaining/error-propagation",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/chaining/error-propagation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "06.2 · Error propagation",
+    "sidebar_label": "02 · Error propagation",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Flattening",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/chaining/flattening"
+  },
+  "next": {
+    "title": "03 · finally and timing",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/chaining/finally-and-timing"
+  }
+}

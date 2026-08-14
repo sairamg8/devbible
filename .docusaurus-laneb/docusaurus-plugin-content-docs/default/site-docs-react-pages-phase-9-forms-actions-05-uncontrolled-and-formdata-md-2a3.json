@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/uncontrolled-and-formdata",
+  "title": "Uncontrolled forms and FormData",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/05-uncontrolled-and-formdata.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/uncontrolled-and-formdata",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/uncontrolled-and-formdata",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Uncontrolled forms and FormData",
+    "sidebar_label": "05 · Uncontrolled forms and FormData",
+    "sidebar_position": 5
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · Validation",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/validation"
+  },
+  "next": {
+    "title": "06 · useFormStatus",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/useformstatus"
+  }
+}

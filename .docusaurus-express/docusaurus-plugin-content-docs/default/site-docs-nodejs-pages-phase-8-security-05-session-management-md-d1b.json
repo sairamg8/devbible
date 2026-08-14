@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/session-management",
+  "title": "Session management — rotation, invalidation, expiry",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-8-security/05-session-management.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/session-management",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/session-management",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Session management — rotation, invalidation, expiry",
+    "sidebar_label": "05 · Session management",
+    "sidebar_position": 5
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "04 · Authz vs authn",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/authentication-vs-authorization"
+  },
+  "next": {
+    "title": "06 · OAuth 2.0 / OIDC",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/oauth-oidc"
+  }
+}

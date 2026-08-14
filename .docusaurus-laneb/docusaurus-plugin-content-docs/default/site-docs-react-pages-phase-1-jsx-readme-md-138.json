@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/README",
+  "title": "Phase 1 — JSX and what a component returns",
+  "description": "Target: React 19.2.8 and react-dom 19.2.8. Every console block on these",
+  "source": "@site/docs/react/pages/phase-1-jsx/README.md",
+  "sourceDirName": "react/pages/phase-1-jsx",
+  "slug": "/react/pages/phase-1-jsx/",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 1 — JSX and what a component returns",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · React vs alternatives",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/react-vs-alternatives"
+  },
+  "next": {
+    "title": "01 · JSX is a function call",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/jsx-is-a-function-call"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-7-positioning/stacking-contexts",
+  "title": "Stacking contexts",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-7-positioning/01-stacking-contexts.md",
+  "sourceDirName": "css/pages/phase-7-positioning",
+  "slug": "/css/pages/phase-7-positioning/stacking-contexts",
+  "permalink": "/devbible/docs/css/pages/phase-7-positioning/stacking-contexts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Stacking contexts",
+    "sidebar_label": "01 · Stacking contexts",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-7-positioning/"
+  },
+  "next": {
+    "title": "02 · z-index in practice",
+    "permalink": "/devbible/docs/css/pages/phase-7-positioning/z-index-in-practice"
+  }
+}

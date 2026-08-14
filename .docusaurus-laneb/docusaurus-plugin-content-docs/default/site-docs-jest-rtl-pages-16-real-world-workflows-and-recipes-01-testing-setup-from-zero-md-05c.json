@@ -1,0 +1,24 @@
+{
+  "id": "jest-rtl/pages/real-world-workflows-and-recipes/testing-setup-from-zero",
+  "title": "Wiring Up a Testing Environment From Zero in an Existing Project",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/jest-rtl/pages/16-real-world-workflows-and-recipes/01-testing-setup-from-zero.md",
+  "sourceDirName": "jest-rtl/pages/16-real-world-workflows-and-recipes",
+  "slug": "/jest-rtl/pages/real-world-workflows-and-recipes/testing-setup-from-zero",
+  "permalink": "/devbible/docs/jest-rtl/pages/real-world-workflows-and-recipes/testing-setup-from-zero",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Wiring Up a Testing Environment From Zero in an Existing Project",
+    "sidebar_label": "Wiring Up a Testing Environment From Zero ",
+    "sidebar_position": 1
+  },
+  "sidebar": "jestRtlSidebar",
+  "previous": {
+    "title": "Debugging Tests",
+    "permalink": "/devbible/docs/jest-rtl/pages/debugging-tests/diagnostic-tools"
+  }
+}

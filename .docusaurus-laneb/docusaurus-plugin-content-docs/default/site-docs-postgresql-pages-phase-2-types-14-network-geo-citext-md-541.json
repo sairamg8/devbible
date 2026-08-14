@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/network-geo-citext",
+  "title": "Network, geometric and citext types",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-2-types/14-network-geo-citext.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/network-geo-citext",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/network-geo-citext",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "Network, geometric and citext types",
+    "sidebar_label": "14 · Network, geo, citext",
+    "sidebar_position": 14
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "13 · bytea",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/bytea"
+  },
+  "next": {
+    "title": "15 · Domains and composites",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/domains-composites"
+  }
+}

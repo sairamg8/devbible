@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/the-rsc-payload",
+  "title": "The RSC payload",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-10-server-components/13-the-rsc-payload.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/the-rsc-payload",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/the-rsc-payload",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "The RSC payload",
+    "sidebar_label": "13 · The RSC payload",
+    "sidebar_position": 13
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "12 · The December 2025 advisories",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/december-2025-advisories"
+  },
+  "next": {
+    "title": "14 · The renderer packages",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/renderer-packages"
+  }
+}

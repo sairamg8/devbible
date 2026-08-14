@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/rate-limiting",
+  "title": "Rate limiting and brute-force protection",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-8-security/21-rate-limiting.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/rate-limiting",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/rate-limiting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 21,
+  "frontMatter": {
+    "title": "Rate limiting and brute-force protection",
+    "sidebar_label": "21 · Rate limiting",
+    "sidebar_position": 21
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "20 · node:crypto",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/node-crypto"
+  },
+  "next": {
+    "title": "22 · Security headers",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/security-headers"
+  }
+}

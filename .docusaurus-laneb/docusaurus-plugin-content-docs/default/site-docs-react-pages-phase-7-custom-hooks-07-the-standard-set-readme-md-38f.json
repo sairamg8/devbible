@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/the-standard-set/README",
+  "title": "The standard set, written out",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/07-the-standard-set/README.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/07-the-standard-set",
+  "slug": "/react/pages/phase-7-custom-hooks/the-standard-set/",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/the-standard-set/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "The standard set, written out",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · The return value and the seam",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/designing-a-hooks-api/the-return-value-and-the-seam"
+  },
+  "next": {
+    "title": "01 · Value helpers",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/the-standard-set/value-helpers"
+  }
+}

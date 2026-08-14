@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/git-add/what-add-does",
+  "title": "What `add` actually does, and the four ways to select",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/02-git-add/01-what-add-does.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop/02-git-add",
+  "slug": "/git/pages/phase-1-everyday-loop/git-add/what-add-does",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-add/what-add-does",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What `add` actually does, and the four ways to select",
+    "sidebar_label": "01 · What add does",
+    "sidebar_position": 1
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-add/"
+  },
+  "next": {
+    "title": "02 · Pathspecs",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-add/pathspecs"
+  }
+}

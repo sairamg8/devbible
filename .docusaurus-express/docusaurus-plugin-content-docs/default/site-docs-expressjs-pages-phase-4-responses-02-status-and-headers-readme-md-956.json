@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/status-and-headers/README",
+  "title": "Status and headers",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/02-status-and-headers/README.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses/02-status-and-headers",
+  "slug": "/expressjs/pages/phase-4-responses/status-and-headers/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/status-and-headers/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Status and headers",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Choosing and shaping",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/choosing-and-shaping"
+  },
+  "next": {
+    "title": "01 · Status as contract",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/status-and-headers/status-as-contract"
+  }
+}

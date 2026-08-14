@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-3-custom-properties/at-property",
+  "title": "@property",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-3-custom-properties/03-at-property.md",
+  "sourceDirName": "css/pages/phase-3-custom-properties",
+  "slug": "/css/pages/phase-3-custom-properties/at-property",
+  "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/at-property",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "@property",
+    "sidebar_label": "03 · @property",
+    "sidebar_position": 3
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "02 · clamp(), min(), max()",
+    "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/clamp-min-max"
+  },
+  "next": {
+    "title": "04 · Units that matter for layout",
+    "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/units-that-matter"
+  }
+}

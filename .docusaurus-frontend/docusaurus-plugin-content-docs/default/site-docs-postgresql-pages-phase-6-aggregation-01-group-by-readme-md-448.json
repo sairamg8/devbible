@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/group-by/README",
+  "title": "GROUP BY and aggregates",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/01-group-by/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/01-group-by",
+  "slug": "/postgresql/pages/phase-6-aggregation/group-by/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/group-by/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "GROUP BY and aggregates",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/"
+  },
+  "next": {
+    "title": "01 · Collapsing rows",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/group-by/collapsing-rows"
+  }
+}

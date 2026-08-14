@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/the-prototype-chain/prototype-vs-the-slot",
+  "title": "05.2 · `prototype` vs `[[Prototype]]`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/05-the-prototype-chain/02-prototype-vs-the-slot.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/05-the-prototype-chain",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/prototype-vs-the-slot",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/prototype-vs-the-slot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "05.2 · `prototype` vs `[[Prototype]]`",
+    "sidebar_label": "02 · prototype vs [[Prototype]]",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · How lookup walks",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/how-lookup-walks"
+  },
+  "next": {
+    "title": "03 · Writing and mutation",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/the-prototype-chain/writing-and-mutation"
+  }
+}

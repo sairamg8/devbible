@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/explain",
+  "title": "EXPLAIN vs EXPLAIN ANALYZE",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/03-explain.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/explain",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/explain",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "EXPLAIN vs EXPLAIN ANALYZE",
+    "sidebar_label": "03 · EXPLAIN",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · B-tree",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/btree"
+  },
+  "next": {
+    "title": "04 · Scan types",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/scan-types"
+  }
+}

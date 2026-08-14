@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-6-data-access/mongoose",
+  "title": "Mongoose: schemas, models, middleware",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-6-data-access/09-mongoose.md",
+  "sourceDirName": "nodejs/pages/phase-6-data-access",
+  "slug": "/nodejs/pages/phase-6-data-access/mongoose",
+  "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/mongoose",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Mongoose: schemas, models, middleware",
+    "sidebar_label": "09 · Mongoose",
+    "sidebar_position": 9
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "08 · Drivers vs builders vs ORMs",
+    "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/drivers-builders-orms"
+  },
+  "next": {
+    "title": "10 · The repository pattern",
+    "permalink": "/devbible/docs/nodejs/pages/phase-6-data-access/repository-pattern"
+  }
+}

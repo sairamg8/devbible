@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/async-iterators",
+  "title": "Async iterators and generators",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-2-async/18-async-iterators.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/async-iterators",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-iterators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "title": "Async iterators and generators",
+    "sidebar_label": "18 · Async iterators",
+    "sidebar_position": 18
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "17 · Promise anti-patterns",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/promise-antipatterns"
+  },
+  "next": {
+    "title": "19 · AbortController",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/abortcontroller"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/es-modules/import-and-export",
+  "title": "01.1 · import and export",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/01-es-modules/01-import-and-export.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/01-es-modules",
+  "slug": "/javascript/pages/phase-8-modules-errors/es-modules/import-and-export",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/import-and-export",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · import and export",
+    "sidebar_label": "01 · import and export",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/"
+  },
+  "next": {
+    "title": "02 · Specifiers and loading",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/specifiers-and-the-graph"
+  }
+}

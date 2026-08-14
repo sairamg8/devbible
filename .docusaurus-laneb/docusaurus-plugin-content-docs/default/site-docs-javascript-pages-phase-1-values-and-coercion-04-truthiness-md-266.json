@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/truthiness",
+  "title": "04 · Truthiness",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/04-truthiness.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/truthiness",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/truthiness",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "04 · Truthiness",
+    "sidebar_label": "04 · Truthiness",
+    "sidebar_position": 4
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Equality",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/equality"
+  },
+  "next": {
+    "title": "05 · null vs undefined",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/null-vs-undefined"
+  }
+}

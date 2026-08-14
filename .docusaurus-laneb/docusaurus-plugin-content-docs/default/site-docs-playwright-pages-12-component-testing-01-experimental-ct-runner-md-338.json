@@ -1,0 +1,28 @@
+{
+  "id": "playwright/pages/component-testing/experimental-ct-runner",
+  "title": "Component Testing: Mounting Components in a Real Browser",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/playwright/pages/12-component-testing/01-experimental-ct-runner.md",
+  "sourceDirName": "playwright/pages/12-component-testing",
+  "slug": "/playwright/pages/component-testing/experimental-ct-runner",
+  "permalink": "/devbible/docs/playwright/pages/component-testing/experimental-ct-runner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Component Testing: Mounting Components in a Real Browser",
+    "sidebar_label": "Component Testing",
+    "sidebar_position": 1
+  },
+  "sidebar": "playwrightSidebar",
+  "previous": {
+    "title": "Parallelism & Sharding",
+    "permalink": "/devbible/docs/playwright/pages/parallelism-and-sharding/scaling-test-runs"
+  },
+  "next": {
+    "title": "API Testing",
+    "permalink": "/devbible/docs/playwright/pages/api-testing/request-fixture"
+  }
+}

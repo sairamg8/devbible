@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/status-mapping/README",
+  "title": "HTTP status mapping",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/02-status-mapping/README.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/02-status-mapping",
+  "slug": "/expressjs/pages/phase-6-rest-surface/status-mapping/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "HTTP status mapping",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Designing a surface",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/designing-a-surface"
+  },
+  "next": {
+    "title": "01 · CRUD to status",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/crud-to-status"
+  }
+}

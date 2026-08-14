@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-3-decorators/providers-in-decorators",
+  "title": "03 · Providers in decorators",
+  "description": "Master",
+  "source": "@site/docs/storybook/pages/phase-3-decorators/03-providers-in-decorators.md",
+  "sourceDirName": "storybook/pages/phase-3-decorators",
+  "slug": "/storybook/pages/phase-3-decorators/providers-in-decorators",
+  "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/providers-in-decorators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · Providers in decorators",
+    "sidebar_label": "03 · Providers",
+    "sidebar_position": 3
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "02 · Decorator order",
+    "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/decorator-order"
+  },
+  "next": {
+    "title": "04 · The story context",
+    "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/the-story-context"
+  }
+}

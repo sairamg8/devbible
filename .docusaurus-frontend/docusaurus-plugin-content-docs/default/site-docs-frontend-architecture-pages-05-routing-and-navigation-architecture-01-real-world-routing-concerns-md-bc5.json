@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/routing-and-navigation-architecture/real-world-routing-concerns",
+  "title": "Routing & Navigation Architecture: Nested Layouts, Code Splitting & Auth Gates",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/05-routing-and-navigation-architecture/01-real-world-routing-concerns.md",
+  "sourceDirName": "frontend-architecture/pages/05-routing-and-navigation-architecture",
+  "slug": "/frontend-architecture/pages/routing-and-navigation-architecture/real-world-routing-concerns",
+  "permalink": "/devbible/docs/frontend-architecture/pages/routing-and-navigation-architecture/real-world-routing-concerns",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Routing & Navigation Architecture: Nested Layouts, Code Splitting & Auth Gates",
+    "sidebar_label": "Routing & Navigation Architecture",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Data Layer & API Architecture",
+    "permalink": "/devbible/docs/frontend-architecture/pages/data-layer-and-api-architecture/structuring-the-data-boundary"
+  },
+  "next": {
+    "title": "Styling Architecture",
+    "permalink": "/devbible/docs/frontend-architecture/pages/styling-architecture/choosing-and-scaling-a-styling-approach"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/versions-and-channels",
+  "title": "Versions and release channels",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/08-versions-and-channels.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/versions-and-channels",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/versions-and-channels",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Versions and release channels",
+    "sidebar_label": "08 · Versions and channels",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · StrictMode",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/strictmode"
+  },
+  "next": {
+    "title": "09 · What changed in 19",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/what-changed-in-19"
+  }
+}

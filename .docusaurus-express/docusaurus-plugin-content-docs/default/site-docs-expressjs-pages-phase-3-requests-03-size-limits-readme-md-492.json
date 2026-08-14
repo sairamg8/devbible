@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/size-limits/README",
+  "title": "Body size limits",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/03-size-limits/README.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests/03-size-limits",
+  "slug": "/expressjs/pages/phase-3-requests/size-limits/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/size-limits/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Body size limits",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Errors and choices",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/errors-and-choices"
+  },
+  "next": {
+    "title": "01 · Two paths to 413",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/size-limits/two-paths-to-413"
+  }
+}

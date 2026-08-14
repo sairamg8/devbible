@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/monitoring/pg-stat-statements",
+  "title": "09.2 · pg_stat_statements — finding the expensive query",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/09-monitoring/02-pg-stat-statements.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/09-monitoring",
+  "slug": "/postgresql/pages/phase-13-ops/monitoring/pg-stat-statements",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/pg-stat-statements",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "09.2 · pg_stat_statements — finding the expensive query",
+    "sidebar_label": "02 · pg_stat_statements",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Right now",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/whats-happening-now"
+  },
+  "next": {
+    "title": "03 · Reading it",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/reading-pg-stat-statements"
+  }
+}

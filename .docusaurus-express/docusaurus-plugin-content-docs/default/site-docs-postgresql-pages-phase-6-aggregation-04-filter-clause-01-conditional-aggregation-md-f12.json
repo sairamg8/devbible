@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/filter-clause/conditional-aggregation",
+  "title": "Conditional aggregation",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/04-filter-clause/01-conditional-aggregation.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/04-filter-clause",
+  "slug": "/postgresql/pages/phase-6-aggregation/filter-clause/conditional-aggregation",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/conditional-aggregation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Conditional aggregation",
+    "sidebar_label": "01 · Conditional aggregation",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/"
+  },
+  "next": {
+    "title": "02 · When it pays",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/when-it-pays"
+  }
+}

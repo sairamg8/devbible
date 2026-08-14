@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/selecting-elements/the-selector-methods",
+  "title": "02.1 · The selector methods",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-9-dom/02-selecting-elements/01-the-selector-methods.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/02-selecting-elements",
+  "slug": "/javascript/pages/phase-9-dom/selecting-elements/the-selector-methods",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/selecting-elements/the-selector-methods",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · The selector methods",
+    "sidebar_label": "01 · The selector methods",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/selecting-elements/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/creating-and-inserting/"
+  }
+}

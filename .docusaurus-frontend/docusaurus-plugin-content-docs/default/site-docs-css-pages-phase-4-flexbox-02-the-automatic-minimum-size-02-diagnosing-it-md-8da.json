@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/the-automatic-minimum-size/diagnosing-it",
+  "title": "Diagnosing it in a real layout",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/02-the-automatic-minimum-size/02-diagnosing-it.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/02-the-automatic-minimum-size",
+  "slug": "/css/pages/phase-4-flexbox/the-automatic-minimum-size/diagnosing-it",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-automatic-minimum-size/diagnosing-it",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Diagnosing it in a real layout",
+    "sidebar_label": "02 · Diagnosing it",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · Why items refuse to shrink",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-automatic-minimum-size/why-items-refuse-to-shrink"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-shorthand/"
+  }
+}

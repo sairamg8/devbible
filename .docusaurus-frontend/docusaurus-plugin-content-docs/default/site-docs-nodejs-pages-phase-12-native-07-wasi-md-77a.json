@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/wasi",
+  "title": "WASI — WebAssembly system interface",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-12-native/07-wasi.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/wasi",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/wasi",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "WASI — WebAssembly system interface",
+    "sidebar_label": "07 · WASI",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · FFI",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/ffi"
+  },
+  "next": {
+    "title": "08 · Custom loaders",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/custom-loaders"
+  }
+}

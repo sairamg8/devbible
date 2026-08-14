@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-7-layering/jobs-from-routes",
+  "title": "Background jobs from routes",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-7-layering/05-jobs-from-routes.md",
+  "sourceDirName": "expressjs/pages/phase-7-layering",
+  "slug": "/expressjs/pages/phase-7-layering/jobs-from-routes",
+  "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/jobs-from-routes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Background jobs from routes",
+    "sidebar_label": "05 · Jobs from routes",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · DI without framework",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/di-without-framework"
+  },
+  "next": {
+    "title": "06 · Folders · DTOs",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/folders-and-dtos"
+  }
+}

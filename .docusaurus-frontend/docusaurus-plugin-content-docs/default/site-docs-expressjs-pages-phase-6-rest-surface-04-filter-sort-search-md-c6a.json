@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/filter-sort-search",
+  "title": "Filtering, sorting, search",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/04-filter-sort-search.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface",
+  "slug": "/expressjs/pages/phase-6-rest-surface/filter-sort-search",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/filter-sort-search",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Filtering, sorting, search",
+    "sidebar_label": "04 · Filter · sort · search",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Cursors that work",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/pagination/cursors-that-work"
+  },
+  "next": {
+    "title": "05 · Versioning",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/versioning"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/capitalization",
+  "title": "Capitalization decides everything",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-1-jsx/05-capitalization.md",
+  "sourceDirName": "react/pages/phase-1-jsx",
+  "slug": "/react/pages/phase-1-jsx/capitalization",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/capitalization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Capitalization decides everything",
+    "sidebar_label": "05 · Capitalization",
+    "sidebar_position": 5
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · Attributes vs props",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/attributes-vs-props"
+  },
+  "next": {
+    "title": "06 · Conditional rendering",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/conditional-rendering"
+  }
+}

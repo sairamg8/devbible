@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/selectors-and-normalization/create-selector-and-reselect",
+  "title": "`createSelector`: Memoized Derived State",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/05-selectors-and-normalization/01-create-selector-and-reselect.md",
+  "sourceDirName": "redux-toolkit/pages/05-selectors-and-normalization",
+  "slug": "/redux-toolkit/pages/selectors-and-normalization/create-selector-and-reselect",
+  "permalink": "/devbible/docs/redux-toolkit/pages/selectors-and-normalization/create-selector-and-reselect",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "`createSelector`: Memoized Derived State",
+    "sidebar_label": "`createSelector`: Memoized Derived State",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "RTK Query Cache",
+    "permalink": "/devbible/docs/redux-toolkit/pages/rtk-query/cache-management-and-invalidation"
+  },
+  "next": {
+    "title": "`createEntityAdapter`",
+    "permalink": "/devbible/docs/redux-toolkit/pages/selectors-and-normalization/create-entity-adapter"
+  }
+}

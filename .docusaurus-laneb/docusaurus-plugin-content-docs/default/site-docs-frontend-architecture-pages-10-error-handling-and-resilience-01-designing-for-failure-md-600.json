@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/error-handling-and-resilience/designing-for-failure",
+  "title": "Error Handling & Resilience: Boundary Hierarchy, Fallback UI & Retry Patterns",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/10-error-handling-and-resilience/01-designing-for-failure.md",
+  "sourceDirName": "frontend-architecture/pages/10-error-handling-and-resilience",
+  "slug": "/frontend-architecture/pages/error-handling-and-resilience/designing-for-failure",
+  "permalink": "/devbible/docs/frontend-architecture/pages/error-handling-and-resilience/designing-for-failure",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Error Handling & Resilience: Boundary Hierarchy, Fallback UI & Retry Patterns",
+    "sidebar_label": "Error Handling & Resilience",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Authentication & Authorization",
+    "permalink": "/devbible/docs/frontend-architecture/pages/authentication-and-authorization-architecture/real-world-auth-concerns"
+  },
+  "next": {
+    "title": "Observability & Monitoring",
+    "permalink": "/devbible/docs/frontend-architecture/pages/observability-and-monitoring/knowing-whats-happening-in-production"
+  }
+}

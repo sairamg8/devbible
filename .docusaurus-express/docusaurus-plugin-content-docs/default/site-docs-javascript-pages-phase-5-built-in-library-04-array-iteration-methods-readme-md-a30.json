@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/array-iteration-methods/README",
+  "title": "04 · Array iteration methods",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/04-array-iteration-methods/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/04-array-iteration-methods",
+  "slug": "/javascript/pages/phase-5-built-in-library/array-iteration-methods/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-iteration-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "04 · Array iteration methods",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · splice",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/splice"
+  },
+  "next": {
+    "title": "01 · Choosing a method",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-iteration-methods/choosing-a-method"
+  }
+}

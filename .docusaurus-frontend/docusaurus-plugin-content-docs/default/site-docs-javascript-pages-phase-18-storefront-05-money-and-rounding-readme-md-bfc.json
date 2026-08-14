@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/money-and-rounding/README",
+  "title": "05 · Money, quantities and rounding",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/05-money-and-rounding/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/05-money-and-rounding",
+  "slug": "/javascript/pages/phase-18-storefront/money-and-rounding/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/money-and-rounding/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · Money, quantities and rounding",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Wiring it up",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/cart-state-machine/wiring-it-up"
+  },
+  "next": {
+    "title": "01 · Integer minor units",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/money-and-rounding/integer-minor-units"
+  }
+}

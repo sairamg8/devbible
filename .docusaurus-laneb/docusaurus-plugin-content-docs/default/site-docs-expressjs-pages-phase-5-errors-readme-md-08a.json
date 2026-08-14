@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/README",
+  "title": "Phase 5 — Error handling",
+  "description": "Target: Express 5.2.1 on Node 24.19.0.",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/README.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors",
+  "slug": "/expressjs/pages/phase-5-errors/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 5 — Error handling",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "09 · Content negotiation",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/content-negotiation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/"
+  }
+}

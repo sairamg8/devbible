@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/the-element",
+  "title": "The element",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/02-the-element.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/the-element",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/the-element",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The element",
+    "sidebar_label": "02 · The element",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · What React is",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/what-react-is"
+  },
+  "next": {
+    "title": "03 · Render, reconcile, commit",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/render-reconcile-commit"
+  }
+}

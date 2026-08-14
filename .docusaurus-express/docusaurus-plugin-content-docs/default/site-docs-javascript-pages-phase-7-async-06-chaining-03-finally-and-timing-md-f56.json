@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/chaining/finally-and-timing",
+  "title": "06.3 · finally and the timing of a chain",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/06-chaining/03-finally-and-timing.md",
+  "sourceDirName": "javascript/pages/phase-7-async/06-chaining",
+  "slug": "/javascript/pages/phase-7-async/chaining/finally-and-timing",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/chaining/finally-and-timing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "06.3 · finally and the timing of a chain",
+    "sidebar_label": "03 · finally and timing",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Error propagation",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/chaining/error-propagation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/res-methods/choosing-and-shaping",
+  "title": "Choosing and shaping",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/01-res-methods/03-choosing-and-shaping.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses/01-res-methods",
+  "slug": "/expressjs/pages/phase-4-responses/res-methods/choosing-and-shaping",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/choosing-and-shaping",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Choosing and shaping",
+    "sidebar_label": "03 · Choosing and shaping",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · The method map",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/the-method-map"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/status-and-headers/"
+  }
+}

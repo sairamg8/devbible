@@ -1,0 +1,28 @@
+{
+  "id": "tanstack-query/pages/dependent-and-parallel-queries/query-composition",
+  "title": "Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/tanstack-query/pages/08-dependent-and-parallel-queries/01-query-composition.md",
+  "sourceDirName": "tanstack-query/pages/08-dependent-and-parallel-queries",
+  "slug": "/tanstack-query/pages/dependent-and-parallel-queries/query-composition",
+  "permalink": "/devbible/docs/tanstack-query/pages/dependent-and-parallel-queries/query-composition",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`",
+    "sidebar_label": "Dependent & Parallel Queries",
+    "sidebar_position": 1
+  },
+  "sidebar": "tanstackQuerySidebar",
+  "previous": {
+    "title": "Pagination & Infinite Queries",
+    "permalink": "/devbible/docs/tanstack-query/pages/pagination-and-infinite-queries/paged-data-patterns"
+  },
+  "next": {
+    "title": "Prefetching & SSR",
+    "permalink": "/devbible/docs/tanstack-query/pages/prefetching-and-ssr/server-rendered-data-flow"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/microtasks-and-macrotasks",
+  "title": "Microtasks, macrotasks and nextTick",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/03-microtasks-and-macrotasks.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/microtasks-and-macrotasks",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/microtasks-and-macrotasks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Microtasks, macrotasks and nextTick",
+    "sidebar_label": "03 · Microtasks and macrotasks",
+    "sidebar_position": 3
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "02 · The poll phase",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/poll-phase"
+  },
+  "next": {
+    "title": "04 · setImmediate vs setTimeout",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/setimmediate-vs-settimeout"
+  }
+}

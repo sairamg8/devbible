@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/syllabus/production",
+  "title": "Part 4 — Production",
+  "description": "Phases 10–12 · Observability, deployment, native and advanced",
+  "source": "@site/docs/nodejs/syllabus/04-production.md",
+  "sourceDirName": "nodejs/syllabus",
+  "slug": "/nodejs/syllabus/production",
+  "permalink": "/devbible/docs/nodejs/syllabus/production",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Part 4 — Production",
+    "sidebar_label": "4 · Production",
+    "sidebar_position": 4
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "3 · Application",
+    "permalink": "/devbible/docs/nodejs/syllabus/application"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/"
+  }
+}

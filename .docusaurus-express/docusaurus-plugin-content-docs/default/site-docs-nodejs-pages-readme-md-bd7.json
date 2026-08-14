@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/README",
+  "title": "Node.js — Pages",
+  "description": "Target runtime: Node 24 — the Active LTS as of August 2026. Every example",
+  "source": "@site/docs/nodejs/pages/README.md",
+  "sourceDirName": "nodejs/pages",
+  "slug": "/nodejs/pages/",
+  "permalink": "/devbible/docs/nodejs/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Node.js — Pages",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "4 · Production",
+    "permalink": "/devbible/docs/nodejs/syllabus/production"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/"
+  }
+}

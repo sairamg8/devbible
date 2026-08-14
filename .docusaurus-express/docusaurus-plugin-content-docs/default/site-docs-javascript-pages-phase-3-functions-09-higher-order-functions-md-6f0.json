@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/higher-order-functions",
+  "title": "09 · Higher-order functions",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-3-functions/09-higher-order-functions.md",
+  "sourceDirName": "javascript/pages/phase-3-functions",
+  "slug": "/javascript/pages/phase-3-functions/higher-order-functions",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/higher-order-functions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "09 · Higher-order functions",
+    "sidebar_label": "09 · Higher-order functions",
+    "sidebar_position": 9
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "06 · Classes and circular imports",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/classes-and-circular-imports"
+  },
+  "next": {
+    "title": "10 · Debounce and throttle",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/debounce-and-throttle"
+  }
+}

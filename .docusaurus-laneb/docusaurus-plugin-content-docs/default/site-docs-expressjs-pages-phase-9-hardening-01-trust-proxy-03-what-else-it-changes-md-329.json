@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-9-hardening/trust-proxy/what-else-it-changes",
+  "title": "What else it changes",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-9-hardening/01-trust-proxy/03-what-else-it-changes.md",
+  "sourceDirName": "expressjs/pages/phase-9-hardening/01-trust-proxy",
+  "slug": "/expressjs/pages/phase-9-hardening/trust-proxy/what-else-it-changes",
+  "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/what-else-it-changes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "What else it changes",
+    "sidebar_label": "03 · What else it changes",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · When `true` is a bypass",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/when-true-is-a-bypass"
+  },
+  "next": {
+    "title": "02 · CORS",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/cors"
+  }
+}

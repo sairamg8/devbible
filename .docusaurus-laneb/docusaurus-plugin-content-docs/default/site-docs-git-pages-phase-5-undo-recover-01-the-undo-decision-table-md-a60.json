@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-5-undo-recover/the-undo-decision-table",
+  "title": "The undo decision table",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-5-undo-recover/01-the-undo-decision-table.md",
+  "sourceDirName": "git/pages/phase-5-undo-recover",
+  "slug": "/git/pages/phase-5-undo-recover/the-undo-decision-table",
+  "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/the-undo-decision-table",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The undo decision table",
+    "sidebar_label": "01 · The decision table",
+    "sidebar_position": 1
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/"
+  },
+  "next": {
+    "title": "02 · reset in depth",
+    "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/reset-in-depth"
+  }
+}

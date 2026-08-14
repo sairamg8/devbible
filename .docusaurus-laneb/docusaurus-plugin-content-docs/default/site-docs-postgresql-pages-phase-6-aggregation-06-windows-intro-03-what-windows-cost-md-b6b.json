@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/windows-intro/what-windows-cost",
+  "title": "What windows cost",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/06-windows-intro/03-what-windows-cost.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/06-windows-intro",
+  "slug": "/postgresql/pages/phase-6-aggregation/windows-intro/what-windows-cost",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/what-windows-cost",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "What windows cost",
+    "sidebar_label": "03 · What windows cost",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Where windows run",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/where-windows-run"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ranking/"
+  }
+}

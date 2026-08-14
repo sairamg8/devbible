@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/README",
+  "title": "Phase 2 — Data types and the relational model",
+  "description": "Target: PostgreSQL 18.4 · Node 24 · pg. Examples measured on the sandbox where noted.",
+  "source": "@site/docs/postgresql/pages/phase-2-types/README.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 2 — Data types and the relational model",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "15 · Piping psql",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/piping"
+  },
+  "next": {
+    "title": "01 · Integers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/integers"
+  }
+}

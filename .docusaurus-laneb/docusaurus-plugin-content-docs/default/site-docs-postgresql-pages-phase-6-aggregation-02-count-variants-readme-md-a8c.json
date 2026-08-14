@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/count-variants/README",
+  "title": "count variants",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/02-count-variants/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/02-count-variants",
+  "slug": "/postgresql/pages/phase-6-aggregation/count-variants/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "count variants",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · How it executes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/group-by/how-it-executes"
+  },
+  "next": {
+    "title": "01 · Three questions",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/count-variants/three-questions"
+  }
+}

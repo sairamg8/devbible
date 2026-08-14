@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/testing/testing-redux-logic",
+  "title": "Testing Redux Logic: Reducers, Thunks & RTK Query",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/12-testing/01-testing-redux-logic.md",
+  "sourceDirName": "redux-toolkit/pages/12-testing",
+  "slug": "/redux-toolkit/pages/testing/testing-redux-logic",
+  "permalink": "/devbible/docs/redux-toolkit/pages/testing/testing-redux-logic",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Testing Redux Logic: Reducers, Thunks & RTK Query",
+    "sidebar_label": "Testing Redux Logic",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "Code Splitting",
+    "permalink": "/devbible/docs/redux-toolkit/pages/code-splitting/dynamic-reducer-injection"
+  },
+  "next": {
+    "title": "Migrating From Classic Redux to RTK",
+    "permalink": "/devbible/docs/redux-toolkit/pages/migration/from-classic-redux"
+  }
+}

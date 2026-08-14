@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/job-queues",
+  "title": "Job queues from Node — the producer/consumer shape",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/02-job-queues.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/job-queues",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/job-queues",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Job queues from Node — the producer/consumer shape",
+    "sidebar_label": "02 · Job queues",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · Sync vs background",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/sync-vs-background"
+  },
+  "next": {
+    "title": "03 · Worker processes",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/worker-processes"
+  }
+}

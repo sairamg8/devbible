@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/frames/rows-vs-range",
+  "title": "ROWS vs RANGE",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/14-frames/01-rows-vs-range.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/14-frames",
+  "slug": "/postgresql/pages/phase-6-aggregation/frames/rows-vs-range",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/rows-vs-range",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "ROWS vs RANGE",
+    "sidebar_label": "01 · ROWS vs RANGE",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/"
+  },
+  "next": {
+    "title": "02 · RANGE offsets, GROUPS, EXCLUDE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/range-groups-exclude"
+  }
+}

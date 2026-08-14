@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/startup-snapshots",
+  "title": "Startup snapshots",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-12-native/09-startup-snapshots.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/startup-snapshots",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/startup-snapshots",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Startup snapshots",
+    "sidebar_label": "09 · Startup snapshots",
+    "sidebar_position": 9
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "08 · Custom loaders",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/custom-loaders"
+  },
+  "next": {
+    "title": "10 · Contributing to Node",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/contributing-to-node"
+  }
+}

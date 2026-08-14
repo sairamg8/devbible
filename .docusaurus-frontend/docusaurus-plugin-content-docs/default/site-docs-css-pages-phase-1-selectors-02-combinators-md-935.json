@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/combinators",
+  "title": "Combinators",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-1-selectors/02-combinators.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/combinators",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/combinators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Combinators",
+    "sidebar_label": "02 · Combinators",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · Selector families",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/the-selector-families"
+  },
+  "next": {
+    "title": "03 · Attribute selectors",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/attribute-selectors"
+  }
+}

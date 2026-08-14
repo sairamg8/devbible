@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-3-ddl/transactional-ddl",
+  "title": "DDL is transactional in PostgreSQL",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-3-ddl/07-transactional-ddl.md",
+  "sourceDirName": "postgresql/pages/phase-3-ddl",
+  "slug": "/postgresql/pages/phase-3-ddl/transactional-ddl",
+  "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/transactional-ddl",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "DDL is transactional in PostgreSQL",
+    "sidebar_label": "07 · Transactional DDL",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · Relationships",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/relationships"
+  },
+  "next": {
+    "title": "08 · Unique and NULLs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/unique-nulls"
+  }
+}

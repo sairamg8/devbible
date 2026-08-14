@@ -1,0 +1,28 @@
+{
+  "id": "web-vitals-performance/pages/inp-optimization/reducing-inp",
+  "title": "INP Optimization: Yielding, Debouncing & Prioritized Updates",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/web-vitals-performance/pages/05-inp-optimization/01-reducing-inp.md",
+  "sourceDirName": "web-vitals-performance/pages/05-inp-optimization",
+  "slug": "/web-vitals-performance/pages/inp-optimization/reducing-inp",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/inp-optimization/reducing-inp",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "INP Optimization: Yielding, Debouncing & Prioritized Updates",
+    "sidebar_label": "INP Optimization",
+    "sidebar_position": 1
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "LCP Optimization",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/lcp-optimization/reducing-lcp"
+  },
+  "next": {
+    "title": "CLS Optimization",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/cls-optimization/preventing-cls"
+  }
+}

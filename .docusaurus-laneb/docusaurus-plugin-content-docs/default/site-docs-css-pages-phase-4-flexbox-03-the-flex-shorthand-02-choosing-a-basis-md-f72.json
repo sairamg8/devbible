@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/the-flex-shorthand/choosing-a-basis",
+  "title": "Choosing a basis for real layouts",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/03-the-flex-shorthand/02-choosing-a-basis.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/03-the-flex-shorthand",
+  "slug": "/css/pages/phase-4-flexbox/the-flex-shorthand/choosing-a-basis",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-shorthand/choosing-a-basis",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Choosing a basis for real layouts",
+    "sidebar_label": "02 · Choosing a basis",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · What the values mean",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-shorthand/what-the-values-mean"
+  },
+  "next": {
+    "title": "04 · flex-basis vs width",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/flex-basis-vs-width"
+  }
+}

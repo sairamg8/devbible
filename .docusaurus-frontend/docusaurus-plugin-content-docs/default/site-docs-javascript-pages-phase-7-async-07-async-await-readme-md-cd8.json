@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/async-await/README",
+  "title": "07 · async/await",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/07-async-await/README.md",
+  "sourceDirName": "javascript/pages/phase-7-async/07-async-await",
+  "slug": "/javascript/pages/phase-7-async/async-await/",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "07 · async/await",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/"
+  },
+  "next": {
+    "title": "01 · Always a promise",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/async-await/always-a-promise"
+  }
+}

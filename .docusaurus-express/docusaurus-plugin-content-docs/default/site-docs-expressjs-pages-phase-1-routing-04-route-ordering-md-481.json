@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-1-routing/route-ordering",
+  "title": "Route ordering",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-1-routing/04-route-ordering.md",
+  "sourceDirName": "expressjs/pages/phase-1-routing",
+  "slug": "/expressjs/pages/phase-1-routing/route-ordering",
+  "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/route-ordering",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Route ordering",
+    "sidebar_label": "04 · Route ordering",
+    "sidebar_position": 4
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Composition at scale",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/router-composition/composition-at-scale"
+  },
+  "next": {
+    "title": "05 · Path matching (v5)",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/path-matching-express5"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/string-methods/README",
+  "title": "07 · String methods",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/07-string-methods/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/07-string-methods",
+  "slug": "/javascript/pages/phase-5-built-in-library/string-methods/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/string-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "07 · String methods",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Stability and mutation",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/stability-and-mutation"
+  },
+  "next": {
+    "title": "01 · Slicing and splitting",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/string-methods/slicing-and-splitting"
+  }
+}

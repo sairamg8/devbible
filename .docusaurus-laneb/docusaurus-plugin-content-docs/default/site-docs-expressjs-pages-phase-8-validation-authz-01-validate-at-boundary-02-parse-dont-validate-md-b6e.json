@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/validate-at-boundary/parse-dont-validate",
+  "title": "Parse, don't validate",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/01-validate-at-boundary/02-parse-dont-validate.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz/01-validate-at-boundary",
+  "slug": "/expressjs/pages/phase-8-validation-authz/validate-at-boundary/parse-dont-validate",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validate-at-boundary/parse-dont-validate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Parse, don't validate",
+    "sidebar_label": "02 · Parse, don't validate",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · What untrusted means",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validate-at-boundary/what-untrusted-means"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validation-factory/"
+  }
+}

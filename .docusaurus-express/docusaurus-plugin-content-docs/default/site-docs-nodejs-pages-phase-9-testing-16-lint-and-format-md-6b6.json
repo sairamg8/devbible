@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/lint-and-format",
+  "title": "ESLint flat config, Prettier, or Biome for both",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/16-lint-and-format.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/lint-and-format",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/lint-and-format",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "ESLint flat config, Prettier, or Biome for both",
+    "sidebar_label": "16 · ESLint, Prettier, Biome",
+    "sidebar_position": 16
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "15 · Snapshot testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/snapshot-testing"
+  },
+  "next": {
+    "title": "17 · Property and mutation",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/property-and-mutation"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/parse-compile-execute",
+  "title": "02 · Parse, compile, execute",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/02-parse-compile-execute.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/parse-compile-execute",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/parse-compile-execute",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02 · Parse, compile, execute",
+    "sidebar_label": "02 · Parse, compile, execute",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Engine, runtime, spec",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/engine-runtime-spec"
+  },
+  "next": {
+    "title": "03 · The call stack",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/call-stack"
+  }
+}

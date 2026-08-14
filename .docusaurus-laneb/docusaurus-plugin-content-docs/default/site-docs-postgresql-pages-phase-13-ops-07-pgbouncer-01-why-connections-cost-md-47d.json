@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/pgbouncer/why-connections-cost",
+  "title": "07.1 · Why a connection costs something",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/07-pgbouncer/01-why-connections-cost.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/07-pgbouncer",
+  "slug": "/postgresql/pages/phase-13-ops/pgbouncer/why-connections-cost",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/why-connections-cost",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "07.1 · Why a connection costs something",
+    "sidebar_label": "01 · Why connections cost",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/"
+  },
+  "next": {
+    "title": "02 · Pool modes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/pool-modes"
+  }
+}

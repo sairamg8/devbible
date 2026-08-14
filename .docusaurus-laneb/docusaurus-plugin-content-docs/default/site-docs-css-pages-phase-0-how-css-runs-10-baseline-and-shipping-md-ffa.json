@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/baseline-and-shipping",
+  "title": "Baseline and shipping decisions",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/10-baseline-and-shipping.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/baseline-and-shipping",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/baseline-and-shipping",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Baseline and shipping decisions",
+    "sidebar_label": "10 · Baseline",
+    "sidebar_position": 10
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "09 · @supports",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/supports-feature-queries"
+  },
+  "next": {
+    "title": "11 · Vendor prefixes",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/vendor-prefixes"
+  }
+}

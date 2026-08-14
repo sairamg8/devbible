@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/class-components/lifecycle-and-hooks",
+  "title": "The lifecycle, and the hook each one maps to",
+  "description": "Know",
+  "source": "@site/docs/react/pages/phase-2-components/14-class-components/02-lifecycle-and-hooks.md",
+  "sourceDirName": "react/pages/phase-2-components/14-class-components",
+  "slug": "/react/pages/phase-2-components/class-components/lifecycle-and-hooks",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/class-components/lifecycle-and-hooks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The lifecycle, and the hook each one maps to",
+    "sidebar_label": "02 · Lifecycle and hooks",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Anatomy and this",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/class-components/anatomy-and-this"
+  },
+  "next": {
+    "title": "15 · PureComponent",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/purecomponent"
+  }
+}

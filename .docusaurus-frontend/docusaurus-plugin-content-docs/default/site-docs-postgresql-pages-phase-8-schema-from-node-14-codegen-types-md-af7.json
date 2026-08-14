@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/codegen-types",
+  "title": "Generating TypeScript types from the schema",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/14-codegen-types.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/codegen-types",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/codegen-types",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "Generating TypeScript types from the schema",
+    "sidebar_label": "14 · Type generation",
+    "sidebar_position": 14
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "13 · Schema drift",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/schema-drift"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/eslint-plugin-react-hooks",
+  "title": "eslint-plugin-react-hooks",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-6-performance/10-eslint-plugin-react-hooks.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/eslint-plugin-react-hooks",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/eslint-plugin-react-hooks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "eslint-plugin-react-hooks",
+    "sidebar_label": "10 · eslint-plugin-react-hooks",
+    "sidebar_position": 10
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "09 · How the Compiler bails out",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/how-the-compiler-bails-out"
+  },
+  "next": {
+    "title": "11 · Do you still write useMemo?",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/do-you-still-write-usememo"
+  }
+}

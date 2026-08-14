@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/leaks/the-four-leaks",
+  "title": "04.2 · The four leaks",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/04-leaks/02-the-four-leaks.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/04-leaks",
+  "slug": "/javascript/pages/phase-8-modules-errors/leaks/the-four-leaks",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/leaks/the-four-leaks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "04.2 · The four leaks",
+    "sidebar_label": "02 · The four leaks",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · Reachability",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/leaks/reachability"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/"
+  }
+}

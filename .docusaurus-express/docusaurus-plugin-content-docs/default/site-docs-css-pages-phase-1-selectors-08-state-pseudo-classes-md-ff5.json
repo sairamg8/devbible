@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/state-pseudo-classes",
+  "title": "State pseudo-classes",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-1-selectors/08-state-pseudo-classes.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/state-pseudo-classes",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/state-pseudo-classes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "State pseudo-classes",
+    "sidebar_label": "08 · State pseudo-classes",
+    "sidebar_position": 8
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "07 · Structural pseudo-classes",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/structural-pseudo-classes"
+  },
+  "next": {
+    "title": "09 · Form-state pseudo-classes",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/form-state-pseudo-classes"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/binary-data-and-endianness",
+  "title": "Binary data and endianness",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/06-binary-data-and-endianness.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/binary-data-and-endianness",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/binary-data-and-endianness",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Binary data and endianness",
+    "sidebar_label": "06 · Binary data, endianness",
+    "sidebar_position": 6
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "05 · string_decoder",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/string-decoder"
+  },
+  "next": {
+    "title": "07 · Why streams exist",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/why-streams"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/circular-dependencies",
+  "title": "Circular dependencies",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/06-circular-dependencies.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/circular-dependencies",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/circular-dependencies",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Circular dependencies",
+    "sidebar_label": "06 · Circular dependencies",
+    "sidebar_position": 6
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "05 · Module resolution",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/module-resolution"
+  },
+  "next": {
+    "title": "07 · package.json",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/package-json"
+  }
+}

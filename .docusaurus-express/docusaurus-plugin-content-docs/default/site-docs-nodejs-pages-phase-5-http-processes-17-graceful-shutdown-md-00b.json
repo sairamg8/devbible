@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/graceful-shutdown",
+  "title": "Graceful shutdown",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/17-graceful-shutdown.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/graceful-shutdown",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/graceful-shutdown",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Graceful shutdown",
+    "sidebar_label": "17 · Graceful shutdown",
+    "sidebar_position": 17
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "16 · Signals",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/signals"
+  },
+  "next": {
+    "title": "18 · Crash handlers",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/crash-handlers"
+  }
+}

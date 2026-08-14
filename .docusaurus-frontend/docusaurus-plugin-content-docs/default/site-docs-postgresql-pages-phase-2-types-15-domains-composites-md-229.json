@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/domains-composites",
+  "title": "Domains and composite types",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-2-types/15-domains-composites.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/domains-composites",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/domains-composites",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Domains and composite types",
+    "sidebar_label": "15 · Domains and composites",
+    "sidebar_position": 15
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "14 · Network, geo, citext",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/network-geo-citext"
+  },
+  "next": {
+    "title": "16 · Range types",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/ranges"
+  }
+}

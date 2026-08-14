@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/variables",
+  "title": "psql variables and the interpolation traps",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/08-variables.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/variables",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/variables",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "psql variables and the interpolation traps",
+    "sidebar_label": "08 · Variables",
+    "sidebar_position": 8
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "07 · Query buffer",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/query-buffer"
+  },
+  "next": {
+    "title": "09 · \\copy vs COPY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/copy"
+  }
+}

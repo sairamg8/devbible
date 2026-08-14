@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/async-testing",
+  "title": "Async testing done right — the await you forgot",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/06-async-testing.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/async-testing",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/async-testing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Async testing done right — the await you forgot",
+    "sidebar_label": "06 · Async testing",
+    "sidebar_position": 6
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "05 · API testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/api-testing"
+  },
+  "next": {
+    "title": "07 · Mocking",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/mocking"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-15-algorithm-patterns/binary-search/the-template",
+  "title": "03.1 · The template that avoids off-by-one",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-15-algorithm-patterns/03-binary-search/01-the-template.md",
+  "sourceDirName": "javascript/pages/phase-15-algorithm-patterns/03-binary-search",
+  "slug": "/javascript/pages/phase-15-algorithm-patterns/binary-search/the-template",
+  "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/binary-search/the-template",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · The template that avoids off-by-one",
+    "sidebar_label": "01 · The template",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/binary-search/"
+  },
+  "next": {
+    "title": "02 · Over an answer",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/binary-search/searching-over-an-answer"
+  }
+}

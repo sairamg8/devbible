@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/real-world-workflows-and-recipes/wiring-colors-and-custom-fonts",
+  "title": "Recipe: Wire App Colors + Custom Fonts Into Storybook 🟢 `[D]`",
+  "description": "Priority: 🟢 [D] Daily setup for any real product Storybook",
+  "source": "@site/docs/storybook/pages/16-real-world-workflows-and-recipes/02-wiring-colors-and-custom-fonts.md",
+  "sourceDirName": "storybook/pages/16-real-world-workflows-and-recipes",
+  "slug": "/storybook/pages/real-world-workflows-and-recipes/wiring-colors-and-custom-fonts",
+  "permalink": "/devbible/docs/storybook/pages/real-world-workflows-and-recipes/wiring-colors-and-custom-fonts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Recipe: Wire App Colors + Custom Fonts Into Storybook 🟢 `[D]`",
+    "sidebar_label": "Recipe",
+    "sidebar_position": 2
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Bootstrapping Storybook Into an Existing A",
+    "permalink": "/devbible/docs/storybook/pages/real-world-workflows-and-recipes/bootstrapping-into-an-existing-app"
+  },
+  "next": {
+    "title": "Storybook Colors",
+    "permalink": "/devbible/docs/storybook/pages/theming-colors-and-fonts/global-colors-themes-and-tokens"
+  }
+}

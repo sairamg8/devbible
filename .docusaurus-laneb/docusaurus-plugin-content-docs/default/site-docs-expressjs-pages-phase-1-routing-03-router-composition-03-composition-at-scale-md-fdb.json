@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-1-routing/router-composition/composition-at-scale",
+  "title": "Composition at scale",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-1-routing/03-router-composition/03-composition-at-scale.md",
+  "sourceDirName": "expressjs/pages/phase-1-routing/03-router-composition",
+  "slug": "/expressjs/pages/phase-1-routing/router-composition/composition-at-scale",
+  "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/router-composition/composition-at-scale",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Composition at scale",
+    "sidebar_label": "03 · Composition at scale",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · mergeParams and isolation",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/router-composition/mergeparams-and-isolation"
+  },
+  "next": {
+    "title": "04 · Route ordering",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/route-ordering"
+  }
+}

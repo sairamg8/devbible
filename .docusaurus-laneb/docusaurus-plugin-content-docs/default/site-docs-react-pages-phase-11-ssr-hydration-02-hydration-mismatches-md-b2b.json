@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-11-ssr-hydration/hydration-mismatches",
+  "title": "Hydration mismatches",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-11-ssr-hydration/02-hydration-mismatches.md",
+  "sourceDirName": "react/pages/phase-11-ssr-hydration",
+  "slug": "/react/pages/phase-11-ssr-hydration/hydration-mismatches",
+  "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/hydration-mismatches",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Hydration mismatches",
+    "sidebar_label": "02 · Hydration mismatches",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The five, distinguished",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/csr-ssr-ssg-streaming-rsc"
+  },
+  "next": {
+    "title": "03 · The server renderers",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/the-server-renderers"
+  }
+}

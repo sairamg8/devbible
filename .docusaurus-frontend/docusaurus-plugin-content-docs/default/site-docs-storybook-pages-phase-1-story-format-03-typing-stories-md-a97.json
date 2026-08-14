@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-1-story-format/typing-stories",
+  "title": "03 · Typing stories",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-1-story-format/03-typing-stories.md",
+  "sourceDirName": "storybook/pages/phase-1-story-format",
+  "slug": "/storybook/pages/phase-1-story-format/typing-stories",
+  "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/typing-stories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · Typing stories",
+    "sidebar_label": "03 · Typing stories",
+    "sidebar_position": 3
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "02 · Files and the glob",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/file-structure-and-the-glob"
+  },
+  "next": {
+    "title": "04 · CSF factories",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/csf-factories"
+  }
+}

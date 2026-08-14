@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/README",
+  "title": "Phase 1 — Selectors",
+  "description": "Verified: 2026-08 in Firefox 153.0.3, with Baseline data from",
+  "source": "@site/docs/css/pages/phase-1-selectors/README.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 1 — Selectors",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "12 · DevTools for CSS",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/devtools-for-css"
+  },
+  "next": {
+    "title": "01 · Selector families",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/the-selector-families"
+  }
+}

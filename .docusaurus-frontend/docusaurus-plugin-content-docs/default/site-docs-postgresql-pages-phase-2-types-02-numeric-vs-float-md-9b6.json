@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/numeric-vs-float",
+  "title": "numeric vs float — money never in float",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/02-numeric-vs-float.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/numeric-vs-float",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/numeric-vs-float",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "numeric vs float — money never in float",
+    "sidebar_label": "02 · numeric vs float",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Integers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/integers"
+  },
+  "next": {
+    "title": "03 · text vs varchar",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/text"
+  }
+}

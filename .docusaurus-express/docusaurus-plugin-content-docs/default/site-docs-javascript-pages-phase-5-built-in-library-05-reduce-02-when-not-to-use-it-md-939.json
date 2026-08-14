@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/reduce/when-not-to-use-it",
+  "title": "05.2 · When not to use `reduce`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/05-reduce/02-when-not-to-use-it.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/05-reduce",
+  "slug": "/javascript/pages/phase-5-built-in-library/reduce/when-not-to-use-it",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/reduce/when-not-to-use-it",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "05.2 · When not to use `reduce`",
+    "sidebar_label": "02 · When not to use it",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The shape",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/reduce/the-shape"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/"
+  }
+}

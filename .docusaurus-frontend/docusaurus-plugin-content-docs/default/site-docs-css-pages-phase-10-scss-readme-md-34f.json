@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-10-scss/README",
+  "title": "Phase 10 — SCSS, practically",
+  "description": "Verified: 2026-08-14 against the official Sass documentation",
+  "source": "@site/docs/css/pages/phase-10-scss/README.md",
+  "sourceDirName": "css/pages/phase-10-scss",
+  "slug": "/css/pages/phase-10-scss/",
+  "permalink": "/devbible/docs/css/pages/phase-10-scss/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 10 — SCSS, practically",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "03 · prefers-reduced-motion",
+    "permalink": "/devbible/docs/css/pages/phase-9-motion/prefers-reduced-motion"
+  },
+  "next": {
+    "title": "01 · Setting up and compiling",
+    "permalink": "/devbible/docs/css/pages/phase-10-scss/setting-up-and-compiling"
+  }
+}

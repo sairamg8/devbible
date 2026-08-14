@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/switch-and-restore",
+  "title": "`git switch` and `git restore`",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/07-switch-and-restore.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop",
+  "slug": "/git/pages/phase-1-everyday-loop/switch-and-restore",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/switch-and-restore",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "`git switch` and `git restore`",
+    "sidebar_label": "07 · switch and restore",
+    "sidebar_position": 7
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "06 · Ignoring ≠ untracking",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/ignoring-does-not-untrack"
+  },
+  "next": {
+    "title": "08 · Undo before you push",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/undo-before-you-push"
+  }
+}

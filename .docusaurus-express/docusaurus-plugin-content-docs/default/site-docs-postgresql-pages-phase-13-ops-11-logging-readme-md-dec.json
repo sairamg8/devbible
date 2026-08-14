@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/logging/README",
+  "title": "Logging slow queries",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/11-logging/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/11-logging",
+  "slug": "/postgresql/pages/phase-13-ops/logging/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Logging slow queries",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Changing a setting",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/config-keys/changing-a-setting"
+  },
+  "next": {
+    "title": "01 · What to log",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/what-to-log"
+  }
+}

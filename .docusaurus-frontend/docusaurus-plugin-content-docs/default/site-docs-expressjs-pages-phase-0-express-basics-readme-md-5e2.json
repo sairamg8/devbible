@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/README",
+  "title": "Phase 0 — Express over node:http",
+  "description": "Target: Express 5.x on Node 24 — Active LTS as of August 2026.",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/README.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics",
+  "slug": "/expressjs/pages/phase-0-express-basics/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 0 — Express over node:http",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/res-methods/what-res-send-does",
+  "title": "What res.send actually does",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/01-res-methods/01-what-res-send-does.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses/01-res-methods",
+  "slug": "/expressjs/pages/phase-4-responses/res-methods/what-res-send-does",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/what-res-send-does",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What res.send actually does",
+    "sidebar_label": "01 · What res.send does",
+    "sidebar_position": 1
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/"
+  },
+  "next": {
+    "title": "02 · The method map",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/the-method-map"
+  }
+}

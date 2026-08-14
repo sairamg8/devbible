@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/next-semantics/the-hang",
+  "title": "The hang",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/03-next-semantics/02-the-hang.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware/03-next-semantics",
+  "slug": "/expressjs/pages/phase-2-middleware/next-semantics/the-hang",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/next-semantics/the-hang",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The hang",
+    "sidebar_label": "02 · The hang",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · What you can pass",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/next-semantics/what-you-can-pass"
+  },
+  "next": {
+    "title": "03 · Double send and guards",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/next-semantics/double-send-and-guards"
+  }
+}

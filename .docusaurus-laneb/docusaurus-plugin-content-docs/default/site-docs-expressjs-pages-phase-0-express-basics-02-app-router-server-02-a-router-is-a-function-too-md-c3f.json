@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/app-router-server/a-router-is-a-function-too",
+  "title": "A Router is a function too",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/02-app-router-server/02-a-router-is-a-function-too.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/02-app-router-server",
+  "slug": "/expressjs/pages/phase-0-express-basics/app-router-server/a-router-is-a-function-too",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/a-router-is-a-function-too",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "A Router is a function too",
+    "sidebar_label": "02 · A Router is a function too",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · The three objects",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/the-three-objects"
+  },
+  "next": {
+    "title": "03 · Inside router.handle",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/inside-router-handle"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-4-filesystem/README",
+  "title": "Phase 4 — Filesystem, paths, and URLs",
+  "description": "Target runtime: Node 24 — the Active LTS as of August 2026.",
+  "source": "@site/docs/nodejs/pages/phase-4-filesystem/README.md",
+  "sourceDirName": "nodejs/pages/phase-4-filesystem",
+  "slug": "/nodejs/pages/phase-4-filesystem/",
+  "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 4 — Filesystem, paths, and URLs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "19 · High water marks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/highwatermark-tuning"
+  },
+  "next": {
+    "title": "01 · fs/promises",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/fs-promises"
+  }
+}

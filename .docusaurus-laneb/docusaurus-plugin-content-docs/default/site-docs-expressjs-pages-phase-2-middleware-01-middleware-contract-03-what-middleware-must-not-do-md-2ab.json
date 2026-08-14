@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/middleware-contract/what-middleware-must-not-do",
+  "title": "What middleware must not do",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/01-middleware-contract/03-what-middleware-must-not-do.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware/01-middleware-contract",
+  "slug": "/expressjs/pages/phase-2-middleware/middleware-contract/what-middleware-must-not-do",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-contract/what-middleware-must-not-do",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "What middleware must not do",
+    "sidebar_label": "03 · What middleware must not do",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Middleware that composes",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-contract/middleware-that-composes"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/execution-order/"
+  }
+}

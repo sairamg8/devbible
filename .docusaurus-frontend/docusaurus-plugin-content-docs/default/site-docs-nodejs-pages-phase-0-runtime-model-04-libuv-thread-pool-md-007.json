@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-0-runtime-model/libuv-thread-pool",
+  "title": "The libuv thread pool",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-0-runtime-model/04-libuv-thread-pool.md",
+  "sourceDirName": "nodejs/pages/phase-0-runtime-model",
+  "slug": "/nodejs/pages/phase-0-runtime-model/libuv-thread-pool",
+  "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/libuv-thread-pool",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "The libuv thread pool",
+    "sidebar_label": "04 · The thread pool",
+    "sidebar_position": 4
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "03 · Blocking the loop",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/blocking-the-event-loop"
+  },
+  "next": {
+    "title": "05 · Node vs the browser",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/node-vs-browser"
+  }
+}

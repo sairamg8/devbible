@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/backoff-and-jitter",
+  "title": "Exponential backoff and jitter",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/15-backoff-and-jitter.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/backoff-and-jitter",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/backoff-and-jitter",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Exponential backoff and jitter",
+    "sidebar_label": "15 · Backoff and jitter",
+    "sidebar_position": 15
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "14 · Retry only what is safe",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/retry-safe-failures"
+  },
+  "next": {
+    "title": "16 · Concurrency limiting",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/concurrency-limiting"
+  }
+}

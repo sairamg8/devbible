@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/race-conditions",
+  "title": "Race conditions",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/08-race-conditions.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/race-conditions",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/race-conditions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Race conditions",
+    "sidebar_label": "08 · Race conditions",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · Fetching data in an effect",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/fetching-data"
+  },
+  "next": {
+    "title": "09 · An effect has its own lifecycle",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/effect-lifecycle"
+  }
+}

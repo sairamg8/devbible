@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/README",
+  "title": "Phase 4 — CRUD and DML",
+  "description": "Target: PostgreSQL 18.4 · Node 24 · pg.",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/README.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 4 — CRUD and DML",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Operating it",
+    "permalink": "/devbible/docs/postgresql/pages/phase-3-ddl/multi-tenancy/operating-it"
+  },
+  "next": {
+    "title": "01 · SELECT",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/select-shape"
+  }
+}

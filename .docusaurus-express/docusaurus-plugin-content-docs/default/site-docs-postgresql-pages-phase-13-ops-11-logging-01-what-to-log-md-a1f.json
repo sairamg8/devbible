@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/logging/what-to-log",
+  "title": "11.1 · What to log, and what it costs",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/11-logging/01-what-to-log.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/11-logging",
+  "slug": "/postgresql/pages/phase-13-ops/logging/what-to-log",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/what-to-log",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "11.1 · What to log, and what it costs",
+    "sidebar_label": "01 · What to log",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/"
+  },
+  "next": {
+    "title": "02 · Parameters & auto_explain",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logging/parameters-and-auto-explain"
+  }
+}

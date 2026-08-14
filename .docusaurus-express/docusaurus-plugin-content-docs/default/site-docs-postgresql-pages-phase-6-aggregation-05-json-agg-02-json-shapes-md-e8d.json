@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/json-agg/json-shapes",
+  "title": "JSON shapes",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/05-json-agg/02-json-shapes.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/05-json-agg",
+  "slug": "/postgresql/pages/phase-6-aggregation/json-agg/json-shapes",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/json-agg/json-shapes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "JSON shapes",
+    "sidebar_label": "02 · JSON shapes",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Arrays and strings",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/json-agg/arrays-and-strings"
+  },
+  "next": {
+    "title": "03 · The empty-array trap",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/json-agg/the-empty-array-trap"
+  }
+}

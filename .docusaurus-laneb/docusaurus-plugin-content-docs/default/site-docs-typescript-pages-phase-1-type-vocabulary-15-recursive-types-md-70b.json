@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/recursive-types",
+  "title": "Recursive type aliases",
+  "description": "Understand",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/15-recursive-types.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/recursive-types",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/recursive-types",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Recursive type aliases",
+    "sidebar_label": "15 · Recursive types",
+    "sidebar_position": 15
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "14 · readonly and immutability",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/readonly-and-immutability"
+  },
+  "next": {
+    "title": "16 · object, Object, {}",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/object-Object-braces"
+  }
+}

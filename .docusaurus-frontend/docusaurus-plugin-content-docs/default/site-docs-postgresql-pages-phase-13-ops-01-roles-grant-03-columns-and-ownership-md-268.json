@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/roles-grant/columns-and-ownership",
+  "title": "Columns, reads and ownership",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/01-roles-grant/03-columns-and-ownership.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/01-roles-grant",
+  "slug": "/postgresql/pages/phase-13-ops/roles-grant/columns-and-ownership",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/roles-grant/columns-and-ownership",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Columns, reads and ownership",
+    "sidebar_label": "03 · Columns and ownership",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · GRANT and REVOKE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/roles-grant/grant-and-revoke"
+  },
+  "next": {
+    "title": "04 · Defaults and auditing",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/roles-grant/defaults-and-auditing"
+  }
+}

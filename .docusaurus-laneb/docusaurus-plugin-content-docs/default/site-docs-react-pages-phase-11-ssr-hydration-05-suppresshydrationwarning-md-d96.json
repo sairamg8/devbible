@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-11-ssr-hydration/suppresshydrationwarning",
+  "title": "suppressHydrationWarning and the two-pass render",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-11-ssr-hydration/05-suppresshydrationwarning.md",
+  "sourceDirName": "react/pages/phase-11-ssr-hydration",
+  "slug": "/react/pages/phase-11-ssr-hydration/suppresshydrationwarning",
+  "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/suppresshydrationwarning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "suppressHydrationWarning and the two-pass render",
+    "sidebar_label": "05 · The two escapes",
+    "sidebar_position": 5
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · hydrateRoot",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/hydrateroot"
+  },
+  "next": {
+    "title": "06 · Streaming SSR",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/streaming-ssr"
+  }
+}

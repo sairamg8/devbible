@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/module-semantics/README",
+  "title": "02 · Modules are singletons, strict, deferred and hoisted",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/02-module-semantics/README.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/02-module-semantics",
+  "slug": "/javascript/pages/phase-8-modules-errors/module-semantics/",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/module-semantics/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Modules are singletons, strict, deferred and hoisted",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Specifiers and loading",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/specifiers-and-the-graph"
+  },
+  "next": {
+    "title": "01 · Singletons and strict",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/module-semantics/singletons-and-strict"
+  }
+}

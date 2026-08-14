@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/attributes-vs-props",
+  "title": "Attributes vs props",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-1-jsx/04-attributes-vs-props.md",
+  "sourceDirName": "react/pages/phase-1-jsx",
+  "slug": "/react/pages/phase-1-jsx/attributes-vs-props",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/attributes-vs-props",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Attributes vs props",
+    "sidebar_label": "04 · Attributes vs props",
+    "sidebar_position": 4
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · What can be rendered",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/what-can-be-rendered"
+  },
+  "next": {
+    "title": "05 · Capitalization",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/capitalization"
+  }
+}

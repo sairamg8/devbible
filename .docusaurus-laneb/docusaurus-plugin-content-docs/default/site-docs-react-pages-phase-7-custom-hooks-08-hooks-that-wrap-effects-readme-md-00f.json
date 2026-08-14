@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/README",
+  "title": "Hooks that wrap effects",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/08-hooks-that-wrap-effects/README.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/08-hooks-that-wrap-effects",
+  "slug": "/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Hooks that wrap effects",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "05 · Timers and lifecycle",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/the-standard-set/timers-and-lifecycle"
+  },
+  "next": {
+    "title": "01 · Dependencies across the boundary",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/dependencies-across-the-boundary"
+  }
+}

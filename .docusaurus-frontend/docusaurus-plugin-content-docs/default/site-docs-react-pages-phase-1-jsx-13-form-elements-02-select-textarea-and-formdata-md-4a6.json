@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-1-jsx/form-elements/select-textarea-and-formdata",
+  "title": "select, textarea, files and FormData",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-1-jsx/13-form-elements/02-select-textarea-and-formdata.md",
+  "sourceDirName": "react/pages/phase-1-jsx/13-form-elements",
+  "slug": "/react/pages/phase-1-jsx/form-elements/select-textarea-and-formdata",
+  "permalink": "/devbible/docs/react/pages/phase-1-jsx/form-elements/select-textarea-and-formdata",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "select, textarea, files and FormData",
+    "sidebar_label": "02 · select, textarea and FormData",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Controlled and uncontrolled",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/form-elements/controlled-and-uncontrolled"
+  },
+  "next": {
+    "title": "14 · Whitespace and text",
+    "permalink": "/devbible/docs/react/pages/phase-1-jsx/whitespace-and-text"
+  }
+}

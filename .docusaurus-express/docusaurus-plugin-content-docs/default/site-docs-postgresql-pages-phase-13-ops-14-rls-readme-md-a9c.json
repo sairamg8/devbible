@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/rls/README",
+  "title": "Row-level security",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/14-rls/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/14-rls",
+  "slug": "/postgresql/pages/phase-13-ops/rls/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/rls/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Row-level security",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Providers & connecting",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/managed-postgres/providers-and-connecting"
+  },
+  "next": {
+    "title": "01 · Policies",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/rls/policies"
+  }
+}

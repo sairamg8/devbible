@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/rest-resources/when-rest-stops-fitting",
+  "title": "When REST stops fitting",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/01-rest-resources/02-when-rest-stops-fitting.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/01-rest-resources",
+  "slug": "/expressjs/pages/phase-6-rest-surface/rest-resources/when-rest-stops-fitting",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/when-rest-stops-fitting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "When REST stops fitting",
+    "sidebar_label": "02 · When REST stops fitting",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · Nouns, collections, items",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/nouns-collections-items"
+  },
+  "next": {
+    "title": "03 · Designing a surface",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/designing-a-surface"
+  }
+}

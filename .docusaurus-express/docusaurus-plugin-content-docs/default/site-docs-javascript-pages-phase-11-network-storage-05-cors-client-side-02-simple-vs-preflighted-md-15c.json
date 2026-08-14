@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/cors-client-side/simple-vs-preflighted",
+  "title": "05.2 · Simple versus preflighted",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/05-cors-client-side/02-simple-vs-preflighted.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/05-cors-client-side",
+  "slug": "/javascript/pages/phase-11-network-storage/cors-client-side/simple-vs-preflighted",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/simple-vs-preflighted",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "05.2 · Simple versus preflighted",
+    "sidebar_label": "02 · Simple vs preflighted",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · What the browser does",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/what-the-browser-is-doing"
+  },
+  "next": {
+    "title": "03 · Credentials and exposure",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/credentials-and-exposure"
+  }
+}

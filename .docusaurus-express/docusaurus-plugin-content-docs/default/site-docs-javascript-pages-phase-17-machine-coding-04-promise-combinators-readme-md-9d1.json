@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-17-machine-coding/promise-combinators/README",
+  "title": "04 · Promise.all, race, any, allSettled",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-17-machine-coding/04-promise-combinators/README.md",
+  "sourceDirName": "javascript/pages/phase-17-machine-coding/04-promise-combinators",
+  "slug": "/javascript/pages/phase-17-machine-coding/promise-combinators/",
+  "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/promise-combinators/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "04 · Promise.all, race, any, allSettled",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · throttle",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/debounce-throttle/throttle"
+  },
+  "next": {
+    "title": "01 · all and allSettled",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/promise-combinators/all-and-allsettled"
+  }
+}

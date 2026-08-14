@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-16-dynamic-programming/what-dp-is/the-two-conditions",
+  "title": "01.1 · The two conditions",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-16-dynamic-programming/01-what-dp-is/01-the-two-conditions.md",
+  "sourceDirName": "javascript/pages/phase-16-dynamic-programming/01-what-dp-is",
+  "slug": "/javascript/pages/phase-16-dynamic-programming/what-dp-is/the-two-conditions",
+  "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/the-two-conditions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · The two conditions",
+    "sidebar_label": "01 · The two conditions",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/"
+  },
+  "next": {
+    "title": "02 · Spotting the state",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/spotting-the-state"
+  }
+}

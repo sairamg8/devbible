@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-9-hardening/helmet",
+  "title": "Helmet",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-9-hardening/03-helmet.md",
+  "sourceDirName": "expressjs/pages/phase-9-hardening",
+  "slug": "/expressjs/pages/phase-9-hardening/helmet",
+  "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/helmet",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Helmet",
+    "sidebar_label": "03 · Helmet",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · CORS",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/cors"
+  },
+  "next": {
+    "title": "04 · Rate limiting",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/rate-limiting"
+  }
+}

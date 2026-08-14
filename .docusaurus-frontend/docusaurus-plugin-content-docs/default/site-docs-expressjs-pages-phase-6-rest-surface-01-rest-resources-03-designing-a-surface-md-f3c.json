@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/rest-resources/designing-a-surface",
+  "title": "Designing a resource surface",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/01-rest-resources/03-designing-a-surface.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface/01-rest-resources",
+  "slug": "/expressjs/pages/phase-6-rest-surface/rest-resources/designing-a-surface",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/designing-a-surface",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Designing a resource surface",
+    "sidebar_label": "03 · Designing a surface",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · When REST stops fitting",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/rest-resources/when-rest-stops-fitting"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/status-mapping/"
+  }
+}

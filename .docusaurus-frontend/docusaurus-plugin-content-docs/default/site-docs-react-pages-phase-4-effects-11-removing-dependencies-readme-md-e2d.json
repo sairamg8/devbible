@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/removing-dependencies/README",
+  "title": "Removing dependencies legitimately",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-4-effects/11-removing-dependencies/README.md",
+  "sourceDirName": "react/pages/phase-4-effects/11-removing-dependencies",
+  "slug": "/react/pages/phase-4-effects/removing-dependencies/",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Removing dependencies legitimately",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "10 · useEffectEvent",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/useeffectevent"
+  },
+  "next": {
+    "title": "01 · Objects and functions",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/removing-dependencies/objects-and-functions"
+  }
+}

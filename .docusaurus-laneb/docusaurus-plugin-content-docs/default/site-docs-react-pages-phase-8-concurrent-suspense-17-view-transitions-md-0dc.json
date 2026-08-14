@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/view-transitions",
+  "title": "⚠ <ViewTransition>, addTransitionType and gesture transitions",
+  "description": "Know",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/17-view-transitions.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/view-transitions",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/view-transitions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "⚠ <ViewTransition>, addTransitionType and gesture transitions",
+    "sidebar_label": "17 · ⚠ ViewTransition",
+    "sidebar_position": 17
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "16 · Error boundaries and Suspense",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/error-boundaries-and-suspense"
+  },
+  "next": {
+    "title": "18 · ⚠ SuspenseList",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspenselist"
+  }
+}

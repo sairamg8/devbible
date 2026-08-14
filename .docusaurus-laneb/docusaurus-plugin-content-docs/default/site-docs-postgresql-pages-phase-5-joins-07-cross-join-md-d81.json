@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/cross-join",
+  "title": "CROSS JOIN",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/07-cross-join.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/cross-join",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/cross-join",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "CROSS JOIN",
+    "sidebar_label": "07 · CROSS JOIN",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · OUTER",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/outer-joins"
+  },
+  "next": {
+    "title": "08 · ON vs USING",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/on-using-natural"
+  }
+}

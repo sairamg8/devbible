@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-2-operators/loops",
+  "title": "05 · Loops",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-2-operators/05-loops.md",
+  "sourceDirName": "javascript/pages/phase-2-operators",
+  "slug": "/javascript/pages/phase-2-operators/loops",
+  "permalink": "/devbible/docs/javascript/pages/phase-2-operators/loops",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "05 · Loops",
+    "sidebar_label": "05 · Loops",
+    "sidebar_position": 5
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "04 · Optional chaining",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/optional-chaining"
+  },
+  "next": {
+    "title": "06 · Spread and rest",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/spread-and-rest"
+  }
+}

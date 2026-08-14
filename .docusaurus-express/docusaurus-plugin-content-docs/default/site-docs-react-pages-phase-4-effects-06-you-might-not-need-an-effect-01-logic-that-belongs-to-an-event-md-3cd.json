@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/you-might-not-need-an-effect/logic-that-belongs-to-an-event",
+  "title": "Logic that belongs to an event",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-4-effects/06-you-might-not-need-an-effect/01-logic-that-belongs-to-an-event.md",
+  "sourceDirName": "react/pages/phase-4-effects/06-you-might-not-need-an-effect",
+  "slug": "/react/pages/phase-4-effects/you-might-not-need-an-effect/logic-that-belongs-to-an-event",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/logic-that-belongs-to-an-event",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Logic that belongs to an event",
+    "sidebar_label": "01 · Logic that belongs to an event",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/"
+  },
+  "next": {
+    "title": "02 · Chains of effects",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/chains-of-effects"
+  }
+}

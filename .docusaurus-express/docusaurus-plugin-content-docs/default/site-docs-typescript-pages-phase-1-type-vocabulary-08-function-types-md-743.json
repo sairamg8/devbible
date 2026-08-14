@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/function-types",
+  "title": "Function types",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/08-function-types.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/function-types",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/function-types",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Function types",
+    "sidebar_label": "08 · Function types",
+    "sidebar_position": 8
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "07 · type vs interface",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/type-vs-interface"
+  },
+  "next": {
+    "title": "09 · Structural typing",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/structural-typing"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/element-manipulation",
+  "title": "cloneElement, Children.map and isValidElement",
+  "description": "Know",
+  "source": "@site/docs/react/pages/phase-2-components/16-element-manipulation.md",
+  "sourceDirName": "react/pages/phase-2-components",
+  "slug": "/react/pages/phase-2-components/element-manipulation",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/element-manipulation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "cloneElement, Children.map and isValidElement",
+    "sidebar_label": "16 · Element manipulation",
+    "sidebar_position": 16
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "15 · PureComponent",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/purecomponent"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/"
+  }
+}

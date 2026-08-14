@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/error-middleware/README",
+  "title": "Four-arg error middleware",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/01-error-middleware/README.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors/01-error-middleware",
+  "slug": "/expressjs/pages/phase-5-errors/error-middleware/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Four-arg error middleware",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/"
+  },
+  "next": {
+    "title": "01 · Arity and placement",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/arity-and-placement"
+  }
+}

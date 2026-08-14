@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-0-how-git-stores-things/loose-objects-and-packfiles",
+  "title": "Loose objects, packfiles and delta compression",
+  "description": "Understand",
+  "source": "@site/docs/git/pages/phase-0-how-git-stores-things/11-loose-objects-and-packfiles.md",
+  "sourceDirName": "git/pages/phase-0-how-git-stores-things",
+  "slug": "/git/pages/phase-0-how-git-stores-things/loose-objects-and-packfiles",
+  "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/loose-objects-and-packfiles",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Loose objects, packfiles and delta compression",
+    "sidebar_label": "11 · Packfiles",
+    "sidebar_position": 11
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "10 · Identity and setup",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/identity-setup"
+  },
+  "next": {
+    "title": "12 · What Git is not",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/what-git-is-not"
+  }
+}

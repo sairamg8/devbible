@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-1-routing/params-and-query/shape-and-trust",
+  "title": "Shape and trust",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-1-routing/02-params-and-query/03-shape-and-trust.md",
+  "sourceDirName": "expressjs/pages/phase-1-routing/02-params-and-query",
+  "slug": "/expressjs/pages/phase-1-routing/params-and-query/shape-and-trust",
+  "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/params-and-query/shape-and-trust",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Shape and trust",
+    "sidebar_label": "03 · Shape and trust",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · The query parser",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/params-and-query/the-query-parser"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-1-routing/router-composition/"
+  }
+}

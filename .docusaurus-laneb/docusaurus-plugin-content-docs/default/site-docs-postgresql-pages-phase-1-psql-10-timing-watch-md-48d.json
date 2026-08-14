@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/timing-watch",
+  "title": "\\timing and \\watch",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/10-timing-watch.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/timing-watch",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/timing-watch",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "\\timing and \\watch",
+    "sidebar_label": "10 · \\timing and \\watch",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · \\copy vs COPY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/copy"
+  },
+  "next": {
+    "title": "11 · \\i and \\ir",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/include-files"
+  }
+}

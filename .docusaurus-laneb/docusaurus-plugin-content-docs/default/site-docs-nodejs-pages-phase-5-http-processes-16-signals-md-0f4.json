@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/signals",
+  "title": "Signals",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/16-signals.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/signals",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/signals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Signals",
+    "sidebar_label": "16 · Signals",
+    "sidebar_position": 16
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "15 · The process object",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/process"
+  },
+  "next": {
+    "title": "17 · Graceful shutdown",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/graceful-shutdown"
+  }
+}

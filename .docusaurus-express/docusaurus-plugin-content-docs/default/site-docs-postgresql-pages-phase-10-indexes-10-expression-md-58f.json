@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/expression",
+  "title": "Expression indexes",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/10-expression.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/expression",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/expression",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Expression indexes",
+    "sidebar_label": "10 · Expression indexes",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · Partial indexes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/partial"
+  },
+  "next": {
+    "title": "11 · GIN and trigrams",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/gin-trgm"
+  }
+}

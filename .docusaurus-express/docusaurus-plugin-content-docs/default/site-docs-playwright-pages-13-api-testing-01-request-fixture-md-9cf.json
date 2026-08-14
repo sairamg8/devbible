@@ -1,0 +1,28 @@
+{
+  "id": "playwright/pages/api-testing/request-fixture",
+  "title": "API Testing: `APIRequestContext` & Combining API Setup With UI Verification",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/playwright/pages/13-api-testing/01-request-fixture.md",
+  "sourceDirName": "playwright/pages/13-api-testing",
+  "slug": "/playwright/pages/api-testing/request-fixture",
+  "permalink": "/devbible/docs/playwright/pages/api-testing/request-fixture",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "API Testing: `APIRequestContext` & Combining API Setup With UI Verification",
+    "sidebar_label": "API Testing",
+    "sidebar_position": 1
+  },
+  "sidebar": "playwrightSidebar",
+  "previous": {
+    "title": "Component Testing",
+    "permalink": "/devbible/docs/playwright/pages/component-testing/experimental-ct-runner"
+  },
+  "next": {
+    "title": "CI Integration",
+    "permalink": "/devbible/docs/playwright/pages/ci-integration/playwright-config"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "vite/pages/env-variables-and-modes/environment-system",
+  "title": "Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/07-env-variables-and-modes/01-environment-system.md",
+  "sourceDirName": "vite/pages/07-env-variables-and-modes",
+  "slug": "/vite/pages/env-variables-and-modes/environment-system",
+  "permalink": "/devbible/docs/vite/pages/env-variables-and-modes/environment-system",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`",
+    "sidebar_label": "Env Variables & Modes",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Asset Handling",
+    "permalink": "/devbible/docs/vite/pages/asset-handling/static-asset-imports"
+  },
+  "next": {
+    "title": "Plugin System",
+    "permalink": "/devbible/docs/vite/pages/plugin-system/plugin-api"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/create-app",
+  "title": "App factory createApp",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/01-create-app.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory",
+  "slug": "/expressjs/pages/phase-10-app-factory/create-app",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "App factory createApp",
+    "sidebar_label": "01 · createApp",
+    "sidebar_position": 1
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/"
+  },
+  "next": {
+    "title": "02 · Request id",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/request-id"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/inner-join/matching-pairs",
+  "title": "One row per matching pair",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/01-inner-join/01-matching-pairs.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins/01-inner-join",
+  "slug": "/postgresql/pages/phase-5-joins/inner-join/matching-pairs",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/inner-join/matching-pairs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "One row per matching pair",
+    "sidebar_label": "01 · Matching pairs",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/inner-join/"
+  },
+  "next": {
+    "title": "02 · Fan-out",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/inner-join/fan-out-and-aggregates"
+  }
+}

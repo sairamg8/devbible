@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/safe-dynamic-where/README",
+  "title": "Safe dynamic WHERE",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/03-safe-dynamic-where/README.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/03-safe-dynamic-where",
+  "slug": "/postgresql/pages/phase-9-api-crud/safe-dynamic-where/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Safe dynamic WHERE",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · list endpoint",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/list-endpoint"
+  },
+  "next": {
+    "title": "01 · Predicates and params",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/safe-dynamic-where/predicates-and-params"
+  }
+}

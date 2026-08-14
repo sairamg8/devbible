@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-10-events/addeventlistener/options-and-removal",
+  "title": "02.1 · Options and removal",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-10-events/02-addeventlistener/01-options-and-removal.md",
+  "sourceDirName": "javascript/pages/phase-10-events/02-addeventlistener",
+  "slug": "/javascript/pages/phase-10-events/addeventlistener/options-and-removal",
+  "permalink": "/devbible/docs/javascript/pages/phase-10-events/addeventlistener/options-and-removal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · Options and removal",
+    "sidebar_label": "01 · Options and removal",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-10-events/addeventlistener/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-10-events/the-event-object/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-8-concurrent-suspense/usedeferredvalue",
+  "title": "useDeferredValue",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-8-concurrent-suspense/08-usedeferredvalue.md",
+  "sourceDirName": "react/pages/phase-8-concurrent-suspense",
+  "slug": "/react/pages/phase-8-concurrent-suspense/usedeferredvalue",
+  "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/usedeferredvalue",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "useDeferredValue",
+    "sidebar_label": "08 · useDeferredValue",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · Urgent vs transition updates",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/urgent-vs-transition"
+  },
+  "next": {
+    "title": "09 · Async transitions",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/async-transitions"
+  }
+}

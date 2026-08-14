@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/cursors",
+  "title": "pg-cursor streaming",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/15-cursors.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/cursors",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/cursors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "pg-cursor streaming",
+    "sidebar_label": "15 · Cursors",
+    "sidebar_position": 15
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "14 · LISTEN/NOTIFY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/listen-notify"
+  },
+  "next": {
+    "title": "16 · pg vs postgres.js",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/postgres-js"
+  }
+}

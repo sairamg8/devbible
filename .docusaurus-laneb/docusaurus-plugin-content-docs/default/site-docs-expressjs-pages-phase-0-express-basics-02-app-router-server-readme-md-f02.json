@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/app-router-server/README",
+  "title": "app, Router, and http.Server",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/02-app-router-server/README.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/02-app-router-server",
+  "slug": "/expressjs/pages/phase-0-express-basics/app-router-server/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "app, Router, and http.Server",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Where Express stops",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/the-boundary"
+  },
+  "next": {
+    "title": "01 · The three objects",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/app-router-server/the-three-objects"
+  }
+}

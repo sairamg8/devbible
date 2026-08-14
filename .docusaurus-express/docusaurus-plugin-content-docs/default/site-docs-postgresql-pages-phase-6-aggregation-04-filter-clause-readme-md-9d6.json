@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/filter-clause/README",
+  "title": "FILTER (WHERE ...)",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/04-filter-clause/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/04-filter-clause",
+  "slug": "/postgresql/pages/phase-6-aggregation/filter-clause/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "FILTER (WHERE ...)",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · What HAVING costs",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/having/what-having-costs"
+  },
+  "next": {
+    "title": "01 · Conditional aggregation",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/conditional-aggregation"
+  }
+}

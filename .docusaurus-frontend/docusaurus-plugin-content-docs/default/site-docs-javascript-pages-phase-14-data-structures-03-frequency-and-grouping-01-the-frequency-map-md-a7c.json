@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/frequency-and-grouping/the-frequency-map",
+  "title": "03.1 · The frequency map",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/03-frequency-and-grouping/01-the-frequency-map.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures/03-frequency-and-grouping",
+  "slug": "/javascript/pages/phase-14-data-structures/frequency-and-grouping/the-frequency-map",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/frequency-and-grouping/the-frequency-map",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "03.1 · The frequency map",
+    "sidebar_label": "01 · The frequency map",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/frequency-and-grouping/"
+  },
+  "next": {
+    "title": "02 · Grouping built-ins",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/frequency-and-grouping/grouping-built-ins"
+  }
+}

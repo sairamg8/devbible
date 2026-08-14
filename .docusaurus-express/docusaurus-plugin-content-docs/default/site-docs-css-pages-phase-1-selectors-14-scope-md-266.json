@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/scope",
+  "title": "@scope",
+  "description": "Know",
+  "source": "@site/docs/css/pages/phase-1-selectors/14-scope.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/scope",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/scope",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "@scope",
+    "sidebar_label": "14 · @scope",
+    "sidebar_position": 14
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "13 · Styling hooks",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/styling-hooks"
+  },
+  "next": {
+    "title": "15 · Selector performance",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/selector-performance"
+  }
+}

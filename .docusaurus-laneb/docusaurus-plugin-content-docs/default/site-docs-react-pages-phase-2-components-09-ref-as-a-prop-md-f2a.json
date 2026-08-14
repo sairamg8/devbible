@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/ref-as-a-prop",
+  "title": "ref as a prop (React 19)",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-2-components/09-ref-as-a-prop.md",
+  "sourceDirName": "react/pages/phase-2-components",
+  "slug": "/react/pages/phase-2-components/ref-as-a-prop",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/ref-as-a-prop",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "ref as a prop (React 19)",
+    "sidebar_label": "09 · ref as a prop",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · Children patterns",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/children-patterns"
+  },
+  "next": {
+    "title": "10 · Component boundaries",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/component-boundaries"
+  }
+}

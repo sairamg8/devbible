@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/updating-state-during-render",
+  "title": "Updating state during render",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-3-state/16-updating-state-during-render.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/updating-state-during-render",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/updating-state-during-render",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Updating state during render",
+    "sidebar_label": "16 · Updating state during render",
+    "sidebar_position": 16
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "15 · Preserving and resetting",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/preserving-and-resetting"
+  },
+  "next": {
+    "title": "17 · Infinite render loops",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/infinite-render-loops"
+  }
+}

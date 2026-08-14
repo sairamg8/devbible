@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/bloat-reindex",
+  "title": "Index bloat and REINDEX",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/17-bloat-reindex.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/bloat-reindex",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/bloat-reindex",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {
+    "title": "Index bloat and REINDEX",
+    "sidebar_label": "17 · Bloat and REINDEX",
+    "sidebar_position": 17
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "16 · Statistics",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/statistics"
+  },
+  "next": {
+    "title": "18 · FK indexes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/fk-indexes"
+  }
+}

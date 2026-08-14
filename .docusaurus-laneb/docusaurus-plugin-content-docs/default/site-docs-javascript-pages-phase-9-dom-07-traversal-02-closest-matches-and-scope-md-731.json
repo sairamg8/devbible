@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/traversal/closest-matches-and-scope",
+  "title": "02 · closest, matches and :scope",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-9-dom/07-traversal/02-closest-matches-and-scope.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/07-traversal",
+  "slug": "/javascript/pages/phase-9-dom/traversal/closest-matches-and-scope",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/traversal/closest-matches-and-scope",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "02 · closest, matches and :scope",
+    "sidebar_label": "02 · closest, matches and :scope",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The two families",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/traversal/the-two-families"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-10-events/"
+  }
+}

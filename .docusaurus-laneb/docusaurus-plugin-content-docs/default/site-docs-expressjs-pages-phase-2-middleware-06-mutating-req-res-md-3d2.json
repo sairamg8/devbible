@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/mutating-req-res",
+  "title": "Mutating req and res",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/06-mutating-req-res.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware",
+  "slug": "/expressjs/pages/phase-2-middleware/mutating-req-res",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/mutating-req-res",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Mutating req and res",
+    "sidebar_label": "06 · Mutating req/res",
+    "sidebar_position": 6
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "05 · First and last",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/first-and-last"
+  },
+  "next": {
+    "title": "07 · Built-in · third-party",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/builtin-and-third-party"
+  }
+}

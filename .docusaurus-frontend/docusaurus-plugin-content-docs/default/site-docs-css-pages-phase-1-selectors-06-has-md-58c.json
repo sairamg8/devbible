@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/has",
+  "title": ":has() — the parent selector",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-1-selectors/06-has.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/has",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/has",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": ":has() — the parent selector",
+    "sidebar_label": "06 · :has()",
+    "sidebar_position": 6
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "05 · :is() and :where()",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/is-and-where"
+  },
+  "next": {
+    "title": "07 · Structural pseudo-classes",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/structural-pseudo-classes"
+  }
+}

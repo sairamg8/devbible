@@ -1,0 +1,28 @@
+{
+  "id": "jest-rtl/pages/README",
+  "title": "Jest & RTL — Explanations",
+  "description": "The 16 imported pages for Jest & RTL, in their original section order.",
+  "source": "@site/docs/jest-rtl/pages/README.md",
+  "sourceDirName": "jest-rtl/pages",
+  "slug": "/jest-rtl/pages/",
+  "permalink": "/devbible/docs/jest-rtl/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Jest & RTL — Explanations",
+    "sidebar_label": "Explanations",
+    "sidebar_position": 0
+  },
+  "sidebar": "jestRtlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/jest-rtl/"
+  },
+  "next": {
+    "title": "Jest Core Concepts",
+    "permalink": "/devbible/docs/jest-rtl/pages/jest-core-concepts/test-structure"
+  }
+}

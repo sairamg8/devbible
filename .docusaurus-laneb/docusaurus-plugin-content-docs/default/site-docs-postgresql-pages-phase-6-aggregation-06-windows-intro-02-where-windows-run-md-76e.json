@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/windows-intro/where-windows-run",
+  "title": "Where windows run",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/06-windows-intro/02-where-windows-run.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/06-windows-intro",
+  "slug": "/postgresql/pages/phase-6-aggregation/windows-intro/where-windows-run",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/where-windows-run",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Where windows run",
+    "sidebar_label": "02 · Where windows run",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · OVER keeps the rows",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/over-vs-group-by"
+  },
+  "next": {
+    "title": "03 · What windows cost",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/windows-intro/what-windows-cost"
+  }
+}

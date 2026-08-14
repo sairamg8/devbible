@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/this-in-methods/README",
+  "title": "07 · `this` inside methods, and losing it",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/07-this-in-methods/README.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/07-this-in-methods",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/this-in-methods/",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "07 · `this` inside methods, and losing it",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Private elements",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/class/private-elements"
+  },
+  "next": {
+    "title": "01 · How a method loses this",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/how-methods-lose-this"
+  }
+}

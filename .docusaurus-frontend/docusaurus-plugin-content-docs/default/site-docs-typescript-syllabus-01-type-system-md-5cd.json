@@ -1,0 +1,28 @@
+{
+  "id": "typescript/syllabus/type-system",
+  "title": "Part 1 — The type system",
+  "description": "Phases 0–3 · 57 topics · 27 Master",
+  "source": "@site/docs/typescript/syllabus/01-type-system.md",
+  "sourceDirName": "typescript/syllabus",
+  "slug": "/typescript/syllabus/type-system",
+  "permalink": "/devbible/docs/typescript/syllabus/type-system",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Part 1 — The type system",
+    "sidebar_label": "1 · The type system",
+    "sidebar_position": 1
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/typescript/"
+  },
+  "next": {
+    "title": "2 · Types at scale",
+    "permalink": "/devbible/docs/typescript/syllabus/types-at-scale"
+  }
+}

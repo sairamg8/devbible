@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-11-deployment/cicd",
+  "title": "CI/CD — Node version matrix, caches, artifacts",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-11-deployment/08-cicd.md",
+  "sourceDirName": "nodejs/pages/phase-11-deployment",
+  "slug": "/nodejs/pages/phase-11-deployment/cicd",
+  "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/cicd",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "CI/CD — Node version matrix, caches, artifacts",
+    "sidebar_label": "08 · CI/CD",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · Zero-downtime deploys",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/zero-downtime-deploys"
+  },
+  "next": {
+    "title": "09 · Image size and hardening",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/image-size-hardening"
+  }
+}

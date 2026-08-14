@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/operational-vs-programmer",
+  "title": "Operational vs programmer errors",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/05-operational-vs-programmer.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors",
+  "slug": "/expressjs/pages/phase-5-errors/operational-vs-programmer",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/operational-vs-programmer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Operational vs programmer errors",
+    "sidebar_label": "05 · Error kinds",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · HTTP mapping",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/mapping-to-http"
+  },
+  "next": {
+    "title": "06 · 404 · process",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/not-found-and-process"
+  }
+}

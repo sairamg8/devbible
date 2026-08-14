@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/request-bodies",
+  "title": "Request bodies are streams",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/02-request-bodies.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/request-bodies",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/request-bodies",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Request bodies are streams",
+    "sidebar_label": "02 · Request bodies",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · The HTTP server",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/http-server"
+  },
+  "next": {
+    "title": "03 · HTTP in practice",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/http-fundamentals"
+  }
+}

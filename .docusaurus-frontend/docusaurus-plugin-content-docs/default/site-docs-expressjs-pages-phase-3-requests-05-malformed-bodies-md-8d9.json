@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/malformed-bodies",
+  "title": "Malformed bodies",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/05-malformed-bodies.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests",
+  "slug": "/expressjs/pages/phase-3-requests/malformed-bodies",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/malformed-bodies",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Malformed bodies",
+    "sidebar_label": "05 · Malformed bodies",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Query parser",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/query-parser"
+  },
+  "next": {
+    "title": "06 · raw · text",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/raw-and-text"
+  }
+}

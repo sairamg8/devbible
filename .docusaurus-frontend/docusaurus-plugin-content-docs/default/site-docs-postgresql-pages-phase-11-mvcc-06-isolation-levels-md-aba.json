@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-11-mvcc/isolation-levels",
+  "title": "REPEATABLE READ and SERIALIZABLE",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-11-mvcc/06-isolation-levels.md",
+  "sourceDirName": "postgresql/pages/phase-11-mvcc",
+  "slug": "/postgresql/pages/phase-11-mvcc/isolation-levels",
+  "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/isolation-levels",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "REPEATABLE READ and SERIALIZABLE",
+    "sidebar_label": "06 · REPEATABLE READ SERIALIZABLE",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · MVCC snapshots",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/mvcc"
+  },
+  "next": {
+    "title": "07 · Row locks FOR UPDATE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/row-locks"
+  }
+}

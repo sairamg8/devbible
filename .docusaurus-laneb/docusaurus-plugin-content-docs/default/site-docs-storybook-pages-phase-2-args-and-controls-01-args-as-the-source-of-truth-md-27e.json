@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-2-args-and-controls/args-as-the-source-of-truth",
+  "title": "01 · Args as the source of truth",
+  "description": "Master",
+  "source": "@site/docs/storybook/pages/phase-2-args-and-controls/01-args-as-the-source-of-truth.md",
+  "sourceDirName": "storybook/pages/phase-2-args-and-controls",
+  "slug": "/storybook/pages/phase-2-args-and-controls/args-as-the-source-of-truth",
+  "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/args-as-the-source-of-truth",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01 · Args as the source of truth",
+    "sidebar_label": "01 · Args",
+    "sidebar_position": 1
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/"
+  },
+  "next": {
+    "title": "02 · argTypes",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/argtypes-and-inference"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "playwright/pages/debugging-tools/diagnostic-tooling",
+  "title": "Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/playwright/pages/10-debugging-tools/01-diagnostic-tooling.md",
+  "sourceDirName": "playwright/pages/10-debugging-tools",
+  "slug": "/playwright/pages/debugging-tools/diagnostic-tooling",
+  "permalink": "/devbible/docs/playwright/pages/debugging-tools/diagnostic-tooling",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode",
+    "sidebar_label": "Debugging Tools",
+    "sidebar_position": 1
+  },
+  "sidebar": "playwrightSidebar",
+  "previous": {
+    "title": "Visual & Screenshot Testing",
+    "permalink": "/devbible/docs/playwright/pages/visual-and-screenshot-testing/visual-regression"
+  },
+  "next": {
+    "title": "Parallelism & Sharding",
+    "permalink": "/devbible/docs/playwright/pages/parallelism-and-sharding/scaling-test-runs"
+  }
+}

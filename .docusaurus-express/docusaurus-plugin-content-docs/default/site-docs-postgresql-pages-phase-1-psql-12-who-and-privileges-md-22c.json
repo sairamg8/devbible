@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/who-and-privileges",
+  "title": "\\conninfo, \\du and \\dp — who am I, what can I touch",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/12-who-and-privileges.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/who-and-privileges",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/who-and-privileges",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "\\conninfo, \\du and \\dp — who am I, what can I touch",
+    "sidebar_label": "12 · Who and privileges",
+    "sidebar_position": 12
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "11 · \\i and \\ir",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/include-files"
+  },
+  "next": {
+    "title": "13 · .psqlrc",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/psqlrc"
+  }
+}

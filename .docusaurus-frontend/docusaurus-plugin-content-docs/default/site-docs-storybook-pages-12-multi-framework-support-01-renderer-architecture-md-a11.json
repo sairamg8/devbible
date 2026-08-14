@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/multi-framework-support/renderer-architecture",
+  "title": "Multi-Framework Support: Framework-Agnostic CSF & Builder Options",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/storybook/pages/12-multi-framework-support/01-renderer-architecture.md",
+  "sourceDirName": "storybook/pages/12-multi-framework-support",
+  "slug": "/storybook/pages/multi-framework-support/renderer-architecture",
+  "permalink": "/devbible/docs/storybook/pages/multi-framework-support/renderer-architecture",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Multi-Framework Support: Framework-Agnostic CSF & Builder Options",
+    "sidebar_label": "Multi-Framework Support",
+    "sidebar_position": 1
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Testing Integration",
+    "permalink": "/devbible/docs/storybook/pages/testing-integration/test-runner"
+  },
+  "next": {
+    "title": "Build & Configuration",
+    "permalink": "/devbible/docs/storybook/pages/build-and-configuration/storybook-main"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/child-process",
+  "title": "child_process",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/19-child-process.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/child-process",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/child-process",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "title": "child_process",
+    "sidebar_label": "19 · child_process",
+    "sidebar_position": 19
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "18 · Crash handlers",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/crash-handlers"
+  },
+  "next": {
+    "title": "20 · Shell injection",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/shell-injection"
+  }
+}

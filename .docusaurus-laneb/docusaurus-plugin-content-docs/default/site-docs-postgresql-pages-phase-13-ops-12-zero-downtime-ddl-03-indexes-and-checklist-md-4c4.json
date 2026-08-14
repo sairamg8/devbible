@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/zero-downtime-ddl/indexes-and-checklist",
+  "title": "12.3 · Indexes, renames, and the checklist",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/12-zero-downtime-ddl/03-indexes-and-checklist.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/12-zero-downtime-ddl",
+  "slug": "/postgresql/pages/phase-13-ops/zero-downtime-ddl/indexes-and-checklist",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/indexes-and-checklist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "12.3 · Indexes, renames, and the checklist",
+    "sidebar_label": "03 · Indexes & the checklist",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Expand & contract",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/zero-downtime-ddl/expand-and-contract"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/managed-postgres/"
+  }
+}

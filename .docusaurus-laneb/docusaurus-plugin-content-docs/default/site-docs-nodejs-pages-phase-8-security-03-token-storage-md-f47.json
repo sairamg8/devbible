@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/token-storage",
+  "title": "Where to store tokens — cookies vs localStorage",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-8-security/03-token-storage.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/token-storage",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/token-storage",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Where to store tokens — cookies vs localStorage",
+    "sidebar_label": "03 · Where to store tokens",
+    "sidebar_position": 3
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "02 · Sessions vs JWT",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/sessions-vs-jwt"
+  },
+  "next": {
+    "title": "04 · Authz vs authn",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/authentication-vs-authorization"
+  }
+}

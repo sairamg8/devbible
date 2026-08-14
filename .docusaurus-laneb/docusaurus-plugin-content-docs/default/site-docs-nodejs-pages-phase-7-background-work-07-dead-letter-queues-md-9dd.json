@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/dead-letter-queues",
+  "title": "Dead-letter queues — where poison messages go",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/07-dead-letter-queues.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/dead-letter-queues",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/dead-letter-queues",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Dead-letter queues — where poison messages go",
+    "sidebar_label": "07 · Dead-letter queues",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · The transactional outbox",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/transactional-outbox"
+  },
+  "next": {
+    "title": "08 · Scheduled and recurring jobs",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/scheduled-jobs"
+  }
+}

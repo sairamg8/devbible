@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-7-positioning/z-index-in-practice",
+  "title": "z-index in practice",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-7-positioning/02-z-index-in-practice.md",
+  "sourceDirName": "css/pages/phase-7-positioning",
+  "slug": "/css/pages/phase-7-positioning/z-index-in-practice",
+  "permalink": "/devbible/docs/css/pages/phase-7-positioning/z-index-in-practice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "z-index in practice",
+    "sidebar_label": "02 · z-index in practice",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · Stacking contexts",
+    "permalink": "/devbible/docs/css/pages/phase-7-positioning/stacking-contexts"
+  },
+  "next": {
+    "title": "03 · position: sticky",
+    "permalink": "/devbible/docs/css/pages/phase-7-positioning/position-sticky"
+  }
+}

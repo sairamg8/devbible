@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/http-server",
+  "title": "node:http — the server",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/01-http-server.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/http-server",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/http-server",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "node:http — the server",
+    "sidebar_label": "01 · The HTTP server",
+    "sidebar_position": 1
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/"
+  },
+  "next": {
+    "title": "02 · Request bodies",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/request-bodies"
+  }
+}

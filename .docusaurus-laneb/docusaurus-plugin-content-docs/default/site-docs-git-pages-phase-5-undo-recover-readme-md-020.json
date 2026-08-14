@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-5-undo-recover/README",
+  "title": "Phase 5 — Undo, recover and rewrite",
+  "description": "Target: git 2.55.0. This phase is documentation-validated, not",
+  "source": "@site/docs/git/pages/phase-5-undo-recover/README.md",
+  "sourceDirName": "git/pages/phase-5-undo-recover",
+  "slug": "/git/pages/phase-5-undo-recover/",
+  "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 5 — Undo, recover and rewrite",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "08 · Transports and credentials",
+    "permalink": "/devbible/docs/git/pages/phase-4-remotes/transports-and-credentials"
+  },
+  "next": {
+    "title": "01 · The decision table",
+    "permalink": "/devbible/docs/git/pages/phase-5-undo-recover/the-undo-decision-table"
+  }
+}

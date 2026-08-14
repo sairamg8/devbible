@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-2-branching-merging/git-rebase",
+  "title": "`git rebase` — replaying commits onto a new base",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-2-branching-merging/05-git-rebase.md",
+  "sourceDirName": "git/pages/phase-2-branching-merging",
+  "slug": "/git/pages/phase-2-branching-merging/git-rebase",
+  "permalink": "/devbible/docs/git/pages/phase-2-branching-merging/git-rebase",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "`git rebase` — replaying commits onto a new base",
+    "sidebar_label": "05 · git rebase",
+    "sidebar_position": 5
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "04 · Resolving conflicts",
+    "permalink": "/devbible/docs/git/pages/phase-2-branching-merging/resolving-conflicts"
+  },
+  "next": {
+    "title": "06 · Rebase vs merge",
+    "permalink": "/devbible/docs/git/pages/phase-2-branching-merging/rebase-vs-merge"
+  }
+}

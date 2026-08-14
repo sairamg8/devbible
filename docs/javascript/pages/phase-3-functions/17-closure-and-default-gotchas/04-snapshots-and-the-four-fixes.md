@@ -244,4 +244,4 @@ appears to run twice, count listeners in the Event Listeners pane.
 
 ---
 
-← [17.3 · Which binding did you get?](./03-which-binding-did-you-get.md) · [Topic index](./README.md) · Next: **17.5 · The stale closure, framework-scale** *(not written yet)*
+← [17.3 · Which binding did you get?](./03-which-binding-did-you-get.md) · [Topic index](./README.md) · [Next → 17.5 · The stale closure, framework-scale](./05-the-stale-closure.md)

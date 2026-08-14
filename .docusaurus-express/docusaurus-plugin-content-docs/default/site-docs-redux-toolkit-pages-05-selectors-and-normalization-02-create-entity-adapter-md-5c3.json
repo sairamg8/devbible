@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/selectors-and-normalization/create-entity-adapter",
+  "title": "`createEntityAdapter`: Normalized State & Generated CRUD",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/05-selectors-and-normalization/02-create-entity-adapter.md",
+  "sourceDirName": "redux-toolkit/pages/05-selectors-and-normalization",
+  "slug": "/redux-toolkit/pages/selectors-and-normalization/create-entity-adapter",
+  "permalink": "/devbible/docs/redux-toolkit/pages/selectors-and-normalization/create-entity-adapter",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "`createEntityAdapter`: Normalized State & Generated CRUD",
+    "sidebar_label": "`createEntityAdapter`",
+    "sidebar_position": 2
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "`createSelector`: Memoized Derived State",
+    "permalink": "/devbible/docs/redux-toolkit/pages/selectors-and-normalization/create-selector-and-reselect"
+  },
+  "next": {
+    "title": "Middleware Stack & `listenerMiddleware`",
+    "permalink": "/devbible/docs/redux-toolkit/pages/middleware/default-middleware-and-listener-middleware"
+  }
+}

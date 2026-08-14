@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/first-and-last",
+  "title": "First and last",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/05-first-and-last.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware",
+  "slug": "/expressjs/pages/phase-2-middleware/first-and-last",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/first-and-last",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "First and last",
+    "sidebar_label": "05 · First and last",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Factories",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-factories"
+  },
+  "next": {
+    "title": "06 · Mutating req/res",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/mutating-req-res"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/audit-logging",
+  "title": "Audit logging and tamper-evidence",
+  "description": "When Needed",
+  "source": "@site/docs/nodejs/pages/phase-8-security/27-audit-logging.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/audit-logging",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/audit-logging",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 27,
+  "frontMatter": {
+    "title": "Audit logging and tamper-evidence",
+    "sidebar_label": "27 · Audit logging",
+    "sidebar_position": 27
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "26 · Encryption and keys",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/encryption-and-keys"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/"
+  }
+}

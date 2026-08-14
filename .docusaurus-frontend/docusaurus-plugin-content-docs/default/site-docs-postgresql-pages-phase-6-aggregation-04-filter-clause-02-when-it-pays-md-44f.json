@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/filter-clause/when-it-pays",
+  "title": "When it pays",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/04-filter-clause/02-when-it-pays.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/04-filter-clause",
+  "slug": "/postgresql/pages/phase-6-aggregation/filter-clause/when-it-pays",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/when-it-pays",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "When it pays",
+    "sidebar_label": "02 · When it pays",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Conditional aggregation",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/filter-clause/conditional-aggregation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/json-agg/"
+  }
+}

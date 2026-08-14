@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/on-conflict",
+  "title": "INSERT ... ON CONFLICT",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/06-on-conflict.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/on-conflict",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/on-conflict",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "INSERT ... ON CONFLICT",
+    "sidebar_label": "06 · ON CONFLICT",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · RETURNING",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/returning"
+  },
+  "next": {
+    "title": "07 · UPDATE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/update"
+  }
+}

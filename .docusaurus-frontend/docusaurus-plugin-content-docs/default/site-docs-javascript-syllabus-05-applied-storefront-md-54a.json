@@ -1,0 +1,28 @@
+{
+  "id": "javascript/syllabus/applied-storefront",
+  "title": "Part 5 — Applied: the storefront",
+  "description": "Phase 18 · 18 topics · 7 Master",
+  "source": "@site/docs/javascript/syllabus/05-applied-storefront.md",
+  "sourceDirName": "javascript/syllabus",
+  "slug": "/javascript/syllabus/applied-storefront",
+  "permalink": "/devbible/docs/javascript/syllabus/applied-storefront",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Part 5 — Applied: the storefront",
+    "sidebar_label": "5 · Applied storefront",
+    "sidebar_position": 5
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "4 · DSA & machine coding",
+    "permalink": "/devbible/docs/javascript/syllabus/dsa-and-machine-coding"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/"
+  }
+}

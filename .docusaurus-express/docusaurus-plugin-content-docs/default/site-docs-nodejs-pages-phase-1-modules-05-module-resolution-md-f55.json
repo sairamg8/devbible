@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/module-resolution",
+  "title": "Module resolution",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/05-module-resolution.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/module-resolution",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/module-resolution",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Module resolution",
+    "sidebar_label": "05 · Module resolution",
+    "sidebar_position": 5
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "04 · CJS ↔ ESM interop",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/cjs-esm-interop"
+  },
+  "next": {
+    "title": "06 · Circular dependencies",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/circular-dependencies"
+  }
+}

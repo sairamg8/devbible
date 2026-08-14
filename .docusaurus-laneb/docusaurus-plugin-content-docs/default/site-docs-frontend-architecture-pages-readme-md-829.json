@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/README",
+  "title": "Frontend Architecture — Explanations",
+  "description": "The 15 imported pages for Frontend Architecture, in their original section order.",
+  "source": "@site/docs/frontend-architecture/pages/README.md",
+  "sourceDirName": "frontend-architecture/pages",
+  "slug": "/frontend-architecture/pages/",
+  "permalink": "/devbible/docs/frontend-architecture/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Frontend Architecture — Explanations",
+    "sidebar_label": "Explanations",
+    "sidebar_position": 0
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/frontend-architecture/"
+  },
+  "next": {
+    "title": "Project Structure",
+    "permalink": "/devbible/docs/frontend-architecture/pages/project-structure-and-organization/folder-strategy"
+  }
+}

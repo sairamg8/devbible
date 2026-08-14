@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-3-decorators/the-story-context",
+  "title": "04 · The story context",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-3-decorators/04-the-story-context.md",
+  "sourceDirName": "storybook/pages/phase-3-decorators",
+  "slug": "/storybook/pages/phase-3-decorators/the-story-context",
+  "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/the-story-context",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "04 · The story context",
+    "sidebar_label": "04 · The story context",
+    "sidebar_position": 4
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "03 · Providers",
+    "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/providers-in-decorators"
+  },
+  "next": {
+    "title": "05 · Loaders and beforeEach",
+    "permalink": "/devbible/docs/storybook/pages/phase-3-decorators/loaders-and-beforeeach"
+  }
+}

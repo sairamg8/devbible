@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/advanced-custom-tooling/custom-loaders-and-plugins",
+  "title": "Advanced Tooling: Writing Custom Loaders & Plugins",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/15-advanced-custom-tooling/01-custom-loaders-and-plugins.md",
+  "sourceDirName": "webpack/pages/15-advanced-custom-tooling",
+  "slug": "/webpack/pages/advanced-custom-tooling/custom-loaders-and-plugins",
+  "permalink": "/devbible/docs/webpack/pages/advanced-custom-tooling/custom-loaders-and-plugins",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Advanced Tooling: Writing Custom Loaders & Plugins",
+    "sidebar_label": "Advanced Tooling",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Performance Analysis",
+    "permalink": "/devbible/docs/webpack/pages/performance-analysis/diagnostics-and-bundle-analysis"
+  },
+  "next": {
+    "title": "Diagnosing and Shrinking a Bloated Product",
+    "permalink": "/devbible/docs/webpack/pages/real-world-workflows-and-recipes/diagnosing-a-bloated-bundle"
+  }
+}

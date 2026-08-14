@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/README",
+  "title": "Phase 6 — Rendering performance and the React Compiler",
+  "description": "Target: React 19.2.8, babel-plugin-react-compiler 1.0.0. No sandbox and",
+  "source": "@site/docs/react/pages/phase-6-performance/README.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 6 — Rendering performance and the React Compiler",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "16 · useDebugValue",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/usedebugvalue"
+  },
+  "next": {
+    "title": "01 · Why did this re-render?",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/why-did-this-re-render"
+  }
+}

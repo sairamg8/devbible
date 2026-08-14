@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-8-validation-authz/validation-factory/schemas-that-hold-up",
+  "title": "Schemas that hold up",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-8-validation-authz/02-validation-factory/03-schemas-that-hold-up.md",
+  "sourceDirName": "expressjs/pages/phase-8-validation-authz/02-validation-factory",
+  "slug": "/expressjs/pages/phase-8-validation-authz/validation-factory/schemas-that-hold-up",
+  "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validation-factory/schemas-that-hold-up",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Schemas that hold up",
+    "sidebar_label": "03 · Schemas that hold up",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Mounting and order",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/validation-factory/mounting-and-order"
+  },
+  "next": {
+    "title": "03 · Coercion traps",
+    "permalink": "/devbible/docs/expressjs/pages/phase-8-validation-authz/coercion-traps"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-4-flexbox/the-flex-sizing-algorithm/grow-and-shrink",
+  "title": "Stage two — growing and shrinking",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-4-flexbox/01-the-flex-sizing-algorithm/02-grow-and-shrink.md",
+  "sourceDirName": "css/pages/phase-4-flexbox/01-the-flex-sizing-algorithm",
+  "slug": "/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/grow-and-shrink",
+  "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/grow-and-shrink",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Stage two — growing and shrinking",
+    "sidebar_label": "02 · Grow and shrink",
+    "sidebar_position": 2
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · Base sizes",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/base-sizes"
+  },
+  "next": {
+    "title": "03 · The alignment stage",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/the-flex-sizing-algorithm/the-alignment-stage"
+  }
+}

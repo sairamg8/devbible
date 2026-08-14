@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/create-app/README",
+  "title": "App factory createApp",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/01-create-app/README.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory/01-create-app",
+  "slug": "/expressjs/pages/phase-10-app-factory/create-app/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "App factory createApp",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/"
+  },
+  "next": {
+    "title": "01 · A function of its dependencies",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/create-app/a-function-of-its-dependencies"
+  }
+}

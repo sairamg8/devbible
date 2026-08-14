@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/immutability-and-immer/immer-internals",
+  "title": "Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/08-immutability-and-immer/01-immer-internals.md",
+  "sourceDirName": "redux-toolkit/pages/08-immutability-and-immer",
+  "slug": "/redux-toolkit/pages/immutability-and-immer/immer-internals",
+  "permalink": "/devbible/docs/redux-toolkit/pages/immutability-and-immer/immer-internals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule",
+    "sidebar_label": "Immer Internals",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "React-Redux Hooks",
+    "permalink": "/devbible/docs/redux-toolkit/pages/react-redux-integration/hooks-api"
+  },
+  "next": {
+    "title": "TypeScript Integration",
+    "permalink": "/devbible/docs/redux-toolkit/pages/typescript-integration/type-inference-patterns"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/cors-client-side/README",
+  "title": "05 · CORS from the client side",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/05-cors-client-side/README.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/05-cors-client-side",
+  "slug": "/javascript/pages/phase-11-network-storage/cors-client-side/",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · CORS from the client side",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Encoding rules",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/url-and-searchparams/encoding-rules"
+  },
+  "next": {
+    "title": "01 · What the browser does",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/what-the-browser-is-doing"
+  }
+}

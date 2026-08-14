@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/set-ops",
+  "title": "UNION INTERSECT EXCEPT",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/11-set-ops.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/set-ops",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/set-ops",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "UNION INTERSECT EXCEPT",
+    "sidebar_label": "11 · Set ops",
+    "sidebar_position": 11
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "10 · LATERAL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/lateral"
+  },
+  "next": {
+    "title": "12 · Aliases",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/alias-discipline"
+  }
+}

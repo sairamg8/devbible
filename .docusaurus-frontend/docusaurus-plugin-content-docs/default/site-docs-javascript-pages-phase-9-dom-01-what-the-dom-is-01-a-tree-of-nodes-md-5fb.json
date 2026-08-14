@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/what-the-dom-is/a-tree-of-nodes",
+  "title": "01.1 · A tree of nodes",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-9-dom/01-what-the-dom-is/01-a-tree-of-nodes.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/01-what-the-dom-is",
+  "slug": "/javascript/pages/phase-9-dom/what-the-dom-is/a-tree-of-nodes",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/what-the-dom-is/a-tree-of-nodes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · A tree of nodes",
+    "sidebar_label": "01 · A tree of nodes",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/what-the-dom-is/"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/selecting-elements/"
+  }
+}

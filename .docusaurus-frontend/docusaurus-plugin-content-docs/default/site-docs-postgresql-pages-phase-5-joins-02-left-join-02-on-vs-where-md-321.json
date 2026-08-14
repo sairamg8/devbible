@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/left-join/on-vs-where",
+  "title": "ON vs WHERE",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/02-left-join/02-on-vs-where.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins/02-left-join",
+  "slug": "/postgresql/pages/phase-5-joins/left-join/on-vs-where",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/left-join/on-vs-where",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "ON vs WHERE",
+    "sidebar_label": "02 · ON vs WHERE",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · NULL extension",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/left-join/null-extension"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/semi-anti/"
+  }
+}

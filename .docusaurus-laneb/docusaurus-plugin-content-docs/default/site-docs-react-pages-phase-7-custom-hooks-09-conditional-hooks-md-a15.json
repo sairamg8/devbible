@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/conditional-hooks",
+  "title": "Conditional hooks and the correct restructure",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/09-conditional-hooks.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks",
+  "slug": "/react/pages/phase-7-custom-hooks/conditional-hooks",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/conditional-hooks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Conditional hooks and the correct restructure",
+    "sidebar_label": "09 · Conditional hooks",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · Not re-subscribing",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/hooks-that-wrap-effects/not-re-subscribing"
+  },
+  "next": {
+    "title": "10 · `use` breaks the rule",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/use-breaks-the-rule"
+  }
+}

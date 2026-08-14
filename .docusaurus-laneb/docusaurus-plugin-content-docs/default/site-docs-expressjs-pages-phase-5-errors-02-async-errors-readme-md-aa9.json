@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/async-errors/README",
+  "title": "Async errors on Express 5",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/02-async-errors/README.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors/02-async-errors",
+  "slug": "/expressjs/pages/phase-5-errors/async-errors/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/async-errors/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Async errors on Express 5",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · Designing the handler",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-middleware/designing-the-handler"
+  },
+  "next": {
+    "title": "01 · What is forwarded",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/async-errors/what-is-forwarded"
+  }
+}

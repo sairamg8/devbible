@@ -1,0 +1,28 @@
+{
+  "id": "playwright/pages/advanced-patterns/scalable-test-architecture",
+  "title": "Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/playwright/pages/15-advanced-patterns/01-scalable-test-architecture.md",
+  "sourceDirName": "playwright/pages/15-advanced-patterns",
+  "slug": "/playwright/pages/advanced-patterns/scalable-test-architecture",
+  "permalink": "/devbible/docs/playwright/pages/advanced-patterns/scalable-test-architecture",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging",
+    "sidebar_label": "Advanced Patterns",
+    "sidebar_position": 1
+  },
+  "sidebar": "playwrightSidebar",
+  "previous": {
+    "title": "CI Integration",
+    "permalink": "/devbible/docs/playwright/pages/ci-integration/playwright-config"
+  },
+  "next": {
+    "title": "Diagnosing a Test That's Flaky in CI But P",
+    "permalink": "/devbible/docs/playwright/pages/real-world-workflows-and-recipes/diagnosing-flaky-ci-tests"
+  }
+}

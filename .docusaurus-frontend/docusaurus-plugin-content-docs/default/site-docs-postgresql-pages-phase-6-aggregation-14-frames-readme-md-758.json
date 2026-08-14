@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/frames/README",
+  "title": "Window frames",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/14-frames/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/14-frames",
+  "slug": "/postgresql/pages/phase-6-aggregation/frames/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Window frames",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · mode, bool_and, hypothetical",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/ordered-set/mode-and-booleans"
+  },
+  "next": {
+    "title": "01 · ROWS vs RANGE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/frames/rows-vs-range"
+  }
+}

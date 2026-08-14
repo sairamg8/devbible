@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/intersection-types",
+  "title": "Intersection types",
+  "description": "Understand",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/11-intersection-types.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/intersection-types",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/intersection-types",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Intersection types",
+    "sidebar_label": "11 · Intersection types",
+    "sidebar_position": 11
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "10 · null and undefined",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/null-and-undefined"
+  },
+  "next": {
+    "title": "12 · Call and construct signatures",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/call-and-construct-signatures"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-0-how-react-runs/README",
+  "title": "Phase 0 — How React runs",
+  "description": "Target: React 19.2.8 and react-dom 19.2.8 — the latest dist-tag as of",
+  "source": "@site/docs/react/pages/phase-0-how-react-runs/README.md",
+  "sourceDirName": "react/pages/phase-0-how-react-runs",
+  "slug": "/react/pages/phase-0-how-react-runs/",
+  "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 0 — How React runs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/"
+  },
+  "next": {
+    "title": "01 · What React is",
+    "permalink": "/devbible/docs/react/pages/phase-0-how-react-runs/what-react-is"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/jsonb-operators/README",
+  "title": "jsonb operators",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/README.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables/01-jsonb-operators",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/jsonb-operators/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "jsonb operators",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/"
+  },
+  "next": {
+    "title": "01 · Accessors and paths",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/accessors-and-paths"
+  }
+}

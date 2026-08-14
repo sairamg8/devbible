@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-2-narrowing/instanceof-narrowing",
+  "title": "`instanceof` narrowing",
+  "description": "Understand",
+  "source": "@site/docs/typescript/pages/phase-2-narrowing/04-instanceof-narrowing.md",
+  "sourceDirName": "typescript/pages/phase-2-narrowing",
+  "slug": "/typescript/pages/phase-2-narrowing/instanceof-narrowing",
+  "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/instanceof-narrowing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "`instanceof` narrowing",
+    "sidebar_label": "04 · instanceof",
+    "sidebar_position": 4
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "03 · The in operator",
+    "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/in-operator-narrowing"
+  },
+  "next": {
+    "title": "05 · Discriminated unions",
+    "permalink": "/devbible/docs/typescript/pages/phase-2-narrowing/discriminated-unions"
+  }
+}

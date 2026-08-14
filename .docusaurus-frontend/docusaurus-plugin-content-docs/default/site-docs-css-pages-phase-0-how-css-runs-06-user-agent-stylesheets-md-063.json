@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/user-agent-stylesheets",
+  "title": "User-agent stylesheets",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/06-user-agent-stylesheets.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/user-agent-stylesheets",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/user-agent-stylesheets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "User-agent stylesheets",
+    "sidebar_label": "06 · User-agent stylesheets",
+    "sidebar_position": 6
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "05 · CSS fails silently",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/css-fails-silently"
+  },
+  "next": {
+    "title": "07 · Resets and normalisers",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/resets-and-normalisers"
+  }
+}

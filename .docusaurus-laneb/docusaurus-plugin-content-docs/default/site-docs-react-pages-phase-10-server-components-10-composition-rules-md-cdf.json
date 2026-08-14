@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/composition-rules",
+  "title": "Composition rules",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-10-server-components/10-composition-rules.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/composition-rules",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/composition-rules",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Composition rules",
+    "sidebar_label": "10 · Composition rules",
+    "sidebar_position": 10
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "09 · Calling Server Functions",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/calling-server-functions"
+  },
+  "next": {
+    "title": "11 · Where interactivity goes",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/where-interactivity-goes"
+  }
+}

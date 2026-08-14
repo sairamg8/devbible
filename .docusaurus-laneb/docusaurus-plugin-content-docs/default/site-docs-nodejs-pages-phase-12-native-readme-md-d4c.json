@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-12-native/README",
+  "title": "Phase 12 — Native and advanced",
+  "description": "Target runtime: Node 24 — the Active LTS as of August 2026.",
+  "source": "@site/docs/nodejs/pages/phase-12-native/README.md",
+  "sourceDirName": "nodejs/pages/phase-12-native",
+  "slug": "/nodejs/pages/phase-12-native/",
+  "permalink": "/devbible/docs/nodejs/pages/phase-12-native/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 12 — Native and advanced",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "14 · Serverless Node",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/serverless-node"
+  },
+  "next": {
+    "title": "01 · node:vm",
+    "permalink": "/devbible/docs/nodejs/pages/phase-12-native/node-vm"
+  }
+}

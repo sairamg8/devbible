@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/call-apply-bind/README",
+  "title": "05 · call, apply and bind",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/05-call-apply-bind/README.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/05-call-apply-bind",
+  "slug": "/javascript/pages/phase-3-functions/call-apply-bind/",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · call, apply and bind",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Syntax and when not to",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/arrow-functions-and-this/syntax-and-when-not-to"
+  },
+  "next": {
+    "title": "01 · The three methods",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/the-three-methods"
+  }
+}

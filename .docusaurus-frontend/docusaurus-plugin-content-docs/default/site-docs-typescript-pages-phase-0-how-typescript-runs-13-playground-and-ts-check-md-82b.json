@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/playground-and-ts-check",
+  "title": "The Playground and `// @ts-check`",
+  "description": "Know",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/13-playground-and-ts-check.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/playground-and-ts-check",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/playground-and-ts-check",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "The Playground and `// @ts-check`",
+    "sidebar_label": "13 · Playground and @ts-check",
+    "sidebar_position": 13
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "12 · Release cadence",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/release-cadence"
+  },
+  "next": {
+    "title": "Phase 1 · The type vocabulary",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/"
+  }
+}

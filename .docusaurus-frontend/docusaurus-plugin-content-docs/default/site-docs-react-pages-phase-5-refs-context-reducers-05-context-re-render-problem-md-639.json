@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/context-re-render-problem",
+  "title": "The context re-render problem",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/05-context-re-render-problem.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/context-re-render-problem",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/context-re-render-problem",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "The context re-render problem",
+    "sidebar_label": "05 · The context re-render problem",
+    "sidebar_position": 5
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "04 · createContext and useContext",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/createcontext-usecontext"
+  },
+  "next": {
+    "title": "06 · Ref callbacks",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/ref-callbacks"
+  }
+}

@@ -32,7 +32,7 @@ every render — plus which fix belongs to which symptom.
 | 2 | **[Merging, forwarding and identity](./02-merging-forwarding-and-identity.md)** | Spread vs `Object.assign` vs destructuring on an explicit `undefined`, pass-through parameters, a fresh object every call, and defaults that run code |
 | 3 | **[Which binding did you get?](./03-which-binding-did-you-get.md)** | Too few bindings versus too many, which loop constructs give a fresh one, and why `await` in a loop half-breaks it |
 | 4 | **[Snapshots and the four fixes](./04-snapshots-and-the-four-fixes.md)** | Registration-time copies, the counter that works, the four fixes and how to choose, and diagnosing one in ten seconds |
-| 5 | **The stale closure, framework-scale** *(not written yet)* | Why every render makes new closures, the interval that logs `0` forever, and choosing between an updater, a ref and a dependency list |
+| 5 | **[The stale closure, framework-scale](./05-the-stale-closure.md)** | Why every render makes new closures, the interval that logs `0` forever, and choosing between an updater, a ref and a dependency list |
 
 ## Phase gate
 

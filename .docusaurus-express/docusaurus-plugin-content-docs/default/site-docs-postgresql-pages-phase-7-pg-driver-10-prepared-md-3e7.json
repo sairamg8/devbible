@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/prepared",
+  "title": "Prepared statements",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/10-prepared.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/prepared",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/prepared",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Prepared statements",
+    "sidebar_label": "10 · Prepared statements",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · Overriding parsers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/pg-types"
+  },
+  "next": {
+    "title": "11 · Timeouts",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/timeouts"
+  }
+}

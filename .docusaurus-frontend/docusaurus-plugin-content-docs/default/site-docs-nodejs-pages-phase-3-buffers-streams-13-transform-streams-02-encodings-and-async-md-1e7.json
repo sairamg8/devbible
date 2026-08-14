@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/transform-streams/encodings-and-async",
+  "title": "Encodings, async work and the alternatives",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/13-transform-streams/02-encodings-and-async.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams/13-transform-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/transform-streams/encodings-and-async",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/transform-streams/encodings-and-async",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Encodings, async work and the alternatives",
+    "sidebar_label": "02 · Encodings and async",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · Transform and boundaries",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/transform-streams/transform-and-boundaries"
+  },
+  "next": {
+    "title": "14 · Object mode",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/object-mode"
+  }
+}

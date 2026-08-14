@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/execution-order/README",
+  "title": "Execution order",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/02-execution-order/README.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware/02-execution-order",
+  "slug": "/expressjs/pages/phase-2-middleware/execution-order/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/execution-order/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Execution order",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "03 · What middleware must not do",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-contract/what-middleware-must-not-do"
+  },
+  "next": {
+    "title": "01 · The four levels",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/execution-order/the-four-levels"
+  }
+}

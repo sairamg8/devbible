@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/README",
+  "title": "Phase 3 — Functions, scope and closures",
+  "description": "20 topics. The brief names custom functions explicitly, and this is where",
+  "source": "@site/docs/javascript/pages/phase-3-functions/README.md",
+  "sourceDirName": "javascript/pages/phase-3-functions",
+  "slug": "/javascript/pages/phase-3-functions/",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 3 — Functions, scope and closures",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "15 · Comma, void, in, delete",
+    "permalink": "/devbible/docs/javascript/pages/phase-2-operators/comma-void-in-delete"
+  },
+  "next": {
+    "title": "01 · Declarations vs arrows",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/declarations-expressions-arrows"
+  }
+}

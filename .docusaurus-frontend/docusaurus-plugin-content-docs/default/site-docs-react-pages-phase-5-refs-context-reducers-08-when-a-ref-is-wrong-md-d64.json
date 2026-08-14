@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/when-a-ref-is-wrong",
+  "title": "When a ref is the wrong tool",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/08-when-a-ref-is-wrong.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/when-a-ref-is-wrong",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/when-a-ref-is-wrong",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "When a ref is the wrong tool",
+    "sidebar_label": "08 · When a ref is the wrong tool",
+    "sidebar_position": 8
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "07 · useImperativeHandle",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/useimperativehandle"
+  },
+  "next": {
+    "title": "09 · useState vs useReducer",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/usestate-vs-usereducer"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-2-args-and-controls/parameters-and-merge-order",
+  "title": "06 · Parameters and the merge order",
+  "description": "Understand",
+  "source": "@site/docs/storybook/pages/phase-2-args-and-controls/06-parameters-and-merge-order.md",
+  "sourceDirName": "storybook/pages/phase-2-args-and-controls",
+  "slug": "/storybook/pages/phase-2-args-and-controls/parameters-and-merge-order",
+  "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/parameters-and-merge-order",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "06 · Parameters and the merge order",
+    "sidebar_label": "06 · Parameters",
+    "sidebar_position": 6
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "05 · Globals and toolbars",
+    "permalink": "/devbible/docs/storybook/pages/phase-2-args-and-controls/globals-and-toolbars"
+  },
+  "next": {
+    "title": "Addons Ecosystem",
+    "permalink": "/devbible/docs/storybook/pages/addons-ecosystem/essential-addons"
+  }
+}

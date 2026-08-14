@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/three-ways-to-run",
+  "title": "The three ways to run TypeScript",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/03-three-ways-to-run.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/three-ways-to-run",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/three-ways-to-run",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "The three ways to run TypeScript",
+    "sidebar_label": "03 · Three ways to run it",
+    "sidebar_position": 3
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "02 · Erasure",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/erasure"
+  },
+  "next": {
+    "title": "04 · Strip-only and erasableSyntaxOnly",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/strip-only-and-erasable-syntax"
+  }
+}

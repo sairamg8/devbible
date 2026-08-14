@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/function-components/README",
+  "title": "Function components",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/01-function-components/README.md",
+  "sourceDirName": "react/pages/phase-2-components/01-function-components",
+  "slug": "/react/pages/phase-2-components/function-components/",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Function components",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/"
+  },
+  "next": {
+    "title": "01 · What makes a component",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/function-components/what-makes-a-component"
+  }
+}

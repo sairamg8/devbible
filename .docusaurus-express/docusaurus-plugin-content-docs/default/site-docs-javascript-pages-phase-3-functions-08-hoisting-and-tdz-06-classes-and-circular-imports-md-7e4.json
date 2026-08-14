@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/hoisting-and-tdz/classes-and-circular-imports",
+  "title": "08.6 · Classes and circular imports",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/08-hoisting-and-tdz/06-classes-and-circular-imports.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/08-hoisting-and-tdz",
+  "slug": "/javascript/pages/phase-3-functions/hoisting-and-tdz/classes-and-circular-imports",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/classes-and-circular-imports",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "08.6 · Classes and circular imports",
+    "sidebar_label": "06 · Classes and circular imports",
+    "sidebar_position": 6
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "05 · Block functions and parameters",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/hoisting-and-tdz/block-functions-and-parameters"
+  },
+  "next": {
+    "title": "09 · Higher-order functions",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/higher-order-functions"
+  }
+}

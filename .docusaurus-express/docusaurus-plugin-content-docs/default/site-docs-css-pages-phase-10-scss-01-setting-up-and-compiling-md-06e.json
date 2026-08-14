@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-10-scss/setting-up-and-compiling",
+  "title": "Setting SCSS up and compiling it",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-10-scss/01-setting-up-and-compiling.md",
+  "sourceDirName": "css/pages/phase-10-scss",
+  "slug": "/css/pages/phase-10-scss/setting-up-and-compiling",
+  "permalink": "/devbible/docs/css/pages/phase-10-scss/setting-up-and-compiling",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Setting SCSS up and compiling it",
+    "sidebar_label": "01 · Setting up and compiling",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-10-scss/"
+  },
+  "next": {
+    "title": "02 · Nesting and &",
+    "permalink": "/devbible/docs/css/pages/phase-10-scss/nesting-and-ampersand"
+  }
+}

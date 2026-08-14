@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/pool-end",
+  "title": "pool.end",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/13-pool-end.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/pool-end",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/pool-end",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "pool.end",
+    "sidebar_label": "13 · pool.end",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · One statement",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/one-statement"
+  },
+  "next": {
+    "title": "14 · LISTEN/NOTIFY",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/listen-notify"
+  }
+}

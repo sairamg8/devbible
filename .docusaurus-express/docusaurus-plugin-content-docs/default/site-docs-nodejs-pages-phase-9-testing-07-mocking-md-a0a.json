@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/mocking",
+  "title": "Mocking — mock.fn, mock.method and mock timers",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/07-mocking.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/mocking",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/mocking",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Mocking — mock.fn, mock.method and mock timers",
+    "sidebar_label": "07 · Mocking",
+    "sidebar_position": 7
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "06 · Async testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/async-testing"
+  },
+  "next": {
+    "title": "08 · Module mocking",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/module-mocking"
+  }
+}

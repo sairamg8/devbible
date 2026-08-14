@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/preserving-and-resetting",
+  "title": "Preserving and resetting state across the tree",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-3-state/15-preserving-and-resetting.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/preserving-and-resetting",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/preserving-and-resetting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Preserving and resetting state across the tree",
+    "sidebar_label": "15 · Preserving and resetting",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · State in lists",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/state-in-lists"
+  },
+  "next": {
+    "title": "16 · Updating state during render",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/updating-state-during-render"
+  }
+}

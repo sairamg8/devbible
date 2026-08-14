@@ -1,0 +1,28 @@
+{
+  "id": "storybook/syllabus/how-storybook-runs",
+  "title": "Part 1 — How Storybook runs",
+  "description": "Phases 0–2 · The two processes, the story format, and the args machine",
+  "source": "@site/docs/storybook/syllabus/01-how-storybook-runs.md",
+  "sourceDirName": "storybook/syllabus",
+  "slug": "/storybook/syllabus/how-storybook-runs",
+  "permalink": "/devbible/docs/storybook/syllabus/how-storybook-runs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Part 1 — How Storybook runs",
+    "sidebar_label": "1 · How Storybook runs",
+    "sidebar_position": 1
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/storybook/"
+  },
+  "next": {
+    "title": "2 · Composing stories",
+    "permalink": "/devbible/docs/storybook/syllabus/composing-stories"
+  }
+}

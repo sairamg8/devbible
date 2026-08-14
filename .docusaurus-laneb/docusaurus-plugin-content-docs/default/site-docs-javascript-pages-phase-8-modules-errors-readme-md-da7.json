@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/README",
+  "title": "Phase 8 — Modules, errors, memory and the toolchain",
+  "description": "18 topics. What turns a file of JavaScript into a program someone else can maintain: how",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/README.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors",
+  "slug": "/javascript/pages/phase-8-modules-errors/",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 8 — Modules, errors, memory and the toolchain",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · return await and others",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/anti-patterns/return-await-and-others"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/es-modules/"
+  }
+}

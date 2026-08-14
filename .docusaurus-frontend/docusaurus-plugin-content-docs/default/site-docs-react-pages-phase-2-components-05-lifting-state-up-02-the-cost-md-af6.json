@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-2-components/lifting-state-up/the-cost",
+  "title": "The cost, and how to pay less of it",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-2-components/05-lifting-state-up/02-the-cost.md",
+  "sourceDirName": "react/pages/phase-2-components/05-lifting-state-up",
+  "slug": "/react/pages/phase-2-components/lifting-state-up/the-cost",
+  "permalink": "/devbible/docs/react/pages/phase-2-components/lifting-state-up/the-cost",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The cost, and how to pay less of it",
+    "sidebar_label": "02 · The cost",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The procedure",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/lifting-state-up/the-procedure"
+  },
+  "next": {
+    "title": "06 · Props are read-only",
+    "permalink": "/devbible/docs/react/pages/phase-2-components/props-are-read-only"
+  }
+}

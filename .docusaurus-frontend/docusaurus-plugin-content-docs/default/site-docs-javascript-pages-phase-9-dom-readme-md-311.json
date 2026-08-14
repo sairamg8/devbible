@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/README",
+  "title": "Phase 9 — The DOM",
+  "description": "19 topics. The document as a data structure you can mutate. As the syllabus puts it, the",
+  "source": "@site/docs/javascript/pages/phase-9-dom/README.md",
+  "sourceDirName": "javascript/pages/phase-9-dom",
+  "slug": "/javascript/pages/phase-9-dom/",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 9 — The DOM",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · The four leaks",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/leaks/the-four-leaks"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/what-the-dom-is/"
+  }
+}

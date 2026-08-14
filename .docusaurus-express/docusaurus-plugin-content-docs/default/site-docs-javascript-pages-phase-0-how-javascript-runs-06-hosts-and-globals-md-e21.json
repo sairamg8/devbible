@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-0-how-javascript-runs/hosts-and-globals",
+  "title": "06 · The hosts you write for",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-0-how-javascript-runs/06-hosts-and-globals.md",
+  "sourceDirName": "javascript/pages/phase-0-how-javascript-runs",
+  "slug": "/javascript/pages/phase-0-how-javascript-runs/hosts-and-globals",
+  "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/hosts-and-globals",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "06 · The hosts you write for",
+    "sidebar_label": "06 · Hosts and globals",
+    "sidebar_position": 6
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "05 · ECMAScript and TC39",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/ecmascript-and-tc39"
+  },
+  "next": {
+    "title": "07 · Loading scripts",
+    "permalink": "/devbible/docs/javascript/pages/phase-0-how-javascript-runs/loading-scripts"
+  }
+}

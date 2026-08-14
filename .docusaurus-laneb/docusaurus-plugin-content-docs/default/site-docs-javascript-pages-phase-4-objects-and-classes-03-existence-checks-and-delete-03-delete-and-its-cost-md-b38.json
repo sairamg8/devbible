@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/delete-and-its-cost",
+  "title": "03.2 · `delete` and what it really costs",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/03-existence-checks-and-delete/03-delete-and-its-cost.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/03-existence-checks-and-delete",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/delete-and-its-cost",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/delete-and-its-cost",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · `delete` and what it really costs",
+    "sidebar_label": "02 · delete and its cost",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · undefined, holes, brand checks",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/existence-checks-and-delete/undefined-holes-and-brand-checks"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/slices-and-actions/create-slice",
+  "title": "`createSlice`: Reducers, Immer Drafts & `extraReducers`",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/02-slices-and-actions/01-create-slice.md",
+  "sourceDirName": "redux-toolkit/pages/02-slices-and-actions",
+  "slug": "/redux-toolkit/pages/slices-and-actions/create-slice",
+  "permalink": "/devbible/docs/redux-toolkit/pages/slices-and-actions/create-slice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "`createSlice`: Reducers, Immer Drafts & `extraReducers`",
+    "sidebar_label": "`createSlice`",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "`configureStore`",
+    "permalink": "/devbible/docs/redux-toolkit/pages/store-setup/configure-store"
+  },
+  "next": {
+    "title": "`createAction` & Action Matchers",
+    "permalink": "/devbible/docs/redux-toolkit/pages/slices-and-actions/create-action-and-matchers"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/parameters/defaults-and-scope",
+  "title": "02.1 · Defaults and the parameter scope",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/02-parameters/01-defaults-and-scope.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/02-parameters",
+  "slug": "/javascript/pages/phase-3-functions/parameters/defaults-and-scope",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/parameters/defaults-and-scope",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · Defaults and the parameter scope",
+    "sidebar_label": "01 · Defaults and scope",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/parameters/"
+  },
+  "next": {
+    "title": "02 · Rest, destructuring, arguments",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/parameters/rest-destructuring-arguments"
+  }
+}

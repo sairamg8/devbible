@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/distinct-on",
+  "title": "DISTINCT and DISTINCT ON",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/12-distinct-on.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/distinct-on",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/distinct-on",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "DISTINCT and DISTINCT ON",
+    "sidebar_label": "12 · DISTINCT ON",
+    "sidebar_position": 12
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "11 · DELETE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/delete"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/merge/"
+  }
+}

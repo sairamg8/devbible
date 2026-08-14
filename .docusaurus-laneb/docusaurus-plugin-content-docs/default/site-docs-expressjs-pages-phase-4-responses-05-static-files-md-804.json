@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/static-files",
+  "title": "Static files",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/05-static-files.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses",
+  "slug": "/expressjs/pages/phase-4-responses/static-files",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/static-files",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Static files",
+    "sidebar_label": "05 · Static files",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Headers already sent",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/headers-already-sent"
+  },
+  "next": {
+    "title": "06 · SPA fallback",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/spa-fallback"
+  }
+}

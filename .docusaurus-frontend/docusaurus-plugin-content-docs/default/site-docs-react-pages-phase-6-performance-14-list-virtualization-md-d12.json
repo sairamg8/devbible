@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-6-performance/list-virtualization",
+  "title": "List virtualization",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-6-performance/14-list-virtualization.md",
+  "sourceDirName": "react/pages/phase-6-performance",
+  "slug": "/react/pages/phase-6-performance/list-virtualization",
+  "permalink": "/devbible/docs/react/pages/phase-6-performance/list-virtualization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "List virtualization",
+    "sidebar_label": "14 · List virtualization",
+    "sidebar_position": 14
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "13 · Moving state down",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/moving-state-down"
+  },
+  "next": {
+    "title": "15 · Expensive initial mount",
+    "permalink": "/devbible/docs/react/pages/phase-6-performance/expensive-initial-mount"
+  }
+}

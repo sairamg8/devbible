@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/monitoring/README",
+  "title": "Monitoring views",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/09-monitoring/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/09-monitoring",
+  "slug": "/postgresql/pages/phase-13-ops/monitoring/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Monitoring views",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Conflicts & routing",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/conflicts-and-routing"
+  },
+  "next": {
+    "title": "01 · Right now",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/monitoring/whats-happening-now"
+  }
+}

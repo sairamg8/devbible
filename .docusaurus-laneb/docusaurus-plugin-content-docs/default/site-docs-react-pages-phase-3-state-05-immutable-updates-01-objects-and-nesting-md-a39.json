@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/immutable-updates/objects-and-nesting",
+  "title": "Objects and nesting",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-3-state/05-immutable-updates/01-objects-and-nesting.md",
+  "sourceDirName": "react/pages/phase-3-state/05-immutable-updates",
+  "slug": "/react/pages/phase-3-state/immutable-updates/objects-and-nesting",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/objects-and-nesting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Objects and nesting",
+    "sidebar_label": "01 · Objects and nesting",
+    "sidebar_position": 1
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/"
+  },
+  "next": {
+    "title": "02 · Arrays and tools",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/immutable-updates/arrays-and-tools"
+  }
+}

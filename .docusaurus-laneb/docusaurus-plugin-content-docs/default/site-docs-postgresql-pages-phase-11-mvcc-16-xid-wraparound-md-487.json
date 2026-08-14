@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-11-mvcc/xid-wraparound",
+  "title": "XID wraparound and freezing",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-11-mvcc/16-xid-wraparound.md",
+  "sourceDirName": "postgresql/pages/phase-11-mvcc",
+  "slug": "/postgresql/pages/phase-11-mvcc/xid-wraparound",
+  "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/xid-wraparound",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "XID wraparound and freezing",
+    "sidebar_label": "16 · XID wraparound",
+    "sidebar_position": 16
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "15 · Advisory locks",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/advisory-locks"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/"
+  }
+}

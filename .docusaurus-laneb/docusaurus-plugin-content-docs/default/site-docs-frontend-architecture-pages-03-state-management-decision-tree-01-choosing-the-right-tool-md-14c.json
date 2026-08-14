@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/state-management-decision-tree/choosing-the-right-tool",
+  "title": "State Management Decision Tree: Local, Lifted, Global & Server State",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/03-state-management-decision-tree/01-choosing-the-right-tool.md",
+  "sourceDirName": "frontend-architecture/pages/03-state-management-decision-tree",
+  "slug": "/frontend-architecture/pages/state-management-decision-tree/choosing-the-right-tool",
+  "permalink": "/devbible/docs/frontend-architecture/pages/state-management-decision-tree/choosing-the-right-tool",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "State Management Decision Tree: Local, Lifted, Global & Server State",
+    "sidebar_label": "State Management Decision Tree",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Component Architecture",
+    "permalink": "/devbible/docs/frontend-architecture/pages/component-architecture/composition-patterns"
+  },
+  "next": {
+    "title": "Data Layer & API Architecture",
+    "permalink": "/devbible/docs/frontend-architecture/pages/data-layer-and-api-architecture/structuring-the-data-boundary"
+  }
+}

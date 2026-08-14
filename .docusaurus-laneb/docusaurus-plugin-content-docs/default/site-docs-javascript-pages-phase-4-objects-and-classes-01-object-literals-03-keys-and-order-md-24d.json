@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/object-literals/keys-and-order",
+  "title": "01.3 · Keys and enumeration order",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/01-object-literals/03-keys-and-order.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/01-object-literals",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/object-literals/keys-and-order",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/object-literals/keys-and-order",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "01.3 · Keys and enumeration order",
+    "sidebar_label": "03 · Keys and order",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Methods, accessors and spread",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/object-literals/methods-accessors-and-spread"
+  },
+  "next": {
+    "title": "04 · __proto__ and null prototypes",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/object-literals/proto-and-null-prototype"
+  }
+}

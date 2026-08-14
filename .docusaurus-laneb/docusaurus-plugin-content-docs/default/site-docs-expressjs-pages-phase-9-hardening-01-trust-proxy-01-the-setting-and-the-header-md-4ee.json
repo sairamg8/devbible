@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-9-hardening/trust-proxy/the-setting-and-the-header",
+  "title": "The setting and the header",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-9-hardening/01-trust-proxy/01-the-setting-and-the-header.md",
+  "sourceDirName": "expressjs/pages/phase-9-hardening/01-trust-proxy",
+  "slug": "/expressjs/pages/phase-9-hardening/trust-proxy/the-setting-and-the-header",
+  "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/the-setting-and-the-header",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "The setting and the header",
+    "sidebar_label": "01 · The setting and the header",
+    "sidebar_position": 1
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/"
+  },
+  "next": {
+    "title": "02 · When `true` is a bypass",
+    "permalink": "/devbible/docs/expressjs/pages/phase-9-hardening/trust-proxy/when-true-is-a-bypass"
+  }
+}

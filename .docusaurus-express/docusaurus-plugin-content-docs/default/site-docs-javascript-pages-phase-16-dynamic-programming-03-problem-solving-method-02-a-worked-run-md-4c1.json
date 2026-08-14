@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-16-dynamic-programming/problem-solving-method/a-worked-run",
+  "title": "03.2 · A worked run",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-16-dynamic-programming/03-problem-solving-method/02-a-worked-run.md",
+  "sourceDirName": "javascript/pages/phase-16-dynamic-programming/03-problem-solving-method",
+  "slug": "/javascript/pages/phase-16-dynamic-programming/problem-solving-method/a-worked-run",
+  "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/problem-solving-method/a-worked-run",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · A worked run",
+    "sidebar_label": "02 · A worked run",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The loop",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/problem-solving-method/the-loop"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-17-machine-coding/"
+  }
+}

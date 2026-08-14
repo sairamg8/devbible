@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/git-stash",
+  "title": "`git stash`",
+  "description": "Understand",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/11-git-stash.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop",
+  "slug": "/git/pages/phase-1-everyday-loop/git-stash",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-stash",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "`git stash`",
+    "sidebar_label": "11 · git stash",
+    "sidebar_position": 11
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "10 · Messages and scope",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/commit-messages"
+  },
+  "next": {
+    "title": "12 · rm, mv and clean",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/removing-and-moving"
+  }
+}

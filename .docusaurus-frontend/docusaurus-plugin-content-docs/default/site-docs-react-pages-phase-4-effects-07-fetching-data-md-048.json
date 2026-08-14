@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/fetching-data",
+  "title": "Fetching data in an effect",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-4-effects/07-fetching-data.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/fetching-data",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/fetching-data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Fetching data in an effect",
+    "sidebar_label": "07 · Fetching data in an effect",
+    "sidebar_position": 7
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · State that belongs elsewhere",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/state-that-belongs-elsewhere"
+  },
+  "next": {
+    "title": "08 · Race conditions",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/race-conditions"
+  }
+}

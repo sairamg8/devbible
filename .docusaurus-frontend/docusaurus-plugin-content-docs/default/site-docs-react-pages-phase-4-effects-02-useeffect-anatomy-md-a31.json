@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/useeffect-anatomy",
+  "title": "useEffect anatomy",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-4-effects/02-useeffect-anatomy.md",
+  "sourceDirName": "react/pages/phase-4-effects",
+  "slug": "/react/pages/phase-4-effects/useeffect-anatomy",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/useeffect-anatomy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "useEffect anatomy",
+    "sidebar_label": "02 · useEffect anatomy",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · What an effect is for",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/what-an-effect-is-for"
+  },
+  "next": {
+    "title": "03 · The dependency array",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/the-dependency-array"
+  }
+}

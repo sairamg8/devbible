@@ -1,0 +1,24 @@
+{
+  "id": "webpack/pages/real-world-workflows-and-recipes/diagnosing-a-bloated-bundle",
+  "title": "Diagnosing and Shrinking a Bloated Production Bundle, End-to-End",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/16-real-world-workflows-and-recipes/01-diagnosing-a-bloated-bundle.md",
+  "sourceDirName": "webpack/pages/16-real-world-workflows-and-recipes",
+  "slug": "/webpack/pages/real-world-workflows-and-recipes/diagnosing-a-bloated-bundle",
+  "permalink": "/devbible/docs/webpack/pages/real-world-workflows-and-recipes/diagnosing-a-bloated-bundle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Diagnosing and Shrinking a Bloated Production Bundle, End-to-End",
+    "sidebar_label": "Diagnosing and Shrinking a Bloated Product",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Advanced Tooling",
+    "permalink": "/devbible/docs/webpack/pages/advanced-custom-tooling/custom-loaders-and-plugins"
+  }
+}

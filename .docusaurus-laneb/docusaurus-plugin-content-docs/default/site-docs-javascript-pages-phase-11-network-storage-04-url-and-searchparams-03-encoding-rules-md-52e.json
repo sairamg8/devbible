@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/url-and-searchparams/encoding-rules",
+  "title": "04.3 · Encoding rules",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/04-url-and-searchparams/03-encoding-rules.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/04-url-and-searchparams",
+  "slug": "/javascript/pages/phase-11-network-storage/url-and-searchparams/encoding-rules",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/url-and-searchparams/encoding-rules",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "04.3 · Encoding rules",
+    "sidebar_label": "03 · Encoding rules",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · URLSearchParams",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/url-and-searchparams/urlsearchparams"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/cors-client-side/"
+  }
+}

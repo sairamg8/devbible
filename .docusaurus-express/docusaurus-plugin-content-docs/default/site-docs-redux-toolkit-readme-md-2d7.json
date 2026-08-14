@@ -1,0 +1,24 @@
+{
+  "id": "redux-toolkit/README",
+  "title": "Redux Toolkit — Overview",
+  "description": "These pages were moved in from the separate frontend-bible repo as-is, on",
+  "source": "@site/docs/redux-toolkit/README.md",
+  "sourceDirName": "redux-toolkit",
+  "slug": "/redux-toolkit/",
+  "permalink": "/devbible/docs/redux-toolkit/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Redux Toolkit — Overview",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "next": {
+    "title": "Explanations",
+    "permalink": "/devbible/docs/redux-toolkit/pages/"
+  }
+}

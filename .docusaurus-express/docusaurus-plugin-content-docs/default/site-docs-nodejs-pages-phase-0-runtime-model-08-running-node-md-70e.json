@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-0-runtime-model/running-node",
+  "title": "Running node",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-0-runtime-model/08-running-node.md",
+  "sourceDirName": "nodejs/pages/phase-0-runtime-model",
+  "slug": "/nodejs/pages/phase-0-runtime-model/running-node",
+  "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/running-node",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Running node",
+    "sidebar_label": "08 · Running node",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · Choosing a version",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/choosing-a-version"
+  },
+  "next": {
+    "title": "09 · Deno and Bun",
+    "permalink": "/devbible/docs/nodejs/pages/phase-0-runtime-model/node-deno-bun"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/phase-1-story-format/reusing-stories",
+  "title": "06 · Reusing stories",
+  "description": "Know",
+  "source": "@site/docs/storybook/pages/phase-1-story-format/06-reusing-stories.md",
+  "sourceDirName": "storybook/pages/phase-1-story-format",
+  "slug": "/storybook/pages/phase-1-story-format/reusing-stories",
+  "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/reusing-stories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "06 · Reusing stories",
+    "sidebar_label": "06 · Reusing stories",
+    "sidebar_position": 6
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "05 · Naming and the sidebar",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/naming-and-the-sidebar"
+  },
+  "next": {
+    "title": "Story Anatomy",
+    "permalink": "/devbible/docs/storybook/pages/story-anatomy/file-structure"
+  }
+}

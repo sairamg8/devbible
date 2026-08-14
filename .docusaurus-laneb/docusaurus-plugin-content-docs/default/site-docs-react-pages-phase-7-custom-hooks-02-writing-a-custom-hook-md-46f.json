@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/writing-a-custom-hook",
+  "title": "Writing a custom hook",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/02-writing-a-custom-hook.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks",
+  "slug": "/react/pages/phase-7-custom-hooks/writing-a-custom-hook",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/writing-a-custom-hook",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Writing a custom hook",
+    "sidebar_label": "02 · Writing a custom hook",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The Rules of Hooks",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/the-rules-of-hooks"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/share-logic-not-state/"
+  }
+}

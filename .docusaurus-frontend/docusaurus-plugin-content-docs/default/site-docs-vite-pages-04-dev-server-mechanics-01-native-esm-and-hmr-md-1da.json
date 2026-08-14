@@ -1,0 +1,28 @@
+{
+  "id": "vite/pages/dev-server-mechanics/native-esm-and-hmr",
+  "title": "Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/vite/pages/04-dev-server-mechanics/01-native-esm-and-hmr.md",
+  "sourceDirName": "vite/pages/04-dev-server-mechanics",
+  "slug": "/vite/pages/dev-server-mechanics/native-esm-and-hmr",
+  "permalink": "/devbible/docs/vite/pages/dev-server-mechanics/native-esm-and-hmr",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling",
+    "sidebar_label": "Dev Server Mechanics",
+    "sidebar_position": 1
+  },
+  "sidebar": "viteSidebar",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/devbible/docs/vite/pages/configuration/vite-config-file"
+  },
+  "next": {
+    "title": "Build System",
+    "permalink": "/devbible/docs/vite/pages/build-system-rollup/build-options"
+  }
+}

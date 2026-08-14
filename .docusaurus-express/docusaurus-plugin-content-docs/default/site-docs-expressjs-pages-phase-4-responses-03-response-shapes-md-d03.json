@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/response-shapes",
+  "title": "Response shapes",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/03-response-shapes.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses",
+  "slug": "/expressjs/pages/phase-4-responses/response-shapes",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/response-shapes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Response shapes",
+    "sidebar_label": "03 · Response shapes",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Headers and timing",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/status-and-headers/headers-and-timing"
+  },
+  "next": {
+    "title": "04 · Headers already sent",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/headers-already-sent"
+  }
+}

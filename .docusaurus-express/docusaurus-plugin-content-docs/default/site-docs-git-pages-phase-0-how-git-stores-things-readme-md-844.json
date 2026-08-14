@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-0-how-git-stores-things/README",
+  "title": "Phase 0 — How Git stores things",
+  "description": "Target: git 2.55.0. Every command block in this phase was run by",
+  "source": "@site/docs/git/pages/phase-0-how-git-stores-things/README.md",
+  "sourceDirName": "git/pages/phase-0-how-git-stores-things",
+  "slug": "/git/pages/phase-0-how-git-stores-things/",
+  "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 0 — How Git stores things",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/git/pages/"
+  },
+  "next": {
+    "title": "01 · What Git is",
+    "permalink": "/devbible/docs/git/pages/phase-0-how-git-stores-things/what-git-is"
+  }
+}

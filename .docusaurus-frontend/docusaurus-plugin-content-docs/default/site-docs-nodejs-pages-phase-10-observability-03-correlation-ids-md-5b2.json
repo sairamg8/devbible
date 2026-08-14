@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-10-observability/correlation-ids",
+  "title": "Correlation and request IDs with AsyncLocalStorage",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-10-observability/03-correlation-ids.md",
+  "sourceDirName": "nodejs/pages/phase-10-observability",
+  "slug": "/nodejs/pages/phase-10-observability/correlation-ids",
+  "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/correlation-ids",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Correlation and request IDs with AsyncLocalStorage",
+    "sidebar_label": "03 · Correlation IDs",
+    "sidebar_position": 3
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "02 · pino in practice",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/pino-in-practice"
+  },
+  "next": {
+    "title": "04 · What to log",
+    "permalink": "/devbible/docs/nodejs/pages/phase-10-observability/what-to-log"
+  }
+}

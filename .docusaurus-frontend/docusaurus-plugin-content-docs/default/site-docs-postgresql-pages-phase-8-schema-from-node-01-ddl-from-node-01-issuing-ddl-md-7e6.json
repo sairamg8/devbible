@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/ddl-from-node/issuing-ddl",
+  "title": "Issuing DDL through the driver",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/01-ddl-from-node/01-issuing-ddl.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node/01-ddl-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/ddl-from-node/issuing-ddl",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/issuing-ddl",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Issuing DDL through the driver",
+    "sidebar_label": "01 · Issuing DDL",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/"
+  },
+  "next": {
+    "title": "02 · Locks and blocking",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/ddl-from-node/locks-and-blocking"
+  }
+}

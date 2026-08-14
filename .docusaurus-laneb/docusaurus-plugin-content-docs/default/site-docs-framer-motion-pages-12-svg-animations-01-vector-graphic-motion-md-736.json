@@ -1,0 +1,28 @@
+{
+  "id": "framer-motion/pages/svg-animations/vector-graphic-motion",
+  "title": "SVG Animations: `pathLength`, Stroke Drawing & Path Morphing",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/framer-motion/pages/12-svg-animations/01-vector-graphic-motion.md",
+  "sourceDirName": "framer-motion/pages/12-svg-animations",
+  "slug": "/framer-motion/pages/svg-animations/vector-graphic-motion",
+  "permalink": "/devbible/docs/framer-motion/pages/svg-animations/vector-graphic-motion",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "SVG Animations: `pathLength`, Stroke Drawing & Path Morphing",
+    "sidebar_label": "SVG Animations",
+    "sidebar_position": 1
+  },
+  "sidebar": "framerMotionSidebar",
+  "previous": {
+    "title": "Keyframes",
+    "permalink": "/devbible/docs/framer-motion/pages/keyframes/multi-step-value-animation"
+  },
+  "next": {
+    "title": "Orchestration & Staggering",
+    "permalink": "/devbible/docs/framer-motion/pages/orchestration-and-staggering/choreographed-groups"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/alloc-vs-allocunsafe",
+  "title": "alloc vs allocUnsafe",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/03-alloc-vs-allocunsafe.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/alloc-vs-allocunsafe",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/alloc-vs-allocunsafe",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "alloc vs allocUnsafe",
+    "sidebar_label": "03 · alloc vs allocUnsafe",
+    "sidebar_position": 3
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "02 · Encodings",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/encodings"
+  },
+  "next": {
+    "title": "04 · Buffer is a Uint8Array",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/buffer-as-uint8array"
+  }
+}

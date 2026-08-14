@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/app-role-not-owner",
+  "title": "The app role should not own the schema",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/03-app-role-not-owner.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops",
+  "slug": "/postgresql/pages/phase-13-ops/app-role-not-owner",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/app-role-not-owner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "The app role should not own the schema",
+    "sidebar_label": "03 · App role ≠ owner",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Storing and rotating",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/secrets/storing-and-rotating"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pg-dump-restore/"
+  }
+}

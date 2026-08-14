@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/type-coercion",
+  "title": "08 · Type coercion",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/08-type-coercion.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/type-coercion",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/type-coercion",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "08 · Type coercion",
+    "sidebar_label": "08 · Type coercion",
+    "sidebar_position": 8
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "07 · const is not immutable",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/const-is-not-immutable"
+  },
+  "next": {
+    "title": "09 · Explicit conversion",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/explicit-conversion"
+  }
+}

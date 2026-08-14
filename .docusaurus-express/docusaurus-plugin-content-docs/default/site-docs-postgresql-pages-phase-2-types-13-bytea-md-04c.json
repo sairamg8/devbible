@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/bytea",
+  "title": "bytea",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-2-types/13-bytea.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/bytea",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/bytea",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "bytea",
+    "sidebar_label": "13 · bytea",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · Casting",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/casting"
+  },
+  "next": {
+    "title": "14 · Network, geo, citext",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/network-geo-citext"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-7-layering/controller-service-repository/wiring-it-in-express",
+  "title": "Wiring it in Express",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-7-layering/01-controller-service-repository/02-wiring-it-in-express.md",
+  "sourceDirName": "expressjs/pages/phase-7-layering/01-controller-service-repository",
+  "slug": "/expressjs/pages/phase-7-layering/controller-service-repository/wiring-it-in-express",
+  "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/controller-service-repository/wiring-it-in-express",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Wiring it in Express",
+    "sidebar_label": "02 · Wiring it in Express",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · The three layers",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/controller-service-repository/the-three-layers"
+  },
+  "next": {
+    "title": "03 · When to adopt it",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/controller-service-repository/when-to-adopt"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-9-testing/testable-code",
+  "title": "Writing testable code — dependency injection over module singletons",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-9-testing/04-testable-code.md",
+  "sourceDirName": "nodejs/pages/phase-9-testing",
+  "slug": "/nodejs/pages/phase-9-testing/testable-code",
+  "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/testable-code",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Writing testable code — dependency injection over module singletons",
+    "sidebar_label": "04 · Testable code",
+    "sidebar_position": 4
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "03 · Unit, integration, e2e",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/unit-integration-e2e"
+  },
+  "next": {
+    "title": "05 · API testing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-9-testing/api-testing"
+  }
+}

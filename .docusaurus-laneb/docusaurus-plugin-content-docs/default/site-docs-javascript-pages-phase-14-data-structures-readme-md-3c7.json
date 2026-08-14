@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-14-data-structures/README",
+  "title": "Phase 14 — Core data structures in JavaScript",
+  "description": "⏸ This phase is parked, not dropped. On the user's instruction (*\"Park Data structures",
+  "source": "@site/docs/javascript/pages/phase-14-data-structures/README.md",
+  "sourceDirName": "javascript/pages/phase-14-data-structures",
+  "slug": "/javascript/pages/phase-14-data-structures/",
+  "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 14 — Core data structures in JavaScript",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · When the array is right",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/choosing-a-structure/when-the-array-is-right"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-14-data-structures/dynamic-arrays/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/README",
+  "title": "Phase 0 — How CSS runs",
+  "description": "Verified: 2026-08 in Firefox 153.0.3, with feature data from",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/README.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 0 — How CSS runs",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/"
+  },
+  "next": {
+    "title": "01 · What CSS is",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/what-css-is"
+  }
+}

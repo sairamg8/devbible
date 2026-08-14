@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/you-might-not-need-an-effect/chains-of-effects",
+  "title": "Chains of effects",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-4-effects/06-you-might-not-need-an-effect/02-chains-of-effects.md",
+  "sourceDirName": "react/pages/phase-4-effects/06-you-might-not-need-an-effect",
+  "slug": "/react/pages/phase-4-effects/you-might-not-need-an-effect/chains-of-effects",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/chains-of-effects",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Chains of effects",
+    "sidebar_label": "02 · Chains of effects",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · Logic that belongs to an event",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/logic-that-belongs-to-an-event"
+  },
+  "next": {
+    "title": "03 · State that belongs elsewhere",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/you-might-not-need-an-effect/state-that-belongs-elsewhere"
+  }
+}

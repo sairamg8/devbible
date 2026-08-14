@@ -1,0 +1,28 @@
+{
+  "id": "web-vitals-performance/pages/legacy-and-lab-measurement/legacy-metrics-and-lab-tools",
+  "title": "Legacy & Supporting Metrics + Lab Measurement Tools",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/web-vitals-performance/pages/02-legacy-and-lab-measurement/01-legacy-metrics-and-lab-tools.md",
+  "sourceDirName": "web-vitals-performance/pages/02-legacy-and-lab-measurement",
+  "slug": "/web-vitals-performance/pages/legacy-and-lab-measurement/legacy-metrics-and-lab-tools",
+  "permalink": "/devbible/docs/web-vitals-performance/pages/legacy-and-lab-measurement/legacy-metrics-and-lab-tools",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Legacy & Supporting Metrics + Lab Measurement Tools",
+    "sidebar_label": "Legacy & Supporting Metrics + Lab Measurem",
+    "sidebar_position": 1
+  },
+  "sidebar": "webVitalsPerformanceSidebar",
+  "previous": {
+    "title": "Core Web Vitals",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/core-web-vitals/lcp-inp-cls-fundamentals"
+  },
+  "next": {
+    "title": "Real User Monitoring",
+    "permalink": "/devbible/docs/web-vitals-performance/pages/real-user-monitoring/web-vitals-library-and-rum"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/replication/README",
+  "title": "Streaming replication replicas",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/08-replication/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/08-replication",
+  "slug": "/postgresql/pages/phase-13-ops/replication/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Streaming replication replicas",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "04 · Node, observing, alternatives",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/pgbouncer/node-and-observing"
+  },
+  "next": {
+    "title": "01 · Lag & read-your-writes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/replication/lag-and-read-your-writes"
+  }
+}

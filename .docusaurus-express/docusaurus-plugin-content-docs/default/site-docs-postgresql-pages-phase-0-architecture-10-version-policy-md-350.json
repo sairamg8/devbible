@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/version-policy",
+  "title": "Version policy",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/10-version-policy.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture",
+  "slug": "/postgresql/pages/phase-0-architecture/version-policy",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/version-policy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Version policy",
+    "sidebar_label": "10 · Version policy",
+    "sidebar_position": 10
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "09 · Process model",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/process-model"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/vs-other-databases/"
+  }
+}

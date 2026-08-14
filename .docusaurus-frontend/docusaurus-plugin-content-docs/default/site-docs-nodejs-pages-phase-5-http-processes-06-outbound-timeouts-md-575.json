@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-5-http-processes/outbound-timeouts",
+  "title": "Outbound timeouts",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-5-http-processes/06-outbound-timeouts.md",
+  "sourceDirName": "nodejs/pages/phase-5-http-processes",
+  "slug": "/nodejs/pages/phase-5-http-processes/outbound-timeouts",
+  "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/outbound-timeouts",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Outbound timeouts",
+    "sidebar_label": "06 · Outbound timeouts",
+    "sidebar_position": 6
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "05 · fetch",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/fetch"
+  },
+  "next": {
+    "title": "07 · Keep-alive and agents",
+    "permalink": "/devbible/docs/nodejs/pages/phase-5-http-processes/keep-alive-and-agents"
+  }
+}

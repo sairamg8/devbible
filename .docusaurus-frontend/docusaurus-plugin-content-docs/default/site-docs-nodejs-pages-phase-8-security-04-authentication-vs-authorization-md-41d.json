@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/authentication-vs-authorization",
+  "title": "Authorization vs authentication — enforced server-side, always",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-8-security/04-authentication-vs-authorization.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/authentication-vs-authorization",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/authentication-vs-authorization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Authorization vs authentication — enforced server-side, always",
+    "sidebar_label": "04 · Authz vs authn",
+    "sidebar_position": 4
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "03 · Where to store tokens",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/token-storage"
+  },
+  "next": {
+    "title": "05 · Session management",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/session-management"
+  }
+}

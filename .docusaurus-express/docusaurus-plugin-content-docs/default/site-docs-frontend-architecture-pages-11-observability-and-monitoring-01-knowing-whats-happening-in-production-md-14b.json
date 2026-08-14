@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/observability-and-monitoring/knowing-whats-happening-in-production",
+  "title": "Observability & Monitoring: RUM, Error Tracking & Event Architecture",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/11-observability-and-monitoring/01-knowing-whats-happening-in-production.md",
+  "sourceDirName": "frontend-architecture/pages/11-observability-and-monitoring",
+  "slug": "/frontend-architecture/pages/observability-and-monitoring/knowing-whats-happening-in-production",
+  "permalink": "/devbible/docs/frontend-architecture/pages/observability-and-monitoring/knowing-whats-happening-in-production",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Observability & Monitoring: RUM, Error Tracking & Event Architecture",
+    "sidebar_label": "Observability & Monitoring",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Error Handling & Resilience",
+    "permalink": "/devbible/docs/frontend-architecture/pages/error-handling-and-resilience/designing-for-failure"
+  },
+  "next": {
+    "title": "CI/CD Pipeline Design",
+    "permalink": "/devbible/docs/frontend-architecture/pages/ci-cd-pipeline-design/shipping-safely"
+  }
+}

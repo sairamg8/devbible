@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/syllabus/foundations",
+  "title": "Part 1 — Foundations",
+  "description": "Phases 0–3 · 65 topics · 20 Master",
+  "source": "@site/docs/postgresql/syllabus/01-foundations.md",
+  "sourceDirName": "postgresql/syllabus",
+  "slug": "/postgresql/syllabus/foundations",
+  "permalink": "/devbible/docs/postgresql/syllabus/foundations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Part 1 — Foundations",
+    "sidebar_label": "1 · Foundations",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/"
+  },
+  "next": {
+    "title": "2 · SQL",
+    "permalink": "/devbible/docs/postgresql/syllabus/sql"
+  }
+}

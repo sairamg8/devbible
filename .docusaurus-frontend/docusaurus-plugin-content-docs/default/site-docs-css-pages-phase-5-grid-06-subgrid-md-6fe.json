@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-5-grid/subgrid",
+  "title": "Subgrid",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-5-grid/06-subgrid.md",
+  "sourceDirName": "css/pages/phase-5-grid",
+  "slug": "/css/pages/phase-5-grid/subgrid",
+  "permalink": "/devbible/docs/css/pages/phase-5-grid/subgrid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Subgrid",
+    "sidebar_label": "06 · Subgrid",
+    "sidebar_position": 6
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "05 · Line-based placement",
+    "permalink": "/devbible/docs/css/pages/phase-5-grid/line-based-placement"
+  },
+  "next": {
+    "title": "07 · Grid patterns",
+    "permalink": "/devbible/docs/css/pages/phase-5-grid/grid-patterns"
+  }
+}

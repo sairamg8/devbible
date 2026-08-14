@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/json-and-urlencoded/the-parsers-and-their-options",
+  "title": "The parsers and their options",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/02-json-and-urlencoded/02-the-parsers-and-their-options.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests/02-json-and-urlencoded",
+  "slug": "/expressjs/pages/phase-3-requests/json-and-urlencoded/the-parsers-and-their-options",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/the-parsers-and-their-options",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The parsers and their options",
+    "sidebar_label": "02 · The parsers and their options",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · The four gates",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/the-four-gates"
+  },
+  "next": {
+    "title": "03 · Errors and choices",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/errors-and-choices"
+  }
+}

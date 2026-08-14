@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/eslint-language-options-globals-and-parsing/language-options-and-file-targeting",
+  "title": "Language Options, Globals & File Targeting",
+  "description": "Covers syllabus §4.1 languageOptions Deep Dive and §4.2 File-Type Targeting Patterns.",
+  "source": "@site/docs/eslint-oxlint/pages/04-eslint-language-options-globals-and-parsing/01-language-options-and-file-targeting.md",
+  "sourceDirName": "eslint-oxlint/pages/04-eslint-language-options-globals-and-parsing",
+  "slug": "/eslint-oxlint/pages/eslint-language-options-globals-and-parsing/language-options-and-file-targeting",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-language-options-globals-and-parsing/language-options-and-file-targeting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Language Options, Globals & File Targeting",
+    "sidebar_label": "Language Options, Globals & File Targeting",
+    "sidebar_position": 1
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "ESLint Flat Config",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-flat-config/forms-fields-and-composition"
+  },
+  "next": {
+    "title": "ESLint Rules",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/eslint-rules-system/severity-core-rules-and-presets"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-6-iteration-and-destructuring/README",
+  "title": "Phase 6 — Iteration, destructuring and generators",
+  "description": "13 topics. The protocol layer. Small phase, but it is what lets for…of, spread,",
+  "source": "@site/docs/javascript/pages/phase-6-iteration-and-destructuring/README.md",
+  "sourceDirName": "javascript/pages/phase-6-iteration-and-destructuring",
+  "slug": "/javascript/pages/phase-6-iteration-and-destructuring/",
+  "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 6 — Iteration, destructuring and generators",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Choosing and costs",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/map-vs-object/choosing-and-costs"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-6-iteration-and-destructuring/destructuring/"
+  }
+}

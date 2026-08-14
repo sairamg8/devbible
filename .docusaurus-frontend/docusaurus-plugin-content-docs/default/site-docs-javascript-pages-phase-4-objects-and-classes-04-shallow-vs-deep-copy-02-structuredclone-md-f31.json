@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/structuredclone",
+  "title": "04.2 · `structuredClone`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/04-shallow-vs-deep-copy/02-structuredclone.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/04-shallow-vs-deep-copy",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/structuredclone",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/structuredclone",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "04.2 · `structuredClone`",
+    "sidebar_label": "02 · structuredClone",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · What shallow means",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/what-shallow-means"
+  },
+  "next": {
+    "title": "03 · JSON and hand-written clones",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/shallow-vs-deep-copy/json-and-hand-written"
+  }
+}

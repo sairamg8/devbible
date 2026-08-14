@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/use-client",
+  "title": "'use client'",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-10-server-components/03-use-client.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/use-client",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/use-client",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "'use client'",
+    "sidebar_label": "03 · 'use client'",
+    "sidebar_position": 3
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · The two module graphs",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/two-module-graphs"
+  },
+  "next": {
+    "title": "04 · 'use server'",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/use-server"
+  }
+}

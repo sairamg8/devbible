@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/adding-and-removing/README",
+  "title": "02 · Adding and removing",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/02-adding-and-removing/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/02-adding-and-removing",
+  "slug": "/javascript/pages/phase-5-built-in-library/adding-and-removing/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Adding and removing",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Holes and length",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-creation-and-shape/holes-and-length"
+  },
+  "next": {
+    "title": "01 · push, pop, shift, unshift",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/push-pop-shift-unshift"
+  }
+}

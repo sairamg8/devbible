@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-11-network-storage/fetch-wrapper/timeouts-and-cancellation",
+  "title": "03.5 · Timeouts and cancellation",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-11-network-storage/03-fetch-wrapper/05-timeouts-and-cancellation.md",
+  "sourceDirName": "javascript/pages/phase-11-network-storage/03-fetch-wrapper",
+  "slug": "/javascript/pages/phase-11-network-storage/fetch-wrapper/timeouts-and-cancellation",
+  "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/timeouts-and-cancellation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "03.5 · Timeouts and cancellation",
+    "sidebar_label": "05 · Timeouts and cancellation",
+    "sidebar_position": 5
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "04 · Auth and refresh",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/auth-and-refresh"
+  },
+  "next": {
+    "title": "06 · Retries",
+    "permalink": "/devbible/docs/javascript/pages/phase-11-network-storage/fetch-wrapper/retries"
+  }
+}

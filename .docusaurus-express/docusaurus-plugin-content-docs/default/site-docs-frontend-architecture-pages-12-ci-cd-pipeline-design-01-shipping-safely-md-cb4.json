@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/ci-cd-pipeline-design/shipping-safely",
+  "title": "CI/CD Pipeline Design: Stage Ordering, Preview Deployments & Progressive Rollout",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/12-ci-cd-pipeline-design/01-shipping-safely.md",
+  "sourceDirName": "frontend-architecture/pages/12-ci-cd-pipeline-design",
+  "slug": "/frontend-architecture/pages/ci-cd-pipeline-design/shipping-safely",
+  "permalink": "/devbible/docs/frontend-architecture/pages/ci-cd-pipeline-design/shipping-safely",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "CI/CD Pipeline Design: Stage Ordering, Preview Deployments & Progressive Rollout",
+    "sidebar_label": "CI/CD Pipeline Design",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Observability & Monitoring",
+    "permalink": "/devbible/docs/frontend-architecture/pages/observability-and-monitoring/knowing-whats-happening-in-production"
+  },
+  "next": {
+    "title": "Testing Strategy",
+    "permalink": "/devbible/docs/frontend-architecture/pages/testing-strategy/the-real-world-testing-pyramid"
+  }
+}

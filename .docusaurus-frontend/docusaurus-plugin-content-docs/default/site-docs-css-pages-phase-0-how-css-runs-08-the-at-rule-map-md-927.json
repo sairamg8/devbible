@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/the-at-rule-map",
+  "title": "The at-rule map",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/08-the-at-rule-map.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/the-at-rule-map",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/the-at-rule-map",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "The at-rule map",
+    "sidebar_label": "08 · The at-rule map",
+    "sidebar_position": 8
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "07 · Resets and normalisers",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/resets-and-normalisers"
+  },
+  "next": {
+    "title": "09 · @supports",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/supports-feature-queries"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-0-how-css-runs/resets-and-normalisers",
+  "title": "Resets and normalisers",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-0-how-css-runs/07-resets-and-normalisers.md",
+  "sourceDirName": "css/pages/phase-0-how-css-runs",
+  "slug": "/css/pages/phase-0-how-css-runs/resets-and-normalisers",
+  "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/resets-and-normalisers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Resets and normalisers",
+    "sidebar_label": "07 · Resets and normalisers",
+    "sidebar_position": 7
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "06 · User-agent stylesheets",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/user-agent-stylesheets"
+  },
+  "next": {
+    "title": "08 · The at-rule map",
+    "permalink": "/devbible/docs/css/pages/phase-0-how-css-runs/the-at-rule-map"
+  }
+}

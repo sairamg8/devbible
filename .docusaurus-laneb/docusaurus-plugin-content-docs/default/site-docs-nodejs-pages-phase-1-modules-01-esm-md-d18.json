@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/esm",
+  "title": "ESM — the standard module system",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/01-esm.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/esm",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/esm",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "ESM — the standard module system",
+    "sidebar_label": "01 · ESM",
+    "sidebar_position": 1
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/"
+  },
+  "next": {
+    "title": "02 · CommonJS",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/commonjs"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "eslint-oxlint/pages/README",
+  "title": "ESLint & Oxlint — Explanations",
+  "description": "The 21 imported pages for ESLint & Oxlint, in their original section order.",
+  "source": "@site/docs/eslint-oxlint/pages/README.md",
+  "sourceDirName": "eslint-oxlint/pages",
+  "slug": "/eslint-oxlint/pages/",
+  "permalink": "/devbible/docs/eslint-oxlint/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "ESLint & Oxlint — Explanations",
+    "sidebar_label": "Explanations",
+    "sidebar_position": 0
+  },
+  "sidebar": "eslintOxlintSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/eslint-oxlint/"
+  },
+  "next": {
+    "title": "Linting Landscape",
+    "permalink": "/devbible/docs/eslint-oxlint/pages/linting-landscape-and-tooling-decisions/why-choose-and-boundaries"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/logical-replication",
+  "title": "Logical replication",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/16-logical-replication.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops",
+  "slug": "/postgresql/pages/phase-13-ops/logical-replication",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/logical-replication",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Logical replication",
+    "sidebar_label": "16 · Logical replication",
+    "sidebar_position": 16
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Restoring & RPO/RTO",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/physical-backup/restoring-and-rpo"
+  },
+  "next": {
+    "title": "17 · Major upgrades",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/major-upgrades"
+  }
+}

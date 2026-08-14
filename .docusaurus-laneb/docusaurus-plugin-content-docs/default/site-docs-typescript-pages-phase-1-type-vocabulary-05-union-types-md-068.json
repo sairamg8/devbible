@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/union-types",
+  "title": "Union types",
+  "description": "Master",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/05-union-types.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/union-types",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/union-types",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Union types",
+    "sidebar_label": "05 · Union types",
+    "sidebar_position": 5
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "04 · Object types",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/object-types"
+  },
+  "next": {
+    "title": "06 · any, unknown, never, void",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/any-unknown-never-void"
+  }
+}

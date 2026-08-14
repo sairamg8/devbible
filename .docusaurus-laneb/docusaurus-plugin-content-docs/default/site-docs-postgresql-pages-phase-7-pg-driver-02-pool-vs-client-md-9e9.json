@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-7-pg-driver/pool-vs-client",
+  "title": "Pool vs Client",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-7-pg-driver/02-pool-vs-client.md",
+  "sourceDirName": "postgresql/pages/phase-7-pg-driver",
+  "slug": "/postgresql/pages/phase-7-pg-driver/pool-vs-client",
+  "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/pool-vs-client",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Pool vs Client",
+    "sidebar_label": "02 · Pool vs Client",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Install and wire",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/install-wire"
+  },
+  "next": {
+    "title": "03 · Connection config",
+    "permalink": "/devbible/docs/postgresql/pages/phase-7-pg-driver/connection-config"
+  }
+}

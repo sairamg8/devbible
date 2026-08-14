@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/release-cadence",
+  "title": "Release cadence and upgrades",
+  "description": "Know",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/12-release-cadence.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/release-cadence",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/release-cadence",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Release cadence and upgrades",
+    "sidebar_label": "12 · Release cadence",
+    "sidebar_position": 12
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "11 · Project layout",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/project-layout"
+  },
+  "next": {
+    "title": "13 · Playground and @ts-check",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/playground-and-ts-check"
+  }
+}

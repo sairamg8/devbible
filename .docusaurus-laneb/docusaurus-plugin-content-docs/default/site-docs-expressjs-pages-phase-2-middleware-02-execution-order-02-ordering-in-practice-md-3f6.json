@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/execution-order/ordering-in-practice",
+  "title": "Ordering in practice",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/02-execution-order/02-ordering-in-practice.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware/02-execution-order",
+  "slug": "/expressjs/pages/phase-2-middleware/execution-order/ordering-in-practice",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/execution-order/ordering-in-practice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Ordering in practice",
+    "sidebar_label": "02 · Ordering in practice",
+    "sidebar_position": 2
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "01 · The four levels",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/execution-order/the-four-levels"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/next-semantics/"
+  }
+}

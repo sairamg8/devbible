@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/every-error-that-arrives/programmer-errors-and-the-fallback",
+  "title": "Programmer errors and the fallback",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/08-every-error-that-arrives/03-programmer-errors-and-the-fallback.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors/08-every-error-that-arrives",
+  "slug": "/expressjs/pages/phase-5-errors/every-error-that-arrives/programmer-errors-and-the-fallback",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/every-error-that-arrives/programmer-errors-and-the-fallback",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Programmer errors and the fallback",
+    "sidebar_label": "03 · Programmer errors and the fallback",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · Database and network",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/every-error-that-arrives/database-and-network"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/combinators",
+  "title": "Promise combinators",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/09-combinators.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/combinators",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/combinators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Promise combinators",
+    "sidebar_label": "09 · Combinators",
+    "sidebar_position": 9
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "08 · async and await",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-await"
+  },
+  "next": {
+    "title": "10 · Sequential vs parallel",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/sequential-vs-parallel"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-1-everyday-loop/gitignore",
+  "title": "`.gitignore` — patterns, precedence, and the one hard limit",
+  "description": "Master",
+  "source": "@site/docs/git/pages/phase-1-everyday-loop/05-gitignore.md",
+  "sourceDirName": "git/pages/phase-1-everyday-loop",
+  "slug": "/git/pages/phase-1-everyday-loop/gitignore",
+  "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/gitignore",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "`.gitignore` — patterns, precedence, and the one hard limit",
+    "sidebar_label": "05 · .gitignore",
+    "sidebar_position": 5
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "04 · git diff",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/git-diff"
+  },
+  "next": {
+    "title": "06 · Ignoring ≠ untracking",
+    "permalink": "/devbible/docs/git/pages/phase-1-everyday-loop/ignoring-does-not-untrack"
+  }
+}

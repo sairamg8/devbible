@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/typescript-integration/type-inference-patterns",
+  "title": "TypeScript Integration: `RootState`, `AppDispatch` & Typed Thunks",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/09-typescript-integration/01-type-inference-patterns.md",
+  "sourceDirName": "redux-toolkit/pages/09-typescript-integration",
+  "slug": "/redux-toolkit/pages/typescript-integration/type-inference-patterns",
+  "permalink": "/devbible/docs/redux-toolkit/pages/typescript-integration/type-inference-patterns",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "TypeScript Integration: `RootState`, `AppDispatch` & Typed Thunks",
+    "sidebar_label": "TypeScript Integration",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "Immer Internals",
+    "permalink": "/devbible/docs/redux-toolkit/pages/immutability-and-immer/immer-internals"
+  },
+  "next": {
+    "title": "Redux DevTools",
+    "permalink": "/devbible/docs/redux-toolkit/pages/devtools-and-debugging/redux-devtools"
+  }
+}

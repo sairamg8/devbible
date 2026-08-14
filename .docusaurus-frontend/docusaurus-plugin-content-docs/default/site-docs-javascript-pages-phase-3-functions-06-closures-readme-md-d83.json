@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/closures/README",
+  "title": "06 · Closures",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/06-closures/README.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/06-closures",
+  "slug": "/javascript/pages/phase-3-functions/closures/",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/closures/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "06 · Closures",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "03 · Borrowing and cost",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/call-apply-bind/borrowing-and-cost"
+  },
+  "next": {
+    "title": "01 · What is captured",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/closures/what-is-captured"
+  }
+}

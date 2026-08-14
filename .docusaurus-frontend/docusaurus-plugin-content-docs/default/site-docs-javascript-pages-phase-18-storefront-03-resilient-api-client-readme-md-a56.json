@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/resilient-api-client/README",
+  "title": "03 · A resilient API client",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/03-resilient-api-client/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/03-resilient-api-client",
+  "slug": "/javascript/pages/phase-18-storefront/resilient-api-client/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "03 · A resilient API client",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · The dropdown",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/the-dropdown"
+  },
+  "next": {
+    "title": "01 · Composing the client",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/resilient-api-client/composing-the-client"
+  }
+}

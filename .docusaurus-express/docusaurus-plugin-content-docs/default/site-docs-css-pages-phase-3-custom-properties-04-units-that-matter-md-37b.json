@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-3-custom-properties/units-that-matter",
+  "title": "Units that matter for layout",
+  "description": "Understand",
+  "source": "@site/docs/css/pages/phase-3-custom-properties/04-units-that-matter.md",
+  "sourceDirName": "css/pages/phase-3-custom-properties",
+  "slug": "/css/pages/phase-3-custom-properties/units-that-matter",
+  "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/units-that-matter",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Units that matter for layout",
+    "sidebar_label": "04 · Units that matter for layout",
+    "sidebar_position": 4
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "03 · @property",
+    "permalink": "/devbible/docs/css/pages/phase-3-custom-properties/at-property"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-4-flexbox/"
+  }
+}

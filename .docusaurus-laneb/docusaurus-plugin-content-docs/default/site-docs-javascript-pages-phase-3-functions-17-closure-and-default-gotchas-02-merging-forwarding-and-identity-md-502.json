@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/closure-and-default-gotchas/merging-forwarding-and-identity",
+  "title": "17.2 · Merging, forwarding and identity",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-3-functions/17-closure-and-default-gotchas/02-merging-forwarding-and-identity.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/17-closure-and-default-gotchas",
+  "slug": "/javascript/pages/phase-3-functions/closure-and-default-gotchas/merging-forwarding-and-identity",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/closure-and-default-gotchas/merging-forwarding-and-identity",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "17.2 · Merging, forwarding and identity",
+    "sidebar_label": "2 · Merging, forwarding, identity",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "1 · null, undefined and APIs",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/closure-and-default-gotchas/null-undefined-and-the-api-boundary"
+  },
+  "next": {
+    "title": "3 · Which binding did you get?",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/closure-and-default-gotchas/which-binding-did-you-get"
+  }
+}

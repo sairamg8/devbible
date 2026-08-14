@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/lazy-initial-state",
+  "title": "Lazy initial state",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-3-state/09-lazy-initial-state.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/lazy-initial-state",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/lazy-initial-state",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Lazy initial state",
+    "sidebar_label": "09 · Lazy initial state",
+    "sidebar_position": 9
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "08 · What triggers a re-render",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/what-triggers-a-re-render"
+  },
+  "next": {
+    "title": "10 · Structuring state",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/structuring-state"
+  }
+}

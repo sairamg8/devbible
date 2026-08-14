@@ -1,0 +1,28 @@
+{
+  "id": "redux-toolkit/pages/rtk-query/api-slice-and-endpoints",
+  "title": "RTK Query: `createApi`, Query & Mutation Endpoints",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/redux-toolkit/pages/04-rtk-query/01-api-slice-and-endpoints.md",
+  "sourceDirName": "redux-toolkit/pages/04-rtk-query",
+  "slug": "/redux-toolkit/pages/rtk-query/api-slice-and-endpoints",
+  "permalink": "/devbible/docs/redux-toolkit/pages/rtk-query/api-slice-and-endpoints",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "RTK Query: `createApi`, Query & Mutation Endpoints",
+    "sidebar_label": "RTK Query",
+    "sidebar_position": 1
+  },
+  "sidebar": "reduxToolkitSidebar",
+  "previous": {
+    "title": "`createAsyncThunk`",
+    "permalink": "/devbible/docs/redux-toolkit/pages/async-thunks/create-async-thunk"
+  },
+  "next": {
+    "title": "RTK Query Cache",
+    "permalink": "/devbible/docs/redux-toolkit/pages/rtk-query/cache-management-and-invalidation"
+  }
+}

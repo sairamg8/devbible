@@ -1,0 +1,28 @@
+{
+  "id": "storybook/pages/core-concepts/component-driven-development",
+  "title": "Core Concepts: Component-Driven Development & CSF3",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/storybook/pages/01-core-concepts/01-component-driven-development.md",
+  "sourceDirName": "storybook/pages/01-core-concepts",
+  "slug": "/storybook/pages/core-concepts/component-driven-development",
+  "permalink": "/devbible/docs/storybook/pages/core-concepts/component-driven-development",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Core Concepts: Component-Driven Development & CSF3",
+    "sidebar_label": "Core Concepts",
+    "sidebar_position": 1
+  },
+  "sidebar": "storybookSidebar",
+  "previous": {
+    "title": "05 · Storybook 10 and packages",
+    "permalink": "/devbible/docs/storybook/pages/phase-0-how-storybook-runs/storybook-10-and-package-consolidation"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/storybook/pages/phase-1-story-format/"
+  }
+}

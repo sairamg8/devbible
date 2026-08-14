@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/views",
+  "title": "Views — naming a query, and their limits",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/07-views.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/views",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/views",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Views — naming a query, and their limits",
+    "sidebar_label": "07 · Views",
+    "sidebar_position": 7
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "06 · pg_trgm fuzzy",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/pg-trgm"
+  },
+  "next": {
+    "title": "08 · Triggers",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/triggers"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-15-algorithm-patterns/sliding-window/README",
+  "title": "02 · Sliding window",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-15-algorithm-patterns/02-sliding-window/README.md",
+  "sourceDirName": "javascript/pages/phase-15-algorithm-patterns/02-sliding-window",
+  "slug": "/javascript/pages/phase-15-algorithm-patterns/sliding-window/",
+  "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Sliding window",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Same direction",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/two-pointers/same-direction"
+  },
+  "next": {
+    "title": "01 · The template",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/the-template"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/configuration/entry-and-output-deep-dive",
+  "title": "Configuration Deep Dive: Entry & Output",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/02-configuration/01-entry-and-output-deep-dive.md",
+  "sourceDirName": "webpack/pages/02-configuration",
+  "slug": "/webpack/pages/configuration/entry-and-output-deep-dive",
+  "permalink": "/devbible/docs/webpack/pages/configuration/entry-and-output-deep-dive",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Configuration Deep Dive: Entry & Output",
+    "sidebar_label": "Configuration Deep Dive: Entry & Output",
+    "sidebar_position": 1
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Webpack Core Concepts",
+    "permalink": "/devbible/docs/webpack/pages/core-concepts/five-core-concepts-and-module-graph"
+  },
+  "next": {
+    "title": "Module Resolution: The `resolve` Object",
+    "permalink": "/devbible/docs/webpack/pages/module-resolution/the-resolve-object"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/microtasks-vs-macrotasks/using-microtasks",
+  "title": "03.2 · Using microtasks deliberately",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/03-microtasks-vs-macrotasks/02-using-microtasks.md",
+  "sourceDirName": "javascript/pages/phase-7-async/03-microtasks-vs-macrotasks",
+  "slug": "/javascript/pages/phase-7-async/microtasks-vs-macrotasks/using-microtasks",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/using-microtasks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "03.2 · Using microtasks deliberately",
+    "sidebar_label": "02 · Using microtasks",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The drain order",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/microtasks-vs-macrotasks/the-drain-order"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/callbacks/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/README",
+  "title": "Phase 5 — The built-in library",
+  "description": "26 topics. Grouped by object, not by method: array iteration is one page, not",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library",
+  "slug": "/javascript/pages/phase-5-built-in-library/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 5 — The built-in library",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Transforming objects",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/keys-values-entries/transforming-objects"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-creation-and-shape/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git/pages/phase-4-remotes/git-push",
+  "title": "`git push` in full",
+  "description": "Understand",
+  "source": "@site/docs/git/pages/phase-4-remotes/07-git-push.md",
+  "sourceDirName": "git/pages/phase-4-remotes",
+  "slug": "/git/pages/phase-4-remotes/git-push",
+  "permalink": "/devbible/docs/git/pages/phase-4-remotes/git-push",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "`git push` in full",
+    "sidebar_label": "07 · git push",
+    "sidebar_position": 7
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "06 · Force-pushing safely",
+    "permalink": "/devbible/docs/git/pages/phase-4-remotes/force-pushing-safely"
+  },
+  "next": {
+    "title": "08 · Transports and credentials",
+    "permalink": "/devbible/docs/git/pages/phase-4-remotes/transports-and-credentials"
+  }
+}

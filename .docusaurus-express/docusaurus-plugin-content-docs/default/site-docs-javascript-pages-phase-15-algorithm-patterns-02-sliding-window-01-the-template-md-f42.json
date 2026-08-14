@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-15-algorithm-patterns/sliding-window/the-template",
+  "title": "02.1 · The expand/shrink template",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-15-algorithm-patterns/02-sliding-window/01-the-template.md",
+  "sourceDirName": "javascript/pages/phase-15-algorithm-patterns/02-sliding-window",
+  "slug": "/javascript/pages/phase-15-algorithm-patterns/sliding-window/the-template",
+  "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/the-template",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · The expand/shrink template",
+    "sidebar_label": "01 · The template",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/"
+  },
+  "next": {
+    "title": "02 · Variants and traps",
+    "permalink": "/devbible/docs/javascript/pages/phase-15-algorithm-patterns/sliding-window/variants-and-traps"
+  }
+}

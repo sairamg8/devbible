@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/server-function-security/README",
+  "title": "Server Function security",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-10-server-components/06-server-function-security/README.md",
+  "sourceDirName": "react/pages/phase-10-server-components/06-server-function-security",
+  "slug": "/react/pages/phase-10-server-components/server-function-security/",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/server-function-security/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Server Function security",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "05 · What crosses the boundary",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/what-crosses-the-boundary"
+  },
+  "next": {
+    "title": "01 · Everything is an endpoint",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/server-function-security/everything-is-an-endpoint"
+  }
+}

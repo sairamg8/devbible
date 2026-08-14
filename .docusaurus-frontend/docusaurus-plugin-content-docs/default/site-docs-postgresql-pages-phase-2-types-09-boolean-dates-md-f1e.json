@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/boolean-dates",
+  "title": "boolean, date and interval",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-2-types/09-boolean-dates.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/boolean-dates",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/boolean-dates",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "boolean, date and interval",
+    "sidebar_label": "09 · boolean, date, interval",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · jsonb vs json",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/jsonb"
+  },
+  "next": {
+    "title": "10 · Arrays",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/arrays"
+  }
+}

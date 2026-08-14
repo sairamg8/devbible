@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-11-mvcc/mvcc",
+  "title": "MVCC: row versions and snapshots",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-11-mvcc/05-mvcc.md",
+  "sourceDirName": "postgresql/pages/phase-11-mvcc",
+  "slug": "/postgresql/pages/phase-11-mvcc/mvcc",
+  "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/mvcc",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "MVCC: row versions and snapshots",
+    "sidebar_label": "05 · MVCC snapshots",
+    "sidebar_position": 5
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "04 · Lost update",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/lost-update"
+  },
+  "next": {
+    "title": "06 · REPEATABLE READ SERIALIZABLE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-11-mvcc/isolation-levels"
+  }
+}

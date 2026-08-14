@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-0-express-basics/what-express-is/README",
+  "title": "What Express is",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-0-express-basics/01-what-express-is/README.md",
+  "sourceDirName": "expressjs/pages/phase-0-express-basics/01-what-express-is",
+  "slug": "/expressjs/pages/phase-0-express-basics/what-express-is/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "What Express is",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/"
+  },
+  "next": {
+    "title": "01 · The mapping problem",
+    "permalink": "/devbible/docs/expressjs/pages/phase-0-express-basics/what-express-is/the-mapping-problem"
+  }
+}

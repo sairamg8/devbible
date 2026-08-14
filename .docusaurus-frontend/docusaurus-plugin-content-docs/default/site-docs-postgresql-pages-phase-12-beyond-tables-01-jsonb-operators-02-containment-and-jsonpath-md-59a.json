@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/jsonb-operators/containment-and-jsonpath",
+  "title": "Containment and jsonpath",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/01-jsonb-operators/02-containment-and-jsonpath.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables/01-jsonb-operators",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/jsonb-operators/containment-and-jsonpath",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/containment-and-jsonpath",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Containment and jsonpath",
+    "sidebar_label": "02 · Containment and jsonpath",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · Accessors and paths",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/jsonb-operators/accessors-and-paths"
+  },
+  "next": {
+    "title": "02 · Column vs JSON",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/column-vs-json"
+  }
+}

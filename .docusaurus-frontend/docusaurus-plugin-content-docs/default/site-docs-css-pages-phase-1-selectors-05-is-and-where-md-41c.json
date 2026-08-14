@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-1-selectors/is-and-where",
+  "title": ":is() and :where()",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-1-selectors/05-is-and-where.md",
+  "sourceDirName": "css/pages/phase-1-selectors",
+  "slug": "/css/pages/phase-1-selectors/is-and-where",
+  "permalink": "/devbible/docs/css/pages/phase-1-selectors/is-and-where",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": ":is() and :where()",
+    "sidebar_label": "05 · :is() and :where()",
+    "sidebar_position": 5
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "04 · Selector lists",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/selector-lists"
+  },
+  "next": {
+    "title": "06 · :has()",
+    "permalink": "/devbible/docs/css/pages/phase-1-selectors/has"
+  }
+}

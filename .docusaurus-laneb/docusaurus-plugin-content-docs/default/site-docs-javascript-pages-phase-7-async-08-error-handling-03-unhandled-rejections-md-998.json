@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/error-handling/unhandled-rejections",
+  "title": "08.3 · Unhandled rejections",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/08-error-handling/03-unhandled-rejections.md",
+  "sourceDirName": "javascript/pages/phase-7-async/08-error-handling",
+  "slug": "/javascript/pages/phase-7-async/error-handling/unhandled-rejections",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/unhandled-rejections",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "08.3 · Unhandled rejections",
+    "sidebar_label": "03 · Unhandled rejections",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Rejections that vanish",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/rejections-that-vanish"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/sequential-vs-parallel/"
+  }
+}

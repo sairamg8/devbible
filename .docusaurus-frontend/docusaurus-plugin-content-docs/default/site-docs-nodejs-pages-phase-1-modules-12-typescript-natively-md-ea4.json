@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-1-modules/typescript-natively",
+  "title": "TypeScript without a build step",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-1-modules/12-typescript-natively.md",
+  "sourceDirName": "nodejs/pages/phase-1-modules",
+  "slug": "/nodejs/pages/phase-1-modules/typescript-natively",
+  "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/typescript-natively",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "TypeScript without a build step",
+    "sidebar_label": "12 · TypeScript natively",
+    "sidebar_position": 12
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "11 · Package managers",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/package-managers"
+  },
+  "next": {
+    "title": "13 · Publishing",
+    "permalink": "/devbible/docs/nodejs/pages/phase-1-modules/publishing"
+  }
+}

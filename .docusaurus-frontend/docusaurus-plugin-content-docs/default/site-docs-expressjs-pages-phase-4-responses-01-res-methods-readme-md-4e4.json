@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/res-methods/README",
+  "title": "res methods",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/01-res-methods/README.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses/01-res-methods",
+  "slug": "/expressjs/pages/phase-4-responses/res-methods/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "res methods",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/"
+  },
+  "next": {
+    "title": "01 · What res.send does",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/res-methods/what-res-send-does"
+  }
+}

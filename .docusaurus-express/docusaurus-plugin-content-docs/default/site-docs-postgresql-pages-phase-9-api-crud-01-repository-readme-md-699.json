@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-9-api-crud/repository/README",
+  "title": "A repository module per resource",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-9-api-crud/01-repository/README.md",
+  "sourceDirName": "postgresql/pages/phase-9-api-crud/01-repository",
+  "slug": "/postgresql/pages/phase-9-api-crud/repository/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/repository/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "A repository module per resource",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/"
+  },
+  "next": {
+    "title": "01 · The executor contract",
+    "permalink": "/devbible/docs/postgresql/pages/phase-9-api-crud/repository/the-executor-contract"
+  }
+}

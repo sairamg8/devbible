@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/timestamptz",
+  "title": "timestamptz vs timestamp",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/04-timestamptz.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/timestamptz",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/timestamptz",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "timestamptz vs timestamp",
+    "sidebar_label": "04 · timestamptz",
+    "sidebar_position": 4
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · text vs varchar",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/text"
+  },
+  "next": {
+    "title": "05 · Time zones",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/time-zones"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-7-custom-hooks/why-the-rules-exist/deriving-the-forbidden-places",
+  "title": "Deriving every forbidden place",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-7-custom-hooks/05-why-the-rules-exist/02-deriving-the-forbidden-places.md",
+  "sourceDirName": "react/pages/phase-7-custom-hooks/05-why-the-rules-exist",
+  "slug": "/react/pages/phase-7-custom-hooks/why-the-rules-exist/deriving-the-forbidden-places",
+  "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/why-the-rules-exist/deriving-the-forbidden-places",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Deriving every forbidden place",
+    "sidebar_label": "02 · Deriving the forbidden places",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · The array and the index",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/why-the-rules-exist/the-array-and-the-index"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-7-custom-hooks/designing-a-hooks-api/"
+  }
+}

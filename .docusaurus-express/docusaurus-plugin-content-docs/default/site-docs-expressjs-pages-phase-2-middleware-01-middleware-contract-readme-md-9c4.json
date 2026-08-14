@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-2-middleware/middleware-contract/README",
+  "title": "The middleware contract",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-2-middleware/01-middleware-contract/README.md",
+  "sourceDirName": "expressjs/pages/phase-2-middleware/01-middleware-contract",
+  "slug": "/expressjs/pages/phase-2-middleware/middleware-contract/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-contract/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "The middleware contract",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/"
+  },
+  "next": {
+    "title": "01 · The shape and the endings",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/middleware-contract/the-shape-and-the-endings"
+  }
+}

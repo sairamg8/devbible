@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-9-dom/attributes-vs-properties/README",
+  "title": "05 · Attributes versus properties",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-9-dom/05-attributes-vs-properties/README.md",
+  "sourceDirName": "javascript/pages/phase-9-dom/05-attributes-vs-properties",
+  "slug": "/javascript/pages/phase-9-dom/attributes-vs-properties/",
+  "permalink": "/devbible/docs/javascript/pages/phase-9-dom/attributes-vs-properties/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · Attributes versus properties",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The three properties",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/text-vs-html/the-three-properties"
+  },
+  "next": {
+    "title": "01 · Two parallel worlds",
+    "permalink": "/devbible/docs/javascript/pages/phase-9-dom/attributes-vs-properties/two-parallel-worlds"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-4-objects-and-classes/this-in-methods/how-methods-lose-this",
+  "title": "07.1 · How a method loses `this`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-4-objects-and-classes/07-this-in-methods/01-how-methods-lose-this.md",
+  "sourceDirName": "javascript/pages/phase-4-objects-and-classes/07-this-in-methods",
+  "slug": "/javascript/pages/phase-4-objects-and-classes/this-in-methods/how-methods-lose-this",
+  "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/how-methods-lose-this",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "07.1 · How a method loses `this`",
+    "sidebar_label": "01 · How a method loses this",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/"
+  },
+  "next": {
+    "title": "02 · The fixes",
+    "permalink": "/devbible/docs/javascript/pages/phase-4-objects-and-classes/this-in-methods/the-fixes"
+  }
+}

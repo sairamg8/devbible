@@ -1,0 +1,28 @@
+{
+  "id": "babel/pages/core-compilation-pipeline/parse-transform-generate-and-api",
+  "title": "Babel Core Pipeline: Parse → Transform → Generate & Programmatic API",
+  "description": "Covers syllabus §2.1 Parse → Transform → Generate, §2.2 @babel/core API, and §2.3 AST Fundamentals & Paths.",
+  "source": "@site/docs/babel/pages/02-core-compilation-pipeline/01-parse-transform-generate-and-api.md",
+  "sourceDirName": "babel/pages/02-core-compilation-pipeline",
+  "slug": "/babel/pages/core-compilation-pipeline/parse-transform-generate-and-api",
+  "permalink": "/devbible/docs/babel/pages/core-compilation-pipeline/parse-transform-generate-and-api",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Babel Core Pipeline: Parse → Transform → Generate & Programmatic API",
+    "sidebar_label": "Babel Core Pipeline",
+    "sidebar_position": 1
+  },
+  "sidebar": "babelSidebar",
+  "previous": {
+    "title": "Why Babel & the Compiler Landscape (2026)",
+    "permalink": "/devbible/docs/babel/pages/why-babel-and-the-compiler-landscape/what-babel-is-and-when-it-matters"
+  },
+  "next": {
+    "title": "Babel Configuration",
+    "permalink": "/devbible/docs/babel/pages/configuration-system/config-files-root-env-overrides"
+  }
+}

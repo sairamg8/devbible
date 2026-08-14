@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-4-effects/cleanup/when-cleanup-is-not-the-answer",
+  "title": "When cleanup is not the answer",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-4-effects/04-cleanup/03-when-cleanup-is-not-the-answer.md",
+  "sourceDirName": "react/pages/phase-4-effects/04-cleanup",
+  "slug": "/react/pages/phase-4-effects/cleanup/when-cleanup-is-not-the-answer",
+  "permalink": "/devbible/docs/react/pages/phase-4-effects/cleanup/when-cleanup-is-not-the-answer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "When cleanup is not the answer",
+    "sidebar_label": "03 · When cleanup is not the answer",
+    "sidebar_position": 3
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "02 · Cleanup recipes",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/cleanup/cleanup-recipes"
+  },
+  "next": {
+    "title": "05 · StrictMode double-invocation",
+    "permalink": "/devbible/docs/react/pages/phase-4-effects/strictmode-double-invocation"
+  }
+}

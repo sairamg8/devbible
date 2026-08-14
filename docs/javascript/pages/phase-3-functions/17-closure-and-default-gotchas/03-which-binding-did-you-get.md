@@ -33,7 +33,7 @@ closure.
 
 **The diagnostic question that separates them: is the wrong value the *last* one, or the
 *first* one?** Last → too few bindings, and this chunk has the fix. First → too many, and
-[17.4](./04-snapshots-and-the-four-fixes.md) has it.
+[17.4](./04-snapshots-and-the-four-fixes.md) and [17.5](./05-the-stale-closure.md) have it.
 
 ## Loops: which constructs give a fresh binding
 

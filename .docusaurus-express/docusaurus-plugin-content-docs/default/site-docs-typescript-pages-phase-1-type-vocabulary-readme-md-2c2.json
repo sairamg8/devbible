@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-1-type-vocabulary/README",
+  "title": "Phase 1 — The type vocabulary",
+  "description": "Verified: 2026-08 on TypeScript 7.0.2 and Node 24.19.0. Every console",
+  "source": "@site/docs/typescript/pages/phase-1-type-vocabulary/README.md",
+  "sourceDirName": "typescript/pages/phase-1-type-vocabulary",
+  "slug": "/typescript/pages/phase-1-type-vocabulary/",
+  "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Phase 1 — The type vocabulary",
+    "sidebar_label": "Phase 1 · The type vocabulary",
+    "sidebar_position": 1
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "13 · Playground and @ts-check",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/playground-and-ts-check"
+  },
+  "next": {
+    "title": "01 · Primitives and inference",
+    "permalink": "/devbible/docs/typescript/pages/phase-1-type-vocabulary/primitives-and-inference"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/usesyncexternalstore",
+  "title": "useSyncExternalStore",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/15-usesyncexternalstore.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/usesyncexternalstore",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/usesyncexternalstore",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "useSyncExternalStore",
+    "sidebar_label": "15 · useSyncExternalStore",
+    "sidebar_position": 15
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "14 · useId",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/useid"
+  },
+  "next": {
+    "title": "16 · useDebugValue",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/usedebugvalue"
+  }
+}

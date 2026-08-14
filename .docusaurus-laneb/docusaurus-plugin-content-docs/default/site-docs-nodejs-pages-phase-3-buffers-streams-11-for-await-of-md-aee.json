@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-3-buffers-streams/for-await-of",
+  "title": "Consuming with for await...of",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-3-buffers-streams/11-for-await-of.md",
+  "sourceDirName": "nodejs/pages/phase-3-buffers-streams",
+  "slug": "/nodejs/pages/phase-3-buffers-streams/for-await-of",
+  "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/for-await-of",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Consuming with for await...of",
+    "sidebar_label": "11 · for await...of",
+    "sidebar_position": 11
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "10 · pipeline over pipe",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/pipeline"
+  },
+  "next": {
+    "title": "12 · Events and modes",
+    "permalink": "/devbible/docs/nodejs/pages/phase-3-buffers-streams/stream-events-and-modes"
+  }
+}

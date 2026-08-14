@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-10-server-components/december-2025-advisories",
+  "title": "The December 2025 advisories",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-10-server-components/12-december-2025-advisories.md",
+  "sourceDirName": "react/pages/phase-10-server-components",
+  "slug": "/react/pages/phase-10-server-components/december-2025-advisories",
+  "permalink": "/devbible/docs/react/pages/phase-10-server-components/december-2025-advisories",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "The December 2025 advisories",
+    "sidebar_label": "12 · The December 2025 advisories",
+    "sidebar_position": 12
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "11 · Where interactivity goes",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/where-interactivity-goes"
+  },
+  "next": {
+    "title": "13 · The RSC payload",
+    "permalink": "/devbible/docs/react/pages/phase-10-server-components/the-rsc-payload"
+  }
+}

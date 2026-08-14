@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-3-state/state-is-a-snapshot",
+  "title": "State is a snapshot",
+  "description": "Master",
+  "source": "@site/docs/react/pages/phase-3-state/02-state-is-a-snapshot.md",
+  "sourceDirName": "react/pages/phase-3-state",
+  "slug": "/react/pages/phase-3-state/state-is-a-snapshot",
+  "permalink": "/devbible/docs/react/pages/phase-3-state/state-is-a-snapshot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "State is a snapshot",
+    "sidebar_label": "02 · State is a snapshot",
+    "sidebar_position": 2
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "01 · useState",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/usestate"
+  },
+  "next": {
+    "title": "03 · Updater functions",
+    "permalink": "/devbible/docs/react/pages/phase-3-state/updater-functions"
+  }
+}

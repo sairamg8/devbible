@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-4-filesystem/stat-and-existence",
+  "title": "stat and checking existence",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-4-filesystem/08-stat-and-existence.md",
+  "sourceDirName": "nodejs/pages/phase-4-filesystem",
+  "slug": "/nodejs/pages/phase-4-filesystem/stat-and-existence",
+  "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/stat-and-existence",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "stat and checking existence",
+    "sidebar_label": "08 · stat, existence",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · Directories",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/directories"
+  },
+  "next": {
+    "title": "09 · File handles",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/file-handles"
+  }
+}

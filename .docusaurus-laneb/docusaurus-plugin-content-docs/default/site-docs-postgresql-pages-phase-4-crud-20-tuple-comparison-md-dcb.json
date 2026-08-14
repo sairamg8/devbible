@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-4-crud/tuple-comparison",
+  "title": "Row constructors and tuple comparison",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-4-crud/20-tuple-comparison.md",
+  "sourceDirName": "postgresql/pages/phase-4-crud",
+  "slug": "/postgresql/pages/phase-4-crud/tuple-comparison",
+  "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/tuple-comparison",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Row constructors and tuple comparison",
+    "sidebar_label": "20 · Tuple comparison",
+    "sidebar_position": 20
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "19 · VALUES and unnest",
+    "permalink": "/devbible/docs/postgresql/pages/phase-4-crud/values-unnest"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/"
+  }
+}

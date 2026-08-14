@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-16-dynamic-programming/what-dp-is/README",
+  "title": "01 · What DP is",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-16-dynamic-programming/01-what-dp-is/README.md",
+  "sourceDirName": "javascript/pages/phase-16-dynamic-programming/01-what-dp-is",
+  "slug": "/javascript/pages/phase-16-dynamic-programming/what-dp-is/",
+  "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "01 · What DP is",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/"
+  },
+  "next": {
+    "title": "01 · The two conditions",
+    "permalink": "/devbible/docs/javascript/pages/phase-16-dynamic-programming/what-dp-is/the-two-conditions"
+  }
+}

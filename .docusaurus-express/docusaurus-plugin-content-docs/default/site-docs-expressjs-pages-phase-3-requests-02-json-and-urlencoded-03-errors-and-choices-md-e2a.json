@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/json-and-urlencoded/errors-and-choices",
+  "title": "Errors and choices",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/02-json-and-urlencoded/03-errors-and-choices.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests/02-json-and-urlencoded",
+  "slug": "/expressjs/pages/phase-3-requests/json-and-urlencoded/errors-and-choices",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/errors-and-choices",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Errors and choices",
+    "sidebar_label": "03 · Errors and choices",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · The parsers and their options",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/json-and-urlencoded/the-parsers-and-their-options"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/size-limits/"
+  }
+}

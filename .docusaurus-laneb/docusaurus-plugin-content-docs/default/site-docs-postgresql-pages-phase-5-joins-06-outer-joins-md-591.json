@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/outer-joins",
+  "title": "RIGHT and FULL OUTER",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/06-outer-joins.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/outer-joins",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/outer-joins",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "RIGHT and FULL OUTER",
+    "sidebar_label": "06 · OUTER",
+    "sidebar_position": 6
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "05 · N-N",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/nn-join-table"
+  },
+  "next": {
+    "title": "07 · CROSS JOIN",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/cross-join"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-10-indexes/index-not-used",
+  "title": "Why an index is not being used",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-10-indexes/05-index-not-used.md",
+  "sourceDirName": "postgresql/pages/phase-10-indexes",
+  "slug": "/postgresql/pages/phase-10-indexes/index-not-used",
+  "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/index-not-used",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Why an index is not being used",
+    "sidebar_label": "05 · Index not used",
+    "sidebar_position": 5
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "04 · Scan types",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/scan-types"
+  },
+  "next": {
+    "title": "06 · Multicolumn",
+    "permalink": "/devbible/docs/postgresql/pages/phase-10-indexes/multicolumn"
+  }
+}

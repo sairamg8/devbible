@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-6-container-queries/container-queries",
+  "title": "Container queries",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-6-container-queries/01-container-queries.md",
+  "sourceDirName": "css/pages/phase-6-container-queries",
+  "slug": "/css/pages/phase-6-container-queries/container-queries",
+  "permalink": "/devbible/docs/css/pages/phase-6-container-queries/container-queries",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Container queries",
+    "sidebar_label": "01 · Container queries",
+    "sidebar_position": 1
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/css/pages/phase-6-container-queries/"
+  },
+  "next": {
+    "title": "02 · Layouts that need no query",
+    "permalink": "/devbible/docs/css/pages/phase-6-container-queries/layouts-that-need-no-query"
+  }
+}

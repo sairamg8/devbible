@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-12-browser-platform/devtools/the-panels",
+  "title": "01.2 · The panels",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-12-browser-platform/01-devtools/02-the-panels.md",
+  "sourceDirName": "javascript/pages/phase-12-browser-platform/01-devtools",
+  "slug": "/javascript/pages/phase-12-browser-platform/devtools/the-panels",
+  "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/devtools/the-panels",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "01.2 · The panels",
+    "sidebar_label": "02 · The panels",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "01 · The console API",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/devtools/the-console-api"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/client-side-security/"
+  }
+}

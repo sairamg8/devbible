@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-10-app-factory/health-and-boot",
+  "title": "Health checks and boot order",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-10-app-factory/05-health-and-boot.md",
+  "sourceDirName": "expressjs/pages/phase-10-app-factory",
+  "slug": "/expressjs/pages/phase-10-app-factory/health-and-boot",
+  "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/health-and-boot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Health checks and boot order",
+    "sidebar_label": "05 · Health · boot",
+    "sidebar_position": 5
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "04 · Auth in tests",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/auth-in-tests"
+  },
+  "next": {
+    "title": "06 · Shutdown · entry",
+    "permalink": "/devbible/docs/expressjs/pages/phase-10-app-factory/shutdown-and-entrypoint"
+  }
+}

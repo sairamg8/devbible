@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-8-schema-from-node/copy-streams",
+  "title": "COPY FROM STDIN with pg-copy-streams",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-8-schema-from-node/09-copy-streams.md",
+  "sourceDirName": "postgresql/pages/phase-8-schema-from-node",
+  "slug": "/postgresql/pages/phase-8-schema-from-node/copy-streams",
+  "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/copy-streams",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "COPY FROM STDIN with pg-copy-streams",
+    "sidebar_label": "09 · COPY streams",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · Minimal runner",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/minimal-runner"
+  },
+  "next": {
+    "title": "10 · Local dev database",
+    "permalink": "/devbible/docs/postgresql/pages/phase-8-schema-from-node/local-dev-db"
+  }
+}

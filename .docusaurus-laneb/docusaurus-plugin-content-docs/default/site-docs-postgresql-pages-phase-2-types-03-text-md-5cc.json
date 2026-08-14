@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/text",
+  "title": "text vs varchar vs char",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/03-text.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/text",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/text",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "text vs varchar vs char",
+    "sidebar_label": "03 · text vs varchar",
+    "sidebar_position": 3
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · numeric vs float",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/numeric-vs-float"
+  },
+  "next": {
+    "title": "04 · timestamptz",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/timestamptz"
+  }
+}

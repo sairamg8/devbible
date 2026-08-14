@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-7-background-work/sync-vs-background",
+  "title": "Sync vs background — what must never happen in the request path",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-7-background-work/01-sync-vs-background.md",
+  "sourceDirName": "nodejs/pages/phase-7-background-work",
+  "slug": "/nodejs/pages/phase-7-background-work/sync-vs-background",
+  "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/sync-vs-background",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Sync vs background — what must never happen in the request path",
+    "sidebar_label": "01 · Sync vs background",
+    "sidebar_position": 1
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/"
+  },
+  "next": {
+    "title": "02 · Job queues",
+    "permalink": "/devbible/docs/nodejs/pages/phase-7-background-work/job-queues"
+  }
+}

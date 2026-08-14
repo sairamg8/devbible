@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-8-modules-errors/error-and-subclasses/README",
+  "title": "03 · Error and its subclasses",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-8-modules-errors/03-error-and-subclasses/README.md",
+  "sourceDirName": "javascript/pages/phase-8-modules-errors/03-error-and-subclasses",
+  "slug": "/javascript/pages/phase-8-modules-errors/error-and-subclasses/",
+  "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/error-and-subclasses/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "03 · Error and its subclasses",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Deferred and hoisted",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/module-semantics/deferred-and-hoisted"
+  },
+  "next": {
+    "title": "01 · The Error object",
+    "permalink": "/devbible/docs/javascript/pages/phase-8-modules-errors/error-and-subclasses/the-error-object"
+  }
+}

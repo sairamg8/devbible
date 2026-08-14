@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-5-joins/nn-join-table",
+  "title": "Reading N-N relationships",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-5-joins/05-nn-join-table.md",
+  "sourceDirName": "postgresql/pages/phase-5-joins",
+  "slug": "/postgresql/pages/phase-5-joins/nn-join-table",
+  "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/nn-join-table",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Reading N-N relationships",
+    "sidebar_label": "05 · N-N",
+    "sidebar_position": 5
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "04 · Multi joins",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/multi-join"
+  },
+  "next": {
+    "title": "06 · OUTER",
+    "permalink": "/devbible/docs/postgresql/pages/phase-5-joins/outer-joins"
+  }
+}

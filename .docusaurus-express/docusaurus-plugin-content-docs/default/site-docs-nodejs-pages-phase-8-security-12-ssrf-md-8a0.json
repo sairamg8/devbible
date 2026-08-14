@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-8-security/ssrf",
+  "title": "SSRF",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-8-security/12-ssrf.md",
+  "sourceDirName": "nodejs/pages/phase-8-security",
+  "slug": "/nodejs/pages/phase-8-security/ssrf",
+  "permalink": "/devbible/docs/nodejs/pages/phase-8-security/ssrf",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "SSRF",
+    "sidebar_label": "12 · SSRF",
+    "sidebar_position": 12
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "11 · CSRF",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/csrf"
+  },
+  "next": {
+    "title": "13 · Prototype pollution",
+    "permalink": "/devbible/docs/nodejs/pages/phase-8-security/prototype-pollution"
+  }
+}

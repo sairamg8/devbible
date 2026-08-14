@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-1-psql/psqlrc",
+  "title": ".psqlrc, the prompt and history",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-1-psql/13-psqlrc.md",
+  "sourceDirName": "postgresql/pages/phase-1-psql",
+  "slug": "/postgresql/pages/phase-1-psql/psqlrc",
+  "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/psqlrc",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": ".psqlrc, the prompt and history",
+    "sidebar_label": "13 · .psqlrc",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · Who and privileges",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/who-and-privileges"
+  },
+  "next": {
+    "title": "14 · \\errverbose and SQLSTATE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-1-psql/errverbose"
+  }
+}

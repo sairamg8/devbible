@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-13-ops/physical-backup/README",
+  "title": "Physical backup and PITR",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-13-ops/15-physical-backup/README.md",
+  "sourceDirName": "postgresql/pages/phase-13-ops/15-physical-backup",
+  "slug": "/postgresql/pages/phase-13-ops/physical-backup/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/physical-backup/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Physical backup and PITR",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "03 · Performance & practice",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/rls/performance-and-practice"
+  },
+  "next": {
+    "title": "01 · Base backups & archiving",
+    "permalink": "/devbible/docs/postgresql/pages/phase-13-ops/physical-backup/archiving"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-11-deployment/boot-sequence",
+  "title": "Boot sequence — validate, connect, listen, ready",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-11-deployment/02-boot-sequence.md",
+  "sourceDirName": "nodejs/pages/phase-11-deployment",
+  "slug": "/nodejs/pages/phase-11-deployment/boot-sequence",
+  "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/boot-sequence",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Boot sequence — validate, connect, listen, ready",
+    "sidebar_label": "02 · Boot sequence",
+    "sidebar_position": 2
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "01 · 12-factor config",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/twelve-factor-config"
+  },
+  "next": {
+    "title": "03 · Dockerizing Node",
+    "permalink": "/devbible/docs/nodejs/pages/phase-11-deployment/dockerizing-node"
+  }
+}

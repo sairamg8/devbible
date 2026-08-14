@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-12-beyond-tables/listen-notify",
+  "title": "LISTEN/NOTIFY — push from the database",
+  "description": "Should Know",
+  "source": "@site/docs/postgresql/pages/phase-12-beyond-tables/13-listen-notify.md",
+  "sourceDirName": "postgresql/pages/phase-12-beyond-tables",
+  "slug": "/postgresql/pages/phase-12-beyond-tables/listen-notify",
+  "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/listen-notify",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "LISTEN/NOTIFY — push from the database",
+    "sidebar_label": "13 · LISTEN/NOTIFY",
+    "sidebar_position": 13
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "12 · PL/pgSQL",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/plpgsql"
+  },
+  "next": {
+    "title": "14 · Partitioning",
+    "permalink": "/devbible/docs/postgresql/pages/phase-12-beyond-tables/partitioning"
+  }
+}

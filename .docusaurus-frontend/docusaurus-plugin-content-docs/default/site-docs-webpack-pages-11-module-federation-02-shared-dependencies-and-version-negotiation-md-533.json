@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/module-federation/shared-dependencies-and-version-negotiation",
+  "title": "Module Federation: Shared Dependencies & Version Negotiation",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/11-module-federation/02-shared-dependencies-and-version-negotiation.md",
+  "sourceDirName": "webpack/pages/11-module-federation",
+  "slug": "/webpack/pages/module-federation/shared-dependencies-and-version-negotiation",
+  "permalink": "/devbible/docs/webpack/pages/module-federation/shared-dependencies-and-version-negotiation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Module Federation: Shared Dependencies & Version Negotiation",
+    "sidebar_label": "Module Federation",
+    "sidebar_position": 2
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Module Federation Fundamentals",
+    "permalink": "/devbible/docs/webpack/pages/module-federation/fundamentals-remotes-and-exposes"
+  },
+  "next": {
+    "title": "Module Federation",
+    "permalink": "/devbible/docs/webpack/pages/module-federation/dynamic-remotes-and-runtime-loading"
+  }
+}

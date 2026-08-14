@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-13-complexity/big-o/what-the-notation-says",
+  "title": "01.1 · What the notation says",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-13-complexity/01-big-o/01-what-the-notation-says.md",
+  "sourceDirName": "javascript/pages/phase-13-complexity/01-big-o",
+  "slug": "/javascript/pages/phase-13-complexity/big-o/what-the-notation-says",
+  "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/big-o/what-the-notation-says",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "01.1 · What the notation says",
+    "sidebar_label": "01 · What it says",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/big-o/"
+  },
+  "next": {
+    "title": "02 · Reading a bound",
+    "permalink": "/devbible/docs/javascript/pages/phase-13-complexity/big-o/reading-a-bound"
+  }
+}

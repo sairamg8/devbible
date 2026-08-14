@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-5-errors/error-contract/making-it-stick",
+  "title": "Making it stick",
+  "description": "Master",
+  "source": "@site/docs/expressjs/pages/phase-5-errors/03-error-contract/03-making-it-stick.md",
+  "sourceDirName": "expressjs/pages/phase-5-errors/03-error-contract",
+  "slug": "/expressjs/pages/phase-5-errors/error-contract/making-it-stick",
+  "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-contract/making-it-stick",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Making it stick",
+    "sidebar_label": "03 · Making it stick",
+    "sidebar_position": 3
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "02 · What is safe to expose",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/error-contract/what-is-safe-to-expose"
+  },
+  "next": {
+    "title": "04 · HTTP mapping",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/mapping-to-http"
+  }
+}

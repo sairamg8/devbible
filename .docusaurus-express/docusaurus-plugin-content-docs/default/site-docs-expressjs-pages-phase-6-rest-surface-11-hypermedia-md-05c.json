@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-6-rest-surface/hypermedia",
+  "title": "Hypermedia and HATEOAS",
+  "description": "When Needed",
+  "source": "@site/docs/expressjs/pages/phase-6-rest-surface/11-hypermedia.md",
+  "sourceDirName": "expressjs/pages/phase-6-rest-surface",
+  "slug": "/expressjs/pages/phase-6-rest-surface/hypermedia",
+  "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/hypermedia",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Hypermedia and HATEOAS",
+    "sidebar_label": "11 · Hypermedia",
+    "sidebar_position": 11
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "10 · PATCH · bulk",
+    "permalink": "/devbible/docs/expressjs/pages/phase-6-rest-surface/patch-and-bulk"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-7-layering/"
+  }
+}

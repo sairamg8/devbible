@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/reduce/README",
+  "title": "05 · `reduce`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/05-reduce/README.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/05-reduce",
+  "slug": "/javascript/pages/phase-5-built-in-library/reduce/",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/reduce/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "05 · `reduce`",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Callbacks, holes, async",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/array-iteration-methods/callbacks-holes-and-async"
+  },
+  "next": {
+    "title": "01 · The shape",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/reduce/the-shape"
+  }
+}

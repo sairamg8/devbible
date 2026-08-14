@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-3-functions/arrow-functions-and-this/lexical-this",
+  "title": "04.1 · Lexical `this` and the missing bindings",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-3-functions/04-arrow-functions-and-this/01-lexical-this.md",
+  "sourceDirName": "javascript/pages/phase-3-functions/04-arrow-functions-and-this",
+  "slug": "/javascript/pages/phase-3-functions/arrow-functions-and-this/lexical-this",
+  "permalink": "/devbible/docs/javascript/pages/phase-3-functions/arrow-functions-and-this/lexical-this",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "04.1 · Lexical `this` and the missing bindings",
+    "sidebar_label": "01 · Lexical this",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/arrow-functions-and-this/"
+  },
+  "next": {
+    "title": "02 · Syntax and when not to",
+    "permalink": "/devbible/docs/javascript/pages/phase-3-functions/arrow-functions-and-this/syntax-and-when-not-to"
+  }
+}

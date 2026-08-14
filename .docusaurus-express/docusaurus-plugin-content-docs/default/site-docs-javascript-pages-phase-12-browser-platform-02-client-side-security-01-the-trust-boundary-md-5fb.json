@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-12-browser-platform/client-side-security/the-trust-boundary",
+  "title": "02.1 · The trust boundary",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-12-browser-platform/02-client-side-security/01-the-trust-boundary.md",
+  "sourceDirName": "javascript/pages/phase-12-browser-platform/02-client-side-security",
+  "slug": "/javascript/pages/phase-12-browser-platform/client-side-security/the-trust-boundary",
+  "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/client-side-security/the-trust-boundary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · The trust boundary",
+    "sidebar_label": "01 · The trust boundary",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/client-side-security/"
+  },
+  "next": {
+    "title": "02 · Windows and frames",
+    "permalink": "/devbible/docs/javascript/pages/phase-12-browser-platform/client-side-security/windows-and-frames"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-18-storefront/search-autocomplete/README",
+  "title": "02 · Search with autocomplete",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-18-storefront/02-search-autocomplete/README.md",
+  "sourceDirName": "javascript/pages/phase-18-storefront/02-search-autocomplete",
+  "slug": "/javascript/pages/phase-18-storefront/search-autocomplete/",
+  "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "02 · Search with autocomplete",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · Rendering and the request",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/product-grid/rendering-and-the-request"
+  },
+  "next": {
+    "title": "01 · The three bugs",
+    "permalink": "/devbible/docs/javascript/pages/phase-18-storefront/search-autocomplete/the-three-bugs"
+  }
+}

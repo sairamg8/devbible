@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/README",
+  "title": "Webpack — Explanations",
+  "description": "The 21 imported pages for Webpack, in their original section order.",
+  "source": "@site/docs/webpack/pages/README.md",
+  "sourceDirName": "webpack/pages",
+  "slug": "/webpack/pages/",
+  "permalink": "/devbible/docs/webpack/pages/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Webpack — Explanations",
+    "sidebar_label": "Explanations",
+    "sidebar_position": 0
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/webpack/"
+  },
+  "next": {
+    "title": "Webpack Core Concepts",
+    "permalink": "/devbible/docs/webpack/pages/core-concepts/five-core-concepts-and-module-graph"
+  }
+}

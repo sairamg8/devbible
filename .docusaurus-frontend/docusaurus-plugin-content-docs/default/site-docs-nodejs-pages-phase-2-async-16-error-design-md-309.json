@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/error-design",
+  "title": "Error design",
+  "description": "Understand",
+  "source": "@site/docs/nodejs/pages/phase-2-async/16-error-design.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/error-design",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/error-design",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "title": "Error design",
+    "sidebar_label": "16 · Error design",
+    "sidebar_position": 16
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "15 · Unhandled rejections",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/unhandled-rejections"
+  },
+  "next": {
+    "title": "17 · Promise anti-patterns",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/promise-antipatterns"
+  }
+}

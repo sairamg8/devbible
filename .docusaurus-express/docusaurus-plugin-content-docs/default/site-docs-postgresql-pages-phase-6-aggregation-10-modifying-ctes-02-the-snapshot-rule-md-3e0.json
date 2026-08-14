@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/modifying-ctes/the-snapshot-rule",
+  "title": "The snapshot rule",
+  "description": "Understand",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/10-modifying-ctes/02-the-snapshot-rule.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/10-modifying-ctes",
+  "slug": "/postgresql/pages/phase-6-aggregation/modifying-ctes/the-snapshot-rule",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/modifying-ctes/the-snapshot-rule",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "The snapshot rule",
+    "sidebar_label": "02 · The snapshot rule",
+    "sidebar_position": 2
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "01 · One statement, several writes",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/modifying-ctes/one-statement-many-writes"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/subqueries/"
+  }
+}

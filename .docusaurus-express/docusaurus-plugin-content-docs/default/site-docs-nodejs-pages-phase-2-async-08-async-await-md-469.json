@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-2-async/async-await",
+  "title": "async and await",
+  "description": "Master",
+  "source": "@site/docs/nodejs/pages/phase-2-async/08-async-await.md",
+  "sourceDirName": "nodejs/pages/phase-2-async",
+  "slug": "/nodejs/pages/phase-2-async/async-await",
+  "permalink": "/devbible/docs/nodejs/pages/phase-2-async/async-await",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "async and await",
+    "sidebar_label": "08 · async and await",
+    "sidebar_position": 8
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "07 · Promise states",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/promise-states"
+  },
+  "next": {
+    "title": "09 · Combinators",
+    "permalink": "/devbible/docs/nodejs/pages/phase-2-async/combinators"
+  }
+}

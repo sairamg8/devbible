@@ -1,0 +1,28 @@
+{
+  "id": "frontend-architecture/pages/monorepo-and-multi-app-strategy/scaling-beyond-one-app",
+  "title": "Monorepo & Multi-App Strategy: When to Monorepo, Tooling & Build Caching",
+  "description": "1. The Decision Framework",
+  "source": "@site/docs/frontend-architecture/pages/07-monorepo-and-multi-app-strategy/01-scaling-beyond-one-app.md",
+  "sourceDirName": "frontend-architecture/pages/07-monorepo-and-multi-app-strategy",
+  "slug": "/frontend-architecture/pages/monorepo-and-multi-app-strategy/scaling-beyond-one-app",
+  "permalink": "/devbible/docs/frontend-architecture/pages/monorepo-and-multi-app-strategy/scaling-beyond-one-app",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Monorepo & Multi-App Strategy: When to Monorepo, Tooling & Build Caching",
+    "sidebar_label": "Monorepo & Multi-App Strategy",
+    "sidebar_position": 1
+  },
+  "sidebar": "frontendArchitectureSidebar",
+  "previous": {
+    "title": "Styling Architecture",
+    "permalink": "/devbible/docs/frontend-architecture/pages/styling-architecture/choosing-and-scaling-a-styling-approach"
+  },
+  "next": {
+    "title": "Environment & Configuration Management",
+    "permalink": "/devbible/docs/frontend-architecture/pages/environment-and-configuration-management/config-across-environments"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs/pages/phase-4-filesystem/watching",
+  "title": "Watching files",
+  "description": "Know",
+  "source": "@site/docs/nodejs/pages/phase-4-filesystem/12-watching.md",
+  "sourceDirName": "nodejs/pages/phase-4-filesystem",
+  "slug": "/nodejs/pages/phase-4-filesystem/watching",
+  "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/watching",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Watching files",
+    "sidebar_label": "12 · Watching files",
+    "sidebar_position": 12
+  },
+  "sidebar": "nodejsSidebar",
+  "previous": {
+    "title": "11 · node:os",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/os"
+  },
+  "next": {
+    "title": "13 · Permissions, symlinks",
+    "permalink": "/devbible/docs/nodejs/pages/phase-4-filesystem/permissions-and-symlinks"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "typescript/syllabus/in-the-stack",
+  "title": "Part 3 — TypeScript in the stack",
+  "description": "Phases 7–9 · 44 topics · 15 Master",
+  "source": "@site/docs/typescript/syllabus/03-in-the-stack.md",
+  "sourceDirName": "typescript/syllabus",
+  "slug": "/typescript/syllabus/in-the-stack",
+  "permalink": "/devbible/docs/typescript/syllabus/in-the-stack",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Part 3 — TypeScript in the stack",
+    "sidebar_label": "3 · In the stack",
+    "sidebar_position": 3
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "2 · Types at scale",
+    "permalink": "/devbible/docs/typescript/syllabus/types-at-scale"
+  },
+  "next": {
+    "title": "4 · Rigour and tooling",
+    "permalink": "/devbible/docs/typescript/syllabus/rigour-and-tooling"
+  }
+}

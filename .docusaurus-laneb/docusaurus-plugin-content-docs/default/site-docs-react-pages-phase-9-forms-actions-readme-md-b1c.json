@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-9-forms-actions/README",
+  "title": "Phase 9 — Forms, Actions and optimistic UI",
+  "description": "Target: React 19.2.8. No sandbox and no console blocks — every claim is",
+  "source": "@site/docs/react/pages/phase-9-forms-actions/README.md",
+  "sourceDirName": "react/pages/phase-9-forms-actions",
+  "slug": "/react/pages/phase-9-forms-actions/",
+  "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 9 — Forms, Actions and optimistic UI",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "18 · ⚠ SuspenseList",
+    "permalink": "/devbible/docs/react/pages/phase-8-concurrent-suspense/suspenselist"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/react/pages/phase-9-forms-actions/controlled-inputs/"
+  }
+}

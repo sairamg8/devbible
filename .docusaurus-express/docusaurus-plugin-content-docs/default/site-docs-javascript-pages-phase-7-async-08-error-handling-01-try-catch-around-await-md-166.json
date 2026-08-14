@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-7-async/error-handling/try-catch-around-await",
+  "title": "08.1 · try/catch around await",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-7-async/08-error-handling/01-try-catch-around-await.md",
+  "sourceDirName": "javascript/pages/phase-7-async/08-error-handling",
+  "slug": "/javascript/pages/phase-7-async/error-handling/try-catch-around-await",
+  "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/try-catch-around-await",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "08.1 · try/catch around await",
+    "sidebar_label": "01 · try/catch around await",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/"
+  },
+  "next": {
+    "title": "02 · Rejections that vanish",
+    "permalink": "/devbible/docs/javascript/pages/phase-7-async/error-handling/rejections-that-vanish"
+  }
+}

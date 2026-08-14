@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/content-negotiation",
+  "title": "Content negotiation",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/09-content-negotiation.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses",
+  "slug": "/expressjs/pages/phase-4-responses/content-negotiation",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/content-negotiation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Content negotiation",
+    "sidebar_label": "09 · Content negotiation",
+    "sidebar_position": 9
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "08 · Streams · downloads",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/streaming-and-downloads"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-5-errors/"
+  }
+}

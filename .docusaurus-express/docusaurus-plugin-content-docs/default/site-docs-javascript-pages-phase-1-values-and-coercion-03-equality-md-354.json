@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/equality",
+  "title": "03 · `==` vs `===`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/03-equality.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/equality",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/equality",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "03 · `==` vs `===`",
+    "sidebar_label": "03 · Equality",
+    "sidebar_position": 3
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "02 · References vs values",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/references-vs-values"
+  },
+  "next": {
+    "title": "04 · Truthiness",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/truthiness"
+  }
+}

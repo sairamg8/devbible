@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/adding-and-removing/push-pop-shift-unshift",
+  "title": "02.1 · `push`, `pop`, `shift`, `unshift`",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/02-adding-and-removing/01-push-pop-shift-unshift.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/02-adding-and-removing",
+  "slug": "/javascript/pages/phase-5-built-in-library/adding-and-removing/push-pop-shift-unshift",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/push-pop-shift-unshift",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "02.1 · `push`, `pop`, `shift`, `unshift`",
+    "sidebar_label": "01 · push, pop, shift, unshift",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/"
+  },
+  "next": {
+    "title": "02 · splice",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/adding-and-removing/splice"
+  }
+}

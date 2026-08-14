@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-4-responses/cookies-out",
+  "title": "Setting cookies",
+  "description": "Understand",
+  "source": "@site/docs/expressjs/pages/phase-4-responses/07-cookies-out.md",
+  "sourceDirName": "expressjs/pages/phase-4-responses",
+  "slug": "/expressjs/pages/phase-4-responses/cookies-out",
+  "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/cookies-out",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Setting cookies",
+    "sidebar_label": "07 · Cookies out",
+    "sidebar_position": 7
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "06 · SPA fallback",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/spa-fallback"
+  },
+  "next": {
+    "title": "08 · Streams · downloads",
+    "permalink": "/devbible/docs/expressjs/pages/phase-4-responses/streaming-and-downloads"
+  }
+}

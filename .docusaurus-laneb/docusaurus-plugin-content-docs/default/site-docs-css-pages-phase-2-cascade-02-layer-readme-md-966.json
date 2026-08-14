@@ -1,0 +1,28 @@
+{
+  "id": "css/pages/phase-2-cascade/layer/README",
+  "title": "@layer",
+  "description": "Master",
+  "source": "@site/docs/css/pages/phase-2-cascade/02-layer/README.md",
+  "sourceDirName": "css/pages/phase-2-cascade/02-layer",
+  "slug": "/css/pages/phase-2-cascade/layer/",
+  "permalink": "/devbible/docs/css/pages/phase-2-cascade/layer/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "@layer",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "cssSidebar",
+  "previous": {
+    "title": "01 · What the cascade compares",
+    "permalink": "/devbible/docs/css/pages/phase-2-cascade/what-the-cascade-compares"
+  },
+  "next": {
+    "title": "01 · Declaring and ordering",
+    "permalink": "/devbible/docs/css/pages/phase-2-cascade/layer/declaring-and-ordering"
+  }
+}

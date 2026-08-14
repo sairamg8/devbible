@@ -1,0 +1,28 @@
+{
+  "id": "git/syllabus/how-git-works",
+  "title": "Part 1 — How Git works",
+  "description": "Phases 0–3 · 61 topics · 27 Master",
+  "source": "@site/docs/git/syllabus/01-how-git-works.md",
+  "sourceDirName": "git/syllabus",
+  "slug": "/git/syllabus/how-git-works",
+  "permalink": "/devbible/docs/git/syllabus/how-git-works",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Part 1 — How Git works",
+    "sidebar_label": "1 · How Git works",
+    "sidebar_position": 1
+  },
+  "sidebar": "gitSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/git/"
+  },
+  "next": {
+    "title": "2 · Working with other people",
+    "permalink": "/devbible/docs/git/syllabus/collaboration"
+  }
+}

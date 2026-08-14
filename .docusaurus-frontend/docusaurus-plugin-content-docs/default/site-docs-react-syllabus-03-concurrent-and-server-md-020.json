@@ -1,0 +1,28 @@
+{
+  "id": "react/syllabus/concurrent-and-server",
+  "title": "Part 3 — Concurrent React and the server",
+  "description": "Phases 8–11 · 68 topics · Suspense and transitions, Actions, Server Components,",
+  "source": "@site/docs/react/syllabus/03-concurrent-and-server.md",
+  "sourceDirName": "react/syllabus",
+  "slug": "/react/syllabus/concurrent-and-server",
+  "permalink": "/devbible/docs/react/syllabus/concurrent-and-server",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Part 3 — Concurrent React and the server",
+    "sidebar_label": "3 · Concurrent and server",
+    "sidebar_position": 3
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "2 · Hooks, completely",
+    "permalink": "/devbible/docs/react/syllabus/hooks"
+  },
+  "next": {
+    "title": "4 · Building a real app",
+    "permalink": "/devbible/docs/react/syllabus/building-an-app"
+  }
+}

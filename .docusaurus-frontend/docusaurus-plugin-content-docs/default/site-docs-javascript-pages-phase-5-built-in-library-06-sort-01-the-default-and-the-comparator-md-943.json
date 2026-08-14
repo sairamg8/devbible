@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-5-built-in-library/sort/the-default-and-the-comparator",
+  "title": "06.1 · The default, and the comparator",
+  "description": "Master",
+  "source": "@site/docs/javascript/pages/phase-5-built-in-library/06-sort/01-the-default-and-the-comparator.md",
+  "sourceDirName": "javascript/pages/phase-5-built-in-library/06-sort",
+  "slug": "/javascript/pages/phase-5-built-in-library/sort/the-default-and-the-comparator",
+  "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/the-default-and-the-comparator",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "06.1 · The default, and the comparator",
+    "sidebar_label": "01 · The default and comparator",
+    "sidebar_position": 1
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/"
+  },
+  "next": {
+    "title": "02 · Stability and mutation",
+    "permalink": "/devbible/docs/javascript/pages/phase-5-built-in-library/sort/stability-and-mutation"
+  }
+}

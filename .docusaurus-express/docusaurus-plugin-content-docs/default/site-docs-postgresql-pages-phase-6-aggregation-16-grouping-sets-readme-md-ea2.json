@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-6-aggregation/grouping-sets/README",
+  "title": "GROUPING SETS, ROLLUP, CUBE",
+  "description": "When Needed",
+  "source": "@site/docs/postgresql/pages/phase-6-aggregation/16-grouping-sets/README.md",
+  "sourceDirName": "postgresql/pages/phase-6-aggregation/16-grouping-sets",
+  "slug": "/postgresql/pages/phase-6-aggregation/grouping-sets/",
+  "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/grouping-sets/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "GROUPING SETS, ROLLUP, CUBE",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "02 · Cycles, guards and limits",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/recursive-cte/cycles-and-limits"
+  },
+  "next": {
+    "title": "01 · Sets, ROLLUP, CUBE",
+    "permalink": "/devbible/docs/postgresql/pages/phase-6-aggregation/grouping-sets/sets-rollup-cube"
+  }
+}

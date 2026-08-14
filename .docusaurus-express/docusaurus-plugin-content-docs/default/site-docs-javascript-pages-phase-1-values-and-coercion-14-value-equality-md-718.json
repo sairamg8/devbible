@@ -1,0 +1,28 @@
+{
+  "id": "javascript/pages/phase-1-values-and-coercion/value-equality",
+  "title": "14 · Value equality in practice",
+  "description": "Understand",
+  "source": "@site/docs/javascript/pages/phase-1-values-and-coercion/14-value-equality.md",
+  "sourceDirName": "javascript/pages/phase-1-values-and-coercion",
+  "slug": "/javascript/pages/phase-1-values-and-coercion/value-equality",
+  "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/value-equality",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "14 · Value equality in practice",
+    "sidebar_label": "14 · Value equality",
+    "sidebar_position": 14
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "13 · BigInt",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/bigint"
+  },
+  "next": {
+    "title": "15 · Object wrappers",
+    "permalink": "/devbible/docs/javascript/pages/phase-1-values-and-coercion/object-wrappers"
+  }
+}

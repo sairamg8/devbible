@@ -1,0 +1,28 @@
+{
+  "id": "webpack/pages/module-federation/dynamic-remotes-and-runtime-loading",
+  "title": "Module Federation: Dynamic Remotes & Runtime-Resolved URLs",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/webpack/pages/11-module-federation/03-dynamic-remotes-and-runtime-loading.md",
+  "sourceDirName": "webpack/pages/11-module-federation",
+  "slug": "/webpack/pages/module-federation/dynamic-remotes-and-runtime-loading",
+  "permalink": "/devbible/docs/webpack/pages/module-federation/dynamic-remotes-and-runtime-loading",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Module Federation: Dynamic Remotes & Runtime-Resolved URLs",
+    "sidebar_label": "Module Federation",
+    "sidebar_position": 3
+  },
+  "sidebar": "webpackSidebar",
+  "previous": {
+    "title": "Module Federation",
+    "permalink": "/devbible/docs/webpack/pages/module-federation/shared-dependencies-and-version-negotiation"
+  },
+  "next": {
+    "title": "Module Federation",
+    "permalink": "/devbible/docs/webpack/pages/module-federation/architecture-patterns-and-topologies"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "tanstack-query/pages/usemutation/mutation-lifecycle",
+  "title": "`useMutation`: Lifecycle Callbacks, Optimistic Updates & `mutate` vs `mutateAsync`",
+  "description": "1. Under-The-Hood Mechanics",
+  "source": "@site/docs/tanstack-query/pages/05-usemutation/01-mutation-lifecycle.md",
+  "sourceDirName": "tanstack-query/pages/05-usemutation",
+  "slug": "/tanstack-query/pages/usemutation/mutation-lifecycle",
+  "permalink": "/devbible/docs/tanstack-query/pages/usemutation/mutation-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "`useMutation`: Lifecycle Callbacks, Optimistic Updates & `mutate` vs `mutateAsync`",
+    "sidebar_label": "`useMutation`",
+    "sidebar_position": 1
+  },
+  "sidebar": "tanstackQuerySidebar",
+  "previous": {
+    "title": "Caching & Invalidation",
+    "permalink": "/devbible/docs/tanstack-query/pages/caching-and-invalidation/cache-management-apis"
+  },
+  "next": {
+    "title": "Background Refetching",
+    "permalink": "/devbible/docs/tanstack-query/pages/background-refetching/automatic-freshness"
+  }
+}

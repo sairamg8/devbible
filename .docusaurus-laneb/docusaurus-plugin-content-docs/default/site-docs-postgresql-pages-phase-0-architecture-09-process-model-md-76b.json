@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-0-architecture/process-model",
+  "title": "Postmaster, backends, and workers",
+  "description": "Know",
+  "source": "@site/docs/postgresql/pages/phase-0-architecture/09-process-model.md",
+  "sourceDirName": "postgresql/pages/phase-0-architecture",
+  "slug": "/postgresql/pages/phase-0-architecture/process-model",
+  "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/process-model",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Postmaster, backends, and workers",
+    "sidebar_label": "09 · Process model",
+    "sidebar_position": 9
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "08 · Connection and auth",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/connection-and-auth"
+  },
+  "next": {
+    "title": "10 · Version policy",
+    "permalink": "/devbible/docs/postgresql/pages/phase-0-architecture/version-policy"
+  }
+}

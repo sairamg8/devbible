@@ -1,0 +1,28 @@
+{
+  "id": "javascript/syllabus/data-and-async",
+  "title": "Part 2 — Data, iteration and async",
+  "description": "Phases 5–8 · 79 topics · 26 Master",
+  "source": "@site/docs/javascript/syllabus/02-data-and-async.md",
+  "sourceDirName": "javascript/syllabus",
+  "slug": "/javascript/syllabus/data-and-async",
+  "permalink": "/devbible/docs/javascript/syllabus/data-and-async",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Part 2 — Data, iteration and async",
+    "sidebar_label": "2 · Data & async",
+    "sidebar_position": 2
+  },
+  "sidebar": "javascriptSidebar",
+  "previous": {
+    "title": "1 · Language core",
+    "permalink": "/devbible/docs/javascript/syllabus/language-core"
+  },
+  "next": {
+    "title": "3 · Web APIs",
+    "permalink": "/devbible/docs/javascript/syllabus/web-apis"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-11-ssr-hydration/hydrateroot",
+  "title": "hydrateRoot",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-11-ssr-hydration/04-hydrateroot.md",
+  "sourceDirName": "react/pages/phase-11-ssr-hydration",
+  "slug": "/react/pages/phase-11-ssr-hydration/hydrateroot",
+  "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/hydrateroot",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "hydrateRoot",
+    "sidebar_label": "04 · hydrateRoot",
+    "sidebar_position": 4
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "03 · The server renderers",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/the-server-renderers"
+  },
+  "next": {
+    "title": "05 · The two escapes",
+    "permalink": "/devbible/docs/react/pages/phase-11-ssr-hydration/suppresshydrationwarning"
+  }
+}

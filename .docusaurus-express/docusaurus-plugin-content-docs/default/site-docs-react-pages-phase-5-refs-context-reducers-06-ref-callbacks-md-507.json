@@ -1,0 +1,28 @@
+{
+  "id": "react/pages/phase-5-refs-context-reducers/ref-callbacks",
+  "title": "Ref callbacks",
+  "description": "Understand",
+  "source": "@site/docs/react/pages/phase-5-refs-context-reducers/06-ref-callbacks.md",
+  "sourceDirName": "react/pages/phase-5-refs-context-reducers",
+  "slug": "/react/pages/phase-5-refs-context-reducers/ref-callbacks",
+  "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/ref-callbacks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Ref callbacks",
+    "sidebar_label": "06 · Ref callbacks",
+    "sidebar_position": 6
+  },
+  "sidebar": "reactSidebar",
+  "previous": {
+    "title": "05 · The context re-render problem",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/context-re-render-problem"
+  },
+  "next": {
+    "title": "07 · useImperativeHandle",
+    "permalink": "/devbible/docs/react/pages/phase-5-refs-context-reducers/useimperativehandle"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "typescript/pages/phase-0-how-typescript-runs/checking-vs-transpiling",
+  "title": "Checking is not transpiling",
+  "description": "Understand",
+  "source": "@site/docs/typescript/pages/phase-0-how-typescript-runs/10-checking-vs-transpiling.md",
+  "sourceDirName": "typescript/pages/phase-0-how-typescript-runs",
+  "slug": "/typescript/pages/phase-0-how-typescript-runs/checking-vs-transpiling",
+  "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/checking-vs-transpiling",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Checking is not transpiling",
+    "sidebar_label": "10 · Checking vs transpiling",
+    "sidebar_position": 10
+  },
+  "sidebar": "typescriptSidebar",
+  "previous": {
+    "title": "09 · Editor vs build",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/language-server-vs-build"
+  },
+  "next": {
+    "title": "11 · Project layout",
+    "permalink": "/devbible/docs/typescript/pages/phase-0-how-typescript-runs/project-layout"
+  }
+}

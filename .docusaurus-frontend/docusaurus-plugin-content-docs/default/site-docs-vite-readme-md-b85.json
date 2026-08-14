@@ -1,0 +1,24 @@
+{
+  "id": "vite/README",
+  "title": "Vite — Overview",
+  "description": "These pages were moved in from the separate frontend-bible repo as-is, on",
+  "source": "@site/docs/vite/README.md",
+  "sourceDirName": "vite",
+  "slug": "/vite/",
+  "permalink": "/devbible/docs/vite/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Vite — Overview",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "viteSidebar",
+  "next": {
+    "title": "Explanations",
+    "permalink": "/devbible/docs/vite/pages/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "expressjs/pages/phase-3-requests/README",
+  "title": "Phase 3 — Requests and body parsing",
+  "description": "Target: Express 5.2.1 on Node 24.19.0. Status codes and error type values",
+  "source": "@site/docs/expressjs/pages/phase-3-requests/README.md",
+  "sourceDirName": "expressjs/pages/phase-3-requests",
+  "slug": "/expressjs/pages/phase-3-requests/",
+  "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Phase 3 — Requests and body parsing",
+    "sidebar_label": "Overview",
+    "sidebar_position": 0
+  },
+  "sidebar": "expressjsSidebar",
+  "previous": {
+    "title": "07 · Built-in · third-party",
+    "permalink": "/devbible/docs/expressjs/pages/phase-2-middleware/builtin-and-third-party"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/expressjs/pages/phase-3-requests/req-anatomy/"
+  }
+}

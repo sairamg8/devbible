@@ -1,0 +1,28 @@
+{
+  "id": "postgresql/pages/phase-2-types/integers",
+  "title": "Integer types",
+  "description": "Master",
+  "source": "@site/docs/postgresql/pages/phase-2-types/01-integers.md",
+  "sourceDirName": "postgresql/pages/phase-2-types",
+  "slug": "/postgresql/pages/phase-2-types/integers",
+  "permalink": "/devbible/docs/postgresql/pages/phase-2-types/integers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Integer types",
+    "sidebar_label": "01 · Integers",
+    "sidebar_position": 1
+  },
+  "sidebar": "postgresqlSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/"
+  },
+  "next": {
+    "title": "02 · numeric vs float",
+    "permalink": "/devbible/docs/postgresql/pages/phase-2-types/numeric-vs-float"
+  }
+}
