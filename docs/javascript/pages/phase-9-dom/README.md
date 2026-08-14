@@ -8,12 +8,12 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — 🚧 **Understand tier under way — 12 of 19** (2026-08-14)
+## Status — 🚧 **Understand tier under way — 13 of 19** (2026-08-14)
 
 **Master tier ✅ COMPLETE** — all six Master topics (01–06), written in syllabus order.
 
 🚧 **Now the Understand tier (07–15), then Know (16–18), then When Needed (19).**
-**07–12 are written** — Traversal, Classes and styles, Forms, Removing and replacing, Batching, Layout thrashing; 13 onward remain. Lane B of the
+**07–13 are written** — Traversal, Classes and styles, Forms, Removing and replacing, Batching, Layout thrashing, Measuring; 14 onward remain. Lane B of the
 two-way JavaScript split owns this phase.
 
 ## Topics
@@ -32,7 +32,8 @@ two-way JavaScript split owns this phase.
 | 10 | **[Removing and replacing](./10-removing-and-replacing/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Batching DOM work](./11-batching-dom-work/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[Layout thrashing](./12-layout-thrashing/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13–15 | Measuring elements, scrolling, focus and accessibility | <span className="db-tier t-understand">Understand</span> | 🚧 next |
+| 13 | **[Measuring elements](./13-measuring-elements/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 14–15 | Scrolling, focus and accessibility | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 16–18 | `<dialog>`/popover/`inert`, `MutationObserver`, shadow DOM | <span className="db-tier t-know">Know</span> | deferred |
 | 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | deferred |
 
