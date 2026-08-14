@@ -34,7 +34,7 @@ Three parts, and each has one job:
 
 - **Setup** starts synchronising. It runs after React has committed to the DOM.
 - **Cleanup** stops synchronising. It must undo what setup did
-  ([04](04-cleanup.md)).
+  ([04](04-cleanup/README.md)).
 - **Dependencies** decide when to stop and start again — they are not a schedule
   ([03](03-the-dependency-array.md)).
 

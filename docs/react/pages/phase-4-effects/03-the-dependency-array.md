@@ -246,4 +246,4 @@ information about the effect — it is probably two effects.
 
 ---
 
-← Prev: [`useEffect` anatomy](02-useeffect-anatomy.md) · Index: [Phase 4](README.md) · Next → [Cleanup](04-cleanup.md)
+← Prev: [`useEffect` anatomy](02-useeffect-anatomy.md) · Index: [Phase 4](README.md) · Next → [Cleanup](04-cleanup/README.md)
