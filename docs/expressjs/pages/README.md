@@ -7,24 +7,25 @@ sidebar_position: 0
 > **Target: Express 5.x on Node 24** — examples executed on **Express 5.2.1** /
 > **Node 24.19.0** before they are written down.
 
-:::caution 🔴 ACTIVE and LOCKED — Master-tier depth pass, session `b7f137c4` (continues `ffadd057`), 2026-08-14
+:::tip ✅ Master-tier depth pass COMPLETE — session `b7f137c4` (continued `ffadd057`), 2026-08-14
 
-**Structurally complete, not yet finished.** All 11 phases, 114 of 114 syllabus topics,
-86 pages — every one carrying a `> Verified:` line, a tier badge, Gotchas, a Trade-off
-and Interview questions; every phase README has a Coverage table; no duplicate headings,
-nothing over the 300-line cap, no broken links.
+**All 28 Master-tier topics rewritten to full depth and chunked.** The corpus is now
+**179 files, 29,893 lines** across 11 phases, 114 of 114 syllabus topics — every page
+carrying a `> Verified:` line, a tier badge, Gotchas, a Trade-off and Interview questions;
+every phase README with a Coverage table; **nothing over the 300-line cap** and **zero
+broken links** in a clean isolated rebuild.
 
-**What is still wrong: depth does not follow tier.** All 28 Master-tier topics sit
-between 63 and 200 lines and **not one of them is chunked** — against a corpus where
-PostgreSQL's Master topics median 530 lines across chunk directories. The tier curve is
-flat (Master avg 139, Understand avg 144), which is the documented tell that pages were
-sized to the 300-line cap instead of to the topic. **The cap is a file-size rule, never a
-content budget.**
+**What the pass fixed.** All 28 Master topics had been sitting between 63 and 200 lines
+with **not one chunked** — a flat tier curve (Master avg 139, Understand avg 144) against
+a corpus where PostgreSQL's Master topics median 530 lines across chunk directories. That
+is the documented tell that pages were sized to the 300-line cap rather than to the topic.
+**The cap is a file-size rule, never a content budget.** Those 28 topics went from 3,829
+lines to 21,190 across 2–5 chunks each, every split on a concept boundary.
 
-**This pass rewrites all 28 Master topics to the depth they deserve**, splitting a topic
-into a `NN-topic/` directory on a concept boundary when it passes 300 lines. It is
-additive: existing prose, examples and console blocks are kept — nothing is re-run and
-nothing is invented.
+**It was additive and nothing was run.** Existing prose, examples and console blocks were
+kept; no sandbox was built, no output invented. New material is validated against the
+Express 5 documentation, the relevant RFCs (9110, 6749, 6750, 6585, 7519, 7239) and MDN,
+each named in the page's `> Verified:` line.
 
 :::
 
