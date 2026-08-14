@@ -7,11 +7,9 @@ sidebar_position: 14
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-08-14 against **react 19.2.8**, from documentation — react.dev
-> [`useId`](https://react.dev/reference/react/useId).
-> ⚠️ **Not confirmed:** the syllabus noted a change to the generated id *format* in
-> 19.2. The reference documents no format at all, so this page treats the shape as
-> an implementation detail rather than asserting a version claim.
-> No sandbox script backs this page.
+> [`useId`](https://react.dev/reference/react/useId) and the **React 19.2 release
+> post** (1 Oct 2025).
+> No sandbox script backs this page; claims are cited, not measured.
 
 **Generating ids that match between the server render and the client render. It
 exists for accessibility attributes, and the reference is unusually direct about the
@@ -132,12 +130,22 @@ hydrateRoot(document.getElementById('root'), <App />, { identifierPrefix: 'react
 
 A mismatch here reintroduces exactly the problem `useId` exists to solve.
 
-## Do not depend on the format
+## 🔴 The format is not a contract — and it changed in 19.2
 
-The reference documents that `useId` returns a unique string and nothing about its
-shape. Treat it as opaque: do not parse it, do not assert on it in a snapshot test,
-and do not build a selector from it. Concatenating a suffix, as above, is fine
-because it only appends.
+The reference documents that `useId` returns a unique string and **nothing about
+its shape**. That is not an omission; it is the contract. And 19.2 proves the point
+— the release post lists:
+
+> **`useId` prefix update** — Changed from `:r:` or `«r»` to `_r_` for View
+> Transitions support.
+
+A cosmetic-looking change that breaks anything depending on the old shape. The
+reason is substantive: `:` and `«` are not valid in a CSS selector or a View
+Transition name, so the generated ids could not be targeted.
+
+Treat the value as **opaque**: do not parse it, do not assert on it in a snapshot
+test, and do not build a selector from it by hand. Concatenating a suffix, as
+above, is fine because it only appends.
 
 ## Gotchas
 
@@ -169,7 +177,7 @@ rendering.
 
 **Symptom:** a snapshot test breaks on a React upgrade.
 **Cause:** the generated format was asserted on. It is undocumented and not a
-contract.
+contract — 19.2 changed it from `:r:` / `«r»` to `_r_`.
 **Fix:** treat the value as opaque.
 
 ## Interview questions
@@ -208,7 +216,9 @@ you have recreated the mismatch problem the hook exists to prevent.
 **Should you generate one `useId` per element?**
 No — call it once and suffix it, as the docs' two-field form does. It is fewer hook
 calls and it keeps related ids visibly related. And treat the returned string as
-opaque: the format is not documented and not a contract.
+opaque: the format is not documented and not a contract — React 19.2 changed it
+from `:r:` / `«r»` to `_r_` so that generated ids are valid in CSS selectors and
+View Transition names, which broke anything that had assumed the old shape.
 
 ---
 
