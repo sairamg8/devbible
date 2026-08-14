@@ -10,7 +10,7 @@ sidebar_position: 0
 :::tip ✅ Master-tier depth pass COMPLETE — session `b7f137c4` (continued `ffadd057`), 2026-08-14
 
 **All 28 Master-tier topics rewritten to full depth and chunked.** The corpus is now
-**179 files, 29,893 lines** across 11 phases, 114 of 114 syllabus topics — every page
+**183 files, 30,731 lines** across 11 phases, 115 of 115 syllabus topics — every page
 carrying a `> Verified:` line, a tier badge, Gotchas, a Trade-off and Interview questions;
 every phase README with a Coverage table; **nothing over the 300-line cap** and **zero
 broken links** in a clean isolated rebuild.
@@ -70,7 +70,7 @@ import Progress from '@site/src/components/Progress';
 | **[2 — Middleware](./phase-2-middleware/README.md)** ✅ | Contract, mount order, `next`, factories — **9/9 topics done** |
 | **[3 — Requests](./phase-3-requests/README.md)** ✅ | Body parsers, limits, query parser, multipart, cookies — **12/12 topics done** |
 | **[4 — Responses](./phase-4-responses/README.md)** ✅ | `res` discipline, static, SPA fallback, cookies out, content negotiation — **12/12 topics done** |
-| **[5 — Errors](./phase-5-errors/README.md)** ✅ | Four-arg middleware, Express 5 async, error envelope, edge logging — **9/9 topics done** |
+| **[5 — Errors](./phase-5-errors/README.md)** ✅ | Four-arg middleware, Express 5 async, error envelope, edge logging, and the **full catalogue of what can reach the handler** (driver, network, library and programmer errors) — **10/10 topics done** |
 | **[6 — REST surface](./phase-6-rest-surface/README.md)** ✅ | Resources, pagination, versioning, idempotency, OpenAPI, webhooks, PATCH/bulk, hypermedia — **14/14 topics done** |
 | **[7 — Layering](./phase-7-layering/README.md)** ✅ | Controller → service → repository, DI, jobs from routes, transactions — **8/8 topics done** |
 | **[8 — Validation & authz](./phase-8-validation-authz/README.md)** ✅ | Boundary parsing, authn, RBAC, ownership/IDOR, tenancy, type inference — **13/13 topics done** |

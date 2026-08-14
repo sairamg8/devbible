@@ -156,7 +156,7 @@ export const LANGUAGES = {
       {n: 2, slug: 'phase-2-middleware', name: 'Middleware architecture', part: 'Foundations', topics: 9, pages: 9},
       {n: 3, slug: 'phase-3-requests', name: 'Requests and body parsing', part: 'HTTP surface', topics: 12, pages: 12},
       {n: 4, slug: 'phase-4-responses', name: 'Responses and static files', part: 'HTTP surface', topics: 12, pages: 12},
-      {n: 5, slug: 'phase-5-errors', name: 'Error handling', part: 'HTTP surface', topics: 9, pages: 9},
+      {n: 5, slug: 'phase-5-errors', name: 'Error handling', part: 'HTTP surface', topics: 10, pages: 10},
       {n: 6, slug: 'phase-6-rest-surface', name: 'REST surface and API features', part: 'API product', topics: 14, pages: 14},
       {n: 7, slug: 'phase-7-layering', name: 'Layering at the edge', part: 'API product', topics: 8, pages: 8},
       {n: 8, slug: 'phase-8-validation-authz', name: 'Validation and authorization', part: 'Edge & ops', topics: 13, pages: 13},

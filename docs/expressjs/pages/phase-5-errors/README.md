@@ -6,7 +6,14 @@ sidebar_position: 0
 
 > **Target: Express 5.2.1 on Node 24.19.0.**
 
-> ✅ **Phase complete — 9 of 9 topics, 2026-08-14.** A top-up pass, not just verification:
+> ✅ **Phase complete — 10 of 10 topics.** 🔴 **Topic 08 added 2026-08-14 on the user's request:**
+> the phase explained *how* errors reach one handler but never catalogued **what** arrives —
+> database driver codes, network failures, library throws that are not `Error` objects, and
+> plain bugs. That is now [08](08-every-error-that-arrives/README.md), Master tier, 3 chunks,
+> and it carries the rule the rest of the phase implies: **the global handler formats, it does
+> not interpret** — translation belongs at the boundary that understands the vocabulary.
+>
+> ✅ **Earlier: 9 of 9 topics, 2026-08-14.** A top-up pass, not just verification:
 > the six pages carried **one Gotchas section and no Trade-offs between them**, and
 > **error logging at the edge had no page** (now 07). Every page now has a `> Verified:`
 > line, a Trade-off, Gotchas and a full interview set.
@@ -30,6 +37,7 @@ the envelope.
 | 05 | **[Operational vs programmer](05-operational-vs-programmer.md)** | <span className="db-tier t-understand">Understand</span> | What to expose vs what to crash/log |
 | 06 | **[404 and process errors](06-not-found-and-process.md)** | <span className="db-tier t-know">Know</span> | 404 middleware; process events stay in Node |
 | 07 | **[Error logging at the edge](07-error-logging.md)** | <span className="db-tier t-know">Know</span> | What to log, what must never be logged, and why levels matter |
+| 08 | **[Every error that arrives](08-every-error-that-arrives/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The full catalogue — six families and who translates each; SQLSTATE, Mongo and network codes; programmer errors and a fallback that leaks nothing |
 
 > 🔴 **Master-tier depth pass complete for this phase** (session `ffadd057`,
 > 2026-08-14). Topics 01–03 were written at 137–153 lines with none chunked — sized
@@ -56,6 +64,7 @@ same cause, as content negotiation in [Phase 4](../phase-4-responses/README.md).
 | 404 handler | 06 |
 | Process-level `uncaughtException` / `unhandledRejection` | 06 (cross-link — Node owns it) |
 | Error logging at the edge | **07** |
+| Every error that can reach the handler — driver, network, library and programmer errors | **08** (chunks [01](08-every-error-that-arrives/01-the-taxonomy.md) · [02](08-every-error-that-arrives/02-database-and-network.md) · [03](08-every-error-that-arrives/03-programmer-errors-and-the-fallback.md)) |
 
 ## Phase gate
 

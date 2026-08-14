@@ -184,4 +184,4 @@ Logging them at `error` buries the 500s that need a human.
 
 ---
 
-← Prev: [404 and process errors](06-not-found-and-process.md) · Index: [Phase 5](README.md)
+← Prev: [404 and process errors](06-not-found-and-process.md) · Index: [Phase 5](README.md) · Next → [Every error that arrives](08-every-error-that-arrives/README.md)
