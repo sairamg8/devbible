@@ -51,4 +51,4 @@ thinking about it, and name the case `NoInfer<T>` was added for.
 
 ---
 
-← Prev: [01 · Generic functions and inference](../01-generic-functions-and-inference/README.md) · Next → **03 · Generic interfaces and type aliases** *(not written yet)*
+← Prev: [01 · Generic functions and inference](../01-generic-functions-and-inference/README.md) · Next → [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md)

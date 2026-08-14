@@ -252,4 +252,4 @@ as `<T extends X = Y>`.
 
 ---
 
-← Prev: [01 · What a constraint does](./01-what-a-constraint-does.md) · Next → **03 · Generic interfaces and type aliases** *(not written yet)*
+← Prev: [01 · What a constraint does](./01-what-a-constraint-does.md) · Next → [03 · Generic interfaces and type aliases](../03-generic-interfaces-and-aliases/README.md)
