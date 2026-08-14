@@ -26,7 +26,7 @@ interviews actually probe.
 | 06 | **[Closures](./06-closures/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07 | **[Lexical scope and the scope chain](./07-lexical-scope/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | **[Hoisting and the temporal dead zone](./08-hoisting-and-tdz/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 09 | Higher-order functions | <span className="db-tier t-understand">Understand</span> | deferred |
+| 09 | **[Higher-order functions](./09-higher-order-functions.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 10 | Debounce and throttle | <span className="db-tier t-understand">Understand</span> | deferred |
 | 11 | Currying and partial application | <span className="db-tier t-understand">Understand</span> | deferred |
 | 12 | Composition | <span className="db-tier t-understand">Understand</span> | deferred |
@@ -39,9 +39,9 @@ interviews actually probe.
 | 19 | Function properties | <span className="db-tier t-know">Know</span> | deferred |
 | 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | deferred |
 
-## Status — **Master tier complete** (2026-08-13)
+## Status — **Master tier complete**; Understand tier under way (2026-08-14)
 
-**All eight Master topics (01–08) are written.** Topics 09–20 are marked *deferred*
+**All eight Master topics (01–08) are written, and the Understand tier has begun at 09.** The remaining 10–20 are marked *deferred*
 deliberately, not forgotten: the standing plan is **Master-first across all
 phases**, so Understand and Know tiers are filled in on demand once the Master
 topics of every phase are done. The next unit of work in JavaScript is
