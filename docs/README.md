@@ -97,7 +97,7 @@ Ordered by how far the explanations have got, not alphabetically.
 | ----------------------------- | --------------------- | --------------------------------------------------------------------------------- |
 | **[Node.js](./nodejs/README.md)**        | 4 parts · 248 topics | **✅ COMPLETE** — [231 pages](./nodejs/pages/README.md) across 13 phases; all 248 topics covered, every page carries a `> Verified:` line |
 | **[PostgreSQL](./postgresql/README.md)** | 4 parts · 233 topics | **✅ COMPLETE** — [298 pages](./postgresql/pages/README.md) across 14 phases; every page carries a `> Verified:` line |
-| **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [148 pages](./javascript/pages/README.md); phases 0–2 complete, Master tiers of 3–6 complete, phase 7 under way |
+| **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [149 pages](./javascript/pages/README.md); phases 0–2 complete, Master tiers of 3–6 complete, phase 7 under way |
 | **[TypeScript](./typescript/README.md)** | 4 parts · 187 topics | In progress — [37 pages](./typescript/pages/README.md), phases 0–2                   |
 | **[CSS](./css/README.md)**               | 4 parts · 74 topics  | **✅ COMPLETE** — [81 pages](./css/pages/README.md) across 11 phases; critical-path scope |
 | **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [131 pages](./react/pages/README.md), **phases 0–5 complete**, phase 6 at 6/17 |
