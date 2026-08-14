@@ -48,7 +48,7 @@ to be confounded, the correction is on the page rather than quietly removed.
 |---|---|---|---|
 | [0 · How TypeScript runs](./phase-0-how-typescript-runs/README.md) | The type system | 13 | ✅ written |
 | [1 · The type vocabulary](./phase-1-type-vocabulary/README.md) | The type system | 17 | ✅ written |
-| [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 8 / 13 | 🚧 writing (Part A) |
+| [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 9 / 13 | 🚧 writing |
 | 3 · Generics | The type system | — | planned |
 | 4 · Classes, objects and declaration merging | Types at scale | — | planned |
 | 5 · Type-level programming | Types at scale | — | planned |

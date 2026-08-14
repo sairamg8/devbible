@@ -31,7 +31,7 @@ own codebase where an assertion is load-bearing.
 
 - **← [07 · Type guards](../07-type-guards.md)** — a guard is a runtime check
   plus a claim; an assertion is the claim alone.
-- **→ [09 · Assertion functions](../09-assertion-functions.md)** — the version
+- **→ [09 · Assertion functions](../09-assertion-functions/README.md)** — the version
   that actually throws.
 - **→ [10 · `satisfies`](../10-satisfies.md)** — what most `as` on an object
   literal should have been.

@@ -129,7 +129,7 @@ interchangeable:
 | `as T` | this value is a `T` | overlap only | a runtime fact the checker cannot see |
 | [`!`](../13-non-null-assertion.md) | not `null`/`undefined` | no | the same, narrowed to nullability |
 | [type guard](../07-type-guards.md) | returns `v is T` | body not checked | the check is reusable and worth naming |
-| [assertion function](../09-assertion-functions.md) | throws unless `v is T` | body not checked | the failure should stop execution |
+| [assertion function](../09-assertion-functions/README.md) | throws unless `v is T` | body not checked | the failure should stop execution |
 
 The bottom two perform a **real runtime check** and then tell the compiler about
 it. The top two do nothing at runtime at all. That is the distinction worth
@@ -207,4 +207,4 @@ each, ban them in the modules that touch the network, and treat
 
 ---
 
-← Prev: [01 · What an assertion actually is](./01-what-an-assertion-is.md) · Next → [09 · Assertion functions](../09-assertion-functions.md)
+← Prev: [01 · What an assertion actually is](./01-what-an-assertion-is.md) · Next → [09 · Assertion functions](../09-assertion-functions/README.md)
