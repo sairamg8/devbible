@@ -114,7 +114,7 @@ export const LANGUAGES = {
       {n: 7, slug: 'phase-7-custom-hooks', name: 'Custom hooks and the Rules of React', part: 'Hooks, completely', topics: 12, pages: 12},
       {n: 8, slug: 'phase-8-concurrent-suspense', name: 'Concurrent rendering, Suspense and transitions', part: 'Concurrent and server', topics: 18, pages: 18},
       {n: 9, slug: 'phase-9-forms-actions', name: 'Forms, Actions and optimistic UI', part: 'Concurrent and server', topics: 14, pages: 14},
-      {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 2, pagesPlanned: 19},
+      {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 3, pagesPlanned: 19},
       {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 0},
       {n: 12, slug: 'phase-12-data-state', name: 'Data and state in a real app', part: 'Building a real app', topics: 16, pages: 0},
       {n: 13, slug: 'phase-13-routing', name: 'Routing, structure and the app shell', part: 'Building a real app', topics: 14, pages: 0},
