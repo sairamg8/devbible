@@ -51,7 +51,7 @@ function isString(v: unknown): v is string {
 ```
 
 **Both of these are accepted.** A type predicate is an assertion in function
-form, exactly like `as` ([08](./08-as-assertions.md)) — the difference is that it
+form, exactly like `as` ([08](./08-as-assertions/README.md)) — the difference is that it
 is written once, reviewed once, and then trusted at every call site, which makes
 a wrong one much more expensive than a wrong cast.
 
@@ -212,4 +212,4 @@ compiler that a `string` is a valid key.
 
 ---
 
-← Prev: [Exhaustiveness](./06-exhaustiveness.md) · Next → [`as` assertions](./08-as-assertions.md)
+← Prev: [Exhaustiveness](./06-exhaustiveness.md) · Next → [`as` assertions](./08-as-assertions/README.md)

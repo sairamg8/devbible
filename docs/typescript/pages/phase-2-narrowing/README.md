@@ -31,7 +31,7 @@ those narrowings, or a way to lose one.
 | 05 | [Discriminated unions](./05-discriminated-unions.md) | <span className="db-tier t-master">Master</span> | A literal tag on every member — the most valuable modelling pattern in the language |
 | 06 | [Exhaustiveness with `never`](./06-exhaustiveness.md) | <span className="db-tier t-master">Master</span> | The `assertNever` default that turns a new variant into a compile error |
 | 07 | [User-defined type guards](./07-type-guards.md) | <span className="db-tier t-master">Master</span> | `v is T`, and the fact that the compiler **trusts you** rather than checking the body |
-| 08 | [`as` assertions](./08-as-assertions.md) | <span className="db-tier t-understand">Understand</span> | What a cast actually does — silence the checker — and the `as unknown as T` escape |
+| 08 | [`as` assertions](./08-as-assertions/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | What a cast actually does — silence the checker — and the `as unknown as T` escape |
 | 09 | [Assertion functions](./09-assertion-functions.md) | <span className="db-tier t-understand">Understand</span> | `asserts v is T`, and the explicit-annotation requirement that catches everyone once |
 | 10 | [`satisfies`](./10-satisfies.md) | <span className="db-tier t-master">Master</span> | Check a value against a type **without** widening it |
 | 11 | [Narrowing you lose without noticing](./11-narrowing-lost.md) | <span className="db-tier t-master">Master</span> | Callbacks, reassignment, mutable properties — and what `await` actually does |
