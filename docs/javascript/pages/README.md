@@ -24,7 +24,7 @@ import Progress from '@site/src/components/Progress';
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | ✅ **complete — every tier** |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | ✅ **complete — every tier** (Master 7/7 · Understand 9/9 · Know 4/4) |
-| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–13 done) |
+| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–14 done) |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
@@ -46,7 +46,7 @@ split by phase. Take your lane's phases and **never write in the other lane's**.
 
 | Lane | Phases | Topics left | Held by |
 |---|---|---|---|
-| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **48** | session `edbfba95` |
+| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **47** | session `edbfba95` |
 | **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **68** | session `75e511e6` |
 
 **The seam is the language itself versus the browser platform**, so the two lanes barely
@@ -74,8 +74,8 @@ build, and the other lane may not have written it yet.
 | **Last touched** | 🎉 **PHASE 4 COMPLETE — 20 of 20, every tier** (Master 7/7 · Understand 9/9 · Know 4/4), closed by topic 20 · Private state before `#`, 2026-08-15. **Phases 3 and 4 are both complete at every tier.** |
 | **Where lane A writes** | 🔴 the worktree **`devbible-js-lane-a`, branch `js-lane-a`** — not on `main`. Merged into `main` at every phase boundary; last merge `a7a92fec`, after which `main..js-lane-a` was empty |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 5 · 14 · `flat`, `flatMap`, `fill`, `copyWithin`**, then the rest of its Understand tier (15–22) and the four Know topics. **13 left in phase 5.** Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **123 topics in the active queue** — Understand **83**, Know **37**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
+| **Next** | **Phase 5 · 15 and 16 · Regular expressions** (syntax, then in practice), then 17–22 and the four Know topics. **12 left in phase 5.** Inside each phase: **Understand → Know → When Needed** |
+| **Remaining** | **122 topics in the active queue** — Understand **82**, Know **37**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
 | **Totals** | **154 of 316 in scope** (337 syllabus rows − 21 dropped). **0 files over 300 lines**, **0 broken links under lane A's phases 3–8**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
 
 **If you are another session:** please do not write under `docs/javascript/` while
