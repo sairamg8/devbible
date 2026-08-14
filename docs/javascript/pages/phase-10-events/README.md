@@ -7,10 +7,10 @@ sidebar_position: 0
 *14 topics.* As the syllabus puts it, **delegation is the row that pays for the phase** — it
 is the difference between one listener and a thousand.
 
-## Status — **in progress** (2026-08-14)
+## Status — **Master tier COMPLETE** (2026-08-14)
 
 **Master tier first.** Phase 10 has **four** Master topics — 01 through 04 — written in
-syllabus order. **03 of 4 done.**
+syllabus order. **ALL 4 DONE — the Master tier of phase 10 is COMPLETE.**
 
 ## Topics
 
@@ -19,7 +19,7 @@ syllabus order. **03 of 4 done.**
 | 01 | **[The event model](./01-the-event-model/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[`addEventListener`](./02-addeventlistener/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[The event object](./03-the-event-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04 | Event delegation | <span className="db-tier t-master">Master</span> | planned |
+| 04 | **[Event delegation](./04-event-delegation/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05–11 | Form and input events, keyboard, pointer, custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | deferred |
 | 12–14 | `EventTarget` as a base class, touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | deferred |
 
