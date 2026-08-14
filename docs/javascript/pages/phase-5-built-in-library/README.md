@@ -13,14 +13,14 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **12 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **13 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 13 · Non-mutating array counterparts**, then the rest of the Understand
-tier (14–22), then the four Know topics (23–26).
+**Next here: 14 · `flat`, `flatMap`, `fill`, `copyWithin`**, then the rest of the
+Understand tier (15–22), then the four Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **4 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **5 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -38,7 +38,7 @@ tier (14–22), then the four Know topics (23–26).
 | 10 | **[`Map` vs a plain object](./10-map-vs-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 11 | **[`Number` and `Math`](./11-number-and-math/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[String searching](./12-string-searching/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13 | Non-mutating array counterparts | <span className="db-tier t-understand">Understand</span> | deferred |
+| 13 | **[Non-mutating array counterparts](./13-non-mutating-counterparts.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | `flat`, `flatMap`, `fill`, `copyWithin` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15 | Regular expressions — the syntax | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16 | Regular expressions — in practice | <span className="db-tier t-understand">Understand</span> | deferred |
