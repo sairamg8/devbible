@@ -177,7 +177,7 @@ got nothing
 not been read, and will not be until a parser middleware reads it
 **Fix:** Mount `express.json()` above anything that needs a body — and remember a
 mismatched `Content-Type` leaves it `undefined` rather than erroring
-([Phase 3 · 02](../../phase-3-requests/02-json-and-urlencoded.md))
+([Phase 3 · 02](../../phase-3-requests/02-json-and-urlencoded/01-the-four-gates.md))
 
 **Symptom:** `res.status(404)` after `res.send(...)` has no effect and no error
 **Cause:** Headers were flushed on the first write; the status line is already on

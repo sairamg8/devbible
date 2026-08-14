@@ -43,7 +43,7 @@ parser runs.
   — the `setPrototypeOf` that makes `req` two objects at once.
 - **← [Phase 1 · 02 · chunk 02](../../phase-1-routing/02-params-and-query/02-the-query-parser.md)**
   — `req.query`, the getter that re-parses.
-- **→ [02 · JSON and urlencoded](../02-json-and-urlencoded.md)** — how `req.body`
+- **→ [02 · JSON and urlencoded](../02-json-and-urlencoded/README.md)** — how `req.body`
   comes to exist, and the content-type gate.
 - **→ [04 · Query parser](../04-query-parser.md)** — the parser setting, from the
   request side.

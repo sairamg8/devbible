@@ -264,4 +264,4 @@ it.
 
 ---
 
-← Prev: [The twelve getters](02-the-twelve-getters.md) · Index: [req anatomy](README.md) · Next topic → [JSON and urlencoded](../02-json-and-urlencoded.md)
+← Prev: [The twelve getters](02-the-twelve-getters.md) · Index: [req anatomy](README.md) · Next topic → [JSON and urlencoded](../02-json-and-urlencoded/README.md)

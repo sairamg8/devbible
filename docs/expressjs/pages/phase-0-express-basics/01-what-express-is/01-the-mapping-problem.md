@@ -170,7 +170,7 @@ Express derives and which it passes straight through
 **Cause:** Nothing parses a body unless you mount a parser — and in Express 5 an
 unparsed body is `undefined`, where Express 4 gave you `{}`
 **Fix:** Mount `express.json()` / `express.urlencoded()`, and see
-[Phase 3 · 02](../../phase-3-requests/02-json-and-urlencoded.md) for the
+[Phase 3 · 02](../../phase-3-requests/02-json-and-urlencoded/01-the-four-gates.md) for the
 content-type gate that decides whether they run at all
 
 **Symptom:** Tutorials treat "Express" as the whole backend curriculum

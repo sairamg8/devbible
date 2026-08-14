@@ -49,7 +49,7 @@ a response; say at what stage `req.body` starts existing; and explain why
   — the `(req, res, next)` contract in full.
 - **→ [Phase 2 · 03 · `next` semantics](../../phase-2-middleware/03-next-semantics/README.md)**
   — `next()`, `next(err)`, `next('route')`, and calling it twice.
-- **→ [Phase 3 · 02 · JSON and urlencoded](../../phase-3-requests/02-json-and-urlencoded.md)**
+- **→ [Phase 3 · 02 · JSON and urlencoded](../../phase-3-requests/02-json-and-urlencoded/README.md)**
   — stage 6, and the content-type gate that decides whether it happens.
 - **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
   — the arity rule chunk 02 derives, applied.

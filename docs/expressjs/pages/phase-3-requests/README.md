@@ -13,7 +13,7 @@ sidebar_position: 0
 > or changed.
 >
 > ⚠️ **Two console blocks on this phase are known to be wrong and were deliberately left
-> in place** — pages [01](01-req-anatomy/03-reading-headers-and-content.md) and [02](02-json-and-urlencoded.md) both
+> in place** — pages [01](01-req-anatomy/03-reading-headers-and-content.md) and [02](02-json-and-urlencoded/01-the-four-gates.md) both
 > print `body: undefined`, which no real run can produce: the value crosses `res.json`,
 > and `JSON.stringify` omits `undefined` properties, so the key is **absent**. Each page
 > says so in its Verified line. They are not rewritten because inventing replacement
@@ -30,7 +30,7 @@ process down.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[req anatomy](01-req-anatomy/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The prototype chain and what each layer contributes; the twelve getters and the six that read `trust proxy`; and reading headers correctly |
-| 02 | **[JSON and urlencoded](02-json-and-urlencoded.md)** | <span className="db-tier t-master">Master</span> | `express.json` / `urlencoded`, content-type gates |
+| 02 | **[JSON and urlencoded](02-json-and-urlencoded/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The four gates before a byte is read; every option with its real default; and the status + `err.type` table |
 | 03 | **[Size limits](03-size-limits.md)** | <span className="db-tier t-master">Master</span> | 413 too large — DoS control, not optional polish |
 | 04 | **[Query parser](04-query-parser.md)** | <span className="db-tier t-understand">Understand</span> | Express 5 `simple` vs `extended` |
 | 05 | **[Malformed bodies](05-malformed-bodies.md)** | <span className="db-tier t-understand">Understand</span> | 400 parse failures into error middleware |
@@ -43,7 +43,7 @@ process down.
 | Syllabus topic | Page |
 |---|---|
 | `req` anatomy | 01 (chunks [01](01-req-anatomy/01-two-objects-in-one.md) · [02](01-req-anatomy/02-the-twelve-getters.md) · [03](01-req-anatomy/03-reading-headers-and-content.md)) |
-| Body parsers json/urlencoded | 02 |
+| Body parsers json/urlencoded | 02 (chunks [01](02-json-and-urlencoded/01-the-four-gates.md) · [02](02-json-and-urlencoded/02-the-parsers-and-their-options.md) · [03](02-json-and-urlencoded/03-errors-and-choices.md)) |
 | Body size limits | 03 |
 | query parser simple vs extended | 04 |
 | Malformed payloads | 05 |
