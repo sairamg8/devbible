@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **15 of 19 topics written** — 17 leaf pages. The whole Master tier is done.
+🚧 **17 of 19 topics written** — 19 leaf pages. The whole Master tier is done.
 
 **The largest change to React since hooks, and the one most often described wrongly.**
 Two directives, two module graphs, one serialization boundary — get those three right and
