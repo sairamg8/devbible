@@ -37,18 +37,18 @@ interviews actually probe.
 | 17 | **[Closure and default-parameter gotchas](./17-closure-and-default-gotchas/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 18 | **[IIFE and the module pattern](./18-iife-and-the-module-pattern.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 19 | **[Function properties](./19-function-properties.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | deferred |
+| 20 | **[`new.target` and constructor guards](./20-new-target-and-constructor-guards.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## Status — **Master tier complete · Understand tier under way** (2026-08-14)
 
-🚧 **19 of 20 written.** All eight Master topics (01–08) are done, and the Master
+✅ **20 of 20 written — PHASE 3 IS COMPLETE at every tier.** All eight Master topics (01–08) are done, and the Master
 tier of **every** phase 0–18 is now closed — so the standing Master-first plan is
 finished and the work has moved to the **Understand and Know tiers**, phase by
 phase. Topics 09–17 are the Understand tier, and it is now complete.
 
-**Next here: 20 · `new.target` and constructor guards** — the last topic in the phase.
+**Phase 3 is finished.** Next in lane A: **phase 4 · Objects, prototypes and classes**, topic 02 onward (Master 01, 03–08 are already written).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **9 / 9** ✅ · Know **2 / 3**.
+**Coverage:** Master **8 / 8** ✅ · Understand **9 / 9** ✅ · Know **3 / 3** ✅.
 
 ## Phase gate
 
