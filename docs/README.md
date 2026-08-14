@@ -12,7 +12,7 @@ and add your own row when you claim something.**
 
 | Area | Claimed by | Since | State |
 |---|---|---|---|
-| **React** — all of `docs/react/` | session `6ffd754d` | 2026-08-14 | 🔴 **Active.** **Phases 0–4 COMPLETE** (106 files, 0 broken links). **Phases 0–5 COMPLETE** (124 files). **Phase 6 · Rendering performance and the Compiler** in progress — **6 of 17 topics** (131 files). |
+| **React** — all of `docs/react/` | session `6ffd754d` | 2026-08-14 | 🔴 **Active.** **Phases 0–4 COMPLETE** (106 files, 0 broken links). **Phases 0–5 COMPLETE** (124 files). **Phase 6 · Rendering performance and the Compiler** in progress — **8 of 17 topics** (133 files). |
 | **PostgreSQL** — all of `docs/postgresql/` | session `052a10c2` | 2026-08-13 | ✅ **COMPLETE — RELEASED, free to pick up.** Phase 13 finished 18/18 (every stamp gone), plus new phase-2 topic 17 (money) and phase-3 topic 20 (multi-tenancy). **298 pages, 298 carrying `> Verified:`, 0 files over 300 lines, 0 broken links.** Topics 07–18 are documentation-validated under the no-new-sandboxes rule and say so inline. Remaining PG work is *review only* — the rubric pass and `/code-review ultra`. |
 | **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3–6 Master tiers COMPLETE** — P3 01–08, P4 01/03–08, P5 01/02/04–07/09/10, P6 01–03. **Phase 7 Master tier COMPLETE** (all 11). **Phase 8 Master tier COMPLETE**. **Phase 9 Master tier COMPLETE**. **Phase 10 · Events in progress** — Master 01 of 4. See the [JavaScript claim notice](javascript/pages/README.md) |
 | **CSS** — all of `docs/css/` | session `6f020813` | 2026-08-14 | ✅ **COMPLETE — RELEASED, free to pick up.** Syllabus re-scoped to the critical path (119 → 74 topics; SCSS is usage-only, the architecture phase was cut). **All 11 phases written — 74 topics, 81 pages, 17,359 lines, 0 files over 300 lines.** Flexbox and Grid at full Master depth on the user's instruction. Doc-validated under the no-new-sandboxes rule with sources named per page; **no fabricated console blocks.** |
@@ -100,7 +100,7 @@ Ordered by how far the explanations have got, not alphabetically.
 | **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [149 pages](./javascript/pages/README.md); phases 0–2 complete, Master tiers of 3–6 complete, phase 7 under way |
 | **[TypeScript](./typescript/README.md)** | 4 parts · 187 topics | In progress — [37 pages](./typescript/pages/README.md), phases 0–2                   |
 | **[CSS](./css/README.md)**               | 4 parts · 74 topics  | **✅ COMPLETE** — [81 pages](./css/pages/README.md) across 11 phases; critical-path scope |
-| **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [131 pages](./react/pages/README.md), **phases 0–5 complete**, phase 6 at 6/17 |
+| **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [133 pages](./react/pages/README.md), **phases 0–5 complete**, phase 6 at 8/17 |
 | **[Git](./git/README.md)**               | 4 parts · 191 topics | In progress — [14 pages](./git/pages/README.md), phase 0                             |
 | **[Express](./expressjs/README.md)**     | 4 parts · 114 topics | **✅ COMPLETE** — [85 pages](./expressjs/pages/README.md) across 11 phases; all 114 topics covered, every page carries a `> Verified:` line |
 | **[MongoDB](./mongodb/README.md)**       | 4 parts · 82 topics | In progress — [3 pages](./mongodb/pages/README.md), phase 0 under way |

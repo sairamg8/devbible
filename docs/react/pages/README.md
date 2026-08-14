@@ -61,7 +61,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[3 — State and the render cycle](./phase-3-state/README.md)** | ✅ **Written** | 17 pages, 17 topics |
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
-| **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | 🚧 **Writing** | 6 of 17 topics, 7 files |
+| **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | 🚧 **Writing** | 8 of 17 topics, 9 files |
 | 7 — Custom hooks and the Rules of React | Not started | — |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |
 | 9 — Forms, Actions and optimistic UI | Not started | — |
