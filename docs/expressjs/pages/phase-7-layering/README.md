@@ -42,7 +42,7 @@ same gap found in phases [4](../phase-4-responses/README.md),
 
 | Syllabus topic | Page |
 |---|---|
-| Controller → service → repository wiring | 01 |
+| Controller → service → repository wiring | 01 (chunks [01](01-controller-service-repository/01-the-three-layers.md) · [02](01-controller-service-repository/02-wiring-it-in-express.md) · [03](01-controller-service-repository/03-when-to-adopt.md)) |
 | Domain vs transport | 02 |
 | Avoiding fat controllers | 03 |
 | Dependency injection without a framework | 04 |
