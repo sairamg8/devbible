@@ -85,7 +85,7 @@ Worth naming explicitly, because each is regularly assumed:
 - **Trusting proxies safely.** `trust proxy` decides *whether* to believe
   `X-Forwarded-For`; it cannot tell you whether the header was sanitised upstream.
   Getting that wrong turns rate limiting off without any symptom —
-  [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md).
+  [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md).
 
 ## Trade-off
 

@@ -25,7 +25,7 @@ parsed object occupies.**
 is 1 GB. `limit` is per request and has no notion of concurrency. The companion
 control is rate limiting, keyed correctly — which means `trust proxy` must be
 right, or the limiter counts fabricated addresses
-([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md),
+([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md),
 [Phase 9 · 04](../../phase-9-hardening/04-rate-limiting.md)).
 
 **2 · Slow clients.** A client that sends one byte per second, forever, stays

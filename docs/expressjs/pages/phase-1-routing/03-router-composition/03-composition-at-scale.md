@@ -68,7 +68,7 @@ somewhere else in this track:
 | request id first | anything logged before it has no correlation id | [Phase 10 · 02](../../phase-10-app-factory/02-request-id.md) |
 | CORS before authn | a preflight carries no credentials, so authn answers 401 and the browser says "CORS" | [Phase 9 · 02](../../phase-9-hardening/02-cors.md) |
 | probes above the limiter | a rate-limited `/readyz` takes the instance out of rotation under load | [Phase 10 · 05](../../phase-10-app-factory/05-health-and-boot.md) |
-| `trust proxy` before anything reading `req.ip` | the limiter keys on `req.ip` | [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md) |
+| `trust proxy` before anything reading `req.ip` | the limiter keys on `req.ip` | [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md) |
 | 404 then error handler | a 404 is not an error and never reaches four-arg middleware | [Phase 5 · 06](../../phase-5-errors/06-not-found-and-process.md) |
 
 **The failure mode this prevents:** the same six middleware mounted in five

@@ -40,7 +40,7 @@ client-controlled — quietly, and all at once.**
 
 🔴 **Six of them depend on `trust proxy`**, and they fail *together*. That is why
 `trust proxy` is the single highest-consequence Express setting and gets its own
-Master topic ([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md)).
+Master topic ([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md)).
 
 ## `protocol` and `secure`
 
@@ -154,7 +154,7 @@ everything works locally
 **Cause:** TLS is terminated at a proxy, `trust proxy` is unset, so
 `socket.encrypted` is false and `req.protocol` is `'http'`
 **Fix:** Set `trust proxy` to the hop count or the proxy's subnet —
-[Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md)
+[Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md)
 
 **Symptom:** A redirect-to-HTTPS guard loops forever behind a load balancer
 **Cause:** Same root cause — `req.secure` is `false` on an already-HTTPS request

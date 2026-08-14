@@ -127,7 +127,7 @@ the moment `express()` returns:
 | `env` | `process.env.NODE_ENV` or `'development'` | Chooses whether the default error handler leaks stacks |
 | `query parser` | `'simple'` | ⬇ see below |
 | `subdomain offset` | `2` | How `req.subdomains` is sliced |
-| `trust proxy` | `false` | The highest-consequence Express setting — [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md) |
+| `trust proxy` | `false` | The highest-consequence Express setting — [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md) |
 | `view` / `views` | `View` / `resolve('views')` | Template engine plumbing |
 | `jsonp callback name` | `'callback'` | |
 | `view cache` | enabled **only** when `env === 'production'` | A template change appears immediately in dev and never in prod |

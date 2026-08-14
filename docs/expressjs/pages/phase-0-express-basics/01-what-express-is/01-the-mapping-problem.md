@@ -199,7 +199,7 @@ language, not an ORM, and not a full application stack.
 Because it is the HTTP request target, which for an ordinary origin-form request
 is only the path and query. The host travels as the `Host` header, which is why
 `req.hostname` exists on the Express request and why it is affected by
-[`trust proxy`](../../phase-9-hardening/01-trust-proxy.md).
+[`trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md).
 
 **★ What is the difference between a middleware function and a route handler in
 Express?**

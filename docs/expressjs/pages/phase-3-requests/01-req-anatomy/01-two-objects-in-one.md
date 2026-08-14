@@ -62,7 +62,7 @@ Two things worth internalising:
   arrive as one comma-joined string. If that matters, read `req.rawHeaders`.
 - **Everything here is attacker-supplied except `req.socket.remoteAddress`.**
   Headers are input. `Host` is input. That is the entire premise of
-  [`trust proxy`](../../phase-9-hardening/01-trust-proxy.md) and of
+  [`trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md) and of
   [chunk 02](02-the-twelve-getters.md).
 
 ## The Express half: twelve getters, none cached

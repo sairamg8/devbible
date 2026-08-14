@@ -17,7 +17,7 @@ sidebar_position: 4
 > ([request reference](https://expressjs.com/en/5x/api/request/),
 > [behind proxies](https://expressjs.com/en/guide/behind-proxies.html)).
 > **Both misconfigurations break the limiter, in opposite directions** — see below; the
-> mechanism is [page 01](01-trust-proxy.md).
+> mechanism is [page 01](01-trust-proxy/README.md).
 > `429 Too Many Requests` and the `Retry-After` header are
 > [RFC 6585](https://www.rfc-editor.org/rfc/rfc6585.html) /
 > [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html); `RateLimit-*` headers are an
@@ -136,7 +136,7 @@ an outage from the user's side.
 
 **Symptom:** One user's activity rate-limits everybody  
 **Cause:** `trust proxy` off, so every request shares the proxy's IP  
-**Fix:** Configure `trust proxy` to match the topology ([page 01](01-trust-proxy.md))
+**Fix:** Configure `trust proxy` to match the topology ([page 01](01-trust-proxy/README.md))
 
 **Symptom:** The limiter never triggers under attack  
 **Cause:** `trust proxy: true` with an edge that does not overwrite `X-Forwarded-For` —

@@ -53,7 +53,7 @@ parser runs.
   — `res.format`, and the `Vary` header `req.accepts` obliges you to send.
 - **→ [Phase 6 · 07 · ETag and cache](../../phase-6-rest-surface/07-etag-and-cache.md)**
   — why `req.fresh` cannot help you with `If-Match`.
-- **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy.md)** —
+- **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md)** —
   the setting six of the twelve getters depend on.
 
 ---

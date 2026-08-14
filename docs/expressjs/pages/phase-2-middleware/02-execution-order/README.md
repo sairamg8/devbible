@@ -49,7 +49,7 @@ would find out what actually ran for a request that hung.
   the same fact applied to two routes that could both match.
 - **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — why an error handler is reachable only from below it.
-- **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy.md)** and
+- **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md)** and
   **[· 02 · CORS](../../phase-9-hardening/02-cors.md)** — the two ordering mistakes
   with security consequences.
 - **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**

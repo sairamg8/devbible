@@ -185,4 +185,4 @@ whole strings, including scheme and port.
 
 ---
 
-← Prev: [trust proxy](01-trust-proxy.md) · Next → [Helmet](03-helmet.md)
+← Prev: [trust proxy](01-trust-proxy/README.md) · Next → [Helmet](03-helmet.md)

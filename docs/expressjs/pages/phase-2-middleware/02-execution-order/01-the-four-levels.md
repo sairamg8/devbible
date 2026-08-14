@@ -152,7 +152,7 @@ app.use(errorHandler);         // 11 · four-arg, last
 
 | Constraint | What breaks if you get it wrong |
 |---|---|
-| `trust proxy` before anything reading `req.ip` | the rate limiter keys on a wrong or forged address — [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md) |
+| `trust proxy` before anything reading `req.ip` | the rate limiter keys on a wrong or forged address — [Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md) |
 | request id before logging | the first log lines have no correlation id |
 | CORS before authn | preflight gets 401, and the browser reports "CORS" — [Phase 9 · 02](../../phase-9-hardening/02-cors.md) |
 | parsers before routes | `req.body` is `undefined` in exactly the handlers registered above them |

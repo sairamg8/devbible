@@ -95,7 +95,7 @@ export function createApp({userService, orderService, config}) {
 
 Reading top to bottom gives the whole request path. Every line has a reason
 established earlier — `trust proxy` before anything reads `req.ip`
-([Phase 9](../phase-9-hardening/01-trust-proxy.md)), CORS before authentication
+([Phase 9](../phase-9-hardening/01-trust-proxy/README.md)), CORS before authentication
 ([Phase 9](../phase-9-hardening/02-cors.md)), health above the limiter, 404 then
 error handler ([Phase 5](../phase-5-errors/06-not-found-and-process.md)).
 

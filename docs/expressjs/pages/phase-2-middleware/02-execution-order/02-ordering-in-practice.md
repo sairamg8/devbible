@@ -98,7 +98,7 @@ reordering is a request that exercises the *interaction*: a preflight `OPTIONS`
 to a protected route asserts CORS-before-authn; a `POST` with a body asserts
 parser-before-route; a request with a forged `X-Forwarded-For` asserts
 `trust proxy` is doing what you think
-([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy.md)).
+([Phase 9 · 01](../../phase-9-hardening/01-trust-proxy/README.md)).
 
 ## The cost of a layer
 

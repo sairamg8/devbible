@@ -12,7 +12,7 @@ sidebar_position: 0
 >
 > 🔴 **The long-outstanding gap is now written**: no page previously connected
 > **`trust proxy: true` → client-controlled `req.ip` → rate-limit bypass**. It is on
-> [01](01-trust-proxy.md) and [04](04-rate-limiting.md), from both directions — including
+> [01](01-trust-proxy/README.md) and [04](04-rate-limiting.md), from both directions — including
 > the mirror failure where trust is *off* and every client shares the proxy's bucket.
 >
 > Two things stated plainly because they are widely misunderstood: **CORS is not access
@@ -30,7 +30,7 @@ README had no Coverage table, the same gap found in phases
 
 | Syllabus topic | Page |
 |---|---|
-| `trust proxy` | 01 |
+| `trust proxy` | 01 (chunks [01](01-trust-proxy/01-the-setting-and-the-header.md) · [02](01-trust-proxy/02-when-true-is-a-bypass.md) · [03](01-trust-proxy/03-what-else-it-changes.md)) |
 | CORS in Express | 02 |
 | Helmet as mounted middleware | 03 |
 | Security headers beyond defaults (COOP/COEP) | **03** |
@@ -42,7 +42,7 @@ README had no Coverage table, the same gap found in phases
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[trust proxy](01-trust-proxy.md)** | <span className="db-tier t-master">Master</span> | Real client IP behind Nginx |
+| 01 | **[trust proxy](01-trust-proxy/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Real client IP behind Nginx; why `true` is a rate-limit bypass; and the silent secure-cookie failure |
 | 02 | **[CORS](02-cors.md)** | <span className="db-tier t-understand">Understand</span> | Credentials + preflight gotchas |
 | 03 | **[Helmet](03-helmet.md)** | <span className="db-tier t-understand">Understand</span> | Secure headers as middleware |
 | 04 | **[Rate limiting](04-rate-limiting.md)** | <span className="db-tier t-understand">Understand</span> | Key by IP/user; skip health |
@@ -55,4 +55,4 @@ Behind a proxy, `req.ip` is correct; CORS allows your SPA with credentials; rate
 
 ---
 
-← Syllabus: [Part 4](../../syllabus/04-edge-and-ops.md) · Start → [trust proxy](01-trust-proxy.md)
+← Syllabus: [Part 4](../../syllabus/04-edge-and-ops.md) · Start → [trust proxy](01-trust-proxy/README.md)
