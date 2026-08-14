@@ -99,7 +99,7 @@ correctly — including spaces, `&` and `=`, which is exactly what hand-built st
 url-encoded format cannot carry binary.
 
 The same object also builds query strings, which is
-[04 · `URL` and `URLSearchParams`](../README.md).
+[04 · `URL` and `URLSearchParams`](../04-url-and-searchparams/README.md).
 
 ## `Blob` and `File`
 
@@ -115,7 +115,7 @@ entry works directly.
 
 **`GET` and `HEAD` cannot have one.** Passing `body` with `method: "GET"` throws a `TypeError`.
 Query parameters are the only way to send data with a `GET` — again
-[04](../README.md).
+[04 · `URL` and `URLSearchParams`](../04-url-and-searchparams/README.md).
 
 **A `Request`'s body is read-once**, exactly like a response's
 ([01 · 01](../01-fetch/01-the-critical-surprise.md)). Reusing one `Request` object for a retry

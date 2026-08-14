@@ -24,7 +24,7 @@ function resolve(path) {
 String concatenation produces `…/v2//users` or `…/v2users` depending on which side has the
 slash, and both are real bugs that only show up against a strict server or a router that does
 not normalise. The `URL` constructor applies the standard relative-resolution rules instead —
-the full treatment is [04 · `URL` and `URLSearchParams`](../README.md) *(not written yet)*.
+the full treatment is [04 · `URL` and `URLSearchParams`](../04-url-and-searchparams/README.md).
 
 🔴 **Two resolution rules bite here**, and both are worth memorising now:
 

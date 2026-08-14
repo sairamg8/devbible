@@ -10,7 +10,7 @@ rows and the CORS row cover the majority of "it works in Postman but not in the 
 ## Status — **in progress** (2026-08-14)
 
 **Master tier first.** Phase 11 has **five** Master topics — 01 through 05 — written in
-syllabus order. **03 of 5 done.**
+syllabus order. **04 of 5 done.**
 
 ## Topics
 
@@ -19,7 +19,7 @@ syllabus order. **03 of 5 done.**
 | 01 | **[`fetch`](./01-fetch/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Request bodies](./02-request-bodies/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[A `fetch` wrapper worth reusing](./03-fetch-wrapper/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04 | `URL` and `URLSearchParams` | <span className="db-tier t-master">Master</span> | planned |
+| 04 | **[`URL` and `URLSearchParams`](./04-url-and-searchparams/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | CORS from the client side | <span className="db-tier t-master">Master</span> | planned |
 | 06–15 | `Request`/`Response`/`Headers`, reading responses, aborting, cookies, web storage, uploads, `Blob`/`File`, WebSocket, `postMessage`, CSP | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16–21 | IndexedDB, service workers, SSE, streams, `sendBeacon`, `XMLHttpRequest` | <span className="db-tier t-know">Know</span> | deferred |
