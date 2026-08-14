@@ -27,7 +27,7 @@ pages look missing here, they are on that branch and not yet merged.
 | 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10 | ✅ **Done — 19 topics, 21 files, 4,780 lines, 0 over cap** |
-| 11 | 🚧 **In progress — 4 of 17 topics** |
+| 11 | 🚧 **In progress — 6 of 17 topics** |
 | 14 | ⬜ Claimed — syllabus approved, 14 topics |
 
 **If you are a different session, do not write React pages.** Pick something with
@@ -78,7 +78,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | ✅ **Written** | 18 topics, 20 files |
 | **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
 | **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | ✅ **Written** | 19 topics, 21 files |
-| **[11 — Server rendering, hydration and the DOM APIs](./phase-11-ssr-hydration/README.md)** | 🚧 **Writing** | 4 of 17 topics |
+| **[11 — Server rendering, hydration and the DOM APIs](./phase-11-ssr-hydration/README.md)** | 🚧 **Writing** | 6 of 17 topics |
 | 14 — Testing React (RTL, Jest/Vitest, events, API mocking) | Not started | — |
 
 ## Progress

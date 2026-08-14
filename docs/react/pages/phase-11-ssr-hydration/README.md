@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **4 of 17 topics written** — 4 leaf pages.
+🚧 **6 of 17 topics written** — 6 leaf pages.
 
 **Everything `react-dom` does outside the browser, plus the DOM-level features React 19
 absorbed.** This is where SSR stops being a checkbox and starts being a set of trade-offs
