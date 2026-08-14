@@ -223,6 +223,24 @@ export const LANGUAGES = {
       {n: 12, slug: 'phase-12-when-git-goes-wrong', name: 'When Git goes wrong', part: 'Depth and repair', topics: 14, pages: 0},
     ],
   },
+  storybook: {
+    label: 'Storybook',
+    docsPath: '/docs/storybook',
+    pagesPath: '/docs/storybook/pages',
+    phases: [
+      {n: 0, slug: 'phase-0-how-storybook-runs', name: 'How Storybook runs', part: 'How Storybook runs', topics: 6, pages: 0},
+      {n: 1, slug: 'phase-1-story-format', name: 'The story format', part: 'How Storybook runs', topics: 6, pages: 0},
+      {n: 2, slug: 'phase-2-args-and-controls', name: 'Args, argTypes and controls', part: 'How Storybook runs', topics: 6, pages: 0},
+      {n: 3, slug: 'phase-3-decorators', name: 'Decorators and context', part: 'Composing stories', topics: 5, pages: 0},
+      {n: 4, slug: 'phase-4-documentation', name: 'Documentation', part: 'Composing stories', topics: 5, pages: 0},
+      {n: 5, slug: 'phase-5-theming', name: 'Theming, colors and fonts', part: 'Composing stories', topics: 6, pages: 0},
+      {n: 6, slug: 'phase-6-interaction-testing', name: 'Interaction testing', part: 'Testing with Storybook', topics: 5, pages: 0},
+      {n: 7, slug: 'phase-7-accessibility-testing', name: 'Accessibility testing', part: 'Testing with Storybook', topics: 4, pages: 0},
+      {n: 8, slug: 'phase-8-visual-testing', name: 'Visual regression testing', part: 'Testing with Storybook', topics: 4, pages: 0},
+      {n: 9, slug: 'phase-9-configuration', name: 'Configuration, builders and CI', part: 'Configuration and shipping', topics: 6, pages: 0},
+      {n: 10, slug: 'phase-10-design-systems', name: 'Design systems and shipping', part: 'Configuration and shipping', topics: 5, pages: 0},
+    ],
+  },
 };
 
 /** 'written' | 'writing' | 'planned' for one phase. */
