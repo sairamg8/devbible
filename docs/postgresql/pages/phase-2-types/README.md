@@ -24,6 +24,7 @@ sidebar_position: 0
 | 14 | **[Network, geometric, citext](14-network-geo-citext.md)** | <span className="db-tier t-know">Know</span> | inet/cidr and friends |
 | 15 | **[Domains and composites](15-domains-composites.md)** | <span className="db-tier t-know">Know</span> | Reusable constraints |
 | 16 | **[Range types](16-ranges.md)** | <span className="db-tier t-when">When Needed</span> | tstzrange and exclusion |
+| 17 | **[Modelling money](./17-modelling-money/README.md)** | <span className="db-tier t-master">Master</span> | currency, rounding, allocation |
 
 ## Phase gate
 

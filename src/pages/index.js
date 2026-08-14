@@ -20,6 +20,12 @@ const git = summarise('git');
  * technologies that actually have content — everything else renders as a
  * disabled card, so the page never promises a page that isn't there.
  *
+ * `done: true` marks a technology whose syllabus is fully explained — every
+ * phase written, every syllabus topic covered, no broken links. It is set by
+ * hand rather than derived from `percent === 100`, because the percentage only
+ * knows that a phase has *pages*; it cannot tell a finished phase from one
+ * whose pages are still outlines (Express is at 100% and still a draft).
+ *
  * `parked: true` marks a layer that is outside the committed eleven in
  * instructions.md §2 — visible so the map is honest about what exists beyond
  * the brief, styled so nobody mistakes it for scheduled work.
@@ -77,6 +83,7 @@ const LAYERS = [
         desc: 'Runtime model, event loop, streams, security, production',
         to: '/docs/nodejs',
         active: true,
+        done: true,
         stats: `${node.topicsTotal} topics · ${node.phasesTotal} phases · ${node.phasesDone} phases explained · ${node.pagesWritten} pages`,
         progress: node.percent,
       },
@@ -99,9 +106,10 @@ const LAYERS = [
       {
         n: '08',
         name: 'PostgreSQL',
-        desc: 'SQL, psql, indexes, MVCC, raw pg from Node',
+        desc: 'SQL, indexes, MVCC, raw pg from Node, ops and security',
         to: '/docs/postgresql',
         active: true,
+        done: true,
         stats: `${postgres.topicsTotal} topics · ${postgres.phasesTotal} phases · ${postgres.phasesDone} phases explained · ${postgres.pagesWritten} pages`,
         progress: postgres.percent,
       },
@@ -144,11 +152,13 @@ const LAYERS = [
 ];
 
 function Card({item, parked}) {
-  const pill = item.active
-    ? {className: styles.pillActive, label: 'In progress'}
-    : parked
-      ? {className: styles.pillParked, label: 'Someday'}
-      : {className: styles.pillSoon, label: 'Planned'};
+  const pill = item.done
+    ? {className: styles.pillDone, label: 'Complete'}
+    : item.active
+      ? {className: styles.pillActive, label: 'In progress'}
+      : parked
+        ? {className: styles.pillParked, label: 'Someday'}
+        : {className: styles.pillSoon, label: 'Planned'};
 
   const inner = (
     <>
@@ -213,7 +223,8 @@ export default function Home() {
                 explained
               </strong>
               ({javascript.pagesWritten} pages). Node.js is complete at{' '}
-              {node.pagesWritten} pages; Express and PostgreSQL are live too.
+              {node.pagesWritten} pages and PostgreSQL at{' '}
+              {postgres.pagesWritten}; Express is live too.
             </p>
             <Progress lang="javascript" compact />
             <Progress lang="nodejs" compact />

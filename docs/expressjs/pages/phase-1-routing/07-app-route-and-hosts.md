@@ -9,6 +9,17 @@ sidebar_position: 7
 **`app.route(path)` chains verbs on one path. Host-based routing exists but is
 rarely your first tool — know it exists, prefer path mounts for APIs.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The [routing guide](https://expressjs.com/en/guide/routing.html) gives `app.route()`
+> the same rationale this page does — *"because the path is specified in a single
+> location, this helps to create modular routes and reduces redundancy and typos."*
+> The [application reference](https://expressjs.com/en/5x/api/application/) settles the
+> `mountpath` point: it *"contains one or more path patterns on which a **sub-app** was
+> mounted"*, where a sub-app is *"an instance of `express`"* — so a `Router` genuinely
+> has none, which is what the section below says.
+> Same page, worth knowing and not covered below: a sub-app also fires a **`mount`
+> event** when it is attached, with the parent app passed to the callback.
+
 ## `app.route` / `router.route`
 
 ```js

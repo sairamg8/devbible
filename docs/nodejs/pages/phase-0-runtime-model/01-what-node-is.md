@@ -6,6 +6,11 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
+> Verified: 2026-08. `process.versions` re-run on **Node 24.19.0** (v8 13.6.233.17-node.51,
+> uv 1.52.1, openssl 3.5.7). The V8/libuv split checked against
+> [libuv — Design overview](https://docs.libuv.org/en/v1.x/design.html) and
+> [Don't block the event loop](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop).
+
 **Node.js is not a language and not a framework. It is a program that runs
 JavaScript outside the browser and gives it access to your computer.**
 

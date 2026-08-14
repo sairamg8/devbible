@@ -36,7 +36,7 @@ that can run your app's queries and **cannot** drop a table, and when you can re
 
 - [App role should not own the schema](../03-app-role-not-owner.md) is the direct
   consequence of the ownership rule in chunk 02.
-- [Row-level security](../14-rls.md) filters *rows*; grants control *tables and
+- [Row-level security](../14-rls/README.md) filters *rows*; grants control *tables and
   columns*. RLS is only consulted after the grant check passes.
 - [pg_hba.conf](../05-pg-hba.md) decides who may connect at all — it runs before
   any privilege here is considered.

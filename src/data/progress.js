@@ -21,7 +21,7 @@ export const LANGUAGES = {
       {n: 0, slug: 'phase-0-how-css-runs', name: 'How CSS runs', part: 'How CSS resolves', topics: 12, pages: 12},
       {n: 1, slug: 'phase-1-selectors', name: 'Selectors', part: 'How CSS resolves', topics: 16, pages: 16},
       {n: 2, slug: 'phase-2-cascade', name: 'Cascade control', part: 'How CSS resolves', topics: 4, pages: 5},
-      {n: 3, slug: 'phase-3-custom-properties', name: 'Custom properties and modern values', part: 'Values and layout', topics: 4, pages: 0},
+      {n: 3, slug: 'phase-3-custom-properties', name: 'Custom properties and modern values', part: 'Values and layout', topics: 4, pages: 4},
       {n: 4, slug: 'phase-4-flexbox', name: 'Flexbox, deeply', part: 'Values and layout', topics: 7, pages: 0},
       {n: 5, slug: 'phase-5-grid', name: 'Grid, deeply', part: 'Values and layout', topics: 10, pages: 0},
       {n: 6, slug: 'phase-6-container-queries', name: 'Container queries and intrinsic responsive', part: 'Adaptive and visual', topics: 3, pages: 0},
@@ -86,7 +86,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-jsx', name: 'JSX and what a component returns', part: 'The React model', topics: 15, pages: 15},
       {n: 2, slug: 'phase-2-components', name: 'Components, props and composition', part: 'The React model', topics: 16, pages: 16},
       {n: 3, slug: 'phase-3-state', name: 'State and the render cycle', part: 'The React model', topics: 17, pages: 17},
-      {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 15, pagesPlanned: 18},
+      {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 18},
       {n: 5, slug: 'phase-5-refs-context-reducers', name: 'Refs, context and reducers', part: 'Hooks, completely', topics: 16, pages: 0},
       {n: 6, slug: 'phase-6-performance', name: 'Rendering performance and the React Compiler', part: 'Hooks, completely', topics: 17, pages: 0},
       {n: 7, slug: 'phase-7-custom-hooks', name: 'Custom hooks and the Rules of React', part: 'Hooks, completely', topics: 12, pages: 0},
@@ -124,17 +124,22 @@ export const LANGUAGES = {
     docsPath: '/docs/expressjs',
     pagesPath: '/docs/expressjs/pages',
     phases: [
-      {n: 0, slug: 'phase-0-express-basics', name: 'Express over node:http', part: 'Foundations', topics: 8, pages: 7},
-      {n: 1, slug: 'phase-1-routing', name: 'Routing and path matching', part: 'Foundations', topics: 9, pages: 7},
-      {n: 2, slug: 'phase-2-middleware', name: 'Middleware architecture', part: 'Foundations', topics: 9, pages: 7},
-      {n: 3, slug: 'phase-3-requests', name: 'Requests and body parsing', part: 'HTTP surface', topics: 12, pages: 8},
-      {n: 4, slug: 'phase-4-responses', name: 'Responses and static files', part: 'HTTP surface', topics: 12, pages: 8},
-      {n: 5, slug: 'phase-5-errors', name: 'Error handling', part: 'HTTP surface', topics: 9, pages: 6},
-      {n: 6, slug: 'phase-6-rest-surface', name: 'REST surface and API features', part: 'API product', topics: 14, pages: 9},
-      {n: 7, slug: 'phase-7-layering', name: 'Layering at the edge', part: 'API product', topics: 8, pages: 6},
-      {n: 8, slug: 'phase-8-validation-authz', name: 'Validation and authorization', part: 'Edge & ops', topics: 13, pages: 8},
-      {n: 9, slug: 'phase-9-hardening', name: 'Hardening middleware', part: 'Edge & ops', topics: 9, pages: 6},
-      {n: 10, slug: 'phase-10-app-factory', name: 'Testable app and ops boundary', part: 'Edge & ops', topics: 11, pages: 6},
+      // `pages` here counts topics brought to the bible's standard — explained to
+      // depth and carrying a `> Verified:` line — NOT files on disk. Every phase
+      // below already has outline files (78 of them, linked from the phase READMEs);
+      // counting those as finished is what made Express read 100% while the claims
+      // table called it a draft. Do not "correct" these back to file counts.
+      {n: 0, slug: 'phase-0-express-basics', name: 'Express over node:http', part: 'Foundations', topics: 8, pages: 8},
+      {n: 1, slug: 'phase-1-routing', name: 'Routing and path matching', part: 'Foundations', topics: 9, pages: 9},
+      {n: 2, slug: 'phase-2-middleware', name: 'Middleware architecture', part: 'Foundations', topics: 9, pages: 0},
+      {n: 3, slug: 'phase-3-requests', name: 'Requests and body parsing', part: 'HTTP surface', topics: 12, pages: 0},
+      {n: 4, slug: 'phase-4-responses', name: 'Responses and static files', part: 'HTTP surface', topics: 12, pages: 0},
+      {n: 5, slug: 'phase-5-errors', name: 'Error handling', part: 'HTTP surface', topics: 9, pages: 0},
+      {n: 6, slug: 'phase-6-rest-surface', name: 'REST surface and API features', part: 'API product', topics: 14, pages: 0},
+      {n: 7, slug: 'phase-7-layering', name: 'Layering at the edge', part: 'API product', topics: 8, pages: 0},
+      {n: 8, slug: 'phase-8-validation-authz', name: 'Validation and authorization', part: 'Edge & ops', topics: 13, pages: 0},
+      {n: 9, slug: 'phase-9-hardening', name: 'Hardening middleware', part: 'Edge & ops', topics: 9, pages: 0},
+      {n: 10, slug: 'phase-10-app-factory', name: 'Testable app and ops boundary', part: 'Edge & ops', topics: 11, pages: 0},
     ],
   },
   postgresql: {

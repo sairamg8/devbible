@@ -34,3 +34,22 @@ import Progress from '@site/src/components/Progress';
 
 All 13 phases are now written. The syllabus they follow starts at
 [Part 1 — Foundations](../syllabus/01-foundations.md).
+
+## Completeness
+
+Audited 2026-08-14 (session `8679dc8c`):
+
+| Check | Result |
+|---|---|
+| Syllabus topics covered | **248 of 248** — every row in all four syllabus parts |
+| Phases written | **13 of 13** |
+| Pages | **231** (232 files; topic 13 of Phase 3 is split into a chunk directory) |
+| `> Verified:` line | **232 of 232 files** |
+| Files over the 300-line cap | **0** |
+| Broken links | **0** in a clean `yarn build` |
+
+Six phases map two syllabus rows onto one page where you would never read one
+without the other — Phase 0 does this three times, Phases 1, 3 and 4 twice each,
+Phases 2 and 5 four times each. **Nothing is dropped**: each of those phase
+READMEs carries a Coverage table naming every syllabus row and the page it
+landed on.

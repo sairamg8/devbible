@@ -188,7 +188,7 @@ that is ten seconds; on 500 GB it is hours, and the restore time grows faster
 than the data.
 
 That is the boundary between this topic and
-[physical backup and PITR](../15-physical-backup.md): logical dumps for
+[physical backup and PITR](../15-physical-backup/README.md): logical dumps for
 portability, per-table recovery and moving data between versions; physical
 backups for restoring a large production database quickly and to a chosen point
 in time. Most production systems need both, for different failures.

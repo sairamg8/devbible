@@ -7,6 +7,18 @@ sidebar_position: 0
 > **Target: Express 5.x on Node 24** — examples executed on **Express 5.2.1** /
 > **Node 24.19.0** before they are written down.
 
+:::info 🔒 Claimed — session `8679dc8c`, 2026-08-14
+
+All of `docs/expressjs/` is being worked on. Picked up after the
+[Node.js audit](../../nodejs/pages/README.md) confirmed Node complete — Express is a
+thin layer over `node:http`, so it was deliberately left until the thing it abstracts
+was finished.
+
+**State:** all 11 phases have files (78 pages), but they are **outlines**. The work is
+depth per topic, not scaffolding. Progress is tracked in `docs/README.md`.
+
+:::
+
 The explanations behind the [Express.js syllabus](../README.md). Phases are
 sequential; the syllabus explains why the order is load-bearing.
 

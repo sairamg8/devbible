@@ -221,3 +221,7 @@ per-tenant loop.
 ---
 
 ← [Adding a `NOT NULL` column safely](09-add-not-null.md) · Next → [Naming conventions](11-naming.md)
+
+**Choosing between the three layouts above — and what each costs to operate — is
+[20 · Multi-tenancy as a decision](./20-multi-tenancy/README.md).** This page is
+the mechanism; that one is the decision.

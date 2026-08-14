@@ -10,20 +10,22 @@ sidebar_position: 0
 > a command run here, not from memory.
 
 The topic inventory for CSS, tiered for **mastery in fullstack application
-development**. **12 phases, 119 topics**, split into 4 parts to stay under the
+development**. **11 phases, 74 topics**, split into 4 parts to stay under the
 300-line file cap.
 
-**This is an advanced syllabus, not a CSS course.** It deliberately does not
-explain every CSS concept. It covers the parts that make a real difference to
-real work: **Flexbox and Grid in depth (28 topics between them)**, the modern
+**This is a critical-path syllabus, not a CSS course.** It deliberately does
+not explain every CSS concept. It covers the parts that make a real difference
+to real work: **Flexbox and Grid in depth (17 topics between them)**, the modern
 selectors that replaced whole categories of JavaScript, cascade control with
 `@layer`, custom properties as runtime machinery, container queries, the
-animation cost model, **SCSS and what it still earns in 2026**, and how styles
-actually reach a React component.
+animation cost model, and **how to use SCSS and its features**.
 
 Assumed, not taught: basic syntax, the box model, typography, print stylesheets,
-form-control styling. Scoped down from an earlier 230-topic draft on the user's
-instruction — *"only advanced concepts… which would really be helpful"*.
+form-control styling. **Cut twice on the user's instruction** — 230 → 119 topics
+(*"only advanced concepts… which would really be helpful"*), then 119 → 74
+(*"only critical explanations"*, and SCSS usage rather than CSS architecture).
+Architecture, design tokens, CSS Modules and Tailwind were dropped in the second
+cut.
 
 Architectural role: **the layer that decides what the browser paints.** CSS is
 declarative and it is *resolved*, not executed — you write constraints, and the
@@ -43,12 +45,10 @@ delete the topic, it is CSS's.*
 | Selectors, cascade, box model, layout, typography, color, motion | **CSS** |
 | `classList`, inline `style`, reading/writing custom properties from script | **JavaScript** (Phase 9 — DOM) |
 | The `requestAnimationFrame` loop, layout thrashing measured from script | **JavaScript** (Phases 9 and 12) |
-| Which CSS properties are cheap to animate, and why | **CSS** (Phase 11) |
+| Which CSS properties are cheap to animate, and why | **CSS** (Phase 9) |
 | HTML semantics and which element to reach for | Assumed, not taught here |
 | Component structure, props, re-render behaviour | **React** |
-| *Getting styles onto* a React component — CSS Modules, Tailwind, the `className` decision | **CSS** (Phase 13) |
 | Serving, compressing and caching CSS over HTTP | **Nginx** / **Express** |
-| Which bytes to send and when to send them | **CSS** (Phase 14) |
 
 The JavaScript syllabus already points here: its Phase 12 row set names
 `prefers-reduced-motion` and container queries as the place where animation work
@@ -76,10 +76,10 @@ recalling "I think Safari lagged on that" would have produced the date.
 
 | # | Part | Covers | Phases | Topics |
 |---|---|---|---|---|
-| 1 | **[How CSS resolves](syllabus/01-how-css-works.md)** | The engine's model, the modern selectors, cascade control with `@layer` | 0–2 | 35 |
-| 2 | **[Values and layout](syllabus/02-layout.md)** | Custom properties, **Flexbox deeply, Grid deeply** | 3–5 | 36 |
-| 3 | **[Adaptive, visual, motion](syllabus/03-adaptive-and-visual.md)** | Container queries, stacking, OkLCh colour, the animation cost model | 6–9 | 30 |
-| 4 | **[SCSS and architecture](syllabus/04-at-scale.md)** | **SCSS in 2026**, layers, tokens, CSS Modules, Tailwind, React | 10–11 | 18 |
+| 1 | **[How CSS resolves](syllabus/01-how-css-works.md)** | The engine's model, the modern selectors, cascade control with `@layer` | 0–2 | 32 |
+| 2 | **[Values and layout](syllabus/02-layout.md)** | Custom properties, **Flexbox deeply, Grid deeply** | 3–5 | 21 |
+| 3 | **[Adaptive, visual, motion](syllabus/03-adaptive-and-visual.md)** | Container queries, stacking, OkLCh colour, the animation cost model | 6–9 | 13 |
+| 4 | **[SCSS](syllabus/04-at-scale.md)** | **How to use SCSS and its features** — setup, `@use`, mixins, loops, maps, functions | 10 | 8 |
 
 ## Progress
 
@@ -91,17 +91,20 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 50 | 42 % |
-| <span className="db-tier t-understand">Understand</span> | 57 | 48 % |
-| <span className="db-tier t-know">Know</span> | 12 | 10 % |
+| <span className="db-tier t-master">Master</span> | 48 | 65 % |
+| <span className="db-tier t-understand">Understand</span> | 22 | 30 % |
+| <span className="db-tier t-know">Know</span> | 4 | 5 % |
 
-**Master is 42 %, above the brief's 25–30 % band, and that is a deliberate
-deviation worth stating rather than fudging.** The band assumes a syllabus that
-covers a whole technology, where most rows are things you look up. This one has
-had the look-up material removed on purpose — typography, print, form controls,
-the box model — so what remains is disproportionately core. A 28 % Master share
-here would mean demoting `minmax(0, 1fr)` or the flex minimum size, which are
-exactly the rows that earn the badge.
+**Master is 65 %, far above the brief's 25–30 % band, and that is the direct
+consequence of the scope — stated rather than fudged.** This syllabus has now
+been cut twice on the user's instruction: 230 → 119 topics (advanced only), then
+119 → 74 (**critical only**). The second cut kept every Master row in the
+unwritten phases, eight Understand rows that are the practical payoff of a
+Master row, and dropped the rest.
+
+The remaining `Understand` and `Know` rows are almost all in **phases 0 and 1**,
+which were written before either cut and are kept intact. In the phases still to
+be written the share is 38 Master out of 46.
 
 If the band matters more than the scope, the fix is to add back the intermediate
 material, not to relabel these rows.

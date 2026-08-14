@@ -9,6 +9,16 @@ sidebar_position: 4
 **First match wins. A param route registered before a static sibling steals the
 static path. Express will not warn you.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> Order-dependence is the documented model, not an accident:
+> [using middleware](https://expressjs.com/en/guide/using-middleware.html) states that
+> middleware runs *"in the order they are defined"*, and the router reference says
+> *"the order of `router.use()` definitions is critical — they execute sequentially,
+> defining middleware precedence."* The
+> [FAQ](https://expressjs.com/en/starter/faq.html) supplies the other half of rule 4:
+> a 404 happens only once *"Express has executed all middleware functions and routes,
+> and found that none of them responded"*, which is why the 404 handler goes last.
+
 ## The classic bug
 
 ```js

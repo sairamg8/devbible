@@ -9,6 +9,10 @@ sidebar_position: 1
 **Express is not a language and not an application architecture. It is a
 programmable layer of routing and middleware on top of Node's `http.Server`.**
 
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — the console block
+> below is a re-run through `sandbox/express-verify`, which extracts every example
+> on this page and executes it against its claimed output. **Sandbox-measured.**
+
 ## Why it exists
 
 `node:http` can accept connections and write responses. It does not give you a

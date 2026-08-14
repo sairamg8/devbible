@@ -1,0 +1,9 @@
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/git-p0/ex1-output.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/git-p0/ex2-output.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/p9-testing/ex1-discovery/disc/README.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/pg-api/tmp/README.md
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/pg-phase-0/README.md
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/react-p0/.ffprof/pkcs11.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/react-p0/.ffprof/datareporting/glean/client_id.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/react-p1/.ffprof/pkcs11.txt
+/mnt/Storage/Backup/Knowledge/devbible/sandbox/react-p1/.ffprof/datareporting/glean/client_id.txt

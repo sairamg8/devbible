@@ -27,7 +27,7 @@
   {
     "id": "phase-0-express-basics_05-application-settings_md__1",
     "file": "phase-0-express-basics/05-application-settings.md",
-    "expected": "$ node settings.mjs\nenv = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = false\ncase sensitive routing = false"
+    "expected": "$ node settings.mjs\nenv = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = undefined\ncase sensitive routing = undefined"
   },
   {
     "id": "phase-0-express-basics_05-application-settings_md__2",
@@ -92,7 +92,7 @@
   {
     "id": "phase-1-routing_07-app-route-and-hosts_md__2",
     "file": "phase-1-routing/07-app-route-and-hosts.md",
-    "expected": "$ node mountpath.mjs\nafter mount, admin.mountpath = /admin\n{ mountpath: '/admin', baseUrl: '/admin' }"
+    "expected": "$ node mountpath.mjs\nRouter.mountpath  : undefined\nsub-app.mountpath : /reports\nrouter    { baseUrl: '/admin', path: '/dashboard', originalUrl: '/admin/dashboard' }\nsub-app   { mountpath: '/reports', baseUrl: '/reports', path: '/daily' }"
   },
   {
     "id": "phase-10-app-factory_06-shutdown-and-entrypoint_md__1",

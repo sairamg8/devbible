@@ -27,6 +27,7 @@ sidebar_position: 0
 | 17 | **[COMMENT ON](17-comments.md)** | <span className="db-tier t-know">Know</span> | Document in the catalog |
 | 18 | **[Deferrable constraints](18-deferrable.md)** | <span className="db-tier t-when">When Needed</span> | Circular FKs |
 | 19 | **[Table inheritance](19-inheritance.md)** | <span className="db-tier t-when">When Needed</span> | Prefer partitioning |
+| 20 | **[Multi-tenancy as a decision](./20-multi-tenancy/README.md)** | <span className="db-tier t-understand">Understand</span> | which model, and what it costs |
 
 ## Phase gate
 

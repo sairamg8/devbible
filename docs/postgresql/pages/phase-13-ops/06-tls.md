@@ -263,4 +263,4 @@ configuration.
 
 ---
 
-← [pg_hba.conf](05-pg-hba.md) · Next → [Connection limits and PgBouncer](07-pgbouncer.md)
+← [pg_hba.conf](05-pg-hba.md) · Next → [Connection limits and PgBouncer](./07-pgbouncer/README.md)

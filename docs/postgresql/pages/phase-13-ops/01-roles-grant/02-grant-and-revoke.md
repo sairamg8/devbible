@@ -86,7 +86,7 @@ client.on('notice', (n) => log.warn({severity: n.severity}, n.message));
 
 Without that listener the warning is discarded by the driver. Check
 `pg_stat_user_tables.last_vacuum` to confirm a vacuum actually happened rather
-than trusting the exit status — see [Monitoring views](../09-monitoring.md).
+than trusting the exit status — see [Monitoring views](../09-monitoring/README.md).
 
 ## Identity columns need no sequence grant
 

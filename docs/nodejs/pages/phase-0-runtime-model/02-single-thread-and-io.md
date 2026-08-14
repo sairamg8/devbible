@@ -6,6 +6,12 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
+> Verified: 2026-08 against [Don't block the event loop](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)
+> — network I/O never touches the thread pool; `fs` (except `FSWatcher` and the `Sync`
+> calls), `dns.lookup`, `crypto.pbkdf2`/`scrypt`/`randomBytes`, and async `zlib` do — and
+> [libuv — Design overview](https://docs.libuv.org/en/v1.x/design.html) for epoll / kqueue /
+> event ports / IOCP.
+
 **Your JavaScript runs on exactly one thread. The waiting does not.**
 
 That one sentence resolves most of the confusion around "Node is

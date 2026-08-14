@@ -28,7 +28,7 @@ row count — and when you know which of your backups contains the roles.
 
 ## Where this connects
 
-- [Physical backup and PITR](../15-physical-backup.md) is the other half:
+- [Physical backup and PITR](../15-physical-backup/README.md) is the other half:
   logical dumps are portable and selective, physical backups are fast to restore
   and can target a point in time. Large systems need both.
 - [Disaster drill](../18-disaster-drill.md) is this topic practised on a schedule.

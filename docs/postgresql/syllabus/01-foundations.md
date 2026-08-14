@@ -4,7 +4,7 @@ sidebar_label: "1 · Foundations"
 sidebar_position: 1
 ---
 
-> **Phases 0–3 · 63 topics · 19 Master**
+> **Phases 0–3 · 65 topics · 20 Master**
 > Architecture, the `psql` client mastered, the type system, and schema design.
 
 Nothing here is Node-specific, but every page still carries its Node `pg`
@@ -75,7 +75,7 @@ into "I watched it work". Every row here is a shell skill, not SQL.
 📖 **Explanation written:** [Phase 2 — Types](../pages/phase-2-types/)
 
 
-*17 topics.* Type choices are the hardest thing in the schema to change later,
+*18 topics.* Type choices are the hardest thing in the schema to change later,
 and three of them (`timestamptz`, `numeric`, `text`) decide whether the
 application has a whole class of bug. Each row also states **what `pg` returns to
 JavaScript**, which is where most surprises live.
@@ -99,6 +99,7 @@ JavaScript**, which is where most surprises live.
 | Network types (`inet`, `cidr`), geometric types, and `citext` | <span className="db-tier t-know">Know</span> |
 | Domains and composite types | <span className="db-tier t-know">Know</span> |
 | Range types (`int4range`, `tstzrange`) and exclusion constraints | <span className="db-tier t-when">When Needed</span> |
+| **Modelling money** — `numeric` vs integer cents vs float, rounding, and the ledger shape | <span className="db-tier t-master">Master</span> |
 
 ---
 
@@ -107,7 +108,7 @@ JavaScript**, which is where most surprises live.
 📖 **Explanation written:** [Phase 3 — DDL](../pages/phase-3-ddl/)
 
 
-*19 topics.* Creating tables is the first thing the user asked for by name, so
+*20 topics.* Creating tables is the first thing the user asked for by name, so
 this phase is deliberately thorough — and Phase 8 then does all of it again from
 Node, in migrations.
 
@@ -132,6 +133,7 @@ Node, in migrations.
 | `COMMENT ON` — documenting the schema where it lives, and reading it back with `\d+` | <span className="db-tier t-know">Know</span> |
 | Deferrable constraints — `DEFERRABLE INITIALLY DEFERRED` and circular FKs | <span className="db-tier t-when">When Needed</span> |
 | Table inheritance, and why declarative partitioning replaced it | <span className="db-tier t-when">When Needed</span> |
+| **Multi-tenancy as a decision** — shared schema with `tenant_id` vs schema-per-tenant vs database-per-tenant, and what each costs to operate | <span className="db-tier t-understand">Understand</span> |
 
 ---
 

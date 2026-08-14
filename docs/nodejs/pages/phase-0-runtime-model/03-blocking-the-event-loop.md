@@ -6,6 +6,14 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
+> Verified: 2026-08. The remedies match
+> [Don't block the event loop](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)
+> — partitioning with `setImmediate`, offloading to workers. `monitorEventLoopDelay`
+> "will be reported in nanoseconds", and `resolution` is the sampling rate in
+> milliseconds, per [`node:perf_hooks`](https://nodejs.org/api/perf_hooks.html).
+> The two console blocks are from the phase's original Node 24.19.0 authoring run and
+> were not re-measured for this stamp.
+
 **One slow function does not slow down one request. It slows down every request.**
 
 This is the failure mode that makes people say "Node doesn't scale". It is

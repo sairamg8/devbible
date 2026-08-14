@@ -9,7 +9,7 @@ sidebar_position: 0
 > see Node sandbox notes for the IPv6 trap).
 
 The complete topic inventory for PostgreSQL, tiered for **mastery in fullstack
-backend development**. **14 phases, 229 topics**, split into 4 parts to stay
+backend development**. **14 phases, 233 topics**, split into 4 parts to stay
 under the 300-line file cap.
 
 Architectural role: **the database** — the relational model, SQL, the planner,
@@ -73,13 +73,13 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 61 | 27% |
-| <span className="db-tier t-understand">Understand</span> | 124 | 54% |
+| <span className="db-tier t-master">Master</span> | 62 | 27% |
+| <span className="db-tier t-understand">Understand</span> | 127 | 54% |
 | <span className="db-tier t-know">Know</span> | 35 | 15% |
 | <span className="db-tier t-when">When Needed</span> | 9 | 4% |
-| **Total** | **229** | |
+| **Total** | **233** | |
 
-Master by part: Foundations 19 · SQL 14 · Node + `pg` 14 · Perf & production 14.
+Master by part: Foundations 20 · SQL 14 · Node + `pg` 14 · Perf & production 14.
 
 If you only ever finish the <span className="db-tier t-master">Master</span> set,
 you can design a schema, write every query a CRUD API needs in raw SQL, drive it

@@ -190,7 +190,7 @@ with — a dump whose grants reference roles the target does not have.
 
 What it does not give you is a recovery point: a nightly dump means up to 24
 hours of data loss. If that is unacceptable, this topic is not your backup
-strategy — [physical backup and PITR](../15-physical-backup.md) is, and dumps
+strategy — [physical backup and PITR](../15-physical-backup/README.md) is, and dumps
 become the portable secondary copy.
 
 ## Trade-off

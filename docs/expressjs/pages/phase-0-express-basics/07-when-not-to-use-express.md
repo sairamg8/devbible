@@ -9,6 +9,10 @@ sidebar_position: 7
 **Express is the default for this stack — not a religion. Know when another
 framework (or raw `node:http`) is the better trade.**
 
+> Verified: 2026-08-14. No runnable claims on this page by design — it deliberately
+> avoids benchmark numbers. The one checkable fact, that 5.x is the current line, was
+> confirmed against the npm registry: `latest` is **5.2.1**, `latest-4` is **4.22.2**.
+
 ## When Express is the right default
 
 - Team already knows it; hiring pool is large

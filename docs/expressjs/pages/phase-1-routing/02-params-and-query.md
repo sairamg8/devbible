@@ -10,6 +10,24 @@ sidebar_position: 2
 on `req.query` after the path matches. On Express 5, `req.query` defaults to
 the simple parser.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The [application settings table](https://expressjs.com/en/5x/api/application/) gives
+> `query parser` a default of `"simple"`, which is Node's `querystring` module. The two
+> behaviours in the table below follow from
+> [`querystring.parse`](https://nodejs.org/api/querystring.html), where
+> `'foo=bar&abc=xyz&abc=123'` parses to `{foo: 'bar', abc: ['xyz','123']}` and no bracket
+> syntax is interpreted — so `a[b]=1` stays a literal key.
+> Named path params are per the
+> [routing guide](https://expressjs.com/en/guide/routing.html); the splat rules are on
+> [page 05](05-path-matching-express5.md).
+>
+> ⚠️ **The Express docs contradict themselves here.** The
+> [`req.query` reference](https://expressjs.com/en/5x/api/request/) still says the parser
+> "by default uses the `qs` module" — that sentence is left over from Express 4. The 5.x
+> settings table and the migration guide both say `simple`. This page follows the
+> settings table; if you need certainty for your own version, read back
+> `app.get('query parser')` rather than trusting either prose page.
+
 ## Path params
 
 ```js

@@ -9,6 +9,14 @@ sidebar_position: 6
 **`router.param(name, fn)` runs when a route param is present — load once, 404
 once, then every handler on that router can use the loaded value.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The "load once" claim is the documented guarantee, not an optimisation:
+> [`router.param`](https://expressjs.com/en/5x/api/router/) states that *"a param
+> callback will be called only once in a request-response cycle, even if the parameter
+> is matched in multiple routes"* — the docs' own example labels the callback
+> `CALLED ONLY ONCE` while two matching handlers both run afterwards. The callback
+> signature `(req, res, next, value)` is from the same page.
+
 ## Load-and-attach
 
 ```js

@@ -140,7 +140,7 @@ in the schema unless you know to look.
 - **`current_setting('app.user_id', true)`** is how the trigger learns who is acting,
   and it is set per-transaction with `SET LOCAL`. Behind a transaction pooler a plain
   `SET` lands on whichever backend you get next — measured on the
-  [PgBouncer page](../phase-13-ops/07-pgbouncer.md). **Always `SET LOCAL`**, inside the
+  [PgBouncer page](../phase-13-ops/07-pgbouncer/README.md). **Always `SET LOCAL`**, inside the
   same transaction as the write.
 - **Supabase** — `auth.uid()` gives you the acting user directly inside the trigger,
   which removes the `SET LOCAL` problem entirely.

@@ -8,8 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 15 of 18 topics written.** The table below links what exists;
-unlinked rows are not written yet.
+✅ **COMPLETE — all 18 topics written**, 27 content files, 0 broken links, 0 files
+over the 300-line cap.
 
 The most misused hook in React, almost always because it is understood as "run
 code after render" instead of **"synchronize with something outside React"**.
@@ -34,13 +34,13 @@ React may run any number of times**.
 | 13 | **[Effect ordering](13-effect-ordering.md)** | <span className="db-tier t-understand">Understand</span> | Three passes; every cleanup before any setup |
 | 14 | **[Timers, listeners and observers](14-timers-listeners-observers.md)** | <span className="db-tier t-understand">Understand</span> | Each API's inverse, and the leak without it |
 | 15 | **[Effects and refs together](15-effects-and-refs.md)** | <span className="db-tier t-understand">Understand</span> | Measuring, focusing, and React 19 ref cleanup |
-| 16 | Subscribing to an external store | <span className="db-tier t-understand">Understand</span> | The tearing problem `useSyncExternalStore` exists to fix |
-| 17 | `useInsertionEffect` | <span className="db-tier t-know">Know</span> | For CSS-in-JS libraries, explicitly not application code |
-| 18 | Skipping the first run | <span className="db-tier t-know">Know</span> | Usually a sign the logic belonged in a handler |
+| 16 | **[Subscribing to an external store](16-external-store.md)** | <span className="db-tier t-understand">Understand</span> | The tearing problem `useSyncExternalStore` exists to fix |
+| 17 | **[`useInsertionEffect`](17-useinsertioneffect.md)** | <span className="db-tier t-know">Know</span> | For CSS-in-JS libraries, explicitly not application code |
+| 18 | **[Skipping the first run](18-skipping-the-first-run.md)** | <span className="db-tier t-know">Know</span> | Usually a sign the logic belonged in a handler |
 
 ## Coverage so far
 
-**15 topics → 24 content files.** Two topics run past the 300-line file cap and
+**18 topics → 27 content files.** Two topics run past the 300-line file cap and
 become topic directories:
 
 | Topic | Chunks | Split at |
@@ -49,7 +49,12 @@ become topic directories:
 | 06 You might not need an effect | 3 | one action ↔ a cascade of them ↔ where the state lives |
 | 11 Removing dependencies | 3 | identity ↔ restructuring ↔ the illegitimate fixes |
 
-Longest file 294 lines; nothing over.
+**Line spread 159–294**, and the two chunked topics were drafted whole and split
+after measuring — never sized to fit. Topic 06's first chunk hit 308 and split again
+at a concept boundary.
+
+**Verified at phase close:** link walker over all 28 files reports **0 broken links**;
+no file exceeds 300 lines.
 
 ## How these pages are verified
 

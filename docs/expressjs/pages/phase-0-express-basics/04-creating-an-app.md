@@ -9,6 +9,9 @@ sidebar_position: 4
 **`express()` builds the app. `listen` (or `http.createServer`) puts it on the
 network. Keep those two jobs separable.**
 
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — console block re-run
+> through `sandbox/express-verify`. **Sandbox-measured.**
+
 ## The minimal app
 
 ```js

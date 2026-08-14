@@ -9,7 +9,10 @@ sidebar_position: 6
 **Express 5 is the line this bible targets. Two upgrades break real apps: path
 syntax and async error handling. Measure them; do not rely on Express 4 folklore.**
 
-> Verified: 2026-08 on **Express 5.2.1** / **Node 24.19.0**.
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — console blocks re-run
+> through `sandbox/express-verify`. **Sandbox-measured.** The breaking-change list is
+> cross-checked against the official
+> [Migrating to Express 5](https://expressjs.com/en/guide/migrating-5.html) guide.
 
 ## Path matching rewrite
 
@@ -47,8 +50,18 @@ app.get('/user/:id?') → THREW: Unexpected ? at index 9: /user/:id?; visit http
 (e.g. `/*splat`) or another Express 5–legal pattern. Phase 4 covers serving a
 built SPA in full.
 
-Optional parameters and custom regex routes need the Express 5 migration guide —
-do not copy Express 4 path strings blindly.
+The replacements are mechanical once you know them — braces mark the optional
+part, and alternation becomes an array:
+
+| Express 4 | Express 5 |
+|---|---|
+| `'*'` | `'/*splat'` — or `'/{*splat}'` to match the root too |
+| `'/:file.:ext?'` | `'/:file{.:ext}'` |
+| `'/[discussion\|page]/:slug'` | `['/discussion/:slug', '/page/:slug']` |
+
+A named wildcard also changes what you *read*: `req.params.splat` is an **array**
+of path segments in Express 5, not a string. Do not copy Express 4 path strings
+blindly — check them against the migration guide.
 
 ## Async errors forward to `next`
 

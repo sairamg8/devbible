@@ -23,8 +23,8 @@ This page is the map, so nothing is a surprise when you meet it.
 | `@scope` | limit rules to a subtree, with an optional lower bound | [Phase 1](../phase-1-selectors/) |
 | `@property` | register a typed custom property | **Phase 3** |
 | `@font-face` | define a font and where to fetch it | **Phase 9** |
-| `@keyframes` | name a sequence of animation states | **Phase 11** |
-| `@starting-style` | the value to animate *from* when an element appears | **Phase 11** |
+| `@keyframes` | name a sequence of animation states | **Phase 9** |
+| `@starting-style` | the value to animate *from* when an element appears | **Phase 9** |
 | `@page` | margins and breaks for print | **Phase 14** |
 | `@counter-style` | define custom list markers | **Phase 9** |
 | `@import` | pull in another stylesheet — **avoid** | [page 03](./03-how-stylesheets-reach-the-page.md) |

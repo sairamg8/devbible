@@ -10,6 +10,17 @@ sidebar_position: 5
 route — the process never listens. Upgrade pain is front-loaded.**
 
 > Verified: 2026-08 · Express **5.2.1**
+>
+> Re-validated 2026-08-14 against the documentation — **no sandbox run**.
+> [Migrating to Express 5](https://expressjs.com/en/guide/migrating-5.html) confirms
+> each row of the migration map: a wildcard *"must have a name"* (`/*splat`, or
+> `/{*splat}` to include the root), `'/:file.:ext?'` becomes `'/:file{.:ext}'`, and
+> regex-alternation paths like `'/[discussion|page]/:slug'` become the array
+> `['/discussion/:slug', '/page/:slug']`.
+> One consequence the migration guide adds and this page does not: a named wildcard
+> gives you an **array**, `{splat: ['foo','bar']}` — the
+> [request reference](https://expressjs.com/en/5x/api/request/) shows
+> `/files/images/image.png` producing `req.params.file = ['images','image.png']`.
 
 ## Patterns that throw
 

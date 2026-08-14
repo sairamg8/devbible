@@ -208,3 +208,7 @@ compares equal to itself so that `numeric` can be sorted and indexed.
 ---
 
 ← [Integer types](01-integers.md) · Next → [text vs varchar vs char](03-text.md)
+
+**This page settles the type. Modelling money — currency, rounding rules, the
+missing penny when you split a bill, and exchange rates — is
+[17 · Modelling money](./17-modelling-money/README.md).**

@@ -15,14 +15,14 @@
     "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
   },
   "data/progress.js": {
-    "mtime": 1786621612.2265866,
-    "ast_hash": "5d0fe922364ff4790b3bf6567c7b15aa",
-    "semantic_hash": "5d0fe922364ff4790b3bf6567c7b15aa"
+    "mtime": 1786672007.0693576,
+    "ast_hash": "29c56711b01e504160f7f36cfb397f85",
+    "semantic_hash": "29c56711b01e504160f7f36cfb397f85"
   },
   "pages/index.js": {
-    "mtime": 1786619931.5864873,
-    "ast_hash": "26690a9e44f881ef99e5a04567423407",
-    "semantic_hash": "26690a9e44f881ef99e5a04567423407"
+    "mtime": 1786671872.746764,
+    "ast_hash": "7ec9c16a5b61cccd9b1a2d6b0281c54b",
+    "semantic_hash": "7ec9c16a5b61cccd9b1a2d6b0281c54b"
   },
   "theme/DocSidebar/index.js": {
     "mtime": 1786613629.5171108,

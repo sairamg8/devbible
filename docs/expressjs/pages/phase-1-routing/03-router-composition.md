@@ -9,6 +9,17 @@ sidebar_position: 3
 **`express.Router()` is a portable stack. Mount it on `app` (or another router)
 at a prefix. That is how feature modules stay small.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The [routing guide](https://expressjs.com/en/guide/routing.html) calls a `Router`
+> *"a complete middleware and routing system … often referred to as a 'mini-app'"*, and
+> states that a parent route's path params are *"not accessible by default from the
+> sub-routes"* without the `mergeParams` option — which is exactly the trap below.
+> The [request reference](https://expressjs.com/en/5x/api/request/) defines `req.baseUrl`
+> as *"the URL path on which a router instance was mounted"*, notes that `req.path`
+> excludes the mount point, and gives the worked example
+> `originalUrl '/admin/new?sort=desc'` · `baseUrl '/admin'` · `path '/new'` — the same
+> relationship as the table below.
+
 ## Mount a feature router
 
 ```js

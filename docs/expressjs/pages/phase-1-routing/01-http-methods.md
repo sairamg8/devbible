@@ -9,6 +9,18 @@ sidebar_position: 1
 **A route is method + path. Register the methods you mean. A mismatch is a 404
 by default — not a 405.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [FAQ — 404 responses](https://expressjs.com/en/starter/faq.html): *"404 responses are
+> not the result of an error … Express has executed all middleware functions and routes,
+> and found that none of them responded."*
+> [`app.all`](https://expressjs.com/en/5x/api/application/) *"matches all HTTP verbs"*,
+> and the routing guide lists `QUERY` among them.
+> **The HEAD note below has a caveat the docs add:** `app.get()` covers HEAD *"if
+> `app.head()` was not called for the path **before** `app.get()`"* — register a `head`
+> route first and the GET handler stops serving HEAD.
+> The docs describe no built-in 405 or `Allow` header, which is why this page says you
+> must write one.
+
 ## The verbs
 
 ```js

@@ -4,7 +4,7 @@ sidebar_label: "4 · Performance & production"
 sidebar_position: 4
 ---
 
-> **Phases 10–13 · 68 topics · 13 Master**
+> **Phases 10–13 · 71 topics · 14 Master**
 > What you need when the app works but is slow, when two requests collide, and
 > when it has to survive in production.
 
@@ -85,7 +85,7 @@ accident.
 📖 **Explanation written:** [Phase 12 — Beyond tables](../pages/phase-12-beyond-tables/)
 
 
-*17 topics.* PostgreSQL's differentiators. The JSON rows are Master-tier because
+*19 topics.* PostgreSQL's differentiators. The JSON rows are Master-tier because
 the schema-versus-document decision is made early and lived with for years.
 
 | Topic | Tier |
@@ -107,6 +107,8 @@ the schema-versus-document decision is made early and lived with for years.
 | Procedures versus functions, and transaction control inside a procedure | <span className="db-tier t-when">When Needed</span> |
 | Foreign data wrappers, `postgres_fdw` and `dblink` | <span className="db-tier t-when">When Needed</span> |
 | `pgvector` — embeddings, distance operators, and HNSW indexes | <span className="db-tier t-when">When Needed</span> |
+| **The transactional outbox** — writing the event in the same transaction as the row, and draining it with `FOR UPDATE SKIP LOCKED` | <span className="db-tier t-understand">Understand</span> |
+| **Audit and history tables** — trigger-written history, what to capture, and why the app cannot be trusted to do it | <span className="db-tier t-understand">Understand</span> |
 
 ---
 

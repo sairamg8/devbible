@@ -132,7 +132,7 @@ Three separate ownerships that are easy to conflate:
 
 A managed provider usually gives you a database whose owner is *your* admin role
 rather than a true superuser — which is why some `ALTER SYSTEM` and extension
-operations fail there. That is [Managed PostgreSQL](13-managed-postgres.md), not
+operations fail there. That is [Managed PostgreSQL](./13-managed-postgres/README.md), not
 this page, but it is the same ownership model.
 
 ## When one role is fine

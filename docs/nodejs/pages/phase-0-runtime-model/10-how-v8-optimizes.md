@@ -6,6 +6,10 @@ sidebar_position: 10
 
 <span className="db-tier t-when">When Needed</span>
 
+> Verified: 2026-08 against [V8 — Maglev, V8's fastest optimizing JIT](https://v8.dev/blog/maglev),
+> which confirms the four-tier lineup (Ignition → Sparkplug → Maglev → TurboFan) and that
+> Maglev shipped in Chrome M117. Node 24.19.0 ships V8 13.6, so all four tiers are present.
+
 **Learn this the day a profiler points at JavaScript execution — which, for a
 normal web application, is almost never.**
 

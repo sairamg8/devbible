@@ -9,6 +9,13 @@ sidebar_position: 5
 **`app.set` / `app.get` hold app-wide defaults. A few of them change security and
 query parsing. Know which ones you inherit.**
 
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — console blocks re-run
+> through `sandbox/express-verify`. **Sandbox-measured.** The `undefined` defaults for
+> `strict routing` and `case sensitive routing` are corroborated by the
+> [Application settings table](https://expressjs.com/en/5x/api/application/), which
+> lists both as `N/A (undefined)`. **Corrected 2026-08-14:** this page previously
+> printed `false` for those two — hand-written output that had never been executed.
+
 ## Defaults on Express 5.2.1
 
 Measured on Node 24.19.0:
@@ -39,9 +46,26 @@ x-powered-by = true
 etag = "weak"
 query parser = "simple"
 trust proxy = false
-strict routing = false
-case sensitive routing = false
+strict routing = undefined
+case sensitive routing = undefined
 ```
+
+**Read the last two lines again — they are `undefined`, not `false`.** Express
+never assigns those two settings a value; it only stores one when *you* call
+`app.set`. The router then treats "not set" the way it treats `false`, so the
+*behaviour* is non-strict and case-insensitive, but the *setting* has no value to
+read. The Express docs say the same thing: their default column is `N/A
+(undefined)`.
+
+It matters the moment you branch on one:
+
+```js
+if (app.get('strict routing') === false) { /* never runs on a fresh app */ }
+if (!app.get('strict routing'))          { /* correct — covers undefined too */ }
+```
+
+Every other setting in the list *does* have a real default, which is why the
+mixture is easy to miss.
 
 ## Settings that earn a deliberate choice
 
@@ -52,6 +76,8 @@ case sensitive routing = false
 | **`trust proxy`** | `false` | Without it, `req.ip` is the proxy, not the client. Phase 9 |
 | **`etag`** | `"weak"` | Affects automatic ETag generation for some responses |
 | **`env`** | `process.env.NODE_ENV` or `"development"` | Error verbosity and template caches in older stacks |
+| **`strict routing`** | **unset (`undefined`)** | Unset behaves as off: `/users` and `/users/` are the same route. Turn it on only if the trailing slash carries meaning |
+| **`case sensitive routing`** | **unset (`undefined`)** | Unset behaves as off: `/Users` matches `/users`. Both of these are inherited by mounted sub-apps |
 
 ```js
 // harden-basics.mjs
@@ -101,6 +127,12 @@ on an open internet edge without understanding spoofed `X-Forwarded-For`
 **Cause:** Another layer (proxy, gateway) adds its own brand header  
 **Fix:** Check the full response chain, not only Express
 
+**Symptom:** A config check like `app.get('strict routing') === false` never fires  
+**Cause:** The setting is `undefined` until something calls `app.set` — it is not
+initialised to `false` the way `trust proxy` and `x-powered-by` are  
+**Fix:** Test truthiness (`!app.get('strict routing')`), or set it explicitly at
+startup so the value you read back is one you wrote
+
 ## Interview questions
 
 **★ Name three Express settings you would review before production.**  
@@ -115,6 +147,11 @@ on an open internet edge without understanding spoofed `X-Forwarded-For`
 **Why disable `x-powered-by`?**  
 Minor fingerprinting reduction; stops advertising the stack for free. Not a
 security boundary by itself.
+
+**What does `app.get('strict routing')` return on a fresh app, and why?**  
+`undefined`, not `false`. Express only stores those two settings when you set
+them; the router reads "unset" as off. The docs list their default as `N/A
+(undefined)`, unlike `trust proxy`, which really is initialised to `false`.
 
 **Does `trust proxy` affect only `req.ip`?**  
 It affects IP and protocol derived from `X-Forwarded-*` — cookies’ `secure`

@@ -10,6 +10,9 @@ sidebar_position: 3
 it falls into error middleware. If nothing calls `next` and nothing writes a
 response, the client hangs.**
 
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — console block re-run
+> through `sandbox/express-verify`. **Sandbox-measured.**
+
 ## The path end to end
 
 1. Node’s `http.Server` accepts a connection and creates `req` / `res`.

@@ -6,6 +6,13 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
+> Verified: 2026-08 against [Node.js — Global objects](https://nodejs.org/api/globals.html):
+> no `window`; `crypto` (Web Crypto, stable in v23), `fetch` (stable in v21), `Blob`,
+> `ReadableStream` (stable in v23.11), `TextEncoder`, `URL`, `URLSearchParams`,
+> `AbortController`, `queueMicrotask`, `Event`/`EventTarget`, `structuredClone` and
+> `performance` are all present, and `setTimeout` returns a `Timeout` object rather than a
+> number.
+
 **Same language, different host, different powers — and a growing middle ground
 of web standards that work in both.**
 

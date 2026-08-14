@@ -31,13 +31,13 @@
     "id": "phase-0-express-basics_04-creating-an-app_md__2",
     "file": "phase-0-express-basics/04-creating-an-app.md",
     "expected": "",
-    "actual": "port 43557",
+    "actual": "port 36085",
     "status": "ok"
   },
   {
     "id": "phase-0-express-basics_05-application-settings_md__1",
     "file": "phase-0-express-basics/05-application-settings.md",
-    "expected": "$ node settings.mjs\nenv = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = false\ncase sensitive routing = false",
+    "expected": "$ node settings.mjs\nenv = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = undefined\ncase sensitive routing = undefined",
     "actual": "env = \"development\"\nx-powered-by = true\netag = \"weak\"\nquery parser = \"simple\"\ntrust proxy = false\nstrict routing = undefined\ncase sensitive routing = undefined",
     "status": "ok"
   },
@@ -128,8 +128,8 @@
   {
     "id": "phase-1-routing_07-app-route-and-hosts_md__2",
     "file": "phase-1-routing/07-app-route-and-hosts.md",
-    "expected": "$ node mountpath.mjs\nafter mount, admin.mountpath = /admin\n{ mountpath: '/admin', baseUrl: '/admin' }",
-    "actual": "after mount, admin.mountpath = undefined\n{ baseUrl: '/admin' }",
+    "expected": "$ node mountpath.mjs\nRouter.mountpath  : undefined\nsub-app.mountpath : /reports\nrouter    { baseUrl: '/admin', path: '/dashboard', originalUrl: '/admin/dashboard' }\nsub-app   { mountpath: '/reports', baseUrl: '/reports', path: '/daily' }",
+    "actual": "Router.mountpath  : undefined\nsub-app.mountpath : /reports\nrouter    {\n  baseUrl: '/admin',\n  path: '/dashboard',\n  originalUrl: '/admin/dashboard'\n}\nsub-app   { mountpath: '/reports', baseUrl: '/reports', path: '/daily' }",
     "status": "ok"
   },
   {
@@ -185,7 +185,7 @@
     "id": "phase-2-middleware_06-mutating-req-res_md__1",
     "file": "phase-2-middleware/06-mutating-req-res.md",
     "expected": "",
-    "actual": "b26f57f6-2b0a-412b-a2b4-8addbb99f5e4 GET /t 200 7ms\nbody { requestId: 'b26f57f6-2b0a-412b-a2b4-8addbb99f5e4' }",
+    "actual": "221843cd-5535-47da-baca-9b82c9a78fd9 GET /t 200 9ms\nbody { requestId: '221843cd-5535-47da-baca-9b82c9a78fd9' }",
     "status": "ok"
   },
   {

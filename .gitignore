@@ -25,3 +25,5 @@ yarn-error.log*
 sandbox/**/node_modules/
 sandbox/**/.stryker-tmp/
 sandbox/**/*.log
+build-react*
+build-*

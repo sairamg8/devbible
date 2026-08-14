@@ -4,7 +4,7 @@ sidebar_label: "1 · How CSS resolves"
 sidebar_position: 1
 ---
 
-> **Phases 0–2 · 35 topics · 14 Master**
+> **Phases 0–2 · 32 topics · 14 Master**
 > The engine's model, the selectors that changed what is expressible, and
 > cascade control with `@layer`.
 
@@ -71,7 +71,7 @@ JavaScript and no extra markup — and state the resulting specificity.
 
 ## Phase 2 — Cascade control
 
-*7 topics.* Not a tour of the cascade — the parts you use to **stop fighting
+*4 topics.* Not a tour of the cascade — the parts you use to **stop fighting
 it**. `@layer` is the load-bearing one and the reason this phase exists.
 
 | Topic | Tier |
@@ -80,9 +80,10 @@ it**. `@layer` is the load-bearing one and the reason this phase exists.
 | **`@layer`** — declaring precedence up front; that **unlayered styles beat every layer**; swallowing a third-party stylesheet into a low layer; and why `!important` **inverts** layer order | <span className="db-tier t-master">Master</span> |
 | **Specificity, counted properly** — the (id, class, type) triple; `:where()` at zero; `:is()`, `:not()` and `:has()` taking their most specific argument | <span className="db-tier t-master">Master</span> |
 | **The shorthand reset trap** — `background: yellow` wiping `background-image`, `border` resetting `border-color` to `currentcolor`; every shorthand writes **all** its longhands | <span className="db-tier t-master">Master</span> |
-| **Custom properties in the cascade** — inherited values resolved at computed-value time, and the invalid-at-computed-value-time rule that turns one bad token into `unset` | <span className="db-tier t-understand">Understand</span> |
-| `!important` and the origin ladder — what it really does, why author `!important` beats inline, and the two legitimate uses | <span className="db-tier t-understand">Understand</span> |
-| The global keywords — `inherit`, `initial`, `unset`, `revert`, `revert-layer`, and what each reverts *to* | <span className="db-tier t-understand">Understand</span> |
+
+*Cut from this phase:* custom properties in the cascade (covered in Phase 3),
+the `!important` origin ladder, and the global keywords (`inherit`, `initial`,
+`unset`, `revert`) — look-up material once the four rows above are solid.
 
 **Gate:** you can design a layer order for an application that imports a
 third-party stylesheet, and explain why nothing in it will ever need
@@ -93,12 +94,8 @@ third-party stylesheet, and explain why nothing in it will ever need
 ## Where this connects
 
 - **Phase 0 → Phase 9** — the pipeline stages become the animation cost model.
-- **Phase 1 → Phase 11** — `@scope`, shadow DOM and CSS Modules are three
-  answers to the same scoping question.
 - **Phase 2 → Phase 10** — `@layer` is native cascade control; Sass's `@use` is
   build-time module control. They solve different halves.
-- **Phase 2 → Phase 11** — an architecture built on layers is only as good as
-  your grasp of the cascade order.
 
 ---
 

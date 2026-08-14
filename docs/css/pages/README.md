@@ -23,19 +23,24 @@ import Progress from '@site/src/components/Progress';
 |---|---|---|
 | [0 · How CSS runs](./phase-0-how-css-runs/README.md) | 12 | ✅ written |
 | [1 · Selectors](./phase-1-selectors/README.md) | 16 | ✅ written |
-| 2 · Cascade control | 7 | — |
-| 3 · Custom properties and modern values | 8 | — |
-| 4 · **Flexbox, deeply** | 12 | — |
-| 5 · **Grid, deeply** | 16 | — |
-| 6 · Container queries | 8 | — |
-| 7 · Positioning, stacking and overlay | 7 | — |
-| 8 · Colour and theming | 7 | — |
-| 9 · Motion and the cost model | 8 | — |
-| 10 · **SCSS in 2026** | 9 | — |
-| 11 · Architecture and the stack | 9 | — |
+| [2 · Cascade control](./phase-2-cascade/README.md) | 4 | ✅ written |
+| [3 · Custom properties and modern values](./phase-3-custom-properties/README.md) | 4 | ✅ written |
+| 4 · **Flexbox, deeply** | 7 | — |
+| 5 · **Grid, deeply** | 10 | — |
+| 6 · Container queries | 3 | — |
+| 7 · Positioning, stacking and overlay | 4 | — |
+| 8 · Colour and theming | 3 | — |
+| 9 · Motion and the cost model | 3 | — |
+| 10 · **SCSS, practically** | 8 | — |
 
-**Scope:** advanced CSS only. Basic syntax, the box model, typography, print and
-form-control styling are assumed, not taught — see the
+**36 of 74 topics written** (37 pages — `@layer` is chunked). Phases 0–3 are
+complete; the 38 topics still to write are the critical set left after the
+second cut.
+
+**Scope:** the critical path only. Basic syntax, the box model, typography,
+print and form-control styling are assumed, not taught — and CSS *architecture*
+(design tokens, CSS Modules, Tailwind, CSS-in-JS) was cut on the user's
+instruction, leaving SCSS as a practical usage phase. See the
 [syllabus overview](../README.md).
 
 ## How these pages are verified

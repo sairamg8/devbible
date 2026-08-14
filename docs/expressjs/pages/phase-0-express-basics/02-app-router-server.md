@@ -9,6 +9,11 @@ sidebar_position: 2
 **Three different objects. Confusing them is how “my middleware never runs”
 starts.**
 
+> Verified: 2026-08-14 on **Express 5.2.1** / **Node 24.19.0** — console block re-run
+> through `sandbox/express-verify`. **Sandbox-measured.** Note that `mountpath` is a
+> property of a mounted **app**, not of a `Router`; a `Router` has no `mountpath`, and
+> inside a request the equivalent is `req.baseUrl` (see Phase 1, topic 07).
+
 ## The graph
 
 ```text

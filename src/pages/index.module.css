@@ -271,6 +271,7 @@
 }
 
 .pillActive,
+.pillDone,
 .pillSoon {
   font-family: var(--db-mono);
   font-size: 0.58rem;
@@ -288,6 +289,15 @@
 
 [data-theme='dark'] .pillActive {
   color: #0f161c;
+}
+
+/* Finished work is settled, not loud: the accent as outline rather than fill,
+   so the solid accent stays the signal for what is actively being written. */
+.pillDone {
+  background: var(--db-accent-soft);
+  color: var(--db-accent-ink);
+  border: 1px solid var(--db-accent);
+  padding: calc(0.2em - 1px) calc(0.5em - 1px);
 }
 
 .pillSoon {
