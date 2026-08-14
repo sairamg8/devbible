@@ -30,7 +30,7 @@ language's rows.
 > **no console blocks**.
 
 The complete topic inventory for MongoDB, tiered for **mastery in fullstack
-application development**. **15 phases, 204 topics**, split into 4 parts to stay
+application development**. **15 phases, 82 topics**, split into 4 parts to stay
 under the 300-line file cap.
 
 The bar is **no knowledge gaps**: every MongoDB decision you would meet building a
@@ -74,10 +74,10 @@ engine's observable behaviour.
 
 | Part | Phases | Topics | What it establishes |
 |---|---|---|---|
-| **[1 — The document model](./syllabus/01-the-document-model.md)** | 0–3 | 55 | What a document is, how the server stores it, and how to design collections around queries |
-| **[2 — Querying](./syllabus/02-querying.md)** | 4–7 | 62 | CRUD, the operator surface, aggregation, and making the planner do what you meant |
-| **[3 — MongoDB from Node](./syllabus/03-from-node.md)** | 8–10 | 46 | The driver, Mongoose, and where transactions are actually warranted |
-| **[4 — Production](./syllabus/04-production.md)** | 11–14 | 41 | Replication, sharding, operations, security, and the applied data layer |
+| **[1 — The document model](./syllabus/01-the-document-model.md)** | 0–3 | 22 | What a document is, how the server stores it, and how to design collections around queries |
+| **[2 — Querying](./syllabus/02-querying.md)** | 4–7 | 24 | CRUD, the operator surface, aggregation, and making the planner do what you meant |
+| **[3 — MongoDB from Node](./syllabus/03-from-node.md)** | 8–10 | 18 | The driver, Mongoose, and where transactions are actually warranted |
+| **[4 — Production](./syllabus/04-production.md)** | 11–14 | 18 | Replication, sharding, operations, security, and the applied data layer |
 
 ## Priority tiers
 

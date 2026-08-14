@@ -14,11 +14,11 @@ and add your own row when you claim something.**
 |---|---|---|---|
 | **React** — all of `docs/react/` | session `6ffd754d` | 2026-08-14 | 🔴 **Active.** **Phases 0–4 COMPLETE** (106 files, 0 broken links). **Phases 0–5 COMPLETE** — Phase 5 finished 16/16, **124 files**, 0 broken links, 0 over cap. Starting **Phase 6 · Rendering performance and the React Compiler**. |
 | **PostgreSQL** — all of `docs/postgresql/` | session `052a10c2` | 2026-08-13 | ✅ **COMPLETE — RELEASED, free to pick up.** Phase 13 finished 18/18 (every stamp gone), plus new phase-2 topic 17 (money) and phase-3 topic 20 (multi-tenancy). **298 pages, 298 carrying `> Verified:`, 0 files over 300 lines, 0 broken links.** Topics 07–18 are documentation-validated under the no-new-sandboxes rule and say so inline. Remaining PG work is *review only* — the rubric pass and `/code-review ultra`. |
-| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3–6 Master tiers COMPLETE** — P3 01–08, P4 01/03–08, P5 01/02/04–07/09/10, P6 01–03. **Phase 7 Master tier COMPLETE** (all 11). **Phase 8 Master tier COMPLETE**. **Phase 9 · The DOM in progress** — Master 05 of 6. See the [JavaScript claim notice](javascript/pages/README.md) |
+| **JavaScript** — all of `docs/javascript/` | session `01ECVvH5` | 2026-08-13 | 🔴 **Active.** **Phases 3–6 Master tiers COMPLETE** — P3 01–08, P4 01/03–08, P5 01/02/04–07/09/10, P6 01–03. **Phase 7 Master tier COMPLETE** (all 11). **Phase 8 Master tier COMPLETE**. **Phase 9 Master tier COMPLETE**. Next: **Phase 10 · Events**. See the [JavaScript claim notice](javascript/pages/README.md) |
 | **CSS** — all of `docs/css/` | session `6f020813` | 2026-08-14 | ✅ **COMPLETE — RELEASED, free to pick up.** Syllabus re-scoped to the critical path (119 → 74 topics; SCSS is usage-only, the architecture phase was cut). **All 11 phases written — 74 topics, 81 pages, 17,359 lines, 0 files over 300 lines.** Flexbox and Grid at full Master depth on the user's instruction. Doc-validated under the no-new-sandboxes rule with sources named per page; **no fabricated console blocks.** |
 | **Node.js** — all of `docs/nodejs/` | session `8679dc8c` | 2026-08-14 | ✅ **COMPLETE — audited, free to pick up.** All 13 phases written, **all 248 syllabus topics covered** (231 pages; six phases merge pairs of rows and each says so in a Coverage table). **232 files, 232 carrying `> Verified:`, 0 files over 300 lines, 0 broken links in a clean rebuild.** |
-| **Express** — all of `docs/expressjs/` | session `8679dc8c` | 2026-08-14 | 🔴 **Active — do not pick this up.** **Phases 0–8 COMPLETE (94 of 114 topics)**; next is **Phase 9 · Hardening**. The 78 existing pages cover all 11 phases but most are **outlines**, so `progress.js` now counts *topics brought to standard*, not files — that is why Express dropped from 100% to a real number. **Documentation-validated, no sandbox.** See the [Express claim notice](expressjs/pages/README.md) |
-| **MongoDB** — all of `docs/mongodb/` | session `6f020813` | 2026-08-14 | 🔴 **Active — just claimed.** Syllabus complete (**15 phases, 204 topics**), zero pages. Picked up on finishing CSS. Starting **Phase 0**. Documentation-validated under the no-new-sandboxes rule. |
+| **Express** — all of `docs/expressjs/` | session `8679dc8c` | 2026-08-14 | ✅ **COMPLETE — free to pick up.** All 11 phases, **114 of 114 topics**, 85 pages, **85 carrying `> Verified:`**, 0 over 300 lines, 0 broken links. **Nine syllabus topics had no page at all** and were written; every phase README now has a **Coverage table**, which is how they were found. Phases 1–10 are **documentation-validated with no sandbox runs** — no console block was added or changed. |
+| **MongoDB** — all of `docs/mongodb/` | session `6f020813` | 2026-08-14 | 🔴 **Active.** Syllabus complete (**15 phases, 204 topics**). 🚧 **Phase 0 · How MongoDB runs — 3 of 14 topics written.** Picked up on finishing CSS. Documentation-validated against the MongoDB Manual under the no-new-sandboxes rule. |
 | **Unclaimed** | — | — | **Docker & Podman, Redis, Nginx have zero pages** — good places to start |
 
 **Rules for a shared checkout:** never `git add -A` — stage explicit paths only.
@@ -96,20 +96,22 @@ Ordered by how far the explanations have got, not alphabetically.
 | ----------------------------- | --------------------- | --------------------------------------------------------------------------------- |
 | **[Node.js](./nodejs/README.md)**        | 4 parts · 248 topics | **✅ COMPLETE** — [231 pages](./nodejs/pages/README.md) across 13 phases; all 248 topics covered, every page carries a `> Verified:` line |
 | **[PostgreSQL](./postgresql/README.md)** | 4 parts · 233 topics | **✅ COMPLETE** — [298 pages](./postgresql/pages/README.md) across 14 phases; every page carries a `> Verified:` line |
-| **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [147 pages](./javascript/pages/README.md); phases 0–2 complete, Master tiers of 3–6 complete, phase 7 under way |
+| **[JavaScript](./javascript/README.md)** | 5 parts · 337 topics | In progress — [148 pages](./javascript/pages/README.md); phases 0–2 complete, Master tiers of 3–6 complete, phase 7 under way |
 | **[TypeScript](./typescript/README.md)** | 4 parts · 187 topics | In progress — [37 pages](./typescript/pages/README.md), phases 0–2                   |
 | **[CSS](./css/README.md)**               | 4 parts · 74 topics  | **✅ COMPLETE** — [81 pages](./css/pages/README.md) across 11 phases; critical-path scope |
 | **[React](./react/README.md)**           | 4 parts · 244 topics | In progress — [124 pages](./react/pages/README.md), **phases 0–5 complete**, phase 6 next |
 | **[Git](./git/README.md)**               | 4 parts · 191 topics | In progress — [14 pages](./git/pages/README.md), phase 0                             |
-| **[Express](./expressjs/README.md)**     | 4 parts · 114 topics | In progress — **17 of 114 topics** brought to standard (phases 0–1). [78 pages](./expressjs/pages/README.md) exist across all 11 phases, but the rest are outlines awaiting depth |
-| **[MongoDB](./mongodb/README.md)**       | 4 parts · 204 topics | **Syllabus complete** — 0 pages. Free to pick up at Phase 0 |
+| **[Express](./expressjs/README.md)**     | 4 parts · 114 topics | **✅ COMPLETE** — [85 pages](./expressjs/pages/README.md) across 11 phases; all 114 topics covered, every page carries a `> Verified:` line |
+| **[MongoDB](./mongodb/README.md)**       | 4 parts · 82 topics | In progress — [3 pages](./mongodb/pages/README.md), phase 0 under way |
 | Docker & Podman               | Not started           | —                                                                                   |
 | Redis                         | Not started           | —                                                                                   |
 | Nginx                         | Not started           | —                                                                                   |
 
-Express is listed last on purpose: every phase has a file, so the sidebar looks
-finished, but the pages average a third the depth of the rest and have not been
-run against a sandbox yet.
+Express was previously listed last with the note that its pages "average a third the
+depth of the rest". **That was resolved on 2026-08-14**: every topic was brought to
+depth, nine syllabus topics that had no page were written, and all 85 pages carry a
+`> Verified:` line. Phases 1–10 are documentation-validated with **no sandbox runs**,
+which their Verified lines state explicitly.
 
 ## What "Verified" means
 
