@@ -254,4 +254,4 @@ libraries as supported rather than replaced.
 
 ← Prev: [Hoisting, and the four exceptions to it](01-hoisting.md) ·
 Index: [10 · Document metadata](README.md) ·
-Next → [Resource preloading](../11-resource-preloading.md)
+Next → [Resource preloading](../11-resource-preloading/README.md)
