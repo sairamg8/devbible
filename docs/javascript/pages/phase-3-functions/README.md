@@ -27,7 +27,7 @@ interviews actually probe.
 | 07 | **[Lexical scope and the scope chain](./07-lexical-scope/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | **[Hoisting and the temporal dead zone](./08-hoisting-and-tdz/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 09 | **[Higher-order functions](./09-higher-order-functions.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 10 | Debounce and throttle | <span className="db-tier t-understand">Understand</span> | deferred |
+| 10 | **[Debounce and throttle](./10-debounce-and-throttle.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | Currying and partial application | <span className="db-tier t-understand">Understand</span> | deferred |
 | 12 | Composition | <span className="db-tier t-understand">Understand</span> | deferred |
 | 13 | Memoization | <span className="db-tier t-understand">Understand</span> | deferred |
