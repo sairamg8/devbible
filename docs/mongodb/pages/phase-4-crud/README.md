@@ -7,7 +7,7 @@ sidebar_position: 0
 > Verified: 2026-08-15 against the **MongoDB Manual** (v8.0). Sources named per page.
 > **Documentation-validated** under the no-new-sandboxes rule; **no console blocks**.
 
-**🚧 3 of 6 topics written.** The write surface. Small, and full of operations that look
+**✅ 6 of 6 topics written — COMPLETE.** The write surface. Small, and full of operations that look
 interchangeable and are not.
 
 > **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82 topics**,
@@ -18,16 +18,16 @@ interchangeable and are not.
 | 01 | [`insertOne` / `insertMany`](./01-insert.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | [`find` and the query document](./02-find-and-the-query-document.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 03 | [`findOne`](./03-findone.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 04 | [Projection](./04-projection.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 05 | [`updateOne` / `updateMany`](./05-update.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 06 | [Field update operators](./06-field-update-operators.md) | <span className="db-tier t-master">Master</span> | ⬜ |
+| 04 | [Projection](./04-projection.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 05 | [`updateOne` / `updateMany`](./05-update.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 06 | [Field update operators](./06-field-update-operators.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **3 of 6** |
-| Pages on disk | **3** |
+| Topics written | **6 of 6 — COMPLETE** |
+| Pages on disk | **6** |
 | Evidence | MongoDB Manual, named per page; **no console blocks** |
 
 ## What makes this phase worth reading carefully
