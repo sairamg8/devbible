@@ -13,22 +13,22 @@ behaviour hangs off: how a property is found, what `class` desugars to, and why
 "copying" an object is four different operations with four different failure
 modes.
 
-## Status — **Master tier COMPLETE** (2026-08-13)
+## Status — **Understand tier under way** (2026-08-14)
 
-**All seven Master topics are written** — 01, 03, 04, 05, 06, 07, 08 in syllabus
-order. (02 is an Understand topic, which is why the Master numbering skips it.)
+🚧 **8 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
+08 in syllabus order — and the **Master-first plan is finished across every phase**,
+so the work here is now the **Understand and Know tiers**, in that order.
 
-Understand and Know tiers are marked *deferred*, not forgotten: the standing plan is
-**Master-first across all phases**, so they are filled in on demand once every
-phase's Master topics are done. The next unit of work in JavaScript is
-**Phase 5 · The built-in library**, not topic 02.
+**Next here: 09 · `extends` and `super`**, then 10–16 (Understand), then 17–20 (Know).
+
+**Coverage:** Master **7 / 7** ✅ · Understand **1 / 9** · Know **0 / 4**.
 
 ## Topics
 
 | # | Topic | Tier | Status |
 |---|---|---|---|
 | 01 | **[Object literals](./01-object-literals/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 02 | Property access | <span className="db-tier t-understand">Understand</span> | deferred |
+| 02 | **[Property access](./02-property-access.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 03 | **[Existence checks and `delete`](./03-existence-checks-and-delete/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Shallow vs deep copy](./04-shallow-vs-deep-copy/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[The prototype chain](./05-the-prototype-chain/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
