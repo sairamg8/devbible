@@ -50,7 +50,7 @@ export const LANGUAGES = {
       {n: 11, slug: 'phase-11-network-storage', name: 'Network, storage and data transfer', part: 'Web APIs', topics: 21, pages: 5, pagesPlanned: 21},
       {n: 12, slug: 'phase-12-browser-platform', name: 'The browser platform', part: 'Web APIs', topics: 21, pages: 2, pagesPlanned: 21},
       {n: 13, slug: 'phase-13-complexity', name: "Complexity and JavaScript's real costs", part: 'DSA & machine coding', topics: 10, pages: 3, pagesPlanned: 10},
-      {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures in JavaScript', part: 'DSA & machine coding', topics: 17, pages: 0},
+      {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures in JavaScript', part: 'DSA & machine coding', topics: 17, pages: 5, pagesPlanned: 17},
       {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns', part: 'DSA & machine coding', topics: 20, pages: 0},
       {n: 16, slug: 'phase-16-dynamic-programming', name: 'Dynamic programming and the harder set', part: 'DSA & machine coding', topics: 16, pages: 0},
       {n: 17, slug: 'phase-17-machine-coding', name: 'Machine coding: implement it yourself', part: 'DSA & machine coding', topics: 18, pages: 0},
