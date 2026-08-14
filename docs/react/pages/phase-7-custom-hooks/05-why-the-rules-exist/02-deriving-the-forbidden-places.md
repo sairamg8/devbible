@@ -275,4 +275,4 @@ neither.
 
 ← Prev: [The array and the index](01-the-array-and-the-index.md) ·
 Index: [Why the rules exist](README.md) ·
-Next → [Designing a hook's API](../06-designing-a-hooks-api.md)
+Next → [Designing a hook's API](../06-designing-a-hooks-api/README.md)

@@ -45,7 +45,7 @@ topic follows from that.
   buys visibility, not shared state; this topic is that sentence's consequences.
 - **→ [Why the rules exist](../05-why-the-rules-exist/README.md)** — positional hook storage
   in full, which is *why* two calls can never meet.
-- **→ [Designing a hook's API](../06-designing-a-hooks-api.md)** — a hook that reads
+- **→ [Designing a hook's API](../06-designing-a-hooks-api/README.md)** — a hook that reads
   shared state has a different shape from one that owns it.
 - **↔ [Phase 5 · `createContext`/`useContext`](../../phase-5-refs-context-reducers/04-createcontext-usecontext.md)**
   and **[Phase 5 · context + reducer](../../phase-5-refs-context-reducers/12-context-plus-reducer.md)**
