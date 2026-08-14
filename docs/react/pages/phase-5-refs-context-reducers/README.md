@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 8 of 16 topics written.** The table below links what exists;
+🚧 **In progress — 10 of 16 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The three escape hatches from pure top-down state, and the two hooks that connect
@@ -26,8 +26,8 @@ default model rather than to supplement it.
 | 06 | **[Ref callbacks](06-ref-callbacks.md)** | <span className="db-tier t-understand">Understand</span> | Tied to the node, not the component — and React 19 cleanup |
 | 07 | **[`useImperativeHandle`](07-useimperativehandle.md)** | <span className="db-tier t-understand">Understand</span> | A deliberately narrow imperative API instead of the raw node |
 | 08 | **[When a ref is the wrong tool](08-when-a-ref-is-wrong.md)** | <span className="db-tier t-understand">Understand</span> | The "it works but the UI is stale" bug |
-| 09 | `useState` vs `useReducer` | <span className="db-tier t-understand">Understand</span> | The honest decision rule |
-| 10 | Reducer patterns | <span className="db-tier t-understand">Understand</span> | Action shape, lazy `init`, and `dispatch` being stable |
+| 09 | **[`useState` vs `useReducer`](09-usestate-vs-usereducer.md)** | <span className="db-tier t-understand">Understand</span> | The honest decision rule |
+| 10 | **[Reducer patterns](10-reducer-patterns.md)** | <span className="db-tier t-understand">Understand</span> | Action shape, lazy `init`, and `dispatch` being stable |
 | 11 | What context is and is not | <span className="db-tier t-understand">Understand</span> | Not a state manager, and it does not prevent re-renders |
 | 12 | Context plus reducer | <span className="db-tier t-understand">Understand</span> | React's own built-in app-state pattern |
 | 13 | The default context value | <span className="db-tier t-understand">Understand</span> | The missing-provider bug it silently hides |
@@ -37,7 +37,7 @@ default model rather than to supplement it.
 
 ## Coverage so far
 
-**8 topics → 10 content files.** One topic runs past the 300-line cap and becomes a topic directory:
+**10 topics → 12 content files.** One topic runs past the 300-line cap and becomes a topic directory:
 
 | Topic | Chunks | Split at |
 |---|---|---|
