@@ -13,14 +13,14 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **9 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **10 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 08 · Template literals**, then the rest of the Understand tier
-(11–22), then the four Know topics (23–26).
+**Next here: 11 · `Number` and `Math`**, then the rest of the Understand tier
+(12–22), then the four Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **1 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **2 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -33,7 +33,7 @@ work here is now the **Understand and Know tiers**, in that order.
 | 05 | **[`reduce`](./05-reduce/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[`sort`](./06-sort/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07 | **[String methods](./07-string-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 08 | Template literals | <span className="db-tier t-understand">Understand</span> | deferred |
+| 08 | **[Template literals](./08-template-literals/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | **[`JSON.parse` and `JSON.stringify`](./09-json/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 10 | **[`Map` vs a plain object](./10-map-vs-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 11 | `Number` and `Math` | <span className="db-tier t-understand">Understand</span> | deferred |
