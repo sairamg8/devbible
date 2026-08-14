@@ -86,7 +86,7 @@ page.
 | 1 | **[The React model](syllabus/01-the-react-model.md)** | How React runs, JSX, components, state and the render cycle | 0–3 | 65 |
 | 2 | **[Hooks, completely](syllabus/02-hooks.md)** | Effects, refs/context/reducers, performance and the Compiler, custom hooks | 4–7 | 63 |
 | 3 | **[Concurrent React and the server](syllabus/03-concurrent-and-server.md)** | Suspense and transitions, Actions, Server Components, SSR and hydration | 8–11 | 68 |
-| 4 | **[Building a real app](syllabus/04-building-an-app.md)** | Data and state, routing and structure, correctness and delivery | 12–14 | 48 |
+| 4 | **[Testing React](syllabus/04-building-an-app.md)** | React Testing Library, Jest/Vitest, events and API mocking. Phases 12 and 13 were **dropped** | 14 | 14 |
 
 ## Progress
 
@@ -111,10 +111,10 @@ Counted from the four part files, not estimated.
 | 1 The React model | 65 | 23 |
 | 2 Hooks, completely | 63 | 20 |
 | 3 Concurrent React and the server | 68 | 17 |
-| 4 Building a real app | 48 | 10 |
+| 4 Testing React | 14 | 6 |
 
 Master sits inside the brief's 25–30 % band, weighted toward Parts 1 and 2 —
-**43 of the 70** — because the render cycle and the hook rules are what you use
+**43 of the 66** — because the render cycle and the hook rules are what you use
 with no documentation open, in every file, every day. Part 3 is deliberately
 lighter on Master despite being the most *modern* material: Server Components
 matter enormously and still change often enough that memorising the plumbing is

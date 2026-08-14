@@ -28,7 +28,6 @@ pages look missing here, they are on that branch and not yet merged.
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10 | 🚧 **In progress — 15 of 19 topics, 17 leaf pages, Master tier complete** |
 | 11, 14 | ⬜ Claimed by this session |
-| ~~12, 13~~ | 🔴 **Dropped 2026-08-14** — never written, abandoned |
 
 **If you are a different session, do not write React pages.** Pick something with
 no owner — **TypeScript, Git and MongoDB are all idle**, and Docker & Podman and
@@ -79,9 +78,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
 | **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | 🚧 **Writing** | 15 of 19 topics, 17 leaf pages |
 | 11 — Server rendering, hydration and the DOM APIs | Not started | — |
-| ~~12 — Data and state in a real app~~ | 🔴 **Dropped** | — |
-| ~~13 — Routing, structure and the app shell~~ | 🔴 **Dropped** | — |
-| 14 — Correctness, testing and delivery | Not started | — |
+| 14 — Testing React (RTL, Jest/Vitest, events, API mocking) | Not started | — |
 
 ## Progress
 
