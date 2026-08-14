@@ -75,8 +75,11 @@ caused by something entirely unrelated.
 The docs give three solutions; **only one of them works at a hook boundary**, and knowing
 why is the useful part:
 
-> **Solution A: Move static objects/functions outside the component** … `const options =
-> { serverUrl: 'https://localhost:1234', roomId: 'music' };`
+> **Solution A: Move static objects/functions outside the component**
+
+```jsx
+const options = { serverUrl: 'https://localhost:1234', roomId: 'music' };
+```
 
 Not available: the object depends on `roomId`, which is a prop.
 

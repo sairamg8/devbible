@@ -8,7 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 10 of 12 topics written.**
+✅ **COMPLETE — all 12 topics written.** 25 leaf pages — 6 chunked topic directories
+(19 pages) plus 6 single-file topics — **7,084 lines, 0 files over 300.**
 
 **The shortest phase in the syllabus and the highest ratio of understanding to
 material.** Everything in phases 0–6 works because of the rules written down here.
@@ -29,8 +30,8 @@ debugging session.
 | 08 | **[Hooks that wrap effects](08-hooks-that-wrap-effects/README.md)** | <span className="db-tier t-understand">Understand</span> | Honest dependencies across the boundary, and not re-subscribing |
 | 09 | **[Conditional hooks and the correct restructure](09-conditional-hooks.md)** | <span className="db-tier t-understand">Understand</span> | Split the component instead of skipping the hook |
 | 10 | **[`use` breaks the rule on purpose](10-use-breaks-the-rule.md)** | <span className="db-tier t-understand">Understand</span> | Why it may sit in a condition when `useState` may not |
-| 11 | Testing a custom hook | <span className="db-tier t-understand">Understand</span> | `renderHook` vs a throwaway component; test behaviour |
-| 12 | Extracting too early | <span className="db-tier t-know">Know</span> | A "custom hook" used once that hides control flow |
+| 11 | **[Testing a custom hook](11-testing-a-custom-hook.md)** | <span className="db-tier t-understand">Understand</span> | `renderHook` vs a throwaway component; test behaviour |
+| 12 | **[Extracting too early](12-extracting-too-early.md)** | <span className="db-tier t-know">Know</span> | A "custom hook" used once that hides control flow |
 
 ## Why this phase sits after Phase 6, not before
 
@@ -55,15 +56,19 @@ harder than "the linter prefers it".
 
 ## Coverage
 
-**12 topics.** 10 written so far → 29 files. Six topics are chunked: 07 into five parts
-(1,337 lines), 03 and 04 into four each (1,055 and 1,147), 05, 06 and 08 into two each
-(555, 575 and 551). Topic 03 splits into the behaviour, the bug it causes and the three homes for
-shared state; topic 04 because the Rules of React are three separate families plus the
-two escape hatches where purity is easiest to break; topic 05 into the mechanism and its
-application to the forbidden list; topic 06 into the signature going in and the contract
-coming out; topic 07 by what each hook talks to — values, browser state, listeners, an
-observed element, timers — because the failure modes cluster that way; topic 08 into
-values and functions, because the fix for each is completely different.
+**All 12 topics, 25 leaf pages, 7,084 lines. No file exceeds 300 lines and nothing was
+trimmed to get there** — six topics became directories instead:
+
+| Topic | Chunks | Lines | Split on |
+|---|---|---|---|
+| 03 Share logic, not state | 4 | 1,055 | The behaviour · the bug it causes · the two homes for shared state inside React · the one outside it |
+| 04 Rules of React beyond hooks | 4 | 1,147 | Purity · immutability · who does the calling · the two escape hatches |
+| 05 Why the rules exist | 2 | 555 | The mechanism · the forbidden list derived from it |
+| 06 Designing a hook's API | 2 | 575 | The signature going in · the contract coming out |
+| 07 The standard set | 5 | 1,337 | What each hook talks to — values, browser state, listeners, an observed element, timers |
+| 08 Hooks that wrap effects | 2 | 551 | Values · functions, because the fix for each differs completely |
+
+Topics 01, 02, 09, 10, 11 and 12 fit in one file each without compression.
 
 ## Gate
 

@@ -70,7 +70,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
-| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | 🚧 **Writing** | 10 of 12 topics, 29 files |
+| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | ✅ Done — 12 topics, 25 files |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |
 | 9 — Forms, Actions and optimistic UI | Not started | — |
 | 10 — Server Components and Server Functions | Not started | — |
