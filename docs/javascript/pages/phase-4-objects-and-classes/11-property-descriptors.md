@@ -72,7 +72,7 @@ take effect. Modules are always strict, so in modern code you get the error.
 
 ⚠️ **`writable: false` protects the binding, not the contents.** A non-writable property holding an
 object still lets you mutate that object — you just cannot replace it. That is the same shallowness
-that makes `Object.freeze` shallow: **12 · `Object.freeze` and `seal`** *(not written yet)*.
+that makes `Object.freeze` shallow: [12 · `Object.freeze` and `seal`](./12-freeze-and-seal/README.md).
 
 ## `enumerable` — the flag that decides what "the properties" means
 
@@ -243,4 +243,4 @@ referenced object's contents.
 
 ---
 
-← [10 · Getters and setters](./10-getters-and-setters.md) · [Phase index](./README.md) · Next: **12 · `Object.freeze` and `seal`** *(not written yet)* →
+← [10 · Getters and setters](./10-getters-and-setters.md) · [Phase index](./README.md) · Next: [12 · `Object.freeze` and `seal`](./12-freeze-and-seal/README.md) →

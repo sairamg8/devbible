@@ -46,7 +46,7 @@ split by phase. Take your lane's phases and **never write in the other lane's**.
 
 | Lane | Phases | Topics left | Held by |
 |---|---|---|---|
-| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **62** | session `edbfba95` |
+| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **61** | session `edbfba95` |
 | **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **68** | session `75e511e6` |
 
 **The seam is the language itself versus the browser platform**, so the two lanes barely
