@@ -102,6 +102,7 @@ are free). If you must, say so here first and take a *different phase*.
 | **Remaining** | **65 topics** — 9 (3), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
 | **Worktree** | 🔴 Since 2026-08-14 lane B writes in the worktree `/run/media/sairam/Storage/Backup/Knowledge/devbible-js-lane-b`, branch **`js-lane-b`**, on the user's instruction. **It is not merged into `main` yet** — the work is there, not lost, and the merge is outstanding |
 | **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
+| **⚠️ Build blocked** | 🔴 Since 2026-08-14 a **full `yarn build` cannot complete** in this worktree: `docs/react/pages/phase-11-ssr-hydration/09-partial-prerendering/` (README + `03-the-caveats.md`) fails MDX compilation — *"Unexpected closing slash `/` in tag"* — from React commit `f8899f5e`, inherited at the branch point. **It is React's file and lane B does not touch it.** Until it is fixed, lane B verifies with a relative-link pass over `docs/javascript/pages` (2,184 links, **0 broken**) plus the 300-line cap check, and says so rather than claiming a green build |
 
 ⛔ **Lane B never writes in phases 3–8** — those are lane A's, live in another session
 right now. Not to fix a link, not to correct a count.
