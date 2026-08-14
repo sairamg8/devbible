@@ -31,7 +31,7 @@ timer delays are a floor rather than a schedule.
 ## Where this connects
 
 - [01 · Synchronous vs asynchronous](../01-sync-vs-async/README.md) — run-to-completion, and what runs off-thread
-- [03 · Microtasks vs macrotasks](../README.md) — the exact drain order this topic only sketches
+- [03 · Microtasks vs macrotasks](../03-microtasks-vs-macrotasks/README.md) — the exact drain order this topic only sketches
 - [Phase 0 · How JavaScript runs](../../phase-0-how-javascript-runs/README.md) — the engine underneath
 
 ---

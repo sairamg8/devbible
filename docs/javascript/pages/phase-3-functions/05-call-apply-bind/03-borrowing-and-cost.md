@@ -135,7 +135,7 @@ Bindings accumulate — measured in
 [the previous chunk](./02-what-bind-does.md) as `T|1|99|`. Note the ordering
 constraint: **`bind` can only fill arguments from the left.** To fix a later
 parameter you need a wrapper or a proper curry, covered in
-[Currying and partial application](../11-currying.md).
+**Currying and partial application** (topic 11, not written yet).
 
 `null` as the `thisArg` here is the conventional "I don't use `this`" marker. In
 strict mode it really is `null`, so this is only safe because `log` never touches

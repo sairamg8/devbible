@@ -34,8 +34,8 @@ does not keep alive.
 
 - [07 · Lexical scope and the scope chain](../07-lexical-scope/README.md) — the mechanism closures are built on
 - [08 · Hoisting and the temporal dead zone](../08-hoisting-and-tdz/README.md) — why `let` gives a per-iteration binding and `var` does not
-- [13 · Memoization](../13-memoization.md) — a cache held in a closure, and the leak that comes with it
-- [17 · Closure and default-parameter gotchas](../17-closure-and-default-gotchas.md) — the stale-closure bug React makes famous
+- **13 · Memoization** *(not written yet)* — a cache held in a closure, and the leak that comes with it
+- **17 · Closure and default-parameter gotchas** *(not written yet)* — the stale-closure bug React makes famous
 
 ---
 

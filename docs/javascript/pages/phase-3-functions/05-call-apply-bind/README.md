@@ -35,7 +35,7 @@ You are done with this topic when you can write `bind` from scratch, say what
 
 - [03 · `this`](../03-this/README.md) — explicit binding is rule 2 of four
 - [04 · Arrow functions and `this`](../04-arrow-functions-and-this/README.md) — arrows ignore all three for `this`, but still accept their arguments
-- [11 · Currying and partial application](../11-currying.md) — `bind` is partial application with a fixed receiver
+- **11 · Currying and partial application** *(not written yet)* — `bind` is partial application with a fixed receiver
 
 ---
 
