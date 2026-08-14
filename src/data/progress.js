@@ -46,7 +46,7 @@ export const LANGUAGES = {
       {n: 7, slug: 'phase-7-async', name: 'Asynchronous JavaScript', part: 'Data & async', topics: 22, pages: 11, pagesPlanned: 22},
       {n: 8, slug: 'phase-8-modules-errors', name: 'Modules, errors, memory and the toolchain', part: 'Data & async', topics: 18, pages: 4, pagesPlanned: 18},
       {n: 9, slug: 'phase-9-dom', name: 'The DOM', part: 'Web APIs', topics: 19, pages: 6, pagesPlanned: 19},
-      {n: 10, slug: 'phase-10-events', name: 'Events and user input', part: 'Web APIs', topics: 14, pages: 1, pagesPlanned: 14},
+      {n: 10, slug: 'phase-10-events', name: 'Events and user input', part: 'Web APIs', topics: 14, pages: 2, pagesPlanned: 14},
       {n: 11, slug: 'phase-11-network-storage', name: 'Network, storage and data transfer', part: 'Web APIs', topics: 4, pages: 0},
       {n: 12, slug: 'phase-12-browser-platform', name: 'The browser platform', part: 'Web APIs', topics: 3, pages: 0},
       {n: 13, slug: 'phase-13-complexity', name: "Complexity and JavaScript's real costs", part: 'DSA & machine coding', topics: 10, pages: 0},
