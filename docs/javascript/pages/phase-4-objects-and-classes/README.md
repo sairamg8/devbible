@@ -13,15 +13,15 @@ behaviour hangs off: how a property is found, what `class` desugars to, and why
 "copying" an object is four different operations with four different failure
 modes.
 
-## Status — **Understand tier under way** (2026-08-14)
+## Status — ✅ **Understand tier COMPLETE** (2026-08-14)
 
-🚧 **15 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
+🚧 **16 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
 08 in syllabus order — and the **Master-first plan is finished across every phase**,
 so the work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 16 · Prototype patterns to avoid** — the last Understand topic — then 17–20 (Know).
+✅ **The Understand tier is now complete, 9 of 9** (02, 09–16). **Next here: 17 · `toString`, `valueOf`, `Symbol.toPrimitive`**, then 18–20 — the four Know topics that close the phase.
 
-**Coverage:** Master **7 / 7** ✅ · Understand **8 / 9** · Know **0 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **0 / 4**.
 
 ## Topics
 
@@ -42,7 +42,7 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 13 | **[`instanceof` and `Symbol.hasInstance`](./13-instanceof-and-hasinstance/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | **[Object creation patterns](./14-object-creation-patterns/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | **[Normalising untrusted shapes](./15-normalising-untrusted-shapes/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 16 | Prototype patterns to avoid | <span className="db-tier t-understand">Understand</span> | deferred |
+| 16 | **[Prototype patterns to avoid](./16-prototype-patterns-to-avoid/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 17 | `toString`, `valueOf`, `Symbol.toPrimitive` | <span className="db-tier t-know">Know</span> | deferred |
 | 18 | Mixins and composition over inheritance | <span className="db-tier t-know">Know</span> | deferred |
 | 19 | `Proxy` and `Reflect` | <span className="db-tier t-know">Know</span> | deferred |
