@@ -8,7 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **17 of 19 topics written** — 19 leaf pages. The whole Master tier is done.
+✅ **COMPLETE — all 19 topics written.** 21 leaf pages — two chunked topics (2 pages each)
+plus 17 single-file topics — **4,780 lines, 0 files over 300.**
 
 **The largest change to React since hooks, and the one most often described wrongly.**
 Two directives, two module graphs, one serialization boundary — get those three right and
@@ -73,6 +74,32 @@ is that the function body runs somewhere else.
   and error contracts are Express material; React owns only the calling convention.
 - **PostgreSQL** — `await db.query(…)` inside a Server Component is the join between these
   two syllabi. Query design stays on the PG side.
+
+## Coverage
+
+**All 19 topics, 21 leaf pages, 4,780 lines. No file exceeds 300 lines and nothing was
+trimmed to get there.** Two topics became directories on concept boundaries:
+
+| Topic | Chunks | Lines | Split on |
+|---|---|---|---|
+| 01 What a Server Component is | 2 | 462 | the definition · what you may write inside one |
+| 06 Server Function security | 2 | 573 | your obligations · what the framework does |
+
+The other seventeen fit one file each without compression, and their lengths run **156 to
+282** — a genuine spread rather than a cluster under the cap.
+
+**Every page is documentation-validated.** No sandbox, no console blocks; each
+`> Verified:` line names its sources. Where a source does **not** settle something, the page
+says so rather than guessing — [topic 12](12-december-2025-advisories.md) states that no
+primary source describes the root cause of CVE-2025-55182 and declines to reconstruct one,
+and [topic 13](13-the-rsc-payload.md) shows no sample payload because React publishes no
+wire-format specification.
+
+Attribution is split deliberately where React and the frameworks disagree in scope: react.dev
+for everything React owns, and **Next.js 16.3.1 / React Router**, labelled as such, for action
+IDs, closure encryption, CSRF handling and the framework comparison
+([topic 06 · 02](06-server-function-security/02-what-the-framework-does.md),
+[topic 16](16-nextjs-vs-react-router.md)).
 
 ## Gate
 
