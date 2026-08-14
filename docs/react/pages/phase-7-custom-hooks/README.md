@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 2 of 12 topics written.**
+🚧 **In progress — 3 of 12 topics written.**
 
 **The shortest phase in the syllabus and the highest ratio of understanding to
 material.** Everything in phases 0–6 works because of the rules written down here.
@@ -21,7 +21,7 @@ debugging session.
 |---|---|---|---|
 | 01 | **[The Rules of Hooks](01-the-rules-of-hooks.md)** | <span className="db-tier t-master">Master</span> | Top level only, React functions only — and the six things "top level" forbids |
 | 02 | **[Writing a custom hook](02-writing-a-custom-hook.md)** | <span className="db-tier t-master">Master</span> | A `use` name plus hooks inside. What the prefix buys and what it doesn't |
-| 03 | Custom hooks share logic, not state | <span className="db-tier t-master">Master</span> | Two callers, two independent states — the phase's biggest misunderstanding |
+| 03 | **[Custom hooks share logic, not state](03-share-logic-not-state/README.md)** | <span className="db-tier t-master">Master</span> | Two callers, two independent states — the phase's biggest misunderstanding |
 | 04 | The Rules of React beyond hooks | <span className="db-tier t-master">Master</span> | Purity, and never mutating anything after passing it to React |
 | 05 | Why the rules exist | <span className="db-tier t-understand">Understand</span> | Hooks are positional; a conditional hook shifts the list |
 | 06 | Designing a hook's API | <span className="db-tier t-understand">Understand</span> | Tuple vs object, one hook one job, naming what it synchronizes with |
@@ -55,7 +55,9 @@ harder than "the linter prefers it".
 
 ## Coverage
 
-**12 topics.** 2 written so far → 2 files; no topic has needed chunking yet.
+**12 topics.** 3 written so far → 7 files. Topic 03 is chunked into four parts
+(1,055 lines): the behaviour, the bug it causes, and the two homes for shared state
+inside and outside React.
 
 ## Gate
 

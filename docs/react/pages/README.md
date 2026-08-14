@@ -6,7 +6,7 @@ sidebar_position: 0
 
 :::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** session `63fa2a80` · **Since:** 2026-08-14 · **Scope:** the whole of
+**Owner:** session `2ee7a9a3` · **Since:** 2026-08-14 · **Scope:** the whole of
 `docs/react/`, straight through to Phase 14. Taken over from session `6ffd754d`
 on the user's direct instruction — *work React and nothing else* — not claimed
 silently.
@@ -70,7 +70,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
-| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | 🚧 **Writing** | 2 of 12 topics |
+| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | 🚧 **Writing** | 3 of 12 topics, 7 files |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |
 | 9 — Forms, Actions and optimistic UI | Not started | — |
 | 10 — Server Components and Server Functions | Not started | — |

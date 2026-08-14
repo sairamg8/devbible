@@ -112,7 +112,7 @@ every hook call inside it into a rule-2 violation
   no way for React to tell `useOnlineStatus` from any other call in the stack — the
   hooks *inside* it are what React sees.
 - It does not create shared state. Two components calling it get two independent
-  states, which is [Phase 7 · 03](03-share-logic-not-state.md) and the single most
+  states, which is [Phase 7 · 03](03-share-logic-not-state/README.md) and the single most
   common misunderstanding in this phase.
 - It does not exempt the function from rule 1. Hooks inside a custom hook must still
   be at the top level, before any early return.
@@ -231,4 +231,4 @@ for nothing and makes readers check a file they would otherwise skip.
 
 ---
 
-← Prev: [The Rules of Hooks](01-the-rules-of-hooks.md) · Index: [Phase 7](README.md) · Next → [Custom hooks share logic, not state](03-share-logic-not-state.md)
+← Prev: [The Rules of Hooks](01-the-rules-of-hooks.md) · Index: [Phase 7](README.md) · Next → [Custom hooks share logic, not state](03-share-logic-not-state/README.md)
