@@ -34,7 +34,7 @@ over from `2ee7a9a3` (from `6ffd754d`).
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10 | ✅ **Done — 19 topics, 21 files, 4,780 lines, 0 over cap** |
 | 11 | 🚧 **In progress — 10 of 17 topics, 15 files** (Part A) |
-| 14 | 🚧 **Part B — in progress, 14 of 14 topics, 30 files** (session `05921047`, worktree `devbible-react-p14`, branch `react-phase-14`) |
+| 14 | ✅ **Part B COMPLETE — 14 of 14 topics, 28 files, 4,986 lines** (session `05921047`, branch `react-phase-14`) |
 
 **If you are a different session, do not write React pages.** Pick something with
 no owner — **TypeScript, Git and MongoDB are all idle**, and Docker & Podman and
@@ -85,7 +85,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
 | **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | ✅ **Written** | 19 topics, 21 files |
 | **[11 — Server rendering, hydration and the DOM APIs](./phase-11-ssr-hydration/README.md)** | 🚧 **Writing** | 10 of 17 topics, 15 files |
-| **[14 — Testing React](./phase-14-correctness/README.md)** | 🚧 **Writing** | 14 of 14 topics, 30 files |
+| **[14 — Testing React](./phase-14-correctness/README.md)** | ✅ **Written** | 14 topics, 28 files |
 
 ## Progress
 
