@@ -45,11 +45,11 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `016cfc46` (Opus 5), from 2026-08-14 — took over from `c5329658`, which took over from `01ECVvH5` |
 | **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** The Master tier is **closed at 99/99 across every phase 0–18** and is not to be reopened for depth; the work is the Understand and Know tiers, phase by phase from Phase 3 |
-| **Last touched** | **Phase 3 topic 14 · Recursion** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
+| **Last touched** | **Phase 3 topic 15 · Pure functions and side effects** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 3 topic 15 · Pure functions and side effects**, then 15–20, then phase 4. Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **202 topics** — Understand **144**, Know **55**, When Needed **3**. Thinnest phases: 12 (2/21), 16 (3/16), 13 (3/10), 6 (3/13) |
-| **Totals** | **135 of 337 topics** · **234 pages** (non-`README.md` `.md` files; 339 counting every README), 315 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
+| **Next** | **Phase 3 topic 16 · There is no function overloading**, then 15–20, then phase 4. Inside each phase: **Understand → Know → When Needed** |
+| **Remaining** | **201 topics** — Understand **143**, Know **55**, When Needed **3**. Thinnest phases: 12 (2/21), 16 (3/16), 13 (3/10), 6 (3/13) |
+| **Totals** | **136 of 337 topics** · **235 pages** (non-`README.md` `.md` files; 340 counting every README), 316 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
