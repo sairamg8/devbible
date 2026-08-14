@@ -7,12 +7,12 @@ sidebar_position: 0
 *14 topics.* As the syllabus puts it, **delegation is the row that pays for the phase** — it
 is the difference between one listener and a thousand.
 
-## Status — 🚧 **Understand tier under way — 7 of 14** (2026-08-15)
+## Status — 🚧 **Understand tier under way — 8 of 14** (2026-08-15)
 
 **Master tier ✅ COMPLETE** — all four Master topics (01–04), written in syllabus order.
 
-🚧 **Now the Understand tier (05–11), then Know (12–14).** **05–07 are written** — Form and input
-events, Keyboard events, Pointer events; 08 onward remain. Lane B of the two-way JavaScript split owns this phase.
+🚧 **Now the Understand tier (05–11), then Know (12–14).** **05–08 are written** — Form and input
+events, Keyboard events, Pointer events, Custom events; 09 onward remain. Lane B of the two-way JavaScript split owns this phase.
 
 ## Topics
 
@@ -25,7 +25,8 @@ events, Keyboard events, Pointer events; 08 onward remain. Lane B of the two-way
 | 05 | **[Form and input events](./05-form-and-input-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 06 | **[Keyboard events](./06-keyboard-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 07 | **[Pointer events](./07-pointer-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 08–11 | Custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | 🚧 next |
+| 08 | **[Custom events](./08-custom-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 09–11 | Scroll/resize/visibility, page lifecycle, default actions you should not block | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 12–14 | `EventTarget` as a base class, touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | deferred |
 
 ## How these pages are verified
