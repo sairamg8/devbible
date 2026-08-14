@@ -57,7 +57,7 @@ before authentication.
   envelope an auth failure shares with every other failure.
 - **→ [05 · Cookies and sessions wire-up](../05-cookies-sessions-wireup.md)** —
   the packages and flags behind chunk 02's choice.
-- **→ [06 · RBAC middleware](../06-rbac-middleware.md)** — the second question,
+- **→ [06 · RBAC middleware](../06-rbac-middleware/README.md)** — the second question,
   and the 403 that goes with it.
 - **→ [07 · Ownership](../07-ownership.md)** — the third question, in the
   service, answered with 404.

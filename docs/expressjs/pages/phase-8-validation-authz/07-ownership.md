@@ -12,7 +12,7 @@ sidebar_position: 7
 > Express has no authorization layer at all. The one framework-level fact that shapes the
 > page is structural: middleware runs **before** the handler, so it cannot see a record
 > that has not been fetched — which is why this check cannot live where RBAC lives
-> ([page 06](06-rbac-middleware.md)).
+> ([page 06](06-rbac-middleware/README.md)).
 > Status semantics are [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html): 403 means
 > the server understood and refuses to authorise; 404 means no current representation was
 > found. **Choosing 404 to avoid confirming existence is a deliberate, standard-compatible
@@ -168,4 +168,4 @@ deliberate — it should be hard to write by accident and obvious in review.
 
 ---
 
-← Prev: [RBAC middleware](06-rbac-middleware.md) · Next → [Multi-tenant and logout](08-tenant-and-logout.md)
+← Prev: [RBAC middleware](06-rbac-middleware/README.md) · Next → [Multi-tenant and logout](08-tenant-and-logout.md)
