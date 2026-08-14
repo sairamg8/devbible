@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **1 of 19 topics written.**
+🚧 **2 of 19 topics written** — 3 leaf pages.
 
 **The largest change to React since hooks, and the one most often described wrongly.**
 Two directives, two module graphs, one serialization boundary — get those three right and
