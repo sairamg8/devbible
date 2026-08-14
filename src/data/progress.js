@@ -22,7 +22,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-selectors', name: 'Selectors', part: 'How CSS resolves', topics: 16, pages: 16},
       {n: 2, slug: 'phase-2-cascade', name: 'Cascade control', part: 'How CSS resolves', topics: 4, pages: 5},
       {n: 3, slug: 'phase-3-custom-properties', name: 'Custom properties and modern values', part: 'Values and layout', topics: 4, pages: 4},
-      {n: 4, slug: 'phase-4-flexbox', name: 'Flexbox, deeply', part: 'Values and layout', topics: 7, pages: 3, pagesPlanned: 14},
+      {n: 4, slug: 'phase-4-flexbox', name: 'Flexbox, deeply', part: 'Values and layout', topics: 7, pages: 5, pagesPlanned: 14},
       {n: 5, slug: 'phase-5-grid', name: 'Grid, deeply', part: 'Values and layout', topics: 10, pages: 0},
       {n: 6, slug: 'phase-6-container-queries', name: 'Container queries and intrinsic responsive', part: 'Adaptive and visual', topics: 3, pages: 0},
       {n: 7, slug: 'phase-7-positioning', name: 'Positioning, stacking and overlay', part: 'Adaptive and visual', topics: 4, pages: 0},
