@@ -6,21 +6,29 @@ sidebar_position: 0
 
 :::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** session `6ffd754d` · **Since:** 2026-08-14 · **Scope:** the whole of
-`docs/react/`, straight through to Phase 14.
+**Owner:** session `63fa2a80` · **Since:** 2026-08-14 · **Scope:** the whole of
+`docs/react/`, straight through to Phase 14. Taken over from session `6ffd754d`
+on the user's direct instruction — *work React and nothing else* — not claimed
+silently.
+
+**Written in a worktree**, not this checkout:
+`/mnt/Storage/Backup/Knowledge/devbible-react`, branch `react-phase-7`. If React
+pages look missing here, they are on that branch and not yet merged.
 
 | Phase | State |
 |---|---|
 | 0, 1 | ✅ Done (measured, `sandbox/react-p0` and `react-p1`) |
 | 2 | ✅ Done — 16 topics |
 | 3 | ✅ Done — 17 topics, 19 files |
-| 4 | ✅ **Done — 18 topics, 27 files, 0 broken links, 0 over cap** |
-| 5 | 🔴 **In progress** — Refs, context and reducers (16 topics) |
-| 6–14 | ⬜ Claimed by this session |
+| 4 | ✅ Done — 18 topics, 27 files |
+| 5 | ✅ Done — 16 topics, 18 files |
+| 6 | ✅ **Done — 17 topics, 18 files, 0 broken links, 0 over cap** |
+| 7 | 🔴 **In progress** — Custom hooks and the Rules of React (12 topics) |
+| 8–14 | ⬜ Claimed by this session |
 
 **If you are a different session, do not write React pages.** Pick something with
-no owner — **MongoDB now has a complete 204-topic syllabus and zero pages**, and
-Docker, Redis and Nginx have neither. See the claims table in
+no owner — **TypeScript, Git and MongoDB are all idle**, and Docker & Podman and
+Nginx have no syllabus at all. See the claims table in
 [`docs/README.md`](../../README.md).
 
 Concepts for each finished phase are in the memory store at
@@ -62,7 +70,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
-| 7 — Custom hooks and the Rules of React | Not started | — |
+| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | 🚧 **Writing** | 2 of 12 topics |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |
 | 9 — Forms, Actions and optimistic UI | Not started | — |
 | 10 — Server Components and Server Functions | Not started | — |
