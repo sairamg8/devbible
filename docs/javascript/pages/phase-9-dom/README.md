@@ -11,14 +11,14 @@ personally**.
 ## Status — **in progress** (2026-08-14)
 
 **Master tier first.** Phase 9 has **six** Master topics — 01 through 06 — written in
-syllabus order. **01 of 6 done.**
+syllabus order. **02 of 6 done.**
 
 ## Topics
 
 | # | Topic | Tier | Status |
 |---|---|---|---|
 | 01 | **[What the DOM is](./01-what-the-dom-is/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 02 | Selecting elements | <span className="db-tier t-master">Master</span> | planned |
+| 02 | **[Selecting elements](./02-selecting-elements/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | Creating and inserting | <span className="db-tier t-master">Master</span> | planned |
 | 04 | `textContent` vs `innerText` vs `innerHTML` | <span className="db-tier t-master">Master</span> | planned |
 | 05 | Attributes versus properties | <span className="db-tier t-master">Master</span> | planned |
