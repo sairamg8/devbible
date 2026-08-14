@@ -41,7 +41,7 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | [0 · How MongoDB runs](./phase-0-how-mongodb-runs/README.md) | 5 | ✅ written |
-| [1 · Documents, BSON types and `_id`](./phase-1-documents-and-bson/README.md) | 6 | 🚧 **writing — 2 of 6** |
+| [1 · Documents, BSON types and `_id`](./phase-1-documents-and-bson/README.md) | 6 | 🚧 **writing — 5 of 6** |
 | 2 · `mongosh`, mastered | 5 | ⬜ planned |
 | 3 · Schema design and modelling | 6 | ⬜ planned |
 | 4 · CRUD and DML | 6 | ⬜ planned |
