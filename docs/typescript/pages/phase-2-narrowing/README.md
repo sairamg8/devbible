@@ -11,7 +11,7 @@ sidebar_position: 2
 > handbook (*Narrowing*, *Type predicates*, *Assertion functions*) and carries no
 > console block.
 
-**13 pages.** [Phase 1](../phase-1-type-vocabulary/README.md) gave you unions.
+**13 topics · 22 files · ✅ complete.** [Phase 1](../phase-1-type-vocabulary/README.md) gave you unions.
 A union is unusable until you can tell the compiler which member you are holding
 — and that is this phase. It is also the single most common source of the
 question *"why is this still possibly `undefined`?"*, which almost always has the
@@ -105,9 +105,17 @@ truthiness vs `!= null`, `Array.isArray`) and `ex2-guards-and-loss.sh` (`in`,
 `instanceof`, predicates, assertion functions, and the four ways a narrowing
 disappears). `npm install`, then run either script directly.
 
-**Pages 08, 12 and 13 carry no console block.** Nothing in the recorded runs
-covers them, and under the no-new-sandboxes rule a plausible-looking `tsc` error
-written from memory is not evidence.
+**Pages 01–07 carry console blocks; pages 08–13 do not.** The `ex1`/`ex2`
+scripts saved no output files, so the later topics state their measured findings
+**in prose, marked sandbox-measured**, and quote error text only where it was
+read out of the compiler's own diagnostic table. Under the no-new-sandboxes rule
+a plausible-looking `tsc` transcript written from memory is not evidence.
+
+Error codes on pages 09–13 — `TS2775`, `TS2776`, `TS1360`, `TS2353`, `TS9035`,
+`TS18047`, `TS1196`, `TS1197`, `TS2564`, `TS1255`, `TS8013` — were each read
+from the compiler's `Diagnostics` table rather than recalled. ⚠️ The compiler
+inspected was TypeScript **6.0.3**, not the 7.0.2 these pages target; every page
+that quotes one says so.
 
 ---
 
