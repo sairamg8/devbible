@@ -67,7 +67,7 @@ hydrateRoot(document, <App />);
 ```
 
 🔴 **That pairing is not optional trivia.** Hydrating the whole document is what makes the
-React 19 [document-metadata](../10-document-metadata.md) and
+React 19 [document-metadata](../10-document-metadata/README.md) and
 [stylesheet](../15-stylesheets-and-precedence.md) features work end to end — React has to own
 `<head>` on both sides for hoisting and deduplication to survive hydration. A prerendered
 page that mounts into a `<div>` and leaves `<head>` to a template is a different, more

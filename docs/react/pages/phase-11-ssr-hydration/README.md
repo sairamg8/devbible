@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **9 of 17 topics written** — 13 leaf pages.
+🚧 **10 of 17 topics written** — 15 leaf pages.
 
 **Everything `react-dom` does outside the browser, plus the DOM-level features React 19
 absorbed.** This is where SSR stops being a checkbox and starts being a set of trade-offs
@@ -26,7 +26,7 @@ you choose between — and where [Phase 10](../phase-10-server-components/README
 | 07 | **[Selective hydration](07-selective-hydration.md)** | <span className="db-tier t-understand">Understand</span> | Prioritising the boundary the user just clicked |
 | 08 | **[Prerendering](08-prerendering/README.md)** | <span className="db-tier t-understand">Understand</span> | `prerender` and `prerenderToNodeStream` — static generation that waits for all data |
 | 09 | **[Partial pre-rendering (19.2)](09-partial-prerendering/README.md)** | <span className="db-tier t-understand">Understand</span> | `postponed`, `resume`, `resumeAndPrerender` — a static shell filled per request |
-| 10 | **[Document metadata (19)](10-document-metadata.md)** | <span className="db-tier t-understand">Understand</span> | `<title>`, `<meta>` and `<link>` hoisted from anywhere in the tree |
+| 10 | **[Document metadata (19)](10-document-metadata/README.md)** | <span className="db-tier t-understand">Understand</span> | `<title>`, `<meta>` and `<link>` hoisted from anywhere in the tree |
 | 11 | **[Resource preloading](11-resource-preloading.md)** | <span className="db-tier t-understand">Understand</span> | `preload`, `preinit`, `preconnect`, `prefetchDNS` and when each helps |
 | 12 | **[`flushSync`](12-flushsync.md)** | <span className="db-tier t-understand">Understand</span> | Forcing a synchronous commit — the legitimate cases and the cost of every other |
 | 13 | **[Root error options (19)](13-root-error-options.md)** | <span className="db-tier t-understand">Understand</span> | `onCaughtError`, `onUncaughtError`, `onRecoverableError`, and `onError` on the server |
