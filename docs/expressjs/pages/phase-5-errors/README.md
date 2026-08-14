@@ -25,11 +25,19 @@ the envelope.
 |---|---|---|---|
 | 01 | **[Four-arg error middleware](01-error-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Arity as the whole detection mechanism; `finalhandler` in full; and the handler design, line by line |
 | 02 | **[Async errors on Express 5](02-async-errors/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Exactly what the router attaches to, the four shapes that escape it, and the habits that keep your code inside the guarantee |
-| 03 | **[Error response contract](03-error-contract.md)** | <span className="db-tier t-master">Master</span> | Stable JSON; no stacks in production |
+| 03 | **[Error response contract](03-error-contract/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The envelope and how to name codes; what is safe to expose and the nine leaks; and the four ways the contract leaks anyway |
 | 04 | **[Mapping to HTTP](04-mapping-to-http.md)** | <span className="db-tier t-understand">Understand</span> | 400/401/403/404/409/422/429/503 |
 | 05 | **[Operational vs programmer](05-operational-vs-programmer.md)** | <span className="db-tier t-understand">Understand</span> | What to expose vs what to crash/log |
 | 06 | **[404 and process errors](06-not-found-and-process.md)** | <span className="db-tier t-know">Know</span> | 404 middleware; process events stay in Node |
 | 07 | **[Error logging at the edge](07-error-logging.md)** | <span className="db-tier t-know">Know</span> | What to log, what must never be logged, and why levels matter |
+
+> 🔴 **Master-tier depth pass complete for this phase** (session `ffadd057`,
+> 2026-08-14). Topics 01–03 were written at 137–153 lines with none chunked — sized
+> to the 300-line cap rather than to the topic — and have been rewritten to full
+> depth as `NN-topic/` directories: **01 is 3 chunks (783 lines), 02 is 3 chunks
+> (812), 03 is 3 chunks (730)**. Still no runs: the new mechanism claims are read
+> from the installed `express@5.2.1`, `router@2.2.0` and `finalhandler@2.1.1`
+> source, cited by function.
 
 ## Coverage
 
@@ -41,7 +49,7 @@ same cause, as content negotiation in [Phase 4](../phase-4-responses/README.md).
 |---|---|
 | Four-argument error middleware | 01 (chunks [01](01-error-middleware/01-arity-and-placement.md) · [02](01-error-middleware/02-the-default-handler.md) · [03](01-error-middleware/03-designing-the-handler.md)) |
 | Express 5 async errors | 02 (chunks [01](02-async-errors/01-what-is-forwarded.md) · [02](02-async-errors/02-the-shapes-that-escape.md) · [03](02-async-errors/03-writing-async-handlers.md)) |
-| Error response contract | 03 |
+| Error response contract | 03 (chunks [01](03-error-contract/01-the-envelope.md) · [02](03-error-contract/02-what-is-safe-to-expose.md) · [03](03-error-contract/03-making-it-stick.md)) |
 | Mapping operational failures to HTTP | 04 |
 | A thin typed error helper (`statusCode` + `code` + `expose`) | 04 |
 | Programmer vs operational at the HTTP edge | 05 |

@@ -75,7 +75,7 @@ ways:
    external calls made, jobs enqueued.
 2. **Bad errors.** A constraint violation is a driver error with a constraint name.
    Turning it into a useful 400 with a field name means parsing driver strings, and
-   [Phase 5](../phase-5-errors/03-error-contract.md) explains why forwarding it raw
+   [Phase 5](../phase-5-errors/03-error-contract/README.md) explains why forwarding it raw
    leaks schema details.
 3. **It cannot see most of it.** Nothing in a schema constrains "this string must be
    a valid URL", "this array has at most 50 items", or "this id must belong to the

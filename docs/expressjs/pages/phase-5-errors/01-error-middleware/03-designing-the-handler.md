@@ -146,7 +146,7 @@ throw new AppError('CONFLICT', 'That email is already registered', {details: {fi
 **`code` is the client contract, not `message`.** Messages get reworded, typo-
 fixed and translated; a client branching on the text breaks. A stable code
 survives all of that, and it is the thing to put in your OpenAPI
-([Phase 5 · 03](../03-error-contract.md)).
+([Phase 5 · 03](../03-error-contract/README.md)).
 
 ## 6 · The handler must not throw
 

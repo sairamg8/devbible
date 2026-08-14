@@ -41,7 +41,7 @@ and explain why a floating promise is more dangerous than a thrown one.
   — `Layer.handleRequest` in full, including the arity gate.
 - **← [01 · Error middleware](../01-error-middleware/README.md)** — where a
   forwarded error goes, and what answers if nothing does.
-- **→ [03 · Error contract](../03-error-contract.md)** — the envelope the
+- **→ [03 · Error contract](../03-error-contract/README.md)** — the envelope the
   forwarded errors end up wearing.
 - **→ [05 · Operational vs programmer](../05-operational-vs-programmer.md)** — the
   distinction that decides whether to keep serving.

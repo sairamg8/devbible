@@ -66,7 +66,7 @@ defensible and simpler.
 support workflow where someone pastes an id from an error screen and you find the
 exact request beats "it failed around 2pm" by an enormous margin — which is also
 why the id belongs in the **error response body**
-([Phase 5](../phase-5-errors/03-error-contract.md)), not just the header.
+([Phase 5](../phase-5-errors/03-error-contract/README.md)), not just the header.
 
 Propagate it outbound too. An id that stops at your process is half a trace: pass
 it on every outgoing HTTP call and into every enqueued job, or the second hop is

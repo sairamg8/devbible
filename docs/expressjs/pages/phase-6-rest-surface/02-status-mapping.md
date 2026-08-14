@@ -71,7 +71,7 @@ The cost is that HTTP's vocabulary rarely fits a domain exactly, and arguments
 about 400-vs-422 or 403-vs-404 consume real review time for little benefit. Resolve
 it by picking the coarse class correctly — client error, server error, conflict —
 and putting the precision in your error `code`
-([Phase 5](../phase-5-errors/03-error-contract.md)). Clients branch on the code;
+([Phase 5](../phase-5-errors/03-error-contract/README.md)). Clients branch on the code;
 caches only ever see the number.
 
 ## Gotchas

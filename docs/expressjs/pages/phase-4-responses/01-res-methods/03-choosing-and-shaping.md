@@ -66,7 +66,7 @@ contact with real clients:
 **1 · One shape per outcome, decided once.** A success is a success everywhere; an
 error is an error everywhere. The specific envelope matters far less than the fact
 that a client can write one parser
-([Phase 5 · 03](../../phase-5-errors/03-error-contract.md)).
+([Phase 5 · 03](../../phase-5-errors/03-error-contract/README.md)).
 
 **2 · Never return a database row directly.**
 

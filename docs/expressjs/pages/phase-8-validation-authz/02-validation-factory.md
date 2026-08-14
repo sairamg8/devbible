@@ -87,7 +87,7 @@ export function validate(schemas) {
 
 `safeParse` rather than `parse` is what makes this readable — no exception-driven
 control flow for an expected outcome. The `details` array is the field described in
-[Phase 5](../phase-5-errors/03-error-contract.md): a stable `code` per issue for the
+[Phase 5](../phase-5-errors/03-error-contract/README.md): a stable `code` per issue for the
 client to branch on, a `message` for a human, and a `path` so a form can highlight
 the right input.
 

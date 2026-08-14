@@ -129,7 +129,7 @@ It is a real pattern and it costs real things:
 
 The counter-argument — "we want one response shape" — is answered by keeping the
 shape consistent *within* each class, not by collapsing the classes
-([Phase 5 · 03](../../phase-5-errors/03-error-contract.md)).
+([Phase 5 · 03](../../phase-5-errors/03-error-contract/README.md)).
 
 ## Trade-off
 

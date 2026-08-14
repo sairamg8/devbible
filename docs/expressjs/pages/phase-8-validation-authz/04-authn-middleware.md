@@ -88,7 +88,7 @@ export function requireAuth({verifyToken}) {
 
 Note it goes through `next(err)` rather than responding directly — so the envelope
 comes from the one error handler
-([Phase 5](../phase-5-errors/03-error-contract.md)) and an auth failure looks like
+([Phase 5](../phase-5-errors/03-error-contract/README.md)) and an auth failure looks like
 every other failure to a client.
 
 **`WWW-Authenticate` on a 401** is what the specification expects, and matters if

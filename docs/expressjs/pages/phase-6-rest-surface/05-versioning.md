@@ -52,7 +52,7 @@ changes break a client**.
 | Removing or renaming a field | **Yes** | Something reads it |
 | Changing a field's type | **Yes** | `"42"` → `42` breaks parsers, and silently |
 | Making an optional field required | **Yes** | Every old request now 400s |
-| Changing an error `code` | **Yes** | Clients branch on it ([Phase 5](../phase-5-errors/03-error-contract.md)) |
+| Changing an error `code` | **Yes** | Clients branch on it ([Phase 5](../phase-5-errors/03-error-contract/README.md)) |
 | Tightening validation | **Yes**, quietly | Requests that used to work now fail |
 
 The last row is the one that ships by accident. Adding a `maxLength` to a field is

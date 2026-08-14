@@ -259,4 +259,4 @@ which has to be re-applied by every author forever.
 
 ---
 
-← Prev: [The four shapes that escape](02-the-shapes-that-escape.md) · Index: [Async errors](README.md) · Next topic → [Error response contract](../03-error-contract.md)
+← Prev: [The four shapes that escape](02-the-shapes-that-escape.md) · Index: [Async errors](README.md) · Next topic → [Error response contract](../03-error-contract/README.md)

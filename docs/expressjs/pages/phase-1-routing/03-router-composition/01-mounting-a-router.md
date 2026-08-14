@@ -162,7 +162,7 @@ orders.use((err, req, res, next) => {           // orders-specific errors
 The pattern that works: **handle what this module knows about, `next(err)`
 everything else.** The app-level handler stays the single place that decides the
 generic shape, and the router-level one adds domain knowledge without owning the
-contract. [Phase 5 · 03](../../phase-5-errors/03-error-contract.md).
+contract. [Phase 5 · 03](../../phase-5-errors/03-error-contract/README.md).
 
 ## Gotchas
 

@@ -107,7 +107,7 @@ familiarity, not interoperability.
 For most APIs a small documented convention — an `_links` object, or an `actions`
 array with `rel`, `href` and `method` — is enough and costs nothing. What matters is
 that it is documented and consistent, and that **relation names are stable**: `rel`
-values are a contract exactly like error codes ([Phase 5](../phase-5-errors/03-error-contract.md)).
+values are a contract exactly like error codes ([Phase 5](../phase-5-errors/03-error-contract/README.md)).
 Renaming `cancel` to `cancel-order` breaks every client that branches on it.
 
 ## Trade-off

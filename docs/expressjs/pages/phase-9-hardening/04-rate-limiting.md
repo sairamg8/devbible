@@ -114,7 +114,7 @@ res.status(429)
 
 `Retry-After` turns "try later" into something a client can act on, and a
 well-behaved client backs off instead of hammering. The same error envelope as
-every other failure ([Phase 5](../phase-5-errors/03-error-contract.md)) means a
+every other failure ([Phase 5](../phase-5-errors/03-error-contract/README.md)) means a
 client parses one shape.
 
 ## Trade-off

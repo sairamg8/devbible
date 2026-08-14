@@ -158,4 +158,4 @@ duplicate module instances, in exchange for nothing the handler reads.
 
 ---
 
-← Prev: [Error response contract](03-error-contract.md) · Next → [Operational vs programmer](05-operational-vs-programmer.md)
+← Prev: [Error response contract](03-error-contract/README.md) · Next → [Operational vs programmer](05-operational-vs-programmer.md)

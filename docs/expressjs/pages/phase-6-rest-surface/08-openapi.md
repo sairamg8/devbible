@@ -98,7 +98,7 @@ UI usually is not
 **Symptom:** Error responses are undocumented, so clients handle only the happy path  
 **Cause:** The spec describes 200s and nothing else  
 **Fix:** Document the error envelope and the `code` values
-([Phase 5](../phase-5-errors/03-error-contract.md)). They are part of the contract —
+([Phase 5](../phase-5-errors/03-error-contract/README.md)). They are part of the contract —
 clients branch on them
 
 ## Interview questions

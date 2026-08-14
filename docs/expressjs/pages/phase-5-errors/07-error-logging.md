@@ -144,7 +144,7 @@ mounted at `/api/users` is just `/42`, and `/` for the index route
 **Symptom:** You cannot correlate a user's report with anything  
 **Cause:** No request id, or one generated in the log line rather than per request  
 **Fix:** Assign an id in early middleware, put it on `req`, log it everywhere, and return
-it in the error envelope ([page 03](03-error-contract.md))
+it in the error envelope ([page 03](03-error-contract/README.md))
 
 **Symptom:** Alerting fires constantly and everyone has muted it  
 **Cause:** 4xx logged at `error`  
