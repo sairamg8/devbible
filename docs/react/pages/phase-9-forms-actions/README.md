@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 2 of 14 topics written.**
+🚧 **In progress — 3 of 14 topics written.**
 
 **React 19 turned "submit a form" from a pile of `useState` into a first-class
 primitive.** Actions are transitions wearing a form — which is why this phase sits
@@ -19,7 +19,7 @@ machinery underneath them was established.
 |---|---|---|---|
 | 01 | **[Controlled inputs, all of them](01-controlled-inputs/README.md)** | <span className="db-tier t-master">Master</span> | Every input type — and why file inputs are always uncontrolled |
 | 02 | **[Actions](02-actions.md)** | <span className="db-tier t-master">Master</span> | `<form action={…}>`, `FormData`, an automatic transition and pending state |
-| 03 | `useActionState` | <span className="db-tier t-master">Master</span> | The hook that replaces the four `useState` calls every form used to need |
+| 03 | **[`useActionState`](03-useactionstate.md)** | <span className="db-tier t-master">Master</span> | The hook that replaces the four `useState` calls every form used to need |
 | 04 | Validation | <span className="db-tier t-master">Master</span> | Client for feedback, server for truth, field errors through the return value |
 | 05 | Uncontrolled forms and `FormData` | <span className="db-tier t-understand">Understand</span> | `name` attributes as the contract, and when this beats controlled outright |
 | 06 | `useFormStatus` | <span className="db-tier t-understand">Understand</span> | Pending state without prop drilling — and the constraint that it must be inside the form |
@@ -60,7 +60,7 @@ what is marked and what is not still apply.
 
 ## Coverage
 
-**14 topics.** 2 written so far → 4 files. Topic 01 is chunked into two parts (517
+**14 topics.** 3 written so far → 5 files. Topic 01 is chunked into two parts (517
 lines): the contract, then the eight places it applies differently.
 
 ## Gate
