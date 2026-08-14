@@ -44,7 +44,7 @@ components multiple times, discard renders, and retry them.
   only one a linter catches reliably.
 - **← [Share logic, not state](../03-share-logic-not-state/README.md)** — module-level
   mutable state is a purity violation as well as a tearing one.
-- **→ [Why the rules exist](../05-why-the-rules-exist.md)** — the implementation
+- **→ [Why the rules exist](../05-why-the-rules-exist/README.md)** — the implementation
   underneath, from positional hook storage upward.
 - **↔ [Phase 3 · Immutable updates](../../phase-3-state/05-immutable-updates/README.md)**
   — the practical half of chunk 02.

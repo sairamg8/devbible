@@ -120,7 +120,7 @@ mechanism seen from further away.
 
 ## Why: a hook call is a call, not a subscription
 
-The mechanical answer belongs to [Phase 7 · 05](../05-why-the-rules-exist.md), but
+The mechanical answer belongs to [Phase 7 · 05](../05-why-the-rules-exist/README.md), but
 the short version is what makes the behaviour obvious rather than memorised.
 
 React stores hook state **positionally, on the component instance** — not on the

@@ -268,4 +268,4 @@ its own source.
 
 ← Prev: [React calls components and hooks](03-react-calls-components-and-hooks.md) ·
 Index: [Rules of React beyond hooks](README.md) ·
-Next → [Why the rules exist](../05-why-the-rules-exist.md)
+Next → [Why the rules exist](../05-why-the-rules-exist/README.md)

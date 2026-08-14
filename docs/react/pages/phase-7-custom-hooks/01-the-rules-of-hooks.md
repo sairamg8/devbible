@@ -102,7 +102,7 @@ hook itself.
 This is the least-known entry, and it is not arbitrary. A hook call inside `try`
 means the hooks *after* it may or may not run depending on whether it threw. That
 is a conditional hook wearing a different syntax. The consequence is the same one
-[Phase 7 · 05](05-why-the-rules-exist.md) works through from the implementation: the
+[Phase 7 · 05](05-why-the-rules-exist/README.md) works through from the implementation: the
 positional list shifts, and every hook after the throw point reads the wrong slot.
 
 If you need error handling around something a hook does, the boundary goes *outside*

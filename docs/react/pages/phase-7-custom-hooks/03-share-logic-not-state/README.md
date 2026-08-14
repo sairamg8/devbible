@@ -43,7 +43,7 @@ topic follows from that.
   component instance, which is the premise this whole topic rests on.
 - **← [Writing a custom hook](../02-writing-a-custom-hook.md)** — the `use` prefix
   buys visibility, not shared state; this topic is that sentence's consequences.
-- **→ [Why the rules exist](../05-why-the-rules-exist.md)** — positional hook storage
+- **→ [Why the rules exist](../05-why-the-rules-exist/README.md)** — positional hook storage
   in full, which is *why* two calls can never meet.
 - **→ [Designing a hook's API](../06-designing-a-hooks-api.md)** — a hook that reads
   shared state has a different shape from one that owns it.
