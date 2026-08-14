@@ -9,7 +9,7 @@ sidebar_position: 0
 > server is installed on this machine**, so these pages carry **no console blocks**. Commands
 > are shown; their output is described, never fabricated.
 
-**🚧 3 of 5 topics written.** The shell is the debugging tool. Fluency in it is the
+**✅ 5 of 5 topics written — COMPLETE.** The shell is the debugging tool. Fluency in it is the
 difference between diagnosing a slow query in two minutes and guessing at it.
 
 > **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82 topics**,
@@ -20,15 +20,15 @@ difference between diagnosing a slow query in two minutes and guessing at it.
 | 01 | [Connecting](./01-connecting.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | [Navigating](./02-navigating.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 03 | [Cursors](./03-cursors.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 04 | [`explain()` from the shell](./04-explain.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 05 | [Shell safety on production](./05-shell-safety.md) | <span className="db-tier t-master">Master</span> | ⬜ |
+| 04 | [`explain()` from the shell](./04-explain.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 05 | [Shell safety on production](./05-shell-safety.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **3 of 5** |
-| Pages on disk | **3** |
+| Topics written | **5 of 5 — COMPLETE** |
+| Pages on disk | **5** |
 | Evidence | MongoDB Manual, named per page; **no console blocks** |
 
 ## Why the shell matters more here than in most databases
