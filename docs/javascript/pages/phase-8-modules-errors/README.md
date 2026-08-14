@@ -11,7 +11,7 @@ do for you.
 ## Status — **in progress** (2026-08-14)
 
 **Master tier first.** Phase 8 has **four** Master topics — 01 through 04 — written in
-syllabus order. **02 of 4 done.**
+syllabus order. **03 of 4 done.**
 
 ## Topics
 
@@ -19,7 +19,7 @@ syllabus order. **02 of 4 done.**
 |---|---|---|---|
 | 01 | **[ES modules](./01-es-modules/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Modules are singletons, strict, deferred and hoisted](./02-module-semantics/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03 | `Error` and its subclasses | <span className="db-tier t-master">Master</span> | planned |
+| 03 | **[`Error` and its subclasses](./03-error-and-subclasses/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | Leaks you will actually cause | <span className="db-tier t-master">Master</span> | planned |
 | 05–14 | Dynamic `import()`, circular imports, `throw`/`try`/`catch`, custom errors, failing well, global error handling, the memory model, finding a leak, bundlers, testing | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15–18 | CommonJS, `AggregateError`, mark-and-sweep GC, linting | <span className="db-tier t-know">Know</span> | deferred |
