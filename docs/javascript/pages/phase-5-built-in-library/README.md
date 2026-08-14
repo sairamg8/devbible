@@ -13,14 +13,14 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **10 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **11 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 11 · `Number` and `Math`**, then the rest of the Understand tier
-(12–22), then the four Know topics (23–26).
+**Next here: 12 · String searching**, then the rest of the Understand tier
+(13–22), then the four Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **2 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **3 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -36,7 +36,7 @@ work here is now the **Understand and Know tiers**, in that order.
 | 08 | **[Template literals](./08-template-literals/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | **[`JSON.parse` and `JSON.stringify`](./09-json/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 10 | **[`Map` vs a plain object](./10-map-vs-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 11 | `Number` and `Math` | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | **[`Number` and `Math`](./11-number-and-math/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | String searching | <span className="db-tier t-understand">Understand</span> | deferred |
 | 13 | Non-mutating array counterparts | <span className="db-tier t-understand">Understand</span> | deferred |
 | 14 | `flat`, `flatMap`, `fill`, `copyWithin` | <span className="db-tier t-understand">Understand</span> | deferred |
