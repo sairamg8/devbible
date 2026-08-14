@@ -176,4 +176,4 @@ confusing failure into a thirty-second task.
 
 ---
 
-← Prev: [`.gitignore`](05-gitignore.md) · Next → [Phase 1 index](README.md)
+← Prev: [`.gitignore`](05-gitignore.md) · Next → [`git switch` and `git restore`](07-switch-and-restore.md)

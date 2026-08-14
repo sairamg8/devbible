@@ -28,16 +28,16 @@ the right tool for a particular sentence you can say out loud.
 | 04 | **[`git diff` and its three questions](04-git-diff.md)** | <span className="db-tier t-master">Master</span> | Bare, `--staged`, `HEAD` — picking wrong is why "my change disappeared" |
 | 05 | **[`.gitignore`](05-gitignore.md)** | <span className="db-tier t-master">Master</span> | Pattern syntax, negation's one hard limit, and `check-ignore -v` |
 | 06 | **[Ignoring does not untrack](06-ignoring-does-not-untrack.md)** | <span className="db-tier t-understand">Understand</span> | Why a committed `.env` keeps being committed |
-| 07 | `git switch` and `git restore` | <span className="db-tier t-master">Master</span> | The two halves the old `checkout` was split into |
-| 08 | Undo before you push | <span className="db-tier t-master">Master</span> | `restore` vs `reset --soft/--mixed/--hard`, as an effect table |
-| 09 | `git log` for the everyday case | <span className="db-tier t-understand">Understand</span> | `--oneline --graph --decorate`, and reading before changing |
+| 07 | **[`git switch` and `git restore`](07-switch-and-restore.md)** | <span className="db-tier t-master">Master</span> | The two halves the old `checkout` was split into |
+| 08 | **[Undo before you push](08-undo-before-you-push.md)** | <span className="db-tier t-master">Master</span> | `restore` vs `reset --soft/--mixed/--hard`, as an effect table |
+| 09 | **[`git log` for the everyday case](09-git-log.md)** | <span className="db-tier t-understand">Understand</span> | `--oneline --graph --decorate`, and reading before changing |
 | 10 | Commit messages, and what belongs in one commit | <span className="db-tier t-understand">Understand</span> | Imperative subject, a body that answers *why*, and the atomic test |
 | 11 | `git stash` | <span className="db-tier t-understand">Understand</span> | Apply versus pop, `-u`, and `--keep-index` for testing what you staged |
 | 12 | Removing and moving files | <span className="db-tier t-understand">Understand</span> | `rm`, `mv`, `clean -n` first, and why Git records no renames |
 
 ## Coverage
 
-**6 of 12 topics written, as 13 files.** Rows without a link have no page yet.
+**9 of 12 topics written, as 16 files.** Rows without a link have no page yet.
 
 | Topic | Files | Lines | Status |
 |---|---|---|---|
@@ -47,7 +47,10 @@ the right tool for a particular sentence you can say out loud.
 | 04 · `git diff` | one file | **225** | ✅ Complete |
 | 05 · `.gitignore` | one file | **238** | ✅ Complete |
 | 06 · Ignoring ≠ untracking | one file | **179** | ✅ Complete |
-| 07–12 | — | — | Not started |
+| 07 · switch and restore | one file | **225** | ✅ Complete |
+| 08 · Undo before you push | one file | **205** | ✅ Complete |
+| 09 · `git log` | one file | **191** | ✅ Complete |
+| 10–12 | — | — | Not started |
 
 ## What changed on 2026-08-14
 

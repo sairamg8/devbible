@@ -39,7 +39,7 @@ than that"*). Five phases, down from thirteen. What was cut and why is in the
 | Phase | Topics | Written | Status |
 |---|---|---|---|
 | **[00 · How Git stores things](./phase-0-how-git-stores-things/README.md)** | 14 | 14 | ✅ **Complete** |
-| **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 12 | 6 | 🚧 **Writing** — through `.gitignore` and untracking |
+| **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 12 | 9 | 🚧 **Writing** — through `git log` |
 | 02 · Branching, merging and rebasing | 10 | 0 | Not started |
 | 04 · Remotes and syncing | 8 | 0 | Not started |
 | 05 · Undo, recover and rewrite | 8 | 0 | Not started |
