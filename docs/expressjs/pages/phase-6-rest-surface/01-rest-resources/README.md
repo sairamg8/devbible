@@ -43,7 +43,7 @@ list endpoint must never return a bare array.
   why `/users/export` is captured by `/users/:id`.
 - **← [Phase 4 · 01 · res methods](../../phase-4-responses/01-res-methods/README.md)**
   — `res.location`, and why a presenter beats `res.json(row)`.
-- **→ [02 · Status mapping](../02-status-mapping.md)** — the status for each
+- **→ [02 · Status mapping](../02-status-mapping/README.md)** — the status for each
   operation, in full.
 - **→ [03 · Pagination](../03-pagination.md)** — what goes in the envelope chunk 03
   insists on.

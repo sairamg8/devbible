@@ -47,7 +47,7 @@ client is entitled to retry after a timeout.
   route: what the path captures.
 - **→ [07 · `app.route` and hosts](../07-app-route-and-hosts.md)** — the chaining
   form chunks 01 and 03 both lean on.
-- **→ [Phase 6 · 02 · Status mapping](../../phase-6-rest-surface/02-status-mapping.md)**
+- **→ [Phase 6 · 02 · Status mapping](../../phase-6-rest-surface/02-status-mapping/README.md)**
   — CRUD to status codes, once the verbs are settled.
 - **→ [Phase 6 · 06 · Idempotency keys](../../phase-6-rest-surface/06-idempotency-keys.md)**
   — the mechanism POST needs because it is the one non-idempotent verb.

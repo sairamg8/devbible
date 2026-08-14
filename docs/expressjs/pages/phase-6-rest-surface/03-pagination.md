@@ -149,4 +149,4 @@ The page query stops after `limit` rows; an exact count cannot stop at all. Pref
 
 ---
 
-← Prev: [Status mapping](02-status-mapping.md) · Next → [Filter sort search](04-filter-sort-search.md)
+← Prev: [Status mapping](02-status-mapping/README.md) · Next → [Filter sort search](04-filter-sort-search.md)

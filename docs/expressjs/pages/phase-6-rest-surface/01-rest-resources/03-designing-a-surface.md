@@ -242,4 +242,4 @@ four of those are decisions you cannot revise without a version.
 
 ---
 
-← Prev: [When REST stops fitting](02-when-rest-stops-fitting.md) · Index: [REST resources](README.md) · Next topic → [Status mapping](../02-status-mapping.md)
+← Prev: [When REST stops fitting](02-when-rest-stops-fitting.md) · Index: [REST resources](README.md) · Next topic → [Status mapping](../02-status-mapping/README.md)

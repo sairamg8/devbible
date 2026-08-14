@@ -26,7 +26,7 @@ sidebar_position: 0
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[REST resources](01-rest-resources/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The four shapes and why nesting stops at one level; the two-question test for action vs sub-resource; and one resource designed end to end |
-| 02 | **[Status mapping](02-status-mapping.md)** | <span className="db-tier t-master">Master</span> | CRUD → 200/201/204/404/409 |
+| 02 | **[Status mapping](02-status-mapping/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | CRUD → 200/201/204/404/409, idempotency as a promise, and the three statuses about *state* — 409, 412, 428 |
 | 03 | **[Pagination](03-pagination.md)** | <span className="db-tier t-master">Master</span> | Offset vs cursor; cap limits |
 | 04 | **[Filter sort search](04-filter-sort-search.md)** | <span className="db-tier t-understand">Understand</span> | Allow-lists only |
 | 05 | **[Versioning](05-versioning.md)** | <span className="db-tier t-understand">Understand</span> | URL / header / media type |
@@ -47,7 +47,7 @@ negotiation and [Phase 5](../phase-5-errors/README.md) lost error logging.
 | Syllabus topic | Page |
 |---|---|
 | REST resource modeling | 01 (chunks [01](01-rest-resources/01-nouns-collections-items.md) · [02](01-rest-resources/02-when-rest-stops-fitting.md) · [03](01-rest-resources/03-designing-a-surface.md)) |
-| HTTP semantics and status mapping | 02 |
+| HTTP semantics and status mapping | 02 (chunks [01](02-status-mapping/01-crud-to-status.md) · [02](02-status-mapping/02-conflicts-and-preconditions.md)) |
 | Pagination | 03 |
 | Filtering and sorting safely | 04 |
 | Search endpoints | 04 |

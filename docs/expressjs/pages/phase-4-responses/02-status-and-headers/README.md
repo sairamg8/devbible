@@ -54,7 +54,7 @@ resource that exists, and what happens if you set a header after the first write
   — 405 and the `Allow` header Express never sends.
 - **→ [Phase 5 · 04 · Mapping to HTTP](../../phase-5-errors/04-mapping-to-http.md)**
   — the error-to-status table, and `err.headers`.
-- **→ [Phase 6 · 02 · Status mapping](../../phase-6-rest-surface/02-status-mapping.md)**
+- **→ [Phase 6 · 02 · Status mapping](../../phase-6-rest-surface/02-status-mapping/README.md)**
   — CRUD operations to status codes.
 - **→ [Phase 6 · 07 · ETag and cache](../../phase-6-rest-surface/07-etag-and-cache.md)**
   — `Cache-Control` and the conditional-request headers.

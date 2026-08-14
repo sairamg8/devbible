@@ -68,7 +68,7 @@ It is not the whole answer:
 
 - **`Lax` still permits top-level GET navigation.** Any state-changing GET remains
   exploitable by a link — which is a second reason GET must never mutate
-  ([Phase 6](../phase-6-rest-surface/02-status-mapping.md)).
+  ([Phase 6](../phase-6-rest-surface/02-status-mapping/README.md)).
 - **`SameSite=None` is required for genuinely cross-site flows**, and turns the
   defence off exactly where you needed it.
 - **Same-site is not same-origin.** A subdomain you do not fully control —
