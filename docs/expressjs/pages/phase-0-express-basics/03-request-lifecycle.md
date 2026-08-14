@@ -132,4 +132,4 @@ After all routes, as a normal middleware that sends 404 — not as error middlew
 
 ---
 
-← Prev: [app, Router, and http.Server](02-app-router-server.md) · Next → [Creating an app](04-creating-an-app.md)
+← Prev: [app, Router, and http.Server](02-app-router-server/README.md) · Next → [Creating an app](04-creating-an-app.md)

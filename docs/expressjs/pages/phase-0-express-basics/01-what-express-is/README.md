@@ -43,7 +43,7 @@ runs, and which of a given list of questions belong to Express rather than Node.
 
 ## Where this connects
 
-- **→ [02 · app, Router and `http.Server`](../02-app-router-server.md)** — the
+- **→ [02 · app, Router and `http.Server`](../02-app-router-server/README.md)** — the
   three objects separately, and which one owns `close`.
 - **→ [03 · The request lifecycle](../03-request-lifecycle.md)** — the same
   `app.handle` walk-through, from the request's point of view.
