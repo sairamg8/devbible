@@ -252,4 +252,4 @@ specific inferred type is genuinely useful downstream.
 
 ---
 
-← Prev: [01 · The problem it solves](./01-the-problem-it-solves.md) · Next → [11 · Narrowing you lose](../11-narrowing-lost.md)
+← Prev: [01 · The problem it solves](./01-the-problem-it-solves.md) · Next → [11 · Narrowing you lose](../11-narrowing-lost/README.md)

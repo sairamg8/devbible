@@ -52,4 +52,4 @@ the day someone adds a new union member.
 
 ---
 
-← Prev: [09 · Assertion functions](../09-assertion-functions/README.md) · Next → [11 · Narrowing you lose](../11-narrowing-lost.md)
+← Prev: [09 · Assertion functions](../09-assertion-functions/README.md) · Next → [11 · Narrowing you lose](../11-narrowing-lost/README.md)

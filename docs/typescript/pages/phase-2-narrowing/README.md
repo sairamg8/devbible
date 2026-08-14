@@ -34,7 +34,7 @@ those narrowings, or a way to lose one.
 | 08 | [`as` assertions](./08-as-assertions/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | What a cast actually does — silence the checker — and the `as unknown as T` escape |
 | 09 | [Assertion functions](./09-assertion-functions/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | `asserts v is T`, and the explicit-annotation requirement that catches everyone once |
 | 10 | [`satisfies`](./10-satisfies/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | Check a value against a type **without** widening it |
-| 11 | [Narrowing you lose without noticing](./11-narrowing-lost.md) | <span className="db-tier t-master">Master</span> | Callbacks, reassignment, mutable properties — and what `await` actually does |
+| 11 | [Narrowing you lose without noticing](./11-narrowing-lost/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | Callbacks, reassignment, mutable properties — and what `await` actually does |
 | 12 | [`unknown` in `catch`](./12-unknown-in-catch.md) | <span className="db-tier t-understand">Understand</span> | JavaScript can throw anything, so every handler starts by proving what it caught |
 | 13 | [The non-null assertion `!`](./13-non-null-assertion.md) | <span className="db-tier t-know">Know</span> | When it is legitimate, and why it is usually a missing guard in disguise |
 

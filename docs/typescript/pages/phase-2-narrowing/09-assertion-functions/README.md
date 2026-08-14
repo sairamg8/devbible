@@ -49,7 +49,7 @@ an assertion is wrong and a type guard is right.
 - **→ [06 · Exhaustiveness](../06-exhaustiveness.md)** — `assertNever` is an
   assertion function whose value is the *compile* error, with the throw as a
   backstop.
-- **→ [11 · Narrowing you lose](../11-narrowing-lost.md)** — an assertion
+- **→ [11 · Narrowing you lose](../11-narrowing-lost/README.md)** — an assertion
   produces an ordinary narrowing, so it is lost in all the ordinary ways.
 - **→ Phase 10 (Strictness)** — asserting a non-empty tuple is what makes
   `xs[0]` safe under `noUncheckedIndexedAccess`.

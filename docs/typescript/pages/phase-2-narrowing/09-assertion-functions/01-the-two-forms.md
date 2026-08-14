@@ -46,7 +46,7 @@ everything after the call.
 
 That is also why the effect is scoped the way it is. The narrowing lasts until
 something invalidates it — a reassignment, a callback boundary, a mutable
-property re-read ([11](../11-narrowing-lost.md)) — exactly like a narrowing
+property re-read ([11](../11-narrowing-lost/README.md)) — exactly like a narrowing
 produced by a `typeof` check. Assertions do not create a special kind of
 knowledge; they create an ordinary narrowing at an unusual place.
 
@@ -199,7 +199,7 @@ interchangeable.
 
 **Symptom:** Narrowing from an assertion disappears further down the function
 **Cause:** The ordinary invalidations — reassignment, a callback boundary, a
-mutable property read after an intervening call ([11](../11-narrowing-lost.md)).
+mutable property read after an intervening call ([11](../11-narrowing-lost/README.md)).
 **Fix:** Assign to a `const` immediately after the assertion.
 
 ## Interview questions
