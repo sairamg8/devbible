@@ -250,4 +250,4 @@ so neither side may reach into the other's values.
 
 ← Prev: [The name and the arguments](01-the-name-and-the-arguments.md) ·
 Index: [Designing a hook's API](README.md) ·
-Next → [The standard set, written out](../07-the-standard-set.md)
+Next → [The standard set, written out](../07-the-standard-set/README.md)

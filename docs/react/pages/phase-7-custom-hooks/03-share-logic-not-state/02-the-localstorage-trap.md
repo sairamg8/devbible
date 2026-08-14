@@ -188,7 +188,7 @@ violation.
 **Cause:** the lazy initialiser runs on the server too.
 **Fix:** a separate concern from sharing, and the reason the standard-set version of
 this hook is built on `useSyncExternalStore` with a `getServerSnapshot`
-([Phase 7 · 07](../07-the-standard-set.md)).
+([Phase 7 · 07 · 02](../07-the-standard-set/02-browser-state.md)).
 
 ## Interview questions
 

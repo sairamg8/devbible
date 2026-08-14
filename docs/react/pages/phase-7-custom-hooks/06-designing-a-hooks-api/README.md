@@ -45,7 +45,7 @@ second is the payoff: `useOnlineStatus` was rewritten from `useState` + `useEffe
   reads shared state has a different signature from one that owns it.
 - **← [Rules of React beyond hooks](../04-rules-of-react-beyond-hooks/README.md)** —
   arguments and return values are immutable in both directions.
-- **→ [The standard set, written out](../07-the-standard-set.md)** — ten hooks whose
+- **→ [The standard set, written out](../07-the-standard-set/README.md)** — ten hooks whose
   APIs are worth reading as design decisions, not just implementations.
 - **→ [Hooks that wrap effects](../08-hooks-that-wrap-effects.md)** — honest
   dependencies across the boundary, in full.
