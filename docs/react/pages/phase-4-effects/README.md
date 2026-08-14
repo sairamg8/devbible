@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 8 of 18 topics written.** The table below links what exists;
+🚧 **In progress — 10 of 18 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The most misused hook in React, almost always because it is understood as "run
@@ -27,8 +27,8 @@ React may run any number of times**.
 | 06 | **[You might not need an effect](06-you-might-not-need-an-effect/README.md)** | <span className="db-tier t-master">Master</span> | Twelve cases; only one survives as an effect |
 | 07 | **[Fetching data in an effect](07-fetching-data.md)** | <span className="db-tier t-master">Master</span> | Everyone's first answer, and a poor one |
 | 08 | **[Race conditions](08-race-conditions.md)** | <span className="db-tier t-understand">Understand</span> | The `ignore` flag and `AbortController`, and which you need |
-| 09 | An effect has its own lifecycle | <span className="db-tier t-understand">Understand</span> | It starts and stops, independent of mounting |
-| 10 | `useEffectEvent` | <span className="db-tier t-understand">Understand</span> | Latest props and state without a dependency |
+| 09 | **[An effect has its own lifecycle](09-effect-lifecycle.md)** | <span className="db-tier t-understand">Understand</span> | It starts and stops, independent of mounting |
+| 10 | **[`useEffectEvent`](10-useeffectevent.md)** | <span className="db-tier t-understand">Understand</span> | Latest props and state without a dependency |
 | 11 | Removing dependencies legitimately | <span className="db-tier t-understand">Understand</span> | Four legitimate moves and two illegitimate ones |
 | 12 | `useLayoutEffect` | <span className="db-tier t-understand">Understand</span> | After DOM mutation, before paint |
 | 13 | Effect ordering | <span className="db-tier t-understand">Understand</span> | Children before parents, cleanups before setups |
@@ -40,7 +40,7 @@ React may run any number of times**.
 
 ## Coverage so far
 
-**8 topics → 14 content files.** Two topics run past the 300-line file cap and
+**10 topics → 16 content files.** Two topics run past the 300-line file cap and
 become topic directories:
 
 | Topic | Chunks | Split at |

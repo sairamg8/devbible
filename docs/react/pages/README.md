@@ -60,7 +60,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[1 — JSX and what a component returns](./phase-1-jsx/README.md)** | ✅ **Written** | 15 pages, 15 topics |
 | **[2 — Components, props and composition](./phase-2-components/README.md)** | ✅ **Written** | 16 pages, 16 topics |
 | **[3 — State and the render cycle](./phase-3-state/README.md)** | ✅ **Written** | 17 pages, 17 topics |
-| **[4 — Effects and synchronization](./phase-4-effects/README.md)** | 🚧 **Writing** | 8 of 18 topics, 14 files |
+| **[4 — Effects and synchronization](./phase-4-effects/README.md)** | 🚧 **Writing** | 10 of 18 topics, 16 files |
 | 5 — Refs, context and reducers | Not started | — |
 | 6 — Rendering performance and the Compiler | Not started | — |
 | 7 — Custom hooks and the Rules of React | Not started | — |
