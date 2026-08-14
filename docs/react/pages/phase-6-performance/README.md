@@ -10,7 +10,7 @@ sidebar_position: 0
 > lives on [Phase 0 · 11](../phase-0-how-react-runs/11-the-compiler.md) and is
 > linked rather than repeated.
 
-🚧 **In progress — 8 of 17 topics written.** The table below links what exists;
+🚧 **In progress — 11 of 17 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 **Memoization is the most cargo-culted area of React.** This phase is ordered
@@ -31,9 +31,9 @@ The single most important sentence in the phase comes from the `memo` reference:
 | 06 | **[The memoization trap](06-the-memoization-trap.md)** | <span className="db-tier t-understand">Understand</span> | Fixed by composition, not by more `useMemo` |
 | 07 | **[The React Compiler v1.0](07-the-react-compiler.md)** | <span className="db-tier t-understand">Understand</span> | Build-time automatic memoization |
 | 08 | **[Installing and configuring the Compiler](08-installing-the-compiler.md)** | <span className="db-tier t-understand">Understand</span> | Babel plugin, `target`, and the runtime for 17/18 |
-| 09 | How the Compiler bails out | <span className="db-tier t-understand">Understand</span> | The rules it must be able to prove |
-| 10 | `eslint-plugin-react-hooks` v7 | <span className="db-tier t-understand">Understand</span> | Compiler-powered rules in `recommended` |
-| 11 | Do you still write `useMemo`? | <span className="db-tier t-understand">Understand</span> | What to delete, what to keep, in what order |
+| 09 | **[How the Compiler bails out](09-how-the-compiler-bails-out.md)** | <span className="db-tier t-understand">Understand</span> | The rules it must be able to prove |
+| 10 | **[`eslint-plugin-react-hooks`](10-eslint-plugin-react-hooks.md)** | <span className="db-tier t-understand">Understand</span> | Compiler-powered rules in `recommended` |
+| 11 | **[Do you still write `useMemo`?](11-do-you-still-write-usememo.md)** | <span className="db-tier t-understand">Understand</span> | What to delete, what to keep, in what order |
 | 12 | Lazy loading components | <span className="db-tier t-understand">Understand</span> | `lazy` + Suspense, and a loading state that does not flash |
 | 13 | Moving state down and lifting content up | <span className="db-tier t-understand">Understand</span> | The two fixes that beat any amount of memoization |
 | 14 | List virtualization | <span className="db-tier t-understand">Understand</span> | When the cost is 10,000 DOM nodes, and what windowing costs you |
