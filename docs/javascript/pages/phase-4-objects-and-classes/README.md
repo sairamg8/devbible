@@ -15,13 +15,13 @@ modes.
 
 ## Status — ✅ **Understand tier COMPLETE** (2026-08-14)
 
-🚧 **18 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
+🚧 **19 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
 08 in syllabus order — and the **Master-first plan is finished across every phase**,
 so the work here is now the **Understand and Know tiers**, in that order.
 
-✅ **The Understand tier is now complete, 9 of 9** (02, 09–16). **Next here: 19 · `Proxy` and `Reflect`**, then 20 · Private state before `#` — the last two topics in the phase.
+✅ **The Understand tier is now complete, 9 of 9** (02, 09–16). **Next here: 20 · Private state before `#`** — the last topic in the phase.
 
-**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **2 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **3 / 4**.
 
 ## Topics
 
@@ -45,7 +45,7 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 16 | **[Prototype patterns to avoid](./16-prototype-patterns-to-avoid/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 17 | **[`toString`, `valueOf`, `Symbol.toPrimitive`](./17-tostring-valueof-toprimitive/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 18 | **[Mixins and composition over inheritance](./18-mixins-and-composition/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 19 | `Proxy` and `Reflect` | <span className="db-tier t-know">Know</span> | deferred |
+| 19 | **[`Proxy` and `Reflect`](./19-proxy-and-reflect/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 20 | Private state before `#` | <span className="db-tier t-know">Know</span> | deferred |
 
 ## Phase gate
