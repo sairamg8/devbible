@@ -85,7 +85,7 @@ export const LANGUAGES = {
       {n: 0, slug: 'phase-0-how-mongodb-runs', name: 'How MongoDB runs', part: 'The document model', topics: 5, pages: 5},
       {n: 1, slug: 'phase-1-documents-and-bson', name: 'Documents, BSON types and _id', part: 'The document model', topics: 6, pages: 6},
       {n: 2, slug: 'phase-2-mongosh', name: 'mongosh, mastered', part: 'The document model', topics: 5, pages: 5},
-      {n: 3, slug: 'phase-3-schema-design', name: 'Schema design and modelling', part: 'The document model', topics: 6, pages: 2, pagesPlanned: 6},
+      {n: 3, slug: 'phase-3-schema-design', name: 'Schema design and modelling', part: 'The document model', topics: 6, pages: 6},
       {n: 4, slug: 'phase-4-crud', name: 'CRUD and DML', part: 'Querying', topics: 6, pages: 0},
       {n: 5, slug: 'phase-5-query-operators', name: 'Query operators and projection', part: 'Querying', topics: 6, pages: 0},
       {n: 6, slug: 'phase-6-aggregation', name: 'The aggregation pipeline', part: 'Querying', topics: 6, pages: 0},

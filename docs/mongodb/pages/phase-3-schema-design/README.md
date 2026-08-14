@@ -8,7 +8,7 @@ sidebar_position: 0
 > Embedding vs. References. Sources named per page. **Documentation-validated** under the
 > no-new-sandboxes rule; **no console blocks**.
 
-**🚧 2 of 6 topics written.** The phase that decides whether an application is pleasant or
+**✅ 6 of 6 topics written — COMPLETE.** The phase that decides whether an application is pleasant or
 awful to work on — and the one where relational experience actively misleads.
 
 > **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82 topics**,
@@ -18,17 +18,17 @@ awful to work on — and the one where relational experience actively misleads.
 |---|---|---|---|
 | 01 | [Schema design is a query exercise](./01-schema-design-is-a-query-exercise.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | [Embed vs reference — the decision procedure](./02-embed-vs-reference.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 03 | [One-to-few](./03-one-to-few.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 04 | [One-to-many](./04-one-to-many.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 05 | [One-to-squillions](./05-one-to-squillions.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 06 | [The extended reference pattern](./06-extended-reference.md) | <span className="db-tier t-master">Master</span> | ⬜ |
+| 03 | [One-to-few](./03-one-to-few.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 04 | [One-to-many](./04-one-to-many.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 05 | [One-to-squillions](./05-one-to-squillions.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 06 | [The extended reference pattern](./06-extended-reference.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **2 of 6** |
-| Pages on disk | **2** |
+| Topics written | **6 of 6 — COMPLETE** |
+| Pages on disk | **6** |
 | Evidence | MongoDB Manual, named per page; **no console blocks** |
 
 ## The sentence this phase turns on
