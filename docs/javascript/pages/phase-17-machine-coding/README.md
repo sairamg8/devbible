@@ -1,0 +1,48 @@
+---
+title: "Phase 17 — Machine coding: implement it yourself"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+*18 topics.* The brief's **custom functions** requirement, and the round that separates people who
+have used JavaScript from people who understand it. Every row is a from-scratch implementation with
+the edge cases interviewers probe.
+
+## Status — **Master tier COMPLETE** (2026-08-14)
+
+**Master tier first.** Phase 17 has **four** Master topics — 01 through 04 — and **all four are
+written**.
+
+## Topics
+
+| # | Topic | Tier | Status |
+|---|---|---|---|
+| 01 | **[`map`, `filter`, `reduce`, `forEach` on `Array.prototype`](./01-array-methods/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 02 | **[`call`, `apply` and `bind`](./02-call-apply-bind/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 03 | **[`debounce` and `throttle`](./03-debounce-throttle/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 04 | **[`Promise.all`, `race`, `any`, `allSettled`](./04-promise-combinators/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
+| 05–15 | `EventEmitter`, deep clone, a concurrency-limited queue, retry with backoff, an LRU cache, a Promise from scratch, `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
+| 16–18 | `new`/`Object.create`/`instanceof` by hand, a pub/sub and a reactive `signal`, a virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | deferred |
+
+## The phase gate
+
+From the syllabus: **you can write `bind`, `debounce`, `Promise.all` and an `EventEmitter` from an
+empty file in under thirty minutes, and name the edge case each one hides.** Three of the four are
+Master topics here; `EventEmitter` is topic 05 and deferred.
+
+## How these pages are verified
+
+**Documentation-validated** against MDN and the behaviours it specifies — the callback contract and
+sparse-array rules, `bind` under `new`, the empty-iterable results for each Promise combinator.
+**No page prints a timing**, and no page prints console output, because nothing was run.
+
+## Where this connects
+
+- [Phase 3 · Functions, scope and closures](../phase-3-functions/README.md) — the closures every wrapper here depends on
+- [Phase 7 · Asynchronous JavaScript](../phase-7-async/README.md) — promises, microtasks and the event loop
+- [Phase 5 · The built-in library](../phase-5-built-in-library/README.md) — the methods being reimplemented
+- [Phase 16 · 03 · A problem-solving method](../phase-16-dynamic-programming/03-problem-solving-method/README.md) — the loop to run while writing these under pressure
+
+---
+
+Start → [01 · `map`, `filter`, `reduce`, `forEach`](./01-array-methods/README.md)

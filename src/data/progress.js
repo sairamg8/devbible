@@ -53,7 +53,7 @@ export const LANGUAGES = {
       {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures in JavaScript', part: 'DSA & machine coding', topics: 17, pages: 5, pagesPlanned: 17},
       {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns', part: 'DSA & machine coding', topics: 20, pages: 5, pagesPlanned: 20},
       {n: 16, slug: 'phase-16-dynamic-programming', name: 'Dynamic programming and the harder set', part: 'DSA & machine coding', topics: 16, pages: 3, pagesPlanned: 16},
-      {n: 17, slug: 'phase-17-machine-coding', name: 'Machine coding: implement it yourself', part: 'DSA & machine coding', topics: 18, pages: 0},
+      {n: 17, slug: 'phase-17-machine-coding', name: 'Machine coding: implement it yourself', part: 'DSA & machine coding', topics: 18, pages: 4, pagesPlanned: 18},
       {n: 18, slug: 'phase-18-storefront', name: 'Building the store front end', part: 'Applied storefront', topics: 18, pages: 0},
     ],
   },
