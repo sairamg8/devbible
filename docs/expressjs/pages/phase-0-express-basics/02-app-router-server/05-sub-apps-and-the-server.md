@@ -212,4 +212,4 @@ the sub-app had been ordinary middleware.
 
 ---
 
-← Prev: [URL rewriting and OPTIONS](04-url-rewriting-and-options.md) · Index: [Object graph](README.md) · Next topic → [The request lifecycle](../03-request-lifecycle.md)
+← Prev: [URL rewriting and OPTIONS](04-url-rewriting-and-options.md) · Index: [Object graph](README.md) · Next topic → [The request lifecycle](../03-request-lifecycle/README.md)

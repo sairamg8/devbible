@@ -18,16 +18,16 @@ Seven topics, in order. The first three are load-bearing.
 > Express's Master topics were all written at 63–200 lines with none chunked —
 > sized to the 300-line cap rather than to the topic. They are being rewritten to
 > the depth they deserve, splitting into `NN-topic/` directories on concept
-> boundaries. **Topics 01 and 02 are done** — 01 is 4 chunks / ~960 lines (up from
-> 121), 02 is 5 chunks / ~1,130 lines (up from 130). **Topic 03 is next.** Nothing
-> was re-run: the mechanism claims are read from the installed `express@5.2.1` and
-> `router@2.2.0` source, cited by file and function.
+> boundaries. **All three of this phase's Master topics are done** — 01 is 4 chunks
+> (up from 121 lines), 02 is 5 chunks (up from 130), 03 is 3 chunks (up from 135).
+> Nothing was re-run: the mechanism claims are read from the installed
+> `express@5.2.1` and `router@2.2.0` source, cited by file and function.
 
 | # | Topic | Tier | In one line |
 |---|---|---|---|
 | 01 | **[What Express is](01-what-express-is/README.md)** *(4 chunks)* | <span className="db-tier t-master">Master</span> | Router + middleware over `http.Server` — the mapping problem, the app-is-a-function mechanism, what it delegates, and where it stops |
 | 02 | **[app, Router, and http.Server](02-app-router-server/README.md)** *(5 chunks)* | <span className="db-tier t-master">Master</span> | Three objects: who mounts, who listens, who owns the stack — plus the `router.handle` walk that answers most "why did Express do that" questions |
-| 03 | **[The request lifecycle](03-request-lifecycle.md)** | <span className="db-tier t-master">Master</span> | Accept → middleware chain → handler → response (or error middleware) |
+| 03 | **[The request lifecycle](03-request-lifecycle/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Accept → middleware chain → handler → response (or error middleware) — the nine stages, how a handler is actually invoked, and the four ways a request ends |
 | 04 | **[Creating an app](04-creating-an-app.md)** | <span className="db-tier t-understand">Understand</span> | `express()`, `listen`, and listening on a prebuilt server |
 | 05 | **[Application settings](05-application-settings.md)** | <span className="db-tier t-understand">Understand</span> | `app.set` defaults you should know: `x-powered-by`, `etag`, `query parser`, `trust proxy` |
 | 06 | **[Express 5 vs 4](06-express-5-vs-4.md)** | <span className="db-tier t-understand">Understand</span> | Path matching rewrite, async errors to `next`, removed APIs |
@@ -39,7 +39,7 @@ Seven topics, in order. The first three are load-bearing.
 |---|---|
 | What Express is and is not | 01 (chunks [01](01-what-express-is/01-the-mapping-problem.md) · [04](01-what-express-is/04-the-boundary.md)) |
 | `app` vs `Router` vs `http.Server` | 02 (chunks [01](02-app-router-server/01-the-three-objects.md) · [02](02-app-router-server/02-a-router-is-a-function-too.md) · [05](02-app-router-server/05-sub-apps-and-the-server.md)) |
-| The request lifecycle | 03 |
+| The request lifecycle | 03 (chunks [01](03-request-lifecycle/01-the-nine-stages.md) · [02](03-request-lifecycle/02-how-a-handler-is-invoked.md) · [03](03-request-lifecycle/03-the-four-endings.md)) |
 | Application instantiation | 04 |
 | Application settings (grouped) | 05 |
 | Express 5 vs 4 | 06 |

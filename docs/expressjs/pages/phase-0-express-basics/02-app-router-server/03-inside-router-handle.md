@@ -17,7 +17,7 @@ routes while an error is pending, and puts everything back on the way out.**
 > [expressjs.com · Routing](https://expressjs.com/en/guide/routing.html) and
 > [Using middleware](https://expressjs.com/en/guide/using-middleware.html). The
 > request's end-to-end journey, including body parsing and the response, is
-> [topic 03](../03-request-lifecycle.md); this page is the router's part of it.
+> [topic 03](../03-request-lifecycle/README.md); this page is the router's part of it.
 
 This is the single function that makes Express behave the way it does. It is
 worth reading once properly, because roughly a third of the "why did Express do

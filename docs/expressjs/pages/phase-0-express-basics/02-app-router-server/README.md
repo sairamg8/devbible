@@ -48,7 +48,7 @@ middleware.
 
 - **← [01 · What Express is](../01-what-express-is/README.md)** — `createApplication`
   and the app-is-a-function mechanism this topic extends to routers.
-- **→ [03 · The request lifecycle](../03-request-lifecycle.md)** — the same journey
+- **→ [03 · The request lifecycle](../03-request-lifecycle/README.md)** — the same journey
   end to end, including body parsing and the response. Chunks 03 and 04 here are
   only the router's part of it.
 - **→ [Phase 1 · 03 · Router composition](../../phase-1-routing/03-router-composition.md)**

@@ -115,4 +115,4 @@ usually has one root `app`.
 
 ---
 
-← Prev: [The request lifecycle](03-request-lifecycle.md) · Next → [Application settings](05-application-settings.md)
+← Prev: [The request lifecycle](03-request-lifecycle/README.md) · Next → [Application settings](05-application-settings.md)
