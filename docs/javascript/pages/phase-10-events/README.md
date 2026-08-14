@@ -7,13 +7,13 @@ sidebar_position: 0
 *14 topics.* As the syllabus puts it, **delegation is the row that pays for the phase** — it
 is the difference between one listener and a thousand.
 
-## Status — 🚧 **Know tier under way — 12 of 14** (2026-08-15)
+## Status — 🚧 **Know tier under way — 13 of 14** (2026-08-15)
 
 **Master tier ✅ COMPLETE** — all four Master topics (01–04), written in syllabus order.
 
 **Understand tier ✅ COMPLETE** — 05–11, all seven.
 
-🚧 **Know tier: 12 ✅ written, 13–14 left.** Lane B of the two-way JavaScript split owns this phase.
+🚧 **Know tier: 12–13 ✅ written, only 14 left.** Lane B of the two-way JavaScript split owns this phase.
 
 ## Topics
 
@@ -31,7 +31,8 @@ is the difference between one listener and a thousand.
 | 10 | **[Page lifecycle](./10-page-lifecycle/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Default actions you should not block](./11-default-actions/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[`EventTarget` as a base class](./12-eventtarget-base-class/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 13–14 | Touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | 🚧 next |
+| 13 | **[Touch and gestures](./13-touch-and-gestures/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 14 | Debugging events | <span className="db-tier t-know">Know</span> | 🚧 next |
 
 ## How these pages are verified
 
