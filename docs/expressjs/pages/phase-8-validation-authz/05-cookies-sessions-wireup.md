@@ -156,4 +156,4 @@ token lives where JavaScript can reach it.
 
 ---
 
-← Prev: [Authn middleware](04-authn-middleware.md) · Next → [RBAC middleware](06-rbac-middleware.md)
+← Prev: [Authn middleware](04-authn-middleware/README.md) · Next → [RBAC middleware](06-rbac-middleware.md)

@@ -79,7 +79,7 @@ route; cross-cutting infrastructure is global.** Request id, logging, body
 parsing, CORS, Helmet and the rate limiter apply to everything and belong at the
 top of the factory. Anything that decides *who may do this* belongs on the route,
 where a reviewer can see it. [Phase 8 ·
-04](../../phase-8-validation-authz/04-authn-middleware.md).
+04](../../phase-8-validation-authz/04-authn-middleware/README.md).
 
 ## Middleware that runs for a subset
 

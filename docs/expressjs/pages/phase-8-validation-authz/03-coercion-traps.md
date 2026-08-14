@@ -168,4 +168,4 @@ to fix when a rule changes.
 
 ---
 
-← Prev: [Validation factory](02-validation-factory/README.md) · Next → [Authn middleware](04-authn-middleware.md)
+← Prev: [Validation factory](02-validation-factory/README.md) · Next → [Authn middleware](04-authn-middleware/README.md)

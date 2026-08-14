@@ -57,7 +57,7 @@ The last two are the ones people do not think of as leaks.
 **Auth failures must be indistinguishable.** "No such user" and "wrong password"
 must produce the same code, the same message and — ideally — the same timing,
 or the endpoint is a user-enumeration oracle
-([Phase 8 · 04](../../phase-8-validation-authz/04-authn-middleware.md)). The same
+([Phase 8 · 04](../../phase-8-validation-authz/04-authn-middleware/README.md)). The same
 applies to "your token expired" versus "that token is invalid": telling an
 attacker their token was once real is information.
 

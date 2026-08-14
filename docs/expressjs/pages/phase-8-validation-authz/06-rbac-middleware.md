@@ -12,7 +12,7 @@ sidebar_position: 6
 > no roles, no permissions, no guards. The factory below is the documented
 > *"configurable middleware"* shape — a function taking options and returning middleware
 > ([using middleware](https://expressjs.com/en/guide/using-middleware.html)) — and
-> `req.user` is a convention set by [page 04](04-authn-middleware.md), not an Express
+> `req.user` is a convention set by [page 04](04-authn-middleware/README.md), not an Express
 > property. The status semantics are
 > [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html): **401 means the request lacks
 > valid authentication credentials** (and the response must carry `WWW-Authenticate`),
@@ -90,7 +90,7 @@ Three habits, all of which are the difference between a bug and a breach:
    `undefined.role`.
 3. **New routes are protected by default.** If your framework of guards makes it
    possible to forget one, that is the design to fix — see the opt-in argument on
-   [page 04](04-authn-middleware.md).
+   [page 04](04-authn-middleware/README.md).
 
 ## Trade-off
 

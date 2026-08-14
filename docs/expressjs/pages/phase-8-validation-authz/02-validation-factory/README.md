@@ -49,7 +49,7 @@ serve both `POST` and `PATCH`.
   the parser that must run first, and the empty body that becomes `{}`.
 - **→ [03 · Coercion traps](../03-coercion-traps.md)** — `z.coerce.number()` on
   `''`, in full.
-- **→ [04 · Authn middleware](../04-authn-middleware.md)** — the guard that runs
+- **→ [04 · Authn middleware](../04-authn-middleware/README.md)** — the guard that runs
   before this one.
 - **→ [09 · Type inference](../09-type-inference.md)** — removing the duplication
   the trade-off complains about.

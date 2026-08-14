@@ -10,7 +10,7 @@ sidebar_position: 4
 
 > Verified: 2026-08-14 — **no sandbox run**, and **not an Express topic at the mechanism
 > level**: Express has no authentication, so what a test mints depends entirely on what
-> [Phase 8](../phase-8-validation-authz/04-authn-middleware.md)'s middleware verifies.
+> [Phase 8](../phase-8-validation-authz/04-authn-middleware/README.md)'s middleware verifies.
 > The Express-side facts are the ones that decide *how* a test presents a credential:
 > `req.get()` reads headers case-insensitively, and `req.cookies` requires cookie-parser
 > ([request reference](https://expressjs.com/en/5x/api/request/)) — so a cookie-session
@@ -49,7 +49,7 @@ const app = createApp({...deps, requireAuth: (req, res, next) => {
 The second is tempting because it is one line and always works. It also means **no
 test ever exercises token verification, expiry handling, the 401 path, or the
 mounting order** — and the missing-guard bugs from
-[Phase 8](../phase-8-validation-authz/04-authn-middleware.md) become invisible to
+[Phase 8](../phase-8-validation-authz/04-authn-middleware/README.md) become invisible to
 the suite. A route that forgot `requireAuth` entirely passes identically.
 
 Sign a real token with a test secret. The middleware runs, the failure paths are

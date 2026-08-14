@@ -136,7 +136,7 @@ The position this bible takes:
   a different limiter on `/auth`.
 - **Per route** — anything that decides *who may do this*, so a missing one is
   visible in the diff rather than silently inherited
-  ([Phase 8 · 04](../../phase-8-validation-authz/04-authn-middleware.md)).
+  ([Phase 8 · 04](../../phase-8-validation-authz/04-authn-middleware/README.md)).
 - **Above everything** — health probes, so they answer when the rest is failing.
 
 ## Gotchas

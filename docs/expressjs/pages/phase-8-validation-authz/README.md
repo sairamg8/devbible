@@ -28,7 +28,7 @@ sidebar_position: 0
 | 01 | **[Validate at the boundary](01-validate-at-boundary/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | Every request surface and its trap; why the parse *output* is what matters; and what a schema cannot do |
 | 02 | **[Validation factory](02-validation-factory/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | One middleware collecting every issue, where it mounts and why, and schemas that hold up per operation |
 | 03 | **[Coercion traps](03-coercion-traps.md)** | <span className="db-tier t-understand">Understand</span> | Query strings are strings |
-| 04 | **[Authn middleware](04-authn-middleware.md)** | <span className="db-tier t-master">Master</span> | Attach `req.user` or 401 |
+| 04 | **[Authn middleware](04-authn-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Attach `req.user` or 401; where the truth lives and what that costs; opt-out mounting and the deny-path tests |
 | 05 | **[Cookies and sessions wire-up](05-cookies-sessions-wireup.md)** | <span className="db-tier t-understand">Understand</span> | Flags + store; theory in Node |
 | 06 | **[RBAC middleware](06-rbac-middleware.md)** | <span className="db-tier t-master">Master</span> | Role checks → 403 |
 | 07 | **[Ownership checks](07-ownership.md)** | <span className="db-tier t-master">Master</span> | Is this row mine? |
@@ -49,8 +49,8 @@ schemas had no coverage at all. This README had no Coverage table; that is phase
 | A reusable validation middleware factory | 02 (chunks [01](02-validation-factory/01-the-factory.md) · [02](02-validation-factory/02-mounting-and-order.md)) |
 | Coercion traps | 03 |
 | Type inference from schemas into handlers | **09** |
-| Authentication middleware | 04 |
-| Session store vs JWT wire-up | 05 |
+| Authentication middleware | 04 (chunks [01](04-authn-middleware/01-one-question-only.md) · [03](04-authn-middleware/03-mounting-and-testing.md)) |
+| Session store vs JWT wire-up | 05, and the trade in 04 (chunk [02](04-authn-middleware/02-tokens-sessions-and-cost.md)) |
 | Cookie flags on the auth path | 05 |
 | RBAC middleware | 06 |
 | Resource ownership checks | 07 |
