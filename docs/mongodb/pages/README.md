@@ -11,8 +11,8 @@ All of `docs/mongodb/` is claimed by session `05921047`, which picked it up on
 **`devbible-mongodb`, branch `mongodb-pages`** — not on `main` — so other live
 sessions' builds are unaffected until it merges.
 
-**State: Phases 0–4 COMPLETE — 28 of 82 topics.**
-Next: **Phase 5 · Query operators and projection (6 topics)**.
+**State: Phases 0–4 COMPLETE. Phase 5 in flight — 3 of 6.**
+Next: **04 · `$regex`**.
 
 The earlier claim by session `6f020813` was stale: that session finished Phase 0
 and stopped without writing this index; session `632ebd35` repaired two
@@ -45,7 +45,7 @@ import Progress from '@site/src/components/Progress';
 | [2 · `mongosh`, mastered](./phase-2-mongosh/README.md) | 5 | ✅ written |
 | [3 · Schema design and modelling](./phase-3-schema-design/README.md) | 6 | ✅ written |
 | [4 · CRUD and DML](./phase-4-crud/README.md) | 6 | ✅ written |
-| 5 · Query operators and projection | 6 | ⬜ planned |
+| [5 · Query operators and projection](./phase-5-query-operators/README.md) | 6 | 🚧 **writing — 3 of 6** |
 | 6 · The aggregation pipeline | 6 | ⬜ planned |
 | 7 · Indexes and the query planner | 6 | ⬜ planned |
 | 8 · The Node.js driver, end to end | 6 | ⬜ planned |
