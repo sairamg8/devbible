@@ -11,7 +11,7 @@ interview probes and what every production incident traces back to."*
 ## Status — **in progress** (2026-08-13)
 
 **Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
-any other phase. They are being written in syllabus order. **04 of 11 done.**
+any other phase. They are being written in syllabus order. **05 of 11 done.**
 
 ## Topics
 
@@ -21,7 +21,7 @@ any other phase. They are being written in syllabus order. **04 of 11 done.**
 | 02 | **[The event loop](./02-the-event-loop/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[Microtasks vs macrotasks](./03-microtasks-vs-macrotasks/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Callbacks](./04-callbacks/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05 | Promises | <span className="db-tier t-master">Master</span> | planned |
+| 05 | **[Promises](./05-promises/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | Chaining | <span className="db-tier t-master">Master</span> | planned |
 | 07 | `async`/`await` | <span className="db-tier t-master">Master</span> | planned |
 | 08 | Error handling in async code | <span className="db-tier t-master">Master</span> | planned |
