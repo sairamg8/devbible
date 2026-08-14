@@ -10,15 +10,41 @@ sidebar_position: 0
 > under `/tmp` with the machine's own config neutralised — not written from
 > memory.
 
-The complete topic inventory for Git, tiered for **mastery in fullstack
-application development**. **13 phases, 191 topics**, split into 4 parts to stay
-under the 300-line file cap.
+:::warning Re-scoped 2026-08-14 — daily-driver Git only
 
-The bar is **no knowledge gaps**: every Git operation you would meet working on
-a real MERN/PERN application — a feature branch, a conflicted rebase, a PR that
-needs three review rounds, a `.env` that must never be committed, a lockfile
-conflict, a bisect through last month's commits, and the morning someone
-force-pushes over your branch — has a row here.
+This syllabus was written as a **complete** inventory: 13 phases, 191 topics. On
+**2026-08-14** it was cut to the commands you use to get work done:
+*"I just need to know about the git to work daily tasks not more than that."*
+
+**In scope — 5 phases, 52 topics:**
+
+| Phase | Topics | Why it stays |
+|---|---|---|
+| **0 · How Git stores things** | 14 | Already written, and it is the reason every daily command behaves the way it does |
+| **1 · The everyday loop** | 12 | `status`, `add`, `commit`, `diff`, ignore rules, undo, stash |
+| **2 · Branching and merging** | 10 | Branches, merges, conflicts, rebase, cherry-pick, reflog |
+| **4 · Remotes and syncing** | 8 | Clone, fetch, pull, push, upstreams, force-push safely |
+| **5 · Undo and recover** | 8 | `reset`, `revert`, `amend`, reflog recovery |
+
+**Parked — not being written:** phase 3 (reading history in depth), phase 6
+(team workflow and code review), and Parts 3 and 4 entirely — the fullstack
+repository, hooks and CI, speed and scale, plumbing, and history surgery. The
+rows are left below as a record of the plan, not as work in flight.
+
+Everything below this box describes the **original** 191-topic inventory unless
+it says otherwise, including the tier distribution.
+
+:::
+
+The topic inventory for Git, tiered for **fullstack application development**,
+split into 4 parts to stay under the 300-line file cap.
+
+The original bar was **no knowledge gaps**: every Git operation you would meet
+working on a real MERN/PERN application — a feature branch, a conflicted rebase,
+a PR that needs three review rounds, a `.env` that must never be committed, a
+lockfile conflict, a bisect through last month's commits, and the morning someone
+force-pushes over your branch — had a row. The re-scope above narrows the written
+corpus to the daily half of that.
 
 Architectural role: **a content-addressed object store with pointers into it.**
 Git is not a diff engine and not a timeline; it is a key-value database keyed by
@@ -80,12 +106,12 @@ The default-branch row is why this syllabus does not take Git facts from memory.
 
 ## Parts
 
-| # | Part | Covers | Phases | Topics |
-|---|---|---|---|---|
-| 1 | **[How Git works](syllabus/01-how-git-works.md)** | The object model, the everyday loop, branching and merging, reading history | 0–3 | 61 |
-| 2 | **[Working with other people](syllabus/02-collaboration.md)** | Remotes and syncing, undo and recovery, team workflow and review | 4–6 | 47 |
-| 3 | **[Git in a real project](syllabus/03-in-a-real-project.md)** | The fullstack repository, hooks and CI, speed and ergonomics | 7–9 | 42 |
-| 4 | **[Depth and repair](syllabus/04-depth-and-repair.md)** | Plumbing and internals, history surgery, the error catalogue | 10–12 | 41 |
+| # | Part | Covers | Phases | Topics | Status |
+|---|---|---|---|---|---|
+| 1 | **[How Git works](syllabus/01-how-git-works.md)** | The object model, the everyday loop, branching and merging, reading history | 0–3 | 61 | 🔴 **In scope** — phases 0, 1, 2. Phase 3 parked |
+| 2 | **[Working with other people](syllabus/02-collaboration.md)** | Remotes and syncing, undo and recovery, team workflow and review | 4–6 | 47 | 🔴 **In scope** — phases 4, 5. Phase 6 parked |
+| 3 | **[Git in a real project](syllabus/03-in-a-real-project.md)** | The fullstack repository, hooks and CI, speed and ergonomics | 7–9 | 42 | ⏸ **Parked** — beyond daily use |
+| 4 | **[Depth and repair](syllabus/04-depth-and-repair.md)** | Plumbing and internals, history surgery, the error catalogue | 10–12 | 41 | ⏸ **Parked** — beyond daily use |
 
 ## Progress
 
@@ -94,6 +120,9 @@ import Progress from '@site/src/components/Progress';
 <Progress lang="git" compact />
 
 ## Tier distribution
+
+*Of the original 191-topic inventory. The in-scope 52 are drawn disproportionately
+from the Master and Understand rows, because that is what "daily" selects for.*
 
 | Tier | Topics | Share |
 |---|---|---|
@@ -119,6 +148,17 @@ and badging them Master would make the tier meaningless.
 
 ## Example policy
 
+🔴 **Changed 2026-08-13 by the no-new-sandboxes rule.** **Phase 0 is
+sandbox-proven** — every command block on those 14 pages came from
+`sandbox/git-p0/ex1-version-facts.sh` or `ex2-object-model.sh`. **Phase 1 onward
+is documentation-validated**: claims are checked against `git help <cmd>` on
+2.55.0, git-scm.com, and the message strings shipped in the `git` binary itself,
+with the source named on each page's `> Verified:` line. Those pages carry **no
+console blocks** unless the output is reused from a recorded `ex1`/`ex2` run, and
+each such block says so underneath. Nothing is reconstructed from memory.
+
+The original policy, which still describes the Phase 0 pages:
+
 Every command block on a Git page is a **real run on git 2.55.0**, captured from
 a script in `sandbox/git-*/`. A page shows:
 
@@ -138,6 +178,12 @@ locally rather than inventing a transcript.
 
 ## Open questions — recorded, not silently decided
 
+🔴 **All three are now moot under the 2026-08-14 re-scope.** They concern phases
+5, 6, 7 and 11: `filter-repo` and `git-lfs` are named only by parked phases (the
+one phase-5 topic that would have used them is not in the daily set), and the
+review/merge-queue and team-workflow questions belong to the parked phase 6. They
+are kept here in case the scope is ever widened again.
+
 1. **`git-filter-repo` and `git-lfs` are not installed here.** Phases 5, 7 and
    11 need them for real output. Install both so those rows can be measured, or
    write them from upstream documentation and mark them explicitly unverified?
@@ -154,9 +200,11 @@ locally rather than inventing a transcript.
 
 ## Explanations
 
-The explanations will live in **`pages/`** — one page per topic (or tight
-group), with runnable commands, real output, gotchas and interview questions.
-**Nothing is written yet**; this syllabus is the proposal.
+The explanations live in **[`pages/`](pages/README.md)** — one page per topic, or
+a `NN-topic/` directory of chunks when a topic runs past 300 lines.
+
+**Written so far: Phase 0 complete (14 topics), Phase 1 in progress.** The
+[pages overview](pages/README.md) carries the live phase table.
 
 ## Tier legend
 

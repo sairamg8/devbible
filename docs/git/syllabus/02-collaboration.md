@@ -41,6 +41,26 @@ daily confusion.
 | **Bare and mirror repositories** — what a bare repo is for, `clone --bare` versus `--mirror`, and hosting a repo yourself | <span className="db-tier t-know">Know</span> |
 | `git bundle` — moving commits as a single file across an air gap or into a review that has no network | <span className="db-tier t-know">Know</span> |
 
+
+:::info In scope — 8 of these topics
+
+The 2026-08-14 re-scope keeps the daily-driver subset of this phase. **Eight topics, in this order.**
+
+| # | Topic written |
+|---|---|
+| 1 | A remote is a named URL, nothing more |
+| 2 | `fetch` versus `pull` |
+| 3 | Remote-tracking branches — and pruning the stale ones |
+| 4 | Upstream tracking, and where "ahead 2, behind 3" comes from |
+| 5 | Divergent branches — the `fatal:` that stops a bare `pull` |
+| 6 | Force-pushing safely — `--force-with-lease` |
+| 7 | `git push` in full |
+| 8 | Transports and credentials — SSH versus HTTPS |
+
+**Not written:** refspecs, fork-and-upstream flow, shallow clones, partial clone, signing, bare and mirror repositories, and `git bundle`. Pruning is folded into the remote-tracking-branches topic.
+
+:::
+
 **Gate — move on when:** your branch and `origin/main` have diverged and you can
 state, before typing anything, which of merge, rebase or fast-forward-only you
 want, what the resulting graph looks like, and whether the push after it needs a
@@ -73,6 +93,26 @@ anyone else seen these commits?
 | **`ORIG_HEAD`, `MERGE_HEAD`, `CHERRY_PICK_HEAD`** — the refs Git leaves behind mid-operation, and using them to inspect or abort by hand | <span className="db-tier t-know">Know</span> |
 | Recovering from a bad `rebase --onto` — reading the reflog entries a rebase writes, and returning to the pre-rebase state exactly | <span className="db-tier t-know">Know</span> |
 
+
+:::info In scope — 8 of these topics
+
+The 2026-08-14 re-scope keeps the daily-driver subset of this phase. **Eight topics, in this order.**
+
+| # | Topic written |
+|---|---|
+| 1 | The undo decision table |
+| 2 | `reset` in terms of the three trees |
+| 3 | `revert` is the undo for shared history |
+| 4 | Recovery with `reflog` — and how long recovery stays possible |
+| 5 | Rewriting your own last few commits |
+| 6 | Recovering a deleted branch |
+| 7 | Undoing a merge |
+| 8 | Undoing something already pushed |
+
+**Not written:** dangling objects and `git fsck`, the rewrite tools (`filter-repo`, BFG), removing a secret from history, squashing a branch before merge, `ORIG_HEAD` / `MERGE_HEAD` / `CHERRY_PICK_HEAD`, and recovering from a bad `rebase --onto`. Stash recovery moves to the phase-1 stash topic; `gc` and reflog expiry are folded into the reflog-recovery topic.
+
+:::
+
 **Gate — move on when:** you can hard-reset away three commits on purpose, then
 restore them from the reflog, and explain how long that would have stayed
 possible.
@@ -80,6 +120,13 @@ possible.
 ---
 
 ## Phase 6 — Team workflow and code review
+:::warning Phase parked — 2026-08-14 re-scope
+
+**Phase 6 is out of scope.** Branching strategy, review process, protection rules and merge queues are team-policy decisions rather than commands you type. The rows below are the original plan, kept for
+the record; no pages are being written for them.
+
+:::
+
 
 *15 topics.* The conventions. None of this is enforced by Git itself, which is
 exactly why it has to be decided rather than absorbed — and why two teams using

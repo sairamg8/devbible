@@ -8,6 +8,17 @@ sidebar_position: 3
 > What actually goes in a MERN/PERN repository, the automation hanging off it,
 > and keeping the whole thing fast.
 
+
+:::warning Parked — 2026-08-14 re-scope
+
+This whole part is **out of scope**. Git was cut to daily-driver use on the
+user's instruction (*"I just need to know about the git to work daily tasks not
+more than that"*), leaving phases 0, 1, 2, 4 and 5 — 52 topics. The rows below
+are kept as a record of the original plan; **no pages are being written for
+them**. See the [syllabus overview](../README.md) for what is in scope.
+
+:::
+
 This is the part that is specific to *this* bible. Everything so far applies to
 any repository; these phases assume the repo contains `node_modules`, a lockfile,
 a `.env` that must never be committed, database migrations that collide by

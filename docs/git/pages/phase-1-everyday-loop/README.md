@@ -5,11 +5,12 @@ sidebar_position: 0
 ---
 
 > **Target: git 2.55.0.** This phase is **documentation-validated**, not
-> sandbox-proven: every claim is checked against `git help <cmd>` on 2.55.0 and
-> git-scm.com, and each page names its sources on its `> Verified:` line. Console
-> blocks appear **only** where the output was actually recorded by
-> `sandbox/git-p0/ex1-version-facts.sh` or `ex2-object-model.sh`, and each one
-> says so underneath. Nothing here is a reconstructed terminal capture.
+> sandbox-proven: every claim is checked against `git help <cmd>` on 2.55.0,
+> git-scm.com, and the message strings shipped in the `git` binary, and each page
+> names its sources on its `> Verified:` line. Console blocks appear **only**
+> where the output was actually recorded by `sandbox/git-p0/ex1-version-facts.sh`
+> or `ex2-object-model.sh`, and each one says so underneath. Nothing here is a
+> reconstructed terminal capture.
 
 The commands you run every hour. The goal is not "knows what `git add` does" — it
 is **never being unsure what state a file is in, and never committing something
@@ -17,35 +18,49 @@ you did not mean to.** Phase 0 established that Git is three trees and an object
 store; this phase is the set of moves between them, and the reason each one is
 the right tool for a particular sentence you can say out loud.
 
+**12 topics**, after the 2026-08-14 re-scope to daily-driver Git.
+
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[`git status` is the instrument panel](01-git-status/README.md)** | <span className="db-tier t-master">Master</span> | Three sections, two columns — each one a comparison between two trees |
-| 02 | `git add` in full | <span className="db-tier t-master">Master</span> | Paths, `-A`, `-u`, and the `-p` habit that improves every commit |
+| 02 | **[`git add` in full](02-git-add/README.md)** | <span className="db-tier t-master">Master</span> | Staging is a content copy; pathspecs; and the `-p` habit |
 | 03 | `git commit` | <span className="db-tier t-master">Master</span> | The index is committed, never the working tree; `--amend` makes a new hash |
 | 04 | `git diff` and its three questions | <span className="db-tier t-master">Master</span> | Bare, `--staged`, `HEAD` — picking wrong is why "my change disappeared" |
 | 05 | `.gitignore` | <span className="db-tier t-master">Master</span> | Pattern syntax, negation's one hard limit, and `check-ignore -v` |
 | 06 | Ignoring does not untrack | <span className="db-tier t-understand">Understand</span> | Why a committed `.env` keeps being committed |
 | 07 | `git switch` and `git restore` | <span className="db-tier t-master">Master</span> | The two halves the old `checkout` was split into |
-| 08 | Undo before you push, decided properly | <span className="db-tier t-master">Master</span> | `restore` vs `reset --soft/--mixed/--hard`, as an effect table |
+| 08 | Undo before you push | <span className="db-tier t-master">Master</span> | `restore` vs `reset --soft/--mixed/--hard`, as an effect table |
 | 09 | `git log` for the everyday case | <span className="db-tier t-understand">Understand</span> | `--oneline --graph --decorate`, and reading before changing |
-| 10 | Commit message craft | <span className="db-tier t-understand">Understand</span> | Imperative subject, 50/72, and a body that answers *why* |
-| 11 | What belongs in one commit | <span className="db-tier t-understand">Understand</span> | The atomic test — builds, passes, does one thing, reverts alone |
-| 12 | `git stash` | <span className="db-tier t-understand">Understand</span> | Apply versus pop, `-u`, and naming them so they stay identifiable |
-| 13 | The file state machine | <span className="db-tier t-understand">Understand</span> | Untracked → tracked → staged → committed → ignored |
-| 14 | `git rm`, `git mv` and rename detection | <span className="db-tier t-understand">Understand</span> | Git records no renames; it detects them by similarity |
-| 15 | `git clean` | <span className="db-tier t-understand">Understand</span> | `-n` first, always — and the `-x` that deletes your `.env` |
-| 16 | Finding the documentation | <span className="db-tier t-know">Know</span> | `git help` versus `-h`, and the concept man pages |
+| 10 | Commit messages, and what belongs in one commit | <span className="db-tier t-understand">Understand</span> | Imperative subject, a body that answers *why*, and the atomic test |
+| 11 | `git stash` | <span className="db-tier t-understand">Understand</span> | Apply versus pop, `-u`, and `--keep-index` for testing what you staged |
+| 12 | Removing and moving files | <span className="db-tier t-understand">Understand</span> | `rm`, `mv`, `clean -n` first, and why Git records no renames |
 
 ## Coverage
 
-**1 of 16 topics written, as 5 files.** Topics 02–16 are not started. Rows above
-without a link have no page yet — they are the syllabus inventory, kept here so
-the gap is visible rather than implied.
+**2 of 12 topics written, as 9 files.** Rows without a link have no page yet.
 
 | Topic | Files | Lines | Status |
 |---|---|---|---|
-| 01 · `git status` | `README.md` + 4 chunks | 278 · 250 · 244 · 268 | ✅ Complete |
-| 02–16 | — | — | Not started |
+| 01 · `git status` | `README.md` + 4 chunks | 66 · 278 · 250 · 244 · 268 = **1,106** | ✅ Complete |
+| 02 · `git add` | `README.md` + 3 chunks | 51 · 243 · 235 · 258 = **787** | ✅ Complete |
+| 03–12 | — | — | Not started |
+
+## What changed on 2026-08-14
+
+This phase was 16 topics. Two were dropped and two merged:
+
+- **The file state machine** — its content is inside topic 01, which reads the
+  same states off `git status` rather than as an abstract diagram.
+- **Finding the documentation** — a Know-tier row about `git help`.
+- **What belongs in one commit** is folded into topic 10, next to the message it
+  produces.
+- **`git rm` / `git mv`** and **`git clean`** are one topic, 12 — they are the
+  three ways to make a file stop being there, and the differences between them
+  are the point.
+
+Topics 01 and 02 were written before the re-scope and carry **Interview
+questions** sections. Topics 03 onward are written to the practical format the
+user asked for: thesis, mechanism, gotchas, no interview block.
 
 ## Gate — move on when
 
@@ -62,8 +77,6 @@ explains why, and describe exactly what is still sitting in your working tree �
   same model; the conflict codes in `git status` are already a preview of it.
 - **Forward to Phase 5** — `reset` and `restore` appear here as "undo before you
   push" and there as the full recovery toolkit, including `reflog`.
-- **Forward to Phase 7** — `.gitignore` is syntax here and a repository-design
-  decision there, once a monorepo has several ecosystems' worth of build output.
 
 ---
 

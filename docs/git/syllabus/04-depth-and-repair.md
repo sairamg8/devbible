@@ -8,6 +8,17 @@ sidebar_position: 4
 > The plumbing under the porcelain, rewriting history at repository scale, and a
 > catalogue of the errors Git actually prints.
 
+
+:::warning Parked — 2026-08-14 re-scope
+
+This whole part is **out of scope**. Git was cut to daily-driver use on the
+user's instruction (*"I just need to know about the git to work daily tasks not
+more than that"*), leaving phases 0, 1, 2, 4 and 5 — 52 topics. The rows below
+are kept as a record of the original plan; **no pages are being written for
+them**. See the [syllabus overview](../README.md) for what is in scope.
+
+:::
+
 Two of these phases are reference material you reach for a few times a year.
 Phase 12 is not: it is the everyday one, deliberately placed last because an
 error message is only diagnosable once you know the model behind it. Read it as

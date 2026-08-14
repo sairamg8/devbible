@@ -70,6 +70,30 @@ committing something you did not mean to.
 | **`git clean`** — `-n` first, always; `-fd` and the `-x` that also removes ignored files (which is how people delete their own `.env`) | <span className="db-tier t-understand">Understand</span> |
 | Finding the documentation — `git help <cmd>` versus `-h`, and the concept man pages (`gitglossary`, `gitrevisions`, `githooks`) that answer questions the command pages do not | <span className="db-tier t-know">Know</span> |
 
+
+:::info In scope — 12 of these topics
+
+The 2026-08-14 re-scope keeps the daily-driver subset of this phase. **Twelve topics, in this order.**
+
+| # | Topic written |
+|---|---|
+| 1 | `git status` is the instrument panel |
+| 2 | `git add` in full — paths, `-A`, `-u`, `-p` |
+| 3 | `git commit` — the index is what gets committed |
+| 4 | `git diff` and the three questions it answers |
+| 5 | `.gitignore` — patterns, precedence, `check-ignore -v` |
+| 6 | Ignoring does not untrack |
+| 7 | `git switch` and `git restore` |
+| 8 | Undo before you push — `restore` and `reset` as an effect table |
+| 9 | `git log` for the everyday case |
+| 10 | Commit messages, and what belongs in one commit |
+| 11 | `git stash` |
+| 12 | Removing and moving files — `rm`, `mv`, `clean`, and rename detection |
+
+**Not written:** *The file state machine* (its content is inside the `git status` topic) and *Finding the documentation*. *What belongs in one commit* is folded into the commit-message topic; *`git rm` / `git mv`* and *`git clean`* are merged into one topic.
+
+:::
+
 **Gate — move on when:** you can stage half the changes in one file, commit
 them with a message that explains why, and describe exactly what is still
 sitting in your working tree — without running `status` to check.
@@ -103,6 +127,28 @@ is the whole thing.
 | **Stacked branches and `rebase.updateRefs`** — rebasing a chain of dependent branches without leaving the lower ones pointing at abandoned commits | <span className="db-tier t-know">Know</span> |
 | `git replay` — marked **EXPERIMENTAL** on this build; rebasing without a working tree, aimed at server-side and automation use | <span className="db-tier t-when">When Needed</span> |
 
+
+:::info In scope — 10 of these topics
+
+The 2026-08-14 re-scope keeps the daily-driver subset of this phase. **Ten topics, in this order.**
+
+| # | Topic written |
+|---|---|
+| 1 | A branch is a moving pointer |
+| 2 | Fast-forward versus a real merge |
+| 3 | The three-way merge and the merge base |
+| 4 | Resolving a conflict, properly |
+| 5 | `git rebase` — replaying commits, and why every hash changes |
+| 6 | Rebase versus merge, decided on purpose |
+| 7 | Interactive rebase — `pick`, `reword`, `squash`, `fixup`, `drop` |
+| 8 | The rule about rewriting shared history |
+| 9 | `git reflog` as the safety net |
+| 10 | Aborting cleanly — `--abort`, `--continue`, `--skip` |
+
+**Not written:** cherry-pick, merge strategies and `-X` options, detached HEAD (covered in phase 0 and in `git status`), long-lived branch maintenance, `rerere`, stacked branches with `rebase.updateRefs`, and the experimental `git replay`.
+
+:::
+
 **Gate — move on when:** you can take a six-commit branch with two "wip"
 commits and a typo fix, turn it into three coherent commits rebased onto current
 main, resolve the conflicts that causes, and explain why every hash changed.
@@ -110,6 +156,13 @@ main, resolve the conflicts that causes, and explain why every hash changed.
 ---
 
 ## Phase 3 — Reading history
+:::warning Phase parked — 2026-08-14 re-scope
+
+**Phase 3 is out of scope.** Reading history in depth — `bisect`, `blame`, pickaxe searching, `log` formatting — sits past what daily work needs; the everyday `git log` incantations are in phase 1 instead. The rows below are the original plan, kept for
+the record; no pages are being written for them.
+
+:::
+
 
 *14 topics.* History is only worth keeping if you can interrogate it. This phase
 is what turns "who broke this and when" from an afternoon into two commands.

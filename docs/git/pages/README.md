@@ -29,23 +29,25 @@ One page per topic from the [syllabus](../README.md), with runnable commands,
 real output, gotchas written symptom → cause → fix, and interview questions with
 answers.
 
-## Phases
+## Phases — 52 topics, daily-driver scope
 
-| Phase | Topics | Pages | Status |
+🔴 **Re-scoped 2026-08-14** to the Git you use to get work done, on the user's
+instruction (*"I just need to know about the git to work daily tasks not more
+than that"*). Five phases, down from thirteen. What was cut and why is in the
+[syllabus overview](../README.md).
+
+| Phase | Topics | Written | Status |
 |---|---|---|---|
 | **[00 · How Git stores things](./phase-0-how-git-stores-things/README.md)** | 14 | 14 | ✅ **Complete** |
-| **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 16 | 1 | 🚧 **Writing** — topic 01 done |
-| 02 · Branching, merging and rebasing | 17 | 0 | Not started |
-| 03 · Reading history | 14 | 0 | Not started |
-| 04 · Remotes and syncing | 16 | 0 | Not started |
-| 05 · Undo, recover and rewrite | 16 | 0 | Not started |
-| 06 · Team workflow and code review | 15 | 0 | Not started |
-| 07 · The repository in a fullstack project | 15 | 0 | Not started |
-| 08 · Hooks, CI and automation | 14 | 0 | Not started |
-| 09 · Speed, scale and daily ergonomics | 13 | 0 | Not started |
-| 10 · Plumbing and internals | 14 | 0 | Not started |
-| 11 · History surgery and migration | 13 | 0 | Not started |
-| 12 · When Git goes wrong | 14 | 0 | Not started |
+| **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 12 | 2 | 🚧 **Writing** — `status` and `add` done |
+| 02 · Branching, merging and rebasing | 10 | 0 | Not started |
+| 04 · Remotes and syncing | 8 | 0 | Not started |
+| 05 · Undo, recover and rewrite | 8 | 0 | Not started |
+
+**Parked, not being written:** 03 · reading history in depth · 06 · team workflow
+and code review · 07 · the fullstack repository · 08 · hooks and CI · 09 · speed
+and scale · 10 · plumbing · 11 · history surgery · 12 · the error catalogue.
+Their syllabus rows are still there, marked, as a record of the original plan.
 
 ## Progress
 
@@ -65,10 +67,10 @@ console block can be diffed against a fresh run.
 
 ## Two things that are absent on this machine
 
-**`git-filter-repo` and `git-lfs` are not installed.** Phases 5, 7 and 11 name
-them. Those pages will either be measured after installing the tools, or state
-explicitly that their output came from upstream documentation rather than a run
-here — the never-invent-output rule does not bend for a missing dependency.
+**`git-filter-repo` and `git-lfs` are not installed.** They were named by phases
+5, 7 and 11 — and after the 2026-08-14 re-scope, **no page in scope needs
+either**: the history-surgery topics that used them are parked. Recorded here so
+nobody re-discovers it.
 
 ---
 
