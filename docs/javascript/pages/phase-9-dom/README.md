@@ -8,12 +8,12 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — 🚧 **Know tier under way — 16 of 19** (2026-08-14)
+## Status — 🚧 **Know tier under way — 17 of 19** (2026-08-14)
 
 **Master tier ✅ COMPLETE** — all six Master topics (01–06), written in syllabus order.
 **Understand tier ✅ COMPLETE** — 07–15, all nine, every one chunked.
 
-🚧 **Know tier: 16 ✅ written, 17–18 left**, then When Needed (19). Lane B of the two-way
+🚧 **Know tier: 16–17 ✅ written, 18 left**, then When Needed (19). Lane B of the two-way
 JavaScript split owns this phase.
 
 ## Topics
@@ -36,7 +36,8 @@ JavaScript split owns this phase.
 | 14 | **[Scrolling](./14-scrolling/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | **[Focus and accessibility from JavaScript](./15-focus-and-accessibility/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 16 | **[`<dialog>`, the popover API and `inert`](./16-dialog-popover-inert/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 17–18 | `MutationObserver`, shadow DOM and custom elements | <span className="db-tier t-know">Know</span> | 🚧 next |
+| 17 | **[`MutationObserver`](./17-mutationobserver/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 18 | Shadow DOM and custom elements | <span className="db-tier t-know">Know</span> | 🚧 next |
 | 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | deferred |
 
 ## How these pages are verified

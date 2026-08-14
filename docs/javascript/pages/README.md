@@ -28,7 +28,7 @@ import Progress from '@site/src/components/Progress';
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
-| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · **Understand ✅** (07–15) · Know under way (**16** ✅, 17–18 left) |
+| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · **Understand ✅** (07–15) · Know under way (**16–17** ✅, 18 left) |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | 🟡 **Master tier ✅** (01–04 — all four); 05–14 deferred |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–05 — all five); 06–21 deferred |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–02 — both); 03–21 deferred |
@@ -97,9 +97,9 @@ are free). If you must, say so here first and take a *different phase*.
 |---|---|
 | **Claimed by** | session `75e511e6` (Opus 5), from 2026-08-14 — took over from `b4ffc223`, the first holder |
 | **Claim** | **phases 9, 10, 11, 12, 17 and 18 only** — DOM, events, network/storage, browser platform, machine coding, and the three kept storefront topics. 🔴 **TIER-LOCKED to Understand and Know**; Master is closed at 99/99 and is not reopened for depth. The 2026-08-14 scope cut applies: phase 18 keeps **only topics 11, 12 and 15**; phases 13, 14, 15 are parked and 16 is dropped — none of them are in either lane |
-| **Last touched** | **Phase 9 topic 16 · `<dialog>`, the popover API and `inert`** — 2026-08-14, 4 files, 615 lines. First Know-tier topic of the lane |
-| **Next** | **Phase 9 topic 17 · `MutationObserver`** (Know), then 18 (Know), 19 (When Needed); then phase 10 from topic 05 |
-| **Remaining** | **65 topics** — 9 (3), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
+| **Last touched** | **Phase 9 topic 17 · `MutationObserver`** — 2026-08-14, 3 files, 442 lines |
+| **Next** | **Phase 9 topic 18 · Shadow DOM and custom elements** (Know), then 19 (When Needed) closes the phase; then phase 10 from topic 05 |
+| **Remaining** | **64 topics** — 9 (2), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
 | **Worktree** | 🔴 Since 2026-08-14 lane B writes in the worktree `/run/media/sairam/Storage/Backup/Knowledge/devbible-js-lane-b`, branch **`js-lane-b`**, on the user's instruction. **It is not merged into `main` yet** — the work is there, not lost, and the merge is outstanding |
 | **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
 | **⚠️ Build blocked** | 🔴 Since 2026-08-14 a **full `yarn build` cannot complete** in this worktree: `docs/react/pages/phase-11-ssr-hydration/09-partial-prerendering/` (README + `03-the-caveats.md`) fails MDX compilation — *"Unexpected closing slash `/` in tag"* — from React commit `f8899f5e`, inherited at the branch point. **It is React's file and lane B does not touch it.** Until it is fixed, lane B verifies with a relative-link pass over `docs/javascript/pages` (2,184 links, **0 broken**) plus the 300-line cap check, and says so rather than claiming a green build |
