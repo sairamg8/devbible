@@ -22,7 +22,7 @@ import Progress from '@site/src/components/Progress';
 | **[0 · How JavaScript runs](./phase-0-how-javascript-runs/README.md)** | Language core | 12 | ✅ written |
 | **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
-| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master ✅** (01–08) · Understand under way (09–11) |
+| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master ✅** (01–08) · Understand under way (09–13) |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
@@ -45,11 +45,11 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `016cfc46` (Opus 5), from 2026-08-14 — took over from `c5329658`, which took over from `01ECVvH5` |
 | **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** The Master tier is **closed at 99/99 across every phase 0–18** and is not to be reopened for depth; the work is the Understand and Know tiers, phase by phase from Phase 3 |
-| **Last touched** | **Phase 3 topic 12 · Composition (`pipe` and `compose`)** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
+| **Last touched** | **Phase 3 topic 13 · Memoization** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 3 topic 13 · Memoization**, then 14–20, then phase 4. Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **204 topics** — Understand **146**, Know **55**, When Needed **3**. Thinnest phases: 12 (2/21), 16 (3/16), 13 (3/10), 6 (3/13) |
-| **Totals** | **133 of 337 topics** · **232 pages** (non-`README.md` `.md` files; 337 counting every README), 313 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
+| **Next** | **Phase 3 topic 14 · Recursion**, then 15–20, then phase 4. Inside each phase: **Understand → Know → When Needed** |
+| **Remaining** | **203 topics** — Understand **145**, Know **55**, When Needed **3**. Thinnest phases: 12 (2/21), 16 (3/16), 13 (3/10), 6 (3/13) |
+| **Totals** | **134 of 337 topics** · **233 pages** (non-`README.md` `.md` files; 338 counting every README), 314 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
@@ -93,12 +93,17 @@ find docs/javascript -name '*.md' -exec wc -l {} + | awk '$1>300 && $2!="total"'
 directory slug. **Chunking a topic is not done until you grep for inbound links to
 its old flat path.**
 
-## Working order — Master-first
+## Working order — 🔴 Master-first is FINISHED; the tiers are the work
 
-Phases are written **Master tier first, across all phases**, rather than one phase
-to completion. Understand and Know tiers are filled in on demand afterwards. So a
-phase marked *Master tier ✅* is finished for now and the next unit of work is the
-**next phase's Master topics**, not that phase's topic 09.
+**The Master tier is complete: all 99 Master topics across every phase 0–18.** That
+strategy is done, and as of 2026-08-14 the claim is **tier-locked to Understand and
+Know**. A Master topic is **not** to be reopened to deepen it — what is left is
+breadth, not depth.
+
+**Order from here: phase by phase, and inside a phase Understand → Know → When
+Needed.** Not Understand-across-all-phases-first — phase 3 is already mid-flight
+that way, so any other order strands it. So a phase marked *Master tier ✅* is the
+**next** place to work, starting at its lowest unwritten Understand topic.
 
 ## How these pages are verified
 

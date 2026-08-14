@@ -30,7 +30,7 @@ interviews actually probe.
 | 10 | **[Debounce and throttle](./10-debounce-and-throttle.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Currying and partial application](./11-currying-and-partial-application.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[Composition (`pipe` and `compose`)](./12-composition.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13 | Memoization | <span className="db-tier t-understand">Understand</span> | deferred |
+| 13 | **[Memoization](./13-memoization.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | Recursion | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15 | Pure functions and side effects | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16 | There is no function overloading | <span className="db-tier t-understand">Understand</span> | deferred |
@@ -41,14 +41,14 @@ interviews actually probe.
 
 ## Status — **Master tier complete · Understand tier under way** (2026-08-14)
 
-🚧 **12 of 20 written.** All eight Master topics (01–08) are done, and the Master
+🚧 **13 of 20 written.** All eight Master topics (01–08) are done, and the Master
 tier of **every** phase 0–18 is now closed — so the standing Master-first plan is
 finished and the work has moved to the **Understand and Know tiers**, phase by
-phase. Topics 09–12 are the Understand tier so far.
+phase. Topics 09–13 are the Understand tier so far.
 
-**Next here: 13 · Memoization**, then 14–17 (Understand) and 18–20 (Know).
+**Next here: 14 · Recursion**, then 15–17 (Understand) and 18–20 (Know).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **4 / 9** · Know **0 / 3**.
+**Coverage:** Master **8 / 8** ✅ · Understand **5 / 9** · Know **0 / 3**.
 
 ## Phase gate
 
