@@ -35,7 +35,7 @@ import Progress from '@site/src/components/Progress';
 | **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
 | **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
-| 16 · Dynamic programming and the harder set | DSA | 16 | planned |
+| **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
 | 17 · Machine coding: implement it yourself | DSA | 18 | planned |
 | 18 · Building the store front end | Applied | 18 | planned |
 
@@ -44,11 +44,11 @@ import Progress from '@site/src/components/Progress';
 | | |
 |---|---|
 | **Claimed by** | session `c5329658` (Opus 5), from 2026-08-14 — took over from `01ECVvH5` |
-| **Claim** | **all of `docs/javascript/`** — currently **Phase 16 · Dynamic programming**, Master tier |
-| **Last touched** | **Phase 15 topic 06 · BFS** (2 chunks) — 2026-08-14. **Phases 11–15 Master tiers complete** |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06) |
-| **Next** | **Phase 16 · Dynamic programming and the harder set** (16 topics, 3 Master) |
-| **Totals** | **212 pages**, 270 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Claim** | **all of `docs/javascript/`** — currently **Phase 17 · Machine coding**, Master tier |
+| **Last touched** | **Phase 16 topic 03 · A problem-solving method** (2 chunks) — 2026-08-14. **Phases 11–16 Master tiers complete** |
+| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03) |
+| **Next** | **Phase 17 · Machine coding: implement it yourself** (18 topics, 4 Master) |
+| **Totals** | **221 pages**, 279 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
