@@ -158,9 +158,11 @@ GitHub. The migration guide deliberately links to it rather than reproducing it.
 
 Worth knowing so you do not mistake a new API for a mistake:
 
-- **CSF factories** — `defineMeta`, a typed alternative to the plain-object story
-  shape. React first; extended to Vue, Angular and Web Components in **10.3**.
-  Covered in Phase 1.
+- **CSF factories** — a type-safe alternative to the plain-object story shape,
+  built from `definePreview` in `preview.ts`, then `preview.meta()` and
+  `meta.story()` in the story file. React first; extended to Vue, Angular and Web
+  Components in **10.3**. Still labelled **experimental**, and CSF 1/2/3 remain
+  supported and undeprecated. Covered in Phase 1.
 - **Storybook MCP for React** (10.3) — Model Context Protocol support for
   AI-assisted workflows. Too new to build guidance on; named here so you recognise
   it.

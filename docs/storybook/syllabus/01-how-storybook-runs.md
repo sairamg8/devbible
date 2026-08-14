@@ -42,7 +42,7 @@ CSF is the whole API surface. Six topics.
 | **Component Story Format (CSF)** — the default export is *metadata about a component*, every named export is *one state of it*; why this is a module and not a config file | <span className="db-tier t-master">Master</span> |
 | **File structure and colocation** — `Button.stories.tsx` beside `Button.tsx`, what the `stories` glob in `main.ts` actually matches, and why a story file outside the glob silently does not exist | <span className="db-tier t-master">Master</span> |
 | Typing stories — `Meta<typeof Component>` and `StoryObj<typeof meta>`, and what `satisfies` buys you over a plain annotation | <span className="db-tier t-understand">Understand</span> |
-| **CSF factories** — `defineMeta`, the typed alternative introduced in the 9.x/10.x line and extended to Vue, Angular and Web Components in 10.3; when it is worth adopting mid-project | <span className="db-tier t-understand">Understand</span> |
+| **CSF factories** — `definePreview` → `preview.meta()` → `meta.story()`, the type-safe alternative to the plain-object form; extended to Vue, Angular and Web Components in 10.3. **Still marked experimental** — CSF 1/2/3 remain supported and undeprecated | <span className="db-tier t-understand">Understand</span> |
 | Naming, `title` and the sidebar hierarchy — slash-separated paths, `tags`, and `storySort` for an order that is not alphabetical | <span className="db-tier t-understand">Understand</span> |
 | Reusing stories — composing one story's args into another, and importing a story into a test | <span className="db-tier t-know">Know</span> |
 

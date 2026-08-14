@@ -106,9 +106,10 @@ The abstraction is good, not perfect. Three places it shows through:
   builder-specific bundling, may support some combinations and not others.
   `@storybook/addon-a11y` is renderer-agnostic; anything advertising itself as
   "for React" is not.
-- **CSF factories.** `defineMeta` landed for React first and was extended to Vue,
-  Angular and Web Components in **10.3** (April 2026). Feature parity across
-  renderers arrives at different times.
+- **CSF factories.** The `definePreview` / `preview.meta()` / `meta.story()` API
+  landed for React first and was extended to Vue, Angular and Web Components in
+  **10.3** (April 2026). Feature parity across renderers arrives at different
+  times.
 
 ## Gotchas
 
