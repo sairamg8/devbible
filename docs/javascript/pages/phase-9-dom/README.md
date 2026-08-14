@@ -8,14 +8,13 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — 🚧 **Understand tier under way — 14 of 19** (2026-08-14)
+## Status — ✅ **Understand tier COMPLETE — 15 of 19** (2026-08-14)
 
 **Master tier ✅ COMPLETE** — all six Master topics (01–06), written in syllabus order.
+**Understand tier ✅ COMPLETE** — 07–15, all nine, every one chunked.
 
-🚧 **Now the Understand tier (07–15), then Know (16–18), then When Needed (19).**
-**07–14 are written** — Traversal, Classes and styles, Forms, Removing and replacing, Batching,
-Layout thrashing, Measuring, Scrolling; **15 · Focus and accessibility** closes the tier. Lane B of
-the two-way JavaScript split owns this phase.
+🚧 **Next: the Know tier (16–18), then When Needed (19).** Lane B of the two-way JavaScript split
+owns this phase.
 
 ## Topics
 
@@ -35,8 +34,8 @@ the two-way JavaScript split owns this phase.
 | 12 | **[Layout thrashing](./12-layout-thrashing/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | **[Measuring elements](./13-measuring-elements/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | **[Scrolling](./14-scrolling/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 15 | Focus and accessibility from JavaScript | <span className="db-tier t-understand">Understand</span> | 🚧 next |
-| 16–18 | `<dialog>`/popover/`inert`, `MutationObserver`, shadow DOM | <span className="db-tier t-know">Know</span> | deferred |
+| 15 | **[Focus and accessibility from JavaScript](./15-focus-and-accessibility/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 16–18 | `<dialog>`/popover/`inert`, `MutationObserver`, shadow DOM | <span className="db-tier t-know">Know</span> | 🚧 next |
 | 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | deferred |
 
 ## How these pages are verified
