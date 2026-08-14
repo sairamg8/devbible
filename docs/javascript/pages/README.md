@@ -37,18 +37,18 @@ import Progress from '@site/src/components/Progress';
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
 | **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | 🟡 **Master tier ✅** (01–04 — all four); rest deferred |
-| 18 · Building the store front end | Applied | 18 | planned |
+| **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🟡 **Master tier ✅** (01–07 — all seven); rest deferred |
 
 ## 🔒 Active work claim — read before editing anything under `docs/javascript/`
 
 | | |
 |---|---|
 | **Claimed by** | session `c5329658` (Opus 5), from 2026-08-14 — took over from `01ECVvH5` |
-| **Claim** | **all of `docs/javascript/`** — currently **Phase 18 · Building the store front end**, Master tier |
-| **Last touched** | **Phase 17 topic 04 · Promise combinators** (2 chunks) — 2026-08-14. **Phases 11–17 Master tiers complete** |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04) |
-| **Next** | **Phase 18 · Building the store front end** (18 topics, 7 Master) — the last phase |
-| **Totals** | **233 pages**, 291 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Claim** | **all of `docs/javascript/`** — 🔴 **the Master tier of every phase is now complete**; next is the Understand/Know tier, from Phase 3 onward |
+| **Last touched** | **Phase 18 topic 07 · Idempotency from the client** — 2026-08-14. 🔴 **ALL Master tiers complete, phases 0–18** |
+| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
+| **Next** | **The Understand tier**, starting at **Phase 3 topic 09** and working forward in phase order |
+| **Totals** | **250 pages**, 308 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
