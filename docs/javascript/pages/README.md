@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
-| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **in progress** — Master tier **05 of 11 done** (01–05; 06–11 to go). The syllabus's centre of gravity |
+| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **in progress** — Master tier **06 of 11 done** (01–06; 07–11 to go). The syllabus's centre of gravity |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
 | 9 · The DOM | Web APIs | 19 | planned |
 | 10 · Events and user input | Web APIs | 14 | planned |
@@ -45,10 +45,10 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — currently **Phase 7 · Asynchronous JavaScript**, Master tier |
-| **Last touched** | **Phase 7 topic 05 · Promises** (3 chunks, 801 lines) — 2026-08-14 |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–05** |
-| **Next** | **Phase 7 topic 06 · Chaining**, then 07–11 (`async`/`await`, async error handling, sequential vs parallel `await`, the `Promise` combinators, anti-patterns) |
-| **Totals** | **117 pages**, 149 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Last touched** | **Phase 7 topic 06 · Chaining** (3 chunks, 767 lines) — 2026-08-14 |
+| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–06** |
+| **Next** | **Phase 7 topic 07 · `async`/`await`**, then 08–11 (async error handling, sequential vs parallel `await`, the `Promise` combinators, anti-patterns) |
+| **Totals** | **120 pages**, 153 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
@@ -62,7 +62,7 @@ are free). If you must, say so here first and take a *different phase*.
 - When a build reports broken links, **check whose page they are on** before assuming
   you caused them.
 - Clean-rebuild and grep rather than trusting `[SUCCESS]`:
-  `rm -rf .docusaurus build && yarn build 2>&1 | grep -iE 'warning|broken'`
+  `rm -rf .docusaurus build node_modules/.cache && yarn build 2>&1 | grep -iE 'warning|broken'`
 
 ## 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget
 
