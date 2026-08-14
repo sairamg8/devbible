@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 10 of 18 topics written.**
+🚧 **In progress — 11 of 18 topics written.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -27,7 +27,7 @@ advice and became a correctness requirement.
 | 08 | **[`useDeferredValue`](08-usedeferredvalue.md)** | <span className="db-tier t-understand">Understand</span> | A value that lags, versus an update you control |
 | 09 | **[Async transitions (React 19)](09-async-transitions.md)** | <span className="db-tier t-understand">Understand</span> | Pending state spanning an `await`, and the rules after it |
 | 10 | **[Suspense boundary placement](10-boundary-placement.md)** | <span className="db-tier t-understand">Understand</span> | Granularity, layout shift, and getting the shell out first |
-| 11 | Suspense inside a transition | <span className="db-tier t-understand">Understand</span> | The fallback is deliberately *not* shown — the phase's biggest surprise |
+| 11 | **[Suspense inside a transition](11-suspense-inside-a-transition.md)** | <span className="db-tier t-understand">Understand</span> | The fallback is deliberately *not* shown — the phase's biggest surprise |
 | 12 | `use(context)` | <span className="db-tier t-understand">Understand</span> | Reading context conditionally, the one legal exception |
 | 13 | `cache` and `cacheSignal` | <span className="db-tier t-understand">Understand</span> | Deduplicating across one server render, and aborting a discarded one |
 | 14 | `<Activity>` (19.2) | <span className="db-tier t-understand">Understand</span> | Hiding a subtree while keeping its state |
@@ -69,7 +69,7 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 10 written so far → 14 files. Both are chunked into two parts each — topic
+**18 topics.** 11 written so far → 15 files. Both are chunked into two parts each — topic
 01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
 (511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
