@@ -25,7 +25,7 @@ Five topics.
 | Topic | Tier |
 |---|---|
 | **The `play` function** — a story that drives itself after render; the same file is now the demo *and* the test, so the two cannot drift apart | <span className="db-tier t-master">Master</span> |
-| **`storybook/test`** — the instrumented Testing Library + Vitest bundle (**moved from `@storybook/test` in 9.0**); `within`, `expect`, `fn`, `userEvent` | <span className="db-tier t-master">Master</span> |
+| **`storybook/test`** — the instrumented Testing Library + Vitest bundle (**moved from `@storybook/test` in 9.0**); `expect` and `fn` are *imported*, while `canvas`, `userEvent`, `args`, `step` and `mount` arrive as the **play context** | <span className="db-tier t-master">Master</span> |
 | `userEvent` over `fireEvent`, and awaiting **every** interaction — the missing `await` that makes a play function flaky rather than failing | <span className="db-tier t-understand">Understand</span> |
 | Assertions and spies — `expect(...).toHaveBeenCalledWith(...)` against an `fn()` arg, and `waitFor` / `findBy*` for anything async | <span className="db-tier t-understand">Understand</span> |
 | **Debugging in the Interactions panel** — stepping through, the rewind control, and reading a failure that the CI log only showed you as a stack trace | <span className="db-tier t-understand">Understand</span> |
