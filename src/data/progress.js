@@ -219,7 +219,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/docker/pages',
     phases: [
       {n: 0, slug: 'phase-0-what-a-container-is', name: 'What a container actually is', part: 'How containers work', topics: 14, pages: 14},
-      {n: 1, slug: 'phase-1-running-containers', name: 'Running containers', part: 'How containers work', topics: 16, pages: 0},
+      {n: 1, slug: 'phase-1-running-containers', name: 'Running containers', part: 'How containers work', topics: 16, pages: 16},
       {n: 2, slug: 'phase-2-images-and-registries', name: 'Images, layers and registries', part: 'How containers work', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-dockerfile', name: 'The Dockerfile', part: 'Building images', topics: 18, pages: 0},
       {n: 4, slug: 'phase-4-build-strategy', name: 'Build strategy: cache, multi-stage, BuildKit', part: 'Building images', topics: 16, pages: 0},
