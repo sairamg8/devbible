@@ -242,4 +242,4 @@ to strip. Every `!` in such a codebase is decoration, which is why enabling
 
 ---
 
-← Prev: [12 · `unknown` in `catch`](./12-unknown-in-catch.md) · [Phase 2 index](./README.md) · Next → **Phase 3 · Generics** *(not written yet)*
+← Prev: [12 · `unknown` in `catch`](./12-unknown-in-catch.md) · [Phase 2 index](./README.md) · Next → [Phase 3 · Generics](../phase-3-generics/README.md)
