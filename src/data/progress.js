@@ -39,7 +39,7 @@ export const LANGUAGES = {
       {n: 0, slug: 'phase-0-how-javascript-runs', name: 'How JavaScript runs', part: 'Language core', topics: 12, pages: 12},
       {n: 1, slug: 'phase-1-values-and-coercion', name: 'Values, types and coercion', part: 'Language core', topics: 17, pages: 17},
       {n: 2, slug: 'phase-2-operators', name: 'Operators, expressions and control flow', part: 'Language core', topics: 15, pages: 15},
-      {n: 3, slug: 'phase-3-functions', name: 'Functions, scope and closures', part: 'Language core', topics: 20, pages: 18, pagesPlanned: 20},
+      {n: 3, slug: 'phase-3-functions', name: 'Functions, scope and closures', part: 'Language core', topics: 20, pages: 19, pagesPlanned: 20},
       {n: 4, slug: 'phase-4-objects-and-classes', name: 'Objects, prototypes and classes', part: 'Language core', topics: 20, pages: 7, pagesPlanned: 20},
       {n: 5, slug: 'phase-5-built-in-library', name: 'The built-in library', part: 'Data & async', topics: 26, pages: 8, pagesPlanned: 26},
       {n: 6, slug: 'phase-6-iteration-and-destructuring', name: 'Iteration, destructuring and generators', part: 'Data & async', topics: 13, pages: 3, pagesPlanned: 13},
