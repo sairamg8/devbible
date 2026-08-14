@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **2 of 17 topics written** — 2 leaf pages.
+🚧 **4 of 17 topics written** — 4 leaf pages.
 
 **Everything `react-dom` does outside the browser, plus the DOM-level features React 19
 absorbed.** This is where SSR stops being a checkbox and starts being a set of trade-offs
@@ -66,8 +66,8 @@ Get that wrong and every topic here reads as a contradiction of Phase 10.
   are **Nginx** topics. This phase states the requirement and links out.
 - **Node** — the process that serves an SSR build, its graceful shutdown and its
   observability are **Node** material.
-- **[Phase 14 · Testing React](../phase-14-correctness/README.md)** *(not yet written)* —
-  hydration mismatches are the class of bug a test suite most often fails to catch.
+- **Phase 14 · Testing React** *(not yet written)* — hydration mismatches are the class of
+  bug a test suite most often fails to catch.
 
 ## Gate
 
