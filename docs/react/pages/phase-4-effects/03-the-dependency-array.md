@@ -39,7 +39,7 @@ The corollary, and the sentence to remember when you want a shorter list:
 > need* to be a dependency.**
 
 You change the code so the value is genuinely not read. You do not delete the
-entry. [Topic 11](11-removing-dependencies.md) is the catalogue of legitimate
+entry. [Topic 11](11-removing-dependencies/README.md) is the catalogue of legitimate
 proofs.
 
 ## What "lying" actually produces
@@ -153,7 +153,7 @@ adding noise:
 Note the ref subtlety: **`ref` is stable, `ref.current` is not tracked at all.**
 Reading `ref.current` in an effect gives you the current value without making the
 effect reactive to it — which is occasionally exactly right, and is also how
-people hide dependencies illegitimately ([11](11-removing-dependencies.md)).
+people hide dependencies illegitimately ([11](11-removing-dependencies/README.md)).
 
 ## Reading an effect for its dependencies
 

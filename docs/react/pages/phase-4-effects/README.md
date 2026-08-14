@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 10 of 18 topics written.** The table below links what exists;
+🚧 **In progress — 11 of 18 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The most misused hook in React, almost always because it is understood as "run
@@ -29,7 +29,7 @@ React may run any number of times**.
 | 08 | **[Race conditions](08-race-conditions.md)** | <span className="db-tier t-understand">Understand</span> | The `ignore` flag and `AbortController`, and which you need |
 | 09 | **[An effect has its own lifecycle](09-effect-lifecycle.md)** | <span className="db-tier t-understand">Understand</span> | It starts and stops, independent of mounting |
 | 10 | **[`useEffectEvent`](10-useeffectevent.md)** | <span className="db-tier t-understand">Understand</span> | Latest props and state without a dependency |
-| 11 | Removing dependencies legitimately | <span className="db-tier t-understand">Understand</span> | Four legitimate moves and two illegitimate ones |
+| 11 | **[Removing dependencies legitimately](11-removing-dependencies/README.md)** | <span className="db-tier t-understand">Understand</span> | Eight legitimate moves, and the two that only look like fixes |
 | 12 | `useLayoutEffect` | <span className="db-tier t-understand">Understand</span> | After DOM mutation, before paint |
 | 13 | Effect ordering | <span className="db-tier t-understand">Understand</span> | Children before parents, cleanups before setups |
 | 14 | Timers, listeners and observers | <span className="db-tier t-understand">Understand</span> | Each API's inverse, and the leak without it |
@@ -40,13 +40,14 @@ React may run any number of times**.
 
 ## Coverage so far
 
-**10 topics → 16 content files.** Two topics run past the 300-line file cap and
+**11 topics → 20 content files.** Two topics run past the 300-line file cap and
 become topic directories:
 
 | Topic | Chunks | Split at |
 |---|---|---|
 | 04 Cleanup | 3 | the contract ↔ the recipes ↔ when it is not the answer |
 | 06 You might not need an effect | 3 | one action ↔ a cascade of them ↔ where the state lives |
+| 11 Removing dependencies | 3 | identity ↔ restructuring ↔ the illegitimate fixes |
 
 Longest file 294 lines; nothing over.
 

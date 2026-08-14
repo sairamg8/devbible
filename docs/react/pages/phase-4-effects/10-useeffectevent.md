@@ -239,4 +239,4 @@ next to that hook's own effect, rather than being handed across the boundary.
 
 ---
 
-← Prev: [An effect has its own lifecycle](09-effect-lifecycle.md) · Index: [Phase 4](README.md) · Next → [Removing dependencies legitimately](11-removing-dependencies.md)
+← Prev: [An effect has its own lifecycle](09-effect-lifecycle.md) · Index: [Phase 4](README.md) · Next → [Removing dependencies legitimately](11-removing-dependencies/README.md)

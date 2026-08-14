@@ -151,7 +151,7 @@ produced, so a value that does not come from rendering has no place in it.
 >   the code to not break the rules.**
 
 That last line is the phase's position in one sentence, and
-[topic 11](11-removing-dependencies.md) is the catalogue of legitimate fixes.
+[topic 11](11-removing-dependencies/README.md) is the catalogue of legitimate fixes.
 
 ## Gotchas
 
