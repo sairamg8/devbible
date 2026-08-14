@@ -53,7 +53,7 @@ a response; say at what stage `req.body` starts existing; and explain why
   — stage 6, and the content-type gate that decides whether it happens.
 - **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware/README.md)**
   — the arity rule chunk 02 derives, applied.
-- **→ [Phase 5 · 02 · Async errors](../../phase-5-errors/02-async-errors.md)** —
+- **→ [Phase 5 · 02 · Async errors](../../phase-5-errors/02-async-errors/README.md)** —
   the four things Express 5 still does not catch.
 - **→ [Phase 5 · 06 · 404 and process errors](../../phase-5-errors/06-not-found-and-process.md)**
   — ending 3 in full.

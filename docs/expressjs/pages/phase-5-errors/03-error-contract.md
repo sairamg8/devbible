@@ -144,4 +144,4 @@ expose. Without it, "I got an error at about 2pm" is not a searchable fact.
 
 ---
 
-← Prev: [Async errors on Express 5](02-async-errors.md) · Next → [Mapping to HTTP](04-mapping-to-http.md)
+← Prev: [Async errors on Express 5](02-async-errors/README.md) · Next → [Mapping to HTTP](04-mapping-to-http.md)

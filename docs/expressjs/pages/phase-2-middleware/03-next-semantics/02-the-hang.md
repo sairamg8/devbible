@@ -95,7 +95,7 @@ alive and stuck, which is worse than crashed: it holds a pooled connection too.
 **5 · A promise you never awaited, in a handler that then falls off the end.**
 The handler returns `undefined`, nothing has responded, and the work continues in
 the background. This one *also* produces an `unhandledRejection` later if the
-promise rejects — [Phase 5 · 02](../../phase-5-errors/02-async-errors.md).
+promise rejects — [Phase 5 · 02](../../phase-5-errors/02-async-errors/02-the-shapes-that-escape.md).
 
 ## Finding it
 

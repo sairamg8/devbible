@@ -262,4 +262,4 @@ shut down cleanly, not to continue.
 
 ---
 
-← Prev: [The default handler](02-the-default-handler.md) · Index: [Error middleware](README.md) · Next topic → [Async errors](../02-async-errors.md)
+← Prev: [The default handler](02-the-default-handler.md) · Index: [Error middleware](README.md) · Next topic → [Async errors](../02-async-errors/README.md)

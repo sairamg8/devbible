@@ -24,7 +24,7 @@ the envelope.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Four-arg error middleware](01-error-middleware/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Arity as the whole detection mechanism; `finalhandler` in full; and the handler design, line by line |
-| 02 | **[Async errors on Express 5](02-async-errors.md)** | <span className="db-tier t-master">Master</span> | Rejected handlers → error middleware |
+| 02 | **[Async errors on Express 5](02-async-errors/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Exactly what the router attaches to, the four shapes that escape it, and the habits that keep your code inside the guarantee |
 | 03 | **[Error response contract](03-error-contract.md)** | <span className="db-tier t-master">Master</span> | Stable JSON; no stacks in production |
 | 04 | **[Mapping to HTTP](04-mapping-to-http.md)** | <span className="db-tier t-understand">Understand</span> | 400/401/403/404/409/422/429/503 |
 | 05 | **[Operational vs programmer](05-operational-vs-programmer.md)** | <span className="db-tier t-understand">Understand</span> | What to expose vs what to crash/log |
@@ -39,8 +39,8 @@ same cause, as content negotiation in [Phase 4](../phase-4-responses/README.md).
 
 | Syllabus topic | Page |
 |---|---|
-| Four-argument error middleware | 01 |
-| Express 5 async errors | 02 |
+| Four-argument error middleware | 01 (chunks [01](01-error-middleware/01-arity-and-placement.md) · [02](01-error-middleware/02-the-default-handler.md) · [03](01-error-middleware/03-designing-the-handler.md)) |
+| Express 5 async errors | 02 (chunks [01](02-async-errors/01-what-is-forwarded.md) · [02](02-async-errors/02-the-shapes-that-escape.md) · [03](02-async-errors/03-writing-async-handlers.md)) |
 | Error response contract | 03 |
 | Mapping operational failures to HTTP | 04 |
 | A thin typed error helper (`statusCode` + `code` + `expose`) | 04 |

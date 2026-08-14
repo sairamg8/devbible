@@ -14,7 +14,7 @@ sidebar_position: 5
 > response is *"intentionally noncommittal"* about the eventual outcome — which is
 > precisely the promise this pattern makes.
 > The Express-level fact that makes the anti-pattern dangerous is from
-> [Phase 5](../phase-5-errors/02-async-errors.md): **Express 5 forwards rejections only
+> [Phase 5](../phase-5-errors/02-async-errors/02-the-shapes-that-escape.md): **Express 5 forwards rejections only
 > from promises it awaited**, so a fire-and-forget call started in a handler and not
 > awaited becomes an `unhandledRejection` with no request context — the failure is
 > invisible rather than logged.

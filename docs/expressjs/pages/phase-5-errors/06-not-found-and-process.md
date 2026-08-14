@@ -103,7 +103,7 @@ as a parse error in the client instead of a clean 404.
 **Fix:** Respond directly. A 404 is not an error in Express's model — the FAQ says so
 
 **Symptom:** `unhandledRejection` fires with no request context  
-**Cause:** A floating promise in a handler ([page 02](02-async-errors.md))  
+**Cause:** A floating promise in a handler ([page 02](02-async-errors/02-the-shapes-that-escape.md))  
 **Fix:** Await it or attach a deliberate `.catch`. Express cannot associate it with a
 request after the fact
 

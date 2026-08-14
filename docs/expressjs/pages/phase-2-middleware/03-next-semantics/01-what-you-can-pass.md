@@ -115,7 +115,7 @@ is refused**. Only `use` layers are still considered, and each is invoked throug
 On Express 5 a `throw` in a handler, or a rejection of the promise a handler
 **returns**, is converted to `next(err)` by the `try`/`catch` and the promise hook
 in `Layer.handleRequest`. Not a floating promise, not a `setTimeout` callback —
-[Phase 5 · 02](../../phase-5-errors/02-async-errors.md).
+[Phase 5 · 02](../../phase-5-errors/02-async-errors/01-what-is-forwarded.md).
 
 ## `next('route')` — skip the rest of this route
 

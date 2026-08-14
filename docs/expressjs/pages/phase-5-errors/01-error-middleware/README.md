@@ -45,7 +45,7 @@ line of an error handler and the reason for it.
   — `Layer.handleError`, where the arity gate lives.
 - **← [Phase 2 · 03 · chunk 03](../../phase-2-middleware/03-next-semantics/03-double-send-and-guards.md)**
   — the double-send the `headersSent` guard prevents.
-- **→ [02 · Async errors](../02-async-errors.md)** — the four things Express 5
+- **→ [02 · Async errors](../02-async-errors/README.md)** — the four things Express 5
   still does not forward here.
 - **→ [03 · Error contract](../03-error-contract.md)** — the envelope chunk 03
   sketches, in full.
