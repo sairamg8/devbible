@@ -131,7 +131,7 @@ app.use('/api/v1', v1);
 
 Note that middleware on `v1` runs for **both** children, and nothing on `app`
 below the `app.use('/api/v1', v1)` line runs before them. Mount order is the
-whole story — [Phase 2 · 02](../../phase-2-middleware/02-execution-order.md).
+whole story — [Phase 2 · 02](../../phase-2-middleware/02-execution-order/01-the-four-levels.md).
 
 **The same router at two prefixes**, which works because a router holds no
 per-request state:

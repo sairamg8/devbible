@@ -56,7 +56,7 @@ middleware.
   `trimPrefix` explain between them.
 - **→ [Phase 1 · 07 · `app.route` and hosts](../../phase-1-routing/07-app-route-and-hosts.md)**
   — where the `router.mountpath` error was corrected.
-- **→ [Phase 2 · 02 · Execution order](../../phase-2-middleware/02-execution-order.md)**
+- **→ [Phase 2 · 02 · Execution order](../../phase-2-middleware/02-execution-order/01-the-four-levels.md)**
   — registration order as an array walk, applied.
 - **→ [Phase 5 · 01 · Error middleware](../../phase-5-errors/01-error-middleware.md)**
   — the arity check that chunk 03's error mode reaches.

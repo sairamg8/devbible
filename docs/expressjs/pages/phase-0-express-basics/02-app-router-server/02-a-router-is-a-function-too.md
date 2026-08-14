@@ -160,7 +160,7 @@ Two facts, both consequential:
 
 - **Order is registration order, per router.** There is no priority, no
   specificity ranking, no "most specific wins". The array is walked from index 0.
-  [Phase 2 · 02](../../phase-2-middleware/02-execution-order.md) is this fact,
+  [Phase 2 · 02](../../phase-2-middleware/02-execution-order/01-the-four-levels.md) is this fact,
   applied.
 - **A router mounted before a middleware never sees it.** The mount pushed a
   layer at position *n*; the middleware is at *n+1*. Nothing reorders them later.

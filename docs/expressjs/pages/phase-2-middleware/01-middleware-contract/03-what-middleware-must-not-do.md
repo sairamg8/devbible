@@ -138,7 +138,7 @@ rate limiting, timeouts, logging, error mapping. Everything else is a service.
 
 Order is registration order — an array walked from index 0, with no priority
 system and no specificity ranking
-([Phase 2 · 02](../02-execution-order.md)). So a middleware that depends on
+([Phase 2 · 02](../02-execution-order/01-the-four-levels.md)). So a middleware that depends on
 another having run is depending on a fact recorded nowhere.
 
 Two mitigations that cost almost nothing:
@@ -235,4 +235,4 @@ rather than inferred.
 
 ---
 
-← Prev: [Middleware that composes](02-middleware-that-composes.md) · Index: [The middleware contract](README.md) · Next topic → [Execution order](../02-execution-order.md)
+← Prev: [Middleware that composes](02-middleware-that-composes.md) · Index: [The middleware contract](README.md) · Next topic → [Execution order](../02-execution-order/README.md)

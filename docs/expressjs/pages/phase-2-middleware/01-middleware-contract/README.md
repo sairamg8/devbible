@@ -41,7 +41,7 @@ authorization question middleware structurally cannot answer.
   — `Layer.handleRequest` in full, where the arity gate lives.
 - **← [Phase 0 · 03 · chunk 03](../../phase-0-express-basics/03-request-lifecycle/03-the-four-endings.md)**
   — what a hung request looks like from the router's side.
-- **→ [02 · Execution order](../02-execution-order.md)** — registration order as an
+- **→ [02 · Execution order](../02-execution-order/README.md)** — registration order as an
   array walk.
 - **→ [03 · `next` semantics](../03-next-semantics.md)** — `next()`, `next(err)`,
   `next('route')`, and calling it twice.

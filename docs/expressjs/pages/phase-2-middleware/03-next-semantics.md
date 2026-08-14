@@ -149,4 +149,4 @@ Rejections are forwarded like `next(err)`.
 
 ---
 
-← Prev: [Execution order](02-execution-order.md) · Next → [Middleware factories](04-middleware-factories.md)
+← Prev: [Execution order](02-execution-order/README.md) · Next → [Middleware factories](04-middleware-factories.md)

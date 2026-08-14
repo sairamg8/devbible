@@ -19,7 +19,7 @@ are the job.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[The middleware contract](01-middleware-contract/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | `(req, res, next) => void` — the three legal endings, arity as part of the contract, the factory convention, and seven things Express permits that you should not do |
-| 02 | **[Execution order](02-execution-order.md)** | <span className="db-tier t-master">Master</span> | App → router → route; first registered runs first |
+| 02 | **[Execution order](02-execution-order/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | One mechanism not four; why the familiar app→router→route order flips if you mount first; and how to see the order and stop it drifting |
 | 03 | **[next semantics](03-next-semantics.md)** | <span className="db-tier t-master">Master</span> | `next()` vs `next(err)` vs hang vs double-send |
 | 04 | **[Middleware factories](04-middleware-factories.md)** | <span className="db-tier t-understand">Understand</span> | `(options) => (req, res, next) => …` |
 | 05 | **[First and last](05-first-and-last.md)** | <span className="db-tier t-understand">Understand</span> | Body parser early; error middleware last |
@@ -31,7 +31,7 @@ are the job.
 | Syllabus topic | Page |
 |---|---|
 | Middleware contract | 01 (chunks [01](01-middleware-contract/01-the-shape-and-the-endings.md) · [02](01-middleware-contract/02-middleware-that-composes.md) · [03](01-middleware-contract/03-what-middleware-must-not-do.md)) |
-| Execution order and mounting | 02 |
+| Execution order and mounting | 02 (chunks [01](02-execution-order/01-the-four-levels.md) · [02](02-execution-order/02-ordering-in-practice.md)) |
 | `next` / `next(err)` / hang | 03 |
 | Writing middleware factories | 04 |
 | Must run first / last | 05 |
