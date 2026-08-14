@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 6 of 18 topics written.**
+🚧 **In progress — 7 of 18 topics written.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -23,7 +23,7 @@ advice and became a correctness requirement.
 | 04 | **[`use(promise)`](04-use-promise.md)** | <span className="db-tier t-master">Master</span> | Reading a promise during render, and the stability requirement |
 | 05 | **[Request waterfalls](05-request-waterfalls.md)** | <span className="db-tier t-master">Master</span> | Three boundaries, three sequential round trips — and the fixes |
 | 06 | **[What concurrent rendering means](06-what-concurrent-rendering-means.md)** | <span className="db-tier t-understand">Understand</span> | Interruptible, prioritised, discardable renders |
-| 07 | Urgent vs transition updates | <span className="db-tier t-understand">Understand</span> | Which interactions belong in which bucket |
+| 07 | **[Urgent vs transition updates](07-urgent-vs-transition.md)** | <span className="db-tier t-understand">Understand</span> | Which interactions belong in which bucket |
 | 08 | `useDeferredValue` | <span className="db-tier t-understand">Understand</span> | A value that lags, versus an update you control |
 | 09 | Async transitions (React 19) | <span className="db-tier t-understand">Understand</span> | Pending state spanning an `await`, and the rules after it |
 | 10 | Suspense boundary placement | <span className="db-tier t-understand">Understand</span> | Granularity, layout shift, and getting the shell out first |
@@ -69,7 +69,7 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 6 written so far → 10 files. Both are chunked into two parts each — topic
+**18 topics.** 7 written so far → 11 files. Both are chunked into two parts each — topic
 01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
 (511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
