@@ -11,7 +11,7 @@ interview probes and what every production incident traces back to."*
 ## Status — **in progress** (2026-08-13)
 
 **Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
-any other phase. They are being written in syllabus order. **09 of 11 done.**
+any other phase. They are being written in syllabus order. **10 of 11 done.**
 
 ## Topics
 
@@ -26,7 +26,7 @@ any other phase. They are being written in syllabus order. **09 of 11 done.**
 | 07 | **[`async`/`await`](./07-async-await/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 08 | **[Error handling in async code](./08-error-handling/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 09 | **[Sequential vs parallel `await`](./09-sequential-vs-parallel/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 10 | `Promise.all` vs `allSettled` vs `race` vs `any` | <span className="db-tier t-master">Master</span> | planned |
+| 10 | **[`Promise.all` vs `allSettled` vs `race` vs `any`](./10-combinators/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 11 | Promise anti-patterns | <span className="db-tier t-master">Master</span> | planned |
 | 12–22 | Cancellation, timers, generators-as-async, workers, and the rest | Understand / Know | deferred |
 
