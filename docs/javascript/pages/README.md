@@ -22,7 +22,7 @@ import Progress from '@site/src/components/Progress';
 | **[0 · How JavaScript runs](./phase-0-how-javascript-runs/README.md)** | Language core | 12 | ✅ written |
 | **[1 · Values, types and coercion](./phase-1-values-and-coercion/README.md)** | Language core | 17 | ✅ written |
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
-| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master ✅** (01–08) · Understand under way (09–10) |
+| **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | 🟡 **Master ✅** (01–08) · Understand under way (09–11) |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
@@ -45,10 +45,10 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `c5329658` (Opus 5), from 2026-08-14 — took over from `01ECVvH5` |
 | **Claim** | **all of `docs/javascript/`** — 🔴 **the Master tier of every phase is now complete**; next is the Understand/Know tier, from Phase 3 onward |
-| **Last touched** | **Phase 3 topic 10 · Debounce and throttle** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
+| **Last touched** | **Phase 3 topic 11 · Currying and partial application** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 3 topic 11 · Currying and partial application**, then 12–20, then phase 4 |
-| **Totals** | **252 pages**, 310 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Next** | **Phase 3 topic 12 · Composition (`pipe`/`compose`)**, then 13–20, then phase 4 |
+| **Totals** | **253 pages**, 311 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
