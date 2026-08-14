@@ -6,14 +6,20 @@ sidebar_position: 0
 
 :::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** session `33f8be33` · **Since:** 2026-08-14 · **Scope:** the whole of
-`docs/react/`, straight through to Phase 14. Taken over from session `2ee7a9a3`
-(itself from `6ffd754d`) on the user's direct instruction to work React — not
-claimed silently.
+**The remaining React work is SPLIT ACROSS TWO SESSIONS.** Their page directories
+are disjoint; neither writes in the other's.
 
-**Written in a worktree**, not this checkout:
-`/mnt/Storage/Backup/Knowledge/devbible-react`, branch `react-phase-7`. If React
-pages look missing here, they are on that branch and not yet merged.
+| Part | Scope | Owner | Since |
+|---|---|---|---|
+| **A** | **Phase 11 topics 08–17 + the phase close** — `phase-11-ssr-hydration/` | session `688ea14a` | 2026-08-14 |
+| **B** | **Phase 14 · Testing React** — `phase-14-correctness/`, 14 topics | open | — |
+
+Previous owner of the whole of `docs/react/`: session `33f8be33`, itself taken
+over from `2ee7a9a3` (from `6ffd754d`).
+
+**All React work is now on `main` in this checkout.** The old worktree
+`/mnt/Storage/Backup/Knowledge/devbible-react` (branch `react-phase-7`) was
+**merged into `main`** as `d74e74f`; nothing React is stranded on a branch.
 
 | Phase | State |
 |---|---|
@@ -27,7 +33,7 @@ pages look missing here, they are on that branch and not yet merged.
 | 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
 | 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10 | ✅ **Done — 19 topics, 21 files, 4,780 lines, 0 over cap** |
-| 11 | 🚧 **In progress — 7 of 17 topics** |
+| 11 | 🚧 **In progress — 8 of 17 topics, 9 files** (Part A) |
 | 14 | ⬜ Claimed — syllabus approved, 14 topics |
 
 **If you are a different session, do not write React pages.** Pick something with

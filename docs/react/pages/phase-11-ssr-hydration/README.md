@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **7 of 17 topics written** — 7 leaf pages.
+🚧 **8 of 17 topics written** — 9 leaf pages.
 
 **Everything `react-dom` does outside the browser, plus the DOM-level features React 19
 absorbed.** This is where SSR stops being a checkbox and starts being a set of trade-offs
@@ -24,7 +24,7 @@ you choose between — and where [Phase 10](../phase-10-server-components/README
 | 05 | **[`suppressHydrationWarning` and the two-pass render](05-suppresshydrationwarning.md)** | <span className="db-tier t-understand">Understand</span> | The two escapes for genuinely client-only content, and when each is honest |
 | 06 | **[Streaming SSR with Suspense](06-streaming-ssr.md)** | <span className="db-tier t-understand">Understand</span> | The shell, `onShellReady` vs `onAllReady`, and which one a crawler needs |
 | 07 | **[Selective hydration](07-selective-hydration.md)** | <span className="db-tier t-understand">Understand</span> | Prioritising the boundary the user just clicked |
-| 08 | **[Prerendering](08-prerendering.md)** | <span className="db-tier t-understand">Understand</span> | `prerender` and `prerenderToNodeStream` — static generation that waits for all data |
+| 08 | **[Prerendering](08-prerendering/README.md)** | <span className="db-tier t-understand">Understand</span> | `prerender` and `prerenderToNodeStream` — static generation that waits for all data |
 | 09 | **[Partial pre-rendering (19.2)](09-partial-prerendering.md)** | <span className="db-tier t-understand">Understand</span> | `postponed`, `resume`, `resumeAndPrerender` — a static shell filled per request |
 | 10 | **[Document metadata (19)](10-document-metadata.md)** | <span className="db-tier t-understand">Understand</span> | `<title>`, `<meta>` and `<link>` hoisted from anywhere in the tree |
 | 11 | **[Resource preloading](11-resource-preloading.md)** | <span className="db-tier t-understand">Understand</span> | `preload`, `preinit`, `preconnect`, `prefetchDNS` and when each helps |

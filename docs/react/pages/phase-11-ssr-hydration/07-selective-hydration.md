@@ -178,4 +178,4 @@ understands why mismatches happen.
 
 ← Prev: [Streaming SSR with Suspense](06-streaming-ssr.md) ·
 Index: [Phase 11](README.md) ·
-Next → [Prerendering](08-prerendering.md)
+Next → [Prerendering](08-prerendering/README.md)
