@@ -10,10 +10,10 @@ sidebar_position: 14
 > [`<Activity>`](https://react.dev/reference/react/Activity) (definition, props, the
 > hidden/visible behaviour, pre-rendering, and the Caveats) and the
 > [React v18.0 release post](https://react.dev/blog/2022/03/29/react-v18) (*reusable
-> state*).
-> ⚠️ react.dev's `<Activity>` reference carries **no experimental label**, unlike
-> `ViewTransition` — but the page below does not claim an introduction version, because
-> the docs do not state one.
+> state*), and
+> [React Labs: View Transitions, Activity, and more](https://react.dev/blog/2025/04/23/react-labs-view-transitions-activity-and-more)
+> — *"`<Activity />` has shipped in `react@19.2`."*
+> It is **stable**, unlike `ViewTransition`, which remains canary-only.
 > No sandbox script backs this page; claims are cited, not measured.
 
 **`<Activity>` hides a subtree without unmounting it: the DOM stays, the state survives,

@@ -8,7 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 15 of 18 topics written.**
+✅ **COMPLETE — all 18 topics written.** 20 leaf pages — 2 chunked topic directories
+(4 pages) plus 16 single-file topics — **4,827 lines, 0 files over 300.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -32,9 +33,9 @@ advice and became a correctness requirement.
 | 13 | **[`cache` and `cacheSignal`](13-cache-and-cachesignal.md)** | <span className="db-tier t-understand">Understand</span> | Deduplicating across one server render, and aborting a discarded one |
 | 14 | **[`<Activity>`](14-activity.md)** | <span className="db-tier t-understand">Understand</span> | Hiding a subtree while keeping its state |
 | 15 | **[Tearing](15-tearing.md)** | <span className="db-tier t-understand">Understand</span> | One render, two values, because it was interrupted |
-| 16 | Error boundaries and Suspense together | <span className="db-tier t-understand">Understand</span> | The loading/error pair, and the order they nest in |
-| 17 | ⚠ `<ViewTransition>` and friends | <span className="db-tier t-know">Know</span> | **Experimental — not in 19.2.8.** What today's answer is instead |
-| 18 | ⚠ `SuspenseList` | <span className="db-tier t-when">When Needed</span> | Still `unstable_`; ordering how sibling boundaries reveal |
+| 16 | **[Error boundaries and Suspense together](16-error-boundaries-and-suspense.md)** | <span className="db-tier t-understand">Understand</span> | The loading/error pair, and the order they nest in |
+| 17 | **[⚠ `<ViewTransition>` and friends](17-view-transitions.md)** | <span className="db-tier t-know">Know</span> | **Experimental — not in 19.2.8.** What today's answer is instead |
+| 18 | **[⚠ `SuspenseList`](18-suspenselist.md)** | <span className="db-tier t-when">When Needed</span> | Still `unstable_`; ordering how sibling boundaries reveal |
 
 ## Why this phase sits after Phase 7
 
@@ -69,7 +70,15 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 15 written so far → 19 files. Both are chunked into two parts each — topic
+**All 18 topics, 20 leaf pages, 4,827 lines. No file exceeds 300 lines and nothing was
+trimmed to get there** — two topics became directories:
+
+| Topic | Chunks | Lines | Split on |
+|---|---|---|---|
+| 01 `startTransition` / `useTransition` | 2 | 496 | What a transition *is* · how you observe and choose it |
+| 02 `<Suspense>` | 2 | 511 | The boundary's own behaviour · what it does to the tree inside it |
+
+The other sixteen fit one file each without compression. Both are chunked into two parts each — topic
 01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
 (511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
