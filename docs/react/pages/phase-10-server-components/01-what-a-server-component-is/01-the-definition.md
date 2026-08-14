@@ -133,7 +133,7 @@ must stay alive afterwards are the ones you deliberately move into the client gr
 ⚠️ **The endpoint does not disappear — it moves.** An API you no longer need for *your own*
 page is not an API you no longer need for a mobile app, a partner integration or a webhook.
 And a Server Function is itself a public endpoint
-([topic 06](../06-server-function-security.md)), with every authorization concern intact.
+([topic 06](../06-server-function-security/README.md)), with every authorization concern intact.
 
 ## Gotchas
 

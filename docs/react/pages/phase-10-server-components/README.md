@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **5 of 19 topics written** — 6 leaf pages.
+🚧 **6 of 19 topics written** — 8 leaf pages. The whole Master tier is done.
 
 **The largest change to React since hooks, and the one most often described wrongly.**
 Two directives, two module graphs, one serialization boundary — get those three right and
@@ -22,7 +22,7 @@ is really a question about which graph a file ended up in.
 | 03 | **[`'use client'`](03-use-client.md)** | <span className="db-tier t-master">Master</span> | An **entry point into the client graph**, not "this file is a component" |
 | 04 | **[`'use server'`](04-use-server.md)** | <span className="db-tier t-master">Master</span> | Marks a **Server Function**, and has nothing to do with Server Components |
 | 05 | **[What crosses the boundary](05-what-crosses-the-boundary.md)** | <span className="db-tier t-master">Master</span> | Only serializable values — the exact list, and the error each violation gives |
-| 06 | **[Server Function security](06-server-function-security.md)** | <span className="db-tier t-master">Master</span> | Every Server Function is a public endpoint anyone can call with any arguments |
+| 06 | **[Server Function security](06-server-function-security/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | Every Server Function is a public endpoint anyone can call with any arguments |
 | 07 | **[Passing Server Components as `children`](07-server-components-as-children.md)** | <span className="db-tier t-understand">Understand</span> | Wrap server-rendered content in a Client Component without pulling it client-side |
 | 08 | **[Async components](08-async-components.md)** | <span className="db-tier t-understand">Understand</span> | `await` your data in render, with a Suspense boundary above it |
 | 09 | **[Calling Server Functions from the client](09-calling-server-functions.md)** | <span className="db-tier t-understand">Understand</span> | RPC over the network — as a form action, in a transition, from a handler |

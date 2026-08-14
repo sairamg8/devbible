@@ -34,7 +34,7 @@ explicitly in the Server Components reference:
 Read that as the definition of **RPC**, because that is what it is. Not a shared function,
 not an import that "runs on the server" — a network call, with everything a network call
 implies: latency, failure, and an attacker who can send whatever they like
-([topic 09](09-calling-server-functions.md), [topic 06](06-server-function-security.md)).
+([topic 09](09-calling-server-functions.md), [topic 06](06-server-function-security/README.md)).
 
 ## The two forms, and why the difference matters
 
@@ -68,7 +68,7 @@ export async function deleteNote(id)       { /* … */ }
 export in that file becomes a **public HTTP endpoint**. A helper you exported only so a
 sibling module could use it is now callable by anyone with the browser's network tab open.
 Keep such files small and export nothing you did not intend to expose — this is the concrete
-form of [topic 06](06-server-function-security.md).
+form of [topic 06](06-server-function-security/README.md).
 
 It is also why the earlier mistake is worse than it looks: someone who adds `'use server'` to
 the top of a **component file**, believing it marks a Server Component, has not merely failed

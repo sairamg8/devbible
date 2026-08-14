@@ -113,7 +113,7 @@ Two things to take from it:
 
 1. **The fix is named in the message.** If the function *should* be callable from the
    client, mark it — that is a Server Function and a deliberate endpoint
-   ([topic 06](06-server-function-security.md)). If it should not, it does not belong in the
+   ([topic 06](06-server-function-security/README.md)). If it should not, it does not belong in the
    props at all.
 2. **The trigger is often not the prop you are looking at.** Serialization is recursive, so
    a function three levels deep inside an options object fails the whole prop. The reported
@@ -252,4 +252,4 @@ dates into strings for nothing.
 
 ← Prev: [`'use server'`](04-use-server.md) ·
 Index: [Phase 10](README.md) ·
-Next → [Server Function security](06-server-function-security.md)
+Next → [Server Function security](06-server-function-security/README.md)
