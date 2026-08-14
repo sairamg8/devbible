@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 6 of 14 topics written.** The phase's whole Master tier is done.
+🚧 **In progress — 7 of 14 topics written.** The phase's whole Master tier is done.
 
 **React 19 turned "submit a form" from a pile of `useState` into a first-class
 primitive.** Actions are transitions wearing a form — which is why this phase sits
@@ -23,7 +23,7 @@ machinery underneath them was established.
 | 04 | **[Validation](04-validation.md)** | <span className="db-tier t-master">Master</span> | Client for feedback, server for truth, field errors through the return value |
 | 05 | **[Uncontrolled forms and `FormData`](05-uncontrolled-and-formdata.md)** | <span className="db-tier t-understand">Understand</span> | `name` attributes as the contract, and when this beats controlled outright |
 | 06 | **[`useFormStatus`](06-useformstatus.md)** | <span className="db-tier t-understand">Understand</span> | Pending state without prop drilling — and the constraint that it must be inside the form |
-| 07 | `useOptimistic` | <span className="db-tier t-understand">Understand</span> | Show the expected result now; revert automatically when the action settles |
+| 07 | **[`useOptimistic`](07-useoptimistic.md)** | <span className="db-tier t-understand">Understand</span> | Show the expected result now; revert automatically when the action settles |
 | 08 | Multiple actions in one form | <span className="db-tier t-understand">Understand</span> | `formAction` for save-vs-delete, and how it meets `useActionState` |
 | 09 | Form reset semantics | <span className="db-tier t-understand">Understand</span> | What React resets for you, when that is wrong, and `requestFormReset` |
 | 10 | Errors in actions | <span className="db-tier t-understand">Understand</span> | Thrown reaches an error boundary; returned reaches `useActionState` |
@@ -60,7 +60,7 @@ what is marked and what is not still apply.
 
 ## Coverage
 
-**14 topics.** 6 written so far → 8 files. Topics 01–04 are all four Master rows. Topic 01 is chunked into two parts (517
+**14 topics.** 7 written so far → 9 files. Topics 01–04 are all four Master rows. Topic 01 is chunked into two parts (517
 lines): the contract, then the eight places it applies differently.
 
 ## Gate
