@@ -43,7 +43,7 @@ client is entitled to retry after a timeout.
   — the matching loop where `_handlesMethod` and the HEAD conditional are read.
 - **← [Phase 0 · 02 · chunk 04](../../phase-0-express-basics/02-app-router-server/04-url-rewriting-and-options.md)**
   — the `OPTIONS` responder, from the router's side.
-- **→ [02 · Params and query](../02-params-and-query.md)** — the other half of a
+- **→ [02 · Params and query](../02-params-and-query/README.md)** — the other half of a
   route: what the path captures.
 - **→ [07 · `app.route` and hosts](../07-app-route-and-hosts.md)** — the chaining
   form chunks 01 and 03 both lean on.

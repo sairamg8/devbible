@@ -144,7 +144,7 @@ module"*; the 5.x settings table and the migration guide say `simple`. **The
 source says `simple`** — one line in `defaultConfiguration`. Believe the source,
 and when it matters, read back `app.get('query parser')` rather than trusting
 either prose page. What the two parsers actually differ on is
-[Phase 1 · 02](../../phase-1-routing/02-params-and-query.md) and
+[Phase 1 · 02](../../phase-1-routing/02-params-and-query/02-the-query-parser.md) and
 [Phase 3 · 04](../../phase-3-requests/04-query-parser.md).
 
 ## Gotchas

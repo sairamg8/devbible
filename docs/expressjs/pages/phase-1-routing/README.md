@@ -17,8 +17,8 @@ sidebar_position: 0
 > 🔴 **Master-tier depth pass in progress** (session `ffadd057`, 2026-08-14). This
 > phase's three Master topics were written at 117–145 lines with none chunked —
 > sized to the 300-line cap rather than to the topic — and are being rewritten to
-> full depth as `NN-topic/` directories. **Topic 01 is done** (3 chunks, 717 lines,
-> up from 117); 02 and 03 are next. Still no runs: the new mechanism claims are read
+> full depth as `NN-topic/` directories. **Topics 01 and 02 are done** — 01 is 3 chunks (up
+> from 117 lines), 02 is 3 chunks (up from 145). **Topic 03 is next.** Still no runs: the new mechanism claims are read
 > from the installed `express@5.2.1` and `router@2.2.0` source, cited by function.
 
 How URLs become handlers. **Order is load-bearing** — Express will not warn you
@@ -27,7 +27,7 @@ when the wrong route wins.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[HTTP methods](01-http-methods/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | All 35 verb helpers and the `app.get(setting)` overload; the HEAD→GET rewrite and the `Allow` header Express does build; why a wrong method is 404, not 405 |
-| 02 | **[Params and query](02-params-and-query.md)** | <span className="db-tier t-master">Master</span> | `req.params`, `req.query`, arrays, Express 5 splats |
+| 02 | **[Params and query](02-params-and-query/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Where params come from and the null prototype only string routes have; `req.query` as a re-parsing getter; and why every value is `string \| string[]` |
 | 03 | **[Router composition](03-router-composition.md)** | <span className="db-tier t-master">Master</span> | Modular routers, mounts, `mergeParams` |
 | 04 | **[Route ordering](04-route-ordering.md)** | <span className="db-tier t-understand">Understand</span> | Static segments before params — or `/export` becomes an id |
 | 05 | **[Path matching on Express 5](05-path-matching-express5.md)** | <span className="db-tier t-understand">Understand</span> | Why `*` and `:id?` throw; legal patterns |
@@ -39,7 +39,7 @@ when the wrong route wins.
 | Syllabus topic | Page |
 |---|---|
 | HTTP method routing | 01 (chunks [01](01-http-methods/01-the-verb-table.md) · [02](01-http-methods/02-head-and-options.md) · [03](01-http-methods/03-405-and-method-semantics.md)) |
-| Params, query, wildcards | 02 |
+| Params, query, wildcards | 02 (chunks [01](02-params-and-query/01-path-params.md) · [02](02-params-and-query/02-the-query-parser.md) · [03](02-params-and-query/03-shape-and-trust.md)) |
 | `express.Router()` composition | 03 |
 | Nested routers and prefixes | 03 |
 | Route ordering pitfalls | 04 |

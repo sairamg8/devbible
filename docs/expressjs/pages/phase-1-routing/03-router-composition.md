@@ -132,4 +132,4 @@ mount order (Phase 5).
 
 ---
 
-← Prev: [Params and query](02-params-and-query.md) · Next → [Route ordering](04-route-ordering.md)
+← Prev: [Params and query](02-params-and-query/README.md) · Next → [Route ordering](04-route-ordering.md)

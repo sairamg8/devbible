@@ -17,7 +17,7 @@ sidebar_position: 4
 > **Shape, not just value** — that is the whole operator-injection problem below.
 > Express 5's `simple` query parser narrows the blast radius without closing it: bracket
 > keys stay literal, but repeated keys still produce **arrays** where your code expects a
-> string ([Phase 1](../phase-1-routing/02-params-and-query.md)). Parameterised queries
+> string ([Phase 1](../phase-1-routing/02-params-and-query/03-shape-and-trust.md)). Parameterised queries
 > are [Node Phase 6](../../../nodejs/pages/phase-6-data-access/README.md).
 
 ## Safe pattern

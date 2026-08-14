@@ -205,4 +205,4 @@ which reintroduces exactly the CSRF surface you were trying to shrink.
 
 ---
 
-← Prev: [HEAD and OPTIONS](02-head-and-options.md) · Index: [HTTP methods](README.md) · Next topic → [Params and query](../02-params-and-query.md)
+← Prev: [HEAD and OPTIONS](02-head-and-options.md) · Index: [HTTP methods](README.md) · Next topic → [Params and query](../02-params-and-query/README.md)

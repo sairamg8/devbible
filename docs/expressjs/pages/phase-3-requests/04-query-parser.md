@@ -17,7 +17,7 @@ Express 4.**
 > ([`querystring.parse`](https://nodejs.org/api/querystring.html)).
 >
 > ⚠️ **Express's own docs contradict each other here**, as flagged on
-> [Phase 1 page 02](../phase-1-routing/02-params-and-query.md): the
+> [Phase 1 page 02](../phase-1-routing/02-params-and-query/02-the-query-parser.md): the
 > [`req.query` reference](https://expressjs.com/en/5x/api/request/) still says the parser
 > *"by default uses the `qs` module"* — stale Express 4 text. The settings table and the
 > [migration guide](https://expressjs.com/en/guide/migrating-5.html) agree on `simple`,
