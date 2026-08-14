@@ -115,7 +115,7 @@ export const LANGUAGES = {
       {n: 8, slug: 'phase-8-concurrent-suspense', name: 'Concurrent rendering, Suspense and transitions', part: 'Concurrent and server', topics: 18, pages: 18},
       {n: 9, slug: 'phase-9-forms-actions', name: 'Forms, Actions and optimistic UI', part: 'Concurrent and server', topics: 14, pages: 14},
       {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 19},
-      {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 10, pagesPlanned: 17},
+      {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 11, pagesPlanned: 17},
       {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 2, pagesPlanned: 14},
     ],
   },

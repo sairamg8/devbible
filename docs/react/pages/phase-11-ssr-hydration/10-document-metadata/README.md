@@ -44,7 +44,7 @@ just wants to know *why is my stylesheet in the body* from reading about microda
   `<link rel="stylesheet">` half, which needs `precedence` to be hoisted at all.
 - **[Topic 16 · `<script async>` support](../16-async-scripts.md)** — the same hoist-and-
   deduplicate treatment applied to a fourth tag.
-- **[Topic 11 · Resource preloading](../11-resource-preloading.md)** — the imperative
+- **[Topic 11 · Resource preloading](../11-resource-preloading/README.md)** — the imperative
   counterpart: `preload` and `preinit` do from code what a hoisted `<link>` does from JSX.
 - **[Topic 08 · Prerendering](../08-prerendering/README.md)** — the static renderers expect the
   tree to render the whole document, which is what makes metadata hoisting necessary rather
