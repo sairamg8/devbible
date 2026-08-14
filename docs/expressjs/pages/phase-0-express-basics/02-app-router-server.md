@@ -127,4 +127,4 @@ The **server** (`server.close`), not `app`. Express does not own process signals
 
 ---
 
-← Prev: [What Express is](01-what-express-is.md) · Next → [The request lifecycle](03-request-lifecycle.md)
+← Prev: [What Express is](01-what-express-is/README.md) · Next → [The request lifecycle](03-request-lifecycle.md)

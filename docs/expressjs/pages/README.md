@@ -7,10 +7,28 @@ sidebar_position: 0
 > **Target: Express 5.x on Node 24** — examples executed on **Express 5.2.1** /
 > **Node 24.19.0** before they are written down.
 
-:::info ✅ COMPLETE — session `8679dc8c`, 2026-08-14
+:::caution 🔴 ACTIVE — Master-tier depth pass, session `ffadd057`, 2026-08-14
 
-**All 11 phases, 114 of 114 syllabus topics, 85 pages — every one carrying a
-`> Verified:` line, none over the 300-line cap, no broken links.**
+**Structurally complete, not yet finished.** All 11 phases, 114 of 114 syllabus topics,
+86 pages — every one carrying a `> Verified:` line, a tier badge, Gotchas, a Trade-off
+and Interview questions; every phase README has a Coverage table; no duplicate headings,
+nothing over the 300-line cap, no broken links.
+
+**What is still wrong: depth does not follow tier.** All 28 Master-tier topics sit
+between 63 and 200 lines and **not one of them is chunked** — against a corpus where
+PostgreSQL's Master topics median 530 lines across chunk directories. The tier curve is
+flat (Master avg 139, Understand avg 144), which is the documented tell that pages were
+sized to the 300-line cap instead of to the topic. **The cap is a file-size rule, never a
+content budget.**
+
+**This pass rewrites all 28 Master topics to the depth they deserve**, splitting a topic
+into a `NN-topic/` directory on a concept boundary when it passes 300 lines. It is
+additive: existing prose, examples and console blocks are kept — nothing is re-run and
+nothing is invented.
+
+:::
+
+:::info Previous pass — session `8679dc8c`, 2026-08-14
 
 Picked up after the [Node.js audit](../../nodejs/pages/README.md) confirmed Node
 complete — Express is a thin layer over `node:http`, so it was deliberately left until
