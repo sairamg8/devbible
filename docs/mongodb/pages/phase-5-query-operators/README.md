@@ -7,7 +7,7 @@ sidebar_position: 0
 > Verified: 2026-08-15 against the **MongoDB Manual** (v8.0). Sources named per page.
 > **Documentation-validated** under the no-new-sandboxes rule; **no console blocks**.
 
-**🚧 3 of 6 topics written.** The operator surface — and the array-matching semantics that
+**✅ 6 of 6 topics written — COMPLETE.** The operator surface — and the array-matching semantics that
 produce the most confident wrong answers in MongoDB.
 
 > **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82 topics**,
@@ -18,16 +18,16 @@ produce the most confident wrong answers in MongoDB.
 | 01 | [Comparison operators](./01-comparison-operators.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | [Logical operators](./02-logical-operators.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 03 | [Element operators — `$exists` and `$type`](./03-element-operators.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 04 | [`$regex`](./04-regex.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 05 | [`$expr`](./05-expr.md) | <span className="db-tier t-master">Master</span> | ⬜ |
-| 06 | [Array matching — exact vs containment](./06-array-matching.md) | <span className="db-tier t-master">Master</span> | ⬜ |
+| 04 | [`$regex`](./04-regex.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 05 | [`$expr`](./05-expr.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 06 | [Array matching — exact vs containment](./06-array-matching.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **3 of 6** |
-| Pages on disk | **3** |
+| Topics written | **6 of 6 — COMPLETE** |
+| Pages on disk | **6** |
 | Evidence | MongoDB Manual, named per page; **no console blocks** |
 
 ## The theme
