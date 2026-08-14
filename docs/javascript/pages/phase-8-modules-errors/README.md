@@ -8,10 +8,10 @@ sidebar_position: 0
 code is split, how failure is represented, and what the garbage collector will and will not
 do for you.
 
-## Status — **in progress** (2026-08-14)
+## Status — **Master tier COMPLETE** (2026-08-14)
 
 **Master tier first.** Phase 8 has **four** Master topics — 01 through 04 — written in
-syllabus order. **03 of 4 done.**
+syllabus order. **ALL 4 DONE — the Master tier of phase 8 is COMPLETE.**
 
 ## Topics
 
@@ -20,7 +20,7 @@ syllabus order. **03 of 4 done.**
 | 01 | **[ES modules](./01-es-modules/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Modules are singletons, strict, deferred and hoisted](./02-module-semantics/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[`Error` and its subclasses](./03-error-and-subclasses/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04 | Leaks you will actually cause | <span className="db-tier t-master">Master</span> | planned |
+| 04 | **[Leaks you will actually cause](./04-leaks/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05–14 | Dynamic `import()`, circular imports, `throw`/`try`/`catch`, custom errors, failing well, global error handling, the memory model, finding a leak, bundlers, testing | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15–18 | CommonJS, `AggregateError`, mark-and-sweep GC, linting | <span className="db-tier t-know">Know</span> | deferred |
 

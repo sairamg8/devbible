@@ -27,7 +27,7 @@ import Progress from '@site/src/components/Progress';
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
-| **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **in progress** — Master tier 03 of 4 |
+| **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
 | 9 · The DOM | Web APIs | 19 | planned |
 | 10 · Events and user input | Web APIs | 14 | planned |
 | 11 · Network, storage and data transfer | Web APIs | 21 | planned |
@@ -45,10 +45,10 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — currently **Phase 7 · Asynchronous JavaScript**, Master tier |
-| **Last touched** | **Phase 8 topic 03 · `Error` and its subclasses** (2 chunks) — 2026-08-14 |
+| **Last touched** | **Phase 8 topic 04 · Leaks** — **Phase 8 Master tier COMPLETE** (2026-08-14) |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–11 ✅** |
-| **Next** | **Phase 8 topic 04 · Leaks you will actually cause** — completes the phase 8 Master tier |
-| **Totals** | **140 pages**, 181 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Next** | **Phase 9 · The DOM** — Master topics. (Master-first: phase 8's Understand/Know topics 05–18 stay deferred.) |
+| **Totals** | **142 pages**, 184 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
