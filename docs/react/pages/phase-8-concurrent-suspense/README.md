@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 1 of 18 topics written.**
+🚧 **In progress — 2 of 18 topics written.**
 
 **React can start rendering, stop, do something more urgent, and throw the unfinished
 work away.** Everything in this phase is a consequence of that one sentence — including
@@ -18,7 +18,7 @@ advice and became a correctness requirement.
 | # | Topic | Tier | In one line |
 |---|---|---|---|
 | 01 | **[`startTransition` and `useTransition`](01-usetransition/README.md)** | <span className="db-tier t-master">Master</span> | Marking an update non-urgent, and what `isPending` really tells you |
-| 02 | `<Suspense>` | <span className="db-tier t-master">Master</span> | The boundary, the fallback, and what "suspending" means |
+| 02 | **[`<Suspense>`](02-suspense/README.md)** | <span className="db-tier t-master">Master</span> | The boundary, the fallback, and what "suspending" means |
 | 03 | What can actually suspend | <span className="db-tier t-master">Master</span> | `lazy`, `use`, server data — and why a `fetch` in an effect never will |
 | 04 | `use(promise)` | <span className="db-tier t-master">Master</span> | Reading a promise during render, and the stability requirement |
 | 05 | Request waterfalls | <span className="db-tier t-master">Master</span> | Three boundaries, three sequential round trips — and the fixes |
@@ -69,8 +69,9 @@ that everyone else is writing about them.
 
 ## Coverage
 
-**18 topics.** 1 written so far → 3 files. Topic 01 is chunked into two parts (496
-lines): what a transition *is*, then how you observe it and choose between the three APIs.
+**18 topics.** 2 written so far → 6 files. Both are chunked into two parts each — topic
+01 (496 lines) into what a transition *is* and how you observe and choose it; topic 02
+(511 lines) into the boundary's own behaviour and what it does to the tree inside it.
 
 ## Gate
 
