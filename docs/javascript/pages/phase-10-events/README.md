@@ -7,10 +7,12 @@ sidebar_position: 0
 *14 topics.* As the syllabus puts it, **delegation is the row that pays for the phase** — it
 is the difference between one listener and a thousand.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **Understand tier under way — 5 of 14** (2026-08-15)
 
-**Master tier first.** Phase 10 has **four** Master topics — 01 through 04 — written in
-syllabus order. **ALL 4 DONE — the Master tier of phase 10 is COMPLETE.**
+**Master tier ✅ COMPLETE** — all four Master topics (01–04), written in syllabus order.
+
+🚧 **Now the Understand tier (05–11), then Know (12–14).** **05 · Form and input events is
+written**; 06 onward remain. Lane B of the two-way JavaScript split owns this phase.
 
 ## Topics
 
@@ -20,7 +22,8 @@ syllabus order. **ALL 4 DONE — the Master tier of phase 10 is COMPLETE.**
 | 02 | **[`addEventListener`](./02-addeventlistener/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[The event object](./03-the-event-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Event delegation](./04-event-delegation/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05–11 | Form and input events, keyboard, pointer, custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | deferred |
+| 05 | **[Form and input events](./05-form-and-input-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 06–11 | Keyboard, pointer, custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 12–14 | `EventTarget` as a base class, touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | deferred |
 
 ## How these pages are verified
