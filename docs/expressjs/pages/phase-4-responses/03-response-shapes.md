@@ -58,4 +58,4 @@ Clients parse one schema; you can add `code` without breaking UIs.
 
 ---
 
-← Prev: [Status and headers](02-status-and-headers.md) · Next → [Headers already sent](04-headers-already-sent.md)
+← Prev: [Status and headers](02-status-and-headers/README.md) · Next → [Headers already sent](04-headers-already-sent.md)

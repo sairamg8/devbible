@@ -104,7 +104,7 @@ Two things fall out of that table.
 **`response.js` alone is 38% of Express.** The framework is mostly response
 helpers — `res.json`, `res.send`, `res.sendFile`, `res.format`, `res.redirect`,
 `res.cookie`. That is the actual product, and it is why [Phase
-4](../../phase-4-responses/01-res-methods.md) has more genuine Express API in it
+4](../../phase-4-responses/01-res-methods/README.md) has more genuine Express API in it
 than any other phase.
 
 **Routing, the thing Express is named for, is not in Express** — 1,237 lines in a
