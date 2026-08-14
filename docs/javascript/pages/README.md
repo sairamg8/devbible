@@ -28,7 +28,7 @@ import Progress from '@site/src/components/Progress';
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
-| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · Understand under way (**07** ✅) |
+| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · Understand under way (**07–08** ✅) |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | 🟡 **Master tier ✅** (01–04 — all four); 05–14 deferred |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–05 — all five); 06–21 deferred |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–02 — both); 03–21 deferred |
@@ -47,7 +47,7 @@ split by phase. Take your lane's phases and **never write in the other lane's**.
 | Lane | Phases | Topics left | Held by |
 |---|---|---|---|
 | **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **69** | session `ec7d13f7` |
-| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **74** | session `b4ffc223` |
+| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **73** | session `b4ffc223` |
 
 **The seam is the language itself versus the browser platform**, so the two lanes barely
 cross-reference each other. Where a page needs the other lane's topic, **write it as bold plain
@@ -97,9 +97,9 @@ are free). If you must, say so here first and take a *different phase*.
 |---|---|
 | **Claimed by** | session `b4ffc223` (Opus 5), from 2026-08-14 — first holder of lane B |
 | **Claim** | **phases 9, 10, 11, 12, 17 and 18 only** — DOM, events, network/storage, browser platform, machine coding, and the three kept storefront topics. 🔴 **TIER-LOCKED to Understand and Know**; Master is closed at 99/99 and is not reopened for depth. The 2026-08-14 scope cut applies: phase 18 keeps **only topics 11, 12 and 15**; phases 13, 14, 15 are parked and 16 is dropped — none of them are in either lane |
-| **Last touched** | **Phase 9 topic 07 · Traversal** — 2026-08-14, chunked to 3 files (index + 2) |
-| **Next** | **Phase 9 topic 08 · Classes and styles from JavaScript**, then 09–15 (Understand), 16–18 (Know), 19 (When Needed); then phase 10 from topic 05 |
-| **Remaining** | **74 topics** — 9 (12), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
+| **Last touched** | **Phase 9 topic 08 · Classes and styles from JavaScript** — 2026-08-14, 3 files |
+| **Next** | **Phase 9 topic 09 · Forms**, then 10–15 (Understand), 16–18 (Know), 19 (When Needed); then phase 10 from topic 05 |
+| **Remaining** | **73 topics** — 9 (11), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
 | **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
 
 ⛔ **Lane B never writes in phases 3–8** — those are lane A's, live in another session

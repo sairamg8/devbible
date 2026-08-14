@@ -27,3 +27,4 @@ sandbox/**/.stryker-tmp/
 sandbox/**/*.log
 build-react*
 build-*
+..docusaurus-
