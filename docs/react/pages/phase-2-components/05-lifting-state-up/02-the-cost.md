@@ -170,7 +170,9 @@ At some size, lifting stops being the right shape. The signals are concrete:
 
 The last row is the one most often got wrong. Server data lifted into `useState`
 at the top of the app becomes a hand-written cache with no invalidation, no
-deduplication and no staleness policy — the problem Phase 12 exists to address.
+deduplication and no staleness policy — the problem a query cache exists to address.
+⚠️ The phase that was going to cover that (12) was **dropped**; this bible states the
+problem and does not prescribe a client-side solution.
 
 react.dev's ordering is worth keeping: props first, composition next, context
 when props become unwieldy. Skipping to a global store because lifting felt

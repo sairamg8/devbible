@@ -6,21 +6,32 @@ sidebar_position: 0
 
 :::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** session `6ffd754d` · **Since:** 2026-08-14 · **Scope:** the whole of
-`docs/react/`, straight through to Phase 14.
+**Owner:** session `33f8be33` · **Since:** 2026-08-14 · **Scope:** the whole of
+`docs/react/`, straight through to Phase 14. Taken over from session `2ee7a9a3`
+(itself from `6ffd754d`) on the user's direct instruction to work React — not
+claimed silently.
+
+**Written in a worktree**, not this checkout:
+`/mnt/Storage/Backup/Knowledge/devbible-react`, branch `react-phase-7`. If React
+pages look missing here, they are on that branch and not yet merged.
 
 | Phase | State |
 |---|---|
 | 0, 1 | ✅ Done (measured, `sandbox/react-p0` and `react-p1`) |
 | 2 | ✅ Done — 16 topics |
 | 3 | ✅ Done — 17 topics, 19 files |
-| 4 | ✅ **Done — 18 topics, 27 files, 0 broken links, 0 over cap** |
-| 5 | 🔴 **In progress** — Refs, context and reducers (16 topics) |
-| 6–14 | ⬜ Claimed by this session |
+| 4 | ✅ Done — 18 topics, 27 files |
+| 5 | ✅ Done — 16 topics, 18 files |
+| 6 | ✅ **Done — 17 topics, 18 files, 0 broken links, 0 over cap** |
+| 7 | ✅ **Done — 12 topics, 25 files, 7,084 lines, 0 over cap, build-verified** |
+| 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
+| 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
+| 10 | ✅ **Done — 19 topics, 21 files, 4,780 lines, 0 over cap** |
+| 11, 14 | ⬜ Claimed by this session — 31 topics left |
 
 **If you are a different session, do not write React pages.** Pick something with
-no owner — **MongoDB now has a complete 204-topic syllabus and zero pages**, and
-Docker, Redis and Nginx have neither. See the claims table in
+no owner — **TypeScript, Git and MongoDB are all idle**, and Docker & Podman and
+Nginx have no syllabus at all. See the claims table in
 [`docs/README.md`](../../README.md).
 
 Concepts for each finished phase are in the memory store at
@@ -62,14 +73,12 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
 | **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | ✅ **Written** | 16 topics, 18 files |
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
-| 7 — Custom hooks and the Rules of React | Not started | — |
-| 8 — Concurrent rendering, Suspense, transitions | Not started | — |
-| 9 — Forms, Actions and optimistic UI | Not started | — |
-| 10 — Server Components and Server Functions | Not started | — |
+| **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | ✅ **Written** | 12 topics, 25 files |
+| **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | ✅ **Written** | 18 topics, 20 files |
+| **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
+| **[10 — Server Components and Server Functions](./phase-10-server-components/README.md)** | ✅ **Written** | 19 topics, 21 files |
 | 11 — Server rendering, hydration and the DOM APIs | Not started | — |
-| 12 — Data and state in a real app | Not started | — |
-| 13 — Routing, structure and the app shell | Not started | — |
-| 14 — Correctness, testing and delivery | Not started | — |
+| 14 — Testing React (RTL, Jest/Vitest, events, API mocking) | Not started | — |
 
 ## Progress
 
@@ -79,7 +88,7 @@ import Progress from '@site/src/components/Progress';
 
 ## Reading order
 
-Phases are sequential through Phase 7. Phase 0 is not optional: every "React is
+Phases are sequential through Phase 9. Phase 0 is not optional: every "React is
 weird" complaint — the state that reset, the effect that ran twice, the value
 that was one update behind — traces back to it.
 

@@ -165,7 +165,8 @@ a single mismatch warning, and reports a thrown render error through
   server-rendered React are **Nginx** topics; Phase 14 names the handoff.
 - **Deliberately not here:** framework-specific routing, caching directives and
   build configuration. Next.js and React Router are covered as *choices* in
-  Phase 13, not taught as their own syllabi.
+  **Phase 10 · 16**, not taught as their own syllabi. (Phase 13 would have gone
+  further; it was **dropped on 2026-08-14**.)
 
 ---
 

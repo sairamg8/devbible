@@ -43,9 +43,10 @@ to CSS. The rule is: *if removing React would remove the topic, it is React's.*
 
 Two deliberate overlaps, both handled by linking rather than re-explaining:
 
-- **Routing** (Phase 13) is not React, but no React application exists without
-  it, and the router is where Suspense, code splitting and data loading actually
-  get used. React owns the integration; the router owns its own API.
+- **Routing** is not React, and the phase that would have covered it (13) was
+  **dropped on 2026-08-14**. Routers are still discussed where they intersect
+  React — as a framework *choice* in Phase 10 — but this syllabus does not teach
+  one.
 - **Server Components** (Phase 10) sit on a bundler and usually a framework.
   React owns the model and the directives; the framework owns the plumbing.
 
@@ -85,7 +86,7 @@ page.
 | 1 | **[The React model](syllabus/01-the-react-model.md)** | How React runs, JSX, components, state and the render cycle | 0–3 | 65 |
 | 2 | **[Hooks, completely](syllabus/02-hooks.md)** | Effects, refs/context/reducers, performance and the Compiler, custom hooks | 4–7 | 63 |
 | 3 | **[Concurrent React and the server](syllabus/03-concurrent-and-server.md)** | Suspense and transitions, Actions, Server Components, SSR and hydration | 8–11 | 68 |
-| 4 | **[Building a real app](syllabus/04-building-an-app.md)** | Data and state, routing and structure, correctness and delivery | 12–14 | 48 |
+| 4 | **[Testing React](syllabus/04-building-an-app.md)** | React Testing Library, Jest/Vitest, events and API mocking. Phases 12 and 13 were **dropped** | 14 | 14 |
 
 ## Progress
 
@@ -110,10 +111,10 @@ Counted from the four part files, not estimated.
 | 1 The React model | 65 | 23 |
 | 2 Hooks, completely | 63 | 20 |
 | 3 Concurrent React and the server | 68 | 17 |
-| 4 Building a real app | 48 | 10 |
+| 4 Testing React | 14 | 6 |
 
 Master sits inside the brief's 25–30 % band, weighted toward Parts 1 and 2 —
-**43 of the 70** — because the render cycle and the hook rules are what you use
+**43 of the 66** — because the render cycle and the hook rules are what you use
 with no documentation open, in every file, every day. Part 3 is deliberately
 lighter on Master despite being the most *modern* material: Server Components
 matter enormously and still change often enough that memorising the plumbing is
@@ -136,7 +137,7 @@ of React is genuinely "look it up the day you need it", which is why
 | Required | The **DOM and events** (JavaScript Phases 9–10) before React Phase 5 — refs and portals assume it |
 | Strongly recommended | **TypeScript** Phases 0–3. Every real React codebase in 2026 is typed; the pages use TS in examples and explain the React-specific types |
 | Required for Part 3 | **Node** Phase 0 (the runtime model). Server Components run in Node; "it runs on the server" is meaningless without knowing what that means |
-| Pairs with | **Express** and **PostgreSQL** for Phase 12 — the React half of talking to your own API |
+| Pairs with | **Express** and **PostgreSQL** — for Server Components reaching a database directly (Phase 10). The planned Phase 12 on the React half of talking to your own API was **dropped** |
 | Not required | Any bundler expertise. Phase 0 sets up Vite and moves on |
 
 ## Reading order
