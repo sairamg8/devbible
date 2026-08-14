@@ -1,6 +1,6 @@
 ---
-title: "The static APIs"
-sidebar_label: "01 · The static APIs"
+title: "The third renderer family"
+sidebar_label: "01 · The third renderer family"
 sidebar_position: 1
 ---
 
@@ -9,8 +9,7 @@ sidebar_position: 1
 > Verified: 2026-08-14 against **react 19.2.8**, from documentation — react.dev
 > [`prerender`](https://react.dev/reference/react-dom/static/prerender) and
 > [`prerenderToNodeStream`](https://react.dev/reference/react-dom/static/prerenderToNodeStream)
-> (definition, full options list, returns, the caveat, both "when should I use this"
-> notes, and every Usage section), with
+> (definition, environment notes, returns, and both "when should I use this" sections), with
 > [`<Suspense>`](https://react.dev/reference/react/Suspense) for what activates a boundary.
 > No sandbox script backs this page; claims are cited, not measured.
 
@@ -42,7 +41,7 @@ and, from the other side:
 
 So the choice between the two static APIs is **not** a feature decision. It is the same
 question as `renderToPipeableStream` vs `renderToReadableStream` — which stream type your
-runtime speaks. Everything else on this page is true of both.
+runtime speaks. Everything else in this topic is true of both.
 
 ## The signature
 
@@ -70,7 +69,8 @@ shell.
 
 🔴 **`postponed` is `null` on the happy path.** A complete prerender needs no resume, and
 that is how you tell the two cases apart in code. The non-null case is
-[topic 09](../09-partial-prerendering.md) and nothing else on this page depends on it.
+[chunk 03](03-aborting-errors-caveats.md) and, beyond it,
+[topic 09](../09-partial-prerendering.md); nothing else in this chunk depends on it.
 
 ## The defining property: it waits for all data
 
@@ -114,129 +114,6 @@ would have produced under `renderToString` — and Effects do not run on the ser
 the fetch never even starts. If your prerendered pages are coming out empty, this is almost
 always why, and no renderer option fixes it. The data has to move to a source that suspends.
 
-## The root component renders the whole document
-
-Both references say the same thing about `reactNode`:
-
-> It is expected to represent the entire document, so the App component should render the
-> `<html>` tag.
-
-```js
-export default function App() {
-  return (
-    <html>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/styles.css"></link>
-        <title>My app</title>
-      </head>
-      <body>
-        <Router />
-      </body>
-    </html>
-  );
-}
-```
-
-React fills in the parts you did not write:
-
-> React will inject the **doctype** and your bootstrap `<script>` tags into the resulting
-> HTML stream:
-
-```html
-<!DOCTYPE html>
-<html>
-  <!-- ... HTML from your components ... -->
-</html>
-<script src="/main.js" async=""></script>
-```
-
-And the client side matches it — `hydrateRoot` is given `document`, not a `div`:
-
-```js
-import { hydrateRoot } from 'react-dom/client';
-import App from './App.js';
-
-hydrateRoot(document, <App />);
-```
-
-That pairing is not optional trivia. Hydrating the whole document is what makes the
-[document-metadata](../10-document-metadata.md) and
-[stylesheet](../15-stylesheets-and-precedence.md) features of React 19 work end to end —
-React needs to own `<head>` on both sides.
-
-## Using it
-
-**Piping the prelude straight to a response** (Node):
-
-```js
-import { prerenderToNodeStream } from 'react-dom/static';
-
-// The route handler syntax depends on your backend framework
-app.use('/', async (request, response) => {
-  const { prelude } = await prerenderToNodeStream(<App />, {
-    bootstrapScripts: ['/main.js'],
-  });
-
-  response.setHeader('Content-Type', 'text/plain');
-  prelude.pipe(response);
-});
-```
-
-**Reading it into a string** — which is what an actual build step does, because the output is
-going to a file rather than a socket:
-
-```js
-import { prerenderToNodeStream } from 'react-dom/static';
-
-async function renderToString() {
-  const {prelude} = await prerenderToNodeStream(<App />, {
-    bootstrapScripts: ['/main.js']
-  });
-
-  return new Promise((resolve, reject) => {
-    let data = '';
-    prelude.on('data', chunk => {
-      data += chunk;
-    });
-    prelude.on('end', () => resolve(data));
-    prelude.on('error', reject);
-  });
-}
-```
-
-⚠️ The reference's own example names the function `renderToString`, which is a genuinely
-confusing choice given that `renderToString` is a different React API with different
-semantics. It is doing the opposite of what the real `renderToString` does — waiting rather
-than bailing out — so do not read that example as an equivalence.
-
-## The options
-
-Identical lists on both APIs, and identical to the server renderers' with one absence
-(covered in [chunk 02](02-aborting-errors-caveats.md)):
-
-| Option | What it does |
-|---|---|
-| `bootstrapScripts` | *"An array of string URLs for the `<script>` tags to emit on the page. Use this to include the `<script>` that calls `hydrateRoot`. **Omit it if you don't want to run React on the client at all**."* |
-| `bootstrapModules` | the same, but emits `<script type="module">` |
-| `bootstrapScriptContent` | *"this string will be placed in an inline `<script>` tag"* |
-| `identifierPrefix` | prefix for `useId` IDs. *"Must be the same prefix as passed to `hydrateRoot`"* |
-| `namespaceURI` | root namespace. Defaults to HTML; `'http://www.w3.org/2000/svg'` or `'http://www.w3.org/1998/Math/MathML'` |
-| `onError` | *"fires whenever there is a server error, whether recoverable or not"* |
-| `progressiveChunkSize` | *"The number of bytes in a chunk."* |
-| `signal` | *"lets you abort prerendering and render the rest on the client"* |
-
-🔴 **`bootstrapScripts` is the switch between a hydrated page and a genuinely static one.**
-Omitting it is a documented, supported choice — you get HTML with no React on the client and
-no hydration cost at all. For a marketing page or a docs page, that is the whole point of
-prerendering, and it is the one option choice here with a real architectural consequence.
-
-**`identifierPrefix` has to match `hydrateRoot`.** It is the same requirement as everywhere
-else `useId` is involved; a mismatch means the server IDs and the client IDs disagree, which
-is a hydration mismatch of exactly the kind [topic 02](../02-hydration-mismatches.md)
-describes.
-
 ## Gotchas
 
 **Symptom:** prerendered pages ship with empty lists and loading placeholders baked in.
@@ -252,20 +129,18 @@ That is the documented design — *"designed for static site generation (SSG) ah
 **Fix:** use `renderToPipeableStream` / `renderToReadableStream` for per-request rendering
 ([topic 06](../06-streaming-ssr.md)). Keep the static APIs for build time.
 
-**Symptom:** `prerender` is not a function / an import error at build time in Node.
+**Symptom:** `prerender is not a function`, or an import error at build time in Node.
 **Cause:** `prerender` depends on Web Streams; Node's entry point is
 `prerenderToNodeStream`. Both live in `react-dom/static`, not `react-dom/server`.
 **Fix:** pick the one that matches the runtime — Node gets `prerenderToNodeStream`, Deno and
 modern edge runtimes get `prerender`.
 
-**Symptom:** hydration warnings about `useId` values on a prerendered page.
-**Cause:** `identifierPrefix` was passed to the prerender but not to `hydrateRoot`, or the
-two differ.
-**Fix:** pass the same prefix on both sides.
-
-**Symptom:** the page renders but nothing is interactive.
-**Cause:** `bootstrapScripts` was omitted, so no script calls `hydrateRoot`.
-**Fix:** add it — or, if the page really is meant to be static, this is working as intended.
+**Symptom:** the prelude is being awaited chunk by chunk in the hope of getting content
+earlier.
+**Cause:** the stream is a consumption detail. The Promise has already waited for the entire
+app before handing it over.
+**Fix:** if you need content earlier, you need a streaming renderer, not a different way of
+reading this one.
 
 ## Interview questions
 
@@ -299,12 +174,12 @@ rendering, and Suspense only detects sources that activate a boundary, so `prere
 nothing to wait for and captures the loading state as the final HTML. The fix is in the data
 layer, not the renderer.
 
-**★ How do you prerender a page that ships no React at all?**
-Omit `bootstrapScripts` (and `bootstrapModules`). The reference says so directly — *"Omit it
-if you don't want to run React on the client at all."* You get HTML with no hydration and no
-client runtime cost.
+**★ What is `postponed` and when is it `null`?**
+It is an opaque, JSON-serializeable handle on work the prerender did not finish, meant to be
+passed to a resume API. It is `null` when the render completed — which is the ordinary case,
+and the signal that the `prelude` already contains everything.
 
 ---
 
 Index: [08 · Prerendering](README.md) ·
-Next → [Aborting, errors and the caveat](02-aborting-errors-caveats.md)
+Next → [Calling them](02-calling-them.md)

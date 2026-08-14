@@ -19,17 +19,21 @@ possible — and what makes an escape hatch necessary when a data source never a
 
 | # | Chunk | What it covers |
 |---|---|---|
-| 01 | **[The static APIs](01-the-static-apis.md)** | Where the two sit among the five renderers, the async signature, `prelude` and `postponed`, "waits for all data" and exactly what data counts, rendering the whole document, and every option |
-| 02 | **[Aborting, errors and the caveat](02-aborting-errors-caveats.md)** | `signal` and why an abort is a partial success, what lands in the HTML, the handover to `resume`, `onError` for recoverable failures, and why `nonce` is deliberately unavailable |
+| 01 | **[The third renderer family](01-the-static-apis.md)** | Where the two sit among the five renderers, the async signature, `prelude` and `postponed`, "waits for all data" and exactly what data counts |
+| 02 | **[Calling them](02-calling-them.md)** | Rendering the whole document, the doctype and bootstrap injection, both ways to consume the prelude, and every option — including the one that decides whether the page ships React at all |
+| 03 | **[Aborting, errors and the caveat](03-aborting-errors-caveats.md)** | `signal` and why an abort is a partial success, what lands in the HTML, the handover to `resume`, `onError` for recoverable failures, and why `nonce` is deliberately unavailable |
 
-## Why this is two files
+## Why this is three files
 
-Because a finished prerender and an unfinished one are different subjects. The first is an
-API — what you call, what comes back, what "all data" means. The second is a design decision:
-what happens when waiting for everything is not something you can afford, which is where
-`postponed` appears and where [topic 09](../09-partial-prerendering.md) begins. Splitting
-there keeps the abort machinery out of the introduction and keeps the introduction out of the
-partial-rendering story.
+Three questions, and they are answered from different material. **What is this thing** is a
+comparison — five renderers, one property that separates this family from the other two.
+**How do you call it** is an API surface: the document requirement, the two consumption
+patterns, the options. **What if it never finishes** is a design decision rather than a
+feature, and it is where `postponed` appears and where
+[topic 09](../09-partial-prerendering.md) begins.
+
+Splitting there keeps the abort machinery out of the introduction, and keeps the option table
+out of the argument about what prerendering *is*.
 
 ## Where this connects
 

@@ -1,7 +1,7 @@
 ---
 title: "Aborting, errors and the caveat"
-sidebar_label: "02 · Aborting, errors and the caveat"
-sidebar_position: 2
+sidebar_label: "03 · Aborting, errors and the caveat"
+sidebar_position: 3
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -13,7 +13,8 @@ sidebar_position: 2
 > value, the `onError` option and the single Caveat on each page.
 > No sandbox script backs this page; claims are cited, not measured.
 
-[Chunk 01](01-the-static-apis.md) described a prerender that finishes. This one is about the
+Chunks [01](01-the-static-apis.md) and [02](02-calling-them.md) described a prerender that
+finishes. This one is about the
 prerender that does not — which is not a failure mode, it is a **feature**, and it is the
 mechanism the whole of [topic 09](../09-partial-prerendering.md) is built on.
 
@@ -233,5 +234,6 @@ fallbacks.
 
 ---
 
-← Prev: [The static APIs](01-the-static-apis.md) ·
-Index: [08 · Prerendering](README.md)
+← Prev: [Calling them](02-calling-them.md) ·
+Index: [08 · Prerendering](README.md) ·
+Next → [Partial pre-rendering (19.2)](../09-partial-prerendering.md)
