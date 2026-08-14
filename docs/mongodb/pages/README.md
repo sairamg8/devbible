@@ -11,8 +11,8 @@ All of `docs/mongodb/` is claimed by session `05921047`, which picked it up on
 **`devbible-mongodb`, branch `mongodb-pages`** — not on `main` — so other live
 sessions' builds are unaffected until it merges.
 
-**State: Phase 0 COMPLETE (5/5). Phase 1 in flight — 2 of 6 topics.**
-Next: **03 · `ObjectId`**.
+**State: Phases 0 and 1 COMPLETE — 11 of 82 topics.**
+Next: **Phase 2 · `mongosh`, mastered (5 topics)**.
 
 The earlier claim by session `6f020813` was stale: that session finished Phase 0
 and stopped without writing this index; session `632ebd35` repaired two
@@ -41,7 +41,7 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | [0 · How MongoDB runs](./phase-0-how-mongodb-runs/README.md) | 5 | ✅ written |
-| [1 · Documents, BSON types and `_id`](./phase-1-documents-and-bson/README.md) | 6 | 🚧 **writing — 5 of 6** |
+| [1 · Documents, BSON types and `_id`](./phase-1-documents-and-bson/README.md) | 6 | ✅ written |
 | 2 · `mongosh`, mastered | 5 | ⬜ planned |
 | 3 · Schema design and modelling | 6 | ⬜ planned |
 | 4 · CRUD and DML | 6 | ⬜ planned |

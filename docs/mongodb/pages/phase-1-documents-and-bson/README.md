@@ -8,7 +8,7 @@ sidebar_position: 0
 > specification**. Sources named per page. **Documentation-validated** under the
 > no-new-sandboxes rule — no console blocks unless a run produced them.
 
-**🚧 5 of 6 topics written.** The type system. **Most "why didn't my query match?"
+**✅ 6 of 6 topics written — COMPLETE.** The type system. **Most "why didn't my query match?"
 bugs are type bugs**, and they are invisible until you go looking for them.
 
 > **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82
@@ -21,14 +21,14 @@ bugs are type bugs**, and they are invisible until you go looking for them.
 | 03 | [`ObjectId`](./03-objectid.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 04 | [Numbers — int32, int64, double, Decimal128](./04-numbers.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 05 | [Dates vs Timestamps](./05-dates-vs-timestamps.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 06 | [Arrays as a first-class type](./06-arrays.md) | <span className="db-tier t-master">Master</span> | ⬜ |
+| 06 | [Arrays as a first-class type](./06-arrays.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **5 of 6** |
-| Pages on disk | **5** |
+| Topics written | **6 of 6 — COMPLETE** |
+| Pages on disk | **6** |
 | Evidence | MongoDB Manual and the BSON spec, named per page; **no console blocks** |
 
 ## Why a whole phase on types
