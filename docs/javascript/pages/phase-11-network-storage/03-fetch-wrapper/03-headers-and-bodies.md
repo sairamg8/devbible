@@ -145,7 +145,7 @@ Two practical consequences:
 Also note the response side: a **`Headers` object from a cross-origin response only exposes the
 safelisted headers** unless the server sends `Access-Control-Expose-Headers`. So
 `res.headers.get("x-request-id")` returning `null` is usually a CORS configuration fact, not a
-missing header — [05 · CORS from the client side](../README.md) *(not written yet)*.
+missing header — [05 · CORS from the client side](../05-cors-client-side/README.md).
 
 ## Version 3 — headers wired in
 

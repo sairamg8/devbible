@@ -90,7 +90,7 @@ The short list — MDN names *"a network error or a bad scheme"*:
 tells your JavaScript almost nothing — usually just `TypeError: Failed to fetch` — because
 revealing the real response would itself defeat the same-origin policy. **The detail is in the
 console, not in the error object**, which is why "read the console error" is the actual advice
-in [05 · CORS from the client side](../README.md).
+in [05 · CORS from the client side](../05-cors-client-side/README.md).
 
 So `TypeError: Failed to fetch` means "the request did not produce a usable response", and the
 cause is nearly always CORS, offline, or a blocked request — never a 4xx or 5xx.

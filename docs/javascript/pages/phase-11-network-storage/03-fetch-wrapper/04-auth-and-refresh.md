@@ -71,7 +71,7 @@ The three values:
 true` **and** an explicit origin — `Access-Control-Allow-Origin: *` is rejected by the browser
 once credentials are involved, because a wildcard plus credentials would let any site read
 authenticated responses. The server half is
-[05 · CORS from the client side](../README.md) *(not written yet)* and the Express syllabus.
+[05 · CORS from the client side](../05-cors-client-side/README.md) and the Express syllabus.
 
 🔴 **Pick one scheme.** A token in `localStorage` *and* cookies means two auth paths that can
 disagree — requests succeed in one tab and fail in another depending on which credential happened
