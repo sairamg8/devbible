@@ -57,7 +57,7 @@ does not authorize `:projectId`.
   — why a router takes its dependencies as an argument.
 - **→ [Phase 8 · 07 · Ownership](../../phase-8-validation-authz/07-ownership/README.md)** —
   the nested-resource authorization gap, in full.
-- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**
+- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app/README.md)**
   — the factory chunk 03 sketches.
 
 ---

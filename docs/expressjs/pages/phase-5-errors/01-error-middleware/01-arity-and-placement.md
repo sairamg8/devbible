@@ -100,7 +100,7 @@ app.use('/api', apiRouter);     // index 1
 **Mount error handlers last**, below every route and below the 404 handler. In a
 single factory that is easy to see; spread across files it is the thing that
 breaks when someone reorders imports
-([Phase 10 · 01](../../phase-10-app-factory/01-create-app.md)).
+([Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md)).
 
 ## Handlers chain, and that is the useful pattern
 

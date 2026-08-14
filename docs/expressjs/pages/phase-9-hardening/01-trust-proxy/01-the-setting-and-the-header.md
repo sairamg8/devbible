@@ -143,7 +143,7 @@ export function createApp({config}) {
 ```
 
 Two reasons this matters more than it looks
-([Phase 10 · 01](../../phase-10-app-factory/01-create-app.md)):
+([Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md)):
 
 - **Tests should run with `false`.** A test suite that sets `true` will happily
   accept `X-Forwarded-For` from a request builder, which hides exactly the

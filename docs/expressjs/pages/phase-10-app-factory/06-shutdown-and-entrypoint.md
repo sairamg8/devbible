@@ -52,7 +52,7 @@ process.on('SIGTERM', () => shutdown(server, pool));
 **Anything with a side effect belongs in `server.js`**: connecting, listening,
 signal handlers, metrics exporters, cron registration. `app.js` must be importable
 by a test without doing any of it — which is the same rule as
-[page 01](01-create-app.md), stated as a file boundary so it is enforceable by
+[page 01](01-create-app/README.md), stated as a file boundary so it is enforceable by
 looking at the diff.
 
 ## Shutdown is a sequence, and the order is the whole thing

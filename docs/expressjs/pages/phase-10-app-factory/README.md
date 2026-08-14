@@ -13,7 +13,7 @@ sidebar_position: 0
 >
 > The through-line: **an Express app *is* a request listener**, and `app.listen()` is
 > documented as a convenience for `http.createServer(app).listen()`. That single fact is
-> why [the factory must not listen](01-create-app.md), why
+> why [the factory must not listen](01-create-app/README.md), why
 > [Supertest works](03-supertest.md), why [serverless adapters work](07-flags-and-serverless.md),
 > and why [`close` belongs to the server, not the app](06-shutdown-and-entrypoint.md).
 >
@@ -23,7 +23,7 @@ sidebar_position: 0
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[createApp](01-create-app.md)** | <span className="db-tier t-master">Master</span> | Pure factory; no listen inside |
+| 01 | **[createApp](01-create-app/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | Pure factory, no listen inside; the mount order read top to bottom; and what the pattern buys against what it costs |
 | 02 | **[Request id middleware](02-request-id.md)** | <span className="db-tier t-understand">Understand</span> | X-Request-Id + ALS hook |
 | 03 | **[Supertest](03-supertest.md)** | <span className="db-tier t-understand">Understand</span> | Route tests with mocked services |
 | 04 | **[Auth in tests](04-auth-in-tests.md)** | <span className="db-tier t-understand">Understand</span> | Helpers mint sessions/JWTs |
@@ -40,7 +40,7 @@ composition concerns, so they share a page.
 
 | Syllabus topic | Page |
 |---|---|
-| App factory `createApp(deps)` | 01 |
+| App factory `createApp(deps)` | 01 (chunks [01](01-create-app/01-a-function-of-its-dependencies.md) · [02](01-create-app/02-mount-order-is-the-content.md) · [03](01-create-app/03-what-it-buys.md)) |
 | Request-id / correlation middleware | 02 |
 | Integration testing with Supertest | 03 |
 | Mocking external services at the router boundary | 03 |
@@ -58,4 +58,4 @@ composition concerns, so they share a page.
 
 ---
 
-← Syllabus: [Part 4](../../syllabus/04-edge-and-ops.md) · Start → [createApp](01-create-app.md)
+← Syllabus: [Part 4](../../syllabus/04-edge-and-ops.md) · Start → [createApp](01-create-app/README.md)

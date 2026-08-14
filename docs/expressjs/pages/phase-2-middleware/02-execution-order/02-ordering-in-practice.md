@@ -76,7 +76,7 @@ sorter.
 **Assemble in one factory.** One function, all the mounting, numbered comments,
 nothing outside it calling `app.use`. That single decision converts "order is an
 emergent property of the module graph" into "order is twelve lines you can
-review". [Phase 10 · 01](../../phase-10-app-factory/01-create-app.md).
+review". [Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md).
 
 **Assert preconditions loudly.** A middleware that needs another to have run
 should say so at the first request rather than producing `undefined` three layers

@@ -148,7 +148,7 @@ Two mitigations that cost almost nothing:
   or first-request error.
 - **Assemble in one factory**, so the order is readable in one screen rather than
   inferred across six files —
-  [Phase 10 · 01](../../phase-10-app-factory/01-create-app.md).
+  [Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md).
 
 ## Trade-off
 

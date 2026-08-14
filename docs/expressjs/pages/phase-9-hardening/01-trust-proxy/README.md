@@ -46,7 +46,7 @@ cookies vanish without an error.
 
 - **← [Phase 3 · 01](../../phase-3-requests/01-req-anatomy/README.md)** — the
   request properties this setting rewires.
-- **← [Phase 10 · 01](../../phase-10-app-factory/01-create-app.md)** — where the
+- **← [Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md)** — where the
   setting belongs, driven by config and `false` in tests.
 - **→ [02 · CORS](../02-cors.md)** — the other edge concern that fails in ways
   pointing somewhere else.

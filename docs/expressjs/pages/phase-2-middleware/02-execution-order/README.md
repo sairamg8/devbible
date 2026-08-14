@@ -52,7 +52,7 @@ would find out what actually ran for a request that hung.
 - **→ [Phase 9 · 01 · `trust proxy`](../../phase-9-hardening/01-trust-proxy/README.md)** and
   **[· 02 · CORS](../../phase-9-hardening/02-cors.md)** — the two ordering mistakes
   with security consequences.
-- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**
+- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app/README.md)**
   — where the order becomes a readable document.
 - **→ [Phase 10 · 05 · Health and boot](../../phase-10-app-factory/05-health-and-boot.md)**
   — probes above everything, and the restart storm if they are not.

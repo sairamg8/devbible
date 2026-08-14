@@ -131,7 +131,7 @@ server explicitly when you need any of:
   `server.closeIdleConnections()`.
 
 The rule that falls out, and the reason [Phase 10 ·
-01](../../phase-10-app-factory/01-create-app.md) is a Master topic: **the module
+01](../../phase-10-app-factory/01-create-app/README.md) is a Master topic: **the module
 that builds the app must not listen.** Export `createApp()`; let one entrypoint
 decide what server wraps it.
 

@@ -54,7 +54,7 @@ runs, and which of a given list of questions belong to Express rather than Node.
   router extraction chunk 03 describes.
 - **→ [07 · When not to use Express](../07-when-not-to-use-express.md)** — the
   decision chunk 04 deliberately stops short of.
-- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app.md)**
+- **→ [Phase 10 · 01 · The app factory](../../phase-10-app-factory/01-create-app/README.md)**
   — why an app that never calls `listen` is the useful one.
 - **← [Node Phase 5 · HTTP and processes](/docs/nodejs/pages/phase-5-http-processes/)**
   — the substrate. Express hides none of it.

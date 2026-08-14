@@ -117,7 +117,7 @@ Three properties that fall out, and they are the actual payoff:
   database at all, and the fake is a plain object.
 - **The wiring is reviewable in one file**, in the same way the middleware order
   is reviewable in one factory
-  ([Phase 10 · 01](../../phase-10-app-factory/01-create-app.md)).
+  ([Phase 10 · 01](../../phase-10-app-factory/01-create-app/README.md)).
 
 You do not need a DI container for this. **Functions taking an options object are
 a dependency-injection framework**, and one with no library, no decorators and no

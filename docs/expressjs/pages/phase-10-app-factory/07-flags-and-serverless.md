@@ -76,7 +76,7 @@ export const handler = serverless(createApp(deps));   // deps built at module sc
 ```
 
 `createApp` is already the right shape — this is the payoff for
-[page 01](01-create-app.md)'s rule. An app that called `listen` internally could not
+[page 01](01-create-app/README.md)'s rule. An app that called `listen` internally could not
 be adapted at all.
 
 Four things change once there is no long-lived process, and they are the reason

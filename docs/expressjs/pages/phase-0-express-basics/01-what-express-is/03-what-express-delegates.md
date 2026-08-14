@@ -52,7 +52,7 @@ read **once**, at the moment the router is first created — which is your first
 `app.set('strict routing', true)` *after* a route is registered has no effect at
 all, and nothing warns you. Settings the router consumes must be set before any
 route exists, which is one of the reasons the [app
-factory](../../phase-10-app-factory/01-create-app.md) puts every `app.set(…)` at
+factory](../../phase-10-app-factory/01-create-app/README.md) puts every `app.set(…)` at
 the very top of the function.
 
 The practical shape of the delegation:

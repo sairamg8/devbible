@@ -151,7 +151,7 @@ documentation and compile-time checks with exactly the ceremony Express refuses.
 
 That trade is the honest summary of the framework: **maximum composability,
 minimum declaration.** It is also why [Phase 10 · the app
-factory](../../phase-10-app-factory/01-create-app.md) exists as a Master topic —
+factory](../../phase-10-app-factory/01-create-app/README.md) exists as a Master topic —
 when nothing is declared, the assembly order becomes the design document, and it
 has to be readable in one place.
 

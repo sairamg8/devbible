@@ -14,7 +14,7 @@ sidebar_position: 3
 > `http.createServer(app).listen()`
 > ([application reference](https://expressjs.com/en/5x/api/application/)) — so a test
 > harness can hand the app to its own server on an ephemeral port. That is why
-> [page 01](01-create-app.md)'s rule against listening inside the factory is what makes
+> [page 01](01-create-app/README.md)'s rule against listening inside the factory is what makes
 > these tests possible at all.
 > The broader testing curriculum — `node:test`, coverage, test doubles — is
 > [Node Phase 9](../../../nodejs/pages/phase-9-testing/README.md); this page is only the
