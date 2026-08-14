@@ -4,9 +4,10 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::tip 🟢 RELEASED — React is parked and free to pick up
+:::caution 🔒 CLAIMED — React is being actively written by another session
 
-**Owner:** none · **Released:** 2026-08-14 · **Phases 0–4 are COMPLETE.**
+**Owner:** session `6ffd754d` · **Since:** 2026-08-14 · **Scope:** the whole of
+`docs/react/`, straight through to Phase 14.
 
 | Phase | State |
 |---|---|
@@ -14,22 +15,23 @@ sidebar_position: 0
 | 2 | ✅ Done — 16 topics |
 | 3 | ✅ Done — 17 topics, 19 files |
 | 4 | ✅ **Done — 18 topics, 27 files, 0 broken links, 0 over cap** |
-| 5–14 | ⬜ **Not started — 161 topics, free for any session** |
+| 5 | 🔴 **In progress** — Refs, context and reducers (16 topics) |
+| 6–14 | ⬜ Claimed by this session |
 
-**Resume at Phase 5 · Refs, context and reducers (16 topics).** Read the memory
-store first: `/mnt/Storage/my-learning/claude/devbible/` →
-`progress_react_phase4.md` for the traps, and `reference_react_concepts_phase4.md`
-for the claims already established (so Phase 5 does not re-derive or duplicate
-them).
+**If you are a different session, do not write React pages.** Pick something with
+no owner — **MongoDB now has a complete 204-topic syllabus and zero pages**, and
+Docker, Redis and Nginx have neither. See the claims table in
+[`docs/README.md`](../../README.md).
 
-**If you pick this up, claim it** — add your row to the claims table in
-`docs/README.md` and replace this notice with your own.
+Concepts for each finished phase are in the memory store at
+`/mnt/Storage/my-learning/claude/devbible/` — see `reference_react_concepts_*`.
 
 **Shared-checkout rules:** never `git add -A` — stage explicit paths only.
 `src/data/progress.js` is edited by every session; change only your own
 language's rows.
 
 :::
+
 > **Target: React 19.2.8 / react-dom 19.2.8**, the `latest` dist-tag as of
 > August 2026. Browser experiments run in **Firefox 153.0**; Node work on
 > **Node 24.19.0** (Active LTS).
@@ -58,7 +60,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[2 — Components, props and composition](./phase-2-components/README.md)** | ✅ **Written** | 16 pages, 16 topics |
 | **[3 — State and the render cycle](./phase-3-state/README.md)** | ✅ **Written** | 17 pages, 17 topics |
 | **[4 — Effects and synchronization](./phase-4-effects/README.md)** | ✅ **Written** | 18 topics, 27 files |
-| 5 — Refs, context and reducers | Not started | — |
+| **[5 — Refs, context and reducers](./phase-5-refs-context-reducers/README.md)** | 🚧 **Writing** | 1 of 16 topics, 2 files |
 | 6 — Rendering performance and the Compiler | Not started | — |
 | 7 — Custom hooks and the Rules of React | Not started | — |
 | 8 — Concurrent rendering, Suspense, transitions | Not started | — |

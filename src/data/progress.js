@@ -109,7 +109,7 @@ export const LANGUAGES = {
       {n: 2, slug: 'phase-2-components', name: 'Components, props and composition', part: 'The React model', topics: 16, pages: 16},
       {n: 3, slug: 'phase-3-state', name: 'State and the render cycle', part: 'The React model', topics: 17, pages: 17},
       {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 18},
-      {n: 5, slug: 'phase-5-refs-context-reducers', name: 'Refs, context and reducers', part: 'Hooks, completely', topics: 16, pages: 0},
+      {n: 5, slug: 'phase-5-refs-context-reducers', name: 'Refs, context and reducers', part: 'Hooks, completely', topics: 16, pages: 1, pagesPlanned: 16},
       {n: 6, slug: 'phase-6-performance', name: 'Rendering performance and the React Compiler', part: 'Hooks, completely', topics: 17, pages: 0},
       {n: 7, slug: 'phase-7-custom-hooks', name: 'Custom hooks and the Rules of React', part: 'Hooks, completely', topics: 12, pages: 0},
       {n: 8, slug: 'phase-8-concurrent-suspense', name: 'Concurrent rendering, Suspense and transitions', part: 'Concurrent and server', topics: 18, pages: 0},
