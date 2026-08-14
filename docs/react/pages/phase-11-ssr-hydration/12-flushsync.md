@@ -236,4 +236,4 @@ can suspend, because that is the caveat most likely to surface later as a flicke
 
 ← Index: [Phase 11](README.md) ·
 Prev: [Resource preloading](11-resource-preloading/README.md) ·
-Next → [Root error options (19)](13-root-error-options.md)
+Next → [Root error options (19)](13-root-error-options/README.md)
