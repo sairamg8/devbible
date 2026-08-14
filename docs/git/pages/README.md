@@ -4,10 +4,26 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: git 2.55.0.** Every command block in these pages was produced by a
-> script in `sandbox/git-*/`, run in a throwaway repository under `/tmp` with
-> the machine's global and system config neutralised. Nothing here is written
-> from memory.
+:::info 🔒 Claimed — session `45e775dc`, 2026-08-14
+
+All of `docs/git/` is being written by one session. **Phase 0 is complete (14
+pages); Phase 1 · The everyday loop is in progress.** Other sessions: please do
+not write here. Claim table: [Contents](../../README.md).
+
+:::
+
+> **Target: git 2.55.0.** Two kinds of evidence appear in these pages, and each
+> page says which it is on its `> Verified:` line.
+>
+> - **Sandbox-proven** — every console block came from a script in
+>   `sandbox/git-*/`, run in a throwaway repository with the machine's global and
+>   system config neutralised. All of Phase 0 is this.
+> - **Documentation-validated** — the claim is checked against the official
+>   `git help` pages and `git-scm.com`, with the source named. Under the
+>   no-new-sandboxes rule these pages carry **no console output**: commands are
+>   shown as commands, and nothing is reconstructed from memory.
+>
+> Nothing here is written from memory either way.
 
 One page per topic from the [syllabus](../README.md), with runnable commands,
 real output, gotchas written symptom → cause → fix, and interview questions with
@@ -18,7 +34,7 @@ answers.
 | Phase | Topics | Pages | Status |
 |---|---|---|---|
 | **[00 · How Git stores things](./phase-0-how-git-stores-things/README.md)** | 14 | 14 | ✅ **Complete** |
-| 01 · The everyday loop | 16 | 0 | Not started |
+| **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 16 | 1 | 🚧 **Writing** — topic 01 done |
 | 02 · Branching, merging and rebasing | 17 | 0 | Not started |
 | 03 · Reading history | 14 | 0 | Not started |
 | 04 · Remotes and syncing | 16 | 0 | Not started |
