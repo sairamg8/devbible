@@ -8,10 +8,10 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — **in progress** (2026-08-14)
+## Status — **Master tier COMPLETE** (2026-08-14)
 
 **Master tier first.** Phase 9 has **six** Master topics — 01 through 06 — written in
-syllabus order. **05 of 6 done.**
+syllabus order. **ALL 6 DONE — the Master tier of phase 9 is COMPLETE.**
 
 ## Topics
 
@@ -22,7 +22,7 @@ syllabus order. **05 of 6 done.**
 | 03 | **[Creating and inserting](./03-creating-and-inserting/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[`textContent` vs `innerText` vs `innerHTML`](./04-text-vs-html/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[Attributes versus properties](./05-attributes-vs-properties/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 06 | Sanitising HTML | <span className="db-tier t-master">Master</span> | planned |
+| 06 | **[Sanitising HTML](./06-sanitising-html/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07–15 | Traversal, classes and styles, forms, removing and replacing, batching, layout thrashing, measuring, scrolling, focus and accessibility | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16–18 | `<dialog>`/popover/`inert`, `MutationObserver`, shadow DOM | <span className="db-tier t-know">Know</span> | deferred |
 | 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | deferred |
