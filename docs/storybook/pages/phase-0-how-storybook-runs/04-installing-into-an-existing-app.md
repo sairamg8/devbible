@@ -69,9 +69,12 @@ Find your app's real root. It looks something like this:
 </QueryClientProvider>
 ```
 
-Storybook needs the **same shape, in the same nesting order**, as global
-decorators — not a simplified version, because a component that reads from the
-outermost provider will crash if you only replicated the inner two:
+Storybook needs the **same shape, in the same nesting order** — not a simplified
+version, because a component that reads from the outermost provider will crash if
+you only replicated the inner two.
+
+Write it as **one decorator with the nesting spelled out in JSX**, rather than four
+array entries:
 
 ```tsx
 // .storybook/preview.tsx
@@ -87,44 +90,44 @@ import '../src/index.css';   // ← the app's entry does this; Storybook must to
 const preview: Preview = {
   decorators: [
     (Story) => {
-      // A FRESH client per render — see gotcha 1.
+      // FRESH instances per render — module scope would leak state between stories.
       const queryClient = new QueryClient({
         defaultOptions: {queries: {retry: false}},
       });
+      const store = configureStore({reducer: rootReducer});
+
+      // The nesting here mirrors src/main.tsx exactly, and is explicit
+      // rather than implied by array position.
       return (
         <QueryClientProvider client={queryClient}>
-          <Story />
+          <Provider store={store}>
+            <ThemeProvider>
+              {/* MemoryRouter, not BrowserRouter — it must not touch the real URL. */}
+              <MemoryRouter initialEntries={['/']}>
+                <Story />
+              </MemoryRouter>
+            </ThemeProvider>
+          </Provider>
         </QueryClientProvider>
       );
     },
-    (Story) => {
-      const store = configureStore({reducer: rootReducer});
-      return (
-        <Provider store={store}>
-          <Story />
-        </Provider>
-      );
-    },
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
-    (Story) => (
-      // MemoryRouter, not BrowserRouter — see gotcha 2.
-      <MemoryRouter initialEntries={['/']}>
-        <Story />
-      </MemoryRouter>
-    ),
   ],
 };
 
 export default preview;
 ```
 
+**Why one decorator rather than four?** Splitting them across four array entries
+works, but the resulting nesting then depends on how Storybook orders decorators
+*within* a single array — which the documentation does not state explicitly. When
+providers are independent that does not matter. When one depends on another it
+matters a great deal, and a single decorator makes the order something you wrote
+down rather than something you inferred. See
+[Phase 3](../../syllabus/02-composing-stories.md).
+
 Three deliberate differences from the app, each of which is a gotcha below:
 `MemoryRouter` instead of `BrowserRouter`, `retry: false` on queries, and fresh
-instances created **inside** each decorator rather than at module scope.
+instances created **inside** the decorator rather than at module scope.
 
 ### Step 4 — mirror the bundler aliases
 
