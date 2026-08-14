@@ -45,7 +45,7 @@ list endpoint must never return a bare array.
   — `res.location`, and why a presenter beats `res.json(row)`.
 - **→ [02 · Status mapping](../02-status-mapping/README.md)** — the status for each
   operation, in full.
-- **→ [03 · Pagination](../03-pagination.md)** — what goes in the envelope chunk 03
+- **→ [03 · Pagination](../03-pagination/README.md)** — what goes in the envelope chunk 03
   insists on.
 - **→ [05 · Versioning](../05-versioning.md)** — why URL shape and field names are
   the expensive decisions.

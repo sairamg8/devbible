@@ -27,7 +27,7 @@ sidebar_position: 0
 |---|---|---|---|
 | 01 | **[REST resources](01-rest-resources/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The four shapes and why nesting stops at one level; the two-question test for action vs sub-resource; and one resource designed end to end |
 | 02 | **[Status mapping](02-status-mapping/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | CRUD → 200/201/204/404/409, idempotency as a promise, and the three statuses about *state* — 409, 412, 428 |
-| 03 | **[Pagination](03-pagination.md)** | <span className="db-tier t-master">Master</span> | Offset vs cursor; cap limits |
+| 03 | **[Pagination](03-pagination/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | Why offset is *incorrect* rather than merely slow, and what a cursor must encode to be a position in a total order |
 | 04 | **[Filter sort search](04-filter-sort-search.md)** | <span className="db-tier t-understand">Understand</span> | Allow-lists only |
 | 05 | **[Versioning](05-versioning.md)** | <span className="db-tier t-understand">Understand</span> | URL / header / media type |
 | 06 | **[Idempotency keys](06-idempotency-keys.md)** | <span className="db-tier t-understand">Understand</span> | Safe retries on POST |
@@ -36,6 +36,13 @@ sidebar_position: 0
 | 09 | **[Webhooks](09-webhooks.md)** | <span className="db-tier t-understand">Understand</span> | Verify in; enqueue out |
 | 10 | **[PATCH and bulk](10-patch-and-bulk.md)** | <span className="db-tier t-know">Know</span> | Merge Patch vs JSON Patch; why bulk has no honest status code |
 | 11 | **[Hypermedia](11-hypermedia.md)** | <span className="db-tier t-when">When Needed</span> | Links as affordances — and when they earn their cost |
+
+> 🔴 **Master-tier depth pass complete for this phase** (session `ffadd057`,
+> 2026-08-14). Topics 01–03 were written at 128–152 lines with none chunked and
+> have been rewritten to full depth as `NN-topic/` directories: **01 is 3 chunks
+> (729 lines), 02 is 2 chunks (484), 03 is 2 chunks (~490)**. Phase 6 is design
+> rather than Express API, so these lean on RFC 9110, RFC 8288 and RFC 6585 and
+> say per chunk which recommendations are this bible's. Still no runs.
 
 ## Coverage
 
@@ -48,7 +55,7 @@ negotiation and [Phase 5](../phase-5-errors/README.md) lost error logging.
 |---|---|
 | REST resource modeling | 01 (chunks [01](01-rest-resources/01-nouns-collections-items.md) · [02](01-rest-resources/02-when-rest-stops-fitting.md) · [03](01-rest-resources/03-designing-a-surface.md)) |
 | HTTP semantics and status mapping | 02 (chunks [01](02-status-mapping/01-crud-to-status.md) · [02](02-status-mapping/02-conflicts-and-preconditions.md)) |
-| Pagination | 03 |
+| Pagination | 03 (chunks [01](03-pagination/01-offset-and-its-drift.md) · [02](03-pagination/02-cursors-that-work.md)) |
 | Filtering and sorting safely | 04 |
 | Search endpoints | 04 |
 | API versioning strategies | 05 |

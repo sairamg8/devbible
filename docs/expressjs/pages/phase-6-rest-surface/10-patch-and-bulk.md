@@ -126,7 +126,7 @@ that failed.
 
 Whichever shape you choose, **cap the batch size** and validate the whole array
 before executing any of it — the same reasoning as `limit` on
-[pagination](03-pagination.md). An uncapped bulk endpoint is a denial-of-service
+[pagination](03-pagination/README.md). An uncapped bulk endpoint is a denial-of-service
 primitive with a friendly name.
 
 ## Trade-off

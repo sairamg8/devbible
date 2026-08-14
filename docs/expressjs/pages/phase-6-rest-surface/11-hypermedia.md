@@ -62,7 +62,7 @@ clients, or the rules change often**:
 3. **Pagination and long collections.** This one is nearly universal and rarely
    called HATEOAS: `next` and `prev` links let clients page without knowing whether
    you use cursors or offsets, and let you change that later
-   ([page 03](03-pagination.md)).
+   ([page 03](03-pagination/README.md)).
 
 Point 3 is the version almost every API should adopt. The full-blown variety is
 for points 1 and 2.

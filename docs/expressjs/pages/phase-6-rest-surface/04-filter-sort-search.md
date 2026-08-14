@@ -155,4 +155,4 @@ than passed through.
 
 ---
 
-← Prev: [Pagination](03-pagination.md) · Next → [Versioning](05-versioning.md)
+← Prev: [Pagination](03-pagination/README.md) · Next → [Versioning](05-versioning.md)

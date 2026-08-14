@@ -92,7 +92,7 @@ change. Wrap it from day one:
 ```
 
 That decision costs nothing on day one and cannot be made later
-([Phase 6 · 03](../03-pagination.md)).
+([Phase 6 · 03](../03-pagination/README.md)).
 
 ## The representation is not the row
 

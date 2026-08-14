@@ -224,4 +224,4 @@ tells the client to retry something that will never succeed unchanged.
 
 ---
 
-← Prev: [CRUD to status](01-crud-to-status.md) · Index: [Status mapping](README.md) · Next topic → [Pagination](../03-pagination.md)
+← Prev: [CRUD to status](01-crud-to-status.md) · Index: [Status mapping](README.md) · Next topic → [Pagination](../03-pagination/README.md)

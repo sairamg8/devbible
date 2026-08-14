@@ -53,7 +53,7 @@ on a bad connection is not an attacker.
 
 **Byte limits and semantic limits are different controls.** Cap `limit`, cap
 array lengths, cap `?limit=`, cap nesting depth
-([Phase 6 · 03](../../phase-6-rest-surface/03-pagination.md),
+([Phase 6 · 03](../../phase-6-rest-surface/03-pagination/README.md),
 [Phase 8 · 03](../../phase-8-validation-authz/03-coercion-traps.md)).
 
 **4 · Memory after parsing.** The limit bounds the *bytes on the wire*. A 100 kb

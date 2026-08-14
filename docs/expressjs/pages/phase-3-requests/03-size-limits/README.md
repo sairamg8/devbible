@@ -44,7 +44,7 @@ limit does nothing about.
   these 413s.
 - **→ [07 · Multipart uploads](../07-multipart-uploads.md)** — the bodies no
   built-in parser claims, and multer's `Infinity` default.
-- **→ [Phase 6 · 03 · Pagination](../../phase-6-rest-surface/03-pagination.md)** and
+- **→ [Phase 6 · 03 · Pagination](../../phase-6-rest-surface/03-pagination/README.md)** and
   **[· 10 · PATCH and bulk](../../phase-6-rest-surface/10-patch-and-bulk.md)** — the
   semantic caps that bytes cannot express.
 - **→ [Phase 9 · 04 · Rate limiting](../../phase-9-hardening/04-rate-limiting.md)** —

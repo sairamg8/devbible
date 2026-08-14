@@ -101,7 +101,7 @@ closes it.
    [Phase 6 · 04](../../phase-6-rest-surface/04-filter-sort-search.md).
 3. **Cap what is uncapped.** `?limit=100000` is a denial-of-service with a valid
    type. Bound it, and prefer cursor pagination so deep pages are not a cost at
-   all — [Phase 6 · 03](../../phase-6-rest-surface/03-pagination.md).
+   all — [Phase 6 · 03](../../phase-6-rest-surface/03-pagination/README.md).
 4. **Never put identity in the query.** `?userId=` invites a caller to change it.
    Identity comes from the authenticated principal, and tenancy should not even
    be *expressible* in the input —

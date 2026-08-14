@@ -43,7 +43,7 @@ do about `If-Match`.
   — `res.status`'s Express 5 throws, and the header timing.
 - **← [01 · REST resources](../01-rest-resources/README.md)** — the route table
   these statuses fill in.
-- **→ [03 · Pagination](../03-pagination.md)** — the 200 that must not be a bare
+- **→ [03 · Pagination](../03-pagination/README.md)** — the 200 that must not be a bare
   array.
 - **→ [06 · Idempotency keys](../06-idempotency-keys.md)** — what POST needs
   because it is the non-idempotent verb.

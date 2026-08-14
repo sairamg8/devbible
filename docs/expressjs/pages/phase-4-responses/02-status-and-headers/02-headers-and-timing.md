@@ -88,7 +88,7 @@ res.links({next: '/orders?cursor=abc', prev: '/orders?cursor=xyz'});
 
 That is the standards-based place to put pagination cursors, as an alternative to
 embedding them in the body
-([Phase 6 · 03](../../phase-6-rest-surface/03-pagination.md)).
+([Phase 6 · 03](../../phase-6-rest-surface/03-pagination/README.md)).
 
 **`res.attachment([filename])`** sets `Content-Disposition` via the
 `content-disposition` package — which handles the quoting and the RFC 5987
