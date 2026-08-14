@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 13 of 18 topics written.** The table below links what exists;
+🚧 **In progress — 15 of 18 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The most misused hook in React, almost always because it is understood as "run
@@ -32,15 +32,15 @@ React may run any number of times**.
 | 11 | **[Removing dependencies legitimately](11-removing-dependencies/README.md)** | <span className="db-tier t-understand">Understand</span> | Eight legitimate moves, and the two that only look like fixes |
 | 12 | **[`useLayoutEffect`](12-uselayouteffect.md)** | <span className="db-tier t-understand">Understand</span> | After DOM mutation, before paint — and what that costs |
 | 13 | **[Effect ordering](13-effect-ordering.md)** | <span className="db-tier t-understand">Understand</span> | Three passes; every cleanup before any setup |
-| 14 | Timers, listeners and observers | <span className="db-tier t-understand">Understand</span> | Each API's inverse, and the leak without it |
-| 15 | Effects and refs together | <span className="db-tier t-understand">Understand</span> | Measuring, focusing, and React 19 ref cleanup |
+| 14 | **[Timers, listeners and observers](14-timers-listeners-observers.md)** | <span className="db-tier t-understand">Understand</span> | Each API's inverse, and the leak without it |
+| 15 | **[Effects and refs together](15-effects-and-refs.md)** | <span className="db-tier t-understand">Understand</span> | Measuring, focusing, and React 19 ref cleanup |
 | 16 | Subscribing to an external store | <span className="db-tier t-understand">Understand</span> | The tearing problem `useSyncExternalStore` exists to fix |
 | 17 | `useInsertionEffect` | <span className="db-tier t-know">Know</span> | For CSS-in-JS libraries, explicitly not application code |
 | 18 | Skipping the first run | <span className="db-tier t-know">Know</span> | Usually a sign the logic belonged in a handler |
 
 ## Coverage so far
 
-**13 topics → 22 content files.** Two topics run past the 300-line file cap and
+**15 topics → 24 content files.** Two topics run past the 300-line file cap and
 become topic directories:
 
 | Topic | Chunks | Split at |
