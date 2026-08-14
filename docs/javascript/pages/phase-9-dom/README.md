@@ -8,10 +8,13 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **Understand tier under way — 7 of 19** (2026-08-14)
 
-**Master tier first.** Phase 9 has **six** Master topics — 01 through 06 — written in
-syllabus order. **ALL 6 DONE — the Master tier of phase 9 is COMPLETE.**
+**Master tier ✅ COMPLETE** — all six Master topics (01–06), written in syllabus order.
+
+🚧 **Now the Understand tier (07–15), then Know (16–18), then When Needed (19).**
+**07 · Traversal is written**; 08 onward remain. Lane B of the two-way JavaScript split
+owns this phase.
 
 ## Topics
 
@@ -23,7 +26,8 @@ syllabus order. **ALL 6 DONE — the Master tier of phase 9 is COMPLETE.**
 | 04 | **[`textContent` vs `innerText` vs `innerHTML`](./04-text-vs-html/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[Attributes versus properties](./05-attributes-vs-properties/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[Sanitising HTML](./06-sanitising-html/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 07–15 | Traversal, classes and styles, forms, removing and replacing, batching, layout thrashing, measuring, scrolling, focus and accessibility | <span className="db-tier t-understand">Understand</span> | deferred |
+| 07 | **[Traversal](./07-traversal/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 08–15 | Classes and styles, forms, removing and replacing, batching, layout thrashing, measuring, scrolling, focus and accessibility | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 16–18 | `<dialog>`/popover/`inert`, `MutationObserver`, shadow DOM | <span className="db-tier t-know">Know</span> | deferred |
 | 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | deferred |
 
@@ -40,6 +44,8 @@ and the documentation does not settle it, the page says so rather than guessing.
 - [Phase 0 · 06 · Hosts and globals](../phase-0-how-javascript-runs/06-hosts-and-globals.md) — why the DOM is not part of the language
 - [Phase 7 · 03 · Microtasks vs macrotasks](../phase-7-async/03-microtasks-vs-macrotasks/README.md) — where rendering fits between tasks
 - [Phase 8 · 04 · Leaks](../phase-8-modules-errors/04-leaks/README.md) — detached nodes, the DOM-specific leak
+- [Phase 10 · 04 · Event delegation](../phase-10-events/04-event-delegation/README.md) — what
+  [07 · Traversal](./07-traversal/README.md) is the vocabulary for
 
 ---
 

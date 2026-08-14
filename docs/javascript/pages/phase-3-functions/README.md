@@ -34,21 +34,21 @@ interviews actually probe.
 | 14 | **[Recursion](./14-recursion.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | **[Pure functions and side effects](./15-pure-functions.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 16 | **[There is no function overloading](./16-no-function-overloading.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 17 | Closure and default-parameter gotchas | <span className="db-tier t-understand">Understand</span> | deferred |
+| 17 | **[Closure and default-parameter gotchas](./17-closure-and-default-gotchas/README.md)** | <span className="db-tier t-understand">Understand</span> | 🔨 4 of 5 chunks |
 | 18 | IIFE and the module pattern | <span className="db-tier t-know">Know</span> | deferred |
 | 19 | Function properties | <span className="db-tier t-know">Know</span> | deferred |
 | 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | deferred |
 
 ## Status — **Master tier complete · Understand tier under way** (2026-08-14)
 
-🚧 **16 of 20 written.** All eight Master topics (01–08) are done, and the Master
+🚧 **16 of 20 written, and topic 17 is 4 chunks in.** All eight Master topics (01–08) are done, and the Master
 tier of **every** phase 0–18 is now closed — so the standing Master-first plan is
 finished and the work has moved to the **Understand and Know tiers**, phase by
-phase. Topics 09–13 are the Understand tier so far.
+phase. Topics 09–16 are the Understand tier so far.
 
-**Next here: 17 · Closure and default-parameter gotchas**, then 15–17 (Understand) and 18–20 (Know).
+**Next here: finish 17 · Closure and default-parameter gotchas** (chunk 5, the framework-scale stale closure), then 18–20 (Know).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **8 / 9** · Know **0 / 3**.
+**Coverage:** Master **8 / 8** ✅ · Understand **8 / 9** (17 in progress) · Know **0 / 3**.
 
 ## Phase gate
 

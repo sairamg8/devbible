@@ -246,4 +246,4 @@ third mode appears. A string union in an options object reads and grows.
 
 ---
 
-← [15 · Pure functions and side effects](./15-pure-functions.md) · [Phase index](./README.md) · **17 · Closure and default-parameter gotchas** *(not written yet)* →
+← [15 · Pure functions and side effects](./15-pure-functions.md) · [Phase index](./README.md) · [17 · Closure and default-parameter gotchas](./17-closure-and-default-gotchas/README.md) →

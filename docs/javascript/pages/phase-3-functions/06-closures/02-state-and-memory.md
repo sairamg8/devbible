@@ -179,7 +179,7 @@ The fixes are the same in plain JavaScript as in React:
    `count` at all.
 
 Full treatment in
-**Closure and default-parameter gotchas** (topic 17, not written yet).
+[17 · Closure and default-parameter gotchas](../17-closure-and-default-gotchas/README.md).
 
 ## Gotchas
 
