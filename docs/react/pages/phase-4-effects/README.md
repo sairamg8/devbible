@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 4 of 18 topics written.** The table below links what exists;
+🚧 **In progress — 6 of 18 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The most misused hook in React, almost always because it is understood as "run
@@ -23,8 +23,8 @@ React may run any number of times**.
 | 02 | **[`useEffect` anatomy](02-useeffect-anatomy.md)** | <span className="db-tier t-master">Master</span> | Setup, cleanup, dependencies — and the three array forms |
 | 03 | **[The dependency array is not a preference](03-the-dependency-array.md)** | <span className="db-tier t-master">Master</span> | Lying produces an effect that reads one render's values forever |
 | 04 | **[Cleanup](04-cleanup/README.md)** | <span className="db-tier t-master">Master</span> | setup → cleanup → setup must be indistinguishable from setup alone |
-| 05 | `StrictMode` double-invocation | <span className="db-tier t-master">Master</span> | What the extra cycle is stress-testing |
-| 06 | You might not need an effect | <span className="db-tier t-master">Master</span> | The eight cases and their fixes |
+| 05 | **[`StrictMode` double-invocation](05-strictmode-double-invocation.md)** | <span className="db-tier t-master">Master</span> | What the extra cycle is stress-testing — and the effect bugs it misses |
+| 06 | **[You might not need an effect](06-you-might-not-need-an-effect/README.md)** | <span className="db-tier t-master">Master</span> | Twelve cases; only one survives as an effect |
 | 07 | Fetching data in an effect | <span className="db-tier t-master">Master</span> | Everyone's first answer, and a poor one |
 | 08 | Race conditions | <span className="db-tier t-understand">Understand</span> | The `ignore` flag and `AbortController` |
 | 09 | An effect has its own lifecycle | <span className="db-tier t-understand">Understand</span> | It starts and stops, independent of mounting |
@@ -40,12 +40,13 @@ React may run any number of times**.
 
 ## Coverage so far
 
-**4 topics → 7 content files.** One topic runs past the 300-line file cap and
-becomes a topic directory:
+**6 topics → 12 content files.** Two topics run past the 300-line file cap and
+become topic directories:
 
 | Topic | Chunks | Split at |
 |---|---|---|
 | 04 Cleanup | 3 | the contract ↔ the recipes ↔ when it is not the answer |
+| 06 You might not need an effect | 3 | one action ↔ a cascade of them ↔ where the state lives |
 
 Longest file 294 lines; nothing over.
 
