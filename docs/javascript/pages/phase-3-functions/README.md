@@ -29,7 +29,7 @@ interviews actually probe.
 | 09 | **[Higher-order functions](./09-higher-order-functions.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 10 | **[Debounce and throttle](./10-debounce-and-throttle.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Currying and partial application](./11-currying-and-partial-application.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 12 | Composition | <span className="db-tier t-understand">Understand</span> | deferred |
+| 12 | **[Composition (`pipe` and `compose`)](./12-composition.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | Memoization | <span className="db-tier t-understand">Understand</span> | deferred |
 | 14 | Recursion | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15 | Pure functions and side effects | <span className="db-tier t-understand">Understand</span> | deferred |
@@ -39,13 +39,16 @@ interviews actually probe.
 | 19 | Function properties | <span className="db-tier t-know">Know</span> | deferred |
 | 20 | `new.target` and constructor guards | <span className="db-tier t-know">Know</span> | deferred |
 
-## Status — **Master tier complete**; Understand tier under way (2026-08-14)
+## Status — **Master tier complete · Understand tier under way** (2026-08-14)
 
-**All eight Master topics (01–08) are written, and the Understand tier has begun at 09.** The remaining 10–20 are marked *deferred*
-deliberately, not forgotten: the standing plan is **Master-first across all
-phases**, so Understand and Know tiers are filled in on demand once the Master
-topics of every phase are done. The next unit of work in JavaScript is
-**Phase 4 · Objects, prototypes and classes**, not topic 09.
+🚧 **12 of 20 written.** All eight Master topics (01–08) are done, and the Master
+tier of **every** phase 0–18 is now closed — so the standing Master-first plan is
+finished and the work has moved to the **Understand and Know tiers**, phase by
+phase. Topics 09–12 are the Understand tier so far.
+
+**Next here: 13 · Memoization**, then 14–17 (Understand) and 18–20 (Know).
+
+**Coverage:** Master **8 / 8** ✅ · Understand **4 / 9** · Know **0 / 3**.
 
 ## Phase gate
 

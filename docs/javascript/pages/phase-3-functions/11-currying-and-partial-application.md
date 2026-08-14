@@ -75,7 +75,7 @@ const withAuth = (getToken) => (fn) => async (...args) => fn(await getToken(), .
 
 🔴 **Data last is what makes it compose.** `map(double)` is a function from array to array, which
 can be dropped into a `pipe` — `map(arr, double)` cannot
-(**12 · Composition**, *not written yet*).
+([12 · Composition](./12-composition.md)).
 
 ## Where it stops being worth it
 
@@ -167,4 +167,4 @@ writing.
 
 ---
 
-← [10 · Debounce and throttle](./10-debounce-and-throttle.md) · [Phase index](./README.md)
+← [10 · Debounce and throttle](./10-debounce-and-throttle.md) · [Phase index](./README.md) · [12 · Composition](./12-composition.md) →
