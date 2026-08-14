@@ -287,4 +287,4 @@ directive, everything above it has been discarded.
 
 ---
 
-← Prev: [Directives and contexts](01-directives-and-contexts.md) · Index: [Phase 1](README.md) · Next → [`include` and the file layout](03-include-and-files.md)
+← Prev: [Directives and contexts](01-directives-and-contexts.md) · Index: [Phase 1](README.md) · Next → [`include` and the file layout](03-include-and-files/README.md)

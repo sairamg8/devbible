@@ -26,7 +26,7 @@ Nine pages. Pages 02, 06 and 07 are the ones that change how you write configs.
 |---|---|---|---|
 | 01 | **[Directives and contexts](01-directives-and-contexts.md)** | <span className="db-tier t-master">Master</span> | Simple directives, block directives, and the context tree everything hangs in |
 | 02 | **[Inheritance and the replace rule](02-inheritance.md)** | <span className="db-tier t-master">Master</span> | Children inherit from parents — and setting one value throws away the whole inherited set |
-| 03 | **[`include` and the file layout](03-include-and-files.md)** | <span className="db-tier t-understand">Understand</span> | How a config is assembled from many files, and MIME types as the worked example |
+| 03 | **[`include` and the file layout](03-include-and-files/README.md)** *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | How a config is assembled from many files, and MIME types as the worked example |
 | 04 | **[Variables](04-variables.md)** | <span className="db-tier t-master">Master</span> | Where they come from, when they are evaluated, and `$uri` vs `$request_uri` |
 | 05 | **[Units, quoting and comments](05-syntax-details.md)** | <span className="db-tier t-understand">Understand</span> | `k`/`m`/`g`, `ms`/`s`/`h`/`d`, when a value needs quotes, and the stray semicolon |
 | 06 | **[`map`](06-map.md)** | <span className="db-tier t-master">Master</span> | The lookup table that replaces most `if` blocks, evaluated only when used |
@@ -43,8 +43,8 @@ already own the material; nothing is dropped.
 |---|---|
 | Directives and contexts; the context tree | 01 |
 | Inheritance downward, and the replace-not-merge rule | 02 |
-| `include` and the file layout | 03 |
-| `include` of MIME types, and `default_type` | 03 |
+| `include` and the file layout | 03 · chunk 01 |
+| `include` of MIME types, and `default_type` | 03 · chunk 02 |
 | Variables — `$host`, `$uri`, `$args`, `$http_*`, `$sent_http_*`, `$upstream_*` | 04 |
 | `$uri` vs `$request_uri` vs `$document_uri` | 04 |
 | Measurement units | 05 |

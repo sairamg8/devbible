@@ -276,4 +276,4 @@ more dangerous case, because nothing ever reports it.
 
 ---
 
-← Prev: [`include` and the file layout](03-include-and-files.md) · Index: [Phase 1](README.md) · Next → [Units, quoting and comments](05-syntax-details.md)
+← Prev: [MIME types and `default_type`](03-include-and-files/02-mime-types.md) · Index: [Phase 1](README.md) · Next → [Units, quoting and comments](05-syntax-details.md)
