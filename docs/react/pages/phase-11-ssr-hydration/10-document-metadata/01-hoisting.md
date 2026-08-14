@@ -202,4 +202,3 @@ metadata. [Chunk 02](02-the-three-tags.md) covers where that line falls.
 
 ← Index: [10 · Document metadata](README.md) ·
 Next → [The three tags, prop by prop](02-the-three-tags.md)
-</content>

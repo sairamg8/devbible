@@ -57,4 +57,3 @@ just wants to know *why is my stylesheet in the body* from reading about microda
 ← Index: [Phase 11](../README.md) ·
 Prev: [Partial pre-rendering (19.2)](../09-partial-prerendering/README.md) ·
 Next → [Hoisting, and the four exceptions to it](01-hoisting.md)
-</content>
