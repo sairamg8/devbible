@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | 🟡 **Master tier ✅** (01, 03–08); 02 and 09–20 deferred |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🟡 **Master tier ✅** (01, 02, 04–07, 09, 10); rest deferred |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
-| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **in progress** — Master tier **10 of 11 done** (01–10; 11 to go). The syllabus's centre of gravity |
+| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | 8 · Modules, errors, memory and the toolchain | Data & async | 18 | planned |
 | 9 · The DOM | Web APIs | 19 | planned |
 | 10 · Events and user input | Web APIs | 14 | planned |
@@ -45,10 +45,10 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — currently **Phase 7 · Asynchronous JavaScript**, Master tier |
-| **Last touched** | **Phase 7 topic 10 · the `Promise` combinators** (3 chunks) — 2026-08-14 |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–10** |
-| **Next** | **Phase 7 topic 11 · Promise anti-patterns** — the last Master topic of the phase |
-| **Totals** | **131 pages**, 168 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Last touched** | **Phase 7 topic 11 · Promise anti-patterns** — **Phase 7 Master tier COMPLETE** (2026-08-14) |
+| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–11 ✅** |
+| **Next** | **Phase 8 · Modules, errors, memory and the toolchain** — Master topics. (Master-first: phase 7's Understand/Know topics 12–22 stay deferred.) |
+| **Totals** | **134 pages**, 172 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
