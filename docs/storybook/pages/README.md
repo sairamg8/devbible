@@ -13,14 +13,14 @@ inventory and the reading order live in the [Syllabus](../README.md).
 
 ## Status
 
-🚧 **18 of 58 topics — Phases 0, 1 and 2 complete.** Pages follow phase by phase.
+🚧 **23 of 58 topics — Phases 0–3 complete.** Pages follow phase by phase.
 
 | Phase | Part | Topics | Status |
 |---|---|---|---|
 | [0 · How Storybook runs](./phase-0-how-storybook-runs/README.md) | 1 | 6 | ✅ **Complete** — 5 pages, 1,175 lines |
 | [1 · The story format](./phase-1-story-format/README.md) | 1 | 6 | ✅ **Complete** — 6 pages, 1,352 lines |
 | [2 · Args, argTypes and controls](./phase-2-args-and-controls/README.md) | 1 | 6 | ✅ **Complete** — 6 pages, 1,234 lines |
-| 3 · Decorators and context | 2 | 5 | 🚧 Not started |
+| [3 · Decorators and context](./phase-3-decorators/README.md) | 2 | 5 | ✅ **Complete** — 5 pages, 1,095 lines |
 | 4 · Documentation | 2 | 5 | 🚧 Not started |
 | 5 · Theming, colors and fonts | 2 | 6 | 🚧 Not started |
 | 6 · Interaction testing | 3 | 5 | 🚧 Not started |
