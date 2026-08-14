@@ -28,7 +28,7 @@ import Progress from '@site/src/components/Progress';
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
-| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🟡 **in progress** — Master tier 03 of 6 |
+| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🟡 **in progress** — Master tier 04 of 6 |
 | 10 · Events and user input | Web APIs | 14 | planned |
 | 11 · Network, storage and data transfer | Web APIs | 21 | planned |
 | 12 · The browser platform | Web APIs | 21 | planned |
@@ -45,10 +45,10 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | **Claimed by** | session `01ECVvH5` (Opus 5), started 2026-08-13 |
 | **Claim** | **all of `docs/javascript/`** — currently **Phase 7 · Asynchronous JavaScript**, Master tier |
-| **Last touched** | **Phase 9 topic 03 · Creating and inserting** — 2026-08-14 |
+| **Last touched** | **Phase 9 topic 04 · textContent vs innerText vs innerHTML** — 2026-08-14 |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03) · **Phase 7 Master 01–11 ✅** |
-| **Next** | **Phase 9 topic 04 · `textContent` vs `innerText` vs `innerHTML`**, then 05–06 |
-| **Totals** | **145 pages**, 190 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Next** | **Phase 9 topic 05 · Attributes versus properties**, then 06 (sanitising HTML) |
+| **Totals** | **146 pages**, 192 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
