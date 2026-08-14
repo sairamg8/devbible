@@ -44,12 +44,12 @@ import Progress from '@site/src/components/Progress';
 | | |
 |---|---|
 | **Claimed by** | session `016cfc46` (Opus 5), from 2026-08-14 — took over from `c5329658`, which took over from `01ECVvH5` |
-| **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** The Master tier is **closed at 99/99 across every phase 0–18** and is not to be reopened for depth; the work is the Understand and Know tiers, phase by phase from Phase 3 |
+| **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** Master is **closed at 99/99** and is not to be reopened for depth. 🔴 **SCOPE CUT 2026-08-14:** phase 16 (Dynamic programming) **dropped** beyond its 3 Master topics; phase 18 trimmed to **11, 12 and 15 only**; the whole DSA block **parked** — 13 (Complexity), 14 (Data structures) and 15 (Algorithmic patterns) — *"mostly language focus"*. **21 dropped, 34 parked.** 17 · Machine coding stays **in scope**: it implements JavaScript's own library functions, which is language work. Nothing already written was deleted.** |
 | **Last touched** | **Phase 3 topic 15 · Pure functions and side effects** — 2026-08-14. 🔴 **All Master tiers complete; Understand tier under way** |
 | **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
 | **Next** | **Phase 3 topic 16 · There is no function overloading**, then 15–20, then phase 4. Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **201 topics** — Understand **143**, Know **55**, When Needed **3**. Thinnest phases: 12 (2/21), 16 (3/16), 13 (3/10), 6 (3/13) |
-| **Totals** | **136 of 337 topics** · **235 pages** (non-`README.md` `.md` files; 340 counting every README), 316 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
+| **Remaining** | **146 topics in the active queue** — Understand **99**, Know **44**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
+| **Totals** | **136 of 316 in scope** (337 syllabus rows − 21 dropped) · **235 pages** (non-`README.md` `.md` files; 340 counting every README), 316 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS

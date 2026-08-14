@@ -4,6 +4,20 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::caution Parked — 2026-08-14
+⏸ **This phase is parked, not dropped.** On the user's instruction (*"Complexity and
+JavaScript's real costs remove this one too"*), the unwritten topics are **out of the queue**
+while the corpus stays on the **language** itself. They keep their syllabus rows and can be
+resumed later.
+
+The three written Master topics are unaffected. This parks the last of the DSA phases:
+13, [14](../phase-14-data-structures/README.md) and
+[15](../phase-15-algorithm-patterns/README.md) are **parked**;
+[16](../phase-16-dynamic-programming/README.md) was **dropped**.
+[17 · Machine coding](../phase-17-machine-coding/README.md) stays **in scope** — it implements
+JavaScript's own library functions from scratch, which is language work, not algorithm practice.
+:::
+
 *10 topics.* Big-O first, then the part most courses skip: what the notation means once V8 is
 underneath it.
 
@@ -20,8 +34,8 @@ phases are done.
 | 01 | **[Big-O notation](./01-big-o/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[The complexity classes you actually meet](./02-complexity-classes/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[Choosing a structure from the operations you need](./03-choosing-a-structure/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04–09 | Space complexity and the call stack, what a JavaScript array really is, `Object` vs `Map` performance, amortised analysis, recursion vs iteration in V8, measuring honestly | <span className="db-tier t-understand">Understand</span> | deferred |
-| 10 | Stating a bound in an interview | <span className="db-tier t-know">Know</span> | deferred |
+| 04–09 | Space complexity and the call stack, what a JavaScript array really is, `Object` vs `Map` performance, amortised analysis, recursion vs iteration in V8, measuring honestly | <span className="db-tier t-understand">Understand</span> | ⏸ **parked** |
+| 10 | Stating a bound in an interview | <span className="db-tier t-know">Know</span> | ⏸ **parked** |
 
 ## The phase gate
 

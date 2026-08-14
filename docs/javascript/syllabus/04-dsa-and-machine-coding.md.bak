@@ -4,22 +4,6 @@ sidebar_label: "4 · DSA & machine coding"
 sidebar_position: 4
 ---
 
-:::info Scope as of 2026-08-14 — this part is largely parked
-This syllabus is the **full inventory** and is kept intact. The **current writing scope is
-narrower**, on the user's instruction to focus on the language:
-
-| Phase | Decision |
-|---|---|
-| 13 · Complexity and real costs | ⏸ **parked** beyond its Master topics |
-| 14 · Core data structures | ⏸ **parked** beyond its Master topics |
-| 15 · Algorithmic patterns | ⏸ **parked** beyond its Master topics |
-| 16 · Dynamic programming | 🚫 **dropped** beyond its Master topics |
-| 17 · Machine coding | ✅ **in scope** — it implements JavaScript's own library functions, which is language work |
-
-**Parked is reversible; dropped is not planned.** Nothing already written was deleted. The
-untouched original of every syllabus part is kept beside it as `*.md.bak`.
-:::
-
 > **Phases 13–17 · 81 topics · 20 Master**
 > Data structures and algorithms **in JavaScript specifically**, then the
 > "implement it yourself" round that fullstack interviews actually run.

@@ -4,6 +4,16 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::caution Trimmed to three — 2026-08-14
+✂️ **Only three of the unwritten storefront topics are still in scope**, on the user's
+instruction: **11 · Infinite scroll and lazy images**, **12 · Long lists without freezing** and
+**15 · Review uploads**. The other eight (persisting the cart, auth in the browser, checkout
+forms, client-side routing, real-time order tracking, dates and delivery estimates, failing in
+public, a performance budget) are **dropped**.
+
+The seven written Master topics (01–07) are unaffected. Phase 18 is **7 of 10 in scope**.
+:::
+
 *18 topics.* Ordered the way you would actually build the app: browse, then cart, then checkout,
 then the operational surface. **This is the last phase**, and it composes everything the earlier
 ones taught.
@@ -25,7 +35,10 @@ JavaScript syllabus is now written.**
 | 05 | **[Money, quantities and rounding](./05-money-and-rounding/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[Optimistic updates with rollback](./06-optimistic-updates/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07 | **[Idempotency from the client](./07-idempotency/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 08–18 | Persisting the cart, auth in the browser, checkout forms, infinite scroll and lazy images, long lists without freezing, client-side routing, real-time order tracking, review uploads, dates and delivery estimates, failing in public, a performance budget | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | Infinite scroll and lazy images | <span className="db-tier t-understand">Understand</span> | deferred |
+| 12 | Long lists without freezing | <span className="db-tier t-understand">Understand</span> | deferred |
+| 15 | Review uploads | <span className="db-tier t-understand">Understand</span> | deferred |
+| ~~08–10, 13, 14, 16–18~~ | ~~Persisting the cart, auth in the browser, checkout forms, client-side routing, real-time order tracking, dates and delivery estimates, failing in public, a performance budget~~ | <span className="db-tier t-understand">Understand</span> | 🚫 **dropped** |
 
 ## The phase gate
 

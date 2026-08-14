@@ -4,6 +4,16 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::danger Dropped from scope — 2026-08-14
+🚫 **This phase is dropped.** On the user's instruction (*"Dynamic programming and the harder
+set — Drop Completly"*), topics **04–16 will not be written**. The corpus is refocused on the
+**language** rather than interview algorithm practice.
+
+**The three written Master topics (01–03) stay** — they are finished, verified and build-clean,
+and dropping the phase does not mean deleting work already done (*"incase of if any already
+developed … let it be"*). Phase 16 counts as **3 of 3 in scope**, not 3 of 16.
+:::
+
 *16 topics.* DP gets its own phase because it is the pattern people bounce off, and because the
 top-down → bottom-up conversion is mechanical once seen.
 
@@ -20,8 +30,8 @@ phases are done.
 | 01 | **[What DP is](./01-what-dp-is/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Memoization, top-down](./02-memoization/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[A problem-solving method](./03-problem-solving-method/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 04–13 | Tabulation, 1-D and 2-D DP, state design, space optimisation, DP on strings, monotonic stack and queue, top-K and streaming, randomised algorithms, async-flavoured problems | <span className="db-tier t-understand">Understand</span> | deferred |
-| 14–16 | DP on trees and graphs, matrix and simulation problems, recognising NP-hardness | <span className="db-tier t-know">Know</span> | deferred |
+| ~~04–13~~ | ~~Tabulation, 1-D and 2-D DP, state design, space optimisation, DP on strings, monotonic stack and queue, top-K and streaming, randomised algorithms, async-flavoured problems~~ | <span className="db-tier t-understand">Understand</span> | 🚫 **dropped** |
+| ~~14–16~~ | ~~DP on trees and graphs, matrix and simulation problems, recognising NP-hardness~~ | <span className="db-tier t-know">Know</span> | 🚫 **dropped** |
 
 ## The phase gate
 

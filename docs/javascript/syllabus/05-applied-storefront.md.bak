@@ -4,13 +4,6 @@ sidebar_label: "5 · Applied storefront"
 sidebar_position: 5
 ---
 
-:::info Scope as of 2026-08-14 — trimmed to three
-Of this phase's unwritten topics, only **11 · Infinite scroll and lazy images**,
-**12 · Long lists without freezing** and **15 · Review uploads** are still in scope. The other
-eight are 🚫 **dropped**. The seven written Master topics are unaffected, and the untouched
-original of this file is kept beside it as `05-applied-storefront.md.bak`.
-:::
-
 > **Phase 18 · 18 topics · 7 Master**
 > Every earlier phase, composed into the front end of a real e-commerce
 > application — **with no framework**, so nothing is hidden.

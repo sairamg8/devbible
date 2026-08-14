@@ -4,6 +4,15 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::caution Parked — 2026-08-14
+⏸ **This phase is parked, not dropped.** On the user's instruction (*"Park Data structures
+completly for now mostly language focus"*), topics **06–17 are out of the queue** while the
+work stays on the language itself. They keep their syllabus rows and can be picked up later —
+this is a pause, not a cut.
+
+The five written Master topics (01–05) are unaffected.
+:::
+
 *17 topics.* Each structure gets a working implementation, the operations table, and the problems
 it exists to solve. Where a built-in already covers it (`Map`, `Set`), the page explains the
 built-in first and implements it only to show the mechanism.
@@ -23,8 +32,8 @@ phases are done.
 | 03 | **[Frequency maps and grouping](./03-frequency-and-grouping/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Stack](./04-stack/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[Queue and deque](./05-queue-and-deque/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 06–14 | Binary trees, singly and doubly linked lists, BSTs, heaps and priority queues, graphs, union-find, tries, matrices and grids | <span className="db-tier t-understand">Understand</span> | deferred |
-| 15–17 | Balanced trees in one page, bitsets and circular buffers, persistent and immutable structures | <span className="db-tier t-know">Know</span> | deferred |
+| 06–14 | Binary trees, singly and doubly linked lists, BSTs, heaps and priority queues, graphs, union-find, tries, matrices and grids | <span className="db-tier t-understand">Understand</span> | ⏸ **parked** |
+| 15–17 | Balanced trees in one page, bitsets and circular buffers, persistent and immutable structures | <span className="db-tier t-know">Know</span> | ⏸ **parked** |
 
 ## The phase gate
 
