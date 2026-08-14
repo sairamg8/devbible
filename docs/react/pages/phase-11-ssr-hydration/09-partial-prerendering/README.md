@@ -59,4 +59,3 @@ decides whether you should adopt this at all.
 ← Index: [Phase 11](../README.md) ·
 Prev: [Prerendering](../08-prerendering/README.md) ·
 Next → [The idea, and the four APIs](01-the-idea-and-the-four-apis.md)
-</content>

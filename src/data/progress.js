@@ -83,7 +83,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/mongodb/pages',
     phases: [
       {n: 0, slug: 'phase-0-how-mongodb-runs', name: 'How MongoDB runs', part: 'The document model', topics: 5, pages: 5},
-      {n: 1, slug: 'phase-1-documents-and-bson', name: 'Documents, BSON types and _id', part: 'The document model', topics: 6, pages: 0},
+      {n: 1, slug: 'phase-1-documents-and-bson', name: 'Documents, BSON types and _id', part: 'The document model', topics: 6, pages: 6},
       {n: 2, slug: 'phase-2-mongosh', name: 'mongosh, mastered', part: 'The document model', topics: 5, pages: 0},
       {n: 3, slug: 'phase-3-schema-design', name: 'Schema design and modelling', part: 'The document model', topics: 6, pages: 0},
       {n: 4, slug: 'phase-4-crud', name: 'CRUD and DML', part: 'Querying', topics: 6, pages: 0},
@@ -115,8 +115,8 @@ export const LANGUAGES = {
       {n: 8, slug: 'phase-8-concurrent-suspense', name: 'Concurrent rendering, Suspense and transitions', part: 'Concurrent and server', topics: 18, pages: 18},
       {n: 9, slug: 'phase-9-forms-actions', name: 'Forms, Actions and optimistic UI', part: 'Concurrent and server', topics: 14, pages: 14},
       {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 19},
-      {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 9, pagesPlanned: 17},
-      {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 2, pagesPlanned: 14},
+      {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 17},
+      {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 14},
     ],
   },
   nodejs: {

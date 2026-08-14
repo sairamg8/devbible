@@ -8,7 +8,7 @@ sidebar_position: 0
 > MSW 2.x.** No sandbox and **no console blocks** — every claim is validated against
 > primary documentation and each page's `> Verified:` line names its sources.
 
-🚧 **2 of 14 topics written** — 5 leaf pages.
+✅ **Complete — 14 of 14 topics**, 21 leaf pages across 28 markdown files, 4,986 lines, 0 files over the 300-line cap.
 
 **Tests for React components that survive a refactor.** Not a testing encyclopedia: the
 aim is that you can open an untested component and know what to write, in what order, and
@@ -27,10 +27,10 @@ Everything here — why `getByRole` outranks `getByTestId`, why `user-event` out
 |---|---|---|---|
 | 01 | **[What to test, and what not to](01-what-to-test/README.md)** | <span className="db-tier t-master">Master</span> | The one decision that makes a suite an asset or a tax |
 | 02 | **[React Testing Library's model](02-the-rtl-model/README.md)** | <span className="db-tier t-master">Master</span> | `render`, `screen`, and what RTL deliberately refuses to give you |
-| 03 | **[The query families](03-the-query-families.md)** | <span className="db-tier t-master">Master</span> | `getBy` throws, `queryBy` returns null, `findBy` retries — and the priority order |
-| 04 | **[`user-event` over `fireEvent`](04-user-event-over-fireevent.md)** | <span className="db-tier t-master">Master</span> | A real click is a sequence of events, not one |
-| 05 | **[Async testing and what `act()` means](05-async-testing-and-act.md)** | <span className="db-tier t-master">Master</span> | `findBy` vs `waitFor` vs `waitForElementToBeRemoved`, and the warning everyone mutes |
-| 06 | **[Mocking the API with MSW](06-mocking-the-api.md)** | <span className="db-tier t-master">Master</span> | Intercept the network, not your own modules |
+| 03 | **[The query families](03-the-query-families/README.md)** | <span className="db-tier t-master">Master</span> | `getBy` throws, `queryBy` returns null, `findBy` retries — and the priority order |
+| 04 | **[`user-event` over `fireEvent`](04-user-event-over-fireevent/README.md)** | <span className="db-tier t-master">Master</span> | A real click is a sequence of events, not one |
+| 05 | **[Async testing and what `act()` means](05-async-testing-and-act/README.md)** | <span className="db-tier t-master">Master</span> | `findBy` vs `waitFor` vs `waitForElementToBeRemoved`, and the warning everyone mutes |
+| 06 | **[Mocking the API with MSW](06-mocking-the-api/README.md)** | <span className="db-tier t-master">Master</span> | Intercept the network, not your own modules |
 | 07 | **[Jest or Vitest](07-jest-or-vitest.md)** | <span className="db-tier t-understand">Understand</span> | jsdom, ESM and transforms — the honest answer for each project shape |
 | 08 | **[Testing forms and Actions](08-testing-forms-and-actions.md)** | <span className="db-tier t-understand">Understand</span> | Asserting on the submitted payload, and the pending and error states |
 | 09 | **[Testing hooks](09-testing-hooks.md)** | <span className="db-tier t-understand">Understand</span> | `renderHook`, and when a real component is the better test |
@@ -62,7 +62,7 @@ Everything here — why `getByRole` outranks `getByTestId`, why `user-event` out
   testing through a component.
 - **[Phase 4 · Effects](../phase-4-effects/README.md)** — effects are where flaky tests
   come from. Most `act()` warnings are an effect updating state after the test stopped
-  looking; [topic 05](05-async-testing-and-act.md) takes that apart.
+  looking; [topic 05](05-async-testing-and-act/README.md) takes that apart.
 - **[Phase 10 · Server Components](../phase-10-server-components/README.md)** — a Server
   Component has no client runtime to render into a jsdom document.
   [Topic 13](13-testing-server-components.md) is honest about what follows from that.
