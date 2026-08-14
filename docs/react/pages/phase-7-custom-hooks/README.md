@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 9 of 12 topics written.**
+🚧 **In progress — 10 of 12 topics written.**
 
 **The shortest phase in the syllabus and the highest ratio of understanding to
 material.** Everything in phases 0–6 works because of the rules written down here.
@@ -28,7 +28,7 @@ debugging session.
 | 07 | **[The standard set, written out](07-the-standard-set/README.md)** | <span className="db-tier t-understand">Understand</span> | Ten hooks, each with the gotcha that makes the naive version wrong |
 | 08 | **[Hooks that wrap effects](08-hooks-that-wrap-effects/README.md)** | <span className="db-tier t-understand">Understand</span> | Honest dependencies across the boundary, and not re-subscribing |
 | 09 | **[Conditional hooks and the correct restructure](09-conditional-hooks.md)** | <span className="db-tier t-understand">Understand</span> | Split the component instead of skipping the hook |
-| 10 | `use` breaks the rule on purpose | <span className="db-tier t-understand">Understand</span> | Why it may sit in a condition when `useState` may not |
+| 10 | **[`use` breaks the rule on purpose](10-use-breaks-the-rule.md)** | <span className="db-tier t-understand">Understand</span> | Why it may sit in a condition when `useState` may not |
 | 11 | Testing a custom hook | <span className="db-tier t-understand">Understand</span> | `renderHook` vs a throwaway component; test behaviour |
 | 12 | Extracting too early | <span className="db-tier t-know">Know</span> | A "custom hook" used once that hides control flow |
 
@@ -55,7 +55,7 @@ harder than "the linter prefers it".
 
 ## Coverage
 
-**12 topics.** 9 written so far → 28 files. Six topics are chunked: 07 into five parts
+**12 topics.** 10 written so far → 29 files. Six topics are chunked: 07 into five parts
 (1,337 lines), 03 and 04 into four each (1,055 and 1,147), 05, 06 and 08 into two each
 (555, 575 and 551). Topic 03 splits into the behaviour, the bug it causes and the three homes for
 shared state; topic 04 because the Rules of React are three separate families plus the
