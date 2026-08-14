@@ -222,4 +222,4 @@ diff never has to be untangled.
 
 ---
 
-← Prev: [`git commit`](03-git-commit.md) · Next → [Phase 1 index](README.md)
+← Prev: [`git commit`](03-git-commit.md) · Next → [`.gitignore`](05-gitignore.md)

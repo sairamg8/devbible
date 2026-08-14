@@ -26,8 +26,8 @@ the right tool for a particular sentence you can say out loud.
 | 02 | **[`git add` in full](02-git-add/README.md)** | <span className="db-tier t-master">Master</span> | Staging is a content copy; pathspecs; and the `-p` habit |
 | 03 | **[`git commit`](03-git-commit.md)** | <span className="db-tier t-master">Master</span> | The index is committed, never the working tree; `--amend` makes a new hash |
 | 04 | **[`git diff` and its three questions](04-git-diff.md)** | <span className="db-tier t-master">Master</span> | Bare, `--staged`, `HEAD` — picking wrong is why "my change disappeared" |
-| 05 | `.gitignore` | <span className="db-tier t-master">Master</span> | Pattern syntax, negation's one hard limit, and `check-ignore -v` |
-| 06 | Ignoring does not untrack | <span className="db-tier t-understand">Understand</span> | Why a committed `.env` keeps being committed |
+| 05 | **[`.gitignore`](05-gitignore.md)** | <span className="db-tier t-master">Master</span> | Pattern syntax, negation's one hard limit, and `check-ignore -v` |
+| 06 | **[Ignoring does not untrack](06-ignoring-does-not-untrack.md)** | <span className="db-tier t-understand">Understand</span> | Why a committed `.env` keeps being committed |
 | 07 | `git switch` and `git restore` | <span className="db-tier t-master">Master</span> | The two halves the old `checkout` was split into |
 | 08 | Undo before you push | <span className="db-tier t-master">Master</span> | `restore` vs `reset --soft/--mixed/--hard`, as an effect table |
 | 09 | `git log` for the everyday case | <span className="db-tier t-understand">Understand</span> | `--oneline --graph --decorate`, and reading before changing |
@@ -37,7 +37,7 @@ the right tool for a particular sentence you can say out loud.
 
 ## Coverage
 
-**4 of 12 topics written, as 11 files.** Rows without a link have no page yet.
+**6 of 12 topics written, as 13 files.** Rows without a link have no page yet.
 
 | Topic | Files | Lines | Status |
 |---|---|---|---|
@@ -45,7 +45,9 @@ the right tool for a particular sentence you can say out loud.
 | 02 · `git add` | `README.md` + 3 chunks | 51 · 243 · 235 · 258 = **787** | ✅ Complete |
 | 03 · `git commit` | one file | **227** | ✅ Complete |
 | 04 · `git diff` | one file | **225** | ✅ Complete |
-| 05–12 | — | — | Not started |
+| 05 · `.gitignore` | one file | **238** | ✅ Complete |
+| 06 · Ignoring ≠ untracking | one file | **179** | ✅ Complete |
+| 07–12 | — | — | Not started |
 
 ## What changed on 2026-08-14
 
