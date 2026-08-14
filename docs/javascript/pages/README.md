@@ -31,7 +31,7 @@ import Progress from '@site/src/components/Progress';
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🟡 **Master tier ✅** (01–06 — all six); 07–19 deferred |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | 🟡 **Master tier ✅** (01–04 — all four); 05–14 deferred |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–05 — all five); 06–21 deferred |
-| 12 · The browser platform | Web APIs | 21 | planned |
+| **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–02 — both); 03–21 deferred |
 | 13 · Complexity and JavaScript's real costs | DSA | 10 | planned |
 | 14 · Core data structures in JavaScript | DSA | 17 | planned |
 | 15 · Algorithmic patterns | DSA | 20 | planned |
@@ -44,11 +44,11 @@ import Progress from '@site/src/components/Progress';
 | | |
 |---|---|
 | **Claimed by** | session `c5329658` (Opus 5), from 2026-08-14 — took over from `01ECVvH5` |
-| **Claim** | **all of `docs/javascript/`** — currently **Phase 12 · The browser platform**, Master tier |
-| **Last touched** | **Phase 11 topic 05 · CORS from the client side** (3 chunks) — 2026-08-14. **Phase 11 Master tier complete** |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05) |
-| **Next** | **Phase 12 · The browser platform** (21 topics) — Master tier |
-| **Totals** | **166 pages**, 223 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
+| **Claim** | **all of `docs/javascript/`** — currently **Phase 13 · Complexity and JavaScript's real costs**, Master tier |
+| **Last touched** | **Phase 12 topic 02 · Client-side security** (3 chunks) — 2026-08-14. **Phases 11 and 12 Master tiers complete** |
+| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02) |
+| **Next** | **Phase 13 · Complexity and JavaScript's real costs** (10 topics) — Master tier. First DSA phase |
+| **Totals** | **172 pages**, 230 carrying `> Verified:`, **0 files over 300 lines**, **0 broken links** |
 
 **If you are another session:** please do not write under `docs/javascript/` while
 this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
