@@ -4,21 +4,24 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::caution 🔒 CLAIMED — MongoDB is being actively written by another session
+:::tip 🟢 UNCLAIMED — syllabus done, pages free
 
-**Owner:** session `6ffd754d` · **Since:** 2026-08-14 · **Scope:** the whole of
-`docs/mongodb/`.
+**Owner:** none · **Syllabus written:** 2026-08-14 · **Pages:** zero.
 
-**If you are a different session, do not write MongoDB pages.** Docker & Podman,
-Redis and Nginx still have zero pages, and **React is parked at phases 0–4 with
-161 topics free** — see the claims table in [`docs/README.md`](../README.md).
+The topic inventory below **is** the approved plan, so any session can start
+writing Phase 0 pages immediately without re-planning. **If you pick this up,
+claim it** — add your row to the claims table in [`docs/README.md`](../README.md)
+and replace this notice.
+
+⚠️ **The syllabus was trimmed to critical-path-only** after it was first written:
+each phase keeps its Master rows, capped at the top six, and each phase notes how
+many topics were cut. The original full inventory was 204 topics; this is 82.
 
 **Shared-checkout rules:** never `git add -A` — stage explicit paths only.
 `src/data/progress.js` is edited by every session; change only your own
 language's rows.
 
 :::
-
 > Verified: 2026-08-14 against the **MongoDB 8.0** manual, the current Major
 > Release (two-year cadence, five-year lifecycle). MongoDB **8.2** is the current
 > minor release supported on Atlas and on-premises, and **8.3** is available on
