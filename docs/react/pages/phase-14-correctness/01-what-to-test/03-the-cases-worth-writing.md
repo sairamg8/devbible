@@ -13,7 +13,7 @@ sidebar_position: 3
 > priority the examples follow. The test *selection* below (four states, the regression
 > rule, the file shape) is judgement built on those principles. Every API used here is
 > covered properly in [topic 02](../02-the-rtl-model/README.md) through
-> [topic 06](../06-mocking-the-api.md); the code is illustrative and is **not** run output.
+> [topic 06](../06-mocking-the-api/README.md); the code is illustrative and is **not** run output.
 > No sandbox script backs this page; claims are cited, not measured.
 
 The procedure from [chunk 02](02-what-earns-a-test.md), applied to one real feature: a
@@ -34,7 +34,7 @@ building the feature.
 
 **Empty and error are where the bugs are**, precisely because they are the states you never
 saw during development. They cost one extra MSW handler each
-([topic 06](../06-mocking-the-api.md)), which is the entire argument for mocking at the
+([topic 06](../06-mocking-the-api/README.md)), which is the entire argument for mocking at the
 transport layer rather than stubbing a module: switching a test from success to failure is
 a one-line change to the response, not a rewrite of the mocking.
 

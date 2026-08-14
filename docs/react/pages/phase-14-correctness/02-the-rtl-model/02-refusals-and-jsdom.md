@@ -51,7 +51,7 @@ sharpest form:
 `expect(screen.getByRole('button', { name: /save/i })).toBeDisabled()`. That holds across
 both refactors and fails when either component is broken. If the real tree is too
 expensive to render — a child that hits the network on mount — the answer is to mock that
-child's *data*, not to mock its existence ([topic 06](../06-mocking-the-api.md)).
+child's *data*, not to mock its existence ([topic 06](../06-mocking-the-api/README.md)).
 
 Where a genuinely heavy child must go, the FAQ names the tool: mock the module with
 `jest.mock` (or `vi.mock`). That is an explicit, visible decision in one test file, not a
@@ -131,7 +131,7 @@ rendering half, and it proves nothing about whether the sentinel is ever actuall
 form submission are not implemented — jsdom logs a "not implemented" error rather than
 navigating. `fetch` reaches the real network unless you intercept it, which is why the API
 layer is mocked at the network boundary with MSW rather than by stubbing `fetch` by hand
-([topic 06](../06-mocking-the-api.md)).
+([topic 06](../06-mocking-the-api/README.md)).
 
 **4 · There is no rendering engine, so there is no paint, no animation and no real
 visibility.** No compositor, no `requestAnimationFrame`-driven visual result, no CSS

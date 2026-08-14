@@ -125,7 +125,7 @@ the machinery.
 **4 · Raising the timeout to fix flakiness.** A test that needs 5000 ms is waiting on
 something real — an un-mocked network call, a long fake-timer chain, a genuinely slow
 render. Raising the number converts a fast failure into a slow one and leaves the cause in
-place. Fix what is slow; the network belongs in MSW ([topic 06](../06-mocking-the-api.md)).
+place. Fix what is slow; the network belongs in MSW ([topic 06](../06-mocking-the-api/README.md)).
 
 ## Deciding, in one table
 

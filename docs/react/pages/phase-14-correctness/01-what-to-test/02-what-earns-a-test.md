@@ -62,7 +62,7 @@ whole point is that acting changes what is on screen. Test the *transitions*, dr
 
 A component that talks to the network has **loading, success, empty and error** states,
 and most suites test exactly one of them. All four earn a test; the network is mocked at
-the transport layer with [MSW](../06-mocking-the-api.md), so all four are cheap to
+the transport layer with [MSW](../06-mocking-the-api/README.md), so all four are cheap to
 produce. [Chunk 03](03-the-cases-worth-writing.md) works this through.
 
 ### Custom hooks

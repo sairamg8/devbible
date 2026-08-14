@@ -8,7 +8,7 @@ sidebar_position: 0
 > MSW 2.x.** No sandbox and **no console blocks** — every claim is validated against
 > primary documentation and each page's `> Verified:` line names its sources.
 
-🚧 **5 of 14 topics written** — 11 leaf pages.
+🚧 **6 of 14 topics written** — 13 leaf pages.
 
 **Tests for React components that survive a refactor.** Not a testing encyclopedia: the
 aim is that you can open an untested component and know what to write, in what order, and
@@ -30,7 +30,7 @@ Everything here — why `getByRole` outranks `getByTestId`, why `user-event` out
 | 03 | **[The query families](03-the-query-families/README.md)** | <span className="db-tier t-master">Master</span> | `getBy` throws, `queryBy` returns null, `findBy` retries — and the priority order |
 | 04 | **[`user-event` over `fireEvent`](04-user-event-over-fireevent/README.md)** | <span className="db-tier t-master">Master</span> | A real click is a sequence of events, not one |
 | 05 | **[Async testing and what `act()` means](05-async-testing-and-act/README.md)** | <span className="db-tier t-master">Master</span> | `findBy` vs `waitFor` vs `waitForElementToBeRemoved`, and the warning everyone mutes |
-| 06 | **[Mocking the API with MSW](06-mocking-the-api.md)** | <span className="db-tier t-master">Master</span> | Intercept the network, not your own modules |
+| 06 | **[Mocking the API with MSW](06-mocking-the-api/README.md)** | <span className="db-tier t-master">Master</span> | Intercept the network, not your own modules |
 | 07 | **[Jest or Vitest](07-jest-or-vitest.md)** | <span className="db-tier t-understand">Understand</span> | jsdom, ESM and transforms — the honest answer for each project shape |
 | 08 | **[Testing forms and Actions](08-testing-forms-and-actions.md)** | <span className="db-tier t-understand">Understand</span> | Asserting on the submitted payload, and the pending and error states |
 | 09 | **[Testing hooks](09-testing-hooks.md)** | <span className="db-tier t-understand">Understand</span> | `renderHook`, and when a real component is the better test |

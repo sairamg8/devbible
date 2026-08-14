@@ -115,7 +115,7 @@ useEffect(() => {
 
 **Fix:** wait for the consequence before the test ends — `await screen.findByText(user.name)`
 — so the update happens inside the test rather than after it. This is also why mocking the
-network deterministically matters ([topic 06](../06-mocking-the-api.md)): a request that
+network deterministically matters ([topic 06](../06-mocking-the-api/README.md)): a request that
 never resolves guarantees an update after teardown.
 
 ### 3 · Timers firing outside the test's control
@@ -233,4 +233,4 @@ whichever test happens to be running. Fix the earlier test.
 
 ← Prev: [The three waiting tools](01-the-waiting-tools.md) ·
 Index: [Async testing and what `act()` means](README.md) ·
-Next → [Mocking the API with MSW](../06-mocking-the-api.md)
+Next → [Mocking the API with MSW](../06-mocking-the-api/README.md)

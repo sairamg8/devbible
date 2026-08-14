@@ -40,7 +40,7 @@ reading the second stops you from muting a real bug.
   introduced there as the retrying query; here it is put in context with `waitFor`.
 - **[Topic 04 · `user-event`](../04-user-event-over-fireevent/README.md)** — awaiting every
   interaction is the other half of keeping `act` quiet.
-- **[Topic 06 · Mocking the API with MSW](../06-mocking-the-api.md)** — the resolved
+- **[Topic 06 · Mocking the API with MSW](../06-mocking-the-api/README.md)** — the resolved
   request is what most of these waits are waiting for.
 - **[Topic 14 · Flaky tests, fake timers and CI](../14-flaky-tests-and-ci.md)** — timing
   problems that survive this topic are usually about timers or shared state.
