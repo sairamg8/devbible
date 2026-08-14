@@ -10,7 +10,7 @@ is the difference between one listener and a thousand.
 ## Status — **in progress** (2026-08-14)
 
 **Master tier first.** Phase 10 has **four** Master topics — 01 through 04 — written in
-syllabus order. **02 of 4 done.**
+syllabus order. **03 of 4 done.**
 
 ## Topics
 
@@ -18,7 +18,7 @@ syllabus order. **02 of 4 done.**
 |---|---|---|---|
 | 01 | **[The event model](./01-the-event-model/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[`addEventListener`](./02-addeventlistener/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03 | The event object | <span className="db-tier t-master">Master</span> | planned |
+| 03 | **[The event object](./03-the-event-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | Event delegation | <span className="db-tier t-master">Master</span> | planned |
 | 05–11 | Form and input events, keyboard, pointer, custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | deferred |
 | 12–14 | `EventTarget` as a base class, touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | deferred |
