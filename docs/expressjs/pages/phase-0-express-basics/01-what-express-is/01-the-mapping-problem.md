@@ -176,7 +176,7 @@ content-type gate that decides whether they run at all
 **Symptom:** Tutorials treat "Express" as the whole backend curriculum
 **Cause:** Course marketing folds databases, auth theory and Docker into "Express"
 **Fix:** Keep the boundary — HTTP surface here; Node, database, Redis and infra
-elsewhere. [Chunk 03](03-the-boundary.md) states the rule this bible uses
+elsewhere. [Chunk 04](04-the-boundary.md) states the rule this bible uses
 
 **Symptom:** You cannot debug a hang, a truncated response or a wrong status
 **Cause:** Express was learned without `node:http` underneath it
