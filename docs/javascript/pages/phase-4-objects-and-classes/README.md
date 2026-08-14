@@ -15,13 +15,13 @@ modes.
 
 ## Status — **Understand tier under way** (2026-08-14)
 
-🚧 **12 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
+🚧 **13 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
 08 in syllabus order — and the **Master-first plan is finished across every phase**,
 so the work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 13 · `instanceof` and `Symbol.hasInstance`**, then 14–16 (Understand), then 17–20 (Know).
+**Next here: 14 · Object creation patterns**, then 15–16 (Understand), then 17–20 (Know).
 
-**Coverage:** Master **7 / 7** ✅ · Understand **5 / 9** · Know **0 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **6 / 9** · Know **0 / 4**.
 
 ## Topics
 
@@ -39,7 +39,7 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 10 | **[Getters and setters](./10-getters-and-setters.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Property descriptors](./11-property-descriptors.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[`Object.freeze` and `seal`](./12-freeze-and-seal/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13 | `instanceof` and `Symbol.hasInstance` | <span className="db-tier t-understand">Understand</span> | deferred |
+| 13 | **[`instanceof` and `Symbol.hasInstance`](./13-instanceof-and-hasinstance/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | Object creation patterns | <span className="db-tier t-understand">Understand</span> | deferred |
 | 15 | Normalising untrusted shapes | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16 | Prototype patterns to avoid | <span className="db-tier t-understand">Understand</span> | deferred |
