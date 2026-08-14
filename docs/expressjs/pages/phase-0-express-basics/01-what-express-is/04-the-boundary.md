@@ -78,7 +78,7 @@ Worth naming explicitly, because each is regularly assumed:
   [Phase 9 · 06](../../phase-9-hardening/06-timeouts-and-secrets.md).
 - **`Allow` on a 405.** Express answers **404**, not 405, when a path matches no
   route for that method, and there is no built-in `Allow` header anywhere —
-  [Phase 1 · 01](../../phase-1-routing/01-http-methods.md).
+  [Phase 1 · 01](../../phase-1-routing/01-http-methods/03-405-and-method-semantics.md).
 - **Reading cookies.** `res.cookie` is built in; `req.cookies` and
   `req.signedCookies` exist only with `cookie-parser`. The asymmetry is
   documented on both sides and surprises everyone once.

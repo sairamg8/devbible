@@ -146,7 +146,7 @@ That single line explains behaviour that otherwise looks arbitrary:
 request, and the `Route` then dispatches it to the `get` stack. That is the
 mechanism behind the documented caveat that `app.get` covers `HEAD` **unless
 `app.head` was registered for that path first** —
-[Phase 1 · 01](../../phase-1-routing/01-http-methods.md).
+[Phase 1 · 01](../../phase-1-routing/01-http-methods/02-head-and-options.md).
 
 ## Gotchas
 
@@ -181,7 +181,7 @@ runs twice — including whatever wrote the response
 inside the `Route` picks the `head` stack only if one exists — registered before
 the `get`
 **Fix:** Register `app.head` first, or do not register it at all and let `GET`
-serve both — [Phase 1 · 01](../../phase-1-routing/01-http-methods.md)
+serve both — [Phase 1 · 01](../../phase-1-routing/01-http-methods/02-head-and-options.md)
 
 ## Interview questions
 

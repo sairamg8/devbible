@@ -94,7 +94,7 @@ The rules, straight from the surrounding code:
 🔴 **Do not generalise this into "Express sends 405".** It does not. A `GET` to a
 path that only has a `POST` route is a **404**, with no `Allow` header — this
 responder is `OPTIONS`-only. [Phase 1 ·
-01](../../phase-1-routing/01-http-methods.md) covers what to do about that.
+01](../../phase-1-routing/01-http-methods/03-405-and-method-semantics.md) covers what to do about that.
 
 ## Gotchas
 
@@ -122,7 +122,7 @@ than 405
 **Cause:** The `Allow` header comes from the `OPTIONS` responder only. Express has
 no 405 path at all
 **Fix:** If you need 405 with `Allow`, write it — a catch-all `app.all` below the
-routes for that path. [Phase 1 · 01](../../phase-1-routing/01-http-methods.md)
+routes for that path. [Phase 1 · 01](../../phase-1-routing/01-http-methods/03-405-and-method-semantics.md)
 
 **Symptom:** A route mounted at `/admin` unexpectedly does *not* handle
 `/administrator`, and someone "fixes" it with a regex

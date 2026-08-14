@@ -142,4 +142,4 @@ Default moved from `extended` (`qs`) to `simple`.
 
 ---
 
-← Prev: [HTTP methods](01-http-methods.md) · Next → [Router composition](03-router-composition.md)
+← Prev: [HTTP methods](01-http-methods/README.md) · Next → [Router composition](03-router-composition.md)
