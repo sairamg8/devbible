@@ -8,7 +8,7 @@ sidebar_position: 0
 > MSW 2.x.** No sandbox and **no console blocks** — every claim is validated against
 > primary documentation and each page's `> Verified:` line names its sources.
 
-🚧 **12 of 14 topics written** — 19 leaf pages.
+🚧 **14 of 14 topics written** — 21 leaf pages.
 
 **Tests for React components that survive a refactor.** Not a testing encyclopedia: the
 aim is that you can open an untested component and know what to write, in what order, and
