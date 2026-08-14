@@ -142,7 +142,7 @@ RTL re-exports `act` as a thin wrapper around React's, and recommends importing 
 `@testing-library/react` rather than from React directly, so the version always matches
 the renderer RTL is using. **You will rarely call it**: `render`, `rerender`, `unmount`,
 `user-event` and the async utilities already wrap what they do.
-[Topic 05](../05-async-testing-and-act.md) is about the one case where the warning still
+[Topic 05](../05-async-testing-and-act/README.md) is about the one case where the warning still
 appears and what it is really telling you.
 
 ## Custom render — the pattern the docs prescribe

@@ -95,7 +95,7 @@ Four tests, and not one of them mentions a state variable, a hook, a handler nam
 class. Every query is by role and accessible name
 ([topic 03](../03-the-query-families/README.md)); every interaction goes through `user-event`
 ([topic 04](../04-user-event-over-fireevent/README.md)); every wait is a `findBy*`
-([topic 05](../05-async-testing-and-act.md)). Rename everything inside `OrdersPage` and
+([topic 05](../05-async-testing-and-act/README.md)). Rename everything inside `OrdersPage` and
 this file stays green.
 
 ## Four details in there worth naming
@@ -148,7 +148,7 @@ people expect.
 which passes whether or not the loading indicator was ever removed.
 **Fix:** assert the loading state's *disappearance* explicitly, with `queryBy*` after the
 data arrives, or `waitForElementToBeRemoved`
-([topic 05](../05-async-testing-and-act.md)).
+([topic 05](../05-async-testing-and-act/README.md)).
 
 **Symptom:** the error-state test passes even when the error UI is broken.
 **Cause:** the test asserts that the success content is absent — which is also true while

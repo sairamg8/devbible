@@ -40,7 +40,7 @@ different mistakes, learned at different times.
   these live, pre-bound to `document.body`.
 - **[Topic 04 · `user-event` over `fireEvent`](../04-user-event-over-fireevent/README.md)** —
   queries find the element; `user-event` is how you then interact with it.
-- **[Topic 05 · Async testing and `act()`](../05-async-testing-and-act.md)** — `findBy` is
+- **[Topic 05 · Async testing and `act()`](../05-async-testing-and-act/README.md)** — `findBy` is
   the async half of this topic, taken further.
 - **[Topic 11 · Roles are the query surface](../11-roles-as-the-query-surface.md)** — what
   to do when the element you want has no role and no name.

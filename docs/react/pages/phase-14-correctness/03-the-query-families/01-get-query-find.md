@@ -84,7 +84,7 @@ approximately worthless. Two ways to keep it honest:
    assertion fails and tells you.
 2. **For something that must *disappear*, wait for the disappearance** rather than querying
    after a guess: `await waitForElementToBeRemoved(() => screen.queryByRole('progressbar'))`
-   ([topic 05](../05-async-testing-and-act.md)). Querying too early is how "it's gone!"
+   ([topic 05](../05-async-testing-and-act/README.md)). Querying too early is how "it's gone!"
    becomes a false pass.
 
 ## `findBy` — the async one, and why it beats the alternatives
@@ -129,7 +129,7 @@ retries all three, so a failure tells you only that the *last* one never came tr
 promise, the assertion runs against it, and the test either passes for the wrong reason or
 fails with something incomprehensible about a promise not being in the document. Worse, the
 un-awaited retry keeps updating state after the test ends, which is a leading cause of the
-`act()` warning appearing in the *next* test ([topic 05](../05-async-testing-and-act.md)).
+`act()` warning appearing in the *next* test ([topic 05](../05-async-testing-and-act/README.md)).
 `eslint-plugin-testing-library`'s `await-async-queries` rule catches this and is worth
 enabling for that reason alone.
 

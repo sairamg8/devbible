@@ -39,7 +39,7 @@ timers, and the handful of events no user directly produces.
 
 - **[Topic 03 · The query families](../03-the-query-families/README.md)** — find the
   element, then interact with it. `user-event` takes the element a query returned.
-- **[Topic 05 · Async testing and `act()`](../05-async-testing-and-act.md)** — every
+- **[Topic 05 · Async testing and `act()`](../05-async-testing-and-act/README.md)** — every
   `user-event` call is awaited, and that is half of why `act()` warnings disappear.
 - **[Topic 08 · Testing forms and Actions](../08-testing-forms-and-actions.md)** — filling
   and submitting a form is where these APIs earn their keep.

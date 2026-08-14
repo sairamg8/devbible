@@ -208,4 +208,4 @@ a bug in the component.
 
 ← Prev: [What a real interaction is](01-what-an-interaction-is.md) ·
 Index: [`user-event` over `fireEvent`](README.md) ·
-Next → [Async testing and `act()`](../05-async-testing-and-act.md)
+Next → [Async testing and `act()`](../05-async-testing-and-act/README.md)

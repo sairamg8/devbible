@@ -89,7 +89,7 @@ expect(screen.getByText("Saved")).toBeInTheDocument();   // fails: not there yet
 Missing the `await` means the assertion runs before the interaction's effects are flushed,
 so you get "unable to find an element" on something that appears microseconds later, or an
 `act()` warning when the update lands after the test has finished
-([topic 05](../05-async-testing-and-act.md)). `eslint-plugin-testing-library` has a rule for
+([topic 05](../05-async-testing-and-act/README.md)). `eslint-plugin-testing-library` has a rule for
 this and it is worth turning on.
 
 ⚠️ **`setup()` goes before `render`, not after.** The documented reason is that setup
