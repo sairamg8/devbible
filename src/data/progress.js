@@ -20,7 +20,7 @@ export const LANGUAGES = {
     phases: [
       {n: 0, slug: 'phase-0-how-css-runs', name: 'How CSS runs', part: 'How CSS resolves', topics: 12, pages: 12},
       {n: 1, slug: 'phase-1-selectors', name: 'Selectors', part: 'How CSS resolves', topics: 16, pages: 16},
-      {n: 2, slug: 'phase-2-cascade', name: 'Cascade control', part: 'How CSS resolves', topics: 4, pages: 0},
+      {n: 2, slug: 'phase-2-cascade', name: 'Cascade control', part: 'How CSS resolves', topics: 4, pages: 5},
       {n: 3, slug: 'phase-3-custom-properties', name: 'Custom properties and modern values', part: 'Values and layout', topics: 4, pages: 0},
       {n: 4, slug: 'phase-4-flexbox', name: 'Flexbox, deeply', part: 'Values and layout', topics: 7, pages: 0},
       {n: 5, slug: 'phase-5-grid', name: 'Grid, deeply', part: 'Values and layout', topics: 10, pages: 0},
@@ -86,7 +86,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-jsx', name: 'JSX and what a component returns', part: 'The React model', topics: 15, pages: 15},
       {n: 2, slug: 'phase-2-components', name: 'Components, props and composition', part: 'The React model', topics: 16, pages: 16},
       {n: 3, slug: 'phase-3-state', name: 'State and the render cycle', part: 'The React model', topics: 17, pages: 17},
-      {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 11, pagesPlanned: 18},
+      {n: 4, slug: 'phase-4-effects', name: 'Effects and synchronization', part: 'Hooks, completely', topics: 18, pages: 13, pagesPlanned: 18},
       {n: 5, slug: 'phase-5-refs-context-reducers', name: 'Refs, context and reducers', part: 'Hooks, completely', topics: 16, pages: 0},
       {n: 6, slug: 'phase-6-performance', name: 'Rendering performance and the React Compiler', part: 'Hooks, completely', topics: 17, pages: 0},
       {n: 7, slug: 'phase-7-custom-hooks', name: 'Custom hooks and the Rules of React', part: 'Hooks, completely', topics: 12, pages: 0},

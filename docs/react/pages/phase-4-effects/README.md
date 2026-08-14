@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 11 of 18 topics written.** The table below links what exists;
+🚧 **In progress — 13 of 18 topics written.** The table below links what exists;
 unlinked rows are not written yet.
 
 The most misused hook in React, almost always because it is understood as "run
@@ -30,8 +30,8 @@ React may run any number of times**.
 | 09 | **[An effect has its own lifecycle](09-effect-lifecycle.md)** | <span className="db-tier t-understand">Understand</span> | It starts and stops, independent of mounting |
 | 10 | **[`useEffectEvent`](10-useeffectevent.md)** | <span className="db-tier t-understand">Understand</span> | Latest props and state without a dependency |
 | 11 | **[Removing dependencies legitimately](11-removing-dependencies/README.md)** | <span className="db-tier t-understand">Understand</span> | Eight legitimate moves, and the two that only look like fixes |
-| 12 | `useLayoutEffect` | <span className="db-tier t-understand">Understand</span> | After DOM mutation, before paint |
-| 13 | Effect ordering | <span className="db-tier t-understand">Understand</span> | Children before parents, cleanups before setups |
+| 12 | **[`useLayoutEffect`](12-uselayouteffect.md)** | <span className="db-tier t-understand">Understand</span> | After DOM mutation, before paint — and what that costs |
+| 13 | **[Effect ordering](13-effect-ordering.md)** | <span className="db-tier t-understand">Understand</span> | Three passes; every cleanup before any setup |
 | 14 | Timers, listeners and observers | <span className="db-tier t-understand">Understand</span> | Each API's inverse, and the leak without it |
 | 15 | Effects and refs together | <span className="db-tier t-understand">Understand</span> | Measuring, focusing, and React 19 ref cleanup |
 | 16 | Subscribing to an external store | <span className="db-tier t-understand">Understand</span> | The tearing problem `useSyncExternalStore` exists to fix |
@@ -40,7 +40,7 @@ React may run any number of times**.
 
 ## Coverage so far
 
-**11 topics → 20 content files.** Two topics run past the 300-line file cap and
+**13 topics → 22 content files.** Two topics run past the 300-line file cap and
 become topic directories:
 
 | Topic | Chunks | Split at |
