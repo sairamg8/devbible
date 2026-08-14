@@ -29,7 +29,7 @@ One page per topic from the [syllabus](../README.md), with runnable commands,
 real output, gotchas written symptom → cause → fix, and interview questions with
 answers.
 
-## Phases — 52 topics, daily-driver scope
+## Phases — ✅ ALL 52 TOPICS COMPLETE
 
 🔴 **Re-scoped 2026-08-14** to the Git you use to get work done, on the user's
 instruction (*"I just need to know about the git to work daily tasks not more
@@ -42,7 +42,7 @@ than that"*). Five phases, down from thirteen. What was cut and why is in the
 | **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 12 | 12 | ✅ **Complete** |
 | **[02 · Branching, merging and rebasing](./phase-2-branching-merging/README.md)** | 10 | 10 | ✅ **Complete** |
 | **[04 · Remotes and syncing](./phase-4-remotes/README.md)** | 8 | 8 | ✅ **Complete** |
-| 05 · Undo, recover and rewrite | 8 | 0 | Not started |
+| **[05 · Undo, recover and rewrite](./phase-5-undo-recover/README.md)** | 8 | 8 | ✅ **Complete** |
 
 **Parked, not being written:** 03 · reading history in depth · 06 · team workflow
 and code review · 07 · the fullstack repository · 08 · hooks and CI · 09 · speed
