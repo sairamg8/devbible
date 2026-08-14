@@ -10,8 +10,8 @@ sidebar_position: 0
 > lives on [Phase 0 · 11](../phase-0-how-react-runs/11-the-compiler.md) and is
 > linked rather than repeated.
 
-🚧 **In progress — 13 of 17 topics written.** The table below links what exists;
-unlinked rows are not written yet.
+✅ **COMPLETE — all 17 topics written**, 18 content files, 0 broken links, 0 files
+over the 300-line cap. Line spread 78–276.
 
 **Memoization is the most cargo-culted area of React.** This phase is ordered
 deliberately: measure, understand *why* something re-rendered, and only then reach
@@ -36,10 +36,10 @@ The single most important sentence in the phase comes from the `memo` reference:
 | 11 | **[Do you still write `useMemo`?](11-do-you-still-write-usememo.md)** | <span className="db-tier t-understand">Understand</span> | What to delete, what to keep, in what order |
 | 12 | **[Lazy loading components](12-lazy-loading.md)** | <span className="db-tier t-understand">Understand</span> | `lazy` + Suspense, and a loading state that does not flash |
 | 13 | **[Moving state down and lifting content up](13-moving-state-down.md)** | <span className="db-tier t-understand">Understand</span> | The two fixes that beat any amount of memoization |
-| 14 | List virtualization | <span className="db-tier t-understand">Understand</span> | When the cost is 10,000 DOM nodes, and what windowing costs you |
-| 15 | Expensive initial mount | <span className="db-tier t-understand">Understand</span> | Hydration cost, deferring below-the-fold work, `<Activity>` |
-| 16 | Bundle size | <span className="db-tier t-know">Know</span> | What actually reaches the browser |
-| 17 | `useDeferredValue` for a laggy list | <span className="db-tier t-know">Know</span> | Named here, taught in Phase 8 |
+| 14 | **[List virtualization](14-list-virtualization.md)** | <span className="db-tier t-understand">Understand</span> | When the cost is 10,000 DOM nodes, and what windowing costs you |
+| 15 | **[Expensive initial mount](15-expensive-initial-mount.md)** | <span className="db-tier t-understand">Understand</span> | Hydration cost, deferring below-the-fold work, `<Activity>` |
+| 16 | **[Bundle size](16-bundle-size.md)** | <span className="db-tier t-know">Know</span> | What actually reaches the browser |
+| 17 | **[`useDeferredValue` for a laggy list](17-usedeferredvalue.md)** | <span className="db-tier t-know">Know</span> | Named here, taught in Phase 8 |
 
 ## The order is the argument
 
@@ -65,6 +65,13 @@ in topics 02–04 helps because the cost is the DOM.
   a linter.
 - **[Phase 0 · 12](../phase-0-how-react-runs/12-devtools-and-profiler.md)** — the
   tooling itself.
+
+## Coverage
+
+**17 topics → 18 content files.** No topic needed chunking.
+
+**Verified at phase close:** link walker over all 18 files reports **0 broken
+links**; no file exceeds 300 lines.
 
 ## Gate
 
