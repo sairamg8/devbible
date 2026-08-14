@@ -7,7 +7,7 @@ sidebar_position: 0
 > **Target: Express 5.x on Node 24** — examples executed on **Express 5.2.1** /
 > **Node 24.19.0** before they are written down.
 
-:::caution 🔴 ACTIVE — Master-tier depth pass, session `ffadd057`, 2026-08-14
+:::caution 🔴 ACTIVE and LOCKED — Master-tier depth pass, session `b7f137c4` (continues `ffadd057`), 2026-08-14
 
 **Structurally complete, not yet finished.** All 11 phases, 114 of 114 syllabus topics,
 86 pages — every one carrying a `> Verified:` line, a tier badge, Gotchas, a Trade-off
