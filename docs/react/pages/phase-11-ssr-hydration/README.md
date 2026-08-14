@@ -8,7 +8,7 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **12 of 17 topics written** — 18 leaf pages.
+🚧 **13 of 17 topics written** — 20 leaf pages.
 
 **Everything `react-dom` does outside the browser, plus the DOM-level features React 19
 absorbed.** This is where SSR stops being a checkbox and starts being a set of trade-offs
@@ -29,7 +29,7 @@ you choose between — and where [Phase 10](../phase-10-server-components/README
 | 10 | **[Document metadata (19)](10-document-metadata/README.md)** | <span className="db-tier t-understand">Understand</span> | `<title>`, `<meta>` and `<link>` hoisted from anywhere in the tree |
 | 11 | **[Resource preloading](11-resource-preloading/README.md)** | <span className="db-tier t-understand">Understand</span> | `preload`, `preinit`, `preconnect`, `prefetchDNS` and when each helps |
 | 12 | **[`flushSync`](12-flushsync.md)** | <span className="db-tier t-understand">Understand</span> | Forcing a synchronous commit — the legitimate cases and the cost of every other |
-| 13 | **[Root error options (19)](13-root-error-options.md)** | <span className="db-tier t-understand">Understand</span> | `onCaughtError`, `onUncaughtError`, `onRecoverableError`, and `onError` on the server |
+| 13 | **[Root error options (19)](13-root-error-options/README.md)** | <span className="db-tier t-understand">Understand</span> | `onCaughtError`, `onUncaughtError`, `onRecoverableError`, and `onError` on the server |
 | 14 | **[`renderToStaticMarkup`](14-rendertostaticmarkup.md)** | <span className="db-tier t-know">Know</span> | No hydration markers — for email and genuinely static pages |
 | 15 | **[Stylesheets and `precedence` (19)](15-stylesheets-and-precedence.md)** | <span className="db-tier t-know">Know</span> | Suspense-aware style loading, deduplication, and CSS-in-JS |
 | 16 | **[`<script async>` support (19)](16-async-scripts.md)** | <span className="db-tier t-know">Know</span> | Rendered anywhere, hoisted and deduplicated |

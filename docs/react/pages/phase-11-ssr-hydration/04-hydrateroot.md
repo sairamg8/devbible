@@ -63,7 +63,7 @@ and why [Phase 10](../phase-10-server-components/01-what-a-server-component-is/R
 >   to avoid conflicts when using multiple roots on the same page. **Must be the same prefix
 >   as used on the server.**
 
-The three error callbacks are [topic 13](13-root-error-options.md)'s subject. Two things to
+The three error callbacks are [topic 13](13-root-error-options/README.md)'s subject. Two things to
 take now:
 
 - **`onRecoverableError` is where hydration mismatches surface in production.** React
