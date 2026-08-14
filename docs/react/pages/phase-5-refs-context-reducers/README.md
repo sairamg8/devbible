@@ -8,8 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line
 > names its sources.
 
-🚧 **In progress — 10 of 16 topics written.** The table below links what exists;
-unlinked rows are not written yet.
+✅ **COMPLETE — all 16 topics written**, 18 content files, 0 broken links, 0 files
+over the 300-line cap.
 
 The three escape hatches from pure top-down state, and the two hooks that connect
 React to the world outside it. Each escape hatch exists because the default model
@@ -28,16 +28,16 @@ default model rather than to supplement it.
 | 08 | **[When a ref is the wrong tool](08-when-a-ref-is-wrong.md)** | <span className="db-tier t-understand">Understand</span> | The "it works but the UI is stale" bug |
 | 09 | **[`useState` vs `useReducer`](09-usestate-vs-usereducer.md)** | <span className="db-tier t-understand">Understand</span> | The honest decision rule |
 | 10 | **[Reducer patterns](10-reducer-patterns.md)** | <span className="db-tier t-understand">Understand</span> | Action shape, lazy `init`, and `dispatch` being stable |
-| 11 | What context is and is not | <span className="db-tier t-understand">Understand</span> | Not a state manager, and it does not prevent re-renders |
-| 12 | Context plus reducer | <span className="db-tier t-understand">Understand</span> | React's own built-in app-state pattern |
-| 13 | The default context value | <span className="db-tier t-understand">Understand</span> | The missing-provider bug it silently hides |
-| 14 | `useId` | <span className="db-tier t-understand">Understand</span> | Ids that match between server and client; never for keys |
-| 15 | `useSyncExternalStore` | <span className="db-tier t-understand">Understand</span> | The reference; the *why* is [Phase 4 · 16](../phase-4-effects/16-external-store.md) |
-| 16 | `useDebugValue` | <span className="db-tier t-when">When Needed</span> | Labelling a custom hook in DevTools |
+| 11 | **[What context is and is not](11-what-context-is-and-is-not.md)** | <span className="db-tier t-understand">Understand</span> | Not a state manager, and it does not prevent re-renders |
+| 12 | **[Context plus reducer](12-context-plus-reducer.md)** | <span className="db-tier t-understand">Understand</span> | React's own built-in app-state pattern |
+| 13 | **[The default context value](13-default-context-value.md)** | <span className="db-tier t-understand">Understand</span> | The missing-provider bug it silently hides |
+| 14 | **[`useId`](14-useid.md)** | <span className="db-tier t-understand">Understand</span> | Ids that match between server and client; never for keys |
+| 15 | **[`useSyncExternalStore`](15-usesyncexternalstore.md)** | <span className="db-tier t-understand">Understand</span> | The reference; the *why* is [Phase 4 · 16](../phase-4-effects/16-external-store.md) |
+| 16 | **[`useDebugValue`](16-usedebugvalue.md)** | <span className="db-tier t-when">When Needed</span> | Labelling a custom hook in DevTools |
 
-## Coverage so far
+## Coverage
 
-**10 topics → 12 content files.** One topic runs past the 300-line cap and becomes a topic directory:
+**16 topics → 18 content files.** One topic runs past the 300-line cap and becomes a topic directory:
 
 | Topic | Chunks | Split at |
 |---|---|---|
