@@ -9,6 +9,15 @@ sidebar_position: 6
 **JSON parsing destroys the exact bytes. Webhooks that HMAC the body need
 `express.raw` (or equivalent) before any JSON middleware consumes the stream.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [`express.raw`](https://expressjs.com/en/5x/api/express/) *"parses incoming request
+> payloads into a `Buffer`"* and defaults to `type` **`"application/octet-stream"`**,
+> `limit` `"100kb"`; `express.text` parses into a string with `type` **`"text/plain"`**.
+> Both default `type` values matter for webhooks: a provider sending
+> `application/json` will **not** hit `express.raw` unless you widen `type` yourself.
+> The ordering argument follows from the documented content-type gate — whichever parser
+> matches first consumes the stream, and the parsed body is what survives.
+
 ## raw → Buffer
 
 ```js

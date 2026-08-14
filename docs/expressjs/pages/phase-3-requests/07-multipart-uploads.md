@@ -9,6 +9,25 @@ sidebar_position: 7
 **`multipart/form-data` is not JSON. Use Multer 2.x (or equivalent) on Express 5.
 Cap size, allow-list MIME types, and treat the file as untrusted input.**
 
+> Verified: 2026-08-14 against the documentation and the npm registry — **no sandbox
+> run**. Express ships **no multipart parser**: the built-in list is `json`,
+> `urlencoded`, `raw`, `text`, `static`, `Router`
+> ([express reference](https://expressjs.com/en/5x/api/express/)), which is why this is a
+> package decision at all. Multer's `latest` is **2.2.0** (checked on the registry
+> 2026-08-14; `next` is a 3.0 alpha), so "Multer 2.x" is current advice.
+> Two warnings are Multer's own, quoted from its
+> [README](https://github.com/expressjs/multer): *"uploading very large files, or
+> relatively small files in large numbers very quickly, can cause your application to
+> run out of memory when memory storage is used"*, and *"never add multer as a global
+> middleware since a malicious user could upload files to a route that you didn't
+> anticipate."* Note `limits.fileSize` **defaults to `Infinity`** — an uncapped upload is
+> the default, not an oversight you have to introduce.
+>
+> ⚠️ **Where the docs stop:** Multer's README carries **no** explicit warning about
+> sanitising `originalname` or distrusting the client-supplied `mimetype`. Those two
+> cautions on this page are standard input-validation reasoning, not quotable upstream
+> guidance — treat them as this bible's advice.
+
 ## Boundary responsibilities
 
 | Layer | Job |

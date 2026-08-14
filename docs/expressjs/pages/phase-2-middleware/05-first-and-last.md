@@ -9,6 +9,18 @@ sidebar_position: 5
 **Some middleware only works in the right slot. Body parsers before handlers that
 read `req.body`. Error middleware last. 404 just above errors.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> Both ends of the skeleton are documented requirements, not style.
+> [Error handling](https://expressjs.com/en/guide/error-handling.html): error-handling
+> middleware is defined *"last, after other `app.use()` and routes calls"*, and takes
+> four arguments — *"you must provide four arguments to identify it as an error-handling
+> middleware function"*, even when `next` goes unused.
+> [FAQ](https://expressjs.com/en/starter/faq.html): the 404 handler goes *"at the very
+> bottom of the stack (below all other functions)"*, because a 404 means Express
+> *"executed all middleware functions and routes, and found that none of them
+> responded"* — which also means a 404 is **not** an error and never reaches the error
+> handler.
+
 ## Canonical skeleton
 
 ```js

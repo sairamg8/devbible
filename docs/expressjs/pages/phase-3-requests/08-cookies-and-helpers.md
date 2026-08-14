@@ -10,6 +10,18 @@ sidebar_position: 8
 (or manual `Cookie` header parsing). Small req helpers avoid reinventing Accept
 negotiation.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The asymmetry this page is named for is documented on both sides: `res.cookie` is a
+> [response method](https://expressjs.com/en/5x/api/response/), while `req.cookies` is
+> populated only *"when using cookie-parser middleware"* and `req.signedCookies` likewise
+> — each *"defaults to `{}`"* once that middleware is mounted
+> ([request reference](https://expressjs.com/en/5x/api/request/)). `cookie-parser` is not
+> in Express's built-in list, so it is an install.
+> The helpers are documented with the exact semantics used below: `req.is()` returns the
+> **matching content type** or `false` (`req.is('html')` → `'html'`), `req.accepts()`
+> returns the best match from the `Accept` header or `false`, and `req.get()` is
+> case-insensitive with `Referrer`/`Referer` interchangeable.
+
 ## The asymmetry
 
 ```js

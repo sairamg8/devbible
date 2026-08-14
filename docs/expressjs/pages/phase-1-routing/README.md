@@ -6,6 +6,14 @@ sidebar_position: 0
 
 > **Target: Express 5.2.1 on Node 24.19.0.** Examples below were executed on that pair.
 
+> ✅ **Phase complete — 9 of 9 topics, 2026-08-14.** Every page carries a `> Verified:`
+> line naming the Express documentation behind its claims. **Documentation-validated,
+> not sandbox-measured**: this pass ran nothing, so no console block was added or
+> changed. Where the docs settle a point the page did not make, the Verified line says
+> so — the `app.head`-before-`app.get` caveat on 01, the `qs`-vs-`simple` contradiction
+> in Express's own docs on 02, the splat-is-an-array consequence on 05, and the sub-app
+> `mount` event on 07.
+
 How URLs become handlers. **Order is load-bearing** — Express will not warn you
 when the wrong route wins.
 

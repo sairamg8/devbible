@@ -9,6 +9,16 @@ sidebar_position: 2
 **First registered runs first. Application middleware runs before router
 middleware for that mount. Route-level middleware runs only for that route.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [Using middleware](https://expressjs.com/en/guide/using-middleware.html) names the
+> same levels this page does — application-level (`app.use`/`app.METHOD`), router-level
+> (`router.use`/`router.METHOD`), route-level, error-handling and built-in — and states
+> that middleware executes *"in the order they are defined"*. The
+> [router reference](https://expressjs.com/en/5x/api/router/) adds that *"the order of
+> `router.use()` definitions is critical — they execute sequentially, defining
+> middleware precedence"*, and that a router's own mount path *"is stripped and not
+> visible to the middleware"*.
+
 ## Levels
 
 ```text

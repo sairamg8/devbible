@@ -9,6 +9,16 @@ sidebar_position: 2
 **Status is part of the contract. Headers are fixed once the body starts.
 Useful APIs pick 201/204/400/401/403/404/409 deliberately — not always 200.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [Response reference](https://expressjs.com/en/5x/api/response/): `res.status` is
+> chainable and aliases Node's `statusCode`; `res.headersSent` is the documented boolean
+> that flips once headers go out (`false` before `res.send`, `true` after — the docs show
+> exactly that); `res.set`/`res.type`/`res.vary` mutate headers and are therefore only
+> meaningful before the first write. Express 5 also **restricts `res.status()` to
+> 100–999** and rejects anything outside that range
+> ([migration guide](https://expressjs.com/en/guide/migrating-5.html)) — an Express 4
+> habit of passing a made-up code now throws.
+
 ## Discipline
 
 ```js

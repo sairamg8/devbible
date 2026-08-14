@@ -9,6 +9,17 @@ sidebar_position: 3
 **Pick envelope vs bare resource and keep it consistent. Mixing both is worse
 than either choice.**
 
+> Verified: 2026-08-14 — **no sandbox run**, and mostly **not a documentation question**.
+> Express has no opinion on body shape: `res.json` simply serialises what you hand it via
+> `JSON.stringify` ([response reference](https://expressjs.com/en/5x/api/response/)).
+> The conventions below are this bible's guidance, not upstream rules — the only
+> Express-level fact that constrains them is the one from
+> [Phase 3](../phase-3-requests/01-req-anatomy.md): `JSON.stringify` **omits `undefined`
+> properties**, so an envelope field you set to `undefined` disappears from the response
+> rather than appearing as `null`
+> ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)).
+> That alone is a reason to make absent-vs-null an explicit decision in your shape.
+
 ## Two common styles
 
 **Bare resource**

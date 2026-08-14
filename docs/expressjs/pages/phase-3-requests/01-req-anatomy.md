@@ -9,6 +9,24 @@ sidebar_position: 1
 **`req` is Node’s `IncomingMessage` plus Express fields. Some properties exist
 only after middleware runs. `req.cookies` is not free.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [Request reference](https://expressjs.com/en/5x/api/request/): `req.body` is *"by
+> default … `undefined`, and is populated when you use body-parsing middleware"*;
+> `req.cookies` needs cookie-parser and *"defaults to `{}`"* only once that middleware
+> is mounted; `req.ip` is *"derived from the left-most entry in the `X-Forwarded-For`
+> header"* whenever `trust proxy` does not evaluate to false, and `req.ips` is otherwise
+> *"an empty array"*.
+>
+> ⚠️ **Known error in the console block below, left in place rather than replaced.** It
+> prints `body: undefined`. A real run cannot print that: the value crosses `res.json`,
+> and `JSON.stringify` **omits** object properties whose value is `undefined` —
+> *"they are either omitted (when found in an object) or changed to `null` (when found
+> in an array)"*
+> ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)).
+> The `body` key would simply be **absent**. Since this pass runs nothing, the block is
+> not rewritten from imagination — the correction is stated here instead. **The lesson is
+> the more useful one anyway: `undefined` does not survive a JSON round-trip.**
+
 ## Always there (routing)
 
 | Field | Meaning |

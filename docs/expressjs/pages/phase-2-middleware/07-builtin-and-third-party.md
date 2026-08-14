@@ -9,6 +9,16 @@ sidebar_position: 7
 **Express ships a small set of built-ins. Everything else is a package. Evaluate
 third-party middleware like production dependencies — not like demo glue.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The [express reference](https://expressjs.com/en/5x/api/express/) lists exactly the
+> built-ins in the table below — `express.json`, `express.urlencoded`, `express.raw`,
+> `express.text`, `express.static`, `express.Router` — and names their origins:
+> the four body parsers are *"based on body-parser"* (reintroduced into core), and
+> `express.static` is *"based on serve-static"*. Everything else, including
+> `compression`, `cookie-parser`, `cors`, `morgan` and `multer`, is listed under
+> [Resources → Middleware](https://expressjs.com/en/resources/middleware/) as a package
+> you install — which is the split this page is about.
+
 ## Built-ins you will actually use
 
 | Middleware | Role |

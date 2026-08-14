@@ -9,6 +9,14 @@ sidebar_position: 4
 **A factory returns middleware. Configure once, reuse with different options —
 no module-level mutable globals.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The factory shape is Express's own convention rather than a community invention:
+> [using middleware](https://expressjs.com/en/guide/using-middleware.html) shows
+> "configurable middleware" as a module that *"exports a function which accepts an
+> options object and returns the middleware implementation"*, and every built-in follows
+> it — `express.json({limit})`, `express.static(root, options)`, `express.urlencoded({extended})`
+> are all called for their return value, never passed directly.
+
 ## Pattern
 
 ```js

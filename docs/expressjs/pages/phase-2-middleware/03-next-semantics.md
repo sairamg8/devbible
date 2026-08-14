@@ -9,6 +9,16 @@ sidebar_position: 3
 **`next()` continues. `next(err)` jumps to error handlers. Neither response nor
 `next` means hang. `next` after a response means header errors.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The hang is documented: *"if a middleware function does not end the request-response
+> cycle, it must call `next()` … Otherwise, the request will be left hanging"*
+> ([using middleware](https://expressjs.com/en/guide/using-middleware.html)).
+> [Error handling](https://expressjs.com/en/guide/error-handling.html) covers the other
+> two branches — `next(err)` skips the remaining non-error middleware, and *"if you call
+> `next()` with an error after you have started writing the response … the Express
+> default error handler closes the connection and fails the request."* That is why the
+> documented guard in a custom handler is `if (res.headersSent) return next(err)`.
+
 ## Hang — no next, no body
 
 ```js

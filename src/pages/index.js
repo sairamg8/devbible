@@ -14,6 +14,8 @@ const express = summarise('expressjs');
 const react = summarise('react');
 const postgres = summarise('postgresql');
 const git = summarise('git');
+const mongodb = summarise('mongodb');
+const redis = summarise('redis');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -23,8 +25,9 @@ const git = summarise('git');
  * `done: true` marks a technology whose syllabus is fully explained — every
  * phase written, every syllabus topic covered, no broken links. It is set by
  * hand rather than derived from `percent === 100`, because the percentage only
- * knows that a phase has *pages*; it cannot tell a finished phase from one
- * whose pages are still outlines (Express is at 100% and still a draft).
+ * knows that a phase has *pages*; it cannot tell a finished phase from one whose
+ * pages are still outlines. Express spent a while in exactly that state — 100%
+ * by the counter, a draft in fact — which is why this flag exists at all.
  *
  * `parked: true` marks a layer that is outside the committed eleven in
  * instructions.md §2 — visible so the map is honest about what exists beyond
@@ -93,6 +96,7 @@ const LAYERS = [
         desc: 'Routing, middleware, error handling, auth, layering',
         to: '/docs/expressjs',
         active: true,
+        done: true,
         stats: `${express.topicsTotal} topics · ${express.phasesTotal} phases · ${express.phasesDone} phases explained · ${express.pagesWritten} pages`,
         progress: express.percent,
       },
@@ -102,7 +106,15 @@ const LAYERS = [
     name: 'Data',
     note: 'Where state lives',
     items: [
-      {n: '07', name: 'MongoDB', desc: 'Document model, aggregation, indexes, Mongoose'},
+      {
+        n: '07',
+        name: 'MongoDB',
+        desc: 'Document model, aggregation, indexes, Mongoose',
+        to: '/docs/mongodb',
+        active: true,
+        stats: `${mongodb.topicsTotal} topics · ${mongodb.phasesTotal} phases · ${mongodb.phasesDone} phases explained · ${mongodb.pagesWritten} pages`,
+        progress: mongodb.percent,
+      },
       {
         n: '08',
         name: 'PostgreSQL',
@@ -113,7 +125,15 @@ const LAYERS = [
         stats: `${postgres.topicsTotal} topics · ${postgres.phasesTotal} phases · ${postgres.phasesDone} phases explained · ${postgres.pagesWritten} pages`,
         progress: postgres.percent,
       },
-      {n: '09', name: 'Redis', desc: 'Data types, caching patterns, sessions, streams'},
+      {
+        n: '09',
+        name: 'Redis',
+        desc: 'Data types, caching patterns, sessions, rate limits, locks',
+        to: '/docs/redis',
+        active: true,
+        stats: `${redis.topicsTotal} topics · ${redis.phasesTotal} phases · ${redis.phasesDone} phases explained · ${redis.pagesWritten} pages`,
+        progress: redis.percent,
+      },
     ],
   },
   {

@@ -9,6 +9,14 @@ sidebar_position: 3
 **Default limits exist so one client cannot stream gigabytes into memory. Treat
 `limit` as a production control. Oversize → 413.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> Every body parser documents `limit` with a default of **`"100kb"`**
+> ([express reference](https://expressjs.com/en/5x/api/express/)) — that is the number
+> you inherit if you never set one, and it applies to `json`, `urlencoded`, `raw` and
+> `text` alike. The `413` / `entity.too.large` console block below predates this pass and
+> was **not** re-measured; the earlier verification review lists it among the claims it
+> checked by hand, and 413 is the correct status for an over-limit entity.
+
 ## Measured
 
 ```js

@@ -9,6 +9,19 @@ sidebar_position: 6
 **Attaching fields on `req` is how identity and timing flow down the chain. Do
 not overwrite Express or Node core properties.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> Mutation is a documented capability — middleware may *"modify the request and response
+> objects"* — and `res.locals` is documented as the request-scoped place for values
+> ([using middleware](https://expressjs.com/en/guide/using-middleware.html),
+> [response reference](https://expressjs.com/en/5x/api/response/)).
+> The "do not clobber" half is reasoning from the documented surface rather than a
+> quotable rule: `req.params`, `req.query`, `req.body`, `req.baseUrl`, `req.path`,
+> `req.originalUrl`, `req.ip` and `req.route` are all defined by Express, and
+> `req`/`res` also carry every `http.IncomingMessage` / `http.ServerResponse` member.
+> Anything you attach must avoid that whole namespace, which is why a single namespaced
+> object is the safe habit. **The docs do not enumerate a reserved list**; treat the
+> request and response references as the list.
+
 ## Safe attachments
 
 ```js

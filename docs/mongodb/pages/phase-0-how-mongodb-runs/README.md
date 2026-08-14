@@ -8,32 +8,26 @@ sidebar_position: 0
 > specification**. Sources named per page. **Documentation-validated** under the
 > no-new-sandboxes rule — no console blocks unless a run produced them.
 
-**14 topics. 🚧 3 of 14 written.** The architecture, and the sentence the rest of
+**✅ 5 of 5 topics written.** The architecture, and the sentence the rest of
 the syllabus is downstream of: **the unit of atomicity is the single document.**
+
+> **Scope:** the syllabus was cut to the critical path on 2026-08-14 — **204 → 82
+> topics**, Master tier only, capped at 6 per phase. This phase went from 14 to 5.
 
 | # | Page | Tier | State |
 |---|---|---|---|
 | 01 | [What MongoDB actually is](./01-what-mongodb-actually-is.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 02 | [The single-document atomicity guarantee](./02-single-document-atomicity.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 | 03 | [BSON](./03-bson.md) | <span className="db-tier t-master">Master</span> | ✅ written |
-| 04 | Document, collection, database | <span className="db-tier t-master">Master</span> | 🚧 next |
-| 05 | How a query reaches the server | <span className="db-tier t-understand">Understand</span> | — |
-| 06 | WiredTiger | <span className="db-tier t-understand">Understand</span> | — |
-| 07 | Journaling and durability | <span className="db-tier t-understand">Understand</span> | — |
-| 08 | `mongod`, `mongos`, `mongosh` | <span className="db-tier t-understand">Understand</span> | — |
-| 09 | Namespaces and on-disk layout | <span className="db-tier t-know">Know</span> | — |
-| 10 | Versions, cadence and lifecycle | <span className="db-tier t-understand">Understand</span> | — |
-| 11 | MongoDB vs PostgreSQL — the actual trade | <span className="db-tier t-master">Master</span> | — |
-| 12 | Atlas vs self-hosted | <span className="db-tier t-know">Know</span> | — |
-| 13 | Running MongoDB locally | <span className="db-tier t-understand">Understand</span> | — |
-| 14 | The ecosystem | <span className="db-tier t-know">Know</span> | — |
+| 04 | [Document, collection, database](./04-document-collection-database.md) | <span className="db-tier t-master">Master</span> | ✅ written |
+| 05 | [MongoDB vs PostgreSQL — the actual trade](./05-mongodb-vs-postgresql.md) | <span className="db-tier t-master">Master</span> | ✅ written |
 
 ## Coverage
 
 | | |
 |---|---|
-| Topics written | **3 of 14** |
-| Pages on disk | **3** |
+| Topics written | **5 of 5 — COMPLETE** |
+| Pages on disk | **5** |
 | Evidence | MongoDB Manual and the BSON spec, named per page; **no console blocks** |
 
 ## The sentence everything follows from

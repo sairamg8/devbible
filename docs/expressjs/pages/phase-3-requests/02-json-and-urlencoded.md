@@ -10,6 +10,22 @@ sidebar_position: 2
 only when `Content-Type` matches. Wrong type means empty body, not a thrown
 error.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The content-type gate is documented in exactly those terms
+> ([express reference](https://expressjs.com/en/5x/api/express/)): the parsed body is
+> populated *"or `undefined` if there was no body to parse, the `Content-Type` was not
+> matched, or an error occurred."* Defaults, all of which this page depends on:
+> `express.json` — `limit` **`"100kb"`**, `type` **`"application/json"`**,
+> `strict` **`true`**, `inflate` `true`;
+> `express.urlencoded` — `limit` **`"100kb"`**, `type`
+> **`"application/x-www-form-urlencoded"`**, `extended` **`false`** (an Express 5 change),
+> `inflate` `true`.
+>
+> ⚠️ **Same known error as [page 01](01-req-anatomy.md): the block below prints
+> `body: undefined`, which a real run cannot produce** — `res.json` serializes with
+> `JSON.stringify`, which omits `undefined` properties, so the key is **absent**. Left
+> unrewritten because this pass ran nothing; the corrected reading is here.
+
 ## JSON
 
 ```js

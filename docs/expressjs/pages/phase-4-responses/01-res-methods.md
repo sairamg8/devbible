@@ -9,6 +9,16 @@ sidebar_position: 1
 **Pick one terminal method. Mixing `json` then `send` is how headers-already-sent
 starts.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> [Response reference](https://expressjs.com/en/5x/api/response/): `res.json` sends a
+> JSON response *"converted to a JSON string using `JSON.stringify()`"*; `res.send`
+> chooses the content type from the body — `Buffer` → `application/octet-stream`,
+> `String` → `text/html`, `Array`/`Object` → JSON; `res.status` is *"a chainable alias
+> of Node's `response.statusCode`"*, which is why it must precede the terminal call;
+> `res.end` comes straight from `http.ServerResponse`; `res.redirect` defaults to
+> **302**. `res.sendStatus(code)` sets the status *and* sends its string body, so it is
+> a terminal call too — not a variant of `res.status`.
+
 ## Common terminals
 
 | Method | Use |

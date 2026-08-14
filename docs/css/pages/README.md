@@ -25,17 +25,16 @@ import Progress from '@site/src/components/Progress';
 | [1 · Selectors](./phase-1-selectors/README.md) | 16 | ✅ written |
 | [2 · Cascade control](./phase-2-cascade/README.md) | 4 | ✅ written |
 | [3 · Custom properties and modern values](./phase-3-custom-properties/README.md) | 4 | ✅ written |
-| 4 · **Flexbox, deeply** | 7 | — |
-| 5 · **Grid, deeply** | 10 | — |
-| 6 · Container queries | 3 | — |
-| 7 · Positioning, stacking and overlay | 4 | — |
-| 8 · Colour and theming | 3 | — |
-| 9 · Motion and the cost model | 3 | — |
-| 10 · **SCSS, practically** | 8 | — |
+| [4 · **Flexbox, deeply**](./phase-4-flexbox/README.md) | 7 | ✅ written |
+| [5 · **Grid, deeply**](./phase-5-grid/README.md) | 10 | ✅ written |
+| [6 · Container queries](./phase-6-container-queries/README.md) | 3 | ✅ written |
+| [7 · Positioning, stacking and overlay](./phase-7-positioning/README.md) | 4 | ✅ written |
+| [8 · Colour and theming](./phase-8-color-theming/README.md) | 3 | ✅ written |
+| [9 · Motion and the cost model](./phase-9-motion/README.md) | 3 | ✅ written |
+| [10 · **SCSS, practically**](./phase-10-scss/README.md) | 8 | ✅ written |
 
-**36 of 74 topics written** (37 pages — `@layer` is chunked). Phases 0–3 are
-complete; the 38 topics still to write are the critical set left after the
-second cut.
+**✅ ALL 74 topics written** (81 pages — deep topics are chunked). Every phase is
+complete.
 
 **Scope:** the critical path only. Basic syntax, the box model, typography,
 print and form-control styling are assumed, not taught — and CSS *architecture*

@@ -7,6 +7,23 @@ sidebar_position: 0
 > **Target: Express 5.2.1 on Node 24.19.0.** Status codes and error `type` values
 > below were measured on that pair.
 
+> ✅ **Phase complete — 12 of 12 topics, 2026-08-14.** Every page carries a `> Verified:`
+> line naming the Express documentation behind its claims. **Documentation-validated,
+> not sandbox-measured** — nothing was run in this pass, so no console block was added
+> or changed.
+>
+> ⚠️ **Two console blocks on this phase are known to be wrong and were deliberately left
+> in place** — pages [01](01-req-anatomy.md) and [02](02-json-and-urlencoded.md) both
+> print `body: undefined`, which no real run can produce: the value crosses `res.json`,
+> and `JSON.stringify` omits `undefined` properties, so the key is **absent**. Each page
+> says so in its Verified line. They are not rewritten because inventing replacement
+> output is worse than a flagged error.
+>
+> Two other places where the documentation stops short, both stated on the page rather
+> than papered over: the `qs`-vs-`simple` contradiction inside Express's own docs (page
+> 04), and the absence of any upstream warning about sanitising upload filenames or
+> distrusting client `mimetype` (page 07).
+
 Everything clients send — and the limits that keep one request from taking the
 process down.
 

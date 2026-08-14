@@ -9,6 +9,15 @@ sidebar_position: 1
 **Middleware is a function `(req, res, next) => void`. It must either send a
 response or call `next` (or `next(err)`). Anything else hangs the client.**
 
+> Verified: 2026-08-14 against the Express 5 documentation — **no sandbox run**.
+> The contract is documented literally: an Express app is *"a series of middleware
+> function calls"*, each middleware may *"execute any code, modify the request and
+> response objects, end the request-response cycle, or pass control to the next
+> middleware function"*, and — the sentence this page is built on — *"if a middleware
+> function does not end the request-response cycle, it must call `next()` … Otherwise,
+> the request will be left hanging."*
+> ([using middleware](https://expressjs.com/en/guide/using-middleware.html))
+
 ## The shape
 
 ```js

@@ -6,6 +6,13 @@ sidebar_position: 0
 
 > **Target: Express 5.2.1 on Node 24.19.0.**
 
+> ✅ **Phase complete — 9 of 9 topics, 2026-08-14.** Every page carries a `> Verified:`
+> line naming the Express documentation behind its claims. **Documentation-validated,
+> not sandbox-measured** — nothing was run, so no console block was added or changed.
+> Page 06 is the one place the docs stop short: there is **no documented reserved-name
+> list** for `req`/`res`, so its Verified line says the request and response references
+> *are* the list rather than pretending a rule exists.
+
 The whole framework is a stack of functions. **Order, `next`, and termination**
 are the job.
 

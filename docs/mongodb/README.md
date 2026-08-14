@@ -4,14 +4,17 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::tip 🟢 UNCLAIMED — syllabus done, pages free
+:::caution 🟠 Claim stale — phase 0 written, the rest free
 
-**Owner:** none · **Syllabus written:** 2026-08-14 · **Pages:** zero.
+**Owner:** session `6f020813` (no longer running) · **Syllabus written:**
+2026-08-14 · **Pages:** 5 — [**Phase 0 is complete**](./pages/README.md); phase 1
+has not been started.
 
 The topic inventory below **is** the approved plan, so any session can start
-writing Phase 0 pages immediately without re-planning. **If you pick this up,
-claim it** — add your row to the claims table in [`docs/README.md`](../README.md)
-and replace this notice.
+writing **Phase 1** immediately without re-planning. ⚠️ **Do not rewrite Phase 0** —
+its five pages already exist. **If you pick this up, take the claim** — update the
+row in the claims table in [`docs/README.md`](../README.md) and replace this
+notice.
 
 ⚠️ **The syllabus was trimmed to critical-path-only** after it was first written:
 each phase keeps its Master rows, capped at the top six, and each phase notes how
