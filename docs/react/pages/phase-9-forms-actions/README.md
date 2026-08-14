@@ -8,7 +8,8 @@ sidebar_position: 0
 > validated against primary documentation and each page's `> Verified:` line names
 > its sources.
 
-🚧 **In progress — 11 of 14 topics written.** The phase's whole Master tier is done.
+✅ **COMPLETE — all 14 topics written.** 15 leaf pages — one chunked topic (2 pages)
+plus 13 single-file topics — **3,411 lines, 0 files over 300.** The phase's whole Master tier is done.
 
 **React 19 turned "submit a form" from a pile of `useState` into a first-class
 primitive.** Actions are transitions wearing a form — which is why this phase sits
@@ -28,9 +29,9 @@ machinery underneath them was established.
 | 09 | **[Form reset semantics](09-form-reset.md)** | <span className="db-tier t-understand">Understand</span> | What React resets for you, when that is wrong, and `requestFormReset` |
 | 10 | **[Errors in actions](10-errors-in-actions.md)** | <span className="db-tier t-understand">Understand</span> | Thrown reaches an error boundary; returned reaches `useActionState` |
 | 11 | **[Progressive enhancement](11-progressive-enhancement.md)** | <span className="db-tier t-understand">Understand</span> | A form that submits before hydration, and what that requires |
-| 12 | Accessible forms | <span className="db-tier t-understand">Understand</span> | Labels, `useId`, `aria-invalid`, announcing results, focusing the first error |
-| 13 | ⚠ `useFormState` | <span className="db-tier t-know">Know</span> | The old name, **deprecated**, still exported from `react-dom` in 19.2.8 |
-| 14 | Form libraries | <span className="db-tier t-know">Know</span> | What React Hook Form and TanStack Form still add over Actions |
+| 12 | **[Accessible forms](12-accessible-forms.md)** | <span className="db-tier t-understand">Understand</span> | Labels, `useId`, `aria-invalid`, announcing results, focusing the first error |
+| 13 | **[⚠ `useFormState`](13-useformstate.md)** | <span className="db-tier t-know">Know</span> | The old name, **deprecated**, still exported from `react-dom` in 19.2.8 |
+| 14 | **[Form libraries](14-form-libraries.md)** | <span className="db-tier t-know">Know</span> | What React Hook Form and TanStack Form still add over Actions |
 
 ## Why this phase sits after Phase 8
 
@@ -60,7 +61,10 @@ what is marked and what is not still apply.
 
 ## Coverage
 
-**14 topics.** 11 written so far → 13 files. Topics 01–04 are all four Master rows. Topic 01 is chunked into two parts (517
+**All 14 topics, 15 leaf pages, 3,411 lines. No file exceeds 300 lines and nothing was
+trimmed to get there** — topic 01 became a directory (554 lines, split between the
+controlled contract and the eight places it applies differently); the other thirteen fit
+one file each without compression. Topics 01–04 are all four Master rows. Topic 01 is chunked into two parts (517
 lines): the contract, then the eight places it applies differently.
 
 ## Gate

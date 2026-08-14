@@ -25,7 +25,7 @@ pages look missing here, they are on that branch and not yet merged.
 | 6 | ✅ **Done — 17 topics, 18 files, 0 broken links, 0 over cap** |
 | 7 | ✅ **Done — 12 topics, 25 files, 7,084 lines, 0 over cap, build-verified** |
 | 8 | ✅ **Done — 18 topics, 20 files, 4,827 lines, 0 over cap** |
-| 9 | 🔴 **In progress** — Forms, Actions and optimistic UI (14 topics) |
+| 9 | ✅ **Done — 14 topics, 15 files, 3,411 lines, 0 over cap** |
 | 10–14 | ⬜ Claimed by this session |
 
 **If you are a different session, do not write React pages.** Pick something with
@@ -74,7 +74,7 @@ uncertain or left out; nothing is reconstructed from memory.
 | **[6 — Rendering performance and the Compiler](./phase-6-performance/README.md)** | ✅ **Written** | 17 topics, 18 files |
 | **[7 — Custom hooks and the Rules of React](./phase-7-custom-hooks/README.md)** | ✅ **Written** | 12 topics, 25 files |
 | **[8 — Concurrent rendering, Suspense, transitions](./phase-8-concurrent-suspense/README.md)** | ✅ **Written** | 18 topics, 20 files |
-| **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | 🚧 **Writing** | 11 of 14 topics, 13 files |
+| **[9 — Forms, Actions and optimistic UI](./phase-9-forms-actions/README.md)** | ✅ **Written** | 14 topics, 15 files |
 | 10 — Server Components and Server Functions | Not started | — |
 | 11 — Server rendering, hydration and the DOM APIs | Not started | — |
 | 12 — Data and state in a real app | Not started | — |
@@ -89,7 +89,7 @@ import Progress from '@site/src/components/Progress';
 
 ## Reading order
 
-Phases are sequential through Phase 8. Phase 0 is not optional: every "React is
+Phases are sequential through Phase 9. Phase 0 is not optional: every "React is
 weird" complaint — the state that reset, the effect that ran twice, the value
 that was one update behind — traces back to it.
 
