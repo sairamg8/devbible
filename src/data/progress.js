@@ -228,7 +228,7 @@ export const LANGUAGES = {
     docsPath: '/docs/storybook',
     pagesPath: '/docs/storybook/pages',
     phases: [
-      {n: 0, slug: 'phase-0-how-storybook-runs', name: 'How Storybook runs', part: 'How Storybook runs', topics: 6, pages: 0},
+      {n: 0, slug: 'phase-0-how-storybook-runs', name: 'How Storybook runs', part: 'How Storybook runs', topics: 6, pages: 6},
       {n: 1, slug: 'phase-1-story-format', name: 'The story format', part: 'How Storybook runs', topics: 6, pages: 0},
       {n: 2, slug: 'phase-2-args-and-controls', name: 'Args, argTypes and controls', part: 'How Storybook runs', topics: 6, pages: 0},
       {n: 3, slug: 'phase-3-decorators', name: 'Decorators and context', part: 'Composing stories', topics: 5, pages: 0},
