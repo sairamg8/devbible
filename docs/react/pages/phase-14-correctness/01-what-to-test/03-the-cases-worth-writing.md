@@ -12,7 +12,7 @@ sidebar_position: 3
 > [queries · About](https://testing-library.com/docs/queries/about) for the query
 > priority the examples follow. The test *selection* below (four states, the regression
 > rule, the file shape) is judgement built on those principles. Every API used here is
-> covered properly in [topic 02](../02-the-rtl-model.md) through
+> covered properly in [topic 02](../02-the-rtl-model/README.md) through
 > [topic 06](../06-mocking-the-api.md); the code is illustrative and is **not** run output.
 > No sandbox script backs this page; claims are cited, not measured.
 
@@ -204,4 +204,4 @@ maintenance and produces six red tests for one cause.
 
 ← Prev: [What earns a test](02-what-earns-a-test.md) ·
 Index: [What to test, and what not to](README.md) ·
-Next → [React Testing Library's model](../02-the-rtl-model.md)
+Next → [React Testing Library's model](../02-the-rtl-model/README.md)

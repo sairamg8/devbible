@@ -39,7 +39,7 @@ first without the third; you cannot act on the third without the first.
 
 ## Where this connects
 
-- **[Topic 02 · RTL's model](../02-the-rtl-model.md)** — the library is built so that the
+- **[Topic 02 · RTL's model](../02-the-rtl-model/README.md)** — the library is built so that the
   wrong test is *hard to write*. That is a design decision, not an omission.
 - **[Topic 03 · The query families](../03-the-query-families.md)** — the priority order is
   this topic's principle turned into a ranked list.

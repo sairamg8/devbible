@@ -8,7 +8,7 @@ sidebar_position: 0
 > MSW 2.x.** No sandbox and **no console blocks** — every claim is validated against
 > primary documentation and each page's `> Verified:` line names its sources.
 
-🚧 **1 of 14 topics written** — 3 leaf pages.
+🚧 **2 of 14 topics written** — 5 leaf pages.
 
 **Tests for React components that survive a refactor.** Not a testing encyclopedia: the
 aim is that you can open an untested component and know what to write, in what order, and
@@ -26,7 +26,7 @@ Everything here — why `getByRole` outranks `getByTestId`, why `user-event` out
 | # | Topic | Tier | In one line |
 |---|---|---|---|
 | 01 | **[What to test, and what not to](01-what-to-test/README.md)** | <span className="db-tier t-master">Master</span> | The one decision that makes a suite an asset or a tax |
-| 02 | **[React Testing Library's model](02-the-rtl-model.md)** | <span className="db-tier t-master">Master</span> | `render`, `screen`, and what RTL deliberately refuses to give you |
+| 02 | **[React Testing Library's model](02-the-rtl-model/README.md)** | <span className="db-tier t-master">Master</span> | `render`, `screen`, and what RTL deliberately refuses to give you |
 | 03 | **[The query families](03-the-query-families.md)** | <span className="db-tier t-master">Master</span> | `getBy` throws, `queryBy` returns null, `findBy` retries — and the priority order |
 | 04 | **[`user-event` over `fireEvent`](04-user-event-over-fireevent.md)** | <span className="db-tier t-master">Master</span> | A real click is a sequence of events, not one |
 | 05 | **[Async testing and what `act()` means](05-async-testing-and-act.md)** | <span className="db-tier t-master">Master</span> | `findBy` vs `waitFor` vs `waitForElementToBeRemoved`, and the warning everyone mutes |

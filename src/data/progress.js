@@ -40,7 +40,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-values-and-coercion', name: 'Values, types and coercion', part: 'Language core', topics: 17, pages: 17},
       {n: 2, slug: 'phase-2-operators', name: 'Operators, expressions and control flow', part: 'Language core', topics: 15, pages: 15},
       {n: 3, slug: 'phase-3-functions', name: 'Functions, scope and closures', part: 'Language core', topics: 20, pages: 20},
-      {n: 4, slug: 'phase-4-objects-and-classes', name: 'Objects, prototypes and classes', part: 'Language core', topics: 20, pages: 11, pagesPlanned: 20},
+      {n: 4, slug: 'phase-4-objects-and-classes', name: 'Objects, prototypes and classes', part: 'Language core', topics: 20, pages: 12, pagesPlanned: 20},
       {n: 5, slug: 'phase-5-built-in-library', name: 'The built-in library', part: 'Data & async', topics: 26, pages: 8, pagesPlanned: 26},
       {n: 6, slug: 'phase-6-iteration-and-destructuring', name: 'Iteration, destructuring and generators', part: 'Data & async', topics: 13, pages: 3, pagesPlanned: 13},
       {n: 7, slug: 'phase-7-async', name: 'Asynchronous JavaScript', part: 'Data & async', topics: 22, pages: 11, pagesPlanned: 22},
@@ -116,7 +116,7 @@ export const LANGUAGES = {
       {n: 9, slug: 'phase-9-forms-actions', name: 'Forms, Actions and optimistic UI', part: 'Concurrent and server', topics: 14, pages: 14},
       {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 19},
       {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 9, pagesPlanned: 17},
-      {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 1, pagesPlanned: 14},
+      {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 2, pagesPlanned: 14},
     ],
   },
   nodejs: {
