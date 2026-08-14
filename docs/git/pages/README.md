@@ -41,7 +41,7 @@ than that"*). Five phases, down from thirteen. What was cut and why is in the
 | **[00 · How Git stores things](./phase-0-how-git-stores-things/README.md)** | 14 | 14 | ✅ **Complete** |
 | **[01 · The everyday loop](./phase-1-everyday-loop/README.md)** | 12 | 12 | ✅ **Complete** |
 | **[02 · Branching, merging and rebasing](./phase-2-branching-merging/README.md)** | 10 | 10 | ✅ **Complete** |
-| 04 · Remotes and syncing | 8 | 0 | Not started |
+| **[04 · Remotes and syncing](./phase-4-remotes/README.md)** | 8 | 8 | ✅ **Complete** |
 | 05 · Undo, recover and rewrite | 8 | 0 | Not started |
 
 **Parked, not being written:** 03 · reading history in depth · 06 · team workflow
