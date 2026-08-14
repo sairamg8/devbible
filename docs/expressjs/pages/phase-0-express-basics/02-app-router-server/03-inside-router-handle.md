@@ -173,7 +173,7 @@ reserve `next('router')` for "this mount does not apply, try the parent"
 **Cause:** The walk resumes twice from the same index, so everything downstream
 runs twice — including whatever wrote the response
 **Fix:** `return next()`, always. [Phase 2 ·
-03](../../phase-2-middleware/03-next-semantics.md) is this failure in full
+03](../../phase-2-middleware/03-next-semantics/03-double-send-and-guards.md) is this failure in full
 
 **Symptom:** A `HEAD` request runs your `GET` handler even though you registered
 `app.head` for the path

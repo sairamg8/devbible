@@ -154,7 +154,7 @@ if (!req.user) return next(new Error('unauthenticated'));
 `return` is doing nothing framework-specific — it is ordinary JavaScript control
 flow, and it is load-bearing precisely because `next` is not. Use it on **every**
 `next` and every terminal `res.*` call, and the whole class of double-send bugs
-disappears. [Phase 2 · 03](../03-next-semantics.md) is this failure in full.
+disappears. [Phase 2 · 03](../03-next-semantics/03-double-send-and-guards.md) is this failure in full.
 
 ## Gotchas
 

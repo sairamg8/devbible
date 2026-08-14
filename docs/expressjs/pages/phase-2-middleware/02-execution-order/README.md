@@ -41,7 +41,7 @@ would find out what actually ran for a request that hung.
   — the walk itself, from the source.
 - **← [01 · The middleware contract](../01-middleware-contract/README.md)** — what
   each layer in that order is allowed to do.
-- **→ [03 · `next` semantics](../03-next-semantics.md)** — how a layer hands to the
+- **→ [03 · `next` semantics](../03-next-semantics/README.md)** — how a layer hands to the
   next one, and the ways that goes wrong.
 - **→ [05 · Must run first, must run last](../05-first-and-last.md)** — the ordering
   rules as a checklist.

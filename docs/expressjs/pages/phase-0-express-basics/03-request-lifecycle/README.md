@@ -47,7 +47,7 @@ a response; say at what stage `req.body` starts existing; and explain why
   wider journey.
 - **→ [Phase 2 · 01 · The middleware contract](../../phase-2-middleware/01-middleware-contract/README.md)**
   — the `(req, res, next)` contract in full.
-- **→ [Phase 2 · 03 · `next` semantics](../../phase-2-middleware/03-next-semantics.md)**
+- **→ [Phase 2 · 03 · `next` semantics](../../phase-2-middleware/03-next-semantics/README.md)**
   — `next()`, `next(err)`, `next('route')`, and calling it twice.
 - **→ [Phase 3 · 02 · JSON and urlencoded](../../phase-3-requests/02-json-and-urlencoded.md)**
   — stage 6, and the content-type gate that decides whether it happens.

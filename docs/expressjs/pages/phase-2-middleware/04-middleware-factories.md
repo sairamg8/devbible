@@ -96,4 +96,4 @@ One implementation, many schemas — `validate(bodySchema)` etc.
 
 ---
 
-← Prev: [next semantics](03-next-semantics.md) · Next → [First and last](05-first-and-last.md)
+← Prev: [next semantics](03-next-semantics/README.md) · Next → [First and last](05-first-and-last.md)

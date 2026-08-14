@@ -43,7 +43,7 @@ authorization question middleware structurally cannot answer.
   — what a hung request looks like from the router's side.
 - **→ [02 · Execution order](../02-execution-order/README.md)** — registration order as an
   array walk.
-- **→ [03 · `next` semantics](../03-next-semantics.md)** — `next()`, `next(err)`,
+- **→ [03 · `next` semantics](../03-next-semantics/README.md)** — `next()`, `next(err)`,
   `next('route')`, and calling it twice.
 - **→ [04 · Middleware factories](../04-middleware-factories.md)** — the convention
   chunk 02 leans on, in full.
