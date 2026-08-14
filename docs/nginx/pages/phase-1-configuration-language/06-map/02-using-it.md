@@ -51,7 +51,7 @@ variables does not add any extra costs to request processing."* You can declare
 fifty maps and pay for none of them on a request that reads none.
 
 The third row is the one that actually causes outages, and
-[page 07](../07-if-is-evil.md) is the full argument.
+[topic 07](../07-if-is-evil/README.md) is the full argument.
 
 ## Five patterns worth stealing
 
@@ -250,4 +250,4 @@ declaring even a large number of map variables adds no cost to request processin
 
 ---
 
-← Prev: [The mechanism](01-the-mechanism.md) · Index: [`map`](README.md) · Next → ["If is evil"](../07-if-is-evil.md)
+← Prev: [The mechanism](01-the-mechanism.md) · Index: [`map`](README.md) · Next → ["If is evil"](../07-if-is-evil/README.md)

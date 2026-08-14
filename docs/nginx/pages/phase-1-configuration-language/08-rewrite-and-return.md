@@ -296,4 +296,4 @@ downstream.
 
 ---
 
-← Prev: ["If is evil"](07-if-is-evil.md) · Index: [Phase 1](README.md) · Next → [`geo` and `split_clients`](09-geo-and-split-clients.md)
+← Prev: ["If is evil"](07-if-is-evil/README.md) · Index: [Phase 1](README.md) · Next → [`geo` and `split_clients`](09-geo-and-split-clients.md)

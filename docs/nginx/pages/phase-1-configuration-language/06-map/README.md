@@ -30,7 +30,7 @@ them costs nothing, and say what an unmatched key produces when you forget
 
 ## Where this connects
 
-- **[07 · "If is evil"](../07-if-is-evil.md)** — the argument this topic's
+- **[07 · "If is evil"](../07-if-is-evil/README.md)** — the argument this topic's
   chunk 02 opens, made in full.
 - **Phase 4 · reverse proxy** — the `$connection_upgrade` map is mandatory for
   WebSocket proxying.
