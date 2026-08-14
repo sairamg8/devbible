@@ -255,4 +255,4 @@ enough to use by default.
 
 ---
 
-← Prev: [Pathspecs, properly](02-pathspecs.md) · Next → [`git commit`](../README.md)
+← Prev: [Pathspecs, properly](02-pathspecs.md) · Next → [`git commit`](../03-git-commit.md)
