@@ -8,14 +8,19 @@ sidebar_position: 0
 sanitising row is **the one security bug a frontend developer is most likely to ship
 personally**.
 
-## Status — 🚧 **18 of 19 — only the When Needed topic left** (2026-08-14)
+## Status — ✅ **COMPLETE — 19 of 19, every tier** (2026-08-15)
 
-**Master tier ✅ COMPLETE** — all six Master topics (01–06), written in syllabus order.
-**Understand tier ✅ COMPLETE** — 07–15, all nine, every one chunked.
-**Know tier ✅ COMPLETE** — 16, 17 and 18.
+| Tier | Topics | State |
+|---|---|---|
+| Master | 01–06 | ✅ |
+| Understand | 07–15 | ✅ |
+| Know | 16–18 | ✅ |
+| When Needed | 19 | ✅ |
 
-🚧 **Left: 19 · Selection, `Range` and `contenteditable`** (When Needed). Lane B of the two-way
-JavaScript split owns this phase.
+**59 files.** Every topic is chunked, every file is under the 300-line cap, and every page is
+documentation-validated against MDN and the specifications with the sources named in its
+`> Verified:` line — no sandbox, no timings, no console output for a run that did not happen.
+Written by lane B of the two-way JavaScript split.
 
 ## Topics
 
@@ -39,7 +44,7 @@ JavaScript split owns this phase.
 | 16 | **[`<dialog>`, the popover API and `inert`](./16-dialog-popover-inert/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 17 | **[`MutationObserver`](./17-mutationobserver/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 18 | **[Shadow DOM and custom elements](./18-shadow-dom-and-custom-elements/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 19 | Selection, `Range` and `contenteditable` | <span className="db-tier t-when">When Needed</span> | 🚧 next |
+| 19 | **[Selection, `Range` and `contenteditable`](./19-selection-range-contenteditable/README.md)** | <span className="db-tier t-when">When Needed</span> | ✅ |
 
 ## How these pages are verified
 
