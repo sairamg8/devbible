@@ -287,4 +287,4 @@ receiver's type all the way along.
 
 ---
 
-← Prev: [08 · Default type parameters](./08-default-type-parameters.md) · Next → **10 · Inference sites and contextual typing** *(not written yet)*
+← Prev: [08 · Default type parameters](./08-default-type-parameters.md) · Next → [10 · Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md)
