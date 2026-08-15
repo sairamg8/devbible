@@ -21,15 +21,15 @@ examples.
 ⚠️ **And the first question is whether you need one at all.** A WebSocket is a stateful
 connection per user; it defeats HTTP caching, complicates load balancing and scaling, and
 survives neither a sleeping laptop nor a flaky network without help. Polling or
-server-sent events are frequently the better answer, and the decision is in
-[chunk 2](./02-reliability-and-when-not-to.md).
+server-sent events are frequently the better answer, and the decision is in chunk 3.
 
 ## Chunks
 
 | # | Chunk | Covers |
 |---|---|---|
-| 1 | **[Connecting and messaging](./01-connecting-and-messaging.md)** | The handshake and why the URL scheme is `ws:`/`wss:`; the four events and the `readyState` machine; sending text and binary, and `binaryType`; 🔴 **framing — the protocol gives you messages, your application still needs an envelope**; `bufferedAmount` and backpressure; and closing properly, including the codes that mean something |
-| 2 | **[Reliability, and when not to](./02-reliability-and-when-not-to.md)** | 🔴 **Reconnection with backoff and jitter**, and why a naive retry loop takes your own server down; heartbeats, and why TCP will not tell you the connection died; queueing and resynchronising after a gap; authentication, given that you cannot set headers; and the honest comparison against polling, SSE and `fetch` |
+| 1 | **[Connecting](./01-connecting.md)** | Constructing *is* connecting; the URL, the schemes and mixed content; the HTTP handshake and `101 Switching Protocols`; 🔴 **WebSocket is not subject to CORS**, and what CSP `connect-src` does instead; sub-protocols; the `readyState` machine; the four events, and why `error` tells you nothing |
+| 2 | **Messaging and closing** *(next)* | Sending text and binary, and what `send()` throws; `binaryType`; 🔴 **framing — the protocol gives you messages, your application still needs an envelope**; `bufferedAmount` and the backpressure the API does not give you; and closing properly, including the close codes that mean something |
+| 3 | **Reliability, and when not to** *(next)* | 🔴 **Reconnection with backoff and jitter**, and why a naive retry loop takes your own server down; heartbeats, and why TCP will not tell you the connection died; queueing and resynchronising after a gap; authentication, given that you cannot set headers; and the honest comparison against polling, SSE and `fetch` |
 
 ## The whole API
 
@@ -62,4 +62,4 @@ one**.
 
 ---
 
-Start → [1 · Connecting and messaging](./01-connecting-and-messaging.md)
+Start → [1 · Connecting](./01-connecting.md)
