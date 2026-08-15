@@ -247,4 +247,4 @@ history rather than design.
 
 ---
 
-← Prev: [07 · The `typeof` type operator](./07-typeof-type-operator.md) · Next → **09 · Generic classes** *(not written yet)*
+← Prev: [07 · The `typeof` type operator](./07-typeof-type-operator.md) · Next → [09 · Generic classes](./09-generic-classes.md)

@@ -50,7 +50,7 @@ can explain from its declaration why `Omit<User, 'nmae'>` compiles.
   passing on chunk 01.
 - **→ 08 · Default type parameters** *(not written yet)* — the `E = Error` half
   of the result type.
-- **→ 09 · Generic classes** *(not written yet)* — what `implements
+- → [09 · Generic classes](../09-generic-classes.md) — what `implements
   Repository<User>` actually requires.
 - **→ Phase 5 (Type-level programming)** — where the alias-only forms
   (conditional, mapped, template literal) become the whole subject.

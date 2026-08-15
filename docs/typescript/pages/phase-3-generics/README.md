@@ -40,7 +40,7 @@ found the wrong equation.
 | 06 | [Indexed access types — `T[K]`](./06-indexed-access-types.md) | <span className="db-tier t-understand">Understand</span> | Reading a property's type out of a type, including `T[number]` |
 | 07 | [The `typeof` type operator](./07-typeof-type-operator.md) | <span className="db-tier t-understand">Understand</span> | Lifting a runtime value into the type world |
 | 08 | [Default type parameters](./08-default-type-parameters.md) | <span className="db-tier t-understand">Understand</span> | `<T = string>`, and how defaults interact with inference |
-| 09 | Generic classes | <span className="db-tier t-understand">Understand</span> | Parameterised state, the static-member restriction |
+| 09 | [Generic classes](./09-generic-classes.md) | <span className="db-tier t-understand">Understand</span> | Parameterised state, the static-member restriction |
 | 10 | Inference sites and contextual typing | <span className="db-tier t-understand">Understand</span> | Why inference works from arguments and not from the return position |
 | 11 | `infer` in conditional types | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
 | 12 | `const` type parameters | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
