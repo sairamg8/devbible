@@ -71,7 +71,7 @@ answers.
 | **10 · Running containers in production** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **64** | |
+| **Total** | **192** | **65** | |
 
 import Progress from '@site/src/components/Progress';
 

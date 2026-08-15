@@ -142,4 +142,4 @@ built from that child does not re-run them.
 
 ---
 
-← Prev: [STOPSIGNAL and SHELL](16-stopsignal-and-shell.md) · Index: [Phase 3](README.md) · Start Phase 4 → **Build strategy: cache, multi-stage, BuildKit** *(not written yet)*
+← Prev: [STOPSIGNAL and SHELL](16-stopsignal-and-shell.md) · Index: [Phase 3](README.md) · Start Phase 4 → [Build strategy: cache, multi-stage, BuildKit](../phase-4-build-strategy/README.md)
