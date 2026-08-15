@@ -227,4 +227,4 @@ will not fix it.
 
 ---
 
-← Prev: [Hardening at run time](10-hardening/README.md) · Index: [Phase 10](README.md) · Next → **Debugging a container you cannot shell into** *(not written yet)*
+← Prev: [Hardening at run time](10-hardening/README.md) · Index: [Phase 10](README.md) · Next → [Debugging a container you cannot shell into](12-debugging-without-a-shell.md)

@@ -117,7 +117,7 @@ HEALTHCHECK --interval=10s --timeout=2s --start-period=30s --retries=3 \
 `curl`-based checks need `curl` in the image — an argument against them in
 distroless and scratch images, where a tiny compiled health binary or the
 application's own `--healthcheck` mode is the answer
-(**12 · Debugging a container you cannot shell into** *(not written yet)*).
+([12 · Debugging a container you cannot shell into](12-debugging-without-a-shell.md)).
 
 ## Podman
 
