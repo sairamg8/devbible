@@ -196,4 +196,4 @@ The message is copy and will change; a code or class is a contract you chose to 
 
 ---
 
-← *(topic index and next chunk land with the README)*
+← [Topic index](./README.md) · Next → [02 · Faking time, network and modules](./02-faking-time-network-modules.md)

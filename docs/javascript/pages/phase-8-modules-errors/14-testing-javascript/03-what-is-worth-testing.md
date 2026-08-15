@@ -175,4 +175,5 @@ prevents nothing.
 
 ---
 
-← Prev: [02 · Faking time, network and modules](./02-faking-time-network-modules.md)
+← Prev: [02 · Faking time, network and modules](./02-faking-time-network-modules.md) ·
+[Topic index](./README.md)

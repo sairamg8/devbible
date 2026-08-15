@@ -216,4 +216,6 @@ possible replacement and hides design problems that dependency injection would s
 
 ---
 
-← Prev: [01 · The shape of a test](./01-the-shape-of-a-test.md)
+← Prev: [01 · The shape of a test](./01-the-shape-of-a-test.md) ·
+[Topic index](./README.md) ·
+Next → [03 · What is worth testing](./03-what-is-worth-testing.md)
