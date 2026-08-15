@@ -73,8 +73,9 @@ confirmation, no clarifying question.
 
 | Phase | State | Start at | Held by |
 |---|---|---|---|
-| **18 · Storefront** | 🚧 only **11, 12, 15** are in scope | **11 → 12** (11's two chunks are written; its index next) | session `dbaa68e7` |
-| **18 · Storefront** | topic-level split | **15 · Review uploads**, the whole topic | 🔴 the **second session** |
+| **18 · Storefront** | ✅ **11 · Infinite scroll and lazy images** — written 2026-08-15 | — | session `dbaa68e7` |
+| **18 · Storefront** | 🔴 **12 · Long lists without freezing** | the whole topic | 🔴 a **second session** |
+| **18 · Storefront** | 🔴 **15 · Review uploads** | the whole topic | 🔴 a **third session** |
 | **0–17** | ✅ **all complete at every in-scope tier** | — | — |
 
 ⛔ **Every other phase is finished** — 5, 6, 7, 8, 11, 12 and 17 all closed on 2026-08-15. Phases
@@ -139,7 +140,7 @@ worktrees left.
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain ✅ **18/18** | **0** | — | ✅ **chunk C complete**: phase 7 22/22 and phase 8 18/18, finished 2026-08-15 |
 | **D** | 12 · The browser platform ✅ **COMPLETE 21/21** | 0 | — every tier done 2026-08-15 | chunk D continues in phase 18 |
-| **D** | 18 · Building the store front end (**8**/18) | 2 | ✅ **11 · Infinite scroll and lazy images** written → **12 · Long lists without freezing** next | 🔴 **15 · Review uploads belongs to the SECOND session** (split 2026-08-15). ⚠️ Only 11, 12, 15 are in scope — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 |
+| **D** | 18 · Building the store front end (**8**/18) | 2 | ✅ **11 written**; 🔴 **12 and 15 are HANDED OUT** — 12 to a second session, 15 to a third (2026-08-15) | ⚠️ Only 11, 12, 15 are in scope — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14. When both land, JavaScript is DONE |
 
 **Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
 99/99** and a Master topic is not reopened to deepen it. Inside a phase the order is **Understand →
