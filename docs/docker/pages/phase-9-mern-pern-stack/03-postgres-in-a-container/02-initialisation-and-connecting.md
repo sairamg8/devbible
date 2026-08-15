@@ -238,4 +238,4 @@ a published port binds all interfaces by default.
 
 ---
 
-← Prev: [The data directory](01-the-data-directory.md) · Index: [PostgreSQL in a container](README.md) · Next → **Waiting for the database** *(not written yet)*
+← Prev: [The data directory](01-the-data-directory.md) · Index: [PostgreSQL in a container](README.md) · Next → [Waiting for the database](../04-waiting-for-the-database/README.md)
