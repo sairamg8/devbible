@@ -23,7 +23,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | **A** | 4 · 5 | 28 | Phase 4 · 01 · How the layer cache decides | 🔴 session `2e26b051` (2026-08-15) |
 | **B** | 6 · 7 | 26 | Phase 6 · 01 · The container filesystem is disposable | 🔴 session `17c9da97` (2026-08-15) |
 | **C** | 8 · 9 | 31 | Phase 8 · 01 · What Compose is | 🔴 session `a91424bd` (2026-08-15) |
-| **D** | 10 · 11 · 12 | 44 | Phase 10 · 01 · PID 1 is not a normal process | _unclaimed_ |
+| **D** | 10 · 11 · 12 | 44 | Phase 10 · 01 · PID 1 is not a normal process | 🔴 session `2f38bb4d` (2026-08-15) |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
 the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
@@ -62,16 +62,16 @@ answers.
 | **[01 · Running containers](./phase-1-running-containers/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[02 · Images, layers and registries](./phase-2-images-and-registries/README.md)** | 15 | 15 | ✅ **Complete** |
 | **[03 · The Dockerfile](./phase-3-dockerfile/README.md)** | 18 | 18 | ✅ **Complete** |
-| **04 · Build strategy: cache, multi-stage, BuildKit** | 16 | 0 | ⏳ Not started — **chunk A** |
+| **[04 · Build strategy: cache, multi-stage, BuildKit](./phase-4-build-strategy/README.md)** | 16 | 1 | 🚧 **Writing — chunk A** |
 | **05 · Image quality, size and supply chain** | 12 | 0 | ⏳ Not started — **chunk A** |
-| **06 · Storage: volumes, mounts and data** | 12 | 0 | ⏳ Not started — **chunk B** |
+| **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 1 | 🚧 **Writing — chunk B** |
 | **07 · Networking** | 14 | 0 | ⏳ Not started — **chunk B** |
 | **08 · Compose** | 17 | 0 | ⏳ Not started — **chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
 | **10 · Running containers in production** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **63** | |
+| **Total** | **192** | **64** | |
 
 import Progress from '@site/src/components/Progress';
 
