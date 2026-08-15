@@ -13,7 +13,7 @@ An image is a build artefact you are shipping to strangers. Phase 4 decided how
 fast it builds; this phase is about **what is inside it** — how big, how
 privileged, and how much of it you did not write.
 
-🚧 **4 of 12 pages written.**
+🚧 **5 of 12 pages written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -21,7 +21,7 @@ privileged, and how much of it you did not write.
 | 02 | **[The classic mistakes](02-classic-mistakes.md)** | <span className="db-tier t-master">Master</span> | `apt` lists, npm cache, `.git`, `node_modules`, secrets in an early layer |
 | 03 | **[Least privilege in the image](03-least-privilege.md)** | <span className="db-tier t-master">Master</span> | Non-root `USER`, read-only root filesystem, dropped capabilities |
 | 04 | **[Measuring](04-measuring.md)** | <span className="db-tier t-understand">Understand</span> | `docker history` layer by layer — and why deletion does not shrink |
-| 05 | **Alpine and musl** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Tiny, and a genuinely different libc |
+| 05 | **[Alpine and musl](05-alpine-and-musl.md)** | <span className="db-tier t-understand">Understand</span> | Tiny, and a genuinely different libc |
 | 06 | **Distroless and `scratch`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | No shell, no package manager — and how you debug afterwards |
 | 07 | **Vulnerability scanning** *(not written yet)* | <span className="db-tier t-know">Know</span> | Trivy, Grype, Scout — reading a report without drowning |
 | 08 | **Pinning base images by digest** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Reproducible against patched, and how to have both |

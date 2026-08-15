@@ -208,4 +208,4 @@ is nearly empty, while the file is absent from the filesystem view.
 
 ---
 
-← Prev: [Least privilege in the image](03-least-privilege.md) · Index: [Phase 5](README.md) · Next → **Alpine and musl** *(not written yet)*
+← Prev: [Least privilege in the image](03-least-privilege.md) · Index: [Phase 5](README.md) · Next → [Alpine and musl](05-alpine-and-musl.md)
