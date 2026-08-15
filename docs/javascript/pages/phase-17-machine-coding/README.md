@@ -8,11 +8,11 @@ sidebar_position: 0
 have used JavaScript from people who understand it. Every row is a from-scratch implementation with
 the edge cases interviewers probe.
 
-## Status — 🚧 **Master ✅ 4/4 · Understand under way — 10 of 18**
+## Status — 🚧 **Master ✅ 4/4 · Understand under way — 11 of 18**
 
 Master (01–04) landed 2026-08-14. The Understand and Know tiers are being written now by
 **chunk B** of the four-way JavaScript split, which finished phase 6 first. Next up:
-**11 · `memoize`**.
+**12 · Deep equality**.
 
 ## Topics
 
@@ -28,7 +28,8 @@ Master (01–04) landed 2026-08-14. The Understand and Know tiers are being writ
 | 08 | **[Retry with backoff, jitter and an `AbortSignal`](./08-retry-backoff/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | **[An LRU cache in O(1)](./09-lru-cache/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 10 | **[A Promise from scratch](./10-promise-from-scratch/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 11–15 | `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | **[`memoize`](./11-memoize/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 12–15 | deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16–18 | `new`/`Object.create`/`instanceof` by hand, a pub/sub and a reactive `signal`, a virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | deferred |
 
 ## The phase gate
