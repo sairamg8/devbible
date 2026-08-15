@@ -7,10 +7,17 @@ sidebar_position: 0
 *14 topics.* As the syllabus puts it, **delegation is the row that pays for the phase** — it
 is the difference between one listener and a thousand.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — ✅ **COMPLETE — 14 of 14, every tier** (2026-08-15)
 
-**Master tier first.** Phase 10 has **four** Master topics — 01 through 04 — written in
-syllabus order. **ALL 4 DONE — the Master tier of phase 10 is COMPLETE.**
+| Tier | Topics | State |
+|---|---|---|
+| Master | 01–04 | ✅ |
+| Understand | 05–11 | ✅ |
+| Know | 12–14 | ✅ |
+
+Every topic is documentation-validated against MDN and the DOM specification, with the sources named
+in each page's `> Verified:` line, every file under the 300-line cap, and **no console output for a
+run that did not happen**. Written by lane B of the two-way JavaScript split. Lane B of the two-way JavaScript split owns this phase.
 
 ## Topics
 
@@ -20,8 +27,16 @@ syllabus order. **ALL 4 DONE — the Master tier of phase 10 is COMPLETE.**
 | 02 | **[`addEventListener`](./02-addeventlistener/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[The event object](./03-the-event-object/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[Event delegation](./04-event-delegation/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05–11 | Form and input events, keyboard, pointer, custom events, scroll/resize/visibility, page lifecycle, default actions | <span className="db-tier t-understand">Understand</span> | deferred |
-| 12–14 | `EventTarget` as a base class, touch and gestures, debugging events | <span className="db-tier t-know">Know</span> | deferred |
+| 05 | **[Form and input events](./05-form-and-input-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 06 | **[Keyboard events](./06-keyboard-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 07 | **[Pointer events](./07-pointer-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 08 | **[Custom events](./08-custom-events/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 09 | **[Scroll, resize and visibility](./09-scroll-resize-visibility/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 10 | **[Page lifecycle](./10-page-lifecycle/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 11 | **[Default actions you should not block](./11-default-actions/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 12 | **[`EventTarget` as a base class](./12-eventtarget-base-class/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 13 | **[Touch and gestures](./13-touch-and-gestures/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 14 | **[Debugging events](./14-debugging-events/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## How these pages are verified
 

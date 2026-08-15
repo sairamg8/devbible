@@ -28,9 +28,9 @@ import Progress from '@site/src/components/Progress';
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
-| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | 🚧 **Master ✅** (01–06) · Understand under way (**07–13** ✅) |
-| **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | 🟡 **Master tier ✅** (01–04 — all four); 05–14 deferred |
-| **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–05 — all five); 06–21 deferred |
+| **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
+| **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
+| **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–07** ✅) |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🟡 **Master tier ✅** (01–02 — both); 03–21 deferred |
 | **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
 | **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
@@ -47,7 +47,7 @@ split by phase. Take your lane's phases and **never write in the other lane's**.
 | Lane | Phases | Topics left | Held by |
 |---|---|---|---|
 | **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **44** | session `edbfba95` |
-| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **68** | session `75e511e6` |
+| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **50** | session `75e511e6` |
 
 **The seam is the language itself versus the browser platform**, so the two lanes barely
 cross-reference each other. Where a page needs the other lane's topic, **write it as bold plain
@@ -98,10 +98,12 @@ are free). If you must, say so here first and take a *different phase*.
 |---|---|
 | **Claimed by** | session `75e511e6` (Opus 5), from 2026-08-14 — took over from `b4ffc223`, the first holder |
 | **Claim** | **phases 9, 10, 11, 12, 17 and 18 only** — DOM, events, network/storage, browser platform, machine coding, and the three kept storefront topics. 🔴 **TIER-LOCKED to Understand and Know**; Master is closed at 99/99 and is not reopened for depth. The 2026-08-14 scope cut applies: phase 18 keeps **only topics 11, 12 and 15**; phases 13, 14, 15 are parked and 16 is dropped — none of them are in either lane |
-| **Last touched** | **Phase 9 topic 13 · Measuring elements** — 2026-08-14, 3 files |
-| **Next** | **Phase 9 topic 14 · Scrolling**, then 15 (Understand), 16–18 (Know), 19 (When Needed); then phase 10 from topic 05 |
-| **Remaining** | **68 topics** — 9 (6), 10 (10), 11 (16), 12 (19), 17 (14), 18 (3) |
+| **Last touched** | **Phase 11 topic 07 · Reading responses** — 2026-08-15, 3 files, 425 lines. ✅ **Phases 9 and 10 before it are both COMPLETE at every tier.** ✅ **Phase 10's Understand tier is COMPLETE (05–11)**. ✅ **Phase 9 before it is COMPLETE — 19 of 19, every tier, 59 files** |
+| **Next** | **Phase 11 topic 08 · Aborting and timing out** (Understand), then 09–15, then Know 16–21 |
+| **Remaining** | **50 topics** — 11 (14), 12 (19), 17 (14), 18 (3). ✅ Phases **9 and 10 are both complete at every tier** |
+| **Worktree** | Lane B writes in `/run/media/sairam/Storage/Backup/Knowledge/devbible-js-lane-b`, branch **`js-lane-b`**. ✅ **MERGED INTO `main` 2026-08-15** (fast-forward to `60a4fc0c`; **0 unique commits left on the branch**, nothing stranded) and `main` rebuilt clean afterwards — **0 broken links site-wide**. The worktree stays in use for the next phases; merge again at each phase boundary |
 | **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
+| **Build** | ✅ **Verified by a real build, 2026-08-15.** The earlier blocker — a React MDX error inherited at the branch point — was fixed on `main` (`0d90db70`) and picked up by merging `main` into `js-lane-b`. Clean isolated rebuild: **0 broken links under `docs/javascript/`, 0 files over 300 lines**; the 3 remaining breaks are React (2) and TypeScript (1), theirs. ⚠️ **A green `[SUCCESS]` is not proof** — the build must be confirmed with `ls build-laneb/index.html`, because a piped `yarn build \| tail` reports `tail`'s exit status and a build that died looks identical to a clean one when you grep for warnings |
 
 ⛔ **Lane B never writes in phases 3–8** — those are lane A's, live in another session
 right now. Not to fix a link, not to correct a count.

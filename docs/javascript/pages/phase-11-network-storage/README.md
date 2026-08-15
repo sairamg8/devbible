@@ -7,11 +7,12 @@ sidebar_position: 0
 *21 topics.* How data gets in and out of the browser. As the syllabus puts it, **the `fetch`
 rows and the CORS row cover the majority of "it works in Postman but not in the browser"**.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **Understand tier under way — 7 of 21** (2026-08-15)
 
-**Master tier first.** Phase 11 has **five** Master topics — 01 through 05 — and **all five are
-written**. Topics 06–21 (Understand and Know) are deferred until the Master tiers of the
-remaining phases are done.
+**Master tier ✅ COMPLETE** — all five Master topics (01–05), written in syllabus order.
+
+🚧 **Now the Understand tier (06–15), then Know (16–21).** **06–07 are written**; 08 onward remain.
+Lane B of the two-way JavaScript split owns this phase.
 
 ## Topics
 
@@ -22,7 +23,9 @@ remaining phases are done.
 | 03 | **[A `fetch` wrapper worth reusing](./03-fetch-wrapper/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[`URL` and `URLSearchParams`](./04-url-and-searchparams/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[CORS from the client side](./05-cors-client-side/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 06–15 | `Request`/`Response`/`Headers`, reading responses, aborting, cookies, web storage, uploads, `Blob`/`File`, WebSocket, `postMessage`, CSP | <span className="db-tier t-understand">Understand</span> | deferred |
+| 06 | **[`Request`, `Response` and `Headers`](./06-request-response-headers/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 07 | **[Reading responses](./07-reading-responses/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 08–15 | Aborting and timing out, cookies, web storage, uploads, `Blob`/`File`, WebSocket, `postMessage`, CSP | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 16–21 | IndexedDB, service workers, SSE, streams, `sendBeacon`, `XMLHttpRequest` | <span className="db-tier t-know">Know</span> | deferred |
 
 ## How these pages are verified
