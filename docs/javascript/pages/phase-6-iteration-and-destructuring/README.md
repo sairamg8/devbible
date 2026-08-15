@@ -7,11 +7,16 @@ sidebar_position: 0
 *13 topics.* The protocol layer. Small phase, but it is what lets `for…of`, spread,
 destructuring and `Promise.all` all work on the same objects.
 
-## Status — 🚧 **Master ✅ · Understand ✅ · Know ✅ — 12 of 13**
+## Status — ✅ **COMPLETE — every tier, 13 of 13**
 
-**Master is complete** (01, 02, 03 — unusually the first three in syllabus order). The
-Understand and Know tiers are being written now, in order, by **chunk B** of the four-way
-JavaScript split (phases 6 and 17). **The Understand tier is complete (04–08).** The Know tier is under way — **The Know tier is complete (09–12).** One topic left: **13 · Driving an iterator by hand** (When Needed).
+**Every topic is written** — Master 01–03, Understand 04–08, Know 09–12, When Needed 13.
+Master landed 2026-08-13; the remaining ten topics were written 2026-08-15 by **chunk B**
+of the four-way JavaScript split (phases 6 and 17), which continues with
+**Phase 17 · Machine coding**.
+
+**Coverage:** 40 files, 0 over the 300-line cap. Every page carries a tier badge, a
+`> Verified:` line naming its MDN sources, Gotchas written symptom → cause → fix, and
+Interview questions.
 
 ## Topics
 
@@ -29,7 +34,7 @@ JavaScript split (phases 6 and 17). **The Understand tier is complete (04–08).
 | 10 | **[`yield*` delegation](./10-yield-delegation/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 11 | **[Iterator helpers](./11-iterator-helpers/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 12 | **[Writing a collection class that iterates cleanly](./12-a-collection-class/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 13 | Driving an iterator by hand | <span className="db-tier t-when">When Needed</span> | deferred |
+| 13 | **[Driving an iterator by hand](./13-driving-by-hand/README.md)** | <span className="db-tier t-when">When Needed</span> | ✅ |
 
 ## Phase gate
 
