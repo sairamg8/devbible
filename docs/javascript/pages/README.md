@@ -32,7 +32,7 @@ import Progress from '@site/src/components/Progress';
 | **[2 · Operators, expressions and control flow](./phase-2-operators/README.md)** | Language core | 15 | ✅ written |
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | ✅ **complete — every tier** |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | ✅ **complete — every tier** (Master 7/7 · Understand 9/9 · Know 4/4) |
-| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–20 done) — **20/26** |
+| **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–21 done) — **21/26** |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🚧 **Master ✅** (01–03) · **Understand ✅ 5/5** (04–08) · Know under way (**09–10** ✅) — **10/13** |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🚧 **Master ✅ 11/11** · Understand under way (**12–17** ✅) — **17/22** |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
@@ -56,7 +56,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
-| **A** | **5**, **11** | **20** — 5 (6: 21–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
+| **A** | **5**, **11** | **19** — 5 (5: 22–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
 | **B** | **6**, **17** | **17** — 6 (3: 11–13) · 17 (14: 05–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
 | **C** | **7**, **8** | **19** — 7 (5: 18–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
 | **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
@@ -107,7 +107,7 @@ worktrees left.
 
 | Chunk | Phase | Left | Start at | Then |
 |---|---|---|---|---|
-| **A** | 5 · The built-in library (20/26) | 6 | **21 · `structuredClone`** (Understand) | 22 Array-likes · **Know** 23 `WeakMap`/`WeakSet` · 24 `Temporal` · 25 typed arrays · 26 text encoding |
+| **A** | 5 · The built-in library (21/26) | 5 | **22 · Array-likes and iterables** (Understand) | **Know** 23 `WeakMap`/`WeakSet` · 24 `Temporal` · 25 typed arrays · 26 text encoding |
 | **A** | 11 · Network, storage and data transfer (7/21) | 14 | **08 · Aborting and timing out** (Understand) | 09 Cookies · 10 `localStorage` · 11 Uploading files · 12 `Blob`/`File` · 13 WebSocket · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
 | **B** | 6 · Iteration, destructuring and generators (**10/13**) | 3 | **11 · Iterator helpers** (Know) | 12 A collection class · **When Needed** 13 Driving an iterator by hand |
 | **B** | 17 · Machine coding (4/18) | 14 | **05 · An `EventEmitter`** (Understand) | 06 Deep clone · 07 Task queue · 08 Retry with backoff · 09 LRU cache · 10 A Promise from scratch · 11 `memoize` · 12 Deep equality · 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
