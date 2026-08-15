@@ -203,4 +203,4 @@ page.
 
 ---
 
-← Prev: [Rootless networking](08-rootless-networking.md) · Index: [Phase 7](README.md) · Next → **`--network=host`** *(not written yet)*
+← Prev: [Rootless networking](08-rootless-networking.md) · Index: [Phase 7](README.md) · Next → [`--network=host`](10-network-host.md)
