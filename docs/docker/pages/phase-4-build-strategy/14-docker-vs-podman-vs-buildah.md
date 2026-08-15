@@ -163,4 +163,4 @@ offers `--cache-ttl`, which Docker has no equivalent for.
 
 ---
 
-← Prev: [Build args versus runtime env](13-build-args-vs-runtime-env.md) · Index: [Phase 4](README.md) · Next → **The build context** *(not written yet)*
+← Prev: [Build args versus runtime env](13-build-args-vs-runtime-env.md) · Index: [Phase 4](README.md) · Next → [The build context](15-the-build-context.md)
