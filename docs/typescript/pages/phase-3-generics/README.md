@@ -42,7 +42,7 @@ found the wrong equation.
 | 08 | [Default type parameters](./08-default-type-parameters.md) | <span className="db-tier t-understand">Understand</span> | `<T = string>`, and how defaults interact with inference |
 | 09 | [Generic classes](./09-generic-classes.md) | <span className="db-tier t-understand">Understand</span> | Parameterised state, the static-member restriction |
 | 10 | [Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) | <span className="db-tier t-understand">Understand</span> | Why inference works from arguments and not from the return position |
-| 11 | `infer` in conditional types | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
+| 11 | [`infer` in conditional types](./11-infer-in-conditional-types.md) | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
 | 12 | `const` type parameters | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
 | 13 | When *not* to write a generic | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
 | 14 | Variance | <span className="db-tier t-know">Know</span> | Co/contra/bivariance, `strictFunctionTypes`, and the `in`/`out` annotations |

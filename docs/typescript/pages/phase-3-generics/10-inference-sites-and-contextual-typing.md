@@ -266,4 +266,4 @@ annotating the receiving position supplies context to the whole thing at once.
 
 ---
 
-← Prev: [09 · Generic classes](./09-generic-classes.md) · Next → **11 · `infer` in conditional types** *(not written yet)*
+← Prev: [09 · Generic classes](./09-generic-classes.md) · Next → [11 · `infer` in conditional types](./11-infer-in-conditional-types.md)

@@ -177,7 +177,7 @@ type ChangeArg = Parameters<Options['onChange']>[0];
 
 `ReturnType` and `Parameters` are themselves conditional types with `infer` in
 them — their declarations are in `lib.es5.d.ts` and they are the subject of
-**topic 11** *(not written yet)*. `Awaited<T>` unwraps a promise, recursively.
+[topic 11](./11-infer-in-conditional-types.md). `Awaited<T>` unwraps a promise, recursively.
 
 **The rule that makes this worth doing:** a derived type cannot go stale. Re-declare
 `{ id: string; name: string }` next to the function that returns it and the two
