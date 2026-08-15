@@ -114,7 +114,7 @@ type Level = Levels[number];                // 'debug' | 'info'
 That second form — `(typeof arr)[number]` — is the pairing with `as const` from
 [Phase 2 · `satisfies`](../../phase-2-narrowing/10-satisfies/README.md), and it
 is one of the highest-value two-line patterns in TypeScript. It is
-**topic 06 · Indexed access types** *(not written yet)*.
+[topic 06 · Indexed access types](../06-indexed-access-types.md).
 
 For a **tuple**, `keyof` gives the literal index positions plus the array
 members:

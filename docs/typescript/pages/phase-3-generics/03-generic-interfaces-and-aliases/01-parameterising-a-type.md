@@ -177,7 +177,7 @@ interface Table<Row extends object, Key extends keyof Row> {
 
 `Row[Key]` is an **indexed access type** — reading the type of one property out
 of another type — which gets its own page at
-**topic 06 · Indexed access types** *(not written yet)*.
+[topic 06 · Indexed access types](../06-indexed-access-types.md).
 
 ## Gotchas
 

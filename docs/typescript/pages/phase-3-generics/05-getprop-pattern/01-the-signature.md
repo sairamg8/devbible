@@ -104,7 +104,7 @@ type V = User['name' | 'age'];    // string | number
 Which is also why `getProp(user, cond ? 'name' : 'age')` returns
 `string | number` — correctly, since the compiler cannot know which branch ran.
 Indexed access types get their own page at
-**topic 06** *(not written yet)*.
+[topic 06](../06-indexed-access-types.md).
 
 ## The body needs no assertion
 

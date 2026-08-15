@@ -37,7 +37,7 @@ found the wrong equation.
 | 03 | [Generic interfaces and type aliases](./03-generic-interfaces-and-aliases/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | `ApiResult<T>`, `Repository<T>` — parameterising your own structures |
 | 04 | [`keyof`](./04-keyof/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The union of an object type's keys, and the entry point to every advanced type |
 | 05 | [The `getProp` pattern](./05-getprop-pattern/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | `<T, K extends keyof T>(obj: T, key: K) => T[K]` — the shape behind every typed accessor |
-| 06 | Indexed access types — `T[K]` | <span className="db-tier t-understand">Understand</span> | Reading a property's type out of a type, including `T[number]` |
+| 06 | [Indexed access types — `T[K]`](./06-indexed-access-types.md) | <span className="db-tier t-understand">Understand</span> | Reading a property's type out of a type, including `T[number]` |
 | 07 | The `typeof` type operator | <span className="db-tier t-understand">Understand</span> | Lifting a runtime value into the type world |
 | 08 | Default type parameters | <span className="db-tier t-understand">Understand</span> | `<T = string>`, and how defaults interact with inference |
 | 09 | Generic classes | <span className="db-tier t-understand">Understand</span> | Parameterised state, the static-member restriction |

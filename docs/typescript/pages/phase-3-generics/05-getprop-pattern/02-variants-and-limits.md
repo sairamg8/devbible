@@ -236,4 +236,4 @@ data — a sort field from a query string, a column from config, a form field na
 
 ---
 
-← Prev: [01 · The signature, piece by piece](./01-the-signature.md) · Next → **06 · Indexed access types** *(not written yet)*
+← Prev: [01 · The signature, piece by piece](./01-the-signature.md) · Next → [06 · Indexed access types](../06-indexed-access-types.md)

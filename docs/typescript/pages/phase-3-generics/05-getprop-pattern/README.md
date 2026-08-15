@@ -60,4 +60,4 @@ type parameter is not optional.
 
 ---
 
-← Prev: [04 · `keyof`](../04-keyof/README.md) · Next → **06 · Indexed access types** *(not written yet)*
+← Prev: [04 · `keyof`](../04-keyof/README.md) · Next → [06 · Indexed access types](../06-indexed-access-types.md)
