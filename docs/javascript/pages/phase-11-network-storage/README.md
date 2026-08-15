@@ -7,11 +7,11 @@ sidebar_position: 0
 *21 topics.* How data gets in and out of the browser. As the syllabus puts it, **the `fetch`
 rows and the CORS row cover the majority of "it works in Postman but not in the browser"**.
 
-## Status — 🚧 **Know tier under way — 20 of 21** (2026-08-15)
+## Status — ✅ **COMPLETE — 21 of 21, every tier** (2026-08-15)
 
-**Master tier ✅ COMPLETE** — all five Master topics (01–05), written in syllabus order.
+**Master ✅ 5/5 · Understand ✅ 10/10 · Know ✅ 6/6.** Written in syllabus order, every topic documentation-validated against MDN and the specifications.
 
-✅ **The Understand tier is COMPLETE (06–15).** 🚧 **The Know tier is under way — 16–20 written; only 21 remains.**
+✅ **The Understand tier is COMPLETE (06–15).** 🏁 **Phase 11 is finished.** The Understand tier closed with 15 · CSP and the Know tier with 21 · `XMLHttpRequest`.
 
 🔴 **Chunk A of the four-way JavaScript split owns this phase** (session `3d9f98b8`, 2026-08-15) —
 the old "lane B" note was from the closed two-lane split. Chunk A also owns **phase 5, which is now
@@ -43,7 +43,7 @@ complete at every tier (26/26)**, and that pairing is deliberate: this phase's `
 | 18 | **[Server-sent events](./18-server-sent-events/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 19 | **[Streams](./19-streams/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 20 | **[`sendBeacon` and keepalive](./20-sendbeacon-keepalive/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 21 | `XMLHttpRequest` | <span className="db-tier t-know">Know</span> | 🚧 next |
+| 21 | **[`XMLHttpRequest`](./21-xmlhttprequest/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## How these pages are verified
 
