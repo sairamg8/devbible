@@ -21,7 +21,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | Chunk | Phases | Topics | Start at | Claimed by |
 |---|---|---|---|---|
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
-| **B** | 6 · 7 | 26 | 🏁 phase 6 **done 12/12** · 🚧 phase 7 **13/14** — next: **07 · 14 · Overlay networks and multi-host** (closes phase 7 and chunk B) | 🔴 session `d0c46f84` (2026-08-15) |
+| **B** | 6 · 7 | 26 | 🏁 **CHUNK B COMPLETE — phase 6 12/12, phase 7 14/14** (2026-08-15) | session `d0c46f84` — finished |
 | **C** | 8 · 9 | 31 (**13 left**) | 🏁 phase 8 **done 17/17** · 🚧 phase 9 **1/14** — next: **09 · 02 · Dev image vs prod image** | 🔴 session `9219957a` (2026-08-15) |
 | **D** | 10 · 11 · 12 | 44 (**32 left**) | 🔴 **Phase 10 · 13 · Disk growth** — 12/16 written | 🔴 session `6d88f249` (2026-08-15, took over from `2f38bb4d`) |
 
@@ -65,13 +65,13 @@ answers.
 | **[04 · Build strategy: cache, multi-stage, BuildKit](./phase-4-build-strategy/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[05 · Image quality, size and supply chain](./phase-5-image-quality/README.md)** | 12 | 12 | ✅ **Complete** |
 | **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 12 | ✅ **Complete** |
-| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 13 | 🚧 **Writing — chunk B** |
+| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 14 | ✅ **Complete** |
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 17 | ✅ **Complete** |
 | **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 1 | 🚧 **Writing — chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 12 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **146** | |
+| **Total** | **192** | **147** | |
 
 import Progress from '@site/src/components/Progress';
 

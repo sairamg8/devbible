@@ -89,4 +89,4 @@ Move on to Phase 7 when you can explain:
 
 ---
 
-← Syllabus: [Part 3 — Running a real stack](../../syllabus/03-running-a-stack.md) · Prev phase: [Phase 3](../phase-3-dockerfile/README.md) · Start → [The container filesystem is disposable](01-filesystem-is-disposable.md)
+← Syllabus: [Part 3 — Running a real stack](../../syllabus/03-running-a-stack.md) · Prev phase: [Phase 5](../phase-5-image-quality/README.md) · Start → [The container filesystem is disposable](01-filesystem-is-disposable.md)

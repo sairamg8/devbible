@@ -185,4 +185,4 @@ and it is the exception that proves the rule.
 
 ---
 
-← Prev: [Service discovery](02-service-discovery.md) · Index: [Phase 7](README.md) · Next → **Publishing ports** *(not written yet)*
+← Prev: [Service discovery](02-service-discovery.md) · Index: [Phase 7](README.md) · Next → [Publishing ports](04-publishing-ports.md)

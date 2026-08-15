@@ -251,4 +251,4 @@ proves nothing about the container's resolver.
 
 ---
 
-← Prev: [The default bridge vs a user-defined bridge](01-default-vs-user-defined-bridge.md) · Index: [Phase 7](README.md) · Next → **`localhost` inside a container is the container** *(not written yet)*
+← Prev: [The default bridge vs a user-defined bridge](01-default-vs-user-defined-bridge.md) · Index: [Phase 7](README.md) · Next → [`localhost` inside a container is the container](03-localhost-is-the-container.md)
