@@ -39,7 +39,7 @@ import Progress from '@site/src/components/Progress';
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–11** ✅) — **11/21** |
-| **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–02) · Understand under way (**03–12** ✅) |
+| **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–02) · **Understand tier ✅ COMPLETE** (03–13) · Know tier next |
 | **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
 | **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
@@ -113,7 +113,7 @@ worktrees left.
 | **B** | 17 · Machine coding (**12/18**) | 6 | **13 · `curry`/`pipe`/`compose`** (Understand) | 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain (**11**/18) | **7** | **12 · Finding a leak** (Understand) — ✅ 05–11 done | 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
-| **D** | 12 · The browser platform (12/21) | 9 | **13 · What belongs on the server** (Understand) | **Know** 14 Yielding to the main thread · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
+| **D** | 12 · The browser platform (13/21) | 8 | **14 · Yielding to the main thread** (Know) · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
 | **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
 
 **Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
