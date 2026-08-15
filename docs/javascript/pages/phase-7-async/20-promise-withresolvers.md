@@ -196,4 +196,4 @@ handler attached later in the same synchronous run is in time.
 ---
 
 ← [19 · Event loop: browser vs Node](./19-event-loop-browser-vs-node/README.md) ·
-[Phase index](./README.md)
+[Phase index](./README.md) · [21 · Thenables](./21-thenables.md) →
