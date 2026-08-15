@@ -209,7 +209,8 @@ building it twice, and it is what makes the image pushable later.
 
 - **[02 · The wiring](02-the-wiring.md)** — ports and the three top-level blocks: one published port, the segmentation that costs four lines, why a volume is declared twice.
 - **[03 · The stateful services](03-the-stateful-services.md)** — `db`, `cache`, `migrate`: volume paths, `_FILE`, healthchecks that tell the truth, and the migration gate.
-- **[04 · The application services](04-the-application-services.md)** — `api`, `web`, `proxy`: readiness, build-time frontend configuration, the proxy template, and the boot order that falls out.
+- **[04 · The API and the frontend](04-the-api-and-the-frontend.md)** — `api` and `web`: readiness versus liveness, and why the frontend's API URL is a build-time problem.
+- **[05 · The proxy and the boot](05-the-proxy-and-the-boot.md)** — `proxy`: the nginx template, the DNS trap, then the boot order end to end and how to prove the stack actually works.
 
 ## Gotchas
 
