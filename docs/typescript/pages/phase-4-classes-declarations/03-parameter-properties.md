@@ -269,4 +269,4 @@ DI-framework codebase that compiles properly, they are usually the right call.
 
 ---
 
-← Prev: [02 · Access modifiers](./02-access-modifiers/README.md) · Next → **04 · `implements` vs `extends`** *(not written yet)*
+← Prev: [02 · Access modifiers](./02-access-modifiers/README.md) · Next → [04 · `implements` vs `extends`](./04-implements-vs-extends.md)

@@ -73,7 +73,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-type-vocabulary', name: 'The type vocabulary', part: 'The type system', topics: 17, pages: 17},
       {n: 2, slug: 'phase-2-narrowing', name: 'Narrowing and control flow analysis', part: 'The type system', topics: 13, pages: 13},
       {n: 3, slug: 'phase-3-generics', name: 'Generics', part: 'The type system', topics: 14, pages: 14},
-      {n: 4, slug: 'phase-4-classes-declarations', name: 'Classes, objects and declaration merging', part: 'Types at scale', topics: 14, pages: 3, pagesPlanned: 14},
+      {n: 4, slug: 'phase-4-classes-declarations', name: 'Classes, objects and declaration merging', part: 'Types at scale', topics: 14, pages: 4, pagesPlanned: 14},
       {n: 5, slug: 'phase-5-type-level', name: 'Type-level programming', part: 'Types at scale', topics: 16, pages: 0},
       {n: 6, slug: 'phase-6-modules-build', name: 'Modules, declarations and the build', part: 'Types at scale', topics: 16, pages: 0},
       {n: 7, slug: 'phase-7-server', name: 'TypeScript on the server', part: 'In the stack', topics: 15, pages: 5, pagesPlanned: 15},
