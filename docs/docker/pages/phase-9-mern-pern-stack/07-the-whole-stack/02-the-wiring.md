@@ -92,7 +92,7 @@ Two other facts from phase 8 that this file depends on:
 - **A recreated container "joins the network under a different IP address but the
   same name."** So the name is the address — hardcoding an IP works exactly once,
   and this is the fact the proxy's configuration has to respect
-  ([04 · The application services](04-the-application-services.md)).
+  ([04 · The application services](04-the-api-and-the-frontend.md)).
 
 ## Volumes are declared twice, deliberately
 

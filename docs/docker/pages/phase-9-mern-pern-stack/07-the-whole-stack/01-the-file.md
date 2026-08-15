@@ -15,9 +15,8 @@ sidebar_position: 1
 > **No sandbox** — no console output on this page.
 
 **Here is the whole file. Nothing in it is new — every attribute was argued in
-phase 8, and this topic is only about which one to reach for and why.** Read it
-once end to end; this page then explains its *shape*, and the next two walk the
-services.
+phase 8; this topic is only about which one to reach for, and why.** Read it end
+to end; this page explains its shape, and the rest walk it.
 
 ## The stack
 
@@ -196,10 +195,9 @@ Three phase-8 facts make that legal, and each is load-bearing:
   file, and the reason `networks:` is left *out* of the anchor: `api` needs two
   networks and `migrate` needs one, and a merged sequence would not have given
   either.
-- For reuse *inside one file*, anchors beat
-  [`extends`](../../phase-8-compose/16-include-and-extends.md), which shares
-  configuration but **does not import referenced resources** — `secrets`,
-  `volumes` and `depends_on` would all need re-declaring.
+- Inside one file, anchors beat
+  [`extends`](../../phase-8-compose/16-include-and-extends.md), which **does not
+  import referenced resources** — `secrets` and `depends_on` would need redeclaring.
 
 ⚠️ **`image:` alongside `build:` is not "pull instead of build".** It names what
 the build produces. That is what lets `migrate` and `api` share one image without
@@ -210,7 +208,8 @@ building it twice, and it is what makes the image pushable later.
 - **[02 · The wiring](02-the-wiring.md)** — ports and the three top-level blocks: one published port, the segmentation that costs four lines, why a volume is declared twice.
 - **[03 · The stateful services](03-the-stateful-services.md)** — `db`, `cache`, `migrate`: volume paths, `_FILE`, healthchecks that tell the truth, and the migration gate.
 - **[04 · The API and the frontend](04-the-api-and-the-frontend.md)** — `api` and `web`: readiness versus liveness, and why the frontend's API URL is a build-time problem.
-- **[05 · The proxy and the boot](05-the-proxy-and-the-boot.md)** — `proxy`: the nginx template, the DNS trap, then the boot order end to end and how to prove the stack actually works.
+- **[05 · The proxy](05-the-proxy.md)** — `proxy`: what the nginx image already does, the template mechanism, and the DNS trap that turns every API rebuild into a 502.
+- **[06 · The boot, and proving it](06-the-boot-and-proving-it.md)** — the startup order end to end, and the three checks that show the stack works on a machine that is not yours.
 
 ## Gotchas
 
@@ -298,4 +297,4 @@ behaviour.
 
 ---
 
-← Overview: [The whole stack in one file](README.md) · Index: [Phase 9](../README.md) · Next → [Networks, volumes and secrets](02-networks-volumes-secrets.md)
+← Overview: [The whole stack in one file](README.md) · Index: [Phase 9](../README.md) · Next → [Networks, volumes and secrets](02-the-wiring.md)

@@ -294,4 +294,4 @@ line, rather than being made implicitly by whoever wrote the service first.
 
 ---
 
-← Prev: [The wiring](02-the-wiring.md) · Index: [Phase 9](../README.md) · Next → [The application services](04-the-application-services.md)
+← Prev: [The wiring](02-the-wiring.md) · Index: [Phase 9](../README.md) · Next → [The application services](04-the-api-and-the-frontend.md)

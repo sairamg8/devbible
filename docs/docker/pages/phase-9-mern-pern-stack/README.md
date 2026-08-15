@@ -10,7 +10,7 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 6 of 14 topics written.**
+🚧 **In progress — 7 of 14 topics written.**
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -29,7 +29,7 @@ reload that actually reloads, and the worked file that ties them together.
 | 04 | **[Waiting for the database](04-waiting-for-the-database/README.md)** | <span className="db-tier t-master">Master</span> | Two halves, both required — Compose gates the first boot, and only the app survives the 3am restart |
 | 05 | **[Hot reload inside a container](05-hot-reload/README.md)** | <span className="db-tier t-master">Master</span> | Two failure classes — the file never arrived, or the watcher never noticed — and they are fixed in different places |
 | 06 | **[Secrets in dev vs prod](06-secrets-dev-vs-prod.md)** | <span className="db-tier t-understand">Understand</span> | Four places a value can come from, and only the build `ARG` is unrecoverable — rotate, do not rebuild |
-| 07 | The whole stack in one file | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 07 | **[The whole stack in one file](07-the-whole-stack/README.md)** | <span className="db-tier t-master">Master</span> | Six services, one published port — and five lines that fail silently if you get them wrong |
 | 08 | MongoDB in a container | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 09 | Redis in a container | <span className="db-tier t-know">Know</span> | _not written yet_ |
 | 10 | Migrations and seeds | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
@@ -51,7 +51,7 @@ dropped.
 | Waiting for the database | 04 (chunked: the startup gate · surviving a restart) |
 | Hot reload inside a container | 05 (chunked: getting the file in · making the change noticed) |
 | Secrets in dev vs prod | 06 |
-| The whole stack in one file | 07 |
+| The whole stack in one file | 07 (chunked: the file · the wiring · the stateful services · the API and the frontend · the proxy · the boot and proving it) |
 | MongoDB in a container | 08 |
 | Redis in a container | 09 |
 | Migrations and seeds | 10 |

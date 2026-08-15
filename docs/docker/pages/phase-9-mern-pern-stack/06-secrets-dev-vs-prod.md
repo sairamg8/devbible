@@ -240,4 +240,4 @@ single-file bind mount.
 
 ---
 
-← Prev: [Hot reload inside a container](05-hot-reload/README.md) · Index: [Phase 9](README.md) · Next → **The whole stack in one file** *(not written yet)*
+← Prev: [Hot reload inside a container](05-hot-reload/README.md) · Index: [Phase 9](README.md) · Next → [The whole stack in one file](07-the-whole-stack/README.md)

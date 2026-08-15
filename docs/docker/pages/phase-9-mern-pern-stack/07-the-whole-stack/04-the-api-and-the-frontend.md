@@ -257,4 +257,4 @@ and it makes an accidental exposure require an edit in an obvious place.
 
 ---
 
-← Prev: [The stateful services](03-the-stateful-services.md) · Index: [Phase 9](../README.md) · Next → [The proxy and the boot](05-the-proxy-and-the-boot.md)
+← Prev: [The stateful services](03-the-stateful-services.md) · Index: [Phase 9](../README.md) · Next → [The proxy](05-the-proxy.md)
