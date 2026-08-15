@@ -10,7 +10,7 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 12 of 14 topics written.**
+🚧 **In progress — 13 of 14 topics written.**
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -35,7 +35,7 @@ reload that actually reloads, and the worked file that ties them together.
 | 10 | **[Migrations and seeds](10-migrations-and-seeds.md)** | <span className="db-tier t-understand">Understand</span> | Exactly once, in order, before anything serves — and why init scripts and startup migrations both fail that |
 | 11 | **[Debugging Node inside a container](11-debugging-node.md)** | <span className="db-tier t-understand">Understand</span> | The inspector is an unauthenticated shell — bind wide inside the namespace, publish narrow on the host |
 | 12 | **[A React/Vite frontend](12-react-vite-frontend.md)** | <span className="db-tier t-understand">Understand</span> | Two containers wearing one name — and a bundle whose API URL was decided at build time |
-| 13 | Nginx in front of the API | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 13 | **[Nginx in front of the API](13-nginx-in-front.md)** | <span className="db-tier t-understand">Understand</span> | One origin, the SPA fallback, hop-by-hop headers, and the API losing track of who the client is |
 | 14 | Connecting from the host | <span className="db-tier t-know">Know</span> | _not written yet_ |
 
 ## Coverage
