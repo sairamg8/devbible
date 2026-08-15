@@ -10,7 +10,9 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 13 of 14 topics written.**
+🏁 **Complete — 14 of 14 topics**, at every tier (Master 5/5 · Understand 7/7 ·
+Know 2/2). **29 files, 6,149 lines, 0 over the 300-line cap, 259 internal links
+resolved against the filesystem** — link-checked, **not built**.
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -36,7 +38,7 @@ reload that actually reloads, and the worked file that ties them together.
 | 11 | **[Debugging Node inside a container](11-debugging-node.md)** | <span className="db-tier t-understand">Understand</span> | The inspector is an unauthenticated shell — bind wide inside the namespace, publish narrow on the host |
 | 12 | **[A React/Vite frontend](12-react-vite-frontend.md)** | <span className="db-tier t-understand">Understand</span> | Two containers wearing one name — and a bundle whose API URL was decided at build time |
 | 13 | **[Nginx in front of the API](13-nginx-in-front.md)** | <span className="db-tier t-understand">Understand</span> | One origin, the SPA fallback, hop-by-hop headers, and the API losing track of who the client is |
-| 14 | Connecting from the host | <span className="db-tier t-know">Know</span> | _not written yet_ |
+| 14 | **[Connecting from the host](14-connecting-from-the-host.md)** | <span className="db-tier t-know">Know</span> | `exec` needs nothing installed and leaves nothing behind; a published port is a socket for the life of the stack |
 
 ## Coverage
 
@@ -94,4 +96,4 @@ Three checks that it is actually true, not true on your laptop:
 
 ---
 
-← Syllabus: [Part 3 — Running a real stack](../../syllabus/03-running-a-stack.md) · Start → [Containerising a Node/Express API](01-node-api-dockerfile/README.md)
+← Syllabus: [Part 3 — Running a real stack](../../syllabus/03-running-a-stack.md) · Start → [Containerising a Node/Express API](01-node-api-dockerfile/README.md) · Next phase → [Phase 10 · Running containers in production](../phase-10-production/README.md)
