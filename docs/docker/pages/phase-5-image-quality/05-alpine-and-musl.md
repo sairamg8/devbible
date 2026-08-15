@@ -202,4 +202,4 @@ has native dependencies with no musl builds published.
 
 ---
 
-← Prev: [Measuring](04-measuring.md) · Index: [Phase 5](README.md) · Next → **Distroless and `scratch`** *(not written yet)*
+← Prev: [Measuring](04-measuring.md) · Index: [Phase 5](README.md) · Next → [Distroless and `scratch`](06-distroless-and-scratch.md)
