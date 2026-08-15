@@ -196,4 +196,4 @@ architecture gets the one image you pinned. Read it from the registry with
 
 ---
 
-← Prev: [Vulnerability scanning](07-vulnerability-scanning.md) · Index: [Phase 5](README.md) · Next → **Supply-chain risk** *(not written yet)*
+← Prev: [Vulnerability scanning](07-vulnerability-scanning.md) · Index: [Phase 5](README.md) · Next → [Supply-chain risk](09-supply-chain-risk.md)
