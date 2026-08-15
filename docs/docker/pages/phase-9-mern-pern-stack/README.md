@@ -10,7 +10,7 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 9 of 14 topics written.**
+🚧 **In progress — 10 of 14 topics written.**
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -32,7 +32,7 @@ reload that actually reloads, and the worked file that ties them together.
 | 07 | **[The whole stack in one file](07-the-whole-stack/README.md)** | <span className="db-tier t-master">Master</span> | Six services, one published port — and five lines that fail silently if you get them wrong |
 | 08 | **[MongoDB in a container](08-mongodb-in-a-container.md)** | <span className="db-tier t-understand">Understand</span> | Four lines that work immediately — and a transaction that needs a replica set to exist at all |
 | 09 | **[Redis in a container](09-redis-in-a-container.md)** | <span className="db-tier t-know">Know</span> | RDB vs AOF, and the `maxmemory` default of zero that gets the container OOM-killed |
-| 10 | Migrations and seeds | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 10 | **[Migrations and seeds](10-migrations-and-seeds.md)** | <span className="db-tier t-understand">Understand</span> | Exactly once, in order, before anything serves — and why init scripts and startup migrations both fail that |
 | 11 | Debugging Node inside a container | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 12 | A React/Vite frontend | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 13 | Nginx in front of the API | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
