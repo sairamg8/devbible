@@ -33,7 +33,7 @@ ends up in a JSON payload.
 |---|---|---|---|
 | 01 | [Module augmentation — `declare module`](./01-module-augmentation/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | Adding properties to somebody else's types; how `req.user`, custom `globalThis` keys and library plugins are typed |
 | 02 | [Access modifiers](./02-access-modifiers/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | `public`/`private`/`protected` are **compile-time only**; `#private` is real at runtime |
-| 03 | Parameter properties | <span className="db-tier t-understand">Understand</span> | `constructor(private readonly repo: Repo)`, and the fact that they **emit code** |
+| 03 | [Parameter properties](./03-parameter-properties.md) | <span className="db-tier t-understand">Understand</span> | `constructor(private readonly repo: Repo)`, and the fact that they **emit code** |
 | 04 | `implements` vs `extends` | <span className="db-tier t-understand">Understand</span> | A contract check that adds no inference, versus real inheritance |
 | 05 | Interface declaration merging | <span className="db-tier t-understand">Understand</span> | Two declarations of one interface combine — the feature `type` deliberately lacks |
 | 06 | Global augmentation | <span className="db-tier t-understand">Understand</span> | `declare global`, typing `globalThis`, and why it only works inside a module |

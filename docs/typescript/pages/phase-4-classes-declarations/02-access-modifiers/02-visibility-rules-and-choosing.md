@@ -124,7 +124,7 @@ that is the trade you are making:
 - A field that must stay enumerable or serialisable.
 - **`readonly` combined with visibility.** `private readonly` is a common and
   useful pair; `#` fields cannot take an accessibility modifier at all.
-- **Parameter properties** (**topic 03** *(not written yet)*) —
+- **Parameter properties** ([topic 03](../03-parameter-properties.md)) —
   `constructor(private readonly repo: Repo)` has no `#` equivalent, and for
   dependency-injected services that idiom is worth more than hard privacy.
 
@@ -211,4 +211,4 @@ none of which `#` supports. It is a real trade, not a legacy choice.
 
 ---
 
-← [01 · Soft private and hard private](./01-soft-private-and-hard-private.md) · Up → [Overview](./README.md) · Next → **03 · Parameter properties** *(not written yet)*
+← [01 · Soft private and hard private](./01-soft-private-and-hard-private.md) · Up → [Overview](./README.md) · Next → [03 · Parameter properties](../03-parameter-properties.md)

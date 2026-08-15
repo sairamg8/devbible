@@ -36,8 +36,9 @@ enforces.**
 - **← [Phase 3 · Generic classes](../../phase-3-generics/09-generic-classes.md)**
   — `TS2442`, where a private member makes class comparison nominal rather than
   structural. Chunk 02 is where that becomes a tool.
-- **→ 03 · Parameter properties** *(not written yet)* — `constructor(private
-  readonly repo: Repo)`, which works with `private` and has no `#` equivalent.
+- **→ [03 · Parameter properties](../03-parameter-properties.md)** —
+  `constructor(private readonly repo: Repo)`, which works with `private` and has
+  no `#` equivalent.
 - **→ 07 · Branded / nominal types** *(not written yet)* — the deliberate use of
   declaration-site privacy.
 
