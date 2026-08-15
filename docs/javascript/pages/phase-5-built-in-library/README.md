@@ -11,15 +11,15 @@ example and its own gotcha.
 This is the phase you use every day. Phases 3 and 4 explained the language; this one
 is the standard library built on top of it.
 
-## Status — **Understand tier under way** (2026-08-15)
+## Status — **Understand tier COMPLETE** (2026-08-15)
 
-🚧 **21 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
-10 in syllabus order — and the Master-first plan is finished across every phase, so the
-work here is now the **Understand and Know tiers**, in that order.
+🚧 **22 of 26 written.** ✅ **Master 8/8** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
+order. ✅ **Understand 14/14**, finished 2026-08-15 with topics 18–22. Only the four
+**Know** topics remain.
 
-**Next here: 22 · Array-likes and iterables**, then the four Know topics (23–26).
+**Next here: the four Know topics — 23 `WeakMap`/`WeakSet`, 24 `Temporal`, 25 typed arrays, 26 text encoding.**
 
-**Coverage:** Master **8 / 8** ✅ · Understand **13 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **14 / 14** ✅ · Know **0 / 4**.
 
 ## Topics
 
@@ -46,7 +46,7 @@ work here is now the **Understand and Know tiers**, in that order.
 | 19 | **[`Date`](./19-date/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 20 | **[`Intl`](./20-intl/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 21 | **[`structuredClone`](./21-structuredclone.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 22 | Array-likes and iterables | <span className="db-tier t-understand">Understand</span> | deferred |
+| 22 | **[Array-likes and iterables](./22-array-likes-and-iterables/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 23 | `WeakMap` and `WeakSet` | <span className="db-tier t-know">Know</span> | deferred |
 | 24 | `Temporal` | <span className="db-tier t-know">Know</span> | deferred |
 | 25 | Typed arrays, `ArrayBuffer`, `DataView` | <span className="db-tier t-know">Know</span> | deferred |
