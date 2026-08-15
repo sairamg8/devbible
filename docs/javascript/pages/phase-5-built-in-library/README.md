@@ -13,13 +13,13 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **18 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **19 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 19 · `Date`**, then 20–22, then the four Know topics (23–26).
+**Next here: 20 · `Intl`**, then 21–22, then the four Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **10 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **11 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -43,7 +43,7 @@ work here is now the **Understand and Know tiers**, in that order.
 | 16 | **[Regular expressions — in practice](./16-regex-in-practice/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 17 | **[`Set`](./17-set.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 18 | **[`Object` statics](./18-object-statics/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 19 | `Date` | <span className="db-tier t-understand">Understand</span> | deferred |
+| 19 | **[`Date`](./19-date/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 20 | `Intl` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 21 | `structuredClone` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 22 | Array-likes and iterables | <span className="db-tier t-understand">Understand</span> | deferred |
