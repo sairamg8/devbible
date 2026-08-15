@@ -47,74 +47,81 @@ import Progress from '@site/src/components/Progress';
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | 🟡 **Master tier ✅** (01–04 — all four); rest deferred |
 | **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🟡 **Master tier ✅** (01–07 — all seven); rest deferred |
 
-## 🔒 TWO LANES — `docs/javascript/` is split between two sessions (2026-08-14)
+## 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15)
 
-🔴 **Read this before writing anything.** JavaScript is worked by **two sessions at once**,
-split by phase. Take your lane's phases and **never write in the other lane's**.
+🔴 **Read this before writing anything.** The old **two-lane** split (A: phases 3–8 · B: phases
+9–12, 17, 18) is **CLOSED** — phases 3, 4, 9 and 10 finished under it, so what is left no longer
+divides that way. The remaining **94 in-scope topics** are split **four ways, whole phases only**,
+so no two sessions ever write in the same phase directory or the same phase `README.md`.
 
-| Lane | Phases | Topics left | Held by |
-|---|---|---|---|
-| **A · The language** | **3, 4, 5, 6, 7, 8** — functions, objects, the built-in library, iteration, async, modules/errors | **44** | session `edbfba95` |
-| **B · Platform and applied** | **9, 10, 11, 12, 17, 18** — DOM, events, network/storage, browser platform, machine coding, storefront | **50** | session `75e511e6` |
+| Chunk | Phases | Topics left | What it is | Held by |
+|---|---|---|---|---|
+| **A** | **5**, **11** | **23** — 5 (9: 18–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | *unclaimed* |
+| **B** | **6**, **17** | **24** — 6 (10: 04–13) · 17 (14: 05–18) | Iteration, generators and iterator helpers; then machine coding | *unclaimed* |
+| **C** | **7**, **8** | **25** — 7 (11: 12–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | *unclaimed* |
+| **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | *unclaimed* |
 
-**The seam is the language itself versus the browser platform**, so the two lanes barely
-cross-reference each other. Where a page needs the other lane's topic, **write it as bold plain
-text with *(not written yet)*** rather than a link — a link to an unwritten page breaks the
-build, and the other lane may not have written it yet.
+### 🔴 How a session is started — `pick javascript A`, and nothing more
+
+**The user starts a session by naming JavaScript plus a chunk letter, and that is the whole
+instruction.** All of these mean the same thing and require **no clarifying question**:
+
+> *"pick javascript A"* · *"javascript chunk B"* · *"JS C"* · *"take D"* · *"pick up js b"*
+
+**On seeing one:** open `devbible/progress_javascript_split_4way.md` in the memory store, start at
+the topic that chunk's cursor names, claim the chunk in the two boards, and **write** — no plan, no
+confirmation, no "shall I begin". A message that names a **phase** instead of a letter settles it
+too: 5 and 11 → A · 6 and 17 → B · 7 and 8 → C · 12 and 18 → D.
+
+⚠️ **The letters were REDEFINED on 2026-08-15.** They no longer mean the old two lanes — "lane A =
+phases 3–8" and "lane B = phases 9–12, 17, 18" are **dead**. Read the letter off the table above,
+never off an older memory file.
+
+**Only ask which chunk if the user says "JavaScript" with no letter and no phase.**
+
+**Claim your chunk before writing** — put your session id in the row above **and** in your chunk's
+row in [`docs/README.md`](../../README.md). Naming a chunk transfers it to the session it was named
+in; if a row already carries an older session id, take it over and say so.
+
+**Nothing outside your chunk.** Not to fix a link, not to correct a stale count, not because another
+phase looks idle. Phases **0, 1, 2, 3, 4, 9, 10** are complete at every tier. Phases **13, 14, 15**
+are **parked** and **16** is **dropped** — they belong to no chunk and are not to be picked up
+without a new instruction from the user.
+
+**Where a page needs a topic from another chunk, write it as bold plain text with *(not written
+yet)*** rather than a link — a link to an unwritten page breaks the build.
 
 **Shared files, and the rule for each:**
 
 | File | Rule |
 |---|---|
-| `src/data/progress.js` | Edit **only your own phases' rows**. Expect the other lane's rows in your `git diff` — leave them. |
-| `docs/README.md` | Two JavaScript rows, one per lane. Touch only yours. |
-| this file | The lane table above, and your lane's block below. |
-| a phase `README.md` | Belongs to whichever lane owns that phase. |
+| `src/data/progress.js` | Edit **only your own phases' rows**. Expect the other chunks' rows in your `git diff` — leave them. |
+| `docs/README.md` | Four JavaScript rows, one per chunk. Touch only yours, plus the JavaScript technology row when a phase closes. |
+| this file | The chunk table above, and your own chunk block below. |
+| a phase `README.md` | Belongs to whichever chunk owns that phase — and no phase is shared. |
 
-**Never `git add -A`.** Stage explicit paths, every time.
+**Never `git add -A`.** Stage explicit paths, every time. Everything is on `main`; there are no
+worktrees left.
 
-## 🔒 Lane A claim — phases 3–8
+## 🔒 Chunk claims
 
-| | |
-|---|---|
-| **Claimed by** | session `edbfba95` (Opus 5), from 2026-08-14 — took over from `ec7d13f7` ← `016cfc46` ← `c5329658` ← `01ECVvH5` |
-| **Claim** | **all of `docs/javascript/`** — 🔴 **TIER-LOCKED to Understand and Know.** Master is **closed at 99/99** and is not to be reopened for depth. 🔴 **SCOPE CUT 2026-08-14:** phase 16 (Dynamic programming) **dropped** beyond its 3 Master topics; phase 18 trimmed to **11, 12 and 15 only**; the whole DSA block **parked** — 13 (Complexity), 14 (Data structures) and 15 (Algorithmic patterns) — *"mostly language focus"*. **21 dropped, 34 parked.** 17 · Machine coding stays **in scope**: it implements JavaScript's own library functions, which is language work. Nothing already written was deleted.** |
-| **Last touched** | 🎉 **PHASE 4 COMPLETE — 20 of 20, every tier** (Master 7/7 · Understand 9/9 · Know 4/4), closed by topic 20 · Private state before `#`, 2026-08-15. **Phases 3 and 4 are both complete at every tier.** |
-| **Where lane A writes** | 🔴 the worktree **`devbible-js-lane-a`, branch `js-lane-a`** — not on `main`. Merged into `main` at every phase boundary; last merge `a7a92fec`, after which `main..js-lane-a` was empty |
-| **Done and committed** | Phases 0–2 complete · **Master tiers complete** for Phase 3 (01–08), Phase 4 (01, 03–08), Phase 5 (01, 02, 04–07, 09, 10), Phase 6 (01–03), Phase 7 (01–11), Phase 8 (01–04), Phase 9 (01–06), Phase 10 (01–04), Phase 11 (01–05), Phase 12 (01–02), Phase 13 (01–03), Phase 14 (01–05), Phase 15 (01–04, 06), Phase 16 (01–03), Phase 17 (01–04), Phase 18 (01–07) |
-| **Next** | **Phase 5 · 18 · `Object` statics**, then 19–22 and the four Know topics. **9 left in phase 5.** Inside each phase: **Understand → Know → When Needed** |
-| **Remaining** | **119 topics in the active queue** — Understand **79**, Know **37**, When Needed **3**. Plus **34 parked** (phases 13, 14, 15) and **21 dropped** (phases 16, 18). Thinnest live phase: **12 · browser platform, 2/21** |
-| **Totals** | **154 of 316 in scope** (337 syllabus rows − 21 dropped). **0 files over 300 lines**, **0 broken links under lane A's phases 3–8**. ⚠️ The earlier "253 pages / 311 verified" figure was wrong — audited 2026-08-14 |
+| Chunk | Phase | Left | Start at | Then |
+|---|---|---|---|---|
+| **A** | 5 · The built-in library (17/26) | 9 | **18 · `Object` statics** (Understand) | 19 `Date` · 20 `Intl` · 21 `structuredClone` · 22 Array-likes · **Know** 23 `WeakMap`/`WeakSet` · 24 `Temporal` · 25 typed arrays · 26 text encoding |
+| **A** | 11 · Network, storage and data transfer (7/21) | 14 | **08 · Aborting and timing out** (Understand) | 09 Cookies · 10 `localStorage` · 11 Uploading files · 12 `Blob`/`File` · 13 WebSocket · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
+| **B** | 6 · Iteration, destructuring and generators (3/13) | 10 | **04 · The iteration protocols** (Understand) | 05 Generators · 06 Async iterators · 07 Paginating with an async generator · 08 Early exit · **Know** 09 Two-way generators · 10 `yield*` · 11 Iterator helpers · 12 A collection class · **When Needed** 13 Driving an iterator by hand |
+| **B** | 17 · Machine coding (4/18) | 14 | **05 · An `EventEmitter`** (Understand) | 06 Deep clone · 07 Task queue · 08 Retry with backoff · 09 LRU cache · 10 A Promise from scratch · 11 `memoize` · 12 Deep equality · 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
+| **C** | 7 · Asynchronous JavaScript (11/22) | 11 | **12 · Timers** (Understand) | 13 Creating promises · 14 Cancellation · 15 Timeouts, retries, backoff · 16 Concurrency limiting · 17 Race conditions in a UI · 18 `queueMicrotask` · 19 Event loop: browser vs Node · **Know** 20 `Promise.withResolvers` · 21 Thenables · 22 Backpressure |
+| **C** | 8 · Modules, errors, memory and the toolchain (4/18) | 14 | **05 · Dynamic `import()`** (Understand) | 06 Circular imports · 07 `throw`/`try`/`catch` · 08 Custom errors · 09 Failing well · 10 Global error handling · 11 The memory model · 12 Finding a leak · 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
+| **D** | 12 · The browser platform (2/21) | 19 | **03 · Timers and frames** (Understand) | 04 `IntersectionObserver` · 05 `ResizeObserver` · 06 `PerformanceObserver` · 07 Web Workers · 08 History API · 09 `window`/`document`/`navigator` · 10 WebCrypto · 11 Accessibility · 12 Feature detection · 13 What belongs on the server · **Know** 14 Yielding to the main thread · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
+| **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
 
-**If you are another session:** please do not write under `docs/javascript/` while
-this claim stands — pick another language (PostgreSQL is parked, React/TypeScript/CSS
-are free). If you must, say so here first and take a *different phase*.
-
-**We share one working tree.** During this session the broken-link count moved
-21 → 31 → 19 → 26 → 31 purely from other sessions' **uncommitted** edits under
-`docs/postgresql/` and `docs/react/`. So:
-
-- `git add` **only your own paths**. Never `git add -A`.
-- When a build reports broken links, **check whose page they are on** before assuming
-  you caused them.
-- Clean-rebuild and grep rather than trusting `[SUCCESS]`:
-  `rm -rf .docusaurus build node_modules/.cache && yarn build 2>&1 | grep -iE 'warning|broken'`
-
-## 🔒 Lane B claim — phases 9–12, 17, 18
-
-| | |
-|---|---|
-| **Claimed by** | session `75e511e6` (Opus 5), from 2026-08-14 — took over from `b4ffc223`, the first holder |
-| **Claim** | **phases 9, 10, 11, 12, 17 and 18 only** — DOM, events, network/storage, browser platform, machine coding, and the three kept storefront topics. 🔴 **TIER-LOCKED to Understand and Know**; Master is closed at 99/99 and is not reopened for depth. The 2026-08-14 scope cut applies: phase 18 keeps **only topics 11, 12 and 15**; phases 13, 14, 15 are parked and 16 is dropped — none of them are in either lane |
-| **Last touched** | **Phase 11 topic 07 · Reading responses** — 2026-08-15, 3 files, 425 lines. ✅ **Phases 9 and 10 before it are both COMPLETE at every tier.** ✅ **Phase 10's Understand tier is COMPLETE (05–11)**. ✅ **Phase 9 before it is COMPLETE — 19 of 19, every tier, 59 files** |
-| **Next** | **Phase 11 topic 08 · Aborting and timing out** (Understand), then 09–15, then Know 16–21 |
-| **Remaining** | **50 topics** — 11 (14), 12 (19), 17 (14), 18 (3). ✅ Phases **9 and 10 are both complete at every tier** |
-| **Worktree** | Lane B writes in `/run/media/sairam/Storage/Backup/Knowledge/devbible-js-lane-b`, branch **`js-lane-b`**. ✅ **MERGED INTO `main` 2026-08-15** (fast-forward to `60a4fc0c`; **0 unique commits left on the branch**, nothing stranded) and `main` rebuilt clean afterwards — **0 broken links site-wide**. The worktree stays in use for the next phases; merge again at each phase boundary |
-| **Verification** | Documentation-validated against MDN and the specifications, named in each page's `> Verified:` line. **No sandbox, no timings, no console block for a run that did not happen** |
-| **Build** | ✅ **Verified by a real build, 2026-08-15.** The earlier blocker — a React MDX error inherited at the branch point — was fixed on `main` (`0d90db70`) and picked up by merging `main` into `js-lane-b`. Clean isolated rebuild: **0 broken links under `docs/javascript/`, 0 files over 300 lines**; the 3 remaining breaks are React (2) and TypeScript (1), theirs. ⚠️ **A green `[SUCCESS]` is not proof** — the build must be confirmed with `ls build-laneb/index.html`, because a piped `yarn build \| tail` reports `tail`'s exit status and a build that died looks identical to a clean one when you grep for warnings |
-
-⛔ **Lane B never writes in phases 3–8** — those are lane A's, live in another session
-right now. Not to fix a link, not to correct a count.
+**Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
+99/99** and a Master topic is not reopened to deepen it. Inside a phase the order is **Understand →
+Know → When Needed**, lowest unwritten number first, and a phase is finished before the chunk's next
+phase starts. Documentation-validated against MDN and the specifications, named in each page's
+`> Verified:` line — **no sandbox, no timings, no console block for a run that did not happen**.
+🔴 **Per-file cadence:** write a file → update the boards → commit → update the memory.
 
 ## 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget
 
