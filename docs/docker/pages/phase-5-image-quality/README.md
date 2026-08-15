@@ -13,7 +13,7 @@ An image is a build artefact you are shipping to strangers. Phase 4 decided how
 fast it builds; this phase is about **what is inside it** — how big, how
 privileged, and how much of it you did not write.
 
-🚧 **11 of 12 pages written.**
+✅ **All 12 pages written — phase complete.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ privileged, and how much of it you did not write.
 | 09 | **[Supply-chain risk](09-supply-chain-risk.md)** | <span className="db-tier t-know">Know</span> | What `FROM some-user/some-image` means you agreed to |
 | 10 | **[Static binaries](10-static-binaries/README.md)** *(2 parts)* | <span className="db-tier t-know">Know</span> | Why Go and Rust ship on `scratch` and Node cannot |
 | 11 | **[SBOMs and provenance](11-sbom-and-provenance.md)** | <span className="db-tier t-know">Know</span> | What BuildKit attaches, and who consumes it |
-| 12 | **Signing and verifying** *(not written yet)* | <span className="db-tier t-when">When Needed</span> | Making "this image is ours" checkable in a pipeline |
+| 12 | **[Signing and verifying](12-signing-and-verifying.md)** | <span className="db-tier t-when">When Needed</span> | Making "this image is ours" checkable in a pipeline |
 
 ## Coverage
 
@@ -47,7 +47,7 @@ Twelve syllabus topics across twelve pages — nothing merged, nothing dropped.
 | Supply-chain risk | 09 |
 | Static binaries | [10](10-static-binaries/README.md) |
 | SBOMs and provenance attestations | [11](11-sbom-and-provenance.md) |
-| Signing and verifying images in a pipeline | 12 |
+| Signing and verifying images in a pipeline | [12](12-signing-and-verifying.md) |
 
 ## Phase gate
 
@@ -70,4 +70,4 @@ and why it is there, page 04 is the one to reread.
 
 ---
 
-← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 4](../phase-4-build-strategy/README.md) · Start → [Where size actually goes](01-where-size-goes.md)
+← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 4](../phase-4-build-strategy/README.md) · Start → [Where size actually goes](01-where-size-goes.md) · Next phase → [Phase 6 · Storage](../phase-6-storage/README.md)
