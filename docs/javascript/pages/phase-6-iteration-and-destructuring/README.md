@@ -7,11 +7,11 @@ sidebar_position: 0
 *13 topics.* The protocol layer. Small phase, but it is what lets `for…of`, spread,
 destructuring and `Promise.all` all work on the same objects.
 
-## Status — 🚧 **Master ✅ · Understand ✅ · Know under way — 9 of 13**
+## Status — 🚧 **Master ✅ · Understand ✅ · Know under way — 10 of 13**
 
 **Master is complete** (01, 02, 03 — unusually the first three in syllabus order). The
 Understand and Know tiers are being written now, in order, by **chunk B** of the four-way
-JavaScript split (phases 6 and 17). **The Understand tier is complete (04–08).** The Know tier is under way — next up **10 · `yield*` delegation**.
+JavaScript split (phases 6 and 17). **The Understand tier is complete (04–08).** The Know tier is under way — next up **11 · Iterator helpers**.
 
 ## Topics
 
@@ -26,7 +26,7 @@ JavaScript split (phases 6 and 17). **The Understand tier is complete (04–08).
 | 07 | **[Paginating an API with an async generator](./07-paginating-an-api/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 08 | **[Early exit inside iteration](./08-early-exit/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | **[Two-way generators](./09-two-way-generators/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 10 | `yield*` delegation | <span className="db-tier t-know">Know</span> | deferred |
+| 10 | **[`yield*` delegation](./10-yield-delegation/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 11 | Iterator helpers | <span className="db-tier t-know">Know</span> | deferred |
 | 12 | Writing a collection class that iterates cleanly | <span className="db-tier t-know">Know</span> | deferred |
 | 13 | Driving an iterator by hand | <span className="db-tier t-when">When Needed</span> | deferred |
