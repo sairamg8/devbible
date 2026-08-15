@@ -167,4 +167,4 @@ Counting: increment on create, decrement on destroy, and watch the count across 
 
 ---
 
-← *(topic index and next chunk land with the README)*
+[Topic index](./README.md) · [02 · Reading a snapshot](./02-reading-a-snapshot.md) →
