@@ -39,7 +39,7 @@ that image and that configuration.
 | `volumes` | Named volumes, bind mounts and tmpfs |
 | `restart` | `no` · `always` · `on-failure[:n]` · `unless-stopped` |
 | `depends_on` | Start order, and optionally readiness ([page 05](../05-depends-on.md)) |
-| `healthcheck` | What "ready" means ([page 06](../06-healthchecks.md)) |
+| `healthcheck` | What "ready" means ([page 06](../06-healthchecks/README.md)) |
 | `networks` | Which networks to attach to ([page 07](../07-networks.md)) |
 
 ## Where this connects

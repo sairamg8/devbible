@@ -164,7 +164,7 @@ does nothing at all about a process that is running but wedged — deadlocked, o
 connections, serving 500s. That distinction is the recurring "Docker reports;
 something else must act" thread from
 [Phase 1, page 12](../../phase-1-running-containers/12-restart-policies.md), and it
-is why [page 06](../06-healthchecks.md) exists.
+is why [page 06](../06-healthchecks/README.md) exists.
 
 `always` and `unless-stopped` differ in exactly one scenario: after you manually
 stop a container and then reboot, `always` brings it back and `unless-stopped` does

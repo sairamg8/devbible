@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 5 of 17 topics written.**
+🚧 **In progress — 6 of 17 topics written.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -26,7 +26,7 @@ actually true, and volumes. Everything else refines those.
 | 03 | **[`up`, `down` and the lifecycle](03-up-and-down/README.md)** | <span className="db-tier t-master">Master</span> | `up` reconciles and recreates; `down -v` is the command that deletes your development database |
 | 04 | **[The `services` block](04-services-block/README.md)** | <span className="db-tier t-master">Master</span> | `image` vs `build`, the `entrypoint` that discards your `CMD`, and the port mapping that binds every interface |
 | 05 | **[`depends_on` with `condition: service_healthy`](05-depends-on.md)** | <span className="db-tier t-master">Master</span> | Plain `depends_on` waits for *started*, not ready — and it does nothing at all after boot |
-| 06 | Healthchecks in Compose | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 06 | **[Healthchecks in Compose](06-healthchecks/README.md)** | <span className="db-tier t-master">Master</span> | The defaults are wrong, `start_period` + `start_interval` fix them, and a check that lies is worse than none |
 | 07 | Networks in Compose | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 08 | Volumes in Compose | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 09 | The project name | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
@@ -51,7 +51,7 @@ nothing dropped.
 | `up` / `down` / `-d` / `--build` | 03 (chunked: `up` · `down`) |
 | The `services` block | 04 (chunked: what runs · how it is wired) |
 | `depends_on` with `condition: service_healthy` | 05 |
-| Healthchecks in Compose | 06 |
+| Healthchecks in Compose | 06 (chunked: the keys · checks that are true) |
 | Networks in Compose | 07 |
 | Volumes in Compose | 08 |
 | The project name | 09 |

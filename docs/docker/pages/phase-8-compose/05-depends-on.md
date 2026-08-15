@@ -92,7 +92,7 @@ And two more fields on the long form:
 
 It is only as good as the healthcheck behind it. `condition: service_healthy`
 against a service whose healthcheck is `test: ["CMD", "true"]` buys you nothing but
-a longer boot. [Page 06](06-healthchecks.md) is about writing checks that are
+a longer boot. [Page 06](06-healthchecks/README.md) is about writing checks that are
 actually true, and it is not optional reading — **this feature and that one are one
 mechanism split across two pages.**
 
@@ -206,7 +206,7 @@ still racy on a cold machine.
 command, a missing binary in a slim image, or a check that needs a `start_period`.
 **Fix:** `docker compose ps` shows the health state; `docker inspect` shows the last
 check output. Fix the check, not the condition
-([page 06](06-healthchecks.md)).
+([page 06](06-healthchecks/README.md)).
 
 **Symptom:** A one-shot migration service restarts forever.
 **Cause:** A restart policy was applied to a service that is supposed to exit.
@@ -268,4 +268,4 @@ enabled in this run.
 
 ---
 
-← Prev: [The services block](04-services-block/README.md) · Index: [Phase 8](README.md) · Next → [Healthchecks in Compose](06-healthchecks.md)
+← Prev: [The services block](04-services-block/README.md) · Index: [Phase 8](README.md) · Next → [Healthchecks in Compose](06-healthchecks/README.md)
