@@ -132,7 +132,7 @@ which is exactly what those programs are written to do.
 Before choosing it, be clear that you are giving up the things the one-process
 model buys: per-process restart is now the supervisor's, not the engine's; logs
 from several processes are interleaved into one stream
-([logs go to stdout](../04-logs-to-stdout.md)); a crash of the important process
+([logs go to stdout](../04-logs-to-stdout/README.md)); a crash of the important process
 does not necessarily exit the container, so the engine's restart policy never
 fires; and `docker stats` reports the sum, so no single process's memory is
 visible. The usual right answer remains one process per container with the engine
