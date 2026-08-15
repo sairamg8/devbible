@@ -254,7 +254,7 @@ export const LANGUAGES = {
       {n: 7, slug: 'phase-7-networking', name: 'Networking', part: 'Running a real stack', topics: 14, pages: 0},
       {n: 8, slug: 'phase-8-compose', name: 'Compose', part: 'Running a real stack', topics: 17, pages: 6, pagesPlanned: 17},
       {n: 9, slug: 'phase-9-mern-pern-stack', name: 'The MERN/PERN stack in containers', part: 'Running a real stack', topics: 14, pages: 0},
-      {n: 10, slug: 'phase-10-production', name: 'Running containers in production', part: 'Production and depth', topics: 16, pages: 4, pagesPlanned: 16},
+      {n: 10, slug: 'phase-10-production', name: 'Running containers in production', part: 'Production and depth', topics: 16, pages: 5, pagesPlanned: 16},
       {n: 11, slug: 'phase-11-podman-in-depth', name: 'Podman in depth', part: 'Production and depth', topics: 16, pages: 0},
       {n: 12, slug: 'phase-12-delivery-and-ci', name: 'Delivery, CI and orchestration', part: 'Production and depth', topics: 12, pages: 0},
     ],
