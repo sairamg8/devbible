@@ -243,4 +243,4 @@ discarded the inherited set. Those two account for most of it.
 
 ---
 
-← Prev: [Named locations, `internal` and nesting](04-named-and-internal.md) · Index: [Phase 2](README.md) · Next → [Internal redirects](06-internal-redirects.md)
+← Prev: [Named locations, `internal` and nesting](04-named-and-internal.md) · Index: [Phase 2](README.md) · Next → [Internal redirects](06-internal-redirects/README.md)

@@ -208,7 +208,7 @@ export const LANGUAGES = {
     phases: [
       {n: 0, slug: 'phase-0-process-model', name: 'The nginx process model', part: 'How nginx works', topics: 14, pages: 14},
       {n: 1, slug: 'phase-1-configuration-language', name: 'The configuration language', part: 'How nginx works', topics: 14, pages: 14},
-      {n: 2, slug: 'phase-2-server-and-location', name: 'How nginx picks a server and a location', part: 'How nginx works', topics: 18, pages: 0},
+      {n: 2, slug: 'phase-2-server-and-location', name: 'How nginx picks a server and a location', part: 'How nginx works', topics: 18, pages: 18},
       {n: 3, slug: 'phase-3-static-and-spa', name: 'Serving static files and SPAs', part: 'Serving and proxying', topics: 14, pages: 0},
       {n: 4, slug: 'phase-4-reverse-proxy', name: 'Reverse proxy to Node', part: 'Serving and proxying', topics: 30, pages: 0},
       {n: 5, slug: 'phase-5-tls', name: 'TLS, HTTP/2 and HTTP/3', part: 'Serving and proxying', topics: 16, pages: 0},

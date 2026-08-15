@@ -27,9 +27,9 @@ Seven pages. **01, 03 and 06 are the load-bearing ones.**
 | 02 | **[The default server and host-header safety](02-default-server.md)** | <span className="db-tier t-understand">Understand</span> | Something is always the default; make it deliberate, or leak your app to any hostname |
 | 03 | **[The location matching algorithm](03-location-matching/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | Longest prefix remembered, first regex wins — and the five modifiers |
 | 04 | **[Named locations, `internal` and nesting](04-named-and-internal.md)** | <span className="db-tier t-understand">Understand</span> | `@name`, locations reachable only from inside, and when to nest |
-| 05 | **[The request-processing phases](05-request-phases.md)** | <span className="db-tier t-understand">Understand</span> | Ten phases in order, and why `add_header` vanishes on a 500 |
-| 06 | **[Internal redirects](06-internal-redirects.md)** | <span className="db-tier t-master">Master</span> | `try_files`, `error_page` and `rewrite … last` send the request round again |
-| 07 | **[`error_page`](07-error-page.md)** | <span className="db-tier t-understand">Understand</span> | Custom error pages, `=200` rewriting, and intercepting upstream errors |
+| 05 | **[The request-processing phases](05-request-phases.md)** | <span className="db-tier t-understand">Understand</span> | Which stage each directive runs in, and why `add_header` vanishes on a 500 |
+| 06 | **[Internal redirects](06-internal-redirects/README.md)** *(2 chunks)* | <span className="db-tier t-master">Master</span> | `try_files`, `error_page` and `rewrite … last` send the request round again |
+| 07 | **[`error_page`](07-error-page/README.md)** *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | Custom error pages, `=200` rewriting, and intercepting upstream errors |
 
 ## Coverage
 
@@ -52,10 +52,10 @@ page that owns the mechanism; nothing is dropped.
 | Nested locations | 04 |
 | The request-processing phases | 05 |
 | Why this explains `add_header` disappearing on a 500 | 05 |
-| Internal redirects | 06 |
-| `rewrite … last` vs `break` vs `redirect` vs `permanent` | 06 |
-| The `error_page` mechanism | 07 |
-| Rewrite loops and the redirection-cycle error | 06 |
+| Internal redirects | 06 · chunk 01 |
+| `rewrite … last` vs `break` vs `redirect` vs `permanent` | 06 · chunk 01 |
+| The `error_page` mechanism | 07 · 2 chunks |
+| Rewrite loops and the redirection-cycle error | 06 · chunk 02 |
 
 ## Phase gate
 
@@ -63,7 +63,7 @@ page that owns the mechanism; nothing is dropped.
 the winning block *and the reason it won* without running nginx — and do it for
 `/api/v1/users`, `/static/app.css` and `/` in the same config.
 
-If that is not comfortable, reread [page 03](03-location-matching/README.md).
+If that is not comfortable, reread [topic 03](03-location-matching/README.md).
 Phase 3 and Phase 4 both assume it completely.
 
 ## Where this connects

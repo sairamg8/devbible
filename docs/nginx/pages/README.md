@@ -14,9 +14,9 @@ in the bible (the other is Docker & Podman) and had zero pages.
 not in the shared checkout, so a build failure here is genuinely this track's
 fault rather than another session's uncommitted edit.
 
-**State: syllabus complete (12 phases, 210 topics). ✅ Phases 0 and 1 written —
-28/210 topics, 20 files.** Next unit: **Phase 2 · How nginx picks a server and a
-location (18 topics)**.
+**State: syllabus complete (12 phases, 210 topics). ✅ Phases 0, 1 and 2 written
+— 46/210 topics (22%), 41 files.** Next unit: **Phase 3 · Serving static files
+and SPAs (14 topics)**.
 
 Documentation-validated against nginx.org under the no-new-sandboxes rule: every
 claim names its source in a `> Verified:` line, and **no console block is added
@@ -42,7 +42,7 @@ import Progress from '@site/src/components/Progress';
 |---|---|
 | ✅ **[0 — The nginx process model](phase-0-process-model/README.md)** | **Written — 14/14 topics, 10 pages.** Master and workers, the per-worker event loop, signals, reload vs restart, `nginx -t`/`-T`/`-V`, mainline vs stable, dynamic modules |
 | ✅ **[1 — The configuration language](phase-1-configuration-language/README.md)** | **Written — 14/14 topics, 15 files.** Contexts and inheritance, the replace-not-merge rule, variables, `map`, why `if` is evil, `return` vs `rewrite` |
-| **2 — Server and location selection** | `listen` and `server_name` matching, the default server, the location algorithm and its modifiers, internal redirects, the request phases |
+| ✅ **[2 — Server and location selection](phase-2-server-and-location/README.md)** | **Written — 18/18 topics, 13 files.** `listen` and `server_name` matching, the default server, the location algorithm and its modifiers, internal redirects, the request phases |
 | **3 — Static files and SPAs** | `root` vs `alias`, `try_files`, the SPA fallback, caching a hashed bundle, MIME types, `sendfile`, `X-Accel-Redirect` |
 | **4 — Reverse proxy to Node** | The `proxy_pass` URI rule, `Host` and `X-Forwarded-*`, `realip`, keep-alive (changed in 1.29.7), timeouts, buffering, WebSockets and SSE, 502/504/499 |
 | **5 — TLS, HTTP/2, HTTP/3** | The TLS server block, chain order, ACME and the built-in ACME module, HSTS, session resumption, QUIC and `Alt-Svc`, `ssl_reject_handshake` |

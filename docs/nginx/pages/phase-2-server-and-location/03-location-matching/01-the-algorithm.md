@@ -166,7 +166,7 @@ server {
 
 That last row is the one to notice. `index` produced an **internal redirect**, and
 the request re-entered location matching with a new URI — the mechanism
-[page 06](../06-internal-redirects.md) covers in full.
+[topic 06](../06-internal-redirects/README.md) covers in full.
 
 ## Gotchas
 
