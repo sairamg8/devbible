@@ -76,7 +76,7 @@ Grouped by what you are trying to *do*, with a pointer to where the depth lives.
 | `Object.getOwnPropertySymbols(o)` | own symbol keys | same |
 | `Reflect.ownKeys(o)` | both, in spec order | same |
 | `Object.getOwnPropertyDescriptor(o, k)` | one key's full flags | [Phase 4 · 11](../../phase-4-objects-and-classes/11-property-descriptors.md) |
-| `Object.getOwnPropertyDescriptors(o)` | every key's flags | [chunk 2](./02-seeing-everything.md) |
+| `Object.getOwnPropertyDescriptors(o)` | every key's flags | [chunk 3](./03-descriptors-and-faithful-copies.md) |
 
 ### Create and copy
 
@@ -108,7 +108,7 @@ Grouped by what you are trying to *do*, with a pointer to where the depth lives.
 | Static | Does | Depth |
 |---|---|---|
 | `Object.is(a, b)` | SameValue — `NaN` equals itself, `0 !== -0` | [Phase 1 · 16](../../phase-1-values-and-coercion/16-object-is-and-zero.md) |
-| `Object.groupBy(items, fn)` | list → null-prototype object of arrays | [chunk 3](./03-grouping-and-the-gaps.md) |
+| `Object.groupBy(items, fn)` | list → null-prototype object of arrays | [chunk 4](./04-grouping-and-the-gaps.md) |
 | `Map.groupBy(items, fn)` | list → `Map` of arrays (not an `Object` static, but the pair) | same |
 
 🔴 **The thing to take from this table is its shape, not its contents.** You will not
@@ -166,7 +166,7 @@ Object.getOwnPropertyDescriptor(copy,   "id");  // { value: 42, writable: true, 
 
 **The getter became a frozen snapshot.** Spread called it once and stored the result.
 That is the single most common way a copy stops behaving like its original, and the fix
-is in [chunk 2](./02-seeing-everything.md).
+is in [chunk 3](./03-descriptors-and-faithful-copies.md).
 
 ## What counts as "an object" here
 
