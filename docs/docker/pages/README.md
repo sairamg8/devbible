@@ -66,7 +66,7 @@ answers.
 | **05 · Image quality, size and supply chain** | 12 | 0 | ⏳ Not started — **chunk A** |
 | **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 10 | 🚧 **Writing — chunk B** |
 | **07 · Networking** | 14 | 0 | ⏳ Not started — **chunk B** |
-| **[08 · Compose](./phase-8-compose/README.md)** | 17 | 6 | 🚧 **Writing — chunk C** |
+| **[08 · Compose](./phase-8-compose/README.md)** | 17 | 7 | 🚧 **Writing — chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 5 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
