@@ -225,4 +225,4 @@ alternative would be exposing a discriminant field just for narrowing.
 
 ---
 
-← Prev: [09 · Typing getters and setters](./09-typing-getters-and-setters.md) · Next → **11 · Abstract classes and abstract construct signatures** *(not written yet)*
+← Prev: [09 · Typing getters and setters](./09-typing-getters-and-setters.md) · Next → [11 · Abstract classes and abstract construct signatures](./11-abstract-classes.md)

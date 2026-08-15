@@ -142,7 +142,7 @@ the compiler cannot pin down. The clause needs a fixed list to check against.
   > member {1} from class '{2}'."*
 
   (`TS2653` is the same rule for a class *expression*.) Abstract classes are
-  **topic 11** *(not written yet)*; the point here is that an `abstract` base
+  [topic 11](./11-abstract-classes.md); the point here is that an `abstract` base
   gives you the "must implement" guarantee people often reach for `implements`
   to get, **plus** shared code and inherited types.
 
