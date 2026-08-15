@@ -23,6 +23,17 @@ import Progress from '@site/src/components/Progress';
 
 <Progress lang="javascript" />
 
+:::tip 🏁 JavaScript is complete — 2026-08-15
+**The active queue is empty.** Every scheduled topic is written: **269 topics across 16 phases**
+(0–12 and 16–18), at every in-scope tier, plus the **Master tier of the three parked phases** —
+**282 of the 316 in-scope syllabus rows, 526 leaf pages**. Master is **99/99** across phases 0–18.
+
+The **34 topics that remain are parked, not pending**: phases **13–15** keep their Master tier and
+nothing beyond it, and **16** kept only its 3 in-scope rows (the other 13 were dropped). The
+progress bar above excludes parked phases, which is why it reads 100% while those rows are still
+listed below. Reopening a parked phase needs a new instruction.
+:::
+
 ## Phases
 
 | Phase | Part | Topics | Status |
@@ -40,19 +51,20 @@ import Progress from '@site/src/components/Progress';
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | ✅ **COMPLETE — every tier (21/21)** · Master 5/5 · Understand 10/10 · Know 6/6 |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | ✅ **COMPLETE — every tier (21/21)** · Master 2/2 · Understand 11/11 · Know 7/7 · When Needed 1/1 |
-| **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
-| **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
-| **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
-| **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
+| **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | ⏸ **PARKED** — Master tier ✅ (01–03, all three); the other **7** are not scheduled work |
+| **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | ⏸ **PARKED** — Master tier ✅ (01–05, all five); the other **12** are not scheduled work |
+| **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | ⏸ **PARKED** — Master tier ✅ (01–04, 06 — all five); the other **15** are not scheduled work |
+| **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 3 in scope (16 rows) | ✅ **COMPLETE — the 3 in-scope topics** (Master 01–03); the other 13 rows were **dropped** on 2026-08-14 |
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | ✅ **COMPLETE — every tier (18/18)** · Master 4/4 · Understand 11/11 · Know 3/3 |
 | **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | ✅ **COMPLETE — 10/10 in scope** · Master 7/7 · Understand 3/3 (**11**, **12**, **15**) |
 
 ## 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15)
 
-🔴 **Read this before writing anything.** The old **two-lane** split (A: phases 3–8 · B: phases
-9–12, 17, 18) is **CLOSED** — phases 3, 4, 9 and 10 finished under it, so what is left no longer
-divides that way. The remaining **94 in-scope topics** are split **four ways, whole phases only**,
-so no two sessions ever write in the same phase directory or the same phase `README.md`.
+🏁 **All four chunks are finished — 0 topics left (2026-08-15).** The table below is kept as the
+record of who wrote what. The split existed because the remaining **94 in-scope topics** were
+divided **four ways, whole phases only**, so no two sessions ever wrote in the same phase directory
+or the same phase `README.md`. (The older **two-lane** split — A: phases 3–8 · B: phases 9–12, 17,
+18 — was closed before it.)
 
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
@@ -140,7 +152,7 @@ worktrees left.
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain ✅ **18/18** | **0** | — | ✅ **chunk C complete**: phase 7 22/22 and phase 8 18/18, finished 2026-08-15 |
 | **D** | 12 · The browser platform ✅ **COMPLETE 21/21** | 0 | — every tier done 2026-08-15 | chunk D continues in phase 18 |
-| **D** | 18 · Building the store front end (**8**/18) | 2 | ✅ **11 written**; 🔴 **12 and 15 are HANDED OUT** — 12 to a second session, 15 to a third (2026-08-15) | ⚠️ Only 11, 12, 15 are in scope — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14. When both land, JavaScript is DONE |
+| **D** | 18 · Building the store front end ✅ **COMPLETE 10/10 in scope** | 0 | — | ✅ all three split topics landed 2026-08-15: **11** `dbaa68e7` · **12** `78e4bc26` · **15** `0e830881`. Only 11, 12, 15 were in scope — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14. 🏁 **JavaScript is DONE** |
 
 **Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
 99/99** and a Master topic is not reopened to deepen it. Inside a phase the order is **Understand →

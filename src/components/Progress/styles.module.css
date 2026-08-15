@@ -166,6 +166,13 @@
   border-color: var(--db-amber-soft);
 }
 
+/* Parked phase: deliberately set aside, so it reads quiet — never "in motion" */
+.phaseDone .phaseStateParked {
+  background: var(--db-surface-3);
+  color: var(--db-ink-3);
+  border-color: var(--db-rule);
+}
+
 .phaseTodo .phaseState {
   background: var(--db-surface-3);
   color: var(--db-ink-3);

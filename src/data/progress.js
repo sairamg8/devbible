@@ -10,6 +10,13 @@
  * `pages`        explanation pages written so far; 0 means not started.
  * `pagesPlanned` set only while a phase is mid-flight, so the bar can show
  *                partial credit. Remove it when the phase is finished.
+ * `parked`       the phase is deliberately out of the active queue — its
+ *                remaining topics are not scheduled work. Parked phases are
+ *                excluded from the percentage and the phase counters (they
+ *                would otherwise pin a finished language below 100% forever)
+ *                and reported separately, so the map stays honest about what
+ *                exists and what was set aside. Whatever *is* written in them
+ *                still counts in the page total.
  */
 
 export const LANGUAGES = {
@@ -49,9 +56,9 @@ export const LANGUAGES = {
       {n: 10, slug: 'phase-10-events', name: 'Events and user input', part: 'Web APIs', topics: 14, pages: 14},
       {n: 11, slug: 'phase-11-network-storage', name: 'Network, storage and data transfer', part: 'Web APIs', topics: 21, pages: 21},
       {n: 12, slug: 'phase-12-browser-platform', name: 'The browser platform', part: 'Web APIs', topics: 21, pages: 21},
-      {n: 13, slug: 'phase-13-complexity', name: "Complexity and real costs (parked at Master)", part: 'DSA & machine coding', topics: 10, pages: 3, pagesPlanned: 10},
-      {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures (parked at Master)', part: 'DSA & machine coding', topics: 17, pages: 5, pagesPlanned: 17},
-      {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns (parked at Master)', part: 'DSA & machine coding', topics: 20, pages: 5, pagesPlanned: 20},
+      {n: 13, slug: 'phase-13-complexity', name: "Complexity and real costs (parked at Master)", part: 'DSA & machine coding', topics: 10, pages: 3, parked: true},
+      {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures (parked at Master)', part: 'DSA & machine coding', topics: 17, pages: 5, parked: true},
+      {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns (parked at Master)', part: 'DSA & machine coding', topics: 20, pages: 5, parked: true},
       {n: 16, slug: 'phase-16-dynamic-programming', name: 'Dynamic programming (Master only — rest dropped)', part: 'DSA & machine coding', topics: 3, pages: 3},
       {n: 17, slug: 'phase-17-machine-coding', name: 'Machine coding: implement it yourself', part: 'DSA & machine coding', topics: 18, pages: 18},
       {n: 18, slug: 'phase-18-storefront', name: 'Building the store front end', part: 'Applied storefront', topics: 10, pages: 10},
@@ -521,8 +528,9 @@ export const LANGUAGES = {
   },
 };
 
-/** 'written' | 'writing' | 'planned' for one phase. */
+/** 'written' | 'writing' | 'parked' | 'planned' for one phase. */
 export function phaseStatus(p) {
+  if (p.parked) return 'parked';
   if (p.pages === 0) return 'planned';
   return p.pagesPlanned ? 'writing' : 'written';
 }
@@ -535,26 +543,33 @@ export function phaseStatus(p) {
 export function summarise(langKey) {
   const lang = LANGUAGES[langKey];
   const phases = lang.phases;
-  const finished = phases.filter((p) => phaseStatus(p) === 'written');
-  const topicsTotal = phases.reduce((sum, p) => sum + p.topics, 0);
-  const topicsDone = phases.reduce((sum, p) => {
+  // Parked phases are out of the active queue, so they sit outside every
+  // ratio here — otherwise a language whose scheduled work is finished can
+  // never reach 100%. They are reported on their own instead.
+  const active = phases.filter((p) => !p.parked);
+  const parked = phases.filter((p) => p.parked);
+  const finished = active.filter((p) => phaseStatus(p) === 'written');
+  const topicsTotal = active.reduce((sum, p) => sum + p.topics, 0);
+  const topicsDone = active.reduce((sum, p) => {
     const status = phaseStatus(p);
     if (status === 'written') return sum + p.topics;
     if (status === 'writing') return sum + (p.topics * p.pages) / p.pagesPlanned;
     return sum;
   }, 0);
   const pagesWritten = phases.reduce((sum, p) => sum + p.pages, 0);
-  const inFlight = phases.find((p) => phaseStatus(p) === 'writing') ?? null;
+  const inFlight = active.find((p) => phaseStatus(p) === 'writing') ?? null;
   return {
     ...lang,
     phases,
-    phasesTotal: phases.length,
+    phasesTotal: active.length,
     phasesDone: finished.length,
     topicsTotal,
     topicsDone: Math.round(topicsDone),
     pagesWritten,
     percent: Math.round((topicsDone / topicsTotal) * 100),
+    parkedPhases: parked.length,
+    parkedTopicsLeft: parked.reduce((sum, p) => sum + (p.topics - p.pages), 0),
     inFlight,
-    nextPhase: inFlight ?? phases.find((p) => p.pages === 0) ?? null,
+    nextPhase: inFlight ?? active.find((p) => p.pages === 0) ?? null,
   };
 }

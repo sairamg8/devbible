@@ -2,7 +2,12 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import {summarise, phaseStatus} from '@site/src/data/progress';
 
-const STATE_LABEL = {written: 'Written', writing: 'Writing', planned: 'Planned'};
+const STATE_LABEL = {
+  written: 'Written',
+  writing: 'Writing',
+  parked: 'Parked',
+  planned: 'Planned',
+};
 import styles from './styles.module.css';
 
 /**
@@ -52,6 +57,17 @@ export default function Progress({lang = 'nodejs', compact = false}) {
           <dt>Pages</dt>
           <dd>{s.pagesWritten}</dd>
         </div>
+        {s.parkedTopicsLeft > 0 && (
+          <div className={styles.counter}>
+            <dt>Parked</dt>
+            <dd>
+              {s.parkedTopicsLeft}{' '}
+              <span className={styles.of}>
+                topics · {s.parkedPhases} {s.parkedPhases === 1 ? 'phase' : 'phases'}
+              </span>
+            </dd>
+          </div>
+        )}
         <div className={styles.counter}>
           <dt>{s.inFlight ? 'In progress' : 'Next'}</dt>
           <dd className={styles.next}>
@@ -80,10 +96,11 @@ export default function Progress({lang = 'nodejs', compact = false}) {
                 <span className={styles.phaseMeta}>
                   {status === 'written' && `${p.pages} pages`}
                   {status === 'writing' && `${p.pages} of ~${p.pagesPlanned} pages`}
+                  {status === 'parked' && `${p.pages} of ${p.topics} topics · rest set aside`}
                   {status === 'planned' && `${p.topics} topics`}
                 </span>
                 <span
-                  className={`${styles.phaseState} ${status === 'writing' ? styles.phaseStateWriting : ''}`}>
+                  className={`${styles.phaseState} ${status === 'writing' ? styles.phaseStateWriting : ''} ${status === 'parked' ? styles.phaseStateParked : ''}`}>
                   {STATE_LABEL[status]}
                 </span>
               </li>

@@ -52,10 +52,11 @@ const LAYERS = [
       {
         n: '02',
         name: 'JavaScript',
-        desc: 'Language core, Web APIs, a full DSA track, and an applied storefront',
+        desc: 'Language core, Web APIs, machine coding and an applied storefront — the DSA track is parked at its Master tier',
         to: '/docs/javascript',
         active: true,
-        stats: `${javascript.topicsTotal} topics · ${javascript.phasesTotal} phases · ${javascript.phasesDone} phases explained · ${javascript.pagesWritten} pages`,
+        done: true,
+        stats: `${javascript.topicsTotal} topics · ${javascript.phasesTotal} phases · ${javascript.phasesDone} phases explained · ${javascript.pagesWritten} pages · ${javascript.parkedTopicsLeft} parked`,
         progress: javascript.percent,
       },
       {
@@ -269,18 +270,16 @@ export default function Home() {
         <section className={styles.focus}>
           <div className={styles.focusBar} />
           <div className={styles.focusBody}>
-            <p className={styles.focusLabel}>Current focus</p>
+            <p className={styles.focusLabel}>Just finished</p>
             <h2 className={styles.focusTitle}>JavaScript explanations</h2>
             <p className={styles.focusText}>
-              JavaScript: {javascript.topicsTotal} topics across{' '}
-              {javascript.phasesTotal} phases ·{' '}
-              <strong>
-                {javascript.phasesDone} of {javascript.phasesTotal} phases
-                explained
-              </strong>
-              ({javascript.pagesWritten} pages). Node.js is complete at{' '}
-              {node.pagesWritten} pages and PostgreSQL at{' '}
-              {postgres.pagesWritten}; Express is live too.
+              JavaScript is <strong>complete</strong> —{' '}
+              {javascript.phasesDone} of {javascript.phasesTotal} phases,{' '}
+              {javascript.topicsTotal} scheduled topics, {javascript.pagesWritten}{' '}
+              pages. The {javascript.parkedTopicsLeft} remaining topics sit in the
+              three parked DSA phases, which keep their Master tier and nothing
+              beyond it. Node.js is complete at {node.pagesWritten} pages and
+              PostgreSQL at {postgres.pagesWritten}; Express is live too.
             </p>
             <Progress lang="javascript" compact />
             <Progress lang="nodejs" compact />
