@@ -4,6 +4,14 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
+:::tip Consolidated 2026-08-15 — all work is on `main`
+Every worktree and branch in this repo was **merged into `main` and deleted** on
+2026-08-15. Any "worktree `devbible-…`", "branch `…`" or "not merged" note below is
+**historical** — nothing is stranded, and all of it is on `main`. Work in
+`/run/media/sairam/Storage/Backup/Knowledge/devbible` on `main`, and keep staging
+explicit paths (never `git add -A`) since everyone shares the checkout again.
+:::
+
 :::info 🔒 Claimed — session `21fbf27e`, 2026-08-14
 
 All of `docs/nginx/` is claimed. Nginx was one of the two unstarted technologies
