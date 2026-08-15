@@ -51,7 +51,8 @@ that happens to be down. Never reach for it during an incident.
 **The fix is preventive:** set log rotation at the daemon level so no container
 can opt out by omission, and prune images and build cache on a schedule rather
 than at 3am. The detail is
-**08 · Log drivers and rotation** and **13 · Disk growth** *(not written yet)*.
+[08 · Log drivers and rotation](../08-log-drivers-and-rotation.md) and
+[13 · Disk growth](../13-disk-growth.md).
 
 ## 8 · DNS
 

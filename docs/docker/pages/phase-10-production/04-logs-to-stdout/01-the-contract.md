@@ -93,7 +93,7 @@ Every reason this fails is structural, not stylistic:
 - **`docker logs` is empty**, and so is everything downstream of it. The log
   pipeline never sees a byte.
 - **It grows the writable layer**, which is the least observable disk consumer on
-  the host (**13 · Disk growth** *(not written yet)*).
+  the host ([13 · Disk growth](../13-disk-growth.md)).
 - **Rotation is now your problem**, inside a container that has no cron and no
   logrotate.
 

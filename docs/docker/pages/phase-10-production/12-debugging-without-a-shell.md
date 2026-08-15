@@ -273,4 +273,4 @@ sidecar.
 
 ---
 
-← Prev: [Observing](11-observing.md) · Index: [Phase 10](README.md) · Next → **Disk growth** *(not written yet)*
+← Prev: [Observing](11-observing.md) · Index: [Phase 10](README.md) · Next → [Disk growth](13-disk-growth.md)
