@@ -21,7 +21,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | Chunk | Phases | Topics | Start at | Claimed by |
 |---|---|---|---|---|
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
-| **B** | 6 · 7 | 26 | 🏁 phase 6 **done 12/12** · 🚧 phase 7 **10/14** — next: **07 · 11 · Debugging the network** | 🔴 session `d0c46f84` (2026-08-15) |
+| **B** | 6 · 7 | 26 | 🏁 phase 6 **done 12/12** · 🚧 phase 7 **11/14** — next: **07 · 12 · netavark and aardvark-dns** | 🔴 session `d0c46f84` (2026-08-15) |
 | **C** | 8 · 9 | 31 (**15 left**) | 🔴 **Phase 8 · 17 · `--scale` and the honest limits** — 16/17 written | 🔴 session `9219957a` (2026-08-15) |
 | **D** | 10 · 11 · 12 | 44 (**34 left**) | 🔴 **Phase 10 · 11 · Observing** — 10/16 written | 🔴 session `6d88f249` (2026-08-15, took over from `2f38bb4d`) |
 
@@ -65,13 +65,13 @@ answers.
 | **[04 · Build strategy: cache, multi-stage, BuildKit](./phase-4-build-strategy/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[05 · Image quality, size and supply chain](./phase-5-image-quality/README.md)** | 12 | 12 | ✅ **Complete** |
 | **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 12 | ✅ **Complete** |
-| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 10 | 🚧 **Writing — chunk B** |
+| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 11 | 🚧 **Writing — chunk B** |
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 16 | 🚧 **Writing — chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 10 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **139** | |
+| **Total** | **192** | **140** | |
 
 import Progress from '@site/src/components/Progress';
 

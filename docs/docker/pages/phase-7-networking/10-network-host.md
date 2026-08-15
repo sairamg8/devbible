@@ -180,4 +180,4 @@ machine is better off with a published port.
 
 ---
 
-← Prev: [Privileged ports rootless](09-privileged-ports-rootless.md) · Index: [Phase 7](README.md) · Next → **Debugging the network** *(not written yet)*
+← Prev: [Privileged ports rootless](09-privileged-ports-rootless.md) · Index: [Phase 7](README.md) · Next → [Debugging the network](11-debugging-the-network.md)
