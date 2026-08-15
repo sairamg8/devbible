@@ -115,8 +115,7 @@ and the rest.
 A pod is not Podman's invention — it is **Kubernetes' smallest deployable unit**,
 and Podman implements it faithfully enough that the mental model transfers. A
 sidecar pattern you build locally as a pod is the sidecar pattern you deploy, and
-`podman kube play` runs the YAML directly (**Phase 11 · 11 · `podman kube play`**
-*(not written yet)*).
+`podman kube play` runs the YAML directly (**Phase 11 · 11 · `podman kube play`** *(not written yet)*).
 
 That is the honest reason to learn pods even if you never use them locally: they
 are the on-ramp, not a Podman quirk.
@@ -204,4 +203,4 @@ restart and fail together.
 
 ---
 
-← Prev: [Rootless by default](02-rootless-by-default/README.md) · Index: [Phase 11](README.md) · Next → **04 · Quadlet** *(not written yet)*
+← Prev: [Rootless by default](02-rootless-by-default/README.md) · Index: [Phase 11](README.md) · Next → [04 · Quadlet](04-quadlet/README.md)

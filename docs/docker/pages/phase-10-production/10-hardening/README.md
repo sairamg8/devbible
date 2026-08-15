@@ -60,9 +60,9 @@ and what it does not, and say why `--privileged` is not a stronger version of
   consequences
 - [09 · Healthchecks in production](../09-healthchecks-in-production.md) — a probe
   that needs `curl` or `ping` is a hardening decision too
-- **Phase 11 · Quadlet** and **Phase 12 · One image, three environments** *(not
-  written yet)* — where the posture stops being a command line and becomes a
-  template
+- [Phase 11 · 04 · Quadlet](../../phase-11-podman-in-depth/04-quadlet/README.md)
+  and **Phase 12 · One image, three environments** *(not written yet)* — where the
+  posture stops being a command line and becomes a template
 
 ---
 

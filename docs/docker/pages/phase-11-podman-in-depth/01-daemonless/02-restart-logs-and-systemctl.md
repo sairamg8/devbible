@@ -62,8 +62,7 @@ engines is a mistake here.
 
 The documentation's own advice is the one to follow: **when containers run as
 systemd services, use systemd's restart functionality rather than this option.**
-That is the argument that ends at **Phase 11 · 04 · Quadlet**
-*(not written yet)*.
+That is the argument that ends at [04 · Quadlet](../04-quadlet/README.md).
 
 ## The session problem, which has nothing to do with Podman
 
@@ -166,7 +165,7 @@ systemd knows how to do therefore applies to the thing you care about:
 🔴 **The conclusion of this topic:** on a systemd host, Podman's design means you
 should stop hand-writing units around a client and let systemd own the container
 directly — which is what Quadlet generates for you. Phase 10 stopped at that
-sentence; **Phase 11 · 04 · Quadlet** *(not written yet)* is where it is cashed.
+sentence; [04 · Quadlet](../04-quadlet/README.md) is where it is cashed.
 
 ## Gotchas
 

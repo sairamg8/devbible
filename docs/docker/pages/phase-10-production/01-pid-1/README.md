@@ -60,7 +60,7 @@ idle.
   the PID namespace itself
 - [02 · Graceful shutdown](../02-graceful-shutdown/README.md) — what the application does
   once the signal finally arrives
-- **Phase 11 · Quadlet** *(not written yet)* — the same stop, wearing systemd's
+- [Phase 11 · 04 · Quadlet](../../phase-11-podman-in-depth/04-quadlet/README.md) — the same stop, wearing systemd's
   clothes
 
 ---

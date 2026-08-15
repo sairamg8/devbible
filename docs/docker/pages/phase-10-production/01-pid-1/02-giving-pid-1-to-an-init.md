@@ -65,7 +65,7 @@ anything, does not order startup, does not check health, and does not turn a
 crash into a retry. Restart belongs to the engine's
 [restart policy](../../phase-1-running-containers/12-restart-policies.md), and
 real supervision belongs to systemd
-(**Phase 11 — Quadlet** *(not written yet)*).
+([Phase 11 · 04 · Quadlet](../../phase-11-podman-in-depth/04-quadlet/README.md)).
 
 ### Do you need it?
 

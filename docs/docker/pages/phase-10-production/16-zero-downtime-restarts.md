@@ -116,7 +116,7 @@ collected in phase 11:
 
 - **Quadlet units** make the overlap expressible as systemd units, so "start the
   new one, then stop the old one" becomes ordinary unit management rather than a
-  shell script — **Phase 11 · Quadlet** *(not written yet)*.
+  shell script — [Phase 11 · 04 · Quadlet](../phase-11-podman-in-depth/04-quadlet/README.md).
 - **`podman auto-update`** does image-driven rolling updates for Quadlet services,
   with rollback — **Phase 11 · `podman auto-update`** *(not written yet)*.
 

@@ -120,10 +120,11 @@ That makes the hand-written unit far more honest — and Podman then goes furthe
 **Quadlet** is that generator. You write a declarative `.container` file and it
 "generates corresponding regular systemd service unit files" during boot and on
 `systemctl daemon-reload`. The unit types are `.container`, `.pod`, `.volume`,
-`.network`, `.kube`, `.build` and `.artifact`, and they live in
+`.network`, `.image`, `.build`, `.kube` and `.artifact`, and they live in
 `/etc/containers/systemd/` for root or `~/.config/containers/systemd/` for a
-rootless user. **Phase 11 · Quadlet** *(not written yet)* is the depth; the point
-here is that on Podman you should not be hand-writing the unit at all.
+rootless user. [Phase 11 · 04 · Quadlet](../phase-11-podman-in-depth/04-quadlet/README.md)
+is the depth; the point here is that on Podman you should not be hand-writing the
+unit at all.
 
 Two more Podman-specific facts that decide whether a container survives a reboot:
 

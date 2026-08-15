@@ -64,7 +64,7 @@ under Docker.
   — the unit that supervises a client, and why Podman does not need the workaround
 - [02 · Rootless by default](../02-rootless-by-default/README.md) — the
   user-namespace arithmetic
-- **04 · Quadlet** *(not written yet)* — where "let systemd own the container"
+- [04 · Quadlet](../04-quadlet/README.md) — where "let systemd own the container"
   becomes a file you write
 - **13 · Docker CLI compatibility** *(not written yet)* — the API socket in
   anger, for Testcontainers and friends
