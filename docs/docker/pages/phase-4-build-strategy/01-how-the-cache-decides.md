@@ -287,4 +287,4 @@ silently do nothing.
 
 ---
 
-← Index: [Phase 4](README.md) · Next → **Instruction ordering** *(not written yet)*
+← Index: [Phase 4](README.md) · Next → [Instruction ordering](02-instruction-ordering.md)
