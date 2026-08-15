@@ -135,7 +135,7 @@ difference:
 
 So a `test` stage that nothing depends on costs nothing in a production build —
 which is what makes one Dockerfile serving dev, test and prod practical
-(**page 06 · `--target`**, *not written yet*).
+([page 06 · `--target`](06-target.md)).
 
 A stage may also be *based* on an earlier stage, which is how you share expensive
 setup between several:

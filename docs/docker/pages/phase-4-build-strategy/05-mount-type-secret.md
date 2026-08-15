@@ -231,4 +231,4 @@ default, plus `--ssh` for the agent case.
 
 ---
 
-← Prev: [Multi-stage builds](04-multi-stage-builds.md) · Index: [Phase 4](README.md) · Next → **`--target` to stop at a stage** *(not written yet)*
+← Prev: [Multi-stage builds](04-multi-stage-builds.md) · Index: [Phase 4](README.md) · Next → [`--target` to stop at a stage](06-target.md)
