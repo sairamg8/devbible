@@ -38,13 +38,13 @@ import Progress from '@site/src/components/Progress';
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🚧 **Master ✅ 4/4** · **Understand ✅ COMPLETE** (05–14) · Know next — **14/18** |
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
-| **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–12** ✅) — **12/21** |
+| **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–13** ✅) — **13/21** |
 | **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–02) · **Understand tier ✅ COMPLETE** (03–13) · Know under way (**14–15** ✅) — **15/21** |
 | **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
 | **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
 | **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
-| **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | 🚧 **Master ✅ 4/4** · **Understand ✅ COMPLETE** (05–15) — **15/18** |
+| **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | 🚧 **Master ✅ 4/4** · **Understand ✅ COMPLETE** (05–15) · Know (**16** ✅) — **16/18** |
 | **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🟡 **Master tier ✅** (01–07 — all seven); rest deferred |
 
 ## 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15)
@@ -56,8 +56,8 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
-| **A** | **5**, **11** | **9** — 5 ✅ **DONE 26/26** · 11 (9: 13–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `3d9f98b8`, 2026-08-15 |
-| **B** | **6**, **17** | **3** — ✅ **phase 6 COMPLETE (13/13)** · 17 (3: 16–18, all Know) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
+| **A** | **5**, **11** | **8** — 5 ✅ **DONE 26/26** · 11 (8: 14–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `3d9f98b8`, 2026-08-15 |
+| **B** | **6**, **17** | **2** — ✅ **phase 6 COMPLETE (13/13)** · 17 (2: 17–18, both Know) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
 | **C** | **7**, **8** | **4** — ✅ **phase 7 COMPLETE 22/22** · 8 (4: 15–18, all Know) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
 | **D** | **12**, **18** | **9** — 12 (6: 16–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
 
@@ -108,9 +108,9 @@ worktrees left.
 | Chunk | Phase | Left | Start at | Then |
 |---|---|---|---|---|
 | **A** | 5 · The built-in library ✅ **COMPLETE 26/26** | 0 | — | every tier done 2026-08-15 |
-| **A** | 11 · Network, storage and data transfer (12/21) | 9 | **13 · WebSocket** (Understand) | 11 Uploading files · 12 `Blob`/`File` · 13 WebSocket · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
+| **A** | 11 · Network, storage and data transfer (13/21) | 8 | **14 · Same-origin and `postMessage`** (Understand) | ~~13 WebSocket ✅ (5 chunks)~~ · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
 | **B** | 6 · Iteration, destructuring and generators | ✅ **13/13 — COMPLETE** | — | phase 6 is done; chunk B continues in phase 17 |
-| **B** | 17 · Machine coding (**15/18**) | 3 | **16 · `new`/`Object.create`/`instanceof` by hand** (Know) — ✅ Understand tier complete | 17 pub/sub and a reactive signal · 18 virtual-DOM diff in outline |
+| **B** | 17 · Machine coding (**16/18**) | 2 | **17 · A tiny pub/sub and a reactive `signal`** (Know) | 18 · A virtual-DOM diff in outline — then chunk B is finished |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain (**14**/18) | **4** | **15 · CommonJS in a modern world** (Know) — ✅ Understand tier done 05–14 | **Know** 16 `AggregateError` · 17 GC · 18 Linting — then phase 8 and chunk C close |
 | **D** | 12 · The browser platform (**15**/21) | 6 | **16 · Clipboard, Web Share and File System Access** (Know) — ✅ 15 Cross-tab coordination | 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
