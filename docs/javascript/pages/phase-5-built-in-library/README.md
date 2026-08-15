@@ -13,13 +13,13 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier COMPLETE** (2026-08-15)
 
-🚧 **22 of 26 written.** ✅ **Master 8/8** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
+🚧 **23 of 26 written.** ✅ **Master 8/8** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
 order. ✅ **Understand 14/14**, finished 2026-08-15 with topics 18–22. Only the four
 **Know** topics remain.
 
-**Next here: the four Know topics — 23 `WeakMap`/`WeakSet`, 24 `Temporal`, 25 typed arrays, 26 text encoding.**
+**Next here: 24 `Temporal`**, then 25 typed arrays and 26 text encoding — the last three.
 
-**Coverage:** Master **8 / 8** ✅ · Understand **14 / 14** ✅ · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **14 / 14** ✅ · Know **1 / 4**.
 
 ## Topics
 
@@ -47,7 +47,7 @@ order. ✅ **Understand 14/14**, finished 2026-08-15 with topics 18–22. Only t
 | 20 | **[`Intl`](./20-intl/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 21 | **[`structuredClone`](./21-structuredclone.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 22 | **[Array-likes and iterables](./22-array-likes-and-iterables/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 23 | `WeakMap` and `WeakSet` | <span className="db-tier t-know">Know</span> | deferred |
+| 23 | **[`WeakMap` and `WeakSet`](./23-weakmap-and-weakset/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 24 | `Temporal` | <span className="db-tier t-know">Know</span> | deferred |
 | 25 | Typed arrays, `ArrayBuffer`, `DataView` | <span className="db-tier t-know">Know</span> | deferred |
 | 26 | Text encoding | <span className="db-tier t-know">Know</span> | deferred |
