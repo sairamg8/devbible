@@ -8,7 +8,7 @@ sidebar_position: 0
 the security surface. As the syllabus puts it, this phase is **broad by design**: most rows are
 Know until a project needs them.
 
-## Status — 🚧 **9 of 21** · Master ✅ (01–02) · Understand under way
+## Status — 🚧 **11 of 21** · Master ✅ (01–02) · Understand under way
 
 **Master tier is complete** — 01 and 02, both written. The **Understand tier is now the work**
 (chunk **D** of the four-way JavaScript split), taken in order, lowest number first. This phase
@@ -28,7 +28,9 @@ project needs them"*.
 | 07 | **[Web Workers](./07-web-workers/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 08 | **[The History API and client-side routing](./08-history-and-routing/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | **[`window`, `document`, `navigator`, `screen`](./09-window-document-navigator/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 10–13 | `WebCrypto`, accessibility, feature detection, what belongs on the server | <span className="db-tier t-understand">Understand</span> | 🚧 next |
+| 10 | **[`WebCrypto`](./10-webcrypto/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 11 | **[Accessibility from JavaScript](./11-accessibility-from-javascript/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 12–13 | Feature detection, what belongs on the server | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 14–20 | Yielding to the main thread, cross-tab coordination, Clipboard/Web Share/File System Access, permissions, media, Page Visibility, i18n | <span className="db-tier t-know">Know</span> | deferred |
 | 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | deferred |
 
@@ -37,10 +39,10 @@ project needs them"*.
 | Tier | Topics | Written |
 |---|---|---|
 | <span className="db-tier t-master">Master</span> | 2 | **2** ✅ |
-| <span className="db-tier t-understand">Understand</span> | 11 | **7** (03–09) |
+| <span className="db-tier t-understand">Understand</span> | 11 | **9** (03–11) |
 | <span className="db-tier t-know">Know</span> | 7 | 0 |
 | <span className="db-tier t-when">When Needed</span> | 1 | 0 |
-| **Total** | **21** | **9** |
+| **Total** | **21** | **11** |
 
 ## How these pages are verified
 
