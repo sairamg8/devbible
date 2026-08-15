@@ -112,7 +112,7 @@ The failure is slow and resembles nothing else you will be looking for:
 - Eventually `fork()` returns `EAGAIN`, and the application starts reporting
   "resource temporarily unavailable" or "cannot allocate memory" while
   `docker stats` shows the container almost idle.
-- With `--pids-limit` set ([resource limits](../03-resource-limits.md)) the wall
+- With `--pids-limit` set ([resource limits](../03-resource-limits/README.md)) the wall
   arrives sooner and, mercifully, more legibly.
 
 **You only meet this if something in the container forks and abandons children**:

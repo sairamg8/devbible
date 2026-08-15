@@ -12,13 +12,13 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 2 of 16 topics.**
+🚧 **Writing — 3 of 16 topics.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[PID 1 is not a normal process](01-pid-1/README.md)** | <span className="db-tier t-master">Master</span> | No default signal dispositions, no reaping — the ten-second stop and exit 137 |
 | 02 | **[Graceful shutdown](02-graceful-shutdown/README.md)** | <span className="db-tier t-master">Master</span> | Handling `SIGTERM`, draining connections, and the stop timeout that kills you mid-request |
-| 03 | **Resource limits** *(not written yet)* | <span className="db-tier t-master">Master</span> | `--memory`, `--cpus`, `--pids-limit`, and why the process "just vanished" |
+| 03 | **[Resource limits](03-resource-limits/README.md)** | <span className="db-tier t-master">Master</span> | `--memory`, `--cpus`, `--pids-limit`, and why the process "just vanished" |
 | 04 | **Logs go to stdout and stderr** *(not written yet)* | <span className="db-tier t-master">Master</span> | That is the contract; a log file inside a container is a bug |
 | 05 | **Configuration and secrets at run time** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | "Not in the image" and "not in the process list" are different claims |
 | 06 | **The production failure catalogue** *(not written yet)* | <span className="db-tier t-master">Master</span> | OOM, full disk, pull limits, clock skew, DNS, unhealthy-but-serving, zombies |
@@ -35,13 +35,14 @@ is that list, with the mechanism and the fix for each.
 
 ## Coverage
 
-Sixteen syllabus topics; nothing merged and nothing dropped so far. Topics 01 and
-02 are chunked directories — each carries two genuinely separate arguments.
+Sixteen syllabus topics; nothing merged and nothing dropped so far. Topics 01–03
+are chunked directories — each carries two genuinely separate arguments.
 
 | Syllabus topic | Page |
 |---|---|
 | PID 1 is not a normal process | 01 |
 | Graceful shutdown | 02 |
+| Resource limits | 03 |
 
 ## Phase gate
 
