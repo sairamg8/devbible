@@ -65,9 +65,9 @@ that has silently dropped everything else).
   the sandbox-proven default, and the seven flags it turns on.
 - **← [Phase 0 · Erasure](../../phase-0-how-typescript-runs/02-erasure.md)** —
   the reason an import in a `.ts` file points at a `.js` file.
-- **→ 02 · Shipping TypeScript to production** *(not written yet)* — the runtime
-  half: source maps, `--enable-source-maps`, and readable stack traces on both
-  paths.
+- **→ [02 · Shipping TypeScript to production](../02-shipping-to-production/README.md)**
+  — the runtime half: what is actually in the artefact, source maps,
+  `--enable-source-maps`, and readable stack traces on both paths.
 
 ---
 

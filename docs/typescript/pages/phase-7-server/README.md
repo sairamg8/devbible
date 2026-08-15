@@ -39,7 +39,7 @@ single most common reason a Node project's types "just don't work".
 | # | Page | Tier | What it settles |
 |---|---|---|---|
 | 01 | [`tsconfig.json` for a Node 24 service](./01-tsconfig-for-a-node-service/README.md) *(5 chunks)* | <span className="db-tier t-master">Master</span> | The two decisions the whole file follows from, and the annotated config for each |
-| 02 | Shipping TypeScript to production | <span className="db-tier t-master">Master</span> | `tsc` build vs running `.ts` on Node 24; source maps and readable stack traces either way |
+| 02 | [Shipping TypeScript to production](./02-shipping-to-production/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | `tsc` build vs running `.ts` on Node 24; source maps and readable stack traces either way |
 | 03 | Typing `process.env` | <span className="db-tier t-master">Master</span> | It is `string \| undefined` and it lies — why parsing beats augmenting `ProcessEnv` |
 | 04 | `catch (e: unknown)` | <span className="db-tier t-master">Master</span> | Proving what was thrown; `instanceof Error`, custom classes, `error.cause` |
 | 05 | Typed Express handlers | <span className="db-tier t-master">Master</span> | The four `Request` generics, and why a typed body is a promise the compiler cannot keep |
