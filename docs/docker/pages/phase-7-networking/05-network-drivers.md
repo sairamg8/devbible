@@ -251,4 +251,4 @@ is a rootful deployment.
 
 ---
 
-← Prev: [Publishing ports](04-publishing-ports.md) · Index: [Phase 7](README.md) · Next → **`network create` and friends** *(not written yet)*
+← Prev: [Publishing ports](04-publishing-ports.md) · Index: [Phase 7](README.md) · Next → [`network create` and friends](06-network-commands.md)
