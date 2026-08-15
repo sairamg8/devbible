@@ -221,4 +221,4 @@ common addition, better avoided by listening above 1024.
 
 ---
 
-← Prev: [The classic mistakes](02-classic-mistakes.md) · Index: [Phase 5](README.md) · Next → **Measuring** *(not written yet)*
+← Prev: [The classic mistakes](02-classic-mistakes.md) · Index: [Phase 5](README.md) · Next → [Measuring](04-measuring.md)
