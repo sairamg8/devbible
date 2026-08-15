@@ -115,7 +115,9 @@ against the map's **keys**. ⚠️ A plain array does **not** qualify and throws
 
 **`WeakSet`** holds its members weakly, so an object in one can still be garbage-collected — it is
 for marking objects ("have I seen this node?") without keeping them alive. It is not iterable and
-has no `size`; the detail is in **23 · `WeakMap` and `WeakSet`** *(not written yet)*.
+has no `size`; the detail is in **23 · `WeakMap` and `WeakSet`** *(not written yet)*. The
+`Object`-side companions to all of this — the statics that list, copy and group — are
+[18 · `Object` statics](./18-object-statics/README.md).
 
 ## Choosing between `Set`, array and object
 
@@ -200,4 +202,4 @@ to apply to. `add` and `delete` keep working.
 
 ---
 
-← [16 · Regular expressions — in practice](./16-regex-in-practice/README.md) · [Phase index](./README.md) · Next: **18 · `Object` statics** *(not written yet)* →
+← [16 · Regular expressions — in practice](./16-regex-in-practice/README.md) · [Phase index](./README.md) · Next: [18 · `Object` statics](./18-object-statics/README.md) →
