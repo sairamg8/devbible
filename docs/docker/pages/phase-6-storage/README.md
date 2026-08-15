@@ -25,7 +25,7 @@ the difference between "my database survived a redeploy" and a support ticket.
 | 04 | **[Bind mounts in development](04-bind-mounts-in-development/README.md)** | <span className="db-tier t-master">Master</span> | Live edits, and the `node_modules` trap that follows from them |
 | 05 | **[File ownership and UID mismatch](05-uid-mismatch/README.md)** | <span className="db-tier t-master">Master</span> | Why a file your container wrote is owned by `165536` |
 | 06 | **[Volume lifecycle](06-volume-lifecycle.md)** | <span className="db-tier t-understand">Understand</span> | `create` / `ls` / `inspect` / `rm` / `prune`, and how anonymous volumes pile up |
-| 07 | **SELinux `:z` and `:Z`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The two-character fix for "permission denied" on Fedora and RHEL |
+| 07 | **[SELinux `:z` and `:Z`](07-selinux-z-and-Z.md)** | <span className="db-tier t-understand">Understand</span> | The two-character fix for "permission denied" on Fedora and RHEL |
 | 08 | **`--read-only` and `tmpfs`** *(not written yet)* | <span className="db-tier t-know">Know</span> | The production posture, and what breaks first |
 | 09 | **`--userns=keep-id`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Podman's answer to bind-mount ownership |
 | 10 | **Backing up and restoring a volume** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The tar-through-a-throwaway-container idiom, and why a database needs more |
