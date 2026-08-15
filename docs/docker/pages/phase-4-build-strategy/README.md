@@ -13,7 +13,7 @@ The difference between a 40-second rebuild and an 11-minute one is entirely in
 this phase, and none of it is exotic. Phase 3 taught the instructions; this phase
 is about the **order** you put them in and the builder that executes them.
 
-🚧 **6 of 16 pages written.**
+🚧 **7 of 16 pages written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -23,7 +23,7 @@ is about the **order** you put them in and the builder that executes them.
 | 04 | **[Multi-stage builds](04-multi-stage-builds.md)** | <span className="db-tier t-master">Master</span> | The toolchain builds it; the runtime stage ships without the toolchain |
 | 05 | **[`RUN --mount=type=secret`](05-mount-type-secret.md)** | <span className="db-tier t-understand">Understand</span> | Readable during one `RUN`, present in no layer |
 | 06 | **[`--target`](06-target.md)** | <span className="db-tier t-understand">Understand</span> | One Dockerfile serving dev, test and prod |
-| 07 | **`COPY --from`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | From an earlier stage, or straight out of another image |
+| 07 | **[`COPY --from`](07-copy-from.md)** | <span className="db-tier t-understand">Understand</span> | From an earlier stage, or straight out of another image |
 | 08 | **BuildKit** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Parallel stages, skipped stages, and the mount types |
 | 09 | **`RUN --mount=type=cache`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | A package cache that survives builds without entering a layer |
 | 10 | **`RUN --mount=type=bind`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Read from the context without `COPY`ing into a layer |

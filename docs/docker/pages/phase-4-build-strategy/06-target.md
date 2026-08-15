@@ -209,4 +209,4 @@ the stage-skipping explicit.
 
 ---
 
-← Prev: [`RUN --mount=type=secret`](05-mount-type-secret.md) · Index: [Phase 4](README.md) · Next → **`COPY --from`** *(not written yet)*
+← Prev: [`RUN --mount=type=secret`](05-mount-type-secret.md) · Index: [Phase 4](README.md) · Next → [`COPY --from`](07-copy-from.md)
