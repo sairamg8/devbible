@@ -152,7 +152,7 @@ rebuild/refresh containers when files are updated"*, and takes three options:
 | `--quiet` | — | Hide build output |
 
 Use `watch` in one terminal and `logs -f` in another
-([page 14](14-day-to-day-commands.md)) when the rebuild chatter and the
+([page 14](14-day-to-day-commands/README.md)) when the rebuild chatter and the
 application output start competing.
 
 ## Path rules that catch people out
@@ -267,4 +267,4 @@ different set of files or flags and you only want the file-watching half.
 
 ---
 
-← Prev: [`profiles`](12-profiles.md) · Index: [Phase 8](README.md) · Next → [Day-to-day commands](14-day-to-day-commands.md)
+← Prev: [`profiles`](12-profiles.md) · Index: [Phase 8](README.md) · Next → [Day-to-day commands](14-day-to-day-commands/README.md)

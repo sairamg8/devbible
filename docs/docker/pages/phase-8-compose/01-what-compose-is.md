@@ -130,7 +130,7 @@ the visible difference between the modern tool and the original Python one: a
 space instead of a hyphen. The surface is large — `up`, `down`, `ps`, `logs`,
 `exec`, `run`, `build`, `pull`, `push`, `config`, `cp`, `top`, `stats`, `wait`,
 `watch`, `ls`, `volumes` and more — but the whole phase is really about a handful
-of them, and [page 14](14-day-to-day-commands.md) is the working set.
+of them, and [page 14](14-day-to-day-commands/README.md) is the working set.
 
 The important claim is what the CLI *does*, not what it offers. Compose
 **reconciles**: it inspects what exists for this project, compares it to the file,
