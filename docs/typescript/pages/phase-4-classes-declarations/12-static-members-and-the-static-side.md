@@ -239,4 +239,4 @@ constants where the class name is doing real work at the call site.
 
 ---
 
-← Prev: [11 · Abstract classes](./11-abstract-classes.md) · Next → **13 · Decorators** *(not written yet)*
+← Prev: [11 · Abstract classes](./11-abstract-classes.md) · Next → [13 · Decorators](./13-decorators.md)
