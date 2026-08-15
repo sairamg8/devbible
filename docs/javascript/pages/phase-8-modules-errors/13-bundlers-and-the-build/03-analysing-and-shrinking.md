@@ -201,4 +201,5 @@ noticing.
 
 ---
 
-← Prev: [02 · Tree shaking, and what defeats it](./02-tree-shaking.md)
+← Prev: [02 · Tree shaking, and what defeats it](./02-tree-shaking.md) ·
+[Topic index](./README.md)

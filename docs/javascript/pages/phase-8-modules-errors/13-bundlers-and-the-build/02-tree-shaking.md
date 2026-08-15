@@ -242,4 +242,6 @@ A computed key is not statically known, so every member of the namespace stays r
 
 ---
 
-← Prev: [01 · What a bundler actually does](./01-what-a-bundler-does.md)
+← Prev: [01 · What a bundler actually does](./01-what-a-bundler-does.md) ·
+[Topic index](./README.md) ·
+Next → [03 · Analysing and shrinking a bundle](./03-analysing-and-shrinking.md)

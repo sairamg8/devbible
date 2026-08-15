@@ -183,4 +183,4 @@ know are needed.
 
 ---
 
-← *(topic index and next chunk land with the README)*
+← [Topic index](./README.md) · Next → [02 · Tree shaking, and what defeats it](./02-tree-shaking.md)

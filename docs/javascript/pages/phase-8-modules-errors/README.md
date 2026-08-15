@@ -8,7 +8,7 @@ sidebar_position: 0
 code is split, how failure is represented, and what the garbage collector will and will not
 do for you.
 
-## Status — Master ✅ 4/4 · 🚧 Understand under way (**12/18 written**)
+## Status — Master ✅ 4/4 · 🚧 Understand under way (**13/18 written**)
 
 Phase 8 has **four** Master topics — 01 through 04 — written in syllabus order. **ALL 4 DONE —
 the Master tier of phase 8 is COMPLETE.**
@@ -33,7 +33,7 @@ Phase 8 belongs to **chunk C** of the four-way JavaScript split, whose other pha
 | 10 | **[Global error handling](./10-global-error-handling/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[The memory model](./11-the-memory-model/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[Finding a leak](./12-finding-a-leak/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13 | Bundlers and the build | <span className="db-tier t-understand">Understand</span> | ⏳ |
+| 13 | **[Bundlers and the build](./13-bundlers-and-the-build/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | Testing JavaScript | <span className="db-tier t-understand">Understand</span> | ⏳ |
 | 15 | CommonJS in a modern world | <span className="db-tier t-know">Know</span> | ⏳ |
 | 16 | `AggregateError` | <span className="db-tier t-know">Know</span> | ⏳ |
