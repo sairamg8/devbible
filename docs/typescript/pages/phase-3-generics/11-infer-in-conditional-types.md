@@ -270,4 +270,4 @@ was wrong.
 
 ---
 
-← Prev: [10 · Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) · Next → [12 · `const` type parameters](./12-const-type-parameters.md)
+← Prev: [10 · Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) · Next → [12 · `const` type parameters](./12-const-type-parameters/README.md)

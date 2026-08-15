@@ -14,7 +14,7 @@ sidebar_position: 3
 > **No sandbox, no console blocks**: every claim here is documentation-validated,
 > and a plausible-looking `tsc` transcript written from memory is not evidence.
 
-**14 topics · 22 files · complete.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
+**14 topics · 28 files · complete.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
 specific type from a wide one. This phase is the opposite motion: **writing code
 for a type you have not been told yet**, and getting it back out intact at the
 other end.
@@ -43,13 +43,18 @@ found the wrong equation.
 | 09 | [Generic classes](./09-generic-classes.md) | <span className="db-tier t-understand">Understand</span> | Parameterised state, the static-member restriction |
 | 10 | [Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) | <span className="db-tier t-understand">Understand</span> | Why inference works from arguments and not from the return position |
 | 11 | [`infer` in conditional types](./11-infer-in-conditional-types.md) | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
-| 12 | [`const` type parameters](./12-const-type-parameters.md) | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
-| 13 | [When *not* to write a generic](./13-when-not-to-write-a-generic.md) | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
+| 12 | [`const` type parameters](./12-const-type-parameters/README.md) *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
+| 13 | [When *not* to write a generic](./13-when-not-to-write-a-generic/README.md) *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
 | 14 | [Variance](./14-variance.md) | <span className="db-tier t-know">Know</span> | Co/contra/bivariance, `strictFunctionTypes`, and the `in`/`out` annotations |
 
-✅ **Phase complete** — 14 topics, 22 files, none over the 300-line cap. Five
-Master topics are chunk directories (`README` + 2 parts); the nine
-Understand/Know topics are single files.
+✅ **Phase complete** — 14 topics, **28 files**, none over the 300-line cap.
+Seven topics are chunk directories, seven are single files. ⚠️ **Topics 12 and 13
+were re-opened and expanded after first being written as single files** of 289
+and 293 lines — not because they broke the cap, but because they had been
+*planned to it*. The phase's single files were clustering in a 43-line band just
+under 300, which is the tell that a line target is shaping content rather than
+the topic deciding its own length. Both are now 4 files, covering material the
+flat versions had no room for.
 
 **Evidence policy for this phase.** No sandbox and **no console blocks**: every
 claim is validated against the handbook, the release notes for anything with a

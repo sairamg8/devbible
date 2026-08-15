@@ -132,7 +132,7 @@ known, deliberate hole.
 
 `readonly T[]` has no input positions, so it is genuinely covariant and genuinely
 safe — one more reason to prefer it in signatures, alongside the `as const`
-reasons from [topic 12](./12-const-type-parameters.md).
+reasons from [topic 12](./12-const-type-parameters/README.md).
 
 ## Optional variance annotations (TypeScript 4.7)
 
@@ -182,7 +182,7 @@ phrase to recognise.
 
 ⚠️ `in`/`out` go on the type parameters of a **class, interface or type alias** —
 the placement list behind `TS1274`, and the mirror of where
-[`const`](./12-const-type-parameters.md) is allowed. Reach for them for
+[`const`](./12-const-type-parameters/README.md) is allowed. Reach for them for
 performance in a large type, or to pin an intended contract in a library. In
 application code they are almost always unnecessary.
 
@@ -278,4 +278,4 @@ contravariance, and it is the mechanism behind `UnionToIntersection`.
 
 ---
 
-← Prev: [13 · When *not* to write a generic](./13-when-not-to-write-a-generic.md) · Up → [Phase 3 · Generics](./README.md)
+← Prev: [13 · When *not* to write a generic](./13-when-not-to-write-a-generic/README.md) · Up → [Phase 3 · Generics](./README.md)

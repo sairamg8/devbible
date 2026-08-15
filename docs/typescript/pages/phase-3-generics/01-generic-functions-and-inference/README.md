@@ -43,7 +43,7 @@ say immediately what is wrong with it.
   something with the value.
 - → [10 · Inference sites and contextual typing](../10-inference-sites-and-contextual-typing.md) — the
   full treatment of the ordering rules sketched here.
-- **→ [13 · When not to write a generic](../13-when-not-to-write-a-generic.md)** — the
+- **→ [13 · When not to write a generic](../13-when-not-to-write-a-generic/README.md)** — the
   return-position-only parameter, which this topic names and that one dissects.
 
 ---
