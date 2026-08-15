@@ -168,4 +168,4 @@ calculation at all, so `.dockerignore` still matters.
 
 ---
 
-← Prev: [`docker build` vs `podman build` vs `buildah`](14-docker-vs-podman-vs-buildah.md) · Index: [Phase 4](README.md) · Next → **Reproducible builds** *(not written yet)*
+← Prev: [`docker build` vs `podman build` vs `buildah`](14-docker-vs-podman-vs-buildah.md) · Index: [Phase 4](README.md) · Next → [Reproducible builds](16-reproducible-builds.md)

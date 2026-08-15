@@ -207,8 +207,7 @@ carrying a git SHA or build number, or an `ARG` consumed high in the file.
 **Symptom:** Reordering helped locally and did nothing in CI.
 **Cause:** The CI runner starts with an empty build cache, so there was nothing to
 hit. Ordering makes a cache *usable*; it does not create one.
-**Fix:** Export and import the cache — **page 12 · Cache import and export**
-*(not written yet)*.
+**Fix:** Export and import the cache — [page 12 · Cache import and export](12-cache-import-export.md).
 
 **Symptom:** Editing the README invalidates the dependency install.
 **Cause:** One `COPY . .` hashing files of wildly different volatility together.

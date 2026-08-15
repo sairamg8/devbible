@@ -13,7 +13,9 @@ The difference between a 40-second rebuild and an 11-minute one is entirely in
 this phase, and none of it is exotic. Phase 3 taught the instructions; this phase
 is about the **order** you put them in and the builder that executes them.
 
-🚧 **15 of 16 pages written.**
+**Sixteen pages, one per syllabus topic.** Pages **01–04 are the load-bearing
+set** — the cache key, the ordering rule, the manifest-first install and
+multi-stage. Everything after them is a refinement of one of those four.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -32,7 +34,7 @@ is about the **order** you put them in and the builder that executes them.
 | 13 | **[Build args versus runtime env](13-build-args-vs-runtime-env.md)** | <span className="db-tier t-understand">Understand</span> | The value baked at build time that cannot be changed without a rebuild |
 | 14 | **[`docker build` vs `podman build` vs `buildah`](14-docker-vs-podman-vs-buildah.md)** | <span className="db-tier t-know">Know</span> | Same Dockerfile, different builder |
 | 15 | **[The build context](15-the-build-context.md)** | <span className="db-tier t-know">Know</span> | A directory, `-`, or a git URL — and the gigabyte upload |
-| 16 | **Reproducible builds** *(not written yet)* | <span className="db-tier t-when">When Needed</span> | Digest-pinned bases, `SOURCE_DATE_EPOCH`, and how close you can get |
+| 16 | **[Reproducible builds](16-reproducible-builds.md)** | <span className="db-tier t-when">When Needed</span> | Digest-pinned bases, `SOURCE_DATE_EPOCH`, and how close you can get |
 
 ## Coverage
 
@@ -76,4 +78,4 @@ the first cache miss on a typical source edit, and move it.** If the answer is
 
 ---
 
-← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 3](../phase-3-dockerfile/README.md) · Start → [How the layer cache decides](01-how-the-cache-decides.md)
+← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 3](../phase-3-dockerfile/README.md) · Start → [How the layer cache decides](01-how-the-cache-decides.md) · Next phase → **Phase 5 · Image quality, size and supply chain** *(not written yet)*

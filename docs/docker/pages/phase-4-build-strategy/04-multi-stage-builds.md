@@ -166,8 +166,7 @@ build fast — they are simply not part of the published image. So:
   just as slow as a badly ordered single-stage file.
 - The final image is unaffected by how many layers the build stage created.
 - On a fresh runner with a cold cache, the build stage is rebuilt in full. Cache
-  export can carry build-stage layers too — **page 12 · Cache import and export**
-  *(not written yet)*.
+  export can carry build-stage layers too — [page 12 · Cache import and export](12-cache-import-export.md).
 
 ## The trap: native modules and mismatched bases
 
