@@ -109,7 +109,7 @@ Two syntaxes, and the short one is doing more than it looks.
 
 ```yaml
 volumes:
-  - pgdata:/var/lib/postgresql/data     # named volume
+  - pgdata:/var/lib/postgresql          # named volume
   - ./src:/app/src                      # bind mount (the leading ./ is the tell)
   - /app/node_modules                   # anonymous volume
   - ./config:/etc/app:ro                # read-only bind mount
@@ -132,7 +132,7 @@ volumes:
     target: /app/src
   - type: volume
     source: pgdata
-    target: /var/lib/postgresql/data
+    target: /var/lib/postgresql
 ```
 
 **Prefer the long syntax in anything shared or long-lived.** It states the intent

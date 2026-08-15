@@ -34,7 +34,7 @@ docker volume create myapp_pgdata
 
 docker run -d --name myapp-db \
   --network myapp_default \
-  -v myapp_pgdata:/var/lib/postgresql/data \
+  -v myapp_pgdata:/var/lib/postgresql \
   -e POSTGRES_PASSWORD=dev \
   --health-cmd 'pg_isready -U postgres' --health-interval 5s \
   postgres:18
@@ -73,7 +73,7 @@ services:
     environment:
       POSTGRES_PASSWORD: dev
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s

@@ -24,7 +24,7 @@ services:
   db:
     image: postgres:18
     volumes:
-      - pgdata:/var/lib/postgresql/data      # named volume — data
+      - pgdata:/var/lib/postgresql           # named volume — data (18+ path)
   api:
     build: .
     volumes:
@@ -34,6 +34,14 @@ services:
 volumes:
   pgdata:
 ```
+
+🔴 **The container path is the image's business, and it changes.** The official
+`postgres` image moved its declared `VOLUME` from `/var/lib/postgresql/data` to
+**`/var/lib/postgresql`** in version 18, and its documentation warns that mounts
+at the old path *"WILL NOT PERSIST database data"*. Nothing errors — the volume
+exists, the container runs, and the data is in the writable layer. **Read the
+image's documentation for the path rather than copying one from a tutorial**, and
+see [Phase 9 · PostgreSQL in a container](../phase-9-mern-pern-stack/03-postgres-in-a-container/01-the-data-directory.md).
 
 | Kind | How you write it | What it is for |
 |---|---|---|
@@ -53,7 +61,7 @@ This catches everyone once:
 services:
   db:
     volumes:
-      - pgdata:/var/lib/postgresql/data   # 1. used here
+      - pgdata:/var/lib/postgresql        # 1. used here
 
 volumes:                                   # 2. and declared here
   pgdata:
