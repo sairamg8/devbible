@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 8 of 16 topics. The Master tier is complete at 5 of 5.**
+🚧 **Writing — 9 of 16 topics. The Master tier is complete at 5 of 5.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -24,7 +24,7 @@ is that list, with the mechanism and the fix for each.
 | 06 | **[The production failure catalogue](06-failure-catalogue/README.md)** | <span className="db-tier t-master">Master</span> | OOM, full disk, pull limits, clock skew, DNS, unhealthy-but-serving, zombies |
 | 07 | **[Restart policies as supervision](07-restart-as-supervision.md)** | <span className="db-tier t-understand">Understand</span> | What they cover, what they hide, and the silent crash loop |
 | 08 | **[Log drivers and rotation](08-log-drivers-and-rotation.md)** | <span className="db-tier t-understand">Understand</span> | `max-size`, `max-file`, `journald`, and the 40 GB file that filled the disk |
-| 09 | **Healthchecks in production** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Liveness versus readiness as concepts, with or without an orchestrator |
+| 09 | **[Healthchecks in production](09-healthchecks-in-production.md)** | <span className="db-tier t-understand">Understand</span> | Liveness versus readiness as concepts, with or without an orchestrator |
 | 10 | **Hardening at run time** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `--read-only`, `--cap-drop=ALL`, `no-new-privileges`, non-root |
 | 11 | **Observing** *(not written yet)* | <span className="db-tier t-know">Know</span> | `stats`, exporters, and host memory versus cgroup memory |
 | 12 | **Debugging a container you cannot shell into** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Distroless and scratch, ephemeral attach, `nsenter`, copying a binary in |
@@ -49,6 +49,7 @@ arguments. The Understand and Know topics are single pages, as their tier warran
 | The production failure catalogue | 06 |
 | Restart policies as supervision | 07 |
 | Log drivers and rotation | 08 |
+| Healthchecks in production | 09 |
 
 ## Phase gate
 
