@@ -10,7 +10,7 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 4 of 14 topics written.**
+🚧 **In progress — 5 of 14 topics written.**
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -27,7 +27,7 @@ reload that actually reloads, and the worked file that ties them together.
 | 02 | **[Dev image vs prod image](02-dev-vs-prod-image.md)** | <span className="db-tier t-understand">Understand</span> | One Dockerfile, two targets — because two Dockerfiles drift, and the drift surfaces in production |
 | 03 | **[PostgreSQL in a container](03-postgres-in-a-container/README.md)** | <span className="db-tier t-master">Master</span> | The data path moved in 18, init scripts run only on an empty directory, and `pg_isready` lies over the socket |
 | 04 | **[Waiting for the database](04-waiting-for-the-database/README.md)** | <span className="db-tier t-master">Master</span> | Two halves, both required — Compose gates the first boot, and only the app survives the 3am restart |
-| 05 | Hot reload inside a container | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 05 | **[Hot reload inside a container](05-hot-reload/README.md)** | <span className="db-tier t-master">Master</span> | Two failure classes — the file never arrived, or the watcher never noticed — and they are fixed in different places |
 | 06 | Secrets in dev vs prod | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 07 | The whole stack in one file | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 08 | MongoDB in a container | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
@@ -49,7 +49,7 @@ dropped.
 | Dev image vs prod image | 02 |
 | PostgreSQL in a container | 03 (chunked: the data directory · initialisation and connecting) |
 | Waiting for the database | 04 (chunked: the startup gate · surviving a restart) |
-| Hot reload inside a container | 05 |
+| Hot reload inside a container | 05 (chunked: getting the file in · making the change noticed) |
 | Secrets in dev vs prod | 06 |
 | The whole stack in one file | 07 |
 | MongoDB in a container | 08 |

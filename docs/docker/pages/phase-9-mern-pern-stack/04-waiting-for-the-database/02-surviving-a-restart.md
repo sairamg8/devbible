@@ -227,4 +227,4 @@ transient dependency failure from a real bug.
 
 ---
 
-← Prev: [The startup gate](01-the-startup-gate.md) · Index: [Waiting for the database](README.md) · Next → **Hot reload inside a container** *(not written yet)*
+← Prev: [The startup gate](01-the-startup-gate.md) · Index: [Waiting for the database](README.md) · Next → [Hot reload inside a container](../05-hot-reload/README.md)

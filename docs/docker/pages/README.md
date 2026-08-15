@@ -22,7 +22,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 |---|---|---|---|---|
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
 | **B** | 6 · 7 | 26 | 🏁 **CHUNK B COMPLETE — phase 6 12/12, phase 7 14/14** (2026-08-15) | session `d0c46f84` — finished |
-| **C** | 8 · 9 | 31 (**10 left**) | 🏁 phase 8 **done 17/17** · 🚧 phase 9 **4/14** — next: **09 · 05 · Hot reload inside a container** | 🔴 session `9219957a` (2026-08-15) |
+| **C** | 8 · 9 | 31 (**9 left**) | 🏁 phase 8 **done 17/17** · 🚧 phase 9 **5/14** — next: **09 · 06 · Secrets in dev vs prod** | 🔴 session `9219957a` (2026-08-15) |
 | **D** | 10 · 11 · 12 | 44 (**28 left**) | 🏁 **Phase 10 COMPLETE 16/16** — next: **Phase 11 · 01 · Daemonless** | 🔴 session `6d88f249` (2026-08-15, took over from `2f38bb4d`) |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
@@ -67,11 +67,11 @@ answers.
 | **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 12 | ✅ **Complete** |
 | **[07 · Networking](./phase-7-networking/README.md)** | 14 | 14 | ✅ **Complete** |
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 17 | ✅ **Complete** |
-| **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 4 | 🚧 **Writing — chunk C** |
+| **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 5 | 🚧 **Writing — chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 16 | ✅ **Complete — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **154** | |
+| **Total** | **192** | **155** | |
 
 import Progress from '@site/src/components/Progress';
 
