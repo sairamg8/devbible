@@ -51,7 +51,7 @@ It will be rendered by something else that is tested, and a test that only prove
 
 **This is where the value is.** A disclosure, a tab set, a filter, a multi-step form: the
 whole point is that acting changes what is on screen. Test the *transitions*, driven by
-[`user-event`](../04-user-event-over-fireevent.md):
+[`user-event`](../04-user-event-over-fireevent/README.md):
 
 - what is visible initially,
 - what is visible after the interaction,
@@ -62,7 +62,7 @@ whole point is that acting changes what is on screen. Test the *transitions*, dr
 
 A component that talks to the network has **loading, success, empty and error** states,
 and most suites test exactly one of them. All four earn a test; the network is mocked at
-the transport layer with [MSW](../06-mocking-the-api.md), so all four are cheap to
+the transport layer with [MSW](../06-mocking-the-api/README.md), so all four are cheap to
 produce. [Chunk 03](03-the-cases-worth-writing.md) works this through.
 
 ### Custom hooks

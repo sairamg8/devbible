@@ -20,7 +20,7 @@ Nothing here is React-specific, Node-specific or browser-specific.
 three different programs that might be reading your `.ts` file. The erasure row
 is the one that makes the rest of the language stop being surprising.
 
-📖 **Explanation written:** [Phase 0 — How TypeScript runs](../pages/phase-0-how-typescript-runs/)
+📖 **Explanation written:** [Phase 0 — How TypeScript runs](../pages/phase-0-how-typescript-runs/README.md)
 
 | Topic | Tier |
 |---|---|
@@ -50,7 +50,7 @@ of the three cases.
 because this is the part you use without looking anything up — ten of the
 seventeen rows appear in almost every file you touch.
 
-📖 **Explanation written:** [Phase 1 — The type vocabulary](../pages/phase-1-type-vocabulary/)
+📖 **Explanation written:** [Phase 1 — The type vocabulary](../pages/phase-1-type-vocabulary/README.md)
 
 | Topic | Tier |
 |---|---|
@@ -83,6 +83,8 @@ than reaching for `any` at the first friction.
 *13 topics.* The compiler reads your `if` statements. This phase is what makes
 unions usable, and it is the single most common source of "why is this still
 possibly undefined?".
+
+📖 **Explanation written:** [Phase 2 — Narrowing and control flow analysis](../pages/phase-2-narrowing/README.md)
 
 | Topic | Tier |
 |---|---|

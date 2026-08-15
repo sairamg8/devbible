@@ -252,5 +252,4 @@ stored it"*.
 
 ← Prev: [Calling the resume APIs](02-calling-them.md) ·
 Index: [09 · Partial pre-rendering](README.md) ·
-Next → [Document metadata](../10-document-metadata.md)
-</content>
+Next → [Document metadata](../10-document-metadata/README.md)

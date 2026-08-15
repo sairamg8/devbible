@@ -41,7 +41,7 @@ first without the third; you cannot act on the third without the first.
 
 - **[Topic 02 · RTL's model](../02-the-rtl-model/README.md)** — the library is built so that the
   wrong test is *hard to write*. That is a design decision, not an omission.
-- **[Topic 03 · The query families](../03-the-query-families.md)** — the priority order is
+- **[Topic 03 · The query families](../03-the-query-families/README.md)** — the priority order is
   this topic's principle turned into a ranked list.
 - **[Topic 12 · Snapshot tests](../12-snapshot-tests.md)** — the purest form of the
   mistake this topic names: an assertion that fails on every change and describes none.

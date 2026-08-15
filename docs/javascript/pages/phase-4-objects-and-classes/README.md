@@ -13,15 +13,14 @@ behaviour hangs off: how a property is found, what `class` desugars to, and why
 "copying" an object is four different operations with four different failure
 modes.
 
-## Status — **Understand tier under way** (2026-08-14)
+## Status — ✅🎉 **PHASE COMPLETE — 20 of 20, every tier** (2026-08-15)
 
-🚧 **12 of 20 written.** All seven Master topics are done — 01, 03, 04, 05, 06, 07,
-08 in syllabus order — and the **Master-first plan is finished across every phase**,
-so the work here is now the **Understand and Know tiers**, in that order.
+✅ **20 of 20 written — every tier.** Master 7/7 (01, 03–08), Understand 9/9
+(02, 09–16), Know 4/4 (17–20). **Nothing in this phase is deferred.**
 
-**Next here: 13 · `instanceof` and `Symbol.hasInstance`**, then 14–16 (Understand), then 17–20 (Know).
+**Next: [Phase 5 · The built-in library](../phase-5-built-in-library/README.md).**
 
-**Coverage:** Master **7 / 7** ✅ · Understand **5 / 9** · Know **0 / 4**.
+**Coverage:** Master **7 / 7** ✅ · Understand **9 / 9** ✅ · Know **4 / 4** ✅.
 
 ## Topics
 
@@ -39,14 +38,14 @@ so the work here is now the **Understand and Know tiers**, in that order.
 | 10 | **[Getters and setters](./10-getters-and-setters.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 11 | **[Property descriptors](./11-property-descriptors.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[`Object.freeze` and `seal`](./12-freeze-and-seal/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 13 | `instanceof` and `Symbol.hasInstance` | <span className="db-tier t-understand">Understand</span> | deferred |
-| 14 | Object creation patterns | <span className="db-tier t-understand">Understand</span> | deferred |
-| 15 | Normalising untrusted shapes | <span className="db-tier t-understand">Understand</span> | deferred |
-| 16 | Prototype patterns to avoid | <span className="db-tier t-understand">Understand</span> | deferred |
-| 17 | `toString`, `valueOf`, `Symbol.toPrimitive` | <span className="db-tier t-know">Know</span> | deferred |
-| 18 | Mixins and composition over inheritance | <span className="db-tier t-know">Know</span> | deferred |
-| 19 | `Proxy` and `Reflect` | <span className="db-tier t-know">Know</span> | deferred |
-| 20 | Private state before `#` | <span className="db-tier t-know">Know</span> | deferred |
+| 13 | **[`instanceof` and `Symbol.hasInstance`](./13-instanceof-and-hasinstance/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 14 | **[Object creation patterns](./14-object-creation-patterns/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 15 | **[Normalising untrusted shapes](./15-normalising-untrusted-shapes/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 16 | **[Prototype patterns to avoid](./16-prototype-patterns-to-avoid/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 17 | **[`toString`, `valueOf`, `Symbol.toPrimitive`](./17-tostring-valueof-toprimitive/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 18 | **[Mixins and composition over inheritance](./18-mixins-and-composition/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 19 | **[`Proxy` and `Reflect`](./19-proxy-and-reflect/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 20 | **[Private state before `#`](./20-private-state-before-hash/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## Phase gate
 

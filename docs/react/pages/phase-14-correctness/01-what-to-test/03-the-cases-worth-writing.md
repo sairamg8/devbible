@@ -13,7 +13,7 @@ sidebar_position: 3
 > priority the examples follow. The test *selection* below (four states, the regression
 > rule, the file shape) is judgement built on those principles. Every API used here is
 > covered properly in [topic 02](../02-the-rtl-model/README.md) through
-> [topic 06](../06-mocking-the-api.md); the code is illustrative and is **not** run output.
+> [topic 06](../06-mocking-the-api/README.md); the code is illustrative and is **not** run output.
 > No sandbox script backs this page; claims are cited, not measured.
 
 The procedure from [chunk 02](02-what-earns-a-test.md), applied to one real feature: a
@@ -34,7 +34,7 @@ building the feature.
 
 **Empty and error are where the bugs are**, precisely because they are the states you never
 saw during development. They cost one extra MSW handler each
-([topic 06](../06-mocking-the-api.md)), which is the entire argument for mocking at the
+([topic 06](../06-mocking-the-api/README.md)), which is the entire argument for mocking at the
 transport layer rather than stubbing a module: switching a test from success to failure is
 a one-line change to the response, not a rewrite of the mocking.
 
@@ -93,9 +93,9 @@ describe("OrdersPage", () => {
 
 Four tests, and not one of them mentions a state variable, a hook, a handler name or a
 class. Every query is by role and accessible name
-([topic 03](../03-the-query-families.md)); every interaction goes through `user-event`
-([topic 04](../04-user-event-over-fireevent.md)); every wait is a `findBy*`
-([topic 05](../05-async-testing-and-act.md)). Rename everything inside `OrdersPage` and
+([topic 03](../03-the-query-families/README.md)); every interaction goes through `user-event`
+([topic 04](../04-user-event-over-fireevent/README.md)); every wait is a `findBy*`
+([topic 05](../05-async-testing-and-act/README.md)). Rename everything inside `OrdersPage` and
 this file stays green.
 
 ## Four details in there worth naming
@@ -148,7 +148,7 @@ people expect.
 which passes whether or not the loading indicator was ever removed.
 **Fix:** assert the loading state's *disappearance* explicitly, with `queryBy*` after the
 data arrives, or `waitForElementToBeRemoved`
-([topic 05](../05-async-testing-and-act.md)).
+([topic 05](../05-async-testing-and-act/README.md)).
 
 **Symptom:** the error-state test passes even when the error UI is broken.
 **Cause:** the test asserts that the success content is absent — which is also true while
