@@ -29,7 +29,7 @@ server-sent events are frequently the better answer, and the decision is in chun
 |---|---|---|
 | 1 | **[Connecting](./01-connecting.md)** | Constructing *is* connecting; the URL, the schemes and mixed content; the HTTP handshake and `101 Switching Protocols`; 🔴 **WebSocket is not subject to CORS**, and what CSP `connect-src` does instead; sub-protocols; the `readyState` machine; the four events, and why `error` tells you nothing |
 | 2 | **[Messaging](./02-messaging.md)** | Sending text and binary, and the two ways `send()` loses data; `binaryType`; 🔴 **framing — the protocol gives you messages, your application still needs an envelope**; request/response built by hand; `bufferedAmount`, and 🔴 **the inbound backpressure the API does not have** |
-| 3 | **Closing** *(next)* | `close(code, reason)` and what it rejects; the 123-**byte** reason limit; `CloseEvent`'s `code`, `reason` and `wasClean`; the close-code table, why **`1006` tells you nothing**, and using `4000`–`4999` to say "do not reconnect" |
+| 3 | **[Closing](./03-closing.md)** | Closing is a **handshake**; `close(code, reason)` and what it rejects; the 123-**byte** reason limit; `CloseEvent`'s `code`, `reason` and `wasClean`; the close-code table, why **`1006` tells you nothing**, and using `4000`–`4999` to say "do not reconnect" |
 | 4 | **Reliability, and when not to** *(next)* | 🔴 **Reconnection with backoff and jitter**, and why a naive retry loop takes your own server down; heartbeats, and why TCP will not tell you the connection died; queueing and resynchronising after a gap; authentication, given that you cannot set headers; and the honest comparison against polling, SSE and `fetch` |
 
 ## The whole API

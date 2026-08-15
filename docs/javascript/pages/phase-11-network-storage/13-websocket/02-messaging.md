@@ -245,4 +245,4 @@ experimental and non-standard.
 
 ---
 
-← [1 · Connecting](./01-connecting.md) · Next → **3 · Closing** *(next)*
+← [1 · Connecting](./01-connecting.md) · Next → [3 · Closing](./03-closing.md)
