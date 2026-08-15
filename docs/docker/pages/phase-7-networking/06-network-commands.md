@@ -275,4 +275,4 @@ network"*, stopping running ones first. Same flag, different blast radius.
 
 ---
 
-← Prev: [Network drivers](05-network-drivers.md) · Index: [Phase 7](README.md) · Next → **Reaching the host from inside** *(not written yet)*
+← Prev: [Network drivers](05-network-drivers.md) · Index: [Phase 7](README.md) · Next → [Reaching the host from inside](07-reaching-the-host.md)
