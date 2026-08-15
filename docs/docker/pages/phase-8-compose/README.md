@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 10 of 17 topics written. The Master tier (02–06, 08) is complete.**
+🚧 **In progress — 11 of 17 topics written. The Master tier (02–06, 08) is complete.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -31,7 +31,7 @@ actually true, and volumes. Everything else refines those.
 | 08 | **[Volumes in Compose](08-volumes.md)** | <span className="db-tier t-master">Master</span> | Named for data, bind for source, and the anonymous-volume shield that makes `node_modules` work |
 | 09 | **[The project name](09-project-name.md)** | <span className="db-tier t-understand">Understand</span> | The namespace, defaulting to your directory name — which is why two checkouts collide |
 | 10 | **[Environment and interpolation](10-environment-and-interpolation.md)** | <span className="db-tier t-understand">Understand</span> | Three mechanisms people conflate — `.env` fills the *file*, `env_file` fills the *container* |
-| 11 | Override files | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 11 | **[Override files](11-override-files.md)** | <span className="db-tier t-understand">Understand</span> | Single values replace, sequences **concatenate**, mappings merge by key — and `!reset` / `!override` |
 | 12 | `profiles` | <span className="db-tier t-know">Know</span> | _not written yet_ |
 | 13 | `develop.watch` | <span className="db-tier t-know">Know</span> | _not written yet_ |
 | 14 | Day-to-day commands | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
