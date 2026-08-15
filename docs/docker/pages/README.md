@@ -22,7 +22,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 |---|---|---|---|---|
 | **A** | 4 · 5 | 28 | Phase 4 · 01 · How the layer cache decides | 🔴 session `2e26b051` (2026-08-15) |
 | **B** | 6 · 7 | 26 | Phase 6 · 01 · The container filesystem is disposable | 🔴 session `17c9da97` (2026-08-15) |
-| **C** | 8 · 9 | 31 | Phase 8 · 01 · What Compose is | _unclaimed_ |
+| **C** | 8 · 9 | 31 | Phase 8 · 01 · What Compose is | 🔴 session `a91424bd` (2026-08-15) |
 | **D** | 10 · 11 · 12 | 44 | Phase 10 · 01 · PID 1 is not a normal process | _unclaimed_ |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
