@@ -265,4 +265,4 @@ fresh in the runtime stage.
 
 ---
 
-← Prev: [Where size actually goes](01-where-size-goes.md) · Index: [Phase 5](README.md) · Next → **Least privilege in the image** *(not written yet)*
+← Prev: [Where size actually goes](01-where-size-goes.md) · Index: [Phase 5](README.md) · Next → [Least privilege in the image](03-least-privilege.md)
