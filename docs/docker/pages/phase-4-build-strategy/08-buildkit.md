@@ -82,7 +82,7 @@ its output layer. Three of them matter, each with its own page:
 | Mount | What it gives the `RUN` | Page |
 |---|---|---|
 | `type=cache` | A directory that persists across builds and is in no layer | [09](09-mount-type-cache.md) |
-| `type=bind` | A file read from the context or another stage without `COPY` | **10** *(not written yet)* |
+| `type=bind` | A file read from the context or another stage without `COPY` | [10](10-mount-type-bind.md) |
 | `type=secret` | A value present for one instruction only | [05](05-mount-type-secret.md) |
 
 There is also `type=ssh`, covered alongside secrets, and `type=tmpfs` for scratch

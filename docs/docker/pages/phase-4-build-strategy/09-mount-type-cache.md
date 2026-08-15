@@ -236,4 +236,4 @@ cache between machines is cache export/import, a different mechanism.
 
 ---
 
-← Prev: [BuildKit](08-buildkit.md) · Index: [Phase 4](README.md) · Next → **`RUN --mount=type=bind`** *(not written yet)*
+← Prev: [BuildKit](08-buildkit.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=bind`](10-mount-type-bind.md)
