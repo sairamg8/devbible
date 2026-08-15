@@ -250,7 +250,7 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-dockerfile', name: 'The Dockerfile', part: 'Building images', topics: 18, pages: 18},
       {n: 4, slug: 'phase-4-build-strategy', name: 'Build strategy: cache, multi-stage, BuildKit', part: 'Building images', topics: 16, pages: 14, pagesPlanned: 16},
       {n: 5, slug: 'phase-5-image-quality', name: 'Image quality, size and supply chain', part: 'Building images', topics: 12, pages: 0},
-      {n: 6, slug: 'phase-6-storage', name: 'Storage: volumes, mounts and data', part: 'Running a real stack', topics: 12, pages: 7},
+      {n: 6, slug: 'phase-6-storage', name: 'Storage: volumes, mounts and data', part: 'Running a real stack', topics: 12, pages: 8},
       {n: 7, slug: 'phase-7-networking', name: 'Networking', part: 'Running a real stack', topics: 14, pages: 0},
       {n: 8, slug: 'phase-8-compose', name: 'Compose', part: 'Running a real stack', topics: 17, pages: 5, pagesPlanned: 17},
       {n: 9, slug: 'phase-9-mern-pern-stack', name: 'The MERN/PERN stack in containers', part: 'Running a real stack', topics: 14, pages: 0},
