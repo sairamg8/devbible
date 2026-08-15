@@ -261,4 +261,4 @@ sanitised versus raw HTML. Not for tidiness.
 
 ---
 
-← Prev: [06 · Global augmentation](./06-global-augmentation.md) · Next → **08 · `readonly` members and definite assignment** *(not written yet)*
+← Prev: [06 · Global augmentation](./06-global-augmentation.md) · Next → [08 · `readonly` members and definite assignment](./08-readonly-and-definite-assignment.md)

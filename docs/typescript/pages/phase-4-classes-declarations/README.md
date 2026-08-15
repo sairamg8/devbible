@@ -38,7 +38,7 @@ ends up in a JSON payload.
 | 05 | [Interface declaration merging](./05-interface-declaration-merging/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | Two declarations of one interface combine — the feature `type` deliberately lacks |
 | 06 | [Global augmentation](./06-global-augmentation.md) | <span className="db-tier t-understand">Understand</span> | `declare global`, typing `globalThis`, and why it only works inside a module |
 | 07 | [Branded / nominal types](./07-branded-nominal-types.md) | <span className="db-tier t-understand">Understand</span> | Stopping a `PostId` being passed where a `UserId` belongs |
-| 08 | `readonly` members and definite assignment `!:` | <span className="db-tier t-understand">Understand</span> | The two ways to promise the compiler a field will exist, and what each guarantees |
+| 08 | [`readonly` members and definite assignment `!:`](./08-readonly-and-definite-assignment.md) | <span className="db-tier t-understand">Understand</span> | The two ways to promise the compiler a field will exist, and what each guarantees |
 | 09 | Typing getters and setters | <span className="db-tier t-know">Know</span> | Divergent getter/setter types, and validation on write |
 | 10 | `this` types and polymorphic `this` | <span className="db-tier t-know">Know</span> | Fluent builders that keep the subclass type through a chain |
 | 11 | Abstract classes and abstract construct signatures | <span className="db-tier t-know">Know</span> | Typing "a class, not an instance", and `new (…args) => T` |
