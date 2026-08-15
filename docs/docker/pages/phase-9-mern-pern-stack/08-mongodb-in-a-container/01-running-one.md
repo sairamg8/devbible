@@ -1,24 +1,19 @@
 ---
-title: "MongoDB in a container"
-sidebar_label: "08 · MongoDB in a container"
-sidebar_position: 8
+title: "Running one"
+sidebar_label: "01 · Running one"
+sidebar_position: 1
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-08 against
 > [the official `mongo` image documentation](https://hub.docker.com/_/mongo),
-> [the `mongo` image Dockerfile](https://github.com/docker-library/mongo),
-> [MongoDB transactions](https://www.mongodb.com/docs/manual/core/transactions/),
-> [change streams](https://www.mongodb.com/docs/manual/changeStreams/),
-> [`rs.initiate()`](https://www.mongodb.com/docs/manual/reference/method/rs.initiate/),
-> [deploy a replica set with keyfile access control](https://www.mongodb.com/docs/manual/tutorial/deploy-replica-set-with-keyfile-access-control/) and
+> [the `mongo` image Dockerfile](https://github.com/docker-library/mongo) and
 > [the `ping` command](https://www.mongodb.com/docs/manual/reference/command/ping/).
 > **No sandbox** — no console output on this page.
 
-**A single `mongod` in a container is four lines and works immediately — and then
-one day you write a transaction and it fails.** The easy part is genuinely easy;
-what bites is a deployment requirement, not a container one.
+**A `mongod` in a container is four lines, and every one of the traps in those four
+lines is about *when* things happen — once, on an empty volume, and never again.**
 
 ## The service
 
@@ -69,13 +64,13 @@ Two consequences that are easy to miss:
 ⚠️ 🔴 **And none of it applies to an existing volume:** *"none of the variables
 below will have any effect if you start the container with a data directory that
 already contains a database"*. Exactly the PostgreSQL rule from
-[topic 03](03-postgres-in-a-container/README.md) — changing the password in the
+[topic 03](../03-postgres-in-a-container/README.md) — changing the password in the
 compose file changes nothing, and the only way to re-run initialisation is to
 start from an empty volume.
 
 **`_FILE` works here too**, with narrower coverage than PostgreSQL's: *"Currently,
 this is only supported for `MONGO_INITDB_ROOT_USERNAME` and
-`MONGO_INITDB_ROOT_PASSWORD`."* Enough for [topic 06](06-secrets-dev-vs-prod.md)'s
+`MONGO_INITDB_ROOT_PASSWORD`."* Enough for [topic 06](../06-secrets-dev-vs-prod.md)'s
 pattern — the credentials never appear in the environment.
 
 ## Init scripts
@@ -100,7 +95,7 @@ db.orders.createIndex({ customerId: 1, createdAt: -1 })
 db.users.createIndex({ email: 1 }, { unique: true })
 ```
 
-Seed *data* belongs with migrations ([topic 10](10-migrations-and-seeds.md)),
+Seed *data* belongs with migrations ([topic 10](../10-migrations-and-seeds.md)),
 because init scripts can only ever run against a brand-new volume and the seed you
 need next month will have to run against an existing one.
 
@@ -114,7 +109,7 @@ need next month will have to run against an existing one.
 naive `mongosh --eval "…"` reports healthy for a server that answered nothing at
 all. Piping the result through `grep -q 1` moves the verdict to the *value* the
 command returned, which is what you meant to test
-([Phase 8 · Healthchecks](../phase-8-compose/06-healthchecks/02-checks-that-are-true.md)).
+([Phase 8 · Healthchecks](../../phase-8-compose/06-healthchecks/02-checks-that-are-true.md)).
 
 `ping` is the right command to send — the manual describes it as *"a no-op used to
 test whether a server is responding to commands"* that *"will return immediately
@@ -131,94 +126,16 @@ documentation does not say so.
 documentation which release removed the old binary — so check the tag you actually
 run rather than trusting a remembered version number.
 
-## The part that bites: transactions and change streams
-
-🔴 **Both require a replica set.** Not a container thing, a MongoDB deployment
-thing — and it does not surface until the feature is used.
-
-| Feature | Documented availability |
-|---|---|
-| **Multi-document transactions** | *"MongoDB supports distributed transactions, including transactions on replica sets and sharded clusters"* — with `featureCompatibilityVersion` at least **4.0** on a replica set, **4.2** on a sharded cluster |
-| **Change streams** | *"Change streams are available for replica sets and sharded clusters"*, requiring the **WiredTiger** storage engine and replica set protocol **`pv1`** |
-
-Neither page describes support on a standalone `mongod`. So a default
-`image: mongo:8` in a compose file — which is a standalone — is a deployment your
-application cannot use those features on, and everything else about it works
-perfectly.
-
-**The development answer is a single-member replica set.** It is a legitimate
-replica set with one voting member, and it is enough to turn both features on:
-
-```yaml
-  mongo:
-    image: mongo:8
-    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
-    volumes:
-      - mongo-data:/data/db
-    networks: [backend]
-
-  mongo-init:
-    image: mongo:8
-    depends_on:
-      mongo:
-        condition: service_healthy
-    command: >
-      mongosh --host mongo --quiet --eval
-      "try { rs.status() } catch (e) { rs.initiate({_id:'rs0',members:[{_id:0,host:'mongo:27017'}]}) }"
-    networks: [backend]
-    restart: "no"
-```
-
-Same one-shot shape as the migration job in
-[topic 07](07-the-whole-stack/03-the-stateful-services.md), for the same reasons:
-`restart: "no"` so a completed initiation is final, and `service_healthy` so it
-does not race the server.
-
-🔴 **Pass the member host explicitly.** `rs.initiate()` with no argument *"uses a
-default replica set configuration"*, which names the member by the machine's own
-hostname — inside a container that is a name your other containers may not
-resolve. The manual's own advice is to *"use DNS hostnames instead of IP
-addresses"*, and on a Compose network the service name is that hostname. Clients
-then connect with the replica set named:
-
-```
-mongodb://mongo:27017/acme?replicaSet=rs0
-```
-
-⚠️ **A replica set plus authentication is a bigger step than it looks.** Enforcing
-access control on a replica set also requires *internal* authentication between
-members, and the documentation is explicit that running `mongod` with `--keyFile`
-*"enforces both Self-Managed Internal/Membership Authentication and Role-Based
-Access Control"*. The keyfile itself has requirements that collide with containers:
-*"A key's length must be between 6 and 1024 characters and may only contain
-characters in the base64 set"*, and *"on UNIX systems, the keyfile must not have
-group or world permissions"* — `chmod 400`, owned by the user running `mongod`. A
-bind-mounted keyfile arrives with the host's ownership and mode, and `mongod`
-refuses to start. Delivering it as a Compose secret with an explicit `mode:` and
-`uid:` is the container-shaped answer.
-
-For development, the pragmatic combination is a single-member replica set **with no
-authentication** on an internal network, and access control configured properly in
-the environment that needs it.
-
 ## Podman
 
 Nothing here diverges: the image, the entrypoint, the volume and the replica-set
 requirements are MongoDB's, not the engine's. The one thing to remember is
-[phase 6](../phase-6-storage/05-uid-mismatch/README.md)'s rootless UID mapping — a
+[phase 6](../../phase-6-storage/05-uid-mismatch/README.md)'s rootless UID mapping — a
 named volume is fine, but a **bind mount** for `/data/db` under rootless Podman
 lands with a mapped owner the in-container `mongodb` user (uid 999) may not be
 able to write.
 
 ## Gotchas
-
-**Symptom:** A transaction fails, or a change stream never yields, on a database
-that is otherwise working perfectly.
-**Cause:** The container is running a standalone `mongod`. Both features are
-documented as available on replica sets and sharded clusters; neither page
-describes standalone support.
-**Fix:** Run `mongod --replSet rs0` and initiate a single-member set from a
-one-shot service. Then connect with `?replicaSet=rs0` so the driver knows.
 
 **Symptom:** The root user was never created and the database is wide open.
 **Cause:** Only one of `MONGO_INITDB_ROOT_USERNAME` / `MONGO_INITDB_ROOT_PASSWORD`
@@ -227,31 +144,29 @@ creating the user.
 **Fix:** Set both — or both `_FILE` variants — and check on a **fresh volume**,
 since neither has any effect on a data directory that already contains a database.
 
-**Symptom:** The replica set initiates, and the application cannot connect to it.
-**Cause:** `rs.initiate()` was called with no argument, so the member is
-registered under the container's own hostname, which is not what the client
-resolves.
-**Fix:** Pass the configuration explicitly with `host: 'mongo:27017'` — the
-service name, which is the name every container on that network resolves.
+**Symptom:** Changing `MONGO_INITDB_ROOT_PASSWORD` in the compose file has no
+effect.
+**Cause:** *"none of the variables below will have any effect if you start the
+container with a data directory that already contains a database"* — the credential
+was baked into the volume on its first boot.
+**Fix:** In development, `down -v` and start again. In anything with real data,
+change the password *in MongoDB* with `db.changeUserPassword`, because the
+environment variable is a bootstrap and not a source of truth.
 
-**Symptom:** `mongod` exits immediately after adding `--keyFile`.
-**Cause:** The keyfile has group or world permissions, or is not owned by the user
-running `mongod` — a bind-mounted file carries the host's ownership and mode.
-**Fix:** Deliver it as a Compose secret with an explicit `mode:` and `uid:`, and
-remember that `--keyFile` also switches on client access control, so every
-connection now needs credentials.
+**Symptom:** The healthcheck reports healthy for a server that is answering nothing.
+**Cause:** `mongosh` exits 0 when the **shell** ran, not when the command inside it
+succeeded.
+**Fix:** Turn the result into an exit status — pipe through `grep -q 1` — so the
+verdict comes from the value the command returned.
+
+**Symptom:** A bind-mounted `/data/db` is unwritable under rootless Podman.
+**Cause:** Rootless UID mapping. The image runs as `mongodb` (uid 999), and the
+mapped owner of a host directory is not that user.
+**Fix:** Use a named volume, which the engine creates with the right ownership.
+Reach for `--userns=keep-id` or an explicit `user:` only if a bind mount is genuinely
+required.
 
 ## Interview questions
-
-**★ Why does a MongoDB transaction fail in a development container and work in
-production?**
-Because the container is almost certainly a standalone `mongod` and production is a
-replica set. The documentation describes multi-document transactions as supported
-on replica sets and sharded clusters, and says nothing about standalone support;
-the same is true of change streams. Nothing in the container is wrong — it is a
-deployment-topology requirement that only surfaces when the feature is used. The
-fix in development is a single-member replica set: `mongod --replSet rs0` plus a
-one-shot `rs.initiate()` with the member host set to the Compose service name.
 
 **★ What do `MONGO_INITDB_ROOT_USERNAME` and `MONGO_INITDB_ROOT_PASSWORD` actually
 do, and when?**
@@ -272,7 +187,7 @@ result has to be turned into an exit status, which is what piping through
 passes: the container reports a state that `condition: service_healthy` then acts
 on.
 
-**What belongs in `/docker-entrypoint-initdb.d` and what does not?**
+**★ What belongs in `/docker-entrypoint-initdb.d` and what does not?**
 Structure belongs there — indexes, unique constraints, validators — because those
 are cheap to declare and the scripts run in alphabetical order against a brand-new
 volume. Seed data does not, because init scripts can only ever run once against an
@@ -285,16 +200,19 @@ run against, defaulting to `test`. The documentation is explicit that MongoDB
 creates on first use, so if the scripts insert nothing, no database appears. It is
 a script target, not a `CREATE DATABASE`.
 
-**Why is adding authentication to a replica set harder than adding it to a
-standalone?**
-Because the members have to authenticate to each other as well as to clients. The
-documentation says that running `mongod` with `--keyFile` enforces both internal
-membership authentication and role-based access control, so the keyfile is not
-optional once access control is on. In a container the keyfile is the awkward part:
-it must be base64 characters, 6–1024 long, with no group or world permissions and
-owned by the user running `mongod` — which a bind mount cannot guarantee, so it is
-delivered as a secret with an explicit mode and uid.
+**Which volume actually holds the data?**
+`/data/db`. The image declares `VOLUME /data/db /data/configdb`, and the second one
+only matters for a config server started with `--configsvr` — mounting it for an
+application database achieves nothing. The image also creates the `mongodb` user at
+uid 999 with `/data/db` as its home and sets no `USER` instruction, which is what
+makes ownership the thing to watch on a bind mount.
+
+**How far does the `_FILE` convention go on this image?**
+Less far than on `postgres`. The documentation says it is *"only supported for
+`MONGO_INITDB_ROOT_USERNAME` and `MONGO_INITDB_ROOT_PASSWORD`"* — which is enough
+for the credentials that matter, but means anything else has to arrive as a plain
+environment variable or be read by your own code.
 
 ---
 
-← Prev: [The whole stack in one file](07-the-whole-stack/README.md) · Index: [Phase 9](README.md) · Next → **Redis in a container** *(not written yet)*
+← Overview: [MongoDB in a container](README.md) · Index: [Phase 9](../README.md) · Next → [The replica set](02-the-replica-set.md)

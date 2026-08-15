@@ -1,7 +1,7 @@
 ---
 title: "The boot, and proving it"
-sidebar_label: "06 · The boot, and proving it"
-sidebar_position: 6
+sidebar_label: "07 · The boot, and proving it"
+sidebar_position: 7
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -220,4 +220,4 @@ is the cheapest documentation a project has.
 
 ---
 
-← Prev: [The proxy](05-the-proxy.md) · Index: [Phase 9](../README.md) · Overview → [The whole stack in one file](README.md)
+← Prev: [The proxy](06-the-proxy.md) · Index: [Phase 9](../README.md) · Overview → [The whole stack in one file](README.md)

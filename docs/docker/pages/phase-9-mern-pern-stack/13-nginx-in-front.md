@@ -60,7 +60,7 @@ template, one variable.
 
 ### 1 · The upstream name has to be resolved at request time
 
-🔴 Covered in full on [topic 07](07-the-whole-stack/05-the-proxy.md), and it is the
+🔴 Covered in full on [topic 07](07-the-whole-stack/06-the-proxy.md), and it is the
 single most common way this configuration breaks. `proxy_pass` consults a
 `resolver` only when *"Parameter value can contain variables"* — with a literal
 name, the documentation does not describe request-time re-resolution at all. Since
@@ -154,11 +154,11 @@ genuinely is the edge, not otherwise.
 ⚠️ **Whatever you choose, the API must never be published directly.** Two entry
 points means two places to configure TLS, two places for headers to be wrong, and a
 CORS problem the single-origin design was supposed to delete
-([topic 07](07-the-whole-stack/02-the-wiring.md)).
+([topic 07](07-the-whole-stack/03-the-wiring.md)).
 
 ## The container specifics, briefly
 
-All established on [topic 07 · The proxy](07-the-whole-stack/05-the-proxy.md) and
+All established on [topic 07 · The proxy](07-the-whole-stack/06-the-proxy.md) and
 not re-argued here: `STOPSIGNAL SIGQUIT` is already correct and must not be
 overridden; `-g daemon off;` is why the container stays up; templates in
 `/etc/nginx/templates/*.template` are `envsubst`-ed into `/etc/nginx/conf.d/`, which

@@ -1,7 +1,7 @@
 ---
 title: "The wiring: ports, networks, volumes and secrets"
-sidebar_label: "02 · The wiring"
-sidebar_position: 2
+sidebar_label: "03 · The wiring"
+sidebar_position: 3
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -92,7 +92,7 @@ Two other facts from phase 8 that this file depends on:
 - **A recreated container "joins the network under a different IP address but the
   same name."** So the name is the address — hardcoding an IP works exactly once,
   and this is the fact the proxy's configuration has to respect
-  ([04 · The application services](04-the-api-and-the-frontend.md)).
+  ([04 · The application services](05-the-api-and-the-frontend.md)).
 
 ## Volumes are declared twice, deliberately
 
@@ -241,4 +241,4 @@ which is why this stack has two networks and only the API on both.
 
 ---
 
-← Prev: [The file and its shape](01-the-file.md) · Index: [Phase 9](../README.md) · Next → [The stateful services](03-the-stateful-services.md)
+← Prev: [The file and its shape](01-the-file.md) · Index: [Phase 9](../README.md) · Next → [The stateful services](04-the-stateful-services.md)

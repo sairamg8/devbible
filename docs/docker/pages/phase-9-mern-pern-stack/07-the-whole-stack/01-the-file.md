@@ -155,8 +155,9 @@ secrets:
     file: ./secrets/db_password.txt
 ```
 
-🔴 **Six services, exactly one published port** — everything else talks over a
-Compose network by service name.
+🔴 **Six services and exactly one published port.** Everything else talks over a
+Compose network by service name. That is the shape you are aiming at, and most of
+the decisions in this topic follow from it.
 
 ## There is no `version:` at the top
 
@@ -167,49 +168,14 @@ from the binary you are running, never from a number in the file** — which is 
 this page states a Compose version at the top and the file does not. `name:` is
 the only top-level metadata worth writing.
 
-## The `x-` block at the top
+## Where each chunk goes
 
-`migrate` and `api` are **the same image running a different command**, and they
-need the same credentials. Repeating twenty lines is how the two drift apart, and
-the drift is silent — the migration job connects to the old database long after
-the API stopped.
-
-```yaml
-x-api-base: &api-base
-  build:
-    context: ./api
-    target: production
-  image: acme/api:local
-  environment:
-    PGHOST: db
-    ...
-```
-
-Three phase-8 facts make that legal, and each is load-bearing:
-
-- 🔴 **`x-` is the one prefix Compose ignores** instead of rejecting. Every other
-  unrecognised key is an error — which is exactly why a typo elsewhere in this
-  file is caught at `up` rather than at runtime.
-- 🔴 **YAML merge (`<<`) applies to mappings only, never to sequences.** That is
-  the reason `environment` is written in `KEY: value` map form throughout this
-  file, and the reason `networks:` is left *out* of the anchor: `api` needs two
-  networks and `migrate` needs one, and a merged sequence would not have given
-  either.
-- Inside one file, anchors beat
-  [`extends`](../../phase-8-compose/16-include-and-extends.md), which **does not
-  import referenced resources** — `secrets` and `depends_on` would need redeclaring.
-
-⚠️ **`image:` alongside `build:` is not "pull instead of build".** It names what
-the build produces. That is what lets `migrate` and `api` share one image without
-building it twice, and it is what makes the image pushable later.
-
-## Where each service is explained
-
-- **[02 · The wiring](02-the-wiring.md)** — ports and the three top-level blocks: one published port, the segmentation that costs four lines, why a volume is declared twice.
-- **[03 · The stateful services](03-the-stateful-services.md)** — `db`, `cache`, `migrate`: volume paths, `_FILE`, healthchecks that tell the truth, and the migration gate.
-- **[04 · The API and the frontend](04-the-api-and-the-frontend.md)** — `api` and `web`: readiness versus liveness, and why the frontend's API URL is a build-time problem.
-- **[05 · The proxy](05-the-proxy.md)** — `proxy`: what the nginx image already does, the template mechanism, and the DNS trap that turns every API rebuild into a 502.
-- **[06 · The boot, and proving it](06-the-boot-and-proving-it.md)** — the startup order end to end, and the three checks that show the stack works on a machine that is not yours.
+- **[02 · The anchor](02-the-anchor.md)** — the `x-` extension field and the YAML merge key that keep `api` and `migrate` from drifting apart, and why `environment` is a mapping everywhere.
+- **[03 · The wiring](03-the-wiring.md)** — ports and the three top-level blocks: one published port, the segmentation that costs four lines, why a volume is declared twice.
+- **[04 · The stateful services](04-the-stateful-services.md)** — `db`, `cache`, `migrate`: volume paths, `_FILE`, healthchecks that tell the truth, and the migration gate.
+- **[05 · The API and the frontend](05-the-api-and-the-frontend.md)** — `api` and `web`: readiness versus liveness, and why the frontend's API URL is a build-time problem.
+- **[06 · The proxy](06-the-proxy.md)** — `proxy`: what the nginx image already does, the template mechanism, and the DNS trap that turns every API rebuild into a 502.
+- **[07 · The boot, and proving it](07-the-boot-and-proving-it.md)** — the startup order end to end, and the three checks that show the stack works on a machine that is not yours.
 
 ## Gotchas
 
@@ -221,29 +187,32 @@ does not exist — and passed the empty result into the container.
 any password containing `$`, and the `NGINX_ENVSUBST_FILTER` regex in this file,
 whose trailing `$$` is a regex anchor and not a Compose variable.
 
-**Symptom:** An override file was supposed to replace `environment`, and instead
-the variable appears twice.
-**Cause:** `environment` was written as a **list**. Compose merges mappings by
-key but **concatenates sequences**, so a list-form override appends.
-**Fix:** Write `environment` as a mapping everywhere — which is also what makes
-the `<<: *api-base` merge work at all, since YAML merge ignores sequences.
+**Symptom:** A missing environment variable produces a confusing failure an hour
+into the stack's life rather than an error at `up`.
+**Cause:** Interpolation of an unset variable yields the **empty string**, not an
+error. Compose starts happily with `PGHOST=` and the application fails later.
+**Fix:** `${VAR:?message}` for anything genuinely required — it stops `up`
+immediately with your own text. `${VAR:-default}` for anything that has a sane
+fallback. The colon is the whole distinction between "set and non-empty" and
+merely "set".
 
-**Symptom:** The anchor was merged into `api`, but the service came up on the
-wrong network — or on none.
-**Cause:** `networks:` was put inside the `x-` block. YAML merge keys operate on
-mappings; `networks: [edge, backend]` is a **sequence**, so the merge either drops
-it or the service's own key replaces it wholesale, with no warning either way.
-**Fix:** Keep sequences out of anchors you intend to merge. Networks, `ports` and
-`depends_on` conditions differ per service anyway — the anchor is for the parts
-that genuinely must be identical.
+**Symptom:** The migration job restarts forever, or a port mapping is rejected as
+invalid.
+**Cause:** YAML type inference. Unquoted, `no` is the boolean `false`, so
+`restart: no` does not mean what it reads as; and `"8000:8000"` must be quoted
+*"to avoid conflicts with YAML base-60 float"*.
+**Fix:** Quote `restart: "no"`, quote every port mapping, and quote
+boolean-looking environment values — the documentation asks for the last of these
+*"to ensure they are not converted to True or False"*.
 
-**Symptom:** Compose rejects the file with an error about an unrecognised key, on
-a block that was added deliberately.
-**Cause:** Only the `x-` prefix is ignored. Every other top-level or service-level
-key Compose does not recognise is an error — there is no "extra data is fine"
-mode.
-**Fix:** Prefix shared fragments with `x-`. The strictness is a feature: it is the
-same rule that catches `enviroment:` at `up` instead of at three in the morning.
+**Symptom:** `docker compose up` in a subdirectory picks up a file you did not
+expect — or reports no configuration file at all.
+**Cause:** With no `-f`, Compose searches the working directory **and its
+parents**, and prefers the canonical `compose.yaml` when both it and
+`docker-compose.yaml` exist.
+**Fix:** Know which file was chosen before debugging its contents —
+`docker compose config` prints the resolved result, and `--project-directory`
+controls what relative paths inside it resolve against.
 
 ## Interview questions
 
@@ -254,47 +223,47 @@ important part: whether `develop.watch` or `start_interval` works is decided by 
 Compose binary on the machine, not by a number in the file — so "bump the version
 to get feature X" is never the fix, and pinning a Compose version in CI is.
 
-**★ What is the `x-api-base` block, and why is it not a service?**
-It is an extension field. `x-` is the single prefix Compose ignores rather than
-rejecting, so the block is legal, and the YAML anchor on it lets `api` and
-`migrate` merge one definition instead of repeating it — which matters because
-the two are the same image with different commands and would otherwise drift
-apart silently. Anchors are the right tool *within* one file; `extends` is for
-across files and does not import referenced resources such as secrets or
-`depends_on`.
+**★ Why is so much of this file quoted when the values are obviously strings or
+numbers?**
+Because YAML's type inference is the source of two silent bugs. `restart: no`
+unquoted is the boolean `false`, so the key stops meaning "never restart" — and a
+one-shot migration job then restarts forever. A port mapping must be quoted *"to
+avoid conflicts with YAML base-60 float"*, and boolean-looking environment values
+should be quoted *"to ensure they are not converted to True or False"*. Quoting
+costs nothing because environment values reach the container as strings anyway, so
+the cheap habit is to quote all of them.
 
-**★ What does `image:` mean when the service also has `build:`?**
-It names the image the build produces — it is not "pull this instead". That is
-what lets `api` and `migrate` share one built image without building it twice, and
-it is what makes the result pushable to a registry later. Whether the build runs
-at all is governed by `pull_policy`, whose value `build` forces a build and whose
-time-based values (`daily`, `weekly`, `every_<duration>`) are the sane middle
-ground given Docker Hub's pull limits.
-
-**Why is `environment` written as a mapping rather than a list?**
-Because YAML merge keys and Compose's own merge rules both distinguish mappings
-from sequences: mappings merge by key, sequences **concatenate**. As a list,
-`environment` in an override file would append rather than replace and the same
-variable would appear twice; and the `<<: *api-base` anchor would not merge it at
-all, since YAML merge applies to mappings only.
+**★ What does the top-level `name:` actually change?**
+It sets the project name, which prefixes Compose's resources — `acme_db-data`,
+`acme_edge`, the container names — so two checkouts of the same project do not
+share a database. It is the lowest-precedence way to set one, below `-p` and
+`COMPOSE_PROJECT_NAME`, so it acts as a default rather than a lock. It does **not**
+namespace host ports: two projects publishing the same host port still collide,
+because the host has never heard of a Compose project.
 
 **When do you need `$$` in a Compose file?**
 Whenever a literal dollar sign has to survive interpolation — a bcrypt hash, a
 crontab, a password containing `$`, a regex anchor, or a shell variable you want
 expanded **inside the container** rather than by Compose on the host. A single `$`
 is Compose's own syntax, and an undefined variable interpolates to the empty
-string rather than failing, so the mistake is silent. `${VAR:?message}` is the
-opposite habit worth having: it fails at `up` with your own error text.
+string rather than failing, so the mistake is silent.
 
-**Why is `PGPORT: "5432"` quoted when it is obviously a number?**
-Habit, and the habit is cheap. YAML has enough type inference to hurt you —
-`"8000:8000"` must be quoted *"to avoid conflicts with YAML base-60 float"*, and
-boolean-looking environment values *"should be enclosed in quotes to ensure they
-are not converted to True or False"*. Environment values reach the container as
-strings regardless, so quoting them all costs nothing and removes a category of
-surprise; `restart: "no"` is the case where forgetting it silently changes
-behaviour.
+**What is `${VAR:?message}` for?**
+Failing fast, in your own words. Because an unset variable interpolates to an empty
+string, a missing value normally becomes a confusing error much later; the `:?`
+form stops `up` immediately with the message you wrote. It is the cheapest
+documentation a project has, and it pairs with `${VAR:-default}` for the values
+that genuinely have a fallback — the colon distinguishing "set and non-empty" from
+merely "set".
+
+**How does Compose decide which file it is reading?**
+With no `-f`, it searches the working directory and then its parents, and prefers
+the canonical `compose.yaml` where both that and `docker-compose.yaml` exist —
+which means running `up` from a subdirectory can quietly pick up a parent
+project's file. `--project-directory` is what relative paths resolve against, and
+`docker compose config` is how you confirm which file and which values actually
+won before debugging anything else.
 
 ---
 
-← Overview: [The whole stack in one file](README.md) · Index: [Phase 9](../README.md) · Next → [Networks, volumes and secrets](02-the-wiring.md)
+← Overview: [The whole stack in one file](README.md) · Index: [Phase 9](../README.md) · Next → [The anchor](02-the-anchor.md)

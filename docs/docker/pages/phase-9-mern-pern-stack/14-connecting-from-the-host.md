@@ -120,7 +120,7 @@ The reasons compound, and none of them is theoretical:
 3. **`exec` already covers the legitimate case**, without a socket and without
    installing anything.
 4. **The database has no business being on the host network at all** — that is what
-   the `internal: true` network in [topic 07](07-the-whole-stack/02-the-wiring.md)
+   the `internal: true` network in [topic 07](07-the-whole-stack/03-the-wiring.md)
    is for, and a published port routes straight around it.
 
 🔴 **The safe habit: grep the base compose file for `ports:` before every release.**

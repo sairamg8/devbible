@@ -116,7 +116,7 @@ browser resolves it against whatever origin served the page. Set it once and:
   bundle at all.
 
 The cost is that something has to put the API on that origin, which is the reverse
-proxy in [topic 07](07-the-whole-stack/05-the-proxy.md) and
+proxy in [topic 07](07-the-whole-stack/06-the-proxy.md) and
 [topic 13](13-nginx-in-front.md). That is one small nginx configuration against a
 rebuild per environment, forever.
 

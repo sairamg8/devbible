@@ -1,7 +1,7 @@
 ---
 title: "The API and the frontend"
-sidebar_label: "04 · The API and the frontend"
-sidebar_position: 4
+sidebar_label: "05 · The API and the frontend"
+sidebar_position: 5
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -257,4 +257,4 @@ and it makes an accidental exposure require an edit in an obvious place.
 
 ---
 
-← Prev: [The stateful services](03-the-stateful-services.md) · Index: [Phase 9](../README.md) · Next → [The proxy](05-the-proxy.md)
+← Prev: [The stateful services](04-the-stateful-services.md) · Index: [Phase 9](../README.md) · Next → [The proxy](06-the-proxy.md)

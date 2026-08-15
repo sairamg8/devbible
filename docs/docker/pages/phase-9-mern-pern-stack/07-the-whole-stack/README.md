@@ -40,12 +40,13 @@ that made it happen.
 
 | # | Chunk | What it covers |
 |---|---|---|
-| 01 | **[The file and its shape](01-the-file.md)** | The complete worked `compose.yaml`, why there is no `version:`, and the `x-` anchor that keeps `api` and `migrate` from drifting apart |
-| 02 | **[The wiring](02-the-wiring.md)** | One published port and why, two networks with `internal: true`, volumes declared twice, and secrets delivered as files |
-| 03 | **[The stateful services](03-the-stateful-services.md)** | `db`, `cache`, `migrate` — the PostgreSQL 18 data path, `_FILE`, init scripts that run once, and the migration gate |
-| 04 | **[The API and the frontend](04-the-api-and-the-frontend.md)** | `api` and `web` — readiness versus liveness, and why the frontend's API URL is a build-time problem |
-| 05 | **[The proxy](05-the-proxy.md)** | What the nginx image already does, the envsubst template mechanism, and the DNS trap that turns every API rebuild into a 502 |
-| 06 | **[The boot, and proving it](06-the-boot-and-proving-it.md)** | The startup order end to end, and the three checks that show the stack works on a machine that is not yours |
+| 01 | **[The file and its shape](01-the-file.md)** | The complete worked `compose.yaml`, why there is no `version:`, and the YAML quoting that decides whether `restart: "no"` means anything |
+| 02 | **[The anchor](02-the-anchor.md)** | The `x-` extension field and the merge key that keep `api` and `migrate` from drifting apart — and why `environment` is a mapping everywhere |
+| 03 | **[The wiring](03-the-wiring.md)** | One published port and why, two networks with `internal: true`, volumes declared twice, and secrets delivered as files |
+| 04 | **[The stateful services](04-the-stateful-services.md)** | `db`, `cache`, `migrate` — the PostgreSQL 18 data path, `_FILE`, init scripts that run once, and the migration gate |
+| 05 | **[The API and the frontend](05-the-api-and-the-frontend.md)** | `api` and `web` — readiness versus liveness, and why the frontend's API URL is a build-time problem |
+| 06 | **[The proxy](06-the-proxy.md)** | What the nginx image already does, the envsubst template mechanism, and the DNS trap that turns every API rebuild into a 502 |
+| 07 | **[The boot, and proving it](07-the-boot-and-proving-it.md)** | The startup order end to end, and the three checks that show the stack works on a machine that is not yours |
 
 ## The five lines that carry the risk
 

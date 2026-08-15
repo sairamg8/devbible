@@ -1,7 +1,7 @@
 ---
 title: "The proxy"
-sidebar_label: "05 · The proxy"
-sidebar_position: 5
+sidebar_label: "06 · The proxy"
+sidebar_position: 6
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -231,4 +231,4 @@ by default. Neither is required, and both remove a category of surprise.
 
 ---
 
-← Prev: [The API and the frontend](04-the-api-and-the-frontend.md) · Index: [Phase 9](../README.md) · Next → [The boot, and proving it](06-the-boot-and-proving-it.md)
+← Prev: [The API and the frontend](05-the-api-and-the-frontend.md) · Index: [Phase 9](../README.md) · Next → [The boot, and proving it](07-the-boot-and-proving-it.md)

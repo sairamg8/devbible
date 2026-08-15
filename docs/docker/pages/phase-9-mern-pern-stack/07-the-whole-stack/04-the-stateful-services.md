@@ -1,7 +1,7 @@
 ---
 title: "The stateful services"
-sidebar_label: "03 · The stateful services"
-sidebar_position: 3
+sidebar_label: "04 · The stateful services"
+sidebar_position: 4
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -294,4 +294,4 @@ line, rather than being made implicitly by whoever wrote the service first.
 
 ---
 
-← Prev: [The wiring](02-the-wiring.md) · Index: [Phase 9](../README.md) · Next → [The application services](04-the-api-and-the-frontend.md)
+← Prev: [The wiring](03-the-wiring.md) · Index: [Phase 9](../README.md) · Next → [The application services](05-the-api-and-the-frontend.md)
