@@ -199,4 +199,5 @@ since `import` does not support them.
 
 ---
 
-← Prev: [01 · The CommonJS model](./01-the-commonjs-model.md)
+← Prev: [01 · The CommonJS model](./01-the-commonjs-model.md) ·
+[Topic index](./README.md)

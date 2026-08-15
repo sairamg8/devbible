@@ -187,4 +187,4 @@ No — Node documents them as separate, which is how one module ends up loaded t
 
 ---
 
-← *(topic index and next chunk land with the README)*
+← [Topic index](./README.md) · Next → [02 · Interop, both ways](./02-interop-both-ways.md)
