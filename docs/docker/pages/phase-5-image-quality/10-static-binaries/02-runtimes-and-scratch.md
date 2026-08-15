@@ -202,4 +202,4 @@ be copying in and keeping current yourself.
 
 ---
 
-← Prev: [Linking](01-linking.md) · Index: [Static binaries](README.md) · Next → **SBOMs and provenance** *(not written yet)*
+← Prev: [Linking](01-linking.md) · Index: [Static binaries](README.md) · Next → [SBOMs and provenance](../11-sbom-and-provenance.md)

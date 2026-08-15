@@ -35,4 +35,4 @@ draws between a linking property and a packaging one.
 
 ---
 
-← Prev: [Supply-chain risk](../09-supply-chain-risk.md) · Index: [Phase 5](../README.md) · Next → **SBOMs and provenance** *(not written yet)*
+← Prev: [Supply-chain risk](../09-supply-chain-risk.md) · Index: [Phase 5](../README.md) · Next → [SBOMs and provenance](../11-sbom-and-provenance.md)

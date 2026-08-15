@@ -109,8 +109,8 @@ publisher to track. A small set of approved bases used everywhere is easier to
 patch and easier to reason about than each team choosing its own.
 
 **Know what is in it.** An SBOM makes the inventory explicit and machine-readable
-rather than something you discover during an incident — **page 11 · SBOMs and
-provenance** *(not written yet)*.
+rather than something you discover during an incident —
+[page 11 · SBOMs and provenance](11-sbom-and-provenance.md).
 
 **Check the whole chain, not just the base.** Language dependencies are the other
 half of the same problem, and typosquatted npm and PyPI packages are more common
