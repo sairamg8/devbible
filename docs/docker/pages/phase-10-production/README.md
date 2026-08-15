@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🏁 **COMPLETE — 16 of 16 topics**, every tier written. 30 files, 5,627 lines, 0 over
+🏁 **COMPLETE — 16 of 16 topics**, every tier written. 29 files, 5,645 lines, 0 over
 the 300-line cap; every internal link resolved against the filesystem — **link-checked,
 not built.**
 
