@@ -207,4 +207,4 @@ whole class; otherwise the client connection has to be configured explicitly.
 
 ---
 
-← Prev: [Getting the file in](01-getting-the-file-in.md) · Index: [Hot reload inside a container](README.md) · Next → **Secrets in dev vs prod** *(not written yet)*
+← Prev: [Getting the file in](01-getting-the-file-in.md) · Index: [Hot reload inside a container](README.md) · Next → [Secrets in dev vs prod](../06-secrets-dev-vs-prod.md)
