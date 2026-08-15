@@ -123,14 +123,21 @@ application's own `--healthcheck` mode is the answer
 
 The semantics match; the mechanism is different, and it shows:
 
-- **There is no daemon polling on a timer.** Podman schedules healthchecks with
-  **systemd timers**, so on a system without a running systemd user session the
-  checks may simply not run — a container that is never marked unhealthy is not
-  necessarily healthy.
-- `podman healthcheck run <container>` executes the check on demand, which is the
-  honest way to test one.
-- Under **Quadlet** (Phase 11) the timer is part of the generated unit set, and
-  `HealthCmd=`/`HealthInterval=` are expressed in the `.container` file.
+- **There is no daemon polling on a timer.** Something outside the engine has to
+  fire each check, and `podman-run(1)` says so only obliquely: an `--health-interval`
+  of `disable` "results in no **automatic timer setup**". ⚠️ **The reference does
+  not name what provides that timer**, so this page does not either — what it does
+  say is that on a host where nothing is scheduling the checks, they may simply not
+  run, and a container that was never marked unhealthy is not thereby healthy.
+- `podman healthcheck run <container>` "runs the healthcheck command defined in a
+  running container manually", which is the honest way to test one.
+- **`--health-on-failure` interacts with supervision**: "do not combine the
+  `restart` action with the `--restart` flag. When running inside of a systemd
+  unit, consider using the `kill` or `stop` action instead to make use of
+  systemd's restart policy" — the one-supervisor rule again.
+- Under [Quadlet](../phase-11-podman-in-depth/04-quadlet/README.md) the check is
+  part of the generated unit set, and `HealthCmd=` is expressed in the
+  `.container` file.
 
 🔴 **"The health status never changed" means something different on each engine** —
 under Docker it means the check passed; under rootless Podman it may mean nothing
@@ -187,10 +194,13 @@ minute and a half. Set the timeout well below a healthy response time and pick
 interval × retries against how long you will tolerate serving errors.
 
 **What is different about healthchecks under Podman?**
-There is no daemon polling them; Podman drives checks with systemd timers, so
-without a running systemd session they may not execute at all — meaning "never
-marked unhealthy" is not evidence of health. `podman healthcheck run` executes one
-on demand.
+There is no daemon polling them. The engine sets up a timer — `--health-interval
+disable` "results in no automatic timer setup" — but the reference does not say
+what provides it, and on a host where nothing fires the checks they may not
+execute at all, so "never marked unhealthy" is not evidence of health.
+`podman healthcheck run` executes one on demand, and `--health-on-failure` should
+use `kill` or `stop` rather than `restart` inside a systemd unit, so there is one
+supervisor.
 
 ---
 
