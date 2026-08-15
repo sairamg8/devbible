@@ -250,8 +250,8 @@ behaviour is actually wanted.
 **Symptom:** Hovers and errors are suddenly enormous
 **Cause:** A large literal is now carried as a full readonly tuple.
 **Fix:** Intended, mostly — but if the return type never reads the literals, the
-`const` is not earning its place (**topic 13 · When *not* to write a generic**
-*(not written yet)*).
+`const` is not earning its place
+([topic 13](./13-when-not-to-write-a-generic.md)).
 
 ## Interview questions
 
@@ -286,4 +286,4 @@ position.
 
 ---
 
-← Prev: [11 · `infer` in conditional types](./11-infer-in-conditional-types.md) · Next → **13 · When *not* to write a generic** *(not written yet)*
+← Prev: [11 · `infer` in conditional types](./11-infer-in-conditional-types.md) · Next → [13 · When *not* to write a generic](./13-when-not-to-write-a-generic.md)

@@ -44,7 +44,7 @@ found the wrong equation.
 | 10 | [Inference sites and contextual typing](./10-inference-sites-and-contextual-typing.md) | <span className="db-tier t-understand">Understand</span> | Why inference works from arguments and not from the return position |
 | 11 | [`infer` in conditional types](./11-infer-in-conditional-types.md) | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
 | 12 | [`const` type parameters](./12-const-type-parameters.md) | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
-| 13 | When *not* to write a generic | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
+| 13 | [When *not* to write a generic](./13-when-not-to-write-a-generic.md) | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
 | 14 | Variance | <span className="db-tier t-know">Know</span> | Co/contra/bivariance, `strictFunctionTypes`, and the `in`/`out` annotations |
 
 *(Pages are linked from this table as they are written.)*
