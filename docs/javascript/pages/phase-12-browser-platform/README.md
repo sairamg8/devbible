@@ -8,12 +8,11 @@ sidebar_position: 0
 the security surface. As the syllabus puts it, this phase is **broad by design**: most rows are
 Know until a project needs them.
 
-## Status — 🚧 **20 of 21** · Understand ✅ COMPLETE (03–13) · **Know ✅ COMPLETE (14–20)** · Master ✅ (01–02) · only 21 left
+## Status — ✅ **COMPLETE — 21 of 21, every tier** · Master 2/2 · Understand 11/11 · Know 7/7 · When Needed 1/1
 
-**Master tier is complete** — 01 and 02, both written. The **Understand tier is now the work**
-(chunk **D** of the four-way JavaScript split), taken in order, lowest number first. This phase
-is deliberately broad above the Master line: the syllabus says most rows *"are Know until a
-project needs them"*.
+🏁 **This phase is finished at every tier**, written by chunk **D** of the four-way JavaScript
+split. It is deliberately broad above the Master line — the syllabus says most rows *"are Know
+until a project needs them"* — and every one of them is now written.
 
 ## Topics
 
@@ -39,7 +38,7 @@ project needs them"*.
 | 18 | **[Media from JavaScript](./18-media/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 19 | **[Page Visibility, Wake Lock and Battery](./19-visibility-wakelock-battery/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 20 | **[Internationalisation in the browser](./20-i18n-in-the-browser/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | 🚧 next |
+| 21 | **[`SharedArrayBuffer` and `Atomics`](./21-sharedarraybuffer-and-atomics/README.md)** | <span className="db-tier t-when">When Needed</span> | ✅ |
 
 ## Coverage
 
@@ -48,8 +47,8 @@ project needs them"*.
 | <span className="db-tier t-master">Master</span> | 2 | **2** ✅ |
 | <span className="db-tier t-understand">Understand</span> | 11 | **11** ✅ (03–13) |
 | <span className="db-tier t-know">Know</span> | 7 | **7** ✅ (14–20) |
-| <span className="db-tier t-when">When Needed</span> | 1 | 0 |
-| **Total** | **21** | **20** |
+| <span className="db-tier t-when">When Needed</span> | 1 | **1** ✅ (21) |
+| **Total** | **21** | **21** ✅ |
 
 ## How these pages are verified
 
