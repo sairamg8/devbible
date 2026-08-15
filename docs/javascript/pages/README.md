@@ -45,7 +45,7 @@ import Progress from '@site/src/components/Progress';
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
 | **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | ✅ **COMPLETE — every tier (18/18)** · Master 4/4 · Understand 11/11 · Know 3/3 |
-| **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🟡 **Master tier ✅** (01–07 — all seven); rest deferred |
+| **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🚧 **Master ✅ 7/7** · in-scope Understand **11 ✅**, 12 and 15 to go — **8/10 in scope** |
 
 ## 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15)
 
@@ -139,7 +139,7 @@ worktrees left.
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain ✅ **18/18** | **0** | — | ✅ **chunk C complete**: phase 7 22/22 and phase 8 18/18, finished 2026-08-15 |
 | **D** | 12 · The browser platform ✅ **COMPLETE 21/21** | 0 | — every tier done 2026-08-15 | chunk D continues in phase 18 |
-| **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
+| **D** | 18 · Building the store front end (**8**/18) | 2 | ✅ **11 · Infinite scroll and lazy images** written → **12 · Long lists without freezing** next | 🔴 **15 · Review uploads belongs to the SECOND session** (split 2026-08-15). ⚠️ Only 11, 12, 15 are in scope — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 |
 
 **Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
 99/99** and a Master topic is not reopened to deepen it. Inside a phase the order is **Understand →

@@ -18,7 +18,7 @@ The seven written Master topics (01–07) are unaffected. Phase 18 is **7 of 10 
 then the operational surface. **This is the last phase**, and it composes everything the earlier
 ones taught.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **8 of 10 in scope** · Master ✅ 7/7 (01–07) · Understand 1/3 (**11** ✅, 12 and 15 to go)
 
 **Master tier first.** Phase 18 has **seven** Master topics — 01 through 07 — and **all seven are
 written**. They were the last seven Master topics in the corpus: 🔴 **every Master topic in the
@@ -35,8 +35,8 @@ JavaScript syllabus is now written.**
 | 05 | **[Money, quantities and rounding](./05-money-and-rounding/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 06 | **[Optimistic updates with rollback](./06-optimistic-updates/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 07 | **[Idempotency from the client](./07-idempotency/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 11 | Infinite scroll and lazy images | <span className="db-tier t-understand">Understand</span> | deferred |
-| 12 | Long lists without freezing | <span className="db-tier t-understand">Understand</span> | deferred |
+| 11 | **[Infinite scroll and lazy images](./11-infinite-scroll-and-lazy-images/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 12 | Long lists without freezing | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 15 | Review uploads | <span className="db-tier t-understand">Understand</span> | deferred |
 | ~~08–10, 13, 14, 16–18~~ | ~~Persisting the cart, auth in the browser, checkout forms, client-side routing, real-time order tracking, dates and delivery estimates, failing in public, a performance budget~~ | <span className="db-tier t-understand">Understand</span> | 🚫 **dropped** |
 
