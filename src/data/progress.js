@@ -252,7 +252,7 @@ export const LANGUAGES = {
       {n: 5, slug: 'phase-5-image-quality', name: 'Image quality, size and supply chain', part: 'Building images', topics: 12, pages: 0},
       {n: 6, slug: 'phase-6-storage', name: 'Storage: volumes, mounts and data', part: 'Running a real stack', topics: 12, pages: 1},
       {n: 7, slug: 'phase-7-networking', name: 'Networking', part: 'Running a real stack', topics: 14, pages: 0},
-      {n: 8, slug: 'phase-8-compose', name: 'Compose', part: 'Running a real stack', topics: 17, pages: 0},
+      {n: 8, slug: 'phase-8-compose', name: 'Compose', part: 'Running a real stack', topics: 17, pages: 1, pagesPlanned: 17},
       {n: 9, slug: 'phase-9-mern-pern-stack', name: 'The MERN/PERN stack in containers', part: 'Running a real stack', topics: 14, pages: 0},
       {n: 10, slug: 'phase-10-production', name: 'Running containers in production', part: 'Production and depth', topics: 16, pages: 0},
       {n: 11, slug: 'phase-11-podman-in-depth', name: 'Podman in depth', part: 'Production and depth', topics: 16, pages: 0},
