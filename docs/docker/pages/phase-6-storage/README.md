@@ -27,7 +27,7 @@ the difference between "my database survived a redeploy" and a support ticket.
 | 06 | **[Volume lifecycle](06-volume-lifecycle.md)** | <span className="db-tier t-understand">Understand</span> | `create` / `ls` / `inspect` / `rm` / `prune`, and how anonymous volumes pile up |
 | 07 | **[SELinux `:z` and `:Z`](07-selinux-z-and-Z.md)** | <span className="db-tier t-understand">Understand</span> | The two-character fix for "permission denied" on Fedora and RHEL |
 | 08 | **[`--read-only` and `tmpfs`](08-read-only-rootfs.md)** | <span className="db-tier t-know">Know</span> | The production posture, and what breaks first |
-| 09 | **`--userns=keep-id`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Podman's answer to bind-mount ownership |
+| 09 | **[`--userns=keep-id`](09-userns-keep-id.md)** | <span className="db-tier t-understand">Understand</span> | Podman's answer to bind-mount ownership |
 | 10 | **Backing up and restoring a volume** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The tar-through-a-throwaway-container idiom, and why a database needs more |
 | 11 | **Volume drivers and network storage** *(not written yet)* | <span className="db-tier t-know">Know</span> | When the `local` driver is not enough |
 | 12 | **Bind-mount performance on macOS and Windows** *(not written yet)* | <span className="db-tier t-know">Know</span> | A VM boundary you cannot see, and what VirtioFS changed |
