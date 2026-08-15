@@ -188,4 +188,4 @@ an image; `source=` selects a subpath.
 
 ---
 
-← Prev: [`RUN --mount=type=cache`](09-mount-type-cache.md) · Index: [Phase 4](README.md) · Next → **`buildx` and platforms** *(not written yet)*
+← Prev: [`RUN --mount=type=cache`](09-mount-type-cache.md) · Index: [Phase 4](README.md) · Next → [`buildx` and platforms](11-buildx-and-platforms.md)

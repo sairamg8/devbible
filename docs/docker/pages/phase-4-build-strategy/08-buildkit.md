@@ -118,7 +118,7 @@ One subtlety that catches people, documented plainly:
 `docker buildx build` respects the builder you selected. So `buildx use` appears
 to have no effect if you keep typing `docker build`. The driver detail — and why
 multi-platform builds need `docker-container` — is
-**page 11 · `buildx` and platforms** *(not written yet)*.
+[page 11 · `buildx` and platforms](11-buildx-and-platforms.md).
 
 ## Reading the output
 
