@@ -8,12 +8,12 @@ sidebar_position: 0
 the security surface. As the syllabus puts it, this phase is **broad by design**: most rows are
 Know until a project needs them.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **3 of 21** · Master ✅ (01–02) · Understand under way
 
-**Master tier first.** Phase 12 has **two** Master topics — 01 and 02 — and **both are written**.
-The Understand and Know rows are deferred until the Master tiers of the remaining phases are
-written. This phase is deliberately broad and shallow above the Master line: the syllabus says
-most rows *"are Know until a project needs them"*.
+**Master tier is complete** — 01 and 02, both written. The **Understand tier is now the work**
+(chunk **D** of the four-way JavaScript split), taken in order, lowest number first. This phase
+is deliberately broad above the Master line: the syllabus says most rows *"are Know until a
+project needs them"*.
 
 ## Topics
 
@@ -21,9 +21,20 @@ most rows *"are Know until a project needs them"*.
 |---|---|---|---|
 | 01 | **[DevTools beyond `console.log`](./01-devtools/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 02 | **[Client-side security](./02-client-side-security/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 03–13 | Timers and frames, `IntersectionObserver`, `ResizeObserver`, `PerformanceObserver`, Web Workers, History API, `window`/`document`/`navigator`, `WebCrypto`, accessibility, feature detection, what belongs on the server | <span className="db-tier t-understand">Understand</span> | deferred |
+| 03 | **[Timers and frames](./03-timers-and-frames/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 04–13 | `IntersectionObserver`, `ResizeObserver`, `PerformanceObserver`, Web Workers, History API, `window`/`document`/`navigator`, `WebCrypto`, accessibility, feature detection, what belongs on the server | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 14–20 | Yielding to the main thread, cross-tab coordination, Clipboard/Web Share/File System Access, permissions, media, Page Visibility, i18n | <span className="db-tier t-know">Know</span> | deferred |
 | 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | deferred |
+
+## Coverage
+
+| Tier | Topics | Written |
+|---|---|---|
+| <span className="db-tier t-master">Master</span> | 2 | **2** ✅ |
+| <span className="db-tier t-understand">Understand</span> | 11 | **1** (03) |
+| <span className="db-tier t-know">Know</span> | 7 | 0 |
+| <span className="db-tier t-when">When Needed</span> | 1 | 0 |
+| **Total** | **21** | **3** |
 
 ## How these pages are verified
 

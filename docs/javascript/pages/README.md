@@ -34,7 +34,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | ✅ **complete — every tier** (Master 7/7 · Understand 9/9 · Know 4/4) |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–17 done) |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🚧 **Master ✅** (01–03) · Understand under way (**04** ✅) |
-| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
+| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🚧 **Master ✅ 11/11** · Understand under way (**12** ✅) — **12/22** |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
