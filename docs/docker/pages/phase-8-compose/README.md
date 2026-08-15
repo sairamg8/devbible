@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 4 of 17 topics written.**
+🚧 **In progress — 5 of 17 topics written.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -25,7 +25,7 @@ actually true, and volumes. Everything else refines those.
 | 02 | **[`compose.yaml` and the Compose Specification](02-compose-yaml-and-the-spec/README.md)** | <span className="db-tier t-master">Master</span> | One schema, always the newest — `version:` is obsolete; and the YAML that silently mis-parses your ports |
 | 03 | **[`up`, `down` and the lifecycle](03-up-and-down/README.md)** | <span className="db-tier t-master">Master</span> | `up` reconciles and recreates; `down -v` is the command that deletes your development database |
 | 04 | **[The `services` block](04-services-block/README.md)** | <span className="db-tier t-master">Master</span> | `image` vs `build`, the `entrypoint` that discards your `CMD`, and the port mapping that binds every interface |
-| 05 | `depends_on` with `condition: service_healthy` | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 05 | **[`depends_on` with `condition: service_healthy`](05-depends-on.md)** | <span className="db-tier t-master">Master</span> | Plain `depends_on` waits for *started*, not ready — and it does nothing at all after boot |
 | 06 | Healthchecks in Compose | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 07 | Networks in Compose | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 08 | Volumes in Compose | <span className="db-tier t-master">Master</span> | _not written yet_ |
