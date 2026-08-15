@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 7 of 17 topics written.**
+🚧 **In progress — 8 of 17 topics written. The Master tier (02–06, 08) is complete.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -28,7 +28,7 @@ actually true, and volumes. Everything else refines those.
 | 05 | **[`depends_on` with `condition: service_healthy`](05-depends-on.md)** | <span className="db-tier t-master">Master</span> | Plain `depends_on` waits for *started*, not ready — and it does nothing at all after boot |
 | 06 | **[Healthchecks in Compose](06-healthchecks/README.md)** | <span className="db-tier t-master">Master</span> | The defaults are wrong, `start_period` + `start_interval` fix them, and a check that lies is worse than none |
 | 07 | **[Networks in Compose](07-networks.md)** | <span className="db-tier t-understand">Understand</span> | Service-name DNS for free, the container port is not the published port, and segmenting a stack with two networks |
-| 08 | Volumes in Compose | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 08 | **[Volumes in Compose](08-volumes.md)** | <span className="db-tier t-master">Master</span> | Named for data, bind for source, and the anonymous-volume shield that makes `node_modules` work |
 | 09 | The project name | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 10 | Environment and interpolation | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 11 | Override files | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
