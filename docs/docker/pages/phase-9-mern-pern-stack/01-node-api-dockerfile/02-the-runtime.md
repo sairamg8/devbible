@@ -224,4 +224,4 @@ turns one blip into a stack-wide outage.
 
 ---
 
-← Prev: [The build](01-the-build.md) · Index: [Containerising a Node/Express API](README.md) · Next → **Dev image vs prod image** *(not written yet)*
+← Prev: [The build](01-the-build.md) · Index: [Containerising a Node/Express API](README.md) · Next → [Dev image vs prod image](../02-dev-vs-prod-image.md)

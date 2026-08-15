@@ -10,7 +10,7 @@ sidebar_position: 0
 > manuals, with the sources named per page. **No sandbox** — nothing was run, so
 > no page carries console output.
 
-🚧 **In progress — 1 of 14 topics written.**
+🚧 **In progress — 2 of 14 topics written.**
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
@@ -24,7 +24,7 @@ reload that actually reloads, and the worked file that ties them together.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Containerising a Node/Express API](01-node-api-dockerfile/README.md)** | <span className="db-tier t-master">Master</span> | Three stages, `npm ci`, `USER node`, and the `CMD` line that decides whether deploys drop requests |
-| 02 | Dev image vs prod image | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 02 | **[Dev image vs prod image](02-dev-vs-prod-image.md)** | <span className="db-tier t-understand">Understand</span> | One Dockerfile, two targets — because two Dockerfiles drift, and the drift surfaces in production |
 | 03 | PostgreSQL in a container | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 04 | Waiting for the database | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 05 | Hot reload inside a container | <span className="db-tier t-master">Master</span> | _not written yet_ |
