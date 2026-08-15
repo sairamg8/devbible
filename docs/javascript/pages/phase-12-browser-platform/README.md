@@ -8,7 +8,7 @@ sidebar_position: 0
 the security surface. As the syllabus puts it, this phase is **broad by design**: most rows are
 Know until a project needs them.
 
-## Status — 🚧 **19 of 21** · Understand tier ✅ COMPLETE (03–13) · Know tier under way (14–19) · Master ✅ (01–02)
+## Status — 🚧 **20 of 21** · Understand ✅ COMPLETE (03–13) · **Know ✅ COMPLETE (14–20)** · Master ✅ (01–02) · only 21 left
 
 **Master tier is complete** — 01 and 02, both written. The **Understand tier is now the work**
 (chunk **D** of the four-way JavaScript split), taken in order, lowest number first. This phase
@@ -38,8 +38,8 @@ project needs them"*.
 | 17 | **[Permissions, Geolocation and Notifications](./17-permissions-geolocation-notifications/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 18 | **[Media from JavaScript](./18-media/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 19 | **[Page Visibility, Wake Lock and Battery](./19-visibility-wakelock-battery/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 20 | Internationalisation in the browser | <span className="db-tier t-know">Know</span> | 🚧 next |
-| 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | deferred |
+| 20 | **[Internationalisation in the browser](./20-i18n-in-the-browser/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | 🚧 next |
 
 ## Coverage
 
@@ -47,9 +47,9 @@ project needs them"*.
 |---|---|---|
 | <span className="db-tier t-master">Master</span> | 2 | **2** ✅ |
 | <span className="db-tier t-understand">Understand</span> | 11 | **11** ✅ (03–13) |
-| <span className="db-tier t-know">Know</span> | 7 | **6** (14–19) |
+| <span className="db-tier t-know">Know</span> | 7 | **7** ✅ (14–20) |
 | <span className="db-tier t-when">When Needed</span> | 1 | 0 |
-| **Total** | **21** | **19** |
+| **Total** | **21** | **20** |
 
 ## How these pages are verified
 
