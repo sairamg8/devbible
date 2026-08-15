@@ -92,8 +92,8 @@ unreachable from the host. Use `docker run -p` and talk to the published port �
 the address in `inspect` is real, just not in your namespace.
 
 **Ports below 1024 fail.** An unprivileged process cannot bind them. That has
-its own page — **09 · Privileged ports rootless** *(not written yet)* — and the
-short version is that the documented options are the
+its own page — [09 · Privileged ports rootless](09-privileged-ports-rootless.md) —
+and the short version is that the documented options are the
 `net.ipv4.ip_unprivileged_port_start` sysctl, granting `CAP_NET_BIND_SERVICE` to
 the `rootlesskit` binary, or *"choose a larger port number (>= 1024)"* — and the
 last one is usually right.
@@ -214,4 +214,4 @@ rootless removes an entire class of host compromise.
 
 ---
 
-← Prev: [Reaching the host from inside](07-reaching-the-host.md) · Index: [Phase 7](README.md) · Next → **Privileged ports rootless** *(not written yet)*
+← Prev: [Reaching the host from inside](07-reaching-the-host.md) · Index: [Phase 7](README.md) · Next → [Privileged ports rootless](09-privileged-ports-rootless.md)
