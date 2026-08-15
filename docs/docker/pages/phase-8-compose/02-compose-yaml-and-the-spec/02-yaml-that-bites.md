@@ -226,4 +226,4 @@ concatenating. The list form is not wrong, but it forecloses both of those.
 
 ---
 
-← Prev: [The Specification and the file](01-the-spec-and-the-file.md) · Topic index: [compose.yaml and the Spec](README.md) · Next → [up, down and the lifecycle](../03-up-and-down.md)
+← Prev: [The Specification and the file](01-the-spec-and-the-file.md) · Topic index: [compose.yaml and the Spec](README.md) · Next → [up, down and the lifecycle](../03-up-and-down/README.md)

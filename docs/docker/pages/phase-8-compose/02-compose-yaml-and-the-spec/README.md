@@ -43,7 +43,7 @@ the file moves.
 
 - **[01 · What Compose is](../01-what-compose-is.md)** established the file/CLI
   split this topic fills in.
-- **[03 · up, down and the lifecycle](../03-up-and-down.md)** is what acts on the
+- **[03 · up, down and the lifecycle](../03-up-and-down/README.md)** is what acts on the
   file once it parses.
 - **[11 · Override files](../11-override-files.md)** and
   **[16 · include and extends](../16-include-and-extends.md)** are the two ways one
