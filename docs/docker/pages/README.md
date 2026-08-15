@@ -65,13 +65,13 @@ answers.
 | **[04 · Build strategy: cache, multi-stage, BuildKit](./phase-4-build-strategy/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[05 · Image quality, size and supply chain](./phase-5-image-quality/README.md)** | 12 | 4 | 🚧 **Writing — chunk A** |
 | **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 12 | ✅ **Complete** |
-| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 1 | 🚧 **Writing — chunk B** |
+| **[07 · Networking](./phase-7-networking/README.md)** | 14 | 2 | 🚧 **Writing — chunk B** |
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 10 | 🚧 **Writing — chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 7 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **113** | |
+| **Total** | **192** | **114** | |
 
 import Progress from '@site/src/components/Progress';
 

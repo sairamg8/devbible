@@ -21,7 +21,7 @@ another, and the single most common connection bug in the whole track.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[The default bridge vs a user-defined bridge](01-default-vs-user-defined-bridge.md)** | <span className="db-tier t-master">Master</span> | Only user-defined networks give you DNS by container name |
-| 02 | **Service discovery** *(not written yet)* | <span className="db-tier t-master">Master</span> | Reach a service by name, on the container port, with nothing published |
+| 02 | **[Service discovery](02-service-discovery.md)** | <span className="db-tier t-master">Master</span> | Reach a service by name, on the container port, with nothing published |
 | 03 | **`localhost` inside a container is the container** *(not written yet)* | <span className="db-tier t-master">Master</span> | Why `DB_HOST=localhost` fails and `DB_HOST=postgres` works |
 | 04 | **Publishing ports** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `-p`, the host interface you bind to, and the firewall rules written for you |
 | 05 | **Network drivers** *(not written yet)* | <span className="db-tier t-know">Know</span> | `bridge`, `host`, `none`, `macvlan`, `ipvlan`, `overlay`, one sentence each |
