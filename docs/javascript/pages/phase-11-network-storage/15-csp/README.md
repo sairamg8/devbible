@@ -21,7 +21,7 @@ hash rather than `'unsafe-inline'`.
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[What a policy breaks](./01-what-a-policy-breaks.md)** | Header vs `<meta>` vs report-only; the directive groups, and 🔴 **`connect-src` governing `fetch`, `WebSocket` and `EventSource`**; `default-src` as a fallback and **the nine directives that never fall back**; the four things blocked from JavaScript's side; why a **domain allow-list is weak**; rolling out with report-only and the `securitypolicyviolation` event |
-| 2 | **Nonces, hashes and `strict-dynamic`** *(next)* | Making a strict policy and a working app coexist — per-response nonces and why static HTML cannot carry one; hashes for build-time-known scripts; what `'strict-dynamic'` actually trusts and what it gives up; the migration order; and Trusted Types |
+| 2 | **[Nonces, hashes and `strict-dynamic`](./02-nonces-and-strict-dynamic.md)** | Making a strict policy and a working app coexist — per-response nonces and why static HTML cannot carry one; hashes for build-time-known scripts; what `'strict-dynamic'` actually trusts and what it gives up; the migration order; and Trusted Types |
 
 ## The policy worth memorising
 

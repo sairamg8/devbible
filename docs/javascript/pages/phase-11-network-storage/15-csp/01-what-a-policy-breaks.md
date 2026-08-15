@@ -18,8 +18,8 @@ Content-Security-Policy: script-src 'nonce-r4nd0m'; object-src 'none'; base-uri 
 
 🔴 **From the JavaScript side, a policy is felt as things that stop working** — inline
 `<script>`, `onclick=`, `eval`, a CDN you forgot to list, a WebSocket that will not connect.
-This chunk is the map of what breaks and why; **chunk 2** *(next)* is
-how to have a strict policy and a working app at the same time.
+This chunk is the map of what breaks and why;
+[chunk 2](./02-nonces-and-strict-dynamic.md) is how to have a strict policy and a working app at the same time.
 
 ## Where a policy comes from
 
@@ -93,7 +93,7 @@ vectors, and one of the most basic goals of a CSP is to prevent its uncontrolled
 🔴 **A policy that blocks injected inline script blocks *your* inline script too. That is the
 feature, not a bug** — the browser cannot tell them apart, which is the entire reason the
 protection works. The fix is never `'unsafe-inline'`; it is a nonce or a hash
-(**chunk 2** *(next)*).
+([chunk 2](./02-nonces-and-strict-dynamic.md)).
 
 **The refactors are mechanical:**
 
@@ -228,4 +228,4 @@ domains.
 
 ---
 
-← [Overview](./README.md) · Next → **2 · Nonces, hashes and `strict-dynamic`** *(next)*
+← [Overview](./README.md) · Next → [2 · Nonces, hashes and `strict-dynamic`](./02-nonces-and-strict-dynamic.md)
