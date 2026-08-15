@@ -60,7 +60,7 @@ CPU without reaching for "add more replicas".
   — where the evidence is read
 - [06 · The production failure catalogue](../06-failure-catalogue/README.md) ·
   [11 · Observing](../11-observing.md) ·
-  **14 · Running containers under systemd** *(not written yet)*
+  [14 · Running containers under systemd](../14-under-systemd.md)
 
 ---
 

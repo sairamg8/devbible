@@ -32,7 +32,7 @@ to execute — the runtime reports that the executable was not found, not that t
 container is unhealthy or that permissions are wrong.
 
 🔴 **Read the error as inventory, not as failure.** "No such file or directory"
-naming a shell means the image is small, which was the point. The four routes
+naming a shell means the image is small, which was the point. The five routes
 below all work without one.
 
 ## Route 1 — `docker debug`

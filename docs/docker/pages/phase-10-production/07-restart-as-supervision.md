@@ -124,7 +124,7 @@ the second and expecting the first is a quiet way to end up with no policy at al
 Under systemd — which is where a single host usually ends up — supervision is the
 unit's job and the engine's policy becomes redundant or actively confusing, since
 two supervisors will both try to own the container's lifecycle. Pick one. That
-argument is **14 · Running containers under systemd** *(not written yet)* and,
+argument is [14 · Running containers under systemd](14-under-systemd.md) and,
 for Podman, Quadlet in Phase 11.
 
 ## Podman
