@@ -38,7 +38,7 @@ the same mistake is `TS2300`.
   them.
 - **← [Phase 1 · `type` vs `interface`](../../phase-1-type-vocabulary/07-type-vs-interface.md)**
   — the decision this topic gives a practical argument for.
-- **→ 06 · Global augmentation** *(not written yet)* — `declare global` on its
+- **→ [06 · Global augmentation](../06-global-augmentation.md)** — `declare global` on its
   own terms, which is where the global-scope hazard in chunk 02 gets its remedy.
 
 ---

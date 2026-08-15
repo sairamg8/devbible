@@ -53,7 +53,7 @@ the file has to be one the compiler reads.
   that claim gets cashed.
 - **→ [05 · Interface declaration merging](../05-interface-declaration-merging/README.md)** — the same
   mechanism inside your own codebase, including the accidents it causes.
-- **→ 06 · Global augmentation** *(not written yet)* — `declare global` on its
+- **→ [06 · Global augmentation](../06-global-augmentation.md)** — `declare global` on its
   own terms, and typing `globalThis`.
 - **→ Phase 6 (Modules, declarations and the build)** — `include`, `types` and
   `typeRoots`, which is *why* chunk 03's failures happen.

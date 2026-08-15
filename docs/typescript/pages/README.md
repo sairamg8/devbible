@@ -49,21 +49,40 @@ to be confounded, the correction is on the page rather than quietly removed.
 
 ## Phases
 
+:::caution Part B was re-scoped on 2026-08-15 — phases 8, 9 and 11 are dropped
+On the user's instruction (*"I just need phase 10 and phase 12 apart from rest
+drop, if they are already written let it be and if not written yet drop those"*),
+**Part B keeps only phases 10 and 12.** Phases 8, 9 and 11 had **nothing
+written** and are dropped; phase 7 **keeps its five written Master topics** and
+its ten unwritten rows are dropped.
+
+**Nothing written was deleted** — a dropped phase that still has pages is
+correct, and phase 7's five topics stay on the reading path. The syllabus rows
+for the dropped phases are kept under banners in
+[Part 3](../syllabus/03-in-the-stack.md) and
+[Part 4](../syllabus/04-rigour-and-tooling.md); reopening any of them needs a new
+instruction. **TypeScript's in-scope total is therefore 136, not 187.**
+
+⚠️ This cut applies to **Part B only**. Phases 2–6 belong to Part A and are
+untouched by it.
+:::
+
+
 | Phase | Part | Pages | Status |
 |---|---|---|---|
 | [0 · How TypeScript runs](./phase-0-how-typescript-runs/README.md) | The type system | 13 | ✅ written |
 | [1 · The type vocabulary](./phase-1-type-vocabulary/README.md) | The type system | 17 | ✅ written |
 | [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 13 | ✅ written |
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
-| [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 5 / 14 | 🚧 writing |
+| [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 6 / 14 | 🚧 writing |
 | 5 · Type-level programming | Types at scale | — | planned |
 | 6 · Modules, declarations and the build | Types at scale | — | planned |
-| [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 15 | 🚧 writing |
-| 8 · TypeScript in React | In the stack | — | planned |
-| 9 · Types at the boundary | In the stack | — | planned |
-| 10 · Strictness and correctness | Rigour and tooling | — | planned |
-| 11 · Migration and legacy | Rigour and tooling | — | planned |
-| 12 · Tooling, performance and testing | Rigour and tooling | — | planned |
+| [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
+| ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
+| ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
+| 10 · Strictness and correctness | Rigour and tooling | — | 🎯 **in scope — next** |
+| ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
+| 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
 
 import Progress from '@site/src/components/Progress';
 

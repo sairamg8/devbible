@@ -194,4 +194,4 @@ is that it exists, not that its member has the wrong type.
 
 ---
 
-← [01 · What merges with what](./01-what-merges-with-what.md) · Up → [Overview](./README.md) · Next → **06 · Global augmentation** *(not written yet)*
+← [01 · What merges with what](./01-what-merges-with-what.md) · Up → [Overview](./README.md) · Next → [06 · Global augmentation](../06-global-augmentation.md)
