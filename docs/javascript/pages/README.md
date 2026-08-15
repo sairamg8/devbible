@@ -61,7 +61,32 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 | **C** | **7**, **8** | ✅ **0 — CHUNK C IS COMPLETE** (7: 22/22 · 8: 18/18) | Async beyond the Master tier; then modules, errors, memory and the toolchain — both phases done 2026-08-15 | ✅ session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
 | **D** | **12**, **18** | **3** — ✅ **12 COMPLETE 21/21** · 18 (**3**: 11, 12, 15 only) | ✅ the browser platform is finished; now the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
 
-### 🔴 How a session is started — `pick javascript A`, and nothing more
+### 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15)
+
+> *"if start new session i just need to give the phase and i should just say continue it should
+> take care"*
+
+**A phase number plus *continue* is the whole instruction.** *"JS phase 18, continue"* ·
+*"javascript 18"* · *"phase 18 continue"* → open `devbible/progress_javascript_split_4way.md` in the
+memory store, read its **START HERE** table, and begin writing at the topic it names. No plan, no
+confirmation, no clarifying question.
+
+| Phase | State | Start at | Held by |
+|---|---|---|---|
+| **18 · Storefront** | 🚧 only **11, 12, 15** are in scope | **11 → 12** (11's two chunks are written; its index next) | session `dbaa68e7` |
+| **18 · Storefront** | topic-level split | **15 · Review uploads**, the whole topic | 🔴 the **second session** |
+| **0–17** | ✅ **all complete at every in-scope tier** | — | — |
+
+⛔ **Every other phase is finished** — 5, 6, 7, 8, 11, 12 and 17 all closed on 2026-08-15. Phases
+**13, 14, 15 are parked** and **16 is dropped**; those are not work to continue.
+🔴 **When phase 18's three topics are done, JavaScript is DONE — stop and report**, do not pick up
+another language.
+
+⚠️ **Two sessions now share `phase-18-storefront/README.md`.** Edit only your own topic's row, stage
+that file explicitly, and leave the other session's row alone. Cross-topic links stay **bold plain
+text with *(not written yet)*** until the target file exists.
+
+### The older form — `pick javascript A`, still understood
 
 **The user starts a session by naming JavaScript plus a chunk letter, and that is the whole
 instruction.** All of these mean the same thing and require **no clarifying question**:
