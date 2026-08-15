@@ -71,7 +71,7 @@ answers.
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 16 | ✅ **Complete — chunk D** |
 | **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 5 | 🚧 **Writing — chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **162** | |
+| **Total** | **192** | **164** | |
 
 import Progress from '@site/src/components/Progress';
 
