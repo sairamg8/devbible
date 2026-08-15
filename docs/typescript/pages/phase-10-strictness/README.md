@@ -37,9 +37,9 @@ The phase splits into three moves:
 
 | # | Page | Tier | What it settles |
 |---|---|---|---|
-| 01 | [`strict` flag by flag](./01-strict-flag-by-flag/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | The seven flags `strict` turns on, and the specific bug each one rejects |
+| 01 | [`strict` flag by flag](./01-strict-flag-by-flag/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | The **nine** flags `strict` turns on — not seven — and the specific bug each one rejects |
 | 02 | [`noUncheckedIndexedAccess`](./02-nouncheckedindexedaccess.md) | <span className="db-tier t-master">Master</span> | `arr[0]` and `record[key]` become `T \| undefined` — the flag that finds the most real bugs and annoys people most |
-| 03 | Containing `any` | <span className="db-tier t-master">Master</span> | The four doors it enters through, and how it spreads silently once inside |
+| 03 | [Containing `any`](./03-containing-any.md) | <span className="db-tier t-master">Master</span> | The four doors it enters through, and how it spreads silently once inside |
 | 04 | Reading a TypeScript error | <span className="db-tier t-master">Master</span> | Start at the innermost message, read the property path first, ignore the outer noise |
 | 05 | `exactOptionalPropertyTypes` | <span className="db-tier t-understand">Understand</span> | "Absent" vs "present and `undefined`", and the API bugs that difference causes |
 | 06 | The other correctness flags | <span className="db-tier t-understand">Understand</span> | `noImplicitOverride`, `noPropertyAccessFromIndexSignature`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noUnusedLocals`/`noUnusedParameters` |
@@ -88,7 +88,8 @@ unchecked access with the warning removed.
 ## Where this connects
 
 - **← [Phase 0 · `strict`](../phase-0-how-typescript-runs/05-strict.md)** — the
-  measured default and the seven-flag list this phase expands.
+  measured default. ⚠️ That page says *seven* flags; the option table says **nine**
+  ([topic 01](./01-strict-flag-by-flag/01-what-strict-actually-is.md)).
 - **← [Phase 2 · Narrowing](../phase-2-narrowing/README.md)** — `strictNullChecks`
   is what makes narrowing mean anything at all.
 - **← [Phase 7 · TypeScript on the server](../phase-7-server/README.md)** — every
