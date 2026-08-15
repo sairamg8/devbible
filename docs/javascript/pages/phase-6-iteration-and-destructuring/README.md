@@ -7,11 +7,11 @@ sidebar_position: 0
 *13 topics.* The protocol layer. Small phase, but it is what lets `for…of`, spread,
 destructuring and `Promise.all` all work on the same objects.
 
-## Status — 🚧 **Master ✅ · Understand under way — 7 of 13**
+## Status — 🚧 **Master ✅ · Understand tier COMPLETE — 8 of 13**
 
 **Master is complete** (01, 02, 03 — unusually the first three in syllabus order). The
 Understand and Know tiers are being written now, in order, by **chunk B** of the four-way
-JavaScript split (phases 6 and 17). Next up: **08 · Early exit inside iteration**.
+JavaScript split (phases 6 and 17). **The Understand tier is now complete (04–08).** Next up: the Know tier — **09 · Two-way generators**.
 
 ## Topics
 
@@ -24,7 +24,7 @@ JavaScript split (phases 6 and 17). Next up: **08 · Early exit inside iteration
 | 05 | **[Generators](./05-generators/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 06 | **[Async iterators](./06-async-iterators/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 07 | **[Paginating an API with an async generator](./07-paginating-an-api/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 08 | Early exit inside iteration | <span className="db-tier t-understand">Understand</span> | deferred |
+| 08 | **[Early exit inside iteration](./08-early-exit/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | Two-way generators | <span className="db-tier t-know">Know</span> | deferred |
 | 10 | `yield*` delegation | <span className="db-tier t-know">Know</span> | deferred |
 | 11 | Iterator helpers | <span className="db-tier t-know">Know</span> | deferred |
