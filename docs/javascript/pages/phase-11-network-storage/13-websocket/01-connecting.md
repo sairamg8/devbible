@@ -282,4 +282,4 @@ one of the sub-protocols you offered — at most one per connection.
 
 ---
 
-← [Overview](./README.md) · Next → **2 · Messaging and closing** *(next)*
+← [Overview](./README.md) · Next → [2 · Messaging](./02-messaging.md)

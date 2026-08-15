@@ -12,7 +12,7 @@ sidebar_position: 4
 WebSocket connection will end — a sleeping laptop, a Wi-Fi handover, a server deploy, a
 proxy that kills idle connections — and the browser does nothing about it. There is no
 automatic reconnect, no replay, no queue. Compare that with `EventSource`, which reconnects
-by itself (**chunk 5** *(next)*); with a WebSocket, every line below is yours.
+by itself ([chunk 5](./05-when-not-to.md)); with a WebSocket, every line below is yours.
 
 ## Reconnecting
 
@@ -201,7 +201,7 @@ and you have no idea what happened while you were away. **Reconnecting is not re
 
 **Three things belong in the `open` handler, in order:**
 
-1. **Re-authenticate** if the protocol requires it (**chunk 5** *(next)*).
+1. **Re-authenticate** if the protocol requires it ([chunk 5](./05-when-not-to.md)).
 2. **Re-subscribe** to every channel, derived from current application state — never from a
    queued "subscribe" message that may no longer be wanted.
 3. **Close the gap in state**, using the `seq` from your envelope:
@@ -281,4 +281,4 @@ otherwise be applied twice.
 
 ---
 
-← [3 · Closing](./03-closing.md) · Next → **5 · Authentication, and when not to** *(next)*
+← [3 · Closing](./03-closing.md) · Next → [5 · Authentication, and when not to](./05-when-not-to.md)
