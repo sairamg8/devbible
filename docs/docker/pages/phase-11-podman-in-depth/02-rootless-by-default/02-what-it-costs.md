@@ -204,4 +204,4 @@ reason, not a whole host reverting to a root daemon.
 
 ---
 
-← Prev: [The namespace you are always in](01-the-namespace-you-are-in.md) · Index: [Phase 11](../README.md) · Next → **03 · Pods** *(not written yet)*
+← Prev: [The namespace you are always in](01-the-namespace-you-are-in.md) · Index: [Phase 11](../README.md) · Next → [03 · Pods](../03-pods.md)
