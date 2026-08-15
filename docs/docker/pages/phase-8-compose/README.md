@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 12 of 17 topics written. The Master tier (02–06, 08) is complete.**
+🚧 **In progress — 13 of 17 topics written. The Master tier (02–06, 08) is complete.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -33,7 +33,7 @@ actually true, and volumes. Everything else refines those.
 | 10 | **[Environment and interpolation](10-environment-and-interpolation.md)** | <span className="db-tier t-understand">Understand</span> | Three mechanisms people conflate — `.env` fills the *file*, `env_file` fills the *container* |
 | 11 | **[Override files](11-override-files.md)** | <span className="db-tier t-understand">Understand</span> | Single values replace, sequences **concatenate**, mappings merge by key — and `!reset` / `!override` |
 | 12 | **[`profiles`](12-profiles.md)** | <span className="db-tier t-know">Know</span> | Optional services, opt-in — "should this exist at all", which an override file cannot answer cleanly |
-| 13 | `develop.watch` | <span className="db-tier t-know">Know</span> | _not written yet_ |
+| 13 | **[`develop.watch`](13-develop-watch.md)** | <span className="db-tier t-know">Know</span> | Compose pushes changes *into* the container instead of covering its filesystem — five actions, and no `node_modules` trap |
 | 14 | Day-to-day commands | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 15 | `podman compose` and `podman-compose` | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
 | 16 | `include` and `extends` | <span className="db-tier t-know">Know</span> | _not written yet_ |
@@ -91,8 +91,9 @@ Three checks that the file is actually right, not merely working on your laptop:
   key: [environment](../phase-1-running-containers/06-environment.md),
   [restart policies](../phase-1-running-containers/12-restart-policies.md) and
   [the two signals](../phase-1-running-containers/08-stop-is-two-signals.md).
-- **Phase 6 — Storage** and **Phase 7 — Networking** *(not written yet)* are the
-  primitives this phase declares rather than explains.
+- **[Phase 6 — Storage](../phase-6-storage/README.md)** and **Phase 7 —
+  Networking** *(not written yet)* are the primitives this phase declares rather
+  than explains.
 - **Phase 9 — The MERN/PERN stack in containers** is this phase applied: its
   worked `compose.yaml` is the deliverable above, with a frontend and a proxy
   added.
