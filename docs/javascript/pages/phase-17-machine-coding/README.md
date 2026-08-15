@@ -8,11 +8,11 @@ sidebar_position: 0
 have used JavaScript from people who understand it. Every row is a from-scratch implementation with
 the edge cases interviewers probe.
 
-## Status — 🚧 **Master ✅ 4/4 · Understand under way — 13 of 18**
+## Status — 🚧 **Master ✅ 4/4 · Understand under way — 14 of 18**
 
 Master (01–04) landed 2026-08-14. The Understand and Know tiers are being written now by
 **chunk B** of the four-way JavaScript split, which finished phase 6 first. Next up:
-**14 · `promisify`**.
+**15 · A rate limiter**.
 
 ## Topics
 
@@ -31,7 +31,8 @@ Master (01–04) landed 2026-08-14. The Understand and Know tiers are being writ
 | 11 | **[`memoize`](./11-memoize/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[Deep equality](./12-deep-equality/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | **[`curry`, `pipe`, `compose`](./13-curry-pipe-compose/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 14–15 | `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
+| 14 | **[`promisify` and a callback↔promise bridge](./14-promisify/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 15 | A rate limiter | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 16–18 | `new`/`Object.create`/`instanceof` by hand, a pub/sub and a reactive `signal`, a virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | deferred |
 
 ## The phase gate
