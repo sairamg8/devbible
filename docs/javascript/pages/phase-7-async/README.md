@@ -8,7 +8,7 @@ sidebar_position: 0
 *"If you only ever finish one phase to Master depth, finish that one — it is what every
 interview probes and what every production incident traces back to."*
 
-## Status — Master ✅ 11/11 · 🚧 Understand under way (**13/22 written**)
+## Status — Master ✅ 11/11 · 🚧 Understand under way (**14/22 written**)
 
 **Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
 any other phase. **ALL 11 DONE — the Master tier of phase 7 is COMPLETE.**
@@ -34,7 +34,7 @@ number first.
 | 11 | **[Promise anti-patterns](./11-anti-patterns/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 12 | **[Timers](./12-timers/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | **[Creating promises](./13-creating-promises/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 14 | Cancellation | <span className="db-tier t-understand">Understand</span> | ⏳ |
+| 14 | **[Cancellation](./14-cancellation/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | Timeouts, retries, backoff and jitter | <span className="db-tier t-understand">Understand</span> | ⏳ |
 | 16 | Concurrency limiting | <span className="db-tier t-understand">Understand</span> | ⏳ |
 | 17 | Race conditions in a UI | <span className="db-tier t-understand">Understand</span> | ⏳ |
