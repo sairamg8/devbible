@@ -168,4 +168,4 @@ off-screen rendering.
 
 ---
 
-← [13 · What belongs on the server](./13-what-belongs-on-the-server/README.md) · [Phase index](./README.md)
+← [13 · What belongs on the server](./13-what-belongs-on-the-server/README.md) · [Phase index](./README.md) · [15 · Cross-tab coordination](./15-cross-tab-coordination/README.md) →

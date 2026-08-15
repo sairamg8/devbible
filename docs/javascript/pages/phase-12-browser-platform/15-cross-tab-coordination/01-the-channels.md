@@ -20,7 +20,7 @@ answer deliberate instead.
 | Problem | Shape | Tool |
 |---|---|---|
 | **Tell the other tabs something happened** | one-to-many notification | `BroadcastChannel`, the `storage` event |
-| **Make sure only one tab does something** | mutual exclusion, leader election | **Web Locks** — [02 · Locks and the patterns](./02-locks-and-the-patterns.md) |
+| **Make sure only one tab does something** | mutual exclusion, leader election | **Web Locks** — [02 · Web Locks](./02-web-locks.md) |
 
 They get confused constantly, and the confusion is expensive: broadcasting *"I am refreshing the
 token"* does not stop the other two tabs, because they broadcast the same thing at the same
@@ -176,7 +176,7 @@ A `SharedWorker` is one script instance for the whole origin, addressed through 
 per tab. One WebSocket instead of five, one poll loop, one in-memory cache — and the `connect`
 event gives it a port list it can push to. ⚠️ **Support is not universal** — feature-detect it
 (`'SharedWorker' in globalThis`) and keep a per-tab fallback, or elect a leader with a lock
-instead ([02](./02-locks-and-the-patterns.md)).
+instead ([03 · The patterns](./03-the-patterns.md)).
 
 A **service worker** solves a related problem from the other side: it is a single script that
 survives navigation and can reach every page it controls.
@@ -199,7 +199,7 @@ answer through the Clients API.
 | "Something changed, everyone re-read it" | **`BroadcastChannel`** |
 | That, **plus** tabs opened later must see it | write to `localStorage` **and** post to the channel |
 | A tab-to-tab reply, not a broadcast | `MessageChannel` ports handed over a broadcast |
-| Only **one** tab may do this | **Web Locks** — [02](./02-locks-and-the-patterns.md) |
+| Only **one** tab may do this | **Web Locks** — [02](./02-web-locks.md) |
 | One connection / one cache for all tabs | `SharedWorker`, or a lock-elected leader |
 | Background, offline, or after the tab closed | a **service worker** |
 | Another device, another browser, another user | the **server** — WebSocket or SSE |
@@ -275,4 +275,4 @@ is only how it arrives sooner.
 
 ---
 
-[Topic index](./README.md) · [02 · Locks and the patterns](./02-locks-and-the-patterns.md) →
+[Topic index](./README.md) · [02 · Web Locks](./02-web-locks.md) →
