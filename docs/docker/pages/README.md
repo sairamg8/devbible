@@ -12,11 +12,27 @@ Every worktree and branch in this repo was **merged into `main` and deleted** on
 explicit paths (never `git add -A`) since everyone shares the checkout again.
 :::
 
-:::info 🔒 Claimed — session `40090c06`, 2026-08-14
+:::info 🔒 Split FOUR WAYS — 2026-08-15
 
-All of `docs/docker/` is being written by one session, in the worktree
-`devbible-docker` on branch **`docker-podman`**. Other sessions: please do not
-write here. Claim table: [Contents](../../README.md).
+The **129 unwritten topics are split into four chunks, whole phases only**, so no two
+sessions ever write in the same phase directory. Phases **0–3 are already written**
+(63 topics, session `40090c06`).
+
+| Chunk | Phases | Topics | Start at | Claimed by |
+|---|---|---|---|---|
+| **A** | 4 · 5 | 28 | Phase 4 · 01 · How the layer cache decides | _unclaimed_ |
+| **B** | 6 · 7 | 26 | Phase 6 · 01 · The container filesystem is disposable | _unclaimed_ |
+| **C** | 8 · 9 | 31 | Phase 8 · 01 · What Compose is | _unclaimed_ |
+| **D** | 10 · 11 · 12 | 44 | Phase 10 · 01 · PID 1 is not a normal process | _unclaimed_ |
+
+**Taking a chunk:** put your session id in the row above **and** in that chunk's row in
+the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
+before starting the next; inside a phase, work the syllabus table in row order.
+
+⛔ **Cross-chunk links break the build** — where a page needs a topic another chunk owns,
+write it as **bold plain text with *(not written yet)***, never a link. Stage explicit
+paths, **never `git add -A`**, and remember `src/data/progress.js` has **one** docker row
+that all four chunks increment.
 
 :::
 
@@ -46,15 +62,15 @@ answers.
 | **[01 · Running containers](./phase-1-running-containers/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[02 · Images, layers and registries](./phase-2-images-and-registries/README.md)** | 15 | 15 | ✅ **Complete** |
 | **[03 · The Dockerfile](./phase-3-dockerfile/README.md)** | 18 | 18 | ✅ **Complete** |
-| **04 · Build strategy: cache, multi-stage, BuildKit** | 16 | 0 | ⏳ Not started |
-| **05 · Image quality, size and supply chain** | 12 | 0 | ⏳ Not started |
-| **06 · Storage: volumes, mounts and data** | 12 | 0 | ⏳ Not started |
-| **07 · Networking** | 14 | 0 | ⏳ Not started |
-| **08 · Compose** | 17 | 0 | ⏳ Not started |
-| **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started |
-| **10 · Running containers in production** | 16 | 0 | ⏳ Not started |
-| **11 · Podman in depth** | 16 | 0 | ⏳ Not started |
-| **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started |
+| **04 · Build strategy: cache, multi-stage, BuildKit** | 16 | 0 | ⏳ Not started — **chunk A** |
+| **05 · Image quality, size and supply chain** | 12 | 0 | ⏳ Not started — **chunk A** |
+| **06 · Storage: volumes, mounts and data** | 12 | 0 | ⏳ Not started — **chunk B** |
+| **07 · Networking** | 14 | 0 | ⏳ Not started — **chunk B** |
+| **08 · Compose** | 17 | 0 | ⏳ Not started — **chunk C** |
+| **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
+| **10 · Running containers in production** | 16 | 0 | ⏳ Not started — **chunk D** |
+| **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
+| **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
 | **Total** | **192** | **63** | |
 
 import Progress from '@site/src/components/Progress';
