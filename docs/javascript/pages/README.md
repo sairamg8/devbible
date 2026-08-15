@@ -33,7 +33,7 @@ import Progress from '@site/src/components/Progress';
 | **[3 · Functions, scope and closures](./phase-3-functions/README.md)** | Language core | 20 | ✅ **complete — every tier** |
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | ✅ **complete — every tier** (Master 7/7 · Understand 9/9 · Know 4/4) |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–17 done) |
-| **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🟡 **Master tier ✅** (01–03); rest deferred |
+| **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🚧 **Master ✅** (01–03) · Understand under way (**04** ✅) |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🟡 **Master tier ✅** (01–11 — all eleven); 12–22 deferred |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
@@ -56,10 +56,10 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
-| **A** | **5**, **11** | **23** — 5 (9: 18–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | *unclaimed* |
-| **B** | **6**, **17** | **24** — 6 (10: 04–13) · 17 (14: 05–18) | Iteration, generators and iterator helpers; then machine coding | *unclaimed* |
-| **C** | **7**, **8** | **25** — 7 (11: 12–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | *unclaimed* |
-| **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | *unclaimed* |
+| **A** | **5**, **11** | **23** — 5 (9: 18–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
+| **B** | **6**, **17** | **24** — 6 (10: 04–13) · 17 (14: 05–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
+| **C** | **7**, **8** | **25** — 7 (11: 12–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
+| **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
 
