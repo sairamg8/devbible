@@ -258,4 +258,4 @@ copying from the wrong place.
 
 ---
 
-← Prev: [The dependency-install pattern](03-dependency-install-pattern.md) · Index: [Phase 4](README.md) · Next → **`RUN --mount=type=secret`** *(not written yet)*
+← Prev: [The dependency-install pattern](03-dependency-install-pattern.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=secret`](05-mount-type-secret.md)
