@@ -256,4 +256,4 @@ character longer than the value that was typed. Trim on read.
 
 ---
 
-← Prev: [Logs go to stdout and stderr](04-logs-to-stdout/README.md) · Index: [Phase 10](README.md) · Next → **The production failure catalogue** *(not written yet)*
+← Prev: [Logs go to stdout and stderr](04-logs-to-stdout/README.md) · Index: [Phase 10](README.md) · Next → [The production failure catalogue](06-failure-catalogue/README.md)

@@ -64,14 +64,14 @@ answers.
 | **[03 · The Dockerfile](./phase-3-dockerfile/README.md)** | 18 | 18 | ✅ **Complete** |
 | **[04 · Build strategy: cache, multi-stage, BuildKit](./phase-4-build-strategy/README.md)** | 16 | 16 | ✅ **Complete** |
 | **[05 · Image quality, size and supply chain](./phase-5-image-quality/README.md)** | 12 | 1 | 🚧 **Writing — chunk A** |
-| **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 11 | 🚧 **Writing — chunk B** |
+| **[06 · Storage: volumes, mounts and data](./phase-6-storage/README.md)** | 12 | 12 | ✅ **Complete** |
 | **07 · Networking** | 14 | 0 | ⏳ Not started — **chunk B** |
-| **[08 · Compose](./phase-8-compose/README.md)** | 17 | 8 | 🚧 **Writing — chunk C** |
+| **[08 · Compose](./phase-8-compose/README.md)** | 17 | 9 | 🚧 **Writing — chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
-| **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 5 | 🚧 **Writing — chunk D** |
+| **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 6 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **103** | |
+| **Total** | **192** | **107** | |
 
 import Progress from '@site/src/components/Progress';
 

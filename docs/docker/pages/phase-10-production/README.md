@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 5 of 16 topics.**
+🚧 **Writing — 6 of 16 topics. The Master tier is complete at 5 of 5.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -21,7 +21,7 @@ is that list, with the mechanism and the fix for each.
 | 03 | **[Resource limits](03-resource-limits/README.md)** | <span className="db-tier t-master">Master</span> | `--memory`, `--cpus`, `--pids-limit`, and why the process "just vanished" |
 | 04 | **[Logs go to stdout and stderr](04-logs-to-stdout/README.md)** | <span className="db-tier t-master">Master</span> | That is the contract; a log file inside a container is a bug |
 | 05 | **[Configuration and secrets at run time](05-config-and-secrets.md)** | <span className="db-tier t-understand">Understand</span> | "Not in the image" and "not in the process list" are different claims |
-| 06 | **The production failure catalogue** *(not written yet)* | <span className="db-tier t-master">Master</span> | OOM, full disk, pull limits, clock skew, DNS, unhealthy-but-serving, zombies |
+| 06 | **[The production failure catalogue](06-failure-catalogue/README.md)** | <span className="db-tier t-master">Master</span> | OOM, full disk, pull limits, clock skew, DNS, unhealthy-but-serving, zombies |
 | 07 | **Restart policies as supervision** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | What they cover, what they hide, and the silent crash loop |
 | 08 | **Log drivers and rotation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `max-size`, `max-file`, `journald`, and the 40 GB file that filled the disk |
 | 09 | **Healthchecks in production** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Liveness versus readiness as concepts, with or without an orchestrator |
@@ -36,8 +36,8 @@ is that list, with the mechanism and the fix for each.
 ## Coverage
 
 Sixteen syllabus topics; nothing merged and nothing dropped so far. Topics 01–04
-are chunked directories — each Master topic carries two genuinely separate
-arguments. Topic 05 onward are single pages, as their tier warrants.
+and 06 are chunked directories — each Master topic carries two genuinely separate
+arguments. The Understand and Know topics are single pages, as their tier warrants.
 
 | Syllabus topic | Page |
 |---|---|
@@ -46,6 +46,7 @@ arguments. Topic 05 onward are single pages, as their tier warrants.
 | Resource limits | 03 |
 | Logs go to stdout and stderr | 04 |
 | Configuration and secrets at run time | 05 |
+| The production failure catalogue | 06 |
 
 ## Phase gate
 
