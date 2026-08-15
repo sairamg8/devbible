@@ -215,4 +215,4 @@ that.
 
 ---
 
-← Prev: [`--network=host`](10-network-host.md) · Index: [Phase 7](README.md) · Next → **Podman's stack: netavark and aardvark-dns** *(not written yet)*
+← Prev: [`--network=host`](10-network-host.md) · Index: [Phase 7](README.md) · Next → [Podman's stack: netavark and aardvark-dns](12-netavark-and-aardvark.md)

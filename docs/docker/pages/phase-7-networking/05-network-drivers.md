@@ -163,8 +163,8 @@ built from.
 rootless, the `macvlan` and `ipvlan` drivers have no access to the host network
 interfaces because rootless networking requires a separate network namespace."*
 The driver names are accepted; the thing they exist to do cannot happen without
-root. This is the same user-namespace boundary that page 08,
-**Rootless networking** *(not written yet)*, covers in full.
+root. This is the same user-namespace boundary that
+[page 08 · Rootless networking](08-rootless-networking.md) covers in full.
 
 ## Gotchas
 

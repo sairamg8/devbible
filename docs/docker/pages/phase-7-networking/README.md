@@ -31,7 +31,7 @@ another, and the single most common connection bug in the whole track.
 | 09 | **[Privileged ports rootless](09-privileged-ports-rootless.md)** | <span className="db-tier t-understand">Understand</span> | Why binding 80 fails as a user, and the sysctl that changes it |
 | 10 | **[`--network=host`](10-network-host.md)** | <span className="db-tier t-know">Know</span> | No isolation, no mapping, native speed — and when that trade is right |
 | 11 | **[Debugging the network](11-debugging-the-network.md)** | <span className="db-tier t-understand">Understand</span> | Ask from *inside* the container instead of guessing |
-| 12 | **Podman's stack: netavark and aardvark-dns** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | What replaced CNI, and which error comes from where |
+| 12 | **[Podman's stack: netavark and aardvark-dns](12-netavark-and-aardvark.md)** | <span className="db-tier t-understand">Understand</span> | What replaced CNI, and which error comes from where |
 | 13 | **Custom subnets, IPv6 and the VPN clash** *(not written yet)* | <span className="db-tier t-know">Know</span> | The address collision that breaks your corporate network |
 | 14 | **Overlay networks and multi-host** *(not written yet)* | <span className="db-tier t-when">When Needed</span> | Where a single engine's networking stops |
 

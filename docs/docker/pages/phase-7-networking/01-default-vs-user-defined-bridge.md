@@ -9,7 +9,8 @@ sidebar_position: 1
 > Verified: 2026-08 against [Docker — bridge network driver](https://docs.docker.com/engine/network/drivers/bridge/),
 > [Docker — networking overview](https://docs.docker.com/engine/network/),
 > [docker network create](https://docs.docker.com/reference/cli/docker/network/create/) and
-> [Podman — podman-network-create](https://docs.podman.io/en/latest/markdown/podman-network-create.1.html).
+> [Podman — podman-network-create](https://docs.podman.io/en/latest/markdown/podman-network-create.1.html) and
+> [Podman — basic networking](https://github.com/containers/podman/blob/main/docs/tutorials/basic_networking.md).
 > **No sandbox** — no console output on this page.
 
 **Two containers started with plain `docker run` can reach each other by IP and
@@ -127,15 +128,20 @@ implementation, and one of those differences is a real gotcha:
 
 | | Docker | Podman |
 |---|---|---|
-| Default network for a container that names none | `bridge` — **no name resolution** | `podman` — **DNS by name is available** via `aardvark-dns` |
+| Default network for a container that names none | `bridge` — **no name resolution** | `podman` — **also no name resolution** |
 | Creating one | `docker network create appnet` | `podman network create appnet` |
 | Backend | libnetwork | **netavark** + **aardvark-dns** (page 12) |
 | Rootless | ports and NAT via the daemon | a user-space stack — `pasta` (page 08) |
 
-⚠️ **Podman's default network resolves names in situations where Docker's does
-not**, so a command that works under Podman can fail under Docker for a reason
-that has nothing to do with your application. The habit that is right on both:
-**create a network and name it.**
+⚠️ **Podman's default network does not resolve names either**, and its
+documentation says why: *"The default network `podman` with netavark is
+memory-only. It does not support dns resolution because of backwards
+compatibility with Docker."* So the rule is the same on both engines — the
+default network is the one without DNS. What differs is that a network **you
+create** has DNS on by default under Podman (`podman network create` has a
+`--disable-dns` flag to turn it off), served by `aardvark-dns` rather than
+Docker's embedded resolver. The habit that is right on both: **create a network
+and name it.**
 
 Podman also has the concept of a **pod** — containers sharing one network
 namespace, reaching each other on `localhost` — which is closer to Kubernetes
@@ -176,12 +182,12 @@ fixed address, set the subnet on the network and assign `--ip` deliberately
 **Fix:** Put services on named networks scoped to what should talk to what —
 the database on a `backend` network the frontend is not attached to.
 
-**Symptom:** The same `podman run` commands fail when translated to `docker
-run`.
-**Cause:** Podman's default network provides name resolution and Docker's does
-not.
-**Fix:** Create and name a network explicitly. It is correct on both engines and
-removes the difference entirely.
+**Symptom:** Containers cannot resolve each other under Podman either, despite
+Podman being expected to be friendlier here.
+**Cause:** The default `podman` network is documented as not supporting DNS
+resolution, *"because of backwards compatibility with Docker"*.
+**Fix:** Create and name a network. Under Podman a created network has DNS
+enabled by default, so this is the whole fix on both engines.
 
 ## Interview questions
 
@@ -214,12 +220,14 @@ user-defined network resolves to the current address every time, which is what
 DNS is for.
 
 **How is Podman different here?**
-Its default network already provides name resolution, through `aardvark-dns`
-rather than Docker's embedded DNS, so a command can work under Podman and fail
-under Docker. Podman also has pods, where containers share a network namespace
-and reach each other on `localhost`. The portable habit on both engines is to
-create a named network.
+Less than people expect: its default `podman` network is documented as *not*
+supporting DNS resolution, *"because of backwards compatibility with Docker"*,
+so the default is nameless on both engines. The difference is in the machinery —
+a Podman network you create has DNS on by default, answered by `aardvark-dns`
+rather than Docker's embedded resolver (page 12) — and in pods, where containers
+share a network namespace and reach each other on `localhost`. The portable
+habit on both engines is to create a named network.
 
 ---
 
-← Index: [Phase 7](README.md) · Next → **Service discovery** *(not written yet)*
+← Index: [Phase 7](README.md) · Next → [Service discovery](02-service-discovery.md)

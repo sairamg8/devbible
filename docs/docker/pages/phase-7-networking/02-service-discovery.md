@@ -167,9 +167,13 @@ internal corporate hostnames.
 ## Podman
 
 Name resolution is provided by **`aardvark-dns`** rather than an embedded server
-in the engine, and — as page 01 noted — **Podman's default network also resolves
-names**, unlike Docker's default bridge. Aliases work the same way
-(`--network-alias`), and `podman network inspect` reports the same information.
+in the engine, and it is enabled by default on a network you **create**
+(`podman network create` carries a `--disable-dns` flag precisely because DNS is
+otherwise on). ⚠️ **The default `podman` network is the exception** — its
+documentation states it *"does not support dns resolution because of backwards
+compatibility with Docker"*, so the rule matches Docker's exactly: the default
+network has no names. Aliases work the same way (`--network-alias`), and
+`podman network inspect` reports the same information.
 
 The extra concept is the **pod**: containers in a pod share one network
 namespace, so they reach each other on `localhost` and cannot each bind the same
