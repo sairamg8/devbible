@@ -60,9 +60,10 @@ deploy shut down cleanly, ignored the signal, or ran out of time.
   reports, does not route; readiness needs something in front
 - [Phase 3 · 16 · STOPSIGNAL and SHELL](../../phase-3-dockerfile/16-stopsignal-and-shell.md)
   — choosing the first signal in the image
-- **03 · Resource limits** · **04 · Logs go to stdout** ·
-  **09 · Healthchecks in production** · **16 · Zero-downtime restarts**
-  *(not written yet)*
+- [03 · Resource limits](../03-resource-limits/README.md) ·
+  [04 · Logs go to stdout](../04-logs-to-stdout/README.md) ·
+  [09 · Healthchecks in production](../09-healthchecks-in-production.md) ·
+  [16 · Zero-downtime restarts](../16-zero-downtime-restarts.md)
 
 ---
 

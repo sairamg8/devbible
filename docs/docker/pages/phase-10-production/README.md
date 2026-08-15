@@ -12,7 +12,9 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 15 of 16 topics. The Master tier is complete at 5 of 5.**
+🏁 **COMPLETE — 16 of 16 topics**, every tier written. 30 files, 5,627 lines, 0 over
+the 300-line cap; every internal link resolved against the filesystem — **link-checked,
+not built.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -31,13 +33,15 @@ is that list, with the mechanism and the fix for each.
 | 13 | **[Disk growth](13-disk-growth.md)** | <span className="db-tier t-understand">Understand</span> | Images, dangling layers, volumes, build cache — and the flag that deletes volumes |
 | 14 | **[Running containers under systemd](14-under-systemd.md)** | <span className="db-tier t-understand">Understand</span> | The unit that supervises, restarts and orders your container |
 | 15 | **[Time, timezones and locales](15-time-and-timezones.md)** | <span className="db-tier t-know">Know</span> | Why the container thinks it is UTC and your logs disagree |
-| 16 | **Zero-downtime restarts without an orchestrator** *(not written yet)* | <span className="db-tier t-know">Know</span> | Start-new, health-check, switch, stop-old |
+| 16 | **[Zero-downtime restarts without an orchestrator](16-zero-downtime-restarts.md)** | <span className="db-tier t-know">Know</span> | Start-new, health-check, switch, stop-old |
 
 ## Coverage
 
-Sixteen syllabus topics; nothing merged and nothing dropped so far. Topics 01–04,
-06 and 10 are chunked directories — the five Master topics each carry two genuinely
-separate arguments, and topic 10 splits between the switches and enforcing them.
+Sixteen syllabus topics, sixteen pages — **nothing merged and nothing dropped.**
+Topics 01–04, 06 and 10 are chunked directories: the five Master topics each carry
+two genuinely separate arguments, and topic 10 splits between the four switches and
+enforcing them everywhere. The Understand and Know topics are single pages of
+194–276 lines, as their tier warrants.
 
 | Syllabus topic | Page |
 |---|---|
@@ -56,6 +60,7 @@ separate arguments, and topic 10 splits between the switches and enforcing them.
 | Disk growth | 13 |
 | Running containers under systemd | 14 |
 | Time, timezones and locales | 15 |
+| Zero-downtime restarts without an orchestrator | 16 |
 
 ## Phase gate
 
@@ -79,11 +84,12 @@ which one applies from the evidence in front of you.**
   [namespaces](../phase-0-what-a-container-is/02-namespaces.md),
   [cgroups](../phase-0-what-a-container-is/03-cgroups.md) and
   [capabilities](../phase-0-what-a-container-is/09-capabilities.md).
-- **Phase 11 — Podman in depth** is where "containers under systemd" becomes
-  Quadlet, and where the no-daemon consequences of this phase are collected.
-- **Phase 12 — Delivery and CI** takes the image that survives all of this and
-  gets it onto a machine that matters.
+- **Phase 11 — Podman in depth** *(not written yet)* is where "containers under
+  systemd" becomes Quadlet, where `podman auto-update` does the rolling restart of
+  topic 16, and where the no-daemon consequences of this phase are collected.
+- **Phase 12 — Delivery and CI** *(not written yet)* takes the image that survives
+  all of this and gets it onto a machine that matters.
 
 ---
 
-← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: **Phase 9 — The MERN/PERN stack** *(not written yet)* · Start → [PID 1 is not a normal process](01-pid-1/README.md)
+← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: **Phase 9 — The MERN/PERN stack** *(not written yet)* · Start → [PID 1 is not a normal process](01-pid-1/README.md) · Next phase → **Phase 11 — Podman in depth** *(not written yet)*
