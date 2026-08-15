@@ -84,12 +84,14 @@ which one applies from the evidence in front of you.**
   [namespaces](../phase-0-what-a-container-is/02-namespaces.md),
   [cgroups](../phase-0-what-a-container-is/03-cgroups.md) and
   [capabilities](../phase-0-what-a-container-is/09-capabilities.md).
-- **Phase 11 — Podman in depth** *(not written yet)* is where "containers under
-  systemd" becomes Quadlet, where `podman auto-update` does the rolling restart of
-  topic 16, and where the no-daemon consequences of this phase are collected.
+- **[Phase 11 — Podman in depth](../phase-11-podman-in-depth/README.md)** is where
+  "containers under systemd" becomes Quadlet, where `podman auto-update` does the
+  rolling restart of topic 16, and where the no-daemon consequences of this phase
+  are collected — starting with
+  [01 · Daemonless](../phase-11-podman-in-depth/01-daemonless/README.md).
 - **Phase 12 — Delivery and CI** *(not written yet)* takes the image that survives
   all of this and gets it onto a machine that matters.
 
 ---
 
-← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: **Phase 9 — The MERN/PERN stack** *(not written yet)* · Start → [PID 1 is not a normal process](01-pid-1/README.md) · Next phase → **Phase 11 — Podman in depth** *(not written yet)*
+← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: **Phase 9 — The MERN/PERN stack** *(not written yet)* · Start → [PID 1 is not a normal process](01-pid-1/README.md) · Next phase → [Phase 11 — Podman in depth](../phase-11-podman-in-depth/README.md)

@@ -22,8 +22,8 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 |---|---|---|---|---|
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
 | **B** | 6 · 7 | 26 | 🏁 **CHUNK B COMPLETE — phase 6 12/12, phase 7 14/14** (2026-08-15) | session `d0c46f84` — finished |
-| **C** | 8 · 9 | 31 (**8 left**) | 🏁 phase 8 **done 17/17** · 🚧 phase 9 **6/14** — next: **09 · 07 · The whole stack in one file** | 🔴 session `9219957a` (2026-08-15) |
-| **D** | 10 · 11 · 12 | 44 (**28 left**) | 🏁 **Phase 10 COMPLETE 16/16** — next: **Phase 11 · 01 · Daemonless** | 🔴 session `6d88f249` (2026-08-15, took over from `2f38bb4d`) |
+| **C** | 8 · 9 | 31 (**8 left**) | 🏁 phase 8 **done 17/17** · 🚧 phase 9 **6/14** — next: **09 · 07 · The whole stack in one file** | 🔴 session `016J3KVb` (2026-08-15, took over from `9219957a`) |
+| **D** | 10 · 11 · 12 | 44 (**28 left**) | 🏁 **Phase 10 COMPLETE 16/16** · 🚧 phase 11 **open** — next: **Phase 11 · 01 · Daemonless** | 🔴 session `75a196a7` (2026-08-15, took over from `6d88f249`) |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
 the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
@@ -69,9 +69,9 @@ answers.
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 17 | ✅ **Complete** |
 | **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 6 | 🚧 **Writing — chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 16 | ✅ **Complete — chunk D** |
-| **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
+| **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 1 | 🚧 **Writing — chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **156** | |
+| **Total** | **192** | **157** | |
 
 import Progress from '@site/src/components/Progress';
 
