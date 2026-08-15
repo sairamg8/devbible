@@ -11,7 +11,7 @@ sidebar_position: 0
 > no page carries console output.
 
 🏁 **Complete — 14 of 14 topics**, at every tier (Master 5/5 · Understand 7/7 ·
-Know 2/2). **29 files, 6,149 lines, 0 over the 300-line cap, 259 internal links
+Know 2/2). **29 files, 6,151 lines, 0 over the 300-line cap, 259 internal links
 resolved against the filesystem** — link-checked, **not built**.
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
