@@ -222,4 +222,4 @@ out of the image.
 
 ---
 
-← Prev: [Containerising a Node/Express API](01-node-api-dockerfile/README.md) · Index: [Phase 9](README.md) · Next → **PostgreSQL in a container** *(not written yet)*
+← Prev: [Containerising a Node/Express API](01-node-api-dockerfile/README.md) · Index: [Phase 9](README.md) · Next → [PostgreSQL in a container](03-postgres-in-a-container/README.md)
