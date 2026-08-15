@@ -261,4 +261,4 @@ Both overrule the compiler, which is the only thing they have in common.
 
 ---
 
-← Prev: [07 · Branded / nominal types](./07-branded-nominal-types.md) · Next → **09 · Typing getters and setters** *(not written yet)*
+← Prev: [07 · Branded / nominal types](./07-branded-nominal-types.md) · Next → [09 · Typing getters and setters](./09-typing-getters-and-setters.md)
