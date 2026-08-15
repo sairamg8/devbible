@@ -193,4 +193,4 @@ builds is explicable.
 
 ---
 
-← Prev: [The build context](15-the-build-context.md) · Index: [Phase 4](README.md) · Next phase → **Phase 5 · Image quality, size and supply chain** *(not written yet)*
+← Prev: [The build context](15-the-build-context.md) · Index: [Phase 4](README.md) · Next phase → [Phase 5 · Image quality, size and supply chain](../phase-5-image-quality/README.md)

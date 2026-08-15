@@ -78,4 +78,4 @@ the first cache miss on a typical source edit, and move it.** If the answer is
 
 ---
 
-← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 3](../phase-3-dockerfile/README.md) · Start → [How the layer cache decides](01-how-the-cache-decides.md) · Next phase → **Phase 5 · Image quality, size and supply chain** *(not written yet)*
+← Syllabus: [Part 2 — Building images](../../syllabus/02-building-images.md) · Prev phase: [Phase 3](../phase-3-dockerfile/README.md) · Start → [How the layer cache decides](01-how-the-cache-decides.md) · Next phase → [Phase 5 · Image quality, size and supply chain](../phase-5-image-quality/README.md)
