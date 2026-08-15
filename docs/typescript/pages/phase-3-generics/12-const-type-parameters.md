@@ -148,7 +148,7 @@ wording maps cleanly onto the two modifiers that can appear here:
 | **TS1277** | *"'{0}' modifier can only appear on a type parameter of a function, method or class"* |
 
 TS1274's list — class, interface, type alias — is where the **variance**
-annotations `in`/`out` belong (topic 14). TS1277's list is where **`const`**
+annotations `in`/`out` belong ([topic 14](./14-variance.md)). TS1277's list is where **`const`**
 belongs. ⚠️ Stated from the message text and the documented placement rules, not
 from watching each one fire; the version installed here is the Go-port compiler,
 whose checker is not readable from the JavaScript package the way the string

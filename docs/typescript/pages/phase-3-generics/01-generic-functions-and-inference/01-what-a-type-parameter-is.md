@@ -95,7 +95,7 @@ function example<T>(a: T, b: T[], c: (x: T) => void): Map<string, T> { … }
 A type parameter can appear anywhere a type can: parameter positions, the
 return type, nested inside other types, inside a function type. The more
 positions it appears in, the more the signature actually *says* — a `T` that
-appears exactly once says almost nothing, which is **topic 13**'s subject *(not written yet)*.
+appears exactly once says almost nothing, which is [topic 13](../13-when-not-to-write-a-generic.md)'s subject.
 
 **Naming.** `T` is conventional for one; `T`, `U`, `V` for more. Once a
 signature has three or more, prefer real names — `<Item, Key, Result>` — because

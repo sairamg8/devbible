@@ -290,4 +290,4 @@ parameter that exists for no reason.
 
 ---
 
-← Prev: [12 · `const` type parameters](./12-const-type-parameters.md) · Next → **14 · Variance** *(not written yet)*
+← Prev: [12 · `const` type parameters](./12-const-type-parameters.md) · Next → [14 · Variance](./14-variance.md)

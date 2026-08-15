@@ -39,11 +39,11 @@ say immediately what is wrong with it.
   — the `any` version of `first` is the baseline a generic improves on.
 - **← [Phase 0 · Erasure](../../phase-0-how-typescript-runs/02-erasure.md)** —
   why `new T()` and `typeof T` cannot exist.
-- **→ 02 · Constraints** *(not written yet)* — what makes the body able to *do*
+- **→ [02 · Constraints](../02-constraints/README.md)** — what makes the body able to *do*
   something with the value.
 - → [10 · Inference sites and contextual typing](../10-inference-sites-and-contextual-typing.md) — the
   full treatment of the ordering rules sketched here.
-- **→ 13 · When not to write a generic** *(not written yet)* — the
+- **→ [13 · When not to write a generic](../13-when-not-to-write-a-generic.md)** — the
   return-position-only parameter, which this topic names and that one dissects.
 
 ---

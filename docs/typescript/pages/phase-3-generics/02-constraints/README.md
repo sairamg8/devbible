@@ -44,9 +44,9 @@ thinking about it, and name the case `NoInfer<T>` was added for.
   satisfies it.
 - **→ 04 · `keyof`** and [05 · The `getProp` pattern](../05-getprop-pattern/README.md) —
   `K extends keyof T` is the constraint that makes generics compose.
-- **→ 08 · Default type parameters** *(not written yet)* — the mechanism a
+- **→ [08 · Default type parameters](../08-default-type-parameters.md)** — the mechanism a
   constraint is repeatedly mistaken for.
-- **→ 14 · Variance** *(not written yet)* — why `(...args: never[]) => unknown`
+- **→ [14 · Variance](../14-variance.md)** — why `(...args: never[]) => unknown`
   is the right bound for "any function".
 
 ---

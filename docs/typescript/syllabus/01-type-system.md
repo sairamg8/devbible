@@ -114,6 +114,8 @@ build.
 is not "can you read `Array<T>`" — it is whether you can write a function whose
 return type depends on its arguments, and explain where inference comes from.
 
+📖 **Explanation written:** [Phase 3 — Generics](../pages/phase-3-generics/README.md)
+
 | Topic | Tier |
 |---|---|
 | **Generic functions and inference** — the type parameter is usually inferred, not passed; what the compiler infers it *from* | <span className="db-tier t-master">Master</span> |

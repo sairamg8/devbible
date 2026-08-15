@@ -170,7 +170,7 @@ type Contra<T> = T extends { a: (x: infer U) => void; b: (x: infer U) => void } 
 
 Inferring the same name from several **property** positions gives a union;
 inferring it from several **parameter** positions gives an intersection. That
-asymmetry is variance (**topic 14 · Variance** *(not written yet)* is the full account) and it is
+asymmetry is variance ([topic 14](./14-variance.md) is the full account) and it is
 the mechanism behind `UnionToIntersection`, which every "merge these types"
 utility is built on.
 

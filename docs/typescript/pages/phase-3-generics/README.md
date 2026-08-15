@@ -14,7 +14,7 @@ sidebar_position: 3
 > **No sandbox, no console blocks**: every claim here is documentation-validated,
 > and a plausible-looking `tsc` transcript written from memory is not evidence.
 
-**14 topics.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
+**14 topics · 22 files · complete.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
 specific type from a wide one. This phase is the opposite motion: **writing code
 for a type you have not been told yet**, and getting it back out intact at the
 other end.
@@ -45,9 +45,19 @@ found the wrong equation.
 | 11 | [`infer` in conditional types](./11-infer-in-conditional-types.md) | <span className="db-tier t-understand">Understand</span> | Pulling a type back out — elements, resolved promises, return types |
 | 12 | [`const` type parameters](./12-const-type-parameters.md) | <span className="db-tier t-understand">Understand</span> | `<const T>`, so callers get literal types without `as const` everywhere |
 | 13 | [When *not* to write a generic](./13-when-not-to-write-a-generic.md) | <span className="db-tier t-understand">Understand</span> | A type parameter used once is a disguised `any` |
-| 14 | Variance | <span className="db-tier t-know">Know</span> | Co/contra/bivariance, `strictFunctionTypes`, and the `in`/`out` annotations |
+| 14 | [Variance](./14-variance.md) | <span className="db-tier t-know">Know</span> | Co/contra/bivariance, `strictFunctionTypes`, and the `in`/`out` annotations |
 
-*(Pages are linked from this table as they are written.)*
+✅ **Phase complete** — 14 topics, 22 files, none over the 300-line cap. Five
+Master topics are chunk directories (`README` + 2 parts); the nine
+Understand/Know topics are single files.
+
+**Evidence policy for this phase.** No sandbox and **no console blocks**: every
+claim is validated against the handbook, the release notes for anything with a
+version (`const` type parameters 5.0, `infer … extends` 4.8, variance annotations
+4.7, `NoInfer` 5.4), and — where an exact error string or a library type is
+quoted — the **compiler's own diagnostic table and `lib.es5.d.ts`**, read rather
+than recalled. ⚠️ The install inspected is TypeScript **6.0.3**, not the 7.0.2
+this corpus targets, and each page that quotes it says so.
 
 ## Phase gate
 

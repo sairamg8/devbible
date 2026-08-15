@@ -187,7 +187,7 @@ function head<T extends readonly unknown[]>(xs: T): T[0] { … }
 Here the parameter is load-bearing: the caller gets back something more specific
 than the constraint. **The test is whether removing `<T>` and using the
 constraint directly would lose a caller anything.** If not, remove it —
-**topic 13 · When not to write a generic** *(not written yet)*.
+[topic 13 · When not to write a generic](../13-when-not-to-write-a-generic.md).
 
 ## Gotchas
 

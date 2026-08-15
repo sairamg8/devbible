@@ -46,9 +46,9 @@ can explain from its declaration why `Omit<User, 'nmae'>` compiles.
   — the general choice; this topic covers only where generics change it.
 - **← [Phase 2 · Discriminated unions](../../phase-2-narrowing/05-discriminated-unions.md)**
   — a parameterised discriminated union is the most valuable shape here.
-- **→ 06 · Indexed access types** *(not written yet)* — `Row[Key]`, used in
+- **→ [06 · Indexed access types](../06-indexed-access-types.md)** — `Row[Key]`, used in
   passing on chunk 01.
-- **→ 08 · Default type parameters** *(not written yet)* — the `E = Error` half
+- **→ [08 · Default type parameters](../08-default-type-parameters.md)** — the `E = Error` half
   of the result type.
 - → [09 · Generic classes](../09-generic-classes.md) — what `implements
   Repository<User>` actually requires.

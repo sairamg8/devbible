@@ -51,7 +51,7 @@ type parameter is not optional.
   another type parameter.
 - **← [04 · `keyof`](../04-keyof/README.md)** — including why a union `T`
   collapses the constraint to the discriminant.
-- **→ 06 · Indexed access types** *(not written yet)* — `T[K]`, `T[number]` and
+- **→ [06 · Indexed access types](../06-indexed-access-types.md)** — `T[K]`, `T[number]` and
   distribution over union keys.
 - **→ Phase 5 (Type-level programming)** — `KeysOfType<T, V>` and typed deep
   paths, both of which start here and need mapped and template literal types.

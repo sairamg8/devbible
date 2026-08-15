@@ -41,11 +41,11 @@ query-string `string` into a key is a guard rather than an `as`.
   destroys them.
 - **← [Phase 2 · Type guards](../../phase-2-narrowing/07-type-guards.md)** —
   `isKeyOf`, the only honest way from a `string` to a `keyof T`.
-- **→ 05 · The `getProp` pattern** *(not written yet)* — this operator plus an
+- **→ [05 · The `getProp` pattern](../05-getprop-pattern/README.md)** — this operator plus an
   indexed access, which is the pattern behind every typed accessor.
-- **→ 06 · Indexed access types** *(not written yet)* — `T[K]` and `T[number]`,
+- **→ [06 · Indexed access types](../06-indexed-access-types.md)** — `T[K]` and `T[number]`,
   used throughout both chunks.
-- **→ 07 · The `typeof` type operator** *(not written yet)* — the other half of
+- **→ [07 · The `typeof` type operator](../07-typeof-type-operator.md)** — the other half of
   `keyof typeof`.
 - **→ Phase 5 (Type-level programming)** — `[K in keyof T]` is where every mapped
   type starts.
