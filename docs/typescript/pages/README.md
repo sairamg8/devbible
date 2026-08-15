@@ -12,23 +12,20 @@ Every worktree and branch in this repo was **merged into `main` and deleted** on
 explicit paths (never `git add -A`) since everyone shares the checkout again.
 :::
 
-:::info 🔒 Active work — TypeScript is held whole by ONE session
+:::info 🔒 Active work — the A/B split is REOPENED, both parts are live
 
-🔴 **The A/B split is closed as of 2026-08-14.** Part A (phases 2–6) was claimed
-by session `3bbe364c`, which wrote the phase-2 index and topic 08 and then went
-quiet; Part B (phases 7–12) was never picked up at all. Both halves are now held
-by a **single** session, so there is no cross-part boundary left to police.
+🔴 **Reopened 2026-08-15.** Two sessions now write TypeScript in parallel, on
+`main`, with a hard directory boundary between them. **Neither creates nor edits
+a file in the other's phase directories.**
 
 | Part | Phases | Topics | Claimed by |
 |---|---|---|---|
-| **A · the type system** | 2, 3, 4, 5, 6 | 73 | session `713ec3db`, 2026-08-14 |
-| **B · TypeScript in the stack** | 7, 8, 9, 10, 11, 12 | 84 | session `713ec3db`, 2026-08-14 |
+| **A · the type system** | 2, 3, 4, 5, 6 | 73 | session `3af83cbb`, 2026-08-15 — phases 0–2 ✅, phase 3 at 11/14 |
+| **B · TypeScript in the stack** | 7, 8, 9, 10, 11, 12 | 84 | session `27931e79`, 2026-08-15 — cold start, phase 7 in progress |
 
-🔴 **Work happens in the worktree
-`/run/media/sairam/Storage/Backup/Knowledge/devbible-typescript`, branch
-`typescript-pages`** — not on `main`. ⚠️ **That branch is not merged into `main`
-yet.** It merges at each phase boundary; saying so plainly rather than leaving it
-stranded is the standing lesson from the React worktree.
+Part B's six phase directories **did not exist** at claim time; each is scaffolded
+(`_category_.json` plus a `README.md` carrying the full topic table) as it is
+reached, which is why they show as `planned` below until their index lands.
 
 Other technologies still belong to other live sessions. Shared files — this
 README's phase rows, `docs/README.md`, and `src/data/progress.js` (anchor every
@@ -57,7 +54,7 @@ to be confounded, the correction is on the page rather than quietly removed.
 | [0 · How TypeScript runs](./phase-0-how-typescript-runs/README.md) | The type system | 13 | ✅ written |
 | [1 · The type vocabulary](./phase-1-type-vocabulary/README.md) | The type system | 17 | ✅ written |
 | [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 13 | ✅ written |
-| [3 · Generics](./phase-3-generics/README.md) | The type system | 11 / 14 | 🚧 writing |
+| [3 · Generics](./phase-3-generics/README.md) | The type system | 12 / 14 | 🚧 writing |
 | 4 · Classes, objects and declaration merging | Types at scale | — | planned |
 | 5 · Type-level programming | Types at scale | — | planned |
 | 6 · Modules, declarations and the build | Types at scale | — | planned |
