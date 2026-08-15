@@ -21,7 +21,7 @@ scripting attacks." Almost every `postMessage` bug is one of those two checks mi
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[What an origin is](./01-what-an-origin-is.md)** | The scheme/host/port tuple and the port rule; opaque origins (`file:`, `data:`, sandboxed frames); what the policy really restricts — **writes and embedding are allowed, reads are not**; the tiny cross-origin `Window`/`Location` allow-list; why `document.domain` is dead; and controlling who may frame *you* |
-| 2 | **`postMessage`** *(next)* | The three argument forms and 🔴 **why `targetOrigin: "*"` is a data leak**; the receive-side checklist (`origin`, `source`, shape); what the structured clone algorithm carries and refuses; transferables; `MessageChannel` ports; and the worker, iframe and popup cases |
+| 2 | **[`postMessage`](./02-postmessage.md)** | The three argument forms and 🔴 **why `targetOrigin: "*"` is a data leak**; the receive-side checklist (`origin`, `source`, shape); what the structured clone algorithm carries and refuses; transferables; `MessageChannel` ports; and the worker, iframe and popup cases |
 
 ## The shape in ten lines
 

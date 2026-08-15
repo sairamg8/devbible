@@ -47,7 +47,7 @@ disagree about who can see what, covered in
   `index.html` from disk is not a smaller version of serving it.
 - **A sandboxed `<iframe>` without `allow-same-origin` has an opaque origin too.** Anything
   it posts arrives with `event.origin === "null"` — the **string**, and it is
-  **chunk 2**'s most dangerous edge, because `"null"` is not a value you
+  [chunk 2](./02-postmessage.md)'s most dangerous edge, because `"null"` is not a value you
   can allow-list meaningfully.
 
 ## What the policy actually restricts
@@ -91,7 +91,7 @@ throws a `SecurityError`:
 1. 🔴 **`location.href` is write-only across origins.** You can navigate someone else's frame
    and you cannot read where it is. That asymmetry is exactly why
    `postMessage(msg, targetOrigin)` needs an explicit target — "a malicious site can change
-   the location of the window without your knowledge" (**chunk 2** *(next)*).
+   the location of the window without your knowledge" ([chunk 2](./02-postmessage.md)).
 2. **`window.opener` is a live handle back to the opener.** A page you link to with
    `target="_blank"` can call `opener.location.replace(...)` and navigate the tab the user
    came from — the reason `rel="noopener"` exists. Modern browsers imply it for
@@ -189,4 +189,4 @@ headers. A JavaScript frame-busting check is not a defence.
 
 ---
 
-← [Overview](./README.md) · Next → **2 · `postMessage`** *(next)*
+← [Overview](./README.md) · Next → [2 · `postMessage`](./02-postmessage.md)

@@ -7,11 +7,11 @@ sidebar_position: 0
 *21 topics.* How data gets in and out of the browser. As the syllabus puts it, **the `fetch`
 rows and the CORS row cover the majority of "it works in Postman but not in the browser"**.
 
-## Status — 🚧 **Understand tier under way — 13 of 21** (2026-08-15)
+## Status — 🚧 **Understand tier under way — 14 of 21** (2026-08-15)
 
 **Master tier ✅ COMPLETE** — all five Master topics (01–05), written in syllabus order.
 
-🚧 **Now the Understand tier (06–15), then Know (16–21).** **06–13 are written**; 14 onward remain.
+🚧 **Now the Understand tier (06–15), then Know (16–21).** **06–14 are written**; 15 onward remain.
 
 🔴 **Chunk A of the four-way JavaScript split owns this phase** (session `3d9f98b8`, 2026-08-15) —
 the old "lane B" note was from the closed two-lane split. Chunk A also owns **phase 5, which is now
@@ -36,7 +36,8 @@ complete at every tier (26/26)**, and that pairing is deliberate: this phase's `
 | 11 | **[Uploading files](./11-uploading-files/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[`Blob`, `File` and object URLs](./12-blob-file-filereader/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | **[WebSocket](./13-websocket/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ **5 chunks** |
-| 14–15 | Same-origin and `postMessage`, CSP | <span className="db-tier t-understand">Understand</span> | 🚧 next |
+| 14 | **[Same-origin and `postMessage`](./14-same-origin-and-postmessage/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ **2 chunks** |
+| 15 | CSP | <span className="db-tier t-understand">Understand</span> | 🚧 next |
 | 16–21 | IndexedDB, service workers, SSE, streams, `sendBeacon`, `XMLHttpRequest` | <span className="db-tier t-know">Know</span> | deferred |
 
 ## How these pages are verified
