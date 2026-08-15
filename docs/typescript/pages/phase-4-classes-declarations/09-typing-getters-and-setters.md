@@ -183,4 +183,4 @@ look free.
 
 ---
 
-← Prev: [08 · `readonly` and definite assignment](./08-readonly-and-definite-assignment.md) · Next → **10 · `this` types and polymorphic `this`** *(not written yet)*
+← Prev: [08 · `readonly` and definite assignment](./08-readonly-and-definite-assignment.md) · Next → [10 · `this` types and polymorphic `this`](./10-this-types.md)
