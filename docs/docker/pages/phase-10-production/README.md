@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 7 of 16 topics. The Master tier is complete at 5 of 5.**
+🚧 **Writing — 8 of 16 topics. The Master tier is complete at 5 of 5.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -23,7 +23,7 @@ is that list, with the mechanism and the fix for each.
 | 05 | **[Configuration and secrets at run time](05-config-and-secrets.md)** | <span className="db-tier t-understand">Understand</span> | "Not in the image" and "not in the process list" are different claims |
 | 06 | **[The production failure catalogue](06-failure-catalogue/README.md)** | <span className="db-tier t-master">Master</span> | OOM, full disk, pull limits, clock skew, DNS, unhealthy-but-serving, zombies |
 | 07 | **[Restart policies as supervision](07-restart-as-supervision.md)** | <span className="db-tier t-understand">Understand</span> | What they cover, what they hide, and the silent crash loop |
-| 08 | **Log drivers and rotation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `max-size`, `max-file`, `journald`, and the 40 GB file that filled the disk |
+| 08 | **[Log drivers and rotation](08-log-drivers-and-rotation.md)** | <span className="db-tier t-understand">Understand</span> | `max-size`, `max-file`, `journald`, and the 40 GB file that filled the disk |
 | 09 | **Healthchecks in production** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Liveness versus readiness as concepts, with or without an orchestrator |
 | 10 | **Hardening at run time** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `--read-only`, `--cap-drop=ALL`, `no-new-privileges`, non-root |
 | 11 | **Observing** *(not written yet)* | <span className="db-tier t-know">Know</span> | `stats`, exporters, and host memory versus cgroup memory |
@@ -48,6 +48,7 @@ arguments. The Understand and Know topics are single pages, as their tier warran
 | Configuration and secrets at run time | 05 |
 | The production failure catalogue | 06 |
 | Restart policies as supervision | 07 |
+| Log drivers and rotation | 08 |
 
 ## Phase gate
 
