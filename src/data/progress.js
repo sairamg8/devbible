@@ -248,7 +248,7 @@ export const LANGUAGES = {
       {n: 1, slug: 'phase-1-running-containers', name: 'Running containers', part: 'How containers work', topics: 16, pages: 16},
       {n: 2, slug: 'phase-2-images-and-registries', name: 'Images, layers and registries', part: 'How containers work', topics: 15, pages: 15},
       {n: 3, slug: 'phase-3-dockerfile', name: 'The Dockerfile', part: 'Building images', topics: 18, pages: 18},
-      {n: 4, slug: 'phase-4-build-strategy', name: 'Build strategy: cache, multi-stage, BuildKit', part: 'Building images', topics: 16, pages: 8, pagesPlanned: 16},
+      {n: 4, slug: 'phase-4-build-strategy', name: 'Build strategy: cache, multi-stage, BuildKit', part: 'Building images', topics: 16, pages: 9, pagesPlanned: 16},
       {n: 5, slug: 'phase-5-image-quality', name: 'Image quality, size and supply chain', part: 'Building images', topics: 12, pages: 0},
       {n: 6, slug: 'phase-6-storage', name: 'Storage: volumes, mounts and data', part: 'Running a real stack', topics: 12, pages: 4},
       {n: 7, slug: 'phase-7-networking', name: 'Networking', part: 'Running a real stack', topics: 14, pages: 0},

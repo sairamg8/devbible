@@ -103,7 +103,7 @@ Rust is the awkward one: Cargo has no "download only my dependencies" command
 that also compiles them, so the common workaround is to copy the manifests,
 create a dummy `src/main.rs`, build once to compile the dependency graph, then
 copy the real source. It works, and it is a workaround — a cache mount
-(**page 09 · `RUN --mount=type=cache`**, *not written yet*) is the cleaner
+([page 09 · `RUN --mount=type=cache`](09-mount-type-cache.md)) is the cleaner
 modern answer.
 
 ## Monorepos, where it usually breaks
@@ -161,7 +161,7 @@ supports it, and treat the explicit list as something CI should check.
 **It does not make the install itself fast** — it makes it *rare*. When it does
 miss, you still pay the full download. Pairing the pattern with a cache mount on
 the package manager's own cache directory is what makes even the miss cheap;
-that is **page 09 · `RUN --mount=type=cache`** *(not written yet)*, and the two
+that is [page 09 · `RUN --mount=type=cache`](09-mount-type-cache.md), and the two
 compose rather than compete.
 
 **It does not keep the dependencies out of the final image.** `npm ci` installs

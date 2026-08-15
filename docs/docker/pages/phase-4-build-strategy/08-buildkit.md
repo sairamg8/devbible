@@ -81,7 +81,7 @@ its output layer. Three of them matter, each with its own page:
 
 | Mount | What it gives the `RUN` | Page |
 |---|---|---|
-| `type=cache` | A directory that persists across builds and is in no layer | **09** *(not written yet)* |
+| `type=cache` | A directory that persists across builds and is in no layer | [09](09-mount-type-cache.md) |
 | `type=bind` | A file read from the context or another stage without `COPY` | **10** *(not written yet)* |
 | `type=secret` | A value present for one instruction only | [05](05-mount-type-secret.md) |
 
@@ -205,4 +205,4 @@ operation produces — so a `RUN` can read something that never lands in the ima
 
 ---
 
-← Prev: [`COPY --from`](07-copy-from.md) · Index: [Phase 4](README.md) · Next → **`RUN --mount=type=cache`** *(not written yet)*
+← Prev: [`COPY --from`](07-copy-from.md) · Index: [Phase 4](README.md) · Next → [`RUN --mount=type=cache`](09-mount-type-cache.md)
