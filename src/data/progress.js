@@ -76,7 +76,7 @@ export const LANGUAGES = {
       {n: 4, slug: 'phase-4-classes-declarations', name: 'Classes, objects and declaration merging', part: 'Types at scale', topics: 14, pages: 0},
       {n: 5, slug: 'phase-5-type-level', name: 'Type-level programming', part: 'Types at scale', topics: 16, pages: 0},
       {n: 6, slug: 'phase-6-modules-build', name: 'Modules, declarations and the build', part: 'Types at scale', topics: 16, pages: 0},
-      {n: 7, slug: 'phase-7-server', name: 'TypeScript on the server', part: 'In the stack', topics: 15, pages: 2, pagesPlanned: 15},
+      {n: 7, slug: 'phase-7-server', name: 'TypeScript on the server', part: 'In the stack', topics: 15, pages: 3, pagesPlanned: 15},
       {n: 8, slug: 'phase-8-react', name: 'TypeScript in React', part: 'In the stack', topics: 14, pages: 0},
       {n: 9, slug: 'phase-9-boundary', name: 'Types at the boundary', part: 'In the stack', topics: 15, pages: 0},
       {n: 10, slug: 'phase-10-strictness', name: 'Strictness and correctness', part: 'Rigour and tooling', topics: 13, pages: 0},
