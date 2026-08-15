@@ -34,7 +34,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 · Objects, prototypes and classes](./phase-4-objects-and-classes/README.md)** | Language core | 20 | ✅ **complete — every tier** (Master 7/7 · Understand 9/9 · Know 4/4) |
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | 🚧 **Master ✅ 8/8** · Understand under way (03, 08, 11–19 done) — **19/26** |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | 🚧 **Master ✅** (01–03) · **Understand ✅ 5/5** (04–08) · Know next — **8/13** |
-| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🚧 **Master ✅ 11/11** · Understand under way (**12–15** ✅) — **15/22** |
+| **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | 🚧 **Master ✅ 11/11** · Understand under way (**12–16** ✅) — **16/22** |
 | **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🟡 **Master tier ✅** (01–04 — all four); 05–18 deferred |
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
@@ -58,7 +58,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 |---|---|---|---|---|
 | **A** | **5**, **11** | **21** — 5 (7: 20–26) · 11 (14: 08–21) | The built-in library, finished; then network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
 | **B** | **6**, **17** | **19** — 6 (5: 09–13) · 17 (14: 05–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
-| **C** | **7**, **8** | **21** — 7 (7: 16–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
+| **C** | **7**, **8** | **20** — 7 (6: 17–22) · 8 (14: 05–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
 | **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
@@ -111,7 +111,7 @@ worktrees left.
 | **A** | 11 · Network, storage and data transfer (7/21) | 14 | **08 · Aborting and timing out** (Understand) | 09 Cookies · 10 `localStorage` · 11 Uploading files · 12 `Blob`/`File` · 13 WebSocket · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
 | **B** | 6 · Iteration, destructuring and generators (**8/13**) | 5 | **09 · Two-way generators** (Know) | 10 `yield*` · 11 Iterator helpers · 12 A collection class · **When Needed** 13 Driving an iterator by hand |
 | **B** | 17 · Machine coding (4/18) | 14 | **05 · An `EventEmitter`** (Understand) | 06 Deep clone · 07 Task queue · 08 Retry with backoff · 09 LRU cache · 10 A Promise from scratch · 11 `memoize` · 12 Deep equality · 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
-| **C** | 7 · Asynchronous JavaScript (**15**/22) | **7** | **16 · Concurrency limiting** (Understand) — ✅ 12–15 done | 17 Race conditions in a UI · 18 `queueMicrotask` · 19 Event loop: browser vs Node · **Know** 20 `Promise.withResolvers` · 21 Thenables · 22 Backpressure |
+| **C** | 7 · Asynchronous JavaScript (**16**/22) | **6** | **17 · Race conditions in a UI** (Understand) — ✅ 12–16 done | 18 `queueMicrotask` · 19 Event loop: browser vs Node · **Know** 20 `Promise.withResolvers` · 21 Thenables · 22 Backpressure |
 | **C** | 8 · Modules, errors, memory and the toolchain (4/18) | 14 | **05 · Dynamic `import()`** (Understand) | 06 Circular imports · 07 `throw`/`try`/`catch` · 08 Custom errors · 09 Failing well · 10 Global error handling · 11 The memory model · 12 Finding a leak · 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
 | **D** | 12 · The browser platform (6/21) | 15 | **07 · Web Workers** (Understand) | 08 History API · 09 `window`/`document`/`navigator` · 10 WebCrypto · 11 Accessibility · 12 Feature detection · 13 What belongs on the server · **Know** 14 Yielding to the main thread · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
 | **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
