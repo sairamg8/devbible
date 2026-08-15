@@ -260,4 +260,4 @@ module graph genuinely provides.
 
 ---
 
-← Prev: [05 · Interface declaration merging](./05-interface-declaration-merging/README.md) · Next → **07 · Branded / nominal types** *(not written yet)*
+← Prev: [05 · Interface declaration merging](./05-interface-declaration-merging/README.md) · Next → [07 · Branded / nominal types](./07-branded-nominal-types.md)

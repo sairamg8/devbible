@@ -39,7 +39,7 @@ enforces.**
 - **→ [03 · Parameter properties](../03-parameter-properties.md)** —
   `constructor(private readonly repo: Repo)`, which works with `private` and has
   no `#` equivalent.
-- **→ 07 · Branded / nominal types** *(not written yet)* — the deliberate use of
+- **→ [07 · Branded / nominal types](../07-branded-nominal-types.md)** — the deliberate use of
   declaration-site privacy.
 
 ---

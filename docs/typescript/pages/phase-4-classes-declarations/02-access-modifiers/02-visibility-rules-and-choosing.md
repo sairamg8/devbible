@@ -81,7 +81,7 @@ site**, not structurally — the `TS2442` behaviour met in
 [phase 3 · generic classes](../../phase-3-generics/09-generic-classes.md). Two
 identically-shaped classes are not interchangeable if either has a private
 member. That is nominal typing arriving through the back door, and it is the
-mechanism behind branded types (**topic 07** *(not written yet)*).
+mechanism behind [branded types](../07-branded-nominal-types.md).
 
 **At runtime**, ES2022 supplies the matching check. MDN's example:
 
