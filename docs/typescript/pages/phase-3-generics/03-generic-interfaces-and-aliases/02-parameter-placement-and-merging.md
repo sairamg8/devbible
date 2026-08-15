@@ -106,7 +106,7 @@ the order `<T extends Bound = Default>`, and the default must satisfy the bound.
 **Where this genuinely pays is a type with one common configuration and several
 rare ones** — `Result<T, E = Error>`, `Repository<T, Id = string>`. It keeps the
 usual case to one argument without hiding the second from anyone who needs it.
-Full treatment in **topic 08 · Default type parameters** *(not written yet)*.
+Full treatment in [topic 08 · Default type parameters](../08-default-type-parameters.md).
 
 ## Recursive generic aliases, and the depth limit
 

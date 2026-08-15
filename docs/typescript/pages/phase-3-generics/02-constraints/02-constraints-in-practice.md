@@ -113,7 +113,7 @@ a considered bound.
 `string` if you do not say" — with no inference site it falls back *to the
 constraint*, which looks the same in that one case and is a different mechanism.
 Defaults are `<T = string>`, they compose with constraints
-(`<T extends string = 'idle'>`), and they are **topic 08** *(not written yet)*.
+(`<T extends string = 'idle'>`), and they are [topic 08](../08-default-type-parameters.md).
 
 ## When a constraint is the wrong tool: `NoInfer<T>`
 

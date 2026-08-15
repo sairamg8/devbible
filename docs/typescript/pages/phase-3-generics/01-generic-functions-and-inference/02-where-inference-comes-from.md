@@ -129,7 +129,7 @@ error TS2558: Expected 2 type arguments, but got 1.
 ```
 
 The usual workaround is a **default** on the trailing parameters
-(**topic 08** *(not written yet)*) so the ones you want inferred have something
+([topic 08](../08-default-type-parameters.md)) so the ones you want inferred have something
 to fall back to — or splitting the function so each call supplies what it knows.
 
 **And the callee must be typed.** Calling something typed `any` with a type

@@ -277,4 +277,4 @@ breaking change.
 
 ---
 
-← Prev: [06 · Indexed access types](./06-indexed-access-types.md) · Next → **08 · Default type parameters** *(not written yet)*
+← Prev: [06 · Indexed access types](./06-indexed-access-types.md) · Next → [08 · Default type parameters](./08-default-type-parameters.md)
