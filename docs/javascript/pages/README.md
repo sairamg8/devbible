@@ -56,10 +56,10 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
-| **A** | **5**, **11** | **9** — 5 ✅ **DONE 26/26** · 11 (9: 13–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
-| **B** | **6**, **17** | **5** — ✅ **phase 6 COMPLETE (13/13)** · 17 (5: 14–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
+| **A** | **5**, **11** | **9** — 5 ✅ **DONE 26/26** · 11 (9: 13–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `3d9f98b8`, 2026-08-15 |
+| **B** | **6**, **17** | **5** — ✅ **phase 6 COMPLETE (13/13)** · 17 (5: 14–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
 | **C** | **7**, **8** | **6** — ✅ **phase 7 COMPLETE 22/22** · 8 (6: 13–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
-| **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
+| **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
 
