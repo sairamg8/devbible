@@ -11,14 +11,15 @@ instruction: **11 · Infinite scroll and lazy images**, **12 · Long lists witho
 forms, client-side routing, real-time order tracking, dates and delivery estimates, failing in
 public, a performance budget) are **dropped**.
 
-The seven written Master topics (01–07) are unaffected. Phase 18 is **7 of 10 in scope**.
+The seven written Master topics (01–07) are unaffected. Phase 18 is **10 of 10 in scope — all
+written**.
 :::
 
 *18 topics.* Ordered the way you would actually build the app: browse, then cart, then checkout,
 then the operational surface. **This is the last phase**, and it composes everything the earlier
 ones taught.
 
-## Status — 🚧 **9 of 10 in scope** · Master ✅ 7/7 (01–07) · Understand 2/3 (**11** ✅, **12** ✅, 15 to go)
+## Status — ✅ **10 of 10 in scope · COMPLETE** · Master ✅ 7/7 (01–07) · Understand ✅ 3/3 (**11**, **12**, **15**)
 
 **Master tier first.** Phase 18 has **seven** Master topics — 01 through 07 — and **all seven are
 written**. They were the last seven Master topics in the corpus: 🔴 **every Master topic in the
@@ -37,7 +38,7 @@ JavaScript syllabus is now written.**
 | 07 | **[Idempotency from the client](./07-idempotency/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 11 | **[Infinite scroll and lazy images](./11-infinite-scroll-and-lazy-images/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 12 | **[Long lists without freezing](./12-long-lists-without-freezing/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 15 | Review uploads | <span className="db-tier t-understand">Understand</span> | deferred |
+| 15 | **[Review uploads](./15-review-uploads/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | ~~08–10, 13, 14, 16–18~~ | ~~Persisting the cart, auth in the browser, checkout forms, client-side routing, real-time order tracking, dates and delivery estimates, failing in public, a performance budget~~ | <span className="db-tier t-understand">Understand</span> | 🚫 **dropped** |
 
 ## The phase gate
@@ -50,8 +51,9 @@ things that make writes safe (06, 07).
 ## How these pages are verified
 
 **Documentation-validated** against MDN — the History and URL APIs, `AbortSignal`, ARIA attributes,
-`Intl`, and the numeric behaviour behind the money rules. **No page prints a timing or console
-output**, because nothing was run.
+`Intl`, the numeric behaviour behind the money rules, and for topic 15 the `FormData`, `xhr.upload`,
+`createImageBitmap`, canvas encoding and content-type-safety pages. **No page prints a timing or
+console output**, because nothing was run.
 
 ## Where this connects
 
