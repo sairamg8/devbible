@@ -63,8 +63,10 @@ application code — and you can name which failures leave no exit code at all.
   and [12 · Restart policies](../../phase-1-running-containers/12-restart-policies.md)
 - [Phase 2 · 02 · Tags versus digests](../../phase-2-images-and-registries/02-tags-vs-digests.md)
   — pinning, and not depending on a registry to recover
-- **07 · Restart policies as supervision** · **08 · Log drivers and rotation** ·
-  **09 · Healthchecks in production** · **11 · Observing** · **13 · Disk growth** ·
+- [07 · Restart policies as supervision](../07-restart-as-supervision.md) ·
+  [08 · Log drivers and rotation](../08-log-drivers-and-rotation.md) ·
+  [09 · Healthchecks in production](../09-healthchecks-in-production.md) ·
+  [11 · Observing](../11-observing.md) · **13 · Disk growth** ·
   **15 · Time, timezones and locales** *(not written yet)*
 
 ---

@@ -60,8 +60,9 @@ anything.
 - [Phase 3 · 11 · HEALTHCHECK](../../phase-3-dockerfile/11-healthcheck.md) and
   [12 · LABEL](../../phase-3-dockerfile/12-label-and-metadata.md) — probe noise,
   and identity that travels with the image
-- **08 · Log drivers and rotation** · **11 · Observing** ·
-  **13 · Disk growth** · **15 · Time, timezones and locales** *(not written yet)*
+- [08 · Log drivers and rotation](../08-log-drivers-and-rotation.md) ·
+  [11 · Observing](../11-observing.md) · **13 · Disk growth** ·
+  **15 · Time, timezones and locales** *(not written yet)*
 
 ---
 

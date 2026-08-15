@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 10 of 16 topics. The Master tier is complete at 5 of 5.**
+🚧 **Writing — 11 of 16 topics. The Master tier is complete at 5 of 5.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -26,7 +26,7 @@ is that list, with the mechanism and the fix for each.
 | 08 | **[Log drivers and rotation](08-log-drivers-and-rotation.md)** | <span className="db-tier t-understand">Understand</span> | `max-size`, `max-file`, `journald`, and the 40 GB file that filled the disk |
 | 09 | **[Healthchecks in production](09-healthchecks-in-production.md)** | <span className="db-tier t-understand">Understand</span> | Liveness versus readiness as concepts, with or without an orchestrator |
 | 10 | **[Hardening at run time](10-hardening/README.md)** | <span className="db-tier t-understand">Understand</span> | `--read-only`, `--cap-drop=ALL`, `no-new-privileges`, non-root |
-| 11 | **Observing** *(not written yet)* | <span className="db-tier t-know">Know</span> | `stats`, exporters, and host memory versus cgroup memory |
+| 11 | **[Observing](11-observing.md)** | <span className="db-tier t-know">Know</span> | `stats`, exporters, and host memory versus cgroup memory |
 | 12 | **Debugging a container you cannot shell into** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Distroless and scratch, ephemeral attach, `nsenter`, copying a binary in |
 | 13 | **Disk growth** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Images, dangling layers, volumes, build cache — and the flag that deletes volumes |
 | 14 | **Running containers under systemd** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The unit that supervises, restarts and orders your container |
@@ -51,6 +51,7 @@ separate arguments, and topic 10 splits between the switches and enforcing them.
 | Log drivers and rotation | 08 |
 | Healthchecks in production | 09 |
 | Hardening at run time | 10 |
+| Observing | 11 |
 
 ## Phase gate
 

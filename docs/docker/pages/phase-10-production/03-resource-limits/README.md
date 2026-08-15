@@ -58,7 +58,8 @@ CPU without reaching for "add more replicas".
   137, 143 and the rest
 - [Phase 1 · 03 · ps, inspect, logs, stats](../../phase-1-running-containers/03-ps-inspect-logs-stats.md)
   — where the evidence is read
-- **06 · The production failure catalogue** · **11 · Observing** ·
+- [06 · The production failure catalogue](../06-failure-catalogue/README.md) ·
+  [11 · Observing](../11-observing.md) ·
   **14 · Running containers under systemd** *(not written yet)*
 
 ---

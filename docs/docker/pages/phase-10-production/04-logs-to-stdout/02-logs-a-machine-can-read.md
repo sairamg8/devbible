@@ -133,7 +133,7 @@ the wrong tool:
 
 - **Counting log lines to get a rate** is expensive and lossy — sampling and
   rotation both silently change the answer. Emit a counter
-  (**11 · Observing** *(not written yet)*).
+  ([11 · Observing](../11-observing.md)).
 - **Reconstructing a call graph from timestamps** across containers fails the
   moment clocks disagree. That is what a trace id is for.
 - **Alerting on a log string** works until someone rewords the message. Alert on

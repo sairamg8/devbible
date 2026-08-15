@@ -45,7 +45,7 @@ That is where the counter-intuitive failure lives:
 - **The evidence is in the cgroup, not in `docker stats`.** `cpu.stat` counts
   `nr_throttled` and `throttled_usec`; a rising `nr_throttled` while utilisation
   looks moderate *is* the diagnosis. Where those numbers surface for you is
-  **11 · Observing** *(not written yet)*.
+  [11 · Observing](../11-observing.md).
 
 The fix is usually one of: raise the quota, lower the concurrency inside the
 container so bursts are smaller, or accept the throttling because the workload is
