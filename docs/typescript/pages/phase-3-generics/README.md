@@ -14,7 +14,7 @@ sidebar_position: 3
 > **No sandbox, no console blocks**: every claim here is documentation-validated,
 > and a plausible-looking `tsc` transcript written from memory is not evidence.
 
-**14 topics · 28 files · complete.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
+**14 topics · 31 files · complete.** [Phase 2](../phase-2-narrowing/README.md) was about recovering a
 specific type from a wide one. This phase is the opposite motion: **writing code
 for a type you have not been told yet**, and getting it back out intact at the
 other end.
