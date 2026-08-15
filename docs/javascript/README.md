@@ -79,6 +79,13 @@ import Progress from '@site/src/components/Progress';
 
 <Progress lang="javascript" compact />
 
+:::tip 🏁 Complete — 2026-08-15
+Every scheduled topic is written: **269 topics across 16 phases** (0–12, 16–18) at every in-scope
+tier, **282 of the 316 in-scope rows**, **526 leaf pages**, and the **Master tier at 99/99**. The
+remaining **34** topics are **parked** in phases 13–15, which keep their Master tier and nothing
+beyond it — the bar above leaves parked phases out, which is why it reads 100%.
+:::
+
 ## Tier legend
 
 | Badge | Meaning |
@@ -92,14 +99,21 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 100 | 30% |
+| <span className="db-tier t-master">Master</span> | 99 | 29% |
 | <span className="db-tier t-understand">Understand</span> | 170 | 50% |
-| <span className="db-tier t-know">Know</span> | 66 | 20% |
+| <span className="db-tier t-know">Know</span> | 64 | 19% |
 | <span className="db-tier t-when">When Needed</span> | 4 | 1% |
 | **Total** | **337** | |
 
-Master by part: Language core 29 · Data & async 26 · Web APIs 18 · DSA 20 ·
+Master by part: Language core 29 · Data & async 26 · Web APIs 17 · DSA 20 ·
 Applied 7.
+
+:::note Counted from the badges, 2026-08-15
+These four numbers are the **first tier badge on each of the 337 syllabus rows**, recounted from
+`syllabus/*.md`. An earlier version of this table read 100 · 170 · 66 · 4, which sums to **340** —
+it counted the badges in the tier-legend rows as topics. **Master is 99, not 100**, and all 99 are
+written.
+:::
 
 The Master set is deliberately front-loaded: 55 of the 100 are in Parts 1 and 2,
 because the language is what you cannot look up mid-task. Part 3 keeps a low
