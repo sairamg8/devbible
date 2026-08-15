@@ -220,4 +220,4 @@ A leak grows with the number of *interactions*; a working set grows with the siz
 
 ---
 
-← [01 · Stack, heap and what a variable holds](./01-stack-and-heap.md)
+← [01 · Stack, heap and what a variable holds](./01-stack-and-heap.md) · [Topic index](./README.md)

@@ -201,3 +201,7 @@ No — it prevents reassigning the binding. `Object.freeze` freezes one level of
 
 **Why is `{a:1} === {a:1}` false?**
 Object equality is identity. They are two distinct objects, so they are not the same reference.
+
+---
+
+[Topic index](./README.md) · [02 · Cost is retention](./02-cost-is-retention.md) →

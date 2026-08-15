@@ -58,7 +58,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 |---|---|---|---|---|
 | **A** | **5**, **11** | **10** — 5 ✅ **DONE 26/26** · 11 (10: 12–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
 | **B** | **6**, **17** | **7** — ✅ **phase 6 COMPLETE (13/13)** · 17 (7: 12–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
-| **C** | **7**, **8** | **8** — ✅ **phase 7 COMPLETE 22/22** · 8 (8: 11–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
+| **C** | **7**, **8** | **7** — ✅ **phase 7 COMPLETE 22/22** · 8 (7: 12–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
 | **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
@@ -112,7 +112,7 @@ worktrees left.
 | **B** | 6 · Iteration, destructuring and generators | ✅ **13/13 — COMPLETE** | — | phase 6 is done; chunk B continues in phase 17 |
 | **B** | 17 · Machine coding (**11/18**) | 7 | **12 · Deep equality** (Understand) | 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
-| **C** | 8 · Modules, errors, memory and the toolchain (**10**/18) | **8** | **11 · The memory model** (Understand) — ✅ 05–10 done | 12 Finding a leak · 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
+| **C** | 8 · Modules, errors, memory and the toolchain (**11**/18) | **7** | **12 · Finding a leak** (Understand) — ✅ 05–11 done | 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
 | **D** | 12 · The browser platform (11/21) | 10 | **12 · Feature detection** (Understand) | 13 What belongs on the server · **Know** 14 Yielding to the main thread · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
 | **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
 
