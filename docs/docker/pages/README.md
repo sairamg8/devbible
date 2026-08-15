@@ -69,9 +69,9 @@ answers.
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 17 | ✅ **Complete** |
 | **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 6 | 🚧 **Writing — chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 16 | ✅ **Complete — chunk D** |
-| **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 1 | 🚧 **Writing — chunk D** |
+| **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 2 | 🚧 **Writing — chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **157** | |
+| **Total** | **192** | **158** | |
 
 import Progress from '@site/src/components/Progress';
 

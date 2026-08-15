@@ -157,8 +157,8 @@ Strip out the marketing and four things are genuinely different:
   ([Phase 0 · 03 · cgroups](../../phase-0-what-a-container-is/03-cgroups.md)).
 - **Rootless is the default path, not a mode you enable** — a user namespace "is
   automatically created for the user, defined in `/etc/subuid` and
-  `/etc/subgid`". That is **Phase 11 · 02 · Rootless by default**
-  *(not written yet)*.
+  `/etc/subgid`". That is
+  [02 · Rootless by default](../02-rootless-by-default/README.md).
 
 The bill for all of this arrives in [the next chunk](02-restart-logs-and-systemctl.md):
 if the container belongs to your session, what happens when your session ends?

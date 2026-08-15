@@ -13,12 +13,12 @@ Podman is not "Docker with a different name". The daemonless, rootless design
 changes real things. This phase is where those differences live, so the rest of
 the track can stay engine-neutral.
 
-🚧 **Writing — 1 of 16 topics.**
+🚧 **Writing — 2 of 16 topics.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Daemonless](01-daemonless/README.md)** | <span className="db-tier t-master">Master</span> | No `dockerd`, no root socket — the container is a child of your session, and that changes restart, logs and `systemctl` |
-| 02 | Rootless by default | <span className="db-tier t-master">Master</span> | User namespaces, `/etc/subuid`, and the UID arithmetic behind every ownership surprise |
+| 02 | **[Rootless by default](02-rootless-by-default/README.md)** | <span className="db-tier t-master">Master</span> | User namespaces, `/etc/subuid`, and the UID arithmetic behind every ownership surprise |
 | 03 | Pods | <span className="db-tier t-understand">Understand</span> | A shared network namespace plus an infra container — the one place `localhost` means "my neighbour" |
 | 04 | Quadlet | <span className="db-tier t-master">Master</span> | `.container`, `.pod`, `.volume`, `.network`, `.kube`, `.build` units and the systemd generator behind them |
 | 05 | Where Podman will bite you | <span className="db-tier t-master">Master</span> | Lingering, systemd-timer healthchecks, netavark errors, and the Compose gaps |

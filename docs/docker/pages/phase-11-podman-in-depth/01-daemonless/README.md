@@ -62,7 +62,8 @@ under Docker.
   — the Docker defaults this page contrasts with
 - [Phase 10 · 14 · Running containers under systemd](../../phase-10-production/14-under-systemd.md)
   — the unit that supervises a client, and why Podman does not need the workaround
-- **02 · Rootless by default** *(not written yet)* — the user-namespace arithmetic
+- [02 · Rootless by default](../02-rootless-by-default/README.md) — the
+  user-namespace arithmetic
 - **04 · Quadlet** *(not written yet)* — where "let systemd own the container"
   becomes a file you write
 - **13 · Docker CLI compatibility** *(not written yet)* — the API socket in

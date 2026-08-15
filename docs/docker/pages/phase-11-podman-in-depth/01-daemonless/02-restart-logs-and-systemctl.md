@@ -242,4 +242,4 @@ containers.
 
 ---
 
-← Prev: [What runs instead of a daemon](01-what-runs-instead.md) · Index: [Phase 11](../README.md) · Next → **02 · Rootless by default** *(not written yet)*
+← Prev: [What runs instead of a daemon](01-what-runs-instead.md) · Index: [Phase 11](../README.md) · Next → [02 · Rootless by default](../02-rootless-by-default/README.md)
