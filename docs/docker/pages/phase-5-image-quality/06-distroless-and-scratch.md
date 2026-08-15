@@ -167,7 +167,7 @@ distribution
 **Does:** removes a large amount of software you were not using, so there is less
 to be vulnerable and less for an attacker to pick up after a compromise. It also
 makes a vulnerability report much shorter and more meaningful, which is
-**page 07 · Vulnerability scanning** *(not written yet)*.
+[page 07 · Vulnerability scanning](07-vulnerability-scanning.md).
 
 **Does not:** fix your application's own vulnerabilities, or your dependencies'.
 A distroless image running a vulnerable web framework is a vulnerable web
@@ -244,4 +244,4 @@ shorter. Your own code and dependencies are unaffected.
 
 ---
 
-← Prev: [Alpine and musl](05-alpine-and-musl.md) · Index: [Phase 5](README.md) · Next → **Vulnerability scanning** *(not written yet)*
+← Prev: [Alpine and musl](05-alpine-and-musl.md) · Index: [Phase 5](README.md) · Next → [Vulnerability scanning](07-vulnerability-scanning.md)
