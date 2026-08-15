@@ -92,7 +92,7 @@ process.on('SIGTERM', () => { server.close(); });
 — you have taken ownership of exiting. If `server.close()` never resolves because
 a keep-alive connection is still open, you are back to ten seconds and exit 137,
 with a handler that reads as correct in review. That is the whole subject of
-[graceful shutdown](../02-graceful-shutdown.md).
+[graceful shutdown](../02-graceful-shutdown/README.md).
 
 ## Rule 2 — orphans reparent to PID 1, and PID 1 must reap them
 

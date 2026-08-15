@@ -159,7 +159,7 @@ stops got *slower*.
 handler never reaches `process.exit()` — `server.close()` blocked on keep-alive
 sockets, a pending query — nothing exits.
 **Fix:** Close the server, set a hard timer as a backstop, exit. That is
-[the next topic](../02-graceful-shutdown.md).
+[the next topic](../02-graceful-shutdown/README.md).
 
 **Symptom:** `--init` fixed the stop, but a crashed application still leaves the
 container dead.

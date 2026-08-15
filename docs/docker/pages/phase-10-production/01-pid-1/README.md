@@ -58,7 +58,7 @@ idle.
   — where PID 1 is decided
 - [Phase 0 · 02 · Namespaces](../../phase-0-what-a-container-is/02-namespaces.md) —
   the PID namespace itself
-- [02 · Graceful shutdown](../02-graceful-shutdown.md) — what the application does
+- [02 · Graceful shutdown](../02-graceful-shutdown/README.md) — what the application does
   once the signal finally arrives
 - **Phase 11 · Quadlet** *(not written yet)* — the same stop, wearing systemd's
   clothes
