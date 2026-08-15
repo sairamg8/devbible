@@ -54,11 +54,11 @@ to be confounded, the correction is on the page rather than quietly removed.
 | [0 · How TypeScript runs](./phase-0-how-typescript-runs/README.md) | The type system | 13 | ✅ written |
 | [1 · The type vocabulary](./phase-1-type-vocabulary/README.md) | The type system | 17 | ✅ written |
 | [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 13 | ✅ written |
-| [3 · Generics](./phase-3-generics/README.md) | The type system | 13 / 14 | 🚧 writing |
+| [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | 4 · Classes, objects and declaration merging | Types at scale | — | planned |
 | 5 · Type-level programming | Types at scale | — | planned |
 | 6 · Modules, declarations and the build | Types at scale | — | planned |
-| 7 · TypeScript on the server | In the stack | — | planned |
+| [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 1 / 15 | 🚧 writing |
 | 8 · TypeScript in React | In the stack | — | planned |
 | 9 · Types at the boundary | In the stack | — | planned |
 | 10 · Strictness and correctness | Rigour and tooling | — | planned |
