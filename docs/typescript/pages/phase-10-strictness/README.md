@@ -40,7 +40,7 @@ The phase splits into three moves:
 | 01 | [`strict` flag by flag](./01-strict-flag-by-flag/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | The **nine** flags `strict` turns on — not seven — and the specific bug each one rejects |
 | 02 | [`noUncheckedIndexedAccess`](./02-nouncheckedindexedaccess.md) | <span className="db-tier t-master">Master</span> | `arr[0]` and `record[key]` become `T \| undefined` — the flag that finds the most real bugs and annoys people most |
 | 03 | [Containing `any`](./03-containing-any.md) | <span className="db-tier t-master">Master</span> | The four doors it enters through, and how it spreads silently once inside |
-| 04 | Reading a TypeScript error | <span className="db-tier t-master">Master</span> | Start at the innermost message, read the property path first, ignore the outer noise |
+| 04 | [Reading a TypeScript error](./04-reading-a-typescript-error.md) | <span className="db-tier t-master">Master</span> | Start at the innermost message, read the property path first, ignore the outer noise |
 | 05 | `exactOptionalPropertyTypes` | <span className="db-tier t-understand">Understand</span> | "Absent" vs "present and `undefined`", and the API bugs that difference causes |
 | 06 | The other correctness flags | <span className="db-tier t-understand">Understand</span> | `noImplicitOverride`, `noPropertyAccessFromIndexSignature`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noUnusedLocals`/`noUnusedParameters` |
 | 07 | Where TypeScript is unsound by design | <span className="db-tier t-understand">Understand</span> | Assertions, `any`, index access, method bivariance, mutation through an alias, `Object.keys` |
