@@ -110,7 +110,7 @@ on bash rather than `ash`. Debugging tooling is thinner too. The fixes are small
 
 - A **Go or Rust** service — a static or near-static binary that does not care
   about the libc at all, where Alpine is really just "a tiny userland to put a
-  binary in" (**page 10 · static binaries**, *not written yet*).
+  binary in" ([page 10 · static binaries](10-static-binaries/README.md)).
 - A **shell-tooling image** — a CI helper, a small utility container.
 - Anything where you have checked that every dependency has a musllinux (or
   equivalent) build.

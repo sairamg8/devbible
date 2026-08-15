@@ -197,4 +197,4 @@ Fully qualify every image reference.
 
 ---
 
-← Prev: [Pinning base images by digest](08-pinning-by-digest.md) · Index: [Phase 5](README.md) · Next → **Static binaries** *(not written yet)*
+← Prev: [Pinning base images by digest](08-pinning-by-digest.md) · Index: [Phase 5](README.md) · Next → [Static binaries](10-static-binaries/README.md)

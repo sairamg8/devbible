@@ -160,7 +160,7 @@ cost of putting back part of what you removed.
 native modules still needs those modules built against a compatible base, and the
 image is not tiny. The size ceiling here is set by the runtime, not by the
 distribution
-(**page 10 · static binaries**, *not written yet*).
+([page 10 · static binaries](10-static-binaries/02-runtimes-and-scratch.md)).
 
 ## What it does and does not do for security
 
