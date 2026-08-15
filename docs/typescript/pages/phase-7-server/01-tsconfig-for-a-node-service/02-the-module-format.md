@@ -173,13 +173,20 @@ an ESM file with top-level `await` cannot be `require`d, silently, at runtime.
 the reverse.
 **Cause:** almost always a `moduleResolution` mismatch between `tsconfig.json`
 and the project the editor actually loaded. The compiler usually says so:
-*"There are types at '{0}', but this result could not be resolved under your
-current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext',
-or 'bundler'."* (`TS6280`)
+
+```text
+error TS6280: There are types at '{0}', but this result could not be resolved
+under your current 'moduleResolution' setting. Consider updating to 'node16',
+'nodenext', or 'bundler'.
+```
+
 **Fix:** one `tsconfig.json` per program, `moduleResolution` set explicitly, and
-`TS2792` — *"Cannot find module '{0}'. Did you mean to set the 'moduleResolution'
-option to 'nodenext', or to add aliases to the 'paths' option?"* — read as the
-instruction it literally is.
+`TS2792` read as the instruction it literally is:
+
+```text
+error TS2792: Cannot find module '{0}'. Did you mean to set the
+'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?
+```
 
 ## Interview questions
 

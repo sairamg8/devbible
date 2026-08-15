@@ -117,10 +117,14 @@ install yourself.
 Forget it, and the compiler tells you in a way that is unusually specific about
 which mistake you made:
 
-| Code | Exact message |
-|---|---|
-| `TS2580` | Cannot find name '{0}'. Do you need to install type definitions for node? Try \`npm i --save-dev @types/node\`. |
-| `TS2591` | Cannot find name '{0}'. Do you need to install type definitions for node? Try \`npm i --save-dev @types/node\` and then add 'node' to the types field in your tsconfig. |
+```text
+error TS2580: Cannot find name '{0}'. Do you need to install type definitions
+for node? Try `npm i --save-dev @types/node`.
+
+error TS2591: Cannot find name '{0}'. Do you need to install type definitions
+for node? Try `npm i --save-dev @types/node` and then add 'node' to the types
+field in your tsconfig.
+```
 
 🔴 **Those two codes are not interchangeable, and the difference is the whole
 lesson of the next section.** `TS2580` means the package is not installed.
