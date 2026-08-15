@@ -230,4 +230,4 @@ on the mode. Both matter for anything that logs or filters by IP.
 
 ---
 
-← Prev: [`localhost` inside a container is the container](03-localhost-is-the-container.md) · Index: [Phase 7](README.md) · Next → **Network drivers** *(not written yet)*
+← Prev: [`localhost` inside a container is the container](03-localhost-is-the-container.md) · Index: [Phase 7](README.md) · Next → [Network drivers](05-network-drivers.md)
