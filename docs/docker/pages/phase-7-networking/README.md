@@ -27,7 +27,7 @@ another, and the single most common connection bug in the whole track.
 | 05 | **[Network drivers](05-network-drivers.md)** | <span className="db-tier t-know">Know</span> | `bridge`, `host`, `none`, `macvlan`, `ipvlan`, `overlay`, one sentence each |
 | 06 | **[`network create` and friends](06-network-commands.md)** | <span className="db-tier t-understand">Understand</span> | Creating, inspecting, and attaching a running container to a second network |
 | 07 | **[Reaching the host from inside](07-reaching-the-host.md)** | <span className="db-tier t-understand">Understand</span> | `host.docker.internal`, `host.containers.internal`, and the Linux caveat |
-| 08 | **Rootless networking** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `pasta`, `slirp4netns`, and why source IPs look wrong in your logs |
+| 08 | **[Rootless networking](08-rootless-networking.md)** | <span className="db-tier t-understand">Understand</span> | `pasta`, `slirp4netns`, and why source IPs look wrong in your logs |
 | 09 | **Privileged ports rootless** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Why binding 80 fails as a user, and the sysctl that changes it |
 | 10 | **`--network=host`** *(not written yet)* | <span className="db-tier t-know">Know</span> | No isolation, no mapping, native speed — and when that trade is right |
 | 11 | **Debugging the network** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Ask from *inside* the container instead of guessing |

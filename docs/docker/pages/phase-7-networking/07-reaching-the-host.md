@@ -228,4 +228,4 @@ to the host is a bridge during migration, not a destination.
 
 ---
 
-← Prev: [`network create` and friends](06-network-commands.md) · Index: [Phase 7](README.md) · Next → **Rootless networking** *(not written yet)*
+← Prev: [`network create` and friends](06-network-commands.md) · Index: [Phase 7](README.md) · Next → [Rootless networking](08-rootless-networking.md)
