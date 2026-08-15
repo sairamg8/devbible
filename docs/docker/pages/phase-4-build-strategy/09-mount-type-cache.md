@@ -171,8 +171,8 @@ during a build.
 
 **Not shared with other builders by default.** A `docker-container` builder, a
 remote builder and the bundled one each keep their own. Moving cache between
-machines is cache **export**, not cache mounts — **page 12 · Cache import and
-export** *(not written yet)*.
+machines is cache **export**, not cache mounts — [page 12 · Cache import and
+export](12-cache-import-export.md).
 
 ## Podman
 

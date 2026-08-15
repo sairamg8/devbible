@@ -13,7 +13,7 @@ The difference between a 40-second rebuild and an 11-minute one is entirely in
 this phase, and none of it is exotic. Phase 3 taught the instructions; this phase
 is about the **order** you put them in and the builder that executes them.
 
-🚧 **11 of 16 pages written.**
+🚧 **12 of 16 pages written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ is about the **order** you put them in and the builder that executes them.
 | 09 | **[`RUN --mount=type=cache`](09-mount-type-cache.md)** | <span className="db-tier t-understand">Understand</span> | A package cache that survives builds without entering a layer |
 | 10 | **[`RUN --mount=type=bind`](10-mount-type-bind.md)** | <span className="db-tier t-understand">Understand</span> | Read from the context without `COPY`ing into a layer |
 | 11 | **[`buildx` and platforms](11-buildx-and-platforms.md)** | <span className="db-tier t-understand">Understand</span> | Builders, drivers, `--platform`, and why QEMU is slow |
-| 12 | **Cache import and export** *(not written yet)* | <span className="db-tier t-know">Know</span> | `--cache-from` / `--cache-to` — what makes CI builds fast |
+| 12 | **[Cache import and export](12-cache-import-export.md)** | <span className="db-tier t-know">Know</span> | `--cache-from` / `--cache-to` — what makes CI builds fast |
 | 13 | **Build args versus runtime env** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The value baked at build time that cannot be changed without a rebuild |
 | 14 | **`docker build` vs `podman build` vs `buildah`** *(not written yet)* | <span className="db-tier t-know">Know</span> | Same Dockerfile, different builder |
 | 15 | **The build context** *(not written yet)* | <span className="db-tier t-know">Know</span> | A directory, `-`, or a git URL — and the gigabyte upload |

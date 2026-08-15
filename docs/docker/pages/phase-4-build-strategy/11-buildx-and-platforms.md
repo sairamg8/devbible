@@ -228,4 +228,4 @@ an alias for `docker buildx build`. Use `docker buildx build` or `--builder`.
 
 ---
 
-← Prev: [`RUN --mount=type=bind`](10-mount-type-bind.md) · Index: [Phase 4](README.md) · Next → **Cache import and export** *(not written yet)*
+← Prev: [`RUN --mount=type=bind`](10-mount-type-bind.md) · Index: [Phase 4](README.md) · Next → [Cache import and export](12-cache-import-export.md)

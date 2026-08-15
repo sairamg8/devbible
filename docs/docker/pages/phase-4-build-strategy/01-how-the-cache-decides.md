@@ -216,7 +216,7 @@ you assume a build is broken.
 That last row is the trap. A Podman CI job that sets `BUILDAH_LAYERS=false` (or
 an older habit of passing `--layers=false`) and then carefully configures
 `--cache-from` gets **no caching at all and no warning** — the flags are simply
-ignored. Remote cache is **page 12 · Cache import and export** *(not written yet)*; the point here is
+ignored. Remote cache is [page 12 · Cache import and export](12-cache-import-export.md); the point here is
 that the layer cache has to exist locally before anything can be imported into
 it.
 
@@ -238,7 +238,7 @@ picking up patches.
 **Symptom:** CI misses the cache on every run although the source is identical.
 **Cause:** The build cache is local to a builder, and a fresh CI runner has an
 empty one — nothing to do with your Dockerfile.
-**Fix:** Export and import it — `--cache-to` / `--cache-from`, **page 12 · Cache import and export** *(not written yet)*.
+**Fix:** Export and import it — `--cache-to` / `--cache-from`, [page 12 · Cache import and export](12-cache-import-export.md).
 Check the ordering first, though; importing a cache for a badly ordered
 Dockerfile buys very little.
 

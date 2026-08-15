@@ -170,7 +170,7 @@ Removing them is the job of a multi-stage build — [page 04 · Multi-stage
 builds](04-multi-stage-builds.md) — and of Phase 5.
 
 **It does not help a cold cache.** A fresh CI runner has nothing to hit. See
-**page 12 · Cache import and export** *(not written yet)*.
+[page 12 · Cache import and export](12-cache-import-export.md).
 
 ## Podman
 
