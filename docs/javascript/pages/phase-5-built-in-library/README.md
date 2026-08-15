@@ -13,14 +13,14 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **14 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **15 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 15 · Regular expressions — the syntax**, then 16–22, then the four
+**Next here: 16 · Regular expressions — in practice**, then 17–22, then the four
 Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **6 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **7 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -40,7 +40,7 @@ Know topics (23–26).
 | 12 | **[String searching](./12-string-searching/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 13 | **[Non-mutating array counterparts](./13-non-mutating-counterparts.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 14 | **[`flat`, `flatMap`, `fill`, `copyWithin`](./14-flat-flatmap-fill.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 15 | Regular expressions — the syntax | <span className="db-tier t-understand">Understand</span> | deferred |
+| 15 | **[Regular expressions — the syntax](./15-regex-syntax/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 16 | Regular expressions — in practice | <span className="db-tier t-understand">Understand</span> | deferred |
 | 17 | `Set` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 18 | `Object` statics | <span className="db-tier t-understand">Understand</span> | deferred |
