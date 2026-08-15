@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 15 of 17 topics written. The Master tier (02–06, 08) is complete.**
+🚧 **In progress — 16 of 17 topics written. The Master tier (02–06, 08) is complete.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -36,7 +36,7 @@ actually true, and volumes. Everything else refines those.
 | 13 | **[`develop.watch`](13-develop-watch.md)** | <span className="db-tier t-know">Know</span> | Compose pushes changes *into* the container instead of covering its filesystem — five actions, and no `node_modules` trap |
 | 14 | **[Day-to-day commands](14-day-to-day-commands/README.md)** | <span className="db-tier t-understand">Understand</span> | The six that decide how long a bad afternoon lasts — and the `ps` default that hides the container you are looking for |
 | 15 | **[`podman compose` and `podman-compose`](15-podman-compose.md)** | <span className="db-tier t-understand">Understand</span> | Three programs share the name — and `podman compose` is a dispatcher that probably runs `docker-compose` |
-| 16 | `include` and `extends` | <span className="db-tier t-know">Know</span> | _not written yet_ |
+| 16 | **[`include` and `extends`](16-include-and-extends.md)** | <span className="db-tier t-know">Know</span> | Two ways to split a large setup with **opposite** relative-path rules — and `extends` does not import the resources it references |
 | 17 | `--scale` and the honest limits | <span className="db-tier t-know">Know</span> | _not written yet_ |
 
 ## Coverage
