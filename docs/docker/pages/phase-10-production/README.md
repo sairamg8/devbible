@@ -12,7 +12,7 @@ sidebar_position: 0
 Most production container incidents are one of about a dozen things. This phase
 is that list, with the mechanism and the fix for each.
 
-🚧 **Writing — 14 of 16 topics. The Master tier is complete at 5 of 5.**
+🚧 **Writing — 15 of 16 topics. The Master tier is complete at 5 of 5.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -30,7 +30,7 @@ is that list, with the mechanism and the fix for each.
 | 12 | **[Debugging a container you cannot shell into](12-debugging-without-a-shell.md)** | <span className="db-tier t-understand">Understand</span> | Distroless and scratch, ephemeral attach, `nsenter`, copying a binary in |
 | 13 | **[Disk growth](13-disk-growth.md)** | <span className="db-tier t-understand">Understand</span> | Images, dangling layers, volumes, build cache — and the flag that deletes volumes |
 | 14 | **[Running containers under systemd](14-under-systemd.md)** | <span className="db-tier t-understand">Understand</span> | The unit that supervises, restarts and orders your container |
-| 15 | **Time, timezones and locales** *(not written yet)* | <span className="db-tier t-know">Know</span> | Why the container thinks it is UTC and your logs disagree |
+| 15 | **[Time, timezones and locales](15-time-and-timezones.md)** | <span className="db-tier t-know">Know</span> | Why the container thinks it is UTC and your logs disagree |
 | 16 | **Zero-downtime restarts without an orchestrator** *(not written yet)* | <span className="db-tier t-know">Know</span> | Start-new, health-check, switch, stop-old |
 
 ## Coverage
@@ -55,6 +55,7 @@ separate arguments, and topic 10 splits between the switches and enforcing them.
 | Debugging a container you cannot shell into | 12 |
 | Disk growth | 13 |
 | Running containers under systemd | 14 |
+| Time, timezones and locales | 15 |
 
 ## Phase gate
 

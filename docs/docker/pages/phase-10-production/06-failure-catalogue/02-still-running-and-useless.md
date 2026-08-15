@@ -101,7 +101,7 @@ Two consequences that settle most confusion:
 
 - **`TZ` changes the display, not the time.** Setting `TZ=Europe/London` affects
   formatting inside the container; the underlying instant is identical
-  (**15 · Time, timezones and locales** *(not written yet)*).
+  ([15 · Time, timezones and locales](../15-time-and-timezones.md)).
 - **You cannot fix skew inside the container**, and should not be able to:
   setting the clock needs `CAP_SYS_TIME`, which is dropped by default precisely
   because doing so would change the **host's** clock and every other container

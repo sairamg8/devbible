@@ -62,7 +62,7 @@ anything.
   and identity that travels with the image
 - [08 · Log drivers and rotation](../08-log-drivers-and-rotation.md) ·
   [11 · Observing](../11-observing.md) · [13 · Disk growth](../13-disk-growth.md) ·
-  **15 · Time, timezones and locales** *(not written yet)*
+  [15 · Time, timezones and locales](../15-time-and-timezones.md)
 
 ---
 

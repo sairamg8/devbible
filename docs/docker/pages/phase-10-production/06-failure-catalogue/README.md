@@ -67,7 +67,7 @@ application code — and you can name which failures leave no exit code at all.
   [08 · Log drivers and rotation](../08-log-drivers-and-rotation.md) ·
   [09 · Healthchecks in production](../09-healthchecks-in-production.md) ·
   [11 · Observing](../11-observing.md) · [13 · Disk growth](../13-disk-growth.md) ·
-  **15 · Time, timezones and locales** *(not written yet)*
+  [15 · Time, timezones and locales](../15-time-and-timezones.md)
 
 ---
 

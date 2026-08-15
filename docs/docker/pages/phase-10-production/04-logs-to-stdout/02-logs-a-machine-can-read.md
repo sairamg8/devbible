@@ -72,7 +72,7 @@ per order and destroys every aggregation the tool can offer.
 ⚠️ **Timestamps: emit your own, in UTC with an explicit offset.** The engine can
 add one (`docker logs -t`), but that is the *collection* time, not the event
 time. A container also defaults to UTC while your host may not, which is the
-subject of **15 · Time, timezones and locales** *(not written yet)* and a
+subject of [15 · Time, timezones and locales](../15-time-and-timezones.md) and a
 recurring source of "the logs are an hour out".
 
 ### What must never be in a log line
