@@ -228,4 +228,4 @@ itself, or a `prototype` assignment in the same file as the augmentation.
 
 ---
 
-← [02 · Augmenting a package](./02-augmenting-a-package.md) · Up → [Overview](./README.md) · Next → **02 · Access modifiers** *(not written yet)*
+← [02 · Augmenting a package](./02-augmenting-a-package.md) · Up → [Overview](./README.md) · Next → [02 · Access modifiers](../02-access-modifiers/README.md)
