@@ -8,11 +8,11 @@ sidebar_position: 0
 have used JavaScript from people who understand it. Every row is a from-scratch implementation with
 the edge cases interviewers probe.
 
-## Status — 🚧 **Master ✅ 4/4 · Understand under way — 6 of 18**
+## Status — 🚧 **Master ✅ 4/4 · Understand under way — 7 of 18**
 
 Master (01–04) landed 2026-08-14. The Understand and Know tiers are being written now by
 **chunk B** of the four-way JavaScript split, which finished phase 6 first. Next up:
-**07 · A concurrency-limited task queue**.
+**08 · Retry with backoff, jitter and an `AbortSignal`**.
 
 ## Topics
 
@@ -24,7 +24,8 @@ Master (01–04) landed 2026-08-14. The Understand and Know tiers are being writ
 | 04 | **[`Promise.all`, `race`, `any`, `allSettled`](./04-promise-combinators/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 05 | **[An `EventEmitter`](./05-eventemitter/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 06 | **[Deep clone](./06-deep-clone/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 07–15 | a concurrency-limited queue, retry with backoff, an LRU cache, a Promise from scratch, `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
+| 07 | **[A concurrency-limited task queue](./07-task-queue/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 08–15 | retry with backoff, an LRU cache, a Promise from scratch, `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16–18 | `new`/`Object.create`/`instanceof` by hand, a pub/sub and a reactive `signal`, a virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | deferred |
 
 ## The phase gate

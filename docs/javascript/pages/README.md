@@ -57,7 +57,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 | Chunk | Phases | Topics left | What it is | Held by |
 |---|---|---|---|---|
 | **A** | **5**, **11** | **14** — 5 ✅ **DONE 26/26** · 11 (14: 08–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `21d2f5de`, 2026-08-15 |
-| **B** | **6**, **17** | **12** — ✅ **phase 6 COMPLETE (13/13)** · 17 (12: 07–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
+| **B** | **6**, **17** | **11** — ✅ **phase 6 COMPLETE (13/13)** · 17 (11: 08–18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `7c6611b4`, 2026-08-15 |
 | **C** | **7**, **8** | **11** — ✅ **phase 7 COMPLETE 22/22** · 8 (11: 08–18) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f6dffd4a`, 2026-08-15 |
 | **D** | **12**, **18** | **22** — 12 (19: 03–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `032a926a`, 2026-08-15 |
 
@@ -110,7 +110,7 @@ worktrees left.
 | **A** | 5 · The built-in library ✅ **COMPLETE 26/26** | 0 | — | every tier done 2026-08-15 |
 | **A** | 11 · Network, storage and data transfer (7/21) | 14 | **08 · Aborting and timing out** (Understand) | 09 Cookies · 10 `localStorage` · 11 Uploading files · 12 `Blob`/`File` · 13 WebSocket · 14 same-origin and `postMessage` · 15 CSP · **Know** 16 IndexedDB · 17 service workers · 18 SSE · 19 Streams · 20 `sendBeacon` · 21 `XMLHttpRequest` |
 | **B** | 6 · Iteration, destructuring and generators | ✅ **13/13 — COMPLETE** | — | phase 6 is done; chunk B continues in phase 17 |
-| **B** | 17 · Machine coding (**6/18**) | 12 | **07 · A concurrency-limited task queue** (Understand) | 08 Retry with backoff · 09 LRU cache · 10 A Promise from scratch · 11 `memoize` · 12 Deep equality · 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
+| **B** | 17 · Machine coding (**7/18**) | 11 | **08 · Retry with backoff** (Understand) | 09 LRU cache · 10 A Promise from scratch · 11 `memoize` · 12 Deep equality · 13 `curry`/`pipe`/`compose` · 14 `promisify` · 15 Rate limiter · **Know** 16 `new`/`Object.create` by hand · 17 pub/sub and signals · 18 virtual-DOM diff |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain (**7**/18) | **11** | **08 · Custom error classes** (Understand) — ✅ 05–07 done | 09 Failing well · 10 Global error handling · 11 The memory model · 12 Finding a leak · 13 Bundlers · 14 Testing · **Know** 15 CommonJS today · 16 `AggregateError` · 17 GC · 18 Linting |
 | **D** | 12 · The browser platform (10/21) | 11 | **11 · Accessibility from JavaScript** (Understand) | 12 Feature detection · 13 What belongs on the server · **Know** 14 Yielding to the main thread · 15 Cross-tab · 16 Clipboard/Share/FS Access · 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
