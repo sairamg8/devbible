@@ -8,10 +8,11 @@ sidebar_position: 0
 have used JavaScript from people who understand it. Every row is a from-scratch implementation with
 the edge cases interviewers probe.
 
-## Status — **Master tier COMPLETE** (2026-08-14)
+## Status — 🚧 **Master ✅ 4/4 · Understand under way — 5 of 18**
 
-**Master tier first.** Phase 17 has **four** Master topics — 01 through 04 — and **all four are
-written**.
+Master (01–04) landed 2026-08-14. The Understand and Know tiers are being written now by
+**chunk B** of the four-way JavaScript split, which finished phase 6 first. Next up:
+**06 · Deep clone**.
 
 ## Topics
 
@@ -21,14 +22,15 @@ written**.
 | 02 | **[`call`, `apply` and `bind`](./02-call-apply-bind/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 03 | **[`debounce` and `throttle`](./03-debounce-throttle/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
 | 04 | **[`Promise.all`, `race`, `any`, `allSettled`](./04-promise-combinators/README.md)** | <span className="db-tier t-master">Master</span> | ✅ |
-| 05–15 | `EventEmitter`, deep clone, a concurrency-limited queue, retry with backoff, an LRU cache, a Promise from scratch, `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
+| 05 | **[An `EventEmitter`](./05-eventemitter/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
+| 06–15 | deep clone, a concurrency-limited queue, retry with backoff, an LRU cache, a Promise from scratch, `memoize`, deep equality, `curry`/`pipe`/`compose`, `promisify`, a rate limiter | <span className="db-tier t-understand">Understand</span> | deferred |
 | 16–18 | `new`/`Object.create`/`instanceof` by hand, a pub/sub and a reactive `signal`, a virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | deferred |
 
 ## The phase gate
 
 From the syllabus: **you can write `bind`, `debounce`, `Promise.all` and an `EventEmitter` from an
-empty file in under thirty minutes, and name the edge case each one hides.** Three of the four are
-Master topics here; `EventEmitter` is topic 05 and deferred.
+empty file in under thirty minutes, and name the edge case each one hides.** All four are now
+written — three as Master topics, and `EventEmitter` as topic 05.
 
 ## How these pages are verified
 
