@@ -11,15 +11,15 @@ example and its own gotcha.
 This is the phase you use every day. Phases 3 and 4 explained the language; this one
 is the standard library built on top of it.
 
-## Status — **Understand tier COMPLETE** (2026-08-15)
+## Status — ✅ **PHASE COMPLETE, every tier** (2026-08-15)
 
-🚧 **25 of 26 written.** ✅ **Master 8/8** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
+✅ **26 of 26 written.** ✅ **Master 8/8** — 01, 02, 04, 05, 06, 07, 09, 10 in syllabus
 order. ✅ **Understand 14/14**, finished 2026-08-15 with topics 18–22. Only the four
 **Know** topics remain.
 
-**Next here: 26 · Text encoding — the last topic in the phase.**
+**Nothing left here.** The phase is finished at every tier.
 
-**Coverage:** Master **8 / 8** ✅ · Understand **14 / 14** ✅ · Know **3 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **14 / 14** ✅ · Know **4 / 4** ✅.
 
 ## Topics
 
@@ -50,7 +50,7 @@ order. ✅ **Understand 14/14**, finished 2026-08-15 with topics 18–22. Only t
 | 23 | **[`WeakMap` and `WeakSet`](./23-weakmap-and-weakset/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 24 | **[`Temporal`](./24-temporal/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 25 | **[Typed arrays, `ArrayBuffer`, `DataView`](./25-typed-arrays/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 26 | Text encoding | <span className="db-tier t-know">Know</span> | deferred |
+| 26 | **[Text encoding](./26-text-encoding/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ⚠️ **Several Understand topics here deliberately overlap phase 4, and are written as
 CONCEPT and CHOICE rather than as a second implementation.** Phase 4 owns
