@@ -198,4 +198,4 @@ throwing the data away costs seconds rather than an afternoon.
 
 ---
 
-← Prev: [`up` and what it recreates](01-up.md) · Topic index: [up, down and the lifecycle](README.md) · Next → [The services block](../04-services-block.md)
+← Prev: [`up` and what it recreates](01-up.md) · Topic index: [up, down and the lifecycle](README.md) · Next → [The services block](../04-services-block/README.md)
