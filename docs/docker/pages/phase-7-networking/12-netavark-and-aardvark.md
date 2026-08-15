@@ -200,4 +200,4 @@ port or the listener.
 
 ---
 
-← Prev: [Debugging the network](11-debugging-the-network.md) · Index: [Phase 7](README.md) · Next → **Custom subnets, IPv6 and the VPN clash** *(not written yet)*
+← Prev: [Debugging the network](11-debugging-the-network.md) · Index: [Phase 7](README.md) · Next → [Custom subnets, IPv6 and the VPN clash](13-subnets-ipv6-and-vpn.md)
