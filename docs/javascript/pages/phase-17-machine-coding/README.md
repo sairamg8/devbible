@@ -8,12 +8,12 @@ sidebar_position: 0
 have used JavaScript from people who understand it. Every row is a from-scratch implementation with
 the edge cases interviewers probe.
 
-## Status — 🚧 **Master ✅ 4/4 · Understand ✅ COMPLETE (05–15) · Know under way — 17 of 18**
+## Status — ✅ **COMPLETE — 18 of 18, every tier** (Master 4/4 · Understand 11/11 · Know 3/3)
 
-Master (01–04) landed 2026-08-14. The Understand and Know tiers are being written now by
-**chunk B** of the four-way JavaScript split, which finished phase 6 first. The **Understand
-tier is complete (05–15)** and the **Know** tier is under way. One topic left:
-**18 · A virtual-DOM diff in outline**.
+Master (01–04) landed 2026-08-14. Topics **05–18** were written by **chunk B** of the four-way
+JavaScript split on 2026-08-15, which finished phase 6 first — the Understand tier (05–15) and
+then the Know tier (16–18). Every file is under the 300-line cap and every page names its
+sources.
 
 ## Topics
 
@@ -36,7 +36,7 @@ tier is complete (05–15)** and the **Know** tier is under way. One topic left:
 | 15 | **[A rate limiter](./15-rate-limiter/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 16 | **[`new`, `Object.create` and `instanceof` by hand](./16-new-create-instanceof/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 17 | **[A tiny pub/sub and a reactive `signal`](./17-pubsub-and-signals/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 18 | A virtual-DOM diff in outline | <span className="db-tier t-know">Know</span> | 🚧 next |
+| 18 | **[A virtual-DOM diff in outline](./18-virtual-dom-diff/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## The phase gate
 
@@ -46,8 +46,12 @@ written — three as Master topics, and `EventEmitter` as topic 05.
 
 ## How these pages are verified
 
-**Documentation-validated** against MDN and the behaviours it specifies — the callback contract and
-sparse-array rules, `bind` under `new`, the empty-iterable results for each Promise combinator.
+**Documentation-validated**, with the sources named in each page's `> Verified:` line — MDN for the
+language and platform behaviours (the callback contract and sparse-array rules, `bind` under `new`,
+the empty-iterable results for each Promise combinator, the `new` operator's four steps,
+`Symbol.hasInstance`), the Node.js documentation and `lib/internal/util.js` for `util.promisify`
+and `util.callbackify`, the IETF `RateLimit` header draft for topic 15, the TC39 Signals proposal
+for topic 17, and the React reconciliation and list-rendering docs for topic 18.
 **No page prints a timing**, and no page prints console output, because nothing was run.
 
 ## Where this connects
