@@ -42,7 +42,7 @@ ends up in a JSON payload.
 | 09 | [Typing getters and setters](./09-typing-getters-and-setters.md) | <span className="db-tier t-know">Know</span> | Divergent getter/setter types, and validation on write |
 | 10 | [`this` types and polymorphic `this`](./10-this-types.md) | <span className="db-tier t-know">Know</span> | Fluent builders that keep the subclass type through a chain |
 | 11 | [Abstract classes and abstract construct signatures](./11-abstract-classes.md) | <span className="db-tier t-know">Know</span> | Typing "a class, not an instance", and `new (…args) => T` |
-| 12 | Static members, static blocks and the static side | <span className="db-tier t-know">Know</span> | Why the instance type and the constructor type are two different types |
+| 12 | [Static members, static blocks and the static side](./12-static-members-and-the-static-side.md) | <span className="db-tier t-know">Know</span> | Why the instance type and the constructor type are two different types |
 | 13 | Decorators (stage 3) | <span className="db-tier t-know">Know</span> | The current standard form, and the older `experimentalDecorators` you still meet |
 | 14 | Mixins | <span className="db-tier t-when">When Needed</span> | The constructor-returning-class pattern, and its type cost |
 

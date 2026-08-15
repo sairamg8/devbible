@@ -231,4 +231,4 @@ one.
 
 ---
 
-← Prev: [10 · `this` types](./10-this-types.md) · Next → **12 · Static members and the static side** *(not written yet)*
+← Prev: [10 · `this` types](./10-this-types.md) · Next → [12 · Static members and the static side](./12-static-members-and-the-static-side.md)
