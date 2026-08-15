@@ -163,7 +163,8 @@ class RateLimiter {
     return new Promise((resolve, reject) => {
       const entry = { cost, resolve, reject };
       entry.onAbort = () => {
-        this.#queue.splice(this.#queue.indexOf(entry), 1);
+        const i = this.#queue.indexOf(entry);          // ⚠️ -1 would splice the LAST entry
+        if (i !== -1) this.#queue.splice(i, 1);
         reject(signal.reason);
       };
       signal?.addEventListener("abort", entry.onAbort, { once: true });
