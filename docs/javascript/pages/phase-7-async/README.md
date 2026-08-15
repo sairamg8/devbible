@@ -8,14 +8,14 @@ sidebar_position: 0
 *"If you only ever finish one phase to Master depth, finish that one — it is what every
 interview probes and what every production incident traces back to."*
 
-## Status — Master ✅ 11/11 · 🚧 Understand under way (**18/22 written**)
+## Status — Master ✅ 11/11 · **Understand ✅ 8/8** · 🚧 Know under way (**19/22 written**)
 
 **Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
 any other phase. **ALL 11 DONE — the Master tier of phase 7 is COMPLETE.**
 
-Phase 7 belongs to **chunk C** of the four-way JavaScript split (phases 7 and 8), and the
-work now is the **Understand** tier (12–19) followed by **Know** (20–22), lowest unwritten
-number first.
+Phase 7 belongs to **chunk C** of the four-way JavaScript split (phases 7 and 8). ✅ **The
+Understand tier is COMPLETE — topics 12–19, all eight.** What remains is the **Know** tier:
+20 `Promise.withResolvers`, 21 Thenables, 22 Async work and backpressure.
 
 ## Topics
 
@@ -39,7 +39,7 @@ number first.
 | 16 | **[Concurrency limiting](./16-concurrency-limiting/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 17 | **[Race conditions in a UI](./17-race-conditions-ui/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 18 | **[`queueMicrotask`](./18-queuemicrotask/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 19 | Event loop: browser vs Node | <span className="db-tier t-understand">Understand</span> | ⏳ |
+| 19 | **[Event loop: browser vs Node](./19-event-loop-browser-vs-node/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 20 | `Promise.withResolvers` | <span className="db-tier t-know">Know</span> | ⏳ |
 | 21 | Thenables | <span className="db-tier t-know">Know</span> | ⏳ |
 | 22 | Async work and backpressure | <span className="db-tier t-know">Know</span> | ⏳ |
