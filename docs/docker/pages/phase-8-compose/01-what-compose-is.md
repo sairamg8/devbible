@@ -283,4 +283,4 @@ relying on what happens to be on the machine.
 
 ---
 
-← Index: [Phase 8](README.md) · Next → [compose.yaml and the Compose Specification](02-compose-yaml-and-the-spec.md)
+← Index: [Phase 8](README.md) · Next → [compose.yaml and the Compose Specification](02-compose-yaml-and-the-spec/README.md)

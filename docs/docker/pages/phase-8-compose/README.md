@@ -9,7 +9,7 @@ sidebar_position: 0
 > `docker compose` CLI reference and the Podman documentation, with sources named
 > per page. **No sandbox** — nothing was run, so no page carries console output.
 
-🚧 **In progress — 1 of 17 topics written.**
+🚧 **In progress — 2 of 17 topics written.**
 
 One file, many services, one lifecycle. Phases 6 and 7 gave you volumes and
 networks as primitives; this phase is where they turn into something a teammate
@@ -22,7 +22,7 @@ actually true, and volumes. Everything else refines those.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[What Compose is](01-what-compose-is.md)** | <span className="db-tier t-understand">Understand</span> | A declarative file plus a CLI that reconciles reality to it — not a script runner, not an orchestrator |
-| 02 | `compose.yaml` and the Compose Specification | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 02 | **[`compose.yaml` and the Compose Specification](02-compose-yaml-and-the-spec/README.md)** | <span className="db-tier t-master">Master</span> | One schema, always the newest — `version:` is obsolete; and the YAML that silently mis-parses your ports |
 | 03 | `up` / `down` / `-d` / `--build` | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 04 | The `services` block | <span className="db-tier t-master">Master</span> | _not written yet_ |
 | 05 | `depends_on` with `condition: service_healthy` | <span className="db-tier t-master">Master</span> | _not written yet_ |
@@ -47,7 +47,7 @@ nothing dropped.
 | Syllabus topic | Page |
 |---|---|
 | What Compose is | 01 |
-| `compose.yaml` and the Compose Specification | 02 |
+| `compose.yaml` and the Compose Specification | 02 (chunked: the Spec and the file · the YAML that bites) |
 | `up` / `down` / `-d` / `--build` | 03 |
 | The `services` block | 04 |
 | `depends_on` with `condition: service_healthy` | 05 |
