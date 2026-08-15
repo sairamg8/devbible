@@ -13,13 +13,13 @@ is the standard library built on top of it.
 
 ## Status — **Understand tier under way** (2026-08-15)
 
-🚧 **16 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
+🚧 **17 of 26 written.** All eight Master topics are done — 01, 02, 04, 05, 06, 07, 09,
 10 in syllabus order — and the Master-first plan is finished across every phase, so the
 work here is now the **Understand and Know tiers**, in that order.
 
-**Next here: 17 · `Set`**, then 18–22, then the four Know topics (23–26).
+**Next here: 18 · `Object` statics**, then 19–22, then the four Know topics (23–26).
 
-**Coverage:** Master **8 / 8** ✅ · Understand **8 / 14** · Know **0 / 4**.
+**Coverage:** Master **8 / 8** ✅ · Understand **9 / 14** · Know **0 / 4**.
 
 ## Topics
 
@@ -41,7 +41,7 @@ work here is now the **Understand and Know tiers**, in that order.
 | 14 | **[`flat`, `flatMap`, `fill`, `copyWithin`](./14-flat-flatmap-fill.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | **[Regular expressions — the syntax](./15-regex-syntax/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 16 | **[Regular expressions — in practice](./16-regex-in-practice/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 17 | `Set` | <span className="db-tier t-understand">Understand</span> | deferred |
+| 17 | **[`Set`](./17-set.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 18 | `Object` statics | <span className="db-tier t-understand">Understand</span> | deferred |
 | 19 | `Date` | <span className="db-tier t-understand">Understand</span> | deferred |
 | 20 | `Intl` | <span className="db-tier t-understand">Understand</span> | deferred |
