@@ -30,7 +30,7 @@ the difference between "my database survived a redeploy" and a support ticket.
 | 09 | **[`--userns=keep-id`](09-userns-keep-id.md)** | <span className="db-tier t-understand">Understand</span> | Podman's answer to bind-mount ownership |
 | 10 | **[Backing up and restoring a volume](10-backup-and-restore.md)** | <span className="db-tier t-understand">Understand</span> | The tar-through-a-throwaway-container idiom, and why a database needs more |
 | 11 | **[Volume drivers and network storage](11-volume-drivers.md)** | <span className="db-tier t-know">Know</span> | When the `local` driver is not enough |
-| 12 | **Bind-mount performance on macOS and Windows** *(not written yet)* | <span className="db-tier t-know">Know</span> | A VM boundary you cannot see, and what VirtioFS changed |
+| 12 | **[Bind-mount performance on macOS and Windows](12-bind-mount-performance.md)** | <span className="db-tier t-know">Know</span> | A VM boundary you cannot see, and what VirtioFS changed |
 
 ## Coverage
 
