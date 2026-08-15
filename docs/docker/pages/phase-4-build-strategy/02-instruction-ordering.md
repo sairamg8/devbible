@@ -163,7 +163,7 @@ on is not built at all. Within one stage the ordering rule above holds exactly.
 Between stages, the question becomes which stage depends on which — and the way
 to protect an expensive stage is to make sure your volatile source is not one of
 its inputs. That is [page 04 · Multi-stage builds](04-multi-stage-builds.md) and
-**page 08 · BuildKit** *(not written yet)*.
+[page 08 · BuildKit](08-buildkit.md).
 
 ## Finding the first miss
 

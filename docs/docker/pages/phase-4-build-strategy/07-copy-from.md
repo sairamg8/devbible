@@ -190,4 +190,4 @@ stops describing what was built.
 
 ---
 
-← Prev: [`--target` to stop at a stage](06-target.md) · Index: [Phase 4](README.md) · Next → **BuildKit** *(not written yet)*
+← Prev: [`--target` to stop at a stage](06-target.md) · Index: [Phase 4](README.md) · Next → [BuildKit](08-buildkit.md)
