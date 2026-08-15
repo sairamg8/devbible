@@ -13,7 +13,7 @@ An image is a build artefact you are shipping to strangers. Phase 4 decided how
 fast it builds; this phase is about **what is inside it** — how big, how
 privileged, and how much of it you did not write.
 
-🚧 **7 of 12 pages written.**
+🚧 **8 of 12 pages written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -24,7 +24,7 @@ privileged, and how much of it you did not write.
 | 05 | **[Alpine and musl](05-alpine-and-musl.md)** | <span className="db-tier t-understand">Understand</span> | Tiny, and a genuinely different libc |
 | 06 | **[Distroless and `scratch`](06-distroless-and-scratch.md)** | <span className="db-tier t-understand">Understand</span> | No shell, no package manager — and how you debug afterwards |
 | 07 | **[Vulnerability scanning](07-vulnerability-scanning.md)** | <span className="db-tier t-know">Know</span> | Trivy, Grype, Scout — reading a report without drowning |
-| 08 | **Pinning base images by digest** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Reproducible against patched, and how to have both |
+| 08 | **[Pinning base images by digest](08-pinning-by-digest.md)** | <span className="db-tier t-understand">Understand</span> | Reproducible against patched, and how to have both |
 | 09 | **Supply-chain risk** *(not written yet)* | <span className="db-tier t-know">Know</span> | What `FROM some-user/some-image` means you agreed to |
 | 10 | **Static binaries** *(not written yet)* | <span className="db-tier t-know">Know</span> | Why Go and Rust ship on `scratch` and Node cannot |
 | 11 | **SBOMs and provenance** *(not written yet)* | <span className="db-tier t-know">Know</span> | What BuildKit attaches, and who consumes it |
