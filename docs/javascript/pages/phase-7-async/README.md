@@ -8,14 +8,19 @@ sidebar_position: 0
 *"If you only ever finish one phase to Master depth, finish that one — it is what every
 interview probes and what every production incident traces back to."*
 
-## Status — Master ✅ 11/11 · **Understand ✅ 8/8** · 🚧 Know under way (**21/22 written**)
+## Status — ✅ **COMPLETE at every tier (22/22)**, 2026-08-15
 
-**Master tier first.** Phase 7 has **eleven** Master topics — 01 through 11 — more than
-any other phase. **ALL 11 DONE — the Master tier of phase 7 is COMPLETE.**
+Phase 7 has **eleven** Master topics — 01 through 11 — more than any other phase.
 
-Phase 7 belongs to **chunk C** of the four-way JavaScript split (phases 7 and 8). ✅ **The
-Understand tier is COMPLETE — topics 12–19, all eight.** What remains is the **Know** tier:
-20 `Promise.withResolvers`, 21 Thenables, 22 Async work and backpressure.
+| Tier | Topics | State |
+|---|---|---|
+| <span className="db-tier t-master">Master</span> | 01–11 | ✅ 11/11 |
+| <span className="db-tier t-understand">Understand</span> | 12–19 | ✅ 8/8 |
+| <span className="db-tier t-know">Know</span> | 20–22 | ✅ 3/3 |
+
+**69 files, 11,962 lines, 0 files over the 300-line cap.** Phase 7 was written by **chunk C**
+of the four-way JavaScript split (phases 7 and 8); the chunk now continues in
+[Phase 8](../phase-8-modules-errors/README.md).
 
 ## Topics
 
@@ -42,7 +47,7 @@ Understand tier is COMPLETE — topics 12–19, all eight.** What remains is the
 | 19 | **[Event loop: browser vs Node](./19-event-loop-browser-vs-node/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 20 | **[`Promise.withResolvers`](./20-promise-withresolvers.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 21 | **[Thenables](./21-thenables.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 22 | Async work and backpressure | <span className="db-tier t-know">Know</span> | ⏳ |
+| 22 | **[Async work and backpressure](./22-backpressure.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 
 ## How these pages are verified
 
