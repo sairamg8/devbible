@@ -12,7 +12,8 @@ sidebar_position: 0
 
 🏁 **Complete — 14 of 14 topics**, at every tier (Master 5/5 · Understand 7/7 ·
 Know 2/2). **32 files, 6,501 lines, largest 297, 0 over the 300-line cap, 281 internal
-links resolved against the filesystem** — link-checked, **not built**.
+links resolved against the filesystem**, and ✅ **build-verified** — a full site
+build after this phase closed came back `[SUCCESS]` with 0 warnings and 0 broken links.
 
 **Everything so far, applied to the actual stack this bible is about.** Phase 8
 gave you Compose as a language; this phase is what you say in it — a Node API, a
