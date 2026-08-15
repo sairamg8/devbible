@@ -8,7 +8,7 @@ sidebar_position: 0
 code is split, how failure is represented, and what the garbage collector will and will not
 do for you.
 
-## Status — Master ✅ 4/4 · 🚧 Understand under way (**7/18 written**)
+## Status — Master ✅ 4/4 · 🚧 Understand under way (**8/18 written**)
 
 Phase 8 has **four** Master topics — 01 through 04 — written in syllabus order. **ALL 4 DONE —
 the Master tier of phase 8 is COMPLETE.**
@@ -28,7 +28,7 @@ Phase 8 belongs to **chunk C** of the four-way JavaScript split, whose other pha
 | 05 | **[Dynamic `import()`](./05-dynamic-import/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 06 | **[Circular imports](./06-circular-imports/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 07 | **[`throw`, `try`/`catch`/`finally`](./07-throw-try-catch/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
-| 08 | Custom error classes | <span className="db-tier t-understand">Understand</span> | ⏳ |
+| 08 | **[Custom error classes](./08-custom-error-classes/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 09 | Failing well | <span className="db-tier t-understand">Understand</span> | ⏳ |
 | 10 | Global error handling | <span className="db-tier t-understand">Understand</span> | ⏳ |
 | 11 | The memory model | <span className="db-tier t-understand">Understand</span> | ⏳ |
