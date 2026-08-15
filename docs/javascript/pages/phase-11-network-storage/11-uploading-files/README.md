@@ -22,7 +22,8 @@ progress**, which is the single reason `XMLHttpRequest` is still in production c
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[Getting the file](./01-getting-the-file.md)** | `<input type="file">`, the array-like `FileList`, and 🔴 **why selecting the same file twice fires nothing**; `accept`, `multiple` and `capture` as hints rather than rules; drag-and-drop and the two `preventDefault` calls without which the browser navigates away; paste; and client-side validation — what it is for, and why `file.type` must never be trusted |
-| 2 | **[Sending it](./02-sending-it.md)** | `FormData` and 🔴 **the `Content-Type` header you must not set**; raw-body uploads and why base64-in-JSON is the wrong default; upload progress, why `fetch` cannot give it and what can; cancelling an upload; chunked and resumable uploads with `Blob.slice`; uploading straight to storage with a presigned URL; and the server-side rules a client cannot enforce |
+| 2 | **[Sending it](./02-sending-it.md)** | `FormData` and 🔴 **the `Content-Type` header you must not set**, and the fetch wrapper that causes it; raw-body uploads, and why base64-in-JSON is the wrong default; upload progress, why `fetch` cannot give it, and the `xhr.upload` target people listen on wrongly; and cancelling, including what abort does not undo |
+| 3 | **[Scale, and what the server must do](./03-scale-and-the-server.md)** | Chunked and resumable uploads with `Blob.slice`, what chunking buys and what it costs; uploading straight to storage with a presigned URL, and the two things that must be right; and 🔴 **the five server-side rules a client cannot enforce** — including serving user content back without turning an upload into stored XSS |
 
 ## The shape
 
