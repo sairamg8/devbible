@@ -273,4 +273,4 @@ anyway, since they compare by declaration site.
 
 ---
 
-← Prev: [03 · Parameter properties](./03-parameter-properties.md) · Next → **05 · Interface declaration merging** *(not written yet)*
+← Prev: [03 · Parameter properties](./03-parameter-properties.md) · Next → [05 · Interface declaration merging](./05-interface-declaration-merging/README.md)

@@ -51,7 +51,7 @@ the file has to be one the compiler reads.
 - **← [Phase 1 · `type` vs `interface`](../../phase-1-type-vocabulary/07-type-vs-interface.md)**
   — merging is the capability that genuinely separates the two, and this is where
   that claim gets cashed.
-- **→ 05 · Interface declaration merging** *(not written yet)* — the same
+- **→ [05 · Interface declaration merging](../05-interface-declaration-merging/README.md)** — the same
   mechanism inside your own codebase, including the accidents it causes.
 - **→ 06 · Global augmentation** *(not written yet)* — `declare global` on its
   own terms, and typing `globalThis`.
