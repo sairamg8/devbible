@@ -74,9 +74,9 @@ it tells you *where* to look:
 
 | Code | Message | When |
 |---|---|---|
-| `TS18047` | '{0}' is possibly 'null'. | a **named** value |
-| `TS18048` | '{0}' is possibly 'undefined'. | a **named** value |
-| `TS18049` | '{0}' is possibly 'null' or 'undefined'. | a **named** value |
+| `TS18047` | `'{0}' is possibly 'null'.` | a **named** value |
+| `TS18048` | `'{0}' is possibly 'undefined'.` | a **named** value |
+| `TS18049` | `'{0}' is possibly 'null' or 'undefined'.` | a **named** value |
 | `TS2531` | Object is possibly 'null'. | an **expression** with no name to report |
 | `TS2532` | Object is possibly 'undefined'. | an **expression** with no name to report |
 | `TS2533` | Object is possibly 'null' or 'undefined'. | an **expression** with no name to report |

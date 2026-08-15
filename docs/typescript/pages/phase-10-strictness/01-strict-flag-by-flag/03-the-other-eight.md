@@ -171,8 +171,7 @@ guard.
 
 The one line worth having here: this flag reliably finds real bugs the day it is
 enabled, because `e.message` on a non-`Error` throw used to compile and print
-`undefined`. The error it produces is `TS18046` — *"'{0}' is of type
-'unknown'."*
+`undefined`. The error it produces is `TS18046` — `'{0}' is of type 'unknown'.`
 
 ## `alwaysStrict`
 

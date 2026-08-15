@@ -80,7 +80,7 @@ untouched by it.
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
-| 10 · Strictness and correctness | Rigour and tooling | — | 🎯 **in scope — next** |
+| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 1 / 13 | 🚧 writing |
 | ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
 | 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
 
