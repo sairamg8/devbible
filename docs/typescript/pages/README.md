@@ -58,7 +58,7 @@ to be confounded, the correction is on the page rather than quietly removed.
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 2 / 14 | 🚧 writing |
 | 5 · Type-level programming | Types at scale | — | planned |
 | 6 · Modules, declarations and the build | Types at scale | — | planned |
-| [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 4 / 15 | 🚧 writing |
+| [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 15 | 🚧 writing |
 | 8 · TypeScript in React | In the stack | — | planned |
 | 9 · Types at the boundary | In the stack | — | planned |
 | 10 · Strictness and correctness | Rigour and tooling | — | planned |

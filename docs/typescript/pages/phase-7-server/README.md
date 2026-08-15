@@ -42,7 +42,7 @@ single most common reason a Node project's types "just don't work".
 | 02 | [Shipping TypeScript to production](./02-shipping-to-production/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | `tsc` build vs running `.ts` on Node 24; source maps and readable stack traces either way |
 | 03 | [Typing `process.env`](./03-typing-process-env/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | It is `string \| undefined` and it lies — why parsing beats augmenting `ProcessEnv` |
 | 04 | [`catch (e: unknown)`](./04-catch-e-unknown/README.md) *(4 chunks)* | <span className="db-tier t-master">Master</span> | Proving what was thrown; `instanceof Error`, custom classes, `error.cause` |
-| 05 | Typed Express handlers | <span className="db-tier t-master">Master</span> | The four `Request` generics, and why a typed body is a promise the compiler cannot keep |
+| 05 | [Typed Express handlers](./05-typed-express-handlers/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The four `Request` generics, and why a typed body is a promise the compiler cannot keep |
 | 06 | Augmenting `Express.Request` | <span className="db-tier t-master">Master</span> | `req.user` by declaration merging, and the `include` mistake that silently no-ops it |
 | 07 | Typing `pg` query results | <span className="db-tier t-understand">Understand</span> | `query<T>()` is an **assertion, not a check** — a renamed column is `undefined` with a green build |
 | 08 | Typed middleware | <span className="db-tier t-understand">Understand</span> | `RequestHandler`, typing `next`, and the four-argument signature TypeScript cannot enforce |
