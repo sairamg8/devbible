@@ -130,7 +130,7 @@ decided to close and said so. `false` means the connection died and the browser 
 **So `1006` with `wasClean: false` means "it broke, and the browser cannot tell you why."**
 Do not build logic on the distinction between "server unreachable" and "network lost" — the
 client genuinely cannot know. The diagnosis lives in the server's logs; the client's job is
-to reconnect sensibly (**chunk 4** *(next)*).
+to reconnect sensibly ([chunk 4](./04-staying-connected.md)).
 
 ⚠️ **A `1006` before any `open` event is the most useful variant** — it means the connection
 never came up at all, which usually points at the URL, mixed content, CSP or an intermediary
@@ -210,4 +210,4 @@ dropped connection are indistinguishable from the browser's side.
 
 ---
 
-← [2 · Messaging](./02-messaging.md) · Next → **4 · Reliability, and when not to** *(next)*
+← [2 · Messaging](./02-messaging.md) · Next → [4 · Staying connected](./04-staying-connected.md)

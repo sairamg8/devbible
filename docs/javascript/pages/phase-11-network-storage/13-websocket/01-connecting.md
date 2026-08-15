@@ -83,7 +83,7 @@ the key is a nonce, not a secret.
    intermediary, not your code.
 3. **After the `101`, it is no longer HTTP.** No caching, no status codes, no retries by
    the browser, no `Retry-After` — everything HTTP gave you for free is now yours to
-   build (**chunk 4** *(next)*).
+   build ([chunk 4](./04-staying-connected.md)).
 
 ### 🔴 WebSocket is not subject to CORS
 
@@ -105,7 +105,7 @@ go with it.
 
 ⚠️ **And because it is cookie-authenticated by default, the fix is the same shape as
 CSRF's** — check `Origin` on the server, and prefer a short-lived ticket over ambient
-cookie authentication (chunk 4 covers how, given that you cannot set headers).
+cookie authentication (chunk 5 covers how, given that you cannot set headers).
 
 **The client-side lever that does exist is CSP.** `connect-src` restricts `fetch()`,
 `XMLHttpRequest`, **`WebSocket`**, `EventSource` and `sendBeacon`, so a policy limits
@@ -141,7 +141,7 @@ sub-protocol(s) that the client would like to use, in order of preference"**, se
 to roll out a breaking message-format change while old clients are still connected — the
 server keeps supporting `v1` and answers `v2` to clients that ask. It is also, in
 practice, the only place to put a token when you cannot set headers, which is a hack
-covered honestly in chunk 4.
+covered honestly in chunk 5.
 
 ## The state machine
 

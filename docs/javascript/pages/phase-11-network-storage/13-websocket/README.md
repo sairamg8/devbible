@@ -21,7 +21,7 @@ examples.
 ⚠️ **And the first question is whether you need one at all.** A WebSocket is a stateful
 connection per user; it defeats HTTP caching, complicates load balancing and scaling, and
 survives neither a sleeping laptop nor a flaky network without help. Polling or
-server-sent events are frequently the better answer, and the decision is in chunk 4.
+server-sent events are frequently the better answer, and the decision is in chunk 5.
 
 ## Chunks
 
@@ -30,7 +30,8 @@ server-sent events are frequently the better answer, and the decision is in chun
 | 1 | **[Connecting](./01-connecting.md)** | Constructing *is* connecting; the URL, the schemes and mixed content; the HTTP handshake and `101 Switching Protocols`; 🔴 **WebSocket is not subject to CORS**, and what CSP `connect-src` does instead; sub-protocols; the `readyState` machine; the four events, and why `error` tells you nothing |
 | 2 | **[Messaging](./02-messaging.md)** | Sending text and binary, and the two ways `send()` loses data; `binaryType`; 🔴 **framing — the protocol gives you messages, your application still needs an envelope**; request/response built by hand; `bufferedAmount`, and 🔴 **the inbound backpressure the API does not have** |
 | 3 | **[Closing](./03-closing.md)** | Closing is a **handshake**; `close(code, reason)` and what it rejects; the 123-**byte** reason limit; `CloseEvent`'s `code`, `reason` and `wasClean`; the close-code table, why **`1006` tells you nothing**, and using `4000`–`4999` to say "do not reconnect" |
-| 4 | **Reliability, and when not to** *(next)* | 🔴 **Reconnection with backoff and jitter**, and why a naive retry loop takes your own server down; heartbeats, and why TCP will not tell you the connection died; queueing and resynchronising after a gap; authentication, given that you cannot set headers; and the honest comparison against polling, SSE and `fetch` |
+| 4 | **[Staying connected](./04-staying-connected.md)** | 🔴 **Reconnection with backoff and jitter**, and why a naive retry loop takes your own server down; when to reset the counter; heartbeats, and why **TCP will not tell you the connection died**; bounded outboxes and what is safe to replay; resynchronising after a gap |
+| 5 | **Authentication, and when not to** *(next)* | Authenticating a handshake you **cannot set headers on** — cookies, query strings, sub-protocols and the ticket pattern; and the honest comparison against polling, long polling, SSE and plain `fetch`, including what a persistent connection costs you |
 
 ## The whole API
 
