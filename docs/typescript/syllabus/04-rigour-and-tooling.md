@@ -15,6 +15,14 @@ tooling that decides whether any of it is actually checked.
 
 ---
 
+:::tip Re-scoped 2026-08-15 — this part is Part B's remaining scope
+**Phases 10 and 12 are the work.** Phase 11 is **dropped** — nothing was written
+for it, and its rows are kept below as a record only.
+
+Everything else in Part B is closed: phase 7 kept its five Master topics, and
+phases 8, 9 and 11 are dropped. See [Part 3](./03-in-the-stack.md).
+:::
+
 ## Phase 10 — Strictness and correctness
 
 *13 topics.* `strict: true` is the start, not the finish. This phase is the flags
@@ -43,6 +51,8 @@ codebase and fix the first twenty errors without a single `!` or `as`.
 ---
 
 ## Phase 11 — Migration and legacy
+
+> ⛔ **DROPPED 2026-08-15.** Nothing written. Kept as a record only.
 
 *12 topics.* Almost nobody starts clean. This phase is inheriting JavaScript,
 inheriting bad TypeScript, and moving both forward without a six-month rewrite

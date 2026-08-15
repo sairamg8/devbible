@@ -66,9 +66,9 @@ silent `else`, and a `findUser` whose signature promises a `User`.
 - **← [02 · Shipping to production](../02-shipping-to-production/README.md)** —
   the `--enable-source-maps` latency caveat, whose mitigation is chunk 04's
   design point rather than a flag.
-- **→ 08 · Typed middleware** *(not written yet)* — the four-argument Express
+- **→ 08 · Typed middleware** *(dropped 2026-08-15)* — the four-argument Express
   error handler that TypeScript cannot enforce.
-- **→ 13 · Typed errors → HTTP responses** *(not written yet)* — the exhaustive
+- **→ 13 · Typed errors → HTTP responses** *(dropped 2026-08-15)* — the exhaustive
   mapping from the error union to status codes, which chunk 02's discriminant
   makes possible.
 

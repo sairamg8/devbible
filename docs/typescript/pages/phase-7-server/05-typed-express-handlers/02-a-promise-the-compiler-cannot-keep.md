@@ -146,7 +146,7 @@ untyped bag.
 Two ways out, and both belong to later topics:
 
 - **Type `res.locals`** via the `LocalsObj` generic, or by declaration merging —
-  **topic 06** *(not written yet)*, the same mechanism as `req.user`.
+  **topic 06** *(dropped 2026-08-15)*, the same mechanism as `req.user`.
 - **Keep the parse in the handler** where its result is a local with a real
   type, and let the middleware only *reject*, not *pass values along*.
 
@@ -178,7 +178,7 @@ one end of the request is your code and the other is the network. Typing helps
 exactly where you control the data.
 
 This is also the argument for keeping the response type separate from the domain
-type — **topic 11 · DTOs vs domain types vs row types** *(not written yet)*.
+type — **topic 11 · DTOs vs domain types vs row types** *(dropped 2026-08-15)*.
 
 ## Gotchas
 

@@ -177,7 +177,7 @@ Both `noUncheckedIndexedAccess` and `exactOptionalPropertyTypes` produce a large
 number of errors mid-project, and `exactOptionalPropertyTypes` in particular
 fights with libraries that spread optional props into object literals. They
 belong in a new service from day one, or in a **phase 11 · Migration and legacy**
-*(not written yet)* pass with a plan and a budget — not in a Friday commit.
+*(dropped 2026-08-15)* pass with a plan and a budget — not in a Friday commit.
 
 ## Gotchas
 

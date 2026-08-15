@@ -62,14 +62,14 @@ validation anywhere, which reads as safe and is not.
   generic wearing domain names, and the defaults are
   [default type parameters](../../phase-3-generics/08-default-type-parameters.md)
   doing exactly what that page describes.
-- **→ 06 · Augmenting `Express.Request`** *(not written yet)* — `req.user` and
+- **→ 06 · Augmenting `Express.Request`** *(dropped 2026-08-15)* — `req.user` and
   `res.locals`, by declaration merging.
-- **→ 08 · Typed middleware** *(not written yet)* — the four-argument error
+- **→ 08 · Typed middleware** *(dropped 2026-08-15)* — the four-argument error
   handler arity TypeScript cannot enforce, and carrying typed data across
   `next()`.
-- **→ 09 · Async handlers** *(not written yet)* — what the `unknown` return type
+- **→ 09 · Async handlers** *(dropped 2026-08-15)* — what the `unknown` return type
   on `RequestHandler` permits, and Express 5's rejected-promise forwarding.
-- **→ 11 · DTOs vs domain types vs row types** *(not written yet)* — why the
+- **→ 11 · DTOs vs domain types vs row types** *(dropped 2026-08-15)* — why the
   response type is not the domain type.
 
 ---

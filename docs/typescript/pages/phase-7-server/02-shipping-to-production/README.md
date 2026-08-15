@@ -54,7 +54,7 @@ compiler in the runtime image, and it is still extremely common.
   output is a different file from the one you wrote.
 - **← [Phase 0 · Checking vs transpiling](../../phase-0-how-typescript-runs/10-checking-vs-transpiling.md)**
   — the distinction this topic turns into a CI requirement.
-- **→ 04 · `catch (e: unknown)`** *(not written yet)* — the design point behind
+- **→ 04 · `catch (e: unknown)`** *(dropped 2026-08-15)* — the design point behind
   the `Error.stack` latency caveat: a service that treats expected outcomes as
   thrown errors pays source-map resolution on its normal path.
 

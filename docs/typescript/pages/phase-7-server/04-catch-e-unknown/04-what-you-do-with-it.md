@@ -148,9 +148,9 @@ Two rules that boundary enforces, both about the second branch:
   serialiser rather than `JSON.stringify` — which, per chunk 03, yields `{}`.
 
 The Express-shaped version of this, with the four-argument signature TypeScript
-cannot enforce, is **topic 08 · Typed middleware** *(not written yet)*; the
+cannot enforce, is **topic 08 · Typed middleware** *(dropped 2026-08-15)*; the
 error-union-to-status-code mapping with its exhaustiveness check is **topic 13 ·
-Typed errors → HTTP responses** *(not written yet)*. This chunk is why they are
+Typed errors → HTTP responses** *(dropped 2026-08-15)*. This chunk is why they are
 each one function in one place.
 
 ## The process-level handlers are not a safety net

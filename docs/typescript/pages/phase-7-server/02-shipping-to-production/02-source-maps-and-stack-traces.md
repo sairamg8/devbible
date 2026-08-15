@@ -118,7 +118,7 @@ stack is doing source-map resolution on its normal path.
 
 📌 The mitigation is not to disable the flag — it is to stop serialising stacks
 for errors you expect. That is a design point **topic 04 · `catch (e: unknown)`**
-*(not written yet)* returns to.
+*(dropped 2026-08-15)* returns to.
 
 ### 🔴 Caveat 2 — overriding `Error.prepareStackTrace` disables it
 

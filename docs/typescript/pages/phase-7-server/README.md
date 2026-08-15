@@ -14,7 +14,18 @@ sidebar_position: 7
 > here is presented as a transcript. Where a claim depends on a version
 > boundary, the version is named.
 
-**15 topics.** Phases 0–6 taught the type system as a language. This is the
+:::caution Re-scoped 2026-08-15 — this phase is COMPLETE at 5 topics
+On the user's instruction, Part B was cut to **phases 10 and 12 only**, with
+anything already written kept. This phase keeps its **five written Master
+topics** (01–05); its **ten unwritten Understand rows are dropped** and are
+struck through in the table below.
+
+**Nothing was deleted.** The five topics here are complete, build-verified and on
+the reading path. The dropped rows stay listed as a record of what the syllabus
+covered — reopening any of them needs a new instruction.
+:::
+
+**5 topics in scope** (originally 15). Phases 0–6 taught the type system as a language. This is the
 first phase where TypeScript meets **other people's code** — Node's standard
 library, Express's router, a database driver, and an environment you do not
 control.
@@ -43,18 +54,18 @@ single most common reason a Node project's types "just don't work".
 | 03 | [Typing `process.env`](./03-typing-process-env/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | It is `string \| undefined` and it lies — why parsing beats augmenting `ProcessEnv` |
 | 04 | [`catch (e: unknown)`](./04-catch-e-unknown/README.md) *(4 chunks)* | <span className="db-tier t-master">Master</span> | Proving what was thrown; `instanceof Error`, custom classes, `error.cause` |
 | 05 | [Typed Express handlers](./05-typed-express-handlers/README.md) *(2 chunks)* | <span className="db-tier t-master">Master</span> | The four `Request` generics, and why a typed body is a promise the compiler cannot keep |
-| 06 | Augmenting `Express.Request` | <span className="db-tier t-master">Master</span> | `req.user` by declaration merging, and the `include` mistake that silently no-ops it |
-| 07 | Typing `pg` query results | <span className="db-tier t-understand">Understand</span> | `query<T>()` is an **assertion, not a check** — a renamed column is `undefined` with a green build |
-| 08 | Typed middleware | <span className="db-tier t-understand">Understand</span> | `RequestHandler`, typing `next`, and the four-argument signature TypeScript cannot enforce |
-| 09 | Async handlers | <span className="db-tier t-understand">Understand</span> | `Promise<void>` handlers, Express 5's rejected-promise forwarding, and the return type |
-| 10 | Typed configuration loading | <span className="db-tier t-understand">Understand</span> | Schema-validated env at startup, failing fast, one exported typed `config` |
-| 11 | DTOs vs domain types vs row types | <span className="db-tier t-understand">Understand</span> | Three shapes of "a user", and what collapsing them leaks |
-| 12 | Typing the service and repository layer | <span className="db-tier t-understand">Understand</span> | Keeping driver types out of business logic; typing a transaction-carrying function |
-| 13 | Typed errors → HTTP responses | <span className="db-tier t-understand">Understand</span> | An error union mapped to status codes with an exhaustiveness check |
-| 14 | Typing MongoDB and Mongoose | <span className="db-tier t-understand">Understand</span> | Generic documents, `ObjectId`, lean queries, and where inference gives up |
-| 15 | Sharing types with the client | <span className="db-tier t-understand">Understand</span> | A shared package, `import type` only, and what must *not* cross |
+| ~~06~~ | ~~Augmenting `Express.Request`~~ | <span className="db-tier t-master">Master</span> | ⛔ **dropped** — `req.user` by declaration merging, and the `include` mistake that silently no-ops it |
+| ~~07~~ | ~~Typing `pg` query results~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — `query<T>()` is an **assertion, not a check** — a renamed column is `undefined` with a green build |
+| ~~08~~ | ~~Typed middleware~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — `RequestHandler`, typing `next`, and the four-argument signature TypeScript cannot enforce |
+| ~~09~~ | ~~Async handlers~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — `Promise<void>` handlers, Express 5's rejected-promise forwarding, and the return type |
+| ~~10~~ | ~~Typed configuration loading~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — Schema-validated env at startup, failing fast, one exported typed `config` |
+| ~~11~~ | ~~DTOs vs domain types vs row types~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — Three shapes of "a user", and what collapsing them leaks |
+| ~~12~~ | ~~Typing the service and repository layer~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — Keeping driver types out of business logic; typing a transaction-carrying function |
+| ~~13~~ | ~~Typed errors → HTTP responses~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — An error union mapped to status codes with an exhaustiveness check |
+| ~~14~~ | ~~Typing MongoDB and Mongoose~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — Generic documents, `ObjectId`, lean queries, and where inference gives up |
+| ~~15~~ | ~~Sharing types with the client~~ | <span className="db-tier t-understand">Understand</span> | ⛔ **dropped** — A shared package, `import type` only, and what must *not* cross |
 
-*(Pages are linked from this table as they are written.)*
+⛔ **Struck-through rows are dropped** (2026-08-15) and are not scheduled work.
 
 ## The scope boundary — read this before you look for missing material
 
@@ -91,7 +102,7 @@ column into an HTTP response the first time somebody adds a column.
 - **← [Phase 3 · Generics](../phase-3-generics/README.md)** — `query<T>()`,
   `Request<P, ResBody, ReqBody, Query>` and `Repository<T>` are all constrained
   generics wearing domain names.
-- **→ Phase 9 · Types at the boundary** *(not written yet)* — where "the
+- **→ Phase 9 · Types at the boundary** *(dropped 2026-08-15)* — where "the
   annotation is a claim, not a check" becomes an architecture.
 
 ---

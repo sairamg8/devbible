@@ -143,7 +143,7 @@ string away from `parseInt(anObject)`.
 
 The fifth slot, and the one the syllabus row omits. `res.locals` is a per-request
 scratch space, typed as a bag of `any`. Typing it is the same declaration-merging
-question as `req.user`, which is **topic 06** *(not written yet)*.
+question as `req.user`, which is **topic 06** *(dropped 2026-08-15)*.
 
 ## `RequestHandler` — the alternative spelling
 
@@ -185,7 +185,7 @@ Two advantages that are worth the extra keystrokes:
 ⚠️ Note the return type: **`unknown`**, not `void`. That is deliberate in the v5
 declarations and it changes what you may return from a handler — including an
 `async` function's promise. The consequences are **topic 09 · Async handlers**
-*(not written yet)*.
+*(dropped 2026-08-15)*.
 
 ## 🔴 `ErrorRequestHandler` hands you `any`
 
@@ -228,7 +228,7 @@ from topic 04. **Do this in every Express application you write.**
 
 The four-argument arity that makes Express treat this as an error handler at all
 is not something TypeScript can enforce — that is **topic 08 · Typed middleware**
-*(not written yet)*.
+*(dropped 2026-08-15)*.
 
 ## Gotchas
 

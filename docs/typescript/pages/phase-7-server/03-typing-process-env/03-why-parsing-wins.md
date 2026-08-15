@@ -25,7 +25,7 @@ Two chunks of setup, and the conclusion is short:
 
 ⚠️ **Scope note:** this chunk argues the *why* and shows the shape. The full
 implementation — schema layout, layered defaults, secret handling, what to log —
-is **topic 10 · Typed configuration loading** *(not written yet)*. If you came
+is **topic 10 · Typed configuration loading** *(dropped 2026-08-15)*. If you came
 here for the code to copy, it is there; what is here is the reasoning that
 decides whether you want it.
 

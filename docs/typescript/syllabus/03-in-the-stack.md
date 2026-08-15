@@ -18,6 +18,16 @@ collapses to one phase — say so before any page is written.
 
 ---
 
+:::caution Re-scoped 2026-08-15 — read before using this part
+**Phase 7 kept only its five Master rows** (topics 01–05, all written and linked
+below). Its ten Understand rows are **dropped**. **Phases 8 and 9 are dropped in
+full** — nothing was written for either.
+
+The rows are kept here deliberately, as the record of what the syllabus covered;
+they are **not scheduled work**. Reopening any of them needs a new instruction.
+Part B's remaining scope is [phases 10 and 12](./04-rigour-and-tooling.md).
+:::
+
 ## Phase 7 — TypeScript on the server
 
 *15 topics.* A typed Node/Express service, end to end. The recurring theme is
@@ -50,6 +60,8 @@ you can point at the exact line where the data stops being untrusted.
 
 ## Phase 8 — TypeScript in React
 
+> ⛔ **DROPPED 2026-08-15.** Nothing written. Kept as a record only.
+
 *14 topics.* Typing components, hooks and events. Almost every row is a pattern
 with one well-known wrong version — this phase is largely about knowing which
 is which, and why the wrong one is still everywhere online.
@@ -78,6 +90,8 @@ prop and a discriminated set of props, and explain what breaks if you use
 ---
 
 ## Phase 9 — Types at the boundary
+
+> ⛔ **DROPPED 2026-08-15.** Nothing written. Kept as a record only.
 
 *15 topics.* The phase this whole syllabus builds toward. **Types are erased, so
 nothing crosses the network typed.** Every row here is about the seam where a

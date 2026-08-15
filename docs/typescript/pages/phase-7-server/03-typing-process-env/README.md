@@ -61,10 +61,10 @@ The tell that it has not landed: an `env.d.ts` full of required `string`s, and
 - **← [01 · `tsconfig.json` for a Node 24 service](../01-tsconfig-for-a-node-service/README.md)**
   — `include` and `types` decide whether an augmentation file is in the program
   at all, which is chunk 02's first failure mode.
-- **→ 10 · Typed configuration loading** *(not written yet)* — the
+- **→ 10 · Typed configuration loading** *(dropped 2026-08-15)* — the
   implementation this topic argues for: schema layout, layered defaults, secret
   handling, and testability.
-- **→ Phase 9 · Types at the boundary** *(not written yet)* — the same move
+- **→ Phase 9 · Types at the boundary** *(dropped 2026-08-15)* — the same move
   generalised. The syllabus calls env *"the boundary everyone forgets is a
   boundary"*.
 
