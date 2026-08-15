@@ -16,6 +16,7 @@ const postgres = summarise('postgresql');
 const git = summarise('git');
 const mongodb = summarise('mongodb');
 const redis = summarise('redis');
+const nginx = summarise('nginx');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -141,7 +142,15 @@ const LAYERS = [
     note: 'How it ships and stays up',
     items: [
       {n: '10', name: 'Docker & Podman', desc: 'Images, multi-stage builds, Compose, rootless'},
-      {n: '11', name: 'Nginx', desc: 'Reverse proxy, load balancing, TLS, caching'},
+      {
+        n: '11',
+        name: 'Nginx',
+        desc: 'Reverse proxy, load balancing, TLS, caching',
+        to: '/docs/nginx',
+        active: true,
+        stats: `${nginx.topicsTotal} topics · ${nginx.phasesTotal} phases · ${nginx.phasesDone} phases explained · ${nginx.pagesWritten} pages`,
+        progress: nginx.percent,
+      },
     ],
   },
   {
