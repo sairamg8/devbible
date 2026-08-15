@@ -51,7 +51,7 @@ type Also = User['id'];        // the literal type directly
 ```
 
 That third line is the normal way. The second is the pairing with the `typeof`
-type operator that **topic 07** *(not written yet)* covers.
+type operator that [topic 07](./07-typeof-type-operator.md) covers.
 
 ## It distributes over a union of keys
 
@@ -261,4 +261,4 @@ use `NonNullable<Cfg['db']>['host']`.
 
 ---
 
-← Prev: [05 · The `getProp` pattern](./05-getprop-pattern/README.md) · Next → **07 · The `typeof` type operator** *(not written yet)*
+← Prev: [05 · The `getProp` pattern](./05-getprop-pattern/README.md) · Next → [07 · The `typeof` type operator](./07-typeof-type-operator.md)

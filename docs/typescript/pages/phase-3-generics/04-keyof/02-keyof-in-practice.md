@@ -42,7 +42,7 @@ a route and the union grows; delete one and every stale call site errors.
 ⚠️ **`typeof` here is the *type* operator, not JavaScript's.** They share a
 spelling and have nothing to do with each other: the JavaScript one runs and
 returns `'object'`, this one is erased and returns a type.
-**Topic 07 · The `typeof` type operator** *(not written yet)* covers the pairing
+[Topic 07 · The `typeof` type operator](../07-typeof-type-operator.md) covers the pairing
 properly.
 
 This is also where [`satisfies`](../../phase-2-narrowing/10-satisfies/README.md)
