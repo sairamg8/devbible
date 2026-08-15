@@ -200,4 +200,4 @@ the packages you actually asked for.
 
 ---
 
-← Index: [Phase 5](README.md) · Next → **The classic mistakes** *(not written yet)*
+← Index: [Phase 5](README.md) · Next → [The classic mistakes](02-classic-mistakes.md)
