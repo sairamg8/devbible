@@ -38,7 +38,7 @@ The phase splits into three moves:
 | # | Page | Tier | What it settles |
 |---|---|---|---|
 | 01 | [`strict` flag by flag](./01-strict-flag-by-flag/README.md) *(3 chunks)* | <span className="db-tier t-master">Master</span> | The seven flags `strict` turns on, and the specific bug each one rejects |
-| 02 | `noUncheckedIndexedAccess` | <span className="db-tier t-master">Master</span> | `arr[0]` and `record[key]` become `T \| undefined` — the flag that finds the most real bugs and annoys people most |
+| 02 | [`noUncheckedIndexedAccess`](./02-nouncheckedindexedaccess.md) | <span className="db-tier t-master">Master</span> | `arr[0]` and `record[key]` become `T \| undefined` — the flag that finds the most real bugs and annoys people most |
 | 03 | Containing `any` | <span className="db-tier t-master">Master</span> | The four doors it enters through, and how it spreads silently once inside |
 | 04 | Reading a TypeScript error | <span className="db-tier t-master">Master</span> | Start at the innermost message, read the property path first, ignore the outer noise |
 | 05 | `exactOptionalPropertyTypes` | <span className="db-tier t-understand">Understand</span> | "Absent" vs "present and `undefined`", and the API bugs that difference causes |
