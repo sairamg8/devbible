@@ -8,7 +8,7 @@ sidebar_position: 0
 the security surface. As the syllabus puts it, this phase is **broad by design**: most rows are
 Know until a project needs them.
 
-## Status — 🚧 **16 of 21** · Understand tier ✅ COMPLETE (03–13) · Know tier under way (14–16) · Master ✅ (01–02)
+## Status — 🚧 **17 of 21** · Understand tier ✅ COMPLETE (03–13) · Know tier under way (14–17) · Master ✅ (01–02)
 
 **Master tier is complete** — 01 and 02, both written. The **Understand tier is now the work**
 (chunk **D** of the four-way JavaScript split), taken in order, lowest number first. This phase
@@ -35,7 +35,8 @@ project needs them"*.
 | 14 | **[Yielding to the main thread](./14-yielding-to-the-main-thread.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 15 | **[Cross-tab coordination](./15-cross-tab-coordination/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 16 | **[Clipboard, Web Share and File System Access](./16-clipboard-share-files/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 17–20 | Permissions/Geolocation/Notifications, media, Page Visibility, i18n | <span className="db-tier t-know">Know</span> | 🚧 next |
+| 17 | **[Permissions, Geolocation and Notifications](./17-permissions-geolocation-notifications/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
+| 18–20 | Media, Page Visibility/Wake Lock/Battery, i18n in the browser | <span className="db-tier t-know">Know</span> | 🚧 next |
 | 21 | `SharedArrayBuffer` and `Atomics` | <span className="db-tier t-when">When Needed</span> | deferred |
 
 ## Coverage
@@ -44,9 +45,9 @@ project needs them"*.
 |---|---|---|
 | <span className="db-tier t-master">Master</span> | 2 | **2** ✅ |
 | <span className="db-tier t-understand">Understand</span> | 11 | **11** ✅ (03–13) |
-| <span className="db-tier t-know">Know</span> | 7 | **3** (14–16) |
+| <span className="db-tier t-know">Know</span> | 7 | **4** (14–17) |
 | <span className="db-tier t-when">When Needed</span> | 1 | 0 |
-| **Total** | **21** | **16** |
+| **Total** | **21** | **17** |
 
 ## How these pages are verified
 

@@ -48,7 +48,7 @@ export const LANGUAGES = {
       {n: 9, slug: 'phase-9-dom', name: 'The DOM', part: 'Web APIs', topics: 19, pages: 19},
       {n: 10, slug: 'phase-10-events', name: 'Events and user input', part: 'Web APIs', topics: 14, pages: 14},
       {n: 11, slug: 'phase-11-network-storage', name: 'Network, storage and data transfer', part: 'Web APIs', topics: 21, pages: 14, pagesPlanned: 21},
-      {n: 12, slug: 'phase-12-browser-platform', name: 'The browser platform', part: 'Web APIs', topics: 21, pages: 16, pagesPlanned: 21},
+      {n: 12, slug: 'phase-12-browser-platform', name: 'The browser platform', part: 'Web APIs', topics: 21, pages: 17, pagesPlanned: 21},
       {n: 13, slug: 'phase-13-complexity', name: "Complexity and real costs (parked at Master)", part: 'DSA & machine coding', topics: 10, pages: 3, pagesPlanned: 10},
       {n: 14, slug: 'phase-14-data-structures', name: 'Core data structures (parked at Master)', part: 'DSA & machine coding', topics: 17, pages: 5, pagesPlanned: 17},
       {n: 15, slug: 'phase-15-algorithm-patterns', name: 'Algorithmic patterns (parked at Master)', part: 'DSA & machine coding', topics: 20, pages: 5, pagesPlanned: 20},

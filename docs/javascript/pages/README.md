@@ -39,7 +39,7 @@ import Progress from '@site/src/components/Progress';
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–14** ✅) — **14/21** |
-| **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–02) · **Understand tier ✅ COMPLETE** (03–13) · Know under way (**14–16** ✅) — **16/21** |
+| **[12 · The browser platform](./phase-12-browser-platform/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–02) · **Understand tier ✅ COMPLETE** (03–13) · Know under way (**14–17** ✅) — **17/21** |
 | **[13 · Complexity and JavaScript's real costs](./phase-13-complexity/README.md)** | DSA | 10 | 🟡 **Master tier ✅** (01–03 — all three); 04–10 deferred |
 | **[14 · Core data structures in JavaScript](./phase-14-data-structures/README.md)** | DSA | 17 | 🟡 **Master tier ✅** (01–05 — all five); 06–17 deferred |
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
@@ -59,7 +59,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 | **A** | **5**, **11** | **7** — 5 ✅ **DONE 26/26** · 11 (7: 15–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `3d9f98b8`, 2026-08-15 |
 | **B** | **6**, **17** | ✅ **0 — CHUNK B IS FINISHED** (phase 6 13/13 · phase 17 18/18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
 | **C** | **7**, **8** | ✅ **0 — CHUNK C IS COMPLETE** (7: 22/22 · 8: 18/18) | Async beyond the Master tier; then modules, errors, memory and the toolchain — both phases done 2026-08-15 | ✅ session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
-| **D** | **12**, **18** | **8** — 12 (5: 17–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
+| **D** | **12**, **18** | **7** — 12 (4: 18–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
 
@@ -113,7 +113,7 @@ worktrees left.
 | **B** | 17 · Machine coding ✅ **COMPLETE 18/18** | 0 | — | every tier done 2026-08-15; **chunk B has no work left** |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
 | **C** | 8 · Modules, errors, memory and the toolchain ✅ **18/18** | **0** | — | ✅ **chunk C complete**: phase 7 22/22 and phase 8 18/18, finished 2026-08-15 |
-| **D** | 12 · The browser platform (**16**/21) | 5 | **17 · Permissions, Geolocation and Notifications** (Know) — ✅ 15 Cross-tab · ✅ 16 Clipboard/Share/FS Access | 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
+| **D** | 12 · The browser platform (**17**/21) | 4 | **18 · Media from JavaScript** (Know) — ✅ 15 Cross-tab · ✅ 16 Clipboard/Share/FS Access · ✅ 17 Permissions/Geolocation/Notifications | 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
 | **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
 
 **Rules every chunk shares:** 🔴 **tier-locked to Understand and Know** — Master is **closed at
