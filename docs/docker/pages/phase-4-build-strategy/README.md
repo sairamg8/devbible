@@ -13,14 +13,14 @@ The difference between a 40-second rebuild and an 11-minute one is entirely in
 this phase, and none of it is exotic. Phase 3 taught the instructions; this phase
 is about the **order** you put them in and the builder that executes them.
 
-🚧 **3 of 16 pages written.**
+🚧 **4 of 16 pages written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[How the layer cache decides](01-how-the-cache-decides.md)** | <span className="db-tier t-master">Master</span> | Instruction text plus parent layer — and for `COPY`/`ADD`, a checksum of the files |
 | 02 | **[Instruction ordering](02-instruction-ordering.md)** | <span className="db-tier t-master">Master</span> | Slow and stable first, fast and volatile last |
 | 03 | **[The dependency-install pattern](03-dependency-install-pattern.md)** | <span className="db-tier t-master">Master</span> | Manifest, install, *then* source — so an edit does not reinstall 900 packages |
-| 04 | **Multi-stage builds** *(not written yet)* | <span className="db-tier t-master">Master</span> | The toolchain builds it; the runtime stage ships without the toolchain |
+| 04 | **[Multi-stage builds](04-multi-stage-builds.md)** | <span className="db-tier t-master">Master</span> | The toolchain builds it; the runtime stage ships without the toolchain |
 | 05 | **`RUN --mount=type=secret`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Readable during one `RUN`, present in no layer |
 | 06 | **`--target`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | One Dockerfile serving dev, test and prod |
 | 07 | **`COPY --from`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | From an earlier stage, or straight out of another image |

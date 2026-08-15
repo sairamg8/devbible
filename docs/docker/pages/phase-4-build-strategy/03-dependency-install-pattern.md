@@ -166,8 +166,8 @@ compose rather than compete.
 
 **It does not keep the dependencies out of the final image.** `npm ci` installs
 dev dependencies and build toolchains that a running service never needs.
-Removing them is the job of a multi-stage build — **page 04 · Multi-stage
-builds** *(not written yet)* — and of Phase 5.
+Removing them is the job of a multi-stage build — [page 04 · Multi-stage
+builds](04-multi-stage-builds.md) — and of Phase 5.
 
 **It does not help a cold cache.** A fresh CI runner has nothing to hit. See
 **page 12 · Cache import and export** *(not written yet)*.
@@ -252,4 +252,4 @@ rather than on a pinned frontend.
 
 ---
 
-← Prev: [Instruction ordering](02-instruction-ordering.md) · Index: [Phase 4](README.md) · Next → **Multi-stage builds** *(not written yet)*
+← Prev: [Instruction ordering](02-instruction-ordering.md) · Index: [Phase 4](README.md) · Next → [Multi-stage builds](04-multi-stage-builds.md)
