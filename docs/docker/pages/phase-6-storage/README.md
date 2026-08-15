@@ -22,7 +22,7 @@ the difference between "my database survived a redeploy" and a support ticket.
 | 01 | **[The container filesystem is disposable](01-filesystem-is-disposable.md)** | <span className="db-tier t-master">Master</span> | `rm` deletes the writable layer, and that is the design |
 | 02 | **[Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md)** | <span className="db-tier t-master">Master</span> | Engine-managed, host-mapped, or RAM — and which job wants which |
 | 03 | **[`-v` short syntax vs `--mount`](03-v-vs-mount.md)** | <span className="db-tier t-understand">Understand</span> | A typo becomes an empty directory with `-v` and an error with `--mount` |
-| 04 | **Bind mounts in development** *(not written yet)* | <span className="db-tier t-master">Master</span> | Live edits, and the `node_modules` trap that follows from them |
+| 04 | **[Bind mounts in development](04-bind-mounts-in-development/README.md)** | <span className="db-tier t-master">Master</span> | Live edits, and the `node_modules` trap that follows from them |
 | 05 | **File ownership and UID mismatch** *(not written yet)* | <span className="db-tier t-master">Master</span> | Why a file your container wrote is owned by `165536` |
 | 06 | **Volume lifecycle** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `create` / `ls` / `inspect` / `rm` / `prune`, and how anonymous volumes pile up |
 | 07 | **SELinux `:z` and `:Z`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The two-character fix for "permission denied" on Fedora and RHEL |
