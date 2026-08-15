@@ -1,0 +1,97 @@
+---
+title: "Phase 9 — The MERN/PERN stack in containers"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+> **Target: Docker Engine 29.7.2 · Compose v5.4.0 · Podman 6.1.0.**
+> Every page is **documentation-validated** against docs.docker.com,
+> docs.podman.io, the official image documentation and the relevant project
+> manuals, with the sources named per page. **No sandbox** — nothing was run, so
+> no page carries console output.
+
+🚧 **In progress — 1 of 14 topics written.**
+
+**Everything so far, applied to the actual stack this bible is about.** Phase 8
+gave you Compose as a language; this phase is what you say in it — a Node API, a
+database that is genuinely ready before the API talks to it, a frontend, and a
+proxy in front.
+
+The load-bearing set is **01, 03, 04, 05 and 07**: the API image, the database
+with its volume and its init scripts, the two halves of waiting for it, hot
+reload that actually reloads, and the worked file that ties them together.
+
+| # | Page | Tier | In one line |
+|---|---|---|---|
+| 01 | **[Containerising a Node/Express API](01-node-api-dockerfile/README.md)** | <span className="db-tier t-master">Master</span> | Three stages, `npm ci`, `USER node`, and the `CMD` line that decides whether deploys drop requests |
+| 02 | Dev image vs prod image | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 03 | PostgreSQL in a container | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 04 | Waiting for the database | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 05 | Hot reload inside a container | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 06 | Secrets in dev vs prod | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 07 | The whole stack in one file | <span className="db-tier t-master">Master</span> | _not written yet_ |
+| 08 | MongoDB in a container | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 09 | Redis in a container | <span className="db-tier t-know">Know</span> | _not written yet_ |
+| 10 | Migrations and seeds | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 11 | Debugging Node inside a container | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 12 | A React/Vite frontend | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 13 | Nginx in front of the API | <span className="db-tier t-understand">Understand</span> | _not written yet_ |
+| 14 | Connecting from the host | <span className="db-tier t-know">Know</span> | _not written yet_ |
+
+## Coverage
+
+Fourteen syllabus topics, fourteen pages — one to one, nothing merged and nothing
+dropped.
+
+| Syllabus topic | Page |
+|---|---|
+| Containerising a Node/Express API | 01 (chunked: the build · the runtime) |
+| Dev image vs prod image | 02 |
+| PostgreSQL in a container | 03 |
+| Waiting for the database | 04 |
+| Hot reload inside a container | 05 |
+| Secrets in dev vs prod | 06 |
+| The whole stack in one file | 07 |
+| MongoDB in a container | 08 |
+| Redis in a container | 09 |
+| Migrations and seeds | 10 |
+| Debugging Node inside a container | 11 |
+| A React/Vite frontend | 12 |
+| Nginx in front of the API | 13 |
+| Connecting from the host | 14 |
+
+## Phase gate
+
+**Deliverable:** clone the project on a machine with nothing installed but an
+engine, run one command, and have a working application with a seeded database —
+and be able to explain every line of the file that made it happen.
+
+Three checks that it is actually true, not true on your laptop:
+
+- **A clean machine, or at least `down -v` plus a pruned build cache.** Anything
+  that only works because of state you already had is not in the file.
+- **Restart the database while the stack runs.** The API must recover on its own;
+  `depends_on` covers startup and nothing after it.
+- **Read the image, not the Dockerfile.** `docker history` and the image config
+  say what actually shipped — development dependencies, a root `USER`, a missing
+  `CMD` are all visible there.
+
+## Where this connects
+
+- **[Phase 8 · Compose](../phase-8-compose/README.md)** is the language this
+  phase writes in. Every healthcheck, `depends_on`, volume and interpolation
+  argument is made there and only *used* here.
+- **[Phase 3 · The Dockerfile](../phase-3-dockerfile/README.md)**,
+  **[Phase 4 · Build strategy](../phase-4-build-strategy/README.md)** and
+  **[Phase 5 · Image quality](../phase-5-image-quality/README.md)** are what
+  topic 01 spends.
+- **[Phase 10 · Running containers in production](../phase-10-production/README.md)**
+  picks up where this phase stops: the same image, on a server, with nobody
+  watching.
+- **[Node.js](../../../nodejs/README.md)**, **[PostgreSQL](../../../postgresql/README.md)**
+  and **[MongoDB](../../../mongodb/README.md)** are the tracks this phase
+  containerises.
+
+---
+
+← Syllabus: [Part 3 — Running a real stack](../../syllabus/03-running-a-stack.md) · Start → [Containerising a Node/Express API](01-node-api-dockerfile/README.md)
