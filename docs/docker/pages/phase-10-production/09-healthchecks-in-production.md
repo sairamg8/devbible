@@ -194,4 +194,4 @@ on demand.
 
 ---
 
-← Prev: [Log drivers and rotation](08-log-drivers-and-rotation.md) · Index: [Phase 10](README.md) · Next → **Hardening at run time** *(not written yet)*
+← Prev: [Log drivers and rotation](08-log-drivers-and-rotation.md) · Index: [Phase 10](README.md) · Next → [Hardening at run time](10-hardening/README.md)

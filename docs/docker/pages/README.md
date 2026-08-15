@@ -23,7 +23,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
 | **B** | 6 · 7 | 26 | 🏁 phase 6 **done 12/12** · 🚧 phase 7 **10/14** — next: **07 · 11 · Debugging the network** | 🔴 session `d0c46f84` (2026-08-15) |
 | **C** | 8 · 9 | 31 (**15 left**) | 🔴 **Phase 8 · 17 · `--scale` and the honest limits** — 16/17 written | 🔴 session `9219957a` (2026-08-15) |
-| **D** | 10 · 11 · 12 | 44 | Phase 10 · 01 · PID 1 is not a normal process | 🔴 session `2f38bb4d` (2026-08-15) |
+| **D** | 10 · 11 · 12 | 44 (**34 left**) | 🔴 **Phase 10 · 11 · Observing** — 10/16 written | 🔴 session `6d88f249` (2026-08-15, took over from `2f38bb4d`) |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
 the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
@@ -68,10 +68,10 @@ answers.
 | **[07 · Networking](./phase-7-networking/README.md)** | 14 | 10 | 🚧 **Writing — chunk B** |
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 16 | 🚧 **Writing — chunk C** |
 | **09 · The MERN/PERN stack in containers** | 14 | 0 | ⏳ Not started — **chunk C** |
-| **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 9 | 🚧 **Writing — chunk D** |
+| **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 10 | 🚧 **Writing — chunk D** |
 | **11 · Podman in depth** | 16 | 0 | ⏳ Not started — **chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **138** | |
+| **Total** | **192** | **139** | |
 
 import Progress from '@site/src/components/Progress';
 

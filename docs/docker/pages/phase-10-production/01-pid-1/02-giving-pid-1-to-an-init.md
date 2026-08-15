@@ -116,7 +116,7 @@ disposition is back, and orphans reparent to the host's real init, which reaps
 them. It also lets the container see and signal **every process on the machine**,
 which is why it belongs to debugging tools, monitoring agents and profilers, not
 to application containers. The security trade is on
-[hardening at run time](../10-hardening.md).
+[hardening at run time](../10-hardening/README.md).
 
 `--pid=container:<name>` joins another container's namespace instead — the same
 mechanism a Podman pod uses when you ask for a shared PID namespace, and a
