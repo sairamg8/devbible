@@ -8,14 +8,14 @@ sidebar_position: 0
 code is split, how failure is represented, and what the garbage collector will and will not
 do for you.
 
-## Status — Master ✅ 4/4 · **Understand ✅ COMPLETE** (05–14) · 🚧 Know under way (**16/18 written**)
+## Status — Master ✅ 4/4 · **Understand ✅ COMPLETE** (05–14) · 🚧 Know under way (**17/18 written**)
 
 Phase 8 has **four** Master topics — 01 through 04 — written in syllabus order. **ALL 4 DONE —
 the Master tier of phase 8 is COMPLETE.**
 
 Phase 8 belongs to **chunk C** of the four-way JavaScript split, whose other phase,
 [Phase 7](../phase-7-async/README.md), is ✅ complete at every tier. The **Understand** tier (05–14) is
-✅ **complete**; the work left is **Know** — 15 and 16 ✅, then 17 and 18.
+✅ **complete**; the work left is **Know** — 15, 16 and 17 ✅; **18 · Linting and formatting closes the phase**.
 
 ## Topics
 
@@ -37,7 +37,7 @@ Phase 8 belongs to **chunk C** of the four-way JavaScript split, whose other pha
 | 14 | **[Testing JavaScript](./14-testing-javascript/README.md)** | <span className="db-tier t-understand">Understand</span> | ✅ |
 | 15 | **[CommonJS in a modern world](./15-commonjs-today/README.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 16 | **[`AggregateError`](./16-aggregate-error.md)** | <span className="db-tier t-know">Know</span> | ✅ |
-| 17 | Mark-and-sweep and generational GC | <span className="db-tier t-know">Know</span> | ⏳ |
+| 17 | **[Mark-and-sweep and generational GC](./17-gc-mark-sweep-generational.md)** | <span className="db-tier t-know">Know</span> | ✅ |
 | 18 | Linting and formatting | <span className="db-tier t-know">Know</span> | ⏳ |
 
 ## How these pages are verified

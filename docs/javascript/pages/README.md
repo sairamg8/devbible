@@ -35,7 +35,7 @@ import Progress from '@site/src/components/Progress';
 | **[5 · The built-in library](./phase-5-built-in-library/README.md)** | Data & async | 26 | ✅ **COMPLETE — every tier (26/26)** · Master 8/8 · Understand 14/14 · Know 4/4 |
 | **[6 · Iteration, destructuring and generators](./phase-6-iteration-and-destructuring/README.md)** | Data & async | 13 | ✅ **COMPLETE — every tier (13/13, 40 files)** |
 | **[7 · Asynchronous JavaScript](./phase-7-async/README.md)** | Data & async | 22 | ✅ **COMPLETE — every tier (22/22, 69 files, 11,962 lines)** |
-| **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🚧 **Master ✅ 4/4** · **Understand ✅ COMPLETE** (05–14) · Know under way (**15, 16** ✅) — **16/18** |
+| **[8 · Modules, errors, memory and the toolchain](./phase-8-modules-errors/README.md)** | Data & async | 18 | 🚧 **Master ✅ 4/4** · **Understand ✅ COMPLETE** (05–14) · Know under way (**15–17** ✅) — **17/18** |
 | **[9 · The DOM](./phase-9-dom/README.md)** | Web APIs | 19 | ✅ **COMPLETE — every tier (19/19, 59 files)** |
 | **[10 · Events and user input](./phase-10-events/README.md)** | Web APIs | 14 | ✅ **COMPLETE — every tier (14/14)** |
 | **[11 · Network, storage and data transfer](./phase-11-network-storage/README.md)** | Web APIs | 21 | 🚧 **Master ✅** (01–05) · Understand under way (**06–13** ✅) — **13/21** |
@@ -58,7 +58,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 |---|---|---|---|---|
 | **A** | **5**, **11** | **8** — 5 ✅ **DONE 26/26** · 11 (8: 14–21) | The built-in library ✅ finished; now network, storage and data transfer | 🔴 session `3d9f98b8`, 2026-08-15 |
 | **B** | **6**, **17** | **1** — ✅ **phase 6 COMPLETE (13/13)** · 17 (1: **18**, the last topic) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
-| **C** | **7**, **8** | **2** — ✅ **phase 7 COMPLETE 22/22** · 8 (2: 17, 18 — both Know) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
+| **C** | **7**, **8** | **1** — ✅ **phase 7 COMPLETE 22/22** · 8 (1: **18 · Linting and formatting**) | Async beyond the Master tier; then modules, errors, memory and the toolchain | 🔴 session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
 | **D** | **12**, **18** | **9** — 12 (6: 16–21) · 18 (**3**: 11, 12, 15 only) | The browser platform; then the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
 
 ### 🔴 How a session is started — `pick javascript A`, and nothing more
@@ -112,7 +112,7 @@ worktrees left.
 | **B** | 6 · Iteration, destructuring and generators | ✅ **13/13 — COMPLETE** | — | phase 6 is done; chunk B continues in phase 17 |
 | **B** | 17 · Machine coding (**17/18**) | 1 | **18 · A virtual-DOM diff in outline** (Know) — the last topic in chunk B | — |
 | **C** | 7 · Asynchronous JavaScript ✅ **22/22** | **0** | ✅ **COMPLETE 2026-08-15** — every tier, 69 files, 11,962 lines | — |
-| **C** | 8 · Modules, errors, memory and the toolchain (**16**/18) | **2** | **17 · Mark-and-sweep and generational GC** (Know) — ✅ 05–16 done | **Know** 18 Linting — then phase 8 and chunk C close |
+| **C** | 8 · Modules, errors, memory and the toolchain (**17**/18) | **1** | **18 · Linting and formatting** (Know) — ✅ 05–17 done | **the last topic — it closes phase 8 AND chunk C** |
 | **D** | 12 · The browser platform (**15**/21) | 6 | **16 · Clipboard, Web Share and File System Access** (Know) — ✅ 15 Cross-tab coordination | 17 Permissions/Geolocation · 18 Media · 19 Page Visibility · 20 i18n · **When Needed** 21 `SharedArrayBuffer` |
 | **D** | 18 · Building the store front end (7/18) | 3 | **11 · Infinite scroll and lazy images** | 12 Long lists without freezing · 15 Review uploads. ⚠️ **Only these three** — 08–10, 13, 14 and 16–18 were **dropped** on 2026-08-14 and are not to be written |
 
