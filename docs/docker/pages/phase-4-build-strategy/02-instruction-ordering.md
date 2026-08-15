@@ -133,7 +133,7 @@ CMD ["node", "dist/main.js"]
 Now a source edit misses at `COPY . .` and re-runs exactly two instructions plus
 the four cheap ones at the bottom. `npm ci` is untouched, which is the entire
 point. The manifest-first split is important enough to have its own page —
-**page 03 · The dependency-install pattern** *(not written yet)*.
+[page 03 · The dependency-install pattern](03-dependency-install-pattern.md).
 
 ## Grouping: one `COPY` per volatility class
 
@@ -253,4 +253,4 @@ ordering to buy anything.
 
 ---
 
-← Prev: [How the layer cache decides](01-how-the-cache-decides.md) · Index: [Phase 4](README.md) · Next → **The dependency-install pattern** *(not written yet)*
+← Prev: [How the layer cache decides](01-how-the-cache-decides.md) · Index: [Phase 4](README.md) · Next → [The dependency-install pattern](03-dependency-install-pattern.md)

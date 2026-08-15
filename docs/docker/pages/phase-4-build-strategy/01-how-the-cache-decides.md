@@ -134,7 +134,7 @@ Change one character in one component file and the build behaves like this:
 Nothing about `npm ci` changed. It reinstalls anyway, because instruction 3 sits
 above it and instruction 3 saw a different context. That is the whole of build
 performance in one table, and the fix — splitting the `COPY` so the manifest
-arrives before the source — is **page 03 · The dependency-install pattern** *(not written yet)*.
+arrives before the source — is [page 03 · The dependency-install pattern](03-dependency-install-pattern.md).
 
 ## What else moves the key
 
@@ -225,7 +225,7 @@ it.
 **Symptom:** Editing a single source file reinstalls every npm package.
 **Cause:** `COPY . .` sits above `RUN npm ci`, so the install's parent changed.
 **Fix:** Copy `package.json` and the lockfile, install, *then* copy the source —
-**page 03 · The dependency-install pattern** *(not written yet)*.
+[page 03 · The dependency-install pattern](03-dependency-install-pattern.md).
 
 **Symptom:** A rebuilt image still contains a package version that was patched
 weeks ago.
