@@ -45,7 +45,7 @@ import Progress from '@site/src/components/Progress';
 | **[15 · Algorithmic patterns](./phase-15-algorithm-patterns/README.md)** | DSA | 20 | 🟡 **Master tier ✅** (01–04, 06 — all five); rest deferred |
 | **[16 · Dynamic programming and the harder set](./phase-16-dynamic-programming/README.md)** | DSA | 16 | 🟡 **Master tier ✅** (01–03 — all three); rest deferred |
 | **[17 · Machine coding: implement it yourself](./phase-17-machine-coding/README.md)** | DSA | 18 | ✅ **COMPLETE — every tier (18/18)** · Master 4/4 · Understand 11/11 · Know 3/3 |
-| **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🚧 **Master ✅ 7/7** · in-scope Understand **11 ✅**, 12 and 15 to go — **8/10 in scope** |
+| **[18 · Building the store front end](./phase-18-storefront/README.md)** | Applied | 18 | 🚧 **Master ✅ 7/7** · in-scope Understand **11 ✅**, **12 ✅**, 15 to go — **9/10 in scope** |
 
 ## 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15)
 
@@ -59,7 +59,7 @@ so no two sessions ever write in the same phase directory or the same phase `REA
 | **A** | **5**, **11** | ✅ **0 — CHUNK A IS FINISHED** (2026-08-15) | Both phases complete at every tier: 5 ✅ 26/26 · 11 ✅ 21/21 | 🔴 session `3d9f98b8`, 2026-08-15 |
 | **B** | **6**, **17** | ✅ **0 — CHUNK B IS FINISHED** (phase 6 13/13 · phase 17 18/18) | Iteration, generators and iterator helpers; then machine coding | 🔴 session `233dede7`, 2026-08-15 (took over from `7c6611b4`) |
 | **C** | **7**, **8** | ✅ **0 — CHUNK C IS COMPLETE** (7: 22/22 · 8: 18/18) | Async beyond the Master tier; then modules, errors, memory and the toolchain — both phases done 2026-08-15 | ✅ session `f7bca7a9`, 2026-08-15 (took over from `f6dffd4a`) |
-| **D** | **12**, **18** | **3** — ✅ **12 COMPLETE 21/21** · 18 (**3**: 11, 12, 15 only) | ✅ the browser platform is finished; now the three kept storefront topics | 🔴 session `dbaa68e7`, 2026-08-15 |
+| **D** | **12**, **18** | **1** — ✅ **12 COMPLETE 21/21** · 18 (**11 ✅**, **12 ✅** by session `78e4bc26`, **15** left) | ✅ the browser platform is finished; the storefront topics are now split one per session | 🔴 session `dbaa68e7`, 2026-08-15 |
 
 ### 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15)
 
@@ -74,7 +74,7 @@ confirmation, no clarifying question.
 | Phase | State | Start at | Held by |
 |---|---|---|---|
 | **18 · Storefront** | ✅ **11 · Infinite scroll and lazy images** — written 2026-08-15 | — | session `dbaa68e7` |
-| **18 · Storefront** | 🔴 **12 · Long lists without freezing** | the whole topic | 🔴 a **second session** |
+| **18 · Storefront** | ✅ **12 · Long lists without freezing** — written 2026-08-15 (4 files, 782 lines) | — | session `78e4bc26` |
 | **18 · Storefront** | 🔴 **15 · Review uploads** | the whole topic | 🔴 a **third session** |
 | **0–17** | ✅ **all complete at every in-scope tier** | — | — |
 
