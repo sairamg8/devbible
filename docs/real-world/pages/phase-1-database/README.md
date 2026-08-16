@@ -1,0 +1,39 @@
+---
+title: "Phase 1 — The database"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+> The storefront's PostgreSQL layer, raw SQL through `pg`. Concepts live in the
+> [PostgreSQL section](../../../postgresql/README.md); these chapters are the
+> schema and queries this app actually runs, against the eleven-table map fixed
+> in [Phase 0](../phase-0-the-app/02-architecture-and-data-model.md).
+
+**Prerequisites:** PostgreSQL [Part 2 — SQL](../../../postgresql/syllabus/02-sql.md)
+and [Part 3 — Node + raw pg](../../../postgresql/syllabus/03-node-and-pg.md).
+
+| # | Chapter | Tier | In one line |
+|---|---|---|---|
+| 01 | **[The schema](01-the-schema/README.md)** | <span className="db-tier t-master">Master</span> | All eleven tables as DDL — keys, constraints, enums, and the invariants the database holds so the app can't break them |
+| 02 | **Migrations as plain SQL** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 03 | **Seed data and fixtures** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 04 | **The catalog query** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 05 | **Full-text product search** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 06 | **The checkout transaction** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 07 | **Money and time** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 08 | **JSONB for product attributes** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 09 | **Dashboard queries** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 10 | **Indexes for this app's queries** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 11 | **Soft delete and audit columns** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 12 | **LISTEN/NOTIFY** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+
+## Phase gate
+
+The gate from the syllabus: the schema migrated from zero, seeded, and every
+catalog and checkout query running under `EXPLAIN ANALYZE` with an index it
+actually uses.
+
+## Where this connects
+
+Phase 2's data layer wraps these queries in modules; Phase 3's endpoints call
+those modules; Phase 8 rebuilds this exact layer on MongoDB.
