@@ -18,7 +18,7 @@ and [Part 3 — Node + raw pg](../../../postgresql/syllabus/03-node-and-pg.md).
 | 02 | **[Migrations as plain SQL](02-migrations.md)** | <span className="db-tier t-master">Master</span> | A 60-line runner: ledger table, advisory lock, one transaction per file, forward-only |
 | 03 | **[Seed data and fixtures](03-seeds-and-fixtures.md)** | <span className="db-tier t-understand">Understand</span> | Reference data in migrations, a deterministic upsert seed, and per-test factories — three problems, three owners |
 | 04 | **[The catalog query](04-the-catalog-query.md)** | <span className="db-tier t-master">Master</span> | Filter + sort + keyset pagination in one parameterized shape — cursor = order by = index |
-| 05 | **Full-text product search** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 05 | **[Full-text product search](05-full-text-search.md)** | <span className="db-tier t-understand">Understand</span> | `websearch_to_tsquery` + weighted `tsvector` — and the honest list of what FTS won’t do |
 | 06 | **The checkout transaction** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 07 | **Money and time** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 08 | **JSONB for product attributes** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
