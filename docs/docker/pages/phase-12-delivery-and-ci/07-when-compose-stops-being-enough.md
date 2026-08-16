@@ -31,9 +31,10 @@ this one is a category change.
 then stop the old one" is a script you can write
 ([Phase 10 · 16](../phase-10-production/16-zero-downtime-restarts.md)) — and a
 script that has to handle a failed health check, a partial rollout and a
-rollback, correctly, every time. Compose's `deploy.update_config` describes this
-but is a platform directive rather than something plain Compose performs, and its
-`order` defaults to **`stop-first`** — the downtime-first option.
+rollback, correctly, every time. Compose's `deploy.update_config` describes the
+behaviour, but the reference frames `deploy` as **what a platform should do** —
+support depends on what is running the file — and its `order` defaults to
+**`stop-first`**, so even where it is honoured the default is downtime.
 
 **3 · Autoscaling.** `--scale` starts N containers on one host
 ([Phase 8 · 17](../phase-8-compose/17-scale-and-limits.md)); it does not add
@@ -127,11 +128,13 @@ CI/CD.
 cheaper to fix without a cluster underneath it.
 
 **Symptom:** `deploy.update_config` is in the Compose file and nothing rolls.
-**Cause:** `deploy` describes what a platform should do; support depends on what
-is running the file, and plain Compose is not that platform.
-**Fix:** Do the dance explicitly, or move to something that implements it. Note
-the documented default is `stop-first`, so even where it is honoured the default
-is downtime.
+**Cause:** `deploy` describes what a *platform* should do, and support depends on
+what is running the file — so it is not a promise the block will be acted on.
+⚠️ The documentation does not say Compose ignores it; it says support varies, and
+this page does not upgrade that into a stronger claim.
+**Fix:** Verify what your runner actually does with it. Otherwise do the dance
+explicitly, and note that the documented default is `stop-first`, so even where
+it is honoured the default is downtime.
 
 **Symptom:** `--scale` was used and the host fell over.
 **Cause:** Scaling on one machine multiplies the load on one machine. There is no
