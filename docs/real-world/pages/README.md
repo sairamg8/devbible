@@ -22,7 +22,7 @@ import Progress from '@site/src/components/Progress';
 | **[1 — The database](./phase-1-database/README.md)** | Schema, migrations, catalog query, checkout transaction, search, indexes — raw SQL + `pg` | ✅ 12 / 12 |
 | **[2 — Node services](./phase-2-node-services/README.md)** | Boot, data layer, uploads, outbox + email worker, scheduled jobs, webhooks, cache, health, CLI | ✅ 10 / 10 |
 | **[3 — The Express API](./phase-3-express-api/README.md)** | Structure, validation, auth, RBAC, catalog/cart/checkout endpoints, errors, rate limits, webhooks | ✅ 12 / 12 |
-| **4 — The React UI** | The storefront's custom hooks and screens, wired to the real API | *(not written yet)* |
+| **[4 — The React UI](./phase-4-react-ui/README.md)** | The storefront’s custom hooks and screens, wired to the real API | 🚧 1 / 12 |
 | **5 — JS custom functions** | Fetch wrapper, TTL cache, task queue, event bus, validation engine, Intl formatting | *(not written yet)* |
 | **6 — TypeScript** | Shared types, zod inference, typed `pg` results, the order state machine | *(not written yet)* |
 | **7 — CSS recipes** | Product grid, checkout form, skeletons, dark mode, overlays | *(not written yet)* |
