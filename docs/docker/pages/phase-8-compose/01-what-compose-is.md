@@ -182,8 +182,8 @@ Being clear about this saves an argument in every design review:
   ([Phase 1, page 06](../phase-1-running-containers/06-environment.md)).
 - **Not production, by default** — but not *disqualified* from it either. A single
   VM running a Compose stack under systemd is a completely respectable deployment
-  for a great many applications. The production posture is **Phase 10 · Running in
-  production** *(not written yet)*.
+  for a great many applications. The production posture is
+  [Phase 10 · Running in production](../phase-10-production/README.md).
 
 ## Podman
 

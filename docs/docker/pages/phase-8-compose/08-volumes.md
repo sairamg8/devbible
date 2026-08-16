@@ -177,7 +177,7 @@ Two divergences that change what you do, not just what you know:
 - **Rootless volumes live under your home directory** and bill against its quota
   ([Phase 2, page 13](../phase-2-images-and-registries/13-storage-on-disk.md)).
 
-The mechanics are **Phase 6 · Storage** *(not written yet)*; this page is only the
+The mechanics are [Phase 6 · Storage](../phase-6-storage/README.md); this page is only the
 Compose-facing half.
 
 ## Gotchas

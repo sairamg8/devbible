@@ -43,7 +43,7 @@ getting the check right.
   is the instruction and the defaults.
 - **[03 · up and down](../03-up-and-down/README.md)** — `up --wait` waits for
   "running|healthy", so it depends on these checks too.
-- **Phase 10 · Healthchecks in production** *(not written yet)* is where a check
+- [Phase 10 · Healthchecks in production](../../phase-10-production/09-healthchecks-in-production.md) is where a check
   becomes a restart or an eviction rather than a colour in `ps`.
 
 ---

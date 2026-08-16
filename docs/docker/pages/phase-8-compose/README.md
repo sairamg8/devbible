@@ -94,8 +94,8 @@ Three checks that the file is actually right, not merely working on your laptop:
   key: [environment](../phase-1-running-containers/06-environment.md),
   [restart policies](../phase-1-running-containers/12-restart-policies.md) and
   [the two signals](../phase-1-running-containers/08-stop-is-two-signals.md).
-- **[Phase 6 — Storage](../phase-6-storage/README.md)** and **Phase 7 —
-  Networking** *(not written yet)* are the primitives this phase declares rather
+- **[Phase 6 — Storage](../phase-6-storage/README.md)** and
+  **[Phase 7 — Networking](../phase-7-networking/README.md)** are the primitives this phase declares rather
   than explains.
 - **Phase 9 — The MERN/PERN stack in containers** is this phase applied: its
   worked `compose.yaml` is the deliverable above, with a frontend and a proxy

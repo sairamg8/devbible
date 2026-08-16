@@ -133,7 +133,7 @@ find out in production:
 |---|---|
 | Development, and one host in production with modest needs | Compose, with **one** of each service |
 | Several workers behind a queue, one host | Compose with `--scale` on the workers only |
-| Needs restarts across reboots, dependencies, logging as a first-class citizen | systemd units — Quadlet under Podman *(Phase 11, not written yet)* |
+| Needs restarts across reboots, dependencies, logging as a first-class citizen | systemd units — Quadlet under Podman ([Phase 11 · 04](../phase-11-podman-in-depth/04-quadlet/README.md)) |
 | Rolling updates, health-based replacement, more than one machine | a real orchestrator — and at that point the Compose file becomes an input to something else |
 
 **Compose is not a failed orchestrator; it is a correct description of one
@@ -213,4 +213,4 @@ skipping a step that solves most of the actual problem.
 
 ---
 
-← Prev: [`include` and `extends`](16-include-and-extends.md) · Index: [Phase 8](README.md) · Next → **Phase 9 · The MERN/PERN stack in containers** *(not written yet)*
+← Prev: [`include` and `extends`](16-include-and-extends.md) · Index: [Phase 8](README.md) · Next → [Phase 9 · The MERN/PERN stack in containers](../phase-9-mern-pern-stack/README.md)

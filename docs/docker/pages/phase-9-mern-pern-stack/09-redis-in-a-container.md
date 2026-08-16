@@ -266,4 +266,4 @@ whole job is latency.
 
 ---
 
-← Prev: [MongoDB in a container](08-mongodb-in-a-container/README.md) · Index: [Phase 9](README.md) · Next → **Migrations and seeds** *(not written yet)*
+← Prev: [MongoDB in a container](08-mongodb-in-a-container/README.md) · Index: [Phase 9](README.md) · Next → [Migrations and seeds](10-migrations-and-seeds.md)

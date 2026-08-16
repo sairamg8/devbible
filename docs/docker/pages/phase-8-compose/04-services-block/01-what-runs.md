@@ -77,8 +77,8 @@ Two of these carry the phase's weight:
 
 - **`target`** is how one Dockerfile serves development and production. The dev
   service builds `target: development` with dev dependencies and a watcher; the
-  production build stops at a lean final stage. **Phase 4 · `--target` to stop at a
-  stage** *(not written yet)* is the same mechanism from the build side.
+  production build stops at a lean final stage. [Phase 4 · `--target` to stop at a stage](../../phase-4-build-strategy/06-target.md)
+  is the same mechanism from the build side.
 - **`args`** feeds `ARG`, and inherits `ARG`'s security property unchanged: it is
   **not a secret**, it is visible in `docker history`
   ([Phase 3, page 07](../../phase-3-dockerfile/07-env-vs-arg.md)). Use `secrets`

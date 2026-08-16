@@ -33,9 +33,9 @@ dependency.
 
 - **[02 · Volumes, bind mounts and tmpfs](../02-volumes-bind-mounts-tmpfs/02-bind-mounts-and-tmpfs.md)**
   states the obscuring rule this whole topic is an application of.
-- **05 · File ownership and UID mismatch** *(not written yet)* is the other half
+- [05 · File ownership and UID mismatch](../05-uid-mismatch/README.md) is the other half
   of the dev bind mount: who owns the files it writes back to your host.
-- **12 · Bind-mount performance on macOS and Windows** *(not written yet)* is why
+- [12 · Bind-mount performance on macOS and Windows](../12-bind-mount-performance.md) is why
   this pattern feels different on a Mac.
 - **[Phase 3 · `.dockerignore`](../../phase-3-dockerfile/08-dockerignore.md)** —
   the same `node_modules` question, one build stage earlier.

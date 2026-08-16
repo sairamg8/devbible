@@ -167,4 +167,4 @@ the identity pinned, and enforce last, after auditing.
 
 ---
 
-← Prev: [Running your own registry](14-your-own-registry.md) · Index: [Phase 2](README.md) · Start Phase 3 → **The Dockerfile** *(not written yet)*
+← Prev: [Running your own registry](14-your-own-registry.md) · Index: [Phase 2](README.md) · Start Phase 3 → [The Dockerfile](../phase-3-dockerfile/README.md)

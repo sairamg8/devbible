@@ -246,4 +246,4 @@ mount types such as `type=image`.
 
 ---
 
-← Prev: [The three types, and named volumes](01-named-volumes.md) · Index: [Volumes, binds and tmpfs](README.md) · Next → **`-v` short syntax vs `--mount`** *(not written yet)*
+← Prev: [The three types, and named volumes](01-named-volumes.md) · Index: [Volumes, binds and tmpfs](README.md) · Next → [`-v` short syntax vs `--mount`](../03-v-vs-mount.md)

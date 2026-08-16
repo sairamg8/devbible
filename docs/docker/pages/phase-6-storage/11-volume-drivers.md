@@ -228,4 +228,4 @@ or CIFS share at all, so the volume creates fine and the first container fails.
 
 ---
 
-← Prev: [Backing up and restoring a volume](10-backup-and-restore.md) · Index: [Phase 6](README.md) · Next → **Bind-mount performance on macOS and Windows** *(not written yet)*
+← Prev: [Backing up and restoring a volume](10-backup-and-restore.md) · Index: [Phase 6](README.md) · Next → [Bind-mount performance on macOS and Windows](12-bind-mount-performance.md)

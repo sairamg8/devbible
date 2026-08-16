@@ -46,7 +46,7 @@ afternoon disappears.
   the reference for the five actions and their fields.
 - **[Topic 02 · Dev image vs prod image](../02-dev-vs-prod-image.md)** is where
   the watcher's dependencies live — and why they must not ship.
-- **Topic 12 · A React/Vite frontend** *(not written yet)* takes the browser half
+- [Topic 12 · A React/Vite frontend](../12-react-vite-frontend.md) takes the browser half
   further.
 
 ---

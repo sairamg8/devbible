@@ -245,4 +245,4 @@ Specification until you have checked.
 
 ---
 
-← Prev: [The `node_modules` trap](02-the-node-modules-trap.md) · Index: [Bind mounts in development](README.md) · Next → **File ownership and UID mismatch** *(not written yet)*
+← Prev: [The `node_modules` trap](02-the-node-modules-trap.md) · Index: [Bind mounts in development](README.md) · Next → [File ownership and UID mismatch](../05-uid-mismatch/README.md)

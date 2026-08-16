@@ -158,8 +158,9 @@ and it deserves to be stated flatly:
 So the correct posture is **both**: `condition: service_healthy` so the first boot
 is not a race, *and* retry-with-backoff in the application so the hundredth hour is
 not an outage. An application that cannot survive its database restarting is broken
-regardless of what the compose file says — **Phase 9 · Waiting for the database**
-*(not written yet)* is where the application-side half is written.
+regardless of what the compose file says —
+[Phase 9 · Waiting for the database](../phase-9-mern-pern-stack/04-waiting-for-the-database/README.md)
+is where the application-side half is written.
 
 `depends_on` also does not survive `--no-deps`: `docker compose up --no-deps api`
 starts the API alone and ignores the dependency graph entirely

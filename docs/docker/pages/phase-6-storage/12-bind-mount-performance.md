@@ -205,4 +205,4 @@ performance rule on macOS and Windows as much as a correctness one on Linux.
 
 ---
 
-← Prev: [Volume drivers and network storage](11-volume-drivers.md) · Index: [Phase 6](README.md) · Next phase → **Phase 7 · Networking** *(not written yet)*
+← Prev: [Volume drivers and network storage](11-volume-drivers.md) · Index: [Phase 6](README.md) · Next phase → [Phase 7 · Networking](../phase-7-networking/README.md)

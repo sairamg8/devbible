@@ -218,4 +218,4 @@ declarations; mount something deliberate at each one.
 
 ---
 
-← Prev: [SELinux `:z` and `:Z`](07-selinux-z-and-Z.md) · Index: [Phase 6](README.md) · Next → **`--userns=keep-id`** *(not written yet)*
+← Prev: [SELinux `:z` and `:Z`](07-selinux-z-and-Z.md) · Index: [Phase 6](README.md) · Next → [`--userns=keep-id`](09-userns-keep-id.md)

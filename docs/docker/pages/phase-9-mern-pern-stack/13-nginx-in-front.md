@@ -255,4 +255,4 @@ change this; it writes into `conf.d` too.
 
 ---
 
-← Prev: [A React/Vite frontend](12-react-vite-frontend.md) · Index: [Phase 9](README.md) · Next → **Connecting from the host** *(not written yet)*
+← Prev: [A React/Vite frontend](12-react-vite-frontend.md) · Index: [Phase 9](README.md) · Next → [Connecting from the host](14-connecting-from-the-host.md)

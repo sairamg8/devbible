@@ -67,7 +67,7 @@ That last rule is the whole ergonomics of the directory. It is an *initialiser*,
 not a migration system: it makes a fresh database correct, and it will never
 apply the file you added yesterday to the database you created last month. Real
 schema change belongs in migrations
-(**topic 10 · Migrations and seeds**, *not written yet*).
+([topic 10 · Migrations and seeds](../10-migrations-and-seeds.md)).
 
 ### 🔴 The socket-only trap
 

@@ -139,7 +139,7 @@ volumes:
 rather than implying it, and it is the Compose equivalent of preferring `--mount`
 over `-v` — the short form quietly creates a directory where the long form errors.
 Full treatment in [page 08](../08-volumes.md); the storage mechanics themselves are
-**Phase 6 · Storage** *(not written yet)*.
+[Phase 6 · Storage](../../phase-6-storage/README.md).
 
 Anything you name here must also appear under the top-level `volumes:` key, or
 Compose does not know to create it.
@@ -181,7 +181,7 @@ Two divergences already established, both relevant here:
   reboot under rootless Podman without `loginctl enable-linger` and a systemd unit
   ([Phase 1, page 12](../../phase-1-running-containers/12-restart-policies.md)).
   Do not read `restart:` in a compose file as "this comes back after a reboot" on
-  Podman — **Phase 11 · Podman in depth** *(not written yet)* is where Quadlet
+  Podman — [Phase 11 · 04 · Quadlet](../../phase-11-podman-in-depth/04-quadlet/README.md) is where Quadlet
   answers it properly.
 
 Bind mounts on SELinux systems still need `:z` or `:Z`, and that applies to the

@@ -260,4 +260,4 @@ pile up faster under Compose than under `docker run --rm`.
 
 ---
 
-← Prev: [File ownership and UID mismatch](05-uid-mismatch/README.md) · Index: [Phase 6](README.md) · Next → **SELinux `:z` and `:Z`** *(not written yet)*
+← Prev: [File ownership and UID mismatch](05-uid-mismatch/README.md) · Index: [Phase 6](README.md) · Next → [SELinux `:z` and `:Z`](07-selinux-z-and-Z.md)

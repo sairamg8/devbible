@@ -238,4 +238,4 @@ rather than inferred.
 
 ---
 
-← Prev: [Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md) · Index: [Phase 6](README.md) · Next → **Bind mounts in development** *(not written yet)*
+← Prev: [Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md) · Index: [Phase 6](README.md) · Next → [Bind mounts in development](04-bind-mounts-in-development/README.md)

@@ -111,7 +111,7 @@ three separate list items, no shell features needed. `redis-cli ping` answers
 Redis starts fast, so a short `start_period` is enough — unless it is loading a
 large RDB or AOF file from disk, in which case it is not accepting commands yet and
 the period needs to cover the load. Whether your cache should persist at all is
-**Phase 9 · Redis in a container** *(not written yet)*.
+[Phase 9 · Redis in a container](../../phase-9-mern-pern-stack/09-redis-in-a-container.md).
 
 If the instance requires a password, `redis-cli` needs it too, and putting it in
 the `test` string means it is visible in `docker inspect` — which is another

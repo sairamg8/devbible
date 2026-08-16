@@ -178,8 +178,8 @@ Two Podman-side facts that bite in a compose stack, both established earlier:
 - **Privileged ports** are unavailable to an ordinary user, so `"80:80"` on a proxy
   service fails where `"8080:80"` succeeds.
 
-The depth belongs to **Phase 7 · Networking** *(not written yet)* and **Phase 11 ·
-Podman in depth** *(not written yet)*.
+The depth belongs to [Phase 7 · Networking](../phase-7-networking/README.md) and
+[Phase 11 · Podman in depth](../phase-11-podman-in-depth/README.md).
 
 ## Gotchas
 

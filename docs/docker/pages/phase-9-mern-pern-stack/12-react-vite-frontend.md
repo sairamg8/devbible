@@ -250,4 +250,4 @@ anonymous volumes are renewed with `-V` or removed with `down -v`.
 
 ---
 
-← Prev: [Debugging Node inside a container](11-debugging-node.md) · Index: [Phase 9](README.md) · Next → **Nginx in front of the API** *(not written yet)*
+← Prev: [Debugging Node inside a container](11-debugging-node.md) · Index: [Phase 9](README.md) · Next → [Nginx in front of the API](13-nginx-in-front.md)

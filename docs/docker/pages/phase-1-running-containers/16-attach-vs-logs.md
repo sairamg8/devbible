@@ -124,4 +124,4 @@ nothing you type can signal the main one.
 
 ---
 
-← Prev: [docker cp](15-docker-cp.md) · Index: [Phase 1](README.md) · Start Phase 2 → **Images, layers and registries** *(not written yet)*
+← Prev: [docker cp](15-docker-cp.md) · Index: [Phase 1](README.md) · Start Phase 2 → [Images, layers and registries](../phase-2-images-and-registries/README.md)

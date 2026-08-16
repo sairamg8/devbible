@@ -71,8 +71,9 @@ Three habits that cost nothing:
 
 1. **Never put `down -v` in a shared script** without the word `reset` in the
    script's name. `make reset` is fine; `make stop` running `down -v` is a trap.
-2. **Keep seeding reproducible** — a migration and a seed service (**Phase 9 ·
-   Migrations and seeds** *(not written yet)* covers the shape), so
+2. **Keep seeding reproducible** — a migration and a seed service
+   ([Phase 9 · Migrations and seeds](../../phase-9-mern-pern-stack/10-migrations-and-seeds.md)
+   covers the shape), so
    `down -v && up -d` is a fifteen-second inconvenience rather than a loss.
 3. **Use named volumes for anything you would miss.** A named volume at least
    survives `down`; an anonymous one is already halfway to being garbage

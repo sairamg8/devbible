@@ -34,7 +34,7 @@ storage bugs in this phase.
 
 - **[01 · The container filesystem is disposable](../01-filesystem-is-disposable.md)**
   is the problem all three of these solve.
-- **04 · Bind mounts in development** *(not written yet)* is the obscuring rule
+- [04 · Bind mounts in development](../04-bind-mounts-in-development/README.md) is the obscuring rule
   applied to `node_modules`.
 - **[Phase 3 · `VOLUME`](../../phase-3-dockerfile/13-volume.md)** is where
   anonymous volumes come from.

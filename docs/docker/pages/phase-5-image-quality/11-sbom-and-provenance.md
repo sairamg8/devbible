@@ -287,4 +287,4 @@ feature a Buildah-based build will not give you.
 
 ---
 
-← Prev: [Static binaries](10-static-binaries/README.md) · Index: [Phase 5](README.md) · Next → **Signing and verifying** *(not written yet)*
+← Prev: [Static binaries](10-static-binaries/README.md) · Index: [Phase 5](README.md) · Next → [Signing and verifying](12-signing-and-verifying.md)

@@ -179,8 +179,8 @@ and the *noise*; they do not reduce the *entry point*.
 Both approaches are ordinary OCI images, so `podman build` and `podman run`
 handle them identically. The namespace-sharing debug trick is spelled
 `--pid=container:<name>` and `--network=container:<name>` under Podman too;
-Podman also has `podman pod` for grouping, which is a Phase 11 subject (another
-chunk's phase, *not written yet*).
+Podman also has `podman pod` for grouping, which is a Phase 11 subject
+([Phase 11 · 03 · Pods](../phase-11-podman-in-depth/03-pods.md)).
 
 Fully qualify distroless references (`gcr.io/distroless/static:nonroot` already
 is) because short-name resolution differs.

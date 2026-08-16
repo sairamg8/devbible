@@ -69,7 +69,7 @@ Five lines in that block are the topic, and each has a failure mode with a name:
   habitat.
 - **[Phase 6 · Backing up and restoring a volume](../../phase-6-storage/10-backup-and-restore.md)**
   is the half this page deliberately does not repeat.
-- **Topic 04 · Waiting for the database** *(not written yet)* is the
+- [Topic 04 · Waiting for the database](../04-waiting-for-the-database/README.md) is the
   application's side of the same problem.
 - **[PostgreSQL](../../../../postgresql/README.md)** is the database itself —
   this page is only about running it in a container.

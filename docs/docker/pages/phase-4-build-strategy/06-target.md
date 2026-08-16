@@ -117,8 +117,7 @@ drift apart the way two Dockerfiles always do.
 
 Compose can select the stage per service through the service's build
 configuration, which is how a `compose.yaml` runs the `dev` target locally and
-the same file builds `prod` in CI — that is **Phase 8 · Compose** *(another
-chunk's phase, not written yet)*.
+the same file builds `prod` in CI — that is [Phase 8 · Compose](../phase-8-compose/README.md).
 
 ## The trap: the default target is "the last stage"
 

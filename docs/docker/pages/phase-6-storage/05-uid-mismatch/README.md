@@ -39,9 +39,9 @@ the right fix without trying three.
   container's UID is decided in the first place.
 - **[04 · Bind mounts in development](../04-bind-mounts-in-development/README.md)**
   is where this hurts daily.
-- **07 · SELinux `:z` and `:Z`** *(not written yet)* is the *other* "permission
+- [07 · SELinux `:z` and `:Z`](../07-selinux-z-and-Z.md) is the *other* "permission
   denied" — different cause, same symptom, and they are constantly confused.
-- **09 · `--userns=keep-id`** *(not written yet)* is chunk 03's second fix in
+- [09 · `--userns=keep-id`](../09-userns-keep-id.md) is chunk 03's second fix in
   full.
 
 ---

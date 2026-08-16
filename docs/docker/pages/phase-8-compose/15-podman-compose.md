@@ -128,7 +128,7 @@ bugs:
   inside the container is you outside it, and UID 1000 inside is something in the
   100000 range on the host.
 
-**Podman in depth is Phase 11** *(not written yet)* — this page is the Compose
+**Podman in depth is [Phase 11](../phase-11-podman-in-depth/README.md)** — this page is the Compose
 half only.
 
 ## Which to use
@@ -138,7 +138,7 @@ half only.
 | Want documented Compose behaviour, including `develop.watch` and `profiles` | `docker-compose` — as the provider under `podman compose`, or directly with `DOCKER_HOST` |
 | Want to keep the daemonless model, no socket at all | `podman-compose` |
 | Are writing a file other people will run on Docker | Target the Specification, and test on both |
-| Are deploying to a Linux host you control | Consider not using Compose in production at all — Quadlet units are Podman's own answer *(Phase 11, not written yet)* |
+| Are deploying to a Linux host you control | Consider not using Compose in production at all — Quadlet units are Podman's own answer ([Phase 11 · 04](../phase-11-podman-in-depth/04-quadlet/README.md)) |
 
 **The practical default:** develop with whichever is installed, keep the file to
 the Specification, and treat anything beyond it — `develop.watch`

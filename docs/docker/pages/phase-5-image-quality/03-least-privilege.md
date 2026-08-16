@@ -95,8 +95,8 @@ docker run --read-only \
 > `--tmpfs` — "Mount a tmpfs directory"
 
 `/tmp` on a tmpfs is the usual accommodation, because a surprising number of
-libraries write there. Data belongs in a volume, which is Phase 6's subject
-(another chunk's phase, *not written yet*).
+libraries write there. Data belongs in a volume, which is
+[Phase 6 · Storage](../phase-6-storage/README.md)'s subject.
 
 **Log to stdout, not to a file.** It is the twelve-factor rule and it is also
 what makes `--read-only` viable — the engine collects the stream, so the
@@ -158,8 +158,9 @@ Two consequences worth carrying forward:
 
 - **File ownership on bind mounts is UID-mapped**, so a file created inside the
   container appears with a different owner outside. This is the source of most
-  "permission denied on a volume" confusion under Podman, and Phase 11 collects
-  the detail (another chunk's phase, *not written yet*).
+  "permission denied on a volume" confusion under Podman, and
+  [Phase 11 · 02 · Rootless by default](../phase-11-podman-in-depth/02-rootless-by-default/README.md)
+  collects the detail.
 - **Privileged ports still need a capability or a sysctl change**, so the
   "listen high, publish low" advice above matters more, not less.
 

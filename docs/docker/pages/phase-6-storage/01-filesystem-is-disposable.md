@@ -269,4 +269,4 @@ your home-directory quota can affect them without root, and that rootful
 
 ---
 
-← Index: [Phase 6](README.md) · Next → **Volumes, bind mounts and tmpfs** *(not written yet)*
+← Index: [Phase 6](README.md) · Next → [Volumes, bind mounts and tmpfs](02-volumes-bind-mounts-tmpfs/README.md)

@@ -281,4 +281,4 @@ backup is the thing worth testing.
 
 ---
 
-← Prev: [Redis in a container](09-redis-in-a-container.md) · Index: [Phase 9](README.md) · Next → **Debugging Node inside a container** *(not written yet)*
+← Prev: [Redis in a container](09-redis-in-a-container.md) · Index: [Phase 9](README.md) · Next → [Debugging Node inside a container](11-debugging-node.md)

@@ -238,4 +238,4 @@ with `semanage`.
 
 ---
 
-← Prev: [Volume lifecycle](06-volume-lifecycle.md) · Index: [Phase 6](README.md) · Next → **`--read-only` and `tmpfs`** *(not written yet)*
+← Prev: [Volume lifecycle](06-volume-lifecycle.md) · Index: [Phase 6](README.md) · Next → [`--read-only` and `tmpfs`](08-read-only-rootfs.md)

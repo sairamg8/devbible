@@ -269,4 +269,4 @@ delivered to the process that needs them — the ten-second-stop problem again.
 
 ---
 
-← Prev: [Rootless, and the UID shift](02-rootless-and-the-shift.md) · Index: [File ownership and UID mismatch](README.md) · Next → **Volume lifecycle** *(not written yet)*
+← Prev: [Rootless, and the UID shift](02-rootless-and-the-shift.md) · Index: [File ownership and UID mismatch](README.md) · Next → [Volume lifecycle](../06-volume-lifecycle.md)

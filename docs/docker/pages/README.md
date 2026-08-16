@@ -12,11 +12,11 @@ Every worktree and branch in this repo was **merged into `main` and deleted** on
 explicit paths (never `git add -A`) since everyone shares the checkout again.
 :::
 
-:::info 🔒 Split FOUR WAYS — 2026-08-15
+:::info 🏁 Complete — the four-way split is finished (2026-08-16)
 
-The **129 unwritten topics are split into four chunks, whole phases only**, so no two
-sessions ever write in the same phase directory. Phases **0–3 are already written**
-(63 topics, session `40090c06`).
+**All 192 topics are written.** The track was built by four sessions in parallel, one
+chunk of whole phases each, on top of phases **0–3** (63 topics, session `40090c06`).
+This notice is kept as the record of who wrote what.
 
 | Chunk | Phases | Topics | Start at | Claimed by |
 |---|---|---|---|---|
@@ -25,14 +25,15 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | **C** | 8 · 9 | 31 | 🏁 **CHUNK C COMPLETE — phase 8 17/17, phase 9 14/14** (2026-08-15) | 🔴 session `016J3KVb` (2026-08-15, took over from `9219957a`) |
 | **D** | 10 · 11 · 12 | 44 | 🏁 **CHUNK D IS COMPLETE — phases 10, 11 and 12 all closed (16/16, 16/16, 12/12). The whole Docker & Podman track is finished at 192/192.** | ✅ session `8e7b6e12` (2026-08-16, took over from `75a196a7`) |
 
-**Taking a chunk:** put your session id in the row above **and** in that chunk's row in
-the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
-before starting the next; inside a phase, work the syllabus table in row order.
+**Nothing is unclaimed and nothing is in progress.** Any further work on this track —
+a review pass, a correction, a new topic — needs a fresh claim in the
+[claim table](../../README.md) first.
 
-⛔ **Cross-chunk links break the build** — where a page needs a topic another chunk owns,
-write it as **bold plain text with *(not written yet)***, never a link. Stage explicit
-paths, **never `git add -A`**, and remember `src/data/progress.js` has **one** docker row
-that all four chunks increment.
+⚠️ **The convention that produced the forward references, kept for the record:** while a
+chunk was mid-flight, a page needing a topic another chunk had not written yet said so as
+**bold plain text with *(not written yet)***, never a link, because a link to a missing
+file breaks the build. **Every one of those was repointed to a real link when the track
+completed** — if you ever write one again, repoint it at your phase close.
 
 :::
 

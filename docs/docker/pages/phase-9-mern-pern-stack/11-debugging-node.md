@@ -271,4 +271,4 @@ production stack traces; turning it on without knowing either caveat is not.
 
 ---
 
-← Prev: [Migrations and seeds](10-migrations-and-seeds.md) · Index: [Phase 9](README.md) · Next → **A React/Vite frontend** *(not written yet)*
+← Prev: [Migrations and seeds](10-migrations-and-seeds.md) · Index: [Phase 9](README.md) · Next → [A React/Vite frontend](12-react-vite-frontend.md)
