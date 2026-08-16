@@ -13,7 +13,7 @@ Podman is not "Docker with a different name". The daemonless, rootless design
 changes real things. This phase is where those differences live, so the rest of
 the track can stay engine-neutral.
 
-🚧 **Writing — 7 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
+🚧 **Writing — 8 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -24,7 +24,7 @@ the track can stay engine-neutral.
 | 05 | **[Where Podman will bite you](05-where-podman-bites/README.md)** | <span className="db-tier t-master">Master</span> | Lingering, systemd-timer healthchecks, netavark errors, and the Compose gaps |
 | 06 | **[`podman unshare`](06-podman-unshare.md)** | <span className="db-tier t-understand">Understand</span> | A shell inside the user namespace your containers already run in — the only place container UIDs are real |
 | 07 | **[`--userns`: `keep-id`, `nomap`, `auto`](07-userns-modes.md)** | <span className="db-tier t-understand">Understand</span> | Choosing the mapping instead of fighting it — six modes, and the pod that silently ignores all of them |
-| 08 | `podman pod create` / `ps` / `rm` | <span className="db-tier t-understand">Understand</span> | When a pod is the right answer versus a user-defined network |
+| 08 | **[`podman pod create` / `ps` / `rm`](08-pod-commands.md)** | <span className="db-tier t-understand">Understand</span> | Driving a pod, and the decision that matters: a pod, or a user-defined network |
 | 09 | Quadlet vs `podman generate systemd` | <span className="db-tier t-understand">Understand</span> | The old command still exists, gets no new features, and should not be in new work |
 | 10 | `podman auto-update` | <span className="db-tier t-know">Know</span> | Image-driven rolling updates for Quadlet services, with rollback |
 | 11 | `podman kube play` / `generate kube` | <span className="db-tier t-understand">Understand</span> | Kubernetes YAML locally, as an on-ramp rather than a toy |
