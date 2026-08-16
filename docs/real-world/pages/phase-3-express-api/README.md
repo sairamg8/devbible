@@ -26,7 +26,7 @@ sidebar_position: 0
 | 09 | **[The error contract](09-the-error-contract.md)** | <span className="db-tier t-master">Master</span> | One wire shape (RFC 9457), one classify funnel, unknowns say nothing, constraint names as contract |
 | 10 | **[Rate limiting](10-rate-limiting.md)** | <span className="db-tier t-understand">Understand</span> | Token buckets per surface, login’s dual IP+email keys, 429 through the error contract |
 | 11 | **[Inbound webhooks](11-inbound-webhooks.md)** | <span className="db-tier t-understand">Understand</span> | Raw-body HMAC first, timestamp window, receiver-side dedup, ack-then-process via the outbox |
-| 12 | **OpenAPI from the schemas** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 12 | **[OpenAPI from the schemas](12-openapi.md)** | <span className="db-tier t-know">Know</span> | Generated from the running zod schemas; the diff in CI is the real deliverable |
 
 ## Phase gate
 
