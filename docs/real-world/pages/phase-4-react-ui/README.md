@@ -17,7 +17,7 @@ context, custom hooks); the Phase 3 API contract.
 | 01 | **[`useAsync` and the API client](01-useasync-and-the-api-client.md)** | <span className="db-tier t-master">Master</span> | The base data hook: abort-on-cleanup kills the race and the leak; retry is a refetch through the same door |
 | 02 | **[`useDebounce` and the search box](02-usedebounce-and-search.md)** | <span className="db-tier t-master">Master</span> | A debounced value, not a debounced function — and why abort still matters after it |
 | 03 | **[The infinite product list](03-the-infinite-product-list.md)** | <span className="db-tier t-master">Master</span> | Observer sentinel + accumulating pages, generation stamps against filter races, cursor reset as structure |
-| 04 | **`useForm` and the checkout form** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 04 | **[`useForm` and the checkout form](04-useform-and-checkout.md)** | <span className="db-tier t-master">Master</span> | One shared zod schema in two runtimes, touched-based errors, the idempotency key scoped to the attempt |
 | 05 | **`useLocalStorage` and the persisted cart** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 06 | **Cart state** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 07 | **Modal, portal and focus trap** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
