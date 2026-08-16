@@ -13,14 +13,14 @@ Everything before this phase happens on one machine. This phase is how the image
 gets from there to somewhere that matters, and it ends with the question everyone
 eventually asks: **do I need Kubernetes?**
 
-🚧 **Writing — 3 of 12 topics.**
+🚧 **Writing — 4 of 12 topics · 🏁 the Master tier is COMPLETE at 2 of 2.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Tag strategy](01-tag-strategy/README.md)** | <span className="db-tier t-master">Master</span> | `latest` is a deployment trap; immutable tags by commit, moving tags for humans |
 | 02 | **[Building images in CI](02-building-in-ci.md)** | <span className="db-tier t-understand">Understand</span> | The pipeline shape, cache export and import between runs, and the cold-build cost |
 | 03 | **[One image, three environments](03-one-image-three-environments/README.md)** | <span className="db-tier t-master">Master</span> | Build once, promote the same digest; configuration comes from the environment |
-| 04 | Registry authentication in CI | <span className="db-tier t-know">Know</span> | Short-lived tokens and OIDC, never a long-lived password in a repository secret |
+| 04 | **[Registry authentication in CI](04-registry-auth-in-ci.md)** | <span className="db-tier t-know">Know</span> | Short-lived tokens and OIDC, never a long-lived password in a repository secret |
 | 05 | Testing with containers | <span className="db-tier t-understand">Understand</span> | A real Postgres in the test run, and the mocks you can finally delete |
 | 06 | Deploying without an orchestrator | <span className="db-tier t-understand">Understand</span> | Compose on a VM, Quadlet units, or a PaaS — and the trade each makes |
 | 07 | When Compose stops being enough | <span className="db-tier t-understand">Understand</span> | The honest threshold, written as four conditions rather than a feeling |
