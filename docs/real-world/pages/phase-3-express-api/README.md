@@ -17,7 +17,7 @@ sidebar_position: 0
 |---|---|---|---|
 | 01 | **[Project structure](01-project-structure.md)** | <span className="db-tier t-master">Master</span> | The factory, the layer rules, and a mount order five chapters depend on |
 | 02 | **[The validation boundary](02-the-validation-boundary.md)** | <span className="db-tier t-master">Master</span> | Parse, don’t validate: strict schemas, coercion only for query strings, bounds on everything |
-| 03 | **Auth** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 03 | **[Auth](03-auth/README.md)** | <span className="db-tier t-master">Master</span> | Sessions as the default (hashed opaque tokens, `__Host-` cookies) and the JWT variant compared on this app’s facts |
 | 04 | **Authorization** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 05 | **Catalog endpoints** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 06 | **Cart endpoints** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
