@@ -25,7 +25,7 @@ context, custom hooks); the Phase 3 API contract.
 | 09 | **[Auth in the client](09-auth-in-the-client.md)** | <span className="db-tier t-master">Master</span> | Belief vs truth, the 401 broadcast seam, and expiry-during-checkout that never unmounts the work |
 | 10 | **[The admin data table](10-the-admin-data-table.md)** | <span className="db-tier t-understand">Understand</span> | Server-driven sort/filter/page, URL as the state store, pessimistic mutations, stale-while-loading |
 | 11 | **[Error boundaries and retry UX](11-error-boundaries-and-retry.md)** | <span className="db-tier t-understand">Understand</span> | Crashes vs operation failures — boundaries at blast radii, retryability read from the error contract |
-| 12 | **When to switch to TanStack Query** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 12 | **[When to switch to TanStack Query](12-when-tanstack-query.md)** | <span className="db-tier t-know">Know</span> | The four switch signals, what the hooks lack honestly, and the migration as diffs not a rewrite |
 
 ## Phase gate
 
