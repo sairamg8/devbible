@@ -7,8 +7,7 @@ sidebar_position: 2
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-08 against [Docker — build in CI](https://docs.docker.com/build/ci/),
-> [Docker — GitHub Actions cache backend](https://docs.docker.com/build/cache/backends/gha/),
-> [docker buildx build](https://docs.docker.com/reference/cli/docker/buildx/build/)
+> [Docker — GitHub Actions cache backend](https://docs.docker.com/build/cache/backends/gha/)
 > and [Docker — building best practices](https://docs.docker.com/build/building/best-practices/).
 > **No sandbox** — no console output on this page.
 
