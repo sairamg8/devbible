@@ -128,7 +128,7 @@ Ordered by how far the explanations have got, not alphabetically.
 | **[Docker & Podman](./docker/README.md)** | 4 parts · 192 topics | ✅ **COMPLETE — [192 of 192 topics](./docker/pages/README.md), all 13 phases** — chunk A closed 4 and 5, chunk B closed 6 and 7, chunk C closed 8 and 9 (all 2026-08-15), and chunk D closed **10, 11 and 12** (2026-08-15/16). **271 files, 50,768 lines, 0 over the 300-line cap, 2,184 internal links all resolving.** Both engines together; **no sandbox**, documentation-validated with no console blocks |
 | **[Redis](./redis/README.md)**           | 4 parts · 74 topics  | Syllabus only — [no pages yet](./redis/pages/README.md); next is phase 0                                                                   |
 | **[Nginx](./nginx/README.md)**           | 4 parts · 210 topics | 🔴 In progress — [41 files](./nginx/pages/README.md), **phases 0–2 complete (46/210 topics, 22%)**; phase 3 next. Target nginx 1.30.x stable |
-| **[Real World](./real-world/README.md)** | 3 parts · 79 topics  | 🔴 In progress — [phases 0–1 COMPLETE, 15/79 topics](./real-world/pages/README.md) (19 files); one storefront implemented across the whole stack. Next is phase 2 · Node services |
+| **[Real World](./real-world/README.md)** | 3 parts · 79 topics  | 🔴 In progress — [phases 0–2 COMPLETE, 25/79 topics](./real-world/pages/README.md) (30 files); one storefront implemented across the whole stack. Next is phase 3 · The Express API |
 
 ### Imported from the frontend-bible corpus (2026-08-14)
 

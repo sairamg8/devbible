@@ -20,7 +20,7 @@ import Progress from '@site/src/components/Progress';
 |---|---|---|
 | **[0 — The app](./phase-0-the-app/README.md)** | The storefront spec, architecture and data-model overview, how to read the track | ✅ 3 / 3 |
 | **[1 — The database](./phase-1-database/README.md)** | Schema, migrations, catalog query, checkout transaction, search, indexes — raw SQL + `pg` | ✅ 12 / 12 |
-| **[2 — Node services](./phase-2-node-services/README.md)** | Boot, data layer, uploads, outbox + email worker, scheduled jobs, webhooks, cache, health, CLI | 🚧 1 / 10 |
+| **[2 — Node services](./phase-2-node-services/README.md)** | Boot, data layer, uploads, outbox + email worker, scheduled jobs, webhooks, cache, health, CLI | ✅ 10 / 10 |
 | **3 — The Express API** | Structure, validation, auth, RBAC, catalog/cart/checkout endpoints, errors, rate limits, webhooks | *(not written yet)* |
 | **4 — The React UI** | The storefront's custom hooks and screens, wired to the real API | *(not written yet)* |
 | **5 — JS custom functions** | Fetch wrapper, TTL cache, task queue, event bus, validation engine, Intl formatting | *(not written yet)* |
