@@ -17,7 +17,7 @@ sidebar_position: 0
 |---|---|---|---|
 | 01 | **[The API boot, assembled](01-the-api-boot.md)** | <span className="db-tier t-master">Master</span> | validate env → migrate → pool → listen → ready, and the mirror-image shutdown with a watchdog |
 | 02 | **[The data layer over raw `pg`](02-the-data-layer.md)** | <span className="db-tier t-master">Master</span> | One pool, ALS-propagated transactions that join not nest, and repos that return plain objects |
-| 03 | **The upload service** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 03 | **[The upload service](03-the-upload-service.md)** | <span className="db-tier t-master">Master</span> | Socket to storage in constant memory: mid-stream limits, magic-number sniffing, temp-then-rename, cleanup on every path |
 | 04 | **The outbox relay and email worker** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 05 | **Scheduled jobs** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 06 | **The webhook dispatcher** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
