@@ -200,4 +200,4 @@ what you are testing.
 
 ---
 
-← Prev: [Registry authentication in CI](04-registry-auth-in-ci.md) · Index: [Phase 12](README.md) · Next → **06 · Deploying without an orchestrator** *(not written yet)*
+← Prev: [Registry authentication in CI](04-registry-auth-in-ci.md) · Index: [Phase 12](README.md) · Next → [06 · Deploying without an orchestrator](06-deploying-without-an-orchestrator.md)

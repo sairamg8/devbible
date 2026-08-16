@@ -177,4 +177,4 @@ a smoke test rather than validation.
 
 ---
 
-← Prev: [When Compose stops being enough](07-when-compose-stops-being-enough.md) · Index: [Phase 12](README.md) · Next → **09 · Rolling updates and rollback by hand** *(not written yet)*
+← Prev: [When Compose stops being enough](07-when-compose-stops-being-enough.md) · Index: [Phase 12](README.md) · Next → [09 · Rolling updates and rollback by hand](09-rolling-updates-by-hand.md)

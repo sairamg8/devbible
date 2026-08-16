@@ -57,4 +57,4 @@ can stop at "on Podman you should not be hand-writing the unit at all".
 
 ---
 
-← Prev: [Phase 10 — Running containers in production](../phase-10-production/README.md) · Index: [Docker & Podman pages](../README.md) · Next → **Phase 12 — Delivery, CI and orchestration** *(not written yet)*
+← Prev: [Phase 10 — Running containers in production](../phase-10-production/README.md) · Index: [Docker & Podman pages](../README.md) · Next → [Phase 12 — Delivery, CI and orchestration](../phase-12-delivery-and-ci/README.md)

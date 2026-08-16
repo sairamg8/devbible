@@ -194,4 +194,4 @@ a nuisance; three is a threshold.
 
 ---
 
-← Prev: [Deploying without an orchestrator](06-deploying-without-an-orchestrator.md) · Index: [Phase 12](README.md) · Next → **08 · Kubernetes on-ramp** *(not written yet)*
+← Prev: [Deploying without an orchestrator](06-deploying-without-an-orchestrator.md) · Index: [Phase 12](README.md) · Next → [08 · Kubernetes on-ramp](08-kubernetes-on-ramp.md)

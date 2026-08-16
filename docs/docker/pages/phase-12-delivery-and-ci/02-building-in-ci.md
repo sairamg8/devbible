@@ -110,8 +110,7 @@ CI is where secrets are nearest to the build, so it is where they leak:
   ([Phase 4 · 05](../phase-4-build-strategy/05-mount-type-secret.md)), which
   never becomes a layer.
 - **Never a registry password in the Dockerfile or the image.** Authentication is
-  the pipeline's problem — **Phase 12 · 04 · Registry authentication in CI**
-  *(not written yet)*.
+  the pipeline's problem — [Phase 12 · 04 · Registry authentication in CI](04-registry-auth-in-ci.md).
 - **Rotate, do not rebuild.** If something did get baked in, rebuilding does not
   unpublish the layer that already exists in the registry — the rule established
   back in [Phase 2](../phase-2-images-and-registries/README.md) and worth
@@ -221,4 +220,4 @@ change your build.
 
 ---
 
-← Prev: [Tag strategy](01-tag-strategy/README.md) · Index: [Phase 12](README.md) · Next → **03 · One image, three environments** *(not written yet)*
+← Prev: [Tag strategy](01-tag-strategy/README.md) · Index: [Phase 12](README.md) · Next → [03 · One image, three environments](03-one-image-three-environments/README.md)

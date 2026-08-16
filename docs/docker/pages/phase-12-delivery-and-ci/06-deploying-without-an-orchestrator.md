@@ -95,7 +95,7 @@ possible.
 | One host, a team that knows Compose, downtime on deploy acceptable | **Compose on a VM** |
 | One Linux host, Podman, you want boot, supervision and updates to be the OS's job | **Quadlet** |
 | You would rather not operate a host at all | **PaaS** |
-| Multiple hosts, health-gated rolling updates, autoscaling | You are past this page — **Phase 12 · 07 · When Compose stops being enough** *(not written yet)* |
+| Multiple hosts, health-gated rolling updates, autoscaling | You are past this page — [Phase 12 · 07](07-when-compose-stops-being-enough.md) |
 
 🔴 **Notice what is not on this list: "Kubernetes because it is what people
 use."** Every option above is a smaller operational surface, and the threshold
@@ -194,4 +194,4 @@ keeps it honest.
 
 ---
 
-← Prev: [Testing with containers](05-testing-with-containers.md) · Index: [Phase 12](README.md) · Next → **07 · When Compose stops being enough** *(not written yet)*
+← Prev: [Testing with containers](05-testing-with-containers.md) · Index: [Phase 12](README.md) · Next → [07 · When Compose stops being enough](07-when-compose-stops-being-enough.md)

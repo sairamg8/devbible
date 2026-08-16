@@ -211,4 +211,4 @@ values scale better than per-environment profiles.
 
 ---
 
-← Prev: [Build once, promote the digest](01-build-once-promote.md) · Index: [Phase 12](../README.md) · Next → **04 · Registry authentication in CI** *(not written yet)*
+← Prev: [Build once, promote the digest](01-build-once-promote.md) · Index: [Phase 12](../README.md) · Next → [04 · Registry authentication in CI](../04-registry-auth-in-ci.md)

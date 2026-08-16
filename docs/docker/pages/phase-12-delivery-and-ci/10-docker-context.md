@@ -149,4 +149,4 @@ context that *does* work is exactly as sensitive as the engine it points at.
 
 ---
 
-← Prev: [Rolling updates and rollback by hand](09-rolling-updates-by-hand.md) · Index: [Phase 12](README.md) · Next → **11 · Cost realities** *(not written yet)*
+← Prev: [Rolling updates and rollback by hand](09-rolling-updates-by-hand.md) · Index: [Phase 12](README.md) · Next → [11 · Cost realities](11-cost-realities.md)

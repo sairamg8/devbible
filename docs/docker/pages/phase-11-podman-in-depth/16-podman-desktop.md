@@ -192,4 +192,4 @@ tools ([12](12-buildah-and-skopeo.md)), the removals in Podman 6
 
 ---
 
-← Prev: [`podman machine`](15-podman-machine.md) · Index: [Phase 11](README.md) · Next → **Phase 12 — Delivery, CI and orchestration** *(not written yet)*
+← Prev: [`podman machine`](15-podman-machine.md) · Index: [Phase 11](README.md) · Next → [Phase 12 — Delivery, CI and orchestration](../phase-12-delivery-and-ci/README.md)

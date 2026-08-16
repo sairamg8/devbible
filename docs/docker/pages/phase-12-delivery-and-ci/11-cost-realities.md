@@ -174,4 +174,4 @@ Authenticating makes the limit yours.
 
 ---
 
-← Prev: [`docker context`](10-docker-context.md) · Index: [Phase 12](README.md) · Next → **12 · Docker Swarm in 2026** *(not written yet)*
+← Prev: [`docker context`](10-docker-context.md) · Index: [Phase 12](README.md) · Next → [12 · Docker Swarm in 2026](12-swarm-in-2026.md)

@@ -76,7 +76,7 @@ shape Docker's base-image guidance uses.
 The corollary is that **environments should not each build their own image**.
 Build once, then promote the identical digest through dev, staging and production
 — which is topic 03's subject and the reason it is the phase's other Master row
-(**Phase 12 · 03 · One image, three environments** *(not written yet)*).
+([Phase 12 · 03](../03-one-image-three-environments/README.md)).
 
 Promotion in practice is re-tagging the same digest, not rebuilding:
 
@@ -233,4 +233,4 @@ not a per-host one.
 
 ---
 
-← Prev: [What a tag actually is](01-what-a-tag-is.md) · Index: [Phase 12](../README.md) · Next → **02 · Building images in CI** *(not written yet)*
+← Prev: [What a tag actually is](01-what-a-tag-is.md) · Index: [Phase 12](../README.md) · Next → [02 · Building images in CI](../02-building-in-ci.md)

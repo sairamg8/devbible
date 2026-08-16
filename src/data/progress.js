@@ -253,7 +253,7 @@ export const LANGUAGES = {
       {n: 9, slug: 'phase-9-mern-pern-stack', name: 'The MERN/PERN stack in containers', part: 'Running a real stack', topics: 14, pages: 14},
       {n: 10, slug: 'phase-10-production', name: 'Running containers in production', part: 'Production and depth', topics: 16, pages: 16},
       {n: 11, slug: 'phase-11-podman-in-depth', name: 'Podman in depth', part: 'Production and depth', topics: 16, pages: 16},
-      {n: 12, slug: 'phase-12-delivery-and-ci', name: 'Delivery, CI and orchestration', part: 'Production and depth', topics: 12, pages: 11, pagesPlanned: 12},
+      {n: 12, slug: 'phase-12-delivery-and-ci', name: 'Delivery, CI and orchestration', part: 'Production and depth', topics: 12, pages: 12},
     ],
   },
   storybook: {

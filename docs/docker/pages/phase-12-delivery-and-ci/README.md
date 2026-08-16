@@ -13,7 +13,7 @@ Everything before this phase happens on one machine. This phase is how the image
 gets from there to somewhere that matters, and it ends with the question everyone
 eventually asks: **do I need Kubernetes?**
 
-🚧 **Writing — 11 of 12 topics · 🏁 the Master tier is COMPLETE at 2 of 2.**
+🏁 **Complete — 12 of 12 topics** (Master 2/2 · Understand 4/4 · Know 3/3 · When Needed 3/3).
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ eventually asks: **do I need Kubernetes?**
 | 09 | **[Rolling updates and rollback by hand](09-rolling-updates-by-hand.md)** | <span className="db-tier t-when">When Needed</span> | The four-step dance and its failure modes |
 | 10 | **[`docker context`](10-docker-context.md)** | <span className="db-tier t-know">Know</span> | Driving a remote engine, and the foot-gun of forgetting which one you are on |
 | 11 | **[Cost realities](11-cost-realities.md)** | <span className="db-tier t-when">When Needed</span> | Registry storage, egress on every pull, CI minutes, and cache as a cost lever |
-| 12 | Docker Swarm in 2026 | <span className="db-tier t-when">When Needed</span> | Its status, and whether it belongs on your list at all |
+| 12 | **[Docker Swarm in 2026](12-swarm-in-2026.md)** | <span className="db-tier t-when">When Needed</span> | Its status, and whether it belongs on your list at all |
 
 ## Coverage
 
@@ -50,6 +50,10 @@ from [Phase 4](../phase-4-build-strategy/README.md), Compose as a deployment too
 from [Phase 8](../phase-8-compose/README.md), the production concerns of
 [Phase 10](../phase-10-production/README.md), and Quadlet and `kube play` from
 [Phase 11](../phase-11-podman-in-depth/README.md).
+
+---
+
+🏁 **This is the final phase of the Docker & Podman track.**
 
 ---
 

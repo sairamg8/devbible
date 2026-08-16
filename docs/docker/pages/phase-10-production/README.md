@@ -89,7 +89,8 @@ which one applies from the evidence in front of you.**
   rolling restart of topic 16, and where the no-daemon consequences of this phase
   are collected — starting with
   [01 · Daemonless](../phase-11-podman-in-depth/01-daemonless/README.md).
-- **Phase 12 — Delivery and CI** *(not written yet)* takes the image that survives
+- [Phase 12 — Delivery, CI and orchestration](../phase-12-delivery-and-ci/README.md)
+  takes the image that survives
   all of this and gets it onto a machine that matters.
 
 ---

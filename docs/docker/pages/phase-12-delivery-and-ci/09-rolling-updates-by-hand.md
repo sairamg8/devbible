@@ -190,4 +190,4 @@ moving that state out of the process, not lengthening the drain window.
 
 ---
 
-← Prev: [Kubernetes on-ramp](08-kubernetes-on-ramp.md) · Index: [Phase 12](README.md) · Next → **10 · `docker context`** *(not written yet)*
+← Prev: [Kubernetes on-ramp](08-kubernetes-on-ramp.md) · Index: [Phase 12](README.md) · Next → [10 · `docker context`](10-docker-context.md)
