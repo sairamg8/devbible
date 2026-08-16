@@ -1,6575 +1,4653 @@
 # Graph Report - devbible  (2026-08-15)
 
 ## Corpus Check
-- Large corpus: 4099 files · ~3,300,651 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
+- Large corpus: 4247 files · ~3,483,254 words. Semantic extraction will be expensive (many Claude tokens). Consider running on a subfolder.
 
 ## Summary
-- 21437 nodes · 26450 edges · 1932 communities (1219 shown, 713 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 752 edges (avg confidence: 0.82)
+- 25765 nodes · 33562 edges · 1369 communities (924 shown, 445 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 21 edges (avg confidence: 0.63)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- React: Phase 10 Server Components
-- React: Phase 8 Concurrent Suspense
-- Expressjs: Phase 5 Errors
-- React: Phase 9 Forms Actions
-- React: Phase 5 Refs Context Reducers
-- React: Phase 6 Performance
-- React: Phase 7 Custom Hooks
-- Expressjs: Phase 2 Middleware
-- Expressjs: Phase 8 Validation Authz
-- Expressjs: Phase 6 Rest Surface
-- Javascript: Phase 8 Modules Errors
-- Javascript: Phase 18 Storefront
-- React: Phase 7 Custom Hooks
-- Expressjs: Phase 3 Requests
-- Expressjs: Phase 8 Validation Authz
-- Expressjs: Phase 1 Routing
-- Javascript: Phase 9 Dom
-- Expressjs: Phase 7 Layering
-- Javascript: Phase 10 Events
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 8 Modules Errors
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 8 Modules Errors
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 8 Modules Errors
-- Docker: Phase 0 What A Container
-- Javascript: Phase 4 Objects And Classes
-- Expressjs: Phase 9 Hardening
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 7 Async
-- Expressjs: Phase 4 Responses
-- Javascript: Phase 7 Async
-- Javascript: Phase 11 Network Storage
-- Expressjs: Phase 10 App Factory
-- Javascript: Phase 4 Objects And Classes
-- Sandbox React-P1 - noise
-- Sandbox React-P0 - require
-- Docker: Phase 3 Dockerfile
-- Git: Phase 4 Remotes
-- Javascript: Phase 17 Machine Coding
-- Docker: Phase 2 Images And Registries
-- Javascript: Phase 9 Dom
-- Javascript: Phase 9 Dom
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 6 Iteration And Destructuring
-- Mongodb: Phase 1 Documents And Bson
-- Mongodb: Phase 3 Schema Design
-- Mongodb: Phase 5 Query Operators
-- Git: Phase 1 Everyday Loop
-- Docker: Phase 1 Running Containers
-- Git: Phase 1 Everyday Loop
-- Javascript: Phase 9 Dom
-- Javascript: Phase 7 Async
-- Package.Json - clsx
-- /: Syllabus Review.Md
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 9 Dom
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 7 Async
-- Sandbox Css - median()
-- Nodejs: Phase 4 Filesystem
-- Tanstack-Query: Build Tool Integration
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- Typescript: Phase 3 Generics
-- Javascript: Phase 15 Algorithm Patterns
-- Javascript: Phase 16 Dynamic Programming
-- Javascript: Phase 9 Dom
-- Nginx: Phase 2 Server And Location
-- Git: Phase 2 Branching Merging
-- Javascript: Phase 4 Objects And Classes
-- Typescript: Phase 2 Narrowing
-- Docker: Phase 1 Running Containers
-- Javascript: Phase 18 Storefront
-- Javascript: Phase 7 Async
-- Postgresql: Phase 13 Ops
-- Postgresql: Performance And Production.Md
-- Css: Phase 3 Custom Properties
-- Docker: Phase 2 Images And Registries
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 9 Dom
-- Nginx: Serving And Proxying.Md
-- Expressjs: Phase 3 Requests
-- Css: Phase 7 Positioning
-- Javascript: Phase 10 Events
-- Javascript: Phase 13 Complexity
-- Javascript: Phase 18 Storefront
-- Typescript: Phase 3 Generics
-- Typescript: Phase 2 Narrowing
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 9 Dom
-- Storybook: Phase 0 How Storybook Runs
-- Git: Phase 1 Everyday Loop
-- Javascript: Phase 14 Data Structures
-- Nginx: Phase 1 Configuration Language
-- React: Phase 4 Effects
-- Webpack: Module Federation
-- Git: Phase 1 Everyday Loop
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 8 Modules Errors
-- Mongodb: Phase 2 Mongosh
-- Docker: Phase 1 Running Containers
-- Javascript: Phase 18 Storefront
-- Storybook: Build And Configuration
-- Webpack: Module Federation
-- Javascript: Phase 0 How Javascript Runs
-- Css: Phase 10 Scss
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 7 Async
-- Storybook: Phase 0 How Storybook Runs
-- Nodejs: Phase 10 Observability
-- Css: Phase 5 Grid
-- Docker: Phase 1 Running Containers
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 7 Async
-- Typescript: Phase 2 Narrowing
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 6 Iteration And Destructuring
-- Mongodb: Phase 4 Crud
-- Nginx: Phase 1 Configuration Language
-- React: Phase 11 Ssr Hydration
-- Expressjs: Phase 0 Express Basics
-- Git: How Git Works.Md
-- Javascript: Phase 10 Events
-- Javascript: Phase 12 Browser Platform
-- Jest-Rtl: Coverage And Configuration
-- Nginx: Phase 0 Process Model
-- React: Phase 11 Ssr Hydration
-- Git: Phase 5 Undo Recover
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 9 Dom
-- Mongodb: The Document Model.Md
-- Redis: Production.Md
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 8 Modules Errors
-- React: Hooks.Md
-- Storybook: Theming Colors And Fonts
-- Sandbox Git-P0 - filter-repo and LFS
-- Sandbox Js-P3 - ex3-this.mjs
-- Git: Phase 2 Branching Merging
-- Javascript: Phase 11 Network Storage
-- Mongodb: Phase 4 Crud
-- Nginx: Phase 0 Process Model
-- Nginx: Phase 1 Configuration Language
-- Storybook: Build And Configuration
-- Storybook: Phase 3 Decorators
-- Docker: Phase 3 Dockerfile
-- Javascript: Phase 14 Data Structures
-- Nginx: Phase 1 Configuration Language
-- React: Phase 11 Ssr Hydration
-- Typescript: Phase 2 Narrowing
-- Docker: Phase 10 Production
-- Git: Phase 5 Undo Recover
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 7 Async
-- Mongodb: Phase 0 How Mongodb Runs
-- React: Phase 11 Ssr Hydration
-- Storybook: Phase 1 Story Format
-- Sandbox P8-Security - ex14-validation.mjs
-- React: Phase 1 Jsx
-- Docker: Running A Stack.Md
-- Git: Phase 5 Undo Recover
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Storybook: Real World Workflows And Recipes
-- Storybook: Theming Colors And Fonts
-- Storybook: Phase 2 Args And Controls
-- Css: Phase 2 Cascade
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 7 Background Work
-- Css: Phase 9 Motion
-- Docker: Phase 0 What A Container
-- Docker: Phase 3 Dockerfile
-- React: Phase 5 Refs Context Reducers
-- Storybook: Visual Testing
-- Storybook: Accessibility Testing
-- Storybook: Phase 2 Args And Controls
-- Sandbox Js-P3 - ex1-stack.mjs
-- Docker: Phase 0 What A Container
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 3 Functions
-- React: Phase 11 Ssr Hydration
-- Typescript: Phase 3 Generics
-- Sandbox P8-Security - ex17-secrets.mjs
-- Postgresql: Phase 11 Mvcc
-- React: Phase 1 Jsx
-- Css: Phase 4 Flexbox
-- Css: Phase 6 Container Queries
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 3 Functions
-- React: Phase 11 Ssr Hydration
-- Storybook: Controls And Args
-- Sandbox Js-P3 - ex4-arrows.mjs
-- Sandbox Js-P3 - ex6-closures.mjs
-- Sandbox Pg-Api - ex54-pgbouncer.mjs
-- Css: Phase 4 Flexbox
-- Css: Phase 8 Color Theming
-- Javascript: Phase 10 Events
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Dsa And Machine Coding.Md
-- Jest-Rtl: Snapshot Testing
-- Nginx: Phase 2 Server And Location
-- React: Phase 14 Correctness
-- Storybook: Interaction Testing
-- Sandbox Js-P3 - ex5-call-apply-bind.mjs
-- Javascript: Phase 7 Async
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 4 Filesystem
-- Eslint-Oxlint: Linting Landscape And Tooling Decisions
-- Frontend-Architecture: Team And Collaboration Practices
-- Storybook: Addons Ecosystem
-- Sandbox Js-P3 - ex2-parameters.mjs
-- Javascript: Phase 4 Objects And Classes
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 8 Security
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 11 Mvcc
-- React: Phase 1 Jsx
-- Docker: Phase 8 Compose
-- Eslint-Oxlint: Real World Workflows And Recipes
-- Git: Phase 1 Everyday Loop
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 13 Complexity
-- Javascript: Phase 15 Algorithm Patterns
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 18 Storefront
-- React: Phase 11 Ssr Hydration
-- Sandbox Js-P3 - ex1-declarations.mjs
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 8 Schema From Node
-- Sandbox P8-Security - helmet
-- Babel: Real World Workflows And Recipes
-- Css: Phase 5 Grid
-- Docker: Phase 1 Running Containers
-- Docker: Phase 3 Dockerfile
-- Javascript: Phase 14 Data Structures
-- Javascript: Phase 15 Algorithm Patterns
-- Javascript: Phase 16 Dynamic Programming
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 17 Machine Coding
-- Javascript: Phase 7 Async
-- Nginx: Phase 0 Process Model
-- Nginx: Phase 0 Process Model
-- Nginx: Phase 2 Server And Location
-- React: Phase 14 Correctness
-- React: Phase 14 Correctness
-- React: Phase 14 Correctness
-- Typescript: Phase 3 Generics
-- Sandbox React-P0 - @babel/core
-- Sandbox React-P1 - @babel/core
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 5 Http Processes
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 4 Crud
-- React: Phase 1 Jsx
-- React: Phase 4 Effects
-- Css: Phase 10 Scss
-- Css: Phase 5 Grid
-- Css: Phase 4 Flexbox
-- Css: Phase 8 Color Theming
-- Docker: Phase 3 Dockerfile
-- Docker: Phase 3 Dockerfile
-- Git: Phase 2 Branching Merging
-- Git: Phase 4 Remotes
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 14 Data Structures
-- Javascript: Phase 15 Algorithm Patterns
-- Javascript: Phase 5 Built In Library
-- Mongodb: Phase 0 How Mongodb Runs
-- Nginx: Phase 2 Server And Location
-- React: Phase 11 Ssr Hydration
-- React: Phase 14 Correctness
-- Css: Phase 0 How Css Runs
-- Css: Phase 1 Selectors
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Nodejs: Phase 0 Runtime Model
-- React: Phase 2 Components
-- Sandbox Pg-Api - pg-copy-streams
-- Css: Phase 10 Scss
-- Css: Phase 4 Flexbox
-- React: Phase 14 Correctness
-- Sandbox P8-Security - ex15-validation-followups.mjs
-- Css: Phase 1 Selectors
-- Expressjs: Foundations.Md
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 5 Built In Library
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 9 Testing
-- / - CSS (in scope)
-- Javascript: Phase 3 Functions
-- Javascript: Phase 6 Iteration And Destructuring
-- React: Phase 14 Correctness
-- Typescript: Phase 3 Generics
-- Sandbox Ts-P0 - tsconfig.json
-- Sandbox P7-Background-Work - bullmq
-- Css: Phase 0 How Css Runs
-- Css: Adaptive And Visual.Md
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Nodejs: Phase 6 Data Access
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 8 Schema From Node
-- React: Phase 3 State
-- Sandbox Pg-Api - node:child_process
-- Docker: Phase 2 Images And Registries
-- React: Phase 14 Correctness
-- React: Phase 14 Correctness
-- React: Phase 14 Correctness
-- Storybook: Phase 1 Story Format
-- Sandbox P8-Security - ex11-deser-redirect-massassign.mjs
-- Src - index.js
-- Css: Phase 1 Selectors
-- Javascript: Phase 0 How Javascript Runs
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Javascript: Language Core.Md
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 8 Security
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- React: Phase 2 Components
-- Typescript: Phase 1 Type Vocabulary
-- Css: Phase 4 Flexbox
-- Javascript: Phase 12 Browser Platform
-- Javascript: Phase 3 Functions
-- Javascript: Phase 3 Functions
-- Storybook: Real World Workflows And Recipes
-- Storybook: Phase 3 Decorators
-- Sandbox P7-Background-Work - ex6-time.mjs
-- Css: Phase 0 How Css Runs
-- Css: Phase 1 Selectors
-- Expressjs: Phase 0 Express Basics
-- Git: Phase 0 How Git Stores
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 1 Values And Coercion
-- Nodejs: Phase 12 Native
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 12 Native
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 8 Security
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 9 Api Crud
-- React: Phase 0 How React Runs
-- Babel: Plugin Ecosystem
-- Eslint-Oxlint: Eslint Flat Config
-- Eslint-Oxlint: Eslint Plugin Ecosystem
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- React: Phase 14 Correctness
-- Typescript: Phase 2 Narrowing
-- Sandbox P9-Testing - @biomejs/biome
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 8 Security
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 7 Pg Driver
-- React: Phase 2 Components
-- React: Phase 3 State
-- Babel: Configuration System
-- Babel: Presets
-- Babel: Authoring Custom Plugins
-- Babel: Typescript And Jsx Handling
-- Babel: Build Tool Integration
-- Babel: Performance And Caching
-- Babel: Migration And Decision Recipes
-- Eslint-Oxlint: Eslint Language Options Globals And
-- Eslint-Oxlint: Eslint Rules System
-- Eslint-Oxlint: Typescript Eslint
-- Eslint-Oxlint: Custom Eslint Rules And Processors
-- Eslint-Oxlint: Oxlint Installation Cli And Config
-- Eslint-Oxlint: Migration Paths
-- Eslint-Oxlint: Ci Monorepos And Performance Engineering
-- Frontend-Architecture: Styling Architecture
-- Jest-Rtl: Assertions And Matchers
-- Jest-Rtl: Mocking
-- React: Phase 11 Ssr Hydration
-- Redux-Toolkit: Rtk Query
-- Redux-Toolkit: Selectors And Normalization
-- Redux-Toolkit: Testing
-- Vite: Dev Server Mechanics
-- Web-Vitals-Performance: Loading And Rendering Performance
-- Sandbox P7-Background-Work - ex5-sync-vs-bg.mjs
-- Sandbox P8-Security - ex2-vulns.mjs
-- Sandbox Pg-Api - ex56-vs-sqlite.mjs
-- Src - index.js
-- Css: Phase 0 How Css Runs
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 3 Functions
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 7 Async
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- React: Phase 0 How React Runs
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- Typescript: Phase 1 Type Vocabulary
-- Sandbox P9-Testing - clear-text
-- Babel: Why Babel And The Compiler
-- Babel: Core Compilation Pipeline
-- Babel: Source Maps And Debugging
-- Babel: Monorepo And Multi Package Strategies
-- Babel: Cli And Programmatic Tooling
-- Babel: Nodejs Backend Usage
-- Css: Phase 10 Scss
-- Css: Phase 4 Flexbox
-- Eslint-Oxlint: Eslint Core Architecture
-- Eslint-Oxlint: Eslint Editor And Local Workflow
-- Eslint-Oxlint: Oxlint Fixes Ignores And Diagnostics
-- Eslint-Oxlint: Coexistence Eslint And Oxlint
-- Framer-Motion: Motion Values
-- Frontend-Architecture: Project Structure And Organization
-- Frontend-Architecture: State Management Decision Tree
-- Frontend-Architecture: Environment And Configuration Management
-- Frontend-Architecture: Authentication And Authorization Architecture
-- Frontend-Architecture: Ci Cd Pipeline Design
-- Javascript: Phase 11 Network Storage
-- Javascript: Phase 16 Dynamic Programming
-- Javascript: Phase 3 Functions
-- Javascript: Phase 3 Functions
-- Playwright: Locators
-- React: Phase 11 Ssr Hydration
-- Redux-Toolkit: Immutability And Immer
-- Redux-Toolkit: Devtools And Debugging
-- Redux-Toolkit: Migration
-- Storybook: Core Concepts
-- Typescript: Phase 3 Generics
-- Vite: Env Variables And Modes
-- Vite: Css Handling
-- Vite: Ssr Support
-- Web-Vitals-Performance: Core Web Vitals
-- Web-Vitals-Performance: Lcp Optimization
-- Web-Vitals-Performance: Inp Optimization
-- Web-Vitals-Performance: Cls Optimization
-- Webpack: Multi Config And Environment
-- Sandbox Express5-Check - express
-- Sandbox Express-Phase0: Express Phase0
-- Sandbox P8-Security - ex22-permission-model.mjs
-- Sandbox Pg-Phase-0: Pg Phase 0
-- Sandbox Ts-P0 - esbuild
-- / - Docusaurus Social Card
-- Css: Phase 2 Cascade
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 12 Native
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 8 Security
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 8 Schema From Node
-- Postgresql: Phase 8 Schema From Node
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- React: Phase 0 How React Runs
-- React: Phase 1 Jsx
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 3 State
-- Babel: Linter And Type Checker Interop
-- Css: Phase 4 Flexbox
-- Css: Phase 5 Grid
-- Css: Phase 5 Grid
-- Css: Phase 5 Grid
-- Css: Phase 9 Motion
-- Eslint-Oxlint: Eslint Cli Output Cache And
-- Eslint-Oxlint: Eslint Suppressions Ignores And Governance
-- Eslint-Oxlint: Oxlint Core Architecture
-- Eslint-Oxlint: Oxlint Native Plugins And Rule
-- Eslint-Oxlint: Oxlint Type Aware Linting And
-- Eslint-Oxlint: Oxlint Js Plugins And Extensibility
-- Framer-Motion: Basic Animation Props
-- Framer-Motion: Transition Types
-- Framer-Motion: Gestures
-- Framer-Motion: Animatepresence
-- Framer-Motion: Layout Animations
-- Framer-Motion: Scroll Linked Animations
-- Framer-Motion: Animation Controls
-- Framer-Motion: Svg Animations
-- Framer-Motion: Advanced Patterns
-- Frontend-Architecture: Component Architecture
-- Frontend-Architecture: Data Layer And Api Architecture
-- Frontend-Architecture: Routing And Navigation Architecture
-- Frontend-Architecture: Monorepo And Multi App Strategy
-- Frontend-Architecture: Observability And Monitoring
-- Javascript: Phase 12 Browser Platform
-- Jest-Rtl: Jest Core Concepts
-- Jest-Rtl: Async Testing
-- Jest-Rtl: Rtl Core Philosophy
-- Jest-Rtl: User Interaction
-- Jest-Rtl: Async Utilities
-- Jest-Rtl: Mocking Network Requests
-- Jest-Rtl: Testing Hooks
-- Jest-Rtl: Debugging Tests
-- Nginx: Phase 1 Configuration Language
-- Nginx: Phase 2 Server And Location
-- Playwright: Test Runner
-- Playwright: Actions And Interactions
-- Playwright: Navigation And Network
-- Playwright: Authentication And State
-- Playwright: Parallelism And Sharding
-- Playwright: Component Testing
-- Playwright: Ci Integration
-- Playwright: Advanced Patterns
-- React: Phase 11 Ssr Hydration
-- React: Phase 2 Components
-- Redux-Toolkit: Slices And Actions
-- Redux-Toolkit: Async Thunks
-- Redux-Toolkit: Middleware
-- Redux-Toolkit: React Redux Integration
-- Storybook: Story Anatomy
-- Storybook: Decorators
-- Storybook: Composition And Design Systems
-- Storybook: Multi Framework Support
-- Storybook: Build And Configuration
-- Storybook: Advanced Patterns
-- Tanstack-Query: Usequery Deep Dive
-- Tanstack-Query: Caching And Invalidation
-- Tanstack-Query: Background Refetching
-- Tanstack-Query: Dependent And Parallel Queries
-- Tanstack-Query: Prefetching And Ssr
-- Tanstack-Query: Suspense Integration
-- Tanstack-Query: Devtools
-- Tanstack-Query: Query Cancellation
-- Vite: Configuration
-- Vite: Build System Rollup
-- Vite: Asset Handling
-- Vite: Worker And Wasm Support
-- Vite: Deployment Considerations
-- Web-Vitals-Performance: Legacy And Lab Measurement
-- Web-Vitals-Performance: Real User Monitoring
-- Web-Vitals-Performance: Caching And Production Monitoring
-- Web-Vitals-Performance: Budgets And Advanced Diagnostics
-- Web-Vitals-Performance: Real World Workflows And Recipes
-- Webpack: Core Concepts
-- Webpack: Configuration
-- Webpack: Loaders
-- Webpack: Code Splitting
-- Webpack: Dev Server And Hmr
-- Webpack: Advanced Custom Tooling
-- Sandbox Git-P0 - ex2-object-model.sh
-- Sandbox P8-Security - ex13-timing.mjs
-- Sandbox P8-Security - ex16-validation-boundary.mjs
-- Sandbox Pg-Api - ex36-aggregation.mjs
-- Sandbox Pg-Api - ex37-cte-subquery.mjs
-- Sandbox Pg-Api - ex37g-grouping-sets-cost.mjs
-- / - Devbible Site Logo SVG
-- / - Facebook-Blue Center Monitor
-- / - undraw Docusaurus Tree Illustration
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 7 Async
-- Javascript: Phase 7 Async
-- Javascript: Phase 7 Async
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 9 Testing
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- React: Phase 3 State
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 1 Type Vocabulary
-- Typescript: Phase 1 Type Vocabulary
-- Css: Phase 4 Flexbox
-- Css: Phase 4 Flexbox
-- Expressjs - 1. Verdict
-- Framer-Motion: Core Concepts
-- Framer-Motion: Variants
-- Framer-Motion: Keyframes
-- Framer-Motion: Performance Considerations
-- Framer-Motion: Real World Workflows And Recipes
-- Frontend-Architecture: Error Handling And Resilience
-- Frontend-Architecture: Testing Strategy
-- Javascript: Phase 3 Functions
-- Jest-Rtl: Rtl Queries
-- Jest-Rtl: Custom Render
-- Jest-Rtl: Accessibility Testing
-- Jest-Rtl: Real World Workflows And Recipes
-- Playwright: Core Architecture
-- Playwright: Auto Waiting And Assertions
-- Playwright: Fixtures And Test Isolation
-- Playwright: Debugging Tools
-- Playwright: Api Testing
-- Redux-Toolkit: Store Setup
-- Redux-Toolkit: Slices And Actions
-- Redux-Toolkit: Rtk Query
-- Redux-Toolkit: Selectors And Normalization
-- Redux-Toolkit: Typescript Integration
-- Redux-Toolkit: Code Splitting
-- Storybook: Addons Ecosystem
-- Storybook: Testing Integration
-- Storybook: Publishing And Deployment
-- Tanstack-Query: Core Concepts
-- Tanstack-Query: Usemutation
-- Tanstack-Query: Pagination And Infinite Queries
-- Tanstack-Query: Global Configuration
-- Tanstack-Query: Optimistic Updates Patterns
-- Tanstack-Query: Testing Tanstack Query
-- Tanstack-Query: Migration Recipes
-- Typescript: Phase 2 Narrowing
-- Typescript: Phase 3 Generics
-- Vite: Core Architecture
-- Vite: Cli And Scaffolding
-- Vite: Plugin System
-- Vite: Optimization And Performance
-- Vite: Testing Integration
-- Vite: Migration Recipes
-- Web-Vitals-Performance: Bundle And Media Optimization
-- Webpack: Asset Modules
-- Webpack: Optimization
-- Webpack: Caching Strategies
-- Webpack: Performance Analysis
-- Sandbox Css - puppeteer-core
-- Sandbox P8-Security - ex1-crypto.mjs
-- Sandbox Pg-Api - ex26-index-ops.mjs
-- Sandbox Pg-Api - ex30-vacuum-horizon.mjs
-- Sandbox Pg-Api - ex50-privileges.mjs
-- Sandbox Ts-P1 - infer.ts
-- / - undraw Docusaurus Mountain Illustration
-- Css: Phase 1 Selectors
-- Git: Phase 0 How Git Stores
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 7 Async
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 8 Schema From Node
-- Postgresql: Phase 8 Schema From Node
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- React: Phase 0 How React Runs
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 4 Effects
-- Typescript: Phase 1 Type Vocabulary
-- Sandbox P9-Testing - jest
-- Framer-Motion: Orchestration And Staggering
-- Javascript: Phase 13 Complexity
-- Javascript: Phase 3 Functions
-- Javascript - 🔒 Chunk claims
-- Mongodb: Phase 0 How Mongodb Runs
-- Playwright: Real World Workflows And Recipes
-- React: Phase 14 Correctness
-- Tanstack-Query: Query States
-- Webpack: Loaders
-- Webpack: Plugins
-- Webpack: Source Maps
-- Webpack: Real World Workflows And Recipes
-- Sandbox Git-P0 - ex1-version-facts.sh
-- Sandbox Js-P0 - package.json
-- Sandbox P7-Background-Work - ex2-skiplocked.mjs
-- Sandbox P8-Security - ex18-https-cookies.mjs
-- Sandbox P8-Security - ex25-audit-log.mjs
-- Sandbox P9-Testing - @testcontainers/postgresql
-- Sandbox P9-Testing - compat.test.mjs
-- Sandbox Pg-Api - ex25-index-kinds.mjs
-- Sandbox Pg-Api - ex33-types-core.mjs
-- Sandbox Pg-Api - ex34-types-more.mjs
-- Sandbox Pg-Api - ex36d-count-having.mjs
-- Sandbox Pg-Api - ex37d-pagination-counts.mjs
-- Sandbox Pg-Api - ex45-search.mjs
-- Sandbox Pg-Api - ex48-extensions-partitioning.mjs
-- / - Docusaurus Brand Identity
-- / - Yarn node-modules linker
-- Git: Phase 0 How Git Stores
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 7 Async
-- Javascript: Phase 7 Async
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 8 Security
-- Nodejs: Foundations.Md
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- Postgresql - 228 topics in 14
-- React: Phase 2 Components
-- React: Phase 3 State
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- Typescript: Phase 1 Type Vocabulary
-- Typescript: Phase 1 Type Vocabulary
-- Sandbox P8-Security - node:fs
-- Javascript: Phase 18 Storefront
-- React: Phase 14 Correctness
-- Storybook: Phase 1 Story Format
-- Sandbox P7-Background-Work - ex3-bullmq.mjs
-- Sandbox P8-Security - ex23-webcrypto.mjs
-- Sandbox P8-Security - ex9-csrf.mjs
-- Sandbox P9-Testing - config.mjs
-- Sandbox Pg-Api - ex11-ddl-alter.mjs
-- Sandbox Pg-Api - ex28-mvcc-isolation.mjs
-- Sandbox Pg-Api - ex29-locks.mjs
-- Sandbox Pg-Api - ex35-joins.mjs
-- Sandbox Pg-Api - ex37b-cte-inlining.mjs
-- Sandbox Pg-Api - ex37c-correlated-cost.mjs
-- Sandbox Pg-Api - ex39-tx-request.mjs
-- Sandbox Pg-Api - ex52-backup-restore.sh
-- Sandbox Pg-Api - ex53-hba-tls.sh
-- Sandbox Pg-Api - ex8-bulk-and-seed.mjs
-- Sandbox Pg-Phase-0: Pg Phase 0
-- Sandbox Pg-Phase-0: Pg Phase 0
-- Sandbox Ts-P1 - typescript
-- Sandbox Ts-P1 - structural.ts
-- Sandbox Ts-P2 - typescript
-- / - graphify explain
-- / - Broken-links report step
-- Css: Phase 0 How Css Runs
-- Css: Phase 0 How Css Runs
-- Css: Phase 1 Selectors
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 4 Responses
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 0 How Javascript Runs
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 2 Async
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 9 Testing
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 8 Schema From Node
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Foundations.Md
-- React: Phase 2 Components
-- React: Phase 2 Components
-- Reviews: 08 13 Cross Phase Correctness.Md
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 1 Type Vocabulary
-- Sandbox P9-Testing - fast-check
-- / - Chunked topic layout
-- Sandbox Pg-Api - node:crypto
-- Eslint-Oxlint: Linting Landscape And Tooling Decisions
-- Javascript: Phase 5 Built In Library
-- Sandbox Express-Verify - express
-- Sandbox Js-P0 - ex11-benchmark-lies.mjs
-- Sandbox P9-Testing - express
-- Sandbox P9-Testing - @stryker-mutator/core
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - convert.mjs
-- Sandbox Pg-Api - ex23-index-basics.mjs
-- Sandbox Pg-Api - ex24-index-not-used.mjs
-- Sandbox Pg-Api - ex27-tx-basics.mjs
-- Sandbox Pg-Api - ex36c-agg-checks.mjs
-- Sandbox Pg-Api - ex36e-shaping.mjs
-- Sandbox Pg-Api - ex46-views-triggers.mjs
-- Sandbox Pg-Api - ex47-functions.mjs
-- Sandbox Pg-Phase-0: Pg Phase 0
-- Sandbox Ts-P1 - typo.ts
-- Sandbox Ts-P1 - fns.ts
-- Sandbox Ts-P1 - sym.ts
-- Sandbox Ts-P2 - guards.ts
-- Sandbox P8-Security - RFC-6238
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 4 Objects And Classes
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Foundations.Md
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 6 Aggregation
-- React: Phase 0 How React Runs
-- React: Phase 1 Jsx
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- Reviews: Phase 0 How Typescript Runs
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 1 Type Vocabulary
-- Mongodb: Phase 3 Schema Design
-- Storybook: Phase 0 How Storybook Runs
-- Storybook: Phase 0 How Storybook Runs
-- Sandbox Express5-Check - check.cjs
-- Sandbox Js-P0 - ex4-hosts.mjs
-- Sandbox Js-P1 - ex5-references.mjs
-- Sandbox Js-P1 - ex8-null-nan-equality.mjs
-- Sandbox Js-P2 - ex11-misc-operators.mjs
-- Sandbox Js-P2 - ex3-control-flow.mjs
-- Sandbox P10-Observability - ex2-lag.mjs
-- Sandbox P8-Security - ex10-ssrf-guard.mjs
-- Sandbox P8-Security - ex12-redos.mjs
-- Sandbox P8-Security - ex19-crypto.mjs
-- Sandbox P8-Security - ex8-ssrf.mjs
-- Sandbox Pg-Api - ex37f-frame-extras.mjs
-- Sandbox Pg-Api - ex40-api-concurrency.mjs
-- Sandbox Pg-Api - ex42-testing-rollback.mjs
-- Sandbox Pg-Api - ex44-jsonb-ops.mjs
-- Sandbox Pg-Api - ex57-vs-mysql.sh
-- Sandbox Ts-P0 - nonerasable.ts
-- Sandbox Ts-P0 - loose.ts
-- Sandbox Ts-P1 - four.ts
-- Sandbox Ts-P1 - json.ts
-- Sandbox Ts-P2 - loss.ts
-- Css: Phase 1 Selectors
-- Expressjs: Phase 4 Responses
-- Expressjs: Phase 6 Rest Surface
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 8 Security
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Core Io.Md
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 10 Indexes
-- Postgresql: Phase 11 Mvcc
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 5 Joins
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- React: Phase 2 Components
-- React: Phase 3 State
-- Reviews: 08 13 Cross Phase Correctness.Md
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 0 How Typescript Runs
-- / - KNOW tier
-- Sandbox P10-Observability - node:module
-- Javascript: Phase 5 Built In Library
-- React: Phase 10 Server Components
-- React: Phase 10 Server Components
-- Storybook - 🔴 A note on
-- Sandbox Express-Verify: Phase 1 Routing_06 Router
-- Sandbox Express-Verify: Phase 1 Routing_07 App
-- Sandbox Express-Verify: Phase 2 Middleware_02 Execution
-- Sandbox Express-Verify - run-all.mjs
-- Sandbox Express-Verify - v10-mount.mjs
-- Sandbox Express-Verify - v6-etag.mjs
-- Sandbox Express-Verify - v7-ifmatch.mjs
-- Sandbox Express-Verify - v9-mountpath.mjs
-- Sandbox Js-P2 - ex2-logical-optional.mjs
-- Sandbox Js-P2 - ex4-spread-bitwise.mjs
-- Sandbox Js-P2 - ex6-optional-limits.mjs
-- Sandbox Js-P3 - Base
-- Sandbox Js-P3 - ex5c-write-bind.mjs
-- Sandbox P7-Background-Work - ex1-outbox.mjs
-- Sandbox P7-Background-Work - ex4-shutdown.mjs
-- Sandbox P7-Background-Work - ex7-overlap.mjs
-- Sandbox P8-Security - ex7-xss.mjs
-- Sandbox P9-Testing - sum.test.mjs
-- Sandbox P9-Testing - package.json
-- Sandbox Pg-Api - ex14-crud.mjs
-- Sandbox Pg-Api - ex15-pagination.mjs
-- Sandbox Pg-Api - ex17-update.mjs
-- Sandbox Pg-Api - ex19-series-values.mjs
-- Sandbox Pg-Api - ex32-psql-io.sh
-- Sandbox Pg-Api - ex37e-ordered-set-checks.mjs
-- Sandbox Pg-Api - ex41-shaping-mapping.mjs
-- Sandbox Pg-Api - ex43-keyset-patch.mjs
-- Sandbox Pg-Api - ex49-notify-server-side.mjs
-- Sandbox Pg-Api - ex7-ddl-locks.mjs
-- Sandbox Ts-P0 - nonerasable.js
-- Sandbox Ts-P1 - merge.ts
-- Sandbox Ts-P1 - deep.ts
-- / - Grok memory store
-- Expressjs: Phase 4 Responses
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 12 Native
-- Nodejs: Phase 1 Modules
-- Nodejs: Phase 9 Testing
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 8 Schema From Node
-- React: Phase 0 How React Runs
-- React: Phase 0 How React Runs
-- React: Phase 4 Effects
-- Docusaurus.Config.Js - docusaurus.config.js
-- Css: Phase 7 Positioning
-- Css - How these pages are
-- React: Phase 10 Server Components
-- React: Phase 10 Server Components
-- Sandbox Express-Verify: Phase 0 Express Basics_02
-- Sandbox Express-Verify: Phase 1 Routing_03 Router
-- Sandbox Express-Verify: Phase 1 Routing_03 Router
-- Sandbox Express-Verify: Phase 2 Middleware_04 Middleware
-- Sandbox Express-Verify: Phase 4 Responses_06 Spa
-- Sandbox Express-Verify - v8-trustproxy.mjs
-- Sandbox Js-P0 - ex2-strict.mjs
-- Sandbox Js-P1 - ex7-strings-symbols-bigint.mjs
-- Sandbox Js-P2 - ex5-assign-contrast.mjs
-- Sandbox Js-P3 - ex7b-scope-sloppy.cjs
-- Sandbox P10-Observability - ex3-diag.mjs
-- Sandbox P8-Security - ex4-throughput.mjs
-- Sandbox P9-Testing - api.test.mjs
-- Sandbox P9-Testing - express-app.mjs
-- Sandbox P9-Testing - probe.mjs
-- Sandbox P9-Testing - discount.mjs
-- Sandbox P9-Testing - render.mjs
-- Sandbox Pg-Api - ex12-ddl-rest.mjs
-- Sandbox Pg-Api - ex13-constraints-rel.mjs
-- Sandbox Pg-Api - ex16-returning.mjs
-- Sandbox Pg-Api - ex18-delete.mjs
-- Sandbox Pg-Api - ex20-driver.mjs
-- Sandbox Pg-Api - ex21-types-prepared.mjs
-- Sandbox Pg-Api - ex22-notify-cursor-pgjs.mjs
-- Sandbox Pg-Api - ex31-psql-basics.sh
-- Sandbox Pg-Api - ex36b-agg-plans.mjs
-- Sandbox Pg-Api - ex38-repository.mjs
-- Sandbox Pg-Api - ex3-advisory-fix.mjs
-- Sandbox Pg-Api - ex4-soft-delete.mjs
-- Sandbox Pg-Api - ex5-filter-sort.mjs
-- Sandbox Pg-Api - ex6-collation.mjs
-- Sandbox Pg-Api - ex9-bulk-at-scale.mjs
-- Sandbox React-P0 - Glean client ID
-- Sandbox Ts-P0 - mod1.ts
-- Sandbox Ts-P0 - mod10.ts
-- Sandbox Ts-P0 - mod100.ts
-- Sandbox Ts-P0 - mod101.ts
-- Sandbox Ts-P0 - mod102.ts
-- Sandbox Ts-P0 - mod103.ts
-- Sandbox Ts-P0 - mod104.ts
-- Sandbox Ts-P0 - mod105.ts
-- Sandbox Ts-P0 - mod106.ts
-- Sandbox Ts-P0 - mod107.ts
-- Sandbox Ts-P0 - mod108.ts
-- Sandbox Ts-P0 - mod109.ts
-- Sandbox Ts-P0 - mod11.ts
-- Sandbox Ts-P0 - mod110.ts
-- Sandbox Ts-P0 - mod111.ts
-- Sandbox Ts-P0 - mod112.ts
-- Sandbox Ts-P0 - mod113.ts
-- Sandbox Ts-P0 - mod114.ts
-- Sandbox Ts-P0 - mod115.ts
-- Sandbox Ts-P0 - mod116.ts
-- Sandbox Ts-P0 - mod117.ts
-- Sandbox Ts-P0 - mod118.ts
-- Sandbox Ts-P0 - mod119.ts
-- Sandbox Ts-P0 - mod12.ts
-- Sandbox Ts-P0 - mod120.ts
-- Sandbox Ts-P0 - mod121.ts
-- Sandbox Ts-P0 - mod122.ts
-- Sandbox Ts-P0 - mod123.ts
-- Sandbox Ts-P0 - mod124.ts
-- Sandbox Ts-P0 - mod125.ts
-- Sandbox Ts-P0 - mod126.ts
-- Sandbox Ts-P0 - mod127.ts
-- Sandbox Ts-P0 - mod128.ts
-- Sandbox Ts-P0 - mod129.ts
-- Sandbox Ts-P0 - mod13.ts
-- Sandbox Ts-P0 - mod130.ts
-- Sandbox Ts-P0 - mod131.ts
-- Sandbox Ts-P0 - mod132.ts
-- Sandbox Ts-P0 - mod133.ts
-- Sandbox Ts-P0 - mod134.ts
-- Sandbox Ts-P0 - mod135.ts
-- Sandbox Ts-P0 - mod136.ts
-- Sandbox Ts-P0 - mod137.ts
-- Sandbox Ts-P0 - mod138.ts
-- Sandbox Ts-P0 - mod139.ts
-- Sandbox Ts-P0 - mod14.ts
-- Sandbox Ts-P0 - mod140.ts
-- Sandbox Ts-P0 - mod141.ts
-- Sandbox Ts-P0 - mod142.ts
-- Sandbox Ts-P0 - mod143.ts
-- Sandbox Ts-P0 - mod144.ts
-- Sandbox Ts-P0 - mod145.ts
-- Sandbox Ts-P0 - mod146.ts
-- Sandbox Ts-P0 - mod147.ts
-- Sandbox Ts-P0 - mod148.ts
-- Sandbox Ts-P0 - mod149.ts
-- Sandbox Ts-P0 - mod15.ts
-- Sandbox Ts-P0 - mod150.ts
-- Sandbox Ts-P0 - mod151.ts
-- Sandbox Ts-P0 - mod152.ts
-- Sandbox Ts-P0 - mod153.ts
-- Sandbox Ts-P0 - mod154.ts
-- Sandbox Ts-P0 - mod155.ts
-- Sandbox Ts-P0 - mod156.ts
-- Sandbox Ts-P0 - mod157.ts
-- Sandbox Ts-P0 - mod158.ts
-- Sandbox Ts-P0 - mod159.ts
-- Sandbox Ts-P0 - mod16.ts
-- Sandbox Ts-P0 - mod160.ts
-- Sandbox Ts-P0 - mod161.ts
-- Sandbox Ts-P0 - mod162.ts
-- Sandbox Ts-P0 - mod163.ts
-- Sandbox Ts-P0 - mod164.ts
-- Sandbox Ts-P0 - mod165.ts
-- Sandbox Ts-P0 - mod166.ts
-- Sandbox Ts-P0 - mod167.ts
-- Sandbox Ts-P0 - mod168.ts
-- Sandbox Ts-P0 - mod169.ts
-- Sandbox Ts-P0 - mod17.ts
-- Sandbox Ts-P0 - mod170.ts
-- Sandbox Ts-P0 - mod171.ts
-- Sandbox Ts-P0 - mod172.ts
-- Sandbox Ts-P0 - mod173.ts
-- Sandbox Ts-P0 - mod174.ts
-- Sandbox Ts-P0 - mod175.ts
-- Sandbox Ts-P0 - mod176.ts
-- Sandbox Ts-P0 - mod177.ts
-- Sandbox Ts-P0 - mod178.ts
-- Sandbox Ts-P0 - mod179.ts
-- Sandbox Ts-P0 - mod18.ts
-- Sandbox Ts-P0 - mod180.ts
-- Sandbox Ts-P0 - mod181.ts
-- Sandbox Ts-P0 - mod182.ts
-- Sandbox Ts-P0 - mod183.ts
-- Sandbox Ts-P0 - mod184.ts
-- Sandbox Ts-P0 - mod185.ts
-- Sandbox Ts-P0 - mod186.ts
-- Sandbox Ts-P0 - mod187.ts
-- Sandbox Ts-P0 - mod188.ts
-- Sandbox Ts-P0 - mod189.ts
-- Sandbox Ts-P0 - mod19.ts
-- Sandbox Ts-P0 - mod190.ts
-- Sandbox Ts-P0 - mod191.ts
-- Sandbox Ts-P0 - mod192.ts
-- Sandbox Ts-P0 - mod193.ts
-- Sandbox Ts-P0 - mod194.ts
-- Sandbox Ts-P0 - mod195.ts
-- Sandbox Ts-P0 - mod196.ts
-- Sandbox Ts-P0 - mod197.ts
-- Sandbox Ts-P0 - mod198.ts
-- Sandbox Ts-P0 - mod199.ts
-- Sandbox Ts-P0 - mod2.ts
-- Sandbox Ts-P0 - mod20.ts
-- Sandbox Ts-P0 - mod200.ts
-- Sandbox Ts-P0 - mod201.ts
-- Sandbox Ts-P0 - mod202.ts
-- Sandbox Ts-P0 - mod203.ts
-- Sandbox Ts-P0 - mod204.ts
-- Sandbox Ts-P0 - mod205.ts
-- Sandbox Ts-P0 - mod206.ts
-- Sandbox Ts-P0 - mod207.ts
-- Sandbox Ts-P0 - mod208.ts
-- Sandbox Ts-P0 - mod209.ts
-- Sandbox Ts-P0 - mod21.ts
-- Sandbox Ts-P0 - mod210.ts
-- Sandbox Ts-P0 - mod211.ts
-- Sandbox Ts-P0 - mod212.ts
-- Sandbox Ts-P0 - mod213.ts
-- Sandbox Ts-P0 - mod214.ts
-- Sandbox Ts-P0 - mod215.ts
-- Sandbox Ts-P0 - mod216.ts
-- Sandbox Ts-P0 - mod217.ts
-- Sandbox Ts-P0 - mod218.ts
-- Sandbox Ts-P0 - mod219.ts
-- Sandbox Ts-P0 - mod22.ts
-- Sandbox Ts-P0 - mod220.ts
-- Sandbox Ts-P0 - mod221.ts
-- Sandbox Ts-P0 - mod222.ts
-- Sandbox Ts-P0 - mod223.ts
-- Sandbox Ts-P0 - mod224.ts
-- Sandbox Ts-P0 - mod225.ts
-- Sandbox Ts-P0 - mod226.ts
-- Sandbox Ts-P0 - mod227.ts
-- Sandbox Ts-P0 - mod228.ts
-- Sandbox Ts-P0 - mod229.ts
-- Sandbox Ts-P0 - mod23.ts
-- Sandbox Ts-P0 - mod230.ts
-- Sandbox Ts-P0 - mod231.ts
-- Sandbox Ts-P0 - mod232.ts
-- Sandbox Ts-P0 - mod233.ts
-- Sandbox Ts-P0 - mod234.ts
-- Sandbox Ts-P0 - mod235.ts
-- Sandbox Ts-P0 - mod236.ts
-- Sandbox Ts-P0 - mod237.ts
-- Sandbox Ts-P0 - mod238.ts
-- Sandbox Ts-P0 - mod239.ts
-- Sandbox Ts-P0 - mod24.ts
-- Sandbox Ts-P0 - mod240.ts
-- Sandbox Ts-P0 - mod241.ts
-- Sandbox Ts-P0 - mod242.ts
-- Sandbox Ts-P0 - mod243.ts
-- Sandbox Ts-P0 - mod244.ts
-- Sandbox Ts-P0 - mod245.ts
-- Sandbox Ts-P0 - mod246.ts
-- Sandbox Ts-P0 - mod247.ts
-- Sandbox Ts-P0 - mod248.ts
-- Sandbox Ts-P0 - mod249.ts
-- Sandbox Ts-P0 - mod25.ts
-- Sandbox Ts-P0 - mod250.ts
-- Sandbox Ts-P0 - mod251.ts
-- Sandbox Ts-P0 - mod252.ts
-- Sandbox Ts-P0 - mod253.ts
-- Sandbox Ts-P0 - mod254.ts
-- Sandbox Ts-P0 - mod255.ts
-- Sandbox Ts-P0 - mod256.ts
-- Sandbox Ts-P0 - mod257.ts
-- Sandbox Ts-P0 - mod258.ts
-- Sandbox Ts-P0 - mod259.ts
-- Sandbox Ts-P0 - mod26.ts
-- Sandbox Ts-P0 - mod260.ts
-- Sandbox Ts-P0 - mod261.ts
-- Sandbox Ts-P0 - mod262.ts
-- Sandbox Ts-P0 - mod263.ts
-- Sandbox Ts-P0 - mod264.ts
-- Sandbox Ts-P0 - mod265.ts
-- Sandbox Ts-P0 - mod266.ts
-- Sandbox Ts-P0 - mod267.ts
-- Sandbox Ts-P0 - mod268.ts
-- Sandbox Ts-P0 - mod269.ts
-- Sandbox Ts-P0 - mod27.ts
-- Sandbox Ts-P0 - mod270.ts
-- Sandbox Ts-P0 - mod271.ts
-- Sandbox Ts-P0 - mod272.ts
-- Sandbox Ts-P0 - mod273.ts
-- Sandbox Ts-P0 - mod274.ts
-- Sandbox Ts-P0 - mod275.ts
-- Sandbox Ts-P0 - mod276.ts
-- Sandbox Ts-P0 - mod277.ts
-- Sandbox Ts-P0 - mod278.ts
-- Sandbox Ts-P0 - mod279.ts
-- Sandbox Ts-P0 - mod28.ts
-- Sandbox Ts-P0 - mod280.ts
-- Sandbox Ts-P0 - mod281.ts
-- Sandbox Ts-P0 - mod282.ts
-- Sandbox Ts-P0 - mod283.ts
-- Sandbox Ts-P0 - mod284.ts
-- Sandbox Ts-P0 - mod285.ts
-- Sandbox Ts-P0 - mod286.ts
-- Sandbox Ts-P0 - mod287.ts
-- Sandbox Ts-P0 - mod288.ts
-- Sandbox Ts-P0 - mod289.ts
-- Sandbox Ts-P0 - mod29.ts
-- Sandbox Ts-P0 - mod290.ts
-- Sandbox Ts-P0 - mod291.ts
-- Sandbox Ts-P0 - mod292.ts
-- Sandbox Ts-P0 - mod293.ts
-- Sandbox Ts-P0 - mod294.ts
-- Sandbox Ts-P0 - mod295.ts
-- Sandbox Ts-P0 - mod296.ts
-- Sandbox Ts-P0 - mod297.ts
-- Sandbox Ts-P0 - mod298.ts
-- Sandbox Ts-P0 - mod299.ts
-- Sandbox Ts-P0 - mod3.ts
-- Sandbox Ts-P0 - mod30.ts
-- Sandbox Ts-P0 - mod300.ts
-- Sandbox Ts-P0 - mod31.ts
-- Sandbox Ts-P0 - mod32.ts
-- Sandbox Ts-P0 - mod33.ts
-- Sandbox Ts-P0 - mod34.ts
-- Sandbox Ts-P0 - mod35.ts
-- Sandbox Ts-P0 - mod36.ts
-- Sandbox Ts-P0 - mod37.ts
-- Sandbox Ts-P0 - mod38.ts
-- Sandbox Ts-P0 - mod39.ts
-- Sandbox Ts-P0 - mod4.ts
-- Sandbox Ts-P0 - mod40.ts
-- Sandbox Ts-P0 - mod41.ts
-- Sandbox Ts-P0 - mod42.ts
-- Sandbox Ts-P0 - mod43.ts
-- Sandbox Ts-P0 - mod44.ts
-- Sandbox Ts-P0 - mod45.ts
-- Sandbox Ts-P0 - mod46.ts
-- Sandbox Ts-P0 - mod47.ts
-- Sandbox Ts-P0 - mod48.ts
-- Sandbox Ts-P0 - mod49.ts
-- Sandbox Ts-P0 - mod5.ts
-- Sandbox Ts-P0 - mod50.ts
-- Sandbox Ts-P0 - mod51.ts
-- Sandbox Ts-P0 - mod52.ts
-- Sandbox Ts-P0 - mod53.ts
-- Sandbox Ts-P0 - mod54.ts
-- Sandbox Ts-P0 - mod55.ts
-- Sandbox Ts-P0 - mod56.ts
-- Sandbox Ts-P0 - mod57.ts
-- Sandbox Ts-P0 - mod58.ts
-- Sandbox Ts-P0 - mod59.ts
-- Sandbox Ts-P0 - mod6.ts
-- Sandbox Ts-P0 - mod60.ts
-- Sandbox Ts-P0 - mod61.ts
-- Sandbox Ts-P0 - mod62.ts
-- Sandbox Ts-P0 - mod63.ts
-- Sandbox Ts-P0 - mod64.ts
-- Sandbox Ts-P0 - mod65.ts
-- Sandbox Ts-P0 - mod66.ts
-- Sandbox Ts-P0 - mod67.ts
-- Sandbox Ts-P0 - mod68.ts
-- Sandbox Ts-P0 - mod69.ts
-- Sandbox Ts-P0 - mod7.ts
-- Sandbox Ts-P0 - mod70.ts
-- Sandbox Ts-P0 - mod71.ts
-- Sandbox Ts-P0 - mod72.ts
-- Sandbox Ts-P0 - mod73.ts
-- Sandbox Ts-P0 - mod74.ts
-- Sandbox Ts-P0 - mod75.ts
-- Sandbox Ts-P0 - mod76.ts
-- Sandbox Ts-P0 - mod77.ts
-- Sandbox Ts-P0 - mod78.ts
-- Sandbox Ts-P0 - mod79.ts
-- Sandbox Ts-P0 - mod8.ts
-- Sandbox Ts-P0 - mod80.ts
-- Sandbox Ts-P0 - mod81.ts
-- Sandbox Ts-P0 - mod82.ts
-- Sandbox Ts-P0 - mod83.ts
-- Sandbox Ts-P0 - mod84.ts
-- Sandbox Ts-P0 - mod85.ts
-- Sandbox Ts-P0 - mod86.ts
-- Sandbox Ts-P0 - mod87.ts
-- Sandbox Ts-P0 - mod88.ts
-- Sandbox Ts-P0 - mod89.ts
-- Sandbox Ts-P0 - mod9.ts
-- Sandbox Ts-P0 - mod90.ts
-- Sandbox Ts-P0 - mod91.ts
-- Sandbox Ts-P0 - mod92.ts
-- Sandbox Ts-P0 - mod93.ts
-- Sandbox Ts-P0 - mod94.ts
-- Sandbox Ts-P0 - mod95.ts
-- Sandbox Ts-P0 - mod96.ts
-- Sandbox Ts-P0 - mod97.ts
-- Sandbox Ts-P0 - mod98.ts
-- Sandbox Ts-P0 - mod99.ts
-- Sandbox Ts-P0 - shipping.ts
-- Sandbox Ts-P1 - exhaust.ts
-- Sandbox Ts-P1 - iface.ts
-- Src - progress.js
-- Expressjs: Phase 1 Routing
-- Expressjs: Phase 5 Errors
-- Expressjs: Foundations.Md
-- Expressjs: Edge And Ops.Md
-- Expressjs: Foundations.Md
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 3 Functions
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 6 Iteration And Destructuring
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 3 Buffers Streams
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Core Io.Md
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 6 Aggregation
-- React: Phase 2 Components
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: The React Model.Md
-- Sidebars.Js - @docusaurus/plugin-content-docs
-- Sandbox Express-Verify - extract.mjs
-- Sandbox Express-Verify: Phase 0 Express Basics_03
-- Sandbox Express-Verify: Phase 0 Express Basics_04
-- Sandbox Express-Verify: Phase 0 Express Basics_04
-- Sandbox Express-Verify: Phase 0 Express Basics_06
-- Sandbox Express-Verify: Phase 0 Express Basics_06
-- Sandbox Express-Verify: Phase 10 App Factory_06
-- Sandbox Express-Verify: Phase 1 Routing_01 Http
-- Sandbox Express-Verify: Phase 1 Routing_02 Params
-- Sandbox Express-Verify: Phase 1 Routing_02 Params
-- Sandbox Express-Verify: Phase 1 Routing_05 Path
-- Sandbox Express-Verify: Phase 1 Routing_07 App
-- Sandbox Express-Verify: Phase 2 Middleware_01 Middleware
-- Sandbox Express-Verify: Phase 2 Middleware_03 Next
-- Sandbox Express-Verify: Phase 2 Middleware_03 Next
-- Sandbox Express-Verify: Phase 2 Middleware_03 Next
-- Sandbox Express-Verify: Phase 2 Middleware_06 Mutating
-- Sandbox Express-Verify: Phase 3 Requests_01 Req
-- Sandbox Express-Verify: Phase 3 Requests_02 Json
-- Sandbox Express-Verify: Phase 3 Requests_03 Size
-- Sandbox Express-Verify: Phase 3 Requests_04 Query
-- Sandbox Express-Verify: Phase 3 Requests_05 Malformed
-- Sandbox Express-Verify: Phase 3 Requests_06 Raw
-- Sandbox Express-Verify: Phase 4 Responses_01 Res
-- Sandbox Express-Verify: Phase 4 Responses_04 Headers
-- Sandbox Express-Verify: Phase 4 Responses_07 Cookies
-- Sandbox Express-Verify: Phase 5 Errors_01 Error
-- Sandbox Express-Verify: Phase 5 Errors_02 Async
-- Sandbox Express-Verify - v5-responses.mjs
-- Sandbox Js-P0 - ex10-console.mjs
-- Sandbox Js-P0 - ex12-spec.mjs
-- Sandbox Js-P0 - ex5-jit.mjs
-- Sandbox Js-P1 - ex3-falsy.mjs
-- Sandbox Js-P2 - ex10-expr-stmt-asi.mjs
-- Sandbox Js-P2 - ex1-arithmetic.mjs
-- Sandbox Js-P2 - ex8-comparison.mjs
-- Sandbox P10-Observability - ex7-pipe.mjs
-- Sandbox P7-Background-Work - ex7b-lock.mjs
-- Sandbox P7-Background-Work - worker.mjs
-- Sandbox P8-Security - ex24-encryption-keys.mjs
-- Sandbox P8-Security - ex6-cmdinj.mjs
-- Sandbox P9-Testing - prop.test.mjs
-- Sandbox P9-Testing - discount.mjs
-- Sandbox P9-Testing - vat.mjs
-- Sandbox Pg-Api - ex1-ddl-from-node.mjs
-- Sandbox Pg-Phase-0: Pg Phase 0
-- Sandbox Ts-P0 - ex8-compiler-speed.sh
-- Sandbox Ts-P0 - shipping.js
-- Sandbox Ts-P0 - quote.ts
-- Sandbox Ts-P0 - package.json
-- Sandbox Ts-P1 - errshape.ts
-- Sandbox Ts-P1 - union.ts
-- Sandbox Ts-P1 - symdecl.ts
-- Src - index.js
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 1 Routing
-- Expressjs: Phase 2 Middleware
-- Expressjs: Http Surface.Md
-- Expressjs: Foundations.Md
-- Expressjs: Http Surface.Md
-- Expressjs: Api Product.Md
-- Expressjs: Api Product.Md
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 3 Functions
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Core Io.Md
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 1 Psql
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- React: Phase 0 How React Runs
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: The React Model.Md
-- Typescript: Phase 0 How Typescript Runs
-- Typescript: Phase 1 Type Vocabulary
-- Sandbox Express-Verify: Phase 0 Express Basics_01
-- Sandbox Express-Verify: Phase 0 Express Basics_05
-- Sandbox Express-Verify: Phase 0 Express Basics_05
-- Sandbox Express-Verify - v1-settings.mjs
-- Sandbox Git-P0 - mdx-check.mjs
-- Sandbox Js-P0 - ex9-feature-era.mjs
-- Sandbox Js-P1 - ex1-types.mjs
-- Sandbox Js-P1 - ex2-equality.mjs
-- Sandbox Js-P2 - ex7-optional-parens.mjs
-- Sandbox Js-P3 - WithField
-- Sandbox Js-P3 - WithMethod
-- Sandbox P10-Observability - ex4-reports.mjs
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - mocking.test.mjs
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - toplevel.test.mjs
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - package.json
-- Sandbox P9-Testing - coupled.test.mjs
-- Sandbox P9-Testing - package.json
-- Sandbox Pg-Api - Sandbox artifacts stay
-- Sandbox Ts-P0 - ex1-erasure.sh
-- Sandbox Ts-P0 - ex2-nonerasable.sh
-- Sandbox Ts-P0 - ex3-emit-despite-errors.sh
-- Sandbox Ts-P0 - ex4-strict.sh
-- Sandbox Ts-P0 - ex5-init-and-flags.sh
-- Sandbox Ts-P0 - ex6-where-types-come-from.sh
-- Sandbox Ts-P0 - ex7-transpile-vs-check.sh
-- Sandbox Ts-P0 - ex9-node-runs-ts.sh
-- Sandbox Ts-P0 - justenum.ts
-- Sandbox Ts-P0 - bad.mjs
-- Sandbox Ts-P0 - bad.ts
-- Sandbox Ts-P0 - untyped-lib.d.ts
-- Sandbox Ts-P1 - ex1-inference-widening.sh
-- Sandbox Ts-P1 - ex2-any-unknown-never-void.sh
-- Sandbox Ts-P1 - ex3-structural-and-excess.sh
-- Sandbox Ts-P1 - ex4-type-vs-interface.sh
-- Sandbox Ts-P1 - ex5-functions.sh
-- Sandbox Ts-P1 - ex6-recursive.sh
-- Sandbox Ts-P1 - ex7-object-types.sh
-- Sandbox Ts-P1 - circular.ts
-- Sandbox Ts-P2 - ex1-narrowing-basics.sh
-- Sandbox Ts-P2 - ex2-guards-and-loss.sh
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 0 Express Basics
-- Expressjs: Phase 1 Routing
-- Expressjs: Phase 2 Middleware
-- Expressjs: Phase 3 Requests
-- Expressjs: Phase 4 Responses
-- Expressjs: Phase 6 Rest Surface
-- Expressjs - 114 Express topics 28
-- Expressjs - Target Express 5.x on
-- Expressjs - Master tier share about
-- Expressjs - Application settings grouped row
-- Expressjs - Approve proposed Express structure
-- Expressjs - Request-id correlation middleware
-- Expressjs: Api Product.Md
-- Expressjs: Edge And Ops.Md
-- Git: Phase 0 How Git Stores
-- Git: Phase 0 How Git Stores
-- Javascript: Phase 0 How Javascript Runs
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 1 Values And Coercion
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 2 Operators
-- Javascript: Phase 3 Functions
-- Javascript: Phase 4 Objects And Classes
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 5 Built In Library
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 6 Iteration And Destructuring
-- Javascript: Phase 6 Iteration And Destructuring
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 0 Runtime Model
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 10 Observability
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 11 Deployment
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 4 Filesystem
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 5 Http Processes
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 6 Data Access
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 7 Background Work
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs: Phase 9 Testing
-- Nodejs - Do not start Express
-- Nodejs - Master share 35% vs
-- Nodejs: Production.Md
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 0 Architecture
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 12 Beyond Tables
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 13 Ops
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 2 Types
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 3 Ddl
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 4 Crud
-- Postgresql: Phase 6 Aggregation
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 7 Pg Driver
-- Postgresql: Phase 9 Api Crud
-- Postgresql: Phase 9 Api Crud
-- Postgresql - PostgreSQL tier distribution
-- React: Phase 0 How React Runs
-- React: Phase 0 How React Runs
-- React: Phase 0 How React Runs
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 2 Components
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: Phase 4 Effects
-- React: The React Model.Md
-- React: The React Model.Md
-- Sandbox P9-Testing - discovery probe
+- React Effects: Effects versus events
+- Docker Build Strategy
+- Docker Images And Registries
+- React Concurrent Suspense
+- React State: Local mutation
+- Docker Compose: Half one: the file
+- Postgresql Joins: From Node
+- Docker Production: Podman
+- Nodejs Data Access
+- Postgresql Indexes: From Node
+- Expressjs Errors: Router-level handlers
+- Javascript Modules Errors
+- Postgresql Crud: From Node
+- Javascript Browser Platform
+- React Forms Actions
+- Expressjs Rest Surface
+- Postgresql Pg Driver
+- Nodejs Background Work
+- Docker Production: Podman
+- React Custom Hooks
+- Javascript Objects And Classes
+- Expressjs Express Basics
+- React Performance: The rewrite
+- Typescript How Typescript Runs
+- Docker Image Quality
+- Docker Networking: Podman
+- Nodejs Security: Choosing the cost
+- Expressjs Middleware: The two functions,
+- Expressjs Validation Authz
+- Javascript Events: Bubbling is the defau
+- Docker: Adjusting the set
+- Postgresql Mvcc: D — durability, measure
+- Docker Compose: EXPOSE publishes nothing
+- Javascript Dom: Format specifiers
+- Docker What A Container Is
+- Javascript Browser Platform
+- Expressjs Responses: fresh and stale
+- Nodejs Observability: The minimum schema
+- Javascript Async: Genuine parallelism: w
+- Javascript Storefront: Cancelling delibe
+- Expressjs Requests: Minimal map
+- Docker Running Containers
+- React Refs Context Reducers
+- Docker Mern Pern Stack
+- Expressjs Validation Authz
+- Javascript Dom: matches — the other half
+- React Custom Hooks
+- Typescript Generics: Inference sites
+- Javascript Network Storage
+- Javascript Modules Errors
+- Typescript Narrowing: On object unions
+- Javascript Modules Errors
+- Javascript Built In Library
+- Typescript Type Vocabulary
+- Nodejs Buffers Streams
+- Nodejs Http Processes
+- Expressjs Layering: "Not found" in three
+- Javascript Async: In the browser: two ev
+- Nodejs Runtime Model
+- Css Flexbox: Flex base size
+- Css Grid: Reading it inside out
+- Javascript Built In Library
+- Javascript Async: Chunks
+- Git Everyday Loop
+- Javascript Async: Always return the prom
+- Nodejs Deployment: Boot order and probes
+- Javascript Objects And Classes
+- Nodejs Async: .finally
+- Javascript Network Storage
+- React Ssr Hydration
+- Javascript Network Storage
+- Postgresql Ops: --no-owner and --no-acl
+- Postgresql Aggregation: The big table
+- Javascript Async: Deriving the rest of t
+- Javascript Objects And Classes
+- Javascript Modules Errors
+- Javascript Network Storage
+- Javascript Built In Library
+- Postgresql Beyond Tables
+- Javascript Objects And Classes
+- Expressjs Hardening: The auth cookie, fl
+- Git How Git Stores Things
+- Postgresql Aggregation: In Node
+- Javascript Objects And Classes
+- Git Everyday Loop
+- Expressjs Routing: The verbs
+- Javascript Machine Coding
+- Nodejs Native: What it is for
+- Nodejs Filesystem: join vs resolve
+- Javascript Browser Platform
+- Css Scss: Scope
+- Expressjs App Factory
+- Postgresql Types: The cost of exactness
+- Postgresql Api Crud
+- React Components: Elements are ordinary 
+- Javascript Built In Library
+- Postgresql Ops: Certificate authenticati
+- Postgresql Aggregation: Both spellings p
+- React How React Runs
+- React Jsx: 1. Renamed
+- Css Cascade: The order, top to bottom
+- Javascript Browser Platform
+- Javascript Dom: Chunks
+- Mongodb Query Operators
+- Sandbox React P1
+- Sandbox React P0
+- Git Undo Recover
+- Docker Storage: Anonymous volumes
+- Javascript: Where a policy comes from
+- Javascript Storefront: Chunks
+- Javascript Network Storage
+- Javascript Browser Platform
+- Javascript Built In Library
+- Nodejs Async: The model to carry around
+- Postgresql Aggregation: Aggregates ignor
+- Postgresql Schema From Node
+- Nginx Server And Location
+- Nodejs Observability: Minimal instrument
+- Webpack Module Federation
+- Javascript Events: Focus events on forms
+- Git Remotes: push.default
+- Javascript Events: Compatibility mouse e
+- Postgresql Ops: Knowing whether it is to
+- Typescript Generics: Modifiers do not af
+- Postgresql Beyond Tables
+- Typescript Narrowing: Narrowing in the e
+- Javascript Iteration And Destructuring
+- Nodejs Security: 1. Reject at parse time
+- React Refs Context Reducers
+- Webpack: 1. Under-The-Hood Mechanics
+- Nodejs Http Processes
+- Postgresql Api Crud
+- Javascript Dynamic Programming
+- Javascript Functions: Precedence, measur
+- Nodejs Filesystem: The error-first conve
+- React Server Components
+- React Components: What a component must 
+- Package.Json: clsx
+- Tanstack-Query: 1. Under-The-Hood Mechan
+- Javascript: Cleanup
+- Mongodb Schema Design
+- Postgresql Ops: Attributes are not privi
+- React Ssr Hydration
+- Postgresql Types: The safe migration pat
+- Postgresql Aggregation: From Node
+- Postgresql Crud: The skeleton
+- Sandbox Css: baseline.mjs
+- Javascript Objects And Classes
+- Postgresql: From Node
+- Postgresql Aggregation: 1170× on the can
+- Css Positioning: Diagnosing it
+- Javascript Algorithm Patterns
+- Javascript Built In Library
+- Expressjs Syllabus: What each phase cove
+- Frontend-Architecture Error Handling And
+- Git Everyday Loop
+- Git Branching Merging
+- Postgresql Pg Driver
+- React Server Components
+- Docker Dockerfile: Choosing an interpret
+- Javascript Browser Platform
+- Javascript Storefront: Rendering from th
+- Javascript Iteration And Destructuring
+- Javascript Async: Availability
+- Css Custom Properties
+- Javascript Dom: The loop error
+- Javascript Machine Coding
+- Mongodb Documents And Bson
+- Nginx Syllabus: What each phase covers
+- Postgresql Crud: Combining predicates
+- React Server Components
+- React Jsx: jsx vs jsxs
+- Git Syllabus: Scripting rules that follo
+- Javascript Machine Coding
+- Javascript Storefront: Derived values
+- React Server Components
+- Postgresql Crud: From Node
+- Storybook: The smallest complete example
+- Typescript Type Vocabulary
+- Javascript Data Structures
+- Nginx Configuration Language
+- Javascript Objects And Classes
+- Javascript Modules Errors
+- Mongodb Mongosh: Connecting with mongosh
+- Css Motion: The pipeline decides the cos
+- Javascript Network Storage
+- Javascript Data Structures
+- Javascript Async: Chaining after a catch
+- Postgresql Beyond Tables
+- React Components: Migration
+- Typescript: Trade-off
+- Javascript Machine Coding
+- Javascript Iteration And Destructuring
+- Javascript Built In Library
+- Javascript Async: Two halves, on purpose
+- Nodejs Security: Children inherit everyt
+- Postgresql Beyond Tables
+- Postgresql Types: From Node
+- Postgresql Ddl: Constraint or index?
+- Postgresql Aggregation: Seeding test dat
+- Expressjs Reviews: Counts (this part)
+- Git Remotes: Amend counts too
+- Javascript Network Storage
+- Javascript Functions: Choosing between t
+- Postgresql Syllabus: Boundary with Node 
+- Postgresql Reviews: Phase 1 — psql, mast
+- React Performance: Reading a tree for po
+- Css Syllabus: How these pages are verifi
+- Javascript Complexity: Chunks
+- Javascript Browser Platform
+- Javascript Functions: What to actually d
+- Nginx Configuration Language
+- Nodejs Async: Cleanup on early exit
+- Nodejs Security: Choosing
+- React How React Runs
+- Css Flexbox: Always use the shorthand
+- Css Container Queries
+- Css Color Theming
+- Javascript Functions: Chunks
+- Javascript Built In Library
+- Nginx Process Model
+- Nodejs Observability: Capture a heap sna
+- Postgresql Ops: Enabling it
+- React Server Components
+- React Syllabus: Example policy
+- Javascript Functions: Measured
+- Postgresql Ddl: Start with shared schema
+- React Ssr Hydration
+- React Components: Files are always uncon
+- Typescript Type Vocabulary
+- Docker Syllabus: How a page is built
+- Javascript Values And Coercion
+- Javascript Operators: Measured
+- Javascript Built In Library
+- Javascript Iteration And Destructuring
+- Storybook Theming Colors And Fonts
+- Sandbox Js P3
+- Css Grid: Baseline alignment
+- Webpack Source Maps
+- Git Branching Merging
+- Nginx Process Model
+- Nginx Configuration Language
+- Nginx Server And Location
+- Postgresql Ddl: bigint, not int
+- Postgresql Joins: From Node
+- React How React Runs
+- Storybook Build And Configuration
+- Storybook How Storybook Runs
+- Storybook Decorators: Choosing the level
+- Javascript Events: The two events
+- Javascript Built In Library
+- Javascript Built In Library
+- Nginx Configuration Language
+- Nodejs Http Processes
+- Nodejs Http Processes
+- Postgresql Ops: pg's own errors are clea
+- Postgresql Api Crud
+- Postgresql Api Crud
+- Redis Syllabus: What each phase will cov
+- Docker Storage: Reading the evidence
+- Git Everyday Loop
+- Javascript Browser Platform
+- Javascript Dynamic Programming
+- Javascript Operators: Measured
+- Mongodb Crud: Existence checks
+- Postgresql Api Crud
+- Postgresql Ops: Finding who is blocking 
+- Postgresql Ops: A first policy
+- Postgresql Ddl: The lock is the real cos
+- React Ssr Hydration
+- React Correctness: getBy — the default
+- React Refs Context Reducers
+- Storybook Story Format
+- Sandbox P8 Security
+- Javascript Machine Coding
+- Javascript Operators: The == null idiom
+- Storybook Theming Colors And Fonts
+- Storybook Args And Controls
+- Typescript Generics: Trade-off
+- Babel Build Tool Integration
+- Css Selectors: :scope and implicit scopi
+- Expressjs Reviews: 1. Verdict
+- Git How Git Stores Things
+- Javascript Machine Coding
+- Javascript Machine Coding
+- Mongodb Syllabus: Priority tiers
+- Nodejs Buffers Streams
+- Postgresql Ddl: The property
+- React Correctness: The shape of the file
+- React Jsx: Choosing, again
+- Reviews Postgresql: B. Factual errors
+- Storybook Visual Testing
+- Storybook Accessibility Testing
+- Storybook Args And Controls
+- Sandbox Js P3
+- Css How Css Runs
+- Javascript Complexity: Recursion: count 
+- Javascript Machine Coding
+- Javascript Machine Coding
+- Javascript Functions: The variable, not 
+- Javascript Functions: Lexical, not dynam
+- Javascript Functions: Eviction, or the l
+- Nodejs Filesystem: Measuring instead of 
+- Postgresql Ops: Find the blocker first
+- Postgresql Schema From Node
+- Sandbox P8 Security
+- Javascript Machine Coding
+- Javascript Functions: What it is actuall
+- Mongodb How Mongodb Runs
+- Nodejs Http Processes
+- Nodejs Buffers Streams
+- Storybook Controls And Args
+- Sandbox Js P3
+- Sandbox Js P3
+- Sandbox Pg Api
+- Javascript How Javascript Runs
+- Javascript Network Storage
+- Javascript Machine Coding
+- Javascript Operators: ++ and --
+- Javascript Iteration And Destructuring
+- Mongodb How Mongodb Runs
+- Nodejs Reviews: 4.3 Things not to add
+- React Correctness: One event is not a cl
+- Storybook Interaction Testing
+- Web-Vitals-Performance Caching And Produ
+- Sandbox Js P3
+- Css How Css Runs
+- Css Flexbox: Nesting makes it worse
+- Frontend-Architecture Team And Collabora
+- Javascript Iteration And Destructuring
+- Javascript Dom: Double submission
+- Javascript Syllabus: Example policy
+- Storybook Addons Ecosystem
+- Sandbox Js P3
+- Css Scss: In a bundler
+- Eslint-Oxlint Real World Workflows And R
+- Javascript Algorithm Patterns
+- Javascript Machine Coding
+- Nginx Server And Location
+- Nodejs Observability: Clinic.js
+- Nodejs Syllabus: Explanations
+- Postgresql Beyond Tables
+- Postgresql Aggregation: Building a pivot
+- Postgresql Aggregation: Choosing between
+- Postgresql Api Crud
+- React Ssr Hydration
+- Typescript Type Vocabulary
+- Typescript Narrowing: It composes with a
+- Typescript Narrowing: Loss 1 — reassignm
+- Sandbox Js P3
+- Babel Real World Workflows And Recipes
+- Css Selectors: The complete set
+- Javascript Data Structures
+- Javascript Algorithm Patterns
+- Javascript Machine Coding
+- Javascript Values And Coercion
+- Nginx Process Model
+- Nginx Process Model
+- Nodejs Testing: How it works
+- Postgresql Ddl: A table worth copying
+- Postgresql Ddl: Other uses for schemas
+- React Correctness: The definition
+- React Correctness: Deciding, in one tabl
+- React Correctness: Three places you can 
+- Sandbox P8 Security
+- Sandbox React P0
+- Sandbox React P1
+- Git Everyday Loop
+- Git Branching Merging
+- Javascript How Javascript Runs
+- Javascript Data Structures
+- Javascript Algorithm Patterns
+- Javascript Values And Coercion
+- Javascript Values And Coercion
+- Javascript Operators: -0 is a real value
+- Mongodb How Mongodb Runs
+- Nodejs Buffers Streams
+- Nodejs Testing: The contract
+- Playwright Fixtures And Test Isolation
+- Postgresql Ops: Measuring lag from each 
+- Postgresql Schema From Node
+- Postgresql Schema From Node
+- React Server Components
+- React Jsx: Comments
+- Reviews Review Prompt.Md
+- Storybook Build And Configuration
+- Drafts: 1. The five hard rules
+- Css Selectors: The empty-field trick
+- Javascript Values And Coercion
+- Javascript Values And Coercion
+- Javascript Operators: Measured
+- Javascript Iteration And Destructuring
+- Nodejs Modules: The part that actually b
+- Postgresql Ddl: Trade-off
+- Postgresql Schema From Node
+- React Correctness: The options worth kno
+- React Correctness: Both need a DOM
+- React Components: Finding the right owne
+- Storybook Build And Configuration
+- Instructions.Md: 10. Working process
+- Sandbox Pg Api
+- Sandbox P8 Security
+- Css Selectors: :empty
+- Javascript How Javascript Runs
+- Javascript Machine Coding
+- Javascript Values And Coercion
+- Javascript Iteration And Destructuring
+- Mongodb Crud: Batching is automatic
+- Nodejs Modules: Dynamic import()
+- Nodejs Buffers Streams
+- Nodejs Testing: Matching errors
+- Nodejs Testing: Mock timers
+- Postgresql Aggregation: Do not count on 
+- React Ssr Hydration
+- React Correctness: Diagnosing a flaky te
+- Sandbox Ts P0
+- Sandbox P7 Background Work
+- Css Selectors: The five
+- Css Selectors: Restrictions worth knowin
+- Javascript Readme.Md: 🔒 Chunk claims
+- Postgresql Architecture: From Node
+- Postgresql Types: From Node
+- Postgresql Reviews: 1. Verdict
+- React Correctness: The decision, in one 
+- React Components: The two rules, verbati
+- Storybook Story Format
+- Sandbox Pg Api
+- Reviews: 10 · File and media metadata
+- Sandbox P8 Security
+- Src: index.js
+- Css How Css Runs
+- Nodejs Modules: Configuration
+- Postgresql Architecture: Auth modes (men
+- Storybook Real World Workflows And Recip
+- Storybook Decorators: Reading context in
+- Sandbox P7 Background Work
+- Babel Plugin Ecosystem
+- Css How Css Runs
+- Css How Css Runs
+- Eslint-Oxlint Linting Landscape And Tool
+- Eslint-Oxlint Eslint Flat Config
+- Eslint-Oxlint Eslint Plugin Ecosystem
+- Javascript Functions: bind and new
+- Javascript Built In Library
+- Javascript Iteration And Destructuring
+- Nodejs Modules: The node_modules walk
+- Nodejs Http Processes
+- React Correctness: By component shape
+- Sandbox P9 Testing
+- Babel Configuration System
+- Babel Presets: 4.1 @babel/preset-env
+- Babel Authoring Custom Plugins
+- Babel Typescript And Jsx Handling
+- Babel Performance And Caching
+- Babel Migration And Decision Recipes
+- Eslint-Oxlint Eslint Language Options Gl
+- Eslint-Oxlint Eslint Rules System
+- Eslint-Oxlint Typescript Eslint
+- Eslint-Oxlint Custom Eslint Rules And Pr
+- Eslint-Oxlint Oxlint Installation Cli An
+- Eslint-Oxlint Migration Paths
+- Frontend-Architecture Styling Architectu
+- Javascript Syllabus: How it differs from
+- Jest-Rtl Assertions And Matchers
+- Jest-Rtl Mocking: 1. Under-The-Hood Mech
+- Nodejs Testing: Choosing generator range
+- Postgresql Architecture: PostgreSQL vs M
+- React Ssr Hydration
+- Redux-Toolkit Rtk Query
+- Redux-Toolkit Selectors And Normalizatio
+- Redux-Toolkit Testing: 1. Under-The-Hood
+- Vite Dev Server Mechanics
+- Web-Vitals-Performance Loading And Rende
+- Webpack Module Federation
+- Reviews: 5 · Ratings, gotchas, Q&A
+- Sandbox P7 Background Work
+- Sandbox P8 Security
+- Sandbox Pg Api
+- Src: index.js
+- Babel Why Babel And The Compiler Landsca
+- Babel Core Compilation Pipeline
+- Babel Source Maps And Debugging
+- Babel Monorepo And Multi Package Strateg
+- Babel Cli And Programmatic Tooling
+- Babel Nodejs Backend Usage
+- Eslint-Oxlint Eslint Core Architecture
+- Eslint-Oxlint Eslint Editor And Local Wo
+- Eslint-Oxlint Oxlint Fixes Ignores And D
+- Eslint-Oxlint Coexistence Eslint And Oxl
+- Eslint-Oxlint Ci Monorepos And Performan
+- Framer-Motion Motion Values
+- Frontend-Architecture Project Structure 
+- Frontend-Architecture Environment And Co
+- Frontend-Architecture Authentication And
+- Playwright Visual And Screenshot Testing
+- Playwright Locators: 1. Under-The-Hood M
+- Postgresql Ops: 1. pg_dump / pg_restore
+- React Ssr Hydration
+- Redux-Toolkit Immutability And Immer
+- Redux-Toolkit Devtools And Debugging
+- Redux-Toolkit Migration: 1. Under-The-Ho
+- Storybook Core Concepts
+- Vite Env Variables And Modes
+- Vite Css Handling
+- Vite Ssr Support
+- Web-Vitals-Performance Core Web Vitals
+- Web-Vitals-Performance Lcp Optimization
+- Web-Vitals-Performance Inp Optimization
+- Web-Vitals-Performance Cls Optimization
+- Webpack Multi Config And Environment
+- Sandbox P9 Testing
+- Reviews: 5 · The proposed splits
+- Reviews: A third gap on the same page
+- Sandbox Express5 Check
+- Sandbox Express Phase0
+- Sandbox P8 Security
+- Sandbox Pg Phase 0
+- Sandbox Ts P0
+- Babel Linter And Type Checker Interop
+- Eslint-Oxlint Eslint Cli Output Cache An
+- Eslint-Oxlint Eslint Suppressions Ignore
+- Eslint-Oxlint Oxlint Core Architecture
+- Eslint-Oxlint Oxlint Native Plugins And 
+- Eslint-Oxlint Oxlint Type Aware Linting 
+- Eslint-Oxlint Oxlint Js Plugins And Exte
+- Framer-Motion Basic Animation Props
+- Framer-Motion Transition Types
+- Framer-Motion Gestures: 1. Under-The-Hoo
+- Framer-Motion Animatepresence: 1. Under-
+- Framer-Motion Layout Animations
+- Framer-Motion Scroll Linked Animations
+- Framer-Motion Animation Controls
+- Framer-Motion Svg Animations
+- Framer-Motion Advanced Patterns
+- Frontend-Architecture Component Architec
+- Frontend-Architecture State Management D
+- Frontend-Architecture Data Layer And Api
+- Frontend-Architecture Routing And Naviga
+- Frontend-Architecture Monorepo And Multi
+- Frontend-Architecture Observability And 
+- Frontend-Architecture Ci Cd Pipeline Des
+- Javascript Values And Coercion
+- Javascript Functions: arguments
+- Jest-Rtl Async Testing
+- Jest-Rtl Snapshot Testing
+- Jest-Rtl Coverage And Configuration
+- Jest-Rtl Rtl Core Philosophy
+- Jest-Rtl User Interaction
+- Jest-Rtl Async Utilities
+- Jest-Rtl Mocking Network Requests
+- Jest-Rtl Testing Hooks
+- Jest-Rtl Debugging Tests
+- Nginx Configuration Language
+- Nginx Server And Location
+- Nodejs Testing: Concurrency
+- Nodejs Testing: Concurrency inside a tes
+- Nodejs Testing: Choosing quickly
+- Nodejs Testing: Choose Jest when
+- Nodejs Testing: Reporters
+- Nodejs Syllabus: Background work
+- Playwright Test Runner
+- Playwright Actions And Interactions
+- Playwright Navigation And Network
+- Playwright Authentication And State
+- Playwright Parallelism And Sharding
+- Playwright Component Testing
+- Playwright Ci Integration
+- Playwright Advanced Patterns
+- Postgresql Architecture: Choosing
+- Redux-Toolkit Slices And Actions
+- Redux-Toolkit Async Thunks
+- Redux-Toolkit Middleware: 1. Under-The-H
+- Redux-Toolkit React Redux Integration
+- Storybook Story Anatomy
+- Storybook Decorators: 1. Under-The-Hood 
+- Storybook Composition And Design Systems
+- Storybook Multi Framework Support
+- Storybook Build And Configuration
+- Storybook Advanced Patterns
+- Tanstack-Query Usequery Deep Dive
+- Tanstack-Query Background Refetching
+- Tanstack-Query Dependent And Parallel Qu
+- Tanstack-Query Prefetching And Ssr
+- Tanstack-Query Suspense Integration
+- Tanstack-Query Devtools: 1. Under-The-Ho
+- Tanstack-Query Query Cancellation
+- Vite Configuration: 1. Under-The-Hood Me
+- Vite Build System Rollup
+- Vite Asset Handling
+- Vite Worker And Wasm Support
+- Vite Deployment Considerations
+- Web-Vitals-Performance Legacy And Lab Me
+- Web-Vitals-Performance Real User Monitor
+- Web-Vitals-Performance Budgets And Advan
+- Web-Vitals-Performance Real World Workfl
+- Webpack Configuration: 1. Under-The-Hood
+- Webpack Loaders: 1. Under-The-Hood Mecha
+- Webpack Code Splitting
+- Webpack Dev Server And Hmr
+- Webpack Advanced Custom Tooling
+- Reviews: The ★ problem
+- Sandbox Git P0
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Css Selectors: The set
+- Css Flexbox: The two axes
+- Expressjs Reviews: 1. Verdict
+- Framer-Motion Core Concepts
+- Framer-Motion Variants: 1. Under-The-Hoo
+- Framer-Motion Keyframes: 1. Under-The-Ho
+- Framer-Motion Performance Considerations
+- Framer-Motion Real World Workflows And R
+- Frontend-Architecture Testing Strategy
+- Frontend-Architecture Performance And Sc
+- Jest-Rtl Rtl Queries
+- Jest-Rtl Accessibility Testing
+- Jest-Rtl Real World Workflows And Recipe
+- Mongodb Crud: Combining them
+- Nodejs Modules: A realistic one
+- Nodejs Testing: Always close the server
+- Nodejs Testing: Database fixtures
+- Playwright Core Architecture
+- Playwright Auto Waiting And Assertions
+- Playwright Debugging Tools
+- Playwright Api Testing
+- Postgresql Psql: \df for functions
+- Postgresql Psql: Atomic scripts
+- Postgresql Psql: History
+- Postgresql Psql: -At is the mode
+- Postgresql Schema From Node
+- Redux-Toolkit Store Setup
+- Redux-Toolkit Slices And Actions
+- Redux-Toolkit Rtk Query
+- Redux-Toolkit Selectors And Normalizatio
+- Redux-Toolkit Typescript Integration
+- Redux-Toolkit Code Splitting
+- Storybook Addons Ecosystem
+- Storybook Testing Integration
+- Storybook Publishing And Deployment
+- Tanstack-Query Caching And Invalidation
+- Tanstack-Query Pagination And Infinite Q
+- Tanstack-Query Optimistic Updates Patter
+- Vite Core Architecture
+- Vite Cli And Scaffolding
+- Vite Plugin System
+- Vite Path Resolution And Aliases
+- Vite Testing Integration
+- Vite Migration Recipes
+- Web-Vitals-Performance Bundle And Media 
+- Webpack Module Resolution
+- Webpack Asset Modules
+- Webpack Optimization: 1. Under-The-Hood 
+- Webpack Performance Analysis
+- Reviews: 1 · Structural verification
+- Sandbox Css: dependencies
+- Sandbox P8 Security
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Ts P1
+- Css Selectors: The specificity differenc
+- Css Selectors: Naming state values
+- Framer-Motion Orchestration And Staggeri
+- Javascript How Javascript Runs
+- Javascript How Javascript Runs
+- Javascript How Javascript Runs
+- Javascript Complexity: Best, average and
+- Nodejs Modules: Importing CommonJS from 
+- Nodejs Modules: Erasable syntax only
+- Nodejs Modules: Dual CJS/ESM packages
+- Nodejs Testing: Do not build a DI contai
+- Nodejs Testing: Reading it well
+- Nodejs Testing: Isolation between tests
+- Nodejs Syllabus: Deliberately not here
+- Playwright Real World Workflows And Reci
+- Postgresql Architecture: From Node
+- Postgresql Architecture: See it on the s
+- Postgresql Psql: Into a container
+- Postgresql Psql: Machine-readable output
+- Postgresql Psql: \h — SQL syntax
+- Postgresql Psql: Editing the buffer
+- Postgresql Psql: Built-in variables
+- Postgresql Psql: Exporting
+- Postgresql Psql: Building a seed script
+- Postgresql Psql: \dp — the table privile
+- Storybook Real World Workflows And Recip
+- Webpack Loaders: 1. Under-The-Hood Mecha
+- Sandbox P9 Testing
+- Sandbox Git P0
+- Sandbox Js P0
+- Sandbox P7 Background Work
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Javascript How Javascript Runs
+- Javascript How Javascript Runs
+- Javascript Storefront: Pagination
+- Nodejs Modules: Conditional exports
+- Nodejs Modules: Keeping up to date
+- Postgresql Architecture: From Node
+- Postgresql Architecture: From Node
+- Postgresql Architecture: From Node
+- Postgresql Architecture: From Node
+- Postgresql Architecture: Trade-off
+- Postgresql Psql: Trade-off
+- Postgresql Psql: Reading the rest of an 
+- Storybook Story Format
+- Typescript Narrowing: Trade-off
+- Sandbox P8 Security
+- Sandbox P7 Background Work
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Phase 0
+- Sandbox Pg Phase 0
+- Sandbox Readme.Md: Containers
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P2
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Express Verify
+- Sandbox Js P0
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Phase 0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P2
+- Sandbox P8 Security
+- Javascript Functions: 2. bind
+- Mongodb Schema Design
+- Storybook How Storybook Runs
+- Storybook How Storybook Runs
+- Storybook How Storybook Runs
+- Reviews: PostgreSQL — review · Fable
+- Sandbox Express5 Check
+- Sandbox Js P0
+- Sandbox Js P1
+- Sandbox Js P1
+- Sandbox Js P2
+- Sandbox Js P2
+- Sandbox P10 Observability
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P2
+- Claude.Md: devbible
+- Nodejs Testing: Contract testing
+- Nodejs Syllabus: Cancellation and contex
+- Reviews Unvalidated.Md: Not yet validate
+- Storybook Readme.Md: Prerequisites
+- Sandbox P10 Observability
+- Reviews: If you only do five
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Js P2
+- Sandbox Js P2
+- Sandbox Js P2
+- Sandbox Js P3
+- Sandbox Js P3
+- Sandbox P7 Background Work
+- Sandbox P7 Background Work
+- Sandbox P7 Background Work
+- Sandbox P8 Security
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Ts P0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Agents.Md: Grok project rules — devbible
+- Mongodb Schema Design
+- Postgresql Architecture: Coverage
+- React Ssr Hydration
+- Docusaurus.Config.Js: docusaurus.config.
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Js P0
+- Sandbox Js P1
+- Sandbox Js P2
+- Sandbox Js P3
+- Sandbox P10 Observability
+- Sandbox P8 Security
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Pg Api
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Src: progress.js
+- Sidebars.Js: sidebars.js
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Js P0
+- Sandbox Js P0
+- Sandbox Js P0
+- Sandbox Js P1
+- Sandbox Js P2
+- Sandbox Js P2
+- Sandbox Js P2
+- Sandbox P10 Observability
+- Sandbox P7 Background Work
+- Sandbox P7 Background Work
+- Sandbox P8 Security
+- Sandbox P8 Security
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Api
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Src: index.js
+- .Agents: graphify
+- .Agents: Workflow: graphify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Express Verify
+- Sandbox Git P0
+- Sandbox Js P0
+- Sandbox Js P1
+- Sandbox Js P1
+- Sandbox Js P2
+- Sandbox Js P3
+- Sandbox Js P3
+- Sandbox P10 Observability
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox P9 Testing
+- Sandbox Pg Phase 0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P0
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P1
+- Sandbox Ts P2
+- Sandbox Ts P2
 
 ## God Nodes (most connected - your core abstractions)
-1. `Phase 1 The type vocabulary` - 23 edges
-2. `Phase 5 Networking HTTP and processes` - 19 edges
-3. `Phase 1 — JSX and what a component returns` - 17 edges
-4. `compilerOptions` - 16 edges
-5. `Phase 1 Selectors overview` - 15 edges
-6. `section()` - 14 edges
-7. `runApp()` - 14 edges
-8. `section()` - 14 edges
-9. `Phase 6 — Data access` - 14 edges
-10. `Phase 8 — Security` - 14 edges
+1. `compilerOptions` - 16 edges
+2. `Dev Bible — final re-review prompt` - 15 edges
+3. `section()` - 14 edges
+4. `runApp()` - 14 edges
+5. `section()` - 14 edges
+6. `launch()` - 13 edges
+7. `section()` - 13 edges
+8. `3. Production-Grade Examples` - 13 edges
+9. `3. Production-Grade Examples` - 13 edges
+10. `The twelve` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `graphify usage rules` --semantically_similar_to--> `graphify knowledge graph`  [INFERRED] [semantically similar]
-  CLAUDE.md → .agents/rules/graphify.md
-- `Claude memory store` --semantically_similar_to--> `Grok memory store`  [INFERRED] [semantically similar]
-  CLAUDE.md → AGENTS.md
-- `Explanation cadence` --semantically_similar_to--> `Incremental working process`  [INFERRED] [semantically similar]
-  AGENTS.md → instructions.md
-- `Run before you write` --semantically_similar_to--> `Never invent a number or console output`  [INFERRED] [semantically similar]
-  sandbox/README.md → drafts/GROK-PROMPT.md
-- `Deploy to GitHub Pages` --conceptually_related_to--> `Yarn 4.18 package manager`  [INFERRED]
-  .github/workflows/deploy.yml → instructions.md
+- `inner()` --indirect_call--> `level2()`  [INFERRED]
+  sandbox/js-p3/ex7-scope.mjs → sandbox/js-p0/ex1-stack.mjs
+- `inner()` --indirect_call--> `level1()`  [INFERRED]
+  sandbox/js-p3/ex7-scope.mjs → sandbox/js-p0/ex1-stack.mjs
+- `SidebarCollapseAll()` --indirect_call--> `getServerSnapshot()`  [INFERRED]
+  src/components/SidebarCollapseAll/index.js → src/components/SidebarCollapseAll/store.js
+- `SidebarCollapseAll()` --indirect_call--> `getSnapshot()`  [INFERRED]
+  src/components/SidebarCollapseAll/index.js → src/components/SidebarCollapseAll/store.js
+- `SidebarCollapseAll()` --indirect_call--> `subscribe()`  [INFERRED]
+  src/components/SidebarCollapseAll/index.js → src/components/SidebarCollapseAll/store.js
 
 ## Import Cycles
 - None detected.
 
-## Hyperedges (group relationships)
-- **CSS rendering pipeline stages** — docs_css_pages_phase_0_how_css_runs_02_the_rendering_pipeline_style_stage, docs_css_pages_phase_0_how_css_runs_02_the_rendering_pipeline_layout_stage, docs_css_pages_phase_0_how_css_runs_02_the_rendering_pipeline_paint_stage, docs_css_pages_phase_0_how_css_runs_02_the_rendering_pipeline_composite_stage [EXTRACTED 1.00]
-- **Four ways CSS reaches a page** — docs_css_pages_phase_0_how_css_runs_03_how_stylesheets_reach_the_page_link_element, docs_css_pages_phase_0_how_css_runs_03_how_stylesheets_reach_the_page_style_element, docs_css_pages_phase_0_how_css_runs_03_how_stylesheets_reach_the_page_inline_style, docs_css_pages_phase_0_how_css_runs_03_how_stylesheets_reach_the_page_at_import [EXTRACTED 1.00]
-- **Shipping a CSS feature safely** — docs_css_pages_phase_0_how_css_runs_05_css_fails_silently_silent_discard, docs_css_pages_phase_0_how_css_runs_09_supports_feature_queries_at_supports, docs_css_pages_phase_0_how_css_runs_10_baseline_and_shipping_widely_available, docs_css_pages_phase_0_how_css_runs_10_baseline_and_shipping_limited_availability, docs_css_pages_phase_0_how_css_runs_09_supports_feature_queries_progressive_enhancement [INFERRED 0.85]
-- **Style isolation: @scope, Shadow DOM, CSS Modules** — docs_css_pages_phase_1_selectors_14_scope_at_scope, docs_css_pages_phase_1_selectors_14_scope_donut_scoping, docs_css_pages_phase_1_selectors_14_scope_css_modules, docs_css_pages_phase_1_selectors_16_shadow_dom_selectors_shadow_boundary [EXTRACTED 1.00]
-- **Phase 1 pseudo-class and pseudo-element family** — docs_css_pages_phase_1_selectors_07_structural_pseudo_classes_nth_child, docs_css_pages_phase_1_selectors_08_state_pseudo_classes_focus_visible, docs_css_pages_phase_1_selectors_09_form_state_pseudo_classes_user_invalid, docs_css_pages_phase_1_selectors_10_pseudo_elements_before_after, docs_css_pages_phase_1_selectors_11_not_empty_root_not [EXTRACTED 1.00]
-- **Cascade control: order, layers, specificity, shorthands** — docs_css_pages_phase_2_cascade_01_what_the_cascade_compares_six_criteria, docs_css_pages_phase_2_cascade_02_layer_readme_at_layer, docs_css_pages_phase_2_cascade_02_layer_02_precedence_and_important_implicit_final_layer, docs_css_pages_phase_2_cascade_03_specificity_counted_properly_triple, docs_css_pages_phase_2_cascade_04_the_shorthand_reset_trap_writes_all_longhands [EXTRACTED 1.00]
-- **Express 5 breaking changes** — docs_expressjs_pages_phase_0_express_basics_06_express_5_vs_4_path_rewrite, docs_expressjs_pages_phase_0_express_basics_06_express_5_vs_4_named_splat, docs_expressjs_pages_phase_0_express_basics_06_express_5_vs_4_async_error_forwarding, docs_expressjs_pages_phase_0_express_basics_05_application_settings_query_parser_simple, docs_expressjs_pages_phase_1_routing_05_path_matching_express5_boot_time_throw, docs_expressjs_pages_phase_1_routing_05_path_matching_express5_migration_map [EXTRACTED 1.00]
-- **Three ways to serve files from Express** — docs_expressjs_pages_phase_4_responses_08_streaming_and_downloads_res_sendfile, docs_expressjs_pages_phase_4_responses_08_streaming_and_downloads_res_download, docs_expressjs_pages_phase_4_responses_08_streaming_and_downloads_root_option [EXTRACTED 1.00]
-- **Express four-part live syllabus** — docs_expressjs_syllabus_01_foundations, docs_expressjs_syllabus_02_http_surface, docs_expressjs_syllabus_03_api_product, docs_expressjs_syllabus_04_edge_and_ops, docs_expressjs_reviews_proposed_syllabus_readme_114_topics [EXTRACTED 1.00]
-- **Git content-addressed object model** — docs_git_pages_phase_0_how_git_stores_things_01_what_git_is_content_hash, docs_git_pages_phase_0_how_git_stores_things_03_object_types_blob, docs_git_pages_phase_0_how_git_stores_things_03_object_types_tree, docs_git_pages_phase_0_how_git_stores_things_03_object_types_commit, docs_git_pages_phase_0_how_git_stores_things_03_object_types_annotated_tag, docs_git_pages_phase_0_how_git_stores_things_02_commit_is_a_snapshot_snapshot_model [EXTRACTED 1.00]
-- **Git Phase 0 on-disk storage model** — docs_git_pages_phase_0_how_git_stores_things_06_refs_and_head_git_ref, docs_git_pages_phase_0_how_git_stores_things_06_refs_and_head_head, docs_git_pages_phase_0_how_git_stores_things_07_commit_graph_dag, docs_git_pages_phase_0_how_git_stores_things_09_git_directory_tour_dot_git, docs_git_pages_phase_0_how_git_stores_things_11_loose_objects_and_packfiles_packfile, docs_git_pages_phase_0_how_git_stores_things_13_object_format_hash_framing [EXTRACTED 1.00]
-- **JavaScript spec engine host split** — docs_javascript_pages_phase_0_how_javascript_runs_01_engine_runtime_spec_spec, docs_javascript_pages_phase_0_how_javascript_runs_01_engine_runtime_spec_engine, docs_javascript_pages_phase_0_how_javascript_runs_01_engine_runtime_spec_host, docs_javascript_pages_phase_0_how_javascript_runs_01_engine_runtime_spec_globalthis, docs_javascript_pages_phase_0_how_javascript_runs_06_hosts_and_globals_four_hosts, docs_javascript_pages_phase_0_how_javascript_runs_06_hosts_and_globals_shared_web_platform [EXTRACTED 1.00]
-- **HTML script loading forms and the module waterfall** — docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_defer, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_async, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_script_type_module, docs_javascript_pages_phase_0_how_javascript_runs_07_loading_scripts_module_request_waterfall [EXTRACTED 1.00]
-- **JavaScript equality algorithms and NaN disagreement** — docs_javascript_pages_phase_1_values_and_coercion_03_equality_four_algorithms, docs_javascript_pages_phase_1_values_and_coercion_03_equality_strict_vs_loose, docs_javascript_pages_phase_1_values_and_coercion_11_nan_nan_not_equal, docs_javascript_pages_phase_1_values_and_coercion_11_nan_includes_vs_indexof [EXTRACTED 1.00]
-- **ToPrimitive ToNumber and overloaded plus** — docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_toprimitive, docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_tonumber, docs_javascript_pages_phase_1_values_and_coercion_08_type_coercion_plus_concatenation, docs_javascript_pages_phase_0_how_javascript_runs_12_reading_the_spec_toprimitive [EXTRACTED 1.00]
-- **Four JavaScript equality algorithms** — docs_javascript_pages_phase_1_values_and_coercion_16_object_is_and_zero_loose_equality, docs_javascript_pages_phase_1_values_and_coercion_16_object_is_and_zero_strict_equality, docs_javascript_pages_phase_1_values_and_coercion_16_object_is_and_zero_samevaluezero, docs_javascript_pages_phase_1_values_and_coercion_16_object_is_and_zero_object_is [EXTRACTED 1.00]
-- **Short-circuit and nullish operator family** — docs_javascript_pages_phase_2_operators_03_logical_operators_return_operands, docs_javascript_pages_phase_2_operators_03_logical_operators_short_circuit, docs_javascript_pages_phase_2_operators_03_logical_operators_nullish_default, docs_javascript_pages_phase_2_operators_02_assignment_logical_assignment, docs_javascript_pages_phase_2_operators_02_assignment_nullish_assignment, docs_javascript_pages_phase_2_operators_04_optional_chaining_optional_chaining, docs_javascript_pages_phase_2_operators_04_optional_chaining_with_nullish [INFERRED 0.85]
-- **Function definition forms and hoisting** — docs_javascript_pages_phase_3_functions_01_declarations_expressions_arrows_declaration_hoist, docs_javascript_pages_phase_3_functions_01_declarations_expressions_arrows_expression_tdz, docs_javascript_pages_phase_3_functions_01_declarations_expressions_arrows_arrow_no_prototype, docs_javascript_pages_phase_3_functions_01_declarations_expressions_arrows_inferred_name [EXTRACTED 1.00]
-- **this binding rules and the four lost-this fixes** — docs_javascript_pages_phase_3_functions_03_this_01_the_four_rules_four_this_binding_rules, docs_javascript_pages_phase_3_functions_03_this_02_losing_and_fixing_this_lost_this, docs_javascript_pages_phase_3_functions_03_this_02_losing_and_fixing_this_arrow_callback_fix, docs_javascript_pages_phase_3_functions_03_this_02_losing_and_fixing_this_bind_identity_trap, docs_javascript_pages_phase_3_functions_03_this_02_losing_and_fixing_this_class_field_arrow, docs_javascript_pages_phase_3_functions_03_this_02_losing_and_fixing_this_thisarg [EXTRACTED 1.00]
-- **MDN four kinds of hoisting as two-step scope entry** — docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_01_the_two_step_scope_entry_two_step_scope_entry, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_01_the_two_step_scope_entry_value_hoisting, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_01_the_two_step_scope_entry_declaration_hoisting, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_01_the_two_step_scope_entry_behavioral_hoisting, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_01_the_two_step_scope_entry_side_effect_hoisting [EXTRACTED 1.00]
-- **Temporal dead zone across scopes and files** — docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_readme_hoisting_and_tdz, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_05_block_functions_and_parameters_parameter_list_tdz, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_06_classes_and_circular_imports_class_lexical_declaration, docs_javascript_pages_phase_3_functions_08_hoisting_and_tdz_06_classes_and_circular_imports_circular_esm_import [EXTRACTED 1.00]
-- **Four existence checks that disagree on purpose** — docs_javascript_pages_phase_4_objects_and_classes_03_existence_checks_and_delete_01_in_and_hasown_in_operator, docs_javascript_pages_phase_4_objects_and_classes_03_existence_checks_and_delete_01_in_and_hasown_object_hasown, docs_javascript_pages_phase_4_objects_and_classes_03_existence_checks_and_delete_01_in_and_hasown_hasownproperty, docs_javascript_pages_phase_4_objects_and_classes_03_existence_checks_and_delete_02_undefined_holes_and_brand_checks_undefined_vs_missing [EXTRACTED 1.00]
-- **Copy operations picked by what you can lose** — docs_javascript_pages_phase_4_objects_and_classes_04_shallow_vs_deep_copy_01_what_shallow_means_shallow_copy, docs_javascript_pages_phase_4_objects_and_classes_04_shallow_vs_deep_copy_02_structuredclone_structuredclone, docs_javascript_pages_phase_4_objects_and_classes_04_shallow_vs_deep_copy_03_json_and_hand_written_json_round_trip_clone, docs_javascript_pages_phase_4_objects_and_classes_04_shallow_vs_deep_copy_03_json_and_hand_written_handwritten_deep_clone [EXTRACTED 1.00]
-- **Where a class member lives** — docs_javascript_pages_phase_4_objects_and_classes_06_class_readme_member_destinations, docs_javascript_pages_phase_4_objects_and_classes_06_class_02_static_and_accessors_static_members, docs_javascript_pages_phase_4_objects_and_classes_06_class_02_static_and_accessors_class_accessors, docs_javascript_pages_phase_4_objects_and_classes_06_class_03_private_elements_private_elements [EXTRACTED 1.00]
-- **Four ways to keep this on a detached method** — docs_javascript_pages_phase_4_objects_and_classes_07_this_in_methods_02_the_fixes_bind_in_constructor, docs_javascript_pages_phase_4_objects_and_classes_07_this_in_methods_02_the_fixes_arrow_class_field, docs_javascript_pages_phase_4_objects_and_classes_07_this_in_methods_02_the_fixes_wrap_at_call_site, docs_javascript_pages_phase_4_objects_and_classes_07_this_in_methods_02_the_fixes_call_apply_thisarg_fix [EXTRACTED 1.00]
-- **Iteration methods that skip holes** — docs_javascript_pages_phase_5_built_in_library_01_array_creation_and_shape_02_holes_and_length_hole_skipping_methods, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_01_choosing_a_method_foreach, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_01_choosing_a_method_map, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_01_choosing_a_method_filter, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_01_choosing_a_method_some, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_01_choosing_a_method_every, docs_javascript_pages_phase_5_built_in_library_05_reduce_01_the_shape_reduce, docs_javascript_pages_phase_5_built_in_library_04_array_iteration_methods_02_callbacks_holes_and_async_find_visits_holes [EXTRACTED 1.00]
-- **ES2023 non-mutating array counterparts** — docs_javascript_pages_phase_5_built_in_library_06_sort_02_stability_and_mutation_tosorted, docs_javascript_pages_phase_5_built_in_library_06_sort_02_stability_and_mutation_nonmutating_family, docs_javascript_pages_phase_5_built_in_library_06_sort_02_stability_and_mutation_reverse, docs_javascript_pages_phase_6_iteration_and_destructuring_03_spread_with_iterables_02_where_it_earns_its_place_immutable_updates [EXTRACTED 1.00]
-- **Own enumerable properties vs internal slots** — docs_javascript_pages_phase_5_built_in_library_09_json_01_stringify_silent_losses, docs_javascript_pages_phase_5_built_in_library_09_json_01_stringify_map_set_empty, docs_javascript_pages_phase_5_built_in_library_10_map_vs_object_02_choosing_and_costs_no_serialize, docs_javascript_pages_phase_6_iteration_and_destructuring_03_spread_with_iterables_01_two_operations_one_syntax_object_spread [EXTRACTED 1.00]
-- **Iterator protocol consumers** — docs_javascript_pages_phase_6_iteration_and_destructuring_02_loop_forms_01_what_each_iterates_for_of, docs_javascript_pages_phase_6_iteration_and_destructuring_02_loop_forms_01_what_each_iterates_symbol_iterator, docs_javascript_pages_phase_6_iteration_and_destructuring_03_spread_with_iterables_01_two_operations_one_syntax_array_call_spread, docs_javascript_pages_phase_5_built_in_library_10_map_vs_object_01_the_six_differences_iteration [EXTRACTED 1.00]
-- **Event loop three facilities** — docs_javascript_pages_phase_7_async_02_the_event_loop_01_stack_queue_heap_heap, docs_javascript_pages_phase_7_async_02_the_event_loop_01_stack_queue_heap_call_stack, docs_javascript_pages_phase_7_async_02_the_event_loop_01_stack_queue_heap_job_queue, docs_javascript_pages_phase_7_async_02_the_event_loop_01_stack_queue_heap_event_loop [EXTRACTED 1.00]
-- **Sync then microtasks then one task** — docs_javascript_pages_phase_7_async_03_microtasks_vs_macrotasks_01_the_drain_order_task, docs_javascript_pages_phase_7_async_03_microtasks_vs_macrotasks_01_the_drain_order_microtask, docs_javascript_pages_phase_7_async_03_microtasks_vs_macrotasks_01_the_drain_order_drain_until_empty, docs_javascript_pages_phase_7_async_03_microtasks_vs_macrotasks_01_the_drain_order_rendering_between_tasks [EXTRACTED 1.00]
-- **Promise contract answering inversion of control** — docs_javascript_pages_phase_7_async_04_callbacks_03_inversion_of_control_inversion_of_control, docs_javascript_pages_phase_7_async_04_callbacks_03_inversion_of_control_promise_three_guarantees, docs_javascript_pages_phase_7_async_05_promises_01_the_three_states_promise_three_states, docs_javascript_pages_phase_7_async_05_promises_02_then_catch_finally_then_always_async, docs_javascript_pages_phase_7_async_04_callbacks_03_inversion_of_control_once_wrapper [EXTRACTED 1.00]
-- **What await does: evaluate, suspend, return, one tick, microtask** — docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_await_evaluates_immediately, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_await_suspends_and_returns, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_one_tick_minimum, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_continuation_is_microtask, docs_javascript_pages_phase_7_async_07_async_await_02_where_it_suspends_sync_until_first_await [EXTRACTED 1.00]
-- **Node.js is V8 plus libuv plus C++ bindings plus the standard library** — docs_nodejs_pages_phase_0_runtime_model_01_what_node_is_v8, docs_nodejs_pages_phase_0_runtime_model_01_what_node_is_libuv, docs_nodejs_pages_phase_0_runtime_model_01_what_node_is_cpp_bindings, docs_nodejs_pages_phase_0_runtime_model_01_what_node_is_node_stdlib [EXTRACTED 1.00]
-- **V8 four-tier compilation: Ignition, Sparkplug, Maglev, TurboFan** — docs_nodejs_pages_phase_0_runtime_model_10_how_v8_optimizes_ignition, docs_nodejs_pages_phase_0_runtime_model_10_how_v8_optimizes_sparkplug, docs_nodejs_pages_phase_0_runtime_model_10_how_v8_optimizes_maglev, docs_nodejs_pages_phase_0_runtime_model_10_how_v8_optimizes_turbofan [EXTRACTED 1.00]
-- **CJS and ESM module systems and how they meet** — docs_nodejs_pages_phase_1_modules_02_commonjs_commonjs, docs_nodejs_pages_phase_1_modules_03_node_prefix_node_prefix, docs_nodejs_pages_phase_1_modules_04_cjs_esm_interop_cjs_esm_interop, docs_nodejs_pages_phase_1_modules_05_module_resolution_module_resolution, docs_nodejs_pages_phase_1_modules_06_circular_dependencies_circular_dependencies [EXTRACTED 1.00]
-- **Declaring, locking, and publishing a package surface** — docs_nodejs_pages_phase_1_modules_07_package_json_package_json, docs_nodejs_pages_phase_1_modules_08_exports_map_exports_map, docs_nodejs_pages_phase_1_modules_07_package_json_files_allowlist, docs_nodejs_pages_phase_1_modules_09_semver_and_lockfiles_lockfile, docs_nodejs_pages_phase_1_modules_13_publishing_publishing [EXTRACTED 1.00]
-- **Logs, traces, and error issues as complementary signals** — docs_nodejs_pages_phase_10_observability_01_structured_logging_structured_logging, docs_nodejs_pages_phase_10_observability_03_correlation_ids_correlation_ids, docs_nodejs_pages_phase_10_observability_05_opentelemetry_opentelemetry, docs_nodejs_pages_phase_10_observability_06_error_tracking_error_tracking [EXTRACTED 1.00]
-- **Four golden signals** — docs_nodejs_pages_phase_10_observability_11_golden_signals_latency, docs_nodejs_pages_phase_10_observability_11_golden_signals_traffic, docs_nodejs_pages_phase_10_observability_11_golden_signals_errors, docs_nodejs_pages_phase_10_observability_11_golden_signals_saturation [EXTRACTED 1.00]
-- **Node memory forensics workflow** — docs_nodejs_pages_phase_10_observability_13_process_metrics_rss, docs_nodejs_pages_phase_10_observability_13_process_metrics_heapused, docs_nodejs_pages_phase_10_observability_17_memory_leaks_heap_snapshot, docs_nodejs_pages_phase_10_observability_17_memory_leaks_retainer_path, docs_nodejs_pages_phase_10_observability_18_common_leak_sources_unbounded_cache, docs_nodejs_pages_phase_10_observability_21_gc_basics_generational_gc [INFERRED 0.85]
-- **Container boot and drain lifecycle** — docs_nodejs_pages_phase_11_deployment_01_twelve_factor_config_env_validation_at_boot, docs_nodejs_pages_phase_11_deployment_02_boot_sequence_validate_connect_listen_ready, docs_nodejs_pages_phase_10_observability_10_health_checks_readiness_probe, docs_nodejs_pages_phase_10_observability_10_health_checks_readiness_drain, docs_nodejs_pages_phase_11_deployment_03_dockerizing_node_exec_form_cmd, docs_nodejs_pages_phase_11_deployment_04_pid1_and_signals_node_as_pid1 [INFERRED 0.85]
-- **Rolling, canary, and blue/green deploy strategies** — docs_nodejs_pages_phase_11_deployment_07_zero_downtime_deploys_rolling_update, docs_nodejs_pages_phase_11_deployment_13_blue_green_canary_blue_green, docs_nodejs_pages_phase_11_deployment_13_blue_green_canary_canary, docs_nodejs_pages_phase_11_deployment_07_zero_downtime_deploys_expand_contract_migrations [EXTRACTED 1.00]
-- **Native compute and isolation options in Node** — docs_nodejs_pages_phase_12_native_01_node_vm_node_vm, docs_nodejs_pages_phase_12_native_02_webassembly_webassembly, docs_nodejs_pages_phase_12_native_04_node_api_node_api, docs_nodejs_pages_phase_12_native_05_cpp_addons_cpp_addon, docs_nodejs_pages_phase_12_native_06_ffi_ffi, docs_nodejs_pages_phase_12_native_07_wasi_wasi [INFERRED 0.85]
-- **One event-loop tick** — docs_nodejs_pages_phase_2_async_01_event_loop_phases_timers_phase, docs_nodejs_pages_phase_2_async_02_poll_phase_poll_phase, docs_nodejs_pages_phase_2_async_01_event_loop_phases_check_phase, docs_nodejs_pages_phase_2_async_01_event_loop_phases_close_callbacks, docs_nodejs_pages_phase_2_async_01_event_loop_phases_nexttick_and_microtasks [EXTRACTED 1.00]
-- **Event-loop checkpoint drain order** — docs_nodejs_pages_phase_2_async_03_microtasks_and_macrotasks_nexttick_queue, docs_nodejs_pages_phase_2_async_03_microtasks_and_macrotasks_microtask_queue, docs_nodejs_pages_phase_2_async_03_microtasks_and_macrotasks_macrotasks, docs_nodejs_pages_phase_2_async_04_setimmediate_vs_settimeout_setimmediate, docs_nodejs_pages_phase_2_async_04_setimmediate_vs_settimeout_settimeout_zero_clamp [EXTRACTED 1.00]
-- **Four Promise combinators** — docs_nodejs_pages_phase_2_async_09_combinators_promise_all, docs_nodejs_pages_phase_2_async_09_combinators_promise_allsettled, docs_nodejs_pages_phase_2_async_09_combinators_promise_race, docs_nodejs_pages_phase_2_async_09_combinators_promise_any [EXTRACTED 1.00]
-- **Process-level error escape and crash vs handle** — docs_nodejs_pages_phase_2_async_12_floating_promises_floating_promise, docs_nodejs_pages_phase_2_async_15_unhandled_rejections_unhandled_rejection, docs_nodejs_pages_phase_2_async_15_unhandled_rejections_uncaught_exception, docs_nodejs_pages_phase_2_async_16_error_design_operational_vs_programmer, docs_nodejs_pages_phase_2_async_15_unhandled_rejections_crash_handler [INFERRED 0.85]
-- **The four Node stream types** — docs_nodejs_pages_phase_3_buffers_streams_08_stream_types_readable, docs_nodejs_pages_phase_3_buffers_streams_08_stream_types_writable, docs_nodejs_pages_phase_3_buffers_streams_08_stream_types_duplex, docs_nodejs_pages_phase_3_buffers_streams_08_stream_types_transform [EXTRACTED 1.00]
-- **Backpressure and safe consumption** — docs_nodejs_pages_phase_3_buffers_streams_09_backpressure_write_returns_false, docs_nodejs_pages_phase_3_buffers_streams_09_backpressure_drain_event, docs_nodejs_pages_phase_3_buffers_streams_10_pipeline_pipeline, docs_nodejs_pages_phase_3_buffers_streams_11_for_await_of_for_await_of, docs_nodejs_pages_phase_3_buffers_streams_19_highwatermark_tuning_highwatermark [INFERRED 0.85]
-- **Phase 3 gate streaming pipeline** — docs_nodejs_pages_phase_3_buffers_streams_readme_phase_gate, docs_nodejs_pages_phase_3_buffers_streams_09_backpressure_backpressure, docs_nodejs_pages_phase_3_buffers_streams_13_transform_streams_01_transform_and_boundaries_splitlines, docs_nodejs_pages_phase_3_buffers_streams_16_zlib_gzip_level, docs_nodejs_pages_phase_3_buffers_streams_10_pipeline_pipeline [EXTRACTED 1.00]
-- **Path containment defense in depth** — docs_nodejs_pages_phase_4_filesystem_03_path_path_resolve, docs_nodejs_pages_phase_4_filesystem_03_path_join_vs_resolve_security, docs_nodejs_pages_phase_4_filesystem_04_path_traversal_containment_check, docs_nodejs_pages_phase_4_filesystem_04_path_traversal_realpath_recheck, docs_nodejs_pages_phase_4_filesystem_04_path_traversal_zip_slip, docs_nodejs_pages_phase_4_filesystem_13_permissions_and_symlinks_readlink_vs_realpath [EXTRACTED 1.00]
-- **Correct file-upload endpoint** — docs_nodejs_pages_phase_4_filesystem_readme_upload_phase_gate, docs_nodejs_pages_phase_4_filesystem_10_atomic_writes_and_temp_files_mkdtemp, docs_nodejs_pages_phase_4_filesystem_10_atomic_writes_and_temp_files_midstream_upload_limit, docs_nodejs_pages_phase_4_filesystem_04_path_traversal_containment_check, docs_nodejs_pages_phase_4_filesystem_04_path_traversal_realpath_recheck, docs_nodejs_pages_phase_4_filesystem_10_atomic_writes_and_temp_files_atomic_write, docs_nodejs_pages_phase_4_filesystem_07_directories_rm_recursive [EXTRACTED 1.00]
-- **Outbound HTTP client discipline stack** — docs_nodejs_pages_phase_5_http_processes_05_fetch_res_ok, docs_nodejs_pages_phase_5_http_processes_05_fetch_unread_holds_pool, docs_nodejs_pages_phase_5_http_processes_06_outbound_timeouts_abort_signal_timeout, docs_nodejs_pages_phase_5_http_processes_07_keep_alive_and_agents_undici_dispatcher, docs_nodejs_pages_phase_5_http_processes_08_outbound_client_discipline_retry_policy, docs_nodejs_pages_phase_5_http_processes_08_outbound_client_discipline_idempotency_key [EXTRACTED 1.00]
-- **Process lifecycle from SIGTERM through drain to exit** — docs_nodejs_pages_phase_5_http_processes_16_signals_sigterm, docs_nodejs_pages_phase_5_http_processes_17_graceful_shutdown_server_close, docs_nodejs_pages_phase_5_http_processes_17_graceful_shutdown_close_idle_connections, docs_nodejs_pages_phase_5_http_processes_17_graceful_shutdown_readiness_vs_liveness, docs_nodejs_pages_phase_5_http_processes_15_process_exitcode_vs_exit, docs_nodejs_pages_phase_6_data_access_03_driver_lifecycle_pool_end [EXTRACTED 1.00]
-- **Process and thread isolation models** — docs_nodejs_pages_phase_5_http_processes_23_cluster_cluster_module, docs_nodejs_pages_phase_5_http_processes_24_worker_threads_worker, docs_nodejs_pages_phase_5_http_processes_19_child_process_fork, docs_nodejs_pages_phase_5_http_processes_21_ipc_process_send, docs_nodejs_pages_phase_5_http_processes_25_shared_memory_sharedarraybuffer [INFERRED 0.85]
-- **Untrusted input must never become parser syntax** — docs_nodejs_pages_phase_5_http_processes_20_shell_injection_no_shell, docs_nodejs_pages_phase_5_http_processes_19_child_process_execfile, docs_nodejs_pages_phase_6_data_access_02_parameterized_queries_placeholders, docs_nodejs_pages_phase_6_data_access_02_parameterized_queries_operator_injection [INFERRED 0.75]
-- **Session-scoped work needs one checked-out client** — docs_nodejs_pages_phase_6_data_access_04_postgresql_from_node_pool_vs_client, docs_nodejs_pages_phase_6_data_access_06_transactions_withtransaction, docs_nodejs_pages_phase_6_data_access_04_postgresql_from_node_listen_notify, docs_nodejs_pages_phase_6_data_access_16_cursors_pg_cursor, docs_nodejs_pages_phase_6_data_access_11_migrations_pg_advisory_lock, docs_nodejs_pages_phase_7_background_work_08_scheduled_jobs_advisory_lock_schedule [EXTRACTED 1.00]
-- **Who writes SQL and where driver types stop** — docs_nodejs_pages_phase_6_data_access_08_drivers_builders_orms_three_layers, docs_nodejs_pages_phase_6_data_access_10_repository_pattern_driver_types_must_not_leak, docs_nodejs_pages_phase_6_data_access_13_prisma_drizzle_schema_first_vs_sql_first, docs_nodejs_pages_phase_6_data_access_09_mongoose_mongoose, docs_nodejs_pages_phase_6_data_access_10_repository_pattern_orm_not_repository [INFERRED 0.85]
-- **At-least-once jobs: claim, stall, idempotency, outbox, DLQ** — docs_nodejs_pages_phase_7_background_work_02_job_queues_queue_properties, docs_nodejs_pages_phase_7_background_work_04_retries_and_stalled_jobs_stalled_vs_failed, docs_nodejs_pages_phase_7_background_work_05_job_idempotency_domain_derived_key, docs_nodejs_pages_phase_7_background_work_06_transactional_outbox_outbox_table, docs_nodejs_pages_phase_7_background_work_07_dead_letter_queues_poison_message [EXTRACTED 1.00]
-- **Correct outbound job** — docs_nodejs_pages_phase_7_background_work_09_outbound_side_effects_outbound_job_properties, docs_nodejs_pages_phase_7_background_work_09_outbound_side_effects_webhook_fan_out, docs_nodejs_pages_phase_7_background_work_09_outbound_side_effects_provider_idempotency_key, docs_nodejs_pages_phase_7_background_work_12_timeout_budgets_budget, docs_nodejs_pages_phase_7_background_work_14_retry_safe_failures_transient_vs_permanent, docs_nodejs_pages_phase_8_security_12_ssrf_ssrf [EXTRACTED 1.00]
-- **Phase 7 resilience stack** — docs_nodejs_pages_phase_7_background_work_12_timeout_budgets_budget, docs_nodejs_pages_phase_7_background_work_13_deadline_propagation_abort_signal_threading, docs_nodejs_pages_phase_7_background_work_14_retry_safe_failures_two_questions, docs_nodejs_pages_phase_7_background_work_15_backoff_and_jitter_full_jitter, docs_nodejs_pages_phase_7_background_work_16_concurrency_limiting_map_limit [EXTRACTED 1.00]
-- **Injection is one bug across interpreters** — docs_nodejs_pages_phase_8_security_08_injection_code_data_separation, docs_nodejs_pages_phase_8_security_08_injection_sql_injection, docs_nodejs_pages_phase_8_security_08_injection_nosql_injection, docs_nodejs_pages_phase_8_security_08_injection_command_injection [EXTRACTED 1.00]
-- **Node crypto stack: primitives, AEAD, Web Crypto, constant-time compare** — docs_nodejs_pages_phase_8_security_20_node_crypto_node_crypto, docs_nodejs_pages_phase_8_security_20_node_crypto_hmac_length_extension, docs_nodejs_pages_phase_8_security_16_timing_attacks_timing_safe_equal, docs_nodejs_pages_phase_8_security_25_web_crypto_web_crypto, docs_nodejs_pages_phase_8_security_26_encryption_and_keys_aes_256_gcm, docs_nodejs_pages_phase_8_security_26_encryption_and_keys_envelope_encryption [INFERRED 0.85]
-- **Volume-dependent attacks that rate limiting makes impractical** — docs_nodejs_pages_phase_8_security_14_redos_redos, docs_nodejs_pages_phase_8_security_16_timing_attacks_timing_attack, docs_nodejs_pages_phase_8_security_16_timing_attacks_user_enumeration, docs_nodejs_pages_phase_8_security_21_rate_limiting_rate_limiting, docs_nodejs_pages_phase_8_security_21_rate_limiting_brute_force_lockout [EXTRACTED 1.00]
-- **node:test toolkit: runner, assert, layers, injection, HTTP, async, mocks** — docs_nodejs_pages_phase_9_testing_01_node_test_runner_node_test, docs_nodejs_pages_phase_9_testing_02_node_assert_assert_strict, docs_nodejs_pages_phase_9_testing_03_unit_integration_e2e_test_layers, docs_nodejs_pages_phase_9_testing_04_testable_code_dependency_injection, docs_nodejs_pages_phase_9_testing_05_api_testing_ephemeral_server, docs_nodejs_pages_phase_9_testing_06_async_testing_forgotten_await, docs_nodejs_pages_phase_9_testing_07_mocking_t_mock [EXTRACTED 1.00]
-- **Stub, spy, mock, and fake form the test-doubles taxonomy** — docs_nodejs_pages_phase_9_testing_09_test_doubles_stub, docs_nodejs_pages_phase_9_testing_09_test_doubles_spy, docs_nodejs_pages_phase_9_testing_09_test_doubles_mock, docs_nodejs_pages_phase_9_testing_09_test_doubles_fake [EXTRACTED 1.00]
-- **Coverage, mutation testing, and property-based testing attack untested behaviour from opposite ends** — docs_nodejs_pages_phase_9_testing_11_coverage_execution_not_assertion, docs_nodejs_pages_phase_9_testing_17_property_and_mutation_mutation_testing, docs_nodejs_pages_phase_9_testing_17_property_and_mutation_property_based, docs_nodejs_pages_phase_9_testing_17_property_and_mutation_stryker [EXTRACTED 1.00]
-- **Consumer-owned contracts and expand-migrate-contract keep independently tested sides from drifting** — docs_nodejs_pages_phase_9_testing_19_contract_testing_contract, docs_nodejs_pages_phase_9_testing_19_contract_testing_shared_zod, docs_nodejs_pages_phase_9_testing_20_schema_compatibility_expand_migrate_contract, docs_nodejs_pages_phase_9_testing_20_schema_compatibility_direction_rule [INFERRED 0.85]
-- **WAL then dirty buffers then checkpoint** — docs_postgresql_pages_phase_0_architecture_05_wal_write_ahead_log, docs_postgresql_pages_phase_0_architecture_05_wal_commit_flush, docs_postgresql_pages_phase_0_architecture_05_wal_double_write, docs_postgresql_pages_phase_0_architecture_04_shared_buffers_shared_buffers, docs_postgresql_pages_phase_0_architecture_05_wal_checkpoint, docs_postgresql_pages_phase_0_architecture_09_process_model_walwriter, docs_postgresql_pages_phase_0_architecture_09_process_model_checkpointer, docs_postgresql_pages_phase_0_architecture_09_process_model_background_writer [EXTRACTED 1.00]
-- **PostgreSQL process constellation** — docs_postgresql_pages_phase_0_architecture_09_process_model_postmaster, docs_postgresql_pages_phase_0_architecture_09_process_model_client_backend, docs_postgresql_pages_phase_0_architecture_09_process_model_walwriter, docs_postgresql_pages_phase_0_architecture_09_process_model_checkpointer, docs_postgresql_pages_phase_0_architecture_09_process_model_background_writer, docs_postgresql_pages_phase_0_architecture_09_process_model_autovacuum_launcher, docs_postgresql_pages_phase_0_architecture_09_process_model_io_workers [EXTRACTED 1.00]
-- **Safe scripted psql migration flags** — docs_postgresql_pages_phase_1_psql_06_scripting_on_error_stop, docs_postgresql_pages_phase_1_psql_06_scripting_single_transaction, docs_postgresql_pages_phase_1_psql_06_scripting_no_psqlrc, docs_postgresql_pages_phase_1_psql_06_scripting_exit_codes [EXTRACTED 1.00]
-- **Flags that make a psql script honest** — docs_postgresql_pages_phase_1_psql_11_include_files_on_error_stop, docs_postgresql_pages_phase_1_psql_13_psqlrc_dash_x, docs_postgresql_pages_phase_1_psql_15_piping_pipefail, docs_postgresql_pages_phase_1_psql_15_piping_cron_flags, docs_postgresql_pages_phase_1_psql_15_piping_at_flags [EXTRACTED 1.00]
-- **Planner scan-type ladder by selectivity** — docs_postgresql_pages_phase_10_indexes_04_scan_types_index_scan, docs_postgresql_pages_phase_10_indexes_04_scan_types_bitmap_heap_scan, docs_postgresql_pages_phase_10_indexes_04_scan_types_seq_scan [EXTRACTED 1.00]
-- **Five causes an index is not used** — docs_postgresql_pages_phase_10_indexes_05_index_not_used_function_wraps_column, docs_postgresql_pages_phase_10_indexes_05_index_not_used_cast_on_indexed_side, docs_postgresql_pages_phase_10_indexes_05_index_not_used_low_selectivity, docs_postgresql_pages_phase_10_indexes_05_index_not_used_stale_statistics, docs_postgresql_pages_phase_10_indexes_05_index_not_used_non_indexable_predicate [EXTRACTED 1.00]
-- **Specialist index types that answer questions a B-tree cannot** — docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_brin, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_hash_index, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_gist, docs_postgresql_pages_phase_10_indexes_15_gist_brin_hash_specialist_vs_btree [EXTRACTED 1.00]
-- **Four ways to stop a lost update** — docs_postgresql_pages_phase_11_mvcc_04_lost_update_lost_update, docs_postgresql_pages_phase_11_mvcc_04_lost_update_sql_arithmetic, docs_postgresql_pages_phase_11_mvcc_04_lost_update_select_for_update, docs_postgresql_pages_phase_11_mvcc_04_lost_update_optimistic_version, docs_postgresql_pages_phase_11_mvcc_04_lost_update_rr_as_error [EXTRACTED 1.00]
-- **MVCC dead versions, xmin horizon, VACUUM and wraparound** — docs_postgresql_pages_phase_11_mvcc_05_mvcc_mvcc, docs_postgresql_pages_phase_11_mvcc_12_long_transactions_xmin_horizon, docs_postgresql_pages_phase_11_mvcc_13_vacuum_vacuum, docs_postgresql_pages_phase_11_mvcc_14_idle_in_transaction_idle_in_transaction, docs_postgresql_pages_phase_11_mvcc_16_xid_wraparound_freezing [EXTRACTED 1.00]
-- **Column versus jsonb decision** — docs_postgresql_pages_phase_12_beyond_tables_02_column_vs_json_hybrid_schema, docs_postgresql_pages_phase_12_beyond_tables_02_column_vs_json_storage_multiplier, docs_postgresql_pages_phase_12_beyond_tables_02_column_vs_json_no_fk_into_jsonb, docs_postgresql_pages_phase_12_beyond_tables_01_jsonb_operators_02_containment_and_jsonpath_shallow_merge [INFERRED 0.85]
-- **jsonb operators and the indexes that can serve them** — docs_postgresql_pages_phase_12_beyond_tables_01_jsonb_operators_readme_two_operator_families, docs_postgresql_pages_phase_12_beyond_tables_01_jsonb_operators_01_accessors_and_paths_arrow_vs_double_arrow, docs_postgresql_pages_phase_12_beyond_tables_01_jsonb_operators_02_containment_and_jsonpath_containment_operator, docs_postgresql_pages_phase_12_beyond_tables_03_index_jsonb_jsonb_ops, docs_postgresql_pages_phase_12_beyond_tables_03_index_jsonb_jsonb_path_ops, docs_postgresql_pages_phase_12_beyond_tables_03_index_jsonb_expression_index [EXTRACTED 1.00]
-- **Full-text search plus trigram fallback** — docs_postgresql_pages_phase_12_beyond_tables_05_full_text_01_tsvector_and_queries_tsvector, docs_postgresql_pages_phase_12_beyond_tables_05_full_text_01_tsvector_and_queries_websearch_to_tsquery, docs_postgresql_pages_phase_12_beyond_tables_05_full_text_02_indexing_and_ranking_generated_tsv, docs_postgresql_pages_phase_12_beyond_tables_06_pg_trgm_word_similarity, docs_postgresql_pages_phase_12_beyond_tables_06_pg_trgm_fts_complement [EXTRACTED 1.00]
-- **Trigger stack for table-attached data invariants** — docs_postgresql_pages_phase_12_beyond_tables_08_triggers_before_after, docs_postgresql_pages_phase_12_beyond_tables_08_triggers_when_clause, docs_postgresql_pages_phase_12_beyond_tables_12_plpgsql_trigger_functions, docs_postgresql_pages_phase_12_beyond_tables_19_audit_history_tables_audit_trigger, docs_postgresql_pages_phase_12_beyond_tables_08_triggers_data_not_behaviour [EXTRACTED 1.00]
-- **Wake hint plus durable outbox event** — docs_postgresql_pages_phase_12_beyond_tables_13_listen_notify_pg_notify, docs_postgresql_pages_phase_12_beyond_tables_13_listen_notify_at_most_once, docs_postgresql_pages_phase_12_beyond_tables_18_transactional_outbox_table, docs_postgresql_pages_phase_12_beyond_tables_18_transactional_outbox_skip_locked, docs_postgresql_pages_phase_12_beyond_tables_18_transactional_outbox_at_least_once [EXTRACTED 1.00]
-- **Least-privilege role and grant recipe** — docs_postgresql_pages_phase_13_ops_01_roles_grant_01_roles_and_membership_separate_owner_app_roles, docs_postgresql_pages_phase_13_ops_01_roles_grant_02_grant_and_revoke_schema_usage, docs_postgresql_pages_phase_13_ops_01_roles_grant_02_grant_and_revoke_truncate_vs_delete, docs_postgresql_pages_phase_13_ops_01_roles_grant_04_defaults_and_auditing_alter_default_privileges, docs_postgresql_pages_phase_13_ops_01_roles_grant_04_defaults_and_auditing_has_privilege_audit [EXTRACTED 1.00]
-- **Connection scarcity and pooler stack** — docs_postgresql_pages_phase_13_ops_07_pgbouncer_01_why_connections_cost_process_per_connection, docs_postgresql_pages_phase_13_ops_07_pgbouncer_01_why_connections_cost_pg_pool_vs_pgbouncer, docs_postgresql_pages_phase_13_ops_07_pgbouncer_02_pool_modes_transaction_pooling, docs_postgresql_pages_phase_13_ops_07_pgbouncer_03_exhaustion_and_sizing_idle_in_transaction_exhaustion, docs_postgresql_pages_phase_13_ops_07_pgbouncer_03_exhaustion_and_sizing_query_wait_timeout [EXTRACTED 1.00]
-- **Replica consumer failures: stale reads and recovery conflicts** — docs_postgresql_pages_phase_13_ops_08_replication_01_lag_and_read_your_writes_read_your_writes, docs_postgresql_pages_phase_13_ops_08_replication_01_lag_and_read_your_writes_replay_lag, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_recovery_conflict, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_hot_standby_feedback, docs_postgresql_pages_phase_13_ops_08_replication_02_conflicts_and_routing_read_routing [EXTRACTED 1.00]
-- **Live activity, aggregate cost, and the slow-query log** — docs_postgresql_pages_phase_13_ops_09_monitoring_readme_three_questions_three_views, docs_postgresql_pages_phase_13_ops_09_monitoring_04_table_health_pg_stat_user_tables, docs_postgresql_pages_phase_13_ops_09_monitoring_05_database_health_pg_stat_database, docs_postgresql_pages_phase_13_ops_11_logging_readme_three_legged_stool, docs_postgresql_pages_phase_13_ops_11_logging_01_what_to_log_log_min_duration_statement [EXTRACTED 1.00]
-- **Safe live-schema change pattern** — docs_postgresql_pages_phase_13_ops_12_zero_downtime_ddl_01_the_lock_queue_lock_timeout_retry, docs_postgresql_pages_phase_13_ops_12_zero_downtime_ddl_02_expand_and_contract_expand_and_contract, docs_postgresql_pages_phase_13_ops_12_zero_downtime_ddl_02_expand_and_contract_not_valid_validate, docs_postgresql_pages_phase_13_ops_12_zero_downtime_ddl_02_expand_and_contract_batched_backfill, docs_postgresql_pages_phase_13_ops_12_zero_downtime_ddl_03_indexes_and_checklist_create_index_concurrently [EXTRACTED 1.00]
-- **RLS identity, policies, and owner bypass** — docs_postgresql_pages_phase_13_ops_14_rls_01_policies_using_vs_with_check, docs_postgresql_pages_phase_13_ops_14_rls_01_policies_force_row_level_security, docs_postgresql_pages_phase_13_ops_14_rls_02_carrying_the_identity_set_local_identity, docs_postgresql_pages_phase_13_ops_14_rls_03_performance_and_practice_testing_rls [EXTRACTED 1.00]
-- **PITR recovery apparatus** — docs_postgresql_pages_phase_13_ops_15_physical_backup_readme_physical_backup_and_pitr, docs_postgresql_pages_phase_13_ops_15_physical_backup_02_restoring_and_rpo_pitr, docs_postgresql_pages_phase_13_ops_15_physical_backup_02_restoring_and_rpo_recovery_target_action_pause, docs_postgresql_pages_phase_13_ops_15_physical_backup_02_restoring_and_rpo_timelines, docs_postgresql_pages_phase_13_ops_15_physical_backup_02_restoring_and_rpo_rpo, docs_postgresql_pages_phase_13_ops_15_physical_backup_02_restoring_and_rpo_rto [EXTRACTED 1.00]
-- **Major-version cutover with sequence and drill steps** — docs_postgresql_pages_phase_13_ops_16_logical_replication_publication_subscription, docs_postgresql_pages_phase_13_ops_16_logical_replication_not_replicated, docs_postgresql_pages_phase_13_ops_17_major_upgrades_logical_cutover, docs_postgresql_pages_phase_13_ops_17_major_upgrades_pg_upgrade, docs_postgresql_pages_phase_13_ops_18_disaster_drill_runbook [EXTRACTED 1.00]
-- **Money correctness pipeline** — docs_postgresql_pages_phase_2_types_02_numeric_vs_float_numeric_vs_float, docs_postgresql_pages_phase_2_types_17_modelling_money_01_storing_money_amount_and_currency, docs_postgresql_pages_phase_2_types_17_modelling_money_02_arithmetic_and_rounding_round_once, docs_postgresql_pages_phase_2_types_17_modelling_money_02_arithmetic_and_rounding_largest_remainder, docs_postgresql_pages_phase_2_types_17_modelling_money_02_arithmetic_and_rounding_store_fx_rate, docs_postgresql_pages_phase_2_types_17_modelling_money_03_ledgers_and_node_append_only_ledger, docs_postgresql_pages_phase_2_types_17_modelling_money_03_ledgers_and_node_never_parsefloat [EXTRACTED 1.00]
-- **Phase 2 default type palette** — docs_postgresql_pages_phase_2_types_readme_phase_gate, docs_postgresql_pages_phase_2_types_01_integers_bigint_surrogate_pk, docs_postgresql_pages_phase_2_types_03_text_use_text, docs_postgresql_pages_phase_2_types_04_timestamptz_timestamptz_vs_timestamp, docs_postgresql_pages_phase_2_types_02_numeric_vs_float_money_never_float [EXTRACTED 1.00]
-- **Schema invariants CHECK NOT NULL UNIQUE FK deferrable** — docs_postgresql_pages_phase_3_ddl_04_constraints_check_constraint, docs_postgresql_pages_phase_3_ddl_04_constraints_not_null, docs_postgresql_pages_phase_3_ddl_08_unique_nulls_constraint_vs_index, docs_postgresql_pages_phase_3_ddl_03_foreign_keys_foreign_key, docs_postgresql_pages_phase_3_ddl_18_deferrable_deferrable_constraint [EXTRACTED 1.00]
-- **Online schema change without long ACCESS EXCLUSIVE** — docs_postgresql_pages_phase_3_ddl_05_alter_table_lock_timeout, docs_postgresql_pages_phase_3_ddl_05_alter_table_not_valid, docs_postgresql_pages_phase_3_ddl_05_alter_table_add_backfill_swap, docs_postgresql_pages_phase_3_ddl_09_add_not_null_batched_backfill, docs_postgresql_pages_phase_3_ddl_07_transactional_ddl_transactional_ddl [INFERRED 0.85]
-- **Three multi-tenant layouts plus RLS backstop** — docs_postgresql_pages_phase_3_ddl_10_schemas_tenancy_shared_tables_tenant_id, docs_postgresql_pages_phase_3_ddl_10_schemas_tenancy_schema_per_tenant, docs_postgresql_pages_phase_3_ddl_10_schemas_tenancy_database_per_tenant, docs_postgresql_pages_phase_3_ddl_10_schemas_tenancy_row_level_security, docs_postgresql_pages_phase_3_ddl_20_multi_tenancy_01_choosing_a_model_choosing_tenancy_model [EXTRACTED 1.00]
-- **Three multi-tenancy models** — docs_postgresql_pages_phase_3_ddl_20_multi_tenancy_02_models_compared_shared_schema_with_rls, docs_postgresql_pages_phase_3_ddl_20_multi_tenancy_02_models_compared_schema_per_tenant, docs_postgresql_pages_phase_3_ddl_20_multi_tenancy_02_models_compared_database_per_tenant, docs_postgresql_pages_phase_3_ddl_20_multi_tenancy_03_operating_it_hybrid_tenancy [EXTRACTED 1.00]
-- **Pagination stack** — docs_postgresql_pages_phase_4_crud_03_limit_offset_offset_linear_cost, docs_postgresql_pages_phase_4_crud_03_limit_offset_keyset_pagination, docs_postgresql_pages_phase_4_crud_03_limit_offset_unique_tiebreaker, docs_postgresql_pages_phase_4_crud_20_tuple_comparison_lexicographic_compare, docs_postgresql_pages_phase_4_crud_10_order_by_no_default_order [EXTRACTED 1.00]
-- **Write statements and RETURNING** — docs_postgresql_pages_phase_4_crud_04_insert_insert, docs_postgresql_pages_phase_4_crud_07_update_update, docs_postgresql_pages_phase_4_crud_11_delete_delete, docs_postgresql_pages_phase_4_crud_05_returning_returning_clause, docs_postgresql_pages_phase_4_crud_06_on_conflict_upsert [EXTRACTED 1.00]
-- **MERGE single-pass insert update delete reconcile** — docs_postgresql_pages_phase_4_crud_13_merge_readme_merge, docs_postgresql_pages_phase_4_crud_13_merge_01_three_actions_when_first_match_wins, docs_postgresql_pages_phase_4_crud_13_merge_01_three_actions_when_not_matched_by_source, docs_postgresql_pages_phase_4_crud_13_merge_02_returning_and_merge_action_merge_action, docs_postgresql_pages_phase_4_crud_13_merge_03_vs_on_conflict_index_arbiter [EXTRACTED 1.00]
-- **Join grain and fan-out control** — docs_postgresql_pages_phase_5_joins_01_inner_join_02_fan_out_and_aggregates_fan_out, docs_postgresql_pages_phase_5_joins_01_inner_join_02_fan_out_and_aggregates_grain, docs_postgresql_pages_phase_5_joins_01_inner_join_02_fan_out_and_aggregates_pre_aggregate, docs_postgresql_pages_phase_5_joins_04_multi_join_compounding_fan_out, docs_postgresql_pages_phase_5_joins_05_nn_join_table_array_agg [EXTRACTED 1.00]
-- **Existence tests: semi join, anti join, HAVING count** — docs_postgresql_pages_phase_5_joins_03_semi_anti_01_semi_joins_semi_join, docs_postgresql_pages_phase_5_joins_03_semi_anti_02_anti_joins_anti_join, docs_postgresql_pages_phase_6_aggregation_03_having_02_what_having_costs_exists_vs_having_count, docs_postgresql_pages_phase_6_aggregation_03_having_01_groups_vs_rows_having_count_star_left_join, docs_postgresql_pages_phase_6_aggregation_02_count_variants_02_left_join_and_fan_out_left_join_count_star_trap [INFERRED 0.85]
-- **PostgreSQL join type family** — docs_postgresql_pages_phase_5_joins_01_inner_join_01_matching_pairs_inner_join, docs_postgresql_pages_phase_5_joins_02_left_join_01_null_extension_guarantee, docs_postgresql_pages_phase_5_joins_06_outer_joins_right_join, docs_postgresql_pages_phase_5_joins_06_outer_joins_full_outer, docs_postgresql_pages_phase_5_joins_07_cross_join_cross_join [EXTRACTED 1.00]
-- **SQL clause evaluation pipeline** — docs_postgresql_pages_phase_6_aggregation_01_group_by_04_ordinals_and_distinct_evaluation_order, docs_postgresql_pages_phase_6_aggregation_03_having_01_groups_vs_rows_where_vs_having, docs_postgresql_pages_phase_6_aggregation_03_having_01_groups_vs_rows_having_no_aliases, docs_postgresql_pages_phase_6_aggregation_03_having_02_what_having_costs_window_in_having_42p20, docs_postgresql_pages_phase_6_aggregation_01_group_by_04_ordinals_and_distinct_42703_vs_42803 [EXTRACTED 1.00]
-- **Three count forms under join fan-out** — docs_postgresql_pages_phase_6_aggregation_02_count_variants_01_three_questions_three_count_forms, docs_postgresql_pages_phase_6_aggregation_02_count_variants_02_left_join_and_fan_out_left_join_count_star_trap, docs_postgresql_pages_phase_6_aggregation_02_count_variants_02_left_join_and_fan_out_fan_out_inflates_sum, docs_postgresql_pages_phase_6_aggregation_02_count_variants_02_left_join_and_fan_out_count_distinct_survives_fanout, docs_postgresql_pages_phase_6_aggregation_02_count_variants_02_left_join_and_fan_out_lateral_preaggregation [EXTRACTED 1.00]
-- **Canonical empty-safe child collection** — docs_postgresql_pages_phase_6_aggregation_05_json_agg_readme_jsonb_agg, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_left_join_null_row, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_filter_empty_group_null, docs_postgresql_pages_phase_6_aggregation_05_json_agg_03_the_empty_array_trap_child_collection_idiom [EXTRACTED 1.00]
-- **Ranking functions differ only in ties** — docs_postgresql_pages_phase_6_aggregation_07_ranking_01_the_four_functions_row_number, docs_postgresql_pages_phase_6_aggregation_07_ranking_01_the_four_functions_rank, docs_postgresql_pages_phase_6_aggregation_07_ranking_01_the_four_functions_dense_rank, docs_postgresql_pages_phase_6_aggregation_07_ranking_01_the_four_functions_percent_rank, docs_postgresql_pages_phase_6_aggregation_07_ranking_01_the_four_functions_ntile [EXTRACTED 1.00]
-- **CTE inlining five-condition rule** — docs_postgresql_pages_phase_6_aggregation_09_ctes_02_the_inlining_rule_cte_inlining, docs_postgresql_pages_phase_6_aggregation_09_ctes_02_the_inlining_rule_materialized_hint, docs_postgresql_pages_phase_6_aggregation_09_ctes_02_the_inlining_rule_volatility_classes, docs_postgresql_pages_phase_6_aggregation_09_ctes_03_references_and_hints_multi_ref_once, docs_postgresql_pages_phase_6_aggregation_10_modifying_ctes_01_one_statement_many_writes_always_fenced [EXTRACTED 1.00]
-- **Four answers to a list-endpoint total** — docs_postgresql_pages_phase_6_aggregation_12_pagination_counts_01_what_total_costs_limit_plus_one, docs_postgresql_pages_phase_6_aggregation_12_pagination_counts_02_estimates_and_caps_planner_estimate, docs_postgresql_pages_phase_6_aggregation_12_pagination_counts_02_estimates_and_caps_capped_count, docs_postgresql_pages_phase_6_aggregation_12_pagination_counts_01_what_total_costs_exact_count [EXTRACTED 1.00]
-- **Three ways a frame measures one preceding** — docs_postgresql_pages_phase_6_aggregation_14_frames_01_rows_vs_range_rows_frame, docs_postgresql_pages_phase_6_aggregation_14_frames_02_range_groups_exclude_groups_frame, docs_postgresql_pages_phase_6_aggregation_14_frames_02_range_groups_exclude_range_offset [EXTRACTED 1.00]
-- **Three ways to survive a recursive cycle** — docs_postgresql_pages_phase_6_aggregation_15_recursive_cte_02_cycles_and_limits_depth_guard, docs_postgresql_pages_phase_6_aggregation_15_recursive_cte_02_cycles_and_limits_union_dedupe, docs_postgresql_pages_phase_6_aggregation_15_recursive_cte_02_cycles_and_limits_cycle_clause [EXTRACTED 1.00]
-- **Five timeouts that apply to a pg query** — docs_postgresql_pages_phase_7_pg_driver_11_timeouts_statement_timeout, docs_postgresql_pages_phase_7_pg_driver_11_timeouts_query_timeout, docs_postgresql_pages_phase_7_pg_driver_11_timeouts_idle_in_transaction_session_timeout, docs_postgresql_pages_phase_7_pg_driver_11_timeouts_connection_timeout_millis, docs_postgresql_pages_phase_7_pg_driver_11_timeouts_idle_timeout_millis, docs_postgresql_pages_phase_7_pg_driver_11_timeouts_lock_timeout [EXTRACTED 1.00]
-- **Creating tables from Node** — docs_postgresql_pages_phase_8_schema_from_node_01_ddl_from_node_readme_creating_tables, docs_postgresql_pages_phase_8_schema_from_node_01_ddl_from_node_01_issuing_ddl_page, docs_postgresql_pages_phase_8_schema_from_node_01_ddl_from_node_02_locks_and_blocking_page, docs_postgresql_pages_phase_8_schema_from_node_01_ddl_from_node_03_startup_races_page [EXTRACTED 1.00]
-- **Bulk load paths from Node** — docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_unnest, docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_copy_from_stdin, docs_postgresql_pages_phase_8_schema_from_node_09_copy_streams_pg_copy_streams, docs_postgresql_pages_phase_8_schema_from_node_09_copy_streams_staging_table, docs_postgresql_pages_phase_8_schema_from_node_04_bulk_insert_autocommit_wal [EXTRACTED 1.00]
-- **Properties a migration system must have** — docs_postgresql_pages_phase_8_schema_from_node_02_migrations_schema_migrations, docs_postgresql_pages_phase_8_schema_from_node_02_migrations_checksum, docs_postgresql_pages_phase_8_schema_from_node_02_migrations_advisory_lock, docs_postgresql_pages_phase_8_schema_from_node_06_tx_migration_transactional_ddl, docs_postgresql_pages_phase_8_schema_from_node_08_minimal_runner_minimal_runner [EXTRACTED 1.00]
-- **Safe list-endpoint query assembly** — docs_postgresql_pages_phase_9_api_crud_03_safe_dynamic_where_01_predicates_and_params_one_pass_builder, docs_postgresql_pages_phase_9_api_crud_04_allowlists_02_building_the_allowlist_orderclause, docs_postgresql_pages_phase_9_api_crud_03_safe_dynamic_where_02_patterns_and_composition_listitems_composition, docs_postgresql_pages_phase_9_api_crud_04_allowlists_02_building_the_allowlist_filterable_map [EXTRACTED 1.00]
-- **Request-scoped transaction lifecycle** — docs_postgresql_pages_phase_9_api_crud_05_transactions_request_01_the_wrapper_withtransaction, docs_postgresql_pages_phase_9_api_crud_05_transactions_request_01_the_wrapper_begin_on_connection, docs_postgresql_pages_phase_9_api_crud_05_transactions_request_01_the_wrapper_try_catch_finally, docs_postgresql_pages_phase_9_api_crud_05_transactions_request_02_savepoints_and_duration_idle_in_transaction [EXTRACTED 1.00]
-- **Keyset pagination correctness triangle** — docs_postgresql_pages_phase_9_api_crud_10_keyset_01_the_tuple_comparison_tuple_comparison, docs_postgresql_pages_phase_9_api_crud_10_keyset_01_the_tuple_comparison_total_order, docs_postgresql_pages_phase_9_api_crud_10_keyset_01_the_tuple_comparison_matching_index [EXTRACTED 1.00]
-- **Executor contract for atomic requests and tests** — docs_postgresql_pages_phase_9_api_crud_01_repository_01_the_executor_contract_executor, docs_postgresql_pages_phase_9_api_crud_12_client_propagation_db_first_arg, docs_postgresql_pages_phase_9_api_crud_12_client_propagation_split_tx, docs_postgresql_pages_phase_9_api_crud_16_testing_real_pg_inject_client [EXTRACTED 1.00]
-- **Read-modify-write concurrency control** — docs_postgresql_pages_phase_9_api_crud_13_optimistic_lost_update, docs_postgresql_pages_phase_9_api_crud_13_optimistic_version_column, docs_postgresql_pages_phase_9_api_crud_14_for_update_select_for_update, docs_postgresql_pages_phase_9_api_crud_14_for_update_lock_last [EXTRACTED 1.00]
-- **PostgreSQL Part 2 SQL phases** — docs_postgresql_syllabus_02_sql_phase_4_crud_and_dml, docs_postgresql_syllabus_02_sql_phase_5_joins, docs_postgresql_syllabus_02_sql_phase_6_aggregation [EXTRACTED 1.00]
-- **React update pipeline** — docs_react_pages_phase_0_how_react_runs_03_render_reconcile_commit_render_phase, docs_react_pages_phase_0_how_react_runs_03_render_reconcile_commit_reconcile_phase, docs_react_pages_phase_0_how_react_runs_03_render_reconcile_commit_commit_phase, docs_react_pages_phase_0_how_react_runs_05_fiber_fiber, docs_react_pages_phase_0_how_react_runs_03_render_reconcile_commit_render_must_be_pure [EXTRACTED 1.00]
-- **React renderer-agnostic architecture** — docs_react_pages_phase_0_how_react_runs_01_what_react_is_react_package, docs_react_pages_phase_0_how_react_runs_01_what_react_is_react_dom, docs_react_pages_phase_0_how_react_runs_13_other_renderers_host_config, docs_react_pages_phase_0_how_react_runs_13_other_renderers_react_native, docs_react_pages_phase_0_how_react_runs_13_other_renderers_react_reconciler [EXTRACTED 1.00]
-- **What a JSX child slot can do** — docs_react_pages_phase_1_jsx_03_what_can_be_rendered_renderable_types, docs_react_pages_phase_1_jsx_03_what_can_be_rendered_silent_no_render, docs_react_pages_phase_1_jsx_03_what_can_be_rendered_objects_not_valid_child, docs_react_pages_phase_1_jsx_03_what_can_be_rendered_promise_suspends, docs_react_pages_phase_1_jsx_06_conditional_rendering_and_zero_trap [EXTRACTED 1.00]
-- **Identity across updates** — docs_react_pages_phase_1_jsx_07_lists_and_keys_key_is_identity, docs_react_pages_phase_1_jsx_07_lists_and_keys_index_keys_rewrite, docs_react_pages_phase_1_jsx_06_conditional_rendering_position_identity, docs_react_pages_phase_1_jsx_06_conditional_rendering_key_reset, docs_react_pages_phase_1_jsx_08_fragments_reconciliation [INFERRED 0.85]
-- **Unstable component type remounts the subtree** — docs_react_pages_phase_2_components_01_function_components_02_identity_and_nesting_nesting_rule, docs_react_pages_phase_2_components_01_function_components_02_identity_and_nesting_four_disguises, docs_react_pages_phase_2_components_13_higher_order_components_never_apply_in_render, docs_react_pages_phase_2_components_01_function_components_02_identity_and_nesting_remount_cost [EXTRACTED 1.00]
-- **Purity assumption that every React optimisation bets on** — docs_react_pages_phase_2_components_02_purity_01_the_two_rules_purity, docs_react_pages_phase_2_components_02_purity_02_what_is_allowed_local_mutation, docs_react_pages_phase_2_components_02_purity_03_strictmode_and_the_compiler_doubling, docs_react_pages_phase_2_components_02_purity_03_strictmode_and_the_compiler_compiler, docs_react_pages_phase_2_components_02_purity_03_strictmode_and_the_compiler_features_depend, docs_react_pages_phase_2_components_15_purecomponent_skipping_is_a_hint [EXTRACTED 1.00]
-- **Children as composition** — docs_react_pages_phase_1_jsx_09_children_ordinary_prop, docs_react_pages_phase_1_jsx_09_children_four_ways, docs_react_pages_phase_2_components_08_children_patterns_wrapper, docs_react_pages_phase_2_components_08_children_patterns_layout_slots, docs_react_pages_phase_2_components_08_children_patterns_compound, docs_react_pages_phase_2_components_08_children_patterns_function_as_children [EXTRACTED 1.00]
-- **Pre-hooks logic sharing and why hooks won** — docs_react_pages_phase_2_components_12_render_props_render_prop, docs_react_pages_phase_2_components_12_render_props_wrapper_hell, docs_react_pages_phase_2_components_12_render_props_hooks_replaced_render_props, docs_react_pages_phase_2_components_13_higher_order_components_hoc, docs_react_pages_phase_2_components_13_higher_order_components_prop_collisions, docs_react_pages_phase_2_components_13_higher_order_components_around_not_inside [EXTRACTED 1.00]
-- **Error boundaries require both class methods** — docs_react_pages_phase_2_components_14_class_components_02_lifecycle_and_hooks_error_boundary, docs_react_pages_phase_2_components_14_class_components_02_lifecycle_and_hooks_getderivedstatefromerror, docs_react_pages_phase_2_components_14_class_components_02_lifecycle_and_hooks_componentdidcatch [EXTRACTED 1.00]
-- **Decision order: derive, key-reset, or adjust during render** — docs_react_pages_phase_3_state_06_derived_state_derived_state, docs_react_pages_phase_3_state_07_resetting_state_with_key_key_reset, docs_react_pages_phase_3_state_16_updating_state_during_render_pattern [EXTRACTED 1.00]
-- **Phase 3 load-bearing facts: snapshot, Object.is, position** — docs_react_pages_phase_3_state_02_state_is_a_snapshot_snapshot, docs_react_pages_phase_3_state_11_bailing_out_object_is, docs_react_pages_phase_3_state_01_usestate_state_belongs_to_position, docs_react_pages_phase_3_state_readme_three_facts [EXTRACTED 1.00]
-- **Fetching in an Effect with race guards** — docs_react_pages_phase_4_effects_07_fetching_data_fetching_data_in_an_effect, docs_react_pages_phase_4_effects_08_race_conditions_out_of_order_responses, docs_react_pages_phase_4_effects_08_race_conditions_ignore_flag, docs_react_pages_phase_4_effects_08_race_conditions_abortcontroller, docs_react_pages_phase_4_effects_07_fetching_data_setbio_null [EXTRACTED 1.00]
-- **Setup and cleanup as a start/stop pair** — docs_react_pages_phase_4_effects_04_cleanup_01_the_cleanup_contract_indistinguishable_sequence, docs_react_pages_phase_4_effects_02_useeffect_anatomy_cleanup_then_setup, docs_react_pages_phase_4_effects_09_effect_lifecycle_start_and_stop, docs_react_pages_phase_4_effects_05_strictmode_double_invocation_extra_setup_cleanup_cycle [EXTRACTED 1.00]
-- **Legitimate ways to remove Effect dependencies** — docs_react_pages_phase_4_effects_11_removing_dependencies_01_objects_and_functions_move_static_outside, docs_react_pages_phase_4_effects_11_removing_dependencies_01_objects_and_functions_move_dynamic_inside, docs_react_pages_phase_4_effects_11_removing_dependencies_01_objects_and_functions_destructure_primitives, docs_react_pages_phase_4_effects_11_removing_dependencies_02_restructuring_the_effect_updater_form, docs_react_pages_phase_4_effects_11_removing_dependencies_02_restructuring_the_effect_extract_effect_event, docs_react_pages_phase_4_effects_11_removing_dependencies_02_restructuring_the_effect_split_effects [EXTRACTED 1.00]
-- **Review rubric, clustering tell, validation backlog, and PG defect list** — docs_reviews_review_prompt_scoring_rubric, docs_reviews_review_prompt_clustering_tell, docs_reviews_unvalidated_no_new_sandboxes, docs_reviews_postgresql_2026_08_13_cross_phase_correctness_clustering_measured, docs_reviews_review_prompt_work_order [INFERRED 0.85]
-- **TypeScript erasure, strip-only, and the three runners** — docs_typescript_readme_types_are_erased, docs_typescript_pages_phase_0_how_typescript_runs_02_erasure_erasable_vs_nonerasable, docs_typescript_pages_phase_0_how_typescript_runs_03_three_ways_to_run_three_runners, docs_typescript_pages_phase_0_how_typescript_runs_04_strip_only_and_erasable_syntax_strip_only_mode, docs_typescript_pages_phase_0_how_typescript_runs_10_checking_vs_transpiling_whole_program, docs_typescript_pages_phase_0_how_typescript_runs_01_static_checker_not_runtime_tsc_noemit [EXTRACTED 1.00]
-- **Three ways to model a fixed set of values** — docs_typescript_pages_phase_1_type_vocabulary_13_enum_vs_union_enum, docs_typescript_pages_phase_1_type_vocabulary_13_enum_vs_union_string_literal_union, docs_typescript_pages_phase_1_type_vocabulary_13_enum_vs_union_const_object, docs_typescript_pages_phase_1_type_vocabulary_02_literal_types_and_as_const_derived_union, docs_typescript_pages_phase_1_type_vocabulary_02_literal_types_and_as_const_as_const [EXTRACTED 1.00]
-- **Phase 1 type vocabulary topics** — docs_typescript_pages_phase_1_type_vocabulary_readme_phase_1, docs_typescript_pages_phase_1_type_vocabulary_01_primitives_and_inference_inference, docs_typescript_pages_phase_1_type_vocabulary_02_literal_types_and_as_const_literal_type, docs_typescript_pages_phase_1_type_vocabulary_03_arrays_and_tuples_array_type, docs_typescript_pages_phase_1_type_vocabulary_04_object_types_object_types, docs_typescript_pages_phase_1_type_vocabulary_05_union_types_union, docs_typescript_pages_phase_1_type_vocabulary_06_any_unknown_never_void_any, docs_typescript_pages_phase_1_type_vocabulary_07_type_vs_interface_type_alias, docs_typescript_pages_phase_1_type_vocabulary_08_function_types_function_types, docs_typescript_pages_phase_1_type_vocabulary_09_structural_typing_structural_typing, docs_typescript_pages_phase_1_type_vocabulary_10_null_and_undefined_strict_null_checks [EXTRACTED 1.00]
-- **Narrowing pipeline that makes unions usable** — docs_typescript_pages_phase_1_type_vocabulary_05_union_types_union, docs_typescript_pages_phase_1_type_vocabulary_05_union_types_discriminated_union, docs_typescript_pages_phase_1_type_vocabulary_05_union_types_assertnever, docs_typescript_pages_phase_2_narrowing_01_typeof_narrowing_typeof, docs_typescript_pages_phase_2_narrowing_02_truthiness_and_equality_equality, docs_typescript_pages_phase_2_narrowing_02_truthiness_and_equality_truthiness, docs_typescript_pages_phase_1_type_vocabulary_06_any_unknown_never_void_never [EXTRACTED 1.00]
-- **Priority tier system** — instructions_priority_tiers, instructions_master_tier, instructions_understand_tier, instructions_know_tier, instructions_when_needed_tier [EXTRACTED 1.00]
-- **Fable PostgreSQL correctness findings** — reviews_fable_03_accuracy_findings_merge_returning, reviews_fable_03_accuracy_findings_phase13_stamps, reviews_fable_03_accuracy_findings_shared_buffers_confound, reviews_fable_02_the_cap_and_depth_content_budget [EXTRACTED 1.00]
-- **Git 2.55.0 environment surface** — sandbox_git_p0_ex1_output_git_version_2550, sandbox_git_p0_ex1_output_porcelain_surface, sandbox_git_p0_ex1_output_init_default_branch, sandbox_git_p0_ex1_output_ref_storage_backend, sandbox_git_p0_ex1_output_object_hash, sandbox_git_p0_ex1_output_divergent_pull, sandbox_git_p0_ex1_output_empty_identity [EXTRACTED 1.00]
-- **Git object model** — sandbox_git_p0_ex2_output_content_addressed_objects, sandbox_git_p0_ex2_output_four_object_types, sandbox_git_p0_ex2_output_commit_snapshot, sandbox_git_p0_ex2_output_annotated_tag, sandbox_git_p0_ex2_output_packfile [EXTRACTED 1.00]
-- **Git three-tree staging model** — sandbox_git_p0_ex2_output_three_trees, sandbox_git_p0_ex2_output_index, sandbox_git_p0_ex2_output_staged_and_modified [EXTRACTED 1.00]
-- **Docusaurus Social Brand Identity** — static_img_docusaurus_social_card_wordmark, static_img_docusaurus_social_card_dinosaur_mascot, static_img_docusaurus_social_card_brand_palette [EXTRACTED 1.00]
-- **Docusaurus Two-Beat Value Proposition** — static_img_docusaurus_social_card_build_optimized_websites, static_img_docusaurus_social_card_focus_on_your_content, static_img_docusaurus_social_card_keyword_highlight, static_img_docusaurus_social_card_docusaurus [EXTRACTED 1.00]
-- **Mascot Holding Documentation** — static_img_docusaurus_social_card_dinosaur_mascot, static_img_docusaurus_social_card_lined_document, static_img_docusaurus_social_card_content_first_authoring [INFERRED 0.85]
-- **Official Docusaurus Brand Mark Composition** — static_img_docusaurus_logo, static_img_docusaurus_dinosaur_mascot, static_img_docusaurus_documentation_scroll [EXTRACTED 1.00]
-- **Docusaurus Static Site Branding Asset** — static_img_docusaurus_logo, static_img_docusaurus_brand_identity, static_img_docusaurus_default_site_logo, static_img_docusaurus_documentation_framework [INFERRED 0.75]
-- **Docusaurus Logo Visual Design System** — static_img_docusaurus_flat_vector_illustration, static_img_docusaurus_friendly_mascot_personality, static_img_docusaurus_green_yellow_palette [INFERRED 0.75]
-- **Cactus Character Illustration** — static_img_logo_cactus_body, static_img_logo_lined_notepad, static_img_logo_character_face, static_img_logo_succulent_pads, static_img_logo_spine_silhouette [EXTRACTED 1.00]
-- **Devbible Site Brand Identity** — static_img_logo, static_img_logo_css_tricks_cactus, static_img_logo_brand_mark [INFERRED 0.85]
-- **Flat Cactus Visual System** — static_img_logo_color_palette, static_img_logo_flat_vector_style, static_img_logo_cactus_body, static_img_logo_lined_notepad [INFERRED 0.85]
-- **Easy to Use Homepage Scene** — static_img_undraw_docusaurus_mountain, static_img_undraw_docusaurus_mountain_easy_to_use, static_img_undraw_docusaurus_mountain_docusaurus_keytar, static_img_undraw_docusaurus_mountain_night_mountain, static_img_undraw_docusaurus_mountain_summit_flag, static_img_undraw_docusaurus_mountain_seated_observer [EXTRACTED 1.00]
-- **Keytar Mascot Composition** — static_img_undraw_docusaurus_mountain_docusaurus_keytar, static_img_undraw_docusaurus_mountain_keytar_keyboard, static_img_undraw_docusaurus_mountain_docusaurus [EXTRACTED 1.00]
-- **Night Landscape Setting** — static_img_undraw_docusaurus_mountain_night_mountain, static_img_undraw_docusaurus_mountain_pine_trees, static_img_undraw_docusaurus_mountain_summit_flag, static_img_undraw_docusaurus_mountain_seated_observer [EXTRACTED 1.00]
-- **Powered by React Hero Scene** — static_img_undraw_docusaurus_react_developer, static_img_undraw_docusaurus_react_docusaurus_keytar, static_img_undraw_docusaurus_react_react_atom_logo, static_img_undraw_docusaurus_react_triple_monitor_desk [EXTRACTED 1.00]
-- **Docusaurus Powered by React Branding** — static_img_undraw_docusaurus_react_docusaurus, static_img_undraw_docusaurus_react_react, static_img_undraw_docusaurus_react_powered_by_react, static_img_undraw_docusaurus_react_docusaurus_keytar [INFERRED 0.85]
-- **Developer Triple-Monitor Workstation** — static_img_undraw_docusaurus_react_developer, static_img_undraw_docusaurus_react_triple_monitor_desk, static_img_undraw_docusaurus_react_center_monitor [EXTRACTED 1.00]
-- **Focus on What Matters Homepage Scene** — static_img_undraw_docusaurus_tree, static_img_undraw_docusaurus_tree_focus_on_what_matters, static_img_undraw_docusaurus_tree_browser_window, static_img_undraw_docusaurus_tree_docs_sidebar, static_img_undraw_docusaurus_tree_content_preview [EXTRACTED 1.00]
-- **Docs Reading Layout** — static_img_undraw_docusaurus_tree_docs_sidebar, static_img_undraw_docusaurus_tree_document_card, static_img_undraw_docusaurus_tree_content_preview, static_img_undraw_docusaurus_tree_cta_button [EXTRACTED 1.00]
-- **Docusaurus unDraw Brand Composition** — static_img_undraw_docusaurus_tree, static_img_undraw_docusaurus_tree_docusaurus, static_img_undraw_docusaurus_tree_undraw, static_img_undraw_docusaurus_tree_cactus [EXTRACTED 1.00]
+## Communities (1369 total, 445 thin omitted)
 
-## Communities (1932 total, 713 thin omitted)
+### Community 0 - "React Effects: Effects versus events"
+Cohesion: 0.02
+Nodes (179): Effects only run on the client, Effects versus events, Gotchas, Interaction-caused effects run earlier than you think, Interview questions, The definition, Where things actually belong, Why "componentDidMount" is the wrong model (+171 more)
 
-### Community 0 - "React: Phase 10 Server Components"
+### Community 1 - "Docker Build Strategy"
 Cohesion: 0.01
-Nodes (186): "before bundling", Build time — no web server at all, Gotchas, "in an environment separate from your client app or SSR server", Interview questions, "renders ahead of time", Request time — your data layer, without an API, The two modes, and why "server" is a misleading name (+178 more)
+Nodes (173): 🔴 `ARG` is not a secret mechanism, Gotchas, Interview questions, Podman, Predefined build args, Scoping — where the empties come from, The distinction, The trap: `ENV` for build-time only (+165 more)
 
-### Community 1 - "React: Phase 8 Concurrent Suspense"
+### Community 2 - "Docker Images And Registries"
+Cohesion: 0.01
+Nodes (168): Case and character rules, Gotchas, How the registry is recognised, Interview questions, `library` — the official-images namespace, Podman resolves short names differently, The full form, Digests inside your own pipeline (+160 more)
+
+### Community 3 - "React Concurrent Suspense"
 Cohesion: 0.02
 Nodes (153): Gotchas, Interruptible, Interview questions, Non-blocking, 🔴 The action must be synchronous, The API, both halves, Two properties that define a transition, What it does *not* do (+145 more)
 
-### Community 2 - "Expressjs: Phase 5 Errors"
+### Community 4 - "React State: Local mutation"
 Cohesion: 0.02
-Nodes (129): Arity is the whole detection mechanism, Gotchas, Handlers chain, and that is the useful pattern, Interview questions, It is reachable only from below, Router-level handlers, Gotchas, Interview questions (+121 more)
+Nodes (141): Gotchas, Interview questions, Local mutation, The rule is smaller than people think, What impurity actually costs, Where side effects belong, Gotchas, How React finds the right value: call order (+133 more)
 
-### Community 3 - "React: Phase 9 Forms Actions"
+### Community 5 - "Docker Compose: Half one: the file"
+Cohesion: 0.02
+Nodes (138): Gotchas, Half one: the file, Half two: the CLI, Interview questions, Podman, The problem it solves, The project is the boundary, What Compose is not (+130 more)
+
+### Community 6 - "Postgresql Joins: From Node"
+Cohesion: 0.02
+Nodes (135): From Node, Gotchas, Interview questions, `JOIN` is `INNER JOIN`, Order does not matter to the planner, Predicting the row count, Reading the rule literally, The measurement (+127 more)
+
+### Community 7 - "Docker Production: Podman"
+Cohesion: 0.02
+Nodes (134): 1. Writing to a file inside the container, 2. Buffering, which loses the logs you needed most, `docker logs` does not always work, Gotchas, Interview questions, Podman, stdout versus stderr, The drivers you will actually meet (+126 more)
+
+### Community 8 - "Nodejs Data Access"
+Cohesion: 0.02
+Nodes (132): Gotchas, Interview questions, Leaks: `connect()` without `release()`, `max` is a queue length, not a speed limit, Sizing it, The defaults you are actually running, The error handler that keeps your process alive, What the pool actually saves (+124 more)
+
+### Community 9 - "Postgresql Indexes: From Node"
+Cohesion: 0.02
+Nodes (133): From Node, Gotchas, In SQL, Index size is not proportional to column count, Interview questions, The read it buys, The write it costs, Trade-off (+125 more)
+
+### Community 10 - "Expressjs Errors: Router-level handlers"
+Cohesion: 0.02
+Nodes (127): Arity is the whole detection mechanism, Gotchas, Handlers chain, and that is the useful pattern, Interview questions, It is reachable only from below, Router-level handlers, Gotchas, Interview questions (+119 more)
+
+### Community 11 - "Javascript Modules Errors"
+Cohesion: 0.02
+Nodes (128): Gotchas, Interview questions, The leading semicolon, The problem it solved, The revealing module pattern, The shape, What modules replaced it with, Where an IIFE is still the right answer (+120 more)
+
+### Community 12 - "Postgresql Crud: From Node"
+Cohesion: 0.02
+Nodes (132): From Node, Get the generated values back, Gotchas, Inserting rows that may already exist, Interview questions, Omitted columns take their default, The speed ladder, The three forms (+124 more)
+
+### Community 13 - "Javascript Browser Platform"
+Cohesion: 0.02
+Nodes (121): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects (+113 more)
+
+### Community 14 - "React Forms Actions"
 Cohesion: 0.02
 Nodes (124): Checkboxes take `checked`, not `value`, Controlled or not: the honest trade, Gotchas, Interview questions, The caveats that decide architecture, 🔴 The Pitfall, 🔴 `undefined` is what flips an input to uncontrolled, What controlled means (+116 more)
 
-### Community 4 - "React: Phase 5 Refs Context Reducers"
+### Community 15 - "Expressjs Rest Surface"
 Cohesion: 0.02
-Nodes (121): 🔴 Do not read or write `ref.current` during render, Gotchas, Interview questions, Mutation, and the one thing you must not mutate, Refs versus state, The caveat that defines it, The one legal exception: initialization, The shape (+113 more)
+Nodes (118): Gotchas, How deep should a URL nest?, Ids: what goes in the path, Interview questions, Plural, singular, and the small decisions, The four shapes, Trade-off, Choosing between an action and a sub-resource (+110 more)
 
-### Community 5 - "React: Phase 6 Performance"
+### Community 16 - "Postgresql Pg Driver"
 Cohesion: 0.02
-Nodes (119): Gotchas, Interview questions, Is the re-render even the problem?, Telling them apart, The cause that is not on the list, The four causes, The order to investigate in, Gotchas (+111 more)
+Nodes (122): `application_name` shows up server-side, Confirming what you are actually talking to, Gotchas, Install, Interview questions, Nothing connects until the first query, One pool per process, not per module, The module every app has (+114 more)
 
-### Community 6 - "React: Phase 7 Custom Hooks"
+### Community 17 - "Nodejs Background Work"
 Cohesion: 0.02
-Nodes (113): Gotchas, Improving coverage, Interview questions, 🔴 It compiles rule-breaking code anyway, Making bail-outs visible or fatal, What bailing out looks like, What it must be able to prove, Gotchas (+105 more)
+Nodes (115): Gotchas, Interview questions, The measurement, The shape, The two different problems, What must never be in the request path, What must stay, When a queue is the wrong answer (+107 more)
 
-### Community 7 - "Expressjs: Phase 2 Middleware"
+### Community 18 - "Docker Production: Podman"
 Cohesion: 0.02
-Nodes (102): Arity is the entire detection mechanism, Gotchas, Interview questions, The two functions, in full, Two details worth carrying, What Express 5 catches, and what it cannot, Ending 1 — responded, Ending 2 — an error reached the end (+94 more)
+Nodes (115): Gotchas, Interview questions, Podman, Rule 1 — an unhandled signal to PID 1 is discarded, Rule 2 — orphans reparent to PID 1, and PID 1 must reap them, Rule 3 — when PID 1 exits, the namespace dies, The container's PID namespace, Who actually has a handler (+107 more)
 
-### Community 8 - "Expressjs: Phase 8 Validation Authz"
+### Community 19 - "React Custom Hooks"
+Cohesion: 0.02
+Nodes (110): Gotchas, Interview questions, 🔴 Keep them concrete, not lifecycle-shaped, The mechanism, in full, 🔴 The naming convention is the whole contract, What the linter does with the name, When to extract one, Gotchas (+102 more)
+
+### Community 20 - "Javascript Objects And Classes"
+Cohesion: 0.02
+Nodes (109): Gotchas, Interview questions, The bug it exists to catch, The corners, The genuinely modern use: an abstract base class, The `instanceof` guard — the ES5 way, The `new.target` guard — direct and honest, The two guards, and why the older one is worse (+101 more)
+
+### Community 21 - "Expressjs Express Basics"
+Cohesion: 0.02
+Nodes (107): Gotchas, Interview questions, The dispatcher you write if you do not use a framework, What Express supplies, exactly, What `node:http` actually gives you, Why the pipeline model — and not decorators or a controller registry, `express()` returns a function, not an object, Gotchas (+99 more)
+
+### Community 22 - "React Performance: The rewrite"
+Cohesion: 0.02
+Nodes (111): Gotchas, Interview questions, The argument that is underrated, The rewrite, The snapshot trap in the rewrite, What it looks like, When a chain is not a chain, Gotchas (+103 more)
+
+### Community 23 - "Typescript How Typescript Runs"
+Cohesion: 0.02
+Nodes (112): Gotchas, Interview questions, The checker will hand you a broken program on request, The demonstration, The two jobs, and only one of them is TypeScript's, Trade-off, What you actually get for the price, Which one runs in your project? (+104 more)
+
+### Community 24 - "Docker Image Quality"
+Cohesion: 0.02
+Nodes (110): 1. The base image, 2. Package manager caches, 3. Dev dependencies, 4. The build toolchain, Gotchas, Interview questions, Podman, The four (+102 more)
+
+### Community 25 - "Docker Networking: Podman"
+Cohesion: 0.02
+Nodes (109): Gotchas, Inspecting what you actually have, Interview questions, Podman, The four differences that matter, The two bridges, What the documentation says to do, Why Compose seems to have none of these problems (+101 more)
+
+### Community 26 - "Nodejs Security: Choosing the cost"
+Cohesion: 0.02
+Nodes (108): Choosing the cost, Gotchas, Interview questions, scrypt, correctly, The whole argument, in two numbers, Upgrading the cost, and migrating algorithms, What else the password path needs, What to use (+100 more)
+
+### Community 27 - "Expressjs Middleware: The two functions,"
+Cohesion: 0.02
+Nodes (103): Arity is the entire detection mechanism, Gotchas, Interview questions, The two functions, in full, Two details worth carrying, What Express 5 catches, and what it cannot, Gotchas, Interview questions (+95 more)
+
+### Community 28 - "Expressjs Validation Authz"
 Cohesion: 0.02
 Nodes (104): Gotchas, Interview questions, Keep test secrets out of production reach, Mint a real credential — do not bypass the middleware, Test the deny paths, or you have tested nothing, Trade-off, Gotchas, Interview questions (+96 more)
 
-### Community 9 - "Expressjs: Phase 6 Rest Surface"
+### Community 29 - "Javascript Events: Bubbling is the defau"
 Cohesion: 0.02
-Nodes (100): Gotchas, How deep should a URL nest?, Ids: what goes in the path, Interview questions, Plural, singular, and the small decisions, The four shapes, Trade-off, Choosing between an action and a sub-resource (+92 more)
+Nodes (101): Bubbling is the default, Gotchas, Interview questions, `stopPropagation`, `target` versus `currentTarget`, The path, Chunks, Phase gate (+93 more)
 
-### Community 10 - "Javascript: Phase 8 Modules Errors"
+### Community 30 - "Docker: Adjusting the set"
 Cohesion: 0.02
-Nodes (100): Default exports, Gotchas, Interview questions, Live bindings — the part that is not obvious, Named exports, Namespace imports, Re-exporting, The specifier must be a string literal (+92 more)
+Nodes (102): Adjusting the set, Gotchas, Interview questions, `--privileged` is not "a bit more access", Root is not one thing, The complementary flag, The default set, AppArmor — path-based confinement (+94 more)
 
-### Community 11 - "Javascript: Phase 18 Storefront"
+### Community 31 - "Postgresql Mvcc: D — durability, measure"
 Cohesion: 0.02
-Nodes (92): Cancelling deliberately, Combining the caller's signal with the wrapper's timeout, Distinguishing the three failures, Gotchas, Interview questions, The timeout is one line, Version 4 — timeout and cancellation wired in, 1. What is retryable? (+84 more)
+Nodes (102): A — atomicity, and what "the transaction failed" means, C — consistency is your constraints, and you choose when they fire, D — durability, measured, From Node, Gotchas, I — isolation is a level you pick, and the default is the weak one, Interview questions, Trade-off (+94 more)
 
-### Community 12 - "React: Phase 7 Custom Hooks"
+### Community 32 - "Docker Compose: EXPOSE publishes nothing"
+Cohesion: 0.02
+Nodes (100): `EXPOSE` publishes nothing, Gotchas, Interview questions, Podman, The security default nobody mentions, The syntax, read right to left, You often do not need to publish at all, Gotchas (+92 more)
+
+### Community 33 - "Javascript Dom: Format specifiers"
+Cohesion: 0.02
+Nodes (96): Format specifiers, Gotchas, Interview questions, Logging in production, The methods worth knowing, and what each is for, The trap in logging objects, Chunks, Phase gate (+88 more)
+
+### Community 34 - "Docker What A Container Is"
+Cohesion: 0.02
+Nodes (95): cgroups — what it may use, Gotchas, Interview questions, Namespaces — what it sees, The parts a container does not have, The root filesystem — what files exist, The three ingredients, one level down, There is no "container" in the kernel (+87 more)
+
+### Community 35 - "Javascript Browser Platform"
+Cohesion: 0.02
+Nodes (94): Gotchas, `history.length` and the traps around it, Interview questions, `popstate`: what it does and does not fire for, Scroll restoration, The four calls, The state object: small, cloneable, and persisted, `afterNavigate`: the part that is usually missing (+86 more)
+
+### Community 36 - "Expressjs Responses: fresh and stale"
 Cohesion: 0.03
-Nodes (83): Gotchas, Interview questions, 🔴 Keep them concrete, not lifecycle-shaped, The mechanism, in full, 🔴 The naming convention is the whole contract, What the linter does with the name, When to extract one, Arguments: pass reactive values in (+75 more)
+Nodes (85): `fresh` and `stale`, Gotchas, `host`, `hostname`, `subdomains`, Interview questions, `ip` and `ips`, `protocol` and `secure`, The twelve, and what each one reads, `xhr` (+77 more)
 
-### Community 13 - "Expressjs: Phase 3 Requests"
+### Community 37 - "Nodejs Observability: The minimum schema"
+Cohesion: 0.02
+Nodes (88): Gotchas, Interview questions, Levels are a dial, not decoration, The minimum schema, What breaks with free-form logs, Where this stops, Why not console.log in production, Baseline setup (+80 more)
+
+### Community 38 - "Javascript Async: Genuine parallelism: w"
+Cohesion: 0.02
+Nodes (87): `await` does not block the thread, Genuine parallelism: workers, Gotchas, Interview questions, Run to completion, Synchronous versus asynchronous, What actually runs elsewhere, Where the exceptions are (+79 more)
+
+### Community 39 - "Javascript Storefront: Cancelling delibe"
+Cohesion: 0.02
+Nodes (85): Cancelling deliberately, Combining the caller's signal with the wrapper's timeout, Distinguishing the three failures, Gotchas, Interview questions, The timeout is one line, Version 4 — timeout and cancellation wired in, 1. What is retryable? (+77 more)
+
+### Community 40 - "Expressjs Requests: Minimal map"
 Cohesion: 0.03
-Nodes (81): Gotchas, Interview questions, Minimal map, Stage by stage, with what can go wrong, The map, Where to hook, and what each hook can still do, Gotchas, Interview questions (+73 more)
+Nodes (80): Gotchas, Interview questions, Minimal map, Stage by stage, with what can go wrong, The map, Where to hook, and what each hook can still do, Phase gate, Where this connects (+72 more)
 
-### Community 14 - "Expressjs: Phase 8 Validation Authz"
+### Community 41 - "Docker Running Containers"
+Cohesion: 0.02
+Nodes (84): Gotchas, Interview questions, Podman, The flags you will actually type, The shape, Two idioms worth memorising, What `run` actually does, Cleaning up (+76 more)
+
+### Community 42 - "React Refs Context Reducers"
 Cohesion: 0.03
-Nodes (82): Four behaviours that follow from the source, Gotchas, Interview questions, Params vs query for identity, The basic shape, Where they come from, 🔴 `extended` enables an option qs itself warns against, Gotchas (+74 more)
+Nodes (83): `dispatch` does not change `state`, 🔴 `dispatch` is stable, Gotchas, Hook rules, Interview questions, The reducer must be pure, The shape, Why "transitions as data" matters (+75 more)
 
-### Community 15 - "Expressjs: Phase 1 Routing"
+### Community 43 - "Docker Mern Pern Stack"
+Cohesion: 0.02
+Nodes (81): Cross-check the phase's other traps, Gotchas, Interview questions, Making it a real backup, Podman's shortcut, Restoring into a fresh volume, The idiom: a throwaway container with two mounts, Why this is not a database backup (+73 more)
+
+### Community 44 - "Expressjs Validation Authz"
 Cohesion: 0.03
-Nodes (75): Gotchas, Interview questions, Prove it, The graph, Who owns what, Why `app.listen` is the wrong default in real code, Consequences you can now derive, Gotchas (+67 more)
+Nodes (79): Four behaviours that follow from the source, Gotchas, Interview questions, Params vs query for identity, The basic shape, Where they come from, 🔴 `extended` enables an option qs itself warns against, Gotchas (+71 more)
 
-### Community 16 - "Javascript: Phase 9 Dom"
+### Community 45 - "Javascript Dom: matches — the other half"
 Cohesion: 0.03
-Nodes (65): Chunks, Phase gate, The three sentences to keep, Where this connects, Gotchas, Interview questions, Markup is a serialisation of the tree, not the tree, Nodes versus elements (+57 more)
+Nodes (82): `closest` — the up-walk, done properly, Containment: `contains` and `compareDocumentPosition`, Going down: the selector is matched against the document, Gotchas, Interview questions, `matches` — the other half, Roots, shadow boundaries and detached trees, `form.elements` — the other way in (+74 more)
 
-### Community 17 - "Expressjs: Phase 7 Layering"
+### Community 46 - "React Custom Hooks"
+Cohesion: 0.03
+Nodes (78): Gotchas, Improving coverage, Interview questions, 🔴 It compiles rule-breaking code anyway, Making bail-outs visible or fatal, What bailing out looks like, What it must be able to prove, Event handlers are not a grey area (+70 more)
+
+### Community 47 - "Typescript Generics: Inference sites"
+Cohesion: 0.03
+Nodes (79): A type parameter is a variable in the type language, Constraints, in one line ahead of the next page, Gotchas, Interview questions, Multiple type parameters relate their arguments, The problem, before the solution, What you can do with an unconstrained `T` — almost nothing, Where the parameter may appear (+71 more)
+
+### Community 48 - "Javascript Network Storage"
+Cohesion: 0.03
+Nodes (77): `Blob` and `File`, `FormData` — never set the header, Gotchas, Interview questions, JSON — the one you must label, The four you will use, Two constraints on any body, `URLSearchParams` — form-encoded without files (+69 more)
+
+### Community 49 - "Javascript Modules Errors"
+Cohesion: 0.03
+Nodes (74): Every link costs a microtask, `finally` runs where you put it, Gotchas, Interview questions, The rule that catches people out, What this means for a long chain, Catching at the right level, Distinguishing failures (+66 more)
+
+### Community 50 - "Typescript Narrowing: On object unions"
+Cohesion: 0.03
+Nodes (72): Gotchas, Interview questions, Making it exhaustive without a switch, On object unions, The idiom, The measurement, Trade-off, Where exhaustiveness quietly fails (+64 more)
+
+### Community 51 - "Javascript Modules Errors"
+Cohesion: 0.03
+Nodes (73): Gotchas, Interview questions, Question 1 · Transient or permanent, Question 2 · Is repeating it safe?, `Retry-After` outranks your backoff, Timeouts come before retries, Where retries belong: one layer, not every layer, Cancellation, and stopping early (+65 more)
+
+### Community 52 - "Javascript Built In Library"
+Cohesion: 0.03
+Nodes (70): `at(index)` — the reason `arr[-1]` never worked, Choosing, in one line each, Gotchas, Interview questions, `slice(start, end)` — a shallow copy of a range, `splice(start, deleteCount, ...items)` — remove, insert, or both, Strings: `slice` is the one to use, The loop bug this topic exists to prevent (+62 more)
+
+### Community 53 - "Typescript Type Vocabulary"
+Cohesion: 0.03
+Nodes (71): Excess property checks: the exception that confuses everyone, Gotchas, Index signatures, Interview questions, Optional is not the same as `| undefined`, `readonly` properties, Structural typing: shapes, not names, The measured surprise: weak type detection (+63 more)
+
+### Community 54 - "Nodejs Buffers Streams"
+Cohesion: 0.03
+Nodes (70): Creating a Buffer, Gotchas, Interview questions, Joining, comparing, copying, Reading and converting, Slicing shares memory, Where buffers show up in a fullstack app, Gotchas (+62 more)
+
+### Community 55 - "Nodejs Http Processes"
+Cohesion: 0.03
+Nodes (70): Authentication, Choosing WS or SSE, Client — built in, Gotchas, Interview questions, Server, with the parts that matter, The protocol in one paragraph, Beyond HTTP (+62 more)
+
+### Community 56 - "Expressjs Layering: "Not found" in three"
 Cohesion: 0.03
 Nodes (67): Gotchas, Interview questions, "Not found" in three steps, Responsibilities, The boundary the pattern does not draw, The test that tells you the layers are real, What each layer is allowed to know, Where the layers usually blur, and what to do (+59 more)
 
-### Community 18 - "Javascript: Phase 10 Events"
+### Community 57 - "Javascript Async: In the browser: two ev"
 Cohesion: 0.03
-Nodes (66): Bubbling is the default, Gotchas, Interview questions, `stopPropagation`, `target` versus `currentTarget`, The path, Chunks, Phase gate (+58 more)
+Nodes (68): Gotchas, In Node: a different name, and a harder default, In the browser: two events, Interview questions, Registering a listener changes the default, Suppressing the console output, What a listener should actually do, `forEach` — nothing is awaited (+60 more)
 
-### Community 19 - "Javascript: Phase 5 Built In Library"
+### Community 58 - "Nodejs Runtime Model"
 Cohesion: 0.03
-Nodes (66): `at(index)` — the reason `arr[-1]` never worked, Choosing, in one line each, Gotchas, Interview questions, `slice(start, end)` — a shallow copy of a range, `splice(start, deleteCount, ...items)` — remove, insert, or both, Strings: `slice` is the one to use, The loop bug this topic exists to prevent (+58 more)
+Nodes (68): Gotchas, Interview questions, The four parts, What happens when you run `node app.js`, Where the powers come from, Why it exists, Concurrency you get for free, Gotchas (+60 more)
 
-### Community 20 - "Javascript: Phase 5 Built In Library"
+### Community 59 - "Css Flexbox: Flex base size"
+Cohesion: 0.03
+Nodes (67): Flex base size, Free space: the number everything else divides up, Gotchas, Hypothetical main size, Interview questions, Percentages in `flex-basis`, Trade-off, Why `flex: 1` produces equal columns and `flex: auto` does not (+59 more)
+
+### Community 60 - "Css Grid: Reading it inside out"
+Cohesion: 0.03
+Nodes (69): `auto-fit` vs `auto-fill` — the actual difference, Gotchas, Interview questions, Reading it inside out, The restriction on combining repeats, The trap: `minmax(20rem, 1fr)` overflows on narrow screens, Trade-off, Why the `1fr` maximum matters (+61 more)
+
+### Community 61 - "Javascript Built In Library"
 Cohesion: 0.03
 Nodes (68): `Date.now()` and `Date.UTC()` — the two statics, Gotchas, Interview questions, `Invalid Date` — a failure that never throws, One number, and a calendar projected onto it, Out-of-range components roll over — they never throw, The four ways to make one, 🔴 Trap one — the month is zero-indexed and nothing else is (+60 more)
 
-### Community 21 - "Javascript: Phase 8 Modules Errors"
+### Community 62 - "Javascript Async: Chunks"
 Cohesion: 0.03
-Nodes (68): Catching at the right level, Distinguishing failures, `finally` behaves normally here, Gotchas, Interview questions, It does not catch a call you forgot to `await`, It does not catch errors in callbacks you pass elsewhere, `return` inside `try` is the subtle case (+60 more)
+Nodes (66): Chunks, Phase gate, The one idea, Where this connects, Chunks, Phase gate, Where this connects, Gotchas (+58 more)
 
-### Community 22 - "Javascript: Phase 12 Browser Platform"
+### Community 63 - "Git Everyday Loop"
 Cohesion: 0.03
-Nodes (68): Do not use `rAF` to throttle `scroll`, Gotchas, Interview questions, `rAF` fires **once**, `rAF` is not always the right tool — and often is not, Reads and writes inside the callback, The timestamp is the argument — use it, Two patterns worth knowing (+60 more)
+Nodes (67): `e` — editing the hunk by hand, Gotchas, Hunk size is a setting, Interview questions, The keys, The mind-bending part, The other interactive subcommands, Trade-off (+59 more)
 
-### Community 23 - "Javascript: Phase 11 Network Storage"
+### Community 64 - "Javascript Async: Always return the prom"
 Cohesion: 0.03
-Nodes (62): Cookies through CORS, CSRF, and why `SameSite` is not the whole answer, Gotchas, Interview questions, `SameSite` — what each value blocks, 🔴 The real decision: token in a cookie, or in `localStorage`?, Chunks, Phase gate (+54 more)
+Nodes (67): A chain is sequential, never concurrent, Always return the promise, Gotchas, Interview questions, Sequential composition over a list, The flat shape, 1. The floating promise, 2. The missing `return` in a chain (+59 more)
 
-### Community 24 - "Javascript: Phase 5 Built In Library"
+### Community 65 - "Nodejs Deployment: Boot order and probes"
 Cohesion: 0.03
-Nodes (64): `File` — a `Blob` with a name, `FileReader` — why it still exists, Gotchas, Interview questions, Making one, Reading — the four methods, 🔴 `slice()` costs nothing, `createObjectURL` (+56 more)
+Nodes (64): Boot order and probes, Drain on shutdown, Gotchas, Interview questions, Two endpoints, two meanings, Files vs platform env, Gotchas, Interview questions (+56 more)
 
-### Community 25 - "Javascript: Phase 11 Network Storage"
+### Community 66 - "Javascript Objects And Classes"
 Cohesion: 0.03
-Nodes (63): `Blob` and `File`, `FormData` — never set the header, Gotchas, Interview questions, JSON — the one you must label, The four you will use, Two constraints on any body, `URLSearchParams` — form-encoded without files (+55 more)
+Nodes (66): Every key is a string or a symbol, Gotchas, "Integer index" is narrower than it looks, Interview questions, Property order is specified, and it is not insertion order, Where the order rule actually bites, Which enumeration method sees what, Gotchas (+58 more)
 
-### Community 26 - "Javascript: Phase 4 Objects And Classes"
+### Community 67 - "Nodejs Async: .finally"
 Cohesion: 0.03
-Nodes (62): Gotchas, Interview questions, The bug it exists to catch, The corners, The genuinely modern use: an abstract base class, The `instanceof` guard — the ES5 way, The `new.target` guard — direct and honest, The two guards, and why the older one is worse (+54 more)
+Nodes (66): Chaining: `.then` returns a *new* promise, `.finally`, Gotchas, Interview questions, The rule: return, or it is not chained, The three states, `.then(onFulfilled, onRejected)` vs `.then().catch()`, Where chaining still beats `await` (+58 more)
 
-### Community 27 - "Javascript: Phase 8 Modules Errors"
+### Community 68 - "Javascript Network Storage"
 Cohesion: 0.03
-Nodes (64): Gotchas, Interview questions, Question 1 · Transient or permanent, Question 2 · Is repeating it safe?, `Retry-After` outranks your backoff, Timeouts come before retries, Where retries belong: one layer, not every layer, Build the chain at each layer that adds meaning (+56 more)
+Nodes (62): Chunks, Phase gate, The three sentences to keep, Where this connects, Constructing responses, Gotchas, `Headers`, Interview questions (+54 more)
 
-### Community 28 - "Javascript: Phase 11 Network Storage"
+### Community 69 - "React Ssr Hydration"
+Cohesion: 0.04
+Nodes (64): Aborting, Gotchas, Interview questions, Node — callbacks, `onError` is not optional in practice, 🔴 `renderToString` cannot stream Suspense, The shape of each API, The three (+56 more)
+
+### Community 70 - "Javascript Network Storage"
 Cohesion: 0.03
-Nodes (62): Check `response.ok`, Gotchas, Interview questions, The body can be read once, The defaults, What *does* reject, Cookies are not a header you set, Gotchas (+54 more)
+Nodes (64): Cleaning up, Constructing one *is* connecting, Gotchas, Interview questions, Sub-protocols, The four events, The handshake, and why the first request is HTTP, The state machine (+56 more)
 
-### Community 29 - "Javascript: Phase 8 Modules Errors"
+### Community 71 - "Postgresql Ops: --no-owner and --no-acl"
+Cohesion: 0.03
+Nodes (64): Compression is not the reason to choose custom, Gotchas, Interview questions, `--no-owner` and `--no-acl`, The four formats, The table of contents, Trade-off, Version compatibility (+56 more)
+
+### Community 72 - "Postgresql Aggregation: The big table"
+Cohesion: 0.04
+Nodes (58): Phase gate, The big table, The fixture, The fixture grows part-way through the phase, Where this connects, Phase gate, The short version, Where this connects (+50 more)
+
+### Community 73 - "Javascript Async: Deriving the rest of t"
+Cohesion: 0.04
+Nodes (61): Deriving the rest of the API, Gotchas, Interview questions, Part four: the callback list, Part one: settle once, remember the outcome, Part three: `then` returns a **new** promise, Part two: handlers are *never* called synchronously, Gotchas (+53 more)
+
+### Community 74 - "Javascript Objects And Classes"
+Cohesion: 0.03
+Nodes (62): Gotchas, Interview questions, `Map` is usually the better answer, `Object.create(null)` — an object with no inheritance at all, The bug it exists to prevent, What you give up, Where `Object.create` still earns its place beyond dictionaries, Destructuring defaults fire on `undefined` only (+54 more)
+
+### Community 75 - "Javascript Modules Errors"
 Cohesion: 0.03
 Nodes (63): Closures retain their scope, Gotchas, Interview questions, The weak collections, `WeakRef` and `FinalizationRegistry`, What this buys, and what it costs, 1. Detached DOM nodes, 2. Forgotten listeners (+55 more)
 
-### Community 30 - "Docker: Phase 0 What A Container"
+### Community 76 - "Javascript Network Storage"
 Cohesion: 0.03
-Nodes (61): cgroups — what it may use, Gotchas, Interview questions, Namespaces — what it sees, The parts a container does not have, The root filesystem — what files exist, The three ingredients, one level down, There is no "container" in the kernel (+53 more)
+Nodes (61): `CookieStore` — the modern API, 🔴 Deleting, and why it fails, `Domain` — omitting it is *narrower*, not wider, Encode the value, Gotchas, `HttpOnly` — you cannot set it from JavaScript, Interview questions, `Path` — the default is the trap (+53 more)
 
-### Community 31 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.04
-Nodes (60): `configurable` — the one-way door, `enumerable` — the flag that decides what "the properties" means, Gotchas, Interview questions, Reading and copying descriptors, The default that catches everyone, Where this actually shows up, `writable` — and where it stops (+52 more)
+### Community 77 - "Javascript Built In Library"
+Cohesion: 0.03
+Nodes (62): Four ways to create holes, all avoidable, Gotchas, Interview questions, Invalid lengths throw, `length` is not a count of elements, `length` is writable, Normalising a sparse array, The three states of an index (+54 more)
 
-### Community 32 - "Expressjs: Phase 9 Hardening"
+### Community 78 - "Postgresql Beyond Tables"
+Cohesion: 0.03
+Nodes (63): A view cannot take a parameter, Gotchas, Interview questions, It stores nothing, and costs nothing, Trade-off, Views are hard dependencies, What views are actually good for, When the predicate cannot be pushed down (+55 more)
+
+### Community 79 - "Javascript Objects And Classes"
+Cohesion: 0.03
+Nodes (61): Class accessors live on the prototype — and it shows in JSON, Defining them after the fact, Gotchas, Interview questions, The half-defined cases, The infinite-recursion trap, They are invisible, and things read them without asking, What accessors are actually for (+53 more)
+
+### Community 80 - "Expressjs Hardening: The auth cookie, fl"
 Cohesion: 0.04
 Nodes (59): Gotchas, Interview questions, Mount order, and why it is not arbitrary, Rotate the session id on privilege change, The auth cookie, flag by flag, Trade-off, Gotchas, Interview questions (+51 more)
 
-### Community 33 - "Javascript: Phase 11 Network Storage"
+### Community 81 - "Git How Git Stores Things"
 Cohesion: 0.03
-Nodes (58): Chunks, Phase gate, The three sentences to keep, Where this connects, Constructing responses, Gotchas, `Headers`, Interview questions (+50 more)
+Nodes (60): Computing a name is not storing it, Gotchas, Interview questions, The hash is over the content, not the file, The store is content; the refs are names, Trade-off, What this buys you, immediately, Gotchas (+52 more)
 
-### Community 34 - "Javascript: Phase 7 Async"
+### Community 82 - "Postgresql Aggregation: In Node"
 Cohesion: 0.03
-Nodes (60): 1 · A timer is a task, so microtasks always win, 2 · The nesting clamp: 4 ms after five levels, 3 · Throttling: the tab you are not looking at, 4 · A busy main thread simply does not check the clock, Gotchas, Interview questions, So when *is* `setTimeout(fn, 0)` the right tool?, The four things standing between you and your callback (+52 more)
+Nodes (62): Combining: partition and order, Gotchas, In Node, Interview questions, `ORDER BY` inside `OVER` — running totals, `OVER ()` — the whole result as one partition, The same numbers, two ways, Trade-off (+54 more)
 
-### Community 35 - "Expressjs: Phase 4 Responses"
+### Community 83 - "Javascript Objects And Classes"
+Cohesion: 0.03
+Nodes (59): Computed property names, Conditional keys — the idiom worth knowing, Gotchas, Interview questions, Shorthand property names, Duplicate keys — last wins, silently, Getters and setters, Gotchas (+51 more)
+
+### Community 84 - "Git Everyday Loop"
+Cohesion: 0.03
+Nodes (60): Every command, as a move between trees, Gotchas, Interview questions, The proof that they are separate: `AM`, Trade-off, Watching a file cross all three, Gotchas, Interview questions (+52 more)
+
+### Community 85 - "Expressjs Routing: The verbs"
 Cohesion: 0.04
-Nodes (55): Everything after the dispatch, Gotchas, Interview questions, `res.json` is a thin wrapper over all of that, `res.sendStatus` is not `res.status`, The dispatch, The measured shapes, Gotchas (+47 more)
+Nodes (55): `app.all` and `route.all` are not the same thing, Gotchas, Interview questions, The verbs, Trade-off, Where the helpers come from, Gotchas, HEAD: served by your GET handler, until it isn't (+47 more)
 
-### Community 36 - "Javascript: Phase 7 Async"
+### Community 86 - "Javascript Machine Coding"
 Cohesion: 0.04
-Nodes (57): 1. The floating promise, 2. The missing `return` in a chain, 3. The missing `await`, 4. `forEach` with an async callback, 5. The `catch` that swallows, 6. `.then(onOk, onErr)` where `onOk` throws, 7. `finally` at the end of a chain, 8. A `catch` attached too late (+49 more)
+Nodes (56): Gotchas, Interview questions, The one-liner people reach for, and why it is wrong, The version worth writing, What this version still does not do, Why each block is there, Choosing, Gotchas (+48 more)
 
-### Community 37 - "Javascript: Phase 11 Network Storage"
+### Community 87 - "Nodejs Native: What it is for"
+Cohesion: 0.03
+Nodes (55): Gotchas, Harder options when you need isolation, Interview questions, What it is for, Why it is not a sandbox, Gotchas, Interview questions, Loading in Node (+47 more)
+
+### Community 88 - "Nodejs Filesystem: join vs resolve"
+Cohesion: 0.03
+Nodes (57): Gotchas, Interview questions, join vs resolve, Paths and ESM, POSIX vs Windows, The rest of the API, Gotchas, Interview questions (+49 more)
+
+### Community 89 - "Javascript Browser Platform"
 Cohesion: 0.04
-Nodes (57): Cleaning up, Constructing one *is* connecting, Gotchas, Interview questions, Sub-protocols, The four events, The handshake, and why the first request is HTTP, The state machine (+49 more)
+Nodes (56): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Copying: the 90% case, Gotchas, Interview questions, `paste`, `copy`, `cut` — the events, and why they are still the best path (+48 more)
 
-### Community 38 - "Expressjs: Phase 10 App Factory"
+### Community 90 - "Css Scss: Scope"
+Cohesion: 0.04
+Nodes (57): Gotchas, Interpolation: getting a Sass value into CSS syntax, Interview questions, Scope, The difference in one example, The hybrid that actually works, Trade-off, What only a custom property can do (+49 more)
+
+### Community 91 - "Expressjs App Factory"
 Cohesion: 0.04
 Nodes (54): An app that never listens is still an app, Config is a dependency, not an ambient fact, Dependencies in, not imports, Gotchas, Interview questions, The rule: no side effects in the factory, The shape, What "two independent apps" buys (+46 more)
 
-### Community 39 - "Javascript: Phase 4 Objects And Classes"
+### Community 92 - "Postgresql Types: The cost of exactness"
 Cohesion: 0.04
-Nodes (54): Arrays are objects with stringified indices, Dot versus bracket, Dynamic keys and the prototype, Gotchas, Interview questions, Keys are stringified — and that is where collisions come from, Reading what might not be there, Symbols are the exception (+46 more)
+Nodes (55): From Node: `numeric` arrives as a string, Gotchas, Interview questions, Precision, overflow and rounding, The cost of exactness, The measurement that settles it, Trade-off, What each type is for (+47 more)
 
-### Community 40 - "Sandbox React-P1 - noise"
+### Community 93 - "Postgresql Api Crud"
+Cohesion: 0.04
+Nodes (53): Gotchas, Interview questions, `OFFSET` is the wrong default, The assembled query, The bug: `ORDER BY` on a non-unique column, The total count, and why it is expensive, Trade-off, Gotchas (+45 more)
+
+### Community 94 - "React Components: Elements are ordinary "
+Cohesion: 0.04
+Nodes (55): Elements are ordinary values, Gotchas, How the trap closes, Interview questions, The inversion, When configuration is the right answer, Choosing between the three, Gotchas (+47 more)
+
+### Community 95 - "Javascript Built In Library"
+Cohesion: 0.03
+Nodes (55): Chunks, Phase gate, The short version, Where this connects, Choosing between `Set`, array and object, Equality is SameValueZero — which decides what "unique" means, Gotchas, Interview questions (+47 more)
+
+### Community 96 - "Postgresql Ops: Certificate authenticati"
+Cohesion: 0.04
+Nodes (55): Certificate authentication, From Node, Gotchas, Interview questions, Making TLS mandatory on the server, Off by default, on with one setting, The six sslmodes, measured, Trade-off (+47 more)
+
+### Community 97 - "Postgresql Aggregation: Both spellings p"
+Cohesion: 0.03
+Nodes (56): Both spellings plan the same, Correlation is what makes `EXISTS` a filter, From Node, Gotchas, Interview questions, The hand-rolled version costs 2.5×, The same query, two spellings, Trade-off (+48 more)
+
+### Community 98 - "React How React Runs"
+Cohesion: 0.04
+Nodes (54): Gotchas, Interview questions, Renderer, not "the DOM part", The two packages, The version-match rule, Why it exists: describing instead of instructing, A component element has not run yet, Elements are frozen (+46 more)
+
+### Community 99 - "React Jsx: 1. Renamed"
+Cohesion: 0.04
+Nodes (54): 1. Renamed, 2. Passed through, 3. Dropped, 4. What React 19 does with `class` and `for`, Booleans, Empty values, Gotchas, Interview questions (+46 more)
+
+### Community 100 - "Css Cascade: The order, top to bottom"
+Cohesion: 0.04
+Nodes (54): Criterion 1: origin and importance, Criterion 3: element-attached styles, Criterion 6: order of appearance, and what it really means, Gotchas, Interview questions, The order, top to bottom, The whole author ladder in one table, Trade-off (+46 more)
+
+### Community 101 - "Javascript Browser Platform"
+Cohesion: 0.04
+Nodes (54): Ending one, Errors cross the boundary badly, Gotchas, Inside: what exists and what does not, Interview questions, Request and response over a one-way channel, Starting one, The channel (+46 more)
+
+### Community 102 - "Javascript Dom: Chunks"
+Cohesion: 0.04
+Nodes (52): Chunks, Phase gate, The three sentences to keep, Where this connects, Attribute names are lowercased, Boolean attributes, `data-*` and `dataset`, Gotchas (+44 more)
+
+### Community 103 - "Mongodb Query Operators"
+Cohesion: 0.04
+Nodes (53): Explaining other operations, Gotchas, Interview questions, Reading the output — four numbers, Reading the plan — the stages, The three verbosities, The two-minute diagnosis, Why *that* index? — `rejectedPlans` (+45 more)
+
+### Community 104 - "Sandbox React P1"
 Cohesion: 0.06
 Nodes (37): a, b, require, noise, noise, noise, require, FORWARD (+29 more)
 
-### Community 41 - "Sandbox React-P0 - require"
+### Community 105 - "Sandbox React P0"
 Cohesion: 0.05
 Nodes (34): pkg, R, require, cel, el, keyed, React, require (+26 more)
 
-### Community 42 - "Docker: Phase 3 Dockerfile"
+### Community 106 - "Git Undo Recover"
 Cohesion: 0.04
-Nodes (52): 🔴 `ARG` is not a secret mechanism, Gotchas, Interview questions, Podman, Predefined build args, Scoping — where the empties come from, The distinction, The trap: `ENV` for build-time only (+44 more)
+Nodes (52): Before any destructive command, Gotchas, The four commands, one sentence each, The one question, The safety ladder, The table, Trade-off, Gotchas (+44 more)
 
-### Community 43 - "Git: Phase 4 Remotes"
+### Community 107 - "Docker Storage: Anonymous volumes"
 Cohesion: 0.04
-Nodes (52): Amend counts too, `--force-with-lease`, not `--force`, Gotchas, The alternative that is always safe, The hole in the lease, and `--force-if-includes`, Trade-off, What actually goes wrong, What "shared" means precisely (+44 more)
+Nodes (50): Anonymous volumes, Creating and mounting a volume, Gotchas, Interview questions, Pre-population: the behaviour that makes volumes different, The three, in one table, Volume options worth knowing, All three in Compose (+42 more)
 
-### Community 44 - "Javascript: Phase 17 Machine Coding"
+### Community 108 - "Javascript: Where a policy comes from"
 Cohesion: 0.04
-Nodes (51): Debouncing without losing the last keystroke, Do not fight the IME, Gotchas, Interview questions, Rejecting input instead of transforming it, Transforming as the user types, What "controlled" means, 1 · `Object.is` before anything else (+43 more)
+Nodes (50): `default-src` is a fallback, not a default, Deploying without breaking the site, Gotchas, Interview questions, The directives, grouped by what they guard, The keywords, and the two to avoid, Watching violations from JavaScript, What a policy blocks that JavaScript notices (+42 more)
 
-### Community 45 - "Docker: Phase 2 Images And Registries"
+### Community 109 - "Javascript Storefront: Chunks"
 Cohesion: 0.04
-Nodes (50): Case and character rules, Gotchas, How the registry is recognised, Interview questions, `library` — the official-images namespace, Podman resolves short names differently, The full form, Digests inside your own pipeline (+42 more)
+Nodes (50): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Cleaning up, Coming back: the scroll restoration problem, Gotchas, Infinite scroll is an accessibility and UX decision (+42 more)
 
-### Community 46 - "Javascript: Phase 9 Dom"
+### Community 110 - "Javascript Network Storage"
 Cohesion: 0.04
-Nodes (50): Breakpoints belong to `matchMedia`, Cleanup, Gotchas, Interview questions, Pick the signal that matches the question, `resize`: the window event versus `ResizeObserver`, `scroll`, in one paragraph, The entry properties (+42 more)
+Nodes (49): `arrayBuffer()` and `bytes()` — binary, `blob()` — files and images, Choosing, in one rule, Errors these methods throw, `formData()`, Gotchas, Interview questions, `json()`, and why wrappers use `text()` instead (+41 more)
 
-### Community 47 - "Javascript: Phase 9 Dom"
+### Community 111 - "Javascript Browser Platform"
 Cohesion: 0.04
-Nodes (49): `beforeinput` — the cancelable one, Focus events on forms, Gotchas, `input` versus `change` — the one people get wrong, Interview questions, Keeping keyboard shortcuts out of forms, `submit`, and the two ways to trigger it, Chunks (+41 more)
+Nodes (51): Do not use `rAF` to throttle `scroll`, Gotchas, Interview questions, `rAF` fires **once**, `rAF` is not always the right tool — and often is not, Reads and writes inside the callback, The timestamp is the argument — use it, Two patterns worth knowing (+43 more)
 
-### Community 48 - "Javascript: Phase 12 Browser Platform"
+### Community 112 - "Javascript Built In Library"
 Cohesion: 0.04
-Nodes (47): Gotchas, `history.length` and the traps around it, Interview questions, `popstate`: what it does and does not fire for, Scroll restoration, The four calls, The state object: small, cloneable, and persisted, `afterNavigate`: the part that is usually missing (+39 more)
+Nodes (50): Escapes and code points, Gotchas, Interview questions, `Intl.Segmenter`, Measured, Normalisation: two identical-looking strings that are not equal, Slicing safely, The three levels (+42 more)
 
-### Community 49 - "Javascript: Phase 6 Iteration And Destructuring"
+### Community 113 - "Nodejs Async: The model to carry around"
 Cohesion: 0.04
-Nodes (47): Gotchas, Interview questions, Nothing is computed until it is pulled, Recursive structures, without an accumulator, State without a class, The built-in version: iterator helpers, The pipeline shape, on real data, Where generators are the wrong tool (+39 more)
+Nodes (50): Gotchas, Interview questions, The close phase really is last, The model to carry around, The phases, in order, Watching it happen, What keeps the loop alive, Gotchas (+42 more)
 
-### Community 50 - "Mongodb: Phase 1 Documents And Bson"
+### Community 114 - "Postgresql Aggregation: Aggregates ignor"
+Cohesion: 0.04
+Nodes (51): Aggregates ignore NULL, Filtering skips NULLs — in both directions, From Node, Gotchas, Interview questions, `NULL` is not the empty string, Ordering, The one that loses data: `NOT IN` (+43 more)
+
+### Community 115 - "Postgresql Schema From Node"
+Cohesion: 0.04
+Nodes (49): A DDL statement is an ordinary query, `ALTER TABLE` from Node, and whether it rewrites the table, Gotchas, Identifiers cannot be parameters, Interview questions, One `query()` call, several statements, Reading the schema back, Transactional DDL — the thing PostgreSQL gives you for free (+41 more)
+
+### Community 116 - "Nginx Server And Location"
+Cohesion: 0.04
+Nodes (49): `auth_request` — the same idea for authorisation decisions, Gotchas, `internal` — reachable only from inside, Interview questions, Named locations — `@name`, Nested locations, The phase difference, and why it matters, Trade-off (+41 more)
+
+### Community 117 - "Nodejs Observability: Minimal instrument"
+Cohesion: 0.04
+Nodes (48): Gotchas, Interview questions, Minimal instrumentation map, The four, What "good" looks like for alerts, Where this stops, Default Node process metrics, Gotchas (+40 more)
+
+### Community 118 - "Webpack Module Federation"
+Cohesion: 0.04
+Nodes (46): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Eager vs Lazy Remote Loading, `exposes`: What a Remote Offers, ⚙️ Module Federation Fundamentals: Containers, `remotes` & `exposes`, ⚠️ Pitfall 1: Relative `publicPath` on a Remote (+38 more)
+
+### Community 119 - "Javascript Events: Focus events on forms"
+Cohesion: 0.04
+Nodes (47): `beforeinput` — the cancelable one, Focus events on forms, Gotchas, `input` versus `change` — the one people get wrong, Interview questions, Keeping keyboard shortcuts out of forms, `submit`, and the two ways to trigger it, Debouncing without losing the last keystroke (+39 more)
+
+### Community 120 - "Git Remotes: push.default"
+Cohesion: 0.04
+Nodes (47): Gotchas, `push.default`, Setting it, The fork setup, Trade-off, `@{u}` and `@{push}`, What it is, Where the counts come from (+39 more)
+
+### Community 121 - "Javascript Events: Compatibility mouse e"
+Cohesion: 0.04
+Nodes (46): Compatibility mouse events, Gotchas, Interview questions, `pointercancel` — the one with no mouse equivalent, The events, The properties that mouse events never had, `touch-action` decides who wins the gesture, When to reach for pointer events (+38 more)
+
+### Community 122 - "Postgresql Ops: Knowing whether it is to"
+Cohesion: 0.04
+Nodes (46): `effective_cache_size` allocates nothing, Gotchas, How these interact with connection count, Interview questions, Knowing whether it is too low, `maintenance_work_mem`, Setting it where it belongs, `shared_buffers` (+38 more)
+
+### Community 123 - "Typescript Generics: Modifiers do not af"
+Cohesion: 0.04
+Nodes (46): Generic interfaces for behaviour, Gotchas, Interview questions, Modelling with a generic alias: the result type, The lib's own utility types are the worked examples, The two forms are not equivalent, Type parameters can constrain each other here too, Choosing between them, honestly (+38 more)
+
+### Community 124 - "Postgresql Beyond Tables"
+Cohesion: 0.04
+Nodes (46): Array elements, Comparisons need text, and then a cast, Gotchas, Interview questions, The accessors, The null trap, Trade-off, Why the return type decides everything (+38 more)
+
+### Community 125 - "Typescript Narrowing: Narrowing in the e"
+Cohesion: 0.04
+Nodes (47): Gotchas, Interview questions, Narrowing in the `else`, Reading the narrowed type, The falsy trap the type system cannot show you, The results, line by line, Trade-off, What `typeof` can distinguish (+39 more)
+
+### Community 126 - "Javascript Iteration And Destructuring"
+Cohesion: 0.06
+Nodes (41): Chunks, Phase gate, The rule, Where this connects, Chunks, Phase gate, The two traps, Where this connects (+33 more)
+
+### Community 127 - "Nodejs Security: 1. Reject at parse time"
+Cohesion: 0.04
+Nodes (46): 1. Reject at parse time, 2. Check the address at connect time, 3. Re-check every redirect hop, A dependency trap worth knowing, Good news first: `new URL()` normalises the obfuscated forms, Gotchas, Interview questions, The check that does not work: validate the URL, then fetch it (+38 more)
+
+### Community 128 - "React Refs Context Reducers"
 Cohesion: 0.05
-Nodes (45): Finding the mess you already have, Gotchas, Interview questions, Null, missing, and the difference that matters, Rule 1 — the value carries the type, Rule 2 — comparison is bracketed by type, The types, Choosing what goes in it (+37 more)
+Nodes (44): 🔴 Do not read or write `ref.current` during render, Gotchas, Interview questions, Mutation, and the one thing you must not mutate, Refs versus state, The caveat that defines it, The one legal exception: initialization, The shape (+36 more)
 
-### Community 51 - "Mongodb: Phase 3 Schema Design"
+### Community 129 - "Webpack: 1. Under-The-Hood Mechanics"
+Cohesion: 0.04
+Nodes (38): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `chunkSizeWarningLimit`: A Tripwire, Not a Hard Failure, ⚡ Optimization & Performance: Tree-Shaking, Chunk Warnings & Size Reporting, ⚠️ Pitfall 1: Ignoring Chunk-Size Warnings as Routine CI Noise, ⚠️ Pitfall 2: Judging Bundle Size From Raw Numbers Instead of the Gzip Column (+30 more)
+
+### Community 130 - "Nodejs Http Processes"
+Cohesion: 0.04
+Nodes (44): Content negotiation, CORS is a browser rule, not a server one, Gotchas, Headers worth knowing, Interview questions, Methods, and the two properties that matter, Status codes you will actually send, Gotchas (+36 more)
+
+### Community 131 - "Postgresql Api Crud"
+Cohesion: 0.04
+Nodes (44): Gotchas, Interview questions, The leak, and what it looks like, The shape, They really are interchangeable, Trade-off, What each one means at the wire level, Why the repository must not fetch its own connection (+36 more)
+
+### Community 132 - "Javascript Dynamic Programming"
 Cohesion: 0.05
-Nodes (45): Gotchas, Interview questions, The method, The two starting questions, What you give up, honestly, When the relational instinct is right, Worked: the order confirmation, A summary table (+37 more)
+Nodes (42): Condition 1 — overlapping subproblems, Condition 2 — optimal substructure, Gotchas, Interview questions, Recognising DP from a problem statement, Stating the complexity, The two directions, A checklist for naming the state (+34 more)
 
-### Community 52 - "Mongodb: Phase 5 Query Operators"
+### Community 133 - "Javascript Functions: Precedence, measur"
 Cohesion: 0.05
-Nodes (45): Gotchas, `$in` is the workhorse, Interview questions, `$ne` and `$nin` match missing fields, Null, missing, and the recommended alternative, Sorting a mixed field, Type bracketing, restated because it matters, AND is implicit — until it cannot be (+37 more)
+Nodes (41): Gotchas, Interview questions, Precedence, measured, Rule 1 — `new` binding, Rule 2 — explicit binding, Rule 3 — implicit binding, Rule 4 — default binding, The decision tree (+33 more)
 
-### Community 53 - "Git: Phase 1 Everyday Loop"
+### Community 134 - "Nodejs Filesystem: The error-first conve"
 Cohesion: 0.04
-Nodes (45): `-a`: the flag with a hole in it, `--amend`: a new commit, always, Author versus committer, Committing specific paths, Gotchas, The flags worth knowing about, The message, Trade-off (+37 more)
+Nodes (43): `callbackify` — the other direction, Gotchas, Interview questions, Most of the time you need neither, `promisify` — callback API to promise, The error-first convention, `util.promisify.custom`, Batching is not the same thing (+35 more)
 
-### Community 54 - "Docker: Phase 1 Running Containers"
-Cohesion: 0.04
-Nodes (43): Copy-up: the behaviour that surprises people, Deletion is not deletion, Gotchas, Interview questions, Looking at it, Page cache sharing — the upside, The four directories, Gotchas (+35 more)
-
-### Community 55 - "Git: Phase 1 Everyday Loop"
-Cohesion: 0.04
-Nodes (45): `git status` is also the "what am I in the middle of" command, Gotchas, Interview questions, Paths are relative to where you are standing, The clean states, and how they differ, The header line — where you are, before what changed, The hints are the answer, not decoration, The same file can appear in two sections at once (+37 more)
-
-### Community 56 - "Javascript: Phase 9 Dom"
-Cohesion: 0.04
-Nodes (43): `defer` and `async` usually remove the need, Gotchas, Interview questions, `readyState`, and the race you did not know you had, Restored from the bfcache: `pageshow`, The two events, What to do at startup, and what not to, `beforeunload`: only for unsaved changes (+35 more)
-
-### Community 57 - "Javascript: Phase 7 Async"
+### Community 135 - "React Server Components"
 Cohesion: 0.05
-Nodes (41): Deriving the rest of the API, Gotchas, Interview questions, Part four: the callback list, Part one: settle once, remember the outcome, Part three: `then` returns a **new** promise, Part two: handlers are *never* called synchronously, Gotchas (+33 more)
+Nodes (44): `children` is not special — any prop works, Gotchas, Interview questions, The pattern, The problem it solves, What you can and cannot do with the children you receive, Why it works: an element is data, Why this is the technique to reach for first (+36 more)
 
-### Community 58 - "Package.Json - clsx"
+### Community 136 - "React Components: What a component must "
+Cohesion: 0.05
+Nodes (42): Gotchas, Interview questions, `<Profile />` and `Profile()` are not the same thing, Props are one argument, always, The definition, and what it leaves out, The real definition: who calls it, What a component must not do, Where components live (+34 more)
+
+### Community 137 - "Package.Json: clsx"
 Cohesion: 0.04
 Nodes (47): clsx, @docusaurus/core, @docusaurus/faster, @docusaurus/module-type-aliases, @docusaurus/preset-classic, @docusaurus/types, @mdx-js/react, browserslist (+39 more)
 
-### Community 59 - "/: Syllabus Review.Md"
-Cohesion: 0.07
-Nodes (47): 300-line page cap, Never invent a number or console output, Authoring prompt for explanation pages, progress.js UI bump, Two-pass review, VERIFY measurement marker, Audit and history tables, boolean-dates granularity merge (+39 more)
-
-### Community 60 - "Javascript: Phase 17 Machine Coding"
+### Community 138 - "Tanstack-Query: 1. Under-The-Hood Mechan"
 Cohesion: 0.05
-Nodes (41): Choosing the limit, Error policy is a decision, not a default, Gotchas, Interview questions, Ordering: three different orders, and they are not the same, The four details that make it correct, Why not just chunk the array?, Cancellation (+33 more)
+Nodes (38): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different, ⚠️ Pitfall 1: Treating Server State Like Client State, Reinventing What TanStack Query Already Solves, ⚠️ Pitfall 2: Creating Multiple `QueryClient` Instances Accidentally, ⚠️ Pitfall 3: Assuming Cached Server Data Is Always Current (+30 more)
 
-### Community 61 - "Javascript: Phase 9 Dom"
+### Community 139 - "Javascript: Cleanup"
+Cohesion: 0.05
+Nodes (42): Breakpoints belong to `matchMedia`, Cleanup, Gotchas, Interview questions, Pick the signal that matches the question, `resize`: the window event versus `ResizeObserver`, `scroll`, in one paragraph, The entry properties (+34 more)
+
+### Community 140 - "Mongodb Schema Design"
+Cohesion: 0.05
+Nodes (41): Gotchas, Interview questions, The method, The two starting questions, What you give up, honestly, When the relational instinct is right, Worked: the order confirmation, A summary table (+33 more)
+
+### Community 141 - "Postgresql Ops: Attributes are not privi"
+Cohesion: 0.05
+Nodes (42): A new role can connect and see nothing, Attributes are not privileges, Dropping a role, Gotchas, Interview questions, Membership, `INHERIT`, and `SET ROLE`, One object type, four roles, Trade-off (+34 more)
+
+### Community 142 - "React Ssr Hydration"
+Cohesion: 0.05
+Nodes (41): Gotchas, Interview questions, 🔴 The four exceptions, The problem it replaces, What "hoist" actually means here, Why this belongs in the SSR phase, De-duplication, Gotchas (+33 more)
+
+### Community 143 - "Postgresql Types: The safe migration pat"
 Cohesion: 0.04
-Nodes (41): Chunks, Phase gate, The three sentences to keep, Where this connects, Attribute names are lowercased, Boolean attributes, `data-*` and `dataset`, Gotchas (+33 more)
+Nodes (42): Gotchas, Interview questions, Rewriting expensive changes as cheap ones, The real danger: the lock queue, The safe migration pattern, Trade-off, What each statement locks, and for how long, Gotchas (+34 more)
 
-### Community 62 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.05
-Nodes (39): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects (+31 more)
+### Community 144 - "Postgresql Aggregation: From Node"
+Cohesion: 0.04
+Nodes (42): From Node, Generating them, Gotchas, Interview questions, Never store a UUID as text, The three key types, measured, Trade-off, When a UUID earns its cost (+34 more)
 
-### Community 63 - "Javascript: Phase 7 Async"
-Cohesion: 0.05
-Nodes (41): Gotchas, Interview questions, The same anti-pattern in `async` clothing, When `new Promise` is correct, Why it is harmful, not just verbose, A string as the first argument is `eval`, Arguments after the delay are passed to the callback, Clearing is teardown, and teardown is not optional (+33 more)
+### Community 145 - "Postgresql Crud: The skeleton"
+Cohesion: 0.04
+Nodes (42): Expressions belong in the select list, Gotchas, Interview questions, `SELECT *` is for `psql`, not for code, The clause you write first runs almost last, The skeleton, Trade-off, What comes back in Node (+34 more)
 
-### Community 64 - "Sandbox Css - median()"
+### Community 146 - "Sandbox Css: baseline.mjs"
 Cohesion: 0.09
 Nodes (25): baseline(), FEATURE_COUNT, table(), WEB_FEATURES_VERSION, consoleMessages, PROBES, diff, results (+17 more)
 
-### Community 65 - "Nodejs: Phase 4 Filesystem"
+### Community 147 - "Javascript Objects And Classes"
 Cohesion: 0.05
-Nodes (46): The three flavors, Sync fs blocks the event loop, Sync fs only at startup, CLI, workers, crash handlers, fs callback, sync, and promise flavors, join vs resolve is a security boundary, node:path, path.join, path.resolve (+38 more)
+Nodes (39): Arrays are objects with stringified indices, Dot versus bracket, Dynamic keys and the prototype, Gotchas, Interview questions, Keys are stringified — and that is where collisions come from, Reading what might not be there, Symbols are the exception (+31 more)
 
-### Community 66 - "Tanstack-Query: Build Tool Integration"
-Cohesion: 0.07
-Nodes (5): Coverage, Imported from the frontend-bible corpus (2026-08-14), Priority tiers, 🔴 The critical rule — do not violate this, What "Verified" means
+### Community 148 - "Postgresql: From Node"
+Cohesion: 0.04
+Nodes (41): From Node, Gotchas, In SQL, `INCLUDE`: payload columns that are not part of the key, `INCLUDE` versus a wider key, Interview questions, It needs `VACUUM`, not just a covering index, One write undoes it (+33 more)
 
-### Community 67 - "Javascript: Phase 17 Machine Coding"
+### Community 149 - "Postgresql Aggregation: 1170× on the can"
 Cohesion: 0.05
-Nodes (39): `apply`, Borrowing methods, `call`, Gotchas, Interview questions, Where `this` actually comes from, Gotchas, Interview questions (+31 more)
+Nodes (41): 1170× on the canonical case, From Node, Gotchas, In SQL, Interview questions, It matches the expression, not the column, The immutability rule — the part that surprises people, They come with their own statistics (+33 more)
 
-### Community 68 - "Javascript: Phase 5 Built In Library"
+### Community 150 - "Css Positioning: Diagnosing it"
 Cohesion: 0.05
-Nodes (40): Choosing between `Set`, array and object, Equality is SameValueZero — which decides what "unique" means, Gotchas, Interview questions, The set operations, The two idioms, What a `Set` is not, `Collator` — sorting human text (+32 more)
+Nodes (40): Diagnosing it, Gotchas, Interview questions, `isolation: isolate`, Painting order within a context, The `z-index: auto` distinction, Trade-off, What creates one (+32 more)
 
-### Community 69 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.06
-Nodes (37): Chunks, Phase gate, The three things that go wrong, Where this connects, Chunks, Phase gate, The three that catch people, Where this connects (+29 more)
-
-### Community 70 - "Typescript: Phase 3 Generics"
-Cohesion: 0.05
-Nodes (40): Phase gate, Where this connects, `as const`, `satisfies` and `typeof` are one toolchain, Gotchas, Interview questions, 🔴 On a class, `typeof` gives the *static* side, The combinations that earn their keep, Two errors mark the boundary (+32 more)
-
-### Community 71 - "Javascript: Phase 15 Algorithm Patterns"
+### Community 151 - "Javascript Algorithm Patterns"
 Cohesion: 0.05
 Nodes (38): Gotchas, Interview questions, Palindromes and the string cases, The rest of the family, The template, Three-sum — the pattern nested once, Two-sum on a sorted array, Deduplicating a sorted array in place (+30 more)
 
-### Community 72 - "Javascript: Phase 16 Dynamic Programming"
+### Community 152 - "Javascript Built In Library"
 Cohesion: 0.05
-Nodes (38): Condition 1 — overlapping subproblems, Condition 2 — optimal substructure, Gotchas, Interview questions, Recognising DP from a problem statement, Stating the complexity, The two directions, Chunks (+30 more)
+Nodes (40): Compare and group, Create and copy, Gotchas, Interview questions, Protect, Read the shape, See *everything*, including what the above hide, The four axes — the answer key for all of them (+32 more)
 
-### Community 73 - "Javascript: Phase 9 Dom"
+### Community 153 - "Expressjs Syllabus: What each phase cove"
 Cohesion: 0.05
-Nodes (39): Chunks, Phase gate, Where this connects, Classes, or a `data-*` attribute?, `className` is a string, and on SVG it is not even that, Gotchas, Interview questions, `replace` returns whether it did anything (+31 more)
+Nodes (36): What each phase covers, Boundary rule (one line), Explanations, Handoff from Node — coverage map, Parts, Prerequisites, Reading order, Sources (+28 more)
 
-### Community 74 - "Nginx: Phase 2 Server And Location"
+### Community 154 - "Frontend-Architecture Error Handling And"
 Cohesion: 0.05
-Nodes (38): Phase gate for this topic, Where this connects, `auth_request` — the same idea for authorisation decisions, Gotchas, `internal` — reachable only from inside, Interview questions, Named locations — `@name`, Nested locations (+30 more)
+Nodes (40): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Root-Level Error Boundary as the Only Failure Containment, ⚠️ Anti-Pattern 2: Infinite Silent Automatic Retries, Masking a Genuinely Broken Feature, ⚠️ Anti-Pattern 3: Using a Generic Spinner Everywhere, Regardless of the Actual Failure/Reliability Characteristics, 🏛️ Error Handling & Resilience: Boundary Hierarchy, Fallback UI & Retry Patterns (+32 more)
 
-### Community 75 - "Git: Phase 2 Branching Merging"
+### Community 155 - "Git Everyday Loop"
+Cohesion: 0.05
+Nodes (40): `--dry-run`: ask before you stage, Errors, and choosing not to stop, `git add .` versus `git add -A`, Gotchas, Interview questions, The four ways to say which files, The mechanism, in one paragraph, Trade-off (+32 more)
+
+### Community 156 - "Git Branching Merging"
 Cohesion: 0.05
 Nodes (39): 41 bytes, measured, Creating, switching, listing, Deleting, and the check that `-d` performs, Detached HEAD, Gotchas, Naming, Renaming, Trade-off (+31 more)
 
-### Community 76 - "Javascript: Phase 4 Objects And Classes"
+### Community 157 - "Postgresql Pg Driver"
 Cohesion: 0.05
-Nodes (38): Destructuring defaults fire on `undefined` only, Gotchas, Interview questions, "Missing" is three different states, and PATCH cares, Nested destructuring throws on a missing parent, Parsing is the first thing that can fail, `?.` short-circuits the whole chain, and that is the point, The trap: `?.` protects one link, not the rest (+30 more)
+Nodes (40): `cont` interpolates, `disc` returns a real value, Gotchas, In Node, Interview questions, `NULL`s are ignored, like every other aggregate, Per group, Several percentiles in one pass, The syntax and the two variants (+32 more)
 
-### Community 77 - "Typescript: Phase 2 Narrowing"
+### Community 158 - "React Server Components"
 Cohesion: 0.05
-Nodes (39): Gotchas, Interview questions, Loss 1 — reassignment, Loss 2 — callbacks, The model: narrowing belongs to a reference, not to a value, The rule to carry, The shapes this hides in, What this is *not* (+31 more)
+Nodes (39): Gotchas, Inline — one function, Interview questions, Module level — every export, Naming: Server Function vs Server Action, The caveats, each with its consequence, The two forms, and why the difference matters, What can be passed and returned (+31 more)
 
-### Community 78 - "Docker: Phase 1 Running Containers"
+### Community 159 - "Docker Dockerfile: Choosing an interpret"
 Cohesion: 0.05
-Nodes (38): Gotchas, `inspect` — how it was configured, Interview questions, `logs` — what it said, Podman, `ps` — is it running, `stats` — what it is consuming, The triage sequence (+30 more)
+Nodes (38): Choosing an interpreter, Gotchas, Inline files with `COPY`, Interview questions, Multi-line `RUN`, Podman, Quoting the delimiter, Requires the syntax directive (+30 more)
 
-### Community 79 - "Javascript: Phase 18 Storefront"
+### Community 160 - "Javascript Browser Platform"
+Cohesion: 0.05
+Nodes (38): Coverage — how much of the bundle is dead, Elements — for the questions that are not JavaScript, Gotchas, Interview questions, Memory — three tools, three questions, Network — the panel that settles arguments, Performance — for jank, not for micro-benchmarks, Sources — breakpoints beyond the line breakpoint (+30 more)
+
+### Community 161 - "Javascript Storefront: Rendering from th"
 Cohesion: 0.05
 Nodes (38): Adding files without losing the ones already there, Every entry point feeds the same function, Gotchas, Interview questions, Previews: an object URL, and the revoke that goes with it, Rendering from the records, The model is a list of records, not a `FileList`, Accessibility, in the four places it matters here (+30 more)
 
-### Community 80 - "Javascript: Phase 7 Async"
+### Community 162 - "Javascript Iteration And Destructuring"
 Cohesion: 0.05
-Nodes (37): Gotchas, In Node: a different name, and a harder default, In the browser: two events, Interview questions, Registering a listener changes the default, Suppressing the console output, What a listener should actually do, Chunks (+29 more)
+Nodes (38): Gotchas, Interview questions, Nothing is computed until it is pulled, Recursive structures, without an accumulator, State without a class, The built-in version: iterator helpers, The pipeline shape, on real data, Where generators are the wrong tool (+30 more)
 
-### Community 81 - "Postgresql: Phase 13 Ops"
+### Community 163 - "Javascript Async: Availability"
 Cohesion: 0.05
-Nodes (42): INHERIT and SET ROLE, pg_authid cluster-wide roles, PostgreSQL role, Separate owner and app roles, MAINTAIN privilege, Ownership outranks privileges, Least privilege model, log_statement logs bound parameters (+34 more)
+Nodes (38): Gotchas, Interview questions, Most of the time you should not be using the constructor at all, Rule 1 · The executor runs synchronously, immediately, Rule 2 · A promise settles exactly once, and later calls are ignored, Rule 3 · Throwing in the executor rejects — until it has settled, Rule 4 · `resolve` adopts; `reject` does not, Rule 5 · The executor's return value is discarded (+30 more)
 
-### Community 82 - "Postgresql: Performance And Production.Md"
-Cohesion: 0.06
-Nodes (42): CTEs (WITH), jsonb_agg, LEFT JOIN + WHERE bug, Logical query processing order, NOT IN NULL trap, INSERT ... ON CONFLICT, Parameterized queries, Part 2 — SQL (+34 more)
-
-### Community 83 - "Css: Phase 3 Custom Properties"
+### Community 164 - "Css Custom Properties"
 Cohesion: 0.05
 Nodes (37): Gotchas, Interview questions, Invalid at computed-value time, Naming that survives, Scoping: the value lives on the element, not in a namespace, Setting a value from outside CSS, The fallback is a second argument, not a default, The shape of the API (+29 more)
 
-### Community 84 - "Docker: Phase 2 Images And Registries"
+### Community 165 - "Javascript Dom: The loop error"
 Cohesion: 0.05
-Nodes (37): Docker Hub rate limits — the number that breaks CI, Gotchas, Interview questions, Podman, Public and private, The ones you will meet, Where the credentials live, Gotchas (+29 more)
+Nodes (37): Cost: what observing actually charges you, Fix 1 — do not write sizes at all, Fix 2 — write to a different element, Fix 3 — skip the write when the size is already right, Fix 4 — defer the write out of the delivery, Gotchas, Interview questions, Testing and environments without one (+29 more)
 
-### Community 85 - "Javascript: Phase 17 Machine Coding"
+### Community 166 - "Javascript Machine Coding"
 Cohesion: 0.05
 Nodes (36): Gotchas, Interview questions, The linked-list version, for when the question wants it, The three decisions the code makes, The twenty-line version, Which to write, Why it is O(1), Before writing one at all (+28 more)
 
-### Community 86 - "Javascript: Phase 9 Dom"
-Cohesion: 0.05
-Nodes (37): `closest` — the up-walk, done properly, Containment: `contains` and `compareDocumentPosition`, Going down: the selector is matched against the document, Gotchas, Interview questions, `matches` — the other half, Roots, shadow boundaries and detached trees, `connectedCallback` can run more than once (+29 more)
+### Community 167 - "Mongodb Documents And Bson"
+Cohesion: 0.06
+Nodes (36): Finding the mess you already have, Gotchas, Interview questions, Null, missing, and the difference that matters, Rule 1 — the value carries the type, Rule 2 — comparison is bracketed by type, The types, Choosing what goes in it (+28 more)
 
-### Community 87 - "Nginx: Serving And Proxying.Md"
+### Community 168 - "Nginx Syllabus: What each phase covers"
 Cohesion: 0.05
 Nodes (36): What each phase covers, Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend (+28 more)
 
-### Community 88 - "Expressjs: Phase 3 Requests"
+### Community 169 - "Postgresql Crud: Combining predicates"
 Cohesion: 0.05
-Nodes (41): Canonical Express skeleton, Error middleware last, Express FAQ 404 guidance, Four-argument error middleware, 404 handler, First and last middleware slots, Body parsers early, Mutating req and res (+33 more)
+Nodes (38): `BETWEEN` is inclusive on both ends, Combining predicates, Gotchas, Interview questions, `NOT IN` with a NULL returns nothing at all, Pattern matching, Predicates that defeat indexes, `!=` skips NULL rows (+30 more)
 
-### Community 89 - "Css: Phase 7 Positioning"
-Cohesion: 0.06
-Nodes (36): Diagnosing it, Gotchas, Interview questions, `isolation: isolate`, Painting order within a context, The `z-index: auto` distinction, Trade-off, What creates one (+28 more)
-
-### Community 90 - "Javascript: Phase 10 Events"
+### Community 170 - "React Server Components"
 Cohesion: 0.05
-Nodes (35): Chunks, Phase gate, The three sentences to keep, Where this connects, `cancelable` and the return value, Creating and dispatching, `CustomEvent` versus `Event`, `dispatchEvent()` is synchronous (+27 more)
+Nodes (37): Gotchas, Interview questions, Stability — what is stable, and for whom, 🔴 There is no `'use server'` on a Server Component, What a Server Component cannot do, What it can do that a Client Component cannot, Where this connects, Why this is two files (+29 more)
 
-### Community 91 - "Javascript: Phase 13 Complexity"
-Cohesion: 0.06
-Nodes (35): Gotchas, Interview questions, Recursion: count the calls, The costs JavaScript hides, The mechanical rules, Two JavaScript-specific surprises, Worked example, Chunks (+27 more)
+### Community 171 - "React Jsx: jsx vs jsxs"
+Cohesion: 0.05
+Nodes (38): Components: the function itself is the type, Development mode adds arguments, Gotchas, Interview questions, `jsx()` and `createElement()` produce the same thing, `jsx` vs `jsxs`, The transform, printed, What this buys you when reading errors (+30 more)
 
-### Community 92 - "Javascript: Phase 18 Storefront"
+### Community 172 - "Git Syllabus: Scripting rules that follo"
+Cohesion: 0.05
+Nodes (35): Doing `git commit`'s job by hand, Gotchas, Interview questions, Scripting rules that follow, The surface, counted, Trade-off, Which is which, Example policy (+27 more)
+
+### Community 173 - "Javascript Machine Coding"
+Cohesion: 0.05
+Nodes (35): `apply`, Borrowing methods, `call`, Gotchas, Interview questions, Where `this` actually comes from, Gotchas, Interview questions (+27 more)
+
+### Community 174 - "Javascript Storefront: Derived values"
 Cohesion: 0.05
 Nodes (35): Derived values, Freezing, and how far to go, Gotchas, Interview questions, The shape, The transitions, Two rules decide the design, A store in twenty lines (+27 more)
 
-### Community 93 - "Typescript: Phase 3 Generics"
-Cohesion: 0.06
-Nodes (35): Generic interfaces for behaviour, Gotchas, Interview questions, Modelling with a generic alias: the result type, The lib's own utility types are the worked examples, The two forms are not equivalent, Type parameters can constrain each other here too, Choosing between them, honestly (+27 more)
-
-### Community 94 - "Typescript: Phase 2 Narrowing"
-Cohesion: 0.06
-Nodes (40): in operator narrowing, k in obj narrows obj never k, Optional properties break in narrowing, The in operator, Prefer a discriminant for designed types, in walks the prototype chain, instanceof narrowing, instanceof narrowing (+32 more)
-
-### Community 95 - "Javascript: Phase 17 Machine Coding"
+### Community 175 - "React Server Components"
 Cohesion: 0.05
-Nodes (34): Gotchas, Interview questions, The one-liner people reach for, and why it is wrong, The version worth writing, What this version still does not do, Why each block is there, Choosing, Gotchas (+26 more)
+Nodes (37): "before bundling", Build time — no web server at all, Gotchas, "in an environment separate from your client app or SSR server", Interview questions, "renders ahead of time", Request time — your data layer, without an API, The two modes, and why "server" is a misleading name (+29 more)
 
-### Community 96 - "Javascript: Phase 9 Dom"
+### Community 176 - "Postgresql Crud: From Node"
 Cohesion: 0.05
-Nodes (35): `form.elements` — the other way in, Gotchas, Interview questions, `Object.fromEntries` loses data — know exactly when, Sending it, The submitter, What actually ends up in a `FormData`, Closing: `close()`, `returnValue`, and `method="dialog"` (+27 more)
+Nodes (36): From Node, Gotchas, Interview questions, Keyset does the same job in constant time, `LIMIT` without `ORDER BY` is not "the first rows", `OFFSET` cost grows with depth, `OFFSET` pages drift under concurrent writes, The `count(*)` that powers "page 1 of N" (+28 more)
 
-### Community 97 - "Storybook: Phase 0 How Storybook Runs"
+### Community 177 - "Storybook: The smallest complete example"
 Cohesion: 0.06
 Nodes (34): Gotchas, Interview questions, The mental shift: bottom-up, not top-down, The problem it exists to solve, The smallest complete example, What a story is, What it is *not*, Where Storybook sits against the things it is confused with (+26 more)
 
-### Community 98 - "Git: Phase 1 Everyday Loop"
+### Community 178 - "Typescript Type Vocabulary"
 Cohesion: 0.05
-Nodes (35): Gotchas, Stopping tracking: `git rm --cached`, The part `rm --cached` does not fix, The right shape for configuration, The rule, and why it works that way, The two flags that look like the answer and are not, Trade-off, What this does to your colleagues (+27 more)
+Nodes (36): Discriminated unions, Exhaustiveness, measured, Gotchas, Interview questions, The common-members rule, The shape, Trade-off, Unions of objects vs optional properties (+28 more)
 
-### Community 99 - "Javascript: Phase 14 Data Structures"
+### Community 179 - "Javascript Data Structures"
 Cohesion: 0.06
 Nodes (33): Gotchas, Interview questions, The table, The two representations, Why `push` is amortised O(1), Why `shift` is O(n), and what to do instead, Array-likes are not arrays, Every copy here is shallow (+25 more)
 
-### Community 100 - "Nginx: Phase 1 Configuration Language"
+### Community 180 - "Nginx Configuration Language"
 Cohesion: 0.05
 Nodes (35): 1. Drop noise from the access log — Phase 10, 2. Never cache a logged-in user's response — Phase 6, 3. Long-lived caching for hashed assets only — Phase 3, 4. Choose a backend by path — Phase 8, 5. WebSocket upgrade — Phase 4, Chaining maps, Five patterns worth stealing, Gotchas (+27 more)
 
-### Community 101 - "React: Phase 4 Effects"
-Cohesion: 0.05
-Nodes (34): `addEventListener` with a stable handler, Gotchas, Interview questions, Observers, 🔴 Only `capture` participates in matching, `setInterval` with a changing delay, What the leaks actually look like, Choosing between the two (+26 more)
-
-### Community 102 - "Webpack: Module Federation"
-Cohesion: 0.05
-Nodes (35): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Rendering Strategy for the Entire App, Regardless of Per-Route Needs, ⚠️ Anti-Pattern 2: Adopting Micro-Frontends Without an Actual Multi-Team Independent-Deploy Need, ⚠️ Anti-Pattern 3: Invalidating One Cache Layer and Assuming the Whole Chain Is Now Fresh, Caching Layers: Knowing Which One Actually Needs Invalidating (+27 more)
-
-### Community 103 - "Git: Phase 1 Everyday Loop"
+### Community 181 - "Javascript Objects And Classes"
 Cohesion: 0.06
-Nodes (34): `--dry-run`: ask before you stage, Errors, and choosing not to stop, `git add .` versus `git add -A`, Gotchas, Interview questions, The four ways to say which files, The mechanism, in one paragraph, Trade-off (+26 more)
+Nodes (33): Broken case 1 — a null-prototype object has no such method, Broken case 2 — the object shadowed the method, Choosing between the three, Gotchas, `in` — own *or* inherited, `in` throws on primitives, Interview questions, `Object.hasOwn` — the modern default (+25 more)
 
-### Community 104 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.06
-Nodes (33): Class accessors live on the prototype — and it shows in JSON, Defining them after the fact, Gotchas, Interview questions, The half-defined cases, The infinite-recursion trap, They are invisible, and things read them without asking, What accessors are actually for (+25 more)
-
-### Community 105 - "Javascript: Phase 8 Modules Errors"
+### Community 182 - "Javascript Modules Errors"
 Cohesion: 0.06
 Nodes (33): Async callbacks overlap under *both* shapes, Do not animate with timers, Drift: why the lateness accumulates, Gotchas, Interview questions, `performance.now()` for durations, `Date.now()` for deadlines, Re-entrancy and teardown, `setInterval` versus a self-rescheduling `setTimeout` (+25 more)
 
-### Community 106 - "Mongodb: Phase 2 Mongosh"
+### Community 183 - "Mongodb Mongosh: Connecting with mongosh"
 Cohesion: 0.06
 Nodes (33): Connecting with `mongosh`, Gotchas, Interview questions, Local development: run a replica set, The anatomy, The options worth knowing, The two forms, Gotchas (+25 more)
 
-### Community 107 - "Docker: Phase 1 Running Containers"
+### Community 184 - "Css Motion: The pipeline decides the cos"
 Cohesion: 0.06
-Nodes (33): Exited is not gone, Gotchas, Interview questions, Podman, The commands, The states, Why containers exit immediately, Choosing the grace period (+25 more)
+Nodes (33): Animating to `auto` does not work, Gotchas, Interview questions, `scale()` is not the same as changing width, The pipeline decides the cost, The substitutions, Trade-off, `will-change`, and why it is not a free win (+25 more)
 
-### Community 108 - "Javascript: Phase 18 Storefront"
+### Community 185 - "Javascript Network Storage"
 Cohesion: 0.06
-Nodes (32): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Fix 0 — do not render the list at all, Fix 1 — make each row cheaper, Fix 2 — insert in one shot, Fix 3 — `content-visibility`, the one that is nearly free (+24 more)
+Nodes (32): `accept`, `multiple`, `capture` — hints, not rules, Drag and drop, Gotchas, Interview questions, Paste, 🔴 Selecting the same file twice fires nothing, The input, Validating on the client (+24 more)
 
-### Community 109 - "Storybook: Build And Configuration"
+### Community 186 - "Javascript Data Structures"
+Cohesion: 0.06
+Nodes (32): Gotchas, Interview questions, `Map` over `Object`, by default, `Set` for membership, always, Start with the question, not the shape, The table, `WeakMap`, and the one thing it is for, Gotchas (+24 more)
+
+### Community 187 - "Javascript Async: Chaining after a catch"
+Cohesion: 0.06
+Nodes (32): Chaining after a `catch`, Gotchas, Interview questions, Nesting on purpose — scoping a `catch`, There is no propagation mechanism, Where to put the `catch`, Chunks, Phase gate (+24 more)
+
+### Community 188 - "Postgresql Beyond Tables"
 Cohesion: 0.05
-Nodes (37): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3.10 Programmatic config export patterns, 3.11 Yarn PnP / monorepo resolution (common pain), 3.12 Webpack→Vite migration customization checklist, 3.1 Manager UI theming & branding (`manager.ts`), 3.2 Deep `viteFinal` — align with the real Vite app, 3.3 `webpackFinal` (Webpack 5 framework) (+29 more)
+Nodes (33): Declaring it, Gotchas, Indexes, Interview questions, Pruning is the whole benefit, The default partition, The reason to actually do it, Trade-off (+25 more)
 
-### Community 110 - "Webpack: Module Federation"
-Cohesion: 0.05
-Nodes (34): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Eager vs Lazy Remote Loading, `exposes`: What a Remote Offers, ⚙️ Module Federation Fundamentals: Containers, `remotes` & `exposes`, ⚠️ Pitfall 1: Relative `publicPath` on a Remote (+26 more)
-
-### Community 111 - "Javascript: Phase 0 How Javascript Runs"
-Cohesion: 0.07
-Nodes (36): JavaScript engine, The engine, the runtime and the spec, fetch is a host API, globalThis, JavaScript host, JavaScriptCore, navigator exists in Node 21+, ECMA-262 spec (+28 more)
-
-### Community 112 - "Css: Phase 10 Scss"
+### Community 189 - "React Components: Migration"
 Cohesion: 0.06
-Nodes (32): Gotchas, In a bundler, Interview questions, Partials and the `_` convention, `.scss` or `.sass`, Source maps, The compiler, Trade-off (+24 more)
+Nodes (32): Does anything still need `forwardRef`?, Gotchas, Interview questions, Migration, Ref cleanup functions, What changed, What this makes easy, Why `ref` was special in the first place (+24 more)
 
-### Community 113 - "Javascript: Phase 17 Machine Coding"
+### Community 190 - "Typescript: Trade-off"
+Cohesion: 0.06
+Nodes (32): `{}` — "anything but null and undefined", Gotchas, Interview questions, `Object` — the interface, and why not to use it, `object` — the only one that means "an object", Trade-off, What each accepts, What to write instead (+24 more)
+
+### Community 191 - "Javascript Machine Coding"
 Cohesion: 0.06
 Nodes (32): Background tabs: the throttling that breaks polling, Cancelling, and the id pool, Gotchas, Interview questions, `setInterval` has two failure modes, and both are silent, The honest list of what replaces a timer, The nesting clamp — where `setTimeout(fn, 0)` stops being 0, The one-sentence model (+24 more)
 
-### Community 114 - "Javascript: Phase 7 Async"
+### Community 192 - "Javascript Iteration And Destructuring"
+Cohesion: 0.06
+Nodes (31): Chunks, Phase gate, Where this connects, Class fields are different — and that is the fix, Detaching it: `this` becomes `undefined`, Gotchas, Interview questions, The four ways it happens in real code (+23 more)
+
+### Community 193 - "Javascript Built In Library"
+Cohesion: 0.06
+Nodes (32): `at` for single characters, Gotchas, Interview questions, `join` is the inverse, with one trap, `slice` versus `substring`, `split`, `split("")` and Unicode, Splitting with a regex (+24 more)
+
+### Community 194 - "Javascript Async: Two halves, on purpose"
 Cohesion: 0.06
 Nodes (32): Abort is cooperative, and that is a real limitation, Do not treat an abort as a failure, Gotchas, Interview questions, Reading the signal: three ways, for three situations, `reason` — what an aborted operation rejects with, `signal.aborted` — the guard before you start, `signal` is accepted far beyond `fetch` (+24 more)
 
-### Community 115 - "Storybook: Phase 0 How Storybook Runs"
+### Community 195 - "Nodejs Security: Children inherit everyt"
 Cohesion: 0.06
-Nodes (31): Gotchas, `iframe.html` — the escape hatch, Interview questions, Which file configures which, Why an iframe at all, Gotchas, Interview questions, Where the renderer boundary leaks (+23 more)
+Nodes (32): Children inherit everything, `--env-file`, exactly, Git remembers, Gotchas, How secrets actually escape, Interview questions, One real advantage over `export`, Rotation (+24 more)
 
-### Community 116 - "Nodejs: Phase 10 Observability"
+### Community 196 - "Postgresql Beyond Tables"
+Cohesion: 0.06
+Nodes (32): Gotchas, Interview questions, Matching with `@@`, Prefix matching, The four query parsers, Trade-off, Use `websearch_to_tsquery`, What `to_tsvector` produces (+24 more)
+
+### Community 197 - "Postgresql Types: From Node"
+Cohesion: 0.06
+Nodes (32): `AT TIME ZONE` converts in both directions, DST: intervals are not all equal, From Node, Gotchas, Interview questions, Neither type stores a time zone, `now()` is the transaction's clock, Trade-off (+24 more)
+
+### Community 198 - "Postgresql Ddl: Constraint or index?"
+Cohesion: 0.06
+Nodes (31): Case sensitivity is a separate problem, Constraint or index?, Gotchas, Interview questions, `NULLS NOT DISTINCT` (PostgreSQL 15+), The default behaviour, Trade-off, Adding a new column is already fast (+23 more)
+
+### Community 199 - "Postgresql Aggregation: Seeding test dat"
+Cohesion: 0.06
+Nodes (32): Gap filling — the reason it matters, Gotchas, Interview questions, Keeping the input order with `WITH ORDINALITY`, Seeding test data, Steps, direction and endpoints, The basic form, The `date` corruption trap (+24 more)
+
+### Community 200 - "Expressjs Reviews: Counts (this part)"
+Cohesion: 0.06
+Nodes (30): Counts (this part), Phase 0 — Express over `node:http`, Phase 1 — Routing and path matching, Phase 2 — Middleware architecture, Counts (this part), Phase 3 — Requests and body parsing, Phase 4 — Responses, static files, and cookies on the way out, Phase 5 — Error handling and propagation (+22 more)
+
+### Community 201 - "Git Remotes: Amend counts too"
+Cohesion: 0.06
+Nodes (31): Amend counts too, `--force-with-lease`, not `--force`, Gotchas, The alternative that is always safe, The hole in the lease, and `--force-if-includes`, Trade-off, What actually goes wrong, What "shared" means precisely (+23 more)
+
+### Community 202 - "Javascript Network Storage"
+Cohesion: 0.06
+Nodes (30): Check `response.ok`, Gotchas, Interview questions, The body can be read once, The defaults, What *does* reject, An origin is scheme + host + port, Gotchas (+22 more)
+
+### Community 203 - "Javascript Functions: Choosing between t"
+Cohesion: 0.06
+Nodes (31): Async loops are the same rule, delayed, Gotchas, Interview questions, Loops: which constructs give a fresh binding, The constructs that cannot have the bug at all, Two failure shapes, and telling them apart, 1 · Close over the variable, not a copy, 2 · Read through a mutable box (+23 more)
+
+### Community 204 - "Postgresql Syllabus: Boundary with Node "
+Cohesion: 0.06
+Nodes (30): Boundary with Node (short), Delivery waves, Example policy, Explanations, Parts, Prerequisites, Reading order, Recap rule (Node Phase 6) (+22 more)
+
+### Community 205 - "Postgresql Reviews: Phase 1 — psql, mast"
+Cohesion: 0.06
+Nodes (30): Phase 0 — PostgreSQL and its architecture, Phase 1 — `psql`, mastered, Phase 2 — Data types and the relational model, Phase 3 — DDL: tables, constraints, schema design, Where this connects, Phase 4 — CRUD and DML, Phase 5 — Joins and set operations, Phase 6 — Aggregation, windows and CTEs (+22 more)
+
+### Community 206 - "React Performance: Reading a tree for po"
+Cohesion: 0.06
+Nodes (31): Gotchas, Interview questions, Reading a tree for position, State dies more than people expect, State survives more than people expect, The two deliberate resets, The two rules, Where the state lives changes the answer (+23 more)
+
+### Community 207 - "Css Syllabus: How these pages are verifi"
+Cohesion: 0.06
+Nodes (28): How these pages are verified, Phases, Progress, Example policy, Explanations, Open questions — recorded, not silently decided, Parts, Prerequisites (+20 more)
+
+### Community 208 - "Javascript Complexity: Chunks"
 Cohesion: 0.07
-Nodes (35): console.log can block the event loop, Log levels, Minimum log schema, Structured logging, Logs, traces, and metrics, pino child loggers, Do not pretty-print in production, pino (+27 more)
+Nodes (28): Chunks, Phase gate, The three sentences to keep, Where this connects, Chunks, Phase gate, The three sentences to keep, Where this connects (+20 more)
 
-### Community 117 - "Css: Phase 5 Grid"
+### Community 209 - "Javascript Browser Platform"
 Cohesion: 0.06
-Nodes (31): Gotchas, Interview questions, Lines, not cells, Named lines, Negative line numbers count from the end, Overlapping items, Placement is independent of DOM order, `span` avoids the arithmetic (+23 more)
+Nodes (30): Detect once, at the boundary, Gotchas, Interview questions, The failure modes that make naive checks wrong, The four shapes of a check, What not to detect on, Deciding what to enhance with: Baseline, Gotchas (+22 more)
 
-### Community 118 - "Docker: Phase 1 Running Containers"
+### Community 210 - "Javascript Functions: What to actually d"
 Cohesion: 0.06
-Nodes (31): `-a` deletes images you will want back, Filters, First, find out where it went, Gotchas, Interview questions, Podman, The prune commands, precisely, The routine that is safe (+23 more)
+Nodes (30): Function declarations — the slot holds the function, Function expressions are not hoisted — and fail differently, Gotchas, Interview questions, Redeclaration does not reset the value, Script top level versus module top level, `var` — the slot exists, the value does not, What to actually do (+22 more)
 
-### Community 119 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.06
-Nodes (31): Ending one, Errors cross the boundary badly, Gotchas, Inside: what exists and what does not, Interview questions, Request and response over a one-way channel, Starting one, The channel (+23 more)
-
-### Community 120 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.06
-Nodes (31): Calling it runs nothing, Ending it early — `return()` and `throw()`, Every place `function*` can be written, Generator objects are one-shot, and are their own iterator, Gotchas, Interview questions, `next(value)` sends a value back in, What `next()` does (+23 more)
-
-### Community 121 - "Javascript: Phase 7 Async"
-Cohesion: 0.06
-Nodes (31): `forEach` — nothing is awaited, Gotchas, Interview questions, `map` without `Promise.all` — an array of promises, Spotting it: the dependency test, The loop is the expensive version, Two loop shapes that do not do what they look like, What it costs, and what it does not (+23 more)
-
-### Community 122 - "Typescript: Phase 2 Narrowing"
-Cohesion: 0.06
-Nodes (30): Annotation checks; assertion asserts, `as unknown as T` — the two-step escape, Gotchas, Interview questions, The one rule `as` still enforces, Trade-off, Why the failure arrives late, Phase gate (+22 more)
-
-### Community 123 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.06
-Nodes (30): Cross-origin resources tell you almost nothing, Gotchas, Interview questions, Observing, and the `buffered` flag that matters more than it looks, The clock, The entry, The polling alternative, and why the observer wins, The rest of the interface (+22 more)
-
-### Community 124 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.06
-Nodes (30): Early exit still closes the iterator, Errors, and the `finally` trap, `for await...of`, Gotchas, Interview questions, It also accepts *sync* iterables, and awaits their values, Sequential by design — and when that is wrong, What is async iterable (+22 more)
-
-### Community 125 - "Mongodb: Phase 4 Crud"
-Cohesion: 0.06
-Nodes (30): Explaining other operations, Gotchas, Interview questions, Reading the output — four numbers, Reading the plan — the stages, The three verbosities, The two-minute diagnosis, Why *that* index? — `rejectedPlans` (+22 more)
-
-### Community 126 - "Nginx: Phase 1 Configuration Language"
+### Community 211 - "Nginx Configuration Language"
 Cohesion: 0.06
 Nodes (30): 1. Repeat the inherited ones, 2. Put them in an include and include it everywhere, 3. Set them at the highest level that is true, 4. `add_header_inherit merge` — new in 1.29.3, Gotchas, Interview questions, Reading it in a real config, The other half of `add_header`: it skips most responses (+22 more)
 
-### Community 127 - "React: Phase 11 Ssr Hydration"
-Cohesion: 0.07
-Nodes (29): Gotchas, Interview questions, 🔴 The four exceptions, The problem it replaces, What "hoist" actually means here, Why this belongs in the SSR phase, Where this connects, Why this is two files (+21 more)
-
-### Community 128 - "Expressjs: Phase 0 Express Basics"
-Cohesion: 0.08
-Nodes (27): Gotchas, Interview questions, The dispatcher you write if you do not use a framework, What Express supplies, exactly, What `node:http` actually gives you, Why the pipeline model — and not decorators or a controller registry, `express()` returns a function, not an object, Gotchas (+19 more)
-
-### Community 129 - "Git: How Git Works.Md"
-Cohesion: 0.07
-Nodes (28): Example policy, Explanations, Open questions — recorded, not silently decided, Parts, Prerequisites, Progress, Scope — what this syllabus owns, Tier distribution (+20 more)
-
-### Community 130 - "Javascript: Phase 10 Events"
-Cohesion: 0.07
-Nodes (28): Compatibility mouse events, Gotchas, Interview questions, `pointercancel` — the one with no mouse equivalent, The events, The properties that mouse events never had, `touch-action` decides who wins the gesture, When to reach for pointer events (+20 more)
-
-### Community 131 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.07
-Nodes (28): Chunks, Phase gate, Three facts worth carrying out of this topic, Where this connects, Copying: the 90% case, Gotchas, Interview questions, `paste`, `copy`, `cut` — the events, and why they are still the best path (+20 more)
-
-### Community 132 - "Jest-Rtl: Coverage And Configuration"
+### Community 212 - "Nodejs Async: Cleanup on early exit"
 Cohesion: 0.06
-Nodes (30): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Coverage & Configuration: `jest.config.js`, Thresholds & Transform Pipeline, `coverageThreshold`: An Enforced, CI-Blocking Floor, `moduleNameMapper`: Mocking Non-JS Imports and Resolving Aliases, ⚠️ Pitfall 1: Using `testEnvironment: 'jsdom'` for Pure-Logic Tests (+22 more)
+Nodes (30): Cleanup on early exit, `for await...of` over an async generator, Gotchas, Interview questions, Sequential by definition, The problem it solves, The protocol underneath, What is already async-iterable (+22 more)
 
-### Community 133 - "Nginx: Phase 0 Process Model"
+### Community 213 - "Nodejs Security: Choosing"
+Cohesion: 0.06
+Nodes (30): Choosing, Gotchas, If you do use JWTs, Interview questions, The claims worth checking, The comparison, without the marketing, What each one actually is, Choosing (+22 more)
+
+### Community 214 - "React How React Runs"
+Cohesion: 0.06
+Nodes (30): Gotchas, Interview questions, It is not a linter, Should you turn it on?, Turning it on, What it does to your code, What it will and will not touch, A workflow that works (+22 more)
+
+### Community 215 - "Css Flexbox: Always use the shorthand"
+Cohesion: 0.06
+Nodes (29): Always use the shorthand, `flex: none` versus `flex: 0 0 auto`, Gotchas, Interview questions, The expansion table, The four you actually need, Trade-off, Why `flex: 1` and `width` conflict (+21 more)
+
+### Community 216 - "Css Container Queries"
+Cohesion: 0.06
+Nodes (29): Container query units, Gotchas, `inline-size` is almost always the right type, Interview questions, The mechanism, The query itself, The rule that catches everyone: a container cannot query itself, Trade-off (+21 more)
+
+### Community 217 - "Css Color Theming"
+Cohesion: 0.06
+Nodes (29): Chroma is not saturation, and it has no fixed maximum, Gotchas, Interview questions, The problem with HSL, The related notations, Trade-off, What OkLCh changes, Wider gamuts, safely (+21 more)
+
+### Community 218 - "Javascript Functions: Chunks"
+Cohesion: 0.07
+Nodes (27): Chunks, Phase gate, Where this connects, Chunks, Phase gate, Where this connects, Chunks, Phase gate (+19 more)
+
+### Community 219 - "Javascript Built In Library"
+Cohesion: 0.06
+Nodes (29): `Array.from` is shallow, `Array.from` — the general converter, Choosing, Gotchas, Interview questions, The `{ length: n }` idiom, The literal, and `Array.of`, The `mapFn` second argument (+21 more)
+
+### Community 220 - "Nginx Process Model"
 Cohesion: 0.06
 Nodes (29): Connection processing methods, Gotchas, Interview questions, The arithmetic, and why it lies, The real ceiling is file descriptors, The tuning knobs you will be told to set, and whether to, The two numbers, Trade-off (+21 more)
 
-### Community 134 - "React: Phase 11 Ssr Hydration"
-Cohesion: 0.07
-Nodes (28): Aborting, Boundary placement is the design, Errors outside the shell degrade, they do not fail, Gotchas, Interview questions, `onShellReady` vs `onAllReady`, The shell, The status-code trade-off (+20 more)
-
-### Community 135 - "Git: Phase 5 Undo Recover"
-Cohesion: 0.07
-Nodes (28): Before any destructive command, Gotchas, The four commands, one sentence each, The one question, The safety ladder, The table, Trade-off, Gotchas (+20 more)
-
-### Community 136 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.07
-Nodes (28): Cancellation, properly, Gotchas, Interview questions, Keeping the worker's code sane, Proving it, not guessing it, 🔴 The decision, The worker pool, Everything else in `crypto.subtle` is async, and secure-context only (+20 more)
-
-### Community 137 - "Javascript: Phase 12 Browser Platform"
+### Community 221 - "Nodejs Observability: Capture a heap sna"
 Cohesion: 0.06
-Nodes (29): `BroadcastChannel` — the one to reach for, Choosing, Gotchas, Interview questions, `SharedWorker` and the service worker — one script for every tab, The message shape that survives a deploy, The `storage` event — the older bus, and the one that lies, 🔴 There are two different problems here (+21 more)
+Nodes (29): Capture a heap snapshot, Comparison discipline, Finding the retainer, Gotchas, Interview questions, Symptoms, 1. Unbounded caches and dictionaries, 2. Event listeners never removed (+21 more)
 
-### Community 138 - "Javascript: Phase 12 Browser Platform"
+### Community 222 - "Postgresql Ops: Enabling it"
 Cohesion: 0.07
-Nodes (28): Activation, secure contexts and iframes, Asking at the right moment, Gotchas, Interview questions, Not every name is queryable everywhere, Permission is state — watch it, never cache it, Three states, and only one of them is yours to change, Before you ask at all (+20 more)
+Nodes (28): Enabling it, Gotchas, Interview questions, Normalisation, and the trap in it, Total time beats mean time, Trade-off, Gotchas, Interview questions (+20 more)
 
-### Community 139 - "Javascript: Phase 9 Dom"
+### Community 223 - "React Server Components"
+Cohesion: 0.06
+Nodes (30): Denial of service, Gotchas, Interview questions, Source code exposure, The critical one — CVE-2025-55182, The follow-ups — 11 December, The frameworks named, The timeline (+22 more)
+
+### Community 224 - "React Syllabus: Example policy"
 Cohesion: 0.07
-Nodes (28): `<dialog>` does the whole job, Giving focus back, Gotchas, If you must write a trap, Interview questions, Keeping focus inside: `inert` beats a hand-written trap, Roving tabindex — one tab stop for a group, Sending focus in (+20 more)
+Nodes (28): Example policy, Explanations, Parts, Prerequisites, Progress, Reading order, Scope — what this syllabus owns, Sources (+20 more)
 
-### Community 140 - "Mongodb: The Document Model.Md"
+### Community 225 - "Javascript Functions: Measured"
+Cohesion: 0.06
+Nodes (28): A default can read earlier parameters — but not later ones, Gotchas, Interview questions, `.length` counts differently than you expect, Measured, Parameters live in their own scope, The shared-default myth, Arity dispatch, and why it is the weakest option (+20 more)
+
+### Community 226 - "Postgresql Ddl: Start with shared schema"
 Cohesion: 0.07
-Nodes (26): Phases, Progress, The sentence everything follows from, What each phase covers, Where this connects, Priority tiers, Progress, Scope — what this syllabus owns (+18 more)
+Nodes (28): Gotchas, Interview questions, Start with shared schema, The obvious objection, and the answer, The setting that makes or breaks it, The three models, Trade-off, Gotchas (+20 more)
 
-### Community 141 - "Redis: Production.Md"
+### Community 227 - "React Ssr Hydration"
 Cohesion: 0.07
-Nodes (24): What each phase covers, What each phase will cover, Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution (+16 more)
+Nodes (28): 1. Whitespace around the root, 2. `typeof window !== 'undefined'` in render, 3. Browser-only APIs during render, 4. Different data on each side, Fixing each, Gotchas, Interview questions, The contract (+20 more)
 
-### Community 142 - "Javascript: Phase 12 Browser Platform"
+### Community 228 - "React Components: Files are always uncon"
 Cohesion: 0.07
-Nodes (27): A note on wrappers, Gotchas, Interview questions, `OffscreenCanvas`: the rendering exception, Ports, and a channel that is not the page, `SharedArrayBuffer`: genuinely shared memory, The cost is real and proportional to size, Transferables: move it instead of copying it (+19 more)
+Nodes (27): Files are always uncontrolled, Gotchas, Interview questions, `onChange` is the DOM's `input` event, The markup never shows the real value, The two modes, The uncontrolled → controlled warning, `value` without `onChange` (+19 more)
 
-### Community 143 - "Javascript: Phase 12 Browser Platform"
+### Community 229 - "Typescript Type Vocabulary"
+Cohesion: 0.06
+Nodes (29): Arrays widen to unions, not tuples, Functions: parameters are not inferred, returns are, Generic inference flows through, Gotchas, Interview questions, Objects widen their properties too, Reading an inferred type honestly, Trade-off (+21 more)
+
+### Community 230 - "Docker Syllabus: How a page is built"
 Cohesion: 0.07
-Nodes (27): Accessibility is part of the feature, not an extra, Follow the element, do not track it yourself, Gotchas, Interview questions, Loading behaviour and the bytes you did not mean to spend, `play()` is a promise, and it can say no, The properties worth knowing, Constraints: required, forbidden, or preferred (+19 more)
+Nodes (25): How a page is built, Phases, Where this connects, Explanations, Parts, Prerequisites, Reading order, Sources (+17 more)
 
-### Community 144 - "Javascript: Phase 8 Modules Errors"
+### Community 231 - "Javascript Values And Coercion"
 Cohesion: 0.07
-Nodes (26): Bare names and import maps, Getting the module into the page, Gotchas, Interview questions, `.mjs` or `.js`, The specifier, Top-level `await`, Two loading failures that are not code failures (+18 more)
+Nodes (27): Gotchas, Interview questions, Measured, `typeof` cannot tell objects apart, `typeof function` is `'function'`, and functions are still objects, `typeof null === 'object'` is a bug, and it is permanent, Why "primitive" matters, Equality follows the same rule (+19 more)
 
-### Community 145 - "React: Hooks.Md"
+### Community 232 - "Javascript Operators: Measured"
 Cohesion: 0.07
-Nodes (26): Phases, Progress, Reading order, Example policy, Explanations, Parts, Prerequisites, Progress (+18 more)
+Nodes (27): Gotchas, Interview questions, `{}` is ambiguous, and position decides, Measured, The dividing line, Where it shows up in real code, Why an IIFE needs parentheses, A real one (+19 more)
 
-### Community 146 - "Storybook: Theming Colors And Fonts"
+### Community 233 - "Javascript Built In Library"
+Cohesion: 0.07
+Nodes (27): `delete` on an array leaves a hole, Gotchas, Interview questions, The performance cost, stated precisely, The return value, and when it lies, What `delete` cannot remove, What it actually does, What to do instead (+19 more)
+
+### Community 234 - "Javascript Iteration And Destructuring"
+Cohesion: 0.06
+Nodes (28): Do not modify a collection while iterating it, Getting it wrong — the three `TypeError`s, in order, Gotchas, Interview questions, The iterable protocol — one method, and it is keyed by a symbol, The iterator protocol — `next()` and the result object, The two optional methods, What consumes iterables (+20 more)
+
+### Community 235 - "Storybook Theming Colors And Fonts"
 Cohesion: 0.06
 Nodes (31): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3.10 Tailwind fontFamily bridge, 3.11 Icon fonts / variable font axes (advanced), 3.12 Preload in manager? (usually no), 3.1 File layout, 3.2 `staticDirs` in main, 3.3 Shared `@font-face` + tokens (+23 more)
 
-### Community 147 - "Sandbox Git-P0 - filter-repo and LFS"
-Cohesion: 0.08
-Nodes (31): filter-repo and LFS absent, Blob header plus content hash, Divergent pull requires reconcile, Empty blob hash e69de29, Empty author identity failure, Git 2.55.0 environment probe, git restore, git switch (+23 more)
-
-### Community 148 - "Sandbox Js-P3 - ex3-this.mjs"
+### Community 236 - "Sandbox Js P3"
 Cohesion: 0.07
 Nodes (19): a, b, bound, boundToExplicit, bp, collector, counter, madeWithNew (+11 more)
 
-### Community 149 - "Git: Phase 2 Branching Merging"
+### Community 237 - "Css Grid: Baseline alignment"
+Cohesion: 0.07
+Nodes (27): Baseline alignment, `*-content`: distributing leftover space between tracks, Gotchas, Interview questions, `*-items`: how items sit in their cells, `stretch` vs `normal`, The shorthands, The two-by-three table (+19 more)
+
+### Community 238 - "Webpack Source Maps"
+Cohesion: 0.08
+Nodes (14): Coverage, Imported from the frontend-bible corpus (2026-08-14), Priority tiers, 🔴 The critical rule — do not violate this, What "Verified" means, 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example (+6 more)
+
+### Community 239 - "Git Branching Merging"
 Cohesion: 0.07
 Nodes (27): A real merge: two parents, Checking what a merge will do, first, Fast-forward: no merge at all, Forcing the choice, Gotchas, Merging with a dirty working tree, The message, and `--no-commit`, Trade-off (+19 more)
 
-### Community 150 - "Javascript: Phase 11 Network Storage"
-Cohesion: 0.07
-Nodes (26): `arrayBuffer()` and `bytes()` — binary, `blob()` — files and images, Choosing, in one rule, Errors these methods throw, `formData()`, Gotchas, Interview questions, `json()`, and why wrappers use `text()` instead (+18 more)
-
-### Community 151 - "Mongodb: Phase 4 Crud"
-Cohesion: 0.07
-Nodes (26): Gotchas, Interview questions, Multi-document transactions exist, and are not the answer, The comparison that makes it concrete, The guarantee, quoted, Trade-off, What "atomic" does not mean here, What is *not* atomic (+18 more)
-
-### Community 152 - "Nginx: Phase 0 Process Model"
+### Community 240 - "Nginx Process Model"
 Cohesion: 0.07
 Nodes (27): Dynamic: loaded at run time, Everything is a module, Gotchas, Interview questions, Static: compiled in at build time, Third-party modules, Trade-off, "Unknown directive" — the decision tree (+19 more)
 
-### Community 153 - "Nginx: Phase 1 Configuration Language"
+### Community 241 - "Nginx Configuration Language"
 Cohesion: 0.07
 Nodes (27): Gotchas, Interview questions, The `Context:` line is the specification, The context tree, Trade-off, Two kinds of directive, `upstream` and `map` are not inside `server`, Where directives actually take effect (+19 more)
 
-### Community 154 - "Storybook: Build And Configuration"
+### Community 242 - "Nginx Server And Location"
+Cohesion: 0.07
+Nodes (26): A worked example, Gotchas, Interview questions, `listen` forms worth knowing, Nothing here looks at the path, Regex server names, and their captures, Sizing the hash, Stage 1 — the socket (+18 more)
+
+### Community 243 - "Postgresql Ddl: bigint, not int"
+Cohesion: 0.07
+Nodes (27): `bigint` ids arrive in JavaScript as strings, `bigint`, not `int`, Composite primary keys, `GENERATED ALWAYS AS IDENTITY` vs `serial`, Gotchas, Interview questions, Natural vs surrogate keys, Trade-off (+19 more)
+
+### Community 244 - "Postgresql Joins: From Node"
+Cohesion: 0.07
+Nodes (27): From Node, Gotchas, Interview questions, Manufactured NULLs are indistinguishable, The anti-join idiom, The count trap, The guarantee, Trade-off (+19 more)
+
+### Community 245 - "React How React Runs"
+Cohesion: 0.07
+Nodes (27): Canary is not "the nightly build you should try", Gotchas, Governance, Interview questions, Patches land on three lines at once, The channels, The ecosystem moves faster than React, The stable line, and how it actually moves (+19 more)
+
+### Community 246 - "Storybook Build And Configuration"
 Cohesion: 0.07
 Nodes (30): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3.10 Environment-specific preview behavior, 3.1 Full-featured `main.ts` (annotated), 3.2 Story discovery patterns, 3.3 Full-featured `preview.tsx`, 3.4 Story / meta overrides (customization at the right level), 3.5 Custom story sort function (when order array isn’t enough) (+22 more)
 
-### Community 155 - "Storybook: Phase 3 Decorators"
+### Community 247 - "Storybook How Storybook Runs"
+Cohesion: 0.08
+Nodes (25): Gotchas, `iframe.html` — the escape hatch, Interview questions, Which file configures which, Why an iframe at all, Gotchas, Interview questions, Where the renderer boundary leaks (+17 more)
+
+### Community 248 - "Storybook Decorators: Choosing the level"
 Cohesion: 0.07
 Nodes (26): Choosing the level, Decorators are components, so treat them like components, Gotchas, Interview questions, The signature, The three levels, Why it exists, Debugging unexpected wrapping (+18 more)
 
-### Community 156 - "Docker: Phase 3 Dockerfile"
+### Community 249 - "Javascript Events: The two events"
 Cohesion: 0.07
-Nodes (26): Auditing an image you did not build, Finding the fat, Gotchas, Interview questions, `<missing>` is not an error, Podman, The command, The limits of what it can tell you (+18 more)
+Nodes (25): `defer` and `async` usually remove the need, Gotchas, Interview questions, `readyState`, and the race you did not know you had, Restored from the bfcache: `pageshow`, The two events, What to do at startup, and what not to, `beforeunload`: only for unsaved changes (+17 more)
 
-### Community 157 - "Javascript: Phase 14 Data Structures"
+### Community 250 - "Javascript Built In Library"
+Cohesion: 0.07
+Nodes (25): Everything convenient is shallow, Gotchas, Interview questions, The four differences between spread and `Object.assign`, The model: a copy duplicates references, not the things they point to, The prototype is not copied, When shallow is the right answer, Comparing strings (+17 more)
+
+### Community 251 - "Javascript Built In Library"
 Cohesion: 0.08
-Nodes (25): Gotchas, Interview questions, `Map` versus a plain object, decided, SameValueZero — the equality that is neither `===` nor `Object.is`, The API, and what each guarantee is worth, The patterns that come up constantly, Anagrams, and the canonical-key idea, Gotchas (+17 more)
+Nodes (25): Availability, Choosing a copy, Gotchas, Interview questions, The same algorithm runs at every boundary, What it costs, `ArrayBuffer` holds bytes and nothing else, Detached buffers (+17 more)
 
-### Community 158 - "Nginx: Phase 1 Configuration Language"
+### Community 252 - "Nginx Configuration Language"
 Cohesion: 0.07
 Nodes (25): Evaluated when used, not when declared, Gotchas, `$host` is not `$http_host`, and the difference is security, Interview questions, `set`, and why it is not a variable assignment, The ones you will actually use, The pattern families, The three URI variables (+17 more)
 
-### Community 159 - "React: Phase 11 Ssr Hydration"
+### Community 253 - "Nodejs Http Processes"
 Cohesion: 0.07
-Nodes (25): Gotchas, Interview questions, `onCaughtError` — the boundary worked, `onRecoverableError` — React fixed it, and you still want to know, `onUncaughtError` — nothing caught it, The default, and what overriding it means, What each one receives, Why these exist at all (+17 more)
+Nodes (25): Argument order matters, `--env-file` — dotenv, built in, Gotchas, Interview questions, `NODE_OPTIONS`, `--run` — script runner without npm, The REPL and one-off evaluation, `--watch` — nodemon, built in (+17 more)
 
-### Community 160 - "Typescript: Phase 2 Narrowing"
+### Community 254 - "Nodejs Http Processes"
 Cohesion: 0.07
-Nodes (25): Gotchas, Guarding `unknown`, Guards on `this`, Interview questions, The compiler does not check the body, The guards worth having in every codebase, The syntax and the measurement, Trade-off (+17 more)
+Nodes (25): Bodies you do not read still cost you, Gotchas, Interview questions, Large bodies never become one Buffer, Parsing by content type, Reading one, The size limit is the point, Framing is the fix (+17 more)
 
-### Community 161 - "Docker: Phase 10 Production"
+### Community 255 - "Postgresql Ops: pg's own errors are clea"
 Cohesion: 0.07
-Nodes (25): Gotchas, Interview questions, Podman, Rule 1 — an unhandled signal to PID 1 is discarded, Rule 2 — orphans reparent to PID 1, and PID 1 must reap them, Rule 3 — when PID 1 exits, the namespace dies, The container's PID namespace, Who actually has a handler (+17 more)
+Nodes (25): Gotchas, Interview questions, `pg`'s own errors are clean, The password survives on the pool object, The server log takes whatever you inline, Trade-off, What other sessions can read while a query runs, Gotchas (+17 more)
 
-### Community 162 - "Git: Phase 5 Undo Recover"
+### Community 256 - "Postgresql Api Crud"
 Cohesion: 0.07
-Nodes (25): Branch protection, `--force-with-lease`, Gotchas, Make the safe one your default, The hole, and `--force-if-includes`, Trade-off, What happens to whoever else had the branch, When a force-push is legitimate (+17 more)
+Nodes (25): Gotchas, Interview questions, `pool.query('BEGIN')` is not a transaction, The reusable version, The shape, Trade-off, Gotchas, Interview questions (+17 more)
 
-### Community 163 - "Javascript: Phase 12 Browser Platform"
+### Community 257 - "Postgresql Api Crud"
+Cohesion: 0.07
+Nodes (26): Do not return `undefined`, `findById` and soft deletes, Gotchas, Interview questions, `null` or throw, The id has to survive being a string, Trade-off, What the driver gives you (+18 more)
+
+### Community 258 - "Redis Syllabus: What each phase will cov"
+Cohesion: 0.08
+Nodes (23): What each phase will cover, Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend (+15 more)
+
+### Community 259 - "Docker Storage: Reading the evidence"
+Cohesion: 0.07
+Nodes (25): A non-root image: the UID 1000 coincidence, Gotchas, Interview questions, Reading the evidence, Rootful Docker: root writes root, The model, Why volumes mostly avoid this, Diagnosing it in three commands (+17 more)
+
+### Community 260 - "Git Everyday Loop"
+Cohesion: 0.07
+Nodes (25): Gotchas, Stopping tracking: `git rm --cached`, The part `rm --cached` does not fix, The right shape for configuration, The rule, and why it works that way, The two flags that look like the answer and are not, Trade-off, What this does to your colleagues (+17 more)
+
+### Community 261 - "Javascript Browser Platform"
 Cohesion: 0.08
 Nodes (24): Gotchas, Interview questions, 🔴 Negotiation: never use `navigator.language` as your locale, The other half of a locale: the time zone, What the browser tells you, Where the decision belongs, Formatted output belongs in the markup, not only in the pixels, Gotchas (+16 more)
 
-### Community 164 - "Javascript: Phase 6 Iteration And Destructuring"
+### Community 262 - "Javascript Dynamic Programming"
 Cohesion: 0.07
-Nodes (25): Do not modify a collection while iterating it, Getting it wrong — the three `TypeError`s, in order, Gotchas, Interview questions, The iterable protocol — one method, and it is keyed by a symbol, The iterator protocol — `next()` and the result object, The two optional methods, What consumes iterables (+17 more)
+Nodes (25): 1. Clarify, 2. Examples, 3. Brute force — always state it, 4. Optimise — name the pattern first, 5. Code, 6. Test — walk your own code, 7. State the complexity, unprompted, Gotchas (+17 more)
 
-### Community 165 - "Javascript: Phase 7 Async"
+### Community 263 - "Javascript Operators: Measured"
 Cohesion: 0.07
-Nodes (25): Cancellation, and stopping early, Deduplicating in-flight work, Errors: fail-fast or collect, Gotchas, Interview questions, Reaching for a library, Results, memory and streaming, The batching trap (+17 more)
+Nodes (25): Gotchas, Interview questions, It short-circuits the *entire* chain, Measured, The three forms, What it does **not** protect against, When *not* to use it, `?.` with `??` is the idiom (+17 more)
 
-### Community 166 - "Mongodb: Phase 0 How Mongodb Runs"
+### Community 264 - "Mongodb Crud: Existence checks"
+Cohesion: 0.08
+Nodes (24): Existence checks, `findOne()` vs `find().limit(1)`, Gotchas, Interview questions, Null is the answer, not an error, Options go in the second argument, 🔴 With multiple matches, which one do you get?, Dot notation reaches into documents and arrays (+16 more)
+
+### Community 265 - "Postgresql Api Crud"
 Cohesion: 0.07
-Nodes (25): Databases: namespace and security boundary, Dropping is not deleting, Everything is created implicitly, Gotchas, How many collections?, `_id` — the one rule a collection does enforce, Interview questions, The three levels (+17 more)
+Nodes (25): Fix 1 — do the arithmetic in SQL, Fix 2 — `SELECT … FOR UPDATE`, Fix 3 — optimistic locking with a version column, Fix 4 — let the isolation level catch it, Gotchas, Interview questions, The bug, Trade-off (+17 more)
 
-### Community 167 - "React: Phase 11 Ssr Hydration"
+### Community 266 - "Postgresql Ops: Finding who is blocking "
+Cohesion: 0.08
+Nodes (24): Ending it: cancel, then terminate, Finding who is blocking whom, Gotchas, Interview questions, The one view to know, The `state` column, and the one that ruins your night, Trade-off, Wait events: what a query is stuck on (+16 more)
+
+### Community 267 - "Postgresql Ops: A first policy"
+Cohesion: 0.08
+Nodes (24): A first policy, Default deny, once you turn it on, Gotchas, Interview questions, Permissive and restrictive, Trade-off, `USING` versus `WITH CHECK`, Who bypasses RLS (+16 more)
+
+### Community 268 - "Postgresql Ddl: The lock is the real cos"
 Cohesion: 0.07
-Nodes (25): `bootstrapScripts` is the real architectural switch, Consuming the prelude, Gotchas, `identifierPrefix` has to match on both sides, Interview questions, `namespaceURI` is for documents that are not HTML, The options, The root component renders the whole document (+17 more)
+Nodes (25): Doing the dangerous changes safely, Gotchas, Interview questions, Measured: which operations rewrite the table, Several changes in one statement, The lock is the real cost, The rules behind the table, Trade-off (+17 more)
 
-### Community 168 - "Storybook: Phase 1 Story Format"
+### Community 269 - "React Ssr Hydration"
+Cohesion: 0.07
+Nodes (25): Gotchas, Interview questions, Is this what "PPR" means elsewhere?, The four resume APIs, The lifecycle, The problem it solves, What each one gives back, Where the `nonce` restriction goes (+17 more)
+
+### Community 270 - "React Correctness: getBy — the default"
+Cohesion: 0.07
+Nodes (25): `findBy` — the async one, and why it beats the alternatives, `getBy` — the default, Gotchas, Interview questions, Manual queries, and where the docs draw the line, `queryBy` — for proving a thing is absent, `TextMatch` — how strings are actually compared, The `All` variants (+17 more)
+
+### Community 271 - "React Refs Context Reducers"
+Cohesion: 0.07
+Nodes (25): Choosing a key, Gotchas, Interview questions, Keys are scoped to siblings, Position, key, and state, What actually happens on a reorder, When index keys are fine, Where the state actually lives matters more (+17 more)
+
+### Community 272 - "Storybook Story Format"
 Cohesion: 0.08
 Nodes (24): Gotchas, Interview questions, `satisfies Meta<…>` rather than `: Meta<…>`, The form to use, The generic-component problem, Typing `render` and `play`, What this actually catches, Gotchas (+16 more)
 
-### Community 169 - "Sandbox P8-Security - ex14-validation.mjs"
+### Community 273 - "Sandbox P8 Security"
 Cohesion: 0.07
 Nodes (25): bad, badInput, big, body, dst, Nested, num, out (+17 more)
 
-### Community 170 - "React: Phase 1 Jsx"
-Cohesion: 0.10
-Nodes (27): Silent no-render values, Do not call components as functions, Capitalization decides everything, Capitalization decides host vs component, Lowercase component is a silent host element, Element type is invalid: undefined, The && zero trap, Four conditional forms (+19 more)
-
-### Community 171 - "Docker: Running A Stack.Md"
-Cohesion: 0.08
-Nodes (22): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Version facts (+14 more)
-
-### Community 172 - "Git: Phase 5 Undo Recover"
-Cohesion: 0.08
-Nodes (24): Gotchas, The clock, The four recoveries, The procedure, Trade-off, What is never recoverable, When the reflog is not enough, Amend, precisely (+16 more)
-
-### Community 173 - "Javascript: Phase 11 Network Storage"
-Cohesion: 0.08
-Nodes (23): `accept`, `multiple`, `capture` — hints, not rules, Drag and drop, Gotchas, Interview questions, Paste, 🔴 Selecting the same file twice fires nothing, The input, Validating on the client (+15 more)
-
-### Community 174 - "Javascript: Phase 17 Machine Coding"
+### Community 274 - "Javascript Machine Coding"
 Cohesion: 0.08
 Nodes (24): 1 · A published implementation beats a generic wrapper, 2 · `this` has to survive, so the wrapper cannot be an arrow, 3 · `if (err)` is a truthiness test, and that is on purpose, 4 · The executor's synchrony does two jobs, and hides one problem, 5 · Settling once makes a double callback harmless — and invisible, 6 · One value goes out, 7 · Keep the function's identity, Gotchas (+16 more)
 
-### Community 175 - "Javascript: Phase 5 Built In Library"
+### Community 275 - "Javascript Operators: The == null idiom"
 Cohesion: 0.08
-Nodes (23): Arrays: why `[1, 2] + [3]` is `"1,23"`, `==` coerces; `===` never does, `Date` is the exception worth memorising, Gotchas, Interview questions, Symbols refuse, The defaults every plain object inherits, The hint decides the order — and that is the whole thing (+15 more)
+Nodes (24): Gotchas, Interview questions, The distinction that has teeth: default parameters, The `== null` idiom, `??` vs `||`, Where each one comes from, Which should you write?, Chained and destructuring assignment (+16 more)
 
-### Community 176 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.08
-Nodes (24): 1 · Metadata on objects you do not own, 2 · Memoising by object identity, 3 · Private state, historically, 4 · Associating a library's data with a user's object, Gotchas, Interview questions, Keys must be objects, `Map` or `WeakMap`? (+16 more)
-
-### Community 177 - "Storybook: Real World Workflows And Recipes"
-Cohesion: 0.15
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Setup Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Bootstrapping Storybook Into an Existing App With Providers Already Wired In, ⚠️ Pitfall 1: Sharing ONE Store/QueryClient Instance Across Every Story, ⚠️ Pitfall 2: Using `BrowserRouter` Instead of `MemoryRouter` in Storybook, ⚠️ Pitfall 3: Forgetting the Global Stylesheet Import, Getting "It Works But Looks Wrong" (+1 more)
-
-### Community 178 - "Storybook: Theming Colors And Fonts"
+### Community 276 - "Storybook Theming Colors And Fonts"
 Cohesion: 0.07
 Nodes (27): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1 Shared token file (app + Storybook), 3.2 Import tokens + global CSS in `preview`, 3.3 Theme + brand toolbar with decorator (React), 3.4 Component that consumes tokens (correct), 3.5 Tailwind path (semantic utilities), 3.6 Design-system color token story (living docs) (+19 more)
 
-### Community 179 - "Storybook: Phase 2 Args And Controls"
+### Community 277 - "Storybook Args And Controls"
 Cohesion: 0.08
 Nodes (23): 🔴 `argTypesRegex` is no longer the recommendation, Arguments are serialised, Gotchas, Interview questions, Reading the panel, The four options, ranked, Use `fn()`, Declaring one (+15 more)
 
-### Community 180 - "Css: Phase 2 Cascade"
-Cohesion: 0.13
-Nodes (26): @scope proximity, What the cascade compares, Author cascade ladder, Important reverses origin order, Element-attached styles, Origin and importance, Cascade six criteria, @layer overview (+18 more)
+### Community 278 - "Typescript Generics: Trade-off"
+Cohesion: 0.07
+Nodes (24): 1. `keyof typeof` — by far the most common form, 2. The duality over unions and intersections, 3. Typing a registry against its own keys, 4. Narrowing a `string` into a key, Filtering keys by their value type, Gotchas, Interview questions, Trade-off (+16 more)
 
-### Community 181 - "Nodejs: Phase 0 Runtime Model"
-Cohesion: 0.10
-Nodes (26): await suspends the function, not the thread, libuv, process.versions, Read-modify-write race across await, Blocking versus non-blocking, Network I/O uses no extra threads, One thread, and never let it wait, One callback at a time, no locks (+18 more)
-
-### Community 182 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.11
-Nodes (26): Signed outbound webhook payload, Four outbound-job properties, Outbound side-effects as jobs, Provider idempotency key, Queue every outbound call, Acknowledge after the effect, Timeout budget, fetch has no default timeout (+18 more)
-
-### Community 183 - "Css: Phase 9 Motion"
+### Community 279 - "Babel Build Tool Integration"
 Cohesion: 0.08
-Nodes (23): Animating to `auto` does not work, Gotchas, Interview questions, `scale()` is not the same as changing width, The pipeline decides the cost, The substitutions, Trade-off, `will-change`, and why it is not a free win (+15 more)
+Nodes (24): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 8.1 Webpack (`babel-loader`), 8.2 Vite (`@vitejs/plugin-react` Babel path), 8.3 Jest (`babel-jest`), 8.4 Rollup/Rolldown (`@rollup/plugin-babel`) (+16 more)
 
-### Community 184 - "Docker: Phase 0 What A Container"
+### Community 280 - "Css Selectors: :scope and implicit scopi"
 Cohesion: 0.08
-Nodes (23): Gotchas, Interview questions, `runc` is not running your container, Talking to the layers directly, The chain, The daemon is root, and that is the point of Podman, The shim exists so the daemon can die, The two things worth actually remembering (+15 more)
+Nodes (23): Gotchas, Interview questions, Proximity: the tiebreak nobody else has, `:scope` and implicit scoping, Scoped without a limit, The shape, When to reach for it, Why the lower bound matters (+15 more)
 
-### Community 185 - "Docker: Phase 3 Dockerfile"
+### Community 281 - "Expressjs Reviews: 1. Verdict"
 Cohesion: 0.08
-Nodes (23): `always` vs `unless-stopped` — the only subtle one, Gotchas, Interview questions, `on-failure` respects the exit code, Podman: the important difference, The four values, What a restart policy is not, Gotchas (+15 more)
+Nodes (24): 1. Verdict, 2.1 Establish Clear Technology Boundaries, 2.2 Reorganize into Parts & Phases, 2.3 Optimize Master Tier Share, 2. Key Modifications & Suggestions, 3. Proposed Phase Structure, Part 1: Foundations (`docs/expressjs/syllabus/01-foundations.md`), Part 2: Request, Response & Errors (`docs/expressjs/syllabus/02-req-res-errors.md`) (+16 more)
 
-### Community 186 - "React: Phase 5 Refs Context Reducers"
+### Community 282 - "Git How Git Stores Things"
 Cohesion: 0.08
-Nodes (23): Gotchas, Interview questions, Multiple apps on one page, One call, several ids, 🔴 The format is not a contract — and it changed in 19.2, The other caveats, The problem it solves, 🔴 The two prohibitions (+15 more)
+Nodes (23): Gotchas, Interview questions, Trade-off, What a commit object contains, What follows from snapshots, Where deltas actually live, Why a snapshot is not expensive, Blob — content, and nothing else (+15 more)
 
-### Community 187 - "Storybook: Visual Testing"
+### Community 283 - "Javascript Machine Coding"
+Cohesion: 0.09
+Nodes (22): Chunks, Phase gate, The three that catch people, Where this connects, 1 · Retry only what can succeed on a retry, 2 · Exponential backoff, 3 · Jitter — the part that is actually load-bearing, 4 · Obey the server before your own arithmetic (+14 more)
+
+### Community 284 - "Javascript Machine Coding"
+Cohesion: 0.09
+Nodes (22): Chunks, Four facts worth carrying out of this topic, Phase gate, Where this connects, Diffing props is not one comparison, Gotchas, Interview questions, Patching, and why the index is fragile (+14 more)
+
+### Community 285 - "Mongodb Syllabus: Priority tiers"
+Cohesion: 0.09
+Nodes (21): Priority tiers, Progress, Scope — what this syllabus owns, The four parts, Why MongoDB is in scope, Working agreement, Phase 0 — How MongoDB runs, Phase 1 — Documents, BSON types and `_id` (+13 more)
+
+### Community 286 - "Nodejs Buffers Streams"
+Cohesion: 0.08
+Nodes (23): base64 vs base64url, Choosing, in one table, Gotchas, Interview questions, Invalid UTF-8 does not throw, Only three are lossless for arbitrary text, Size, which is the reason to care, The eight, and what each is for (+15 more)
+
+### Community 287 - "Postgresql Ddl: The property"
+Cohesion: 0.08
+Nodes (23): Gotchas, Interview questions, The property, The statements that cannot participate, Trade-off, What it does not give you, What it is worth in practice, `DROP` is transactional — which is the safety net (+15 more)
+
+### Community 288 - "React Correctness: The shape of the file"
+Cohesion: 0.09
+Nodes (21): Four details in there worth naming, Gotchas, Interview questions, Regression tests: the one test that is always worth writing, The four states, and the one everybody writes, The shape of the file, What a feature's suite looks like when it is done, Where this connects (+13 more)
+
+### Community 289 - "React Jsx: Choosing, again"
+Cohesion: 0.08
+Nodes (23): Choosing, again, File inputs, Gotchas, Interview questions, Reading a whole form without any state, Reading one field: refs, `<select>` takes a `value`, `<textarea>` takes a `value`, not children (+15 more)
+
+### Community 290 - "Reviews Postgresql: B. Factual errors"
+Cohesion: 0.08
+Nodes (25): A1 · `SET` cannot take bind parameters, A2 · Five queries filter on a column the fixture does not have, A3 · Sorting an id array does not order row locks, A4 · Session advisory lock leaks on a pooled client, A5 · Backoff sleep holds a pooled connection, A. Code that fails or misleads when copied, B1 · Merge join cannot serve a range predicate, B2 · Wraparound warning threshold is off by ~1.1 billion (+17 more)
+
+### Community 291 - "Storybook Visual Testing"
 Cohesion: 0.08
 Nodes (26): 1. Under-The-Hood Mechanics, 2. What You See in the UI / Review Surface, 3.1 Disable non-deterministic stories, 3.2 Multiple viewports per story, 3.3 Delay for fonts / animations, 3.4 Ignore regions (dynamic islands), 3.5 Modes (theme / locale matrices), 3.6 Stories that need interaction first (+18 more)
 
-### Community 188 - "Storybook: Accessibility Testing"
+### Community 292 - "Storybook Accessibility Testing"
 Cohesion: 0.08
 Nodes (26): 1. Under-The-Hood Mechanics, 2. What You See in the Accessibility UI, 3.1 Register the addon, 3.2 Global rules in `preview.ts`, 3.3 Per-story / meta overrides, 3.4 Stories that document good vs bad patterns, 3. Setup & Configuration, 4.1 test-runner + axe-playwright (+18 more)
 
-### Community 189 - "Storybook: Phase 2 Args And Controls"
+### Community 293 - "Storybook Args And Controls"
 Cohesion: 0.08
 Nodes (23): Args a component does not take, Args and the play function, Args in `render`, Designing good args, Gotchas, How args resolve, Interview questions, What being data buys you (+15 more)
 
-### Community 190 - "Sandbox Js-P3 - ex1-stack.mjs"
+### Community 294 - "Sandbox Js P3"
 Cohesion: 0.09
 Nodes (16): level1(), level2(), level3(), arr, callsIt(), definedHere(), fail(), fns (+8 more)
 
-### Community 191 - "Docker: Phase 0 What A Container"
-Cohesion: 0.08
-Nodes (22): Distribution spec — why every registry works the same, Gotchas, Image spec — why one image runs everywhere, Interview questions, Runtime spec — why `runc` and `crun` are swappable, Three specifications, one pipeline, What each one buys you, concretely, Where the standard stops (+14 more)
+### Community 295 - "Css How Css Runs"
+Cohesion: 0.09
+Nodes (21): Gotchas, `@import` costs a full round trip, measured, Inline `style` is a cascade decision, not just a styling one, Interview questions, The four, Where each one belongs, Gotchas, Interview questions (+13 more)
 
-### Community 192 - "Javascript: Phase 17 Machine Coding"
+### Community 296 - "Javascript Complexity: Recursion: count "
+Cohesion: 0.08
+Nodes (22): Gotchas, Interview questions, Recursion: count the calls, The costs JavaScript hides, The mechanical rules, Two JavaScript-specific surprises, Worked example, Gotchas (+14 more)
+
+### Community 297 - "Javascript Machine Coding"
+Cohesion: 0.09
+Nodes (21): Adding the features, Gotchas, Interview questions, The five-line version, The return value problem, The two traps, Both edges, Both share the same lifecycle problems (+13 more)
+
+### Community 298 - "Javascript Machine Coding"
 Cohesion: 0.08
 Nodes (22): `emit` iterates a **copy**, `emit` returns a boolean, Gotchas, Interview questions, Listeners run synchronously, in order, `Map` of `Set`, not an object of arrays, `once` removes before it calls, The `'error'` convention (+14 more)
 
-### Community 193 - "Javascript: Phase 3 Functions"
+### Community 299 - "Javascript Functions: The variable, not "
+Cohesion: 0.08
+Nodes (22): Gotchas, Interview questions, `let` really does create a new binding per iteration, `setTimeout` — the interview favourite, The classic `var`-in-a-loop bug, The variable, not the value, Three fixes, in historical order, Closures created together share one scope (+14 more)
+
+### Community 300 - "Javascript Functions: Lexical, not dynam"
+Cohesion: 0.08
+Nodes (22): Gotchas, Interview questions, Lexical, not dynamic, Lookup walks outward, never inward, Shadowing, Shadowing a parameter, What creates a scope, Why lexical scope is fast (+14 more)
+
+### Community 301 - "Javascript Functions: Eviction, or the l"
 Cohesion: 0.08
 Nodes (22): Eviction, or the leak, Gotchas, Interview questions, Key derivation is the whole problem, The `this` trap, The wrapper, Where memoization is simply wrong, Converting recursion you cannot afford (+14 more)
 
-### Community 194 - "React: Phase 11 Ssr Hydration"
+### Community 302 - "Nodejs Filesystem: Measuring instead of "
 Cohesion: 0.08
-Nodes (22): `createRoot` vs `hydrateRoot`, Gotchas, Hydration and Suspense, Interview questions, The caveats worth acting on, The four options, What it returns, What it reuses and what it does not (+14 more)
+Nodes (22): Gotchas, Interview questions, Measuring instead of guessing, Memory maths worth doing once, The defaults, The trade-off, stated plainly, What changing it actually does, When lowering it helps (+14 more)
 
-### Community 195 - "Typescript: Phase 3 Generics"
-Cohesion: 0.09
-Nodes (21): Constraints can refer to other type parameters, `extends` here does not mean inheritance, Gotchas, Interview questions, The constraints you will actually write, Two error codes, two different mistakes, What a constraint gives you, and what it does not, When a constraint means the generic should not exist (+13 more)
+### Community 303 - "Postgresql Ops: Find the blocker first"
+Cohesion: 0.08
+Nodes (22): Find the blocker first, Gotchas, Interview questions, `lock_timeout` is not optional, The fact that explains the outage, Trade-off, Transactional DDL cuts both ways, Which operations are actually cheap (+14 more)
 
-### Community 196 - "Sandbox P8-Security - ex17-secrets.mjs"
+### Community 304 - "Postgresql Schema From Node"
+Cohesion: 0.08
+Nodes (22): `CREATE TABLE IF NOT EXISTS` is not concurrency-safe, Gotchas, If bootstrapping must live in the app, take a lock, Interview questions, The seeding variant is worse, because it does not fail, Trade-off, Gap 1: it is not concurrency-safe, Gap 2: it does not compare the definition (+14 more)
+
+### Community 305 - "Sandbox P8 Security"
 Cohesion: 0.08
 Nodes (16): a, b, conf, dir, envFile, kid, leaky, loader (+8 more)
 
-### Community 197 - "Postgresql: Phase 11 Mvcc"
+### Community 306 - "Javascript Machine Coding"
+Cohesion: 0.08
+Nodes (22): 1 · `Object.is` before anything else, 2 · Dependencies are re-collected on every run, 3 · `current` is a stack, not a variable, 4 · `finally`, always, 5 · Iterate a copy of the subscriber set, Gotchas, Interview questions, The five lines that are load-bearing (+14 more)
+
+### Community 307 - "Javascript Functions: What it is actuall"
+Cohesion: 0.08
+Nodes (21): A `curry` you can write under pressure, Gotchas, Interview questions, What it is actually for, Where it stops being worth it, Async composition, Everything after the first function is unary, Gotchas (+13 more)
+
+### Community 308 - "Mongodb How Mongodb Runs"
 Cohesion: 0.09
-Nodes (24): FOR UPDATE, lock_timeout, FOR UPDATE NOWAIT, pg_blocking_pids, Row locks live in the tuple header, SKIP LOCKED and the job queue, FOR UPDATE SKIP LOCKED, Savepoints and partial rollback (+16 more)
+Nodes (21): Gotchas, Interview questions, Schema validation exists, and is off by default, "Schemaless" is wrong, and actively harmful, The three levels, The trade, stated plainly, Trade-off, Where this leaves you (+13 more)
 
-### Community 198 - "React: Phase 1 Jsx"
-Cohesion: 0.10
-Nodes (24): Boolean host attributes, className and htmlFor, null/undefined remove attributes, onclick is silently dropped, Attributes vs props, style must be an object, Unknown host props, Spreading onto a component has no DOM rules (+16 more)
-
-### Community 199 - "Css: Phase 4 Flexbox"
+### Community 309 - "Nodejs Http Processes"
 Cohesion: 0.09
-Nodes (20): Phase gate, The rule in one line, The three symptoms to recognise, Where this connects, Phase gate, The rule underneath all of them, The three lines that do the real work, Where this connects (+12 more)
+Nodes (21): Gotchas, Interview questions, `rejectionHandled` — the late-handler case, The default is to crash, and that is correct, The two events, What a handler is for, Why "log and continue" is wrong, A thrown handler does not become a 500 (+13 more)
 
-### Community 200 - "Css: Phase 6 Container Queries"
+### Community 310 - "Nodejs Buffers Streams"
 Cohesion: 0.09
-Nodes (21): Container query units, Gotchas, `inline-size` is almost always the right type, Interview questions, The mechanism, The query itself, The rule that catches everyone: a container cannot query itself, Trade-off (+13 more)
+Nodes (20): Gotchas, Interview questions, The boundary problem, and the fix, The minimal Transform, Async work inside a transform, `decodeStrings` and encodings, Gotchas, Interview questions (+12 more)
 
-### Community 201 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.09
-Nodes (21): Client-side validation is a UX feature, Gotchas, Interview questions, The headers that only a server can set, The honest list, 🔴 The one sentence, What "in the browser" means for secrets, A checklist for a feature (+13 more)
-
-### Community 202 - "Javascript: Phase 3 Functions"
-Cohesion: 0.09
-Nodes (20): Chunks, Phase gate, Where this connects, Gotchas, Interview questions, Returning a function, Taking a function, The wrapper pattern (+12 more)
-
-### Community 203 - "React: Phase 11 Ssr Hydration"
-Cohesion: 0.09
-Nodes (21): Gotchas, Interview questions, `precedence`, and where it sits, Rung 3 — `preload`, you know the URL, Rung 4 — `preinit`, you know the URL *and* you want it live, Rungs 1 and 2 — you only know the host, The ladder, The module pair (+13 more)
-
-### Community 204 - "Storybook: Controls And Args"
+### Community 311 - "Storybook Controls And Args"
 Cohesion: 0.08
 Nodes (24): 1. Under-The-Hood Mechanics, 2. What You See in the Controls UI, 3. Control Types Reference, 4.1 Meta + story with precise argTypes, 4.2 Global Controls defaults (`preview.ts`), 4.3 Conditional controls (`if`), 4.4 Mapping labels ≠ raw values, 4.5 Custom `render` that still respects Controls (+16 more)
 
-### Community 205 - "Sandbox Js-P3 - ex4-arrows.mjs"
+### Community 312 - "Sandbox Js P3"
 Cohesion: 0.09
 Nodes (10): arrow, c, f1, f2, fail(), m1, m2, obj (+2 more)
 
-### Community 206 - "Sandbox Js-P3 - ex6-closures.mjs"
+### Community 313 - "Sandbox Js P3"
 Cohesion: 0.08
 Nodes (14): bindings, c1, c2, eachFns, handlers, iifeFns, letFns, ofFns (+6 more)
 
-### Community 207 - "Sandbox Pg-Api - ex54-pgbouncer.mjs"
+### Community 314 - "Sandbox Pg Api"
 Cohesion: 0.10
 Nodes (21): a, adm, admin, bench(), clients, concPids, connectCost(), DIRECT (+13 more)
 
-### Community 208 - "Css: Phase 4 Flexbox"
+### Community 315 - "Javascript How Javascript Runs"
 Cohesion: 0.09
-Nodes (20): Always use the shorthand, `flex: none` versus `flex: 0 0 auto`, Gotchas, Interview questions, The expansion table, The four you actually need, Trade-off, Why `flex: 1` and `width` conflict (+12 more)
+Nodes (20): Gotchas, Interview questions, `nomodule` and the two-bundle pattern, The four options, The old advice, and why it changed, What each one is for, Why `type="module"` is deferred and what that costs, Checking syntax without running anything (+12 more)
 
-### Community 209 - "Css: Phase 8 Color Theming"
-Cohesion: 0.09
-Nodes (20): Chroma is not saturation, and it has no fixed maximum, Gotchas, Interview questions, The problem with HSL, The related notations, Trade-off, What OkLCh changes, Wider gamuts, safely (+12 more)
-
-### Community 210 - "Javascript: Phase 10 Events"
-Cohesion: 0.09
-Nodes (20): `code` — use it for positions, Gotchas, IME composition: the guard nobody writes first, Interview questions, `key` — use it for text and for named keys, `keyCode` is deprecated, Modifier state, The event sequence (+12 more)
-
-### Community 211 - "Javascript: Phase 11 Network Storage"
+### Community 316 - "Javascript Network Storage"
 Cohesion: 0.09
 Nodes (20): Gotchas, Interview questions, `MessageChannel` — a private pipe, `MessageEvent`, field by field, Receiving — three checks, none optional, 🔴 `targetOrigin` is a security check, not an address, The call, Transferables — moving instead of copying (+12 more)
 
-### Community 212 - "Javascript: Phase 17 Machine Coding"
+### Community 317 - "Javascript Machine Coding"
 Cohesion: 0.09
 Nodes (20): Gotchas, Interview questions, `Object.create` by hand, The second argument is descriptors, not values, The two lines people skip, Two words that are not the same thing, What `myNew` cannot do — and it is not a detail, What `new` actually does (+12 more)
 
-### Community 213 - "Javascript: Phase 4 Objects And Classes"
+### Community 318 - "Javascript Operators: ++ and --"
 Cohesion: 0.09
-Nodes (20): A setter still runs on a frozen object, Arrays — locked, but they fail two different ways, Every copy comes out unfrozen, Gotchas, Interview questions, `Map`, `Set`, `Date`, `WeakMap` — freeze does nothing at all, `#private` fields survive a freeze, What is still protected, and is easy to forget (+12 more)
+Nodes (21): `++` and `--`, Gotchas, Interview questions, `+` is overloaded; the rest are not, `%` is remainder, not modulo, `**` is right-associative, and rejects a leading minus, Measured, There is no integer division (+13 more)
 
-### Community 214 - "Javascript: Dsa And Machine Coding.Md"
+### Community 319 - "Javascript Iteration And Destructuring"
 Cohesion: 0.09
-Nodes (20): Example policy, Explanations, Parts, Prerequisites, Reading order, Scope — what this owns, and what it hands off, Tier distribution, Tier legend (+12 more)
+Nodes (20): Early exit still closes the iterator, Errors, and the `finally` trap, `for await...of`, Gotchas, Interview questions, It also accepts *sync* iterables, and awaits their values, Sequential by design — and when that is wrong, What is async iterable (+12 more)
 
-### Community 215 - "Jest-Rtl: Snapshot Testing"
+### Community 320 - "Mongodb How Mongodb Runs"
 Cohesion: 0.09
-Nodes (21): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Reflexively Running `--updateSnapshot` on Every Failure Without Reviewing the Diff, ⚠️ Pitfall 2: Snapshotting Large, Full Component Trees Instead of Specific Properties, ⚠️ Pitfall 3: Committing Snapshot Files Without Understanding They're Part of the Test Suite's Correctness, Snapshot Serializers: Custom Formatting for Domain Objects (+13 more)
+Nodes (21): Databases: namespace and security boundary, Dropping is not deleting, Everything is created implicitly, Gotchas, How many collections?, `_id` — the one rule a collection does enforce, Interview questions, The three levels (+13 more)
 
-### Community 216 - "Nginx: Phase 2 Server And Location"
+### Community 321 - "Nodejs Reviews: 4.3 Things not to add"
 Cohesion: 0.09
-Nodes (21): A worked example, Gotchas, Interview questions, `listen` forms worth knowing, Nothing here looks at the path, Regex server names, and their captures, Sizing the hash, Stage 1 — the socket (+13 more)
+Nodes (22): 1. Project state (where things stand), 2. Verdict — does this syllabus cover Node for a fullstack platform?, 3. Coverage map (platform builder lens), 4.1 Keep the boundary (strongest recommendation), 4.2 Optional high-value missing topics (+4–6, not +20), 4.3 Things not to add, 4.4 Master demotion pass (~8–12 topics), 4.5 Phase 7 placement — keep it where it is (+14 more)
 
-### Community 217 - "React: Phase 14 Correctness"
+### Community 322 - "React Correctness: One event is not a cl"
 Cohesion: 0.10
 Nodes (19): Gotchas, Interview questions, One event is not a click, The bugs only `user-event` can catch, The checks are the point, The v14 ceremony: `setup()`, and `await`, What the sequences actually look like, Fake timers — the one that breaks whole suites (+11 more)
 
-### Community 218 - "Storybook: Interaction Testing"
+### Community 323 - "Storybook Interaction Testing"
 Cohesion: 0.09
 Nodes (23): 1. Under-The-Hood Mechanics, 2. What You See in the Interactions UI, 3.1 Canonical form, 3.2 Async UI (`waitFor` / `findBy`), 3.3 Keyboard and focus flows, 3.4 Composing plays (reuse setup), 3.5 Reading live Controls args, 3. Writing Strong `play` Functions (+15 more)
 
-### Community 219 - "Sandbox Js-P3 - ex5-call-apply-bind.mjs"
+### Community 324 - "Web-Vitals-Performance Caching And Produ"
+Cohesion: 0.09
+Nodes (21): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 Caching Strategies & Production RUM Tooling, HTTP Caching Headers, ⚠️ Pitfall 1: `no-cache` Misread as "Don't Cache At All", ⚠️ Pitfall 2: A Service Worker Serving a Permanently Stale App Shell (+13 more)
+
+### Community 325 - "Sandbox Js P3"
 Cohesion: 0.09
 Nodes (16): arrayLike, bench(), big, bound, BoundPoint, fail(), logger, nums (+8 more)
 
-### Community 220 - "Javascript: Phase 7 Async"
-Cohesion: 0.13
-Nodes (22): await evaluates its expression immediately, await converts non-promises via Promise.resolve, await suspends and returns control to the caller, await continuation is a microtask, MDN await operator, await always costs at least one tick, await-split pieces share one scope, Async body is synchronous until the first await (+14 more)
-
-### Community 221 - "Nodejs: Phase 2 Async"
-Cohesion: 0.13
-Nodes (22): ESM top-level is a microtask, Macrotasks, process.nextTick queue, Microtasks, macrotasks and nextTick, queueMicrotask vs process.nextTick, setImmediate wins inside an I/O callback, Main-module setImmediate vs setTimeout race, setImmediate vs setTimeout(fn, 0) (+14 more)
-
-### Community 222 - "Nodejs: Phase 4 Filesystem"
+### Community 326 - "Css How Css Runs"
 Cohesion: 0.10
-Nodes (22): Hidden sync I/O, fs.createReadStream, HTTP range request via createReadStream, Inclusive start/end byte range, stat then writeHead then pipeline, fs.access is still TOCTOU, existsSync, TOCTOU race (+14 more)
+Nodes (19): Gotchas, How to get the errors back, Interview questions, The only APIs that will tell you, Three kinds of mistake, three different blast radii, Why the language is designed this way, Gotchas, Interview questions (+11 more)
 
-### Community 223 - "Eslint-Oxlint: Linting Landscape And Tooling Decisions"
-Cohesion: 0.14
-Nodes (7): 1.1 Why Lint at All, 1.2 Choosing a Linter (Decision Tree), 1.3 Lint vs Format Boundary, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 🔍 Linting Landscape: Why Lint, Choosing Tools & Format Boundaries
+### Community 327 - "Css Flexbox: Nesting makes it worse"
+Cohesion: 0.09
+Nodes (20): Gotchas, In a column: the same rule, the other axis, Interview questions, Nesting makes it worse, The cause, The fix, The symptom, Trade-off (+12 more)
 
-### Community 224 - "Frontend-Architecture: Team And Collaboration Practices"
+### Community 328 - "Frontend-Architecture Team And Collabora"
 Cohesion: 0.09
 Nodes (20): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ADRs: Preventing Decisions From Being Silently Re-Litigated, ⚠️ Anti-Pattern 1: No Ownership Model for Shared Design System Components, ⚠️ Anti-Pattern 2: Undocumented, Reviewer-Dependent PR Standards, ⚠️ Anti-Pattern 3: Making Non-Obvious Architectural Decisions Without Recording Why (+12 more)
 
-### Community 225 - "Storybook: Addons Ecosystem"
+### Community 329 - "Javascript Iteration And Destructuring"
+Cohesion: 0.10
+Nodes (19): Collecting it, when you do want everything, Gotchas, Interview questions, Terminating — get this right, or it never ends, The three paging styles, What it replaces, Yield items, not pages — with one exception, Bounding the result (+11 more)
+
+### Community 330 - "Javascript Dom: Double submission"
+Cohesion: 0.10
+Nodes (19): `checkValidity` versus `reportValidity`, Gotchas, Interview questions, `setCustomValidity` — and the bug it causes, Styling: `:invalid` is too eager, `:user-invalid` is not, The rule that outranks everything on this page, Turning the native UI off — without losing the API, `ValidityState` — why it failed (+11 more)
+
+### Community 331 - "Javascript Syllabus: Example policy"
+Cohesion: 0.10
+Nodes (19): Example policy, Explanations, Parts, Prerequisites, Reading order, Scope — what this owns, and what it hands off, Tier distribution, Tier legend (+11 more)
+
+### Community 332 - "Storybook Addons Ecosystem"
 Cohesion: 0.09
 Nodes (22): 1. Under-The-Hood Mechanics, 2. What You See in the Actions UI, 3.1 Recommended: `fn()` on meta args, 3.2 Explicit `action()` (legacy / name-only logs), 3.3 argTypes `action` field, 3.4 DOM event handles (non-prop events), 3.5 Global preview defaults, 3. Wiring Patterns (Production) (+14 more)
 
-### Community 226 - "Sandbox Js-P3 - ex2-parameters.mjs"
+### Community 333 - "Sandbox Js P3"
 Cohesion: 0.09
 Nodes (3): calls, NOTE: printed with util.inspect, not JSON.stringify — the latter turns, shared
 
-### Community 227 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.18
-Nodes (21): Accessor infinite-recursion trap, Class getters and setters, 06.2 · Static members and accessors, Polymorphic static factory, Static fields evaluated at class evaluation, Static initialization blocks, static members, this in a static method (+13 more)
-
-### Community 228 - "Nodejs: Phase 2 Async"
-Cohesion: 0.12
-Nodes (21): Promise.prototype.finally, Promise states and chaining, Promises are eager, Return or it is not chained, .then(f, g) vs .then(f).catch(g), Promise pending / fulfilled / rejected, async function, await inside forEach (+13 more)
-
-### Community 229 - "Nodejs: Phase 8 Security"
-Cohesion: 0.11
-Nodes (21): argon2id, bcrypt, Password storage, Rehash at login, Per-password salt, scrypt, A password hash must be slow, libuv thread-pool login capacity (+13 more)
-
-### Community 230 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.12
-Nodes (21): idx_scan, PostgreSQL index, PRIMARY KEY is a unique index, What an index is, Index write cost, B-tree, B-tree indexes, Prefix LIKE on a B-tree (+13 more)
-
-### Community 231 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.11
-Nodes (21): Invalid _ccnew index leftover, Index bloat, pgstatindex leaf_fragmentation, REINDEX CONCURRENTLY, VACUUM does not shrink indexes, One statement, one snapshot, fillfactor for update-heavy tables, HOT update (+13 more)
-
-### Community 232 - "React: Phase 1 Jsx"
-Cohesion: 0.11
-Nodes (21): Fragment groups without a DOM node, Four ways to pass content, A fragment child counts as one, Children helpers discouraged in new code, jsx vs jsxs decides children shape, children is an ordinary prop, children, Children.toArray (+13 more)
-
-### Community 233 - "Docker: Phase 8 Compose"
+### Community 334 - "Css Scss: In a bundler"
 Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, Podman, The `--env-file` format is not a shell script, The twelve-factor habit, Three places they come from, What the environment is not for, Gotchas (+10 more)
+Nodes (19): Gotchas, In a bundler, Interview questions, Partials and the `_` convention, `.scss` or `.sass`, Source maps, The compiler, Trade-off (+11 more)
 
-### Community 234 - "Eslint-Oxlint: Real World Workflows And Recipes"
+### Community 335 - "Eslint-Oxlint Real World Workflows And R"
 Cohesion: 0.10
 Nodes (21): 1. Concept & Under-the-Hood Mechanics, 21.1 Bootstrap Recipes, 21.2 Migration Recipes, 21.3 Day-to-Day Recipes, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A) Greenfield Vite + React + TS — Oxlint-only (+13 more)
 
-### Community 235 - "Git: Phase 1 Everyday Loop"
-Cohesion: 0.10
-Nodes (19): Binary files and generated output, Comparing commits and branches, Diffing things that are not commits, Gotchas, Limiting the diff, Reading a unified diff, The options that make diffs readable, The three you use every day (+11 more)
-
-### Community 236 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.10
-Nodes (18): Format specifiers, Gotchas, Interview questions, Logging in production, The methods worth knowing, and what each is for, The trap in logging objects, Coverage — how much of the bundle is dead, Elements — for the questions that are not JavaScript (+10 more)
-
-### Community 237 - "Javascript: Phase 13 Complexity"
-Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, `Map` over `Object`, by default, `Set` for membership, always, Start with the question, not the shape, The table, `WeakMap`, and the one thing it is for, Gotchas (+10 more)
-
-### Community 238 - "Javascript: Phase 15 Algorithm Patterns"
+### Community 336 - "Javascript Algorithm Patterns"
 Cohesion: 0.10
 Nodes (18): Fixed-size windows, Gotchas, Interview questions, Longest substring without repeating characters, Minimum window substring — the shrinking variant, Recognising it, The template, Counting windows rather than measuring one (+10 more)
 
-### Community 239 - "Javascript: Phase 17 Machine Coding"
+### Community 337 - "Javascript Machine Coding"
 Cohesion: 0.10
 Nodes (18): `filter` and `forEach` — the same skeleton, Gotchas, Interview questions, `map`, Mutation during iteration, `reduce` — the one with the real edge case, The contract, from the specification's own description, `flat` — the recursive one (+10 more)
 
-### Community 240 - "Javascript: Phase 18 Storefront"
+### Community 338 - "Nginx Server And Location"
 Cohesion: 0.10
-Nodes (18): Cleaning up, Coming back: the scroll restoration problem, Gotchas, Infinite scroll is an accessibility and UX decision, Interview questions, The sentinel, The state machine that stops it going wrong, And the row nobody thinks about: rendering cost (+10 more)
+Nodes (19): `~` and `~*` — regexes, Bare prefix — the workhorse, Gotchas, Interview questions, `^~` — "prefix wins, do not check regexes", The algorithm, The documented worked example, `=` — the fastest possible match (+11 more)
 
-### Community 241 - "React: Phase 11 Ssr Hydration"
+### Community 339 - "Nodejs Observability: Clinic.js"
 Cohesion: 0.10
-Nodes (19): CSR — client-side rendering, Gotchas, Interview questions, RSC — React Server Components, SSG — static site generation, SSR — server-side rendering, Streaming SSR, The five, on one axis each (+11 more)
+Nodes (18): 0x, Clinic.js, Gotchas, Interview questions, Reading a flame graph, When not to reach for these, enableCompileCache, Gotchas (+10 more)
 
-### Community 243 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.13
-Nodes (20): Database-per-tenant, Shared-to-separated migration asymmetry, The models compared, Schema-per-tenant, SET LOCAL mandatory for tenant context, Shared schema with RLS, Tenancy decision order, tenant_id leads every index (+12 more)
-
-### Community 244 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.12
-Nodes (20): pg_advisory_xact_lock around migrate, Migrations as a deploy step, Forward-only migrations, Migrations, Deterministic fixtures, Identity consumed on skipped conflict, ON CONFLICT DO NOTHING, ON CONFLICT DO UPDATE (+12 more)
-
-### Community 245 - "Sandbox P8-Security - helmet"
+### Community 340 - "Nodejs Syllabus: Explanations"
 Cohesion: 0.10
-Nodes (19): helmet, redis, dependencies, helmet, redis, undici, valibot, zod (+11 more)
+Nodes (18): Explanations, Parts, Prerequisites, Reading order, Sources, Tier distribution, Tier legend, Version facts (+10 more)
 
-### Community 246 - "Babel: Real World Workflows And Recipes"
+### Community 341 - "Postgresql Beyond Tables"
+Cohesion: 0.10
+Nodes (19): Gotchas, Interview questions, Latency, and when to reach for `LISTEN`/`NOTIFY`, The bug this fixes: the dual write, The fix: write the event to a table, in the same transaction, The relay: publishing without double delivery, Through your ORM or platform, Trade-off (+11 more)
+
+### Community 342 - "Postgresql Aggregation: Building a pivot"
+Cohesion: 0.10
+Nodes (19): Building a pivot, `count(*)` vs `count(col)` inside a `FILTER`, Gotchas, Interview questions, The `CASE` equivalent, and where it stops being equivalent, The syntax, Trade-off, Where they *agree*, surprisingly: no rows at all (+11 more)
+
+### Community 343 - "Postgresql Aggregation: Choosing between"
+Cohesion: 0.10
+Nodes (19): Choosing between them, Gotchas, In Node, Interview questions, `ntile`, `row_number`, `rank`, `dense_rank`, `percent_rank`, The fixture, Trade-off (+11 more)
+
+### Community 344 - "Postgresql Api Crud"
+Cohesion: 0.10
+Nodes (19): `created_at` needs no trigger, Gotchas, Interview questions, `now()` is the transaction timestamp, Reading it back, The cases a trigger does not cover, The measurement, The trigger (+11 more)
+
+### Community 345 - "React Ssr Hydration"
+Cohesion: 0.10
+Nodes (19): Gotchas, Interview questions, `precedence`, and where it sits, Rung 3 — `preload`, you know the URL, Rung 4 — `preinit`, you know the URL *and* you want it live, Rungs 1 and 2 — you only know the host, The ladder, The module pair (+11 more)
+
+### Community 346 - "Typescript Type Vocabulary"
+Cohesion: 0.10
+Nodes (19): Choosing, Gotchas, Interview questions, Migrating off `enum`, The three, Trade-off, What `enum` compiles to, What the alternatives compile to (+11 more)
+
+### Community 347 - "Typescript Narrowing: It composes with a"
+Cohesion: 0.10
+Nodes (19): Gotchas, Interview questions, It composes with `as const`, The problem, in one example, The three-way comparison, The two escapes, and why neither works, What `satisfies` does, Where it can and cannot go (+11 more)
+
+### Community 348 - "Typescript Narrowing: Loss 1 — reassignm"
+Cohesion: 0.10
+Nodes (19): Gotchas, Interview questions, Loss 1 — reassignment, Loss 2 — callbacks, The model: narrowing belongs to a reference, not to a value, The rule to carry, The shapes this hides in, What this is *not* (+11 more)
+
+### Community 350 - "Babel Real World Workflows And Recipes"
 Cohesion: 0.10
 Nodes (20): 16.1 Setup Recipes, 16.2 Debugging Recipes, 16.3 Migration Recipes, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Audit whether Babel is still needed (+12 more)
 
-### Community 247 - "Css: Phase 5 Grid"
-Cohesion: 0.10
-Nodes (18): Debugging: which grid is a track in?, `dense` and the cost it imposes, Gotchas, `grid-auto-flow`, Interview questions, Making rows explicit on purpose, Sizing them: `grid-auto-rows` and `grid-auto-columns`, Trade-off (+10 more)
+### Community 351 - "Css Selectors: The complete set"
+Cohesion: 0.11
+Nodes (17): Case sensitivity, and the `i` flag, Gotchas, Interview questions, Specificity: they count as a class, The complete set, `~=` versus `*=`, which is a real bug source, What they are actually for, Gotchas (+9 more)
 
-### Community 248 - "Docker: Phase 1 Running Containers"
-Cohesion: 0.10
-Nodes (18): Gotchas, `-i` alone: pipe input in, Interview questions, `-it`: an actual interactive session, Podman, `-t` alone: pretend there is a terminal, The two flags, What a TTY actually changes (+10 more)
-
-### Community 249 - "Docker: Phase 3 Dockerfile"
-Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, It does not create a handler, Podman, Scope, `SHELL`, `SHELL` on Windows, `STOPSIGNAL` (+10 more)
-
-### Community 250 - "Javascript: Phase 14 Data Structures"
+### Community 352 - "Javascript Data Structures"
 Cohesion: 0.11
 Nodes (17): Approach 1 — a head index (the practical answer), Approach 2 — a ring buffer (fixed capacity), Approach 3 — a linked list (unbounded, no copies), Choosing, Gotchas, Interview questions, Why `[].shift()` disqualifies the array, BFS — where queues actually earn their keep (+9 more)
 
-### Community 251 - "Javascript: Phase 15 Algorithm Patterns"
+### Community 353 - "Javascript Algorithm Patterns"
 Cohesion: 0.11
 Nodes (17): Gotchas, Interview questions, Rotated and unsorted-ish arrays, The preconditions, which are the real content, The template: half-open `[lo, hi)`, The three functions you actually need, Why it is hard to write, Floating-point ranges (+9 more)
 
-### Community 252 - "Javascript: Phase 16 Dynamic Programming"
-Cohesion: 0.10
-Nodes (18): A checklist for naming the state, Gotchas, Interview questions, Three state-design mistakes, What a state is, When one dimension is not enough, Worked: coin change, Worked: house robber (+10 more)
-
-### Community 253 - "Javascript: Phase 17 Machine Coding"
+### Community 354 - "Javascript Machine Coding"
 Cohesion: 0.11
 Nodes (17): `allSettled` — never rejects, Gotchas, Interview questions, The behaviour that matters in production, The implementation, What the specification requires, `any` — first to fulfil, Gotchas (+9 more)
 
-### Community 254 - "Javascript: Phase 17 Machine Coding"
-Cohesion: 0.11
-Nodes (17): Currying is not partial application, Gotchas, Interview questions, Placeholders — know they exist, and skip them, The costs, stated plainly, The implementation, Where it earns its place, Gotchas (+9 more)
-
-### Community 255 - "Javascript: Phase 7 Async"
+### Community 355 - "Javascript Values And Coercion"
 Cohesion: 0.10
-Nodes (18): `all` is the "related tasks" combinator, Empty iterables, Gotchas, Interview questions, MDN's own framing of the choice, `Promise.all` — one failure kills the aggregate, `Promise.allSettled` — failure is a result, The `allSettled` trap: a silent failure (+10 more)
+Nodes (18): Actually making a value immutable, `const`, `let`, `var`, Deep freeze, Gotchas, Interview questions, Measured, The three levels, When to freeze, and when not to (+10 more)
 
-### Community 256 - "Nginx: Phase 0 Process Model"
+### Community 356 - "Nginx Process Model"
 Cohesion: 0.10
 Nodes (18): Apache, and why the comparison still gets made, Gotchas, Interview questions, The five things it is, The one-sentence version, Trade-off, What a minimal real config looks like, What nginx is not (+10 more)
 
-### Community 257 - "Nginx: Phase 0 Process Model"
+### Community 357 - "Nginx Process Model"
 Cohesion: 0.10
 Nodes (18): Gotchas, Interview questions, `-t` — does this configuration work?, `-T` — what configuration is *actually* in effect?, The whole command line, Trade-off, `-V` — what can this binary do?, Where the paths come from (+10 more)
 
-### Community 258 - "Nginx: Phase 2 Server And Location"
+### Community 358 - "Nodejs Testing: How it works"
 Cohesion: 0.10
-Nodes (18): Gotchas, Interview questions, Nested locations, The asymmetry, side by side, The failure it produces, The ordering discipline, Three rules that follow, Trade-off (+10 more)
+Nodes (18): Gotchas, How it works, Interview questions, Making them stable, Multiple snapshots in one test, Serialisers, The trap, Where snapshots are right (+10 more)
 
-### Community 259 - "React: Phase 14 Correctness"
+### Community 359 - "Postgresql Ddl: A table worth copying"
+Cohesion: 0.10
+Nodes (18): A table worth copying, Gotchas, Interview questions, `NOT NULL` by default, `now()` is transaction time, Trade-off, Type choices that are expensive to reverse, What `CREATE TABLE` returns through `pg` (+10 more)
+
+### Community 360 - "Postgresql Ddl: Other uses for schemas"
+Cohesion: 0.10
+Nodes (18): Gotchas, Interview questions, Other uses for schemas, `public` and the security note, `search_path` and connection pooling, The mechanism, The schema name cannot be a parameter, Three multi-tenant layouts (+10 more)
+
+### Community 361 - "React Correctness: The definition"
 Cohesion: 0.10
 Nodes (18): A component has exactly two users, False negative — red when nothing is broken, False positive — green when something is broken, Gotchas, Interview questions, The definition, The drill that settles any argument, The one honest exception (+10 more)
 
-### Community 260 - "React: Phase 14 Correctness"
+### Community 362 - "React Correctness: Deciding, in one tabl"
 Cohesion: 0.10
 Nodes (18): Deciding, in one table, `findBy` — the default wait, Gotchas, Interview questions, The four `waitFor` anti-patterns, Three tools, three questions, `waitFor` — and the rule that explains its misuse, `waitForElementToBeRemoved` — for disappearance (+10 more)
 
-### Community 261 - "React: Phase 14 Correctness"
+### Community 363 - "React Correctness: Three places you can "
 Cohesion: 0.11
 Nodes (17): Gotchas, Interview questions, The property that pays for itself, Three places you can cut, What a `fetch` stub cannot catch, What a module mock cannot catch, What network interception gives you, When a module mock is still right (+9 more)
 
-### Community 262 - "Typescript: Phase 3 Generics"
+### Community 364 - "Sandbox P8 Security"
 Cohesion: 0.10
-Nodes (18): A type parameter is a variable in the type language, Constraints, in one line ahead of the next page, Gotchas, Interview questions, Multiple type parameters relate their arguments, The problem, before the solution, What you can do with an unconstrained `T` — almost nothing, Where the parameter may appear (+10 more)
+Nodes (19): helmet, redis, dependencies, helmet, redis, undici, valibot, zod (+11 more)
 
-### Community 263 - "Sandbox React-P0 - @babel/core"
-Cohesion: 0.10
-Nodes (19): dependencies, @babel/core, babel-plugin-react-compiler, @babel/preset-react, esbuild, puppeteer-core, react, react-dom (+11 more)
-
-### Community 264 - "Sandbox React-P1 - @babel/core"
+### Community 365 - "Sandbox React P0"
 Cohesion: 0.10
 Nodes (19): dependencies, @babel/core, babel-plugin-react-compiler, @babel/preset-react, esbuild, puppeteer-core, react, react-dom (+11 more)
 
-### Community 265 - "Nodejs: Phase 0 Runtime Model"
+### Community 366 - "Sandbox React P1"
+Cohesion: 0.10
+Nodes (19): dependencies, @babel/core, babel-plugin-react-compiler, @babel/preset-react, esbuild, puppeteer-core, react, react-dom (+11 more)
+
+### Community 367 - "Git Everyday Loop"
 Cohesion: 0.11
-Nodes (19): Buffer, __dirname versus process.cwd, process.exit versus process.exitCode, Globals worth knowing, import.meta.dirname, process, process.env values are always strings, SIGTERM graceful shutdown (+11 more)
+Nodes (17): `git stash branch` — the escape hatch, Gotchas, `--index`, and why `pop` sometimes loses your staging, `pop` versus `apply`, The commands you need, The two flags that make stash a precision tool, Trade-off, Untracked and ignored files (+9 more)
 
-### Community 266 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.19
-Nodes (19): node:http2, HTTP/2 stream vs request API, process.env, process.exitCode versus process.exit, The process object and exit codes, process object, Asynchronous stdout on a pipe, Signals (+11 more)
-
-### Community 267 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.14
-Nodes (19): GiST, BRIN and hash, BRIN index, GiST index, Hash index, pg_stats.correlation, Specialist indexes vs default B-tree, Statistics, ANALYZE and extended statistics, ANALYZE (+11 more)
-
-### Community 268 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.18
-Nodes (19): psql \copy, COPY is one transaction, \copy TO STDOUT, \copy vs COPY, SQL COPY, All-text staging table for untrusted CSV, \timing and \watch, \watch (+11 more)
-
-### Community 269 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.16
-Nodes (19): Three actions in one statement, MERGE rowCount is total across branches, MERGE USING source, WHEN first matching branch wins, RETURNING and merge_action(), DELETE branch RETURNING yields pre-state, merge_action(), old. and new. in MERGE RETURNING (+11 more)
-
-### Community 270 - "React: Phase 1 Jsx"
-Cohesion: 0.13
-Nodes (19): value attribute vs value property, File inputs are always uncontrolled, React onChange is the DOM input event, Controlled and uncontrolled, Store the raw string, convert at the edge, Controlled vs uncontrolled, File input FileList and clear, Read a form with FormData (+11 more)
-
-### Community 271 - "React: Phase 4 Effects"
-Cohesion: 0.13
-Nodes (19): componentDidMount is the wrong model, react.dev Synchronizing with Effects, react.dev useEffect, What an effect is for, Three dependency-array forms, useEffect anatomy, Object and function identity re-runs the Effect, The dependency array is not a preference (+11 more)
-
-### Community 272 - "Css: Phase 10 Scss"
-Cohesion: 0.11
-Nodes (17): Arguments, defaults and keywords, `@content`: passing a block, `@extend` is not the answer, Gotchas, Interview questions, The basics, Trade-off, When a mixin beats a class, and when it does not (+9 more)
-
-### Community 273 - "Css: Phase 5 Grid"
-Cohesion: 0.11
-Nodes (17): `align-content` needs more than one line, Auto margins absorb free space before alignment runs, Gotchas, Interview questions, Main axis versus cross axis: two different mechanisms, The order matters, and this is why, The safe-area problem with centring, Trade-off (+9 more)
-
-### Community 274 - "Css: Phase 4 Flexbox"
-Cohesion: 0.11
-Nodes (17): Fixed panel plus flexible body, `gap` belongs to the container, not the basis, Gotchas, Interview questions, Ratios that actually hold, The decision procedure, The wrap-friendly basis: `flex: 1 1 <ideal>`, Trade-off (+9 more)
-
-### Community 275 - "Css: Phase 8 Color Theming"
-Cohesion: 0.11
-Nodes (17): `forced-colors`, Gotchas, Interview questions, `prefers-color-scheme`, `prefers-contrast`, `prefers-reduced-motion`, Testing them, Trade-off (+9 more)
-
-### Community 276 - "Docker: Phase 3 Dockerfile"
-Cohesion: 0.11
-Nodes (17): `COPY` in practice, Gotchas, Interview questions, Paths, context and the trailing slash, Podman, The build context is why `.dockerignore` exists, What each can do, Why fetching a URL with `ADD` is worse than it looks (+9 more)
-
-### Community 277 - "Docker: Phase 3 Dockerfile"
-Cohesion: 0.11
-Nodes (17): Choosing an interpreter, Gotchas, Inline files with `COPY`, Interview questions, Multi-line `RUN`, Podman, Quoting the delimiter, Requires the syntax directive (+9 more)
-
-### Community 278 - "Git: Phase 2 Branching Merging"
+### Community 368 - "Git Branching Merging"
 Cohesion: 0.11
 Nodes (17): Gotchas, The four disasters, and their fixes, The limits — worth knowing before you rely on it, The recovery procedure, The `@{...}` syntax, Trade-off, What each entry tells you, What it records (+9 more)
 
-### Community 279 - "Git: Phase 4 Remotes"
+### Community 369 - "Javascript How Javascript Runs"
 Cohesion: 0.11
-Nodes (17): `--atomic`, Checking before you push, First push of a new branch, Gotchas, `push.default`, Tags are not pushed by default, The shape of the command, Trade-off (+9 more)
+Nodes (16): Gotchas, Interview questions, Measured: which globals exist in Node 24, The rule this gives you, Which engine, and does it matter, Why this split exists, Gotchas, How to read an algorithm (+8 more)
 
-### Community 280 - "Javascript: Phase 11 Network Storage"
-Cohesion: 0.11
-Nodes (17): `default-src` is a fallback, not a default, Deploying without breaking the site, Gotchas, Interview questions, The directives, grouped by what they guard, The keywords, and the two to avoid, Watching violations from JavaScript, What a policy blocks that JavaScript notices (+9 more)
-
-### Community 281 - "Javascript: Phase 14 Data Structures"
+### Community 370 - "Javascript Data Structures"
 Cohesion: 0.11
 Nodes (16): Bracket matching — the canonical problem, Gotchas, Interview questions, The implementation, for completeness, Undo/redo — two stacks, Why the *call stack* is the same idea, Expression evaluation, Gotchas (+8 more)
 
-### Community 282 - "Javascript: Phase 15 Algorithm Patterns"
+### Community 371 - "Javascript Algorithm Patterns"
 Cohesion: 0.11
 Nodes (16): Bidirectional BFS, Gotchas, Interview questions, Level-order — when the level number matters, Multi-source BFS, Shortest path, and returning it, The template, Flood fill and connected components (+8 more)
 
-### Community 283 - "Javascript: Phase 5 Built In Library"
+### Community 372 - "Javascript Values And Coercion"
 Cohesion: 0.11
-Nodes (17): Gotchas, Interview questions, The comparator rules do not change, The idioms they replace, which still work, They are shallow copies, Typed arrays get three of the four, What still has no copying counterpart, Why they exist: the bug they remove (+9 more)
+Nodes (17): Comparing floats, Gotchas, Integers are safe only up to 2⁵³ − 1, Interview questions, Measured, Money: the rule and the reason, Other things worth knowing, The one that bites in real applications (+9 more)
 
-### Community 284 - "Mongodb: Phase 0 How Mongodb Runs"
+### Community 373 - "Javascript Values And Coercion"
+Cohesion: 0.11
+Nodes (17): Defending against it, Detecting it, Gotchas, Interview questions, Measured, `NaN` and `??`, Two equality algorithms disagree, Where `NaN` comes from in real code (+9 more)
+
+### Community 374 - "Javascript Operators: -0 is a real value"
+Cohesion: 0.11
+Nodes (17): `-0` is a real value, Gotchas, `Infinity`, Interview questions, Measured, The four algorithms, side by side, When to reach for `Object.is`, Where it actually matters (+9 more)
+
+### Community 375 - "Mongodb How Mongodb Runs"
 Cohesion: 0.11
 Nodes (17): 1. Real types, 2. Field order is preserved, 3. Length prefixes, Gotchas, Interview questions, `ObjectId` is not random, Reading BSON outside MongoDB, The 16 MiB limit (+9 more)
 
-### Community 285 - "Nginx: Phase 2 Server And Location"
+### Community 376 - "Nodejs Buffers Streams"
 Cohesion: 0.11
-Nodes (17): Gotchas, Interview questions, `last` versus `break`, The five causes, Trade-off, `$uri` changes; `$request_uri` does not, Where processing restarts, 1. A `try_files` fallback to a file that is not there (+9 more)
+Nodes (17): Backpressure comes free, Breaking out destroys the stream, Collecting, when the data is bounded, Errors throw, Gotchas, Interview questions, Reading lines, not chunks, Streams have iterator helpers too (+9 more)
 
-### Community 286 - "React: Phase 11 Ssr Hydration"
+### Community 377 - "Nodejs Testing: The contract"
 Cohesion: 0.11
-Nodes (17): Aborting, Gotchas, Interview questions, Node — callbacks, `onError` is not optional in practice, 🔴 `renderToString` cannot stream Suspense, The shape of each API, The three (+9 more)
+Nodes (17): Consumer-driven contracts, properly, Do not derive the contract from the implementation, Gotchas, Interview questions, The consumer side — validate the mock, The contract, The gap, The provider side — verify against the real handler (+9 more)
 
-### Community 287 - "React: Phase 14 Correctness"
+### Community 378 - "Playwright Fixtures And Test Isolation"
+Cohesion: 0.14
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Automatic Fixtures: Running Without Explicit Opt-In, 🎭 Fixtures & Test Isolation: Scoping, Automatic Fixtures & Fresh Contexts, ⚠️ Pitfall 1: Worker-Scoping a Fixture That Actually Needs Per-Test Isolation, ⚠️ Pitfall 2: Overusing Automatic Fixtures for Non-Universal Concerns (+2 more)
+
+### Community 379 - "Postgresql Ops: Measuring lag from each "
 Cohesion: 0.11
-Nodes (17): `act` — the version you should import, Cleanup is automatic, and why that matters, Custom render — the pattern the docs prescribe, Gotchas, Interview questions, The options worth knowing, What `render` does, What `render` returns, and what to use (+9 more)
+Nodes (17): Choosing your guarantee: `synchronous_commit`, Gotchas, Interview questions, Measuring lag from each side, The bug, before the mechanism, The four stages WAL passes through, Trade-off, What a replica actually is (+9 more)
 
-### Community 288 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.15
-Nodes (18): Cascade, Inline style attribute, UA body margin 8px, Default box-sizing content-box, Form controls do not inherit font, User-agent cascade origin, User-agent stylesheets, box-sizing border-box universal (+10 more)
-
-### Community 289 - "Css: Phase 1 Selectors"
-Cohesion: 0.18
-Nodes (16): :placeholder-shown, :not(), :empty, :root and the logical set, :empty, :not(), :root, :scope, CSS Nesting, Nesting & parent selector (+8 more)
-
-### Community 290 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.20
-Nodes (18): this is decided by the call site, this in a class field initialiser, Four ways a method loses this, Method borrowing, 07.1 · How a method loses this, Sloppy-mode this substitution, thisArg on iteration methods, Arrow class field (+10 more)
-
-### Community 291 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.21
-Nodes (18): Array constructor arity trap, Array.from, Array.from mapFn, Array.of, {length: n} range idiom, 01.1 · Making arrays, Four ways to create holes, Methods that skip holes (+10 more)
-
-### Community 292 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.17
-Nodes (18): Slicing and splitting, Trimming, padding and replacing, 07 · String methods, JSON.stringify and what it drops, JSON.parse and the reviver, 09 · JSON.parse and JSON.stringify, The six Map vs object differences, Choosing and what Map costs (+10 more)
-
-### Community 293 - "Nodejs: Phase 0 Runtime Model"
-Cohesion: 0.13
-Nodes (18): C++ bindings, The event loop is the program, Node.js is a runtime, not a language, Node standard library, V8, What Node.js is, Same language, different host, Build on Node for production fullstack work (+10 more)
-
-### Community 294 - "React: Phase 2 Components"
+### Community 380 - "Postgresql Schema From Node"
 Cohesion: 0.11
-Nodes (18): Element versus direct call, Hooks matched by call order, The configuration trap, Composition over configuration, Elements are ordinary values, Configuration trap, When configuration is the right answer, Passing children skips wrapper re-renders (+10 more)
+Nodes (17): `COPY FROM STDIN` — streaming, bounded memory, Gotchas, Interview questions, The hard ceiling: 65535 parameters, The same 10 000 rows, five ways, The two good options, Trade-off, `unnest` — one statement, any number of rows (+9 more)
 
-### Community 295 - "Sandbox Pg-Api - pg-copy-streams"
+### Community 381 - "Postgresql Schema From Node"
+Cohesion: 0.11
+Nodes (17): Compose, for more than one service, Connect on `127.0.0.1`, never `localhost`, Gotchas, Interview questions, Match the production version — and the base image, Persistence — and why you may not want it, The command, The reset script (+9 more)
+
+### Community 382 - "React Server Components"
+Cohesion: 0.11
+Nodes (17): `cache` — deduplicate a query across one request, `cache` is not `useMemo`, `cacheSignal` — stop work nobody is waiting for, Calling it outside a component does nothing, Gotchas, Interview questions, Its two caveats, Putting it together (+9 more)
+
+### Community 383 - "React Jsx: Comments"
+Cohesion: 0.11
+Nodes (17): Arrays flatten, and `null` inside them disappears, Comments, Expression, not statement, Gotchas, Interview questions, The four falsy values that are not the same, What each value actually renders, Whitespace inside braces is yours (+9 more)
+
+### Community 384 - "Reviews Review Prompt.Md"
+Cohesion: 0.11
+Nodes (18): 0. Read before starting, 10. Provenance (drives D5), 11. Output, 12. Order of work, 13. Two ways this review fails, 1. Persona and the three hard rules, 2. Unit of work, 3. The scoring rubric — every topic gets a score (+10 more)
+
+### Community 385 - "Storybook Build And Configuration"
+Cohesion: 0.11
+Nodes (19): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 4. Senior Engineer Edge Cases & Pitfalls, End-to-end customization map, Env variable model, 🛠️ Manager UI, Builder Hooks (`viteFinal` / `webpackFinal`), Env & CI, Manager vs preview (again), ⚠️ Pitfall 10: Assuming `manager.ts` hot reloads reliably (+11 more)
+
+### Community 386 - "Drafts: 1. The five hard rules"
+Cohesion: 0.11
+Nodes (18): 1. The five hard rules, 2. Page structure, 3. How to open a page, 4. Markdown and site styling, 5. How to write the body, 6. Gotchas, 7. Interview questions, 8. Voice (+10 more)
+
+### Community 387 - "Css Selectors: The empty-field trick"
+Cohesion: 0.11
+Nodes (16): Custom checkboxes, the modern way, Gotchas, `:indeterminate` — the third checkbox state, Interview questions, `:invalid` versus `:user-invalid` — the important one, Styling by state, without a class, The empty-field trick, The set (+8 more)
+
+### Community 388 - "Javascript Values And Coercion"
+Cohesion: 0.11
+Nodes (16): Checking emptiness correctly, Converting to boolean explicitly, Gotchas, Interview questions, Measured, The bug this actually causes, The eight falsy values, The truthy values that surprise people (+8 more)
+
+### Community 389 - "Javascript Values And Coercion"
+Cohesion: 0.11
+Nodes (16): Every symbol is unique, Gotchas, Interview questions, Measured, `Symbol.for` — the global registry, Symbols as non-colliding keys, Symbols never coerce to string implicitly, Well-known symbols — where you actually meet them (+8 more)
+
+### Community 390 - "Javascript Operators: Measured"
+Cohesion: 0.11
+Nodes (16): Dates compare, but do not equal, Gotchas, Interview questions, Measured, `NaN` makes every comparison false, Objects compare without error, which is the trap, Sorting human-readable text needs `Intl`, The rule (+8 more)
+
+### Community 391 - "Javascript Iteration And Destructuring"
+Cohesion: 0.11
+Nodes (16): Calling it runs nothing, Ending it early — `return()` and `throw()`, Every place `function*` can be written, Generator objects are one-shot, and are their own iterator, Gotchas, Interview questions, `next(value)` sends a value back in, What `next()` does (+8 more)
+
+### Community 392 - "Nodejs Modules: The part that actually b"
+Cohesion: 0.12
+Nodes (15): Gotchas, Interview questions, The part that actually bites, What it does, Where you will still see bare names, Why it is also faster, `enableCompileCache()` — the one with immediate value, Gotchas (+7 more)
+
+### Community 393 - "Postgresql Ddl: Trade-off"
+Cohesion: 0.11
+Nodes (16): Gotchas, Interview questions, Normalization is a correctness property, not a tidiness one, The rule for when to denormalize, The three forms, on one example, Trade-off, When to denormalize on purpose, Deleting and updating (+8 more)
+
+### Community 394 - "Postgresql Schema From Node"
+Cohesion: 0.11
+Nodes (16): Gotchas, Interview questions, Loading a file, Named parameters, if you want them, The multi-statement trap, Trade-off, What you get back, Where it does not fit (+8 more)
+
+### Community 395 - "React Correctness: The options worth kno"
+Cohesion: 0.11
+Nodes (16): `act` — the version you should import, Cleanup is automatic, and why that matters, Custom render — the pattern the docs prescribe, Gotchas, Interview questions, The options worth knowing, What `render` does, What `render` returns, and what to use (+8 more)
+
+### Community 396 - "React Correctness: Both need a DOM"
+Cohesion: 0.11
+Nodes (16): Both need a DOM, ESM, which is where the time goes, Gotchas, Interview questions, The API differences you will actually notice, The one decision that matters, The setup file — the same three lines either way, What does not depend on the choice (+8 more)
+
+### Community 397 - "React Components: Finding the right owne"
+Cohesion: 0.11
+Nodes (16): Finding the right owner, Gotchas, Interview questions, Inverse data flow, Passing handlers, not setters, to deeper children, Single source of truth, The three steps, What lifting is not for (+8 more)
+
+### Community 399 - "Storybook Build And Configuration"
+Cohesion: 0.11
+Nodes (18): 3.10 Programmatic config export patterns, 3.11 Yarn PnP / monorepo resolution (common pain), 3.12 Webpack→Vite migration customization checklist, 3.1 Manager UI theming & branding (`manager.ts`), 3.2 Deep `viteFinal` — align with the real Vite app, 3.3 `webpackFinal` (Webpack 5 framework), 3.4 Environment variables, 3.5 Dev server: host, port, HTTPS, CI (+10 more)
+
+### Community 400 - "Instructions.Md: 10. Working process"
+Cohesion: 0.11
+Nodes (17): 10. Working process, 11. Current state, 1. Goal, 2. Tech stack in scope, 3. Priority tiers — every topic gets exactly one, 4. What every concept must contain, 5. Granularity — what earns its own page, 6. File size and chunking (+9 more)
+
+### Community 401 - "Sandbox Pg Api"
 Cohesion: 0.11
 Nodes (17): pg-copy-streams, pg-cursor, postgres, dependencies, pg, pg-copy-streams, pg-cursor, postgres (+9 more)
 
-### Community 296 - "Css: Phase 10 Scss"
-Cohesion: 0.11
-Nodes (16): `@each` over a list or map, `@for` for numeric ranges, Generating responsive variants — carefully, Gotchas, Interview questions, Maps and `sass:map`, The pattern that pays: one source of truth, Trade-off (+8 more)
-
-### Community 297 - "Css: Phase 4 Flexbox"
-Cohesion: 0.11
-Nodes (16): 1. The nav bar with a pushed group, 2. The media object, 3. The sticky footer, 4. The input with an attached button, 5. The toolbar that wraps, Gotchas, Interview questions, Trade-off (+8 more)
-
-### Community 298 - "React: Phase 14 Correctness"
-Cohesion: 0.11
-Nodes (16): `getByRole` in depth, Gotchas, Interview questions, Roles you will use constantly, Scoping with `within`, Tier 1, in order, Tier 2 — semantic, Tier 3 — test ids, and when they are right (+8 more)
-
-### Community 299 - "Sandbox P8-Security - ex15-validation-followups.mjs"
+### Community 402 - "Sandbox P8 Security"
 Cohesion: 0.11
 Nodes (15): Capped, cases, D, Loose, many, obj, one, Patch (+7 more)
 
-### Community 300 - "Css: Phase 1 Selectors"
-Cohesion: 0.15
-Nodes (17): Class selector, Adjacent sibling combinator, Child combinator, Combinators, Descendant combinator, Owl selector * + *, Right-to-left selector matching, Subsequent sibling combinator (+9 more)
-
-### Community 301 - "Expressjs: Foundations.Md"
-Cohesion: 0.16
-Nodes (17): Proposed Part 1 Foundations, Proposed Part 2 HTTP surface, Proposed Part 3 API product, Proposed Part 4 Edge and ops, Express proposed syllabus inventory, Concept to Node middleware to Express, Express.js syllabus consolidated review, 38 sections to 3 parts 9 phases (+9 more)
-
-### Community 302 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.23
-Nodes (17): for...in vs Object.keys, Integer-index enumeration order, Object.keys throws on null and undefined, Object.entries, Object.keys, Object.values, Own enumerable string-keyed, 08.1 · What they include and what they skip (+9 more)
-
-### Community 303 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.20
-Nodes (17): Array.prototype.every, every is vacuously true on [], Array.prototype.find, Array.prototype.findIndex, for...of for control flow, Array.prototype.forEach, Array.prototype.map, 04.1 · Choosing a method (+9 more)
-
-### Community 304 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.15
-Nodes (17): require is synchronous, CJS ↔ ESM interop, cjs-module-lexer named exports, Dual package hazard, ERR_REQUIRE_ASYNC_MODULE, __esModule marker, JSON import attribute, require() of an ES module (+9 more)
-
-### Community 305 - "Nodejs: Phase 8 Security"
-Cohesion: 0.18
-Nodes (17): Session cookie flags, HTTP Strict Transport Security, HTTPS, HSTS and cookie flags, TLS 1.3 session resumption trap, X-Forwarded-Proto trust, Account lockout as DoS, Limiter fail-open vs fail-closed, Rate limiting and brute-force protection (+9 more)
-
-### Community 306 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.15
-Nodes (17): node --test file discovery, node:test runner, node:test — the built-in runner, Test process isolation, node:test concurrency, node:assert/strict, deepStrictEqual rules, node:assert — strict mode and deep equality (+9 more)
-
-### Community 307 - "/ - CSS (in scope)"
-Cohesion: 0.14
-Nodes (17): CSS (in scope), Docker & Podman (in scope), Express (in scope), Git (in scope), GraphQL (parked), JavaScript (in scope), Kubernetes (parked), MongoDB (in scope) (+9 more)
-
-### Community 308 - "Javascript: Phase 3 Functions"
+### Community 403 - "Css Selectors: :empty"
 Cohesion: 0.12
-Nodes (15): Closures created together share one scope, Gotchas, Interview questions, The counter factory, The stale-closure bug, What a closure actually keeps alive, Where it does leak, Gotchas (+7 more)
+Nodes (15): `:empty`, Gotchas, Interview questions, `:lang()` and `:dir()`, `:not()`, `:root`, `:scope`, The double-negative trap (+7 more)
 
-### Community 309 - "Javascript: Phase 6 Iteration And Destructuring"
+### Community 404 - "Javascript How Javascript Runs"
 Cohesion: 0.12
-Nodes (15): Collecting it, when you do want everything, Gotchas, Interview questions, Terminating — get this right, or it never ends, The three paging styles, What it replaces, Yield items, not pages — with one exception, Bounding the result (+7 more)
+Nodes (15): `await` does not consume stack, Gotchas, Interview questions, Only the first 10 frames are captured, Reading a stack trace, The fix is almost always iteration, The limit is bytes, not calls, What a frame holds (+7 more)
 
-### Community 310 - "React: Phase 14 Correctness"
+### Community 405 - "Javascript Machine Coding"
 Cohesion: 0.12
-Nodes (15): Gotchas, Interview questions, Per-test options without losing that property, Query clients and stores, The pattern, The router, What not to put in the wrapper, Form fields are the most common failure (+7 more)
+Nodes (15): Choosing the limit, Error policy is a decision, not a default, Gotchas, Interview questions, Ordering: three different orders, and they are not the same, The four details that make it correct, Why not just chunk the array?, Cancellation (+7 more)
 
-### Community 311 - "Typescript: Phase 3 Generics"
+### Community 406 - "Javascript Values And Coercion"
 Cohesion: 0.12
-Nodes (15): 1. `keyof typeof` — by far the most common form, 2. The duality over unions and intersections, 3. Typing a registry against its own keys, 4. Narrowing a `string` into a key, Filtering keys by their value type, Gotchas, Interview questions, Trade-off (+7 more)
+Nodes (15): Converting at the boundary, Gotchas, Interview questions, Measured, Numbers to strings, The radix trap, Which to use, Gotchas (+7 more)
 
-### Community 312 - "Sandbox Ts-P0 - tsconfig.json"
+### Community 407 - "Javascript Iteration And Destructuring"
+Cohesion: 0.12
+Nodes (15): 1 · You need the completion value, 2 · You need to look ahead, 3 · You are consuming several iterators together, 4 · The consumer is a state machine, not a loop, Gotchas, Interview questions, You now own the cleanup, Do not write these if you do not have to (+7 more)
+
+### Community 408 - "Mongodb Crud: Batching is automatic"
+Cohesion: 0.12
+Nodes (15): Batching is automatic, Gotchas, Interview questions, Partial failure is the normal case, The one option that matters: `ordered`, The return value, An empty filter matches everything, Dot notation reaches inside (+7 more)
+
+### Community 409 - "Nodejs Modules: Dynamic import()"
+Cohesion: 0.12
+Nodes (15): Dynamic `import()`, Exporting, Gotchas, Imports are hoisted and run first, Imports are live, read-only bindings, Interview questions, The extension is not optional, Top-level `await` (+7 more)
+
+### Community 410 - "Nodejs Buffers Streams"
+Cohesion: 0.12
+Nodes (15): Converting at the boundary, Gotchas, Interview questions, Locking and tee, Streaming a fetch response to disk, The three types, and how they differ from Node's, Where you meet them in Node, Which to use in your own code (+7 more)
+
+### Community 411 - "Nodejs Testing: Matching errors"
+Cohesion: 0.12
+Nodes (15): Assertions on the test context, Gotchas, Interview questions, Matching errors, `partialDeepStrictEqual` for noisy objects, `rejects` is async and must be awaited, The assertions you actually use, What `deepStrictEqual` compares (+7 more)
+
+### Community 412 - "Nodejs Testing: Mock timers"
+Cohesion: 0.12
+Nodes (15): Gotchas, Interview questions, `mock.fn` — a function you can interrogate, `mock.method` — for objects you do not control, Mock timers, Mocking `fetch`, `t.mock` versus the top-level `mock`, `exports`, not `namedExports` (+7 more)
+
+### Community 413 - "Postgresql Aggregation: Do not count on "
+Cohesion: 0.12
+Nodes (15): Do not count on every request, Gotchas, In Node, Interview questions, The four ways, measured, The `limit + 1` pattern, Trade-off, Why `count(*) OVER ()` is the worst option (+7 more)
+
+### Community 414 - "React Ssr Hydration"
+Cohesion: 0.12
+Nodes (15): A third option worth knowing, Choosing between them, Escape 1 — `suppressHydrationWarning`, Escape 2 — the deliberate two-pass render, Gotchas, Interview questions, What it costs, in the docs' own words, What neither is for (+7 more)
+
+### Community 415 - "React Correctness: Diagnosing a flaky te"
+Cohesion: 0.12
+Nodes (14): Cause 1 · Time the test does not control, Cause 2 · State leaking between tests, Cause 3 · Fake timers, used carelessly, Cause 4 · Environment differences, Diagnosing a flaky test, Gotchas, Interview questions, Keeping a suite fast (+6 more)
+
+### Community 416 - "Sandbox Ts P0"
 Cohesion: 0.12
 Nodes (16): compilerOptions, declaration, declarationMap, exactOptionalPropertyTypes, isolatedModules, jsx, module, moduleDetection (+8 more)
 
-### Community 313 - "Sandbox P7-Background-Work - bullmq"
+### Community 417 - "Sandbox P7 Background Work"
 Cohesion: 0.12
 Nodes (15): bullmq, ioredis, dependencies, bullmq, ioredis, pg, description, pg (+7 more)
 
-### Community 314 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.19
-Nodes (16): CSSOM, Parse-time value normalisation, Shorthand expansion, What CSS is, Invalid declaration drop, Silent discard of unknown CSS, CSS fails silently, Unclosed brace swallows next rule (+8 more)
-
-### Community 315 - "Css: Adaptive And Visual.Md"
-Cohesion: 0.20
-Nodes (16): Syllabus Part 2 Values and layout, Flex automatic minimum size min-width:0, minmax(0, 1fr), Phase 3 Custom properties, Phase 4 Flexbox, Phase 5 Grid, Syllabus Part 3 Adaptive visual motion, Compositor-only animation (+8 more)
-
-### Community 316 - "Javascript: Phase 3 Functions"
-Cohesion: 0.15
-Nodes (16): Default this binding, Explicit this binding, Four this binding rules, Implicit this binding, Module top-level this, this precedence, Arrow callback this fix, Class field arrow (+8 more)
-
-### Community 317 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.20
-Nodes (16): Non-mutating add/remove equivalents, O(n²) queue via shift in a loop, 02.1 · push, pop, shift, unshift, Array.prototype.pop, Array.prototype.push, push(...huge) argument limit, Array.prototype.shift, Array.prototype.unshift (+8 more)
-
-### Community 318 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.17
-Nodes (15): Indexes belong in migrations, MongoDB from Node, Transactions from Node, N+1 queries, Drivers vs builders vs ORMs, Mongoose autoIndex, Mongoose schemas, models, middleware, An ORM is not a repository (+7 more)
-
-### Community 319 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.15
-Nodes (16): ACID in PostgreSQL, SQLSTATE 25P02 transaction aborted, Atomicity and aborted transactions, Durability and WAL flush, Default isolation READ COMMITTED, synchronous_commit, BEGIN, COMMIT, ROLLBACK from Node, PostgreSQL autocommit (+8 more)
-
-### Community 320 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.20
-Nodes (16): INNER JOIN matching pairs, Fan-out and aggregates, count(DISTINCT) rescues counts only, Join fan-out, Result grain, Pre-aggregate the child then join, LEFT JOIN at-least-once guarantee, Fan-out compounds across independent branches (+8 more)
-
-### Community 321 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.17
-Nodes (16): Migration file checksum, Lexical migration filename order, schema_migrations tracking table, INVALID leftover CONCURRENTLY index, migrate no-transaction directive, Statements that cannot run in a transaction, Batch vs per-file migration transaction, Minimal migration runner (+8 more)
-
-### Community 322 - "React: Phase 3 State"
-Cohesion: 0.18
-Nodes (16): Hook call-order slots, useState initial value is read once, State belongs to a tree position, useState, key becomes part of position, Resetting state with key, Lazy initial state, Lazy ref pattern (+8 more)
-
-### Community 323 - "Sandbox Pg-Api - node:child_process"
-Cohesion: 0.14
-Nodes (11): bad, bad2, c, enc, line(), log, logger, p (+3 more)
-
-### Community 324 - "Docker: Phase 2 Images And Registries"
+### Community 418 - "Css Selectors: The five"
 Cohesion: 0.12
-Nodes (14): Credential storage and helpers, Credentials for CI, `docker login`, done properly, Gotchas, Interview questions, Podman, The token exchange, Building for more than one platform (+6 more)
+Nodes (14): Case sensitivity, which surprises people, Gotchas, Interview questions, The five, Type selectors are for content you do not control, Which to use, and the coupling each creates, Why `id` is a mistake in stylesheets, Descendant vs child: pick deliberately (+6 more)
 
-### Community 325 - "React: Phase 14 Correctness"
-Cohesion: 0.13
-Nodes (13): Where this connects, Why this is three files, `findBy` — the async one, and why it beats the alternatives, `getBy` — the default, Gotchas, Interview questions, Manual queries, and where the docs draw the line, `queryBy` — for proving a thing is absent (+5 more)
+### Community 419 - "Css Selectors: Restrictions worth knowin"
+Cohesion: 0.12
+Nodes (14): Gotchas, Interview questions, Restrictions worth knowing, Specificity: the maximum of its arguments, The patterns that actually earn their place, The shape, What it costs, measured, Gotchas (+6 more)
 
-### Community 326 - "React: Phase 14 Correctness"
-Cohesion: 0.13
-Nodes (13): Where this connects, Why this is two files, Both need a DOM, ESM, which is where the time goes, Gotchas, Interview questions, The API differences you will actually notice, The one decision that matters (+5 more)
+### Community 421 - "Javascript Readme.Md: 🔒 Chunk claims"
+Cohesion: 0.12
+Nodes (14): 🔒 Chunk claims, 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15), 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15), How these pages are verified, Phases, 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget, The older form — `pick javascript A`, still understood, Working order — 🔴 Master-first is FINISHED; the tiers are the work (+6 more)
 
-### Community 327 - "React: Phase 14 Correctness"
+### Community 422 - "Postgresql Architecture: From Node"
+Cohesion: 0.12
+Nodes (14): From Node, Gotchas, Interview questions, Qualifying names, See it, The four levels, Trade-off, From Node (+6 more)
+
+### Community 423 - "Postgresql Types: From Node"
+Cohesion: 0.12
+Nodes (14): Composite types: usually the wrong tool, Domains: a constraint you declare once, From Node, Gotchas, Interview questions, Trade-off, From Node, Gotchas (+6 more)
+
+### Community 424 - "Postgresql Reviews: 1. Verdict"
+Cohesion: 0.12
+Nodes (15): §10 — Run every example before pasting it · **FAIL, and this one is serious**, 1. Verdict, 2. The twelve real pages, 3. The five templates, §4.1 — Proper code and examples · **FAIL**, §4.2 — Interview questions, 3–8 per topic, with answers · **FAIL on substance**, §4.3 — Gotchas as symptom → cause → fix · **FAIL**, 4. Instruction-by-instruction (+7 more)
+
+### Community 425 - "React Correctness: The decision, in one "
 Cohesion: 0.12
 Nodes (14): Gotchas, Interview questions, Rules that make them tolerable, The decision, in one line, The mechanics, Where they genuinely earn their place, Why most snapshot tests are worthless, Gotchas (+6 more)
 
-### Community 328 - "Storybook: Phase 1 Story Format"
+### Community 426 - "React Components: The two rules, verbati"
+Cohesion: 0.12
+Nodes (14): Gotchas, Interview questions, Neither rule bans mutation outright, Rule 1 — mind your own business, Rule 2 — same inputs, same output, The two rules, verbatim, A practical audit, Gotchas (+6 more)
+
+### Community 427 - "Storybook Story Format"
 Cohesion: 0.12
 Nodes (14): `args` merge, they do not replace, Gotchas, Interview questions, `render` — and when not to use it, The three levels, What goes on a story, What goes on `meta`, Why CSF is a module, and what that buys you (+6 more)
 
-### Community 329 - "Sandbox P8-Security - ex11-deser-redirect-massassign.mjs"
+### Community 428 - "Sandbox Pg Api"
+Cohesion: 0.14
+Nodes (11): bad, bad2, c, enc, line(), log, logger, p (+3 more)
+
+### Community 429 - "Reviews: 10 · File and media metadata"
+Cohesion: 0.12
+Nodes (16): 05 · Real-world scenarios for PostgreSQL, 10 · File and media metadata, 11 · Rate limiting and quota counters, 12 · Reporting export without exhausting memory, 1 · Session and auth store — *your example, expanded*, 2 · Product catalogue: filter, sort, search, paginate, 3 · Checkout: inventory, pricing, idempotency, 4 · Background job queue in PostgreSQL (+8 more)
+
+### Community 430 - "Sandbox P8 Security"
 Cohesion: 0.12
 Nodes (11): Account, body, clone, deny, filtered, naive, parsed, patched (+3 more)
 
-### Community 330 - "Src - index.js"
+### Community 431 - "Src: index.js"
 Cohesion: 0.12
 Nodes (13): css, docker, express, git, javascript, LAYERS, mongodb, nginx (+5 more)
 
-### Community 331 - "Css: Phase 1 Selectors"
-Cohesion: 0.23
-Nodes (15): @scope, @scope at-rule, CSS Modules, Donut scoping, Selector performance, :has() matching cost, Style invalidation breadth, Right-to-left selector matching (+7 more)
-
-### Community 332 - "Javascript: Phase 0 How Javascript Runs"
-Cohesion: 0.16
-Nodes (15): Module request waterfall, nomodule two-bundle pattern, script async, script defer, script type=module, browserslist, Polyfill, Transpiler (+7 more)
-
-### Community 333 - "Javascript: Phase 3 Functions"
-Cohesion: 0.14
-Nodes (15): Object literal is not a scope, Direct eval, Lexical scope, Scope chain lookup, Shadowing, What creates a scope, with is banned in strict mode, const fixes the binding not the value (+7 more)
-
-### Community 334 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.22
-Nodes (15): Array.prototype.filter, Always pass a reduce initial value, 05.1 · The shape that stays readable, reduce callback and initial value, reduce is a for...of loop, Missing return in reduce callback, reduce without initialValue, reduceRight (+7 more)
-
-### Community 335 - "Javascript: Language Core.Md"
+### Community 432 - "Css How Css Runs"
 Cohesion: 0.13
-Nodes (15): Engine versus host, Part 1 — The language core, Phase 0 — How JavaScript runs, Phase 1 — Values, types and coercion, Phase 2 — Operators, expressions and control flow, Phase 3 — Functions, scope and closures, Phase 4 — Objects, prototypes and classes, Part 2 — Data, iteration and async (+7 more)
+Nodes (13): Gotchas, Interview questions, The related legacy: `-webkit-` pseudo-elements, What is actually true today, What they were for, What to do about it, Gotchas, Interview questions (+5 more)
 
-### Community 336 - "Nodejs: Phase 3 Buffers Streams"
+### Community 433 - "Nodejs Modules: Configuration"
 Cohesion: 0.13
-Nodes (15): Base64 decode is not validation, Base64 +33% size cost, base64 vs base64url, Buffer encodings, Invalid UTF-8 becomes U+FFFD, latin1 vs ascii, TextDecoder fatal true, utf8 encoding (+7 more)
+Nodes (13): Configuration, `dependencies` vs `devDependencies`, Global installs, Gotchas, Inspecting, Installing, Interview questions, Scripts and `npx` (+5 more)
 
-### Community 337 - "Nodejs: Phase 3 Buffers Streams"
+### Community 434 - "Postgresql Architecture: Auth modes (men"
 Cohesion: 0.13
-Nodes (15): Buffer.alloc, Buffer.allocUnsafe, Buffer.allocUnsafeSlow, Buffer pool, allocUnsafe memory disclosure, new Buffer deprecated DEP0005, Buffer extends Uint8Array, Buffer.from copy vs view overloads (+7 more)
+Nodes (13): Auth modes (mental model), Connection string (URI), From Node, Gotchas, Interview questions, `PG*` environment variables, Trade-off, From Node (+5 more)
 
-### Community 338 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.15
-Nodes (15): Duplex stream, PassThrough, Transform stream, Late data handler data-loss window, Flowing vs paused mode, readable event plus read n, Transform chunk boundary problem, _transform and _flush (+7 more)
-
-### Community 339 - "Nodejs: Phase 8 Security"
-Cohesion: 0.18
-Nodes (15): alg none and HS256-as-RS256, Asymmetric JWT signing, Short access JWT plus opaque refresh, JWT, Opaque server-side session, Sessions vs JWT, HttpOnly cookie credential, In-memory SPA access token (+7 more)
-
-### Community 340 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.16
-Nodes (15): The lost update, and four ways to stop it, MVCC: row versions and snapshots, Long-running transactions and the xmin horizon, VACUUM, autovacuum and bloat, Idle in transaction, idle_in_transaction_session_timeout 25P03, idle in transaction, pg pool error event on backend kill (+7 more)
-
-### Community 341 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.20
-Nodes (15): Full-text search overview, A view cannot take a parameter, Extensions, Set-returning functions in FROM, Put SRFs in FROM not SELECT, PL/pgSQL functions, LANGUAGE sql inlining vs plpgsql black box, Function volatility IMMUTABLE STABLE VOLATILE (+7 more)
-
-### Community 342 - "Postgresql: Phase 2 Types"
-Cohesion: 0.18
-Nodes (14): AT TIME ZONE bidirectional conversion, date to JavaScript Date midnight trap, DST: 1 day versus 24 hours, timestamptz vs timestamp, GROUP BY day depends on session zone, IANA time zone names, Pin the pg pool to UTC, Session TimeZone setting (+6 more)
-
-### Community 343 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.17
-Nodes (15): = ANY($1::int[]) for IN lists, EXISTS must be correlated, Parallel Hash Semi Join, Semi join, Semi joins: EXISTS and IN, Anti join, Anti join needs the child FK index more, Anti joins and the NOT IN trap (+7 more)
-
-### Community 344 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.15
-Nodes (15): Default window frame, Partial moving-average window, RANGE frame, Ranking functions ignore the frame, ROWS frame, Window peers, 0A000 RANGE offset unsupported type, 42P20 RANGE offset one ORDER BY column (+7 more)
-
-### Community 345 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.14
-Nodes (15): application_name, Lazy pool connection, One pool per process, pg.Pool, pool.on('error'), LISTEN needs a dedicated Client, pg.Client, pool.connect() (+7 more)
-
-### Community 346 - "React: Phase 2 Components"
-Cohesion: 0.13
-Nodes (15): Spread precedence is later keys win, Spread the set, not a domain object, Ref cleanup functions, findDOMNode removed, forwardRef is deprecated, not removed, ref as a prop (React 19), React v19 blog — ref as a prop, ref is an ordinary prop in React 19 (+7 more)
-
-### Community 347 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.17
-Nodes (15): as const, as const is not as T, Derived union from as const list, Literal type, satisfies vs as const, Hook return as const tuple, Tuple type, Union common-members rule (+7 more)
-
-### Community 348 - "Css: Phase 4 Flexbox"
-Cohesion: 0.13
-Nodes (13): Phase gate, The three stages in one place, Three results worth carrying out of this topic, Where this connects, Gotchas, In a column: the same rule, the other axis, Interview questions, Nesting makes it worse (+5 more)
-
-### Community 349 - "Javascript: Phase 12 Browser Platform"
-Cohesion: 0.13
-Nodes (13): Detect once, at the boundary, Gotchas, Interview questions, The failure modes that make naive checks wrong, The four shapes of a check, What not to detect on, Deciding what to enhance with: Baseline, Gotchas (+5 more)
-
-### Community 350 - "Javascript: Phase 3 Functions"
-Cohesion: 0.13
-Nodes (12): Chunks, Phase gate, Where this connects, Gotchas, Interview questions, JSON cannot carry `undefined`, Nested destructuring defaults have the same hole, twice, `??`, not `||` (+4 more)
-
-### Community 351 - "Javascript: Phase 3 Functions"
-Cohesion: 0.13
-Nodes (13): A default is code, so it runs like code, A fresh value every call — and the identity it costs, Forwarding through a wrapper, Gotchas, Interview questions, Merging options: three mechanisms, three answers, When identity matters: hoist, and then freeze, Async loops are the same rule, delayed (+5 more)
-
-### Community 352 - "Storybook: Real World Workflows And Recipes"
+### Community 435 - "Storybook Real World Workflows And Recip"
 Cohesion: 0.13
 Nodes (15): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade End-to-End Setup, 4. Senior Engineer Edge Cases & Pitfalls, Done when, ⚠️ Pitfall 1: Only fixing colors, forgetting fonts, ⚠️ Pitfall 2: Theme on wrong document, ⚠️ Pitfall 3: Tailwind content paths (+7 more)
 
-### Community 353 - "Storybook: Phase 3 Decorators"
+### Community 436 - "Storybook Decorators: Reading context in"
 Cohesion: 0.13
 Nodes (13): Gotchas, Interview questions, Parameterising a decorator properly, Reading context in `render`, `viewMode` — the one that surprises people, What is on it, Which one should a decorator read?, `beforeEach` — setup with cleanup (+5 more)
 
-### Community 354 - "Sandbox P7-Background-Work - ex6-time.mjs"
+### Community 437 - "Sandbox P7 Background Work"
 Cohesion: 0.13
 Nodes (10): ac, all, Budget, paidAt, plus7ms, slow, start, t (+2 more)
 
-### Community 355 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.20
-Nodes (14): CSS.supports and style round-trip, @supports, @supports tests parse not correctness, @supports selector(), @supports feature queries, Baseline and shipping decisions, Baseline Limited availability, Local support is not shipping safety (+6 more)
-
-### Community 356 - "Css: Phase 1 Selectors"
-Cohesion: 0.20
-Nodes (14): Structural Pseudo-classes, :nth-child(An+B), :nth-last-child, :nth-of-type, :nth-child of S, Quantity query, State Pseudo-classes, :disabled vs aria-disabled (+6 more)
-
-### Community 357 - "Expressjs: Phase 0 Express Basics"
-Cohesion: 0.18
-Nodes (14): Express 5.x documentation, Named splat /*splat, Express 5 path-to-regexp rewrite, Express 5.2.1 current line, Raw node:http, Illegal paths throw at registration, Express 5 path migration map, Named splat params are arrays (+6 more)
-
-### Community 358 - "Git: Phase 0 How Git Stores"
-Cohesion: 0.15
-Nodes (14): Detached HEAD, HEAD, Symbolic ref, Token in remote URL, Bare repository, .git directory, .git/hooks, .git/logs reflog (+6 more)
-
-### Community 359 - "Git: Phase 0 How Git Stores"
-Cohesion: 0.25
-Nodes (14): Refs and HEAD, The commit graph is a DAG, Config layers and precedence, A tour of .git/, Identity and first-run setup, Loose objects and packfiles, What Git is not, SHA-1 and SHA-256 do not interoperate (+6 more)
-
-### Community 360 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.18
-Nodes (14): Abstract operations, Date Symbol.toPrimitive default-as-string, ToPrimitive, {} + [] statement parse, + concatenates if either side is a string, ToNumber, ToPrimitive coercion, Convert at the boundary (+6 more)
-
-### Community 361 - "Nodejs: Phase 12 Native"
-Cohesion: 0.14
-Nodes (14): node:24-alpine musl, node:24-bookworm-slim, glibc vs musl for native addons, process.versions.napi 10, node-addon-api, Node-API stable ABI, Native addon prebuilds, C++ addon (+6 more)
-
-### Community 362 - "Nodejs: Phase 2 Async"
-Cohesion: 0.18
-Nodes (14): Vertical vs horizontal scaling, Check phase, Close callbacks phase, Event loop phases, nextTick and microtasks are not phases, The event loop phases, setTimeout(0) vs setImmediate race from main, Timers phase (+6 more)
-
-### Community 363 - "Nodejs: Phase 12 Native"
-Cohesion: 0.25
-Nodes (14): node:vm — and why it is not a security sandbox, WebAssembly in Node — CPU-bound work when it fits, V8 flags — what they actually control, Node-API (N-API) and node-addon-api, C++ addons and the embedder API, FFI — calling native libraries without a full addon, WASI — WebAssembly system interface, Custom module loaders and resolution hooks (+6 more)
-
-### Community 364 - "Nodejs: Phase 2 Async"
-Cohesion: 0.18
-Nodes (14): Promise combinators, Promise.allSettled, Promise.any, .catch placement, Catch only what you can handle, error.cause, Error handling with async/await, try/catch with await (+6 more)
-
-### Community 365 - "Nodejs: Phase 8 Security"
-Cohesion: 0.19
-Nodes (14): Never concatenate code and data, Command injection, execFile / spawn without a shell, Identifier allowlist, Injection — SQL, NoSQL and command, NoSQL injection, SQL injection, Encode on output, not input (+6 more)
-
-### Community 366 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.14
-Nodes (14): SET LOCAL lock_timeout, ADD CONSTRAINT NOT VALID, Atomic migrations, Transactional DDL, Adding NOT NULL safely, Batched backfill, NOT VALID then VALIDATE for NOT NULL, DROP CASCADE (+6 more)
-
-### Community 367 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.16
-Nodes (14): JOIN plus DISTINCT costs 2.5x, GROUP BY does not order, GROUP BY without aggregate is DISTINCT, Compare Buffers before milliseconds, GroupAggregate, HashAggregate, GroupAggregate over ordered index scan, Partial and Finalize aggregation (+6 more)
-
-### Community 368 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.21
-Nodes (14): FILTER before OVER, OVER keeps the rows, PARTITION BY is GROUP BY that does not collapse, Running total via ORDER BY in OVER, Window functions, Ranking functions, generate_series date spine before lag, lag (+6 more)
-
-### Community 369 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.15
-Nodes (13): NOT IN versus NOT EXISTS, Set subquery, CUBE, MixedAggregate, Grouping sets are not parallelised, ROLLUP, GROUPING(), Subtotal NULL versus data NULL (+5 more)
-
-### Community 370 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.16
-Nodes (14): bigint arrives as string, date and timestamp read in Node timezone, numeric arrives as string, PostgresInterval object, timestamptz as instant, Type OID parser key, pg type parsing, Array types have their own OIDs (+6 more)
-
-### Community 371 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.18
-Nodes (14): The executor contract, list with filtering, sorting and pagination, create INSERT RETURNING, findById and the not-found decision, Partial updates COALESCE vs built SET, delete hard vs soft, Idempotent writes, Passing a client through services (+6 more)
-
-### Community 372 - "React: Phase 0 How React Runs"
-Cohesion: 0.19
-Nodes (14): JSX automatic runtime, $$typeof / react.transitional.element, key is not a prop, React element, The element, React keys, ref is an ordinary prop, React.createElement (+6 more)
-
-### Community 373 - "Babel: Plugin Ecosystem"
+### Community 438 - "Babel Plugin Ecosystem"
 Cohesion: 0.14
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 5.1 Syntax vs Transform Plugins, 5.2 Stage-X / TC39 Proposals, 5.3 Common Ecosystem Plugins, 5.4 Macros (`babel-plugin-macros`) (+5 more)
 
-### Community 374 - "Eslint-Oxlint: Eslint Flat Config"
+### Community 439 - "Css How Css Runs"
+Cohesion: 0.14
+Nodes (12): Declarations are resolved, not executed, Declarative has a cost, and a payoff, Gotchas, Interview questions, What you write is not what is stored, Your stylesheet becomes an object model, Gotchas, Interview questions (+4 more)
+
+### Community 440 - "Css How Css Runs"
+Cohesion: 0.14
+Nodes (12): Gotchas, Inspect them, do not guess them, Interview questions, The actual defaults, They differ between browsers — but less than you think, Where they sit in the cascade, Gotchas, Interview questions (+4 more)
+
+### Community 441 - "Eslint-Oxlint Linting Landscape And Tool"
+Cohesion: 0.14
+Nodes (14): 1.1 Why Lint at All, 1.2 Choosing a Linter (Decision Tree), 1.3 Lint vs Format Boundary, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Choosing Biome *or* ESLint by blog post, not inventory (+6 more)
+
+### Community 442 - "Eslint-Oxlint Eslint Flat Config"
 Cohesion: 0.14
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1 Config File Forms, 3.2 Core Flat-Config Object Fields, 3.3 Composition: extends, Order, FlatCompat, Inspector, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming `defineConfig` exists on older ESLint 9 minors (+5 more)
 
-### Community 375 - "Eslint-Oxlint: Eslint Plugin Ecosystem"
+### Community 443 - "Eslint-Oxlint Eslint Plugin Ecosystem"
 Cohesion: 0.14
 Nodes (14): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 6.1 Plugin Anatomy, 6.2 Essential Frontend Plugins, 6.3 Resolution Pitfalls, 6.4 Node, Backend & Security (Fullstack) (+6 more)
 
-### Community 376 - "Javascript: Phase 3 Functions"
+### Community 444 - "Javascript Functions: bind and new"
 Cohesion: 0.14
-Nodes (12): A `curry` you can write under pressure, Gotchas, Interview questions, What it is actually for, Where it stops being worth it, Gotchas, Interview questions, `length` — declared arity, not parameter count (+4 more)
+Nodes (12): `bind` and `new`, Gotchas, Interview questions, What `bind` does to the function it returns, Writing `bind` yourself, `apply`'s argument limit, Borrowing methods from array-likes, Gotchas (+4 more)
 
-### Community 377 - "Javascript: Phase 5 Built In Library"
+### Community 445 - "Javascript Built In Library"
 Cohesion: 0.14
 Nodes (13): 🔴 Build the formatter once, Compact notation and sign display, Currency, Digits, and the two systems that must not be mixed, `formatToParts` — when the options cannot express the layout, Gotchas, Interview questions, `NumberFormat` — the styles (+5 more)
 
-### Community 378 - "Javascript: Phase 6 Iteration And Destructuring"
+### Community 446 - "Javascript Iteration And Destructuring"
 Cohesion: 0.14
 Nodes (12): Gotchas, Interview questions, The asymmetry, and the discarded first argument, The request/response driver, `throw()` — injecting an error at the pause point, Why you rarely write this today, `finally` gets to speak — and can even yield, Gotchas (+4 more)
 
-### Community 379 - "React: Phase 14 Correctness"
+### Community 447 - "Nodejs Modules: The node_modules walk"
+Cohesion: 0.14
+Nodes (12): Gotchas, Interview questions, The file that decides CJS or ESM, The `node_modules` walk, Three kinds of specifier, Where CJS and ESM diverge, CommonJS: a partial object, quietly, ESM: a loud failure instead (+4 more)
+
+### Community 448 - "Nodejs Http Processes"
+Cohesion: 0.14
+Nodes (12): Gotchas, Interview questions, Mutual TLS, SNI, Terminating TLS in Node, The certificate chain, Trusting a private CA — three options, one of them wrong, Chunked happens automatically (+4 more)
+
+### Community 449 - "React Correctness: By component shape"
 Cohesion: 0.14
 Nodes (13): By component shape, Custom hooks, Data-fetching — the four states, Gotchas, Interactive — state that the user drives, Interview questions, Presentational — props in, markup out, Pure functions and reducers (+5 more)
 
-### Community 380 - "Typescript: Phase 2 Narrowing"
-Cohesion: 0.15
-Nodes (11): Phase gate, Sandbox, The technique behind every claim here, What the measurements changed, Where this connects, Phases, Phase 0 — How TypeScript runs, Phase 1 — The type vocabulary (+3 more)
-
-### Community 381 - "Sandbox P9-Testing - @biomejs/biome"
+### Community 450 - "Sandbox P9 Testing"
 Cohesion: 0.15
 Nodes (12): @biomejs/biome, eslint, @eslint/js, prettier, dependencies, @biomejs/biome, eslint, @eslint/js (+4 more)
 
-### Community 382 - "Javascript: Phase 3 Functions"
-Cohesion: 0.18
-Nodes (13): Behavioral hoisting, Declaration hoisting, MDN Glossary: Hoisting, Side-effect hoisting, Three binding error types, Two-step scope entry, Function expression not hoisted, var declaration vs initialization split (+5 more)
-
-### Community 383 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.18
-Nodes (13): Getter and setter properties, Object.assign triggers setters, Object spread own enumerable shallow, Copy the path you are changing, Shallow copy, Spread drops the prototype, structuredClone silent losses, structuredClone (+5 more)
-
-### Community 384 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.21
-Nodes (13): Errors signal, Four golden signals, Latency signal, Traffic signal, Counter, gauge, histogram, summary, Finding the bottleneck, Measure then change one thing, Caching strategy (+5 more)
-
-### Community 385 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.15
-Nodes (13): dependencies vs devDependencies vs peerDependencies, Commit the lockfile, Lockfile integrity hash, package-lock.json, npm ci, npm ci --omit=dev, Erasable vs non-erasable syntax, ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX (+5 more)
-
-### Community 386 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.18
-Nodes (13): Character vs token boundaries, stream.setEncoding, StringDecoder, A chunk is not a line, Streams keep memory constant, V8 MAX_STRING_LENGTH, When not to stream, readline createInterface (+5 more)
-
-### Community 387 - "Nodejs: Phase 8 Security"
-Cohesion: 0.19
-Nodes (13): Child process environment inheritance, Node --env-file, Committed secret in git history, Secrets handling, Secret rotation, Secret wrapper type, extractable: false, Envelope encryption (+5 more)
-
-### Community 388 - "Nodejs: Phase 8 Security"
-Cohesion: 0.24
-Nodes (13): CSPRNG APIs, HMAC vs length-extension, KeyObject vs Buffer key, Modulo bias, node:crypto primitives, node:crypto, Web Crypto API, Web Crypto SubtleCrypto (+5 more)
-
-### Community 389 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.22
-Nodes (13): Backend process, Node connection pool, max_connections, pg_stat_activity, PgBouncer, Process-per-connection model, Client backend, Postmaster (+5 more)
-
-### Community 390 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.18
-Nodes (12): Use 127.0.0.1 not localhost, Container-first local Postgres, Published host port 55432, postgres:18-alpine sandbox, Major vs minor versions, server_version_num, Target PostgreSQL 18.4, musl vs glibc sort order (+4 more)
-
-### Community 391 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.18
-Nodes (13): EXPLAIN vs EXPLAIN ANALYZE, EXPLAIN ANALYZE, EXPLAIN loops, EXPLAIN, BUFFERS, Correlated-column estimate error, shared hit vs shared read, pg_stat_statements.max and dealloc (+5 more)
-
-### Community 392 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.21
-Nodes (13): Foreign key, Index every FK referencing column, NO ACTION vs RESTRICT, ON DELETE actions, Constraint SQLSTATE to HTTP map, One-to-many, One-to-one, Self-referencing tree (+5 more)
-
-### Community 393 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.15
-Nodes (13): client.end vs release, Dedicated Client for LISTEN, NOTIFY dedup within a transaction, NOTIFY delivery on COMMIT, NOTIFY plus queue table, LISTEN/NOTIFY from Node, NOTIFY 8000-byte payload limit, pg_notify function (+5 more)
-
-### Community 394 - "React: Phase 2 Components"
-Cohesion: 0.15
-Nodes (13): The two rules of a pure component, Inputs are props state and context, Module-level write during render, Component purity, Writing a ref during render is unsupported, useSyncExternalStore for external sources, What purity still allows, Side effects belong in event handlers (+5 more)
-
-### Community 395 - "React: Phase 3 State"
-Cohesion: 0.21
-Nodes (13): Mental substitution of snapshot values, State is a snapshot, Stale closure, Updaters must be pure, Three cases where updater form is required, Updater function, Automatic batching, await is a batch boundary (+5 more)
-
-### Community 396 - "Babel: Configuration System"
+### Community 451 - "Babel Configuration System"
 Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3.1 Config File Forms, 3.2 Config Resolution & Root (Monorepos), 3.3 env-based Config, 3.4 overrides, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls (+5 more)
 
-### Community 397 - "Babel: Presets"
+### Community 452 - "Babel Presets: 4.1 @babel/preset-env"
 Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4.1 @babel/preset-env, 4.2 @babel/preset-react, 4.3 @babel/preset-typescript, 4.4 Framework-Bundled Presets, 4. Senior Engineer Edge Cases & Pitfalls (+5 more)
 
-### Community 398 - "Babel: Authoring Custom Plugins"
+### Community 453 - "Babel Authoring Custom Plugins"
 Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 6.1 Visitor Pattern, 6.2 Path & Scope APIs, 6.3 @babel/types Builders, 6.4 Testing (+5 more)
 
-### Community 399 - "Babel: Typescript And Jsx Handling"
+### Community 454 - "Babel Typescript And Jsx Handling"
 Cohesion: 0.15
 Nodes (12): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 7.1 Type-Stripping Semantics, 7.2 Babel-Unsupported (or Awkward) TS Features, 7.3 Automatic JSX Runtime, ⚠️ const enums in published d.ts + Babel consumers (+4 more)
 
-### Community 400 - "Babel: Build Tool Integration"
-Cohesion: 0.15
-Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 8.1 Webpack (`babel-loader`), 8.2 Vite (`@vitejs/plugin-react` Babel path), 8.3 Jest (`babel-jest`), 8.4 Rollup/Rolldown (`@rollup/plugin-babel`) (+5 more)
-
-### Community 401 - "Babel: Performance And Caching"
+### Community 455 - "Babel Performance And Caching"
 Cohesion: 0.15
 Nodes (12): 11.1 Compilation Cost, 11.2 Caching Strategies, 11.3 Reducing Surface, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Babel Performance & Caching (+4 more)
 
-### Community 402 - "Babel: Migration And Decision Recipes"
+### Community 456 - "Babel Migration And Decision Recipes"
 Cohesion: 0.15
 Nodes (13): 15.1 Babel → SWC (Next.js / general), 15.2 Babel → esbuild / Vite native, 15.3 Keeping Babel Deliberately, 15.4 Auditing Inherited Config, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls (+5 more)
 
-### Community 403 - "Eslint-Oxlint: Eslint Language Options Globals And"
+### Community 457 - "Eslint-Oxlint Eslint Language Options Gl"
 Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4.1 languageOptions, 4.2 File-Type Targeting, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Ignoring vs excluding from type-aware, ⚠️ JSX without the right parser features (+5 more)
 
-### Community 404 - "Eslint-Oxlint: Eslint Rules System"
+### Community 458 - "Eslint-Oxlint Eslint Rules System"
 Cohesion: 0.15
 Nodes (12): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 5.1 Rule Identity & Severity, 5.2 High-Value Core Rules (Not an Exhaustive Catalog), 5.3 Shareable Presets, ⚠️ Enabling `js.configs.all` (+4 more)
 
-### Community 405 - "Eslint-Oxlint: Typescript Eslint"
+### Community 459 - "Eslint-Oxlint Typescript Eslint"
 Cohesion: 0.15
 Nodes (13): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 7.1 Architecture, 7.2 Type-Aware Linting, 7.3 TS + React + Next Stack, ⚠️ Believing type-aware lint replaces `tsc` (+5 more)
 
-### Community 406 - "Eslint-Oxlint: Custom Eslint Rules And Processors"
+### Community 460 - "Eslint-Oxlint Custom Eslint Rules And Pr"
 Cohesion: 0.15
 Nodes (12): 10.1 Authoring a Rule, 10.2 Testing with RuleTester, 10.3 Processors, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🛠️ Custom ESLint Rules, Testing & Processors (+4 more)
 
-### Community 407 - "Eslint-Oxlint: Oxlint Installation Cli And Config"
+### Community 461 - "Eslint-Oxlint Oxlint Installation Cli An"
 Cohesion: 0.15
 Nodes (12): 13.1 Getting Started, 13.2 Configuration Surfaces, 13.3 Schema Essentials, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Expecting ESLint flat `files` at top level for all rules (+4 more)
 
-### Community 408 - "Eslint-Oxlint: Migration Paths"
+### Community 462 - "Eslint-Oxlint Migration Paths"
 Cohesion: 0.15
 Nodes (12): 19.1 ESLint Legacy → Flat Config, 19.2 ESLint → Oxlint, 19.3 Dual-Stack Phases (Large Monorepos), 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Big-bang monorepo cutover on Friday (+4 more)
 
-### Community 409 - "Eslint-Oxlint: Ci Monorepos And Performance Engineering"
-Cohesion: 0.15
-Nodes (12): 1. Concept & Under-the-Hood Mechanics, 20.1 CI Design for Linters, 20.2 Monorepo Patterns, 20.3 Performance Pitfalls, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Annotations only for ESLint, not Oxlint (+4 more)
-
-### Community 410 - "Frontend-Architecture: Styling Architecture"
+### Community 463 - "Frontend-Architecture Styling Architectu"
 Cohesion: 0.15
 Nodes (12): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Choosing CSS-in-JS for a New Project Without Weighing Its Runtime Cost, ⚠️ Anti-Pattern 2: Hardcoding Design Values Instead of Referencing Tokens, ⚠️ Anti-Pattern 3: Mixing Multiple Styling Approaches Within One Codebase Without a Clear Boundary, Color Strategy for Modern Fullstack Applications (+4 more)
 
-### Community 411 - "Jest-Rtl: Assertions And Matchers"
+### Community 464 - "Javascript Syllabus: How it differs from"
+Cohesion: 0.15
+Nodes (11): Phase 13 — Complexity and JavaScript's real costs, Phase 14 — Core data structures in JavaScript, Phase 15 — Algorithmic patterns, Phase 16 — Dynamic programming and the harder set, Phase 17 — Machine coding: implement it yourself, Where this connects, How it differs from Part 4, Phase 18 — Building the store front end (+3 more)
+
+### Community 465 - "Jest-Rtl Assertions And Matchers"
 Cohesion: 0.15
 Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Assertions & Matchers: `toBe` vs `toEqual`, Asymmetric Matchers & `expect.extend()`, Asymmetric Matchers: Partial Structural Matching, Custom Matchers: `expect.extend()`, ⚠️ Pitfall 1: Using `toBe` for Object/Array Comparison (+4 more)
 
-### Community 412 - "Jest-Rtl: Mocking"
+### Community 466 - "Jest-Rtl Mocking: 1. Under-The-Hood Mech"
 Cohesion: 0.15
 Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Fake Timers: Controlling Time Deterministically, `jest.fn()`: Configuring Return Behavior, `jest.mock()`: Auto-Mock vs Factory vs Manual `__mocks__`, `jest.spyOn()`: Preserving Real Behavior by Default (+4 more)
 
-### Community 413 - "React: Phase 11 Ssr Hydration"
+### Community 467 - "Nodejs Testing: Choosing generator range"
+Cohesion: 0.15
+Nodes (12): Choosing generator ranges, Cost, Gotchas, Interview questions, Mutation testing, Properties worth writing, Property-based testing, Reading the score (+4 more)
+
+### Community 468 - "Postgresql Architecture: PostgreSQL vs M"
+Cohesion: 0.18
+Nodes (9): Phase gate, PostgreSQL vs MySQL vs SQLite, Where this connects, Creating a database, From Node, Gotchas, Interview questions, See the catalog (+1 more)
+
+### Community 469 - "React Ssr Hydration"
 Cohesion: 0.15
 Nodes (12): 1. It costs performance, 2. 🔴 It can show your Suspense fallbacks, 3. It can run pending Effects, 4. It can flush work you did not ask about, Gotchas, Interview questions, The four caveats, and why each one bites, The Pitfall, quoted in full (+4 more)
 
-### Community 414 - "Redux-Toolkit: Rtk Query"
+### Community 470 - "Redux-Toolkit Rtk Query"
 Cohesion: 0.15
 Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Lifecycle & Refetch Triggers, Optimistic Updates: `onQueryStarted` + `updateQueryData().undo()`, ⚠️ Pitfall 1: Only Invalidating the Item Tag on Create/Delete, ⚠️ Pitfall 2.5: Forgetting to `catch` and `undo()` the Optimistic Patch (+5 more)
 
-### Community 415 - "Redux-Toolkit: Selectors And Normalization"
+### Community 471 - "Redux-Toolkit Selectors And Normalizatio"
 Cohesion: 0.15
 Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createEntityAdapter`: Normalized State & Generated CRUD, Generated CRUD Reducer Methods, Generated Selectors, ⚠️ Pitfall 1: Assuming `addOne` Overwrites an Existing Entity (+4 more)
 
-### Community 416 - "Redux-Toolkit: Testing"
+### Community 472 - "Redux-Toolkit Testing: 1. Under-The-Hood"
 Cohesion: 0.15
 Nodes (12): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Testing Reducers Through `dispatch` on a Full App Store, ⚠️ Pitfall 2: Mocking `fetch` Globally Instead of Using MSW, ⚠️ Pitfall 3: Sharing One Store Instance Across Multiple Tests, Testing Connected Components (+4 more)
 
-### Community 417 - "Vite: Dev Server Mechanics"
+### Community 473 - "Vite Dev Server Mechanics"
 Cohesion: 0.15
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Dev Server Mechanics: Native ESM Serving, HMR & Dependency Pre-Bundling, Module Graph Invalidation on File Change, `optimizeDeps`: When Pre-Bundling Re-Triggers, ⚠️ Pitfall 1: Assuming HMR "Just Works" for Every Kind of Module Without a Boundary (+3 more)
 
-### Community 418 - "Web-Vitals-Performance: Loading And Rendering Performance"
+### Community 474 - "Web-Vitals-Performance Loading And Rende"
 Cohesion: 0.15
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Delivery Optimization, 🚀 Loading & Rendering Performance: Delivery Optimization & Runtime Efficiency, ⚠️ Pitfall 1: Prefetching Everything "Just in Case", ⚠️ Pitfall 2: Virtualizing a List That's Already Small (+2 more)
 
-### Community 419 - "Sandbox P7-Background-Work - ex5-sync-vs-bg.mjs"
+### Community 475 - "Webpack Module Federation"
+Cohesion: 0.15
+Nodes (13): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Composition Strategy: Build-Time vs Runtime, ⚙️ Module Federation: Micro-Frontend Architecture Patterns & Topologies, ⚠️ Pitfall 1: Choosing Bidirectional Federation for Teams That Don't Need It, ⚠️ Pitfall 2: Nesting Federation Too Deeply Without a Clear Ownership Boundary at Each Level (+5 more)
+
+### Community 476 - "Reviews: 5 · Ratings, gotchas, Q&A"
+Cohesion: 0.15
+Nodes (11): 1 · The cap was read as a content budget — the main defect, 2 · `13-merge.md` is wrong about PostgreSQL 18 · `WRONG`, 3 · Twelve Phase 13 pages are stamps that pass every check, 4 · Phase 0 — confounded measurement, and half the corpus depth, 5 · Ratings, gotchas, Q&A, PostgreSQL — findings and ratings · Fable · 2026-08-13, What's already good — don't lose this in a rewrite, 1 · Syllabus (+3 more)
+
+### Community 477 - "Sandbox P7 Background Work"
 Cohesion: 0.18
 Nodes (8): connection, noJ, q, resize(), server, t2, w, yesJ
 
-### Community 420 - "Sandbox P8-Security - ex2-vulns.mjs"
+### Community 478 - "Sandbox P8 Security"
 Cohesion: 0.17
 Nodes (7): safe, t, userInput, attempt(), byAction, pool, q()
 
-### Community 421 - "Sandbox Pg-Api - ex56-vs-sqlite.mjs"
+### Community 479 - "Sandbox Pg Api"
 Cohesion: 0.15
 Nodes (8): bWait, CONC_DB, db, db2, db3, pool, sqBig, started
 
-### Community 422 - "Src - index.js"
+### Community 480 - "Src: index.js"
 Cohesion: 0.29
 Nodes (9): SidebarCollapseAll(), getServerSnapshot(), getSnapshot(), listeners, setMode(), state, subscribe(), DocSidebarItemsWrapper() (+1 more)
 
-### Community 423 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.23
-Nodes (12): @import request serialisation, link rel stylesheet, Embedded style element, How stylesheets reach the page, CSS blocks first paint, Non-matching media does not block paint, media print onload flip, Render-blocking CSS (+4 more)
-
-### Community 424 - "Git: Phase 0 How Git Stores"
-Cohesion: 0.18
-Nodes (12): Commit object contents, Blob, Commit, Tree, Tree modes 100644 100755 120000 040000 160000, AM status short, Index tree, Working tree (+4 more)
-
-### Community 425 - "Javascript: Phase 3 Functions"
-Cohesion: 0.20
-Nodes (12): Annex B sloppy-mode block functions, Block-level function declaration, Prefer const-assigned function expressions in blocks, Strict-mode block functions, Const-like inner class binding, Class lexical declaration and TDZ, extends evaluated at declaration, Import hoisting (+4 more)
-
-### Community 426 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.20
-Nodes (12): Map is directly iterable, for...in, for...of, Never for...in on an array, Plain objects are not iterable, Symbol.iterator, Iterating while modifying, Array and call spread (+4 more)
-
-### Community 427 - "Javascript: Phase 7 Async"
-Cohesion: 0.21
-Nodes (12): Callback hell / pyramid of doom, Named functions do not fix callback hell, Thenable, Promise adoption, Forgotten return / floating promise, reduce sequential composition, then returns a new promise, async function always returns a promise (+4 more)
-
-### Community 428 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.17
-Nodes (12): Expand/contract migrations, Readiness gate and SIGTERM drain, Readiness is not liveness, Kubernetes-style rolling update, terminationGracePeriodSeconds, Zero-downtime deploy, ExecStart invokes node not npm, One owner for restarts and signals (+4 more)
-
-### Community 429 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.18
-Nodes (12): CommonJS, module.exports vs exports, CommonJS module singleton, CommonJS module wrapper, Never assign to bare exports, CommonJS has no live bindings, require.cache, Circular dependencies (+4 more)
-
-### Community 430 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.17
-Nodes (12): SSRF URL validation, url.parse deprecated DEP0169, URLSearchParams, WHATWG URL, http.createServer, Thrown handler is not a 500, ERR_HTTP_HEADERS_SENT, headersTimeout requestTimeout connectionsCheckingInterval (+4 more)
-
-### Community 431 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.20
-Nodes (12): node:dns, dns.lookup, DNS rebinding SSRF, dns.resolve, DNS verbatim result order, postMessage transfer list, Worker thread, Worker pool (+4 more)
-
-### Community 432 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.20
-Nodes (12): pool.connect without release, Connection pooling, Pool max concurrency ceiling, pg.Pool, pool.on error idle death, pool.waitingCount, MongoDB operator injection, Parameterized queries (+4 more)
-
-### Community 433 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.18
-Nodes (12): pg Pool vs Client, MongoClient is the pool, 25P02 and SAVEPOINT, withTransaction helper, Prisma 7 driver adapter, Retry the whole transaction, Keyset pagination, pg-cursor (+4 more)
-
-### Community 434 - "Nodejs: Phase 8 Security"
-Cohesion: 0.21
-Nodes (12): path.join is not a security boundary, Path traversal, Resolve then check containment, Symlink escape, Zip slip, DNS rebinding, Egress proxy for user URLs, Literal IPs bypass custom lookup (+4 more)
-
-### Community 435 - "Nodejs: Phase 8 Security"
-Cohesion: 0.27
-Nodes (12): Field allowlist over denylist, Insecure deserialization, Mass assignment, Open redirect, Deserialization, open redirects, mass assignment, safeNext origin check, Request body size cap, HTTP boundary check order (+4 more)
-
-### Community 436 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.26
-Nodes (12): Do not mock the thing that can be wrong, Unit, integration and e2e, Unit vs integration vs e2e, Dependency injection via parameters, Hidden dependency, No DI container in Node, Writing testable code, mock.fn (+4 more)
-
-### Community 437 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.18
-Nodes (12): Never double your own database driver, Testcontainers under rootless podman, PostgreSqlContainer, Real SQLSTATE from a real engine, Container start cost, --test-global-setup, Database cluster, App is a guest with a connection (+4 more)
-
-### Community 438 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.20
-Nodes (12): 8 KB pages, OS page cache, Shared buffers, work_mem, Checkpoint, COMMIT flushes WAL, Change is written twice, wal_level = replica (+4 more)
-
-### Community 439 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.18
-Nodes (12): Views — naming a query, and their limits, View optimisation fence, View predicate pushdown, View is a stored query not stored data, DROP EXTENSION blocked by type users, Materialized views and REFRESH CONCURRENTLY, Materialized view stores its result, dblink autonomous query (+4 more)
-
-### Community 440 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.17
-Nodes (12): Trigger firing order is alphabetical, BEFORE vs AFTER triggers, BEFORE RETURN NULL cancels the row, FOR EACH ROW vs FOR EACH STATEMENT, Trigger transition tables, Trigger WHEN clause, RAISE EXCEPTION USING ERRCODE, Trigger functions must be plpgsql (+4 more)
-
-### Community 441 - "Postgresql: Phase 2 Types"
-Cohesion: 0.23
-Nodes (12): pg returns bigint as a string, PostgreSQL integer types, Integer cents in bigint, Money never in float, pg returns numeric as a string, numeric vs float, Amount plus currency, Do not use the money type (+4 more)
-
-### Community 442 - "Postgresql: Phase 2 Types"
-Cohesion: 0.17
-Nodes (12): Aggregates ignore NULL, Empty string is not NULL, NOT IN with NULL returns nothing, NULL three-valued logic, UNIQUE allows many NULLs, boolean type, Enum cannot drop values, Default to a lookup table (+4 more)
-
-### Community 443 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.20
-Nodes (12): Schema-qualify DDL in migrations, Row-level security tenant isolation, Schema as namespace, Schema per tenant, search_path, SET LOCAL search_path, Shared tables with tenant_id, Choosing a tenancy model (+4 more)
-
-### Community 444 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.18
-Nodes (12): IS DISTINCT FROM, Three-valued logic in WHERE, WHERE predicates, Keyset pagination, LIMIT and OFFSET, OFFSET cost grows with depth, OFFSET pages drift under writes, GREATEST and LEAST skip nulls (+4 more)
-
-### Community 445 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.23
-Nodes (11): INNER JOIN, LEFT JOIN, Multi-table joins, Joins chain left to right, Inner joins reorder, outer joins do not, join_collapse_limit default 8, Reading N-N relationships, Junction table composite primary key (+3 more)
-
-### Community 446 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.23
-Nodes (12): Self joins, Adjacency-list hierarchy, Recursive CTE cycle detection, lag() beats self join for previous row, Self join via aliases, WITH RECURSIVE hierarchy walk, UNION INTERSECT EXCEPT, Default to UNION ALL (+4 more)
-
-### Community 447 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.18
-Nodes (12): Aggregate return types, avg(x) is sum(x)/count(x), bigint and numeric arrive as strings, sum()::int overflow 22003, NULL-skipping aggregate rule, sum over nothing is NULL, Three count forms, Three different questions (+4 more)
-
-### Community 448 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.17
-Nodes (12): NULL as a grouping key, No GROUP BY always returns one row, DISTINCT ON one whole row per group, 42803 grouping error, Four ways out of 42803, Functional dependency on primary key, UNIQUE does not grant functional dependency, 42703 vs 42803 (+4 more)
-
-### Community 449 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.23
-Nodes (12): SQL evaluation order, GROUP BY ordinals, GROUP BY output alias is a PG extension, Filtering groups, not rows, WHERE vs HAVING, HAVING on grouping columns is rewritten, What HAVING costs, 42P20 window functions not allowed in HAVING (+4 more)
-
-### Community 450 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.20
-Nodes (12): bigint arrives as a String, Expanded OR comparison is 160× slower, Index Cond versus Filter, OFFSET versus keyset at depth, Row-constructor tuple comparison, base64url cursor encoding, Order by an immutable key, Fetch limit + 1 for hasMore (+4 more)
-
-### Community 451 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.17
-Nodes (12): INSERT ... RETURNING, Named RETURNING columns, unnest multi-row insert, Hard delete with RETURNING, jsonb_agg LEFT JOIN empty-children trap, jsonb_agg is slower than grouping in JS, N+1 per-parent queries, Who owns the response shape (+4 more)
-
-### Community 452 - "React: Phase 0 How React Runs"
-Cohesion: 0.23
-Nodes (12): Commit phase, Render must be pure, useEffect, useLayoutEffect, Fiber double buffering, Fiber, Hook state lives on the fiber, Cleanup must fully undo setup (+4 more)
-
-### Community 453 - "React: Phase 4 Effects"
-Cohesion: 0.17
-Nodes (12): Effects versus events, Synchronize with an external system, Analytics POST needs no cleanup, Buying a product is not an Effect, Double render versus extra effect cycle, Doubled development analytics is not a bug, POST placement depends on causation, Share handler logic with a plain function (+4 more)
-
-### Community 454 - "React: Phase 4 Effects"
-Cohesion: 0.17
-Nodes (12): Setup function cannot be async, One effect per concern, Clear stale data before the next fetch, useData fixes ergonomics only, AbortController, AbortError is not a failure, ignore flag, Responses may arrive out of order (+4 more)
-
-### Community 455 - "React: Phase 4 Effects"
-Cohesion: 0.17
-Nodes (12): Dependency array must be a constant-size literal, You cannot choose Effect dependencies, react-hooks/exhaustive-deps, Reactive values, Omitted dependency freezes the first render, Cleanup closes over the old render, All linter errors on dependencies are legitimate, Mutable-outside-React values cannot be dependencies (+4 more)
-
-### Community 456 - "React: Phase 4 Effects"
-Cohesion: 0.17
-Nodes (12): ref.current is not tracked, Ref guard anti-fix, Remount principle, StrictMode only doubles the mount, Extra setup+cleanup cycle, Partial StrictMode skips the extra effect cycle, State as a message queue, Door-lock analogy (+4 more)
-
-### Community 457 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.27
-Nodes (12): Excess property checks, Object types, Weak type detection, Declaration merging, Interface error-message folklore, interface, Branded types, Read assignability errors bottom-up (+4 more)
-
-### Community 458 - "Sandbox P9-Testing - clear-text"
-Cohesion: 0.17
-Nodes (11): clear-text, src/*.mjs, commandRunner, command, concurrency, coverageAnalysis, mutate, packageManager (+3 more)
-
-### Community 459 - "Babel: Why Babel And The Compiler"
+### Community 481 - "Babel Why Babel And The Compiler Landsca"
 Cohesion: 0.17
 Nodes (12): 1.1 What Babel Does, 1.2 Babel vs SWC vs esbuild vs tsc, 1.3 Where Babel Still Matters in 2026, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming tsc emit replaces preset-react/preset-env (+4 more)
 
-### Community 460 - "Babel: Core Compilation Pipeline"
+### Community 482 - "Babel Core Compilation Pipeline"
 Cohesion: 0.17
 Nodes (12): 1. Concept & Under-the-Hood Mechanics, 2.1 Parse → Transform → Generate, 2.2 @babel/core Programmatic API, 2.3 AST Fundamentals & Paths, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Babel Core Pipeline: Parse → Transform → Generate & Programmatic API (+4 more)
 
-### Community 461 - "Babel: Source Maps And Debugging"
+### Community 483 - "Babel Source Maps And Debugging"
 Cohesion: 0.17
 Nodes (11): 10.1 Source Map Generation, 10.2 Debugging Transforms, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming Vite always uses Babel maps, ⚠️ Debugging plugins only inside the full Next build (+3 more)
 
-### Community 462 - "Babel: Monorepo And Multi Package Strategies"
+### Community 484 - "Babel Monorepo And Multi Package Strateg"
 Cohesion: 0.17
 Nodes (11): 12.1 Shared Root Config, 12.2 Cross-Package Compilation, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ babelrcRoots wildcards that include apps twice, ⚠️ Forgetting test env for Jest in monorepo root config (+3 more)
 
-### Community 463 - "Babel: Cli And Programmatic Tooling"
+### Community 485 - "Babel Cli And Programmatic Tooling"
 Cohesion: 0.17
 Nodes (11): 13.1 @babel/cli, 13.2 Codemods (jscodeshift et al.), 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧰 @babel/cli & Codemods on Babel’s Parser, ⚠️ CLI build without typecheck (+3 more)
 
-### Community 464 - "Babel: Nodejs Backend Usage"
+### Community 486 - "Babel Nodejs Backend Usage"
 Cohesion: 0.17
 Nodes (11): 14.1 Runtime Registration, 14.2 ESM/CJS for Backend Packages, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Dual package hazard (Node “exports” misconfiguration), ⚠️ Ignoring .mjs/.cjs extension rules under "type": "module" (+3 more)
 
-### Community 465 - "Css: Phase 10 Scss"
-Cohesion: 0.17
-Nodes (11): `as` and `as *`, Configuration with `with`, `@forward`: building one entry point from many partials, Gotchas, Interview questions, Migrating, Narrowing what is forwarded, Private members (+3 more)
-
-### Community 466 - "Css: Phase 4 Flexbox"
-Cohesion: 0.17
-Nodes (11): 1. The truncating label that will not truncate, 2. The panel that will not scroll, 3. The grid or flex track blown out by one long string, A defensive base rule, and its limits, Gotchas, Interview questions, Reading it in DevTools, The interaction with `flex-basis` (+3 more)
-
-### Community 467 - "Eslint-Oxlint: Eslint Core Architecture"
+### Community 487 - "Eslint-Oxlint Eslint Core Architecture"
 Cohesion: 0.17
 Nodes (12): 1. Concept & Under-the-Hood Mechanics, 2.1 Source → Parse → AST → Rules, 2.2 Legacy Config Era (Historical Context), 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming Espree parses TypeScript, ⚠️ Autofix in CI without review on first enable (+4 more)
 
-### Community 468 - "Eslint-Oxlint: Eslint Editor And Local Workflow"
+### Community 488 - "Eslint-Oxlint Eslint Editor And Local Wo"
 Cohesion: 0.17
 Nodes (11): 11.1 IDE Integration, 11.2 Hooks & Scripts, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🖥️ ESLint Editor Integration, Git Hooks & Scripts, ⚠️ Extension resolving a different ESLint than the project (+3 more)
 
-### Community 469 - "Eslint-Oxlint: Oxlint Fixes Ignores And Diagnostics"
+### Community 489 - "Eslint-Oxlint Oxlint Fixes Ignores And D"
 Cohesion: 0.17
 Nodes (12): 17.1 Automatic Fixes, 17.2 Ignore Comments, 17.3 Ignore Files & Patterns, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming --fix is idempotent across ESLint and Oxlint (+4 more)
 
-### Community 470 - "Eslint-Oxlint: Coexistence Eslint And Oxlint"
+### Community 490 - "Eslint-Oxlint Coexistence Eslint And Oxl"
 Cohesion: 0.17
 Nodes (12): 18.1 Recommended Dual-Run Pattern, 18.2 Overlap & Conflict Management, 18.3 When to Drop ESLint Entirely, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🤝 Coexistence: Running ESLint + Oxlint Together (+4 more)
 
-### Community 471 - "Framer-Motion: Motion Values"
+### Community 491 - "Eslint-Oxlint Ci Monorepos And Performan"
+Cohesion: 0.17
+Nodes (12): 1. Concept & Under-the-Hood Mechanics, 20.1 CI Design for Linters, 20.2 Monorepo Patterns, 20.3 Performance Pitfalls, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Annotations only for ESLint, not Oxlint (+4 more)
+
+### Community 492 - "Framer-Motion Motion Values"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Motion Values: `useMotionValue`, `useTransform` & `useSpring`, ⚠️ Pitfall 1: Reading a Motion Value's Current Value via `.get()` During Render, Expecting Reactivity, ⚠️ Pitfall 2: Using `useState` for High-Frequency Updates Where a Motion Value Was Needed, ⚠️ Pitfall 3: Forgetting `useTransform`'s Derived Value Needs the SAME Motion-Value Discipline (+3 more)
 
-### Community 472 - "Frontend-Architecture: Project Structure And Organization"
+### Community 493 - "Frontend-Architecture Project Structure "
 Cohesion: 0.17
 Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Migrating to Feature-Based Structure Mid-Project Without a Clear Boundary Definition, ⚠️ Anti-Pattern 2: Barrel Files at Every Folder Level, "For Consistency", ⚠️ Anti-Pattern 3: A "Shared" or "Common" Folder That Becomes a Dumping Ground, Barrel Files: Convenience vs Real Costs at Scale (+3 more)
 
-### Community 473 - "Frontend-Architecture: State Management Decision Tree"
-Cohesion: 0.17
-Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Lifting State to Global/Context "Just in Case It's Needed Elsewhere Later", ⚠️ Anti-Pattern 2: Duplicating Server State Into a Global Store "For Consistency With Other State", ⚠️ Anti-Pattern 3: Using Context for Frequently-Updating Values Without `useMemo`/Splitting, Server State Is a Cache, Not Owned State (+3 more)
-
-### Community 474 - "Frontend-Architecture: Environment And Configuration Management"
+### Community 494 - "Frontend-Architecture Environment And Co"
 Cohesion: 0.17
 Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Passing Secrets Through Build-Time `DefinePlugin`-Style Config, ⚠️ Anti-Pattern 2: Building a Separate Artifact Per Environment "For Simplicity," Accepting the Staging/Prod Drift Risk, ⚠️ Anti-Pattern 3: Treating Feature Flags as Permanent Configuration Rather Than Temporary Rollout Mechanisms, 🏛️ Environment & Configuration Management: Build-Time vs Runtime Config & Secrets (+3 more)
 
-### Community 475 - "Frontend-Architecture: Authentication And Authorization Architecture"
+### Community 495 - "Frontend-Architecture Authentication And"
 Cohesion: 0.17
 Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Trusting Client-Side Permission Checks as the Actual Security Boundary, ⚠️ Anti-Pattern 2: Independent, Non-Deduplicated Refresh Attempts Per Failed Request, ⚠️ Anti-Pattern 3: Choosing Token Storage Based on Convention Rather Than an Actual Threat Model, 🏛️ Authentication & Authorization: Token Storage, Refresh Flows & UI Gating (+3 more)
 
-### Community 476 - "Frontend-Architecture: Ci Cd Pipeline Design"
+### Community 496 - "Playwright Visual And Screenshot Testing"
 Cohesion: 0.17
-Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Expensive Stages Running Before Cheap Ones, ⚠️ Anti-Pattern 2: Deploying Directly to 100% of Production Traffic With No Staged Rollout, ⚠️ Anti-Pattern 3: Performance/Quality Gates Configured as Informational Only, Never Actually Blocking, 🏛️ CI/CD Pipeline Design: Stage Ordering, Preview Deployments & Progressive Rollout (+3 more)
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Zero Tolerance (`maxDiffPixelRatio: 0`) Causing Constant False Failures, ⚠️ Pitfall 2: Not Masking Genuinely Dynamic Content, Causing Every Run to "Fail", ⚠️ Pitfall 3: Generating Baselines on a Different OS/Environment Than CI Runs Them, Threshold & `maxDiffPixels` Tuning: Absorbing Legitimate Rendering Variance (+2 more)
 
-### Community 477 - "Javascript: Phase 11 Network Storage"
-Cohesion: 0.17
-Nodes (11): `CookieStore` — the modern API, 🔴 Deleting, and why it fails, `Domain` — omitting it is *narrower*, not wider, Encode the value, Gotchas, `HttpOnly` — you cannot set it from JavaScript, Interview questions, `Path` — the default is the trap (+3 more)
-
-### Community 478 - "Javascript: Phase 16 Dynamic Programming"
-Cohesion: 0.17
-Nodes (11): 1. Clarify, 2. Examples, 3. Brute force, 4. Optimise, 5. Code, 6. Test, 7. Complexity, Gotchas (+3 more)
-
-### Community 479 - "Javascript: Phase 3 Functions"
-Cohesion: 0.17
-Nodes (11): 1 · Close over the variable, not a copy, 2 · Read through a mutable box, 3 · Recreate the closure when the value changes, 4 · Never capture it — take it as an argument, Choosing between them, Diagnosing one in ten seconds, Gotchas, Interview questions (+3 more)
-
-### Community 480 - "Javascript: Phase 3 Functions"
-Cohesion: 0.17
-Nodes (11): 1 · The functional updater — the default answer, 2 · A ref — for reads that must be current, 3 · An honest dependency list — recreate the closure, Choosing, Diagnosing it in a framework, Gotchas, Interview questions, The interval that logs 0 forever (+3 more)
-
-### Community 481 - "Playwright: Locators"
+### Community 497 - "Playwright Locators: 1. Under-The-Hood M"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Chaining & Filtering, 🎭 Locators: `getByRole`, Semantic Queries & Strictness Mode, ⚠️ Pitfall 1: Reaching for Raw CSS Selectors Instead of Semantic Locators, ⚠️ Pitfall 2: Fighting Strictness Mode With `.first()` Instead of Properly Scoping (+3 more)
 
-### Community 482 - "React: Phase 11 Ssr Hydration"
+### Community 498 - "Postgresql Ops: 1. pg_dump / pg_restore"
 Cohesion: 0.17
-Nodes (11): 1. Whitespace around the root, 2. `typeof window !== 'undefined'` in render, 3. Browser-only APIs during render, 4. Different data on each side, Fixing each, Gotchas, Interview questions, The contract (+3 more)
+Nodes (11): 1. `pg_dump` / `pg_restore`, 2. `pg_upgrade`, 3. Logical replication, Gotchas, Interview questions, Minor versus major, On a managed provider, Statistics after the upgrade — changed in PostgreSQL 18 (+3 more)
 
-### Community 483 - "Redux-Toolkit: Immutability And Immer"
+### Community 499 - "React Ssr Hydration"
+Cohesion: 0.17
+Nodes (11): CSR — client-side rendering, Gotchas, Interview questions, RSC — React Server Components, SSG — static site generation, SSR — server-side rendering, Streaming SSR, The five, on one axis each (+3 more)
+
+### Community 500 - "Redux-Toolkit Immutability And Immer"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 Immer Internals: Proxy Drafts & The Mutate-Or-Return Rule, ⚠️ Pitfall 1: Mutating State Outside an Immer-Wrapped Reducer, ⚠️ Pitfall 2: Returning AND Mutating in the Same Reducer Branch, ⚠️ Pitfall 3: Assuming Immer Drafts Work With Class Instances or Non-Plain Objects (+3 more)
 
-### Community 484 - "Redux-Toolkit: Devtools And Debugging"
+### Community 501 - "Redux-Toolkit Devtools And Debugging"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Action Diffing, ⚠️ Pitfall 1: Shipping `devTools: true` (or Leaving It Unset) to Production, ⚠️ Pitfall 2: High-Frequency Actions Bloating the DevTools Log, ⚠️ Pitfall 3: Relying on Time-Travel With Non-Serializable or Impure State (+3 more)
 
-### Community 485 - "Redux-Toolkit: Migration"
+### Community 502 - "Redux-Toolkit Migration: 1. Under-The-Ho"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `configureStore` Replaces Hand-Assembled `createStore`, Interop With Existing `redux-saga`/`redux-observable` Middleware, 📦 Migrating From Classic Redux to RTK, Migrating Switch-Statement Reducers to `createSlice` (+3 more)
 
-### Community 486 - "Storybook: Core Concepts"
+### Community 503 - "Storybook Core Concepts"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, A "Story": One Reproducible Render of One Component State, Component Story Format 3 (CSF3): The Modern, Object-Based Convention, 📖 Core Concepts: Component-Driven Development & CSF3, ⚠️ Pitfall 1: Building Components That Secretly Depend on Ambient App Context (+3 more)
 
-### Community 487 - "Typescript: Phase 3 Generics"
-Cohesion: 0.17
-Nodes (11): Conditional types, in one paragraph, Constrained `infer` (TypeScript 4.8), 🔴 Distribution over unions, Gotchas, `infer` names a piece of the pattern, `infer` position decides union or intersection, Interview questions, The library's own `infer` types, read from the source (+3 more)
-
-### Community 488 - "Vite: Env Variables And Modes"
+### Community 504 - "Vite Env Variables And Modes"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Env Variables & Modes: `.env` Files, the `VITE_` Prefix & `import.meta.env`, `import.meta.env`: Built-In Values Plus Custom Ones, Mode vs `NODE_ENV`: A Genuinely Different Axis, ⚠️ Pitfall 1: Assuming an Unprefixed Env Var Will Be Available Client-Side (+3 more)
 
-### Community 489 - "Vite: Css Handling"
+### Community 505 - "Vite Css Handling"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ CSS Handling: Modules, PostCSS, Preprocessors & Lightning CSS, CSS Modules: Automatic Scoping via Naming Convention, Lightning CSS: An Alternative, Rust-Based Transformer, ⚠️ Pitfall 1: Expecting a Plain `.css` Import to Be Automatically Scoped (+3 more)
 
-### Community 490 - "Vite: Ssr Support"
+### Community 506 - "Vite Ssr Support"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Forgetting `ssrFixStacktrace()`, Getting Useless Production-Mapped Stack Traces During Dev, ⚠️ Pitfall 2: Using `ssrLoadModule()` in Production, Not Just Development, ⚠️ Pitfall 3: Forgetting the SSR Manifest Only Reflects the LAST Production Build, `server.middlewareMode`: Vite as a Library, Not a Standalone Server (+3 more)
 
-### Community 491 - "Web-Vitals-Performance: Core Web Vitals"
+### Community 507 - "Web-Vitals-Performance Core Web Vitals"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, CLS: A Cumulative Score, Not a Single Event, 🚀 Core Web Vitals: LCP, INP & CLS Fundamentals, INP: Measured Across the Page's Entire Lifetime, Not Just "First Input", LCP: Measured via `PerformanceObserver` (+3 more)
 
-### Community 492 - "Web-Vitals-Performance: Lcp Optimization"
+### Community 508 - "Web-Vitals-Performance Lcp Optimization"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Eliminating Render-Blocking Resources, `fetchpriority="high"`, 🚀 LCP Optimization: Preloading, Render-Blocking Elimination & TTFB, ⚠️ Pitfall 1: Lazy-Loading the LCP Image (+3 more)
 
-### Community 493 - "Web-Vitals-Performance: Inp Optimization"
+### Community 509 - "Web-Vitals-Performance Inp Optimization"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 INP Optimization: Yielding, Debouncing & Prioritized Updates, `isInputPending()`, ⚠️ Pitfall 1: Debouncing an Input's Visual Feedback, Not Just Its Side Effect, ⚠️ Pitfall 2: Yielding Too Frequently, Turning a Fast Task Slow (+3 more)
 
-### Community 494 - "Web-Vitals-Performance: Cls Optimization"
+### Community 510 - "Web-Vitals-Performance Cls Optimization"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 CLS Optimization: Reserved Space, Font Loading & Safe DOM Insertion, Font Loading & FOIT/FOUT, ⚠️ Pitfall 1: Percentage-Only Sizing Without `aspect-ratio`, ⚠️ Pitfall 2: Injecting a Cookie Consent Banner That Pushes Content Instead of Overlaying It (+3 more)
 
-### Community 495 - "Webpack: Multi Config And Environment"
+### Community 511 - "Webpack Multi Config And Environment"
 Cohesion: 0.17
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `--env` Flag & Exporting a Config Function, Multi-Compiler Configs: An Array of Configs, ⚙️ Multi-Config & Environment: Composition, `--env`, and Multi-Compiler Builds, ⚠️ Pitfall 1: Forgetting `externals` on the Server Bundle (+3 more)
 
-### Community 496 - "Sandbox Express5-Check - express"
+### Community 512 - "Sandbox P9 Testing"
+Cohesion: 0.17
+Nodes (11): clear-text, src/*.mjs, commandRunner, command, concurrency, coverageAnalysis, mutate, packageManager (+3 more)
+
+### Community 513 - "Reviews: 5 · The proposed splits"
+Cohesion: 0.17
+Nodes (12): 02 · The 300-line cap, read as a content budget, 1 · The whole-corpus distribution, 2 · The real test — same tier, same corpus, 6× the depth, 3 · The split is by phase, and the phase boundary is the date, 4 · The important nuance — this is not a quality problem, 5.1 `phase-10-indexes/03-explain.md` (186) → `03-explain/` — est. 620, 5.2 `phase-11-mvcc/03-read-committed.md` (170) → `03-read-committed/` — est. 480, 5.3 `phase-2-types/04-timestamptz.md` (220) → `04-timestamptz/` — est. 520 (+4 more)
+
+### Community 514 - "Reviews: A third gap on the same page"
+Cohesion: 0.17
+Nodes (12): 03 · Accuracy findings — where it is wrong, explicitly, A third gap on the same page, Exact replacement text, Finding 1 — `MERGE … RETURNING` **does** work on PostgreSQL 18 · `WRONG`, Finding 2 — twelve Phase 13 pages are template stamps · `STAMP`, Finding 3 — Phase 0's shared-buffers measurement is confounded · `WRONG`, Finding 4 — Phase 0 is under-explained throughout · `THIN`, Fix (+4 more)
+
+### Community 515 - "Sandbox Express5 Check"
 Cohesion: 0.17
 Nodes (11): dependencies, express, description, express, keywords, main, name, scripts (+3 more)
 
-### Community 497 - "Sandbox Express-Phase0: Express Phase0"
+### Community 516 - "Sandbox Express Phase0"
 Cohesion: 0.17
 Nodes (11): dependencies, express, description, express, keywords, main, name, scripts (+3 more)
 
-### Community 498 - "Sandbox P8-Security - ex22-permission-model.mjs"
+### Community 517 - "Sandbox P8 Security"
 Cohesion: 0.17
 Nodes (8): addonProbe, dir, envProbe, escalate, fetcher, probe, reader, spawner
 
-### Community 499 - "Sandbox Pg-Phase-0: Pg Phase 0"
+### Community 518 - "Sandbox Pg Phase 0"
 Cohesion: 0.17
 Nodes (11): dependencies, pg, description, pg, keywords, main, name, scripts (+3 more)
 
-### Community 500 - "Sandbox Ts-P0 - esbuild"
+### Community 519 - "Sandbox Ts P0"
 Cohesion: 0.17
 Nodes (11): description, devDependencies, esbuild, typescript, typescript5, esbuild, typescript, name (+3 more)
 
-### Community 501 - "/ - Docusaurus Social Card"
-Cohesion: 0.29
-Nodes (12): Docusaurus Social Card, Blue Teal Green Brand Palette, Build Optimized Websites, Content-First Authoring, Docusaurus Dinosaur Mascot, Docusaurus, Focus on Your Content, Green Keyword Highlight (+4 more)
-
-### Community 502 - "Css: Phase 2 Cascade"
-Cohesion: 0.24
-Nodes (11): CSS Cascading and Inheritance Level 5, Declaring layers and fixing their order, Anonymous layers, @import layer(), Nested cascade layers, @layer statement form, Precedence, unlayered styles and !important, Implicit final layer (+3 more)
-
-### Community 503 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.20
-Nodes (11): Four equality algorithms, == versus ===, Eight falsy values, Empty objects are truthy, ToBoolean, Nullish coalescing ??, includes versus indexOf for NaN, NaN !== NaN (+3 more)
-
-### Community 504 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.25
-Nodes (11): Default sort is UTF-16 string order, The default and the comparator, sort mutates and returns the same array, ES2023 non-mutating array family, Stability, mutation and toSorted, Array.prototype.reverse, Array.prototype.toSorted, Four sort rules (+3 more)
-
-### Community 505 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.20
-Nodes (11): Map and Set stringify as {}, stringify is not deep equality, undefined omitted in objects, nulled in arrays, JSON.stringify is silently lossy, Object accidental inherited keys, Map.groupBy vs Object.groupBy, Map does not serialise, Use Map when keys are data (+3 more)
-
-### Community 506 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.18
-Nodes (11): acceptingTraffic flag, Liveness probe, Readiness drain on SIGTERM, Readiness probe, Shutdown is the reverse of boot, Exec-form CMD, Node as PID 1, npm start swallows SIGTERM (+3 more)
-
-### Community 507 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.18
-Nodes (11): .env local only, Env validation at boot, No default secrets, NODE_ENV is not a feature flag, 12-factor config, Boot sequence, .dockerignore, Multi-stage Docker build (+3 more)
-
-### Community 508 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.31
-Nodes (11): Zero-downtime deploys — rolling restarts, drain, readiness, CI/CD — Node version matrix, caches, artifacts, Image size and hardening — distroless, alpine, slim, libc, Process managers — pm2, systemd, or the orchestrator, Scaling — vertical vs horizontal, cluster vs replicas, Semantic release and versioning strategy, Canary deploy, Canary metrics gates (+3 more)
-
-### Community 509 - "Nodejs: Phase 12 Native"
-Cohesion: 0.18
-Nodes (11): vm constructor-chain breakout, node:vm, node:vm is not a security sandbox, vm timeout is best-effort, Wasm security is only as strong as imports, WebAssembly.instantiate, Wasm vs worker_threads vs N-API, WebAssembly in Node (+3 more)
-
-### Community 510 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.20
-Nodes (11): module.builtinModules, Prefixed imports as bundler signal, Core modules resolve before node_modules, node: prefix, Prefix-only built-ins, CJS vs ESM resolution, Module resolution, require.resolve (+3 more)
-
-### Community 511 - "Nodejs: Phase 2 Async"
-Cohesion: 0.22
-Nodes (11): Promise.all, map plus Promise.all, Sequential vs parallel await, Chunked Promise.all vs worker pool, Picking a concurrency limit, mapLimit worker pool, Concurrency control, Unbounded Promise.all (+3 more)
-
-### Community 512 - "Nodejs: Phase 2 Async"
-Cohesion: 0.22
-Nodes (11): AsyncLocalStorage.run, AsyncLocalStorage, enterWith leaks context, ALS is hidden state with a cost, AsyncLocalStorage, executionAsyncId and triggerAsyncId, AsyncResource.bind, async_hooks.createHook (+3 more)
-
-### Community 513 - "Nodejs: Phase 4 Filesystem"
-Cohesion: 0.18
-Nodes (11): brotli default quality 11, Compress in nginx or CDN, zlib on libuv thread pool, Zip bomb maxOutputLength, zlib Transform streams, fs error codes, node:fs/promises, readFile vs stream (+3 more)
-
-### Community 514 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.24
-Nodes (11): Chunked transfer encoding, EventSource, Last-Event-ID resumption, pipeline over pipe for streaming responses, Server-Sent Events, Streaming responses and SSE, Global WebSocket client, WebSocket Origin check (+3 more)
-
-### Community 515 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.18
-Nodes (11): WebSocket ping/pong heartbeat, ws WebSocketServer, child_process.fork, IPC server handle passing, IPC JSON serialization, process.send / child.send, availableParallelism, node:cluster (+3 more)
-
-### Community 516 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.22
-Nodes (11): Close worker before resources, Graceful worker shutdown, node must be PID 1, SIGKILL leaves the job active, SIGTERM drain via worker.close, One AbortSignal threaded through, Propagation stops at the queue, Exponential backoff and jitter (+3 more)
-
-### Community 517 - "Nodejs: Phase 8 Security"
-Cohesion: 0.27
-Nodes (11): npm 12 allowScripts, Lockfile integrity, Release cooldown min-release-age, npm audit limits, Supply chain, npm provenance attestations, npm supply-chain threat, --allow-child-process escape (+3 more)
-
-### Community 518 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.25
-Nodes (11): Roles and membership, GRANT and REVOKE, Columns, reads and ownership, Defaults and auditing, Roles, GRANT and REVOKE, Where secrets leak, Storing and rotating, Secrets (+3 more)
-
-### Community 519 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.22
-Nodes (11): effective_cache_size allocates nothing, random_page_cost = 4 models spinning disk, ALTER SYSTEM vs postgresql.conf, pg_settings.context, Setting precedence order, Tuning start order for PERN, Key configuration, logging_collector (+3 more)
-
-### Community 520 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.18
-Nodes (11): RLS default-deny empty table, FORCE ROW LEVEL SECURITY, Table owners bypass RLS by default, Permissive OR restrictive AND, USING versus WITH CHECK, BYPASSRLS job role, Index policy predicate columns, RLS leakproofness limit (+3 more)
-
-### Community 521 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.24
-Nodes (11): Managed provider restore duties, Point-in-time recovery, PITR trades procedure for precision, Oldest recoverable point is backup end, recovery.signal versus standby.signal, recovery_target_action pause default, Recovery point objective, Recovery time objective (+3 more)
-
-### Community 522 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.18
-Nodes (11): Natural key, Surrogate key, ALTER TABLE, Batch ALTER subcommands, CREATE INDEX CONCURRENTLY, INVALID concurrent index, UNIQUE constraint vs unique index, Partial unique index (+3 more)
-
-### Community 523 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.35
-Nodes (11): Collapsing rows, Empty groups and grouping keys, What you are allowed to select, Ordinals, aliases and DISTINCT, How GROUP BY executes, agg_events 500000-row table, Aggregation fixture, GROUP BY and aggregates (+3 more)
-
-### Community 524 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.20
-Nodes (11): ANY($1::int[]), Identifiers are not parameters, 65535 parameter ceiling, pool.query, Positional $n placeholders, undefined becomes SQL NULL, Result.fields, pg Result object (+3 more)
-
-### Community 525 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.20
-Nodes (11): Pooled connection leak, DISCARD ALL before release, pool.connect and release, Pool total idle waiting counters, withClient helper, Custom vs generic plan after five executions, Named prepared statements, Prepared statements are per session (+3 more)
-
-### Community 526 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.20
-Nodes (11): release(true) destroys the connection, query_timeout, statement_timeout, One statement per call, Module-scope pool keeps the event loop alive, HTTP close then pool.end, pool.end, postgres.js (+3 more)
-
-### Community 527 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.29
-Nodes (11): Issuing DDL through the driver, DDL locks and blocking, Startup races and advisory locks, Creating tables from Node, Boot-time schema check, Generate expected schema in CI, information_schema type flattening, Schema drift (+3 more)
-
-### Community 528 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.18
-Nodes (11): Schema drift, Generated TypeScript types, Introspect live database for types, pg default JS type mappings, pool.query generic is an assertion, Query-level type inference, Malformed bigint id is 400, Missing row is a successful empty result (+3 more)
-
-### Community 529 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.18
-Nodes (11): db as first parameter, BEGIN is a statement on a connection, pool.query('BEGIN') is not a transaction, ROLLBACK catch must not replace the original error, try COMMIT catch ROLLBACK finally release, withTransaction wrapper, Do external work outside the transaction, idle in transaction (+3 more)
-
-### Community 530 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.20
-Nodes (11): Lost update across requests, Retry only recomputable operations, rowCount 0 is 404 or 409, Version column guard, Do slow work then lock last, Lock rows in deterministic order, SELECT ... FOR UPDATE, Committed test suite (+3 more)
-
-### Community 531 - "React: Phase 0 How React Runs"
-Cohesion: 0.24
-Nodes (11): Declarative UI model, What React is, Render, reconcile, commit, Reconcile phase, Render phase, Reconciliation, Performance Tracks, Re-render + diff vs signals (+3 more)
-
-### Community 532 - "React: Phase 1 Jsx"
-Cohesion: 0.18
-Nodes (11): Iterables as children, Objects are not valid as a React child, What can be rendered, Promise child suspends, Renderable child types, Returning undefined throws, Reset a subtree with key, A key is an identity, not an index (+3 more)
-
-### Community 533 - "React: Phase 2 Components"
-Cohesion: 0.20
-Nodes (11): Four host-prop outcomes, Prop vs attribute, Props are immutable by contract, not enforcement, react.dev Keeping Components Pure, Mutating array methods on props, Mutating a prop appears to work, One-way data flow, Props are read-only (+3 more)
-
-### Community 534 - "React: Phase 2 Components"
-Cohesion: 0.22
-Nodes (11): What makes a function a component, Capital letter is a JSX compilation rule, React calls the component not you, Component identity and the nesting rule, key for deliberate remount, Nesting rule, Type change remount cost, Function components (+3 more)
-
-### Community 535 - "React: Phase 2 Components"
-Cohesion: 0.18
-Nodes (11): Features that assume calling is free, Inline render prop defeats memoization, this binding in class handlers, Component vs PureComponent and shouldComponentUpdate, Memoization does not stop context updates, memo compares props only, Shallow comparison Object.is, Skipping a render is a hint not a contract (+3 more)
-
-### Community 536 - "React: Phase 3 State"
-Cohesion: 0.31
-Nodes (11): Local mutation exception, Shallow spread trap, Two mutation failures, ES2023 copying array methods, Immer, Mutating vs copying array methods, structuredClone, Immutable updates (+3 more)
-
-### Community 537 - "Babel: Linter And Type Checker Interop"
+### Community 520 - "Babel Linter And Type Checker Interop"
 Cohesion: 0.18
 Nodes (11): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 9.1 @babel/eslint-parser, 9.2 Coexisting with tsc, ⚠️ Assuming ESLint type-aware works identically under Babel parser, ⚠️ CI only running `build` (+3 more)
 
-### Community 538 - "Css: Phase 4 Flexbox"
-Cohesion: 0.18
-Nodes (10): Clamping, and the loop the spec actually runs, Gotchas, Grow factors below 1, Growing: proportional to the factor alone, Interview questions, Making one item resist, Shrinking: weighted by the base size, The two branches are mutually exclusive (+2 more)
-
-### Community 539 - "Css: Phase 5 Grid"
-Cohesion: 0.18
-Nodes (10): `1fr` means `minmax(auto, 1fr)`, Fractions below 1, Gotchas, Interview questions, Mixing fixed and flexible tracks, Ratios: `2fr` is twice `1fr`, of the free space, The fix: `minmax(0, 1fr)`, The sizing algorithm, in the order it runs (+2 more)
-
-### Community 540 - "Css: Phase 5 Grid"
-Cohesion: 0.18
-Nodes (10): 1. Equal columns that are not equal, 2. A nested scroll container that will not scroll, 3. A table or code block blowing out the page, Gotchas, Interview questions, Should you write it everywhere?, The three symptoms, The two floors, and why one fix is not enough (+2 more)
-
-### Community 541 - "Css: Phase 5 Grid"
-Cohesion: 0.18
-Nodes (10): Empty cells, Gotchas, `grid-area` is a four-value shorthand too, Implicit line names come free, Interview questions, Rearranging in exactly one media query, The rules the parser enforces, The shape of it (+2 more)
-
-### Community 542 - "Css: Phase 9 Motion"
-Cohesion: 0.18
-Nodes (10): Doing it properly, Gotchas, Interview questions, `scroll-behavior: smooth`, The blanket reset, and its limits, The JavaScript half, Trade-off, What is and is not a problem (+2 more)
-
-### Community 543 - "Eslint-Oxlint: Eslint Cli Output Cache And"
+### Community 521 - "Eslint-Oxlint Eslint Cli Output Cache An"
 Cohesion: 0.18
 Nodes (11): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 8.1 CLI Essentials, 8.2 Programmatic API, ⚠️ Diff-only lint as sole gate, 💻 ESLint CLI, Output, Cache, Fixes & Programmatic API (+3 more)
 
-### Community 544 - "Eslint-Oxlint: Eslint Suppressions Ignores And Governance"
+### Community 522 - "Eslint-Oxlint Eslint Suppressions Ignore"
 Cohesion: 0.18
 Nodes (11): 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 9.1 Inline Disable Comments, 9.2 Governance Patterns, ⚠️ Disable without rule names, ⚠️ Divergent prettierignore vs eslint ignores (+3 more)
 
-### Community 545 - "Eslint-Oxlint: Oxlint Core Architecture"
+### Community 523 - "Eslint-Oxlint Oxlint Core Architecture"
 Cohesion: 0.18
 Nodes (11): 12.1 What Oxlint Is, 12.2 Architectural Differences from ESLint, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Assuming config is “flat config like ESLint 9”, ⚠️ Enabling every category at error on day one (+3 more)
 
-### Community 546 - "Eslint-Oxlint: Oxlint Native Plugins And Rule"
+### Community 524 - "Eslint-Oxlint Oxlint Native Plugins And "
 Cohesion: 0.18
 Nodes (11): 14.1 Built-in Plugin Families, 14.2 Categories Strategy, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Believing plugin enable = all upstream rules, ⚠️ Dropping ESLint security plugins without replacement (+3 more)
 
-### Community 547 - "Eslint-Oxlint: Oxlint Type Aware Linting And"
+### Community 525 - "Eslint-Oxlint Oxlint Type Aware Linting "
 Cohesion: 0.18
 Nodes (11): 15.1 Type-Aware Mode, 15.2 Multi-File Analysis, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Expecting full `tsc` replacement, ⚠️ Floating promise false positives on intentional void (+3 more)
 
-### Community 548 - "Eslint-Oxlint: Oxlint Js Plugins And Extensibility"
+### Community 526 - "Eslint-Oxlint Oxlint Js Plugins And Exte"
 Cohesion: 0.18
 Nodes (11): 16.1 jsPlugins Bridge, 16.2 Custom Rules Strategy, 1. Concept & Under-the-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Expecting type-aware *custom* JS rules, ⚠️ Infinite “temporary” dual systems without ownership matrix (+3 more)
 
-### Community 549 - "Framer-Motion: Basic Animation Props"
+### Community 527 - "Framer-Motion Basic Animation Props"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Basic Animation Props: `initial`, `animate`, `exit` & `transition`, `initial` vs `animate`: Not Just "Before and After" — A Live Diff on Re-Render, Per-Property Transition Overrides, ⚠️ Pitfall 1: Expecting `exit` to Work Without `<AnimatePresence>` (+2 more)
 
-### Community 550 - "Framer-Motion: Transition Types"
+### Community 528 - "Framer-Motion Transition Types"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `duration` With a `spring` Transition, Expecting It to Work Like `tween`, ⚠️ Pitfall 2: Using `tween` for Drag-Release Motion, Losing the Natural Momentum Feel, ⚠️ Pitfall 3: Over-Bouncy Spring Settings on Content Users Read/Interact With Precisely, `stiffness`/`damping`/`mass`: Tuning Spring Feel (+2 more)
 
-### Community 551 - "Framer-Motion: Gestures"
+### Community 529 - "Framer-Motion Gestures: 1. Under-The-Hoo"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `dragConstraints`/`dragElastic`: Bounded, Resistant Dragging, 🎨 Gestures: `whileHover`/`whileTap`/`whileFocus`, `drag` & Constraints, ⚠️ Pitfall 1: Forgetting `whileFocus` for Keyboard-Only Accessibility, ⚠️ Pitfall 2: Enabling `drag` Without `dragConstraints`, Letting Elements Drag Anywhere Indefinitely (+2 more)
 
-### Community 552 - "Framer-Motion: Animatepresence"
+### Community 530 - "Framer-Motion Animatepresence: 1. Under-"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 `AnimatePresence`: Exit Animations & Mode Configuration, Keying Children Correctly, `mode`: Controlling Overlap Between Outgoing and Incoming Elements, ⚠️ Pitfall 1: Forgetting a Stable, Unique `key` on Children Inside `AnimatePresence` (+2 more)
 
-### Community 553 - "Framer-Motion: Layout Animations"
+### Community 531 - "Framer-Motion Layout Animations"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Layout Animations: The `layout` Prop & `layoutId` Shared Transitions, `layout="position"` / `layout="size"`: Restricting Scope, `layoutId`: Shared Element Transitions Across Different Components, ⚠️ Pitfall 1: Applying `layout` to a Large Subtree, Causing Expensive Recalculation (+2 more)
 
-### Community 554 - "Framer-Motion: Scroll Linked Animations"
+### Community 532 - "Framer-Motion Scroll Linked Animations"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `whileInView` for an Effect That Should Continuously Track Scroll Position, ⚠️ Pitfall 2: Forgetting `viewport={{ once: true }}` for an Entrance Animation That Shouldn't Replay, ⚠️ Pitfall 3: Attaching `useScroll` Without a `target`, Tracking the Wrong Scroll Container, 🎨 Scroll-Linked Animations: `useScroll`, `whileInView` & Parallax (+2 more)
 
-### Community 555 - "Framer-Motion: Animation Controls"
+### Community 533 - "Framer-Motion Animation Controls"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Animation Controls: `useAnimate()`/`useAnimation()` & Chained Sequences, ⚠️ Pitfall 1: Reaching for `useAnimate()`/`useAnimation()` Where Plain Declarative Props Would Suffice, ⚠️ Pitfall 2: Forgetting to `await` Sequential `animate()` Calls, Losing the Intended Ordering, ⚠️ Pitfall 3: Using CSS Selectors in `animate()` That Match Elements Outside the Intended `scope` (+2 more)
 
-### Community 556 - "Framer-Motion: Svg Animations"
+### Community 534 - "Framer-Motion Svg Animations"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Morphing Between Path Shapes: A Real Caveat, ⚠️ Pitfall 1: Attempting to Morph Between Structurally Mismatched Paths, ⚠️ Pitfall 2: Forgetting `fill: 'none'` When Using `pathLength` for a Stroke-Drawing Effect, ⚠️ Pitfall 3: Assuming `pathLength` Animates at a Perceptually Uniform Speed Across Complex Paths (+2 more)
 
-### Community 557 - "Framer-Motion: Advanced Patterns"
+### Community 535 - "Framer-Motion Advanced Patterns"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Advanced Patterns: Shared Layout Transitions, Next.js Integration & Reduced Motion, Next.js Integration: A Deliberate Client Boundary, ⚠️ Pitfall 1: Marking Entire Pages `'use client'` Just to Enable a Page Transition, ⚠️ Pitfall 2: Ignoring `useReducedMotion()` Entirely, Providing No Accommodation (+2 more)
 
-### Community 558 - "Frontend-Architecture: Component Architecture"
+### Community 536 - "Frontend-Architecture Component Architec"
 Cohesion: 0.18
 Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Building a Container/Presentational Split "By Convention" Post-Hooks, ⚠️ Anti-Pattern 2: Reaching for Compound Components for a Simple, Rarely-Varied Component, ⚠️ Anti-Pattern 3: Configuration-Prop Explosion Left Unaddressed Until It's Genuinely Unmanageable, Atomic Design: A Mental Model, Rarely Literal Folders (+2 more)
 
-### Community 559 - "Frontend-Architecture: Data Layer And Api Architecture"
+### Community 537 - "Frontend-Architecture State Management D"
+Cohesion: 0.18
+Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Lifting State to Global/Context "Just in Case It's Needed Elsewhere Later", ⚠️ Anti-Pattern 2: Duplicating Server State Into a Global Store "For Consistency With Other State", ⚠️ Anti-Pattern 3: Using Context for Frequently-Updating Values Without `useMemo`/Splitting, Server State Is a Cache, Not Owned State (+3 more)
+
+### Community 538 - "Frontend-Architecture Data Layer And Api"
 Cohesion: 0.18
 Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Scattering Raw `fetch()` Calls Throughout Component Code, ⚠️ Anti-Pattern 2: Introducing a BFF Layer Prematurely, for a Single Frontend With No Aggregation Need, ⚠️ Anti-Pattern 3: Hand-Maintaining Request/Response Types Alongside a Schema-Having Backend, API Client Abstraction: One Module, Not Scattered `fetch()` Calls (+3 more)
 
-### Community 560 - "Frontend-Architecture: Routing And Navigation Architecture"
+### Community 539 - "Frontend-Architecture Routing And Naviga"
 Cohesion: 0.18
 Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Client-Side-Only Auth Guards for Genuinely Sensitive Content, ⚠️ Anti-Pattern 2: Storing Filter/Pagination State Only in React State, Never the URL, ⚠️ Anti-Pattern 3: Component-Level Code Splitting Before Exhausting Route-Level Splitting, Route-Based Code Splitting: The Default, Highest-Leverage Boundary (+2 more)
 
-### Community 561 - "Frontend-Architecture: Monorepo And Multi App Strategy"
+### Community 540 - "Frontend-Architecture Monorepo And Multi"
 Cohesion: 0.18
 Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Adopting a Monorepo for a Single App With No Shared-Package Need, ⚠️ Anti-Pattern 2: A Monorepo Without Build Caching Configured, Rebuilding Everything on Every CI Run, ⚠️ Anti-Pattern 3: Publishing Shared Packages to a Real Registry When Workspace Linking Would Suffice, Build Caching: The Actual Payoff at Scale (+2 more)
 
-### Community 562 - "Frontend-Architecture: Observability And Monitoring"
+### Community 541 - "Frontend-Architecture Observability And "
 Cohesion: 0.18
 Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, A Typed Event Schema: Preventing Analytics Rot, ⚠️ Anti-Pattern 1: Relying Exclusively on Synthetic Performance Testing, ⚠️ Anti-Pattern 2: Scattering Unstructured `console.log` as the Only Production Logging Strategy, ⚠️ Anti-Pattern 3: Ad-Hoc Analytics Calls With No Enforced Event Schema (+3 more)
 
-### Community 563 - "Javascript: Phase 12 Browser Platform"
+### Community 542 - "Frontend-Architecture Ci Cd Pipeline Des"
 Cohesion: 0.18
-Nodes (10): Cost: what observing actually charges you, Fix 1 — do not write sizes at all, Fix 2 — write to a different element, Fix 3 — skip the write when the size is already right, Fix 4 — defer the write out of the delivery, Gotchas, Interview questions, Testing and environments without one (+2 more)
+Nodes (11): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: Expensive Stages Running Before Cheap Ones, ⚠️ Anti-Pattern 2: Deploying Directly to 100% of Production Traffic With No Staged Rollout, ⚠️ Anti-Pattern 3: Performance/Quality Gates Configured as Informational Only, Never Actually Blocking, 🏛️ CI/CD Pipeline Design: Stage Ordering, Preview Deployments & Progressive Rollout (+3 more)
 
-### Community 564 - "Jest-Rtl: Jest Core Concepts"
+### Community 543 - "Javascript Values And Coercion"
 Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Hook Scoping & Cascading, 🧪 Jest Core Concepts: Test Structure, Hooks & Parameterization, ⚠️ Pitfall 1: Committing `test.only` Accidentally, Silently Skipping an Entire Suite, ⚠️ Pitfall 2: Assuming `test.each`'s Row Values Are Deep-Cloned Per Test (+3 more)
+Nodes (10): Gotchas, Interview questions, Measured, `NaN` and `-0`: `===` is not the whole story, `null >= 0` is `true` but `null > 0` is `false`, `null == undefined` is `true`, and nothing else equals `null`, Objects are never `==` by content, The `==` algorithm, in the four cases you actually hit (+2 more)
 
-### Community 565 - "Jest-Rtl: Async Testing"
+### Community 544 - "Javascript Functions: arguments"
+Cohesion: 0.18
+Nodes (10): A named function expression binds its name inside only, `arguments`, Arrow functions are missing machinery, Gotchas, Hoisting: three behaviours, three error messages, Interview questions, Measured, `.name`, and why it is not always empty (+2 more)
+
+### Community 545 - "Jest-Rtl Async Testing"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Async Testing: `async`/`await`, `.resolves`/`.rejects` & the Legacy `done` Callback, ⚠️ Pitfall 1: Forgetting to `await`/`return` a Promise, Producing a Test That Can Never Fail, ⚠️ Pitfall 2: Forgetting `done(error)` in a Try/Catch, Producing a Confusing Timeout Instead of a Clear Failure, ⚠️ Pitfall 3: Mixing `done` and `async` in the Same Test Function (+2 more)
 
-### Community 566 - "Jest-Rtl: Rtl Core Philosophy"
+### Community 546 - "Jest-Rtl Snapshot Testing"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Reflexively Running `--updateSnapshot` on Every Failure Without Reviewing the Diff, ⚠️ Pitfall 2: Snapshotting Large, Full Component Trees Instead of Specific Properties, ⚠️ Pitfall 3: Committing Snapshot Files Without Understanding They're Part of the Test Suite's Correctness, Snapshot Serializers: Custom Formatting for Domain Objects (+3 more)
+
+### Community 547 - "Jest-Rtl Coverage And Configuration"
+Cohesion: 0.18
+Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Coverage & Configuration: `jest.config.js`, Thresholds & Transform Pipeline, `coverageThreshold`: An Enforced, CI-Blocking Floor, `moduleNameMapper`: Mocking Non-JS Imports and Resolving Aliases, ⚠️ Pitfall 1: Using `testEnvironment: 'jsdom'` for Pure-Logic Tests (+3 more)
+
+### Community 548 - "Jest-Rtl Rtl Core Philosophy"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Reaching for `container.querySelector()` as a Habitual Escape Hatch, ⚠️ Pitfall 2: Asserting Against a Component's Props Directly Instead of Rendered Output, ⚠️ Pitfall 3: Treating "It Compiles/Renders Without Throwing" as Sufficient Verification, 🧪 RTL Core Philosophy: Testing Behavior, Not Implementation (+2 more)
 
-### Community 567 - "Jest-Rtl: User Interaction"
+### Community 549 - "Jest-Rtl User Interaction"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `fireEvent` for Interactions Where the Full Event Sequence Matters, ⚠️ Pitfall 2: Forgetting to `await` a `user-event` Method, ⚠️ Pitfall 3: Using `fireEvent.change()` to Simulate Typing Instead of `user.type()`, 🧪 User Interaction: `fireEvent` vs `@testing-library/user-event` (+2 more)
 
-### Community 568 - "Jest-Rtl: Async Utilities"
+### Community 550 - "Jest-Rtl Async Utilities"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `act()`: Why RTL Wraps Renders/Events Automatically, 🧪 Async Utilities: `waitFor()`, `findBy` Queries & `act()` Warnings, ⚠️ Pitfall 1: Ignoring `act()` Warnings as Harmless Console Noise, ⚠️ Pitfall 2: Putting Side Effects Inside a `waitFor()` Callback (+2 more)
 
-### Community 569 - "Jest-Rtl: Mocking Network Requests"
+### Community 551 - "Jest-Rtl Mocking Network Requests"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Handler Override Per-Test, 🧪 Mocking Network Requests: MSW vs Direct `fetch`/`axios` Mocking, ⚠️ Pitfall 1: Forgetting `server.resetHandlers()` Between Tests, Leaking Overrides, ⚠️ Pitfall 2: Setting `onUnhandledRequest` to `'warn'` (or Leaving the Default) Instead of `'error'` (+2 more)
 
-### Community 570 - "Jest-Rtl: Testing Hooks"
+### Community 552 - "Jest-Rtl Testing Hooks"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `act()` Wrapping for State-Updating Calls, ⚠️ Pitfall 1: Forgetting to Wrap a State-Updating Call in `act()`, ⚠️ Pitfall 2: Testing Only a Hook's Initial Behavior, Never Its Reactivity to Changing Args, ⚠️ Pitfall 3: Forgetting `unmount()` When Testing Cleanup-Dependent Hooks (+2 more)
 
-### Community 571 - "Jest-Rtl: Debugging Tests"
+### Community 553 - "Jest-Rtl Debugging Tests"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Debugging Tests: `screen.debug()`, `logRoles()` & Testing Playground, `logRoles()`: Discovering the Correct Query Without Guessing, ⚠️ Pitfall 1: Reaching for Trial-and-Error Query Syntax Changes Before Checking the Actual DOM, ⚠️ Pitfall 2: Calling `screen.debug()` on a Huge Tree Without Scoping It (+2 more)
 
-### Community 572 - "Nginx: Phase 1 Configuration Language"
+### Community 554 - "Nginx Configuration Language"
 Cohesion: 0.18
 Nodes (10): Breakage 1 — `add_header` silently drops the inherited set, Breakage 2 — two `if` blocks do not combine, Breakage 3 — `if` with a content-phase directive, Gotchas, Interview questions, The conditions it accepts, The documentation, read carefully, The two things that are safe (+2 more)
 
-### Community 573 - "Nginx: Phase 2 Server And Location"
+### Community 555 - "Nginx Server And Location"
 Cohesion: 0.18
-Nodes (10): `~` and `~*` — regexes, Bare prefix — the workhorse, Gotchas, Interview questions, `^~` — "prefix wins, do not check regexes", The algorithm, The documented worked example, `=` — the fastest possible match (+2 more)
+Nodes (10): 1. `set` before `proxy_pass` does not do what it looks like, 2. `realip` fixes `$remote_addr` for everything downstream, 3. 🔴 `add_header` disappears on a 500, Gotchas, Interview questions, The order that matters to you, Trade-off, What runs after the response (+2 more)
 
-### Community 574 - "Playwright: Test Runner"
+### Community 556 - "Nodejs Testing: Concurrency"
+Cohesion: 0.18
+Nodes (10): Concurrency, Exit codes and failure output, Gotchas, Hooks and their order, How files are found, Interview questions, Isolation: one process per file, Skip, todo, only (+2 more)
+
+### Community 557 - "Nodejs Testing: Concurrency inside a tes"
+Cohesion: 0.18
+Nodes (10): Concurrency inside a test, Don't sleep — control the clock, Gotchas, Interview questions, Never use `try/catch` to test a rejection, Testing a callback API, The three correct shapes, The widely repeated claim, and what actually happens (+2 more)
+
+### Community 558 - "Nodejs Testing: Choosing quickly"
+Cohesion: 0.18
+Nodes (10): Choosing quickly, Fake — a working substitute, Gotchas, Interview questions, Mock — assert the interaction, Over-mocking, Spy — observe without changing, Stub — control the input (+2 more)
+
+### Community 559 - "Nodejs Testing: Choose Jest when"
+Cohesion: 0.18
+Nodes (10): Choose Jest when, Choose Vitest when, Gotchas, Interview questions, Jest and ESM, Migration is mostly mechanical, Stay on `node:test`, The API differences that actually matter (+2 more)
+
+### Community 560 - "Nodejs Testing: Reporters"
+Cohesion: 0.18
+Nodes (10): A CI configuration that is honest, Gotchas, Interview questions, Reporters, Selecting what runs, Tag filtering — and the option key that silently does nothing, `--test-force-exit` — a plaster, `--test-global-setup` — one-time setup across all files (+2 more)
+
+### Community 561 - "Nodejs Syllabus: Background work"
+Cohesion: 0.18
+Nodes (10): Authentication and authorization, Background work, Contract testing, Phase 6 — Data access, Phase 7 — Background work and resilience, Phase 8 — Security, Phase 9 — Testing, Practices and tooling (+2 more)
+
+### Community 562 - "Playwright Test Runner"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Built-In Fixtures, ⚠️ Pitfall 1: Repeating Setup Logic Inline Instead of Extracting a Custom Fixture, ⚠️ Pitfall 2: Forgetting Fixture Cleanup Code Must Go AFTER `use()`, ⚠️ Pitfall 3: Using a Worker-Scoped Fixture Where Test-Scoped Isolation Was Actually Needed (+3 more)
 
-### Community 575 - "Playwright: Actions And Interactions"
+### Community 563 - "Playwright Actions And Interactions"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Actions & Interactions: Core Methods & Low-Level Keyboard/Mouse APIs, `dragTo()` and `setInputFiles()`: Purpose-Built for Otherwise-Awkward Interactions, `fill()` vs `pressSequentially()`: A Genuine Behavioral Difference, ⚠️ Pitfall 1: Using `fill()` for Content That Needs Real Keystroke-Driven Behavior (+2 more)
 
-### Community 576 - "Playwright: Navigation And Network"
+### Community 564 - "Playwright Navigation And Network"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, HAR Replay: Deterministic, Recorded Network Traffic, 🎭 Navigation & Network: `page.goto()`, `page.route()` & HAR Replay, `page.route()`: Intercepting at the Browser's Network Layer, ⚠️ Pitfall 1: Forgetting `page.route()` Must Be Set Up BEFORE the Navigation That Triggers the Request (+2 more)
 
-### Community 577 - "Playwright: Authentication And State"
+### Community 565 - "Playwright Authentication And State"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Authentication & State: `storageState` & Global Setup Projects, Per-Role Authentication Files, ⚠️ Pitfall 1: A Stale `storageState` File Persisting Across CI Runs, ⚠️ Pitfall 2: Committing `storageState` Files (Containing Real Session Tokens) to Version Control (+2 more)
 
-### Community 578 - "Playwright: Parallelism And Sharding"
+### Community 566 - "Playwright Parallelism And Sharding"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Parallelism & Sharding: Workers, `describe.serial()` & CI Sharding, ⚠️ Pitfall 1: Using `test.describe.parallel()` for Tests With Hidden Interdependencies, ⚠️ Pitfall 2: Overusing `describe.serial()` as a Workaround for Poor Test Isolation, ⚠️ Pitfall 3: Sharding Without Load-Balancing Test Duration Across Shards (+2 more)
 
-### Community 579 - "Playwright: Component Testing"
+### Community 567 - "Playwright Component Testing"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Component Testing: Mounting Components in a Real Browser, `mount()`: Component-Level, Not Page-Level, ⚠️ Pitfall 1: Using Component Testing for Everything, Losing RTL's Speed Advantage, ⚠️ Pitfall 2: Treating Component Testing as a Replacement for Full E2E Coverage (+2 more)
 
-### Community 580 - "Playwright: Ci Integration"
+### Community 568 - "Playwright Ci Integration"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 CI Integration: Reporters, Retries & the Official Docker Image, ⚠️ Pitfall 1: Letting Version Drift Between the Docker Image and the npm Package, ⚠️ Pitfall 2: Setting High `retries` Globally, Masking Genuinely Flaky Tests, ⚠️ Pitfall 3: Not Uploading Trace/Report Artifacts on CI Failure (+2 more)
 
-### Community 581 - "Playwright: Advanced Patterns"
+### Community 569 - "Playwright Advanced Patterns"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Advanced Patterns: Page Object Model, Custom Matchers & Test Tagging, Page Object Model: Encapsulation Against Locator Churn, ⚠️ Pitfall 1: Page Objects Containing Assertions Instead of Just Actions/Locators, ⚠️ Pitfall 2: Inconsistent or Undocumented Tag Conventions (+2 more)
 
-### Community 582 - "React: Phase 11 Ssr Hydration"
+### Community 570 - "Postgresql Architecture: Choosing"
 Cohesion: 0.18
-Nodes (10): De-duplication, Gotchas, Interview questions, `<link>` — the one with de-duplication and real caveats, `<meta>` — exactly one of four props, Only one at a time, The `itemProp` fork, stated twice, 🔴 The two caveats (+2 more)
+Nodes (11): Choosing, Default isolation level, Gotchas, Identifier case folding, Interview questions, `RETURNING` and `UPDATE … ORDER BY … LIMIT`, The concurrency ceiling, The differences that survive (+3 more)
 
-### Community 583 - "React: Phase 2 Components"
-Cohesion: 0.18
-Nodes (9): Fix 1: own the state at the right level, Fix 2: pass the expensive subtree as `children`, Fix 3: split the state, or split the component, Fix 4: memoize — last, and knowingly, Gotchas, Interview questions, Lifting versus context versus a store, What actually re-renders (+1 more)
-
-### Community 584 - "Redux-Toolkit: Slices And Actions"
+### Community 571 - "Redux-Toolkit Slices And Actions"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createSlice`: Reducers, Immer Drafts & `extraReducers`, `extraReducers`: Responding to Foreign Actions, ⚠️ Pitfall 1: Mixing Mutation AND Return in the Same Reducer, ⚠️ Pitfall 2: Forgetting `extraReducers` Actions Must Come From Outside the Slice (+2 more)
 
-### Community 585 - "Redux-Toolkit: Async Thunks"
+### Community 572 - "Redux-Toolkit Async Thunks"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createAsyncThunk`: Async Lifecycle, `thunkAPI` & Cancellation, ⚠️ Pitfall 1: Throwing Instead of `rejectWithValue` When Typed Errors Are Needed, ⚠️ Pitfall 2: Ignoring `signal` — Wasted Work After Cancellation/Unmount, ⚠️ Pitfall 3: Reading `state.users.status` As a Single Global Flag for Multiple Concurrent Requests (+2 more)
 
-### Community 586 - "Redux-Toolkit: Middleware"
+### Community 573 - "Redux-Toolkit Middleware: 1. Under-The-H"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `listenerMiddleware`: Reactive Side Effects Without Sagas, 📦 Middleware Stack & `listenerMiddleware`, ⚠️ Pitfall 1: `.concat()` Instead of `.prepend()` for `listenerMiddleware`, ⚠️ Pitfall 2: Forgetting `cancelActiveListeners()` in Debounce Patterns (+2 more)
 
-### Community 587 - "Redux-Toolkit: React Redux Integration"
+### Community 574 - "Redux-Toolkit React Redux Integration"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Returning a New Object Literal Without `shallowEqual`, ⚠️ Pitfall 2: Calling `useStore()` Where `useSelector()` Was Needed, ⚠️ Pitfall 3: Skipping the Typed Hooks Wrapper in a Growing Codebase, 📦 React-Redux Hooks: `useSelector`, `useDispatch` & Typed Wrappers (+3 more)
 
-### Community 588 - "Storybook: Story Anatomy"
+### Community 575 - "Storybook Story Anatomy"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `args`: Declarative Props Driving the Rendered Story, `argTypes`: Controlling How Controls Are Displayed, ⚠️ Pitfall 1: Overusing `render` When Plain `args` Would Have Sufficed, ⚠️ Pitfall 2: Duplicating Shared Configuration Across Every Story Instead of Using Meta (+3 more)
 
-### Community 589 - "Storybook: Decorators"
+### Community 576 - "Storybook Decorators: 1. Under-The-Hood "
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Composition Order: Global Decorators Wrap OUTSIDE Story-Level Ones, 📖 Decorators: Global, Story-Level & Composition Order, Global Decorators: Applied to Every Story, App-Wide, ⚠️ Pitfall 1: Applying a Narrow-Need Provider Globally, Wasting Setup and Masking Missing-Context Bugs (+3 more)
 
-### Community 590 - "Storybook: Composition And Design Systems"
+### Community 577 - "Storybook Composition And Design Systems"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Composition & Design Systems: Design Tokens, Variant Matrices & Storybook Composition, Design Token Stories: Documenting the Foundation, Not Just Components, ⚠️ Pitfall 1: Hand-Copying Design Token Values Instead of Importing From the Source of Truth, ⚠️ Pitfall 2: Variant Matrices Becoming So Large They're Impractical to Visually Scan (+3 more)
 
-### Community 591 - "Storybook: Multi Framework Support"
+### Community 578 - "Storybook Multi Framework Support"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Multi-Framework Support: Framework-Agnostic CSF & Builder Options, ⚠️ Pitfall 1: Assuming Every Addon Works Identically Across Every Framework/Builder Combination, ⚠️ Pitfall 2: Mixing Builder-Specific Configuration Into Framework-Agnostic Story Files, ⚠️ Pitfall 3: Migrating Framework Without Verifying Every Addon's Renderer Support First (+2 more)
 
-### Community 592 - "Storybook: Build And Configuration"
+### Community 579 - "Storybook Build And Configuration"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `addons`: Order Can Matter for Some Addons, 📖 Build & Configuration: `.storybook/main.js` Deep Dive, ⚠️ Pitfall 1: A `stories` Glob That Doesn't Match the Actual, Evolved Project Structure, ⚠️ Pitfall 2: Forgetting `staticDirs` for Assets Referenced by Fixed Path (+3 more)
 
-### Community 593 - "Storybook: Advanced Patterns"
+### Community 580 - "Storybook Advanced Patterns"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Advanced Patterns: Living Style Guide, PR-Based Visual Review & Outside-In Development, ⚠️ Pitfall 1: Treating Component-Driven Development as "Storybook Adoption" Alone, Without the Workflow Shift, ⚠️ Pitfall 2: Making Visual/Interaction Checks Required Gates Without a Clear Review Ownership Process, ⚠️ Pitfall 3: Writing Stories That Don't Reflect Genuinely Realistic Data/Edge Cases (+2 more)
 
-### Community 594 - "Tanstack-Query: Usequery Deep Dive"
+### Community 581 - "Tanstack-Query Usequery Deep Dive"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Confusing `staleTime` and `gcTime` as the Same Concept, ⚠️ Pitfall 2: Using an Unserializable or Unstable `queryKey`, ⚠️ Pitfall 3: Forgetting `enabled: false` Still Returns a Query Object, Just Without Fetching, `queryKey`: Hierarchical, Serializable Cache Identity (+3 more)
 
-### Community 595 - "Tanstack-Query: Caching And Invalidation"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Caching & Invalidation: `invalidateQueries()`, `refetchQueries()` & Direct Cache Access, Hierarchical Keys Enabling Partial-Match Invalidation, ⚠️ Pitfall 1: Using `refetchQueries()` Where `invalidateQueries()` Would Suffice, ⚠️ Pitfall 2: Over-Broad Invalidation Causing Unnecessary Refetch Storms (+2 more)
-
-### Community 596 - "Tanstack-Query: Background Refetching"
+### Community 582 - "Tanstack-Query Background Refetching"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Background Refetching: Window Focus, Reconnect & Polling Intervals, Conditional `refetchInterval`: Polling That Stops Itself, ⚠️ Pitfall 1: Fixed-Interval Polling That Never Stops, Wasting Resources Indefinitely, ⚠️ Pitfall 2: Leaving `refetchOnWindowFocus: true` for Data That Should Never Change Mid-Session (+2 more)
 
-### Community 597 - "Tanstack-Query: Dependent And Parallel Queries"
+### Community 583 - "Tanstack-Query Dependent And Parallel Qu"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Dependent & Parallel Queries: `enabled` Chaining & `useQueries()`, Dependent Queries: A Genuine, Necessary Waterfall, ⚠️ Pitfall 1: Creating an Unnecessary Waterfall for Genuinely Independent Data, ⚠️ Pitfall 2: Calling `useQuery` in a Loop Instead of `useQueries()` (+2 more)
 
-### Community 598 - "Tanstack-Query: Prefetching And Ssr"
+### Community 584 - "Tanstack-Query Prefetching And Ssr"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `dehydrate()`/`HydrationBoundary`: Bridging Server and Client Caches, Next.js Integration: Prefetching in Server Components, Hydrating in Client Hooks, ⚠️ Pitfall 1: Mismatched `queryKey` Between Server Prefetch and Client `useQuery`, ⚠️ Pitfall 2: Creating a Single, Shared `QueryClient` for SSR Across Multiple Requests (+2 more)
 
-### Community 599 - "Tanstack-Query: Suspense Integration"
+### Community 585 - "Tanstack-Query Suspense Integration"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Nesting Multiple Fine-Grained Suspense Boundaries Where One Coarser Boundary Was More Appropriate, ⚠️ Pitfall 2: Forgetting an Error Boundary Alongside a Suspense Boundary, ⚠️ Pitfall 3: Mixing `useSuspenseQuery` and Regular `useQuery` for the Same Query Key Inconsistently, 🔄 Suspense Integration: `useSuspenseQuery` & `throwOnError` (+2 more)
 
-### Community 600 - "Tanstack-Query: Devtools"
+### Community 586 - "Tanstack-Query Devtools: 1. Under-The-Ho"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 DevTools: Live Cache Inspection & Manual Cache Manipulation, Manually Triggering Invalidation for Debugging Invalidation Logic, ⚠️ Pitfall 1: Accidentally Shipping DevTools to Production, ⚠️ Pitfall 2: Debugging by Guessing Query Key Structure Instead of Reading It From DevTools (+2 more)
 
-### Community 601 - "Tanstack-Query: Query Cancellation"
+### Community 587 - "Tanstack-Query Query Cancellation"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Automatic Cancellation on Query Key Change: Avoiding a Race Condition, ⚠️ Pitfall 1: Forgetting to Pass `signal` Into the Actual Network Call, ⚠️ Pitfall 2: Treating an `AbortError` as a Genuine Application Error, ⚠️ Pitfall 3: Manually Managing Cancellation Elsewhere, Duplicating What TanStack Query Already Provides (+2 more)
 
-### Community 602 - "Vite: Configuration"
+### Community 588 - "Vite Configuration: 1. Under-The-Hood Me"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Conditional Config: The Function Form, ⚡ Configuration: `vite.config.ts`, `defineConfig()` & Conditional Config, `defineConfig()`: Type Safety, Not Runtime Behavior, ⚠️ Pitfall 1: Forgetting `base` Must Match the Actual Deployment Sub-Path (+3 more)
 
-### Community 603 - "Vite: Build System Rollup"
+### Community 589 - "Vite Build System Rollup"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `build.lib`: A Fundamentally Different Output Shape, ⚡ Build System: Rollup Options, `manualChunks` & Library Mode, `build.target`: esbuild's Role Inside the Rollup Pipeline, `manualChunks`: Deliberate Chunk Splitting Strategy (+3 more)
 
-### Community 604 - "Vite: Asset Handling"
+### Community 590 - "Vite Asset Handling"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Asset Handling: Static Imports, `public/` & Special Import Suffixes, `import.meta.glob()`: Batch-Importing Many Modules at Once, ⚠️ Pitfall 1: Putting Source-Referenced Assets in `public/` Instead of Importing Them, ⚠️ Pitfall 2: Using Eager `import.meta.glob` Where Lazy Would Avoid an Unnecessarily Large Bundle (+2 more)
 
-### Community 605 - "Vite: Worker And Wasm Support"
+### Community 591 - "Vite Worker And Wasm Support"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Forgetting Workers Can't Access the DOM or Main-Thread Variables, ⚠️ Pitfall 2: Treating WASM Instantiation as Synchronous, ⚠️ Pitfall 3: Using `format: 'iife'` Workers Unnecessarily, Losing Module Syntax, WASM's `?init` Suffix: Explicit, Async Instantiation (+2 more)
 
-### Community 606 - "Vite: Deployment Considerations"
+### Community 592 - "Vite Deployment Considerations"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `base`: Must Exactly Match the Deployment Sub-Path, ⚡ Deployment Considerations: `base`, `vite preview` & Cache Header Strategy, Long-Term Cache Header Strategy, ⚠️ Pitfall 1: Forgetting `base` for a Sub-Path Deployment (+3 more)
 
-### Community 607 - "Web-Vitals-Performance: Legacy And Lab Measurement"
+### Community 593 - "Web-Vitals-Performance Legacy And Lab Me"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Lab Tools: Controlled, Reproducible, But Not Real-World-Representative, 🚀 Legacy & Supporting Metrics + Lab Measurement Tools, ⚠️ Pitfall 1: Chasing a Perfect Lighthouse Score as the Actual Goal, ⚠️ Pitfall 2: Confusing FCP Improvements With LCP Improvements (+2 more)
 
-### Community 608 - "Web-Vitals-Performance: Real User Monitoring"
+### Community 594 - "Web-Vitals-Performance Real User Monitor"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `navigator.sendBeacon`: Reliable Delivery During Page Unload, ⚠️ Pitfall 1: Using `fetch()` Without `keepalive` in an Unload Handler, ⚠️ Pitfall 2: Aggregating Vitals Site-Wide Instead of Per-Route, ⚠️ Pitfall 3: Sampling Too Aggressively for Low-Traffic Routes (+3 more)
 
-### Community 609 - "Web-Vitals-Performance: Caching And Production Monitoring"
-Cohesion: 0.18
-Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 Caching Strategies & Production RUM Tooling, HTTP Caching Headers, ⚠️ Pitfall 1: `no-cache` Misread as "Don't Cache At All", ⚠️ Pitfall 2: A Service Worker Serving a Permanently Stale App Shell (+3 more)
-
-### Community 610 - "Web-Vitals-Performance: Budgets And Advanced Diagnostics"
+### Community 595 - "Web-Vitals-Performance Budgets And Advan"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Attribution: Root-Causing a Bad Score to a Specific Element/Resource, CI-Enforced Budgets, Deep Profiling: Flame Charts & Long Task Analysis, 🚀 Performance Budgets & Advanced Diagnostics (+3 more)
 
-### Community 611 - "Web-Vitals-Performance: Real World Workflows And Recipes"
+### Community 596 - "Web-Vitals-Performance Real World Workfl"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 Diagnosing a Production LCP/INP Regression, End-to-End, LCP's Four Attributed Sub-Phases, ⚠️ Pitfall 1: Jumping Straight to Lighthouse Without Field Data First, ⚠️ Pitfall 2: Treating `resourceLoadDelay` and `resourceLoadTime` as the Same Problem (+2 more)
 
-### Community 612 - "Webpack: Core Concepts"
-Cohesion: 0.18
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Module Types, ⚠️ Pitfall 1: Forgetting `dependOn` and Duplicating Vendor Code, ⚠️ Pitfall 2: Using `array entry` When Independent Bundles Were Intended, ⚠️ Pitfall 3: `publicPath: 'auto'` Breaking on Non-Root-Relative Deployments (+2 more)
-
-### Community 613 - "Webpack: Configuration"
+### Community 597 - "Webpack Configuration: 1. Under-The-Hood"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Configuration Deep Dive: Entry & Output, `library` / `libraryTarget`: Building a Consumable Package, Not an App, Output Naming: Three Distinct Filename Templates, ⚠️ Pitfall 1: Forgetting `externals` When Building a Library (+2 more)
 
-### Community 614 - "Webpack: Loaders"
+### Community 598 - "Webpack Loaders: 1. Under-The-Hood Mecha"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Loader Mechanics: Pitching Phase, Async Loaders & Options, Loader Options: Query Params vs `rules[].use.options`, ⚠️ Pitfall 1: Forgetting to Call `this.async()` Before Doing Async Work, ⚠️ Pitfall 2: Non-Deterministic Loader Output Breaking the Filesystem Cache (+2 more)
 
-### Community 615 - "Webpack: Code Splitting"
+### Community 599 - "Webpack Code Splitting"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Code Splitting: Dynamic Imports, `SplitChunksPlugin` & Runtime Chunks, Magic Comments, ⚠️ Pitfall 1: Forgetting `runtimeChunk`, Busting Cache on Every Deploy, ⚠️ Pitfall 2: Over-Aggressive `splitChunks` Producing Hundreds of Tiny Chunks (+3 more)
 
-### Community 616 - "Webpack: Dev Server And Hmr"
+### Community 600 - "Webpack Dev Server And Hmr"
 Cohesion: 0.18
 Nodes (11): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `devServer.proxy`, `historyApiFallback`, HMR vs Live Reload — a Real Distinction, ⚠️ Pitfall 1: Assuming HMR "Just Works" Without Any `module.hot.accept()` Boundary (+3 more)
 
-### Community 617 - "Webpack: Advanced Custom Tooling"
+### Community 601 - "Webpack Advanced Custom Tooling"
 Cohesion: 0.18
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Advanced Tooling: Writing Custom Loaders & Plugins, Custom Loaders: The `this` Loader Context, Custom Plugins: `compiler` vs `compilation`, and Tapable Hook Timing, ⚠️ Pitfall 1: Using `compiler.hooks` When `compilation.hooks` Was Needed (or Vice Versa) (+2 more)
 
-### Community 618 - "Sandbox Git-P0 - ex2-object-model.sh"
+### Community 602 - "Reviews: The ★ problem"
+Cohesion: 0.18
+Nodes (11): 04 · Ratings, gotchas and interview Q&A, Ask 3b — Gotchas and pitfalls: **the corpus's strongest feature**, Ask 3c — Interview Q&A: **useful, not random — but the ★ has stopped meaning anything**, Per-topic detail — the two that need work, `phase-0-architecture/02-client-server-model.md` — Client/server model, `phase-0-architecture/04-shared-buffers.md` — Shared buffers, Scoreboard — topics read in full, The ★ problem (+3 more)
+
+### Community 603 - "Sandbox Git P0"
 Cohesion: 0.20
 Nodes (10): GIT_AUTHOR_DATE, GIT_AUTHOR_EMAIL, GIT_AUTHOR_NAME, GIT_COMMITTER_DATE, GIT_COMMITTER_EMAIL, GIT_COMMITTER_NAME, GIT_CONFIG_GLOBAL, GIT_CONFIG_SYSTEM (+2 more)
 
-### Community 619 - "Sandbox P8-Security - ex13-timing.mjs"
+### Community 604 - "Sandbox P8 Security"
 Cohesion: 0.18
 Nodes (5): a, DUMMY, samples, secret, stored
 
-### Community 620 - "Sandbox P8-Security - ex16-validation-boundary.mjs"
+### Community 605 - "Sandbox P8 Security"
 Cohesion: 0.22
 Nodes (8): Catch, CreateUser, huge, j(), readJson(), Rec, server, t
 
-### Community 621 - "Sandbox Pg-Api - ex36-aggregation.mjs"
+### Community 606 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (8): err(), j(), planOf(), pool, q(), rows(), timed(), tryq()
 
-### Community 622 - "Sandbox Pg-Api - ex37-cte-subquery.mjs"
+### Community 607 - "Sandbox Pg Api"
 Cohesion: 0.36
 Nodes (9): err(), fullPlan(), jj(), planOf(), pool, q(), rows(), timed() (+1 more)
 
-### Community 623 - "Sandbox Pg-Api - ex37g-grouping-sets-cost.mjs"
+### Community 608 - "Sandbox Pg Api"
 Cohesion: 0.29
 Nodes (9): buffersOf(), nsets(), planOf(), pool, q(), sep, sepTotal, shape() (+1 more)
 
-### Community 624 - "/ - Devbible Site Logo SVG"
-Cohesion: 0.33
-Nodes (11): Devbible Site Logo SVG, Devbible Site Brand Mark, Green Cactus Body, Cactus Character Face, Cactus Green and Notepad Yellow Palette, CSS-Tricks Cactus Mascot, Flat Evenodd Vector Illustration, Yellow Lined Notepad Overlay (+3 more)
-
-### Community 625 - "/ - Facebook-Blue Center Monitor"
-Cohesion: 0.33
-Nodes (11): Facebook-Blue Center Monitor, Seated Developer, Docusaurus, Docusaurus Keytar Mascot, Powered by React Illustration, Keytar Synthesizer, Powered by React, React (+3 more)
-
-### Community 626 - "/ - undraw Docusaurus Tree Illustration"
-Cohesion: 0.31
-Nodes (11): undraw Docusaurus Tree Illustration, Browser Window Chrome, Docusaurus Cactus Tree, Documentation Content Preview, Green Call To Action Button, Docs File Tree Sidebar, Docs Site Split Layout, Yellow Document Card (+3 more)
-
-### Community 627 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.24
-Nodes (10): Primitives copied objects shared, Shallow copy, Structural sharing, structuredClone, const protects the binding, const let var, Object.freeze is shallow, Deep equality (+2 more)
-
-### Community 628 - "Javascript: Phase 2 Operators"
+### Community 610 - "Css Selectors: The set"
 Cohesion: 0.20
-Nodes (10): Strict equality ===, Dates compare but do not equal, Intl.Collator / localeCompare, Lexicographic string comparison, Object relational comparison is silent, Relational comparison algorithm, Object lookup instead of branching, switch body is one block (+2 more)
+Nodes (9): `:disabled` and the alternative, `:focus` versus `:focus-visible`, `:focus-within` — the container knows, Gotchas, Interview questions, `:target` — a state you get from the URL, The order of link states matters, The set (+1 more)
 
-### Community 629 - "Javascript: Phase 2 Operators"
-Cohesion: 0.20
-Nodes (10): Logical assignment skips the write, Nullish assignment ??=, Short-circuit evaluation, ?. short-circuits the entire chain, Optional chaining ?., Optional chaining is read-only, Reserve ?. for genuinely optional values, for…in walks prototypes and stringifies indices (+2 more)
-
-### Community 630 - "Javascript: Phase 3 Functions"
-Cohesion: 0.22
-Nodes (10): bind identity trap, call apply bind cannot change arrow this, call apply bind, Sloppy primitive boxing, thisArg coercion, bind reduces function.length, apply and spread argument limit, call apply bind cost (+2 more)
-
-### Community 631 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.20
-Nodes (10): Keys are string or symbol only, Map for identity and ordered keys, JSON __proto__ is an ordinary key, Object.create(null) dictionary, Prototype pollution, hasOwnProperty, in for behaviour, hasOwn for data, in operator (+2 more)
-
-### Community 632 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.20
-Nodes (10): sort compareFn contract, Decorate–sort–undecorate, Fisher–Yates shuffle, Well-formed comparator requirements, Intl.Collator, String.prototype.localeCompare, Multi-key || comparator chain, ES2019 sort stability (+2 more)
-
-### Community 633 - "Javascript: Phase 7 Async"
-Cohesion: 0.20
-Nodes (10): await does not block the thread, Concurrency vs parallelism, MDN JavaScript execution model, Never-blocking exceptions, Run-to-completion, Single-threaded JavaScript, Worker as separate agent, await is microtask scheduling (+2 more)
-
-### Community 634 - "Javascript: Phase 7 Async"
-Cohesion: 0.27
-Nodes (10): Microtask drain until empty, MDN Using microtasks in JavaScript, Microtask, Microtask starvation, Rendering between tasks, requestAnimationFrame, Task (macrotask), length === 1 microtask batching (+2 more)
-
-### Community 635 - "Javascript: Phase 7 Async"
-Cohesion: 0.22
-Nodes (10): Releasing Zalgo (sometimes-async), Error-first callback convention, Missing return after if (err), Inversion of control (callbacks), MDN Using promises, once() wrapper, MDN promise guarantees, Promise state is not readable (+2 more)
-
-### Community 636 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.20
-Nodes (10): Cache package downloads not node_modules, Node CI/CD pipeline, Promote image digest, Node CI version matrix, yarn install --immutable, Immutable digest plus human version tag, Custom module loaders, node --import loader registration (+2 more)
-
-### Community 637 - "Nodejs: Phase 2 Async"
-Cohesion: 0.24
-Nodes (10): node:timers/promises, Promises have no cancellation, Promise.race, AbortController, AbortSignal, AbortSignal.any, AbortSignal.timeout, AbortController and cancellation (+2 more)
-
-### Community 638 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.20
-Nodes (10): LISTEN / NOTIFY, 202 Accepted for queued work, res.json then doSlowThing is not a queue, BullMQ, Durable exclusive claim visibility ack, FOR UPDATE SKIP LOCKED, Domain-derived idempotency key, jobId vs handler dedup (+2 more)
-
-### Community 639 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.22
-Nodes (10): PostgreSQL from Node, Pass executor vs AsyncLocalStorage, No HTTP inside a transaction, The repository pattern, Mongo causal consistency, Read-your-own-writes, Sync vs background, Job queues from Node (+2 more)
-
-### Community 640 - "Nodejs: Phase 8 Security"
-Cohesion: 0.22
-Nodes (10): timingSafeEqual for secrets, Double-submit CSRF token, SameSite cookie attribute, OAuth state parameter, CSRF is an authority problem, CORS does not stop CSRF, CSRF, Origin allowlist check (+2 more)
-
-### Community 641 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.20
-Nodes (10): Determinism beats faker, Coverage records execution not assertions, --experimental-test-coverage, Uncovered lines column, Mutation testing cost, fast-check, Round-trip, idempotence, invariant, oracle, Mutation testing (+2 more)
-
-### Community 642 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.22
-Nodes (10): Bitmap Heap Scan, enable_seqscan = off, Index Scan, random_page_cost, Seq scan vs index scan vs bitmap heap scan, Seq Scan, Cast on the indexed column, Why an index is not being used (+2 more)
-
-### Community 643 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.20
-Nodes (10): Equality first, range second, Leftmost-prefix rule, Multicolumn indexes and column order, PostgreSQL 18 skip scan, EXPLAIN (ANALYZE, BUFFERS), INCLUDE columns, Index-only scan, Index-only scans, INCLUDE and the visibility map (+2 more)
-
-### Community 644 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.29
-Nodes (10): The app role should not own the schema, pg_hba.conf — who may connect, TLS to the database, Logical replication, Logical replication is not for HA, Major version upgrades, Disaster drill, An untested backup is a belief (+2 more)
-
-### Community 645 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.20
-Nodes (10): Defensible production alert set, Disk space and WAL fill, Oldest transaction age as leading indicator, idle_in_transaction_session_timeout, log_statement, ALTER ROLE PASSWORD logs plaintext, log_parameter_max_length_on_error defaults to 0, Parameters do not protect the log (+2 more)
-
-### Community 646 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.20
-Nodes (10): ON_ERROR_STOP, \conninfo, current_user vs session_user, Test as the application role, psql -X / --no-psqlrc, ON_ERROR_ROLLBACK interactive, PROMPT1 %x and %#, .psqlrc (+2 more)
-
-### Community 647 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.24
-Nodes (10): Five money modelling rules, Modelling money, numeric rounds 2.5 away from zero, CREATE TABLE, pg returns bigint as a string, bigint primary key, GENERATED ALWAYS AS IDENTITY, serial (+2 more)
-
-### Community 648 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.20
-Nodes (10): now() is transaction start time, Explicit NULL bypasses DEFAULT, Case-insensitive unique email, Denormalize against a measurement, Historical price snapshot, Generated column, Generated expression must be IMMUTABLE, STORED generated columns only (+2 more)
-
-### Community 649 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.29
-Nodes (10): SELECT alias visibility, The SELECT shape, Unique ORDER BY tiebreaker, Logical query processing order, FROM WHERE GROUP BY HAVING SELECT DISTINCT ORDER BY LIMIT, Logical order is not execution order, No default row order, ORDER BY (+2 more)
-
-### Community 650 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.22
-Nodes (10): JOIN is INNER JOIN, Phase 5 join fixture j_customers j_orders j_order_items, Order 14 orphan NULL customer_id, CROSS JOIN, Calendar spine gap fill, Accidental comma join, CROSS JOIN cartesian product, date parsed as local midnight then UTC-shifted (+2 more)
-
-### Community 651 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.29
-Nodes (10): array_agg, Arrays and strings, 42P10 DISTINCT ORDER BY must match arguments, ORDER BY inside the collection aggregate, string_agg, JSON shapes, json versus jsonb, jsonb_agg (+2 more)
-
-### Community 652 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.31
-Nodes (10): percentile_cont array form, Percentiles do not compose, percentile_cont, percentile_disc, WITHIN GROUP, Hypothetical-set aggregates, mode(), percent_rank() WITHIN GROUP (+2 more)
-
-### Community 653 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.20
-Nodes (10): withTransaction helper, Empty params array is not parameterized, Extended query protocol, Multi-statement implicit transaction, Simple query protocol, sql.begin transaction API, Resolve SQL paths from import.meta.url, Named parameter shim (+2 more)
-
-### Community 654 - "React: Phase 3 State"
-Cohesion: 0.29
-Nodes (10): getDerivedStateFromProps, Derived state, Store selected id not object, useEffect-that-syncs-state antipattern, Five principles for structuring state, Impossible state, Five rules for set during render, Updating state during render (+2 more)
-
-### Community 655 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.20
-Nodes (10): strict defaults to true in TypeScript 7, strictNullChecks, Classic ts.* API moved, Editor vs CI disagreements, Pin the TypeScript compiler, Upgrade path 5.9 to 6.0 to 7.0, TypeScript four parts, 187 topics, TypeScript syllabus (+2 more)
-
-### Community 656 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.22
-Nodes (10): Annotate inputs infer outputs, void, Contextual typing, Default makes parameter optional, Fewer parameters assignability, Function types, Function overloads, Function parameter contravariance (+2 more)
-
-### Community 657 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.22
-Nodes (10): Optional property vs undefined union, null vs undefined, ?? vs ||, Optional chaining ?., Symbol keys skipped by JSON, symbol, Well-known symbols, JavaScript falsy values (+2 more)
-
-### Community 659 - "Css: Phase 4 Flexbox"
-Cohesion: 0.20
-Nodes (9): Flex base size, Free space: the number everything else divides up, Gotchas, Hypothetical main size, Interview questions, Percentages in `flex-basis`, Trade-off, Why `flex: 1` produces equal columns and `flex: auto` does not (+1 more)
-
-### Community 660 - "Css: Phase 4 Flexbox"
+### Community 611 - "Css Flexbox: The two axes"
 Cohesion: 0.20
 Nodes (9): Centring, stated once for each direction, `flex-flow`: direction plus wrap, Gotchas, Interview questions, Logical properties make direction changes survivable, `row-reverse` and `column-reverse` move the start, not just the order, The accessibility rule: visual order is not reading order, The two axes (+1 more)
 
-### Community 661 - "Expressjs - 1. Verdict"
+### Community 612 - "Expressjs Reviews: 1. Verdict"
 Cohesion: 0.20
 Nodes (9): 1. Verdict, 2. What I executed, and what held, 3. The one substantive technical gap, 4. The structural gap — it is a cliff, not a spread, 4b. Against the Node baseline, 5. Why this matters more than it looks, 6. Recommendation, 7. Source paths (+1 more)
 
-### Community 662 - "Framer-Motion: Core Concepts"
+### Community 613 - "Framer-Motion Core Concepts"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Core Concepts: Declarative Animation & `motion` Components, `motion(Component)`: Making a Custom Component Animatable, `motion.div`, `motion.svg`, etc.: Drop-In Animatable Elements, ⚠️ Pitfall 1: Forgetting `forwardRef` When Making a Custom Component Animatable (+2 more)
 
-### Community 663 - "Framer-Motion: Variants"
+### Community 614 - "Framer-Motion Variants: 1. Under-The-Hoo"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Orchestration: `staggerChildren`/`delayChildren` on a Parent, ⚠️ Pitfall 1: Setting an Explicit `animate` Prop on a Child, Accidentally Breaking Propagation, ⚠️ Pitfall 2: Mismatched Variant Key Names Between Parent and Child, ⚠️ Pitfall 3: Putting Orchestration Config on the Wrong Level (Child Instead of Parent) (+2 more)
 
-### Community 664 - "Framer-Motion: Keyframes"
+### Community 615 - "Framer-Motion Keyframes: 1. Under-The-Ho"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Keyframes: Array Syntax & The `times` Array, ⚠️ Pitfall 1: Assuming Keyframes Are Evenly Spaced by Default When Precise Pacing Is Needed, ⚠️ Pitfall 2: Mismatched Array Lengths Between the Animated Value and `times`, ⚠️ Pitfall 3: Using Keyframes for What's Actually a Simple Two-State Toggle (+1 more)
 
-### Community 665 - "Framer-Motion: Performance Considerations"
+### Community 616 - "Framer-Motion Performance Considerations"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Performance Considerations: GPU-Accelerated Properties & `will-change`, ⚠️ Pitfall 1: Animating `width`/`height`/`top`/`left` "Because It's More Intuitive," Ignoring the Performance Cost, ⚠️ Pitfall 2: Applying `will-change` Broadly, Across Many Simultaneously-Animating Elements, ⚠️ Pitfall 3: Assuming Every Property Motion Exposes Is Equally Cheap to Animate (+2 more)
 
-### Community 666 - "Framer-Motion: Real World Workflows And Recipes"
+### Community 617 - "Framer-Motion Real World Workflows And R"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🎨 Diagnosing Janky, Dropped-Frame Animations in Production, ⚠️ Pitfall 1: Fixing Category A When the Real Problem Is Category B, ⚠️ Pitfall 2: Testing Only on a Fast Development Machine, ⚠️ Pitfall 3: Assuming `will-change`'s Automatic Application Fixes Category B (+1 more)
 
-### Community 667 - "Frontend-Architecture: Error Handling And Resilience"
-Cohesion: 0.20
-Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Root-Level Error Boundary as the Only Failure Containment, ⚠️ Anti-Pattern 2: Infinite Silent Automatic Retries, Masking a Genuinely Broken Feature, ⚠️ Anti-Pattern 3: Using a Generic Spinner Everywhere, Regardless of the Actual Failure/Reliability Characteristics, 🏛️ Error Handling & Resilience: Boundary Hierarchy, Fallback UI & Retry Patterns (+2 more)
-
-### Community 668 - "Frontend-Architecture: Testing Strategy"
+### Community 618 - "Frontend-Architecture Testing Strategy"
 Cohesion: 0.20
 Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: An Inverted Pyramid — Heavy E2E, Sparse Unit/Component Coverage, ⚠️ Anti-Pattern 2: Treating "More E2E Tests" as Inherently Higher Confidence, ⚠️ Anti-Pattern 3: No Contract Testing, Relying Solely on "It Compiled" as API-Correctness Evidence, Contract Testing: Verifying the Frontend's Assumptions Stay True (+2 more)
 
-### Community 669 - "Javascript: Phase 3 Functions"
+### Community 619 - "Frontend-Architecture Performance And Sc"
 Cohesion: 0.20
-Nodes (9): Async composition, Everything after the first function is unary, Gotchas, Interview questions, Point-free style, and how far to take it, Two implementations, and the difference matters, What it costs: the stack trace, Where you already use it (+1 more)
+Nodes (10): 1. The Decision Framework, 2. Real-World Engineering Scenario, 3. Reference Implementation, 4. Senior Engineer Anti-Patterns & Lessons, ⚠️ Anti-Pattern 1: One Rendering Strategy for the Entire App, Regardless of Per-Route Needs, ⚠️ Anti-Pattern 2: Adopting Micro-Frontends Without an Actual Multi-Team Independent-Deploy Need, ⚠️ Anti-Pattern 3: Invalidating One Cache Layer and Assuming the Whole Chain Is Now Fresh, Caching Layers: Knowing Which One Actually Needs Invalidating (+2 more)
 
-### Community 670 - "Jest-Rtl: Rtl Queries"
+### Community 620 - "Jest-Rtl Rtl Queries"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `getBy*` for an Element That Appears Asynchronously, ⚠️ Pitfall 2: Defaulting to `getByTestId` When an Accessible Query Would Work, ⚠️ Pitfall 3: Using `queryBy*` When `getBy*` Was Actually Appropriate, Masking a Real Failure, Query Priority: Accessibility as the Organizing Principle (+2 more)
 
-### Community 671 - "Jest-Rtl: Custom Render"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Configurable Initial State/Route, 🧪 Custom Render: Wrapping Providers & Re-Exporting RTL Consistently, ⚠️ Pitfall 1: Some Test Files Using the Custom Render, Others Importing RTL Directly, ⚠️ Pitfall 2: A Fresh Store/QueryClient Not Created Per-Render (+2 more)
-
-### Community 672 - "Jest-Rtl: Accessibility Testing"
+### Community 621 - "Jest-Rtl Accessibility Testing"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🧪 Accessibility Testing: `jest-axe`, Accessible Name Matchers & Role-Based Queries, Automated Scanning vs Targeted Assertions: Different Coverage, ⚠️ Pitfall 1: Relying Solely on `getByTestId`, Structurally Blind to Accessibility Regressions, ⚠️ Pitfall 2: Treating a Passing `jest-axe` Scan as "Fully Accessible" (+2 more)
 
-### Community 673 - "Jest-Rtl: Real World Workflows And Recipes"
+### Community 622 - "Jest-Rtl Real World Workflows And Recipe"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Setup Sequence, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Configuring All Five Layers Before Running a Single Test, ⚠️ Pitfall 2: Skipping Straight to MSW for a Component That Doesn't Need It, ⚠️ Pitfall 3: One Test File's `jest.mock()` Silently Affecting Sibling Test Files, ⚠️ Pitfall 4: Forgetting `onUnhandledRequest: 'error'` and Getting False-Positive Passes (+1 more)
 
-### Community 674 - "Playwright: Core Architecture"
+### Community 623 - "Mongodb Crud: Combining them"
+Cohesion: 0.20
+Nodes (9): Combining them, `$currentDate`, Gotchas, Interview questions, `$min` and `$max` — conditional writes, `$rename`, `$set` and `$unset`, `$setOnInsert` (+1 more)
+
+### Community 624 - "Nodejs Modules: A realistic one"
+Cohesion: 0.20
+Nodes (9): A realistic one, `engines`, `files` — what actually ships, Gotchas, Interview questions, `main` vs `exports`, `scripts`, The rest, briefly (+1 more)
+
+### Community 625 - "Nodejs Testing: Always close the server"
+Cohesion: 0.20
+Nodes (9): Always close the server, Gotchas, Interview questions, Never hardcode a port, Option 1 — a real server on port 0, with `fetch`, Option 2 — supertest, Testing the whole request path, What to assert (+1 more)
+
+### Community 626 - "Nodejs Testing: Database fixtures"
+Cohesion: 0.20
+Nodes (9): Database fixtures, Determinism beats realism, Factories, Fix time explicitly, Gotchas, Interview questions, Keep the defaults valid and boring, The problem with a shared fixture (+1 more)
+
+### Community 627 - "Playwright Core Architecture"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Core Architecture: Browser/Context/Page Hierarchy & Out-of-Process Drivers, Multi-Browser Engine Support From One API, Out-of-Process Drivers: Why This Design Is Fast and Reliable, ⚠️ Pitfall 1: Reusing a `BrowserContext` Across Tests to "Save Time" (+2 more)
 
-### Community 675 - "Playwright: Auto Waiting And Assertions"
+### Community 628 - "Playwright Auto Waiting And Assertions"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Auto-Waiting & Assertions: Web-First Assertions, Actionability & Soft Assertions, ⚠️ Pitfall 1: Adding Manual `waitForTimeout()` Delays "Just in Case", ⚠️ Pitfall 2: Using Regular `expect()` When Checking Several Independent, Unrelated Conditions, ⚠️ Pitfall 3: Assuming Actionability Checks Substitute for Explicit Assertions About State (+2 more)
 
-### Community 676 - "Playwright: Fixtures And Test Isolation"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Automatic Fixtures: Running Without Explicit Opt-In, 🎭 Fixtures & Test Isolation: Scoping, Automatic Fixtures & Fresh Contexts, ⚠️ Pitfall 1: Worker-Scoping a Fixture That Actually Needs Per-Test Isolation, ⚠️ Pitfall 2: Overusing Automatic Fixtures for Non-Universal Concerns (+2 more)
-
-### Community 677 - "Playwright: Debugging Tools"
+### Community 629 - "Playwright Debugging Tools"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `codegen`: Generating a Starting Point, Not a Finished Test, 🎭 Debugging Tools: Trace Viewer, Inspector, Codegen & UI Mode, ⚠️ Pitfall 1: Committing Raw `codegen` Output Without Refinement, ⚠️ Pitfall 2: Capturing Traces on Every Run, Not Just Failures (+2 more)
 
-### Community 678 - "Playwright: Api Testing"
+### Community 630 - "Playwright Api Testing"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 API Testing: `APIRequestContext` & Combining API Setup With UI Verification, Combining API Setup With UI Verification: A Common, Valuable Pattern, ⚠️ Pitfall 1: Using UI-Based Setup for Every Test, Multiplying Redundant Coverage and Flakiness Blast Radius, ⚠️ Pitfall 2: Forgetting the `request` Fixture Doesn't Share Auth State With `page` Automatically (+2 more)
 
-### Community 679 - "Redux-Toolkit: Store Setup"
+### Community 631 - "Postgresql Psql: \df for functions"
+Cohesion: 0.20
+Nodes (9): `\df` for functions, Gotchas, Interview questions, Patterns, Switching around, The `\d` family, These are not SQL, Trade-off (+1 more)
+
+### Community 632 - "Postgresql Psql: Atomic scripts"
+Cohesion: 0.20
+Nodes (9): Atomic scripts, `-c` versus `-f` versus stdin, Echoing for logs, Exit codes, Gotchas, Interview questions, The default keeps going after an error, The script to copy (+1 more)
+
+### Community 633 - "Postgresql Psql: History"
+Cohesion: 0.20
+Nodes (9): Gotchas, History, Interview questions, It loads, and `-X` ignores it, Per-connection configuration, Query shortcuts, The file worth having, The prompt (+1 more)
+
+### Community 634 - "Postgresql Psql: -At is the mode"
+Cohesion: 0.20
+Nodes (9): `-At` is the mode, CSV for anything structured, `\gexec` — run the SQL a query generates, Gotchas, Health checks and cron, Interview questions, The trap: exit codes disappear in a pipe, Trade-off (+1 more)
+
+### Community 635 - "Postgresql Schema From Node"
+Cohesion: 0.20
+Nodes (9): Concurrency: the reason the constraint matters, Deterministic fixtures, `DO NOTHING` versus `DO UPDATE`, Gotchas, Interview questions, `ON CONFLICT DO NOTHING` is the whole technique, Seeding is not migration, The gotcha: identity values are consumed anyway (+1 more)
+
+### Community 636 - "Redux-Toolkit Store Setup"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `configureStore`: Store Assembly & Default Middleware Stack, Default Middleware Stack (Dev vs Prod), ⚠️ Pitfall 1: Overwriting the Default Middleware Instead of Extending It, ⚠️ Pitfall 2: Ignoring Serializability Warnings Instead of Fixing the Root Cause (+2 more)
 
-### Community 680 - "Redux-Toolkit: Slices And Actions"
+### Community 637 - "Redux-Toolkit Slices And Actions"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createAction` & Action Matchers: Standalone Actions Outside Slices, Matcher Utilities: `isAnyOf` / `isAllOf`, ⚠️ Pitfall 1: Colliding Action Type Strings, ⚠️ Pitfall 2: Using `action.type === 'string literal'` Instead of `.match()` (+1 more)
 
-### Community 681 - "Redux-Toolkit: Rtk Query"
+### Community 638 - "Redux-Toolkit Rtk Query"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: One `createApi` Instance Per Feature (Should Be One Per App), ⚠️ Pitfall 2: Forgetting `query` Object Form for Non-GET Requests, ⚠️ Pitfall 3: Reading Stale `data` Immediately After a Mutation Resolves, Query vs Mutation Endpoints (+2 more)
 
-### Community 682 - "Redux-Toolkit: Selectors And Normalization"
+### Community 639 - "Redux-Toolkit Selectors And Normalizatio"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 `createSelector`: Memoized Derived State, ⚠️ Pitfall 1: Sharing One Parameterized Selector Instance Across Many Components, ⚠️ Pitfall 2: Input Selectors That Return a Fresh Reference Every Call, ⚠️ Pitfall 3: Wrapping `useSelector` Calls in `createSelector` Unnecessarily (+1 more)
 
-### Community 683 - "Redux-Toolkit: Typescript Integration"
+### Community 640 - "Redux-Toolkit Typescript Integration"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `PayloadAction<T>`, ⚠️ Pitfall 1: Hand-Writing `RootState` Instead of Deriving It, ⚠️ Pitfall 2: Using Plain `Dispatch` Instead of `AppDispatch` for Thunks, ⚠️ Pitfall 3: Forgetting `rejectValue` in the Generic Config (+2 more)
 
-### Community 684 - "Redux-Toolkit: Code Splitting"
+### Community 641 - "Redux-Toolkit Code Splitting"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 📦 Code Splitting: `combineSlices` & `injectEndpoints`, `combineSlices()`, `injectEndpoints()` for RTK Query, ⚠️ Pitfall 1: Reading Injected Slice State Before It's Injected (+2 more)
 
-### Community 685 - "Storybook: Addons Ecosystem"
+### Community 642 - "Storybook Addons Ecosystem"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Actions: Verifying Callback Props Fire Correctly, 📖 Addons Ecosystem: `addon-essentials` — Controls, Actions, Viewport & Backgrounds, Controls: Live, Interactive Prop Editing, ⚠️ Pitfall 1: Forgetting Controls-Panel Changes Are Session-Local, Not Persisted (+2 more)
 
-### Community 686 - "Storybook: Testing Integration"
+### Community 643 - "Storybook Testing Integration"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Assuming Stories Without `play` Functions Get Any Behavioral Verification, ⚠️ Pitfall 2: Not Installing Playwright's Browser Dependencies in CI, ⚠️ Pitfall 3: Running the Test-Runner Against a Live Dev Server Instead of a Built, Static Storybook, Running in CI: A Real Browser, Not jsdom (+2 more)
 
-### Community 687 - "Storybook: Publishing And Deployment"
+### Community 644 - "Storybook Publishing And Deployment"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Chromatic Publish: Per-Commit, Per-PR Storybook URLs, ⚠️ Pitfall 1: Deploying a Static Storybook Without Any Access Control for an Internal-Only Design System, ⚠️ Pitfall 2: Forgetting `--exit-zero-on-changes` for Chromatic in a Non-Blocking CI Setup, ⚠️ Pitfall 3: Not Cache-Busting Between Static Deployments, Serving a Stale Storybook Build (+2 more)
 
-### Community 688 - "Tanstack-Query: Core Concepts"
+### Community 645 - "Tanstack-Query Caching And Invalidation"
 Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Core Concepts: The Server-State Model, `QueryClient` & Why Server State Is Different, ⚠️ Pitfall 1: Treating Server State Like Client State, Reinventing What TanStack Query Already Solves, ⚠️ Pitfall 2: Creating Multiple `QueryClient` Instances Accidentally, ⚠️ Pitfall 3: Assuming Cached Server Data Is Always Current (+2 more)
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Caching & Invalidation: `invalidateQueries()`, `refetchQueries()` & Direct Cache Access, Hierarchical Keys Enabling Partial-Match Invalidation, ⚠️ Pitfall 1: Using `refetchQueries()` Where `invalidateQueries()` Would Suffice, ⚠️ Pitfall 2: Over-Broad Invalidation Causing Unnecessary Refetch Storms (+2 more)
 
-### Community 689 - "Tanstack-Query: Usemutation"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `mutate()` vs `mutateAsync()`: Fire-and-Forget vs Awaitable, ⚠️ Pitfall 1: Forgetting to Cancel In-Flight Queries Before an Optimistic Update, ⚠️ Pitfall 2: Using `mutate()` When the Calling Code Needs to Await the Result, ⚠️ Pitfall 3: Forgetting `onError`'s Rollback, Leaving the Cache Permanently Wrong After a Failure (+2 more)
-
-### Community 690 - "Tanstack-Query: Pagination And Infinite Queries"
+### Community 646 - "Tanstack-Query Pagination And Infinite Q"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `getNextPageParam`: Deriving the Next Request From the Last Response, `keepPreviousData`: Eliminating Loading Flicker Between Pages, 🔄 Pagination & Infinite Queries: `useInfiniteQuery` & `keepPreviousData`, ⚠️ Pitfall 1: Forgetting `getNextPageParam` Must Return `undefined` to Stop Pagination (+2 more)
 
-### Community 691 - "Tanstack-Query: Global Configuration"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Global Configuration: `QueryClient` Defaults & Per-Query Overrides, ⚠️ Pitfall 1: Enabling Automatic Retries for Mutations Without Considering Idempotency, ⚠️ Pitfall 2: Setting a Global `staleTime` So High It Masks Genuinely Fresh-Data-Needing Queries, ⚠️ Pitfall 3: Forgetting That `defaultOptions` Only Apply to Queries Created AFTER the Client Is Configured (+2 more)
-
-### Community 692 - "Tanstack-Query: Optimistic Updates Patterns"
+### Community 647 - "Tanstack-Query Optimistic Updates Patter"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Optimistic Updates Patterns: List vs Single-Item Rollback & Race Conditions, ⚠️ Pitfall 1: Restoring Only a Partial Patch Instead of the Full Snapshot on Rollback, ⚠️ Pitfall 2: Skipping `cancelQueries()`, Reintroducing the Background-Refetch Race, ⚠️ Pitfall 3: Leaving the Mutation's Generic Type Parameters Untyped, Losing Rollback Type Safety (+2 more)
 
-### Community 693 - "Tanstack-Query: Testing Tanstack Query"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Sharing One `QueryClient` Instance Across Multiple Tests, ⚠️ Pitfall 2: Forgetting `retry: false` in the Test Client, Producing Needlessly Slow Tests, ⚠️ Pitfall 3: Mocking `queryFn` Directly Instead of Intercepting at the Network Layer, `retry: false`: Failing Fast Instead of Waiting Through Backoff (+2 more)
-
-### Community 694 - "Tanstack-Query: Migration Recipes"
-Cohesion: 0.20
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Migration Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🔄 Migration Recipe: RTK Query → TanStack Query, ⚠️ Pitfall 1: Assuming `providesTags`' `'LIST'` Pseudo-Tag Needs a Direct Equivalent, ⚠️ Pitfall 2: Forgetting `mutationFn` Doesn't Auto-Parse JSON or Throw on Non-2xx, ⚠️ Pitfall 3: Migrating Endpoint-by-Endpoint Without Deciding Where the QueryClient Lives (+1 more)
-
-### Community 695 - "Typescript: Phase 2 Narrowing"
-Cohesion: 0.20
-Nodes (9): Assertion methods on `this`, Gotchas, Interview questions, 🔴 The explicit-annotation requirement, The sibling rule, Trade-off, What Node's `assert` module actually declares, Where it earns its place (+1 more)
-
-### Community 696 - "Typescript: Phase 3 Generics"
-Cohesion: 0.20
-Nodes (9): Gotchas, Inference order makes it work, Interview questions, `K extends keyof T` — check the key against that object, Start from what fails, `T[K]` — the indexed access, `<T>` — remember which object, The body needs no assertion (+1 more)
-
-### Community 697 - "Vite: Core Architecture"
+### Community 648 - "Vite Core Architecture"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, esbuild Pre-Bundling: Solving Two Problems at Once, ⚠️ Pitfall 1: Assuming Dev and Production Builds Use Identical Transform Behavior, ⚠️ Pitfall 2: A Dependency Missing From `optimizeDeps.include`, Causing Constant Re-Bundling, ⚠️ Pitfall 3: Expecting Native ESM Dev Serving to Work Identically in Every Browser (+2 more)
 
-### Community 698 - "Vite: Cli And Scaffolding"
+### Community 649 - "Vite Cli And Scaffolding"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ CLI & Project Scaffolding: `create vite` & Core Commands, `npm create vite@latest`: Template-Based Scaffolding, Not a Framework Opinion, ⚠️ Pitfall 1: Treating the Dev Server as a Reliable Production Preview, ⚠️ Pitfall 2: Manually Running `vite optimize` Habitually "Just in Case" (+2 more)
 
-### Community 699 - "Vite: Plugin System"
+### Community 650 - "Vite Plugin System"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `apply`: Restricting a Plugin to Dev-Only or Build-Only, `enforce`: Controlling Execution Order Relative to Core Processing, ⚠️ Pitfall 1: Forgetting `apply` on a Dev-Only Plugin, Leaking Debug Code Into Production, ⚠️ Pitfall 2: Assuming Plugin Order Doesn't Matter (+2 more)
 
-### Community 700 - "Vite: Optimization And Performance"
+### Community 651 - "Vite Path Resolution And Aliases"
 Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `chunkSizeWarningLimit`: A Tripwire, Not a Hard Failure, ⚡ Optimization & Performance: Tree-Shaking, Chunk Warnings & Size Reporting, ⚠️ Pitfall 1: Ignoring Chunk-Size Warnings as Routine CI Noise, ⚠️ Pitfall 2: Judging Bundle Size From Raw Numbers Instead of the Gzip Column (+2 more)
+Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `alias`: Must Be Mirrored in `tsconfig.json`'s `paths`, `dedupe`: Solving the "Two Copies of React" Problem, ⚡ Path Resolution & Aliases: `resolve.alias`, `extensions` & `dedupe`, ⚠️ Pitfall 1: Configuring `resolve.alias` Without Mirroring It in `tsconfig.json` (+2 more)
 
-### Community 701 - "Vite: Testing Integration"
+### Community 652 - "Vite Testing Integration"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Maintaining a Separate Test Config File "Just in Case," Reintroducing Drift, ⚠️ Pitfall 2: Assuming a Vite-Specific Plugin's Dev-Only Behavior (`apply: 'serve'`) Applies to Tests Correctly, ⚠️ Pitfall 3: Forgetting Test Environment (`jsdom`/`node`) Is a Vitest-Specific Concern, Not Something Vite Itself Configures, Shared Plugin Ecosystem (+2 more)
 
-### Community 702 - "Vite: Migration Recipes"
+### Community 653 - "Vite Migration Recipes"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Migration Sequence, 4. Senior Engineer Edge Cases & Pitfalls, ⚡ Migration Recipe: Create React App → Vite, ⚠️ Pitfall 1: A Dependency Crashes With "process is not defined", ⚠️ Pitfall 2: `tsconfig.json` Paths Configured, But Imports Still Fail at Runtime, ⚠️ Pitfall 3: CRA's Built-In Jest Setup Doesn't Carry Over (+1 more)
 
-### Community 703 - "Web-Vitals-Performance: Bundle And Media Optimization"
+### Community 654 - "Web-Vitals-Performance Bundle And Media "
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, 🚀 JavaScript Bundle & Media Optimization, Media Delivery, ⚠️ Pitfall 1: Replacing a Heavy Dependency Without Verifying Feature Parity, ⚠️ Pitfall 2: Serving One Oversized Image to Every Device (+2 more)
 
-### Community 704 - "Webpack: Asset Modules"
+### Community 655 - "Webpack Module Resolution"
+Cohesion: 0.20
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Key Options, ⚙️ Module Resolution: The `resolve` Object, ⚠️ Pitfall 1: An Overly Long `extensions` List Slowing Every Build, ⚠️ Pitfall 2: `mainFields` Order Silently Disabling Tree Shaking (+1 more)
+
+### Community 656 - "Webpack Asset Modules"
 Cohesion: 0.20
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Asset Modules (Webpack 5+): Built-In `asset/*` Types, Automatic Choice via `maxSize`, ⚠️ Pitfall 1: Inlining Fonts via `asset/inline`, ⚠️ Pitfall 2: Forgetting Old `file-loader` Options Don't Map 1:1 (+1 more)
 
-### Community 705 - "Webpack: Optimization"
+### Community 657 - "Webpack Optimization: 1. Under-The-Hood "
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Module/Chunk IDs & Long-Term Caching, ⚠️ Pitfall 1: `"sideEffects": false` on a Package That Actually Has Import-Time Side Effects, ⚠️ Pitfall 2: CommonJS Imports Defeating Tree Shaking Entirely, ⚠️ Pitfall 3: Blanket `drop_console: true` Silencing Legitimate Production Error Logging (+2 more)
 
-### Community 706 - "Webpack: Caching Strategies"
-Cohesion: 0.20
-Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Browser Cache-Busting: `[hash]` vs `[chunkhash]` vs `[contenthash]`, ⚙️ Long-Term Caching: Content Hashes & Persistent Build Cache, Persistent Filesystem Build Cache, ⚠️ Pitfall 1: Using `[hash]` Instead of `[contenthash]`, Believing It's Equivalent (+2 more)
-
-### Community 707 - "Webpack: Performance Analysis"
+### Community 658 - "Webpack Performance Analysis"
 Cohesion: 0.20
 Nodes (10): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Performance Analysis: Bundle Analyzer, Stats & Size Budgets, `performance.hints`, ⚠️ Pitfall 1: Measuring Uncompressed Size Instead of Gzip/Brotli Size, ⚠️ Pitfall 2: `performance.hints` Silently Set to `false` After a Budget Violation "Just to Unblock a Deploy" (+2 more)
 
-### Community 708 - "Sandbox Css - puppeteer-core"
+### Community 659 - "Reviews: 1 · Structural verification"
+Cohesion: 0.20
+Nodes (10): 01 · Syllabus review — accuracy, and fit to the fullstack goal, 1 · Structural verification, 2 · Fit to the fullstack goal, 3.1 Transactional outbox <span>Understand</span> — **the significant one**, 3.2 Multi-tenancy as a decision <span>Understand</span>, 3.3 Audit and history tables <span>Understand</span>, 3.4 Modelling money <span>Master</span>, 3 · What is missing — four real-world patterns with no home (+2 more)
+
+### Community 660 - "Sandbox Css: dependencies"
 Cohesion: 0.20
 Nodes (9): dependencies, puppeteer-core, web-features, description, puppeteer-core, name, private, type (+1 more)
 
-### Community 709 - "Sandbox P8-Security - ex1-crypto.mjs"
+### Community 661 - "Sandbox P8 Security"
 Cohesion: 0.20
 Nodes (8): a, b, c, salt, scrypt, secret, sig, t2
 
-### Community 710 - "Sandbox Pg-Api - ex26-index-ops.mjs"
+### Community 662 - "Sandbox Pg Api"
 Cohesion: 0.27
 Nodes (5): bytes(), plan(), pool, q(), size()
 
-### Community 711 - "Sandbox Pg-Api - ex30-vacuum-horizon.mjs"
+### Community 663 - "Sandbox Pg Api"
 Cohesion: 0.24
 Nodes (4): pool, q(), size(), stats()
 
-### Community 712 - "Sandbox Pg-Api - ex50-privileges.mjs"
+### Community 664 - "Sandbox Pg Api"
 Cohesion: 0.22
 Nodes (6): admin, admin2, c1, own, q(), tryAdmin()
 
-### Community 713 - "Sandbox Ts-P1 - infer.ts"
+### Community 665 - "Sandbox Ts P1"
 Cohesion: 0.20
 Nodes (8): constCity, frozen, maybe, mixed, mutableCity, nested, rates, tupleish
 
-### Community 714 - "/ - undraw Docusaurus Mountain Illustration"
-Cohesion: 0.36
-Nodes (10): undraw Docusaurus Mountain Illustration, Docusaurus, Docusaurus Keytar Mascot, Easy to Use, Keytar Keyboard, Night Mountain Landscape, Pine Trees, Seated Observer (+2 more)
-
-### Community 715 - "Css: Phase 1 Selectors"
-Cohesion: 0.33
-Nodes (9): Form-state Pseudo-classes, appearance:none custom checkbox, :indeterminate, :invalid, :user-invalid, Pseudo-elements, ::before and ::after, content property (+1 more)
-
-### Community 716 - "Git: Phase 0 How Git Stores"
+### Community 666 - "Css Selectors: The specificity differenc"
 Cohesion: 0.22
-Nodes (9): Branch is a moving ref, Branching is a 41-byte file write, Unset config uses built-in defaults, Five config scopes, includeIf directory identity, git config --show-origin --show-scope, init.defaultBranch still master on 2.55.0, Defensible starting Git config (+1 more)
+Nodes (8): Both forgive invalid arguments, Gotchas, Interview questions, The specificity difference, The trade-off, They match the same things, What `:is()` is for, What `:where()` is actually for
 
-### Community 717 - "Git: Phase 0 How Git Stores"
+### Community 667 - "Css Selectors: Naming state values"
 Cohesion: 0.22
-Nodes (9): Commit DAG, Commit dates are metadata not structure, git merge-base, Merge commit, Parent pointers define order, Commit range A..B, Reachability, Rebase versus merge trade-off (+1 more)
+Nodes (8): Gotchas, Interview questions, Naming state values, Never style on `data-testid`, State belongs on attributes, The `js-` prefix convention, Three consumers, three hooks, Where `:has()` changes the design
 
-### Community 718 - "Javascript: Phase 2 Operators"
-Cohesion: 0.22
-Nodes (9): Exponentiation ** right-associative, -2 ** 2 SyntaxError, Assignment is an expression, ?? cannot mix with && or ||, Ternary chooses a value, && binds tighter than ||, Five precedence bugs, Right-associative operators (+1 more)
-
-### Community 719 - "Javascript: Phase 3 Functions"
-Cohesion: 0.28
-Nodes (9): arguments object, Arity is never enforced, Destructured parameters, Non-simple parameter list, Rest parameters, Positional plus options-object signature, Sloppy-mode arguments aliasing, Arrow inherited arguments (+1 more)
-
-### Community 720 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.22
-Nodes (9): A miss traverses the entire chain, Property shadowing, Prototype chain, this is the receiver not the home, Keep the prototype chain short, Shared mutable prototype state, A write creates an own property, Derived class field initialisation order (+1 more)
-
-### Community 721 - "Javascript: Phase 7 Async"
-Cohesion: 0.22
-Nodes (9): Call stack, Event loop, Heap, A job is complete when the stack is empty, Job queue, No tail-call optimisation in V8, Node vs browser event loops, setTimeout delay is a minimum (+1 more)
-
-### Community 722 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.31
-Nodes (9): Event loop lag, Idle p50 is the sampling resolution, Lag max vs p99, monitorEventLoopDelay histogram, Saturation signal, perf_hooks, Exposing metrics for Prometheus, CPU and heap profiling (+1 more)
-
-### Community 723 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.22
-Nodes (9): MODULE_TYPELESS_PACKAGE_JSON, Nearest package.json type field, Avoid postinstall scripts, engines as a floor, files allowlist, node --run, package.json essentials, package.json type field (+1 more)
-
-### Community 724 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.22
-Nodes (9): Caret vs tilde ranges, package.json overrides, Semantic versioning, save-exact, Pre-release dist-tag, npm publish --provenance, A published version is permanent, Publishing a package (+1 more)
-
-### Community 725 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.22
-Nodes (9): Buffer, Buffer.from and Buffer.alloc, Collect HTTP body with a size limit, Buffer.concat, JSON.stringify of a Buffer, Buffer.length is bytes, Buffer basics, Buffer.subarray shares memory (+1 more)
-
-### Community 726 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.25
-Nodes (9): TLS certificate chain, HTTPS, TLS and mTLS, Node Mozilla trust store, Mutual TLS, NODE_EXTRA_CA_CERTS, rejectUnauthorized false is never the fix, SNI, TLS termination in Node (+1 more)
-
-### Community 727 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.22
-Nodes (9): TCP message framing, node:net, node:dgram and framing, socket.setNoDelay, TCP is a byte stream, node:dgram UDP, Unix domain socket, HPACK header compression, HTTP/2 stream multiplexing (+1 more)
-
-### Community 728 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.31
-Nodes (9): child_process, child_process.exec, child_process.execFile, maxBuffer 1 MB cliff, child_process.spawn, Do not use a shell with user input, pg.escapeIdentifier, SQL placeholders (+1 more)
-
-### Community 729 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.25
-Nodes (9): Batch with ANY / $in, json_agg join, N+1 query, Promise.all is not the N+1 fix, Driver, query builder, ORM, Prisma include is two queries, Schema-first vs SQL-first, Tagged-template escape hatches parameterize (+1 more)
-
-### Community 730 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.28
-Nodes (9): Database, postgresql:// connection URI, DATABASE_URL, PG* environment variables, .pgpass, postgres database, ex31-psql-basics.sh, Three psql connection forms (+1 more)
-
-### Community 731 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.25
-Nodes (9): Function around the column, Partial index, Partial indexes, Partial UNIQUE index, Partial-index predicate implication, Expression index, Expression indexes, Expression-index statistics (+1 more)
-
-### Community 732 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.28
-Nodes (9): REPEATABLE READ turns lost updates into 40001, REPEATABLE READ and SERIALIZABLE, SQLSTATE 40001 serialization failure, REPEATABLE READ, SERIALIZABLE, Write skew, Row locks: FOR UPDATE and friends, SQLSTATE 40P01 deadlock detected (+1 more)
-
-### Community 733 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.22
-Nodes (9): 8 GB notification queue, Partition key must be in every unique constraint, What logical replication does not copy, PUBLICATION and SUBSCRIPTION, Replica identity, Abandoned replication slot fills publisher disk, Logical vs physical replication, Logical-replication upgrade cutover (+1 more)
-
-### Community 734 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.22
-Nodes (9): Liberal constraints conservative types, UUIDv7, Add backfill swap type change, Table rewrite via relfilenode, Volatile default rewrites ADD COLUMN, Constant default ADD COLUMN since PG11, ON COMMIT DROP, TEMPORARY table (+1 more)
-
-### Community 735 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.31
-Nodes (9): INSERT, ON CONFLICT DO NOTHING RETURNING trap, RETURNING, RETURNING on every write, INSERT ON CONFLICT, xmax = 0 as was_insert, UPDATE, Soft delete is an UPDATE (+1 more)
-
-### Community 736 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.31
-Nodes (9): Canonical child-collection idiom, The empty-array trap, FILTER empty group is NULL, LEFT JOIN NULL row kept by array_agg, array_agg, string_agg, array_agg, jsonb_agg, json_agg / jsonb_agg, jsonb_object_agg (+1 more)
-
-### Community 737 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.28
-Nodes (9): Two-level LATERAL nested payload, Shape in SQL versus stitch in JS, CTE (WITH), CTE name shadows a real table, CTE forward reference 42P01, Naming a subquery, The inlining rule, CTEs (WITH) (+1 more)
-
-### Community 738 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.25
-Nodes (9): CTE inlining conditions, LIMIT does not fence a CTE, MATERIALIZED fence, Volatility classes and CTE inlining, Multiply-referenced CTE computed once, NOT MATERIALIZED is advisory, OFFSET 0 subquery fence, References, hints and the plan (+1 more)
-
-### Community 739 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.22
-Nodes (9): Correlated subquery, Scalar subquery, Subqueries, Table subquery, Capped count, Recursive CTE cycle, CYCLE clause, Recursive depth guard (+1 more)
-
-### Community 740 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.25
-Nodes (9): Recursive CTE anchor, generate_series instead of recursion, Recursive term, Recursive Union, WorkTable Scan, 42P19 recursive term restrictions, Missing RECURSIVE is 42P01, SEARCH clause (+1 more)
-
-### Community 741 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.22
-Nodes (9): DDL as ordinary query, Identifiers cannot be parameters, Simple vs extended query protocol, Transactional DDL, CREATE INDEX lock modes, Assembled list query, OFFSET pagination cost, ORDER BY unique tiebreaker (+1 more)
-
-### Community 742 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.28
-Nodes (9): 65535 parameter wire limit, Autocommit WAL flush cost, Bulk insert that scales, COPY FROM STDIN from Node, INSERT SELECT unnest, COPY text vs csv format, COPY NULL representation, pg-copy-streams (+1 more)
-
-### Community 743 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.22
-Nodes (9): Mapper is an allowlist by construction, Keep mapper adjacent to the SELECT, Missing SELECT row is not an error, rowCount versus rows.length, toDomain row mapper, FILTERABLE column and operator map, Allowlist is a lookup not validation, Allowlist is also the index contract (+1 more)
-
-### Community 744 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.25
-Nodes (9): 42xxx codes must stay 500s, Validate in the app and still map 23505, Switch on constraint name not message, err.detail leaks submitted values, Map SQLSTATE in middleware not the repository, SQLSTATE to HTTP status map, toHttpError, unique_violation 23505 (+1 more)
-
-### Community 745 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.25
-Nodes (9): = ANY($1::bigint[]), Bound parameter cannot become SQL, Escape ILIKE pattern metacharacters, Concatenated ORDER BY drops the table, ORDER BY $1 is a silent no-op, Simple query protocol stacked statements, The payload is not the problem — the position is, format %I %L %s (+1 more)
-
-### Community 746 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.22
-Nodes (9): Database clock for created_at, Built SET list, COALESCE patch form, SET naming does not defeat HOT, IS DISTINCT FROM no-op guard, jsonb shallow merge patch, created_at DEFAULT now(), now() is the transaction timestamp (+1 more)
-
-### Community 747 - "React: Phase 0 How React Runs"
-Cohesion: 0.28
-Nodes (9): react-dom renderer, react package, react / react-dom version-match rule, canary channel, React release channels, Renderer host config, React Native, react-reconciler (+1 more)
-
-### Community 748 - "React: Phase 2 Components"
-Cohesion: 0.22
-Nodes (9): Compound components, React 19 context as provider, Composition over configuration, Render props and function-as-children, legacy.reactjs.org Render Props, Legacy context removed in React 19, cloneElement, Children.map and isValidElement, cloneElement (+1 more)
-
-### Community 749 - "React: Phase 2 Components"
-Cohesion: 0.25
-Nodes (9): Portal accessibility obligation, react.dev createPortal, Portals escape overflow and stacking contexts, dialog showModal and the top layer, React events vs native events on portals, Portals, Portal changes DOM placement only, createPortal is client-only (+1 more)
-
-### Community 750 - "React: Phase 4 Effects"
-Cohesion: 0.28
-Nodes (9): Effects only run on the client, react.dev You Might Not Need an Effect, Application init belongs at module level, typeof window guard around module init, subscribe must be declared outside the component, useSyncExternalStore, Twelve cases; only fetching survives, Fetching data in an effect (+1 more)
-
-### Community 751 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.22
-Nodes (9): any, unknown, unknown at the door never any, type alias, JsonValue, reduce type argument pins accumulator, Array.isArray type guard, Reveal narrowed type via impossible assignment (+1 more)
-
-### Community 752 - "Sandbox P9-Testing - jest"
-Cohesion: 0.22
-Nodes (8): jest, dependencies, jest, vitest, name, private, type, vitest
-
-### Community 753 - "Framer-Motion: Orchestration And Staggering"
+### Community 668 - "Framer-Motion Orchestration And Staggeri"
 Cohesion: 0.22
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `custom` Prop: Per-Child Data-Driven Stagger, 🎨 Orchestration & Staggering: Parent-Child Timing & Custom Per-Child Stagger, ⚠️ Pitfall 1: Assuming `staggerChildren` Can Express Non-Sequential Stagger Patterns, ⚠️ Pitfall 2: Forgetting a Variant Defined as a Function Needs the `custom` Prop Actually Set (+1 more)
 
-### Community 754 - "Javascript: Phase 13 Complexity"
+### Community 669 - "Javascript How Javascript Runs"
+Cohesion: 0.22
+Nodes (8): Function declarations are hoisted whole. Function *expressions* are not., Gotchas, Hoisting is the creation pass, observed, Interview questions, Proof: a syntax error stops the first line, The three passes, The two error messages are different on purpose, Why the TDZ is a feature, not a nuisance
+
+### Community 670 - "Javascript How Javascript Runs"
+Cohesion: 0.22
+Nodes (8): Gotchas, Interview questions, Measured: what Node 24 actually has, The features worth knowing by edition, The names, The stage process, What to actually check before using a feature, Why editions stopped mattering
+
+### Community 671 - "Javascript How Javascript Runs"
+Cohesion: 0.22
+Nodes (8): Globals that are *not* the global object, Gotchas, Interview questions, `navigator` is the trap, The four hosts, The measured map, The shared surface, in practice, Writing a module that runs in both
+
+### Community 672 - "Javascript Complexity: Best, average and"
 Cohesion: 0.22
 Nodes (8): Best, average and worst case, Dropping constants and lower-order terms, Gotchas, Interview questions, Space complexity is a separate answer, The definition, in the form you will use, The notations that are not O, What Big-O cannot tell you
 
-### Community 755 - "Javascript: Phase 3 Functions"
+### Community 673 - "Nodejs Modules: Importing CommonJS from "
 Cohesion: 0.22
-Nodes (8): Arity dispatch, and why it is the weakest option, Designing a signature that ages, Gotchas, Interview questions, The options object is usually the right answer, Type dispatch, and the checks that are actually correct, What TypeScript changes, and what it does not, When dispatch is genuinely the right call
+Nodes (8): `createRequire` — CommonJS helpers inside ESM, Gotchas, Importing CommonJS from ESM, Interview questions, JSON in ESM, `require()`-ing an ES module, The hard boundary: top-level `await`, Where the analysis gives up
 
-### Community 756 - "Javascript - 🔒 Chunk claims"
+### Community 674 - "Nodejs Modules: Erasable syntax only"
 Cohesion: 0.22
-Nodes (8): 🔒 Chunk claims, 🔒 FOUR CHUNKS — `docs/javascript/` is split between four sessions (2026-08-15), 🔴🔴 How a session is started NOW — **give the phase, say continue** (2026-08-15), How these pages are verified, Phases, 🔴 The critical rule — a line cap is a FILE-SIZE rule, never a content budget, The older form — `pick javascript A`, still understood, Working order — 🔴 Master-first is FINISHED; the tiers are the work
+Nodes (8): Erasable syntax only, Gotchas, Import specifiers, Interview questions, `node_modules` is excluded, So do you still need a build step?, What it does not do: check anything, What works
 
-### Community 757 - "Mongodb: Phase 0 How Mongodb Runs"
+### Community 675 - "Nodejs Modules: Dual CJS/ESM packages"
 Cohesion: 0.22
-Nodes (8): Gotchas, Interview questions, Schema validation exists, and is off by default, "Schemaless" is wrong, and actively harmful, The three levels, The trade, stated plainly, Trade-off, Where this leaves you
+Nodes (8): Dual CJS/ESM packages, Gotchas, Interview questions, Pre-releases, Provenance, Scoped names, The pre-flight check, Versioning
 
-### Community 759 - "Playwright: Real World Workflows And Recipes"
+### Community 676 - "Nodejs Testing: Do not build a DI contai"
+Cohesion: 0.22
+Nodes (8): Defaults keep call sites honest, Do not build a DI container, Gotchas, Interview questions, The fix, The problem, measured, Two shapes that both work, What counts as a hidden dependency
+
+### Community 677 - "Nodejs Testing: Reading it well"
+Cohesion: 0.22
+Nodes (8): Gotchas, Interview questions, Reading it well, Running it, The demonstration, The other direction: covered but unasserted, What the number is good for, Why 100% is actively harmful
+
+### Community 678 - "Nodejs Testing: Isolation between tests"
+Cohesion: 0.22
+Nodes (8): Gotchas, Interview questions, Isolation between tests, Other containers, Running under podman, The cost, measured, The shape, When it is not worth it
+
+### Community 679 - "Nodejs Syllabus: Deliberately not here"
+Cohesion: 0.22
+Nodes (8): Deliberately not here, Logging and tracing, Metrics and health, Performance work, Phase 10 — Observability and performance, Phase 11 — Deployment and operations, Phase 12 — Native and advanced, Where this connects
+
+### Community 680 - "Playwright Real World Workflows And Reci"
 Cohesion: 0.22
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 🎭 Diagnosing a Test That's Flaky in CI But Passes Locally, ⚠️ Pitfall 1: Reaching for `retries` as the Fix Instead of the Band-Aid, ⚠️ Pitfall 2: "Fixing" Flakiness by Adding More `waitForTimeout` Calls, ⚠️ Pitfall 3: Assuming "Passes Locally 50/50 Runs" Proves It's Not the Test's Fault (+1 more)
 
-### Community 760 - "React: Phase 14 Correctness"
+### Community 681 - "Postgresql Architecture: From Node"
 Cohesion: 0.22
-Nodes (8): Filling fields, by control type, Gotchas, Interview questions, Submitting, Testing React 19 Actions, The shape of a form test, The states worth asserting, What not to test
+Nodes (8): From Node, Gotchas, Interview questions, License and governance, See it running, Trade-off, What you are holding, Why it exists
 
-### Community 761 - "Tanstack-Query: Query States"
+### Community 682 - "Postgresql Architecture: See it on the s"
 Cohesion: 0.22
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Using `isFetching` Where `isLoading` Was Actually Needed, ⚠️ Pitfall 2: Assuming `status: 'success'` Means "Definitely Fresh, Just-Fetched Data", ⚠️ Pitfall 3: Not Handling the `pending` + `paused` (Offline) Combination Distinctly, 🔄 Query States: `status` vs `fetchStatus` & the Loading Flag Family (+1 more)
+Nodes (8): From Node — two checkouts, two backends, Gotchas, Interview questions, See it on the server, The shape, Trade-off, What this means for fullstack apps, Why it exists
 
-### Community 762 - "Webpack: Loaders"
+### Community 683 - "Postgresql Psql: Into a container"
+Cohesion: 0.22
+Nodes (8): Confirming what you connected to, Gotchas, Interview questions, Into a container, Passwords, Reading the four failures, The three forms, Trade-off
+
+### Community 684 - "Postgresql Psql: Machine-readable output"
+Cohesion: 0.22
+Nodes (8): Gotchas, Interview questions, Machine-readable output, Other `\pset` knobs, Sending output somewhere, The `NULL` trap, Trade-off, `\x` — expanded output
+
+### Community 685 - "Postgresql Psql: \h — SQL syntax"
+Cohesion: 0.22
+Nodes (7): Gotchas, `\h` — SQL syntax, Interview questions, `\?` — psql's commands, The three-command loop, Trade-off, Phase gate
+
+### Community 686 - "Postgresql Psql: Editing the buffer"
+Cohesion: 0.22
+Nodes (8): Editing the buffer, `\g` and its variants, Gotchas, `\gset` — a query result into a variable, History, Interview questions, Nothing is sent until you terminate the statement, Trade-off
+
+### Community 687 - "Postgresql Psql: Built-in variables"
+Cohesion: 0.22
+Nodes (8): Built-in variables, Gotchas, Interview questions, Setting and using, Trade-off, Trap 1: `-c` does not interpolate at all, Trap 2: an unset variable is left as literal text, Trap 3: substitution is textual, so it is injectable
+
+### Community 688 - "Postgresql Psql: Exporting"
+Cohesion: 0.22
+Nodes (8): Exporting, Gotchas, Interview questions, It is one transaction — all or nothing, Options worth knowing, The distinction, and the hint that explains it, The receipt, Trade-off
+
+### Community 689 - "Postgresql Psql: Building a seed script"
+Cohesion: 0.22
+Nodes (8): Building a seed script, Conditional includes, Gotchas, Interview questions, Making a script report its own progress, The difference, measured, Trade-off, Where this stops being enough
+
+### Community 690 - "Postgresql Psql: \dp — the table privile"
+Cohesion: 0.22
+Nodes (8): `\dp` — the table privileges, `\du` — the roles, Gotchas, Interview questions, The grants a new role actually needs, Trade-off, What a limited role actually experiences, Who am I
+
+### Community 691 - "Storybook Real World Workflows And Recip"
+Cohesion: 0.22
+Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Setup Sequence, 4. Senior Engineer Edge Cases & Pitfalls, 📖 Bootstrapping Storybook Into an Existing App With Providers Already Wired In, ⚠️ Pitfall 1: Sharing ONE Store/QueryClient Instance Across Every Story, ⚠️ Pitfall 2: Using `BrowserRouter` Instead of `MemoryRouter` in Storybook, ⚠️ Pitfall 3: Forgetting the Global Stylesheet Import, Getting "It Works But Looks Wrong" (+1 more)
+
+### Community 692 - "Webpack Loaders: 1. Under-The-Hood Mecha"
 Cohesion: 0.22
 Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, `babel-loader` & Type-Checking Strategy, ⚙️ Loaders In-Depth: Transpilation & Style Pipelines, ⚠️ Pitfall 1: Loader Order Reversed, ⚠️ Pitfall 2: Using `style-loader` in Production Builds (+1 more)
 
-### Community 763 - "Webpack: Plugins"
+### Community 693 - "Sandbox P9 Testing"
 Cohesion: 0.22
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Pitfall 1: Forgetting `JSON.stringify` in `DefinePlugin` Values, ⚠️ Pitfall 2: Baking Secrets Into the Bundle via `DefinePlugin`, ⚠️ Pitfall 3: `HtmlWebpackPlugin` Chunk Injection Order With Multiple Entries, ⚙️ Plugins In-Depth: The Essential Build-Extension Toolkit (+1 more)
+Nodes (8): jest, dependencies, jest, vitest, name, private, type, vitest
 
-### Community 764 - "Webpack: Source Maps"
-Cohesion: 0.22
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Code Example, 4. Senior Engineer Edge Cases & Pitfalls, Common Choices by Environment, ⚠️ Pitfall 1: Shipping `eval`-Based Devtools to Production, ⚠️ Pitfall 2: Publicly Serving Full `source-map` in Production, ⚠️ Pitfall 3: Forgetting to Delete `.map` Files Before Deploying Static Assets (+1 more)
-
-### Community 765 - "Webpack: Real World Workflows And Recipes"
-Cohesion: 0.22
-Nodes (9): 1. Under-The-Hood Mechanics, 2. Real-World Engineering Scenario, 3. Production-Grade Diagnostic Sequence, 4. Senior Engineer Edge Cases & Pitfalls, ⚙️ Diagnosing and Shrinking a Bloated Production Bundle, End-to-End, ⚠️ Pitfall 1: Fixing the First Big Box Without Checking If It's Legitimate, ⚠️ Pitfall 2: Fixing `sideEffects` Globally Instead of Per-Package, ⚠️ Pitfall 3: Declaring Victory From the Uncompressed Treemap Number (+1 more)
-
-### Community 766 - "Sandbox Git-P0 - ex1-version-facts.sh"
+### Community 694 - "Sandbox Git P0"
 Cohesion: 0.25
 Nodes (8): GIT_AUTHOR_EMAIL, GIT_AUTHOR_NAME, GIT_COMMITTER_EMAIL, GIT_COMMITTER_NAME, GIT_CONFIG_GLOBAL, GIT_CONFIG_SYSTEM, line(), ex1-version-facts.sh script
 
-### Community 768 - "Sandbox Js-P0 - package.json"
+### Community 696 - "Sandbox Js P0"
 Cohesion: 0.22
 Nodes (8): description, keywords, main, name, scripts, test, type, version
 
-### Community 769 - "Sandbox P7-Background-Work - ex2-skiplocked.mjs"
+### Community 697 - "Sandbox P7 Background Work"
 Cohesion: 0.25
 Nodes (7): all, claim(), pool, t0, t1, taken, worker()
 
-### Community 770 - "Sandbox P8-Security - ex18-https-cookies.mjs"
+### Community 698 - "Sandbox P8 Security"
 Cohesion: 0.22
 Nodes (6): ca, cert, cookies, dir, hsts, key
 
-### Community 771 - "Sandbox P8-Security - ex25-audit-log.mjs"
+### Community 699 - "Sandbox P8 Security"
 Cohesion: 0.28
 Nodes (7): append(), canonical(), chain, dir, event, KEY, verify()
 
-### Community 772 - "Sandbox P9-Testing - @testcontainers/postgresql"
+### Community 700 - "Sandbox P9 Testing"
 Cohesion: 0.22
 Nodes (8): dependencies, pg, @testcontainers/postgresql, pg, name, private, type, @testcontainers/postgresql
 
-### Community 773 - "Sandbox P9-Testing - compat.test.mjs"
+### Community 701 - "Sandbox P9 Testing"
 Cohesion: 0.33
 Nodes (4): v1, UserResponse, createProvider(), verifyAgainst()
 
-### Community 774 - "Sandbox Pg-Api - ex25-index-kinds.mjs"
+### Community 702 - "Sandbox Pg Api"
 Cohesion: 0.28
 Nodes (4): plan(), pool, q(), size()
 
-### Community 775 - "Sandbox Pg-Api - ex33-types-core.mjs"
+### Community 703 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (6): bytes(), err(), pool, q(), size(), tryq()
 
-### Community 776 - "Sandbox Pg-Api - ex34-types-more.mjs"
+### Community 704 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (6): err(), plan1(), pool, q(), size(), tryq()
 
-### Community 777 - "Sandbox Pg-Api - ex36d-count-having.mjs"
+### Community 705 - "Sandbox Pg Api"
 Cohesion: 0.42
 Nodes (7): jj(), planOf(), pool, q(), rows(), timed(), tryq()
 
-### Community 778 - "Sandbox Pg-Api - ex37d-pagination-counts.mjs"
+### Community 706 - "Sandbox Pg Api"
 Cohesion: 0.42
 Nodes (7): capped(), jj(), planOf(), pool, q(), rows(), timed()
 
-### Community 779 - "Sandbox Pg-Api - ex45-search.mjs"
+### Community 707 - "Sandbox Pg Api"
 Cohesion: 0.28
 Nodes (6): ADJS, NOUNS, pool, q(), scanNode(), size()
 
-### Community 780 - "Sandbox Pg-Api - ex48-extensions-partitioning.mjs"
+### Community 708 - "Sandbox Pg Api"
 Cohesion: 0.22
 Nodes (3): cleanup, pool, vec
 
-### Community 781 - "/ - Docusaurus Brand Identity"
-Cohesion: 0.42
-Nodes (9): Docusaurus Brand Identity, Default Docusaurus Site Logo Asset, Docusaurus Dinosaur Mascot, Docusaurus Documentation Framework, Documentation Scroll, Flat Vector Illustration Style, Friendly Approachable Mascot Personality, Complementary Green Yellow Palette (+1 more)
-
-### Community 782 - "/ - Yarn node-modules linker"
-Cohesion: 0.29
-Nodes (8): Yarn node-modules linker, Explanation cadence, Grok project rules, Never-delete rule, Single-agent default, Node 24 Active LTS target, Incremental working process, Yarn 4.18 package manager
-
-### Community 783 - "Git: Phase 0 How Git Stores"
+### Community 709 - "Javascript How Javascript Runs"
 Cohesion: 0.25
-Nodes (8): Object name is SHA of header plus content, hash-object without -w does not store, History is immutable and cumulative, Refs are names pointing at hashes, Packfile delta compression, Snapshot model, Annotated tag, Lightweight tag
+Nodes (7): Detect once, at module load, Gotchas, Interview questions, Progressive enhancement, concretely, The four detection shapes, The measured reason this matters right now, When user-agent sniffing is defensible
 
-### Community 784 - "Git: Phase 0 How Git Stores"
+### Community 710 - "Javascript How Javascript Runs"
 Cohesion: 0.25
-Nodes (8): git count-objects -vH, Delta compression, git gc, Loose objects, Packing is below the object model, Packfile, Git LFS, Git is not a large-file store
+Nodes (7): Gotchas, Interview questions, Measured: optimise, then deopt, Measured: why a single timing is worthless, One piece of folklore that did **not** reproduce, The tiers, What actually makes JavaScript slow
 
-### Community 785 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.25
-Nodes (8): Array.isArray, JavaScript eight types, typeof null === object, null == undefined only, null >= 0 is true, Defaults fire only on undefined, JSON.stringify drops undefined, null versus undefined
-
-### Community 786 - "Javascript: Phase 2 Operators"
-Cohesion: 0.25
-Nodes (8): No integer division, Remainder % not modulo, True modulo idiom, ?.() does not test callability, Bitwise ToInt32 coercion, ~~ is not Math.trunc, >> vs >>>, Phase 2 — Operators, expressions and control flow
-
-### Community 787 - "Javascript: Phase 3 Functions"
-Cohesion: 0.32
-Nodes (8): new this binding, Arrow has no prototype, Arrow inherited bindings, No generator arrow, new discards bound this, Bound function exotic object, Hand-written bind, Partial application with bind
-
-### Community 788 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.25
-Nodes (8): Circular ESM import TDZ, CommonJS circular require, Array holes three states, ?? versus ||, undefined versus missing key, delete on an array leaves a hole, DataCloneError, JSON.stringify seven losses
-
-### Community 789 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.29
-Nodes (8): Computed property names, Conditional key spread idiom, Duplicate keys last wins, __proto__ colon form prototype setter, delete operator, Rest destructuring instead of delete, V8 HiddenClass and dictionary mode, Object.setPrototypeOf deoptimization
-
-### Community 790 - "Javascript: Phase 7 Async"
-Cohesion: 0.29
-Nodes (8): Callback, MDN Callback function, Synchronous vs asynchronous callbacks, Promise for one result, callback for many, MDN Promise, Promise, Promise three states, Resolved vs fulfilled
-
-### Community 791 - "Javascript: Phase 7 Async"
-Cohesion: 0.25
-Nodes (8): catch is then(undefined, onRejected), catch restores the chain, finally transparency, Identity and thrower default handlers, Chain error propagation modeled after try, Nesting to scope a catch, then(f, g) is not then(f).catch(g), finally is a link, not a clause
-
-### Community 792 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.25
-Nodes (7): Top-level await, ESM — the standard module system, ESM import extension is required, Imports are hoisted and run first, ESM live read-only bindings, Named versus default exports, ESM top-level await
-
-### Community 793 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.25
-Nodes (8): cluster module vs platform replicas, Autoscale on lag and saturation, Horizontal replicas, node:cluster on one machine, Connection pool multiplication, Serverless connection storm, Module-scope connection reuse, Poll blocking vs blocked event loop
-
-### Community 794 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.32
-Nodes (8): Hoisting makes undeclared dependencies work, node_modules walk, Corepack, Hoisted node_modules, npm, pnpm, yarn, Phantom dependencies, pnpm content-addressable store, Workspaces
-
-### Community 795 - "Nodejs: Phase 2 Async"
-Cohesion: 0.25
-Nodes (8): Timeout.unref, Process crash handler, Log and continue is wrong, unhandledRejection and uncaughtException, rejectionHandled, uncaughtException, isOperational flag, Operational vs programmer errors
-
-### Community 796 - "Nodejs: Phase 2 Async"
-Cohesion: 0.29
-Nodes (8): Sequential independent awaits, When sequential is right, async function*, for await...of, Generator finally cleanup on break, Async iterators and generators, Pull-based backpressure, Symbol.asyncIterator
-
-### Community 797 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.25
-Nodes (8): Backpressure, drain event, Fan-out without per-client backpressure, writableLength, write() returns false, High water mark throughput curve, highWaterMark, When to raise or lower highWaterMark
-
-### Community 798 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.29
-Nodes (7): pipeline AbortSignal, Never .pipe() in a server, stream.pipeline, Cleanup on close not end, Stream events end finish close, _destroy resource cleanup, stream.finished
-
-### Community 799 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.25
-Nodes (8): Exponential backoff with full jitter, Split queues by latency expectation, Retries and stalled jobs, Stalled vs failed jobs, Visibility timeout / lockDuration, Job idempotency, Dead-letter queues, Catch up from state not the clock
-
-### Community 800 - "Nodejs: Phase 8 Security"
-Cohesion: 0.29
-Nodes (8): Return 404 not 403 for foreign objects, Authentication, Authentication vs authorization, Authorization, Broken object-level authorization, Deny by default at the router, RBAC and ABAC, Opaque generated storage key
-
-### Community 801 - "Nodejs: Phase 8 Security"
-Cohesion: 0.29
-Nodes (8): TOTP drift window, HOTP, MFA and TOTP, Hashed MFA recovery codes, RFC 6238, Record accepted TOTP step, TOTP, WebAuthn / passkeys
-
-### Community 802 - "Nodejs: Foundations.Md"
-Cohesion: 0.25
-Nodes (8): Load testing, Contract testing and consumer-driven contracts, Phase 0 gate, Phase 0 — The runtime model, Phase 1 — Modules and packages, Phase 2 — Async and the event loop, Phase 2 gate, Phase 10 — Observability and performance
-
-### Community 803 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.25
-Nodes (8): Cluster, Four-level namespace, Qualify names in migrations, Schema, search_path, Identifier case folding, Phase 0 gate, psql name patterns
-
-### Community 804 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.25
-Nodes (8): Least-privilege app role, LOGIN user vs NOLOGIN group, Role, session_user vs current_user, pg_hba.conf, SQLSTATE 28P01, \conninfo, Four connection failure messages
-
-### Community 805 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.32
-Nodes (8): MySQL implicit commit on DDL, Transactional DDL, CREATE DATABASE, template0, template1, psql exit codes, ON_ERROR_STOP, --single-transaction
-
-### Community 806 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.32
-Nodes (8): Dirty read never in PostgreSQL, Non-repeatable read, Phantom read, READ COMMITTED, UPDATE re-evaluates WHERE after wait, Lost update, SELECT FOR UPDATE then UPDATE, SQL arithmetic UPDATE
-
-### Community 807 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.36
-Nodes (8): jsonb -> vs ->>, Missing key vs JSON null, jsonb containment @>, jsonpath @? and @@, jsonb accessor vs predicate families, jsonb expression index, GIN jsonb_ops, GIN jsonb_path_ops
-
-### Community 808 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.25
-Nodes (8): tsvector lexemes, websearch_to_tsquery, Generated tsvector column, to_tsvector IMMUTABLE config, ts_headline after LIMIT, FTS and trigram are complements, gin_trgm_ops vs gist_trgm_ops, pg_trgm % vs <%
-
-### Community 809 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.39
-Nodes (8): Why a connection costs something, Pool modes, Exhaustion and sizing, The Node side, observing, and alternatives, Connection limits and PgBouncer, Lag and read-your-writes, Conflicts and routing, Streaming replication replicas
-
-### Community 810 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.29
-Nodes (8): temp_bytes spill signal, hash_mem_multiplier, work_mem per sort or hash operation, max_connections forces work_mem down, log_temp_files, set_config is_local for parameterized identity, SET LOCAL for RLS identity, current_setting is STABLE
-
-### Community 811 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.25
-Nodes (8): lock_timeout, statement_timeout, log_lock_waits, ACCESS EXCLUSIVE lock queue, lock_timeout plus retry on 55P03, Invalid indexes after CONCURRENTLY failure, Zero-downtime migration checklist, Waiting ACCESS EXCLUSIVE blocks the queue
-
-### Community 812 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.25
-Nodes (8): Backslash commands are not SQL, \d family, psql -E echo hidden, \d table, \d+, Normalised CHECK display, pg_dump --schema-only, \sv and \sf
-
-### Community 813 - "Postgresql: Phase 2 Types"
-Cohesion: 0.25
-Nodes (8): bigint for surrogate primary keys, GENERATED ALWAYS AS IDENTITY, B-tree locality for sequential keys, Never store a UUID as text, uuid v4 versus uuid v7, uuidv7() built-in, Cast the literal, never the column, PostgreSQL 42883 type mismatch
-
-### Community 814 - "Postgresql: Phase 2 Types"
-Cohesion: 0.25
-Nodes (8): numeric rounds half away from zero, char(n) padding semantics, text vs varchar vs char, Use text by default, varchar cast truncates silently, Implicit, assignment, and explicit casts, Largest-remainder allocation, Round once at the charging boundary
-
-### Community 815 - "Postgresql: Phase 2 Types"
-Cohesion: 0.32
-Nodes (8): GIN index on jsonb, jsonb vs json, Promote queried jsonb keys to columns, Array versus child table, GIN @> not ANY for array membership, PostgreSQL arrays, Avoid composites for storage, Composite type
-
-### Community 816 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.29
-Nodes (8): text plus CHECK not varchar or enum, Application cannot enforce referential integrity, Application validation vs constraints, CHECK constraint, CHECK passes on NULL, NOT NULL, NULLS NOT DISTINCT, UNIQUE accepts unlimited NULLs
-
-### Community 817 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.29
-Nodes (8): One row per matching pair, Nested Loop Hash Join Merge Join, NOT NULL FK makes child-to-parent count knowable, Joining on expressions, EXCLUDE USING gist no-overlap, Expression index pays only when selective, Non-equality ON leaves nested loop only, Range join with tstzrange @>
-
-### Community 818 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.25
-Nodes (8): GROUP BY omits missing combinations, EXISTS instead of HAVING count > 0, FILTER pivot, FILTER (WHERE …), 42809 FILTER on a non-aggregate, FILTER is not a scan filter, FILTER on aggregate window functions, FILTER vs GROUP BY shape
-
-### Community 819 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.25
-Nodes (8): 42P20 windowing_error, Named WINDOW clause, Index matching PARTITION BY then ORDER BY, Compatible windows share one sort, What windows cost, WindowAgg is not parallel-aware, Non-covering window index made top-N slower, Run Condition
-
-### Community 820 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.25
-Nodes (8): Omit WHERE when there are no filters, One-pass WHERE fragment builder, Placeholder from params.length, Hand-built predicates versus a query builder, listItems composes WHERE sort LIMIT, Direction is a ternary never interpolated, orderClause, ORDER BY must be total
-
-### Community 821 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.25
-Nodes (8): Soft delete is not an audit log, Partial unique index for live emails, Soft delete as UPDATE, ON CONFLICT DO NOTHING RETURNING trap, DO UPDATE RETURNING xmax, Idempotency-Key unique constraint, Idempotency-key response table, Naturally idempotent operations
-
-### Community 822 - "Postgresql - 228 topics in 14"
-Cohesion: 0.29
-Nodes (8): 228 topics in 14 phases, Every page carries SQL and Node pg, Proposed PostgreSQL syllabus (2026-08-11), False Verified stamps on 210 pages, Five stamped page variants, Rewrite against the Node corpus standard, 216 of 228 pages are template stamps, Twelve genuinely hand-written pages
-
-### Community 823 - "React: Phase 2 Components"
-Cohesion: 0.25
-Nodes (8): Slots, children and the context hole, Slots pattern, Function-as-children, Render prop, When render props still win, Children namespace, children is source structure not rendered output, Children.toArray key rewriting
-
-### Community 824 - "React: Phase 3 State"
-Cohesion: 0.25
-Nodes (8): Effect model vs lifecycle moments, Class lifecycle to hook mapping, UNSAFE_ class lifecycles, React Compiler auto-memoization, useMemo for expensive derivation, Unchanged children element identity, memo, Four things that stop render descent
-
-### Community 825 - "React: Phase 4 Effects"
-Cohesion: 0.25
-Nodes (8): cleanup(old) then setup(new), setup → cleanup → setup must match setup once, Idempotent setup needs no cleanup, StrictMode double-invocation, Start and stop, not mount and unmount, Move 1 — static object outside the component, All cleanups then all setups, useInsertionEffect interleaves cleanup and setup
-
-### Community 826 - "React: Phase 4 Effects"
-Cohesion: 0.25
-Nodes (8): Lift the state up instead of copying, Notifying the parent from an Effect runs too late, Pass data down, do not push it up, Fetching on mount is the weak strategy, Four documented fetching-in-Effect downsides, Framework fetching or a client cache, Network waterfall, Race guards are not a cache
-
-### Community 827 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.25
-Nodes (8): Index signature and Record, Narrowing lost inside a callback, strictNullChecks, Empty object type {}, object (lowercase), Object wrapper interface, Record<string, unknown>, typeof object includes null
-
-### Community 828 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.36
-Nodes (8): assertNever exhaustiveness, Discriminated union, never, extends vs intersection on conflict, Intersection conflicting members become never, Intersection distributes over union, Intersection types, Equality narrowing
-
-### Community 830 - "Javascript: Phase 18 Storefront"
+### Community 711 - "Javascript Storefront: Pagination"
 Cohesion: 0.25
 Nodes (7): Gotchas, Interview questions, Pagination, `pushState` or `replaceState`, Reading and writing, The details that get missed, The rule
 
-### Community 831 - "React: Phase 14 Correctness"
+### Community 712 - "Nodejs Modules: Conditional exports"
 Cohesion: 0.25
-Nodes (7): Four details in there worth naming, Gotchas, Interview questions, Regression tests: the one test that is always worth writing, The four states, and the one everybody writes, The shape of the file, What a feature's suite looks like when it is done
+Nodes (7): Conditional exports, Gotchas, Interview questions, Subpath exports, Subpath imports — `#internal`, The dual package hazard, The problem it solves
 
-### Community 833 - "Storybook: Phase 1 Story Format"
+### Community 713 - "Nodejs Modules: Keeping up to date"
+Cohesion: 0.25
+Nodes (7): Gotchas, Interview questions, Keeping up to date, `npm ci` — the one that respects it, Ranges, The lockfile is the real answer, The version number
+
+### Community 714 - "Postgresql Architecture: From Node"
+Cohesion: 0.25
+Nodes (7): From Node, Gotchas, Interview questions, See the setting, The double write (conceptually), Trade-off, Why it exists
+
+### Community 715 - "Postgresql Architecture: From Node"
+Cohesion: 0.25
+Nodes (7): From Node, Gotchas, Interview questions, See it, The vocabulary, Trade-off, Why it exists
+
+### Community 716 - "Postgresql Architecture: From Node"
+Cohesion: 0.25
+Nodes (7): From Node, Gotchas, Interview questions, Run PostgreSQL 18, Trade-off, Volumes and reset, Why container-first
+
+### Community 717 - "Postgresql Architecture: From Node"
+Cohesion: 0.25
+Nodes (7): From Node, Gotchas, Interview questions, Majors vs minors, This bible’s target, Trade-off, What major 18 is for (orientation, not a changelog)
+
+### Community 718 - "Postgresql Architecture: Trade-off"
+Cohesion: 0.25
+Nodes (8): `CHECK` constraints and `GROUP BY` — also fixed, Gotchas, Interview questions, One thing that is the same everywhere, The folklore that no longer holds, The one that actually changes your migrations, Trade-off, Type strictness — the folklore is a version behind
+
+### Community 719 - "Postgresql Psql: Trade-off"
+Cohesion: 0.25
+Nodes (7): Gotchas, Interview questions, `\timing` measures the whole round trip, Trade-off, `\watch` — re-run on an interval, What to watch, Which number to trust
+
+### Community 720 - "Postgresql Psql: Reading the rest of an "
+Cohesion: 0.25
+Nodes (7): Gotchas, Interview questions, Reading the rest of an error, The codes, each produced by causing the error, The same error from Node, The same error, twice, Trade-off
+
+### Community 722 - "Storybook Story Format"
 Cohesion: 0.25
 Nodes (7): Colocation, Diagnosing "my story is not there", Gotchas, Interview questions, The object form, when you need it, The `stories` glob, What is a story, from the module's point of view
 
-### Community 836 - "Sandbox P7-Background-Work - ex3-bullmq.mjs"
+### Community 723 - "Typescript Narrowing: Trade-off"
+Cohesion: 0.25
+Nodes (7): Annotation checks; assertion asserts, `as unknown as T` — the two-step escape, Gotchas, Interview questions, The one rule `as` still enforces, Trade-off, Why the failure arrives late
+
+### Community 727 - "Sandbox P7 Background Work"
 Cohesion: 0.25
 Nodes (7): connection, dlq, done, q, stamps, started, w
 
-### Community 837 - "Sandbox P8-Security - ex23-webcrypto.mjs"
+### Community 728 - "Sandbox P8 Security"
 Cohesion: 0.25
 Nodes (5): data, enc, raw, sig, wcDigest
 
-### Community 838 - "Sandbox P8-Security - ex9-csrf.mjs"
+### Community 729 - "Sandbox P8 Security"
 Cohesion: 0.32
 Nodes (6): nonce, safeEqual(), sign(), srv, token, verify()
 
-### Community 839 - "Sandbox P9-Testing - config.mjs"
+### Community 730 - "Sandbox P9 Testing"
 Cohesion: 0.39
 Nodes (4): config, makeReceiptId(), clock(), receiptId()
 
-### Community 840 - "Sandbox Pg-Api - ex11-ddl-alter.mjs"
+### Community 731 - "Sandbox Pg Api"
 Cohesion: 0.46
 Nodes (6): build(), node(), pool, probe(), q(), size()
 
-### Community 841 - "Sandbox Pg-Api - ex28-mvcc-isolation.mjs"
+### Community 732 - "Sandbox Pg Api"
 Cohesion: 0.29
 Nodes (3): pool, q(), size()
 
-### Community 843 - "Sandbox Pg-Api - ex35-joins.mjs"
+### Community 734 - "Sandbox Pg Api"
 Cohesion: 0.39
 Nodes (6): err(), plan(), pool, q(), rows(), tryq()
 
-### Community 844 - "Sandbox Pg-Api - ex37b-cte-inlining.mjs"
+### Community 735 - "Sandbox Pg Api"
 Cohesion: 0.39
 Nodes (6): inlined(), plan(), pool, q(), show(), tryq()
 
-### Community 845 - "Sandbox Pg-Api - ex37c-correlated-cost.mjs"
+### Community 736 - "Sandbox Pg Api"
 Cohesion: 0.46
 Nodes (6): measure(), planOf(), pool, q(), scanFacts(), timed()
 
-### Community 846 - "Sandbox Pg-Api - ex39-tx-request.mjs"
+### Community 737 - "Sandbox Pg Api"
 Cohesion: 0.32
 Nodes (4): counts(), pool, q(), truncate()
 
-### Community 847 - "Sandbox Pg-Api - ex52-backup-restore.sh"
+### Community 738 - "Sandbox Pg Api"
 Cohesion: 0.32
 Nodes (7): line(), PGHOST, PGPASSWORD, PGPORT, PGUSER, ex52-backup-restore.sh script, sizes()
 
-### Community 848 - "Sandbox Pg-Api - ex53-hba-tls.sh"
+### Community 739 - "Sandbox Pg Api"
 Cohesion: 0.46
 Nodes (7): attempt(), line(), PGPASSWORD, psqlc(), reload(), sethba(), ex53-hba-tls.sh script
 
-### Community 849 - "Sandbox Pg-Api - ex8-bulk-and-seed.mjs"
+### Community 740 - "Sandbox Pg Api"
 Cohesion: 0.39
 Nodes (6): count(), pool, q(), reset(), rows, time()
 
-### Community 850 - "Sandbox Pg-Phase-0: Pg Phase 0"
+### Community 741 - "Sandbox Pg Phase 0"
 Cohesion: 0.29
 Nodes (6): counts, mkPhase(), p4, p5, p6, w()
 
-### Community 851 - "Sandbox Pg-Phase-0: Pg Phase 0"
+### Community 742 - "Sandbox Pg Phase 0"
 Cohesion: 0.29
 Nodes (6): mkPhase(), p10, p11, p12, p13, w()
 
-### Community 852 - "Sandbox Ts-P1 - typescript"
+### Community 743 - "Sandbox Readme.Md: Containers"
+Cohesion: 0.25
+Nodes (7): Containers, Layout, pg-api — PostgreSQL Phase 4/8/9 measurements, Rules, Running a phase, Sandbox, What is here and what is not
+
+### Community 744 - "Sandbox Ts P1"
 Cohesion: 0.25
 Nodes (7): description, devDependencies, typescript, typescript, name, private, type
 
-### Community 853 - "Sandbox Ts-P1 - structural.ts"
+### Community 745 - "Sandbox Ts P1"
 Cohesion: 0.25
 Nodes (5): c, Crate, direct, extra, Parcel
 
-### Community 854 - "Sandbox Ts-P2 - typescript"
+### Community 746 - "Sandbox Ts P2"
 Cohesion: 0.25
 Nodes (7): description, devDependencies, typescript, typescript, name, private, type
 
-### Community 855 - "/ - graphify explain"
-Cohesion: 0.48
-Nodes (7): graphify explain, graphify knowledge graph, graphify path, graphify query, graphify update, graphify workflow, graphify usage rules
-
-### Community 856 - "/ - Broken-links report step"
-Cohesion: 0.29
-Nodes (7): Broken-links report step, Enable corepack before setup-node, Deploy to GitHub Pages, Approved colour palette, Dev Bible, Docusaurus delivery, MERN and PERN stacks
-
-### Community 857 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.33
-Nodes (7): CSS is resolved not executed, Critical-path CSS syllabus, CSS owns what the browser paints, CSS syllabus, CSS example policy, Single-engine limitation, web-features Baseline dataset
-
-### Community 858 - "Css: Phase 0 How Css Runs"
-Cohesion: 0.43
-Nodes (7): Composite, Layout reflow, Paint, The rendering pipeline, Style recalculation, transform and opacity composite-only, visibility hidden vs display none
-
-### Community 859 - "Css: Phase 1 Selectors"
-Cohesion: 0.43
-Nodes (7): Invalid selector discards whole rule, Selector lists forgiving and not, Unforgiving selector list, Forgiving :is()/:where() arguments, :is(), :is() and :where(), :where()
-
-### Community 860 - "Expressjs: Phase 0 Express Basics"
-Cohesion: 0.29
-Nodes (7): Application settings (app.set / app.get), etag default weak, query parser default simple, trust proxy, strict and case-sensitive routing unset, x-powered-by, Host-based routing
-
-### Community 861 - "Expressjs: Phase 4 Responses"
-Cohesion: 0.33
-Nodes (7): httpOnly cookie flag, res.cookie, SameSite cookie flag, Secure cookie flag, stream.pipeline over pipe, Stream vs buffer trade-off, Streaming and downloads
-
-### Community 862 - "Git: Phase 0 How Git Stores"
-Cohesion: 0.33
-Nodes (7): Git ref, packed-refs, reftable backend, Tag is an immovable ref, git update-ref, Commit with plumbing only, Plumbing commands
-
-### Community 863 - "Javascript: Phase 0 How Javascript Runs"
-Cohesion: 0.29
-Nodes (7): Console API beyond log, DevTools lazy object expansion, node --inspect-brk, Cold versus warm micro-benchmark, Deoptimisation, Keep data shapes stable, V8 compilation tiers
-
-### Community 864 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.33
-Nodes (7): Unpolyfillable engine features, Numbers are IEEE-754 doubles, JSON.parse corrupts large integer IDs, Number.MAX_SAFE_INTEGER, Money as integer minor units, toFixed is not a rounding function, BigInt
-
-### Community 865 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.29
-Nodes (7): Signed zero -0, Object.is (SameValue), SameValueZero, Literal rounding above MAX_SAFE_INTEGER, Literal bases are notation only, Phase 1 — Values, types and coercion, Phase 1 gate
-
-### Community 866 - "Javascript: Phase 2 Operators"
-Cohesion: 0.29
-Nodes (7): JSX {count && <X/>} zero trap, ?? default-value idiom, Logical operators return operands, ?. with ?? default, Guard clauses, if uses ToBoolean, Only undefined triggers a default
-
-### Community 867 - "Javascript: Phase 3 Functions"
-Cohesion: 0.33
-Nodes (7): Closure captures the variable not the value, IIFE loop-variable capture, let per-iteration binding, setTimeout is not the loop-bug cause, var-in-a-loop bug, Per-iteration TDZ binding, TDZ is temporal not positional
-
-### Community 868 - "Nodejs: Phase 0 Runtime Model"
-Cohesion: 0.29
-Nodes (7): Odd/even LTS rule ends at v27, All 248 Node syllabus topics written, Node.js — Pages, Node.js 248 topics in 13 phases, Node.js 26 Current, Node.js — Syllabus, v27 one major per year, every release LTS
-
-### Community 869 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.29
-Nodes (7): Lag is not downstream I/O wait, High lag plus high CPU, Low lag plus high p99, --cpu-prof, Node Inspector --inspect, 0x flame graphs, Flame graph width is sample time
-
-### Community 870 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.33
-Nodes (7): Health checks — liveness vs readiness, Startup probe, module.enableCompileCache, Lazy imports, Time to readiness, Parallel independent connects, Validate, connect, listen, ready
-
-### Community 871 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.29
-Nodes (7): heapUsed, RSS resident set, v8.getHeapStatistics, Rising heapUsed under stable load, cgroup OOM vs V8 heap OOM, heap_size_limit vs flag value, --max-old-space-size
-
-### Community 872 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.29
-Nodes (7): In-process vs Redis cache, Heap snapshot, Retainer path, Unbounded cache leak, --heap-prof, Clinic.js suite, Flame graphs
-
-### Community 873 - "Nodejs: Phase 2 Async"
-Cohesion: 0.29
-Nodes (7): await yields to the microtask queue, Microtask queue, Event loop delay cannot detect starvation, await is a microtask yield, async does not stop blocking, CPU-bound work, Event loop delay misses a fully blocked loop
-
-### Community 874 - "Nodejs: Phase 2 Async"
-Cohesion: 0.29
-Nodes (7): util.callbackify, Error-first callback convention, new Promise only wraps callback APIs, Callbacks, promisify and callbackify, util.promisify, util.promisify.custom, Explicit construction antipattern
-
-### Community 875 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.33
-Nodes (7): Readable stream, Readable.from, Async generator pipeline stage, Readable.from high water mark 1, Custom Readable _read, Prefer Readable.from over a class, Readable.from string special case
-
-### Community 876 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.29
-Nodes (7): break destroys the stream, for await of Readable, Readable iterator helpers, on data async has no backpressure, stream/consumers, Transform is sequential, consumers impose no size limit
-
-### Community 877 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.29
-Nodes (7): Mongo session.withTransaction, pool.query BEGIN bug, One tool owns schema and pool, Migration system four parts, pg_advisory_lock, PostgreSQL transactional DDL, Advisory lock for clustered schedules
-
-### Community 878 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.33
-Nodes (7): One delivery job per webhook subscriber, Honour Retry-After, Backpressure vs concurrency limiting, Concurrency limiting, Count the product of limits, mapLimit worker pool, Unbounded Promise.all
-
-### Community 879 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.29
-Nodes (7): Fake, Transaction per test rollback, Testcontainers — real database integration tests, Runner flags worth knowing, Snapshot testing, ESLint flat config, Prettier, or Biome, Property-based and mutation testing
-
-### Community 880 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.29
-Nodes (7): CREATE INDEX CONCURRENTLY, indisvalid, CREATE INDEX ShareLock, SQLSTATE 25001, SQLSTATE classes 23 and 40, pg error object mapping, SQLSTATE
-
-### Community 881 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.29
-Nodes (7): Transaction cost is connection-seconds, pool.query BEGIN bug, withTransaction helper, Bounded retry with jitter, Optimistic version column, Never await while holding a pooled client, withSerializable retry loop
-
-### Community 882 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.29
-Nodes (7): Automatically updatable view, WITH CHECK OPTION, Triggers — BEFORE/AFTER, row versus statement, Triggers maintain data not behaviour, Matview staleness is yours to manage, LISTEN/NOTIFY — push from the database, The transactional outbox
-
-### Community 883 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.29
-Nodes (7): Dead tuples vs autovacuum pace, VACUUM silent skip without MAINTAIN, pg_stat_user_tables, High seq_scan is a hint not a verdict, Table health, Unused indexes via idx_scan = 0, Batched backfill with SKIP LOCKED
-
-### Community 884 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.29
-Nodes (7): Monitoring views, Three questions three views, log_min_duration_statement, auto_explain, auto_explain.log_analyze instruments every statement, Logging slow queries, Monitoring three-legged stool
-
-### Community 885 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.29
-Nodes (7): ADD COLUMN constant default is catalog-only, VALIDATE CONSTRAINT uses SHARE UPDATE EXCLUSIVE, Expand and contract, SET NOT NULL via validated CHECK, NOT VALID then VALIDATE CONSTRAINT, Never rename a column in one step, Schema change and code deploy are never simultaneous
-
-### Community 886 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.33
-Nodes (7): Transactional DDL holds locks until commit, CREATE INDEX CONCURRENTLY, Direct vs pooled endpoints, Migrations must use the direct endpoint, Neon pooled endpoint via PgBouncer, Serverless connection pattern, Supabase Supavisor ports
-
-### Community 887 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.33
-Nodes (7): Illusion of delegation, Provider backups do not make restore yours, archive_timeout, Logical vs physical backups, pg_basebackup -X stream, Base backups and WAL archiving, Point-in-time recovery
-
-### Community 888 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.29
-Nodes (7): \pset null, \o and \g redirect, \x expanded output, psql query buffer, \e editor, \g family, psql prompt suffixes
-
-### Community 889 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.29
-Nodes (7): UPDATE FROM duplicate-source trap, DISTINCT ON, DISTINCT and DISTINCT ON, DISTINCT ON ORDER BY rule, WITH ORDINALITY, unnest parallel arrays, VALUES as a table expression
-
-### Community 890 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.43
-Nodes (7): WHEN NOT MATCHED BY SOURCE, The guarantee and its NULLs, count(*) vs count(col) after LEFT JOIN, LEFT JOIN IS NULL anti-join, Manufactured NULLs indistinguishable from stored, EXCEPT, count(*) arrives as a string from pg
-
-### Community 891 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.33
-Nodes (7): RIGHT and FULL OUTER, Emulate FULL OUTER with LEFT plus anti-join UNION ALL, FULL OUTER JOIN, FULL JOIN only merge or hash joinable, IS DISTINCT FROM for snapshot diffs, USING on FULL JOIN coalesces the key, USING merged join column
-
-### Community 892 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.38
-Nodes (7): ON vs USING vs NATURAL, JOIN ON explicit condition, pg SELECT * duplicate names last-wins, Alias discipline, 42702 ambiguous column, Output alias usable in ORDER BY and GROUP BY not WHERE, Alias every table and qualify every column
-
-### Community 893 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.38
-Nodes (7): DISTINCT runs after windows, dense_rank, The four ranking functions, ntile, percent_rank, rank, row_number
-
-### Community 894 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.29
-Nodes (7): DISTINCT ON top-1, LATERAL top-N per group, Top-N per group, Correlated subquery, count() is 0, sum() is NULL over empty, SubPlan loops per outer row, Correlated cost coupled to visibility map
-
-### Community 895 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.29
-Nodes (7): Archive pattern, One statement, several writes, Unreferenced write CTE still runs, Sibling SELECT cannot see the write, The snapshot rule, Two CTEs writing the same row, When a transaction beats one multi-CTE write
-
-### Community 896 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.29
-Nodes (7): count(*) OVER (), Exact count(*), limit + 1 has-more, WindowAgg defeats LIMIT, Planner row estimate, reltuples, Counting for pagination
-
-### Community 897 - "Postgresql: Phase 7 Pg Driver"
-Cohesion: 0.29
-Nodes (7): idle_in_transaction_session_timeout, pool.on error handler, Keyset batching instead of a cursor, pg-cursor streaming, pool.query buffers the whole result, DECLARE cursor dies on COMMIT, Long cursor snapshot pins xmin
-
-### Community 898 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.29
-Nodes (7): ADD COLUMN DEFAULT no rewrite, ACCESS EXCLUSIVE lock, DDL lock queue pile-up, lock_timeout for migrations, Where DDL belongs, Phase 8 gate, NOWAIT vs SKIP LOCKED
-
-### Community 899 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.38
-Nodes (7): Unreleased client leak, Executor contract, pool.query vs held client, AsyncLocalStorage ambient client, Pass db through every layer, Pool handed instead of client, Tests must inject the executor
-
-### Community 900 - "Postgresql: Foundations.Md"
-Cohesion: 0.29
-Nodes (7): Part 1 Foundations (proposed), Part 2 SQL (proposed), Part 3 Node + raw pg (proposed), Node Phase 6 versus PG Part 3 boundary, Part 1 Foundations (live syllabus), Modelling money, Multi-tenancy as a decision
-
-### Community 901 - "React: Phase 2 Components"
-Cohesion: 0.33
-Nodes (7): Four disguises of unstable identity, Hooks replaced render props, Wrapper hell, Higher-order component, Never apply a HOC during render, HOC prop collisions are silent, HOC refs and React 19
-
-### Community 902 - "React: Phase 2 Components"
-Cohesion: 0.33
-Nodes (7): componentDidCatch, Error Boundary, getDerivedStateFromError, Class components, defaultProps kept for classes, Legacy context removed, String refs removed in React 19
-
-### Community 903 - "Reviews: 08 13 Cross Phase Correctness.Md"
-Cohesion: 0.33
-Nodes (7): Session advisory lock pool leak, Merge join needs equality, PostgreSQL cross-phase correctness review, SET cannot take bind parameters, XID wraparound warning threshold, Dev Bible final re-review prompt, Review work order
-
-### Community 904 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.33
-Nodes (7): checkJs project-wide, JSDoc type annotations, JSDoc checking vs converting to .ts, // @ts-check, Phase 0 How TypeScript runs, strict defaults to true in TypeScript 7, tsc emits broken JavaScript by default
-
-### Community 905 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.33
-Nodes (7): TypeScript Playground, Erasure as the foundation fact, readonly T[], Object.freeze, readonly, readonly T[] parameter, readonly is shallow
-
-### Community 906 - "Sandbox P9-Testing - fast-check"
+### Community 747 - "Sandbox P9 Testing"
 Cohesion: 0.29
 Nodes (6): fast-check, dependencies, fast-check, name, private, type
 
-### Community 907 - "/ - Chunked topic layout"
-Cohesion: 0.33
-Nodes (7): Chunked topic layout, Concept page contents, Granularity rule, One docs tree per language, Dev Bible standing brief, 300-line file cap, Handbook writing style
-
-### Community 908 - "Sandbox Pg-Api - node:crypto"
+### Community 748 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (3): pool, q(), reset()
 
-### Community 909 - "Eslint-Oxlint: Linting Landscape And Tooling Decisions"
-Cohesion: 0.29
-Nodes (7): 4. Senior Engineer Edge Cases & Pitfalls, ⚠️ Choosing Biome *or* ESLint by blog post, not inventory, ⚠️ Enabling “all rules” on day one, ⚠️ `eslint-plugin-prettier` as the formatter, ⚠️ Ignoring editor cost, ⚠️ No written decision for dual-run, ⚠️ Treating lint as a substitute for tests or types
-
-### Community 910 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.29
-Nodes (7): Compare and group, Create and copy, Protect, Read the shape, See *everything*, including what the above hide, The inventory, by the job it does, The prototype chain
-
-### Community 911 - "Sandbox Express-Verify - express"
+### Community 750 - "Sandbox Express Verify"
 Cohesion: 0.29
 Nodes (6): dependencies, express, express, name, private, type
 
-### Community 912 - "Sandbox Js-P0 - ex11-benchmark-lies.mjs"
+### Community 751 - "Sandbox Js P0"
 Cohesion: 0.29
 Nodes (3): data, r, t0
 
-### Community 913 - "Sandbox P9-Testing - express"
+### Community 752 - "Sandbox P9 Testing"
 Cohesion: 0.29
 Nodes (6): dependencies, express, supertest, express, type, supertest
 
-### Community 914 - "Sandbox P9-Testing - @stryker-mutator/core"
+### Community 753 - "Sandbox P9 Testing"
 Cohesion: 0.29
 Nodes (6): dependencies, @stryker-mutator/core, name, private, type, @stryker-mutator/core
 
-### Community 915 - "Sandbox P9-Testing - package.json"
+### Community 754 - "Sandbox P9 Testing"
 Cohesion: 0.29
 Nodes (6): dependencies, zod, zod, name, private, type
 
-### Community 916 - "Sandbox P9-Testing - convert.mjs"
+### Community 755 - "Sandbox P9 Testing"
 Cohesion: 0.43
 Nodes (3): convert(), NOTE: convert.mjs is deliberately NOT imported at the top., fetchRate()
 
-### Community 917 - "Sandbox Pg-Api - ex23-index-basics.mjs"
+### Community 756 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (3): plan(), pool, q()
 
-### Community 918 - "Sandbox Pg-Api - ex24-index-not-used.mjs"
+### Community 757 - "Sandbox Pg Api"
 Cohesion: 0.33
 Nodes (3): plan(), pool, q()
 
-### Community 920 - "Sandbox Pg-Api - ex36c-agg-checks.mjs"
+### Community 759 - "Sandbox Pg Api"
 Cohesion: 0.48
 Nodes (5): jj(), pool, q(), rows(), tryq()
 
-### Community 921 - "Sandbox Pg-Api - ex36e-shaping.mjs"
+### Community 760 - "Sandbox Pg Api"
 Cohesion: 0.48
 Nodes (5): jj(), pool, q(), rows(), tryq()
 
-### Community 922 - "Sandbox Pg-Api - ex46-views-triggers.mjs"
+### Community 761 - "Sandbox Pg Api"
 Cohesion: 0.38
 Nodes (4): plan(), pool, q(), tryq()
 
-### Community 923 - "Sandbox Pg-Api - ex47-functions.mjs"
+### Community 762 - "Sandbox Pg Api"
 Cohesion: 0.38
 Nodes (4): planOf(), pool, q(), tryq()
 
-### Community 924 - "Sandbox Pg-Phase-0: Pg Phase 0"
+### Community 763 - "Sandbox Pg Phase 0"
 Cohesion: 0.33
 Nodes (5): mkPhase(), p7, p8, p9, w()
 
-### Community 925 - "Sandbox Ts-P1 - typo.ts"
+### Community 764 - "Sandbox Ts P1"
 Cohesion: 0.29
 Nodes (4): m, Mixed, Options, opts
 
-### Community 927 - "Sandbox Ts-P1 - sym.ts"
+### Community 766 - "Sandbox Ts P1"
 Cohesion: 0.29
 Nodes (6): Alias, KEY, loose, Maybe, r, Registry
 
-### Community 928 - "Sandbox Ts-P2 - guards.ts"
+### Community 767 - "Sandbox Ts P2"
 Cohesion: 0.29
 Nodes (3): ApiError, Cat, Dog
 
-### Community 929 - "Sandbox P8-Security - RFC-6238"
+### Community 768 - "Sandbox P8 Security"
 Cohesion: 0.40
 Nodes (5): RFC-6238, hotp(), s1, s256, totp()
 
-### Community 930 - "Git: Phase 0 How Git Stores"
+### Community 770 - "Javascript Functions: 2. bind"
 Cohesion: 0.33
-Nodes (6): Identity is asserted not authenticated, Author identity required to commit, Author versus committer, Hardened SHA-1 sha1dc, Object hash framing, SHA-1 object format
+Nodes (6): 1. An arrow function — the default answer, 2. `bind`, 3. A class field arrow, 4. `thisArg`, where the API offers one, Choosing, The four fixes
 
-### Community 931 - "Javascript: Phase 2 Operators"
-Cohesion: 0.33
-Nodes (6): Destructuring assignment parentheses, {} block vs object literal, Expression vs statement, IIFE needs parentheses, JSX interpolation is expression-only, Accidental label in arrow body
-
-### Community 932 - "Javascript: Phase 2 Operators"
-Cohesion: 0.33
-Nodes (6): for…of default loop, forEach cannot break or await, Exhaustive default that throws, switch fallthrough, Labelled break and continue, Labels are not goto
-
-### Community 933 - "Javascript: Phase 2 Operators"
-Cohesion: 0.33
-Nodes (6): Array spread vs object spread, Spread copies are shallow, Spread vs rest, delete creates array holes, Arrow closes over outer arguments, Arrow functions lack function machinery
-
-### Community 934 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.33
-Nodes (6): Method shorthand is not a function property, Enumeration method comparison, Integer-index keys, Three-tier property enumeration order, Object literals, Five non-sugar class features
-
-### Community 935 - "Javascript: Phase 4 Objects And Classes"
-Cohesion: 0.33
-Nodes (6): class is the same lookup machinery, What new actually does, Object.create, prototype vs [[Prototype]], The prototype chain topic, What class desugars to
-
-### Community 936 - "Nodejs: Phase 0 Runtime Model"
-Cohesion: 0.40
-Nodes (6): fetch does not reject on 404 or 500, Phase 11 — Network, storage and data transfer, CORS is a browser policy, fetch relative URL throws in Node, Node vs the browser, Shared web-standard surface
-
-### Community 937 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.33
-Nodes (6): Cold start, Serverless freeze model, When serverless is the wrong default, Compile cache vs startup snapshot, Snapshots are tied to the Node/V8 build, V8/Node startup snapshot
-
-### Community 938 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.33
-Nodes (6): createRequire, Subpath imports (#internal), enableCompileCache, Loader hooks run on a separate thread, module.register(), node:module API
-
-### Community 939 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.33
-Nodes (6): CORS is a browser rule not authorization, CORS preflight, Vary header, __Host- cookie prefix, Opaque session id vs JWT cookie, HttpOnly Secure SameSite
-
-### Community 940 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.33
-Nodes (6): Exit code 137 SIGKILL, A signal listener replaces default terminate, Exec-form CMD as PID 1, Kubernetes preStop hook, SIGKILL, SIGTERM
-
-### Community 941 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.33
-Nodes (6): closeAllConnections, closeIdleConnections, Shutdown drain order, Readiness versus liveness during shutdown, server.close, pool.end
-
-### Community 942 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.33
-Nodes (6): SQLSTATE error codes, Translate 23505 to domain errors, Transient vs permanent errors, UnrecoverableError, BullMQ has no built-in DLQ, Poison message
-
-### Community 943 - "Nodejs: Phase 7 Background Work"
-Cohesion: 0.33
-Nodes (6): Calendar arithmetic vs elapsed milliseconds, Instant vs calendar date, Do not trust a scheduled job's clock, Store UTC, convert at the edge, Time on the server, timestamptz not timestamp
-
-### Community 944 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.33
-Nodes (6): --experimental-test-module-mocks, Mock-first then dynamic import, mock.module(), Prefer dependency injection over mock.module, t.mock.module scoped restore, vi.mock hoisting
-
-### Community 945 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.33
-Nodes (6): --test-rerun-failures, --experimental-test-tag-filter, --test-randomize, --test-shard, Phase 9 measurement corrections, Syllabus flag names predating page 14 measurements
-
-### Community 946 - "Nodejs: Foundations.Md"
-Cohesion: 0.33
-Nodes (6): Node syllabus covers the Node layer, Node.js syllabus consolidated review, Part 1 — Foundations, Part 2 — Core I/O, Part 3 — Application Layer, Part 4 — Production
-
-### Community 947 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.33
-Nodes (6): LISTEN/NOTIFY is at-most-once, Outbox is at-least-once, Dual write bug, Idempotent consumer ON CONFLICT DO NOTHING, SKIP LOCKED relay claim, Outbox table in the same transaction
-
-### Community 948 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.33
-Nodes (6): EXECUTE to PUBLIC on new functions, relacl privilege string, has_*_privilege boot assertion, Pool object connectionString leak, Safe connection identity readout, URL password encoding
-
-### Community 949 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.33
-Nodes (6): Custom dump format -Fc, pg_restore table of contents, pg_restore -j parallelises across items, Restore costs far more than dump, Selective restore leaves indexes behind, Logical backup
-
-### Community 950 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.33
-Nodes (6): Statistics counters are estimates, Database statistics are approximate by design, Cache hit ratio understates OS cache, Database health and alerting, pg_stat_database, shared_buffers
-
-### Community 951 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.33
-Nodes (6): Composite primary key, Join table trailing-column index, Many-to-many join table, Depend on the key the whole key and nothing but the key, First normal form, Second normal form
-
-### Community 952 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.40
-Nodes (6): Row constructor comparison, = ANY($1::int[]) list parameter, IN, EXISTS and the NOT IN trap, NOT EXISTS anti join, NOT IN NULL trap, IN / = ANY / EXISTS as semi join
-
-### Community 953 - "React: Phase 0 How React Runs"
-Cohesion: 0.33
-Nodes (6): createRoot, hydrateRoot, One root per container, ReactDOM.render removed, Partial Pre-rendering, use
-
-### Community 954 - "React: Phase 1 Jsx"
-Cohesion: 0.40
-Nodes (6): Must be {__html: ...} and exclusive of children, React escapes text and attributes by default, React 19 rewrites javascript: URLs, dangerouslySetInnerHTML, Sanitize with a real library or do not inject, script tags do not run; img onerror does
-
-### Community 955 - "React: Phase 4 Effects"
-Cohesion: 0.33
-Nodes (6): Cleanup without setup is a code smell, Logic that belongs to an event, Chains of effects, State that belongs elsewhere, You might not need an effect, Effect Event call-site rules
-
-### Community 956 - "React: Phase 4 Effects"
-Cohesion: 0.33
-Nodes (6): Dependencies should match the code, Eight legitimate dependency-removal moves, Illegitimate dependency fixes, Removing dependencies legitimately, react.dev Removing Effect Dependencies, useEffectEvent
-
-### Community 957 - "Reviews: Phase 0 How Typescript Runs"
-Cohesion: 0.33
-Nodes (6): No new sandboxes, Node and Express verification backlog, Not yet validated, tsc --noEmit CI gate, tsc, transpilers, and Node 24, Whole-program check vs one-file transpile
-
-### Community 958 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.40
-Nodes (6): tsc emit-on-error default, Where types come from, The language server is not the build, Checking is not transpiling, Project layout and tsc --init, Release cadence and upgrades
-
-### Community 959 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.40
-Nodes (6): exclude only removes roots, tsconfig.json anatomy, types empty array, Compiler speed benchmark confound, TypeScript 7 is a different compiler, Set rootDir explicitly
-
-### Community 960 - "Typescript: Phase 1 Type Vocabulary"
-Cohesion: 0.40
-Nodes (6): Type inference, noUncheckedIndexedAccess, Literal widening let vs const, Array type T[], Computed key unique symbol folklore, unique symbol
-
-### Community 962 - "Mongodb: Phase 3 Schema Design"
+### Community 771 - "Mongodb Schema Design"
 Cohesion: 0.33
 Nodes (6): 1 · Is it unbounded? → reference, 2 · Is it queried on its own? → reference, 3 · Does it change independently, and often? → reference, 4 · Is it shared by many parents? → reference (usually), 5 · Otherwise → embed, The procedure
 
-### Community 963 - "Storybook: Phase 0 How Storybook Runs"
+### Community 772 - "Storybook How Storybook Runs"
 Cohesion: 0.33
 Nodes (6): Addons are two halves that talk over the channel, An error can come from either side, and they read differently, DevTools shows you the wrong document, The consequences you will actually hit, Your fonts load in the app and not in the preview, Your global stylesheet is not there unless you put it there
 
-### Community 964 - "Storybook: Phase 0 How Storybook Runs"
+### Community 773 - "Storybook How Storybook Runs"
+Cohesion: 0.33
+Nodes (6): Step 1 — install, and change nothing, Step 2 — verify the baseline before touching anything, Step 3 — replicate the app's provider tree, Step 4 — mirror the bundler aliases, The four steps, in order, The payoff
+
+### Community 774 - "Storybook How Storybook Runs"
 Cohesion: 0.33
 Nodes (6): Deleted — the feature is core, install nothing, Moved into the core `storybook` package, Moved to a different package, Moved under `/internal` — not public API, Still their own packages, The mapping — the table to bookmark
 
-### Community 965 - "Sandbox Express5-Check - check.cjs"
+### Community 775 - "Reviews: PostgreSQL — review · Fable"
+Cohesion: 0.33
+Nodes (6): PostgreSQL — review · Fable, Scope note, The five findings, ranked, Verdict in five sentences, What is already good — do not lose this in any rewrite, Your seven questions, answered
+
+### Community 776 - "Sandbox Express5 Check"
 Cohesion: 0.40
 Nodes (5): app, app2, app3, express, srv
 
-### Community 966 - "Sandbox Js-P0 - ex4-hosts.mjs"
+### Community 777 - "Sandbox Js P0"
 Cohesion: 0.33
 Nodes (4): browserOnly, languageGlobals, nodeOnly, webPlatform
 
-### Community 967 - "Sandbox Js-P1 - ex5-references.mjs"
+### Community 778 - "Sandbox Js P1"
 Cohesion: 0.33
 Nodes (5): cart1, deep, frozen, frozenish, shallow
 
-### Community 968 - "Sandbox Js-P1 - ex8-null-nan-equality.mjs"
+### Community 779 - "Sandbox Js P1"
 Cohesion: 0.33
 Nodes (3): { a = 'dflt' }, { b = 'dflt' }, wrapped
 
-### Community 969 - "Sandbox Js-P2 - ex11-misc-operators.mjs"
+### Community 780 - "Sandbox Js P2"
 Cohesion: 0.33
 Nodes (4): arr, calls, frozen, o
 
-### Community 970 - "Sandbox Js-P2 - ex3-control-flow.mjs"
+### Community 781 - "Sandbox Js P2"
 Cohesion: 0.33
 Nodes (4): arr, base, child, out
 
-### Community 972 - "Sandbox P10-Observability - ex2-lag.mjs"
+### Community 783 - "Sandbox P10 Observability"
 Cohesion: 0.33
 Nodes (4): h, h2, t0, t2
 
-### Community 973 - "Sandbox P8-Security - ex10-ssrf-guard.mjs"
+### Community 784 - "Sandbox P8 Security"
 Cohesion: 0.40
 Nodes (4): guardedLookup(), isPrivate(), redirector, srv
 
-### Community 974 - "Sandbox P8-Security - ex12-redos.mjs"
+### Community 785 - "Sandbox P8 Security"
 Cohesion: 0.33
 Nodes (4): iv, shapes, t, t0
 
-### Community 975 - "Sandbox P8-Security - ex19-crypto.mjs"
+### Community 786 - "Sandbox P8 Security"
 Cohesion: 0.33
 Nodes (3): b64, data, hmac
 
-### Community 976 - "Sandbox P8-Security - ex8-ssrf.mjs"
+### Community 787 - "Sandbox P8 Security"
 Cohesion: 0.40
 Nodes (4): guarded, isPrivate(), redirector, srv
 
-### Community 977 - "Sandbox Pg-Api - ex37f-frame-extras.mjs"
+### Community 788 - "Sandbox Pg Api"
 Cohesion: 0.47
 Nodes (4): pool, q(), rows(), tryq()
 
-### Community 978 - "Sandbox Pg-Api - ex40-api-concurrency.mjs"
+### Community 789 - "Sandbox Pg Api"
 Cohesion: 0.40
 Nodes (3): pool, q(), seed()
 
-### Community 979 - "Sandbox Pg-Api - ex42-testing-rollback.mjs"
+### Community 790 - "Sandbox Pg Api"
 Cohesion: 0.40
 Nodes (3): pool, q(), seed()
 
-### Community 980 - "Sandbox Pg-Api - ex44-jsonb-ops.mjs"
+### Community 791 - "Sandbox Pg Api"
 Cohesion: 0.40
 Nodes (3): planLines(), pool, q()
 
-### Community 981 - "Sandbox Pg-Api - ex57-vs-mysql.sh"
+### Community 792 - "Sandbox Pg Api"
 Cohesion: 0.53
 Nodes (5): hdr(), MY(), pg(), PGPASSWORD, ex57-vs-mysql.sh script
 
-### Community 982 - "Sandbox Ts-P0 - nonerasable.ts"
+### Community 793 - "Sandbox Ts P0"
 Cohesion: 0.33
 Nodes (3): o, Order, Status
 
-### Community 984 - "Sandbox Ts-P1 - four.ts"
+### Community 795 - "Sandbox Ts P1"
 Cohesion: 0.33
 Nodes (3): nv, s, v
 
-### Community 985 - "Sandbox Ts-P1 - json.ts"
+### Community 796 - "Sandbox Ts P1"
 Cohesion: 0.33
 Nodes (4): JsonValue, menu, MenuItem, payload
 
-### Community 987 - "Css: Phase 1 Selectors"
-Cohesion: 0.70
-Nodes (5): Styling hooks that are not classes, data-* and aria-* state hooks, data-testid, js- prefix convention, One hook per consumer
-
-### Community 988 - "Expressjs: Phase 4 Responses"
+### Community 798 - "Claude.Md: devbible"
 Cohesion: 0.40
-Nodes (5): res.attachment, res.download, res.sendFile, sendFile root option, Signed URL offload
+Nodes (4): devbible, graphify, Memory, This project
 
-### Community 989 - "Expressjs: Phase 6 Rest Surface"
-Cohesion: 0.50
-Nodes (5): Webhook event id dedupe, express.raw on webhook path, HMAC with crypto.timingSafeEqual, Inbound webhooks, Webhook timestamp replay window
-
-### Community 990 - "Git: Phase 0 How Git Stores"
+### Community 799 - "Nodejs Testing: Contract testing"
 Cohesion: 0.40
-Nodes (5): What Git actually is, A commit is a snapshot not a diff, The four object types, The three trees, The index is a real file
+Nodes (4): Contract testing, Testing, What the measurements changed, Where this connects
 
-### Community 991 - "Javascript: Phase 1 Values And Coercion"
+### Community 800 - "Nodejs Syllabus: Cancellation and contex"
 Cohesion: 0.40
-Nodes (5): Ponyfill, Primitive versus object, JSON.stringify throws on BigInt, Autoboxing, Number literal method-dot trap
+Nodes (5): Cancellation and context, CPU-bound work, Phase 2 — Async and the event loop, Promises and async/await, The loop itself
 
-### Community 992 - "Javascript: Phase 1 Values And Coercion"
+### Community 801 - "Reviews Unvalidated.Md: Not yet validate"
 Cohesion: 0.40
-Nodes (5): Array sort default string compare, ECMA-262 living standard, Strings are UTF-16 code units, Intl.Segmenter graphemes, Unicode NFC versus NFD
+Nodes (4): Not yet validated, The pre-existing backlog, The rule this serves, Written but not yet validated
 
-### Community 993 - "Javascript: Phase 1 Values And Coercion"
-Cohesion: 0.40
-Nodes (5): Infinity and -Infinity, Math.max empty identity, Number.isFinite validation, Math.max(...arr) argument cap, NaN poisons every relational
-
-### Community 994 - "Javascript: Phase 3 Functions"
-Cohesion: 0.40
-Nodes (5): Rest excluded from fn.length, Defaults evaluated at call time, fn.length stops at first default, Shared-default myth, Parameter scope vs body scope
-
-### Community 995 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.40
-Nodes (5): Intl.Segmenter, Array.prototype.join, String.prototype.split, split("") splits UTF-16 code units, empty string split is [""]
-
-### Community 996 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.40
-Nodes (5): Date.toJSON ISO string, toJSON hook, Reviver is innermost-first, Reviving Date from JSON, Reviver must return value
-
-### Community 997 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.40
-Nodes (5): PerformanceObserver GC entries, Process metrics — RSS, heap, handles, Memory leaks, Common leak sources, GC basics
-
-### Community 998 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.40
-Nodes (5): Conventional commits, False patch, semantic-release automation, Semantic Versioning, Node core SemVer compatibility culture
-
-### Community 999 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.50
-Nodes (5): uncaughtException and unhandledRejection, Log and exit from crash handlers, uncaughtException, uncaughtExceptionMonitor, unhandledRejection
-
-### Community 1000 - "Nodejs: Phase 8 Security"
-Cohesion: 0.70
-Nodes (5): Catastrophic backtracking, ReDoS input length cap, ReDoS, Regular expression denial of service, Worker-thread regex timeout
-
-### Community 1001 - "Nodejs: Phase 8 Security"
-Cohesion: 0.70
-Nodes (5): Dummy password hash, Timing attacks, Timing attack, crypto.timingSafeEqual, Login user enumeration
-
-### Community 1002 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.40
-Nodes (5): Module mocking with mock.module(), Test doubles — stub, spy, mock, fake, Fixtures, factories, and test data, Coverage — why 100% is a bad target, Vitest and Jest — when they earn their place
-
-### Community 1003 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.40
-Nodes (5): Biome, ESLint flat config, Linter vs formatter, Prettier, Type-aware lint rules
-
-### Community 1004 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.40
-Nodes (5): Linting as cheapest testing layer, Phase 9 — Testing, Phase 6 — Data access, Phase 9 — Testing (syllabus), Recap rule with Node Phase 6
-
-### Community 1005 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.40
-Nodes (5): Contract written independently of the model, Pact consumer-driven contracts, Shared Zod UserResponse schema, Changing a field's meaning, same type, Phase 8 — Security
-
-### Community 1006 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.40
-Nodes (5): Deprecation and Sunset headers, Response add-safe, request tighten-unsafe, Adding a response enum value is breaking, Expand, migrate, contract, Rename is removal plus addition
-
-### Community 1007 - "Nodejs: Core Io.Md"
-Cohesion: 0.40
-Nodes (5): Node stops before the framework, Graceful shutdown, Phase 5 — Networking, HTTP, and processes, API design belongs to Express, Phase 11 — Deployment and operations
-
-### Community 1008 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.40
-Nodes (5): SQLSTATE 23P01 exclusion violation, btree_gist extension, EXCLUDE USING gist, Consistency as constraints, DEFERRABLE UNIQUE for swaps
-
-### Community 1009 - "Postgresql: Phase 10 Indexes"
-Cohesion: 0.40
-Nodes (5): FK-without-index audit query, ON DELETE CASCADE needs child FK index, Referencing-side FK index, FOR KEY SHARE, Row lock mode conflict matrix
-
-### Community 1010 - "Postgresql: Phase 11 Mvcc"
-Cohesion: 0.50
-Nodes (5): Alert at 500 million not the WARNING, autovacuum_freeze_max_age, Row freezing, xidWarnLimit and xidStopLimit, XID wraparound
-
-### Community 1011 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.40
-Nodes (5): security_invoker views, DDL is an ownership right, ALTER DEFAULT PRIVILEGES FOR ROLE owner, GRANT USAGE not CREATE on schema, Two connection strings owner vs app
-
-### Community 1012 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.40
-Nodes (5): Identity vs serial sequence grant, Column grants are additive, View as a column boundary, ALTER DEFAULT PRIVILEGES, GRANT ON ALL TABLES is a snapshot
-
-### Community 1013 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.40
-Nodes (5): pg_dump ACCESS SHARE lock, pg_dump REPEATABLE READ snapshot, Physical streaming replica, hot_standby_feedback, Recovery conflict 40001
-
-### Community 1014 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.50
-Nodes (5): \gset, Bare :var is injectable, Variables are textual substitution, Three interpolation forms, Unset variable left as text
-
-### Community 1015 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.40
-Nodes (5): Declarative partitioning, ONLY excludes children, Unique constraint must include partition key, Primary keys are not inherited, Table inheritance
-
-### Community 1016 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.40
-Nodes (5): Bulk insert speed ladder, 65535 parameter ceiling, Extended query protocol, Parameterized queries, unnest N rows through one parameter per column
-
-### Community 1017 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.40
-Nodes (5): Identity consumed before conflict, Conflict target needs a unique index, EXCLUDED proposed row, Atomic upsert, TRUNCATE RESTART IDENTITY
-
-### Community 1018 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.50
-Nodes (5): UPDATE writes a new tuple version, DELETE, DELETE does not shrink the table, TRUNCATE, TRUNCATE versus DELETE
-
-### Community 1019 - "Postgresql: Phase 5 Joins"
-Cohesion: 0.70
-Nodes (5): ON vs WHERE, Outer-join predicate classification, FROM including ON then WHERE, WHERE on right table cancels LEFT JOIN, Downstream INNER JOIN cancels LEFT JOIN
-
-### Community 1020 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.40
-Nodes (5): LATERAL LIMIT 1 when columns are needed, count(DISTINCT) survives fan-out, Join fan-out inflates sum, LATERAL pre-aggregation, sum(DISTINCT) is not a fan-out fix
-
-### Community 1021 - "Postgresql: Phase 6 Aggregation"
-Cohesion: 0.40
-Nodes (5): Where windows run, sum(count(*)) OVER (), 21000 more than one row returned, Scalar and row subqueries, Scalar subquery
-
-### Community 1022 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.60
-Nodes (5): Sorting cannot use parameter machinery, Safe dynamic WHERE, Sort and filter allowlists, Phase 9 CRUD patterns for a real API, Critical Phase 8–9 topics were stamps
-
-### Community 1023 - "Postgresql: Phase 9 Api Crud"
-Cohesion: 0.40
-Nodes (5): 25P02 current transaction is aborted, COMMIT on an aborted transaction reports success, SAVEPOINT for an optional step, Savepoint-per-row overflows the 64-XID cache, Transactions in a request
-
-### Community 1024 - "React: Phase 2 Components"
-Cohesion: 0.40
-Nodes (5): Three tiers of impurity cost, StrictMode, the Compiler and how purity is enforced, What StrictMode cannot catch, StrictMode doubling is the test, useRef guard is the wrong StrictMode fix
-
-### Community 1025 - "React: Phase 3 State"
-Cohesion: 0.40
-Nodes (5): Props changing is not a render trigger, Two reasons a component renders, Cannot update a different component during render, Effects run bottom-up, Top-down depth-first render order
-
-### Community 1026 - "Reviews: 08 13 Cross Phase Correctness.Md"
-Cohesion: 0.40
-Nodes (5): 81 pages clustered 169–269 lines, Item 14 re-split queue, Clustering tell, Review evidence rule, D1–D5 review scoring rubric
-
-### Community 1027 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.40
-Nodes (5): TypeScript is a checker, not a runtime, Erasure and surviving syntax, The three ways to run TypeScript, Strip-only mode and erasableSyntaxOnly, strict and the flags it turns on
-
-### Community 1028 - "Typescript: Phase 0 How Typescript Runs"
-Cohesion: 0.50
-Nodes (5): Numeric enum IIFE, Erasable vs non-erasable syntax, erasableSyntaxOnly, Node strip-only mode, isolatedModules
-
-### Community 1029 - "/ - KNOW tier"
-Cohesion: 0.40
-Nodes (5): KNOW tier, MASTER tier, Priority tiers, UNDERSTAND tier, WHEN-NEEDED tier
-
-### Community 1030 - "Sandbox P10-Observability - node:module"
-Cohesion: 0.40
-Nodes (3): h, snap, t0
-
-### Community 1031 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.40
-Nodes (5): An array has a `length`, Built-ins are almost entirely non-enumerable, Class methods are invisible by design, The one that costs real debugging time — `Error`, What they reveal that `keys` hides
-
-### Community 1032 - "React: Phase 10 Server Components"
-Cohesion: 0.40
-Nodes (5): Four caveats that only make sense once you see the graph, Importing from a client module has a type restriction, The directive must be genuinely first, The guarantee runs one way only, `'use client'` inside the client graph does nothing
-
-### Community 1033 - "React: Phase 10 Server Components"
-Cohesion: 0.40
-Nodes (5): The critical one — CVE-2025-55182, The frameworks named, The timeline, Who was not affected, 🔴 You did not need to write a Server Function to be exposed
-
-### Community 1034 - "Storybook - 🔴 A note on"
+### Community 802 - "Storybook Readme.Md: Prerequisites"
 Cohesion: 0.40
 Nodes (4): 🔴 A note on where this track's raw material comes from, Prerequisites, Rules these pages follow, Status
 
-### Community 1035 - "Sandbox Express-Verify: Phase 1 Routing_06 Router"
+### Community 803 - "Sandbox P10 Observability"
+Cohesion: 0.40
+Nodes (3): h, snap, t0
+
+### Community 804 - "Reviews: If you only do five"
+Cohesion: 0.40
+Nodes (5): 06 · Work order — ranked by payoff, If you only do five, Ranked, Verification for whoever executes this, What this review deliberately does not recommend
+
+### Community 805 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (4): app, db, items, server
 
-### Community 1036 - "Sandbox Express-Verify: Phase 1 Routing_07 App"
+### Community 806 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (4): admin, app, reports, server
 
-### Community 1037 - "Sandbox Express-Verify: Phase 2 Middleware_02 Execution"
+### Community 807 - "Sandbox Express Verify"
 Cohesion: 0.50
 Nodes (4): api, app, log(), server
 
-### Community 1038 - "Sandbox Express-Verify - run-all.mjs"
+### Community 808 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (4): errs, manifest, results, run
 
-### Community 1039 - "Sandbox Express-Verify - v10-mount.mjs"
+### Community 809 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (4): admin, app, reports, server
 
-### Community 1040 - "Sandbox Express-Verify - v6-etag.mjs"
+### Community 810 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (3): app, {port}, server
 
-### Community 1041 - "Sandbox Express-Verify - v7-ifmatch.mjs"
+### Community 811 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (3): app, {port}, server
 
-### Community 1042 - "Sandbox Express-Verify - v9-mountpath.mjs"
+### Community 812 - "Sandbox Express Verify"
 Cohesion: 0.40
 Nodes (4): admin, app, server, sub
 
-### Community 1043 - "Sandbox Js-P2 - ex2-logical-optional.mjs"
+### Community 813 - "Sandbox Js P2"
 Cohesion: 0.40
 Nodes (3): empty, nf, user
 
-### Community 1044 - "Sandbox Js-P2 - ex4-spread-bitwise.mjs"
+### Community 814 - "Sandbox Js P2"
 Cohesion: 0.40
 Nodes (3): { a, ...others }, copy, orig
 
-### Community 1045 - "Sandbox Js-P2 - ex6-optional-limits.mjs"
+### Community 815 - "Sandbox Js P2"
 Cohesion: 0.40
 Nodes (4): a, b, checks, empty
 
-### Community 1050 - "Sandbox P7-Background-Work - ex4-shutdown.mjs"
+### Community 820 - "Sandbox P7 Background Work"
 Cohesion: 0.40
 Nodes (3): child2, connection, q
 
-### Community 1052 - "Sandbox P8-Security - ex7-xss.mjs"
+### Community 822 - "Sandbox P8 Security"
 Cohesion: 0.40
 Nodes (4): safe, sep, srv, user
 
-### Community 1054 - "Sandbox P9-Testing - package.json"
+### Community 824 - "Sandbox P9 Testing"
 Cohesion: 0.40
 Nodes (4): name, private, type, version
 
-### Community 1055 - "Sandbox Pg-Api - ex14-crud.mjs"
+### Community 825 - "Sandbox Pg Api"
 Cohesion: 0.50
 Nodes (3): pool, q(), show()
 
-### Community 1057 - "Sandbox Pg-Api - ex17-update.mjs"
+### Community 827 - "Sandbox Pg Api"
 Cohesion: 0.50
 Nodes (3): pool, q(), reset()
 
-### Community 1058 - "Sandbox Pg-Api - ex19-series-values.mjs"
+### Community 828 - "Sandbox Pg Api"
 Cohesion: 0.50
 Nodes (3): pool, q(), show()
 
-### Community 1059 - "Sandbox Pg-Api - ex32-psql-io.sh"
+### Community 829 - "Sandbox Pg Api"
 Cohesion: 0.60
 Nodes (4): line(), PGPASSWORD, run_err(), ex32-psql-io.sh script
 
-### Community 1060 - "Sandbox Pg-Api - ex37e-ordered-set-checks.mjs"
+### Community 830 - "Sandbox Pg Api"
 Cohesion: 0.50
 Nodes (3): pool, q(), rows()
 
-### Community 1066 - "Sandbox Ts-P1 - merge.ts"
+### Community 836 - "Sandbox Ts P1"
 Cohesion: 0.40
 Nodes (4): b, Box, missing, TBox
 
-### Community 1067 - "Sandbox Ts-P1 - deep.ts"
+### Community 837 - "Sandbox Ts P1"
 Cohesion: 0.40
 Nodes (4): A, B, C, Deep
 
-### Community 1068 - "/ - Grok memory store"
+### Community 838 - "Agents.Md: Grok project rules — devbible"
 Cohesion: 0.50
-Nodes (4): Grok memory store, Global rules vs project memory split, Claude memory store, Claude project bridge
+Nodes (3): Grok project rules — devbible, Memory (Grok), This project
 
-### Community 1069 - "Expressjs: Phase 4 Responses"
+### Community 839 - "Mongodb Schema Design"
 Cohesion: 0.50
-Nodes (4): Cannot set headers after they are sent, Headers already sent, res.headersSent guard, Set headers before first stream byte
+Nodes (4): 1 · Embed the children, 2 · Embed an array of ids, 3 · Reference from the child, The three shapes
 
-### Community 1070 - "Javascript: Phase 2 Operators"
+### Community 840 - "Postgresql Architecture: Coverage"
 Cohesion: 0.50
-Nodes (4): Always brace if bodies, Automatic semicolon insertion, Five dangerous ASI line starts, Restricted productions
+Nodes (3): Coverage, Phase gate, Where this connects
 
-### Community 1071 - "Javascript: Phase 3 Functions"
+### Community 841 - "React Ssr Hydration"
 Cohesion: 0.50
-Nodes (4): HoistableDeclaration, Value hoisting, Function declaration value hoisting, var and function name collision
+Nodes (4): `bootstrapScripts` is the real architectural switch, `identifierPrefix` has to match on both sides, `namespaceURI` is for documents that are not HTML, The options
 
-### Community 1072 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.50
-Nodes (4): Replacement $ patterns, Never build a regex from user input, String.prototype.replace, String.prototype.replaceAll
-
-### Community 1073 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.50
-Nodes (4): Destructuring null or undefined throws, Destructured parameter = {}, Destructuring and fn.length, Options object as named arguments
-
-### Community 1074 - "Nodejs: Phase 11 Deployment"
-Cohesion: 0.67
-Nodes (4): Spoofed X-Forwarded-For, TLS termination at the edge, trust proxy, X-Forwarded-* headers
-
-### Community 1075 - "Nodejs: Phase 12 Native"
-Cohesion: 0.50
-Nodes (4): V8 heap limit vs cgroup RSS, --max-old-space-size, --trace-gc is diagnostic only, node --v8-options
-
-### Community 1076 - "Nodejs: Phase 1 Modules"
-Cohesion: 0.50
-Nodes (4): Avoid global npm installs, npm day to day, npm explain, npx
-
-### Community 1077 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.50
-Nodes (4): Mock (interaction assertion), Over-mocking as a design smell, Spy, Stub
-
-### Community 1078 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.50
-Nodes (4): MySQL strict mode, SQLite STRICT tables, SQLite type affinities, Real BOOLEAN type
-
-### Community 1079 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.50
-Nodes (4): jsonb shallow merge ||, Hybrid columns plus jsonb, No foreign key into a jsonb key, jsonb key-name storage cost
-
-### Community 1080 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.50
-Nodes (4): HNSW 2000-dimension cap, vector distance operators, ef_search recall knob, HNSW approximate index
-
-### Community 1081 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.50
-Nodes (4): pg_hba auth methods, pg_hba_file_rules parsed view, First matching pg_hba rule wins, hostssl hostnossl enforce TLS on the server
-
-### Community 1082 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.50
-Nodes (4): pg returns bigint as a string, date maps to JS Date at local midnight, Date and time functions, generate_series and helpers
-
-### Community 1083 - "Postgresql: Phase 8 Schema From Node"
-Cohesion: 0.50
-Nodes (4): pg_advisory_xact_lock, Idempotent vs concurrency-safe, CREATE TABLE IF NOT EXISTS race, Silent startup seed duplication
-
-### Community 1084 - "React: Phase 0 How React Runs"
-Cohesion: 0.50
-Nodes (4): Reconciliation two rules, Type change remounts the subtree, React DevTools, Profiler API
-
-### Community 1085 - "React: Phase 0 How React Runs"
-Cohesion: 0.50
-Nodes (4): process.env.NODE_ENV selects the React build, Create React App sunset, Framework vs Vite SPA, Vite SPA starter
-
-### Community 1086 - "React: Phase 4 Effects"
-Cohesion: 0.50
-Nodes (4): Effect timing relative to paint is not guaranteed, Layout state update executes remaining Effects immediately, useLayoutEffect, Three effect passes per commit
-
-### Community 1088 - "Css: Phase 7 Positioning"
-Cohesion: 0.50
-Nodes (4): 1. It needs a threshold, 2. No ancestor may clip or scroll unexpectedly, 3. The parent must be taller than the element, The three conditions
-
-### Community 1089 - "Css - How these pages are"
-Cohesion: 0.50
-Nodes (3): How these pages are verified, Phases, Progress
-
-### Community 1090 - "React: Phase 10 Server Components"
-Cohesion: 0.50
-Nodes (4): Browser APIs, State and event handlers, 🔴 The React APIs that force it, When you genuinely need it
-
-### Community 1091 - "React: Phase 10 Server Components"
-Cohesion: 0.50
-Nodes (4): `cache` — deduplicate a query across one request, `cache` is not `useMemo`, Calling it outside a component does nothing, The four caveats, each with a consequence
-
-### Community 1092 - "Sandbox Express-Verify: Phase 0 Express Basics_02"
+### Community 843 - "Sandbox Express Verify"
 Cohesion: 0.50
 Nodes (3): app, server, users
 
-### Community 1093 - "Sandbox Express-Verify: Phase 1 Routing_03 Router"
+### Community 844 - "Sandbox Express Verify"
 Cohesion: 0.50
 Nodes (3): app, server, users
 
-### Community 1094 - "Sandbox Express-Verify: Phase 1 Routing_03 Router"
+### Community 845 - "Sandbox Express Verify"
 Cohesion: 0.50
 Nodes (3): app, comments, server
 
-### Community 1096 - "Sandbox Express-Verify: Phase 4 Responses_06 Spa"
+### Community 847 - "Sandbox Express Verify"
 Cohesion: 0.50
 Nodes (3): app, dir, server
 
-### Community 1097 - "Sandbox Express-Verify - v8-trustproxy.mjs"
+### Community 848 - "Sandbox Express Verify"
 Cohesion: 0.67
 Nodes (3): get(), hdrs, mk()
 
-### Community 1099 - "Sandbox Js-P1 - ex7-strings-symbols-bigint.mjs"
+### Community 850 - "Sandbox Js P1"
 Cohesion: 0.50
 Nodes (3): id1, id2, o
 
-### Community 1100 - "Sandbox Js-P2 - ex5-assign-contrast.mjs"
+### Community 851 - "Sandbox Js P2"
 Cohesion: 0.50
 Nodes (3): frozen, frozen2, t
 
-### Community 1102 - "Sandbox P10-Observability - ex3-diag.mjs"
+### Community 853 - "Sandbox P10 Observability"
 Cohesion: 0.50
 Nodes (3): seen, srv, tc
 
-### Community 1103 - "Sandbox P8-Security - ex4-throughput.mjs"
+### Community 854 - "Sandbox P8 Security"
 Cohesion: 0.50
 Nodes (3): P, s, salt
 
-### Community 1116 - "Sandbox Pg-Api - ex31-psql-basics.sh"
+### Community 867 - "Sandbox Pg Api"
 Cohesion: 0.67
 Nodes (3): line(), PGPASSWORD, ex31-psql-basics.sh script
 
-### Community 1117 - "Sandbox Pg-Api - ex36b-agg-plans.mjs"
+### Community 868 - "Sandbox Pg Api"
 Cohesion: 0.67
 Nodes (3): pool, q(), show()
 
-### Community 1119 - "Sandbox Pg-Api - ex3-advisory-fix.mjs"
+### Community 870 - "Sandbox Pg Api"
 Cohesion: 0.50
 Nodes (3): errors, pool, t0
 
-### Community 1122 - "Sandbox Pg-Api - ex6-collation.mjs"
+### Community 873 - "Sandbox Pg Api"
 Cohesion: 0.67
 Nodes (3): pool, q(), show()
 
-### Community 1123 - "Sandbox Pg-Api - ex9-bulk-at-scale.mjs"
+### Community 874 - "Sandbox Pg Api"
 Cohesion: 0.67
 Nodes (3): pool, q(), reset()
 
-### Community 1124 - "Sandbox React-P0 - Glean client ID"
-Cohesion: 0.67
-Nodes (4): Glean client ID (react-p0), NSS Internal PKCS #11 Module (react-p0), Glean client ID (react-p1), NSS Internal PKCS #11 Module (react-p1)
-
-### Community 1427 - "Sandbox Ts-P1 - iface.ts"
+### Community 1177 - "Sandbox Ts P1"
 Cohesion: 0.50
 Nodes (3): IOrder, JsonValue, TOrder
 
-### Community 1428 - "Src - progress.js"
+### Community 1178 - "Src: progress.js"
 Cohesion: 0.67
 Nodes (3): LANGUAGES, phaseStatus(), summarise()
 
-### Community 1429 - "Expressjs: Phase 1 Routing"
-Cohesion: 0.67
-Nodes (3): app.param, param callback runs once per cycle, router.param
-
-### Community 1430 - "Expressjs: Phase 5 Errors"
-Cohesion: 0.67
-Nodes (3): Operational errors, Programmer errors, Request-scoped vs process-level errors
-
-### Community 1431 - "Expressjs: Foundations.Md"
-Cohesion: 1.00
-Nodes (3): Express 5 path-to-regexp break, Express 5 vs 4, SPA history fallback /*splat
-
-### Community 1432 - "Expressjs: Edge And Ops.Md"
-Cohesion: 0.67
-Nodes (3): Validate at boundary is Master, RBAC and resource ownership, Validate at the HTTP boundary
-
-### Community 1433 - "Expressjs: Foundations.Md"
-Cohesion: 0.67
-Nodes (3): Express over node:http, Middleware contract, Express request lifecycle
-
-### Community 1434 - "Javascript: Phase 2 Operators"
-Cohesion: 0.67
-Nodes (3): Overloaded + concatenation, += inherits + overloading, + string position changes the answer
-
-### Community 1435 - "Javascript: Phase 3 Functions"
-Cohesion: 0.67
-Nodes (3): Function declaration hoisting, Function expression TDZ, Parameter-list TDZ
-
-### Community 1436 - "Javascript: Phase 3 Functions"
-Cohesion: 0.67
-Nodes (3): Parameter list TDZ, Parameter scope is parent of body, var shadowing a parameter
-
-### Community 1437 - "Javascript: Phase 5 Built In Library"
-Cohesion: 1.00
-Nodes (3): String.prototype.slice, String.prototype.substring, Use slice, not substring
-
-### Community 1438 - "Javascript: Phase 5 Built In Library"
-Cohesion: 0.67
-Nodes (3): Map keys can be any value, SameValueZero key equality, WeakMap
-
-### Community 1439 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.67
-Nodes (3): Array vs object destructuring, Promise.all array destructuring, for...of await vs Promise.all map
-
-### Community 1440 - "Javascript: Phase 6 Iteration And Destructuring"
-Cohesion: 0.67
-Nodes (3): Array.prototype.forEach, Loop capability table, return inside forEach
-
-### Community 1441 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.67
-Nodes (3): Performance marks and measures, performance.now monotonic clock, Staged request timings
-
-### Community 1442 - "Nodejs: Phase 10 Observability"
-Cohesion: 0.67
-Nodes (3): autocannon HTTP load, Microbenchmarks lie, Observe-result sink
-
-### Community 1443 - "Nodejs: Phase 3 Buffers Streams"
-Cohesion: 0.67
-Nodes (3): Writable stream, _write callback contract, Custom Writable _write _writev _final
-
-### Community 1444 - "Nodejs: Phase 4 Filesystem"
-Cohesion: 0.67
-Nodes (3): Dirent.parentPath, opendir async iterator, readdir withFileTypes
-
-### Community 1445 - "Nodejs: Phase 4 Filesystem"
-Cohesion: 0.67
-Nodes (3): Close FileHandle in finally, EMFILE too many open files, FileHandle
-
-### Community 1446 - "Nodejs: Phase 4 Filesystem"
-Cohesion: 0.67
-Nodes (3): os.availableParallelism, os reports host not cgroup, process vs os memory and CPU
-
-### Community 1447 - "Nodejs: Phase 5 Http Processes"
-Cohesion: 0.67
-Nodes (3): sea.getAsset, postject, Single Executable Application
-
-### Community 1448 - "Nodejs: Phase 6 Data Access"
-Cohesion: 0.67
-Nodes (3): int8 and numeric as strings, Driver types must not leak, SQLite integers throw above MAX_SAFE_INTEGER
-
-### Community 1449 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.67
-Nodes (3): Jest native ESM friction, node:test as default backend runner, Vitest
-
-### Community 1450 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.67
-Nodes (3): t.assert.snapshot(), Blind --test-update-snapshots trap, Snapshot normalization
-
-### Community 1451 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.67
-Nodes (3): autocannon, k6, Stress, soak, and spike tests
-
-### Community 1452 - "Nodejs: Phase 9 Testing"
-Cohesion: 0.67
-Nodes (3): Consumer-owned contract, Contract test, Schema compatibility — breaking vs non-breaking
-
-### Community 1453 - "Nodejs: Core Io.Md"
-Cohesion: 0.67
-Nodes (3): Suggested Node platform topics, Phase 4 — Filesystem, paths, and URLs, Phase 7 — Background work and resilience
-
-### Community 1454 - "Postgresql: Phase 0 Architecture"
-Cohesion: 0.67
-Nodes (3): What PostgreSQL is, PostgreSQL explanation pages, PostgreSQL syllabus
-
-### Community 1455 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.67
-Nodes (3): Extension available vs installed, Extensions are per database not per cluster, pgvector is not in the stock image
-
-### Community 1456 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.67
-Nodes (3): jsonb_to_recordset, unnest bulk-insert bridge, WITH ORDINALITY
-
-### Community 1457 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.67
-Nodes (3): DEFAULT partition safety net, Partition pruning, RANGE LIST HASH partitioning
-
-### Community 1458 - "Postgresql: Phase 12 Beyond Tables"
-Cohesion: 0.67
-Nodes (3): CALL vs SELECT for procedures, Procedure can COMMIT mid-body, Procedure transaction control only when outermost
-
-### Community 1459 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.67
-Nodes (3): Schema USAGE before table verbs, TRUNCATE is not DELETE, UPDATE needs SELECT to read
-
-### Community 1460 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.67
-Nodes (3): pg rejectUnauthorized false is require, Six libpq sslmodes, verify-full hostname check
-
-### Community 1461 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.67
-Nodes (3): What is happening right now, pg_stat_statements, Reading pg_stat_statements
-
-### Community 1462 - "Postgresql: Phase 13 Ops"
-Cohesion: 0.67
-Nodes (3): pg_upgrade --link and --swap destroy rollback, pg_upgrade catalog migration, PostgreSQL 18 transfers most optimizer statistics
-
-### Community 1463 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.67
-Nodes (3): -At unaligned tuples-only, --csv, --no-psqlrc / -X
-
-### Community 1464 - "Postgresql: Phase 1 Psql"
-Cohesion: 0.67
-Nodes (3): ALTER DEFAULT PRIVILEGES, \dp / \z privileges, GRANT USAGE ON SCHEMA
-
-### Community 1465 - "Postgresql: Phase 2 Types"
-Cohesion: 0.67
-Nodes (3): bytea, Object storage instead of large bytea, TOAST for bytea
-
-### Community 1466 - "Postgresql: Phase 3 Ddl"
-Cohesion: 0.67
-Nodes (3): Unquoted identifiers fold to lower case, user is reserved, snake_case convention
-
-### Community 1467 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.67
-Nodes (3): NOT EXISTS over NOT IN, NOT IN with NULL returns nothing, = ANY($1) for IN lists
-
-### Community 1468 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.67
-Nodes (3): COALESCE PATCH semantics, COALESCE, || versus concat versus concat_ws
-
-### Community 1469 - "Postgresql: Phase 4 Crud"
-Cohesion: 0.67
-Nodes (3): musl versus glibc collation split, Pin an ICU collation, libc upgrade can corrupt text btrees
-
-### Community 1471 - "React: Phase 2 Components"
-Cohesion: 0.67
-Nodes (3): The switch warning, and supporting both, value={x ?? ''} fix, undefined decides controlled mode
-
-### Community 1472 - "React: Phase 4 Effects"
-Cohesion: 0.67
-Nodes (3): Symmetrical cleanup, removeEventListener needs the same handler reference, dialog.showModal needs close
-
-### Community 1473 - "React: Phase 4 Effects"
-Cohesion: 0.67
-Nodes (3): An effect chain cannot be replayed, Chains are often stored derived state, Snapshot trap when collapsing a chain
-
-### Community 1474 - "React: The React Model.Md"
-Cohesion: 0.67
-Nodes (3): Fiber, Part 1 — The React model, Render, reconcile, commit
-
-### Community 1526 - "Sandbox Pg-Phase-0: Pg Phase 0"
-Cohesion: 0.67
-Nodes (3): devbible-pg container, postgres:18-alpine, PostgreSQL Phase 0 measurements
-
 ## Knowledge Gaps
-- **13590 isolated node(s):** `config`, `name`, `version`, `packageManager`, `private` (+13585 more)
+- **20036 isolated node(s):** `config`, `name`, `version`, `packageManager`, `private` (+20031 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **713 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **445 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `📖 Story Anatomy: Meta, Named Exports, `args`, `argTypes` & `render`` connect `Storybook: Story Anatomy` to `Storybook: Real World Workflows And Recipes`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `📖 Composition & Design Systems: Design Tokens, Variant Matrices & Storybook Composition` connect `Storybook: Composition And Design Systems` to `Storybook: Real World Workflows And Recipes`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `🎨 Storybook Colors: Global Tokens, Themes & Live Switching` connect `Storybook Theming Colors And Fonts` to `Storybook`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `🍳 Real-World Workflows & Recipes (ESLint & Oxlint)` connect `Eslint-Oxlint Real World Workflows And R` to `Eslint-Oxlint`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `🌐 Language Options, Globals & File Targeting` connect `Eslint-Oxlint Eslint Language Options Gl` to `Eslint-Oxlint`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `config`, `name`, `version` to the rest of the system?**
-  _13590 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `React: Phase 10 Server Components` be split into smaller, more focused modules?**
-  _Cohesion score 0.014035087719298246 - nodes in this community are weakly interconnected._
-- **Should `React: Phase 8 Concurrent Suspense` be split into smaller, more focused modules?**
-  _Cohesion score 0.015106732348111659 - nodes in this community are weakly interconnected._
-- **Should `Expressjs: Phase 5 Errors` be split into smaller, more focused modules?**
-  _Cohesion score 0.019955257270693513 - nodes in this community are weakly interconnected._
-- **Should `React: Phase 9 Forms Actions` be split into smaller, more focused modules?**
-  _Cohesion score 0.01904761904761905 - nodes in this community are weakly interconnected._
+  _20036 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `React Effects: Effects versus events` be split into smaller, more focused modules?**
+  _Cohesion score 0.015060383613544873 - nodes in this community are weakly interconnected._
+- **Should `Docker Build Strategy` be split into smaller, more focused modules?**
+  _Cohesion score 0.013601036269430052 - nodes in this community are weakly interconnected._
+- **Should `Docker Images And Registries` be split into smaller, more focused modules?**
+  _Cohesion score 0.012531328320802004 - nodes in this community are weakly interconnected._
