@@ -21,7 +21,7 @@ sidebar_position: 0
 | 04 | **[The outbox relay and email worker](04-outbox-relay-and-email.md)** | <span className="db-tier t-master">Master</span> | Send-then-mark at-least-once, `skip locked` claims, backoff bookkeeping on the row, dead letters a human reads |
 | 05 | **[Scheduled jobs](05-scheduled-jobs.md)** | <span className="db-tier t-understand">Understand</span> | Age-based chores that catch up: clock-anchored ticks, try-lock arbitration, jobs that report facts |
 | 06 | **[The webhook dispatcher](06-the-webhook-dispatcher.md)** | <span className="db-tier t-understand">Understand</span> | An outbox handler that signs `timestamp.body`, ships a dedup id, and judges delivery by status code only |
-| 07 | **The search indexer job** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 07 | **[The search indexer job](07-the-search-indexer.md)** | <span className="db-tier t-know">Know</span> | Mostly does not need to exist — the generated column dissolved it; the three residual tasks, named |
 | 08 | **The cache layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 09 | **The health and metrics kit** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 10 | **The ops CLI** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
