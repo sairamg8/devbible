@@ -22,7 +22,7 @@ sidebar_position: 0
 | 05 | **[Catalog endpoints](05-catalog-endpoints.md)** | <span className="db-tier t-master">Master</span> | Slugs in URLs, opaque cursors, mapper functions as the contract seam, honest cache headers |
 | 06 | **[Cart endpoints](06-cart-endpoints.md)** | <span className="db-tier t-understand">Understand</span> | One idempotent PUT, live prices, and the transactional merge-on-login that never loses items |
 | 07 | **[The checkout endpoint](07-the-checkout-endpoint.md)** | <span className="db-tier t-master">Master</span> | Authorize → commit → capture-by-outbox, one idempotency key across both systems, the failure map |
-| 08 | **The uploads endpoint** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 08 | **[The uploads endpoint](08-the-uploads-endpoint.md)** | <span className="db-tier t-understand">Understand</span> | busboy straight into the service, batch failure undoes, rows after storage, immutable serving |
 | 09 | **The error contract** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 10 | **Rate limiting** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 11 | **Inbound webhooks** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |

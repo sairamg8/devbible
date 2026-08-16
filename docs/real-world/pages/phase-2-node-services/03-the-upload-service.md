@@ -50,7 +50,7 @@ is a database column, not a filesystem fact.
 
 ```js
 // services/uploads.js
-import {createWriteStream} from 'node:fs';
+import {createReadStream, createWriteStream} from 'node:fs';
 import {mkdir, rename, rm} from 'node:fs/promises';
 import {pipeline} from 'node:stream/promises';
 import {Transform} from 'node:stream';
@@ -114,6 +114,16 @@ export function uploadService({rootDir, maxBytes = 5 * 1024 * 1024}) {
 
     async remove(key) {
       await rm(path.join(rootDir, key), {force: true});
+    },
+
+    /** Read side for serving (Phase 3's GET route). The key is server-minted,
+     *  but normalize-and-check anyway — defence in depth costs two lines. */
+    createReadStream(key) {
+      const p = path.resolve(rootDir, key);
+      if (!p.startsWith(path.resolve(rootDir) + path.sep)) {
+        throw new UploadError('BAD_KEY', 'key escapes the store');
+      }
+      return createReadStream(p);
     },
 
     /** Removes .tmp orphans older than maxAgeMs; returns how many.
