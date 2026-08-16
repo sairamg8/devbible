@@ -25,7 +25,7 @@ and [Part 3 — Node + raw pg](../../../postgresql/syllabus/03-node-and-pg.md).
 | 09 | **[Dashboard queries](09-dashboard-queries.md)** | <span className="db-tier t-understand">Understand</span> | `generate_series` spines, `filter` counts, window shares — and the cache→matview→replica ladder |
 | 10 | **[Indexes for this app’s queries](10-indexes.md)** | <span className="db-tier t-master">Master</span> | Every index derived from a named query — FK block, partial indexes, the keyset sort pairs, and the deliberate absences |
 | 11 | **[Soft delete and audit columns](11-soft-delete-and-audit.md)** | <span className="db-tier t-know">Know</span> | Soft delete for exactly one table, anonymize-not-hide for users, and the app’s only trigger |
-| 12 | **LISTEN/NOTIFY** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 12 | **[LISTEN/NOTIFY](12-listen-notify.md)** | <span className="db-tier t-know">Know</span> | Push as a hint on top of polling — outbox wake-up and cache eviction, never a queue |
 
 ## Phase gate
 
