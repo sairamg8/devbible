@@ -13,7 +13,7 @@ Podman is not "Docker with a different name". The daemonless, rootless design
 changes real things. This phase is where those differences live, so the rest of
 the track can stay engine-neutral.
 
-🚧 **Writing — 13 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
+🚧 **Writing — 14 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -30,7 +30,7 @@ the track can stay engine-neutral.
 | 11 | **[`podman kube play` / `generate kube`](11-kube-play.md)** | <span className="db-tier t-understand">Understand</span> | Kubernetes YAML as a file format for one host — the unsupported fields are ignored, not rejected |
 | 12 | **[Buildah and Skopeo](12-buildah-and-skopeo.md)** | <span className="db-tier t-know">Know</span> | Three tools, three privilege levels — and Skopeo copies between registries without a local pull |
 | 13 | **[Docker CLI compatibility](13-docker-cli-compatibility.md)** | <span className="db-tier t-understand">Understand</span> | Three levels — artefacts, CLI, API — and why an alias is the one that breaks in scripts |
-| 14 | Podman 6 breaking changes | <span className="db-tier t-understand">Understand</span> | cgroups v1 removed, BoltDB dropped, hosts dropped |
+| 14 | **[Podman 6 breaking changes](14-podman-6-breaking-changes.md)** | <span className="db-tier t-understand">Understand</span> | A removal release — cgroups v1, BoltDB, CNI, slirp4netns, iptables and two host platforms |
 | 15 | `podman machine` | <span className="db-tier t-know">Know</span> | The Linux VM behind Podman on macOS and Windows |
 | 16 | Podman Desktop | <span className="db-tier t-know">Know</span> | The GUI, and what it adds over the CLI |
 
