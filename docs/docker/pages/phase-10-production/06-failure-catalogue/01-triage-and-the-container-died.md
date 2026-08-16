@@ -98,7 +98,7 @@ works, and nothing alerted.
 It does not tell anyone, and Docker's exponential backoff makes a loop look
 calmer over time rather than louder
 ([Phase 1 — restart policies](../../phase-1-running-containers/12-restart-policies.md);
-**07 · Restart policies as supervision** *(not written yet)*).
+[07 · Restart policies as supervision](../07-restart-as-supervision.md)).
 
 ⚠️ **`docker logs` shows the current run.** In a loop that is the one that has not
 failed yet, which is why the loop looks unexplained. `docker logs` on the exited

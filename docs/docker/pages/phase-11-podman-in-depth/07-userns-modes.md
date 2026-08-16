@@ -249,4 +249,4 @@ rather than something you configure.
 
 ---
 
-← Prev: [`podman unshare`](06-podman-unshare.md) · Index: [Phase 11](README.md) · Next → **08 · `podman pod create`, `ps`, `rm`** *(not written yet)*
+← Prev: [`podman unshare`](06-podman-unshare.md) · Index: [Phase 11](README.md) · Next → [08 · `podman pod create`, `ps`, `rm`](08-pod-commands.md)

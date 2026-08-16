@@ -60,7 +60,7 @@ podman info --format '{{ .Host.LogDriver }}'     # what this machine defaults to
 a container host runs out of disk.** A chatty service writes until the partition
 is full and then everything on the box fails at once. The `local` driver, or
 explicit `max-size`/`max-file`, is the fix — the full treatment is
-**08 · Log drivers and rotation** *(not written yet)*.
+[08 · Log drivers and rotation](../08-log-drivers-and-rotation.md).
 
 ## `docker logs` does not always work
 

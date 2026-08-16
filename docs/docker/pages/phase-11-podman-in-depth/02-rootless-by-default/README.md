@@ -64,10 +64,11 @@ name which documented shortcoming it is before reading the error message.
   — written assuming limits are enforced, which rootless on cgroups v1 breaks
 - [01 · Daemonless](../01-daemonless/README.md) — the other half of Podman's
   default posture; the store being per user is why images cannot be shared
-- **06 · `podman unshare`** *(not written yet)* and **07 · `--userns` modes**
-  *(not written yet)* — choosing the mapping instead of fighting it
-- **14 · Podman 6 breaking changes** *(not written yet)* — why dropping cgroups v1
-  was possible
+- [06 · `podman unshare`](../06-podman-unshare.md) and
+  [07 · `--userns` modes](../07-userns-modes.md) — choosing the mapping instead
+  of fighting it
+- [14 · Podman 6 breaking changes](../14-podman-6-breaking-changes.md) — why
+  dropping cgroups v1 was possible
 
 ---
 

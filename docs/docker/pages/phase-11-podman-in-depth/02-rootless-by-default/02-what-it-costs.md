@@ -65,7 +65,7 @@ Docker one.** On a v1 host the flag is accepted and unenforced, which is the wor
 combination: [Phase 10 · 03](../../phase-10-production/03-resource-limits/README.md)
 teaches limits assuming they are real, and rootless on cgroups v1 is where that
 assumption breaks. It is also the reason Podman 6 could simply drop v1 —
-**Phase 11 · 14 · Podman 6 breaking changes** *(not written yet)*.
+[Phase 11 · 14 · Podman 6 breaking changes](../14-podman-6-breaking-changes.md).
 
 ## Storage, and the home directory it lives in
 
@@ -110,8 +110,8 @@ exactly what the document calls difficult, so plan for a registry pull instead.
 - **"A few commands do not work or have reduced functionality"**, checkpoint and
   restore among them.
 - **"Some systemd unit configuration options do not work in the rootless
-  container"** — worth knowing before **Phase 11 · 04 · Quadlet**
-  *(not written yet)* rather than during it.
+  container"** — worth knowing before [Phase 11 · 04 · Quadlet](../04-quadlet/README.md) rather
+  than during it.
 
 ## Requirements, and the failure that looks like nothing
 

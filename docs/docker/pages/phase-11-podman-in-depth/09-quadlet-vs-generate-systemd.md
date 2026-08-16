@@ -207,4 +207,4 @@ the generated unit is making a choice on your behalf.
 
 ---
 
-← Prev: [Pod commands](08-pod-commands.md) · Index: [Phase 11](README.md) · Next → **10 · `podman auto-update`** *(not written yet)*
+← Prev: [Pod commands](08-pod-commands.md) · Index: [Phase 11](README.md) · Next → [10 · `podman auto-update`](10-auto-update.md)

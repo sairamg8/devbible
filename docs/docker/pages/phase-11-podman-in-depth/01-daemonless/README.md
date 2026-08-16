@@ -66,8 +66,8 @@ under Docker.
   user-namespace arithmetic
 - [04 · Quadlet](../04-quadlet/README.md) — where "let systemd own the container"
   becomes a file you write
-- **13 · Docker CLI compatibility** *(not written yet)* — the API socket in
-  anger, for Testcontainers and friends
+- [13 · Docker CLI compatibility](../13-docker-cli-compatibility.md) — the API
+  socket in anger, for Testcontainers and friends
 
 ---
 

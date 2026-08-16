@@ -151,7 +151,7 @@ Under systemd, the same three are `CPUQuota=`, `TasksMax=` and `MemoryMax=` from
 `systemd.resource-control(5)` — which is how a Quadlet unit expresses them
 (Phase 11). **A container run four different ways has four places to keep in
 agreement**, and that mismatch is a recurring entry in
-**06 · The production failure catalogue** *(not written yet)*.
+[06 · The production failure catalogue](../06-failure-catalogue/README.md).
 
 ## Podman
 

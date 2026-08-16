@@ -126,7 +126,7 @@ Both come from checking the wrong thing, in opposite directions.
 The distinction that resolves it is **liveness versus readiness**: *should I be
 restarted* is a different question from *should I be sent traffic*, and one
 endpoint cannot answer both well. That is
-**09 · Healthchecks in production** *(not written yet)*.
+[09 · Healthchecks in production](../09-healthchecks-in-production.md).
 
 🔴 **And the fact this whole catalogue keeps returning to: Docker reports health;
 it does not act on it.** `HEALTHCHECK` sets a status and emits a

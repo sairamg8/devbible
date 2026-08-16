@@ -94,4 +94,4 @@ which one applies from the evidence in front of you.**
 
 ---
 
-← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: **Phase 9 — The MERN/PERN stack** *(not written yet)* · Start → [PID 1 is not a normal process](01-pid-1/README.md) · Next phase → [Phase 11 — Podman in depth](../phase-11-podman-in-depth/README.md)
+← Syllabus: [Part 4 — Production and depth](../../syllabus/04-production-and-depth.md) · Prev phase: [Phase 9 — The MERN/PERN stack](../phase-9-mern-pern-stack/README.md) · Start → [PID 1 is not a normal process](01-pid-1/README.md) · Next phase → [Phase 11 — Podman in depth](../phase-11-podman-in-depth/README.md)

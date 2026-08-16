@@ -134,8 +134,8 @@ The flags are the same and the starting position is different, because
   neither by default.
 - `--userns=keep-id` and friends are the mapping controls;
   [phase 6 · `--userns=keep-id`](../../phase-6-storage/09-userns-keep-id.md) covers
-  the ownership case, and **Phase 11 · `--userns`: `keep-id`, `nomap`, `auto`**
-  *(not written yet)* is the depth.
+  the ownership case, and [Phase 11 · 07 · `--userns` modes](../../phase-11-podman-in-depth/07-userns-modes.md)
+  is the depth.
 
 ## Rolling it out on a service that is already running
 

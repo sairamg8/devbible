@@ -115,15 +115,14 @@ and the rest.
 A pod is not Podman's invention — it is **Kubernetes' smallest deployable unit**,
 and Podman implements it faithfully enough that the mental model transfers. A
 sidecar pattern you build locally as a pod is the sidecar pattern you deploy, and
-`podman kube play` runs the YAML directly (**Phase 11 · 11 · `podman kube play`** *(not written yet)*).
+`podman kube play` runs the YAML directly ([Phase 11 · 11](11-kube-play.md)).
 
 That is the honest reason to learn pods even if you never use them locally: they
 are the on-ramp, not a Podman quirk.
 
 ## So when is a pod the right answer?
 
-The short version, argued properly in **Phase 11 · 08 · `podman pod create`,
-`ps`, `rm`** *(not written yet)*:
+The short version, argued properly in [Phase 11 · 08 · `podman pod create`, `ps`, `rm`](08-pod-commands.md):
 
 - **Use a pod** when containers are genuinely one deployable thing that scale and
   fail together — an application with its log shipper, a proxy sidecar, a

@@ -186,8 +186,7 @@ the Docker daemon.
 **Cause:** The tool speaks the Docker API over a socket, and no socket exists
 until you ask for one.
 **Fix:** Enable the rootless API service and point `DOCKER_HOST` at
-`$XDG_RUNTIME_DIR/podman/podman.sock`. Detail in **Phase 11 · 13 · Docker CLI
-compatibility** *(not written yet)*.
+`$XDG_RUNTIME_DIR/podman/podman.sock`. Detail in [Phase 11 · 13 · Docker CLI compatibility](../13-docker-cli-compatibility.md).
 
 **Symptom:** Pulling a large image fails with a disk-space error although the
 system disk has plenty free.

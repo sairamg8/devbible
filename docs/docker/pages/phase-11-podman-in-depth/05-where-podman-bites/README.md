@@ -70,8 +70,8 @@ reproducing it.
   — the engine-neutral catalogue this one parallels
 - [Phase 10 · 09 · Healthchecks in production](../../phase-10-production/09-healthchecks-in-production.md)
   — what a check is for, before the question of what fires it
-- **13 · Docker CLI compatibility** *(not written yet)* — the socket and
-  `DOCKER_HOST` in detail
+- [13 · Docker CLI compatibility](../13-docker-cli-compatibility.md) — the
+  socket and `DOCKER_HOST` in detail
 
 ---
 

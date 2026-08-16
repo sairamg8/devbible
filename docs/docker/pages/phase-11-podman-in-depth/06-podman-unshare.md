@@ -145,8 +145,7 @@ give it to you — it will fail in the same way, one namespace further in.
 
 **It is not available everywhere.** The reference states that "this command is
 not available with the remote Podman client", which quietly covers macOS and
-Windows, where the CLI talks to a VM (**Phase 11 · 15 · `podman machine`**
-*(not written yet)*) rather than to local storage. The files you want to fix are
+Windows, where the CLI talks to a VM ([Phase 11 · 15](15-podman-machine.md)) rather than to local storage. The files you want to fix are
 inside that VM, so the fix has to run inside it too — `podman machine ssh` first,
 then `podman unshare` there.
 
@@ -232,4 +231,4 @@ that address only exists inside the network namespace.
 
 ---
 
-← Prev: [Where Podman will bite you](05-where-podman-bites/README.md) · Index: [Phase 11](README.md) · Next → **07 · `--userns`: `keep-id`, `nomap`, `auto`** *(not written yet)*
+← Prev: [Where Podman will bite you](05-where-podman-bites/README.md) · Index: [Phase 11](README.md) · Next → [07 · `--userns`: `keep-id`, `nomap`, `auto`](07-userns-modes.md)

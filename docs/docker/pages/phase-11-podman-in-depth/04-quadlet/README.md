@@ -64,9 +64,9 @@ survives a reboot, and explain what the generator produced and when.
 - [03 · Pods](../03-pods.md) — declared as a `.pod` unit, with ports on the pod
 - [Phase 8 · 05 · `depends_on`](../../phase-8-compose/05-depends-on.md) — the
   Compose ordering this replaces with systemd's own
-- **09 · Quadlet vs `podman generate systemd`** *(not written yet)* — why the old
-  command is not the answer
-- **10 · `podman auto-update`** *(not written yet)* — what `AutoUpdate=registry`
+- [09 · Quadlet vs `podman generate systemd`](../09-quadlet-vs-generate-systemd.md)
+  — why the old command is not the answer
+- [10 · `podman auto-update`](../10-auto-update.md) — what `AutoUpdate=registry`
   turns on
 
 ---

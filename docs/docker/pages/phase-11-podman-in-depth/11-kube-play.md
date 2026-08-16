@@ -193,4 +193,4 @@ with the same dependency and restart handling as a `.container` unit. Running
 
 ---
 
-← Prev: [`podman auto-update`](10-auto-update.md) · Index: [Phase 11](README.md) · Next → **12 · Buildah and Skopeo** *(not written yet)*
+← Prev: [`podman auto-update`](10-auto-update.md) · Index: [Phase 11](README.md) · Next → [12 · Buildah and Skopeo](12-buildah-and-skopeo.md)

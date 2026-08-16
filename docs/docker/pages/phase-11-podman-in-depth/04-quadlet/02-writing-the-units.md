@@ -64,7 +64,7 @@ The keys that carry weight:
   systemd — the signal path Docker has no equivalent for
   ([topic 01](../01-daemonless/02-restart-logs-and-systemctl.md)).
 - **`AutoUpdate=registry`** marks the container for `podman auto-update`
-  (**Phase 11 · 10** *(not written yet)*).
+  ([Phase 11 · 10](../10-auto-update.md)).
 
 ## The dependency trick
 

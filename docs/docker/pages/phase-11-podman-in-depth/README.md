@@ -13,7 +13,7 @@ Podman is not "Docker with a different name". The daemonless, rootless design
 changes real things. This phase is where those differences live, so the rest of
 the track can stay engine-neutral.
 
-🚧 **Writing — 15 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
+🏁 **Complete — 16 of 16 topics** (Master 4/4 · Understand 8/8 · Know 4/4).
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -32,13 +32,13 @@ the track can stay engine-neutral.
 | 13 | **[Docker CLI compatibility](13-docker-cli-compatibility.md)** | <span className="db-tier t-understand">Understand</span> | Three levels — artefacts, CLI, API — and why an alias is the one that breaks in scripts |
 | 14 | **[Podman 6 breaking changes](14-podman-6-breaking-changes.md)** | <span className="db-tier t-understand">Understand</span> | A removal release — cgroups v1, BoltDB, CNI, slirp4netns, iptables and two host platforms |
 | 15 | **[`podman machine`](15-podman-machine.md)** | <span className="db-tier t-know">Know</span> | The Linux VM behind Podman on macOS and Windows — your CLI is a remote client, and that explains everything |
-| 16 | Podman Desktop | <span className="db-tier t-know">Know</span> | The GUI, and what it adds over the CLI |
+| 16 | **[Podman Desktop](16-podman-desktop.md)** | <span className="db-tier t-know">Know</span> | A view, not a source of truth — plus the licence threshold that decides it for organisations |
 
 ## Coverage
 
 Sixteen syllabus topics, sixteen pages — nothing merged and nothing dropped. Four
-rows are **Master** (01, 02, 04, 05); eight are Understand and four are Know, so
-expect most of the phase to be single pages rather than chunked directories.
+rows are **Master** (01, 02, 04, 05) and are chunked directories; the eight
+Understand and four Know rows are single pages.
 
 ## Phase gate
 
@@ -57,4 +57,4 @@ can stop at "on Podman you should not be hand-writing the unit at all".
 
 ---
 
-← Prev: [Phase 10 — Running containers in production](../phase-10-production/README.md) · Index: [Docker & Podman pages](../README.md)
+← Prev: [Phase 10 — Running containers in production](../phase-10-production/README.md) · Index: [Docker & Podman pages](../README.md) · Next → **Phase 12 — Delivery, CI and orchestration** *(not written yet)*

@@ -118,7 +118,7 @@ collected in phase 11:
   new one, then stop the old one" becomes ordinary unit management rather than a
   shell script — [Phase 11 · 04 · Quadlet](../phase-11-podman-in-depth/04-quadlet/README.md).
 - **`podman auto-update`** does image-driven rolling updates for Quadlet services,
-  with rollback — **Phase 11 · `podman auto-update`** *(not written yet)*.
+  with rollback — [Phase 11 · 10 · `podman auto-update`](../phase-11-podman-in-depth/10-auto-update.md).
 
 **Pods** are not the answer to this: containers in a pod share a network namespace,
 so two versions in one pod collide on the port exactly as before.

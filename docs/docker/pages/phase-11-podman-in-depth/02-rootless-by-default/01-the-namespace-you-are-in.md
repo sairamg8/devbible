@@ -123,7 +123,7 @@ container:
   the root cause of a surprising number of "podman just fails" reports.
 - **`/proc/self/uid_map`** — the map of whatever you are currently in. Run it
   inside `podman unshare` and you are looking at the container's map (that
-  command is **Phase 11 · 06 · `podman unshare`** *(not written yet)*).
+  command is [Phase 11 · 06 · `podman unshare`](../06-podman-unshare.md)).
 - **The host `ls -n` of a bind mount** — numbers, not names, because the names
   come from whichever `/etc/passwd` did the lookup
   ([Phase 6 · 05 · A UID is just a number](../../phase-6-storage/05-uid-mismatch/01-a-uid-is-just-a-number.md)).

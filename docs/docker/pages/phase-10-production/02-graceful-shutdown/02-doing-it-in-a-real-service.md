@@ -174,7 +174,7 @@ have already been established elsewhere in this track:
   nothing unless you forward it, or unless an init is doing that job for you.
 - **Logs written during shutdown must go to stdout/stderr** to survive, because
   the container's filesystem goes away with it
-  (**04 · Logs go to stdout and stderr** *(not written yet)*). A shutdown routine
+  ([04 · Logs go to stdout and stderr](../04-logs-to-stdout/README.md)). A shutdown routine
   that logs to a file inside the container leaves no evidence of the failure you
   are trying to debug.
 

@@ -202,4 +202,4 @@ artefacts.
 
 ---
 
-← Prev: [`podman kube play` / `generate kube`](11-kube-play.md) · Index: [Phase 11](README.md) · Next → **13 · Docker CLI compatibility** *(not written yet)*
+← Prev: [`podman kube play` / `generate kube`](11-kube-play.md) · Index: [Phase 11](README.md) · Next → [13 · Docker CLI compatibility](13-docker-cli-compatibility.md)

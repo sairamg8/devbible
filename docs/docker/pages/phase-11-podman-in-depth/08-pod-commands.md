@@ -143,8 +143,7 @@ Nothing, and that is worth knowing. Compose files describe services on a network
 so a Compose stack under Podman gets a **network**, not a pod
 ([Phase 8 · 15](../phase-8-compose/15-podman-compose.md)). Pods are a Podman-CLI
 and Quadlet construct — `.pod` units ([Phase 11 · 04](04-quadlet/README.md)) —
-or something you get from Kubernetes YAML via **Phase 11 · 11 · `podman kube
-play`** *(not written yet)*.
+or something you get from Kubernetes YAML via [Phase 11 · 11 · `podman kube play`](11-kube-play.md).
 
 So the two paths do not meet in the middle: choose the Compose path or the
 pod/Quadlet path per project, rather than trying to run both over one stack.
@@ -217,4 +216,4 @@ trouble — pick one per project.
 
 ---
 
-← Prev: [`--userns` modes](07-userns-modes.md) · Index: [Phase 11](README.md) · Next → **09 · Quadlet vs `podman generate systemd`** *(not written yet)*
+← Prev: [`--userns` modes](07-userns-modes.md) · Index: [Phase 11](README.md) · Next → [09 · Quadlet vs `podman generate systemd`](09-quadlet-vs-generate-systemd.md)

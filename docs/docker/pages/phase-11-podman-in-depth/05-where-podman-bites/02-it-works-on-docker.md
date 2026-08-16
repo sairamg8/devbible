@@ -120,7 +120,7 @@ Three things bite here:
   tool reaching for a newer or unimplemented endpoint gets an error that looks
   like a Podman bug and is a scope boundary.
 
-Detail in **Phase 11 · 13 · Docker CLI compatibility** *(not written yet)*.
+Detail in [Phase 11 · 13 · Docker CLI compatibility](../13-docker-cli-compatibility.md).
 
 ## The small divergences worth a note
 
@@ -205,4 +205,4 @@ behave, because it gives real systemd ordering against the rest of the machine.
 
 ---
 
-← Prev: [It ran yesterday](01-it-ran-yesterday.md) · Index: [Phase 11](../README.md) · Next → **06 · `podman unshare`** *(not written yet)*
+← Prev: [It ran yesterday](01-it-ran-yesterday.md) · Index: [Phase 11](../README.md) · Next → [06 · `podman unshare`](../06-podman-unshare.md)

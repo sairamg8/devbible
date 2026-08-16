@@ -192,4 +192,4 @@ unit it needs to restart.
 
 ---
 
-← Prev: [Quadlet vs `podman generate systemd`](09-quadlet-vs-generate-systemd.md) · Index: [Phase 11](README.md) · Next → **11 · `podman kube play` / `generate kube`** *(not written yet)*
+← Prev: [Quadlet vs `podman generate systemd`](09-quadlet-vs-generate-systemd.md) · Index: [Phase 11](README.md) · Next → [11 · `podman kube play` / `generate kube`](11-kube-play.md)

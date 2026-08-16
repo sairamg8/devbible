@@ -116,7 +116,7 @@ and there is no built-in load balancer to remove you from. The pattern matters
 because something in front of the container — nginx, a cloud load balancer, an
 orchestrator — is doing the routing, and it is *that* thing which must be told.
 The liveness-versus-readiness distinction is
-**09 · Healthchecks in production** *(not written yet)*.
+[09 · Healthchecks in production](../09-healthchecks-in-production.md).
 
 ## What graceful shutdown is not
 
@@ -132,7 +132,7 @@ made *resumable* rather than made slower:
   forty seconds by a container that is going to be killed anyway.
 
 **It is not a substitute for being killable.** `SIGKILL` still arrives on a
-timeout, an OOM kill (**03 · Resource limits** *(not written yet)*), a hardware
+timeout, an OOM kill ([03 · Resource limits](../03-resource-limits/README.md)), a hardware
 failure or a `docker kill`. Graceful shutdown reduces how often you lose
 in-flight work; it never reduces it to zero. If losing that work is unacceptable,
 the fix is at-least-once delivery and idempotent handlers, not a longer grace
