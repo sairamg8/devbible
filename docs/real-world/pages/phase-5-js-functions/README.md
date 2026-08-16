@@ -16,7 +16,7 @@ coding); the Phase 3 API contract.
 | # | Chapter | Tier | In one line |
 |---|---|---|---|
 | 01 | **[The fetch wrapper](01-the-fetch-wrapper.md)** | <span className="db-tier t-master">Master</span> | Timeout, retry and dedupe as composable wrappers — and the retry-eligibility law |
-| 02 | **The TTL cache with stale-while-revalidate** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 02 | **[The TTL cache with stale-while-revalidate](02-the-ttl-cache.md)** | <span className="db-tier t-master">Master</span> | Fresh / stale / expired as three behaviours; promises in the map keep both stampedes single-flight |
 | 03 | **The concurrency-limited task queue** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 04 | **The event bus** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 05 | **The form validation engine** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
