@@ -16,7 +16,7 @@ and [Part 3 — Node + raw pg](../../../postgresql/syllabus/03-node-and-pg.md).
 |---|---|---|---|
 | 01 | **[The schema](01-the-schema/README.md)** | <span className="db-tier t-master">Master</span> | All eleven tables as DDL — keys, constraints, enums, and the invariants the database holds so the app can't break them |
 | 02 | **[Migrations as plain SQL](02-migrations.md)** | <span className="db-tier t-master">Master</span> | A 60-line runner: ledger table, advisory lock, one transaction per file, forward-only |
-| 03 | **Seed data and fixtures** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 03 | **[Seed data and fixtures](03-seeds-and-fixtures.md)** | <span className="db-tier t-understand">Understand</span> | Reference data in migrations, a deterministic upsert seed, and per-test factories — three problems, three owners |
 | 04 | **The catalog query** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 05 | **Full-text product search** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 06 | **The checkout transaction** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
