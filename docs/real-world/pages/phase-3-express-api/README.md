@@ -16,7 +16,7 @@ sidebar_position: 0
 | # | Chapter | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Project structure](01-project-structure.md)** | <span className="db-tier t-master">Master</span> | The factory, the layer rules, and a mount order five chapters depend on |
-| 02 | **The validation boundary** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 02 | **[The validation boundary](02-the-validation-boundary.md)** | <span className="db-tier t-master">Master</span> | Parse, don’t validate: strict schemas, coercion only for query strings, bounds on everything |
 | 03 | **Auth** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 04 | **Authorization** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 05 | **Catalog endpoints** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
