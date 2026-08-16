@@ -23,7 +23,7 @@ context, custom hooks); the Phase 3 API contract.
 | 07 | **[Modal, portal and focus trap](07-modal-portal-focus.md)** | <span className="db-tier t-understand">Understand</span> | Start from native `<dialog>`; your code owns focus return, state sync, and knowing when NOT to trap |
 | 08 | **[Upload with progress](08-upload-with-progress.md)** | <span className="db-tier t-understand">Understand</span> | Resize on pick, XHR progress island, per-file state machine — cancelled vanishes, failed stays |
 | 09 | **[Auth in the client](09-auth-in-the-client.md)** | <span className="db-tier t-master">Master</span> | Belief vs truth, the 401 broadcast seam, and expiry-during-checkout that never unmounts the work |
-| 10 | **The admin data table** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 10 | **[The admin data table](10-the-admin-data-table.md)** | <span className="db-tier t-understand">Understand</span> | Server-driven sort/filter/page, URL as the state store, pessimistic mutations, stale-while-loading |
 | 11 | **Error boundaries and retry UX** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 12 | **When to switch to TanStack Query** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 
