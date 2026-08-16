@@ -19,7 +19,7 @@ context, custom hooks); the Phase 3 API contract.
 | 03 | **[The infinite product list](03-the-infinite-product-list.md)** | <span className="db-tier t-master">Master</span> | Observer sentinel + accumulating pages, generation stamps against filter races, cursor reset as structure |
 | 04 | **[`useForm` and the checkout form](04-useform-and-checkout.md)** | <span className="db-tier t-master">Master</span> | One shared zod schema in two runtimes, touched-based errors, the idempotency key scoped to the attempt |
 | 05 | **[`useLocalStorage` and the persisted cart](05-uselocalstorage-and-cart.md)** | <span className="db-tier t-understand">Understand</span> | `useSyncExternalStore` over storage, mirrors of convenience, server truth always wins |
-| 06 | **Cart state** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 06 | **[Cart state](06-cart-state.md)** | <span className="db-tier t-master">Master</span> | Context + reducer with optimistic/settle/rollback choreography; rollback restores truth, not a diff |
 | 07 | **Modal, portal and focus trap** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 08 | **Upload with progress** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 09 | **Auth in the client** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
