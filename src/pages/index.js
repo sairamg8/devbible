@@ -18,6 +18,7 @@ const mongodb = summarise('mongodb');
 const redis = summarise('redis');
 const nginx = summarise('nginx');
 const docker = summarise('docker');
+const realworld = summarise('realworld');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -175,6 +176,21 @@ const LAYERS = [
         active: true,
         stats: `${git.topicsTotal} topics · ${git.phasesTotal} phases · ${git.phasesDone} phases explained · ${git.pagesWritten} pages`,
         progress: git.percent,
+      },
+    ],
+  },
+  {
+    name: 'Real world',
+    note: 'One storefront, implemented across the whole stack',
+    items: [
+      {
+        n: '25',
+        name: 'Real World',
+        desc: 'The storefront: raw pg schema, Node services, the Express API, React hooks and screens, typed end to end',
+        to: '/docs/real-world',
+        active: true,
+        stats: `${realworld.topicsTotal} topics · ${realworld.phasesTotal} phases · ${realworld.phasesDone} phases explained · ${realworld.pagesWritten} pages`,
+        progress: realworld.percent,
       },
     ],
   },
