@@ -21,7 +21,7 @@ context, custom hooks); the Phase 3 API contract.
 | 05 | **[`useLocalStorage` and the persisted cart](05-uselocalstorage-and-cart.md)** | <span className="db-tier t-understand">Understand</span> | `useSyncExternalStore` over storage, mirrors of convenience, server truth always wins |
 | 06 | **[Cart state](06-cart-state.md)** | <span className="db-tier t-master">Master</span> | Context + reducer with optimistic/settle/rollback choreography; rollback restores truth, not a diff |
 | 07 | **[Modal, portal and focus trap](07-modal-portal-focus.md)** | <span className="db-tier t-understand">Understand</span> | Start from native `<dialog>`; your code owns focus return, state sync, and knowing when NOT to trap |
-| 08 | **Upload with progress** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 08 | **[Upload with progress](08-upload-with-progress.md)** | <span className="db-tier t-understand">Understand</span> | Resize on pick, XHR progress island, per-file state machine — cancelled vanishes, failed stays |
 | 09 | **Auth in the client** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 10 | **The admin data table** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 11 | **Error boundaries and retry UX** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
