@@ -23,7 +23,7 @@ and [Part 3 — Node + raw pg](../../../postgresql/syllabus/03-node-and-pg.md).
 | 07 | **[Money and time](07-money-and-time.md)** | <span className="db-tier t-master">Master</span> | Integer cents that survive the whole stack; `timestamptz` instants, compared in SQL, localized only at the edge |
 | 08 | **[JSONB for product attributes](08-jsonb-attributes.md)** | <span className="db-tier t-understand">Understand</span> | The column-vs-jsonb line, indexed containment filters, and promotion when an attribute earns a range |
 | 09 | **[Dashboard queries](09-dashboard-queries.md)** | <span className="db-tier t-understand">Understand</span> | `generate_series` spines, `filter` counts, window shares — and the cache→matview→replica ladder |
-| 10 | **Indexes for this app's queries** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 10 | **[Indexes for this app’s queries](10-indexes.md)** | <span className="db-tier t-master">Master</span> | Every index derived from a named query — FK block, partial indexes, the keyset sort pairs, and the deliberate absences |
 | 11 | **Soft delete and audit columns** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 12 | **LISTEN/NOTIFY** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 
