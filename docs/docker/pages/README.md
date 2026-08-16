@@ -23,7 +23,7 @@ sessions ever write in the same phase directory. Phases **0–3 are already writ
 | **A** | 4 · 5 | 28 | 🏁 **CHUNK A COMPLETE — phases 4 (16/16) and 5 (12/12) both closed 2026-08-15** | ✅ session `e75b3868` (took over from `2e26b051`) |
 | **B** | 6 · 7 | 26 | 🏁 **CHUNK B COMPLETE — phase 6 12/12, phase 7 14/14** (2026-08-15) | session `d0c46f84` — finished |
 | **C** | 8 · 9 | 31 | 🏁 **CHUNK C COMPLETE — phase 8 17/17, phase 9 14/14** (2026-08-15) | 🔴 session `016J3KVb` (2026-08-15, took over from `9219957a`) |
-| **D** | 10 · 11 · 12 | 44 (**20 left**) | 🏁 **Phase 10 COMPLETE 16/16** · 🚧 phase 11 **8/16** — next: **Phase 11 · 09 · Quadlet vs `podman generate systemd`** | 🔴 session `8e7b6e12` (2026-08-16, took over from `75a196a7`) |
+| **D** | 10 · 11 · 12 | 44 (**19 left**) | 🏁 **Phase 10 COMPLETE 16/16** · 🚧 phase 11 **9/16** — next: **Phase 11 · 10 · `podman auto-update`** | 🔴 session `8e7b6e12` (2026-08-16, took over from `75a196a7`) |
 
 **Taking a chunk:** put your session id in the row above **and** in that chunk's row in
 the [claim table](../../README.md), then start writing. Finish the lower-numbered phase
@@ -69,9 +69,9 @@ answers.
 | **[08 · Compose](./phase-8-compose/README.md)** | 17 | 17 | ✅ **Complete** |
 | **[09 · The MERN/PERN stack in containers](./phase-9-mern-pern-stack/README.md)** | 14 | 14 | ✅ **Complete — chunk C** |
 | **[10 · Running containers in production](./phase-10-production/README.md)** | 16 | 16 | ✅ **Complete — chunk D** |
-| **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 8 | 🚧 **Writing — chunk D** |
+| **[11 · Podman in depth](./phase-11-podman-in-depth/README.md)** | 16 | 9 | 🚧 **Writing — chunk D** |
 | **12 · Delivery, CI and orchestration** | 12 | 0 | ⏳ Not started — **chunk D** |
-| **Total** | **192** | **172** | |
+| **Total** | **192** | **173** | |
 
 import Progress from '@site/src/components/Progress';
 
