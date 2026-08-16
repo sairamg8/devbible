@@ -112,8 +112,8 @@ alternative of nobody updating anything. Beyond that, be deliberate.
 
 - **It deploys whatever the tag points at, unreviewed.** With a moving tag, a
   registry push becomes a production deployment at midnight with no gate. That
-  makes your tag strategy the real control — **Phase 12 · 01 · Tag strategy**
-  *(not written yet)*.
+  makes your tag strategy the real control —
+  [Phase 12 · 01 · Tag strategy](../phase-12-delivery-and-ci/01-tag-strategy/README.md).
 - **A digest-pinned image never updates**, by definition
   ([Phase 5 · 08](../phase-5-image-quality/08-pinning-by-digest.md)). The two
   practices are opposites; pick per service.
