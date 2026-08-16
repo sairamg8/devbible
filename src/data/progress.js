@@ -530,7 +530,7 @@ export const LANGUAGES = {
     phases: [
       {n: 0, slug: 'phase-0-the-app', name: 'The app', part: 'Backend spine', topics: 3, pages: 3},
       {n: 1, slug: 'phase-1-database', name: 'The database (raw SQL + pg)', part: 'Backend spine', topics: 12, pages: 12},
-      {n: 2, slug: 'phase-2-node-services', name: 'Node services', part: 'Backend spine', topics: 10, pages: 8, pagesPlanned: 10},
+      {n: 2, slug: 'phase-2-node-services', name: 'Node services', part: 'Backend spine', topics: 10, pages: 9, pagesPlanned: 10},
       {n: 3, slug: 'phase-3-express-api', name: 'The Express API', part: 'Backend spine', topics: 12, pages: 0},
       {n: 4, slug: 'phase-4-react-ui', name: 'The React UI and its hooks', part: 'Frontend', topics: 12, pages: 0},
       {n: 5, slug: 'phase-5-js-functions', name: 'JavaScript custom functions', part: 'Frontend', topics: 10, pages: 0},

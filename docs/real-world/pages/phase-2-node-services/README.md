@@ -23,7 +23,7 @@ sidebar_position: 0
 | 06 | **[The webhook dispatcher](06-the-webhook-dispatcher.md)** | <span className="db-tier t-understand">Understand</span> | An outbox handler that signs `timestamp.body`, ships a dedup id, and judges delivery by status code only |
 | 07 | **[The search indexer job](07-the-search-indexer.md)** | <span className="db-tier t-know">Know</span> | Mostly does not need to exist — the generated column dissolved it; the three residual tasks, named |
 | 08 | **[The cache layer](08-the-cache-layer.md)** | <span className="db-tier t-understand">Understand</span> | Single-flight promises, bounded LRU, TTL as the guarantee with NOTIFY tightening it |
-| 09 | **The health and metrics kit** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 09 | **[The health and metrics kit](09-health-and-metrics.md)** | <span className="db-tier t-understand">Understand</span> | Liveness ≠ readiness ≠ metrics — and the six storefront signals that pay rent |
 | 10 | **The ops CLI** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 
 ## Phase gate
