@@ -92,7 +92,8 @@ list.
 command line is not.** An override file, a Quadlet unit or a base Compose file
 everyone extends is what makes the posture the default for services nobody
 reviewed. Phase 11's Quadlet topic is the systemd expression of the same set, and
-**Phase 12 · One image, three environments** *(not written yet)* is why the
+[Phase 12 · 03 · One image, three environments](../../phase-12-delivery-and-ci/03-one-image-three-environments/README.md)
+is why the
 hardening must not vary between them.
 
 ## `--privileged` cancels the entire page
