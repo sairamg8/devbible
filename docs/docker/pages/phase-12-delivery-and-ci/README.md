@@ -13,7 +13,7 @@ Everything before this phase happens on one machine. This phase is how the image
 gets from there to somewhere that matters, and it ends with the question everyone
 eventually asks: **do I need Kubernetes?**
 
-🚧 **Writing — 8 of 12 topics · 🏁 the Master tier is COMPLETE at 2 of 2.**
+🚧 **Writing — 9 of 12 topics · 🏁 the Master tier is COMPLETE at 2 of 2.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -25,7 +25,7 @@ eventually asks: **do I need Kubernetes?**
 | 06 | **[Deploying without an orchestrator](06-deploying-without-an-orchestrator.md)** | <span className="db-tier t-understand">Understand</span> | Compose on a VM, Quadlet units, or a PaaS — and the trade each makes |
 | 07 | **[When Compose stops being enough](07-when-compose-stops-being-enough.md)** | <span className="db-tier t-understand">Understand</span> | The honest threshold, written as four conditions rather than a feeling |
 | 08 | **[Kubernetes on-ramp](08-kubernetes-on-ramp.md)** | <span className="db-tier t-know">Know</span> | What your image, services and healthchecks map to — and what has no equivalent |
-| 09 | Rolling updates and rollback by hand | <span className="db-tier t-when">When Needed</span> | The four-step dance and its failure modes |
+| 09 | **[Rolling updates and rollback by hand](09-rolling-updates-by-hand.md)** | <span className="db-tier t-when">When Needed</span> | The four-step dance and its failure modes |
 | 10 | `docker context` | <span className="db-tier t-know">Know</span> | Driving a remote engine, and the foot-gun of forgetting which one you are on |
 | 11 | Cost realities | <span className="db-tier t-when">When Needed</span> | Registry storage, egress on every pull, CI minutes, and cache as a cost lever |
 | 12 | Docker Swarm in 2026 | <span className="db-tier t-when">When Needed</span> | Its status, and whether it belongs on your list at all |
