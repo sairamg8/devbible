@@ -13,7 +13,7 @@ Podman is not "Docker with a different name". The daemonless, rootless design
 changes real things. This phase is where those differences live, so the rest of
 the track can stay engine-neutral.
 
-🚧 **Writing — 5 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
+🚧 **Writing — 6 of 16 topics · 🏁 the Master tier is COMPLETE at 4 of 4.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -22,7 +22,7 @@ the track can stay engine-neutral.
 | 03 | **[Pods](03-pods.md)** | <span className="db-tier t-understand">Understand</span> | A shared network namespace plus an infra container — the one place `localhost` means "my neighbour" |
 | 04 | **[Quadlet](04-quadlet/README.md)** | <span className="db-tier t-master">Master</span> | `.container`, `.pod`, `.volume`, `.network`, `.kube`, `.build` units and the systemd generator behind them |
 | 05 | **[Where Podman will bite you](05-where-podman-bites/README.md)** | <span className="db-tier t-master">Master</span> | Lingering, systemd-timer healthchecks, netavark errors, and the Compose gaps |
-| 06 | `podman unshare` | <span className="db-tier t-understand">Understand</span> | Running a command inside your user namespace, which is how you fix a rootless volume's ownership |
+| 06 | **[`podman unshare`](06-podman-unshare.md)** | <span className="db-tier t-understand">Understand</span> | A shell inside the user namespace your containers already run in — the only place container UIDs are real |
 | 07 | `--userns`: `keep-id`, `nomap`, `auto` | <span className="db-tier t-understand">Understand</span> | Choosing the mapping instead of fighting it |
 | 08 | `podman pod create` / `ps` / `rm` | <span className="db-tier t-understand">Understand</span> | When a pod is the right answer versus a user-defined network |
 | 09 | Quadlet vs `podman generate systemd` | <span className="db-tier t-understand">Understand</span> | The old command still exists, gets no new features, and should not be in new work |
