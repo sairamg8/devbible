@@ -19,7 +19,7 @@ sidebar_position: 0
 | 02 | **[The data layer over raw `pg`](02-the-data-layer.md)** | <span className="db-tier t-master">Master</span> | One pool, ALS-propagated transactions that join not nest, and repos that return plain objects |
 | 03 | **[The upload service](03-the-upload-service.md)** | <span className="db-tier t-master">Master</span> | Socket to storage in constant memory: mid-stream limits, magic-number sniffing, temp-then-rename, cleanup on every path |
 | 04 | **[The outbox relay and email worker](04-outbox-relay-and-email.md)** | <span className="db-tier t-master">Master</span> | Send-then-mark at-least-once, `skip locked` claims, backoff bookkeeping on the row, dead letters a human reads |
-| 05 | **Scheduled jobs** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 05 | **[Scheduled jobs](05-scheduled-jobs.md)** | <span className="db-tier t-understand">Understand</span> | Age-based chores that catch up: clock-anchored ticks, try-lock arbitration, jobs that report facts |
 | 06 | **The webhook dispatcher** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 07 | **The search indexer job** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 08 | **The cache layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |

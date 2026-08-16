@@ -115,6 +115,23 @@ export function uploadService({rootDir, maxBytes = 5 * 1024 * 1024}) {
     async remove(key) {
       await rm(path.join(rootDir, key), {force: true});
     },
+
+    /** Removes .tmp orphans older than maxAgeMs; returns how many.
+     *  Called by the scheduled sweep job (chapter 05). */
+    async sweepTmp(maxAgeMs) {
+      const {readdir, stat} = await import('node:fs/promises');
+      let removed = 0;
+      for (const entry of await readdir(rootDir, {recursive: true})) {
+        if (!entry.endsWith('.tmp')) continue;
+        const p = path.join(rootDir, entry);
+        const {mtimeMs} = await stat(p);
+        if (Date.now() - mtimeMs > maxAgeMs) {
+          await rm(p, {force: true});
+          removed++;
+        }
+      }
+      return removed;
+    },
   };
 }
 ```
