@@ -18,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Covers | State |
 |---|---|---|
-| **[0 — The app](./phase-0-the-app/README.md)** | The storefront spec, architecture and data-model overview, how to read the track | 🚧 0 / 3 |
+| **[0 — The app](./phase-0-the-app/README.md)** | The storefront spec, architecture and data-model overview, how to read the track | ✅ 3 / 3 |
 | **1 — The database** | Schema, migrations, catalog query, checkout transaction, search, indexes — raw SQL + `pg` | *(not written yet)* |
 | **2 — Node services** | Boot, data layer, uploads, outbox + email worker, scheduled jobs, webhooks, cache, health, CLI | *(not written yet)* |
 | **3 — The Express API** | Structure, validation, auth, RBAC, catalog/cart/checkout endpoints, errors, rate limits, webhooks | *(not written yet)* |

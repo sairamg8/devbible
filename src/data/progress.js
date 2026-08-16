@@ -528,7 +528,7 @@ export const LANGUAGES = {
     docsPath: '/docs/real-world',
     pagesPath: '/docs/real-world/pages',
     phases: [
-      {n: 0, slug: 'phase-0-the-app', name: 'The app', part: 'Backend spine', topics: 3, pages: 0},
+      {n: 0, slug: 'phase-0-the-app', name: 'The app', part: 'Backend spine', topics: 3, pages: 3},
       {n: 1, slug: 'phase-1-database', name: 'The database (raw SQL + pg)', part: 'Backend spine', topics: 12, pages: 0},
       {n: 2, slug: 'phase-2-node-services', name: 'Node services', part: 'Backend spine', topics: 10, pages: 0},
       {n: 3, slug: 'phase-3-express-api', name: 'The Express API', part: 'Backend spine', topics: 12, pages: 0},
