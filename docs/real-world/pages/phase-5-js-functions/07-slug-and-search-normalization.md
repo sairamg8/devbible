@@ -193,7 +193,7 @@ the only thing that catches it
 
 **Symptom:** `null value in column "slug" violates not-null constraint`
 **Cause:** Every character was stripped — a non-Latin title, or punctuation only
-**Fix:** The `|| \`${kind}-${id}\`` fallback; never let `''` leave `slugify`
+**Fix:** The `` || `${kind}-${id}` `` fallback; never let `''` leave `slugify`
 
 **Symptom:** Shared links 404 after an editor fixed a typo in a title
 **Cause:** The slug was recomputed on update
