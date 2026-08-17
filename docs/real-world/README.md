@@ -60,10 +60,14 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics |
 |---|---|
-| <span className="db-tier t-master">Master</span> | 37 |
-| <span className="db-tier t-understand">Understand</span> | 28 |
+| <span className="db-tier t-master">Master</span> | 36 |
+| <span className="db-tier t-understand">Understand</span> | 27 |
 | <span className="db-tier t-know">Know</span> | 14 |
-| **Total** | **79** |
+| **Total** | **77** |
+
+⚠️ **77, not 79** — phase 7's header and checkout-form topics were dropped on
+2026-08-17 (see the [Completion syllabus](./syllabus/03-completion.md)).
+Their rows are struck through rather than deleted, so the cut stays visible.
 
 Master runs high here on purpose: an implementations track is precisely the
 "use with no documentation open" material.

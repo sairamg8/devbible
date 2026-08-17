@@ -18,11 +18,24 @@ every selector here targets components that already exist.
 | # | Chapter | Tier | In one line |
 |---|---|---|---|
 | 01 | **[The product grid](01-the-product-grid/README.md)** *(12 chunks)* | <span className="db-tier t-master">Master</span> | One `grid-template-columns` declaration replaces the breakpoint pile-up — and the card adapts to its column, not the viewport |
-| 02 | **The header and navigation** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
-| 03 | **The checkout form** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 04 | **Skeleton loaders and spinners** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 05 | **Dark mode** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 06 | **The overlay layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+
+:::note Four chapters, and the numbering has gaps on purpose
+
+**02 · The header and navigation** and **03 · The checkout form** were dropped
+on 2026-08-17. Both are standard flex and grid work whose mechanisms already
+have homes in the [CSS section](../../../css/README.md) — a bar shell is
+[CSS 4·06](../../../css/pages/phase-4-flexbox/06-flexbox-patterns/01-bars-and-shells.md),
+form-state styling is
+[CSS 1·09](../../../css/pages/phase-1-selectors/09-form-state-pseudo-classes.md) —
+and the storefront gains nothing from a second telling. The four that remain
+are the ones carrying traps a concept page does not cover on its own.
+
+The remaining numbers are left as they were, so the syllabus rows still line up.
+
+:::
 
 ## The layer order this phase assumes
 

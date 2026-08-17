@@ -16,14 +16,33 @@ the same data layer rebuilt on MongoDB for the MERN variant.
 Concepts live in the [CSS section](../../css/README.md); these chapters are the
 storefront's stylesheet, component by component.
 
-| Topic | Tier |
-|---|---|
-| **The product grid** — Grid + container queries, from phone to wide desktop | <span className="db-tier t-master">Master</span> |
-| The header and navigation — responsive without a breakpoint pile-up | <span className="db-tier t-understand">Understand</span> |
-| **The checkout form** — layout, focus states, inline validation styling | <span className="db-tier t-master">Master</span> |
-| Skeleton loaders and spinners — perceived speed while the hooks fetch | <span className="db-tier t-understand">Understand</span> |
-| Dark mode — the token layer, honouring the three viewer states | <span className="db-tier t-understand">Understand</span> |
-| The overlay layer — toasts and modals that never fight the stacking context | <span className="db-tier t-understand">Understand</span> |
+:::warning Scope cut — 2026-08-17
+
+**The header and navigation** and **the checkout form** were **dropped** on the
+user's instruction: *"i do not need that checkout form in css / that header and
+navigation as well"*, because *"it was css i know how to build those, they are
+not worth for writing topics"*.
+
+Both are standard flex and grid work whose mechanisms already have homes in the
+[CSS section](../../css/README.md) — a bar shell is
+[CSS 4·06](../../css/pages/phase-4-flexbox/06-flexbox-patterns/01-bars-and-shells.md)
+and form-state styling is
+[CSS 1·09](../../css/pages/phase-1-selectors/09-form-state-pseudo-classes.md).
+The four topics that remain are the ones with traps a concept page does not
+cover on its own.
+
+**Phase 7 is 4 topics, not 6.** Reinstating either needs a new instruction.
+
+:::
+
+| Topic | Tier | |
+|---|---|---|
+| **The product grid** — Grid + container queries, from phone to wide desktop | <span className="db-tier t-master">Master</span> | |
+| ~~The header and navigation~~ | — | 🚫 **dropped** |
+| ~~The checkout form~~ | — | 🚫 **dropped** |
+| Skeleton loaders and spinners — perceived speed while the hooks fetch | <span className="db-tier t-understand">Understand</span> | |
+| Dark mode — the token layer, honouring the three viewer states | <span className="db-tier t-understand">Understand</span> | |
+| The overlay layer — toasts and modals that never fight the stacking context | <span className="db-tier t-understand">Understand</span> | |
 
 ---
 
