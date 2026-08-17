@@ -19,7 +19,7 @@ coding); the Phase 3 API contract.
 | 02 | **[The TTL cache with stale-while-revalidate](02-the-ttl-cache.md)** | <span className="db-tier t-master">Master</span> | Fresh / stale / expired as three behaviours; promises in the map keep both stampedes single-flight |
 | 03 | **[The concurrency-limited task queue](03-the-task-queue.md)** | <span className="db-tier t-master">Master</span> | Phase-17’s primitive plus application policy: priorities as intent, dequeue-time cancellation, idempotent prefetch |
 | 04 | **[The event bus](04-the-event-bus.md)** | <span className="db-tier t-understand">Understand</span> | `EventTarget` plus a constitution: facts not commands, no state rides, closed catalogue |
-| 05 | **The form validation engine** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 05 | **[The form validation engine](05-the-validation-engine.md)** | <span className="db-tier t-understand">Understand</span> | Rules compose *over* the shared schema, not beside it — and async checks never gate submit |
 | 06 | **Money and dates with `Intl`** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
 | 07 | **Slug and search normalization** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 08 | **Feature flags with a local override** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
