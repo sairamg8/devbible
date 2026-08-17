@@ -13,7 +13,7 @@ sidebar_position: 3
 > `getSyntacticDiagnosticsForFile`. Diagnostic codes and their message text come
 > from the compiler's own numbered table. **No sandbox, no console blocks.**
 
-[Topic 07 chunk 01](../07-authoring-d-ts-files/01-what-a-d-ts-is.md) defines what
+[Topic 07 chunk 01](../07-authoring-d-ts-files/01-what-a-declaration-file-is.md) defines what
 a `.d.ts` file *is* — not by prose, but by the six diagnostics that fire when you
 break the format. Ambient context has rules: no statements, no initialisers, no
 function bodies, top-level declarations need `declare` or `export`.
@@ -26,7 +26,7 @@ Not "makes the errors less severe". They are never computed.
 
 ## Why — the exact line
 
-From [chunk 01](./01-what-it-actually-skips.md), one of the five gated call sites
+From [chunk 01](./01-what-it-actually-skips.md), one of the six gated call sites
 is the checker's own walk of the file. Here it is:
 
 ```js

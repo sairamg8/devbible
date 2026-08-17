@@ -60,7 +60,7 @@ not about hiding errors you would otherwise have to fix.*
 resolved in [chunk 06](./06-who-turns-it-on-for-you.md). The short version: the
 compiler default is `false`; what changed is the config `tsc --init` writes.
 
-## The gate — one predicate, five call sites
+## The gate — one predicate, six call sites
 
 Everything this flag does happens in a single function:
 
@@ -97,7 +97,7 @@ it is the reason the whole of [chunk 04](./04-what-it-does-not-do.md) exists.
 
 ### Where the predicate is consulted
 
-`skipTypeChecking` is called from exactly five places in 5.9.3, and the list is
+`skipTypeChecking` is called from exactly six places in 5.9.3, and the list is
 the precise definition of "what stops happening":
 
 | Call site | What it gates |
@@ -108,7 +108,7 @@ the precise definition of "what stops happening":
 | `checkSourceFileNodesWorker` | the same walk, for the editor's partial-file checking |
 | `getSuggestionDiagnostics` | the editor's suggestion (grey squiggle) pass |
 
-Plus one in the language service — `getRegionSemanticDiagnostics`, the
+And the sixth is in the language service — `getRegionSemanticDiagnostics`, the
 editor's viewport-limited check, which bails on the same predicate.
 
 🔴 **The third row is the one nobody expects**, and it has a chunk of its own:
@@ -144,7 +144,7 @@ reason — it early-returns `emptyArray` for any file where `isDeclarationFile` 
 true, because declaration-emit errors are about the `.ts` files you are emitting
 *from*. `skipLibCheck` has nothing to do with them, which matters when someone
 proposes it as a fix for the `TS4053` family that
-[topic 07 chunk 08](../07-authoring-d-ts-files/08-when-emit-fails.md) covers.
+[topic 07 chunk 08](../07-authoring-d-ts-files/08-when-declaration-emit-fails.md) covers.
 
 ## So the honest one-line summary
 
@@ -192,7 +192,7 @@ wrote. Different mechanism, different audit.
 **Symptom:** The editor stops offering a suggestion inside a `.d.ts` after the
 flag is set.
 **Cause:** `getSuggestionDiagnostics` bails on the same predicate.
-**Fix:** Expected. The editor's suggestion pass is one of the five gated call
+**Fix:** Expected. The editor's suggestion pass is one of the six gated call
 sites.
 
 **Symptom:** `skipLibCheck` is set and a declaration file in a **referenced
@@ -236,7 +236,7 @@ without consulting the skip predicate, so a malformed declaration file fails
 regardless.
 
 **Where in the compiler does the flag take effect?**
-`skipTypeCheckingWorker`, consulted from five places: program diagnostics,
+`skipTypeCheckingWorker`, consulted from six places: program diagnostics,
 bind-and-check diagnostics, the checker's file walk (twice — whole file and
 node-range), and the editor's suggestion pass, plus the language service's
 region-diagnostics path.

@@ -119,7 +119,7 @@ Be precise about the boundary, because over-claiming here is easy:
 - ❌ It does **not** affect declaration *emit* errors. Those are computed from the
   `.ts` file being emitted from, and `getDeclarationDiagnosticsForFile` returns
   early for declaration files regardless of the flag. The `TS4053` "private name"
-  family in [topic 07 chunk 08](../07-authoring-d-ts-files/08-when-emit-fails.md)
+  family in [topic 07 chunk 08](../07-authoring-d-ts-files/08-when-declaration-emit-fails.md)
   still fires.
 
 That third point is worth holding onto: **the flag cannot make a broken build
