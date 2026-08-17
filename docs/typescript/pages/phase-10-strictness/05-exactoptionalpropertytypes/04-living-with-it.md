@@ -254,4 +254,4 @@ because the codebase now advertises a guarantee it does not have.
 
 ---
 
-← [03 · Spread, defaults and construction](./03-spread-defaults-and-construction.md) · [Topic index](./README.md) · Next → **06 · The other correctness flags** *(not written yet)*
+← [03 · Spread, defaults and construction](./03-spread-defaults-and-construction.md) · [Topic index](./README.md) · Next → [06 · The other correctness flags](../06-the-other-correctness-flags/README.md)
