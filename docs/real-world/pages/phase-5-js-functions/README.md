@@ -23,7 +23,7 @@ coding); the Phase 3 API contract.
 | 06 | **[Money and dates with `Intl`](06-money-and-dates/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The display edge: `/100` is a bug, the symbol is not a prefix, `timeZone` is required — and the hydration mismatch is a state bug |
 | 07 | **[Slug and search normalization](07-slug-and-search-normalization.md)** | <span className="db-tier t-know">Know</span> | Two jobs with opposite requirements — a permanent identifier vs transient data; NFD to strip, NFC to compare |
 | 08 | **[Feature flags with a local override](08-feature-flags.md)** | <span className="db-tier t-know">Know</span> | Resolved server-side like locale; a closed catalogue with expiry — and the flag hides the button, it does not protect the endpoint |
-| 09 | **Optimistic-update helpers** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 09 | **[Optimistic-update helpers](09-optimistic-update-helpers.md)** | <span className="db-tier t-understand">Understand</span> | Apply and revert as data, captured at apply time — so one failure does not undo its neighbours |
 | 10 | **Debounce and throttle, applied** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 
 ## Phase gate
