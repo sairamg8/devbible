@@ -67,7 +67,7 @@ And it pre-empts the misreading everybody makes:
 🔴 **This is the single most useful correction in the topic.** `nodenext` is not
 "the ESM setting". It is the *obey-Node* setting, and it is the right answer for
 a project that emits nothing but CommonJS. How the per-file decision is made is
-[chunk 06](./06-format-detection.md).
+[chunk 08](./08-format-detection.md).
 
 The granularity ladder is the clean way to hold the whole table:
 
@@ -89,7 +89,7 @@ The reference page does not hedge, so neither will this page.
 > You probably shouldn't use this. Use `node16`, `node18`, or `nodenext` to emit
 > CommonJS modules for Node.js.
 
-That reads as a contradiction until you have chunk 06: `nodenext` on a project
+That reads as a contradiction until you have [chunk 08](./08-format-detection.md): `nodenext` on a project
 without `"type": "module"` emits CommonJS *anyway*, and additionally enforces the
 rules Node applies to CommonJS files. You get the same output plus the checking.
 `"module": "commonjs"` is strictly less information for the same artefact.
@@ -152,7 +152,7 @@ declarations.` for a package that is unmistakably installed. *Cause:* the implie
 `moduleResolution` for every non-Node, non-`preserve` value is `classic`, which
 does not search `node_modules` at all. *Fix:* set
 `"moduleResolution": "bundler"`. This is
-[chunk 05](./05-the-defaults-you-did-not-set.md)'s headline and it catches
+[chunk 07](./07-the-defaults-you-did-not-set.md)'s headline and it catches
 people every year.
 
 **Switching `commonjs` → `nodenext` can change your emit format wholesale.**
