@@ -47,7 +47,7 @@ Read down the left column until a row sounds like your week.
 | "This button should sometimes render an `<a>`" | **Polymorphic components / the `as` prop** | [03 · Polymorphic components](03-polymorphic-components.md) — *new* |
 | "The caller keeps forgetting to spread the accessibility props" | **Prop getters** | [04 · Prop getters](04-prop-getters.md) — *new* |
 | "My `App.jsx` is nine nested `<Provider>` tags" | **Provider composition** | [05 · Provider composition](05-provider-composition.md) — *new* |
-| "Should I split this into a smart and a dumb component?" | **Container / presentational** — mostly obsolete, and worth knowing *why* | **06 · Container and presentational** *(not written yet)* — *new* |
+| "Should I split this into a smart and a dumb component?" | **Container / presentational** — mostly obsolete, and worth knowing *why* | [06 · Container and presentational](06-container-and-presentational.md) — *new* |
 | "Who owns this input's value?" | **Controlled vs uncontrolled** | [Controlled vs uncontrolled](../phase-2-components/04-controlled-vs-uncontrolled/README.md) <span className="db-tier t-master">Master</span> |
 | "I am storing something in state that I could compute" | **Derived state** — compute during render, do not sync with an effect | [Derived state](../phase-3-state/06-derived-state.md) <span className="db-tier t-master">Master</span> |
 | "I need this component's state to reset when the user changes" | **Reset with `key`** | [Resetting state with `key`](../phase-3-state/07-resetting-state-with-key.md) <span className="db-tier t-master">Master</span> |
@@ -167,7 +167,7 @@ written here because there was nowhere to link to.
 | 03 | **[Polymorphic components](03-polymorphic-components.md)** | <span className="db-tier t-know">Know</span> | The `as` prop, and why a link that renders a `<div>` is a bug, not a style choice |
 | 04 | **[Prop getters](04-prop-getters.md)** | <span className="db-tier t-know">Know</span> | One object the caller spreads, so they cannot forget the ARIA attributes |
 | 05 | **[Provider composition](05-provider-composition.md)** | <span className="db-tier t-understand">Understand</span> | Nine nested providers, and the two ways out — one cosmetic, one real |
-| 06 | **Container and presentational** *(not written yet)* | <span className="db-tier t-know">Know</span> | The pattern hooks retired, why its author withdrew it, and what survived |
+| 06 | **[Container and presentational](06-container-and-presentational.md)** | <span className="db-tier t-know">Know</span> | The pattern hooks retired, why its author withdrew it, and what survived |
 
 ## Patterns this reference deliberately says no to
 
@@ -181,7 +181,7 @@ plainly:
   responsibility. [Component boundaries](../phase-2-components/10-component-boundaries.md)
   gives five reasons that justify a split and three that do not.
 - **A container/presentational split by default.** Its own author withdrew the
-  recommendation after hooks — **06** *(not written yet)* carries
+  recommendation after hooks — [06](06-container-and-presentational.md) carries
   the quote.
 
 ## Where this connects

@@ -227,4 +227,4 @@ the provider. That is the standard RSC composition technique.
 
 ---
 
-← Prev: [Prop getters](04-prop-getters.md) · Index: [React patterns](README.md) · Next → **06 · Container and presentational** *(not written yet)*
+← Prev: [Prop getters](04-prop-getters.md) · Index: [React patterns](README.md) · Next → [06 · Container and presentational](06-container-and-presentational.md)

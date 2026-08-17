@@ -121,7 +121,7 @@ export const LANGUAGES = {
       {n: 10, slug: 'phase-10-server-components', name: 'Server Components and Server Functions', part: 'Concurrent and server', topics: 19, pages: 19},
       {n: 11, slug: 'phase-11-ssr-hydration', name: 'Server rendering, hydration and the DOM APIs', part: 'Concurrent and server', topics: 17, pages: 17},
       {n: 14, slug: 'phase-14-correctness', name: 'Testing React', part: 'Testing React', topics: 14, pages: 14},
-      {n: 15, slug: 'patterns', name: 'Patterns — choosing a shape', part: 'Patterns', topics: 6, pages: 5, pagesPlanned: 6},
+      {n: 15, slug: 'patterns', name: 'Patterns — choosing a shape', part: 'Patterns', topics: 6, pages: 6},
     ],
   },
   nodejs: {
