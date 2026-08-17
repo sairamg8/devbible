@@ -10,12 +10,6 @@ sidebar_position: 0
 > and `as const`. ⚠️ **No test framework is installed in this repository**, so any
 > framework claim is documentation-attributed. **No sandbox run, no console block.**
 
-:::info 🚧 This topic is mid-write — 1 chunk
-Chunk **01 is written**. References to the rest are deliberately **plain text
-rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
 ⚠️ **Not to be confused with [topic 04 · Testing types](../04-testing-types/README.md)**,
 despite the names. **That topic tests your types. This one keeps test code honestly
 typed** — a different problem, and the one with the higher failure rate.
@@ -36,7 +30,7 @@ other half is the expensive one:
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [Fixtures that cannot lie](./01-fixtures-that-cannot-lie.md) | The factory that **concentrates a contract change into one compile error**; `as const satisfies` for test tables; where `Partial<T>` stops being honest; and how to spend the `as` you genuinely need |
-| 02 | **Mocks, spies, and the test directory's type budget** *(not written yet)* | Typing doubles so call assertions mean something, and whether the test directory is in the gate at all |
+| 02 | [Mocks, spies, and the test directory's type budget](./02-mocks-and-the-test-type-budget.md) | 🔴 An untyped mock **certifies a call signature the codebase does not have** — the assertion passes for a call that could never happen. Derive from the real function; and ⚠️ **none of it matters if the test directory is not in the checked program**, which hides the errors, the `as any` population and your type tests at once |
 
 ## Phase gate
 

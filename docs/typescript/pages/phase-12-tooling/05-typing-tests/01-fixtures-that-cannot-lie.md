@@ -205,4 +205,4 @@ by tests that keep passing.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · Mocks, spies, and the test directory's type budget** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · Mocks, spies, and the test directory's type budget](./02-mocks-and-the-test-type-budget.md)
