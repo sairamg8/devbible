@@ -12,21 +12,35 @@ Every worktree and branch in this repo was **merged into `main` and deleted** on
 explicit paths (never `git add -A`) since everyone shares the checkout again.
 :::
 
-:::info 🔒 Active work — the A/B split is REOPENED, both parts are live
+:::info 🔒 Active work — TypeScript is split FOUR ways: A · B · C · D
 
-🔴 **Reopened 2026-08-15.** Two sessions now write TypeScript in parallel, on
-`main`, with a hard directory boundary between them. **Neither creates nor edits
-a file in the other's phase directories.**
+🔴 **Re-split 2026-08-17.** Up to four sessions write TypeScript in parallel on
+`main`. **No lane creates or edits a file outside its own scope**, and a session
+started with just a letter — *"typescript c"* — reads its row below and begins.
 
-| Part | Phases | Topics | Claimed by |
+| Lane | Scope — the only directories it may touch | Left | Claimed by |
 |---|---|---|---|
-| **A · the type system** | **5 only** (2, 3, 4 complete) | 9 left | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–4 ✅ complete, **phase 5 at 7/16**; phase 6 split off as Part C |
-| **C · modules and the build** | **6** | 16 | 🔴 **UNCLAIMED, created 2026-08-17** — the whole phase, nothing written. Paste-ready prompt in the store: `devbible/project_typescript_split_part_c.md` |
-| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 9/13**, phase 12 not started |
+| **A · type-level** | `phase-5-type-level/` topics **08–16** | 9 | session `bbd2d39d`, 2026-08-17 |
+| **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 19 | session `ea9f43fb`, 2026-08-17 |
+| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 6 | 🔴 **unclaimed** |
+| **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 10 | 🔴 **unclaimed** |
 
-Part B's six phase directories **did not exist** at claim time; each is scaffolded
-(`_category_.json` plus a `README.md` carrying the full topic table) as it is
-reached, which is why they show as `planned` below until their index lands.
+🔴 **Re-split four ways on 2026-08-17.** Phase 6 was the imbalance, not the lanes: weighted
+by tier it projected to ~10,350 lines — 43% of all remaining TypeScript — in one unclaimed
+part, because its three Master rows sit at the front. Cutting after topic 06 gives ~5,100 /
+~5,250 and falls on a real boundary: **C is the module system and how the compiler sees
+files; D is declarations, packaging and the build.**
+
+⚠️ **C and D share one phase directory — devbible's only intra-phase split.** Whoever
+arrives first scaffolds `phase-6-modules-build/README.md` with the **full 16-row table**;
+after that each lane edits **only its own rows** (C 01–06, D 07–16) and re-reads the file
+immediately before every edit. They also share that phase's row in `src/data/progress.js`.
+
+⚠️ **Two of the four remaining directories do not exist yet** —
+`phase-6-modules-build/` (C + D) and `phase-12-tooling/` (B). **31 of the 44
+remaining topics live in them.** A phase directory takes **no `_category_.json`**:
+phases 0–5 use README frontmatter plus autogeneration, and only a *chunk*
+directory inside a topic gets one.
 
 Other technologies still belong to other live sessions. Shared files — this
 README's phase rows, `docs/README.md`, and `src/data/progress.js` (anchor every
@@ -35,7 +49,7 @@ re-read immediately before writing. **Never `git add -A`.** Where a page needs a
 topic that is not written yet, write it as bold plain text with
 *(not written yet)* rather than a link.
 
-Split rules, kept for history: `devbible/project_typescript_split_parts_ab.md`.
+🔴 **The cursor for all four lanes: `devbible/progress_typescript_split_4way.md`.** History: `devbible/project_typescript_split_parts_ab.md` (the original A/B) and `devbible/project_typescript_split_part_c.md` (superseded — it gave C the whole of phase 6).
 
 :::
 
