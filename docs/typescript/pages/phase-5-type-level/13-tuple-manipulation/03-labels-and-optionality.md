@@ -263,4 +263,4 @@ place.
 ---
 
 ← [02 · Variadic tuple types](./02-variadic-tuple-types.md) · [Topic index](./README.md) ·
-Next → **04 · Typing `bind`, `curry` and partial application** *(not written yet)*
+Next → [04 · Typing `bind`, `curry` and partial application](./04-bind-and-curry.md)

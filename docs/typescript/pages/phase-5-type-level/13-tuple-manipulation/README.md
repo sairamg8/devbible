@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-know">Know</span>
 
 :::info Topic in progress
-**Chunks 01–03 are written.** The remaining chunks are planned and referred to as plain text until
+**Chunks 01–04 are written.** The remaining chunks are planned and referred to as plain text until
 they land.
 :::
 
@@ -28,7 +28,7 @@ tuple type exists.
 | 01 | [The accessors](./01-the-accessors.md) | `Head`, `Tail`, `Last`, `Init`, `Length` — why every pattern needs `readonly`, why `never` and `[]` are different base cases, and why `Last` was unwritable before 4.0 |
 | 02 | [Variadic tuple types](./02-variadic-tuple-types.md) | The two changes 4.0 actually made, 🔴 **the rule that positions before an unbounded spread survive and positions after it do not**, and why a structural operation should be a spread rather than a recursion |
 | 03 | [Labels, optionality and the spread rule](./03-labels-and-optionality.md) | The three 4.0 labelling rules, 🔴 **the only two structure-preserving operations there are**, and why `infer` sits between them — the case that bites hardest |
-| 04 | **Typing `bind`, `curry` and partial application** *(not written yet)* | The release notes' own `partialCall`, and where the pattern stops working |
+| 04 | [Typing `bind`, `curry` and partial application](./04-bind-and-curry.md) | The notes' own `partialCall` with all four of its error cases, why currying is the recursive version, and 🔴 **the four places the pattern stops — all one root cause** |
 | 05 | **The limits** *(not written yet)* | The 10,000-element ceiling, the cost of a recursive tuple walk, and when a tuple type is the wrong shape |
 
 ## The one-sentence version
