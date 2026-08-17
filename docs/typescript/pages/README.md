@@ -21,8 +21,8 @@ started with just a letter — *"typescript c"* — reads its row below and begi
 | Lane | Scope — the only directories it may touch | Left | Claimed by |
 |---|---|---|---|
 | **A · type-level** | `phase-5-type-level/` topics **08–16** | 5 | session `65de22b3`, 2026-08-17 |
-| **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 18 | session `c01e37bb`, 2026-08-17 (took over from `ede9cd9f`) |
-| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 3 | session `f4392a13`, 2026-08-17 (took over from `5ff47a9c`) |
+| **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 17 | session `c01e37bb`, 2026-08-17 (took over from `ede9cd9f`) |
+| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 2 | session `f4392a13`, 2026-08-17 (took over from `5ff47a9c`) |
 | **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 6 | session `e28ddf99`, 2026-08-17 (took over from `8dcc0095`) |
 
 🔴 **Re-split four ways on 2026-08-17.** Phase 6 was the imbalance, not the lanes: weighted
@@ -91,11 +91,11 @@ untouched by it.
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 14 / 14 | ✅ written |
 | [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 11 / 16 | 🚧 writing |
-| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 7 / 16 | 🚧 writing |
+| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 8 / 16 | 🚧 writing |
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
-| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 10 / 13 | 🚧 writing |
+| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 11 / 13 | 🚧 writing |
 | ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
 | 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
 
