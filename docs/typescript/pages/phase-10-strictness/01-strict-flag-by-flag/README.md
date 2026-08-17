@@ -60,7 +60,7 @@ reaching for `strictNullChecks: false` to quiet a migration.
   `exactOptionalPropertyTypes` alongside them.
 - **→ 02 · `noUncheckedIndexedAccess`** *(not written yet)* — the most valuable
   flag `strict` does **not** include.
-- **→ 07 · Where TypeScript is unsound by design** *(not written yet)* — method
+- **→ [07 · Where TypeScript is unsound by design](../07-unsound-by-design/README.md)** — method
   bivariance, introduced in chunk 03, listed there as one of six deliberate holes.
 - **→ 12 · Assertion discipline** *(not written yet)* — the `!` count as the real
   measure of a strictness migration.

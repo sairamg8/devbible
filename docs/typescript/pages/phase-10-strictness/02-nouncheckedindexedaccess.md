@@ -159,7 +159,7 @@ fixing that also gives you exhaustiveness checking for free
 access sound — `arr[5]` on a 3-element array is still `T | undefined` rather
 than an error, and mutation can still invalidate a check. It narrows the gap
 without closing it, which is exactly what
-[topic 07](./README.md) is about.
+[topic 07](./07-unsound-by-design/README.md) is about.
 
 ## Adopting it
 

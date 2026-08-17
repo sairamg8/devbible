@@ -187,4 +187,4 @@ everything else is turned on.
 
 ---
 
-← [04 · The unused-code flags](./04-unused-code-flags.md) · [Topic index](./README.md) · Next → **07 · Where TypeScript is unsound by design** *(not written yet)*
+← [04 · The unused-code flags](./04-unused-code-flags.md) · [Topic index](./README.md) · Next → [07 · Where TypeScript is unsound by design](../07-unsound-by-design/README.md)

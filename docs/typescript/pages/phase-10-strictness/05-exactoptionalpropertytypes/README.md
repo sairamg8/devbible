@@ -74,7 +74,7 @@ flag and gains nothing from it.
 - **← [Phase 2 · Narrowing](../../phase-2-narrowing/README.md)** — the
   control-flow analysis that reading an optional property still requires,
   unchanged by this flag.
-- **→ 07 · Where TypeScript is unsound by design** *(not written yet)* — object
+- **→ [07 · Where TypeScript is unsound by design](../07-unsound-by-design/README.md)** — object
   spread's incorrect result type is one of the holes this flag closes; the rest
   stay open.
 - **→ 12 · Assertion discipline** *(not written yet)* — the `as` count as the

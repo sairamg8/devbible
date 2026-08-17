@@ -21,7 +21,7 @@ a file in the other's phase directories.**
 | Part | Phases | Topics | Claimed by |
 |---|---|---|---|
 | **A · the type system** | 2, 3, 4, 5, 6 | 73 | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–3 ✅ complete, **phase 4 at 13/14**, phases 5 and 6 not started |
-| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 6/13**, phase 12 not started |
+| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 7/13**, phase 12 not started |
 
 Part B's six phase directories **did not exist** at claim time; each is scaffolded
 (`_category_.json` plus a `README.md` carrying the full topic table) as it is
@@ -75,12 +75,12 @@ untouched by it.
 | [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 13 | ✅ written |
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 14 / 14 | ✅ written |
-| [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 1 / 16 | 🚧 writing |
+| [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 2 / 16 | 🚧 writing |
 | 6 · Modules, declarations and the build | Types at scale | — | planned |
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
-| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 6 / 13 | 🚧 writing |
+| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 7 / 13 | 🚧 writing |
 | ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
 | 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
 

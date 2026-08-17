@@ -67,7 +67,8 @@ interface A { f(x: Dog): void }      // method syntax   → bivariant, unchecked
 interface B { f: (x: Dog) => void }  // property syntax → contravariant, checked
 ```
 
-That is a **deliberate unsoundness**, and topic 07 lists it as one. The
+That is a **deliberate unsoundness**, and
+[topic 07](../07-unsound-by-design/04-mutation-and-variance.md) lists it as one. The
 practical takeaway: if you want the check, declare the callback as a **property**,
 not a method.
 
@@ -216,7 +217,7 @@ assignment is still accepted.
 bivariant by design.
 **Fix:** declare it as a property — `f: (x: Dog) => void` — if you want the
 check. Otherwise accept it as one of TypeScript's deliberate soundness holes
-(topic 07).
+([topic 07](../07-unsound-by-design/04-mutation-and-variance.md)).
 
 **Symptom:** `strictPropertyInitialization` reports nothing at all.
 **Cause:** `strictNullChecks` is off, so every property type already includes
