@@ -193,7 +193,7 @@ export const LANGUAGES = {
     docsPath: '/docs/redis',
     pagesPath: '/docs/redis/pages',
     phases: [
-      {n: 0, slug: 'phase-0-how-redis-runs', name: 'How Redis runs', part: 'How Redis works', topics: 6, pages: 0},
+      {n: 0, slug: 'phase-0-how-redis-runs', name: 'How Redis runs', part: 'How Redis works', topics: 6, pages: 1, pagesPlanned: 6},
       {n: 1, slug: 'phase-1-keys-and-expiry', name: 'Keys, expiry and the keyspace', part: 'How Redis works', topics: 6, pages: 0},
       {n: 2, slug: 'phase-2-redis-cli', name: 'redis-cli, mastered', part: 'How Redis works', topics: 5, pages: 0},
       {n: 3, slug: 'phase-3-strings', name: 'Strings, numbers and bitmaps', part: 'Data types', topics: 6, pages: 0},

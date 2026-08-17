@@ -12,14 +12,15 @@ only** — so no two ever write in the same phase directory or the same phase
 
 | Chunk | Phases | Topics | Start at | Claimed by |
 |---|---|---|---|---|
-| **A** | **0, 1, 2, 3** | **23** | Phase 0 · 01 · What Redis is | session `3bb1face`, 2026-08-17 |
+| **A** | **0, 1, 2, 3** | **23** | 🚧 **1 written** — next: Phase 0 · 02 · Single-threaded execution | session `3bb1face`, 2026-08-17 |
 | **B** | **4, 5, 6** | **21** | Phase 4 · 01 · Hashes | — unclaimed |
 | **C** | **7, 8, 9, 10** | **30** | Phase 7 · 01 · Cache-aside | — unclaimed |
 
 **A phase number settles which chunk you are:** 0/1/2/3 → A · 4/5/6 → B ·
 7/8/9/10 → C.
 
-**State: syllabus complete (11 phases, 74 topics), no explanation pages yet.**
+**State: 1 of 74 topics written** — chunk A opened phase 0 on 2026-08-17.
+Chunks B and C have not started.
 
 ⛔ **Cross-chunk links break the build.** Where a page needs a topic another chunk
 owns, write it as **bold plain text with *(not written yet)*** until the target
@@ -53,7 +54,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Covers |
 |---|---|
-| **0 — How Redis runs** | In-memory data-structure server, single-threaded execution, O(N) commands, RESP, durability |
+| 🚧 **[0 — How Redis runs](./phase-0-how-redis-runs/README.md)** — **1/6** | In-memory data-structure server, single-threaded execution, O(N) commands, RESP, durability |
 | **1 — Keys, expiry, keyspace** | Key naming as schema, TTL, how expiry really happens, `SCAN` over `KEYS`, `UNLINK` |
 | **2 — `redis-cli`, mastered** | `MONITOR`, `SLOWLOG`, `INFO`, `--bigkeys`/`--hotkeys`, `OBJECT ENCODING` |
 | **3 — Strings, numbers, bitmaps** | `SET` options, atomic counters, `GETEX`/`GETDEL`, `MGET`, bitmaps |
