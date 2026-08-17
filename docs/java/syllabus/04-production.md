@@ -67,4 +67,4 @@ dump — and can say what each would show if it were the culprit.
 
 ---
 
-← Prev: [Part 3 — Application layer](03-application.md) · Index: [Java](../README.md)
+← Prev: [Part 3 — Application layer](03-application.md) · Next → [Part 5 — Distributed Java](05-distributed.md)

@@ -7,8 +7,8 @@ sidebar_position: 0
 Status board for the Java explanation pages — one page per syllabus topic, with
 code, gotchas and interview questions.
 
-**Nothing is written yet.** The [syllabus](../README.md) is complete (179 topics,
-13 phases); pages start once it is approved, phase by phase in reading order.
+**Writing in progress** — approved 2026-08-17, written phase by phase in
+reading order. The [syllabus](../README.md) is complete: 232 topics, 17 phases.
 
 import Progress from '@site/src/components/Progress';
 
@@ -29,3 +29,7 @@ import Progress from '@site/src/components/Progress';
 | 10 · Data access | 14 | Planned |
 | 11 · Testing | 11 | Planned |
 | 12 · The JVM in production | 15 | Planned |
+| 13 · OAuth2, OIDC and service security | 14 | Planned |
+| 14 · Microservice architecture | 12 | Planned |
+| 15 · Messaging and event-driven | 14 | Planned |
+| 16 · Resilience and operating the fleet | 13 | Planned |

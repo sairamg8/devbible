@@ -8,7 +8,7 @@ sidebar_position: 0
 > and /27, and the Oracle Java SE support roadmap.
 
 The complete topic inventory for Java, tiered for **mastery in backend service
-development**. 13 phases, split into 4 parts to stay under the 300-line file cap.
+development**. 17 phases, split into 5 parts to stay under the 300-line file cap.
 
 Java sits outside this bible's MERN/PERN core — it is here as the second backend
 language, taught toward the same job: a production API in front of PostgreSQL.
@@ -39,6 +39,7 @@ the release that finalized them (records 16, sealed types 17, virtual threads
 | 2 | **[Core library](syllabus/02-core-library.md)** | Generics, collections, streams, exceptions, concurrency | 3–6 |
 | 3 | **[Application layer](syllabus/03-application.md)** | Everyday stdlib, Maven/Gradle, Spring Boot, data access | 7–10 |
 | 4 | **[Production](syllabus/04-production.md)** | Testing, the JVM under load, observability, deployment | 11–12 |
+| 5 | **[Distributed Java](syllabus/05-distributed.md)** | OAuth2/OIDC, microservices, Kafka/RabbitMQ, resilience | 13–16 |
 
 ## Explanations
 
@@ -62,13 +63,14 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 53 | 30% |
-| <span className="db-tier t-understand">Understand</span> | 84 | 47% |
-| <span className="db-tier t-know">Know</span> | 36 | 20% |
-| <span className="db-tier t-when">When Needed</span> | 6 | 3% |
-| **Total** | **179** | |
+| <span className="db-tier t-master">Master</span> | 68 | 29% |
+| <span className="db-tier t-understand">Understand</span> | 111 | 48% |
+| <span className="db-tier t-know">Know</span> | 46 | 20% |
+| <span className="db-tier t-when">When Needed</span> | 7 | 3% |
+| **Total** | **232** | |
 
-By part: Foundations 44 · Core library 54 · Application 55 · Production 26.
+By part: Foundations 44 · Core library 54 · Application 55 · Production 26 ·
+Distributed 53.
 
 If you only ever finish the <span className="db-tier t-master">Master</span>
 set, you can build, test and debug a Spring Boot service. The rest is range —
@@ -93,6 +95,8 @@ Phases are sequential and the order is load-bearing. Three rules:
    you've never seen under.
 
 Phases 11–12 can run alongside whatever you're building from Phase 9 onward.
+Part 5 (phases 13–16) assumes Phases 9–12 — its OAuth2 phase extends Phase 9's
+Spring Security row, and its messaging phase leans on Phase 10's transactions.
 
 ## Sources
 
@@ -101,3 +105,5 @@ Phases 11–12 can run alongside whatever you're building from Phase 9 onward.
 - [Oracle Java SE support roadmap](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) · [endoflife.date/oracle-jdk](https://endoflife.date/oracle-jdk)
 - [Spring Boot reference](https://docs.spring.io/spring-boot/index.html) · [Hibernate ORM docs](https://hibernate.org/orm/documentation/)
 - [JUnit 5 user guide](https://junit.org/junit5/docs/current/user-guide/) · [Testcontainers for Java](https://java.testcontainers.org/)
+- [Spring Security reference](https://docs.spring.io/spring-security/reference/index.html) · [Spring Cloud](https://spring.io/projects/spring-cloud) · [Resilience4j docs](https://resilience4j.readme.io/)
+- [Apache Kafka documentation](https://kafka.apache.org/documentation/) · [Spring for Apache Kafka](https://docs.spring.io/spring-kafka/reference/) · [RabbitMQ docs](https://www.rabbitmq.com/docs)
