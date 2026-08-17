@@ -23,7 +23,7 @@ tools. This phase is opinionated on purpose: `pyproject.toml`, `uv`, `ruff`.
 | **`uv`**: venv + resolver + lockfile + `uv run` — the 2026 default workflow; `pip` + `venv` as the baseline you can always fall back to | <span className="db-tier t-master">Master</span> |
 | **Dependencies done right**: ranges in `pyproject.toml`, **a committed lockfile** for the app, extras (`[project.optional-dependencies]`), dependency groups (dev/test) — and why apps lock but libraries range | <span className="db-tier t-master">Master</span> |
 | Project layout: the **src layout** (and the import-the-wrong-copy bug flat layout invites), tests outside the package, one project per repo vs workspaces | <span className="db-tier t-understand">Understand</span> |
-| **`ruff`**: linter + formatter in one — replacing flake8/isort/black; rule selection, `--fix`, and putting it in CI and pre-commit | <span className="db-tier t-master">Master</span> |
+| **`ruff`**: linter + formatter in one — replacing flake8/isort/black; rule selection, `--fix`, and putting it in CI and pre-commit | <span className="db-tier t-understand">Understand</span> |
 | Entry points: `[project.scripts]` — `mycli = mypkg.cli:main`, installed as a command | <span className="db-tier t-understand">Understand</span> |
 | Wheels vs sdists, and native extensions — why `pip install` sometimes compiles C, and what a missing wheel for your platform looks like | <span className="db-tier t-understand">Understand</span> |
 | **Config and secrets**: environment variables, `.env` in dev only, typed settings objects (pydantic-settings) — 12-factor as Python practices it | <span className="db-tier t-understand">Understand</span> |
@@ -47,7 +47,7 @@ mistakes are picking the wrong one — or blocking the loop with the right one.
 |---|---|
 | **The decision**: I/O-bound → threads or asyncio; CPU-bound → processes (or native code); and *how to tell which you are* — the model behind every other row | <span className="db-tier t-master">Master</span> |
 | Threads: `threading.Thread`, locks, `queue.Queue` for handoff — why threads genuinely help for I/O despite the GIL | <span className="db-tier t-understand">Understand</span> |
-| **`concurrent.futures`**: `ThreadPoolExecutor` (100 API calls, bounded workers), `ProcessPoolExecutor`, `as_completed` vs `map` — the high-level API that covers most needs | <span className="db-tier t-master">Master</span> |
+| **`concurrent.futures`**: `ThreadPoolExecutor` (100 API calls, bounded workers), `ProcessPoolExecutor`, `as_completed` vs `map` — the high-level API that covers most needs | <span className="db-tier t-understand">Understand</span> |
 | `multiprocessing` under the hood: **spawn vs fork** (fork's deadlock hazards — no longer the default on any major platform), pickling costs at the boundary | <span className="db-tier t-understand">Understand</span> |
 | **asyncio, the model**: the event loop, coroutines, `await` as a yield point, `asyncio.run` — single-threaded concurrency, cooperative on purpose | <span className="db-tier t-master">Master</span> |
 | **Tasks**: `create_task`, **`gather` vs `TaskGroup`** (structured, fail-fast — 3.11+), cancellation, `asyncio.timeout` — fan out 50 requests, fail cleanly | <span className="db-tier t-master">Master</span> |
@@ -76,7 +76,7 @@ what they are, when they win.
 | **WSGI vs ASGI** — the two server protocols, sync vs async at the interface, and why the framework choice implies one | <span className="db-tier t-understand">Understand</span> |
 | **FastAPI routing**: path/query params typed in the signature, request bodies as Pydantic models, response models filtering what leaves — validation as the framework's core trick | <span className="db-tier t-master">Master</span> |
 | **Pydantic v2**: `BaseModel`, validation and coercion, `field_validator`/`model_validator`, serialization control, `pydantic-settings` — the boundary guard for *all* external data, not just HTTP | <span className="db-tier t-master">Master</span> |
-| **Dependency injection with `Depends`**: shared DB sessions, auth extraction, pagination params — testable by override, no globals | <span className="db-tier t-master">Master</span> |
+| **Dependency injection with `Depends`**: shared DB sessions, auth extraction, pagination params — testable by override, no globals | <span className="db-tier t-understand">Understand</span> |
 | **Error handling**: `HTTPException`, custom exception handlers, one error shape for the whole API — and never leaking a stack trace to a client | <span className="db-tier t-master">Master</span> |
 | `def` vs `async def` route handlers — FastAPI runs sync handlers in a threadpool; the wrong choice either blocks the loop or wastes threads | <span className="db-tier t-understand">Understand</span> |
 | Middleware and CORS — request-scoped logging with ids, the browser preflight you will debug at least once | <span className="db-tier t-understand">Understand</span> |
@@ -102,7 +102,7 @@ people's APIs, and time — tiered by how often each one pages someone.
 | Topic | Tier |
 |---|---|
 | **`pathlib`**: `Path` everywhere, `/` joining, `glob`, `read_text`/`write_text` — modern path work, no `os.path` string surgery | <span className="db-tier t-master">Master</span> |
-| Files properly: `with open(...)`, explicit `encoding="utf-8"` (the Windows-default bug), newline handling, binary mode, atomic-write patterns (temp + rename) | <span className="db-tier t-master">Master</span> |
+| Files properly: `with open(...)`, explicit `encoding="utf-8"` (the Windows-default bug), newline handling, binary mode, atomic-write patterns (temp + rename) | <span className="db-tier t-understand">Understand</span> |
 | **`json`**: `load`/`dump`, the "`datetime` is not JSON serializable" rite of passage and its fixes, `orjson` when speed matters — and Pydantic as the typed alternative at boundaries | <span className="db-tier t-master">Master</span> |
 | **`datetime` without regret**: **aware vs naive** (the bug class), `zoneinfo`, store UTC / convert at the edge, `date` vs `datetime`, ISO parsing — the same discipline as Java's `java.time`, same reasons | <span className="db-tier t-master">Master</span> |
 | **HTTP clients**: `httpx` (sync and async, one API), **timeouts on every call**, retries with backoff, sessions/connection reuse — `requests` read-fluently as the legacy default | <span className="db-tier t-master">Master</span> |

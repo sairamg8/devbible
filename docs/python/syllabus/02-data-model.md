@@ -20,10 +20,10 @@ the standard-library structures that replace hand-rolled code.
 | Topic | Tier |
 |---|---|
 | **`list` internals**: a dynamic array — append is cheap, `insert(0, …)` is O(n); `sort` (Timsort, stable) with `key=`, `sorted` vs `.sort()` (one returns, one mutates and returns `None` — the classic `x = x.sort()` bug) | <span className="db-tier t-master">Master</span> |
-| `tuple`: immutable, hashable (if contents are), the natural "record without a name" — and when a dataclass beats a 4-tuple | <span className="db-tier t-master">Master</span> |
+| `tuple`: immutable, hashable (if contents are), the natural "record without a name" — and when a dataclass beats a 4-tuple | <span className="db-tier t-understand">Understand</span> |
 | **`dict`**: insertion-ordered by guarantee, the lookup workhorse — `get` with defaults, `setdefault`, views, merge (`\|`), comprehensions; what can be a key (**hashability**) and why a list can't | <span className="db-tier t-master">Master</span> |
 | **`set`/`frozenset`**: membership at O(1), dedupe, and set algebra — "users in A but not B" as `a - b` instead of a nested loop | <span className="db-tier t-master">Master</span> |
-| **Slicing deeply**: `[start:stop:step]`, negatives, `[::-1]`, slice assignment, and slices as *copies* (for lists) — vs the aliasing bugs of Phase 1 | <span className="db-tier t-master">Master</span> |
+| **Slicing deeply**: `[start:stop:step]`, negatives, `[::-1]`, slice assignment, and slices as *copies* (for lists) — vs the aliasing bugs of Phase 1 | <span className="db-tier t-understand">Understand</span> |
 | **`collections`**: `defaultdict` (the group-by one-liner), `Counter` (top-N in two lines), `deque` (O(1) both ends — the queue `list.pop(0)` pretends to be), `namedtuple`, `ChainMap` | <span className="db-tier t-master">Master</span> |
 | `heapq` (top-K without sorting everything) and `bisect` (binary search on sorted data) | <span className="db-tier t-understand">Understand</span> |
 | **`copy` vs `deepcopy`** — one level vs the whole graph, and the nested-dict config that two requests accidentally shared | <span className="db-tier t-understand">Understand</span> |
@@ -49,7 +49,7 @@ protocols, plus the machinery (`@property`, descriptors) frameworks are made of.
 | Class anatomy: `__init__`, `self` (explicit on purpose), **class vs instance attributes** — and the shared-mutable-class-attribute trap (`items = []` on the class) | <span className="db-tier t-master">Master</span> |
 | **The core dunders**: `__repr__` (for logs — unambiguous) vs `__str__`, `__eq__` **and** `__hash__` as a pair (the object that vanished from a set), `__len__`, `__bool__` | <span className="db-tier t-master">Master</span> |
 | **`@property`**: computed attributes, validation on set — evolving a public attribute into logic *without breaking callers* (the refactor Java does with getters up front) | <span className="db-tier t-master">Master</span> |
-| `@classmethod` (alternative constructors — `Order.from_json(...)`) vs `@staticmethod` (a namespaced function) | <span className="db-tier t-master">Master</span> |
+| `@classmethod` (alternative constructors — `Order.from_json(...)`) vs `@staticmethod` (a namespaced function) | <span className="db-tier t-understand">Understand</span> |
 | **`dataclasses`**: `@dataclass`, `field(default_factory=...)` (the mutable-default trap again, solved), `frozen=True`, `slots=True`, `__post_init__`, `kw_only` — the default data carrier | <span className="db-tier t-master">Master</span> |
 | Inheritance and **`super()`**: the MRO (C3), cooperative `__init__`, mixins — and why composition usually beats a hierarchy here too | <span className="db-tier t-understand">Understand</span> |
 | **ABCs vs `Protocol`**: nominal vs structural — duck typing formalized; registering vs just matching the shape | <span className="db-tier t-understand">Understand</span> |
