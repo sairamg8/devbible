@@ -19,7 +19,7 @@ debugging. Phase 12 (the JVM in production) is this phase's payoff; Spring
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[What Java is](01-what-java-is.md)** | <span className="db-tier t-master">Master</span> | Source → bytecode → JVM; why the same `.jar` runs everywhere |
+| 01 | **[What Java is](01-what-java-is/README.md)** | <span className="db-tier t-master">Master</span> | Source → bytecode → JVM; why the same `.jar` runs everywhere — 3 chunks |
 | 02 | **JDK vs JRE vs JVM, and distributions** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Same bytecode, different support contracts |
 | 03 | **The release model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | 6-month majors, LTS every 2 years: 17 → 21 → 25 |
 | 04 | **Running code** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `java`, `javac`, single-file launch, `jshell` |
