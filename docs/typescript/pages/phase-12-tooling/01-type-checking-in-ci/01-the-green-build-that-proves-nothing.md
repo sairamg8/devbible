@@ -97,7 +97,7 @@ enforcement matters, and a guarantee nobody verifies decays silently: the first
 error merges, the second is easier, and by the time anyone looks the number is
 large enough that turning the check on is its own project.
 
-📌 **That decay is the real cost, and it compounds.** **Chunk 05 · When the gate fails** *(not written yet)*
+📌 **That decay is the real cost, and it compounds.** [Chunk 05](./05-when-the-gate-fails.md)
 is about turning the check on when the number is already large; this chunk is the
 argument for never being in that position.
 

@@ -13,13 +13,7 @@ sidebar_position: 0
 > a build pipeline, so where a number matters it is quoted with its source named.
 > **No console block.**
 
-:::info 🚧 This topic is mid-write — 4 chunks
-Chunks **01–04 are written**. The rest are not, and references to them are deliberately
-**plain text rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
-The syllabus row asks for *"`tsc --noEmit` as a required gate, and why a
+:The syllabus row asks for *"`tsc --noEmit` as a required gate, and why a
 transpile-only build cannot replace it."* The second half is the load-bearing part,
 and it is not a matter of tooling preference:
 
@@ -37,7 +31,7 @@ and it is not a matter of tooling preference:
 | 02 | [What the gate guarantees](./02-what-the-gate-guarantees.md) | 🔴 A green run is compatible with **an entire directory never having been looked at** — the four things it does not claim, the files quietly outside the program, ⚠️ that **`exclude` is not a firewall**, the multi-config hole, and the four compiler flags that tell you what was actually checked |
 | 03 | [Where the gate goes](./03-where-the-gate-goes.md) | The four positions and why **pre-commit is the wrong one** (a whole-program check cannot be scoped to staged files, and `--no-verify` makes it optional) — plus 🔴 **the merge queue case: a type error is the classic semantic merge conflict**, which is why `main` breaks when no individual PR was wrong |
 | 04 | [Making it fast enough to be required](./04-making-it-fast-enough.md) | 🔴 **Speed is a correctness concern** — a slow gate stops being a gate. The levers split into *free* and *costs coverage*, and ⚠️ **every "make it faster by checking less" change is a coverage change** that arrives in a PR titled *speed up CI* |
-| 05 | **When the gate fails** *(not written yet)* | Blocking vs advisory, and turning the check on when the error count is already large |
+| 05 | [When the gate fails](./05-when-the-gate-fails.md) | 🔴 **Advisory is not a halfway house, it is the failure mode** — a non-blocking red is indistinguishable from a green after two weeks, and it has **no failure indicator**. The two approaches that work (baseline, or split the config), and the five ways a pipeline ends up green with types unenforced |
 
 ## Phase gate
 

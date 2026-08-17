@@ -54,7 +54,7 @@ and should be reviewed as one.**
 | `skipLibCheck` | checking **inside** `.d.ts` files — bounded, and widely accepted ([chunk 02](./02-what-the-gate-guarantees.md)) |
 | a narrower `include` | whatever you removed, entirely |
 | running only on changed **projects** | cross-project breakage, unless references model the dependencies correctly |
-| moving it to nightly | ⚠️ **it stops being a gate** — see **chunk 05 · When the gate fails** *(not written yet)* |
+| moving it to nightly | ⚠️ **it stops being a gate** — see [chunk 05](./05-when-the-gate-fails.md) |
 
 🔴 **Only the first belongs in the "usually fine" column.** The rest are a smaller
 gate wearing the same name, and the danger is that they all show up in a pull
@@ -123,7 +123,7 @@ that was never rebuilt, which is the semantic-merge-conflict failure from
 
 **Symptom:** the gate was moved to nightly and errors reach `main` for a day.
 **Cause:** a nightly check is a report, not a gate.
-**Fix:** **chunk 05 · When the gate fails** *(not written yet)*. ⚠️ If the check genuinely cannot
+**Fix:** [chunk 05](./05-when-the-gate-fails.md). ⚠️ If the check genuinely cannot
 run per-PR, that is an orchestration problem to solve, not a fact to accept.
 
 **Symptom:** the runner is at its memory limit and the compiler is thrashing.
@@ -180,4 +180,4 @@ change reliably converts a slow check into no check.
 
 ---
 
-← [03 · Where the gate goes](./03-where-the-gate-goes.md) · [Topic index](./README.md) · Next → **05 · When the gate fails** *(not written yet)*
+← [03 · Where the gate goes](./03-where-the-gate-goes.md) · [Topic index](./README.md) · Next → [05 · When the gate fails](./05-when-the-gate-fails.md)
