@@ -25,7 +25,7 @@ caller passes instead of throwing it away.**
 
 ## The problem it fixes
 
-[Headless components](01-headless-components/README.md) hand the caller a props object
+[Headless components](../06-headless-components/README.md) hand the caller a props object
 to spread:
 
 ```jsx
@@ -199,9 +199,9 @@ needed.
 says the `null` call is going away in a future version, so that branch has a
 shelf life.)*
 
-[Ref callbacks](../phase-5-refs-context-reducers/06-ref-callbacks.md) is the page
+[Ref callbacks](../../phase-5-refs-context-reducers/06-ref-callbacks.md) is the page
 on that mechanism, and
-[`ref` as a prop](../phase-2-components/09-ref-as-a-prop.md) covers the React 19
+[`ref` as a prop](../../phase-2-components/09-ref-as-a-prop.md) covers the React 19
 change.
 
 ## When it is the wrong answer
@@ -212,7 +212,7 @@ convert `contentProps` into `getContentProps()` for symmetry.
 
 **When there is one caller.** Same argument as everywhere else in this section —
 this is machinery, and machinery with one consumer is
-[extracting too early](../phase-7-custom-hooks/12-extracting-too-early.md).
+[extracting too early](../../phase-7-custom-hooks/12-extracting-too-early.md).
 
 **When the caller needs to know what they are getting.** A props object is
 inspectable; a getter is opaque until you read its source. In TypeScript this
@@ -235,7 +235,7 @@ so `fn?.(...args)` rather than `fn(...args)`.
 
 **The getter's identity changes when its dependencies change**, so a `memo`'d
 child receiving the result re-renders. Whether that matters is a
-[Phase 6](../phase-6-performance/README.md) question, and under the React
+[Phase 6](../../phase-6-performance/README.md) question, and under the React
 Compiler it usually stops mattering — but do not assume it away.
 
 **`key` cannot be passed through a spread.** If a caller puts `key` in the object
@@ -279,4 +279,4 @@ prevents.
 
 ---
 
-← Prev: [Polymorphic components](03-polymorphic-components.md) · Index: [React patterns](README.md) · Next → [05 · Provider composition](05-provider-composition.md)
+← Prev: [Polymorphic components](polymorphic-components.md) · Index: [React patterns](../README.md) · Next → [05 · Provider composition](provider-composition.md)

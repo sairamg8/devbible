@@ -59,7 +59,7 @@ Split rules and both paste-ready prompts:
 | 11 | ✅ Done — 17 topics, 24 files (Part A, session `bfcb390b`) |
 | 12, 13 | 🚫 **Dropped** — not written, not reopened |
 | 14 | ✅ Done — 14 topics, 28 files, 4,986 lines (Part B, session `05921047`) |
-| **Patterns** | 🚧 **Depth rewrite — 2 of 6 topics rebuilt.** 01 Headless (Master, 6 chunks) · 02 State reducer (Understand, 3 chunks). See [Patterns](patterns/README.md) |
+| **Patterns** | 🚧 **Restructured to the canonical TEN patterns.** 4 live here (03 Compound · 06 Headless · 08 State reducer · 09 Container/presentational), 6 in their phases, plus 3 supporting techniques. Rebuilt so far: **Compound (Master, 4 chunks) · Headless (Master, 6) · State reducer (Understand, 3)**. See [Patterns](patterns/README.md) |
 
 Earlier owners of the whole of `docs/react/`: `33f8be33`, from `2ee7a9a3`, from `6ffd754d`.
 All React work is on `main`; the old `react-phase-7` worktree was merged as `d74e74f` and

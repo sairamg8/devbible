@@ -106,10 +106,10 @@ screens, it is not — and hoisting it to the root costs you:
 - **A re-render surface.** Every consumer re-renders when a provider's `value`
   *identity* changes, and `useContext` has no selector. A chatty provider at the
   root is a chatty provider over your whole tree —
-  [the context re-render problem](../phase-5-refs-context-reducers/05-context-re-render-problem.md).
+  [the context re-render problem](../../phase-5-refs-context-reducers/05-context-re-render-problem.md).
 - **A testing tax.** Every test that renders anything now needs the whole stack,
   which is why
-  [wrappers and providers](../phase-14-correctness/10-wrappers-and-providers.md)
+  [wrappers and providers](../../phase-14-correctness/10-wrappers-and-providers.md)
   exists as a topic at all.
 
 *(Judgement, not documentation:)* the useful question for each provider is **what
@@ -117,7 +117,7 @@ is the smallest subtree that needs this?** — and then mount it there. A route,
 a layout, a feature folder. The root is for what is genuinely global, and most
 applications discover that this is three or four things, not nine.
 
-This is [colocation](../phase-2-components/10-component-boundaries.md) applied to
+This is [colocation](../../phase-2-components/10-component-boundaries.md) applied to
 providers.
 
 ## Provider count is not the metric
@@ -127,7 +127,7 @@ Two things make the count go *up* on purpose, and neither is a problem to solve.
 **Splitting state from dispatch.** React's own recommended app-state shape is two
 contexts — one for the state, one for the dispatcher — precisely so that
 components which only dispatch do not re-render when the state changes.
-[Context plus reducer](../phase-5-refs-context-reducers/12-context-plus-reducer.md)
+[Context plus reducer](../../phase-5-refs-context-reducers/12-context-plus-reducer.md)
 is the page, and it deliberately turns one provider into two.
 
 **Splitting a fat context.** One context holding `{user, theme, locale}` re-renders
@@ -150,7 +150,7 @@ const ThemeContext = createContext('light');
 ```
 
 That does not reduce nesting, but it does remove a token per level.
-[`createContext` and `useContext`](../phase-5-refs-context-reducers/04-createcontext-usecontext.md)
+[`createContext` and `useContext`](../../phase-5-refs-context-reducers/04-createcontext-usecontext.md)
 covers the change and what `.Provider` still means.
 
 ## Providers and Server Components
@@ -167,7 +167,7 @@ provider can wrap server-rendered content passed in as `children`:
 ```
 
 This is the single most useful RSC technique, and it is taught in
-[Server Components as `children`](../phase-10-server-components/07-server-components-as-children.md).
+[Server Components as `children`](../../phase-10-server-components/07-server-components-as-children.md).
 It also means the flattening helper above has to live in a client module, and the
 tree it wraps does not.
 
@@ -195,7 +195,7 @@ uses that provider's value. Do not sweep them into the same fold.
 
 **A provider whose default value is used is usually a missing provider.** The
 default only applies when no matching provider is above — see
-[the default context value](../phase-5-refs-context-reducers/13-default-context-value.md),
+[the default context value](../../phase-5-refs-context-reducers/13-default-context-value.md),
 and prefer a custom hook that throws.
 
 ## Interview questions
@@ -227,4 +227,4 @@ the provider. That is the standard RSC composition technique.
 
 ---
 
-← Prev: [Prop getters](04-prop-getters.md) · Index: [React patterns](README.md) · Next → [06 · Container and presentational](06-container-and-presentational.md)
+← Prev: [Prop getters](prop-getters.md) · Index: [React patterns](../README.md) · Next → [06 · Container and presentational](../09-container-presentational.md)

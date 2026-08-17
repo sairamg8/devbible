@@ -54,10 +54,10 @@ proposal and stay compatible when the shape grows.
 
 ## Where this connects
 
-- **→ [Headless components](../01-headless-components/README.md)** — the pattern
+- **→ [Headless components](../06-headless-components/README.md)** — the pattern
   this is usually shipped alongside. A headless widget encapsulates behaviour; a
   state reducer is how one caller changes part of that behaviour without a fork.
-- **→ [Prop getters](../04-prop-getters.md)** — the other half of the same API.
+- **→ [Prop getters](../supporting/prop-getters.md)** — the other half of the same API.
   Chunk 03 shows the two composing.
 - **→ [Reducer patterns](../../phase-5-refs-context-reducers/10-reducer-patterns.md)** —
   action shape, discriminated unions and lazy `init`. Read that first if reducers

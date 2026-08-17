@@ -69,12 +69,12 @@ legitimately, e.g. a `role="option"` wrapped in a `role="presentation"` list.
 `tabIndex`, `aria-selected` and `ref` sit above too, which is a **deliberate but
 arguable** choice: it lets a caller break the widget. Move them below `...rest`
 if you would rather the widget win. *(Judgement — the trade-off is discussed in
-[prop getters](../04-prop-getters.md).)*
+[prop getters](../supporting/prop-getters.md).)*
 
 **`mergeRefs` is not optional here.** The hook needs the node for `.focus()` and
 the caller may want it too. The version that survives React 19's cleanup
 contract — the one that does not lose the `null` reset — is in
-[prop getters](../04-prop-getters.md).
+[prop getters](../supporting/prop-getters.md).
 
 ## Using it
 

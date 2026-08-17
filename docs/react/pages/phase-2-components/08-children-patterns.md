@@ -79,6 +79,14 @@ The rules that make this pleasant to use rather than merely possible:
 
 ## Pattern 3 — compound components
 
+:::tip Full treatment
+This section introduces the shape. The working treatment — how a part learns which
+one it is, controlled vs uncontrolled parents, dot notation vs named exports, the
+re-render bill and the Server Component boundary — is
+[**Compound components**](../patterns/03-compound-components/README.md) in the
+patterns section.
+:::
+
 The parts need shared state. The parent provides it through context and the
 caller arranges the parts however they like.
 

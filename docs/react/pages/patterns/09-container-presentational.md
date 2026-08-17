@@ -231,4 +231,4 @@ than by convention.
 
 ---
 
-← Prev: [Provider composition](05-provider-composition.md) · Index: [React patterns](README.md)
+← Prev: [Provider composition](supporting/provider-composition.md) · Index: [React patterns](README.md)

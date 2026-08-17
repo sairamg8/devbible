@@ -126,7 +126,7 @@ Listbox.Option = Option;
 - ⚠️ Adds a component per part to the tree.
 
 **The usual repair is a polymorphic `as` prop on each part** — which is
-[pattern 03](../03-polymorphic-components.md), and is why published kits almost
+[pattern 03](../supporting/polymorphic-components.md), and is why published kits almost
 all ship both.
 
 ## Shape 4 — the slot / `asChild` hybrid

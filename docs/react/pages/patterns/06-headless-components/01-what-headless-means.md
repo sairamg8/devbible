@@ -151,7 +151,7 @@ absent for a grid to work, they are patching around your component.
 **`triggerProps` as a plain object silently loses the caller's handlers.**
 `<button {...triggerProps} onClick={mine}>` overwrites yours; the reverse order
 overwrites theirs. There is no order that keeps both — that is the whole reason
-[prop getters](../04-prop-getters.md) exist, and chunk 03 uses them from the
+[prop getters](../supporting/prop-getters.md) exist, and chunk 03 uses them from the
 start.
 
 **Two calls to the hook are two independent widgets.** `useDisclosure()` twice

@@ -68,7 +68,7 @@ function Text({ as: Component = 'span', ...rest }) {
 **The rename to `Component` is mandatory, not stylistic.** JSX decides between a
 DOM tag and a component by case: a lowercase name is compiled to the string
 `"as"` and you would render an `<as>` element. This is the
-[capitalization rule](../phase-1-jsx/05-capitalization.md), and it is the single
+[capitalization rule](../../phase-1-jsx/05-capitalization.md), and it is the single
 most common way this pattern is got wrong the first time.
 
 ```jsx
@@ -93,7 +93,7 @@ function Text({ as: Component = 'span', ...rest }) {
 }
 ```
 
-[`ref` as a prop](../phase-2-components/09-ref-as-a-prop.md) is the page on that
+[`ref` as a prop](../../phase-2-components/09-ref-as-a-prop.md) is the page on that
 change, including what still needs `forwardRef` and why `forwardRef` is on its
 way out.
 
@@ -214,9 +214,9 @@ supported set; in TypeScript, by unioning the allowed tags rather than taking
 element type: a different type means the old tree is destroyed and a new one
 built, so DOM state, focus and any component state below are lost. That follows
 from
-[preserving and resetting state](../phase-3-state/15-preserving-and-resetting.md)
+[preserving and resetting state](../../phase-3-state/15-preserving-and-resetting.md)
 and from
-[identity and nesting](../phase-2-components/01-function-components/02-identity-and-nesting.md).
+[identity and nesting](../../phase-2-components/01-function-components/02-identity-and-nesting.md).
 Toggling `as` on a focused input will drop the focus.
 
 **Props valid on one element are invalid on another.** `<Button as="a"
@@ -232,7 +232,7 @@ during development can break the first time a caller picks a tag you did not try
 **`as={someComponent}` where the component is defined inline recreates the type
 every render** — a new function identity is a new type, so React unmounts and
 remounts. This is the general trap from
-[function components](../phase-2-components/01-function-components/README.md),
+[function components](../../phase-2-components/01-function-components/README.md),
 and `as` is an unusually easy way to fall into it.
 
 **Accessibility does not follow automatically.** `as="div"` on something the user
@@ -268,4 +268,4 @@ trade.
 
 ---
 
-← Prev: [The state reducer pattern](02-the-state-reducer-pattern/README.md) · Index: [React patterns](README.md) · Next → [04 · Prop getters](04-prop-getters.md)
+← Prev: [The state reducer pattern](../08-state-reducer/README.md) · Index: [React patterns](../README.md) · Next → [04 · Prop getters](prop-getters.md)

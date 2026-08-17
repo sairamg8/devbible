@@ -95,7 +95,7 @@ need it are integrators you cannot reach.
 
 ## Composing with prop getters and headless hooks
 
-The state reducer and [prop getters](../04-prop-getters.md) answer two different
+The state reducer and [prop getters](../supporting/prop-getters.md) answer two different
 questions, and a headless widget wants both:
 
 | | Question it answers |
