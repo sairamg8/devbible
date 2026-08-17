@@ -129,7 +129,7 @@ make CI authoritative**, because it is the one that can block a merge.
 **Symptom:** a file has errors and nothing reports them, even with `tsc` in the
 pipeline.
 **Cause:** the file is not in the program — an `include`/`exclude` question, and the
-subject of **chunk 02 · What the gate guarantees** *(not written yet)*.
+subject of [chunk 02](./02-what-the-gate-guarantees.md).
 **Fix:** ⚠️ the gate only guarantees what it was pointed at, which is the most
 common way a green `tsc` is also misleading.
 
@@ -181,4 +181,4 @@ production does.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · What the gate guarantees** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · What the gate guarantees](./02-what-the-gate-guarantees.md)
