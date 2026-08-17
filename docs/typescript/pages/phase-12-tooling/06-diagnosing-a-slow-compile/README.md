@@ -14,12 +14,6 @@ sidebar_position: 0
 > topic teaches how to read *your* numbers and quotes none of its own.
 > **No console block.**
 
-:::info 🚧 This topic is mid-write — 1 chunk
-Chunk **01 is written**. References to the rest are deliberately **plain text
-rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
 Every slow-compile investigation goes wrong the same way: a theory, a config change,
 and a build that is still slow — now with a setting nobody can justify.
 
@@ -32,7 +26,7 @@ and a build that is still slow — now with a setting nobody can justify.
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [Measure before you guess](./01-measure-before-you-guess.md) | The four flags in the compiler's own words — including 🔴 `--generateTrace` emitting **"a list of types"**, the half that names the culprit, and `--generateCpuProfile`, which the syllabus does not mention — plus the phase-split table and the loop that works |
-| 02 | **The shapes that are slow** *(not written yet)* | Deep conditionals, huge unions, `DeepPartial`, and what to write instead |
+| 02 | [The shapes that are slow](./02-the-shapes-that-are-slow.md) | 🔴 Rank by **which budget a shape consumes** — depth, count, cross-product, comparisons — not by how clever it looks. The wiki's four fixes, why **annotating is the highest-leverage change** (it turns inference into verification), and that **silencing `TS2589` does not make a type cheap** |
 
 ## Phase gate
 

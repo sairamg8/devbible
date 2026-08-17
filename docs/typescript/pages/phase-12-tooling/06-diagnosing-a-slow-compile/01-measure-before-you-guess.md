@@ -47,7 +47,7 @@ tells you what kind of problem you have.** They call for entirely different fixe
 | If the time is in… | The problem is | Look at |
 |---|---|---|
 | **parse / program construction** | **too many files**, not complex types | `include` globs, `dist/` in the program, barrel files |
-| 🔴 **check** | **complex types** | **chunk 02 · The shapes that are slow** *(not written yet)* |
+| 🔴 **check** | **complex types** | [chunk 02](./02-the-shapes-that-are-slow.md) |
 | **bind** | rare — usually enormous files | file size |
 | **emit / declaration emit** | output, not checking | [topic 03](../03-build-pipelines/README.md) |
 
@@ -190,4 +190,4 @@ because it gets acted on, and the config change it justifies then stays forever.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · The shapes that are slow** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · The shapes that are slow](./02-the-shapes-that-are-slow.md)
