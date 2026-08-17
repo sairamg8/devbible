@@ -61,7 +61,7 @@ keeps genericity.
   — the same `never[]`/`any[]` decision on the class side, for construct signatures.
 - **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — `Head`, `Tail`, `Last` and currying, which
   chunk 03 uses one instance of.
-- **→ 14 · `NoInfer<T>`** *(not written yet)* — the fence for the inference sites a generic
+- **→ [14 · `NoInfer<T>`](../14-noinfer.md)** — the fence for the inference sites a generic
   wrapper introduces.
 - **→ [08 · Knowing when to stop](../08-knowing-when-to-stop/README.md)** — shape 4 is where its
   tests bite: a re-typing adapter used three times should be two hand-written signatures.

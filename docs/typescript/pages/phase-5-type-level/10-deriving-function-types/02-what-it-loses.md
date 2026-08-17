@@ -114,7 +114,7 @@ function logged<T, K extends keyof T>(obj: T, key: K): T[K] { /* … */ }
 When a caller's mistake makes two inference sites disagree, the error lands on whichever the
 compiler chose — often not the one at fault. **`NoInfer<T>` (5.4)** is the fence that says
 "infer this parameter from somewhere else, not here", and it is
-**14 · `NoInfer<T>`** *(not written yet)*'s subject in full.
+[14 · `NoInfer<T>`](../14-noinfer.md)'s subject in full.
 
 📌 **The relevance here:** every wrapper you make generic to solve problems 1 and 2 adds
 inference sites, so the two fixes have a cost of their own. That is not a reason to avoid them —
@@ -161,7 +161,7 @@ later.
 **Symptom:** The error for a bad call points at the second argument when the first is wrong.
 **Cause:** Two inference sites for one type parameter; the compiler picked the other one.
 **Fix:** `NoInfer<T>` on the site that should not drive inference
-(**14 · `NoInfer<T>`**, *not written yet*).
+([14 · `NoInfer<T>`](../14-noinfer.md)).
 
 **Symptom:** Everything is correct and the wrapper is still unusable in a `.d.ts`.
 **Cause:** The derived type is too large to serialise — `TS7056`.

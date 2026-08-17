@@ -197,4 +197,4 @@ fix is to resolve it once into a named alias and export that.
 ---
 
 ← [04 · `bind` and `curry`](./04-bind-and-curry.md) · [Topic index](./README.md) ·
-[Phase 5 index](../README.md) · Next topic → **14 · `NoInfer<T>`** *(not written yet)*
+[Phase 5 index](../README.md) · Next topic → [14 · `NoInfer<T>`](../14-noinfer.md)

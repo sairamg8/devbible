@@ -72,7 +72,7 @@ Gotchas sections in chunks 02 to 04 are for.
   its siblings actually earn their place.
 - **→ [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md)** — the recursive
   versions of the shallow shapers, and what they cost.
-- **→ 14 · `NoInfer<T>`** *(not written yet)* — the fence from chunk 05, in full.
+- **→ [14 · `NoInfer<T>`](../14-noinfer.md)** — the fence from chunk 05, in full.
 
 ---
 
