@@ -47,7 +47,7 @@ The phase splits into three moves:
 | 08 | [`@ts-expect-error` vs `@ts-ignore` vs `@ts-nocheck`](./08-suppression-directives/README.md) *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | Why the first is the only acceptable one — it fails when the error goes away |
 | 09 | [Excess property checks vs assignability](./09-excess-property-checks/README.md) *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | Why an object literal errors where an identically-shaped variable does not |
 | 10 | [The error codes you will actually meet](./10-the-error-codes/README.md) *(14 chunks)* | <span className="db-tier t-understand">Understand</span> | 2322, 2345, 2339, 2367, 2551, 7053, 18046, 18048, 2589 — and 🔴 why the **generic** message is always a ladder's last rung, so a bare `TS2339` says more than a specific one |
-| 11 | typescript-eslint type-aware rules | <span className="db-tier t-understand">Understand</span> | The checks the compiler will not do, and their CI cost |
+| 11 | [typescript-eslint type-aware rules](./11-typescript-eslint/README.md) *(🚧 4 of 7 chunks)* | <span className="db-tier t-understand">Understand</span> | ⚠️ The syllabus said *"the checks the compiler will not do"* — **half of that is wrong**: `no-unnecessary-condition` overlaps **seven** compiler codes, so the topic states the exact leftover instead. Plus the CI cost, quoted from typescript-eslint |
 | 12 | Assertion discipline | <span className="db-tier t-understand">Understand</span> | Treating every `as` as a review comment, and the guard that should have been written |
 | 13 | Designing APIs `unknown`-first | <span className="db-tier t-know">Know</span> | Making the caller prove the shape, rather than trusting a parameter type |
 
