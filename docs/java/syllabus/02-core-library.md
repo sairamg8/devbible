@@ -22,15 +22,15 @@ Choosing the right one — and knowing its cost model — is daily work.
 | Generics: why raw types (`List` instead of `List<Order>`) are a bug factory the compiler can no longer help with; the diamond `<>` | <span className="db-tier t-master">Master</span> |
 | **Type erasure** — what it breaks: no `new T[]`, no `instanceof List<String>`, one `.class` per generic type. Why overloads on `List<A>` vs `List<B>` won't compile | <span className="db-tier t-understand">Understand</span> |
 | Bounded types and wildcards: `? extends` / `? super`, **PECS** — reading a library signature like `Collections.copy(List<? super T>, List<? extends T>)` without flinching | <span className="db-tier t-understand">Understand</span> |
-| The collection hierarchy: `Collection`, `List`, `Set`, `Map` (not a `Collection`!), `Queue`, `Deque` — the map of what exists | <span className="db-tier t-master">Master</span> |
+| The collection hierarchy: `Collection`, `List`, `Set`, `Map` (not a `Collection`!), `Queue`, `Deque` — the map of what exists | <span className="db-tier t-understand">Understand</span> |
 | **`ArrayList`** — the default list, its growth strategy, and why `LinkedList` almost never wins in practice despite what the big-O table promises (cache locality) | <span className="db-tier t-master">Master</span> |
-| Sets: `HashSet` for membership, `LinkedHashSet` for iteration order, `TreeSet` for sorted — dedupe a list in one constructor call | <span className="db-tier t-master">Master</span> |
-| **`HashMap` internals**: buckets, hashing, treeification at collision depth — enough to explain why keys must be immutable and `hashCode` must spread | <span className="db-tier t-master">Master</span> |
+| Sets: `HashSet` for membership, `LinkedHashSet` for iteration order, `TreeSet` for sorted — dedupe a list in one constructor call | <span className="db-tier t-understand">Understand</span> |
+| **`HashMap` internals**: buckets, hashing, treeification at collision depth — enough to explain why keys must be immutable and `hashCode` must spread | <span className="db-tier t-understand">Understand</span> |
 | `LinkedHashMap` (access-order = a 10-line LRU cache) and `TreeMap` (range queries, `floorKey`/`ceilingKey`) | <span className="db-tier t-understand">Understand</span> |
 | Queues: `ArrayDeque` for stacks and queues, `PriorityQueue` for "next most urgent" — job scheduling shapes | <span className="db-tier t-understand">Understand</span> |
 | **`Comparable` vs `Comparator`**: natural vs external order, `Comparator.comparing(...).thenComparing(...)`, null handling, and the "comparison method violates its general contract" crash from an inconsistent comparator | <span className="db-tier t-master">Master</span> |
 | Iteration and **`ConcurrentModificationException`** — removing from a list while iterating it: `removeIf`, iterators, and why the exception is a feature | <span className="db-tier t-master">Master</span> |
-| **Immutable collections**: `List.of`/`Map.of`/`Set.of`, `copyOf`, vs `Collections.unmodifiableList` (a view — the underlying list can still change under you) | <span className="db-tier t-master">Master</span> |
+| **Immutable collections**: `List.of`/`Map.of`/`Set.of`, `copyOf`, vs `Collections.unmodifiableList` (a view — the underlying list can still change under you) | <span className="db-tier t-understand">Understand</span> |
 | `Collections` and `Arrays` utilities: `sort`, `binarySearch`, `shuffle`, `asList` (fixed-size trap), `fill` | <span className="db-tier t-understand">Understand</span> |
 | **Choosing a collection — the decision table**: by lookup pattern, ordering need, and mutation pattern. The API-shape question in every design interview | <span className="db-tier t-master">Master</span> |
 | Writing an `Iterable` — implementing iteration for your own types | <span className="db-tier t-know">Know</span> |
@@ -51,7 +51,7 @@ knowing the collectors — and knowing when a plain loop is clearer.
 | Topic | Tier |
 |---|---|
 | **Lambdas and functional interfaces**: `Function`, `Supplier`, `Consumer`, `Predicate`, `BiFunction` — the vocabulary every modern Java API speaks | <span className="db-tier t-master">Master</span> |
-| Method references: `User::getEmail`, `String::toLowerCase`, constructor refs — when they read better than lambdas and when they don't | <span className="db-tier t-master">Master</span> |
+| Method references: `User::getEmail`, `String::toLowerCase`, constructor refs — when they read better than lambdas and when they don't | <span className="db-tier t-understand">Understand</span> |
 | **The stream pipeline**: source → intermediate (lazy!) → terminal. Nothing runs until the terminal op — the print-debugging surprise | <span className="db-tier t-master">Master</span> |
 | Core ops: `map`, `filter`, **`flatMap`** (orders → all their line items), `sorted`, `distinct`, `limit`, `peek` (debug only) | <span className="db-tier t-master">Master</span> |
 | **Collectors**: `toList`, `toSet`, **`toMap` and its duplicate-key `IllegalStateException`** (the one that ships and then meets real data), `groupingBy`, `counting`, `joining`, `partitioningBy` | <span className="db-tier t-master">Master</span> |
@@ -80,7 +80,7 @@ get them wrong in one of two directions: swallowing, or wrapping without cause.
 | The hierarchy: `Throwable` → `Error` (don't catch) / `Exception` → `RuntimeException`. **Checked vs unchecked** — the debate, and the modern lean toward unchecked in application code | <span className="db-tier t-master">Master</span> |
 | `try`/`catch`/`finally`, multi-catch (`catch (IOException \| SQLException e)`), and what happens when `finally` itself throws or returns | <span className="db-tier t-master">Master</span> |
 | **try-with-resources**: `AutoCloseable`, close order (reverse), suppressed exceptions — the reason connection leaks stopped being routine | <span className="db-tier t-master">Master</span> |
-| Custom exceptions and **translation at layer boundaries**: `SQLException` → `OrderRepositoryException` → a 500 with a clean message. Always pass the cause | <span className="db-tier t-master">Master</span> |
+| Custom exceptions and **translation at layer boundaries**: `SQLException` → `OrderRepositoryException` → a 500 with a clean message. Always pass the cause | <span className="db-tier t-understand">Understand</span> |
 | Reading a stack trace fast: `Caused by` chains, your-code-first scanning, lost stack traces from re-`throw new` without cause | <span className="db-tier t-master">Master</span> |
 | Checked exceptions inside lambdas — why `Files.lines(...).map(...)` fights you, and the wrapper patterns | <span className="db-tier t-understand">Understand</span> |
 | Exceptions as control flow — why not: cost of `fillInStackTrace`, and returning `Optional`/result types for *expected* absence vs throwing for *broken invariants* | <span className="db-tier t-understand">Understand</span> |

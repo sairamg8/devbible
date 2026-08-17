@@ -23,9 +23,9 @@ run time, and that changes how you reason about performance and deployment.
 | What Java is: source → `javac` → **bytecode** → JVM. Why "write once, run anywhere" actually holds — the `.jar` you build on a Mac runs unchanged on the Linux server | <span className="db-tier t-master">Master</span> |
 | **JDK vs JRE vs JVM**, and distributions: Temurin, Oracle, Corretto, Zulu — same bytecode, different support contracts. Which one your Docker base image is, and why it matters at CVE time | <span className="db-tier t-understand">Understand</span> |
 | Release model: one major every **6 months**, **LTS every 2 years** (17 → 21 → 25). Build on the LTS; read the feature releases. Why "we're on Java 8" is a real sentence you will hear in interviews | <span className="db-tier t-understand">Understand</span> |
-| Running code: `java`, `javac`, single-file source launch (`java Hello.java`), multi-file source programs, `jshell` for trying an API in ten seconds | <span className="db-tier t-master">Master</span> |
+| Running code: `java`, `javac`, single-file source launch (`java Hello.java`), multi-file source programs, `jshell` for trying an API in ten seconds | <span className="db-tier t-understand">Understand</span> |
 | **Packages and the classpath** — how the JVM finds a class, `ClassNotFoundException` vs `NoClassDefFoundError`, and why "it works in the IDE" fails on the server | <span className="db-tier t-master">Master</span> |
-| `main`, JVM startup, program arguments, **system properties (`-D`) vs environment variables** — the two config channels every deploy script uses | <span className="db-tier t-master">Master</span> |
+| `main`, JVM startup, program arguments, **system properties (`-D`) vs environment variables** — the two config channels every deploy script uses | <span className="db-tier t-understand">Understand</span> |
 | **JIT compilation**: interpreter → C1 → C2, warmup — why the first 100 requests after a deploy are slower than the next 100,000 | <span className="db-tier t-know">Know</span> |
 | Garbage collection, the working model: you allocate, the JVM reclaims — and what that costs. (Tuning and algorithms are Phase 12) | <span className="db-tier t-understand">Understand</span> |
 | Version managers: **SDKMAN!**, `.sdkmanrc`, IDE/toolchain pinning — the team stays on one JDK on purpose | <span className="db-tier t-understand">Understand</span> |
@@ -49,14 +49,14 @@ production bugs when half-known: boxing, `==` on strings, `BigDecimal`.
 |---|---|
 | **Primitives vs reference types** — the 8 primitives, stack vs heap, default values, why a `long` field and a `Long` field behave differently when unset | <span className="db-tier t-master">Master</span> |
 | **Autoboxing and the integer cache**: `Integer a = 127; Integer b = 127; a == b` is `true` — and `false` at 128. The classic "works in the test, fails with real IDs" bug | <span className="db-tier t-master">Master</span> |
-| `var` — local-variable type inference: where it helps, where it hides the type a reviewer needs | <span className="db-tier t-master">Master</span> |
+| `var` — local-variable type inference: where it helps, where it hides the type a reviewer needs | <span className="db-tier t-understand">Understand</span> |
 | Operators: integer division and overflow (silent wraparound — no exception), `%` with negatives, bit operations, `Math.addExact` when overflow must be an error | <span className="db-tier t-master">Master</span> |
 | Floating point: why `0.1 + 0.2 != 0.3` here too, `float` vs `double`, and **`BigDecimal` for money — always, with `String` constructor and explicit scale** | <span className="db-tier t-master">Master</span> |
 | **Strings**: immutability, the string pool, `==` vs `equals` — the interview question that is also a real bug — `StringBuilder` in loops, `String.format`/`formatted` | <span className="db-tier t-master">Master</span> |
 | **Text blocks** (`"""`) — SQL and JSON in tests without escape soup | <span className="db-tier t-understand">Understand</span> |
 | Control flow, and the modern **`switch` expression** with arrows, `yield`, and exhaustiveness — the readable replacement for `if`/`else` chains over enums | <span className="db-tier t-master">Master</span> |
-| Arrays: fixed size, covariance (and the `ArrayStoreException` it invites), `Arrays.toString` — why collections replace them in application code | <span className="db-tier t-master">Master</span> |
-| Methods: overloading resolution (which one runs when you pass `null`?), varargs, pass-by-value — Java copies references, it never passes them | <span className="db-tier t-master">Master</span> |
+| Arrays: fixed size, covariance (and the `ArrayStoreException` it invites), `Arrays.toString` — why collections replace them in application code | <span className="db-tier t-understand">Understand</span> |
+| Methods: overloading resolution (which one runs when you pass `null`?), varargs, pass-by-value — Java copies references, it never passes them | <span className="db-tier t-understand">Understand</span> |
 | `static` — class-level state and methods, why static mutable state is the enemy of tests and of thread-safety | <span className="db-tier t-master">Master</span> |
 | `final` on variables, parameters, methods, classes — what each actually prevents (hint: not deep immutability) | <span className="db-tier t-understand">Understand</span> |
 | **`null` and `NullPointerException`** — helpful NPE messages (since 14) that name the exact null, defensive patterns at boundaries, `Objects.requireNonNull` with a message | <span className="db-tier t-master">Master</span> |
