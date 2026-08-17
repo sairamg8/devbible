@@ -15,7 +15,7 @@ run time*, and that changes how you reason about performance, deployment and
 debugging. Phase 12 (the JVM in production) is this phase's payoff; Spring
 (Phase 9) is unreadable without it.
 
-🚧 **1 of 13 written.**
+🚧 **9 of 13 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -24,14 +24,14 @@ debugging. Phase 12 (the JVM in production) is this phase's payoff; Spring
 | 03 | **The release model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | 6-month majors, LTS every 2 years: 17 → 21 → 25 |
 | 04 | **Running code** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `java`, `javac`, single-file launch, `jshell` |
 | 05 | **Packages and the classpath** *(not written yet)* | <span className="db-tier t-master">Master</span> | How the JVM finds a class — and the two errors when it can't |
-| 06 | **`main`, startup and the config channels** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Program args, `-D` system properties vs environment variables |
-| 07 | **JIT compilation** *(not written yet)* | <span className="db-tier t-know">Know</span> | Interpreter → C1 → C2; why the first 100 requests are slow |
-| 08 | **Garbage collection, the working model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | You allocate, the JVM reclaims — and what that costs |
-| 09 | **Version managers** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | SDKMAN!, `.sdkmanrc` — one JDK per team, on purpose |
-| 10 | **The standard library layout** *(not written yet)* | <span className="db-tier t-know">Know</span> | `java.base`, `java.util`, `java.time` — and Javadoc as a reflex |
-| 11 | **The module system (JPMS)** *(not written yet)* | <span className="db-tier t-know">Know</span> | Why most apps stay on the classpath — and where modules still reach you |
-| 12 | **Java vs Kotlin vs the JVM ecosystem** *(not written yet)* | <span className="db-tier t-know">Know</span> | The honest comparison, post-records and pattern matching |
-| 13 | **HotSpot internals** *(not written yet)* | <span className="db-tier t-when">When Needed</span> | Tiered compilation detail, deoptimization, intrinsics |
+| 06 | **[`main`, startup and the config channels](06-main-startup-config.md)** | <span className="db-tier t-understand">Understand</span> | Program args, `-D` system properties vs environment variables |
+| 07 | **[JIT compilation](07-jit-compilation.md)** | <span className="db-tier t-know">Know</span> | Interpreter → C1 → C2; why the first 100 requests are slow |
+| 08 | **[Garbage collection, the working model](08-garbage-collection.md)** | <span className="db-tier t-understand">Understand</span> | You allocate, the JVM reclaims — and what that costs |
+| 09 | **[Version managers](09-version-managers.md)** | <span className="db-tier t-understand">Understand</span> | SDKMAN!, `.sdkmanrc` — one JDK per team, on purpose |
+| 10 | **[The standard library layout](10-stdlib-layout.md)** | <span className="db-tier t-know">Know</span> | `java.base`, `java.util`, `java.time` — and Javadoc as a reflex |
+| 11 | **[The module system (JPMS)](11-module-system.md)** | <span className="db-tier t-know">Know</span> | Why most apps stay on the classpath — and where modules still reach you |
+| 12 | **[Java vs Kotlin vs the JVM ecosystem](12-java-vs-kotlin.md)** | <span className="db-tier t-know">Know</span> | The honest comparison, post-records and pattern matching |
+| 13 | **[HotSpot internals](13-hotspot-internals.md)** | <span className="db-tier t-when">When Needed</span> | Tiered compilation detail, deoptimization, intrinsics |
 
 ## Phase gate
 

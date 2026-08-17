@@ -16,7 +16,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| 0 · The platform and the JVM | 13 | 🚧 1/13 |
+| 0 · The platform and the JVM | 13 | 🚧 9/13 |
 | 1 · Language core | 16 | Planned |
 | 2 · Classes and objects | 15 | Planned |
 | 3 · Generics and collections | 16 | Planned |

@@ -545,7 +545,7 @@ export const LANGUAGES = {
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
-      {n: 0, slug: 'phase-0-platform-jvm', name: 'The platform and the JVM', part: 'Foundations', topics: 13, pages: 1, pagesPlanned: 13},
+      {n: 0, slug: 'phase-0-platform-jvm', name: 'The platform and the JVM', part: 'Foundations', topics: 13, pages: 9, pagesPlanned: 13},
       {n: 1, slug: 'phase-1-language-core', name: 'Language core', part: 'Foundations', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-classes-objects', name: 'Classes and objects', part: 'Foundations', topics: 15, pages: 0},
       {n: 3, slug: 'phase-3-generics-collections', name: 'Generics and collections', part: 'Core library', topics: 16, pages: 0},
