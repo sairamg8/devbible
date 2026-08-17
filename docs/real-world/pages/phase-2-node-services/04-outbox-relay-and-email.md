@@ -42,7 +42,7 @@ keyed so the partner deduplicates.
 
 The schema's `processed_at` alone can't express "failed, retry later". One
 migration adds the delivery bookkeeping — on the outbox, not on a queue,
-because the [architecture chose](../../phase-0-the-app/02-architecture-and-data-model.md)
+because the [architecture chose](../phase-0-the-app/02-architecture-and-data-model.md)
 the table *as* the queue:
 
 ```sql

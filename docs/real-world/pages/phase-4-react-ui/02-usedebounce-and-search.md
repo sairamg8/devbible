@@ -10,7 +10,7 @@ sidebar_position: 2
 > search contract. Concept home:
 > [JavaScript — debounce and throttle](../../../javascript/pages/README.md)
 > (phase 17's from-scratch implementations) and
-> [React — designing a hooks API](../../../react/pages/phase-7-custom-hooks/06-designing-a-hooks-api.md).
+> [React — designing a hooks API](../../../react/pages/phase-7-custom-hooks/06-designing-a-hooks-api/README.md).
 
 ## The problem
 

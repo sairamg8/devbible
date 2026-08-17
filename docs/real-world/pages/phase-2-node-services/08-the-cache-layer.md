@@ -126,7 +126,7 @@ export function catalogService({pool, cache}) {
   bounds.
 - **What is deliberately not cached:** anything user-specific (carts,
   orders, sessions) — per the
-  [statelessness rule](../../phase-0-the-app/02-architecture-and-data-model.md),
+  [statelessness rule](../phase-0-the-app/02-architecture-and-data-model.md),
   user state lives in the database, and caching it per-instance would make
   two instances *disagree about the user's own actions*. Catalog data is
   shared truth; that is what makes it cacheable here.

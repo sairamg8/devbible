@@ -163,7 +163,7 @@ where the work is, by overlaying re-auth. A guard that unmounted on the
   navigation-time gating uses `RequireAuth`; expiry-during-work uses the
   modal; a screen never wires both. The checkout route is *not* wrapped
   in `RequireAuth` for exactly this reason — guests reach it and are
-  upgraded in place ([the spec's flow](../../phase-0-the-app/01-the-storefront-spec.md)).
+  upgraded in place ([the spec's flow](../phase-0-the-app/01-the-storefront-spec.md)).
 
 ## Interview questions
 
