@@ -47,7 +47,7 @@ lanes:
 | 11 | [Publishing a typed package](./11-publishing-a-typed-package/README.md) *(9 chunks)* | <span className="db-tier t-understand">Understand</span> | `exports`, `types`/`typesVersions`, dual ESM/CJS, and validating the result |
 | 12 | [Sharing types across a monorepo](./12-sharing-types-across-a-monorepo/README.md) *(6 chunks)* | <span className="db-tier t-understand">Understand</span> | Source imports vs built `.d.ts`, and the editor-vs-build divergence each causes |
 | 13 | [Project references and `tsc -b`](./13-project-references/README.md) *(4 chunks)* | <span className="db-tier t-know">Know</span> | `composite`, build order, and when a monorepo actually needs them |
-| 14 | Incremental builds | <span className="db-tier t-know">Know</span> | `.tsbuildinfo`, what invalidates it, and caching it in CI |
+| 14 | [Incremental builds](./14-incremental-builds/README.md) *(3 chunks)* | <span className="db-tier t-know">Know</span> | `.tsbuildinfo`, what invalidates it, and caching it in CI |
 | 15 | `isolatedDeclarations` | <span className="db-tier t-know">Know</span> | Declaration emit without full inference, the annotation cost, and the speed it buys |
 | 16 | Typing non-code imports | <span className="db-tier t-know">Know</span> | CSS modules, JSON, images, and `?raw`-style bundler suffixes |
 
