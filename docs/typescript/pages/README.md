@@ -97,7 +97,7 @@ untouched by it.
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 13 / 13 | ✅ written |
 | ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
-| 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
+| [12 · Tooling, performance and testing](./phase-12-tooling/README.md) | Rigour and tooling | 0 / 15 | 🚧 writing |
 
 import Progress from '@site/src/components/Progress';
 
