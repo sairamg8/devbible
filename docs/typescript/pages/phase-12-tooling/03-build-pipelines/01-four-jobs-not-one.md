@@ -159,4 +159,4 @@ just that the two tools each do the job only they can.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · The two pipeline shapes** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · The two pipeline shapes](./02-the-two-shapes.md)
