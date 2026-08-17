@@ -29,8 +29,8 @@ that matters.
 
 | Lever | What it does |
 |---|---|
-| **`incremental: true`** | writes `.tsbuildinfo` so the next run reuses prior work — ⚠️ **useless in CI unless the file is cached between runs** |
-| **Project references + `tsc -b`** | rebuilds only the projects whose inputs changed |
+| **`incremental: true`** | writes `.tsbuildinfo` so the next run reuses prior work — ⚠️ **useless in CI unless the file is cached between runs** ([phase 6 · 14](../../phase-6-modules-build/14-incremental-builds/README.md) owns what invalidates it) |
+| **Project references + `tsc -b`** | rebuilds only the projects whose inputs changed ([phase 6 · 13](../../phase-6-modules-build/13-project-references/README.md)) |
 | 🔴 **Excluding build output from the program** | stops the compiler parsing `dist/`, `coverage/` and generated clients |
 | **The native compiler** | [phase 0 · 07](../../phase-0-how-typescript-runs/07-typescript-7-native-compiler.md) — its speed claims are there, not here |
 | **More memory on the runner** | unglamorous, frequently the actual answer |
