@@ -122,12 +122,65 @@ covers the common case with far less machinery.)*
 
 ## The cost nobody mentions until they hit it
 
-**In TypeScript, typing this properly is genuinely hard.** A correct polymorphic
-type has to be generic over the element type, pull that element's props in, drop
-the ones your own API overrides, and get `ref` right for both tags and
-components. It is several dozen lines of type-level code that most teams copy
-without understanding, and it degrades badly — a small mistake shows up as
-`any`, and the caller loses autocomplete on every prop.
+**In TypeScript, typing this properly is genuinely hard** — and since that is the
+main argument against the pattern, here is the actual shape rather than a warning
+about it.
+
+The type has three jobs: capture which element was chosen, pull that element's
+props in, and stop the element's props colliding with your own.
+
+```tsx
+import type { ElementType, ComponentPropsWithRef } from 'react';
+
+type PolymorphicProps<E extends ElementType, OwnProps> =
+  OwnProps &
+  { as?: E } &
+  Omit<ComponentPropsWithRef<E>, keyof OwnProps | 'as'>;
+```
+
+Read it clause by clause:
+
+| Clause | What it is for |
+|---|---|
+| `E extends ElementType` | `E` is the chosen tag or component, inferred from the `as` the caller passed |
+| `OwnProps` | your component's own API — `tone`, `size`, whatever |
+| `{ as?: E }` | the prop that does the choosing, optional so the default applies |
+| `ComponentPropsWithRef<E>` | every prop the chosen element accepts, `ref` included |
+| `Omit<…, keyof OwnProps \| 'as'>` | **the load-bearing part** — drops the element's versions of any prop you also define, so your `size` wins over `<input>`'s `size` instead of producing an unusable intersection |
+
+Used:
+
+```tsx
+type TextOwnProps = { tone?: 'default' | 'muted' };
+
+function Text<E extends ElementType = 'span'>(
+  { as, tone, ...rest }: PolymorphicProps<E, TextOwnProps>,
+) {
+  const Component = as ?? 'span';
+  return <Component data-tone={tone} {...rest} />;
+}
+```
+
+`<E extends ElementType = 'span'>` on the function is what makes inference work:
+write `<Text as="a" href="/x" />` and `E` becomes `'a'`, so `href` is allowed and
+checked. Omit `as` and the default `'span'` applies, so `href` is an error.
+
+**And here is where it stops being pleasant.** *(Judgement, from the shape of the
+type rather than from documentation.)*
+
+- **The internal `<Component {...rest} />` usually will not type-check on its
+  own.** TypeScript cannot prove that the props gathered for a generic `E` are
+  valid for the specific element it resolves to, so most implementations end up
+  with a cast at that one line. The cast is contained, but it means the
+  component's *inside* is unchecked even though its *outside* is precise.
+- **Error messages become unreadable.** A wrong prop on `<Text as="a">` reports
+  against the expanded intersection, which for an anchor is well over a hundred
+  members.
+- **The `ref` story is version-sensitive.** `ComponentPropsWithRef` is the right
+  helper today, but React 19's typings changed how `ref` flows for function
+  components, so a type copied from a pre-19 blog post can be subtly wrong.
+- **It degrades to `any` quietly.** Get one clause wrong and you keep
+  compilation and lose every bit of checking the type existed to provide.
 
 If your codebase is TypeScript and the component has two possible elements, two
 components are often the honest answer:

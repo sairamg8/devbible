@@ -12,8 +12,10 @@ sidebar_position: 4
 > [`useId`](https://react.dev/reference/react/useId),
 > [`useCallback`](https://react.dev/reference/react/useCallback), and the
 > [React 19 release notes](https://react.dev/blog/2024/12/05/react-19) for `ref`
-> as a prop and ref-callback cleanup functions. Spread semantics from the
-> ECMAScript object-spread rules (later keys win).
+> as a prop. The ref-callback cleanup contract quoted below is from react.dev
+> [Common components § `ref` callback](https://react.dev/reference/react-dom/components/common),
+> fetched 2026-08-17. Spread semantics from the ECMAScript object-spread rules
+> (later keys win).
 > ⚠️ **"Prop getter" is a community convention, not a React API.** React does not
 > document or name it. Judgements below are marked as judgements.
 > No sandbox script backs this page; claims are cited, not measured.
@@ -150,10 +152,53 @@ function mergeRefs(...refs) {
 }
 ```
 
-⚠️ **This simple version discards ref-callback cleanup functions**, which React 19
-introduced — a ref callback may now return a cleanup that React calls on unmount.
-`forEach` throws the return values away, so cleanups registered by either ref
-never run. Collecting and returning them is the correct fix.
+⚠️ **That version is wrong in two ways**, and both come from the same React 19
+change. The documentation for a ref callback's return value says:
+
+> When the `ref` is detached, React will call the cleanup function. If a function
+> is not returned by the `ref` callback, React will call the callback again with
+> `null` as the argument when the `ref` gets detached. This behavior will be
+> removed in a future version.
+
+So: `forEach` throws away any cleanup an inner ref returned, and those cleanups
+never run. And the moment you *do* return a cleanup from the merged callback,
+**React stops calling it with `null`** — which means the object refs above are
+never reset, because the code that reset them was the `null` call you just
+suppressed.
+
+Both are fixed by making every ref hand back its own detach step:
+
+```jsx
+function mergeRefs(...refs) {
+  return (node) => {
+    const cleanups = refs.map((ref) => {
+      if (typeof ref === 'function') {
+        const cleanup = ref(node);
+        // A modern ref returns its own cleanup. A legacy one expects null.
+        return typeof cleanup === 'function' ? cleanup : () => ref(null);
+      }
+      if (ref != null) {
+        ref.current = node;
+        return () => { ref.current = null; };
+      }
+      return () => {};
+    });
+
+    return () => cleanups.forEach((cleanup) => cleanup());
+  };
+}
+```
+
+Each branch now answers "what does detaching *this* ref mean?" — run the cleanup
+it gave us, call it with `null` if it is a legacy callback that gave us none, or
+null the `.current` if it is an object ref. The merged callback returns one
+cleanup that runs all of them, so React's own `null` call is correctly no longer
+needed.
+
+*(`() => ref(null)` is there for backwards compatibility only. The documentation
+says the `null` call is going away in a future version, so that branch has a
+shelf life.)*
+
 [Ref callbacks](../phase-5-refs-context-reducers/06-ref-callbacks.md) is the page
 on that mechanism, and
 [`ref` as a prop](../phase-2-components/09-ref-as-a-prop.md) covers the React 19
@@ -222,9 +267,10 @@ it; below, they cannot. Computed ARIA state generally belongs below.
 
 **Why are refs the hard case?**
 An element takes one `ref`, and since React 19 `ref` is an ordinary prop, so it
-merges by clobbering like anything else. You need an explicit merge function —
-and it must forward ref-callback cleanup functions, which the naive `forEach`
-version drops.
+merges by clobbering like anything else. You need an explicit merge function, and
+it has a trap: returning a cleanup from the merged callback stops React calling
+it with `null`, so any object ref you were resetting on that `null` call is now
+never reset. The merge has to give every ref its own detach step.
 
 **When would you not use one?**
 When no props need merging, when there is a single consumer, or when the loss of
