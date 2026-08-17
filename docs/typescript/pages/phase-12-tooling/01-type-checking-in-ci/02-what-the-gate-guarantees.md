@@ -211,4 +211,4 @@ shrink the program silently.
 
 ---
 
-← [01 · The green build that proves nothing](./01-the-green-build-that-proves-nothing.md) · [Topic index](./README.md) · Next → **03 · Where the gate goes** *(not written yet)*
+← [01 · The green build that proves nothing](./01-the-green-build-that-proves-nothing.md) · [Topic index](./README.md) · Next → [03 · Where the gate goes](./03-where-the-gate-goes.md)
