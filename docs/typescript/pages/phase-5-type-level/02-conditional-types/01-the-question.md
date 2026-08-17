@@ -93,8 +93,8 @@ This is distribution (topic 05) doing its job: a conditional over a naked type
 parameter distributes across the union it is given, `never` is the empty union,
 and mapping over nothing produces nothing. It surprises everyone once. The fix,
 when you need an answer rather than an absence, is the bracket form —
-`[T] extends [string] ? true : false` — which is **05 · Distributive conditional
-types** *(not written yet)*.
+`[T] extends [string] ? true : false` — which is
+[05 · Distributive conditional types](../05-distributive-conditionals.md).
 
 ## Using a conditional to extract
 

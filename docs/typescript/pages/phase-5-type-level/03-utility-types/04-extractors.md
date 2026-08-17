@@ -60,8 +60,8 @@ Note the two assertions. They are the deferral problem from
 [topic 02 · chunk 02](../02-conditional-types/02-deferred.md): at the call site
 everything is precise, inside the wrapper the compiler cannot prove that
 `Parameters<F>` matches `F`'s own parameters. Wrapper functions are the standard
-place where one asserted line is the honest answer. **10 · Deriving one function's
-type from another** *(not written yet)* is where this pattern is developed
+place where one asserted line is the honest answer. [10 · Deriving one function's type from another](../10-deriving-function-types/README.md)
+is where this pattern is developed
 properly.
 
 ## The overload rule — the sharpest edge in the family

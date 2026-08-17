@@ -77,8 +77,8 @@ type ObjectsNeedingGDPRDeletion = ExtractPII<DBFields>;
 ```
 
 That is a mapped type and a conditional type composed, and it is the pattern most
-real helper types are made of. Conditional types get their own page — **02 ·
-Conditional types** *(not written yet)* — but the composition is worth meeting
+real helper types are made of. Conditional types get their own page —
+[02 · Conditional types](../02-conditional-types/README.md) — but the composition is worth meeting
 here, because a mapped type whose value never branches is rare in practice.
 
 A second, very common form of the same idea keeps the value and only *tests* it:

@@ -266,5 +266,4 @@ which turns the cap from a default into a decision somebody has to make on purpo
 ---
 
 ← [04 · The fine print](./04-the-fine-print.md) · [Topic index](./README.md) ·
-[Phase 5 index](../README.md) · Next topic → **12 · `DeepPartial` / `DeepReadonly`**
-*(not written yet)*
+[Phase 5 index](../README.md) · Next topic → [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md)

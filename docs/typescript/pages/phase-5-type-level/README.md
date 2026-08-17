@@ -12,8 +12,14 @@ sidebar_position: 5
 > **No sandbox, no console blocks** — every claim here is documentation-validated,
 > and a plausible-looking `tsc` transcript written from memory is not evidence.
 
-**16 topics.** Types that take types as input. This is the phase where TypeScript
-stops describing values and starts computing.
+**16 topics · 65 files · ✅ complete.** Types that take types as input. This is the
+phase where TypeScript stops describing values and starts computing.
+
+📌 **File sizes: 64–295 lines across 65 files, 0 over the 300-line cap.** That 231-line
+spread is deliberate evidence rather than a coincidence — the cap decides where a file
+breaks and never how much a topic gets explained, so topics run from a single page to
+five chunks depending on what the subject actually has. Topics 11, 12 and 13 are five
+chunks each (1,417 · 1,225 · 1,211 lines); topic 08 is eleven (2,795).
 
 The useful fifth of it — mapped types, conditional types, and the built-in
 utilities they are made of — is not optional knowledge: it is what every library

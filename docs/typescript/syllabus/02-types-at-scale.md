@@ -53,6 +53,8 @@ conditional types, the built-in utilities — is what libraries and your own
 helpers are made of. The rest is a skill with a strict discipline attached:
 **a clever type that produces an unreadable error message is a net loss.**
 
+📖 **Explanation written:** [Phase 5 — Type-level programming](../pages/phase-5-type-level/README.md)
+
 | Topic | Tier |
 |---|---|
 | **Mapped types** — `{ [K in keyof T]: … }`, adding and removing `?` and `readonly` with `+`/`-`, and building your own `Partial` | <span className="db-tier t-master">Master</span> |

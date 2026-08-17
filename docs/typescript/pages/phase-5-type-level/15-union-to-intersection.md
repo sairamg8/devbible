@@ -239,10 +239,10 @@ path where it costs work at every step.
   parameter position produces an intersection. Without this the identity is memorisation.
 - **← [08 · Knowing when to stop](./08-knowing-when-to-stop/README.md)** — the argument this
   page ends on, applied to exactly the shapes it names.
-- **→ 16 · Higher-kinded types** *(not written yet)* — the other recognition topic: what
+- **→ [16 · Higher-kinded types](./16-higher-kinded-types.md)** — the other recognition topic: what
   TypeScript cannot express at all, rather than what it can express awkwardly.
 
 ---
 
 ← [14 · `NoInfer<T>`](./14-noinfer.md) · [Phase 5 index](./README.md) ·
-Next → **16 · Higher-kinded types** *(not written yet)*
+Next → [16 · Higher-kinded types](./16-higher-kinded-types.md)
