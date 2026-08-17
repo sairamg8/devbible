@@ -39,6 +39,20 @@ least appear next to the code they excuse.
 
 ## 🔴 Tier 6 — the suppression options most people do not know exist
 
+:::warning Corrected — these two options no longer function
+🔴 **On the versions this corpus targets, both options below are inert.** They
+worked through TypeScript 4.9, were deprecated in 5.0, **stopped functioning in
+5.5** (`TS5102`, which `ignoreDeprecations` cannot silence), and are **absent from
+the 7.0.2 compiler entirely** (`TS5023`). The tier's *argument* stands unchanged —
+a project-wide switch with no per-site record is the worst thing on this ladder —
+and the audit advice in
+[chunk 04](./04-a-policy-that-works.md) still applies to any project on an older
+compiler. But the mechanism is historical.
+**Exact behaviour by version, and the methodological lesson about why the option
+table did not reveal this:**
+[topic 10 · chunk 13](../10-the-error-codes/13-the-suppress-codes-are-gone.md).
+:::
+
 Two compiler options do at **project scale** what `@ts-ignore` does per line:
 
 ```json

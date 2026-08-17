@@ -100,6 +100,18 @@ member.
 
 ## Rule 5 · Never `suppressExcessPropertyErrors`
 
+:::warning Corrected — you can no longer set this, which makes the rule easier
+🔴 **The option is inert on current TypeScript.** It worked through 4.9, was
+deprecated in 5.0, **stopped functioning in 5.5** (`TS5102`, unsilenceable), and is
+**absent from the 7.0.2 compiler** (`TS5023`). The rule below is unchanged and now
+enforced by the compiler itself.
+⚠️ **What this means in practice is an upgrade hazard rather than a config
+choice:** a project moving off 5.4 gets a batch of `TS2353`/`TS2561` errors the
+moment the option stops working, and **those are pre-existing typos, not new
+bugs.** Exact behaviour by version:
+[topic 10 · chunk 13](../10-the-error-codes/13-the-suppress-codes-are-gone.md).
+:::
+
 The compiler option that turns this entire topic off, project-wide:
 
 ```json

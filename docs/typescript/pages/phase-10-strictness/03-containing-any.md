@@ -157,9 +157,17 @@ Compiler flags cannot see most of it, because inherited `any` is not *implicit*
 - **Grep.** `as any` and `: any` are honest signals and take a second to count.
 
 🔴 **Ban `suppressImplicitAnyIndexErrors`** if you meet it. It exists to silence
-`TS7053` wholesale, which is the opposite of containment, and it is deprecated.
-The right fix is a real index signature or a union-keyed `Record`
+`TS7053` wholesale, which is the opposite of containment. The right fix is a real
+index signature or a union-keyed `Record`
 ([topic 02](./02-nouncheckedindexedaccess.md)).
+
+📌 **Stronger than "deprecated", corrected 2026-08:** the option **stopped
+functioning in TypeScript 5.5** (`TS5102`, which `ignoreDeprecations` cannot
+silence) and is **absent from the 7.0.2 compiler entirely** (`TS5023`). So on a
+current compiler you cannot set it — but ⚠️ **a project upgrading past 5.5 gets
+every `TS7053` it was hiding, all at once**, and those are pre-existing `any`s
+rather than new ones. Exact behaviour by version:
+[topic 10 · chunk 13](./10-the-error-codes/13-the-suppress-codes-are-gone.md).
 
 ## The containment strategy
 
