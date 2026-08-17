@@ -135,144 +135,14 @@ ignored" bug is a `tsconfig.json` bug. Check the `include` pattern first, every
 time — this is the single most common cause, and it is invisible because the
 symptom is an *absence*.
 
-## The export forms, and when each is correct
+## Once you have decided "module"
 
-For a module `.d.ts`, the shape of the export has to match what the JavaScript
-actually does at runtime. The handbook's template covers each:
-
-### Named exports — the ordinary case
-
-```ts
-export function myFunction(a: string): string;
-export const myField: number;
-export interface SomeType {
-  name: string;
-  length: number;
-  extras?: string[];
-}
-```
-
-Note there is no `declare` here. `export` already satisfies `TS1046`, and inside
-a `.d.ts` the declarations are ambient anyway.
-
-### `export =` — for CommonJS `module.exports = x`
-
-> This handles cases where CommonJS exports a single value as `module.exports`.
-
-```ts
-declare const helloWorld: RegExp;
-export = helloWorld;
-```
-
-The handbook's most useful variant is the function-with-properties one, because
-it is what half of npm looks like:
-
-```ts
-declare function getArrayLength(arr: any[]): number;
-declare namespace getArrayLength {
-  const maxInterval: 12;
-}
-export = getArrayLength;
-```
-
-Two rules attach to `export =`:
-
-> **TS2309:** *"An export assignment cannot be used in a module with other
-> exported elements."*
-> **TS1203:** *"Export assignment cannot be used when targeting ECMAScript
-> modules. Consider using 'export default' or another module format instead."*
-
-So `export =` is all-or-nothing, and it is a **CommonJS** description. Whether a
-consumer can then write `import x from 'pkg'` against it is the
-`esModuleInterop` question — **09 · `esModuleInterop` and default imports**
-*(not written yet)* — and its failure is:
-
-> **TS2497:** *"This module can only be referenced with ECMAScript
-> imports/exports by turning on the '{0}' flag and referencing its default
-> export."*
-
-### `export default` — for a real ES module
-
-```ts
-export default function greet(s: string): void;
-```
-
-Legal only where the module is genuinely an ES module:
-
-> **TS1319:** *"A default export can only be used in an ECMAScript-style
-> module."*
-
-🔴 **`export default` and `export =` are not interchangeable, and choosing by
-taste is how interop bugs are born.** Describe what the package *does*: if its
-JavaScript assigns `module.exports = fn`, that is `export =`; if it has a real
-`export default`, that is `export default`.
-
-### `export as namespace` — the UMD global
-
-> You can use `export as namespace` to declare that your module will be available
-> in the global scope in UMD contexts.
-
-```ts
-export as namespace myLib;
-
-export function myFunction(a: string): string;
-```
-
-This describes a library that is *both* importable and, when loaded by a
-`<script>` tag, available as a global. The compiler enforces that you pick one
-per file:
-
-> **TS2686:** *"'{0}' refers to a UMD global, but the current file is a module.
-> Consider adding an import instead."*
-
-In other words: inside a module you must import it; the global form is for
-script files only. Modern packages rarely need this — it is mostly a jQuery-era
-shape you will meet in `@types` rather than write.
-
-## `declare module 'name'` — and the two things it can mean
-
-The same syntax does two different jobs depending on whether the module already
-exists:
-
-```ts
-declare module 'legacy-lib' {          // module has NO types → you are DECLARING it
-  export function doThing(x: number): string;
-}
-
-declare module 'express' {             // module HAS types → you are AUGMENTING it
-  interface Request { user?: User }
-}
-```
-
-The compiler tells you which one it decided:
-
-> **TS2664:** *"Invalid module name in augmentation, module '{0}' cannot be
-> found."*
-> **TS2665:** *"Invalid module name in augmentation. Module '{0}' resolves to an
-> untyped module at '{1}', which cannot be augmented."*
-
-⚠️ **`TS2665` is the confusing one.** It fires when the module *does* resolve —
-to a `.js` file with no types — which means the compiler treats your block as an
-augmentation of something untyped rather than as a fresh declaration. Both
-mechanisms are the subject of **08 · Typing an untyped dependency** *(not written
-yet)*; the augmentation half is
-[Phase 4 · Module augmentation](../../phase-4-classes-declarations/01-module-augmentation/README.md).
-
-📌 **An ambient module declaration is itself an ambient context**, so a
-`declare global` block nested inside one is legal — that is the *"or ambient
-module declarations"* half of `TS2669`.
-
-## Choosing, in practice
-
-Ask what the thing you are describing is, at runtime:
-
-- **Something you `import`** → module file. Use `export`, and reach for
-  `declare global` only for the extra globals it also installs.
-- **Something that just exists** — a `<script>` tag global, a build-time
-  constant, a test framework's `describe`/`it`, an environment variable shim →
-  script file, or `declare global` inside a module file. Either is fine; be
-  consistent within a repo.
-- **Both** → `export as namespace`, and only if the package really is UMD.
+The decision made here settles only *whether* the file exports. **Which export
+form** — named exports, `export =`, `export default`, `export as namespace` — has
+to match what the JavaScript does at runtime, and choosing by taste is how
+interop bugs start. That is
+[chunk 06](./06-the-export-forms.md), along with the two different jobs
+`declare module 'name'` can do ([chunk 07](./07-declare-module-and-choosing.md)).
 
 ## Gotchas
 
@@ -308,29 +178,6 @@ is matched by `include` instead.
 **Fix:** Widen the glob, add it to `files`, or reference it. Check this before
 suspecting anything subtler.
 
-**Symptom:** `TS2309: An export assignment cannot be used in a module with other
-exported elements.`
-**Cause:** `export =` alongside named exports.
-**Fix:** Pick one. To attach names to an `export =` value, merge a `namespace`
-into it instead.
-
-**Symptom:** `TS1203: Export assignment cannot be used when targeting ECMAScript
-modules.`
-**Cause:** `export =` in a file the compiler treats as ESM.
-**Fix:** Use `export default` — and check that the underlying JavaScript really
-is an ES module, because the declaration must describe the runtime, not your
-preference.
-
-**Symptom:** `TS2686: 'myLib' refers to a UMD global, but the current file is a
-module.`
-**Cause:** Using a UMD global by name inside a module file.
-**Fix:** Import it. The bare global form is only available in script files.
-
-**Symptom:** `TS2665: … resolves to an untyped module … which cannot be
-augmented.`
-**Cause:** `declare module 'x'` where `x` resolves to a real but untyped `.js`.
-**Fix:** That is topic 08's shim problem — the declaration has to be found
-*before* the untyped resolution, typically via `paths` or a `types` entry.
 
 ## Interview questions
 
@@ -349,28 +196,12 @@ complements.
 `export {};`. The handbook recommends it precisely for this, and it works
 regardless of the module target.
 
-**★ When do you use `export =` instead of `export default`?**
-When the JavaScript being described assigns a single value to `module.exports`
-— the CommonJS shape. `export default` describes a real ES module default. The
-declaration has to match the runtime, and mismatching them is the root of most
-`esModuleInterop` confusion. Note `export =` cannot coexist with named exports
-(`TS2309`).
 
 **★ My hand-written `.d.ts` is being ignored. Where do you look first?**
 Whether the compiler is reading it at all — is it matched by `include`/`files`,
 or reachable via `types`/`typeRoots` or a reference? An unincluded declaration
 file produces no error, so the symptom is a silent absence rather than a failure.
 
-**How would you type a function that also has properties on it, exported as a
-CommonJS default?**
-Declare a function and a namespace of the same name so they merge, then
-`export =` the function. The handbook's `getArrayLength` / `maxInterval` example
-is exactly this shape.
-
-**What is `export as namespace` for?**
-UMD packages: the module is importable *and* exposes a global when loaded by a
-`<script>` tag. Inside a module file you must still import it — referring to the
-bare global there is `TS2686`.
 
 **Why is a global `interface Response {}` dangerous?**
 Interfaces merge. A global one with a name that already exists in `lib.dom.d.ts`
@@ -379,4 +210,4 @@ whole project, and nothing reports it.
 
 ---
 
-← Prev: [02 · Generated or hand-written](./02-generated-or-handwritten.md) · Next → [04 · When declaration emit fails](./04-when-declaration-emit-fails.md)
+← Prev: [04 · Generated or hand-written](./04-generated-or-handwritten.md) · Next → [06 · The export forms](./06-the-export-forms.md)

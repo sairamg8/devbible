@@ -40,7 +40,7 @@ lanes:
 | 04 | `lib`, `target` and the ambient environment | <span className="db-tier t-understand">Understand</span> | DOM vs Node globals, `@types/node`, and why `structuredClone` is missing from your types but present at runtime |
 | 05 | `isolatedModules` | <span className="db-tier t-understand">Understand</span> | The constraint every single-file transpiler needs, and the patterns it bans |
 | 06 | File extensions — `.ts`/`.mts`/`.cts`/`.d.ts` | <span className="db-tier t-understand">Understand</span> | `allowImportingTsExtensions`, `rewriteRelativeImportExtensions`, and writing the extension the *runtime* wants |
-| 07 | Authoring `.d.ts` files | <span className="db-tier t-understand">Understand</span> | Declaring a module's public surface by hand, and when you should |
+| 07 | [Authoring `.d.ts` files](./07-authoring-d-ts-files/README.md) *(13 chunks)* | <span className="db-tier t-understand">Understand</span> | Declaring a module's public surface by hand, and when you should |
 | 08 | Typing an untyped dependency | <span className="db-tier t-understand">Understand</span> | `declare module 'legacy-lib'`, the shim that unblocks you today, and the upstream fix |
 | 09 | `esModuleInterop` and default imports | <span className="db-tier t-understand">Understand</span> | What `import express from 'express'` means for a CommonJS package |
 | 10 | `skipLibCheck` | <span className="db-tier t-understand">Understand</span> | Nearly everyone sets it; know exactly which errors you are agreeing not to see |

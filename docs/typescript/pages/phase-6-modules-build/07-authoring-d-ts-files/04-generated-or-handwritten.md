@@ -156,7 +156,7 @@ non-code imports** *(not written yet)*.
 **3 · Globals that exist at runtime but come from nowhere the compiler can see.**
 A `<script>` tag, a server-injected `window.__CONFIG__`, a bundler-replaced
 `process.env.NODE_ENV`, a test framework's globals. These are `declare global`
-and `declare const`, and the mechanics are chunk 03's.
+and `declare const`, and the mechanics are chunk 05's.
 
 **4 · An API surface you maintain deliberately, decoupled from your source.**
 Rare, and rarely a good idea — the moment the hand-written file and the
@@ -183,7 +183,7 @@ git diff -- 'dist/**/*.d.ts'
 
 If that diff is large after a change you thought was internal, it was not
 internal. `@internal` and `stripInternal` are the tools for pulling the surface
-back in, and they are chunk 06.
+back in, and they are chunk 11.
 
 ## Gotchas
 
@@ -196,7 +196,7 @@ included in the published files. Packaging is **11 · Publishing a typed package
 **Symptom:** Turning on `composite` produced a wave of new errors.
 **Cause:** `composite` implies `declaration`, and declaration emit surfaces
 errors ordinary compilation never needed to raise.
-**Fix:** They are real — chunk 04 is the family of them and their fixes.
+**Fix:** They are real — chunks 08 and 09 are the family of them and their fixes.
 
 **Symptom:** `TS5069: Option 'declarationMap' cannot be specified without
 specifying option 'declaration' or option 'composite'.`
@@ -281,4 +281,4 @@ is unrelated. The only thing that turns it on implicitly is `composite`.
 
 ---
 
-← Prev: [01 · What a `.d.ts` is](./01-what-a-declaration-file-is.md) · Next → [03 · Module or global](./03-module-or-global.md)
+← Prev: [03 · The three declaration spaces](./03-the-three-spaces.md) · Next → [05 · Module or global](./05-module-or-global.md)
