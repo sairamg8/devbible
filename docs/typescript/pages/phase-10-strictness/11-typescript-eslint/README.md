@@ -15,25 +15,20 @@ sidebar_position: 0
 > phase nothing here is read from its source; every rule claim is attributed to a
 > documentation page. **No sandbox, no console block, no timings of our own.**
 
-:::info 🚧 This topic is mid-write — 9 chunks of 10
-Chunks **01–09 are written**. Only **10 (adoption and the CI cost)** is left, and
-the references to it in the pages below are deliberately **plain text rather than
-links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-
-⚠️ **The plan said seven chunks; it is ten, and the difference is the point.** Two
-syllabus items turned out to be several arguments each.
+:::note Ten chunks, and the plan said seven
+Two of the topic's items turned out to be several arguments each.
 `strict-boolean-expressions` became three chunks — the rule and its option matrix
 (05), the bugs it exists to catch (06), and the migration (07), because half of the
 fixes change runtime behaviour and that needed working out rather than listing. The
-`no-unsafe-*` rules became two (08, 09) once it turned out that 🔴 **the prefix is
-not a family**: five of the ten track `any` and only work as a set, and the other
-five are unrelated checks that share a naming convention.
+`no-unsafe-*` rules became two (08, 09) once the count turned out to be **ten
+rather than nine** and 🔴 **the prefix turned out not to be a family** — five of
+them track `any` and only work as a set; the other five are unrelated checks that
+share a naming convention.
 
-📌 **The draft of 06 reached 329 lines and was split, not trimmed — and the two
-halves then came to 459 together.** The 130 lines the split *added* are the
-standing evidence for the rule: the cap decides where a file breaks, never how much
-a topic gets explained.
+📌 **Chunk 06's draft reached 329 lines and was split rather than trimmed — the two
+halves then came to 459 together.** The 130 lines the split *added* are why the
+300-line limit is a file-size rule and never a limit on how much a topic is
+explained.
 :::
 
 The syllabus row asks for *"the checks the compiler will not do, and their CI
@@ -70,7 +65,7 @@ this topic is organised around.
 | 07 | [Fixing them without breaking them](./07-fixing-them-without-breaking-them.md) | 🔴 **Four of the eight fixes change runtime behaviour**, and one makes things *worse* — `n !== 0` admits the `NaN` that truthiness rejected. Why no fixer can choose for you, and the three-pass rollout |
 | 08 | [The rules that track `any`](./08-the-rules-that-track-any.md) | Five rules, **one flow** — the five places an `any` can cross a boundary, so disabling one relocates the leak instead of removing it. Pays [topic 03](../03-containing-any.md)'s debt: 🔴 the compiler **cannot** report `any` usage, and the one source it did close (`catch`) needed a dedicated flag to do it |
 | 09 | [The five that only share a prefix](./09-the-five-that-share-a-prefix.md) | 🔴 **The prefix is not a family** — enum comparison, class–interface merging, `Function`, unary minus, assertions. Two compiler-read diagnostics anchor it: `TS2395` checks merged declarations for *export consistency* and nothing else, and `TS2356` lists **`any` first** among the operands it accepts |
-| 10 | **Adoption and the CI cost** *(not written yet)* | The order to turn things on, the `-only` configs, and the arithmetic of not running two type-checks per job |
+| 10 | [Adoption and the CI cost](./10-adoption-and-ci-cost.md) | 🔴 The two runs **cannot be merged**, so the levers are scope and parallelism — and *"lint only the changed files"* does not work, because the build is per **project**. Plus the ordering principle the whole topic converges on: **flags before rules**, since every compiler flag you enable first *reduces* the lint work |
 
 ## Phase gate
 
