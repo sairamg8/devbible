@@ -215,4 +215,4 @@ trade.
 
 ---
 
-← Prev: [The state reducer pattern](02-the-state-reducer-pattern.md) · Index: [React patterns](README.md) · Next → **04 · Prop getters** *(not written yet)*
+← Prev: [The state reducer pattern](02-the-state-reducer-pattern.md) · Index: [React patterns](README.md) · Next → [04 · Prop getters](04-prop-getters.md)

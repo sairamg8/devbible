@@ -109,8 +109,7 @@ match between the server and client render or hydration breaks.
 solution to exactly that problem, and hand-rolled counters are not.
 
 **`triggerProps` is a prop getter in its simplest form** — one object the caller
-spreads rather than four attributes they might mis-wire. See **04 · Prop
-getters** *(not written yet)* for what happens when the caller also needs their
+spreads rather than four attributes they might mis-wire. See [04 · Prop getters](04-prop-getters.md) for what happens when the caller also needs their
 own `onClick`, which this version silently discards.
 
 ## The three shapes headless comes in
@@ -194,7 +193,7 @@ that element to be a `<li>`, or needs it gone for a grid layout to work.
 **Returning `triggerProps` invites the caller to overwrite your handlers.**
 `<button {...triggerProps} onClick={mine}>` silently replaces yours — JSX spread
 follows object spread order, so the later key wins. This is the entire reason
-**prop getters** *(not written yet)* take an argument.
+[prop getters](04-prop-getters.md) take an argument.
 
 **Consuming the same hook twice gives you two independent states.** Two
 `useDisclosure()` calls are two disclosures. This is not a bug in the hook, it is

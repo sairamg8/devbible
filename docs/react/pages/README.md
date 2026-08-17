@@ -59,7 +59,7 @@ Split rules and both paste-ready prompts:
 | 11 | ✅ Done — 17 topics, 24 files (Part A, session `bfcb390b`) |
 | 12, 13 | 🚫 **Dropped** — not written, not reopened |
 | 14 | ✅ Done — 14 topics, 28 files, 4,986 lines (Part B, session `05921047`) |
-| **Patterns** | 🚧 **3 of 6 new pages** — the hub is written; see [Patterns](patterns/README.md) |
+| **Patterns** | 🚧 **4 of 6 new pages** — the hub is written; see [Patterns](patterns/README.md) |
 
 Earlier owners of the whole of `docs/react/`: `33f8be33`, from `2ee7a9a3`, from `6ffd754d`.
 All React work is on `main`; the old `react-phase-7` worktree was merged as `d74e74f` and
