@@ -75,7 +75,7 @@ Type '"activ"' is not assignable to type '"active" | "inactive" | "pending"'.
 That second clause is its own template, `TS2820` — *"Type '{0}' is not assignable
 to type '{1}'. Did you mean '{2}'?"* — and it is the **same similarity machinery**
 that produces `TS2551` for property names.
-[Chunk 06](./06-the-spelling-budget.md) has the exact edit-distance budget.
+[Chunk 07](./07-the-spelling-budget.md) has the exact edit-distance budget.
 
 It matters most here because **string-literal unions are where typos are both
 most likely and least visible**: a status, a variant, an event name, a
@@ -228,7 +228,7 @@ about.
 error.
 **Cause:** `TS2560`. You passed the function rather than its result — a missing
 `()`.
-**Fix:** call it. See [chunk 04](./04-the-call-site-family.md) for the rest of
+**Fix:** call it. See [chunk 05](./05-callable-or-not.md) for the rest of
 that family.
 
 ## Interview questions
