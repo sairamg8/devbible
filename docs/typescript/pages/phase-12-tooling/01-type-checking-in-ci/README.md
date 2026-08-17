@@ -13,8 +13,8 @@ sidebar_position: 0
 > a build pipeline, so where a number matters it is quoted with its source named.
 > **No console block.**
 
-:::info 🚧 This topic is mid-write — 3 chunks
-Chunks **01–03 are written**. The rest are not, and references to them are deliberately
+:::info 🚧 This topic is mid-write — 4 chunks
+Chunks **01–04 are written**. The rest are not, and references to them are deliberately
 **plain text rather than links** so the build stays green. Resume point:
 `devbible/progress_typescript_part_b.md` in the memory store.
 :::
@@ -36,7 +36,7 @@ and it is not a matter of tooling preference:
 | 01 | [The green build that proves nothing](./01-the-green-build-that-proves-nothing.md) | The seven-step sequence in which **every tool works correctly and nothing type-checks** — and why `isolatedModules` makes the fast tool *safe* rather than *thorough* |
 | 02 | [What the gate guarantees](./02-what-the-gate-guarantees.md) | 🔴 A green run is compatible with **an entire directory never having been looked at** — the four things it does not claim, the files quietly outside the program, ⚠️ that **`exclude` is not a firewall**, the multi-config hole, and the four compiler flags that tell you what was actually checked |
 | 03 | [Where the gate goes](./03-where-the-gate-goes.md) | The four positions and why **pre-commit is the wrong one** (a whole-program check cannot be scoped to staged files, and `--no-verify` makes it optional) — plus 🔴 **the merge queue case: a type error is the classic semantic merge conflict**, which is why `main` breaks when no individual PR was wrong |
-| 04 | **Making it fast enough to be required** *(not written yet)* | `incremental`, `.tsbuildinfo`, project references — and which levers trade guarantee for speed |
+| 04 | [Making it fast enough to be required](./04-making-it-fast-enough.md) | 🔴 **Speed is a correctness concern** — a slow gate stops being a gate. The levers split into *free* and *costs coverage*, and ⚠️ **every "make it faster by checking less" change is a coverage change** that arrives in a PR titled *speed up CI* |
 | 05 | **When the gate fails** *(not written yet)* | Blocking vs advisory, and turning the check on when the error count is already large |
 
 ## Phase gate

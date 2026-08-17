@@ -202,4 +202,4 @@ phase 10 · 11 · chunk 10 sets out.
 
 ---
 
-← [02 · What the gate guarantees](./02-what-the-gate-guarantees.md) · [Topic index](./README.md) · Next → **04 · Making it fast enough to be required** *(not written yet)*
+← [02 · What the gate guarantees](./02-what-the-gate-guarantees.md) · [Topic index](./README.md) · Next → [04 · Making it fast enough to be required](./04-making-it-fast-enough.md)
