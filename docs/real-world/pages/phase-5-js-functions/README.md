@@ -20,7 +20,7 @@ coding); the Phase 3 API contract.
 | 03 | **[The concurrency-limited task queue](03-the-task-queue.md)** | <span className="db-tier t-master">Master</span> | Phase-17’s primitive plus application policy: priorities as intent, dequeue-time cancellation, idempotent prefetch |
 | 04 | **[The event bus](04-the-event-bus.md)** | <span className="db-tier t-understand">Understand</span> | `EventTarget` plus a constitution: facts not commands, no state rides, closed catalogue |
 | 05 | **[The form validation engine](05-the-validation-engine.md)** | <span className="db-tier t-understand">Understand</span> | Rules compose *over* the shared schema, not beside it — and async checks never gate submit |
-| 06 | **Money and dates with `Intl`** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 06 | **[Money and dates with `Intl`](06-money-and-dates/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The display edge: `/100` is a bug, the symbol is not a prefix, `timeZone` is required — and the hydration mismatch is a state bug |
 | 07 | **Slug and search normalization** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 08 | **Feature flags with a local override** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 09 | **Optimistic-update helpers** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
