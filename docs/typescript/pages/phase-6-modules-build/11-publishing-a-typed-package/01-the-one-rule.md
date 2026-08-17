@@ -152,7 +152,7 @@ The whole of this topic is bookkeeping on one sentence:
   them** — `export =` versus `export default`,
   [chunk 05](./05-export-equals-vs-default.md).
 - **And you cannot confirm any of it by building your own package**, because
-  your build is not a consumer — [chunk 07](./07-validating-the-result.md).
+  your build is not a consumer — [chunk 07](./07-the-problem-catalogue.md).
 
 ## Gotchas
 

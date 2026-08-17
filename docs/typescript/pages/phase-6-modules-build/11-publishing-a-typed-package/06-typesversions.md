@@ -241,4 +241,4 @@ only visible from outside the package.
 
 ---
 
-← Prev: [05 · `export =` vs `export default`](./05-export-equals-vs-default.md) · Next → [07 · Validating the result](./07-validating-the-result.md)
+← Prev: [05 · `export =` vs `export default`](./05-export-equals-vs-default.md) · Next → [07 · The problem catalogue](./07-the-problem-catalogue.md)

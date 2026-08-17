@@ -139,7 +139,7 @@ outright.
 
 📌 That makes `files`/`.npmignore` part of this topic's surface: a `types` target
 excluded from the tarball is indistinguishable, to a consumer, from a typo.
-[Chunk 07](./07-validating-the-result.md) is how you catch it.
+[Chunk 08](./08-wiring-the-checks-in.md) is how you catch it.
 
 ## Reading a failure with `--traceResolution`
 
@@ -188,7 +188,7 @@ the file layout changes.
 for consumers.
 **Cause:** It is not in the published tarball.
 **Fix:** Check `files`/`.npmignore`, and validate the packed artefact rather than
-the working tree. Chunk 07.
+the working tree. Chunk 08.
 
 **Symptom:** Every condition was given its own nested `types` and the map is
 unreadable.
@@ -220,7 +220,7 @@ key syntax.
 `nodenext`.
 **Cause:** Bundler resolution is more forgiving about conditions and extensions.
 **Fix:** Validate under every resolution mode a consumer might use — which is
-precisely what chunk 07's tooling automates.
+precisely what chunk 08's tooling automates.
 
 ## Interview questions
 

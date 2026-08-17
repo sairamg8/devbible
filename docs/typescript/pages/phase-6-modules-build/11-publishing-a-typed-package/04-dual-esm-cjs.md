@@ -135,7 +135,7 @@ your own build:
 
 🔴 **The first question for all of them is the same:** does each condition in
 your `exports` map lead to a declaration file whose format matches the
-implementation it sits beside? [Chunk 07](./07-validating-the-result.md) answers
+implementation it sits beside? [Chunk 08](./08-wiring-the-checks-in.md) answers
 it mechanically instead of by inspection.
 
 ## The thing that makes this genuinely hard
@@ -186,7 +186,7 @@ and the nominality.
 **Symptom:** The build works and the published package does not.
 **Cause:** The output tree is right and the `exports` map or `files` list is
 not.
-**Fix:** Validate the packed tarball, not `dist/`. Chunk 07.
+**Fix:** Validate the packed tarball, not `dist/`. Chunk 08.
 
 **Symptom:** A maintainer wants to drop the CJS build and is told it is a
 breaking change.

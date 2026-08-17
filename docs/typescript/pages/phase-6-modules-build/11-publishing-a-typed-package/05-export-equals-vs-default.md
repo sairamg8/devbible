@@ -141,7 +141,7 @@ themselves for exactly this reason.
 | **Caught by** | `arethetypeswrong` (FalseExportDefault) | `arethetypeswrong` (NamedExports) |
 
 🔴 **Neither is caught by compiling your own package**, because your build never
-performs the consumer's import. [Chunk 07](./07-validating-the-result.md).
+performs the consumer's import. [Chunk 07](./07-the-problem-catalogue.md).
 
 ## Gotchas
 
@@ -154,7 +154,7 @@ then crashes.
 **Symptom:** It works for every consumer you tested with.
 **Cause:** They had `esModuleInterop` on, which synthesises the default and hides
 the mismatch.
-**Fix:** Test under `nodenext` from a real ESM consumer. Chunk 07 automates it.
+**Fix:** Test under `nodenext` from a real ESM consumer. Chunk 08 automates it.
 
 **Symptom:** `import { thing } from 'pkg'` type-checks and crashes in Node.
 **Cause:** `cjs-module-lexer` cannot see `thing` — most likely `module.exports =
