@@ -174,4 +174,4 @@ this directory import from it?" is the right one.
 
 ---
 
-← [01 · Four jobs, not one](./01-four-jobs-not-one.md) · [Topic index](./README.md) · Next → **03 · Making two tools agree** *(not written yet)*
+← [01 · Four jobs, not one](./01-four-jobs-not-one.md) · [Topic index](./README.md) · Next → [03 · Making two tools agree](./03-making-two-tools-agree.md)

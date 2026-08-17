@@ -11,12 +11,6 @@ sidebar_position: 0
 > **TypeScript 5.9.3 diagnostic table read from disk** (`sandbox/ts-p0`).
 > ⚠️ **No timing figure on these pages is ours. No console block.**
 
-:::info 🚧 This topic is mid-write — 2 chunks
-Chunks **01 and 02 are written**. References to the rest are deliberately **plain text
-rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
 The syllabus row asks *"who checks and who only strips, and where declaration emit
 fits."* [Topic 01](../01-type-checking-in-ci/README.md) already settled **why** a
 transpiler cannot check. This topic is the practical map that follows from it:
@@ -35,7 +29,7 @@ transpiler cannot check. This topic is the practical map that follows from it:
 |---|---|---|
 | 01 | [Four jobs, not one](./01-four-jobs-not-one.md) | The job-by-tool matrix; 🔴 why **declaration emit cannot be fast** (it needs inferred return types, so it needs the checker); and what `TS5069` and `TS6304` tell you — including that **composite projects and declaration emit are one feature, not two settings** |
 | 02 | [The two pipeline shapes](./02-the-two-shapes.md) | App vs library, chosen by one question — and 🔴 **a library's declaration build has already type-checked**, so the separate `--noEmit` is usually a second payment for the same work. Plus `rootDir`, which is **inferred** and re-roots the output tree when you add a file, producing **a green build and a wrong package** |
-| 03 | **Making two tools agree** *(not written yet)* | One config or two, source maps across the seam, and the settings that must match |
+| 03 | [Making two tools agree](./03-making-two-tools-agree.md) | 🔴 Only the settings that change **meaning** matter — `paths`, `jsx`, `experimentalDecorators`, `useDefineForClassFields` — and **none of them fails loudly**: the compiler approves a program the bundler did not produce. Plus `declarationMap`, the flag libraries forget and only consumers notice |
 
 ## Phase gate
 
