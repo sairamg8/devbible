@@ -245,4 +245,4 @@ the error message is the part everyone else will read.
 ---
 
 ← Prev: [10 · Keeping the ones you keep](./10-keeping-the-ones-you-keep.md) ·
-[Topic index](./README.md) · Next → **09 · Type-level performance** *(not written yet)*
+[Topic index](./README.md) · Next → [09 · Type-level performance](../09-type-level-performance/README.md)

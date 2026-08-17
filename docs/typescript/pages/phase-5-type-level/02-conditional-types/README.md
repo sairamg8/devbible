@@ -70,7 +70,7 @@ mapping. `ReturnType` needs `infer`, which is topic 06.
   full.
 - **→ [06 · Extracting with `infer`](../06-infer/README.md)** — multiple `infer` sites,
   constrained `infer`, and the standard-library extractors.
-- **→ 09 · Type-level performance** *(not written yet)* — `TS2589`, `TS2321` and
+- **→ [09 · Type-level performance](../09-type-level-performance/README.md)** — `TS2589`, `TS2321` and
   what makes a checker slow.
 
 ---

@@ -173,8 +173,8 @@ in `strictNullChecks`, because `T[P]` already includes `undefined`.
 **Cause:** No base case — every branch recurses, including for primitives and
 built-ins like `Date` and `Function`.
 **Fix:** Guard the recursion with a conditional (`T[P] extends object ? … : T[P]`)
-and exclude the built-ins you do not want walked. See **09 · Type-level
-performance** *(not written yet)*.
+and exclude the built-ins you do not want walked. See [09 · Type-level
+performance](../09-type-level-performance/README.md).
 
 **Symptom:** `Record<K, V>` did not preserve `readonly` from the source type
 **Cause:** There is no source type — `Record` loops over a key union, so it is

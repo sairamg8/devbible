@@ -78,7 +78,7 @@ input is closed; check it when the data comes from outside.**
 - **← [Phase 10 · Reading a TypeScript error](../../phase-10-strictness/04-reading-a-typescript-error.md)**
   — the reader's side of the same problem, including `noErrorTruncation`. This topic is the
   author's side.
-- **→ 09 · Type-level performance** *(not written yet)* — the compile-time half of the five
+- **→ [09 · Type-level performance](../09-type-level-performance/README.md)** — the compile-time half of the five
   walls, and the depth-capping construction chunk 10 defers.
 - **→ 10 · Deriving one function's type from another** *(not written yet)* — chunk 11's case
   2 in full: wrappers, decorators and adapters.

@@ -107,7 +107,7 @@ over a five-member union is twenty checks, and each one may itself distribute.
 
 The mitigations are the same habits as above, plus one more: **give recursion a
 depth limit**. A tuple of a fixed length is the usual counter, and it belongs to
-**09 · Type-level performance** *(not written yet)* along with the rest of the
+[09 · Type-level performance](../09-type-level-performance/README.md) along with the rest of the
 compile-time story.
 
 ## A checklist before merging a conditional type

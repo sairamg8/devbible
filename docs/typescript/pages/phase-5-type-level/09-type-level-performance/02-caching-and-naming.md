@@ -254,4 +254,4 @@ version they were read from.
 ---
 
 ← Prev: [01 · The three budgets](./01-the-three-budgets.md) · [Topic index](./README.md) ·
-Next → **03 · What actually makes a codebase slow** *(not written yet)*
+Next → [03 · What actually makes a codebase slow](./03-what-makes-it-slow.md)

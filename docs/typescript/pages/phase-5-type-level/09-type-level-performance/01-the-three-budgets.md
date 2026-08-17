@@ -245,5 +245,4 @@ count, comparison and union size, with two messages covering them.
 
 ---
 
-← [Topic index](./README.md) · Next → **02 · Caching, and why naming a type is a performance
-fix** *(not written yet)*
+← [Topic index](./README.md) · Next → [02 · Caching, and why naming is a performance fix](./02-caching-and-naming.md)

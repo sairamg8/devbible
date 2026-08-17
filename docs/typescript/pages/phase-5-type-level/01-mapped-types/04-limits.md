@@ -150,7 +150,7 @@ other limit arrives:
 
 > **`TS2589`: Type instantiation is excessively deep and possibly infinite.**
 
-Both belong to **09 · Type-level performance** *(not written yet)*; they are
+Both belong to [09 · Type-level performance](../09-type-level-performance/README.md); they are
 listed here so the message is recognisable when a mapping is the thing that
 produced it.
 

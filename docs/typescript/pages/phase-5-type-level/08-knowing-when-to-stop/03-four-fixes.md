@@ -72,7 +72,7 @@ with the caveat the same page attaches, kept here so this does not turn into dog
 
 So naming buys **legibility and cache hits**: the rare recommendation with no
 trade-off. It is the first thing to do and the last thing to skip. The compile-time
-half of the argument belongs to **09 · Type-level performance** *(not written yet)*.
+half of the argument belongs to [09 · Type-level performance](../09-type-level-performance/README.md).
 
 ⚠️ **Naming is not the same as `Prettify`.** A name gives the compiler something to
 print *instead of* structure; `Prettify` forces an already-structural display into a

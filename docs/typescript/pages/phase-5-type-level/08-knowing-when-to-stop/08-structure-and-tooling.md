@@ -208,7 +208,7 @@ declaration, which is the recommendation working rather than a regression.
 Because they are the two places where the compile-time and readability arguments coincide,
 which makes them easy decisions rather than trade-offs. Flat object types print better and
 cache better; a base type prints shorter and skips quadratic pairwise elimination. The
-compile-time half is developed in **09 · Type-level performance** *(not written yet)*; what
+compile-time half is developed in [09 · Type-level performance](../09-type-level-performance/README.md); what
 belongs here is that the better error message comes free.
 
 ---

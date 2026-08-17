@@ -243,4 +243,4 @@ size.
 ---
 
 ← Prev: [02 · Caching and naming](./02-caching-and-naming.md) · [Topic index](./README.md) ·
-Next → **04 · The fixes, in order** *(not written yet)*
+Next → [04 · The fixes, in order](./04-the-fixes-in-order.md)
