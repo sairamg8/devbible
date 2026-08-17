@@ -101,14 +101,14 @@ type Length<T extends readonly unknown[], Acc extends 1[] = []> =
 tuple, an object, a union, another utility — it is not a tail call. `[...Acc, 1]` is an argument
 being built, not a wrapper around the call, which is why the accumulator pattern works.
 
-That conversion is **chunk 02 · The accumulator pattern** *(not written yet)*.
+That conversion is [chunk 02 · The accumulator pattern](./02-the-accumulator-pattern.md).
 
 ## Neither limit is the one you should be relying on
 
 Both ceilings are the compiler's, not yours, and hitting either is
 [topic 09 · chunk 03](../09-type-level-performance/03-what-makes-it-slow.md)'s uncapped-recursion
 shape: **a performance profile you did not choose.** A deliberate depth cap is
-**chunk 03 · Capping depth deliberately** *(not written yet)*.
+**chunk 05 · Capping depth deliberately** *(not written yet)*.
 
 ⚠️ **And 1,000 is a limit on *iterations*, not on cost.** A tail-recursive type that survives 900
 iterations is still doing 900 instantiations against the five-million count budget
@@ -120,7 +120,7 @@ file that uses it.
 **Symptom:** `TS2589` at around a hundred elements, when you expected a thousand.
 **Cause:** The recursion is nested, not tail — something wraps the recursive call.
 **Fix:** Convert to an accumulator so the call is the branch's whole result
-(**chunk 02**, *not written yet*).
+([chunk 02](./02-the-accumulator-pattern.md)).
 
 **Symptom:** You converted to an accumulator and the ceiling did not move.
 **Cause:** The conditional distributes, so the tail-call path bails out.
@@ -198,4 +198,4 @@ why they are the usual source of `TS2589` in application code.
 
 ---
 
-← [Topic index](./README.md) · Next → **02 · The accumulator pattern** *(not written yet)*
+← [Topic index](./README.md) · Next → [02 · The accumulator pattern](./02-the-accumulator-pattern.md)
