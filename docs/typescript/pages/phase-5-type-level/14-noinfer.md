@@ -262,11 +262,10 @@ call wanted a different signature, but it is worth checking rather than assuming
 - **← [10 · Deriving one function's type from another · chunk 02](./10-deriving-function-types/02-what-it-loses.md)**
   — making a wrapper generic to preserve genericity **adds inference sites**, and that page
   hands the consequence to this topic.
-- **→ 15 · Union → intersection and other identities** *(not written yet)* — the other place
-  inference behaviour is exploited deliberately.
+- **→ [15 · Union → intersection and other identities](./15-union-to-intersection.md)** — the
+  other place inference behaviour is exploited deliberately.
 
 ---
 
 ← [13 · Tuple manipulation](./13-tuple-manipulation/README.md) ·
-[Phase 5 index](./README.md) · Next → **15 · Union → intersection and other identities**
-*(not written yet)*
+[Phase 5 index](./README.md) · Next → [15 · Union → intersection and other identities](./15-union-to-intersection.md)
