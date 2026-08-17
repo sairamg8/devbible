@@ -221,4 +221,4 @@ out of a call site and onto the callback where the mistake actually is.
 
 ---
 
-← [Phase 10 index](./README.md) · Next → **05 · `exactOptionalPropertyTypes`** *(not written yet)*
+← [Phase 10 index](./README.md) · Next → [05 · `exactOptionalPropertyTypes`](./05-exactoptionalpropertytypes/README.md)
