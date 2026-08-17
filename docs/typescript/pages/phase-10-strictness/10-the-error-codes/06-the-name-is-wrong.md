@@ -54,7 +54,7 @@ const user = getUser();          // returns Promise<User>
 console.log(user.name);          // TS2339 + TS2773
 ```
 
-The message says *"Property 'name' does not exist on type 'Promise<User>'"*, and
+The message says *"Property 'name' does not exist on type `Promise<User>`"*, and
 underneath it — as a **related-information line, in a `Message` category** — sits
 *"Did you forget to use 'await'?"*.
 

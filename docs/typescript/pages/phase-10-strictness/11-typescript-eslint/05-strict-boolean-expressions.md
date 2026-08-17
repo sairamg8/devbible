@@ -290,4 +290,3 @@ a policy, because the same idiom applied to a value that can be `NaN` is a bug.
 ---
 
 ← [04 · `no-unnecessary-condition`](./04-no-unnecessary-condition.md) · [Topic index](./README.md) · Next → **06 · The conditions you get wrong** *(not written yet)*
-</content>
