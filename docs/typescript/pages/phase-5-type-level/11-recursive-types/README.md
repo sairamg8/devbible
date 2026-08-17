@@ -68,7 +68,7 @@ which one you get depends on whether the recursive call is the branch's entire r
   limits are drawn against, and why an uncapped recursive type has a profile you did not choose.
 - **← [01 · Mapped types · chunk 04](../01-mapped-types/04-limits.md)** — `TS2615`, and why
   circularity is a different failure from a depth limit.
-- **→ 12 · `DeepPartial` / `DeepReadonly`** *(not written yet)* — recursion over *objects*, where
+- **→ [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md)** — recursion over *objects*, where
   each property is its own branch, so the work fans out rather than advancing.
 - **→ 13 · Tuple manipulation** *(not written yet)* — the variadic patterns the accumulator
   conversion is built from.

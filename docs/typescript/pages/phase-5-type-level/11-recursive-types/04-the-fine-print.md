@@ -152,8 +152,9 @@ binding constraint anyway.
 
 Every property is its own recursive branch, so the work **fans out** rather than advancing
 one step. There is no single "rest of the input" to pass along, so there is no tail call to
-make. That is why the deep helpers are their own topic — **12 · `DeepPartial` /
-`DeepReadonly`** *(not written yet)* — and why they are the usual source of `TS2589` in
+make. That is why the deep helpers are their own topic —
+[12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md) — and why they are the
+usual source of `TS2589` in
 application code rather than the string parsers everyone worries about.
 
 ### When the next step depends on the answer

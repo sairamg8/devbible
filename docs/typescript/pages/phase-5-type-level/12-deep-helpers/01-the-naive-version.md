@@ -94,7 +94,7 @@ unions ([topic 05](../05-distributive-conditionals.md)), it is a different shape
 error message, and it changes what the type does with `any`. People pay all three costs to
 solve a problem they did not have — and then are surprised when the guard *also* fails to
 fix the problems they did have, which are the subject of
-**chunk 02 · What it breaks** *(not written yet)*.
+[chunk 02 · What it breaks](./02-what-it-breaks.md).
 
 ⚠️ **The guard is still needed — for other reasons.** `Object` in that flag test covers
 functions, class instances, `Date`, `Map`, `RegExp` and everything else with an object
@@ -114,7 +114,7 @@ worth reading because it explains behaviour 2 above:
   labels**;
 - an **intersection** is mapped constituent by constituent and re-intersected;
 - anything else object-shaped goes to `instantiateAnonymousType` — the general case, and
-  the one that causes the damage in **chunk 02 · What it breaks** *(not written yet)*.
+  the one that causes the damage in [chunk 02 · What it breaks](./02-what-it-breaks.md).
 
 🔴 **Note what is missing from that list: there is no case for a function.** A function
 type has the `Object` flag, so it takes the last branch and is mapped like any other
@@ -204,4 +204,4 @@ subject of the next chunk.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · What it breaks** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · What it breaks](./02-what-it-breaks.md)

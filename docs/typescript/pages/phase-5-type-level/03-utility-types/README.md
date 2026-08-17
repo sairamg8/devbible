@@ -70,7 +70,7 @@ Gotchas sections in chunks 02 to 04 are for.
   `infer` sites in parameter positions intersect rather than union.
 - **→ [07 · Template literal types](../07-template-literal-types.md)** — where `Capitalize` and
   its siblings actually earn their place.
-- **→ 12 · `DeepPartial` / `DeepReadonly`** *(not written yet)* — the recursive
+- **→ [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md)** — the recursive
   versions of the shallow shapers, and what they cost.
 - **→ 14 · `NoInfer<T>`** *(not written yet)* — the fence from chunk 05, in full.
 

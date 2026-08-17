@@ -103,7 +103,7 @@ distributed anyway. But it is worth knowing it is happening, because:
 - a guard that should test **the whole union** must be bracketed: `[T] extends [Date]` asks
   "is this union exactly `Date`", where `T extends Date` asks it member by member;
 - distribution multiplies the work, and this is a type that already fans out
-  (**chunk 05 · The cost** *(not written yet)*).
+  ([chunk 05 · The cost](./05-the-cost.md)).
 
 **The default is right; the exception is when a guard is about the union rather than its
 members.**
@@ -161,7 +161,7 @@ for not using a deep helper here.
 **Cause:** Six conditionals plus a mapping is what the checker prints when something does
 not fit.
 **Fix:** Nothing local. This is the cost side of the trade and it is
-**chunk 05 · The cost** *(not written yet)*.
+[chunk 05 · The cost](./05-the-cost.md).
 
 **Symptom:** `T extends Function` behaves differently from
 `T extends (...args: never[]) => unknown`.
@@ -227,4 +227,4 @@ as `[T] extends [X]`.
 ---
 
 ← [02 · What it breaks](./02-what-it-breaks.md) · [Topic index](./README.md) ·
-Next → **04 · `DeepPartial` is not `DeepReadonly`** *(not written yet)*
+Next → [04 · `DeepPartial` is not `DeepReadonly`](./04-partial-is-not-readonly.md)

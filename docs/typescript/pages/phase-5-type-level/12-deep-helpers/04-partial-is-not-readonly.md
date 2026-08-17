@@ -253,5 +253,4 @@ under-describing what it promises.
 ---
 
 ← [03 · The version that holds up](./03-the-version-that-holds-up.md) ·
-[Topic index](./README.md) · Next → **05 · The cost, and the alternatives**
-*(not written yet)*
+[Topic index](./README.md) · Next → [05 · The cost, and the alternatives](./05-the-cost.md)

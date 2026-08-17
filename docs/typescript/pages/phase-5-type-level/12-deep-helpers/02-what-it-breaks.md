@@ -130,7 +130,7 @@ helper is being applied to things that are not data.** A method, a `Date`, a `Ma
 produces a shape that has their names and none of their meaning.
 
 🔴 **So the guard the naive version needs is not `T extends object` — it is a list of the
-things that must be handed back untouched.** That is **chunk 03 · The version that holds up** *(not written yet)*'s
+things that must be handed back untouched.** That is [chunk 03 · The version that holds up](./03-the-version-that-holds-up.md)'s
 subject, and it explains why every serious implementation has a stack of conditionals at
 the top rather than one.
 
@@ -238,4 +238,4 @@ changes what the helper produces.
 ---
 
 ← [01 · The naive version](./01-the-naive-version.md) · [Topic index](./README.md) ·
-Next → **03 · The version that holds up** *(not written yet)*
+Next → [03 · The version that holds up](./03-the-version-that-holds-up.md)

@@ -90,7 +90,7 @@ type ReadonlyDeep1<T> = {
 ```
 
 Recursion is legal and useful, and it is also where the phase's discipline starts
-to matter — see **12 · `DeepPartial` / `DeepReadonly`** *(not written yet)* for
+to matter — see [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md) for
 what this costs in error messages and editor responsiveness.
 
 ## Building the standard utilities from an empty file

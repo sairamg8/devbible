@@ -6,10 +6,8 @@ sidebar_position: 0
 
 <span className="db-tier t-know">Know</span>
 
-:::info Topic in progress
-**Chunks 01–04 are written.** The remaining chunks are planned and referred to as plain text
-until they land.
-:::
+**5 chunks, 1,225 lines**, spread **207 · 230 · 231 · 241 · 257** — no file at the cap, and
+nothing trimmed to reach it.
 
 > Verified: 2026-08. 🔴 **The primitive pass-through and the empty call-signature list were
 > read out of the compiler's own source** — **TypeScript 5.9.3**,
@@ -31,13 +29,28 @@ advancing by one.
 | 02 | [What it breaks](./02-what-it-breaks.md) | Five silent failures — 🔴 **a mapped type structurally cannot carry a call signature**, class instances become name-only shells, `DeepPartial` makes array *elements* `undefined`, recursive data cannot be fixed with an accumulator, and `any` is mapped rather than passed through |
 | 03 | [The version that holds up](./03-the-version-that-holds-up.md) | The five guards in the order they must go, 🔴 **why `DeepReadonly` should NOT have an array branch and `DeepPartial` must**, and the three limits no guard removes |
 | 04 | [`DeepPartial` is not `DeepReadonly`](./04-partial-is-not-readonly.md) | 🔴 **One is a restriction, the other a widening** — the three places a deep-partial genuinely belongs, all of them *partial in, complete out*, and what happens when it escapes |
-| 05 | **The cost, and the alternatives** *(not written yet)* | Error messages, the fan-out, the depth cap, and when to reach for something that is not a type |
+| 05 | [The cost, and the alternatives](./05-the-cost.md) | Three costs that multiply, why the error messages are the underrated one, the six fixes cheapest-first, and 🔴 **what a published helper actually sells you — the guard list, not the mapped type** |
 
 ## The one-sentence version
 
 **A deep helper is a homomorphic mapped type applied recursively**, which means it
 inherits modifier preservation, array and tuple handling and union distribution for free —
 and inherits nothing at all about what to do with the objects that are not plain data.
+
+## The four sentences to keep
+
+1. 🔴 **The `T extends object` guard everybody writes is unnecessary for the reason it is
+   always given** — `instantiateConstituent` returns primitives untouched — **and necessary
+   for a different one**, because functions and class instances are object-flagged.
+2. 🔴 **A mapped type structurally cannot carry a call signature.**
+   `resolveMappedTypeMembers` starts the call- and construct-signature lists empty and never
+   refills them, so a method that goes through a mapping comes out as `{}`.
+3. 🔴 **`DeepReadonly` should not have an array branch and `DeepPartial` must.** `readonly`
+   composes with arrays; `?` lands on the element and turns `string[]` into
+   `(string | undefined)[]`.
+4. **One is a restriction and the other is a widening.** `DeepReadonly` cannot describe a
+   value that does not exist; `DeepPartial` claims every subset of your structure is
+   meaningful, which is a statement about your domain and usually false.
 
 ## Where this connects
 
