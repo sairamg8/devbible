@@ -28,3 +28,10 @@ sandbox/**/*.log
 build-react*
 build-*
 .docusaurus-*
+
+# Generated search indexes copied into static/ so that `yarn start` has working
+# search (the plugin only indexes during a build). They are build output, not
+# source: regenerate with `yarn search:index`. Never commit them — the
+# whole-site index measured 94.7 MB, and `yarn deploy` pushes the built site to
+# gh-pages where GitHub hard-blocks any file over 100 MB.
+static/search-index*.json

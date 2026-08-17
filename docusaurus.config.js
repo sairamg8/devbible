@@ -1,5 +1,23 @@
 // @ts-check
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 import {themes as prismThemes} from 'prism-react-renderer';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// One search context per technology, derived from the folders in docs/ rather
+// than hard-coded, so a technology added by any session gets its own index
+// without anyone remembering to edit this list.
+//
+// These strings are matched against the route with the baseUrl stripped, i.e.
+// `docs/react/pages/...` — so the context path is `docs/<technology>`. That is
+// the plugin's own rule: `uri === path || uri.startsWith(path + '/')`.
+const searchContexts = fs
+  .readdirSync(path.join(dirname, 'docs'), {withFileTypes: true})
+  .filter((entry) => entry.isDirectory() && !entry.name.startsWith('_'))
+  .map((entry) => `docs/${entry.name}`)
+  .sort();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -92,6 +110,31 @@ const config = {
         // src/pages holds the homepage language picker and little else —
         // navigation, not reference material worth searching.
         indexPages: false,
+
+        // 🔴 One index PER TECHNOLOGY instead of one for the whole site.
+        //
+        // A single whole-site index measured 94.7 MB (24.5 MB gzipped) at
+        // ~2,900 pages, which is two problems at once: every visitor downloads
+        // all of it before their first result, and `yarn deploy` commits the
+        // built site to gh-pages, where GitHub hard-blocks any file over
+        // 100 MB. At 94.7 MB and a corpus several sessions grow daily, that
+        // ceiling was weeks away, not months.
+        //
+        // Split, a reader inside docs/react fetches only React's index.
+        searchContextByPaths: searchContexts,
+
+        // ⚠️ Deliberately left OFF, and it is the whole reason the split works.
+        //
+        // With this ON the plugin adds every document to the ROOT index *as
+        // well as* its own context index (see postBuildFactory: it `continue`s
+        // past the root push only when this is false). The root index would
+        // then be the full 94.7 MB again — back over the GitHub limit, with
+        // total output roughly doubled.
+        //
+        // The cost is real and worth stating: there is no single search that
+        // spans all technologies at once. The search box gets a context
+        // switcher instead, so you pick the technology and search inside it.
+        useAllContextsWithNoSearchContext: false,
 
         // Both of these earn their keep specifically because the corpus is
         // ~2,900 pages across 15+ technologies, where the same headings
