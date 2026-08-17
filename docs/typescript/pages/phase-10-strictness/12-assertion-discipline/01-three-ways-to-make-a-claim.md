@@ -39,7 +39,9 @@ That is a statement about **file extensions** — the same shape as its neighbou
 `TS8037` *"Type satisfaction expressions can only be used in TypeScript files."*
 
 **There is no diagnostic anywhere that questions whether a `!` is justified**, and
-there cannot be one: `!` means *stop applying strict null checking to this
+there cannot be one
+([Phase 2 · 13](../../phase-2-narrowing/13-non-null-assertion.md) covers what `!`
+does and where it silently does nothing): `!` means *stop applying strict null checking to this
 expression*, so a check on it would be a check on the feature working.
 
 📌 **Compare `as`, which at least has a floor.** `TS2352` exists and can refuse an
@@ -63,7 +65,8 @@ Three things follow, and each one matters more than it looks:
    enough for the compiler to decline the argument. Most wrong assertions are
    between related types, which is exactly the region `TS2352` does not police.
 2. 🔴 **`x as unknown as T` is not a hack someone invented — the compiler names
-   it.** That is worth knowing both ways round: it is sanctioned, and it is the
+   it.** ([Phase 2 · 08](../../phase-2-narrowing/08-as-assertions/README.md) covers
+   the mechanism; what matters here is what it tells you about the diff.) That is worth knowing both ways round: it is sanctioned, and it is the
    documented way to defeat the only check `as` has. **A double assertion in a diff
    means someone was told "these types do not overlap" and proceeded anyway.**
 3. **`as` has no runtime effect at all.** It is erased with the rest of the type
@@ -74,8 +77,9 @@ Three things follow, and each one matters more than it looks:
 
 > `TS1360` · *"Type '{0}' does not satisfy the expected type '{1}'."*
 
-`satisfies` verifies the value against `T` **and leaves the value's own narrow type
-in place** — which is why it is the right default for configuration objects and
+`satisfies` ([Phase 2 · 10](../../phase-2-narrowing/10-satisfies/README.md) has it in
+full) verifies the value against `T` **and leaves the value's own narrow type in
+place** — which is why it is the right default for configuration objects and
 lookup tables, where an annotation would widen away the literal types you wanted.
 [Topic 09](../09-excess-property-checks/README.md) makes the same argument from the
 freshness side: an annotation restores excess property checking *and* widens;
