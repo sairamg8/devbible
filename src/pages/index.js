@@ -74,9 +74,10 @@ const LAYERS = [
       {
         n: '04',
         name: 'React',
-        desc: 'Every hook, the render cycle, Suspense, Actions, Server Components',
+        desc: 'Every hook, the render cycle, Suspense, Actions, Server Components, and a patterns layer — phases 12 and 13 dropped by decision',
         to: '/docs/react',
         active: true,
+        done: true,
         stats: `${react.topicsTotal} topics · ${react.phasesTotal} phases · ${react.phasesDone} phases explained · ${react.pagesWritten} pages`,
         progress: react.percent,
       },
