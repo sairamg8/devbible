@@ -80,7 +80,7 @@ pattern.
 - **← [Phase 3 · Generic functions and inference](../../phase-3-generics/01-generic-functions-and-inference/README.md)**
   — a mixin factory is a generic function whose return type is inferred, so
   everything about inference sites applies here unchanged.
-- **→ Phase 6 · `isolatedDeclarations`** *(not written yet)* — the flag that makes
+- **→ [Phase 6 · `isolatedDeclarations`](../../phase-6-modules-build/15-isolateddeclarations/README.md)** — the flag that makes
   the mixin factory unbuildable, and the trade it is asking you to make.
 
 ---

@@ -72,11 +72,12 @@ sidebar_position: 15
   and **[Topic 14 · What invalidates it](../14-incremental-builds/02-what-invalidates-it.md)**
   — both argue for stable declarations on build-time grounds. 🔴 **This topic is
   that argument turned into an enforced rule.**
-- **← Phase 4 · Mixins** — `TS9021`/`TS9022` make the mixin factory pattern
-  unbuildable under this flag. ⚠️ That page cites `TS9005` in this context; the
-  attribution looks wrong (see chunk 02) and it belongs to another lane, so it
-  has been flagged rather than edited.
-- **→ 16 · Typing non-code imports** *(not written yet)* — the last topic in this
+- **← [Phase 4 · Mixins](../../phase-4-classes-declarations/14-mixins/README.md)**
+  — `TS9021`/`TS9022` make the mixin factory pattern unbuildable under this flag.
+  ⚠️ That page also cites `TS9005` for a `.ts` example, where it would not
+  actually fire (see chunk 02); it belongs to another lane and has been flagged
+  rather than edited.
+- **→ [16 · Typing non-code imports](../16-typing-non-code-imports/README.md)** — the last topic in this
   phase.
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — where
   the emit-toolchain speed question actually belongs.

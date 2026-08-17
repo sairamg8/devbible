@@ -100,11 +100,12 @@ the 5.9.3 build is `transformDeclarationsForJS`** — the *JavaScript* declarati
 path. Seeing one means `allowJs` + `declaration`, and the fix is a JSDoc
 annotation.
 
-⚠️ **This corpus has a page that cites `TS9005` in an `isolatedDeclarations`
-context** — `phase-4-classes-declarations/14-mixins/05-the-cost-in-the-build.md`.
-That file belongs to another lane and has been left alone deliberately, but the
-attribution is worth checking: the mixin argument stands on `TS9021`/`TS9022`,
-which are correct, and does not need `TS9005`.
+⚠️ **One page in this corpus cites `TS9005` for a `.ts` mixin** —
+`phase-4-classes-declarations/14-mixins/05-the-cost-in-the-build.md`, as the
+sibling of `TS4060`. That grouping is reasonable — both are declaration-emit
+"private name" diagnostics — but `TS9005` reaches only the JavaScript path, so
+it would not fire for the `.ts` example given. `TS4060` alone carries that
+argument. The file belongs to another lane and has been left alone.
 
 📌 **The general lesson:** a diagnostic's number range does not tell you which
 feature raises it. Phase 10's error-code work makes the same point from the other
