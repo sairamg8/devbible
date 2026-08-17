@@ -114,7 +114,7 @@ type Shout  = Uppercase<"hello">;           // "HELLO"
 **They are compiler intrinsics, not types written in `lib`** — you cannot look up
 their definition, because there is not one to read; the checker computes them.
 That also means you cannot write a fifth one of your own. Their real home is
-**07 · Template literal types** *(not written yet)*, where key remapping turns
+[07 · Template literal types](../07-template-literal-types.md), where key remapping turns
 them into `Getters<T>` and typed event names.
 
 ## Writing the one that is missing
@@ -240,4 +240,4 @@ for what they produce, not for the mechanism.
 
 ---
 
-← Prev: [04 · The extractors](./04-extractors.md) · [Topic index](./README.md) · Next → **04 · Key remapping with `as`** *(not written yet)*
+← Prev: [04 · The extractors](./04-extractors.md) · [Topic index](./README.md) · Next → [04 · Key remapping with `as`](../04-key-remapping.md)

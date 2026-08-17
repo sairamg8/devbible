@@ -191,7 +191,7 @@ not homomorphic and has nothing to preserve.
 **Cause:** The property's type is a union, and the conditional distributed over
 it, producing `true | false`.
 **Fix:** Stop the distribution with the bracket trick — `[T[P]] extends [X] ? … : …`.
-Covered on **05 · Distributive conditional types** *(not written yet)*.
+Covered on [05 · Distributive conditional types](../05-distributive-conditionals.md).
 
 **Symptom:** The mapped type over a model type includes methods you did not want
 **Cause:** `keyof T` includes every member, methods among them.

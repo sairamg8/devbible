@@ -236,4 +236,4 @@ sees a two-member union and answers for each. The result `"yes" | "no"` — or
 
 ---
 
-← [Phase 5 index](./README.md) · Prev: [04 · Key remapping with `as`](./04-key-remapping.md) · Next → **06 · Extracting with `infer`** *(not written yet)*
+← [Phase 5 index](./README.md) · Prev: [04 · Key remapping with `as`](./04-key-remapping.md) · Next → [06 · Extracting with `infer`](./06-infer/README.md)

@@ -89,7 +89,7 @@ Three honest signals, all of which say the type is costing more than it saves:
   are shorter, faster to check, and self-documenting. A conditional earns its keep
   when the input set is open.
 
-**08 · Knowing when to stop** *(not written yet)* is the whole argument; this is
+[08 · Knowing when to stop](../08-knowing-when-to-stop/README.md) is the whole argument; this is
 the conditional-type-specific half of it.
 
 ## Depth is a real limit, not a style opinion
@@ -201,4 +201,4 @@ them what happened, which `never` cannot.
 
 ---
 
-← Prev: [03 · Composing them](./03-composing.md) · [Topic index](./README.md) · Next → **03 · The built-in utility types** *(not written yet)*
+← Prev: [03 · Composing them](./03-composing.md) · [Topic index](./README.md) · Next → [03 · The built-in utility types](../03-utility-types/README.md)

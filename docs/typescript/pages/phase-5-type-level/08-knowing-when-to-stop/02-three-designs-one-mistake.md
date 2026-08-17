@@ -119,7 +119,7 @@ template expansion — can only be printed as a value.
 📌 **This is not "always use overloads".** Overloads have documented problems of
 their own, including a pass-through failure a conditional handles correctly and two
 shapes the handbook explicitly tells you not to write. That argument, with the
-handbook quoted, is [chunk 05](./05-what-to-write-instead.md). What this comparison
+handbook quoted, is [chunk 06](./06-what-to-write-instead.md). What this comparison
 settles is narrower and mechanical: **a design the compiler can list reports better
 than one it must resolve.**
 
@@ -166,14 +166,14 @@ them.
 **Cause:** Related information nests once per candidate; eight overloads means eight
 reasons.
 **Fix:** Reduce the candidate count — union or optional parameters where the
-handbook recommends them ([chunk 05](./05-what-to-write-instead.md)) — rather than
+handbook recommends them ([chunk 06](./06-what-to-write-instead.md)) — rather than
 hiding the message.
 
 **Symptom:** A union argument that should work is rejected by the overloads.
 **Cause:** The documented pass-through problem: a caller holding `number | string`
 cannot satisfy any single overload.
 **Fix:** That is the case *for* a union parameter or a generic; see
-[chunk 05](./05-what-to-write-instead.md). It is the one place C loses outright.
+[chunk 06](./06-what-to-write-instead.md). It is the one place C loses outright.
 
 **Symptom:** Somebody replaced working overloads with a conditional to "clean up the
 error".
@@ -187,7 +187,7 @@ and nobody notices for weeks.
 variable.
 **Fix:** Name the fallback something loud — a message string type — while designing,
 then replace it with a constraint before merging
-([chunk 06](./06-keeping-the-ones-you-keep.md)).
+([chunk 10](./10-keeping-the-ones-you-keep.md)).
 
 **Symptom:** Version C's two signatures drifted apart during a refactor.
 **Cause:** Overloads duplicate the shared parts of a signature, so a change has two
@@ -230,7 +230,7 @@ better error message.
 When a caller passes a value of a union type through. Each overload must be
 satisfied individually, so `number | string` matches none of them, even though every
 member matches one — the handbook's own example of this is in
-[chunk 05](./05-what-to-write-instead.md). A single union parameter, or a generic
+[chunk 06](./06-what-to-write-instead.md). A single union parameter, or a generic
 with a bound, handles it correctly.
 
 **Version B and version C both report at the call site. What decides between them?**

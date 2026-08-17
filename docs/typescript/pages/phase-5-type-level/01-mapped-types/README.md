@@ -63,9 +63,9 @@ union (topic 03) and `ReturnType` needs `infer` (topic 06).
   capability differences between them.
 - **← [Phase 1 · `readonly` and immutability](../../phase-1-type-vocabulary/14-readonly-and-immutability.md)**
   — what the modifier means before a mapping starts adding and removing it.
-- **→ 02 · Conditional types** *(not written yet)* — the other half of every
+- **→ [02 · Conditional types](../02-conditional-types/README.md)** — the other half of every
   useful helper type; chunk 03 composes the two.
-- **→ 04 · Key remapping with `as`** *(not written yet)* — renaming and filtering
+- **→ [04 · Key remapping with `as`](../04-key-remapping.md)** — renaming and filtering
   keys, and the homomorphism it costs you.
 
 ---

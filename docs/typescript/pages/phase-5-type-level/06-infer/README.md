@@ -54,7 +54,7 @@ will ever write is that line with a different pattern.
   `infer` names.
 - **← [Phase 3 · `infer` in conditional types](../../phase-3-generics/11-infer-in-conditional-types.md)**
   — the first encounter, in a generics context.
-- **→ 07 · Template literal types** *(not written yet)* — the string half of chunk
+- **→ [07 · Template literal types](../07-template-literal-types.md)** — the string half of chunk
   02, on its own terms.
 - **→ 13 · Tuple manipulation** *(not written yet)* — variadic patterns like
   `[...infer Rest, infer Last]`, which chunk 01 previews.

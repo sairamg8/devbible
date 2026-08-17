@@ -254,4 +254,4 @@ read the failure of has negative value, however elegant it is.
 
 ---
 
-← Prev: [03 · Writing your own](./03-writing-your-own.md) · [Topic index](./README.md) · Next → **02 · Conditional types** *(not written yet)*
+← Prev: [03 · Writing your own](./03-writing-your-own.md) · [Topic index](./README.md) · Next → [02 · Conditional types](../02-conditional-types/README.md)

@@ -81,7 +81,7 @@ type Events<T> = {
 };
 ```
 
-**07 · Template literal types** *(not written yet)* covers the string side of
+[07 · Template literal types](./07-template-literal-types.md) covers the string side of
 this properly — pattern matching on strings, `infer` inside a template, and the
 four case intrinsics.
 
@@ -278,4 +278,4 @@ information — a prefix or conditional that funnels several keys to one name.
 
 ---
 
-← [Phase 5 index](./README.md) · Prev: [03 · The built-in utility types](./03-utility-types/README.md) · Next → **05 · Distributive conditional types** *(not written yet)*
+← [Phase 5 index](./README.md) · Prev: [03 · The built-in utility types](./03-utility-types/README.md) · Next → [05 · Distributive conditional types](./05-distributive-conditionals.md)

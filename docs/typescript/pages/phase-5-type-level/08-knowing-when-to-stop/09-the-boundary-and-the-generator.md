@@ -168,7 +168,7 @@ because it is believed.
 **Symptom:** The validated type is right and the code still uses `as` afterwards.
 **Cause:** Narrowing was lost between the check and the use — a reassignment, a callback, a
 property access.
-**Fix:** [Phase 2 · narrowing lost](../../phase-2-narrowing/11-narrowing-lost.md), not a
+**Fix:** [Phase 2 · narrowing lost](../../phase-2-narrowing/11-narrowing-lost/README.md), not a
 type-level problem.
 
 ## Interview questions

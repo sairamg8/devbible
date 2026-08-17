@@ -43,7 +43,7 @@ type Num = GetReturnType<() => number>;
 ```
 
 That is `ReturnType` from the standard library, near enough. **`infer` has its own
-page — 06 · Extracting with `infer`** *(not written yet)* — including multiple
+page — [06 · Extracting with `infer`](../06-infer/README.md)** — including multiple
 `infer` sites, `infer … extends …` constraints, and where inference goes wrong.
 What matters here is the shape: a conditional is the only place `infer` is legal,
 so every extractor you will ever read is a conditional type underneath.
@@ -70,7 +70,7 @@ type ArrOfStrOrNum = ToArrayNonDist<string | number>;
 
 Wrapping both sides in brackets stops it. That is the whole trick, and the rest
 — why `never` disappears, what "naked" means precisely, when distribution is what
-you wanted — is **05 · Distributive conditional types** *(not written yet)*. It
+you wanted — is [05 · Distributive conditional types](../05-distributive-conditionals.md). It
 is listed here because you cannot read library types without meeting it, and
 because the two examples above are the ones everyone learns it from.
 

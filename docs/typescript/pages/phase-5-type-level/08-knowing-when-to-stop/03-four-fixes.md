@@ -166,7 +166,7 @@ intersection, which the compiler prints structurally rather than by name.
 **Fix:** Apply the `Prettify` identity mapping at the boundary
 ([topic 01 · chunk 01](../01-mapped-types/01-the-loop.md)), or express the shape with
 `interface … extends` instead of `&`
-([chunk 05](./05-what-to-write-instead.md)).
+([chunk 06](./06-what-to-write-instead.md)).
 
 **Symptom:** Naming the intermediates made the file longer and the hover worse.
 **Cause:** Names were given to steps that are not concepts — `Step1`, `Tmp2`.

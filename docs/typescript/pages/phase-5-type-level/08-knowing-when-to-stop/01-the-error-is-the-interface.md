@@ -53,7 +53,7 @@ else's, and there are far more of them.
 thousand projects is read by more strangers than any application type, so its
 failure mode matters *more*, not less — which is why the well-known libraries
 invest in error-message design that application code cannot justify.
-[Chunk 06](./06-the-cases-that-earn-it.md) is where that case is made properly.
+[Chunk 11](./11-the-cases-that-earn-it.md) is where that case is made properly.
 
 ## What the compiler can and cannot tell them
 
@@ -98,8 +98,8 @@ That message names the constraint **the author wrote**, at the call site **the
 caller wrote**. It is the only diagnostic in this topic that points at a decision a
 human made, rather than printing a value a machine derived.
 
-Everything in [chunk 02](./02-three-designs-and-the-fix.md) and
-[chunk 05](./05-keeping-the-ones-you-keep.md) about "constrain the input instead of
+Everything in [chunk 02](./02-three-designs-one-mistake.md) and
+[chunk 10](./10-keeping-the-ones-you-keep.md) about "constrain the input instead of
 handling nonsense in a branch" comes back to this one message existing.
 
 ## The compiler *can* point at a declaration — just not at a branch
@@ -133,12 +133,12 @@ Three facts, and every recommendation later is downstream of them:
 
 1. **Failures print types, not programs.** So the readability of a type-level
    program is the readability of its *output*, and the fix is naming
-   ([chunk 02](./02-three-designs-and-the-fix.md)).
+   ([chunk 02](./02-three-designs-one-mistake.md)).
 2. **Constraints fail early and by name.** So bad input should be excluded by a
    bound, never handled by a fallback branch.
 3. **Enumerable candidates produce enumerable errors.** So a design the compiler
    can list — overloads, a discriminated union — reports better than one it must
-   resolve. That is [chunk 03](./03-what-to-write-instead.md)'s subject, with the
+   resolve. That is [chunk 06](./06-what-to-write-instead.md)'s subject, with the
    documented caveats attached.
 
 ## Gotchas
@@ -148,7 +148,7 @@ intersection.
 **Cause:** The computed type had no alias, so the compiler filled `{0}` with
 structure instead of a name.
 **Fix:** Extract named aliases for every intermediate step
-([chunk 02](./02-three-designs-and-the-fix.md)).
+([chunk 02](./02-three-designs-one-mistake.md)).
 
 **Symptom:** A forty-line error with a dozen `Types of property` lines.
 **Cause:** `TS2326`/`TS2328` nesting — the message walks one level per level of
@@ -174,7 +174,7 @@ make it.
 **Cause:** There is no diagnostic for "your input did not match my intent". The
 compiler only has assignability.
 **Fix:** Encode the intent *as* the type — a named constraint, or a named
-error-message type in the fallback ([chunk 05](./05-keeping-the-ones-you-keep.md)).
+error-message type in the fallback ([chunk 10](./10-keeping-the-ones-you-keep.md)).
 
 **Symptom:** An error mentions a type from a library the caller has never imported.
 **Cause:** Your derived type expanded through the library's aliases, and the
@@ -256,4 +256,4 @@ resolved type cannot.
 
 ---
 
-← [Topic index](./README.md) · Next → [02 · Three designs, and the fix](./02-three-designs-and-the-fix.md)
+← [Topic index](./README.md) · Next → [02 · Three designs, and the fix](./02-three-designs-one-mistake.md)

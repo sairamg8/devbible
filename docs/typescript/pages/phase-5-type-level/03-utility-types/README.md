@@ -68,7 +68,7 @@ Gotchas sections in chunks 02 to 04 are for.
   filters and the extractors, built from scratch.
 - **← [Phase 3 · Variance](../../phase-3-generics/14-variance.md)** — why two
   `infer` sites in parameter positions intersect rather than union.
-- **→ 07 · Template literal types** *(not written yet)* — where `Capitalize` and
+- **→ [07 · Template literal types](../07-template-literal-types.md)** — where `Capitalize` and
   its siblings actually earn their place.
 - **→ 12 · `DeepPartial` / `DeepReadonly`** *(not written yet)* — the recursive
   versions of the shallow shapers, and what they cost.

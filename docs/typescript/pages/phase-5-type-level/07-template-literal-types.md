@@ -251,4 +251,4 @@ worth it if the failure it produces is readable.
 
 ---
 
-← [Phase 5 index](./README.md) · Prev: [06 · Extracting with `infer`](./06-infer/README.md) · Next → **08 · Knowing when to stop** *(not written yet)*
+← [Phase 5 index](./README.md) · Prev: [06 · Extracting with `infer`](./06-infer/README.md) · Next → [08 · Knowing when to stop](./08-knowing-when-to-stop/README.md)

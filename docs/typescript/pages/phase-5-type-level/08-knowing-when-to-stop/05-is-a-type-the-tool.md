@@ -45,7 +45,7 @@ or delete the type.
 📌 **The productive combination is both, in one direction.** Validate at the boundary,
 then **derive your types from the validator** so there is one source of truth that is
 checked at runtime and known at compile time. That is a legitimate and common use of
-this phase's machinery — see [chunk 08](./08-the-cases-that-earn-it.md).
+this phase's machinery — see [chunk 11](./11-the-cases-that-earn-it.md).
 
 ## Test 6 · Who maintains it when you are not here?
 

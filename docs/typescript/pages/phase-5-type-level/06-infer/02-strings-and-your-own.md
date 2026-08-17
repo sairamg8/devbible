@@ -202,4 +202,4 @@ pattern, which is the whole point of learning the shape rather than the list.
 
 ---
 
-← Prev: [01 · Pattern matching](./01-pattern-matching.md) · [Topic index](./README.md) · Next → **07 · Template literal types** *(not written yet)*
+← Prev: [01 · Pattern matching](./01-pattern-matching.md) · [Topic index](./README.md) · Next → [07 · Template literal types](../07-template-literal-types.md)

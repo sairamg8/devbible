@@ -65,10 +65,10 @@ mapping. `ReturnType` needs `infer`, which is topic 06.
   conditional results will look arbitrary.
 - **← [Phase 3 · `infer` in conditional types](../../phase-3-generics/11-infer-in-conditional-types.md)**
   — met there in a generics context; chunk 03 uses it, topic 06 takes it apart.
-- **→ 05 · Distributive conditional types** *(not written yet)* — what "naked
+- **→ [05 · Distributive conditional types](../05-distributive-conditionals.md)** — what "naked
   type parameter" means precisely, why `never` vanishes, and the bracket trick in
   full.
-- **→ 06 · Extracting with `infer`** *(not written yet)* — multiple `infer` sites,
+- **→ [06 · Extracting with `infer`](../06-infer/README.md)** — multiple `infer` sites,
   constrained `infer`, and the standard-library extractors.
 - **→ 09 · Type-level performance** *(not written yet)* — `TS2589`, `TS2321` and
   what makes a checker slow.
