@@ -57,9 +57,10 @@ Everything in this topic is a consequence of that sentence.
 | 05 | [The Node resolver](./05-the-node-resolver.md) | `node16`/`nodenext` — the only mode that models two algorithms, and why you write `./db.js` |
 | 06 | [The bundler resolver](./06-the-bundler-resolver.md) | `bundler` — the union of the other two, the `node` condition it does *not* match, and the `TS5095` change in 7.0 |
 | 07 | [The defaults you did not set](./07-the-defaults-you-did-not-set.md) | 🔴 The computed-option chain, read from source — including the one that silently gives you `classic` |
-| 08 | [Format detection, file by file](./08-format-detection.md) | How `node16`–`nodenext` decides ESM or CJS per file, and how to ask the compiler why |
-| 09 | [When the model is wrong](./09-when-the-model-is-wrong.md) | The failure catalogue: symptom → cause → fix, with the compiler's own message text |
-| 10 | [Choosing, and migrating](./10-choosing-and-migrating.md) | The decision procedure per host, the doc-backed configs, and the order to change things in |
+| 08 | [Implied, enforced, and incompatible](./08-implied-and-enforced.md) | What you cannot override, what fails silently, and the four diagnostics that police the pairings |
+| 09 | [Format detection, file by file](./09-format-detection.md) | How `node16`–`nodenext` decides ESM or CJS per file, and how to ask the compiler why |
+| 10 | [When the model is wrong](./10-when-the-model-is-wrong.md) | The failure catalogue: symptom → cause → fix, with the compiler's own message text |
+| 11 | [Choosing, and migrating](./11-choosing-and-migrating.md) | The decision procedure per host, the doc-backed configs, and the order to change things in |
 
 ## Three sentences to keep
 

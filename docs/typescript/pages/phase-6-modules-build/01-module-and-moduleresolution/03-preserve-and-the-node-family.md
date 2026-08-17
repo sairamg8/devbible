@@ -109,7 +109,7 @@ your errors, confirmed in the compiler's computed-option table:
 🔴 That table is read out of the compiler, not from documentation, and it is the
 concrete reason a "harmless" `node18` → `node20` change alters downlevelling
 behaviour: one array method's worth of `target` moved with it.
-[Chunk 05](./05-the-defaults-you-did-not-set.md) reads the whole computed chain.
+[Chunk 07](./07-the-defaults-you-did-not-set.md) reads the whole computed chain.
 
 ## Choosing between the four
 

@@ -28,7 +28,7 @@ it is the only one that models **two algorithms at once**.
 That last sentence is the whole design. Every other strategy is one algorithm.
 This one is two, and which you get depends on how the **importing** file is
 loaded — a fact established per file by format detection
-([chunk 08](./08-format-detection.md)).
+([chunk 09](./09-format-detection.md)).
 
 The handbook gives it as a two-column table, and it is the most useful table in
 the modules reference:

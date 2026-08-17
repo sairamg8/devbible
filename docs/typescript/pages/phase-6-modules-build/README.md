@@ -34,7 +34,7 @@ lanes:
 
 | # | Page | Tier | What it settles |
 |---|---|---|---|
-| 01 | [`module` and `moduleResolution`](./01-module-and-moduleresolution/README.md) *(10 chunks)* | <span className="db-tier t-master">Master</span> | `node16`/`nodenext` vs `bundler` vs the legacy `node10`; picking the one that matches what actually loads your code |
+| 01 | [`module` and `moduleResolution`](./01-module-and-moduleresolution/README.md) *(11 chunks)* | <span className="db-tier t-master">Master</span> | `node16`/`nodenext` vs `bundler` vs the legacy `node10`; picking the one that matches what actually loads your code |
 | 02 | `import type` / `export type` and `verbatimModuleSyntax` | <span className="db-tier t-master">Master</span> | Why a type-only import must be erasable, and the runtime import that vanished and broke a side effect |
 | 03 | Path aliases — `paths` | <span className="db-tier t-master">Master</span> | `tsc` resolves `@/lib`, **Node does not** — so something has to resolve it again at runtime |
 | 04 | `lib`, `target` and the ambient environment | <span className="db-tier t-understand">Understand</span> | DOM vs Node globals, `@types/node`, and why `structuredClone` is missing from your types but present at runtime |
