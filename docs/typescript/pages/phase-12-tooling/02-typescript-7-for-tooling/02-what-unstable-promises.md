@@ -148,4 +148,4 @@ an unexamined worry rather than a finding.
 
 ---
 
-← [01 · Which of your tools actually reach in](./01-which-tools-actually-reach-in.md) · [Topic index](./README.md) · Next → **03 · Upgrading in stages** *(not written yet)*
+← [01 · Which of your tools actually reach in](./01-which-tools-actually-reach-in.md) · [Topic index](./README.md) · Next → [03 · Upgrading in stages](./03-upgrading-in-stages.md)

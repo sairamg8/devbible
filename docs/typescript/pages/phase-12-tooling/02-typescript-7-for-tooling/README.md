@@ -13,12 +13,6 @@ sidebar_position: 0
 > here. Tool-side claims are attributed to each tool's documentation.
 > **No sandbox run of our own, no console block.**
 
-:::info 🚧 This topic is mid-write — 2 chunks
-Chunks **01 and 02 are written**. References to the rest are deliberately **plain text
-rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
 Phase 0 established what TypeScript 7 *is*: **the language did not change, the tool
 did**, and the root `ts.*` export was replaced by an explicitly `unstable/` surface.
 This topic is the operational follow-up — **auditing your toolchain before you
@@ -35,7 +29,7 @@ upgrade, rather than discovering it during.**
 |---|---|---|
 | 01 | [Which of your tools actually reach in](./01-which-tools-actually-reach-in.md) | The two columns, the tools that import the API grouped by *why*, the ten-minute audit — and 🔴 that a **type-aware linter is a compiler-API consumer**, which is the entry people miss |
 | 02 | [What `unstable/` actually promises](./02-what-unstable-promises.md) | 🔴 It is a **versioning contract — this surface may change without a major bump** — not a maturity label, so a caret range on it is a promise nobody made. Plus the wider habit: **check whether what you pin considers itself bound by semver at all** |
-| 03 | **Upgrading in stages** *(not written yet)* | Moving the gate before the tools, the editor's own compiler version, and the rollback |
+| 03 | [Upgrading in stages](./03-upgrading-in-stages.md) | 🔴 **The gate can move before the tools do**, because a `tsc` invocation and an API import are different consumers — plus the editor as a **third** consumer on nobody's list, re-testing the gate after a compiler swap, and why the steps must be **separate commits** |
 
 ## Phase gate
 
