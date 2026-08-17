@@ -174,7 +174,7 @@ that is the right answer rather than a defeat.
 
 **Symptom:** The result of a spread has a label you did not write.
 **Cause:** Labels propagate through spreads; that is deliberate and it is
-**chunk 03 · Labels, optionality and the spread rule**'s subject *(not written yet)*.
+[chunk 03 · Labels, optionality and the spread rule](./03-labels-and-optionality.md)'s subject.
 **Fix:** Nothing — it is the feature working.
 
 ## Interview questions
@@ -226,4 +226,4 @@ representation that did not exist before 4.0.
 ---
 
 ← [01 · The accessors](./01-the-accessors.md) · [Topic index](./README.md) ·
-Next → **03 · Labels, optionality and the spread rule** *(not written yet)*
+Next → [03 · Labels, optionality and the spread rule](./03-labels-and-optionality.md)
