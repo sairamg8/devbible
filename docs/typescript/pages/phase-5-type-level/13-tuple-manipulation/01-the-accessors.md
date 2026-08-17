@@ -216,4 +216,4 @@ inputs it was written for.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · Variadic tuple types** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · Variadic tuple types](./02-variadic-tuple-types.md)

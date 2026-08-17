@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-know">Know</span>
 
 :::info Topic in progress
-**Chunk 01 is written.** The remaining chunks are planned and referred to as plain text until
+**Chunks 01 and 02 are written.** The remaining chunks are planned and referred to as plain text until
 they land.
 :::
 
@@ -26,7 +26,7 @@ tuple type exists.
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [The accessors](./01-the-accessors.md) | `Head`, `Tail`, `Last`, `Init`, `Length` — why every pattern needs `readonly`, why `never` and `[]` are different base cases, and why `Last` was unwritable before 4.0 |
-| 02 | **Variadic tuple types** *(not written yet)* | Generic spreads, rest elements anywhere, and the rule that spreading an unbounded type makes everything after it unbounded |
+| 02 | [Variadic tuple types](./02-variadic-tuple-types.md) | The two changes 4.0 actually made, 🔴 **the rule that positions before an unbounded spread survive and positions after it do not**, and why a structural operation should be a spread rather than a recursion |
 | 03 | **Labels, optionality and the spread rule** *(not written yet)* | The 4.0 labelling rules, and why rebuilding a tuple from indexed access destroys what a spread preserves |
 | 04 | **Typing `bind`, `curry` and partial application** *(not written yet)* | The release notes' own `partialCall`, and where the pattern stops working |
 | 05 | **The limits** *(not written yet)* | The 10,000-element ceiling, the cost of a recursive tuple walk, and when a tuple type is the wrong shape |
