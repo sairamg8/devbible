@@ -45,7 +45,7 @@ lanes:
 | 09 | [`esModuleInterop` and default imports](./09-esmoduleinterop-and-default-imports/README.md) *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | What `import express from 'express'` means for a CommonJS package |
 | 10 | [`skipLibCheck`](./10-skiplibcheck/README.md) *(8 chunks)* | <span className="db-tier t-understand">Understand</span> | Nearly everyone sets it; know exactly which errors you are agreeing not to see |
 | 11 | [Publishing a typed package](./11-publishing-a-typed-package/README.md) *(9 chunks)* | <span className="db-tier t-understand">Understand</span> | `exports`, `types`/`typesVersions`, dual ESM/CJS, and validating the result |
-| 12 | Sharing types across a monorepo | <span className="db-tier t-understand">Understand</span> | Source imports vs built `.d.ts`, and the editor-vs-build divergence each causes |
+| 12 | [Sharing types across a monorepo](./12-sharing-types-across-a-monorepo/README.md) *(6 chunks)* | <span className="db-tier t-understand">Understand</span> | Source imports vs built `.d.ts`, and the editor-vs-build divergence each causes |
 | 13 | Project references and `tsc -b` | <span className="db-tier t-know">Know</span> | `composite`, build order, and when a monorepo actually needs them |
 | 14 | Incremental builds | <span className="db-tier t-know">Know</span> | `.tsbuildinfo`, what invalidates it, and caching it in CI |
 | 15 | `isolatedDeclarations` | <span className="db-tier t-know">Know</span> | Declaration emit without full inference, the annotation cost, and the speed it buys |
