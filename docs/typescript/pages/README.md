@@ -20,10 +20,10 @@ started with just a letter — *"typescript c"* — reads its row below and begi
 
 | Lane | Scope — the only directories it may touch | Left | Claimed by |
 |---|---|---|---|
-| **A · type-level** | `phase-5-type-level/` topics **08–16** | 4 | session `65de22b3`, 2026-08-17 |
+| **A · type-level** | `phase-5-type-level/` topics **08–16** | 3 | session `65de22b3`, 2026-08-17 |
 | **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 13 | session `c01e37bb`, 2026-08-17 (took over from `ede9cd9f`) |
 | **C · the module system** | `phase-6-modules-build/` topics **01–06** | ✅ **0 — DONE 6/6** | session `f4392a13`, 2026-08-17 (took over from `5ff47a9c`) |
-| **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 2 | session `e28ddf99`, 2026-08-17 (took over from `8dcc0095`) |
+| **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | ✅ **0 — DONE 10/10** | session `e28ddf99`, 2026-08-17 (took over from `8dcc0095`) |
 
 🔴 **Re-split four ways on 2026-08-17.** Phase 6 was the imbalance, not the lanes: weighted
 by tier it projected to ~10,350 lines — 43% of all remaining TypeScript — in one unclaimed
@@ -90,8 +90,8 @@ untouched by it.
 | [2 · Narrowing and control flow analysis](./phase-2-narrowing/README.md) | The type system | 13 | ✅ written |
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 14 / 14 | ✅ written |
-| [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 12 / 16 | 🚧 writing |
-| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 14 / 16 | 🚧 writing |
+| [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 13 / 16 | 🚧 writing |
+| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 16 / 16 | ✅ written |
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
