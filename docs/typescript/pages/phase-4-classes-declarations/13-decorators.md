@@ -238,4 +238,4 @@ declarative, discoverable surface.
 
 ---
 
-← Prev: [12 · Static members](./12-static-members-and-the-static-side.md) · Next → **14 · Mixins** *(not written yet)*
+← Prev: [12 · Static members](./12-static-members-and-the-static-side.md) · Next → [14 · Mixins](./14-mixins/README.md)

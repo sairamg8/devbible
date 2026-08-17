@@ -44,6 +44,8 @@ scratch, and explain why it must live in a file the compiler actually includes.
 
 ---
 
+📖 **Explanation written:** [Phase 4 — Classes, objects and declaration merging](../pages/phase-4-classes-declarations/README.md)
+
 ## Phase 5 — Type-level programming
 
 *16 topics.* Types that take types as input. The useful 20 % — mapped types,

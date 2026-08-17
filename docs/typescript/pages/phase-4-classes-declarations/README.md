@@ -7,13 +7,13 @@ sidebar_position: 4
 > Verified: 2026-08 against the **TypeScript handbook** (*Declaration Merging*,
 > *Classes*, *Modules*) and the release notes for anything with a version.
 > Error codes and their exact `{0}`-templated message text are read out of the
-> **compiler's own diagnostic table** rather than recalled — ⚠️ the install
-> inspected is TypeScript **6.0.3**, not the 7.0.2 this corpus targets, and each
-> page that quotes it says so. **No sandbox, no console blocks**: every claim
+> **compiler's own diagnostic table** rather than recalled — ⚠️ topics 01–13 read
+> the **6.0.3** table, topic 14 confirms its messages against the **7.0.2**
+> compiler this corpus targets, and each page says which it used. **No sandbox, no console blocks**: every claim
 > here is documentation-validated, and a plausible-looking `tsc` transcript
 > written from memory is not evidence.
 
-**14 topics.** TypeScript's class syntax is mostly JavaScript's, so this phase is
+**14 topics · 29 files · 5,691 lines · complete.** TypeScript's class syntax is mostly JavaScript's, so this phase is
 short on the class and long on the two things that are genuinely TypeScript:
 **declaration merging** and **module augmentation** — the mechanism behind every
 `req.user` you have ever seen typed.
@@ -44,9 +44,7 @@ ends up in a JSON payload.
 | 11 | [Abstract classes and abstract construct signatures](./11-abstract-classes.md) | <span className="db-tier t-know">Know</span> | Typing "a class, not an instance", and `new (…args) => T` |
 | 12 | [Static members, static blocks and the static side](./12-static-members-and-the-static-side.md) | <span className="db-tier t-know">Know</span> | Why the instance type and the constructor type are two different types |
 | 13 | [Decorators (stage 3)](./13-decorators.md) | <span className="db-tier t-know">Know</span> | The current standard form, and the older `experimentalDecorators` you still meet |
-| 14 | Mixins | <span className="db-tier t-when">When Needed</span> | The constructor-returning-class pattern, and its type cost |
-
-*(Pages are linked from this table as they are written.)*
+| 14 | [Mixins](./14-mixins/README.md) *(7 chunks)* | <span className="db-tier t-when">When Needed</span> | The constructor-returning-class pattern, and its type cost |
 
 ## Phase gate
 
