@@ -201,9 +201,9 @@ staleness trap and it is caused by over-memoizing.
 **Testing the reducer in isolation proves the transitions and nothing else.** No
 assertion in a reducer suite can tell you the `Escape` handler is wired up.
 
-**A veto that returns a *new but equal* object defeats the bail-out.** `return
-{ ...state }` is not `return state`; the identity differs, so React re-renders.
-Return the original reference.
+**A veto that returns a *new but equal* object defeats the bail-out.**
+Writing `return { ...state }` is not the same as `return state` — the identity
+differs, so React re-renders. Return the original reference.
 
 **Composed reducers make the veto ambiguous.** If the wrapper vetoes and the
 application amends, whose intent wins depends entirely on the order you chose —

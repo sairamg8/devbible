@@ -196,10 +196,10 @@ its default has to be `(state, action, changes) => changes`. Defaulting to
 nothing and calling it anyway returns `undefined` and wipes the state on the
 first dispatch.
 
-**A caller who returns a partial object destroys the rest of the state.** `return
-{ isOpen: true }` — without spreading `changes` — leaves `selectedItem`
-undefined. This is the single most common caller error, and it is worth a runtime
-warning in development.
+**A caller who returns a partial object destroys the rest of the state.**
+Writing `return { isOpen: true }` without spreading `changes` leaves
+`selectedItem` undefined. This is the single most common caller error, and it is
+worth a runtime warning in development.
 
 **It cannot express "set this from outside".** A state reducer only ever runs in
 response to an action the component dispatched. If the caller needs to open the
