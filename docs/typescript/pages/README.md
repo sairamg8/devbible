@@ -91,7 +91,7 @@ untouched by it.
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 14 / 14 | ✅ written |
 | [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 9 / 16 | 🚧 writing |
-| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 4 / 16 | 🚧 writing |
+| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 5 / 16 | 🚧 writing |
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
