@@ -31,7 +31,7 @@ adequate one.
 | 4 | **Context + Provider** | <span className="db-tier t-master">Master</span> | [phase 5 · 04](../phase-5-refs-context-reducers/04-createcontext-usecontext.md) · [05](../phase-5-refs-context-reducers/05-context-re-render-problem.md) · [12](../phase-5-refs-context-reducers/12-context-plus-reducer.md) | Values that skip the prop chain — and the re-render bill |
 | 5 | **Controlled components** | <span className="db-tier t-master">Master</span> | [phase 2 · 04](../phase-2-components/04-controlled-vs-uncontrolled/README.md) | Who owns the value, and why `undefined` decides it permanently |
 | 6 | **Headless components** | <span className="db-tier t-master">Master</span> | **[06 · here](06-headless-components/README.md)** | All the behaviour, none of the markup — justified by accessibility, not reuse |
-| 7 | **Render props** | <span className="db-tier t-know">Know</span> | [phase 2 · 12](../phase-2-components/12-render-props.md) | The pre-hooks sharing pattern, and the cases hooks still cannot cover |
+| 7 | **Render props** | <span className="db-tier t-know">Know</span> | [phase 2 · 12](../phase-2-components/12-render-props/README.md) | The pre-hooks sharing pattern, and the cases hooks still cannot cover |
 | 8 | **State reducer** | <span className="db-tier t-understand">Understand</span> | **[08 · here](08-state-reducer/README.md)** | Let the caller intercept a transition instead of adding a prop per exception |
 | 9 | **Container / presentational** | <span className="db-tier t-know">Know</span> | **[09 · here](09-container-presentational.md)** | The pattern hooks retired — and why its author withdrew it |
 | 10 | **Higher-order components** | <span className="db-tier t-know">Know</span> | [phase 2 · 13](../phase-2-components/13-higher-order-components.md) | Three documented caveats, one quietly fixed by React 19 |
@@ -64,7 +64,7 @@ Not peers of the ten — machinery the ten are built from, most often
 | "Two components need the same *logic*" | **A custom hook** | [phase 7 · 02](../phase-7-custom-hooks/02-writing-a-custom-hook.md) |
 | "Two components need the same *state*" | **Lift it** — a hook will not do this | [phase 7 · 03](../phase-7-custom-hooks/03-share-logic-not-state/README.md) |
 | "All the behaviour, my own markup" | **Headless** | [06](06-headless-components/README.md) |
-| "Hand the caller my state so they render it their way" | **Render props** | [phase 2 · 12](../phase-2-components/12-render-props.md) |
+| "Hand the caller my state so they render it their way" | **Render props** | [phase 2 · 12](../phase-2-components/12-render-props/README.md) |
 | "Almost right, but this one caller needs different behaviour" | **State reducer** | [08](08-state-reducer/README.md) |
 | "Who owns this input's value?" | **Controlled vs uncontrolled** | [phase 2 · 04](../phase-2-components/04-controlled-vs-uncontrolled/README.md) |
 | "This value needs to skip six levels of props" | **Context** | [phase 5 · 04](../phase-5-refs-context-reducers/04-createcontext-usecontext.md) |

@@ -198,7 +198,7 @@ Where function-as-children still earns its place:
 - **A render must be scoped to a boundary** — inside a Suspense boundary, inside
   an error boundary, inside a portal.
 
-[Topic 12](12-render-props.md) covers the pattern in full, including why it
+[Topic 12](12-render-props/README.md) covers the pattern in full, including why it
 mostly lost to hooks.
 
 ## Choosing

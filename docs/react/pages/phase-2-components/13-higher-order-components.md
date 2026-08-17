@@ -34,7 +34,7 @@ const ProfileWithUser = withUser(Profile);      // ✅ at module level
 
 The HOC does not modify the component it receives — it wraps it. The result is a
 new component that renders the original with extra props. Before hooks, this and
-[render props](12-render-props.md) were the two ways to share stateful logic
+[render props](12-render-props/README.md) were the two ways to share stateful logic
 between components.
 
 Note where `withUser(Profile)` is called: **module level, once.** That placement
@@ -245,4 +245,4 @@ statics, `displayName`, transparency — is unchanged.
 
 ---
 
-← Prev: [Render props and function-as-children](12-render-props.md) · Index: [Phase 2](README.md) · Next → [Class components](14-class-components/README.md)
+← Prev: [Render props and function-as-children](12-render-props/README.md) · Index: [Phase 2](README.md) · Next → [Class components](14-class-components/README.md)

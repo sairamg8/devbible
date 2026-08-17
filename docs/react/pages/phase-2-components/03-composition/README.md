@@ -33,7 +33,7 @@ behind them.
   single child.
 - **→ [Children patterns](../08-children-patterns.md)** — the wrapper, layout
   and function-as-children shapes in detail.
-- **→ [Render props](../12-render-props.md)** — the fourth slot form, for when
+- **→ [Render props](../12-render-props/README.md)** — the fourth slot form, for when
   the parent must supply values to what it renders.
 - **→ [Element manipulation](../16-element-manipulation.md)** — why slicing
   `children` apart is the fragile way to fake multiple slots.

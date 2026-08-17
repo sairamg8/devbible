@@ -49,7 +49,7 @@ know *how things look*.** Containers had state and data sources; presentational
 components took props and returned JSX, nothing else.
 
 In 2015 this was genuinely useful, and the reason is specific. The only ways to
-share stateful logic were [render props](../phase-2-components/12-render-props.md)
+share stateful logic were [render props](../phase-2-components/12-render-props/README.md)
 and [higher-order components](../phase-2-components/13-higher-order-components.md),
 both of which force an extra component into the tree anyway. Given that you were
 paying for a wrapper regardless, making the wrapper the data layer was a sound

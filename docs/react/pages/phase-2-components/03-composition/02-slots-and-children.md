@@ -201,7 +201,7 @@ syllabus's cross-phase note points Phase 2 at Phase 10.
 | One content area, no opinion about it | `children` |
 | Several fixed regions | Named element props |
 | Parts that must share state and be arranged freely | Compound components + context |
-| The parent must supply values to what it renders | Render props ([topic 12](../12-render-props.md)) |
+| The parent must supply values to what it renders | Render props ([topic 12](../12-render-props/README.md)) |
 | A value is needed by many components at many depths | Context (Phase 5) |
 
 The order is deliberate: reach for the simplest that works. `children` costs

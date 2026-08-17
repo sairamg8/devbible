@@ -251,4 +251,4 @@ after mount, or use a framework component that handles the SSR case.
 
 ---
 
-← Prev: [Component boundaries](10-component-boundaries.md) · Index: [Phase 2](README.md) · Next → [Render props and function-as-children](12-render-props.md)
+← Prev: [Component boundaries](10-component-boundaries.md) · Index: [Phase 2](README.md) · Next → [Render props and function-as-children](12-render-props/README.md)

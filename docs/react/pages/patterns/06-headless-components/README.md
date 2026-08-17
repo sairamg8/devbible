@@ -72,7 +72,7 @@ more ceremony.
   exception. The two patterns are usually shipped together.
 - **→ [Children patterns](../../phase-2-components/08-children-patterns.md)** —
   the compound-component mechanism chunk 05 builds on.
-- **→ [Render props](../../phase-2-components/12-render-props.md)** — the
+- **→ [Render props](../../phase-2-components/12-render-props/README.md)** — the
   children-as-a-function shape, and the wrapper-nesting cost it carries.
 - **→ [Share logic, not state](../../phase-7-custom-hooks/03-share-logic-not-state/README.md)** —
   the distinction that decides whether a headless hook is even the right tool.

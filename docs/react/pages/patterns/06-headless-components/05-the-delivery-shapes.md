@@ -65,7 +65,7 @@ function Listbox({ items, children }) {
 - ✅ Gives the caller a **component boundary** — useful when the widget's state
   should live below something else in the tree, or be conditionally mounted.
 - ✅ Still total structural freedom.
-- ⚠️ It is a [render prop](../../phase-2-components/12-render-props.md), so it
+- ⚠️ It is a [render prop](../../phase-2-components/12-render-props/README.md), so it
   inherits the wrapper-nesting problem: three of these nest into a pyramid, which
   is exactly what hooks were introduced to remove.
 - ⚠️ The function body re-creates its whole subtree on every render of the
