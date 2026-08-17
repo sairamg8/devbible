@@ -1,96 +1,124 @@
 ---
-title: "Validating the result — you cannot check this from inside"
-sidebar_label: "07 · Validating the result"
+title: "You cannot check this from inside — the problem catalogue"
+sidebar_label: "07 · The problem catalogue"
 sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08 against the **`arethetypeswrong` problem documentation**
-> (`NoResolution.md`, `InternalResolutionError.md`, `UnexpectedModuleSyntax.md`,
-> `FalseCJS.md`, `FalseESM.md`, `CJSResolvesToESM.md`, `NamedExports.md`,
-> `FalseExportDefault.md` — quoted verbatim) and **publint's published rule
-> list** on publint.dev, whose rule names are quoted exactly. **No sandbox, no
-> console blocks** — no tool was run here, and no output is reproduced.
+> Verified: 2026-08 against the **`arethetypeswrong` problem documentation** —
+> `NoResolution.md`, `InternalResolutionError.md`, `UnexpectedModuleSyntax.md`,
+> `FalseCJS.md`, `FalseESM.md`, `CJSResolvesToESM.md`, `NamedExports.md` and
+> `FalseExportDefault.md`, each quoted verbatim. **No sandbox, no console
+> blocks** — no tool was run here and no output is reproduced.
 
 Everything in the previous six chunks is a claim your package makes to a consumer
-you do not control. And here is the uncomfortable fact that makes this chunk
-necessary:
+you do not control. And here is the uncomfortable fact that makes this chunk and
+the next one necessary:
 
 > 🔴 **A green build of your own package proves almost nothing about its types.**
 
 Your build compiles `src`. It never performs the consumer's `import`. It does not
 read your `exports` map, does not choose a condition, does not apply extension
 substitution, and does not run under `moduleResolution: node10`. Every failure in
-this topic is invisible to it by construction.
+this topic is invisible to it **by construction** — not because your build is
+misconfigured, but because it is asking a different question.
 
-## The two tools, and what each is for
+This chunk is the catalogue of what can be wrong. [Chunk 08](./08-wiring-the-checks-in.md)
+is how to detect it.
 
-They are complementary, not alternatives, and they answer different questions.
+## Why the names matter
 
-| | `arethetypeswrong` | `publint` |
+`arethetypeswrong` gives each failure a name, and the names are worth learning
+even if you never run the tool — because they are how the problem gets
+communicated. An issue titled *"Masquerading as CJS"* tells a maintainer exactly
+where to look; one titled *"types are broken"* starts a week of back-and-forth.
+
+They also sort into three groups that need different responses, and confusing the
+groups is the commonest wasted effort:
+
+| Group | Meaning | Response |
 |---|---|---|
-| **Question** | *"Can a consumer resolve and use your types, from every resolution mode?"* | *"Is this `package.json` correct and complete?"* |
-| **Method** | Resolves your entrypoints as a consumer would, under each mode | Lints the manifest and the published file tree |
-| **Catches** | The masquerades, the export-form mismatches, resolution failures | Condition ordering, missing files, unpublished files, format contradictions |
+| **Masquerade** | Types imply one module format, Node resolves the other | Fix the declarations — pair them |
+| **Honest limitation** | Types and implementation agree; the consumer wanted something you do not ship | A product decision, not a bug |
+| **Broken artefact** | The published tree does not resolve, or contains invalid syntax | Fix the build or the manifest |
 
-```bash
-npx @arethetypeswrong/cli --pack .
-npx publint
-```
+## Group 1 — the masquerades
 
-📌 **`--pack` matters.** It runs `npm pack` first, so the analysis is of the
-**tarball**, not your working tree. That is the only way to catch a `types`
-target excluded by `files`/`.npmignore` — which
-[chunk 03](./03-exports-and-the-types-condition.md) flagged as indistinguishable
-from a typo, and which `publint` reports separately as `FILE_NOT_PUBLISHED`
-(*"File exists locally but won't be included in npm package"*).
+### Masquerading as CJS · Masquerading as ESM
 
-## The problem catalogue, and what each one means
+Both covered in [chunk 01](./01-the-one-rule.md): one declaration file describing
+two JavaScript files of different formats. **Fix: pair the declarations**, and
+nest the `types` condition inside each of `import` and `require`
+([chunk 03](./03-exports-and-the-types-condition.md)).
 
-Worth knowing by name, because the names are how the failure gets communicated in
-an issue thread.
+### False export default
 
-### The two masquerades
+[Chunk 05](./05-export-equals-vs-default.md). *"The resolved types use
+`export default` where the JavaScript file appears to use `module.exports =`."*
+Fix: `export =`.
 
-Covered in [chunk 01](./01-the-one-rule.md) — the types imply one module format
-and Node resolves the other. **Fix: pair the declarations.**
+### Named exports
+
+[Chunk 05](./05-export-equals-vs-default.md) again — the types claim named
+exports that `cjs-module-lexer` cannot see. Fix: `exports.x =` form, or the
+documented `0 &&` hint.
+
+🔴 **All four are the same shape:** the declaration is a claim, the runtime is the
+truth, and only the consumer's import compares them.
+
+## Group 2 — the honest limitation
 
 ### ESM-only entrypoint
 
-*"a `require` call resolved to an ESM JavaScript file, which is an error in Node
-and some bundlers."* **Not a bug in your types** — the types and implementation
-agree. Ship a CommonJS build or document `await import()`.
+> *"a `require` call resolved to an ESM JavaScript file, which is an error in
+> Node and some bundlers."*
+
+**Nothing is masquerading** — the types and the implementation agree. The tool's
+own framing is that this *"accurately reflects an actual runtime problem"*, and
+that it *"typically occurs when library authors consciously decide to support
+only ESM"*.
+
+So the response is a decision, not a fix: ship a CommonJS build, or document
+`await import()` and accept the documented cost — *"introducing asynchronicity
+into a large synchronous codebase can be a prohibitively difficult refactor and a
+breaking change for downstream APIs."*
+
+⚠️ **Do not let this one send you editing declaration files.** It is the failure
+most often misdiagnosed as a masquerade, because the consumer's error text looks
+similar.
+
+## Group 3 — the broken artefact
 
 ### 💀 Resolution failed
 
 > *"Import failed to resolve to type declarations or JavaScript files."*
 
-The consequences are stated plainly: *"Consumers will see TypeScript errors on
+Consequences, stated plainly: *"Consumers will see TypeScript errors on
 imports/requires"*, and *"If the diagnosis is accurate, a runtime/bundle-time
 error will occur."*
 
-🔴 **Two causes, and the documentation separates them for you.**
+🔴 **The documentation separates two very different causes, and you must too.**
 
-**A false positive worth knowing about:** TypeScript does not record non-JS/TS
-files as resolution results, so a subpath exposing a `.css` file *"will show up
-as a failed resolution"*. The doc's own guidance: *"If the asset is intended to
+**A documented false positive.** TypeScript does not record non-JS/TS files as
+resolution results, so a subpath exposing a `.css` file *"will show up as a
+failed resolution, when it might be more accurately described as an untyped
+resolution of an unknown file type."* The guidance: *"If the asset is intended to
 be imported as a side-effect import (`import "pkg/styles.css"`), this problem can
-safely be ignored."* — a point **16 · Typing non-code imports** *(not written
-yet)* picks up.
+safely be ignored."* — which **16 · Typing non-code imports** *(not written yet)*
+picks up.
 
-**A true positive that only affects one column:** when it fires for `node10` and
-nothing else, it usually means subpaths are mapped through `exports` into `dist`,
-and `node10` does not read `exports`. That is chunk 02's `node10` audience seen
-from the tool's side. The doc is candid about the trade — *"few libraries care
-about supporting a long-past EOL version of Node"*, but *"many TypeScript users
-are still using `--moduleResolution node`"*, and migrating away is hard for them
-precisely because it *"introduces new errors caused by incorrect dependency
-typings — the problem this tool was made to diagnose."*
+**A true positive confined to one column.** When it fires for `node10` and
+nothing else, it usually means subpaths are mapped through `exports` into `dist`
+and `node10` does not read `exports` — chunk 02's legacy audience, seen from the
+tool's side. The documentation is unusually candid about the trade: *"few
+libraries care about supporting a long-past EOL version of Node"*, but *"many
+TypeScript users are still using `--moduleResolution node`"*, and migrating away
+is hard for them precisely because it *"introduces new errors caused by incorrect
+dependency typings — the problem this tool was made to diagnose."*
 
-📌 **There is a switch for deciding you do not care:** the CLI's `--profile
-node16` ignores issues that only affect `node10`. Using it is a deliberate scope
-decision, which is better than silencing rows one at a time.
+📌 A circular problem, then: the packages that would push consumers off `node10`
+are the same ones whose breakage keeps them there.
 
 ### Internal resolution error
 
@@ -98,210 +126,155 @@ decision, which is better than silencing rows one at a time.
 > indicates that runtime resolution errors will occur, or (more likely) the types
 > misrepresent the contents of the JavaScript files."*
 
-🔴 **The first consequence connects straight back to
+🔴 **Its first consequence connects straight back to
 [topic 10](../10-skiplibcheck/README.md):**
 
 > *"Consumers without `skipLibCheck` enabled will see a TypeScript error reported
 > on declaration files from the package in their node_modules."*
 
-That is topic 10's whole argument arriving from the other direction. `skipLibCheck`
-is how most consumers avoid seeing this — and the ones who have it off, correctly,
-are the ones who report it to you. Second consequence: *"Some exported types may
-be missing or substituted with `any`."*
+That is topic 10's argument arriving from the other direction, and it is worth
+sitting with. Most consumers have `skipLibCheck: true`, so **they never see
+this** — which means the report reaches you only from the minority who have it
+off, and reaches you *late*. Second consequence: *"Some exported types may be
+missing or substituted with `any`"* — silent, and far worse.
 
-The documented causes are worth quoting because they are specific:
+The documented causes are specific enough to act on:
 
 - **Mismatched generation tools** — *"declarations generated via TypeScript under
-  certain settings, while the JavaScript is generated by another tool entirely"*.
-  A very common modern shape: `tsc` for types, esbuild/swc/Rollup for code.
-- **Wrong compiler settings.** Library authors should compile with
+  certain settings, while the JavaScript is generated by another tool entirely."*
+  A very common modern shape: `tsc` for declarations, esbuild/swc/Rollup for the
+  code.
+- **Wrong compiler settings.** Compile declarations with
   `--module node16 --moduleResolution node16` (or `nodenext`), because *"this is
   the only TypeScript mode that recognizes Node's strict module resolution
   algorithm for ESM."*
-- 🔴 **A `package.json` dropped into the output directory after the build** that
-  changes the format *"to/from `"type": "module"`"* — if it differs from what
+- 🔴 **A `package.json` dropped into the output directory after the build**, one
+  that changes the format *"to/from `"type": "module"`"* and differs from what
   TypeScript saw while compiling. **That is exactly
-  [chunk 04](./04-dual-esm-cjs.md)'s answer-1 marker**, and it means the marker
-  must be consistent with what the compile assumed, not merely present.
+  [chunk 04](./04-dual-esm-cjs.md)'s answer-1 marker** — which means the marker
+  must *agree with the compile*, not merely exist.
 
 ### Unexpected module syntax
 
 > *"Syntax detected in the module is incompatible with the module kind according
 > to the package.json or file extension."*
 
-CommonJS files containing `import`/`export`, or ESM files using `require()`. The
-documented origin is *"packages that were only intended to be consumed by
-bundlers for frontend use"* — bundlers are permissive where Node is not — and the
-consequence is blunt: such a file *"will crash (or fail to bundle)"* under Node's
-rules.
+CommonJS files containing `import`/`export`, or ESM files using `module.exports`
+or `require()`. The documented origin is *"packages that were only intended to be
+consumed by bundlers for frontend use"* — bundlers are permissive where Node's
+detection is strict, so the mismatch went unnoticed. The consequence is blunt: a
+file triggering it *"will crash (or fail to bundle)"* under Node's rules.
 
-### Named exports · False export default
+## Reading the matrix
 
-Both covered in [chunk 05](./05-export-equals-vs-default.md).
+The tool reports per **entrypoint × resolution mode**, and the shape of the
+result is itself diagnostic:
 
-## What `publint` adds
-
-Several of its error rules are this topic's earlier chunks, mechanised:
-
-| Rule | Which chunk it enforces |
+| Pattern | Reading |
 |---|---|
-| `EXPORTS_TYPES_SHOULD_BE_FIRST` | [Chunk 03](./03-exports-and-the-types-condition.md)'s ordering rule |
-| `EXPORTS_TYPES_INVALID_FORMAT` | *"Type files must match their context (ESM vs CJS)"* — the golden rule |
-| `TYPES_NOT_EXPORTED` | *"TypeScript cannot locate types for exported modules"* |
-| `FILE_NOT_PUBLISHED` | The `files`/`.npmignore` trap |
-| `FILE_DOES_NOT_EXIST` | A `types` target that is not there |
-| `EXPORTS_DEFAULT_SHOULD_BE_LAST` | The other half of condition ordering |
-| `FILE_INVALID_EXPLICIT_FORMAT` | *"File format contradicts its extension (.mjs/.cjs)"* |
-| `NESTED_PACKAGE_JSON_FIELD_IGNORED` | ⚠️ `exports`/`imports` in a nested manifest **are ignored by Node** |
+| One row broken, all modes | That entrypoint's `exports` entry or its declarations |
+| One column broken (`node10`) | An `exports`-only package meeting the legacy audience |
+| One column broken (`node16` CJS) | Almost always a masquerade or a missing `.d.cts` |
+| Everything broken | The manifest or the tarball, not the types — start with chunk 08's `publint` |
 
-🔴 **That last one is a genuine trap for chunk 04's answer 1.** The nested
-`dist/cjs/package.json` marker is legitimate and necessary — but it may only
-carry `"type"`. Putting `exports` in it does nothing, and `publint` says so.
-
-📌 Its suggestions are worth reading once even though they are not correctness
-issues — `USE_FILES`, `USE_TYPE`, `USE_ENGINES_NODE` and `USE_SIDE_EFFECTS` each
-remove a class of ambiguity a consumer would otherwise have to guess at.
-
-## Wire it into CI, not into your memory
-
-```jsonc
-// package.json
-{
-  "scripts": {
-    "check:types":   "tsc --noEmit -p tsconfig.build.json",
-    "check:package": "attw --pack . && publint",
-    "prepublishOnly": "npm run build && npm run check:package"
-  }
-}
-```
-
-The ordering is the point: `check:types` uses `skipLibCheck: false`
-([topic 10 chunk 08](../10-skiplibcheck/08-choosing-it.md)) so **your own**
-declarations are validated, and `check:package` validates that a consumer can
-reach them. Neither substitutes for the other.
-
-⚠️ **`prepublishOnly` rather than a manual step**, because this is precisely the
-class of mistake that is caught on the run where somebody was in a hurry.
-
-## The manual check, when you want to see it yourself
-
-The tools are better, but understanding what they do is worth ten minutes:
-
-```
-/tmp-consumer-esm/          package.json { "type": "module" }
-                            tsconfig.json { "module": "nodenext",
-                                            "moduleResolution": "nodenext" }
-                            index.ts      import x from 'your-pkg'
-
-/tmp-consumer-cjs/          package.json { "type": "commonjs" }
-                            …same, and: import x = require('your-pkg')
-```
-
-Install the **packed tarball** (`npm pack`, then `npm i ../your-pkg-1.0.0.tgz`)
-rather than linking the source directory — a symlink or workspace link resolves
-differently and will not reproduce the failure you are hunting.
+🔴 **Diagnose by the shape before reading any individual message.** A column
+failure and a row failure have completely different causes, and the per-cell text
+is the same either way.
 
 ## Gotchas
 
 **Symptom:** Everything passes locally and consumers report broken types.
 **Cause:** Your build never performs a consumer's import.
-**Fix:** `attw --pack .` and `publint`. There is no configuration of your own
-build that substitutes for them.
+**Fix:** No configuration of your own build substitutes for resolving from
+outside. Chunk 08.
 
-**Symptom:** `attw` reports a failure that only appears in the `node10` column.
-**Cause:** Subpaths mapped through `exports`, which `node10` does not read.
-**Fix:** Decide whether you support that audience. If not, `--profile node16`
-records the decision instead of ignoring rows individually.
+**Symptom:** "ESM-only entrypoint" and a maintainer starts editing `.d.ts` files.
+**Cause:** Misread as a masquerade.
+**Fix:** The types are accurate. The decision is whether to ship CommonJS.
 
 **Symptom:** "Resolution failed" on a `.css` subpath.
-**Cause:** Documented false positive — TypeScript does not record non-JS/TS files
-as resolution results.
+**Cause:** The documented false positive — TypeScript does not record non-JS/TS
+files as resolution results.
 **Fix:** Safe to ignore for a side-effect import.
 
-**Symptom:** "Internal resolution error", and the JavaScript is generated by
-esbuild while the types come from `tsc`.
-**Cause:** The named cause — two tools with different assumptions.
-**Fix:** Compile declarations with `--module node16 --moduleResolution node16`,
-and make sure both tools see the same `"type"`.
+**Symptom:** "Internal resolution error", with types from `tsc` and code from
+esbuild.
+**Cause:** The named cause — two tools with different assumptions about module
+format.
+**Fix:** Compile declarations with `node16`/`nodenext`, and make both tools see
+the same `"type"`.
 
-**Symptom:** A `dist/esm/package.json` marker was added and "internal resolution
-error" appeared.
-**Cause:** The marker changed the format *after* TypeScript compiled under a
+**Symptom:** Adding a `dist/esm/package.json` marker produced "internal
+resolution error".
+**Cause:** The marker changed the format after TypeScript compiled under a
 different assumption.
-**Fix:** The compile and the marker must agree. Chunk 04.
+**Fix:** The compile and the marker must agree — chunk 04.
 
-**Symptom:** `exports` was added to a nested `dist/*/package.json` and has no
-effect.
-**Cause:** Node ignores `exports`/`imports` in nested manifests —
-`NESTED_PACKAGE_JSON_FIELD_IGNORED`.
-**Fix:** Only `"type"` belongs there. The real map lives in the root manifest.
+**Symptom:** "Unexpected module syntax" in a package that works fine in a
+bundler.
+**Cause:** Bundlers are more permissive than Node's module detection.
+**Fix:** It will crash under Node. Fix the emitted syntax or the declared format.
 
-**Symptom:** Validation passes on the working tree and the published package is
-broken.
-**Cause:** You validated `dist/`, not the tarball.
-**Fix:** `--pack`, always. `FILE_NOT_PUBLISHED` exists because this is common.
+**Symptom:** Only the `node10` column fails and it is treated as urgent.
+**Cause:** It affects only consumers on the legacy resolution mode.
+**Fix:** A scope decision. Chunk 08 shows how to record it rather than ignore it.
 
-**Symptom:** Someone links the package with `npm link` to test and it works.
-**Cause:** A link resolves through the source layout, not the published one.
-**Fix:** Install the packed tarball into a scratch consumer.
-
-**Symptom:** CI runs the checks and nobody looks at the output.
-**Cause:** They were added as an informational step.
-**Fix:** `prepublishOnly`, so a failure blocks the publish rather than annotating
-it.
+**Symptom:** A consumer reports errors *inside* your package's `.d.ts` files.
+**Cause:** Internal resolution error, and they have `skipLibCheck: false`.
+**Fix:** Yours to fix — and your own `skipLibCheck: false` declaration build
+would have caught it first ([topic 10 chunk 08](../10-skiplibcheck/08-choosing-it.md)).
 
 ## Interview questions
 
 **★ Why is a green build of your own package insufficient evidence that its types
 are correct?**
-Because your build compiles your source; it never performs a consumer's import.
+Because your build compiles your source and never performs a consumer's import.
 It does not read your `exports` map, choose a condition, apply extension
 substitution, or run under other resolution modes — so every publishing failure
 is invisible to it by construction.
 
-**★ What do `arethetypeswrong` and `publint` each check?**
-`attw` resolves your entrypoints as a consumer would under every resolution mode
-and reports mismatches between what the types imply and what resolves. `publint`
-lints the manifest and the published file tree — condition ordering, missing or
-unpublished files, format contradictions. Different questions; run both.
-
-**★ Why run `attw --pack` rather than pointing it at your directory?**
-Because it packs the tarball first, so the analysis covers exactly what
-consumers receive. A `types` target excluded by `files` or `.npmignore` is
-otherwise invisible — `publint` has a rule for it, `FILE_NOT_PUBLISHED`.
+**★ Name the three groups the publishing problems fall into.**
+Masquerades (the types imply one module format and Node resolves the other),
+honest limitations (types and implementation agree; the consumer wanted something
+you do not ship), and broken artefacts (the tree does not resolve, or contains
+syntax invalid for its declared format). Each needs a different response.
 
 **★ "Internal resolution error" — what does it usually mean?**
 That an import inside your `.d.ts` does not resolve, which more often means the
-types misrepresent the JavaScript than that a runtime failure is coming.
-Consumers *without* `skipLibCheck` see it as errors inside your package's files,
-and some of your exported types may silently become `any`.
+types misrepresent the JavaScript than that a runtime failure is imminent.
+Consumers without `skipLibCheck` see errors inside your package's files, and some
+of your exported types may silently become `any`.
 
-**★ How does that problem connect to `skipLibCheck`?**
-It is the concrete case for topic 10: most consumers have `skipLibCheck: true` so
-they never see it, which means the report reaches you only from the minority who
-have it off — and it is your build's `skipLibCheck: false` pass that would have
-caught it first.
+**★ How does that connect to `skipLibCheck`?**
+Most consumers have it on, so they never see the error — which means it reaches
+you only from the minority who have it off, and reaches you late. Your own
+`skipLibCheck: false` declaration build is what should have caught it.
+
+**★ What causes "internal resolution error" most often in a modern setup?**
+Generating declarations with `tsc` while generating the JavaScript with something
+else — esbuild, swc, Rollup — so the two disagree about module format. The
+documented fix is to compile declarations under `node16`/`nodenext`, the only
+mode that models Node's strict ESM resolution.
 
 **A failure appears only in the `node10` column. What does that tell you?**
-That the problem is `exports`-related and affects only consumers on the legacy
-resolution mode. Whether it matters is a scope decision — `--profile node16`
-records "we do not support that" explicitly.
+That it is `exports`-related and affects only the legacy resolution mode.
+Whether it matters is a scope decision, not a bug report.
 
-**What compiler settings does a library author's declaration build want, and
-why?**
-`--module node16 --moduleResolution node16` (or `nodenext`), because that is the
-only mode that models Node's strict ESM resolution — so declarations generated
-any other way can encode assumptions Node will not honour.
+**Why is "resolution failed" on a `.css` subpath not necessarily a bug?**
+Because TypeScript does not record non-JS/TS files as resolution results, so an
+intentional asset subpath is indistinguishable from a missing file. For a
+side-effect import it can safely be ignored.
 
-**Why does `npm link` fail to reproduce packaging bugs?**
-Because a link resolves through the source layout rather than the published one,
-so `exports`, `files` and the built output are all bypassed. Install the packed
-tarball into a scratch consumer instead.
+**Why does "unexpected module syntax" so often come from frontend packages?**
+Because they were built for bundlers, which are permissive about module syntax
+where Node's detection is strict. The file works everywhere it was tested and
+crashes under Node.
 
-**What belongs in a nested `dist/*/package.json`?**
-Only `"type"`. Node ignores `exports` and `imports` in nested manifests, and
-`publint` reports it as `NESTED_PACKAGE_JSON_FIELD_IGNORED`.
+**What should you look at before reading any individual message in the matrix?**
+The shape. A whole row failing points at one entrypoint; a whole column points at
+one resolution mode; everything failing points at the manifest or the tarball
+rather than the types.
 
 ---
 
-← Prev: [06 · `typesVersions`](./06-typesversions.md) · Next → [08 · The checklist](./08-the-checklist.md)
+← Prev: [06 · `typesVersions`](./06-typesversions.md) · Next → [08 · Wiring the checks in](./08-wiring-the-checks-in.md)
