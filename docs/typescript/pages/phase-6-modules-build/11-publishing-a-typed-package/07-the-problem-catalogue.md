@@ -105,7 +105,7 @@ resolution results, so a subpath exposing a `.css` file *"will show up as a
 failed resolution, when it might be more accurately described as an untyped
 resolution of an unknown file type."* The guidance: *"If the asset is intended to
 be imported as a side-effect import (`import "pkg/styles.css"`), this problem can
-safely be ignored."* — which **16 · Typing non-code imports** *(not written yet)*
+safely be ignored."* — which [16 · Typing non-code imports](../16-typing-non-code-imports/README.md)
 picks up.
 
 **A true positive confined to one column.** When it fires for `node10` and

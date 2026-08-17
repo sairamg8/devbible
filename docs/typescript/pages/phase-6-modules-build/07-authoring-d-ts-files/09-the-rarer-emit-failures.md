@@ -83,7 +83,7 @@ failing. **`isolatedDeclarations` is the flag that stops it trying**: it require
 the annotations up front so that each file's `.d.ts` can be produced from that
 file alone, with no checker and no cross-file inference. That trade — a large
 annotation diff in exchange for parallelisable, much faster declaration builds —
-is **15 · `isolatedDeclarations`** *(not written yet)*.
+is [15 · `isolatedDeclarations`](../15-isolateddeclarations/README.md).
 
 📌 **Which means these errors are worth fixing properly rather than working
 around.** Every explicit annotation you add here is an annotation

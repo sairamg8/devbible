@@ -58,7 +58,7 @@ one.
 stable**, which is an argument for explicit return-type annotations on a
 package's public surface: an inferred type that changes shape when an
 implementation detail changes invalidates the whole downstream graph.
-**15 · `isolatedDeclarations`** *(not written yet)* takes that further.
+[15 · `isolatedDeclarations`](../15-isolateddeclarations/README.md) takes that further.
 
 ### Timestamp-only updates
 

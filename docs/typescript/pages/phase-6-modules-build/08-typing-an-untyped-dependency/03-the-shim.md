@@ -167,7 +167,7 @@ A subpath wildcard is reasonable for a package with deep imports you cannot
 enumerate. `declare module '*'` is not: it matches every unresolved specifier in
 the program, including your own typos, and permanently disables *"cannot find
 module"* as a signal. Asset wildcards (`'*.svg'`) are a different thing with a
-different justification — **16 · Typing non-code imports** *(not written yet)*.
+different justification — [16 · Typing non-code imports](../16-typing-non-code-imports/README.md).
 
 ## The one that is not a shim
 

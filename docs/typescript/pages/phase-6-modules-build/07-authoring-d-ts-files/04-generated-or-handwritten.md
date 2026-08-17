@@ -148,8 +148,7 @@ declaration in any repo and it has its own topic — [08 · Typing an untyped de
 
 **2 · Things that are not code.** `*.css`, `*.svg`, `*.json`, `?raw` imports —
 your bundler makes these importable, but `tsc` has never heard of them. A
-hand-written module declaration is the only way to teach it. **16 · Typing
-non-code imports** *(not written yet)*.
+hand-written module declaration is the only way to teach it. [16 · Typing non-code imports](../16-typing-non-code-imports/README.md).
 
 **3 · Globals that exist at runtime but come from nowhere the compiler can see.**
 A `<script>` tag, a server-injected `window.__CONFIG__`, a bundler-replaced

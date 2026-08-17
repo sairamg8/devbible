@@ -110,7 +110,7 @@ export function parse(input: string): ParseResult {
 optimisation, not only a style preference.** That is the same argument
 [topic 13 chunk 02](../13-project-references/02-the-up-to-date-check.md) makes at
 project granularity for `TS6354`, and it is the argument
-**15 · `isolatedDeclarations`** *(not written yet)* takes to its conclusion.
+[15 · `isolatedDeclarations`](../15-isolateddeclarations/README.md) takes to its conclusion.
 
 ## The things that invalidate it *accidentally*
 

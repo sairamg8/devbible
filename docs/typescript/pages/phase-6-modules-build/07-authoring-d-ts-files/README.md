@@ -65,11 +65,9 @@ so you know where to look rather than assuming something is missing:
 - **Which errors `skipLibCheck` hides** — [10 · `skipLibCheck`](../10-skiplibcheck/README.md). Chunk 09 only establishes that it cannot help with emit failures.
 - **Getting the file into a published package** — `exports`, `types`,
   `typesVersions`, dual ESM/CJS. [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md).
-- **Declaration emit without inference** — **15 · `isolatedDeclarations`** *(not
-  written yet)* is the flag that turns chunk 08's failures into a rule you write
+- **Declaration emit without inference** — [15 · `isolatedDeclarations`](../15-isolateddeclarations/README.md) is the flag that turns chunk 08's failures into a rule you write
   to up front.
-- **`declare module '*.css'` and friends** — **16 · Typing non-code imports**
-  *(not written yet)*.
+- **`declare module '*.css'` and friends** — [16 · Typing non-code imports](../16-typing-non-code-imports/README.md).
 
 ## Where this connects
 

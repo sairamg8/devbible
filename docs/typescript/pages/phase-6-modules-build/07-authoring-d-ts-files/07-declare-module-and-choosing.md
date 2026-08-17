@@ -55,8 +55,7 @@ module declarations"* half of `TS2669` from chunk 05.
 ⚠️ **A wildcard module declaration is a blunt instrument.**
 `declare module '*.svg'` (and worse, `declare module '*'`) matches by pattern and
 turns off "cannot find module" errors for everything it covers, including
-typos. It is the right tool for non-code assets — **16 · Typing non-code
-imports** *(not written yet)* — and the wrong one for a package you were too
+typos. It is the right tool for non-code assets — [16 · Typing non-code imports](../16-typing-non-code-imports/README.md) — and the wrong one for a package you were too
 impatient to type.
 
 ## Choosing, in practice
