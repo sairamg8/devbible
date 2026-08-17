@@ -43,39 +43,38 @@ $ psql -h 127.0.0.1 -p 55432 -U devbible -d devbible -c "show shared_buffers;"
 
 ## From Node
 
-You do not configure shared buffers from `pg`. You **observe** effects: first
-query after idle vs warm repeat. Pooling does not replace server cache; it only
-reuses backends.
+You do not configure shared buffers from `pg`. You **observe** effects — but
+observing them correctly is harder than it looks, and the obvious experiment is
+wrong.
 
-```js
-// warm-read.mjs — conceptual timing, not a benchmark harness
-import pg from 'pg';
+**Do not time a first query against a second one.** The first query on a fresh
+`Pool` also pays for the TCP connect, the SCRAM authentication round trips, the
+backend `fork()`, and the catalog cache that backend builds privately. All of
+that is work the second query never repeats, and none of it is the buffer cache.
+A wall-clock gap between the two is real, but it is overwhelmingly connection
+setup — attributing it to shared buffers is measuring one thing and naming
+another.
 
-const pool = new pg.Pool({
-  connectionString:
-    'postgresql://devbible:devbible@127.0.0.1:55432/devbible',
-});
+The buffer cache has its own counters, so ask it directly instead of timing it.
+On **one connection that is already warm**, run the same query twice under:
 
-async function once(label) {
-  const t0 = performance.now();
-  await pool.query('select count(*) from pg_class');
-  console.log(label, (performance.now() - t0).toFixed(2), 'ms');
-}
-
-await once('first');
-await once('second');
-await pool.end();
+```sql
+EXPLAIN (ANALYZE, BUFFERS) SELECT ...;
 ```
 
-```console
-$ node warm-read.mjs
-first 44.52 ms
-second 2.64 ms
-```
+and read the `Buffers:` line. A cold run reports `shared read=N` — pages fetched
+from the OS or disk. The identical query re-run reports `shared hit=N` — the
+same pages found in shared buffers. That `read=` → `hit=` shift *is* the buffer
+cache and nothing else, because everything around it is held constant.
 
-> Verified: 2026-08 on this machine. Absolute ms move with load; the **shape**
-> matters: second call is cheaper because catalogs (and paths) are warm. Do not
-> put micro-benchmarks in production SLOs without a proper harness.
+`pg_statio_user_tables` gives the same story cumulatively per table
+(`heap_blks_read` vs `heap_blks_hit`) if you want it across a workload rather
+than one query.
+
+> Verified: 2026-08 against the PostgreSQL 18 documentation for `EXPLAIN`
+> (`BUFFERS`) and `pg_statio_all_tables`. **This page carries no measurement of
+> its own** — the timing comparison that used to sit here measured connection
+> establishment, not the buffer cache, and was removed rather than reinterpreted.
 
 ## Trade-off
 
