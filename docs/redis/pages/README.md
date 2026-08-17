@@ -4,18 +4,38 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-:::info 🔒 Claimed — session `8679dc8c`, 2026-08-14
+:::info 🔒 SPLIT THREE WAYS — chunks A, B and C, 2026-08-17
 
-All of `docs/redis/` is claimed. Picked up on finishing
-[Express](../../expressjs/pages/README.md), which — together with
-[Node](../../nodejs/pages/README.md) — defers to this track on **39 pages**.
+Redis is written by **three sessions in parallel**, one chunk each, **whole phases
+only** — so no two ever write in the same phase directory or the same phase
+`README.md`.
+
+| Chunk | Phases | Topics | Start at | Claimed by |
+|---|---|---|---|---|
+| **A** | **0, 1, 2, 3** | **23** | Phase 0 · 01 · What Redis is | session `3bb1face`, 2026-08-17 |
+| **B** | **4, 5, 6** | **21** | Phase 4 · 01 · Hashes | — unclaimed |
+| **C** | **7, 8, 9, 10** | **30** | Phase 7 · 01 · Cache-aside | — unclaimed |
+
+**A phase number settles which chunk you are:** 0/1/2/3 → A · 4/5/6 → B ·
+7/8/9/10 → C.
 
 **State: syllabus complete (11 phases, 74 topics), no explanation pages yet.**
-Next unit: **Phase 0 · How Redis runs (6 topics)**.
+
+⛔ **Cross-chunk links break the build.** Where a page needs a topic another chunk
+owns, write it as **bold plain text with *(not written yet)*** until the target
+exists on disk. Never `git add -A`; the single `redis` row in
+`src/data/progress.js` is incremented by all three chunks, so re-read it before
+editing and take the higher number if it moved.
 
 Documentation-validated against the Redis docs under the no-new-sandboxes rule:
 every claim names its source in a `> Verified:` line, and **no console block is
-added unless a run actually produced it**.
+added unless a run actually produced it** — there is no Redis server on this
+machine, so there never can be.
+
+🔴 **The 300-line cap is a file-size rule, never a content budget.** Write the
+topic to its full depth first — every gotcha, pitfall, example and interview
+question it actually has — then split on concept boundaries into `NN-topic/`
+chunks so no file passes 300.
 
 :::
 
