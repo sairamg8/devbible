@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-know">Know</span>
 
 :::info Topic in progress
-**Chunks 01, 02 and 03 are written.** The remaining chunks are planned and referred to as plain text
+**Chunks 01–04 are written.** The remaining chunks are planned and referred to as plain text
 until they land.
 :::
 
@@ -30,7 +30,7 @@ advancing by one.
 | 01 | [The naive version](./01-the-naive-version.md) | What the four-line version already gets right — and 🔴 **the `T extends object` guard everyone writes to protect primitives is guarding against something that cannot happen** |
 | 02 | [What it breaks](./02-what-it-breaks.md) | Five silent failures — 🔴 **a mapped type structurally cannot carry a call signature**, class instances become name-only shells, `DeepPartial` makes array *elements* `undefined`, recursive data cannot be fixed with an accumulator, and `any` is mapped rather than passed through |
 | 03 | [The version that holds up](./03-the-version-that-holds-up.md) | The five guards in the order they must go, 🔴 **why `DeepReadonly` should NOT have an array branch and `DeepPartial` must**, and the three limits no guard removes |
-| 04 | **`DeepPartial` is not `DeepReadonly`** *(not written yet)* | Why making everything optional is a claim about your domain, and what it does at a JSON boundary |
+| 04 | [`DeepPartial` is not `DeepReadonly`](./04-partial-is-not-readonly.md) | 🔴 **One is a restriction, the other a widening** — the three places a deep-partial genuinely belongs, all of them *partial in, complete out*, and what happens when it escapes |
 | 05 | **The cost, and the alternatives** *(not written yet)* | Error messages, the fan-out, the depth cap, and when to reach for something that is not a type |
 
 ## The one-sentence version
