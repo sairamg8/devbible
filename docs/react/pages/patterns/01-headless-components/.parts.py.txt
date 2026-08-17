@@ -1,0 +1,345 @@
+---
+title: "Building it"
+sidebar_label: "03 · Building it"
+sidebar_position: 3
+---
+
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-17 against **react 19.2.8**, from documentation — react.dev
+> [`useRef`](https://react.dev/reference/react/useRef),
+> [`useId`](https://react.dev/reference/react/useId),
+> [`useCallback`](https://react.dev/reference/react/useCallback),
+> [Common components](https://react.dev/reference/react-dom/components/common)
+> for the `ref` callback cleanup contract, and
+> [Responding to Events](https://react.dev/learn/responding-to-events) for
+> `preventDefault`. Behavioural requirements from the W3C
+> [APG Listbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/),
+> fetched 2026-08-17 — the requirements are quoted in
+> [chunk 02](02-the-contract-you-are-inheriting.md).
+> ⚠️ **This code has not been run.** Under the standing no-sandbox rule it is
+> written against the documented APIs and the quoted spec, and carries no console
+> output. Treat it as a worked reference, not as tested library code.
+> No sandbox script backs this page; claims are cited, not measured.
+
+**Single-select listbox, roving `tabindex`, with the bindings chunk 02 quoted.
+This is the widget the previous version of this topic promised and did not
+build.**
+
+@@@
+## The state, and why each piece exists
+
+```jsx
+import { useCallback, useId, useRef, useState } from 'react';
+
+const TYPEAHEAD_RESET_MS = 500;
+
+function useListbox({ items, getLabel = (item) => item.label, onSelect }) {
+  const listboxId = useId();
+
+  const [activeIndex, setActiveIndex]     = useState(0);   // where focus is
+  const [selectedIndex, setSelectedIndex] = useState(-1);  // what is chosen
+
+  const optionRefs = useRef([]);                    // for imperative .focus()
+  const typeahead  = useRef({ buffer: '', timer: 0 });
+```
+
+**`activeIndex` and `selectedIndex` are two different things**, and collapsing
+them is the first mistake people make. The spec is explicit that arrow keys move
+*focus*, and that moving selection with focus is *optional* in single-select.
+With one variable you cannot express "focused but not chosen", which is exactly
+the state a keyboard user is in while browsing the list.
+
+**`optionRefs` exists because roving `tabindex` needs real DOM focus.** There is
+no declarative way to say "focus this element now" — `.focus()` is imperative, so
+you need the node.
+
+**`typeahead` is a ref, not state, deliberately.** Nothing renders from the
+buffer. Making it state would re-render the whole list on every keystroke to
+change a value nobody displays.
+
+## Moving focus
+
+```jsx
+  const focusOption = useCallback((index) => {
+    setActiveIndex(index);
+    optionRefs.current[index]?.focus();
+  }, []);
+```
+
+Two things happen because both are needed: the state update re-renders so
+`tabIndex` moves to the new option, and the imperative `.focus()` actually moves
+the browser's focus. Doing only the first leaves focus on the old element with
+`tabIndex={-1}`; doing only the second leaves two options claiming `tabIndex={0}`
+on the next render.
+
+## Type-ahead
+
+The spec's two behaviours differ only by timing, so the buffer is the entire
+implementation.
+
+```jsx
+  const findMatch = useCallback((needle, from) => {
+    for (let offset = 0; offset < items.length; offset += 1) {
+      const index = (from + offset) % items.length;          // wraps
+      if (getLabel(items[index]).toLowerCase().startsWith(needle)) return index;
+    }
+    return -1;
+  }, [items, getLabel]);
+
+  const onType = useCallback((char) => {
+    const state = typeahead.current;
+    window.clearTimeout(state.timer);
+    state.buffer += char.toLowerCase();
+    state.timer = window.setTimeout(() => { state.buffer = ''; }, TYPEAHEAD_RESET_MS);
+
+    // "b b b" cycles through the b's; "b r o" matches "Broccoli".
+    const repeated = state.buffer.length > 1
+      && [...state.buffer].every((c) => c === state.buffer[0]);
+    const needle = repeated ? state.buffer[0] : state.buffer;
+
+    // A single character advances PAST the current option; a longer string
+    // refines from where we are.
+    const from = needle.length === 1 ? activeIndex + 1 : activeIndex;
+
+    const match = findMatch(needle, from);
+    if (match !== -1) focusOption(match);
+  }, [activeIndex, findMatch, focusOption]);
+```
+
+The `repeated` check is what makes pressing "b" three times cycle rather than
+search for `"bbb"` and find nothing. It is four lines and it is the difference
+between a list that feels native and one that feels broken.
+
+## Selection
+
+```jsx
+  const select = useCallback((index) => {
+    setSelectedIndex(index);
+    onSelect?.(items[index], index);
+  }, [items, onSelect]);
+```
+
+## The keyboard handler
+
+Every binding from chunk 02 that applies to single-select:
+
+```jsx
+  const onKeyDown = useCallback((event) => {
+    const last = items.length - 1;
+
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();                       // or the page scrolls
+        focusOption(Math.min(activeIndex + 1, last));
+        return;
+      case 'ArrowUp':
+        event.preventDefault();
+        focusOption(Math.max(activeIndex - 1, 0));
+        return;
+      case 'Home':
+        event.preventDefault();
+        focusOption(0);
+        return;
+      case 'End':
+        event.preventDefault();
+        focusOption(last);
+        return;
+      case 'Enter':
+      case ' ':
+        event.preventDefault();                       // Space would scroll
+        select(activeIndex);
+        return;
+      default:
+        // Printable characters only, and never steal a shortcut.
+        if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+          event.preventDefault();
+          onType(event.key);
+        }
+    }
+  }, [activeIndex, items.length, focusOption, select, onType]);
+```
+
+`Math.min`/`Math.max` rather than modulo: the spec does not ask for wrapping on
+arrow keys, and a list that jumps from last to first surprises people. Type-ahead
+*does* wrap, which is why `findMatch` uses `%`.
+
+@@@
+## The prop getters
+
+```jsx
+  const getListboxProps = useCallback(({ onKeyDown: callerKeyDown, ...rest } = {}) => ({
+    role: 'listbox',
+    id: listboxId,
+    ...rest,
+    onKeyDown: (event) => {
+      callerKeyDown?.(event);
+      if (!event.defaultPrevented) onKeyDown(event);
+    },
+  }), [listboxId, onKeyDown]);
+
+  const getOptionProps = useCallback((index, { onClick, ref, ...rest } = {}) => ({
+    role: 'option',
+    id: `${listboxId}-option-${index}`,
+    'aria-selected': index === selectedIndex,      // present on every option
+    tabIndex: index === activeIndex ? 0 : -1,      // exactly one is 0
+    ref: mergeRefs((node) => { optionRefs.current[index] = node; }, ref),
+    ...rest,
+    onClick: (event) => {
+      onClick?.(event);
+      if (!event.defaultPrevented) { setActiveIndex(index); select(index); }
+    },
+  }), [listboxId, selectedIndex, activeIndex, select]);
+
+  return { getListboxProps, getOptionProps, activeIndex, selectedIndex };
+}
+```
+
+`aria-selected` is `index === selectedIndex`, which yields `false` — not
+`undefined` — for every other option. Chunk 02 is explicit that an absent
+`aria-selected` means "not selectable", so the boolean has to be present.
+
+`mergeRefs` is from [prop getters](../04-prop-getters.md), and the version that
+handles React 19's cleanup contract is the one you want here.
+
+## Using it
+
+```jsx
+function FruitPicker({ fruits }) {
+  const { getListboxProps, getOptionProps, selectedIndex } = useListbox({
+    items: fruits,
+    onSelect: (fruit) => console.log('picked', fruit),
+  });
+
+  return (
+    <ul {...getListboxProps({ 'aria-label': 'Fruit' })} className="picker">
+      {fruits.map((fruit, i) => (
+        <li key={fruit.id} {...getOptionProps(i, { className: 'picker-option' })}>
+          {fruit.label}
+        </li>
+      ))}
+    </ul>
+  );
+}
+```
+
+**Note what the caller chose:** `<ul>`/`<li>`, their own class names, their own
+label. They could have used `<div>`s, or a table, or added a wrapper per option.
+That is the test from [chunk 01](01-what-headless-means.md), passed.
+
+**And note what they could not get wrong:** the roles, the ids, `aria-selected`
+on every option, the roving `tabIndex`, and every keyboard binding.
+
+@@@
+## Gotchas
+
+**`optionRefs.current` is never cleaned up.** Items removed from the list leave
+stale nodes in the array, so `focusOption` can call `.focus()` on a detached
+element. Either clear the array during render or use the ref-callback cleanup
+form — see [ref callbacks](../../phase-5-refs-context-reducers/06-ref-callbacks.md).
+
+**`activeIndex` survives an items change and can point past the end.** Replace
+`items` with a shorter list and the next `ArrowDown` reads `undefined`. Clamp it
+when the list changes; do not sync it in an effect, which costs a render and
+shows the wrong option first —
+[derived state](../../phase-3-state/06-derived-state.md).
+
+**`getOptionProps(index)` keys the ref by index, not identity.** Reorder the list
+and the refs point at the wrong nodes. For a stable list this is fine; for a
+sortable one, key by id.
+
+**`preventDefault()` on every printable key steals application shortcuts.** Many
+apps bind `/` to search and `?` to help. The modifier checks let `Ctrl`/`Cmd`
+combinations through, but a bare `/` is still swallowed. Scope it if your app
+uses single-key shortcuts.
+
+**`Space` must be prevented or the page scrolls**, and it must be handled before
+the type-ahead branch — `' '.length === 1`, so it would otherwise fall through
+and be buffered as a search character.
+
+**Arrow keys do not wrap here, deliberately.** If you add wrapping, add it to
+both directions and say so in your docs; half-wrapping is worse than neither.
+
+**`focusOption` scrolls the option into view as a side effect of `.focus()`.**
+Usually what you want, occasionally not — inside a virtualised or transformed
+container it can fight your own scroll logic. `scrollIntoView({ block: 'nearest'
+})` after focusing gives you control back.
+
+**Nothing here handles multi-select**, and it is not a small addition: chunk 02
+documents two incompatible models with up to seven extra bindings and a
+`Shift`-anchored range. Pick a model before you start.
+
+**No `aria-setsize`/`aria-posinset`.** Correct for a fully rendered list, wrong
+the moment you virtualise. See chunk 02.
+
+**The type-ahead timer is never cleared on unmount.** A pending
+`setTimeout` firing after unmount writes to a ref of a dead component —
+harmless here, but it is the shape of a leak, and a component that instead called
+`setState` would warn.
+
+**`getLabel` in `findMatch`'s dependency array will usually change every
+render**, because callers pass an inline arrow. The `useCallback` then rebuilds
+each render and buys nothing. Document that `getLabel` should be stable, or
+stabilise it internally.
+
+**Two `useListbox()` calls are two listboxes.** Still true, still the most common
+misunderstanding —
+[share logic, not state](../../phase-7-custom-hooks/03-share-logic-not-state/README.md).
+
+@@@
+## Interview questions
+
+**Why are `activeIndex` and `selectedIndex` separate?**
+Because the spec separates focus from selection: arrow keys move focus, and
+moving selection with focus is optional in single-select. One variable cannot
+represent "focused but not chosen", which is the state a keyboard user occupies
+while browsing.
+
+**Why does `focusOption` both set state and call `.focus()`?**
+The state update moves `tabIndex={0}` to the new option on re-render; the
+imperative call moves the browser's actual focus. Either alone leaves the DOM and
+the component disagreeing.
+
+**Why is the type-ahead buffer a ref rather than state?**
+Nothing renders from it. As state it would re-render the entire list on every
+keystroke to update a value that is never displayed.
+
+**How does the implementation distinguish the spec's two type-ahead behaviours?**
+By timing and by content: keystrokes accumulate into a buffer that resets after
+~500 ms, and a buffer whose characters are all identical is treated as a repeat —
+cycling to the next match for that single character rather than searching for the
+literal repeated string.
+
+**Why does `findMatch` wrap but the arrow keys do not?**
+Type-ahead is a search and should find a match anywhere in the list. Arrow
+navigation is positional, the APG does not require wrapping, and a list that
+jumps from the last item to the first surprises users.
+
+**Why must `aria-selected` be `false` rather than omitted on unselected
+options?**
+Absent means "not selectable"; `false` means "selectable, not currently
+selected". They are different statements, and screen readers announce them
+differently.
+
+**Which element receives the `keydown`, given roving `tabindex`?**
+The focused option — and it bubbles to the container, where the handler is
+attached. That works precisely because real DOM focus is on an option. With
+`aria-activedescendant` the container itself is focused and the handler goes
+there instead.
+
+**What is the first thing that breaks when the `items` array changes?**
+`activeIndex` can point past the end of the new list, and `optionRefs` holds
+detached nodes for removed items.
+
+**Why is `preventDefault()` on `ArrowDown` not optional?**
+Without it the browser scrolls the page while the user navigates the list, so the
+widget moves out from under them.
+
+**What would you have to add for multi-select?**
+A selection set instead of one index, a `Shift` range anchor, and one of the two
+APG models in full — `Space` toggling versus `Control + Space` toggling, and
+whether plain arrows change selection. The models are mutually exclusive.
+
+---
+
+← Prev: [02 · The contract you are inheriting](02-the-contract-you-are-inheriting.md) · Index: [Headless components](README.md) · Next → [04 · The delivery shapes](04-the-delivery-shapes.md)

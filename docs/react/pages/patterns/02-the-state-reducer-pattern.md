@@ -226,4 +226,4 @@ be pure — no side effects, no mutation, no requests.
 
 ---
 
-← Prev: [Headless components](01-headless-components.md) · Index: [React patterns](README.md) · Next → [03 · Polymorphic components](03-polymorphic-components.md)
+← Prev: [Headless components](01-headless-components/README.md) · Index: [React patterns](README.md) · Next → [03 · Polymorphic components](03-polymorphic-components.md)

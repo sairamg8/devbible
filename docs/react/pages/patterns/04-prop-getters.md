@@ -25,7 +25,7 @@ caller passes instead of throwing it away.**
 
 ## The problem it fixes
 
-[Headless components](01-headless-components.md) hand the caller a props object
+[Headless components](01-headless-components/README.md) hand the caller a props object
 to spread:
 
 ```jsx
