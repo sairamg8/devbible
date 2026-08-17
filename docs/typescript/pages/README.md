@@ -20,8 +20,8 @@ a file in the other's phase directories.**
 
 | Part | Phases | Topics | Claimed by |
 |---|---|---|---|
-| **A · the type system** | 2, 3, 4, 5, 6 | 73 | session `3af83cbb`, 2026-08-15 — phases 0–2 ✅, phase 3 at 11/14 |
-| **B · TypeScript in the stack** | 7, 8, 9, 10, 11, 12 | 84 | session `27931e79`, 2026-08-15 — cold start, phase 7 in progress |
+| **A · the type system** | 2, 3, 4, 5, 6 | 73 | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–3 ✅ complete, **phase 4 at 13/14**, phases 5 and 6 not started |
+| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | session `27931e79`, 2026-08-15 — phase 7 ✅, **phase 10 at 4/13**, phase 12 not started |
 
 Part B's six phase directories **did not exist** at claim time; each is scaffolded
 (`_category_.json` plus a `README.md` carrying the full topic table) as it is
