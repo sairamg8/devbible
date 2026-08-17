@@ -39,7 +39,7 @@ the input is a type and the output is another type, derived by rules you write.
 | 04 | [Key remapping — `as` in a mapped type](./04-key-remapping.md) | <span className="db-tier t-understand">Understand</span> | Renaming keys, prefixing, and filtering keys out by mapping to `never` |
 | 05 | [Distributive conditional types](./05-distributive-conditionals.md) | <span className="db-tier t-understand">Understand</span> | Why a conditional over a union applies member by member, and how to stop it |
 | 06 | [Extracting with `infer`](./06-infer/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | `ReturnType`, `Parameters`, `Awaited`, `InstanceType`, and writing your own extractor |
-| 07 | Template literal types | <span className="db-tier t-understand">Understand</span> | Typed event names and route strings, and the case-changing intrinsics |
+| 07 | [Template literal types](./07-template-literal-types.md) | <span className="db-tier t-understand">Understand</span> | Typed event names and route strings, and the case-changing intrinsics |
 | 08 | Knowing when to stop | <span className="db-tier t-understand">Understand</span> | The readability test — if the error is worse than the bug, delete the type |
 | 09 | Type-level performance | <span className="db-tier t-understand">Understand</span> | Instantiation depth, `TS2589`, and what makes a codebase's checker slow |
 | 10 | Deriving one function's type from another | <span className="db-tier t-understand">Understand</span> | `Parameters<typeof f>` for wrappers, decorators and adapters |
