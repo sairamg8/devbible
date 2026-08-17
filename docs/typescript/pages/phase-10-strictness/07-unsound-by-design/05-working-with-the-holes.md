@@ -204,4 +204,4 @@ where you need to know which one you are holding.
 
 ---
 
-← [04 · Mutation and variance](./04-mutation-and-variance.md) · [Topic index](./README.md) · Next → **08 · `@ts-expect-error` vs `@ts-ignore` vs `@ts-nocheck`** *(not written yet)*
+← [04 · Mutation and variance](./04-mutation-and-variance.md) · [Topic index](./README.md) · Next → [08 · `@ts-expect-error` vs `@ts-ignore` vs `@ts-nocheck`](../08-suppression-directives/README.md)

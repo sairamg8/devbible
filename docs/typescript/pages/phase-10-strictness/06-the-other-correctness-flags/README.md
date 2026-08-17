@@ -79,7 +79,7 @@ behaviour change with no compile-time signal at all — and it costs a keyword.
   exhaustiveness checking at the same time.
 - **← [Phase 7 · Typing `process.env`](../../phase-7-server/03-typing-process-env/README.md)**
   — the applied answer to the flag that `process.env` triggers everywhere.
-- **→ 08 · `@ts-expect-error` vs `@ts-ignore`** *(not written yet)* — why a
+- **→ [08 · `@ts-expect-error` vs `@ts-ignore`](../08-suppression-directives/README.md)** — why a
   suppression over any error in *this* group is never justified.
 - **→ 11 · typescript-eslint type-aware rules** *(not written yet)* — where the
   unused-code pair arguably belongs, and the rules that go further than `TS6205`.
