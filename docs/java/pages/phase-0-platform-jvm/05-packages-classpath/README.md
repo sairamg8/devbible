@@ -48,4 +48,4 @@ about the classpath, and name the next command to run for each.
 
 ---
 
-← Prev: [Running code](../04-running-code.md) · Index: [Phase 0 — The platform and the JVM](../README.md)
+← Prev: [Running code](../04-running-code.md) · Next → [`main`, startup and the config channels](../06-main-startup-config.md)

@@ -15,15 +15,15 @@ run time*, and that changes how you reason about performance, deployment and
 debugging. Phase 12 (the JVM in production) is this phase's payoff; Spring
 (Phase 9) is unreadable without it.
 
-🚧 **9 of 13 written.**
+✅ **Phase complete — 13 of 13 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[What Java is](01-what-java-is/README.md)** | <span className="db-tier t-master">Master</span> | Source → bytecode → JVM; why the same `.jar` runs everywhere — 3 chunks |
-| 02 | **JDK vs JRE vs JVM, and distributions** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Same bytecode, different support contracts |
-| 03 | **The release model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | 6-month majors, LTS every 2 years: 17 → 21 → 25 |
-| 04 | **Running code** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `java`, `javac`, single-file launch, `jshell` |
-| 05 | **Packages and the classpath** *(not written yet)* | <span className="db-tier t-master">Master</span> | How the JVM finds a class — and the two errors when it can't |
+| 02 | **[JDK vs JRE vs JVM, and distributions](02-jdk-jre-jvm.md)** | <span className="db-tier t-understand">Understand</span> | Same bytecode, different support contracts |
+| 03 | **[The release model](03-release-model.md)** | <span className="db-tier t-understand">Understand</span> | 6-month majors, LTS every 2 years: 17 → 21 → 25 |
+| 04 | **[Running code](04-running-code.md)** | <span className="db-tier t-understand">Understand</span> | `java`, `javac`, single-file launch, `jshell` |
+| 05 | **[Packages and the classpath](05-packages-classpath/README.md)** | <span className="db-tier t-master">Master</span> | How the JVM finds a class — and the two errors when it can't — 3 chunks |
 | 06 | **[`main`, startup and the config channels](06-main-startup-config.md)** | <span className="db-tier t-understand">Understand</span> | Program args, `-D` system properties vs environment variables |
 | 07 | **[JIT compilation](07-jit-compilation.md)** | <span className="db-tier t-know">Know</span> | Interpreter → C1 → C2; why the first 100 requests are slow |
 | 08 | **[Garbage collection, the working model](08-garbage-collection.md)** | <span className="db-tier t-understand">Understand</span> | You allocate, the JVM reclaims — and what that costs |

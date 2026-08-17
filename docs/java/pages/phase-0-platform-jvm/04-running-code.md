@@ -183,4 +183,4 @@ tree", not past dependencies.
 
 ---
 
-← Prev: [The release model](03-release-model.md) · Index: [Phase 0 — The platform and the JVM](README.md)
+← Prev: [The release model](03-release-model.md) · Next → [Packages and the classpath](05-packages-classpath/README.md)

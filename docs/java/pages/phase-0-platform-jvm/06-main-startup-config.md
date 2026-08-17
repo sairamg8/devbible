@@ -214,4 +214,4 @@ Shell scripts, CI gates and restart policies branch on it.
 
 ---
 
-← Index: [Phase 0 — The platform and the JVM](README.md) · Next → [JIT compilation](07-jit-compilation.md)
+← Prev: [Packages and the classpath](05-packages-classpath/README.md) · Next → [JIT compilation](07-jit-compilation.md)
