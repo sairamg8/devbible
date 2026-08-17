@@ -98,7 +98,7 @@ type Bad = (a: Parameters<typeof send>[0],
 
 **Judgement:** index into `Parameters<F>` to *read* a type, never to rebuild a parameter list.
 Spread it, or manipulate it with a variadic pattern that preserves the rest
-(**13 · Tuple manipulation**, *not written yet*).
+([13 · Tuple manipulation](../13-tuple-manipulation/README.md)).
 
 ## 4 · Inference sites you did not intend to create
 

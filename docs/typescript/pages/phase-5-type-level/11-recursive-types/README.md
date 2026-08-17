@@ -70,7 +70,7 @@ which one you get depends on whether the recursive call is the branch's entire r
   circularity is a different failure from a depth limit.
 - **→ [12 · `DeepPartial` / `DeepReadonly`](../12-deep-helpers/README.md)** — recursion over *objects*, where
   each property is its own branch, so the work fans out rather than advancing.
-- **→ 13 · Tuple manipulation** *(not written yet)* — the variadic patterns the accumulator
+- **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — the variadic patterns the accumulator
   conversion is built from.
 
 ---

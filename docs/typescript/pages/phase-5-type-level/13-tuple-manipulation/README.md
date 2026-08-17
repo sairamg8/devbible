@@ -6,10 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-know">Know</span>
 
-:::info Topic in progress
-**Chunks 01–04 are written.** The remaining chunks are planned and referred to as plain text until
-they land.
-:::
+**5 chunks, 1,211 lines with this index**, spread **200 · 219 · 229 · 237 · 266** — no file near the cap.
 
 > Verified: 2026-08 against the **TypeScript 4.0 release notes** (*Variadic Tuple Types*,
 > *Labeled Tuple Elements*), quoted verbatim where they are quoted at all. The tuple element
@@ -29,7 +26,22 @@ tuple type exists.
 | 02 | [Variadic tuple types](./02-variadic-tuple-types.md) | The two changes 4.0 actually made, 🔴 **the rule that positions before an unbounded spread survive and positions after it do not**, and why a structural operation should be a spread rather than a recursion |
 | 03 | [Labels, optionality and the spread rule](./03-labels-and-optionality.md) | The three 4.0 labelling rules, 🔴 **the only two structure-preserving operations there are**, and why `infer` sits between them — the case that bites hardest |
 | 04 | [Typing `bind`, `curry` and partial application](./04-bind-and-curry.md) | The notes' own `partialCall` with all four of its error cases, why currying is the recursive version, and 🔴 **the four places the pattern stops — all one root cause** |
-| 05 | **The limits** *(not written yet)* | The 10,000-element ceiling, the cost of a recursive tuple walk, and when a tuple type is the wrong shape |
+| 05 | [The limits](./05-the-limits.md) | The three ceilings applied to tuples, 🔴 **the three cheaper things to check before writing a recursion**, the four shapes a tuple is the wrong tool for, and the four-clause test for when this earns its cost |
+
+## The five sentences to keep
+
+1. **Length and order are the information.** The general signature
+   `concat<T, U>(a: T[], b: U[]): Array<T | U>` throws both away, and that is the sentence
+   the 4.0 notes use to justify the whole feature.
+2. 🔴 **Positions before an unbounded spread survive; positions after it do not.** One
+   array spread into a tuple absorbs everything that follows it into the rest element.
+3. 🔴 **Spread preserves structure; rebuilding from indexed access destroys it.** Labels,
+   `?` and the rest element belong to the *positions*, so `[T[0], T[1]]` silently returns
+   anonymous required elements — and changes the arity.
+4. **There are exactly two structure-preserving operations** — a spread, and a homomorphic
+   mapped type. Everything else is a rebuild.
+5. **This is a parameter-list tool.** The 10,000-element ceiling and the per-use cost make
+   it poor for anything resembling data, and the syntax hides that.
 
 ## The one-sentence version
 

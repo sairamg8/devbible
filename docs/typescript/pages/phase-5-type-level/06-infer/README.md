@@ -56,7 +56,7 @@ will ever write is that line with a different pattern.
   — the first encounter, in a generics context.
 - **→ [07 · Template literal types](../07-template-literal-types.md)** — the string half of chunk
   02, on its own terms.
-- **→ 13 · Tuple manipulation** *(not written yet)* — variadic patterns like
+- **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — variadic patterns like
   `[...infer Rest, infer Last]`, which chunk 01 previews.
 
 ---

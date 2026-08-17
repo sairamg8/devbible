@@ -167,7 +167,7 @@ used as a `UserId` — for that you still need a brand.
   shape check, not validation.
 - **No arithmetic.** You cannot add, compare or count with template literal types;
   numeric work at the type level is done with tuple lengths
-  (**13 · Tuple manipulation**, *not written yet*).
+  ([13 · Tuple manipulation](./13-tuple-manipulation/README.md)).
 - **The expansion is eager.** A union interpolated into a template is materialised
   as literals, so it costs memory in the checker and shows up in hover output as a
   wall of strings.

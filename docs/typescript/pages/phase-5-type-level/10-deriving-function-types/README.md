@@ -59,7 +59,7 @@ keeps genericity.
   circulation**. The inner function is this topic's shape 1 or 2.
 - **← [Phase 4 · Mixins · chunk 01](../../phase-4-classes-declarations/14-mixins/01-the-pattern.md)**
   — the same `never[]`/`any[]` decision on the class side, for construct signatures.
-- **→ 13 · Tuple manipulation** *(not written yet)* — `Head`, `Tail`, `Last` and currying, which
+- **→ [13 · Tuple manipulation](../13-tuple-manipulation/README.md)** — `Head`, `Tail`, `Last` and currying, which
   chunk 03 uses one instance of.
 - **→ 14 · `NoInfer<T>`** *(not written yet)* — the fence for the inference sites a generic
   wrapper introduces.

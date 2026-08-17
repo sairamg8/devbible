@@ -137,7 +137,7 @@ type Init<T extends readonly unknown[]> =
 
 `[...infer Rest, unknown]` matching from the *end* of a tuple is worth knowing —
 variadic tuple patterns are what make head/tail, reverse and length helpers
-possible, and they belong to **13 · Tuple manipulation** *(not written yet)*.
+possible, and they belong to [13 · Tuple manipulation](../13-tuple-manipulation/README.md).
 
 ⚠️ **Recursion needs a base case and a bound.** `DeepUnwrap` terminates because a
 non-promise takes the false branch. A recursion whose false branch also recurses

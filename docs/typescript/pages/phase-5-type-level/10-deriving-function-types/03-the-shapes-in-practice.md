@@ -106,7 +106,7 @@ Three things worth being explicit about:
   assertion, isolated in a helper.
 
 📌 **Variadic tuple manipulation in general — `Head`, `Tail`, `Last`, currying to arbitrary
-depth — is 13 · Tuple manipulation** *(not written yet)*. This page uses one pattern; that topic
+depth — is [13 · Tuple manipulation](../13-tuple-manipulation/README.md). This page uses one pattern; that topic
 develops them.
 
 ## Shape 4 · Adapter that changes a parameter's *type*

@@ -234,4 +234,4 @@ parameter, which a parameter tuple does not carry.
 ---
 
 ← [03 · Labels and optionality](./03-labels-and-optionality.md) · [Topic index](./README.md) ·
-Next → **05 · The limits** *(not written yet)*
+Next → [05 · The limits](./05-the-limits.md)

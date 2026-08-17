@@ -228,4 +228,4 @@ three, and that is the trade the stopping tests are for.
 
 ← [04 · `DeepPartial` is not `DeepReadonly`](./04-partial-is-not-readonly.md) ·
 [Topic index](./README.md) · [Phase 5 index](../README.md) ·
-Next topic → **13 · Tuple manipulation** *(not written yet)*
+Next topic → [13 · Tuple manipulation](../13-tuple-manipulation/README.md)
