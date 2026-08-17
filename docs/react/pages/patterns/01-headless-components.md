@@ -246,4 +246,4 @@ that a design system may specifically not want to give.
 
 ---
 
-← Index: [React patterns](README.md) · Next → **02 · The state reducer pattern** *(not written yet)*
+← Index: [React patterns](README.md) · Next → [02 · The state reducer pattern](02-the-state-reducer-pattern.md)

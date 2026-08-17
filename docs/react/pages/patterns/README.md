@@ -43,7 +43,7 @@ Read down the left column until a row sounds like your week.
 | "Two components need the same *state*, not the same logic" | **Lift it up** — a custom hook will not do this, and believing it will is the classic bug | [Share logic, not state](../phase-7-custom-hooks/03-share-logic-not-state/README.md) · [Lifting state up](../phase-2-components/05-lifting-state-up/README.md) <span className="db-tier t-master">Master</span> |
 | "I need to hand the caller my state so they can render it their way" | **Render props** — still correct where the *markup* varies per call | [Render props](../phase-2-components/12-render-props.md) <span className="db-tier t-know">Know</span> |
 | "I want all the behaviour and none of the markup" | **Headless components** | [01 · Headless components](01-headless-components.md) — *new* |
-| "My reusable component is almost right, but this one caller needs different behaviour" | **The state reducer pattern** | **02 · The state reducer pattern** *(not written yet)* — *new* |
+| "My reusable component is almost right, but this one caller needs different behaviour" | **The state reducer pattern** | [02 · The state reducer pattern](02-the-state-reducer-pattern.md) — *new* |
 | "This button should sometimes render an `<a>`" | **Polymorphic components / the `as` prop** | **03 · Polymorphic components** *(not written yet)* — *new* |
 | "The caller keeps forgetting to spread the accessibility props" | **Prop getters** | **04 · Prop getters** *(not written yet)* — *new* |
 | "My `App.jsx` is nine nested `<Provider>` tags" | **Provider composition** | **05 · Provider composition** *(not written yet)* — *new* |
@@ -163,7 +163,7 @@ written here because there was nowhere to link to.
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Headless components](01-headless-components.md)** | <span className="db-tier t-understand">Understand</span> | All the behaviour, none of the markup — and the accessibility argument that actually justifies it |
-| 02 | **The state reducer pattern** *(not written yet)* | <span className="db-tier t-know">Know</span> | Let the caller intercept your state transitions instead of adding a prop per exception |
+| 02 | **[The state reducer pattern](02-the-state-reducer-pattern.md)** | <span className="db-tier t-know">Know</span> | Let the caller intercept your state transitions instead of adding a prop per exception |
 | 03 | **Polymorphic components** *(not written yet)* | <span className="db-tier t-know">Know</span> | The `as` prop, and why a link that renders a `<div>` is a bug, not a style choice |
 | 04 | **Prop getters** *(not written yet)* | <span className="db-tier t-know">Know</span> | One object the caller spreads, so they cannot forget the ARIA attributes |
 | 05 | **Provider composition** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Nine nested providers, and the two ways out — one cosmetic, one real |
