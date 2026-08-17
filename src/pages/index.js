@@ -20,6 +20,8 @@ const nginx = summarise('nginx');
 const docker = summarise('docker');
 const storybook = summarise('storybook');
 const realworld = summarise('realworld');
+const java = summarise('java');
+const python = summarise('python');
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -181,6 +183,30 @@ const LAYERS = [
         done: true,
         stats: `${git.topicsTotal} topics · ${git.phasesTotal} phases · ${git.phasesDone} phases explained · ${git.pagesWritten} pages`,
         progress: git.percent,
+      },
+    ],
+  },
+  {
+    name: 'Beyond the JS stack',
+    note: 'Second backend languages — syllabus written, pages not started',
+    items: [
+      {
+        n: '26',
+        name: 'Java',
+        desc: 'JVM model, collections, virtual threads, Spring Boot, JPA, JUnit 5, GC and JFR — targeting JDK 25 LTS',
+        to: '/docs/java',
+        active: true,
+        stats: `${java.topicsTotal} topics · ${java.phasesTotal} phases · ${java.phasesDone} phases explained · ${java.pagesWritten} pages`,
+        progress: java.percent,
+      },
+      {
+        n: '27',
+        name: 'Python',
+        desc: 'CPython and the GIL, the data model, typing, uv and ruff, asyncio, FastAPI, pytest — targeting 3.14',
+        to: '/docs/python',
+        active: true,
+        stats: `${python.topicsTotal} topics · ${python.phasesTotal} phases · ${python.phasesDone} phases explained · ${python.pagesWritten} pages`,
+        progress: python.percent,
       },
     ],
   },
