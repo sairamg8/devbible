@@ -40,7 +40,7 @@ Topics are linked from the table below as they land. Resume point:
 | 10 | [Monorepo orchestration](./10-monorepo-orchestration.md) | <span className="db-tier t-know">Know</span> | 🔴 **Two graphs describe the same structure** — references and tasks — and nothing keeps them in sync; plus the stale-green bug: *"run after"* is not *"invalidate when"* |
 | 11 | [Declaration emit](./11-declaration-emit.md) | <span className="db-tier t-know">Know</span> | 🔴 The 4xxx range exists **only in the emit path**, so a green `--noEmit` gate and a failing declaration build are not a contradiction — and for a library **the declaration build IS the gate** |
 | 12 | [Validating published types](./12-validating-published-types.md) | <span className="db-tier t-know">Know</span> | 🔴 **What breaks consumers is resolution, not types** — so no amount of type checking surfaces it, and the cheapest check is to **pack and install into an empty project** |
-| 13 | Measuring type coverage | <span className="db-tier t-know">Know</span> | What the number means and what it does not |
+| 13 | [Measuring type coverage](./13-measuring-type-coverage.md) | <span className="db-tier t-know">Know</span> | 🔴 **An `as` produces a covered expression**, so a coverage target set alone pays people to make the codebase worse in a way the metric cannot see |
 | 14 | AST tooling after TS 7 | <span className="db-tier t-when">When Needed</span> | `ts-morph`, custom transformers, and what still works |
 | 15 | Contributing to DefinitelyTyped | <span className="db-tier t-when">When Needed</span> | The process, and when writing types beats waiting |
 
