@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-know">Know</span>
 
 :::info Topic in progress
-**Chunk 01 is written.** The remaining chunks are planned and referred to as plain text
+**Chunks 01 and 02 are written.** The remaining chunks are planned and referred to as plain text
 until they land.
 :::
 
@@ -28,7 +28,7 @@ advancing by one.
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [The naive version](./01-the-naive-version.md) | What the four-line version already gets right — and 🔴 **the `T extends object` guard everyone writes to protect primitives is guarding against something that cannot happen** |
-| 02 | **What it breaks** *(not written yet)* | Functions, `Date`, `Map`, class instances and index signatures — the cases the guard is actually for |
+| 02 | [What it breaks](./02-what-it-breaks.md) | Five silent failures — 🔴 **a mapped type structurally cannot carry a call signature**, class instances become name-only shells, `DeepPartial` makes array *elements* `undefined`, recursive data cannot be fixed with an accumulator, and `any` is mapped rather than passed through |
 | 03 | **The version that holds up** *(not written yet)* | The guarded implementation, why the conditionals go in that order, and what it still cannot do |
 | 04 | **`DeepPartial` is not `DeepReadonly`** *(not written yet)* | Why making everything optional is a claim about your domain, and what it does at a JSON boundary |
 | 05 | **The cost, and the alternatives** *(not written yet)* | Error messages, the fan-out, the depth cap, and when to reach for something that is not a type |
