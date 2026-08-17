@@ -78,7 +78,7 @@ export const LANGUAGES = {
       {n: 6, slug: 'phase-6-modules-build', name: 'Modules, declarations and the build', part: 'Types at scale', topics: 16, pages: 16},
       {n: 7, slug: 'phase-7-server', name: 'TypeScript on the server (Master rows only — rest dropped)', part: 'In the stack', topics: 5, pages: 5},
       {n: 10, slug: 'phase-10-strictness', name: 'Strictness and correctness', part: 'Rigour and tooling', topics: 13, pages: 13},
-      {n: 12, slug: 'phase-12-tooling', name: 'Tooling, performance and testing', part: 'Rigour and tooling', topics: 15, pages: 6, pagesPlanned: 15},
+      {n: 12, slug: 'phase-12-tooling', name: 'Tooling, performance and testing', part: 'Rigour and tooling', topics: 15, pages: 7, pagesPlanned: 15},
     ],
   },
   mongodb: {
