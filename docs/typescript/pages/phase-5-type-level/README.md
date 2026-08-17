@@ -38,7 +38,7 @@ the input is a type and the output is another type, derived by rules you write.
 | 03 | [The built-in utility types](./03-utility-types/README.md) *(5 chunks)* | <span className="db-tier t-master">Master</span> | Which are mapped and which are conditional, so you can write the missing one |
 | 04 | [Key remapping — `as` in a mapped type](./04-key-remapping.md) | <span className="db-tier t-understand">Understand</span> | Renaming keys, prefixing, and filtering keys out by mapping to `never` |
 | 05 | [Distributive conditional types](./05-distributive-conditionals.md) | <span className="db-tier t-understand">Understand</span> | Why a conditional over a union applies member by member, and how to stop it |
-| 06 | Extracting with `infer` | <span className="db-tier t-understand">Understand</span> | `ReturnType`, `Parameters`, `Awaited`, `InstanceType`, and writing your own extractor |
+| 06 | [Extracting with `infer`](./06-infer/README.md) *(2 chunks)* | <span className="db-tier t-understand">Understand</span> | `ReturnType`, `Parameters`, `Awaited`, `InstanceType`, and writing your own extractor |
 | 07 | Template literal types | <span className="db-tier t-understand">Understand</span> | Typed event names and route strings, and the case-changing intrinsics |
 | 08 | Knowing when to stop | <span className="db-tier t-understand">Understand</span> | The readability test — if the error is worse than the bug, delete the type |
 | 09 | Type-level performance | <span className="db-tier t-understand">Understand</span> | Instantiation depth, `TS2589`, and what makes a codebase's checker slow |
