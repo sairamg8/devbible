@@ -31,10 +31,10 @@ adequate one.
 | 4 | **Context + Provider** | <span className="db-tier t-master">Master</span> | [phase 5 · 04](../phase-5-refs-context-reducers/04-createcontext-usecontext.md) · [05](../phase-5-refs-context-reducers/05-context-re-render-problem.md) · [12](../phase-5-refs-context-reducers/12-context-plus-reducer.md) | Values that skip the prop chain — and the re-render bill |
 | 5 | **Controlled components** | <span className="db-tier t-master">Master</span> | [phase 2 · 04](../phase-2-components/04-controlled-vs-uncontrolled/README.md) | Who owns the value, and why `undefined` decides it permanently |
 | 6 | **Headless components** | <span className="db-tier t-master">Master</span> | **[06 · here](06-headless-components/README.md)** | All the behaviour, none of the markup — justified by accessibility, not reuse |
-| 7 | **Render props** | <span className="db-tier t-know">Know</span> | [phase 2 · 12](../phase-2-components/12-render-props/README.md) | The pre-hooks sharing pattern, and the cases hooks still cannot cover |
+| 7 | **Render props** | <span className="db-tier t-know">Know</span> | [phase 2 · 12](../phase-2-components/12-render-props/README.md) | **3 chunks** — the five cases hooks cannot cover, and the RSC boundary a function prop cannot cross |
 | 8 | **State reducer** | <span className="db-tier t-understand">Understand</span> | **[08 · here](08-state-reducer/README.md)** | Let the caller intercept a transition instead of adding a prop per exception |
-| 9 | **Container / presentational** | <span className="db-tier t-know">Know</span> | **[09 · here](09-container-presentational.md)** | The pattern hooks retired — and why its author withdrew it |
-| 10 | **Higher-order components** | <span className="db-tier t-know">Know</span> | [phase 2 · 13](../phase-2-components/13-higher-order-components/README.md) | Three documented caveats, one quietly fixed by React 19 |
+| 9 | **Container / presentational** | <span className="db-tier t-know">Know</span> | **[09 · here](09-container-presentational/README.md)** | **2 chunks** — the pattern hooks retired, and the one RSC brought back with a compiler behind it |
+| 10 | **Higher-order components** | <span className="db-tier t-know">Know</span> | [phase 2 · 13](../phase-2-components/13-higher-order-components/README.md) | **3 chunks** — three caveats, invisible composition order, typing, and how to retire one |
 
 **Four of the ten live here** because they had no adequate home: compound
 components was a 66-line section, headless and the state reducer did not exist at
@@ -79,7 +79,7 @@ Not peers of the ten — machinery the ten are built from, most often
 | "Read from something outside React" | **`useSyncExternalStore`** | [phase 5 · 15](../phase-5-refs-context-reducers/15-usesyncexternalstore.md) |
 | "This file is 400 lines, should I split it?" | **Component boundaries** | [phase 2 · 10](../phase-2-components/10-component-boundaries.md) |
 | "Maintaining `withRouter(withTheme(...))`" | **HOCs** — read them, do not write them | [phase 2 · 13](../phase-2-components/13-higher-order-components/README.md) |
-| "Should I split this into smart and dumb?" | Probably not — **container/presentational** | [09](09-container-presentational.md) |
+| "Should I split this into smart and dumb?" | Probably not — **container/presentational** | [09](09-container-presentational/README.md) |
 
 ## The one distinction that matters most
 
@@ -102,7 +102,7 @@ is Master tier for exactly that reason.
 - **Splitting a component because the file got long.** Length is not a
   responsibility ([component boundaries](../phase-2-components/10-component-boundaries.md)).
 - **A container/presentational split by default.** Its author withdrew the
-  recommendation in 2019 — [09](09-container-presentational.md) carries the quote.
+  recommendation in 2019 — [09](09-container-presentational/README.md) carries the quote.
 - **`cloneElement` to wire up compound parts.** It only reaches direct children
   and fails silently ([03 · 02](03-compound-components/02-why-context.md)).
 
