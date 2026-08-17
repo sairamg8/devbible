@@ -12,17 +12,12 @@ sidebar_position: 12
 > **No sandbox, no console blocks** — no timing on these pages is our own, and
 > where a figure exists it is quoted from documentation with the source named.
 
-**15 topics.** The compiler as part of a build system.
+**15 topics — ✅ COMPLETE.** The compiler as part of a build system.
 
 Everything in this phase shows up as *"the editor is slow"* or *"CI takes eleven
 minutes"* long before anyone calls it a TypeScript problem. The phase's job is to
 make those two complaints diagnosable — and the first topic is the one that decides
 whether your pipeline is checking anything at all.
-
-:::info 🚧 This phase is being written
-Topics are linked from the table below as they land. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
 
 ## Topics
 
@@ -41,8 +36,8 @@ Topics are linked from the table below as they land. Resume point:
 | 11 | [Declaration emit](./11-declaration-emit.md) | <span className="db-tier t-know">Know</span> | 🔴 The 4xxx range exists **only in the emit path**, so a green `--noEmit` gate and a failing declaration build are not a contradiction — and for a library **the declaration build IS the gate** |
 | 12 | [Validating published types](./12-validating-published-types.md) | <span className="db-tier t-know">Know</span> | 🔴 **What breaks consumers is resolution, not types** — so no amount of type checking surfaces it, and the cheapest check is to **pack and install into an empty project** |
 | 13 | [Measuring type coverage](./13-measuring-type-coverage.md) | <span className="db-tier t-know">Know</span> | 🔴 **An `as` produces a covered expression**, so a coverage target set alone pays people to make the codebase worse in a way the metric cannot see |
-| 14 | AST tooling after TS 7 | <span className="db-tier t-when">When Needed</span> | `ts-morph`, custom transformers, and what still works |
-| 15 | Contributing to DefinitelyTyped | <span className="db-tier t-when">When Needed</span> | The process, and when writing types beats waiting |
+| 14 | [AST tooling after TS 7](./14-ast-tooling-after-ts7.md) | <span className="db-tier t-when">When Needed</span> | 🔴 The surface was **re-shaped, not re-exported**, so a port is a rewrite — and the question to ask first is **whether the tool needs to exist** |
+| 15 | [Contributing to DefinitelyTyped](./15-contributing-to-definitelytyped.md) | <span className="db-tier t-when">When Needed</span> | 🔴 **Two upstreams, and they are not the same** — plus: an `any` you leave in a contributed `.d.ts` becomes **inherited `any`** in every consumer's program |
 
 ## Phase gate
 
