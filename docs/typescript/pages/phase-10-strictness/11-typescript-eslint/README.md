@@ -15,20 +15,25 @@ sidebar_position: 0
 > phase nothing here is read from its source; every rule claim is attributed to a
 > documentation page. **No sandbox, no console block, no timings of our own.**
 
-:::info 🚧 This topic is mid-write — 7 chunks of 9
-Chunks **01–07 are written**. Chunks **08 (the `no-unsafe-*` family) and 09
-(adoption and the CI cost)** are not written yet, and references to them in the
-pages below are deliberately **plain text rather than links** so the build stays
-green. Resume point: `devbible/progress_typescript_part_b.md` in the memory store.
+:::info 🚧 This topic is mid-write — 9 chunks of 10
+Chunks **01–09 are written**. Only **10 (adoption and the CI cost)** is left, and
+the references to it in the pages below are deliberately **plain text rather than
+links** so the build stays green. Resume point:
+`devbible/progress_typescript_part_b.md` in the memory store.
 
-⚠️ **The plan said seven chunks; it is nine, and the difference is the point.**
-`strict-boolean-expressions` was one row and is three chunks: the rule and its
-option matrix are one argument (05), the bugs it exists to catch are a second (06),
-and the migration is a third (07) because half of the fixes change runtime
-behaviour and that needed working out rather than listing. The draft of 06 reached
-**329 lines and was split, not trimmed** — the two halves then came to **459
-together**. **The chunk count is an output of the material, never a budget set in
-advance.**
+⚠️ **The plan said seven chunks; it is ten, and the difference is the point.** Two
+syllabus items turned out to be several arguments each.
+`strict-boolean-expressions` became three chunks — the rule and its option matrix
+(05), the bugs it exists to catch (06), and the migration (07), because half of the
+fixes change runtime behaviour and that needed working out rather than listing. The
+`no-unsafe-*` rules became two (08, 09) once it turned out that 🔴 **the prefix is
+not a family**: five of the ten track `any` and only work as a set, and the other
+five are unrelated checks that share a naming convention.
+
+📌 **The draft of 06 reached 329 lines and was split, not trimmed — and the two
+halves then came to 459 together.** The 130 lines the split *added* are the
+standing evidence for the rule: the cap decides where a file breaks, never how much
+a topic gets explained.
 :::
 
 The syllabus row asks for *"the checks the compiler will not do, and their CI
@@ -63,8 +68,9 @@ this topic is organised around.
 | 05 | [`strict-boolean-expressions`](./05-strict-boolean-expressions.md) | The closed list of falsy values as the **whole** rule — 🔴 truthiness is safe exactly when the non-nullish part of the type has no falsy member, which explains the entire option matrix; and 🔴 that the **defaults draw the line at nullability, not falsiness**, so the famous bugs are permitted until you set two options yourself |
 | 06 | [The conditions you get wrong](./06-the-conditions-you-get-wrong.md) | The six worked bugs — the empty username, the zero-valued option, `NaN`, the numeric enum's **first** member, and 🔴 `{count && …}` rendering a literal `0` in the DOM. The pattern that matters: four of the six land on the **most-travelled** path, which is why they reach production |
 | 07 | [Fixing them without breaking them](./07-fixing-them-without-breaking-them.md) | 🔴 **Four of the eight fixes change runtime behaviour**, and one makes things *worse* — `n !== 0` admits the `NaN` that truthiness rejected. Why no fixer can choose for you, and the three-pass rollout |
-| 08 | **The `no-unsafe-*` family** *(not written yet)* | The nine rules, and 🔴 the debt from [topic 03](../03-containing-any.md): they are the only way to catch **inherited** `any` |
-| 09 | **Adoption and the CI cost** *(not written yet)* | The order to turn things on, the `-only` configs, and the arithmetic of not running two type-checks per job |
+| 08 | [The rules that track `any`](./08-the-rules-that-track-any.md) | Five rules, **one flow** — the five places an `any` can cross a boundary, so disabling one relocates the leak instead of removing it. Pays [topic 03](../03-containing-any.md)'s debt: 🔴 the compiler **cannot** report `any` usage, and the one source it did close (`catch`) needed a dedicated flag to do it |
+| 09 | [The five that only share a prefix](./09-the-five-that-share-a-prefix.md) | 🔴 **The prefix is not a family** — enum comparison, class–interface merging, `Function`, unary minus, assertions. Two compiler-read diagnostics anchor it: `TS2395` checks merged declarations for *export consistency* and nothing else, and `TS2356` lists **`any` first** among the operands it accepts |
+| 10 | **Adoption and the CI cost** *(not written yet)* | The order to turn things on, the `-only` configs, and the arithmetic of not running two type-checks per job |
 
 ## Phase gate
 
@@ -92,7 +98,7 @@ already argued for on their own merits.
   positives.
 - **← [03 · Containing `any`](../03-containing-any.md)** — which names the
   `no-unsafe-*` family as the only way to catch `any` that arrives **inherited**
-  rather than written. Chunk 08 owes that debt.
+  rather than written. Chunk 08 pays that debt.
 - **← [07 · Unsound by design](../07-unsound-by-design/README.md)** — the holes that
   become this topic's false positives, one for one.
 - **← [08 · Suppression directives](../08-suppression-directives/README.md)** — the
@@ -105,7 +111,7 @@ already argued for on their own merits.
   — the same promise-in-a-`void`-position mechanism, argued in the framework where
   it bites hardest.
 - **→ 12 · Assertion discipline** *(not written yet)* — `no-unsafe-type-assertion`
-  and the `as` count belong there; chunk 08 will link rather than restate.
+  and the `as` count belong there; chunk 09 links rather than restates.
 
 ---
 
