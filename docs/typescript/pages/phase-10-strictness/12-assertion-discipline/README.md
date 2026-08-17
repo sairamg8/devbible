@@ -12,8 +12,8 @@ sidebar_position: 0
 > claims are attributed to **typescript-eslint's** rule pages — ⚠️ it is not
 > installed here. **No sandbox run, no console block.**
 
-:::info 🚧 This topic is mid-write — 2 chunks
-Chunks **01 and 02 are written**. The rest are not, and references to them below are
+:::info 🚧 This topic is mid-write — 3 chunks
+Chunks **01–03 are written**. The rest are not, and references to them below are
 deliberately **plain text rather than links** so the build stays green. Resume
 point: `devbible/progress_typescript_part_b.md` in the memory store.
 :::
@@ -36,7 +36,7 @@ organised around one measured fact that reframes all three:
 |---|---|---|
 | 01 | [Three ways to make a claim](./01-three-ways-to-make-a-claim.md) | `satisfies` / `as` / `!` ranked by how much each is checked, with the diagnostics quoted — 🔴 `TS2352`'s floor is **"sufficient overlap", not correctness**, and it **quotes its own escape hatch**, so `x as unknown as T` in a diff means someone was told the types are unrelated and proceeded |
 | 02 | [What an `as` is standing in for](./02-what-an-as-is-standing-in-for.md) | 🔴 **Six substitutions, each needing a different fix** — and the review question that replaces "avoid `as`": *what would have to be true for this to be deleted?* Includes the one case where a claim became a check (**5.5's inferred type predicates**) and why `as const` must be excluded from any count |
-| 03 | **`!` and the definite assignment assertion** *(not written yet)* | The one-character claim nobody counts, its `!:` sibling and the rules the compiler *does* enforce there |
+| 03 | [The one-character claim nobody counts](./03-the-one-character-claim.md) | 🔴 Six reasons `!` goes uncounted — including that it **cannot be grepped for**, since `!` is also negation and `!=` — the two shapes that **contain their own refutation** (`a?.b!` and `a! ?? c`), and that every rule the compiler enforces around `!:` is about **form, not truth** |
 | 04 | **`as any`, and why it is a different thing** *(not written yet)* | Not a stronger assertion but an exit from the type system — and what it does to the `no-unsafe-*` rules downstream |
 | 05 | **A policy that works** *(not written yet)* | Count, do not ban; the legitimate uses; and the metric this phase has been building toward |
 
