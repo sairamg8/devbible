@@ -242,4 +242,4 @@ decorators topic is where that is settled.
 ---
 
 ← Prev: [02 · What it quietly loses](./02-what-it-loses.md) · [Topic index](./README.md) ·
-Next → **11 · Recursive types** *(not written yet)*
+Next → [11 · Recursive types](../11-recursive-types/README.md)

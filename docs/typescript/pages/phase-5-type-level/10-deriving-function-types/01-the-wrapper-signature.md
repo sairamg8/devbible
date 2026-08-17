@@ -218,4 +218,4 @@ to the type system, and `Function` is the one bound that hides it.
 
 ---
 
-← [Topic index](./README.md) · Next → **02 · What derivation quietly loses** *(not written yet)*
+← [Topic index](./README.md) · Next → [02 · What derivation quietly loses](./02-what-it-loses.md)

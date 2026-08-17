@@ -6,13 +6,10 @@ sidebar_position: 0
 
 <span className="db-tier t-know">Know</span>
 
-:::info Topic in progress
-**Chunks 01 and 02 are written.** Chunks 03, 04 and 05 are planned and not yet written —
-they are referred to as plain text until they land. ⚠️ The plan grew from three chunks to
-five when chunk 02's draft came in at **349 lines**: it was **split on a concept boundary,
-not trimmed**, and the remaining material earned two chunks of its own rather than being
-compressed into one.
-:::
+**5 chunks, 1,417 lines with this index.** ⚠️ The topic was planned as three and came out as five: chunk
+02's draft measured **349 lines** and was **split on a concept boundary, not trimmed**, and
+the material that came out of the split earned two chunks of its own rather than being
+compressed back in. Per-file spread is **201 · 270 · 282 · 291 · 295**.
 
 > Verified: 2026-08. 🔴 **The recursion limits were read out of the compiler's own source** —
 > **TypeScript 5.9.3**, `sandbox/ts-p0/node_modules/typescript5/lib/typescript.js`: the
@@ -34,14 +31,14 @@ recursion as **computation**: a type that walks a structure and produces a diffe
 | 02 | [The accumulator pattern](./02-the-accumulator-pattern.md) | The conversion itself, in the release notes' own words — the five-step recipe, the three seeds (`never`, `""`, `[]`), and why a type whose input never shrinks needs a counter |
 | 03 | [Order and position](./03-order-and-position.md) | Why the conversion reverses tuples and strings but not unions, what may wrap in the base branch (and should), how free the argument list really is, and the nine-shape eyeball table |
 | 04 | [The fine print](./04-the-fine-print.md) | 🔴 **A third ceiling — 10,000 tuple elements, `TS2799`/`TS2800`, checked at the spread and unrelated to recursion depth** — plus the public-alias split as a correctness issue, iterations against cost, and the three shapes no accumulator can reach |
-| 05 | **Capping depth deliberately** *(not written yet)* | The counter tuple, whether the cap errors or stops, and the circularity diagnostics |
+| 05 | [Capping depth deliberately](./05-capping-depth-deliberately.md) | The counter tuple against the `Prev` lookup table, **the four things you can return at the cap and where each one fails**, picking the number from your data, and the four circularity diagnostics a cap cannot help |
 
 ## The one-sentence version
 
 **There are two recursion ceilings an order of magnitude apart, both reported as `TS2589`**, and
 which one you get depends on whether the recursive call is the branch's entire result.
 
-## The three sentences to keep
+## The six sentences to keep
 
 1. **`getConditionalType` is a loop, not a recursive function.** A tail call re-enters it instead
    of stacking an instantiation, so `instantiationDepth` never climbs and the ceiling is
@@ -50,6 +47,16 @@ which one you get depends on whether the recursive call is the branch's entire r
    you on the 1,000 path, so the bracket form is a *performance* tool as well as a correctness one.
 3. 🔴 **`tailCount` only counts tail calls to a named alias**, which is the third independent
    reason to name helper types — after caching and error messages.
+4. **The conversion is order-safe for unions and order-changing for tuples and strings.**
+   A union has no order, so the release notes' example could not go wrong; `[...Acc, H]`
+   preserves order and `[H, ...Acc]` reverses it, which makes reversal free and makes
+   accidental reversal the pattern's commonest silent bug.
+5. 🔴 **There is a third ceiling and it is not about recursion at all** — a tuple cannot
+   exceed **10,000 elements** (`TS2799` / `TS2800`), checked at the spread, so a doubling
+   accumulator dies with almost its whole iteration budget unspent.
+6. **A depth cap's real content is what it returns AT the cap.** Stopping is a decision
+   with four possible answers, and `never` — the one that looks principled — is the one
+   whose failure surfaces furthest from the cause.
 
 ## Where this connects
 

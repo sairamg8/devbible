@@ -164,7 +164,7 @@ definition. Restructure so the decision uses the accumulator instead of the resu
 accept the nested ceiling.
 
 **When none of the three has a way out, the honest options are a deliberate depth cap —
-chunk 05 · Capping depth deliberately** *(not written yet)* — **or not writing the type**,
+[chunk 05](./05-capping-depth-deliberately.md) — or not writing the type**,
 which [topic 08](../08-knowing-when-to-stop/README.md) argues is more often right than it
 feels.
 
@@ -279,4 +279,4 @@ gap in the wording, not a hint about where the union was built.
 ---
 
 ← [03 · Order and position](./03-order-and-position.md) · [Topic index](./README.md) ·
-Next → **05 · Capping depth deliberately** *(not written yet)*
+Next → [05 · Capping depth deliberately](./05-capping-depth-deliberately.md)

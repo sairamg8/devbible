@@ -56,9 +56,9 @@ The input is **the caller's own function**, which you cannot enumerate — test 
 of open. Writing the signature by hand is not an option, and re-writing it every time the
 wrapped function changes is exactly the drift the type prevents.
 
-Deriving one function's type from another is **10 · Deriving one function's type from
-another** *(not written yet)*, which is this case in full: decorators, adapters, retry
-helpers, instrumentation.
+Deriving one function's type from another is
+[10 · Deriving one function's type from another](../10-deriving-function-types/README.md),
+which is this case in full: decorators, adapters, retry helpers, instrumentation.
 
 ## 3 · A key-driven API where the value type follows the key
 

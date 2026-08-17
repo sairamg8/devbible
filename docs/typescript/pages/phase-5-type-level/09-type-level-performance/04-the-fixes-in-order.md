@@ -100,7 +100,7 @@ types**, which is also exactly the population that can hit `TS7056`.
 
 An uncapped recursive type stops when the compiler does, at `instantiationDepth === 100`. A
 chosen limit is a contract; the compiler's limit is an accident. The construction belongs to
-**11 · Recursive types** *(not written yet)*; the decision belongs here, and it has two parts:
+[11 · Recursive types · chunk 05](../11-recursive-types/05-capping-depth-deliberately.md); the decision belongs here, and it has two parts:
 **pick the depth, and decide whether exceeding it errors or silently stops.**
 
 ## Step 6 · Reduce the surface, not the type
@@ -232,4 +232,4 @@ touching.
 ---
 
 ← Prev: [03 · What makes it slow](./03-what-makes-it-slow.md) · [Topic index](./README.md) ·
-Next → **10 · Deriving one function's type from another** *(not written yet)*
+Next → [10 · Deriving one function's type from another](../10-deriving-function-types/README.md)

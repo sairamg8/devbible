@@ -112,7 +112,7 @@ of derived types, not every local arrow.
 A recursive type walks until it stops. With no depth limit the stopping condition is the
 compiler's: `instantiationDepth === 100`, i.e. `TS2589` on somebody else's deeper data. The
 counter-construction — a fixed-length tuple used as a depth budget — belongs to
-**11 · Recursive types** *(not written yet)*; what belongs here is that **an uncapped recursive
+[11 · Recursive types · chunk 05](../11-recursive-types/05-capping-depth-deliberately.md); what belongs here is that **an uncapped recursive
 type has a performance profile you did not choose.**
 
 ## 6 · Mapped types over very large object types

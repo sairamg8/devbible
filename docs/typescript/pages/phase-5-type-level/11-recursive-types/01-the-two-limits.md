@@ -108,7 +108,7 @@ That conversion is [chunk 02 · The accumulator pattern](./02-the-accumulator-pa
 Both ceilings are the compiler's, not yours, and hitting either is
 [topic 09 · chunk 03](../09-type-level-performance/03-what-makes-it-slow.md)'s uncapped-recursion
 shape: **a performance profile you did not choose.** A deliberate depth cap is
-**chunk 05 · Capping depth deliberately** *(not written yet)*.
+[chunk 05 · Capping depth deliberately](./05-capping-depth-deliberately.md).
 
 ⚠️ **And 1,000 is a limit on *iterations*, not on cost.** A tail-recursive type that survives 900
 iterations is still doing 900 instantiations against the five-million count budget

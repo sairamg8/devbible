@@ -80,8 +80,8 @@ input is closed; check it when the data comes from outside.**
   author's side.
 - **→ [09 · Type-level performance](../09-type-level-performance/README.md)** — the compile-time half of the five
   walls, and the depth-capping construction chunk 10 defers.
-- **→ 10 · Deriving one function's type from another** *(not written yet)* — chunk 11's case
-  2 in full: wrappers, decorators and adapters.
+- **→ [10 · Deriving one function's type from another](../10-deriving-function-types/README.md)**
+  — chunk 11's case 2 in full: wrappers, decorators and adapters.
 
 ---
 

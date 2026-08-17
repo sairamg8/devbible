@@ -65,8 +65,9 @@ before choosing a fix.**
   and `TS2590` as arithmetic rather than bad luck.
 - **← [01 · Mapped types · chunk 04](../01-mapped-types/04-limits.md)** — the limits page that
   forward-referenced this topic for `TS2589`.
-- **→ 11 · Recursive types** *(not written yet)* — the depth-cap construction this topic
-  defers.
+- **→ [11 · Recursive types](../11-recursive-types/README.md)** — the depth-cap construction
+  this topic defers, and a **third** ceiling these budgets do not cover: 10,000 tuple
+  elements, `TS2799`.
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — `--extendedDiagnostics`,
   `--generateTrace`, `incremental` and project references. **Measurement lives there; this topic
   is about what to look for and what it will cost you to fix.**

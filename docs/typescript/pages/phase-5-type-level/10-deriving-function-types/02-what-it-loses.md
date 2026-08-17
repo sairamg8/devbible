@@ -212,4 +212,4 @@ open — the caller's own function, inferred at the call site.
 ---
 
 ← Prev: [01 · The wrapper signature](./01-the-wrapper-signature.md) · [Topic index](./README.md) ·
-Next → **03 · The shapes in practice** *(not written yet)*
+Next → [03 · The shapes in practice](./03-the-shapes-in-practice.md)

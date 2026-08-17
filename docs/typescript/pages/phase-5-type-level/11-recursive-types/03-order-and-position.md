@@ -120,7 +120,7 @@ recursive path:
    separator after it, so it never matched the recursive pattern. Almost every string
    splitter has a version of this, and forgetting it silently drops the last item.
 4. **The failure answer.** `never`, a branded error type, or a message string for the
-   caller — see **chunk 05 · Capping depth deliberately** *(not written yet)*, which is
+   caller — see [chunk 05 · Capping depth deliberately](./05-capping-depth-deliberately.md), which is
    about deciding what that answer is on purpose, and
    [chunk 04](./04-the-fine-print.md) for why the base branch is also where the public
    alias earns its keep.

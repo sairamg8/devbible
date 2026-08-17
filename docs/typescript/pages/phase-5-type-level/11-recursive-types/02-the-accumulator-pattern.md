@@ -149,7 +149,8 @@ type ZeroToFour = Range<5>;   // [0, 1, 2, 3, 4]
 tuple back into a numeric literal type, so a tuple accumulator is simultaneously the
 result you are building and the loop counter you are testing against — which is what
 makes `Range`, `Repeat` and the deliberate depth caps in
-**chunk 05 · Capping depth deliberately** *(not written yet)* possible at all.
+[chunk 05 · Capping depth deliberately](./05-capping-depth-deliberately.md)
+possible at all.
 
 ## Two accumulators are normal
 
