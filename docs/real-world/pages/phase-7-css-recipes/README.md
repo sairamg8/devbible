@@ -18,7 +18,7 @@ every selector here targets components that already exist.
 | # | Chapter | Tier | In one line |
 |---|---|---|---|
 | 01 | **[The product grid](01-the-product-grid/README.md)** *(12 chunks)* | <span className="db-tier t-master">Master</span> | One `grid-template-columns` declaration replaces the breakpoint pile-up — and the card adapts to its column, not the viewport |
-| 04 | **Skeleton loaders and spinners** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 04 | **[Skeleton loaders and spinners](04-skeletons-and-spinners/README.md)** *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | A loading indicator is a cost, not a courtesy — show nothing for the first 400 ms, and make the skeleton *be* the component |
 | 05 | **Dark mode** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 06 | **The overlay layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 
