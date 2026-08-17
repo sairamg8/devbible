@@ -34,7 +34,7 @@ the input is a type and the output is another type, derived by rules you write.
 | # | Page | Tier | What it settles |
 |---|---|---|---|
 | 01 | [Mapped types](./01-mapped-types/README.md) *(4 chunks)* | <span className="db-tier t-master">Master</span> | `{ [K in keyof T]: … }`, adding and removing `?` and `readonly` with `+`/`-`, and building your own `Partial` |
-| 02 | Conditional types | <span className="db-tier t-master">Master</span> | `T extends U ? X : Y`, the assignability question it actually asks, and nesting them readably |
+| 02 | [Conditional types](./02-conditional-types/README.md) *(4 chunks)* | <span className="db-tier t-master">Master</span> | `T extends U ? X : Y`, the assignability question it actually asks, and nesting them readably |
 | 03 | The built-in utility types | <span className="db-tier t-master">Master</span> | Which are mapped and which are conditional, so you can write the missing one |
 | 04 | Key remapping — `as` in a mapped type | <span className="db-tier t-understand">Understand</span> | Renaming keys, prefixing, and filtering keys out by mapping to `never` |
 | 05 | Distributive conditional types | <span className="db-tier t-understand">Understand</span> | Why a conditional over a union applies member by member, and how to stop it |
