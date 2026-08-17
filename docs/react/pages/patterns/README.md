@@ -34,7 +34,7 @@ adequate one.
 | 7 | **Render props** | <span className="db-tier t-know">Know</span> | [phase 2 · 12](../phase-2-components/12-render-props/README.md) | The pre-hooks sharing pattern, and the cases hooks still cannot cover |
 | 8 | **State reducer** | <span className="db-tier t-understand">Understand</span> | **[08 · here](08-state-reducer/README.md)** | Let the caller intercept a transition instead of adding a prop per exception |
 | 9 | **Container / presentational** | <span className="db-tier t-know">Know</span> | **[09 · here](09-container-presentational.md)** | The pattern hooks retired — and why its author withdrew it |
-| 10 | **Higher-order components** | <span className="db-tier t-know">Know</span> | [phase 2 · 13](../phase-2-components/13-higher-order-components.md) | Three documented caveats, one quietly fixed by React 19 |
+| 10 | **Higher-order components** | <span className="db-tier t-know">Know</span> | [phase 2 · 13](../phase-2-components/13-higher-order-components/README.md) | Three documented caveats, one quietly fixed by React 19 |
 
 **Four of the ten live here** because they had no adequate home: compound
 components was a 66-line section, headless and the state reducer did not exist at
@@ -78,7 +78,7 @@ Not peers of the ten — machinery the ten are built from, most often
 | "App-wide state without a library" | **Context + reducer** | [phase 5 · 12](../phase-5-refs-context-reducers/12-context-plus-reducer.md) |
 | "Read from something outside React" | **`useSyncExternalStore`** | [phase 5 · 15](../phase-5-refs-context-reducers/15-usesyncexternalstore.md) |
 | "This file is 400 lines, should I split it?" | **Component boundaries** | [phase 2 · 10](../phase-2-components/10-component-boundaries.md) |
-| "Maintaining `withRouter(withTheme(...))`" | **HOCs** — read them, do not write them | [phase 2 · 13](../phase-2-components/13-higher-order-components.md) |
+| "Maintaining `withRouter(withTheme(...))`" | **HOCs** — read them, do not write them | [phase 2 · 13](../phase-2-components/13-higher-order-components/README.md) |
 | "Should I split this into smart and dumb?" | Probably not — **container/presentational** | [09](09-container-presentational.md) |
 
 ## The one distinction that matters most

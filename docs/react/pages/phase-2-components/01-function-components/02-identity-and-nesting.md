@@ -130,7 +130,7 @@ function Page(props) {
 The legacy HOC documentation names this explicitly — *"Don't Use HOCs Inside the
 render Method"* — and gives the same reason: a new `EnhancedComponent` is
 created on every render, so React unmounts and remounts rather than updating.
-Apply HOCs once, at module level ([topic 13](../13-higher-order-components.md)).
+Apply HOCs once, at module level ([topic 13](../13-higher-order-components/README.md)).
 
 **3. A component chosen from an object literal**
 

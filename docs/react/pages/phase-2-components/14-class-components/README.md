@@ -41,7 +41,7 @@ Three removals and one deliberate survival, all covered across the two chunks:
 
 - **→ [`Component` vs `PureComponent`](../15-purecomponent.md)** — the class
   ancestry of `memo`.
-- **→ [Higher-order components](../13-higher-order-components.md)** — error
+- **→ [Higher-order components](../13-higher-order-components/README.md)** — error
   boundaries must be classes, so a HOC is the ergonomic way to apply one.
 - **→ [`ref` as a prop](../09-ref-as-a-prop.md)** — string refs, and why class
   refs mean the instance.

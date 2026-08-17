@@ -57,7 +57,7 @@ is often the actual fix rather than a stylistic preference.
 - **→ [Slots and children](../03-composition/02-slots-and-children.md)** — the
   element-prop alternative, which is what you want when the hole takes no
   arguments.
-- **→ [Higher-order components](../13-higher-order-components.md)** — the other
+- **→ [Higher-order components](../13-higher-order-components/README.md)** — the other
   pre-hooks sharing pattern, with its own three caveats.
 - **→ [Headless components](../../patterns/06-headless-components/05-the-delivery-shapes.md)** —
   children-as-a-function is one of the four ways to deliver a headless widget.

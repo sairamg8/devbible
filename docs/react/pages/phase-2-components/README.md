@@ -32,7 +32,7 @@ the pre-hooks era: read them to *read code*, not to write it.
 | 10 | **[Component boundaries](10-component-boundaries.md)** | <span className="db-tier t-understand">Understand</span> | Split by responsibility, never by length; colocate |
 | 11 | **[Portals](11-portals.md)** | <span className="db-tier t-understand">Understand</span> | Moves the DOM node, keeps the React tree — including events |
 | 12 | **[Render props](12-render-props/README.md)** | <span className="db-tier t-know">Know</span> | **3 chunks** — wrapper hell, the five cases hooks cannot cover, and the RSC boundary a function prop cannot cross |
-| 13 | **[Higher-order components](13-higher-order-components.md)** | <span className="db-tier t-know">Know</span> | Three caveats, one of them quietly fixed by React 19 |
+| 13 | **[Higher-order components](13-higher-order-components/README.md)** | <span className="db-tier t-know">Know</span> | **3 chunks** — three caveats (one quietly fixed by React 19), composition order, typing, and how to retire one |
 | 14 | **[Class components](14-class-components/README.md)** | <span className="db-tier t-know">Know</span> | `setState` merges; two lifecycle methods have no hook |
 | 15 | **[`Component` vs `PureComponent`](15-purecomponent.md)** | <span className="db-tier t-know">Know</span> | The class ancestry of `memo`, caveats intact |
 | 16 | **[Element manipulation](16-element-manipulation.md)** | <span className="db-tier t-know">Know</span> | React's own docs call these fragile, and say why |
@@ -52,6 +52,7 @@ the content was not reduced to fit:
 | 05 Lifting state up | 2 | procedure ↔ cost |
 | 14 Class components | 2 | anatomy and `this` ↔ lifecycle and hooks |
 | 12 Render props | **3** | the pattern ↔ where it wins ↔ costs and limits |
+| 13 Higher-order components | **3** | pattern and caveats ↔ why hooks won ↔ writing and retiring |
 
 **29 content files, 16 topics.** Longest file 288 lines; nothing over 300.
 

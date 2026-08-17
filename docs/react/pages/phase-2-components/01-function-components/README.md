@@ -36,7 +36,7 @@ questions.
   to a function once it is a component.
 - **→ Phase 3** — resetting state with `key` uses the identity rule from
   chunk 02 deliberately.
-- **→ [Higher-order components](../13-higher-order-components.md)** — the
+- **→ [Higher-order components](../13-higher-order-components/README.md)** — the
   most common real-world source of an unstable component type.
 
 ---
