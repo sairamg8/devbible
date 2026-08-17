@@ -32,7 +32,7 @@ recursion as **computation**: a type that walks a structure and produces a diffe
 |---|---|---|
 | 01 | [The two limits](./01-the-two-limits.md) | 🔴 **100 for nested recursion, 1,000 for tail recursion** — the loop that makes the difference, the three conditions for staying on the fast path, and the eyeball test for tail position |
 | 02 | [The accumulator pattern](./02-the-accumulator-pattern.md) | The conversion itself, in the release notes' own words — the five-step recipe, the three seeds (`never`, `""`, `[]`), and why a type whose input never shrinks needs a counter |
-| 03 | **Order and position** *(not written yet)* | Why the conversion reverses tuples and strings but not unions, what may wrap in the base branch, and how much freedom the argument list has |
+| 03 | [Order and position](./03-order-and-position.md) | Why the conversion reverses tuples and strings but not unions, what may wrap in the base branch (and should), how free the argument list really is, and the nine-shape eyeball table |
 | 04 | **The fine print** *(not written yet)* | The public-alias split, the **third** ceiling (`TS2799` at 10,000 tuple elements), iterations against cost, and the shapes that cannot be converted at all |
 | 05 | **Capping depth deliberately** *(not written yet)* | The counter tuple, whether the cap errors or stops, and the circularity diagnostics |
 

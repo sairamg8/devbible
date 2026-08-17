@@ -73,7 +73,7 @@ against 100 — is not documented anywhere; it comes from reading `getConditiona
 ⚠️ **Steps 3 and 4 together are why the conversion changes nothing observable.** The
 result is the same type; the compiler simply reaches it by iterating instead of
 stacking. If the output changed, the conversion was done wrong — and the usual way it
-changes is order, which is **chunk 03 · Order and position** *(not written yet)*.
+changes is order, which is [chunk 03 · Order and position](./03-order-and-position.md).
 
 ## The three kinds of accumulator
 
@@ -287,4 +287,4 @@ dedicated test.
 ---
 
 ← [01 · The two limits](./01-the-two-limits.md) · [Topic index](./README.md) ·
-Next → **03 · Order and position** *(not written yet)*
+Next → [03 · Order and position](./03-order-and-position.md)
