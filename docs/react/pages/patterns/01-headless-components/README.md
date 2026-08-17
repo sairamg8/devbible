@@ -67,7 +67,7 @@ more ceremony.
 - **→ [Prop getters](../04-prop-getters.md)** — the delivery mechanism a headless
   hook uses to hand you props you cannot accidentally break. Chunk 04 uses them
   throughout; chunk 01 shows why the naive props-object version fails.
-- **→ [The state reducer pattern](../02-the-state-reducer-pattern.md)** — how a
+- **→ [The state reducer pattern](../02-the-state-reducer-pattern/README.md)** — how a
   headless component lets one caller change one transition without a prop per
   exception. The two patterns are usually shipped together.
 - **→ [Children patterns](../../phase-2-components/08-children-patterns.md)** —
