@@ -12,13 +12,7 @@ sidebar_position: 0
 > claims are attributed to **typescript-eslint's** rule pages — ⚠️ it is not
 > installed here. **No sandbox run, no console block.**
 
-:::info 🚧 This topic is mid-write — 4 chunks
-Chunks **01–04 are written**. The rest are not, and references to them below are
-deliberately **plain text rather than links** so the build stays green. Resume
-point: `devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
-The syllabus row asks for *"treating every `as` as a review comment, banning
+:The syllabus row asks for *"treating every `as` as a review comment, banning
 `as any`, and the guard that should have been written instead."* The topic is
 organised around one measured fact that reframes all three:
 
@@ -38,7 +32,7 @@ organised around one measured fact that reframes all three:
 | 02 | [What an `as` is standing in for](./02-what-an-as-is-standing-in-for.md) | 🔴 **Six substitutions, each needing a different fix** — and the review question that replaces "avoid `as`": *what would have to be true for this to be deleted?* Includes the one case where a claim became a check (**5.5's inferred type predicates**) and why `as const` must be excluded from any count |
 | 03 | [The one-character claim nobody counts](./03-the-one-character-claim.md) | 🔴 Six reasons `!` goes uncounted — including that it **cannot be grepped for**, since `!` is also negation and `!=` — the two shapes that **contain their own refutation** (`a?.b!` and `a! ?? c`), and that every rule the compiler enforces around `!:` is about **form, not truth** |
 | 04 | [`as any` is an exit](./04-as-any-is-an-exit.md) | 🔴 An assertion that **cannot be wrong is the absence of a type**, not a safer type. And the inversion that matters: a bare `as any` is the **loud** spelling the lint rules report, while `as any as T` and `as unknown as T` are **silent** — so banning `as any` alone moves the exits to a tier your tooling cannot see |
-| 05 | **A policy that works** *(not written yet)* | Count, do not ban; the legitimate uses; and the metric this phase has been building toward |
+| 05 | [A policy that works](./05-a-policy-that-works.md) | Count, do not ban — with the mechanism: a tier-3 ban inflates **tier 4**, which no tool sees. The five tiers to count, why **`as const` is excluded**, and the metric the phase has been building toward: 🔴 **assertions added per error fixed**, not the raw count |
 
 ## 🔴 What this topic deliberately does not repeat
 
