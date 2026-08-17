@@ -18,6 +18,7 @@ const mongodb = summarise('mongodb');
 const redis = summarise('redis');
 const nginx = summarise('nginx');
 const docker = summarise('docker');
+const storybook = summarise('storybook');
 const realworld = summarise('realworld');
 
 /**
@@ -47,6 +48,7 @@ const LAYERS = [
         desc: 'Flexbox, Grid, container queries, and the 2026 feature set',
         to: '/docs/css',
         active: true,
+        done: true,
         stats: `${css.topicsTotal} topics · ${css.phasesTotal} phases · ${css.phasesDone} phases explained · ${css.pagesWritten} pages`,
         progress: css.percent,
       },
@@ -150,6 +152,7 @@ const LAYERS = [
         desc: 'Namespaces and cgroups, multi-stage builds, Compose, rootless, Quadlet',
         to: '/docs/docker',
         active: true,
+        done: true,
         stats: `${docker.topicsTotal} topics · ${docker.phasesTotal} phases · ${docker.phasesDone} phases explained · ${docker.pagesWritten} pages`,
         progress: docker.percent,
       },
@@ -171,9 +174,10 @@ const LAYERS = [
       {
         n: '12',
         name: 'Git',
-        desc: 'The object model, rebase vs merge, recovery, review workflow',
+        desc: 'The object model, rebase vs merge, recovery, review workflow — re-scoped to the daily-driver 52',
         to: '/docs/git',
         active: true,
+        done: true,
         stats: `${git.topicsTotal} topics · ${git.phasesTotal} phases · ${git.phasesDone} phases explained · ${git.pagesWritten} pages`,
         progress: git.percent,
       },
@@ -196,7 +200,7 @@ const LAYERS = [
   },
   {
     name: 'Frontend toolchain',
-    note: 'Imported corpus — moved in, not yet validated',
+    note: 'Imported corpus — moved in, not yet validated. Storybook is the exception: it has a written syllabus and verified pages',
     items: [
       {n: '13', name: 'Vite', desc: 'Dual-engine dev server, HMR, plugins, code-splitting', to: '/docs/vite', active: true, imported: true},
       {n: '14', name: 'Webpack', desc: 'Module Federation, loaders, plugins, Tapable hooks, chunks', to: '/docs/webpack', active: true, imported: true},
@@ -204,7 +208,15 @@ const LAYERS = [
       {n: '16', name: 'ESLint & Oxlint', desc: 'Flat config, typescript-eslint, Oxlint, dual-run, CI', to: '/docs/eslint-oxlint', active: true, imported: true},
       {n: '17', name: 'Jest & RTL', desc: 'JSDOM, async queries, module mocking, userEvent, coverage', to: '/docs/jest-rtl', active: true, imported: true},
       {n: '18', name: 'Playwright', desc: 'Cross-browser E2E, visual regression, network interception, CI', to: '/docs/playwright', active: true, imported: true},
-      {n: '19', name: 'Storybook', desc: 'CSF, args and controls, decorators, interaction and a11y testing', to: '/docs/storybook', active: true, imported: true},
+      {
+        n: '19',
+        name: 'Storybook',
+        desc: 'CSF, args and controls, decorators, interaction and a11y testing — written to full depth from phase 0, alongside 22 imported pages',
+        to: '/docs/storybook',
+        active: true,
+        stats: `${storybook.topicsTotal} topics · ${storybook.phasesTotal} phases · ${storybook.phasesDone} phases explained · ${storybook.pagesWritten} pages`,
+        progress: storybook.percent,
+      },
       {n: '20', name: 'Redux Toolkit', desc: 'RTK Query, Immer, entity adapters, custom middleware', to: '/docs/redux-toolkit', active: true, imported: true},
       {n: '21', name: 'TanStack Query', desc: 'QueryCache internals, mutations, optimistic updates, SSR', to: '/docs/tanstack-query', active: true, imported: true},
       {n: '22', name: 'Framer Motion', desc: 'Layout animations, FLIP, AnimatePresence, scroll and gestures', to: '/docs/framer-motion', active: true, imported: true},
@@ -287,27 +299,31 @@ export default function Home() {
           <div className={styles.focusBar} />
           <div className={styles.focusBody}>
             <p className={styles.focusLabel}>Just finished</p>
-            <h2 className={styles.focusTitle}>JavaScript explanations</h2>
+            <h2 className={styles.focusTitle}>
+              Docker &amp; Podman, and the React patterns layer
+            </h2>
             <p className={styles.focusText}>
-              JavaScript is <strong>complete</strong> —{' '}
-              {javascript.phasesDone} of {javascript.phasesTotal} phases,{' '}
-              {javascript.topicsTotal} scheduled topics, {javascript.pagesWritten}{' '}
-              pages. The {javascript.parkedTopicsLeft} remaining topics sit in the
-              three parked DSA phases, which keep their Master tier and nothing
-              beyond it. Node.js is complete at {node.pagesWritten} pages and
-              PostgreSQL at {postgres.pagesWritten}; Express is live too.
+              Docker &amp; Podman is <strong>complete</strong> —{' '}
+              {docker.phasesDone} of {docker.phasesTotal} phases,{' '}
+              {docker.topicsTotal} topics, both engines taught side by side
+              through to Compose, rootless and Quadlet. React gained a{' '}
+              <strong>Patterns</strong> section: a selection layer that indexes
+              every pattern by the problem you actually have, rather than by its
+              name. That makes seven technologies complete — JavaScript, Node.js,
+              PostgreSQL, Express, CSS, Git and Docker — with React, TypeScript,
+              MongoDB, Nginx and the Real World storefront still in flight.
             </p>
+            <Progress lang="docker" compact />
+            <Progress lang="react" compact />
             <Progress lang="javascript" compact />
-            <Progress lang="nodejs" compact />
-            <Progress lang="expressjs" compact />
-            <Link className={styles.focusCta} to="/docs/javascript">
+            <Link className={styles.focusCta} to="/docs/docker">
+              Docker &amp; Podman syllabus →
+            </Link>
+            <Link className={styles.focusCtaAlt} to="/docs/react/pages/patterns">
+              React patterns →
+            </Link>
+            <Link className={styles.focusCtaAlt} to="/docs/javascript">
               JavaScript syllabus →
-            </Link>
-            <Link className={styles.focusCtaAlt} to="/docs/expressjs">
-              Express.js syllabus →
-            </Link>
-            <Link className={styles.focusCtaAlt} to="/docs/nodejs/pages">
-              Node explanations →
             </Link>
           </div>
         </section>
