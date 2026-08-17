@@ -56,6 +56,54 @@ const config = {
     ],
   ],
 
+  // Offline, client-side search. Deliberately NOT Algolia: no API key, no
+  // crawler, no external service — the index is built from the local corpus
+  // and shipped as a static asset alongside the pages.
+  //
+  // It registers as a THEME, not a plugin, because it swizzles the navbar
+  // search box in.
+  //
+  // The index is generated in the postBuild hook, which means it exists only
+  // after `yarn build`. `yarn start` shows a search box that finds nothing —
+  // that is the documented behaviour, not a fault. Verify with
+  // `yarn build && yarn serve`.
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        // Content-hashed index filename, so a rebuilt index is never served
+        // from a client's cache next to freshly rebuilt pages.
+        hashed: true,
+        language: ['en'],
+
+        // Must match the `docs` preset above: `routeBasePath: '/docs'`. The
+        // plugin's default happens to be the same string, but it is spelled
+        // out because the two would silently drift apart otherwise — and a
+        // mismatch indexes nothing rather than failing loudly.
+        indexDocs: true,
+        docsRouteBasePath: '/docs',
+
+        // `blog: false` in the preset, so there is nothing to index and
+        // leaving this at its `true` default would make the plugin look for a
+        // /blog route that does not exist.
+        indexBlog: false,
+
+        // src/pages holds the homepage language picker and little else —
+        // navigation, not reference material worth searching.
+        indexPages: false,
+
+        // Both of these earn their keep specifically because the corpus is
+        // ~2,900 pages across 15+ technologies, where the same headings
+        // ("Gotchas", "Interview questions") recur in hundreds of places:
+        // the path disambiguates otherwise identical-looking hits, and the
+        // highlight saves a second search once you land on a long page.
+        explicitSearchResultPath: true,
+        highlightSearchTermsOnTargetPage: true,
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
