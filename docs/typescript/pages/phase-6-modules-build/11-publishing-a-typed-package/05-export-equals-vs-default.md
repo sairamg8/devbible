@@ -157,10 +157,10 @@ the mismatch.
 **Fix:** Test under `nodenext` from a real ESM consumer. Chunk 08 automates it.
 
 **Symptom:** `import { thing } from 'pkg'` type-checks and crashes in Node.
-**Cause:** `cjs-module-lexer` cannot see `thing` — most likely `module.exports =
-{ … }`.
-**Fix:** Switch to `exports.thing =`, or add the `0 && (module.exports = {
-thing })` hint.
+**Cause:** `cjs-module-lexer` cannot see `thing` — most likely the
+`module.exports = { … }` form.
+**Fix:** Switch to `exports.thing =`, or add the
+`0 && (module.exports = { thing })` hint.
 
 **Symptom:** The `0 &&` line was removed as dead code and named imports broke.
 **Cause:** It is not dead — it is the analyser's only evidence.
