@@ -22,8 +22,8 @@ started with just a letter — *"typescript c"* — reads its row below and begi
 |---|---|---|---|
 | **A · type-level** | `phase-5-type-level/` topics **08–16** | 9 | session `bbd2d39d`, 2026-08-17 |
 | **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 19 | session `ea9f43fb`, 2026-08-17 |
-| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 6 | 🔴 **unclaimed** |
-| **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 10 | 🔴 **unclaimed** |
+| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 6 | session `5ff47a9c`, 2026-08-17 |
+| **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 10 | session `8dcc0095`, 2026-08-17 |
 
 🔴 **Re-split four ways on 2026-08-17.** Phase 6 was the imbalance, not the lanes: weighted
 by tier it projected to ~10,350 lines — 43% of all remaining TypeScript — in one unclaimed
@@ -91,7 +91,7 @@ untouched by it.
 | [3 · Generics](./phase-3-generics/README.md) | The type system | 14 | ✅ written |
 | [4 · Classes, objects and declaration merging](./phase-4-classes-declarations/README.md) | Types at scale | 14 / 14 | ✅ written |
 | [5 · Type-level programming](./phase-5-type-level/README.md) | Types at scale | 7 / 16 | 🚧 writing |
-| 6 · Modules, declarations and the build | Types at scale | — | planned |
+| [6 · Modules, declarations and the build](./phase-6-modules-build/README.md) | Types at scale | 0 / 16 | 🚧 writing |
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
