@@ -15,12 +15,19 @@ sidebar_position: 0
 > phase nothing here is read from its source; every rule claim is attributed to a
 > documentation page. **No sandbox, no console block, no timings of our own.**
 
-:::info 🚧 This topic is mid-write — 4 chunks of 7
-Chunks **01–04 are written**. Chunks **05 (`strict-boolean-expressions`), 06 (the
-`no-unsafe-*` family) and 07 (adoption and the CI cost)** are not written yet, and
+:::info 🚧 This topic is mid-write — 5 chunks of 8
+Chunks **01–05 are written**. Chunks **06 (the conditions you get wrong), 07 (the
+`no-unsafe-*` family) and 08 (adoption and the CI cost)** are not written yet, and
 references to them in the pages below are deliberately **plain text rather than
 links** so the build stays green. Resume point:
 `devbible/progress_typescript_part_b.md` in the memory store.
+
+⚠️ **The plan said seven chunks; `strict-boolean-expressions` turned out to be
+two.** The rule and its option matrix are one argument, the bugs it exists to catch
+are another, and the second half was not going to fit in what was left of a
+300-line file. **The chunk count is an output of the material, never a budget set
+in advance** — so the family and the adoption chunks renumbered rather than the
+content shrinking.
 :::
 
 The syllabus row asks for *"the checks the compiler will not do, and their CI
@@ -52,9 +59,10 @@ this topic is organised around.
 | 02 | [`no-floating-promises`](./02-no-floating-promises.md) | The one rule with **zero** compiler overlap, and why that is structural; `void` as the sanctioned fire-and-forget spelling; and 🔴 the asymmetry that ESLint has no `TS2578`, so disable comments rot in a way `@ts-expect-error` cannot |
 | 03 | [`no-misused-promises`](./03-no-misused-promises.md) | Which of the three checks duplicates the compiler and which does not; and why `forEach(async …)` type-checks — `void` is a **deliberately permissive** return position that ordinary code depends on, so no flag will change it |
 | 04 | [`no-unnecessary-condition`](./04-no-unnecessary-condition.md) | 🔴 The seven codes the compiler already has, and the exact leftover; plus the best result in the topic — the rule's **false positives are a detector for unsound types**, each traceable to a specific hole from [topic 07](../07-unsound-by-design/README.md) |
-| 05 | **`strict-boolean-expressions`** *(not written yet)* | The `allow*` matrix and why this one is opt-in rather than in any preset |
-| 06 | **The `no-unsafe-*` family** *(not written yet)* | The nine rules, and 🔴 the debt from [topic 03](../03-containing-any.md): they are the only way to catch **inherited** `any` |
-| 07 | **Adoption and the CI cost** *(not written yet)* | The order to turn things on, the `-only` configs, and the arithmetic of not running two type-checks per job |
+| 05 | [`strict-boolean-expressions`](./05-strict-boolean-expressions.md) | The closed list of falsy values as the **whole** rule — 🔴 truthiness is safe exactly when the non-nullish part of the type has no falsy member, which explains the entire option matrix; and 🔴 that the **defaults draw the line at nullability, not falsiness**, so the famous bugs are permitted until you set two options yourself |
+| 06 | **The conditions you get wrong** *(not written yet)* | The worked bugs — the empty username, the zero-valued config, the numeric enum's first member, `{count && …}` rendering a literal `0`, and `\|\|` versus `??` — with the fixes and 🔴 where each fix **changes runtime behaviour** |
+| 07 | **The `no-unsafe-*` family** *(not written yet)* | The nine rules, and 🔴 the debt from [topic 03](../03-containing-any.md): they are the only way to catch **inherited** `any` |
+| 08 | **Adoption and the CI cost** *(not written yet)* | The order to turn things on, the `-only` configs, and the arithmetic of not running two type-checks per job |
 
 ## Phase gate
 
@@ -82,7 +90,7 @@ already argued for on their own merits.
   positives.
 - **← [03 · Containing `any`](../03-containing-any.md)** — which names the
   `no-unsafe-*` family as the only way to catch `any` that arrives **inherited**
-  rather than written. Chunk 06 owes that debt.
+  rather than written. Chunk 07 owes that debt.
 - **← [07 · Unsound by design](../07-unsound-by-design/README.md)** — the holes that
   become this topic's false positives, one for one.
 - **← [08 · Suppression directives](../08-suppression-directives/README.md)** — the
@@ -95,7 +103,7 @@ already argued for on their own merits.
   — the same promise-in-a-`void`-position mechanism, argued in the framework where
   it bites hardest.
 - **→ 12 · Assertion discipline** *(not written yet)* — `no-unsafe-type-assertion`
-  and the `as` count belong there; chunk 06 will link rather than restate.
+  and the `as` count belong there; chunk 07 will link rather than restate.
 
 ---
 

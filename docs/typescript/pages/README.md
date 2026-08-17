@@ -20,9 +20,9 @@ started with just a letter — *"typescript c"* — reads its row below and begi
 
 | Lane | Scope — the only directories it may touch | Left | Claimed by |
 |---|---|---|---|
-| **A · type-level** | `phase-5-type-level/` topics **08–16** | 6 | session `8b70b2f9`, 2026-08-17 |
-| **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 18 | session `ede9cd9f`, 2026-08-17 |
-| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 6 | session `5ff47a9c`, 2026-08-17 |
+| **A · type-level** | `phase-5-type-level/` topics **08–16** | 6 | session `65de22b3`, 2026-08-17 |
+| **B · strictness + tooling** | `phase-10-strictness/` **and** `phase-12-tooling/` | 18 | session `c01e37bb`, 2026-08-17 (took over from `ede9cd9f`) |
+| **C · the module system** | `phase-6-modules-build/` topics **01–06** | 3 | session `f4392a13`, 2026-08-17 (took over from `5ff47a9c`) |
 | **D · declarations & the build** | `phase-6-modules-build/` topics **07–16** | 10 | session `8dcc0095`, 2026-08-17 |
 
 🔴 **Re-split four ways on 2026-08-17.** Phase 6 was the imbalance, not the lanes: weighted

@@ -249,4 +249,4 @@ caution.
 
 ---
 
-← [03 · `no-misused-promises`](./03-no-misused-promises.md) · [Topic index](./README.md) · Next → **05 · `strict-boolean-expressions`** *(not written yet)*
+← [03 · `no-misused-promises`](./03-no-misused-promises.md) · [Topic index](./README.md) · Next → [05 · `strict-boolean-expressions`](./05-strict-boolean-expressions.md)

@@ -86,7 +86,7 @@ anything much worse as misconfiguration rather than as the normal price.
 
 📌 **That reframes the CI question.** The honest comparison is not "lint got
 slower" but *"we now run two type-checks per CI job"* — and the fix is usually to
-notice that, not to disable rules. **chunk 07 · Adoption and the CI cost** *(not written yet)* is the
+notice that, not to disable rules. **chunk 08 · Adoption and the CI cost** *(not written yet)* is the
 arithmetic.
 
 ⚠️ **The documentation gives no multiplier or timing figures beyond the "roughly
@@ -146,7 +146,7 @@ finding bugs — and it should be a decision rather than a default.
 
 📌 **The `-only` variants exist for a specific shape:** run the cheap syntactic
 config over everything, and the type-aware config over only the directories where
-it pays. **chunk 07 · Adoption and the CI cost** *(not written yet)* uses them.
+it pays. **chunk 08 · Adoption and the CI cost** *(not written yet)* uses them.
 
 ## Which rules this topic covers, and where each lives
 
@@ -156,7 +156,7 @@ it pays. **chunk 07 · Adoption and the CI cost** *(not written yet)* uses them.
 | [`no-misused-promises`](./03-no-misused-promises.md) | `recommended-type-checked` |
 | **the `no-unsafe-*` family** *(not written yet)* | `recommended-type-checked` |
 | [`no-unnecessary-condition`](./04-no-unnecessary-condition.md) | 🔴 `strict-type-checked` |
-| **`strict-boolean-expressions`** *(not written yet)* | ⚠️ **its page names no config** — opt-in |
+| [`strict-boolean-expressions`](./05-strict-boolean-expressions.md) | ⚠️ **its page names no config** — opt-in |
 
 📌 **The split is informative.** The promise rules and the `any` rules are
 *correctness* rules the project is confident about, so they sit in `recommended`.
@@ -169,7 +169,7 @@ not bugs — for a reason this phase has already documented, and
 **Symptom:** lint takes as long as the build and it feels broken.
 **Cause:** that is the documented expectation, not a fault.
 **Fix:** nothing, mechanically — but stop paying for it twice.
-**chunk 07 · Adoption and the CI cost** *(not written yet)* is about running one type-check instead
+**chunk 08 · Adoption and the CI cost** *(not written yet)* is about running one type-check instead
 of two.
 
 **Symptom:** lint is far slower than `tsc --noEmit` on the same project.
