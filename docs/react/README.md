@@ -10,7 +10,8 @@ sidebar_position: 0
 > installed package, not recalled from documentation.
 
 The complete topic inventory for React, tiered for **mastery in fullstack
-application development**. **15 phases, 244 topics**, split into 4 parts to stay
+application development**. **15 phases, 244 topics** plus a cross-cutting
+**[Patterns](pages/patterns/README.md)** section, split into 5 parts to stay
 under the 300-line file cap.
 
 The bar is **no knowledge gaps**: every hook React ships, every rendering API,
@@ -87,6 +88,7 @@ page.
 | 2 | **[Hooks, completely](syllabus/02-hooks.md)** | Effects, refs/context/reducers, performance and the Compiler, custom hooks | 4–7 | 63 |
 | 3 | **[Concurrent React and the server](syllabus/03-concurrent-and-server.md)** | Suspense and transitions, Actions, Server Components, SSR and hydration | 8–11 | 68 |
 | 4 | **[Testing React](syllabus/04-building-an-app.md)** | React Testing Library, Jest/Vitest, events and API mocking. Phases 12 and 13 were **dropped** | 14 | 14 |
+| 5 | **[Patterns](pages/patterns/README.md)** | The ten React patterns, indexed by the problem they solve. Four are taught here; six in the phase that introduces them | — | 10 |
 
 ## Progress
 
@@ -177,7 +179,8 @@ only where knowing they exist changes a decision you make today.
 
 The explanations will live in **`pages/`** — one page per topic (or tight group),
 with runnable code, gotchas written symptom → cause → fix, and interview
-questions with answers. **Nothing is written yet**; this syllabus is the proposal.
+questions with answers. **277 pages are written** — phases 0–11 and 14, plus the
+[Patterns](pages/patterns/README.md) section. Phases 12 and 13 were dropped.
 
 ## Tier legend
 
