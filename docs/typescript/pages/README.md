@@ -20,7 +20,8 @@ a file in the other's phase directories.**
 
 | Part | Phases | Topics | Claimed by |
 |---|---|---|---|
-| **A · the type system** | 2, 3, 4, 5, 6 | 73 | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–3 ✅ complete, **phase 4 at 13/14**, phases 5 and 6 not started |
+| **A · the type system** | **5 only** (2, 3, 4 complete) | 9 left | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–4 ✅ complete, **phase 5 at 7/16**; phase 6 split off as Part C |
+| **C · modules and the build** | **6** | 16 | 🔴 **UNCLAIMED, created 2026-08-17** — the whole phase, nothing written. Paste-ready prompt in the store: `devbible/project_typescript_split_part_c.md` |
 | **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 8/13**, phase 12 not started |
 
 Part B's six phase directories **did not exist** at claim time; each is scaffolded
