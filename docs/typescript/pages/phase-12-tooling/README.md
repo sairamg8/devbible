@@ -29,7 +29,7 @@ Topics are linked from the table below as they land. Resume point:
 | # | Topic | Tier | What it settles |
 |---|---|---|---|
 | 01 | [Type checking in CI](./01-type-checking-in-ci/README.md) *(5 chunks)* | <span className="db-tier t-master">Master</span> | ✅ `tsc --noEmit` as a required gate — 🔴 a transpiler **cannot** check, because the speed and the blindness are the same design decision; what a green run does **not** claim; the **semantic merge conflict** only a merge queue catches; speed as a **correctness** concern; and why **advisory is the failure mode, not a halfway house** |
-| 02 | What TypeScript 7 changed for tooling | <span className="db-tier t-understand">Understand</span> | The native compiler's speed, the classic root `ts.*` API moving to an explicitly `unstable/` surface, and auditing your toolchain before upgrading |
+| 02 | [What TypeScript 7 changed for tooling](./02-typescript-7-for-tooling/README.md) *(🚧 1 chunk)* | <span className="db-tier t-understand">Understand</span> | 🔴 Tools that **run** the compiler are unaffected — the CLI is the stable interface — so the migration is only the tools that **import** it, which is a much shorter list |
 | 03 | Build pipelines | <span className="db-tier t-understand">Understand</span> | `tsc` vs esbuild/swc/Rollup/Vite — who checks, who only strips, and where declaration emit fits |
 | 04 | Testing types | <span className="db-tier t-understand">Understand</span> | `expectTypeOf`/`assertType`, `tsd`, and `@ts-expect-error` as an assertion that a wrong call is rejected |
 | 05 | Typing tests | <span className="db-tier t-understand">Understand</span> | Typed fixtures, `satisfies` on test data, typing mocks and spies |
