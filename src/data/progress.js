@@ -75,7 +75,7 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-generics', name: 'Generics', part: 'The type system', topics: 14, pages: 14},
       {n: 4, slug: 'phase-4-classes-declarations', name: 'Classes, objects and declaration merging', part: 'Types at scale', topics: 14, pages: 14},
       {n: 5, slug: 'phase-5-type-level', name: 'Type-level programming', part: 'Types at scale', topics: 16, pages: 8, pagesPlanned: 16},
-      {n: 6, slug: 'phase-6-modules-build', name: 'Modules, declarations and the build', part: 'Types at scale', topics: 16, pages: 2, pagesPlanned: 16},
+      {n: 6, slug: 'phase-6-modules-build', name: 'Modules, declarations and the build', part: 'Types at scale', topics: 16, pages: 3, pagesPlanned: 16},
       {n: 7, slug: 'phase-7-server', name: 'TypeScript on the server (Master rows only — rest dropped)', part: 'In the stack', topics: 5, pages: 5},
       {n: 10, slug: 'phase-10-strictness', name: 'Strictness and correctness', part: 'Rigour and tooling', topics: 13, pages: 9, pagesPlanned: 13},
       {n: 12, slug: 'phase-12-tooling', name: 'Tooling, performance and testing', part: 'Rigour and tooling', topics: 15, pages: 0},

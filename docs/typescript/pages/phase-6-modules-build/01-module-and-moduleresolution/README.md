@@ -75,9 +75,9 @@ Everything in this topic is a consequence of that sentence.
 
 ## Where this connects
 
-- **→ [02 · `import type` and `verbatimModuleSyntax`](../02-import-type-and-verbatim-module-syntax.md)**
-  *(not written yet)* — once the format is decided, the next question is which of
-  your imports survive to the output at all.
+- **→ Phase 6 · 02 · `import type` and `verbatimModuleSyntax`** *(not written
+  yet)* — once the format is decided, the next question is which of your imports
+  survive to the output at all.
 - **→ Phase 6 · 03 · Path aliases** *(not written yet)* — `paths` is the one
   feature that deliberately breaks the rule in sentence 3 above.
 - **→ [Phase 7 · The module format](../../phase-7-server/01-tsconfig-for-a-node-service/02-the-module-format.md)**
