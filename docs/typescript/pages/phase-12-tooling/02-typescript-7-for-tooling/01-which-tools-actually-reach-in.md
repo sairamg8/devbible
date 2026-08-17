@@ -161,4 +161,4 @@ the check is running it across the whole codebase rather than confirming it boot
 
 ---
 
-[Topic index](./README.md) · Next → **02 · What `unstable/` actually promises** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · What `unstable/` actually promises](./02-what-unstable-promises.md)
