@@ -90,7 +90,7 @@ project references throughout
 - **← [Topic 11 · Publishing a typed package](../11-publishing-a-typed-package/README.md)**
   — on the built route, internal packages are consumed exactly as published ones,
   so every rule there applies daily instead of at release.
-- **→ 13 · Project references and `tsc -b`** *(not written yet)* — this topic
+- **→ [13 · Project references and `tsc -b`](../13-project-references/README.md)** — this topic
   *uses* references; that one explains them.
 - **→ 14 · Incremental builds** *(not written yet)* — `composite` implies
   `incremental`, so every package writes a `.tsbuildinfo`.

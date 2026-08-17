@@ -125,7 +125,7 @@ declarations in the CI job that also runs the checks from
 Two boundaries, drawn deliberately:
 
 - **Project references themselves** — `composite`, `references`, build ordering,
-  `tsc -b` — are **13 · Project references and `tsc -b`** *(not written yet)*.
+  `tsc -b` — are [13 · Project references and `tsc -b`](../13-project-references/README.md).
   This topic uses them; that topic explains them.
 - **Why not to point `paths` at another package's `src`** is already argued in
   [topic 03 chunk 05](../03-path-aliases/05-the-decision.md), which settles that

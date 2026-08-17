@@ -201,7 +201,7 @@ project** still is not checked when the flag is removed.
 `isSourceOfProjectReferenceRedirect`. That file is the referenced project's
 responsibility.
 **Fix:** Build the referenced project. Project references are
-**13 · Project references and `tsc -b`** *(not written yet)*.
+[13 · Project references and `tsc -b`](../13-project-references/README.md).
 
 **Symptom:** Turning the flag off produces thousands of errors from
 `node_modules` and none of them are in your code.

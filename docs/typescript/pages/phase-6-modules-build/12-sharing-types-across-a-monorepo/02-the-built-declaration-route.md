@@ -74,8 +74,7 @@ diff. Against source, it is re-inferred silently on every check.
 
 **1. Order.** `shared` must be built before `ui` is checked. In a graph of any
 size that means an ordering mechanism — which is what project references and
-`tsc -b` are for, and they are **13 · Project references and `tsc -b`** *(not
-written yet)*.
+`tsc -b` are for, and they are [13 · Project references and `tsc -b`](../13-project-references/README.md).
 
 **2. Staleness.** A `dist` built an hour ago is what you are checking against
 now. This is the single largest source of monorepo confusion and it has its own

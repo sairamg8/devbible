@@ -33,7 +33,7 @@ opposite surprises:
   a side effect.** `composite` requires `.d.ts` output — that is how a referenced
   project is consumed — so it switches `declaration` on for you. Suddenly your
   build reports declaration-emit errors it never reported before, in code you did
-  not touch. See **13 · Project references and `tsc -b`** *(not written yet)*.
+  not touch. See [13 · Project references and `tsc -b`](../13-project-references/README.md).
 - **You are publishing a package and shipping no types at all**, because
   `declaration` is off by default and nothing warns you. Nothing in `strict`
   turns it on. The failure is silent, and your consumers see `any`.

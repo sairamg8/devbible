@@ -129,7 +129,7 @@ is the clause that surprises people who remove `skipLibCheck` in a
 project-references setup and find some declaration files still unchecked. They
 are not being skipped by your flag; they are somebody else's job.
 
-**13 · Project references and `tsc -b`** *(not written yet)* owns that mechanism.
+[13 · Project references and `tsc -b`](../13-project-references/README.md) owns that mechanism.
 
 ## `canIncludeBindAndCheckDiagnostics` — the JavaScript clause
 
