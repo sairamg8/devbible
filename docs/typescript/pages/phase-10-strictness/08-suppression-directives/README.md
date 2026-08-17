@@ -66,7 +66,7 @@ virtue is that it expires.
   from different directions.
 - **← [Phase 7 · `target`, `lib` and types](../../phase-7-server/01-tsconfig-for-a-node-service/03-target-lib-and-types.md)**
   — `skipLibCheck`'s real trade, which is not suppression.
-- **→ 09 · Excess property checks vs assignability** *(not written yet)* — the
+- **→ [09 · Excess property checks vs assignability](../09-excess-property-checks/README.md)** — the
   check that `suppressExcessPropertyErrors` turns off project-wide.
 - **→ 12 · Assertion discipline** *(not written yet)* — where these three metrics
   become one practice.

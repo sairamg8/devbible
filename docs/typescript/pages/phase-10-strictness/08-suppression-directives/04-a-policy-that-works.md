@@ -176,4 +176,4 @@ before it becomes permanent.
 
 ---
 
-← [03 · The suppression tiers](./03-the-suppression-tiers.md) · [Topic index](./README.md) · Next → **09 · Excess property checks vs assignability** *(not written yet)*
+← [03 · The suppression tiers](./03-the-suppression-tiers.md) · [Topic index](./README.md) · Next → [09 · Excess property checks vs assignability](../09-excess-property-checks/README.md)

@@ -22,7 +22,7 @@ a file in the other's phase directories.**
 |---|---|---|---|
 | **A · the type system** | **5 only** (2, 3, 4 complete) | 9 left | 🔴 session `bbd2d39d`, 2026-08-17 — phases 0–4 ✅ complete, **phase 5 at 7/16**; phase 6 split off as Part C |
 | **C · modules and the build** | **6** | 16 | 🔴 **UNCLAIMED, created 2026-08-17** — the whole phase, nothing written. Paste-ready prompt in the store: `devbible/project_typescript_split_part_c.md` |
-| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 8/13**, phase 12 not started |
+| **B · TypeScript in the stack** | **10, 12** (re-scoped; 7 closed at 5/5) | 28 | 🔴 session `ea9f43fb`, 2026-08-17 (took over from `27931e79`) — phase 7 ✅, **phase 10 at 9/13**, phase 12 not started |
 
 Part B's six phase directories **did not exist** at claim time; each is scaffolded
 (`_category_.json` plus a `README.md` carrying the full topic table) as it is
@@ -81,7 +81,7 @@ untouched by it.
 | [7 · TypeScript on the server](./phase-7-server/README.md) | In the stack | 5 / 5 | ✅ written — **cut to its 5 Master rows** |
 | ~~8 · TypeScript in React~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
 | ~~9 · Types at the boundary~~ | In the stack | — | ⛔ **dropped 2026-08-15** |
-| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 8 / 13 | 🚧 writing |
+| [10 · Strictness and correctness](./phase-10-strictness/README.md) | Rigour and tooling | 9 / 13 | 🚧 writing |
 | ~~11 · Migration and legacy~~ | Rigour and tooling | — | ⛔ **dropped 2026-08-15** |
 | 12 · Tooling, performance and testing | Rigour and tooling | — | 🎯 **in scope** |
 

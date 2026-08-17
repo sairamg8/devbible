@@ -76,7 +76,7 @@ those improve the code independently of soundness.
 - **← [Phase 7 · Typing `process.env`](../../phase-7-server/03-typing-process-env/README.md)**
   and [`catch (e: unknown)`](../../phase-7-server/04-catch-e-unknown/README.md) —
   the two worked examples of validating at the edge.
-- **→ 09 · Excess property checks vs assignability** *(not written yet)* — the
+- **→ [09 · Excess property checks vs assignability](../09-excess-property-checks/README.md)** — the
   heuristic that catches an extra property on a literal and not on a variable,
   which is why `Object.keys` cannot promise `keyof T`.
 - **→ 12 · Assertion discipline** *(not written yet)* — holes 1–3 as a process
