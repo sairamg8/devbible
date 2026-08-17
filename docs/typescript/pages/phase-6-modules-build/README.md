@@ -42,7 +42,7 @@ lanes:
 | 06 | File extensions — `.ts`/`.mts`/`.cts`/`.d.ts` | <span className="db-tier t-understand">Understand</span> | `allowImportingTsExtensions`, `rewriteRelativeImportExtensions`, and writing the extension the *runtime* wants |
 | 07 | [Authoring `.d.ts` files](./07-authoring-d-ts-files/README.md) *(13 chunks)* | <span className="db-tier t-understand">Understand</span> | Declaring a module's public surface by hand, and when you should |
 | 08 | [Typing an untyped dependency](./08-typing-an-untyped-dependency/README.md) *(6 chunks)* | <span className="db-tier t-understand">Understand</span> | `declare module 'legacy-lib'`, the shim that unblocks you today, and the upstream fix |
-| 09 | `esModuleInterop` and default imports | <span className="db-tier t-understand">Understand</span> | What `import express from 'express'` means for a CommonJS package |
+| 09 | [`esModuleInterop` and default imports](./09-esmoduleinterop-and-default-imports/README.md) *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | What `import express from 'express'` means for a CommonJS package |
 | 10 | `skipLibCheck` | <span className="db-tier t-understand">Understand</span> | Nearly everyone sets it; know exactly which errors you are agreeing not to see |
 | 11 | Publishing a typed package | <span className="db-tier t-understand">Understand</span> | `exports`, `types`/`typesVersions`, dual ESM/CJS, and validating the result |
 | 12 | Sharing types across a monorepo | <span className="db-tier t-understand">Understand</span> | Source imports vs built `.d.ts`, and the editor-vs-build divergence each causes |
