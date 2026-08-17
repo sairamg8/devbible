@@ -145,7 +145,7 @@ choose. Two mistakes follow from writing what you *want* instead:
 - **Declaring `export default` for a CommonJS package.** The consumer's
   `import x from 'legacy-lib'` then type-checks and yields `undefined` unless
   `esModuleInterop` is doing the work. Use `export =`; interop is
-  **09 · `esModuleInterop` and default imports** *(not written yet)*.
+  [09 · `esModuleInterop` and default imports](../09-esmoduleinterop-and-default-imports/README.md).
 - **Declaring a value where the code calls `new`.** That produces
   `TS7009: 'new' expression, whose target lacks a construct signature, implicitly
   has an 'any' type.` Use `declare class` or an interface with a `new` signature
@@ -180,7 +180,7 @@ If the package *does* resolve to real JavaScript with no types and your
 This one is a **resolution** problem, not a declaration one: your block has to be
 found *instead of* the untyped resolution, not alongside it. The usual levers are
 `paths` pointing the specifier at your declaration, or placing the types where
-resolution looks first. `paths` is **03 · Path aliases** *(not written yet)*.
+resolution looks first. `paths` is [03 · Path aliases](../03-path-aliases/README.md).
 
 ## Gotchas
 

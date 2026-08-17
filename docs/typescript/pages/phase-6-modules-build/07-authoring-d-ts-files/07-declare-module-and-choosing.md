@@ -44,7 +44,7 @@ when the module *does* resolve — to a real `.js` file with no types — so the
 compiler reads your block as an augmentation of something untyped rather than as
 a fresh declaration. The shape of the fix is that your declaration has to be
 found *instead of* the untyped resolution, not alongside it. That whole problem
-is **08 · Typing an untyped dependency** *(not written yet)*; the augmentation
+is [08 · Typing an untyped dependency](../08-typing-an-untyped-dependency/README.md); the augmentation
 half is
 [Phase 4 · Module augmentation](../../phase-4-classes-declarations/01-module-augmentation/README.md).
 

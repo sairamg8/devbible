@@ -195,8 +195,7 @@ there.
 **Cause:** A type-only import brings the name into the type space only, by
 design.
 **Fix:** Use a value import. That the two spaces are separable here is exactly
-what makes `import type` erasable — **02 · `import type` and
-`verbatimModuleSyntax`** *(not written yet)*.
+what makes `import type` erasable — [02 · `import type` and `verbatimModuleSyntax`](../02-import-type-and-verbatim-module-syntax/README.md).
 
 ## Interview questions
 

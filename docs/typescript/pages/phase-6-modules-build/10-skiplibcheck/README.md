@@ -101,7 +101,7 @@ what is this build FOR?
   config.**
 - **→ 11 · Publishing a typed package** *(not written yet)* — checking your
   declarations is not the same as testing that consumers can resolve them.
-- **→ 14 · Incremental builds** *(not written yet)* — `.tsbuildinfo` in general;
+- **→ [14 · Incremental builds](../14-incremental-builds/README.md)** — `.tsbuildinfo` in general;
   chunk 07 owns only this flag's part of it.
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — **the
   performance question belongs there**, and it is why no timing figure appears

@@ -174,7 +174,7 @@ is CommonJS?".
 **Symptom:** Different interop errors from the same package in different files.
 **Cause:** The files have different implied module formats — `.mts` versus
 `.cts`, or `type: module` boundaries.
-**Fix:** That is **06 · File extensions** *(not written yet)* and topic 01's
+**Fix:** That is [06 · File extensions](../06-file-extensions/README.md) and topic 01's
 territory; the interop flag is downstream of the format question.
 
 ## Interview questions

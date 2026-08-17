@@ -79,7 +79,7 @@ sidebar_position: 13
   `isSourceOfProjectReferenceRedirect` in the skip predicate.
 - **← [Topic 02 · `composite` constraints](../12-sharing-types-across-a-monorepo/02-the-built-declaration-route.md)**
   — `TS6304` and `TS6307` are argued there; this topic adds `TS6379`.
-- **→ 14 · Incremental builds** *(not written yet)* — `.tsbuildinfo` in general.
+- **→ [14 · Incremental builds](../14-incremental-builds/README.md)** — `.tsbuildinfo` in general.
   Chunk 02 owns only the up-to-date *decision*; that topic owns the file.
 - **→ 15 · `isolatedDeclarations`** *(not written yet)* — takes chunk 02's
   stable-declarations argument further.

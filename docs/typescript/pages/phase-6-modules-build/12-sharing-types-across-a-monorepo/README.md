@@ -92,7 +92,7 @@ project references throughout
   so every rule there applies daily instead of at release.
 - **→ [13 · Project references and `tsc -b`](../13-project-references/README.md)** — this topic
   *uses* references; that one explains them.
-- **→ 14 · Incremental builds** *(not written yet)* — `composite` implies
+- **→ [14 · Incremental builds](../14-incremental-builds/README.md)** — `composite` implies
   `incremental`, so every package writes a `.tsbuildinfo`.
 - **→ Phase 12 · Tooling, performance and testing** *(not written yet)* — the
   build-time comparison this topic deliberately does not make.

@@ -103,8 +103,7 @@ excludes from verification.
 The same shape appears without any publishing at all. A monorepo where
 `packages/app` imports `packages/lib` **via `lib`'s built `dist/*.d.ts`** is
 consuming a declaration file, so `skipLibCheck` in the root config covers it.
-That is one of the two configurations **12 · Sharing types across a monorepo**
-*(not written yet)* has to distinguish, and it is why the editor-versus-build
+That is one of the two configurations [12 · Sharing types across a monorepo](../12-sharing-types-across-a-monorepo/README.md) has to distinguish, and it is why the editor-versus-build
 divergence in a monorepo so often turns out to be this flag.
 
 ## What this does *not* mean
@@ -194,7 +193,7 @@ from a separate, minimal project whose only dependency is the package itself.
 type.
 **Cause:** Not this flag — the declarations still apply. Look at resolution
 (`types`, `exports`, `typesVersions`) instead.
-**Fix:** **11 · Publishing a typed package** *(not written yet)*. `skipLibCheck`
+**Fix:** [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md). `skipLibCheck`
 never changes which types are found, only whether they are checked.
 
 **Symptom:** A team disables the flag globally to be safe, and the build slows

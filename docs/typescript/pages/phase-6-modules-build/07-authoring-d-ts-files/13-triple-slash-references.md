@@ -149,7 +149,7 @@ dependency travels with it.
 **Cause:** It only skips files marked `/// <reference no-default-lib="true"/>` —
 that is the lib files, not your dependencies.
 **Fix:** You are probably reaching for `skipLibCheck`
-(**10 · `skipLibCheck`** *(not written yet)*).
+([10 · `skipLibCheck`](../10-skiplibcheck/README.md)).
 
 **Symptom:** Adding `/// <reference types="node" />` to a browser package pulled
 Node's globals into consumers' projects.

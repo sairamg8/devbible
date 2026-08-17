@@ -58,16 +58,13 @@ Each of these is another topic in this phase, and the boundary is worth stating
 so you know where to look rather than assuming something is missing:
 
 - **Shimming a dependency that ships no types** — the most common hand-written
-  declaration in any repo. **08 · Typing an untyped dependency** *(not written
-  yet)*.
+  declaration in any repo. [08 · Typing an untyped dependency](../08-typing-an-untyped-dependency/README.md).
 - **`import express from 'express'` against a CommonJS package** — chunk 06 says
-  which export form is *correct*; **09 · `esModuleInterop`** *(not written yet)*
+  which export form is *correct*; [09 · `esModuleInterop`](../09-esmoduleinterop-and-default-imports/README.md)
   says what the consumer's flag does about it.
-- **Which errors `skipLibCheck` hides** — **10 · `skipLibCheck`** *(not written
-  yet)*. Chunk 09 only establishes that it cannot help with emit failures.
+- **Which errors `skipLibCheck` hides** — [10 · `skipLibCheck`](../10-skiplibcheck/README.md). Chunk 09 only establishes that it cannot help with emit failures.
 - **Getting the file into a published package** — `exports`, `types`,
-  `typesVersions`, dual ESM/CJS. **11 · Publishing a typed package** *(not
-  written yet)*.
+  `typesVersions`, dual ESM/CJS. [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md).
 - **Declaration emit without inference** — **15 · `isolatedDeclarations`** *(not
   written yet)* is the flag that turns chunk 08's failures into a rule you write
   to up front.

@@ -92,8 +92,7 @@ import getArrayLength = require("get-array-length");
 ```
 
 Whether a consumer may instead write the friendlier `import x from 'pkg'` is the
-`esModuleInterop` question — **09 · `esModuleInterop` and default imports**
-*(not written yet)* — and the diagnostic when they cannot is:
+`esModuleInterop` question — [09 · `esModuleInterop` and default imports](../09-esmoduleinterop-and-default-imports/README.md) — and the diagnostic when they cannot is:
 
 > **TS2497:** *"This module can only be referenced with ECMAScript
 > imports/exports by turning on the '{0}' flag and referencing its default

@@ -101,8 +101,7 @@ project whose only input is your own output.**
 
 That checks your declarations, keeps the `node_modules` surface as small as your
 package genuinely requires, and doubles as a rough consumer simulation. It is not
-a substitute for the real thing — **11 · Publishing a typed package** *(not
-written yet)* covers `arethetypeswrong` and `publint`, which test resolution
+a substitute for the real thing — [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md) covers `arethetypeswrong` and `publint`, which test resolution
 under every consumer configuration rather than just checking the files.
 
 ## The two-config split, complete

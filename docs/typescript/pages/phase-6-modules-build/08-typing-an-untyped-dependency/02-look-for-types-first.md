@@ -36,7 +36,7 @@ npx tsc --traceResolution 2>&1 | grep some-lib   # what the compiler actually di
 ⚠️ **A package that ships types can still fail to expose them to *you*.** Its
 `exports` map may publish types only for some conditions, or only for one module
 format. That is a packaging fault on their side and its diagnosis belongs to
-**11 · Publishing a typed package** *(not written yet)* — but the tell is that
+[11 · Publishing a typed package](../11-publishing-a-typed-package/README.md) — but the tell is that
 `ls` finds a `.d.ts` and the compiler still reports `TS7016`.
 
 📌 **Installing an `@types` package for a library that ships its own types is a

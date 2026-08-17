@@ -56,8 +56,7 @@ suggestion means the name nearly matched something real:
 📌 **`TS2613` and `TS2614` are a mirror pair and they are usually an interop
 question, not a wrongness question.** You asked for a default and the types
 describe named exports, or the reverse. Before patching anything, check whether
-`esModuleInterop` explains it — **09 · `esModuleInterop` and default imports**
-*(not written yet)*.
+`esModuleInterop` explains it — [09 · `esModuleInterop` and default imports](../09-esmoduleinterop-and-default-imports/README.md).
 
 **A bare `TS2305` with no suggestion is the interesting one:** nothing close
 exists, so either the export is genuinely undeclared, or you are on a copy from
@@ -126,7 +125,7 @@ use, from scratch, as in chunk 03.
 2. **`paths` affects the compiler only.** The runtime still loads the real
    package. That is fine here (you *want* the real code with different types) but
    it is the same lever that causes runtime failures when misused for module
-   resolution — **03 · Path aliases** *(not written yet)*.
+   resolution — [03 · Path aliases](../03-path-aliases/README.md).
 3. **It is invisible at the call site.** Nobody reading the import knows the
    types came from your file. Leave a comment in the declaration saying which
    package version it shadows and why.
@@ -167,8 +166,7 @@ the rest of your codebase, wrap it and add the runtime check
   sites.
 
 [Phase 10 · The suppression tiers](../../phase-10-strictness/08-suppression-directives/03-the-suppression-tiers.md)
-settles that it is not a suppression mechanism at all, and **10 · `skipLibCheck`**
-*(not written yet)* is the full account of what you are agreeing not to see.
+settles that it is not a suppression mechanism at all, and [10 · `skipLibCheck`](../10-skiplibcheck/README.md) is the full account of what you are agreeing not to see.
 
 **Editing `node_modules`.** It works until the next install. If you genuinely
 need a patched dependency, the tooling for that is `patch-package` or

@@ -108,8 +108,7 @@ outcome.
    it is the whole defence — a declaration that matches the runtime cannot
    mislead anyone's flags.
 2. **Test your package as a consumer would**, with interop both on and off. That
-   is what `arethetypeswrong` automates, and it is **11 · Publishing a typed
-   package** *(not written yet)*.
+   is what `arethetypeswrong` automates, and it is [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md).
 
 🔴 **`importHelpers` is the other library-specific decision.** Without it the
 helpers are inlined per file across everything you ship; with it, `tslib` becomes
@@ -129,8 +128,7 @@ refusing to transform your import statements, which is the opposite instinct to
 interop's *"emit additional JavaScript"*. In a `nodenext` project you commonly
 have both, and they do not conflict — but if you are reasoning about why an
 import looks the way it does in the output, you need to know which one is
-responsible. That flag is **02 · `import type` / `export type` and
-`verbatimModuleSyntax`** *(not written yet)*.
+responsible. That flag is [02 · `import type` / `export type` and `verbatimModuleSyntax`](../02-import-type-and-verbatim-module-syntax/README.md).
 
 ## The applied case is already written
 

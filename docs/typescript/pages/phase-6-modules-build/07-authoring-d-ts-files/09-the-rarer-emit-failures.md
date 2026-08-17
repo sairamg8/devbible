@@ -102,7 +102,7 @@ That does silence it, and it silences it by deleting the type from your public
 surface — which is precisely the thing declaration emit exists to produce.
 `skipLibCheck` does not help either: it skips checking *inside* `.d.ts` files and
 has nothing to do with *producing* them
-(**10 · `skipLibCheck`** *(not written yet)*, and
+([10 · `skipLibCheck`](../10-skiplibcheck/README.md), and
 [Phase 10 · The suppression tiers](../../phase-10-strictness/08-suppression-directives/03-the-suppression-tiers.md)
 settles that it is not a suppression mechanism at all).
 

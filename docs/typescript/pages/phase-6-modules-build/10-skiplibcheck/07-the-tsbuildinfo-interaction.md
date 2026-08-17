@@ -112,7 +112,7 @@ it is consulted, and it never helps.
 explicitly. The default location is derived from `outDir`/`configFilePath`, which
 is why two configs emitting to the same `outDir` collide by default.
 
-**14 · Incremental builds** *(not written yet)* owns `.tsbuildinfo` in general —
+[14 · Incremental builds](../14-incremental-builds/README.md) owns `.tsbuildinfo` in general —
 what else invalidates it, what it contains, and how to cache it in CI. This chunk
 owns only the `skipLibCheck` half of that story.
 

@@ -83,8 +83,7 @@ you cannot read the implementation or edit anything. With it, the editor follows
 the map back to the original `.ts`.
 
 It costs a `.d.ts.map` file per declaration and nothing at runtime. In a monorepo
-it is close to mandatory, and the reason is in **12 · Sharing types across a
-monorepo** *(not written yet)* — it is the flag that makes "build the package"
+it is close to mandatory, and the reason is in [12 · Sharing types across a monorepo](../12-sharing-types-across-a-monorepo/README.md) — it is the flag that makes "build the package"
 feel like "import the source".
 
 ⚠️ **The map is only useful if the sources it points at are present.** In a
@@ -117,7 +116,7 @@ Two consequences of that split worth knowing before you adopt it:
   exactly this: *"Option 'allowImportingTsExtensions' can only be used when
   either 'noEmit' or 'emitDeclarationOnly' is set"* (**TS5096**) — because a `.ts`
   specifier in emitted JavaScript would be unloadable. That trade is
-  **06 · File extensions** *(not written yet)*'s.
+  [06 · File extensions](../06-file-extensions/README.md)'s.
 
 ### `declarationDir` — and why you usually do not need it
 
@@ -145,8 +144,7 @@ Four cases, and they are narrower than most codebases assume.
 
 **1 · A dependency that ships no types, and no `@types` package exists.**
 The `declare module 'legacy-lib'` shim. This is the most common hand-written
-declaration in any repo and it has its own topic — **08 · Typing an untyped
-dependency** *(not written yet)*.
+declaration in any repo and it has its own topic — [08 · Typing an untyped dependency](../08-typing-an-untyped-dependency/README.md).
 
 **2 · Things that are not code.** `*.css`, `*.svg`, `*.json`, `?raw` imports —
 your bundler makes these importable, but `tsc` has never heard of them. A
@@ -190,8 +188,7 @@ back in, and they are chunk 11.
 **Symptom:** Published package has no types; consumers see `any` everywhere.
 **Cause:** `declaration` defaults to `false` and nothing warns you.
 **Fix:** Set `"declaration": true` and check that the built `.d.ts` is actually
-included in the published files. Packaging is **11 · Publishing a typed package**
-*(not written yet)*.
+included in the published files. Packaging is [11 · Publishing a typed package](../11-publishing-a-typed-package/README.md).
 
 **Symptom:** Turning on `composite` produced a wave of new errors.
 **Cause:** `composite` implies `declaration`, and declaration emit surfaces

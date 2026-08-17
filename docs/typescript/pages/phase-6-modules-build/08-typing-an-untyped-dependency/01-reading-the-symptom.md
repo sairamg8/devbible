@@ -44,8 +44,7 @@ package".
 > 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths'
 > option?"*
 
-That one belongs to **01 · `module` and `moduleResolution`** *(not written
-yet)*. If you see it, stop — no declaration file will help.
+That one belongs to [01 · `module` and `moduleResolution`](../01-module-and-moduleresolution/README.md). If you see it, stop — no declaration file will help.
 
 ## 🔴 `TS7016` is conditional, and two flags switch it off
 
@@ -110,8 +109,7 @@ is off**, and installing the package alone will not be enough. That is
 [chunk 02](./02-look-for-types-first.md).
 
 ⚠️ **The last row of the table is not this topic's problem.** `Map` and `Promise`
-missing is a `lib`/`target` question — **04 · `lib`, `target` and the ambient
-environment** *(not written yet)* — and no declaration file will fix it.
+missing is a `lib`/`target` question — [04 · `lib`, `target` and the ambient environment](../04-lib-target-ambient/README.md) — and no declaration file will fix it.
 
 ## The other implicit-`any` codes you will see alongside
 
