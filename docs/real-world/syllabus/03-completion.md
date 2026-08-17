@@ -18,9 +18,9 @@ storefront's stylesheet, component by component.
 
 | Topic | Tier |
 |---|---|
-| **The product grid** — Grid + container queries, from phone to wide desktop | <span className="db-tier t-understand">Understand</span> |
+| **The product grid** — Grid + container queries, from phone to wide desktop | <span className="db-tier t-master">Master</span> |
 | The header and navigation — responsive without a breakpoint pile-up | <span className="db-tier t-understand">Understand</span> |
-| **The checkout form** — layout, focus states, inline validation styling | <span className="db-tier t-understand">Understand</span> |
+| **The checkout form** — layout, focus states, inline validation styling | <span className="db-tier t-master">Master</span> |
 | Skeleton loaders and spinners — perceived speed while the hooks fetch | <span className="db-tier t-understand">Understand</span> |
 | Dark mode — the token layer, honouring the three viewer states | <span className="db-tier t-understand">Understand</span> |
 | The overlay layer — toasts and modals that never fight the stacking context | <span className="db-tier t-understand">Understand</span> |

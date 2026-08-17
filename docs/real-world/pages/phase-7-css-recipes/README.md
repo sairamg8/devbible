@@ -1,0 +1,60 @@
+---
+title: "Phase 7 — CSS recipes for the storefront"
+sidebar_label: "Overview"
+sidebar_position: 0
+---
+
+> The stylesheet the Phase 4 screens actually need. CSS itself — the cascade,
+> grid track sizing, container queries, stacking contexts, the colour
+> functions — is the [CSS section](../../../css/README.md), and no chapter here
+> re-teaches it. These pages are the **decisions**: which mechanism this
+> component needs, what it costs, and the complete rules that ship.
+
+**Prerequisites:** CSS phases 2 (cascade and `@layer`), 3 (custom properties),
+5 (grid), 6 (container queries), 7 (positioning), 8 (colour and theming); the
+markup from [Phase 4 — The React UI](../phase-4-react-ui/README.md), because
+every selector here targets components that already exist.
+
+| # | Chapter | Tier | In one line |
+|---|---|---|---|
+| 01 | **[The product grid](01-the-product-grid/README.md)** *(12 chunks)* | <span className="db-tier t-master">Master</span> | One `grid-template-columns` declaration replaces the breakpoint pile-up — and the card adapts to its column, not the viewport |
+| 02 | **The header and navigation** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 03 | **The checkout form** | <span className="db-tier t-master">Master</span> | *(not written yet)* |
+| 04 | **Skeleton loaders and spinners** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 05 | **Dark mode** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 06 | **The overlay layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+
+## The layer order this phase assumes
+
+Every chapter writes into a named layer, declared once in the entry
+stylesheet. Declaring the order up front is what lets a component rule be
+written at its natural specificity instead of being escalated to beat
+something else — the mechanism is
+[CSS 2·02 — `@layer`](../../../css/pages/phase-2-cascade/02-layer/README.md).
+
+```css
+/* src/styles/index.css — the only place layer order is decided */
+@layer reset, tokens, base, layout, components, utilities;
+```
+
+`reset` normalises, `tokens` declares the custom properties (**chapter 05 ·
+Dark mode** *(not written yet)* owns the theme layer), `base` styles bare
+elements,
+`layout` holds the page shells, `components` is where almost everything in
+this phase lands, and `utilities` is the deliberate escape hatch that wins
+without `!important`.
+
+## Phase gate
+
+The gate from the syllabus: **the storefront is usable from a 320 px phone to
+a 2560 px desktop with no horizontal scrollbar, no layout shift as images
+arrive, and no overlay that can be trapped behind the content it overlays** —
+and the stylesheet gets there without a media-query pile-up.
+
+## Where this connects
+
+Phase 4 supplies the markup and the class names — this phase never invents an
+element it cannot point to. Phase 5's `Intl` formatting decides the *text* in
+the price cell, and this phase decides how that cell behaves when the text is
+long. The CSS section supplies every mechanism used here; the direction is
+always **concept there, decision here.**

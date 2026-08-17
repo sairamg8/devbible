@@ -60,8 +60,8 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics |
 |---|---|
-| <span className="db-tier t-master">Master</span> | 35 |
-| <span className="db-tier t-understand">Understand</span> | 30 |
+| <span className="db-tier t-master">Master</span> | 37 |
+| <span className="db-tier t-understand">Understand</span> | 28 |
 | <span className="db-tier t-know">Know</span> | 14 |
 | **Total** | **79** |
 

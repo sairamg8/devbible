@@ -25,7 +25,7 @@ import Progress from '@site/src/components/Progress';
 | **[4 — The React UI](./phase-4-react-ui/README.md)** | The storefront’s custom hooks and screens, wired to the real API | ✅ 12 / 12 |
 | **[5 — JS custom functions](./phase-5-js-functions/README.md)** | Fetch wrapper, TTL cache, task queue, event bus, validation engine, Intl formatting | ✅ 10 / 10 |
 | **[6 — TypeScript](./phase-6-typescript/README.md)** | Shared types, zod inference, typed `pg` results, the order state machine | 🚧 1 / 8 |
-| **7 — CSS recipes** | Product grid, checkout form, skeletons, dark mode, overlays | *(not written yet)* |
+| **[7 — CSS recipes](./phase-7-css-recipes/README.md)** | Product grid, header, checkout form, skeletons, dark mode, overlays | 🚧 1 / 6 |
 | **8 — The MongoDB mirror** | The same data layer on MongoDB for MERN | *(not written yet)* |
 
 ## The chapter shape
