@@ -46,7 +46,7 @@ Read down the left column until a row sounds like your week.
 | "My reusable component is almost right, but this one caller needs different behaviour" | **The state reducer pattern** | [02 · The state reducer pattern](02-the-state-reducer-pattern.md) — *new* |
 | "This button should sometimes render an `<a>`" | **Polymorphic components / the `as` prop** | [03 · Polymorphic components](03-polymorphic-components.md) — *new* |
 | "The caller keeps forgetting to spread the accessibility props" | **Prop getters** | [04 · Prop getters](04-prop-getters.md) — *new* |
-| "My `App.jsx` is nine nested `<Provider>` tags" | **Provider composition** | **05 · Provider composition** *(not written yet)* — *new* |
+| "My `App.jsx` is nine nested `<Provider>` tags" | **Provider composition** | [05 · Provider composition](05-provider-composition.md) — *new* |
 | "Should I split this into a smart and a dumb component?" | **Container / presentational** — mostly obsolete, and worth knowing *why* | **06 · Container and presentational** *(not written yet)* — *new* |
 | "Who owns this input's value?" | **Controlled vs uncontrolled** | [Controlled vs uncontrolled](../phase-2-components/04-controlled-vs-uncontrolled/README.md) <span className="db-tier t-master">Master</span> |
 | "I am storing something in state that I could compute" | **Derived state** — compute during render, do not sync with an effect | [Derived state](../phase-3-state/06-derived-state.md) <span className="db-tier t-master">Master</span> |
@@ -136,7 +136,7 @@ with state and dispatch in **separate** contexts. Outside React entirely,
 [`useSyncExternalStore`](../phase-5-refs-context-reducers/15-usesyncexternalstore.md).
 
 Once the provider count grows, the mechanical problem is nesting, and that is
-**05 · Provider composition** *(not written yet)*.
+[05 · Provider composition](05-provider-composition.md).
 
 ### 5 · Designing a component other people will use
 
@@ -166,7 +166,7 @@ written here because there was nowhere to link to.
 | 02 | **[The state reducer pattern](02-the-state-reducer-pattern.md)** | <span className="db-tier t-know">Know</span> | Let the caller intercept your state transitions instead of adding a prop per exception |
 | 03 | **[Polymorphic components](03-polymorphic-components.md)** | <span className="db-tier t-know">Know</span> | The `as` prop, and why a link that renders a `<div>` is a bug, not a style choice |
 | 04 | **[Prop getters](04-prop-getters.md)** | <span className="db-tier t-know">Know</span> | One object the caller spreads, so they cannot forget the ARIA attributes |
-| 05 | **Provider composition** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Nine nested providers, and the two ways out — one cosmetic, one real |
+| 05 | **[Provider composition](05-provider-composition.md)** | <span className="db-tier t-understand">Understand</span> | Nine nested providers, and the two ways out — one cosmetic, one real |
 | 06 | **Container and presentational** *(not written yet)* | <span className="db-tier t-know">Know</span> | The pattern hooks retired, why its author withdrew it, and what survived |
 
 ## Patterns this reference deliberately says no to

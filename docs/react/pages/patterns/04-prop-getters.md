@@ -233,4 +233,4 @@ prevents.
 
 ---
 
-← Prev: [Polymorphic components](03-polymorphic-components.md) · Index: [React patterns](README.md) · Next → **05 · Provider composition** *(not written yet)*
+← Prev: [Polymorphic components](03-polymorphic-components.md) · Index: [React patterns](README.md) · Next → [05 · Provider composition](05-provider-composition.md)
