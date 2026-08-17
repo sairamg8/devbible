@@ -51,12 +51,13 @@ Everything in this topic is a consequence of that sentence.
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [The two questions](./01-the-two-questions.md) | The model — specifier, resolution, emit format, and why the specifier is *not* rewritten |
-| 02 | [Every `module` value](./02-every-module-value.md) | All fourteen accepted values, what each emits, and the four that are still defensible |
-| 03 | [Every resolution strategy](./03-every-resolution-strategy.md) | `classic`, `node10`, `node16`/`nodenext`, `bundler` — what each can and cannot see |
-| 04 | [The defaults you did not set](./04-the-defaults-you-did-not-set.md) | 🔴 The computed-option chain, read from source — including the one that silently gives you `classic` |
-| 05 | [Format detection, file by file](./05-format-detection.md) | How `node16`–`nodenext` decides ESM or CJS per file, and how to ask the compiler why |
-| 06 | [When the model is wrong](./06-when-the-model-is-wrong.md) | The failure catalogue: eleven diagnostics, symptom → cause → fix |
-| 07 | [Choosing, and migrating](./07-choosing-and-migrating.md) | The decision procedure per host, the doc-backed configs, and the order to change things in |
+| 02 | [Every `module` value](./02-every-module-value.md) | All fourteen accepted values, what each emits, and what the handbook says to do with the legacy ones |
+| 03 | [`preserve` and the Node family](./03-preserve-and-the-node-family.md) | The two rungs that matter today — per-statement and per-file — and choosing among `node16`…`nodenext` |
+| 04 | [Every resolution strategy](./04-every-resolution-strategy.md) | `classic`, `node10`, `node16`/`nodenext`, `bundler` — what each can and cannot see |
+| 05 | [The defaults you did not set](./05-the-defaults-you-did-not-set.md) | 🔴 The computed-option chain, read from source — including the one that silently gives you `classic` |
+| 06 | [Format detection, file by file](./06-format-detection.md) | How `node16`–`nodenext` decides ESM or CJS per file, and how to ask the compiler why |
+| 07 | [When the model is wrong](./07-when-the-model-is-wrong.md) | The failure catalogue: symptom → cause → fix, with the compiler's own message text |
+| 08 | [Choosing, and migrating](./08-choosing-and-migrating.md) | The decision procedure per host, the doc-backed configs, and the order to change things in |
 
 ## Three sentences to keep
 
