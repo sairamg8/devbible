@@ -75,7 +75,7 @@ Type '"activ"' is not assignable to type '"active" | "inactive" | "pending"'.
 That second clause is its own template, `TS2820` — *"Type '{0}' is not assignable
 to type '{1}'. Did you mean '{2}'?"* — and it is the **same similarity machinery**
 that produces `TS2551` for property names.
-[Chunk 07](./07-the-spelling-budget.md) has the exact edit-distance budget.
+[Chunk 08](./08-the-spelling-budget.md) has the exact edit-distance budget.
 
 It matters most here because **string-literal unions are where typos are both
 most likely and least visible**: a status, a variant, an event name, a

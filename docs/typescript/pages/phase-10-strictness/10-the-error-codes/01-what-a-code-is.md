@@ -56,7 +56,7 @@ single word of the message**, which is most of the value:
 | **4xxx** | 110 | **Declaration emit.** *"Type parameter '{0}' of exported class has or is using private name"* | Your code type-checks; the **`.d.ts` cannot be written**. Only appears with `declaration: true` |
 | **5xxx** | 64 | **Options and the command line.** `TS5023` unknown option, `TS5096`, `TS5101`/`TS5102` | 🔴 **Your `tsconfig.json` is wrong, not your code.** Fix before believing anything else |
 | **6xxx** | 474 | **Mostly `--help` text** (431 of 474 are `Message`) — but **43 are Errors**, including the whole unused-code family | Mixed range. `6133` and friends are real findings; the rest is UI text |
-| **7xxx** | 53 | **The `noImplicitAny` family.** *"…implicitly has an '{1}' type"* | 🔴 **Not a type error — a refusal to insert an implicit `any`.** See [chunk 08](./08-the-index-codes.md) |
+| **7xxx** | 53 | **The `noImplicitAny` family.** *"…implicitly has an '{1}' type"* | 🔴 **Not a type error — a refusal to insert an implicit `any`.** See [chunk 09](./09-the-index-codes.md) |
 | **8xxx** | 35 | **TypeScript syntax in a JavaScript file**, and refactor restrictions | You are in a `.js` file under `allowJs` |
 | **9xxx** | 34 | **`isolatedDeclarations` and declaration-emit strictness.** `TS9007` *"Function must have an explicit return type annotation with --isolatedDeclarations"* | A flag you turned on is asking for an annotation |
 | **17xxx** | 20 | **JSX** | `--jsx` is unset, or a tag is unbalanced |
@@ -157,7 +157,7 @@ Not a style preference — a consequence of the compiler's own phases:
 
 🔴 **Step 2 is the one people skip**, and it produces the most wasted time: a
 misspelled or removed option is a quiet single line above a wall of type errors
-that are all its fault. [Chunk 12](./12-the-suppress-codes-are-gone.md) is an
+that are all its fault. [Chunk 13](./13-the-suppress-codes-are-gone.md) is an
 entire real instance of this.
 
 ## Gotchas

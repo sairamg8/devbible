@@ -12,17 +12,17 @@ sidebar_position: 5
 > `TS6212`, `TS6234`, `TS1209`, `TS1329`, `TS7052`. **No sandbox, no console
 > block.**
 
-TypeScript spends **at least eight distinct diagnostics** on one mistake:
-parentheses. That is a strong signal about how often it happens, and the codes
-differ by *where* the un-called function ended up, which makes them a fast
-diagnosis.
+TypeScript spends **seven distinct diagnostics** on one mistake: parentheses —
+six for forgetting them and one for adding too many. That is a strong signal
+about how often it happens, and the codes differ by *where* the un-called
+function ended up, which makes them a fast diagnosis.
 
 > **A forgotten `()` never looks like a forgotten `()`.** It looks like a type
 > mismatch, or an object with no properties in common, or a condition that is
 > always true, or an index signature complaint. The compiler knows, and says so —
 > in a clause at the end of a message nobody reads to the end.
 
-## "Did you mean to call it?" — the same mistake, five reports
+## "Did you mean to call it?" — the same mistake, six reports
 
 | Code | Template | Where the un-called function was |
 |---|---|---|
@@ -121,7 +121,7 @@ only indication that the call is untyped.
 *property access* the compiler has both an anonymous form (`TS2532`) and a named
 one (`TS18048` — *"'x' is possibly 'undefined'"*), and it prefers the named form
 whenever it can print the expression
-([chunk 09](./09-you-have-not-proved-it.md)). For **invocation** there is only the
+([chunk 10](./10-you-have-not-proved-it.md)). For **invocation** there is only the
 anonymous form. So the trick of extracting a subexpression into a named `const` to
 get a better message — which works everywhere else — buys you nothing here.
 
