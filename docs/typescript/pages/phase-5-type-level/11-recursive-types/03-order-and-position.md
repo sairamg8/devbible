@@ -121,7 +121,9 @@ recursive path:
    splitter has a version of this, and forgetting it silently drops the last item.
 4. **The failure answer.** `never`, a branded error type, or a message string for the
    caller — see **chunk 05 · Capping depth deliberately** *(not written yet)*, which is
-   about deciding what that answer is on purpose.
+   about deciding what that answer is on purpose, and
+   [chunk 04](./04-the-fine-print.md) for why the base branch is also where the public
+   alias earns its keep.
 
 ⚠️ **A type with more than two branches has more than one "other" branch.** A chain of
 conditionals may have several non-recursive outcomes and one recursive one; the bare-call
@@ -290,4 +292,4 @@ removes the question.
 ---
 
 ← [02 · The accumulator pattern](./02-the-accumulator-pattern.md) ·
-[Topic index](./README.md) · Next → **04 · The fine print** *(not written yet)*
+[Topic index](./README.md) · Next → [04 · The fine print](./04-the-fine-print.md)
