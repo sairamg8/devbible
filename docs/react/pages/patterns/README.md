@@ -44,7 +44,7 @@ Read down the left column until a row sounds like your week.
 | "I need to hand the caller my state so they can render it their way" | **Render props** — still correct where the *markup* varies per call | [Render props](../phase-2-components/12-render-props.md) <span className="db-tier t-know">Know</span> |
 | "I want all the behaviour and none of the markup" | **Headless components** | [01 · Headless components](01-headless-components.md) — *new* |
 | "My reusable component is almost right, but this one caller needs different behaviour" | **The state reducer pattern** | [02 · The state reducer pattern](02-the-state-reducer-pattern.md) — *new* |
-| "This button should sometimes render an `<a>`" | **Polymorphic components / the `as` prop** | **03 · Polymorphic components** *(not written yet)* — *new* |
+| "This button should sometimes render an `<a>`" | **Polymorphic components / the `as` prop** | [03 · Polymorphic components](03-polymorphic-components.md) — *new* |
 | "The caller keeps forgetting to spread the accessibility props" | **Prop getters** | **04 · Prop getters** *(not written yet)* — *new* |
 | "My `App.jsx` is nine nested `<Provider>` tags" | **Provider composition** | **05 · Provider composition** *(not written yet)* — *new* |
 | "Should I split this into a smart and a dumb component?" | **Container / presentational** — mostly obsolete, and worth knowing *why* | **06 · Container and presentational** *(not written yet)* — *new* |
@@ -164,7 +164,7 @@ written here because there was nowhere to link to.
 |---|---|---|---|
 | 01 | **[Headless components](01-headless-components.md)** | <span className="db-tier t-understand">Understand</span> | All the behaviour, none of the markup — and the accessibility argument that actually justifies it |
 | 02 | **[The state reducer pattern](02-the-state-reducer-pattern.md)** | <span className="db-tier t-know">Know</span> | Let the caller intercept your state transitions instead of adding a prop per exception |
-| 03 | **Polymorphic components** *(not written yet)* | <span className="db-tier t-know">Know</span> | The `as` prop, and why a link that renders a `<div>` is a bug, not a style choice |
+| 03 | **[Polymorphic components](03-polymorphic-components.md)** | <span className="db-tier t-know">Know</span> | The `as` prop, and why a link that renders a `<div>` is a bug, not a style choice |
 | 04 | **Prop getters** *(not written yet)* | <span className="db-tier t-know">Know</span> | One object the caller spreads, so they cannot forget the ARIA attributes |
 | 05 | **Provider composition** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Nine nested providers, and the two ways out — one cosmetic, one real |
 | 06 | **Container and presentational** *(not written yet)* | <span className="db-tier t-know">Know</span> | The pattern hooks retired, why its author withdrew it, and what survived |
