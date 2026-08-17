@@ -21,7 +21,7 @@ coding); the Phase 3 API contract.
 | 04 | **[The event bus](04-the-event-bus.md)** | <span className="db-tier t-understand">Understand</span> | `EventTarget` plus a constitution: facts not commands, no state rides, closed catalogue |
 | 05 | **[The form validation engine](05-the-validation-engine.md)** | <span className="db-tier t-understand">Understand</span> | Rules compose *over* the shared schema, not beside it — and async checks never gate submit |
 | 06 | **[Money and dates with `Intl`](06-money-and-dates/README.md)** *(3 chunks)* | <span className="db-tier t-master">Master</span> | The display edge: `/100` is a bug, the symbol is not a prefix, `timeZone` is required — and the hydration mismatch is a state bug |
-| 07 | **Slug and search normalization** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
+| 07 | **[Slug and search normalization](07-slug-and-search-normalization.md)** | <span className="db-tier t-know">Know</span> | Two jobs with opposite requirements — a permanent identifier vs transient data; NFD to strip, NFC to compare |
 | 08 | **Feature flags with a local override** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 | 09 | **Optimistic-update helpers** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 10 | **Debounce and throttle, applied** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
