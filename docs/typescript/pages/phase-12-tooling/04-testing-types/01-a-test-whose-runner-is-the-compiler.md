@@ -184,4 +184,4 @@ reaches a consumer.
 
 ---
 
-[Topic index](./README.md) · Next → **02 · Exactness, `any`, and choosing a tool** *(not written yet)*
+[Topic index](./README.md) · Next → [02 · Exactness, `any`, and choosing a tool](./02-exactness-any-and-choosing-a-tool.md)

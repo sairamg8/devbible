@@ -11,12 +11,6 @@ sidebar_position: 0
 > ⚠️ **Neither Vitest nor `tsd` is installed in this repository**, so every tool
 > claim is documentation-attributed and **no page here carries a console block.**
 
-:::info 🚧 This topic is mid-write — 1 chunk
-Chunk **01 is written**. References to the rest are deliberately **plain text
-rather than links** so the build stays green. Resume point:
-`devbible/progress_typescript_part_b.md` in the memory store.
-:::
-
 A type test asserts what the **compiler** concludes, not what the program computes —
 which makes it a different kind of test with two consequences that decide everything
 else:
@@ -35,7 +29,7 @@ else:
 | # | Chunk | What it settles |
 |---|---|---|
 | 01 | [A test whose runner is the compiler](./01-a-test-whose-runner-is-the-compiler.md) | Where type tests actually run and the program-membership trap; the positive/negative asymmetry; and 🔴 `@ts-expect-error` as an assertion, using `TS2578` — **the only diagnostic that reports a problem which has stopped existing** |
-| 02 | **Exactness, `any`, and choosing a tool** *(not written yet)* | Equal vs assignable, why `any` defeats a naive check, and when the cost is worth it |
+| 02 | [Exactness, `any`, and choosing a tool](./02-exactness-any-and-choosing-a-tool.md) | Equal vs assignable (assignability is one-directional, so *matches* is a much weaker claim) and 🔴 **`any` is assignable both ways, so a naive equality check reports that `any` equals every type** — a suite built that way passes completely when your types degrade to `any` |
 
 ## Phase gate
 
