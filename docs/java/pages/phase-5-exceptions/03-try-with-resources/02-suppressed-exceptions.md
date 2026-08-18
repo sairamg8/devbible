@@ -187,6 +187,13 @@ first observed by the body — the close failure is an echo. Propagating the
 echo (pre-JDK 7 behaviour) sent debuggers to the wrong place; the JLS
 translation hard-codes the better default.
 
+**★ Three resources in one header; the body throws, and all three closes throw too. What does the caller see?**
+The body's exception, with **three** suppressed entries. The translation
+nests per resource, so the innermost (last-declared) resource closes first
+and its failure suppresses onto the primary first — `getSuppressed()`
+returns them in that close order. One throw carries all four failures;
+nothing needs a second log line.
+
 **★ When would you call `addSuppressed` yourself?**
 Any many-failures-one-throw shape the compiler doesn't generate for you:
 closing a list of resources where every close must be *attempted*, shutdown

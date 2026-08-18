@@ -8,8 +8,9 @@ sidebar_position: 1
 
 > Verified: 2026-08-18 against JLS SE 25 §14.20.3 (try-with-resources,
 > basic and extended forms, and the specified translation), the JDK 25
-> Javadoc for `AutoCloseable`, and JEP 213 (Milling Project Coin — the
-> JDK 9 effectively-final resource form).
+> Javadoc for `AutoCloseable`, JEP 213 (Milling Project Coin — the
+> JDK 9 effectively-final resource form) and JEP 456 (Unnamed Variables &
+> Patterns — `_` as a resource name, final in JDK 22).
 
 **try-with-resources is not a convenience wrapper around `finally` — it is
 a different statement with better semantics, and the JLS specifies its
@@ -186,6 +187,10 @@ covers why GC-driven cleanup is unbounded in time and unordered.
 **Cause:** the inner `FileOutputStream` is not a resource *variable*, so when `GZIPOutputStream`'s constructor throws (it writes a header), nothing closes the file stream
 **Fix:** one header slot per resource: `try (var fos = new FileOutputStream(f); var gz = new GZIPOutputStream(fos))` — now the file stream is tracked independently
 
+**Symptom:** `incompatible types: try-with-resources not applicable to variable type` on an object that plainly has a `close()` method
+**Cause:** the header is checked against the variable's *static* type — it must implement `AutoCloseable`; a `close()` method alone (or an interface type that doesn't extend `AutoCloseable`) doesn't qualify
+**Fix:** type the variable as the concrete closeable class, or wrap the object in a small `AutoCloseable` adapter that delegates the close
+
 ## Interview questions
 
 **★ Write the desugaring of a one-resource try-with-resources.**
@@ -218,6 +223,13 @@ The statement guarantees it closes the object the header referenced. If the
 variable could be reassigned mid-body, "which object gets closed" would
 depend on execution path — so the language forbids the reassignment
 outright, same as the implicit finality of declared resources.
+
+**★ What does `try (var _ = mutex.lock())` mean in Java 25?**
+An unnamed resource variable (JEP 456, final in JDK 22): the resource is
+acquired, guards the block, closes on exit — and the `_` declares that the
+body never touches it. It is the cleanest spelling of the guard/scope
+idiom (locks, timers, tracing spans), replacing the old `var ignored = …`
+convention and silencing never-referenced-resource lint by design.
 
 **★ Can you use `catch`/`finally` on the same try as the resource header, and when do they run?**
 Yes — the extended form. Both apply to the statement *after* translation,

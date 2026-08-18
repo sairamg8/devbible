@@ -8,8 +8,8 @@ sidebar_position: 3
 
 > Verified: 2026-08-18 against the JDK 25 Javadoc for `AutoCloseable`,
 > `java.io.Closeable`, `java.sql.Connection`/`Statement`/`ResultSet`,
-> `java.util.stream.Stream` (the "Closing stream operations" note) and
-> `Files.lines`, plus JLS SE 25 §14.20.3.
+> `java.util.stream.Stream` (the "Closing stream operations" note),
+> `Files.lines` and `ExecutorService.close()`, plus JLS SE 25 §14.20.3.
 
 **`AutoCloseable` is the language-facing contract ("this can go in a try
 header") and `Closeable` is the older, stricter I/O contract layered on top
@@ -186,6 +186,10 @@ whether the resource still owed you work.
 **Cause:** the closed/consumed stream was reused — `Stream` is single-shot, and close (like a terminal op) ends its life
 **Fix:** rebuild the pipeline from the source per use; store the *source* (the path, the list), never the stream
 
+**Symptom:** a request handler that wraps its `ExecutorService` in a try header "hangs" at the end of the block
+**Cause:** `ExecutorService` is `AutoCloseable` (JDK 21+), and its `close()` is shutdown-and-*await*: it blocks until submitted tasks finish
+**Fix:** that blocking is the feature for scoped, per-operation executors (all tasks done when the block exits); long-lived shared pools don't belong in a try header at all — they are closed once, at application shutdown
+
 ## Interview questions
 
 **★ `Closeable` vs `AutoCloseable` — the two contract differences?**
@@ -216,6 +220,15 @@ final flush happens there, so failure means lost data and must propagate.
 Because inside a try statement a close exception may be *suppressed* onto a
 primary — and a suppressed interruption is a lost cancellation signal.
 Handle interrupts inside close and restore the interrupt flag instead.
+
+**★ Is the closed-flag pattern thread-safe, and does it need to be?**
+As written, no — a plain `boolean` is fine for the normal case, where one
+thread owns the resource for its whole life inside one try statement. It
+needs to be (volatile flag, or synchronization around close-vs-use) only
+when the resource is deliberately shared across threads — at which point
+close-while-in-use becomes a design question, not a flag question, and you
+are in **Phase 6 · Concurrency** *(not written yet)* territory. The
+`AutoCloseable` contract itself demands no thread safety.
 
 **★ Your `AutoCloseable` wraps three closeables. Write `close()`.**
 Close all three in reverse acquisition order, attempting every one:
