@@ -13,16 +13,16 @@ codebases get them wrong in one of two directions: swallowing, or wrapping
 without cause. This phase is small and dense — eight topics that decide
 whether your 3am stack trace names the real problem.
 
-🚧 **0 of 8 written.**
+✅ **8 of 8 written — phase complete.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **The hierarchy, checked vs unchecked** *(not written yet)* | <span className="db-tier t-master">Master</span> | `Throwable` → `Error`/`Exception`; the modern lean to unchecked |
-| 02 | **`try`/`catch`/`finally` mechanics** *(not written yet)* | <span className="db-tier t-master">Master</span> | Multi-catch; what happens when `finally` throws or returns |
-| 03 | **try-with-resources** *(not written yet)* | <span className="db-tier t-master">Master</span> | `AutoCloseable`, reverse close order, suppressed exceptions |
-| 04 | **Custom exceptions and layer translation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `SQLException` → domain exception → clean 500; always pass the cause |
-| 05 | **Reading a stack trace fast** *(not written yet)* | <span className="db-tier t-master">Master</span> | `Caused by` chains, your-code-first scanning, lost traces |
-| 06 | **Checked exceptions inside lambdas** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Why `Files.lines(...).map(...)` fights you; wrapper patterns |
+| 01 | **[The hierarchy, checked vs unchecked](01-hierarchy-checked-unchecked/README.md)** | <span className="db-tier t-master">Master</span> | `Throwable` → `Error`/`Exception`; the modern lean to unchecked |
+| 02 | **[`try`/`catch`/`finally` mechanics](02-try-catch-finally/README.md)** | <span className="db-tier t-master">Master</span> | Multi-catch; what happens when `finally` throws or returns |
+| 03 | **[try-with-resources](03-try-with-resources/README.md)** | <span className="db-tier t-master">Master</span> | `AutoCloseable`, reverse close order, suppressed exceptions |
+| 04 | **[Custom exceptions and layer translation](04-custom-exceptions-translation.md)** | <span className="db-tier t-understand">Understand</span> | `SQLException` → domain exception → clean 500; always pass the cause |
+| 05 | **[Reading a stack trace fast](05-reading-stack-traces/README.md)** | <span className="db-tier t-master">Master</span> | `Caused by` chains, your-code-first scanning, lost traces |
+| 06 | **[Checked exceptions inside lambdas](06-checked-exceptions-lambdas.md)** | <span className="db-tier t-understand">Understand</span> | Why `Files.lines(...).map(...)` fights you; wrapper patterns |
 | 07 | **[Exceptions as control flow — why not](07-exceptions-as-control-flow.md)** | <span className="db-tier t-understand">Understand</span> | `fillInStackTrace` cost; `Optional` for absence, throw for broken invariants |
 | 08 | **[Where the global handler lives](08-global-handler.md)** | <span className="db-tier t-know">Know</span> | `@ControllerAdvice`, `UncaughtExceptionHandler`, the swallow that hides incidents |
 

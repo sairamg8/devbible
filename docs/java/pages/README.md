@@ -21,7 +21,7 @@ import Progress from '@site/src/components/Progress';
 | 2 · Classes and objects | 15 | ✅ 15/15 |
 | 3 · Generics and collections | 16 | ✅ 16/16 |
 | 4 · Lambdas, streams and `Optional` | 13 | ✅ 13/13 |
-| 5 · Exceptions and failure design | 8 | 🚧 2/8 |
+| 5 · Exceptions and failure design | 8 | ✅ 8/8 |
 | 6 · Concurrency | 17 | Planned |
 | 7 · I/O, time and the everyday stdlib | 13 | Planned |
 | 8 · The build: Maven, Gradle, dependencies | 12 | Planned |

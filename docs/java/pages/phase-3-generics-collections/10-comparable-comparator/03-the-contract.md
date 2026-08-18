@@ -175,7 +175,7 @@ offers.
 - **Mutable sort keys → don't.** A lawful comparator over keys that change
   while the element sits inside a `TreeSet` produces the same unfindable
   elements as an intransitive one — the tree's shape froze the old answers
-  ([`HashMap` has the same rule](07-hashmap-internals.md) for `hashCode`).
+  ([`HashMap` has the same rule](../07-hashmap-internals.md) for `hashCode`).
 
 ## Gotchas
 

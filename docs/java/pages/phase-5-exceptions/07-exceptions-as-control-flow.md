@@ -228,4 +228,4 @@ five layers that only the top one inspects.
 
 ---
 
-← Prev: **06 · Checked exceptions inside lambdas** *(not written yet)* · Next → [Where the global handler lives](08-global-handler.md)
+← Prev: [Checked exceptions inside lambdas](06-checked-exceptions-lambdas.md) · Next → [Where the global handler lives](08-global-handler.md)
