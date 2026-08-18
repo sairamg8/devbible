@@ -219,4 +219,4 @@ abrupt exit* belongs in a shutdown hook on a platform thread.
 
 ---
 
-← Prev: [What changed, what didn't](02-what-changed-what-didnt.md) · Index: [Platform vs virtual threads](README.md) · Next → **03 · Race conditions** *(not written yet)*
+← Prev: [What changed, what didn't](02-what-changed-what-didnt.md) · Index: [Platform vs virtual threads](README.md) · Next → [Race conditions](../03-race-conditions/README.md)
