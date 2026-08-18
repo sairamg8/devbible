@@ -227,4 +227,4 @@ collector protocol.
 
 ---
 
-← Prev: **Parallel streams** *(not written yet)* · [Next → `toList()` vs `collect(toList())`](11-tolist-vs-collectors.md)
+[← Prev: Parallel streams](09-parallel-streams.md) · [Next → `toList()` vs `collect(toList())`](11-tolist-vs-collectors.md)

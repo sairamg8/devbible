@@ -170,4 +170,4 @@ long exact = orders.stream().mapToLong(Order::totalCents)
 
 ---
 
-← Prev: [Collectors](05-collectors/README.md) · Index: [Phase 4 — Lambdas, streams and Optional](README.md) · Next → **07 · Optional used correctly**
+← Prev: [Collectors](05-collectors/README.md) · Index: [Phase 4 — Lambdas, streams and Optional](README.md) · [Next → `Optional` used correctly](07-optional/README.md)
