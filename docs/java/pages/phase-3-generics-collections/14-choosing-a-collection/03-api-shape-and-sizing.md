@@ -29,7 +29,7 @@ private final LinkedHashMap<K, V> lru = ...;              // access-order behavi
 ```
 
 - Callers code against `List`; swapping `ArrayList` → `CopyOnWriteArrayList`
-  (**Phase 6** *(not written yet)*) touches one line.
+  ([Phase 6](../../phase-6-concurrency/README.md)) touches one line.
 - Take the **widest parameter** that works: a method that only iterates
   should take `Collection<T>` or `Iterable<T>`, not `List<T>` — every set
   and custom iterable ([topic 15](../15-writing-an-iterable.md)) becomes a
@@ -79,9 +79,9 @@ returns a view.
   ([Phase 1, autoboxing](../../phase-1-language-core/02-autoboxing-integer-cache/README.md));
   the memory multiple is what kills heaps, not the CPU.
 - **Fixed-size byte/char buffers at I/O edges** → arrays, by the API's own
-  shape (**Phase 7** *(not written yet)*).
+  shape ([Phase 7](../../phase-7-io-time-stdlib/README.md)).
 - **Cross-thread structures** → the `java.util.concurrent` types, not
-  synchronized wrappers — Phase 6's whole subject (**not written yet**).
+  synchronized wrappers — [Phase 6's whole subject](../../phase-6-concurrency/README.md).
 
 ## Gotchas
 

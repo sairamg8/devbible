@@ -60,8 +60,7 @@ var cache = new LinkedHashMap<K, V>(16, 0.75f, true) {   // true = access order
 
 Every `get` moves the entry to the tail; `removeEldestEntry` (a documented
 protected hook) evicts the head on insert past capacity. Single-threaded
-only — the concurrent version is a different topic (**Phase 6 · caches**
-*(not written yet)*).
+only — the concurrent version is a different topic ([Phase 6 · caches](../../phase-6-concurrency/11-concurrent-collections.md)).
 
 ## 3 · "Next most urgent" — job scheduling
 
@@ -69,7 +68,7 @@ only — the concurrent version is a different topic (**Phase 6 · caches**
 `peek` O(1). The two contract lines that matter: its iterator is **not** in
 priority order, and ties are broken arbitrarily — add
 `.thenComparing(Job::id)` when replay determinism matters. Unbounded; a
-bounded work queue is Phase 6's `BlockingQueue` (**not written yet**).
+bounded work queue is [Phase 6's `BlockingQueue`](../../phase-6-concurrency/11-concurrent-collections.md).
 
 ## 4 · Range queries — "latest version ≤ x"
 

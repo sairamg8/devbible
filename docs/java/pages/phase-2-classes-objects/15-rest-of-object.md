@@ -79,7 +79,7 @@ Two practical notes:
 ## `wait`/`notify`/`notifyAll`: recognize, don't write
 
 Every object owns a **monitor** (the thing `synchronized` locks — see
-**Phase 6 · `synchronized` and intrinsic locks** *(not written yet)*) and
+[Phase 6 · `synchronized` and intrinsic locks](../phase-6-concurrency/04-synchronized-intrinsic-locks/README.md)) and
 a **wait set**. The legacy protocol:
 
 ```java
@@ -108,7 +108,7 @@ You will meet this pattern in pre-2004 codebases and in textbooks. New
 code uses the tools that package it safely: `BlockingQueue` for
 producer/consumer, `CountDownLatch`/`Semaphore` for signalling,
 `Condition` when explicit waiting is genuinely needed — all in
-**Phase 6 — Concurrency** *(not written yet)*.
+[Phase 6 — Concurrency](../phase-6-concurrency/README.md).
 
 ## The small ones
 

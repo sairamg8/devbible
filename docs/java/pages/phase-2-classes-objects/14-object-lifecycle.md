@@ -55,8 +55,8 @@ lived in that corner for two decades.
 
 - **Deterministic resource cleanup** → `AutoCloseable` +
   **try-with-resources** — close at a defined point, exceptions handled,
-  in reverse order. The full treatment is **Phase 5 · try-with-resources**
-  *(not written yet)*; the rule here is simply: if it has `close()`, you
+  in reverse order. The full treatment is
+  [Phase 5 · try-with-resources](../phase-5-exceptions/03-try-with-resources/README.md); the rule here is simply: if it has `close()`, you
   close it — the GC never will.
 - **Safety net for a *native* resource whose owner forgot to close** →
   `java.lang.ref.Cleaner` (9+). You register the object plus a cleanup

@@ -13,11 +13,11 @@ The APIs you touch in every service, tiered by how often they bite. The two
 Master topics — `java.time` and Jackson — are Master because getting either
 subtly wrong ships silently and corrupts data at a boundary.
 
-🚧 **12 of 13 written; `java.time` chunk 4 is mid-write.**
+✅ **All 13 topics written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | 🚧 **[`java.time`](01-java-time/README.md)** *(chunks 1–3 of 4 written)* | <span className="db-tier t-master">Master</span> | `Instant` in the data, zones at the edge; the DST bug prevented |
+| 01 | **[`java.time`](01-java-time/README.md)** | <span className="db-tier t-master">Master</span> | `Instant` in the data, zones at the edge; the DST bug prevented |
 | 02 | **[`Path` and `Files`](02-path-and-files.md)** | <span className="db-tier t-understand">Understand</span> | Modern file work; `Files.lines` holds a file open |
 | 03 | **[Streams, buffers and charsets](03-streams-buffers-charsets.md)** | <span className="db-tier t-understand">Understand</span> | Byte vs char, buffering, UTF-8 default since 18 |
 | 04 | **[`HttpClient`](04-httpclient.md)** | <span className="db-tier t-understand">Understand</span> | Sync/async HTTP without a library — timeouts on every call |

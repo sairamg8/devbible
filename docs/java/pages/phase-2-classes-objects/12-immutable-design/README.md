@@ -45,7 +45,7 @@ changes is the debugging skill.
   automates three of the five parts, and exactly which two it doesn't.
 - **[Composition over inheritance](../13-composition-over-inheritance.md)** —
   closing the class (part 1) is the same move as preferring composition.
-- **Phase 6 — Concurrency** *(not written yet)* — safe publication and the
+- [Phase 6 — Concurrency](../../phase-6-concurrency/README.md) — safe publication and the
   JMM own the deep version of the §17.5 guarantee.
 
 ---

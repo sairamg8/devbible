@@ -117,7 +117,7 @@ Two separate sins compound here:
 A mid-stack `catch` is legitimate in exactly three shapes: **handle fully**
 (the fallback genuinely restores the contract — cache miss → recompute);
 **translate** at a layer boundary (`SQLException` →
-`RepositoryException(cause)` — **topic 04** *(not written yet)*); or
+`RepositoryException(cause)` — [topic 04](04-custom-exceptions-translation.md)); or
 **enrich and rethrow** (attach the order ID, keep the cause). All three end
 with the invariant intact or the exception still moving up. What is never
 legitimate mid-stack is *ending* the exception without restoring the
@@ -156,7 +156,7 @@ The global handler is also where honesty about failure modes lives:
 
 **Symptom:** `ExecutionException` stack traces point into executor plumbing, not the failing code
 **Cause:** `Future.get` wraps the task's exception — the real failure is the `getCause()`
-**Fix:** unwrap and log the cause (and its own cause chain — **topic 05** *(not written yet)* reads them fast); rethrow a translation, not the wrapper
+**Fix:** unwrap and log the cause (and its own cause chain — [topic 05](05-reading-stack-traces/README.md) reads them fast); rethrow a translation, not the wrapper
 
 **Symptom:** after "hardening", a service returns 200s with half-done work during incidents
 **Cause:** mid-stack `catch (Exception e) { log; continue; }` added to stop crashes — it also stopped the framework handler from turning failures into error responses

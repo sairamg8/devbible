@@ -47,7 +47,7 @@ With non-final fields that hand-off is a data race: B could legally see
 `shared` non-null but `amount` still null. With final fields it is safe —
 *provided* `this` never escaped the constructor, which is why chunk 1's
 leaked-`this` rule is part of the recipe and not a style preference.
-**Phase 6 — Concurrency** *(not written yet)* owns the deep version (safe
+[Phase 6 — Concurrency](../../phase-6-concurrency/README.md) owns the deep version (safe
 publication, happens-before, and what "leaked" means precisely).
 
 ## Safe hash keys

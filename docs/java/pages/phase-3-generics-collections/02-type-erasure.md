@@ -151,7 +151,7 @@ argument of a runtime *instance*: nothing recovers the `<Order>` from an
 
 **Symptom:** `catch (AppException<Payment> e)` won't compile
 **Cause:** generic catch is unverifiable — a `Throwable` subclass cannot be generic at all (JLS §8.1.2)
-**Fix:** non-generic exception carrying a typed payload field, or distinct exception classes per case (Phase 5 *(not written yet)* covers failure design)
+**Fix:** non-generic exception carrying a typed payload field, or distinct exception classes per case ([Phase 5](../phase-5-exceptions/README.md) covers failure design)
 
 **Symptom:** a `Class<T>` parameter was added "for erasure reasons" but callers now pass `List.class` for a `List<Order>` and element type is still lost
 **Cause:** `Class` tokens carry only the raw type — one level, no nesting

@@ -31,7 +31,7 @@ one reports with a return value:
 For the unbounded collections in this page (`ArrayDeque` grows,
 `PriorityQueue` grows) the insert forms behave identically — the split matters
 at the *empty* end and for the bounded blocking queues you meet in
-**Phase 6 · Concurrency** *(not written yet)*, which reuse exactly this
+[Phase 6 · Concurrency](../phase-6-concurrency/README.md), which reuse exactly this
 vocabulary. Day-to-day rule: **`offer`/`poll`/`peek`** and check for `null`,
 or `remove()`/`element()` when an empty queue is a bug you *want* thrown.
 
@@ -114,8 +114,8 @@ Two more properties worth knowing before you build a scheduler on it:
 equal-priority elements have **no FIFO guarantee** (ties are arbitrary — add a
 timestamp tiebreaker as above if arrival order matters), and `remove(Object)` /
 `contains` are O(n) linear scans. It is also unbounded and not thread-safe —
-the concurrent, blocking variant is **Phase 6's `PriorityBlockingQueue`**
-*(not written yet)*.
+the concurrent, blocking variant is
+[Phase 6's `PriorityBlockingQueue`](../phase-6-concurrency/11-concurrent-collections.md).
 
 ## Choosing the shape
 

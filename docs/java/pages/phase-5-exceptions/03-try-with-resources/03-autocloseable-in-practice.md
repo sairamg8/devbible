@@ -43,8 +43,8 @@ guarantee are both valid strengthenings) and not the other way around.
 Two further Javadoc directives for implementers of `AutoCloseable`:
 
 - **Don't throw `InterruptedException` from `close()`.** Interruption has
-  runtime-visible semantics (the interrupt flag, and **Phase 6 ·
-  Concurrency** *(not written yet)* owns them); if it can be raised during
+  runtime-visible semantics (the interrupt flag, and
+  [Phase 6 · Concurrency](../../phase-6-concurrency/README.md) owns them); if it can be raised during
   close and then gets *suppressed* onto a primary exception, the
   interruption is effectively swallowed. Handle it inside `close`, restore
   the flag, throw something else.
@@ -227,7 +227,7 @@ thread owns the resource for its whole life inside one try statement. It
 needs to be (volatile flag, or synchronization around close-vs-use) only
 when the resource is deliberately shared across threads — at which point
 close-while-in-use becomes a design question, not a flag question, and you
-are in **Phase 6 · Concurrency** *(not written yet)* territory. The
+are in [Phase 6 · Concurrency](../../phase-6-concurrency/README.md) territory. The
 `AutoCloseable` contract itself demands no thread safety.
 
 **★ Your `AutoCloseable` wraps three closeables. Write `close()`.**

@@ -222,7 +222,7 @@ Sealed result when the caller is expected to *branch* on failure cases as
 part of the feature — exhaustive `switch` gives compile-time coverage of
 each reason. Checked exception when the failure can only be *propagated or
 translated* — but note modern application code leans unchecked even there
-(**topic 01** *(not written yet)* has that debate). The wrong choice shows
+([topic 01](01-hierarchy-checked-unchecked/README.md) has that debate). The wrong choice shows
 up as `catch` blocks with business logic, or as `Result` plumbed through
 five layers that only the top one inspects.
 

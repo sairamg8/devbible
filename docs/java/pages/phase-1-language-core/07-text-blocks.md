@@ -97,7 +97,7 @@ defence and the reason SQL text blocks stay static.
   to and from `psql`.
 - **JSON fixtures in tests** — expected payloads readable next to the
   assertion, no quote-escape noise (pairs with Jackson,
-  **Phase 7's JSON topic** *(not written yet)*).
+  [Phase 7's JSON topic](../phase-7-io-time-stdlib/05-json-jackson/README.md)).
 - **Golden files inlined** — small expected outputs, error-message
   templates, HTML snippets.
 - Anywhere you previously concatenated lines with `+ "\n"` — that idiom is

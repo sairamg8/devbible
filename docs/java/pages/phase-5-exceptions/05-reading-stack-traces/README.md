@@ -52,7 +52,7 @@ This topic runs deeper than one file. The chunks:
 - [Topic 04](../04-custom-exceptions-translation.md) builds the cause chains
   this topic reads; the lost-trace pathology is its "always pass the cause"
   rule seen from the morgue.
-- **Phase 6 · Concurrency** *(not written yet)* owns why executor-submitted
+- [Phase 6 · Concurrency](../../phase-6-concurrency/README.md) owns why executor-submitted
   work loses the submitter's frames; chunk 2 shows what that looks like.
 - **Phase 12 · The JVM in production** *(not written yet)* picks up logging
   pipelines and aggregators where chunk 3 leaves off.

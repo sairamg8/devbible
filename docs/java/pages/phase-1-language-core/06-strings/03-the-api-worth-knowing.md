@@ -76,7 +76,7 @@ The names suggest `replace` does one and `replaceAll` does all. Wrong axis:
 corrupts. Default to `replace`; reach for `replaceAll` only when you mean
 patterns, and then mind `Matcher.quoteReplacement` for dynamic replacements.
 (Full regex — `Pattern`, compile-once, catastrophic backtracking — is
-**Phase 7's regex topic** *(not written yet)*.)
+[Phase 7's regex topic](../../phase-7-io-time-stdlib/06-regex.md).)
 
 ## Case operations and the locale trap
 

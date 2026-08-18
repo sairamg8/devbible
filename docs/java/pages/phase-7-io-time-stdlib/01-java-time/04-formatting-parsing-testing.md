@@ -208,6 +208,20 @@ every `now()` precisely so time is an injectable dependency.
 same instant. `isBefore` — false either way round, since neither precedes
 the other on the timeline. Business "same time?" logic wants `isEqual`.
 
+**★ `Clock` vs `InstantSource` — which do you inject, and why does the narrower one exist?**
+`InstantSource` (17+) supplies only `instant()` — no zone. Inject it when
+the code needs "now" and nothing calendar-shaped; injecting `Clock` there
+smuggles in a zone dependency the code shouldn't have. `Clock` implements
+`InstantSource`, so production wiring passes `Clock.systemUTC()` either
+way; the interface choice documents what the class actually uses.
+
+**★ Why did the JDK make `ofPattern` default to SMART rather than STRICT?**
+Compatibility with what people paste: real-world patterns written with `y`
+and real-world input with 24:00 or slightly-off fields would fail under
+STRICT, so the forgiving default minimizes surprise for formatting-heavy
+code. The cost lands on *validation* code, which must remember to opt in
+to STRICT — the default is tuned for output, not input.
+
 **★ A feed sometimes includes an offset, sometimes not. How do you parse it without two code paths?**
 One formatter with optional sections (`[XXX]`) and `parseBest(text,
 OffsetDateTime::from, LocalDateTime::from)` — the richest type the text
