@@ -14,7 +14,7 @@ knowing the collectors — and knowing when a plain loop is clearer. The
 Master rows are the ones that ship bugs: lazy pipelines that never ran,
 `toMap` meeting duplicate keys, `orElse` doing work you thought was deferred.
 
-🚧 **13 of 13 written — one chunk (`01-lambdas-functional-interfaces` chunk 3) landing, then the phase closes.**
+✅ **All 13 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|

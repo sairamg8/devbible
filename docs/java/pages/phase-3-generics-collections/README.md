@@ -13,7 +13,7 @@ Choosing the right one — and knowing its cost model — is daily work, and the
 `HashMap`-internals and erasure questions are interview staples because they
 separate users from understanders.
 
-🚧 **16 of 16 written — one chunk (`10-comparable-comparator` chunk 3) landing, then the phase closes.**
+✅ **All 16 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|

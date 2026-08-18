@@ -19,8 +19,8 @@ import Progress from '@site/src/components/Progress';
 | 0 · The platform and the JVM | 13 | ✅ 13/13 |
 | 1 · Language core | 16 | ✅ 16/16 |
 | 2 · Classes and objects | 15 | ✅ 15/15 |
-| 3 · Generics and collections | 16 | 🚧 16/16 (final chunk landing) |
-| 4 · Lambdas, streams and `Optional` | 13 | 🚧 13/13 (final chunk landing) |
+| 3 · Generics and collections | 16 | ✅ 16/16 |
+| 4 · Lambdas, streams and `Optional` | 13 | ✅ 13/13 |
 | 5 · Exceptions and failure design | 8 | Planned |
 | 6 · Concurrency | 17 | Planned |
 | 7 · I/O, time and the everyday stdlib | 13 | Planned |
