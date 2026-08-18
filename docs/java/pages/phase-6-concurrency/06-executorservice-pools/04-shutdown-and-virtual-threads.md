@@ -188,4 +188,4 @@ them.
 
 ---
 
-← Prev: [Scheduling and sizing](03-scheduling-and-sizing.md) · Next → **07 · `CompletableFuture`** *(not written yet)*
+← Prev: [Scheduling and sizing](03-scheduling-and-sizing.md) · Next → [`CompletableFuture`](../07-completablefuture/README.md)

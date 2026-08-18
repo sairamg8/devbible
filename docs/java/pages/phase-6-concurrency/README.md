@@ -14,7 +14,7 @@ The deepest phase in the syllabus, on purpose. Virtual threads made concurrent
 Java simple to *write* — the model underneath is unchanged, and it is the
 model that pages you at 3am if you skip it.
 
-🚧 **9 of 17 written.**
+🚧 **11 of 17 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -24,8 +24,8 @@ model that pages you at 3am if you skip it.
 | 04 | **[`synchronized` and intrinsic locks](04-synchronized-intrinsic-locks/README.md)** | <span className="db-tier t-master">Master</span> | What it guards; lock on private finals, not `this` |
 | 05 | **[The Java Memory Model](05-java-memory-model/README.md)** | <span className="db-tier t-understand">Understand</span> | Visibility, happens-before, `volatile` — the flag that never stops |
 | 06 | **[`ExecutorService` and pools](06-executorservice-pools/README.md)** | <span className="db-tier t-master">Master</span> | Sizing for CPU vs I/O; shutdown done right |
-| 07 | **`CompletableFuture`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Fan-out to three services and join; `thenCompose` vs `thenApply` |
-| 08 | **Structured concurrency** *(not written yet)* | <span className="db-tier t-know">Know</span> | `StructuredTaskScope`: subtasks that cannot leak |
+| 07 | **[`CompletableFuture`](07-completablefuture/README.md)** | <span className="db-tier t-understand">Understand</span> | Fan-out to three services and join; `thenCompose` vs `thenApply` |
+| 08 | **[Structured concurrency](08-structured-concurrency.md)** | <span className="db-tier t-know">Know</span> | `StructuredTaskScope`: subtasks that cannot leak |
 | 09 | **[Explicit locks](09-explicit-locks.md)** | <span className="db-tier t-know">Know</span> | `ReentrantLock`'s `tryLock` — the deadlock escape hatch |
 | 10 | **[Atomics](10-atomics.md)** | <span className="db-tier t-understand">Understand</span> | `compareAndSet`, `LongAdder` for hot counters |
 | 11 | **[Concurrent collections](11-concurrent-collections.md)** | <span className="db-tier t-understand">Understand</span> | `ConcurrentHashMap.computeIfAbsent` — the one-line cache |
