@@ -23,8 +23,8 @@ whether your 3am stack trace names the real problem.
 | 04 | **Custom exceptions and layer translation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `SQLException` → domain exception → clean 500; always pass the cause |
 | 05 | **Reading a stack trace fast** *(not written yet)* | <span className="db-tier t-master">Master</span> | `Caused by` chains, your-code-first scanning, lost traces |
 | 06 | **Checked exceptions inside lambdas** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Why `Files.lines(...).map(...)` fights you; wrapper patterns |
-| 07 | **Exceptions as control flow — why not** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `fillInStackTrace` cost; `Optional` for absence, throw for broken invariants |
-| 08 | **Where the global handler lives** *(not written yet)* | <span className="db-tier t-know">Know</span> | `@ControllerAdvice`, `UncaughtExceptionHandler`, the swallow that hides incidents |
+| 07 | **[Exceptions as control flow — why not](07-exceptions-as-control-flow.md)** | <span className="db-tier t-understand">Understand</span> | `fillInStackTrace` cost; `Optional` for absence, throw for broken invariants |
+| 08 | **[Where the global handler lives](08-global-handler.md)** | <span className="db-tier t-know">Know</span> | `@ControllerAdvice`, `UncaughtExceptionHandler`, the swallow that hides incidents |
 
 ## Phase gate
 
