@@ -84,7 +84,7 @@ fixes *visibility* (each thread reads the latest value) and does nothing
 for *atomicity*: both threads can still read the same value, add one, and
 write the same result. This is the single most common `volatile`
 misconception, and it comes up in [chunk 3](03-volatile-and-safe-publication.md)
-and again with the atomics — **topic 10 · Atomics** *(not written yet)*.
+and again with the atomics — [topic 10 · Atomics](../10-atomics.md).
 
 ## Word tearing: the 64-bit fine print
 
@@ -118,8 +118,7 @@ reordering, staleness, tearing — become invisible to you.
 
 Note what a data race is *not*: a **race condition** (check-then-act on a
 bank balance) is a logic-level interleaving bug that can happen even in a
-correctly synchronized program — **topic 03 · Race conditions**
-*(not written yet)* owns that distinction.
+correctly synchronized program — [topic 03 · Race conditions](../03-race-conditions/README.md) owns that distinction.
 
 ## Gotchas
 

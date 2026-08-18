@@ -68,8 +68,7 @@ Unwrapping `ExecutionException.getCause()` and rethrowing it as your
 domain exception is standard translation — the phase 5 pattern
 ([topic 04](../../phase-5-exceptions/04-custom-exceptions-translation.md)).
 `cancel(true)` delivers an interrupt; whether the task stops depends
-entirely on it honouring interruption — cooperative cancellation, topic 01
-*(not written yet)*.
+entirely on it honouring interruption — cooperative cancellation, [topic 01](../01-threads-lifecycle-interrupt/README.md).
 
 ## Batches: `invokeAll` and `invokeAny`
 
@@ -95,7 +94,7 @@ Quote first = executor.invokeAny(calls, 2, TimeUnit.SECONDS);
 For richer fan-out — combining, racing with fallbacks, non-blocking
 composition — the tool is **topic 07 · `CompletableFuture`** *(not written
 yet)*; for fan-outs whose subtasks must never outlive the operation,
-**topic 08 · Structured concurrency** *(not written yet)*.
+[topic 08 · Structured concurrency](../08-structured-concurrency.md).
 
 ## The memory edges you get for free
 
@@ -124,7 +123,7 @@ that's an ordinary data race.
 
 **Symptom:** `cancel(true)` returns true but the task keeps running to completion
 **Cause:** cancellation is an interrupt, and the task never checks its interrupt status (CPU loop, or it swallows `InterruptedException`)
-**Fix:** tasks that should be cancellable must poll `Thread.interrupted()` / let `InterruptedException` propagate — cancellation is cooperative (topic 01, *(not written yet)*)
+**Fix:** tasks that should be cancellable must poll `Thread.interrupted()` / let `InterruptedException` propagate — cancellation is cooperative ([topic 01](../01-threads-lifecycle-interrupt/README.md))
 
 **Symptom:** `catch (Exception e)` around `f.get()` logs `java.util.concurrent.ExecutionException` with a useless message
 **Cause:** the real failure is wrapped; the catch logged the wrapper

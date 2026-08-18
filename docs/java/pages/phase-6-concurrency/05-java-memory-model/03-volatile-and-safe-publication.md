@@ -38,8 +38,7 @@ that they can never observe it half-built.**
   needs `AtomicInteger.incrementAndGet` — **topic 10 · Atomics** *(not
   written yet)* — or a lock.
 - **No compound invariants.** `volatile` can't keep `min <= max` true
-  across two fields; any multi-field invariant needs exclusion (topic 04,
-  *(not written yet)*) or an immutable snapshot object swapped atomically.
+  across two fields; any multi-field invariant needs exclusion ([topic 04](../04-synchronized-intrinsic-locks/README.md)) or an immutable snapshot object swapped atomically.
 - **No waiting.** A volatile flag can't block a consumer until data is
   ready; that's what latches, queues and `wait`/`notify` are for.
 
@@ -142,7 +141,7 @@ lazy, thread-safe, no `volatile`, no measurable fast-path cost.
 
 **Symptom:** `volatile int hits; hits++` under load reports fewer hits than requests
 **Cause:** volatile gives visibility, not atomicity — concurrent read-add-write interleavings lose updates exactly as with a plain field
-**Fix:** `AtomicInteger`/`LongAdder` (topic 10, *(not written yet)*), or count under the lock that already guards the operation
+**Fix:** `AtomicInteger`/`LongAdder` ([topic 10](../10-atomics.md)), or count under the lock that already guards the operation
 
 **Symptom:** singleton via double-checked locking intermittently returns an object whose fields are default values
 **Cause:** the `instance` field isn't volatile — the unlocked read can see the reference before the constructor's writes

@@ -107,7 +107,7 @@ shutdown, so tests never see it.
 - **`synchronized` monitor acquisition** — a thread `BLOCKED` on a
   monitor sets the flag and keeps waiting; the lock wait itself is
   uninterruptible. The escape is `ReentrantLock.lockInterruptibly()`
-  (**topic 09** *(not written yet)*).
+  ([topic 09](../09-explicit-locks.md)).
 - **Classic stream I/O** — a thread deep in `InputStream.read()` on a
   file generally does not notice interrupts; the flag sets, the read
   continues. Interrupt-aware I/O means NIO channels
@@ -124,11 +124,11 @@ disappear into a 40-minute uninterruptible call, no protocol saves you.
 ## Where you'll meet it dressed up
 
 - `Future.cancel(true)` → `interrupt()` on the running worker
-  (**topic 06** *(not written yet)*).
+  ([topic 06](../06-executorservice-pools/README.md)).
 - `ExecutorService.shutdownNow()` → interrupts all workers, returns the
   queue.
 - Structured scopes cancel siblings by interruption when one fails
-  (**topic 08** *(not written yet)*).
+  ([topic 08](../08-structured-concurrency.md)).
 - Virtual threads use the same protocol unchanged
   ([topic 02](../02-platform-vs-virtual-threads/README.md)).
 
@@ -167,7 +167,7 @@ cancellation must be cooperative.**
 
 **Symptom:** thread interrupted while `BLOCKED` on `synchronized` doesn't wake
 **Cause:** monitor acquisition is not an interruption point — only the flag is set
-**Fix:** if interruptible lock waits are a requirement, that critical section needs `ReentrantLock.lockInterruptibly` (**topic 09** *(not written yet)*)
+**Fix:** if interruptible lock waits are a requirement, that critical section needs `ReentrantLock.lockInterruptibly` ([topic 09](../09-explicit-locks.md))
 
 **Symptom:** `ClosedByInterruptException` and now the *channel is unusable* even though the task decided to continue
 **Cause:** interrupting a thread blocked on an `InterruptibleChannel` closes the channel by contract — the interrupt is not "undoable"

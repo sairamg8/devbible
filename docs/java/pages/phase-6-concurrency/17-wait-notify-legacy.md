@@ -103,7 +103,7 @@ says pay it.
   [topic 01's interruption chunk](01-threads-lifecycle-interrupt/02-interruption.md).
 - The wait-set operations live on `Object`, which is *why* they can't
   be overloaded per-condition — and why `Condition` (from
-  `ReentrantLock.newCondition()`, **topic 09** *(not written yet)*)
+  `ReentrantLock.newCondition()`, [topic 09](09-explicit-locks.md))
   exists: multiple wait sets per lock, one per condition, so "not full"
   and "not empty" waiters stop sharing a room.
 
@@ -111,11 +111,11 @@ says pay it.
 
 | Legacy shape (recognize it) | Modern replacement |
 |---|---|
-| Buffer + wait-for-items / wait-for-space | `BlockingQueue` — `take`/`put` *are* this protocol, debugged (**topic 11** *(not written yet)*) |
+| Buffer + wait-for-items / wait-for-space | `BlockingQueue` — `take`/`put` *are* this protocol, debugged ([topic 11](11-concurrent-collections.md)) |
 | Wait until initialization/event done | `CountDownLatch` ([topic 16](16-coordination-primitives.md)) |
 | Threads meeting in rounds | `CyclicBarrier`/`Phaser` ([topic 16](16-coordination-primitives.md)) |
-| Wait for a computed result | futures — **topic 07** *(not written yet)* |
-| Distinct not-full / not-empty conditions | `Condition` per state, one lock — **topic 09** *(not written yet)* |
+| Wait for a computed result | futures — [topic 07](07-completablefuture/README.md) |
+| Distinct not-full / not-empty conditions | `Condition` per state, one lock — [topic 09](09-explicit-locks.md) |
 
 Reading legacy code, audit against the three rules: monitor held? `while`
 loop? `notifyAll` (or a justified `notify`)? A violated rule is not

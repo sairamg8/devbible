@@ -80,8 +80,7 @@ Three properties to hold in mind together:
   yours to arrange, and even then it doesn't interrupt
   ([chunk 3](03-failure-cancellation-when-not.md)). Fan-outs whose
   losers must actually stop are what structured concurrency's
-  any-success joiner is for — **topic 08** *(not written yet at this
-  chunk's writing; see the phase index)*.
+  any-success joiner is for — [topic 08](../08-structured-concurrency.md).
 
 ## Timeouts — `orTimeout` and `completeOnTimeout`
 

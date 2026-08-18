@@ -28,8 +28,7 @@ is a write. A program contains a **data race** when two conflicting
 accesses are not ordered by a happens-before relationship. The
 consequences are the memory-consistency errors the tutorials warn about:
 a thread may read a stale value, or observe writes in a surprising order.
-What happens-before is and how you establish it belongs to **topic 05 ·
-The Java Memory Model** *(not written yet)* — this chunk needs only the
+What happens-before is and how you establish it belongs to [topic 05 · The Java Memory Model](../05-java-memory-model/README.md) — this chunk needs only the
 definition.
 
 Two facts worth fixing early:
@@ -86,7 +85,7 @@ void ensureInit() {
 ```
 
 `volatile` removes the data race (every read sees the latest write, and
-**topic 05** *(not written yet)* explains why). The race *condition*
+[topic 05](../05-java-memory-model/README.md) explains why). The race *condition*
 remains: between one thread's read and its write, the other thread reads.
 Visibility tools cannot close a compound gap — only mutual exclusion
 ([topic 04](../04-synchronized-intrinsic-locks/README.md)) or an atomic
@@ -122,7 +121,7 @@ being able to recite:
 - **The JIT is allowed to make it worse.** For racy code, the compiler may
   hoist a read out of a loop (turning "stale for a moment" into "stale
   forever"). The infamous non-`volatile` stop-flag loop that never stops
-  is this — **topic 05** *(not written yet)* shows it.
+  is this — [topic 05](../05-java-memory-model/README.md) shows it.
 
 The practical consequence: **absence of failing tests is not evidence of
 thread safety.** Reviewing for the shapes in
@@ -135,7 +134,7 @@ honest check.
 
 **Symptom:** counter under-counts in production; every unit test passes
 **Cause:** `count++` is read-modify-write across three steps; concurrent increments interleave and one write clobbers the other
-**Fix:** `AtomicLong.incrementAndGet()` (or `LongAdder` for hot counters — **topic 10** *(not written yet)*), or `synchronized` around the compound step
+**Fix:** `AtomicLong.incrementAndGet()` (or `LongAdder` for hot counters — [topic 10](../10-atomics.md)), or `synchronized` around the compound step
 
 **Symptom:** team declares a class thread-safe "because we made everything `volatile`"
 **Cause:** conflating the two races — `volatile` orders and publishes individual accesses; it cannot make a read-then-write sequence atomic

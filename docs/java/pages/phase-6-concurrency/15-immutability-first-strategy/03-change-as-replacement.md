@@ -83,8 +83,7 @@ so the function must be pure (no side effects, no I/O): it may run more
 than once. Losers redo a copy instead of blocking; readers never wait at
 all. Under heavy write contention the copies get expensive — that is the
 signal you've left read-mostly territory and a lock or a concurrent
-collection fits better. The CAS machinery itself is **topic 10 ·
-Atomics** *(not written yet)*; here it is the writer's tool for the
+collection fits better. The CAS machinery itself is [topic 10 · Atomics](../10-atomics.md); here it is the writer's tool for the
 snapshot swap.
 
 `CopyOnWriteArrayList` is this exact pattern productized — every mutator
@@ -123,9 +122,9 @@ honest exceptions, each with its fence:
 
 | Need | Fence |
 |---|---|
-| Hot shared counters/metrics | `LongAdder` — designed for contended accumulation (**topic 10** *(not written yet)*); the total is read rarely, written constantly |
+| Hot shared counters/metrics | `LongAdder` — designed for contended accumulation ([topic 10](../10-atomics.md)); the total is read rarely, written constantly |
 | Accumulation during a computation | confine the mutable structure to one thread (or one stream terminal op), publish the frozen result |
-| Large state with tiny frequent updates | a concurrent collection (**topic 11** *(not written yet)*) — full-snapshot copies would dominate; you are no longer read-mostly |
+| Large state with tiny frequent updates | a concurrent collection ([topic 11](../11-concurrent-collections.md)) — full-snapshot copies would dominate; you are no longer read-mostly |
 | Caches | `ConcurrentHashMap` with immutable *values* — mutability confined to the map's own thread-safe machinery |
 
 The pattern across all four: mutation is allowed **inside a boundary

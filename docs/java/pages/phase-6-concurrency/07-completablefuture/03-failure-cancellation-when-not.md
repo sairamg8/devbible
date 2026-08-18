@@ -95,7 +95,7 @@ Consequences:
   deliver, and `CompletableFuture` deliberately does not.
 - Scope-owned lifetimes — where abandoning the operation genuinely
   interrupts and reaps every subtask — are structured concurrency's
-  contract: **topic 08** *(not written yet at this chunk's writing)*.
+  contract: [topic 08](../08-structured-concurrency.md).
 
 ## When *not* to: virtual threads and the readable alternative
 

@@ -65,7 +65,7 @@ Two consequences of tasks being cheap threads now:
 - **Scope them.** The try-with-resources form
   ([phase 5, topic 03](../../phase-5-exceptions/03-try-with-resources/README.md))
   gives tasks a lifetime the code shows. Structured concurrency
-  (**topic 08** *(not written yet)*) tightens this further —
+  ([topic 08](../08-structured-concurrency.md)) tightens this further —
   fan-out/join with automatic cancellation.
 - **Don't cache the executor as a shared "pool" singleton** out of habit;
   per-use executors are fine and make shutdown local. (A shared one is
@@ -93,7 +93,7 @@ This is strictly better than sizing a thread pool to 50: the limit sits
 *at the resource it protects*, is independent per resource (50 for the DB,
 200 for the search index), and waiting costs a parked virtual thread
 instead of a blocked OS worker. The JDK guide recommends exactly this
-shape. (**Topic 16** *(not written yet)* covers `Semaphore` itself.)
+shape. ([topic 16](../16-coordination-primitives.md) covers `Semaphore` itself.)
 
 ## When platform threads still win
 
@@ -124,7 +124,7 @@ hot `synchronized` blocks that block within to `ReentrantLock`. On a
 current JDK that rewrite is no longer needed for pinning reasons. Detect
 what remains with `jdk.VirtualThreadPinned` (JFR). The full treatment —
 including the 21-era guidance you'll still meet in the wild — is
-**topic 14** *(not written yet)*.
+[topic 14](../14-virtual-thread-pinning.md).
 
 ## Migration checklist (thread-per-request services)
 
@@ -155,7 +155,7 @@ including the 21-era guidance you'll still meet in the wild — is
 
 **Symptom:** logs show empty thread names everywhere after migration
 **Cause:** virtual threads default to an empty name, and the old pattern leaned on pool worker names
-**Fix:** `.name("prefix-", 0)` on the builder/factory — or better, log a request/task id via MDC or `ScopedValue` (**topic 12** *(not written yet)*)
+**Fix:** `.name("prefix-", 0)` on the builder/factory — or better, log a request/task id via MDC or `ScopedValue` ([topic 12](../12-threadlocal-scopedvalue/README.md))
 
 **Symptom:** on JDK 21 in production, sporadic whole-service stalls under load traced to carriers all `BLOCKED`
 **Cause:** synchronized-block pinning (pre-JEP 491) starving the carrier pool
@@ -198,7 +198,7 @@ Request-handling and I/O-bound executors: good change. The image-resizing
 pool is CPU-bound: virtual threads won't unmount during compute, so the
 change removes the deliberate ≈core-count cap and lets resize jobs crowd
 carriers, hurting everything else. Keep compute on a sized platform pool;
-the sizing rules are **topic 06**'s *(not written yet)*.
+the sizing rules are [topic 06](../06-executorservice-pools/README.md)'s.
 
 **★ Where do virtual threads come from, API-wise, and what can't `new Thread()` give you?**
 `Thread.ofVirtual()` (builder → `start`/`unstarted`/`factory`),

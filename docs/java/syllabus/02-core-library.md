@@ -113,7 +113,7 @@ that pages you at 3am if you skip it.
 | **Concurrent collections**: `ConcurrentHashMap` (`computeIfAbsent` — the one-line thread-safe cache, and the "don't mutate inside compute" rule), `CopyOnWriteArrayList`, `BlockingQueue` for producer/consumer | <span className="db-tier t-understand">Understand</span> |
 | `ThreadLocal` — request context, its leak in pooled threads — and **`ScopedValue`** (finalized in 25) as the virtual-thread-era replacement | <span className="db-tier t-understand">Understand</span> |
 | **Deadlock, livelock, starvation**: the lock-ordering rule, and reading a thread dump that says `BLOCKED` — diagnosis before theory | <span className="db-tier t-understand">Understand</span> |
-| Virtual-thread pinning: what pinned means, `synchronized` pinning fixed in 24 (JEP 491), remaining cases (native calls), `-Djdk.tracePinnedThreads` | <span className="db-tier t-know">Know</span> |
+| Virtual-thread pinning: what pinned means, `synchronized` pinning fixed in 24 (JEP 491), remaining cases (native calls), JFR `jdk.VirtualThreadPinned` (the old `-Djdk.tracePinnedThreads` flag was removed in JDK 24) | <span className="db-tier t-know">Know</span> |
 | **Immutability as the first concurrency strategy**: share nothing mutable, and most of this phase's hazards vanish — the payoff of Phase 2's design habits | <span className="db-tier t-master">Master</span> |
 | Coordination primitives: `CountDownLatch` (tests love it), `Semaphore` (bounding concurrent calls to a fragile downstream), `CyclicBarrier` | <span className="db-tier t-know">Know</span> |
 | `wait`/`notify` — the legacy protocol: recognize it in old code, reach for higher-level tools in new code | <span className="db-tier t-know">Know</span> |

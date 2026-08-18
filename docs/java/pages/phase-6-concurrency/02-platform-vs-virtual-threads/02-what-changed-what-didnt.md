@@ -33,7 +33,7 @@ forced is obsolete for I/O-bound work:
   the request count.
 - **The async detour loses its main justification.** `CompletableFuture`
   chains and reactive pipelines existed to keep threads unblocked
-  (**topic 07** *(not written yet)* still matters — for *composition*, not
+  ([topic 07](../07-completablefuture/README.md) still matters — for *composition*, not
   for thread economy). JEP 444 is explicit that plain blocking code on
   virtual threads is the intended replacement for async style where
   hardware utilization was the only reason for it.
@@ -56,16 +56,16 @@ virtual threads, the benchmark is measuring something else.
 ## What didn't change
 
 **The memory model.** JLS §17 knows nothing of carriers. Data races,
-visibility, happens-before (**topic 05** *(not written yet)*) apply
+visibility, happens-before ([topic 05](../05-java-memory-model/README.md)) apply
 unchanged — two virtual threads incrementing a shared counter lose updates
-exactly as platform threads do (**topic 03** *(not written yet)*). Virtual
+exactly as platform threads do ([topic 03](../03-race-conditions/README.md)). Virtual
 threads *multiply* the number of threads you run, which makes discipline
 about shared state more load-bearing, not less —
 [immutability first](../../phase-2-classes-objects/12-immutable-design/README.md)
 scales; fine-grained locking of hotter hot spots does not.
 
 **Locks and deadlocks.** `synchronized` means the same thing, blocks the
-same way, deadlocks the same way (**topic 13** *(not written yet)*). A
+same way, deadlocks the same way ([topic 13](../13-deadlock-livelock-starvation/README.md)). A
 lock-ordering bug ported to virtual threads is the same bug with more
 threads available to hit it.
 
@@ -121,7 +121,7 @@ yet)*.
 
 **Symptom:** memory profile shows millions of short-lived `SimpleDateFormat`/buffer instances after migration
 **Cause:** `ThreadLocal` caches sized for "one per pool worker" now allocate one per task-thread
-**Fix:** share immutable/thread-safe objects (`DateTimeFormatter`), pool genuinely expensive resources explicitly, or scope context with `ScopedValue` (**topic 12** *(not written yet)*)
+**Fix:** share immutable/thread-safe objects (`DateTimeFormatter`), pool genuinely expensive resources explicitly, or scope context with `ScopedValue` ([topic 12](../12-threadlocal-scopedvalue/README.md))
 
 **Symptom:** service with virtual threads accepts unbounded work and falls over downstream — the database, not the JVM, dies first
 **Cause:** the thread pool was the accidental backpressure; nothing replaced it

@@ -99,8 +99,7 @@ written independently of its previous value* (shutdown flags, the
 config-swap of [the cures](../03-race-conditions/03-the-cures.md));
 `synchronized` when any *invariant spans more than one action*. The
 full memory-model treatment — including why `volatile` was the missing
-piece in double-checked locking — is **topic 05 · The Java Memory
-Model** *(not written yet)*.
+piece in double-checked locking — is [topic 05 · The Java Memory Model](../05-java-memory-model/README.md).
 
 ## Safe publication through a lock
 
@@ -120,7 +119,7 @@ synchronized (queueLock) {              synchronized (queueLock) {
 The producer's construction writes happen-before the unlock; the
 consumer's lock happens-before its reads; transitivity delivers a fully
 built `Order`. Every thread-safe handoff structure — `BlockingQueue`,
-executor task submission (**topic 06** *(not written yet)*) — documents
+executor task submission ([topic 06](../06-executorservice-pools/README.md)) — documents
 this same promise as "memory consistency effects: actions prior to
 submission happen-before actions taken by the task", a phrase from the
 `java.util.concurrent` package documentation you can now unpack.

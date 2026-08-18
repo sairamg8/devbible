@@ -12,7 +12,7 @@ sidebar_position: 1
 
 **Every object — every one, from `new Object()` to your `OrderService` —
 has exactly one monitor: a lock that at most one thread can hold, plus a
-wait set used by `wait`/`notify` (**topic 17** *(not written yet)*).
+wait set used by `wait`/`notify` ([topic 17](../17-wait-notify-legacy.md)).
 `synchronized` acquires that monitor on entry and releases it on *every*
 exit — normal return, exception, anything. Which object's monitor you
 acquire is the entire meaning of the construct: two threads exclude each
@@ -142,7 +142,7 @@ Scope follows the invariant, in both directions:
 
 **Symptom:** deadlock introduced by refactoring a synchronized method to call a helper on *another* object that calls back
 **Cause:** reentrancy saves you only on the *same* monitor; A-locked code calling B-locked code that calls back into A is the classic two-lock cycle
-**Fix:** never call foreign/overridable code while holding a lock; keep critical sections self-contained (**topic 13 · Deadlock** *(not written yet)* has the ordering discipline)
+**Fix:** never call foreign/overridable code while holding a lock; keep critical sections self-contained ([topic 13 · Deadlock](../13-deadlock-livelock-starvation/README.md) has the ordering discipline)
 
 ## Interview questions
 

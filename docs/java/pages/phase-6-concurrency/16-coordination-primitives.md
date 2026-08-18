@@ -112,7 +112,7 @@ Response call(Request r) throws InterruptedException {
 - Fairness (`new Semaphore(n, true)`) trades throughput for
   starvation-freedom; default unfair is right until proven otherwise.
 - A binary semaphore is *not* a mutex: no owner, no reentrancy — prefer
-  `synchronized`/`ReentrantLock` (**topic 09** *(not written yet)*) for
+  `synchronized`/`ReentrantLock` ([topic 09](09-explicit-locks.md)) for
   exclusion.
 
 ## `Phaser` and `Exchanger` — know they exist
@@ -135,8 +135,8 @@ Response call(Request r) throws InterruptedException {
 | At most N concurrently past this point | `Semaphore` |
 | Lockstep with parties joining/leaving | `Phaser` |
 | Two threads swap payloads at a rendezvous | `Exchanger` |
-| Wait for results (not just completion) | futures — **topic 07** *(not written yet)* |
-| Hand items between producers/consumers | `BlockingQueue` (**topic 11** *(not written yet)*) |
+| Wait for results (not just completion) | futures — [topic 07](07-completablefuture/README.md) |
+| Hand items between producers/consumers | `BlockingQueue` ([topic 11](11-concurrent-collections.md)) |
 
 ## Gotchas
 

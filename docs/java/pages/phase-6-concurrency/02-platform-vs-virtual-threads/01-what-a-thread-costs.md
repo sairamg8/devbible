@@ -45,13 +45,13 @@ idle; the thread ledger is full.
 
 Two workarounds, both taxed:
 
-- **Share threads through pools** (**topic 06** *(not written yet)*): a
+- **Share threads through pools** ([topic 06](../06-executorservice-pools/README.md)): a
   request *borrows* a worker for each processing step. But a borrowed
   thread blocked on a database call is still consumed — pool capacity, not
   request count, becomes the throughput ceiling the moment latency rises
   anywhere downstream.
 - **Go asynchronous**: never block; express the continuation as callbacks
-  or `CompletableFuture` chains (**topic 07** *(not written yet)*). The
+  or `CompletableFuture` chains ([topic 07](../07-completablefuture/README.md)). The
   thread bill drops; the tax moves into the code — stack traces stop
   describing the request, debuggers and profilers see event loops instead
   of tasks, and every library in the path must speak async too.
@@ -116,7 +116,7 @@ Cheap has edges — places the abstraction is visibly not a platform thread:
   temporarily growing the carrier pool. `synchronized` used to pin the
   carrier too; JEP 491 removed that in JDK 24
   ([chunk 3](03-using-them-well.md) has the practical rules, the deep
-  dive is **topic 14** *(not written yet)*).
+  dive is [topic 14](../14-virtual-thread-pinning.md)).
 - **The scheduler is not the kernel.** Carriers are scheduled
   cooperatively among virtual threads at blocking points; there is no
   time-slicing between virtual threads. A virtual thread that neither

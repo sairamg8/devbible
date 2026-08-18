@@ -87,11 +87,11 @@ The missing features are the syllabus for the rest of the phase:
 - **No timeout, no try.** A thread that wants the monitor waits
   indefinitely; there is no "give up after 50 ms". `ReentrantLock`'s
   `tryLock` exists for exactly this — it is the deadlock escape hatch of
-  **topic 09** *(not written yet)*.
+  [topic 09](../09-explicit-locks.md).
 - **No interruptible acquisition.** A thread blocked entering a
   `synchronized` block does not respond to `Thread.interrupt` — it
   parks until the monitor is free (interruption and its cooperative
-  protocol are **topic 01** *(not written yet)*).
+  protocol are [topic 01](../01-threads-lifecycle-interrupt/README.md)).
 - **No fairness.** Monitor handoff order is unspecified; a hot lock can
   starve an unlucky thread indefinitely. Explicit locks offer an
   optional fairness mode, at a cost.
@@ -138,7 +138,7 @@ the JDK 24 release notes retire the rewrite advice. On JDK 25 the
 choice between `synchronized` and explicit locks is back to being about
 *features* (timeout, interruptibility, fairness, read/write modes), not
 about virtual-thread compatibility. Pinning itself — what remains of it
-and how to observe it — is **topic 14** *(not written yet)*.
+and how to observe it — is [topic 14](../14-virtual-thread-pinning.md).
 
 ## Gotchas
 
@@ -160,7 +160,7 @@ and how to observe it — is **topic 14** *(not written yet)*.
 
 **Symptom:** worker refuses to die: `interrupt()` has no effect during shutdown
 **Cause:** the thread is blocked *entering* a synchronized block — monitor acquisition is not interruptible
-**Fix:** if cancellable blocking matters, use `ReentrantLock.lockInterruptibly` (**topic 09** *(not written yet)*) or restructure so shutdown doesn't race the lock
+**Fix:** if cancellable blocking matters, use `ReentrantLock.lockInterruptibly` ([topic 09](../09-explicit-locks.md)) or restructure so shutdown doesn't race the lock
 
 **Symptom:** readers contend with each other on a read-mostly cache, though nobody writes for hours
 **Cause:** intrinsic locks have one exclusive mode — fifty readers serialize

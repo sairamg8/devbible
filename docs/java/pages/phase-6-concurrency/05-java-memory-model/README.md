@@ -47,8 +47,8 @@ This topic runs deeper than one file. The chunks:
 - **[Immutable design](../../phase-2-classes-objects/12-immutable-design/README.md)** —
   immutability plus safe publication removes the need for most of this
   reasoning; that is why it is the first strategy.
-- **Topic 04 · `synchronized`** *(not written yet)* supplies the
-  monitor edges; **topic 10 · Atomics** *(not written yet)* is
+- [topic 04 · `synchronized`](../04-synchronized-intrinsic-locks/README.md) supplies the
+  monitor edges; [topic 10 · Atomics](../10-atomics.md) is
   `volatile` plus atomic read-modify-write.
 - **[ExecutorService and pools](../06-executorservice-pools/README.md)** —
   the executor's submit/complete edges are why you rarely write `volatile`

@@ -62,4 +62,4 @@ This topic runs deeper than one file. The chunks:
 
 ---
 
-← Prev: **14 · Virtual-thread pinning** *(not written yet)* · Index: [Phase 6 — Concurrency](../README.md) · Next → [Why it deletes the problem](01-why-it-deletes-the-problem.md)
+← Prev: [Virtual-thread pinning](../14-virtual-thread-pinning.md) · Index: [Phase 6 — Concurrency](../README.md) · Next → [Why it deletes the problem](01-why-it-deletes-the-problem.md)

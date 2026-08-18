@@ -32,8 +32,7 @@ scope.**
 Notes the table can't hold: `shutdown()` returns immediately — it stops
 intake, nothing more; termination is what `awaitTermination` watches for.
 `shutdownNow()`'s "stop" is only ever an interrupt — a task that ignores
-interruption keeps running (cooperative cancellation again, topic 01
-*(not written yet)*). The returned list of never-started tasks is your
+interruption keeps running (cooperative cancellation again, [topic 01](../01-threads-lifecycle-interrupt/README.md)). The returned list of never-started tasks is your
 chance to log or persist what was abandoned.
 
 ## The drain pattern
@@ -94,7 +93,7 @@ fresh virtual thread; there is no queue, no core/max, no rejection under
 load. The economics that justified pooling — thread creation is expensive,
 so amortize it — do not apply to virtual threads, whose creation is cheap
 and whose blocked state costs a small heap footprint, not an OS thread
-(the full model is topic 02's, *(not written yet)*).
+(the full model is [topic 02](../02-platform-vs-virtual-threads/README.md)'s).
 
 What this rewrites, and what it doesn't:
 
@@ -109,8 +108,7 @@ What this rewrites, and what it doesn't:
   [phase 4's pipeline chunk](../../phase-4-lambdas-streams/03-stream-pipeline/03-pipelines-in-practice.md)).
 - **Bounding concurrency:** the pool used to *be* the limiter ("at most
   20 against that API"). With per-task executors, the limit must be
-  explicit — a `Semaphore` around the calls (**topic 16 · Coordination
-  primitives** *(not written yet)*), not a pool.
+  explicit — a `Semaphore` around the calls ([topic 16 · Coordination primitives](../16-coordination-primitives.md)), not a pool.
 - **Never pool virtual threads.** A fixed pool *of* virtual threads
   reinstates the ceiling that virtual threads exist to remove, and costs
   the pool's bookkeeping for nothing.

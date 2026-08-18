@@ -52,7 +52,7 @@ This topic runs deeper than one file. The chunks:
 - **[Immutable design](../../phase-2-classes-objects/12-immutable-design/README.md)** —
   the alternative that makes most locks unnecessary.
 - **`wait`/`notify`** — the monitor's other half (its wait set) is
-  **topic 17** *(not written yet)*; this topic covers only the lock.
+  [topic 17](../17-wait-notify-legacy.md); this topic covers only the lock.
 
 ---
 

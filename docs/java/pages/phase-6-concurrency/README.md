@@ -14,7 +14,7 @@ The deepest phase in the syllabus, on purpose. Virtual threads made concurrent
 Java simple to *write* — the model underneath is unchanged, and it is the
 model that pages you at 3am if you skip it.
 
-🚧 **14 of 17 written.**
+✅ **17 of 17 written — phase complete.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -29,9 +29,9 @@ model that pages you at 3am if you skip it.
 | 09 | **[Explicit locks](09-explicit-locks.md)** | <span className="db-tier t-know">Know</span> | `ReentrantLock`'s `tryLock` — the deadlock escape hatch |
 | 10 | **[Atomics](10-atomics.md)** | <span className="db-tier t-understand">Understand</span> | `compareAndSet`, `LongAdder` for hot counters |
 | 11 | **[Concurrent collections](11-concurrent-collections.md)** | <span className="db-tier t-understand">Understand</span> | `ConcurrentHashMap.computeIfAbsent` — the one-line cache |
-| 12 | **`ThreadLocal` and `ScopedValue`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Request context; the pool leak; the 25-era replacement |
-| 13 | **Deadlock, livelock, starvation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Lock ordering, and reading `BLOCKED` in a thread dump |
-| 14 | **Virtual-thread pinning** *(not written yet)* | <span className="db-tier t-know">Know</span> | What pinning is; `synchronized` pinning fixed in 24 (JEP 491) |
+| 12 | **[`ThreadLocal` and `ScopedValue`](12-threadlocal-scopedvalue/README.md)** | <span className="db-tier t-understand">Understand</span> | Request context; the pool leak; the 25-era replacement |
+| 13 | **[Deadlock, livelock, starvation](13-deadlock-livelock-starvation/README.md)** | <span className="db-tier t-understand">Understand</span> | Lock ordering, and reading `BLOCKED` in a thread dump |
+| 14 | **[Virtual-thread pinning](14-virtual-thread-pinning.md)** | <span className="db-tier t-know">Know</span> | What pinning is; `synchronized` pinning fixed in 24 (JEP 491) |
 | 15 | **[Immutability as the first strategy](15-immutability-first-strategy/README.md)** | <span className="db-tier t-master">Master</span> | Share nothing mutable and most hazards vanish |
 | 16 | **[Coordination primitives](16-coordination-primitives.md)** | <span className="db-tier t-know">Know</span> | `CountDownLatch`, `Semaphore`, `CyclicBarrier` |
 | 17 | **[`wait`/`notify` — the legacy protocol](17-wait-notify-legacy.md)** | <span className="db-tier t-know">Know</span> | Recognize it in old code; never start with it |

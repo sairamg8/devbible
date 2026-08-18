@@ -263,4 +263,4 @@ one — the "queue" enforces that work never waits behind other work.
 
 ---
 
-← Prev: [Atomics](10-atomics.md) · Index: [Phase 6 — Concurrency](README.md) · Next → **12 · `ThreadLocal` and `ScopedValue`** *(not written yet)*
+← Prev: [Atomics](10-atomics.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [`ThreadLocal` and `ScopedValue`](12-threadlocal-scopedvalue/README.md)

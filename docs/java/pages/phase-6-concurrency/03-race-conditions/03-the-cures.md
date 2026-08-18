@@ -39,8 +39,7 @@ State only one thread can reach cannot race. Three practical forms:
   per-thread scratch buffers, with two documented traps: on *pooled*
   threads a value outlives the request unless `remove()` is called
   (leak + cross-request bleed), and with *millions* of virtual threads
-  per-thread copies multiply. **Topic 12 · `ThreadLocal` and
-  `ScopedValue`** *(not written yet)* covers the JDK 25-era replacement.
+  per-thread copies multiply. [topic 12 · `ThreadLocal` and `ScopedValue`](../12-threadlocal-scopedvalue/README.md) covers the JDK 25-era replacement.
 
 Confinement's weakness: nothing enforces it. One leaked reference — a
 field assignment, a listener registration, a stream captured into a
@@ -97,15 +96,15 @@ accesses cannot interleave:
   optimized: `computeIfAbsent`/`putIfAbsent`/`merge` on
   `ConcurrentHashMap` for check-then-act on maps;
   `incrementAndGet`/`addAndGet`/`compareAndSet` on the atomic classes and
-  `LongAdder` for hot counters (**topics 10–11** *(not written yet)*).
+  `LongAdder` for hot counters ([topic 10](../10-atomics.md) and [topic 11](../11-concurrent-collections.md)).
   One method call, no lock to forget.
 - **Locks for everything else.** `synchronized`
   ([topic 04](../04-synchronized-intrinsic-locks/README.md)) or
-  `ReentrantLock` (**topic 09** *(not written yet)*) around the *entire*
+  `ReentrantLock` ([topic 09](../09-explicit-locks.md)) around the *entire*
   compound step — check and act together, every access path, including
   the reads. Locks are the general tool and the error-prone one: too
   little scope re-opens the gap, too much creates contention and
-  deadlock (**topic 13** *(not written yet)*).
+  deadlock ([topic 13](../13-deadlock-livelock-starvation/README.md)).
 - **The store for cross-process races.** Chunk 2's double-charge showed
   it: JVM-level cures have JVM scope. Two service instances need the
   atomic step in the database (conditional update, version column) or an

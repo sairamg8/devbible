@@ -142,7 +142,7 @@ in-process races only.
 
 **Symptom:** `ArrayIndexOutOfBoundsException` deep inside `ArrayList.add` that "can't happen"
 **Cause:** unsynchronized concurrent `add` — the internal size/array read-modify-write interleaved
-**Fix:** confine the list to one thread, use a concurrent collection (**topic 11** *(not written yet)*), or guard every access path with one lock
+**Fix:** confine the list to one thread, use a concurrent collection ([topic 11](../11-concurrent-collections.md)), or guard every access path with one lock
 
 **Symptom:** cache occasionally serves two different values for one key early after startup
 **Cause:** `containsKey`-then-`put` — both loaders ran; callers that grabbed the first value diverge from later ones

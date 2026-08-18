@@ -90,11 +90,9 @@ so you rarely need raw `volatile`:
   ([ExecutorService](../06-executorservice-pools/README.md)).
 - A task's completion *hb* `Future.get` returning its result.
 - Placing an object in any concurrent collection *hb* another thread
-  reading it from that collection — **topic 11 · Concurrent collections**
-  *(not written yet)*.
+  reading it from that collection — [topic 11 · Concurrent collections](../11-concurrent-collections.md).
 - `CountDownLatch.countDown()` *hb* `await()` returning; the same pattern
-  for semaphores and barriers — **topic 16 · Coordination primitives**
-  *(not written yet)*.
+  for semaphores and barriers — [topic 16 · Coordination primitives](../16-coordination-primitives.md).
 
 The habit to build: when handing data between threads, *name the edge*.
 If you can't name it, you don't have one.
@@ -106,7 +104,7 @@ If you can't name it, you don't have one.
   in the model.
 - **Not mutual exclusion.** Edges order and publish; they don't make
   compound actions atomic. `volatile` gives edges with no exclusion;
-  a lock gives both — that split is topic 04's *(not written yet)*.
+  a lock gives both — that split is [topic 04](../04-synchronized-intrinsic-locks/README.md)'s.
 - **Not a fence you call.** You get edges from *paired* operations on the
   *same* monitor/field. An unlock of lock X and a lock of lock Y create
   no edge between their threads.

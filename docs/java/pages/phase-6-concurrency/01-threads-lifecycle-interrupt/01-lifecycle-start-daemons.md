@@ -35,8 +35,7 @@ Two rules the API can't stop you from breaking:
   entity and invokes `run()` on it.
 - **`start()` works once.** A second `start()` on any `Thread` — even a
   `TERMINATED` one — throws `IllegalThreadStateException`. Threads are not
-  reusable; *pools* exist so the reuse happens one level up (**topic 06**
-  *(not written yet)*).
+  reusable; *pools* exist so the reuse happens one level up ([topic 06](../06-executorservice-pools/README.md)).
 
 Prefer passing a `Runnable` to subclassing `Thread`: the task/worker split
 is what every executor API is built on, and a subclass couples the two for
@@ -52,7 +51,7 @@ them:
 |---|---|---|
 | `NEW` | created, `start()` not yet called | rarely — a constructed but unstarted thread |
 | `RUNNABLE` | executing **or ready and waiting for a CPU** — the JVM does not distinguish | busy code, spinning code, and (historically) some blocking native I/O |
-| `BLOCKED` | waiting to *enter* a `synchronized` block/method — contending for a monitor | lock contention (**topic 04** *(not written yet)*) |
+| `BLOCKED` | waiting to *enter* a `synchronized` block/method — contending for a monitor | lock contention ([topic 04](../04-synchronized-intrinsic-locks/README.md)) |
 | `WAITING` | parked indefinitely — `Object.wait()`, `Thread.join()`, `LockSupport.park()` | idle pool workers, threads waiting on conditions |
 | `TIMED_WAITING` | as above but with a deadline — `sleep(ms)`, `wait(ms)`, `join(ms)`, timed park | backoff sleeps, timed waits |
 | `TERMINATED` | `run()` returned or threw | finished workers |
@@ -63,7 +62,7 @@ Three readings that pay for the table:
   monitor contention — someone else holds a lock this thread wants.
   `WAITING` means the thread chose to park and expects a wake-up. A dump
   full of `BLOCKED` says "lock bottleneck"; a dump full of `WAITING` says
-  "idle or lost wake-up". **Topic 13** *(not written yet)* builds the
+  "idle or lost wake-up". [topic 13](../13-deadlock-livelock-starvation/README.md) builds the
   deadlock diagnosis on exactly this.
 - **`RUNNABLE` does not mean "on a CPU".** Ten `RUNNABLE` threads on two
   cores: all ten report `RUNNABLE`, eight are queued. The JVM state

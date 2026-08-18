@@ -52,9 +52,9 @@ This topic runs deeper than one file. The chunks:
 - **[The Java Memory Model](../05-java-memory-model/README.md)** — the
   executor's submit/complete edges are the documented happens-before
   guarantees that make task handoff safe without `volatile`.
-- **Topic 02 · Platform vs virtual threads** *(not written yet)* — what a
+- [topic 02 · Platform vs virtual threads](../02-platform-vs-virtual-threads/README.md) — what a
   thread costs and why millions of virtual ones are fine.
-- **Topic 07 · `CompletableFuture`** *(not written yet)* — composition on
+- [topic 07 · `CompletableFuture`](../07-completablefuture/README.md) — composition on
   top of executors; **topic 08 · Structured concurrency** *(not written
   yet)* — the JEP 505 successor for fan-out.
 - **[try-with-resources](../../phase-5-exceptions/03-try-with-resources/README.md)** —

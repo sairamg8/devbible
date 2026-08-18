@@ -75,7 +75,7 @@ if (lock.tryLock(2, TimeUnit.SECONDS)) { // bounded wait, interruptible
 ```
 
 This is the standard cure for lock-ordering deadlock when a global order
-is impossible (**topic 13 · Deadlock** *(not written yet)*):
+is impossible ([topic 13 · Deadlock](13-deadlock-livelock-starvation/README.md)):
 acquire the first lock, `tryLock` the second, and on failure **release the
 first, back off, retry** — the cycle cannot hold because no thread waits
 while holding. Two caveats the Javadoc states plainly:
@@ -130,7 +130,7 @@ void put(T item) throws InterruptedException {
 ```
 
 The rules carry over from the monitor protocol
-(**topic 17 · `wait`/`notify`** *(not written yet)*): hold the lock to `await`/`signal`, and
+([topic 17 · `wait`/`notify`](17-wait-notify-legacy.md)): hold the lock to `await`/`signal`, and
 always re-check the predicate in a `while` loop — `Condition.await` is
 documented to permit spurious wakeup. This is how `ArrayBlockingQueue` is
 built; write it yourself only when the
@@ -180,7 +180,7 @@ Everything above is capability, not superiority. `synchronized` cannot
 leak a lock (release is structural), reads better, shows up first-class in
 thread dumps and `IllegalMonitorStateException`-free by construction, and
 since JEP 491 (JDK 24) no longer pins virtual threads
-(**topic 14 · Virtual-thread pinning** *(not written yet)*). The JDK's own guidance in the
+([topic 14 · Virtual-thread pinning](14-virtual-thread-pinning.md)). The JDK's own guidance in the
 `ReentrantLock` Javadoc is to use it *"when you actually need something
 it provides"* — timeout, interruptible acquisition, fairness, multiple
 conditions, non-block-structured locking — and `synchronized` otherwise.
@@ -258,4 +258,4 @@ not for aesthetic ordering discomfort.
 
 ---
 
-← Prev: **08 · Structured concurrency** *(not written yet)* · Index: [Phase 6 — Concurrency](README.md) · Next → [Atomics](10-atomics.md)
+← Prev: [Structured concurrency](08-structured-concurrency.md) · Index: [Phase 6 — Concurrency](README.md) · Next → [Atomics](10-atomics.md)
