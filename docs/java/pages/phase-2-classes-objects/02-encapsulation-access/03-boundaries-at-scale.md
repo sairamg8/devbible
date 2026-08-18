@@ -168,4 +168,4 @@ only exercise the public surface.
 
 ---
 
-← Prev: [Designing with access](02-designing-with-access.md) · Index: [Encapsulation and access](README.md) · Next → [Inheritance](../03-inheritance.md)
+← Prev: [Designing with access](02-designing-with-access.md) · Index: [Encapsulation and access](README.md) · Next → [Inheritance](../03-inheritance/README.md)

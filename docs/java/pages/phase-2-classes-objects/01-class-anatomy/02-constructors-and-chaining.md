@@ -65,7 +65,7 @@ prologue may *assign* fields of the class being constructed before an
 explicit `super(...)`, which lets a field be definitely set before any
 superclass code could observe it — a direct patch over the
 constructor-calls-overridable-method hazard in
-[inheritance](../03-inheritance.md).)
+[inheritance](../03-inheritance/README.md).)
 
 The other half of the fail-fast idiom predates 25 and still matters:
 `Objects.requireNonNull(x, "x")` in the constructor body converts a far-away

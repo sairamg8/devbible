@@ -73,13 +73,13 @@ Comparator<Employee> bySalary = (a, b) -> a.salary() - b.salary();
 
 Correct for small numbers, and wrong in general: **int subtraction overflows
 silently** (JLS §15.18.2 — the result wraps, no exception; the same silent
-wraparound as [Phase 1 topic 04](../../phase-1-language-core/04-operators-overflow.md)).
+wraparound as [Phase 1 topic 04](../../phase-1-language-core/04-operators-overflow/README.md)).
 `Integer.MIN_VALUE - 1` wraps to a huge *positive* value, so a hugely
 negative `a` compared with a positive `b` can report "a comes after b".
 The sort doesn't just misplace those two elements — a comparator that is
 sometimes wrong is *intransitive*, which TimSort detects and punishes with
 the `IllegalArgumentException` dissected in
-**chunk 3** *(not written yet)*, or repays with a silently garbled order.
+[chunk 3](03-the-contract.md), or repays with a silently garbled order.
 
 The fix costs nothing:
 
@@ -114,7 +114,7 @@ right trade inside a sort.
 For money, the key is `BigDecimal`, and its `compareTo` treats `1.0` and
 `1.00` as equal while its `equals` does not — the classic
 consistency-with-equals case, picked up in
-**chunk 3** *(not written yet)*.
+[chunk 3](03-the-contract.md).
 
 ## Gotchas
 
@@ -164,4 +164,4 @@ consistency-with-equals case, picked up in
 
 ---
 
-← Prev: [Two kinds of order](01-two-orders.md) · Index: [Comparable vs Comparator](README.md) · Next → **The contract, and what breaks it** *(not written yet)*
+← Prev: [Two kinds of order](01-two-orders.md) · Index: [Comparable vs Comparator](README.md) · Next → [The contract, and what breaks it](03-the-contract.md)

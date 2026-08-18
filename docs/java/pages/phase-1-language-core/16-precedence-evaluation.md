@@ -142,7 +142,7 @@ boolean-to-boolean.
 
 **Symptom:** a byte/short counter drifts wrong with no compile error anywhere
 **Cause:** `+=`'s implicit cast (§15.26.2) silently truncates what plain `=` with `+` would have rejected
-**Fix:** widen the variable to `int`/`long`; if the narrow type is required, add an explicit range check — see [overflow](04-operators-overflow.md)
+**Fix:** widen the variable to `int`/`long`; if the narrow type is required, add an explicit range check — see [overflow](04-operators-overflow/README.md)
 
 **Symptom:** NPE on a line with no dereference — just a ternary
 **Cause:** mixed primitive/boxed arms made the conditional unbox the boxed arm (§15.25)

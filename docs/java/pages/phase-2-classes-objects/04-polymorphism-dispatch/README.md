@@ -46,4 +46,4 @@ choose between them.
 
 ---
 
-← Prev: [Inheritance](../03-inheritance.md) · Index: [Phase 2 — Classes and objects](../README.md) · Next → [Abstract classes vs interfaces](../05-abstract-vs-interfaces.md)
+← Prev: [Inheritance](../03-inheritance/README.md) · Index: [Phase 2 — Classes and objects](../README.md) · Next → [Abstract classes vs interfaces](../05-abstract-vs-interfaces/README.md)

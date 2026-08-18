@@ -22,7 +22,7 @@ differs.
 | 01 | **[Primitives vs reference types](01-primitives-vs-references/README.md)** | <span className="db-tier t-master">Master</span> | 8 primitives, stack vs heap, why `long` and `Long` differ when unset |
 | 02 | **[Autoboxing and the integer cache](02-autoboxing-integer-cache/README.md)** | <span className="db-tier t-master">Master</span> | `127 == 127` true, `128 == 128` false — the real-IDs bug |
 | 03 | **[`var`](03-var.md)** | <span className="db-tier t-understand">Understand</span> | Local inference: where it helps, where it hides the type |
-| 04 | **[Operators, division and overflow](04-operators-overflow.md)** | <span className="db-tier t-master">Master</span> | Silent wraparound, `%` with negatives, `Math.addExact` |
+| 04 | **[Operators, division and overflow](04-operators-overflow/README.md)** | <span className="db-tier t-master">Master</span> | Silent wraparound, `%` with negatives, `Math.addExact` |
 | 05 | **[Floating point and `BigDecimal`](05-floating-point-bigdecimal/README.md)** | <span className="db-tier t-master">Master</span> | `0.1 + 0.2 != 0.3` here too; money = `BigDecimal`, always |
 | 06 | **[Strings](06-strings/README.md)** | <span className="db-tier t-master">Master</span> | Immutability, the pool, `==` vs `equals`, `StringBuilder` in loops |
 | 07 | **[Text blocks](07-text-blocks.md)** | <span className="db-tier t-understand">Understand</span> | SQL and JSON without escape soup |

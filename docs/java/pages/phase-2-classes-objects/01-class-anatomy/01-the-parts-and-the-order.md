@@ -96,7 +96,7 @@ Two consequences carry most of the bug weight:
 - **During step 4, the `Child` half of the object is still all defaults.**
   Any path that lets `Parent` code observe `Child` state during its
   constructor — most famously calling an overridable method — reads `null`s
-  and zeros ([inheritance](../03-inheritance.md) owns that gotcha).
+  and zeros ([inheritance](../03-inheritance/README.md) owns that gotcha).
 
 ## Instance initializer blocks, precisely
 
@@ -126,7 +126,7 @@ Parent p = c;                 // same object
 ```
 
 Fields never dispatch dynamically ([inheritance's hiding
-rules](../03-inheritance.md)). Shadowing is legal and almost always an
+rules](../03-inheritance/README.md)). Shadowing is legal and almost always an
 accident — a parent adding a field can silently shadow-collide with a
 subclass written years earlier, and no warning is required. Keep parent
 fields `private` and the collision cannot occur, because private fields are
@@ -144,7 +144,7 @@ customer` idiom exists rather than being a style choice.
 
 **Symptom:** value computed in the parent constructor is `null`/`0` even though the child "already set it"
 **Cause:** the child's field initializers run *after* the entire parent constructor — parent code observed the defaults from step 3
-**Fix:** don't read subclass state from a superclass constructor (usually via an overridable call — see [inheritance](../03-inheritance.md)); pass values up as constructor arguments instead
+**Fix:** don't read subclass state from a superclass constructor (usually via an overridable call — see [inheritance](../03-inheritance/README.md)); pass values up as constructor arguments instead
 
 **Symptom:** `illegal forward reference` compile error on a field initializer
 **Cause:** an initializer reads, by simple name, a field declared textually below it (JLS §8.3.3)

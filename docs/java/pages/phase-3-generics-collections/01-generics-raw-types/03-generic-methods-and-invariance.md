@@ -116,7 +116,7 @@ picks up.
 
 **Symptom:** overriding a generic method in a subclass silently created an overload instead
 **Cause:** the override changed the type-parameter bounds or spelled the parameter differently in a way that changed erasure; signatures no longer match
-**Fix:** `@Override` on every intended override ([Phase 2 topic 03](../../phase-2-classes-objects/03-inheritance.md)) turns the silent fork into a compile error
+**Fix:** `@Override` on every intended override ([Phase 2 topic 03](../../phase-2-classes-objects/03-inheritance/README.md)) turns the silent fork into a compile error
 
 **Symptom:** IDE offers `Collections.<String>emptyList()` syntax and reviewers have never seen it
 **Cause:** explicit type witnesses are legal on any generic method call but almost always redundant since Java 8's target-typing improvements

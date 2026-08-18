@@ -42,4 +42,4 @@ an invariant — chunks 2 and 3 are that design skill.
 
 ---
 
-← Prev: [Class anatomy and construction](../01-class-anatomy/README.md) · Index: [Phase 2 — Classes and objects](../README.md) · Next → [Inheritance](../03-inheritance.md)
+← Prev: [Class anatomy and construction](../01-class-anatomy/README.md) · Index: [Phase 2 — Classes and objects](../README.md) · Next → [Inheritance](../03-inheritance/README.md)

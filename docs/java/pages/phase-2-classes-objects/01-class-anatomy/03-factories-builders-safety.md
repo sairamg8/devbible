@@ -114,7 +114,7 @@ Two distinct hazards stack:
 - **Sequencing** — the callee (or any thread the bus hands `this` to) can
   invoke methods that read fields still at their defaults. Same class of
   bug as the parent-constructor-calls-override problem in
-  [inheritance](../03-inheritance.md), self-inflicted.
+  [inheritance](../03-inheritance/README.md), self-inflicted.
 - **Memory model** — `final` fields carry a safe-publication guarantee
   (JLS §17.5): any thread that sees the object *after construction
   completes* sees the final fields' values with no synchronization. Leak

@@ -34,7 +34,7 @@ No runtime check, no error — modular truncation is the *specified* behaviour
 (JLS §5.1.3). This is a different universe from reference casts: nothing is
 asserted, bits are transformed. The overflow discipline (`Math.toIntExact`
 for checked narrowing) belongs to
-[operators and overflow](../04-operators-overflow.md); the point here is
+[operators and overflow](../04-operators-overflow/README.md); the point here is
 that the cast syntax gives no hint which universe you are in — the operand
 types decide.
 

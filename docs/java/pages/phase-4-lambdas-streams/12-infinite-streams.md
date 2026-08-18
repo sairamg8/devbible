@@ -161,7 +161,7 @@ adds laziness you then have to reason around
 **Fix:** keep stateful sequences on `iterate` (ordered, sequential by nature) or a plain loop; reserve `generate` for stateless suppliers
 
 **Symptom:** exponential-backoff stream overflows to negative delays
-**Cause:** `iterate`'s function runs unbounded — `x * 2` on a `long` eventually wraps ([overflow](../phase-1-language-core/04-operators-overflow.md)); the `takeWhile` may even stay true forever after wrap
+**Cause:** `iterate`'s function runs unbounded — `x * 2` on a `long` eventually wraps ([overflow](../phase-1-language-core/04-operators-overflow/README.md)); the `takeWhile` may even stay true forever after wrap
 **Fix:** cap inside the step function (`Math.min(cap, x * 2)`) or bound by element count too, not only by value
 
 ## Interview questions

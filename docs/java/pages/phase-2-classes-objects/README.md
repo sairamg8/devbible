@@ -22,7 +22,7 @@ concurrency strategy you will ever buy.
 |---|---|---|---|
 | 01 | **[Class anatomy and construction](01-class-anatomy/README.md)** | <span className="db-tier t-master">Master</span> | Fields, constructors, `this`, initialization order, chaining |
 | 02 | **[Encapsulation and access modifiers](02-encapsulation-access/README.md)** | <span className="db-tier t-master">Master</span> | Package-private: the underrated default for internals |
-| 03 | **[Inheritance](03-inheritance.md)** | <span className="db-tier t-master">Master</span> | `extends`, `super`, `@Override` — and why deep hierarchies rot |
+| 03 | **[Inheritance](03-inheritance/README.md)** | <span className="db-tier t-master">Master</span> | `extends`, `super`, `@Override` — and why deep hierarchies rot |
 | 04 | **[Polymorphism and dynamic dispatch](04-polymorphism-dispatch/README.md)** | <span className="db-tier t-master">Master</span> | The mechanism every framework is built on |
 | 05 | **[Abstract classes vs interfaces](05-abstract-vs-interfaces.md)** | <span className="db-tier t-master">Master</span> | "Is-a with shared state" vs "can-do contract" |
 | 06 | **[`equals`/`hashCode` — the contract](06-equals-hashcode/README.md)** | <span className="db-tier t-master">Master</span> | The entity that vanishes from a `HashSet` |

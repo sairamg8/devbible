@@ -51,7 +51,7 @@ expected the target.
 `equals` is where overloading-vs-overriding stops being trivia:
 `equals(Object)` is the virtual slot everything calls — an `equals(MyType)`
 overload never dispatches from collections
-([inheritance](../03-inheritance.md) gotcha). And *inside* a correct
+([inheritance](../03-inheritance/README.md) gotcha). And *inside* a correct
 `equals`, the type check itself is a design decision: `instanceof` (allows
 subclass equality, risks symmetry breaks) vs `getClass() == o.getClass()`
 (strict, breaks proxy frameworks that generate subclasses). The

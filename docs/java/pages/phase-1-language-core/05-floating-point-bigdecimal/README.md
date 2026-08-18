@@ -37,4 +37,4 @@ the working depth.
 
 ---
 
-← Prev: [Operators, division and overflow](../04-operators-overflow.md) · Index: [Phase 1 — Language core](../README.md)
+← Prev: [Operators, division and overflow](../04-operators-overflow/README.md) · Index: [Phase 1 — Language core](../README.md)

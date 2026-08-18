@@ -83,7 +83,7 @@ same phase ordering explains several cousins:
 ## Comparator and sort traps
 
 - **The subtraction comparator.** `(a, b) -> a.getViews() - b.getViews()`
-  overflows for large spreads ([topic 04](../04-operators-overflow.md))
+  overflows for large spreads ([topic 04](../04-operators-overflow/README.md))
   *and* unboxes — two failure modes in one idiom. Write
   `Comparator.comparingInt(Post::getViews)` or `Integer.compare(x, y)`.
 - **`Comparator.comparing` vs `comparingInt`/`comparingLong`.**

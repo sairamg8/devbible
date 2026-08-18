@@ -148,4 +148,4 @@ nothing at run time).
 
 ---
 
-← Prev: [Autoboxing and the integer cache](02-autoboxing-integer-cache/README.md) · Next → [Operators, division and overflow](04-operators-overflow.md)
+← Prev: [Autoboxing and the integer cache](02-autoboxing-integer-cache/README.md) · Next → [Operators, division and overflow](04-operators-overflow/README.md)

@@ -55,7 +55,7 @@ This page owns the run-time half and the seam between the two.
 | Constructor | Exact class named by `new` | Never dispatched |
 | `super.m()` | Parent implementation, statically | Deliberate dispatch bypass |
 
-The [inheritance topic](../03-inheritance.md) covers hiding from the
+The [inheritance topic](../03-inheritance/README.md) covers hiding from the
 author's side; this table is the caller's side. Two rows deserve expansion,
 because each is a production bug shape.
 
