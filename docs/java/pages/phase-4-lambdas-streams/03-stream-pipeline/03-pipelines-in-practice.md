@@ -124,7 +124,7 @@ var bad  = results.stream().filter(p -> p.ok().isEmpty()).toList();
 
 This keeps the pipeline total (every input produces an output) and the
 failure handling inspectable — the shape `Collectors.partitioningBy`
-formalizes (**Collectors** *(not written yet)*).
+formalizes ([Collectors](../05-collectors/README.md)).
 
 ## Debugging without print
 

@@ -52,4 +52,4 @@ The gate's pipeline ends in `findFirst()` and a default. Writing that as
 
 ---
 
-← Prev: **`reduce` and primitive streams** *(not written yet)* · Index: [Phase 4 — Lambdas, streams and `Optional`](../README.md) · Next → [Streams vs loops](../08-streams-vs-loops.md)
+[← Prev: `reduce` and primitive streams](../06-reduce-primitive-streams.md) · Index: [Phase 4 — Lambdas, streams and `Optional`](../README.md) · Next → [Streams vs loops](../08-streams-vs-loops.md)

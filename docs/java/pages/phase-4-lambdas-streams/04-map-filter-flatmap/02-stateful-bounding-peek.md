@@ -41,7 +41,7 @@ List<Order> latestFirst = orders.stream()
   not, you get a `ClassCastException` **at terminal-op time**, not where
   you wrote `sorted()`. Prefer the explicit-`Comparator` overload; building
   good comparators is a Phase 3 topic
-  (**Comparable vs Comparator** *(not written yet)*).
+  ([Comparable vs Comparator](../../phase-3-generics-collections/10-comparable-comparator/README.md)).
 - Sorting an already-sorted source: `sorted` on a `TreeSet`-backed stream
   may still buffer — don't rely on the runtime detecting sortedness; keep
   data in the right structure instead.
@@ -63,7 +63,7 @@ Stream.of("a", "b", "a").distinct()    // "a", "b"
   wins; for unordered streams any duplicate may be the survivor. "Dedupe by
   a key, keeping the newest" is **not** `distinct` — that's a
   `toMap(key, identity, mergeFunction)` job (next topic,
-  **Collectors** *(not written yet)*).
+  [Collectors](../05-collectors/README.md)).
 
 ## `limit` and `skip` — the bounding pair
 
@@ -82,7 +82,7 @@ orders.stream().skip(20).limit(10)     // page 3 of a page-size-10 listing
 - On **parallel** ordered streams, `limit`/`skip` must respect encounter
   order, which the package doc warns can make them expensive rather than
   cheap — another entry in the "parallel isn't free" ledger (topic 09,
-  **Parallel streams** *(not written yet)*).
+  [Parallel streams](../09-parallel-streams.md)).
 
 ## `peek` — debugging, and honestly nothing else
 

@@ -34,9 +34,9 @@ This topic runs deeper than one file. The chunks:
 Every stream page after this one leans on the execution model:
 
 - **Core ops and collectors** ([04](../04-map-filter-flatmap/README.md),
-  **05** *(not written yet)*) make no sense as "loops that run in order" —
+  [05](../05-collectors/README.md)) make no sense as "loops that run in order" —
   they are stages elements flow through one at a time.
-- **Parallel streams** (**09** *(not written yet)*) are this same model
+- **Parallel streams** ([09](../09-parallel-streams.md)) are this same model
   with the source split across threads — the reasons `.parallel()`
   disappoints are visible already in the sequential machinery.
 - **Stateful-lambda bugs** ([10](../10-stateful-lambdas.md)) are all,

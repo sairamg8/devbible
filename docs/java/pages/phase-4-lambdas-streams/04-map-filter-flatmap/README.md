@@ -46,4 +46,4 @@ model is what tells you where that work actually happens.
 
 ---
 
-← Prev: **The stream pipeline** *(not written yet)* · Index: [Phase 4 — Lambdas, streams and Optional](../README.md) · Next → **Collectors** *(not written yet)*
+[← Prev: The stream pipeline](../03-stream-pipeline/README.md) · Index: [Phase 4 — Lambdas, streams and Optional](../README.md) · [Next → Collectors](../05-collectors/README.md)

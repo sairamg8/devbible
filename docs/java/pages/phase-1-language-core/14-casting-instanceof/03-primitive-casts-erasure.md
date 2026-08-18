@@ -65,7 +65,7 @@ route: assert `Integer`, unbox to `int`, widen to `long`.
 
 ## Generics: the cast the runtime cannot check
 
-Erasure (**Phase 3's type-erasure topic** *(not written yet)* owns the
+Erasure ([Phase 3's type-erasure topic](../../phase-3-generics-collections/02-type-erasure.md) owns the
 mechanism) means the runtime knows a `List`, not a `List<String>`. Two
 consequences here:
 

@@ -96,7 +96,7 @@ in a diff is the tell that the author didn't know.
 A read-only membership check built at startup (feature flags, stop-words,
 allowed country codes): `Set.copyOf(source)` — immutable, safely shareable
 across threads without synchronization
-(**topic 12** *(not written yet)*), and honest: no caller can
+([topic 12](../12-immutable-collections.md)), and honest: no caller can
 mutate what the signature hands out.
 
 ## Gotchas

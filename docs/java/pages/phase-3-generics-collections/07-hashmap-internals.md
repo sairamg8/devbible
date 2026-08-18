@@ -178,4 +178,4 @@ subtle off-by-a-third that the factory was added to end.
 
 ---
 
-← Prev: [Sets](06-sets.md) · Next → **LinkedHashMap and TreeMap** *(not written yet)*
+← Prev: [Sets](06-sets.md) · [Next → LinkedHashMap and TreeMap](08-linkedhashmap-treemap.md)

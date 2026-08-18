@@ -137,7 +137,7 @@ queue. The honest options, in order of preference:
 1. **Collect first, then act**: build the list, then loop over it with a
    plain `for` — effects happen outside the stream machinery, in a defined
    order, with normal exception handling
-   (**topic 08** *(not written yet)* is this argument in full).
+   ([topic 08](08-streams-vs-loops.md) is this argument in full).
 2. **`forEach` as the terminal op** — acceptable for independent,
    order-irrelevant, thread-safe effects, and it *says* "effects here" to
    the reader.

@@ -31,7 +31,7 @@ This topic runs deeper than one file. The chunks:
 ## Why this is a Master topic
 
 - **Every sorted collection and every sort call** routes through exactly this
-  contract — **`TreeMap`/`TreeSet`, topics 06 and 08** *(not written yet)*, sorting for display,
+  contract — [`TreeSet`, topic 06](../06-sets.md) and [`TreeMap`, topic 08](../08-linkedhashmap-treemap.md), sorting for display,
   [`PriorityQueue`](../09-queues-deques.md) scheduling.
 - **The failure modes ship.** An overflow comparator or a
   double-compared-with-`<` comparator passes every small test and crashes in
@@ -48,4 +48,4 @@ example, including the way it *diverges from* `equals`.
 
 ---
 
-← Prev: [Queues and deques](../09-queues-deques.md) · Index: [Phase 3 — Generics and collections](../README.md) · Next → **Iteration and `ConcurrentModificationException`** *(not written yet)*
+← Prev: [Queues and deques](../09-queues-deques.md) · Index: [Phase 3 — Generics and collections](../README.md) · [Next → Iteration and `ConcurrentModificationException`](../11-concurrent-modification/README.md)

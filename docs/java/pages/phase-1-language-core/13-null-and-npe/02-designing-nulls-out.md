@@ -54,7 +54,7 @@ already guaranteed it.
 |---|---|
 | …for an empty collection | `List.of()` / `Set.of()` / `Map.of()` — immutable, shared, free |
 | …for "no text" | `""` — if blank and absent truly mean the same thing here |
-| …for a lookup that can miss | `Optional<T>` — the miss becomes part of the signature (**Phase 4, topic 07 — not written yet** — owns the full API) |
+| …for a lookup that can miss | `Optional<T>` — the miss becomes part of the signature ([Phase 4, topic 07 · `Optional`](../../phase-4-lambdas-streams/07-optional/README.md) owns the full API) |
 | …for "not found" that is a *caller error* | throw — a broken invariant is an exception, not an absence |
 
 A method that returns a null collection forces every caller into a guard, and

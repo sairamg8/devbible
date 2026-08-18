@@ -40,7 +40,7 @@ Three real fixes, strongest first:
 
 1. **Immutable key state** — equality fields are `final` (or the whole class
    is a record). The bug becomes unrepresentable. This is Phase 2's
-   **topic 12 · Designing immutable classes** *(not written yet)* earning its
+   [topic 12 · Designing immutable classes](../12-immutable-design/README.md) earning its
    keep.
 2. **Equality on identity fields only** — compare the immutable business key
    (`orderNumber`), never mutable state (`status`). Mutation then doesn't

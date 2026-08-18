@@ -88,7 +88,7 @@ Collections.sort(List<T>, Comparator<? super T>)   // a Comparator<Object>
 `Comparator<? super T>` is PECS earning its keep: a single
 `Comparator<Person>` sorts `List<Employee>` — without the `super`, every
 subclass would need its own comparator
-(**topic 10 · Comparable vs Comparator** *(not written yet)* builds on
+([topic 10 · Comparable vs Comparator](10-comparable-comparator/README.md) builds on
 this).
 
 When **neither** applies — the method both reads and writes T-typed
@@ -201,4 +201,4 @@ across positions.
 
 ---
 
-← Prev: [Type erasure](02-type-erasure.md) · Next → **The collection hierarchy** *(not written yet)*
+← Prev: [Type erasure](02-type-erasure.md) · [Next → The collection hierarchy](04-collection-hierarchy.md)

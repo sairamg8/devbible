@@ -101,7 +101,7 @@ Reach for `Iterable` when callers should *for-each your type directly*,
 re-iterate it many times, or pass it to APIs that take `Iterable`. Reach
 for a `Stream`-returning method when the sequence is consumed once in a
 pipeline — a `Stream` is itself one-shot, which is topic territory for
-**Phase 4** *(not written yet)*. A type can offer both (`iterator()` and a
+[Phase 4's stream-pipeline topic](../phase-4-lambdas-streams/03-stream-pipeline/README.md). A type can offer both (`iterator()` and a
 `stream()` accessor); the collections do.
 
 ## Gotchas
@@ -124,7 +124,7 @@ pipeline — a `Stream` is itself one-shot, which is topic territory for
 
 **Symptom:** `ConcurrentModificationException`-style corruption from a hand-rolled iterator over a mutable backing structure
 **Cause:** custom iterators get no fail-fast modCount machinery for free — mutation mid-iteration silently derails the cursor
-**Fix:** iterate a snapshot, document "don't mutate while iterating", or build modCount checking like the JDK collections do (**topic 11** *(not written yet)*)
+**Fix:** iterate a snapshot, document "don't mutate while iterating", or build modCount checking like the JDK collections do ([topic 11](11-concurrent-modification/README.md))
 
 ## Interview questions
 
@@ -156,4 +156,4 @@ Override only when the structure can iterate itself faster.
 
 ---
 
-← Prev: [Choosing a collection](14-choosing-a-collection/README.md) · Next → **Legacy types** *(not written yet)*
+← Prev: [Choosing a collection](14-choosing-a-collection/README.md) · [Next → Legacy types](16-legacy-types.md)

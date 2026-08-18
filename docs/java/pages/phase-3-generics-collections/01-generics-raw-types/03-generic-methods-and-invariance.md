@@ -35,7 +35,7 @@ Order first = firstOrNull(orders);        // T inferred as Order — no <>
 
 - Works in any class, generic or not; `static` methods **must** use their
   own parameter, since the class's `T` is per-instance and statics have no
-  instance (**Phase 1 topic 11** *(not written yet)*).
+  instance ([Phase 1 topic 11](../../phase-1-language-core/11-static/README.md)).
 - Inference (JLS §18) resolves `T` from the arguments and the *target
   type* — `Collections.<String>emptyList()` shows the rare explicit form,
   needed only when there is nothing to infer from.

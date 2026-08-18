@@ -78,7 +78,7 @@ transactions.stream()
 
 **`fold(initial, folder)`** — like `scan` but emits only the final value,
 as a one-element stream: an ordered, sequential reduce for cases the
-associative `reduce` can't express (**topic 06** *(not written yet)*).
+associative `reduce` can't express ([topic 06](06-reduce-primitive-streams.md)).
 
 **`mapConcurrent(maxConcurrency, mapper)`** — `map`, but each mapper call
 runs in its own **virtual thread**, at most `maxConcurrency` in flight,
@@ -93,7 +93,7 @@ orders.stream()
 
 That is the sane replacement for the `parallelStream()`-for-blocking-IO
 mistake: explicit concurrency cap, virtual threads instead of the shared
-`ForkJoinPool` (the argument of **topic 09** *(not written yet)*).
+`ForkJoinPool` (the argument of [topic 09](09-parallel-streams.md)).
 
 ## Writing your own
 

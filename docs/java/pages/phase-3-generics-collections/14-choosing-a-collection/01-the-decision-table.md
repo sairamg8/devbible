@@ -59,12 +59,12 @@ site is simpler and cache-friendlier than paying O(log n) per insert all day.
   `System.arraycopy` on real hardware; the big-O table's O(1) insert only
   starts *after* an O(n) traversal to the spot).
 - **Remove while iterating** → `Iterator.remove` / `removeIf` on any type
-  (**topic 11 · ConcurrentModificationException** *(not written yet)*), or a
+  ([topic 11 · ConcurrentModificationException](../11-concurrent-modification/README.md)), or a
   `LinkedList` **only** when you hold a `ListIterator` positioned there.
 - **Both-ends mutation** → `ArrayDeque`, never `Stack`/`LinkedList`
-  (**topic 16** *(not written yet)*).
+  ([topic 16](../16-legacy-types.md)).
 - **Never mutates after build** → the immutable factories
-  (**topic 12** *(not written yet)*): `List.of`, `Map.copyOf` — 
+  ([topic 12](../12-immutable-collections.md)): `List.of`, `Map.copyOf` — 
   smaller, safe to share, honest in the signature.
 
 ## The cost lines worth knowing cold
@@ -84,7 +84,7 @@ probe:
 "Expected" on the hash types assumes a `hashCode` that spreads
 ([Phase 2's contract](../../phase-2-classes-objects/06-equals-hashcode/README.md));
 adversarial or degenerate keys push toward the treeified bucket's O(log n)
-(**topic 07 · HashMap internals** *(not written yet)*).
+([topic 07 · HashMap internals](../07-hashmap-internals.md)).
 
 ## The defaults
 

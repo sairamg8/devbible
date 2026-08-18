@@ -151,7 +151,7 @@ private state changing — the classic "defensive copy that wasn't a copy".
 
 **★ Why does `list.toArray()` return `Object[]` instead of `T[]`?**
 Erasure: at runtime the list has no `T` to allocate an array of
-(**this phase's type-erasure topic** *(not written yet)*). The typed overload takes the
+([this phase's type-erasure topic](../02-type-erasure.md)). The typed overload takes the
 component type from the array you pass — which is why
 `toArray(new String[0])` works and the cast of the no-arg result cannot.
 

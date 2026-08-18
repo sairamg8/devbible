@@ -76,7 +76,7 @@ returns a view.
   ([Phase 2's chunk](../../phase-2-classes-objects/10-enums/03-collections-boundaries-persistence.md)).
 - **Primitive sequences in bulk** → arrays or `IntStream` pipelines —
   `List<Integer>` pays boxing per element
-  (**Phase 1, autoboxing** *(not written yet)*);
+  ([Phase 1, autoboxing](../../phase-1-language-core/02-autoboxing-integer-cache/README.md));
   the memory multiple is what kills heaps, not the CPU.
 - **Fixed-size byte/char buffers at I/O edges** → arrays, by the API's own
   shape (**Phase 7** *(not written yet)*).

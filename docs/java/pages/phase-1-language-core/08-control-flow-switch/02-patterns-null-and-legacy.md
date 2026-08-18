@@ -35,7 +35,7 @@ Each label tests, casts and binds in one step — the pattern variable (`a`,
 interface, no `default` is needed and exhaustiveness covers the hierarchy:
 add a `Chargeback` subtype and every such switch fails to compile until it
 answers for it. Sealed-hierarchy design — why to model domain results this
-way at all — is **Phase 2's sealed-types topic** *(not written yet)*; this
+way at all — is [Phase 2's sealed-types topic](../../phase-2-classes-objects/09-sealed-adts.md); this
 page is the dispatch half. (Record deconstruction patterns —
 `case Point(int x, int y)` — belong to the same Phase 2 story.)
 

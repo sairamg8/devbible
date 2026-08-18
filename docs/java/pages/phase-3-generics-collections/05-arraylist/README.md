@@ -48,4 +48,4 @@ lots of inserts" fails the follow-up question.
 
 ---
 
-← Prev: **The collection hierarchy** *(not written yet)* · Index: [Phase 3 — Generics and collections](../README.md) · Next → [Sets](../06-sets.md)
+[← Prev: The collection hierarchy](../04-collection-hierarchy.md) · Index: [Phase 3 — Generics and collections](../README.md) · Next → [Sets](../06-sets.md)

@@ -23,7 +23,7 @@ skill.**
 
 | Method | What it does | The contract line that bites |
 |---|---|---|
-| `sort(list)` / `sort(list, cmp)` | stable sort in place | list must be modifiable; elements mutually comparable or the comparator total (**topic 10 · Comparable vs Comparator** *(not written yet)*) |
+| `sort(list)` / `sort(list, cmp)` | stable sort in place | list must be modifiable; elements mutually comparable or the comparator total ([topic 10 · Comparable vs Comparator](10-comparable-comparator/README.md)) |
 | `binarySearch(list, key)` | O(log n) lookup | **list must already be sorted in the same order** — otherwise the result is undefined, not an exception |
 | `shuffle(list)` / `shuffle(list, rnd)` | random permutation | pass your own `Random`/generator for reproducible tests |
 | `reverse`, `rotate`, `swap` | in-place rearrangement | need a modifiable list |
@@ -32,7 +32,7 @@ skill.**
 | `frequency(coll, obj)` | count `equals` matches | O(n) scan — inside a loop it is O(n²) |
 | `disjoint(a, b)` | true if no element in common | uses `equals`; cost depends on the second argument's `contains` |
 | `max`/`min` | extreme by natural order or comparator | throws `NoSuchElementException` on empty |
-| `unmodifiableList` etc. | read-only **view** | the backing list can still change under it (**topic 12** *(not written yet)*) |
+| `unmodifiableList` etc. | read-only **view** | the backing list can still change under it ([topic 12](12-immutable-collections.md)) |
 | `emptyList`, `singletonList` | legacy fixed instances | superseded by `List.of()` in new code |
 
 The sort behind `Collections.sort` and `list.sort(cmp)` is the same
@@ -138,7 +138,7 @@ sorted-insert possible without a second search.
 The first is a live read-only *view* — mutations to the backing list show
 through it. The second is an independent immutable snapshot. Passing a view
 to a caller while you keep the backing reference is how "immutable" lists
-change under the reader — **topic 12** *(not written yet)* works the
+change under the reader — [topic 12](12-immutable-collections.md) works the
 distinction.
 
 **Why does `Arrays.asList` support `set` but `List.of` doesn't?**
@@ -153,4 +153,4 @@ which a slice-and-concat rewrite is not.
 
 ---
 
-← Prev: **Immutable collections** *(not written yet)* · Next → [Choosing a collection](14-choosing-a-collection/README.md)
+[← Prev: Immutable collections](12-immutable-collections.md) · Next → [Choosing a collection](14-choosing-a-collection/README.md)

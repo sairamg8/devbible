@@ -127,7 +127,7 @@ that dips below the threshold and comes back up is truncated at the dip:
   form: the bound is a property of the page, not a count).
 - **Numeric sequences** — `IntStream.iterate`/`LongStream.iterate` avoid
   boxing every element (`Stream<Long>` boxes; `LongStream` doesn't —
-  the argument of **topic 06** *(not written yet)*).
+  the argument of [topic 06](06-reduce-primitive-streams.md)).
 
 For anything more stateful — reading a socket, polling a queue — a plain
 loop is more honest: the "supplier" has side effects, and stream machinery

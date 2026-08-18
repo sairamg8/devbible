@@ -145,7 +145,7 @@ References win when the method name *is* the operation:
   concatenation: `u -> u.getEmail() == null ? "" : u.getEmail()`.
 - **A checked exception needs handling** — you cannot wrap a `try` around
   a `::`; the lambda gets a body, the reference cannot
-  (**composition and checked exceptions** *(not written yet)* covers the
+  ([composition and checked exceptions](01-lambdas-functional-interfaces/03-composition-checked-exceptions.md) covers the
   patterns).
 - **The receiver should be re-read per call** — the timing section above;
   a bound reference freezes it.

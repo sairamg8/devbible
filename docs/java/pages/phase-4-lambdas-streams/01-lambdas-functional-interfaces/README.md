@@ -49,4 +49,4 @@ composition (phase 3) are automatic — chunks 1 and 3 build exactly that.
 
 ---
 
-← Index: [Phase 4 — Lambdas, streams and `Optional`](../README.md) · Next → **Method references** *(not written yet)*
+← Index: [Phase 4 — Lambdas, streams and `Optional`](../README.md) · [Next → Method references](../02-method-references.md)

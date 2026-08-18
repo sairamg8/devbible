@@ -61,12 +61,12 @@ Frame top = stack.pop();                  // f1 — last in, first out
 
 A resizable circular array: both ends are O(1) amortized, elements are
 contiguous (cache-friendly, no per-node allocation — the same reason
-**`ArrayList` beats `LinkedList`, topic 05** *(not written yet)*), and it has no capacity
+[`ArrayList` beats `LinkedList`, topic 05](05-arraylist/02-arraylist-vs-linkedlist.md)), and it has no capacity
 limit. The Javadoc states it plainly: *likely faster than `Stack` when used
 as a stack, and faster than `LinkedList` when used as a queue*.
 
 **Why not `java.util.Stack`?** It extends `Vector` (see
-**topic 16 — legacy types** *(not written yet)*): every method synchronized,
+[topic 16 — legacy types](16-legacy-types.md)): every method synchronized,
 and — worse — it *is-a* `List`, so `stack.add(2, x)` can insert into the
 middle of your "stack". The `Stack` Javadoc itself says a `Deque` should be
 used in preference. Same reasoning as
@@ -75,7 +75,7 @@ used in preference. Same reasoning as
 
 What `ArrayDeque` gives up: no index access (`get(i)` doesn't exist — if you
 need it you wanted a `List`), no `null`s, and its iterator is fail-fast
-(**topic 11** *(not written yet)*).
+([topic 11](11-concurrent-modification/README.md)).
 
 ## `PriorityQueue` — "next most urgent", not "sorted"
 
@@ -185,4 +185,4 @@ you are hand-rolling a worse `PriorityQueue`.
 
 ---
 
-← Prev: **`LinkedHashMap` and `TreeMap`** *(not written yet)* · Index: [Phase 3 — Generics and collections](README.md) · Next → [`Comparable` vs `Comparator`](10-comparable-comparator/README.md)
+[← Prev: `LinkedHashMap` and `TreeMap`](08-linkedhashmap-treemap.md) · Index: [Phase 3 — Generics and collections](README.md) · Next → [`Comparable` vs `Comparator`](10-comparable-comparator/README.md)

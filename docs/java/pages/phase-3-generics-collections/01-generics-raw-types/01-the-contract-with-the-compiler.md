@@ -62,7 +62,7 @@ Box<String> box = new Box<>();       // String: type argument (use site)
   real class" at a glance.
 - **Type argument** (`String`) — what you plug in at the use site. Must be
   a reference type: `Box<int>` does not compile, which is why boxing
-  (**Phase 1 topic 02** *(not written yet)*)
+  ([Phase 1 topic 02](../../phase-1-language-core/02-autoboxing-integer-cache/README.md))
   is a collections story.
 - **Parameterized type** (`Box<String>`) — the combination. `Box<String>`
   and `Box<Integer>` are different compile-time types built from one class.
@@ -125,7 +125,7 @@ see them (no `instanceof List<String>` — topic 02 owns that story).
 **Fix:** design so the runtime never needs the argument; where unavoidable, pass a `Class<T>` token ([topic 02](../../phase-3-generics-collections/02-type-erasure.md))
 
 **Symptom:** generic class compiles but a `static` field of type `T` won't
-**Cause:** `T` belongs to an *instance* of the parameterization; statics are shared across all of them (**Phase 1 topic 11** *(not written yet)*)
+**Cause:** `T` belongs to an *instance* of the parameterization; statics are shared across all of them ([Phase 1 topic 11](../../phase-1-language-core/11-static/README.md))
 **Fix:** statics can't refer to the class's type parameter — restructure, or make the method generic with its own parameter (chunk 3)
 
 ## Interview questions
