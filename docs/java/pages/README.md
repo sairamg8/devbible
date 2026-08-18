@@ -23,7 +23,7 @@ import Progress from '@site/src/components/Progress';
 | 4 · Lambdas, streams and `Optional` | 13 | ✅ 13/13 |
 | 5 · Exceptions and failure design | 8 | ✅ 8/8 |
 | 6 · Concurrency | 17 | ✅ 17/17 |
-| 7 · I/O, time and the everyday stdlib | 13 | 🚧 5/13 |
+| 7 · I/O, time and the everyday stdlib | 13 | 🚧 12/13 |
 | 8 · The build: Maven, Gradle, dependencies | 12 | Planned |
 | 9 · Spring Boot and the web | 16 | Planned |
 | 10 · Data access | 14 | Planned |

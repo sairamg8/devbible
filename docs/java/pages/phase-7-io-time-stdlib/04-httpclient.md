@@ -82,7 +82,7 @@ consume the response: `ofString()` (charset taken from the Content-Type,
 UTF-8 otherwise), `ofFile(path)`, `ofInputStream()` / `ofLines()` for
 streaming without buffering the whole payload, `discarding()` when only
 the status matters. JSON is just a string body plus Jackson at each end —
-the mapping topic is **05 · JSON with Jackson** *(not written yet)*.
+the mapping topic is [JSON with Jackson](05-json-jackson/README.md).
 
 ## Status codes are data, not exceptions
 
@@ -207,4 +207,4 @@ else automatically; `NEVER` (the default) hands every 3xx back to you.
 
 ---
 
-← Prev: [Streams, buffers and charsets](03-streams-buffers-charsets.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → **05 · JSON with Jackson** *(not written yet)*
+← Prev: [Streams, buffers and charsets](03-streams-buffers-charsets.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [JSON with Jackson](05-json-jackson/README.md)

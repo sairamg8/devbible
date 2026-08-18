@@ -118,7 +118,7 @@ way, and the filter advice stands.
 | Message queues carrying `Serializable` payloads | producer and consumer are now version-locked; switch to JSON/protobuf with explicit schema |
 | Library requiring `Serializable` DTOs | check whether it actually serializes or just demands the marker |
 
-**Boundaries get JSON (Jackson — topic 05, *(not written yet)*) or
+**Boundaries get JSON ([Jackson — topic 05](05-json-jackson/README.md)) or
 protobuf**: explicit schemas, no code execution on parse, cross-language,
 versionable on purpose. [Records](../phase-2-classes-objects/08-records/README.md)
 as DTOs pair with either.
@@ -168,4 +168,4 @@ RMI/JMX, session replication, old caches and queue payloads. Posture: filter imm
 
 ---
 
-← Prev: [UUID and randomness](07-uuid-and-randomness.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → **09 · Localization basics** *(not written yet)*
+← Prev: [UUID and randomness](07-uuid-and-randomness.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Localization basics](09-localization-basics.md)

@@ -28,8 +28,8 @@ This topic runs deeper than one file. The chunks:
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[One mapper, records in and out](01-objectmapper-and-records.md)** | Why `ObjectMapper` is created once and shared (cost + thread-safety, the builder discipline), `ObjectReader`/`ObjectWriter` for per-call variation, records as DTOs (2.12+), visibility rules, constructor binding with `@JsonCreator`/`@JsonProperty` |
-| 2 | **The policy decisions** *(not written yet)* | Unknown fields (`FAIL_ON_UNKNOWN_PROPERTIES` both ways), null vs absent vs default, `JsonInclude`, `Optional` via `jackson-datatype-jdk8`, `java.time` via `JavaTimeModule`, the annotations that carry weight, generics with `TypeReference` |
-| 3 | **Polymorphism, the three APIs, and failure** *(not written yet)* | `@JsonTypeInfo` and the default-typing CVE history (allow-lists, `PolymorphicTypeValidator`), data binding vs tree model vs streaming, custom (de)serializers, the `JacksonException` taxonomy, what Jackson 3 changes |
+| 2 | **[The policy decisions](02-the-policy-decisions.md)** | Unknown fields (`FAIL_ON_UNKNOWN_PROPERTIES` both ways), null vs absent vs default, `JsonInclude`, `Optional` via `jackson-datatype-jdk8`, `java.time` via `JavaTimeModule`, the annotations that carry weight, generics with `TypeReference` |
+| 3 | **[Polymorphism, the three APIs, and failure](03-polymorphism-apis-failure.md)** | `@JsonTypeInfo` and the default-typing CVE history (allow-lists, `PolymorphicTypeValidator`), data binding vs tree model vs streaming, custom (de)serializers, the `JacksonException` taxonomy, what Jackson 3 changes |
 
 ## Why this is a Master topic
 
@@ -52,9 +52,9 @@ This topic runs deeper than one file. The chunks:
   DTO carrier this topic serializes; Jackson 2.12+ binds them natively.
 - **[Optional](../../phase-4-lambdas-streams/07-optional/README.md)** —
   absent-vs-null at the JSON boundary is the same distinction in wire form.
-- **`java.time` — topic 01** *(not written yet)* — the types the
+- **[`java.time` — topic 01](../01-java-time/README.md)** — the types the
   `JavaTimeModule` exists to carry as ISO-8601.
 
 ---
 
-← Prev: **04 · `HttpClient`** *(not written yet)* · Index: [Phase 7 — I/O, time and the everyday stdlib](../README.md) · Next → [One mapper, records in and out](01-objectmapper-and-records.md)
+← Prev: [`HttpClient`](../04-httpclient.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](../README.md) · Next → [One mapper, records in and out](01-objectmapper-and-records.md)

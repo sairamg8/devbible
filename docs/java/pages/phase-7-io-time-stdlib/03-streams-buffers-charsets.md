@@ -210,4 +210,4 @@ reads) or enforce a limit with `readNBytes`.
 
 ---
 
-← Prev: **02 · `Path` and `Files`** *(not written yet)* · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [`HttpClient`](04-httpclient.md)
+← Prev: [Path and Files](02-path-and-files.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [`HttpClient`](04-httpclient.md)

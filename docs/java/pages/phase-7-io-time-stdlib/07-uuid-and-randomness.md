@@ -191,4 +191,4 @@ Correct for reproducibility — tests, simulations, generated fixtures — on `R
 
 ---
 
-← Prev: **06 · Regex** *(not written yet)* · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Java serialization](08-java-serialization.md)
+← Prev: [Regex](06-regex.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Java serialization](08-java-serialization.md)

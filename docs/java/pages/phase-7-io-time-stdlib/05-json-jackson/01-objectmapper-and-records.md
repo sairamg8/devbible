@@ -140,7 +140,7 @@ Records sidestep the whole table: components are the properties, full stop.
 
 **Symptom:** record's compact-constructor validation never seems to run on some inputs
 **Cause:** it does run — but a field absent from JSON arrives as `null`/`0`, and the validation only checked something else
-**Fix:** validate all invariants in the compact constructor; absent-vs-null policy is **chunk 2 · The policy decisions** *(not written yet)*'s subject
+**Fix:** validate all invariants in the compact constructor; absent-vs-null policy is [chunk 2 · The policy decisions](02-the-policy-decisions.md)'s subject
 
 **Symptom:** mapper configured at startup behaves unconfigured for the first few requests
 **Cause:** `configure(...)` called on another thread after the mapper was already published and warming caches — a policy race
@@ -186,4 +186,4 @@ so cleanly.
 
 ---
 
-← Prev: [JSON with Jackson](README.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](../README.md) · Next → **The policy decisions** *(not written yet)*
+← Prev: [JSON with Jackson](README.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](../README.md) · Next → [The policy decisions](02-the-policy-decisions.md)

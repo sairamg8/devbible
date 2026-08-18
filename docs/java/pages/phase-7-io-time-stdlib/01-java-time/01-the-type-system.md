@@ -26,7 +26,7 @@ mutable (`setTime`), months are 0-indexed, years count from 1900,
 differently on different machines, and it has no concept of a time zone —
 `Calendar` bolted that on, mutably, with `MONTH = 0` still meaning
 January. Treat both as wire formats from old APIs: convert at the boundary
-(chunk 3 *(not written yet)*), never compute with them.
+([chunk 3](03-instant-in-the-data.md)), never compute with them.
 
 ## `Instant` — a point on the timeline
 
@@ -40,11 +40,11 @@ Instant now = Instant.now();          // 2026-08-18T10:15:30.123456789Z
 - `toString()` is ISO-8601 with the `Z` suffix — already the right wire
   format for logs and APIs.
 - Nanosecond precision — finer than most databases store, which is a real
-  trap (chunk 3 *(not written yet)*).
+  trap ([chunk 3](03-instant-in-the-data.md)).
 - Arithmetic is exact machine time: `plusSeconds`, `plus(Duration)`. Asking
   an `Instant` for "the next day" is a category error until you give it a
   zone — `instant.plus(1, ChronoUnit.DAYS)` works (24h exactly) but
-  *calendar* days need `ZonedDateTime` (chunk 2 *(not written yet)*).
+  *calendar* days need `ZonedDateTime` ([chunk 2](02-machine-vs-calendar-time.md)).
 
 ## The `Local` family — "local" means *no zone at all*
 
@@ -88,7 +88,7 @@ they carry:
   (unambiguous, stable, sortable); `ZonedDateTime` is the calendaring type.
 - A subtle consequence: two `ZonedDateTime`s at the same instant in
   different zones are `isEqual` but not `equals` — `equals` compares the
-  zone too (chunk 4 *(not written yet)*).
+  zone too ([chunk 4](04-formatting-parsing-testing.md)).
 
 `ZoneOffset` is itself a `ZoneId` subtype, so APIs taking `ZoneId` accept
 both — `Instant.now().atZone(ZoneOffset.UTC)` is fine and common.
@@ -100,10 +100,10 @@ both — `Instant.now().atZone(ZoneOffset.UTC)` is fine and common.
 | Something happened (log, event, audit, `created_at`) | `Instant` |
 | A calendar date with no time or zone (birthday, invoice date) | `LocalDate` |
 | A time of day rule (opening hours) | `LocalTime` |
-| A future appointment for humans in a place | `ZonedDateTime` — or `LocalDateTime` + `ZoneId` columns (chunk 2 *(not written yet)*) |
+| A future appointment for humans in a place | `ZonedDateTime` — or `LocalDateTime` + `ZoneId` columns ([chunk 2](02-machine-vs-calendar-time.md)) |
 | A timestamp that must keep its local reading in transit | `OffsetDateTime` |
-| Elapsed machine time between two instants | `Duration` (chunk 2 *(not written yet)*) |
-| A calendar quantity ("3 months, 2 days") | `Period` (chunk 2 *(not written yet)*) |
+| Elapsed machine time between two instants | `Duration` ([chunk 2](02-machine-vs-calendar-time.md)) |
+| A calendar quantity ("3 months, 2 days") | `Period` ([chunk 2](02-machine-vs-calendar-time.md)) |
 
 Every type here is **immutable and thread-safe** — share them freely,
 cache them in statics, hand them to any thread. `plusDays` returns a new
@@ -113,11 +113,11 @@ object; ignoring the return value is a no-op bug the compiler won't catch.
 
 **Symptom:** timestamps in the database are off by exactly the server's UTC offset
 **Cause:** event times stored as `LocalDateTime` and interpreted through the JVM default zone somewhere in the pipeline
-**Fix:** store `Instant` (chunk 3 *(not written yet)*); `LocalDateTime` never represents a moment
+**Fix:** store `Instant` ([chunk 3](03-instant-in-the-data.md)); `LocalDateTime` never represents a moment
 
 **Symptom:** `zonedDateTime.plusDays(1)` and `zonedDateTime.plus(Duration.ofDays(1))` disagree twice a year
 **Cause:** they answer different questions — calendar day vs 86,400 seconds — and DST transitions expose the difference
-**Fix:** that's correct behavior; pick the method for the question you're asking (chunk 2 *(not written yet)*)
+**Fix:** that's correct behavior; pick the method for the question you're asking ([chunk 2](02-machine-vs-calendar-time.md))
 
 **Symptom:** `date.plusDays(1)` appears to do nothing
 **Cause:** every `java.time` type is immutable — the result is the return value, the receiver never changes
@@ -179,4 +179,4 @@ field-by-field seam entirely with `calendar.toInstant().atZone(...)`.
 
 ---
 
-← Prev: [java.time](README.md) · Index: [java.time](README.md) · Next → **Machine vs calendar time** *(not written yet)*
+← Prev: [java.time](README.md) · Index: [java.time](README.md) · Next → [Machine vs calendar time](02-machine-vs-calendar-time.md)
