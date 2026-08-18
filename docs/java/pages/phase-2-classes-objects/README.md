@@ -16,7 +16,7 @@ your entity survives a `HashSet`, records as the default data carrier, sealed
 types as compiler-checked domain modelling, and immutability as the cheapest
 concurrency strategy you will ever buy.
 
-🚧 **14 of 15 written.**
+✅ **15 of 15 written — phase complete.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -29,7 +29,7 @@ concurrency strategy you will ever buy.
 | 07 | **[`toString`](07-tostring.md)** | <span className="db-tier t-understand">Understand</span> | For logs, not for parsing; no secrets, no lazy graphs |
 | 08 | **[Records](08-records/README.md)** | <span className="db-tier t-master">Master</span> | The default data carrier; compact constructors for validation |
 | 09 | **[Sealed types + records + `switch` = ADTs](09-sealed-adts.md)** | <span className="db-tier t-understand">Understand</span> | `PaymentResult` with compiler-checked exhaustiveness |
-| 10 | **Enums** *(not written yet)* | <span className="db-tier t-master">Master</span> | Fields, methods, per-constant behaviour — status machines |
+| 10 | **[Enums](10-enums/README.md)** | <span className="db-tier t-master">Master</span> | Fields, methods, per-constant behaviour — status machines |
 | 11 | **[Nested classes](11-nested-classes.md)** | <span className="db-tier t-understand">Understand</span> | Static vs inner — and the outer reference inner classes secretly hold |
 | 12 | **[Designing immutable classes](12-immutable-design.md)** | <span className="db-tier t-master">Master</span> | Final fields, defensive copies, no leaked `this` |
 | 13 | **[Composition over inheritance](13-composition-over-inheritance.md)** | <span className="db-tier t-understand">Understand</span> | Delegate instead of extend; the `extends ArrayList` mistake |
