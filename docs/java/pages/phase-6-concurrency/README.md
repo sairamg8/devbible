@@ -14,7 +14,7 @@ The deepest phase in the syllabus, on purpose. Virtual threads made concurrent
 Java simple to *write* — the model underneath is unchanged, and it is the
 model that pages you at 3am if you skip it.
 
-🚧 **4 of 17 written.**
+🚧 **6 of 17 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -22,8 +22,8 @@ model that pages you at 3am if you skip it.
 | 02 | **[Platform vs virtual threads](02-platform-vs-virtual-threads/README.md)** | <span className="db-tier t-master">Master</span> | Millions of cheap threads; what changed and what didn't |
 | 03 | **[Race conditions](03-race-conditions/README.md)** | <span className="db-tier t-master">Master</span> | Check-then-act, read-modify-write — the double-charge bug |
 | 04 | **[`synchronized` and intrinsic locks](04-synchronized-intrinsic-locks/README.md)** | <span className="db-tier t-master">Master</span> | What it guards; lock on private finals, not `this` |
-| 05 | **The Java Memory Model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Visibility, happens-before, `volatile` — the flag that never stops |
-| 06 | **`ExecutorService` and pools** *(not written yet)* | <span className="db-tier t-master">Master</span> | Sizing for CPU vs I/O; shutdown done right |
+| 05 | **[The Java Memory Model](05-java-memory-model/README.md)** | <span className="db-tier t-understand">Understand</span> | Visibility, happens-before, `volatile` — the flag that never stops |
+| 06 | **[`ExecutorService` and pools](06-executorservice-pools/README.md)** | <span className="db-tier t-master">Master</span> | Sizing for CPU vs I/O; shutdown done right |
 | 07 | **`CompletableFuture`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Fan-out to three services and join; `thenCompose` vs `thenApply` |
 | 08 | **Structured concurrency** *(not written yet)* | <span className="db-tier t-know">Know</span> | `StructuredTaskScope`: subtasks that cannot leak |
 | 09 | **Explicit locks** *(not written yet)* | <span className="db-tier t-know">Know</span> | `ReentrantLock`'s `tryLock` — the deadlock escape hatch |

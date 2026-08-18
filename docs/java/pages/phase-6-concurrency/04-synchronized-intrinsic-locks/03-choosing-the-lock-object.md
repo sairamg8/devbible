@@ -225,4 +225,4 @@ measured.
 
 ---
 
-← Prev: [Visibility and happens-before](02-visibility-and-happens-before.md) · Index: [`synchronized` and intrinsic locks](README.md) · Next → **05 · The Java Memory Model** *(not written yet)*
+← Prev: [Visibility and happens-before](02-visibility-and-happens-before.md) · Index: [`synchronized` and intrinsic locks](README.md) · Next → [The Java Memory Model](../05-java-memory-model/README.md)
