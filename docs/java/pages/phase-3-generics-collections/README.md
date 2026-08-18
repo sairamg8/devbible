@@ -13,7 +13,7 @@ Choosing the right one — and knowing its cost model — is daily work, and the
 `HashMap`-internals and erasure questions are interview staples because they
 separate users from understanders.
 
-🚧 **14 of 16 written.**
+🚧 **16 of 16 written — one chunk (`10-comparable-comparator` chunk 3) landing, then the phase closes.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -27,8 +27,8 @@ separate users from understanders.
 | 08 | **[`LinkedHashMap` and `TreeMap`](08-linkedhashmap-treemap.md)** | <span className="db-tier t-understand">Understand</span> | A 10-line LRU cache; range queries |
 | 09 | **[Queues and deques](09-queues-deques.md)** | <span className="db-tier t-understand">Understand</span> | `ArrayDeque`, `PriorityQueue` — job-scheduling shapes |
 | 10 | **[`Comparable` vs `Comparator`](10-comparable-comparator/README.md)** | <span className="db-tier t-master">Master</span> | Chained comparators, nulls, and the contract-violation crash |
-| 11 | **Iteration and `ConcurrentModificationException`** *(not written yet)* | <span className="db-tier t-master">Master</span> | Removing while iterating — why the exception is a feature |
-| 12 | **Immutable collections** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `List.of` vs `unmodifiableList` — copy vs view |
+| 11 | **[Iteration and `ConcurrentModificationException`](11-concurrent-modification/README.md)** | <span className="db-tier t-master">Master</span> | Removing while iterating — why the exception is a feature |
+| 12 | **[Immutable collections](12-immutable-collections.md)** | <span className="db-tier t-understand">Understand</span> | `List.of` vs `unmodifiableList` — copy vs view |
 | 13 | **[`Collections` and `Arrays` utilities](13-collections-arrays-utilities.md)** | <span className="db-tier t-understand">Understand</span> | `sort`, `binarySearch`, the `asList` fixed-size trap |
 | 14 | **[Choosing a collection — the decision table](14-choosing-a-collection/README.md)** | <span className="db-tier t-master">Master</span> | By lookup, ordering and mutation pattern |
 | 15 | **[Writing an `Iterable`](15-writing-an-iterable.md)** | <span className="db-tier t-know">Know</span> | Iteration for your own types |
