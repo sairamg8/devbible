@@ -551,7 +551,7 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-generics-collections', name: 'Generics and collections', part: 'Core library', topics: 16, pages: 16},
       {n: 4, slug: 'phase-4-lambdas-streams', name: 'Lambdas, streams and Optional', part: 'Core library', topics: 13, pages: 13},
       {n: 5, slug: 'phase-5-exceptions', name: 'Exceptions and failure design', part: 'Core library', topics: 8, pages: 8},
-      {n: 6, slug: 'phase-6-concurrency', name: 'Concurrency', part: 'Core library', topics: 17, pages: 0},
+      {n: 6, slug: 'phase-6-concurrency', name: 'Concurrency', part: 'Core library', topics: 17, pages: 2, pagesPlanned: 17},
       {n: 7, slug: 'phase-7-io-time-stdlib', name: 'I/O, time and the everyday stdlib', part: 'Application', topics: 13, pages: 0},
       {n: 8, slug: 'phase-8-build-dependencies', name: 'The build: Maven, Gradle, dependencies', part: 'Application', topics: 12, pages: 0},
       {n: 9, slug: 'phase-9-spring-boot', name: 'Spring Boot and the web', part: 'Application', topics: 16, pages: 0},

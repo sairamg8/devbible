@@ -14,12 +14,12 @@ The deepest phase in the syllabus, on purpose. Virtual threads made concurrent
 Java simple to *write* — the model underneath is unchanged, and it is the
 model that pages you at 3am if you skip it.
 
-🚧 **0 of 17 written.**
+🚧 **2 of 17 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **Threads: lifecycle, interrupt** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Interruption is cooperative cancellation, not a kill switch |
-| 02 | **Platform vs virtual threads** *(not written yet)* | <span className="db-tier t-master">Master</span> | Millions of cheap threads; what changed and what didn't |
+| 01 | **[Threads: lifecycle, interrupt](01-threads-lifecycle-interrupt/README.md)** | <span className="db-tier t-understand">Understand</span> | Interruption is cooperative cancellation, not a kill switch |
+| 02 | **[Platform vs virtual threads](02-platform-vs-virtual-threads/README.md)** | <span className="db-tier t-master">Master</span> | Millions of cheap threads; what changed and what didn't |
 | 03 | **Race conditions** *(not written yet)* | <span className="db-tier t-master">Master</span> | Check-then-act, read-modify-write — the double-charge bug |
 | 04 | **`synchronized` and intrinsic locks** *(not written yet)* | <span className="db-tier t-master">Master</span> | What it guards; lock on private finals, not `this` |
 | 05 | **The Java Memory Model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Visibility, happens-before, `volatile` — the flag that never stops |
