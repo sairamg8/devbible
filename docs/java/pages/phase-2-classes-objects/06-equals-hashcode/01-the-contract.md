@@ -144,7 +144,7 @@ itself a bug — it merges things that must stay distinct.
 
 **Why is `==` on two `Integer`s a bug but on two enum constants correct?**
 Boxed integers are objects with value semantics (and a cache that makes `==`
-lie inconsistently — [phase 1, topic 02](../../phase-1-language-core/02-autoboxing-integer-cache.md));
+lie inconsistently — [phase 1, topic 02](../../phase-1-language-core/02-autoboxing-integer-cache/README.md));
 enum constants are canonical singletons, so identity and equality coincide by
 construction.
 

@@ -40,4 +40,4 @@ at construction time, not at use time.
 
 ---
 
-← Prev: [`final`](../12-final.md) · Next → [Casting and `instanceof` patterns](../14-casting-instanceof.md)
+← Prev: [`final`](../12-final.md) · Next → [Casting and `instanceof` patterns](../14-casting-instanceof/README.md)

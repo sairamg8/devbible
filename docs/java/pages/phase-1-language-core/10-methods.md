@@ -35,7 +35,7 @@ log("hello");        // log(String) — most specific applicable overload
 ```
 
 Contrast with overriding: which *override* runs is decided at runtime from
-the actual object ([Phase 2's dispatch topic](../phase-2-classes-objects/04-polymorphism-dispatch.md));
+the actual object ([Phase 2's dispatch topic](../phase-2-classes-objects/04-polymorphism-dispatch/README.md));
 which *overload* is targeted was fixed when the class compiled. A method
 that is both overloaded and overridden resolves in two steps: compile time
 picks the signature, runtime picks the implementation of that signature.
@@ -146,7 +146,7 @@ or on argument *order* of same-typed parameters compiles but reads as a trap.
 
 **Symptom:** the "wrong" overload runs — `log(Object)` although the variable holds a `String`
 **Cause:** overload choice is compile-time, from the static type of the expression, not the runtime object
-**Fix:** cast at the call site to select (`log((String) x)`), or collapse the overloads into one method that checks `instanceof` ([topic 14](14-casting-instanceof.md))
+**Fix:** cast at the call site to select (`log((String) x)`), or collapse the overloads into one method that checks `instanceof` ([topic 14](14-casting-instanceof/README.md))
 
 **Symptom:** "reference to method is ambiguous" appears after *adding* an overload — old code, new error
 **Cause:** the new overload ties with an existing one for "most specific" on some call shapes (classically two unrelated reference types and a `null`/lambda argument)
@@ -224,4 +224,4 @@ parameters" via mutable arguments don't survive review.
 
 ---
 
-← Prev: [Arrays](09-arrays.md) · Next → [`static`](11-static.md)
+← Prev: [Arrays](09-arrays.md) · Next → [`static`](11-static/README.md)

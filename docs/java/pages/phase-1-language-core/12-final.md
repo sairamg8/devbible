@@ -178,4 +178,4 @@ with `final`, composition usually models the constraint better.
 
 ---
 
-← Prev: [`static`](11-static.md) · Next → [`null` and `NullPointerException`](13-null-and-npe/README.md)
+← Prev: [`static`](11-static/README.md) · Next → [`null` and `NullPointerException`](13-null-and-npe/README.md)

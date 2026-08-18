@@ -31,7 +31,7 @@ int[][] grid = new int[3][4];          // array of arrays — NOT a matrix
   inconsistency is historical and permanent).
 - **Every element is initialized** to the component type's default (`0`,
   `0.0`, `false`, `null`) — unlike locals, exactly like fields
-  ([topic 01](01-primitives-vs-references.md)).
+  ([topic 01](01-primitives-vs-references/README.md)).
 - An array is an **object on the heap** — even `int[]`. The variable is a
   reference; `==` compares identity; it inherits `Object`'s methods and
   overrides none of them usefully.

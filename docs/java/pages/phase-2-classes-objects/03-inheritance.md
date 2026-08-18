@@ -36,7 +36,7 @@ public class AuditedRepository extends BaseRepository {
 - `super(...)` invokes a parent constructor; if you write no explicit
   `this(...)`/`super(...)`, the compiler inserts `super()` — which fails to
   compile when the parent has no accessible no-arg constructor. (Since 25,
-  statements may precede it — [class anatomy](01-class-anatomy.md).)
+  statements may precede it — [class anatomy](01-class-anatomy/README.md).)
 - `super.method()` calls the parent's implementation *statically* — no
   dispatch, and there is no `super.super`; skipping a level is not
   expressible, by design.
@@ -53,7 +53,7 @@ parent published:
 |---|---|---|
 | Return type | Same, or a **subtype** (covariant) | Callers were promised at least the parent type |
 | Checked exceptions | Same, **fewer, or narrower** — never broader | Callers only handle what the parent declared |
-| Visibility | Same or **wider** — never narrower | [Access can't be revoked](02-encapsulation-access.md) |
+| Visibility | Same or **wider** — never narrower | [Access can't be revoked](02-encapsulation-access/README.md) |
 | `static`? | No — statics don't override, they **hide** | Dispatch is per-instance; statics have no instance |
 
 Covariant returns are why `clone()`-style and builder APIs can return their
@@ -86,7 +86,7 @@ Only instance *methods* override. Two look-alikes bind statically:
   compile time — never do this deliberately.
 - **Static methods hide.** `Child.create()` vs `Parent.create()` are chosen
   by the reference's compile-time type. A "polymorphic static" does not
-  exist ([dispatch](04-polymorphism-dispatch.md) has the full model).
+  exist ([dispatch](04-polymorphism-dispatch/README.md) has the full model).
 
 `private` methods are outside all of this: not inherited, so a same-named
 `private` method in the subclass is an unrelated method, and parent-internal
@@ -107,7 +107,7 @@ class Child extends Parent {
 }
 ```
 
-Construction order ([class anatomy](01-class-anatomy.md)) runs the parent
+Construction order ([class anatomy](01-class-anatomy/README.md)) runs the parent
 constructor before the child's field initializers — but dispatch already
 targets the child's override, which reads uninitialized state. The rule:
 **constructors call only `private`, `static` or `final` methods.** Modern
@@ -209,4 +209,4 @@ that's composition.
 
 ---
 
-← Prev: [Encapsulation and access modifiers](02-encapsulation-access.md) · Next → [Polymorphism and dynamic dispatch](04-polymorphism-dispatch.md)
+← Prev: [Encapsulation and access modifiers](02-encapsulation-access/README.md) · Next → [Polymorphism and dynamic dispatch](04-polymorphism-dispatch/README.md)

@@ -118,7 +118,7 @@ edition:
 
 **Symptom:** an NPE appears as the *cause* of an `ExceptionInInitializerError`
 **Cause:** the null dereference happened inside a static initializer — the class failed to initialize
-**Fix:** the [static initialization page](../11-static.md) rules apply: find the first occurrence, keep static init trivial. Later uses of the class show only `NoClassDefFoundError`
+**Fix:** the [static initialization page](../11-static/README.md) rules apply: find the first occurrence, keep static init trivial. Later uses of the class show only `NoClassDefFoundError`
 
 ## Interview questions
 

@@ -63,7 +63,7 @@ file systems. Beyond the mechanics, the idiomatic choice that matters is
 **package-by-feature over package-by-layer**: `billing.invoice`,
 `billing.payment` — not `controllers`, `services`, `repositories` — because
 package-private (Phase 2's
-[encapsulation topic](../phase-2-classes-objects/02-encapsulation-access.md))
+[encapsulation topic](../phase-2-classes-objects/02-encapsulation-access/README.md))
 only encapsulates within a package, and a layer package makes everything
 public by necessity.
 
@@ -176,4 +176,4 @@ distinct from class names in imports and qualified references.
 
 ---
 
-← Prev: [Casting and `instanceof` patterns](14-casting-instanceof.md) · Next → [Precedence and evaluation order](16-precedence-evaluation.md)
+← Prev: [Casting and `instanceof` patterns](14-casting-instanceof/README.md) · Next → [Precedence and evaluation order](16-precedence-evaluation.md)

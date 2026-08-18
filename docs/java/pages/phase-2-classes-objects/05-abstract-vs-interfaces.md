@@ -143,7 +143,7 @@ pattern-matching `switch` possible over pure contracts.
 **Fix:** mandatory logic belongs in an abstract class's `final` method (template method), or in a wrapper the caller controls — interfaces cannot enforce behaviour
 
 **Symptom:** abstract class constructor "runs" although the class can never be instantiated
-**Cause:** every concrete subclass construction chains through it ([class anatomy](01-class-anatomy.md)) — abstract only forbids *direct* `new`
+**Cause:** every concrete subclass construction chains through it ([class anatomy](01-class-anatomy/README.md)) — abstract only forbids *direct* `new`
 **Fix:** expected; it is exactly where shared-state initialization belongs — and why abstract classes can enforce invariants interfaces cannot
 
 **Symptom:** `X.super.plan()` fails to compile from a class that transitively implements `X`
@@ -193,4 +193,4 @@ Prefer annotations unless the marker must appear where a *type* goes.
 
 ---
 
-← Prev: [Polymorphism and dynamic dispatch](04-polymorphism-dispatch.md) · Index: [Phase 2 — Classes and objects](README.md)
+← Prev: [Polymorphism and dynamic dispatch](04-polymorphism-dispatch/README.md) · Index: [Phase 2 — Classes and objects](README.md)
