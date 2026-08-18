@@ -168,4 +168,4 @@ RMI/JMX, session replication, old caches and queue payloads. Posture: filter imm
 
 ---
 
-← Prev: [UUID and randomness](07-uuid-and-randomness.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Localization basics](09-localization-basics.md)
+← Prev: [UUID and randomness](07-uuid-and-randomness.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → **09 · Localization basics** *(not written yet)*

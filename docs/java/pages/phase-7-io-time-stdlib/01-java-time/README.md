@@ -25,9 +25,9 @@ This topic runs deeper than one file. The chunks:
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[The type system](01-the-type-system.md)** | Why `Date`/`Calendar` are read-only legacy; `Instant`; what "local" really means; `ZonedDateTime` vs `OffsetDateTime`; the choosing table |
-| 2 | **[Machine vs calendar time](02-machine-vs-calendar-time.md)** | `Duration` vs `Period`; `plusDays` vs `plus(Duration)` across DST; gap and overlap resolution; storing future events; the meeting-moved-an-hour bug prevented |
-| 3 | **[`Instant` in the data, zones at the edge](03-instant-in-the-data.md)** | The architecture rule; JDBC 4.2 / `timestamptz` mapping; precision truncation; ISO-8601 at API boundaries; legacy conversions; the Java Time-Scale |
-| 4 | **[Formatting, parsing and testing](04-formatting-parsing-testing.md)** | `DateTimeFormatter` (immutable, thread-safe); ISO constants vs `ofPattern`; the pattern-letter traps; `ResolverStyle`; `Clock` injection; comparison traps |
+| 2 | **Machine vs calendar time** *(not written yet)* | `Duration` vs `Period`; `plusDays` vs `plus(Duration)` across DST; gap and overlap resolution; storing future events; the meeting-moved-an-hour bug prevented |
+| 3 | **`Instant` in the data, zones at the edge** *(not written yet)* | The architecture rule; JDBC 4.2 / `timestamptz` mapping; precision truncation; ISO-8601 at API boundaries; legacy conversions; the Java Time-Scale |
+| 4 | **Formatting, parsing and testing** *(not written yet)* | `DateTimeFormatter` (immutable, thread-safe); ISO constants vs `ofPattern`; the pattern-letter traps; `ResolverStyle`; `Clock` injection; comparison traps |
 
 ## Why this is a Master topic
 

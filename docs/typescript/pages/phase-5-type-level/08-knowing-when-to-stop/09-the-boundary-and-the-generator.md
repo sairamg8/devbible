@@ -177,7 +177,7 @@ type-level problem.
 When you want a shape checked without losing literal inference. An annotation replaces the
 inferred type; `satisfies` checks against the constraint and leaves inference alone, so a
 `routes` object keeps `"/users/:id"` as a literal while still being verified against
-`Record<string, \`/${string}\`>` — and the error lands on the offending property rather than
+``Record<string, `/${string}`>`` — and the error lands on the offending property rather than
 on the whole object. A large share of hand-written mapped types over config objects are this
 clause, written the long way.
 

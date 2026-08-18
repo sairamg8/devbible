@@ -202,4 +202,4 @@ Redirect every stream away from `PIPE`: `INHERIT` for tooling, `Redirect.to(file
 
 ---
 
-← Prev: **09 · Localization basics** *(not written yet)* · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Console I/O and Scanner](11-console-io-scanner.md)
+← Prev: **09 · Localization basics** *(not written yet)* · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → **11 · Console I/O and Scanner** *(not written yet)*

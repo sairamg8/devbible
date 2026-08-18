@@ -108,7 +108,7 @@ a leading `U+FEFF` stays in your first string.
 ## The small print that bites
 
 - **`read()` returns `int`, not `byte`/`char`** — `-1` is end-of-stream.
-  Cast to `char` *before* the `-1` check and EOF becomes `'￿'`, an
+  Cast to `char` *before* the `-1` check and EOF becomes `'\uFFFF'`, an
   infinite loop or a corrupt tail.
 - **`transferTo(out)`** (JDK 9) replaces the hand-rolled copy loop;
   `readAllBytes()`/`readNBytes()` slurp — fine for bounded payloads,
@@ -152,7 +152,7 @@ a leading `U+FEFF` stays in your first string.
 **Fix:** read the protocol's framing (length prefix, delimiter via `readLine`, fixed count via `readNBytes`); `readAllBytes` is for bounded inputs
 
 **Symptom:** `while ((c = (char) in.read()) != -1)` loops forever at end of file
-**Cause:** the cast happens before the comparison — `-1` became `'￿'`, which never equals `-1` after re-widening
+**Cause:** the cast happens before the comparison — `-1` became `'\uFFFF'`, which never equals `-1` after re-widening
 **Fix:** keep the result an `int`, compare to `-1`, cast only after the check
 
 **Symptom:** wrapping `System.in` in try-with-resources breaks all later console input in the process
