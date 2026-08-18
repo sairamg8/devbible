@@ -15,7 +15,7 @@ money, silent integer overflow. This phase is written against the reader who
 "knows Java" from another language and keeps getting cut by the 10% that
 differs.
 
-🚧 **12 of 16 written.**
+✅ **16 of 16 written — phase complete.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -27,14 +27,14 @@ differs.
 | 06 | **[Strings](06-strings/README.md)** | <span className="db-tier t-master">Master</span> | Immutability, the pool, `==` vs `equals`, `StringBuilder` in loops |
 | 07 | **[Text blocks](07-text-blocks.md)** | <span className="db-tier t-understand">Understand</span> | SQL and JSON without escape soup |
 | 08 | **[Control flow and `switch` expressions](08-control-flow-switch/README.md)** | <span className="db-tier t-master">Master</span> | Arrows, `yield`, exhaustiveness over enums |
-| 09 | **Arrays** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Fixed size, covariance and `ArrayStoreException` |
-| 10 | **Methods: overloading, varargs, pass-by-value** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Which overload runs on `null`; Java copies references |
+| 09 | **[Arrays](09-arrays.md)** | <span className="db-tier t-understand">Understand</span> | Fixed size, covariance and `ArrayStoreException` |
+| 10 | **[Methods: overloading, varargs, pass-by-value](10-methods.md)** | <span className="db-tier t-understand">Understand</span> | Which overload runs on `null`; Java copies references |
 | 11 | **[`static`](11-static.md)** | <span className="db-tier t-master">Master</span> | Class-level state — and why mutable static state ruins tests |
 | 12 | **[`final`](12-final.md)** | <span className="db-tier t-understand">Understand</span> | What it prevents on variables, methods, classes — not deep immutability |
 | 13 | **[`null` and `NullPointerException`](13-null-and-npe/README.md)** | <span className="db-tier t-master">Master</span> | Helpful NPEs, boundary defence, `Objects.requireNonNull` |
 | 14 | **[Casting and `instanceof` patterns](14-casting-instanceof.md)** | <span className="db-tier t-master">Master</span> | `if (o instanceof User u)` — the checked cast that ended a decade of boilerplate |
-| 15 | **Naming and idiom** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The conventions the ecosystem actually enforces |
-| 16 | **Precedence and evaluation order** *(not written yet)* | <span className="db-tier t-know">Know</span> | Read it, don't rely on it; parenthesize |
+| 15 | **[Naming and idiom](15-naming-idiom.md)** | <span className="db-tier t-understand">Understand</span> | The conventions the ecosystem actually enforces |
+| 16 | **[Precedence and evaluation order](16-precedence-evaluation.md)** | <span className="db-tier t-know">Know</span> | Read it, don't rely on it; parenthesize |
 
 ## Phase gate
 

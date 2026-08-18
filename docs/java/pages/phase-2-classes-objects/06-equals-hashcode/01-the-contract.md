@@ -88,7 +88,7 @@ the niche records fill with generated, contract-correct implementations
 - Domain values, strings, boxed numbers: `equals` (or better, let
   collections and `Objects.equals` call it).
 - Enum constants: `==` is correct *and* null-safe — each constant is a
-  singleton (topic [10 · Enums](../10-enums.md)).
+  singleton (topic [10 · Enums](../10-enums/README.md)).
 - `Objects.equals(a, b)` — the null-safe wrapper for code that may hold nulls.
 
 ## Gotchas

@@ -17,8 +17,8 @@ import Progress from '@site/src/components/Progress';
 | Phase | Topics | State |
 |---|---|---|
 | 0 · The platform and the JVM | 13 | ✅ 13/13 |
-| 1 · Language core | 16 | Planned |
-| 2 · Classes and objects | 15 | Planned |
+| 1 · Language core | 16 | ✅ 16/16 |
+| 2 · Classes and objects | 15 | 🚧 14/15 |
 | 3 · Generics and collections | 16 | Planned |
 | 4 · Lambdas, streams and `Optional` | 13 | Planned |
 | 5 · Exceptions and failure design | 8 | Planned |

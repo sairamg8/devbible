@@ -217,4 +217,4 @@ have the lifetime problem.
 
 ---
 
-← Index: [Phase 2 — Classes and objects](README.md) · Next → [Designing immutable classes](12-immutable-design.md)
+← Prev: [Enums](10-enums/README.md) · Index: [Phase 2 — Classes and objects](README.md) · Next → [Designing immutable classes](12-immutable-design.md)

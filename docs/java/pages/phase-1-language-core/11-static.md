@@ -221,4 +221,4 @@ at one.
 
 ---
 
-← Index: [Phase 1 — Language core](README.md) · Next → [`final`](12-final.md)
+← Prev: [Methods: overloading, varargs, pass-by-value](10-methods.md) · Index: [Phase 1 — Language core](README.md) · Next → [`final`](12-final.md)

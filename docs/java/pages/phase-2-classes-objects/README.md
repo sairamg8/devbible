@@ -16,7 +16,7 @@ your entity survives a `HashSet`, records as the default data carrier, sealed
 types as compiler-checked domain modelling, and immutability as the cheapest
 concurrency strategy you will ever buy.
 
-🚧 **12 of 15 written.**
+🚧 **14 of 15 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ concurrency strategy you will ever buy.
 | 06 | **[`equals`/`hashCode` — the contract](06-equals-hashcode/README.md)** | <span className="db-tier t-master">Master</span> | The entity that vanishes from a `HashSet` |
 | 07 | **[`toString`](07-tostring.md)** | <span className="db-tier t-understand">Understand</span> | For logs, not for parsing; no secrets, no lazy graphs |
 | 08 | **[Records](08-records/README.md)** | <span className="db-tier t-master">Master</span> | The default data carrier; compact constructors for validation |
-| 09 | **Sealed types + records + `switch` = ADTs** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `PaymentResult` with compiler-checked exhaustiveness |
+| 09 | **[Sealed types + records + `switch` = ADTs](09-sealed-adts.md)** | <span className="db-tier t-understand">Understand</span> | `PaymentResult` with compiler-checked exhaustiveness |
 | 10 | **Enums** *(not written yet)* | <span className="db-tier t-master">Master</span> | Fields, methods, per-constant behaviour — status machines |
 | 11 | **[Nested classes](11-nested-classes.md)** | <span className="db-tier t-understand">Understand</span> | Static vs inner — and the outer reference inner classes secretly hold |
 | 12 | **[Designing immutable classes](12-immutable-design.md)** | <span className="db-tier t-master">Master</span> | Final fields, defensive copies, no leaked `this` |
