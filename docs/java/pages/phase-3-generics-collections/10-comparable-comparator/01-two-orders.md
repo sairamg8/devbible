@@ -70,7 +70,7 @@ The `compareTo` contract (from the Javadoc, the same shape as
    `a.compareTo(b) == 0` iff `a.equals(b)`. Not required, but the Javadoc
    asks classes that break it to say so ("Note: this class has a natural
    ordering that is inconsistent with equals"), because sorted collections
-   behave oddly without it — **chunk 3** *(not written yet)* shows how.
+   behave oddly without it — [chunk 3](03-the-contract.md) shows how.
 5. `a.compareTo(null)` **throws `NullPointerException`** — unlike
    `equals(null)`, which returns `false`. Natural order has no place for
    `null`.

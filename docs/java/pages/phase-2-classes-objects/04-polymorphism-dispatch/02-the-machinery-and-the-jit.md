@@ -108,7 +108,7 @@ instead of a keyword.
 
 **Symptom:** `AbstractMethodError` (or `IncompatibleClassChangeError`) thrown at run time from a line that compiles fine
 **Cause:** linkage skew — the receiver's class was compiled against an older interface/superclass and implements no body for the resolved method; dispatch found an empty slot
-**Fix:** align dependency versions so implementors are compiled against the interface they run with; API authors add interface methods as `default`, not abstract ([topic 05](../05-abstract-vs-interfaces.md))
+**Fix:** align dependency versions so implementors are compiled against the interface they run with; API authors add interface methods as `default`, not abstract ([topic 05](../05-abstract-vs-interfaces/README.md))
 
 **Symptom:** a hot loop's performance drops sharply after a plugin/new implementation is loaded, with no code change in the loop
 **Cause:** the call site went from monomorphic to polymorphic — the JIT deoptimized its inlined guard and the site may now be megamorphic

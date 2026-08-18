@@ -95,7 +95,7 @@ mechanics). And one modifier interaction worth naming: interface members are
 implicitly `public` (fields also `static final`), so an interface offers no
 access design space at all below `public` — except `private` interface
 methods, which exist purely as helpers for `default` methods
-([abstract vs interfaces](../05-abstract-vs-interfaces.md)).
+([abstract vs interfaces](../05-abstract-vs-interfaces/README.md)).
 
 ## Gotchas
 

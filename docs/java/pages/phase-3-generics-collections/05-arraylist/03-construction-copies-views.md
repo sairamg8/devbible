@@ -43,7 +43,7 @@ the `List.of`-family immutable lists — cheap idempotent snapshotting.
 **Every copy here is shallow** — elements are shared references, never
 cloned. An "immutable" `List.of(mutableOrder)` is an unchangeable list of
 changeable things;
-**[Phase 2's immutable-design topic](../../phase-2-classes-objects/12-immutable-design.md)**
+**[Phase 2's immutable-design topic](../../phase-2-classes-objects/12-immutable-design/README.md)**
 is the other half of actual safety.
 
 ## `unmodifiableList` vs `copyOf` — view vs snapshot

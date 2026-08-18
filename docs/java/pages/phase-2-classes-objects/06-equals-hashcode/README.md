@@ -43,4 +43,4 @@ The phase deliverable requires an immutable `Money` record whose `equals`
 
 ---
 
-← Index: [Phase 2 — Classes and objects](../README.md) · Next → [toString](../07-tostring.md)
+← Prev: [Abstract classes vs interfaces](../05-abstract-vs-interfaces/README.md) · Index: [Phase 2 — Classes and objects](../README.md) · Next → [toString](../07-tostring.md)

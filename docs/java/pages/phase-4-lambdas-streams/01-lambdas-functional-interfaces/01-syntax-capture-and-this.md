@@ -174,7 +174,7 @@ actually retain:
 
 **Symptom:** checked exception "unhandled" inside a lambda that is one line long
 **Cause:** the target interface's method declares no `throws`; the lambda must satisfy *its* signature, not the enclosing method's
-**Fix:** chunk 3's patterns — wrap, sneak, or choose a throwing interface (`Callable`)
+**Fix:** [chunk 3](03-composition-checked-exceptions.md)'s patterns — wrap, sneak, or choose a throwing interface (`Callable`)
 
 ## Interview questions
 

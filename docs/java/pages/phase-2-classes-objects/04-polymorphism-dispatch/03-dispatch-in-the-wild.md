@@ -36,7 +36,7 @@ what-dispatches table predicting reality.**
 - **Template method / callbacks / listeners**: parent or framework code calls
   an abstract or interface method; your override supplies the behaviour.
   `JpaRepository`, servlet `doGet`, JUnit lifecycle — all this shape.
-  ([Topic 05](../05-abstract-vs-interfaces.md) covers when the
+  ([Topic 05](../05-abstract-vs-interfaces/README.md) covers when the
   skeleton should be an abstract class.)
 
 The practical consequences run in both directions. Because interception *is*
@@ -116,7 +116,7 @@ exhaustiveness the visitor only enforced by convention. The decision rule:
 
 **Symptom:** a listener registered in a constructor receives events before the object is fully built — intermittent NPEs under load
 **Cause:** registering `this` in the constructor leaks a partially-constructed object into code that will make virtual calls on it ([chunk 1's](01-the-two-machines.md) constructor rule, distributed)
-**Fix:** register after construction — factory method or lifecycle callback; [immutable design](../12-immutable-design.md) covers safe publication
+**Fix:** register after construction — factory method or lifecycle callback; [immutable design](../12-immutable-design/README.md) covers safe publication
 
 **Symptom:** visitor implementation compiles but the wrong `visit` overload runs for a subtype added later
 **Cause:** the `accept` methods weren't added to the new subtype, so it inherits a parent's `accept` — the callback's static type is the *parent*, and overload selection (compile-time) picks the parent handler

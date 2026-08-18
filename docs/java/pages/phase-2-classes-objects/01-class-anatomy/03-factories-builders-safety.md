@@ -188,7 +188,7 @@ Beyond callbacks reading default values, `final` fields' safe-publication
 guarantee (JLS §17.5) only covers objects published *after* construction
 completes. Early publication lets other threads see `final` fields
 unset — breaking the one guarantee immutable objects rely on for free
-thread-safety ([immutable design](../12-immutable-design.md)).
+thread-safety ([immutable design](../12-immutable-design/README.md)).
 
 **★ Where does construct-then-publish belong if not in the constructor?**
 In a static factory: construct fully, then register/start/publish the

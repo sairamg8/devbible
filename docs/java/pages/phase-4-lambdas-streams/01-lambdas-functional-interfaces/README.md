@@ -25,7 +25,7 @@ This topic runs deeper than one file. The chunks:
 |---|---|---|
 | 1 | **[Syntax, capture and `this`](01-syntax-capture-and-this.md)** | Every syntax form, target typing, effectively final capture, `this`-binding vs anonymous classes, how lambdas are compiled (`invokedynamic`) |
 | 2 | **[The `java.util.function` vocabulary](02-the-function-vocabulary.md)** | `Function`/`BiFunction`/`Supplier`/`Consumer`/`Predicate`/operators, the primitive variants and why they exist, `@FunctionalInterface`, writing your own |
-| 3 | ****Composition and checked exceptions** *(not written yet)*** | `andThen`/`compose`/`negate`/`and`/`or`, why checked exceptions and lambdas fight, and the patterns that resolve it |
+| 3 | **[Composition and checked exceptions](03-composition-checked-exceptions.md)** | `andThen`/`compose`/`negate`/`and`/`or`, why checked exceptions and lambdas fight, and the patterns that resolve it |
 
 ## Why this is a Master topic
 

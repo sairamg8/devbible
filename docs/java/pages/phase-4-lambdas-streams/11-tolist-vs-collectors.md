@@ -55,7 +55,7 @@ to a caller, rendered, serialized — and results should not be mutable.
 Unmodifiability turns "someone mutated my return value" from a latent
 aliasing bug into an immediate `UnsupportedOperationException` at the
 mutation site (the fail-fast argument made in
-[immutable design](../phase-2-classes-objects/12-immutable-design.md)).
+[immutable design](../phase-2-classes-objects/12-immutable-design/README.md)).
 
 Deviate in exactly two situations:
 

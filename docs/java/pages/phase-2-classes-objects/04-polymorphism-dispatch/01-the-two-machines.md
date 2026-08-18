@@ -101,7 +101,7 @@ class Child extends Parent {
 been assigned yet. The rule that follows: **never call an overridable method
 from a constructor** — call only `private`, `static`, or `final` methods.
 The same leak shape (passing `this` out of a constructor) is treated in
-[immutable design](../12-immutable-design.md).
+[immutable design](../12-immutable-design/README.md).
 
 ## Covariant returns and bridge methods
 

@@ -96,7 +96,7 @@ Watch the two `remove` overloads on `List<Integer>`:
   null) and unlike `Set`s (reject duplicates).
 - **It stores references, not copies.** Mutating an element mutates it for
   every holder of the list —
-  **[Phase 2's immutability topic](../../phase-2-classes-objects/12-immutable-design.md)**
+  **[Phase 2's immutability topic](../../phase-2-classes-objects/12-immutable-design/README.md)**
   is what makes list-sharing safe.
 - **Not thread-safe, and not "slightly" so.** Concurrent structural
   modification can lose updates or throw; even one writer with one reader

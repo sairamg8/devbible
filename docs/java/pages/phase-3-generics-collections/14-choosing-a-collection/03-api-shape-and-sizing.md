@@ -42,7 +42,7 @@ private final LinkedHashMap<K, V> lru = ...;              // access-order behavi
 
 Returning the internal list gives every caller a mutation handle on your
 state — the classic encapsulation leak
-([Phase 2, immutable design](../../phase-2-classes-objects/12-immutable-design.md)):
+([Phase 2, immutable design](../../phase-2-classes-objects/12-immutable-design/README.md)):
 
 | Hand out | Meaning | Cost |
 |---|---|---|

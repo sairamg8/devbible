@@ -179,4 +179,4 @@ variants exist only on the input side; multiple outputs are a record
 
 ---
 
-← Prev: [Syntax, capture and `this`](01-syntax-capture-and-this.md) · Index: [Lambdas and functional interfaces](README.md) · Next → **Composition and checked exceptions** *(not written yet)*
+← Prev: [Syntax, capture and `this`](01-syntax-capture-and-this.md) · Index: [Lambdas and functional interfaces](README.md) · Next → [Composition and checked exceptions](03-composition-checked-exceptions.md)

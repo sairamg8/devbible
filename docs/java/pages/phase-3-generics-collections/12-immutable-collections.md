@@ -148,7 +148,7 @@ compositional: an unmodifiable collection **of immutable elements**
 ([records](../phase-2-classes-objects/08-records/README.md), `String`,
 value types) — that combination is what you can share across threads and
 cache without thinking, and it's the shape
-[immutable design](../phase-2-classes-objects/12-immutable-design.md)
+[immutable design](../phase-2-classes-objects/12-immutable-design/README.md)
 argues for at the class level.
 
 ## Choosing

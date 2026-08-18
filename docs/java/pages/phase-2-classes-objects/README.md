@@ -24,14 +24,14 @@ concurrency strategy you will ever buy.
 | 02 | **[Encapsulation and access modifiers](02-encapsulation-access/README.md)** | <span className="db-tier t-master">Master</span> | Package-private: the underrated default for internals |
 | 03 | **[Inheritance](03-inheritance/README.md)** | <span className="db-tier t-master">Master</span> | `extends`, `super`, `@Override` — and why deep hierarchies rot |
 | 04 | **[Polymorphism and dynamic dispatch](04-polymorphism-dispatch/README.md)** | <span className="db-tier t-master">Master</span> | The mechanism every framework is built on |
-| 05 | **[Abstract classes vs interfaces](05-abstract-vs-interfaces.md)** | <span className="db-tier t-master">Master</span> | "Is-a with shared state" vs "can-do contract" |
+| 05 | **[Abstract classes vs interfaces](05-abstract-vs-interfaces/README.md)** | <span className="db-tier t-master">Master</span> | "Is-a with shared state" vs "can-do contract" |
 | 06 | **[`equals`/`hashCode` — the contract](06-equals-hashcode/README.md)** | <span className="db-tier t-master">Master</span> | The entity that vanishes from a `HashSet` |
 | 07 | **[`toString`](07-tostring.md)** | <span className="db-tier t-understand">Understand</span> | For logs, not for parsing; no secrets, no lazy graphs |
 | 08 | **[Records](08-records/README.md)** | <span className="db-tier t-master">Master</span> | The default data carrier; compact constructors for validation |
 | 09 | **[Sealed types + records + `switch` = ADTs](09-sealed-adts.md)** | <span className="db-tier t-understand">Understand</span> | `PaymentResult` with compiler-checked exhaustiveness |
 | 10 | **[Enums](10-enums/README.md)** | <span className="db-tier t-master">Master</span> | Fields, methods, per-constant behaviour — status machines |
 | 11 | **[Nested classes](11-nested-classes.md)** | <span className="db-tier t-understand">Understand</span> | Static vs inner — and the outer reference inner classes secretly hold |
-| 12 | **[Designing immutable classes](12-immutable-design.md)** | <span className="db-tier t-master">Master</span> | Final fields, defensive copies, no leaked `this` |
+| 12 | **[Designing immutable classes](12-immutable-design/README.md)** | <span className="db-tier t-master">Master</span> | Final fields, defensive copies, no leaked `this` |
 | 13 | **[Composition over inheritance](13-composition-over-inheritance.md)** | <span className="db-tier t-understand">Understand</span> | Delegate instead of extend; the `extends ArrayList` mistake |
 | 14 | **[Object lifecycle](14-object-lifecycle.md)** | <span className="db-tier t-know">Know</span> | Allocation, reachability, no destructors; `Cleaner`, not finalizers |
 | 15 | **[The rest of `Object`](15-rest-of-object.md)** | <span className="db-tier t-know">Know</span> | `clone` (broken by design), `getClass`, legacy `wait`/`notify` |

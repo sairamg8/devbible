@@ -26,7 +26,7 @@ This topic runs deeper than one file. The chunks:
 |---|---|---|
 | 1 | **[Two kinds of order](01-two-orders.md)** | `Comparable` and natural order, the `compareTo` contract, `Comparator` as external order, and which of the two each API consumes |
 | 2 | **[Building comparators](02-building-comparators.md)** | `Comparator.comparing`, `thenComparing`, `reversed`, `nullsFirst`/`nullsLast` — and the int-subtraction overflow bug in hand-written comparators |
-| 3 | ****The contract, and what breaks it** *(not written yet)*** | The TimSort `IllegalArgumentException`, what "inconsistent" concretely means, and consistency-with-`equals` — the `TreeSet` that disagrees with the `HashSet` |
+| 3 | **[The contract, and what breaks it](03-the-contract.md)** | The TimSort `IllegalArgumentException`, what "inconsistent" concretely means, and consistency-with-`equals` — the `TreeSet` that disagrees with the `HashSet` |
 
 ## Why this is a Master topic
 

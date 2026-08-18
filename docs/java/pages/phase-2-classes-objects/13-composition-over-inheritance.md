@@ -220,4 +220,4 @@ helpers" no longer justifies implementation coupling.
 
 ---
 
-← Prev: [Designing immutable classes](12-immutable-design.md) · Next → [Object lifecycle](14-object-lifecycle.md)
+← Prev: [Designing immutable classes](12-immutable-design/README.md) · Next → [Object lifecycle](14-object-lifecycle.md)

@@ -80,7 +80,7 @@ defenses, in order of preference:
 Same discipline inbound: a constructor storing a caller-supplied collection
 must defensive-copy it (`this.lines = new ArrayList<>(lines)` — or
 `List.copyOf` for immutables), or the caller retains a write handle into
-your object ([immutable design](../12-immutable-design.md) makes this rule
+your object ([immutable design](../12-immutable-design/README.md) makes this rule
 load-bearing).
 
 ## Why `public` fields lock your API
@@ -105,7 +105,7 @@ any caller, independent of every other field. Most fields don't want that
 contract:
 
 - Fields fixed at construction → `final`, no setter
-  ([immutable design](../12-immutable-design.md)).
+  ([immutable design](../12-immutable-design/README.md)).
 - Fields that change only as part of a *transition* → a named operation
   (`ship()`, `cancel(reason)`) enforcing the state machine, not `setStatus`.
 - Fields that genuinely are freely mutable properties (a UI bean's
