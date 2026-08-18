@@ -14,7 +14,7 @@ The deepest phase in the syllabus, on purpose. Virtual threads made concurrent
 Java simple to *write* — the model underneath is unchanged, and it is the
 model that pages you at 3am if you skip it.
 
-🚧 **11 of 17 written.**
+🚧 **14 of 17 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -32,9 +32,9 @@ model that pages you at 3am if you skip it.
 | 12 | **`ThreadLocal` and `ScopedValue`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Request context; the pool leak; the 25-era replacement |
 | 13 | **Deadlock, livelock, starvation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Lock ordering, and reading `BLOCKED` in a thread dump |
 | 14 | **Virtual-thread pinning** *(not written yet)* | <span className="db-tier t-know">Know</span> | What pinning is; `synchronized` pinning fixed in 24 (JEP 491) |
-| 15 | **Immutability as the first strategy** *(not written yet)* | <span className="db-tier t-master">Master</span> | Share nothing mutable and most hazards vanish |
-| 16 | **Coordination primitives** *(not written yet)* | <span className="db-tier t-know">Know</span> | `CountDownLatch`, `Semaphore`, `CyclicBarrier` |
-| 17 | **`wait`/`notify` — the legacy protocol** *(not written yet)* | <span className="db-tier t-know">Know</span> | Recognize it in old code; never start with it |
+| 15 | **[Immutability as the first strategy](15-immutability-first-strategy/README.md)** | <span className="db-tier t-master">Master</span> | Share nothing mutable and most hazards vanish |
+| 16 | **[Coordination primitives](16-coordination-primitives.md)** | <span className="db-tier t-know">Know</span> | `CountDownLatch`, `Semaphore`, `CyclicBarrier` |
+| 17 | **[`wait`/`notify` — the legacy protocol](17-wait-notify-legacy.md)** | <span className="db-tier t-know">Know</span> | Recognize it in old code; never start with it |
 
 ## Phase gate
 
