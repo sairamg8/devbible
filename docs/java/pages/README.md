@@ -24,7 +24,7 @@ import Progress from '@site/src/components/Progress';
 | 5 · Exceptions and failure design | 8 | ✅ 8/8 |
 | 6 · Concurrency | 17 | ✅ 17/17 |
 | 7 · I/O, time and the everyday stdlib | 13 | ✅ 13/13 |
-| 8 · The build: Maven, Gradle, dependencies | 12 | Planned |
+| 8 · The build: Maven, Gradle, dependencies | 12 | ✅ 12/12 |
 | 9 · Spring Boot and the web | 16 | Planned |
 | 10 · Data access | 14 | Planned |
 | 11 · Testing | 11 | Planned |

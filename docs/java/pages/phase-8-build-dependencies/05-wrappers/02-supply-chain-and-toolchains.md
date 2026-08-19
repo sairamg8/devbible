@@ -112,7 +112,7 @@ The wrapper structurally *cannot* do the toolchain's job. Gradle 9 requires
 Java 17 or newer to run, and the JVM it runs on is simply whichever one
 launched `./gradlew` — the wrapper downloads Gradle, not a JDK. That gap is
 exactly why toolchains exist as a separate mechanism, and it gets its own
-topic: **Toolchains** *(not written yet)*.
+topic: [Toolchains](../12-toolchains.md).
 
 ```kotlin
 // the two pins, side by side
@@ -223,4 +223,4 @@ regardless of who runs it.
 
 ---
 
-← Prev: [What a wrapper is, and why it is committed](01-what-a-wrapper-is.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → **Layout and multi-module projects** *(not written yet)*
+← Prev: [What a wrapper is, and why it is committed](01-what-a-wrapper-is.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Layout and multi-module projects](../06-layout-and-multi-module/README.md)

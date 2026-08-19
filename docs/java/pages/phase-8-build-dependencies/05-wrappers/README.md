@@ -45,9 +45,9 @@ This topic splits in two:
 - **[Gradle](../04-gradle/README.md)** — the wrapper is how `./gradlew` is
   invoked in every command on those pages; it also pins the Gradle version
   whose plugin compatibility and configuration-cache behaviour you rely on.
-- **Maven core** *(not written yet)* — topic 01. `./mvnw` runs exactly the
+- [Maven core](../01-maven-core/README.md) — topic 01. `./mvnw` runs exactly the
   lifecycle described there, with a version you chose.
-- **Toolchains** *(not written yet)* — topic 12. The complementary pin: the
+- [Toolchains](../12-toolchains.md) — topic 12. The complementary pin: the
   wrapper fixes the build tool, the toolchain fixes the JDK.
 - **[Version managers](../../phase-0-platform-jvm/09-version-managers.md)** —
   the developer-shell equivalent for JDKs, and why it is not a substitute for

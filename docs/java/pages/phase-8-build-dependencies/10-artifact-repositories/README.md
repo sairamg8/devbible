@@ -40,15 +40,15 @@ alone and build; you cannot make the security argument in 02 without it.
 
 - **[Phase 0 · Packages and the classpath](../../phase-0-platform-jvm/05-packages-classpath/README.md)**
   — the classpath is what these downloads end up on.
-- **Transitive dependencies and mediation** *(not written yet)* — mediation
+- [Transitive dependencies and mediation](../03-transitive-and-mediation/README.md) — mediation
   decides *which* version; this topic decides *where it comes from*.
-- **Versioning, updates and CVE scanning** *(not written yet)* — a repository
+- [Versioning, updates and CVE scanning](../07-versioning-updates-cve/README.md) — a repository
   manager is where an organisation answers "what do we depend on?".
-- **Wrappers** *(not written yet)* — the wrapper pins the build tool; the
+- [Wrappers](../05-wrappers/README.md) — the wrapper pins the build tool; the
   mirror pins where everything else comes from.
 
 ---
 
-← Prev: **Annotation processing** *(not written yet)* · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [`javac` flags that matter](../11-javac-flags/README.md)
+← Prev: [Annotation processing](../09-annotation-processing/README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [`javac` flags that matter](../11-javac-flags/README.md)
 
 Start here → [The local cache, remote repositories and Maven Central](01-local-remote-central.md)

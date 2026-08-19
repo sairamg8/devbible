@@ -192,4 +192,4 @@ The returned `MemorySegment` has length zero because the runtime can't know the 
 
 ---
 
-← Prev: [NIO channels and selectors](12-nio-channels-selectors.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md)
+← Prev: [NIO channels and selectors](12-nio-channels-selectors.md) · Index: [Phase 7 — I/O, time and the everyday stdlib](README.md) · Next → [Phase 8 — The build: Maven, Gradle and dependencies](../phase-8-build-dependencies/README.md)

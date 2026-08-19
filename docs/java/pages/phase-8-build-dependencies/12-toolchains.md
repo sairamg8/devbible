@@ -166,7 +166,7 @@ correct combination for a service that runs on Java 21 while the team develops
 on 25 is: wrapper pinning Gradle, toolchain 21 (so tests run on the real
 runtime), and `release` 21.
 
-Wrappers are covered in **Wrappers** *(not written yet)*; the short version is
+Wrappers are covered in [Wrappers](05-wrappers/README.md); the short version is
 that wrapper pins the build tool, toolchain pins the JDK, and neither implies
 the other.
 

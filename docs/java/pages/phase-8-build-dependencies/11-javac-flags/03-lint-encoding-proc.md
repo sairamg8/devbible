@@ -99,8 +99,7 @@ runs **only if some other option explicitly configures it** — discovery of a
 processor merely present on the classpath no longer silently switches
 processing on. `-proc:none` is therefore mostly a diagnostic tool now ("is
 Lombok/MapStruct responsible for this?") and a small speed-up for modules that
-have no processors. The mechanism itself belongs to **Annotation processing**
-*(not written yet)*.
+have no processors. The mechanism itself belongs to [Annotation processing](../09-annotation-processing/README.md).
 
 `-J` passes an option to the JVM running `javac` itself — `-J-Xmx2g` when the
 compiler runs out of heap on a very large module. Note that build tools do not

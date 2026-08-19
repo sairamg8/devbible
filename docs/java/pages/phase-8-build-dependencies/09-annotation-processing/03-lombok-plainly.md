@@ -203,4 +203,4 @@ setters, inheritance from a shared base class, and small conveniences like
 
 ---
 
-← Prev: [MapStruct and Spring's processors](02-mapstruct-and-spring.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → **Artifact repositories** *(not written yet)*
+← Prev: [MapStruct and Spring's processors](02-mapstruct-and-spring.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [Artifact repositories](../10-artifact-repositories/README.md)

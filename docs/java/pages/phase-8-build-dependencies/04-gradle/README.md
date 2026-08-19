@@ -51,18 +51,18 @@ This topic runs well past one file. The chunks:
 
 ## Where this connects
 
-- **Maven core** *(not written yet)* — topic 01. Gradle's model is defined
+- [Maven core](../01-maven-core/README.md) — topic 01. Gradle's model is defined
   here by contrast with Maven's; read that first if you have not.
-- **Dependency scopes** *(not written yet)* — topic 02. Gradle's
+- [Dependency scopes](../02-dependency-scopes/README.md) — topic 02. Gradle's
   configurations are the same problem with a finer-grained answer.
 - **[Wrappers](../05-wrappers/README.md)** — `./gradlew` is how everyone actually
   invokes Gradle, and it pins the Gradle version the graph is built with.
 - **[The classpath](../../phase-0-platform-jvm/05-packages-classpath/02-the-classpath.md)**
   — compile classpath vs runtime classpath is what the configurations are
   separating.
-- **Toolchains** *(not written yet)* — topic 12. Gradle needs Java 17+ to
+- [Toolchains](../12-toolchains.md) — topic 12. Gradle needs Java 17+ to
   *run*; that is independent of the JDK it *compiles with*.
 
 ---
 
-← Prev: **Transitive dependencies and mediation** *(not written yet)* · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [The model: a task graph, and two phases](01-the-model-and-the-phases.md)
+← Prev: [Transitive dependencies and mediation](../03-transitive-and-mediation/README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [The model: a task graph, and two phases](01-the-model-and-the-phases.md)

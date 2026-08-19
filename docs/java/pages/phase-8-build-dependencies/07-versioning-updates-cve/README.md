@@ -49,7 +49,7 @@ December 2021 because they could not answer a simple question fast enough.
   topic uses operationally.
 - **[Jar anatomy](../08-jar-anatomy/README.md)** — topic 08. Shading and fat jars are the
   reason a dependency you demonstrably ship can be invisible to a scanner.
-- **Artifact repositories** *(not written yet)* — topic 10. A proxy repository
+- [Artifact repositories](../10-artifact-repositories/README.md) — topic 10. A proxy repository
   is where an organisation gets a chokepoint it can inventory and block at.
 - **[The release model](../../phase-0-platform-jvm/03-release-model.md)** —
   the JDK's own versioning and LTS cadence is the same problem solved with an

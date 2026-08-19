@@ -46,7 +46,7 @@ investigation, the third breaks your afternoon.
   — `--release` also governs which JDK-internal packages you can reach.
 - **[12 · Toolchains](../12-toolchains.md)** — `--release` pins the API level,
   a toolchain pins the actual compiler binary; you usually want both.
-- **Annotation processing** *(not written yet)* — `-proc:none` and
+- [Annotation processing](../09-annotation-processing/README.md) — `-proc:none` and
   `-proc:full` belong to that topic's mechanism.
 
 ---

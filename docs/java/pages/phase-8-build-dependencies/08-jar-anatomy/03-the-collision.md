@@ -49,8 +49,7 @@ found first and the loser is simply shadowed; the other is one archive
 where the loser was overwritten.
 
 The real fix is upstream. Settle the version with a BOM or an exclusion so
-only one copy is ever resolved — **Transitive dependencies and mediation**
-*(not written yet)* is where that decision lives. Shading is the fix only
+only one copy is ever resolved — [Transitive dependencies and mediation](../03-transitive-and-mediation/README.md) is where that decision lives. Shading is the fix only
 when you genuinely need two incompatible versions to coexist in one
 process, and then the tool is relocation, not luck.
 

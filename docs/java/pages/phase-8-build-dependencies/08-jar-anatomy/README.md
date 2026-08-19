@@ -63,7 +63,7 @@ copied from a Stack Overflow answer.
 - **[Phase 7 · JSON with Jackson](../../phase-7-io-time-stdlib/05-json-jackson/README.md)**
   — `findAndRegisterModules()` is `ServiceLoader`, so Jackson is where the
   services collision usually shows up first.
-- **Transitive dependencies and mediation** *(not written yet)* — the
+- [Transitive dependencies and mediation](../03-transitive-and-mediation/README.md) — the
   duplicate class that a fat jar exposes was already on the classpath;
   mediation is where it should have been settled.
 - **Phase 12 · Delivery, packaging and containers** *(not written yet)* —
@@ -71,4 +71,4 @@ copied from a Stack Overflow answer.
 
 ---
 
-← Prev: **Versioning, updates and CVE scanning** *(not written yet)* · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [The format](01-the-format.md)
+← Prev: [Versioning, updates and CVE scanning](../07-versioning-updates-cve/README.md) · Index: [Phase 8 — The build: Maven, Gradle and dependencies](../README.md) · Next → [The format](01-the-format.md)
