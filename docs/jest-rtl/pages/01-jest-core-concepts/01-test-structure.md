@@ -136,7 +136,7 @@ describe('Price Calculator Suite', () => {
 **Answer**: Jest loads the file synchronously, executing all top-level statements and `describe` function bodies to construct the test tree. Only after the tree is fully registered does the test runner execute hooks and test bodies in order: outer `beforeAll` → inner `beforeAll` → outer `beforeEach` → inner `beforeEach` → `test` body → inner `afterEach` → outer `afterEach` → inner `afterAll` → outer `afterAll`.
 
 ### ★ 2. What is the difference between `test.each` using array tables vs tagged template literals?
-**Answer**: Array tables (`test.each([[a, b, expected]])`) accept typed tuples and pass parameters as function arguments (`(a, b, expected)`). Tagged template literals (``test.each`amount | expected` ``) provide inline column headers and inject an object parameter (`({ amount, expected })`), improving readability for large parameter sets with named fields.
+**Answer**: Array tables (`test.each([[a, b, expected]])`) accept typed tuples and pass parameters as function arguments (`(a, b, expected)`). Tagged template literals (using `test.each` with a backtick-delimited header row, e.g. columns `amount | expected`) provide inline column headers and inject an object parameter (`({ amount, expected })`), improving readability for large parameter sets with named fields.
 
 ### 3. What happens if an error is thrown inside `beforeAll` vs `beforeEach`?
 **Answer**: If `beforeAll` throws, all tests inside that `describe` block are aborted immediately and marked as failed. If `beforeEach` throws, only the current test is failed, but Jest will still attempt to run subsequent tests (re-triggering `beforeEach` for the next test).
