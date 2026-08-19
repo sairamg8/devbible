@@ -146,6 +146,21 @@ during the constructor they are genuinely still null
 happen after full initialisation, that is what `@PostConstruct` is for — see
 **Topic 04 — Bean scopes and lifecycle** *(not written yet)*
 
+**Symptom:** the context fails at startup with a `BeanCreationException` wrapping an
+exception thrown from a bean's constructor
+**Cause:** the constructor is doing real work — a lookup, a connection, a validation —
+and that work failed
+**Fix:** this is usually the system behaving correctly, so fix the cause. If the work
+should not block startup, move it to `@PostConstruct` or an `ApplicationRunner` and
+decide deliberately whether failure there should stop the deploy
+
+**Symptom:** a Kotlin or Lombok-generated class works, but the equivalent hand-written
+class with two constructors fails to start
+**Cause:** the generated class has exactly one constructor, so Spring selects it
+implicitly; the hand-written one has several and none annotated
+**Fix:** annotate the intended constructor with `@Autowired`, and avoid adding a
+convenience no-arg constructor, which would be selected silently
+
 ## Interview questions
 
 **★ When do you need `@Autowired` on a constructor, and when is it noise?**
@@ -172,6 +187,26 @@ memory model's final-field freeze guarantee: any thread that obtains a reference
 to a safely-constructed object sees that field fully initialised, with no
 synchronisation. Field injection cannot use `final` at all, so you give up that
 guarantee on an object that is by definition touched by many threads at once.
+
+**★ What changes if one of several constructors is a no-arg default constructor?**
+The requirement to annotate goes away, and that is a trap rather than a
+convenience. The docs' rule is that `@Autowired` is needed when several
+constructors exist *and there is no primary or default constructor* — so adding a
+no-arg constructor makes the container stop complaining and quietly pick the
+empty one. Every dependency is then null, and the failure appears at first use
+rather than at startup. If you add a no-arg constructor to silence a
+constructor-selection error, you have converted a clear startup failure into a
+`NullPointerException` later.
+
+**★ Should a constructor do any work beyond assigning fields?**
+Almost never. Anything a constructor does becomes startup work and a startup
+failure mode, so a constructor that opens a connection or calls a downstream
+service makes your application's boot depend on that service's availability —
+usually not what was intended. There is a subtler reason too: the AOP proxy is
+applied after construction, so `@Transactional` or `@Cacheable` behaviour is
+absent during the constructor, and publishing `this` from a constructor lets
+other threads see a half-built object. Assign fields in the constructor and put
+real initialisation in `@PostConstruct`.
 
 **★ What does "fully initialized state" buy you that a startup-time null check would not?**
 It removes the state entirely rather than detecting it. A container check can

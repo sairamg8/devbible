@@ -178,6 +178,20 @@ rather than a visible change to a signature
 the constructor genuinely exists and tests can call it — but watch the field count in
 review, since the count is the design signal and it is now less prominent
 
+**Symptom:** `@Value` on a `static` field is always null
+**Cause:** injection works on instances; Spring populates fields of the bean instance
+and does not write static fields
+**Fix:** make it an instance field, or if the value really must be static, assign it
+from a `@Value`-annotated setter or from `@PostConstruct` — and treat the need as a
+sign that the consumer should have been a bean
+
+**Symptom:** a `@Value` expression using `#{...}` silently produces the literal string
+or fails in a confusing way
+**Cause:** `#{...}` is SpEL and `${...}` is a property placeholder — they are different
+resolvers, and the wrong one does not read your configuration at all
+**Fix:** use `${property.name:default}` for configuration. Reserve `#{...}` for the rare
+case that genuinely needs an expression
+
 ## Interview questions
 
 **★ When is setter injection the right answer?**
@@ -204,6 +218,26 @@ typo surfaces as a placeholder-resolution failure at startup at best. Typed
 `@ConfigurationProperties` makes the configuration a class — enumerable,
 validatable with Bean Validation, bindable in one place. `@Value` is fine for
 one or two strays.
+
+**★ `${...}` versus `#{...}` in `@Value` — what is the difference?**
+`${...}` is a *property placeholder*: it is resolved against the `Environment`,
+so it reads from `application.yml`, environment variables, command-line
+arguments and every other property source, and it supports a default after a
+colon — `${pricing.timeout:2s}`. `#{...}` is a *SpEL expression*, evaluated by the
+Spring Expression Language, which can call methods, read other beans and do
+arithmetic. The practical guidance is that configuration should be `${...}`;
+reaching for `#{...}` usually means logic has drifted into an annotation string
+where nothing can test it.
+
+**★ How do records interact with `@ConfigurationProperties`?**
+Very well, and it is the reason the pairing is worth knowing: a record's
+canonical constructor gives Boot exactly the constructor binding it wants, so the
+configuration object comes out immutable, fully populated, and with every
+property visible in one declaration. That is precisely the property `@Value`
+cannot offer, since `@Value` scatters the property names through string literals
+at each use site. So the honest split is `@Value` for a stray value or two, and a
+`@ConfigurationProperties` record for anything that is genuinely a group of
+settings.
 
 **★ Can a record be a Spring bean? Should it?**
 It can, and cleanly — a record's canonical constructor is its sole constructor,

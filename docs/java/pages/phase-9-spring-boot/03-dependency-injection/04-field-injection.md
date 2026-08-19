@@ -206,6 +206,20 @@ which the growth looks like a decision
 **Fix:** convert to constructor injection and let the signature carry the count — the
 reference explicitly treats that count as the smell to act on
 
+**Symptom:** an `@Autowired` static field is null and startup reported nothing
+**Cause:** injection targets instances; static fields are never populated, and there is
+no unsatisfied-dependency error to raise
+**Fix:** make the consumer a bean and inject normally. Assigning a static from an
+instance setter works but leaves a race between construction and first static read
+
+**Symptom:** converting a class from field to constructor injection suddenly produces a
+circular-dependency failure at startup
+**Cause:** the cycle was always there — field injection allowed it by separating
+construction from wiring, so nothing ever reported it
+**Fix:** treat it as the finding it is and break the cycle
+([Breaking the cycle](09-breaking-the-cycle.md)); do not restore field injection to make
+the message go away
+
 ## Interview questions
 
 **★ Why is field injection considered a code smell?**
@@ -250,6 +264,25 @@ constructed object's final fields are visible fully initialised to every thread
 without synchronisation. Spring beans are singletons shared across all request
 threads, so this is a real property to give up, and what you get in its place is
 a mutable field on a shared object.
+
+**★ `@Autowired` on a `static` field — what happens?**
+Nothing, silently. Spring injects into instances, so a static field is simply
+never written and stays null, with no warning at startup because there is no
+injection point the container considers unsatisfied. This is a particularly nasty
+variant of the field-injection problem: the usual startup-time safety net does not
+catch it, and the failure is a `NullPointerException` at first use. If a value is
+genuinely needed statically, the consumer should have been a bean.
+
+**★ How would you migrate a large codebase from field injection to constructor injection?**
+Incrementally, and class by class rather than with a bulk rewrite, because the
+migration surfaces real design problems you will want to handle deliberately —
+classes with a dozen dependencies, and cycles that only worked because field
+injection permitted them. A practical order is: convert the class, let the
+constructor reveal the dependency count, and split anything that is obviously
+overloaded; expect the cycles to appear as startup failures and treat each as a
+finding rather than something to suppress with
+`spring.main.allow-circular-references`. `@RequiredArgsConstructor` makes the
+mechanical part cheap, so the effort goes where it belongs.
 
 **★ Does Lombok's `@RequiredArgsConstructor` count as constructor injection?**
 Yes, genuinely — it generates a real constructor over the `final` fields, so the

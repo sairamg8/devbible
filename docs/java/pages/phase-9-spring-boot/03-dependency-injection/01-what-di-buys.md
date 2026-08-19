@@ -195,6 +195,21 @@ public BigDecimal total(TaxCalculator tax) {
 }
 ```
 
+**Symptom:** a class is annotated `@Service`, and `@Transactional` or `@Cacheable` on
+it does nothing in one code path
+**Cause:** that code path constructed the class with `new` instead of using the injected
+bean. A hand-constructed instance is not managed — no injection, and no proxy applying
+the advice
+**Fix:** inject the bean rather than constructing it. If the object genuinely must be
+created per call, it should not be carrying container-dependent annotations at all
+
+**Symptom:** a bean's collaborator is created inside a method with `new` "just for this
+one case", and it later needs configuration nobody can supply
+**Cause:** the dependency was welded in at the point of use, so the composition root has
+no say and no test can substitute it
+**Fix:** promote it to a constructor parameter. The signature growing is the honest
+signal that the class acquired a new dependency
+
 ## Interview questions
 
 **★ What does dependency injection actually give you, in one sentence, without using the words "loose coupling"?**
@@ -230,6 +245,29 @@ code path, which may be days later and in production. Moving failure earlier is
 the whole point of the arrangement, and it is why constructor injection (checked
 by the compiler and the container) is preferred to field injection (checked only
 by the container) and why lazy initialization is not the default.
+
+**★ Is dependency injection the same thing as the Dependency Inversion Principle?**
+No, and conflating them is common. The Dependency Inversion Principle is about
+*what* you depend on — high-level policy should depend on abstractions rather
+than on low-level details, so `InvoiceService` should be typed against an
+`InvoiceRepository` interface rather than against `JdbcInvoiceRepository`.
+Dependency injection is about *how* the dependency arrives — from outside,
+rather than being constructed internally. You can do DI while injecting a
+concrete class (no inversion at all), and you can honour inversion while
+building the graph by hand with no container. They travel together because
+inversion is what makes substitution useful and injection is what makes it
+possible.
+
+**★ Is a DI container the same as a service locator?**
+No, and the difference is the direction of the arrow. With injection, the class
+declares what it needs and something else supplies it — the dependency is in the
+signature and the class never names the container. With a service locator the
+class asks a global registry for what it wants, so the dependency is invisible
+from outside, the class is coupled to the locator, and a test must populate the
+registry rather than pass an argument. Spring can be used either way:
+constructor parameters are injection, `ApplicationContext.getBean(...)` in a
+service is a service locator, and that is why the second one is a smell in a
+class that could have declared the need instead.
 
 **★ Someone argues DI is unnecessary because you can just use static factories or singletons. What is the counter?**
 A static factory hard-codes the decision inside the consuming class again, so you
