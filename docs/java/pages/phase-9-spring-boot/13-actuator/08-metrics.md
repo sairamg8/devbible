@@ -123,7 +123,7 @@ an atomic add; the cost lives in your monitoring backend, where every distinct
 combination of name and tag values is a separate time series that is stored,
 indexed and paid for. That asymmetry is why the interesting failure mode in
 metrics is not overhead in your application — it is
-[cardinality](11-cardinality-and-observations.md), and it is severe enough to
+[cardinality](11-tags-filters-cardinality.md), and it is severe enough to
 have its own chunk.
 
 The second trade is that the facade constrains you to roughly the intersection

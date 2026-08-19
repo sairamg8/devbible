@@ -63,7 +63,7 @@ bean whose class is annotated `@Validated` and validates constrained method
 arguments on the way through.
 
 That mechanism is the right tool on a **service** bean
-([chunk 10](10-beyond-the-controller.md)). On a **controller** it is now a
+([chunk 10](13-beyond-the-controller.md)). On a **controller** it is now a
 trap, because the reference says plainly: *"In order to take advantage of the
 Spring MVC built-in support for method validation added in Spring Framework
 6.1, you need to remove the class level `@Validated` annotation from the
