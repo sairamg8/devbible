@@ -4,11 +4,17 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: Spring Boot 3.x on Java 25.** Documentation-validated — every page
-> names its sources on a `> Verified:` line (the Spring Boot and Spring
-> Framework reference docs, the Spring Security reference for topic 11).
-> No sandbox: pages carry Java/config code, never fabricated logs or HTTP
-> transcripts.
+> **Target: Spring Boot 4.1.0 (11 Jun 2026) on Spring Framework 7.0, JDK 25.**
+> ⚠️ Spring Boot **4** renamed `spring-boot-starter-web` to
+> **`spring-boot-starter-webmvc`**, moved to **Jakarta EE 11** and **Jackson 3**,
+> deprecated **`RestTemplate`** in favour of `RestClient`, and removed
+> `@MockBean`/`@SpyBean`. Almost every Spring tutorial online predates this —
+> these pages are written against 4.x and say so.
+> Documentation-validated — every page names its sources on a `> Verified:` line
+> (the Spring Boot and Spring Framework reference docs and release notes, the
+> Spring Security reference for topic 11).
+> No sandbox: pages carry Java/config code, never fabricated logs, startup
+> banners or HTTP transcripts.
 
 The framework nearly every Java job means when it says "Java". These pages
 teach the machinery — DI, auto-configuration, the request pipeline — because
