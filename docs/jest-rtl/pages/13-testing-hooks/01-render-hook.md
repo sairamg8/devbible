@@ -1,128 +1,151 @@
 ---
-title: "Testing Hooks: `renderHook()`, `result.current` & `rerender()`"
+title: "Testing Hooks: renderHook, result.current, rerender & Lifecycle Cleanups"
 sidebar_label: "Testing Hooks"
 sidebar_position: 1
 ---
 
-# 🧪 Testing Hooks: `renderHook()`, `result.current` & `rerender()`
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-08-19 against Testing Library documentation — [renderHook API](https://testing-library.com/docs/react-testing-library/api#renderhook).
+
+`renderHook` mounts custom React hooks inside an invisible test host component in the synthetic DOM tree, exposing `result.current` return values, props reactivity via `rerender()`, and teardown inspection via `unmount()`.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Custom hooks can't be called directly outside a component (React enforces the Rules of Hooks) — `renderHook()` solves this by mounting the hook inside a minimal, invisible **test host component** automatically, giving the test direct access to the hook's return value without needing to author a throwaway component by hand for every hook test.
+Because React enforces the Rules of Hooks (hooks can only execute within a React Function Component), `renderHook` synthesizes an internal component harness:
 
 ```
-renderHook(() => useCounter(0))
-        │
-        ▼
-Internally renders a hidden host component that calls useCounter(0) and exposes its result
-        │
-        ▼
-{ result, rerender, unmount } = renderHook(...)
-        │
-        ├── result.current   ──► the hook's CURRENT return value — re-read after each act()-wrapped update
-        ├── rerender(newArgs)  ──► re-invokes the hook with NEW arguments/props, simulating a parent re-render
-        └── unmount()             ──► triggers the hook's cleanup (e.g. a useEffect's return function)
+`renderHook(callback, { initialProps, wrapper })`:
+  1. Creates an internal Component `TestHook({ hookProps })`:
+     └── Executes `result.current = callback(hookProps)` during its render cycle.
+  2. Wraps `TestHook` in the optional `wrapper` component (Contexts, Providers).
+  3. Mounts the compound tree into jsdom.
+  4. Exposes control handles:
+     ├── `result.current`: Accesses the latest return value of the hook.
+     ├── `rerender(newProps)`: Triggers a component re-render with updated arguments.
+     └── `unmount()`: Unmounts the host component, firing `useEffect` return cleanups.
 ```
 
-### `act()` Wrapping for State-Updating Calls
-Just as with component testing, any call that triggers a state update inside the hook (calling a function the hook returned, like `result.current.increment()`) needs to happen inside `act()` (or a `user-event` call, which already wraps it) so React fully flushes the update before `result.current` is read again — reading `result.current` immediately after an un-wrapped update risks seeing a stale value.
-
-### `rerender()`: Testing a Hook's Reactivity to Changing Inputs
-A hook that behaves differently based on its arguments (e.g. `useDebounce(value, delay)`) needs its reactivity to **changing** arguments tested, not just its initial behavior — `rerender(newProps)` simulates the hook's host component receiving new props/arguments, exactly as a real consuming component's re-render would.
+### When to Test a Hook in Isolation vs Through a Component
+- **Standalone `renderHook`**: Reusable utility hooks with complex state transitions or external API subscriptions (e.g. `useDebounce`, `useLocalStorage`, `useMediaQuery`, `usePagination`).
+- **Component Test (`render(<MyComponent />)`)**: Domain-specific hooks tightly coupled to a single component's UI layout (e.g. `useCheckoutStepWizard`). Testing through the component verifies real user interactions and avoids brittle assertions.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Custom `useLocalStorage` Hook's Reactivity to a Changing Key Prop Going Untested Until a Real Bug Surfaced.
-A `useLocalStorage(key)` hook was only ever tested with a single, fixed key — its initial-load behavior was well covered, but nothing verified what happened if the `key` argument itself changed after the hook was already mounted (a real scenario: a user switching between different saved drafts, each with its own storage key). A production bug emerged where changing the key didn't correctly re-read from the new key's storage value. Adding a `renderHook` test using `rerender({ key: 'draft-2' })` after an initial render with `{ key: 'draft-1' }` reproduced the exact bug in isolation — the hook's dependency array was missing `key`, so it never re-ran its read logic when the key prop itself changed.
+**Scenario**: A memory leak in production caused by a custom event listener hook failing to detach on component unmount.
+
+A `useWindowScrollPosition` hook attaches a passive `window.addEventListener('scroll', ...)` in a `useEffect`. In an SPAs with hundreds of route transitions, unmounted components left dangling scroll listeners in memory, degrading browser performance. Using `renderHook` and asserting `unmount()` with `jest.spyOn(window, 'removeEventListener')` ensures that cleanup callbacks execute hermetically.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```typescript
-// useCounter.ts — the hook under test
-import { useState, useCallback } from 'react';
+// useLocalStorage.test.ts
+import { renderHook, act, waitFor } from '@testing-library/react';
+import { useLocalStorage } from './useLocalStorage';
 
-export function useCounter(initialValue: number) {
-  const [count, setCount] = useState(initialValue);
-  const increment = useCallback(() => setCount((c) => c + 1), []);
-  const reset = useCallback(() => setCount(initialValue), [initialValue]);
-  return { count, increment, reset };
-}
-```
-
-```typescript
-// useCounter.test.ts
-import { renderHook, act } from '@testing-library/react';
-import { useCounter } from './useCounter';
-
-test('increments the count', () => {
-  const { result } = renderHook(() => useCounter(0));
-
-  act(() => {
-    result.current.increment(); // a state-updating call — MUST be wrapped in act()
+describe('useLocalStorage Custom Hook Specifications', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    jest.clearAllMocks();
   });
 
-  expect(result.current.count).toBe(1); // re-read AFTER the act()-wrapped update has flushed
-});
+  test('initializes with default value and syncs to localStorage', () => {
+    const { result } = renderHook(() => useLocalStorage('theme_key', 'dark'));
 
-test('reset returns to the CURRENT initialValue, reflecting prop changes via rerender', () => {
-  const { result, rerender } = renderHook(({ initialValue }) => useCounter(initialValue), {
-    initialProps: { initialValue: 0 },
+    expect(result.current[0]).toBe('dark');
+    expect(window.localStorage.getItem('theme_key')).toBe(JSON.stringify('dark'));
   });
 
-  act(() => { result.current.increment(); });
-  expect(result.current.count).toBe(1);
+  test('updates stored value when setter is invoked within act()', () => {
+    const { result } = renderHook(() => useLocalStorage('user_pref', { volume: 80 }));
 
-  rerender({ initialValue: 10 }); // simulates the CONSUMING component re-rendering with a new prop
-  act(() => { result.current.reset(); });
-  expect(result.current.count).toBe(10); // reset correctly used the NEW initialValue, not the original 0
-});
-```
+    act(() => {
+      const setValue = result.current[1];
+      setValue({ volume: 100 });
+    });
 
-```typescript
-// Testing a hook's cleanup logic via unmount()
-test('cleans up an event listener on unmount', () => {
-  const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener');
-  const { unmount } = renderHook(() => useWindowResize());
+    expect(result.current[0]).toEqual({ volume: 100 });
+    expect(JSON.parse(window.localStorage.getItem('user_pref')!)).toEqual({ volume: 100 });
+  });
 
-  unmount();
+  test('handles dynamic key changes across re-renders with initialProps and rerender', () => {
+    const { result, rerender } = renderHook(
+      ({ key, fallback }: { key: string; fallback: string }) => useLocalStorage(key, fallback),
+      {
+        initialProps: { key: 'draft_1', fallback: 'initial text' },
+      }
+    );
 
-  expect(removeEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function));
+    expect(result.current[0]).toBe('initial text');
+
+    // Simulate parent component updating props
+    rerender({ key: 'draft_2', fallback: 'new draft text' });
+    expect(result.current[0]).toBe('new draft text');
+  });
+
+  test('unmount triggers cleanup and removes storage event listeners', () => {
+    const removeListenerSpy = jest.spyOn(window, 'removeEventListener');
+    const { unmount } = renderHook(() => useLocalStorage('sync_key', 'val'));
+
+    unmount();
+
+    expect(removeListenerSpy).toHaveBeenCalledWith('storage', expect.any(Function));
+    removeListenerSpy.mockRestore();
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Forgetting to Wrap a State-Updating Call in `act()`
+### Symptom: `Warning: An update to TestHook inside a test was not wrapped in act(...)`
+- **Cause**: Invoking a state-updating callback returned by the hook (e.g. `result.current.increment()`) directly without wrapping it in `act(() => { ... })`.
+- **Fix**: Wrap all synchronous state setter calls in `act(() => { result.current.setter(); })`. If the hook setter is asynchronous, await the condition using `await waitFor(() => expect(result.current.data).toBeDefined())`.
+
+### Symptom: `result.current` is destructured and becomes stale
+- **Cause**: Writing `const { count, increment } = result.current` at the top of the test. Destructuring extracts the primitive value at that single moment; subsequent state updates mutate `result.current`, not your local variable.
+- **Fix**: Always access values through the property path: `result.current.count`.
+
+### Symptom: Custom hook requires React Context but crashes when called in `renderHook`
+- **Cause**: The hook calls `useContext()` (e.g. `useAuth()`, `useTheme()`), but `renderHook` has no context providers.
+- **Fix**: Pass the wrapper component in options: `renderHook(() => useAuth(), { wrapper: AuthProvider })`.
+
+---
+
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. How does `renderHook` work internally, and why can you not call custom hooks directly in a test?
+**Answer**: React's fiber reconciler requires an active rendering component instance on the fiber stack to track hook state indices and effect queues. Invoking a hook outside a component throws `Invalid hook call: Hooks can only be called inside the body of a function component`. `renderHook` creates a lightweight host component (`TestHook`) that executes the hook callback on each render pass and writes the return value to `result.current`.
+
+### ★ 2. What is the difference between `act()` in hook tests vs component tests?
+**Answer**: In component tests using `@testing-library/user-event`, interactions automatically wrap event dispatches in `act()`. In custom hook tests, because you call JavaScript setter functions directly without DOM events (e.g. `result.current.toggle()`), you must manually wrap the setter in `act(() => { ... })` so React flushes microtask state transitions before assertions evaluate.
+
+### 3. How do you test custom hooks that perform asynchronous data fetching with `renderHook`?
+**Answer**: Use `waitFor` from `@testing-library/react` to poll `result.current`:
 ```typescript
-// ❌ WRONG: calling a state-updating function without act() risks reading result.current
-// BEFORE React has fully flushed the update — can produce a stale value or an act() warning
-result.current.increment();
-expect(result.current.count).toBe(1); // may read the OLD value, or trigger a warning
+const { result } = renderHook(() => useUserData('usr_1'));
+expect(result.current.isLoading).toBe(true);
 
-// ✅ CORRECT: wrap state-updating calls in act()
-act(() => { result.current.increment(); });
-expect(result.current.count).toBe(1);
+await waitFor(() => {
+  expect(result.current.isLoading).toBe(false);
+  expect(result.current.user).toEqual({ id: 'usr_1', name: 'Alex' });
+});
 ```
 
-### ⚠️ Pitfall 2: Testing Only a Hook's Initial Behavior, Never Its Reactivity to Changing Args
-```typescript
-// ❌ INCOMPLETE: only ever calling renderHook() ONCE with fixed initial arguments misses
-// bugs in how the hook responds to those arguments CHANGING later — exactly the class of
-// bug in the useLocalStorage scenario above
-const { result } = renderHook(() => useLocalStorage('draft-1'));
-// no rerender() with a different key ever tested
+### 4. How does `initialProps` and `rerender()` simulate prop changes in `renderHook`?
+**Answer**: `renderHook` accepts an `initialProps` object that is forwarded into the callback: `renderHook((props) => useMyHook(props), { initialProps: { val: 1 } })`. Calling `rerender({ val: 2 })` triggers a new render pass of the host component with the new props, verifying that `useEffect` and `useMemo` dependency arrays respond reactively.
 
-// ✅ CORRECT: use rerender() to verify the hook behaves correctly when its inputs change,
-// not just on its very first render
-const { result, rerender } = renderHook(({ key }) => useLocalStorage(key), { initialProps: { key: 'draft-1' } });
-rerender({ key: 'draft-2' }); // verifies REACTIVITY, not just initial mount behavior
-```
+---
 
-### ⚠️ Pitfall 3: Forgetting `unmount()` When Testing Cleanup-Dependent Hooks
-A hook registering a subscription, event listener, or timer in a `useEffect` needs its **cleanup function** (the effect's return value) verified too — a test that never calls `unmount()` never actually exercises that cleanup path at all, potentially missing a genuine memory-leak bug (a listener that's registered but never correctly removed) that would only surface as a real production issue after many mount/unmount cycles.
+## Where this connects
+
+- **Previous**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Mocking HTTP endpoints for data-fetching hooks.
+- **Next**: [14 · Accessibility Testing](../14-accessibility-testing/01-a11y-assertions.md) — Automated a11y assertions with `jest-axe`.
+- **Custom Render**: [11 · Custom Render](../11-custom-render/01-provider-wrapping.md) — Passing custom `wrapper` providers into `renderHook`.

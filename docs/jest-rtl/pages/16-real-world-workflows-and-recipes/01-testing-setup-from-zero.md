@@ -1,178 +1,175 @@
 ---
-title: "Wiring Up a Testing Environment From Zero in an Existing Project"
-sidebar_label: "Wiring Up a Testing Environment From Zero "
+title: "Testing Setup from Zero: Jest, SWC, RTL, MSW v2 & Vite Migration"
+sidebar_label: "Setup from Zero"
 sidebar_position: 1
 ---
 
-# 🧪 Wiring Up a Testing Environment From Zero in an Existing Project
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Jest 29.7 / 30.x, React 18/19, Testing Library React 16.x, and MSW 2.x documentation.
+
+Bootstrapping a production testing environment from zero requires incremental layer configuration — Jest runner, SWC fast transpilation, jsdom environment, React Testing Library, `jest-dom` matchers, and Mock Service Worker (MSW v2) — verifying each layer independently before adding the next.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-An existing, previously-untested project doesn't need Jest, RTL, `jest-dom`, and MSW configured all at once as one big-bang setup — each piece solves a genuinely separate problem, and adding them in **dependency order** means every intermediate step is itself a working, runnable state, not a half-configured pile you can't test until everything is done:
+Setting up a complete testing pipeline in dependency order prevents compounding configuration errors:
 
-```text
-1. Jest itself           ──► can run a test file at all, executes plain JS/TS assertions
-2. testEnvironment/       ──► can render REACT COMPONENTS (jsdom gives document/window;
-   transform pipeline          the transform makes JSX/TS actually compile for Jest)
-3. @testing-library/react ──► can query/interact with rendered component output
-4. jest-dom               ──► can write READABLE assertions (toBeInTheDocument(), not
-                                manual DOM property poking)
-5. MSW                    ──► can test components that actually FETCH data, without
-                                hitting a real network
 ```
-
-Each layer is independently testable the moment it's added — you can (and should) verify layer 1 works before adding layer 2, rather than writing config for all five and debugging a wall of errors with no idea which layer is actually broken.
+Layer 1: Jest CLI & SWC Transpiler  ──► Verifies plain TypeScript/JavaScript execution in Node.
+                                        │
+                                        ▼
+Layer 2: jsdom Environment & RTL    ──► Verifies synthetic DOM window mounting and React JSX rendering.
+                                        │
+                                        ▼
+Layer 3: @testing-library/jest-dom  ──► Upgrades assertions to accessible DOM matchers (`toBeInTheDocument`).
+                                        │
+                                        ▼
+Layer 4: Mock Service Worker v2     ──► Intercepts network socket streams at transport layer.
+```
 
 ---
 
-## 2. Real-World Engineering Scenario
+## 2. Step-by-Step Production Setup Recipe
 
-**Scenario**: A Two-Year-Old App With Zero Tests, Where a Recent Production Bug Justified Finally Adding Them.
-A team's app shipped for two years with no test suite at all — "we'll add tests eventually" never got prioritized against feature work, until a regression that a basic component test would have caught reached production and got noticed by customers. The team doesn't attempt "write tests for everything" as one initiative; they wire up the minimum working test infrastructure first (verified against ONE trivial test), then write a real test for the exact component that regressed, proving the setup works end-to-end on a real, non-trivial case before asking the rest of the team to start adding tests to their own PRs.
-
----
-
-## 3. Production-Grade Setup Sequence
-
+### Step 1: Install Core Dependencies
 ```bash
-# Step 1: Jest itself — verify it runs BEFORE adding anything React-specific
-npm install --save-dev jest @babel/preset-env @babel/preset-typescript @babel/preset-react babel-jest
+yarn add -D jest @types/jest @swc/core @swc/jest jest-environment-jsdom \
+  @testing-library/react @testing-library/jest-dom @testing-library/user-event msw
 ```
 
-```javascript
-// babel.config.js — needed for babel-jest to understand JSX/TS at all
-module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
-};
-```
+### Step 2: Configure `jest.config.ts`
+```typescript
+// jest.config.ts
+import type { Config } from 'jest';
 
-```javascript
-// A throwaway sanity-check test — confirms Jest itself works before adding ANY React pieces
-// src/sanity.test.ts
-test('jest runs', () => {
-  expect(1 + 1).toBe(2);
-});
-```
-
-```bash
-npx jest src/sanity.test.ts   # MUST pass before moving to Step 2 — if this fails, the
-                                # problem is Jest/Babel config, not React/RTL/anything downstream
-```
-
-```bash
-# Step 2: jsdom environment + React Testing Library — now render an ACTUAL component
-npm install --save-dev jest-environment-jsdom @testing-library/react @testing-library/dom
-```
-
-```javascript
-// jest.config.js — minimal, just enough for component rendering
-module.exports = {
+const config: Config = {
   testEnvironment: 'jsdom',
-  transform: { '^.+\\.[jt]sx?$': 'babel-jest' },
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss)$': 'identity-obj-proxy',
+  },
+  transform: {
+    '^.+\\.(t|j)sx?$': [
+      '@swc/jest',
+      {
+        jsc: {
+          transform: {
+            react: { runtime: 'automatic' },
+          },
+        },
+      },
+    ],
+  },
 };
+
+export default config;
 ```
 
-```tsx
-// A second sanity check — proves rendering + querying works before adding jest-dom's nicer matchers
-// src/Button.test.tsx
-import { render, screen } from '@testing-library/react';
-
-function Button({ label }: { label: string }) {
-  return <button>{label}</button>;
-}
-
-test('renders a button with the given label', () => {
-  render(<Button label="Save" />);
-  expect(screen.getByRole('button', { name: 'Save' })).toBeTruthy(); // plain assertion — no jest-dom yet
-});
-```
-
-```bash
-# Step 3: jest-dom — upgrades assertions from "toBeTruthy()" to purpose-built, readable matchers
-npm install --save-dev @testing-library/jest-dom
-```
-
+### Step 3: Global Test Setup (`src/setupTests.ts`)
 ```typescript
-// src/test-setup.ts — imported globally so EVERY test file gets jest-dom's matchers automatically
+// src/setupTests.ts
 import '@testing-library/jest-dom';
-```
-
-```javascript
-// jest.config.js — wire the setup file in
-module.exports = {
-  testEnvironment: 'jsdom',
-  transform: { '^.+\\.[jt]sx?$': 'babel-jest' },
-  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-};
-```
-
-```tsx
-// Now the SAME test can use a real jest-dom matcher — more readable, better failure messages
-expect(screen.getByRole('button', { name: 'Save' })).toBeInTheDocument();
-```
-
-```bash
-# Step 4: MSW — only needed once you're testing something that ACTUALLY fetches data
-npm install --save-dev msw
-```
-
-```typescript
-// src/mocks/server.ts — one shared MSW server for the whole suite's happy-path responses
-import { setupServer } from 'msw/node';
-import { http, HttpResponse } from 'msw';
-
-export const server = setupServer(
-  http.get('/api/users/:id', ({ params }) => {
-    return HttpResponse.json({ id: params.id, name: 'Alex' });
-  })
-);
-```
-
-```typescript
-// src/test-setup.ts — extend the SAME setup file from Step 3, don't create a second one
-import '@testing-library/jest-dom';
-import { server } from './mocks/server';
+import { server } from './test/mocks/server';
 
 beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
-afterEach(() => server.resetHandlers());
+afterEach(() => {
+  server.resetHandlers();
+  jest.clearAllMocks();
+});
 afterAll(() => server.close());
+
+// Polyfill missing jsdom window APIs
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 3. Side-by-Side: Jest vs Vite/Vitest Equivalent
 
-### ⚠️ Pitfall 1: Configuring All Five Layers Before Running a Single Test
-Writing the complete `jest.config.js` (transform, moduleNameMapper, MSW, coverage thresholds) up front, THEN running tests for the first time, means any failure could be caused by any of five independent pieces — debugging becomes guesswork. Verifying each layer in isolation (Step 1's plain sanity test, Step 2's render-only test) before adding the next means a failure always has exactly one new suspect: whatever you just added.
+If your application uses Vite, the equivalent `vitest.config.ts` setup shares the same `setupTests.ts` and test code:
 
-### ⚠️ Pitfall 2: Skipping Straight to MSW for a Component That Doesn't Need It
-```tsx
-// ❌ OVER-ENGINEERED: this component takes data as a prop — it never fetches anything itself,
-// so there's no network activity for MSW to intercept, and setting it up here adds nothing
-function UserCard({ user }: { user: User }) {
-  return <div>{user.name}</div>;
-}
-test('renders user name', () => {
-  render(<UserCard user={{ name: 'Alex' }} />); // no fetch happening — MSW is irrelevant here
-});
-
-// ✅ CORRECT: reserve MSW setup for components that ACTUALLY call fetch/axios themselves
-// (e.g. a component using useQuery/useEffect to load its own data) — not every component needs it
-```
-
-### ⚠️ Pitfall 3: One Test File's `jest.mock()` Silently Affecting Sibling Test Files
-Module-level mocks (`jest.mock('../api/client')`) are scoped per test **file**, not globally leaked across files — but a shared `test-setup.ts` `beforeEach`/`afterEach` IS global, applying to every test file in the suite. Putting something test-specific (a per-test-suite mock reset that only one feature's tests actually need) into the shared setup file affects every unrelated test file's timing/behavior — keep the shared setup file to genuinely universal concerns (jest-dom matchers, the MSW server lifecycle), and put anything narrower in the specific test file or a `describe` block's own `beforeEach`.
-
-### ⚠️ Pitfall 4: Forgetting `onUnhandledRequest: 'error'` and Getting False-Positive Passes
 ```typescript
-// ❌ RISKY: without this option, MSW's default behavior on an unmatched request is to
-// let it through (attempting a REAL network call in a test environment) or warn quietly —
-// a component silently fetching the WRONG url can pass a test that never actually
-// verified the right request was made
-server.listen(); // default onUnhandledRequest behavior — doesn't fail loudly on a mismatch
+// vitest.config.ts (Vite Alternative)
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// ✅ CORRECT: fail loudly on any request without a matching handler — this turns
-// "the component requested the wrong endpoint" into an immediate, visible test failure
-// instead of a silently-passing test that never proved what it looked like it proved
-server.listen({ onUnhandledRequest: 'error' });
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: { '@': path.resolve(__dirname, './src') },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/setupTests.ts'],
+    css: false,
+  },
+});
 ```
+
+---
+
+## 4. Gotchas & Senior Pitfalls
+
+### Symptom: `TypeError: expect(...).toBeInTheDocument is not a function`
+- **Cause**: `@testing-library/jest-dom` was not imported in `setupFilesAfterEnv` or inside the test file.
+- **Fix**: Add `import '@testing-library/jest-dom'` to your `src/setupTests.ts` file.
+
+### Symptom: Unhandled requests succeed or fail silently with timeout
+- **Cause**: MSW server started without `{ onUnhandledRequest: 'error' }`.
+- **Fix**: Always pass `{ onUnhandledRequest: 'error' }` to `server.listen()` in `setupTests.ts` to catch typos in endpoint URLs immediately.
+
+### Symptom: `SyntaxError: Cannot use import statement outside a module` on ESM dependencies
+- **Cause**: Jest runs in CommonJS by default and does not transpile `node_modules` ESM packages.
+- **Fix**: Add `transformIgnorePatterns: ['node_modules/(?!(nanoid|axios)/)']` in `jest.config.ts`.
+
+---
+
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. What is the execution sequence when Jest boots up and executes a test file?
+**Answer**:
+1. Jest CLI parses CLI arguments and loads `jest.config.ts`.
+2. A worker process spawns with the configured `testEnvironment` (`jsdom` creates global `window` and `document`).
+3. `setupFiles` run before the test framework is installed.
+4. Jest registers global APIs (`describe`, `test`, `expect`) and runs `setupFilesAfterEnv` (`setupTests.ts`).
+5. Transpiler (`@swc/jest`) compiles the test file.
+6. The test file executes synchronously to construct the test tree, then executes hooks and test bodies.
+
+### ★ 2. How do you migrate a test suite from Jest to Vitest?
+**Answer**:
+1. Replace `jest` with `vitest` in `package.json`.
+2. Configure `vitest.config.ts` with `test.globals: true` and `test.environment: 'jsdom'`.
+3. Reuse existing `@testing-library/react` tests without changes.
+4. Replace `jest.fn()` with `vi.fn()`, `jest.spyOn()` with `vi.spyOn()`, and `jest.mock()` with `vi.mock()`.
+5. Point `test.setupFiles` to the existing `setupTests.ts` file.
+
+### 3. Why should you avoid global mutable state in `setupTests.ts`?
+**Answer**: `setupTests.ts` executes in every test worker before each test file. Setting global mutable variables or mock implementations there can cause test pollution and race conditions across suites. Global setup files should only register matchers, initialize MSW listeners, and attach browser polyfills.
+
+### 4. What is the difference between `setupFiles` and `setupFilesAfterEnv`?
+**Answer**: `setupFiles` executes before Jest is bound to the global context (used for Node runtime polyfills). `setupFilesAfterEnv` executes after Jest globals (`expect`, `beforeAll`, `afterEach`) are available (used for `@testing-library/jest-dom` and MSW hooks).
+
+---
+
+## Where this connects
+
+- **Part 1 (Jest Core)**: [01 · Jest Core Concepts](../01-jest-core-concepts/01-test-structure.md) — Understanding test trees and lifecycle hooks.
+- **Part 2 (RTL)**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query priority order.
+- **Part 3 (MSW)**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Network boundary interception.

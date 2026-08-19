@@ -1,146 +1,168 @@
 ---
-title: "Mocking: `jest.fn()`, `jest.spyOn()`, `jest.mock()` & Fake Timers"
+title: "Mocking: jest.fn, jest.spyOn, Module Hoisting & Fake Timers"
 sidebar_label: "Mocking"
 sidebar_position: 1
 ---
 
-# 🧪 Mocking: `jest.fn()`, `jest.spyOn()`, `jest.mock()` & Fake Timers
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Jest 29.7 / 30.x documentation — [Mock Functions](https://jestjs.io/docs/mock-functions) and [Timer Mocks](https://jestjs.io/docs/timer-mocks).
+
+Jest provides deterministic isolation through standalone mock spies (`jest.fn`), existing method interception (`jest.spyOn`), hoisted module replacements (`jest.mock`), and controllable event loop timers (`jest.useFakeTimers`).
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Jest's mocking tools each replace a different **scope** of real behavior — a standalone function, one method on an otherwise-real object, or an entire module — and picking the wrong scope either under-isolates a test (real dependencies still run) or over-isolates it (mocking away behavior the test actually needed to exercise).
+Jest's mocking ecosystem operates across three distinct scopes of abstraction:
 
 ```
-jest.fn()           ──► a brand-new mock function, with NO prior implementation, tracking every call
-jest.spyOn(obj, 'method')  ──► WRAPS an EXISTING method — by default still calls through to the REAL
-                                  implementation, tracking calls, UNLESS you also call .mockImplementation()
-jest.mock('./module')        ──► replaces an ENTIRE module's exports — auto-mocked (every export becomes
-                                    a jest.fn()) unless a factory function or a __mocks__ file provides
-                                    a specific manual mock shape
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 1. Standalone Function (`jest.fn()`)                                      │
+│    Creates an isolated mock function with no original implementation.     │
+│    Tracks `.mock.calls`, `.mock.results`, `.mock.instances`.              │
+└───────────────────────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 2. Method Spy (`jest.spyOn(targetObject, 'methodName')`)                 │
+│    Wraps an existing method. By default, calls through to REAL logic.     │
+│    Replaced with `.mockImplementation()`, reversible via `.mockRestore()`.│
+└───────────────────────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 3. Module Replacement (`jest.mock('./modulePath', factoryFn)`)            │
+│    Hoisted by Babel/SWC to the TOP of the file (before imports execute).  │
+│    Replaces entire module exports across all importing files in suite.    │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
-### `jest.fn()`: Configuring Return Behavior
-```javascript
-const mockFn = jest.fn();
-mockFn.mockReturnValue(42);              // every call returns 42
-mockFn.mockImplementation((a, b) => a + b); // full custom logic per call
-mockFn.mockResolvedValue({ id: 1 });        // returns a Promise resolving to this value — for mocking async functions
-mockFn.mockRejectedValueOnce(new Error());     // the NEXT call only rejects; subsequent calls use the default behavior
-```
+### Mock Lifecycle Management: Clear vs Reset vs Restore
+Understanding mock cleanup prevents state leakage between tests:
 
-### `jest.spyOn()`: Preserving Real Behavior by Default
-Unlike `jest.fn()` (starts with no implementation at all), `jest.spyOn(console, 'error')` **still calls the real `console.error`** by default — it only adds call-tracking. This matters when a test wants to assert "was this called" WITHOUT changing the actual behavior (e.g. verifying an error was logged, while still letting the real logging happen) — calling `.mockImplementation()` on a spy is what actually replaces the real behavior, an explicit opt-in step, not the default.
+| Method | Clears Call History? | Resets Return Values / Implementations? | Restores Original Real Method? |
+|---|---|---|---|
+| `jest.clearAllMocks()` | ✅ Yes (`.mock.calls = []`) | ❌ No (keeps `mockReturnValue`) | ❌ No |
+| `jest.resetAllMocks()` | ✅ Yes | ✅ Yes (reverts to empty `jest.fn()`) | ❌ No |
+| `jest.restoreAllMocks()`| ✅ Yes | ✅ Yes | ✅ Yes (restores original `spyOn` implementation) |
 
-### `jest.mock()`: Auto-Mock vs Factory vs Manual `__mocks__`
-- **Auto-mock** (`jest.mock('./api')` with no factory) — every export becomes an empty `jest.fn()` automatically; useful when the test will configure each function's behavior itself per-test.
-- **Factory function** (`jest.mock('./api', () => ({ fetchUser: jest.fn() }))`) — explicit control over the mock's exact shape, inline in the test file.
-- **Manual `__mocks__` directory** — a sibling `__mocks__/api.js` file provides a reusable, shared mock implementation for a given module, automatically picked up by `jest.mock('./api')` with no factory needed, ideal for a mock shape reused across many test files.
-
-### Fake Timers: Controlling Time Deterministically
-`jest.useFakeTimers()` replaces the real `setTimeout`/`setInterval`/`Date` with controllable fake equivalents — `jest.advanceTimersByTime(1000)` synchronously fast-forwards fake time, letting a test verify debounce/throttle/retry-delay logic **instantly**, without actually waiting for real wall-clock time to pass.
+### Module Hoisting Mechanics
+When `jest.mock('./api')` is called, Jest's transform pipeline (Babel / SWC / ts-jest) hoists the call to the very top of the compiled file, before any `import` statement. Variables defined outside the factory function cannot be referenced inside `jest.mock()` unless prefixed with `mock` (e.g. `const mockUser = ...`).
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: Testing a Debounced Search Input Without the Test Actually Waiting 300ms.
-A search input's debounce logic waits 300ms after the last keystroke before firing an API call — testing this naively (with real timers) would mean the test suite actually pauses for 300ms per test, and testing edge cases (multiple rapid keystrokes resetting the timer) would require carefully-timed real delays, making tests slow and flaky. `jest.useFakeTimers()` combined with `jest.advanceTimersByTime(300)` let the test simulate "300ms has passed" **instantly and deterministically**, verifying the debounce fired exactly once (not once per keystroke) with zero actual wall-clock delay and zero timing-related flakiness.
+**Scenario**: Testing a debounced typeahead search service that queries an external analytics SDK and caches results.
+
+A search input debounces user keystrokes by 300ms, calls an external analytics tracker, and persists query results. If tested with real wall-clock timers and network calls, the test suite would be slow and flaky. `jest.useFakeTimers()` fast-forwards debounce timers synchronously in 0ms, while `jest.spyOn()` tracks analytics calls without making real HTTP requests.
 
 ---
 
 ## 3. Production-Grade Code Example
 
-```javascript
-// jest.fn() — configuring mock return behavior for a dependency-injected function
-test('processes items and reports success', async () => {
-  const mockSave = jest.fn().mockResolvedValue({ success: true });
-  const result = await processAndSave(['item1', 'item2'], mockSave);
+```typescript
+// searchService.test.ts
+import { searchService } from './searchService';
+import { analytics } from './analytics';
 
-  expect(mockSave).toHaveBeenCalledTimes(2);
-  expect(mockSave).toHaveBeenNthCalledWith(1, 'item1');
-  expect(result.success).toBe(true);
+// Partial module mock: preserve real module except for specific exports
+jest.mock('./apiClient', () => {
+  const actual = jest.requireActual('./apiClient');
+  return {
+    ...actual,
+    fetchSearchResults: jest.fn(),
+  };
 });
-```
 
-```javascript
-// jest.spyOn() — preserving real behavior while asserting a call happened
-test('logs an error when validation fails, without swallowing the real log output', () => {
-  const errorSpy = jest.spyOn(console, 'error'); // real console.error STILL runs, just also tracked
+import { fetchSearchResults } from './apiClient';
 
-  validateInput(''); // internally calls console.error('Invalid input')
+describe('Search Service & Timer Isolation', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    jest.useFakeTimers();
+  });
 
-  expect(errorSpy).toHaveBeenCalledWith('Invalid input');
-  errorSpy.mockRestore(); // restores the ORIGINAL, un-spied console.error afterward
-});
-```
+  afterEach(() => {
+    jest.useRealTimers();
+  });
 
-```javascript
-// jest.mock() with a manual __mocks__ file — reused across many test files
-// __mocks__/analytics.js
-export const trackEvent = jest.fn();
+  test('debounces search queries and logs analytics call', async () => {
+    const analyticsSpy = jest.spyOn(analytics, 'trackSearch');
+    const mockedFetch = fetchSearchResults as jest.MockedFunction<typeof fetchSearchResults>;
+    mockedFetch.mockResolvedValue([{ id: '1', title: 'React Guide' }]);
 
-// someComponent.test.js
-jest.mock('../lib/analytics'); // automatically picks up __mocks__/analytics.js — no factory needed here
-import { trackEvent } from '../lib/analytics';
+    // Trigger rapid typing
+    searchService.handleQueryChange('r');
+    searchService.handleQueryChange('re');
+    searchService.handleQueryChange('react');
 
-test('tracks a click event', () => {
-  renderAndClickButton();
-  expect(trackEvent).toHaveBeenCalledWith('button_clicked');
-});
-```
+    // Fast-forward 299ms: timer has not elapsed, fetch should NOT have fired
+    jest.advanceTimersByTime(299);
+    expect(mockedFetch).not.toHaveBeenCalled();
 
-```javascript
-// Fake timers — testing debounce logic without real wall-clock delay
-jest.useFakeTimers();
+    // Fast-forward 1ms more (300ms total): timer fires
+    jest.advanceTimersByTime(1);
+    expect(mockedFetch).toHaveBeenCalledTimes(1);
+    expect(mockedFetch).toHaveBeenCalledWith('react');
 
-test('debounces rapid calls into a single execution', () => {
-  const mockSearch = jest.fn();
-  const debouncedSearch = debounce(mockSearch, 300);
+    // Verify spy tracked method call
+    expect(analyticsSpy).toHaveBeenCalledWith({
+      query: 'react',
+      timestamp: expect.any(Number),
+    });
 
-  debouncedSearch('a');
-  debouncedSearch('ab');
-  debouncedSearch('abc'); // rapid calls — should only actually fire ONCE, for the LAST value
-
-  jest.advanceTimersByTime(300); // instantly simulates 300ms passing, no real delay
-
-  expect(mockSearch).toHaveBeenCalledTimes(1);
-  expect(mockSearch).toHaveBeenCalledWith('abc');
+    analyticsSpy.mockRestore();
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Forgetting `jest.spyOn()` Still Calls the Real Implementation by Default
-```javascript
-// ❌ SURPRISING: without .mockImplementation(), a spy on a function that makes a REAL network
-// call still makes that REAL call — spyOn alone does NOT isolate the test from real side effects
-const fetchSpy = jest.spyOn(apiClient, 'fetchUser'); // still hits the REAL API unless further configured!
+### Symptom: `ReferenceError: Cannot access 'variable' before initialization` inside `jest.mock()`
+- **Cause**: Babel/SWC hoists `jest.mock()` above top-level `const` definitions. Variables declared outside the factory cannot be accessed inside it.
+- **Fix**: Define mock data inline inside the `jest.mock()` factory, or prefix variable names with `mock` (e.g. `const mockUserData = ...`), which Jest's transform allows through hoisting boundaries.
 
-// ✅ CORRECT: explicitly override the implementation if the test needs to avoid the real behavior
-const fetchSpy = jest.spyOn(apiClient, 'fetchUser').mockResolvedValue({ id: 1, name: 'Alex' });
+### Symptom: `jest.spyOn(obj, 'method')` causes tests to execute real network/database calls
+- **Cause**: `jest.spyOn()` wraps the existing method but calls through to the original implementation by default.
+- **Fix**: Chain `.mockImplementation(() => ...)` or `.mockResolvedValue(...)` immediately to override real execution.
+
+### Symptom: `jest.advanceTimersByTime()` causes infinite event loop freeze
+- **Cause**: The component code contains `setInterval` or recursive `setTimeout` without an exit condition. Advancing time indefinitely keeps triggering synchronous iterations.
+- **Fix**: Use `jest.runOnlyPendingTimers()` or advance by an exact, finite millisecond interval.
+
+---
+
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. What is the difference between `jest.clearAllMocks()`, `jest.resetAllMocks()`, and `jest.restoreAllMocks()`?
+**Answer**:
+- `clearAllMocks`: Resets call counts, arguments, and recorded instances (`.mock.calls = []`), but retains mock implementations and return values.
+- `resetAllMocks`: Clears call history AND resets mock implementations back to `() => undefined`.
+- `restoreAllMocks`: Clears call history, resets implementations, AND restores original un-spied methods for spies created with `jest.spyOn()`.
+
+### ★ 2. Why does Jest hoist `jest.mock()` to the top of the file, and how do you mock only one export while keeping the rest real?
+**Answer**: Jest hoists `jest.mock()` so that the mock is registered in the module registry before any ES module `import` executes. To perform partial mocking, use `jest.requireActual('./modulePath')` inside the mock factory:
+```typescript
+jest.mock('./module', () => ({
+  ...jest.requireActual('./module'),
+  mockedExport: jest.fn(),
+}));
 ```
 
-### ⚠️ Pitfall 2: Forgetting to Reset Mocks Between Tests, Leaking Call History
-```javascript
-// ❌ RISKY: without resetting, a mock's accumulated call count/history from a PREVIOUS test
-// leaks into the next test — `toHaveBeenCalledTimes(1)` might unexpectedly see 2, from a prior test
-test('A', () => { mockFn(); expect(mockFn).toHaveBeenCalledTimes(1); });
-test('B', () => { mockFn(); expect(mockFn).toHaveBeenCalledTimes(1); }); // ❌ actually 2, if not reset!
+### 3. How do modern fake timers differ from legacy fake timers in Jest?
+**Answer**: Legacy fake timers mocked global `setTimeout`/`clearTimeout` objects directly in JavaScript. Modern fake timers (based on `@sinonjs/fake-timers`) mock the underlying Node.js `process.hrtime`, `performance.now()`, microtasks queue, and `Date` object, ensuring seamless support for Promises, async microtasks, and system clock advances.
 
-// ✅ CORRECT: reset mock state between tests, typically via a global beforeEach
-beforeEach(() => { jest.clearAllMocks(); }); // or configure clearMocks:true in jest.config.js globally
-```
+### 4. What happens if you spy on a method on an imported ES module namespace (`import * as api from './api'`)?
+**Answer**: In strict ESM, module namespace objects are immutable (sealed and frozen). Spying on `api.method` will throw `TypeError: Cannot assign to read only property`. In Babel/Jest CommonJS emulation, this works because namespaces are transpiled to plain objects, but under native ESM (`--experimental-vm-modules`), module mocking must be done via `jest.unstable_mockModule()` or dependency injection.
 
-### ⚠️ Pitfall 3: Forgetting to Restore Real Timers After `useFakeTimers()`
-```javascript
-// ❌ RISKY: leaving fake timers active across test files (if not properly scoped/restored)
-// can cause OTHER, unrelated tests relying on real setTimeout/Date behavior to hang or misbehave
-jest.useFakeTimers();
-// ... test using fake timers ...
-// missing jest.useRealTimers() afterward
+---
 
-// ✅ CORRECT: always restore real timers after a test/suite that used fake ones
-afterEach(() => { jest.useRealTimers(); });
-```
+## Where this connects
+
+- **Previous**: [02 · Assertions & Matchers](../02-assertions-and-matchers/01-the-expect-api.md) — Assertion API and `.mock.calls` inspection.
+- **Next**: [04 · Async Testing](../04-async-testing/01-handling-asynchrony.md) — Handling Promises, async/await, and microtask queues.
+- **Modern MSW Alternative**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Intercepting network requests at the transport layer instead of function mocking.

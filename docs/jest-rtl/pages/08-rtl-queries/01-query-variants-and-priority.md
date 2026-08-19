@@ -1,120 +1,143 @@
 ---
-title: "RTL Queries: `getBy`/`queryBy`/`findBy` & The Accessibility-First Priority Order"
+title: "RTL Queries: getBy, queryBy, findBy & Accessibility-First Priority"
 sidebar_label: "RTL Queries"
 sidebar_position: 1
 ---
 
-# 🧪 RTL Queries: `getBy`/`queryBy`/`findBy` & The Accessibility-First Priority Order
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Testing Library documentation — [About Queries](https://testing-library.com/docs/queries/about) and [Query Priority](https://testing-library.com/docs/queries/about#priority).
+
+DOM queries in React Testing Library are structured into three distinct execution variants (`getBy`, `queryBy`, `findBy`) arranged in an accessibility-first priority hierarchy that mirrors how assistive technologies interpret UI components.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Every RTL query exists in up to three variants, each with different behavior for "not found" and "found later" — picking the wrong variant produces either a confusing false failure or an assertion that can never actually fail.
+Every query category provides single-element and multi-element (`*AllBy*`) variants with strict failure semantics:
+
+| Query Type | 0 Matches | 1 Match | 2+ Matches | Asynchronous Retry? | Primary Use Case |
+|---|---|---|---|---|---|
+| `getBy...` | ❌ **Throws error** | ✅ Returns element | ❌ **Throws error** | ❌ No (Sync) | Element expected to exist on initial render |
+| `queryBy...` | ✅ **Returns `null`** | ✅ Returns element | ❌ **Throws error** | ❌ No (Sync) | Asserting element ABSENCE (`.not.toBeInTheDocument()`) |
+| `findBy...` | ❌ **Throws error** | ✅ Returns element | ❌ **Throws error** | ✅ **Yes (Async wait)** | Element appearing after network fetch or state settle |
+| `getAllBy...` | ❌ **Throws error** | ✅ Returns Array[1] | ✅ Returns Array[N] | ❌ No (Sync) | Expected multiple elements (e.g. list items) |
+| `queryAllBy...` | ✅ **Returns `[]`** | ✅ Returns Array[1] | ✅ Returns Array[N] | ❌ No (Sync) | Asserting zero or multiple elements |
+| `findAllBy...` | ❌ **Throws error** | ✅ Returns Array[1] | ✅ Returns Array[N] | ✅ **Yes (Async wait)** | Multiple elements appearing asynchronously |
+
+---
+
+### The Official Query Priority Hierarchy
+
+RTL prescribes a strict query priority order to maximize accessibility compliance:
 
 ```
-getBy*      ──► THROWS immediately if 0 or 2+ matches found — for elements EXPECTED TO EXIST right now
-queryBy*      ──► returns null if not found (does NOT throw) — for asserting ABSENCE of an element
-findBy*         ──► returns a PROMISE, internally POLLS/retries until found or timeout — for elements
-                       that appear ASYNCHRONOUSLY (after a fetch resolves, after a state update settles)
+1. Accessible to Everyone (Top Priority):
+   ├── getByRole(role, { name: /.../i })   ──► Semantic ARIA role + accessible name (buttons, links, dialogs, inputs)
+   ├── getByLabelText(/.../i)              ──► Form labels linked via <label htmlFor="..."> or aria-labelledby
+   ├── getByPlaceholderText(/.../i)        ──► Input placeholder (fallback when label absent)
+   ├── getByText(/.../i)                   ──► Non-interactive content (paragraphs, headings, banners)
+   └── getByDisplayValue(/.../i)           ──► Current value of a filled form element
 
-All* variants (getAllBy/queryAllBy/findAllBy) — same semantics, for MULTIPLE expected matches
+2. Semantic HTML5 / Media Queries:
+   ├── getByAltText(/.../i)                ──► Images, areas, input type="image" with alt text
+   └── getByTitle(/.../i)                  ──► Title attributes or SVG <title> tags
+
+3. Escape Hatches (Last Resort):
+   └── getByTestId('...')                  ──► Arbitrary data-testid attribute (no accessibility signal)
 ```
-
-### Why Three Variants, Not One
-Using `getBy*` to assert an element is **absent** would throw immediately (since `getBy*` throws on zero matches) — the wrong tool for that job; `queryBy*`'s null-return is specifically what makes "assert this does NOT exist" expressible at all (`expect(queryByText('Error')).not.toBeInTheDocument()`). Using `getBy*` for an element that appears **after** an async operation would fail immediately (the element doesn't exist yet at the moment `getBy*` runs, synchronously) — `findBy*`'s built-in polling/retry is what correctly waits for asynchronously-appearing content.
-
-### Query Priority: Accessibility as the Organizing Principle
-RTL's own documentation recommends a specific priority order, **not** arbitrary preference — it's designed so tests naturally verify accessibility as a side effect of how elements are queried:
-1. **`getByRole`** — matches by ARIA role + accessible name; the preferred default for almost everything, since it's exactly how assistive technology (and sighted users scanning for a "button labeled Submit") identifies interactive elements.
-2. **`getByLabelText`/`getByPlaceholderText`** — for form fields specifically, matching how a user identifies an input.
-3. **`getByText`** — for non-interactive content (a paragraph, a heading) where role-based querying doesn't apply.
-4. **`getByTestId`** — the escape hatch of last resort, matching an arbitrary `data-testid` attribute with **no** accessibility signal at all — appropriate only when no accessible query can reasonably express the target element.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Test Suite Riddled With `data-testid` Queries That Missed a Real Accessibility Regression.
-A component library's tests exclusively used `getByTestId` for every query — convenient to write, but entirely blind to accessibility. A refactor accidentally removed a button's `aria-label`, making it inaccessible to screen reader users — every existing `getByTestId('submit-button')` query kept passing, since the `data-testid` attribute was untouched, completely masking the regression. Migrating the highest-value tests to `getByRole('button', { name: /submit/i })` meant that same regression would have failed the test immediately — the accessible name was now literally part of what the query needed to match, making an accessibility break a test failure by construction, not something requiring separate, dedicated a11y tooling to catch.
+**Scenario**: Eliminating test fragility and catching an accidental accessibility regression in a user checkout flow.
+
+A payment card checkout used `getByTestId('pay-button')`. During a redesign, a developer swapped `<button>` for a non-semantic `<div onClick={...}>` without an ARIA role or keyboard listener. The `data-testid` test continued passing, but keyboard and screen-reader users could no longer complete purchases. Refactoring tests to `getByRole('button', { name: /pay \$49\.00/i })` instantly caught the regression because `<div>` does not compute to the `button` role in the accessibility tree.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```tsx
-// getBy vs queryBy vs findBy — matched correctly to what's actually being asserted
-import { render, screen } from '@testing-library/react';
+// CheckoutForm.test.tsx
+import React from 'react';
+import { render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { CheckoutForm } from './CheckoutForm';
 
-test('shows an error message immediately after invalid submission', async () => {
-  render(<LoginForm />);
+describe('CheckoutForm Query Priority & Variant Specifications', () => {
+  test('handles complete accessible form submission lifecycle', async () => {
+    const user = userEvent.setup();
+    render(<CheckoutForm />);
 
-  // getBy: the submit button exists RIGHT NOW, synchronously, on initial render
-  const submitButton = screen.getByRole('button', { name: /log in/i });
+    // 1. getByRole / getByLabelText: Form fields present synchronously on mount
+    const emailInput = screen.getByLabelText(/billing email/i);
+    const planSelect = screen.getByRole('combobox', { name: /subscription tier/i });
+    const submitButton = screen.getByRole('button', { name: /complete order/i });
 
-  // queryBy: asserting ABSENCE — using getBy here would THROW instead of letting the assertion run
-  expect(screen.queryByText(/invalid credentials/i)).not.toBeInTheDocument();
+    // 2. queryBy: Asserting absence of error banner on initial render
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
 
-  await userEvent.click(submitButton);
+    // 3. User interaction
+    await user.type(emailInput, 'alex@example.com');
+    await user.selectOptions(planSelect, 'pro');
+    await user.click(submitButton);
 
-  // findBy: the error message appears ASYNCHRONOUSLY, after a rejected API call resolves
-  const errorMessage = await screen.findByText(/invalid credentials/i);
-  expect(errorMessage).toBeInTheDocument();
-});
-```
+    // 4. findBy: Element appears asynchronously after network validation resolves
+    const successBanner = await screen.findByRole('status', { name: /order confirmed/i });
+    expect(successBanner).toBeInTheDocument();
 
-```tsx
-// Query priority in practice — getByRole first, data-testid only as an actual last resort
-function LoginForm() {
-  return (
-    <form>
-      <label htmlFor="email">Email</label>
-      <input id="email" type="email" />
-      <button type="submit">Log In</button>
-    </form>
-  );
-}
+    // 5. Scoped queries with within() on repeating list elements
+    const orderItems = screen.getAllByRole('listitem');
+    expect(orderItems).toHaveLength(2);
 
-test('renders accessible form elements', () => {
-  render(<LoginForm />);
-  screen.getByLabelText('Email');                        // ✅ priority 2 — form field, matched by label
-  screen.getByRole('button', { name: 'Log In' });           // ✅ priority 1 — interactive element, matched by role+name
-  // NOT: screen.getByTestId('login-form-submit-button')      ❌ last resort, unnecessary here — a real accessible query exists
+    const firstItem = within(orderItems[0]);
+    expect(firstItem.getByText(/pro subscription/i)).toBeInTheDocument();
+    expect(firstItem.getByRole('button', { name: /remove/i })).toBeInTheDocument();
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Using `getBy*` for an Element That Appears Asynchronously
-```tsx
-// ❌ WRONG: throws IMMEDIATELY — the element genuinely doesn't exist yet at the moment
-// this synchronous query runs, since the async operation hasn't resolved
-await userEvent.click(submitButton);
-const error = screen.getByText(/invalid credentials/i); // ❌ throws — too early, still resolving
+### Symptom: `TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Submit"`
+- **Cause**: The button contains an SVG icon or nested spans without an accessible name, or `aria-hidden="true"` was accidentally applied to a parent container.
+- **Fix**: Verify accessible name calculation in the DOM, ensure `aria-label="Submit"` or text content exists, and inspect the rendered tree using `screen.debug()`.
 
-// ✅ CORRECT: findBy* polls/retries until the element appears (or times out)
-const error = await screen.findByText(/invalid credentials/i);
-```
+### Symptom: `TestingLibraryElementError: Found multiple elements with the role "button"`
+- **Cause**: Using `getByRole('button')` when multiple buttons exist without narrowing by accessible name.
+- **Fix**: Narrow the query by accessible name using regex: `screen.getByRole('button', { name: /submit/i })`. If identical buttons exist in different table rows, scope with `within(tableRow).getByRole('button', { name: /delete/i })`.
 
-### ⚠️ Pitfall 2: Defaulting to `getByTestId` When an Accessible Query Would Work
-```tsx
-// ❌ AVOID (as the default): bypasses accessibility verification entirely, and couples the
-// test to an implementation detail (a testid attribute) rather than user-observable behavior
-screen.getByTestId('submit-btn');
+### Symptom: `expect(screen.getByRole('alert')).not.toBeInTheDocument()` crashes with an unhandled exception
+- **Cause**: `getBy*` throws immediately when 0 elements match, preventing the `.not.toBeInTheDocument()` assertion from running.
+- **Fix**: Always use `queryBy*` when asserting the absence of an element: `expect(screen.queryByRole('alert')).not.toBeInTheDocument()`.
 
-// ✅ PREFER: query the way a real user/assistive technology would identify the element
-screen.getByRole('button', { name: /submit/i });
-```
+---
 
-### ⚠️ Pitfall 3: Using `queryBy*` When `getBy*` Was Actually Appropriate, Masking a Real Failure
-```tsx
-// ❌ RISKY: queryBy* returns null instead of throwing — if the element SHOULD exist but a
-// bug means it doesn't, this produces a confusing "Cannot read property of null" a few
-// lines later, rather than a clear, immediate "Unable to find element" failure at the query itself
-const button = screen.queryByRole('button', { name: /submit/i });
-userEvent.click(button); // ❌ throws a confusing null-related error if button is actually missing
+## 5. Interview Questions & Deep Dives
 
-// ✅ CORRECT: use getBy* when the element is EXPECTED to exist — a clear, immediate failure
-// message beats a confusing downstream null-reference error
-const button = screen.getByRole('button', { name: /submit/i });
-```
+### ★ 1. What are the key differences between `getBy*`, `queryBy*`, and `findBy*`?
+**Answer**:
+- `getBy*`: Synchronous. Returns the matching DOM node. Throws an error immediately if 0 or >1 nodes match. Used for elements expected on initial render.
+- `queryBy*`: Synchronous. Returns the matching DOM node, or `null` if 0 nodes match (throws if >1 match). Used exclusively for asserting absence.
+- `findBy*`: Asynchronous. Returns a Promise that wraps `waitFor()` and `getBy*`. Polls the DOM until the element appears or the timeout (default 1000ms) expires. Used for elements appearing after async updates.
+
+### ★ 2. Why is `getByRole` preferred over `getByText` and `getByTestId`?
+**Answer**: `getByRole` queries elements using the browser's computed Accessibility API Tree (roles like `button`, `heading`, `dialog`, `checkbox` combined with accessible names). Unlike `getByText`, it verifies both semantic role and visibility. Unlike `getByTestId`, it provides a 1:1 guarantee that real screen reader and keyboard users can locate and operate the control.
+
+### 3. How does the `within()` utility work in React Testing Library?
+**Answer**: `within(domNode)` binds all standard RTL query methods (`getByRole`, `queryByText`, `findByLabelText`) to search strictly within the descendants of the specified `domNode` rather than global `document.body`. This disambiguates queries in complex UIs such as data tables, lists, and modal drawers.
+
+### 4. What is the difference between `{ exact: false }` and RegExp matching in queries?
+**Answer**: String matching with `{ exact: false }` performs case-insensitive substring matching (`screen.getByText('submit', { exact: false })`). Regular expressions (`screen.getByText(/submit/i)`) provide identical case-insensitivity with greater precision, allowing anchors (`/^submit$/i`), wildcards, and partial phrase matching.
+
+---
+
+## Where this connects
+
+- **Previous**: [07 · RTL Core Philosophy](../07-rtl-core-philosophy/01-guiding-principle.md) — Behavior vs implementation details.
+- **Next**: [09 · User Interaction](../09-user-interaction/01-simulating-input.md) — Simulating realistic input with `user-event` v14.
+- **Async Queries**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — How `findBy` delegates to `waitFor`.

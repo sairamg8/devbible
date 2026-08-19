@@ -1,118 +1,157 @@
 ---
-title: "Accessibility Testing: `jest-axe`, Accessible Name Matchers & Role-Based Queries"
+title: "Accessibility Testing: jest-axe, WCAG Auditing & Accessible Names"
 sidebar_label: "Accessibility Testing"
 sidebar_position: 1
 ---
 
-# 🧪 Accessibility Testing: `jest-axe`, Accessible Name Matchers & Role-Based Queries
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-08-19 against Deque axe-core & jest-axe documentation — [jest-axe](https://github.com/nickcolley/jest-axe).
+
+Automated accessibility testing combines `axe-core` rule engines (`jest-axe`) with targeted ARIA matchers (`toHaveAccessibleName`, `toHaveAccessibleDescription`) to detect WCAG compliance violations before code reaches production.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Accessibility testing in this stack operates at two distinct levels — automated, rule-based violation scanning (`jest-axe`) and targeted, specific ARIA-correctness assertions (`jest-dom`'s matchers) — plus a happy side effect from RTL's own query system.
+Accessibility testing in modern React operates across automated rule engines and semantic DOM matchers:
 
 ```
-jest-axe: render the component ──► axe.run(container) ──► scans against WCAG rule set
-                                        │
-                                        ▼
-                              toHaveNoViolations() ──► fails with a DETAILED report of
-                                                          which specific rule(s) were violated
-                                                          (missing alt text, insufficient contrast,
-                                                           a form control with no accessible label, ...)
-
-jest-dom matchers: toHaveAccessibleName() / toHaveAccessibleDescription()
-                       ──► asserts the COMPUTED accessible name/description an actual screen
-                             reader would announce — not just a raw attribute value
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 1. Automated WCAG Rule Scanning (`jest-axe`)                              │
+│    Executes `axe.run(container)` on the rendered HTML DOM tree.          │
+│    Evaluates 90+ accessibility rules (ARIA roles, form labels, headings). │
+│    `expect(results).toHaveNoViolations()` outputs detailed rule summaries.│
+└───────────────────────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 2. Computed Accessible Name Matchers (`@testing-library/jest-dom`)        │
+│    Computes the EXACT text a screen reader announces based on:            │
+│    `aria-labelledby` > `aria-label` > Native text content / Alt text.      │
+│    `expect(button).toHaveAccessibleName('Close dialog')`                  │
+│    `expect(input).toHaveAccessibleDescription('Password must be 8+ chars')│
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Automated Scanning vs Targeted Assertions: Different Coverage
-`jest-axe` catches a **broad class** of common, rule-expressible violations automatically (missing labels, poor contrast, invalid ARIA attribute usage) across an entire rendered component — but it cannot verify deeper, judgment-based correctness (whether a modal correctly traps focus, whether the reading order genuinely makes sense) the way a specific, deliberately-written assertion can. The two approaches are complementary, not substitutes for each other.
-
-### RTL's Query Priority as an Implicit A11y Check
-As covered in the [RTL queries doc](../08-rtl-queries/01-query-variants-and-priority.md), consistently using `getByRole` (the recommended default) means a test can only find an element **if it's genuinely identifiable by role and accessible name** — a component that's technically visible but has no accessible name at all simply cannot be queried this way, meaning a large fraction of accessibility regressions surface as query failures automatically, without any dedicated a11y-specific tooling required at all.
+### Automated Rules vs Manual Semantics
+- **What `jest-axe` Catches (30–50% of WCAG issues)**: Missing `<label htmlFor>`, duplicate IDs, buttons without text or `aria-label`, invalid ARIA parent-child relationships (`role="list"` without `role="listitem"`).
+- **What `jest-axe` Cannot Catch**: Keyboard focus traps, logical tab navigation order, screen reader context flow, and visual color contrast (since jsdom does not compute actual CSS pixel rendering).
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Redesigned Icon-Only Button Passing All Existing Tests While Being Completely Inaccessible.
-A design refactor replaced a text-labeled "Delete" button with an icon-only trash-can button, using `getByTestId('delete-button')` in the existing test — which still passed, since the `data-testid` attribute was preserved through the redesign, structurally blind to the fact that the button now had **no accessible name at all** for screen reader users. Running `jest-axe` against the component caught this immediately (a "button has no accessible name" rule violation), and switching the test's query to `getByRole('button', { name: /delete/i })` meant the test itself would have failed the moment the accessible name was lost — regardless of whether `jest-axe` was run, since the query itself depends on that accessible name existing.
+**Scenario**: A design refactor replacing text buttons with icon buttons, creating a severe accessibility regression.
+
+A navigation toolbar replaced `<button>Close</button>` with `<button><XIcon /></button>`. In unit tests using `getByTestId('close-button')`, the suite passed. However, screen readers announced "button, unlabeled", leaving visually impaired users unable to dismiss modals. Integrating `jest-axe` and asserting `toHaveAccessibleName('Close modal')` caught the defect, forcing the engineering team to supply `aria-label="Close modal"`.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```tsx
-// jest-axe — automated WCAG rule violation scanning
-import { render } from '@testing-library/react';
+// ModalDialog.test.tsx
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { axe, toHaveNoViolations } from 'jest-axe';
+import { ModalDialog } from './ModalDialog';
 
 expect.extend(toHaveNoViolations);
 
-test('SignupForm has no automatically-detectable accessibility violations', async () => {
-  const { container } = render(<SignupForm />);
-  const results = await axe(container);
-  expect(results).toHaveNoViolations();
-});
-```
+describe('ModalDialog Accessibility Specifications', () => {
+  test('passes automated axe-core audit in both closed and open states', async () => {
+    const { container } = render(
+      <ModalDialog isOpen={true} title="Delete Account" onClose={jest.fn()}>
+        <p>This action cannot be undone.</p>
+        <button type="button">Confirm</button>
+      </ModalDialog>
+    );
 
-```tsx
-// jest-dom accessible name/description matchers — targeted ARIA correctness
-test('delete button has a clear accessible name despite being icon-only', () => {
-  render(<IconButton icon={<TrashIcon />} ariaLabel="Delete item" />);
-  const button = screen.getByRole('button');
-  expect(button).toHaveAccessibleName('Delete item'); // verifies the COMPUTED name, not just a raw attribute
-});
+    // Run axe against rendered container
+    const results = await axe(container, {
+      rules: {
+        // Disable color-contrast in jsdom because layout engine is synthetic
+        'color-contrast': { enabled: false },
+      },
+    });
 
-test('form field has an accessible description linking its validation hint', () => {
-  render(<PasswordField />);
-  const input = screen.getByLabelText(/password/i);
-  expect(input).toHaveAccessibleDescription('Must be at least 8 characters'); // via aria-describedby
-});
-```
+    expect(results).toHaveNoViolations();
+  });
 
-```tsx
-// Role-based queries as an implicit accessibility check — this test FAILS if the accessible name is lost
-test('delete button is discoverable by its accessible role and name', () => {
-  render(<IconButton icon={<TrashIcon />} ariaLabel="Delete item" />);
-  // If a future redesign removes ariaLabel, THIS QUERY ITSELF fails immediately — no separate
-  // a11y-specific tooling run required to catch the regression
-  expect(screen.getByRole('button', { name: /delete item/i })).toBeInTheDocument();
+  test('validates computed accessible names and descriptions', () => {
+    render(
+      <div>
+        <label id="search-label" htmlFor="search-input">Global Search</label>
+        <input
+          id="search-input"
+          type="search"
+          aria-labelledby="search-label"
+          aria-describedby="search-hint"
+        />
+        <span id="search-hint">Press Enter to search documentation</span>
+      </div>
+    );
+
+    const input = screen.getByRole('searchbox');
+
+    // Assert computed accessibility tree attributes
+    expect(input).toHaveAccessibleName('Global Search');
+    expect(input).toHaveAccessibleDescription('Press Enter to search documentation');
+  });
+
+  test('icon-only buttons expose accessible names', () => {
+    render(
+      <button type="button" aria-label="Dismiss alert">
+        <svg aria-hidden="true" width="16" height="16"><path d="M0 0h16v16H0z" /></svg>
+      </button>
+    );
+
+    const button = screen.getByRole('button', { name: /dismiss alert/i });
+    expect(button).toHaveAccessibleName('Dismiss alert');
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Relying Solely on `getByTestId`, Structurally Blind to Accessibility Regressions
-As the scenario above demonstrates, a `data-testid`-based query survives an accessible-name-removing redesign completely unaffected — providing zero signal about the actual accessibility regression. Preferring `getByRole` (per the [RTL queries priority doc](../08-rtl-queries/01-query-variants-and-priority.md)) makes this exact class of regression a natural, automatic test failure.
+### Symptom: `jest-axe` throws `color-contrast` rule errors on synthetic elements
+- **Cause**: jsdom does not calculate layout geometry, stylesheets, or computed RGB pixel blending. `color-contrast` checks in jsdom can produce false positives.
+- **Fix**: Disable the `color-contrast` rule in `jest-axe` configuration and run color contrast audits in real browser testing (Playwright / Storybook a11y addon).
 
-### ⚠️ Pitfall 2: Treating a Passing `jest-axe` Scan as "Fully Accessible"
-```
-❌ OVERCONFIDENT: jest-axe catches automatically-detectable, rule-expressible violations —
-it CANNOT verify keyboard navigation order makes logical sense, whether focus is correctly
-trapped in a modal, or whether a screen reader's ANNOUNCED experience is genuinely coherent
-end-to-end. Automated tools estimate that they catch roughly 30-50% of real WCAG issues —
-a clean jest-axe run is necessary, not sufficient, evidence of genuine accessibility
+### Symptom: Passing `jest-axe` audit, but the modal does not manage focus or handle Escape key
+- **Cause**: Automated a11y tools only scan static HTML markup, not runtime event handlers or focus traps.
+- **Fix**: Write explicit interaction tests with `@testing-library/user-event` to assert that pressing `{Escape}` closes the modal and focus returns to the triggering button.
 
-✅ CORRECT: pair automated scanning with periodic REAL screen reader testing and manual
-keyboard-only navigation testing for anything genuinely accessibility-critical
-```
+### Symptom: Testing accessibility only on initial component mount
+- **Cause**: Scanning only the default state misses violations in error banners, dynamic form validation tooltips, or loading states.
+- **Fix**: Run `await axe(container)` across multiple render states (e.g. after validation errors appear).
 
-### ⚠️ Pitfall 3: Running `jest-axe` Against an Unmounted or Loading State Only
-```tsx
-// ❌ INCOMPLETE: scanning only the component's initial/default render state misses violations
-// that only exist in OTHER states — an error message that appears without an accessible
-// role, a loading spinner with no aria-live announcement, a modal's post-open focus state
-test('has no violations', async () => {
-  const { container } = render(<Form />); // only the DEFAULT state ever gets scanned
-  expect(await axe(container)).toHaveNoViolations();
-});
+---
 
-// ✅ CORRECT: scan meaningfully different states too — after an error, after a successful
-// submission, with a modal open — not just the component's very first render
-test('has no violations in the error state', async () => {
-  const { container } = render(<Form initialError="Invalid email" />);
-  expect(await axe(container)).toHaveNoViolations();
-});
-```
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. How does `jest-axe` work under the hood, and what are its limitations?
+**Answer**: `jest-axe` executes Deque's `axe-core` library by serializing the rendered jsdom container and evaluating it against WCAG 2.1 A/AA/AAA rules. Its primary limitation is that it evaluates the DOM statically in jsdom: it cannot test computed CSS bounding boxes (color contrast, overlapping text), screen reader live announcements (`aria-live` pacing), or dynamic keyboard focus trapping.
+
+### ★ 2. What is the difference between `toHaveAttribute('aria-label', 'x')` and `toHaveAccessibleName('x')`?
+**Answer**:
+- `toHaveAttribute('aria-label', 'x')` only verifies that a specific raw HTML attribute exists on the element.
+- `toHaveAccessibleName('x')` calculates the element's actual Accessible Name according to the W3C Accessible Name and Description Computation specification, resolving `aria-labelledby`, `aria-label`, `<label>`, native button text, and child `alt` attributes in precedence order.
+
+### 3. How should SVG icons inside buttons be configured for accessibility?
+**Answer**: SVGs should have `aria-hidden="true"` or `focusable="false"` to prevent screen readers from announcing raw SVG paths. The parent `<button>` must provide the accessible name via text content, `aria-label`, or `aria-labelledby`.
+
+### 4. What are `aria-live` regions and how do you test them in RTL?
+**Answer**: `aria-live` regions (`polite` or `assertive`) announce dynamic content changes (such as toast notifications or search results) to screen readers without shifting focus. You test them by asserting that the container element has `role="status"` or `role="alert"` and verifying the updated text appears.
+
+---
+
+## Where this connects
+
+- **Previous**: [13 · Testing Hooks](../13-testing-hooks/01-render-hook.md) — Testing custom hook states.
+- **Next**: [15 · Debugging Tests](../15-debugging-tests/01-diagnostic-tools.md) — Inspecting DOM trees and using testing-playground.
+- **Storybook Accessibility (`docs/storybook/pages/07-accessibility-testing/`)**: Real-browser automated accessibility audits.

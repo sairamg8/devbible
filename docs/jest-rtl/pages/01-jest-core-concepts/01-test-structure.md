@@ -4,29 +4,44 @@ sidebar_label: "Jest Core Concepts"
 sidebar_position: 1
 ---
 
-# 🧪 Jest Core Concepts: Test Structure, Hooks & Parameterization
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Jest 29.7 / 30.x documentation — [Jest Test API](https://jestjs.io/docs/api) and [Setup and Teardown](https://jestjs.io/docs/setup-teardown).
+
+Jest executes tests in two distinct phases: a synchronous registration phase where `describe` blocks construct an in-memory execution tree, followed by an asynchronous test execution phase where scoped lifecycle hooks cascade through suites.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Jest builds a **tree** of test structure at file-load time — every `describe`/`test` call registers itself into this tree **synchronously**, before any actual test body runs; the tests themselves execute only afterward, in a separate phase.
+When Jest loads a test file, it does not immediately execute test bodies. It runs the file from top to bottom, registering all `describe`, `test`, and lifecycle hooks into an execution tree.
 
 ```
-File load (SYNCHRONOUS — registers structure, runs NO test bodies yet):
+Phase 1: File Discovery (SYNCHRONOUS — registers execution tree, runs NO test bodies):
   describe('Cart', () => {
-    beforeAll(...)     // registered, runs ONCE before ALL tests in this describe block
-    beforeEach(...)      // registered, runs before EACH test in this describe block
-    test('adds item', () => {...})   // registered, body NOT yet executed
-    describe('nested', () => {...})    // nested describe — hooks CASCADE inward
+    console.log('1');                 // Executes IMMEDIATELY during discovery
+    beforeAll(...)                   // Registered
+    beforeEach(...)                  // Registered
+    test('adds item', () => {...})   // Registered (body untouched)
+    describe('nested', () => {
+      console.log('2');               // Executes IMMEDIATELY during discovery
+      test('removes item', () => {}) // Registered (body untouched)
+    })
   })
 
-Execution phase (AFTER the whole file has loaded):
-  beforeAll → beforeEach → test 1 body → afterEach → beforeEach → test 2 body → afterEach → afterAll
+Phase 2: Test Execution (Sequential runner loop):
+  Cart beforeAll
+    ├── Cart beforeEach → 'adds item' test body → Cart afterEach
+    └── Cart beforeEach → nested beforeEach → 'removes item' test body → nested afterEach → Cart afterEach
+  Cart afterAll
 ```
 
 ### Hook Scoping & Cascading
-`beforeEach`/`afterEach` declared in an **outer** `describe` run for **every** test in that block, including tests inside **nested** `describe` blocks — outer hooks always wrap inner ones (outer `beforeEach` before inner `beforeEach`, inner `afterEach` before outer `afterEach`), regardless of the physical order hooks are declared in relative to nested blocks.
+- Outer `beforeEach` hooks always execute **before** inner `beforeEach` hooks.
+- Inner `afterEach` hooks always execute **before** outer `afterEach` hooks (unwinding in reverse order).
+- Code written directly in `describe` callbacks (outside of hooks or test bodies) executes during **file collection**, not during test runs.
 
-### `test.each()`/`describe.each()`: Data-Driven Test Generation
+### Data-Driven Parameterization (`test.each`)
 ```javascript
 test.each([
   [1, 1, 2],
@@ -35,96 +50,104 @@ test.each([
   expect(a + b).toBe(expected);
 });
 ```
-Rather than hand-writing near-duplicate test bodies for each input combination, `test.each` generates one distinct, individually-reportable test **per row** of the provided data table — each row shows up as its own named entry in test output, not a single test looping internally (which would only report one pass/fail for the whole loop).
-
-### `test.skip`/`test.only`/`test.todo`
-`.skip` excludes a test from the run entirely (registered, but never executed); `.only` runs **only** the marked test(s) in that file, excluding all siblings (useful for focused debugging, dangerous if accidentally committed); `.todo` marks a planned-but-unwritten test, appearing in output as a reminder without needing a body at all.
+`test.each` generates a distinct, reportable test entry per row in the matrix. If row 2 fails, CI reports a discrete failure at row 2 with precise inputs rather than terminating an entire loop.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Validation Function Needing to Be Tested Against Dozens of Input/Output Combinations.
-A price-formatting utility needed correctness verification across many distinct input shapes (negative numbers, zero, very large numbers, different currency codes) — hand-writing 20+ near-identical `test('formats X correctly', () => {...})` blocks would be repetitive and hard to scan for coverage gaps. `test.each` with a data table of `[input, currency, expected]` tuples generated one clearly-named, individually-reportable test per row from a single, compact test definition — adding a new edge case meant adding one row to the table, not writing a whole new test block.
+**Scenario**: Testing a financial transaction calculator across multiple currencies and rounding edge cases.
+
+A currency formatting and tax utility must process zero values, decimal fractions, negative deductions, and multi-currency formatting. Rather than writing 15 individual `test()` blocks that duplicate setup logic, `test.each` defines a single parameterized specification tested against a matrix of inputs, currency codes, and expected output strings.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```javascript
-// priceFormatter.test.js
-import { formatPrice } from './priceFormatter';
+// priceCalculator.test.js
+import { calculateTotal, formatCurrency } from './priceCalculator';
 
-describe('formatPrice', () => {
-  let originalLocale;
+describe('Price Calculator Suite', () => {
+  let initialConfig;
 
   beforeAll(() => {
-    originalLocale = Intl.DateTimeFormat().resolvedOptions().locale;
+    initialConfig = { defaultCurrency: 'USD', taxRate: 0.08 };
   });
 
   beforeEach(() => {
-    jest.clearAllMocks(); // fresh mock state before EVERY test in this describe block
+    jest.clearAllMocks();
   });
 
-  test.each([
-    [0, 'USD', '$0.00'],
-    [19.99, 'USD', '$19.99'],
-    [-5, 'USD', '-$5.00'],
-    [1000000, 'USD', '$1,000,000.00'],
-    [19.99, 'EUR', '€19.99'],
-  ])('formatPrice(%f, %s) returns %s', (amount, currency, expected) => {
-    expect(formatPrice(amount, currency)).toBe(expected);
+  describe('calculateTotal with tax', () => {
+    test.each([
+      [100, 0.08, 108],
+      [50, 0.10, 55],
+      [0, 0.08, 0],
+      [19.99, 0.05, 20.99],
+    ])('subtotal $%f with %f tax rate calculates total $%f', (subtotal, taxRate, expected) => {
+      const result = calculateTotal(subtotal, taxRate);
+      expect(result).toBe(expected);
+    });
   });
 
-  describe('when currency is invalid', () => {
-    // NESTED describe — the outer beforeEach above STILL runs before each test in here too
-    test('throws a descriptive error', () => {
-      expect(() => formatPrice(10, 'INVALID')).toThrow('Unsupported currency: INVALID');
+  describe('formatCurrency localization', () => {
+    test.each`
+      amount    | currency | expected
+      ${100}    | ${'USD'} | ${'$100.00'}
+      ${100}    | ${'EUR'} | ${'€100.00'}
+      ${-50.5}  | ${'USD'} | ${'-$50.50'}
+    `('$amount in $currency formats as $expected', ({ amount, currency, expected }) => {
+      expect(formatCurrency(amount, currency)).toBe(expected);
+    });
+  });
+
+  describe('error handling on invalid currency', () => {
+    test('throws descriptive error on unsupported currency code', () => {
+      expect(() => formatCurrency(100, 'INVALID')).toThrow('Unsupported currency: INVALID');
     });
 
-    test.todo('handle lowercase currency codes gracefully'); // planned, not yet implemented
+    test.todo('support crypto currency symbols in future release');
   });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Committing `test.only` Accidentally, Silently Skipping an Entire Suite
-```javascript
-// ❌ DANGEROUS: if this is accidentally committed, EVERY other test in the file (and CI's
-// overall pass/fail signal) silently ignores every OTHER test entirely — CI can report
-// "all tests passing" while dozens of tests never actually ran at all
-test.only('one specific test I was debugging', () => { /* ... */ });
-test('a completely different, important test', () => { /* NEVER RUNS while .only exists above */ });
+### Symptom: CI passes with 1 test executed while 50 tests are skipped
+- **Cause**: A developer left `test.only()` or `describe.only()` in a file during local debugging. Jest ignores all other tests in the file.
+- **Fix**: Enable the ESLint rule `jest/no-focused-tests` in `.eslintrc.js` to fail pull request linting whenever `.only` is committed.
 
-// ✅ CORRECT: many teams lint-ban test.only/describe.only in committed code (eslint-plugin-jest's
-// no-focused-tests rule) specifically to catch this before it reaches CI
-```
+### Symptom: Parameterized tests fail intermittently across runs when using object payloads
+- **Cause**: Passing mutable objects in `test.each` rows. If one test case mutates the object, downstream row tests receive the modified object reference.
+- **Fix**: Use primitive row values or return fresh object instances inside each test using a factory function.
 
-### ⚠️ Pitfall 2: Assuming `test.each`'s Row Values Are Deep-Cloned Per Test
-```javascript
-// ❌ RISKY: if a row contains a shared, mutable object reference, and one test mutates it,
-// SUBSEQUENT tests using the same row data see the ALREADY-MUTATED object — test.each does
-// NOT automatically clone row values between test invocations
-const sharedConfig = { retries: 3 };
-test.each([[sharedConfig], [sharedConfig]])('test with %o', (config) => {
-  config.retries = 0; // mutates the SAME object every invocation shares
-});
+### Symptom: Console logs inside `describe` print before `beforeAll` runs
+- **Cause**: Top-level code inside `describe(...)` executes during the discovery/registration phase, before any lifecycle hooks execute.
+- **Fix**: Move all state initialization, network setups, or dynamic configuration into `beforeAll` or `beforeEach` blocks.
 
-// ✅ CORRECT: use a factory function per row, or ensure row data is either primitive or
-// genuinely intended to be shared/immutable across the generated tests
-```
+---
 
-### ⚠️ Pitfall 3: Relying on Hook Execution Order Across SIBLING (Not Nested) `describe` Blocks
-```javascript
-// ❌ WRONG ASSUMPTION: two SIBLING describe blocks' hooks have NO guaranteed interaction —
-// state set up in one describe's afterAll should never be assumed to affect a sibling
-// describe's beforeAll, even though Jest runs them in file order by default
-describe('Suite A', () => { afterAll(() => { globalThis.flag = true; }); test('...', () => {}); });
-describe('Suite B', () => { beforeAll(() => { expect(globalThis.flag).toBe(true); }); test('...', () => {}); }); // fragile
+## 5. Interview Questions & Deep Dives
 
-// ✅ CORRECT: each describe block should set up and tear down its OWN state independently,
-// never relying on execution order or leaked state from a sibling block
-```
+### ★ 1. What is the exact execution order of code in a Jest test file?
+**Answer**: Jest loads the file synchronously, executing all top-level statements and `describe` function bodies to construct the test tree. Only after the tree is fully registered does the test runner execute hooks and test bodies in order: outer `beforeAll` → inner `beforeAll` → outer `beforeEach` → inner `beforeEach` → `test` body → inner `afterEach` → outer `afterEach` → inner `afterAll` → outer `afterAll`.
+
+### ★ 2. What is the difference between `test.each` using array tables vs tagged template literals?
+**Answer**: Array tables (`test.each([[a, b, expected]])`) accept typed tuples and pass parameters as function arguments (`(a, b, expected)`). Tagged template literals (`test.each\`amount | expected\``) provide inline column headers and inject an object parameter (`({ amount, expected })`), improving readability for large parameter sets with named fields.
+
+### 3. What happens if an error is thrown inside `beforeAll` vs `beforeEach`?
+**Answer**: If `beforeAll` throws, all tests inside that `describe` block are aborted immediately and marked as failed. If `beforeEach` throws, only the current test is failed, but Jest will still attempt to run subsequent tests (re-triggering `beforeEach` for the next test).
+
+### 4. How does `test.concurrent` execute asynchronous tests differently from standard tests?
+**Answer**: Standard `test()` blocks execute serially within a file. `test.concurrent()` runs asynchronous tests concurrently within the same process worker. It requires shared resources (mocks, databases) to be strictly isolated per test to avoid race conditions.
+
+---
+
+## Where this connects
+
+- **Next**: [02 · The Expect API](../02-assertions-and-matchers/01-the-expect-api.md) — Assertion matchers and deep equality semantics.
+- **Mocking**: [03 · Jest Mock Functions](../03-mocking/01-jest-mock-functions.md) — Clearing and restoring spy state across lifecycle hooks.
+- **Node.js Phase 9 (`docs/nodejs/pages/phase-9-testing/`)**: Backend integration testing patterns using the same runner structure.

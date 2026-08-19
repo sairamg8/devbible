@@ -1,127 +1,182 @@
 ---
-title: "Custom Render: Wrapping Providers & Re-Exporting RTL Consistently"
+title: "Custom Render: Provider Wrappers, Redux, TanStack Query & Test Utils"
 sidebar_label: "Custom Render"
 sidebar_position: 1
 ---
 
-# 🧪 Custom Render: Wrapping Providers & Re-Exporting RTL Consistently
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Testing Library documentation — [Custom Render Setup](https://testing-library.com/docs/react-testing-library/setup#custom-render).
+
+A custom render utility encapsulates global React Contexts (Redux Store, TanStack QueryClient, MemoryRouter, ThemeProvider) into a single reusable test wrapper, guaranteeing test isolation by instantiating fresh state clients per test execution.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Any component relying on React Context (a Redux store, a router, a theme provider, a query client) will crash or behave incorrectly if rendered in isolation via plain RTL `render()` — a **custom render function**, wrapping the component tree in whatever providers the app actually needs, is the standard solution, written once and reused across every test file.
+When testing React components that consume Context hooks (`useSelector`, `useQuery`, `useNavigate`), rendering without providers throws fatal runtime errors:
 
 ```
-plain RTL render(ui)  ──► renders `ui` with NO surrounding context providers at all
-        │
-        ▼
-custom render(ui, options)  ──► renders `ui` WRAPPED IN: <Provider><Router><ThemeProvider><QueryClientProvider>
-                                    {ui}
-                                  </QueryClientProvider></ThemeProvider></Router></Provider>
+Direct Render (Unwrapped):
+  render(<UserProfile />) ──► Fails: "useQuery must be used within a QueryClientProvider"
+
+Custom Render Pipeline:
+  renderWithProviders(<UserProfile />, options)
+    ├── Instantiates FRESH Redux Store (with optional preloadedState)
+    ├── Instantiates FRESH TanStack QueryClient (retry: false, gcTime: 0)
+    ├── Instantiates MemoryRouter (with optional initialEntries: ['/profile/101'])
+    └── Passes compound <AllTheProviders /> component to RTL's `wrapper` option
 ```
 
-### Re-Exporting RTL: One Import Path for the Whole Test Suite
-The idiomatic pattern doesn't just define a custom `render` — it **re-exports everything else from RTL** (`screen`, `waitFor`, etc.) from the same custom test-utils module, so every test file imports from **one** consistent location (`../test-utils`, not `@testing-library/react` directly) — this is what makes it structurally difficult to accidentally use the plain, unwrapped `render()` in a test that actually needs providers, since the "wrong" import isn't even the one habitually reached for.
-
-### Configurable Initial State/Route
-A well-designed custom render accepts **options** (an initial Redux state, an initial route, a set of feature flags) so individual tests can render the same component tree under different starting conditions — without each test needing to hand-construct its own full provider wrapper from scratch.
+### The Single-Entrypoint Re-Export Pattern
+To enforce consistency across engineering teams, author a central `src/test/test-utils.tsx` file that exports your custom `renderWithProviders` method while re-exporting all standard utilities from `@testing-library/react` and `@testing-library/user-event`.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: Every New Test File Needing to Hand-Wrap Components in Four Different Providers, Until a Custom Render Existed.
-Before a custom render utility existed, every test file that touched a connected component had to manually wrap it in `<Provider store={...}><BrowserRouter><ThemeProvider theme={...}><QueryClientProvider client={...}>` — repetitive, error-prone (easy to forget one provider, or configure it inconsistently across files), and a genuine drag on new test authoring speed. Introducing one shared `renderWithProviders()` utility (accepting an optional `preloadedState` and `initialRoute`) collapsed all of that repeated wrapping into a single import, used identically across the entire test suite — new tests became faster to write, and every test's provider setup stayed consistent by construction, rather than by convention alone.
+**Scenario**: Data leaking across tests due to a shared global `QueryClient` cache.
+
+A dashboard test suite fetched user notification counts. Test A mutated the server cache with `queryClient.setQueryData()`. When Test B executed, it received Test A's cached notifications instead of fetching initial state, causing intermittent CI failures based on execution order. Refactoring `renderWithProviders` to instantiate a brand-new `QueryClient` inside the render function for each invocation restored complete test hermeticity.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```tsx
-// test-utils.tsx — the ONE custom render, re-exporting everything else from RTL
-import { render, type RenderOptions } from '@testing-library/react';
+// src/test/test-utils.tsx
+import React, { PropsWithChildren } from 'react';
+import { render, RenderOptions } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import { MemoryRouter } from 'react-router-dom';
+import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { rootReducer } from '../app/rootReducer';
-import type { RootState } from '../app/store';
+import { MemoryRouter, MemoryRouterProps } from 'react-router-dom';
+import { rootReducer, RootState } from '../store/rootReducer';
 
-interface CustomRenderOptions extends Omit<RenderOptions, 'wrapper'> {
+interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   preloadedState?: Partial<RootState>;
-  initialRoute?: string;
+  store?: EnhancedStore;
+  queryClient?: QueryClient;
+  initialEntries?: MemoryRouterProps['initialEntries'];
 }
 
 export function renderWithProviders(
   ui: React.ReactElement,
-  { preloadedState, initialRoute = '/', ...renderOptions }: CustomRenderOptions = {}
+  {
+    preloadedState = {},
+    store = configureStore({
+      reducer: rootReducer,
+      preloadedState: preloadedState as any,
+    }),
+    queryClient = new QueryClient({
+      defaultOptions: {
+        queries: {
+          retry: false, // Disables automatic retries that slow down tests
+          gcTime: 0,    // Instantly clears garbage collection cache
+        },
+      },
+    }),
+    initialEntries = ['/'],
+    ...renderOptions
+  }: ExtendedRenderOptions = {}
 ) {
-  const store = configureStore({ reducer: rootReducer, preloadedState });
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } }); // no retries slowing tests down
-
-  function Wrapper({ children }: { children: React.ReactNode }) {
+  function AllTheProviders({ children }: PropsWithChildren<{}>): React.JSX.Element {
     return (
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
-          <MemoryRouter initialEntries={[initialRoute]}>{children}</MemoryRouter>
+          <MemoryRouter initialEntries={initialEntries}>
+            {children}
+          </MemoryRouter>
         </QueryClientProvider>
       </Provider>
     );
   }
 
-  return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
+  return {
+    store,
+    queryClient,
+    ...render(ui, { wrapper: AllTheProviders, ...renderOptions }),
+  };
 }
 
-// Re-export EVERYTHING else from RTL, so tests never need a second import source
+// Re-export standard testing utilities
 export * from '@testing-library/react';
 export { default as userEvent } from '@testing-library/user-event';
 ```
 
 ```tsx
-// CartBadge.test.tsx — using the custom render, with test-specific initial state
-import { renderWithProviders, screen } from '../test-utils'; // NOT '@testing-library/react' directly
+// UserProfile.test.tsx — Clean consumer test file
+import React from 'react';
+import { renderWithProviders, screen, userEvent } from '../test/test-utils';
+import { UserProfile } from './UserProfile';
 
-test('shows the correct item count from preloaded state', () => {
-  renderWithProviders(<CartBadge />, {
-    preloadedState: { cart: { items: ['sku_1', 'sku_2'] } },
+describe('UserProfile Provider Integration', () => {
+  test('renders user data with preloaded Redux state and route parameters', async () => {
+    const user = userEvent.setup();
+
+    renderWithProviders(<UserProfile />, {
+      preloadedState: {
+        auth: { user: { id: 'usr_1', role: 'ADMIN' }, isAuthenticated: true },
+      },
+      initialEntries: ['/users/usr_1?tab=security'],
+    });
+
+    expect(screen.getByRole('heading', { name: /admin security settings/i })).toBeInTheDocument();
   });
-  expect(screen.getByText('2')).toBeInTheDocument();
-});
-
-test('renders correctly when navigated to the checkout route', () => {
-  renderWithProviders(<CheckoutPage />, { initialRoute: '/checkout' });
-  expect(screen.getByRole('heading', { name: /checkout/i })).toBeInTheDocument();
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Some Test Files Using the Custom Render, Others Importing RTL Directly
+### Symptom: Tests fail randomly when run in parallel or different order
+- **Cause**: Creating a single `const queryClient = new QueryClient()` at the file module scope of `test-utils.tsx`. The cache is shared across every test in the file.
+- **Fix**: Always construct a new `new QueryClient()` instance *inside* the `renderWithProviders` function body so each test receives an isolated cache.
+
+### Symptom: `Error: useNavigate() may be used only in the context of a <Router> component`
+- **Cause**: Testing a component that triggers programmatic routing without wrapping it in a `<MemoryRouter>`.
+- **Fix**: Include `<MemoryRouter initialEntries={initialEntries}>` in your provider wrapper.
+
+### Symptom: Query requests timeout because TanStack Query retries failed requests 3 times
+- **Cause**: Default React Query options retry failed network requests with exponential backoff (1s, 2s, 4s), stalling failed API tests for 7+ seconds.
+- **Fix**: In the test `QueryClient`, configure `defaultOptions: { queries: { retry: false } }`.
+
+---
+
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. Why is instantiating a fresh Redux store and QueryClient per test critical for test hermeticity?
+**Answer**: Hermeticity requires that each test run in a clean, reproducible state. If a single store or QueryClient instance is shared across tests, state mutations, cached network payloads, and in-flight query subscriptions from Test A leak into Test B, making test outcomes order-dependent and causing flaky CI runs.
+
+### ★ 2. How does RTL's `wrapper` option work inside `render()`?
+**Answer**: The `wrapper` option accepts a React component (`({ children }) => <Providers>{children}</Providers>`). RTL wraps the rendered UI element inside this wrapper component before mounting it into the synthetic DOM container. When `rerender()` is called, RTL preserves the wrapper hierarchy.
+
+### 3. How do you test route changes when using `MemoryRouter`?
+**Answer**: You can inspect the current location by wrapping a lightweight consumer component or by testing UI elements that appear exclusively at the target destination URL:
 ```tsx
-// ❌ INCONSISTENT: mixing import sources means SOME tests get providers, others silently
-// don't — a component needing context crashes only in the files that forgot the custom render
-import { render, screen } from '@testing-library/react'; // ❌ missing providers entirely
-
-// ✅ CORRECT: lint-enforce (via eslint's no-restricted-imports) that test files import
-// render/screen ONLY from the custom test-utils module, never directly from RTL
-import { renderWithProviders as render, screen } from '../test-utils';
-```
-
-### ⚠️ Pitfall 2: A Fresh Store/QueryClient Not Created Per-Render
-```tsx
-// ❌ WRONG: a MODULE-LEVEL shared store means state from one test LEAKS into the next test,
-// since Redux/React Query state persists across renders sharing the same store/client instance
-const store = configureStore({ reducer: rootReducer }); // created ONCE, shared across EVERY test
-export function renderWithProviders(ui) { return render(ui, { wrapper: ... }); }
-
-// ✅ CORRECT: construct a FRESH store/queryClient INSIDE the render function, per call,
-// as shown in the production example — full isolation between tests
-export function renderWithProviders(ui, options) {
-  const store = configureStore({ reducer: rootReducer, preloadedState: options?.preloadedState });
-  // ...
+function LocationDisplay() {
+  const location = useLocation();
+  return <div data-testid="location-display">{location.pathname}</div>;
 }
 ```
 
-### ⚠️ Pitfall 3: Overloading One Custom Render With Every Possible Provider Combination
-A single custom render trying to support every conceivable provider combination via a large, sprawling options object can become its own source of complexity and confusion. For apps with genuinely distinct testing needs across different areas (some tests need a router, some don't; some need auth context, some don't), consider a few distinct, purpose-built render utilities (`renderWithRouter`, `renderWithAuth`, `renderFullApp`) rather than one over-parameterized function trying to cover every case.
+### 4. How can ESLint prevent developers from bypassing the custom render utility?
+**Answer**: Use `eslint-plugin-no-restricted-imports` to forbid direct imports of `render` from `@testing-library/react`:
+```javascript
+'no-restricted-imports': ['error', {
+  paths: [{
+    name: '@testing-library/react',
+    importNames: ['render'],
+    message: 'Please use renderWithProviders from src/test/test-utils instead.',
+  }],
+}]
+```
+
+---
+
+## Where this connects
+
+- **Previous**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — Handling asynchronous DOM updates.
+- **Next**: [12 · Mocking Network Requests](../12-mocking-network-requests/01-api-level-mocking.md) — Integrating Mock Service Worker (MSW) with custom render.
+- **Redux Toolkit Track (`docs/redux-toolkit/`)**: In-depth state slice management.

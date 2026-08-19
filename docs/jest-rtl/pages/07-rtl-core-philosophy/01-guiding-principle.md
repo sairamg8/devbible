@@ -1,100 +1,128 @@
 ---
-title: "RTL Core Philosophy: Testing Behavior, Not Implementation"
+title: "RTL Core Philosophy: Testing Behavior, Refactoring Resilience & screen"
 sidebar_label: "RTL Core Philosophy"
 sidebar_position: 1
 ---
 
-# 🧪 RTL Core Philosophy: Testing Behavior, Not Implementation
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Testing Library documentation — [Guiding Principles](https://testing-library.com/docs/guiding-principles).
+
+React Testing Library (RTL) replaces implementation-detail assertions with user-centric behavioral testing, ensuring test suites remain resilient when internal state and component structures are refactored.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-React Testing Library is built around one guiding principle, stated directly in its own documentation: **"The more your tests resemble the way your software is used, the more confidence they give you."** Every API decision in RTL — which queries exist, which don't, how rendering works — follows from this single premise.
+Traditional test runners (e.g. Enzyme) encouraged testing component internals (`wrapper.state()`, `wrapper.props()`, shallow rendering). RTL eliminated these APIs intentionally:
 
 ```
-Enzyme-style (implementation-focused, what RTL deliberately moved AWAY from):
-  wrapper.find('Button').instance().state.isLoading   ──► inspects INTERNAL component state directly
-
-RTL (behavior-focused):
-  screen.getByRole('button', { name: /submit/i })        ──► queries what a USER would actually see/interact with
-  expect(button).toBeDisabled()                             ──► asserts observable BEHAVIOR, not internal state
+┌───────────────────────────────────────────────────────────────────────────┐
+│ Implementation-Detail Testing (Legacy Paradigm — Flaky on Refactor)       │
+│ • Inspects `this.state` or `useState` hooks directly.                     │
+│ • Asserts internal function handlers (`instance.handleClick()`).          │
+│ • Tests break whenever code is refactored (e.g. useState -> Zustand),    │
+│   even though user-visible UI behavior never changed.                     │
+└───────────────────────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+┌───────────────────────────────────────────────────────────────────────────┐
+│ Behavioral Testing with RTL (Modern Paradigm — Refactor-Resilient)        │
+│ • Mounts real DOM nodes inside `document.body` via jsdom.                 │
+│ • Interacts exclusively through accessible DOM boundaries (`screen`).     │
+│ • Renaming internal state, handlers, or hooks causes ZERO test breaks.    │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Why Implementation-Detail Testing Is Actively Harmful
-A test asserting `wrapper.state('isLoading')` passes or fails based on an implementation detail (that this component happens to use `this.state.isLoading` internally) that a user of the app can never observe directly. Refactoring the component to use a different internal mechanism (a different state variable name, moving from local state to a global store) — while the actual user-facing behavior stays **completely identical** — breaks the test anyway, for a change that shouldn't have been test-relevant at all. This produces the exact opposite of what tests should provide: confidence to refactor safely.
-
-### RTL's Deliberate API Absence: No Shallow Rendering, No Instance Access
-RTL simply does not provide APIs for shallow rendering or reaching into a component instance's internals — this isn't an oversight; it's a deliberate design choice forcing tests to interact with rendered output the same way an actual user (or assistive technology) would, which is precisely what makes RTL tests robust against internal refactors that don't change observable behavior.
+### The Role of `screen`
+In modern RTL, `screen` exposes pre-bound query methods tied to `document.body`. You no longer need to destructure return values from `render()`:
+```typescript
+// Modern standard:
+render(<LoginForm />);
+const button = screen.getByRole('button', { name: /submit/i });
+```
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Team Unable to Refactor a Component's State Management Because Dozens of Tests Broke on Every Attempt.
-A legacy Enzyme-based test suite asserted directly against component instance state (`wrapper.instance().state.cartItems`) across dozens of tests. When the team wanted to migrate that component's state from local `this.state` to a shared context/store — a change with **zero** user-facing behavior difference — every single one of those tests broke, since they were coupled to an implementation detail (exactly where the state lived) rather than the actual rendered behavior. Migrating the test suite to RTL, asserting instead against what the user would see (`screen.getByText('3 items in cart')`), meant the SAME state-management refactor could proceed with zero test changes needed — the tests were verifying behavior that genuinely hadn't changed.
+**Scenario**: Migrating a legacy React component from local `useState` to a global Redux slice without breaking a single test.
+
+A shopping cart drawer manages item counts and subtotal calculations. Originally written with three `useState` hooks, the team refactors the component to use Redux Toolkit. Because the test suite was authored using RTL (`screen.getByRole('button', { name: /add to cart/i })` and `expect(screen.getByText('3 items')).toBeInTheDocument()`), all 25 cart tests continue to pass without a single line of test code modified.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```tsx
-// ❌ Implementation-detail-coupled test (Enzyme-style, illustrative — NOT the RTL API)
-test('cart shows correct item count (BAD - coupled to internal state shape)', () => {
-  const wrapper = shallow(<Cart />);
-  wrapper.instance().setState({ items: ['a', 'b', 'c'] });
-  expect(wrapper.instance().state.items.length).toBe(3); // breaks the MOMENT state shape changes internally
-});
-```
-
-```tsx
-// ✅ Behavior-focused RTL test — survives ANY internal refactor that preserves user-facing behavior
+// CartDrawer.test.tsx
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { CartDrawer } from './CartDrawer';
 
-test('cart shows correct item count after adding items', async () => {
-  const user = userEvent.setup();
-  render(<Cart />);
+describe('CartDrawer Behavioral Specifications', () => {
+  test('increments cart item quantity and updates subtotal via DOM interaction', async () => {
+    const user = userEvent.setup();
 
-  await user.click(screen.getByRole('button', { name: /add item/i }));
-  await user.click(screen.getByRole('button', { name: /add item/i }));
-  await user.click(screen.getByRole('button', { name: /add item/i }));
+    render(<CartDrawer initialItems={[{ id: 'prod_1', name: 'Mechanical Keyboard', price: 100, qty: 1 }]} />);
 
-  // Asserts what a REAL USER would see on screen — completely indifferent to HOW the
-  // component tracks that count internally (local state, context, a store, anything)
-  expect(screen.getByText('3 items in cart')).toBeInTheDocument();
+    // 1. Assert initial state via accessible DOM output
+    expect(screen.getByText(/subtotal: \$100\.00/i)).toBeInTheDocument();
+    expect(screen.getByRole('spinbutton', { name: /quantity/i })).toHaveValue(1);
+
+    // 2. Drive interaction like a real user
+    const incrementBtn = screen.getByRole('button', { name: /increase quantity/i });
+    await user.click(incrementBtn);
+
+    // 3. Assert new DOM output — completely agnostic to internal hook / state mechanics
+    expect(screen.getByRole('spinbutton', { name: /quantity/i })).toHaveValue(2);
+    expect(screen.getByText(/subtotal: \$200\.00/i)).toBeInTheDocument();
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Reaching for `container.querySelector()` as a Habitual Escape Hatch
-```tsx
-// ❌ AGAINST THE PHILOSOPHY: querySelector bypasses RTL's accessibility-oriented query system
-// entirely, coupling the test to specific CSS class names/DOM structure rather than to
-// what an actual user (or screen reader) would perceive
-const { container } = render(<Form />);
-const input = container.querySelector('.form-input--email'); // couples to an internal CSS class name
+### Symptom: Tests break constantly during CSS or layout refactoring
+- **Cause**: Using `container.querySelector('.btn-submit')` or CSS class selectors. Classes change frequently during design updates.
+- **Fix**: Query elements exclusively by their ARIA roles, accessible names, or labels (`screen.getByRole('button', { name: /submit/i })`).
 
-// ✅ CORRECT: query the way a user actually finds elements — by label, role, or visible text
-const input = screen.getByLabelText(/email/i);
-```
+### Symptom: `TestingLibraryElementError: Unable to find an element with text` on an element rendered in a Portal
+- **Cause**: Destructuring queries from `render(<Modal />)` (`const { getByText } = render(...)`). Destructured queries only search the local container wrapper, missing portalled elements attached directly to `document.body`.
+- **Fix**: Always query via `screen.getByRole(...)` or `screen.getByText(...)`, which queries the entire document body.
 
-### ⚠️ Pitfall 2: Asserting Against a Component's Props Directly Instead of Rendered Output
-```tsx
-// ❌ WRONG: testing that a prop WAS PASSED doesn't verify the component actually DID anything
-// meaningful with it — a component could receive the correct prop and still render incorrectly
-test('receives the correct label prop', () => {
-  const wrapper = render(<Button label="Submit" />);
-  expect(wrapper.props.label).toBe('Submit'); // NOT actually testing rendered behavior at all
-});
+### Symptom: Test passes by verifying a prop was received, but the component fails to render anything
+- **Cause**: Asserting that a child component received props rather than verifying that the user can see or interact with the resulting output.
+- **Fix**: Mount the parent and assert that the child's rendered DOM output is visible and accessible.
 
-// ✅ CORRECT: assert on what the component actually RENDERED, given that prop
-test('renders the correct label text', () => {
-  render(<Button label="Submit" />);
-  expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument();
-});
-```
+---
 
-### ⚠️ Pitfall 3: Treating "It Compiles/Renders Without Throwing" as Sufficient Verification
-A test that only renders a component and asserts nothing beyond "it didn't crash" provides real but very limited confidence — it catches crashes, not incorrect behavior. RTL's philosophy pushes toward asserting specific, user-observable outcomes (text content, ARIA states, focus behavior) precisely because "it rendered" and "it behaves correctly for the user" are very different bars, and only the second one is what the guiding principle is actually about.
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. What is the fundamental guiding principle of React Testing Library, and why does it reject shallow rendering?
+**Answer**: The guiding principle is: *"The more your tests resemble the way your software is used, the more confidence they can give you."* Shallow rendering renders only the parent component and stubs out child components as placeholders. This creates false confidence: it tests how the code is structured rather than what the user sees, misses integration bugs between parent and child components, and breaks whenever implementation details change.
+
+### ★ 2. Why does RTL recommend using `screen` over destructuring queries from `render()`?
+**Answer**: 
+1. **Portals & Modals**: `render()` returns queries bound only to the local wrapper `<div>`. If a component renders into a React Portal (e.g. `document.body`), destructured queries cannot find it. `screen` queries `document.body` directly.
+2. **Code Cleanliness**: You don't need to update the destructuring list every time you add a new query (`getByRole`, `findByText`) to your test.
+
+### 3. How does testing accessible roles (`getByRole`) improve both test quality and application accessibility?
+**Answer**: `getByRole` queries elements using the same Accessibility Tree that screen readers and assistive technologies use. If a button or input is difficult to query via `getByRole` in an RTL test, it indicates that the component lacks accessible labels, semantic HTML tags, or ARIA attributes in the browser. Fixing the test forces you to fix accessibility for real users.
+
+### 4. What constitutes an "implementation detail" in a React component test?
+**Answer**: Implementation details include:
+- Internal state variables (`useState`, `useReducer`, Redux slice state).
+- Component class instances, references, and internal private helper functions.
+- Specific HTML tag choices or internal CSS class names that do not affect the accessibility tree or user interaction.
+
+---
+
+## Where this connects
+
+- **Previous**: [06 · Coverage and Configuration](../06-coverage-and-configuration/01-jest-config.md) — Configuring jsdom environment.
+- **Next**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query variants (`getBy`, `queryBy`, `findBy`) and priority order.
+- **React Testing Track (`docs/react/pages/phase-14-correctness/`)**: Deep dive into React component testing contracts.

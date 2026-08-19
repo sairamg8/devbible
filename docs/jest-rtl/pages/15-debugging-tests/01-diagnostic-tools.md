@@ -1,113 +1,133 @@
 ---
-title: "Debugging Tests: `screen.debug()`, `logRoles()` & Testing Playground"
+title: "Debugging Tests: screen.debug, logRoles & Testing Playground"
 sidebar_label: "Debugging Tests"
 sidebar_position: 1
 ---
 
-# 🧪 Debugging Tests: `screen.debug()`, `logRoles()` & Testing Playground
+<span className="db-tier t-know">Know</span>
+
+> Verified: 2026-08-19 against Testing Library documentation — [Debugging](https://testing-library.com/docs/dom-testing-library/api-debugging).
+
+React Testing Library provides diagnostic inspection utilities (`screen.debug`, `logRoles`, `logTestingPlaygroundURL`, `prettyDOM`) to inspect synthetic jsdom trees, determine valid ARIA roles, and generate optimal queries without trial-and-error guessing.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-When a query fails or a test's assertion doesn't match reality, RTL provides direct visibility tools that print the **actual current DOM/accessibility state** — turning "why isn't this query finding anything" from a guessing game into a quick, direct inspection.
+When test queries fail, RTL offers direct introspection methods that serialize the DOM and accessibility tree to the terminal:
 
 ```
-screen.debug()                ──► pretty-prints the CURRENT rendered DOM to the console
-                                     (optionally scoped: screen.debug(specificElement))
-
-logRoles(container)              ──► prints every ACCESSIBLE ROLE currently present in the container,
-                                        alongside the accessible name RTL would use to query each one —
-                                        directly answers "what role/name should I actually query by"
-
-Testing Playground                 ──► a browser extension / testing-playground.com URL — paste HTML,
-                                          get SUGGESTED queries ranked by RTL's own priority order
+Diagnostic Tooling Pipeline:
+  ├── screen.debug(element?, maxLength?)
+  │     └── Serializes the active DOM tree using `prettyDOM()`.
+  │     └── Highlighted with ANSI colors; truncated at `DEBUG_PRINT_LIMIT` (default: 7000 chars).
+  │
+  ├── logRoles(container)
+  │     └── Computes the browser Accessibility Tree for the provided container.
+  │     └── Prints table of: ARIA role, Accessible Name, and HTML element tag.
+  │
+  └── screen.logTestingPlaygroundURL()
+        └── Generates an interactive URL at testing-playground.com loaded with current DOM HTML.
+        └── Suggests optimal, prioritized RTL queries by clicking interactive elements in browser.
 ```
-
-### `screen.debug()`: The First Thing to Reach For
-When a `getByRole`/`getByText` query throws "unable to find element," `screen.debug()` immediately shows **exactly** what's actually in the DOM at that point — frequently revealing the real issue at a glance (the element hasn't rendered yet because the query needed to be `findBy*` instead of `getBy*`, or the actual text differs slightly from what the query expected, or a provider is missing and the component crashed silently before rendering anything meaningful).
-
-### `logRoles()`: Discovering the Correct Query Without Guessing
-Rather than guessing which role a given element maps to (implicit ARIA roles aren't always obvious — a `<button>` is `role="button"`, but a `<div onClick>` has no accessible role at all), `logRoles(container)` prints the actual, currently-computed role/name pairing for every accessible element present — directly answering "what should my `getByRole` call actually look like" from real, current output rather than documentation lookup or trial and error.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Failing Query Diagnosed in Seconds Instead of Minutes of Guessing.
-A test's `screen.getByRole('button', { name: /submit/i })` was throwing "unable to find an accessible element," despite the developer being confident a submit button existed in the component. Calling `screen.debug()` immediately revealed the actual rendered DOM: the button element was present, but its visible text was "Submit Order" (matched fine by the regex) — the REAL issue was that the button was still disabled and hidden behind a loading spinner overlay at the exact point the query ran, since the component hadn't finished its initial async data fetch yet. The fix wasn't a query problem at all — it needed `findByRole` (waiting for the post-loading state) instead of `getByRole` (checking too early) — a diagnosis that took seconds once the actual DOM state was visible, versus potentially much longer spent guessing at query syntax issues that weren't the real problem.
+**Scenario**: Debugging a complex custom date picker dropdown where `getByRole('button')` throws "unable to find element".
+
+A calendar dropdown had nested composite buttons and tablist headers. A developer spent 20 minutes guessing regex strings (`/select date/i`, `/calendar/i`) to query the trigger button. Running `logRoles(container)` printed the exact computed accessibility tree: the trigger was actually rendered with `role="combobox", name="Choose departure date"`. Using the printed role and accessible name fixed the query in seconds.
 
 ---
 
 ## 3. Production-Grade Code Example
 
 ```tsx
-// screen.debug() — the first diagnostic step when a query unexpectedly fails
+// DatePicker.test.tsx
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-
-test('shows the submit button once loading completes', async () => {
-  render(<CheckoutForm />);
-
-  screen.debug(); // prints the CURRENT DOM — reveals the loading spinner is still showing here
-
-  // Diagnosis from the debug() output: this needs findBy (wait for it), not getBy (check now)
-  const submitButton = await screen.findByRole('button', { name: /submit order/i });
-  expect(submitButton).toBeEnabled();
-});
-```
-
-```tsx
-// logRoles() — discovering the correct query for an element with a non-obvious role
-import { render } from '@testing-library/react';
 import { logRoles } from '@testing-library/dom';
+import userEvent from '@testing-library/user-event';
+import { DatePicker } from './DatePicker';
 
-test('discovering the right role to query by', () => {
-  const { container } = render(<CustomDropdown />);
-  logRoles(container);
-  // Console output might reveal:
-  //   button:
-  //   Name "Select an option":
-  //   <button />
-  //
-  //   listbox:
-  //   Name "":
-  //   <ul />
-  // ── now the actual correct query is obvious: getByRole('button', { name: 'Select an option' })
-});
-```
+describe('DatePicker Diagnostic Debugging Specifications', () => {
+  test('inspects accessible roles and generates testing playground URL', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<DatePicker label="Departure Date" />);
 
-```tsx
-// Scoping screen.debug() to a specific element, for a large component tree
-test('scoped debugging in a large tree', () => {
-  render(<Dashboard />);
-  const sidebar = screen.getByRole('navigation');
-  screen.debug(sidebar); // prints ONLY the sidebar's DOM, not the entire (potentially huge) page
+    // 1. Log computed accessible roles to terminal for inspection
+    logRoles(container);
+    /* Terminal Output:
+      combobox:
+        Name "Departure Date":
+        <input role="combobox" aria-expanded="false" />
+      button:
+        Name "Open calendar picker":
+        <button type="button" />
+    */
+
+    // 2. Open dropdown
+    const trigger = screen.getByRole('button', { name: /open calendar picker/i });
+    await user.click(trigger);
+
+    // 3. Print scoped subtree of the opened popover
+    const popover = screen.getByRole('dialog', { name: /calendar/i });
+    screen.debug(popover);
+
+    // 4. In case of complex layout debugging, generate playground URL
+    if (process.env.DEBUG_TEST) {
+      screen.logTestingPlaygroundURL();
+      // Outputs: https://testing-playground.com/#markup=...
+    }
+
+    // 5. Query verified element
+    const dayButton = screen.getByRole('gridcell', { name: '15' });
+    await user.click(dayButton);
+
+    expect(screen.getByRole('combobox')).toHaveValue('2026-08-15');
+  });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Reaching for Trial-and-Error Query Syntax Changes Before Checking the Actual DOM
-```tsx
-// ❌ INEFFICIENT: repeatedly guessing at slightly different query variations without ever
-// looking at what's ACTUALLY rendered wastes time on a problem screen.debug() would reveal instantly
-screen.getByRole('button', { name: 'Submit' });     // fails
-screen.getByRole('button', { name: /submit/ });        // fails
-screen.getByRole('button', { name: /submit/i });          // still fails — but the REAL issue was never the regex
+### Symptom: `screen.debug()` output is truncated with `...` in the console
+- **Cause**: DOM serialization exceeds the default character limit (7000 characters).
+- **Fix**: Increase the limit by passing a character size: `screen.debug(undefined, Infinity)`, or set `process.env.DEBUG_PRINT_LIMIT = '100000'`.
 
-// ✅ CORRECT: call screen.debug() FIRST, the moment a query unexpectedly fails —
-// often reveals the actual issue (wrong timing, missing provider, different text) immediately
-```
+### Symptom: `screen.debug()` dumps thousands of irrelevant HTML lines to the terminal
+- **Cause**: Calling `screen.debug()` with no arguments on a full page / dashboard component tree.
+- **Fix**: Pass the specific sub-element you are investigating: `screen.debug(screen.getByRole('form'))`.
 
-### ⚠️ Pitfall 2: Calling `screen.debug()` on a Huge Tree Without Scoping It
-```tsx
-// ❌ UNWIELDY: debugging the ENTIRE page for a large app dumps an enormous, hard-to-scan
-// console output, when only one specific section was actually relevant to the failing query
-screen.debug(); // prints potentially THOUSANDS of lines for a large dashboard
+### Symptom: Polluting CI build logs with permanent `screen.debug()` statements
+- **Cause**: Forgetting to remove temporary debugging calls before pushing commits.
+- **Fix**: Add the ESLint rule `testing-library/no-debugging-utils` to automatically fail linting if `screen.debug()` or `logRoles()` is committed.
 
-// ✅ CORRECT: scope debug() to the specific element/container actually relevant to the issue
-screen.debug(screen.getByRole('main'));
-```
+---
 
-### ⚠️ Pitfall 3: Leaving `screen.debug()` Calls in Committed Test Code
-`screen.debug()` is a diagnostic tool for **active debugging**, not a permanent fixture — leaving stray `debug()` calls in committed tests clutters CI output with large DOM dumps on every run, for tests that aren't currently failing or being actively investigated. Remove debug calls once the actual issue is diagnosed and fixed, the same discipline as removing stray `console.log` statements before committing.
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. How does `logRoles()` help developers write accessible queries?
+**Answer**: `logRoles(domNode)` traverses the subtree, computes the computed ARIA role for each element according to W3C ARIA specifications, calculates their accessible names, and prints a hierarchical tree. This eliminates guesswork regarding whether an element has an implicit role (e.g. `<nav>` is `navigation`, `<dialog>` is `dialog`, `<select>` is `combobox`).
+
+### ★ 2. What is `screen.logTestingPlaygroundURL()`, and how does it work?
+**Answer**: It serializes the current state of `document.body` into compressed HTML and outputs a URL to `testing-playground.com`. Opening the URL in a browser renders the live HTML inside a visual sandbox where you can click any element to see recommended RTL query code ranked by RTL's official query priority.
+
+### 3. How do you attach a Node inspector breakpoint to debug a Jest test in VS Code or Chrome?
+**Answer**: Run Jest with Node's inspect flag:
+`node --inspect-brk ./node_modules/.bin/jest --runInBand src/MyTest.test.tsx`
+Place `debugger;` statements inside your test or component code. Connect via Chrome DevTools (`chrome://inspect`) or the VS Code Debugger to step through React component fiber rendering line-by-line.
+
+### 4. What is the difference between `screen.debug()` and `console.log(container.innerHTML)`?
+**Answer**: `container.innerHTML` outputs raw, unformatted, single-line HTML strings without styling. `screen.debug()` uses `prettyDOM()` to format HTML with indentation, syntax highlighting via ANSI terminal colors, and respects the `DEBUG_PRINT_LIMIT` buffer configuration.
+
+---
+
+## Where this connects
+
+- **Previous**: [14 · Accessibility Testing](../14-accessibility-testing/01-a11y-assertions.md) — Verifying accessible roles and WCAG compliance.
+- **Next**: [16 · Testing Setup from Zero](../16-real-world-workflows-and-recipes/01-testing-setup-from-zero.md) — Comprehensive setup recipe with Jest, RTL, and MSW.
+- **RTL Queries**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Query prioritization hierarchy.

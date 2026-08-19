@@ -1,155 +1,145 @@
 ---
-title: "Async Testing: `async`/`await`, `.resolves`/`.rejects` & the Legacy `done` Callback"
+title: "Async Testing: Promises, async/await, expect.assertions & Microtasks"
 sidebar_label: "Async Testing"
 sidebar_position: 1
 ---
 
-# 🧪 Async Testing: `async`/`await`, `.resolves`/`.rejects` & the Legacy `done` Callback
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Jest 29.7 / 30.x documentation — [Testing Asynchronous Code](https://jestjs.io/docs/asynchronous).
+
+Jest requires explicit asynchronous signals to await microtasks and macrotasks before completing a test, using `async`/`await`, Promise returns, `.resolves`/`.rejects` matchers, and `expect.assertions()` verification counts.
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Jest needs an explicit signal that a test involves asynchronous work — without one, a test function that returns before an async operation actually completes is reported as **passing**, regardless of what happens afterward, since Jest has no way to know to wait for it.
+When a test function finishes its synchronous execution block, Jest checks whether it returned a Promise:
 
 ```
-test('description', async () => {
-  await somethingAsync();   // Jest AWAITS the returned promise before considering the test complete
-});
+Case A: Returned Promise / `async () => {}`
+  Test function invoked ──► Returns Promise
+                              │
+                              ▼
+                          Jest awaits Promise resolution
+                              ├── Resolved ──► Test PASSES (if no assertions failed)
+                              └── Rejected ──► Test FAILS with error trace
 
-test('description', () => {
-  return promise;              // returning a promise ALSO signals "wait for this" — works without async/await too
-});
+Case B: Unreturned Promise / Missing await
+  Test function invoked ──► Returns undefined (synchronously)
+                              │
+                              ▼
+                          Jest marks test PASSED immediately
+                          (In-flight Promise executes afterward; errors become Unhandled Rejections)
 
-test('description', () => {
-  somethingAsync();              // ❌ NEITHER awaited NOR returned — Jest has NO IDEA this is async,
-});                                  // reports PASS immediately, regardless of what the promise eventually does
+Case C: Legacy `done` Callback (`(done) => {}`)
+  Jest checks `fn.length > 0`. Awaits `done()` invocation or fails on timeout (default 5000ms).
 ```
 
-### `.resolves`/`.rejects`: Matcher-Level Promise Unwrapping
-```javascript
-await expect(fetchUser(1)).resolves.toEqual({ id: 1, name: 'Alex' }); // unwraps the FULFILLED value, then matches
-await expect(fetchUser(-1)).rejects.toThrow('Invalid user id');           // unwraps the REJECTION, then matches
-```
-These read cleanly for the common "assert this promise resolves/rejects with X" pattern — but still require their own `await`, since `.resolves`/`.rejects` themselves return a promise-wrapped assertion, not a synchronous one.
-
-### The Legacy `done` Callback: Mostly Superseded
-```javascript
-test('legacy async pattern', (done) => {
-  fetchData((result) => {
-    expect(result).toBe('data');
-    done(); // MUST be called manually, or the test times out
-  });
-});
-```
-Used for callback-based (pre-Promise) async APIs — largely superseded by `async`/`await` for genuinely Promise-based code, but still relevant for legacy callback-style APIs that have no Promise equivalent to `await` at all.
+### Matcher-Level Promise Handling
+- `await expect(promise).resolves.toEqual(...)`: Unwraps the fulfilled value from the Promise before running the matcher.
+- `await expect(promise).rejects.toThrow(...)`: Catches rejection errors and asserts on the error instance or message.
+- `expect.assertions(N)`: Enforces that exactly `N` assertions run. Essential when testing error callbacks to prevent false passes when code fails to throw.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Test Suite Reporting 100% Passing While a Real Regression Silently Broke Data Fetching.
-A test asserting a data-fetching function's behavior forgot to `await` (or `return`) the promise — the test function returned synchronously before the actual assertion inside a `.then()` callback ever ran, so Jest marked the test "passed" immediately, regardless of what the assertion inside the unawaited promise chain actually found. A genuine regression (the function had started throwing) went completely undetected by CI for weeks, since the test was structurally incapable of ever failing — it wasn't asserting anything Jest was actually waiting to observe.
+**Scenario**: Verifying token refresh failure handling in an HTTP interceptor without creating silent false-positive passes.
+
+An authentication middleware refreshes an expired JWT. If the refresh endpoint returns 401, the client must reject with an `AuthSessionExpiredError`. If the test uses a `try/catch` block without `expect.assertions(1)`, and the function unexpectedly *succeeds* without throwing, execution skips the `catch` block entirely and passes silently. `expect.assertions(1)` forces the test to fail because zero assertions executed.
 
 ---
 
 ## 3. Production-Grade Code Example
 
-```javascript
-// The async testing bug from the scenario, and its fix
-// ❌ BROKEN: the test function returns BEFORE the assertion inside .then() ever runs —
-// Jest considers the test complete (and passing) the instant the synchronous body finishes
-test('fetchUser resolves with user data', () => {
-  fetchUser(1).then((user) => {
-    expect(user.name).toBe('Alex'); // this NEVER actually gets checked before the test is marked "passed"
+```typescript
+// authService.test.ts
+import { refreshToken, fetchUserProfile, AuthSessionExpiredError } from './authService';
+
+describe('Asynchronous Authentication Suite', () => {
+  test('resolves user profile using async/await', async () => {
+    const profile = await fetchUserProfile('usr_123');
+    expect(profile).toEqual({
+      id: 'usr_123',
+      name: 'Sarah Connor',
+      role: 'ADMIN',
+    });
   });
-});
 
-// ✅ FIXED: async/await ensures Jest actually waits for the assertion to run
-test('fetchUser resolves with user data', async () => {
-  const user = await fetchUser(1);
-  expect(user.name).toBe('Alex');
-});
-```
+  test('resolves profile using .resolves matcher unwrap', async () => {
+    await expect(fetchUserProfile('usr_123')).resolves.toHaveProperty('role', 'ADMIN');
+  });
 
-```javascript
-// .resolves/.rejects for concise promise-outcome assertions
-test('fetchUser resolves with correct data', async () => {
-  await expect(fetchUser(1)).resolves.toEqual({ id: 1, name: 'Alex' });
-});
+  test('rejects with typed error on session expiration using .rejects', async () => {
+    await expect(refreshToken('expired_token')).rejects.toThrow(AuthSessionExpiredError);
+  });
 
-test('fetchUser rejects for an invalid id', async () => {
-  await expect(fetchUser(-1)).rejects.toThrow('Invalid user id');
-});
-```
+  test('asserts error payload using try/catch with expect.assertions', async () => {
+    // Guards against false passes: MUST run exactly 2 assertions
+    expect.assertions(2);
 
-```javascript
-// Legacy done callback — for a genuinely callback-based (non-Promise) API
-test('legacy callback-based API', (done) => {
-  legacyFetchWithCallback((err, result) => {
     try {
-      expect(err).toBeNull();
-      expect(result).toEqual({ status: 'ok' });
-      done(); // signals completion — REQUIRED, or Jest times out waiting
-    } catch (assertionError) {
-      done(assertionError); // pass the error to done() so Jest reports the ACTUAL assertion failure, not a timeout
+      await refreshToken('malformed_token');
+    } catch (error: any) {
+      expect(error).toBeInstanceOf(AuthSessionExpiredError);
+      expect(error.code).toBe('AUTH_INVALID_TOKEN');
     }
+  });
+
+  test('handles legacy event emitter with done callback', (done) => {
+    const eventStream = createMockEventStream();
+
+    eventStream.on('data', (chunk) => {
+      try {
+        expect(chunk).toBe('payload_ready');
+        done();
+      } catch (err) {
+        done(err); // Passes assertion failure directly to Jest
+      }
+    });
+
+    eventStream.emit('data', 'payload_ready');
   });
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Forgetting to `await`/`return` a Promise, Producing a Test That Can Never Fail
-```javascript
-// ❌ CRITICAL BUG: exactly the scenario above — a test with NO await/return around async
-// work provides ZERO actual verification, despite looking like a real test in the test file
-test('validates input', () => {
-  validateAsync(input).then((result) => { expect(result.valid).toBe(true); }); // silently never checked
-});
+### Symptom: Test passes on CI, but console logs `UnhandledPromiseRejection` after test completes
+- **Cause**: An asynchronous function was called inside `test(...)` without `await` or `return`. The test marked itself complete while the promise was still executing on the microtask queue.
+- **Fix**: Always mark test callbacks as `async () => { await ... }` or `return promise`.
 
-// ✅ CORRECT: always await or return the promise chain containing assertions
-test('validates input', async () => {
-  const result = await validateAsync(input);
-  expect(result.valid).toBe(true);
-});
-```
+### Symptom: `try/catch` error test passes even when the underlying bug causes the code to never throw
+- **Cause**: The test calls an async function inside `try`, but when the function resolves unexpectedly, the `catch` block never executes, and no assertion runs.
+- **Fix**: Place `expect.assertions(1)` or `expect.hasAssertions()` at the start of the test.
 
-### ⚠️ Pitfall 2: Forgetting `done(error)` in a Try/Catch, Producing a Confusing Timeout Instead of a Clear Failure
-```javascript
-// ❌ CONFUSING: if the assertion inside the callback throws, and it's NOT caught and passed
-// to done(), Jest doesn't see the actual assertion error — it just times out after the default
-// timeout period, with an unhelpful "Exceeded timeout" message instead of the real failure reason
-test('legacy pattern without proper error handling', (done) => {
-  legacyFetch((result) => {
-    expect(result).toBe('unexpected'); // if this throws, done() never gets called AT ALL
-    done();
-  });
-});
+### Symptom: Test times out after 5000ms when testing with `(done) => {}`
+- **Cause**: An assertion inside the callback threw an error, which prevented `done()` from being reached.
+- **Fix**: Wrap the callback body in `try { ... done(); } catch (e) { done(e); }`, or migrate the API to Promise-based `async`/`await`.
 
-// ✅ CORRECT: wrap in try/catch, passing any caught error to done() so the REAL failure surfaces
-test('legacy pattern with proper error handling', (done) => {
-  legacyFetch((result) => {
-    try {
-      expect(result).toBe('expected');
-      done();
-    } catch (err) {
-      done(err); // Jest reports the ACTUAL assertion failure, not a generic timeout
-    }
-  });
-});
-```
+---
 
-### ⚠️ Pitfall 3: Mixing `done` and `async` in the Same Test Function
-```javascript
-// ❌ WRONG: an async function that ALSO takes a `done` parameter confuses Jest's completion
-// detection — it doesn't know whether to wait for the returned promise or for done() to be called
-test('confusing mixed pattern', async (done) => { // ❌ don't do this
-  const result = await fetchData();
-  expect(result).toBe('data');
-  done(); // redundant AND potentially causes unexpected behavior
-});
+## 5. Interview Questions & Deep Dives
 
-// ✅ CORRECT: pick ONE pattern — async/await for Promise-based code, done for genuinely
-// callback-only APIs — never both in the same test function
-```
+### ★ 1. Why does `test('name', () => { fetchUser().then(res => expect(res).toBeDefined()); })` cause false passes?
+**Answer**: Because the test callback does not return the Promise returned by `.then()`, Jest treats the test function as synchronous. The test exits immediately with code 0 (Pass). If the promise later rejects or the assertion fails, it happens after Jest has recorded the test result, resulting in an unhandled rejection warning rather than a reported test failure.
+
+### ★ 2. What is the role of `expect.hasAssertions()` and `expect.assertions(N)`?
+**Answer**: They verify that assertions actually executed during the test lifecycle. This is critical in conditional logic, catch blocks, and event callbacks. If an expected error path or event never fires, `expect.assertions(N)` ensures the test fails rather than exiting with zero executed assertions.
+
+### 3. What is the execution difference between macrotasks (`setTimeout`) and microtasks (`Promise.resolve`) in Jest?
+**Answer**: When an `async` test awaits a Promise, Node processes microtasks immediately before returning control to the runner. In contrast, macrotasks (`setTimeout`, `setInterval`) enter the timers queue. Jest's worker will not wait for macrotasks unless they are explicitly awaited, wrapped in a Promise, or fast-forwarded via fake timers (`jest.advanceTimersByTime`).
+
+### 4. What happens if you mix `async () => {}` syntax with the `done` callback argument?
+**Answer**: Supplying `done` tells Jest to wait for `done()` to be called, while `async` tells Jest to wait for the returned Promise to resolve. If `done()` is called while the promise is still resolving, or vice versa, Jest throws a `Jest: Done and Promise referred to in the same test` error.
+
+---
+
+## Where this connects
+
+- **Previous**: [03 · Mocking](../03-mocking/01-jest-mock-functions.md) — Asynchronous mock function resolution (`mockResolvedValue`).
+- **Next**: [05 · Snapshot Testing](../05-snapshot-testing/01-snapshot-mechanics.md) — Snapshot testing mechanics and serializers.
+- **RTL Async**: [10 · Async Utilities](../10-async-utilities/01-waiting-for-updates.md) — Waiting for DOM mutations with `waitFor` and `findBy`.

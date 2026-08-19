@@ -1,131 +1,166 @@
 ---
-title: "Assertions & Matchers: `toBe` vs `toEqual`, Asymmetric Matchers & `expect.extend()`"
+title: "Assertions & Matchers: Expect API, Equality & Custom Matchers"
 sidebar_label: "Assertions & Matchers"
 sidebar_position: 1
 ---
 
-# 🧪 Assertions & Matchers: `toBe` vs `toEqual`, Asymmetric Matchers & `expect.extend()`
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-08-19 against Jest 29.7 / 30.x documentation — [Expect API](https://jestjs.io/docs/expect).
+
+The `expect` API provides assertion matching and diagnostic diff generation, distinguishing between strict referential equality (`toBe`), deep recursive equality (`toEqual`), and exact structural/prototype parity (`toStrictEqual`).
+
+---
 
 ## 1. Under-The-Hood Mechanics
 
-Jest's matcher family encodes several genuinely different equality/comparison semantics — picking the wrong one either produces false failures (too strict) or false passes (too loose, missing real bugs).
+Jest matchers compare received values against expected targets using three distinct equality tiers:
 
 ```
-toBe(value)          ──► Object.is() REFERENCE equality — for primitives, or verifying the EXACT same object instance
-toEqual(value)          ──► RECURSIVE structural/deep equality — ignores undefined properties, ignores object TYPE
-toStrictEqual(value)      ──► deep equality LIKE toEqual, PLUS checks undefined properties explicitly AND object type/class
+toBe(val)           ──► Referential Equality (Object.is)
+                        Checks identical memory addresses or identical primitive values.
+                        { a: 1 } !== { a: 1 }
+
+toEqual(val)        ──► Deep Structural Equality
+                        Recursively traverses enumerable keys.
+                        Ignores object prototypes / class constructors.
+                        Ignores keys with `undefined` values: { a: 1, b: undefined } == { a: 1 }
+
+toStrictEqual(val)  ──► Strict Deep Structural Equality
+                        Checks prototype / constructor equality (new User() !== plain Object).
+                        Checks explicit `undefined` keys: { a: 1, b: undefined } != { a: 1 }
+                        Checks sparse arrays vs undefined elements ([ , 1] != [undefined, 1]).
 ```
 
-### `toBe` vs `toEqual`: Reference vs Structural
-```javascript
-expect({ a: 1 }).toBe({ a: 1 });     // ❌ FAILS — different object references, even with identical content
-expect({ a: 1 }).toEqual({ a: 1 });    // ✅ PASSES — structurally identical, reference doesn't matter
-```
-`toBe` is correct for primitives (`expect(sum).toBe(5)`) or for verifying two variables reference the **exact same** object (`expect(cachedUser).toBe(originalUser)`) — using it for a fresh object/array comparison is almost always a mistake, since two independently-constructed-but-equal objects will never pass `toBe`.
+### Modifier Flags & Asynchronous Matchers
+- `.not`: Inverts the assertion condition (`expect(res).not.toBeNull()`).
+- `.resolves`: Unwraps a fulfilled Promise before matching (`await expect(fetchUser()).resolves.toEqual({ id: 1 })`).
+- `.rejects`: Unwraps a rejected Promise error (`await expect(fetchUser()).rejects.toThrow('Not Found')`).
 
-### `toStrictEqual`: Catching What `toEqual` Deliberately Ignores
-```javascript
-expect({ a: 1, b: undefined }).toEqual({ a: 1 });        // ✅ PASSES — toEqual ignores undefined properties
-expect({ a: 1, b: undefined }).toStrictEqual({ a: 1 });    // ❌ FAILS — toStrictEqual does NOT ignore them
-
-class Point { constructor(x, y) { this.x = x; this.y = y; } }
-expect(new Point(1, 2)).toEqual({ x: 1, y: 2 });          // ✅ PASSES — toEqual ignores the class/prototype
-expect(new Point(1, 2)).toStrictEqual({ x: 1, y: 2 });      // ❌ FAILS — toStrictEqual checks the object's TYPE too
-```
-
-### Asymmetric Matchers: Partial Structural Matching
-`expect.objectContaining({...})`, `expect.arrayContaining([...])`, and `expect.any(Constructor)` let an assertion check **part** of a value's shape without requiring an exhaustive, brittle full match — essential when asserting against an object containing genuinely non-deterministic fields (a generated ID, a timestamp).
-
-### Custom Matchers: `expect.extend()`
-Domain-specific assertions (`expect(response).toBeValidApiResponse()`) improve test readability and failure-message clarity over generic matchers manually re-checking the same multi-field shape in every test — `expect.extend()` registers a new matcher globally, with a custom pass/fail message.
+### Asymmetric Matchers
+When asserting on large payloads containing non-deterministic data (UUIDs, timestamps, hashes), asymmetric matchers avoid brittle assertions without mocking timestamps:
+- `expect.any(Constructor)`: Matches any instance of the constructor (e.g. `expect.any(String)`).
+- `expect.objectContaining({...})`: Asserts that a subset of keys matches without requiring an exhaustive dictionary.
+- `expect.arrayContaining([...])`: Asserts that the received array contains all specified elements in any order.
 
 ---
 
 ## 2. Real-World Engineering Scenario
 
-**Scenario**: A Test Passing Despite a Real Bug, Because `toEqual` Silently Ignored an Unexpected `undefined` Field.
-A refactor accidentally introduced a bug where a required `userId` field was present but set to `undefined` instead of being correctly populated — the existing test used `toEqual`, which explicitly ignores `undefined`-valued properties during comparison, so the test kept passing despite the object being genuinely broken. Switching the assertion to `toStrictEqual` (which does NOT ignore undefined properties) immediately caught the regression, failing loudly on the exact bug `toEqual` had been silently tolerating.
+**Scenario**: Validating API response contracts containing database-generated IDs and sparse optional fields.
+
+An e-commerce order checkout returns an `Order` domain model instance containing a generated UUID, a creation timestamp, line items, and optional discount codes. If the code inadvertently sets `discount: undefined`, `toEqual` silently passes because it strips `undefined` keys during traversal. Using `toStrictEqual` combined with `expect.objectContaining` guarantees that required fields match while catching accidental `undefined` mutations.
 
 ---
 
 ## 3. Production-Grade Code Example
 
-```javascript
-// toBe vs toEqual vs toStrictEqual — choosing correctly based on what's actually being verified
-test('sum returns the correct primitive value', () => {
-  expect(sum(2, 3)).toBe(5); // primitive — toBe is correct and appropriate here
-});
+```typescript
+// orderProcessor.test.ts
+import { processOrder, calculateSummary, OrderModel } from './orderProcessor';
 
-test('createUser returns the correct shape', () => {
-  const user = createUser('Alex');
-  expect(user).toEqual({ name: 'Alex', role: 'member' }); // structural match, object identity irrelevant
-});
+describe('Order Processor Suite', () => {
+  test('returns primitive totals using toBe', () => {
+    const total = calculateSummary([10, 20, 30]);
+    expect(total).toBe(60);
+  });
 
-test('createUser does not include unexpected undefined fields', () => {
-  const user = createUser('Alex');
-  expect(user).toStrictEqual({ name: 'Alex', role: 'member' }); // catches an accidental stray `id: undefined`
-});
-```
+  test('validates full domain model contract with toStrictEqual', () => {
+    const rawOrder = {
+      orderId: 'ord_123',
+      userId: 'usr_456',
+      total: 100,
+    };
 
-```javascript
-// Asymmetric matchers — partial matching for non-deterministic fields
-test('creates an order with a generated id and current timestamp', () => {
-  const order = createOrder({ items: ['sku_1'] });
-  expect(order).toEqual({
-    id: expect.any(String),           // don't care about the EXACT generated id, just that it's a string
-    createdAt: expect.any(Date),        // don't care about the exact timestamp, just its type
-    items: expect.arrayContaining(['sku_1']), // items array CONTAINS this, may have others too
+    const result = processOrder(rawOrder);
+
+    // toStrictEqual verifies that result is an instance of OrderModel,
+    // not a plain JavaScript object literal
+    expect(result).toStrictEqual(
+      new OrderModel({
+        orderId: 'ord_123',
+        userId: 'usr_456',
+        total: 100,
+      })
+    );
+  });
+
+  test('matches dynamic fields with asymmetric matchers', () => {
+    const order = processOrder({ userId: 'usr_456', total: 100 });
+
+    expect(order).toEqual(
+      expect.objectContaining({
+        orderId: expect.stringMatching(/^ord_[a-f0-9]+$/),
+        createdAt: expect.any(Date),
+        status: 'PENDING',
+        tags: expect.arrayContaining(['retail', 'web']),
+      })
+    );
+  });
+
+  test('handles async promise rejections with toThrow', async () => {
+    const invalidOrder = { userId: '', total: -10 };
+
+    await expect(processOrder(invalidOrder)).rejects.toThrow('Invalid user ID');
   });
 });
 ```
 
-```javascript
-// Custom matcher via expect.extend() — improving readability and failure messages
+```typescript
+// Custom domain matcher setup: src/test/customMatchers.ts
 expect.extend({
-  toBeValidApiResponse(received) {
-    const pass =
-      typeof received === 'object' && received !== null &&
-      'status' in received && 'data' in received;
+  toBeWithinRange(received: number, floor: number, ceiling: number) {
+    const pass = received >= floor && received <= ceiling;
     return {
       pass,
       message: () =>
         pass
-          ? `expected response NOT to be a valid API response`
-          : `expected response to have 'status' and 'data' fields, got: ${JSON.stringify(received)}`,
+          ? `expected ${received} NOT to be within range [${floor}, ${ceiling}]`
+          : `expected ${received} to be within range [${floor}, ${ceiling}]`,
     };
   },
-});
-
-test('API returns a valid response shape', async () => {
-  const response = await fetchData();
-  expect(response).toBeValidApiResponse(); // reads clearly, and gives a domain-specific failure message
 });
 ```
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
+## 4. Gotchas & Senior Pitfalls
 
-### ⚠️ Pitfall 1: Using `toBe` for Object/Array Comparison
-```javascript
-// ❌ WRONG: ALWAYS fails for freshly-constructed objects/arrays, even when content is identical —
-// a very common early mistake, since `toBe` "feels" like the default equality check
-expect(getConfig()).toBe({ retries: 3 }); // FAILS — different object references
+### Symptom: Object comparison passes in test, but runtime crashes with "x.method is not a function"
+- **Cause**: Using `toEqual` when asserting against Class/ORM instances. `toEqual` ignores the prototype chain and constructor, passing plain objects `{}` against class instances.
+- **Fix**: Use `toStrictEqual`, which asserts prototype equality and verifies the object was instantiated with `new`.
 
-// ✅ CORRECT: use toEqual (or toStrictEqual) for structural comparison of objects/arrays
-expect(getConfig()).toEqual({ retries: 3 });
-```
+### Symptom: `await expect(asyncFn()).rejects.toThrow()` passes even if the function resolves successfully
+- **Cause**: Forgetting the `await` keyword before `expect(...)`. Without `await`, the assertion promise is returned to Jest without executing in-flight assertions.
+- **Fix**: Always prefix `.resolves` and `.rejects` with `await`, or return the promise directly from the test function.
 
-### ⚠️ Pitfall 2: Defaulting to `toEqual` When `toStrictEqual` Would Have Caught a Real Bug
-As shown in the scenario above, `toEqual`'s deliberate leniency (ignoring undefined properties, ignoring object type) can mask genuine bugs. For any assertion where an unexpected extra `undefined` field or wrong-class object would represent a real, meaningful bug, `toStrictEqual` is the more rigorous default — reserve plain `toEqual` for cases where that leniency is genuinely desired (e.g. comparing against a plain object literal when the actual value is a class instance, by design).
+### Symptom: Snapshot or matcher fails intermittently due to dynamic timestamps
+- **Cause**: Comparing whole objects that include `Date.now()` or UUIDs without masking.
+- **Fix**: Use `expect.objectContaining({ timestamp: expect.any(Number) })` or snapshot property matchers.
 
-### ⚠️ Pitfall 3: Over-Constraining an Assertion With an Exhaustive Match Where Asymmetric Matchers Were Needed
-```javascript
-// ❌ FRAGILE: hardcoding an exact, generated id/timestamp makes the test fail on every single
-// run (since these values are genuinely different each time), forcing constant, meaningless test updates
-expect(order).toEqual({ id: 'abc123', createdAt: '2026-07-31T10:00:00Z', items: ['sku_1'] });
+---
 
-// ✅ CORRECT: use expect.any()/objectContaining() for genuinely non-deterministic fields,
-// keeping the assertion meaningful and STABLE across repeated runs
-expect(order).toEqual({ id: expect.any(String), createdAt: expect.any(Date), items: ['sku_1'] });
-```
+## 5. Interview Questions & Deep Dives
+
+### ★ 1. What are the three core differences between `toEqual` and `toStrictEqual`?
+**Answer**:
+1. **Undefined properties**: `toEqual` treats `{ a: 1, b: undefined }` as equal to `{ a: 1 }`. `toStrictEqual` flags this as a difference.
+2. **Type/Class checking**: `toEqual` treats `new Point(1, 2)` as equal to `{ x: 1, y: 2 }`. `toStrictEqual` checks the prototype and constructor.
+3. **Array sparseness**: `toEqual` considers `[, 1]` equal to `[undefined, 1]`. `toStrictEqual` distinguishes between empty slots and explicit `undefined`.
+
+### ★ 2. How do asymmetric matchers work inside `toEqual`?
+**Answer**: Asymmetric matchers implement a custom `asymmetricMatch(other)` method. When `toEqual` traverses object properties, if the expected value contains an asymmetric matcher (like `expect.any(String)`), it delegates the comparison to that matcher's logic rather than checking strict value identity.
+
+### 3. How does `expect.extend` enable custom matcher creation with custom diff formatting?
+**Answer**: `expect.extend` registers a matcher function returning an object with `{ pass: boolean, message: () => string }`. Inside the matcher, Jest exposes `this.utils` containing helpers like `this.utils.printReceived()`, `this.utils.printExpected()`, and `this.utils.diff()` for formatted terminal color output.
+
+### 4. What is the danger of asserting errors with `expect(() => fn()).toThrow()` on async functions?
+**Answer**: Synchronous `expect(() => fn()).toThrow()` only catches errors thrown synchronously during the initial function call. If `fn()` returns a rejected Promise, the error occurs asynchronously on the microtask queue, causing an unhandled promise rejection. Async rejections must use `await expect(fn()).rejects.toThrow()`.
+
+---
+
+## Where this connects
+
+- **Previous**: [01 · Jest Core Concepts](../01-jest-core-concepts/01-test-structure.md) — Test tree execution lifecycle and hooks.
+- **Next**: [03 · Mocking](../03-mocking/01-jest-mock-functions.md) — Spying on functions and asserting call arguments.
+- **RTL Matchers**: [08 · RTL Queries](../08-rtl-queries/01-query-variants-and-priority.md) — Extending `expect` with `@testing-library/jest-dom`.
