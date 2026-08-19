@@ -146,7 +146,7 @@ called — no error, no log, the field keeps whatever it was
 if its dependency is not available"*. Absence is silent by design
 **Fix:** rely on it deliberately by giving the field a default at declaration. If you
 actually wanted to know whether the bean was present, inject `ObjectProvider<T>` and
-ask — see [Optional, plural and deferred](07-optional-and-deferred.md)
+ask — see [Optional, plural and deferred](08-optional-and-deferred.md)
 
 **Symptom:** `@Value("${pricing.timeout}")` fails at startup with a placeholder
 resolution error in one environment only

@@ -1,7 +1,7 @@
 ---
 title: "Circular dependencies, and why the failure is the feature"
-sidebar_label: "8 · Circular dependencies"
-sidebar_position: 8
+sidebar_label: "9 · Circular dependencies"
+sidebar_position: 9
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -128,7 +128,7 @@ of heavy lifting in most codebases that use it:
 after a routine refactor
 **Cause:** two beans now require each other in their constructors, so no construction
 order exists; Boot has prohibited this by default since 2.6
-**Fix:** break the cycle — the moves are in [the next chunk](09-breaking-the-cycle.md).
+**Fix:** break the cycle — the moves are in [the next chunk](10-breaking-the-cycle.md).
 Setting `spring.main.allow-circular-references=true` makes the message go away and
 leaves the design untouched
 
@@ -219,4 +219,4 @@ arrangement exists to make impossible.
 
 ---
 
-← Prev: [Optional, plural and deferred](07-optional-and-deferred.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Breaking the cycle](09-breaking-the-cycle.md)
+← Prev: [Optional, plural and deferred](08-optional-and-deferred.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Breaking the cycle](10-breaking-the-cycle.md)

@@ -1,7 +1,7 @@
 ---
 title: "Optional, plural and deferred: `ObjectProvider`"
-sidebar_label: "7 · Optional and deferred"
-sidebar_position: 7
+sidebar_label: "8 · Optional and deferred"
+sidebar_position: 8
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -119,7 +119,7 @@ The methods that matter:
   empty stream, not an error.
 - **`orderedStream()`** — every candidate, honouring `Ordered`/`@Order`. This is
   the ordered-plural form, and it is the clean answer to the `Map`-has-no-order
-  trap from [the previous chunk](06-collections-and-ordering.md).
+  trap from [the previous chunk](07-collections-and-ordering.md).
 
 ### Why deferral matters
 
@@ -133,7 +133,7 @@ Three real reasons, and none of them is style:
 2. **Breaking a cycle honestly.** If A needs B only occasionally,
    `ObjectProvider<B>` removes the construction-time edge, so the cycle in the
    *object graph* disappears rather than being tolerated. This is a real fix,
-   unlike `@Lazy` — [next chunk](08-circular-dependencies.md).
+   unlike `@Lazy` — [next chunk](09-circular-dependencies.md).
 3. **Optional infrastructure.** A library that works better when a
    `MeterRegistry` is present, and correctly when it is not, wants
    `getIfAvailable()` and not two configuration classes.
@@ -261,4 +261,4 @@ empty-tolerant.
 
 ---
 
-← Prev: [Collections, ordering and self-injection](06-collections-and-ordering.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Circular dependencies](08-circular-dependencies.md)
+← Prev: [Collections, ordering and self-injection](07-collections-and-ordering.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Circular dependencies](09-circular-dependencies.md)

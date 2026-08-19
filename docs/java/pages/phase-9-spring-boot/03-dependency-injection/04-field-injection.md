@@ -166,7 +166,7 @@ tool for a pure unit test of a service's logic, which should not need a context
 at all. **Phase 11 — Testing** *(not written yet)* covers the split.
 
 **"Circular dependencies are easier to deal with."** This is true and it is an
-indictment, not a defence — see [the circular dependency chunk](08-circular-dependencies.md).
+indictment, not a defence — see [the circular dependency chunk](09-circular-dependencies.md).
 
 ## Gotchas
 
@@ -217,7 +217,7 @@ circular-dependency failure at startup
 **Cause:** the cycle was always there — field injection allowed it by separating
 construction from wiring, so nothing ever reported it
 **Fix:** treat it as the finding it is and break the cycle
-([Breaking the cycle](09-breaking-the-cycle.md)); do not restore field injection to make
+([Breaking the cycle](10-breaking-the-cycle.md)); do not restore field injection to make
 the message go away
 
 ## Interview questions

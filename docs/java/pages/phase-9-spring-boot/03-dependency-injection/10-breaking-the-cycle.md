@@ -1,7 +1,7 @@
 ---
 title: "Breaking the cycle"
-sidebar_label: "9 · Breaking the cycle"
-sidebar_position: 9
+sidebar_label: "10 · Breaking the cycle"
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -77,7 +77,7 @@ class OrderService {
 ```
 
 `ApplicationEventPublisher` is one of the always-resolvable dependencies from
-[the previous chunk](07-optional-and-deferred.md), so this costs one constructor
+[the previous chunk](08-optional-and-deferred.md), so this costs one constructor
 parameter and removes an edge from the graph entirely.
 
 ### Or defer the edge honestly
@@ -109,6 +109,51 @@ readable directly off that list. Two things are worth knowing about how to use i
 
 *(The exact rendering is produced by Boot's failure analyzers and this page does
 not reproduce it, since no application was run to capture it.)*
+
+### Finding the offending edge when the ring is large
+
+A two-bean cycle diagnoses itself. A ring of six or eight, in a service nobody
+has read end to end, does not — the report tells you *that* the ring exists and
+lists its members, and every one of them looks reasonable. Work it in this
+order, because it goes from cheapest to most invasive:
+
+1. **Read the ring as a sentence.** Take each arrow literally: "the order
+   service needs the invoicer, the invoicer needs the notifier, the notifier
+   needs the order service." One of those sentences will sound wrong when spoken
+   — usually the one where a low-level component reaches back up to something
+   that orchestrates it. That edge is the candidate, and it is nearly always a
+   *notification* or a *lookup* pointing the wrong way.
+2. **Ask which beans are in the ring only as a pass-through.** A class that
+   appears in the cycle but merely forwards a call is not part of the real
+   dependency — it is a link in a chain that would collapse if the wrong edge
+   were removed. Ignore those and the ring usually shrinks to two or three
+   classes that genuinely know about each other.
+3. **Look for the edge that exists for one method.** The most common cause is a
+   class injecting a whole collaborator to call a single method on it. That
+   method is the thing it actually depends on, and it belongs on a smaller type
+   both classes can depend on — the "find the third thing" move above.
+4. **Check the constructors for work.** An edge that exists only because a
+   constructor is *using* the collaborator rather than storing it is a different
+   bug wearing a cycle's clothes; deferring or restructuring that work often
+   removes the edge entirely.
+5. **Only then reach for a temporary diagnostic.** Setting
+   `spring.main.allow-circular-references=true` lets the context start so you can
+   inspect the graph in a running application rather than reasoning about it from
+   a stack trace. This is a *diagnostic*, not a fix — see the previous chunk for
+   why the property is a deprecation-shaped thing to leave switched on, and
+   remove it in the same change that removes the cycle.
+
+⚠️ **The one step to skip is annotating.** `@Lazy` on an arbitrary member of the
+ring will make the failure disappear, and it will disappear regardless of which
+member you pick — which is precisely why it teaches you nothing and leaves the
+design defect in place with a proxy on top of it.
+
+**A structural check worth doing once.** If the same ring keeps reappearing in
+different shapes after each fix, the cycle is not between those classes at all —
+it is between the *layers* they belong to, and something in a lower layer has
+been given a responsibility that belongs above it. That is a refactor with a
+different scope, and it is worth naming as such rather than fighting the same
+startup error four times.
 
 ## Gotchas
 
@@ -192,6 +237,35 @@ starting point is an artefact of ordering, not a diagnosis. Read the whole ring
 and ask which edge should not exist, which is a design question the report
 cannot answer for you.
 
+**★ The cycle report lists eight beans. How do you find the edge that should not exist?**
+Read the ring as a sentence, arrow by arrow, and find the one that sounds wrong
+when spoken aloud — typically a low-level component reaching back to something
+that orchestrates it, which is a notification or a lookup pointing the wrong way.
+Then discard the beans that are only pass-throughs, which usually shrinks eight
+to two or three classes that genuinely know about each other. The most common
+concrete cause is a class injecting an entire collaborator to call one method on
+it; that method is the real dependency and belongs on a smaller type both can
+depend on. Reaching for `@Lazy` is the step to skip, because it removes the
+failure no matter which bean you put it on and therefore tells you nothing.
+
+**★ Is `spring.main.allow-circular-references=true` ever a reasonable thing to type?**
+As a diagnostic, yes — briefly. Turning it on lets the context start so you can
+inspect the object graph in a running application instead of reasoning about it
+from a startup failure, which is genuinely faster on a large ring. As anything
+other than that it is a decision to keep a defect: it restores pre-2.6 behaviour
+for the whole application, not just the cycle you were looking at, so it also
+silences the next cycle somebody introduces. If it goes in, it goes in on a
+branch and comes out in the same change that removes the cycle.
+
+**★ You fix a cycle, and a differently-shaped one appears in the same area next sprint.
+What does that mean?**
+That the cycle is between layers rather than between classes. Individual fixes
+keep working and keep being undone because something in a lower layer has been
+given a responsibility that belongs above it, so every new feature re-creates an
+upward edge. The useful response is to name it as a layering problem and scope a
+refactor accordingly, rather than extracting a fourth collaborator and treating
+the recurrence as bad luck.
+
 ---
 
-← Prev: [Circular dependencies](08-circular-dependencies.md) · Index: [Phase 9 — Spring Boot and the web](../README.md)
+← Prev: [Circular dependencies](09-circular-dependencies.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next topic → [Bean scopes and lifecycle](../04-bean-scopes-lifecycle/README.md)

@@ -1,5 +1,5 @@
 ---
-title: "Resolving ambiguity: qualifiers, primary, collections"
+title: "Resolving ambiguity: narrowing the type match"
 sidebar_label: "5 · Resolving ambiguity"
 sidebar_position: 5
 ---
@@ -9,22 +9,26 @@ sidebar_position: 5
 > Verified: 2026-08-19 against the Spring Framework reference — *Fine-tuning
 > Annotation-based Autowiring with Qualifiers*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired-qualifiers.html
-> — narrowing semantics, the bean-name fallback and its `-parameters` requirement
-> since 6.1, custom qualifier annotations, qualifiers as filtering criteria on
-> collections, and `@Primary`/`@Fallback`) and *Using `@Autowired`*
+> — narrowing semantics, and the bean-name fallback with its `-parameters`
+> requirement since 6.1 and the 6.2 shortcut resolution), *Using Generics as
+> Autowiring Qualifiers*
+> (docs.spring.io/spring-framework/reference/core/beans/annotation-config/generics-as-qualifiers.html
+> — the `Store<String>` / `Store<Integer>` example and generic filtering of
+> collections) and *Using `@Autowired`*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html
-> — array/`Set`/`List`/`Map` injection, and the `@Resource` name-based vs `@Autowired` type-based comparison, `@Order`/`Ordered`/`@Priority` ordering, and
-> the note that `@Order` on a `@Configuration` class does not propagate to its
-> `@Bean` methods). `@Fallback` was introduced in Framework 6.2. Spring Boot
-> 4.1.0, Spring Framework 7.0.x, JDK 25.
+> — the `@Resource` name-based vs `@Autowired` type-based comparison). Spring
+> Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
 
 **Autowiring is matching by *type*, and the moment two beans satisfy one type
-the container refuses to guess. Everything in this chunk is a way of narrowing
-that match — and the most important thing to understand is that a qualifier is
-**not** a bean id. The reference is unambiguous: qualifier values *"always have
-narrowing semantics within the set of type matches. They do not semantically
-express a reference to a unique bean `id`."* Once you read `@Qualifier` as a
-filter rather than a name, the collection behaviour stops being surprising.**
+the container refuses to guess. This chunk is about narrowing that match *at the
+injection point* — and the most important thing to understand is that a qualifier
+is **not** a bean id. The reference is unambiguous: qualifier values *"always
+have narrowing semantics within the set of type matches. They do not
+semantically express a reference to a unique bean `id`."* Once you read
+`@Qualifier` as a filter rather than a name, the collection behaviour stops
+being surprising. And before any annotation, check the mechanism people forget:
+if the two beans differ by a generic type argument, the type system has already
+narrowed the match for you and the compiler is checking it.**
 
 ## The failure you are resolving
 
@@ -90,78 +94,62 @@ Gradle plugins configure `-parameters` for you, so it works in a Boot project
 and breaks in a plain one — and it breaks by falling back to ambiguity, i.e. a
 startup failure in an environment that compiles differently. It is a real
 mechanism but a fragile thing to depend on deliberately; prefer the explicit
-`@Qualifier` when the choice matters.
+`@Qualifier` when the choice matters.## The qualifier you already wrote: the generic type
 
-## `@Primary` — a default chosen at the definition
+Before reaching for any annotation, check whether the type system has already
+said what you mean. The reference treats **generic type arguments as an implicit
+form of qualification** — no `@Qualifier`, no bean names, no configuration:
 
 ```java
+class StringStore  implements Store<String>  { }
+class IntegerStore implements Store<Integer> { }
+
 @Configuration
-class PaymentConfig {
-    @Bean @Primary PaymentGateway stripeGateway() { return new StripeGateway(); }
-    @Bean          PaymentGateway adyenGateway()  { return new AdyenGateway(); }
-}
-```
-
-Now an unqualified `PaymentGateway` injection point gets Stripe, and anyone
-wanting Adyen asks by qualifier. The difference from `@Qualifier` is *where the
-decision lives*: `@Primary` decides once at the definition for every consumer,
-`@Qualifier` decides per injection point. Use `@Primary` when there is a real
-default and the exceptions are few; use qualifiers when every consumer has an
-opinion.
-
-## `@Fallback` — the inverse, since Framework 6.2
-
-`@Fallback` marks a bean as the one to use *only when nothing else matches*:
-
-```java
-@Bean @Fallback PaymentGateway noopGateway() { return new NoopGateway(); }
-```
-
-It is the natural fit for auto-configuration and for library defaults: ship a
-`@Fallback` implementation, and the moment an application defines its own, the
-application's wins without anyone marking anything `@Primary`. The docs group
-the two together — *"`@Primary` and `@Fallback` are effective ways to use
-autowiring by type with several instances when one primary (or non-fallback)
-candidate can be determined."*
-
-Think of it as: `@Primary` says "prefer me"; `@Fallback` says "prefer anyone
-else".
-
-## Custom qualifier annotations
-
-A string qualifier is untyped and untypo-checked. The reference shows the
-alternative: a meta-annotated annotation.
-
-```java
-@Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-@Qualifier
-public @interface Gateway {
-    Provider value();
-    enum Provider { STRIPE, ADYEN }
+class StoreConfig {
+    @Bean Store<String>  stringStore()  { return new StringStore(); }
+    @Bean Store<Integer> integerStore() { return new IntegerStore(); }
 }
 ```
 
 ```java
-@Bean @Gateway(STRIPE) PaymentGateway stripeGateway() { ... }
-
-CheckoutService(@Gateway(STRIPE) PaymentGateway gateway) { ... }
+@Autowired Store<String>  s1;   // <String>  qualifies — injects stringStore
+@Autowired Store<Integer> s2;   // <Integer> qualifies — injects integerStore
 ```
 
-Now the compiler checks it, the IDE completes it, and renaming is a refactor
-rather than a search. The docs also show qualifiers with **several attributes**
-(`@MovieQualifier(format=Format.VHS, genre="Action")`), and matching then
-requires all attributes to agree — useful when the axis of choice is genuinely
-two-dimensional.
+Two beans of the raw type `Store` exist, and neither injection point is
+ambiguous, because the type arguments differ. This is the single cleanest way to
+resolve ambiguity when it applies, for the reason that runs through this whole
+topic: **the compiler checks it.** A `@Qualifier("stringStore")` is a string
+that nothing verifies; `Store<String>` is a type that fails the build when you
+get it wrong.
+
+It filters collections the same way:
+
+```java
+@Autowired List<Store<Integer>> integerStores;   // Store<String> beans are excluded
+```
+
+The filtering is automatic. There is no annotation to forget and no name to keep
+in sync.
+
+**Where it applies and where it does not.** It only helps when the axis you are
+choosing along is genuinely expressible as a type parameter —
+`EventHandler<OrderPlaced>` versus `EventHandler<OrderShipped>`,
+`Validator<Invoice>` versus `Validator<Customer>`, a repository per aggregate.
+It does nothing for two beans of the *same* parameterisation: two
+`PaymentGateway` implementations are both `PaymentGateway`, and no generic
+signature distinguishes Stripe from Adyen because the difference is not a type
+difference. That is what the rest of this chunk, and the next one, are for.
+
+⚠️ **This depends on the generic information being reachable.** Spring resolves
+it from the declared type of the `@Bean` method or the class's implemented
+interface. Declare the method as `Store<String> stringStore()`, not
+`StringStore stringStore()` returning a raw-typed variable, and never widen the
+declaration to raw `Store` — the moment the type argument is erased from the
+*declaration*, the implicit qualifier goes with it and you are back to an
+ambiguity error that looks inexplicable.
 
 ## Gotchas
-
-**Symptom:** `NoUniqueBeanDefinitionException` appears the moment a second
-implementation is added, in a codebase that worked for a year
-**Cause:** the single-candidate case never needed narrowing, so nothing declared the
-intent; adding a bean of the same type made the existing injection point ambiguous
-**Fix:** decide deliberately — `@Primary` if one is genuinely the default,
-`@Qualifier` at each site if not. Do not delete the second bean to make it go away
 
 **Symptom:** injection by parameter name works locally and fails in another build
 **Cause:** the bean-name fallback needs parameter names in the bytecode, which since
@@ -175,21 +163,31 @@ ambiguity even though the qualifier looks "specific"
 **Cause:** qualifiers narrow, they do not name — three beans can share one qualifier
 value, and the docs say qualifiers do not have to be unique
 **Fix:** narrow further with a distinct qualifier value or a multi-attribute custom
-qualifier, or accept plurality and inject `List<PaymentGateway>`
-([next chunk](06-collections-and-ordering.md))
+qualifier ([next chunk](06-primary-fallback-and-custom-qualifiers.md)), or accept
+plurality and inject `List<PaymentGateway>`
+([chunk 7](07-collections-and-ordering.md))
 
-**Symptom:** a library's default implementation is silently used even though the
-application defined its own
-**Cause:** the library marked its default `@Primary`, which outranks an unmarked
-application bean
-**Fix:** the library should mark it `@Fallback` (Framework 6.2+) instead, which means
-"prefer anyone else" and lets an application override by simply existing
+**Symptom:** `Store<String>` and `Store<Integer>` beans resolve fine from a
+`@Configuration` class but become ambiguous after a refactor that "simplified" the
+`@Bean` method signatures
+**Cause:** the `@Bean` method return type was narrowed to the concrete class or widened
+to the raw type, and the generic argument is no longer visible on the declaration
+**Fix:** declare `@Bean` methods with the parameterised interface type —
+`Store<String> stringStore()` — because that declaration *is* the qualifier
 
-**Symptom:** a string qualifier is renamed on the bean but not at one injection point,
-and the failure only shows up in the environment that activates that configuration
-**Cause:** string qualifiers are not checked by anything at compile time
-**Fix:** use a custom `@Qualifier`-meta-annotated annotation with an enum attribute, so
-renaming is a refactor the compiler follows
+**Symptom:** a `@Qualifier` is added to fix ambiguity between two handlers that
+differ only in the event they handle
+**Cause:** the difference was a type difference all along and was being expressed as
+a string instead
+**Fix:** parameterise — `EventHandler<OrderPlaced>` — and delete the qualifier; the
+compiler now enforces what the string was asserting
+
+**Symptom:** two beans differ only by qualifier and every consumer names one, so the
+qualifier strings are duplicated across a dozen files
+**Cause:** the choice is per-consumer and expressed with an untyped literal
+**Fix:** a custom qualifier annotation with an enum attribute
+([next chunk](06-primary-fallback-and-custom-qualifiers.md)) — one place to rename,
+and the compiler follows
 
 ## Interview questions
 
@@ -202,31 +200,35 @@ consequence is that a qualifier can match several beans — on a single-valued
 injection point that is still an ambiguity error, and on a collection injection
 point it is a filter that returns all of them.
 
-**★ `@Primary` versus `@Qualifier` — how do you choose?**
-By where the decision belongs. `@Primary` is declared once at the bean
-definition and applies to every unqualified consumer, so it fits the case where
-one implementation genuinely is the default and exceptions are rare.
-`@Qualifier` is declared at each injection point, so it fits the case where
-consumers legitimately differ and no default is honest. Using `@Primary` to
-silence an ambiguity you have not thought about is how the wrong gateway ends up
-in production.
+**★ Two beans implement `Store<T>` with different type arguments. Do you need a qualifier?**
+No. Generic type arguments are an implicit qualifier: `Store<String>` resolves to
+the `Store<String>` bean and `Store<Integer>` to the other, with no annotation at
+all. It is the best available answer when it applies, because it is the only
+narrowing mechanism the compiler checks — a wrong type argument is a build
+failure, whereas a wrong qualifier string is a runtime one. It also filters
+collections, so `List<Store<Integer>>` excludes the `String` stores
+automatically.
 
-**★ What is `@Fallback` for, and how does it relate to `@Primary`?**
-`@Fallback`, added in Framework 6.2, marks a bean as the one to use only when no
-non-fallback candidate exists — effectively "prefer anyone else", the inverse of
-`@Primary`'s "prefer me". It is aimed squarely at libraries and
-auto-configuration: ship a fallback implementation and an application overrides
-it just by defining its own bean, with no `@Primary` needed and no ambiguity
-error in between. The docs pair the two as the ways to make type-based
-autowiring work when several instances exist.
+**★ When does the generic-qualifier mechanism stop helping?**
+When the distinction is not a type distinction. Two `PaymentGateway`
+implementations are both exactly `PaymentGateway`; Stripe and Adyen differ by
+vendor, not by type parameter, so there is no signature that separates them and
+you need `@Primary`, a qualifier, or plurality. The mechanism also disappears if
+the generic argument is erased from the *declaration* — a `@Bean` method declared
+as raw `Store` or as the concrete `StringStore` no longer advertises the type
+argument Spring matches on.
 
-**★ Why would you write a custom qualifier annotation instead of a string?**
-Because a string qualifier is untyped: a typo is a startup failure at best and a
-silent wrong match at worst, refactoring is a text search, and nothing completes
-it in the IDE. A `@Qualifier`-meta-annotated annotation with an enum attribute is
-compiler-checked and refactorable. The docs also support multi-attribute
-qualifiers, where all attributes must match — worth using when the choice is
-genuinely two-dimensional, like provider plus region.
+**★ Why does the bean-name fallback break in one build and not another?**
+Because it needs the parameter name to still exist in the bytecode. Since
+Framework 6.1 that requires the `-parameters` compiler flag, which Spring Boot's
+Maven and Gradle plugins add for you and a hand-rolled build may not. The failure
+mode is unpleasant: it does not fall back to something reasonable, it falls back
+to ambiguity, so the application starts in one environment and fails at startup in
+another with an error that points at the injection point rather than at the
+compiler configuration. Framework 6.2 also added a fast shortcut when the
+parameter name matches a bean name — a performance detail, but it underlines that
+this is a supported mechanism rather than an accident. Depend on it for
+convenience, never for correctness.
 
 **★ `@Resource` versus `@Autowired` — do they resolve the same way?**
 No, and the reference draws the line sharply. `@Resource` is *"semantically
@@ -240,14 +242,16 @@ single-argument setters. Since constructor injection is the default, the docs'
 own conclusion applies — *"stick with qualifiers if your injection target is a
 constructor or a multi-argument method."*
 
-**★ What happens if you resolve ambiguity by just deleting one of the beans?**
-You have answered the container's question by removing the capability, which is
-only correct if the second implementation was genuinely dead. The ambiguity error
-is information: it says two things now satisfy one type and nobody has said which
-consumers want which. The useful responses are `@Primary`, a qualifier per site,
-or — often the best one — recognising that the consumer wants *all* of them and
-should be injecting a collection.
+**★ Rank the ways of narrowing a type match, best first, and say why.**
+Generic type arguments, because the compiler enforces them. Then a custom
+`@Qualifier`-meta-annotated annotation with an enum attribute, because it is
+compiler-checked and refactorable even though the matching itself is at runtime.
+Then a string `@Qualifier`, which works and is honest about intent but is checked
+by nothing. Then `@Primary`, which is not really narrowing at all — it is picking
+a default for everybody, and it is the right tool only when there genuinely is a
+default. Last, the bean-name fallback, which is implicit, invisible at the
+injection point and dependent on a compiler flag.
 
 ---
 
-← Prev: [Why field injection is flagged](04-field-injection.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Collections, ordering and self-injection](06-collections-and-ordering.md)
+← Prev: [Why field injection is flagged](04-field-injection.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [`@Primary`, `@Fallback` and custom qualifiers](06-primary-fallback-and-custom-qualifiers.md)
