@@ -65,9 +65,9 @@ This topic runs to six files. The chunks:
   describes, and Boot's fat jar deliberately disagrees about it.
 - **[Phase 8 · Versioning, updates and CVEs](../../phase-8-build-dependencies/07-versioning-updates-cve/README.md)**
   — embedding the server means a Tomcat CVE is now your dependency bump.
-- **Topic 10 — The request pipeline** *(not written yet)* — filters are one of
+- **[Topic 10 — The request pipeline](../10-the-request-pipeline/README.md)** — filters are one of
   three interception points; that topic is where you choose between them.
-- **Topic 15 — WebFlux and reactive** *(not written yet)* — chunk 5 sets up the
+- **[Topic 15 — WebFlux and reactive](../15-webflux-reactive/README.md)** — chunk 5 sets up the
   argument that topic settles.
 
 ---

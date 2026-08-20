@@ -80,10 +80,10 @@ This topic runs to thirteen files. The chunks:
 - **[Topic 06 — Configuration and profiles](../06-configuration-and-profiles/01-the-environment-and-precedence.md)**
   — the JSON and mapping properties in chunks 10 and 12 are `Environment`
   properties like any other.
-- **Topic 08 — Validation** *(not written yet)* — `@Valid` sits on the
+- **[Topic 08 — Validation](../08-validation/README.md)** — `@Valid` sits on the
   `@RequestBody` parameter chunk 4 describes; that topic owns the constraint
   set and the custom validators.
-- **Topic 09 — Error handling** *(not written yet)* — chunk 7 chooses the status
+- **[Topic 09 — Error handling](../09-error-handling/README.md)** — chunk 7 chooses the status
   codes; that topic owns the single error body shape every failure returns.
 - **[Records](../../phase-2-classes-objects/08-records/README.md)** and
   **[Immutable design](../../phase-2-classes-objects/12-immutable-design/README.md)**

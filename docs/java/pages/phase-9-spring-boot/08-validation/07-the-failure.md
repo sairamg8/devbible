@@ -153,7 +153,7 @@ are deliberately similar and *"can be handled with almost identical code"*, but
 
 **Where this hands off.** Turning any of these into a client-facing body — a
 `ProblemDetail` with a field-by-field breakdown, a stable error code, i18n — is
-**Topic 09 — Error handling** *(not written yet)*, which covers
+**[Topic 09 — Error handling](../09-error-handling/README.md)**, which covers
 `@ControllerAdvice`, `ResponseEntityExceptionHandler` and RFC 9457. This topic
 stops at *what the exception is and what it contains*. The general principle of
 translating an exception at a boundary is

@@ -231,7 +231,7 @@ behind it, and pollutes your error rate.
 **Cause:** `/error` is an ordinary mapped path; hitting it with no error
 attributes set produces a 500-shaped body.
 **Fix:** point probes at the Actuator health endpoints instead
-(**Topic 13 — Actuator** *(not written yet)*). Changing
+(**[Topic 13 — Actuator](../13-actuator/README.md)**). Changing
 `spring.web.error.path` hides it rather than fixing it.
 
 ## Interview questions

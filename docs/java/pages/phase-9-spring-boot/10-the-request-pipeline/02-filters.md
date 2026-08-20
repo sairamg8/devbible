@@ -131,7 +131,7 @@ class TokenFilter extends OncePerRequestFilter {
 
 Two details make that work rather than merely compile. It writes
 `application/problem+json`, so the body matches the contract
-**Topic 09 — Error handling** *(not written yet)* defines for every other
+**[Topic 09 — Error handling](../09-error-handling/README.md)** defines for every other
 failure. And it serialises through an injected `HttpMessageConverter` rather than
 string concatenation, so the JSON is produced by the same Jackson configuration
 as the rest of the API — field naming, null inclusion, date format and all.

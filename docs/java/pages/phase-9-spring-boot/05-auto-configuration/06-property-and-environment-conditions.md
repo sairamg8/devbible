@@ -146,7 +146,7 @@ was missing. The causal distance between *"I wrote `acme.libx.enabld` in
 It is also the argument for binding configuration with
 `@ConfigurationProperties` rather than scattering raw keys: typed configuration
 can be validated and can fail at startup naming the property, which is covered
-in **Phase 9 topic 06 — Configuration and profiles** *(not written yet)*.
+in **[Phase 9 topic 06 — Configuration and profiles](../06-configuration-and-profiles/README.md)**.
 
 ## The trade-off
 
@@ -187,7 +187,7 @@ removal date.
 
 **Symptom:** the same property key works when set as an environment variable but not in `application.yml`, or vice versa
 **Cause:** condition annotations read the `Environment`, so relaxed binding applies to the *lookup* — but the `prefix` + `name` you wrote must still form the canonical key. `ACME_LIBX_ENABLED` binds to `acme.libx.enabled`, not to `acme.libxEnabled`
-**Fix:** write the canonical kebab-case key in the annotation and let relaxed binding handle the environment-variable form; the mapping rules are in **Phase 9 topic 06 — Configuration and profiles** *(not written yet)*
+**Fix:** write the canonical kebab-case key in the annotation and let relaxed binding handle the environment-variable form; the mapping rules are in **[Phase 9 topic 06 — Configuration and profiles](../06-configuration-and-profiles/README.md)**
 
 **Symptom:** an auto-configuration meant for embedded deployments tries to configure a server in a war deployed to an external container
 **Cause:** it guards on `@ConditionalOnWebApplication`, which is true for both embedded and war deployments

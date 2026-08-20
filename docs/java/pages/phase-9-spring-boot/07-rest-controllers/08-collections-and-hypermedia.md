@@ -143,7 +143,7 @@ instead of constructing URLs from a specification, and in practice consumers
 generate a typed client from an OpenAPI document and construct URLs. Paying for
 hypermedia that clients ignore is a poor trade, and a generated contract
 delivers most of the decoupling benefit for far less effort — that contract is
-**topic 14 · OpenAPI with springdoc** *(not written yet)*.
+**[topic 14 · OpenAPI with springdoc](../14-openapi-springdoc/README.md)**.
 
 Where hypermedia does pay: long-lived public APIs with many independent
 consumers you cannot coordinate a release with, and workflow resources where the

@@ -144,7 +144,7 @@ happens to include `/error` may not.
 
 **Actuator.** Health, readiness and metrics need a deliberate rule rather than
 an accident — permitted for the orchestrator, closed for everything else. That
-belongs to **Topic 13 — Actuator** *(not written yet)*, but the matcher lives
+belongs to **[Topic 13 — Actuator](../13-actuator/README.md)**, but the matcher lives
 here.
 
 ## The trade-off

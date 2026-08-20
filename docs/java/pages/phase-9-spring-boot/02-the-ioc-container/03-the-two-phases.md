@@ -112,7 +112,7 @@ It also explains the ordering rule people trip over.
 yet?", and user configuration is processed *before* auto-configuration for
 exactly this reason. Declare your own `ObjectMapper` and Boot's backs off; the
 mechanism is definition ordering in phase 1, not magic. That is
-**Topic 05 — Boot auto-configuration** *(not written yet)*.
+**[Topic 05 — Boot auto-configuration](../05-auto-configuration/README.md)**.
 
 ## Gotchas
 

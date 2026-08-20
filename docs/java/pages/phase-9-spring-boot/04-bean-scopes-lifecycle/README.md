@@ -53,12 +53,12 @@ This topic runs to five files. The chunks:
 
 ## Where this connects
 
-- **Topic 03 — Dependency injection** *(not written yet)* — injection decides
+- **[Topic 03 — Dependency injection](../03-dependency-injection/README.md)** — injection decides
   what a bean receives; scope decides how many of it there are. The
   `ObjectProvider` used here to escape the prototype trap is introduced there,
   and the circular-dependency mechanism this topic only reads the report for is
   argued out there in full.
-- **Topic 05 — Boot auto-configuration** *(not written yet)* — conditional beans
+- **[Topic 05 — Boot auto-configuration](../05-auto-configuration/README.md)** — conditional beans
   are still beans, with these scopes and these callbacks.
 - **[Race conditions](../../phase-6-concurrency/03-race-conditions/README.md)**
   and **[the immutability-first strategy](../../phase-6-concurrency/15-immutability-first-strategy/README.md)**

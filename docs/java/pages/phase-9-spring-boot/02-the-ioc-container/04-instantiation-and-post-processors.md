@@ -83,7 +83,7 @@ distinction is the first gotcha below.
 The same phase-two timing is why a field-injected `@Value` is still `null`
 inside the constructor — field injection happens after construction. That
 argument, and why constructor injection avoids the whole class of problem,
-belongs to **Topic 03 — Dependency injection** *(not written yet)*.
+belongs to **[Topic 03 — Dependency injection](../03-dependency-injection/README.md)**.
 
 ## Gotchas
 

@@ -132,7 +132,7 @@ public class ReportService {
 The fix people reach for is `@PostConstruct`, which does work. The fix that
 removes the problem is a constructor parameter, after which there is no step 2
 to wait for. Lifecycle ordering is
-**Topic 04 — Bean scopes and lifecycle** *(not written yet)*.
+**[Topic 04 — Bean scopes and lifecycle](../04-bean-scopes-lifecycle/README.md)**.
 
 ## The one place field injection is not a choice
 

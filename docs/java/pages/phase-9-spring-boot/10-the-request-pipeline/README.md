@@ -109,9 +109,9 @@ This topic runs to ten files. The chunks:
   and
   [platform vs virtual threads](../../phase-6-concurrency/02-platform-vs-virtual-threads/README.md)
   — the language-level mechanics under everything in chunk 10.
-- **Topic 12 — Outbound HTTP** *(not written yet)* — where trace context has to be
+- **[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)** — where trace context has to be
   propagated onwards, and why an injected `RestClient.Builder` matters.
-- **Topic 13 — Actuator** *(not written yet)* — the endpoints that expose the
+- **[Topic 13 — Actuator](../13-actuator/README.md)** — the endpoints that expose the
   metrics chunk 7 describes.
 
 ---

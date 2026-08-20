@@ -217,7 +217,7 @@ management.endpoint.health.group.liveness.include=livenessState
 
 **Symptom:** taking the database out of readiness meant an outage where every request returned 500 instead of the instances being removed
 **Cause:** this is the intended behaviour, and the objection is really that the errors were not handled well
-**Fix:** the answer is not to put the database back in readiness — it is to return a meaningful error for the endpoints that need the database while continuing to serve the ones that do not, which is **topic 09 — Error handling** *(not written yet)*'s job, not the probe's
+**Fix:** the answer is not to put the database back in readiness — it is to return a meaningful error for the endpoints that need the database while continuing to serve the ones that do not, which is **[topic 09 — Error handling](../09-error-handling/README.md)**'s job, not the probe's
 
 **Symptom:** a deployment drops requests even though readiness is configured
 **Cause:** readiness flipping to `REFUSING_TRAFFIC` is not instantaneous from the load balancer's point of view — it takes at least one probe interval for the change to be observed

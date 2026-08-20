@@ -83,10 +83,10 @@ This topic runs to eight files. The chunks:
 - **[Platform vs virtual threads](../../phase-6-concurrency/02-platform-vs-virtual-threads/README.md)**
   — `@ConditionalOnThreading` is how one auto-configuration ships sensible
   behaviour for both execution models.
-- **Phase 9 topic 06 — Configuration and profiles** *(not written yet)* — the
+- **[Phase 9 topic 06 — Configuration and profiles](../06-configuration-and-profiles/README.md)** — the
   properties that condition annotations read, bound properly and validated at
   startup instead of scattered as raw keys.
-- **Phase 9 topic 13 — Actuator** *(not written yet)* — the `conditions`
+- **[Phase 9 topic 13 — Actuator](../13-actuator/README.md)** — the `conditions`
   endpoint is the production-safe way to read the report, and it needs locking
   down.
 

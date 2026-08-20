@@ -62,7 +62,7 @@ deserialise another service's problem body into a `ProblemDetail` and find the
 extension members in `getProperties()`. That makes `ProblemDetail` usable as a
 *client-side* type as well as a server-side one, which is how you map an
 upstream failure onto your own without inventing a second DTO — relevant when
-you call other services (**Topic 12 — Outbound HTTP** *(not written yet)*).
+you call other services (**[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)**).
 
 **It is Jackson-specific and Jackson-version-specific.** Boot 4 ships Jackson 3,
 with new package names and a new builder type. If you construct your own JSON

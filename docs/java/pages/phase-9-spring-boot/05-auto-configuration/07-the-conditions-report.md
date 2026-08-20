@@ -94,7 +94,7 @@ management:
 That endpoint reveals a great deal about your classpath and configuration —
 which libraries you use, which properties are set, which features are off — so
 it belongs behind authentication. Exposure and locking the Actuator down is
-**Phase 9 topic 13 — Actuator** *(not written yet)*.
+**[Phase 9 topic 13 — Actuator](../13-actuator/README.md)**.
 
 ## The trade-off
 

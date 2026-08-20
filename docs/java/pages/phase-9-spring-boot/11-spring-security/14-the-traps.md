@@ -221,8 +221,8 @@ passes when the rule is missing.
 `permitAll` written for `/actuator/health` with a `**` that reached further than
 intended.
 **Fix.** Permit exactly the liveness and readiness paths and require
-authentication for the rest. The endpoints themselves are **Topic 13 —
-Actuator** *(not written yet)*; the matcher is a security decision and belongs
+authentication for the rest. The endpoints themselves are **[Topic 13 —
+Actuator](../13-actuator/README.md)**; the matcher is a security decision and belongs
 in the chain.
 
 ## The pattern behind all of them

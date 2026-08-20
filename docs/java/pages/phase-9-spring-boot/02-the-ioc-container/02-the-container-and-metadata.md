@@ -271,7 +271,7 @@ the definition and condition work to build time and emits generated code
 instead of runtime reflection, and GraalVM native images, which additionally
 remove JVM warm-up. That is also why frameworks like Quarkus and Micronaut do
 their dependency injection at compile time — the subject of
-**Topic 16 — The alternatives** *(not written yet)*.
+**[Topic 16 — The alternatives](../16-the-alternatives/README.md)**.
 
 ---
 

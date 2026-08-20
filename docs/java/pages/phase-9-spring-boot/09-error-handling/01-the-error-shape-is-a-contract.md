@@ -168,7 +168,7 @@ the advice's reach by construction, not by misconfiguration.
 hits it directly.
 **Cause** — it is an ordinary mapped path with no error attributes set.
 **Fix** — do not point a probe at it. Use the Actuator health endpoints
-(**Topic 13 — Actuator** *(not written yet)*) and, if the exposure bothers you,
+(**[Topic 13 — Actuator](../13-actuator/README.md)**) and, if the exposure bothers you,
 change the path with `spring.web.error.path`.
 
 **Symptom** — a browser hitting a broken endpoint gets HTML, an API client

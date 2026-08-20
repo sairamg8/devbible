@@ -117,7 +117,7 @@ they do not know which controller will handle the request or what it will
 return. Spring adds `HandlerInterceptor`, which runs inside
 `DispatcherServlet` and *does* know the handler, and AOP advice, which wraps
 the method call itself. Choosing between the three is
-**Topic 10 — The request pipeline** *(not written yet)*.
+**[Topic 10 — The request pipeline](../10-the-request-pipeline/README.md)**.
 
 ### Dispatcher types: the reason your filter runs twice, or not at all
 

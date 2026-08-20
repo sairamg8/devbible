@@ -87,7 +87,7 @@ shows what replaces it and why.
   — the `ProblemDetail` contract your `AuthenticationEntryPoint` and
   `AccessDeniedHandler` must match, because security failures never reach
   `@ControllerAdvice`.
-- **Topic 12 — Outbound HTTP** *(not written yet)* — a resource
+- **[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)** — a resource
   server makes an outbound call to fetch the JWK set, and it needs real
   timeouts like any other dependency.
 - **[Phase 13 — OAuth2 and OIDC](../../phase-13-oauth2-oidc/README.md)** — the

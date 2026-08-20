@@ -111,8 +111,8 @@ Four rules, all of them earned earlier in this topic:
 3. **Guard on the class**, so the auto-configuration is inert for anyone who
    receives the starter transitively but does not use the feature.
 4. **Bind configuration through `@ConfigurationProperties`**, not `@Value`, so
-   it is typed and validatable — **Phase 9 topic 06 — Configuration and
-   profiles** *(not written yet)*.
+   it is typed and validatable — **[Phase 9 topic 06 — Configuration and
+   profiles](../06-configuration-and-profiles/README.md)**.
 
 ### Publishing it
 

@@ -153,7 +153,7 @@ between them and it no longer binds to that argument, and the validation failure
 becomes a thrown exception instead of a value you can inspect.
 
 Which exception, and how the arrangement of parameters changes the answer, is
-worked through in **topic 08 · Validation** *(not written yet)* — it is a
+worked through in **[topic 08 · Validation](../08-validation/README.md)** — it is a
 genuinely intricate corner and it belongs with validation rather than here.
 
 ## The trade-off: convention that `javac` cannot check
@@ -194,7 +194,7 @@ it skips.
 
 **Symptom:** validation errors that should have landed in a `BindingResult` are thrown as an exception instead
 **Cause:** the `BindingResult` parameter is not *immediately* after the argument it validates; the reference requires adjacency
-**Fix:** move it so it directly follows the validated parameter. The full consequences are in **topic 08 · Validation** *(not written yet)*
+**Fix:** move it so it directly follows the validated parameter. The full consequences are in **[topic 08 · Validation](../08-validation/README.md)**
 
 **Symptom:** a controller unit test passes while the endpoint is broken in production
 **Cause:** the test calls the controller method as a plain Java method, so no argument resolution happens at all — the exact stage where the bug lives is the stage the test skips

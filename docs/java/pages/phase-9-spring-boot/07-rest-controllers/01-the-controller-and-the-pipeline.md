@@ -96,8 +96,8 @@ Four things a controller author takes from this diagram and uses constantly:
   covered in [chunk 7](07-the-response.md).
 
 The full pipeline — servlet filters, MVC interceptors, where AOP sits relative
-to both — is a topic of its own: **topic 10 · The request pipeline**
-*(not written yet)*.
+to both — is a topic of its own: **[topic 10 · The request pipeline](../10-the-request-pipeline/README.md)**
+.
 
 ## Mapping: the shortcut annotations and the class-level prefix
 

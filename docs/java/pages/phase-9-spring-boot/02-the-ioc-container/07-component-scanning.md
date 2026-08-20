@@ -128,7 +128,7 @@ does not opt itself in.
 **Fix.** The library should register itself through auto-configuration —
 an entry in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`
 — rather than relying on every consumer to widen a scan. That mechanism is
-**Topic 05 — Boot auto-configuration** *(not written yet)*.
+**[Topic 05 — Boot auto-configuration](../05-auto-configuration/README.md)**.
 
 ## Interview questions
 

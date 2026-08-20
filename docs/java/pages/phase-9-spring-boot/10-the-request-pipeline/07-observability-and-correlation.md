@@ -75,7 +75,7 @@ and the reference is explicit:
 
 So the better your error handling, the emptier your `error` tag. An API that maps
 every failure through `@ControllerAdvice` — which is what
-**Topic 09 — Error handling** *(not written yet)* argues for — reports
+**[Topic 09 — Error handling](../09-error-handling/README.md)** argues for — reports
 `error=none` on every single one of them. The `status` tag is still accurate, so
 you can alert on 5xx; what you cannot do is group by exception type.
 
@@ -152,7 +152,7 @@ or OpenZipkin Brave with Zipkin — Boot wires the rest:
   load-bearing: a `RestClient` you build with `RestClient.create()` is not
   instrumented, and the trace stops at your service boundary. This is one of the
   arguments for injecting the builder rather than constructing clients, made at
-  length in **Topic 12 — Outbound HTTP** *(not written yet)*.
+  length in **[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)**.
 
 - **Sampling is `management.tracing.sampling.probability`**, defaulting to 10%.
   Turning it to `1.0` in development is standard; leaving it at `1.0` in

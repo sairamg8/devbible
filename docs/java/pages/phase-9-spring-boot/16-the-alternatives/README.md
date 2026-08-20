@@ -94,7 +94,7 @@ This topic runs to seven files. The chunks:
   dependency review is where "is this library native-ready" belongs.
 - **[Phase 12 — The JVM in production](../../phase-12-jvm-production/README.md)**
   — picks up AOT/CDS and native image from the operations side.
-- **Topic 13 — Actuator** *(not written yet)* — the observability surface chunk
+- **[Topic 13 — Actuator](../13-actuator/README.md)** — the observability surface chunk
   6 warns you may lose when an APM agent has no bytecode to instrument.
 
 ---

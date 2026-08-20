@@ -134,7 +134,7 @@ validation. An endpoint that used to reject a negative quantity now accepts it.
 This is the highest-consequence item in the Boot 4 migration for error handling,
 because the failure is invisible: everything compiles, everything starts,
 nothing validates. The mechanics of validation itself — constraint annotations,
-groups, custom validators — are **Topic 08 — Validation** *(not written yet)*;
+groups, custom validators — are **[Topic 08 — Validation](../08-validation/README.md)**;
 what belongs here is only its mapping to a response.
 
 ⚠️ Related Boot 4 rename to expect in the same `pom.xml` edit:
@@ -155,7 +155,7 @@ misleading statuses.
 | `HttpClientErrorException` from a downstream call | **502**, occasionally **503** | Your upstream's 404 does not mean *your* resource is missing |
 | `HttpServerErrorException` from a downstream call | **502** | The dependency broke, not the client |
 | `ResourceAccessException` / connect or read timeout | **503** or **504** | Availability, not a client error |
-| `AccessDeniedException` | **403** | Leave it to Spring Security's own handling — see **Topic 11 — Spring Security** *(not written yet)* |
+| `AccessDeniedException` | **403** | Leave it to Spring Security's own handling — see **[Topic 11 — Spring Security](../11-spring-security/README.md)** |
 | `AuthenticationException` | **401**, with `WWW-Authenticate` | Same: Security owns this path, and it runs in the filter chain, *before* your advice |
 
 🔴 **Never pass a downstream status through.** If your payment provider returns

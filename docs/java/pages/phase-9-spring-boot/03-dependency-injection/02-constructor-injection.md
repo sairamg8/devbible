@@ -144,7 +144,7 @@ it — that makes Spring pick the empty one and every field stays null
 during the constructor they are genuinely still null
 **Fix:** take the dependency as a constructor parameter. If the work truly must
 happen after full initialisation, that is what `@PostConstruct` is for — see
-**Topic 04 — Bean scopes and lifecycle** *(not written yet)*
+**[Topic 04 — Bean scopes and lifecycle](../04-bean-scopes-lifecycle/README.md)**
 
 **Symptom:** the context fails at startup with a `BeanCreationException` wrapping an
 exception thrown from a bean's constructor

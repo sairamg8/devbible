@@ -173,7 +173,7 @@ body instead of your `ProblemDetail`.
 `DispatcherServlet` — a servlet the request never reached.
 **Fix:** handle it inside the filter and write the body yourself; the shape is
 in [chunk 2](02-filters.md), and the error contract it must match is
-**Topic 09 — Error handling** *(not written yet)*.
+**[Topic 09 — Error handling](../09-error-handling/README.md)**.
 
 **⚠️ Putting an authorisation check in an interceptor and finding it never runs**
 **Symptom:** requests to a mistyped path bypass the check.

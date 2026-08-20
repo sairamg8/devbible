@@ -163,7 +163,7 @@ public class OrderService {
 ```
 
 The full argument, including the circular-dependency consequences, is
-**Topic 03 — Dependency injection** *(not written yet)*.
+**[Topic 03 — Dependency injection](../03-dependency-injection/README.md)**.
 
 ### Doing work in a constructor that the container calls
 
@@ -190,8 +190,8 @@ class WarmCache {
 }
 ```
 
-Lifecycle callbacks are **Topic 04 — Bean scopes and lifecycle**
-*(not written yet)*.
+Lifecycle callbacks are **[Topic 04 — Bean scopes and lifecycle](../04-bean-scopes-lifecycle/README.md)**
+.
 
 ### Assuming the inversion means "no `new` anywhere"
 

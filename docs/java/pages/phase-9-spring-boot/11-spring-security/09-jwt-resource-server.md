@@ -236,7 +236,7 @@ deploy.
 **Cause:** The JWK set fetch failed — egress policy, a proxy, or DNS.
 **Fix:** Treat the IdP as a dependency: allow the egress, and give the decoder's
 HTTP client real timeouts so a hanging fetch does not stall request threads.
-Timeouts are **Topic 12 — Outbound HTTP** *(not written yet)*.
+Timeouts are **[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)**.
 
 **Symptom:** A user is deactivated and keeps working for the rest of the day.
 **Cause:** Token lifetime. This is the model working as designed.

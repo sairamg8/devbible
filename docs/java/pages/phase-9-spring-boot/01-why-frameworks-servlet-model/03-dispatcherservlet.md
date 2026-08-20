@@ -74,7 +74,7 @@ when you provide none:
 This table is worth memorising, because it is the map of every extension point
 Spring MVC has. Nearly every "how do I customise X" question in Spring MVC
 resolves to "replace or add to one of these eight beans" — and
-`@ControllerAdvice`, which **Topic 09 — Error handling** *(not written yet)*
+`@ControllerAdvice`, which **[Topic 09 — Error handling](../09-error-handling/README.md)**
 covers, is a wrapper over `HandlerExceptionResolver`.
 
 ## The context hierarchy Boot mostly deletes
@@ -125,7 +125,7 @@ directly — which is exactly why the view-resolution step is skipped. "Returnin
 JSON" is not a feature; it is a converter being selected because the request
 said `Accept: application/json` and Jackson is on the classpath. Content
 negotiation and converter customisation in detail belong to
-**Topic 07 — REST controllers** *(not written yet)*.
+**[Topic 07 — REST controllers](../07-rest-controllers/README.md)**.
 
 ## `@EnableWebMvc` — the annotation that turns Boot off
 

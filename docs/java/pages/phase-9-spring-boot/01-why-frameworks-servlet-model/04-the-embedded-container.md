@@ -165,7 +165,7 @@ renamed between versions fails silently.
 property names against the metadata, and reach for a
 `WebServerFactoryCustomizer` for anything genuinely not exposed as a property
 rather than guessing at names. Typed, validated configuration is
-**Topic 06 — Configuration and profiles** *(not written yet)*.
+**[Topic 06 — Configuration and profiles](../06-configuration-and-profiles/README.md)**.
 
 ### The server starts but the application is not ready
 
@@ -179,7 +179,7 @@ pool may not have filled.
 **Fix.** Do not use port-open as a readiness signal. Split liveness from
 readiness with Actuator's probes — which Boot 4 enables by default — and point
 the orchestrator's readiness check at the readiness endpoint. That is
-**Topic 13 — Actuator** *(not written yet)*.
+**[Topic 13 — Actuator](../13-actuator/README.md)**.
 
 ## Interview questions
 

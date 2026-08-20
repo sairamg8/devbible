@@ -116,9 +116,9 @@ This topic runs to twenty files. The chunks:
   endpoints are not controllers, and the difference is the point: they are
   technology-agnostic operations that Boot maps onto HTTP or JMX, which is why
   exposure is configured per technology.
-- **Topic 10 — The request pipeline** *(not written yet)* — where filters,
+- **[Topic 10 — The request pipeline](../10-the-request-pipeline/README.md)** — where filters,
   interceptors and the actuator's own chain sit relative to one another.
-- **Topic 12 — Outbound HTTP** *(not written yet)* — `http.client.requests` is
+- **[Topic 12 — Outbound HTTP](../12-outbound-http/README.md)** — `http.client.requests` is
   the meter chunks 09 and 13 keep referring to, and it carries its own
   cardinality and bucket costs.
 

@@ -95,7 +95,7 @@ being the right answer at about the point where the graph is two hundred nodes
 deep, the order is load-bearing, and half the nodes want the same
 `DataSource` instance. Then you want something that reads the declarations and
 does the topological sort for you. **That is the container's entire job**, and
-it is covered in **Topic 02 — The IoC container** *(not written yet)*.
+it is covered in **[Topic 02 — The IoC container](../02-the-ioc-container/README.md)**.
 
 ## The object graph is assembled at exactly one edge
 

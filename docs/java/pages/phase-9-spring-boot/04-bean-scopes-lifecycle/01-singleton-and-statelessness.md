@@ -56,7 +56,7 @@ That difference is not pedantry. It is why:
 - a `@SpringBootTest` in the same JVM as another one gets a *different*
   instance, because it is a different context;
 - you can still write `new InvoiceService(stub, repo)` in a unit test — which
-  is chunk 1 of **Topic 03 — Dependency injection** *(not written yet)*, and
+  is chunk 1 of **[Topic 03 — Dependency injection](../03-dependency-injection/README.md)**, and
   would be impossible with a GoF singleton.
 
 ## What "shared across every request" actually means

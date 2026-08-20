@@ -91,7 +91,7 @@ public class PricingClient {
 more than one or two values** — scattered `@Value` strings are unvalidated,
 untyped at the declaration site, and impossible to enumerate. The typed
 alternative, `@ConfigurationProperties`, is
-**Topic 06 — Configuration and profiles** *(not written yet)*, and that is where
+**[Topic 06 — Configuration and profiles](../06-configuration-and-profiles/README.md)**, and that is where
 this belongs.
 
 ## Records as beans
@@ -160,8 +160,8 @@ can answer "what configuration does this service take?"
 **Cause:** `@Value` puts the property name in a string literal at the point of use, so
 the set of properties is not enumerable from anywhere
 **Fix:** one `@ConfigurationProperties` record per concern. The type becomes the
-answer to the question, and it can be validated — **Topic 06 — Configuration and
-profiles** *(not written yet)*
+answer to the question, and it can be validated — **[Topic 06 — Configuration and
+profiles](../06-configuration-and-profiles/README.md)**
 
 **Symptom:** a record annotated `@Service` works, but a colleague objects in review
 **Cause:** the objection is about signalling, not mechanics — records advertise value

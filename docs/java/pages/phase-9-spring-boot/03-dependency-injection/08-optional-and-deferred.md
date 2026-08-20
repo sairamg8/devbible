@@ -128,7 +128,7 @@ Three real reasons, and none of them is style:
 1. **A prototype-scoped collaborator.** A singleton that constructor-injects a
    prototype gets exactly one instance, forever — the container resolves once.
    `ObjectProvider.getObject()` resolves per call, which is the point.
-   **Topic 04 — Bean scopes and lifecycle** *(not written yet)* works this
+   **[Topic 04 — Bean scopes and lifecycle](../04-bean-scopes-lifecycle/README.md)** works this
    through, since it is a scope problem more than an injection problem.
 2. **Breaking a cycle honestly.** If A needs B only occasionally,
    `ObjectProvider<B>` removes the construction-time edge, so the cycle in the
@@ -184,8 +184,8 @@ same instance
 **Cause:** dependencies are resolved once, at the singleton's instantiation; the
 prototype is created once and handed over
 **Fix:** inject `ObjectProvider<T>` and call `getObject()` per use, which resolves each
-time — the mechanism and its alternatives belong to **Topic 04 — Bean scopes and
-lifecycle** *(not written yet)*
+time — the mechanism and its alternatives belong to **[Topic 04 — Bean scopes and
+lifecycle](../04-bean-scopes-lifecycle/README.md)**
 
 **Symptom:** an auto-configuration's default bean fights with the application's, or
 backs off when it should not

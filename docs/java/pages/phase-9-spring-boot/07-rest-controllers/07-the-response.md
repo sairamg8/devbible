@@ -65,7 +65,7 @@ The builders the reference documents:
 
 ⚠️ **Do not use `ResponseEntity` to return errors from a controller.** Mapping
 exceptions to status codes belongs in one place, not scattered through handlers;
-that is **topic 09 · Error handling** *(not written yet)*, and it is what
+that is **[topic 09 · Error handling](../09-error-handling/README.md)**, and it is what
 `@ControllerAdvice` and `ProblemDetail` exist for. Use `ResponseEntity` for
 *successful* responses whose status or headers vary.
 

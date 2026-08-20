@@ -126,7 +126,7 @@ annotations guard the HTTP boundary, the constructor guards the type.** A test
 fixture, a message consumer or another service calling the same code
 constructs the record directly and never passes through a `Validator` — so an
 invariant that only exists as an annotation is not an invariant at all. The
-argument is developed further in **topic 08 · Validation** *(not written yet)*.
+argument is developed further in **[topic 08 · Validation](../08-validation/README.md)**.
 
 ⚠️ Throwing from a compact constructor during *deserialisation* surfaces as a
 message-conversion failure rather than a validation failure, so the two

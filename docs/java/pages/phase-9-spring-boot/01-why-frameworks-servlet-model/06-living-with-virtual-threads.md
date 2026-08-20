@@ -78,7 +78,7 @@ years ago. What you are trading:
 
 That last bullet is why WebFlux is not obsolete — it is why it is now a
 *specialised* choice rather than the scaling answer, which is the argument
-**Topic 15 — WebFlux and reactive** *(not written yet)* takes up.
+**[Topic 15 — WebFlux and reactive](../15-webflux-reactive/README.md)** takes up.
 
 ## Gotchas
 
