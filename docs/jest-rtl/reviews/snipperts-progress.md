@@ -14,7 +14,7 @@ git log.**
 :::
 
 > Plan this tracks: [Configs section proposal](./configs-section-proposal.md)
-> Last updated: **2026-08-20 08:16**
+> Last updated: **2026-08-20 08:26**
 
 ---
 
@@ -22,8 +22,8 @@ git log.**
 
 | | |
 |---|---|
-| **Next topic to pick up** | `02-jest-config-reference/` |
-| **Currently working on** | — nothing in flight |
+| **Next topic to pick up** | `03-setup-lifecycle.md` |
+| **Currently working on** | 🔨 `configs/02-jest-config-reference/` — 6 chunks |
 | **Blocked on** | — nothing. ✅ **Both decisions answered 2026-08-20** |
 | **Target directory** | `docs/jest-rtl/configs/` |
 | **Scope** | **Jest + RTL + Vitest combined in this one track.** No `docs/vitest/`, nothing moved out of `docs/vite/` |
@@ -54,7 +54,7 @@ what a usage cut-off destroys.
 |---|---|---|---|---|---|---|
 | — | **Configs index** — three config surfaces, which-runner decision table | `configs/README.md` | ✅ | 1 | 145 | 2026-08-20 08:09 |
 | 01 | **Where config lives and how it resolves** — `package.json#jest` vs `jest.config.*` vs `--config`; `vitest.config.ts` vs `test:` in `vite.config.ts`; `rootDir` and `<rootDir>`; `extends` vs `mergeConfig` | `configs/01-where-config-lives.md` | ✅ | 1 | 289 | 2026-08-20 08:16 |
-| 02 | **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ⬜ | — | — | — |
+| 02 | 🔨 **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ⬜ | — | — | — |
 | 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ⬜ | — | — | — |
 | 04 | **RTL configuration** — `configure()` · `setupTests.ts` anatomy · polyfill checklist · `RTL_SKIP_AUTO_CLEANUP` · `userEvent.setup()` options | `configs/04-rtl-configuration/` | ⬜ | — | — | — |
 | 05 | **`vitest.config` reference** — environment · globals · `pool`/`isolate` · `server.deps.inline` · coverage · workspace · browser mode | `configs/05-vitest-config-reference/` | ⬜ | — | — | — |
@@ -69,7 +69,13 @@ content actually produces (global rule 1: write first, then split).
 
 | Topic | Chunk | Status | Lines |
 |---|---|---|---|
-| — | *none yet* | — | — |
+| 02 | `README.md` — index | ✅ | 72 |
+| 02 | `01-discovery-and-environments.md` | ✅ | 197 |
+| 02 | `02-the-transform-pipeline.md` | ✅ | 194 |
+| 02 | `03-module-resolution.md` | ⬜ | — |
+| 02 | `04-mock-state-and-timers.md` | ⬜ | — |
+| 02 | `05-coverage.md` | ⬜ | — |
+| 02 | `06-workers-and-projects.md` | ⬜ | — |
 
 ---
 
@@ -104,6 +110,7 @@ Newest first. One line per working session — what moved, and where it stopped.
 
 | When | Session | What happened |
 |---|---|---|
+| 2026-08-20 08:26 | `13263a40` | Topic 02 started — `README.md` (72), `01-discovery-and-environments.md` (197), `02-the-transform-pipeline.md` (194). 3 of 7 chunks. |
 | 2026-08-20 08:16 | `13263a40` | Wrote **`01-where-config-lives.md` (289 lines)** — Jest's 4 config sources and the package.json/config-file trap, `rootDir` vs `<rootDir>`, Vitest's 3 sources and the `vite` vs `vitest/config` import, shallow `extends` vs deep `mergeConfig`, `projects`. **8 gotchas, 7 interview questions.** |
 | 2026-08-20 08:09 | `13263a40` | Decisions answered — **combine Jest + RTL + Vitest in this one track**, jest-rtl only. Created `docs/jest-rtl/configs/` + `_category_.json`, wrote **`README.md` (145 lines)** — three config surfaces, runner decision table, the three-places-alias seam, chunk index, versions. 10/10 links verified. |
 | 2026-08-20 07:51 | `13263a40` | Surveyed the repo, wrote [`configs-section-proposal.md`](./configs-section-proposal.md) (167 lines) and this tracker. **No content pages written** — blocked on decisions 1 and 2. Flagged at ~90% usage, so both files were committed before any writing began. |
