@@ -14,7 +14,7 @@ git log.**
 :::
 
 > Plan this tracks: [Configs section proposal](./configs-section-proposal.md)
-> Last updated: **2026-08-20 07:51**
+> Last updated: **2026-08-20 08:09**
 
 ---
 
@@ -22,10 +22,11 @@ git log.**
 
 | | |
 |---|---|
-| **Next topic to pick up** | `README.md` — the configs index (three config surfaces + runner decision table) |
+| **Next topic to pick up** | `01-where-config-lives.md` |
 | **Currently working on** | — nothing in flight |
-| **Blocked on** | 🔴 **Decision 1 and Decision 2** — see *Open decisions* below |
-| **Target directory** | `docs/jest-rtl/configs/` — **not yet created** |
+| **Blocked on** | — nothing. ✅ **Both decisions answered 2026-08-20** |
+| **Target directory** | `docs/jest-rtl/configs/` |
+| **Scope** | **Jest + RTL + Vitest combined in this one track.** No `docs/vitest/`, nothing moved out of `docs/vite/` |
 
 ---
 
@@ -47,11 +48,11 @@ what a usage cut-off destroys.
 
 ## Progress
 
-**0 of 8 topics complete · 0 files written · 0 lines**
+**1 of 8 topics complete · 1 file written · 145 lines**
 
 | # | Topic | Target path | Status | Files | Lines | Finished |
 |---|---|---|---|---|---|---|
-| — | **Configs index** — three config surfaces, which-runner decision table | `configs/README.md` | ⬜ | — | — | — |
+| — | **Configs index** — three config surfaces, which-runner decision table | `configs/README.md` | ✅ | 1 | 145 | 2026-08-20 08:09 |
 | 01 | **Where config lives and how it resolves** — `package.json#jest` vs `jest.config.*` vs `--config`; `vitest.config.ts` vs `test:` in `vite.config.ts`; `rootDir` and `<rootDir>`; `extends` vs `mergeConfig` | `configs/01-where-config-lives.md` | ⬜ | — | — | — |
 | 02 | **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ⬜ | — | — | — |
 | 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ⬜ | — | — | — |
@@ -77,7 +78,7 @@ content actually produces (global rule 1: write first, then split).
 | Item | Status | Note |
 |---|---|---|
 | Delete `docs/jest-rtl/syllabus/#-snippet.md` | ⬜ | `#` is a URL fragment character — the filename cannot ship. Replaced by `configs/README.md` |
-| Create `configs/_category_.json` | ⬜ | `{"label":"Configs","position":3,"collapsed":true}` |
+| Create `configs/_category_.json` | ✅ | `{"label":"Configs","position":3,"collapsed":true}` |
 | Update `src/data/progress.js` jest-rtl row + `updated:` stamp | ⬜ | Global rules 9 and 15 |
 | Update `docs/jest-rtl/README.md` — add the Configs section | ⬜ | |
 | Update `docs/jest-rtl/pages/README.md` if 06 is superseded | ⬜ | Depends on how much of the 163-line page moves |
@@ -85,15 +86,15 @@ content actually produces (global rule 1: write first, then split).
 
 ---
 
-## 🔴 Open decisions — work is blocked on these
+## ✅ Decisions — both answered
 
-Both are stated in full in the
+Background in the
 [proposal](./configs-section-proposal.md).
 
 | # | Decision | Options | Answer |
 |---|---|---|---|
-| 1 | What "move the existing vitest files" means — there is no standalone Vitest folder | **(a)** absorb, do not move *(recommended)* · **(b)** relocate `docs/vite/pages/14-testing-integration/` · **(c)** new top-level `docs/vitest/` | 🔴 **pending** |
-| 2 | Is `configs/` a repo-wide convention or jest-rtl only? | **repo-wide** → README written as a reusable seven-slot template · **jest-rtl only** → bespoke | 🔴 **pending** |
+| 1 | What "move the existing vitest files" means — there is no standalone Vitest folder | (a) absorb · (b) relocate the Vite page · (c) new `docs/vitest/` | ✅ **(a) — combine.** *"Combine vitest jest and rtl"*. Vitest is written fresh **inside this track**; `docs/vite/pages/14-testing-integration/` stays put and gets a pointer link only |
+| 2 | Is `configs/` a repo-wide convention or jest-rtl only? | repo-wide template · jest-rtl only | ✅ **jest-rtl only.** *"for now jest-rtl-vitest only"* — written bespoke to these three tools. Generalising to other technologies needs a new instruction |
 
 ---
 
@@ -103,6 +104,7 @@ Newest first. One line per working session — what moved, and where it stopped.
 
 | When | Session | What happened |
 |---|---|---|
+| 2026-08-20 08:09 | `13263a40` | Decisions answered — **combine Jest + RTL + Vitest in this one track**, jest-rtl only. Created `docs/jest-rtl/configs/` + `_category_.json`, wrote **`README.md` (145 lines)** — three config surfaces, runner decision table, the three-places-alias seam, chunk index, versions. 10/10 links verified. |
 | 2026-08-20 07:51 | `13263a40` | Surveyed the repo, wrote [`configs-section-proposal.md`](./configs-section-proposal.md) (167 lines) and this tracker. **No content pages written** — blocked on decisions 1 and 2. Flagged at ~90% usage, so both files were committed before any writing began. |
 
 ---
