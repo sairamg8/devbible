@@ -14,7 +14,7 @@ git log.**
 :::
 
 > Plan this tracks: [Configs section proposal](./configs-section-proposal.md)
-> Last updated: **2026-08-20 09:04**
+> Last updated: **2026-08-20 09:21**
 
 ---
 
@@ -22,7 +22,7 @@ git log.**
 
 | | |
 |---|---|
-| **Next topic to pick up** | `05-vitest-config-reference/` |
+| **Next topic to pick up** | `06-annotated-configs/` |
 | **Currently working on** | — nothing in flight |
 | **Blocked on** | — nothing. ✅ **Both decisions answered 2026-08-20** |
 | **Target directory** | `docs/jest-rtl/configs/` |
@@ -48,7 +48,7 @@ what a usage cut-off destroys.
 
 ## Progress
 
-**5 of 8 topics complete · 14 files written · 2,607 lines**
+**6 of 8 topics complete · 18 files written · 3,303 lines**
 
 | # | Topic | Target path | Status | Files | Lines | Finished |
 |---|---|---|---|---|---|---|
@@ -57,7 +57,7 @@ what a usage cut-off destroys.
 | 02 | **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ✅ | 7 | 1252 | 2026-08-20 08:43 |
 | 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ✅ | 1 | 215 | 2026-08-20 08:52 |
 | 04 | **RTL configuration** — `configure()` · `setupTests.ts` anatomy · polyfill checklist · `RTL_SKIP_AUTO_CLEANUP` · `userEvent.setup()` options | `configs/04-rtl-configuration/` | ✅ | 4 | 706 | 2026-08-20 09:04 |
-| 05 | **`vitest.config` reference** — environment · globals · `pool`/`isolate` · `server.deps.inline` · coverage · workspace · browser mode | `configs/05-vitest-config-reference/` | ⬜ | — | — | — |
+| 05 | **`vitest.config` reference** — environment · globals · `pool`/`isolate` · `server.deps.inline` · coverage · workspace · browser mode | `configs/05-vitest-config-reference/` | ✅ | 4 | 696 | 2026-08-20 09:21 |
 | 06 | **The annotated configs** — one React+TS app configured twice, every line with a "why" row | `configs/06-annotated-configs/` | ⬜ | — | — | — |
 | 07 | **Jest → Vitest, key by key** — config-level map first, then API-level | `configs/07-jest-to-vitest-map.md` | ⬜ | — | — | — |
 
@@ -80,6 +80,10 @@ content actually produces (global rule 1: write first, then split).
 | 04 | `01-the-configure-call.md` | ✅ | 232 |
 | 04 | `02-the-setup-file.md` | ✅ | 199 |
 | 04 | `03-the-jsdom-polyfill-checklist.md` | ✅ | 205 |
+| 05 | `README.md` — index | ✅ | 64 |
+| 05 | `01-environment-and-globals.md` | ✅ | 204 |
+| 05 | `02-pools-and-isolation.md` | ✅ | 194 |
+| 05 | `03-deps-coverage-and-projects.md` | ✅ | 234 |
 
 ---
 
@@ -114,6 +118,7 @@ Newest first. One line per working session — what moved, and where it stopped.
 
 | When | Session | What happened |
 |---|---|---|
+| 2026-08-20 09:21 | `13263a40` | ✅ **Topic 05 COMPLETE — 4 files, 696 lines.** 🔴 **CHECKPOINT at usage limit.** Remaining: topics **06 (annotated configs)** and **07 (Jest→Vitest map)**, plus the 5 UI-board items in Housekeeping. |
 | 2026-08-20 09:04 | `13263a40` | ✅ **Topic 04 COMPLETE — 4 files, 706 lines.** `configure()` options with asyncUtilTimeout argued against and defaultHidden flagged as an a11y-check disabler; the setup file with cleanup loss, MSW ordering and userEvent.setup; the jsdom polyfill checklist with its three traps. |
 | 2026-08-20 08:52 | `13263a40` | ✅ **`03-setup-lifecycle.md` (215 lines)** — the full ordering, what belongs in each stage, the jest-dom-in-setupFiles silent failure, a correctly-ordered setupTests.ts, and Vitest's `test.setupFiles` mapping to `setupFilesAfterEnv` despite the name. 10 gotchas, 10 Q&A. |
 | 2026-08-20 08:43 | `13263a40` | ✅ **Topic 02 COMPLETE — 7 files, 1,252 lines**, largest file 209, all links verified. Added `05-coverage.md` (188) and `06-workers-and-projects.md` (191). |
