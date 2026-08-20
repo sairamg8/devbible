@@ -72,7 +72,7 @@ instead, whose `ParameterValidationResult`s group errors by parameter and, for
 cascaded `@Valid` parameters, expose `ParameterErrors` implementing `Errors` —
 the same shape as [chunk 8](08-reading-the-errors.md). It also routes messages
 through `MessageSource` with codes like `Size.person.name`, which is the hook
-described in [chunk 14](14-messages-and-interpolation.md).
+described in [chunk 16](16-message-codes.md).
 
 ```java
 @Bean

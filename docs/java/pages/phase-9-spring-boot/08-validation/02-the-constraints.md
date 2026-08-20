@@ -61,7 +61,7 @@ auto-configuration of a `LocalValidatorFactoryBean`. That one bean implements
 serves the annotation-driven path and Spring's own `Errors`-based `DataBinder`
 path. It is also what enables method validation on `@Validated` beans, which
 Boot turns on automatically once a provider is on the classpath
-([chunk 8](08-beyond-the-controller.md)).
+([chunk 13](13-beyond-the-controller.md)).
 
 The bean is conditional, like everything else Boot configures — if you declare
 your own `Validator`, Boot's backs off. That mechanism is
@@ -119,7 +119,7 @@ strength and its ceiling. **It describes the shape of a value and nothing about
 its meaning.** There is no `@ValidIsoCurrency`, no `@AtLeastOneOf`, no
 `@InThePastByAtLeast(Duration)`, and nothing that can look at a second field.
 Everything past this table is a custom validator you write, own, test and
-document ([chunk 7](07-custom-validators.md)) — which is precisely why the
+document ([chunk 9](09-custom-validators.md)) — which is precisely why the
 table is worth knowing exactly, so that nobody on the team invents a
 `@NotEmptyString` that `@NotBlank` already is.
 

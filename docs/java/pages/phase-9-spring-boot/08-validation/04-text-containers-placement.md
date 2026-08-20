@@ -128,9 +128,9 @@ the contained value, which is the only sensible reading, since
 | getter (property) | `@NotBlank public String getName()` | the JavaBean property |
 | type argument | `List<@NotBlank String>` | each element / key / value |
 | record component | `record R(@NotBlank String name)` | propagated per the annotation's `@Target` |
-| method parameter | `void f(@Positive int n)` | method validation — [chunk 6](06-the-failure.md), [chunk 8](08-beyond-the-controller.md) |
+| method parameter | `void f(@Positive int n)` | method validation — [chunk 7](07-the-failure.md), [chunk 13](13-beyond-the-controller.md) |
 | method return value | `@NotNull Order find(…)` | method validation |
-| class | `@ConsistentDateRange public class Booking` | cross-field rules — [chunk 7](07-custom-validators.md) |
+| class | `@ConsistentDateRange public class Booking` | cross-field rules — [chunk 11](11-cross-field-rules.md) |
 
 **On a record, annotate the component.** The built-in constraints target
 fields, methods, parameters and type use, so a component annotation is

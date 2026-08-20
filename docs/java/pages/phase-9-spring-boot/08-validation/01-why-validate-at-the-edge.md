@@ -69,8 +69,8 @@ constraint.**
   people write it, but it is a business rule wearing a constraint's clothing:
   it can pass validation and still fail on insert, because the row can appear
   in the microseconds between the two. See
-  [chunk 5](05-custom-validators.md) for what injecting a repository into a
-  validator can and cannot buy you.
+  [chunk 10](10-spring-managed-and-composition.md) for what injecting a
+  repository into a validator can and cannot buy you.
 - **It is not a replacement for domain invariants.** More on that next.
 
 ## The DTO carries constraints; the domain type carries invariants
@@ -145,7 +145,7 @@ Declarative constraints are not free, and the honest costs are these.
   reading the constructor, and cannot express anything a constant plus a value
   cannot decide. Anything conditional — *"`discountCode` is required only when
   `channel` is `PARTNER`"* — needs a class-level custom constraint
-  ([chunk 5](05-custom-validators.md)) and immediately reads worse than the
+  ([chunk 11](11-cross-field-rules.md)) and immediately reads worse than the
   four-line `if` it replaced.
 - **You take a dependency and a startup cost.** Hibernate Validator is a real
   library that builds metadata for every constrained class it meets. For an
@@ -187,7 +187,7 @@ same" object.
 **Cause** · Two DTOs copied from each other.
 **Fix** · One request type per *contract*, shared where the contract genuinely
 is shared; the create-versus-update case is what **validation groups** exist
-for ([chunk 5](05-custom-validators.md)) and is not a reason to duplicate.
+for ([chunk 12](12-validation-groups.md)) and is not a reason to duplicate.
 
 **Symptom** · A `@UniqueEmail` constraint passes and the insert then fails with
 a constraint-violation error from the database.
@@ -208,8 +208,8 @@ valid, deliberately.
 **Symptom** · Error messages leak column names and internal identifiers to API
 clients.
 **Cause** · Default messages plus DTO field names that mirror the schema.
-**Fix** · [Chunk 7](07-messages-and-interpolation.md) — and it is a design
-decision, not a formatting one.
+**Fix** · [Chunk 16](16-message-codes.md) — relabel the message argument
+rather than the field, and it is a design decision, not a formatting one.
 
 ## Interview questions
 
@@ -266,4 +266,4 @@ extra class and it buys all three back.
 
 ---
 
-← Index: [Validation](README.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The constraints themselves](02-the-constraints.md)
+← Index: [Validation](README.md) · Phase: [Phase 9 — Spring Boot and the web](../README.md) · Next → [The constraints themselves](02-the-constraints.md)

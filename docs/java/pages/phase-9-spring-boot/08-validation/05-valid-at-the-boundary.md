@@ -48,7 +48,7 @@ argument annotated with `@jakarta.validation.Valid` or Spring's `@Validated`,
    no constraint annotations sit directly on any of its parameters.
 
 Each of those three has a failure mode, and each is covered below or in
-[chunk 6](06-the-failure.md).
+[chunk 7](07-the-failure.md).
 
 ⛔ **Remove `@Valid` and everything passes.** No warning, no log line, no
 startup check. This is the single most common validation bug in Spring, and it
@@ -68,12 +68,12 @@ defence.
 
 Two practical rules fall out. **On a parameter, use `@Valid` unless you need
 groups**, in which case `@Validated(Something.class)` is the only option
-([chunk 7](07-custom-validators.md)). **On a field, only `@Valid` cascades** —
+([chunk 12](12-validation-groups.md)). **On a field, only `@Valid` cascades** —
 `@Validated` is a Spring annotation and the provider does not read it when
 walking an object graph.
 
 The class-level use is a different feature altogether and it interacts badly
-with controllers; that is [chunk 6](06-the-failure.md).
+with controllers; that is [chunk 7](07-the-failure.md).
 
 ## Nested objects do not validate themselves
 

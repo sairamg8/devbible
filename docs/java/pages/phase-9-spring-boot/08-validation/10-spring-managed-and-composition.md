@@ -241,4 +241,4 @@ explicitly rather than by default.
 
 ---
 
-← Prev: [Custom validators](09-custom-validators.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Cross-field rules and groups](11-cross-field-and-groups.md)
+← Prev: [Custom validators](09-custom-validators.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Cross-field rules](11-cross-field-rules.md)

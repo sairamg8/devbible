@@ -31,7 +31,7 @@ stable field-by-field report out of them.**
 than stopping at the first failure, which is what makes a complete
 field-by-field rejection possible. Fail-fast exists as a provider option and is
 the wrong trade for an HTTP API — see
-[chunk 11](11-messages-and-interpolation.md).
+[chunk 15](15-wiring-the-message-source.md).
 
 **None of them are ordered.** The underlying `Set<ConstraintViolation<T>>` is a
 set, so nothing promises that `@NotNull` is reported before `@Size` on the same
@@ -90,8 +90,8 @@ Four things in there are worth naming.
 such as `Size.createOrderRequest.customerName`, `Size.customerName`,
 `Size.java.lang.String`, `Size` — which is the hook for message resolution via
 `MessageSource` rather than the constraint's own `message` attribute.
-[Chunk 11](11-messages-and-interpolation.md) is about which of those two
-mechanisms you should be using.
+[Chunk 16](16-message-codes.md) is about which of those two mechanisms you
+should be using.
 
 ## Inside `HandlerMethodValidationException`
 
@@ -137,7 +137,7 @@ client cannot tell which part of the request to fix.
 
 Turning any of this into the actual response — a `ProblemDetail` per RFC 9457,
 a stable machine-readable error code per violation, content negotiation,
-i18n — is **Topic 09 — Error handling** *(not written yet)*, which covers
+i18n — is [Topic 09 — Error handling](../09-error-handling/01-the-error-shape-is-a-contract.md), which covers
 `@ControllerAdvice`, `ResponseEntityExceptionHandler` and Boot's
 `spring.mvc.problemdetails.enabled`. The handler above is deliberately a
 sketch of *extraction*, not a recommended final shape.
@@ -163,7 +163,7 @@ front-end and is a reconnaissance aid for anyone probing your API: it discloses
 your internal field names, your limits and your rules. The usual resolution is
 to report the path and a message but never the rejected value, and to keep
 messages generic on endpoints that handle credentials.
-[Chunk 11](11-messages-and-interpolation.md) takes that further.
+[Chunk 17](17-message-safety.md) takes that further.
 
 ## Gotchas
 
@@ -264,4 +264,4 @@ validation errors within a single API.
 
 ---
 
-← Prev: [What the failure is](07-the-failure.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Custom validators and groups](09-custom-validators.md)
+← Prev: [What the failure is](07-the-failure.md) · Index: [Phase 9 — Spring Boot and the web](../README.md) · Next → [Writing a custom constraint](09-custom-validators.md)

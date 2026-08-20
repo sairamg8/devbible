@@ -148,7 +148,7 @@ the provider adds because `isValid` returned `false`. That is the most common
 bug in hand-written validators after the `null` rule.
 
 Note that the template is a message **key**, not a sentence —
-[chunk 12](12-messages-and-interpolation.md) explains why the literal belongs
+[chunk 14](14-messages-and-interpolation.md) explains why the literal belongs
 in a properties file.
 
 ## The trade-off
@@ -202,7 +202,7 @@ composable.
 `{com.example.validation.CurrencyCode.message}` in the response.
 **Cause** · The message key has no entry in any resolvable bundle.
 **Fix** · Add it to `ValidationMessages.properties` or to the application's
-`MessageSource` — [chunk 12](12-messages-and-interpolation.md).
+`MessageSource` — [chunk 14](14-messages-and-interpolation.md).
 
 ## Interview questions
 

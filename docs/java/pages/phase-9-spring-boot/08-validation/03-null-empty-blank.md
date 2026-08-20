@@ -44,7 +44,7 @@ independent pieces:
 
 That is also the rule custom validators must obey — an `isValid` that returns
 `false` for `null` breaks the composition for every user of the constraint. See
-[chunk 7](07-custom-validators.md).
+[chunk 9](09-custom-validators.md).
 
 ## `@NotNull` vs `@NotEmpty` vs `@NotBlank`, exactly
 
@@ -146,7 +146,7 @@ stopped after the first failure, but because `@Size` genuinely passes on
 This is the mechanism behind "the same bad value produced a different number of
 errors than I expected", and it is worth being able to predict, because the
 count is what the client renders. How the complete set of violations is
-collected and surfaced is [chunk 6](06-the-failure.md).
+collected and surfaced is [chunk 8](08-reading-the-errors.md).
 
 ## The trade-off
 
