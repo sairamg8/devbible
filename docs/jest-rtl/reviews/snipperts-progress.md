@@ -14,7 +14,7 @@ git log.**
 :::
 
 > Plan this tracks: [Configs section proposal](./configs-section-proposal.md)
-> Last updated: **2026-08-20 08:43**
+> Last updated: **2026-08-20 08:52**
 
 ---
 
@@ -22,7 +22,7 @@ git log.**
 
 | | |
 |---|---|
-| **Next topic to pick up** | `03-setup-lifecycle.md` |
+| **Next topic to pick up** | `04-rtl-configuration/` |
 | **Currently working on** | — nothing in flight |
 | **Blocked on** | — nothing. ✅ **Both decisions answered 2026-08-20** |
 | **Target directory** | `docs/jest-rtl/configs/` |
@@ -48,14 +48,14 @@ what a usage cut-off destroys.
 
 ## Progress
 
-**3 of 8 topics complete · 9 files written · 1,686 lines**
+**4 of 8 topics complete · 10 files written · 1,901 lines**
 
 | # | Topic | Target path | Status | Files | Lines | Finished |
 |---|---|---|---|---|---|---|
 | — | **Configs index** — three config surfaces, which-runner decision table | `configs/README.md` | ✅ | 1 | 145 | 2026-08-20 08:09 |
 | 01 | **Where config lives and how it resolves** — `package.json#jest` vs `jest.config.*` vs `--config`; `vitest.config.ts` vs `test:` in `vite.config.ts`; `rootDir` and `<rootDir>`; `extends` vs `mergeConfig` | `configs/01-where-config-lives.md` | ✅ | 1 | 289 | 2026-08-20 08:16 |
 | 02 | **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ✅ | 7 | 1252 | 2026-08-20 08:43 |
-| 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ⬜ | — | — | — |
+| 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ✅ | 1 | 215 | 2026-08-20 08:52 |
 | 04 | **RTL configuration** — `configure()` · `setupTests.ts` anatomy · polyfill checklist · `RTL_SKIP_AUTO_CLEANUP` · `userEvent.setup()` options | `configs/04-rtl-configuration/` | ⬜ | — | — | — |
 | 05 | **`vitest.config` reference** — environment · globals · `pool`/`isolate` · `server.deps.inline` · coverage · workspace · browser mode | `configs/05-vitest-config-reference/` | ⬜ | — | — | — |
 | 06 | **The annotated configs** — one React+TS app configured twice, every line with a "why" row | `configs/06-annotated-configs/` | ⬜ | — | — | — |
@@ -110,6 +110,7 @@ Newest first. One line per working session — what moved, and where it stopped.
 
 | When | Session | What happened |
 |---|---|---|
+| 2026-08-20 08:52 | `13263a40` | ✅ **`03-setup-lifecycle.md` (215 lines)** — the full ordering, what belongs in each stage, the jest-dom-in-setupFiles silent failure, a correctly-ordered setupTests.ts, and Vitest's `test.setupFiles` mapping to `setupFilesAfterEnv` despite the name. 10 gotchas, 10 Q&A. |
 | 2026-08-20 08:43 | `13263a40` | ✅ **Topic 02 COMPLETE — 7 files, 1,252 lines**, largest file 209, all links verified. Added `05-coverage.md` (188) and `06-workers-and-projects.md` (191). |
 | 2026-08-20 08:34 | `13263a40` | `03-module-resolution.md` (209), `04-mock-state-and-timers.md` (201). 5 of 7 chunks in topic 02. |
 | 2026-08-20 08:26 | `13263a40` | Topic 02 started — `README.md` (72), `01-discovery-and-environments.md` (197), `02-the-transform-pipeline.md` (194). 3 of 7 chunks. |
