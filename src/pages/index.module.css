@@ -380,3 +380,34 @@
     gap: 0.3rem;
   }
 }
+
+/* --------------------------------------------------------------- updated */
+
+/*
+ * "Last updated" in the hero. The stamp is the freshest per-language `updated`
+ * field in src/data/progress.js, which every session refreshes when it finishes
+ * a piece of work — so this is the site's own honesty about how current it is.
+ * Minute precision, no seconds, by request.
+ */
+.updated {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--db-mono);
+  font-size: 0.72rem;
+  color: var(--db-ink-3, var(--db-ink-2));
+  margin: 1.35rem 0 0;
+}
+
+.updatedLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--db-accent-ink);
+}
+
+.updatedWhat {
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--db-rule);
+  color: var(--db-ink-2);
+}

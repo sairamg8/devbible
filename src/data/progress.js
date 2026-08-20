@@ -10,6 +10,15 @@
  * `pages`        explanation pages written so far; 0 means not started.
  * `pagesPlanned` set only while a phase is mid-flight, so the bar can show
  *                partial credit. Remove it when the phase is finished.
+ * `updated`      🔴 REQUIRED. Local date and time, `'YYYY-MM-DD HH:MM'`, of when
+ *                that language's pages last changed. **Every session updates its
+ *                own language's stamp when it finishes a piece of work** — the
+ *                homepage prints the most recent one, so the site can always say
+ *                how fresh it is. Minute precision on purpose; seconds are noise.
+ *                It is per-language rather than one global field because several
+ *                sessions run in this checkout at once, each locked to one
+ *                language: a single shared field would collide on every commit,
+ *                while a per-language one is a row that session already owns.
  * `parked`       the phase is deliberately out of the active queue — its
  *                remaining topics are not scheduled work. Parked phases are
  *                excluded from the percentage and the phase counters (they
@@ -22,6 +31,7 @@
 export const LANGUAGES = {
   css: {
     label: 'CSS',
+    updated: '2026-08-14 09:15',
     docsPath: '/docs/css',
     pagesPath: '/docs/css/pages',
     phases: [
@@ -40,6 +50,7 @@ export const LANGUAGES = {
   },
   javascript: {
     label: 'JavaScript',
+    updated: '2026-08-15 14:06',
     docsPath: '/docs/javascript',
     pagesPath: '/docs/javascript/pages',
     phases: [
@@ -66,6 +77,7 @@ export const LANGUAGES = {
   },
   typescript: {
     label: 'TypeScript',
+    updated: '2026-08-18 19:16',
     docsPath: '/docs/typescript',
     pagesPath: '/docs/typescript/pages',
     phases: [
@@ -83,6 +95,7 @@ export const LANGUAGES = {
   },
   mongodb: {
     label: 'MongoDB',
+    updated: '2026-08-15 07:28',
     docsPath: '/docs/mongodb',
     pagesPath: '/docs/mongodb/pages',
     phases: [
@@ -105,6 +118,7 @@ export const LANGUAGES = {
   },
   react: {
     label: 'React',
+    updated: '2026-08-17 07:35',
     docsPath: '/docs/react',
     pagesPath: '/docs/react/pages',
     phases: [
@@ -126,6 +140,7 @@ export const LANGUAGES = {
   },
   nodejs: {
     label: 'Node.js',
+    updated: '2026-08-14 07:33',
     docsPath: '/docs/nodejs',
     pagesPath: '/docs/nodejs/pages',
     phases: [
@@ -146,6 +161,7 @@ export const LANGUAGES = {
   },
   expressjs: {
     label: 'Express.js',
+    updated: '2026-08-14 17:38',
     docsPath: '/docs/expressjs',
     pagesPath: '/docs/expressjs/pages',
     phases: [
@@ -169,6 +185,7 @@ export const LANGUAGES = {
   },
   postgresql: {
     label: 'PostgreSQL',
+    updated: '2026-08-17 06:20',
     docsPath: '/docs/postgresql',
     pagesPath: '/docs/postgresql/pages',
     phases: [
@@ -190,6 +207,7 @@ export const LANGUAGES = {
   },
   redis: {
     label: 'Redis',
+    updated: '2026-08-17 12:21',
     docsPath: '/docs/redis',
     pagesPath: '/docs/redis/pages',
     phases: [
@@ -208,6 +226,7 @@ export const LANGUAGES = {
   },
   nginx: {
     label: 'Nginx',
+    updated: '2026-08-15 07:28',
     docsPath: '/docs/nginx',
     pagesPath: '/docs/nginx/pages',
     phases: [
@@ -227,6 +246,7 @@ export const LANGUAGES = {
   },
   git: {
     label: 'Git',
+    updated: '2026-08-14 18:12',
     docsPath: '/docs/git',
     pagesPath: '/docs/git/pages',
     phases: [
@@ -239,6 +259,7 @@ export const LANGUAGES = {
   },
   docker: {
     label: 'Docker & Podman',
+    updated: '2026-08-16 07:17',
     docsPath: '/docs/docker',
     pagesPath: '/docs/docker/pages',
     phases: [
@@ -259,6 +280,7 @@ export const LANGUAGES = {
   },
   storybook: {
     label: 'Storybook',
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/storybook',
     pagesPath: '/docs/storybook/pages',
     phases: [
@@ -277,6 +299,7 @@ export const LANGUAGES = {
   },
   'vite': {
     label: "Vite",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/vite',
     pagesPath: '/docs/vite/pages',
     phases: [
@@ -300,6 +323,7 @@ export const LANGUAGES = {
   },
   'webpack': {
     label: "Webpack",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/webpack',
     pagesPath: '/docs/webpack/pages',
     phases: [
@@ -323,6 +347,7 @@ export const LANGUAGES = {
   },
   'babel': {
     label: "Babel",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/babel',
     pagesPath: '/docs/babel/pages',
     phases: [
@@ -346,6 +371,7 @@ export const LANGUAGES = {
   },
   'eslint-oxlint': {
     label: "ESLint & Oxlint",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/eslint-oxlint',
     pagesPath: '/docs/eslint-oxlint/pages',
     phases: [
@@ -374,6 +400,7 @@ export const LANGUAGES = {
   },
   'jest-rtl': {
     label: "Jest & RTL",
+    updated: '2026-08-19 20:59',
     docsPath: '/docs/jest-rtl',
     pagesPath: '/docs/jest-rtl/pages',
     phases: [
@@ -397,6 +424,7 @@ export const LANGUAGES = {
   },
   'playwright': {
     label: "Playwright",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/playwright',
     pagesPath: '/docs/playwright/pages',
     phases: [
@@ -420,6 +448,7 @@ export const LANGUAGES = {
   },
   'redux-toolkit': {
     label: "Redux Toolkit",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/redux-toolkit',
     pagesPath: '/docs/redux-toolkit/pages',
     phases: [
@@ -440,6 +469,7 @@ export const LANGUAGES = {
   },
   'tanstack-query': {
     label: "TanStack Query",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/tanstack-query',
     pagesPath: '/docs/tanstack-query/pages',
     phases: [
@@ -463,6 +493,7 @@ export const LANGUAGES = {
   },
   'framer-motion': {
     label: "Framer Motion",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/framer-motion',
     pagesPath: '/docs/framer-motion/pages',
     phases: [
@@ -486,6 +517,7 @@ export const LANGUAGES = {
   },
   'web-vitals-performance': {
     label: "Web Vitals & Performance",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/web-vitals-performance',
     pagesPath: '/docs/web-vitals-performance/pages',
     phases: [
@@ -504,6 +536,7 @@ export const LANGUAGES = {
   },
   'frontend-architecture': {
     label: "Frontend Architecture",
+    updated: '2026-08-14 13:35',
     docsPath: '/docs/frontend-architecture',
     pagesPath: '/docs/frontend-architecture/pages',
     phases: [
@@ -526,6 +559,7 @@ export const LANGUAGES = {
   },
   realworld: {
     label: 'Real World',
+    updated: '2026-08-17 12:11',
     docsPath: '/docs/real-world',
     pagesPath: '/docs/real-world/pages',
     phases: [
@@ -542,6 +576,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
+    updated: '2026-08-20 07:28',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
@@ -566,6 +601,7 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
+    updated: '2026-08-17 20:55',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [
@@ -630,4 +666,23 @@ export function summarise(langKey) {
     inFlight,
     nextPhase: inFlight ?? active.find((p) => p.pages === 0) ?? null,
   };
+}
+
+/**
+ * The freshest `updated` stamp across every language, and which language it came
+ * from — what the homepage prints so a reader can see how current the site is.
+ *
+ * The stamps are plain `'YYYY-MM-DD HH:MM'` local-time strings, so they sort
+ * lexicographically and need no Date parsing. That matters: Docusaurus renders
+ * this at build time, so anything relative ("3 hours ago") would be frozen at
+ * whatever the build machine thought the time was. An absolute stamp stays true.
+ */
+export function lastUpdated() {
+  const entries = Object.entries(LANGUAGES)
+    .filter(([, lang]) => lang.updated)
+    .sort((a, b) => (a[1].updated < b[1].updated ? 1 : -1));
+  if (entries.length === 0) return null;
+  const [key, lang] = entries[0];
+  const [date, time] = lang.updated.split(' ');
+  return {key, label: lang.label, stamp: lang.updated, date, time};
 }

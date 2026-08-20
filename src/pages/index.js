@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Progress from '@site/src/components/Progress';
-import {summarise} from '@site/src/data/progress';
+import {summarise, lastUpdated} from '@site/src/data/progress';
 import styles from './index.module.css';
 
 /** Live counts, so the homepage can never drift from what is actually written. */
@@ -22,6 +22,9 @@ const storybook = summarise('storybook');
 const realworld = summarise('realworld');
 const java = summarise('java');
 const python = summarise('python');
+
+/** Freshest per-language `updated` stamp, so the page can say how current it is. */
+const updated = lastUpdated();
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -320,6 +323,15 @@ export default function Home() {
             deployment. Every topic carries a priority tier, so you always know
             what to master and what to leave until a project asks for it.
           </p>
+          {updated && (
+            <p className={styles.updated}>
+              <span className={styles.updatedLabel}>Last updated</span>
+              <time dateTime={updated.stamp.replace(' ', 'T')}>
+                {updated.date} · {updated.time}
+              </time>
+              <span className={styles.updatedWhat}>{updated.label}</span>
+            </p>
+          )}
         </header>
 
         <section className={styles.focus}>
