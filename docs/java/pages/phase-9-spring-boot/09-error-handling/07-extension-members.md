@@ -116,7 +116,7 @@ ResponseEntity<ValidationProblemDetail> handle(MethodArgumentNotValidException e
 
 ⚠️ Note `getRejectedValue()` in that example: it echoes back what the client
 sent. That is fine for a `quantity` field and **not** fine for a password or a
-card number — [chunk 11](11-never-reaches-the-client.md) deals with it
+card number — [chunk 13](13-never-reaches-the-client.md) deals with it
 properly.
 
 ## Choosing between the two
@@ -203,6 +203,31 @@ of your API applies here; nothing about `ProblemDetail` changes it.
 response body — see
 [customising serialisation](../07-rest-controllers/11-customising-serialisation.md).
 
+**Symptom** — an extension member named `status`, `type`, `title`, `detail` or
+`instance` behaves unpredictably, or a client library reports a duplicate key.
+**Cause** — those five names belong to RFC 9457's own fields, and the mixin
+unwraps your `properties` map into the same top-level object. Nothing stops you
+from claiming one.
+**Fix** — treat the five as reserved. If you need a second notion of "status" or
+"type", name it for your domain — `orderStatus`, `errorCode` — which is clearer
+to a client anyway.
+
+**Symptom** — an extension member is present on some responses and absent on
+others of the same problem `type`, and the client's null checks multiply.
+**Cause** — `setProperty` with a `null` value, combined with a global
+`NON_NULL` inclusion setting, drops the key entirely rather than emitting
+`null`.
+**Fix** — decide per member whether absence is meaningful. If it is not, always
+set a value; if it is, document that the member is optional so the client is
+null-checking deliberately rather than defensively.
+
+**Symptom** — an extension member is translated in one locale and not another.
+**Cause** — the message-code mechanism resolves `type`, `title` and `detail`
+only ([chunk 9](09-message-codes-and-i18n.md)); extension members are whatever
+your handler put there.
+**Fix** — keep extension members machine-facing — codes, ids, quantities — and
+leave prose to `detail`, which is the field designed to carry it.
+
 ## Interview questions
 
 **★ How do you put your own field in an RFC 9457 body, and why does it come out
@@ -224,6 +249,48 @@ Renaming or removing one is breaking, because clients branch on it exactly as
 they branch on `type`. Treat extension member names with the same care as the
 field names of a success response, and put removals at a version boundary.
 
+**★ How does a client actually read your extension members?**
+The reference spells out the round trip: *"A client application can catch
+`WebClientResponseException`, when using the `WebClient`, or
+`RestClientResponseException` when using the `RestTemplate`, and use their
+`getResponseBodyAs` methods to decode the error response body to any target type
+such as `ProblemDetail`, or a subclass of `ProblemDetail`."* `RestClient` — the
+synchronous default in Framework 7 — raises `RestClientResponseException`
+subclasses, so it takes the same route. Decoding into the base `ProblemDetail`
+puts your members in `getProperties()`; decoding into a shared subclass gives
+the client typed accessors, which is the argument for publishing that subclass
+in a client library.
+
+**★ Which mechanism would you choose for a list of field violations, and why?**
+The subclass, without hesitation. It is structured, it recurs on every
+validation failure, and clients iterate it mechanically — all three are
+arguments for real types and a generatable schema. The `properties` map is right
+for the opposite profile: one or two scalars that differ per problem type and
+that a human reads. The deciding question is never "which is nicer" but "will a
+client write a loop over this".
+
+**★ Can an extension member be localised?**
+Not by the framework. Message codes are exposed for `type`, `title` and `detail`
+only, so anything you put in `properties` or a subclass field is emitted
+verbatim. That is a reason to keep members machine-facing — an error code, an
+id, a count, a retry delay — and to let `detail` carry the sentence a person
+reads ([chunk 9](09-message-codes-and-i18n.md)).
+
+**★ Where do extension members that must appear on *every* error go?**
+Not in each handler. Add them once, centrally, at the point every response
+passes through: an override of `handleExceptionInternal` or `createResponseEntity`
+in a `ResponseEntityExceptionHandler` subclass
+([chunk 10](10-responseentityexceptionhandler.md)). A correlation id added in
+twelve handlers is a correlation id missing from the thirteenth.
+
+**★ How do you document extension members?**
+Alongside the `type` URI, because that is the identifier they hang off — the
+same place a client looks to find out what the problem means. Two rules make the
+documentation stay true: attach members to the `type` rather than to the
+endpoint, so every occurrence carries the same set; and never let a member
+appear only when the data happens to be available, because that turns a
+documented field into a guess.
+
 ---
 
-← Prev: [ProblemDetail and RFC 9457](06-problemdetail-and-rfc-9457.md) · Index: [Error handling](README.md) · Next → [ErrorResponse and i18n](08-errorresponse-and-i18n.md)
+← Prev: [ProblemDetail and RFC 9457](06-problemdetail-and-rfc-9457.md) · Index: [Error handling](README.md) · Next → [ErrorResponse](08-errorresponse.md)

@@ -231,7 +231,7 @@ to read the request instead.
 **Fix** — have the filter also store it as a request attribute, then take
 `HttpServletRequest` in the handler and read it:
 `String cid = (String) request.getAttribute("correlationId");` Covered fully in
-[chunk 9](09-never-reaches-the-client.md).
+[chunk 14](14-correlation-ids-and-logging.md).
 
 **Symptom** — taking `HttpSession` as a handler argument creates sessions for
 API clients that never had one.

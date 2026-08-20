@@ -86,7 +86,7 @@ puts a token in a query parameter that should be an `int`, echoing `{1}` puts
 that token in the error body — and in your logs. Prefer `{0}` and `{2}`
 (the parameter name and the expected type), which are the two things the client
 actually needs. This is the same class of leak as
-[chunk 12](12-never-reaches-the-client.md) deals with at length.
+[chunk 13](13-never-reaches-the-client.md) deals with at length.
 
 ## The precondition nobody reads
 
@@ -191,6 +191,22 @@ field error collections, formatted by their `toString`.
 explicitly and build a structured `errors` extension member instead — see
 [chunk 11](11-mapping-domain-exceptions.md).
 
+**Symptom** — a key exists in `messages_de.properties` and nowhere else, and
+German clients get the override while everyone else gets Spring's default text.
+**Cause** — resource-bundle lookup falls back from the locale bundle to the
+default bundle, not the other way round. A key present only in a locale bundle
+has nothing to fall back *from*.
+**Fix** — put every key in `messages.properties` first, then translate. The
+default bundle is the source of truth for which keys exist at all.
+
+**Symptom** — support changes a piece of copy and a frontend feature breaks.
+**Cause** — the frontend was branching on `detail` text rather than on `type`.
+Wording is meant to be free to change; that is the entire point of putting it in
+a bundle.
+**Fix** — publish `type` as the branching key and say so in the API
+documentation. If a client insists on a short string, give it a `code` extension
+member ([chunk 7](07-extension-members.md)) — a stable identifier, not prose.
+
 ## Interview questions
 
 **★ How do you change the wording of Spring's built-in error messages?**
@@ -215,6 +231,54 @@ The keys embed fully qualified Spring class names. A class moving package in a
 future Spring release makes the key stop matching, and the failure is silent —
 the default text simply comes back. Keep the override set small and re-verify on
 major upgrades.
+
+**★ Where exactly does the resolution happen?**
+Inside `ResponseEntityExceptionHandler`'s `handleExceptionInternal` — the method
+every one of its `handle*` methods delegates to — with `createProblemDetail`
+doing the `MessageSource` lookup for the detail field. That is why the mechanism
+is invisible until you extend the base class, and why an override that stops
+calling `super` quietly turns it off ([chunk 10](10-responseentityexceptionhandler.md)).
+
+**★ You have a hand-written handler and you still want message-source wording.
+How?**
+Call `ex.updateAndGetBody(messageSource, locale)` on the exception — it is part
+of the `ErrorResponse` contract ([chunk 8](08-errorresponse.md)) and it resolves
+the type, title and detail codes and returns the updated `ProblemDetail`. It
+only works for exceptions that implement `ErrorResponse`, which is every Spring
+MVC exception and any of yours that opted in.
+
+**★ Do message codes work for your own exceptions?**
+Yes, on the same scheme, provided the exception implements `ErrorResponse` —
+`problemDetail.title.[your FQCN]` and `problemDetail.[your FQCN]`. Whether you
+*want* that is the question chunk 8 argues: it puts your exception's copy in a
+properties file keyed by a class name you are then reluctant to rename. For a
+domain exception you map centrally, writing the wording in the handler is
+usually clearer.
+
+**★ Should a machine-facing API translate its error text at all?**
+Often not. `type` is the identifier a client branches on, and if the client
+renders its own message keyed off `type`, translating `detail` server-side is
+work nobody reads. Translate when a human reads the response directly — an
+internal tool, an admin surface, a partner integration whose support staff quote
+it back to you. Otherwise ship one clear language and treat `detail` as
+diagnostic prose for a developer.
+
+**★ Can the bundle be changed without a redeploy?**
+Only if you make it so. The classpath `messages.properties` Boot auto-configures
+is baked into the artifact. Pointing the message source at an external location
+— or using a reloadable implementation — is what lets product or support edit
+copy independently, and it is worth doing only when someone outside the
+engineering team genuinely owns the wording. Confirm the reload semantics of
+whatever you configure rather than assuming them; caching behaviour differs
+between implementations.
+
+**★ What is the one key you should never put in a locale bundle?**
+`problemDetail.type.[FQCN]`. Spring exposes the code, so localising `type` is
+mechanically possible and semantically broken: `type` is an identifier clients
+compare for equality, and one that varies with `Accept-Language` means a client
+in another locale silently stops matching. Set it once in the default bundle if
+you want to give a built-in exception a stable type URI, and never anywhere
+else.
 
 ---
 

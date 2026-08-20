@@ -137,7 +137,7 @@ The second cost is **over-generalisation**. A single `handle(Exception ex)`
 returning 500 is centralisation without translation: it makes every failure look
 identical, including the ones the client could have fixed. Central handling is
 only worth it if the mapping is deliberate per exception, which is
-[chunk 8](08-mapping-domain-exceptions.md).
+[chunk 11](11-mapping-domain-exceptions.md).
 
 ## Gotchas
 
@@ -160,8 +160,9 @@ Boot's default error body.
 **Cause** — the exception did not reach the `DispatcherServlet`'s resolver
 chain. It was thrown in a servlet `Filter`, or during response writing after
 the status was committed.
-**Fix** — see [chunk 10](10-the-gaps.md); these are outside the advice's reach
-by construction, not by misconfiguration.
+**Fix** — see [chunk 15](15-the-gaps.md) for the filter case and
+[chunk 19](19-committed-responses.md) for the committed one; both are outside
+the advice's reach by construction, not by misconfiguration.
 
 **Symptom** — `/error` returns a 500-shaped payload when a monitoring probe
 hits it directly.

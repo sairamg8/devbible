@@ -184,8 +184,9 @@ the client gets a 500.
 **Cause** — the throw happened outside the `DispatcherServlet`'s try block: in
 a `Filter`, in an `@Async` method whose result nobody waits on, or during
 response writing after commit.
-**Fix** — [chunk 10](10-the-gaps.md) covers each case and what actually catches
-it.
+**Fix** — [chunk 15](15-the-gaps.md) covers the filter case,
+[chunk 18](18-timeouts-and-async.md) the `@Async` one, and
+[chunk 19](19-committed-responses.md) the committed response.
 
 **Symptom** — a `@ResponseStatus` exception is thrown from inside a
 `@Transactional` service method and the transaction commits anyway.
@@ -219,10 +220,10 @@ return a plain status with no body, while your exceptions return a nice
 **Cause** — those are handled by `DefaultHandlerExceptionResolver`, which maps
 to a status code and stops. Your advice never saw them.
 **Fix** — either extend `ResponseEntityExceptionHandler`
-([chunk 7](07-responseentityexceptionhandler.md)) or set
+([chunk 10](10-responseentityexceptionhandler.md)) or set
 `spring.mvc.problemdetails.enabled=true`
 ([chunk 6](06-problemdetail-and-rfc-9457.md)). The two routes are different and
-chunk 7 explains which to pick.
+chunk 10 explains which to pick.
 
 ## Interview questions
 

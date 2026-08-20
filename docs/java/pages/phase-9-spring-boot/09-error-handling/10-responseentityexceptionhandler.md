@@ -207,7 +207,7 @@ and passing it through is why the parameter exists.
 **Cause** — `super.handleExceptionInternal` returned `null` because the response
 was already committed, and the override ignored that and returned an entity.
 **Fix** — null-check the `super` result and return it unchanged when it is
-`null`. Committed-response cases are [chunk 13](13-the-gaps.md).
+`null`. Committed-response cases are [chunk 19](19-committed-responses.md).
 
 **Symptom** — after a Spring upgrade, an error that used to be a 500 is now a
 404 with a problem body.

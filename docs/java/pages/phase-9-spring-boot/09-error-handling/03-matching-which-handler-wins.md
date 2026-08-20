@@ -147,7 +147,7 @@ ResponseEntity<ProblemDetail> handle(DataAccessException ex) throws DataAccessEx
 
 ⚠️ Rethrowing a **different** exception is not backing out — it is throwing from
 inside error handling, and where that lands is covered in
-[chunk 10](10-the-gaps.md).
+[chunk 16](16-the-error-floor.md).
 
 ## The trade-off
 
@@ -192,7 +192,7 @@ status of several existing errors.
 exceptions to correct statuses (405, 415, 400). Your catch-all turns all of them
 into whatever it returns, usually 500.
 **Fix** — either extend `ResponseEntityExceptionHandler` so Spring's mappings
-survive ([chunk 7](07-responseentityexceptionhandler.md)), or exclude them:
+survive ([chunk 10](10-responseentityexceptionhandler.md)), or exclude them:
 handle `ErrorResponse` separately and rethrow, rather than catching `Exception`
 blind.
 

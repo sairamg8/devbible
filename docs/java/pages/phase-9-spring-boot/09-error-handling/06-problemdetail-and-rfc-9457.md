@@ -115,7 +115,7 @@ pd.setTitle("Insufficient stock");
 which is right for most cases, and worth overriding when the "occurrence" you
 want to identify is a business object rather than a URL (an order id, a job id,
 a correlation id). Overriding it is one of the two good places to put a
-correlation id; see [chunk 10](10-never-reaches-the-client.md).
+correlation id; see [chunk 14](14-correlation-ids-and-logging.md).
 
 ## A complete handler, end to end
 
@@ -159,7 +159,7 @@ generic error-reporting tool can understand your errors without configuration.
 - **Frontend developers will still want a machine-readable code**, and will be
   unhappy that `type` is a long URI. That is what `type` *is*, but nothing stops
   you from also emitting a short `code` extension member — see
-  [chunk 7](07-extensions-and-errorresponse.md).
+  [chunk 7](07-extension-members.md).
 
 ## The trade-off
 
@@ -252,4 +252,4 @@ reason phrase when the type is `about:blank`.
 
 ---
 
-← Prev: [@ControllerAdvice](05-controlleradvice.md) · Index: [Error handling](README.md) · Next → [Extensions and ErrorResponse](07-extensions-and-errorresponse.md)
+← Prev: [@ControllerAdvice](05-controlleradvice.md) · Index: [Error handling](README.md) · Next → [Extension members](07-extension-members.md)

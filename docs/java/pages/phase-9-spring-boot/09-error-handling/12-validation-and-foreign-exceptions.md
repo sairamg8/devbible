@@ -166,7 +166,7 @@ sends them into a debugging loop they cannot exit.
 ⚠️ Two of these rows — `AccessDeniedException` and `AuthenticationException` —
 are a genuine trap: Spring Security handles them **inside the filter chain**, so
 they frequently never reach your `@ControllerAdvice` at all. That is a special
-case of [chunk 14](14-the-gaps.md).
+case of [chunk 15](15-the-gaps.md).
 
 ## Translating at the boundary, not in the advice
 
@@ -242,7 +242,7 @@ fires.
 **Cause** — Spring Security handles it in the filter chain, before the
 `DispatcherServlet`.
 **Fix** — configure Security's `AccessDeniedHandler` / `AuthenticationEntryPoint`
-to emit your problem shape. See [chunk 14](14-the-gaps.md).
+to emit your problem shape. See [chunk 15](15-the-gaps.md).
 
 ## Interview questions
 
