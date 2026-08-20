@@ -133,7 +133,7 @@ provider publishes its HTTP interface, a change to a method signature breaks you
 *build* rather than your production traffic — which is the earliest and cheapest
 place to find out. It does not catch a semantic change behind an unchanged
 signature, so it is a floor, not a ceiling. The OpenAPI route is
-**Topic 14 — OpenAPI with springdoc** *(not written yet)*.
+**[Topic 14 — OpenAPI with springdoc](../14-openapi-springdoc/README.md)**.
 
 ## Gotchas
 

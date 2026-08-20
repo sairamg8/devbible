@@ -20,7 +20,7 @@ The framework nearly every Java job means when it says "Java". These pages
 teach the machinery — DI, auto-configuration, the request pipeline — because
 the annotations are learnable in a day but debuggable only with the model.
 
-🚧 **9 of 16 written.**
+✅ **All 16 topics written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -31,15 +31,15 @@ the annotations are learnable in a day but debuggable only with the model.
 | 05 | **[Boot auto-configuration](05-auto-configuration/README.md)** | <span className="db-tier t-understand">Understand</span> | What `@SpringBootApplication` triggers; the conditions report |
 | 06 | **[Configuration and profiles](06-configuration-and-profiles/README.md)** | <span className="db-tier t-master">Master</span> | `@ConfigurationProperties`, profiles, env overrides — 12-factor |
 | 07 | **[REST controllers](07-rest-controllers/README.md)** | <span className="db-tier t-master">Master</span> | Mappings, records as bodies, `ResponseEntity`, status on purpose |
-| 08 | **Validation** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Bean Validation at the boundary; custom validators |
-| 09 | **Error handling** *(not written yet)* | <span className="db-tier t-master">Master</span> | `@ControllerAdvice` + `ProblemDetail` (RFC 9457) |
-| 10 | **The request pipeline** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Filters vs interceptors vs AOP — where each concern belongs |
+| 08 | **[Validation](08-validation/README.md)** | <span className="db-tier t-understand">Understand</span> | Bean Validation at the boundary; custom validators |
+| 09 | **[Error handling](09-error-handling/README.md)** | <span className="db-tier t-master">Master</span> | `@ControllerAdvice` + `ProblemDetail` (RFC 9457) |
+| 10 | **[The request pipeline](10-the-request-pipeline/README.md)** | <span className="db-tier t-understand">Understand</span> | Filters vs interceptors vs AOP — where each concern belongs |
 | 11 | **[Spring Security, the working subset](11-spring-security/README.md)** | <span className="db-tier t-understand">Understand</span> | Filter chain, JWT resource server, CORS/CSRF for SPA + API |
-| 12 | **Outbound HTTP** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `RestClient`, timeouts, error mapping |
-| 13 | **Actuator** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Liveness vs readiness — and locking the rest down |
-| 14 | **OpenAPI with springdoc** *(not written yet)* | <span className="db-tier t-know">Know</span> | The generated contract your frontend consumes |
+| 12 | **[Outbound HTTP](12-outbound-http/README.md)** | <span className="db-tier t-understand">Understand</span> | `RestClient`, timeouts, error mapping |
+| 13 | **[Actuator](13-actuator/README.md)** | <span className="db-tier t-understand">Understand</span> | Liveness vs readiness — and locking the rest down |
+| 14 | **[OpenAPI with springdoc](14-openapi-springdoc/README.md)** | <span className="db-tier t-know">Know</span> | The generated contract your frontend consumes |
 | 15 | **[WebFlux and reactive](15-webflux-reactive/README.md)** | <span className="db-tier t-know">Know</span> | What it costs, and why virtual threads moved the default back |
-| 16 | **The alternatives** *(not written yet)* | <span className="db-tier t-know">Know</span> | Quarkus, Micronaut, Helidon — the trade-offs |
+| 16 | **[The alternatives](16-the-alternatives/README.md)** | <span className="db-tier t-know">Know</span> | Quarkus, Micronaut, Helidon — the trade-offs |
 
 ## Phase gate
 

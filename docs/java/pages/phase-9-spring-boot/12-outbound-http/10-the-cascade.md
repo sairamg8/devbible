@@ -137,7 +137,7 @@ your readiness probe calls the degraded dependency, then a dependency being slow
 takes *your* instances out of rotation, concentrating traffic on the remaining
 ones, which makes them slower. A readiness probe should answer whether *this
 instance* can serve traffic, not whether the whole dependency graph is healthy.
-That is **Topic 13 — Actuator** *(not written yet)*'s territory, and it is worth
+That is **[Topic 13 — Actuator](../13-actuator/README.md)**'s territory, and it is worth
 checking before an incident rather than during one.
 
 ## Retries make it worse, and this is the part people get wrong

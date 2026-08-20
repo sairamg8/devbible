@@ -126,14 +126,14 @@ This topic runs to eighteen files. The chunks:
 - **[Phase 16 — Resilience and operations](../../phase-16-resilience-operations/README.md)**
   — circuit breakers, bulkheads and load shedding at the architecture level,
   where the core framework stops.
-- **Topic 10 — The request pipeline** *(not written yet)* — the inbound side of
+- **[Topic 10 — The request pipeline](../10-the-request-pipeline/README.md)** — the inbound side of
   the deadline problem chunk 11 raises.
-- **Topic 13 — Actuator** *(not written yet)* — the metrics endpoint chunk 16's
+- **[Topic 13 — Actuator](../13-actuator/README.md)** — the metrics endpoint chunk 16's
   observations arrive at, and the readiness-probe trap chunk 10 warns about.
-- **Topic 14 — OpenAPI with springdoc** *(not written yet)* — generating client
+- **[Topic 14 — OpenAPI with springdoc](../14-openapi-springdoc/README.md)** — generating client
   stubs and interfaces from a provider's schema, which is chunk 18's answer to
   stub drift.
-- **Topic 16 — The alternatives** *(not written yet)* — where a service mesh
+- **[Topic 16 — The alternatives](../16-the-alternatives/README.md)** — where a service mesh
   takes over retries, timeouts and mTLS from the application entirely.
 
 ---

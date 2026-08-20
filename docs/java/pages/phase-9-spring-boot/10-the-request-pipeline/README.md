@@ -91,7 +91,7 @@ This topic runs to ten files. The chunks:
   handler at the centre of the stack. Its
   [chunk 1](../07-rest-controllers/01-the-controller-and-the-pipeline.md) points
   here for the full pipeline.
-- **Topic 09 — Error handling** — the resolver chain that chunk 1 places inside
+- **[Topic 09 — Error handling](../09-error-handling/README.md)** — the resolver chain that chunk 1 places inside
   `DispatcherServlet`, argued in full:
   [the resolver chain](../09-error-handling/02-the-resolver-chain.md) and
   [correlation IDs and logging](../09-error-handling/14-correlation-ids-and-logging.md)
