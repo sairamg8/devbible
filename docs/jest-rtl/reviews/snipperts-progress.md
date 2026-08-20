@@ -14,7 +14,7 @@ git log.**
 :::
 
 > Plan this tracks: [Configs section proposal](./configs-section-proposal.md)
-> Last updated: **2026-08-20 08:09**
+> Last updated: **2026-08-20 08:16**
 
 ---
 
@@ -22,7 +22,7 @@ git log.**
 
 | | |
 |---|---|
-| **Next topic to pick up** | `01-where-config-lives.md` |
+| **Next topic to pick up** | `02-jest-config-reference/` |
 | **Currently working on** | — nothing in flight |
 | **Blocked on** | — nothing. ✅ **Both decisions answered 2026-08-20** |
 | **Target directory** | `docs/jest-rtl/configs/` |
@@ -48,12 +48,12 @@ what a usage cut-off destroys.
 
 ## Progress
 
-**1 of 8 topics complete · 1 file written · 145 lines**
+**2 of 8 topics complete · 2 files written · 434 lines**
 
 | # | Topic | Target path | Status | Files | Lines | Finished |
 |---|---|---|---|---|---|---|
 | — | **Configs index** — three config surfaces, which-runner decision table | `configs/README.md` | ✅ | 1 | 145 | 2026-08-20 08:09 |
-| 01 | **Where config lives and how it resolves** — `package.json#jest` vs `jest.config.*` vs `--config`; `vitest.config.ts` vs `test:` in `vite.config.ts`; `rootDir` and `<rootDir>`; `extends` vs `mergeConfig` | `configs/01-where-config-lives.md` | ⬜ | — | — | — |
+| 01 | **Where config lives and how it resolves** — `package.json#jest` vs `jest.config.*` vs `--config`; `vitest.config.ts` vs `test:` in `vite.config.ts`; `rootDir` and `<rootDir>`; `extends` vs `mergeConfig` | `configs/01-where-config-lives.md` | ✅ | 1 | 289 | 2026-08-20 08:16 |
 | 02 | **`jest.config` reference** — discovery · environments · transforms · resolution · mock state · coverage · performance · `projects` · reporters · Jest 29→30 | `configs/02-jest-config-reference/` | ⬜ | — | — | — |
 | 03 | **The setup lifecycle** — `globalSetup` → `setupFiles` → framework install → `setupFilesAfterEnv` → test file → `globalTeardown`, with Vitest's equivalents beside it | `configs/03-setup-lifecycle.md` | ⬜ | — | — | — |
 | 04 | **RTL configuration** — `configure()` · `setupTests.ts` anatomy · polyfill checklist · `RTL_SKIP_AUTO_CLEANUP` · `userEvent.setup()` options | `configs/04-rtl-configuration/` | ⬜ | — | — | — |
@@ -104,6 +104,7 @@ Newest first. One line per working session — what moved, and where it stopped.
 
 | When | Session | What happened |
 |---|---|---|
+| 2026-08-20 08:16 | `13263a40` | Wrote **`01-where-config-lives.md` (289 lines)** — Jest's 4 config sources and the package.json/config-file trap, `rootDir` vs `<rootDir>`, Vitest's 3 sources and the `vite` vs `vitest/config` import, shallow `extends` vs deep `mergeConfig`, `projects`. **8 gotchas, 7 interview questions.** |
 | 2026-08-20 08:09 | `13263a40` | Decisions answered — **combine Jest + RTL + Vitest in this one track**, jest-rtl only. Created `docs/jest-rtl/configs/` + `_category_.json`, wrote **`README.md` (145 lines)** — three config surfaces, runner decision table, the three-places-alias seam, chunk index, versions. 10/10 links verified. |
 | 2026-08-20 07:51 | `13263a40` | Surveyed the repo, wrote [`configs-section-proposal.md`](./configs-section-proposal.md) (167 lines) and this tracker. **No content pages written** — blocked on decisions 1 and 2. Flagged at ~90% usage, so both files were committed before any writing began. |
 
