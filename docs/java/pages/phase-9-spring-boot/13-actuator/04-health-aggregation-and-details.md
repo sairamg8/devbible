@@ -41,7 +41,7 @@ There is no notion of a "warning" or a "non-critical" contributor built into the
 aggregation. Severity is a total order over status names, and every contributor
 gets the same vote. If you want a check that is visible but not decisive, the
 mechanism is not a gentler status — it is a
-[health group](06-groups-probes-and-shutdown.md) that excludes it.
+[health group](07-groups-and-graceful-shutdown.md) that excludes it.
 
 `Status` is not a closed enum; you can register your own. But a custom status
 that no aggregator ordering and no HTTP mapping knows about has no defined
@@ -113,7 +113,7 @@ why `always` keeps ending up in production.
 principal in the roles named by `management.endpoint.health.roles`, a bare
 status for everyone else. It requires that you have a security configuration
 that authenticates actuator requests, which is
-[the other half of the topic](10-locking-it-down.md).
+[the other half of the topic](19-securing-the-endpoints.md).
 
 `show-components` is the same idea one level up: it controls whether the
 contributor *names* are listed at all. It is worth restricting separately,
@@ -160,7 +160,7 @@ management.endpoint.health.roles=ops
 
 **Symptom:** the service is pulled from rotation whenever a peripheral system has a slow patch
 **Cause:** an indicator for a non-critical dependency is in the group the probe reads, and a single `DOWN` aggregates to `DOWN`
-**Fix:** stop aggregating things with different consequences — give the probe a group containing only decisive checks, as [health groups](06-groups-probes-and-shutdown.md) sets out
+**Fix:** stop aggregating things with different consequences — give the probe a group containing only decisive checks, as [health groups](07-groups-and-graceful-shutdown.md) sets out
 
 **Symptom:** a custom `Status` you registered is treated as healthy when you meant it as a failure
 **Cause:** severity comes from the configured order and a status not named there has no defined severity; the HTTP mapping is a separate lookup that can also miss

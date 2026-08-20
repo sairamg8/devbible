@@ -84,7 +84,7 @@ effect. Note that `management.health.<key>.enabled` and
 `management.info.<id>.enabled` are *different* properties governing
 *contributors* rather than endpoints — both of those are current and are covered
 in [health](03-health-properly.md) and
-[`/info` and the catalogue](09-info-and-the-catalogue.md).
+[`/info` and its contributors](16-info-and-the-catalogue.md).
 
 ## Gate 3 — is it exposed over the technology you are calling?
 
@@ -104,7 +104,7 @@ and unreachable over HTTP until somebody opts in.
 Web and JMX are configured **separately**. An endpoint exposed over HTTP is not
 thereby visible in JConsole, and vice versa. `exclude` wins over `include`, so
 `include=*` with `exclude=env,heapdump` is a legitimate shape — though
-[locking it down](10-locking-it-down.md) argues that starting from `*` is the
+[locking it down](18-locking-it-down.md) argues that starting from `*` is the
 wrong direction to approach the problem from, because an allowlist and a
 denylist have opposite failure modes when the endpoint catalogue grows.
 
@@ -138,7 +138,7 @@ the management server and is a separate knob from
 
 This matters because it changes what your ingress can reach rather than what
 your application chooses to answer, and that is a much stronger kind of control
-— [locking it down](10-locking-it-down.md) makes the full argument.
+— [locking it down](18-locking-it-down.md) makes the full argument.
 
 ⚠️ Setting a management port has a consequence people forget: **the management
 server is a different server**, so it does not inherit your application
@@ -203,7 +203,7 @@ management:
 
 **Symptom:** `POST /actuator/loggers/com.example` returns 403 as soon as Spring Security is on the classpath
 **Cause:** Boot inherits Spring Security's defaults, so CSRF protection is on, and the `POST` and `DELETE` actuator operations are ordinary state-changing requests as far as it is concerned
-**Fix:** exclude the actuator paths from CSRF in the actuator's own filter chain, or use a token scheme that does not rely on cookie sessions — see [locking it down](10-locking-it-down.md). Disabling CSRF globally so that one `loggers` call works is not a fix, it is a regression in your application's security
+**Fix:** exclude the actuator paths from CSRF in the actuator's own filter chain, or use a token scheme that does not rely on cookie sessions — see [securing the endpoints](19-securing-the-endpoints.md). Disabling CSRF globally so that one `loggers` call works is not a fix, it is a regression in your application's security
 
 **Symptom:** you set `management.server.port` and every actuator call now fails TLS verification, or 404s under a path that used to work
 **Cause:** the management server is a separate server that does not inherit `server.ssl.*`, `server.servlet.context-path` or your servlet filters

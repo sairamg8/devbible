@@ -37,7 +37,7 @@ not renamed.** `spring-boot-starter-web` became
 [`spring-boot-starter-webmvc`](../05-auto-configuration/01-what-a-starter-is.md)
 and `spring-boot-starter-aop` became `spring-boot-starter-aspectj`, but the
 actuator starter kept its name. Plenty of internal *classes* moved — see
-[health](03-health-properly.md) and [locking it down](10-locking-it-down.md) —
+[health](03-health-properly.md) and [locking it down](18-locking-it-down.md) —
 but the POM line from a Boot 2 tutorial still resolves.
 
 Adding it is enough. There is no `@EnableActuator`; the starter puts classes on

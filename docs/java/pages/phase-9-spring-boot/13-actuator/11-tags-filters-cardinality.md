@@ -55,7 +55,7 @@ possible values, it is not a tag.
 cardinality identifiers belong there: a trace can carry a user id and an order
 id because a trace is sampled and stored per-event, whereas a metric is
 aggregated and stored per-series-forever. That distinction is the whole design
-of [observations](12-distributions-and-observations.md), which separates low-
+of [the Observation API](14-the-observation-api.md), which separates low-
 cardinality key values from high-cardinality ones and sends them to different
 places on purpose.
 
@@ -281,4 +281,4 @@ leak indicator in its own right.
 
 ---
 
-← Prev: [Registering custom metrics](10-custom-metrics.md) · Index: [Actuator](README.md) · Next → [Distributions and observations](12-distributions-and-observations.md)
+← Prev: [Registering custom metrics](10-custom-metrics.md) · Index: [Actuator](README.md) · Next → [Distributions and percentiles](12-distributions-and-percentiles.md)

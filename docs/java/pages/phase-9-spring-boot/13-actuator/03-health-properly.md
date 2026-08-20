@@ -161,7 +161,7 @@ at. A health endpoint that checks nothing is a perfect probe target and tells
 you nothing.
 
 Boot's answer is not to pick one but to let you have several, which is what
-[health groups](06-groups-probes-and-shutdown.md) are for. The question to ask
+[health groups](07-groups-and-graceful-shutdown.md) are for. The question to ask
 of every proposed indicator is not "is this dependency important" but "when
 this dependency fails, should traffic stop arriving at this instance" — and for
 most peripheral systems the answer is no.

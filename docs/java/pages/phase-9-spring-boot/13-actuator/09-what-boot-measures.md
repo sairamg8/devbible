@@ -86,7 +86,7 @@ The HTTP server timer is the metric you will spend the most time with, and its
 (`/orders/{id}`), not the actual path (`/orders/91f2…`). Without that
 substitution every distinct order id would be a distinct time series, which is
 the cardinality failure in
-[the next chunk](11-cardinality-and-observations.md) at industrial scale.
+[the cardinality chunk](11-tags-filters-cardinality.md) at industrial scale.
 
 This has a direct consequence: **a request that does not match a handler
 mapping has no template to report.** Boot handles that by tagging unmatched
@@ -138,7 +138,7 @@ confusion is so durable.
 architecture, `uri` tags enumerate your entire API surface, `jdbc.connections`
 tags name your data sources, and a badly chosen custom tag can carry
 identifiers. It belongs on the management port, reachable only from your
-monitoring system — see [locking it down](13-locking-it-down.md).
+monitoring system — see [locking it down](18-locking-it-down.md).
 
 ## The trade-off
 
