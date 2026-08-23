@@ -4,11 +4,15 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: Java 25 · Spring Boot 3.x · Hibernate 6.x · PostgreSQL.**
+> **Target: JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Hibernate ORM
+> 7.4.1 (Jakarta Persistence 3.2) · Spring Data JPA 4.1.0 · HikariCP 7.0.2 ·
+> Flyway 12.4.0 · PostgreSQL 18.**
+> ⚠️ Boot 4.1's baseline is **JDK 17** — 25 is the recommended LTS, not the floor.
 > Documentation-validated — every page names its sources on a `> Verified:`
-> line (the JDBC specification and API docs, HikariCP's documentation, the
-> Spring Framework transaction docs, the Hibernate ORM user guide, Flyway
-> docs). No sandbox: pages carry Java/SQL code, never fabricated query logs.
+> line (the JDBC specification and JDK API docs, HikariCP's documentation, the
+> Spring Framework transaction docs, the Hibernate ORM 7.4 user guide, the
+> Jakarta Persistence 3.2 specification, Flyway and PostgreSQL 18 docs). No
+> sandbox: pages carry Java/SQL code, never fabricated query logs.
 
 The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
