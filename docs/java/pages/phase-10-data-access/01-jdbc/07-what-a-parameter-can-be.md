@@ -11,8 +11,9 @@ sidebar_position: 7
 > (docs.oracle.com/en/java/javase/25/docs/api/java.sql/), the PostgreSQL 18
 > manual *SELECT* and *Functions and Operators → Array Functions and Operators*
 > (postgresql.org/docs/18/sql-select.html), and the pgJDBC documentation
-> *Issuing a Query and Processing the Result*. JDK 25, JDBC 4.3, PostgreSQL 18,
-> pgjdbc 42.7.13.
+> *Issuing a Query and Processing the Result*, and the PostgreSQL 18 manual
+> *Queries → Sorting Rows* (postgresql.org/docs/18/queries-order.html). JDK 25,
+> JDBC 4.3, PostgreSQL 18, pgjdbc 42.7.13.
 
 **A parameter is a *value*. It is never an identifier, never an operator, never a
 clause, and never a list. That single sentence explains four of the most common
@@ -113,6 +114,28 @@ not a design.
   `now() - (? || ' days')::interval` or, better, `now() - make_interval(days =>
   ?)`, which keeps the value typed.
 
+## Why `ORDER BY ?` parses at all
+
+The PostgreSQL manual explains the trap in one sentence:
+
+> *A `sort_expression` can also be the column label or number of an output
+> column.*
+
+So `ORDER BY 1` is legal and means "the first output column". Bind an integer and
+you have silently asked for a real, wrong ordering. Bind a string and you have
+asked to sort by a constant, which orders nothing — every row ties, and the
+server is free to return them in any order it likes. Neither raises an error, and
+the second is the one that reaches production, because a developer testing with
+20 rows on a freshly loaded table sees them come back in insertion order and
+concludes the sort works.
+
+⚠️ **The same page also settles `NULLS FIRST` / `NULLS LAST`**, which people
+routinely try to parameterize: *"By default, null values sort as if larger than
+any non-null value; that is, `NULLS FIRST` is the default for `DESC` order, and
+`NULLS LAST` otherwise."* It is syntax, so it belongs in the allow-list beside
+the direction — and if your API exposes a nulls-position control, note that the
+default flips with the direction, so "unchanged" is not a constant.
+
 ## The trade-off
 
 An allow-list is a piece of duplication: the set of sortable columns exists in the
@@ -149,6 +172,12 @@ a set.
 **Symptom:** a syntax error on a query that looks obviously correct.
 **Cause:** an interval literal is parsed, not bound.
 **Fix:** `make_interval(days => ?)` — typed, readable, and parameterized.
+
+**⚠️ Parameterizing `NULLS LAST`**
+**Symptom:** a syntax error, or an allow-list that forgot it.
+**Cause:** it is syntax, like `ASC`.
+**Fix:** put it in the same map as the direction — and remember the default flips
+with the direction, so an explicit choice is not a no-op.
 
 ## Interview questions
 
@@ -196,6 +225,16 @@ statement. An alternative worth preferring where it fits is to set `search_path`
 per connection to a validated schema and leave the SQL free of schema
 qualification entirely — the value then travels as a session setting rather than
 as statement text.
+
+**★ Why is a silently unsorted result worse than an exception?**
+Because nothing fails, so nothing gets fixed. `ORDER BY ?` with a bound string
+sorts by a constant: every row compares equal, the server may return them in any
+order, and on a small development table that order is usually insertion order —
+which looks exactly like a working sort. It surfaces later as "the list is
+sometimes in a different order", reported by users, on data nobody can reproduce
+locally, after a plan change or a vacuum reshuffled the heap. An exception would
+have been caught by the first test. This is the general shape of the worst class
+of bug in this layer: the thing that is wrong is not the thing that errors.
 
 ---
 
