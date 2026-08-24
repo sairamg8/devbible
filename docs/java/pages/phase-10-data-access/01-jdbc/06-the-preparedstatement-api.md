@@ -199,13 +199,6 @@ wrong column.
 **Fix:** remember that both parameters and result columns start at 1. Sequential
 `setX` calls right after the SQL literal make the mismatch visible.
 
-**⚠️ A conditional that leaves a parameter unset**
-**Symptom:** an exception naming a parameter index, on a path that only runs when
-an optional field is absent.
-**Cause:** a branch that skips a setter.
-**Fix:** set every parameter on every path — including `setNull` — or build a
-different statement for the different shape.
-
 **⚠️ `WHERE col = ?` with a null bound, expecting it to match nulls**
 **Symptom:** an optional filter silently returns zero rows instead of "no filter".
 **Cause:** SQL three-valued logic. `= NULL` is never true.
@@ -224,11 +217,6 @@ placeholders.
 varying".
 **Cause:** no implicit cast from text to jsonb in that position.
 **Fix:** `CAST(? AS jsonb)` in the SQL, or a `PGobject`.
-
-**⚠️ Reusing a `PreparedStatement` whose `ResultSet` is still open**
-**Symptom:** "This ResultSet is closed" from code that never closed it.
-**Cause:** re-executing a statement closes its previous result.
-**Fix:** finish reading before re-executing, or use a second statement.
 
 **⚠️ `setObject` on an enum**
 **Symptom:** a column containing something other than what you expected, or a
