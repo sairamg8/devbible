@@ -18,11 +18,11 @@ The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
 debug an abstraction you've never seen under.
 
-🚧 **0 of 14 written.**
+🚧 **1 of 14 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **JDBC** *(not written yet)* | <span className="db-tier t-master">Master</span> | `PreparedStatement` always — SQL injection dies here |
+| 01 | **[JDBC](01-jdbc/README.md)** | <span className="db-tier t-master">Master</span> | `PreparedStatement` always — SQL injection dies here |
 | 02 | **Connection pooling with HikariCP** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Small pools, leak detection, "connection is not available" |
 | 03 | **Transactions at the JDBC level** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Isolation levels mapped to real anomalies |
 | 04 | **Spring `@Transactional`** *(not written yet)* | <span className="db-tier t-master">Master</span> | Proxy mechanics, rollback rules, the self-invocation trap |
