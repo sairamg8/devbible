@@ -1,7 +1,7 @@
 ---
 title: "The cheapest way to find out which id you were given is to have decided it yourself"
 sidebar_label: "20e · Client-side keys, and upward"
-sidebar_position: 20.4
+sidebar_position: 33
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -297,4 +297,4 @@ row is inserted anyway, so gaps exist under every strategy and nothing should de
 contiguity.
 
 ---
-<!--FOOTER-->
+← Prev: [20d · Batches and ON CONFLICT](20d-batches-and-on-conflict.md) · Index: [JDBC](README.md) · Next → [21 · `SQLException`](21-sqlexception.md)

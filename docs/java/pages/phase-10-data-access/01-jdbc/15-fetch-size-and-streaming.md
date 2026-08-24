@@ -1,7 +1,7 @@
 ---
 title: "By default the driver reads every row into your heap before you see the first one"
 sidebar_label: "15 · Fetch size and streaming"
-sidebar_position: 15
+sidebar_position: 17
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -284,4 +284,4 @@ nowhere useful.
 
 ---
 
-← Prev: [Dates, times and `timestamptz`](14-dates-times-and-timestamptz.md) · Index: [JDBC](README.md) · Next → [Mapping rows to objects](16-mapping-rows-to-objects.md)
+← Prev: [14 · Dates, times and `timestamptz`](14-dates-times-and-timestamptz.md) · Index: [JDBC](README.md) · Next → [16 · Mapping rows to objects](16-mapping-rows-to-objects.md)

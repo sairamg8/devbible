@@ -1,7 +1,7 @@
 ---
 title: "Asking the database which id it just assigned has three APIs, and on PostgreSQL the convenient one answers a much bigger question than you asked"
 sidebar_label: "20 · Generated keys"
-sidebar_position: 20
+sidebar_position: 29
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -292,4 +292,4 @@ exactly why the portable-looking flag has a very unportable meaning. Naming the
 columns is how you take that decision back.
 
 ---
-<!--FOOTER-->
+← Prev: [19h · COPY instead of batching](19h-copy-instead-of-batching.md) · Index: [JDBC](README.md) · Next → [20b · Reading keys, writing RETURNING](20b-reading-and-writing-returning.md)

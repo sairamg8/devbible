@@ -1,7 +1,7 @@
 ---
 title: "Fast five times, then slow forever: the generic plan nobody deployed"
 sidebar_label: "10 · The generic plan cliff"
-sidebar_position: 10
+sidebar_position: 12
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -287,4 +287,4 @@ statistics, and `force_custom_plan` is the workaround while you get them.
 
 ---
 
-← Prev: [Server-side prepared statements](09-server-side-prepared-statements.md) · Index: [JDBC](README.md) · Next → [`Statement`, `PreparedStatement`, `CallableStatement`](11-statement-types.md)
+← Prev: [9 · Server-side prepared statements](09-server-side-prepared-statements.md) · Index: [JDBC](README.md) · Next → [11 · The three statement types](11-statement-types.md)

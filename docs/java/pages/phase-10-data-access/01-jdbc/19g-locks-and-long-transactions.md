@@ -1,7 +1,7 @@
 ---
 title: "Row locks are unlimited, which is exactly why a big batch hurts — the cost is the length of the transaction, not the size of a lock table"
 sidebar_label: "19g · Locks and long transactions"
-sidebar_position: 19.6
+sidebar_position: 27
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -206,4 +206,4 @@ it is a targeted fix, not a default.
 **Continue:** [19h · When to use `COPY` instead](19h-copy-instead-of-batching.md)
 
 ---
-<!--FOOTER-->
+← Prev: [19f · Timeouts and cancellation](19f-timeouts-and-cancellation.md) · Index: [JDBC](README.md) · Next → [19h · COPY instead of batching](19h-copy-instead-of-batching.md)

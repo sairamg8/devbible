@@ -1,7 +1,7 @@
 ---
 title: "Every layer must be strictly larger than the one it backstops, or the destructive one fires first"
 sidebar_label: "22e · Setting the timeouts"
-sidebar_position: 26
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -292,4 +292,4 @@ middleware "may not react well to unexpected connection closure", and notes that
 an idle session outside a transaction costs the server little anyway.
 
 ---
-<!--FOOTER-->
+← Prev: [22d · The server's own timeouts](22d-server-side-timeouts.md) · Index: [JDBC](README.md) · Next → [22f · How cancellation works](22f-how-cancellation-works.md)

@@ -1,7 +1,7 @@
 ---
 title: "A batch returns one key per row it affected, not per row you submitted, and nothing tells you which ones are missing"
 sidebar_label: "20d · Batches and ON CONFLICT"
-sidebar_position: 20.3
+sidebar_position: 32
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -295,4 +295,4 @@ per row rather than a whole row, and bound the batch so the materialised result
 set is bounded too.
 
 ---
-<!--FOOTER-->
+← Prev: [20c · Beyond INSERT and beyond keys](20c-returning-beyond-insert.md) · Index: [JDBC](README.md) · Next → [20e · Client-side keys, and upward](20e-when-the-key-is-not-the-databases.md)

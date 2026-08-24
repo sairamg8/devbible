@@ -1,7 +1,7 @@
 ---
 title: "Three statement types, one of which you should almost never create"
 sidebar_label: "11 · The three statement types"
-sidebar_position: 11
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -276,4 +276,4 @@ result set from an ordinary query, with no driver-specific behaviour in between.
 
 ---
 
-← Prev: [The generic plan cliff](10-the-generic-plan-cliff.md) · Index: [JDBC](README.md) · Next → [`ResultSet`: the cursor model](12-resultset-the-cursor-model.md)
+← Prev: [10 · The generic plan cliff](10-the-generic-plan-cliff.md) · Index: [JDBC](README.md) · Next → [12 · `ResultSet`: the cursor model](12-resultset-the-cursor-model.md)

@@ -249,4 +249,4 @@ from a test double.
 
 ---
 
-← Prev: [Phase 9 — Spring Boot and the web](../../phase-9-spring-boot/README.md) · Index: [JDBC](README.md) · Next → [`DataSource`, not `DriverManager`](02-datasource-not-drivermanager.md)
+← Prev: [Phase 10 — Data access](../README.md) · Index: [JDBC](README.md) · Next → [2 · `DataSource`, not `DriverManager`](02-datasource-not-drivermanager.md)

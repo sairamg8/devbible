@@ -1,7 +1,7 @@
 ---
 title: "Inside a transaction pgJDBC reports every entry as EXECUTE_FAILED, including the ones that worked — and it is right to"
 sidebar_label: "19b · When a batch fails"
-sidebar_position: 19.1
+sidebar_position: 22
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -295,4 +295,4 @@ PostgreSQL means silently skipping rows that were never sent.
 [19e · Sizing a batch](19e-sizing-a-batch.md).
 
 ---
-<!--FOOTER-->
+← Prev: [19 · Batch updates](19-batch-updates.md) · Index: [JDBC](README.md) · Next → [19c · Insert rewriting](19c-insert-rewriting.md)

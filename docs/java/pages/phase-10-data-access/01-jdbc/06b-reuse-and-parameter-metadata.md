@@ -186,4 +186,4 @@ opening a connection per row, which turns a bulk load into ten thousand pool
 borrows. Detail in [chunk 19](19-batch-updates.md).
 
 ---
-<!--FOOTER-->
+← Prev: [6 · The `PreparedStatement` API](06-the-preparedstatement-api.md) · Index: [JDBC](README.md) · Next → [7 · What a parameter can be](07-what-a-parameter-can-be.md)

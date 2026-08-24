@@ -233,4 +233,4 @@ pattern defeats most taint tracking, so read the builders by hand.
 
 ---
 
-← Prev: [A `Connection` is expensive](04-connection-is-expensive.md) · Index: [JDBC](README.md) · Next → [The `PreparedStatement` API](06-the-preparedstatement-api.md)
+← Prev: [4 · A `Connection` is expensive](04-connection-is-expensive.md) · Index: [JDBC](README.md) · Next → [6 · The `PreparedStatement` API](06-the-preparedstatement-api.md)

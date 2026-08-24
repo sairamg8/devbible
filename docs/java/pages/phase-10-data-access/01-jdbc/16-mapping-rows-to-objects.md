@@ -1,7 +1,7 @@
 ---
 title: "Hand-written mapping is not primitive; it is the thing an ORM spends its life hiding"
 sidebar_label: "16 · Mapping rows to objects"
-sidebar_position: 16
+sidebar_position: 18
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -293,4 +293,4 @@ loading, no persistence context and no N+1 that emerges from a getter.
 
 ---
 
-← Prev: [Fetch size and streaming](15-fetch-size-and-streaming.md) · Index: [JDBC](README.md) · Next → [Resource handling](17-resource-handling.md)
+← Prev: [15 · Fetch size and streaming](15-fetch-size-and-streaming.md) · Index: [JDBC](README.md) · Next → [17 · Resource handling](17-resource-handling.md)

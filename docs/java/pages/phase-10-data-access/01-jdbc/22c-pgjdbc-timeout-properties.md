@@ -1,7 +1,7 @@
 ---
 title: "Every timeout pgJDBC ships is either off by default or measured in a unit you did not expect"
 sidebar_label: "22c · pgJDBC's timeout properties"
-sidebar_position: 24
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ second connection, and its default of 10 seconds is a value you might reasonably
 lower.
 
 ---
-<!--FOOTER-->
+← Prev: [22b · Connection and socket timeouts](22b-connection-and-socket-timeouts.md) · Index: [JDBC](README.md) · Next → [22d · The server's own timeouts](22d-server-side-timeouts.md)

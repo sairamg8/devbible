@@ -1,7 +1,7 @@
 ---
 title: "Preparation is a server-side cache with a five-execution fuse and a plan you did not choose"
 sidebar_label: "9 · Server-side prepared statements"
-sidebar_position: 9
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ benefit, silently.
 
 ---
 
-← Prev: [`IN` lists and `LIKE`](08-in-lists-and-like-patterns.md) · Index: [JDBC](README.md) · Next → [The generic plan cliff](10-the-generic-plan-cliff.md)
+← Prev: [8 · `IN` lists and `LIKE`](08-in-lists-and-like-patterns.md) · Index: [JDBC](README.md) · Next → [10 · The generic plan cliff](10-the-generic-plan-cliff.md)

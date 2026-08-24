@@ -1,7 +1,7 @@
 ---
 title: "pgJDBC ignores the subclass hierarchy and hands you something better instead — a structured error object with the constraint name in it"
 sidebar_label: "21c · What pgJDBC actually throws"
-sidebar_position: 21.2
+sidebar_position: 36
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -295,4 +295,4 @@ It is also a good argument for putting that table in one place behind a single
 predicate rather than scattering `startsWith("08")` through the codebase.
 
 ---
-<!--FOOTER-->
+← Prev: [21b · The `SQLException` hierarchy](21b-the-subclass-hierarchy.md) · Index: [JDBC](README.md) · Next → [21d · The chain and the cause](21d-the-chain-and-what-to-do.md)

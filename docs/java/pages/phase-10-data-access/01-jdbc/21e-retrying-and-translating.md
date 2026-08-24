@@ -1,7 +1,7 @@
 ---
 title: "There are exactly three things to do with a `SQLException`, and the one everybody actually does is not on the list"
 sidebar_label: "21e · Retrying and translating"
-sidebar_position: 21.4
+sidebar_position: 38
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -254,4 +254,4 @@ per statement costs round trips and server-side resources, which is why the driv
 default is `never`.
 
 ---
-<!--FOOTER-->
+← Prev: [21d · The chain and the cause](21d-the-chain-and-what-to-do.md) · Index: [JDBC](README.md) · Next → [22 · Client-side timeouts](22-timeouts-cancellation-metadata.md)

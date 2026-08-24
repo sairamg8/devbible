@@ -1,7 +1,7 @@
 ---
 title: "The clever ways to avoid concatenating are safe, and most of them are slow"
 sidebar_label: "7b · Dynamic SQL without concatenation"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -252,4 +252,4 @@ and the fragment builder is not much more code once the argument list is built i
 the same place as the fragment.
 
 ---
-<!--FOOTER-->
+← Prev: [7 · What a parameter can be](07-what-a-parameter-can-be.md) · Index: [JDBC](README.md) · Next → [8 · `IN` lists and `LIKE`](08-in-lists-and-like-patterns.md)

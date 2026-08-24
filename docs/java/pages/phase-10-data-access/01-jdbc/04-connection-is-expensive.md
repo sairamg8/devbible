@@ -265,4 +265,4 @@ transaction scope.
 
 ---
 
-← Prev: [The JDBC URL](03-the-jdbc-url.md) · Index: [JDBC](README.md) · Next → [`PreparedStatement` and SQL injection](05-preparedstatement-and-injection.md)
+← Prev: [3 · The JDBC URL](03-the-jdbc-url.md) · Index: [JDBC](README.md) · Next → [5 · `PreparedStatement` and injection](05-preparedstatement-and-injection.md)

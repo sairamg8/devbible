@@ -1,7 +1,7 @@
 ---
 title: "The subclass hierarchy puts \"is retrying worth it\" into the type system, and the answer has three values, not two"
 sidebar_label: "21b · The `SQLException` hierarchy"
-sidebar_position: 21.1
+sidebar_position: 35
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -293,4 +293,4 @@ timeout cases that dominate real incident handling, they are the ones worth writ
 handlers for.
 
 ---
-<!--FOOTER-->
+← Prev: [21 · `SQLException`](21-sqlexception.md) · Index: [JDBC](README.md) · Next → [21c · What pgJDBC actually throws](21c-what-pgjdbc-throws.md)

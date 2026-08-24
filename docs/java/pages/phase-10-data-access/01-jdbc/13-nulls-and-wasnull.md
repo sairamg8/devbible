@@ -1,7 +1,7 @@
 ---
 title: "`getInt` on a NULL column returns 0, and nothing tells you"
 sidebar_label: "13 · Nulls, primitives and `wasNull`"
-sidebar_position: 13
+sidebar_position: 15
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -257,4 +257,4 @@ default, because that is the original bug with extra steps.
 
 ---
 
-← Prev: [`ResultSet`: the cursor model](12-resultset-the-cursor-model.md) · Index: [JDBC](README.md) · Next → [Dates, times and `timestamptz`](14-dates-times-and-timestamptz.md)
+← Prev: [12 · `ResultSet`: the cursor model](12-resultset-the-cursor-model.md) · Index: [JDBC](README.md) · Next → [14 · Dates, times and `timestamptz`](14-dates-times-and-timestamptz.md)

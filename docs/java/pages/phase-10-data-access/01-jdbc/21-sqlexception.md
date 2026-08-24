@@ -1,7 +1,7 @@
 ---
 title: "One exception class covers every database failure, and the only reliable way to ask it what went wrong is a five-character string"
 sidebar_label: "21 · `SQLException`"
-sidebar_position: 21
+sidebar_position: 34
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ you genuinely branch on it, such as distinguishing `23505` from `23503` to produ
 different user-facing messages.
 
 ---
-<!--FOOTER-->
+← Prev: [20e · Client-side keys, and upward](20e-when-the-key-is-not-the-databases.md) · Index: [JDBC](README.md) · Next → [21b · The `SQLException` hierarchy](21b-the-subclass-hierarchy.md)

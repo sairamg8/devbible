@@ -270,4 +270,4 @@ rather than the driver's.
 
 ---
 
-← Prev: [`PreparedStatement` and injection](05-preparedstatement-and-injection.md) · Index: [JDBC](README.md) · Next → [What a parameter can and cannot be](07-what-a-parameter-can-be.md)
+← Prev: [5 · `PreparedStatement` and injection](05-preparedstatement-and-injection.md) · Index: [JDBC](README.md) · Next → [6b · Reuse and parameter metadata](06b-reuse-and-parameter-metadata.md)

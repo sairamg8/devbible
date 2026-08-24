@@ -1,7 +1,7 @@
 ---
 title: "A leaked connection is not found where it leaked, and that is the whole difficulty"
 sidebar_label: "18 · Ownership and leaks"
-sidebar_position: 18
+sidebar_position: 20
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -278,4 +278,4 @@ detector is a tool for finding the bug, not a mitigation you can leave on and
 consider the problem handled. The fix is always in the code the trace names.
 
 ---
-<!--FOOTER-->
+← Prev: [17 · Resource handling](17-resource-handling.md) · Index: [JDBC](README.md) · Next → [19 · Batch updates](19-batch-updates.md)

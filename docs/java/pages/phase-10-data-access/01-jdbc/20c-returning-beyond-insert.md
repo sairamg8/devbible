@@ -1,7 +1,7 @@
 ---
 title: "RETURNING is not an insert feature and is not about keys: it is how you read the row the database actually stored"
 sidebar_label: "20c · Beyond INSERT and beyond keys"
-sidebar_position: 20.2
+sidebar_position: 31
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ both. Reading the key back is identical for all of them: `RETURNING id`, or a
 `String[]` of column names. The choice matters for writes, not for reads.
 
 ---
-<!--FOOTER-->
+← Prev: [20b · Reading keys, writing RETURNING](20b-reading-and-writing-returning.md) · Index: [JDBC](README.md) · Next → [20d · Batches and ON CONFLICT](20d-batches-and-on-conflict.md)

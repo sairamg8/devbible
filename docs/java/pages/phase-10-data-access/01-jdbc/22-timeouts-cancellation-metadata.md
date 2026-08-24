@@ -1,7 +1,7 @@
 ---
 title: "A timeout on the client stops you waiting; it does not stop the database working"
 sidebar_label: "22 · Client-side timeouts"
-sidebar_position: 22
+sidebar_position: 39
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -297,4 +297,4 @@ execution time, so it must be set on a statement before it is used, which matter
 most for a `PreparedStatement` that is reused across calls with different needs.
 
 ---
-<!--FOOTER-->
+← Prev: [21e · Retrying and translating](21e-retrying-and-translating.md) · Index: [JDBC](README.md) · Next → [22b · Connection and socket timeouts](22b-connection-and-socket-timeouts.md)

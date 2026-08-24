@@ -1,7 +1,7 @@
 ---
 title: "`setNetworkTimeout` does not fail your query — it destroys your connection"
 sidebar_label: "22b · Connection and socket timeouts"
-sidebar_position: 23
+sidebar_position: 40
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -289,4 +289,4 @@ query is still running and still holding its snapshot and locks. Only the server
 own `statement_timeout`, or a cancel that actually arrives, stops the work.
 
 ---
-<!--FOOTER-->
+← Prev: [22 · Client-side timeouts](22-timeouts-cancellation-metadata.md) · Index: [JDBC](README.md) · Next → [22c · pgJDBC's timeout properties](22c-pgjdbc-timeout-properties.md)

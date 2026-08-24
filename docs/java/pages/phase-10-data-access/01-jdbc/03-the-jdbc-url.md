@@ -275,4 +275,4 @@ single connection property.
 
 ---
 
-← Prev: [`DataSource`, not `DriverManager`](02-datasource-not-drivermanager.md) · Index: [JDBC](README.md) · Next → [A `Connection` is expensive](04-connection-is-expensive.md)
+← Prev: [2 · `DataSource`, not `DriverManager`](02-datasource-not-drivermanager.md) · Index: [JDBC](README.md) · Next → [4 · A `Connection` is expensive](04-connection-is-expensive.md)

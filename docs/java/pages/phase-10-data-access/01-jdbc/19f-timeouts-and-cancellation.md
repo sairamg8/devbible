@@ -1,7 +1,7 @@
 ---
 title: "The client timeout covers the whole batch and the server timeout restarts on every entry, and neither of them is a deadline"
 sidebar_label: "19f · Timeouts and cancellation"
-sidebar_position: 19.5
+sidebar_position: 26
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -228,4 +228,4 @@ which abandons the socket, kills the connection, and takes it out of the pool.
 **Continue:** [19g · Locks, deadlocks and the long transaction](19g-locks-and-long-transactions.md)
 
 ---
-<!--FOOTER-->
+← Prev: [19e · Sizing a batch](19e-sizing-a-batch.md) · Index: [JDBC](README.md) · Next → [19g · Locks and long transactions](19g-locks-and-long-transactions.md)

@@ -1,7 +1,7 @@
 ---
 title: "A cancel does not travel on the connection running the query — it arrives at the front door on a new one, carrying a password"
 sidebar_label: "22f · How cancellation works"
-sidebar_position: 22.6
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -286,4 +286,4 @@ which is not the case if a pooler minted them or the work has moved. Miss any on
 and the outcome is identical: nothing happens, silently.
 
 ---
-<!--FOOTER-->
+← Prev: [22e · Setting the timeouts](22e-setting-the-timeouts.md) · Index: [JDBC](README.md) · Next → [22f2 · What pgJDBC does](22f2-what-pgjdbc-actually-does.md)

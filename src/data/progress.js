@@ -576,7 +576,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
-    updated: '2026-08-24 21:50',
+    updated: '2026-08-24 22:42',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [

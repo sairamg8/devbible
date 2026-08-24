@@ -1,7 +1,7 @@
 ---
 title: "Every JDBC object is a handle on something that is not garbage, and closing is not optional"
 sidebar_label: "17 · Resource handling"
-sidebar_position: 17
+sidebar_position: 19
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -276,4 +276,4 @@ is relying on the object above having been closed correctly, which is precisely
 the thing in doubt.
 
 ---
-<!--FOOTER-->
+← Prev: [16 · Mapping rows to objects](16-mapping-rows-to-objects.md) · Index: [JDBC](README.md) · Next → [18 · Ownership and leaks](18-ownership-and-leaks.md)

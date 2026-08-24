@@ -1,7 +1,7 @@
 ---
 title: "One parameter for a whole list, and the wildcards your users didn't mean to type"
 sidebar_label: "8 · `IN` lists and `LIKE`"
-sidebar_position: 8
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -285,4 +285,4 @@ matching. Adding hardware buys months, not a fix.
 
 ---
 
-← Prev: [What a parameter can be](07-what-a-parameter-can-be.md) · Index: [JDBC](README.md) · Next → [Server-side prepared statements](09-server-side-prepared-statements.md)
+← Prev: [7b · Dynamic SQL without concatenation](07b-dynamic-sql-without-concatenation.md) · Index: [JDBC](README.md) · Next → [9 · Server-side prepared statements](09-server-side-prepared-statements.md)

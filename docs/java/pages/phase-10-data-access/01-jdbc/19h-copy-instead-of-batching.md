@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL's own manual says COPY beats a prepared, batched, single-transaction INSERT — and the reason to switch is not only speed"
 sidebar_label: "19h · COPY instead of batching"
-sidebar_position: 19.7
+sidebar_position: 28
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -238,4 +238,4 @@ portable. That is a reasonable price for the largest single win available at thi
 layer, but it should be a decision rather than an accident.
 
 ---
-<!--FOOTER-->
+← Prev: [19g · Locks and long transactions](19g-locks-and-long-transactions.md) · Index: [JDBC](README.md) · Next → [20 · Generated keys](20-generated-keys.md)

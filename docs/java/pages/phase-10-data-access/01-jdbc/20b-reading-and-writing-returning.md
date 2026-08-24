@@ -1,7 +1,7 @@
 ---
 title: "The generated-keys result set is an ordinary cursor, and the clause underneath it is one you are allowed to write yourself"
 sidebar_label: "20b · Reading keys, writing RETURNING"
-sidebar_position: 20.1
+sidebar_position: 30
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -292,4 +292,4 @@ as information rather than an error. Code written as `if (keys.next())` or
 time the same input is processed, which is precisely when nobody is watching.
 
 ---
-<!--FOOTER-->
+← Prev: [20 · Generated keys](20-generated-keys.md) · Index: [JDBC](README.md) · Next → [20c · Beyond INSERT and beyond keys](20c-returning-beyond-insert.md)

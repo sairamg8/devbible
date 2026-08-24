@@ -1,7 +1,7 @@
 ---
 title: "A batch removes round trips, not work — and under autocommit it is still a transaction, just not the one you think"
 sidebar_label: "19 · Batch updates"
-sidebar_position: 19
+sidebar_position: 21
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ three update-count values really mean, the exception chain, why every count read
 [19e · Sizing a batch](19e-sizing-a-batch.md).
 
 ---
-<!--FOOTER-->
+← Prev: [18 · Ownership and leaks](18-ownership-and-leaks.md) · Index: [JDBC](README.md) · Next → [19b · When a batch fails](19b-when-a-batch-fails.md)

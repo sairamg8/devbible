@@ -1,7 +1,7 @@
 ---
 title: "A `ResultSet` is a cursor over rows you have not necessarily received yet"
 sidebar_label: "12 · `ResultSet`: the cursor model"
-sidebar_position: 12
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -284,4 +284,4 @@ different driver.
 
 ---
 
-← Prev: [The three statement types](11-statement-types.md) · Index: [JDBC](README.md) · Next → [Nulls, primitives and `wasNull`](13-nulls-and-wasnull.md)
+← Prev: [11 · The three statement types](11-statement-types.md) · Index: [JDBC](README.md) · Next → [13 · Nulls, primitives and `wasNull`](13-nulls-and-wasnull.md)

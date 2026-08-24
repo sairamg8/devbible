@@ -1,7 +1,7 @@
 ---
 title: "reWriteBatchedInserts turns one SQL text into up to fifteen, throws your update counts away, and silently does nothing if the insert has a RETURNING clause"
 sidebar_label: "19c · Insert rewriting"
-sidebar_position: 19.2
+sidebar_position: 23
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -293,4 +293,4 @@ concrete argument for fixed chunk sizes that has nothing to do with memory.
 then [19e · Sizing a batch](19e-sizing-a-batch.md).
 
 ---
-<!--FOOTER-->
+← Prev: [19b · When a batch fails](19b-when-a-batch-fails.md) · Index: [JDBC](README.md) · Next → [19d · Generated keys from a batch](19d-generated-keys-from-a-batch.md)

@@ -1,7 +1,7 @@
 ---
 title: "A `SQLException` has a chain as well as a cause, and nothing in the JDK prints the chain"
 sidebar_label: "21d · The chain and the cause"
-sidebar_position: 21.3
+sidebar_position: 37
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -266,4 +266,4 @@ overhead for information almost nobody acts on, which is the honest reason the A
 largely dead.
 
 ---
-<!--FOOTER-->
+← Prev: [21c · What pgJDBC actually throws](21c-what-pgjdbc-throws.md) · Index: [JDBC](README.md) · Next → [21e · Retrying and translating](21e-retrying-and-translating.md)

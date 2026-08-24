@@ -1,7 +1,7 @@
 ---
 title: "`timestamp` and `timestamptz` are different types, and only one of them is an instant"
 sidebar_label: "14 · Dates, times and `timestamptz`"
-sidebar_position: 14
+sidebar_position: 16
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -284,4 +284,4 @@ developer's machine. The rule that follows is that `LocalDateTime.now()` and
 
 ---
 
-← Prev: [Nulls, primitives and `wasNull`](13-nulls-and-wasnull.md) · Index: [JDBC](README.md) · Next → [Fetch size and streaming](15-fetch-size-and-streaming.md)
+← Prev: [13 · Nulls, primitives and `wasNull`](13-nulls-and-wasnull.md) · Index: [JDBC](README.md) · Next → [15 · Fetch size and streaming](15-fetch-size-and-streaming.md)

@@ -276,4 +276,4 @@ network event that caused it. Use `PGSimpleDataSource` when you want an unpooled
 
 ---
 
-← Prev: [What JDBC actually is](01-what-jdbc-actually-is.md) · Index: [JDBC](README.md) · Next → [The JDBC URL](03-the-jdbc-url.md)
+← Prev: [1 · What JDBC actually is](01-what-jdbc-actually-is.md) · Index: [JDBC](README.md) · Next → [3 · The JDBC URL](03-the-jdbc-url.md)

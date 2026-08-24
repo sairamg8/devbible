@@ -1,7 +1,7 @@
 ---
 title: "getGeneratedKeys after executeBatch works on pgJDBC, is not in the specification, and hands you a ResultSet that is not guaranteed to line up with your batch"
 sidebar_label: "19d · Generated keys from a batch"
-sidebar_position: 19.3
+sidebar_position: 24
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -269,4 +269,4 @@ business key is not optional.
 **Continue:** [19e · Sizing a batch](19e-sizing-a-batch.md)
 
 ---
-<!--FOOTER-->
+← Prev: [19c · Insert rewriting](19c-insert-rewriting.md) · Index: [JDBC](README.md) · Next → [19e · Sizing a batch](19e-sizing-a-batch.md)

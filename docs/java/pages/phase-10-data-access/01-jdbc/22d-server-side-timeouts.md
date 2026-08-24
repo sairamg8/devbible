@@ -1,7 +1,7 @@
 ---
 title: "The only timeout that stops the database working is the one the database enforces"
 sidebar_label: "22d · The server's own timeouts"
-sidebar_position: 25
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -276,4 +276,4 @@ too long". Retry `55P03` with jitter and a small cap; treat a repeated `57014` a
 a query or an index to fix, not a thing to retry harder.
 
 ---
-<!--FOOTER-->
+← Prev: [22c · pgJDBC's timeout properties](22c-pgjdbc-timeout-properties.md) · Index: [JDBC](README.md) · Next → [22e · Setting the timeouts](22e-setting-the-timeouts.md)

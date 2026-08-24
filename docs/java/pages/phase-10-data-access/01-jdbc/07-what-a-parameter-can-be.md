@@ -1,7 +1,7 @@
 ---
 title: "`ORDER BY ?` does not work, and that is where the remaining injections live"
 sidebar_label: "7 · What a parameter can be"
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -238,4 +238,4 @@ of bug in this layer: the thing that is wrong is not the thing that errors.
 
 ---
 
-← Prev: [The `PreparedStatement` API](06-the-preparedstatement-api.md) · Index: [JDBC](README.md) · Next → [`IN` lists, arrays and `LIKE`](08-in-lists-and-like-patterns.md)
+← Prev: [6b · Reuse and parameter metadata](06b-reuse-and-parameter-metadata.md) · Index: [JDBC](README.md) · Next → [7b · Dynamic SQL without concatenation](07b-dynamic-sql-without-concatenation.md)

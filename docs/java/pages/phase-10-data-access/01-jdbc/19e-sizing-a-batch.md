@@ -1,7 +1,7 @@
 ---
 title: "The whole batch is resident in your heap before a single byte leaves the JVM, so the chunk size is a memory decision before it is a performance one"
 sidebar_label: "19e · Sizing a batch"
-sidebar_position: 19.4
+sidebar_position: 25
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -259,4 +259,4 @@ hundreds of rows, and turns into the dominant cost of a bulk load.
 [19h · When to use `COPY` instead](19h-copy-instead-of-batching.md).
 
 ---
-<!--FOOTER-->
+← Prev: [19d · Generated keys from a batch](19d-generated-keys-from-a-batch.md) · Index: [JDBC](README.md) · Next → [19f · Timeouts and cancellation](19f-timeouts-and-cancellation.md)
