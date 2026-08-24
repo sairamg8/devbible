@@ -150,7 +150,7 @@ another thread"** — and pgJDBC implements it by opening a *separate* connectio
 to send PostgreSQL's cancel request, which is why `cancelSignalTimeout` exists as
 a connection property. That is the shape of a safe cross-thread interaction: not
 sharing the connection, but signalling out of band.
-[Chunk 18](21-timeouts-cancellation-metadata.md) covers it.
+[Chunk 22](22-timeouts-cancellation-metadata.md) covers it.
 
 ## The trade-off
 
@@ -188,7 +188,7 @@ the setting dies at commit.
 `too_many_connections` failure that takes the whole database down with it.
 **Cause:** the borrow was scoped to the statement instead of the job.
 **Fix:** one connection for the loop; and if the loop writes,
-[batch it](18-batch-updates.md).
+[batch it](19-batch-updates.md).
 
 **⚠️ Reusing one `Statement` while its `ResultSet` is still being read**
 **Symptom:** a `ResultSet` that closes underneath you, with an exception about a

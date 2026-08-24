@@ -71,7 +71,7 @@ ps.executeQuery();          // throws
 **A `PreparedStatement` is reusable.** The javadoc's framing is *"This object can
 then be used to efficiently execute this statement multiple times."* Set,
 execute, set again, execute again. That reuse is what makes
-[batching](18-batch-updates.md) natural and what makes
+[batching](19-batch-updates.md) natural and what makes
 [server-side preparation](09-server-side-prepared-statements.md) pay off.
 
 ```java

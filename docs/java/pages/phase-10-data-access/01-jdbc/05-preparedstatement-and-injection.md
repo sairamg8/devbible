@@ -163,7 +163,7 @@ the exception.
 **Cause:** the `SQLException` message reaching the HTTP response body.
 **Fix:** log it, do not return it —
 [Phase 5's exception translation](../../phase-5-exceptions/04-custom-exceptions-translation.md)
-is the shape, and [chunk 17](20-sqlexception.md) is the JDBC-specific version.
+is the shape, and [chunk 21](21-sqlexception.md) is the JDBC-specific version.
 
 ## Interview questions
 

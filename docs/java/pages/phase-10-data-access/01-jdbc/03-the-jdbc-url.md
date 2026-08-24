@@ -86,7 +86,7 @@ the default shown:
 | `cancelSignalTimeout` | 10 | timeout for the out-of-band cancel connection |
 | `prepareThreshold` | **5** | executions before switching to a server-side prepared statement — [chunk 7](09-server-side-prepared-statements.md) |
 | `preferQueryMode` | `extended` | `simple`, `extended`, `extendedForPrepared`, `extendedCacheEverything` |
-| `reWriteBatchedInserts` | **false** | rewrites batched inserts; documented as a **"2-3x performance improvement"** — [chunk 15](18-batch-updates.md) |
+| `reWriteBatchedInserts` | **false** | rewrites batched inserts; documented as a **"2-3x performance improvement"** — [chunk 19c](19c-insert-rewriting.md) |
 | `defaultRowFetchSize` | **0** | rows per fetch; 0 means the driver buffers everything — [chunk 12](15-fetch-size-and-streaming.md) |
 | `ApplicationName` | — | shows in `pg_stat_activity.application_name` |
 | `options` | — | server GUCs, e.g. `-c statement_timeout=5000` |
@@ -97,7 +97,7 @@ HTTP clients, and it has the same consequence: a database that accepts your
 connection and then stops answering — a failover mid-flight, a network partition
 that drops packets silently, a backend stuck on a lock — parks your thread with
 no exception and no bound. `setQueryTimeout` does **not** cover it, and
-[chunk 18](21-timeouts-cancellation-metadata.md) explains why.
+[chunk 22c](22c-pgjdbc-timeout-properties.md) explains why.
 
 ⚠️ **`sslmode=prefer` is the default and it is not security.** `prefer` means
 "encrypt if the server offers it, otherwise don't" — with no certificate
@@ -195,7 +195,7 @@ indefinitely in a socket read against the database, with no exception ever throw
 **Cause:** the documented default is 0, meaning no timeout.
 **Fix:** set it, comfortably above your slowest legitimate query, and set a
 server-side `statement_timeout` too. Two different mechanisms, both needed —
-[chunk 18](21-timeouts-cancellation-metadata.md).
+[chunk 22c](22c-pgjdbc-timeout-properties.md).
 
 **⚠️ Treating `ssl=true` or `sslmode=require` as "the connection is secure"**
 **Symptom:** an audit finding, or a real man-in-the-middle that nothing detected.

@@ -159,7 +159,7 @@ you are calling a procedure.
 clause makes a DML statement produce rows, so `executeUpdate` on it either throws
 or discards them depending on the path. Use `executeQuery` and read the
 `ResultSet` — that is the whole mechanism behind
-[chunk 19](19-generated-keys.md).
+[chunk 20](20-generated-keys.md).
 
 ⚠️ **`executeUpdate` returning 0 is information, not a failure.** An `UPDATE ...
 WHERE id = ?` that affects zero rows means the row did not exist or did not match
