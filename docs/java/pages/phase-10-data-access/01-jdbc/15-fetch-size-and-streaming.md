@@ -107,10 +107,10 @@ Four things in that block are load-bearing and each is skipped by somebody:
 - `setAutoCommit(false)` — without it, nothing streams.
 - `setFetchSize(n)` — without it, `defaultRowFetchSize` (0) applies.
 - `commit()` — the transaction must end, and a long read transaction has real
-  costs ([Topic 03](../03-jdbc-transactions/11-long-transactions.md)).
+  costs (**Topic 03 — long transactions** *(not written yet)*).
 - **restoring autocommit** — otherwise the connection goes back to the pool with
   autocommit off, which is
-  [Topic 03's killer bug](../03-jdbc-transactions/03-the-pooling-bug.md).
+  **Topic 03's killer bug** *(not written yet)*.
 
 ⚠️ **Alternatively set `defaultRowFetchSize` on the connection URL** so every
 statement on that connection fetches in batches. That is a reasonable default for a

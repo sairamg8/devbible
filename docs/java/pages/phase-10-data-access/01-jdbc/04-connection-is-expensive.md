@@ -91,7 +91,7 @@ The state a `Connection` carries:
 borrow a connection, change something, close it — and the *next* borrower gets
 your setting. The catastrophic instance of this is an open transaction, which is
 serious enough to be **Topic 03's** subject:
-[returning a connection mid-transaction](../03-jdbc-transactions/03-the-pooling-bug.md).
+**returning a connection mid-transaction** *(not written yet)*.
 The quieter instances are just as real: a `SET search_path` that survives, a
 `setReadOnly(true)` never reset, an isolation level raised for one query and
 inherited by everything after it.
@@ -163,7 +163,7 @@ statement.** Borrow once for the unit of work, do everything, commit, release.
 Holding it *longer* than that — across an HTTP call to a payment provider, across
 user think-time — is the other failure, and in PostgreSQL an idle-in-transaction
 connection is a genuine operational incident
-([Topic 03, chunk 11](../03-jdbc-transactions/11-long-transactions.md)).
+(**Topic 03 — long transactions** *(not written yet)*).
 
 ## Gotchas
 
