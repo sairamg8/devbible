@@ -185,7 +185,7 @@ starts one, with unclear ownership of the outermost commit.
 **Cause:** JDBC has no nested transactions; savepoints are a rewind mechanism
 inside a single one, and they share its locks, its snapshot and its commit.
 **Fix:** one owner per transaction boundary. Framework-level nesting is built above
-JDBC — **Topic 04 — Spring `@Transactional`** *(not written yet)* is where that
+JDBC — **[Topic 04 — NESTED and savepoints](../04-spring-transactional/11-nested-and-savepoints.md)** is where that
 bookkeeping lives.
 
 ## Interview questions

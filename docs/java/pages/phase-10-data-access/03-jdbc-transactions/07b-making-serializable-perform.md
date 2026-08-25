@@ -93,8 +93,7 @@ needed.** *"This is always an important performance consideration, but it can be
 particularly important in a busy system using Serializable transactions."* More
 concurrent Serializable transactions means more overlapping read sets and more
 chances to form a cycle. **Connection pooling here is a correctness-adjacent
-tuning knob, not just a resource one** — see **Topic 02 — Connection pooling**
-*(not written yet)*.
+tuning knob, not just a resource one** — see **[Topic 02 — why a small pool is faster](../02-connection-pooling/02-why-a-small-pool-is-faster.md)**.
 
 **3 · Don't put more into a single transaction than needed for integrity
 purposes.** A bigger transaction reads more, so it takes more predicate locks and

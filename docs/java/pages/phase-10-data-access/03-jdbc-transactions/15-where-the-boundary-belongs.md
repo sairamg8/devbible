@@ -36,7 +36,7 @@ long periods of time (e.g., while waiting for user input)."***
 |---|---|---|
 | Row locks are held until the transaction ends | every other writer to those rows | [chunk 12](12-locking-and-select-for-update.md) |
 | A snapshot is pinned, so vacuum cannot reclaim superseded rows | **the whole database**, not just your tables | [chunk 6b](06b-what-repeatable-read-still-cannot-promise.md) |
-| A pooled connection is occupied | every request queued behind the pool | **Topic 02 — Connection pooling** *(not written yet)* |
+| A pooled connection is occupied | every request queued behind the pool | [Connection is not available](../02-connection-pooling/05-connection-is-not-available.md) |
 | The conflict window widens | every concurrent transaction's abort rate | [chunk 7b](07b-making-serializable-perform.md) |
 
 🔴 **Not one of those appears in the latency of the request that caused it.** A
@@ -149,7 +149,7 @@ is a well-understood at-least-once delivery with an idempotency key on the consu
 
 In a Spring application that boundary already exists as an annotation, and it is
 where propagation, rollback rules and the isolation level are declared —
-**Topic 04 — Spring `@Transactional`** *(not written yet)*. Everything on this page
+**[Topic 04 — Spring `@Transactional`](../04-spring-transactional/README.md)**. Everything on this page
 is what that annotation is doing underneath, and knowing it is what makes the
 annotation debuggable rather than magic.
 
