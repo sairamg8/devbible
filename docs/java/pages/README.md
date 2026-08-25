@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | 7 · I/O, time and the everyday stdlib | 13 | ✅ 13/13 |
 | 8 · The build: Maven, Gradle, dependencies | 12 | ✅ 12/12 |
 | 9 · Spring Boot and the web | 16 | ✅ 16/16 — complete |
-| 10 · Data access | 14 | 🚧 **3/14** — 01 · JDBC · 02 · Connection pooling · 03 · JDBC transactions |
+| 10 · Data access | 14 | 🚧 **4/14** — 01 · JDBC · 02 · Connection pooling · 03 · JDBC transactions · 04 · Spring `@Transactional` |
 | 11 · Testing | 11 | Planned |
 | 12 · The JVM in production | 15 | Planned |
 | 13 · OAuth2, OIDC and service security | 14 | Planned |

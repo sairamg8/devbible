@@ -18,14 +18,14 @@ The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
 debug an abstraction you've never seen under.
 
-🚧 **3 of 14 written.**
+🚧 **4 of 14 written.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[JDBC](01-jdbc/README.md)** | <span className="db-tier t-master">Master</span> | `PreparedStatement` always — SQL injection dies here |
 | 02 | **[Connection pooling with HikariCP](02-connection-pooling/README.md)** | <span className="db-tier t-understand">Understand</span> | Small pools, leak detection, "connection is not available" |
 | 03 | **[Transactions at the JDBC level](03-jdbc-transactions/README.md)** | <span className="db-tier t-understand">Understand</span> | Isolation levels mapped to real anomalies |
-| 04 | **Spring `@Transactional`** *(not written yet)* | <span className="db-tier t-master">Master</span> | Proxy mechanics, rollback rules, the self-invocation trap |
+| 04 | **[Spring `@Transactional`](04-spring-transactional/README.md)** | <span className="db-tier t-master">Master</span> | Proxy mechanics, rollback rules, the self-invocation trap |
 | 05 | **SQL-first access** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `JdbcTemplate`/`JdbcClient` — when typed SQL beats entities |
 | 06 | **The JPA/Hibernate model** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
 | 07 | **Relationships and fetch types** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Owning side, `mappedBy` — `EAGER` on a collection is a time bomb |
