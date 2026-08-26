@@ -99,7 +99,7 @@ decoration. If a constraint is in the name, it has to be after the `By`.
 ⚠️ **And those discarded words are not always inert.** A descriptive token is
 what breaks the reserved-method match on `findById`, so `findUserById` and
 `findById` can resolve to two different properties on the same entity. That rule
-is [02c · property paths and ambiguity](02c-property-paths-and-ambiguity.md).
+is [02d · property paths and ambiguity](02d-property-paths-and-ambiguity.md).
 
 ## When the parsing happens
 
@@ -138,7 +138,7 @@ Four lines, no JPQL to keep in sync with the model, no parameter binding to get
 wrong, and every one of them validated at startup. Nothing else in the JPA stack
 gives you that. The failure mode is not that derived queries are bad — it is that
 they scale badly, and the point at which they stop is discussed in
-[02e · where derived queries stop](02e-where-derived-queries-stop.md).
+[02f · where derived queries stop](02f-where-derived-queries-stop.md).
 
 ## Gotchas
 
@@ -200,7 +200,7 @@ introduces an ambiguity.**
 It is deterministic, but the rule is not the one you would guess: a direct match
 on a property wins over any nested path. Adding a scalar field can therefore
 change which column an existing method queries. That is
-[02c · property paths and ambiguity](02c-property-paths-and-ambiguity.md).
+[02d · property paths and ambiguity](02d-property-paths-and-ambiguity.md).
 
 ## Interview questions
 
