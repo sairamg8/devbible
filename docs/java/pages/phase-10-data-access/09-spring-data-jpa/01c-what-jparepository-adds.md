@@ -277,4 +277,4 @@ fails later rather than now. If the application needs any of them, it needs them
 in one or two places, which argues for extending bare `Repository` and copying in
 what you actually want.
 
-<!--FOOTER-->
+{/* FOOTER */}

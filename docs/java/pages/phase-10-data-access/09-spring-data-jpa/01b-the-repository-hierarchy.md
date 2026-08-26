@@ -268,4 +268,4 @@ information. The message names the identifier type, which does not obviously
 point at the `extends` clause on a different file — so it is worth knowing that
 this is where that class of startup error comes from.
 
-<!--FOOTER-->
+{/* FOOTER */}

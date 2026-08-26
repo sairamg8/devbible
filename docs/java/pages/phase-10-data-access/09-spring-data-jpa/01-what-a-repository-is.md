@@ -258,4 +258,4 @@ reference's own example overrides `save`. That ordering is also the entire
 mechanism behind "my custom `save` is not being called", which is almost always
 a fragment that was never wired in rather than an ordering problem.
 
-<!--FOOTER-->
+{/* FOOTER */}

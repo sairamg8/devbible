@@ -275,4 +275,4 @@ any module supports. JPA sits on blocking JDBC with a thread-bound persistence
 context and has no reactive variant, so those rows never apply to a
 `JpaRepository`.
 
-<!--FOOTER-->
+{/* FOOTER */}

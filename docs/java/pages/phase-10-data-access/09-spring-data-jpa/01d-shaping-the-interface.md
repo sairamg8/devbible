@@ -264,4 +264,4 @@ model that must not be written through, and anything where `deleteAll()` existin
 is a bad idea. Elsewhere `JpaRepository` is fine, as long as choosing it was a
 decision rather than an autocomplete.
 
-<!--FOOTER-->
+{/* FOOTER */}
