@@ -104,7 +104,7 @@ lines. The first order with a line reaches an entirely unvisited subtree.
 
 A third group remains — the cases where the association really was a lazy proxy and
 something else in the request initialised it before your code got there. Those are
-**[03b · Something initialised it first](03b-something-initialised-it-first.md)**.
+**[03c · Something initialised it first](03c-something-initialised-it-first.md)**.
 
 ## Gotchas
 
