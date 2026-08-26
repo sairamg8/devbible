@@ -148,7 +148,7 @@ Be honest about this in an interview, because the naive answer is wrong.
 - **Staleness of the generated code itself.** If nobody regenerated after the migration, the
   constants describe yesterday's schema and everything compiles happily. This is the single
   most important operational risk in adopting jOOQ, and
-  **[02b · Generating from migrations](02b-generating-from-migrations.md)** exists to
+  **[02d · Generating from migrations](02d-generating-from-migrations.md)** exists to
   remove it.
 
 ## Gotchas
