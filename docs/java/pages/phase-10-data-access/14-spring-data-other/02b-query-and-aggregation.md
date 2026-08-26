@@ -254,4 +254,4 @@ because resolving the reference would require a second lookup the query layer do
 perform. `@DocumentReference` is the newer mechanism and does not carry the same
 restriction.
 
-<!--FOOTER-->
+{/* FOOTER */}

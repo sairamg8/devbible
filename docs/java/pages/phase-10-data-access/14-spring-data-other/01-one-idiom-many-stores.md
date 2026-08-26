@@ -80,8 +80,9 @@ shared**, and the Redis list is very short. See
 [05b · What Redis repositories can and cannot answer](05b-what-a-redis-repository-can-answer.md).
 
 **Projections.** Interface and class-based projections, closed and open, `@Value`-driven
-open projections, dynamic projections via a generic `<T> List<T> findByX(String x,
-Class<T> type)` method — all defined once in commons and available in every module.
+open projections, dynamic projections via a generic
+`<T> List<T> findByX(String x, Class<T> type)` method — all defined once in commons and
+available in every module.
 
 **Paging and sorting types.** `Sort`, `Pageable`, `PageRequest`, `Page`, `Slice`,
 `Window` and keyset scrolling are commons types. ⚠️ **Whether a module can honour them
@@ -279,4 +280,4 @@ count cheaply?**
 `Slice` only asks whether there is a next page, and `Window` supports keyset scrolling.
 The types are shared across modules precisely so this choice is available everywhere.
 
-<!--FOOTER-->
+{/* FOOTER */}

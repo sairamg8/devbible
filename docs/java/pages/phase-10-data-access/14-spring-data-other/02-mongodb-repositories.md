@@ -214,4 +214,4 @@ To keep `findAll()` and the other whole-collection methods off the interface. Na
 supertypes are a design choice available in every Spring Data module, and it matters
 more on a store where a full scan has no planner to complain about it.
 
-<!--FOOTER-->
+{/* FOOTER */}
