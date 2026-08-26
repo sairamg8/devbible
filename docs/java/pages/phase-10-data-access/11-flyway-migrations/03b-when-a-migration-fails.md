@@ -135,8 +135,9 @@ Recovery is a fixed sequence and there is no shortcut in it:
 4. **Deploy again.**
 
 Step 3 without step 2 is how a database ends up with an invalid index nobody remembers creating —
-[04b · Repair](04b-repair-and-when-it-is-legitimate.md) sets out what `repair` does and does not
-touch.
+[04d · What `repair` actually does](04d-what-repair-actually-does.md) sets out what it does and
+does not touch, and [04e](04e-when-repair-is-the-right-answer.md) sets out when running it is
+honest.
 
 ## The one failure Flyway will tolerate
 
