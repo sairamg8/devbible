@@ -50,7 +50,7 @@ its argument (see
 wildcards, and a search box that accepts `%` is a search box that can be made to
 scan the whole table. The supported escape hatch is the SpEL `escape(…)` helper
 together with JPQL's `escape` clause, and that belongs to
-[03e · templated queries and expressions](03e-templated-queries-and-expressions.md).
+[03e2 · expressions, escaping and their cost](03e2-expressions-escaping-and-cost.md).
 
 ## What binding does not do for you
 
