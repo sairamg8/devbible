@@ -285,4 +285,4 @@ dependency if it is remote, a serialization format that becomes a compatibility 
 a cluster-coherence problem the moment there are two instances. None of that is exotic; all
 of it arrives with the annotation and none of it is visible in the diff.
 
-<!--FOOTER-->
+{/* FOOTER */}

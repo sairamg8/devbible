@@ -261,4 +261,4 @@ Spring tutorial describes, and a debugging story that surprises people. Most tea
 served by the proxy default plus a test that asserts advice is applied, because that keeps the
 mental model that everyone already has.
 
-<!--FOOTER-->
+{/* FOOTER */}

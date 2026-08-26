@@ -267,4 +267,4 @@ still looks live in the YAML. If I need one customised cache I would rather supp
 `RedisCacheConfiguration` bean or a `RedisCacheManagerBuilderCustomizer`, which lets the
 auto-configuration keep ownership and keeps the properties meaningful.
 
-<!--FOOTER-->
+{/* FOOTER */}

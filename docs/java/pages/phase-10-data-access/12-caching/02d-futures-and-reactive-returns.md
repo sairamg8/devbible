@@ -165,4 +165,4 @@ they configured for the synchronous case and getting behaviour that does not mat
 reference. I would verify the specific store rather than assume — and for Redis specifically I
 could not settle it from the 4.1 documentation.
 
-<!--FOOTER-->
+{/* FOOTER */}

@@ -275,4 +275,4 @@ that the data is stale for the whole window after every write, including a write
 made and is watching for. So it works for reference data changed by a human occasionally, and
 it fails for anything a user edits and immediately re-reads.
 
-<!--FOOTER-->
+{/* FOOTER */}
