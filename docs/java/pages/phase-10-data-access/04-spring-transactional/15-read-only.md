@@ -1,7 +1,7 @@
 ---
 title: "readOnly = true is a hint that passes through four independent layers, and each of them is free to ignore it"
 sidebar_label: "15 · Read-only"
-sidebar_position: 42
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -290,4 +290,4 @@ you, not the annotation.
 
 ---
 
-← Prev: [14c · What the database did](14c-what-the-database-did.md) · Index: [Spring @Transactional](README.md) · Next → [15b · Where read-only pays](15b-where-read-only-pays.md)
+← Prev: [14c · What the database did](14c-what-the-database-did.md) · Index: [04 · Spring @Transactional](README.md) · Next → [15b · Where read-only pays](15b-where-read-only-pays.md)

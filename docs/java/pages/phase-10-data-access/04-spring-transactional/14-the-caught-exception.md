@@ -294,4 +294,4 @@ and shows up as wrong data much later. This one tells you immediately.
 
 ---
 
-← Prev: [13e · When rules collide](13e-when-rules-collide.md) · Index: [Spring @Transactional](README.md) · Next → [14b · Three honest options](14b-three-honest-options.md)
+← Prev: [13e · When rules collide](13e-when-rules-collide.md) · Index: [04 · Spring @Transactional](README.md) · Next → [14b · Three honest options](14b-three-honest-options.md)

@@ -278,4 +278,4 @@ terrain is bogging you down, consider using a stateless session."
 
 ---
 
-← Prev: [13b · merge returns a copy](13b-merge-returns-a-copy.md) · Index: [The JPA/Hibernate model](README.md)
+← Prev: [13b · merge returns a copy](13b-merge-returns-a-copy.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [14 · Dirty checking](14-dirty-checking.md)

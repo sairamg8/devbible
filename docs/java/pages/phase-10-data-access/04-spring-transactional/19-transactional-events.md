@@ -1,7 +1,7 @@
 ---
 title: "@TransactionalEventListener delays a listener until a chosen phase of the transaction — and if there is no transaction it does not run at all"
 sidebar_label: "19 · Transactional events"
-sidebar_position: 50
+sidebar_position: 51
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -290,4 +290,4 @@ the context has to be carried explicitly with the event.
 
 ---
 
-← Prev: [18b · Reactive and virtual threads](18b-reactive-and-virtual-threads.md) · Index: [Spring @Transactional](README.md) · Next → [19b · After-commit is not durable](19b-after-commit-is-not-durable.md)
+← Prev: [18b · Reactive and virtual threads](18b-reactive-and-virtual-threads.md) · Index: [04 · Spring @Transactional](README.md) · Next → [19b · After-commit is not durable](19b-after-commit-is-not-durable.md)

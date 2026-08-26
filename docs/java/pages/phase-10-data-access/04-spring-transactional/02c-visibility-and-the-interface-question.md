@@ -279,4 +279,4 @@ points `public` when a class hierarchy spans packages.
 
 ---
 
-← Prev: [2b · Where the annotation lives](02b-where-the-annotation-lives.md) · Index: [Spring @Transactional](README.md) · Next → [2d · The inheritance rule](02d-the-inheritance-rule.md)
+← Prev: [2b · Where the annotation lives](02b-where-the-annotation-lives.md) · Index: [04 · Spring @Transactional](README.md) · Next → [2d · The inheritance rule](02d-the-inheritance-rule.md)

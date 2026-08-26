@@ -291,4 +291,4 @@ do something and does nothing, and nothing in the diff shows the call site.
 
 ---
 
-← Prev: [3b · The initialization variant](03b-the-initialization-variant.md) · Index: [Spring @Transactional](README.md) · Next → [4 · Fixing self-invocation](04-fixing-self-invocation.md)
+← Prev: [3b · The initialization variant](03b-the-initialization-variant.md) · Index: [04 · Spring @Transactional](README.md) · Next → [4 · Fixing self-invocation](04-fixing-self-invocation.md)

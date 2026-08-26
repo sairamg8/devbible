@@ -284,4 +284,4 @@ managed entity.
 
 ---
 
-← Prev: [9b · Fixing the rollback-only trap](09b-fixing-the-rollback-only-trap.md) · Index: [Spring @Transactional](README.md) · Next → [10b · When REQUIRES_NEW is right](10b-when-requires-new-is-right.md)
+← Prev: [9b · Fixing the rollback-only trap](09b-fixing-the-rollback-only-trap.md) · Index: [04 · Spring @Transactional](README.md) · Next → [10b · When REQUIRES_NEW is right](10b-when-requires-new-is-right.md)

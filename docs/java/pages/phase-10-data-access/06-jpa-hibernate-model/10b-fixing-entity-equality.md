@@ -198,4 +198,4 @@ components are set at construction.
 
 ---
 
-← Prev: [10 · equals and hashCode](10-equals-and-hashcode.md) · Index: [The JPA/Hibernate model](README.md) · Next → [11 · The persistence context](11-the-persistence-context.md)
+← Prev: [10 · equals and hashCode](10-equals-and-hashcode.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [11 · The persistence context](11-the-persistence-context.md)

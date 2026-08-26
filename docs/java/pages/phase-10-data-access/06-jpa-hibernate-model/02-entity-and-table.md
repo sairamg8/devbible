@@ -270,4 +270,4 @@ ignorant of deployment topology.
 
 ---
 
-← Prev: [1c · Why not a record](01c-why-not-a-record.md) · Index: [The JPA/Hibernate model](README.md) · Next → [3 · Fields, columns, access](03-fields-columns-access.md)
+← Prev: [1c · Why not a record](01c-why-not-a-record.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [3 · Fields, columns, access](03-fields-columns-access.md)

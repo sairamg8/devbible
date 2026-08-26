@@ -160,4 +160,4 @@ the right holder.
 
 ---
 
-← Prev: [6c · What Boot picked for you](06c-what-boot-picked-for-you.md) · Index: [Spring @Transactional](README.md) · Next → [7 · Thread binding](07-thread-binding.md)
+← Prev: [6c · What Boot picked for you](06c-what-boot-picked-for-you.md) · Index: [04 · Spring @Transactional](README.md) · Next → [7 · Thread binding](07-thread-binding.md)

@@ -224,4 +224,4 @@ need, and it is one `getCause()` away.
 
 ---
 
-← Prev: [6b · The translator chain](06b-the-translator-chain.md) · Index: [SQL-first access](README.md) · Next → [7 · Empty results](07-queryforobject-and-empty.md)
+← Prev: [6b · The translator chain](06b-the-translator-chain.md) · Index: [05 · SQL-first access](README.md) · Next → [7 · Empty results](07-queryforobject-and-empty.md)

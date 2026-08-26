@@ -1,7 +1,7 @@
 ---
 title: "The assertion nobody writes is that a transaction existed at all — and it is the only one that catches a self-invocation or a dead annotation"
 sidebar_label: "20f · Asserting the boundary exists"
-sidebar_position: 57
+sidebar_position: 58
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -269,4 +269,4 @@ entry point for the wiring.
 
 ---
 
-← Prev: [20e · What the context hides](20e-what-the-context-hides.md) · Index: [Spring @Transactional](README.md) · Next → [20g · Asserting the settings](20g-asserting-the-settings.md)
+← Prev: [20e · What the context hides](20e-what-the-context-hides.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20g · Asserting the settings](20g-asserting-the-settings.md)

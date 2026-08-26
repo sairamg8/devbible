@@ -1,7 +1,7 @@
 ---
 title: "On PostgreSQL a failed statement poisons the whole transaction — so the loop that catches and carries on usually cannot carry on"
 sidebar_label: "14c · What the database did"
-sidebar_position: 41
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -266,4 +266,4 @@ still atomic at the end.
 
 ---
 
-← Prev: [14b · Three honest options](14b-three-honest-options.md) · Index: [Spring @Transactional](README.md) · Next → [15 · Read-only](15-read-only.md)
+← Prev: [14b2 · Its own transaction](14b2-its-own-transaction.md) · Index: [04 · Spring @Transactional](README.md) · Next → [15 · Read-only](15-read-only.md)

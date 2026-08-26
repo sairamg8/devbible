@@ -116,8 +116,6 @@ data. If a limit is part of the requirement, write it as `limit` in the SQL wher
 reader — and a code reviewer — can see it. Keep `maxRows` for what it is good at:
 a blunt guard against an accidental unbounded query exhausting the heap.
 
-<!--FOOTER-->
-
 ---
 
-← Prev: [2 · `JdbcTemplate`](02-jdbctemplate.md) · Index: [SQL-first access](README.md) · Next → [3 · `RowMapper` and friends](03-rowmapper.md)
+← Prev: [2 · `JdbcTemplate`](02-jdbctemplate.md) · Index: [05 · SQL-first access](README.md) · Next → [3 · `RowMapper` and friends](03-rowmapper.md)

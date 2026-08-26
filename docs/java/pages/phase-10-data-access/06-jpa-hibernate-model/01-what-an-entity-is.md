@@ -264,4 +264,4 @@ exactly as relevant once JPA is in the picture.
 
 ---
 
-Index: [The JPA/Hibernate model](README.md) · Next → [1b · The rules the spec imposes](01b-the-rules-the-spec-imposes.md)
+Index: [06 · The JPA/Hibernate model](README.md) · Next → [1b · The rules the spec imposes](01b-the-rules-the-spec-imposes.md)

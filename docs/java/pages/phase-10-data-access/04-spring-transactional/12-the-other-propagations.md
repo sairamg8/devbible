@@ -281,4 +281,4 @@ boundary it got ([chunk 8b](08b-whose-settings-win.md)).
 
 ---
 
-← Prev: [11b · Choosing NESTED](11b-choosing-nested.md) · Index: [Spring @Transactional](README.md) · Next → [12b · SUPPORTS and NOT_SUPPORTED](12b-supports-and-not-supported.md)
+← Prev: [11b · Choosing NESTED](11b-choosing-nested.md) · Index: [04 · Spring @Transactional](README.md) · Next → [12b · SUPPORTS and NOT_SUPPORTED](12b-supports-and-not-supported.md)

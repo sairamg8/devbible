@@ -273,4 +273,4 @@ a persistence exception inside a transactional method and continuing to use the 
 
 ---
 
-← Prev: [12 · The four entity states](12-the-four-states.md) · Index: [The JPA/Hibernate model](README.md) · Next → [13b · merge returns a copy](13b-merge-returns-a-copy.md)
+← Prev: [12 · The four entity states](12-the-four-states.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [13b · merge returns a copy](13b-merge-returns-a-copy.md)

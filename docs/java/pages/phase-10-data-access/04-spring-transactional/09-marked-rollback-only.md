@@ -284,4 +284,4 @@ timeout of 10 seconds and without the `readOnly` flag."
 
 ---
 
-← Prev: [8c · Making the mismatch loud](08c-making-the-mismatch-loud.md) · Index: [Spring @Transactional](README.md) · Next → [9b · Fixing the rollback-only trap](09b-fixing-the-rollback-only-trap.md)
+← Prev: [8c · Making the mismatch loud](08c-making-the-mismatch-loud.md) · Index: [04 · Spring @Transactional](README.md) · Next → [9b · Fixing the rollback-only trap](09b-fixing-the-rollback-only-trap.md)

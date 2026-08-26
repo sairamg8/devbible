@@ -268,4 +268,4 @@ not a correctness tool. The fix remains an explicit flush, or not mixing.
 
 ---
 
-← Prev: [11 · Mixing both](11-mixing-both.md) · Index: [SQL-first access](README.md)
+← Prev: [11 · Mixing both](11-mixing-both.md) · Index: [05 · SQL-first access](README.md) · Next → [12 · The repository shape](12-testing-and-the-shape-of-a-repository.md)

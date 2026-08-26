@@ -216,4 +216,4 @@ annotation.
 
 ---
 
-← Prev: [8 · Propagation REQUIRED](08-propagation-required.md) · Index: [Spring @Transactional](README.md) · Next → [8c · Making the mismatch loud](08c-making-the-mismatch-loud.md)
+← Prev: [8 · Propagation REQUIRED](08-propagation-required.md) · Index: [04 · Spring @Transactional](README.md) · Next → [8c · Making the mismatch loud](08c-making-the-mismatch-loud.md)

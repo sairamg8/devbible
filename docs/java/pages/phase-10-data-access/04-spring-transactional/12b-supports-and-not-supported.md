@@ -268,4 +268,4 @@ every `SUPPORTS` scope in the application.
 
 ---
 
-← Prev: [12 · The other propagations](12-the-other-propagations.md) · Index: [Spring @Transactional](README.md) · Next → [12c · The empty transaction](12c-the-empty-transaction.md)
+← Prev: [12 · The other propagations](12-the-other-propagations.md) · Index: [04 · Spring @Transactional](README.md) · Next → [12c · The empty transaction](12c-the-empty-transaction.md)

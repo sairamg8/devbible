@@ -286,4 +286,4 @@ keep non-final.
 
 ---
 
-← Prev: [1 · Not a language feature](01-not-a-language-feature.md) · Index: [Spring @Transactional](README.md) · Next → [2b · Where the annotation lives](02b-where-the-annotation-lives.md)
+← Prev: [1 · Not a language feature](01-not-a-language-feature.md) · Index: [04 · Spring @Transactional](README.md) · Next → [2b · Where the annotation lives](02b-where-the-annotation-lives.md)

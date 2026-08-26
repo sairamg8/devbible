@@ -1,7 +1,7 @@
 ---
 title: "Flushing is only the first way a transaction test lies — a second thread and a mocked repository each give you a green test over code that has no transaction at all"
 sidebar_label: "20c · The other ways a test lies"
-sidebar_position: 54
+sidebar_position: 55
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -272,4 +272,4 @@ contracts and a fast mocked suite for everything else, not one or the other.
 
 ---
 
-← Prev: [20b · The false positives](20b-the-false-positives.md) · Index: [Spring @Transactional](README.md) · Next → [20d · What a test must assert](20d-what-a-test-must-assert.md)
+← Prev: [20b · The false positives](20b-the-false-positives.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20d · What a test must assert](20d-what-a-test-must-assert.md)

@@ -278,4 +278,4 @@ names rather than interpolating user input.
 
 ---
 
-← Prev: [4b · The result specs](04b-the-result-specs.md) · Index: [SQL-first access](README.md) · Next → [5b · `IN` lists and the cache](05b-in-lists-and-the-statement-cache.md)
+← Prev: [4b · The result specs](04b-the-result-specs.md) · Index: [05 · SQL-first access](README.md) · Next → [5b · `IN` lists and the cache](05b-in-lists-and-the-statement-cache.md)

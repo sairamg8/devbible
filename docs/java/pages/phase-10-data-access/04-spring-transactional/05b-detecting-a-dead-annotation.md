@@ -275,4 +275,4 @@ declaration that lost to an outer one.
 
 ---
 
-← Prev: [5 · Annotations that do nothing](05-annotations-that-do-nothing.md) · Index: [Spring @Transactional](README.md) · Next → [5c · Proving it and preventing it](05c-proving-it-and-preventing-it.md)
+← Prev: [5 · Annotations that do nothing](05-annotations-that-do-nothing.md) · Index: [04 · Spring @Transactional](README.md) · Next → [5c · Proving it and preventing it](05c-proving-it-and-preventing-it.md)

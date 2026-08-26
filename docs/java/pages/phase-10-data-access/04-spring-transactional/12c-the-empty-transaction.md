@@ -290,4 +290,4 @@ must be undoable needs `REQUIRED`, `REQUIRES_NEW` or `NESTED`, never `SUPPORTS`.
 
 ---
 
-← Prev: [12b · SUPPORTS and NOT_SUPPORTED](12b-supports-and-not-supported.md) · Index: [Spring @Transactional](README.md) · Next → [13 · Rollback rules](13-rollback-rules.md)
+← Prev: [12b · SUPPORTS and NOT_SUPPORTED](12b-supports-and-not-supported.md) · Index: [04 · Spring @Transactional](README.md) · Next → [13 · Rollback rules](13-rollback-rules.md)

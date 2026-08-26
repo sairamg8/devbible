@@ -154,4 +154,4 @@ method that is not in your source is not evidence of anything being wrong.
 
 ---
 
-← Prev: [2c · Visibility and interfaces](02c-visibility-and-the-interface-question.md) · Index: [Spring @Transactional](README.md) · Next → [3 · The self-invocation trap](03-the-self-invocation-trap.md)
+← Prev: [2c · Visibility and interfaces](02c-visibility-and-the-interface-question.md) · Index: [04 · Spring @Transactional](README.md) · Next → [3 · The self-invocation trap](03-the-self-invocation-trap.md)

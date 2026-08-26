@@ -293,4 +293,4 @@ wrapper is not.
 
 ---
 
-← Prev: [2 · @Entity and @Table](02-entity-and-table.md) · Index: [The JPA/Hibernate model](README.md) · Next → [4 · Enums and the ORDINAL trap](04-enums-ordinal-corruption.md)
+← Prev: [2 · @Entity and @Table](02-entity-and-table.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [4 · Enums and the ORDINAL trap](04-enums-ordinal-corruption.md)

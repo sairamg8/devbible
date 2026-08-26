@@ -295,4 +295,4 @@ why that check exists and why its default is to throw.
 
 ---
 
-← Prev: [7b · IDENTITY kills batching](07b-identity-kills-batching.md) · Index: [The JPA/Hibernate model](README.md) · Next → [8b · Sequences on PostgreSQL](08b-sequence-on-postgres.md)
+← Prev: [7b · IDENTITY kills batching](07b-identity-kills-batching.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [8b · Sequences on PostgreSQL](08b-sequence-on-postgres.md)

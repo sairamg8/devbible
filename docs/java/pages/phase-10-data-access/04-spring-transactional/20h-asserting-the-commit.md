@@ -1,7 +1,7 @@
 ---
 title: "The only place a rollback can be observed is from outside the transaction that was rolled back — which is why the assertion belongs in @AfterTransaction or after TestTransaction.end()"
 sidebar_label: "20h · Asserting the commit"
-sidebar_position: 59
+sidebar_position: 60
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -251,4 +251,4 @@ propagated", so a failed assertion there vanishes and the test passes.
 
 ---
 
-← Prev: [20g · Asserting the settings](20g-asserting-the-settings.md) · Index: [Spring @Transactional](README.md) · Next → [20i · Committing, and what participates](20i-committing-and-what-participates.md)
+← Prev: [20g · Asserting the settings](20g-asserting-the-settings.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20i · Committing, and what participates](20i-committing-and-what-participates.md)

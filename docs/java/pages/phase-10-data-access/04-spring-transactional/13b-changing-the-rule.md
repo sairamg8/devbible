@@ -296,4 +296,4 @@ becomes both the feature and the hazard.
 
 ---
 
-← Prev: [13 · Rollback rules](13-rollback-rules.md) · Index: [Spring @Transactional](README.md) · Next → [13c · How a rule is matched](13c-how-a-rule-is-matched.md)
+← Prev: [13 · Rollback rules](13-rollback-rules.md) · Index: [04 · Spring @Transactional](README.md) · Next → [13c · How a rule is matched](13c-how-a-rule-is-matched.md)

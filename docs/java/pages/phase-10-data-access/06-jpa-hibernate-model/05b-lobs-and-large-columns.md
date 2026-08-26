@@ -193,4 +193,4 @@ select a projection instead.
 
 ---
 
-← Prev: [5 · Embeddables and converters](05-embeddables-lobs-converters.md) · Index: [The JPA/Hibernate model](README.md) · Next → [6 · The identifier](06-the-identifier.md)
+← Prev: [5 · Embeddables and converters](05-embeddables-lobs-converters.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [6 · The identifier](06-the-identifier.md)

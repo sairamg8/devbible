@@ -268,4 +268,4 @@ bound in the recursive term, or `union` if duplicate rows are acceptable.
 
 ---
 
-← Prev: [9 · The connection](09-transactions-and-the-connection.md) · Index: [SQL-first access](README.md) · Next → [10b · What you give up](10b-what-you-give-up.md)
+← Prev: [9 · The connection](09-transactions-and-the-connection.md) · Index: [05 · SQL-first access](README.md) · Next → [10b · What you give up](10b-what-you-give-up.md)

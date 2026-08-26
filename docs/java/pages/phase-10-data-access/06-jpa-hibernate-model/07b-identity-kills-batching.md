@@ -240,4 +240,4 @@ which is [9 · TABLE, AUTO and UUID](09-table-auto-uuid.md).
 
 ---
 
-← Prev: [7 · @GeneratedValue and IDENTITY](07-generatedvalue-identity.md) · Index: [The JPA/Hibernate model](README.md) · Next → [8 · SEQUENCE and allocationSize](08-sequence-and-allocationsize.md)
+← Prev: [7 · @GeneratedValue and IDENTITY](07-generatedvalue-identity.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [8 · SEQUENCE and allocationSize](08-sequence-and-allocationsize.md)

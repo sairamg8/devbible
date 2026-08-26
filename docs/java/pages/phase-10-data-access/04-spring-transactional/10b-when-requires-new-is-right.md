@@ -275,4 +275,4 @@ anything downstream has to tolerate a reference that resolves late or not at all
 
 ---
 
-← Prev: [10 · REQUIRES_NEW](10-requires-new.md) · Index: [Spring @Transactional](README.md) · Next → [10c · What suspension costs](10c-what-suspension-costs.md)
+← Prev: [10 · REQUIRES_NEW](10-requires-new.md) · Index: [04 · Spring @Transactional](README.md) · Next → [10c · What suspension costs](10c-what-suspension-costs.md)

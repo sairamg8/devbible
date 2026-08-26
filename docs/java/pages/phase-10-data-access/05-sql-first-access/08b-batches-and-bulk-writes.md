@@ -233,4 +233,4 @@ the entry. That is slow, which is a good argument for validating up front.
 
 ---
 
-← Prev: [8 · Writes and keys](08-writes-and-generated-keys.md) · Index: [SQL-first access](README.md) · Next → [9 · The connection](09-transactions-and-the-connection.md)
+← Prev: [8 · Writes and keys](08-writes-and-generated-keys.md) · Index: [05 · SQL-first access](README.md) · Next → [9 · The connection](09-transactions-and-the-connection.md)

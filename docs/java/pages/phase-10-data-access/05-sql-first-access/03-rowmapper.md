@@ -291,4 +291,4 @@ where an index can be used, and it is where the reader expects it.
 
 ---
 
-← Prev: [2b · Wiring, settings, logging](02b-settings-and-logging.md) · Index: [SQL-first access](README.md) · Next → [3b · The fan-out problem](03b-the-fan-out-problem.md)
+← Prev: [2b · Wiring, settings, logging](02b-settings-and-logging.md) · Index: [05 · SQL-first access](README.md) · Next → [3b · The fan-out problem](03b-the-fan-out-problem.md)

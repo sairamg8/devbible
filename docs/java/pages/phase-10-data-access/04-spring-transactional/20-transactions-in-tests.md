@@ -1,7 +1,7 @@
 ---
 title: "@Transactional on a test method means something different from @Transactional on a service method — the test's transaction is rolled back by default"
 sidebar_label: "20 · Transactions in tests"
-sidebar_position: 52
+sidebar_position: 53
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -279,4 +279,4 @@ a controller would.
 
 ---
 
-← Prev: [19b · After-commit is not durable](19b-after-commit-is-not-durable.md) · Index: [Spring @Transactional](README.md) · Next → [20b · The false positives](20b-the-false-positives.md)
+← Prev: [19b · After-commit is not durable](19b-after-commit-is-not-durable.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20b · The false positives](20b-the-false-positives.md)

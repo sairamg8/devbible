@@ -1,7 +1,7 @@
 ---
 title: "Read, then act: do the slow part with no transaction open, then take a short one for the write — and put the retry above the boundary, restarting it whole"
 sidebar_label: "21b · Shaping the work"
-sidebar_position: 63
+sidebar_position: 65
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -287,4 +287,4 @@ decision, usually an idempotency key, for the part that is not.
 
 ---
 
-← Prev: [21 · What belongs in a transaction](21-what-belongs-in-a-transaction.md) · Index: [Spring @Transactional](README.md) · Next → [22 · The debugging order](22-the-checklist.md)
+← Prev: [21 · What belongs in a transaction](21-what-belongs-in-a-transaction.md) · Index: [04 · Spring @Transactional](README.md) · Next → [22 · The debugging order](22-the-checklist.md)

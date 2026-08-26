@@ -274,4 +274,4 @@ subject of [chunk 14](14-the-caught-exception.md).
 
 ---
 
-← Prev: [4 · Fixing self-invocation](04-fixing-self-invocation.md) · Index: [Spring @Transactional](README.md) · Next → [4c · AspectJ weaving](04c-aspectj-weaving.md)
+← Prev: [4 · Fixing self-invocation](04-fixing-self-invocation.md) · Index: [04 · Spring @Transactional](README.md) · Next → [4c · AspectJ weaving](04c-aspectj-weaving.md)

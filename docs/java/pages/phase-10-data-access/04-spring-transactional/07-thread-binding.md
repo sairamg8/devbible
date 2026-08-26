@@ -279,4 +279,4 @@ only when something fails partway through.
 
 ---
 
-← Prev: [6d · The status handle](06d-the-status-handle.md) · Index: [Spring @Transactional](README.md) · Next → [7b · Getting the connection safely](07b-getting-the-connection-safely.md)
+← Prev: [6d · The status handle](06d-the-status-handle.md) · Index: [04 · Spring @Transactional](README.md) · Next → [7b · Getting the connection safely](07b-getting-the-connection-safely.md)

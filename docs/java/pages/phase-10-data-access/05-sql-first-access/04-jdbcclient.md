@@ -294,4 +294,4 @@ injected where you need something `JdbcClient` does not expose — most commonly
 
 ---
 
-← Prev: [3d · The built-in mappers](03d-automatic-mappers.md) · Index: [SQL-first access](README.md) · Next → [4b · The result specs](04b-the-result-specs.md)
+← Prev: [3d · The built-in mappers](03d-automatic-mappers.md) · Index: [05 · SQL-first access](README.md) · Next → [4b · The result specs](04b-the-result-specs.md)

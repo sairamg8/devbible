@@ -1,7 +1,7 @@
 ---
 title: "What to look for when you review a transactional service, and the four defaults worth changing once for the whole application"
 sidebar_label: "22b · Reviewing a service"
-sidebar_position: 65
+sidebar_position: 67
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -284,4 +284,4 @@ invisible from the call site.
 
 ---
 
-← Prev: [22 · The debugging order](22-the-checklist.md) · Index: [Spring @Transactional](README.md)
+← Prev: [22 · The debugging order](22-the-checklist.md) · Index: [04 · Spring @Transactional](README.md)

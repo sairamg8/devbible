@@ -245,4 +245,4 @@ old rows unreadable with no migration path. Hibernate's own documentation calls 
 
 ---
 
-← Prev: [4 · Enums and the ORDINAL trap](04-enums-ordinal-corruption.md) · Index: [The JPA/Hibernate model](README.md) · Next → [5b · Large columns and @Lob](05b-lobs-and-large-columns.md)
+← Prev: [4 · Enums and the ORDINAL trap](04-enums-ordinal-corruption.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [5b · Large columns and @Lob](05b-lobs-and-large-columns.md)

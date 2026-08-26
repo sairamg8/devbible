@@ -1,7 +1,7 @@
 ---
 title: "AFTER_COMMIT runs after the commit, which means a crash in between loses the side effect forever — the outbox is what survives that"
 sidebar_label: "19b · After-commit is not durable"
-sidebar_position: 51
+sidebar_position: 52
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -278,4 +278,4 @@ pending", which is a much better failure — but only if somebody is looking at 
 
 ---
 
-← Prev: [19 · Transactional events](19-transactional-events.md) · Index: [Spring @Transactional](README.md) · Next → [20 · Transactions in tests](20-transactions-in-tests.md)
+← Prev: [19 · Transactional events](19-transactional-events.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20 · Transactions in tests](20-transactions-in-tests.md)

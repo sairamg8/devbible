@@ -293,4 +293,4 @@ should migrate deliberately rather than assume the compiler will find them all.
 
 ---
 
-← Prev: [1b · The three APIs](01b-the-three-apis.md) · Index: [SQL-first access](README.md) · Next → [2b · Wiring, settings, logging](02b-settings-and-logging.md)
+← Prev: [1b · The three APIs](01b-the-three-apis.md) · Index: [05 · SQL-first access](README.md) · Next → [2b · Wiring, settings, logging](02b-settings-and-logging.md)

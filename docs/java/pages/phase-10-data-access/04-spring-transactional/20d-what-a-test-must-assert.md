@@ -1,7 +1,7 @@
 ---
 title: "A transaction test is only worth something if it asserts on state the database actually produced — an assertion answered from the persistence context is an assertion about Java"
 sidebar_label: "20d · What a test must assert"
-sidebar_position: 55
+sidebar_position: 56
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -182,4 +182,4 @@ silently removes the constraint coverage too. Flush explicitly and assert on the
 
 ---
 
-← Prev: [20c · The other ways a test lies](20c-the-other-ways-a-test-lies.md) · Index: [Spring @Transactional](README.md) · Next → [20e · What the context hides](20e-what-the-context-hides.md)
+← Prev: [20c · The other ways a test lies](20c-the-other-ways-a-test-lies.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20e · What the context hides](20e-what-the-context-hides.md)

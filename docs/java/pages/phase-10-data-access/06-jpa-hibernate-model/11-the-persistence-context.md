@@ -272,4 +272,4 @@ costs or guarantees.
 
 ---
 
-← Prev: [10b · Fixing entity equality](10b-fixing-entity-equality.md) · Index: [The JPA/Hibernate model](README.md) · Next → [11b · The find that issues no SQL](11b-find-that-issues-no-sql.md)
+← Prev: [10b · Fixing entity equality](10b-fixing-entity-equality.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [11b · The find that issues no SQL](11b-find-that-issues-no-sql.md)

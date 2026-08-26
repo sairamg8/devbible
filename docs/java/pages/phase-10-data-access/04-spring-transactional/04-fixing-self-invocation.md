@@ -271,4 +271,4 @@ to avoid extracting one class.
 
 ---
 
-← Prev: [3c · Bound receivers](03c-bound-receivers.md) · Index: [Spring @Transactional](README.md) · Next → [4b · The escape hatches](04b-the-escape-hatches.md)
+← Prev: [3c · Bound receivers](03c-bound-receivers.md) · Index: [04 · Spring @Transactional](README.md) · Next → [4b · The escape hatches](04b-the-escape-hatches.md)

@@ -292,4 +292,4 @@ queries.
 
 ---
 
-← Prev: [10b · When REQUIRES_NEW is right](10b-when-requires-new-is-right.md) · Index: [Spring @Transactional](README.md) · Next → [11 · NESTED and savepoints](11-nested-and-savepoints.md)
+← Prev: [10b · When REQUIRES_NEW is right](10b-when-requires-new-is-right.md) · Index: [04 · Spring @Transactional](README.md) · Next → [11 · NESTED and savepoints](11-nested-and-savepoints.md)

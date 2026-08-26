@@ -278,4 +278,4 @@ second is far worse, because it works.
 
 ---
 
-Index: [Spring @Transactional](README.md) · Next → [2 · The proxy](02-the-proxy.md)
+Index: [04 · Spring @Transactional](README.md) · Next → [2 · The proxy](02-the-proxy.md)

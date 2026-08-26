@@ -255,4 +255,4 @@ should paper over.
 
 ---
 
-← Prev: [6c · On PostgreSQL](06c-what-to-catch-on-postgresql.md) · Index: [SQL-first access](README.md) · Next → [8 · Writes and keys](08-writes-and-generated-keys.md)
+← Prev: [6c · On PostgreSQL](06c-what-to-catch-on-postgresql.md) · Index: [05 · SQL-first access](README.md) · Next → [8 · Writes and keys](08-writes-and-generated-keys.md)

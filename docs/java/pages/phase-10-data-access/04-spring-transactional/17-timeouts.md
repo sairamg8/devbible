@@ -1,7 +1,7 @@
 ---
 title: "A transaction timeout is not a wall clock — it is checked before operations and pushed down as a JDBC statement timeout, and code that bypasses Spring gets no timeout at all"
 sidebar_label: "17 · Timeouts"
-sidebar_position: 46
+sidebar_position: 47
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -296,4 +296,4 @@ is never the right move.
 
 ---
 
-← Prev: [16b · Isolation in the plumbing](16b-isolation-in-the-plumbing.md) · Index: [Spring @Transactional](README.md) · Next → [17b · What actually bounds it](17b-what-actually-bounds-it.md)
+← Prev: [16b · Isolation in the plumbing](16b-isolation-in-the-plumbing.md) · Index: [04 · Spring @Transactional](README.md) · Next → [17b · What actually bounds it](17b-what-actually-bounds-it.md)

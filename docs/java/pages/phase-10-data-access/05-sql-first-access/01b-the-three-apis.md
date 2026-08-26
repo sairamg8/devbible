@@ -138,8 +138,6 @@ transaction's connection and participates fully — commit and rollback cover it
 **[Topic 04 · Spring `@Transactional`](../04-spring-transactional/README.md)**
 owns the transaction semantics themselves.
 
-<!--FOOTER-->
-
 ---
 
-← Prev: [1 · Why SQL-first exists](01-why-sql-first-exists.md) · Index: [SQL-first access](README.md) · Next → [2 · `JdbcTemplate`](02-jdbctemplate.md)
+← Prev: [1 · Why SQL-first exists](01-why-sql-first-exists.md) · Index: [05 · SQL-first access](README.md) · Next → [2 · `JdbcTemplate`](02-jdbctemplate.md)

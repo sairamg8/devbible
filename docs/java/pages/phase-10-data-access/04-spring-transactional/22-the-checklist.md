@@ -1,7 +1,7 @@
 ---
 title: "\"My @Transactional did nothing\" — the eight checks, in the order that finds it fastest"
 sidebar_label: "22 · The debugging order"
-sidebar_position: 64
+sidebar_position: 66
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -272,4 +272,4 @@ boundary" to "is the boundary in the right place".
 
 ---
 
-← Prev: [21b · Shaping the work](21b-shaping-the-work.md) · Index: [Spring @Transactional](README.md) · Next → [22b · Reviewing a service](22b-reviewing-a-service.md)
+← Prev: [21b · Shaping the work](21b-shaping-the-work.md) · Index: [04 · Spring @Transactional](README.md) · Next → [22b · Reviewing a service](22b-reviewing-a-service.md)

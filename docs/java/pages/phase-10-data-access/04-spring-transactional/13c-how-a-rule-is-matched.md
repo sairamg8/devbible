@@ -288,4 +288,4 @@ the exemption belongs to a common supertype, which is a `Class` rule too.
 
 ---
 
-← Prev: [13b · Changing the rule](13b-changing-the-rule.md) · Index: [Spring @Transactional](README.md) · Next → [13d · The matching algorithm](13d-the-matching-algorithm.md)
+← Prev: [13b · Changing the rule](13b-changing-the-rule.md) · Index: [04 · Spring @Transactional](README.md) · Next → [13d · The matching algorithm](13d-the-matching-algorithm.md)

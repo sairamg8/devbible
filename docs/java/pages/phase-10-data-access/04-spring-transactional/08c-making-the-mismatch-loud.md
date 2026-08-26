@@ -206,4 +206,4 @@ level, so it is left lenient and the outermost boundary owns the timeout.
 
 ---
 
-← Prev: [8b · Whose settings win](08b-whose-settings-win.md) · Index: [Spring @Transactional](README.md) · Next → [9 · Marked rollback-only](09-marked-rollback-only.md)
+← Prev: [8b · Whose settings win](08b-whose-settings-win.md) · Index: [04 · Spring @Transactional](README.md) · Next → [9 · Marked rollback-only](09-marked-rollback-only.md)

@@ -266,4 +266,4 @@ one class its `final` keyword, which is a bad trade.
 
 ---
 
-← Prev: [4c · AspectJ weaving](04c-aspectj-weaving.md) · Index: [Spring @Transactional](README.md) · Next → [5b · Detecting a dead annotation](05b-detecting-a-dead-annotation.md)
+← Prev: [4c · AspectJ weaving](04c-aspectj-weaving.md) · Index: [04 · Spring @Transactional](README.md) · Next → [5b · Detecting a dead annotation](05b-detecting-a-dead-annotation.md)

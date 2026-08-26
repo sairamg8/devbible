@@ -288,4 +288,4 @@ some stacks the release is a no-op.
 
 ---
 
-← Prev: [10c · What suspension costs](10c-what-suspension-costs.md) · Index: [Spring @Transactional](README.md) · Next → [11b · Choosing NESTED](11b-choosing-nested.md)
+← Prev: [10c · What suspension costs](10c-what-suspension-costs.md) · Index: [04 · Spring @Transactional](README.md) · Next → [11b · Choosing NESTED](11b-choosing-nested.md)

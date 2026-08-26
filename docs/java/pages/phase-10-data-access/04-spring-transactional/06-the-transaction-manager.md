@@ -232,4 +232,4 @@ production can change when a DBA changes a server default and no code changed.
 
 ---
 
-← Prev: [5c · Proving it and preventing it](05c-proving-it-and-preventing-it.md) · Index: [Spring @Transactional](README.md) · Next → [6b · The implementations](06b-which-manager-you-have.md)
+← Prev: [5c · Proving it and preventing it](05c-proving-it-and-preventing-it.md) · Index: [04 · Spring @Transactional](README.md) · Next → [6b · The implementations](06b-which-manager-you-have.md)

@@ -256,4 +256,4 @@ correctness improvement.
 
 ---
 
-← Prev: [4 · `JdbcClient`](04-jdbcclient.md) · Index: [SQL-first access](README.md) · Next → [5 · Named parameters](05-named-parameters.md)
+← Prev: [4 · `JdbcClient`](04-jdbcclient.md) · Index: [05 · SQL-first access](README.md) · Next → [5 · Named parameters](05-named-parameters.md)

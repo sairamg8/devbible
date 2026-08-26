@@ -289,4 +289,4 @@ built with `new` has no proxy either way and cannot tell the two cases apart.
 
 ---
 
-← Prev: [2d · The inheritance rule](02d-the-inheritance-rule.md) · Index: [Spring @Transactional](README.md) · Next → [3b · The initialization variant](03b-the-initialization-variant.md)
+← Prev: [2d · The inheritance rule](02d-the-inheritance-rule.md) · Index: [04 · Spring @Transactional](README.md) · Next → [3b · The initialization variant](03b-the-initialization-variant.md)

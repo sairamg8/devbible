@@ -285,4 +285,4 @@ no. Treat it as fix 2's cheaper cousin where the manager supports it —
 
 ---
 
-← Prev: [9 · Marked rollback-only](09-marked-rollback-only.md) · Index: [Spring @Transactional](README.md) · Next → [10 · REQUIRES_NEW](10-requires-new.md)
+← Prev: [9 · Marked rollback-only](09-marked-rollback-only.md) · Index: [04 · Spring @Transactional](README.md) · Next → [10 · REQUIRES_NEW](10-requires-new.md)

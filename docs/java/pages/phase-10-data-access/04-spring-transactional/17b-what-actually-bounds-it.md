@@ -1,7 +1,7 @@
 ---
 title: "The only thing that reliably bounds a runaway transaction is the database, because it is the participant no application code can bypass"
 sidebar_label: "17b · What actually bounds it"
-sidebar_position: 47
+sidebar_position: 48
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -279,4 +279,4 @@ unfamiliar codebase that is the assumption I would trust least.
 
 ---
 
-← Prev: [17 · Timeouts](17-timeouts.md) · Index: [Spring @Transactional](README.md) · Next → [18 · Threads and @Async](18-threads-and-async.md)
+← Prev: [17 · Timeouts](17-timeouts.md) · Index: [04 · Spring @Transactional](README.md) · Next → [18 · Threads and @Async](18-threads-and-async.md)

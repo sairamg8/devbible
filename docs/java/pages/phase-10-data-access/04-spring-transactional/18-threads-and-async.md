@@ -1,7 +1,7 @@
 ---
 title: "The transaction is bound to a ThreadLocal, so the moment work moves to another thread it leaves the transaction behind and gets a different connection"
 sidebar_label: "18 · Threads and @Async"
-sidebar_position: 48
+sidebar_position: 49
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -282,4 +282,4 @@ path will pass regardless, which is why these survive to production.
 
 ---
 
-← Prev: [17b · What actually bounds it](17b-what-actually-bounds-it.md) · Index: [Spring @Transactional](README.md) · Next → [18b · Reactive and virtual threads](18b-reactive-and-virtual-threads.md)
+← Prev: [17b · What actually bounds it](17b-what-actually-bounds-it.md) · Index: [04 · Spring @Transactional](README.md) · Next → [18b · Reactive and virtual threads](18b-reactive-and-virtual-threads.md)

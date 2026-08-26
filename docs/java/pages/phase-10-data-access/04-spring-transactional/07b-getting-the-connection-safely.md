@@ -281,4 +281,4 @@ different feature wearing the same class name.
 
 ---
 
-← Prev: [7 · Thread binding](07-thread-binding.md) · Index: [Spring @Transactional](README.md) · Next → [8 · Propagation REQUIRED](08-propagation-required.md)
+← Prev: [7 · Thread binding](07-thread-binding.md) · Index: [04 · Spring @Transactional](README.md) · Next → [8 · Propagation REQUIRED](08-propagation-required.md)

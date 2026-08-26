@@ -266,4 +266,4 @@ attribute "does nothing" is which annotation was imported.
 
 ---
 
-← Prev: [13c · How a rule is matched](13c-how-a-rule-is-matched.md) · Index: [Spring @Transactional](README.md) · Next → [13e · When rules collide](13e-when-rules-collide.md)
+← Prev: [13c · How a rule is matched](13c-how-a-rule-is-matched.md) · Index: [04 · Spring @Transactional](README.md) · Next → [13e · When rules collide](13e-when-rules-collide.md)

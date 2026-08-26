@@ -219,4 +219,4 @@ signal to split the operation into two transactions instead.
 
 ---
 
-← Prev: [10b · What you give up](10b-what-you-give-up.md) · Index: [SQL-first access](README.md) · Next → [11b · The flush trap](11b-the-flush-ordering-trap.md)
+← Prev: [10b · What you give up](10b-what-you-give-up.md) · Index: [05 · SQL-first access](README.md) · Next → [11b · The flush trap](11b-the-flush-ordering-trap.md)

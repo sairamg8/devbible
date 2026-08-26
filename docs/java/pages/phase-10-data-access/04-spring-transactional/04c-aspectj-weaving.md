@@ -273,4 +273,4 @@ the new name is the one to add.
 
 ---
 
-← Prev: [4b · The escape hatches](04b-the-escape-hatches.md) · Index: [Spring @Transactional](README.md) · Next → [5 · Annotations that do nothing](05-annotations-that-do-nothing.md)
+← Prev: [4b · The escape hatches](04b-the-escape-hatches.md) · Index: [04 · Spring @Transactional](README.md) · Next → [5 · Annotations that do nothing](05-annotations-that-do-nothing.md)

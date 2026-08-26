@@ -286,4 +286,4 @@ database after the transaction closed, not one that asserts on the exception.
 
 ---
 
-← Prev: [12c · The empty transaction](12c-the-empty-transaction.md) · Index: [Spring @Transactional](README.md) · Next → [13b · Changing the rule](13b-changing-the-rule.md)
+← Prev: [12c · The empty transaction](12c-the-empty-transaction.md) · Index: [04 · Spring @Transactional](README.md) · Next → [13b · Changing the rule](13b-changing-the-rule.md)

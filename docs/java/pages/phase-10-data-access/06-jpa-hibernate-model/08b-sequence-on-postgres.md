@@ -243,4 +243,4 @@ looking at the entity sees no generator and has to know to look in `package-info
 
 ---
 
-← Prev: [8 · SEQUENCE and allocationSize](08-sequence-and-allocationsize.md) · Index: [The JPA/Hibernate model](README.md) · Next → [9 · TABLE, AUTO and UUID](09-table-auto-uuid.md)
+← Prev: [8 · SEQUENCE and allocationSize](08-sequence-and-allocationsize.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [9 · TABLE, AUTO and UUID](09-table-auto-uuid.md)

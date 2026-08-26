@@ -1,7 +1,7 @@
 ---
 title: "The persistence context answers reads the database never sees — which is why a lifecycle callback can silently never run and a second EntityManager does not help"
 sidebar_label: "20e · What the context hides"
-sidebar_position: 56
+sidebar_position: 57
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -256,4 +256,4 @@ immediately after, which is also what makes the following assertion honest.
 
 ---
 
-← Prev: [20d · What a test must assert](20d-what-a-test-must-assert.md) · Index: [Spring @Transactional](README.md) · Next → [20f · Asserting the boundary exists](20f-asserting-the-boundary-exists.md)
+← Prev: [20d · What a test must assert](20d-what-a-test-must-assert.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20f · Asserting the boundary exists](20f-asserting-the-boundary-exists.md)

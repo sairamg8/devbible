@@ -271,4 +271,4 @@ the thing to change.
 
 ---
 
-← Prev: [11 · NESTED and savepoints](11-nested-and-savepoints.md) · Index: [Spring @Transactional](README.md) · Next → [12 · The other propagations](12-the-other-propagations.md)
+← Prev: [11 · NESTED and savepoints](11-nested-and-savepoints.md) · Index: [04 · Spring @Transactional](README.md) · Next → [12 · The other propagations](12-the-other-propagations.md)

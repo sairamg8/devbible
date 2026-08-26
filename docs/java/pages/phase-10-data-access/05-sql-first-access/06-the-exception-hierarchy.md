@@ -253,4 +253,4 @@ occurrences of one are a good reason to look at what the actual SQLSTATE was.
 
 ---
 
-← Prev: [5b · `IN` lists and the cache](05b-in-lists-and-the-statement-cache.md) · Index: [SQL-first access](README.md) · Next → [6b · The translator chain](06b-the-translator-chain.md)
+← Prev: [5b · `IN` lists and the cache](05b-in-lists-and-the-statement-cache.md) · Index: [05 · SQL-first access](README.md) · Next → [6b · The translator chain](06b-the-translator-chain.md)

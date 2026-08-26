@@ -169,4 +169,4 @@ there; the collection type decided whether it was reachable.
 
 ---
 
-← Prev: [9 · TABLE, AUTO and UUID](09-table-auto-uuid.md) · Index: [The JPA/Hibernate model](README.md) · Next → [10b · Fixing entity equality](10b-fixing-entity-equality.md)
+← Prev: [9 · TABLE, AUTO and UUID](09-table-auto-uuid.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [10b · Fixing entity equality](10b-fixing-entity-equality.md)

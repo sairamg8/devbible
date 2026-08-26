@@ -1,7 +1,7 @@
 ---
 title: "A transaction is a lock on shared state, so its duration is a concurrency budget — and an HTTP call inside one spends that budget at another company's discretion"
 sidebar_label: "21 · What belongs in a transaction"
-sidebar_position: 62
+sidebar_position: 64
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -294,4 +294,4 @@ out costs nothing that was real.
 
 ---
 
-← Prev: [20j · The fixture and the real database](20j-the-fixture-and-the-real-database.md) · Index: [Spring @Transactional](README.md) · Next → [21b · Shaping the work](21b-shaping-the-work.md)
+← Prev: [20k · Getting the real engine in](20k-getting-the-real-engine-into-the-test.md) · Index: [04 · Spring @Transactional](README.md) · Next → [21b · Shaping the work](21b-shaping-the-work.md)

@@ -237,4 +237,4 @@ directly bypasses initialisation and yields `null`.
 
 ---
 
-← Prev: [1 · What an entity is](01-what-an-entity-is.md) · Index: [The JPA/Hibernate model](README.md) · Next → [1c · Why not a record](01c-why-not-a-record.md)
+← Prev: [1 · What an entity is](01-what-an-entity-is.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [1c · Why not a record](01c-why-not-a-record.md)

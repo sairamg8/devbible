@@ -159,4 +159,4 @@ outside it. This is the same underlying problem Hibernate warns about with
 
 ---
 
-← Prev: [3b · The fan-out problem](03b-the-fan-out-problem.md) · Index: [SQL-first access](README.md) · Next → [3d · The built-in mappers](03d-automatic-mappers.md)
+← Prev: [3b · The fan-out problem](03b-the-fan-out-problem.md) · Index: [05 · SQL-first access](README.md) · Next → [3d · The built-in mappers](03d-automatic-mappers.md)

@@ -230,4 +230,4 @@ every hard question about staleness and invalidation with it.
 
 ---
 
-← Prev: [11 · The persistence context](11-the-persistence-context.md) · Index: [The JPA/Hibernate model](README.md) · Next → [12 · The four entity states](12-the-four-states.md)
+← Prev: [11 · The persistence context](11-the-persistence-context.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [12 · The four entity states](12-the-four-states.md)

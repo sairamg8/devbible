@@ -241,4 +241,4 @@ entity identity is about *which row*. A type cannot sensibly mean both.
 
 ---
 
-← Prev: [1b · The rules the spec imposes](01b-the-rules-the-spec-imposes.md) · Index: [The JPA/Hibernate model](README.md) · Next → [2 · @Entity and @Table](02-entity-and-table.md)
+← Prev: [1b · The rules the spec imposes](01b-the-rules-the-spec-imposes.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [2 · @Entity and @Table](02-entity-and-table.md)

@@ -1,7 +1,7 @@
 ---
 title: "The read-only win is Hibernate skipping dirty checking and the flush — and the flag is silently ignored on a transaction it did not start"
 sidebar_label: "15b · Where read-only pays"
-sidebar_position: 43
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -295,4 +295,4 @@ transaction, and nowhere else.
 
 ---
 
-← Prev: [15 · Read-only](15-read-only.md) · Index: [Spring @Transactional](README.md) · Next → [16 · Isolation](16-isolation.md)
+← Prev: [15 · Read-only](15-read-only.md) · Index: [04 · Spring @Transactional](README.md) · Next → [16 · Isolation](16-isolation.md)

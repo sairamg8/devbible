@@ -208,4 +208,4 @@ feature.
 
 ---
 
-← Prev: [13d · The matching algorithm](13d-the-matching-algorithm.md) · Index: [Spring @Transactional](README.md) · Next → [14 · The caught exception](14-the-caught-exception.md)
+← Prev: [13d · The matching algorithm](13d-the-matching-algorithm.md) · Index: [04 · Spring @Transactional](README.md) · Next → [14 · The caught exception](14-the-caught-exception.md)

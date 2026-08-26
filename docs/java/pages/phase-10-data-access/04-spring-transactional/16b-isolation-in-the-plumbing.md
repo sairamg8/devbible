@@ -1,7 +1,7 @@
 ---
 title: "Isolation is session state on a pooled connection, so three layers decide what DEFAULT means and two independent mechanisms put it back"
 sidebar_label: "16b · Isolation in the plumbing"
-sidebar_position: 45
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -289,4 +289,4 @@ capacity-planning decision rather than a safety one.
 
 ---
 
-← Prev: [16 · Isolation](16-isolation.md) · Index: [Spring @Transactional](README.md) · Next → [17 · Timeouts](17-timeouts.md)
+← Prev: [16 · Isolation](16-isolation.md) · Index: [04 · Spring @Transactional](README.md) · Next → [17 · Timeouts](17-timeouts.md)

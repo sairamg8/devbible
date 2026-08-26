@@ -222,4 +222,4 @@ look.
 
 ---
 
-← Prev: [2 · The proxy](02-the-proxy.md) · Index: [Spring @Transactional](README.md) · Next → [2c · Visibility and interfaces](02c-visibility-and-the-interface-question.md)
+← Prev: [2 · The proxy](02-the-proxy.md) · Index: [04 · Spring @Transactional](README.md) · Next → [2c · Visibility and interfaces](02c-visibility-and-the-interface-question.md)

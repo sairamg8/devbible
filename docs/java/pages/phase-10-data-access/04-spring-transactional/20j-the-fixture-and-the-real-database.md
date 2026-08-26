@@ -1,7 +1,7 @@
 ---
 title: "The fixture is a transactional decision too — and an in-memory database quietly removes every engine behaviour the test was written to check"
 sidebar_label: "20j · The fixture and the real database"
-sidebar_position: 61
+sidebar_position: 62
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -19,7 +19,7 @@ sidebar_position: 61
 assertion. Two things upstream of it decide whether the assertion can mean anything at
 all: whether the fixture was committed, and whether the database under the test is the
 database you deploy. Both have a default that is convenient and quietly wrong for a
-whole class of test.**
+whole class of test. This chunk takes the fixture; the next one takes the database.**
 
 ## The fixture is a decision, not a detail
 
@@ -116,55 +116,6 @@ The fix is to run these particular tests against the real engine —
 that they are slower and fewer. A suite of a hundred in-memory tests and three real
 ones is a better trade than a hundred and three tests of an engine you do not deploy.
 
-## Getting the real engine into the test
-
-Two pieces. First, stop the replacement:
-
-```java
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = Replace.NONE)
-class OrderRepositoryRealDbTests { ... }
-```
-
-Second, supply a real PostgreSQL. Boot's Testcontainers support wires the container's
-address into the auto-configuration for you, so there is no property plumbing:
-
-> A service connection is a connection to any remote service. Spring Boot's
-> auto-configuration can consume the details of a service connection and use them to
-> establish a connection to a remote service. When doing so, the connection details
-> take precedence over any connection-related configuration properties.
->
-> When using Testcontainers, connection details can be automatically created for a
-> service running in a container by annotating the container field in the test class.
-
-```java
-@Testcontainers
-@SpringBootTest
-class OrderIntegrationTests {
-
-    @Container
-    @ServiceConnection
-    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
-
-    // ... the tests from 20f–20i, now against the engine you deploy
-}
-```
-
-`@ServiceConnection` lives in
-`org.springframework.boot.testcontainers.service.connection`, and the container is
-managed by Testcontainers' own JUnit extension — "The extension is activated by
-applying the `@Testcontainers` annotation… You can then use the `@Container` annotation
-on static container fields."
-
-⚠️ **A reused container is shared state, and that interacts with everything above.**
-The reference notes that "a single test container instance can, and often is, retained
-across execution of tests from multiple test classes", because container beans are
-created once per application context and contexts are cached. So anything that
-genuinely commits — a `@Commit` test, an `ISOLATED` `@Sql` fixture, a `REQUIRES_NEW`
-boundary — is visible to every later test class sharing that container. The rollback
-default is what normally hides this; the moment you opt out of it, the blast radius is
-the whole suite rather than the class.
-
 ## Gotchas
 
 **⚠️ A class-level `@Sql` schema script that stops running**
@@ -186,8 +137,9 @@ to delete it again.
 violation.
 **Cause:** `@DataJpaTest` replaces the `DataSource` with an embedded in-memory database
 by default; none of that behaviour is the real engine's.
-**Fix:** `@AutoConfigureTestDatabase(replace = NONE)` against a real PostgreSQL for
-the handful of tests where engine behaviour is the subject.
+**Fix:** a real PostgreSQL under the handful of tests where engine behaviour is the
+subject — [20k](20k-getting-the-real-engine-into-the-test.md) has the wiring, and the
+annotation most advice reaches for is not the one you want on Boot 4.
 
 **⚠️ A stray `.sql` file named after the test class**
 **Symptom:** fixture data appears that no annotation in the test declares.
@@ -195,23 +147,6 @@ the handful of tests where engine behaviour is the subject.
 or `<ClassName>.<methodName>.sql` at method level.
 **Fix:** name fixture scripts something else, or declare them explicitly. When
 debugging a phantom fixture, look for the conventional filename first.
-
-**⚠️ Committed data crossing test classes through a shared container**
-**Symptom:** a test fails only when the whole suite runs, and only after some other
-class ran first.
-**Cause:** a container instance is "often… retained across execution of tests from
-multiple test classes", so an `ISOLATED` fixture or a `@Commit` test leaves rows behind
-for every later class on that container.
-**Fix:** delete what you commit, in an `AFTER_TEST_METHOD` script or an
-`@AfterTransaction` method — not at the end of the test body.
-
-**⚠️ `@DataJpaTest` plus `@AutoConfigureTestDatabase(replace = NONE)` and no container**
-**Symptom:** the test connects to whatever `spring.datasource.url` resolves to —
-possibly a developer's real database.
-**Cause:** turning off the replacement restores the ordinary auto-configuration; it
-does not supply a database.
-**Fix:** pair `replace = NONE` with a container, always. The two annotations are one
-decision.
 
 ## Interview questions
 
@@ -246,10 +181,10 @@ embedded in-memory database (replacing any explicit or usually auto-configured
 behaviour and the serialization failures it produces, `FOR UPDATE` / `SKIP LOCKED` /
 `NOWAIT` semantics, deadlock detection, `statement_timeout` and its relatives, dialect
 and type behaviour such as `jsonb` or sequence allocation, and the constraint names an
-exception translator keys on. The remedy is not to make every test real: it is
-`@AutoConfigureTestDatabase(replace = NONE)` against a real PostgreSQL for the small
-number of tests whose subject *is* engine behaviour, and to be honest that the rest are
-testing your mapping, not your database.
+exception translator keys on. The remedy is not to make every test real: it is a real PostgreSQL under the small
+number of tests whose subject *is* engine behaviour — see
+[20k](20k-getting-the-real-engine-into-the-test.md) — and to be honest that the rest
+are testing your mapping, not your database.
 
 **★ You have exactly one integration test's worth of budget for a new service method.
 What does it assert?**
@@ -262,28 +197,6 @@ which is the entire list of silent failures in this topic. The mapping assertion
 the flush discipline matter too, but they belong in cheaper tests; if only one test can
 be real, make it the one that only a real transaction can answer.
 
-**★ How do you actually get a real PostgreSQL under an integration test in Boot 4?**
-Two annotations doing two different jobs. `@AutoConfigureTestDatabase(replace = NONE)`
-stops `@DataJpaTest` swapping the `DataSource` for an embedded one — on its own that
-just restores the ordinary auto-configuration, so it points at whatever
-`spring.datasource.url` resolves to, which may be a developer's real database.
-Testcontainers supplies the engine: a `static` `@Container` field annotated
-`@ServiceConnection`, which makes Boot create the connection details for it, and those
-details "take precedence over any connection-related configuration properties". Treat
-the pair as a single decision — `replace = NONE` without a container is a footgun.
-
-**★ Testcontainers reuses one container across test classes. Why does that matter for
-transaction tests specifically?**
-Because the rollback default is what normally makes a shared database safe, and every
-technique in this chunk group that is worth using opts out of it somewhere. The
-documentation is explicit that "a single test container instance can, and often is,
-retained across execution of tests from multiple test classes" — container beans are
-created once per application context, and contexts are cached. So an `ISOLATED` `@Sql`
-fixture, a `@Commit` test or a `REQUIRES_NEW` service boundary leaves committed rows
-visible to every later test class on that container. The blast radius of forgetting a
-cleanup is the whole suite rather than the class, and the failure surfaces in a file
-that has nothing to do with the mistake.
-
 **★ A test class picks up fixture data and there is no `@Sql` naming a script. How?**
 Almost certainly the default-detection convention: `@Sql` with no `scripts` attribute
 resolves to `classpath:<package>/<ClassName>.sql` at class level, or
@@ -295,4 +208,4 @@ in one class and nowhere else.
 
 ---
 
-← Prev: [20i · Committing, and what participates](20i-committing-and-what-participates.md) · Index: [Spring @Transactional](README.md) · Next → [21 · What belongs in a transaction](21-what-belongs-in-a-transaction.md)
+← Prev: [20i · Committing, and what participates](20i-committing-and-what-participates.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20k · Getting the real engine in](20k-getting-the-real-engine-into-the-test.md)

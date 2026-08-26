@@ -238,4 +238,4 @@ operation spanning both needs a design decision rather than an annotation.
 
 ---
 
-← Prev: [8b · Batches and bulk](08b-batches-and-bulk-writes.md) · Index: [SQL-first access](README.md) · Next → [10 · When SQL wins](10-when-sql-first-beats-an-entity.md)
+← Prev: [8b · Batches and bulk](08b-batches-and-bulk-writes.md) · Index: [05 · SQL-first access](README.md) · Next → [10 · When SQL wins](10-when-sql-first-beats-an-entity.md)

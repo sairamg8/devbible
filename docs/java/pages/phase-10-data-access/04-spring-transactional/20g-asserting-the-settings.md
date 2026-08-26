@@ -1,7 +1,7 @@
 ---
 title: "A boundary that exists can still have the wrong settings — and the manager reports what the actual transaction got, not what your annotation asked for"
 sidebar_label: "20g · Asserting the settings"
-sidebar_position: 58
+sidebar_position: 59
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -254,4 +254,4 @@ test method after the boundary has closed.
 
 ---
 
-← Prev: [20f · Asserting the boundary exists](20f-asserting-the-boundary-exists.md) · Index: [Spring @Transactional](README.md) · Next → [20h · Asserting the commit](20h-asserting-the-commit.md)
+← Prev: [20f · Asserting the boundary exists](20f-asserting-the-boundary-exists.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20h · Asserting the commit](20h-asserting-the-commit.md)

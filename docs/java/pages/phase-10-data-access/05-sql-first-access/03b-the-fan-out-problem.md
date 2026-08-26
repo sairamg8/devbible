@@ -202,8 +202,6 @@ returns the extracted object directly; and `query(RowCallbackHandler)` returns
 because the same three callbacks are visibly three overloads of one method instead
 of scattered across a dozen `query`/`queryForObject`/`queryForList` signatures.
 
-<!--FOOTER-->
-
 ---
 
-← Prev: [3 · `RowMapper` and friends](03-rowmapper.md) · Index: [SQL-first access](README.md) · Next → [3c · Two queries, and `LIMIT`](03c-two-queries-and-limit.md)
+← Prev: [3 · `RowMapper` and friends](03-rowmapper.md) · Index: [05 · SQL-first access](README.md) · Next → [3c · Two queries, and `LIMIT`](03c-two-queries-and-limit.md)

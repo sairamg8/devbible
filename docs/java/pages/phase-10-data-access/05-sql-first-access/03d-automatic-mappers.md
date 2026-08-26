@@ -292,4 +292,4 @@ shapes in the domain package is how a codebase ends up with fifteen near-identic
 
 ---
 
-← Prev: [3c · Two queries, and `LIMIT`](03c-two-queries-and-limit.md) · Index: [SQL-first access](README.md) · Next → [4 · `JdbcClient`](04-jdbcclient.md)
+← Prev: [3c · Two queries, and `LIMIT`](03c-two-queries-and-limit.md) · Index: [05 · SQL-first access](README.md) · Next → [4 · `JdbcClient`](04-jdbcclient.md)

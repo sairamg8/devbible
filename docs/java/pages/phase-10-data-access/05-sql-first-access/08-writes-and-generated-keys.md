@@ -273,4 +273,4 @@ in the `SET`, is one column and one comparison and it is why every ORM has one.
 
 ---
 
-← Prev: [7 · Empty results](07-queryforobject-and-empty.md) · Index: [SQL-first access](README.md) · Next → [8b · Batches and bulk](08b-batches-and-bulk-writes.md)
+← Prev: [7 · Empty results](07-queryforobject-and-empty.md) · Index: [05 · SQL-first access](README.md) · Next → [8b · Batches and bulk](08b-batches-and-bulk-writes.md)

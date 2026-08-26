@@ -274,4 +274,4 @@ not-ready until the warmer has finished.
 
 ---
 
-← Prev: [3 · The self-invocation trap](03-the-self-invocation-trap.md) · Index: [Spring @Transactional](README.md) · Next → [3c · Bound receivers](03c-bound-receivers.md)
+← Prev: [3 · The self-invocation trap](03-the-self-invocation-trap.md) · Index: [04 · Spring @Transactional](README.md) · Next → [3c · Bound receivers](03c-bound-receivers.md)

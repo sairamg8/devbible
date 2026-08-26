@@ -1,7 +1,7 @@
 ---
 title: "The test passes because nothing was ever flushed — the same code throws in production, and Spring's own documentation warns about exactly this"
 sidebar_label: "20b · The false positives"
-sidebar_position: 53
+sidebar_position: 54
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -284,4 +284,4 @@ recommended.
 
 ---
 
-← Prev: [20 · Transactions in tests](20-transactions-in-tests.md) · Index: [Spring @Transactional](README.md) · Next → [20c · The other ways a test lies](20c-the-other-ways-a-test-lies.md)
+← Prev: [20 · Transactions in tests](20-transactions-in-tests.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20c · The other ways a test lies](20c-the-other-ways-a-test-lies.md)

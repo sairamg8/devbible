@@ -242,4 +242,4 @@ supplies. So the injection story is unchanged from
 
 ---
 
-← Prev: [5 · Named parameters](05-named-parameters.md) · Index: [SQL-first access](README.md) · Next → [6 · The exception hierarchy](06-the-exception-hierarchy.md)
+← Prev: [5 · Named parameters](05-named-parameters.md) · Index: [05 · SQL-first access](README.md) · Next → [6 · The exception hierarchy](06-the-exception-hierarchy.md)

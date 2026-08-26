@@ -279,4 +279,4 @@ handle with a custom translator.
 
 ---
 
-← Prev: [6 · The exception hierarchy](06-the-exception-hierarchy.md) · Index: [SQL-first access](README.md) · Next → [6c · On PostgreSQL](06c-what-to-catch-on-postgresql.md)
+← Prev: [6 · The exception hierarchy](06-the-exception-hierarchy.md) · Index: [05 · SQL-first access](README.md) · Next → [6c · On PostgreSQL](06c-what-to-catch-on-postgresql.md)

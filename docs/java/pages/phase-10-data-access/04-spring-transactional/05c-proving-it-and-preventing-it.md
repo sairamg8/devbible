@@ -282,4 +282,4 @@ in the project produces it.
 
 ---
 
-← Prev: [5b · Detecting a dead annotation](05b-detecting-a-dead-annotation.md) · Index: [Spring @Transactional](README.md) · Next → [6 · The transaction manager](06-the-transaction-manager.md)
+← Prev: [5b · Detecting a dead annotation](05b-detecting-a-dead-annotation.md) · Index: [04 · Spring @Transactional](README.md) · Next → [6 · The transaction manager](06-the-transaction-manager.md)

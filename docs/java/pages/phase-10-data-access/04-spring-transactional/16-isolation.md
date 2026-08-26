@@ -1,7 +1,7 @@
 ---
 title: "Isolation on @Transactional applies only to a transaction Spring actually starts — set it on a method that joins one and it is discarded without a sound"
 sidebar_label: "16 · Isolation"
-sidebar_position: 44
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -274,4 +274,4 @@ documents neither of them reliably.
 
 ---
 
-← Prev: [15b · Where read-only pays](15b-where-read-only-pays.md) · Index: [Spring @Transactional](README.md) · Next → [16b · Isolation in the plumbing](16b-isolation-in-the-plumbing.md)
+← Prev: [15b · Where read-only pays](15b-where-read-only-pays.md) · Index: [04 · Spring @Transactional](README.md) · Next → [16b · Isolation in the plumbing](16b-isolation-in-the-plumbing.md)

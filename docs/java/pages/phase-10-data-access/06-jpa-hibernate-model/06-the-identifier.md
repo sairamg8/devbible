@@ -281,4 +281,4 @@ database cannot enforce the uniqueness the whole identity map depends on.
 
 ---
 
-← Prev: [5b · Large columns and @Lob](05b-lobs-and-large-columns.md) · Index: [The JPA/Hibernate model](README.md) · Next → [7 · @GeneratedValue and IDENTITY](07-generatedvalue-identity.md)
+← Prev: [5b · Large columns and @Lob](05b-lobs-and-large-columns.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [7 · @GeneratedValue and IDENTITY](07-generatedvalue-identity.md)

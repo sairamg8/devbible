@@ -293,4 +293,4 @@ to the outer commit, where the stack trace tells you nothing about the cause.
 
 ---
 
-← Prev: [6b · The implementations](06b-which-manager-you-have.md) · Index: [Spring @Transactional](README.md) · Next → [6d · The status handle](06d-the-status-handle.md)
+← Prev: [6b · The implementations](06b-which-manager-you-have.md) · Index: [04 · Spring @Transactional](README.md) · Next → [6d · The status handle](06d-the-status-handle.md)

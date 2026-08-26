@@ -270,4 +270,4 @@ operation you want is `merge`.
 
 ---
 
-← Prev: [11b · The find that issues no SQL](11b-find-that-issues-no-sql.md) · Index: [The JPA/Hibernate model](README.md) · Next → [13 · persist, find, getReference](13-persist-find-getreference.md)
+← Prev: [11b · The find that issues no SQL](11b-find-that-issues-no-sql.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [13 · persist, find, getReference](13-persist-find-getreference.md)

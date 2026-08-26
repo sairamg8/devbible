@@ -1,7 +1,7 @@
 ---
 title: "The reactive model puts the transaction in the subscriber context instead of a ThreadLocal, and virtual threads change the economics of blocking without changing the model at all"
 sidebar_label: "18b · Reactive and virtual threads"
-sidebar_position: 49
+sidebar_position: 50
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -295,4 +295,4 @@ pipeline where backpressure is the actual requirement.
 
 ---
 
-← Prev: [18 · Threads and @Async](18-threads-and-async.md) · Index: [Spring @Transactional](README.md) · Next → [19 · Transactional events](19-transactional-events.md)
+← Prev: [18 · Threads and @Async](18-threads-and-async.md) · Index: [04 · Spring @Transactional](README.md) · Next → [19 · Transactional events](19-transactional-events.md)

@@ -285,4 +285,4 @@ you would actually be standing when you asked.
 
 ---
 
-← Prev: [7b · Getting the connection safely](07b-getting-the-connection-safely.md) · Index: [Spring @Transactional](README.md) · Next → [8b · Whose settings win](08b-whose-settings-win.md)
+← Prev: [7b · Getting the connection safely](07b-getting-the-connection-safely.md) · Index: [04 · Spring @Transactional](README.md) · Next → [8b · Whose settings win](08b-whose-settings-win.md)

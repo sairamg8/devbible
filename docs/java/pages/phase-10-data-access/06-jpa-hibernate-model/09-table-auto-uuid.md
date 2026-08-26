@@ -247,4 +247,4 @@ will each beat it.
 
 ---
 
-← Prev: [8b · Sequences on PostgreSQL](08b-sequence-on-postgres.md) · Index: [The JPA/Hibernate model](README.md) · Next → [10 · equals and hashCode](10-equals-and-hashcode.md)
+← Prev: [8b · Sequences on PostgreSQL](08b-sequence-on-postgres.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [10 · equals and hashCode](10-equals-and-hashcode.md)

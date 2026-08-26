@@ -295,4 +295,4 @@ when you cannot edit the code that calls `getConnection`, not as a default.
 
 ---
 
-← Prev: [6 · The transaction manager](06-the-transaction-manager.md) · Index: [Spring @Transactional](README.md) · Next → [6c · What Boot picked for you](06c-what-boot-picked-for-you.md)
+← Prev: [6 · The transaction manager](06-the-transaction-manager.md) · Index: [04 · Spring @Transactional](README.md) · Next → [6c · What Boot picked for you](06c-what-boot-picked-for-you.md)

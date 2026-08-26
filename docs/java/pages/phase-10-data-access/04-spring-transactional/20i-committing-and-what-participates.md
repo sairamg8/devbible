@@ -1,7 +1,7 @@
 ---
 title: "Committing in a test is a debt you take on, and the propagation of the code under test decides how much of it the rollback was ever paying"
 sidebar_label: "20i · Committing, and what participates"
-sidebar_position: 60
+sidebar_position: 61
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -227,4 +227,4 @@ diagnose because the failing test is not the broken one.
 
 ---
 
-← Prev: [20h · Asserting the commit](20h-asserting-the-commit.md) · Index: [Spring @Transactional](README.md) · Next → [20j · The fixture and the real database](20j-the-fixture-and-the-real-database.md)
+← Prev: [20h · Asserting the commit](20h-asserting-the-commit.md) · Index: [04 · Spring @Transactional](README.md) · Next → [20j · The fixture and the real database](20j-the-fixture-and-the-real-database.md)

@@ -220,4 +220,4 @@ you hit first.
 
 ---
 
-← Prev: [6 · The identifier](06-the-identifier.md) · Index: [The JPA/Hibernate model](README.md) · Next → [7b · IDENTITY kills batching](07b-identity-kills-batching.md)
+← Prev: [6 · The identifier](06-the-identifier.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [7b · IDENTITY kills batching](07b-identity-kills-batching.md)

@@ -212,4 +212,4 @@ rather than by module.
 
 ---
 
-← Prev: [10 · When SQL wins](10-when-sql-first-beats-an-entity.md) · Index: [SQL-first access](README.md) · Next → [11 · Mixing both](11-mixing-both.md)
+← Prev: [10 · When SQL wins](10-when-sql-first-beats-an-entity.md) · Index: [05 · SQL-first access](README.md) · Next → [11 · Mixing both](11-mixing-both.md)

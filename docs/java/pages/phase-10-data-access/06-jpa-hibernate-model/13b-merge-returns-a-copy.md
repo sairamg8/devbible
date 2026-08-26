@@ -281,4 +281,4 @@ loss.
 
 ---
 
-← Prev: [13 · persist, find, getReference](13-persist-find-getreference.md) · Index: [The JPA/Hibernate model](README.md) · Next → [13c · remove, refresh, detach, clear](13c-remove-refresh-detach-clear.md)
+← Prev: [13 · persist, find, getReference](13-persist-find-getreference.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [13c · remove, refresh, detach, clear](13c-remove-refresh-detach-clear.md)

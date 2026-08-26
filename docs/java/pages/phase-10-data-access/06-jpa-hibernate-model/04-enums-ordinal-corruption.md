@@ -295,4 +295,4 @@ which is not something test suites normally carry.
 
 ---
 
-← Prev: [3 · Fields, columns, access](03-fields-columns-access.md) · Index: [The JPA/Hibernate model](README.md) · Next → [5 · Embeddables and converters](05-embeddables-lobs-converters.md)
+← Prev: [3 · Fields, columns, access](03-fields-columns-access.md) · Index: [06 · The JPA/Hibernate model](README.md) · Next → [5 · Embeddables and converters](05-embeddables-lobs-converters.md)
