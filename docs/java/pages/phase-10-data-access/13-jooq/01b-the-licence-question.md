@@ -221,4 +221,4 @@ plus the schema-drift bugs jOOQ prevents". For a PostgreSQL shop the comparison 
 arises, because the answer is free — which is why establishing the database first is the
 whole conversation.
 
-<!--FOOTER-->
+{/* FOOTER */}

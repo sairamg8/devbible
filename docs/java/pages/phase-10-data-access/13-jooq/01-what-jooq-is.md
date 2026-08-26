@@ -223,4 +223,4 @@ Nothing, until they do. The stale constants keep compiling and the query fails a
 against the real database — the exact failure mode jOOQ was adopted to prevent. Which is why
 generation must be wired into the build, not run by hand.
 
-<!--FOOTER-->
+{/* FOOTER */}

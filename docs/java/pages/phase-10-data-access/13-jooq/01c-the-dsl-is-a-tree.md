@@ -265,4 +265,4 @@ the option of keeping SQL in `.sql` files that a DBA can review. Those are real,
 turns the SQL into Java expressions checked by the compiler against a generated model of the
 real schema; `JdbcClient` leaves it as an opaque string.
 
-<!--FOOTER-->
+{/* FOOTER */}
