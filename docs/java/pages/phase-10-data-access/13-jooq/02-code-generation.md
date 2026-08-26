@@ -60,7 +60,7 @@ There are three practical sources, and the choice matters more than it first app
 A live database is the highest-fidelity option — it is the actual catalogue, including
 everything a parser might not understand. It is also the one that makes your build depend on a
 server being up, which is the objection people raise first and the reason
-**[02c · Generating from migrations](02c-generating-from-migrations.md)** exists.
+**[02d · Generating from migrations](02d-generating-from-migrations.md)** exists.
 
 ⚠️ The extension-based sources live in a separate artifact, `org.jooq:jooq-meta-extensions`,
 not in `jooq-meta` itself.
