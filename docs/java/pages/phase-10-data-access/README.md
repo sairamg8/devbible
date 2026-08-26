@@ -18,9 +18,8 @@ The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
 debug an abstraction you've never seen under.
 
-🚧 **5 of 14 written** — and topics 05, 06 and 08 are part-written on top of that
-(96 further chunks on disk, all wired and link-clean; see each topic index for what
-is outstanding).
+🚧 **7 of 14 written** — and topic 08 is part-written on top of that (40 further
+chunks on disk, all wired and link-clean; see its index for what is outstanding).
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,10 +27,10 @@ is outstanding).
 | 02 | **[Connection pooling with HikariCP](02-connection-pooling/README.md)** | <span className="db-tier t-understand">Understand</span> | Small pools, leak detection, "connection is not available" |
 | 03 | **[Transactions at the JDBC level](03-jdbc-transactions/README.md)** | <span className="db-tier t-understand">Understand</span> | Isolation levels mapped to real anomalies |
 | 04 | **[Spring `@Transactional`](04-spring-transactional/README.md)** | <span className="db-tier t-master">Master</span> | Proxy mechanics, rollback rules, the self-invocation trap |
-| 05 | **[SQL-first access](05-sql-first-access/README.md)** 🚧 23/24 | <span className="db-tier t-understand">Understand</span> | `JdbcTemplate`/`JdbcClient` — when typed SQL beats entities |
-| 06 | **[The JPA/Hibernate model](06-jpa-hibernate-model/README.md)** 🚧 22/30 | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
+| 05 | **[SQL-first access](05-sql-first-access/README.md)** | <span className="db-tier t-understand">Understand</span> | `JdbcTemplate`/`JdbcClient` — when typed SQL beats entities |
+| 06 | **[The JPA/Hibernate model](06-jpa-hibernate-model/README.md)** | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
 | 07 | **[Relationships and fetch types](07-relationships-fetch/README.md)** | <span className="db-tier t-understand">Understand</span> | Owning side, `mappedBy` — `EAGER` on a collection is a time bomb |
-| 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** 🚧 23/~42 | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
+| 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** 🚧 | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
 | 09 | **Spring Data JPA** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
 | 10 | **Lazy-loading pitfalls** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
 | 11 | **Migrations with Flyway** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
