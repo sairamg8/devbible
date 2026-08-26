@@ -99,7 +99,7 @@ association or an id that is generated on flush.** Lombok's `@Data` and
 Without bytecode enhancement it is advisory and generally ignored, so your
 half-megabyte blob is on every row of every query that touches that entity. If
 you need lazy columns, you need enhancement configured in the build — see
-**chunk 13** *(not written yet)*.
+[13c · Bytecode enhancement](13c-bytecode-enhancement.md).
 
 **⚠️ Enabling enhancement and finding one lazy column pulls in the others.**
 That is the default lazy group at work: all singular lazy attributes load
@@ -206,4 +206,4 @@ rather than composing cleanly.
 
 ---
 
-← Prev: [4d · The ones you cannot make lazy](04d-the-ones-you-cannot-make-lazy.md) · Index: [The N+1 problem](README.md) · Next → [5 · Turning the SQL on](05-turning-the-sql-on.md)
+← Prev: [4d · The ones you cannot make lazy](04d-the-ones-you-cannot-make-lazy.md) · Index: [08 · The N+1 problem](README.md) · Next → [5 · Turning the SQL on](05-turning-the-sql-on.md)

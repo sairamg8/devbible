@@ -1,7 +1,7 @@
 ---
 title: "Below 7.4 you page the ids first and fetch the graph second — and the forgotten order by in step two is the bug everyone writes"
 sidebar_label: "8d2 · Paginating before 7.4"
-sidebar_position: 22
+sidebar_position: 21
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -65,7 +65,7 @@ Page<Order> page = orders.findByPlacedAtAfter(cutoff, pageable);   // no fetch j
 
 The limit is unambiguous because no join multiplies rows, and the collections
 come back in a small number of batched selects rather than one per order. This is
-**chunk 10** *(not written yet)*'s central argument — that batch fetching's real
+[10 · `@BatchSize`](10-batch-size.md)'s central argument — that batch fetching's real
 virtue is composability — and pagination is the clearest case of it.
 
 ## Gotchas
@@ -155,4 +155,4 @@ fetch joins is really a restriction on to-many fetches.
 
 ---
 
-← Prev: [8e · MultipleBagFetchException](08e-multiplebagfetchexception.md) · Index: [The N+1 problem](README.md) · Next → [8e2 · The three ways out](08e2-the-three-ways-out.md)
+← Prev: [8d · Pagination](08d-pagination.md) · Index: [08 · The N+1 problem](README.md) · Next → [8e · MultipleBagFetchException](08e-multiplebagfetchexception.md)

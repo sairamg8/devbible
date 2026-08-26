@@ -99,7 +99,8 @@ habit: you want to *count*, not read.
 
 It is tempting to conclude that lazy loading was a mistake. It was not, and
 understanding why keeps you from over-correcting into the two non-fixes in
-**chunks 15** *(not written yet)* and **16** *(not written yet)*.
+[15 · Open session in view](15-open-in-view.md) and
+[16 · `EAGER` is not a fix](16-eager-is-not-a-fix.md).
 
 An object graph in a database is, in the general case, connected: follow enough
 associations from any row and you reach most of the schema. The guide makes the
@@ -218,7 +219,8 @@ performance chapter notes that an EAGER association "cannot be overwritten on a
 per query basis", so you lose the ability to say "not this time", and you gain a
 *new* N+1 when a JPQL query forgets to join the eager association and Hibernate
 resolves it with a secondary select anyway. The lazy default is correct; the fix
-belongs at the call site. **Chunk 16** *(not written yet)* is the long form.
+belongs at the call site. [16 · `EAGER` is not a fix](16-eager-is-not-a-fix.md) is the
+long form.
 
 **★ If lazy loading is what causes this, isn't lazy loading badly designed?**
 It is designed with a known and accepted trade-off, and it is worth being able to
@@ -246,4 +248,4 @@ fails the build rather than relying on a human noticing. That is
 
 ---
 
-← Prev: [1b · The general rule](01b-the-general-rule.md) · Index: [The N+1 problem](README.md) · Next → [3 · Why production is worse](03-why-production-is-worse.md)
+← Prev: [1b · The general rule](01b-the-general-rule.md) · Index: [08 · The N+1 problem](README.md) · Next → [3 · Why production is worse](03-why-production-is-worse.md)

@@ -1,7 +1,7 @@
 ---
 title: "cannot simultaneously fetch multiple bags — the exception is Hibernate refusing to give you a wrong answer, and changing List to Set is only one of two honest fixes"
 sidebar_label: "8e · MultipleBagFetchException"
-sidebar_position: 21
+sidebar_position: 22
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -205,4 +205,4 @@ is a row count, not the presence or absence of an exception.
 
 ---
 
-← Prev: [8d · Pagination](08d-pagination.md) · Index: [The N+1 problem](README.md) · Next → [8d2 · Paginating before 7.4](08d2-paginating-on-older-versions.md)
+← Prev: [8d2 · Paginating before 7.4](08d2-paginating-on-older-versions.md) · Index: [08 · The N+1 problem](README.md) · Next → [8e2 · The three ways out](08e2-the-three-ways-out.md)

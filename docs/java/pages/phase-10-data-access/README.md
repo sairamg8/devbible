@@ -18,8 +18,8 @@ The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
 debug an abstraction you've never seen under.
 
-🚧 **7 of 14 written** — and topic 08 is part-written on top of that (40 further
-chunks on disk, all wired and link-clean; see its index for what is outstanding).
+🚧 **8 of 14 written** — 335 chunks, ~88,000 lines, 0 over the 300-line cap and 0
+dangling links. Topics 09–14 are scaffolded with chunk plans and are the remaining work.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -30,7 +30,7 @@ chunks on disk, all wired and link-clean; see its index for what is outstanding)
 | 05 | **[SQL-first access](05-sql-first-access/README.md)** | <span className="db-tier t-understand">Understand</span> | `JdbcTemplate`/`JdbcClient` — when typed SQL beats entities |
 | 06 | **[The JPA/Hibernate model](06-jpa-hibernate-model/README.md)** | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
 | 07 | **[Relationships and fetch types](07-relationships-fetch/README.md)** | <span className="db-tier t-understand">Understand</span> | Owning side, `mappedBy` — `EAGER` on a collection is a time bomb |
-| 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** 🚧 | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
+| 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
 | 09 | **Spring Data JPA** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
 | 10 | **Lazy-loading pitfalls** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
 | 11 | **Migrations with Flyway** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |

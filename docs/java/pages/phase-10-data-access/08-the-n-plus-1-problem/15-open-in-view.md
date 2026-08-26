@@ -1,7 +1,7 @@
 ---
 title: "Open session in view is on by default in Spring Boot, and it is not a fix — it is the mechanism that makes every N+1 in this topic invisible while making each one more expensive"
 sidebar_label: "15 · Open session in view"
-sidebar_position: 58
+sidebar_position: 53
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -261,4 +261,6 @@ because that is a consistency property rather than a speed one — a response as
 at different points in time can be internally inconsistent no matter how quick it was. OSIV's real
 cost is not that it makes things slow; it is that it makes both of those questions invisible.
 
-<!--FOOTER-->
+---
+
+← Prev: [14d · Worked: the detail view](14d-the-detail-view.md) · Index: [08 · The N+1 problem](README.md) · Next → [15b · What it costs](15b-what-open-in-view-costs.md)

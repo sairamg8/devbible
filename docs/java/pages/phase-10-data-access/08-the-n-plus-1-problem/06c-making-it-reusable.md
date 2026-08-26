@@ -213,4 +213,4 @@ underlying problem the tests are correctly reporting.
 
 ---
 
-← Prev: [6b · Asserting the count](06b-asserting-the-count-in-a-test.md) · Index: [The N+1 problem](README.md) · Next → [6d · Proxies and agents](06d-proxies-and-agents.md)
+← Prev: [6b · Asserting the count](06b-asserting-the-count-in-a-test.md) · Index: [08 · The N+1 problem](README.md) · Next → [6d · Proxies and agents](06d-proxies-and-agents.md)

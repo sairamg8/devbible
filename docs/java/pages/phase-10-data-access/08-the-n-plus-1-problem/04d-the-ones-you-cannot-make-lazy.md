@@ -99,12 +99,12 @@ lazily, then you need to enable lazy state initialization bytecode
 enhancement."* Enhancement rewrites the field access itself, so Hibernate
 intercepts the read rather than relying on a proxy object standing in the field —
 which means it no longer needs to decide anything at load time. Detail in
-**chunk 13** *(not written yet)*.
+[13c · Bytecode enhancement](13c-bytecode-enhancement.md).
 
 **Fetch it explicitly.** If the shape must stay and enhancement is not available,
 treat it like any other association you know you will need and join it —
 [chunk 8](08-join-fetch.md) — or batch it so the N becomes N/K —
-**chunk 10** *(not written yet)*.
+[10 · `@BatchSize`](10-batch-size.md).
 
 ## Case 2 · A `final` entity class or `final` accessors
 
@@ -229,8 +229,8 @@ nothing. The inverse side has no column, so the only way to populate the field a
 all is a query. That is why the same `fetch = LAZY` annotation is honoured on one
 side and quietly ignored on the other, and it is a good example of a JPA rule
 that only makes sense once you look at which table holds which column. The
-mapping mechanics themselves belong to **Topic 07 · Relationships and fetch
-types** *(not written yet)*.
+mapping mechanics themselves belong to
+[Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md).
 
 **★ Would you ever accept the eager inverse one-to-one rather than fix it?**
 Yes, in one situation: when the parent is only ever loaded one at a time. The
@@ -245,4 +245,4 @@ the unidirectional `@MapsId` form is the safer default.
 
 ---
 
-← Prev: [4c · Serialisation and logging](04c-serialization-and-logging.md) · Index: [The N+1 problem](README.md) · Next → [4e · Lazy columns and hashCode](04e-lazy-columns-and-hashcode.md)
+← Prev: [4c · Serialisation and logging](04c-serialization-and-logging.md) · Index: [08 · The N+1 problem](README.md) · Next → [4e · Lazy columns and hashCode](04e-lazy-columns-and-hashcode.md)

@@ -43,7 +43,7 @@ orders.stream().flatMap(o -> o.getLines().stream())   // reads as flattening
 
 Note the second line. **`@ManyToOne` is just as capable of N+1 as `@OneToMany`.**
 If the association was mapped `fetch = LAZY` — which it should be, per
-**Topic 07 · Relationships and fetch types** *(not written yet)* — then
+[Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md) — then
 `o.getCustomer().getName()` initialises a proxy, and it does so once per order.
 
 ## Shape 2 · The eager `@ManyToOne` on a list result
@@ -87,7 +87,7 @@ An eager one cannot be un-fetched at the call site at all — the only fix is to
 change the mapping, which is a change to every other caller too.
 
 This is the concrete reason the guide concludes *"So, EAGER fetching is to be
-avoided"*, and why **chunk 16** *(not written yet)* treats `EAGER` as a
+avoided"*, and why [16 · `EAGER` is not a fix](16-eager-is-not-a-fix.md) treats `EAGER` as a
 cause of N+1 rather than a cure for it.
 
 ### Why the default is EAGER at all
@@ -135,7 +135,8 @@ Generated mappers — MapStruct and similar — have exactly this property, with
 additional twist that the dereferencing code does not exist in your source at all
 until the annotation processor writes it.
 
-The fix has a shape worth naming now, because **chunk 12** *(not written yet)*
+The fix has a shape worth naming now, because
+[12 · Projections and DTOs](12-projections-and-dtos.md)
 argues it at length: if the destination of every one of these calls is a DTO
 with three fields, **the entity was never the right thing to load**. A mapper
 from an entity to a DTO is a strong signal that a projection would have been
@@ -180,7 +181,7 @@ your source until the annotation processor writes it.
 three fields.**
 That is treating the symptom. A mapper from an entity to a small DTO is the
 strongest available signal that the entity was never the right thing to load —
-see **chunk 12** *(not written yet)*.
+see [12 · Projections and DTOs](12-projections-and-dtos.md).
 
 ## Interview questions
 
@@ -230,7 +231,7 @@ before the mapper ran. Then ask the more useful question: what does `OrderDto`
 actually contain? If it is a handful of scalar fields, the right fix is not to
 fetch-join the entity graph so the mapper keeps working — it is to stop loading
 entities and select the fields directly, which is
-**chunk 12** *(not written yet)*.
+[12 · Projections and DTOs](12-projections-and-dtos.md).
 
 **★ Does a hand-written JPQL `@Query` protect you from N+1?**
 Only for the associations it actually fetches, and only if none of the untouched
@@ -244,4 +245,4 @@ from the fact that a human wrote it.
 
 ---
 
-← Prev: [3 · Why production is worse](03-why-production-is-worse.md) · Index: [The N+1 problem](README.md) · Next → [4b · Three more shapes](04b-three-more-shapes.md)
+← Prev: [3 · Why production is worse](03-why-production-is-worse.md) · Index: [08 · The N+1 problem](README.md) · Next → [4b · Three more shapes](04b-three-more-shapes.md)

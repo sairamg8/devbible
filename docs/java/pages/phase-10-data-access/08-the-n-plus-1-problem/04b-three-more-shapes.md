@@ -108,8 +108,8 @@ outright exception. Fetching two collections in one query multiplies their rows
 together, and if both are mapped as `List` without an `@OrderColumn` you get
 `MultipleBagFetchException` instead — see
 [chunk 8e](08e-multiplebagfetchexception.md). The nested case is where subselect
-fetching (**chunk 11** *(not written yet)*) and batch fetching
-(**chunk 10** *(not written yet)*) genuinely earn their place.
+fetching ([11 · `@Fetch(SUBSELECT)`](11-subselect.md)) and batch fetching
+([10 · `@BatchSize`](10-batch-size.md)) genuinely earn their place.
 
 **⚠️ Missing the write-side version because you only look at `select`s.**
 N loads followed by N updates at flush is the same pathology and holds row locks
@@ -130,7 +130,7 @@ attached.
 It fixes the round trips — one query instead of N — but it does not fetch any
 associations, so if the loop body dereferences one you have merely moved the
 N+1 down a level. Combine it with an entity graph
-(**chunk 9** *(not written yet)*) when the loop body navigates.
+([9 · Entity graphs](09-entity-graph.md)) when the loop body navigates.
 
 **⚠️ Not recognising shape 6 because the query is well written.**
 `buildFor(id)` may be a model of good data access. That is irrelevant: it is
@@ -193,8 +193,8 @@ in SQL, which walks the whole tree in a single statement and returns it as a fla
 result you can assemble in memory. Hibernate 7 supports CTEs in HQL directly, and
 a plain SQL query through `JdbcClient` is often simpler still. This is the
 clearest case in the whole topic where the right answer is to leave the object
-graph behind and write a query, which is what **Topic 05 · SQL-first access**
-*(not written yet)* argues in general.
+graph behind and write a query, which is what
+[Topic 05 · SQL-first access](../05-sql-first-access/README.md) argues in general.
 
 **★ You replaced a loop of `findById` with `findAllById`. Are you done?**
 Only if the loop body does not navigate. `findAllById` collapses N primary-key
@@ -208,4 +208,4 @@ applying one mechanical substitution.
 
 ---
 
-← Prev: [4 · The shapes it hides in](04-the-shapes-it-hides-in.md) · Index: [The N+1 problem](README.md) · Next → [4c · Serialisation and logging](04c-serialization-and-logging.md)
+← Prev: [4 · The shapes it hides in](04-the-shapes-it-hides-in.md) · Index: [08 · The N+1 problem](README.md) · Next → [4c · Serialisation and logging](04c-serialization-and-logging.md)

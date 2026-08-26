@@ -105,8 +105,8 @@ than four spellings of one:
 |---|---|---|
 | `left join fetch` in HQL/JPQL | in the query text | this one |
 | `From.fetch()` in a criteria query | in code, type-safe | below |
-| a JPA `EntityGraph` | as a declarative plan attached to the call | **9** *(not written yet)* |
-| a named fetch profile | as a named plan enabled for a session | **13** *(not written yet)* |
+| a JPA `EntityGraph` | as a declarative plan attached to the call | [9](09-entity-graph.md) |
+| a named fetch profile | as a named plan enabled for a session | [13](13-fetch-profiles.md) |
 
 Its own recommendation: *"Typically, a query is the most convenient option."*
 
@@ -145,7 +145,8 @@ Hence the guide's two tips that read as contradictory and are not:
 Its own resolution: *"It's saying that you must explicitly specify eager fetching
 for associations precisely when and where they are needed."* **Lazy in the
 mapping, eager at the call site.** That sentence is the design principle behind
-this entire topic, and **chunk 18** *(not written yet)* is its
+this entire topic, and
+[18 · Fetching belongs to the call site](18-fetching-belongs-to-the-call-site.md) is its
 long form.
 
 What a fetch join breaks — duplicate parents, pagination, and more than one
@@ -180,12 +181,13 @@ without the fetch.
 **⚠️ Assuming a fetch join on a `@ManyToOne` removes an eager N+1 everywhere.**
 It removes it for that query. Other queries returning the same entity still
 resolve the eager association with secondary selects, because the mapping is
-unchanged. That is **chunk 16** *(not written yet)*.
+unchanged. That is [16 · `EAGER` is not a fix](16-eager-is-not-a-fix.md).
 
 **⚠️ Expecting a fetch join to work on a derived-name repository method.**
 A method like `findByStatus` has no query text to add the clause to. Either write
 the `@Query`, or attach an `@EntityGraph` to the derived method —
-**chunk 9d** *(not written yet)*, which exists precisely for this.
+[9g · Spring Data `@EntityGraph`](09g-spring-data-entitygraph.md), which exists
+precisely for this.
 
 **⚠️ Using a fetch join in a subquery.**
 Disallowed, and the guide says why: "fetch joins are disallowed in subqueries,
@@ -256,4 +258,4 @@ thing being fetched onto.
 
 ---
 
-← Prev: [7 · From a count to a call site](07-from-a-count-to-a-call-site.md) · Index: [The N+1 problem](README.md) · Next → [8b · What it breaks](08b-what-a-fetch-join-breaks.md)
+← Prev: [7 · From a count to a call site](07-from-a-count-to-a-call-site.md) · Index: [08 · The N+1 problem](README.md) · Next → [8b · What it breaks](08b-what-a-fetch-join-breaks.md)

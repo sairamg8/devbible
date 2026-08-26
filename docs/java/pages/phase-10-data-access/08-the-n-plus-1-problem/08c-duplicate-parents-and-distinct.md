@@ -256,4 +256,4 @@ the hand-rolled Java version is neither.
 
 ---
 
-← Prev: [8b · What it breaks](08b-what-a-fetch-join-breaks.md) · Index: [The N+1 problem](README.md) · Next → [8d · Pagination](08d-pagination.md)
+← Prev: [8b · What it breaks](08b-what-a-fetch-join-breaks.md) · Index: [08 · The N+1 problem](README.md) · Next → [8d · Pagination](08d-pagination.md)

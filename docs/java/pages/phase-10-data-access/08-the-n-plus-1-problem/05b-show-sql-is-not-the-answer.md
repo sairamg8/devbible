@@ -226,4 +226,4 @@ you want it and no standing cost or exposure where you do not.
 
 ---
 
-← Prev: [5 · Turning the SQL on](05-turning-the-sql-on.md) · Index: [The N+1 problem](README.md) · Next → [6 · Count, do not read](06-count-do-not-read.md)
+← Prev: [5 · Turning the SQL on](05-turning-the-sql-on.md) · Index: [08 · The N+1 problem](README.md) · Next → [6 · Count, do not read](06-count-do-not-read.md)

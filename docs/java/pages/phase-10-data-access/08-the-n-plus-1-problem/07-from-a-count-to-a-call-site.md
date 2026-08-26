@@ -140,22 +140,22 @@ parent each statement was for — which usually identifies the loop.
 
 You have the line. Do not reach for a fetch join yet — the choice of fix depends
 on what the caller does with the data, and that question is what
-**chunk 14** *(not written yet)* is entirely about.
+[14 · Choosing a fix](14-choosing-a-fix.md) is entirely about.
 
 Ask, in this order:
 
 1. **Does the caller need entities at all,** or does it build a DTO? If a DTO,
-   the answer is a projection (**chunk 12** *(not written yet)*) and the
+   the answer is a projection ([12 · Projections and DTOs](12-projections-and-dtos.md)) and the
    fetch join is the wrong fix.
 2. **One collection or several?** One takes a fetch join
    ([chunk 8](08-join-fetch.md)); several will Cartesian-product and want
-   subselect or batch fetching (**chunk 11** *(not written yet)*,
-   **chunk 10** *(not written yet)*).
+   subselect or batch fetching ([11 · `@Fetch(SUBSELECT)`](11-subselect.md),
+   [10 · `@BatchSize`](10-batch-size.md)).
 3. **Is the query paginated?** That used to disqualify the fetch join and no
    longer does on Hibernate 7.4 — see [chunk 8d](08d-pagination.md), which is one
    of the most out-of-date pieces of received wisdom in the ecosystem.
 4. **Is this one call site or the general case?** A single call takes an entity
-   graph on that method (**chunk 9** *(not written yet)*); a general pattern across
+   graph on that method ([9 · Entity graphs](09-entity-graph.md)); a general pattern across
    many call sites may want batch fetching, which composes without a query
    rewrite.
 
@@ -282,4 +282,4 @@ is a good reason to re-measure after any fix rather than assuming it worked.
 
 ---
 
-← Prev: [6d · Proxies and agents](06d-proxies-and-agents.md) · Index: [The N+1 problem](README.md) · Next → [8 · join fetch](08-join-fetch.md)
+← Prev: [6d · Proxies and agents](06d-proxies-and-agents.md) · Index: [08 · The N+1 problem](README.md) · Next → [8 · join fetch](08-join-fetch.md)

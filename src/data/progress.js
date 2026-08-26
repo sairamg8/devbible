@@ -576,7 +576,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
-    updated: '2026-08-26 16:18',
+    updated: '2026-08-26 16:32',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
@@ -590,7 +590,7 @@ export const LANGUAGES = {
       {n: 7, slug: 'phase-7-io-time-stdlib', name: 'I/O, time and the everyday stdlib', part: 'Application', topics: 13, pages: 13},
       {n: 8, slug: 'phase-8-build-dependencies', name: 'The build: Maven, Gradle, dependencies', part: 'Application', topics: 12, pages: 12},
       {n: 9, slug: 'phase-9-spring-boot', name: 'Spring Boot and the web', part: 'Application', topics: 16, pages: 16},
-      {n: 10, slug: 'phase-10-data-access', name: 'Data access', part: 'Application', topics: 14, pages: 7, pagesPlanned: 14},
+      {n: 10, slug: 'phase-10-data-access', name: 'Data access', part: 'Application', topics: 14, pages: 8, pagesPlanned: 14},
       {n: 11, slug: 'phase-11-testing', name: 'Testing', part: 'Production', topics: 11, pages: 0},
       {n: 12, slug: 'phase-12-jvm-production', name: 'The JVM in production', part: 'Production', topics: 15, pages: 0},
       {n: 13, slug: 'phase-13-oauth2-oidc', name: 'OAuth2, OIDC and service security', part: 'Distributed', topics: 14, pages: 0},

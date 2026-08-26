@@ -263,4 +263,4 @@ the whole table rather than to the page size.
 
 ---
 
-← Prev: [8c · Duplicates and distinct](08c-duplicate-parents-and-distinct.md) · Index: [The N+1 problem](README.md) · Next → [8e · MultipleBagFetchException](08e-multiplebagfetchexception.md)
+← Prev: [8c · Duplicates and distinct](08c-duplicate-parents-and-distinct.md) · Index: [08 · The N+1 problem](README.md) · Next → [8d2 · Paginating before 7.4](08d2-paginating-on-older-versions.md)

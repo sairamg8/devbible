@@ -75,7 +75,8 @@ expensive to block, it is that the round trips are sequential and each one is
 real elapsed time.
 
 The only way to reduce the sum is to reduce the count of terms. That is what
-[chunk 8](08-join-fetch.md) does by making it one, and **chunk 10** *(not written yet)*
+[chunk 8](08-join-fetch.md) does by making it one, and
+[10 · `@BatchSize`](10-batch-size.md)
 does by making it N/K.
 
 ## It holds a connection the whole time
@@ -266,4 +267,4 @@ have.
 
 ---
 
-← Prev: [2 · Why nobody sees it](02-why-nobody-sees-it.md) · Index: [The N+1 problem](README.md) · Next → [4 · The shapes it hides in](04-the-shapes-it-hides-in.md)
+← Prev: [2 · Why nobody sees it](02-why-nobody-sees-it.md) · Index: [08 · The N+1 problem](README.md) · Next → [4 · The shapes it hides in](04-the-shapes-it-hides-in.md)

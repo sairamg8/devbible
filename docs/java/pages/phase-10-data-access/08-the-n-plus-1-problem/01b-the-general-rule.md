@@ -81,7 +81,7 @@ default for anything lazy — carries this warning in its javadoc:
 > retrieved from the second-level cache."*
 
 Note the word **alleviated**. Not solved. That distinction is the whole argument
-of **chunk 10** *(not written yet)*, and it is the most commonly misunderstood
+of [10 · `@BatchSize`](10-batch-size.md), and it is the most commonly misunderstood
 sentence in Hibernate's documentation.
 
 ## Gotchas
@@ -95,7 +95,7 @@ shape does not.
 **⚠️ Reading "alleviated" in the `FetchMode.SELECT` javadoc as "solved".**
 Hibernate's own wording for what `@BatchSize` and the second-level cache do is
 *alleviate*. They reduce the multiplier. Only a join removes it, and
-**chunk 10** *(not written yet)* argues why the reduced version is nevertheless
+[10 · `@BatchSize`](10-batch-size.md) argues why the reduced version is nevertheless
 sometimes the right answer.
 
 **⚠️ Hearing "only you can solve this" as a criticism of the framework.**
@@ -107,7 +107,7 @@ information exists only in the developer's intent.
 **⚠️ Applying the rule to the mapping instead of the call site.**
 "Specify all the data you're going to need" is advice about a *unit of work*, not
 about an entity. Implementing it by editing the entity's fetch types is exactly
-how `EAGER` gets added, which is **chunk 16** *(not written yet)*.
+how `EAGER` gets added, which is [16 · `EAGER` is not a fix](16-eager-is-not-a-fix.md).
 
 **⚠️ Assuming migrating off JPA fixes it.**
 Some shapes go with you. A DAO with `findLinesForOrder(orderId)` called in a loop
@@ -165,7 +165,7 @@ bytes over the wire and in memory. They matter together because the standard cur
 for N+1 — a fetch join — is exactly what produces a Cartesian product when
 applied to two collections at once. That tension is why Hibernate offers batch
 and subselect fetching at all, and it is the subject of
-**chunk 11** *(not written yet)*.
+[11 · `@Fetch(SUBSELECT)`](11-subselect.md).
 
 **★ What does it mean that batch fetching "alleviates" rather than solves?**
 It means the multiplier is reduced but the shape is unchanged. Batch fetching
@@ -195,4 +195,4 @@ write one.
 
 ---
 
-← Prev: [1 · 101 queries](01-one-hundred-and-one-queries.md) · Index: [The N+1 problem](README.md) · Next → [2 · Why nobody sees it](02-why-nobody-sees-it.md)
+← Prev: [1 · 101 queries](01-one-hundred-and-one-queries.md) · Index: [08 · The N+1 problem](README.md) · Next → [2 · Why nobody sees it](02-why-nobody-sees-it.md)

@@ -74,7 +74,7 @@ cannot initialise and you get a `LazyInitializationException` from inside a
 message converter, with a stack trace full of Jackson frames and nothing of
 yours. The apparent fix — keep the persistence context open through view
 rendering — is `open-in-view`, and it converts the exception back into the N+1.
-That trade is **chunk 15** *(not written yet)*, and it is the single most
+That trade is [15 · Open session in view](15-open-in-view.md), and it is the single most
 consequential non-fix in this topic.
 
 ### The fix is not a fetch join
@@ -85,7 +85,8 @@ graph on an endpoint whose response is a JSON document you do not control.
 
 **Return a DTO.** The controller should serialise a type that exists for that
 endpoint, whose fields are exactly what the contract promises, and which cannot
-grow a new association behind your back. That is **chunk 12** *(not written yet)*,
+grow a new association behind your back. That is
+[12 · Projections and DTOs](12-projections-and-dtos.md),
 and this shape is the strongest argument in it.
 
 ## Shape 8 · The `toString()` in a log line
@@ -282,8 +283,8 @@ buys working endpoints and pays with the removal of the only diagnostic you had.
 If you take it, take it deliberately: set the property explicitly rather than
 leaving it on by default, put the statement-count assertion in place first so the
 silent version is still detectable, and treat the setting as a debt with a date
-on it. **Chunk 15** *(not written yet)* argues the whole trade.
+on it. [15 · Open session in view](15-open-in-view.md) argues the whole trade.
 
 ---
 
-← Prev: [4b · Three more shapes](04b-three-more-shapes.md) · Index: [The N+1 problem](README.md) · Next → [4d · The ones you cannot make lazy](04d-the-ones-you-cannot-make-lazy.md)
+← Prev: [4b · Three more shapes](04b-three-more-shapes.md) · Index: [08 · The N+1 problem](README.md) · Next → [4d · The ones you cannot make lazy](04d-the-ones-you-cannot-make-lazy.md)

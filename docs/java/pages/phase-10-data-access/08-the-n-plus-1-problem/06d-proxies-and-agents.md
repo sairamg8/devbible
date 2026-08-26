@@ -279,4 +279,4 @@ dependency.
 
 ---
 
-← Prev: [6c · Making it reusable](06c-making-it-reusable.md) · Index: [The N+1 problem](README.md) · Next → [7 · From a count to a call site](07-from-a-count-to-a-call-site.md)
+← Prev: [6c · Making it reusable](06c-making-it-reusable.md) · Index: [08 · The N+1 problem](README.md) · Next → [7 · From a count to a call site](07-from-a-count-to-a-call-site.md)

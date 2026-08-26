@@ -219,4 +219,4 @@ point at the wrong page.
 
 ---
 
-Index: [The N+1 problem](README.md) · Next → [1b · The general rule](01b-the-general-rule.md)
+Index: [08 · The N+1 problem](README.md) · Next → [1b · The general rule](01b-the-general-rule.md)

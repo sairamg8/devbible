@@ -85,7 +85,8 @@ identification variable to a fetched joined entity except for the purpose of
 specifying a nested fetch join."*
 
 If you need filtered children, that is a query returning children, not a parent
-with a partial collection — which is **chunk 12** *(not written yet)*'s
+with a partial collection — which is
+[12 · Projections and DTOs](12-projections-and-dtos.md)'s
 argument again.
 
 Finally: *"Fetch joins are disallowed in subqueries, where they would make no
@@ -191,4 +192,4 @@ implementation cleverness makes ten times eight anything other than eighty.
 
 ---
 
-← Prev: [8 · join fetch](08-join-fetch.md) · Index: [The N+1 problem](README.md) · Next → [8c · Duplicates and distinct](08c-duplicate-parents-and-distinct.md)
+← Prev: [8 · join fetch](08-join-fetch.md) · Index: [08 · The N+1 problem](README.md) · Next → [8c · Duplicates and distinct](08c-duplicate-parents-and-distinct.md)

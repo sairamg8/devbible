@@ -118,7 +118,7 @@ long entFetches  = statistics.getEntityFetchCount();       // ← the to-one N
 ```
 
 If `collFetches` is large, you need a fetch plan for a collection —
-[chunk 8](08-join-fetch.md) or **chunk 9** *(not written yet)*. If `entFetches` is
+[chunk 8](08-join-fetch.md) or [chunk 9](09-entity-graph.md). If `entFetches` is
 large, you have a to-one that is lazy-and-unfetched or eager-and-unjoined —
 [chunk 4](04-the-shapes-it-hides-in.md) shape 2.
 
@@ -292,4 +292,4 @@ arithmetic has already got bad.
 
 ---
 
-← Prev: [5b · Why show-sql is not it](05b-show-sql-is-not-the-answer.md) · Index: [The N+1 problem](README.md) · Next → [6b · Asserting the count](06b-asserting-the-count-in-a-test.md)
+← Prev: [5b · Why show-sql is not it](05b-show-sql-is-not-the-answer.md) · Index: [08 · The N+1 problem](README.md) · Next → [6b · Asserting the count](06b-asserting-the-count-in-a-test.md)

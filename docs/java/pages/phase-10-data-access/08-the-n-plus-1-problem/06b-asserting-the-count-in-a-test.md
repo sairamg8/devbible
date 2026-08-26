@@ -239,4 +239,4 @@ can catch those, and a statement count catches them without knowing they exist.
 
 ---
 
-← Prev: [6 · Count, do not read](06-count-do-not-read.md) · Index: [The N+1 problem](README.md) · Next → [6c · Making it reusable](06c-making-it-reusable.md)
+← Prev: [6 · Count, do not read](06-count-do-not-read.md) · Index: [08 · The N+1 problem](README.md) · Next → [6c · Making it reusable](06c-making-it-reusable.md)

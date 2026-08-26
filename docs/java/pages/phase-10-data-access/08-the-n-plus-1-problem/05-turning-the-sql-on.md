@@ -263,4 +263,4 @@ to be more than something to look at.
 
 ---
 
-← Prev: [4e · Lazy columns and hashCode](04e-lazy-columns-and-hashcode.md) · Index: [The N+1 problem](README.md) · Next → [5b · Why show-sql is not it](05b-show-sql-is-not-the-answer.md)
+← Prev: [4e · Lazy columns and hashCode](04e-lazy-columns-and-hashcode.md) · Index: [08 · The N+1 problem](README.md) · Next → [5b · Why show-sql is not it](05b-show-sql-is-not-the-answer.md)
