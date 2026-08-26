@@ -242,4 +242,4 @@ expects. That combination — a Hibernate class with no ability to act like one 
 serialising entities is treated in this topic as the root mistake rather than as a thing to
 configure around.
 
-<!--FOOTER-->
+{/* FOOTER */}

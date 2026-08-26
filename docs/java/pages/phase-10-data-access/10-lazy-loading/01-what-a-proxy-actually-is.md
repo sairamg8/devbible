@@ -286,4 +286,4 @@ identifier, no data, and no way to get any. It is the strongest argument in the 
 putting entities anywhere that outlives a request: the mechanism does not merely happen to
 break, it is designed not to travel.
 
-<!--FOOTER-->
+{/* FOOTER */}

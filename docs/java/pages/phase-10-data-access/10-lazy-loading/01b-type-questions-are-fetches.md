@@ -266,4 +266,4 @@ more complete object graph than the program in production. The way to check it i
 inspecting and instead assert on `Hibernate.isInitialized` at the point of interest, which
 answers the question without changing it.
 
-<!--FOOTER-->
+{/* FOOTER */}

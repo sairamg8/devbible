@@ -65,7 +65,7 @@ throw new LazyInitializationException( "Could not initialize proxy ["
 
 A proxy, not a collection. That single word tells you the failure is on a `@ManyToOne` or a
 `@OneToOne`, not a `@OneToMany` — collections produce a different message entirely, covered
-in **[02b · The collection message](02b-the-collection-message.md)**.
+in **[01c · A collection is not a proxy](01c-a-collection-is-not-a-proxy.md)**.
 
 ### `[com.acme.Customer#4711]`
 
@@ -282,4 +282,4 @@ outlive a context — there is nothing to become detached. The wording is a poin
 alternative programming model, which Hibernate 7 brought to near feature parity with
 `Session`, rather than idle precision.
 
-<!--FOOTER-->
+{/* FOOTER */}
