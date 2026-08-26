@@ -131,7 +131,7 @@ behaviour, it becomes the behaviour.
 `select * from users where email_address = ?1` is SQL, not JPQL, and it fails at
 startup with a parse error naming a token you did not expect. If you meant SQL,
 say so with `nativeQuery = true` and accept the trade —
-[03f · native queries](03f-native-queries.md).
+[03g · native queries](03g-native-queries.md).
 
 **⚠️ Expecting `o.customer.country` to behave like an outer join.**
 It is an inner join. Rows whose association is null vanish before your predicate
