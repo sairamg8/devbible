@@ -273,4 +273,4 @@ The file name and the location, in that order. A parse failure and a wrong locat
 produce silence by default. Turn on `validate-migration-naming` and `fail-on-missing-locations`
 so that neither can be silent again.
 
-<!--FOOTER-->
+{/* FOOTER */}

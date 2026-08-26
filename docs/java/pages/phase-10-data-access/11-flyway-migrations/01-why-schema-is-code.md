@@ -269,4 +269,4 @@ That the schema change becomes a reviewable artefact in a pull request. The orde
 bookkeeping are what the tool does; the review is what prevents the outage, and it is only
 possible because the change is now a file somebody wrote deliberately.
 
-<!--FOOTER-->
+{/* FOOTER */}

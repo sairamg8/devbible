@@ -229,4 +229,4 @@ would need a placeholder migration, and two schema changes inside one release wo
 nowhere to sit. Keep the migration sequence independent and let the description carry the
 meaning.
 
-<!--FOOTER-->
+{/* FOOTER */}

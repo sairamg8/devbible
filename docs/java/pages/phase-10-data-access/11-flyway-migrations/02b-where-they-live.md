@@ -284,4 +284,4 @@ Most likely `flyway-database-postgresql` is not on the classpath. Boot's Postgre
 is `@ConditionalOnClass` on the extension class, so without the module the property binds
 successfully and is never read.
 
-<!--FOOTER-->
+{/* FOOTER */}
