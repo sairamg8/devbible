@@ -88,7 +88,7 @@ a JPA invention, and everything that page says about them applies here unchanged
 
 Everywhere else in this topic, `persist` schedules work and nothing reaches the database
 until flush. That is the model: the persistence context is, in the User Guide's words,
-"a transactional write-behind cache". See **15 · Flush** *(not written yet)*.
+"a transactional write-behind cache". See [15 · Flush](15-flush.md).
 
 `IDENTITY` cannot participate in that model. The User Guide states the constraint
 exactly:

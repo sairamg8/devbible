@@ -118,8 +118,9 @@ an appropriate index, not a large object.
 `@Basic(fetch = LAZY)` needs bytecode enhancement or it is silently ignored — see
 [3 · Fields, columns, access](03-fields-columns-access.md). Moving the column to its own
 entity always works, at the cost of an association; that association's fetch behaviour
-is **Topic 07 · Relationships and fetch types** *(not written yet)*, and the query-count
-consequence of getting it wrong is **Topic 08 · The N+1 problem** *(not written yet)*.
+is [Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md), and
+the query-count consequence of getting it wrong is
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 **A `java.sql.Clob` or `Blob` is not usable after its transaction ends.**
 The User Guide: "it's not portable to access a LOB locator after the end of the
@@ -135,7 +136,7 @@ not compile, which at least is a good failure.
 On a migration-managed schema the length is inert at runtime; the column type is
 whatever your migration created. The annotation still earns its place as documentation
 and as the thing `ddl-auto: validate` checks against — see
-**17 · `ddl-auto`** *(not written yet)*.
+[17 · `ddl-auto`](17-ddl-auto.md).
 
 **Deleting a row does not necessarily delete a PostgreSQL large object.**
 This is the operational cost of the `oid` model: the large object lives in

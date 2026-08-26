@@ -112,7 +112,7 @@ noticed and written out, with no repository call anywhere. The Introduction call
 "automatic dirty checking": "after modifying an entity, we don't need to perform any
 explicit operation to ask Hibernate to propagate that change back to the database."
 This is the syllabus's *"UPDATE you never wrote"*, and it gets its own chunk at
-**14 · Dirty checking** *(not written yet)*.
+[14 · Dirty checking](14-dirty-checking.md).
 
 **A lifecycle that outlives the object.** `persist()` and `remove()` mark the
 beginning and end of an entity's persistent life. The Java object dies when the JVM
@@ -121,7 +121,7 @@ context tomorrow.
 
 **Deferred, batched writes.** Nothing is written when you call a setter. Nothing is
 even written when you call `persist()`. Work is queued and executed at *flush* —
-see **15 · Flush** *(not written yet)*.
+see [15 · Flush](15-flush.md).
 
 ## The promise runs in both directions
 
@@ -160,8 +160,8 @@ reference to it *and* a snapshot of its loaded state, so it can tell later wheth
 anything changed. The Introduction is blunt about the consequence — "a persistence
 context holds a hard reference to all its entities, preventing them from being
 garbage collected. Thus, the session must be discarded once a unit of work is
-complete." The cost side is **14b · What dirty checking
-costs** *(not written yet)*.
+complete." The cost side is [14e · What dirty checking
+costs](14e-what-dirty-checking-costs.md).
 
 ## Gotchas
 

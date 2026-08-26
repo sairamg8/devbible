@@ -104,7 +104,7 @@ exactly this reason. Hibernate also lets you set defaults globally with
 
 **`uniqueConstraints` and `indexes` only affect generated DDL.** They are instructions
 to the schema exporter. If your schema comes from Flyway — and in production it should;
-see **17 · `ddl-auto`** *(not written yet)* and **Topic 11 · Migrations with Flyway** *(not
+see [17 · `ddl-auto`](17-ddl-auto.md) and **Topic 11 · Migrations with Flyway** *(not
 written yet)* — these annotations do nothing at runtime. They are documentation at
 that point, which is not worthless, but do not mistake them for enforcement.
 

@@ -178,8 +178,8 @@ testing only"). The User Guide is blunt about `allow`:
 It also names a data-loss risk in the same section — "There are known issues when
 representations of the same persistent entity have different values for a collection […]
 These issues can cause data loss or corruption" — and recommends optimistic locking to
-detect the situation, which is **16 · `@Version` and optimistic
-locking** *(not written yet)*.
+detect the situation, which is [16 · `@Version` and optimistic
+locking](16-version-and-optimistic-locking.md).
 
 The default is `disallow` for good reason. Do not turn it off to make an error go away.
 

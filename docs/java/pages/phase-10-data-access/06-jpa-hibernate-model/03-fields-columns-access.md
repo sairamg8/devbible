@@ -173,7 +173,7 @@ Two things to be clear about, because `@Formula` looks like a free lunch. It is
 **Hibernate-specific**, not JPA. And the subquery runs as part of loading the entity —
 every time you load the entity, including when you load a hundred of them. That makes
 it a query-count concern, and query counts on collections are
-**Topic 08 · The N+1 problem** *(not written yet)*.
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 ## Gotchas
 
@@ -181,7 +181,7 @@ it a query-count concern, and query counts on collections are
 Add a `private String internalNote` for debugging and `ddl-auto: validate` fails,
 because the schema has no such column. Under `ddl-auto: update` it silently adds one,
 which is one of several reasons `update` is not for production —
-**17 · `ddl-auto`** *(not written yet)*.
+[17 · `ddl-auto`](17-ddl-auto.md).
 
 **Primitive types are inferred `NOT NULL`.**
 The Introduction: "primitively-typed attributes are inferred NOT NULL by default." So
@@ -229,7 +229,8 @@ the object.
 The annotation compiles, the mapping is accepted, and the column is fetched eagerly
 anyway. If you are mapping a large `text` or `bytea` column and need it lazy, either
 enable the enhancer or — usually simpler and always effective — move the column to its
-own entity, which is **Topic 07 · Relationships and fetch types** *(not written yet)*.
+own entity, which is
+[Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md).
 
 ## Interview questions
 

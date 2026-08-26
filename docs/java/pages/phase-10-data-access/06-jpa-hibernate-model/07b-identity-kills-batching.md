@@ -129,8 +129,8 @@ trap [Topic 01 · JDBC](../01-jdbc/README.md) covers.
 To see whether batching is actually happening, the Introduction names the switch:
 "To confirm that statement batching is working, enable TRACE-level logging for the
 category `org.hibernate.orm.jdbc.batch`." Turning that on is fine; reproducing its
-output here is not — see **18 · Seeing what Hibernate
-does** *(not written yet)*.
+output here is not — see [18 · Seeing what Hibernate
+does](18-seeing-what-hibernate-does.md).
 
 ## What to do about it
 
@@ -149,7 +149,7 @@ ORM path, and Hibernate's own `StatelessSession` sits between the two.
 **Do not clear the persistence context and call it a fix.** Periodically calling
 `flush()` and `clear()` during a long loop is good advice for *memory* — it stops the
 context accumulating thousands of managed entities and their snapshots, which is
-**14b · What dirty checking costs** *(not written yet)*. It does nothing
+[14e · What dirty checking costs](14e-what-dirty-checking-costs.md). It does nothing
 about `IDENTITY`, because the INSERTs already happened at `persist`.
 
 ## Gotchas

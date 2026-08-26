@@ -128,7 +128,7 @@ List<CustomerSummary> rows = entityManager.createQuery("""
 
 Nothing here is managed. Nothing is dirty-checked. Nothing is held in the persistence
 context. For read-only endpoints that is a strict improvement — and it is one of the
-tools **Topic 08 · The N+1 problem** *(not written yet)* reaches for.
+tools [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md) reaches for.
 
 ### 3 · As the DTO at your API boundary
 
@@ -187,8 +187,8 @@ more*.
 **An embeddable record's components are still mapped as columns of the owning table.**
 Making it a record does not create a table. `Name(firstName, middleName, lastName)`
 inside `Customer` maps to three columns on `customer`. If you want it in its own table
-you want an entity and a relationship, which is **Topic 07 · Relationships and fetch
-types** *(not written yet)*.
+you want an entity and a relationship, which is
+[Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md).
 
 **A record projection with `select new` needs the fully-qualified class name.**
 It is a constructor expression, and JPQL resolves it against the class name you write.

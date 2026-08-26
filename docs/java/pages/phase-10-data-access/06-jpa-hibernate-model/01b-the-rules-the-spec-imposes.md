@@ -94,7 +94,7 @@ persistent attribute getters and setters as final."
 So `final` on an entity does not usually produce an error. It produces a quieter
 outcome: your lazy associations stop being lazy, and you find out from a query count
 rather than an exception. The general shape of that failure is
-**Topic 08 · The N+1 problem** *(not written yet)*.
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 Two knock-on rules follow from the same mechanism, and both bite in real code:
 

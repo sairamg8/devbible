@@ -70,7 +70,7 @@ Three consequences follow directly from "no identity of its own":
 
 - **No table.** `Money` produces columns on `orders`, not a `money` table. If you want a
   table you want an entity, which is
-  **Topic 07 · Relationships and fetch types** *(not written yet)*.
+  [Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md).
 - **No independent lifecycle.** "An embeddable object can only be made persistent by
   assigning it to the attribute of an entity […] its lifecycle with respect to
   persistence is completely determined by the lifecycle of the entity to which it
@@ -192,7 +192,8 @@ are internal machinery that expects the mapped type directly.
 Hibernate supports it (User Guide §3.3.13) but the collection lives in its own table
 with its own fetch behaviour, which drags relationship semantics into what looked like
 a value. That is
-**Topic 07 · Relationships and fetch types** *(not written yet)* territory.
+[Topic 07 · Relationships and fetch types](../07-relationships-fetch/README.md)
+territory.
 
 ## Interview questions
 

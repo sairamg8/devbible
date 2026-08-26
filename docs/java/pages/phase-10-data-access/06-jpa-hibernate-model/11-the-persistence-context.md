@@ -56,7 +56,7 @@ public void alsoDemonstrate() {
 
 You did not save anything. You did not re-read anything. `b` shows the new email because
 `b` and `a` are one object. And when the transaction commits, an UPDATE is issued that
-nobody wrote — **14 · Dirty checking** *(not written yet)*.
+nobody wrote — [14 · Dirty checking](14-dirty-checking.md).
 
 ## Now the name
 
@@ -140,7 +140,7 @@ service methods in one transaction cannot end up with two divergent copies of a 
 
 **They enable automatic dirty checking.** "after modifying an entity, we don't need to
 perform any explicit operation to ask Hibernate to propagate that change back to the
-database." → **14 · Dirty checking** *(not written yet)*.
+database." → [14 · Dirty checking](14-dirty-checking.md).
 
 **They can avoid database round trips.** "by avoiding a trip to the database when a given
 entity instance is requested repeatedly in a given unit of work." → [11b · The find that
@@ -148,7 +148,7 @@ issues no SQL](11b-find-that-issues-no-sql.md).
 
 **They make batching possible.** "They make it possible to transparently batch together
 multiple database operations." Because writes are queued rather than executed, they can
-be grouped — **15 · Flush** *(not written yet)*, and the exception in
+be grouped — [15 · Flush](15-flush.md), and the exception in
 [7b · IDENTITY kills batching](07b-identity-kills-batching.md).
 
 **They let Hibernate detect circularity.** "A persistence context also allows us to detect
@@ -168,7 +168,7 @@ given unit of work depends greatly on the nature of the unit of work. For this r
 Hibernate provides both stateful and stateless sessions."
 
 That is the seed of two later chunks. The memory and CPU cost of holding entities *and
-their snapshots* is **14b · What dirty checking costs** *(not written yet)*.
+their snapshots* is [14e · What dirty checking costs](14e-what-dirty-checking-costs.md).
 The escape hatch — a `StatelessSession`, which has no persistence context at all, and
 therefore no identity map, no snapshots, and no dirty checking — is the right tool for
 bulk work.

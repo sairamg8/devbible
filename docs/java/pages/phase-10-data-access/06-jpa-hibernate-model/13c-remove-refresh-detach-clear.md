@@ -170,8 +170,8 @@ same `Timeout` value can be passed to any of them:
 entityManager.find(Book.class, isbn, Timeout.ms(100), CacheStoreMode.BYPASS);
 ```
 
-The optimistic side of locking is **16 · `@Version` and optimistic
-locking** *(not written yet)*; pessimistic locking is a transaction-level
+The optimistic side of locking is [16 · `@Version` and optimistic
+locking](16-version-and-optimistic-locking.md); pessimistic locking is a transaction-level
 concern and belongs with
 [Topic 04 · Spring `@Transactional`](../04-spring-transactional/README.md).
 

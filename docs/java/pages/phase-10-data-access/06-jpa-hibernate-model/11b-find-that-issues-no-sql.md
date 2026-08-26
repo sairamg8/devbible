@@ -130,7 +130,8 @@ returns.
 
 Which is why it is not the answer to a query-count problem. When one query returns N rows
 and N more queries follow, the identity map is not what is missing —
-**Topic 08 · The N+1 problem** *(not written yet)* is, and every fix for it lives there.
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md) is, and every fix for
+it lives there.
 
 The thing that caches *across* transactions is the second-level cache, configured per
 entity and shared by the whole `SessionFactory`. It is a genuine cache with genuine
@@ -149,7 +150,7 @@ expecting a query to give you the database's current view, it does not.
 
 **Modifying an entity and then querying can trigger a flush first.**
 Because Hibernate will not let a query see a stale view of your own writes, an
-overlapping query forces a flush. That is **15 · Flush** *(not written yet)*, and it is why a
+overlapping query forces a flush. That is [15 · Flush](15-flush.md), and it is why a
 read-looking line of code can emit an UPDATE.
 
 **`getReference` on a non-existent id fails somewhere else entirely.**
@@ -218,7 +219,7 @@ ids, so there is nothing already in the map to hit. And even where ids repeat, t
 that actually work operate at the query level — a fetch join, an entity graph, batch
 fetching, or a projection — rather than at the identity level. The identity map does not
 reduce the number of queries a query plan produces. All the real fixes are in
-**Topic 08 · The N+1 problem** *(not written yet)*.
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 **★ How is the first-level cache different from the second-level cache?**
 Scope and purpose. The first-level cache is the persistence context: one per unit of work,

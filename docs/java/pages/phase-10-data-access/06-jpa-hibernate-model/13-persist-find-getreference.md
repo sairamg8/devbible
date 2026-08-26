@@ -58,7 +58,7 @@ And it names two absences that people look for:
 > `update()` operation for a stateful session.** Modifications are automatically detected
 > when the session is flushed.
 
-The missing `update()` is **14 · Dirty checking** *(not written yet)*.
+The missing `update()` is [14 · Dirty checking](14-dirty-checking.md).
 
 ## `persist`
 

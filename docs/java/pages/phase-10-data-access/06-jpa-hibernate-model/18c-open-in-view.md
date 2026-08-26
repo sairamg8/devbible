@@ -24,6 +24,14 @@ request before your controller runs and stays bound until the response is writte
 `spring.jpa.open-in-view`, it defaults to `true`, and it changes dirty checking, flushing and
 `readOnly = true` — which is why it belongs here and not in a chapter about fetching.**
 
+:::note The other half of this argument
+This chunk is about what open-in-view does to the *unit of work* — context lifetime,
+dirty checking, flush and `readOnly`. What it does to *query counts* is a separate and
+equally consequential story, and it belongs to the topic that owns them:
+[Topic 08 · 15 · Open session in view](../08-the-n-plus-1-problem/15-open-in-view.md)
+argues that it is not a fix for N+1 but the reason nobody sees one.
+:::
+
 ## What Boot actually does
 
 The reference documentation:
