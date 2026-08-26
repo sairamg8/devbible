@@ -207,8 +207,8 @@ every table in the join, including the ones added last month.
 
 **★ Derived tables lose the generated column constants entirely.** Everything inside is typed;
 everything reaching in from outside goes through `field(...)`. If a query is doing a lot of that,
-a CTE with named columns — see **[06 · PostgreSQL specifics](06-postgres-specifics.md)** — usually
-reads better.
+a CTE with named columns — see **[06b · CTEs and DISTINCT ON](06b-ctes-and-distinct-on.md)** —
+usually reads better.
 
 ## Interview questions
 

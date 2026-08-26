@@ -91,8 +91,9 @@ opposite of what you want, and you should reduce with `falseCondition()` instead
 
 The tree is dialect-neutral; the renderer is not. jOOQ knows what PostgreSQL 18 supports and
 what H2 supports, and where a feature is missing it emulates rather than fails. That is the
-mechanism behind everything in **[06 · PostgreSQL specifics](06-postgres-specifics.md)**, and
-also the reason a `MULTISET` query works on databases with no `MULTISET` type.
+mechanism behind the PostgreSQL-specific expressions starting at
+**[06 · Window functions](06-postgres-specifics.md)**, and also the reason a `MULTISET` query
+works on databases with no `MULTISET` type.
 
 It is not magic portability. An emulation exists or it does not, and where it does not, jOOQ
 says so at render time. But the failure is explicit rather than a dialect-specific runtime
