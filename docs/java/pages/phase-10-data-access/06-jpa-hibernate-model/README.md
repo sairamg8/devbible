@@ -17,7 +17,7 @@ on: dirty checking and the snapshot, flush and its fixed operation order, `@Vers
 and optimistic locking, `ddl-auto`, and how to see what Hibernate is actually doing.
 :::
 
-<!--CHUNKS-->
+{/* CHUNKS */}
 
 | # | Chunk | What it argues |
 |---|---|---|

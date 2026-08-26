@@ -10,7 +10,7 @@ sidebar_position: 0
 
 **The owning side, `mappedBy` and the fetch-type defaults — and why `EAGER` on a collection is a time bomb.**
 
-<!--CHUNKS-->
+{/* CHUNKS */}
 
 | # | Chunk | What it argues |
 |---|---|---|

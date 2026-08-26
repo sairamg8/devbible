@@ -98,9 +98,9 @@ if (returningColumnNames.length == 1 && returningColumnNames[0].charAt(0) == '*'
 `RETURNING *` returns **every column of every inserted row**. On a single insert
 that is a rounding error. On a ten-thousand-row batch it is your entire payload
 coming back across the wire and into a client-side `ResultSet`, to be discarded
-after you read one `long` from each row. `prepareStatement(sql, new String[]
-{ "id" })` returns one column, and the identifiers are quoted safely by
-`Utils.escapeIdentifier` when `quoteReturningIdentifiers` is on.
+after you read one `long` from each row.
+`prepareStatement(sql, new String[] { "id" })` returns one column, and the identifiers
+are quoted safely by `Utils.escapeIdentifier` when `quoteReturningIdentifiers` is on.
 
 ## What asking for keys costs
 

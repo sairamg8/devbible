@@ -134,9 +134,9 @@ collection exists and you need its size, this is the call to reach for.
   N+1 problem** *(not written yet)*.
 - **`Hibernate.unproxy` to make an `instanceof` work.** It is a type question asked of
   something that should have been given a method.
-- **Anything that makes production behaviour depend on load state.** `if (isInitialized(x))
-  { … } else { … }` is a branch on how the entity happened to be loaded, which is a property
-  of an unrelated call site.
+- **Anything that makes production behaviour depend on load state.**
+  `if (isInitialized(x)) { … } else { … }` is a branch on how the entity happened to be
+  loaded, which is a property of an unrelated call site.
 
 ## Gotchas
 

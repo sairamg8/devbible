@@ -21,7 +21,7 @@ fetching, projections and DTOs, fetch profiles and bytecode enhancement — then
 And **prevention**: fetching is a property of the call site, not of the mapping.
 :::
 
-<!--CHUNKS-->
+{/* CHUNKS */}
 
 | # | Chunk | What it argues |
 |---|---|---|

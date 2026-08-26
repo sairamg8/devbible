@@ -17,7 +17,7 @@ shape of a SQL-first repository, the `@JdbcTest` slice, a real PostgreSQL under
 the test, and what such a test can assert that an entity-based one cannot.
 :::
 
-<!--CHUNKS-->
+{/* CHUNKS */}
 
 | # | Chunk | What it argues |
 |---|---|---|

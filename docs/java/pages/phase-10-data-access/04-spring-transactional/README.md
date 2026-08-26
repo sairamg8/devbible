@@ -10,7 +10,7 @@ sidebar_position: 0
 
 **68 chunks.**
 
-<!--CHUNKS-->
+{/* CHUNKS */}
 
 | # | Chunk | What it argues |
 |---|---|---|
