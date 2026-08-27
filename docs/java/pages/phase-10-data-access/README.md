@@ -36,7 +36,7 @@ half-topic.
 | 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
 | 09 | **[Spring Data JPA](09-spring-data-jpa/README.md)** | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
 | 10 | **[Lazy-loading pitfalls](10-lazy-loading/README.md)** | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
-| 11 | **Migrations with Flyway** *(in progress — 38 chunks written, no index yet)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
+| 11 | **[Migrations with Flyway](11-flyway-migrations/README.md)** | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
 | 12 | **[Caching](12-caching/README.md)** | <span className="db-tier t-know">Know</span> | Second-level, `@Cacheable` with Redis — invalidation is the cost |
 | 13 | **[jOOQ](13-jooq/README.md)** | <span className="db-tier t-know">Know</span> | Typed SQL as the JPA alternative — reporting, complex joins |
 | 14 | **[Spring Data for MongoDB / Redis](14-spring-data-other/README.md)** | <span className="db-tier t-know">Know</span> | The same repository idiom over the other stores in this bible |
