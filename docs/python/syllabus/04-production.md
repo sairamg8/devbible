@@ -4,7 +4,7 @@ sidebar_label: "4 · Production"
 sidebar_position: 4
 ---
 
-> Phases 11–12 · pytest, and running Python where it counts
+> Phases 12–13 · pytest, and running Python where it counts
 
 The last mile: tests that let you refactor without fear, and the operational
 craft — logging, profiling, deployment — that keeps a Python service boring in
@@ -12,7 +12,7 @@ the good way.
 
 ---
 
-## Phase 11 — Testing with pytest
+## Phase 12 — Testing with pytest
 
 pytest won. The ecosystem's plugins, fixtures and plain-assert style are the
 standard; `unittest` is read-only legacy. The hard skills here are fixtures and
@@ -33,13 +33,13 @@ knowing *where to patch*.
 | Multi-version test matrices: tox/nox, CI jobs per Python version — for libraries more than apps | <span className="db-tier t-know">Know</span> |
 | Doctests — examples in docstrings that can't rot | <span className="db-tier t-when">When Needed</span> |
 
-**Gate — deliverable:** the Phase 9 service tested three ways — pure unit tests
+**Gate — deliverable:** the Phase 11 CRUD resource tested three ways — pure unit tests
 for the domain, endpoint tests with dependency overrides, one data-layer suite
 against real Postgres — green in CI with coverage reported.
 
 ---
 
-## Phase 12 — Production and performance
+## Phase 13 — Production and performance
 
 Python's operational reality: a logging module older than some teammates, real
 profilers, and a deployment story that is 90% "build a good container".

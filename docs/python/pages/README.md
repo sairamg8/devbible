@@ -7,9 +7,10 @@ sidebar_position: 0
 Status board for the Python explanation pages — one page per syllabus topic,
 with code, gotchas and interview questions.
 
-**Nothing is written yet.** The [syllabus](../README.md) is complete (163
-topics, 13 phases); pages start once it is approved, phase by phase in reading
-order.
+🚧 **Phase 0 is in progress.** The [syllabus](../README.md) is complete — **180
+topics, 14 phases**, extended 2026-08-27 with **Phase 11 · REST APIs and CRUD**
+so the track ends in a shippable fullstack API rather than a pile of framework
+mechanics. Pages are written phase by phase in reading order.
 
 import Progress from '@site/src/components/Progress';
 
@@ -17,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| 0 · The runtime | 12 | Planned |
+| **[0 · The runtime](phase-0-runtime/README.md)** | 12 | 🚧 **In progress** |
 | 1 · Language core | 16 | Planned |
 | 2 · Functions, closures and decorators | 10 | Planned |
 | 3 · Collections in depth | 12 | Planned |
@@ -28,5 +29,6 @@ import Progress from '@site/src/components/Progress';
 | 8 · Concurrency and async | 13 | Planned |
 | 9 · The web service | 14 | Planned |
 | 10 · Data, files and integrations | 13 | Planned |
-| 11 · Testing with pytest | 12 | Planned |
-| 12 · Production and performance | 12 | Planned |
+| **11 · REST APIs and CRUD, end to end** | 17 | Planned — the payoff phase |
+| 12 · Testing with pytest | 12 | Planned |
+| 13 · Production and performance | 12 | Planned |

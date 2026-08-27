@@ -4,11 +4,13 @@ sidebar_label: "3 · Application"
 sidebar_position: 3
 ---
 
-> Phases 7–10 · Packaging and tooling, concurrency, the web service, and data
+> Phases 7–11 · Packaging and tooling, concurrency, the web service, data, and
+> the REST API you actually ship
 
 This is where Python becomes a shipped service: a reproducible project, the
-right concurrency model for the workload, a FastAPI app, and real I/O against
-PostgreSQL.
+right concurrency model for the workload, a FastAPI app, real I/O against
+PostgreSQL — and then Phase 11, where those last two stop being separate
+subjects and become one CRUD resource a frontend can consume.
 
 ---
 
@@ -118,6 +120,51 @@ people's APIs, and time — tiered by how often each one pages someone.
 **Gate — move on when:** you can pull JSON from an API with httpx (timeout,
 retry), upsert it into Postgres with parameterized SQL in one transaction, and
 every timestamp in the table is UTC-aware by construction.
+
+
+---
+
+## Phase 11 — REST APIs and CRUD, end to end
+
+**The payoff phase, and the reason this track exists.** Phase 9 gave you FastAPI
+mechanics; Phase 10 gave you a database. Neither one, alone, is an API. This
+phase carries a single resource all the way through — create, read, update,
+delete — with the design decisions, the status codes, the layering and the
+transaction boundary that separate a demo from something a team maintains.
+
+Protocol-level REST is already taught in this bible from the Node side, and
+these pages **link there rather than re-derive it**: the
+[Express REST surface](../../expressjs/pages/phase-6-rest-surface/README.md)
+phase covers resources, status mapping, versioning, idempotency keys and ETags
+as HTTP concerns. What follows is the half that is genuinely Python's — Pydantic
+at the boundary, SQLAlchemy behind it, and the shape of a FastAPI project that
+survives its fortieth endpoint.
+
+| Topic | Tier |
+|---|---|
+| **What REST actually constrains**: resources not actions, URI design (plural nouns, how deep to nest, when to stop), the difference between "a REST API" and JSON over HTTP — and the honest note on where an RPC-shaped endpoint is the right answer | <span className="db-tier t-master">Master</span> |
+| **The verb table**: GET/POST/PUT/PATCH/DELETE, **safe vs idempotent** and why the distinction is a retry policy rather than trivia, why POST is neither, `HEAD`/`OPTIONS` | <span className="db-tier t-master">Master</span> |
+| **Status codes as a contract**: the CRUD → status map — 201 + `Location`, 200 vs 204, **400 vs 422** (FastAPI answers validation failures with 422 by default, and your frontend must be told), 404 vs 403 and what each leaks, 409 for conflicts — plus `status_code=` on the decorator | <span className="db-tier t-master">Master</span> |
+| **The schema/model split**: `ProductCreate` / `ProductUpdate` / `ProductRead` beside the SQLAlchemy `Product`, `ConfigDict(from_attributes=True)`, and `response_model` as the leak-stopper — **the most common FastAPI design error is one class doing both jobs**, and the hashed password that reached a browser is how teams find out | <span className="db-tier t-master">Master</span> |
+| **Layering a FastAPI service**: router → service → repository, what belongs in each layer, the folder layout that survives forty endpoints, and why a router should never contain a `select()` | <span className="db-tier t-master">Master</span> |
+| **The session and the transaction boundary**: `Depends(get_db)` with `yield`, one transaction per request, **who commits** (the service, never the repository), rollback on exception, and the `DetachedInstanceError` that follows a commit | <span className="db-tier t-master">Master</span> |
+| **Create**: body → validation → insert → **201 with `Location`** and the created resource; the check-then-insert race, and why the unique constraint — `IntegrityError` translated to 409 — is the only real fix | <span className="db-tier t-master">Master</span> |
+| **Read**: one resource vs a collection, **404 vs an empty list** (different answers to different questions), `response_model` over a list, and the **N+1 that every list endpoint grows** — how to see it (echo the SQL) and `selectinload` as the fix | <span className="db-tier t-master">Master</span> |
+| **Pagination, filtering and sorting**: offset/limit and its drift under concurrent writes, **keyset (cursor) pagination** in SQLAlchemy 2.0, a filter contract that does not decay into a query language, **sort whitelisting** (accepting a raw column name is `ORDER BY` injection), and the response envelope the frontend consumes | <span className="db-tier t-master">Master</span> |
+| **Update — PUT vs PATCH**: full replacement vs partial, **`model_dump(exclude_unset=True)`** as the whole trick, the null-vs-absent problem PATCH inherits from JSON, and optimistic concurrency with `ETag` / `If-Match` instead of last-write-wins | <span className="db-tier t-master">Master</span> |
+| **Delete**: 204 vs 200-with-body, **idempotent delete** (the second `DELETE` is still 204, not 404), **soft delete and everything it costs** — every query filters forever, unique constraints stop meaning what they said — cascade vs restrict at the foreign key | <span className="db-tier t-understand">Understand</span> |
+| **The error contract**: one error shape for the whole API, **RFC 9457 Problem Details**, custom exception handlers, translating `RequestValidationError` into your shape, domain exceptions that never import `HTTPException` — and never letting a stack trace or an SQL string reach a client | <span className="db-tier t-master">Master</span> |
+| **The frontend contract**: OpenAPI as the source of truth, **generating a typed TypeScript client** from it, and **CORS and the preflight** you will debug at least once — credentials, custom headers, and the wildcard origin that stops working the moment a cookie appears | <span className="db-tier t-understand">Understand</span> |
+| **Auth for a real SPA**: bearer JWT vs an httpOnly cookie (the XSS/CSRF trade, stated honestly), access + refresh tokens, `Depends` chains that yield the current user, and **ownership checks pushed into the query** rather than the handler — 403 vs 404 as a disclosure decision | <span className="db-tier t-understand">Understand</span> |
+| **Versioning, idempotency keys and caching**: URI vs header versioning and what actually counts as a breaking change, `Idempotency-Key` for POST retries, `ETag`/`If-None-Match` and `Cache-Control` on reads, bulk endpoints and their partial-failure shape | <span className="db-tier t-understand">Understand</span> |
+| **Django REST Framework**, read fluently: serializers vs Pydantic, `ViewSet` + router vs explicit routes, permission classes, the browsable API — and the honest "when a shop picks DRF over FastAPI" (the admin, an ORM already in place, batteries over assembly) | <span className="db-tier t-know">Know</span> |
+| **The capstone**: one resource, five endpoints, layered and transactional, paginated, error-shaped, tested against real Postgres and consumed by a React page — plus the review checklist to hold any CRUD endpoint against | <span className="db-tier t-understand">Understand</span> |
+
+**Gate — deliverable:** a `/products` resource with all five endpoints, a
+router that contains no SQL, a service that owns the transaction, keyset
+pagination, one error shape, a generated TypeScript client that compiles, and
+a React page that lists, creates and edits through it. You can defend every
+status code it returns.
 
 ---
 

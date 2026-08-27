@@ -8,7 +8,7 @@ sidebar_position: 0
 > posts (3.14.7 / 3.13.15), and PEP 790 (the 3.15 schedule).
 
 The complete topic inventory for Python, tiered for **mastery in backend
-service development and automation**. 13 phases, split into 4 parts to stay
+service development and automation**. 14 phases, split into 4 parts to stay
 under the 300-line file cap.
 
 Python sits outside this bible's MERN/PERN core — it is here as the second
@@ -36,8 +36,8 @@ level only.
 |---|---|---|---|
 | 1 | **[Foundations](syllabus/01-foundations.md)** | The runtime and GIL, language core, functions and decorators | 0–2 |
 | 2 | **[The data model](syllabus/02-data-model.md)** | Collections in depth, classes and dunders, generators, typing | 3–6 |
-| 3 | **[Application layer](syllabus/03-application.md)** | Packaging and uv, concurrency and asyncio, FastAPI, data and files | 7–10 |
-| 4 | **[Production](syllabus/04-production.md)** | pytest, logging, profiling, deployment | 11–12 |
+| 3 | **[Application layer](syllabus/03-application.md)** | Packaging and uv, concurrency and asyncio, FastAPI, data and files, **the REST/CRUD API** | 7–11 |
+| 4 | **[Production](syllabus/04-production.md)** | pytest, logging, profiling, deployment | 12–13 |
 
 ## Explanations
 
@@ -61,13 +61,13 @@ import Progress from '@site/src/components/Progress';
 
 | Tier | Topics | Share |
 |---|---|---|
-| <span className="db-tier t-master">Master</span> | 49 | 30% |
-| <span className="db-tier t-understand">Understand</span> | 77 | 47% |
-| <span className="db-tier t-know">Know</span> | 30 | 18% |
+| <span className="db-tier t-master">Master</span> | 60 | 33% |
+| <span className="db-tier t-understand">Understand</span> | 82 | 46% |
+| <span className="db-tier t-know">Know</span> | 31 | 17% |
 | <span className="db-tier t-when">When Needed</span> | 7 | 4% |
-| **Total** | **163** | |
+| **Total** | **180** | |
 
-By part: Foundations 38 · Data model 49 · Application 52 · Production 24.
+By part: Foundations 38 · Data model 49 · Application 69 · Production 24.
 
 If you only ever finish the <span className="db-tier t-master">Master</span>
 set, you can build, test and ship a FastAPI service and write automation the
@@ -81,7 +81,7 @@ section rather than reteaching it.
 
 ## Reading order
 
-Phases are sequential and the order is load-bearing. Three rules:
+Phases are sequential and the order is load-bearing. Four rules:
 
 1. **Do not skip Phase 0.** The GIL, venvs and the import system are where
    "Python is being weird" complaints actually live.
@@ -90,8 +90,12 @@ Phases are sequential and the order is load-bearing. Three rules:
    an incantation.
 3. **asyncio (Phase 8) before the web service**, because `async def` route
    handlers without the event-loop model produce the blocking bug you can't see.
+4. **Phase 11 is the destination.** REST design, CRUD end to end, layering and
+   the transaction boundary need both FastAPI (Phase 9) and SQLAlchemy
+   (Phase 10) in hand — which is exactly why it sits after them rather than
+   inside Phase 9.
 
-Phases 11–12 can run alongside whatever you're building from Phase 9 onward.
+Phases 12–13 can run alongside whatever you're building from Phase 9 onward.
 
 ## Sources
 

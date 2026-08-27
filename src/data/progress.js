@@ -601,7 +601,7 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
-    updated: '2026-08-17 20:55',
+    updated: '2026-08-27 20:15',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [
@@ -616,8 +616,9 @@ export const LANGUAGES = {
       {n: 8, slug: 'phase-8-concurrency-async', name: 'Concurrency and async', part: 'Application', topics: 13, pages: 0},
       {n: 9, slug: 'phase-9-web-service', name: 'The web service', part: 'Application', topics: 14, pages: 0},
       {n: 10, slug: 'phase-10-data-files', name: 'Data, files and integrations', part: 'Application', topics: 13, pages: 0},
-      {n: 11, slug: 'phase-11-testing', name: 'Testing with pytest', part: 'Production', topics: 12, pages: 0},
-      {n: 12, slug: 'phase-12-production', name: 'Production and performance', part: 'Production', topics: 12, pages: 0},
+      {n: 11, slug: 'phase-11-rest-crud', name: 'REST APIs and CRUD, end to end', part: 'Application', topics: 17, pages: 0},
+      {n: 12, slug: 'phase-12-testing', name: 'Testing with pytest', part: 'Production', topics: 12, pages: 0},
+      {n: 13, slug: 'phase-13-production', name: 'Production and performance', part: 'Production', topics: 12, pages: 0},
     ],
   },
 };
