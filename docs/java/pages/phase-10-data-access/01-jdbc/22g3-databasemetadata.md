@@ -297,4 +297,4 @@ unknown, which recurs; `DatabaseMetaData` in a tool, and in an application usual
 only for a startup log line and a version assertion.
 
 ---
-← Prev: [22g2 · Types and mappers](22g2-metadata-types-and-mappers.md) · Index: [JDBC](README.md) · Next → **Topic 02 · Connection pooling with HikariCP** *(not written yet)*
+← Prev: [22g2 · Types and mappers](22g2-metadata-types-and-mappers.md) · Index: [JDBC](README.md) · Next → [Topic 02 · Connection pooling with HikariCP](../02-connection-pooling/README.md)

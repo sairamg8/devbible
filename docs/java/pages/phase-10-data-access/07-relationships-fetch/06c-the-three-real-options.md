@@ -212,7 +212,7 @@ and fails in the other. Decide once, apply everywhere, and document that the bui
 
 **Enhancement is not a licence to leave associations lazy and hope.** It gives you the
 ability to defer; deciding *when* to fetch is still your job, and doing it badly is the
-N+1 problem — **Topic 08 · The N+1 problem** *(not written yet)* owns that.
+N+1 problem — [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md) owns that.
 
 **`@MapsId` with a composite key needs the attribute name.** `@MapsId("parentId")` names
 which part of the child's `@IdClass` or `@EmbeddedId` this association supplies. The

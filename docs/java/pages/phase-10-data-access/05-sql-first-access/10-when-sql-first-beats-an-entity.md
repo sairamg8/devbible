@@ -135,7 +135,7 @@ select id, parent_id, name, depth from subtree order by depth, name;
 
 One statement returns the whole subtree with its depth. The entity version walks
 `getChildren()` recursively, which is one query per node — the N+1 problem in its
-purest form (**Topic 08 · The N+1 problem**, *not written yet*) — and there is no
+purest form ([Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md)) — and there is no
 fetch-join depth that fixes an arbitrary-depth tree.
 
 **Verdict: SQL-first**, and this one is not close.

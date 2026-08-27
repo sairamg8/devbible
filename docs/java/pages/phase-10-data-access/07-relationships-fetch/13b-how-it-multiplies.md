@@ -80,7 +80,7 @@ be days after deployment.
 
 **The mapping-level fix is to make them `Set`s**, which have identity and can be fetched
 together (paying the cross product instead). The query-level fixes — separate queries,
-`@BatchSize`, entity graphs — are **Topic 08 · The N+1 problem** *(not written yet)*.
+`@BatchSize`, entity graphs — are [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 ## Transitive expansion: the chain nobody can see
 

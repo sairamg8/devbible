@@ -98,7 +98,7 @@ The abstraction is not on trial. What it takes away is real:
   JPQL string fails at startup, which is better than any hand-written string-based data access
   layer offers ([03f](03f-what-is-checked-and-when.md)).
 - **A uniform idiom across stores.** The same interface shape works against Mongo, Redis and
-  the rest — the subject of topic **14 · Spring Data for other stores** *(not written yet)*.
+  the rest — the subject of topic [14 · Spring Data for other stores](../14-spring-data-other/README.md).
 
 Nothing above is a small saving, and none of it is what causes production incidents.
 
@@ -129,7 +129,7 @@ Honest boundaries, since the topic has spent thirty-odd chunks inside them:
 - **Reporting and aggregation.** Group-bys, window functions, `CASE` expressions and CTEs are
   not what an entity model is for. SQL-first access
   ([05 · when SQL-first beats an entity](../05-sql-first-access/10-when-sql-first-beats-an-entity.md))
-  or **13 · jOOQ** *(not written yet)*.
+  or [13 · jOOQ](../13-jooq/README.md).
 - **Bulk data movement.** Millions of rows do not belong in a persistence context at all —
   neither `deleteBy` nor `deleteAllInBatch` is the right tool at that scale
   ([04c](04c-derived-delete-versus-bulk-delete.md)).

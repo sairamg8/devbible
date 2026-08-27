@@ -113,7 +113,7 @@ fetched by the same machinery**. Two `List` collections both marked `EAGER` puts
 on the first `find`. That is **[13b · How it multiplies](13b-how-it-multiplies.md)**.
 
 🔴 The *fix* for needing several collections at once — separate queries, batching, entity
-graphs — belongs to **Topic 08 · The N+1 problem** *(not written yet)*. The mapping-level
+graphs — belongs to [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md). The mapping-level
 advice that belongs here is simpler: **make them `Set`s.** Two `Set`s do not raise this
 exception, because a set element is identifiable.
 

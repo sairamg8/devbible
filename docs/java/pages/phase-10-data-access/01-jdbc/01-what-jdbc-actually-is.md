@@ -37,8 +37,7 @@ The split is historical but it still tells you something useful. `java.sql` is
 the API you *use*; `javax.sql` is the API that *middleware* implements so that
 something else can hand you a `java.sql.Connection` with extra behaviour
 attached. HikariCP is a `javax.sql.DataSource` implementation. That is the whole
-of its relationship to JDBC — see **Topic 02 — Connection pooling with HikariCP**
-*(not written yet)*.
+of its relationship to JDBC — see [Topic 02 — Connection pooling with HikariCP](../02-connection-pooling/README.md).
 
 ⚠️ Both packages live in the **`java.sql` module**, not `java.base`. On a modular
 application you need `requires java.sql`, and on a `jlink` image you need the

@@ -107,7 +107,7 @@ Four things in that block are load-bearing and each is skipped by somebody:
 - `setAutoCommit(false)` — without it, nothing streams.
 - `setFetchSize(n)` — without it, `defaultRowFetchSize` (0) applies.
 - `commit()` — the transaction must end, and a long read transaction has real
-  costs (**Topic 03 — long transactions** *(not written yet)*).
+  costs ([Topic 03 — long transactions](../03-jdbc-transactions/README.md)).
 - **restoring autocommit** — otherwise the connection goes back to the pool with
   autocommit off, which is
   **Topic 03's killer bug** *(not written yet)*.

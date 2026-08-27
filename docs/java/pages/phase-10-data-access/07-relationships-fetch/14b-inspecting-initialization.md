@@ -160,7 +160,7 @@ is not guaranteed to be available until after the insert. Same for `getVersion`.
 
 **Neither API tells you whether an entity is managed, detached or transient.** The
 `Hibernate` class has no `isDetached` in the 7.4 javadoc listing. Entity state is
-**Topic 06 · JPA and the persistence context** *(not written yet)*, and `em.contains(x)` is
+[Topic 06 · JPA and the persistence context](../06-jpa-hibernate-model/README.md), and `em.contains(x)` is
 the question you actually want there.
 
 **Do not build a `hashCode` on load state.** It changes when the association initialises.

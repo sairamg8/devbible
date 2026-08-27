@@ -163,7 +163,7 @@ statement.** Borrow once for the unit of work, do everything, commit, release.
 Holding it *longer* than that — across an HTTP call to a payment provider, across
 user think-time — is the other failure, and in PostgreSQL an idle-in-transaction
 connection is a genuine operational incident
-(**Topic 03 — long transactions** *(not written yet)*).
+([Topic 03 — long transactions](../03-jdbc-transactions/README.md)).
 
 ## Gotchas
 
@@ -204,7 +204,7 @@ and worse throughput than a much smaller pool.
 **Cause:** each connection is a server process; more of them past the point of
 CPU and disk saturation makes the database slower, not faster.
 **Fix:** size for the database's capacity, not the application's thread count —
-**Topic 02 — Connection pooling with HikariCP** *(not written yet)*.
+[Topic 02 — Connection pooling with HikariCP](../02-connection-pooling/README.md).
 
 ## Interview questions
 

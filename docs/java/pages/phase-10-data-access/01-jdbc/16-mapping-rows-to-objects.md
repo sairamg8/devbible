@@ -181,7 +181,7 @@ JPA":
 | Reporting, aggregates, window functions, CTEs | hand mapping is the *only* pleasant option |
 | A team that will not read SQL | the mappers will rot; pick the tool the team maintains |
 
-**Topic 05 — SQL-first access** *(not written yet)* covers the middle ground —
+[Topic 05 — SQL-first access](../05-sql-first-access/README.md) covers the middle ground —
 Spring's `JdbcClient` and `JdbcTemplate` give you exactly the helpers above,
 tested, with named parameters — and **Topic 06 — The JPA/Hibernate model** *(not
 written yet)* covers the other end.

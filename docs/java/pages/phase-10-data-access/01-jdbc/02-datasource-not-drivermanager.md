@@ -151,7 +151,7 @@ use the PostgreSQL® provided connection pool."**
 
 Take the driver at its word. Use `PGSimpleDataSource` when you want an unpooled
 `DataSource` — a migration runner, a test — and a real pool otherwise. That is
-**Topic 02 — Connection pooling with HikariCP** *(not written yet)*.
+[Topic 02 — Connection pooling with HikariCP](../02-connection-pooling/README.md).
 
 ## Wiring a `DataSource` by hand
 

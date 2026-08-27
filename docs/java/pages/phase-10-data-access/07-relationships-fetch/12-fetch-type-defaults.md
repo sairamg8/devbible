@@ -111,8 +111,7 @@ the shape of the result set — or, when the query did not join it, by a follow-
 per row. You do not choose which; the provider does, based on how the entity was loaded.
 
 🔴 **Naming the danger is this topic's job. Solving it is not.** Fetch joins,
-`@EntityGraph`, `@BatchSize` and projections all belong to **Topic 08 · The N+1 problem**
-*(not written yet)*.
+`@EntityGraph`, `@BatchSize` and projections all belong to [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 ## The mapping discipline that follows
 

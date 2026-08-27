@@ -144,7 +144,7 @@ production.** With fifty orders in your local database, walking
 `order.getLines()` in a loop is instant. The behaviour that kills it — one query
 per order — is invisible at that size, and the growth is linear in a number that
 is not a number anyone tests with. This is the N+1 problem, and it gets its own
-topic: **Topic 08 · The N+1 problem** *(not written yet)*.
+topic: [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 **The wide-table projection argument reverses for narrow tables.** If a table has
 six columns and you need four, fetching the entity costs almost nothing extra and

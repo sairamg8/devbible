@@ -154,7 +154,7 @@ arrives at the same place:
 > DTO projections don't need to be managed.
 
 🔴 **Selecting a projection directly in the query — rather than loading entities and mapping
-them — is Topic 08's material.** **Topic 08 · The N+1 problem** *(not written yet)* owns
+them — is Topic 08's material.** [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md) owns
 projections, entity graphs and fetch joins. What belongs here is the mapping-level point:
 the recursion is a property of bidirectional associations, and the way to not have it in
 your API is to not send entities.
