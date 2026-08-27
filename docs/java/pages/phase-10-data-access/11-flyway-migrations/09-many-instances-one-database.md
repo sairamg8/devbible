@@ -213,6 +213,8 @@ instead — and a `finally` block does not run if the process is killed.
 transactional advisory lock and a statement that refuses to run in a transaction. If any migration
 in your history needs `CONCURRENTLY`, the whole application runs with session-level locks.
 
+## Interview questions
+
 **★ Ten pods start simultaneously and all run Flyway. What stops them corrupting the schema?**
 A PostgreSQL advisory lock taken around the entire migration run. One instance acquires it and
 applies the pending migrations; the others poll until it is released, then acquire it themselves,
@@ -247,5 +249,31 @@ safest option because it survives the process being killed. It cannot be used wh
 itself must not run in a transaction — most commonly `CREATE INDEX CONCURRENTLY` — so Flyway offers
 session-level locks via `spring.flyway.postgresql.transactional-lock: false`, released explicitly in
 a `finally` block.
+
+**★ Concretely, what goes wrong if the lock is not there?**
+Two instances both read the history table, both see `V42` as pending and both execute it. If it is
+a DDL statement the second one fails on a duplicate object and takes that pod's startup with it; if
+it is an `INSERT` of reference data both succeed and every row exists twice — which nothing reports,
+because both migrations "worked". Both then race to write a history row for the same version. The
+DDL case is loud and survivable; the data case is silent and is the one that reaches production.
+
+**★ Nine pods are polling once a second for the length of the migration. Is that a problem?**
+At ten replicas, no — it is nine trivial queries a second. It becomes worth thinking about at large
+replica counts, because the retry is a fixed 1000 ms with no backoff and no jitter, so every losing
+instance polls in lockstep and stays in lockstep for the whole run. The load is constant rather than
+decaying, and it is at its highest exactly while the winner is doing the expensive work.
+
+**★ Would you set `lock-retry-count: -1`?**
+Rarely. `-1` means retry indefinitely, which converts a crash-loop into a hang: the pod stays alive,
+never becomes ready, and emits no error. A crash-loop is at least visible in the deployment's status
+and in the restart count. A large finite value — enough to cover the longest migration you expect,
+with margin — gives you the patience without giving up the failure signal.
+
+**★ Your first deployment against a fresh production database fails on every pod but one. Why?**
+Because the initial migration run is long — it is every migration you have ever written, applied in
+sequence — and the default retry budget is about fifty one-second attempts. The winner is still
+working when the other instances exhaust `lockRetryCount` and throw, which fails their application
+contexts. It is a configuration mismatch, not a bug: raise `spring.flyway.lock-retry-count` for the
+first rollout, or apply the baseline migrations from a separate job before the deployment starts.
 
 {/* FOOTER */}
