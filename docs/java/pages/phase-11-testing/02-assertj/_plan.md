@@ -55,13 +55,13 @@ and content are filtering, and it forward-links to `03f`. Do not rename it.
 |---|---|---|
 | `04-recursive-comparison.md` | 12 | `02c`, `02d`, `03b` |
 | `04b-ignoring-fields.md` | 13 | `02c` |
-| `05-exceptions.md` | 14 | — |
-| `06-soft-assertions.md` | 15 | `02`, `02b`, `03f` |
-| `07-custom-assertions.md` | 16 | `01`, `02` |
-| `08-optional-assertions.md` | 17 | `02b` |
-| `08b-dates-and-times.md` | 18 | `02c` |
-| `09-describedas-and-messages.md` | 19 | `01`, `02b` |
-| `10-the-checklist.md` | 20 | `01` |
+| ~~`05-exceptions.md`~~ ✅ written @ 14, plus `05b-causes-and-messages.md` @ 15 | — | — |
+| `06-soft-assertions.md` | 16 | `02`, `02b`, `03f` |
+| `07-custom-assertions.md` | 17 | `01`, `02` |
+| `08-optional-assertions.md` | 18 | `02b` |
+| `08b-dates-and-times.md` | 19 | `02c` |
+| `09-describedas-and-messages.md` | 20 | `01`, `02b` |
+| `10-the-checklist.md` | 21 | `01` |
 | `README.md` | 0 | `../03-parameterized-tests/01` |
 
 Note the drift from the original table above: the fork chose `04-recursive-comparison`
