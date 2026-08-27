@@ -1,9 +1,27 @@
 # Phase 11 · Testing — notes every fork in this phase must read
 
-Target stack: **JUnit 5 (Jupiter) · Mockito · AssertJ · Testcontainers**, on **JDK 25**,
-**Spring Boot 4.1.0 / Spring Framework 7.0.8**. ⚠️ Verify the exact JUnit, Mockito and
-AssertJ versions **Boot 4.1.0 manages** (`spring-boot-dependencies`) rather than quoting
-the newest release on each project's site.
+Target stack: **JUnit (Jupiter) · Mockito · AssertJ · Testcontainers**, on **JDK 25**,
+**Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+
+## 🔴 THE VERSION SPINE — verified, do not re-derive and do not quote a project's front page
+
+Read straight out of `spring-boot-dependencies:4.1.0`'s POM on Maven Central, 2026-08-27:
+
+| | Managed by Boot 4.1.0 |
+|---|---|
+| **JUnit (Jupiter)** | 🔴 **6.0.3** — `org.junit:junit-bom:6.0.3` |
+| Mockito | 5.23.0 |
+| AssertJ | 3.27.7 |
+| Testcontainers | 2.0.5 |
+| Hamcrest · JSONassert · XMLUnit · Awaitility | 3.0 · 1.5.3 · 2.11.0 · 4.3.0 |
+
+🔴🔴 **JUnit is at 6, not 5.** Topic 01's directory is `01-junit-5` and the phase README says
+"JUnit 5"; **do not rename either** — the names are the ecosystem's own for the Jupiter
+programming model and inbound links point at them. But **verify content against the JUnit 6
+user guide and javadocs**, check which version any page you quote documents, and state the
+reconciliation in topic 01's prose: a reader on Boot 4.1 resolves Jupiter 6 while every
+tutorial says 5. Anything that is 5.x-only or was removed in 6 gets said explicitly, not
+dropped silently.
 
 ## 🔴 The three facts that make most online samples wrong on this phase
 
