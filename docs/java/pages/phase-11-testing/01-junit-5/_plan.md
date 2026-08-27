@@ -50,19 +50,31 @@ and then says plainly that the rest of the phase uses AssertJ, and why. **03 own
 🔴 **These EXACT filenames are already linked from the chunks above — write them, not
 variants**, or the inbound links dangle:
 
+**Also on disk since the salvage commit:** `06b-nested-tests` (pos 12) and
+`06c-nesting-lifecycle-and-limits` (pos 13). `sidebar_position` now runs 1–13.
+
+⚠️ While writing 06b/06c, a **stale claim in `03b` was corrected**: "a `@Nested` class
+cannot declare `@BeforeAll` because an inner class cannot have `static` members" expired at
+**Java SE 16** (JLS SE 25 §8.1.3 — an inner class *may* declare `static` members), and
+JUnit 6 baselines Java 17. Do not reintroduce the pre-16 rule anywhere in this topic.
+
 | File | `sidebar_position` | Linked from |
 |---|---|---|
-| `06b-nested-tests.md` | 12 | `03b` |
-| `07-disabling-and-conditions.md` | 13 | `02`, `03`, `04` |
-| `08-assumptions.md` | 14 | — |
-| `09-tempdir-and-resources.md` | 15 | `02b`, `03c` |
-| `10-extensions.md` | 16 | `02`, `03`, `03c` |
-| `10b-writing-one.md` | 17 | `02b` |
-| `11-execution-order.md` | 18 | `01`, `02b`, `03`, `03b` |
-| `12-parallel-execution.md` | 19 | `03`, `03b` |
-| `13-timeouts.md` | 20 | `04`, `05b` |
-| `14-flaky-tests.md` | 21 | `03` |
-| `15-the-checklist.md` | 22 | — |
+| `07-disabling-and-conditions.md` | 14 | `02`, `03`, `04` |
+| `08-assumptions.md` | 15 | — |
+| `09-tempdir-and-resources.md` | 16 | `02b`, `03c` |
+| `10-extensions.md` | 17 | `02`, `03`, `03c` |
+| `10b-writing-one.md` | 18 | `02b` |
+| `11-execution-order.md` | 19 | `01`, `02b`, `03`, `03b`, `06c` |
+| `12-parallel-execution.md` | 20 | `03`, `03b` |
+| `13-timeouts.md` | 21 | `04`, `05b` |
+| `14-flaky-tests.md` | 22 | `03` |
+| `15-the-checklist.md` | 23 | — |
 | `README.md` | 0 | `../03-parameterized-tests/01`, `04` |
+
+🔴 **Tagging still has no home.** `_PHASE-NOTES.md` gives topic 01 "nested/tagged tests";
+06b/06c cover nesting only. Write `@Tag`, tag expressions and the tag syntax rules as
+`06d-tagging.md` (pos 14, shifting 07–15 up by one) or fold them into `07`. Decide, then
+say which in this file.
 
 Split further with lettered siblings as needed — the table is the floor, not the ceiling.

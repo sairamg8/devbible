@@ -11,7 +11,11 @@ sidebar_position: 5
 > and "Parallel Execution"
 > ([parallel-execution](https://docs.junit.org/6.0.3/writing-tests/parallel-execution.html));
 > `@TestInstance` javadoc
-> ([TestInstance](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/TestInstance.html)).
+> ([TestInstance](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/TestInstance.html));
+> "Nested Tests"
+> ([nested-tests](https://docs.junit.org/6.0.3/writing-tests/nested-tests.html)); and
+> **JLS SE 25 §8.1.3** on `static` members in inner classes
+> ([jls-8.html](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html)).
 > JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
 
 **One annotation flips the default from "a new instance per test method" to "one instance
@@ -69,10 +73,19 @@ From the `@TestInstance` javadoc, `PER_CLASS` enables:
 > well as `@MethodSource` factory methods in test classes implemented with the Kotlin
 > programming language."*
 
-Item two is the one that matters most in practice: **a `@Nested` inner class cannot have a
-`static` member in the general case, so under the default lifecycle a `@Nested` class
-cannot declare `@BeforeAll` at all.** `PER_CLASS` on the nested class is how you get
-class-scoped setup inside a nesting hierarchy ([06b](06b-nested-tests.md)).
+Item two used to be the one that mattered most in practice, and on JUnit 6 it no longer is.
+⚠️ **The old rule — "a `@Nested` inner class cannot declare `@BeforeAll`, because
+`@BeforeAll` must be `static` and an inner class cannot have `static` members" — expired at
+Java SE 16.** JLS SE 25 §8.1.3 is explicit: *"an inner class may declare and inherit
+`static` members … and declare static initializers, even though the inner class itself is
+not `static`"*, with the historical note that *"prior to Java SE 16, an inner class could
+not declare static initializers, and could only declare `static` members that were constant
+variables"*. JUnit 6 baselines Java 17, so `static @BeforeAll` inside a `@Nested` class
+compiles, and the guide's nested-tests page says inner classes are *"subject to full
+lifecycle support, including `@BeforeAll` and `@AfterAll` methods on each level"*.
+
+`PER_CLASS` on a nested class is therefore now a **preference**, not the only way out —
+see [06b](06b-nested-tests.md). Every tutorial written before 2021 says otherwise.
 
 Item four is why almost every Kotlin JUnit 5 example on the internet carries
 `@TestInstance(PER_CLASS)`: Kotlin has no `static`, so `@BeforeAll` otherwise needs a
@@ -209,10 +222,15 @@ The isolation guarantee — the reason the per-method default exists — and, un
 explicitly annotate `@Execution(CONCURRENT)`, the class's eligibility for parallel
 execution. You also lose the `static` keyword as a visible marker of shared state.
 
-**★ Why can a `@Nested` class not normally declare `@BeforeAll`?**
-Because `@BeforeAll` must be `static` under the default lifecycle, and a `@Nested` class is
-by definition a non-static inner class. `@TestInstance(PER_CLASS)` on the nested class
-removes the `static` requirement and is the standard way out.
+**★ Can a `@Nested` class declare `@BeforeAll`, and has the answer changed?**
+Yes, and yes. `@BeforeAll` must be `static` under the default lifecycle, and until Java SE
+16 an inner class could not declare a non-constant `static` member — so on Java 8–15 a
+`@Nested` class could not have one, and `@TestInstance(PER_CLASS)` was the only way out.
+JLS SE 25 §8.1.3 now permits `static` members in inner classes, JUnit 6 baselines Java 17,
+and the user guide describes full lifecycle support *"on each level"* of the nesting.
+`PER_CLASS` still works and is still the tidier option if you also want non-static
+`@MethodSource` factories; it is no longer a requirement. This is a good question to be
+asked, because the pre-16 answer is what most published material still gives.
 
 **★ Why do so many Kotlin examples use `PER_CLASS`?**
 Kotlin has no `static`; a static method requires a `companion object` with `@JvmStatic`.
