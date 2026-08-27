@@ -18,8 +18,11 @@ The layer where Java meets PostgreSQL — and where the worst performance bugs
 in typical services live. JPA is taught *after* JDBC on purpose: you cannot
 debug an abstraction you've never seen under.
 
-🚧 **8 of 14 written** — 335 chunks, ~88,000 lines, 0 over the 300-line cap and 0
-dangling links. Topics 09–14 are scaffolded with chunk plans and are the remaining work.
+🚧 **8 of 14 topics closed** — and topics 09–14 are part-written: **104 more chunks are on
+disk** (09 · 27 · 10 · 9 · 11 · 23 · 12 · 10 · 13 · 26 · 14 · 9), each topic resuming from
+the chunk plan in its own directory. 0 files over the 300-line cap. A part-written topic
+keeps its row unlinked until its `README.md` index exists, so nothing here points at a
+half-topic.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -31,12 +34,12 @@ dangling links. Topics 09–14 are scaffolded with chunk plans and are the remai
 | 06 | **[The JPA/Hibernate model](06-jpa-hibernate-model/README.md)** | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
 | 07 | **[Relationships and fetch types](07-relationships-fetch/README.md)** | <span className="db-tier t-understand">Understand</span> | Owning side, `mappedBy` — `EAGER` on a collection is a time bomb |
 | 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
-| 09 | **Spring Data JPA** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
-| 10 | **Lazy-loading pitfalls** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
-| 11 | **Migrations with Flyway** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
-| 12 | **Caching** *(not written yet)* | <span className="db-tier t-know">Know</span> | Second-level, `@Cacheable` with Redis — invalidation is the cost |
-| 13 | **jOOQ** *(not written yet)* | <span className="db-tier t-know">Know</span> | Typed SQL as the JPA alternative — reporting, complex joins |
-| 14 | **Spring Data for MongoDB / Redis** *(not written yet)* | <span className="db-tier t-know">Know</span> | The same repository idiom over the other stores in this bible |
+| 09 | **Spring Data JPA** *(in progress — 27 chunks written)* | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
+| 10 | **Lazy-loading pitfalls** *(in progress — 9 chunks written)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
+| 11 | **Migrations with Flyway** *(in progress — 23 chunks written)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
+| 12 | **Caching** *(in progress — 10 chunks written)* | <span className="db-tier t-know">Know</span> | Second-level, `@Cacheable` with Redis — invalidation is the cost |
+| 13 | **jOOQ** *(in progress — 26 chunks written)* | <span className="db-tier t-know">Know</span> | Typed SQL as the JPA alternative — reporting, complex joins |
+| 14 | **Spring Data for MongoDB / Redis** *(in progress — 9 chunks written)* | <span className="db-tier t-know">Know</span> | The same repository idiom over the other stores in this bible |
 
 ## Phase gate
 

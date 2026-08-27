@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | 7 · I/O, time and the everyday stdlib | 13 | ✅ 13/13 |
 | 8 · The build: Maven, Gradle, dependencies | 12 | ✅ 12/12 |
 | 9 · Spring Boot and the web | 16 | ✅ 16/16 — complete |
-| 10 · Data access | 14 | 🚧 **8/14** — topics 01–08 complete (**335 chunks, ~88,000 lines**): JDBC · connection pooling · JDBC transactions · Spring `@Transactional` · SQL-first access · the JPA/Hibernate model · relationships and fetch types · the N+1 problem. Next: 09 · Spring Data JPA |
+| 10 · Data access | 14 | 🚧 **8/14 closed** — topics 01–08 complete (**335 chunks, ~88,000 lines**): JDBC · connection pooling · JDBC transactions · Spring `@Transactional` · SQL-first access · the JPA/Hibernate model · relationships and fetch types · the N+1 problem. Topics **09–14 are part-written in parallel — 104 more chunks on disk** (09·27 10·9 11·23 12·10 13·26 14·9); each resumes from the chunk plan in its own directory |
 | 11 · Testing | 11 | Planned |
 | 12 · The JVM in production | 15 | Planned |
 | 13 · OAuth2, OIDC and service security | 14 | Planned |
