@@ -137,7 +137,7 @@ or a trigger is invisible to the cache. Hibernate invalidates on *its own* write
 ⚠️ This is a change from the Hibernate 5 folklore that still fills search results. You do not
 "set `hibernate.cache.use_second_level_cache=true` to turn it on" — you configure a region
 factory, and it turns on. Setting the flag without a provider does nothing; configuring a
-provider without the flag works. The wiring is [6c · Turning it on](06c-turning-it-on.md).
+provider without the flag works. The wiring is [6d · Turning it on](06d-turning-it-on.md).
 
 **Two — mark the entity**, because the default shared-cache mode caches nothing you did not
 opt in.
