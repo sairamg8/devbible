@@ -57,11 +57,11 @@ and content are filtering, and it forward-links to `03f`. Do not rename it.
 | `04b-ignoring-fields.md` | 13 | `02c` |
 | ~~`05-exceptions.md`~~ ✅ written @ 14, plus `05b-causes-and-messages.md` @ 15 | — | — |
 | ~~`06-soft-assertions.md`~~ ✅ @ 16, plus `06b-composing-soft-assertions` @ 17 and `06c-soft-assertions-extension` @ 18 | — | — |
-| `07-custom-assertions.md` | 19 | `01`, `02` |
-| `08-optional-assertions.md` | 20 | `02b` |
-| `08b-dates-and-times.md` | 21 | `02c` |
-| `09-describedas-and-messages.md` | 22 | `01`, `02b`, `06` |
-| `10-the-checklist.md` | 23 | `01` |
+| ~~`07-custom-assertions.md`~~ ✅ @ 19, plus `07b-adopting-custom-assertions` @ 20 | — | — |
+| `08-optional-assertions.md` | 21 | `02b` |
+| `08b-dates-and-times.md` | 22 | `02c` |
+| `09-describedas-and-messages.md` | 23 | `01`, `02b`, `06` |
+| `10-the-checklist.md` | 24 | `01` |
 | `README.md` | 0 | `../03-parameterized-tests/01` |
 
 Note the drift from the original table above: the fork chose `04-recursive-comparison`
