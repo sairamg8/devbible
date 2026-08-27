@@ -37,7 +37,7 @@ fails in four ways that are all invisible on day one.
 Every route below fixes all four by making the migration scripts the input.
 
 ⚠️ **Migrations themselves belong to another topic.** The tool, its file naming, its versioning
-and its failure modes are **Topic 11 · Migrations with Flyway** *(not written yet)*. This page
+and its failure modes are [Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md). This page
 is only about how the generator consumes them.
 
 ## Route 1 · `DDLDatabase` — no server at all

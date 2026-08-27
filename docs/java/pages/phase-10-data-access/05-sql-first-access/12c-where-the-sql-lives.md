@@ -156,8 +156,8 @@ can find them.
   on the driver. Split them.
 - **Never mix query files with migration files.** Flyway runs everything matching its
   naming convention under its configured locations, so a query stored under
-  `db/migration/` will be *executed as a migration* — see **Flyway and schema
-  migrations** *(not written yet)*. Keep queries under `sql/` and migrations under
+  `db/migration/` will be *executed as a migration* — see
+  [Flyway and schema migrations](../11-flyway-migrations/README.md). Keep queries under `sql/` and migrations under
   `db/migration/`, and never let one directory serve both.
 
 ## Gotchas

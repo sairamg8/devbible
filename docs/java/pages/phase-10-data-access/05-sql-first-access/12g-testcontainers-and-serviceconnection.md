@@ -132,8 +132,8 @@ for a spike, not for a suite where you care when containers start and stop.
 
 Once the database is real, the schema should come from the real migrations —
 `@ImportAutoConfiguration(FlywayAutoConfiguration.class)` in a slice, or nothing at
-all in a `@SpringBootTest` where Flyway auto-configures normally. See **Flyway and
-schema migrations** *(not written yet)*.
+all in a `@SpringBootTest` where Flyway auto-configures normally. See
+[Flyway and schema migrations](../11-flyway-migrations/README.md).
 
 The reason to prefer this over `TC_INITSCRIPT` or a `@Sql` schema is not tidiness. A
 migration that fails — a `not null` added to a column with nulls, a constraint the

@@ -102,8 +102,7 @@ At the end of this deploy every *new* and *updated* row has both. Old rows do no
 UPDATE customers SET full_name = name WHERE full_name IS NULL;
 ```
 
-⚠️ A single `UPDATE` over a large table is a long transaction holding row locks — **10 · Data
-migrations** *(not written yet)* is about doing this in batches. For a small table this is fine as
+⚠️ A single `UPDATE` over a large table is a long transaction holding row locks — **[10 · Data migrations](10-data-migrations.md)** is about doing this in batches. For a small table this is fine as
 written.
 
 Code in deploy 2 **reads the new column and still writes both.** Writing both is what makes deploy 2

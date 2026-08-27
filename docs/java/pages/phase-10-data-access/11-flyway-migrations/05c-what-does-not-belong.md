@@ -32,7 +32,7 @@ deployment — and that one is worth being able to recognise on sight.**
 | `UPDATE … SET n = n + 1` | ⛔ **the second run applies it again** — silent, cumulative corruption |
 | `DELETE FROM …` | re-deletes rows a later step may have legitimately re-created |
 | Anything with `now()` or a sequence | produces different data every run, and the checksum never changes |
-| A data backfill | belongs in a versioned migration — see **10 · Data migrations** *(not written yet)* |
+| A data backfill | belongs in a versioned migration — see **[10 · Data migrations](10-data-migrations.md)** |
 
 The `UPDATE … SET n = n + 1` row is the dangerous one because it is the only entry that **does not
 fail**. Everything else on the list errors on the second run and gets fixed within an hour. A

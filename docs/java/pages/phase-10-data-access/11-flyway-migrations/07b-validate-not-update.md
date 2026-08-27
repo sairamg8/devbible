@@ -111,7 +111,7 @@ current shape and asserts it from then on.**
 
 Closing the remaining gap needs a schema comparison — a diff between the live schema and one built
 by replaying the migrations into an empty database. That is a job for the pipeline, and it is what
-**11 · Testing migrations** *(not written yet)* is about.
+**[11 · Testing migrations](11-testing-migrations.md)** is about.
 
 ## `validate-on-migrate` and the `validate` command are not the same thing
 

@@ -152,8 +152,8 @@ anything about the data. `validate` is a shape check, not a correctness check.
    database should run the same migrations production will.
 
 The migration tool itself — Flyway's versioning, repeatable migrations, baselining an existing
-database, and what a failed migration leaves behind — is **topic 11 · Migrations with
-Flyway** *(not written yet)*.
+database, and what a failed migration leaves behind — is
+[Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md).
 
 ## Gotchas
 

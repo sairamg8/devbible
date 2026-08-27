@@ -117,7 +117,7 @@ indexes.
 large fraction of nullable columns are nullable because nobody decided, not
 because absence is meaningful. `NOT NULL DEFAULT 0` removes an entire class of
 bug from every consumer of that table forever. That is a migration
-(**Topic 11 — Migrations with Flyway** *(not written yet)*), not a mapper change.
+([Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md)), not a mapper change.
 
 ## `Optional` in records, and where it belongs
 

@@ -43,7 +43,7 @@ nothing fails — the reads simply return fewer documents than they should.
 This is the first of several places in this topic where the absence of a schema converts
 a configuration change into a data problem. Relational storage would have refused the
 new key outright, or forced you through a `ALTER TABLE … RENAME COLUMN` that rewrote
-everything atomically. **Topic 11 · Flyway migrations** *(not written yet)* covers what
+everything atomically. [Topic 11 · Flyway migrations](../11-flyway-migrations/README.md) covers what
 that discipline buys you; the document store's answer is that you have to build the
 equivalent yourself.
 

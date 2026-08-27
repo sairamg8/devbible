@@ -62,7 +62,7 @@ version column you get genuine optimistic concurrency: one statement, no lock, c
 by the write itself. Without one you get a lock you did not ask for, on every single-row save.
 
 **The version column is a schema change**, which means it belongs in a migration —
-**Topic 11 · Migrations with Flyway** *(not written yet)* — and then in the generator
+[Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md) — and then in the generator
 configuration, alongside everything else in
 **[02c · Shaping the generated API](02c-shaping-the-generated-api.md)**.
 

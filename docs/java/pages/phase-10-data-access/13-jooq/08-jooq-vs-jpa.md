@@ -117,7 +117,7 @@ that reason disappears the moment the SQL is a string again.
 
 **★ A jOOQ codebase without disciplined migrations is worse than a JPA one.** jOOQ has no
 `ddl-auto` equivalent and should not. Schema ownership must sit with the migration tool —
-**Topic 11 · Migrations with Flyway** *(not written yet)*.
+[Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md).
 
 **★ jOOQ's compile-time checking is only as current as your last generation.** A stale generated
 tree checks yesterday's schema confidently. That is the operational risk

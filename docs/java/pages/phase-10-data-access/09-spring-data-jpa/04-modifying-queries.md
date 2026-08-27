@@ -207,7 +207,7 @@ batches.
 A `@Modifying` query is application code that mutates rows in bulk with no
 history and no review trail beyond the commit. Data repairs usually belong in a
 migration, where they are versioned and applied once —
-**topic 11 · migrations with Flyway** *(not written yet)*.
+[Topic 11 · Migrations with Flyway](../11-flyway-migrations/README.md).
 
 ## Interview questions
 
