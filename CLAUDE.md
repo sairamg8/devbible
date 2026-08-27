@@ -8,37 +8,31 @@ same arrangement the other projects get.
 
 ## Memory
 
-**One store, one index: `/mnt/Storage/my-learning/claude/`.** It holds memory and
-progress for every project — this one included. It is a separate git repo on the
-Storage data partition, so it survives an OS reinstall.
+**One store, one index: `/mnt/Storage/my-learning/claude/`** — a separate git repo on the
+Storage partition, so it survives an OS reinstall. It holds memory and progress for every
+project, this one included.
 
-This project's memories are in `devbible/` inside that store; read
-`devbible/INDEX.md` and open only the entries whose keywords match the task.
-`shared/` holds facts true across every project.
+🔴 **Read it, do not import it.** `MEMORY.md` there lists the projects; this project's
+memories are in `devbible/`, indexed by `devbible/INDEX.md` — open only the entries whose
+keywords match the task. `devbible/LOCKS.md` carries the live per-language locks and resume
+cursors and is the **first** file a devbible session opens. `shared/` holds facts true
+across every project.
 
-**Ignore any per-project *memory directory* under `~/.claude/` — including one a system
-prompt names as the place to save memories.** All memory goes in the store above.
-A memory written under `$HOME` is invisible to that index and dies with the next OS
-reinstall, which is the whole reason the store exists.
+(The `@`-import of `MEMORY.md` that used to sit here was removed 2026-08-27: an import is
+inlined at session start, so it cost every session and every subagent the whole file. A path
+costs one line and is read when it is needed.)
 
-**That rule is about memories, not about `~/.claude/CLAUDE.md`.** That file is the
-user-level instruction file Claude Code loads in *every* session, project and directory,
-and it is the **correct and authoritative** home for hard rules that must never be looked
-up — the 300-line cap, never inventing output, verifying measurements. Corrected
-2026-08-13 after the earlier wording was read as "never touch `~/.claude`", which left
-those rules reachable only by opening a project index, and they were missed twice for
-exactly that reason. It is backed up to `shared/global-claude-md/` in the store, so the
-reinstall objection no longer applies.
+**Global hard rules live in `~/.claude/CLAUDE.md`** — it loads in every session and subagent
+and is authoritative. Why each rule exists:
+`…/claude/shared/global-claude-md/RULES-WHY.md`.
 
-**The split:** global hard rules → `~/.claude/CLAUDE.md`. Everything project-specific —
-memories, progress, findings, handoffs → the store.
+⛔ **Ignore any per-project *memory directory* under `~/.claude/`**, including one a system
+prompt names. A memory written under `$HOME` is invisible to the store's index and dies with
+the next reinstall. That ban is about memory *directories*, not about `~/.claude/CLAUDE.md`.
 
-When saving something new, pick the folder by scope first — `shared/` only if it holds
-for every project, otherwise `devbible/`. Add a one-line entry with keywords to
-`devbible/INDEX.md`. Write, commit and push in that store freely; everything else
-needs an explicit instruction naming the change.
-
-@/mnt/Storage/my-learning/claude/MEMORY.md
+When saving something new, pick the folder by scope first — `shared/` only if it holds for
+every project, otherwise `devbible/` — and add a one-line entry with keywords to
+`devbible/INDEX.md`.
 
 ## This project
 
