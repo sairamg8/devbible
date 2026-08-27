@@ -130,8 +130,8 @@ collection exists and you need its size, this is the call to reach for.
 - **`Hibernate.initialize` as a general fetching strategy.** The *Introduction* is direct
   about the cost: *"the above code is very inefficient, requiring two trips to the database
   to obtain data that could in principle be retrieved with just one query."* Fetching what
-  an operation needs, in the query that loads it, is Topic 08's material — **Topic 08 · The
-  N+1 problem** *(not written yet)*.
+  an operation needs, in the query that loads it, is Topic 08's material —
+  [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 - **`Hibernate.unproxy` to make an `instanceof` work.** It is a type question asked of
   something that should have been given a method.
 - **Anything that makes production behaviour depend on load state.**

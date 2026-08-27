@@ -110,7 +110,7 @@ Four things in that block are load-bearing and each is skipped by somebody:
   costs ([Topic 03 — long transactions](../03-jdbc-transactions/README.md)).
 - **restoring autocommit** — otherwise the connection goes back to the pool with
   autocommit off, which is
-  **Topic 03's killer bug** *(not written yet)*.
+  **[Topic 03's killer bug](../03-jdbc-transactions/08b-the-level-and-the-pool.md)**.
 
 ⚠️ **Alternatively set `defaultRowFetchSize` on the connection URL** so every
 statement on that connection fetches in batches. That is a reasonable default for a

@@ -85,8 +85,8 @@ The `Connection.close()` javadoc is explicit and is not what people assume:
 So "closing rolls back" is **not** something the specification promises. In a
 pooled application the connection is not being closed at all — it is going back
 into the pool with whatever session state you left on it, which is the failure
-[chunk 4](04-connection-is-expensive.md) describes and **Topic 03 — transactions
-at the JDBC level** *(not written yet)* owns in full. The rule that survives every
+[chunk 4](04-connection-is-expensive.md) describes and [Topic 03 — transactions at the JDBC level](../03-jdbc-transactions/README.md)
+owns in full. The rule that survives every
 combination of driver and pool: **end the transaction yourself, in the code that
 started it.**
 

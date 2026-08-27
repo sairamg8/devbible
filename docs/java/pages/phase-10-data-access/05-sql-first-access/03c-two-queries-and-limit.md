@@ -74,8 +74,8 @@ number does to the server's statement cache.
 unbounded number of round trips that grows with the result. This is exactly two,
 always, regardless of how many orders there are. The distinction matters because
 people who have been burned by N+1 sometimes reject any second query on principle
-and take a cartesian product instead. The ORM version of this argument is **Topic
-08 · The N+1 problem** *(not written yet)*.
+and take a cartesian product instead. The ORM version of this argument is
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 ## Pagination and fan-out do not mix
 

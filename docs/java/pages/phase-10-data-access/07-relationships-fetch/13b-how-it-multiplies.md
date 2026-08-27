@@ -159,8 +159,8 @@ is applied. The rows are still transferred either way.
 **Pagination and a fetched collection do not combine.** A `LIMIT` applied to a result set
 that has been multiplied by a join limits *rows*, not entities, so you get a partial
 collection on the boundary entity. This is why Hibernate has historically had to paginate
-such queries in memory. Both the problem and the fixes belong to **Topic 08 · The N+1
-problem** *(not written yet)*.
+such queries in memory. Both the problem and the fixes belong to
+[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).
 
 **Transitive eager fetching has no depth limit you can configure.** There is no "max fetch
 depth" for entity associations in JPA. The graph closure is the limit.

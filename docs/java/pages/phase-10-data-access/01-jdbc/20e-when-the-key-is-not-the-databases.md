@@ -162,9 +162,9 @@ a value from a sequence before the insert; or assign it in the application. The
 consequence is also the same shape — a strategy that learns the key *from* the
 insert must execute that insert to know it, while a strategy that knows the key
 first can defer and group its writes. That is why the choice of strategy shows up
-as a batching question rather than a naming question. **Topic 06 — The
-JPA/Hibernate model** *(not written yet)* covers it properly; **Topic 05 — SQL-first
-access** *(not written yet)* covers `JdbcClient` and `JdbcTemplate`, where the
+as a batching question rather than a naming question. [Topic 06 — The JPA/Hibernate model](../06-jpa-hibernate-model/README.md)
+covers it properly; [Topic 05 — SQL-first access](../05-sql-first-access/README.md)
+covers `JdbcClient` and `JdbcTemplate`, where the
 `KeyHolder` above lives.
 
 ## The trade-off

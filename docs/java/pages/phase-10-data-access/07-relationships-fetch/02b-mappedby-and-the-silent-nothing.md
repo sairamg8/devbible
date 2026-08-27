@@ -61,8 +61,8 @@ Java on a valid collection. There is no type-level distinction between an owned 
 unowned collection — both are just `Set<Book>`.
 
 **Hibernate's dirty check.** Hibernate does compare loaded state against current state to
-decide what to write (that mechanism belongs to **Topic 06 · JPA and the persistence
-context** *(not written yet)*). But it only compares the attributes that **map columns**.
+decide what to write (that mechanism belongs to
+[Topic 06 · JPA and the persistence context](../06-jpa-hibernate-model/README.md)). But it only compares the attributes that **map columns**.
 An unowned collection maps nothing, so there is nothing to compare and nothing to
 generate. It is not that Hibernate looked and decided to skip it; there is no column in
 its model for that attribute at all.

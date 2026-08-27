@@ -229,8 +229,7 @@ precisely for that, and is **@since 7.0**.
 no `.where(...)`, no `.orderBy(...)`. Dynamic SQL is still string assembly, with
 all the discipline that requires — see
 **[Dynamic SQL without concatenation](../01-jdbc/07b-dynamic-sql-without-concatenation.md)**.
-If you want typed SQL construction, that is jOOQ, and it is **Topic 13 · jOOQ**
-*(not written yet)*.
+If you want typed SQL construction, that is jOOQ, and it is [Topic 13 · jOOQ](../13-jooq/README.md).
 
 ## Interview questions
 

@@ -124,8 +124,8 @@ transaction from inside the call. So `CALL` from JDBC with autocommit off can
 return with your transaction already committed and a new one begun, which makes
 your subsequent `rollback()` a no-op over work you thought was still provisional.
 If you call procedures, know what they do to the transaction —
-**Topic 03** covers the transaction side at
-**the shape that survives failure** *(not written yet)*.
+Topic 03 covers the transaction side at
+**[the shape that survives failure](../03-jdbc-transactions/02-commit-rollback-and-the-shape-that-survives.md)**.
 
 ⚠️ **For an ordinary PostgreSQL function, a `PreparedStatement` is simpler and
 better:**

@@ -182,7 +182,7 @@ surfaces as a business bug days later.
 **Cause:** the `catch` is a habit, not a decision, and there is nothing useful to
 do at this layer.
 **Fix:** translate and rethrow — [exception translation](../../phase-5-exceptions/04-custom-exceptions-translation.md)
-is the phase 5 discipline, and **chunk 21 · `SQLException`** *(not written yet)*
+is the phase 5 discipline, and **[chunk 21 · `SQLException`](21-sqlexception.md)**
 is the JDBC-specific version.
 
 **⚠️ Assuming `close()` is cheap and always succeeds**

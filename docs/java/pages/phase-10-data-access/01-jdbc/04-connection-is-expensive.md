@@ -90,8 +90,8 @@ The state a `Connection` carries:
 🔴 **In a pooled application every one of those rows is a leak surface.** You
 borrow a connection, change something, close it — and the *next* borrower gets
 your setting. The catastrophic instance of this is an open transaction, which is
-serious enough to be **Topic 03's** subject:
-**returning a connection mid-transaction** *(not written yet)*.
+serious enough to be Topic 03's subject:
+**[returning a connection mid-transaction](../03-jdbc-transactions/02-commit-rollback-and-the-shape-that-survives.md)**.
 The quieter instances are just as real: a `SET search_path` that survives, a
 `setReadOnly(true)` never reset, an isolation level raised for one query and
 inherited by everything after it.

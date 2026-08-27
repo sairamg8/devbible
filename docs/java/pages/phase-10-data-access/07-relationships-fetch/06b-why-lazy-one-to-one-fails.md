@@ -133,7 +133,7 @@ That second shape is the N+1 problem, and the 7.4 *User Guide* names it in exact
 context: *"Because this can lead to N+1 query issues, it's much more efficient to use
 unidirectional `@OneToOne` associations with the `@MapsId` annotation in place."*
 
-🔴 **Fixing N+1 belongs to Topic 08 · The N+1 problem** *(not written yet)*. What belongs
+🔴 **Fixing N+1 belongs to [Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md).** What belongs
 here is the *mapping-level* answer: change the mapping so the extra query is not needed
 in the first place. That is **[6c · The three real options](06c-the-three-real-options.md)**.
 
