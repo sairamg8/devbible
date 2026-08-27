@@ -124,9 +124,10 @@ Native Image."* If you are building a native image, the string form is the safe
 one, and the Querydsl form is safe because the metamodel is generated at compile
 time.
 
-What sorting actually costs at the database — indexes, expressions and the
+What you are allowed to put in a `Sort` — path expressions, aliases and the
 `JpaSort.unsafe` escape hatch — is
-[05c · sort is not free](05c-sort-is-not-free.md).
+[05c](05c-sort-is-not-free.md); what the resulting `ORDER BY` costs at the database is
+[05c2](05c2-what-the-order-by-costs.md).
 
 ## The combinations that are rejected
 
