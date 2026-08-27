@@ -25,3 +25,39 @@ Mockito (04). ⚠️ `MockMvcTester`'s AssertJ integration belongs to **06**, no
 - ⚠️ The AssertJ version Boot 4.1 manages; `assertj-core` vs the guava/db modules.
 - 🔴 **No console blocks.** A failure message quoted **from the AssertJ documentation** is
   fine and should be named as such; a failure message you imagined is not.
+
+---
+
+## 🔴 SALVAGE STATE — 2026-08-27, after the fork was killed mid-topic
+
+**On disk and QC'd** (all ≤300, MDX clean): `01-why-fluent-assertions` ·
+`02-assertthat-basics` · `02b-assertions-that-assert-nothing` ·
+`02c-equality-identity-and-comparators` · `02d-numbers-and-offsets` · `03-collections` ·
+`03b-element-comparison-and-streams` · `03c-extracting` · `03d-extracting-by-name`.
+`sidebar_position` runs 1–9.
+
+⚠️ `03c-extracting.md` came off the fork at **314 lines** and was split on the
+String-overload boundary into `03c` + `03d-extracting-by-name.md` (position 9). The two
+inbound links that said `03d-filtering-and-navigating.md` were repointed to **`03e`** —
+that chunk is now **03e**, not 03d.
+
+🔴 **These EXACT filenames are already linked from the chunks above — write them, not
+variants**, or the inbound links dangle:
+
+| File | `sidebar_position` | Linked from |
+|---|---|---|
+| `03e-filtering-and-navigating.md` | 10 | `02`, `03` |
+| `04-recursive-comparison.md` | 11 | `02c`, `02d`, `03b` |
+| `04b-ignoring-fields.md` | 12 | `02c` |
+| `05-exceptions.md` | 13 | — |
+| `06-soft-assertions.md` | 14 | `02`, `02b` |
+| `07-custom-assertions.md` | 15 | `01`, `02` |
+| `08-optional-assertions.md` | 16 | `02b` |
+| `08b-dates-and-times.md` | 17 | `02c` |
+| `09-describedas-and-messages.md` | 18 | `01`, `02b` |
+| `10-the-checklist.md` | 19 | `01` |
+| `README.md` | 0 | `../03-parameterized-tests/01` |
+
+Note the drift from the original table above: the fork chose `04-recursive-comparison`
+(not `04-objects-and-recursive-comparison`) and `08-optional-assertions` +
+`08b-dates-and-times` (not `08-optional-and-time`). **The links win.**

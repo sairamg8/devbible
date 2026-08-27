@@ -37,3 +37,32 @@ and then says plainly that the rest of the phase uses AssertJ, and why. **03 own
 - ⚠️ JUnit 5.11+ moved several things (`@TempDir` cleanup modes, the `assertInstanceOf`
   family); check the user guide rather than memory.
 - 🔴 **No test-run output.** Never paste a green/red run, a stack trace or a timing.
+
+---
+
+## 🔴 SALVAGE STATE — 2026-08-27, after the fork was killed mid-topic
+
+**On disk and QC'd** (all ≤300, MDX clean): `01-what-a-test-is-for` · `02-the-architecture`
+· `02b-what-junit-6-changed` · `03-the-lifecycle` · `03b-per-class-lifecycle` ·
+`03c-inheritance-and-wrapping` · `04-assertions` · `04b-assertall` · `05-assertthrows` ·
+`05b-what-not-to-assert` · `06-naming-and-display-names`. `sidebar_position` runs 1–11.
+
+🔴 **These EXACT filenames are already linked from the chunks above — write them, not
+variants**, or the inbound links dangle:
+
+| File | `sidebar_position` | Linked from |
+|---|---|---|
+| `06b-nested-tests.md` | 12 | `03b` |
+| `07-disabling-and-conditions.md` | 13 | `02`, `03`, `04` |
+| `08-assumptions.md` | 14 | — |
+| `09-tempdir-and-resources.md` | 15 | `02b`, `03c` |
+| `10-extensions.md` | 16 | `02`, `03`, `03c` |
+| `10b-writing-one.md` | 17 | `02b` |
+| `11-execution-order.md` | 18 | `01`, `02b`, `03`, `03b` |
+| `12-parallel-execution.md` | 19 | `03`, `03b` |
+| `13-timeouts.md` | 20 | `04`, `05b` |
+| `14-flaky-tests.md` | 21 | `03` |
+| `15-the-checklist.md` | 22 | — |
+| `README.md` | 0 | `../03-parameterized-tests/01`, `04` |
+
+Split further with lettered siblings as needed — the table is the floor, not the ceiling.

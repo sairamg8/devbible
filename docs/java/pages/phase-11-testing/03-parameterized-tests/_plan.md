@@ -26,3 +26,31 @@ Owns `@ParameterizedTest` and every argument source. 01 owns the lifecycle; 08 o
   before mentioning it, and say plainly if you cannot confirm.
 - ⚠️ Null/empty handling (`@NullSource`, `@EmptySource`, `@NullAndEmptySource`) and the
   `nullValues` attribute on `@CsvSource` — quote the user guide.
+
+---
+
+## 🔴 SALVAGE STATE — 2026-08-27, after the fork was killed mid-topic
+
+**On disk and QC'd** (all ≤300, MDX clean): `01-one-test-many-cases` · `02-valuesource` ·
+`02b-null-and-empty` · `03-csvsource` · `03b-csv-text-blocks` · `03c-csvfilesource` ·
+`04-methodsource` · `04b-methodsource-return-types` · `04c-fieldsource` · `05-enumsource` ·
+`06-argumentssource`. `sidebar_position` runs 1–11.
+
+⚠️ `04b-methodsource-return-types.md` linked `@FieldSource` as `04b-fieldsource.md`; the
+file on disk is `04c-fieldsource.md` and the two links were repointed.
+
+🔴 **These EXACT filenames are already linked from the chunks above — write them, not
+variants**, or the inbound links dangle:
+
+| File | `sidebar_position` | Linked from |
+|---|---|---|
+| `07-display-names.md` | 12 | `02`, `04c` |
+| `08-conversion-and-aggregation.md` | 13 | `02`, `02b`, `03` |
+| `08b-aggregation.md` | 14 | `01`, `03`, `04b` |
+| `08c-parameterized-classes.md` | 15 | `01`, `04` |
+| `09-when-not-to-parameterize.md` | 16 | `01`, `05` |
+| `10-the-checklist.md` | 17 | — |
+| `README.md` | 0 | `../01-junit-5` chunks |
+
+Note the drift: the fork split conversion (`08`) from aggregation (`08b`) and added
+`08c-parameterized-classes` for JUnit 5.13's `@ParameterizedClass`. **The links win.**
