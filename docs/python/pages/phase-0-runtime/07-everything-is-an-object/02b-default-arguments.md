@@ -145,4 +145,4 @@ rebuild signatures have to copy these attributes across.
 
 ---
 
-← Prev: [Binding in functions](02-binding-in-functions.md) · Index: [Everything is an object](README.md) · Next → **Identity and equality** *(not written yet)*
+← Prev: [Binding in functions](02-binding-in-functions.md) · Index: [Everything is an object](README.md) · Next → [Identity and equality](03-identity-and-equality.md)

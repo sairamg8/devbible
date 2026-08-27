@@ -30,8 +30,11 @@ This topic runs deeper than one file. The chunks:
 | 1 | **[Names and objects](01-names-and-objects.md)** | The label model; rebinding vs mutating; aliasing; immutability hiding the distinction; the `+=` asymmetry; multiple assignment |
 | 2 | **[Binding in functions](02-binding-in-functions.md)** | Call-by-binding; why a swap function is impossible; mutate-or-return as an API decision; what `del` actually deletes |
 | 2b | **[Default arguments](02b-default-arguments.md)** | Defaults are objects created once at `def` time — the mutable-default bug and its four disguises; sentinels when `None` is a legal value |
-| 3 | **Identity and equality** *(not written yet)* | `id()`, `is`, `==`, `__eq__`; the `is None` rule; NaN; why `in` tries `is` first |
-| 4 | **Caching and interning** *(not written yet)* | The `-5..256` small-int cache, string interning, immortal objects — and why every one of them is a trap if you build on it |
+| 3 | **[Identity and equality](03-identity-and-equality.md)** | `id()` and its lifetime rule; `is` vs `==`; the `__eq__` contract; the `is None` rule; the `SyntaxWarning` for `is` against a literal |
+| 3b | **[NaN](03b-nan.md)** | The float that is not equal to itself — silent unsorted sorts, broken threshold checks, and JSON that is not JSON |
+| 3c | **[Container comparison](03c-container-comparison.md)** | Why `in`, `index`, `remove` and dict lookup try `is` before `==` — and what a non-reflexive `__eq__` does to them |
+| 4 | **[Caching and interning](04-caching-and-interning.md)** | The `-5..256` small-int cache, compile-time constant merging and folding, string interning |
+| 4b | **[Immortal objects](04b-immortal-objects.md)** | PEP 683, what free-threading changes, and the closing argument: every one of these caches hides a bug rather than causing one |
 
 ## The one paragraph the whole topic expands
 
@@ -67,7 +70,7 @@ intermediate level.
 - **The mutable-default trap and closures** — Phase 2 (`Parameters in full`)
   builds directly on chunks 1 and 2b.
 - **`__eq__` / `__hash__` and hashability** — Phase 3 (the data model) turns
-  chunk 3's equality contract into rules for dict keys and set members.
+  chunks 3–3c's equality contract into rules for dict keys and set members.
 
 ---
 
