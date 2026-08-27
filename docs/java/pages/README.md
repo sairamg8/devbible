@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | 7 · I/O, time and the everyday stdlib | 13 | ✅ 13/13 |
 | 8 · The build: Maven, Gradle, dependencies | 12 | ✅ 12/12 |
 | 9 · Spring Boot and the web | 16 | ✅ 16/16 — complete |
-| 10 · Data access | 14 | 🚧 **11/14 closed** — topics 01–08 complete (**335 chunks, ~88,000 lines**): JDBC · connection pooling · JDBC transactions · Spring `@Transactional` · SQL-first access · the JPA/Hibernate model · relationships and fetch types · the N+1 problem. **09 · Spring Data JPA (49 chunks), 13 · jOOQ (33) and 14 · Spring Data Mongo/Redis (26) closed 2026-08-27** with their indexes. Topics **10, 11 and 12 are part-written — 86 chunks on disk, no index yet** (10·25 11·34 12·27); each resumes from the chunk plan in its own directory |
+| 10 · Data access | 14 | 🚧 **11/14 closed** — topics 01–08 complete (**335 chunks, ~88,000 lines**): JDBC · connection pooling · JDBC transactions · Spring `@Transactional` · SQL-first access · the JPA/Hibernate model · relationships and fetch types · the N+1 problem. **09 · Spring Data JPA (49 chunks), 13 · jOOQ (33) and 14 · Spring Data Mongo/Redis (26) closed 2026-08-27** with their indexes. Topics **10, 11 and 12 are part-written — 86 chunks on disk, no index yet** (10·27 11·33 12·26); each resumes from the chunk plan in its own directory. 2026-08-27: topic 10's uncommitted 379-line `08-lazy-basic-attributes.md` was salvaged and split at the cap into **08** and **08b · The `@Lob` reflex and the lazy group** |
 | 11 · Testing | 11 | Planned |
 | 12 · The JVM in production | 15 | Planned |
 | 13 · OAuth2, OIDC and service security | 14 | Planned |
