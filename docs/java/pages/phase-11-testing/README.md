@@ -14,12 +14,12 @@ Java's testing stack is mature and opinionated. The skill gap in real teams is
 not "can you write a test" — it is slice choice, mock discipline, and tests
 that hit a real database instead of an in-memory impostor.
 
-🚧 **0 of 11 written.**
+🚧 **1 of 11 written** — 02 · AssertJ is closed at 24 chunks (~5,600 lines); 01 · JUnit 5 and 03 · Parameterized tests are in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **JUnit 5** *(not written yet)* | <span className="db-tier t-master">Master</span> | Lifecycle, assertions, `assertThrows` — tests that document behaviour |
-| 02 | **AssertJ** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Fluent assertions whose failures do the debugging |
+| 02 | **[AssertJ](02-assertj/README.md)** | <span className="db-tier t-understand">Understand</span> | Fluent assertions whose failures do the debugging |
 | 03 | **Parameterized tests** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | One test, every edge of the tax calculation |
 | 04 | **Mockito** *(not written yet)* | <span className="db-tier t-master">Master</span> | Mock boundaries, never the class under test |
 | 05 | **The test pyramid in Spring** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Unit vs slices vs `@SpringBootTest` — and the 20-minute suite |
