@@ -34,12 +34,12 @@ half-topic.
 | 06 | **[The JPA/Hibernate model](06-jpa-hibernate-model/README.md)** | <span className="db-tier t-understand">Understand</span> | The persistence context — the UPDATE you never wrote |
 | 07 | **[Relationships and fetch types](07-relationships-fetch/README.md)** | <span className="db-tier t-understand">Understand</span> | Owning side, `mappedBy` — `EAGER` on a collection is a time bomb |
 | 08 | **[The N+1 problem](08-the-n-plus-1-problem/README.md)** | <span className="db-tier t-master">Master</span> | Seeing it in the SQL log; fetch joins, `@EntityGraph`, batch size |
-| 09 | **Spring Data JPA** *(in progress — 27 chunks written)* | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
-| 10 | **Lazy-loading pitfalls** *(in progress — 9 chunks written)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
-| 11 | **Migrations with Flyway** *(in progress — 23 chunks written)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
-| 12 | **Caching** *(in progress — 10 chunks written)* | <span className="db-tier t-know">Know</span> | Second-level, `@Cacheable` with Redis — invalidation is the cost |
-| 13 | **jOOQ** *(in progress — 26 chunks written)* | <span className="db-tier t-know">Know</span> | Typed SQL as the JPA alternative — reporting, complex joins |
-| 14 | **Spring Data for MongoDB / Redis** *(in progress — 9 chunks written)* | <span className="db-tier t-know">Know</span> | The same repository idiom over the other stores in this bible |
+| 09 | **[Spring Data JPA](09-spring-data-jpa/README.md)** | <span className="db-tier t-understand">Understand</span> | Derived queries, `@Query`, pagination, projections |
+| 10 | **Lazy-loading pitfalls** *(in progress — 25 chunks written, no index yet)* | <span className="db-tier t-understand">Understand</span> | `LazyInitializationException`; open-session-in-view, off |
+| 11 | **Migrations with Flyway** *(in progress — 34 chunks written, no index yet)* | <span className="db-tier t-understand">Understand</span> | Versioned SQL in the repo — never `ddl-auto: update` in prod |
+| 12 | **Caching** *(in progress — 27 chunks written, no index yet)* | <span className="db-tier t-know">Know</span> | Second-level, `@Cacheable` with Redis — invalidation is the cost |
+| 13 | **[jOOQ](13-jooq/README.md)** | <span className="db-tier t-know">Know</span> | Typed SQL as the JPA alternative — reporting, complex joins |
+| 14 | **[Spring Data for MongoDB / Redis](14-spring-data-other/README.md)** | <span className="db-tier t-know">Know</span> | The same repository idiom over the other stores in this bible |
 
 ## Phase gate
 
