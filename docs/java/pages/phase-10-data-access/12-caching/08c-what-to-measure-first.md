@@ -76,8 +76,9 @@ Cache metrics are auto-configured, and the sentence to read carefully is the fir
 
 🔴 **Note which provider is not on that list.** `ConcurrentMapCacheManager` — the `simple` provider,
 the one you get by default when no caching library is present — is absent. It exposes no statistics
-for anything to bind to, which is consistent with Spring's description of the `ConcurrentMap` store as
-providing *"no management, persistence capabilities, or eviction contracts"*. So the configuration
+for anything to bind to, which is consistent with Spring's description of the `ConcurrentMap` store —
+it *"does not provide any management, persistence capabilities, or eviction contracts"*. So the
+configuration
 that most needs watching, because it is unbounded and per-pod ([8b](08b-when-the-cache-is-the-wrong-risk.md)),
 is the one that reports nothing.
 
