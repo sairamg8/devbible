@@ -170,7 +170,7 @@ silent one.
 
 **★ Writes bypass every cache in front of the database.** There is no persistence context to
 invalidate and none to help you. Anything cached above jOOQ is now stale, which is
-**Topic 12 · Caching** *(not written yet)*'s problem and worth knowing exists.
+[Topic 12 · Caching](../12-caching/README.md)'s problem and worth knowing exists.
 
 **★ An insert-select that archives rows does not delete them.** Obvious written down, and the
 usual source of a duplicate-archive incident when the follow-up `DELETE` is in a separate

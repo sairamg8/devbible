@@ -77,8 +77,8 @@ List<Country> rows = session.createSelectionQuery("from Country order by name", 
         .getResultList();
 ```
 
-In Spring Data JPA the equivalent is `@QueryHints` on the repository method — but that repository
-is being written concurrently, so: **`../09-spring-data-jpa/`** *(not written yet)*.
+In Spring Data JPA the equivalent is `@QueryHints` on the repository method; the repository
+itself is **[Topic 09 · Spring Data JPA](../09-spring-data-jpa/README.md)**.
 
 ⚠️ The query cache also depends on the second-level cache being configured, because of what it
 stores. That is the next section.
