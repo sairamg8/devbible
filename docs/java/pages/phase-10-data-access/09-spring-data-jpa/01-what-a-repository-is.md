@@ -117,7 +117,7 @@ bootstrap.
 
 ⚠️ **Two things are *not* validated at bootstrap.** A `nativeQuery = true` string
 is SQL, and Spring Data does not have a database to check it against — see
-[3b · native queries](03b-native-queries.md). And a property name inside a
+[3g · native queries](03g-native-queries.md). And a property name inside a
 `Sort` object is a runtime value, not part of the method signature, so a bad one
 fails when the query runs — see [5c · sort is not free](05c-sort-is-not-free.md).
 

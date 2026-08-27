@@ -1,0 +1,46 @@
+**★ The lock covers one migration, not the run.** By default Flyway acquires it, applies a single
+migration, and releases it before looping. That is why the retry budget only has to cover the
+longest individual migration — and why migrations within one deployment can be applied by different
+instances.
+
+
+**★ `group: true` turns the per-migration lock into a per-run lock.** Every losing instance then has
+to outlast the entire deployment's migrations on a single fifty-second budget.
+
+
+**★ The history table's own creation is a separate race with a separate, hard-coded budget** — ten
+attempts at one second, not `lockRetryCount`. It is not configurable.
+
+
+**★ Nine instances doing nothing still each open a connection and read the history table.** On a
+large history table ([03c · Reading the history](03c-reading-the-history.md)) that is a real query,
+repeated once per replica, during the most sensitive minute of a deployment.
+
+## Interview questions
+
+
+**★ What is the second race, before the lock is useful?**
+Creating the history table itself on an empty database. `JdbcTableSchemaHistory.create()` loops
+while the table does not exist, catching the exception, sleeping a second, up to ten attempts —
+inside the same advisory lock. That budget is hard-coded and separate from `lockRetryCount`.
+
+
+**★ Why is it safe for nine instances to run `migrate()` after the tenth has already migrated?**
+Because `migrate()` decides what to do from `flyway_schema_history`, which it re-reads inside the
+lock on every acquisition. By the time the nine acquire it the history table already records every
+migration as applied, so they resolve zero pending migrations and do nothing. Serialisation plus a
+durable record of what was applied is what makes the operation idempotent.
+
+
+**★ Does one instance apply all the migrations in a deployment?**
+Not necessarily, and by default not reliably. Without `group`, Flyway takes the lock, applies one
+migration, and releases it before looping, so a different instance can win the next round. All the
+migrations still run exactly once and in order — but `installed_by` in the history table can name
+several different sessions for a single deployment.
+
+
+**★ What does `lockRetryCount` actually have to be big enough for?**
+The longest single migration, not the whole run — because a fresh retry budget is created for each
+lock acquisition and the lock is released between migrations. If you enable `group: true`, the lock
+is held for the entire run and the budget must cover all of it.
+

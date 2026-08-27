@@ -101,7 +101,7 @@ You do not have to jump to SQL. The ladder has rungs:
    result — you need three columns, not an entity. [06 · projections](06-projections.md).
 4. **A native query.** When the SQL feature you need has no JPQL spelling —
    window functions, a database-specific operator, a CTE.
-   [03b · native queries](03b-native-queries.md).
+   [03g · native queries](03g-native-queries.md).
 5. **SQL-first, with `JdbcClient`.** When the result was never an entity and the
    query is the point.
    [topic 05 · when SQL-first beats an entity](../05-sql-first-access/10-when-sql-first-beats-an-entity.md).

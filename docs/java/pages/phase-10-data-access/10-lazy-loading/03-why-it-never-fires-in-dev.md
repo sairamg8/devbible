@@ -49,7 +49,7 @@ servlet web requests and nothing else. That is not a bug in the job. It is a ser
 that never had a well-defined contract, and OSIV was supplying one for exactly one caller.
 
 That split is the subject of
-**[03c · The same method with two contracts](03c-the-same-method-with-two-contracts.md)**.
+**[03c · Something initialised it first](03c-something-initialised-it-first.md)**.
 The rest of this chunk is about the reasons the exception hides that have **nothing to do
 with open-in-view at all** — the ones that still hide it after you have turned OSIV off,
 and the ones that explain why a colleague cannot reproduce your failure.
