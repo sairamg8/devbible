@@ -46,16 +46,22 @@ variants**, or the inbound links dangle:
 
 | File | `sidebar_position` | Linked from |
 |---|---|---|
-| `03e-filtering-and-navigating.md` | 10 | `02`, `03` |
-| `04-recursive-comparison.md` | 11 | `02c`, `02d`, `03b` |
-| `04b-ignoring-fields.md` | 12 | `02c` |
-| `05-exceptions.md` | 13 | — |
-| `06-soft-assertions.md` | 14 | `02`, `02b` |
-| `07-custom-assertions.md` | 15 | `01`, `02` |
-| `08-optional-assertions.md` | 16 | `02b` |
-| `08b-dates-and-times.md` | 17 | `02c` |
-| `09-describedas-and-messages.md` | 18 | `01`, `02b` |
-| `10-the-checklist.md` | 19 | `01` |
+**Also on disk since the salvage commit:** `03e-filtering-and-navigating` (pos 10, filtering
+only) and `03f-navigating-to-elements` (pos 11). `sidebar_position` now runs 1–11. The `03e`
+FILENAME keeps "and-navigating" because two committed chunks link to it; its `sidebar_label`
+and content are filtering, and it forward-links to `03f`. Do not rename it.
+
+| File | `sidebar_position` | Linked from |
+|---|---|---|
+| `04-recursive-comparison.md` | 12 | `02c`, `02d`, `03b` |
+| `04b-ignoring-fields.md` | 13 | `02c` |
+| `05-exceptions.md` | 14 | — |
+| `06-soft-assertions.md` | 15 | `02`, `02b`, `03f` |
+| `07-custom-assertions.md` | 16 | `01`, `02` |
+| `08-optional-assertions.md` | 17 | `02b` |
+| `08b-dates-and-times.md` | 18 | `02c` |
+| `09-describedas-and-messages.md` | 19 | `01`, `02b` |
+| `10-the-checklist.md` | 20 | `01` |
 | `README.md` | 0 | `../03-parameterized-tests/01` |
 
 Note the drift from the original table above: the fork chose `04-recursive-comparison`
