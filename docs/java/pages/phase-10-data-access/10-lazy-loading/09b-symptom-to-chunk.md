@@ -34,11 +34,12 @@ a driver error — are [09b2](09b2-symptoms-with-no-exception.md).**
 
 | Symptom | What it actually is | Goes to |
 |---|---|---|
-| `EntityNotFoundException` on first access to a `getReferenceById` result | the row does not exist; the proxy was always going to find that out late | [below](#entitynotfoundexception-from-getreferencebyid) |
-| `JpaObjectRetrievalFailureException` | the same thing, after Spring's exception translation ran | [below](#entitynotfoundexception-from-getreferencebyid) |
-| `ObjectNotFoundException` / `UnresolvableObjectException` | a foreign key pointing at a row that is not there | [below](#objectnotfoundexception-a-dangling-foreign-key) |
-| `HibernateException: Illegally attempted to associate proxy […] with two open sessions` | one object shared between two sessions — a caching or object-sharing bug | [below](#a-proxy-bound-to-two-sessions) |
-| `NonUniqueObjectException` | two Java objects claiming the same row in one persistence context | [below](#nonuniqueobjectexception) |
+| `EntityNotFoundException` on first access to a `getReferenceById` result | the row does not exist; the proxy was always going to find that out late | **below on this page** |
+| `JpaObjectRetrievalFailureException` | the same thing, after Spring's exception translation ran | **below on this page** |
+| `ObjectNotFoundException` / `UnresolvableObjectException` | a foreign key pointing at a row that is not there | **below on this page** |
+| `FetchNotFoundException` | the same thing, on an association mapped `@NotFound` — and it is a subclass of `EntityNotFoundException` | **below on this page** |
+| `HibernateException: Illegally attempted to associate proxy […] with two open sessions` | one object shared between two sessions — a caching or object-sharing bug | **below on this page** |
+| `NonUniqueObjectException` | two Java objects claiming the same row in one persistence context | **below on this page** |
 | `LazyInitializationException: Could not retrieve real entity name […]` | it *is* this exception, from a type question rather than a state access | [01b](01b-type-questions-are-fetches.md) |
 | `LazyInitializationException: Unable to perform requested lazy initialization […]` | it *is* this exception, from the bytecode-enhancement path | [08c](08c-when-enhancement-is-on.md) |
 | `HibernateException: identifier of an instance of X was altered from A to B` | a setter on the identifier of an unloaded enhanced instance | [08c4](08c4-the-enhanced-instance.md) |
@@ -112,6 +113,38 @@ Databases with no foreign key constraints, soft deletes that remove rows a `@Man
 points at, and data migrations are the usual producers. No fetch plan fixes it; the row has to
 exist or the column has to be null.
 
+### `@NotFound`, which changes both the exception and the fetch plan
+
+Hibernate has an annotation for models where this is expected, and it does two things, only one of
+which is advertised. The user guide, §3.8.5:
+
+> *"When dealing with associations which are not enforced by a physical foreign-key, it is possible
+> for a non-null foreign-key value to point to a non-existent value on the associated entity's
+> table. Not enforcing physical foreign-keys at the database level is highly discouraged. Hibernate
+> provides support for such models using the `@NotFound` annotation, which accepts a
+> `NotFoundAction` value which indicates how Hibernate should behave when such broken foreign-keys
+> are encountered — `EXCEPTION` (default) Hibernate will throw an exception
+> (`FetchNotFoundException`) `IGNORE` the association will be treated as `null`."*
+
+Two consequences you have to know before you reach for it:
+
+- **`FetchNotFoundException` extends `jakarta.persistence.EntityNotFoundException`**, and its
+  message is built from a format string that quotes both values in backticks:
+
+  ```
+  Entity `com.acme.Customer` with identifier value `3` does not exist
+  ```
+
+  So an `EntityNotFoundException` in a stack trace has two entirely different causes — a
+  `getReferenceById` for a missing row, and a broken foreign key on a `@NotFound` association — and
+  the message is the only thing that separates them.
+- 🔴 **`@NotFound` makes the association eager, silently.** The user guide: *"`@ManyToOne` and
+  `@OneToOne` associations annotated with `@NotFound` are always fetched eagerly even if the fetch
+  strategy is set to `FetchType.LAZY`."* Adding it to suppress a missing-row error therefore
+  converts that association into an eager one across the whole application, which is the N+1 shape
+  in [Topic 08 · 4d](../08-the-n-plus-1-problem/04d-the-ones-you-cannot-make-lazy.md) and the
+  irreversible decision [06b](06b-more-fixes-that-are-not-fixes.md) argues against.
+
 ## A proxy bound to two sessions
 
 ```
@@ -171,6 +204,24 @@ translates the first into the second where the translation post-processor is in 
 you see the translated form depends on where the *access* happened, not on where the reference was
 obtained, so both appear in one codebase for one cause.
 
+**★ `EntityNotFoundException` has two unrelated causes and one type.** A `getReferenceById` for a
+row that does not exist, and a `@NotFound` association whose foreign key is broken —
+`FetchNotFoundException` extends `EntityNotFoundException`, so a catch block or an alert cannot
+tell them apart. Only the message can: the second one names the entity and the identifier and ends
+"does not exist".
+
+**★ `@NotFound` is not a fetching annotation and it changes fetching anyway.** Both actions make
+the association eager regardless of `FetchType.LAZY`. Adding it to silence a missing-row error
+buys a permanent, application-wide eager fetch, and `IGNORE` additionally converts a data-integrity
+defect into a `null` that looks like a legitimately absent association.
+
+**★ `save()` on a detached entity is a `merge`, and which one you get is decided by `isNew`.**
+`SimpleJpaRepository.save` calls `entityManager.persist` when the entity information reports the
+instance as new and `entityManager.merge` otherwise. An entity with an application-assigned
+identifier can report itself new when it is not, at which point `persist` on an existing row is
+what produces the identity errors above rather than an update
+([Topic 09 · 7d](../09-spring-data-jpa/07d-what-the-base-repository-does.md)).
+
 **★ "Illegally attempted to associate proxy with two open sessions" is a sharing bug, not a
 fetching bug.** The object has too many sessions, not too few. `merge`, `evict` and a bigger fetch
 plan all fail to address it, and the only fix is to stop reusing the instance.
@@ -198,6 +249,18 @@ exists."* The first is a boundary problem in your code; the second is a data pro
 foreign key pointing at a deleted row, and it will reproduce inside a transaction where a lazy
 failure will not. That last property is the quickest test: re-run the same access with the session
 open. A lazy failure disappears; a missing row does not.
+
+**★ A colleague fixes a missing-row error by adding `@NotFound(action = IGNORE)` to the
+association. What do you say in review?**
+That it trades a loud data-integrity problem for a silent one and buys an eager fetch nobody asked
+for. `IGNORE` makes Hibernate treat the broken foreign key as `null`, so the endpoint stops failing
+and starts returning an object whose association is absent for a reason the client cannot
+distinguish from "there genuinely is no customer". And the user guide states that `@ManyToOne` and
+`@OneToOne` associations annotated `@NotFound` are always fetched eagerly even when the fetch
+strategy is `FetchType.LAZY`, so the annotation quietly makes that association eager everywhere it
+is loaded — an application-wide fetch change made to suppress one error. The documentation's own
+framing is that not enforcing physical foreign keys is highly discouraged, so the real fix is
+upstream: add the constraint, or stop deleting rows that are still referenced.
 
 **★ What does `Illegally attempted to associate proxy with two open sessions` tell you?**
 That one entity instance is being used by two units of work at once, which is a sharing problem

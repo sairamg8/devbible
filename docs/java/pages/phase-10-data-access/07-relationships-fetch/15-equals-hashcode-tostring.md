@@ -177,8 +177,8 @@ careless `equals`.
 of `toString` frames. Recognise it and go straight to the entity.
 
 **`toString` on a lazy collection initialises it — or throws.** Either a query you did not
-mean to run, or a `LazyInitializationException` from a logger. **Topic 10 · Lazy-loading
-pitfalls** *(not written yet)* owns the second.
+mean to run, or a `LazyInitializationException` from a logger. [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md)
+owns the second.
 
 **A hash over a mutable field breaks silently.** Changing a book's title after it went into
 a `HashSet` keyed on the title puts it in the wrong bucket. Hibernate's first principle

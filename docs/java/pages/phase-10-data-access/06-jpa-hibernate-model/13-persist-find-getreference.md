@@ -156,7 +156,7 @@ already knows. Every other getter triggers the load.
 should not expect the instance state to be available upon detachment, unless it was
 accessed by the application while the entity manager was open." An uninitialised proxy
 returned from a `@Transactional` method throws when the caller touches it — that is
-**Topic 10 · Lazy-loading pitfalls** *(not written yet)*.
+[Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).
 
 Jakarta Persistence 3.2 added an overload taking an entity: `getReference(T entity)`
 returns "a reference to an instance of the entity class of the given object, with the

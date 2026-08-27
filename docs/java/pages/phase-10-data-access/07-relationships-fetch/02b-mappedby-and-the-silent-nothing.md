@@ -193,8 +193,8 @@ failure. That is worth more than the flexibility you give up.
 **Reusing a detached parent makes it worse.**
 If `publisher` came from a previous transaction and is detached, `publisher.getBooks()`
 may not even be a live collection — touching it can throw, or return whatever was
-loaded before. Now you have two bugs layered on each other. **Topic 10 · Lazy-loading
-pitfalls** *(not written yet)* owns that failure mode.
+loaded before. Now you have two bugs layered on each other. [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md)
+owns that failure mode.
 
 **Bytecode enhancement can hide it — and only sometimes.**
 Hibernate's bidirectional association management (a bytecode-enhancement feature listed

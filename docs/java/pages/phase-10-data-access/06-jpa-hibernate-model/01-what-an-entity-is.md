@@ -142,7 +142,7 @@ so in as many words, and the reason is exactly this trade. See
 **Not a DTO.** An entity is bound to a persistence context and, through it, to a
 transaction and a database connection. Serialising one straight out of a controller
 drags that binding into places it does not belong. The consequences of doing this in
-a web request are **Topic 10 · Lazy-loading pitfalls** *(not written yet)*.
+a web request are [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).
 
 **Not a validation object.** `@Column(nullable = false)` affects generated DDL and
 nothing else. `@Basic(optional = false)` is checked by Hibernate before writing. Bean

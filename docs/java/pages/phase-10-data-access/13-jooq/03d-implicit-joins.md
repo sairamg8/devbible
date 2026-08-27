@@ -88,7 +88,7 @@ The syntax is deliberately ORM-shaped, so it is worth being precise about the di
   **[Topic 08 · The N+1 problem](../08-the-n-plus-1-problem/README.md)** is entirely about.
 - **No session, so no detachment.** The result is a plain record. Navigating it after the
   transaction ends is meaningless because there is nothing left to navigate; the columns are
-  already in your hands. The exception **Topic 10 · Lazy-loading pitfalls** *(not written yet)*
+  already in your hands. The exception [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md)
   exists to explain has no counterpart here.
 - **The cost is visible in the SQL.** An implicit join appears in the rendered statement, in
   `EXPLAIN`, and in the query log. A lazy proxy's cost appears as a separate statement somewhere

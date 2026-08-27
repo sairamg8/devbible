@@ -156,7 +156,7 @@ gotcha:
 > `LazyInitializationException`.
 
 🔴 **That exception, open-session-in-view, and every strategy for dealing with them belong
-to Topic 10 · Lazy-loading pitfalls** *(not written yet)*. This chunk names the object;
+to [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).** This chunk names the object;
 that topic owns what happens when it outlives its session.
 
 ## Gotchas

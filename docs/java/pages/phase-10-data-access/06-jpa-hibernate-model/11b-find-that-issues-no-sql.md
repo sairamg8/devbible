@@ -78,8 +78,8 @@ exception at an unpredictable later point — or a foreign-key violation at flus
 A second trap in the same javadoc: "The application should not expect the instance state
 to be available upon detachment, unless it was accessed by the application while the
 entity manager was open." An uninitialised proxy that escapes the transaction is a
-`LazyInitializationException` waiting to happen — **Topic 10 · Lazy-loading pitfalls**
-*(not written yet)*.
+`LazyInitializationException` waiting to happen —
+[Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).
 
 ## The cache does not see other transactions
 

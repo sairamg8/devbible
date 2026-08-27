@@ -167,8 +167,8 @@ inverse side of a `@OneToOne` is the documented case, and it is silent.
 
 **Making an association `LAZY` moves the failure, it does not remove it.** The query you
 avoided at load time still happens when you touch the association — and if the persistence
-context has closed by then, you get a `LazyInitializationException` instead. **Topic 10 ·
-Lazy-loading pitfalls** *(not written yet)* owns that.
+context has closed by then, you get a `LazyInitializationException` instead. [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md)
+owns that.
 
 **Spring Data projections and `EAGER` interact badly.** An interface projection selecting
 three columns still has to honour the entity's `EAGER` associations when the query returns

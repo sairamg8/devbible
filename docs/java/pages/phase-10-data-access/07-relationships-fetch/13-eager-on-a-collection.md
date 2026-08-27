@@ -119,8 +119,8 @@ Worth naming, because the pattern repeats and none of the causes are stupidity.
 **"It was throwing `LazyInitializationException`."** Somebody read the collection after the
 transaction ended, got an exception, and made the mapping eager to stop it. It works. It
 also loads the collection for every other caller forever. The real fix is to fetch what the
-operation needs inside the transaction, or to return a DTO — **Topic 10 · Lazy-loading
-pitfalls** *(not written yet)*.
+operation needs inside the transaction, or to return a DTO —
+[Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).
 
 **"The controller needs it for JSON."** One endpoint serialises the graph, so the mapping
 was changed to make the graph available. Now every endpoint pays. See

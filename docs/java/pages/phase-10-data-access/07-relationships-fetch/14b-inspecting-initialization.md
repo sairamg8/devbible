@@ -146,7 +146,7 @@ fetching one call at a time.
 
 **`Hibernate.initialize` outside a session throws.** It needs an open persistence context,
 exactly like touching the association would. It is not a repair for a detached entity —
-that is **Topic 10 · Lazy-loading pitfalls** *(not written yet)*.
+that is [Topic 10 · Lazy-loading pitfalls](../10-lazy-loading/README.md).
 
 **`collection.size()` and `Hibernate.size(collection)` are different operations.** The first
 loads everything; the second does not. They read almost identically at a glance.
