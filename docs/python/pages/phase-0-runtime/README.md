@@ -19,7 +19,7 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 3 of 12 written**, topics 08 and 03–04 in flight.
+🚧 **Phase in progress — 4 of 12 written**, topics 03–04 and 05–06 in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
