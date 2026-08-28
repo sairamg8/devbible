@@ -58,8 +58,7 @@ being used.
   asserting an `Order` is confirmed *and* has an audit entry *and* has no pending payment.
 - **A domain concept with an invariant** — "a valid IBAN", "a settled trade" — where the
   check is the definition and belongs in one place.
-- **When the default failure message is genuinely bad.** `expected: <Order@3f2a> but was:
-  <Order@8b1c>` helps nobody; a custom message naming the reference and the status does.
+- **When the default failure message is genuinely bad.** `expected: <Order@3f2a> but was: <Order@8b1c>` helps nobody; a custom message naming the reference and the status does.
 
 ## When it does not
 
