@@ -62,7 +62,7 @@ review runs out; you will have spent it on the right things.**
 | **Does a captor assertion account for every invocation, not just the last?** | `getValue()` is the last one only — [06e · Captors and multiplicity](06e-captors-and-multiplicity.md) |
 | **Is a captor field reused across tests?** | State leaks between them — [06f · The captor's lifetime](06f-the-captors-lifetime.md) |
 | **Is `when(...)` used to stub a spy or a partial mock?** | The real method runs during setup; use `doReturn(...)` — [08d · Stubbing a spy](08d-stubbing-a-spy.md) |
-| **Does an `@InjectMocks` field arrive `null`?** | Injection failed silently; prefer constructor injection — **09 · @InjectMocks** *(not written yet)* |
+| **Does an `@InjectMocks` field arrive `null`?** | Injection failed silently; prefer constructor injection — [09b · Constructor injection](09b-constructor-injection.md) |
 | **Is a void method stubbed with `when`?** | It cannot be; the `do*` family exists for this — [03g · Stubbing voids](03g-stubbing-voids.md) |
 | **Is `RETURNS_DEEP_STUBS` in use?** | A Law of Demeter violation with framework support — [03f · Default answers](03f-default-answers.md) |
 | **Is `mockStatic` present, and is its scope closed?** | A leaked scope corrupts later tests on the same thread — [11 · Static and final](11-static-and-final.md) |
