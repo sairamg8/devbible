@@ -601,11 +601,11 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
-    updated: '2026-08-28 12:39',
+    updated: '2026-08-28 12:41',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [
-      {n: 0, slug: 'phase-0-runtime', name: 'The runtime', part: 'Foundations', topics: 12, pages: 8, pagesPlanned: 12},
+      {n: 0, slug: 'phase-0-runtime', name: 'The runtime', part: 'Foundations', topics: 12, pages: 10, pagesPlanned: 12},
       {n: 1, slug: 'phase-1-language-core', name: 'Language core', part: 'Foundations', topics: 16, pages: 0},
       {n: 2, slug: 'phase-2-functions', name: 'Functions, closures and decorators', part: 'Foundations', topics: 10, pages: 0},
       {n: 3, slug: 'phase-3-collections', name: 'Collections in depth', part: 'Data model', topics: 12, pages: 0},

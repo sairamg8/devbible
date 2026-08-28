@@ -19,7 +19,7 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 8 of 12 written.** Topics 05, 06, 09 and 10 remain; 05 and 09 have chunks on disk from forks that were wound down at the usage limit.
+🚧 **Phase in progress — 10 of 12 written.** Only **06 · Running code** (5 chunks on disk, index not yet written) and **10 · Python vs Node** (unstarted) remain.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -27,11 +27,11 @@ all of them are load-bearing.
 | 02 | **[The GIL](02-the-gil/README.md)** | <span className="db-tier t-master">Master</span> | One thread runs bytecode — but I/O releases it, and 3.14 makes free-threading official |
 | 03 | **[The release model](03-release-model/README.md)** | <span className="db-tier t-understand">Understand</span> | One major each October; 3.14 current, 3.15 lands Oct 2026 |
 | 04 | **[Installing and managing versions](04-installing-and-versions/README.md)** | <span className="db-tier t-understand">Understand</span> | `uv` / `pyenv`, and never installing into the system Python |
-| 05 | **Virtual environments** | <span className="db-tier t-master">Master</span> | What a venv actually is — a config file and a path |
+| 05 | **[Virtual environments](05-virtual-environments/README.md)** | <span className="db-tier t-master">Master</span> | What a venv actually is — a config file and a path |
 | 06 | **Running code** | <span className="db-tier t-understand">Understand</span> | `python -m` vs `python file.py`, the rewritten REPL, `-c`, shebangs |
 | 07 | **[Everything is an object](07-everything-is-an-object/README.md)** | <span className="db-tier t-master">Master</span> | Names bind to objects, `is` vs `==`, and why `a = b` never copies |
 | 08 | **[Imports](08-imports/README.md)** | <span className="db-tier t-master">Master</span> | Modules, packages, `sys.path` — and the file you named `random.py` |
-| 09 | **`if __name__ == "__main__"`** | <span className="db-tier t-understand">Understand</span> | Script vs import, and the multiprocessing crash without it |
+| 09 | **[`if __name__ == "__main__"`](09-name-main/README.md)** | <span className="db-tier t-understand">Understand</span> | Script vs import, and the multiprocessing crash without it |
 | 10 | **Python vs Node for a backend** | <span className="db-tier t-know">Know</span> | The honest comparison; PyPy and GraalPy at recognition level |
 | 11 | **[Startup and import cost](11-startup-and-import-cost/README.md)** | <span className="db-tier t-know">Know</span> | Why CLIs feel slow, and lazy imports as the coming answer |
 | 12 | **[Bytecode inspection with `dis`](12-dis-bytecode/README.md)** | <span className="db-tier t-when">When Needed</span> | Seeing what a line actually does |

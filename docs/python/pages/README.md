@@ -18,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| **[0 · The runtime](phase-0-runtime/README.md)** | 12 | 🚧 **In progress — 8 of 12** (01, 02, 03, 04, 07, 08, 11, 12 written; 05, 06, 09, 10 remain) |
+| **[0 · The runtime](phase-0-runtime/README.md)** | 12 | 🚧 **In progress — 10 of 12** (01–05, 07–09, 11, 12 written; **06** needs its index, **10** unstarted) |
 | 1 · Language core | 16 | Planned |
 | 2 · Functions, closures and decorators | 10 | Planned |
 | 3 · Collections in depth | 12 | Planned |
