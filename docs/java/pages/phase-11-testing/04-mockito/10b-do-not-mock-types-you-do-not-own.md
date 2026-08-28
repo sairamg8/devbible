@@ -1,7 +1,7 @@
 ---
 title: "A mock of a third-party client is a machine-readable copy of your beliefs about that library, and the test that uses it goes green because your beliefs are self-consistent — not because the library agrees with them, which is why the failure arrives one dependency upgrade later with a green build behind it"
 sidebar_label: "10b · Types you do not own"
-sidebar_position: 51
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>

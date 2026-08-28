@@ -1,7 +1,7 @@
 ---
 title: "A contract test that runs only against the fake proves the fake agrees with itself, which is the exact failure it was written to prevent — so the operating question is not how to write the suite but how to guarantee the expensive half keeps executing, and a mistyped tag removes a class from every selection with nothing but a log warning"
 sidebar_label: "12e · Running both halves"
-sidebar_position: 43
+sidebar_position: 56
 ---
 
 <span className="db-tier t-master">Master</span>

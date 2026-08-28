@@ -1,7 +1,7 @@
 ---
 title: "Everything this topic argues, compressed into the questions worth asking about a pull request that touches a test with mocks in it — ordered so that the ones which change what a green build means come before the ones which only change what it costs to maintain"
 sidebar_label: "13 · The checklist"
-sidebar_position: 63
+sidebar_position: 57
 ---
 
 <span className="db-tier t-master">Master</span>

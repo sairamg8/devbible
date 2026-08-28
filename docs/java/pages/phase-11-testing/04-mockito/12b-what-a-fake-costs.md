@@ -1,7 +1,7 @@
 ---
 title: "A fake is production-shaped code in the test tree, and its failure mode is not that it breaks but that it quietly disagrees with the real implementation while every test stays green — which is why the fake and the real thing have to be run against the same test class, not against two"
 sidebar_label: "12b · What a fake costs"
-sidebar_position: 62
+sidebar_position: 53
 ---
 
 <span className="db-tier t-master">Master</span>

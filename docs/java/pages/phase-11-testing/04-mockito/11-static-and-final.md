@@ -1,7 +1,7 @@
 ---
 title: "Mockito can mock static methods since 3.4.0, and the API's shape is itself the warning: the mock is thread-local, it is scoped, and it must be closed — because a static method you need to mock is a dependency your class never declared, and the framework can only pretend it did for as long as you hold the scope open"
 sidebar_label: "11 · Static and final"
-sidebar_position: 57
+sidebar_position: 48
 ---
 
 <span className="db-tier t-master">Master</span>

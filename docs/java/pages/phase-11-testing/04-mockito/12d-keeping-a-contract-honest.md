@@ -1,7 +1,7 @@
 ---
 title: "A contract test proves the fake and the real implementation agree about the clauses it states and nothing else, so the two things that decide whether it is worth anything are what you put in it and whether the slow half actually runs — and the discipline that makes both work is that every clause must be expressible through the interface alone"
 sidebar_label: "12d · Keeping a contract honest"
-sidebar_position: 42
+sidebar_position: 55
 ---
 
 <span className="db-tier t-master">Master</span>

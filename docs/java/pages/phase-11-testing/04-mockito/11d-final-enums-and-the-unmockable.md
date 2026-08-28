@@ -1,7 +1,7 @@
 ---
 title: "Mockito 5 mocks final classes, final methods and most enums by default, which leaves a much shorter list of genuinely impossible things — and every item on that shorter list has a precise reason in the source, worth knowing because the error message names the symptom rather than the cause"
 sidebar_label: "11d · The unmockable"
-sidebar_position: 60
+sidebar_position: 51
 ---
 
 <span className="db-tier t-master">Master</span>

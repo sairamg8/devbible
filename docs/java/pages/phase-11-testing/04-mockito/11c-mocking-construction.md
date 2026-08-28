@@ -1,7 +1,7 @@
 ---
 title: "mockConstruction intercepts the new operator itself, which makes it the most powerful and the most alarming thing in Mockito's API — it is scoped and thread-local for the same reasons mockStatic is, and needing it means a class is building its own collaborators, which a factory parameter fixes permanently"
 sidebar_label: "11c · Mocking construction"
-sidebar_position: 59
+sidebar_position: 50
 ---
 
 <span className="db-tier t-master">Master</span>

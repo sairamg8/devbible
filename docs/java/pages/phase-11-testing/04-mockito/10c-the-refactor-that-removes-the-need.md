@@ -1,7 +1,7 @@
 ---
 title: "Every reason anyone gives for spying the class under test — and most of the reasons for mocking a library type — dissolve under the same one-line refactor: the thing you wanted to stub becomes a type, the type becomes a constructor parameter, and the stub moves one object outward"
 sidebar_label: "10c · The refactor that removes the need"
-sidebar_position: 52
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>

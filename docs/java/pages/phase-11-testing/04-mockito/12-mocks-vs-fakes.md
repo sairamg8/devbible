@@ -1,7 +1,7 @@
 ---
 title: "When a test needs twenty stubbings to reach one assertion, the problem is not the stubbing syntax — it is that a mock has no state and no invariants, so every fact about the collaborator has to be restated by hand in every test, and a forty-line in-memory implementation replaces all of them permanently"
 sidebar_label: "12 · Mocks vs fakes"
-sidebar_position: 61
+sidebar_position: 52
 ---
 
 <span className="db-tier t-master">Master</span>

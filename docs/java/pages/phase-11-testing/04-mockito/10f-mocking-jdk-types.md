@@ -1,7 +1,7 @@
 ---
 title: "Mockito 5 can mock LocalDate and List, and that capability is the trap: the standard library is the one category of types nobody owns, the JDK documents the substitution it actually wants for each of them, and a mocked collection can be configured into a state no collection can reach"
 sidebar_label: "10f · Mocking JDK types"
-sidebar_position: 55
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>

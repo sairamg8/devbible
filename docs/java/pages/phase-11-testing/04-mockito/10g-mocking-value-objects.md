@@ -1,7 +1,7 @@
 ---
 title: "Mocking a value object is the one rule in this topic with no exception case at all, because the reason anyone reaches for it is always the same — the constructor is painful — and that is a request for a builder, not for a mock that quietly bypasses every invariant the type exists to enforce"
 sidebar_label: "10g · Mocking value objects"
-sidebar_position: 56
+sidebar_position: 47
 ---
 
 <span className="db-tier t-master">Master</span>

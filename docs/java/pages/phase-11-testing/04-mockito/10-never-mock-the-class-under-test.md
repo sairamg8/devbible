@@ -1,7 +1,7 @@
 ---
 title: "The moment you spy or partially mock the class under test, the test stops asserting against your production code and starts asserting against a hybrid the test itself invented — and Mockito's own documentation says so more bluntly than most reviewers dare to"
 sidebar_label: "10 · Never mock the SUT"
-sidebar_position: 50
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>

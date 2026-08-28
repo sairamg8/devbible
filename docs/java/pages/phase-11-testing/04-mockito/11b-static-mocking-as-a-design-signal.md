@@ -1,7 +1,7 @@
 ---
 title: "A static call you need to mock is a dependency the constructor never declared, and mockStatic does not remove that coupling — it rents a thread-local exemption from it, once per test, forever, where a two-line adapter interface would have removed it once"
 sidebar_label: "11b · Static mocking as a signal"
-sidebar_position: 58
+sidebar_position: 49
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "There are exactly three situations in which a partial mock of the class under test is defensible, all three are about code you cannot change yet rather than code you would rather not change, and what separates a defensible spy from a defect is not the situation but the comment above it"
 sidebar_label: "10d · The honest exceptions"
-sidebar_position: 53
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>

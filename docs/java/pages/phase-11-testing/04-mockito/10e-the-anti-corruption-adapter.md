@@ -1,7 +1,7 @@
 ---
 title: "The way out of mocking a library is a one-method interface written in your own vocabulary, and the thing that makes the pattern real rather than ceremonial is the integration test behind it — without that, you have not removed the guess, you have concentrated it"
 sidebar_label: "10e · The anti-corruption adapter"
-sidebar_position: 54
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>

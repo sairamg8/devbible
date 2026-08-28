@@ -1,7 +1,7 @@
 ---
 title: "A contract test only keeps a fake honest if the assertions are literally the same code running twice, which in Jupiter means inheriting them — and the guide's own sentence about inheritance carries the trap, because a subclass that overrides a contract method replaces it silently and the run still reports the test as passing"
 sidebar_label: "12c · Contract-testing a fake"
-sidebar_position: 41
+sidebar_position: 54
 ---
 
 <span className="db-tier t-master">Master</span>
