@@ -67,7 +67,7 @@ counts[["GET"]] = 1                      # TypeError: unhashable type: 'list'
 **Safe sharing.** Passing a string to a function you did not write carries zero
 risk that it comes back different. Compare with handing over a list, which is
 the central hazard of
-[Assignment semantics and aliasing](../07-assignment-and-aliasing.md).
+**Assignment semantics and aliasing** *(not written yet)*.
 
 **Caching.** Because the value can never change, CPython is free to reuse one
 object for many equal strings — the interning behaviour below.
@@ -90,7 +90,7 @@ Three different notions of "length" exist, and they disagree:
 | Question | Answer in Python |
 |---|---|
 | How many code points? | `len(s)` |
-| How many bytes on the wire? | `len(s.encode("utf-8"))` — see [`bytes` vs `str`](../04-bytes-and-encoding.md) |
+| How many bytes on the wire? | `len(s.encode("utf-8"))` — see [`bytes` vs `str`](../04-bytes-and-encoding/README.md) |
 | How many things does a human see? | Neither — that is a *grapheme cluster* count, and the standard library does not provide it |
 
 The gap between the first and the third is where the real bugs live:
@@ -255,4 +255,4 @@ collation, which the standard library only exposes through process-global
 
 ---
 
-← Prev: [Numbers](../02-numbers.md) · Index: [Strings](README.md) · Next → [Building strings and interning](01b-building-and-interning.md)
+← Prev: [Numbers](../02-numbers/README.md) · Index: [Strings](README.md) · Next → [Building strings and interning](01b-building-and-interning.md)

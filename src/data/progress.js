@@ -601,7 +601,7 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
-    updated: '2026-08-28 23:11',
+    updated: '2026-08-28 23:14',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [

@@ -64,4 +64,4 @@ must survive a round trip, and `ignore` essentially never.
 
 ---
 
-← Prev: [Strings](../03-strings/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [Truthiness](../05-truthiness.md)
+← Prev: [Strings](../03-strings/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Truthiness** *(not written yet)*

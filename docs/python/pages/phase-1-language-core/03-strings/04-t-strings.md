@@ -198,4 +198,4 @@ producing a parameterised query from interpolation-shaped syntax.
 
 ---
 
-← Prev: [`__format__`, the protocol behind the spec](03d-the-format-protocol.md) · Index: [Strings](README.md) · Next → [`bytes` vs `str`](../04-bytes-and-encoding.md)
+← Prev: [`__format__`, the protocol behind the spec](03d-the-format-protocol.md) · Index: [Strings](README.md) · Next → [`bytes` vs `str`](../04-bytes-and-encoding/README.md)

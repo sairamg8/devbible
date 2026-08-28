@@ -149,7 +149,7 @@ f'{(half := 1/2)}, {half * 42}'      # '0.5, 21.0'
 
 Useful for printing a value you also want to keep; a smell if the reader has to
 hunt inside a string to find where a name was bound. See
-[Truthiness and the walrus](../05-truthiness.md).
+**Truthiness and the walrus** *(not written yet)*.
 
 ## Gotchas
 

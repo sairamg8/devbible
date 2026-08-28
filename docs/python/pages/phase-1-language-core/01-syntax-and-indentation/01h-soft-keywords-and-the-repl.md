@@ -186,4 +186,4 @@ in a file it costs the whole module.
 
 ---
 
-← Prev: [Syntax errors and 3.14's messages](01g-syntax-errors-and-messages.md) · Index: [Syntax and indentation](README.md) · Next → [Numbers](../02-numbers.md)
+← Prev: [Syntax errors and 3.14's messages](01g-syntax-errors-and-messages.md) · Index: [Syntax and indentation](README.md) · Next → [Numbers](../02-numbers/README.md)

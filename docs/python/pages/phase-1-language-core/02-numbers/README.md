@@ -93,10 +93,10 @@ cannot represent `1/3` exactly either; `Fraction` can.
 
 ## Where this connects
 
-- **[Truthiness](../05-truthiness.md)** inherits `bool` being an `int`
+- **Truthiness** *(not written yet)* inherits `bool` being an `int`
   subclass: `True + True` is `2`, and `0`, `0.0`, `Decimal(0)` and
   `Fraction(0)` are all falsy.
-- **[Comparisons](../06-comparisons.md)** is where NaN's refusal to equal
+- **Comparisons** *(not written yet)* is where NaN's refusal to equal
   itself stops being a curiosity and starts breaking `sort`, `in` and `max`.
 - **Phase 6 — Typing** formalises the numeric tower shortcut: a parameter
   annotated `float` accepts an `int`, and one annotated `complex` accepts both.

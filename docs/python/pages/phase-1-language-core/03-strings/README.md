@@ -56,10 +56,10 @@ the template are the same string.
 
 ## Where this connects
 
-- **[`bytes` vs `str`](../04-bytes-and-encoding.md)** is the other half of text
+- **[`bytes` vs `str`](../04-bytes-and-encoding/README.md)** is the other half of text
   handling: this topic works entirely in `str`, and that one covers getting in
   and out of it.
-- **[Comparisons](../06-comparisons.md)** picks up the `is` versus `==` rule
+- **Comparisons** *(not written yet)* picks up the `is` versus `==` rule
   that interning makes tempting to get wrong.
 - **Phase 3 — Collections** relies on string hashability for every `dict` it
   builds.
@@ -68,4 +68,4 @@ the template are the same string.
 
 ---
 
-← Prev: [Numbers](../02-numbers.md) · Index: [Phase 1 — Language core](../README.md) · Next → [`bytes` vs `str`](../04-bytes-and-encoding.md)
+← Prev: [Numbers](../02-numbers/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [`bytes` vs `str`](../04-bytes-and-encoding/README.md)
