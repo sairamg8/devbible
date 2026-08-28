@@ -148,7 +148,7 @@ having nothing substantive to say.
 becomes two true and useful statements: *CPython's interpreter loop is roughly an order
 of magnitude slower than V8's JIT for tight numeric loops in the language itself*, and
 *this almost never matters in a backend, because the hot work is in C, in the database,
-or on the network*. [Chunk 6](06-performance-honestly.md) puts numbers-shaped claims in
+or on the network*. [Chunk 7](07-performance.md) puts numbers-shaped claims in
 their place and is careful about which ones are actually measurable.
 
 ## Gotchas
@@ -191,7 +191,7 @@ setup.
 **Fix.** If you must benchmark, hold the layer constant: an ASGI app on `uvicorn` with
 `--http httptools` (or `granian`) against Fastify, both behind the same proxy, both with
 the same connection pool size, both against the same database, both measured at the same
-concurrency, with a p99 rather than a mean. Then read [chunk 6](06-performance-honestly.md)
+concurrency, with a p99 rather than a mean. Then read [chunk 7](07-performance.md)
 before you believe your own numbers.
 
 ### Treating this as a permanent, whole-company decision
