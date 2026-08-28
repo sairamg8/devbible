@@ -1,7 +1,7 @@
 ---
 title: "timeout exits the moment the verification passes and after always waits the full duration, which is why after(100).never() is a real assertion and timeout(100).never() is one that is satisfied instantly — and why Mockito's own javadoc tells you to find a better way of testing concurrency"
 sidebar_label: "05c · Async verification"
-sidebar_position: 18
+sidebar_position: 19
 ---
 
 <span className="db-tier t-master">Master</span>

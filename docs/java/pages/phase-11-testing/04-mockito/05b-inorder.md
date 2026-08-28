@@ -1,7 +1,7 @@
 ---
 title: "InOrder verification is greedy and its cursor only moves forward, which is why calls(n) exists, why atLeast(n) inside an InOrder quietly consumes every remaining match, and why inOrder.verifyNoMoreInteractions() can pass on the same mock where the static one fails"
 sidebar_label: "05b · InOrder"
-sidebar_position: 17
+sidebar_position: 18
 ---
 
 <span className="db-tier t-master">Master</span>

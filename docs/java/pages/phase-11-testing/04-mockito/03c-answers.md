@@ -1,7 +1,7 @@
 ---
 title: "thenAnswer is the only stubbing that sees the arguments, which makes it the only way to echo a saved entity back or fire a callback — and it is also the escape hatch through which a whole unnamed, untested implementation gets smuggled into a lambda"
 sidebar_label: "03c · Answers"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 <span className="db-tier t-master">Master</span>

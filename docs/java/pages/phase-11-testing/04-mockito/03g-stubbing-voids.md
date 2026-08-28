@@ -1,7 +1,7 @@
 ---
 title: "The do-family exists because a void expression cannot be passed to when, and the order flips for a mechanical reason — doReturn(x).when(spy).foo() never calls foo(), while when(spy.foo()) always does, which is the single most consequential difference in the whole API"
 sidebar_label: "03g · Stubbing voids"
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>

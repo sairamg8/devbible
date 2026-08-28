@@ -1,7 +1,7 @@
 ---
 title: "RETURNS_SMART_NULLS, RETURNS_MOCKS, CALLS_REAL_METHODS, RETURNS_SELF and RETURNS_DEEP_STUBS all exist to rescue legacy code, and reaching for one in a new test is almost always a way of making a null go away rather than making a behaviour testable"
 sidebar_label: "03f · Default answers"
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>

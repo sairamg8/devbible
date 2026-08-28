@@ -1,7 +1,7 @@
 ---
 title: "AdditionalAnswers turns the four Answers everyone hand-writes into one token each, and its delegatesTo is the documented alternative to a spy for objects a spy cannot wrap — with the same when-calls-the-real-method hazard and one crucial difference about self-calls"
 sidebar_label: "03d · AdditionalAnswers"
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 <span className="db-tier t-master">Master</span>

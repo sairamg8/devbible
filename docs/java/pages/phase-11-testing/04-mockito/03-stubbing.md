@@ -1,7 +1,7 @@
 ---
 title: "when(mock.get(0)) works by actually calling the method and catching the invocation on a thread-local, which explains every strange rule about stubbing — why void methods cannot use it, why the last stubbing wins, and why the same syntax is a landmine on a spy"
 sidebar_label: "03 · Stubbing"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "A test that verifies every call is a test that fails on every refactor, and the distinction that saves you is command versus query — verifying a command asserts the observable effect, verifying a query asserts your own implementation back to you"
 sidebar_label: "05d · Verifying too much"
-sidebar_position: 19
+sidebar_position: 20
 ---
 
 <span className="db-tier t-master">Master</span>
