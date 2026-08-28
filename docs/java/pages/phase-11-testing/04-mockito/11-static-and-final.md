@@ -237,6 +237,12 @@ The wider the block, the more unrelated code runs against a rewritten class. Ope
 immediately before the call under test and close it immediately after when you are using
 try-with-resources.
 
+**★ Static state left mutated by the stubbed call's absence.**
+If the real static had side effects — populating a cache, registering a listener — stubbing it
+out means those side effects do not happen, and later code that assumes them fails. A mocked
+static is not a no-op; it is a different implementation, and the difference includes everything
+the real one did on the way.
+
 **★ Switching mock maker and breaking every static mock in the module.**
 `mockStatic` is an inline-mock-maker feature. A per-project `mock-maker-subclass` or
 `mock-maker-proxy` extension file — the escape hatch in
