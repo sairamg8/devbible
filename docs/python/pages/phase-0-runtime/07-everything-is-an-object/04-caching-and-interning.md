@@ -125,7 +125,7 @@ pathological expression — the limits in CPython 3.14's `flowgraph.c` are:
 
 So `2 ** 64` is folded and `2 ** 1000` is not; `"x" * 100` is folded and
 `"x" * 100000` is not. This is a real, useful thing to know when reading a
-disassembly — see topic **12 · Bytecode inspection with `dis`** *(not written yet)*
+disassembly — see topic [12 · Bytecode inspection with `dis`](../12-dis-bytecode/README.md)
 — and a terrible thing to build on.
 
 ## String interning
@@ -205,7 +205,7 @@ interned copy is collected like anything else. Store the return value.
 
 **Symptom:** `a = 1000; b = 1000; a is b` is True in a script and False in the REPL
 **Cause:** the compiler merges equal constants within one compilation unit; a script is one unit, each REPL statement is its own
-**Fix:** stop asking the question in code. If you are genuinely investigating, `dis` will show both names loading the same `LOAD_CONST` index — see topic **12 · Bytecode inspection with `dis`** *(not written yet)* — but the answer is not portable and must not be relied on
+**Fix:** stop asking the question in code. If you are genuinely investigating, `dis` will show both names loading the same `LOAD_CONST` index — see topic [12](../12-dis-bytecode/README.md) — but the answer is not portable and must not be relied on
 
 **Symptom:** a string comparison with `is` passes locally against literals and fails against a request body
 **Cause:** identifier-shaped string *literals* are interned at compile time; a string decoded from JSON or read from a socket is a fresh object
