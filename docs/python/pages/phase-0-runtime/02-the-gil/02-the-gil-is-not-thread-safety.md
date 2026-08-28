@@ -119,7 +119,7 @@ the thing making your program slow.
 ## Free threading turns these from rare into reproducible
 
 The GIL does not make these bugs impossible; it makes their windows small. On
-the free-threaded build ([chunk 5](05-free-threading.md)) two threads can be
+the free-threaded build ([chunk 6](06-free-threading.md)) two threads can be
 inside your check-then-act *simultaneously*, so a race that fired once a month
 fires immediately.
 

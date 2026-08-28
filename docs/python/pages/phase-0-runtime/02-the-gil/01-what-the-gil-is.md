@@ -103,7 +103,7 @@ plainly:
 Every prior attempt — Greg Stein's free-threading patch in the 1990s, the
 "Gilectomy" — produced an interpreter that worked and was substantially slower
 single-threaded. That is why PEP 779 (see
-[chunk 4](04-free-threading.md)) set an explicit, numeric performance budget as
+[chunk 6](06-free-threading.md)) set an explicit, numeric performance budget as
 a condition of official support rather than leaving it to judgement.
 
 ## The switch interval
@@ -150,7 +150,7 @@ library that releases the lock.
   PEP 734) give each interpreter its own, which is a different mechanism with
   a different set of trade-offs.
 - **It is not held during I/O.** That is
-  [chunk 3](03-io-releases-the-gil.md), and it is the single most useful thing
+  [chunk 5](05-io-releases-the-gil.md), and it is the single most useful thing
   to know about it.
 - **It does not make your code thread-safe.** That is
   [chunk 2](02-the-gil-is-not-thread-safety.md), and it is the single most

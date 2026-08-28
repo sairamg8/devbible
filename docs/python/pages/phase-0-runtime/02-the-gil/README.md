@@ -29,8 +29,13 @@ This topic runs deeper than one file. The chunks:
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[What the GIL is and what it protects](01-what-the-gil-is.md)** | The lock, reference counts, the switch interval, and why a threaded counter is still wrong |
-| 2 | **[Why I/O is the exception](02-io-releases-the-gil.md)** | The precise reason 100 HTTP calls speed up and 100 checksums do not, plus which C extensions release the lock |
-| 3 | **[Free-threaded CPython](03-free-threading.md)** | PEP 703 and PEP 779, what "officially supported" means in 3.14, how to tell which build you are on, and what it costs |
+| 2 | **[The GIL is not thread safety](02-the-gil-is-not-thread-safety.md)** | The threaded counter that loses updates, every check-then-act race, and what is atomic only by accident |
+| 3 | **[Making threaded code correct](03-making-threaded-code-correct.md)** | The four real options: share nothing, use a structure that locks for you, find the single step, or lock the whole span |
+| 4 | **[Lock discipline and testing for races](04-lock-discipline-and-testing.md)** | Choosing the primitive, holding it correctly, and writing a test that actually fails |
+| 5 | **[Why I/O is the exception](05-io-releases-the-gil.md)** | The precise reason 100 HTTP calls speed up and a Python loop never does — the GIL is released around the wait, not around your code |
+| 5b | **[Native code that releases the lock](05b-native-code-releases-the-gil.md)** | `zlib`, `hashlib` and its 2047-byte threshold, NumPy — why "100 checksums do not speed up" is false for the checksum you would actually use |
+| 6 | **[Free-threaded CPython](06-free-threading.md)** | PEP 703 and PEP 779, what "officially supported" means in 3.14, and what it costs |
+| 6b | **[Running on the free-threaded build](06b-running-on-the-free-threaded-build.md)** | The three ways the GIL comes back on, and why correct code is identical on both builds |
 
 ## The one question this topic exists to answer
 
