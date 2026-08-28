@@ -19,14 +19,14 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 4 of 12 written**, topics 03–04 and 05–06 in flight.
+🚧 **Phase in progress — 6 of 12 written**, topics 05–06 and 09–10 in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[What Python is: CPython](01-what-python-is/README.md)** | <span className="db-tier t-master">Master</span> | Source → bytecode → the interpreter loop; the language vs its implementation |
 | 02 | **[The GIL](02-the-gil/README.md)** | <span className="db-tier t-master">Master</span> | One thread runs bytecode — but I/O releases it, and 3.14 makes free-threading official |
-| 03 | **The release model** | <span className="db-tier t-understand">Understand</span> | One major each October; 3.14 current, 3.15 lands Oct 2026 |
-| 04 | **Installing and managing versions** | <span className="db-tier t-understand">Understand</span> | `uv` / `pyenv`, and never installing into the system Python |
+| 03 | **[The release model](03-release-model/README.md)** | <span className="db-tier t-understand">Understand</span> | One major each October; 3.14 current, 3.15 lands Oct 2026 |
+| 04 | **[Installing and managing versions](04-installing-and-versions/README.md)** | <span className="db-tier t-understand">Understand</span> | `uv` / `pyenv`, and never installing into the system Python |
 | 05 | **Virtual environments** | <span className="db-tier t-master">Master</span> | What a venv actually is — a config file and a path |
 | 06 | **Running code** | <span className="db-tier t-understand">Understand</span> | `python -m` vs `python file.py`, the rewritten REPL, `-c`, shebangs |
 | 07 | **[Everything is an object](07-everything-is-an-object/README.md)** | <span className="db-tier t-master">Master</span> | Names bind to objects, `is` vs `==`, and why `a = b` never copies |
