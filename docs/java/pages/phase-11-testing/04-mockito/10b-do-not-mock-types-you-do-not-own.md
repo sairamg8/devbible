@@ -27,8 +27,9 @@ the two halves of the test agree with each other. This page is why that goes wro
 the line between "yours" and "not yours" actually falls;
 [10e · The anti-corruption adapter](10e-the-anti-corruption-adapter.md) is the construction
 that makes the question moot, and
-[10f · Mocking JDK and value types](10f-mocking-jdk-and-value-types.md) is the same argument
-applied to the standard library and to your own data.**
+[10f · Mocking JDK types](10f-mocking-jdk-types.md) and
+[10g · Mocking value objects](10g-mocking-value-objects.md) apply the same argument to the
+standard library and to your own data.**
 
 ## 🔴 Mockito's own position, in full
 
@@ -140,7 +141,9 @@ compiler, only if the signature changed", it belongs behind an adapter — which
 
 The JDK is the case people forget is on this list at all. `java.time`, collections and
 `Optional` are types nobody owns and almost nobody should mock, and the reasons are specific
-enough to be worth their own page: [10f](10f-mocking-jdk-and-value-types.md).
+enough to be worth their own page: [10f](10f-mocking-jdk-types.md). Your own value objects are
+the mirror case — you *do* own them, and mocking them is still always wrong:
+[10g](10g-mocking-value-objects.md).
 
 ## Gotchas
 
