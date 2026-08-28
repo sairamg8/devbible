@@ -21,7 +21,7 @@ The parallelism strategies and pool sizing are
 [12b · parallelism configuration](12b-parallelism-configuration.md); `@ResourceLock` and
 `@Isolated` are [12c · resource locks](12c-resource-locks.md); the catalogue of shared state
 that breaks is
-[12d · shared state under parallelism](12d-shared-state-under-parallelism.md).
+[12e · shared state under parallelism](12e-shared-state-under-parallelism.md).
 
 ## Two switches, not one
 

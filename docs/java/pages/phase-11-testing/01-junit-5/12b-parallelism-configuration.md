@@ -202,7 +202,7 @@ tail beyond the buffer, and the tail is usually the part with the failure in it.
 **★ Tuning parallelism before eliminating shared state.**
 The strategy parameters change how fast a correct suite runs and how often an incorrect one
 fails. Fixing the second problem with the first knob does not work
-([12d](12d-shared-state-under-parallelism.md)).
+([12e](12e-shared-state-under-parallelism.md)).
 
 **★ Writing a custom strategy as the first move.**
 `custom.class` exists, and the two built-ins cover essentially every ordinary need. A custom
