@@ -141,8 +141,9 @@ Scripts with inline metadata are handled separately, and always in isolation:
 > *"Scripts that declare inline metadata are automatically executed in
 > environments isolated from the project."*
 
-That is PEP 723, covered by **06 · Running code — `uv run` and inline script
-metadata** *(not written yet)*.
+That is PEP 723, covered by
+[06 · Running code — `uv run` and inline script metadata](../06-running-code/08-uv-run-and-inline-metadata.md),
+with the block's own syntax in [the PEP 723 block](../06-running-code/08b-the-pep-723-block.md).
 
 ## Where the project environment lives
 

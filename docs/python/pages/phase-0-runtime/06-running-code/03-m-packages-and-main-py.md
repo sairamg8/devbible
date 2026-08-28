@@ -59,7 +59,7 @@ The `if __name__ == "__main__":` guard is still worth writing in `__main__.py`
 even though the file is by definition the main module: it costs nothing and it
 keeps the file importable by tools that inspect it. The reasons this guard exists
 at all — including the multiprocessing failure it prevents — are in
-**`../09-name-main.md`** *(not written yet)*.
+[09 · `if __name__ == "__main__"`](../09-name-main/README.md).
 
 ## Why `python -m pip`, not `pip`
 
@@ -169,7 +169,7 @@ The full treatment, including what the warning is telling you, is in
 
 **Symptom:** `python -m myapp` is slow or has side effects even for `--help`
 **Cause:** `-m` on a package imports the package first, so everything in `__init__.py` runs before your entry point does
-**Fix:** keep `__init__.py` empty or nearly so. Import heavy dependencies inside functions, not at package import time — the startup-cost argument in **Phase 0 topic 11** *(not written yet)*
+**Fix:** keep `__init__.py` empty or nearly so. Import heavy dependencies inside functions, not at package import time — the startup-cost argument in [11 · Startup and import cost](../11-startup-and-import-cost/README.md)
 
 **Symptom:** `python -m myapp` reports that the module cannot be found although `myapp/` is right there
 **Cause:** either `myapp` is not on `sys.path` (a src layout that has not been installed — [chunk 2](02-script-vs-m.md)), or the package has no `__main__.py`
