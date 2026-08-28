@@ -21,8 +21,8 @@ columns the method declaration stops being readable and starts being a place to 
 `String` parameters. The fix is to collapse the row into one object — but an aggregated
 parameter is a different *kind* of parameter, and almost every surprise in this chunk follows
 from that one fact. This chunk is the built-in half — `ArgumentsAccessor`, injected for free.
-Extracting the unpacking into a reusable class is [08d · custom
-aggregators](08d-custom-aggregators.md).**
+Extracting the unpacking into a reusable class is [08i · custom
+aggregators](08i-custom-aggregators.md).**
 
 ## The problem, in the documentation's words
 
@@ -144,7 +144,7 @@ as a record — *"all arguments in this accessor as an immutable list"*, so a de
 not needed and a mutation attempt is a failure rather than a corruption. `size()` plus
 `toList()` also give you the honest way to assert that a table row has the width you expect,
 which is the only protection an aggregated method has against a stale column
-([08e](08e-argument-count-validation.md)).
+([08j](08j-argument-count-validation.md)).
 
 ## Aggregation and the report
 

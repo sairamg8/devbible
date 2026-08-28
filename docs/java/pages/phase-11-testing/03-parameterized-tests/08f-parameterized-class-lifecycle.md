@@ -194,7 +194,7 @@ the file name, which is what makes the display name readable
 each argument set is used for exactly one invocation, but it means the objects your
 `@MethodSource` returns are not immutable value objects. What happens to those objects once the
 invocation ends — including the fact that an `AutoCloseable` one is closed for you — is
-[08g · argument lifetime](08g-argument-lifetime.md).
+[08h · argument lifetime](08h-argument-lifetime.md).
 
 ## Gotchas
 

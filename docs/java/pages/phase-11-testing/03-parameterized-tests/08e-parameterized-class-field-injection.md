@@ -137,7 +137,7 @@ as read-only by convention, since the compiler will not.
 > automatically."*
 
 So everything in [08](08-conversion-and-aggregation.md) and
-[08j](08j-explicit-conversion.md) applies to a field exactly as it applies to a method
+[08l](08l-explicit-conversion.md) applies to a field exactly as it applies to a method
 parameter — the *declared type of the field* selects the converter.
 
 Aggregation works the same way, because `@AggregateWith` is
@@ -161,7 +161,7 @@ The `@AggregateWith` javadoc names both targets explicitly: *"This annotation ma
 parameters of a `@ParameterizedClass` constructor or its `@Parameter`-annotated fields, or to
 parameters of a `@ParameterizedTest` method."* Supporting a field as well as a parameter is
 exactly why `ArgumentsAggregator` grew a `FieldContext` overload in 6.0
-([08g](08g-custom-aggregators.md)).
+([08i](08i-custom-aggregators.md)).
 
 ## Gotchas
 

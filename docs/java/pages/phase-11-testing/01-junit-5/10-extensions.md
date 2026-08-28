@@ -33,7 +33,7 @@ the behaviour of every library you already use in tests.**
 This chunk is the model and the catalogue of extension points. Writing one — including the
 `ParameterResolver` rules an author must know — is [10b · writing one](10b-writing-one.md);
 the three ways to register an extension and the order they run in are
-[10c · registering extensions](10c-registering-extensions.md).
+[10d · registering extensions](10d-registering-extensions.md).
 
 ## One concept, replacing three
 
@@ -219,7 +219,7 @@ after a failing lifecycle method.
 
 **★ Registering the same extension twice and expecting it twice.**
 A specific extension implementation is registered once per extension context and its
-parents; duplicates are ignored ([10c](10c-registering-extensions.md)).
+parents; duplicates are ignored ([10d](10d-registering-extensions.md)).
 ## Interview questions
 
 **★ What did Jupiter's extension model replace, and why is that better?**
@@ -252,4 +252,4 @@ descriptor and no registration metadata: implementing `AfterAllCallback` *is* th
 declaration that you want to be called after all tests, and one class may implement as many
 of these interfaces as it needs.
 
-{/* FOOTER */}{/* FOOTER */}
+{/* FOOTER */}

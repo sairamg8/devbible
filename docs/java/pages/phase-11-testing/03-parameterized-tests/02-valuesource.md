@@ -194,7 +194,7 @@ notice. `@EnumSource` is the source that notices — [05](05-enumsource.md).
 
 **★ Growing a `@ValueSource` past a screenful.** Fifty literals in an annotation is a data
 file that has not admitted it yet. Move it to
-[`@CsvFileSource`](03b-csvfilesource.md) or a `@MethodSource` factory where it can be read,
+[`@CsvFileSource`](03c-csvfilesource.md) or a `@MethodSource` factory where it can be read,
 diffed and commented.
 
 ## Interview questions

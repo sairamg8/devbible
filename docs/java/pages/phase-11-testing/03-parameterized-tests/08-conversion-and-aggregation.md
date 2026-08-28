@@ -22,8 +22,8 @@ worth keeping apart because they fail differently. Two of them are automatic and
 widening primitive conversion, and a documented table of about thirty implicit
 `String`-to-type converters — and they are what this chunk covers. The third is a reflective
 fallback that reaches into your own production code, which is why it gets its own chunk:
-[08d · fallback conversion](08d-fallback-conversion.md). Explicit conversion, where you name
-the converter yourself, is [08e](08e-explicit-conversion.md).**
+[08k · fallback conversion](08k-fallback-conversion.md). Explicit conversion, where you name
+the converter yourself, is [08l](08l-explicit-conversion.md).**
 
 ## Widening comes first
 
@@ -125,7 +125,7 @@ would be the far worse design, and JUnit does not do it.
 
 **The `java.time` types are ISO-8601 parsers.** `"14/03/2017"` is not a `LocalDate` here.
 Either write ISO in the table or use `@JavaTimeConversionPattern`
-([08e](08e-explicit-conversion.md)).
+([08l](08l-explicit-conversion.md)).
 
 **`Locale` changed in 6.0.** 🔴 *"Support for the
 `junit.jupiter.params.arguments.conversion.locale.format` configuration parameter has been
@@ -159,7 +159,7 @@ silent `false` but does not look like one at first glance.
 
 **★ A non-ISO date in a CSV table.** `java.time` conversion is ISO-8601 only. `"14/03/2017"`
 fails. Write ISO in the table, or annotate the parameter with `@JavaTimeConversionPattern`
-([08e](08e-explicit-conversion.md)).
+([08l](08l-explicit-conversion.md)).
 
 **★ `"en_US"` for a `Locale` on JUnit 6.** Conversion is now always BCP 47 via
 `Locale.forLanguageTag`, and the configuration parameter that used to select the old format was
@@ -217,7 +217,7 @@ identical and the documentation says the object is passed through unmodified.
 **★ When should you stop relying on implicit conversion?**
 When the string in the table stops being the value's natural written form. A date in a
 non-ISO format, a domain type without a parse method, or a cell that has to become two fields
-are all signals: reach for `@ConvertWith` ([08e](08e-explicit-conversion.md)), an aggregator
+are all signals: reach for `@ConvertWith` ([08l](08l-explicit-conversion.md)), an aggregator
 ([08b](08b-aggregation.md)), or a `@MethodSource` that builds the object in Java
 ([04](04-methodsource.md)).
 

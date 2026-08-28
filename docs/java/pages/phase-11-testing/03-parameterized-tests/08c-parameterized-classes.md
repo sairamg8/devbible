@@ -24,7 +24,7 @@ input would otherwise be four parameterized methods each repeating the same sour
 and it is a trap when the class is really a bag of unrelated tests that happen to be in the
 same file. This chunk is what the feature is and what it costs; how the arguments actually get
 into the instance is [08d](08d-parameterized-class-injection.md), and what runs when is
-[08e](08e-parameterized-class-lifecycle.md).**
+[08f](08f-parameterized-class-lifecycle.md).**
 
 ## 🔴 Package and status, checked against the javadoc
 
