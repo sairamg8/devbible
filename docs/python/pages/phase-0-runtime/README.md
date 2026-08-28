@@ -19,7 +19,7 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 6 of 12 written**, topics 05–06 and 09–10 in flight.
+🚧 **Phase in progress — 7 of 12 written**, topics 05–06 and 09–10 in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -33,7 +33,7 @@ all of them are load-bearing.
 | 08 | **[Imports](08-imports/README.md)** | <span className="db-tier t-master">Master</span> | Modules, packages, `sys.path` — and the file you named `random.py` |
 | 09 | **`if __name__ == "__main__"`** | <span className="db-tier t-understand">Understand</span> | Script vs import, and the multiprocessing crash without it |
 | 10 | **Python vs Node for a backend** | <span className="db-tier t-know">Know</span> | The honest comparison; PyPy and GraalPy at recognition level |
-| 11 | **Startup and import cost** | <span className="db-tier t-know">Know</span> | Why CLIs feel slow, and lazy imports as the coming answer |
+| 11 | **[Startup and import cost](11-startup-and-import-cost/README.md)** | <span className="db-tier t-know">Know</span> | Why CLIs feel slow, and lazy imports as the coming answer |
 | 12 | **Bytecode inspection with `dis`** | <span className="db-tier t-when">When Needed</span> | Seeing what a line actually does |
 
 ## Phase gate
