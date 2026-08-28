@@ -184,7 +184,7 @@ either a comment naming the removal plan or a refactor.
 The javadoc's first spy gotcha is explicit — *"Impossible: real method is called"* — and on a
 half-configured SUT the real method runs against whatever state the test has built so far,
 which is usually nothing. That is why the shapes above use `doReturn(...).when(service)`. The
-mechanism is [08 · Spies](08-spies.md); the point here is that the workaround makes the
+mechanism is [08d · Stubbing a spy](08d-stubbing-a-spy.md); the point here is that the workaround makes the
 mistake *quieter*, not smaller.
 
 **★ `spy(realObject)` copies the object; it does not delegate to it.**

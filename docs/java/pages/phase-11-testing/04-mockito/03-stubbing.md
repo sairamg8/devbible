@@ -49,7 +49,7 @@ Four consequences you will hit:
   expression does not compile. That is the entire reason the `do…` family exists.
 - **On a spy, step 1 runs the real method.** A mock returns `null` harmlessly; a spy executes
   the body, with whatever side effects and exceptions it has. See
-  [08 · Spies](08-spies.md).
+  [08d · Stubbing a spy](08d-stubbing-a-spy.md).
 - **Argument matchers are also recorded on a thread-local**, in step 1, which is why mixing a
   matcher and a raw value in one call breaks — [04 · Argument matchers](04-argument-matchers.md).
 - **The `OngoingStubbing` is transient state, not a handle.** The javadoc for `when` is blunt:

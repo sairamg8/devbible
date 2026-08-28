@@ -67,7 +67,7 @@ code is `mock(...)`, because that is the API.
 
 The classical **spy** is a real object wrapped so that calls are recorded — behaviour is
 real, observation is added. Mockito's `spy(...)` is exactly that, and is covered in
-**08 · Spies** *(not written yet)*.
+[08 · Spies](08-spies.md).
 
 But "spy" is also used loosely for "a mock I am verifying against", which is the classical
 *mock*. When someone says "I spied on the repository", ask which they mean — a real

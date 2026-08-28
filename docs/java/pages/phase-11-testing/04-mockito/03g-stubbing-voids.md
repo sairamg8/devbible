@@ -202,7 +202,8 @@ the way you want to design your application."* — and the same recommendation:
 > responsible for constructing the object passed to spy() method."*
 
 Note this is `mock(Foo.class)`, not `spy(...)`: the object was never constructed, so its fields
-are `null`. The real method runs against an empty object. See [08 · Spies](08-spies.md).
+are `null`. The real method runs against an empty object. See
+[08e · Partial mocks](08e-partial-mocks.md).
 
 Whether to adopt `do…` as the house style — and the BDD `given`/`will` vocabulary that shadows
 both forms — is [03h · Choosing a stubbing vocabulary](03h-choosing-a-stubbing-vocabulary.md).

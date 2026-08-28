@@ -102,7 +102,7 @@ and, importantly for the mechanism in [03 · Stubbing](03-stubbing.md):
 > syntax will call the real method. For partial mock it's recommended to use `doReturn`
 > syntax."*
 
-Covered fully in [08 · Spies](08-spies.md), and `doCallRealMethod` in
+Covered fully in [08d · Stubbing a spy](08d-stubbing-a-spy.md), and `doCallRealMethod` in
 [03g · Stubbing voids](03g-stubbing-voids.md).
 
 ### `RETURNS_SELF`

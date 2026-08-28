@@ -114,7 +114,7 @@ else in the repository will tell them.
 
 **Spying a collaborator is a different thing.** `spy(new InMemoryOrderRepository())` to
 verify a call while keeping real behaviour is legal, occasionally useful, and governed by
-[08 · Spies](08-spies.md) rather than by this page. The rule here is specifically about the
+[08e · Partial mocks](08e-partial-mocks.md) rather than by this page. The rule here is specifically about the
 object whose behaviour the test claims to be establishing.
 
 **Mocking a superclass's method is still mocking the SUT.** Inheritance does not put the
