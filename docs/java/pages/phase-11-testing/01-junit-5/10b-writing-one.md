@@ -31,7 +31,7 @@ annotation bug — are [10c · resolving parameters](10c-resolving-parameters.md
 
 `BeforeTestExecutionCallback` and `AfterTestExecutionCallback` in one class, using the
 `Store` to carry a value from one callback to the other
-([10e · keeping state](10e-keeping-state.md) is the mechanism):
+([10h · keeping state](10h-keeping-state.md) is the mechanism):
 
 ```java
 public class TimingExtension implements BeforeTestExecutionCallback, AfterTestExecutionCallback {
@@ -228,7 +228,7 @@ parameter case is a third interface. Nothing errors; the field just keeps its de
 **★ Keeping per-test state in an instance field of the extension.**
 *"Usually, an extension is instantiated only once"* — so an instance field is shared across
 every test the extension serves, and under parallel execution it is shared across threads.
-Use the `Store` ([10e](10e-keeping-state.md)).
+Use the `Store` ([10h](10h-keeping-state.md)).
 
 **★ Using `org.junit.platform.commons.util` instead of `…commons.support`.**
 The `util` package is internal. JUnit 6 removed a long list of its members —
