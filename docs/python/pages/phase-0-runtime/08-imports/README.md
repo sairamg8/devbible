@@ -84,10 +84,10 @@ of chunks 1 and 6.
 
 ## Where this connects
 
-- **09 · `if __name__ == "__main__"`** *(not written yet)* is the direct
+- **[09 · `if __name__ == "__main__"`](../09-name-main/README.md)** is the direct
   sequel: the guard exists because `multiprocessing` re-imports your main module
   in the child process.
-- **11 · Startup and import cost** *(not written yet)* turns
+- **[11 · Startup and import cost](../11-startup-and-import-cost/README.md)** turns
   "the body runs once" into "the body runs once *and you pay for it at startup*",
   and introduces PEP 810 lazy imports.
 - **Phase 6 — Typing** picks up `if TYPE_CHECKING`, introduced in

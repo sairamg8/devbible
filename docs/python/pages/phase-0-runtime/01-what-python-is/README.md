@@ -57,7 +57,7 @@ print statement run?" answer lives.
 
 - It is the *shared substrate* for the next two topics. The GIL
   ([02](../02-the-gil/README.md)) is a lock around this interpreter's state.
-  The import system — topic 08, **Imports** *(not written yet)* — is what fills
+  The import system — topic 08, [Imports](../08-imports/README.md) — is what fills
   `__pycache__`.
 - It answers the questions juniors get asked and cannot answer: *"Is Python
   compiled or interpreted?"* has a precise, correct, three-sentence answer, and

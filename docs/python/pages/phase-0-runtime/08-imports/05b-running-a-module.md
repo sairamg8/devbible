@@ -144,7 +144,7 @@ if __name__ == "__main__":
 Nothing is *defined* in the duplicated file, so duplicating it costs nothing. All
 the classes, constants and functions live in `cli.py`, which is only ever
 imported once. This is the same reason a `if __name__ == "__main__":` guard
-exists at all, and topic **09 · `if __name__ == "__main__"`** *(not written yet)*
+exists at all, and topic [09 · `if __name__ == "__main__"`](../09-name-main/README.md)
 takes it further into `multiprocessing`.
 
 ## PEP 366, and why its answer expired

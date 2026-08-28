@@ -142,7 +142,7 @@ That single redirection is what makes everything else on this page work:
 
 The full mechanism — `pyvenv.cfg`, what activation actually changes, why
 activation is optional, and what `--system-site-packages` does — is
-**05 · Virtual environments** *(not written yet)*.
+[05 · Virtual environments](../05-virtual-environments/README.md).
 
 **The failure mode of this layer:** *the environment you think you are in is not
 the one you are in*. A shell where activation was never run, a new terminal tab,

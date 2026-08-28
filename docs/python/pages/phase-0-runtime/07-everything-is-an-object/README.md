@@ -74,4 +74,4 @@ intermediate level.
 
 ---
 
-← Prev: **Running code** *(not written yet)* · Index: [Phase 0 — The runtime](../README.md) · Next → [Names and objects](01-names-and-objects.md)
+← Prev: [Running code](../06-running-code/README.md) · Index: [Phase 0 — The runtime](../README.md) · Next → [Names and objects](01-names-and-objects.md)

@@ -231,7 +231,7 @@ file starts raising `AttributeError`. Import what you use.
 
 **Symptom:** a module body starts a thread, opens a socket or connects to a database, and it happens during test collection
 **Cause:** import executes the body; `pytest` imports every test module and everything they import, at collection time
-**Fix:** move side effects into a function the caller invokes. A module body should define things, not do things — that is also the precondition for the lazy imports in **11 · Startup and import cost** *(not written yet)*
+**Fix:** move side effects into a function the caller invokes. A module body should define things, not do things — that is also the precondition for the lazy imports in [11 · Startup and import cost](../11-startup-and-import-cost/README.md)
 
 ## Interview questions
 

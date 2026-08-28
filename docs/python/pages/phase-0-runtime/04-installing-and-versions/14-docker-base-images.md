@@ -283,4 +283,4 @@ earlier stage that has the toolchain.
 
 ---
 
-← Prev: [Confirming free-threading](13-confirming-free-threading.md) · Index: [Installing and versions](README.md) · Next → **05 · Virtual environments** *(not written yet)*
+← Prev: [Confirming free-threading](13-confirming-free-threading.md) · Index: [Installing and versions](README.md) · Next → [Virtual environments](../05-virtual-environments/README.md)

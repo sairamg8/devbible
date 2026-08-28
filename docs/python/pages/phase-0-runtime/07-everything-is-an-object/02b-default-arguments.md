@@ -57,7 +57,7 @@ def add(item, items=None):
 ```
 
 `None` is the right sentinel here because it is a singleton you can test with
-`is` (chunk 3, **Identity and equality** *(not written yet)*, covers why that
+`is` (chunk 3, [Identity and equality](03-identity-and-equality.md), covers why that
 matters). When `None` is itself a legal argument
 value, use a private module-level sentinel object instead:
 

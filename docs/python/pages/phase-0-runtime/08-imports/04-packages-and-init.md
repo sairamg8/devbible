@@ -97,7 +97,7 @@ numerical library.
 This is why a CLI written as a package with a rich `__init__.py` feels slow, and
 why `--help` can take a second. The measurement tool is `python -X importtime`
 ([chunk 2d](02d-diagnosing-import-failures.md)); the cost analysis belongs to
-**11 · Startup and import cost** *(not written yet)*.
+[11 · Startup and import cost](../11-startup-and-import-cost/README.md).
 
 There are three honest positions, and picking one deliberately is the point:
 

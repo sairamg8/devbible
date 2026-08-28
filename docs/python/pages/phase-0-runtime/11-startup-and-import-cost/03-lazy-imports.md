@@ -256,4 +256,4 @@ new syntax to benefit where it is available.
 
 ---
 
-← Prev: [What you can actually do today](02-what-you-can-actually-do.md) · Index: [Startup and import cost](README.md) · Next → **12 · Bytecode inspection with `dis`** *(not written yet)*
+← Prev: [What you can actually do today](02-what-you-can-actually-do.md) · Index: [Startup and import cost](README.md) · Next → [Bytecode inspection with `dis`](../12-dis-bytecode/README.md)

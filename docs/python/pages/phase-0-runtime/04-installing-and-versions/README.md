@@ -39,7 +39,7 @@ six interpreters and no idea which one `pip` just wrote to:
    installation a project uses and where *its* packages live.
 
 Only the third of these is covered by
-**05 · Virtual environments** *(not written yet)*. The first two are this topic.
+[05 · Virtual environments](../05-virtual-environments/README.md). The first two are this topic.
 
 This topic runs deeper than one file. The chunks:
 
@@ -88,7 +88,7 @@ attached rather than a habit.
 
 - **[03 · The release model](../03-release-model/README.md)** decided *which*
   version. This topic is how you get it.
-- **05 · Virtual environments** *(not written yet)* is the layer directly above
+- **[05 · Virtual environments](../05-virtual-environments/README.md)** is the layer directly above
   this one, and the reason most of the advice here works.
 - **Phase 7 — Packaging** turns the interpreter choice into `requires-python`, a
   lockfile and a reproducible build.

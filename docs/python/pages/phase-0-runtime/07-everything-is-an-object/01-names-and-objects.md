@@ -242,7 +242,7 @@ reference to it under the name `x` — a `STORE_FAST` into the function's
 fast-locals array inside a function, or a `STORE_NAME`/`STORE_GLOBAL` into a
 namespace dict at module level. No memory is allocated for "the variable x"; a
 namespace entry now points at an existing `int` object. Topic
-**12 · Bytecode inspection with `dis`** *(not written yet)* shows how to see
+[12 · Bytecode inspection with `dis`](../12-dis-bytecode/README.md) shows how to see
 which instruction you actually got.
 
 **Is a tuple immutable if it contains a list?**

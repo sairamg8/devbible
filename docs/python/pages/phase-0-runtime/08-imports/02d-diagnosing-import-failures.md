@@ -127,13 +127,17 @@ Note this catches plain `ImportError` deliberately: `mylib.accel` exists and is
 expected to fail on platforms without the compiled extension, and the `name`
 attribute records which import inside it gave up.
 
-## Gotchas\n\n**Symptom:** an optional-dependency guard swallows a real bug
+## Gotchas
+
+**Symptom:** an optional-dependency guard swallows a real bug
 **Cause:** `except ModuleNotFoundError:` catches *any* missing module, including a broken transitive dependency of the optional package
 **Fix:** check `exc.name` against the module you were importing and re-raise otherwise
 
 **Symptom:** `except ImportError` catches a failure you wanted to see
 **Cause:** `ModuleNotFoundError` is a subclass, but the reverse trap is the real one: a module whose *body* raised `ImportError` looks identical to a missing module unless you distinguish the classes
-**Fix:** catch `ModuleNotFoundError` for "is it installed?", and let plain `ImportError` propagate — it means the module exists and is broken\n\n**Symptom:** `pip list` shows the package but `import` fails
+**Fix:** catch `ModuleNotFoundError` for "is it installed?", and let plain `ImportError` propagate — it means the module exists and is broken
+
+**Symptom:** `pip list` shows the package but `import` fails
 **Cause:** `pip` and `python` are different interpreters, or the distribution name and the module name differ
 **Fix:** run `python -m pip list` so the interpreter is the same one, and use `importlib.metadata.packages_distributions()` to map module names to distributions
 
@@ -143,7 +147,9 @@ attribute records which import inside it gave up.
 
 **Symptom:** the same command fails under `cron`/systemd and works in your shell
 **Cause:** a different working directory, a different `PATH` selecting a different interpreter, and no shell profile so no `PYTHONPATH`
-**Fix:** run the diagnosis commands *through the same launcher*. `ExecStart=/usr/bin/env python -c "import sys; print(sys.executable, sys.path)"` answers all three at once\n\n**Symptom:** `python -X importtime` output is unreadable in a threaded program
+**Fix:** run the diagnosis commands *through the same launcher*. `ExecStart=/usr/bin/env python -c "import sys; print(sys.executable, sys.path)"` answers all three at once
+
+**Symptom:** `python -X importtime` output is unreadable in a threaded program
 **Cause:** documented — *"its output may be broken in multi-threaded application"*
 **Fix:** measure a minimal `python -X importtime -c "import myapp"` before the application starts threads
 
@@ -151,7 +157,9 @@ attribute records which import inside it gave up.
 **Cause:** plain `-X importtime` only reports modules it actually loaded
 **Fix:** `-X importtime=2` on 3.14, which *"enables additional output that indicates when an imported module has already been loaded"* — the string `cached` appears in both time columns
 
-## Interview questions\n\n**★ What is the difference between `ImportError` and `ModuleNotFoundError`, and
+## Interview questions
+
+**★ What is the difference between `ImportError` and `ModuleNotFoundError`, and
 why does it matter operationally?**
 `ModuleNotFoundError` is a subclass of `ImportError`, raised when the search
 failed to locate a module at all (or when `None` was found in `sys.modules`). A
@@ -174,7 +182,9 @@ time. On 3.14, `-X importtime=2` also emits a line for modules that were already
 loaded, so it doubles as an import-order trace, and `PYTHONPROFILEIMPORTTIME`
 is the environment equivalent. The usual finding is a top-level import of
 something large in a module that is itself imported unconditionally — which is
-the subject of **11 · Startup and import cost** *(not written yet)*.\n\n**★ Where do you start when an import fails in production but not locally?**
+the subject of [11 · Startup and import cost](../11-startup-and-import-cost/README.md).
+
+**★ Where do you start when an import fails in production but not locally?**
 With the exception type. `ModuleNotFoundError` means nothing ran, so it is a
 `sys.path`, interpreter or installation difference — check `sys.executable`,
 `sys.path` and the environment, in that order, *from inside the failing process*.
@@ -193,14 +203,15 @@ the importer are the same interpreter, which eliminates the most common cause of
 distributions that provide them. It matters because the names differ so often —
 `yaml` from `PyYAML`, `bs4` from `beautifulsoup4`, `PIL` from `Pillow` — and
 because when two distributions ship the same top-level name, this is what shows
-you both.\n
+you both.
+
 **How do you find out why startup is slow?**
 `python -X importtime`, which reports each module's name, cumulative time
 including nested imports, and self time excluding them. On 3.14,
 `-X importtime=2` additionally emits a line for modules that were already loaded,
 which turns it into an import-order trace; `PYTHONPROFILEIMPORTTIME` is the
 environment equivalent. The usual finding is an unconditional top-level import of
-something large — see **11 · Startup and import cost** *(not written yet)*.
+something large — see [11 · Startup and import cost](../11-startup-and-import-cost/README.md).
 
 ---
 

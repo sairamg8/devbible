@@ -68,7 +68,7 @@ some others. The practical consequences for ordinary code are that
 `sys.getrefcount` is even less meaningful, that all string constants are interned
 and immortalized (so string identity behaviour differs from the GIL build), and
 that any code depending on `__del__` firing at a precise moment is on thinner ice
-than it already was. Topic **02 · The GIL** *(not written yet)* is where the
+than it already was. Topic [02 · The GIL](../02-the-gil/README.md) is where the
 free-threaded build is covered properly.
 
 ## The honest conclusion

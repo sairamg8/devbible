@@ -177,8 +177,8 @@ The same mechanism removes startup cost even where there is no cycle. The
 
 A library that annotates against `numpy.ndarray` or a large protocol module can
 declare the relationship for type checkers without making every importer load it.
-That belongs with the rest of the startup-cost material in **11 · Startup and
-import cost** *(not written yet)*.
+That belongs with the rest of the startup-cost material in [11 · Startup and
+import cost](../11-startup-and-import-cost/README.md).
 
 ## Gotchas
 
@@ -258,4 +258,4 @@ pattern.
 
 ---
 
-← Prev: [Breaking circular imports](06b-breaking-circular-imports.md) · Index: [Imports](README.md) · Next → **09 · `if __name__ == "__main__"`** *(not written yet)*
+← Prev: [Breaking circular imports](06b-breaking-circular-imports.md) · Index: [Imports](README.md) · Next → [09 · `if __name__ == "__main__"`](../09-name-main/README.md)

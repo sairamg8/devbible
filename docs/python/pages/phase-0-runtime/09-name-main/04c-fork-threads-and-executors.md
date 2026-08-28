@@ -167,4 +167,4 @@ semaphore" warning you get after a worker is killed by a signal.
 
 ---
 
-← Prev: [What the child does to __main__](04b-what-the-child-does-to-main.md) · Index: [if __name__ == "__main__"](README.md) · Next → **10 · Python vs Node for a backend** *(not written yet)*
+← Prev: [What the child does to __main__](04b-what-the-child-does-to-main.md) · Index: [if __name__ == "__main__"](README.md) · Next → [Python vs Node for a backend](../10-python-vs-node/README.md)

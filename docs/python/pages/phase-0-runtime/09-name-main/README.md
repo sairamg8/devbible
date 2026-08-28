@@ -91,7 +91,7 @@ and that all three are the same fact about module names, seen from three angles.
   from there.
 - **[Topic 02 — The GIL](../02-the-gil/README.md)** is why `multiprocessing`
   exists at all, and therefore why the guard matters as much as it does.
-- **11 · Startup and import cost** *(not written yet)* picks up the other half
+- **[11 · Startup and import cost](../11-startup-and-import-cost/README.md)** picks up the other half
   of "the module body runs": that you pay for it, once per process, and a
   spawn-based worker pool pays for it once per worker.
 - **Phase 7 — Packaging** turns `[project.scripts]` and the `console_scripts`
