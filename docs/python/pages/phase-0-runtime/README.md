@@ -19,7 +19,7 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 10 of 12 closed.** **06 · Running code** is part-written (5 of 8 chunks, index live) and **10 · Python vs Node** is unstarted.
+🚧 **Phase in progress — 11 of 12 closed.** Only **06 · Running code** remains, part-written (5 of 8 chunks, index live).
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -32,7 +32,7 @@ all of them are load-bearing.
 | 07 | **[Everything is an object](07-everything-is-an-object/README.md)** | <span className="db-tier t-master">Master</span> | Names bind to objects, `is` vs `==`, and why `a = b` never copies |
 | 08 | **[Imports](08-imports/README.md)** | <span className="db-tier t-master">Master</span> | Modules, packages, `sys.path` — and the file you named `random.py` |
 | 09 | **[`if __name__ == "__main__"`](09-name-main/README.md)** | <span className="db-tier t-understand">Understand</span> | Script vs import, and the multiprocessing crash without it |
-| 10 | **Python vs Node for a backend** | <span className="db-tier t-know">Know</span> | The honest comparison; PyPy and GraalPy at recognition level |
+| 10 | **[Python vs Node for a backend](10-python-vs-node/README.md)** | <span className="db-tier t-know">Know</span> | The honest comparison; PyPy and GraalPy at recognition level |
 | 11 | **[Startup and import cost](11-startup-and-import-cost/README.md)** | <span className="db-tier t-know">Know</span> | Why CLIs feel slow, and lazy imports as the coming answer |
 | 12 | **[Bytecode inspection with `dis`](12-dis-bytecode/README.md)** | <span className="db-tier t-when">When Needed</span> | Seeing what a line actually does |
 
