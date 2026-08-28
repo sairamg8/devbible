@@ -284,6 +284,6 @@ you actually use.
 
 ---
 
-← Prev: [The REPL](06-the-repl.md) · Index: [Running code](README.md) · Next → [The REPL as a tool](06c-the-repl-as-a-tool.md)
+← Prev: [The REPL](06-the-repl.md) · Index: [Running code](README.md) · Next → [The REPL is not a script](06c-the-repl-as-a-tool.md)
 
 {/* FOOTER */}

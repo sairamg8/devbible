@@ -287,6 +287,6 @@ python3`), or to place the interpreter somewhere without spaces.
 
 ---
 
-← Prev: [Shebangs](07-shebangs-and-launchers.md) · Index: [Running code](README.md) · Next → [Console scripts and launchers](07c-console-scripts-and-launchers.md)
+← Prev: [Shebangs](07-shebangs-and-launchers.md) · Index: [Running code](README.md) · Next → [Generated shebangs](07c-console-scripts-and-launchers.md)
 
 {/* FOOTER */}

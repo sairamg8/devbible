@@ -110,7 +110,7 @@ moment you add a metadata block to it.
 > attempt to parse the path as a PEP 723 script, irrespective of its extension."*
 
 which is what makes an extensionless executable file work
-([chunk 8c](08c-locking-tools-and-the-boundary.md)).
+([chunk 8c](08c-uv-script-tooling-and-locking.md)).
 
 ## GUI scripts on Windows
 
@@ -165,7 +165,7 @@ uv resolves and downloads the declared dependencies, and may download an
 interpreter to satisfy `requires-python`. A script that is "self-contained"
 is self-*describing*, not offline-capable; a locked script plus a warm cache is
 what makes a CI job reproducible without surprises
-([chunk 8c](08c-locking-tools-and-the-boundary.md)).
+([chunk 8c](08c-uv-script-tooling-and-locking.md)).
 
 **★ The script's `sys.path[0]` is not what you expected.**
 `uv run` ultimately executes the file as a script, so everything in

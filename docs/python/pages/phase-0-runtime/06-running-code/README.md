@@ -39,10 +39,22 @@ command you typed*.
 | 3 | **[Packages and `__main__.py`](03-m-packages-and-main-py.md)** | `-m` on a package, directories and zipapps; why `python -m pip` beats `pip`; `runpy`; the double-import trap |
 | 4 | **[`-c`, stdin and pipes](04-c-and-stdin.md)** | The 3.14 auto-dedent; heredoc quoting; why a program read from stdin cannot read stdin; `curl \| python`; code that has no `__file__` |
 | 5 | **[Options worth knowing](05-options-worth-knowing.md)** | `-u` and the container with no logs; `-X dev`, `-X importtime`, `-i`, `-W error`; the isolation switches; and why `-O` is the flag to leave alone |
-
-Still to be written for this topic: **the rewritten REPL of 3.13 and 3.14**,
-**shebangs and the Windows launcher**, and **`uv run` with PEP 723 inline script
-metadata**.
+| 6 | **[The REPL](06-the-repl.md)** | The 3.13 PyREPL rewrite, ported from PyPy: block-level history, F1/F2/F3, `exit`/`quit`/`clear` without parentheses, and what 3.14 added — syntax highlighting and import completion |
+| 6b | **[REPL colour, history, fallback](06b-repl-colour-history-and-fallback.md)** | The four colour switches and their precedence; `PYTHON_BASIC_REPL` and the trap in "any value"; why `.inputrc` stopped working; `~/.python_history` and `PYTHON_HISTORY` |
+| 6c | **[The REPL is not a script](06c-the-repl-as-a-tool.md)** | `sys.path[0]` is `''` and follows your cwd; no `__file__`; `sys.displayhook`, the `_` binding and why a statement echoes nothing |
+| 6d | **[Configuring the session](06d-configuring-the-session.md)** | `PYTHONSTARTUP` and the namespace it runs in; `sys.ps1`/`sys.ps2` and dynamic prompts; `sys.__interactivehook__` and the order the four hooks fire in |
+| 6e | **[sitecustomize and `.pth`](06e-sitecustomize-and-usercustomize.md)** | The customisation modules that run in *every* process; the documented "silent and perhaps mysterious failure"; executable lines in `.pth` files; `-s` vs `-S` vs `-I` |
+| 6f | **[`python -i` and post-mortem](06f-dropping-into-a-repl.md)** | `-i` after a crash; `sys.last_exc` and `pdb.pm()`; `pdb.post_mortem()` when the exception was caught; `PYTHONINSPECT` set from inside the program |
+| 6g | **[Prompts from inside a program](06g-prompts-from-inside-a-program.md)** | `code.interact()` and `local_exit`; why assignments there vanish; `breakpoint()` and `PYTHONBREAKPOINT`; 3.14's `pdb -p PID` and PEP 768 |
+| 7 | **[Shebangs](07-shebangs-and-launchers.md)** | The shebang is a kernel feature: what `execve(2)` does with it, `env` versus a hard path, PEP 394 on `python` vs `python3`, and `sys.executable` |
+| 7b | **[When a shebang fails](07b-when-a-shebang-fails.md)** | The four mechanical failures — a second argument and `env -S`, the execute bit, `\r` and BOMs, and the 127/255-character truncation — all of which name a path that looks correct |
+| 7c | **[Generated shebangs](07c-console-scripts-and-launchers.md)** | What pip and uv write into console scripts and why a moved venv half-works; `zipapp -p` in front of a zip archive; the coding cookie as the shebang's cousin |
+| 7d | **[Windows: `py` and PyManager](07d-windows-launcher.md)** | No kernel shebang support, so a launcher emulates it; `py.exe` deprecated in 3.14; `-V:<TAG>` and why `py -3.13` still works; virtual shebang commands; `.pyw` |
+| 8 | **[`uv run` and PEP 723](08-uv-run-and-inline-metadata.md)** | Running a file with no project; `--with`; `--python`; `uv run -`; and the isolation rule that makes an inline-metadata script ignore the project it sits in |
+| 8b | **[The PEP 723 block](08b-the-pep-723-block.md)** | The byte-exact format, every rule that makes it fail silently, `dependencies` and `requires-python`, and why the canonical regex is not the definition |
+| 8c | **[uv script tooling](08c-uv-script-tooling-and-locking.md)** | `uv init/add/remove --script`; `uv lock --script` and the adjacent `.lock`; `exclude-newer`; `[[tool.uv.index]]` inside the block |
+| 8d | **[Tools and the boundary](08d-tools-other-readers-and-the-boundary.md)** | `#!/usr/bin/env -S uv run --script`; pipx and Hatch reading the same block; and the seven signals that a script should become a package |
+| 8e | **[Running published tools](08e-running-published-tools.md)** | `uvx` / `uv tool run` and `pipx run`; `--from` and `--spec`; `--python-args`; and why an unpinned `uvx` in CI is a build that changes without a commit |
 
 ## The short version
 
@@ -80,8 +92,8 @@ guessing.
 - **[08 · Imports](../08-imports/README.md)** owns `sys.path` in full;
   [`../08-imports/05b-running-a-module.md`](../08-imports/05b-running-a-module.md)
   is the deep version of chunk 2's argument.
-- **`if __name__ == "__main__"`** *(not written yet)* is the module-identity half
-  of `-m`.
+- **[09 · `if __name__ == "__main__"`](../09-name-main/README.md)** is the
+  module-identity half of `-m`.
 - **Phase 7 — Packaging** turns "how do I run it" into a `[project.scripts]`
   entry point, which is the answer this topic keeps arriving at.
 

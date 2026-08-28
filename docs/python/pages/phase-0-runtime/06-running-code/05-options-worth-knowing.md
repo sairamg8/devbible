@@ -277,4 +277,4 @@ environment block.
 
 ---
 
-← Prev: [-c, stdin and pipes](04-c-and-stdin.md) · Index: [Running code](README.md) · Next → **06 · The REPL** *(not written yet)*
+← Prev: [-c, stdin and pipes](04-c-and-stdin.md) · Index: [Running code](README.md) · Next → [The REPL](06-the-repl.md)
