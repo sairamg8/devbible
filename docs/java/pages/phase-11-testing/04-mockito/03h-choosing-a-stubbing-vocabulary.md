@@ -146,7 +146,7 @@ is `verifyNoMoreInteractions(mock)` and `shouldHaveNoInteractions()` is
 `verifyNoInteractions(mock)` — the source shows each one delegating directly. What those
 verifications *mean*, and when they are over-specification, is
 [05 · Verification](05-verification.md) and
-[05b · Verifying too much](05b-verifying-too-much.md).
+[05d · Verifying too much](05d-verifying-too-much.md).
 
 ⚠️ `shouldHaveZeroInteractions()` appears in the class javadoc example above but the interface
 in 5.23.0 declares `shouldHaveNoInteractions()` (since 3.0.1) alongside
