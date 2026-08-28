@@ -137,7 +137,7 @@ externally-managed-environment` heading comes from. Its message is
 *"This environment is externally managed"*, and where the distributor supplied
 no message of their own, pip substitutes its own default:
 
-> *"The Python environment under {sys.prefix} is managed externally, and may not
+> *"The Python environment under \{sys.prefix\} is managed externally, and may not
 > be manipulated by the user. Please use specific tooling from the distributor
 > of the Python installation to interact with this environment instead."*
 
