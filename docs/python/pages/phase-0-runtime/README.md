@@ -19,7 +19,7 @@ of four things taught here: the GIL, a virtual environment that isn't active,
 the import system, or names-bind-to-objects. None of them are advanced topics;
 all of them are load-bearing.
 
-🚧 **Phase in progress — 10 of 12 written.** Only **06 · Running code** (5 chunks on disk, index not yet written) and **10 · Python vs Node** (unstarted) remain.
+🚧 **Phase in progress — 10 of 12 closed.** **06 · Running code** is part-written (5 of 8 chunks, index live) and **10 · Python vs Node** is unstarted.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ all of them are load-bearing.
 | 03 | **[The release model](03-release-model/README.md)** | <span className="db-tier t-understand">Understand</span> | One major each October; 3.14 current, 3.15 lands Oct 2026 |
 | 04 | **[Installing and managing versions](04-installing-and-versions/README.md)** | <span className="db-tier t-understand">Understand</span> | `uv` / `pyenv`, and never installing into the system Python |
 | 05 | **[Virtual environments](05-virtual-environments/README.md)** | <span className="db-tier t-master">Master</span> | What a venv actually is — a config file and a path |
-| 06 | **Running code** | <span className="db-tier t-understand">Understand</span> | `python -m` vs `python file.py`, the rewritten REPL, `-c`, shebangs |
+| 06 | **[Running code](06-running-code/README.md)** 🚧 *5/8 chunks* | <span className="db-tier t-understand">Understand</span> | `python -m` vs `python file.py`, the rewritten REPL, `-c`, shebangs |
 | 07 | **[Everything is an object](07-everything-is-an-object/README.md)** | <span className="db-tier t-master">Master</span> | Names bind to objects, `is` vs `==`, and why `a = b` never copies |
 | 08 | **[Imports](08-imports/README.md)** | <span className="db-tier t-master">Master</span> | Modules, packages, `sys.path` — and the file you named `random.py` |
 | 09 | **[`if __name__ == "__main__"`](09-name-main/README.md)** | <span className="db-tier t-understand">Understand</span> | Script vs import, and the multiprocessing crash without it |
