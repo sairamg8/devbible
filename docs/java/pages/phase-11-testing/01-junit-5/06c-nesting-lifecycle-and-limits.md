@@ -107,8 +107,8 @@ are not:
   a level of indentation for no shared setup at all. Separate test classes are clearer.
 - **Nesting to reach four or five levels because each level adds one field.** The setup is
   now spread across five `@BeforeEach` methods in five classes, and reading a failing test
-  means reading all five. Past two or three levels a builder ([08 · Test data
-  patterns](../08-test-data-patterns/README.md)) says more in less space.
+  means reading all five. Past two or three levels a builder (**08 · Test data patterns**,
+  *not written yet*) says more in less space.
 
 The test for whether a nested class earns its keep: **can you read its `@DisplayName` as a
 clause that narrows the one above it?** "when new" narrows "a stack". "Deposit" narrows
