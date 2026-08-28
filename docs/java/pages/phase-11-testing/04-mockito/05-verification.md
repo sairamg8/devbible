@@ -1,7 +1,7 @@
 ---
 title: "verify asserts that a conversation happened, which is a fundamentally different kind of claim from asserting on a returned value — and the whole family of verification modes exists to let you say exactly how much of that conversation you are willing to be coupled to"
 sidebar_label: "05 · Verification"
-sidebar_position: 17
+sidebar_position: 18
 ---
 
 <span className="db-tier t-master">Master</span>

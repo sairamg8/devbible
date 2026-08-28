@@ -1,7 +1,7 @@
 ---
 title: "verifyNoMoreInteractions is the one Mockito API whose own javadoc names the habit of using it and tells you to stop, because it asserts about every call the mock ever received including the ones your @BeforeEach made — and verifyNoInteractions, one word shorter, means something completely different and useful"
 sidebar_label: "05e · verifyNoMoreInteractions"
-sidebar_position: 21
+sidebar_position: 22
 ---
 
 <span className="db-tier t-master">Master</span>

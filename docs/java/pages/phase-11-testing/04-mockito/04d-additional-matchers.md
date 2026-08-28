@@ -1,7 +1,7 @@
 ---
 title: "AdditionalMatchers exists for EasyMock compatibility and Mockito tells you to use it judiciously, but and/or/not and the comparison matchers are the only way to express a constraint that argThat would otherwise turn into an unreadable boolean — and its logical operators have an argument-order trap that no compiler will catch"
 sidebar_label: "04d · AdditionalMatchers"
-sidebar_position: 16
+sidebar_position: 17
 ---
 
 <span className="db-tier t-master">Master</span>

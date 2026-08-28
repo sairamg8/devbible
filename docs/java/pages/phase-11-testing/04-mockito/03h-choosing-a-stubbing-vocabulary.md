@@ -1,7 +1,7 @@
 ---
 title: "Mockito ships three interchangeable ways to say the same stubbing — when/then, do/when and BDDMockito's given/will — and because BDDMockito extends Mockito a single static import puts all of them in scope, so the choice is a project decision that nothing in the compiler will make for you"
 sidebar_label: "03h · Choosing a stubbing vocabulary"
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>

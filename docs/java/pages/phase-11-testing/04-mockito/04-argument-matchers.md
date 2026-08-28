@@ -1,7 +1,7 @@
 ---
 title: "any() and eq() do not return matchers — they push a matcher onto a thread-local stack and hand back a dummy value, and once you know that, every rule about mixing matchers with raw values, and every error that fires on the wrong line, stops being arbitrary"
 sidebar_label: "04 · Argument matchers"
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>

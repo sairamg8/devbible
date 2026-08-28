@@ -61,8 +61,58 @@ and it may be more appropriate to choose a different approach depending on your 
 constraints"*, and that Gradle recommends a `CommandLineArgumentProvider` for task
 relocatability — omitted above for simplicity, as in the original.
 
+**Maven surefire**, also from the javadoc:
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>properties</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <configuration>
+        <argLine>@{argLine} -javaagent:${org.mockito:mockito-core:jar}</argLine>
+    </configuration>
+</plugin>
+```
+
+🔴 With the caveat attached to it, which is the one that costs an afternoon:
+
+> *"Note however, that `@{argLine}` needs to exist when surefire performs its late replacement
+> otherwise it will just use the value verbatim which will crash the VM, `The forked VM
+> terminated without properly saying goodbye. VM crash or System.exit called.`, in this case,
+> you may need to adapt your maven configuration, for example by adding an empty `<argLine/>`
+> property to the POM file."*
+
+`@{argLine}` is exactly the property JaCoCo sets, which is why the two interact and why a
+project already running coverage usually has it defined. See **09 · JaCoCo** *(not written
+yet)*.
+
+**The escape hatch**, also documented:
+
+> *"Alternatively, to enable support for dynamic attach, it is also possible to start a JVM
+> with `-XX:+EnableDynamicAgentLoading` flag. Do however note that, since this option is not
+> standardized, any future release of a JDK might prohibit this behaviour."*
+
+Treat that as a stopgap. The javadoc's own wording is a warning about the direction the JDK is
+moving in; the `-javaagent` form is the durable answer.
+
 **If your build suddenly prints an agent warning after a JDK upgrade, this is why**, and it
 is not a Mockito bug.
+
+⚠️ **What I could not confirm from the documentation:** whether JDK 25 specifically *refuses*
+self-attachment or merely warns. Section 0.3 says the inline mock maker *"might not be able to
+function without an explicit setup"* and that *"the JVM will always display a warning"* — which
+covers both possibilities without committing to either for a given JDK release. Configure the
+agent explicitly and the question does not arise.
 
 ### What the inline maker still cannot do
 
@@ -72,6 +122,11 @@ From section 39:
   `withSettings().serializable()` and `withSettings().extraInterfaces()`.
 - *"Some methods cannot be mocked"* — *"Package-visible methods of `java.*`"* and
   *"`native` methods"*.
+
+And independent of the mock maker, from Mockito's own error text: `equals()` and `hashCode()`
+*"cannot be stubbed/verified"*, because Mockito uses them to identify mocks. `private` methods
+are never dispatched through the proxy at all. Choosing a different mock maker changes none of
+those — see [11 · Static and final](11-static-and-final.md).
 
 ## Gotchas
 
@@ -83,6 +138,17 @@ breakage.
 **★ Assuming "final classes are mockable now" means everything is.**
 Package-visible methods of `java.*` and `native` methods still cannot be mocked, and
 `serializable()` and `extraInterfaces()` are incompatible with mocking final types and enums.
+
+**★ Adding `-javaagent` to surefire's `argLine` without preserving `@{argLine}`.**
+The javadoc's warning is explicit: if `@{argLine}` does not exist at late-replacement time,
+surefire passes the literal text and the forked VM crashes with *"The forked VM terminated
+without properly saying goodbye"*. The documented fix is an empty `<argLine/>` property in the
+POM.
+
+**★ Relying on `-XX:+EnableDynamicAgentLoading` as the permanent fix.**
+Documented as viable and explicitly flagged as unstandardised: *"any future release of a JDK
+might prohibit this behaviour."* It gets today's build green; it is not a configuration to
+leave in place.
 
 **★ Adding the `mockito-inline` artifact on Mockito 5.**
 It is redundant — the inline maker is the default since 5.0.0 — and the javadoc says the
@@ -103,10 +169,23 @@ incompatible with `withSettings().serializable()` and `withSettings().extraInter
 Needing any of these is usually a design signal — see
 **11 · Static and final** *(not written yet)*.
 
+**★ How does the inline mock maker differ from the subclass one?**
+The subclass maker generates a new class that extends the mocked type, so it cannot touch
+anything `final`. The inline maker uses *"a combination of both Java instrumentation API and
+sub-classing rather than creating a new class to represent a mock"* — it instruments the
+existing class, which is what makes final types and methods mockable and what makes it need an
+agent.
+
+**★ Your Maven build crashes with "The forked VM terminated without properly saying goodbye"
+right after you added the Mockito agent. Why?**
+Because `@{argLine}` in surefire's configuration was never defined, so surefire passed the
+literal string to the JVM instead of substituting it. The javadoc names this exact failure and
+the fix: add an empty `<argLine/>` property to the POM, or make sure whatever sets it — JaCoCo,
+usually — runs first.
+
 **★ Should a Mockito 5 project depend on `mockito-inline`?**
 No. The inline mock maker has been the default since 5.0.0, and the javadoc says the separate
 artifact *"may be abolished in future versions"*. Keeping it adds a dependency that changes
 nothing and misleads the next reader into thinking it does.
-
 
 {/* FOOTER */}

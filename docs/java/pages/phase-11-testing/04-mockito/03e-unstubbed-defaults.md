@@ -1,7 +1,7 @@
 ---
 title: "An unstubbed method does not return null — it returns whatever ReturnsEmptyValues has a case for, which means Optional is empty, Integer is 0, List is a fresh mutable LinkedList and String is still null, and the difference between those four decides whether a test fails loudly or passes for the wrong reason"
 sidebar_label: "03e · Unstubbed defaults"
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>

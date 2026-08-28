@@ -1,7 +1,7 @@
 ---
 title: "argThat takes a lambda and gives you a boolean, which means the failure message is 'no matching invocation' and nothing about which field was wrong — so Mockito's own documentation lists five alternatives to writing one, and assertArg exists to turn the boolean back into an assertion"
 sidebar_label: "04c · Custom matchers"
-sidebar_position: 15
+sidebar_position: 16
 ---
 
 <span className="db-tier t-master">Master</span>

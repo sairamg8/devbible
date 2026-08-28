@@ -1,7 +1,7 @@
 ---
 title: "Consecutive stubbing gives one call site a different answer each time, and the trap is that writing two when blocks instead of one chained expression looks identical in a diff but silently keeps only the last value"
 sidebar_label: "03b · Consecutive stubbing"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 <span className="db-tier t-master">Master</span>

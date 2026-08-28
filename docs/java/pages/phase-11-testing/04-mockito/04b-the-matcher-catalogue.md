@@ -1,7 +1,7 @@
 ---
 title: "any() matches null and anyString() does not, any(Class) stopped being an alias of any() in Mockito 2 and started matching varargs in Mockito 5, and every one of those changes silently turns a stubbing that used to match into one that quietly does not"
 sidebar_label: "04b · The matcher catalogue"
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 <span className="db-tier t-master">Master</span>
