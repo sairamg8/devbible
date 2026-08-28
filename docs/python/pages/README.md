@@ -18,7 +18,7 @@ import Progress from '@site/src/components/Progress';
 
 | Phase | Topics | State |
 |---|---|---|
-| **[0 · The runtime](phase-0-runtime/README.md)** | 12 | 🚧 **In progress — 11 of 12 closed** (01–05, 07–12); only **06** remains, part-written 5/8 with a live index |
+| **[0 · The runtime](phase-0-runtime/README.md)** | 12 | ✅ **Complete — 12 of 12** · 134 files, 31,030 lines, 0 over the cap, 0 dangling of 877 links, 0 MDX hazards |
 | 1 · Language core | 16 | Planned |
 | 2 · Functions, closures and decorators | 10 | Planned |
 | 3 · Collections in depth | 12 | Planned |
