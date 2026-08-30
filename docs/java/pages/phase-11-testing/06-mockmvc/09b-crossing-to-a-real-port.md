@@ -1,7 +1,7 @@
 ---
 title: "Crossing to a real port: RANDOM_PORT buys you a connector and costs you an ApplicationContext, TestRestTemplate and WebTestClient both ride on it — and @WithMockUser goes silently inert the moment the request is handled on a different thread"
 sidebar_label: "09b · Crossing to a real port"
-sidebar_position: 20
+sidebar_position: 33
 ---
 
 <span className="db-tier t-understand">Understand</span>

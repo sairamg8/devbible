@@ -1,7 +1,7 @@
 ---
 title: "The boundary is the DispatcherServlet: everything above it is your real Spring MVC configuration and everything below it is a mock object, so MockMvc proves your controllers and proves nothing about the container — and the fix is a real port, not a better assertion"
 sidebar_label: "09 · What MockMvc cannot test"
-sidebar_position: 19
+sidebar_position: 32
 ---
 
 <span className="db-tier t-understand">Understand</span>
