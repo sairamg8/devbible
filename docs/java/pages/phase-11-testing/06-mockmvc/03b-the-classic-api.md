@@ -21,7 +21,7 @@ the Framework's MockMvc documentation is written in, what every existing test su
 what Spring Security's own testing documentation uses throughout. It also has one behaviour with
 no equivalent in the fluent API. Where the two front ends genuinely diverge — unhandled
 exceptions, and asynchronous handlers — is
-[03c · Failures and async](03c-failures-and-async.md).**
+[03c · Resolved and unresolved failures](03c-resolved-and-unresolved-failures.md).**
 
 ## The four static imports, and why they are a design cost
 
@@ -159,7 +159,7 @@ String body = mvcResult.getResponse().getContentAsString();
 Note *"after all other expectations"*. `andReturn()` ends the chain; anything you assert on the
 `MvcResult` afterwards is ordinary JUnit or AssertJ code, which is a perfectly good place to be —
 it is also how you reach the async dispatch, and that is
-[03c · Failures and async](03c-failures-and-async.md).
+[03c · Resolved and unresolved failures](03c-resolved-and-unresolved-failures.md).
 
 ## Setup features that apply to every request
 

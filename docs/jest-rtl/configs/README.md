@@ -142,4 +142,4 @@ independently, and a config that worked in 2023 can fail on all four counts at o
   syllabus rows these chunks satisfy
 - [tsconfig.json anatomy](../../typescript/pages/phase-0-how-typescript-runs/06-tsconfig-anatomy.md)
   — the same treatment for the type checker, and the model this section follows
-- [Progress tracker](../reviews/snipperts-progress.md) — live status of every chunk here
+- Progress tracker (`reviews/snipperts-progress.md`) — live status of every chunk here

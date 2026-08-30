@@ -27,7 +27,7 @@ reference has rewritten all of its MockMvc examples in `MockMvcTester`; neither 
 other; they share one engine. This chunk is `MockMvcTester` — what it is, the three problems it
 was built to solve, and the one mechanical surprise in its design.
 [03b · The classic API](03b-the-classic-api.md) is the other one, and
-[03c · Failures and async](03c-failures-and-async.md) is where the two genuinely behave
+[03c · Resolved and unresolved failures](03c-resolved-and-unresolved-failures.md) is where the two genuinely behave
 differently.**
 
 ## 🔴 What the two references actually say — they do not agree on emphasis
@@ -75,7 +75,7 @@ The first is ergonomics — the classic API needs `MockMvcRequestBuilders.get`,
 `MockMvcResultMatchers.status`, `jsonPath`, `content` and often `MockMvcResultHandlers.print` all
 statically imported, and an IDE that has not been told about them offers nothing. The second and
 third are behavioural and they are the real content; both are
-[03c · Failures and async](03c-failures-and-async.md).
+[03c · Resolved and unresolved failures](03c-resolved-and-unresolved-failures.md).
 
 ## Creating one
 
