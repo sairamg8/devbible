@@ -14,7 +14,7 @@ Java's testing stack is mature and opinionated. The skill gap in real teams is
 not "can you write a test" — it is slice choice, mock discipline, and tests
 that hit a real database instead of an in-memory impostor.
 
-🚧 **5 of 11 closed, 2 more in flight — 209 chunks and ~50,000 lines on disk.** ✅ **04 · Mockito CLOSED — 57 chunks + index, ~14,100 lines, 758 interview questions**, and ✅ **05 · The test pyramid CLOSED — 22 chunks + index, ~4,950 lines**, written in parallel by a fork and the coordinator sharing this phase. 04's positions were renumbered contiguous 1–57 without renaming a single file, since two forks had shared the directory with reserved bands. ✅ **01 · JUnit 5 CLOSED — 62 chunks + index**, the largest topic in the Java corpus; closing it repaired four live 404s in topics 02 and 03. 02 · AssertJ (24) and 03 · Parameterized tests (37) were already closed. 06 · MockMvc (4 chunks) is in flight; 07 · Testcontainers stands at 2.
+🚧 **6 of 11 closed, 217 chunks and ~58,000 lines on disk.** ✅ **06 · MockMvc CLOSED 2026-08-30 — 34 chunks + index, ~8,000 lines, 406 interview questions and gotchas**, the second-largest topic in the phase: a 15-line stub for security became nine chunks and a 14-line stub for exception handlers became six. Closing it also repaired a 314-line cap violation left behind in `06-validation-errors.md` (split, not trimmed) and upgraded an under-claiming hedge in `02-webmvctest.md` to a Boot how-to citation. ✅ **04 · Mockito CLOSED — 57 chunks + index, ~14,100 lines, 758 interview questions**, and ✅ **05 · The test pyramid CLOSED — 22 chunks + index, ~4,950 lines**. ✅ **01 · JUnit 5 CLOSED — 62 chunks + index**, the largest topic in the Java corpus. 02 · AssertJ (24) and 03 · Parameterized tests (37) were already closed. **07 · Testcontainers is next, standing at 3 chunks + 3 stubs.**
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -23,7 +23,7 @@ that hit a real database instead of an in-memory impostor.
 | 03 | **[Parameterized tests](03-parameterized-tests/README.md)** | <span className="db-tier t-understand">Understand</span> | One test, every edge of the tax calculation |
 | 04 | **[Mockito](04-mockito/README.md)** *(57 chunks)* | <span className="db-tier t-master">Master</span> | Mock boundaries, never the class under test |
 | 05 | **[The test pyramid in Spring](05-the-test-pyramid/README.md)** *(22 chunks)* | <span className="db-tier t-understand">Understand</span> | Unit vs slices vs `@SpringBootTest` — and the 20-minute suite |
-| 06 | **Web-layer tests with `MockMvc`** *(4 chunks, in flight)* | <span className="db-tier t-understand">Understand</span> | Status, JSON body, validation errors — no server socket |
+| 06 | **[Web-layer tests with `MockMvc`](06-mockmvc/README.md)** *(34 chunks + index, ~8,000 lines)* | <span className="db-tier t-understand">Understand</span> | ✅ **CLOSED** — the slice, both APIs, JSON, validation, `@ControllerAdvice`, security, and where the boundary is |
 | 07 | **Testcontainers** *(2 chunks, in flight)* | <span className="db-tier t-understand">Understand</span> | A real PostgreSQL per suite — the end of "passed on H2" |
 | 08 | **Test data patterns** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Builders and object mothers vs the 40-line setup block |
 | 09 | **Coverage with JaCoCo** *(not written yet)* | <span className="db-tier t-know">Know</span> | A floor, not a target — what the number can't say |

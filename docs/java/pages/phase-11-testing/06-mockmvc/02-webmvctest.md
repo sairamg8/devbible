@@ -138,11 +138,19 @@ public class SecurityConfig {                       // is NOT a SecurityFilterCh
 it is not assignable to `SecurityFilterChain`. So the include does not fire, and the class is
 filtered out of the scan.
 
-⚠️ **Stated with its provenance.** This follows from the filter source above plus the shape of a
-modern security configuration; the javadoc's wording — *"beans that **implement** …
-`SecurityFilterChain`"* — is consistent with it, and no Boot documentation sentence contradicts
-it, but none states the consequence either. The safe practice is therefore the one that is
-correct under either reading: **name the configuration explicitly.**
+✅ **And Boot's own how-to states this outright** — it is not an inference from the filter
+source, though the filter source is why it happens. `howto.testing.slice-tests`, using
+`SecurityFilterChain` as its worked example:
+
+> *"For a `@WebMvcTest` … you might expect to have the `SecurityFilterChain` bean in the
+> application context so that you can test if your controller endpoints are secured properly.
+> However, `MyConfiguration` is not picked up by `@WebMvcTest`'s component scanning filter
+> because it doesn't match any of the types specified by the filter. You can include the
+> configuration explicitly by annotating the test class with `@Import(MyConfiguration.class)`."*
+
+The how-to even ships the `MyConfiguration` class with a `@Bean SecurityFilterChain` beside a
+`HikariDataSource`, which is exactly the shape above. So: **name the configuration explicitly** —
+and note that the how-to's remedy is the same one, `@Import`.
 
 ```java
 @WebMvcTest(OrderController.class)
