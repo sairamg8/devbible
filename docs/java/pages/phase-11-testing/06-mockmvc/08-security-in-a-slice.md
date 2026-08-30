@@ -1,7 +1,7 @@
 ---
 title: "Security filters in @WebMvcTest — @WithMockUser and the 401 that surprises everyone"
 sidebar_label: "08 · Security in a slice"
-sidebar_position: 17
+sidebar_position: 18
 draft: true
 ---
 

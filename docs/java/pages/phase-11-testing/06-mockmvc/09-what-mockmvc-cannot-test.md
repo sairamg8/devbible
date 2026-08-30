@@ -1,7 +1,7 @@
 ---
 title: "Content negotiation edges, real serialization, and filters outside the chain — what MockMvc cannot test and when to reach for TestRestTemplate or WebTestClient"
 sidebar_label: "09 · What MockMvc cannot test"
-sidebar_position: 18
+sidebar_position: 19
 draft: true
 ---
 
