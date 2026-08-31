@@ -152,7 +152,7 @@ that plugs into the JUnit *Platform*, and the version of the Platform it is buil
 not the version Spring Boot 4.1 puts on your classpath. That collision is the load-bearing
 practical fact of this whole topic and it is unpacked, with the evidence, in
 [02 · jqwik is an engine, not an extension](02-the-stack-problem.md) and
-[02b · What a team on Boot 4.1 can actually do](02b-what-to-do-about-it.md). Read those
+[02c · What a team on Boot 4.1 can actually do](02c-what-to-do-about-it.md). Read those
 before you add a dependency, not after.
 
 ## Where this connects
