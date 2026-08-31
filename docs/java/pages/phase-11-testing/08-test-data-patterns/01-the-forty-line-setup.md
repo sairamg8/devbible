@@ -162,7 +162,7 @@ That has three consequences worth naming.
 who owns the instance and lets `@BeforeAll` be non-static, but the setup still runs per
 method (that is `@BeforeEach`'s contract), and now the fields are genuinely shared across
 methods, which turns cost 2 into a bleed-between-tests problem as well. See
-**05b · Tests that depend on each other** *(not written yet)*.
+[05b · Tests that depend on each other](05b-tests-that-depend-on-each-other.md).
 
 ## Where this connects
 

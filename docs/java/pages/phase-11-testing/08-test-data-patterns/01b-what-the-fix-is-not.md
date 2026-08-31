@@ -173,7 +173,8 @@ is the whole idea of **02 · The builder** *(not written yet)*.
 - The pattern that replaces the block is **02 · The builder** *(not written yet)*; the
   scenario-shaped variant is **03 · Object mothers** *(not written yet)*.
 - Order-dependence between tests, and why a shared row in a database is the same bug as a
-  shared static field, is **05b · Tests that depend on each other** *(not written yet)*.
+  shared static field, is
+  [05b · Tests that depend on each other](05b-tests-that-depend-on-each-other.md).
 - `@BeforeEach` inheritance rules, execution order and parallel execution belong to
   [01 · JUnit 5](../01-junit-5/README.md).
 - The slice-level version of "a base class that carries infrastructure" is in

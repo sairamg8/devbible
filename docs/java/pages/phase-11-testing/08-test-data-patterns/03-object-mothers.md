@@ -172,7 +172,7 @@ explosion starts.
 - The failure mode of the pattern, and how to see it coming, is
   [03b · When a mother becomes a god object](03b-when-a-mother-becomes-a-god-object.md).
 - Putting a scenario into a database rather than into variables is
-  **04 · Fixtures in the database** *(not written yet)*.
+  [04 · Fixtures in the database](04-fixtures-in-the-database.md).
 - The setup block both patterns exist to remove is
   [01 · The forty-line setup](01-the-forty-line-setup.md).
 
@@ -211,7 +211,7 @@ disambiguate when two are genuinely different.
 The pattern is about constructing objects. The moment `aDelinquentCustomer()` also saves rows,
 it has become a fixture-loading routine with a misleading name, and unit tests that only wanted
 an object now need a database. Keep persistence in a separate, obviously-named layer — see
-**04 · Fixtures in the database** *(not written yet)*.
+[04 · Fixtures in the database](04-fixtures-in-the-database.md).
 
 **★ Scenario knowledge in a mother can drift out of sync with the rule it encodes.**
 `aDelinquentCustomer()` builds three invoices past 30 days because that was the policy when it

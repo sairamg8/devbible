@@ -172,7 +172,7 @@ they will instead go around the builder entirely.
 - When the reusable unit is a *scenario* rather than an object, the pattern is
   **03 · Object mothers** *(not written yet)*.
 - Getting the built object into a database, rather than into a variable, is
-  **04 · Fixtures in the database** *(not written yet)*.
+  [04 · Fixtures in the database](04-fixtures-in-the-database.md).
 - When the repetition is in the *cases* rather than the objects, the answer is
   [03 · Parameterized tests](../03-parameterized-tests/README.md), not a builder.
 
