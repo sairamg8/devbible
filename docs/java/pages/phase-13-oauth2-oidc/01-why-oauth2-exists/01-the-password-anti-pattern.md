@@ -168,7 +168,7 @@ revocable only by ending every session.
 **★ The five failures are about *authorization*, and none of them mention identity.**
 Every one is about what a program may do with your data. Not one is about proving who you
 are. Teams that read OAuth2 as a login protocol are answering a question §1 never asked —
-see **02 · Authorization is not authentication** *(next chunk)*.
+see [02 · Authorization is not authentication](02-authorization-is-not-authentication.md).
 
 ## Interview questions
 
