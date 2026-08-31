@@ -168,49 +168,6 @@ tasks.check {
 dependency of the `check` task"*, so without that line the rules are configuration that never
 executes — see [chunk 02c](02c-wiring-it-up-gradle.md).
 
-## Floor or target — decide, and say which
-
-This is the part that is not about syntax.
-
-**A floor** says: do not go below where we are. It is set at or just under the current number,
-its purpose is to catch the pull request that deletes a test class or adds an untested module,
-and it creates no pressure to write anything. It is cheap, it is safe, and it is almost always
-worth having.
-
-**A target** says: get to 80%. It creates pressure, and the pressure is real, and people respond
-to it — which is the problem, because [chunk 01](01-what-coverage-measures.md) established that
-the cheapest way to move coverage is to write tests with no assertions. A target does not ask for
-tests; it asks for executed lines, and it will get exactly what it asked for.
-[Chunk 04b](04b-the-eighty-percent-ritual.md) is what that looks like in a diff.
-
-The practical position:
-
-| | Floor | Target |
-|---|---|---|
-| Set at | current level, or just below | some aspirational number |
-| Catches | regression | nothing, reliably |
-| Produces | no new tests | assertion-free tests, exclusions, and resentment |
-| Right granularity | `CLASS` on `MISSEDCOUNT`, or `BUNDLE` | — |
-| Verdict | worth having | ask what problem you are solving first |
-
-If somebody wants coverage to go up, the honest instruments are a **per-change** coverage report
-on the pull request ([chunk 07b](07b-coverage-in-ci.md)) and a conversation about which classes
-matter — not a global number with a build failure attached.
-
-## Introducing a gate to a codebase that would fail it
-
-Three steps, in order, and none of them is "lower the number until it passes":
-
-1. **Run `check` with `haltOnFailure=false`** for a sprint. You get the rule evaluated and
-   reported without breaking anyone's build, and you find out how many classes are affected.
-2. **Set the floor at the current value**, exactly. Not a round number — the actual one. A gate
-   set to today's number cannot fail today and will fail the moment someone regresses.
-3. **Ratchet it, deliberately and rarely.** [Chunk 04c](04c-the-ratchet.md) covers whether to
-   automate that and why automating it usually goes wrong.
-
-Setting a round aspirational number and then spending three sprints reaching it is the failure
-mode this sequence exists to avoid.
-
 ## Where this connects
 
 - **[03 · The six counters](03-the-six-counters.md)** — what you are choosing between in
@@ -247,10 +204,6 @@ Quoted from Gradle's manual: the verification task *"is not a task dependency of
 task"*. Teams have shipped for months with a configured, never-executed gate. Verify by setting a
 minimum of `"1.0"` on a scratch branch and confirming the build actually fails.
 
-**★ `haltOnFailure=false` left in place indefinitely is a gate that does not exist.**
-It is the right way to introduce a rule and the wrong way to keep one. Nobody reads a warning in
-a green build. Put a date on it.
-
 **★ Rule-level `<excludes>`, report `<excludes>` and agent `excludes` are three different things.**
 Rule excludes exempt classes from a rule while keeping them in the report; report excludes remove
 them from the numbers entirely; agent excludes stop collection and — per JaCoCo's FAQ — make the
@@ -267,15 +220,6 @@ If the agent never attached, there may be nothing for a rule to evaluate against
 green with zero coverage. A gate should be paired with an assertion that the exec file exists and
 that the total instruction count is non-zero — see [chunk 02b](02b-the-argline-trap.md).
 
-**★ Setting the gate to a round number rather than to the current number guarantees a period of theatre.**
-80% is not a fact about your codebase; today's number is. A gate set to today's number starts
-protecting you immediately. A gate set to 80% starts a project.
-
-**★ Excluding a class to get past a gate is the cheapest move available and nobody reviews it.**
-The moment a threshold exists, adding a line to an `<excludes>` block becomes the fastest way to a
-green build, and it is a one-line diff in a config file that reviewers skim. If you introduce a
-gate, review its exclusion list on the same cadence you review the threshold.
-
 ## Interview questions
 
 **★ Write a JaCoCo rule that requires 70% branch coverage and explain every element.**
@@ -285,28 +229,12 @@ A `rule` with `<element>BUNDLE</element>` (or `CLASS` for per-class enforcement)
 defaults are `BUNDLE`, `INSTRUCTION` and `COVEREDRATIO` — omitting them gives you a bundle-wide
 instruction-coverage gate, which is materially weaker than what you asked for.
 
-**★ What's the difference between a coverage floor and a coverage target?**
-A floor is set at the current level and exists to stop regression; it creates no pressure to write
-tests and is nearly free. A target is set above the current level and exists to push the number
-up — and since the cheapest way to raise coverage is to execute code without asserting on it, a
-target reliably produces assertion-free tests and aggressive exclusions rather than better tests.
-Floors are worth having by default; targets need a specific argument for why the number itself is
-the problem.
-
 **★ Why might `MISSEDCOUNT` be a better limit than `COVEREDRATIO`?**
 Because a ratio moves when the code grows, independently of whether anything was tested. Adding a
 well-covered feature to a class lifts its percentage while every existing uncovered branch stays
 uncovered, so a ratio gate can be satisfied by growth. `MISSEDCOUNT` with a `maximum` fixes an
 absolute budget — "no more than ten uncovered branches in this class" — which does not drift, is
 easy to explain in review, and translates into a concrete list of decisions to go and test.
-
-**★ You want to introduce a coverage gate to a legacy codebase that would fail it badly. How?**
-Run `check` with `haltOnFailure=false` first to see the scope without breaking builds. Then set the
-floor at the codebase's *actual* current number rather than a round aspirational one, so the gate
-cannot fail on day one but fails immediately on regression. Prefer per-class `MISSEDCOUNT` limits
-with rule-level excludes for the genuinely untestable, so the rule points at specific gaps.
-Ratchet later, deliberately, and treat the exclusion list as something to be reviewed rather than
-grown.
 
 **★ Your Gradle build has `violationRules` configured and coverage has fallen to 30% without failing. Why?**
 Because `jacocoTestCoverageVerification` is not a dependency of `check`, so `./gradlew build`
