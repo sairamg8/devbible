@@ -159,7 +159,8 @@ want — and an `@AfterEach` that tries to clean up is doing nothing at all, bec
 transaction that is about to be discarded. **That is the single most common reason a hand-rolled
 cleanup silently does not run.** Cleanup that must survive belongs in `@AfterTransaction`, in an
 `@Sql` script with `executionPhase = AFTER_TEST_METHOD`, or in a truncation step — the last two are
-**06e · Truncation and `@Sql` scripts** *(not written yet)*.
+[06e · Truncating between tests](06e-truncating-between-tests.md) and
+[06f · `@Sql` scripts and unique data](06f-sql-scripts-and-unique-data.md).
 
 For finer control there is a programmatic API:
 
@@ -198,7 +199,8 @@ diagnostic shape a suite can have.
 ## Where this continues
 
 The strategies that let the commit actually happen — truncation, `@Sql` scripts, and unique data
-per test — are **06e · Truncation and `@Sql` scripts** *(not written yet)*.
+per test — are [06e · Truncating between tests](06e-truncating-between-tests.md) and
+[06f · `@Sql` scripts and unique data](06f-sql-scripts-and-unique-data.md).
 [06c](06c-keeping-tests-independent.md) has the comparison table and the shared-state problem all
 four of them exist to solve.
 

@@ -87,10 +87,11 @@ that is not "never write anything". The three mechanical options are:
 - **`@Sql` scripts**, which is the declarative answer;
 - **unique data per test**, which is the answer that needs no cleanup at all.
 
-**06e · Truncation and `@Sql` scripts** *(not written yet)* is all three in full — the
-`TRUNCATE … RESTART IDENTITY CASCADE` form, generating the table list instead of maintaining it,
-`@Sql`'s four execution phases and its `ISOLATED` transaction mode, and when unique-data-per-test is
-the cheapest correct thing you can do.
+[06e · Truncating between tests](06e-truncating-between-tests.md) is the general answer — the
+`TRUNCATE … RESTART IDENTITY CASCADE` form and generating the table list instead of maintaining it.
+[06f · `@Sql` scripts and unique data](06f-sql-scripts-and-unique-data.md) is the other two —
+`@Sql`'s four execution phases and its `ISOLATED` transaction mode, when unique-data-per-test is
+the cheapest correct thing you can do, and a decision rule across all four.
 
 ## What `@DirtiesContext` is not
 
