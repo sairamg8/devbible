@@ -59,7 +59,7 @@ Four consequences follow from that one fact, and they surprise people who assume
   `@AfterEach`, `@Nested`, `@ExtendWith`, `@ParameterizedTest` are concepts belonging to the
   Jupiter *engine*. jqwik's engine does not read them. It has its own vocabulary —
   `@Property`, `@Example`, `@Group`, `@BeforeTry`, `@BeforeProperty` — covered in
-  [03b · The jqwik lifecycle](03b-the-jqwik-lifecycle.md). A `@BeforeEach` method in a jqwik
+  [03d · The jqwik lifecycle](03d-the-jqwik-lifecycle.md). A `@BeforeEach` method in a jqwik
   test class is not "ignored with a warning". It is invisible.
 - **Assertion libraries still work, because they are just static methods.** AssertJ, Hamcrest
   and even `org.junit.jupiter.api.Assertions` are plain classes with no engine involvement.
@@ -95,7 +95,7 @@ careful account of what can and cannot be established without running anything, 
   engine started — is [02b · What a team on Boot 4.1 can do](02c-what-to-do-about-it.md).
 - The annotations jqwik brings instead of Jupiter's are
   [03 · Writing a property](03-a-property.md) and
-  [03b · The jqwik lifecycle](03b-the-jqwik-lifecycle.md).
+  [03d · The jqwik lifecycle](03d-the-jqwik-lifecycle.md).
 - The JUnit Platform, engines, the launcher and Jupiter's own extension model belong to
   [01 · JUnit 5](../01-junit-5/README.md); the Spring slices that `SpringExtension` powers
   belong to [05 · The test pyramid](../05-the-test-pyramid/README.md).
