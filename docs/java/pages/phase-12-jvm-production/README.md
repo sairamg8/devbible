@@ -14,11 +14,17 @@ The payoff of Phase 0's mental model: memory, GC, and the observability tools
 that come *with* the JVM. This is the phase that turns "the service is slow"
 from a mystery into a flame graph.
 
-🚧 **0 of 15 written.**
+🚧 **0 of 15 topics closed — but the phase is scaffolded and topic 01 is well under way.**
+
+**All 15 topics are planned**: `_PHASE-NOTES.md` (binding: JDK 25 version spine, topic
+boundaries, the phase's hard rules) and a `_plan.md` for every topic are written, so any
+topic here can be picked up cold. **Topic 01 · Memory layout has 31 chunks on disk
+(~7,900 lines)** and needs six more plus its index before it closes — it is deliberately
+not linked below until that index exists.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **Memory layout** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Heap, metaspace, stacks — "heap is fine but the process grew" |
+| 01 | **Memory layout** *(31 chunks written; index pending)* | <span className="db-tier t-understand">Understand</span> | Heap, metaspace, stacks — "heap is fine but the process grew" |
 | 02 | **GC in practice** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | G1 vs generational ZGC vs the rest, chosen by latency target |
 | 03 | **Heap sizing in containers** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `MaxRAMPercentage` and the OOMKilled loop |
 | 04 | **`OutOfMemoryError`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Heap dumps, MAT, dominator trees — and the usual suspects |
