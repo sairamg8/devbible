@@ -98,8 +98,8 @@ our app can, because it has the secret" is false for a public client.
 §2.3.1 adds the concrete mechanism for confidential clients with a password: HTTP Basic, and
 authorization servers *"MUST support the HTTP Basic authentication scheme"* for clients
 issued a password. That is `client_secret_basic` — the default in most Spring
-configurations. The stronger alternatives — `client_secret_jwt`, `private_key_jwt` and
-mTLS — are the next chunk.
+configurations. The stronger alternatives are in
+[03 · Client authentication](03-client-authentication.md).
 
 ## The mistakes this classification catches
 
