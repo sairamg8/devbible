@@ -114,7 +114,7 @@ field list where an added field is visibly missing.
   your defaults, are in
   [02c · Where builders live, and Lombok](02c-where-builders-live-and-lombok.md).
 - What changes when the domain type is a `record` — no setters, and `with`-style copying — is
-  in **02d · Builders and records** *(not written yet)*.
+  in [02d · Builders and records](02d-builders-and-records.md).
 - The shared-mutable-fixture failure these rules keep away from is in
   [01b · What the fix is not](01b-what-the-fix-is-not.md).
 - When the reusable unit is a scenario spanning several objects, the pattern is

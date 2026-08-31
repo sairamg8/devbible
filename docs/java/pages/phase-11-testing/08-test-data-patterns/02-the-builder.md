@@ -168,7 +168,7 @@ they will instead go around the builder entirely.
   your defaults, are in
   [02c · Where builders live, and Lombok](02c-where-builders-live-and-lombok.md).
 - What changes when the domain type is a `record` and there are no setters at all is in
-  **02d · Builders and records** *(not written yet)*.
+  [02d · Builders and records](02d-builders-and-records.md).
 - When the reusable unit is a *scenario* rather than an object, the pattern is
   **03 · Object mothers** *(not written yet)*.
 - Getting the built object into a database, rather than into a variable, is

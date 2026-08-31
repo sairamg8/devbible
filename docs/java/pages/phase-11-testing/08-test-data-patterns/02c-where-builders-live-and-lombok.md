@@ -143,8 +143,8 @@ that the annotation is now load-bearing for your test suite.
 - The pattern itself and its readability rules are in [02 · The builder](02-the-builder.md);
   the correctness rules — production doors, composition, copy-with-changes — are in
   [02b · Builder design rules](02b-builder-design-rules.md).
-- What changes when the domain type is a `record` is in **02d · Builders and records**
-  *(not written yet)*.
+- What changes when the domain type is a `record` is in
+  [02d · Builders and records](02d-builders-and-records.md).
 - Build-tool mechanics in general — source sets, module layout, attached artifacts, scopes —
   belong to [Phase 8 · Build & dependencies](../../phase-8-build-dependencies/README.md).
 
