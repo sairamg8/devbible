@@ -1,18 +1,18 @@
 {
   "version": 2,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-08-31 10:17",
+  "updated": "2026-08-31 12:05",
   "totals": {
-    "languages": 27,
+    "languages": 28,
     "complete": 20,
     "inProgress": 4,
-    "notStarted": 0,
+    "notStarted": 1,
     "parked": 2,
     "blocked": 1,
-    "topics": 2629,
+    "topics": 2840,
     "completed": 2057,
-    "pending": 572,
-    "percent": 78
+    "pending": 783,
+    "percent": 72
   },
   "languages": [
     {
@@ -83,6 +83,20 @@
       "next": null,
       "docs": "/docs/react",
       "updated": "2026-08-17 07:35",
+      "note": null
+    },
+    {
+      "key": "angular",
+      "label": "Angular",
+      "status": "not-started",
+      "percent": 0,
+      "topics": 211,
+      "completed": 0,
+      "pending": 211,
+      "phases": "0/16",
+      "next": "0 · How Angular runs",
+      "docs": "/docs/angular",
+      "updated": "2026-08-31 12:05",
       "note": null
     },
     {
