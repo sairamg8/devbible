@@ -26,14 +26,33 @@ against the 7.x reference, and say so on your `> Verified:` line.
 
 ## 🔴 The four facts that make most online material wrong on this phase
 
-1. 🔴 **The implicit flow and the resource-owner-password-credentials flow are dead.**
-   RFC 9700 (*OAuth 2.0 Security Best Current Practice*, published as a BCP) says clients
-   **MUST NOT** use the implicit grant and **MUST NOT** use the password grant. Any page
-   that presents either as a live option is wrong. Present them **as history plus the
-   attack that killed each** — that is the teaching, not a footnote.
-2. 🔴 **PKCE is not "the mobile/SPA extension" any more.** RFC 9700 requires PKCE for
-   **all** authorization-code clients, confidential ones included. RFC 7636 is where the
-   mechanism is defined; RFC 9700 is where it became universal. Both get cited.
+1. 🔴 **The implicit flow and the resource-owner-password-credentials flow are dead — but
+   they are dead by *different* normative words, and getting that wrong is itself a review
+   finding.** Verified against RFC 9700 (*OAuth 2.0 Security Best Current Practice*) on
+   2026-08-31:
+   - **§2.1.2** — *"Clients **SHOULD NOT** use the implicit grant (response type `token`)
+     or other response types issuing access tokens in the authorization response"*.
+   - **§2.4** — *"The resource owner password credentials grant [RFC6749] **MUST NOT** be
+     used. This grant type insecurely exposes the credentials of the resource owner to the
+     client."*
+
+   So the password grant is a **MUST NOT** and implicit is a **SHOULD NOT**. Do not write
+   "MUST NOT" over implicit — quote the actual clause. Present both **as history plus the
+   attack that killed each**; that is the teaching, not a footnote.
+2. 🔴 **PKCE is not "the mobile/SPA extension" any more — but it is not a blanket MUST
+   either.** RFC 9700 **§2.1.1**, verified 2026-08-31: *"Public clients **MUST** use PKCE
+   [RFC7636] to this end"*; *"For confidential clients, the use of PKCE [RFC7636] is
+   **RECOMMENDED**, as it provides strong protection"*; and *"Authorization servers **MUST**
+   support PKCE [RFC7636]."* RFC 7636 defines the mechanism; RFC 9700 is where it stopped
+   being mobile-only. Cite both, and use the exact normative word for the client type you
+   are talking about.
+
+   Two neighbouring §2.1 clauses belong in the same argument: redirect URIs — *"authorization
+   servers **MUST** utilize exact string matching except for port numbers in `localhost`
+   redirection URIs of native apps"* (§2.1) — and sender-constrained tokens — *"Authorization
+   and resource servers **SHOULD** use mechanisms for sender-constraining access tokens, such
+   as mutual TLS for OAuth 2.0 [RFC8705] or OAuth 2.0 Demonstrating Proof of Possession
+   (DPoP) [RFC9449]"* (§2.2.1).
 3. 🔴 **An access token is opaque to the client, by contract.** That it is *often* a JWT is
    an implementation choice of the authorization server, not part of OAuth2. A client that
    parses an access token has coupled itself to a format the AS may change. The **ID token**
@@ -110,7 +129,13 @@ Acceptable primary sources, in order of preference:
 
 1. **The RFC itself** — 6749 (core), 6750 (bearer), 7009 (revocation), 7515/7517/7518/7519
    (JWS/JWK/JWA/JWT), 7636 (PKCE), 7662 (introspection), 8414 (AS metadata), 8628 (device),
-   8693 (token exchange), 8705 (mTLS), 9068 (JWT access-token profile), **9700 (BCP)**.
+   8693 (token exchange), 8705 (mTLS), 9068 (JWT access-token profile), 9449 (DPoP),
+   **9700 (BCP)**.
+
+   ⚠️ **This file has already been corrected once by a fork that checked.** The first draft
+   said implicit was a MUST NOT and PKCE a blanket MUST; RFC 9700 says SHOULD NOT and
+   RECOMMENDED-for-confidential. **That is the rule working as intended: verify, then fix
+   the brief.** If you find another such error, correct this file and say so.
 2. **openid.net** — OpenID Connect Core 1.0, Discovery 1.0.
 3. **The Spring Security 7.x reference and javadocs.**
 
