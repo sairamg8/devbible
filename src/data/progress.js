@@ -600,7 +600,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
-    updated: '2026-08-31 18:20',
+    updated: '2026-08-31 23:55',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
