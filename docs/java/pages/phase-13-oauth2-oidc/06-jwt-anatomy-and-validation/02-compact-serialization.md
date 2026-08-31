@@ -128,7 +128,7 @@ with the only instruction that matters at the end of a validation routine:
 
 Note the ordering: **the signature is checked before the claims are trusted.** A verifier
 that reads `iss` out of the payload to decide which key to use is doing something delicate,
-not something forbidden — see [08b · kid lookup](08b-kid-lookup.md) — but a verifier that
+not something forbidden — see **08b · kid lookup** *(not written yet)* — but a verifier that
 *acts* on a claim before the signature verifies has no security at all.
 
 ## Splitting it correctly in Java
@@ -209,7 +209,7 @@ bites people writing their own filter or calling the decoder from a scheduled jo
 JSON-serialization concept that does not apply.**
 Every header parameter in a JWT is inside the protected header and is therefore covered by
 the signature — *after* verification. Before verification it is attacker-controlled data,
-which is the whole reason [11c · Header injection](11c-header-injection-attacks.md) exists.
+which is the whole reason **11c · Header injection** *(not written yet)* exists.
 
 **★ Duplicate JSON member names in the header must cause rejection.**
 RFC 7515 §5.2 step 4 requires verifying that the resulting JOSE Header *"does not contain

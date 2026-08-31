@@ -57,13 +57,13 @@ three and it exists because tokens issued for one purpose being accepted for ano
 whole class of bug. Note the interaction with RFC 9068: an `at+jwt` token has
 `typ: at+jwt`, which is *not* what `JwtTypeValidator.jwt()` accepts, which is why the RFC
 9068 path uses `validateTypes(false)` and its own type validator —
-[06f · RFC 9068 validation](06f-rfc-9068-validation.md).
+**06f · RFC 9068 validation** *(not written yet)*.
 
 ### 2 · `JwtTimestampValidator`
 
 `exp` and `nbf`, with a default 60-second clock skew. Its two most consequential defaults —
 `allowEmptyExpiryClaim = true` and `allowEmptyNotBeforeClaim = true` — are
-[06e · Clock skew and the missing `exp`](06e-clock-skew-and-missing-exp.md), and the second
+**06e · Clock skew and the missing `exp`** *(not written yet)*, and the second
 of those is one of the sharpest edges in the whole topic.
 
 ### 3 · `X509CertificateThumbprintValidator`
@@ -111,9 +111,9 @@ private OAuth2TokenValidator<Jwt> getValidator() {
 Read that and the whole picture snaps into focus:
 
 - `iss` is validated **only because `issuer-uri` is set**.
-- `aud` is validated **only because `audiences` is set** ([06c · Audience](06c-audience.md)).
+- `aud` is validated **only because `audiences` is set** (**06c · Audience** *(not written yet)*).
 - Any `OAuth2TokenValidator<Jwt>` bean in the context is appended
-  ([06d · A validator bean](06d-a-validator-bean.md)).
+  (**06d · A validator bean** *(not written yet)*).
 - Everything else — type, timestamps, thumbprint — comes from `createDefaultWithValidators`,
   which is the subject of [06b · Composing validators](06b-composing-validators.md).
 
@@ -129,14 +129,14 @@ Both statements are true; they are about different objects.
 ## What is still not validated, by anyone, by default
 
 - **`aud`.** The single most important omission and the reason a token minted for another
-  service in the same estate is accepted. [06c · Audience](06c-audience.md).
+  service in the same estate is accepted. **06c · Audience** *(not written yet)*.
 - **`sub`.** Absent `sub` is fine as far as the framework is concerned; you may care.
 - **`iat`.** Not checked at all. A token with an issuance time in the future passes.
 - **`jti`.** No replay detection. Bearer tokens are bearer tokens.
 - **`client_id`, `azp`, `scope` non-emptiness** — all yours.
 - **Revocation.** Nothing here contacts the authorization server. If you need
   per-request revocation the answer is introspection —
-  [08 · Opaque token introspection](08-opaque-token-introspection.md).
+  **08 · Opaque token introspection** *(not written yet)*.
 
 ## How a failure is reported
 
@@ -157,7 +157,7 @@ return String.format(DECODING_ERROR_MESSAGE_TEMPLATE, oAuth2Error.getDescription
 [05 · The request path](05-the-request-path.md) step 4 turns it into
 `InvalidBearerTokenException` and a 401. The description ends up in the
 `WWW-Authenticate` header's `error_description` parameter, which is
-[10b · What not to leak](10b-what-not-to-leak.md).
+**10b · What not to leak** *(not written yet)*.
 
 ## Gotchas
 
@@ -180,7 +180,7 @@ when the AS sets it.
 **★ `JwtTypeValidator.jwt()` rejects `typ: at+jwt`.**
 An authorization server that follows RFC 9068 sets that header, and the stock default
 validator will reject its tokens. The fix is `validateTypes(false)` on the builder plus
-`JwtValidators.createAtJwtValidator()` — [06f](06f-rfc-9068-validation.md).
+`JwtValidators.createAtJwtValidator()` — **06f** *(not written yet)*.
 
 **★ `iat` is never checked.**
 A token claiming to have been issued next Tuesday validates fine, as long as `exp` and `nbf`

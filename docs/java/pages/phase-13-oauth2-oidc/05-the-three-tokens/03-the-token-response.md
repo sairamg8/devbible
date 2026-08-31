@@ -116,7 +116,7 @@ OIDC Core §3.1.3.3 adds exactly one parameter and makes it mandatory for OIDC f
 > authenticated session."*
 
 So an OIDC token response is an OAuth2 token response plus `id_token`. The ID token's role
-is [17 · The ID token as a token role](17-the-id-token-as-a-token-role.md); its claims and
+is **17 · The ID token as a token role** *(not written yet)*; its claims and
 validation are **07 · OpenID Connect** *(not written yet)* and
 **06 · JWT anatomy and validation** *(not written yet)*.
 

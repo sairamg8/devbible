@@ -115,7 +115,7 @@ document that is correct and incomplete.
 
 The implicit grant put the *access token* in the left column. That is the whole story of
 why it died, and it gets its own chunk in
-[16 · The implicit grant](16-the-implicit-grant.md).
+**16 · The implicit grant** *(not written yet)*.
 
 ## The three things that make step 9 safe
 
@@ -160,7 +160,7 @@ URL being redirected to in step 3 — it is the URL the AS will use in step 6. R
 requirement.**
 If your integration involves collecting a username and password in your own form and
 posting them anywhere, you are not doing this flow. See
-[17 · The password grant](17-the-password-grant.md) for the grant that did that and the
+**17 · The password grant** *(not written yet)* for the grant that did that and the
 `MUST NOT` that ended it.
 
 **★ The back-channel call is made by your server, not by the browser.**
@@ -215,7 +215,7 @@ Security that is the whole `OAuth2AuthorizationRequest`, held by an
 `AuthorizationRequestRepository` whose default implementation is session-backed. This is
 server-side state in an "OAuth is stateless" flow, and it is the source of a specific class
 of production failure covered in
-[19 · Where the defaults leave you exposed](19-where-the-defaults-leave-you.md).
+**19 · Where the defaults leave you exposed** *(not written yet)*.
 
 **★ If you had to remove one of `state`, PKCE and client authentication from a confidential
 web client, which would you remove and what would you lose?**

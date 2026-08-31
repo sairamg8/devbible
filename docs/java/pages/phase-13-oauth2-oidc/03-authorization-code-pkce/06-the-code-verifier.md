@@ -205,7 +205,7 @@ state.**
 The verifier lives with the authorization request. Two application replicas with local
 in-memory sessions and no sticky routing will lose it between the redirect out and the
 callback in, producing a login that fails roughly (N−1)/N of the time. Covered in
-[19 · Where the defaults leave you exposed](19-where-the-defaults-leave-you.md).
+**19 · Where the defaults leave you exposed** *(not written yet)*.
 
 **★ Do not log the verifier.**
 It is a secret for the duration of the flow. It is short, looks like an opaque id, and is

@@ -118,7 +118,7 @@ Everything inside the lambda — including the discovery probe performed by
 
 Better still, in Boot 4.x: **do not declare a `JwtDecoder` bean at all.** Declare an
 `OAuth2TokenValidator<Jwt>` bean and let the auto-configuration keep its supplier. That is
-[06d · A validator bean](06d-a-validator-bean.md), and it is the single most useful thing
+**06d · A validator bean** *(not written yet)*, and it is the single most useful thing
 in this topic that no tutorial has caught up with.
 
 ### 2. The Nimbus key-selector recipe
@@ -146,7 +146,7 @@ prevent the readiness probe from passing.
 
 If `/actuator/health/liveness` requires a token, the first probe becomes the "first request
 containing a JWT" — except it contains no JWT, so it 401s and the pod is killed. See
-[12 · Actuator and the resource server](12-actuator-and-the-resource-server.md).
+**12 · Actuator and the resource server** *(not written yet)*.
 
 ## What this chunk deliberately leaves out
 

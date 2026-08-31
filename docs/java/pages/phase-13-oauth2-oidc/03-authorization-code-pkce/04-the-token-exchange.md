@@ -88,7 +88,7 @@ RFC 6749 §4.1.3, with §4.6 of RFC 7636 as the fifth. The server:
    error response indicating `invalid_grant` MUST be returned."*
 
 Four of the five report `invalid_grant`. That is intentional and it is the reason
-[20 · Reading the errors](20-reading-the-errors.md) is a chunk of its own: the error code
+**20 · Reading the errors** *(not written yet)* is a chunk of its own: the error code
 does not tell you which check failed, and the `error_description` — if the server sends one
 — is not standardised.
 

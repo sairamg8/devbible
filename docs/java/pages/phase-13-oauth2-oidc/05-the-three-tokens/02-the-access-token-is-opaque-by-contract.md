@@ -127,7 +127,7 @@ Two different words that sound identical in a meeting:
 A JWT access token is opaque to the client and *not* an opaque token. Both statements are
 true simultaneously, and conflating them is how "we use JWTs so clients can read the user's
 role" gets into a design document. The format trade-off itself is
-[15 · Opaque vs JWT as an AS choice](15-opaque-vs-jwt-as-an-as-choice.md).
+**15 · Opaque vs JWT as an AS choice** *(not written yet)*.
 
 ## What a Java client looks like when it obeys the contract
 

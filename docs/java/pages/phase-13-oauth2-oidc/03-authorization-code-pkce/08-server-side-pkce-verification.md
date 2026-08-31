@@ -137,7 +137,7 @@ because "our IdP changed a default" is a real event.
 
 As a **client**, Spring Security generates the verifier, sends the challenge and replays the
 verifier at the token endpoint; the conditions under which it does so are
-[18 · Spring Security client config](18-spring-security-client-config.md).
+**18 · Spring Security client config** *(not written yet)*.
 
 As an **authorization server**, that is Spring Authorization Server, a separate project, and it
 belongs to **11 · Running vs buying the AS** *(not written yet)*. The relevant fact here is that
@@ -166,7 +166,7 @@ the outside because the error is `invalid_grant`.
 **★ `invalid_grant` at the token endpoint has five causes and PKCE is only one of them.**
 Expired code, used code, wrong client, `redirect_uri` mismatch, PKCE mismatch — all
 `invalid_grant` by RFC 6749 §5.2 and RFC 7636 §4.6. Do not conclude "PKCE is broken" from the
-error code alone. [20 · Reading the errors](20-reading-the-errors.md) is the differential
+error code alone. **20 · Reading the errors** *(not written yet)* is the differential
 diagnosis.
 
 **★ RFC 7636 §5's backward compatibility is a server-side allowance, not a client-side

@@ -107,7 +107,7 @@ static class AudienceValidator implements OAuth2TokenValidator<Jwt> {
 Note the error code: `invalid_token` is the RFC 6750 §3.1 code a resource server returns for a
 token that *"is expired, revoked, malformed, or invalid for other reasons"*, and it maps to a
 401 with a `WWW-Authenticate` header. Using a made-up code produces a technically-valid but
-non-standard response; [12c · Custom token validators](12c-custom-token-validators.md) covers
+non-standard response; **12c · Custom token validators** *(not written yet)* covers
 error shaping properly.
 
 ## Wiring it without losing the standard validators

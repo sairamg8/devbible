@@ -59,7 +59,7 @@ and §3.10 states the rule:
 > by validating and/or sanitizing the received value."*
 
 The concrete exploits — `kid` path traversal, `kid` SQL injection, `kid` command injection —
-are worked through in [11c · Header injection attacks](11c-header-injection-attacks.md). The
+are worked through in **11c · Header injection attacks** *(not written yet)*. The
 rule to carry from here: **a `kid` you cannot find in your cached JWK set is a rejection, not
 a prompt to go looking somewhere else.**
 
@@ -79,7 +79,7 @@ with the exception spelled out:
 SHOULD, not MUST. So a correct selector filters on `kid` **and** the key type implied by the
 header's `alg`, **and** the key's own `alg` (RFC 7517 §4.4) and `use` (§4.2) members when
 present, and tries every survivor. That is what Nimbus's `JWSVerificationKeySelector` does,
-which is one reason not to hand-roll it. [08b · kid lookup](08b-kid-lookup.md) is the whole
+which is one reason not to hand-roll it. **08b · kid lookup** *(not written yet)* is the whole
 algorithm.
 
 ## `cty` — the payload is another JWT
@@ -174,7 +174,7 @@ Map<String, Object> whoami(@AuthenticationPrincipal Jwt jwt) {
 **Logging the verified `kid` is genuinely valuable.** It is how you discover, three weeks
 after a rotation, that a fifth of your traffic is still signed by the old key because one
 service pinned a stale JWKS cache. A counter keyed on `kid` costs nothing and turns
-[09 · Key rotation](09-key-rotation.md) from a hope into an observation.
+**09 · Key rotation** *(not written yet)* from a hope into an observation.
 
 ## Gotchas
 
@@ -191,7 +191,7 @@ verify an RS256 signature and get a failure that reads like a corrupt token.
 **★ `kid` has no defined structure, so anything you do with it beyond equality is your
 liability.**
 Interpolating it into a path, a SQL string, a URL or a shell command is the entire class of
-attacks in [11c](11c-header-injection-attacks.md). If you must log it, log it length-limited
+attacks in **11c** *(not written yet)*. If you must log it, log it length-limited
 and escaped — a `kid` containing a newline will forge log lines.
 
 **★ Comparing `kid` case-insensitively contradicts RFC 7515 §4.1.4.**

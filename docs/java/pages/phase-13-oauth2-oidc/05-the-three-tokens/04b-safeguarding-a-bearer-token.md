@@ -61,7 +61,7 @@ RFC 6750 §5.3 is a short checklist and every line of it is load-bearing:
 - *"Issue scoped bearer tokens: Token servers SHOULD issue bearer tokens that contain an
   audience restriction, scoping their use to the intended relying party or set of relying
   parties."*
-- *"Don't pass bearer tokens in page URLs"* — [04b](04b-the-form-and-query-transports.md).
+- *"Don't pass bearer tokens in page URLs"* — **04b** *(not written yet)*.
 
 The cookie one is subtler than it reads. It is not "never use cookies" — it is "not cookies
 that can be sent in the clear", i.e. without `Secure`, and if you do use cookies you inherit
@@ -104,7 +104,7 @@ Plus one that is aimed at your own code:
 That `MUST` catches a surprising amount of real code: caching the raw token as a map key,
 putting it in a distributed cache to memoise introspection results, attaching it to a trace
 span, or persisting it in a request-audit table. Hash it if you need an identifier
-(introspection caching is [14b](14b-the-cost-of-introspecting-per-request.md)); do not store
+(introspection caching is **14b** *(not written yet)*); do not store
 the token.
 
 ## Audience restriction is the one control you can deploy today

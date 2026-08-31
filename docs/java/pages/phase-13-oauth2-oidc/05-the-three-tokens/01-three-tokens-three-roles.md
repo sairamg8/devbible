@@ -159,7 +159,7 @@ Each of the three roles has one dominant way teams get it wrong, and each gets a
    mints full-scope access. See [08b](08b-why-a-resource-server-must-never-see-one.md).
 3. **The ID token is sent to the API as the access token** — because it is a JWT, it has a
    `sub`, and it validates. It is the most seductive of the three because it *works*. See
-   [17b](17b-the-id-token-as-access-token-anti-pattern.md).
+   **17b** *(not written yet)*.
 
 ## What this topic does not cover
 
@@ -186,7 +186,7 @@ account takeover. Insist on the noun.
 An access token can be a JWT. An ID token is always a JWT. Both can have `sub`, `iss`,
 `aud`, `exp`. A resource server that accepts "a valid JWT from our issuer" accepts both,
 and that is exactly the anti-pattern in
-[17b](17b-the-id-token-as-access-token-anti-pattern.md). Role is carried by `aud` and by
+**17b** *(not written yet)*. Role is carried by `aud` and by
 `typ`, not by shape.
 
 **★ `expires_in` describes the access token only.**
@@ -246,7 +246,7 @@ every call runs with the user's full identity. It cannot be refreshed with the r
 grant in the way an access token can, so client code ends up re-running the login flow or
 caching the ID token past its purpose. And it defeats the whole point of OAuth2, which is
 that the API grants access to a *delegated* subset, not to "whoever this human is". The
-full treatment is in [17b](17b-the-id-token-as-access-token-anti-pattern.md).
+full treatment is in **17b** *(not written yet)*.
 
 **★ Where, precisely, may a refresh token appear in a correctly built system?**
 In exactly two requests: the refresh grant to the AS token endpoint (RFC 6749 §6) and a

@@ -119,7 +119,7 @@ if (current == null || isExpiring(current)) {
 ```
 
 The `store.save(principal, fresh)` line saving *both* tokens is the one people omit, and it is
-what breaks the moment rotation is turned on ([10](10-refresh-token-rotation.md)).
+what breaks the moment rotation is turned on (**10** *(not written yet)*).
 
 **2 · Instrument before you change anything.** Emit a metric for token age at validation time
 on the resource server. You want to know the p99 age of tokens in use before and after, and you
@@ -132,7 +132,7 @@ once, in production.
 
 **4 · Only then talk about `T`.** Once tokens are short, revocation latency is bounded and you
 can have an honest conversation about whether you need introspection
-([14](14-introspection-rfc-7662.md)).
+(**14** *(not written yet)*).
 
 ## The exception worth naming
 

@@ -153,7 +153,7 @@ the request the browser made. Getting the scheme, host and port right is what
 `server.forward-headers-strategy` and the `ForwardedHeaderFilter` are for, and getting it wrong
 produces a `redirect_uri` that does not match your registration — reported by the authorization
 server as an error page you never see. This is covered in detail in
-[19 · Where the defaults leave you exposed](19-where-the-defaults-leave-you.md).
+**19 · Where the defaults leave you exposed** *(not written yet)*.
 
 Native-app redirect URIs — private-use schemes, claimed `https`, and the loopback exception —
 are [12b · Native apps and loopback](12b-native-apps-and-loopback.md).

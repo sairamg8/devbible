@@ -66,8 +66,8 @@ OpenID Connect Core, not by RFC 6749.
 
 The value is what makes this the flow it is, and it is the parameter to check first when
 reading someone else's integration. A `response_type` containing `token` means an access
-token is coming back on the front channel — see [16 · The implicit
-grant](16-the-implicit-grant.md) and RFC 9700 §2.1.2's *"Clients SHOULD NOT use the implicit
+token is coming back on the front channel — see **16 · The implicit
+grant** *(not written yet)* and RFC 9700 §2.1.2's *"Clients SHOULD NOT use the implicit
 grant (response type `token`) or other response types issuing access tokens in the
 authorization response"*.
 

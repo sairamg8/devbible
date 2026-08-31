@@ -111,8 +111,8 @@ The countermeasure there is the OIDC `at_hash` claim:
 > The attacker therefore needs to replace both the access token as well as the ID Token."*
 
 Which is a mitigation, not a fix, and is part of why response types that return access tokens
-on the front channel are discouraged — [16 · The implicit
-grant](16-the-implicit-grant.md).
+on the front channel are discouraged — **16 · The implicit
+grant** *(not written yet)*.
 
 ## The normative wording, stated exactly
 

@@ -103,7 +103,7 @@ nonce                if the request was an OIDC request
 
 Every check at the token endpoint is a comparison against one of those columns. When you can
 recite this row, [08 · Server-side PKCE verification](08-server-side-pkce-verification.md)
-and [20 · Reading the errors](20-reading-the-errors.md) stop needing memorisation.
+and **20 · Reading the errors** *(not written yet)* stop needing memorisation.
 
 ## Codes are opaque — including to you
 
@@ -154,7 +154,7 @@ Behind a load balancer, `https://app.example.com/login/oauth2/code/x` on the way
 Security resolves the redirect URI from the request, so `server.forward-headers-strategy` and
 correct `X-Forwarded-Proto`/`Host` handling are a *functional* requirement for this flow, not
 a cosmetic one. Details in
-[19 · Where the defaults leave you exposed](19-where-the-defaults-leave-you.md).
+**19 · Where the defaults leave you exposed** *(not written yet)*.
 
 **★ The code is high-entropy but you must still not compare it yourself.**
 Clients never compare codes. If you find code comparing an incoming `code` against a stored

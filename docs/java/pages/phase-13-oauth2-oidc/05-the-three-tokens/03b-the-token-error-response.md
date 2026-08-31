@@ -129,7 +129,7 @@ try {
 The distinction the code above draws is the important one: `invalid_grant` is **terminal**;
 a 503 or a connection reset is **retryable**. Collapsing the two is the most common
 client-side defect in this area, and it is what turns a rotation race
-([11 · The rotation race](11-the-rotation-race.md)) into a thundering herd.
+(**11 · The rotation race** *(not written yet)*) into a thundering herd.
 
 ## Codes defined by extensions
 

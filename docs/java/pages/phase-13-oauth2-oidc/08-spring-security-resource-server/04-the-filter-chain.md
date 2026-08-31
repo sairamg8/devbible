@@ -131,7 +131,7 @@ bearer token. That is what turns an authorization failure into `403` with
 that is the union of "carries a bearer token", `X-Requested-With`, "asks for a non-HTML
 media type", and `Accept: */*`. That last set is why a browser hitting a secured API path
 directly can get an HTML-ish 401 while your client gets a JSON-friendly one. Both are
-[10 · Error responses](10-error-responses.md).
+**10 · Error responses** *(not written yet)*.
 
 **4 · 🔴 It exempts bearer-token requests from CSRF, on its own.**
 
@@ -173,7 +173,7 @@ http.addFilterBefore(protectedResourceMetadataFilter, AbstractPreAuthenticatedPr
 
 That filter serves `/.well-known/oauth-protected-resource` and is added **unconditionally**
 whenever `oauth2ResourceServer` is configured. It is
-[10c · Protected resource metadata](10c-protected-resource-metadata.md), and it is new
+**10c · Protected resource metadata** *(not written yet)*, and it is new
 enough that no tutorial mentions it.
 
 ## The DSL methods that exist on `oauth2ResourceServer`
@@ -239,7 +239,7 @@ to do.
 **★ The protected-resource-metadata filter is added whether you asked for it or not.**
 In 7.1, `oauth2ResourceServer` always registers `OAuth2ProtectedResourceMetadataFilter`.
 If `/.well-known/oauth-protected-resource` matters to you — for exposure review, or because
-it now appears in your route table — see [10c](10c-protected-resource-metadata.md).
+it now appears in your route table — see **10c** *(not written yet)*.
 
 **★ Validation cannot be configured from the chain DSL.**
 No `audiences`, no `issuer`, no `validator`. If your mental model is "everything is in the
@@ -273,7 +273,7 @@ No. `OAuth2AuthorizationManagers.hasScope` returns
 `AuthorityAuthorizationManager.hasAuthority("SCOPE_" + scope)`. The value of the helper is
 that the prefix cannot be forgotten or doubled, and that the call site says "scope" rather
 than "authority that happens to start with SCOPE_" — which matters for the argument in
-[07e · Roles are not scopes](07e-roles-are-not-scopes.md).
+**07e · Roles are not scopes** *(not written yet)*.
 
 **★ Where does audience validation go in the chain DSL?**
 Nowhere — it is not a chain concern. The `oauth2ResourceServer` DSL has no `audiences`

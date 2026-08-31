@@ -146,7 +146,7 @@ over `authority-prefix`, `principal-claim-name`, `authorities-claim-name` and
 `authorities-claim-expressions`. Set none of them and **no `JwtAuthenticationConverter`
 bean exists at all** — `JwtAuthenticationProvider` falls back to its own internal default.
 That matters when you try to inject one to tweak it. See
-[07c · Authorities by property](07c-authorities-by-property.md).
+**07c · Authorities by property** *(not written yet)*.
 
 ## Where phase 9 stops and this topic starts
 
@@ -163,7 +163,7 @@ Nothing here contradicts phase 9. Two things **extend** it and are called out wh
 appear: the default validator set in 7.x now includes a `typ` header check and an X.509
 thumbprint check ([06 · The default validators](06-the-default-validators.md)), and Boot
 4.x will compose an `OAuth2TokenValidator<Jwt>` bean onto the defaults for you
-([06d · A validator bean](06d-a-validator-bean.md)).
+(**06d · A validator bean** *(not written yet)*).
 
 ## Gotchas
 
@@ -190,7 +190,7 @@ design.**
 `OAuth2ResourceServerConfigurer.validateConfiguration()` asserts
 `"Spring Security only supports JWTs or Opaque Tokens, not both at the same time."` If you
 genuinely need both formats, that is an `AuthenticationManagerResolver` —
-[09b · Dynamic tenants and mixed token formats](09b-dynamic-tenants.md).
+**09b · Dynamic tenants and mixed token formats** *(not written yet)*.
 
 **★ Configuring neither is also a startup failure, and the message is the most useful in
 the whole module.**
@@ -208,7 +208,7 @@ resolve. Declare your own bean instead — that is the supported extension point
 A resource server with a wrong `issuer-uri` and a reachable JWK set will still verify
 signatures and still reject nothing else. The tokens your own IdP mints pass every test
 you are likely to write. The checks that matter are the ones that reject *other people's*
-valid tokens — [06c · Audience](06c-audience.md).
+valid tokens — **06c · Audience** *(not written yet)*.
 
 ## Interview questions
 

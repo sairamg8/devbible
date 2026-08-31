@@ -134,7 +134,7 @@ pattern and there is no case where the older one is preferable.**
 ## Composition three: do not touch the decoder at all
 
 Boot 4.x appends every `OAuth2TokenValidator<Jwt>` bean to the list it builds. That is
-[06d · A validator bean](06d-a-validator-bean.md), and it is better than both of the above
+**06d · A validator bean** *(not written yet)*, and it is better than both of the above
 because it does not require replacing the `JwtDecoder` bean — which, as
 [02c](02c-trusted-algorithms.md) and [03](03-startup-coupling.md) both noted, quietly
 discards `audiences`, `jws-algorithms` and the lazy startup behaviour.
@@ -155,7 +155,7 @@ first. That matters for two reasons. It means the cost of a validator is paid ev
 earlier one already failed — irrelevant for claim comparisons, relevant if you write one
 that hits a database. And it means the `JwtValidationException` carries the full error
 collection even though only the first description reaches the client
-([10b · What not to leak](10b-what-not-to-leak.md)).
+(**10b · What not to leak** *(not written yet)*).
 
 ## Writing the validator itself
 
@@ -190,7 +190,7 @@ static class AudienceValidator implements OAuth2TokenValidator<Jwt> {
 the error code `"custom_code"` is not one of RFC 6750's three, so it will be emitted verbatim
 in the `WWW-Authenticate` header as `error="custom_code"`. Clients that switch on the error
 code will not recognise it. Prefer `OAuth2ErrorCodes.INVALID_TOKEN` unless you have a
-specific reason. More in [10 · Error responses](10-error-responses.md).
+specific reason. More in **10 · Error responses** *(not written yet)*.
 
 ## Gotchas
 
@@ -230,7 +230,7 @@ have never heard of.
 `validate` returns failure whenever `token.getClaim(claim)` is `null`. That is the right
 default for `aud` and `iss` and it is worth knowing explicitly, because
 `JwtTimestampValidator` does the opposite for `exp` — see
-[06e](06e-clock-skew-and-missing-exp.md).
+**06e** *(not written yet)*.
 
 ## Interview questions
 

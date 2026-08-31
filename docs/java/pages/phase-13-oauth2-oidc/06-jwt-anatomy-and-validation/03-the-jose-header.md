@@ -74,8 +74,8 @@ RFC 7515 §10.6 states (2) from the signature side:
 Point (3) sounds redundant until you read how the vulnerable libraries were written: one
 `verify(token, key)` entry point that dispatched on `alg` and accepted whatever `key`
 happened to be a `byte[]`. That single design produced both `alg: none`
-([11 · The `none` attack](11-alg-none-attack.md)) and RS256→HS256 confusion
-([11b](11b-algorithm-confusion.md)). RFC 8725 §2.1 describes both in one breath:
+(**11 · The `none` attack** *(not written yet)*) and RS256→HS256 confusion
+(**11b** *(not written yet)*). RFC 8725 §2.1 describes both in one breath:
 
 > *"The algorithm can be changed to `'none'` by an attacker, and some libraries would trust
 > this value and 'validate' the JWT without checking any signature."*
@@ -122,8 +122,8 @@ Note also the type of the configuration surface: `SignatureAlgorithm`, a Spring 
 values are exactly `RS256`, `RS384`, `RS512`, `ES256`, `ES384`, `ES512`, `PS256`, `PS384`,
 `PS512`. There is no `NONE` and no `HS256` in it. You cannot express the vulnerable
 configuration through this API at all — the symmetric case has a separate builder,
-`withSecretKey`, which is the design decision that matters. [06b · Symmetric vs
-asymmetric](06b-symmetric-vs-asymmetric.md) is why those two are kept apart.
+`withSecretKey`, which is the design decision that matters. **06b · Symmetric vs
+asymmetric** *(not written yet)* is why those two are kept apart.
 
 And the single-key builder enforces (2) directly:
 
@@ -146,7 +146,7 @@ does not have; a verifier that uses `equalsIgnoreCase` on `alg` accepts `NONE`, 
 The mirror-image bug shows up in *issuers*: a home-grown token minter that writes
 `"alg": "HMACSHA256"` because that is the JCA name produces tokens no conforming verifier
 accepts. The JOSE name and the JCA name are different namespaces;
-[06 · The algorithm table](06-the-algorithm-table.md) lists both.
+**06 · The algorithm table** *(not written yet)* lists both.
 
 ## Reading `alg` afterwards, safely
 
@@ -188,7 +188,7 @@ variable of type `byte[]`, an HS256 header plus an RSA public key satisfies an a
 Safe, but it means an authorization server that has moved to ES256 or PS256 produces tokens
 your decoder rejects — and the failure surfaces as a key-selection error, not as a legible
 "unsupported algorithm". Configure `jwsAlgorithm(...)` explicitly, or use
-`discoverJwsAlgorithms()`; see [12d](12d-restricting-algorithms.md).
+`discoverJwsAlgorithms()`; see **12d** *(not written yet)*.
 
 **★ `withIssuerLocation` does not use that RS256 default.**
 It passes `JwtDecoderProviderConfigurationUtils::getJWSAlgorithms` as the default-algorithm
@@ -210,7 +210,7 @@ usually does not.
 **★ There is no `alg` value that means "whatever the last token used".**
 Every token carries its own `alg`, and a rotation from RS256 to ES256 means both are in
 flight simultaneously. Your accepted set has to contain both for the duration of the
-migration, and then be narrowed again. See [09 · Key rotation](09-key-rotation.md).
+migration, and then be narrowed again. See **09 · Key rotation** *(not written yet)*.
 
 **★ JOSE algorithm names are not JCA algorithm names.**
 `RS256` is `SHA256withRSA` to `java.security.Signature`; `ES256` is `SHA256withECDSAinP1363Format`

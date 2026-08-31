@@ -178,8 +178,8 @@ which nothing else does. The friction is `clientId`: RFC 9068 §2.2 does list `c
 REQUIRED claim, so the builder is following the profile, but a resource server pinning a
 single client id only works when exactly one client calls it. If several clients call the same
 API, this builder is the wrong tool and the `createDefaultWithValidators` form above is right.
-[05 · The RFC 9068 access-token profile](05-at-jwt-profile.md) and
-[12b · The default validator chain](12b-the-default-validator-chain.md) go further.
+**05 · The RFC 9068 access-token profile** *(not written yet)* and
+**12b · The default validator chain** *(not written yet)* go further.
 
 ## Gotchas
 

@@ -102,7 +102,7 @@ The underlying complaint is real: refresh is fiddly, and users get logged out. T
 solve it without moving the refresh token.
 
 **A · Fix the client's refresh, properly.** Most of the pain is three specific bugs — no
-single-flight guard so concurrent requests race ([11](11-the-rotation-race.md)), not saving the
+single-flight guard so concurrent requests race (**11** *(not written yet)*), not saving the
 *new* refresh token when the AS rotates, and retrying on `invalid_grant` instead of
 re-authenticating ([03b](03b-the-token-error-response.md)). Every mature OAuth client library
 has these solved; the fix is usually to stop hand-rolling.
@@ -117,7 +117,7 @@ tokens. The distinction is not cosmetic: in the BFF the AS knows who is refreshi
 
 **C · Give the app a longer-lived, rotating refresh token with inactivity expiry.** If the real
 complaint is "users get logged out after a day", the lever is refresh-token lifetime policy at
-the AS — which is [12](12-refresh-token-lifetimes-and-expiry.md) — not moving the credential.
+the AS — which is **12** *(not written yet)* — not moving the credential.
 
 ## How to spot it in review
 

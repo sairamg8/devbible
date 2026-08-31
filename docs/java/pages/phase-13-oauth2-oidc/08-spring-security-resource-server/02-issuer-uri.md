@@ -114,7 +114,7 @@ Two properties of that code decide the behaviour you will debug:
 2. **A missing claim fails.** `JwtClaimValidator.validate` returns failure when
    `token.getClaim(claim)` is `null`, so a token with no `iss` at all is rejected. That
    asymmetry — absent `iss` rejected, absent `exp` accepted — is
-   [06e · Clock skew and the missing `exp`](06e-clock-skew-and-missing-exp.md).
+   **06e · Clock skew and the missing `exp`** *(not written yet)*.
 
 RFC 9068 §4 requires exactly this behaviour of any RFC 9068 resource server:
 
@@ -209,7 +209,7 @@ For `https://idp.example.com` (no path), `/issuer/.well-known/openid-configurati
 **★ Changing the issuer is a breaking change for every token already in flight.**
 Tokens minted before the change carry the old `iss` and will be rejected. Either accept
 both issuers for one token lifetime — which is
-[09 · Multi-tenancy](09-multi-tenancy.md)'s `fromTrustedIssuers(...)` — or accept a window
+**09 · Multi-tenancy** *(not written yet)*'s `fromTrustedIssuers(...)` — or accept a window
 of 401s.
 
 **★ The `iss` value is not necessarily the URL you can reach.**
@@ -253,7 +253,7 @@ No, not without a compensating control. Boot only adds `JwtIssuerValidator` when
 that key set and nothing else. On a shared or multi-tenant authorization server, every
 tenant's tokens are signed by keys in the same set, so you have removed the only thing
 distinguishing them. Configure both, and add an audience check on top —
-[06c · Audience](06c-audience.md).
+**06c · Audience** *(not written yet)*.
 
 **★ Your IdP is reachable internally as `http://keycloak:8080/realms/prod` but issues
 tokens with `iss: https://sso.example.com/realms/prod`. How do you configure this?**

@@ -83,7 +83,7 @@ incident, not a debugging technique. Anything that method can print is not a sec
 🔴 **`peek` is a debugging aid and nothing else.** It performs no signature check, no claim
 check, no algorithm check. Calling something like it and then trusting the result is the
 single most common JWT vulnerability in real code —
-[11e · Decoding is not validating](11e-decode-is-not-validate.md) is that whole failure mode.
+**11e · Decoding is not validating** *(not written yet)* is that whole failure mode.
 
 ## What "signed" actually buys you
 
@@ -100,7 +100,7 @@ a dot. Three properties follow, and they are the only three:
 2. **Authenticity, relative to a key.** A verifying signature says "whoever holds the
    private key for this public key produced these bytes". It says nothing about *which*
    holder, or whether that holder meant the token for you — hence
-   [11d · Issuer and audience confusion](11d-issuer-and-audience-confusion.md).
+   **11d · Issuer and audience confusion** *(not written yet)*.
 3. **Nothing about time, purpose, or revocation.** Those come from the claims, and the
    claims are only checked if your code checks them.
 
@@ -258,7 +258,7 @@ the header or payload changes the JWS Signing Input, so the recomputed signature
 match the one attached, and a correct verifier rejects the token. The important qualifier is
 "a correct verifier": if the server accepts `alg: none`, or verifies an HMAC using the
 public key as the secret, or decodes without verifying at all, then editing works perfectly.
-Those are chunks [11](11-alg-none-attack.md), [11b](11b-algorithm-confusion.md) and
-[11e](11e-decode-is-not-validate.md).
+Those are chunks **11** *(not written yet)*, **11b** *(not written yet)* and
+**11e** *(not written yet)*.
 
 {/* FOOTER */}

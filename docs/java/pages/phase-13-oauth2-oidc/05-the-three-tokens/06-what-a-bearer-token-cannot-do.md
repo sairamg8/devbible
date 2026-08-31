@@ -44,7 +44,7 @@ Consequences, in order:
   that *"are valid for other resource servers"*. Without audience restriction, one leak is a
   leak everywhere.
 - **No revocation, in the JWT case.** The token validates locally; the AS is not consulted; a
-  revocation reaches nobody until expiry. See [13b](13b-revocation-in-a-jwt-world.md).
+  revocation reaches nobody until expiry. See **13b** *(not written yet)*.
 - **Lifetime is the only lever.** Which is why [07](07-access-token-lifetime-as-a-design-decision.md)
   is about arithmetic rather than taste.
 
@@ -68,7 +68,7 @@ For **refresh tokens issued to public clients**, §2.2.2 is a `MUST`, with an al
 
 So: sender-constraining access tokens is recommended; for public-client refresh tokens you
 must do *either* sender-constraining *or* rotation. Rotation is
-[10 · Refresh token rotation](10-refresh-token-rotation.md); the "or" is why rotation is what
+**10 · Refresh token rotation** *(not written yet)*; the "or" is why rotation is what
 almost everybody actually deploys.
 
 §4.10.1 defines the term:

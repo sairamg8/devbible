@@ -64,7 +64,7 @@ Two distinct outcomes and the difference matters enormously:
 In the single-tenant case the configurer wraps a fixed manager in a trivial resolver
 (`resolver = (request) -> authenticationManager;`). In the multi-tenant case this is where
 `JwtIssuerAuthenticationManagerResolver` reads the *unverified* `iss` claim to pick a
-manager — [09 · Multi-tenancy](09-multi-tenancy.md).
+manager — **09 · Multi-tenancy** *(not written yet)*.
 
 **3 · `ProviderManager` delegates to `JwtAuthenticationProvider`.** Standard Spring Security
 plumbing; the provider `supports(BearerTokenAuthenticationToken.class)`.
@@ -133,7 +133,7 @@ Three things worth pinning:
   reference says so: *"a set of authorities that contains at least `FACTOR_BEARER`"*.
 - The principal's own authorities are merged in, which is how a
   `UserDetailsService`-backed principal converter contributes authorities
-  ([07b · The converters](07b-the-converters.md)).
+  (**07b · The converters** *(not written yet)*).
 
 **7 · The filter installs the result.**
 
@@ -242,7 +242,7 @@ bearer filter to populate a session for a later request, it never did.
 **★ The `iss` claim is read before the signature is verified in the multi-tenant path.**
 Step 2 parses the token to pick a manager. That is unavoidable — you cannot verify without
 knowing which keys to use — and it is exactly why the trusted-issuer allow-list is
-mandatory. See [09 · Multi-tenancy](09-multi-tenancy.md).
+mandatory. See **09 · Multi-tenancy** *(not written yet)*.
 
 **★ A DPoP-bound token sent as a bearer token is rejected as `invalid_token`.**
 Deliberately, to prevent downgrade. The client's error message says nothing about DPoP, so

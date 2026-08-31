@@ -152,7 +152,7 @@ configured constant — never a "looks like our issuer" heuristic, never a
 of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap
 seconds."* Nothing forbids an issuer writing `1735689600.0`, and nothing forbids a value
 beyond a 32-bit range. A parser that maps JSON numbers to `int` overflows; one that maps to
-`double` loses precision above 2^53. [04b · The time claims](04b-registered-claims-time.md)
+`double` loses precision above 2^53. **04b · The time claims** *(not written yet)*
 covers what this does to `exp`.
 
 **4 · Depth and size.** The payload is attacker-supplied JSON of unbounded size. A verifier
@@ -187,7 +187,7 @@ static Map<String, Object> unsafePeekClaims(String compactJws) {
 Note `.strip()`, `split("\\.", -1)`, `getUrlDecoder()`, explicit UTF-8, and strict duplicate
 detection. That is four separate traps handled in eight lines, which is a fair measure of
 how much this layer costs you when you do it yourself. The reason to use
-[`NimbusJwtDecoder`](12-nimbusjwtdecoder.md) is that it has already paid all of them.
+**`NimbusJwtDecoder`** *(not written yet)* is that it has already paid all of them.
 
 ## Gotchas
 

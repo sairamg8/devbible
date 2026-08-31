@@ -196,6 +196,6 @@ every property it read — algorithms, audiences, issuer validation — is no lo
 anyone. This is the single most common way a resource server ends up with weaker validation
 after a "small" customisation; see
 [06b · Composing validators](06b-composing-validators.md) and
-[06d · A validator bean](06d-a-validator-bean.md) for the two ways out.
+**06d · A validator bean** *(not written yet)* for the two ways out.
 
 {/* FOOTER */}

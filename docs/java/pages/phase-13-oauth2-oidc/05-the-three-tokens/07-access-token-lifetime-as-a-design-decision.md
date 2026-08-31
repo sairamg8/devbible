@@ -70,8 +70,8 @@ authorization-server capacity question, not a security one.
 **Revocation latency.** For a self-contained token validated locally, `T = L`. There is no
 other lever. "We fired someone, how long until their access stops?" has the answer "up to
 `L`". If the business needs `T` measured in seconds, you cannot get there by shortening `L` —
-you have to change validation strategy, which is [14](14-introspection-rfc-7662.md) and
-[15](15-opaque-vs-jwt-as-an-as-choice.md).
+you have to change validation strategy, which is **14** *(not written yet)* and
+**15** *(not written yet)*.
 
 **Failure amplification.** If the authorization server is down for `D`, then after at most `L`
 every user is locked out — because every access token expires and no refresh can succeed. A
@@ -93,7 +93,7 @@ questions:
    token or client credentials can silently get a new token. A public client mid-flow may not
    be able to.
 3. **What is `T` allowed to be?** If the answer is "under a minute", stop optimising `L` and go
-   read [15](15-opaque-vs-jwt-as-an-as-choice.md).
+   read **15** *(not written yet)*.
 
 That gives a defensible starting table — these are engineering judgements, not specification
 values:
@@ -179,7 +179,7 @@ finishes. If your revocation story depends on `T`, add the duration of your long
 token.**
 Teams argue for hours about `L` and leave refresh tokens valid for 90 days with no inactivity
 expiry. RFC 9700 §4.14.2: *"Refresh tokens SHOULD expire if the client has been inactive for
-some time."* That is [12](12-refresh-token-lifetimes-and-expiry.md), and it usually matters
+some time."* That is **12** *(not written yet)*, and it usually matters
 more.
 
 **★ Different clients should not all get the same lifetime.**
@@ -228,7 +228,7 @@ server becomes a hard availability dependency on a five-minute horizon rather th
 one, and — the subtle one — the client now holds and exercises its refresh token twelve times
 as often, which increases the exposure of the *more* powerful credential and, under rotation,
 twelve times as many chances for a rotation race
-([11 · The rotation race](11-the-rotation-race.md)). The honest answer is that it is more
+(**11 · The rotation race** *(not written yet)*). The honest answer is that it is more
 secure against token theft and less robust operationally, and which matters depends on whether
 your threat model is leakage or availability.
 

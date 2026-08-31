@@ -92,7 +92,7 @@ The related case is **substitution**, RFC 8725 §2.7:
 > different recipient for which that JWT was not intended."*
 
 That one is about `aud` across *services* rather than about token *kind*, and it is
-[11d](11d-issuer-and-audience-confusion.md).
+**11d** *(not written yet)*.
 
 ## Why `aud` is not enough on its own
 
@@ -156,7 +156,7 @@ Jwt token = this.encoder.encode(JwtEncoderParameters.from(header, claims));
 If you issue more than one kind of token from the same key — an access token and, say, an
 internal service ticket — give each kind a distinct `typ` and make each verifier demand
 exactly one. That is RFC 8725 §3.12 satisfied by construction rather than by discipline.
-[13 · JwtEncoder](13-jwtencoder.md) covers minting properly, including the trap that
+**13 · JwtEncoder** *(not written yet)* covers minting properly, including the trap that
 `NimbusJwtEncoder` defaults the `typ` header to `JWT`.
 
 ## Gotchas

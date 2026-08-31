@@ -92,8 +92,8 @@ The browser-apps BCP §5.2.1 draws the consequence in operational terms:
 > revoked."*
 
 Three stopping conditions: expiry, rotation, revocation. Those are exactly the three topics
-that follow ([12](12-refresh-token-lifetimes-and-expiry.md),
-[10](10-refresh-token-rotation.md), [13](13-revocation-rfc-7009.md)) — the BCP is telling you
+that follow (**12** *(not written yet)*,
+**10** *(not written yet)*, **13** *(not written yet)*) — the BCP is telling you
 what the syllabus has to be.
 
 ## What RFC 6749 already required, before the BCP
