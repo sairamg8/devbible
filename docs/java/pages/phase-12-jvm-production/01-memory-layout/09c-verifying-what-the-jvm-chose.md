@@ -214,9 +214,9 @@ sizing defaults underneath you.
 you respond?**
 That the chart records an intention, not an outcome. The arguments pass through an entrypoint
 script, possibly `JAVA_TOOL_OPTIONS` set by the base image or an injected agent, and then
-through ergonomics — and any of those can change or override what arrives. `jcmd <pid>
-VM.command_line` shows what the process was actually handed and `jcmd <pid> VM.flags` shows
-what it settled on. Also worth noting: compressed oops are on by default anyway, so the
+through ergonomics — and any of those can change or override what arrives.
+`jcmd <pid> VM.command_line` shows what the process was actually handed, and
+`jcmd <pid> VM.flags` shows what it settled on. Also worth noting: compressed oops are on by default anyway, so the
 interesting question is usually not whether the flag is set but whether the heap size let the
 JVM keep them, which only `-Xlog:gc+heap+coops` answers.
 

@@ -104,8 +104,8 @@ JVM running with NMT carries a 5–10% penalty that nothing in the output remind
 **★ Walk me through using NMT to find a leak.**
 Enable `summary` at startup. Let the service reach steady state — past class loading, JIT warm-up
 and pool creation — then `jcmd <pid> VM.native_memory baseline`. Wait long enough for the growth
-to occur: minutes for a fast leak, hours for a slow one. Then `jcmd <pid> VM.native_memory
-summary.diff` and read which category grew. One usually dominates, and it tells you which tool
+to occur: minutes for a fast leak, hours for a slow one. Then run
+`jcmd <pid> VM.native_memory summary.diff` and read which category grew. One usually dominates, and it tells you which tool
 comes next: Class points at metaspace and a possible classloader leak, Thread points at thread
 count times stack size, Code at the code cache, Other most often at direct byte buffers, and Java
 Heap sends you to a heap dump. The diff is the technique; a single snapshot is what people
