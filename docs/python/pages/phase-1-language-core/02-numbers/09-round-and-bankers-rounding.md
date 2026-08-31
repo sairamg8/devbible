@@ -75,8 +75,8 @@ conventions, tax rules and card-network specifications frequently mandate
 *round half up* (or *half away from zero*), because a human being must be able
 to reproduce the number by hand. Python's default disagrees with them. The
 `decimal` module is where you say so explicitly — `ROUND_HALF_UP` is one of its
-rounding modes, and `quantize` is how you apply it. See
-**10c** *(not written yet)*.
+rounding modes, and `quantize` is how you apply it, covered in
+**Decimal for money** *(not written yet)*.
 
 The library reference records the same rule in the numeric-types table, which
 is where most people first meet it without noticing:

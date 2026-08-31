@@ -38,8 +38,8 @@ That is a language-design decision, not an oversight: Python's default is that
 a nonsense computation stops immediately rather than propagating a `nan`
 through four more stages and surfacing as an odd number in a report. The
 `decimal` module offers the other policy explicitly, through untrapped signals
-— see **10b** *(not written yet)* — and NumPy offers it by
-default, with a `RuntimeWarning`.
+(the `DivisionByZero` trap, covered in **Decimal for money** *(not written
+yet)*), and NumPy offers it by default, with a `RuntimeWarning`.
 
 The realistic failure is a divisor derived from a length:
 
