@@ -92,9 +92,29 @@ export const PINS = {
     pin: '2.55.0', checked: '2026-08-31', tracks: ['git'], names: ['git'],
   },
   firefox: {
-    label: 'Firefox', source: 'eol:firefox', policy: 'latest',
+    // 🔴 'frozen', not 'latest' — and the distinction matters more than it looks.
+    //
+    // Firefox is not something this bible TARGETS. It is the instrument the CSS
+    // and React measurements were taken with, and `> Verified: 2026-08 in
+    // **Firefox 153.0.3** via sandbox/css/ex09-…` is a provenance record. A
+    // record of what was measured does not become false when a newer browser
+    // ships.
+    //
+    // Modelling it as 'latest' produced a 48-page "major drift" alarm on
+    // 2026-08-31 whose only cheap fix would have been to rewrite 153.0.3 →
+    // 154.0.1 inside lines naming a script that was never re-run — i.e. to
+    // fabricate a verification. That is the exact failure 216 PostgreSQL pages
+    // once shipped, and a currency tool that pressures you into it is worse
+    // than no tool.
+    //
+    // The instrument moving is still worth knowing, so the newer version is
+    // resolved and reported — as information, not as drift. Re-measuring on a
+    // newer Firefox is a real job, decided deliberately, never implied by a
+    // version number.
+    label: 'Firefox', source: 'eol:firefox', policy: 'frozen',
     pin: '153.0.3', checked: '2026-08-31', tracks: ['css', 'react'], names: ['firefox'],
-    note: 'The browser the CSS and React harnesses measure in — a claim about computed styles is only as current as this.',
+    reason: 'Measurement instrument, not a target. Bumping the string without re-running the scripts would fabricate a verification.',
+    note: 'System Firefox is 154.0.1 as of 2026-08-31 and the harness drives it fine — re-measuring is possible, it is simply a decision nobody has made.',
   },
 
   // ── The JS/TS stack ────────────────────────────────────────────────────────

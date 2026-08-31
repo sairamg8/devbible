@@ -5,12 +5,12 @@
   "horizonDays": 60,
   "totals": {
     "pins": 42,
-    "current": 18,
+    "current": 16,
     "patch": 5,
-    "minor": 4,
-    "major": 2,
+    "minor": 3,
+    "major": 0,
     "unanchored": 12,
-    "unreachable": 1,
+    "unreachable": 5,
     "inconsistent": 6,
     "events": 1
   },
@@ -32,7 +32,11 @@
     "storybook"
   ],
   "unreachable": [
-    "podman"
+    "podman",
+    "mockito",
+    "junit",
+    "testcontainers",
+    "flyway"
   ],
   "tracks": {
     "nodejs": "minor",
@@ -46,10 +50,10 @@
     "nginx": "patch",
     "docker": "unknown",
     "python": "none",
-    "java": "major",
+    "java": "unknown",
     "git": "none",
-    "css": "major",
-    "react": "major",
+    "css": "frozen",
+    "react": "patch",
     "jest-rtl": "unanchored",
     "storybook": "patch",
     "redux-toolkit": "unanchored",
@@ -302,11 +306,11 @@
     "firefox": {
       "label": "Firefox",
       "source": "eol:firefox",
-      "policy": "latest",
+      "policy": "frozen",
       "pin": "153.0.3",
       "latest": "154.0.1",
       "newestOverall": "154.0.1",
-      "drift": "major",
+      "drift": "frozen",
       "eol": false,
       "events": [],
       "tracks": [
@@ -320,7 +324,7 @@
         "153.0×17"
       ],
       "error": null,
-      "note": "The browser the CSS and React harnesses measure in — a claim about computed styles is only as current as this.",
+      "note": "System Firefox is 154.0.1 as of 2026-08-31 and the harness drives it fine — re-measuring is possible, it is simply a decision nobody has made.",
       "checked": "2026-08-31"
     },
     "react": {
@@ -634,9 +638,9 @@
       "source": "gh:mockito/mockito",
       "policy": "latest",
       "pin": "5.23.0",
-      "latest": "5.23.0",
+      "latest": null,
       "newestOverall": null,
-      "drift": "none",
+      "drift": "unknown",
       "eol": null,
       "events": [],
       "tracks": [
@@ -646,7 +650,7 @@
       "claimed": "5.23.0",
       "claimedMatchesPin": true,
       "minority": null,
-      "error": null,
+      "error": "UND_ERR_CONNECT_TIMEOUT",
       "note": null,
       "checked": "2026-08-31"
     },
@@ -655,9 +659,9 @@
       "source": "gh:junit-team/junit-framework",
       "policy": "latest",
       "pin": "6.0.3",
-      "latest": "6.1.3",
+      "latest": null,
       "newestOverall": null,
-      "drift": "minor",
+      "drift": "unknown",
       "eol": null,
       "events": [],
       "tracks": [
@@ -667,7 +671,7 @@
       "claimed": "6.0.3",
       "claimedMatchesPin": true,
       "minority": null,
-      "error": null,
+      "error": "UND_ERR_CONNECT_TIMEOUT",
       "note": "The repo is junit-team/junit-framework — junit-team/junit5 now 301-redirects.",
       "checked": "2026-08-31"
     },
@@ -676,9 +680,9 @@
       "source": "gh:testcontainers/testcontainers-java",
       "policy": "latest",
       "pin": "2.0.5",
-      "latest": "2.0.5",
+      "latest": null,
       "newestOverall": null,
-      "drift": "none",
+      "drift": "unknown",
       "eol": null,
       "events": [],
       "tracks": [
@@ -690,7 +694,7 @@
       "minority": [
         "12.1.0×1"
       ],
-      "error": null,
+      "error": "UND_ERR_CONNECT_TIMEOUT",
       "note": null,
       "checked": "2026-08-31"
     },
@@ -722,9 +726,9 @@
       "source": "gh:flyway/flyway",
       "policy": "latest",
       "pin": "12",
-      "latest": "13.4.0",
+      "latest": null,
       "newestOverall": null,
-      "drift": "major",
+      "drift": "unknown",
       "eol": null,
       "events": [],
       "tracks": [
@@ -734,7 +738,7 @@
       "claimed": null,
       "claimedMatchesPin": null,
       "minority": null,
-      "error": null,
+      "error": "UND_ERR_CONNECT_TIMEOUT",
       "note": null,
       "checked": "2026-08-31"
     },
