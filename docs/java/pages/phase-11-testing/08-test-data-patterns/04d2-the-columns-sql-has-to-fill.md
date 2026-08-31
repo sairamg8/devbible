@@ -1,7 +1,7 @@
 ---
 title: "A hand-written INSERT has to satisfy the schema rather than the entity, so it must fill every column auditing and optimistic locking normally fill — and if it names its own primary keys it silently leaves the sequence behind, which is why the first insert the application performs collides with fixture data"
 sidebar_label: "04d2 · The columns SQL has to fill"
-sidebar_position: 26
+sidebar_position: 15
 ---
 
 <span className="db-tier t-understand">Understand</span>

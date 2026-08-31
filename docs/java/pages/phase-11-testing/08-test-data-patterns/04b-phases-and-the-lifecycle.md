@@ -1,7 +1,7 @@
 ---
 title: "@Sql scripts do not run where you think they do relative to @BeforeEach and @AfterEach, there are four phases rather than the two most tutorials know about, and the two class-level phases pull the whole ApplicationContext forward in a way that breaks container startup"
 sidebar_label: "04b · Phases and the lifecycle"
-sidebar_position: 21
+sidebar_position: 10
 ---
 
 <span className="db-tier t-understand">Understand</span>

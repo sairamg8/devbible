@@ -1,7 +1,7 @@
 ---
 title: "There is no per-script atomicity: statements go to the driver one at a time, so a fixture that dies at statement seven has already applied six, and whether those six survive is decided by a transaction setting most people never touch"
 sidebar_label: "04c2 · Error modes and half-failed scripts"
-sidebar_position: 24
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>

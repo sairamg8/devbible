@@ -1,7 +1,7 @@
 ---
 title: "@Sql is repeatable, its declarations run in source order, and — the default that costs the most afternoons — a method-level declaration replaces the class-level one entirely rather than adding to it, so the natural schema-on-the-class arrangement is broken until you add @SqlMergeMode(MERGE)"
 sidebar_label: "04b2 · Groups and merge mode"
-sidebar_position: 22
+sidebar_position: 11
 ---
 
 <span className="db-tier t-understand">Understand</span>

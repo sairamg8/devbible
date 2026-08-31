@@ -1,7 +1,7 @@
 ---
 title: "Your Clock bean governs the timestamps your Java code writes and nothing else — the scheduler, Spring Data auditing, Hibernate and the database each read a different clock, and each has its own documented seam or none at all"
 sidebar_label: "06g · The clocks you do not own"
-sidebar_position: 46
+sidebar_position: 29
 ---
 
 <span className="db-tier t-understand">Understand</span>

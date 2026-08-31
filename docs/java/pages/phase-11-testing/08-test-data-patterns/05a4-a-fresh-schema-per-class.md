@@ -1,7 +1,7 @@
 ---
 title: "A fresh schema or a fresh container is the only strategy that is correct by construction, and it is priced accordingly — which makes the real question not which strategy is best but which one each test can afford, and that has a short decision rule"
 sidebar_label: "05a4 · A fresh schema per class"
-sidebar_position: 31
+sidebar_position: 20
 ---
 
 <span className="db-tier t-understand">Understand</span>

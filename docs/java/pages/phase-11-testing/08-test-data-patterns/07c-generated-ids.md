@@ -1,7 +1,7 @@
 ---
 title: "UUID.randomUUID() is the right tool for uniqueness and a defect in an assertion, and the deeper question underneath every generated identifier is whether the entity assigns its own id — because one that does has the same defect as one that calls LocalDate.now()"
 sidebar_label: "07c · Generated ids"
-sidebar_position: 50
+sidebar_position: 33
 ---
 
 <span className="db-tier t-understand">Understand</span>

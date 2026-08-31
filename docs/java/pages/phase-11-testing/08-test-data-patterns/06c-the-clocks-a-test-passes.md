@@ -1,7 +1,7 @@
 ---
 title: "The JDK ships three real clock implementations — fixed for calendar behaviour, offset for and-then-later, tick for precision — and the fourth clock, the one that moves under the test's control, is eight lines the JDK deliberately does not ship"
 sidebar_label: "06c · The clocks a test passes"
-sidebar_position: 42
+sidebar_position: 25
 ---
 
 <span className="db-tier t-understand">Understand</span>

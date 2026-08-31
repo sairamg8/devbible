@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot does not auto-configure a Clock bean and the request for one was closed as not planned, so you declare it — and the three decisions packed into that one-line @Bean method are the ones that decide whether your tests can control time at all"
 sidebar_label: "06e · The clock bean"
-sidebar_position: 44
+sidebar_position: 27
 ---
 
 <span className="db-tier t-understand">Understand</span>

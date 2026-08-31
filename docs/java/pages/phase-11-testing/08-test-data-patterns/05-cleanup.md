@@ -1,7 +1,7 @@
 ---
 title: "Cleaning up between tests is four different strategies with four different bills, and the one Spring Boot hands you by default — a transaction that is rolled back — is the cheapest, the most invisible, and the one that quietly changes what your test is able to prove"
 sidebar_label: "05 · Cleanup"
-sidebar_position: 27
+sidebar_position: 16
 ---
 
 <span className="db-tier t-understand">Understand</span>

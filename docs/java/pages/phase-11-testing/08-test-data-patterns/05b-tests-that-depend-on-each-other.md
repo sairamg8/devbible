@@ -1,7 +1,7 @@
 ---
 title: "One shared row turns a suite into a program whose tests are statements, and the single most common expression of that bug is an assertion that a table contains exactly one thing — which is a claim about every test that has ever run, not about the code"
 sidebar_label: "05b · Tests that depend on each other"
-sidebar_position: 32
+sidebar_position: 21
 ---
 
 <span className="db-tier t-understand">Understand</span>

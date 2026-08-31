@@ -1,7 +1,7 @@
 ---
 title: "A SQL fixture is honest about what is in the database and blind to refactoring; a fixture inserted through the repository is refactor-safe and can hide the very mapping bug the test exists to catch — the choice is between two different lies, and the honest answer is to use each for what it can actually prove"
 sidebar_label: "04d · SQL versus repository fixtures"
-sidebar_position: 25
+sidebar_position: 14
 ---
 
 <span className="db-tier t-understand">Understand</span>

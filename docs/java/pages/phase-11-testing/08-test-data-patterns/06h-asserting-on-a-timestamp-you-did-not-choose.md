@@ -1,7 +1,7 @@
 ---
 title: "When the timestamp really does come from a clock you cannot control, the fix is not a wider tolerance — it is a window you measured, and the difference between the two is whether the test can ever flake for a reason that has nothing to do with your code"
 sidebar_label: "06h · Asserting on a timestamp you did not choose"
-sidebar_position: 47
+sidebar_position: 30
 ---
 
 <span className="db-tier t-understand">Understand</span>

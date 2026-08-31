@@ -1,7 +1,7 @@
 ---
 title: "Order dependence is not a bug you wait for — it is one you can go and cause on purpose in four cheap experiments, and the most valuable of them is simply running the whole suite twice against the same database without resetting it in between"
 sidebar_label: "05b2 · Finding order dependence"
-sidebar_position: 33
+sidebar_position: 22
 ---
 
 <span className="db-tier t-understand">Understand</span>

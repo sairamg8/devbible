@@ -1,7 +1,7 @@
 ---
 title: "A fixture that lives in a .sql file is a claim about rows rather than about objects, and @Sql is how Spring makes that claim declaratively — but the string you put in the annotation has four different meanings depending on how it starts, and the empty annotation is the one that binds hardest"
 sidebar_label: "04 · Fixtures in the database"
-sidebar_position: 20
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>

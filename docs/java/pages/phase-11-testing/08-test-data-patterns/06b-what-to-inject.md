@@ -1,7 +1,7 @@
 ---
 title: "The parameter's type is a claim about the class: InstantSource says this component has no time-zone behaviour, Clock says it does, and choosing the wide one by default is how a zone bug gets in later"
 sidebar_label: "06b · What to inject"
-sidebar_position: 41
+sidebar_position: 24
 ---
 
 <span className="db-tier t-understand">Understand</span>

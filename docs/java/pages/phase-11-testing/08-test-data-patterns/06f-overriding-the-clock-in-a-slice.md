@@ -1,7 +1,7 @@
 ---
 title: "Replacing the clock in a Spring slice is a bean-override decision, and the reflex answer is the wrong one: @TestBean supplies a real fixed clock, while @MockitoBean supplies a null-returning mock and will silently invent the bean your application forgot to declare"
 sidebar_label: "06f · Overriding the clock in a slice"
-sidebar_position: 45
+sidebar_position: 28
 ---
 
 <span className="db-tier t-understand">Understand</span>

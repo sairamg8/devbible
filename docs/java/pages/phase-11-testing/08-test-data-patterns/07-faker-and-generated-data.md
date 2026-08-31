@@ -1,7 +1,7 @@
 ---
 title: "Generated data earns its place in exactly one region of a fixture — the fields nobody asserts on — and every failure mode of Datafaker traces back to a value that escaped that region into an assertion, a validator or a golden file"
 sidebar_label: "07 · Faker and generated data"
-sidebar_position: 48
+sidebar_position: 31
 ---
 
 <span className="db-tier t-understand">Understand</span>

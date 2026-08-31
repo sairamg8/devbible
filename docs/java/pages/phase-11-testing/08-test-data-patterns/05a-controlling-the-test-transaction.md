@@ -1,7 +1,7 @@
 ---
 title: "Most of @Transactional's attributes do nothing on a test and fail silently, @BeforeEach and @AfterEach run inside the transaction so cleanup written there is undone with everything else, and the only two hooks that can see the database as another connection sees it are the two nobody uses"
 sidebar_label: "05a · Controlling the test transaction"
-sidebar_position: 28
+sidebar_position: 17
 ---
 
 <span className="db-tier t-understand">Understand</span>

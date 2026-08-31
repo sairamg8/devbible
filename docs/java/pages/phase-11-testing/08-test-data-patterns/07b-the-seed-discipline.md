@@ -1,7 +1,7 @@
 ---
 title: "A seed you did not print is a failure you cannot reproduce, and a seed you hard-coded is a fixed fixture with extra steps — those are the only two honest configurations, and choosing between them is choosing what the generated data is for"
 sidebar_label: "07b · The seed discipline"
-sidebar_position: 49
+sidebar_position: 32
 ---
 
 <span className="db-tier t-understand">Understand</span>

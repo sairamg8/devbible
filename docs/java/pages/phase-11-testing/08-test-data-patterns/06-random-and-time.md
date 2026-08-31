@@ -1,7 +1,7 @@
 ---
 title: "A method that calls LocalDate.now() has hard-coded its clock — the javadoc says so in exactly those words — so the fix is not a cleverer test, it is one more constructor parameter"
 sidebar_label: "06 · Random and time"
-sidebar_position: 40
+sidebar_position: 23
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Emptying the tables between tests is the strategy that lets a test commit, and it costs three things nobody budgets for: foreign-key ordering, a table list that goes stale on the next migration, and the fact that RESTART IDENTITY CASCADE will happily reach tables you never named"
 sidebar_label: "05a3 · Truncating and deleting"
-sidebar_position: 30
+sidebar_position: 19
 ---
 
 <span className="db-tier t-understand">Understand</span>

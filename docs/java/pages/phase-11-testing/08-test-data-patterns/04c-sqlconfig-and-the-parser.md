@@ -1,7 +1,7 @@
 ---
 title: "Spring parses your fixture script itself before the database ever sees it — splitting on semicolons, stripping comments and guessing the encoding — so a script that runs perfectly in psql can still fail under @Sql, and @SqlConfig is the set of dials that exist because that parser has to be told the truth"
 sidebar_label: "04c · @SqlConfig and the parser"
-sidebar_position: 23
+sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>

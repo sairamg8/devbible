@@ -1,7 +1,7 @@
 ---
 title: "The rollback strategy is free because it never commits, and everything it breaks is a consequence of that single fact: no commit means no commit-time constraint check, no AFTER_COMMIT listener, nothing visible on a second connection, and — Spring's own manual says so — a test that passes while production throws"
 sidebar_label: "05a2 · What rollback breaks"
-sidebar_position: 29
+sidebar_position: 18
 ---
 
 <span className="db-tier t-understand">Understand</span>

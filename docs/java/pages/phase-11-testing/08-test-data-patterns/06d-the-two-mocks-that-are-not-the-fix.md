@@ -1,7 +1,7 @@
 ---
 title: "Both shortcuts around injecting a clock are mocks — mock(Clock.class) and mockStatic(LocalDate.class) — and both fail for the same underlying reason: a clock is a value, and mocking a value produces a thing no real clock could be"
 sidebar_label: "06d · The two mocks that are not the fix"
-sidebar_position: 43
+sidebar_position: 26
 ---
 
 <span className="db-tier t-understand">Understand</span>
