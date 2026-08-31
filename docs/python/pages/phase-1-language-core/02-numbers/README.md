@@ -46,17 +46,50 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 2b | **[Configuring and avoiding it](02b-configuring-and-avoiding-the-limit.md)** | `PYTHONINTMAXSTRDIGITS`, `-X`, `sys.set_int_max_str_digits`, why the scope is interpreter-wide, and the exempt conversions you should use instead |
 | 3 | **[Numeric literals](03-numeric-literals.md)** | `0x`/`0o`/`0b`, the leading zero that is a `SyntaxError`, imaginary literals, and `1e6` being a `float` |
 | 3b | **[Underscores and constructors](03b-underscores-and-constructors.md)** | PEP 515 placement rules, `_` as a format separator, and the strictly larger language `int()` and `float()` accept |
+| 4 | **[`bool` is an `int`](04-bool-is-an-int.md)** | The subclass promise, the idioms it buys, `&`/`\|`/`^` staying `bool` only when both operands are, `~` deprecated and gone in 3.16, and why a format spec prints `1` |
+| 4b | **[Identity traps](04b-bool-identity-traps.md)** | `{1: "a", True: "b"}` is one key, the `isinstance(x, int)` hole, `match`/`case` arm ordering, and `singledispatch` walking the MRO |
+| 4c | **[`is True` and `== True`](04c-is-true-and-the-type-system.md)** | The three checks and which one to delete, the tri-state pattern, `assertTrue` vs `assertIs`, and E712 |
+| 4d | **[Booleans and the type system](04d-booleans-and-the-type-system.md)** | `bool` assignable to `int`, `-> bool` annotations that lie, `Literal[True]` overloads, and `TypeGuard` vs `TypeIs` |
+| 4e | **[Writing a `bool` out](04e-booleans-at-a-boundary.md)** | `json` keeps values and coerces keys, and `sqlite3` has no boolean storage class at all |
+| 4f | **[Reading a `bool` in](04f-reading-a-bool-in.md)** | `bool()` is a truth test, not a parser — `argparse` `type=bool`, `os.environ`, and what an unrecognised value should do |
+| 5 | **[`float` and IEEE-754](05-float-and-ieee-754.md)** | The binary64 layout, `sys.float_info`, why 1/10 is not representable, and `repr` as a display convention |
+| 5b | **[Inspecting and constructing floats](05b-inspecting-and-constructing-floats.md)** | `as_integer_ratio()`, `Decimal(x)`, `.hex()`, the 17-digit round trip, and 3.14's `float.from_number()` |
+| 5c | **[The float number line](05c-the-float-number-line.md)** | `math.ulp`, `nextafter`, the regions of the number line, correct rounding, non-associativity and cancellation |
+| 5d | **[Accurate float arithmetic](05d-accurate-float-arithmetic.md)** | `sum()`'s 3.12 change, `math.fsum`, `math.sumprod` and `math.fma` |
+| 6 | **[NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md)** | The values, where they come from, and the comparison rules that make NaN unequal to itself |
+| 6b | **[Detecting NaN, and containers](06b-detecting-nan-and-containers.md)** | Identity-first membership, 3.10 identity hashing, and what NaN does to sets, dicts, sorting and `lru_cache` |
+| 8 | **[Floor division and modulo](08-floor-division-and-modulo.md)** | `//` floors rather than truncates, `%` takes the sign of the divisor, and the invariant that ties them together |
+| 8b | **[Ceiling division and integer edges](08b-ceiling-division-and-integer-edges.md)** | `-(-a // b)`, `divmod`, and the edges where the arithmetic stops matching intuition |
+| 8c | **[Zero divisors and the operator protocol](08c-zero-divisors-and-the-operator-protocol.md)** | `ZeroDivisionError`, `__floordiv__`/`__mod__`/`__divmod__` and their reflected forms |
+| 8d | **[Modulo on floats and Decimals](08d-modulo-on-floats-and-decimals.md)** | Where `Decimal`'s `//` truncates toward zero while `int`'s floors, and what that does to a money calculation |
+| 8e | **[Float modulo, `fmod` and `remainder`](08e-float-modulo-fmod-and-remainder.md)** | Why `%` and `math.fmod` disagree on sign, the documented roundoff case, and which to reach for |
+| 9 | **[`round()` and banker's rounding](09-round-and-bankers-rounding.md)** | Round-half-to-even, the `round(2.675, 2)` note the docs call "not a bug", and the return type with and without `ndigits` |
+| 9b | **[`round()` per type, and double rounding](09b-round-per-type-and-double-rounding.md)** | `__round__`, how each numeric type rounds, and the double-rounding trap |
+| 9c | **[Double rounding and policy](09c-double-rounding-and-policy.md)** | Why rounding twice is not rounding once, and choosing a rounding policy deliberately rather than inheriting one |
+| 13 | **[`complex`](13-complex-and-the-numeric-tower.md)** | An imaginary literal, the constructor's string grammar, no ordering and no `//`, mixed-type widening, and 3.14's deprecation and `from_number` |
+| 13b | **[`cmath`](13b-cmath.md)** | Why two modules exist, the always-complex return, `phase`/`polar`/`rect`, `isfinite` vs `isinf`, and branch cuts via signed zero |
+| 13c | **[The numeric tower](13c-the-numeric-tower.md)** | The `numbers` ABCs rung by rung, `Decimal` deliberately excluded by PEP 3141, `bool` as `Integral`, and annotate-with-builtins-check-with-ABCs |
 
-⚠️ **This topic is incomplete — it covers integers and is short its float half.**
-Written: unlimited-precision `int`, bitwise on an infinite width, identity and the
-int↔str digit limit, literals and constructors. **Not written:** `bool` as an `int`
-subclass, `float` and IEEE-754, NaN/infinity/signed zero, comparing floats,
-floor division and modulo, `round()` and banker's rounding, `Decimal` for money,
-`Fraction`, conversions and precision loss, `complex` and the numeric tower, and
-`math` versus the operators. The session was wound down at 97% weekly usage with
-the fork mid-topic; it spent its last action on this index so nothing landed
-unreachable. **Forward references to those chunks are plain bold text, not links** —
-there is no dangling link in this topic.
+⚠️ **This topic is incomplete, and these chunks are genuinely missing.** They are
+named in the prose above as plain bold ***(not written yet)*** text rather than as
+links, so this topic carries no dangling link to them:
+
+| Planned | Position | Covers |
+|---|---|---|
+| `06c-signed-zero-and-serialisation.md` | 62 | `math.copysign` as the only way to detect `-0.0`, `0.0`/`-0.0` collapsing to one dict key, and `json`'s `allow_nan` / `parse_constant` |
+| `07-comparing-floats.md` | 70 | `math.isclose`, PEP 485's weak symmetric test, why comparing to zero needs `abs_tol`, `assertAlmostEqual`'s different model, and when `==` is exactly right |
+| `10-decimal-for-money.md` | 100 | Contexts, precision as significant digits, `quantize`, rounding modes, traps and signals, and `Decimal` vs integer minor units |
+| `10b-contexts-precision-and-signals.md` | 101 | Named forward from chunk 8c |
+| `10c-quantize-and-fixed-point-discipline.md` | 102 | Named forward from chunk 9 |
+| `11-fraction.md` | 110 | When exactness must be rational rather than decimal, `limit_denominator`, and the cost |
+| `12-conversions-and-precision-loss.md` | 120 | `int()` truncating toward zero (and 3.14 dropping the `__trunc__` delegation), `Decimal(float)`'s exact expansion, and `Fraction(1.1)` vs `Fraction(Decimal("1.1"))` |
+| `14-math-vs-the-operators.md` | 140 | Where `math` and the operators disagree, and which to reach for |
+
+🔴 **`sidebar_position` runs on a ×10 scheme from chunk 4 onward** — the chunks
+written first hold 1–7, then `04` is 40, `05` is 50, `06` is 60, and split siblings
+take the next integer. That is what leaves room for a split without renumbering
+anything already committed.
+
 ## The four questions this topic exists to answer
 
 > *Why is `-7 // 2` equal to `-4`?*

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-08-31 12:05",
+  "updated": "2026-08-31 12:09",
   "totals": {
     "languages": 28,
     "complete": 20,
@@ -404,7 +404,7 @@
       "phases": "1/14",
       "next": "1 · Language core",
       "docs": "/docs/python",
-      "updated": "2026-08-28 23:14",
+      "updated": "2026-08-31 12:09",
       "note": "Blocked behind Java. Resume at phase 1, 02-numbers/04-bool-is-an-int.md."
     }
   ]
