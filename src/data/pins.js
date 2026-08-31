@@ -1,0 +1,201 @@
+/**
+ * Single source of truth for "which version of each product this bible targets".
+ *
+ * The companion to `progress.js`. That file answers *how much is written*; this
+ * one answers *is what is written still current*. Same arrangement: this file is
+ * hand-maintained, `scripts/currency.mjs` reads it and generates
+ * `static/currency.json`, and nothing else is edited by hand.
+ *
+ *   yarn currency           # rewrite static/currency.json
+ *   yarn currency --check   # exit 1 if a pin has drifted (CI)
+ *   yarn currency --scan    # also list the pages naming each pin
+ *
+ * ── Why watch products instead of re-reading pages ────────────────────────────
+ * The corpus carries 4,400+ `> Verified:` lines and 1,400 of them name an exact
+ * version. Re-verifying pages does not scale; watching ~40 upstream releases a
+ * year does, and a grep maps a release back to the pages that name it.
+ *
+ * ── Fields ───────────────────────────────────────────────────────────────────
+ * `source`   where "latest" comes from. Three forms, all reachable without auth:
+ *              npm:<package>        registry.npmjs.org — exact, fastest
+ *              eol:<product>        endoflife.date — ALSO gives EOL and LTS
+ *                                   dates, which npm cannot. Use it for anything
+ *                                   with a release *cycle* (runtimes, databases).
+ *              gh:<owner>/<repo>    GitHub tags — the stragglers only.
+ *
+ * `policy`   🔴 NOT optional. It is what stops the checker crying wolf.
+ *              'latest'  track the newest release.
+ *              'lts'     track the current LTS line ONLY. A newer major is not
+ *                        drift until it becomes LTS. Node 26.8.1 exists today
+ *                        and Node 24 is still correct — without this field the
+ *                        checker would demand work on 311 pages for nothing,
+ *                        and then be ignored on 2026-10-28 when it matters.
+ *              'major'   stay on `cycle`; only that line's patches are drift.
+ *              'frozen'  deliberately pinned old. `reason` is then REQUIRED.
+ *
+ * `pin`      the version the corpus targets. `null` means the track has NO
+ *            version anchor anywhere — a real defect, reported as `unanchored`,
+ *            not silently skipped.
+ * `cycle`    the release line, for policy 'major' / 'lts'.
+ * `checked`  YYYY-MM-DD the pin was last confirmed against the source by a human
+ *            or by `yarn currency`. Never back-date it.
+ * `tracks`   docs/<dir> this pin governs. Drives the per-language rollup.
+ * `names`    lowercase strings to look for in `> Verified:` lines when scanning
+ *            for affected pages. Order does not matter; keep them specific
+ *            enough not to collide (see 'motion' below).
+ */
+
+export const PINS = {
+  // ── Runtimes, databases, servers ───────────────────────────────────────────
+  node: {
+    label: 'Node.js', source: 'eol:nodejs', policy: 'lts', cycle: '24',
+    pin: '24.19.0', checked: '2026-08-31',
+    tracks: ['nodejs', 'expressjs', 'javascript', 'typescript', 'postgresql', 'real-world'],
+    names: ['node', 'node.js'],
+    note: 'Node 26 becomes LTS 2026-10-28 — 311 pages say "Active LTS" and that claim expires then.',
+  },
+  postgresql: {
+    label: 'PostgreSQL', source: 'eol:postgresql', policy: 'major', cycle: '18',
+    pin: '18.4', patchIndex: 1, checked: '2026-08-31', tracks: ['postgresql', 'nodejs'],
+    names: ['postgresql', 'postgres'],
+  },
+  mongodb: {
+    label: 'MongoDB', source: 'eol:mongodb', policy: 'latest',
+    pin: '8.0', checked: '2026-08-31', tracks: ['mongodb'], names: ['mongodb', 'mongo'],
+  },
+  redis: {
+    label: 'Redis', source: 'eol:redis', policy: 'latest',
+    pin: '8.10.0', checked: '2026-08-31', tracks: ['redis', 'nodejs'], names: ['redis'],
+  },
+  nginx: {
+    label: 'Nginx', source: 'eol:nginx', policy: 'latest',
+    pin: '1.31.3', checked: '2026-08-31', tracks: ['nginx'], names: ['nginx'],
+  },
+  docker: {
+    label: 'Docker Engine', source: 'eol:docker-engine', policy: 'latest',
+    pin: '29.7.2', checked: '2026-08-31', tracks: ['docker'], names: ['docker engine', 'docker'],
+  },
+  podman: {
+    label: 'Podman', source: 'gh:containers/podman', policy: 'latest',
+    pin: '6.1.0', checked: '2026-08-31', tracks: ['docker'], names: ['podman'],
+  },
+  python: {
+    label: 'Python', source: 'eol:python', policy: 'latest',
+    pin: '3.14', checked: '2026-08-31', tracks: ['python'], names: ['python', 'cpython'],
+  },
+  jdk: {
+    label: 'JDK (Temurin)', source: 'eol:eclipse-temurin', policy: 'lts', cycle: '25',
+    pin: '25', checked: '2026-08-31', tracks: ['java'], names: ['jdk', 'java'],
+  },
+  git: {
+    label: 'Git', source: 'gh:git/git', policy: 'latest',
+    pin: '2.55.0', checked: '2026-08-31', tracks: ['git'], names: ['git'],
+  },
+  firefox: {
+    label: 'Firefox', source: 'eol:firefox', policy: 'latest',
+    pin: '153.0.3', checked: '2026-08-31', tracks: ['css', 'react'], names: ['firefox'],
+    note: 'The browser the CSS and React harnesses measure in — a claim about computed styles is only as current as this.',
+  },
+
+  // ── The JS/TS stack ────────────────────────────────────────────────────────
+  react: {
+    label: 'React', source: 'npm:react', policy: 'latest',
+    pin: '19.2.8', checked: '2026-08-31',
+    tracks: ['react', 'jest-rtl', 'storybook', 'redux-toolkit', 'tanstack-query', 'framer-motion', 'real-world'],
+    names: ['react', 'react-dom'],
+  },
+  typescript: {
+    label: 'TypeScript', source: 'npm:typescript', policy: 'latest',
+    pin: '7.0.2', checked: '2026-08-31', tracks: ['typescript', 'real-world'], names: ['typescript'],
+  },
+  express: {
+    label: 'Express', source: 'npm:express', policy: 'latest',
+    pin: '5.2.1', checked: '2026-08-31', tracks: ['expressjs'], names: ['express'],
+  },
+  angular: {
+    label: 'Angular', source: 'npm:@angular/core', policy: 'latest',
+    pin: '22.1.4', checked: '2026-08-31', tracks: ['angular'], names: ['angular'],
+  },
+  next: {
+    label: 'Next.js', source: 'npm:next', policy: 'latest',
+    pin: '16.3.1', checked: '2026-08-31', tracks: ['react'], names: ['next.js', 'next'],
+  },
+  npm: {
+    label: 'npm', source: 'npm:npm', policy: 'latest',
+    pin: '12.0.2', checked: '2026-08-31', tracks: ['nodejs'], names: ['npm'],
+  },
+  undici: {
+    label: 'undici', source: 'npm:undici', policy: 'latest',
+    pin: '8.10.0', checked: '2026-08-31', tracks: ['nodejs'], names: ['undici'],
+  },
+  zod: {
+    label: 'Zod', source: 'npm:zod', policy: 'latest',
+    pin: '4.4.3', checked: '2026-08-31', tracks: ['nodejs', 'expressjs'], names: ['zod'],
+  },
+  valibot: {
+    label: 'Valibot', source: 'npm:valibot', policy: 'latest',
+    pin: '1.4.2', checked: '2026-08-31', tracks: ['nodejs'], names: ['valibot'],
+  },
+  esbuild: {
+    label: 'esbuild', source: 'npm:esbuild', policy: 'latest',
+    pin: '0.28.2', checked: '2026-08-31', tracks: ['typescript', 'vite'], names: ['esbuild'],
+  },
+  docusaurus: {
+    label: 'Docusaurus', source: 'npm:@docusaurus/core', policy: 'latest',
+    pin: '3.10.2', checked: '2026-08-31', tracks: [], names: ['docusaurus'],
+    note: 'The site itself, not a subject. Drift here breaks the build, not a claim.',
+  },
+
+  // ── The Java stack ─────────────────────────────────────────────────────────
+  springBoot: {
+    label: 'Spring Boot', source: 'eol:spring-boot', policy: 'latest',
+    pin: '4.1.1', checked: '2026-08-31', tracks: ['java'], names: ['spring boot'],
+  },
+  springFramework: {
+    label: 'Spring Framework', source: 'eol:spring-framework', policy: 'latest',
+    pin: '7.0.9', checked: '2026-08-31', tracks: ['java'], names: ['spring framework'],
+  },
+  mockito: {
+    label: 'Mockito', source: 'gh:mockito/mockito', policy: 'latest',
+    pin: '5.23.0', checked: '2026-08-31', tracks: ['java'], names: ['mockito'],
+  },
+  junit: {
+    label: 'JUnit', source: 'gh:junit-team/junit-framework', policy: 'latest',
+    pin: '6.0.3', checked: '2026-08-31', tracks: ['java'], names: ['junit'],
+    note: 'The repo is junit-team/junit-framework — junit-team/junit5 now 301-redirects.',
+  },
+  testcontainers: {
+    label: 'Testcontainers', source: 'gh:testcontainers/testcontainers-java', policy: 'latest',
+    pin: '2.0.5', checked: '2026-08-31', tracks: ['java'], names: ['testcontainers'],
+  },
+  jooq: {
+    label: 'jOOQ', source: 'gh:jOOQ/jOOQ', policy: 'latest',
+    pin: '3.21', checked: '2026-08-31', tracks: ['java'], names: ['jooq'],
+  },
+  flyway: {
+    label: 'Flyway', source: 'gh:flyway/flyway', policy: 'latest',
+    pin: '12', checked: '2026-08-31', tracks: ['java'], names: ['flyway'],
+  },
+
+  // ── The frontend toolchain ─────────────────────────────────────────────────
+  // 🔴 `pin: null` is deliberate and is a FINDING, not a gap in this file. These
+  // tracks were imported on 2026-08-14 and name no version anywhere, so no page
+  // can be checked against anything. See project_frontend_toolchain_currency_plan.
+  vite:       {label: 'Vite',            source: 'npm:vite',                    policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['vite'],                  names: ['vite']},
+  webpack:    {label: 'Webpack',         source: 'npm:webpack',                 policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['webpack'],               names: ['webpack']},
+  babel:      {label: 'Babel',           source: 'npm:@babel/core',             policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['babel'],                 names: ['babel']},
+  eslint:     {label: 'ESLint',          source: 'npm:eslint',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['eslint-oxlint'],         names: ['eslint']},
+  oxlint:     {label: 'Oxlint',          source: 'npm:oxlint',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['eslint-oxlint'],         names: ['oxlint']},
+  jest:       {label: 'Jest',            source: 'npm:jest',                    policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['jest-rtl'],              names: ['jest']},
+  rtl:        {label: 'Testing Library', source: 'npm:@testing-library/react',  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['jest-rtl'],              names: ['testing library', 'rtl']},
+  playwright: {label: 'Playwright',      source: 'npm:playwright',              policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['playwright'],            names: ['playwright']},
+  storybook:  {label: 'Storybook',       source: 'npm:storybook',               policy: 'latest', pin: '10.5.8', checked: '2026-08-31', tracks: ['storybook'],         names: ['storybook']},
+  rtk:        {label: 'Redux Toolkit',   source: 'npm:@reduxjs/toolkit',        policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['redux-toolkit'],         names: ['redux toolkit', 'rtk']},
+  tanstack:   {label: 'TanStack Query',  source: 'npm:@tanstack/react-query',   policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['tanstack-query'],        names: ['tanstack query', 'react query']},
+  motion:     {label: 'Motion',          source: 'npm:motion',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['framer-motion'],         names: ['framer motion', 'framer-motion'],
+    note: 'Package renamed framer-motion → motion. 14 pages still import the old name.'},
+  webVitals:  {label: 'web-vitals',      source: 'npm:web-vitals',              policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['web-vitals-performance'], names: ['web-vitals', 'web vitals']},
+};
+
+/** Tracks with no pin governing them at all — nothing to check, and worth saying so. */
+export const UNGOVERNED = ['frontend-architecture', 'real-world'];

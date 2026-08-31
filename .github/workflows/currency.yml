@@ -1,0 +1,78 @@
+# Weekly currency check — "is what the bible says still current?"
+#
+# Runs `scripts/currency.mjs` against npm, endoflife.date and GitHub tags,
+# commits the refreshed `static/currency.json`, and opens ONE issue when
+# something needs a human.
+#
+# 🔴 It lives here rather than in a scheduled Claude session or a cron on the
+# author's machine deliberately: $HOME on that machine has been wiped three
+# times, and anything scheduled there dies with it. A workflow in the repo
+# survives a reinstall.
+#
+# 🔴 It is SILENT on patch drift by design. `--check` exits 0 for patches; a
+# checker that files an issue every week is muted within a month, and then the
+# major that mattered is skimmed past.
+
+name: currency
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'      # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: currency
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # `|| true` on purpose: a non-zero exit means "a human is needed", which is
+      # the normal outcome we want to REPORT, not a broken workflow.
+      - name: Check pins
+        id: check
+        run: |
+          set +e
+          node scripts/currency.mjs --check > report.txt 2>&1
+          echo "needs_human=$?" >> "$GITHUB_OUTPUT"
+          cat report.txt
+
+      - name: Commit currency.json if it moved
+        run: |
+          if git diff --quiet -- static/currency.json; then
+            echo "no change"; exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/currency.json
+          git commit -m "currency: refresh static/currency.json"
+          git push
+
+      - name: Open or update the report issue
+        if: steps.check.outputs.needs_human != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Currency report — $(date -u +%Y-%m-%d)"
+          BODY=$(printf '%s\n\n```\n%s\n```\n\n%s\n' \
+            "Pins that need a human. Patch drift is excluded by design." \
+            "$(cat report.txt)" \
+            "Plan: \`project_currency_system.md\` in the memory store. A patch bump never causes a page to be re-read.")
+          EXISTING=$(gh issue list --label currency --state open --limit 1 --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create currency --color 0e8a16 --description "Version drift reports" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label currency --body "$BODY"
+          fi

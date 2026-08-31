@@ -1,0 +1,1017 @@
+{
+  "version": 1,
+  "generatedFrom": "src/data/pins.js",
+  "generated": "2026-08-31",
+  "horizonDays": 60,
+  "totals": {
+    "pins": 42,
+    "current": 18,
+    "patch": 5,
+    "minor": 4,
+    "major": 2,
+    "unanchored": 12,
+    "unreachable": 1,
+    "inconsistent": 6,
+    "events": 1
+  },
+  "events": [
+    {
+      "pin": "node",
+      "kind": "lts",
+      "cycle": "26",
+      "date": "2026-10-28",
+      "inDays": 58
+    }
+  ],
+  "inconsistent": [
+    "mongodb",
+    "redis",
+    "podman",
+    "springBoot",
+    "springFramework",
+    "storybook"
+  ],
+  "unreachable": [
+    "podman"
+  ],
+  "tracks": {
+    "nodejs": "minor",
+    "expressjs": "minor",
+    "javascript": "minor",
+    "typescript": "minor",
+    "postgresql": "minor",
+    "real-world": "minor",
+    "mongodb": "minor",
+    "redis": "patch",
+    "nginx": "patch",
+    "docker": "unknown",
+    "python": "none",
+    "java": "major",
+    "git": "none",
+    "css": "major",
+    "react": "major",
+    "jest-rtl": "unanchored",
+    "storybook": "patch",
+    "redux-toolkit": "unanchored",
+    "tanstack-query": "unanchored",
+    "framer-motion": "unanchored",
+    "angular": "none",
+    "vite": "unanchored",
+    "webpack": "unanchored",
+    "babel": "unanchored",
+    "eslint-oxlint": "unanchored",
+    "playwright": "unanchored",
+    "web-vitals-performance": "unanchored",
+    "frontend-architecture": "ungoverned"
+  },
+  "pins": {
+    "node": {
+      "label": "Node.js",
+      "source": "eol:nodejs",
+      "policy": "lts",
+      "pin": "24.19.0",
+      "latest": "24.20.0",
+      "newestOverall": "26.8.1",
+      "drift": "minor",
+      "eol": "2028-04-30",
+      "events": [
+        {
+          "kind": "lts",
+          "cycle": "26",
+          "date": "2026-10-28",
+          "inDays": 58
+        }
+      ],
+      "tracks": [
+        "nodejs",
+        "expressjs",
+        "javascript",
+        "typescript",
+        "postgresql",
+        "real-world"
+      ],
+      "pages": 317,
+      "claimed": "24.19.0",
+      "claimedMatchesPin": true,
+      "minority": [
+        "26.7.0×1"
+      ],
+      "error": null,
+      "note": "Node 26 becomes LTS 2026-10-28 — 311 pages say \"Active LTS\" and that claim expires then.",
+      "checked": "2026-08-31"
+    },
+    "postgresql": {
+      "label": "PostgreSQL",
+      "source": "eol:postgresql",
+      "policy": "major",
+      "pin": "18.4",
+      "latest": "18.6",
+      "newestOverall": "18.6",
+      "drift": "patch",
+      "eol": "2030-11-14",
+      "events": [],
+      "tracks": [
+        "postgresql",
+        "nodejs"
+      ],
+      "pages": 303,
+      "claimed": "18.4",
+      "claimedMatchesPin": true,
+      "minority": [
+        "17.10×12"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "mongodb": {
+      "label": "MongoDB",
+      "source": "eol:mongodb",
+      "policy": "latest",
+      "pin": "8.0",
+      "latest": "8.3.8",
+      "newestOverall": "8.3.8",
+      "drift": "minor",
+      "eol": "2029-10-31",
+      "events": [],
+      "tracks": [
+        "mongodb"
+      ],
+      "pages": 21,
+      "claimed": "5.1",
+      "claimedMatchesPin": false,
+      "minority": [
+        "8.0×5",
+        "7.5.0×2",
+        "8.2.12×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "redis": {
+      "label": "Redis",
+      "source": "eol:redis",
+      "policy": "latest",
+      "pin": "8.10.0",
+      "latest": "8.10.1",
+      "newestOverall": "8.10.1",
+      "drift": "patch",
+      "eol": false,
+      "events": [],
+      "tracks": [
+        "redis",
+        "nodejs"
+      ],
+      "pages": 17,
+      "claimed": "4.1",
+      "claimedMatchesPin": false,
+      "minority": [
+        "8.10.0×6"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "nginx": {
+      "label": "Nginx",
+      "source": "eol:nginx",
+      "policy": "latest",
+      "pin": "1.31.3",
+      "latest": "1.31.4",
+      "newestOverall": "1.31.4",
+      "drift": "patch",
+      "eol": false,
+      "events": [],
+      "tracks": [
+        "nginx"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "docker": {
+      "label": "Docker Engine",
+      "source": "eol:docker-engine",
+      "policy": "latest",
+      "pin": "29.7.2",
+      "latest": "29.7.2",
+      "newestOverall": "29.7.2",
+      "drift": "none",
+      "eol": false,
+      "events": [],
+      "tracks": [
+        "docker"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "podman": {
+      "label": "Podman",
+      "source": "gh:containers/podman",
+      "policy": "latest",
+      "pin": "6.1.0",
+      "latest": null,
+      "newestOverall": null,
+      "drift": "unknown",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "docker"
+      ],
+      "pages": 1,
+      "claimed": "6.0.0",
+      "claimedMatchesPin": false,
+      "minority": null,
+      "error": "The operation was aborted due to timeout",
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "python": {
+      "label": "Python",
+      "source": "eol:python",
+      "policy": "latest",
+      "pin": "3.14",
+      "latest": "3.14.7",
+      "newestOverall": "3.14.7",
+      "drift": "none",
+      "eol": "2030-10-31",
+      "events": [],
+      "tracks": [
+        "python"
+      ],
+      "pages": 106,
+      "claimed": "3.14",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "jdk": {
+      "label": "JDK (Temurin)",
+      "source": "eol:eclipse-temurin",
+      "policy": "lts",
+      "pin": "25",
+      "latest": "25.0.4.1+1",
+      "newestOverall": "26.0.2.1+1",
+      "drift": "none",
+      "eol": "2031-09-30",
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "git": {
+      "label": "Git",
+      "source": "gh:git/git",
+      "policy": "latest",
+      "pin": "2.55.0",
+      "latest": "2.55.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "git"
+      ],
+      "pages": 60,
+      "claimed": "2.55.0",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "firefox": {
+      "label": "Firefox",
+      "source": "eol:firefox",
+      "policy": "latest",
+      "pin": "153.0.3",
+      "latest": "154.0.1",
+      "newestOverall": "154.0.1",
+      "drift": "major",
+      "eol": false,
+      "events": [],
+      "tracks": [
+        "css",
+        "react"
+      ],
+      "pages": 48,
+      "claimed": "153.0.3",
+      "claimedMatchesPin": true,
+      "minority": [
+        "153.0×17"
+      ],
+      "error": null,
+      "note": "The browser the CSS and React harnesses measure in — a claim about computed styles is only as current as this.",
+      "checked": "2026-08-31"
+    },
+    "react": {
+      "label": "React",
+      "source": "npm:react",
+      "policy": "latest",
+      "pin": "19.2.8",
+      "latest": "19.2.8",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "react",
+        "jest-rtl",
+        "storybook",
+        "redux-toolkit",
+        "tanstack-query",
+        "framer-motion",
+        "real-world"
+      ],
+      "pages": 283,
+      "claimed": "19.2.8",
+      "claimedMatchesPin": true,
+      "minority": [
+        "19.2×4",
+        "18.3.1×1",
+        "7.29.7×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "typescript": {
+      "label": "TypeScript",
+      "source": "npm:typescript",
+      "policy": "latest",
+      "pin": "7.0.2",
+      "latest": "7.0.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "typescript",
+        "real-world"
+      ],
+      "pages": 82,
+      "claimed": "7.0.2",
+      "claimedMatchesPin": true,
+      "minority": [
+        "5.9.3×10",
+        "5.0×10",
+        "4.0×5",
+        "4.9×3",
+        "4.5×2",
+        "4.7×1",
+        "3.4×1",
+        "4.3×1",
+        "4.4×1",
+        "4.2×1",
+        "4.8×1",
+        "5.4×1",
+        "2.2×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "express": {
+      "label": "Express",
+      "source": "npm:express",
+      "policy": "latest",
+      "pin": "5.2.1",
+      "latest": "5.2.1",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "expressjs"
+      ],
+      "pages": 46,
+      "claimed": "5.2.1",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "angular": {
+      "label": "Angular",
+      "source": "npm:@angular/core",
+      "policy": "latest",
+      "pin": "22.1.4",
+      "latest": "22.1.4",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "angular"
+      ],
+      "pages": 7,
+      "claimed": "22.1.4",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "next": {
+      "label": "Next.js",
+      "source": "npm:next",
+      "policy": "latest",
+      "pin": "16.3.1",
+      "latest": "16.3.3",
+      "newestOverall": null,
+      "drift": "patch",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "react"
+      ],
+      "pages": 6,
+      "claimed": "16.3.1",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "npm": {
+      "label": "npm",
+      "source": "npm:npm",
+      "policy": "latest",
+      "pin": "12.0.2",
+      "latest": "12.0.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nodejs"
+      ],
+      "pages": 6,
+      "claimed": "12.0.2",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "undici": {
+      "label": "undici",
+      "source": "npm:undici",
+      "policy": "latest",
+      "pin": "8.10.0",
+      "latest": "8.10.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nodejs"
+      ],
+      "pages": 1,
+      "claimed": "8.10.0",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "zod": {
+      "label": "Zod",
+      "source": "npm:zod",
+      "policy": "latest",
+      "pin": "4.4.3",
+      "latest": "4.5.4",
+      "newestOverall": null,
+      "drift": "minor",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nodejs",
+        "expressjs"
+      ],
+      "pages": 3,
+      "claimed": "4.4.3",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "valibot": {
+      "label": "Valibot",
+      "source": "npm:valibot",
+      "policy": "latest",
+      "pin": "1.4.2",
+      "latest": "1.4.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nodejs"
+      ],
+      "pages": 1,
+      "claimed": "1.4.2",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "esbuild": {
+      "label": "esbuild",
+      "source": "npm:esbuild",
+      "policy": "latest",
+      "pin": "0.28.2",
+      "latest": "0.28.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "typescript",
+        "vite"
+      ],
+      "pages": 2,
+      "claimed": "0.28.2",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "docusaurus": {
+      "label": "Docusaurus",
+      "source": "npm:@docusaurus/core",
+      "policy": "latest",
+      "pin": "3.10.2",
+      "latest": "3.10.2",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": "The site itself, not a subject. Drift here breaks the build, not a claim.",
+      "checked": "2026-08-31"
+    },
+    "springBoot": {
+      "label": "Spring Boot",
+      "source": "eol:spring-boot",
+      "policy": "latest",
+      "pin": "4.1.1",
+      "latest": "4.1.1",
+      "newestOverall": "4.1.1",
+      "drift": "none",
+      "eol": "2027-07-31",
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 72,
+      "claimed": "4.1.0",
+      "claimedMatchesPin": false,
+      "minority": [
+        "4.1×24",
+        "4.1.1×7",
+        "4.0×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "springFramework": {
+      "label": "Spring Framework",
+      "source": "eol:spring-framework",
+      "policy": "latest",
+      "pin": "7.0.9",
+      "latest": "7.0.9",
+      "newestOverall": "7.0.9",
+      "drift": "none",
+      "eol": "2027-07-31",
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 146,
+      "claimed": "7.0",
+      "claimedMatchesPin": false,
+      "minority": [
+        "7.0.8×11",
+        "7.0.9×7",
+        "6.2×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "mockito": {
+      "label": "Mockito",
+      "source": "gh:mockito/mockito",
+      "policy": "latest",
+      "pin": "5.23.0",
+      "latest": "5.23.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 49,
+      "claimed": "5.23.0",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "junit": {
+      "label": "JUnit",
+      "source": "gh:junit-team/junit-framework",
+      "policy": "latest",
+      "pin": "6.0.3",
+      "latest": "6.1.3",
+      "newestOverall": null,
+      "drift": "minor",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 97,
+      "claimed": "6.0.3",
+      "claimedMatchesPin": true,
+      "minority": null,
+      "error": null,
+      "note": "The repo is junit-team/junit-framework — junit-team/junit5 now 301-redirects.",
+      "checked": "2026-08-31"
+    },
+    "testcontainers": {
+      "label": "Testcontainers",
+      "source": "gh:testcontainers/testcontainers-java",
+      "policy": "latest",
+      "pin": "2.0.5",
+      "latest": "2.0.5",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 19,
+      "claimed": "2.0.5",
+      "claimedMatchesPin": true,
+      "minority": [
+        "12.1.0×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "jooq": {
+      "label": "jOOQ",
+      "source": "gh:jOOQ/jOOQ",
+      "policy": "latest",
+      "pin": "3.21",
+      "latest": "3.21.7",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 27,
+      "claimed": "3.21",
+      "claimedMatchesPin": true,
+      "minority": [
+        "3.21.7×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "flyway": {
+      "label": "Flyway",
+      "source": "gh:flyway/flyway",
+      "policy": "latest",
+      "pin": "12",
+      "latest": "13.4.0",
+      "newestOverall": null,
+      "drift": "major",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "java"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "vite": {
+      "label": "Vite",
+      "source": "npm:vite",
+      "policy": "latest",
+      "pin": null,
+      "latest": "8.2.2",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "vite"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "webpack": {
+      "label": "Webpack",
+      "source": "npm:webpack",
+      "policy": "latest",
+      "pin": null,
+      "latest": "5.110.2",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "webpack"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "babel": {
+      "label": "Babel",
+      "source": "npm:@babel/core",
+      "policy": "latest",
+      "pin": null,
+      "latest": "8.0.1",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "babel"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "eslint": {
+      "label": "ESLint",
+      "source": "npm:eslint",
+      "policy": "latest",
+      "pin": null,
+      "latest": "10.9.1",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "eslint-oxlint"
+      ],
+      "pages": 1,
+      "claimed": "10.8.1",
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "oxlint": {
+      "label": "Oxlint",
+      "source": "npm:oxlint",
+      "policy": "latest",
+      "pin": null,
+      "latest": "1.80.0",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "eslint-oxlint"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "jest": {
+      "label": "Jest",
+      "source": "npm:jest",
+      "policy": "latest",
+      "pin": null,
+      "latest": "30.5.0",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "jest-rtl"
+      ],
+      "pages": 9,
+      "claimed": "29.7",
+      "claimedMatchesPin": null,
+      "minority": [
+        "30.4.2×1"
+      ],
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "rtl": {
+      "label": "Testing Library",
+      "source": "npm:@testing-library/react",
+      "policy": "latest",
+      "pin": null,
+      "latest": "16.3.3",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "jest-rtl"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "playwright": {
+      "label": "Playwright",
+      "source": "npm:playwright",
+      "policy": "latest",
+      "pin": null,
+      "latest": "1.62.1",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "playwright"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "storybook": {
+      "label": "Storybook",
+      "source": "npm:storybook",
+      "policy": "latest",
+      "pin": "10.5.8",
+      "latest": "10.5.10",
+      "newestOverall": null,
+      "drift": "patch",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "storybook"
+      ],
+      "pages": 1,
+      "claimed": "9.0",
+      "claimedMatchesPin": false,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "rtk": {
+      "label": "Redux Toolkit",
+      "source": "npm:@reduxjs/toolkit",
+      "policy": "latest",
+      "pin": null,
+      "latest": "2.12.0",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "redux-toolkit"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "tanstack": {
+      "label": "TanStack Query",
+      "source": "npm:@tanstack/react-query",
+      "policy": "latest",
+      "pin": null,
+      "latest": "5.102.8",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "tanstack-query"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    },
+    "motion": {
+      "label": "Motion",
+      "source": "npm:motion",
+      "policy": "latest",
+      "pin": null,
+      "latest": "13.1.1",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "framer-motion"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": "Package renamed framer-motion → motion. 14 pages still import the old name.",
+      "checked": "2026-08-31"
+    },
+    "webVitals": {
+      "label": "web-vitals",
+      "source": "npm:web-vitals",
+      "policy": "latest",
+      "pin": null,
+      "latest": "6.2.1",
+      "newestOverall": null,
+      "drift": "unanchored",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "web-vitals-performance"
+      ],
+      "pages": 0,
+      "claimed": null,
+      "claimedMatchesPin": null,
+      "minority": null,
+      "error": null,
+      "note": null,
+      "checked": "2026-08-31"
+    }
+  }
+}
