@@ -53,10 +53,21 @@ Ask of any data-layer test:
 > caught it?*
 
 If the query uses anything past the intersection dialect — `jsonb`, arrays,
-`ON CONFLICT DO UPDATE`, `SKIP LOCKED`, `DISTINCT ON`, `generate_series`, a window frame,
-a partial index, a `citext` column, a check constraint with a regular expression — then on
-H2 the answer is no, and the test is decoration. It will go green whether the production
-query works or not, which is the definition of a test that is not testing.
+`ON CONFLICT DO UPDATE`, `generate_series`, a `citext` column, a partial index, a check
+constraint with a regular expression — then on H2 the answer is no, and the test is
+decoration. It will go green whether the production query works or not, which is the
+definition of a test that is not testing.
+
+⚠️ **Two constructs that belong on a different list, because "H2 will not parse it" is the
+weaker failure.** H2 2.4.240 *does* accept `SELECT DISTINCT ON (...)` and
+`FOR UPDATE [ NOWAIT | WAIT n | SKIP LOCKED ]` — the grammar is there. What differs is the
+**semantics**, which is worse, because a parse error is a failure you cannot ignore and a
+semantic divergence is a green test. H2 states plainly that *"locking behavior for rows that
+were excluded from result using `OFFSET` / `FETCH` / `LIMIT` / `TOP` or `QUALIFY` is
+undefined"* — and `FOR UPDATE SKIP LOCKED` with a `LIMIT` is precisely the work-queue idiom.
+[01f](01f-functions-and-the-dialect.md) and [01h](01h-isolation-and-locking.md) have both in
+full. **Syntax accepted is not behaviour reproduced**, and this pair is the clearest example
+in the topic.
 
 Notice what the question does *not* ask. It does not ask whether the query is complicated,
 or whether the team is disciplined, or whether anyone has been bitten yet. It asks about a
@@ -91,8 +102,8 @@ There is a third option people reach for and it is worse than either endpoint: k
 and constrain the production SQL to what H2 will also accept.
 
 This looks like a compromise and is actually a transfer of cost from the test suite to
-production. `DISTINCT ON` becomes a window function plus a subquery, or worse, a
-`LEFT JOIN` plus grouping in Java. One `ON CONFLICT DO UPDATE` round trip becomes a
+production. `ON CONFLICT DO UPDATE` becomes a `SELECT` and a branch; a `jsonb` column becomes
+a `varchar` the application parses; a window frame becomes a second query. One `ON CONFLICT DO UPDATE` round trip becomes a
 `SELECT`, a branch, and an `INSERT` or `UPDATE` — which is also a lost-update race unless
 someone remembers to take a lock. A `jsonb` column becomes a `varchar` that the
 application parses.
@@ -122,6 +133,13 @@ the test green". It shows up as a `LEFT JOIN` plus application-side grouping whe
 would have done. If you ever find yourself asking "will H2 accept this", the test tool has
 started making production decisions, and the fix is to change the test tool rather than
 the query.
+
+**★ ⚠️ "H2 will not parse it" is the *weaker* half of this argument, and the half people quote.**
+H2 2.4.240 accepts `DISTINCT ON` and `FOR UPDATE … SKIP LOCKED`; what it does not reproduce is
+their behaviour under concurrency, and it says so itself about rows excluded by a `LIMIT`. A
+construct H2 rejects costs you a red build you cannot ignore. A construct H2 *accepts and
+approximates* costs you a green one. Prefer the first list when arguing, and reach for
+[01h](01h-isolation-and-locking.md) when someone answers "but H2 supports that".
 
 **★ A green H2 suite is evidence, just not about the thing you think.**
 It is genuine evidence that your Java compiles, that your `RowMapper` field names line up
@@ -174,17 +192,22 @@ are right and the test is close to worthless either way. In practice "simple" is
 self-reported and drifts: someone adds `ON CONFLICT DO UPDATE` for an upsert, or a `jsonb`
 column for an audit payload, or `FOR UPDATE SKIP LOCKED` for a work queue, and the H2 test
 either starts failing for a reason nobody can act on, or — worse — keeps passing on an
-approximation. The question is not "is this query simple today", it is "will anyone
+approximation. The work-queue case is the second kind: H2 parses `SKIP LOCKED` happily and
+leaves the locking of `LIMIT`-excluded rows undefined, so the test passes and the queue
+double-delivers in production. The question is not "is this query simple today", it is "will anyone
 re-evaluate the test strategy on the day it stops being simple", and the answer is no.
 
 **★ Someone proposes writing all production SQL in "portable" form so it runs on both H2 and PostgreSQL. What is wrong with that?**
 It moves cost from the test suite, where it would be visible and paid once, into
 production, where it is invisible and paid on every request. Portable SQL means giving up
-`ON CONFLICT DO UPDATE`, `DISTINCT ON`, `SKIP LOCKED`, `jsonb` operators, arrays and
-window frames — which usually means extra round trips, application-side grouping, and
-concurrency bugs that the discarded constructs existed to prevent. It also does not
-actually deliver equivalence: two engines can parse the same statement and still differ
-on `NULL` ordering, identifier case and isolation semantics. You end up with worse
+`ON CONFLICT DO UPDATE`, `jsonb` operators, arrays and window frames — which usually means
+extra round trips, application-side grouping, and concurrency bugs that the discarded
+constructs existed to prevent. And it does not actually deliver equivalence, which is the
+part that sinks the idea: two engines can **parse the same statement and still behave
+differently**. H2 accepts `DISTINCT ON` and `SKIP LOCKED` and diverges on what they do; both
+engines accept an unquoted identifier and fold it in opposite directions; both accept
+`ORDER BY` and default to opposite `NULL` placement; both accept `REPEATABLE READ` and mean
+different things by it. You end up with worse
 production code *and* a test that still cannot vouch for it.
 
 **★ How would you decide, for an existing suite, which tests should move onto a container?**
