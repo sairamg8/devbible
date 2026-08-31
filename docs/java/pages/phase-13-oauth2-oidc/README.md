@@ -17,18 +17,19 @@ flows copied from blog posts, tokens validated by accident. These pages go
 protocol-first: once you can narrate the authorization code flow from memory,
 every framework config becomes readable.
 
-🚧 **3 of 14 written.**
+🚧 **3 of 14 closed** (01, 02, 04) — **5 more part-written**: 03 (20 chunks), 05 (16),
+06 (11), 08 (14), 07 (1). A topic counts as closed only when it has a `README.md` index.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[Why OAuth2 exists](01-why-oauth2-exists/README.md)** | <span className="db-tier t-understand">Understand</span> | Delegated authorization; the password anti-pattern it killed |
 | 02 | **[The four roles](02-the-four-roles/README.md)** | <span className="db-tier t-master">Master</span> | Resource owner, client, AS, RS — mapped onto your actual stack |
-| 03 | **Authorization code flow with PKCE** *(not written yet)* | <span className="db-tier t-master">Master</span> | The one flow to know cold; why implicit and password died |
+| 03 | **Authorization code flow with PKCE** *(⚠️ 20 chunks written, index owed)* | <span className="db-tier t-master">Master</span> | The one flow to know cold; why implicit and password died |
 | 04 | **[Client credentials flow](04-client-credentials/README.md)** | <span className="db-tier t-understand">Understand</span> | Machine-to-machine tokens for service-to-service calls |
-| 05 | **The three tokens** *(not written yet)* | <span className="db-tier t-master">Master</span> | Access, refresh (rotation), ID — and where each may appear |
-| 06 | **JWT anatomy and validation** *(not written yet)* | <span className="db-tier t-master">Master</span> | RS256, `iss`/`aud`/`exp`, JWKS rotation, the classic attacks |
-| 07 | **OpenID Connect** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The authentication layer; discovery makes config one line |
-| 08 | **Spring Security as resource server** *(not written yet)* | <span className="db-tier t-master">Master</span> | `issuer-uri`, authorities mapping, the Keycloak converter |
+| 05 | **The three tokens** *(⚠️ 16 chunks written, index owed)* | <span className="db-tier t-master">Master</span> | Access, refresh (rotation), ID — and where each may appear |
+| 06 | **JWT anatomy and validation** *(⚠️ 11 chunks written, index owed)* | <span className="db-tier t-master">Master</span> | RS256, `iss`/`aud`/`exp`, JWKS rotation, the classic attacks |
+| 07 | **OpenID Connect** *(⚠️ 1 chunk written, index owed)* | <span className="db-tier t-understand">Understand</span> | The authentication layer; discovery makes config one line |
+| 08 | **Spring Security as resource server** *(⚠️ 14 chunks written, index owed)* | <span className="db-tier t-master">Master</span> | `issuer-uri`, authorities mapping, the Keycloak converter |
 | 09 | **Spring as OAuth2 client** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `oauth2Login`, `OAuth2AuthorizedClientManager` for outbound |
 | 10 | **Method security** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `@PreAuthorize`, roles vs scopes vs permissions, one layer |
 | 11 | **Running vs buying the AS** *(not written yet)* | <span className="db-tier t-know">Know</span> | Keycloak / Spring Authorization Server vs Auth0/Cognito/Entra |
