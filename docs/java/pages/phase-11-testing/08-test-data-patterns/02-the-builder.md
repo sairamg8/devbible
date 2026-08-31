@@ -170,7 +170,7 @@ they will instead go around the builder entirely.
 - What changes when the domain type is a `record` and there are no setters at all is in
   [02d · Builders and records](02d-builders-and-records.md).
 - When the reusable unit is a *scenario* rather than an object, the pattern is
-  **03 · Object mothers** *(not written yet)*.
+  [03 · Object mothers](03-object-mothers.md).
 - Getting the built object into a database, rather than into a variable, is
   [04 · Fixtures in the database](04-fixtures-in-the-database.md).
 - When the repetition is in the *cases* rather than the objects, the answer is

@@ -151,7 +151,7 @@ rather than above it.
 The instinct behind it is sound, though, and it is worth keeping: the test should *own* its
 data. What is wrong is the assumption that owning the data means writing the data. A builder
 lets the test own its data in three lines by naming only the parts it cares about — which
-is the whole idea of **02 · The builder** *(not written yet)*.
+is the whole idea of [02 · The builder](02-the-builder.md).
 
 ## What the actual fixes are, in one paragraph each
 
@@ -170,8 +170,8 @@ is the whole idea of **02 · The builder** *(not written yet)*.
 
 - The four costs this page is reacting to are in
   [01 · The forty-line setup](01-the-forty-line-setup.md).
-- The pattern that replaces the block is **02 · The builder** *(not written yet)*; the
-  scenario-shaped variant is **03 · Object mothers** *(not written yet)*.
+- The pattern that replaces the block is [02 · The builder](02-the-builder.md); the
+  scenario-shaped variant is [03 · Object mothers](03-object-mothers.md).
 - Order-dependence between tests, and why a shared row in a database is the same bug as a
   shared static field, is
   [05b · Tests that depend on each other](05b-tests-that-depend-on-each-other.md).

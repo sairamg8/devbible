@@ -184,7 +184,7 @@ half needs no Spring context at all
 - Timestamps written by JPA auditing or by the database, and how to assert on them:
   [06e · Timestamps you did not write](06g-the-clocks-you-do-not-own.md).
 - Random values, generated ids and seeded generators:
-  **06f · Random values and generated ids** *(not written yet)*.
+  [06f · Random values and generated ids](07c-generated-ids-and-seeded-randomness.md).
 - Day boundaries, DST and time zones are catalogued from the flake side in
   [14b · Time and determinism](../01-junit-5/14b-time-and-determinism.md).
 - What `Instant` is and why it is not `LocalDateTime`:

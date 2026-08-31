@@ -118,7 +118,7 @@ field list where an added field is visibly missing.
 - The shared-mutable-fixture failure these rules keep away from is in
   [01b · What the fix is not](01b-what-the-fix-is-not.md).
 - When the reusable unit is a scenario spanning several objects, the pattern is
-  **03 · Object mothers** *(not written yet)*.
+  [03 · Object mothers](03-object-mothers.md).
 
 ## Gotchas
 

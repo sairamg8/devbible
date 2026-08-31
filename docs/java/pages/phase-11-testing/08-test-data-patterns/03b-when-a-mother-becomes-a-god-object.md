@@ -170,8 +170,7 @@ fixture, which is what you want.
 **★ A mother that autowires a repository can no longer be used from a unit test.**
 Once fixture construction needs a Spring context, every test that wanted a plain object pays for
 one, and the pyramid quietly inverts. Keep object construction and persistence in separate,
-obviously-named places — the second one belongs to **04 · Fixtures in the database**
-*(not written yet)*.
+obviously-named places — the second one belongs to [04 · Fixtures in the database](04-fixtures-in-the-database.md).
 
 **★ The fan-in is the blast radius, and it is invisible in the class itself.**
 A fixture class imported by four hundred test classes cannot be changed cheaply, no matter how

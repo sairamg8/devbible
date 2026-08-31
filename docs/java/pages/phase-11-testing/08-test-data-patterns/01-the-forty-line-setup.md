@@ -132,7 +132,7 @@ it. The block is monotonic. Six months of "just add the field it needs" is exact
 forty lines happens, and no single commit in that history looks unreasonable.
 
 Costs 1 and 3 are fixed by making the test name its own data — the builder in
-**02 · The builder** *(not written yet)*. Cost 2 is fixed by giving each test its own
+[02 · The builder](02-the-builder.md). Cost 2 is fixed by giving each test its own
 object rather than a shared one, which a builder also does, and which a `static` fixture
 notably does not. Cost 4 is not fixed by any pattern: it is fixed by the block ceasing to
 exist, because there is no longer a shared place for the ratchet to operate on.
@@ -170,9 +170,9 @@ methods, which turns cost 2 into a bleed-between-tests problem as well. See
   "fixes" that are not fixes, are in
   [01b · What the fix is not](01b-what-the-fix-is-not.md).
 - The pattern that fixes costs 1 and 3 directly — defaults live somewhere else, the test
-  names only what it depends on — is **02 · The builder** *(not written yet)*.
+  names only what it depends on — is [02 · The builder](02-the-builder.md).
 - The pattern for when the *scenario* is the unit of reuse rather than the object is
-  **03 · Object mothers** *(not written yet)*.
+  [03 · Object mothers](03-object-mothers.md).
 - The lifecycle rules this page leans on — `@BeforeEach`, `@BeforeAll`, `PER_METHOD` vs
   `PER_CLASS`, and execution order — belong to
   [01 · JUnit 5](../01-junit-5/README.md), which owns the engine.

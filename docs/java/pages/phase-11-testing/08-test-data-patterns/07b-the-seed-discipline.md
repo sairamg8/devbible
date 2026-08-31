@@ -137,7 +137,7 @@ is not.
 
 Worse, `java.util.Random` is thread-safe but contended — the javadoc says so, and recommends
 `ThreadLocalRandom` *"in multithreaded designs"*, which cannot be seeded at all
-(**07c** *(not written yet)*). So the shared instance is both
+([07c](07c-generated-ids.md)). So the shared instance is both
 non-reproducible and a contention point.
 
 **The fix is one `Faker` per test**, created in `@BeforeEach` or by an extension, seeded from a
@@ -179,7 +179,7 @@ assertion stronger than one example" — that is property-based testing, not Fak
 - The rule that decides where generated values may appear:
   [07 · Faker and generated data](07-faker-and-generated-data.md).
 - Seeded JDK generators, `RandomGenerator`, and generated ids:
-  **07c · Generated ids and seeded randomness** *(not written yet)*.
+  [07c · Generated ids](07c-generated-ids.md).
 - Where per-test state lives in JUnit: [10h · Keeping state](../01-junit-5/10h-keeping-state.md).
 - Random test *ordering*, which prints its seed for exactly this reason:
   [11b · Random order](../01-junit-5/11b-random-order.md).

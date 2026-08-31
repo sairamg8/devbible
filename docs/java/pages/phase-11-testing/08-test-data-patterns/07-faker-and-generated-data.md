@@ -189,7 +189,7 @@ three generated fields say "these do not matter" more convincingly than any lite
 - Seeds, reproducibility and what a fixed seed actually buys:
   [07b · The seed discipline](07b-the-seed-discipline.md).
 - Generated identifiers, `UUID.randomUUID()` and seeded generators:
-  **07c · Generated ids and seeded randomness** *(not written yet)*.
+  [07c · Generated ids](07c-generated-ids.md).
 - The setup this is trying to shrink: [01 · The forty-line setup](01-the-forty-line-setup.md).
 - The builder these defaults live in: [02 · The builder](02-the-builder.md).
 - Named scenarios, which are the alternative to generating: [03 · Object mothers](03-object-mothers.md).

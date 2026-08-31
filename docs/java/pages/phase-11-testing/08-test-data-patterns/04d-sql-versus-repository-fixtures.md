@@ -143,8 +143,7 @@ the test rather than in a file.
 
 ## Where this connects
 
-- The builder and object-mother patterns this page assumes: **02 · The builder**
-  *(not written yet)* and **03 · Object mothers** *(not written yet)*.
+- The builder and object-mother patterns this page assumes: [02 · The builder](02-the-builder.md) and [03 · Object mothers](03-object-mothers.md).
 - The columns a hand-written `INSERT` has to fill and the sequence it leaves behind:
   [04d2 · The columns SQL has to fill](04d2-the-columns-sql-has-to-fill.md).
 - Where the `@Sql` script comes from:
