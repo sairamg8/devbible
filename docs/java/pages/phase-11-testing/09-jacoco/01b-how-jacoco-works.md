@@ -154,7 +154,7 @@ Every chunk after this one is, in some sense, a detailed reading of one row of t
 
 ## Where this connects
 
-- **[02 · Wiring it up](02-wiring-it-up.md)** — the Maven goals that implement the first row,
+- **[02 · Wiring it up](02-wiring-it-up-maven.md)** — the Maven goals that implement the first row,
   with their real defaults and phase bindings.
 - **[02b · The argLine trap](02b-the-argline-trap.md)** — the documented failure of row one, and
   the documented fix.

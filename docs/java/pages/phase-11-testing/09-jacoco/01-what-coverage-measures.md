@@ -140,7 +140,7 @@ narrow, honest uses:
   threshold, no gate and no ceremony — just someone reading the report.
 - **Seeing what a *change* did not touch.** Coverage on the diff of a pull request is a far
   better signal than coverage of the repository, because "you added forty lines and none ran"
-  is actionable in a way that "the project is at 74.3%" never is. [Chunk 07](07-coverage-in-ci.md)
+  is actionable in a way that "the project is at 74.3%" never is. [Chunk 07](07b-coverage-in-ci.md)
   is about making that visible.
 - **Stopping regression, as a floor.** A threshold that says "do not go *below* where we are"
   costs nothing and catches the pull request that quietly deletes a test class. A threshold that
