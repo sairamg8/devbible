@@ -4,7 +4,7 @@ sidebar_label: "2 · Components in the signal era"
 sidebar_position: 2
 ---
 
-> **Phases 3–5 · 35 topics · 13 Master**
+> **Phases 3–5 · 35 topics · 10 Master**
 > The component API rewritten in signals, the control flow that replaced the
 > structural directives, and change detection with the zone taken out.
 
@@ -30,7 +30,7 @@ it changes when a value is readable, which is why `static: true` and half the
 | **`output()`** — `OutputEmitterRef`, `emit()`, automatic teardown, and every way it differs from `EventEmitter` (which is still exported and still a `Subject`) | <span className="db-tier t-master">Master</span> |
 | **`model()`** — one declaration that is an input, an output and a writable signal, and the only clean way to build a `[(value)]` component | <span className="db-tier t-master">Master</span> |
 | **`viewChild()` and `viewChildren()`** — signal queries, `{read}`, and why the result is available without waiting for a lifecycle hook | <span className="db-tier t-master">Master</span> |
-| **`@Directive` — attribute directives** — adding behaviour to an element you do not own, host bindings and listeners, injecting the host `ElementRef` | <span className="db-tier t-master">Master</span> |
+| **`@Directive` — attribute directives** — adding behaviour to an element you do not own, host bindings and listeners, injecting the host `ElementRef` | <span className="db-tier t-understand">Understand</span> |
 | **Input transforms** — `booleanAttribute` (so `<my-dir disabled>` works), `numberAttribute`, custom transform functions, and how a transform widens the accepted type | <span className="db-tier t-understand">Understand</span> |
 | **`contentChild()` and `contentChildren()`** — querying projected content, `{descendants}`, and why content queries resolve later than view queries | <span className="db-tier t-understand">Understand</span> |
 | **Why signal queries removed `static: true`** — the old two-phase timing problem, and what to do with the `AfterViewInit` code you no longer need | <span className="db-tier t-understand">Understand</span> |

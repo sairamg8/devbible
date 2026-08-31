@@ -4,7 +4,7 @@ sidebar_label: "3 · Injection, streams and routing"
 sidebar_position: 3
 ---
 
-> **Phases 6–8 · 42 topics · 15 Master**
+> **Phases 6–8 · 42 topics · 13 Master**
 > The injector hierarchy that everything is resolved through, the RxJS an
 > Angular app actually needs, and a router configuration you could defend in
 > review.
@@ -29,7 +29,7 @@ component tree, and almost every confusing DI error is really a question about
 | **`inject()`** — the function form, why it replaced constructor parameters for most code, and the injection-context rule that governs where you may call it | <span className="db-tier t-master">Master</span> |
 | **`@Injectable({providedIn: 'root'})`** — the tree-shakeable provider; why a service nobody injects costs nothing, and what `'root'` actually names | <span className="db-tier t-master">Master</span> |
 | **The two injector trees** — the environment injector (application, route, `EnvironmentInjector`) and the element injector (component and directive `providers`), and the order they are searched in | <span className="db-tier t-master">Master</span> |
-| **Provider kinds** — `useClass`, `useValue`, `useFactory`, `useExisting`, plus `deps`; when a factory is the honest choice and when it is a code smell | <span className="db-tier t-master">Master</span> |
+| **Provider kinds** — `useClass`, `useValue`, `useFactory`, `useExisting`, plus `deps`; when a factory is the honest choice and when it is a code smell | <span className="db-tier t-understand">Understand</span> |
 | **`InjectionToken`** — typed tokens with factory defaults, why a plain string token loses type safety and collides, and the config-object pattern | <span className="db-tier t-master">Master</span> |
 | **`DestroyRef` and `takeUntilDestroyed()`** — cleanup tied to the injector's lifetime rather than to a component hook; the one subscription pattern to standardise on | <span className="db-tier t-master">Master</span> |
 | **Resolution modifiers** — `{optional: true}`, `{self: true}`, `{skipSelf: true}`, `{host: true}`, and the parent-directive pattern each one exists for | <span className="db-tier t-understand">Understand</span> |
@@ -84,8 +84,8 @@ are the parts that bite: guard ordering, `CanMatch` vs `CanActivate`, and what
 | Topic | Tier |
 |---|---|
 | **`provideRouter()` and the `Routes` array** — path, component, children, data; the shape of a real route table and how features are composed into it | <span className="db-tier t-master">Master</span> |
-| **`RouterOutlet` and nested routes** — the outlet as a rendering slot, child outlets, and how a route tree maps to a component tree | <span className="db-tier t-master">Master</span> |
-| **`routerLink` and `RouterLinkActive`** — array syntax, relative vs absolute paths, `queryParams`/`fragment` inputs, `exact` matching, and why `href` alone breaks the SPA | <span className="db-tier t-master">Master</span> |
+| **`RouterOutlet` and nested routes** — the outlet as a rendering slot, child outlets, and how a route tree maps to a component tree | <span className="db-tier t-understand">Understand</span> |
+| **`routerLink` and `RouterLinkActive`** — array syntax, relative vs absolute paths, `queryParams`/`fragment` inputs, `exact` matching, and why `href` alone breaks the SPA | <span className="db-tier t-understand">Understand</span> |
 | **Lazy loading** — `loadComponent` for a single route and `loadChildren` for a feature; what actually ends up in the chunk, and how to verify it did | <span className="db-tier t-master">Master</span> |
 | **Route parameters and `withComponentInputBinding()`** — params, query params and route data delivered straight into `input()` signals, retiring most `ActivatedRoute` plumbing | <span className="db-tier t-master">Master</span> |
 | **Guards as functions** — `CanActivateFn`, `CanActivateChildFn`, `CanDeactivateFn`, `CanMatchFn`; returning a `boolean`, a `UrlTree` or an observable, and the order they run in | <span className="db-tier t-master">Master</span> |

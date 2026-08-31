@@ -156,7 +156,7 @@ export const LANGUAGES = {
       {n: 9, slug: 'phase-9-http-and-data', name: 'HTTP and data', part: 'Data, forms and architecture', topics: 12, pages: 0},
       {n: 10, slug: 'phase-10-forms', name: 'Forms, all three systems', part: 'Data, forms and architecture', topics: 16, pages: 0},
       {n: 11, slug: 'phase-11-architecture-state-ui', name: 'Architecture, state and UI', part: 'Data, forms and architecture', topics: 12, pages: 0},
-      {n: 12, slug: 'phase-12-ssr-hydration', name: 'SSR, hydration and the server', part: 'Rendering on the server, and testing', topics: 12, pages: 0},
+      {n: 12, slug: 'phase-12-ssr-hydration', name: 'SSR, hydration and the server', part: 'Rendering on the server, and testing', topics: 13, pages: 0},
       {n: 13, slug: 'phase-13-testing', name: 'Testing', part: 'Rendering on the server, and testing', topics: 14, pages: 0},
       {n: 14, slug: 'phase-14-performance-build', name: 'Performance and the build', part: 'Performance, tooling and the ecosystem', topics: 12, pages: 0},
       {n: 15, slug: 'phase-15-tooling-ecosystem', name: 'Tooling, upgrades and the ecosystem', part: 'Performance, tooling and the ecosystem', topics: 12, pages: 0},

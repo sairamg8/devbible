@@ -11,7 +11,7 @@ sidebar_position: 0
 > `@angular/router@22.1.4`, not recalled from documentation.
 
 The complete topic inventory for Angular, tiered for **mastery in fullstack
-application development**. **16 phases, 210 topics**, split into 6 parts to stay
+application development**. **16 phases, 211 topics**, split into 6 parts to stay
 under the 300-line file cap.
 
 The bar is **no knowledge gaps**: the whole signal graph, the component and
@@ -131,7 +131,7 @@ the phase that everything from Phase 3 onwards assumes.
 | 9 | HTTP and data | Data, forms and architecture | 12 |
 | 10 | Forms — all three systems | Data, forms and architecture | 16 |
 | 11 | Architecture, state and UI | Data, forms and architecture | 12 |
-| 12 | SSR, hydration and the server | Rendering on the server, and testing | 12 |
+| 12 | SSR, hydration and the server | Rendering on the server, and testing | 13 |
 | 13 | Testing | Rendering on the server, and testing | 14 |
 | 14 | Performance and the build | Performance, tooling and the ecosystem | 12 |
 | 15 | Tooling, upgrades and the ecosystem | Performance, tooling and the ecosystem | 12 |
@@ -144,19 +144,19 @@ the phase that everything from Phase 3 onwards assumes.
 | **[2 · Components in the signal era](syllabus/02-components-in-the-signal-era.md)** | 3–5 | 35 | The signal-based component API, control flow and `@defer`, and change detection with the zone removed |
 | **[3 · Injection, streams and routing](syllabus/03-injection-streams-and-routing.md)** | 6–8 | 42 | The injector hierarchy, the RxJS you actually need, and a real router configuration |
 | **[4 · Data, forms and architecture](syllabus/04-data-forms-and-architecture.md)** | 9–11 | 40 | `httpResource` and interceptors, all three forms systems including signal forms, and where state lives |
-| **[5 · Rendering on the server, and testing](syllabus/05-server-and-testing.md)** | 12–13 | 26 | SSR, hydration, incremental hydration and event replay — then how any of it is tested |
+| **[5 · Rendering on the server, and testing](syllabus/05-server-and-testing.md)** | 12–13 | 27 | SSR, hydration, incremental hydration and event replay — then how any of it is tested |
 | **[6 · Performance, tooling and the ecosystem](syllabus/06-performance-and-tooling.md)** | 14–15 | 24 | Budgets, bundles, `ng update` as a survival skill, security, and the libraries worth knowing |
 
 ## Tier distribution
 
 | Tier | Topics | Share |
 |---|---|---|
-| **Master** | 58 | 28% |
-| **Understand** | 84 | 40% |
-| **Know** | 48 | 23% |
-| **When Needed** | 20 | 9% |
+| **Master** | 63 | 30% |
+| **Understand** | 116 | 55% |
+| **Know** | 27 | 13% |
+| **When Needed** | 5 | 2% |
 
-Master sits at 28%, inside the 25–30% band the brief asks for. What earns it is
+Master sits at 30%, inside the 25–30% band the brief asks for. What earns it is
 narrow and predictable: the template language, signals, DI, change detection,
 routing, forms, and the parts of the build you touch weekly. What does not:
 i18n, Web Workers, custom elements, the `upgrade` path from AngularJS, and every

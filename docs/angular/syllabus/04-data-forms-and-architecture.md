@@ -4,7 +4,7 @@ sidebar_label: "4 · Data, forms and architecture"
 sidebar_position: 4
 ---
 
-> **Phases 9–11 · 40 topics · 12 Master**
+> **Phases 9–11 · 40 topics · 11 Master**
 > Talking to a server, the three forms systems Angular now ships, and the
 > decision nobody can avoid: where does state live.
 
@@ -26,7 +26,7 @@ default shape of a read: a request that is a signal, with `value`, `status` and
 | Topic | Tier |
 |---|---|
 | **`provideHttpClient()` and `withFetch()`** — the modern setup, why `fetch` rather than `XMLHttpRequest`, and what changes for progress events when you switch | <span className="db-tier t-master">Master</span> |
-| **Typed requests and responses** — generics on `get`/`post`, `observe: 'response'` vs `'body'` vs `'events'`, `responseType`, and why the generic is a claim rather than a check | <span className="db-tier t-master">Master</span> |
+| **Typed requests and responses** — generics on `get`/`post`, `observe: 'response'` vs `'body'` vs `'events'`, `responseType`, and why the generic is a claim rather than a check | <span className="db-tier t-understand">Understand</span> |
 | **`httpResource()`** — a request expressed as a signal: reactive request functions, `value`/`status`/`error`, automatic cancellation, and when it replaces a service method returning an observable | <span className="db-tier t-master">Master</span> |
 | **Functional interceptors** — `withInterceptors([...])`, the `HttpInterceptorFn`/`HttpHandlerFn` signature, `inject()` inside one, and the auth-header, logging and error-mapping interceptors every app writes | <span className="db-tier t-master">Master</span> |
 | **Error handling** — `HttpErrorResponse`, distinguishing a network failure from a 4xx, mapping transport errors into domain errors once at the interceptor rather than at every call site | <span className="db-tier t-master">Master</span> |

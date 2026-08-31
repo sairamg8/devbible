@@ -4,7 +4,7 @@ sidebar_label: "1 · The Angular model"
 sidebar_position: 1
 ---
 
-> **Phases 0–2 · 43 topics · 17 Master**
+> **Phases 0–2 · 43 topics · 15 Master**
 > What the compiler does with your code, the component and template language it
 > compiles, and the reactive primitive that every other part of Angular 22 is
 > now expressed in.
@@ -29,7 +29,7 @@ every "why does Angular need this?" question resolves to that fact.
 | **Angular is a compiler with a framework attached** — templates are a separate language, compiled ahead of time into instruction calls; this is why metadata must be statically analysable and why `@defer` can split a bundle where no bundler could | <span className="db-tier t-master">Master</span> |
 | **Standalone by default** — `bootstrapApplication(App, appConfig)`, no `NgModule` anywhere in a v22 app; what `imports` on a component now means | <span className="db-tier t-master">Master</span> |
 | **The provider array is the application's wiring** — `ApplicationConfig.providers`, what belongs there (`provideRouter`, `provideHttpClient`, `provideZonelessChangeDetection`) and what does not | <span className="db-tier t-master">Master</span> |
-| **`ng update` is the upgrade mechanism, not `npm install`** — schematics rewrite your source; skipping a major and jumping two is the single most expensive Angular mistake | <span className="db-tier t-master">Master</span> |
+| **`ng update` is the upgrade mechanism, not `npm install`** — schematics rewrite your source; skipping a major and jumping two is the single most expensive Angular mistake (Master in Phase 15, where the mechanics live) | <span className="db-tier t-understand">Understand</span> |
 | **The build: `@angular/build`** — esbuild for output, Vite for the dev server; the Webpack builders are legacy and only kept for old configurations | <span className="db-tier t-understand">Understand</span> |
 | **`angular.json` anatomy** — projects, targets, builders, `configurations`, `fileReplacements`, `budgets`; which fields you set and which are scaffolding you never touch again | <span className="db-tier t-understand">Understand</span> |
 | **The TypeScript setup Angular requires** — the hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the `tsconfig.json` / `tsconfig.app.json` / `tsconfig.spec.json` split | <span className="db-tier t-understand">Understand</span> |
@@ -56,9 +56,9 @@ time and which is **not JavaScript** — a fact that explains most of its rules.
 | **Interpolation and template expression rules** — no assignment, no `new`, no bitwise operators, no chained statements; why the compiler forbids each | <span className="db-tier t-master">Master</span> |
 | **Property binding vs attribute binding** — `[value]` sets a DOM property, `[attr.value]` sets an HTML attribute, and the bugs that come from confusing them (`colspan`, `aria-*`, SVG) | <span className="db-tier t-master">Master</span> |
 | **Class and style bindings** — `[class.active]`, `[style.width.px]`, object and array forms, and why `NgClass`/`NgStyle` are now rarely the right answer | <span className="db-tier t-master">Master</span> |
-| **Event binding** — `(click)`, `$event`, key modifiers like `(keydown.enter)`, and what the listener is actually attached to | <span className="db-tier t-master">Master</span> |
+| **Event binding** — `(click)`, `$event`, key modifiers like `(keydown.enter)`, and what the listener is actually attached to | <span className="db-tier t-understand">Understand</span> |
 | **Two-way binding** — `[(value)]`, exactly what it desugars to, and why it only works against a matching `valueChange` output or a `model()` | <span className="db-tier t-master">Master</span> |
-| **Lifecycle hooks in full order** — `ngOnChanges` → `ngOnInit` → `ngDoCheck` → content hooks → view hooks → `ngOnDestroy`; which of them signals have made unnecessary and which have not | <span className="db-tier t-master">Master</span> |
+| **Lifecycle hooks in full order** — `ngOnChanges` → `ngOnInit` → `ngDoCheck` → content hooks → view hooks → `ngOnDestroy`; which of them signals have made unnecessary and which have not | <span className="db-tier t-understand">Understand</span> |
 | **`ChangeDetectionStrategy.OnPush` as the default posture** — what it actually skips, what still marks a component dirty, and why every component you write should have it | <span className="db-tier t-master">Master</span> |
 | **Component selectors** — element, attribute and class selectors, `:not()`, and when an attribute selector is the right call | <span className="db-tier t-understand">Understand</span> |
 | **Template reference variables and `@let`** — `#ref` on an element vs on a component vs with `exportAs`, and `@let` for a value you would otherwise recompute three times | <span className="db-tier t-understand">Understand</span> |

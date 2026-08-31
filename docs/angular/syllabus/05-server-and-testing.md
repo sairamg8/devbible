@@ -4,7 +4,7 @@ sidebar_label: "5 · Server and testing"
 sidebar_position: 5
 ---
 
-> **Phases 12–13 · 27 topics · 8 Master**
+> **Phases 12–13 · 27 topics · 7 Master**
 > Getting the first paint out of a server without breaking the app when it
 > wakes up on the client — and then proving any of it works.
 
@@ -58,7 +58,7 @@ still the thing people get wrong.
 | **Vitest as the runner** — the `@angular/build` unit-test target, the config, what a migration from Karma and Jasmine actually involves, and which assertions and spy APIs change | <span className="db-tier t-master">Master</span> |
 | **`TestBed.configureTestingModule()`** — providers, imports for standalone components, `overrideComponent`, and why the testing module is the same DI system rather than a special one | <span className="db-tier t-master">Master</span> |
 | **Testing a standalone component** — `TestBed.createComponent()`, `ComponentFixture`, `fixture.detectChanges()`, querying with `DebugElement` vs `nativeElement`, and firing a real event | <span className="db-tier t-master">Master</span> |
-| **Testing signal inputs and signal state** — `fixture.componentRef.setInput()`, asserting on a `computed`, and why reading a signal in a test needs no fixture at all | <span className="db-tier t-master">Master</span> |
+| **Testing signal inputs and signal state** — `fixture.componentRef.setInput()`, asserting on a `computed`, and why reading a signal in a test needs no fixture at all | <span className="db-tier t-understand">Understand</span> |
 | **`HttpTestingController`** — `provideHttpClientTesting()`, `expectOne`, matching by predicate, `flush`, `error`, and `verify()` in an `afterEach` so an unexpected request fails the test | <span className="db-tier t-master">Master</span> |
 | **What to test, and at which level** — the component with its template, the service alone, the pipe as a function; the tests that only assert Angular still works, and deleting them | <span className="db-tier t-understand">Understand</span> |
 | **Router testing** — `provideRouter` with a small route table, `RouterTestingHarness`, asserting a guard redirect, and testing a resolver without booting the app | <span className="db-tier t-understand">Understand</span> |
