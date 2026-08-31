@@ -194,7 +194,7 @@ padding for no gain.
 **★ Compressed oops apply to the heap only.** They say nothing about the size of a thread
 stack frame, a direct `ByteBuffer`, or metaspace. "We enabled compressed oops and RSS did
 not move" usually means the growth was never in the heap — see
-[11b · The footprint that is not in any region](11b-the-footprint-that-is-not-in-any-region.md).
+[11c · The footprint that is not in any region](11c-the-footprint-that-is-not-in-any-region.md).
 
 **★ There is no 32-bit JVM to fall back to.** The 32-bit x86 port was removed in JDK 25, and
 the tool reference notes compression *"works only for 64-bit JVMs"*. "Just run the 32-bit VM

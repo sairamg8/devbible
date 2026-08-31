@@ -167,7 +167,7 @@ guide states both. Turn it on to answer a question, then turn it off. Leaving it
 not track memory allocations by non-JVM code"* — a native library's allocations are invisible
 to it. A process whose growth NMT cannot account for is showing you exactly that, and it is a
 finding, not a failure of the tool. See
-[11b · The footprint that is not in any region](11b-the-footprint-that-is-not-in-any-region.md).
+[11c · The footprint that is not in any region](11c-the-footprint-that-is-not-in-any-region.md).
 
 **★ `jcmd` needs to reach the target process.** It works over the attach mechanism, which
 means the same user (or sufficient privilege) and a shared PID namespace. In a container,

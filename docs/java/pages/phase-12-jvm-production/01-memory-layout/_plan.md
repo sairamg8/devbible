@@ -30,7 +30,7 @@ This topic is the **map**; every later topic in the phase reads a region of it.
 | 9 | `09-compressed-oops.md` | The 32 GB cliff, zero-based vs shifted, and the heap that got *smaller* when it grew |
 | 10 | `10-strings.md` | The string pool, `intern()`, compact strings (Latin-1 vs UTF-16), string dedup |
 | 11 | `11-native-memory-tracking.md` | `-XX:NativeMemoryTracking`, `jcmd VM.native_memory`, baselines and diffs |
-| 11b | `11b-the-footprint-that-is-not-in-any-region.md` | Malloc arenas, JNI, the allocator; RSS vs the JVM's own accounting |
+| 11c | `11c-the-footprint-that-is-not-in-any-region.md` | Malloc arenas, JNI, the allocator; RSS vs the JVM's own accounting |
 | 12 | `12-the-checklist.md` | "The pod grew and the heap is flat" — the ordered questions and the tool for each |
 
 ## Verify, do not assume
