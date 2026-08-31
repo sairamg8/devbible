@@ -8,6 +8,9 @@ sidebar_position: 10
 
 > Verified: 2026-08 against **`web-features` 3.34.3** (1 186 features) and
 > **Firefox 153.0.3**, via `sandbox/css/ex03-baseline-data.mjs`.
+> Extended 2026-08-31: the same script re-run on **Firefox 154.0** and on
+> **Blink (Edge 152.0.4191.53)** — `ENGINE=blink node sandbox/css/ex03-baseline-data.mjs`.
+> Both runs recorded in `sandbox/css/tmp/gecko/` and `sandbox/css/tmp/blink/`.
 
 **"Can I use this?" is a data question, and there is a dataset.** Guessing from
 memory is how you ship a feature that has been fine for two years but is broken
@@ -96,11 +99,46 @@ lacking the *unprefixed* property — `-webkit-line-clamp` works
 ([page 11](./11-vendor-prefixes.md)). One engine's answer is not the story in
 either direction.
 
-:::note One engine on this machine
-Only Firefox is installed here, so no measurement in this bible compares
-engines. Every support claim on these pages comes from `web-features`; every
-measured number is labelled with the engine that produced it. Those are
-deliberately different sources answering different questions.
+### Now ask a second engine the same questions
+
+Added 2026-08-31, when a Blink build became available on this machine. Same
+script, same feature list, one environment variable:
+
+```console
+=== Edg/152.0.0.0 support vs Baseline — where they disagree ===
+  feature                      Edg/152.0.0.0  Baseline
+  anchor-positioning           true           Limited availability   ← ships here, NOT Baseline
+  scroll-driven-animations     true           Limited availability   ← ships here, NOT Baseline
+  masonry                      false          Limited availability
+  calc-size                    true           Limited availability   ← ships here, NOT Baseline
+  interpolate-size             true           Limited availability   ← ships here, NOT Baseline
+  line-clamp                   false          Limited availability
+  text-wrap-pretty             true           Limited availability   ← ships here, NOT Baseline
+  accent-color                 true           Limited availability   ← ships here, NOT Baseline
+```
+
+🔴 **Gecko flags two features as "works here but is not Baseline". Blink flags
+six.** Four of them — `scroll-driven-animations`, `calc-size`,
+`interpolate-size` and `text-wrap: pretty` — are `false` in Gecko and `true` in
+Blink. They are the same four that a Chrome-only workflow would wave straight
+through.
+
+This is the argument of this page, measured rather than asserted. "I tried it
+and it worked" is three times more dangerous in the engine most developers
+actually test in, because that engine ships the most not-yet-Baseline CSS.
+
+The two engines agree in the other direction too: `masonry` and `line-clamp`
+are `false` in both. `line-clamp` is the trap from
+[page 11](./11-vendor-prefixes.md) — neither engine has the *unprefixed*
+property, and `-webkit-line-clamp` works in both.
+
+:::note Two engines, still not "cross-browser"
+Gecko and Blink are measured here. **WebKit is not installed**, and Safari can
+differ from both — the four features above say nothing about what Safari ships.
+So the two sources stay separate exactly as before: every *support* claim on
+these pages comes from `web-features`, and every *measured* number is labelled
+with the engine that produced it. Two engines agreeing narrows the risk; it
+does not answer the availability question.
 :::
 
 ## The decision procedure
