@@ -17,7 +17,7 @@ This topic is the **map**; every later topic in the phase reads a region of it.
 | 2 | `02-the-process-map.md` | Every region a running JVM has, and who sizes each |
 | 3 | `03-the-heap.md` | Young/old, eden and the survivor spaces, why generations exist at all |
 | 3b | `03b-the-weak-generational-hypothesis.md` | The measured claim the design rests on, and where it fails |
-| 3c | `03c-tlabs-and-allocation.md` | Thread-local allocation buffers; pointer-bump allocation; why `new` is cheap |
+| 3c | `03c-tlabs-and-allocation.md` | Thread-local allocation buffers; pointer-bump allocation; why `new` is cheap. 🔴 The flag is `TLABSize`, **not** `InitialTLABSize` |
 | 4 | `04-metaspace.md` | Native, not heap; PermGen's removal; `MaxMetaspaceSize` and the classloader leak |
 | 5 | `05-the-code-cache.md` | JIT output lives here; segmented code cache; "CodeCache is full" and what it costs |
 | 6 | `06-thread-stacks.md` | `-Xss`, frames, `StackOverflowError`, and the thread-count × stack-size arithmetic |
@@ -34,10 +34,15 @@ This topic is the **map**; every later topic in the phase reads a region of it.
 | 12 | `12-the-checklist.md` | "The pod grew and the heap is flat" — the ordered questions and the tool for each |
 
 ## Verify, do not assume
-- ⚠️ **Compact object headers**: confirm JEP 519's *product* status in JDK 25 and that it is
-  **off by default**; quote the JEP's own size numbers.
+- ✅ **RESOLVED** — JEP 519 product in 25, off by default, no unlock flag; size numbers belong to
+  **JEP 450**; **JEP 534 makes it the default in Release 27**. See `research_java_p12_t01_*`.
 - ⚠️ **Compressed oops**: the exact `-XX:ObjectAlignmentInBytes` interaction and the real
   threshold (it is not exactly 32 GB — it depends on alignment). Quote the source.
-- ⚠️ **`-XX:MaxDirectMemorySize` default** on JDK 25 — state what it actually derives from.
-- ⚠️ **NMT overhead** — the tuning guide states a figure; quote it rather than estimating.
-- ⚠️ Whether `UseStringDeduplication` is still G1-only on JDK 25.
+- ✅ **RESOLVED** — it derives from `Runtime.getRuntime().maxMemory()`, i.e. **equals `-Xmx`**
+  (`jdk/internal/misc/VM.java`). Not in the man page. Mapped files are bounded by nothing.
+- ✅ **RESOLVED** — **5–10% JVM performance drop**, plus **two machine words per malloc**.
+- ✅ **RESOLVED — it is NOT.** Serial, Parallel and ZGC gained support in **JDK 18**.
+- ⚠️ 🔴 **`-XX:InitialTLABSize` DOES NOT EXIST.** The flag is **`-XX:TLABSize`**, default 0 =
+  ergonomic. `ResizeTLAB` (true) and `MinTLABSize` (2K) are in the source, not the man page.
+- ⚠️ **Weakest surviving claim in this topic:** that direct buffers land in NMT's `Other`
+  category. The guide does not name them. Confirm before repeating; prefer `BufferPoolMXBean`.

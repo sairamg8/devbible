@@ -1,7 +1,7 @@
 ---
 title: "Native Memory Tracking is the only tool that accounts for the JVM's memory by subsystem rather than by heap, which makes it the answer to \"the heap is flat and the pod keeps getting killed\" — and it costs 5–10% throughput, so you turn it on to answer a question and then turn it off"
 sidebar_label: "11 · Native Memory Tracking"
-sidebar_position: 68
+sidebar_position: 69
 ---
 
 <span className="db-tier t-understand">Understand</span>

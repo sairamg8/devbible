@@ -11,8 +11,8 @@ This topic owns everything from the moment the JVM prints `java.lang.OutOfMemory
 | # | File | What it argues |
 |---|---|---|
 | 1 | `01-it-is-an-error-not-an-exception.md` | Why catching it is almost always wrong, and the state the JVM is in |
-| 2 | `02-the-eight-messages.md` | `Java heap space`, `GC overhead limit exceeded`, `Metaspace`, `Requested array size…`, `unable to create native thread`, `Direct buffer memory`, `Compressed class space`, `reason stack_trace_with_native_method` — each with its own cause |
-| 2b | `02b-the-message-decides-the-fix.md` | Why "add more heap" is wrong for five of the eight |
+| 2 | `02-the-messages.md` | 🔴 **SEVEN documented** (`Java heap space`, `GC Overhead limit exceeded`, `Requested array size exceeds VM limit`, `Metaspace`, `request size bytes for reason. Out of swap space?`, `Compressed class space`, `reason stack_trace (Native method)`) **plus two real but undocumented** — the native-thread and direct-buffer messages. Each with its own cause |
+| 2b | `02b-the-message-decides-the-fix.md` | Why "add more heap" is wrong for most of them — and why `HeapDumpOnOutOfMemoryError` covers only the heap ones |
 | 3 | `03-getting-a-heap-dump.md` | `HeapDumpOnOutOfMemoryError`, `HeapDumpPath`, `jcmd GC.heap_dump`, `jmap` |
 | 3b | `03b-the-dump-you-could-not-take.md` | Size, pause, disk, and dumping a container |
 | 4 | `04-reading-a-dump-in-mat.md` | Histogram, dominator tree, retained vs shallow heap |
@@ -27,8 +27,11 @@ This topic owns everything from the moment the JVM prints `java.lang.OutOfMemory
 | 8 | `08-the-checklist.md` | From the error line to the fix, in order |
 
 ## Verify, do not assume
-- ⚠️ 🔴 The **exact** set and wording of the `OutOfMemoryError` messages on JDK 25 — from the
-  troubleshooting guide, not from memory. If there are more than eight, write them all.
+- ✅ **RESOLVED — seven documented, plus two.** Exact strings banked in
+  `research_java_p12_metaspace_codecache_tlabs.md` and `research_java_p12_t01_*`.
+- ✅ **RESOLVED — `jmap` is EXPERIMENTAL AND UNSUPPORTED on JDK 25** (man page's opening note).
+  Prefer `jcmd GC.heap_dump`. ⚠️ They have **opposite defaults**: `jmap` needs `live`,
+  `jcmd` needs `-all` to include unreachable objects.
 - ⚠️ Whether `GC overhead limit exceeded` applies to every collector or only some.
 - ⚠️ `jmap -dump:live` semantics and whether `jmap` is deprecated in favour of `jcmd` on 25.
 - ⚠️ **No fabricated MAT screenshots or dump statistics.** Describe, quote, or schematise.

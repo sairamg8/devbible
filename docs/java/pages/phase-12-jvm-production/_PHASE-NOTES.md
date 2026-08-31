@@ -29,7 +29,7 @@ reference, the **GraalVM** reference, the **JMH** samples in the OpenJDK repo, a
 
 ---
 
-## 🔴 The five facts that make most online material wrong on this phase
+## 🔴 The six facts that make most online material wrong on this phase
 
 1. 🔴 **ZGC is generational, and there is no other kind any more.** Generational ZGC became
    the default ZGC mode in JDK 23 (JEP 474) and the **non-generational mode was removed in
@@ -54,7 +54,12 @@ reference, the **GraalVM** reference, the **JMH** samples in the OpenJDK repo, a
    **`-XX:MaxRAMPercentage`** — a percentage of the *cgroup* limit, so one image works at
    every memory size. Topic 03 owns this and the OOMKilled-vs-`OutOfMemoryError`
    distinction, which is the single most misdiagnosed production symptom in the phase.
-5. 🔴 **Heap is not the process.** `-Xmx` bounds the Java heap only; metaspace, code cache,
+5. 🔴 **`-XX:MaxDirectMemorySize` defaults to `-Xmx`, and nothing bounds mapped files.** The man
+   page hides the first behind *"the JVM chooses the size … automatically"*; `jdk/internal/misc/VM.java`
+   resets it to `Runtime.getRuntime().maxMemory()`. So the direct-memory ceiling is a **second copy
+   of the heap ceiling**, and raising `-Xmx` raises it too. Mapped buffers use separate pools and
+   are bounded by **no JVM flag at all**. Both matter for topic 03's container arithmetic.
+6. 🔴 **Heap is not the process.** `-Xmx` bounds the Java heap only; metaspace, code cache,
    thread stacks, GC structures, direct/mapped `ByteBuffer`s and the native allocator all
    live outside it. "Heap looks fine but the pod got OOMKilled" is a *native footprint*
    question, answered with **Native Memory Tracking** (`-XX:NativeMemoryTracking=summary`,
@@ -69,7 +74,13 @@ the phase current rather than a 2019 rerun:
 - **JEP 519 · Compact Object Headers** — promoted from experimental to **product** in JDK 25.
   Shrinks the header from 96–128 bits to **64 bits** on 64-bit platforms.
   🔴 **It is a product feature, not a default** — `-XX:+UseCompactObjectHeaders` still has to
-  be asked for. Topic 01 owns the header anatomy; topic 13 owns the flag's status.
+  be asked for, and JEP 519 lists making it the default as an explicit **non-goal**. No unlock
+  flag is needed any more. The size numbers belong to **JEP 450**, not 519.
+  🔴 **JEP 534 · Compact Object Headers by Default is `Closed/Delivered` for Release 27** — so
+  "eventually" has a version. It **requires compressed class pointers** (shrinking them 32→22
+  bits), and it **silently disables itself under legacy locking**. ⚠️ Relatedly,
+  **`UseCompressedClassPointers` is deprecated in JDK 25 and obsolete in 26** — do not write
+  advice that depends on turning it off. Topic 01 owns the header anatomy; topic 13 owns flag status.
 - **JEP 515 · Ahead-of-Time Method Profiling** and **JEP 514 · AOT Command-Line Ergonomics**,
   on top of **JEP 483 · AOT Class Loading & Linking** (JDK 24). The AOT *cache* is the
   successor story to CDS. Topic 10 owns packaging and the cache; topic 11 contrasts it with
@@ -93,9 +104,16 @@ the phase current rather than a 2019 rerun:
 - **03 Heap sizing in containers** owns cgroups, `MaxRAMPercentage`, the OOMKilled loop,
   requests/limits, and why `-Xmx` in a Dockerfile is a bug. Links to the Docker section
   rather than re-teaching containers.
-- **04 `OutOfMemoryError`** owns the eight messages the JVM can print after that word, heap
+- **04 `OutOfMemoryError`** owns the messages the JVM can print after that word, heap
   dumps (`-XX:+HeapDumpOnOutOfMemoryError`, `jcmd GC.heap_dump`), MAT, dominator trees, and
   the usual suspects (unbounded cache, `ThreadLocal` on a pooled thread, classloader leak).
+  🔴 **It is SEVEN documented messages, not eight** — the JDK 25 troubleshooting guide lists
+  `Java heap space`, `GC Overhead limit exceeded`, `Requested array size exceeds VM limit`,
+  `Metaspace`, `request size bytes for reason. Out of swap space?`, `Compressed class space`,
+  `reason stack_trace (Native method)`. The direct-buffer and native-thread messages are **real
+  but not on that list**; say "seven documented, plus these two".
+  🔴 **`-XX:+HeapDumpOnOutOfMemoryError` fires only for HEAP exhaustion** (man page, verbatim);
+  it does nothing for metaspace, class space, direct buffers or native threads.
 - **05 Thread dumps** owns `jcmd Thread.print` / `jstack`, every thread state, deadlock
   detection, and reading a dump of a stuck service. **Virtual threads' dump story
   (`jcmd Thread.dump_to_file`) belongs here**, and it links back to Phase 6.
@@ -127,6 +145,12 @@ the phase current rather than a 2019 rerun:
 
 ## Hard rules for this phase specifically
 
+0. 🔴 **The `java` man page is not the whole truth — read the source when it is silent.** Several
+   defaults that matter here (`CompressedClassSpaceSize` = 1 GB, `MetaspaceSize` = 21 MB,
+   `MaxDirectMemorySize` = `-Xmx`, the TLAB flags, `ExitOnOutOfMemoryError`) are **absent from the
+   man page entirely**. `raw.githubusercontent.com/openjdk/jdk/jdk-25%2B36/src/hotspot/...` is
+   fetchable and authoritative; `curl -A "Mozilla/5.0"` gets JEPs that 403 WebFetch. Banked in
+   `research_java_p12_*` in the memory store — **read those before authoring.**
 1. 🔴 **NO sandbox, NO Docker, NO invented output.** There is no JVM run behind these pages.
    **Never fabricate a GC log line, a heap dump summary, a thread dump, a JFR event table,
    a flame graph, a benchmark number or a metric value.** Where a page needs to show output

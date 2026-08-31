@@ -1,7 +1,7 @@
 ---
 title: "String deduplication makes duplicate strings share one backing array without touching the objects, which is why it needs no code change, why `==` still returns false afterwards, and why it does nothing at all for the short-lived strings a web request creates"
 sidebar_label: "10c · String deduplication"
-sidebar_position: 67
+sidebar_position: 68
 ---
 
 <span className="db-tier t-understand">Understand</span>

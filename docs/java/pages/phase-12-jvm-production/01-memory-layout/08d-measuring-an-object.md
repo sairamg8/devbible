@@ -123,7 +123,7 @@ This reports the layout-relevant configuration — address size, object alignmen
 references and class pointers are compressed, and the header sizes in effect. 🔴 **Print this
 alongside any size you record**, because a size without its configuration is not a measurement,
 it is a number. That is the same discipline as
-[09c · Verifying what the JVM chose](09c-verifying-what-the-jvm-chose.md), applied to layout.
+[09d · Verifying what the JVM chose](09d-verifying-what-the-jvm-chose.md), applied to layout.
 
 ## Running it without adding a dependency
 

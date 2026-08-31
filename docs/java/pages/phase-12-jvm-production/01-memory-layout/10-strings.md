@@ -1,7 +1,7 @@
 ---
 title: "Strings are usually the largest single thing in a Java heap, and since Java 9 they are not what you think they are — a byte array plus a one-byte encoding flag, which halved most heaps and made a small number of applications slightly slower"
 sidebar_label: "10 · Strings in the heap"
-sidebar_position: 65
+sidebar_position: 66
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -184,7 +184,7 @@ non-BMP character — an emoji, a rare CJK ideograph — arrives and one "charac
 **★ Disabling compact strings changes memory *and* changes nothing else you can see.** There is
 no API difference and no exception; a service run with `-XX:-CompactStrings` simply uses more
 heap. If a flag like that is inherited in a `JAVA_OPTS` line, nothing will ever surface it
-except reading the flags — see [09c](09c-verifying-what-the-jvm-chose.md).
+except reading the flags — see [09d](09d-verifying-what-the-jvm-chose.md).
 
 ## Interview questions
 

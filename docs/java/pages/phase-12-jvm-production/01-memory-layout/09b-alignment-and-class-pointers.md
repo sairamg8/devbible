@@ -1,6 +1,6 @@
 ---
-title: "You can buy a compressed heap larger than 32 GB by widening object alignment, but the documentation warns in its own note that you may get nothing for it — and the compression of class pointers is a second mechanism that people keep mistaking for the first"
-sidebar_label: "09b · Alignment and class pointers"
+title: "You can buy a compressed heap larger than 32 GB by widening object alignment, and the documentation warns in its own note that you may get nothing for it — the one JVM flag whose right answer genuinely differs per application"
+sidebar_label: "09b · Widening object alignment"
 sidebar_position: 63
 ---
 
@@ -13,15 +13,16 @@ sidebar_position: 63
 > JDK 25 · Spring Boot 4.1.0.
 > **No sandbox** — flags, quoted documentation and arithmetic only. No captured JVM output.
 
-**[09](09-compressed-oops.md) explained why the cliff exists. This chunk is about what you
-can do at the edge of it: the one documented lever that moves the boundary, and the second
-compression that travels with the first and is constantly confused with it. Both are places
-where the obvious expectation — bigger compressed heap must be better; these are the same
-feature — is wrong, and the documentation says so in its own words.**
+**[09](09-compressed-oops.md) explained why the cliff exists. This chunk is about the one
+documented lever that moves it — widening object alignment — and about why the obvious
+expectation, that a bigger compressed heap must be better, is wrong often enough that the
+documentation warns about it in its own note.**
 
-Once you have decided what to set, [09c · Verifying what the JVM chose](09c-verifying-what-the-jvm-chose.md)
-is how you confirm the JVM did what you intended, which on this subject is never safe to
-assume.
+The *other* compression, the one that travels with compressed oops and is constantly mistaken
+for it, is in [09c · Class pointers and compact headers](09c-class-pointers-and-compact-headers.md).
+Once you have decided what to set,
+[09d · Verifying what the JVM chose](09d-verifying-what-the-jvm-chose.md) is how you confirm the
+JVM did what you intended, which on this subject is never safe to assume.
 
 ## Buying a bigger compressed heap with `ObjectAlignmentInBytes`
 
@@ -91,80 +92,6 @@ inherit the alignment they were made at. And because it applies to *every* objec
 interacts with compact object headers below: a header saving that alignment rounds back up
 is a saving you did not get.
 
-## Compressed class pointers: the second compression with a similar name
-
-Two different compressions travel together and are constantly confused:
-
-- **Compressed oops** (`-XX:+UseCompressedOops`) compress *references in the heap* — object
-  fields and array elements.
-- **Compressed class pointers** (`-XX:+UseCompressedClassPointers`) compress the *class word
-  in the object header*, from 8 bytes to 4, by placing class metadata in a bounded region —
-  the **compressed class space** — carved out of metaspace.
-
-The class word is in *every object*, so this saves 4 bytes per object across the whole heap,
-independently of how many references those objects contain. It is why disabling compressed
-oops hurts twice: the class pointers go with them, so a primitive-heavy heap that "should
-not care" about compressed oops still pays 4 bytes per object when compression is lost.
-
-### The compressed class space is its own exhaustion path
-
-The compressed class space is a **reserved region with its own size limit**, distinct from
-metaspace at large. That is why `OutOfMemoryError` has a separate `Compressed class space`
-message: an application that generates enormous numbers of classes — heavy proxying, script
-compilation, repeated redeploys leaking classloaders — can exhaust the class space while
-metaspace still has room.
-
-The three symptoms are worth telling apart, because they have different fixes:
-
-| Message | Region | Usual cause |
-|---|---|---|
-| `Metaspace` | Metaspace at large | Class metadata growth; classloader leak |
-| `Compressed class space` | The bounded class-pointer region | Very large class count, or too small a `CompressedClassSpaceSize` |
-| `Java heap space` | The heap | Live set exceeds `-Xmx` |
-
-[Topic 04 · `OutOfMemoryError`](../04-out-of-memory-error/_plan.md) owns the full set of
-messages; [04 · Metaspace](04-metaspace.md) owns the region itself.
-
-⚠️ **Check the current defaults on JDK 25 before setting `-XX:CompressedClassSpaceSize`.**
-Its sizing interacts with `MaxMetaspaceSize` and with whether compressed class pointers are
-enabled at all, and that interaction has changed across releases. Read the values off the
-JDK you are actually running — [09c](09c-verifying-what-the-jvm-chose.md) shows how.
-
-## Where compact object headers fit — and why two published numbers disagree
-
-JEP 519's compact object headers shrink the header itself, and are a **different saving from
-compressed oops**: headers versus fields. They compose. Compact headers reduce the fixed
-per-object overhead; compressed oops reduce the per-reference cost inside it.
-
-The interaction worth understanding is with **alignment**, because it explains why the two
-numbers you will see quoted look inconsistent:
-
-- **JEP 519** describes the header shrinking from **96–128 bits down to 64 bits** — that is
-  4 to 8 bytes of header removed.
-- The **`java` tool reference** describes the realised saving as *"4 bytes per object (on
-  average)"*.
-
-Both are correct, and the gap between them is alignment. A theoretical 8-byte header saving
-on an object that is padded up to the next 8-byte boundary anyway gives back nothing; only
-objects whose size crosses a boundary actually shrink. Averaged over a real heap, roughly
-half the theoretical saving survives padding.
-
-The tool reference is also unusually forward-looking about the option's future, which is
-worth quoting because it tells you how to treat it today:
-
-> *"Enables compact object headers. By default, this option is disabled. Enabling this option
-> reduces memory footprint in the Java heap by 4 bytes per object (on average) and often
-> improves performance.*
->
-> *The feature remains disabled by default while it continues to be evaluated. In a future
-> release it is expected to be enabled by default, and eventually will be the only mode of
-> operation."*
-> — JDK 25 `java` tool reference, `-XX:+UseCompactObjectHeaders`
-
-🔴 **Product, but not default.** JEP 519 promoted it out of experimental in JDK 25, so it is
-a supported option rather than a curiosity — but you still have to ask for it.
-[08b · Compact object headers](08b-compact-object-headers.md) owns the header layout in full.
-
 ## Gotchas
 
 **★ `ObjectAlignmentInBytes` is not free space.** Every object is padded up to the new
@@ -181,32 +108,13 @@ alignment is not usable under a different one.
 workloads.** They gain almost nothing from compressed references and pay the full padding
 cost. If your heap is mostly large arrays, cross the boundary uncompressed instead.
 
-**★ Disabling compressed oops disables compressed class pointers too.** You lose 4 bytes per
-reference *and* 4 bytes per object header. People budget for the first and are surprised by
-the second — and the second hits even the workloads that were supposed to be indifferent.
+**★ Alignment applies to arrays too, and that is where it hurts most.** Every array is padded
+to the same boundary, so a heap of many small arrays — `byte[16]` chunks, short `Object[]` nodes —
+loses the padding on each one. Costing the change on your objects alone understates it.
 
-**★ `Compressed class space` is a different `OutOfMemoryError` from `Metaspace`.** They have
-different regions, different limits and different fixes. Raising `MaxMetaspaceSize` does not
-help a class-space exhaustion, and neither does raising `-Xmx`. Read the message.
-
-**★ Compact object headers save less than the JEP's header numbers suggest.** The JEP's
-96–128 → 64 bits is the header; the tool reference's *"4 bytes per object (on average)"* is
-what survives alignment padding. Quoting the first number as the heap saving overstates it,
-often by half.
-
-**★ Compact object headers are product but still off by default on JDK 25.** "It's a product
-feature in 25" does not mean it is on. The tool reference is explicit — *"By default, this
-option is disabled"* — and equally explicit that this is temporary: *"eventually will be the
-only mode of operation."* Plan for the change; do not assume it has happened.
-
-**★ Compact headers and a widened alignment fight each other.** Compact headers save bytes
-that alignment then rounds back up. At 16-byte alignment a large fraction of the header
-saving disappears into padding. If you are setting both, the combination needs measuring —
-the two savings do not simply add.
-
-**★ An article's number for `CompressedClassSpaceSize` is not your JVM's number.** These
-defaults have moved across releases and are affected by other flags, including whether
-compressed class pointers are enabled at all. Read them off the JDK you are running.
+**★ Widening alignment on a heap under 32 GB buys nothing at all.** The flag only exists to move
+the compressed-oops ceiling. Below the ceiling there is nothing to move, so all you have bought is
+padding. Check the heap size before the flag.
 
 ## Interview questions
 
@@ -219,45 +127,6 @@ heap. The tool reference warns about exactly this — *"you may not realize any 
 using compressed pointers with large Java heap sizes"*. Whether it wins depends on how
 reference-dense the objects are, so it must be measured. It also has to be set identically
 anywhere a heap dump, CDS archive or benchmark is compared, because it changes layout.
-
-**★ What is the difference between compressed oops and compressed class pointers?**
-Compressed oops compress references *in the heap* — object fields and array elements.
-Compressed class pointers compress the *class word in the object header* from 8 bytes to 4,
-by placing class metadata in a bounded region called the compressed class space, carved out
-of metaspace. They are separate mechanisms that are enabled and disabled together in
-practice, which is why turning off compressed oops costs you twice: 4 bytes per reference
-and another 4 bytes per object. It is also why a primitive-heavy heap, which "should not
-care" about compressed oops, still pays something when compression is lost.
-
-**★ A service dies with `OutOfMemoryError: Compressed class space`. What is your first move,
-and what is definitely not the fix?**
-The first move is to read the message rather than the word "OutOfMemoryError", because it
-names a specific bounded region: the compressed class space inside metaspace, which holds
-class metadata addressed by compressed class pointers. Definitely not the fix: raising
-`-Xmx`, which sizes the heap and is unrelated, or raising `MaxMetaspaceSize`, which sizes a
-different region. The real causes are an enormous number of loaded classes — heavy dynamic
-proxying, generated classes, script compilation — or a classloader leak keeping dead classes
-alive, or simply a `CompressedClassSpaceSize` too small for a legitimately class-heavy
-application. You distinguish a leak from legitimate growth by watching whether the
-loaded-class count ever comes down.
-
-**★ Compact object headers are a product feature in JDK 25. Should you turn them on?**
-Probably worth testing, and definitely worth understanding, but the answer is "measure".
-The documentation says it *"reduces memory footprint in the Java heap by 4 bytes per object
-(on average) and often improves performance"*, and also that it *"remains disabled by default
-while it continues to be evaluated"* and that *"eventually will be the only mode of
-operation"*. So the direction of travel is clear, and the risk is mostly in tooling and in
-any code that assumes a header layout. The gain is largest for heaps of many small objects
-and negligible for heaps of few large ones — the same shape of argument as compressed oops.
-
-**★ Why do JEP 519 and the `java` tool reference quote different savings for the same
-feature?**
-Because they measure different things. The JEP measures the header, which goes from 96–128
-bits to 64 — 4 to 8 bytes. The tool reference measures the realised heap saving, *"4 bytes
-per object (on average)"*, which is what remains after object alignment rounds sizes back up
-to a multiple of 8. An object that would have shrunk by 8 bytes but was going to be padded to
-the same size anyway saves nothing. Roughly half the theoretical saving survives, which is
-exactly the gap between the two numbers.
 
 **★ You inherit a service running `-Xmx36g -XX:ObjectAlignmentInBytes=16`. Critique it.**
 The alignment flag is doing real work here: without it, 36 GB would be over the 32 GB
@@ -278,5 +147,37 @@ of 16, which reclaims much of what the header gave back. The combination is not 
 its benefit is entirely empirical and could easily be worse than either alone. I would also
 ask what the alignment is *for* — if the heap is under 32 GB, raising alignment buys nothing
 at all, since compression was never in danger, and is pure padding cost.
+
+**★ Why is `ObjectAlignmentInBytes` capped at 256, and what does the cap imply?**
+Because the compressed-oop shift is what alignment buys you, and the documented heap limit is
+`4GB × ObjectAlignmentInBytes` — 256 gives a shift of 8 and a 1 TB ceiling. The implication is
+that compressed oops simply do not reach past about a terabyte no matter what you set, so above
+that the question does not arise and you run uncompressed. In practice the padding cost makes
+anything past 16 or 32 hard to justify long before you reach the cap.
+
+**★ You raise alignment to 16 and the heap gets *bigger*, not smaller. Explain.**
+Because you paid the padding immediately and the saving is conditional. Every object is now
+rounded up to a multiple of 16, which costs roughly half of all size classes 8 bytes each, while
+the 4-bytes-per-reference saving only materialises if the objects are reference-dense. On a heap
+of large primitive arrays there are almost no references to compress, so you took the whole cost
+and got none of the benefit — which is precisely the case the documentation's own note warns
+about when it says you "may not realize any benefits".
+
+{/* FOOTER */}
+
+**★ Why is `ObjectAlignmentInBytes` capped at 256, and what does the cap imply?**
+Because the compressed-oop shift is what alignment buys you, and the documented heap limit is
+`4GB × ObjectAlignmentInBytes` — 256 gives a shift of 8 and a 1 TB ceiling. The implication is
+that compressed oops simply do not reach past about a terabyte no matter what you set, so above
+that the question does not arise and you run uncompressed. In practice the padding cost makes
+anything past 16 or 32 hard to justify long before you reach the cap.
+
+**★ You raise alignment to 16 and the heap gets *bigger*, not smaller. Explain.**
+Because you paid the padding immediately and the saving is conditional. Every object is now
+rounded up to a multiple of 16, which costs roughly half of all size classes 8 bytes each, while
+the 4-bytes-per-reference saving only materialises if the objects are reference-dense. On a heap
+of large primitive arrays there are almost no references to compress, so you took the whole cost
+and got none of the benefit — which is precisely the case the documentation's own note warns
+about when it says you "may not realize any benefits".
 
 {/* FOOTER */}

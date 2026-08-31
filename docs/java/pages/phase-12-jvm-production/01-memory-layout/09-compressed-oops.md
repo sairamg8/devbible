@@ -30,7 +30,7 @@ This chunk owns the **mechanism and the cliff**. The levers you can pull —
 `ObjectAlignmentInBytes` and the separate compression of class pointers — are in
 [09b · Alignment and class pointers](09b-alignment-and-class-pointers.md), and the commands
 that tell you what your JVM actually chose are in
-[09c · Verifying what the JVM chose](09c-verifying-what-the-jvm-chose.md).
+[09d · Verifying what the JVM chose](09d-verifying-what-the-jvm-chose.md).
 
 ## What an oop is, and why compressing it pays
 
@@ -184,7 +184,7 @@ dereference. Only the `gc+heap+coops` log tells you which you got.
 banner in the default log configuration, and no metric that flips. The only evidence is the
 `gc+heap+coops` log tag, which you have to have asked for. Bake it into your standard
 startup logging if your heap is anywhere near the boundary —
-[09c](09c-verifying-what-the-jvm-chose.md) has the command.
+[09d](09d-verifying-what-the-jvm-chose.md) has the command.
 
 **★ Compressed oops do nothing for primitive-heavy heaps.** A heap that is mostly `byte[]`,
 `long[]` or off-heap buffers has almost no references to compress. Crossing 32 GB costs
@@ -273,7 +273,7 @@ capacity is real. If it is reference-dense structures, you have three options: s
 `-Xlog:gc+heap+coops` rather than assuming the flag did what you intended.
 
 **★ How would you detect that a production JVM had silently lost compressed oops?**
-Nothing alerts on it, so you have to look — [09c](09c-verifying-what-the-jvm-chose.md) is the
+Nothing alerts on it, so you have to look — [09d](09d-verifying-what-the-jvm-chose.md) is the
 full set of commands. `-Xlog:gc+heap+coops=info` at startup reports the
 heap base and shift and is the direct evidence; `jcmd <pid> VM.flags` on a running process
 shows whether `UseCompressedOops` ended up true. Indirectly, you would see the live set after

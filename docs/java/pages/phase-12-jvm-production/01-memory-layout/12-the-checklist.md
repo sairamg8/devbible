@@ -1,7 +1,7 @@
 ---
 title: "\"The pod grew and the heap is flat\" is not one question but seven, asked in a fixed order, and the value of the order is that each answer eliminates a region — this is the whole topic compressed into the sequence you run at three in the morning"
 sidebar_label: "12 · The checklist"
-sidebar_position: 71
+sidebar_position: 73
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -65,15 +65,25 @@ for a problem that was never in the heap.
 
 The word after the colon determines the fix, and only one of the messages means "add heap":
 
-| Message | Region |
-|---|---|
-| `Java heap space` | The heap — step 4 |
-| `GC overhead limit exceeded` | The heap, plus a collector spending its life on it |
-| `Metaspace` | Class metadata — [04 · Metaspace](04-metaspace.md) |
-| `Compressed class space` | The bounded class-pointer region — [09b](09b-alignment-and-class-pointers.md) |
-| `unable to create native thread` | Thread stacks or an OS limit — [06](06-thread-stacks.md) |
-| `Direct buffer memory` | Native, via `ByteBuffer` — [07](07-direct-and-mapped-buffers.md) |
-| `Requested array size exceeds VM limit` | A single allocation, not the heap's total |
+The JDK 25 troubleshooting guide documents **seven** detail messages. Two more are real but come
+from elsewhere in the JVM and are not on that list — worth knowing, because looking for them in
+the guide and not finding them makes people doubt what they are seeing:
+
+| Message | Region | |
+|---|---|---|
+| `Java heap space` | The heap — step 4 | documented |
+| `GC Overhead limit exceeded` | The heap, plus a collector spending its life on it | documented |
+| `Requested array size exceeds VM limit` | A single allocation, not the heap's total | documented |
+| `Metaspace` | Class metadata — [04 · Metaspace](04-metaspace.md) | documented |
+| `request size bytes for reason. Out of swap space?` | The OS is out of swap, not the JVM out of heap | documented |
+| `Compressed class space` | The bounded class-pointer region — [09c](09c-class-pointers-and-compact-headers.md) | documented |
+| `reason stack_trace (Native method)` | A native frame's allocation | documented |
+| `unable to create native thread: possibly out of memory or process/resource limits reached` | Thread stacks or an OS limit — [06](06-thread-stacks.md) | from HotSpot, not the guide |
+| `Cannot reserve N bytes of direct buffer memory (allocated: …, limit: …)` | Native, via `ByteBuffer` — [07](07-direct-and-mapped-buffers.md) | from `Bits`, not the guide |
+
+⚠️ **Note the last two are quoted in full deliberately.** They are commonly paraphrased as
+"unable to create native thread" and "Direct buffer memory", and searching a log for those short
+forms works — but searching the *documentation* for them does not, because they are not in it.
 
 [Topic 04](../04-out-of-memory-error/_plan.md) owns the full set and each one's causes.
 
@@ -149,7 +159,7 @@ than commands, and skipping it is how a `MALLOC_ARENA_MAX` change gets made for 
 | Heap flat, NMT flat, RSS rising | Which mapping? | `pmap` — [11c](11c-the-footprint-that-is-not-in-any-region.md) |
 | RSS rises then plateaus at peak | Allocator retention, probably | Watch longer — [11c](11c-the-footprint-that-is-not-in-any-region.md) |
 | Objects bigger than expected | Which layout flags? | JOL — [08d](08d-measuring-an-object.md) |
-| Heap over 32 GB, capacity fell | Compressed oops lost | [09](09-compressed-oops.md), [09c](09c-verifying-what-the-jvm-chose.md) |
+| Heap over 32 GB, capacity fell | Compressed oops lost | [09](09-compressed-oops.md), [09d](09d-verifying-what-the-jvm-chose.md) |
 
 ## What to do before the next incident
 
@@ -158,9 +168,18 @@ Most of this checklist is cheaper if three decisions were made earlier, and all 
 1. 🔴 **`-XX:+HeapDumpOnOutOfMemoryError` with a `HeapDumpPath` on a volume that survives a
    restart.** A dump you did not take is a dump you cannot analyse, and the container's
    filesystem is gone by the time you look. [01d](01d-taking-a-heap-dump-on-purpose.md).
+
+   ⚠️ **But know what it does not cover.** The man page is explicit: *"This applies only to
+   `OutOfMemoryError` exceptions caused by Java Heap exhaustion; it does not apply to
+   `OutOfMemoryError` exceptions thrown directly from Java code, nor by the JVM for other types
+   of resource exhaustion (such as native thread creation errors)."* So it gets you **nothing**
+   for metaspace, compressed class space, direct buffer or native-thread exhaustion — four of the
+   nine rows above. `-XX:+ExitOnOutOfMemoryError` and `-XX:+CrashOnOutOfMemoryError` are the
+   broader net (both `product`, both default `false`, and neither is in the man page), because
+   they fire on *any* out-of-memory error thrown from the JVM.
 2. **GC logging on, permanently, rotated.** `-Xlog:gc*` with `filecount` and `filesize` costs
    almost nothing and is the only record of what the heap was doing before the restart. If the
-   heap is anywhere near 32 GB, add `gc+heap+coops` too — [09c](09c-verifying-what-the-jvm-chose.md).
+   heap is anywhere near 32 GB, add `gc+heap+coops` too — [09d](09d-verifying-what-the-jvm-chose.md).
 3. **Decide your NMT policy now.** It cannot be attached to a running JVM. Either accept the
    documented 5–10% cost permanently, or make sure you can restart one replica with
    `-XX:NativeMemoryTracking=summary` in minutes rather than in a release cycle.
@@ -188,6 +207,15 @@ schedule is a way of not finding out which of five unrelated causes you have.
 
 **★ NMT cannot be turned on after the fact.** If it was off when the incident happened, no amount
 of `jcmd` will produce the data. That decision was made at launch.
+
+**★ `-XX:+HeapDumpOnOutOfMemoryError` only covers *heap* exhaustion.** The man page says so in
+as many words. A metaspace, compressed-class-space, direct-buffer or native-thread
+`OutOfMemoryError` produces no dump however carefully you configured the flag. "We have heap
+dumps enabled" is not the same as "we will have evidence".
+
+**★ Two of the nine `OutOfMemoryError` messages are not in the documentation.** The native-thread
+and direct-buffer messages come from HotSpot and from `Bits` respectively. Failing to find them in
+the troubleshooting guide does not mean you misread the log.
 
 **★ The heap dump you configured is on a filesystem that no longer exists.** Ephemeral container
 storage disappears with the container. `HeapDumpPath` has to point at something mounted, or the

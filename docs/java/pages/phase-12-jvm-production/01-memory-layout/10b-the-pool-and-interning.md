@@ -1,7 +1,7 @@
 ---
 title: "The string pool holds literals and nothing else, `intern()` is a native call that costs more than people expect, and the fact that `==` on strings sometimes works is precisely what makes it one of the most durable bugs in Java"
 sidebar_label: "10b · The pool and interning"
-sidebar_position: 66
+sidebar_position: 67
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -100,7 +100,7 @@ java -XX:+PrintStringTableStatistics -version
 ⚠️ **Read the default off your own JDK.** Secondary sources disagree about the current value and
 it has changed across releases; `PrintFlagsFinal` is authoritative for the JVM in front of you
 and takes two seconds. This is the same discipline as
-[09c · Verifying what the JVM chose](09c-verifying-what-the-jvm-chose.md).
+[09d · Verifying what the JVM chose](09d-verifying-what-the-jvm-chose.md).
 
 Sizing the table matters for the same reason sizing any hash table matters: a table too small
 for the number of interned strings degrades lookups toward a linear scan of a bucket, and
