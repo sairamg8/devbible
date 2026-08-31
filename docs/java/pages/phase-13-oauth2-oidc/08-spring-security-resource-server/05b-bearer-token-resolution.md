@@ -104,6 +104,14 @@ private static @Nullable String resolveToken(@Nullable String... accessTokens) {
 So a client that sets the header *and* a form parameter gets 400. It only fires when the
 alternative transports are enabled — with the defaults, there is only one source to check.
 
+## Where the token can come from instead
+
+The `Authorization` header is the default and the only transport enabled out of the box.
+Three alternatives — a form parameter, a query parameter, a differently-named header — plus
+a resolver you write yourself, are
+[05c · Alternative token transports](05c-alternative-token-transports.md). Read that page
+before enabling any of them; two of the three change your CSRF analysis.
+
 ## Gotchas
 
 **★ `Bearer` followed by two spaces fails the regex with `invalid_token`.**
