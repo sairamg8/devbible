@@ -18,24 +18,26 @@ bundler could, why the upgrade path runs through `ng update` rather than
 `npm install`, and why a published library on npm contains function calls you
 have never heard of.
 
-🚧 **Scaffolded — 0 of 12 written.** The twelve topics below are the phase's
-running order and each has its sidebar entry; the pages themselves are the next
-piece of work. Every link in the table below will resolve once they land.
+🚧 **Scaffolded — 0 of 12 written.** The table below is the phase's running
+order, tier by tier; the pages themselves are the next piece of work. Titles are
+deliberately **not links yet** — a link to a page that does not exist is a broken
+link, and this repo builds with none. Each row becomes a link as its topic
+lands.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
-| 01 | **[A compiler with a framework attached](01-compiler-with-a-framework-attached/README.md)** | <span className="db-tier t-master">Master</span> | Templates are a separate language, compiled ahead of time into instruction calls |
-| 02 | **[Standalone by default](02-standalone-by-default/README.md)** | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
-| 03 | **[The provider array is the wiring](03-the-provider-array/README.md)** | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
-| 04 | **[`ng update`, not `npm install`](04-ng-update-not-npm-install/README.md)** | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
-| 05 | **[The build: `@angular/build`](05-the-angular-build/README.md)** | <span className="db-tier t-understand">Understand</span> | esbuild for output, Vite for the dev server; Webpack builders are legacy |
-| 06 | **[`angular.json` anatomy](06-angular-json-anatomy/README.md)** | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |
-| 07 | **[The TypeScript setup Angular requires](07-the-typescript-setup/README.md)** | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
-| 08 | **[What `ng new` produces in v22](08-what-ng-new-produces/README.md)** | <span className="db-tier t-understand">Understand</span> | The file tree, `app.config.ts`, `app.routes.ts`, `main.ts`, line by line |
-| 09 | **[The release train](09-the-release-train/README.md)** | <span className="db-tier t-understand">Understand</span> | Majors every six months, 6 active + 12 LTS, and how to read a changelog |
-| 10 | **[Partial compilation](10-partial-compilation/README.md)** | <span className="db-tier t-know">Know</span> | `ɵɵngDeclareComponent` in published libraries, and what the linker does |
-| 11 | **[JIT vs AOT](11-jit-vs-aot/README.md)** | <span className="db-tier t-know">Know</span> | Where JIT still exists, and why it is not a deployment option |
-| 12 | **[Dev-mode-only behaviour](12-dev-mode-only-behaviour/README.md)** | <span className="db-tier t-know">Know</span> | `isDevMode()`, `ngDevMode`, `provideNgReflectAttributes()`, and what vanishes |
+| 01 | **A compiler with a framework attached** | <span className="db-tier t-master">Master</span> | Templates are a separate language, compiled ahead of time into instruction calls |
+| 02 | **Standalone by default** | <span className="db-tier t-master">Master</span> | `bootstrapApplication(App, appConfig)`, no `NgModule`, and what `imports` now means |
+| 03 | **The provider array is the wiring** | <span className="db-tier t-master">Master</span> | `ApplicationConfig.providers` — what belongs there and what does not |
+| 04 | **`ng update`, not `npm install`** | <span className="db-tier t-understand">Understand</span> | Schematics rewrite your source; skipping a major is the expensive mistake |
+| 05 | **The build: `@angular/build`** | <span className="db-tier t-understand">Understand</span> | esbuild for output, Vite for the dev server; Webpack builders are legacy |
+| 06 | **`angular.json` anatomy** | <span className="db-tier t-understand">Understand</span> | Projects, targets, builders, `configurations`, `fileReplacements`, `budgets` |
+| 07 | **The TypeScript setup Angular requires** | <span className="db-tier t-understand">Understand</span> | The hard `>=6.0 <6.1` peer pin, `strictTemplates`, and the tsconfig split |
+| 08 | **What `ng new` produces in v22** | <span className="db-tier t-understand">Understand</span> | The file tree, `app.config.ts`, `app.routes.ts`, `main.ts`, line by line |
+| 09 | **The release train** | <span className="db-tier t-understand">Understand</span> | Majors every six months, 6 active + 12 LTS, and how to read a changelog |
+| 10 | **Partial compilation** | <span className="db-tier t-know">Know</span> | `ɵɵngDeclareComponent` in published libraries, and what the linker does |
+| 11 | **JIT vs AOT** | <span className="db-tier t-know">Know</span> | Where JIT still exists, and why it is not a deployment option |
+| 12 | **Dev-mode-only behaviour** | <span className="db-tier t-know">Know</span> | `isDevMode()`, `ngDevMode`, `provideNgReflectAttributes()`, and what vanishes |
 
 ## Phase gate
 
