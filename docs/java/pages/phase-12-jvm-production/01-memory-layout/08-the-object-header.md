@@ -98,61 +98,6 @@ flag does not appear in `globals.hpp` at all. Any mark-word diagram you find con
 `biased_lock:1` and `epoch:2` describes JDK 14 or earlier. Reproducing one in an interview is a
 reliable way to date your knowledge.
 
-## The tag bits and what they mean
-
-`markWord.hpp` again, verbatim:
-
-```text
-//  - the two lock bits are used to describe three states: locked/unlocked and monitor.
-//
-//    [ptr             | 00]  locked             ptr points to real header on stack (stack-locking in use)
-//    [header          | 00]  locked             locked regular object header (fast-locking in use)
-//    [header          | 01]  unlocked           regular object header
-//    [ptr             | 10]  monitor            inflated lock (header is swapped out, UseObjectMonitorTable == false)
-//    [header          | 10]  monitor            inflated lock (UseObjectMonitorTable == true)
-//    [ptr             | 11]  marked             used to mark an object
-//    [0 ............ 0| 00]  inflating          inflation in progress (stack-locking in use)
-```
-
-Note that `00` has two different meanings depending on the locking implementation in use. JDK 25's
-default is the newer one:
-
-```cpp
-product(int, LockingMode, LM_LIGHTWEIGHT,
-        "(Deprecated) Select locking mode: "
-        "0: (Deprecated) monitors only (LM_MONITOR), "
-        "1: (Deprecated) monitors & legacy stack-locking (LM_LEGACY), "
-        "2: monitors & new lightweight locking (LM_LIGHTWEIGHT, default)")
-```
-
-The two legacy modes are marked `(Deprecated)`; `LM_LIGHTWEIGHT` is the default and the only
-non-deprecated one. JEP 450 describes what each does:
-
-> *"**Lightweight locking** is used when the locked object's monitor is uncontended, no thread
-> control methods (`wait()`, `notify()`, etc.) are called, and no JNI locking is used. In such
-> cases, HotSpot atomically flips the tag bits in the object header from 01 (unlocked) to 00
-> (lightweight-locked). No additional data structures are required, and no other header bits are
-> used."*
->
-> *"**Monitor locking** is used when the locked object's monitor is contended, thread control
-> methods are used, or lightweight locking is otherwise inadequate. To indicate this state, HotSpot
-> atomically flips the tags bits in the object header from 01 (unlocked) or 00 (lightweight-locked)
-> to 10 (monitor-locked)."*
-
-And why the legacy mode had to go before headers could shrink:
-
-> *"HotSpot also supports the legacy stack-locking mechanism. This spiritual predecessor to
-> lightweight locking associates the locked object with the locking thread by copying the object
-> header to the thread's stack and overwriting the object header with the pointer to the header
-> copy. This is problematic for compact object headers because it overwrites the object header and
-> thus loses crucial type information. Therefore, compact object headers are not compatible with
-> legacy locking. If the JVM is configured to run with both legacy locking and compact object
-> headers then compact object headers are disabled."*
-
-That paragraph is worth remembering because it is a silent-downgrade rule: combine
-`-XX:LockingMode=1` with `-XX:+UseCompactObjectHeaders` and you get ordinary headers with no
-error.
-
 ## The class word
 
 JEP 450, verbatim:
@@ -222,25 +167,11 @@ the same as `byte[8]` after alignment, and why an array of many small arrays is 
 proposition from one large array — a point [08c · Alignment and padding](08c-alignment-and-padding.md)
 develops.
 
-## The identity hash code lives in the header, and only once
+## Where the locking and hashing story continues
 
-`Object.hashCode()`'s default implementation returns an *identity* hash that must stay stable for
-the object's lifetime, including across garbage collections that move the object. It cannot be
-derived from the address, therefore, so HotSpot computes it lazily on first request and stores it
-in the mark word's 31 hash bits.
-
-Three consequences follow:
-
-- **An object that has never been hashed has no hash stored.** Calling
-  `System.identityHashCode(o)` on it mutates the header. This is a write to a field you did not
-  know existed, on an object you may be treating as immutable.
-- **The hash and the lock state compete for the same word.** Under the legacy stack-locking mode
-  the mark word is displaced onto the locking thread's stack, so a hash request on a
-  stack-locked object has to find the displaced header. Under `LM_LIGHTWEIGHT` the header stays in
-  place for the uncontended case, which is one of the reasons the newer mode was needed.
-- **Identity hash is 31 bits, not 32.** The source computes
-  `hash_bits = max_hash_bits > 31 ? 31 : max_hash_bits`, so the value is always non-negative in
-  practice. Do not write code that depends on that.
+The two lock bits, the three lock states, why JDK 25's default `LockingMode` matters for header
+layout, and how the identity hash code gets into the same word are
+[08e · The mark word as lock word and hash word](08e-the-mark-word-locking-and-hashing.md).
 
 ## Gotchas
 
@@ -257,17 +188,6 @@ It is not an arbitrary limit and no flag raises it. If you find advice to set
 `markWord.hpp`: `unused_gap_bits = LP64_ONLY(4) … // Reserved for Valhalla`. JEP 450's risks
 section says the same. Treating them as free space in your mental model will make the compact
 layout's arithmetic look wrong.
-
-**★ `-XX:LockingMode` is deprecated in JDK 25 in two of its three values.**
-The flag's own help text marks `LM_MONITOR` and `LM_LEGACY` as `(Deprecated)`. Setting
-`-XX:LockingMode=1` to "restore old behaviour" also silently disables compact object headers if
-you asked for them, because JEP 450 states the two are incompatible.
-
-**★ `System.identityHashCode()` writes to the object.**
-The identity hash is computed lazily and stored in the mark word on first request. Calling it —
-directly, or indirectly by putting the object in an `IdentityHashMap`, or through a default
-`hashCode()` — mutates the header of an object you may believe is immutable, and interacts with
-whatever the locking subsystem is doing to the same word.
 
 **★ The `Klass*` in the header does not point at a `java.lang.Class`.**
 It points into metaspace, at HotSpot's internal `Klass` structure. The `java.lang.Class` object is
@@ -328,24 +248,6 @@ need that type information do not have to cooperate with the locking, hashing, a
 subsystems"*. Compact object headers fold the compressed class pointer into the mark word, which
 means locking can no longer overwrite the word (hence the removal of legacy stack-locking as an
 option) and GC self-forwarding needs a dedicated bit instead of overwriting the header.
-
-**★ What happens to the mark word when you `synchronized` on an object?**
-It depends on the lock state. In the uncontended case under JDK 25's default `LM_LIGHTWEIGHT`
-mode, HotSpot atomically flips the tag bits from `01` (unlocked) to `00` (lightweight-locked) and
-touches nothing else — JEP 450: *"No additional data structures are required, and no other header
-bits are used."* If the monitor becomes contended, or `wait()`/`notify()` is used, or JNI locking
-is involved, the lock inflates: the tag bits become `10` and an `ObjectMonitor` is created. In the
-legacy stack-locking mode, which is deprecated in JDK 25, the whole header was copied to the
-locking thread's stack and replaced with a pointer to that copy — which is precisely why that mode
-is incompatible with compact headers.
-
-**★ Why can the identity hash code not just be the object's address?**
-Because `Object.hashCode()`'s contract requires the value to be stable for the object's lifetime,
-and a moving collector relocates objects. So HotSpot computes an identity hash on first request and
-stores it in the mark word's 31 hash bits, where it survives relocation. The side effect worth
-knowing is that the first call to `System.identityHashCode(o)` — or anything that reaches the
-default `hashCode()`, including inserting into an `IdentityHashMap` — *writes* to the object's
-header.
 
 **★ Why does the header dominate footprint for some applications and not others?**
 Because it is a fixed cost per object, so what matters is object *count*, not total bytes. JEP 450

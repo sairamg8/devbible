@@ -126,7 +126,7 @@ Concretely, none of the following appears in any NMT category:
 The diagnostic consequence is simple and worth memorising: **if NMT's total is materially
 below RSS, the difference is in that list**, and the next tools are `pmap -x <pid>`,
 `/proc/<pid>/smaps_rollup`, and `MALLOC_ARENA_MAX`. That case is
-[11b · The footprint that is not in any region](11b-the-footprint-that-is-not-in-any-region.md).
+[11c · The footprint that is not in any region](11c-the-footprint-that-is-not-in-any-region.md).
 
 ## Reading the map in practice
 

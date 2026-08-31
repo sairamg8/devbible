@@ -110,7 +110,7 @@ When a JVM's memory looks wrong, ask these in order. Each eliminates a family of
    allocates. The Troubleshooting Guide is explicit: *"Since NMT doesn't track memory
    allocations by non-JVM code, you may have to use tools supported by the operating system
    to detect memory leaks in native code."* That case is
-   [11b · The footprint that is not in any region](11b-the-footprint-that-is-not-in-any-region.md).
+   [11c · The footprint that is not in any region](11c-the-footprint-that-is-not-in-any-region.md).
 
 The mechanics of steps 4 and 5 are [11 · Native Memory Tracking](11-native-memory-tracking.md);
 the whole sequence is written out as a runnable checklist in

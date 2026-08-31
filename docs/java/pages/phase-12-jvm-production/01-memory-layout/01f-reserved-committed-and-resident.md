@@ -144,7 +144,7 @@ glibc creates per-thread `malloc` arenas — up to eight times the core count by
 memory freed into an arena is not necessarily returned to the kernel. On a JVM with hundreds
 of threads this can be hundreds of megabytes of RSS that no JVM tool will ever account for.
 `MALLOC_ARENA_MAX=2` in the container environment is the usual mitigation, and
-[11b · The footprint that is not in any region](11b-the-footprint-that-is-not-in-any-region.md)
+[11c · The footprint that is not in any region](11c-the-footprint-that-is-not-in-any-region.md)
 is where it is worked through.
 
 **★ Swap turns an OOMKill into a latency incident, which is worse.**
