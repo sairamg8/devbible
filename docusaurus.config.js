@@ -19,6 +19,9 @@ const searchContexts = fs
   .map((entry) => `docs/${entry.name}`)
   .sort();
 
+// Verification builds skip the search index — see the `themes` note below.
+const FAST_BUILD = process.env.FAST_BUILD === 'true';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dev Bible',
@@ -85,7 +88,15 @@ const config = {
   // after `yarn build`. `yarn start` shows a search box that finds nothing —
   // that is the documented behaviour, not a fault. Verify with
   // `yarn build && yarn serve`.
-  themes: [
+  //
+  // ⚡ Skipped entirely when FAST_BUILD=true (`yarn build:fast`). The plugin's
+  // postBuild hook re-parses every built HTML file with Cheerio in the MAIN
+  // process, after SSG has already peaked — at ~4,900 pages that is the single
+  // longest and heaviest stage of the build. A verification build only needs
+  // to know that routes resolve and MDX compiles, so it does not pay for it.
+  // 🔴 The output of a FAST_BUILD is therefore NOT deployable: search finds
+  // nothing. `yarn build` (no flag) is the one that ships.
+  themes: FAST_BUILD ? [] : [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
