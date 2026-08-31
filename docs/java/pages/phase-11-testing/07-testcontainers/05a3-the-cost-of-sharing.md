@@ -93,7 +93,7 @@ the cache holds:
 That last sentence is the point: a container bean is *already* shared across test classes, for
 exactly as long as the context that owns it is cached — so you get the sharing the singleton was
 invented for, plus correct shutdown ordering, without a static field. The mechanics belong to
-**04 · @ServiceConnection** *(not written yet)* and to
+[04 · @ServiceConnection](04-serviceconnection.md) and to
 [05a](05a-holders-interfaces-and-wiring.md)'s `@ImportTestcontainers` section.
 
 ⚠️ **One consequence people miss:** a container bean's lifetime is tied to a *cache key*. Anything
@@ -146,13 +146,16 @@ and asserts only on rows it created.
   discipline has to hold for every author forever. It is the cheapest strategy at runtime and the
   most fragile socially.
 
-🔴 **Which one to use, and the migration mechanics behind option 3, belong to
-**06 · Schema and data** *(not written yet)* and to the Flyway topic, which already covers testing
-migrations against a container in detail:
+🔴 Which one to use, and the mechanics of each, belong to
+[06 · Schema and data](06-schema-and-data.md) — specifically
+[06d · The rollback strategy](06d-the-rollback-strategy.md),
+[06e · Truncating between tests](06e-truncating-between-tests.md) and
+[06f · SQL scripts and unique data](06f-sql-scripts-and-unique-data.md) — and to the Flyway topic,
+which already covers testing migrations against a container in detail:
 [11 · Testing migrations](../../phase-10-data-access/11-flyway-migrations/11-testing-migrations.md),
 [11b · Wiring the container](../../phase-10-data-access/11-flyway-migrations/11b-wiring-the-container.md)
 and [11b2 · Making it fast](../../phase-10-data-access/11-flyway-migrations/11b2-making-it-fast.md).
-Read those rather than inventing a fifth strategy here.**
+**Read those rather than inventing a fifth strategy here.**
 
 ⚠️ Two of these four strategies stop working the moment the suite runs in parallel, and the
 extension's own javadoc has something to say about parallel execution that the documentation site

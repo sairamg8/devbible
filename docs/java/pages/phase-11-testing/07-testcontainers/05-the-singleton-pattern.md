@@ -9,10 +9,8 @@ sidebar_position: 40
 > Verified: 2026-08-31 against the **Testcontainers 2.0.5 source tarball**
 > ([tag `2.0.5`](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)) — read directly:
 > `modules/junit-jupiter/src/main/java/org/testcontainers/junit/jupiter/TestcontainersExtension.java`
-> and `Testcontainers.java`, `core/src/main/java/org/testcontainers/containers/GenericContainer.java`,
-> `core/src/main/java/org/testcontainers/utility/{ResourceReaper,RyukResourceReaper,RyukContainer,JVMHookResourceReaper,TestcontainersConfiguration}.java`,
-> `core/src/main/java/org/testcontainers/DockerClientFactory.java`, plus `docs/features/configuration.md`
-> and `docs/supported_docker_environment/index.md` from the same tag.
+> and `Testcontainers.java` (whose javadoc is quoted verbatim), and
+> `core/src/main/java/org/testcontainers/containers/GenericContainer.java`.
 > Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing on this page is a container log, a

@@ -112,7 +112,7 @@ Reading `ContainerFieldsImporter` pins down the rules the javadoc summarises:
 Once the container is a bean, **Spring owns the lifecycle** — started before all other beans,
 stopped after them, and tied to the cached application context rather than to the JVM. That is a
 genuinely different design from the singleton, it is what Boot 4.1 recommends, and the reasons are
-in [05a3](05a3-the-cost-of-sharing.md) and in **04 · @ServiceConnection** *(not written yet)*.
+in [05a3](05a3-the-cost-of-sharing.md) and in [04 · @ServiceConnection](04-serviceconnection.md).
 
 ## Wiring any of them into Spring
 
@@ -146,7 +146,7 @@ the habit then gets copied into a test where the container is started by the ext
 value is read too early.
 
 Boot 4.1 also offers `DynamicPropertyRegistrar`, the `@Bean`-friendly form that does not require a
-static method; the full comparison belongs to **04b · @DynamicPropertySource** *(not written yet)*.
+static method; the full comparison belongs to [04c · @DynamicPropertySource](04c-dynamicpropertysource.md).
 
 ⚠️ These properties become part of the context's merged configuration, so **every test class that
 extends this base shares one context cache key** — which is exactly what you want, and is the thing
