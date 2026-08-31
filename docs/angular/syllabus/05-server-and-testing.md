@@ -4,7 +4,7 @@ sidebar_label: "5 · Server and testing"
 sidebar_position: 5
 ---
 
-> **Phases 12–13 · 27 topics · 7 Master**
+> **Phases 12–13 · 27 topics · 8 Master**
 > Getting the first paint out of a server without breaking the app when it
 > wakes up on the client — and then proving any of it works.
 
