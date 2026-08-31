@@ -161,7 +161,7 @@ toolchains, which is itself a signal about how rough they are.
   configurable package list, and the reason its default list is not enough on a Log4j 2 codebase.
 - **[04b · Equivalent mutants](04b-equivalent-mutants.md)** — `FRETEQUIV`, `FSEQUIVDIV` and
   `FSEQUIVEQUALS` are the automated part of a problem that has no complete automated solution.
-- **[03c · Optional mutators](03c-optional-mutators.md)** — the mirror image: operators that are
+- **[03d · Optional mutators](03d-optional-mutators.md)** — the mirror image: operators that are
   *off* by default because they generate too many equivalent or unstable mutants.
 - **[08 · Test data patterns](../08-test-data-patterns/02c-where-builders-live-and-lombok.md)**
   covers Lombok's `@Builder` in tests; the `lombok` feature here is why Lombok-generated production
