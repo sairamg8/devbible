@@ -11,6 +11,7 @@ const typescript = summarise('typescript');
 const node = summarise('nodejs');
 const express = summarise('expressjs');
 const react = summarise('react');
+const angular = summarise('angular');
 const postgres = summarise('postgresql');
 const git = summarise('git');
 const mongodb = summarise('mongodb');
@@ -76,6 +77,12 @@ const LAYERS = [
         to: '/docs/react',
         done: true,
         data: react,
+      },
+      {
+        name: 'Angular',
+        desc: 'Signals, zoneless change detection, the signal component API, signal forms, httpResource and SSR — targeting Angular 22, the current major. Syllabus written; pages not started',
+        to: '/docs/angular',
+        data: angular,
       },
     ],
   },
