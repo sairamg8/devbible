@@ -1,7 +1,7 @@
 ---
 title: "The extension never stops a container in afterAll — it puts each one in JUnit's Store as a CloseableResource and lets JUnit close it, which is the single fact that explains reverse teardown order, the per-subclass restart, and every one of the six messages you can get out of this module"
 sidebar_label: "03c · The Store and the messages"
-sidebar_position: 18
+sidebar_position: 15
 ---
 
 <span className="db-tier t-understand">Understand</span>

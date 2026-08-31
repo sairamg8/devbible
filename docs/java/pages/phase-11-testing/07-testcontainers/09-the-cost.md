@@ -1,7 +1,7 @@
 ---
 title: "Testcontainers costs you a container runtime on every machine that runs the suite, an image pull the first time, and a startup on every fresh application context — and the honest answer to all three is not to make containers cheaper but to run far fewer tests that need one"
 sidebar_label: "09 · The cost"
-sidebar_position: 80
+sidebar_position: 48
 ---
 
 <span className="db-tier t-understand">Understand</span>

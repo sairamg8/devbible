@@ -1,7 +1,7 @@
 ---
 title: "The SSL annotations that sit beside @ServiceConnection configure your client and never the containerised server, and Boot's Docker Compose support reuses the same ConnectionDetails interfaces with a completely different matching rule and a different list of services"
 sidebar_label: "04b4 · SSL, and the other catalogue"
-sidebar_position: 24
+sidebar_position: 23
 ---
 
 <span className="db-tier t-understand">Understand</span>

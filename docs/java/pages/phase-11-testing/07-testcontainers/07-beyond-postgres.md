@@ -1,7 +1,7 @@
 ---
 title: "Everything the topic has argued about PostgreSQL applies unchanged to Kafka, MongoDB, Elasticsearch and the rest — but the module you need may not exist, may not be maintained by Testcontainers at all, or may be a plain GenericContainer, and 2.0 renamed and relocated every one of them"
 sidebar_label: "07 · Beyond PostgreSQL"
-sidebar_position: 75
+sidebar_position: 45
 ---
 
 <span className="db-tier t-understand">Understand</span>

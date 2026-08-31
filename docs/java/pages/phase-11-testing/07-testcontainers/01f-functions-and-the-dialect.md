@@ -1,7 +1,7 @@
 ---
 title: "The statement-level dialect — ON CONFLICT, RETURNING, LATERAL, DISTINCT ON and the aggregate names — where the divergence is loud and the damage is done by the repair rather than the failure"
 sidebar_label: "01f · Functions and the dialect"
-sidebar_position: 9
+sidebar_position: 6
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Whether a @Container field is static decides whether you start one container for the whole test class or one for every single test method, and the only thing that tells you which you chose is the modifier — no attribute, no warning, no log line"
 sidebar_label: "03b · static vs instance"
-sidebar_position: 17
+sidebar_position: 14
 ---
 
 <span className="db-tier t-understand">Understand</span>

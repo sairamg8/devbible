@@ -1,7 +1,7 @@
 ---
 title: "The random host port that makes parallel test runs safe is the one thing another container cannot use, so container-to-container traffic goes by network alias and original port — and the hostname that reaches back into your own test process is not localhost, because inside a container localhost is the container"
 sidebar_label: "07c · Networks and image names"
-sidebar_position: 79
+sidebar_position: 47
 ---
 
 <span className="db-tier t-understand">Understand</span>

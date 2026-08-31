@@ -1,7 +1,7 @@
 ---
 title: "@DynamicPropertySource registers Suppliers rather than values, runs during context customization rather than when the container starts, and requires a static method for a reason that has nothing to do with container readiness"
 sidebar_label: "04c · @DynamicPropertySource"
-sidebar_position: 27
+sidebar_position: 26
 ---
 
 <span className="db-tier t-understand">Understand</span>

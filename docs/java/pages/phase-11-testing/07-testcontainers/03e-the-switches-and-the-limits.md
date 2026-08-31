@@ -1,7 +1,7 @@
 ---
 title: "One attribute on @Testcontainers will let a CI build report success having run none of your integration tests, because the Docker probe catches Throwable and cannot tell a laptop without Docker from a pipeline whose socket permissions are wrong"
 sidebar_label: "03e · Ordering and the Docker switch"
-sidebar_position: 19.4
+sidebar_position: 17
 ---
 
 <span className="db-tier t-understand">Understand</span>

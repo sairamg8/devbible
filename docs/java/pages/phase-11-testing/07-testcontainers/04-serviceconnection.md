@@ -1,7 +1,7 @@
 ---
 title: "@ServiceConnection never writes a property — it registers ConnectionDetails beans that outrank every property you could have written, and once you see that the whole feature stops being magic and starts being a bean lookup"
 sidebar_label: "04 · @ServiceConnection"
-sidebar_position: 20
+sidebar_position: 19
 ---
 
 <span className="db-tier t-understand">Understand</span>

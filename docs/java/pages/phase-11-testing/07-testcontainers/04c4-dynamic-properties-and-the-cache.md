@@ -1,7 +1,7 @@
 ---
 title: "The context cache keys @DynamicPropertySource on the SET OF METHODS rather than on the values they register, which is why two subclasses of one base class silently share a context pointed at the first subclass's container"
 sidebar_label: "04c4 · Dynamic properties and the cache"
-sidebar_position: 30
+sidebar_position: 29
 ---
 
 <span className="db-tier t-understand">Understand</span>

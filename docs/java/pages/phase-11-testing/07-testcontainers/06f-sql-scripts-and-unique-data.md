@@ -1,7 +1,7 @@
 ---
 title: "@Sql runs fixture and cleanup scripts around a test without any plumbing, and exactly one of its ten configuration attributes decides whether the cleanup survives the test's own transaction — and the fourth strategy, giving every test data nothing else can match, needs no cleanup at all"
 sidebar_label: "06f · @Sql scripts and unique data"
-sidebar_position: 72
+sidebar_position: 44
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Reviewing a Testcontainers test — the questions that separate a test which proves something about your production database from one that merely takes longer to be wrong, in the order you should ask them"
 sidebar_label: "10 · The checklist"
-sidebar_position: 90
+sidebar_position: 50
 ---
 
 <span className="db-tier t-understand">Understand</span>

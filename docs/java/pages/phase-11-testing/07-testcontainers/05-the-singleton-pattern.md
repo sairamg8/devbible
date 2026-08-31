@@ -1,7 +1,7 @@
 ---
 title: "The JUnit extension stops a static @Container when the test class ends and an instance @Container after every single test method, so a suite of twenty integration classes pays for twenty container starts — the singleton pattern is a plain static field that is started once, never stopped, and left to Ryuk"
 sidebar_label: "05 · The singleton pattern"
-sidebar_position: 40
+sidebar_position: 30
 ---
 
 <span className="db-tier t-understand">Understand</span>

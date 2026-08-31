@@ -1,7 +1,7 @@
 ---
 title: "Boot 4.1 now tells you to stop declaring containers with the JUnit extension and declare them as Spring beans instead, because the extension stops a container when the test class ends while the TestContext framework keeps the cached context — and those two lifetimes disagree by exactly the length of the cache"
 sidebar_label: "04b5 · Containers as Spring beans"
-sidebar_position: 25
+sidebar_position: 24
 ---
 
 <span className="db-tier t-understand">Understand</span>

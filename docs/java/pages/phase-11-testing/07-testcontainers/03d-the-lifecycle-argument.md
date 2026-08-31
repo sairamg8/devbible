@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot 4.1 now tells you, in the reference documentation, to stop declaring containers with @Container for Spring tests — because the extension's Store closes at the end of the test class and the TestContext cache does not, and the page still shows you the @Container sample anyway"
 sidebar_label: "03d · The lifecycle argument"
-sidebar_position: 19
+sidebar_position: 16
 ---
 
 <span className="db-tier t-understand">Understand</span>

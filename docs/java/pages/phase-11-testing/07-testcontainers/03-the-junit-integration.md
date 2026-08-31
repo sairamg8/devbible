@@ -1,7 +1,7 @@
 ---
 title: "The Testcontainers JUnit 5 extension is a separate artifact, one @ExtendWith annotation and an empty marker annotation whose only job is to find fields that implement Startable — which is why it manages a WireMock server exactly as happily as it manages Postgres"
 sidebar_label: "03 · The JUnit integration"
-sidebar_position: 16
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>

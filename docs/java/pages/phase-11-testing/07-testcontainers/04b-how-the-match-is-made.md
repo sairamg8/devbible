@@ -1,7 +1,7 @@
 ---
 title: "Nothing configures which container maps to which ConnectionDetails — the rule is three gates in one method, and the container type Boot matches on is recovered by reflecting on a factory's own generic parameters"
 sidebar_label: "04b · How the match is made"
-sidebar_position: 21
+sidebar_position: 20
 ---
 
 <span className="db-tier t-understand">Understand</span>

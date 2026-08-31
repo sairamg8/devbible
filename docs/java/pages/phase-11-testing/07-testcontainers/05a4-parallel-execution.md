@@ -1,7 +1,7 @@
 ---
 title: "Containers are safe to run concurrently because every exposed port is published to a random free host port, but the JUnit integration says in its own javadoc that parallel test execution is unsupported — and the shared database underneath a singleton is a piece of mutable global state that no port mapping protects"
 sidebar_label: "05a4 · Parallel execution"
-sidebar_position: 44
+sidebar_position: 34
 ---
 
 <span className="db-tier t-understand">Understand</span>

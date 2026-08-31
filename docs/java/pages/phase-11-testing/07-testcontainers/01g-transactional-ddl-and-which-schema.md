@@ -1,7 +1,7 @@
 ---
 title: "DDL is part of a transaction on PostgreSQL and commits one on H2 — and on an embedded database Spring Boot generates the schema for you, so the test may never have run your migrations at all"
 sidebar_label: "01g · Transactional DDL, and which schema"
-sidebar_position: 11
+sidebar_position: 8
 ---
 
 <span className="db-tier t-understand">Understand</span>

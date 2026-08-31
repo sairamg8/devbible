@@ -1,7 +1,7 @@
 ---
 title: "Two engines, one set of isolation level names, and opposite answers — H2's REPEATABLE READ allows phantoms, its SERIALIZABLE does not serialize writes, and its SKIP LOCKED is documented as undefined for the query you would use it in"
 sidebar_label: "01h · Isolation and locking"
-sidebar_position: 12
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>

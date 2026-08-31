@@ -1,7 +1,7 @@
 ---
 title: "@Testcontainers(parallel = true) starts several containers concurrently inside one test class, which is not remotely the same thing as JUnit parallel execution — the extension's own javadoc calls that combination unsupported — and the docs' reason for banning shared containers in @Nested classes stopped being true at Java SE 16"
 sidebar_label: "03f · Parallelism and @Nested"
-sidebar_position: 19.7
+sidebar_position: 18
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Testcontainers' JDBC URL scheme carries its own reuse switch — ?TC_REUSABLE=true — which quietly also puts the driver into daemon mode so it stops closing the container when the last connection goes; and reuse and the singleton pattern are not competitors but different axes that compose into one container that outlives everything"
 sidebar_label: "05b4 · JDBC URLs and the singleton"
-sidebar_position: 48
+sidebar_position: 38
 ---
 
 <span className="db-tier t-understand">Understand</span>

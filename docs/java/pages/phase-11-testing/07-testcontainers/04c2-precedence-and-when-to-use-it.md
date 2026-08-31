@@ -1,7 +1,7 @@
 ---
 title: "A dynamic property outranks @TestPropertySource, the OS environment and system properties, and that ordinary property precedence — not a bean lookup — is exactly why it can do four things @ServiceConnection structurally cannot"
 sidebar_label: "04c2 · Precedence, and choosing"
-sidebar_position: 28
+sidebar_position: 27
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "A singleton container is never stopped by anything in your code, which is only safe because a sidecar called Ryuk holds an open socket to your test JVM and deletes everything carrying that JVM's session label the moment the connection drops — and the two environments that force you to disable it change the cleanup story completely"
 sidebar_label: "05a2 · Ryuk and cleanup"
-sidebar_position: 42
+sidebar_position: 32
 ---
 
 <span className="db-tier t-understand">Understand</span>

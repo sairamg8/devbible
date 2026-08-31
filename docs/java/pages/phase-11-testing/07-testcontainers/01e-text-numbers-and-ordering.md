@@ -1,7 +1,7 @@
 ---
 title: "Text, numbers, the types H2 simply does not have, and the sort-order defaults that are exact opposites — the divergences that only appear on data your fixture did not contain"
 sidebar_label: "01e · Text, numbers, ordering"
-sidebar_position: 8
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>

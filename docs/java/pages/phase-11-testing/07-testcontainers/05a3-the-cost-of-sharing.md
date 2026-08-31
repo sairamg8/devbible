@@ -1,7 +1,7 @@
 ---
 title: "Sharing one container across the suite buys you startup time and sells you two things in exchange — a database whose rows outlive every test class, and a lifecycle that Spring's context cache does not know about, which is the specific reason Spring Boot 4.1 tells you to stop using @Container and manage containers as beans instead"
 sidebar_label: "05a3 · The cost of sharing"
-sidebar_position: 43
+sidebar_position: 33
 ---
 
 <span className="db-tier t-understand">Understand</span>

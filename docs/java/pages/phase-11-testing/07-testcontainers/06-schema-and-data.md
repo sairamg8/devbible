@@ -1,7 +1,7 @@
 ---
 title: "A container starts empty, and there are five different mechanisms that can put a schema in it — this half is the three you choose deliberately, and the first of them is the only one that tests the schema you actually deploy"
 sidebar_label: "06 · Schema and data"
-sidebar_position: 60
+sidebar_position: 39
 ---
 
 <span className="db-tier t-understand">Understand</span>

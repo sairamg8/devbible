@@ -1,7 +1,7 @@
 ---
 title: "The recommended way to run Testcontainers in CI is to hand your build container the host's Docker socket so the containers it starts are siblings rather than children — and the reason the pattern insists on identical paths inside and out is that every bind mount is resolved by the host's daemon, not yours"
 sidebar_label: "09b · CI and alternative runtimes"
-sidebar_position: 82
+sidebar_position: 49
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "The types you reach for when the column holds an object — jsonb, arrays, UUID, enums, intervals and timestamptz — and why a save-and-load test passes on H2 for every one of them"
 sidebar_label: "01d · Types you query with"
-sidebar_position: 7
+sidebar_position: 4
 ---
 
 <span className="db-tier t-understand">Understand</span>

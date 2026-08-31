@@ -1,7 +1,7 @@
 ---
 title: "Pattern matching and search — two different regular-expression engines, an ILIKE that really is portable, and a full-text mechanism with nothing in common on either side"
 sidebar_label: "01f2 · Pattern matching and search"
-sidebar_position: 10
+sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>

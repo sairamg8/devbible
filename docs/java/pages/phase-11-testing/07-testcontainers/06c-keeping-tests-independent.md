@@ -1,7 +1,7 @@
 ---
 title: "The container outlives the test class by design, so every test after the first one runs against a database somebody else has already written to — and what accumulates is not only rows, but sequence values, migration history and everything the engine does outside a transaction"
 sidebar_label: "06c · Keeping tests independent"
-sidebar_position: 65
+sidebar_position: 41
 ---
 
 <span className="db-tier t-understand">Understand</span>

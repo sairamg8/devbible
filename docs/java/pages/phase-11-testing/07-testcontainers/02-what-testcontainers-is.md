@@ -1,7 +1,7 @@
 ---
 title: "Testcontainers 2.0 removed the self-type generic from every module container class, so the one line every tutorial opens with — new PostgreSQLContainer<>(image) — now compiles only against a deprecated shim, and that is before you reach the renamed artifacts and relocated packages"
 sidebar_label: "02 · What Testcontainers is"
-sidebar_position: 4
+sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>

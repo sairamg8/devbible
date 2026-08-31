@@ -1,7 +1,7 @@
 ---
 title: "Wrapping a Testcontainers test in @Transactional buys isolation by never committing, and the commit is where deferred constraints, AFTER triggers, AFTER_COMMIT listeners and every other connection's view of the world actually happen — so the cheapest isolation strategy is also the one that cancels most of the reason you started a container"
 sidebar_label: "06d · The rollback strategy"
-sidebar_position: 67
+sidebar_position: 42
 ---
 
 <span className="db-tier t-understand">Understand</span>

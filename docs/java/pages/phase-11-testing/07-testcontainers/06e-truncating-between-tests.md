@@ -1,7 +1,7 @@
 ---
 title: "The general answer to a shared container is one statement run before every test — TRUNCATE over a table list the database itself gives you, RESTART IDENTITY CASCADE, and never the migration-history table — and it works precisely because it lets the commit happen"
 sidebar_label: "06e · Truncating between tests"
-sidebar_position: 70
+sidebar_position: 43
 ---
 
 <span className="db-tier t-understand">Understand</span>

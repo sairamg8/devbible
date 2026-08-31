@@ -1,7 +1,7 @@
 ---
 title: "The three SQLStates everyone expects to be portable are portable — and the two that are not are exactly the two nobody checks, including a 40001 that means the opposite thing on each engine"
 sidebar_label: "01h2 · What a violation raises"
-sidebar_position: 13
+sidebar_position: 10
 ---
 
 <span className="db-tier t-understand">Understand</span>

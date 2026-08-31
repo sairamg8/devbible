@@ -1,7 +1,7 @@
 ---
 title: "DynamicPropertyRegistrar is the bean-shaped form of @DynamicPropertySource, and it exists because a static method cannot see a bean — which is precisely the situation you are in the moment your containers become @Bean methods"
 sidebar_label: "04c3 · DynamicPropertyRegistrar"
-sidebar_position: 29
+sidebar_position: 28
 ---
 
 <span className="db-tier t-understand">Understand</span>

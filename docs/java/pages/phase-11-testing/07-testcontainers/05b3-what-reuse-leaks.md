@@ -1,7 +1,7 @@
 ---
 title: "A reusable container is never registered with Ryuk, which is both why it can outlive your JVM and why nothing will ever remove it — and what it hands the next run is yesterday's database, with yesterday's rows, yesterday's sequences and yesterday's migration history"
 sidebar_label: "05b3 · What reuse leaks"
-sidebar_position: 47
+sidebar_position: 37
 ---
 
 <span className="db-tier t-understand">Understand</span>

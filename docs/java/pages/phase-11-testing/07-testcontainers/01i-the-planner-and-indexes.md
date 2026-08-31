@@ -1,7 +1,7 @@
 ---
 title: "H2's CREATE INDEX has no USING, no expression, no WHERE and no CONCURRENTLY — so a partial unique index is a constraint your test schema cannot express, and no green test on any engine says anything about a plan"
 sidebar_label: "01i · The planner and indexes"
-sidebar_position: 15
+sidebar_position: 11
 ---
 
 <span className="db-tier t-understand">Understand</span>

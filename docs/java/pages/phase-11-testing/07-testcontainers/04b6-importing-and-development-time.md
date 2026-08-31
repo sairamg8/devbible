@@ -1,7 +1,7 @@
 ---
 title: "@ImportTestcontainers lifts container declarations you already have into a Spring context, and once containers are Spring beans you can attach them to the real application's main method and run the whole service against real dependencies with no test in sight"
 sidebar_label: "04b6 · Importing, and dev time"
-sidebar_position: 26
+sidebar_position: 25
 ---
 
 <span className="db-tier t-understand">Understand</span>

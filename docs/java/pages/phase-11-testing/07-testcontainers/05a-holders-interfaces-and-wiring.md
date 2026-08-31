@@ -1,7 +1,7 @@
 ---
 title: "The abstract base class is one of three shapes a singleton container can take, and the two alternatives — a holder class and an interface handed to @ImportTestcontainers — differ in what they cost you and in who ends up owning the lifecycle; then there is the wiring, and the NoClassDefFoundError wall a failed static initialiser leaves across the rest of the run"
 sidebar_label: "05a · Holders, interfaces, wiring"
-sidebar_position: 41
+sidebar_position: 31
 ---
 
 <span className="db-tier t-understand">Understand</span>

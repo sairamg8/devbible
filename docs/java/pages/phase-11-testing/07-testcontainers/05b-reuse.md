@@ -1,7 +1,7 @@
 ---
 title: "withReuse(true) is a declaration that a container is eligible for reuse, not a command to reuse it — the decision belongs to the machine running the tests, through an environment variable or the user's home-directory properties file and explicitly not through anything you can commit to the repository"
 sidebar_label: "05b · Reuse: the opt-in"
-sidebar_position: 45
+sidebar_position: 35
 ---
 
 <span className="db-tier t-understand">Understand</span>

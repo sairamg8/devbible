@@ -1,7 +1,7 @@
 ---
 title: "GenericContainer gives you any image at all, and hands you back the one problem every module was quietly solving on your behalf — Testcontainers waits sixty seconds for the first mapped port to start listening, and a great many services accept a TCP connection well before they can answer a request"
 sidebar_label: "07b · GenericContainer and waiting"
-sidebar_position: 77
+sidebar_position: 46
 ---
 
 <span className="db-tier t-understand">Understand</span>

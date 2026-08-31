@@ -1,7 +1,7 @@
 ---
 title: "Two of Boot's five schema mechanisms are conditional on the database being embedded, so the moment you replace H2 with a container they stop running — and neither of them logs that it declined, which is why the first symptom is a missing relation in a query nobody changed"
 sidebar_label: "06b · The defaults that silently stop"
-sidebar_position: 62
+sidebar_position: 40
 ---
 
 <span className="db-tier t-understand">Understand</span>

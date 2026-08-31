@@ -1,7 +1,7 @@
 ---
 title: "The reuse contract forbids the JUnit integration outright, refuses any container class that overrides containerIsCreated, and defines *the same configuration* as a SHA-1 over the entire serialised create command — so changing one environment variable silently gives you a second container instead of the one you meant to reuse"
 sidebar_label: "05b2 · The contract and the hash"
-sidebar_position: 46
+sidebar_position: 36
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "A @Bean method is matched on its return type and a static field is matched on its image name, so the same annotation on the same container fails in one place and works in the other — plus the two ways @ServiceConnection does nothing without telling you"
 sidebar_label: "04b2 · The @Bean rule and narrowing"
-sidebar_position: 22
+sidebar_position: 21
 ---
 
 <span className="db-tier t-understand">Understand</span>

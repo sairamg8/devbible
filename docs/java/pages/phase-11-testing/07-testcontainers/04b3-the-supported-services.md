@@ -1,7 +1,7 @@
 ---
 title: "The Boot 4.1 service-connection catalogue, read as rules rather than a list — three entries share one base class, one is third-party code you must add yourself, one is opt-in, and one works but is missing from the table"
 sidebar_label: "04b3 · What is supported"
-sidebar_position: 23
+sidebar_position: 22
 ---
 
 <span className="db-tier t-understand">Understand</span>
