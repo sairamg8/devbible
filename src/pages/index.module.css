@@ -1,16 +1,16 @@
-/* Homepage — language picker. Tokens come from src/css/custom.css. */
+/* Homepage — the dashboard. Tokens come from src/css/custom.css. */
 
 .page {
-  max-width: 980px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 4rem 1.25rem 6rem;
+  padding: 3.5rem 1.25rem 6rem;
 }
 
 /* ------------------------------------------------------------------ hero */
 
 .hero {
   border-bottom: 1px solid var(--db-rule);
-  padding-bottom: 2.25rem;
+  padding-bottom: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -34,114 +34,261 @@
 }
 
 .lede {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   line-height: 1.62;
   color: var(--db-ink-2);
-  max-width: 60ch;
+  max-width: 62ch;
   margin: 0;
   text-wrap: pretty;
 }
 
-/* ----------------------------------------------------------------- focus */
+/* ----------------------------------------------------------------- stats */
 
-.focus {
-  display: flex;
+/*
+ * The roll-up strip. Every number is summed from src/data/progress.js at build
+ * time, so the headline figure and the cards below can never disagree — the
+ * old homepage had no total at all, and you could not tell from it whether the
+ * bible was a weekend of notes or twenty thousand pages.
+ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin: 2rem 0 0;
   border: 1px solid var(--db-rule);
   border-radius: 10px;
-  background: var(--db-surface);
-  box-shadow: var(--db-shadow);
+  background: var(--db-rule);
   overflow: hidden;
-  margin-bottom: 3.5rem;
 }
 
-.focusBar {
-  width: 4px;
-  flex: none;
-  background: var(--db-accent);
+.stat {
+  background: var(--db-surface);
+  padding: 0.95rem 1.1rem 1rem;
+  margin: 0;
 }
 
-.focusBody {
-  padding: 1.6rem 1.8rem;
-}
-
-.focusLabel {
+.stat dt {
   font-family: var(--db-mono);
-  font-size: 0.66rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--db-accent-ink);
-  margin: 0 0 0.5rem;
+  color: var(--db-ink-3);
+  margin: 0 0 0.4rem;
 }
 
-.focusTitle {
+.stat dd {
+  margin: 0;
   font-family: var(--db-serif);
-  font-size: 1.55rem;
+  font-size: 1.7rem;
+  line-height: 1;
   font-weight: 600;
-  letter-spacing: -0.016em;
-  margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+  color: var(--db-ink);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.statSub {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--db-accent-ink);
+}
+
+/* ---------------------------------------------------------------- recent */
+
+/*
+ * Replaces the hand-written "Just finished" panel. That paragraph was correct
+ * on the day it was written and wrong within a fortnight — it was still
+ * announcing Docker while Java was the thing actually being written. These
+ * three cards are the three freshest `updated` stamps, which every session
+ * already refreshes as part of its cadence, so they cannot go stale.
+ */
+.recent {
+  margin-bottom: 2.75rem;
+}
+
+.recentRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.recentCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem 1.1rem;
+  border: 1px solid var(--db-rule);
+  border-left: 3px solid var(--db-accent);
+  border-radius: 9px;
+  background: var(--db-surface);
+  text-decoration: none;
+  transition: box-shadow 0.16s, transform 0.16s;
+}
+
+.recentCard:hover {
+  text-decoration: none;
+  box-shadow: var(--db-shadow);
+  transform: translateY(-1px);
+}
+
+.recentStamp {
+  font-family: var(--db-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  color: var(--db-ink-3);
+}
+
+.recentName {
+  font-family: var(--db-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
   color: var(--db-ink);
 }
 
-.focusText {
+.recentWhat {
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: var(--db-ink-2);
-  font-size: 0.96rem;
-  line-height: 1.6;
-  max-width: 62ch;
-  margin: 0 0 1.15rem;
+  margin-bottom: 0.35rem;
 }
 
-.focusCta {
-  display: inline-block;
+.recentMeta {
   font-family: var(--db-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  padding: 0.55rem 1rem;
-  border-radius: 6px;
-  background: var(--db-accent);
-  color: var(--db-surface);
-  transition: opacity 0.15s;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  color: var(--db-accent-ink);
+  margin-top: 0.3rem;
 }
 
-[data-theme='dark'] .focusCta {
-  color: #0f161c;
+/* -------------------------------------------------------------- controls */
+
+/*
+ * Thirty-one cards is past the point where scanning works. The filter is
+ * client-side and matches the name and the one-line summary only; anything
+ * deeper is what the header search index is for, and the empty state says so.
+ */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--db-rule);
 }
 
-.focusCta:hover {
-  opacity: 0.88;
-  text-decoration: none;
-  color: var(--db-surface);
-}
-
-[data-theme='dark'] .focusCta:hover {
-  color: #0f161c;
-}
-
-/* Second entry point: the explanation pages, alongside the syllabus. */
-.focusCtaAlt {
-  display: inline-block;
-  margin-left: 0.6rem;
-  font-family: var(--db-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  padding: 0.55rem 1rem;
-  border-radius: 6px;
-  border: 1px solid var(--db-rule-strong);
+.search {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 0.6rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.9rem;
   color: var(--db-ink);
-  transition: border-color 0.15s, color 0.15s;
+  background: var(--db-surface);
+  border: 1px solid var(--db-rule-strong);
+  border-radius: 7px;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.focusCtaAlt:hover {
-  text-decoration: none;
+.search::placeholder {
+  color: var(--db-ink-3);
+}
+
+.search:focus {
+  outline: none;
   border-color: var(--db-accent);
-  color: var(--db-accent);
+  box-shadow: 0 0 0 3px var(--db-accent-soft);
 }
 
-/* ----------------------------------------------------------------- tiers */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
 
-.tiers {
-  margin-bottom: 3.5rem;
+.chip {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 7px;
+  border: 1px solid var(--db-rule-strong);
+  background: transparent;
+  color: var(--db-ink-2);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--db-accent);
+  color: var(--db-accent-ink);
+}
+
+.chipOn {
+  background: var(--db-accent);
+  border-color: var(--db-accent);
+  color: var(--db-surface);
+}
+
+[data-theme='dark'] .chipOn {
+  color: #0f161c;
+}
+
+.matchCount {
+  font-family: var(--db-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--db-ink-3);
+  margin: 0;
+}
+
+.empty {
+  padding: 2rem 0 3rem;
+  color: var(--db-ink-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+/* ---------------------------------------------------------------- layers */
+
+.layer {
+  margin-bottom: 2.5rem;
+}
+
+.layerParked {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--db-rule);
+}
+
+.layerParked .layerTitle {
+  color: var(--db-ink-3);
+  font-size: 1.1rem;
+}
+
+.layerHead {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--db-rule);
+}
+
+.layerTitle {
+  font-family: var(--db-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  margin: 0;
+  color: var(--db-ink);
 }
 
 .sectionLabel,
@@ -155,7 +302,158 @@
 }
 
 .sectionLabel {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 0.75rem;
+}
+
+/* ----------------------------------------------------------------- cards */
+
+/*
+ * The old cards painted every live technology in accent-soft with an accent
+ * border, which meant twenty-six cards all shouting at the same volume. Here
+ * the surface stays neutral and state is carried by one 3px edge: accent for
+ * finished, amber for in flight, nothing for imported or planned. The palette
+ * already had amber for exactly this and the homepage never used it.
+ */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem 1.1rem;
+  border: 1px solid var(--db-rule);
+  border-left: 3px solid var(--db-rule-strong);
+  border-radius: 9px;
+  background: var(--db-surface);
+  text-decoration: none;
+  transition: box-shadow 0.16s, transform 0.16s, border-color 0.16s;
+}
+
+a.card:hover {
+  text-decoration: none;
+  box-shadow: var(--db-shadow);
+  transform: translateY(-1px);
+}
+
+.complete {
+  border-left-color: var(--db-accent);
+}
+
+.writing {
+  border-left-color: var(--db-amber);
+}
+
+.imported {
+  border-left-color: var(--db-rule-strong);
+}
+
+.planned,
+.parked {
+  border-style: dashed;
+  border-left-style: dashed;
+  background: transparent;
+  opacity: 0.62;
+}
+
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.cardTitle {
+  font-size: 1.02rem;
+  font-weight: 640;
+  letter-spacing: -0.008em;
+  margin: 0;
+  color: var(--db-ink);
+}
+
+.cardPercent {
+  font-family: var(--db-mono);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--db-ink-2);
+  flex: none;
+}
+
+.complete .cardPercent {
+  color: var(--db-accent-ink);
+}
+
+.cardTag {
+  font-family: var(--db-mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--db-ink-3);
+  white-space: nowrap;
+  flex: none;
+}
+
+.cardDesc {
+  font-size: 0.845rem;
+  line-height: 1.5;
+  color: var(--db-ink-3);
+  margin: 0;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.7rem;
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  color: var(--db-ink-3);
+  margin: 0.15rem 0 0;
+}
+
+.cardNow {
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  color: var(--db-amber);
+  margin: 0.1rem 0 0;
+}
+
+/* ------------------------------------------------------------------- bar */
+
+.bar {
+  height: 4px;
+  margin: 0.55rem 0 0.1rem;
+  border-radius: 999px;
+  background: var(--db-surface-3);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--db-amber);
+}
+
+.barDone {
+  background: var(--db-accent);
+}
+
+/* ----------------------------------------------------------------- tiers */
+
+/*
+ * Moved below the map. It is a legend for the badges on the syllabus pages,
+ * not an entry point — at the top it pushed the actual content of the page
+ * below the fold on a laptop.
+ */
+.tiers {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--db-rule);
 }
 
 .tierRow {
@@ -176,186 +474,6 @@
   font-size: 0.83rem;
   color: var(--db-ink-3);
   line-height: 1.45;
-}
-
-/* ---------------------------------------------------------------- layers */
-
-.layer {
-  margin-bottom: 2.75rem;
-}
-
-.layerParked {
-  margin-top: 3.5rem;
-  padding-top: 2.25rem;
-  border-top: 1px solid var(--db-rule);
-}
-
-.layerParked .layerTitle {
-  color: var(--db-ink-3);
-  font-size: 1.1rem;
-}
-
-.layerHead {
-  display: flex;
-  align-items: baseline;
-  gap: 0.9rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--db-rule);
-}
-
-.layerTitle {
-  font-family: var(--db-serif);
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.012em;
-  margin: 0;
-  color: var(--db-ink);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
-  gap: 0.75rem;
-}
-
-/* ----------------------------------------------------------------- cards */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding: 1.05rem 1.15rem 1.15rem;
-  border: 1px solid var(--db-rule);
-  border-radius: 9px;
-  background: var(--db-surface);
-  text-decoration: none;
-}
-
-.cardLive {
-  border-color: var(--db-accent);
-  background: var(--db-accent-soft);
-  transition: box-shadow 0.16s, transform 0.16s;
-}
-
-.cardLive:hover {
-  text-decoration: none;
-  box-shadow: var(--db-shadow);
-  transform: translateY(-1px);
-}
-
-.cardDim {
-  opacity: 0.62;
-}
-
-/* Parked cards sit a step further back than "Planned" — dashed and unfilled,
-   so the committed eleven stay visually dominant. */
-.cardParked {
-  opacity: 0.5;
-  background: transparent;
-  border-style: dashed;
-}
-
-.cardHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
-}
-
-.cardNum {
-  font-family: var(--db-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.09em;
-  color: var(--db-ink-3);
-}
-
-.pillActive,
-.pillDone,
-.pillSoon {
-  font-family: var(--db-mono);
-  font-size: 0.58rem;
-  text-transform: uppercase;
-  letter-spacing: 0.11em;
-  padding: 0.2em 0.5em;
-  border-radius: 3px;
-  white-space: nowrap;
-}
-
-.pillActive {
-  background: var(--db-accent);
-  color: var(--db-surface);
-}
-
-[data-theme='dark'] .pillActive {
-  color: #0f161c;
-}
-
-/* Finished work is settled, not loud: the accent as outline rather than fill,
-   so the solid accent stays the signal for what is actively being written. */
-.pillDone {
-  background: var(--db-accent-soft);
-  color: var(--db-accent-ink);
-  border: 1px solid var(--db-accent);
-  padding: calc(0.2em - 1px) calc(0.5em - 1px);
-}
-
-.pillSoon {
-  background: var(--db-surface-3);
-  color: var(--db-ink-3);
-}
-
-/* Parked work reads as a note, not a queue slot: outline instead of fill. */
-.pillParked {
-  background: transparent;
-  color: var(--db-ink-3);
-  border: 1px solid var(--db-rule-strong);
-}
-
-.cardTitle {
-  font-size: 1.02rem;
-  font-weight: 640;
-  letter-spacing: -0.008em;
-  margin: 0.15rem 0 0;
-  color: var(--db-ink);
-}
-
-.cardDesc {
-  font-size: 0.845rem;
-  line-height: 1.5;
-  color: var(--db-ink-3);
-  margin: 0;
-}
-
-.cardStats {
-  font-family: var(--db-mono);
-  font-size: 0.68rem;
-  color: var(--db-accent-ink);
-  margin: 0.2rem 0 0;
-  letter-spacing: 0.02em;
-}
-
-/* Thin completion bar on the one live card */
-.cardBar {
-  height: 4px;
-  margin: 0.6rem 0 0.1rem;
-  border-radius: 999px;
-  background: var(--db-surface-3);
-  overflow: hidden;
-}
-
-.cardBarFill {
-  height: 100%;
-  background: var(--db-accent);
-  border-radius: 999px;
-}
-
-.cardGo {
-  font-family: var(--db-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  color: var(--db-accent-ink);
-  margin-top: 0.45rem;
 }
 
 /* ------------------------------------------------------------------ foot */
@@ -379,35 +497,7 @@
     align-items: flex-start;
     gap: 0.3rem;
   }
-}
-
-/* --------------------------------------------------------------- updated */
-
-/*
- * "Last updated" in the hero. The stamp is the freshest per-language `updated`
- * field in src/data/progress.js, which every session refreshes when it finishes
- * a piece of work — so this is the site's own honesty about how current it is.
- * Minute precision, no seconds, by request.
- */
-.updated {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-family: var(--db-mono);
-  font-size: 0.72rem;
-  color: var(--db-ink-3, var(--db-ink-2));
-  margin: 1.35rem 0 0;
-}
-
-.updatedLabel {
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--db-accent-ink);
-}
-
-.updatedWhat {
-  padding-left: 0.5rem;
-  border-left: 1px solid var(--db-rule);
-  color: var(--db-ink-2);
+  .stat dd {
+    font-size: 1.45rem;
+  }
 }

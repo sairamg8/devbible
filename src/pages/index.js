@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import Progress from '@site/src/components/Progress';
-import {summarise, lastUpdated} from '@site/src/data/progress';
+import {summarise, recentlyUpdated} from '@site/src/data/progress';
 import styles from './index.module.css';
 
 /** Live counts, so the homepage can never drift from what is actually written. */
@@ -12,6 +11,7 @@ const typescript = summarise('typescript');
 const node = summarise('nodejs');
 const express = summarise('expressjs');
 const react = summarise('react');
+const angular = summarise('angular');
 const postgres = summarise('postgresql');
 const git = summarise('git');
 const mongodb = summarise('mongodb');
@@ -23,8 +23,8 @@ const realworld = summarise('realworld');
 const java = summarise('java');
 const python = summarise('python');
 
-/** Freshest per-language `updated` stamp, so the page can say how current it is. */
-const updated = lastUpdated();
+/** The three languages whose pages changed most recently — derived, not written. */
+const RECENT = recentlyUpdated(3);
 
 /**
  * The stack, grouped by the layer it lives in. `to` is set only for
@@ -41,6 +41,10 @@ const updated = lastUpdated();
  * `parked: true` marks a layer that is outside the committed eleven in
  * instructions.md §2 — visible so the map is honest about what exists beyond
  * the brief, styled so nobody mistakes it for scheduled work.
+ *
+ * `stats` is not a string any more. Each card is handed its `summarise()`
+ * result and lays the numbers out itself, so every card counts the same things
+ * in the same order and a new language cannot invent its own format.
  */
 const LAYERS = [
   {
@@ -48,43 +52,37 @@ const LAYERS = [
     note: 'What the browser runs',
     items: [
       {
-        n: '01',
         name: 'CSS',
         desc: 'Flexbox, Grid, container queries, and the 2026 feature set',
         to: '/docs/css',
-        active: true,
         done: true,
-        stats: `${css.topicsTotal} topics · ${css.phasesTotal} phases · ${css.phasesDone} phases explained · ${css.pagesWritten} pages`,
-        progress: css.percent,
+        data: css,
       },
       {
-        n: '02',
         name: 'JavaScript',
         desc: 'Language core, Web APIs, machine coding and an applied storefront — the DSA track is parked at its Master tier',
         to: '/docs/javascript',
-        active: true,
         done: true,
-        stats: `${javascript.topicsTotal} topics · ${javascript.phasesTotal} phases · ${javascript.phasesDone} phases explained · ${javascript.pagesWritten} pages · ${javascript.parkedTopicsLeft} parked`,
-        progress: javascript.percent,
+        data: javascript,
       },
       {
-        n: '03',
         name: 'TypeScript',
         desc: 'Narrowing, generics, mapped and conditional types, typed at every layer',
         to: '/docs/typescript',
-        active: true,
-        stats: `${typescript.topicsTotal} topics · ${typescript.phasesTotal} phases · ${typescript.phasesDone} phases explained · ${typescript.pagesWritten} pages`,
-        progress: typescript.percent,
+        data: typescript,
       },
       {
-        n: '04',
         name: 'React',
         desc: 'Every hook, the render cycle, Suspense, Actions, Server Components, and a patterns layer — phases 12 and 13 dropped by decision',
         to: '/docs/react',
-        active: true,
         done: true,
-        stats: `${react.topicsTotal} topics · ${react.phasesTotal} phases · ${react.phasesDone} phases explained · ${react.pagesWritten} pages`,
-        progress: react.percent,
+        data: react,
+      },
+      {
+        name: 'Angular',
+        desc: 'Signals, zoneless change detection, the signal component API, signal forms, httpResource and SSR — targeting Angular 22, the current major. Syllabus written; pages not started',
+        to: '/docs/angular',
+        data: angular,
       },
     ],
   },
@@ -93,24 +91,18 @@ const LAYERS = [
     note: 'What the server runs',
     items: [
       {
-        n: '05',
         name: 'Node.js',
         desc: 'Runtime model, event loop, streams, security, production',
         to: '/docs/nodejs',
-        active: true,
         done: true,
-        stats: `${node.topicsTotal} topics · ${node.phasesTotal} phases · ${node.phasesDone} phases explained · ${node.pagesWritten} pages`,
-        progress: node.percent,
+        data: node,
       },
       {
-        n: '06',
         name: 'Express',
         desc: 'Routing, middleware, error handling, auth, layering',
         to: '/docs/expressjs',
-        active: true,
         done: true,
-        stats: `${express.topicsTotal} topics · ${express.phasesTotal} phases · ${express.phasesDone} phases explained · ${express.pagesWritten} pages`,
-        progress: express.percent,
+        data: express,
       },
     ],
   },
@@ -119,32 +111,23 @@ const LAYERS = [
     note: 'Where state lives',
     items: [
       {
-        n: '07',
         name: 'MongoDB',
         desc: 'Document model, aggregation, indexes, Mongoose',
         to: '/docs/mongodb',
-        active: true,
-        stats: `${mongodb.topicsTotal} topics · ${mongodb.phasesTotal} phases · ${mongodb.phasesDone} phases explained · ${mongodb.pagesWritten} pages`,
-        progress: mongodb.percent,
+        data: mongodb,
       },
       {
-        n: '08',
         name: 'PostgreSQL',
         desc: 'SQL, indexes, MVCC, raw pg from Node, ops and security',
         to: '/docs/postgresql',
-        active: true,
         done: true,
-        stats: `${postgres.topicsTotal} topics · ${postgres.phasesTotal} phases · ${postgres.phasesDone} phases explained · ${postgres.pagesWritten} pages`,
-        progress: postgres.percent,
+        data: postgres,
       },
       {
-        n: '09',
         name: 'Redis',
         desc: 'Data types, caching patterns, sessions, rate limits, locks',
         to: '/docs/redis',
-        active: true,
-        stats: `${redis.topicsTotal} topics · ${redis.phasesTotal} phases · ${redis.phasesDone} phases explained · ${redis.pagesWritten} pages`,
-        progress: redis.percent,
+        data: redis,
       },
     ],
   },
@@ -153,23 +136,17 @@ const LAYERS = [
     note: 'How it ships and stays up',
     items: [
       {
-        n: '10',
         name: 'Docker & Podman',
         desc: 'Namespaces and cgroups, multi-stage builds, Compose, rootless, Quadlet',
         to: '/docs/docker',
-        active: true,
         done: true,
-        stats: `${docker.topicsTotal} topics · ${docker.phasesTotal} phases · ${docker.phasesDone} phases explained · ${docker.pagesWritten} pages`,
-        progress: docker.percent,
+        data: docker,
       },
       {
-        n: '11',
         name: 'Nginx',
         desc: 'Reverse proxy, load balancing, TLS, caching',
         to: '/docs/nginx',
-        active: true,
-        stats: `${nginx.topicsTotal} topics · ${nginx.phasesTotal} phases · ${nginx.phasesDone} phases explained · ${nginx.pagesWritten} pages`,
-        progress: nginx.percent,
+        data: nginx,
       },
     ],
   },
@@ -178,38 +155,29 @@ const LAYERS = [
     note: 'How the code gets there',
     items: [
       {
-        n: '12',
         name: 'Git',
         desc: 'The object model, rebase vs merge, recovery, review workflow — re-scoped to the daily-driver 52',
         to: '/docs/git',
-        active: true,
         done: true,
-        stats: `${git.topicsTotal} topics · ${git.phasesTotal} phases · ${git.phasesDone} phases explained · ${git.pagesWritten} pages`,
-        progress: git.percent,
+        data: git,
       },
     ],
   },
   {
     name: 'Beyond the JS stack',
-    note: 'Second backend languages — syllabus written, pages not started',
+    note: 'Second backend languages',
     items: [
       {
-        n: '26',
         name: 'Java',
         desc: 'JVM model, collections, virtual threads, Spring Boot, JPA, JUnit 5, GC and JFR — targeting JDK 25 LTS',
         to: '/docs/java',
-        active: true,
-        stats: `${java.topicsTotal} topics · ${java.phasesTotal} phases · ${java.phasesDone} phases explained · ${java.pagesWritten} pages`,
-        progress: java.percent,
+        data: java,
       },
       {
-        n: '27',
         name: 'Python',
         desc: 'CPython and the GIL, the data model, typing, uv and ruff, asyncio, FastAPI, pytest — targeting 3.14',
         to: '/docs/python',
-        active: true,
-        stats: `${python.topicsTotal} topics · ${python.phasesTotal} phases · ${python.phasesDone} phases explained · ${python.pagesWritten} pages`,
-        progress: python.percent,
+        data: python,
       },
     ],
   },
@@ -218,13 +186,10 @@ const LAYERS = [
     note: 'One storefront, implemented across the whole stack',
     items: [
       {
-        n: '25',
         name: 'Real World',
         desc: 'The storefront: raw pg schema, Node services, the Express API, React hooks and screens, typed end to end',
         to: '/docs/real-world',
-        active: true,
-        stats: `${realworld.topicsTotal} topics · ${realworld.phasesTotal} phases · ${realworld.phasesDone} phases explained · ${realworld.pagesWritten} pages`,
-        progress: realworld.percent,
+        data: realworld,
       },
     ],
   },
@@ -232,26 +197,23 @@ const LAYERS = [
     name: 'Frontend toolchain',
     note: 'Imported corpus — moved in, not yet validated. Storybook is the exception: it has a written syllabus and verified pages',
     items: [
-      {n: '13', name: 'Vite', desc: 'Dual-engine dev server, HMR, plugins, code-splitting', to: '/docs/vite', active: true, imported: true},
-      {n: '14', name: 'Webpack', desc: 'Module Federation, loaders, plugins, Tapable hooks, chunks', to: '/docs/webpack', active: true, imported: true},
-      {n: '15', name: 'Babel', desc: 'Compiler pipeline, presets/plugins, macros, SWC/esbuild migration', to: '/docs/babel', active: true, imported: true},
-      {n: '16', name: 'ESLint & Oxlint', desc: 'Flat config, typescript-eslint, Oxlint, dual-run, CI', to: '/docs/eslint-oxlint', active: true, imported: true},
-      {n: '17', name: 'Jest & RTL', desc: 'JSDOM, async queries, module mocking, userEvent, coverage', to: '/docs/jest-rtl', active: true, imported: true},
-      {n: '18', name: 'Playwright', desc: 'Cross-browser E2E, visual regression, network interception, CI', to: '/docs/playwright', active: true, imported: true},
+      {name: 'Vite', desc: 'Dual-engine dev server, HMR, plugins, code-splitting', to: '/docs/vite', imported: true},
+      {name: 'Webpack', desc: 'Module Federation, loaders, plugins, Tapable hooks, chunks', to: '/docs/webpack', imported: true},
+      {name: 'Babel', desc: 'Compiler pipeline, presets/plugins, macros, SWC/esbuild migration', to: '/docs/babel', imported: true},
+      {name: 'ESLint & Oxlint', desc: 'Flat config, typescript-eslint, Oxlint, dual-run, CI', to: '/docs/eslint-oxlint', imported: true},
+      {name: 'Jest & RTL', desc: 'JSDOM, async queries, module mocking, userEvent, coverage', to: '/docs/jest-rtl', imported: true},
+      {name: 'Playwright', desc: 'Cross-browser E2E, visual regression, network interception, CI', to: '/docs/playwright', imported: true},
       {
-        n: '19',
         name: 'Storybook',
         desc: 'CSF, args and controls, decorators, interaction and a11y testing — written to full depth from phase 0, alongside 22 imported pages',
         to: '/docs/storybook',
-        active: true,
-        stats: `${storybook.topicsTotal} topics · ${storybook.phasesTotal} phases · ${storybook.phasesDone} phases explained · ${storybook.pagesWritten} pages`,
-        progress: storybook.percent,
+        data: storybook,
       },
-      {n: '20', name: 'Redux Toolkit', desc: 'RTK Query, Immer, entity adapters, custom middleware', to: '/docs/redux-toolkit', active: true, imported: true},
-      {n: '21', name: 'TanStack Query', desc: 'QueryCache internals, mutations, optimistic updates, SSR', to: '/docs/tanstack-query', active: true, imported: true},
-      {n: '22', name: 'Framer Motion', desc: 'Layout animations, FLIP, AnimatePresence, scroll and gestures', to: '/docs/framer-motion', active: true, imported: true},
-      {n: '23', name: 'Web Vitals & Performance', desc: 'LCP, INP, CLS, critical rendering path, budgets', to: '/docs/web-vitals-performance', active: true, imported: true},
-      {n: '24', name: 'Frontend Architecture', desc: 'Micro-frontends, monorepos, state machines, observability', to: '/docs/frontend-architecture', active: true, imported: true},
+      {name: 'Redux Toolkit', desc: 'RTK Query, Immer, entity adapters, custom middleware', to: '/docs/redux-toolkit', imported: true},
+      {name: 'TanStack Query', desc: 'QueryCache internals, mutations, optimistic updates, SSR', to: '/docs/tanstack-query', imported: true},
+      {name: 'Framer Motion', desc: 'Layout animations, FLIP, AnimatePresence, scroll and gestures', to: '/docs/framer-motion', imported: true},
+      {name: 'Web Vitals & Performance', desc: 'LCP, INP, CLS, critical rendering path, budgets', to: '/docs/web-vitals-performance', imported: true},
+      {name: 'Frontend Architecture', desc: 'Micro-frontends, monorepos, state machines, observability', to: '/docs/frontend-architecture', imported: true},
     ],
   },
   {
@@ -259,57 +221,185 @@ const LAYERS = [
     note: 'Not committed — parked for later',
     parked: true,
     items: [
-      {n: '13', name: 'GraphQL', desc: 'Schema design, resolvers, N+1 and DataLoader'},
-      {n: '14', name: 'tRPC', desc: 'End-to-end typed RPC for TypeScript stacks'},
-      {n: '15', name: 'Kubernetes', desc: 'Pods, services, probes, scaling, rollouts'},
+      {name: 'GraphQL', desc: 'Schema design, resolvers, N+1 and DataLoader'},
+      {name: 'tRPC', desc: 'End-to-end typed RPC for TypeScript stacks'},
+      {name: 'Kubernetes', desc: 'Pods, services, probes, scaling, rollouts'},
     ],
   },
 ];
 
-function Card({item, parked}) {
-  const pill = item.done
-    ? {className: styles.pillDone, label: 'Complete'}
-    : item.active
-      ? {className: styles.pillActive, label: 'In progress'}
-      : parked
-        ? {className: styles.pillParked, label: 'Someday'}
-        : {className: styles.pillSoon, label: 'Planned'};
+/**
+ * One word for where a technology stands. This is what the filter chips filter
+ * on and what colours the card, so it is computed once, here, rather than
+ * re-derived from three different flags at three different call sites.
+ */
+function statusOf(item, layer) {
+  if (layer.parked) return 'parked';
+  if (item.done) return 'complete';
+  if (item.imported) return 'imported';
+  if (item.data) return 'writing';
+  return 'planned';
+}
 
-  const inner = (
+const STATUS_LABEL = {
+  complete: 'Complete',
+  writing: 'In progress',
+  imported: 'Imported',
+  parked: 'Someday',
+  planned: 'Planned',
+};
+
+const FILTERS = [
+  {key: 'all', label: 'Everything'},
+  {key: 'complete', label: 'Complete'},
+  {key: 'writing', label: 'In progress'},
+  {key: 'imported', label: 'Imported'},
+];
+
+/** Rolled-up totals across every card that carries real progress data. */
+function rollUp(layers) {
+  let topics = 0;
+  let topicsDone = 0;
+  let pages = 0;
+  let tracked = 0;
+  let complete = 0;
+  for (const layer of layers) {
+    for (const item of layer.items) {
+      if (item.to) tracked += 1;
+      if (statusOf(item, layer) === 'complete') complete += 1;
+      if (!item.data) continue;
+      topics += item.data.topicsTotal;
+      topicsDone += item.data.topicsDone;
+      pages += item.data.pagesWritten;
+    }
+  }
+  return {
+    topics,
+    topicsDone,
+    pages,
+    tracked,
+    complete,
+    percent: Math.round((topicsDone / topics) * 100),
+  };
+}
+
+const TOTALS = rollUp(LAYERS);
+
+function Bar({percent, tone}) {
+  return (
+    <div className={styles.bar} aria-hidden="true">
+      <div
+        className={`${styles.barFill} ${tone === 'complete' ? styles.barDone : ''}`}
+        style={{width: `${percent}%`}}
+      />
+    </div>
+  );
+}
+
+function Card({item, layer}) {
+  const status = statusOf(item, layer);
+  const {data} = item;
+
+  const body = (
     <>
       <div className={styles.cardHead}>
-        <span className={styles.cardNum}>{item.n}</span>
-        <span className={pill.className}>{pill.label}</span>
+        <h3 className={styles.cardTitle}>{item.name}</h3>
+        {data ? (
+          <span className={styles.cardPercent}>{data.percent}%</span>
+        ) : (
+          <span className={styles.cardTag}>{STATUS_LABEL[status]}</span>
+        )}
       </div>
-      <h3 className={styles.cardTitle}>{item.name}</h3>
       <p className={styles.cardDesc}>{item.desc}</p>
-      {item.progress != null && (
-        <div className={styles.cardBar} aria-hidden="true">
-          <div className={styles.cardBarFill} style={{width: `${item.progress}%`}} />
-        </div>
+      {data && <Bar percent={data.percent} tone={status} />}
+      {data && (
+        <p className={styles.cardMeta}>
+          <span>
+            {data.phasesDone}/{data.phasesTotal} phases
+          </span>
+          <span>{data.topicsTotal} topics</span>
+          <span>
+            {data.pagesWritten} {data.pagesWritten === 1 ? 'page' : 'pages'}
+          </span>
+        </p>
       )}
-      {item.stats && <p className={styles.cardStats}>{item.stats}</p>}
-      {item.to && <span className={styles.cardGo}>Open the syllabus →</span>}
+      {data?.inFlight && (
+        <p className={styles.cardNow}>Writing · {data.inFlight.name}</p>
+      )}
     </>
   );
 
   if (item.to) {
     return (
-      <Link to={item.to} className={`${styles.card} ${styles.cardLive}`}>
-        {inner}
+      <Link to={item.to} className={`${styles.card} ${styles[status]}`}>
+        {body}
       </Link>
     );
   }
   return (
-    <div
-      className={`${styles.card} ${parked ? styles.cardParked : styles.cardDim}`}
-      aria-disabled="true">
-      {inner}
+    <div className={`${styles.card} ${styles[status]}`} aria-disabled="true">
+      {body}
     </div>
   );
 }
 
+function Recent() {
+  return (
+    <section className={styles.recent} aria-labelledby="recent-heading">
+      <p className={styles.sectionLabel} id="recent-heading">
+        Moved most recently
+      </p>
+      <div className={styles.recentRow}>
+        {RECENT.map((lang) => (
+          <Link key={lang.key} to={lang.docsPath} className={styles.recentCard}>
+            <span className={styles.recentStamp}>
+              <time dateTime={lang.stamp.replace(' ', 'T')}>
+                {lang.date} · {lang.time}
+              </time>
+            </span>
+            <span className={styles.recentName}>{lang.label}</span>
+            <span className={styles.recentWhat}>
+              {lang.inFlight
+                ? `Phase ${lang.inFlight.n} · ${lang.inFlight.name}`
+                : lang.nextPhase
+                  ? `Next up · ${lang.nextPhase.name}`
+                  : 'Every scheduled phase written'}
+            </span>
+            <Bar percent={lang.percent} tone={lang.nextPhase ? '' : 'complete'} />
+            <span className={styles.recentMeta}>
+              {lang.percent}% · {lang.pagesWritten} pages
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
+  const [query, setQuery] = useState('');
+  const [filter, setFilter] = useState('all');
+
+  /**
+   * Filtering happens over the whole tree at once so a layer that matches
+   * nothing disappears entirely — a page of empty section headings is worse
+   * than no sections at all.
+   */
+  const shown = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return LAYERS.map((layer) => ({
+      ...layer,
+      items: layer.items.filter((item) => {
+        if (filter !== 'all' && statusOf(item, layer) !== filter) return false;
+        if (!q) return true;
+        return `${item.name} ${item.desc}`.toLowerCase().includes(q);
+      }),
+    })).filter((layer) => layer.items.length > 0);
+  }, [query, filter]);
+
+  const matches = shown.reduce((n, layer) => n + layer.items.length, 0);
+  const filtering = filter !== 'all' || query.trim() !== '';
+
   return (
     <Layout
       title="Dev Bible"
@@ -323,49 +413,90 @@ export default function Home() {
             deployment. Every topic carries a priority tier, so you always know
             what to master and what to leave until a project asks for it.
           </p>
-          {updated && (
-            <p className={styles.updated}>
-              <span className={styles.updatedLabel}>Last updated</span>
-              <time dateTime={updated.stamp.replace(' ', 'T')}>
-                {updated.date} · {updated.time}
-              </time>
-              <span className={styles.updatedWhat}>{updated.label}</span>
-            </p>
-          )}
+
+          <dl className={styles.stats}>
+            <div className={styles.stat}>
+              <dt>Coverage</dt>
+              <dd>{TOTALS.percent}%</dd>
+            </div>
+            <div className={styles.stat}>
+              <dt>Technologies</dt>
+              <dd>
+                {TOTALS.tracked}
+                <span className={styles.statSub}>
+                  {TOTALS.complete} complete
+                </span>
+              </dd>
+            </div>
+            <div className={styles.stat}>
+              <dt>Topics</dt>
+              <dd>
+                {TOTALS.topics.toLocaleString('en-GB')}
+                <span className={styles.statSub}>
+                  {TOTALS.topicsDone.toLocaleString('en-GB')} explained
+                </span>
+              </dd>
+            </div>
+            <div className={styles.stat}>
+              <dt>Pages written</dt>
+              <dd>{TOTALS.pages.toLocaleString('en-GB')}</dd>
+            </div>
+          </dl>
         </header>
 
-        <section className={styles.focus}>
-          <div className={styles.focusBar} />
-          <div className={styles.focusBody}>
-            <p className={styles.focusLabel}>Just finished</p>
-            <h2 className={styles.focusTitle}>
-              Docker &amp; Podman, and the React patterns layer
-            </h2>
-            <p className={styles.focusText}>
-              Docker &amp; Podman is <strong>complete</strong> —{' '}
-              {docker.phasesDone} of {docker.phasesTotal} phases,{' '}
-              {docker.topicsTotal} topics, both engines taught side by side
-              through to Compose, rootless and Quadlet. React gained a{' '}
-              <strong>Patterns</strong> section: a selection layer that indexes
-              every pattern by the problem you actually have, rather than by its
-              name. That makes seven technologies complete — JavaScript, Node.js,
-              PostgreSQL, Express, CSS, Git and Docker — with React, TypeScript,
-              MongoDB, Nginx and the Real World storefront still in flight.
-            </p>
-            <Progress lang="docker" compact />
-            <Progress lang="react" compact />
-            <Progress lang="javascript" compact />
-            <Link className={styles.focusCta} to="/docs/docker">
-              Docker &amp; Podman syllabus →
-            </Link>
-            <Link className={styles.focusCtaAlt} to="/docs/react/pages/patterns">
-              React patterns →
-            </Link>
-            <Link className={styles.focusCtaAlt} to="/docs/javascript">
-              JavaScript syllabus →
-            </Link>
+        <Recent />
+
+        <div className={styles.controls} role="search">
+          <input
+            type="search"
+            className={styles.search}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Filter — try “grid”, “streams”, “aggregation”"
+            aria-label="Filter technologies"
+          />
+          <div className={styles.chips}>
+            {FILTERS.map((f) => (
+              <button
+                key={f.key}
+                type="button"
+                className={`${styles.chip} ${filter === f.key ? styles.chipOn : ''}`}
+                aria-pressed={filter === f.key}
+                onClick={() => setFilter(f.key)}>
+                {f.label}
+              </button>
+            ))}
           </div>
-        </section>
+          {filtering && (
+            <p className={styles.matchCount} role="status">
+              {matches} {matches === 1 ? 'match' : 'matches'}
+            </p>
+          )}
+        </div>
+
+        {shown.length === 0 && (
+          <p className={styles.empty}>
+            Nothing matches “{query}”. The search box reads the technology name
+            and its one-line summary — for anything inside a page, use the site
+            search in the header.
+          </p>
+        )}
+
+        {shown.map((layer) => (
+          <section
+            key={layer.name}
+            className={`${styles.layer} ${layer.parked ? styles.layerParked : ''}`}>
+            <div className={styles.layerHead}>
+              <h2 className={styles.layerTitle}>{layer.name}</h2>
+              <p className={styles.layerNote}>{layer.note}</p>
+            </div>
+            <div className={styles.grid}>
+              {layer.items.map((item) => (
+                <Card key={item.name} item={item} layer={layer} />
+              ))}
+            </div>
+          </section>
+        ))}
 
         <section className={styles.tiers}>
           <p className={styles.sectionLabel}>How topics are tiered</p>
@@ -388,22 +519,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {LAYERS.map((layer) => (
-          <section
-            key={layer.name}
-            className={`${styles.layer} ${layer.parked ? styles.layerParked : ''}`}>
-            <div className={styles.layerHead}>
-              <h2 className={styles.layerTitle}>{layer.name}</h2>
-              <p className={styles.layerNote}>{layer.note}</p>
-            </div>
-            <div className={styles.grid}>
-              {layer.items.map((item) => (
-                <Card key={item.name} item={item} parked={layer.parked} />
-              ))}
-            </div>
-          </section>
-        ))}
 
         <footer className={styles.foot}>
           Content verified August 2026 · Node 26.7.0 current, Node 24 active LTS

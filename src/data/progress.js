@@ -138,6 +138,30 @@ export const LANGUAGES = {
       {n: 15, slug: 'patterns', name: 'Patterns — choosing a shape', part: 'Patterns', topics: 7, pages: 7},
     ],
   },
+  angular: {
+    label: 'Angular',
+    updated: '2026-08-31 12:05',
+    docsPath: '/docs/angular',
+    pagesPath: '/docs/angular/pages',
+    phases: [
+      {n: 0, slug: 'phase-0-how-angular-runs', name: 'How Angular runs', part: 'The Angular model', topics: 12, pages: 0},
+      {n: 1, slug: 'phase-1-components-templates', name: 'Components and templates', part: 'The Angular model', topics: 16, pages: 0},
+      {n: 2, slug: 'phase-2-signals', name: 'Signals', part: 'The Angular model', topics: 15, pages: 0},
+      {n: 3, slug: 'phase-3-signal-component-api', name: 'The signal component API', part: 'Components in the signal era', topics: 12, pages: 0},
+      {n: 4, slug: 'phase-4-template-control-flow', name: 'Template syntax and control flow', part: 'Components in the signal era', topics: 12, pages: 0},
+      {n: 5, slug: 'phase-5-change-detection', name: 'Change detection and zoneless', part: 'Components in the signal era', topics: 11, pages: 0},
+      {n: 6, slug: 'phase-6-dependency-injection', name: 'Dependency injection', part: 'Injection, streams and routing', topics: 14, pages: 0},
+      {n: 7, slug: 'phase-7-rxjs', name: 'RxJS in Angular', part: 'Injection, streams and routing', topics: 12, pages: 0},
+      {n: 8, slug: 'phase-8-routing', name: 'Routing', part: 'Injection, streams and routing', topics: 16, pages: 0},
+      {n: 9, slug: 'phase-9-http-and-data', name: 'HTTP and data', part: 'Data, forms and architecture', topics: 12, pages: 0},
+      {n: 10, slug: 'phase-10-forms', name: 'Forms, all three systems', part: 'Data, forms and architecture', topics: 16, pages: 0},
+      {n: 11, slug: 'phase-11-architecture-state-ui', name: 'Architecture, state and UI', part: 'Data, forms and architecture', topics: 12, pages: 0},
+      {n: 12, slug: 'phase-12-ssr-hydration', name: 'SSR, hydration and the server', part: 'Rendering on the server, and testing', topics: 13, pages: 0},
+      {n: 13, slug: 'phase-13-testing', name: 'Testing', part: 'Rendering on the server, and testing', topics: 14, pages: 0},
+      {n: 14, slug: 'phase-14-performance-build', name: 'Performance and the build', part: 'Performance, tooling and the ecosystem', topics: 12, pages: 0},
+      {n: 15, slug: 'phase-15-tooling-ecosystem', name: 'Tooling, upgrades and the ecosystem', part: 'Performance, tooling and the ecosystem', topics: 12, pages: 0},
+    ],
+  },
   nodejs: {
     label: 'Node.js',
     updated: '2026-08-14 07:33',
@@ -679,11 +703,33 @@ export function summarise(langKey) {
  * whatever the build machine thought the time was. An absolute stamp stays true.
  */
 export function lastUpdated() {
-  const entries = Object.entries(LANGUAGES)
+  return recentlyUpdated(1)[0] ?? null;
+}
+
+/**
+ * The `count` most recently touched languages, freshest first, each already
+ * summarised.
+ *
+ * This exists so the homepage can *derive* "what moved lately" instead of
+ * carrying a hand-written paragraph about it. The hand-written version went
+ * stale every single time: it still announced Docker and the React patterns
+ * layer weeks after Java had become the thing actually being written. A stamp
+ * that every session already updates as part of its cadence cannot drift.
+ */
+export function recentlyUpdated(count = 3) {
+  return Object.entries(LANGUAGES)
     .filter(([, lang]) => lang.updated)
-    .sort((a, b) => (a[1].updated < b[1].updated ? 1 : -1));
-  if (entries.length === 0) return null;
-  const [key, lang] = entries[0];
-  const [date, time] = lang.updated.split(' ');
-  return {key, label: lang.label, stamp: lang.updated, date, time};
+    // A corpus that was moved in wholesale carries the stamp of the day it was
+    // imported, not of anyone writing it. Left in, the three freshest stamps
+    // were "Jest & RTL, 100%, every scheduled phase written" — true of the
+    // counter and false of the pages. Storybook survives this filter because
+    // only some of its phases are imported and the rest were written here.
+    .filter(([, lang]) => lang.phases.some((p) => p.part !== 'Imported corpus'))
+    .sort((a, b) => (a[1].updated < b[1].updated ? 1 : -1))
+    .slice(0, count)
+    .map(([key, lang]) => {
+      const [date, time] = lang.updated.split(' ');
+      const stats = summarise(key);
+      return {key, label: lang.label, stamp: lang.updated, date, time, ...stats};
+    });
 }

@@ -8,6 +8,7 @@
     "start": "node scripts/ensure-search-index.mjs && docusaurus start",
     "start:no-search": "docusaurus start",
     "search:index": "node scripts/ensure-search-index.mjs --force",
+    "status": "node scripts/status.mjs",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

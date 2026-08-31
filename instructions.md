@@ -28,6 +28,7 @@ fullstack application, frontend through deployment, across both **MERN** and
 | 10 | **Redis** | — |
 | 11 | **Nginx** | — |
 | 12 | **Git** | Moved into scope 2026-08-13 (was parked). Version control as it is actually used on a fullstack team |
+| 13 | **Angular** | Added 2026-08-31 on request. The **second frontend framework**, alongside React rather than replacing it. Targets **Angular 22** — the current major as of September 2026 — so signals, zoneless change detection, signal forms and `httpResource` are the baseline, not the advanced material |
 
 Each technology is taught **toward mastery for efficient fullstack development** —
 not as isolated trivia. Gather all the concepts a topic actually requires.
