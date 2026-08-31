@@ -1,0 +1,80 @@
+engine: Edg/152.0.0.0
+
+=== What each selector actually matched ===
+  p                              3  type
+                                    p.lead[first]  p[second]  p.lead[nested lead]
+  .lead                          2  class
+                                    p.lead[first]  p.lead[nested lead]
+  #app                           1  id
+                                    main#app.layout[Heading
+  fi]
+  *                             23  universal
+                                    html[Heading
+  fi]  head[]  body[Heading
+  fi]  main#app.layout[Heading
+  fi]  h2.title.heading[Heading]  p.lead[first]
+  [data-state]                   1  attribute presence
+                                    main#app.layout[Heading
+  fi]
+  main p                         3  descendant
+                                    p.lead[first]  p[second]  p.lead[nested lead]
+  main > p                       2  child
+                                    p.lead[first]  p[second]
+  .title + p                     1  next sibling
+                                    p.lead[first]
+  .title ~ p                     2  subsequent siblings
+                                    p.lead[first]  p[second]
+  .wrap > .tag + .tag            2  child + adjacent
+                                    span.tag[b]  span.tag[c]
+  [data-kind="beta"]             1  exact =
+                                    span.tag[b]
+  [data-kind^="alpha"]           2  starts with ^=
+                                    span.tag[a]  span.tag[c]
+  [data-kind$="-1"]              1  ends with $=
+                                    span.tag[a]
+  [data-kind*="lph"]             2  contains *=
+                                    span.tag[a]  span.tag[c]
+  [lang|="en"]                   1  hyphen prefix |=
+                                    main#app.layout[Heading
+  fi]
+  [href$=".pdf" i]               1  case-insensitive i
+                                    a[pdf]
+  [href^="mailto:"]              1  protocol match
+                                    a[mail]
+  li:first-child                 1  first-child
+                                    li[1]
+  li:last-child                  1  last-child
+                                    li[5]
+  li:nth-child(2n)               2  nth-child even
+                                    li[2]  li[4]
+  li:nth-child(2n+1)             3  nth-child odd
+                                    li[1]  li[3]  li[5]
+  li:nth-child(-n+2)             2  first two
+                                    li[1]  li[2]
+  p:nth-child(2)                 1  nth-child counts ALL siblings
+                                    p.lead[first]
+  p:nth-of-type(2)               1  nth-of-type counts P only
+                                    p[second]
+  .tag:nth-child(2 of .tag)      1  nth-child of S
+                                    span.tag[b]
+  :checked                       1  checked
+                                    input[]
+  :required                      1  required
+                                    input[]
+  input:not([required])          1  not()
+                                    input[]
+  :is(.lead, .title)             3  :is()
+                                    h2.title.heading[Heading]  p.lead[first]  p.lead[nested lead]
+  :where(.lead, .title)          3  :where()
+                                    h2.title.heading[Heading]  p.lead[first]  p.lead[nested lead]
+  .wrap:has(.tag)                1  :has() — parent selector
+                                    div.wrap[nested lead
+]
+  p:has(+ p)                     1  :has() — followed by a sibling
+                                    p.lead[first]
+
+=== The two that people get wrong ===
+  p:nth-child(2)   → ["first"]
+  p:nth-of-type(2) → ["second"]
+  nth-child counts every sibling, then checks the type.
+  nth-of-type counts only siblings of that type.

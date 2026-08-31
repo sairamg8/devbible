@@ -1,0 +1,57 @@
+web-features 3.34.3 · 1186 features
+
+=== Baseline status, straight from web-features ===
+  has                          Widely available     2023-12-19   :has()
+  container-queries            Widely available     2023-02-14   Container queries
+  subgrid                      Widely available     2023-09-15   Subgrid
+  nesting                      Widely available     2023-12-11   Nesting
+  cascade-layers               Widely available     2022-03-14   Cascade layers
+  color-mix                    Widely available     2023-05-09   color-mix()
+  oklab                        Widely available     2023-05-09   Oklab and OkLCh
+  logical-properties           Widely available     2021-09-20   Logical properties
+  aspect-ratio                 Widely available     2021-09-20   aspect-ratio
+  light-dark                   Newly available      2024-05-13   light-dark()
+  scope                        Newly available      2025-12-12   @scope
+  popover                      Newly available      2025-01-27   Popover
+  content-visibility           Newly available      2025-09-15   content-visibility
+  view-transitions             Newly available      2025-10-14   View transitions
+  starting-style               Newly available      2024-08-06   @starting-style
+  field-sizing                 Newly available      2026-06-16   field-sizing
+  details-content              Newly available      2025-09-16   ::details-content
+  scrollbar-gutter             Newly available      2024-12-11   scrollbar-gutter
+  anchor-positioning           Limited availability —            Anchor positioning
+  scroll-driven-animations     Limited availability —            Scroll-driven animations
+  masonry                      Limited availability —            Masonry
+  calc-size                    Limited availability —            calc-size()
+  interpolate-size             Limited availability —            interpolate-size
+  line-clamp                   Limited availability —            line-clamp
+  text-wrap-pretty             Limited availability —            text-wrap: pretty
+  accent-color                 Limited availability —            accent-color
+  marker                       Limited availability —            ::marker
+  relative-color               Newly available      2024-09-16   Relative colors
+
+=== Firefox/154.0 support vs Baseline — where they disagree ===
+  feature                      Firefox/154.0  Baseline
+  has                          true           Widely available
+  container-queries            true           Widely available
+  subgrid                      true           Widely available
+  nesting                      true           Widely available
+  color-mix                    true           Widely available
+  oklab                        true           Widely available
+  light-dark                   true           Newly available
+  field-sizing                 true           Newly available
+  anchor-positioning           true           Limited availability   ← ships here, NOT Baseline
+  scroll-driven-animations     false          Limited availability
+  masonry                      false          Limited availability
+  calc-size                    false          Limited availability
+  interpolate-size             false          Limited availability
+  line-clamp                   false          Limited availability
+  text-wrap-pretty             false          Limited availability
+  accent-color                 true           Limited availability   ← ships here, NOT Baseline
+  content-visibility           true           Newly available
+  relative-color               true           Newly available
+
+=== The point ===
+  A green CSS.supports() in one engine is not a shipping decision.
+  Everything flagged above renders correctly on this machine and
+  would still break for a share of real users.

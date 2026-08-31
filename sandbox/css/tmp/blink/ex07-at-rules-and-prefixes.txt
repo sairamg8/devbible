@@ -1,0 +1,36 @@
+engine: Edg/152.0.0.0
+
+=== Which at-rules survived parsing ===
+  @media (min-width: 1px)        kept    CSSMediaRule
+  @supports (color: red)         kept    CSSSupportsRule
+  @layer base                    kept    CSSLayerBlockRule
+  @container (min-width: 1px)    kept    CSSContainerRule
+  @scope (.a) to (.b)            kept    CSSScopeRule
+  @property --p                  kept    CSSPropertyRule
+  @font-face                     kept    CSSFontFaceRule
+  @keyframes k                   kept    CSSKeyframesRule
+  @page                          kept    CSSPageRule
+  @starting-style                kept    CSSStartingStyleRule
+  @counter-style c               kept    CSSCounterStyleRule
+  @nonsense foo                  DROPPED 
+
+=== Vendor prefixes — what is still real ===
+  line-clamp                false
+  -webkit-line-clamp        true
+  backdrop-filter           true
+  -webkit-backdrop-filter   false
+  user-select               true
+  -webkit-user-select       true
+  box-shadow                true
+  -webkit-box-shadow        true
+  border-radius             true
+  -moz-border-radius        false
+  appearance                true
+  -webkit-appearance        true
+  text-size-adjust          true
+  -webkit-text-size-adjust  true
+
+=== The -webkit- prefix Firefox implements on purpose ===
+  Firefox supports several -webkit- properties for web compatibility:
+  sites shipped them for years, so refusing them broke real pages.
+  That is why a prefix check is not a browser check.

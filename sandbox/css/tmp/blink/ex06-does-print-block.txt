@@ -1,0 +1,14 @@
+engine: Edg/152.0.0.0
+stylesheet delayed 600ms server-side; FCP is median of 5 after warm-up
+
+
+=== Does a non-matching stylesheet block the first paint? — Edg/152.0.0.0 ===
+  no stylesheet (floor)  FCP    28ms   runs [28,32,24,36,28]
+  media="print"          FCP    32ms   runs [32,36,28,36,24]
+  media not matching     FCP    36ms   runs [36,36,36,32,32]
+  normal stylesheet      FCP   632ms   runs [640,620,624,640,632]
+
+=== Verdict ===
+  media="print"          32ms  (floor 28ms)  → does not block
+  media not matching     36ms  (floor 28ms)  → does not block
+  normal stylesheet      632ms  (floor 28ms)  → BLOCKS the first paint

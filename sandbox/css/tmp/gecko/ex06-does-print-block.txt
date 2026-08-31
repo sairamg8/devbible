@@ -1,0 +1,14 @@
+engine: Firefox/154.0
+stylesheet delayed 600ms server-side; FCP is median of 5 after warm-up
+
+
+=== Does a non-matching stylesheet block the first paint? — Firefox/154.0 ===
+  no stylesheet (floor)  FCP    17ms   runs [14,16,17,64,28]
+  media="print"          FCP    28ms   runs [19,32,28,25,28]
+  media not matching     FCP    25ms   runs [19,32,25,32,22]
+  normal stylesheet      FCP   634ms   runs [633,624,637,634,637]
+
+=== Verdict ===
+  media="print"          28ms  (floor 17ms)  → does not block
+  media not matching     25ms  (floor 17ms)  → does not block
+  normal stylesheet      634ms  (floor 17ms)  → BLOCKS the first paint

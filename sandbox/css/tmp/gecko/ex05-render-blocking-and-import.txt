@@ -1,0 +1,17 @@
+engine: Firefox/154.0
+every stylesheet delayed 500ms server-side
+
+
+=== First Contentful Paint by delivery shape (median of 5, after warm-up) ===
+  1 blocking sheet           FCP   530ms   sheets 1   request start gap 0ms
+  2 sheets, parallel <link>  FCP   530ms   sheets 2   request start gap 0ms
+  2 sheets, chained @import  FCP  1046ms   sheets 2   request start gap 510ms
+
+=== Reading it ===
+  Two parallel <link>s cost roughly one delay, not two — the requests
+  overlap, so the start gap is ~1ms.
+  @import cannot overlap: the second request is not discoverable until
+  the first stylesheet has arrived and been parsed. The start gap is a
+  full delay, and the delays ADD UP.
+  Whether a non-matching media stylesheet blocks is measured separately
+  and properly in ex06-does-print-block.mjs (it does not).

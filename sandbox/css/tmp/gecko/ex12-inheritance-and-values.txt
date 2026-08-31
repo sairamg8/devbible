@@ -1,0 +1,48 @@
+engine: Firefox/154.0
+
+=== Which properties inherit — parent vs untouched child ===
+  color            INHERITS     parent=rgb(0, 0, 128)         child=rgb(0, 0, 128)
+  fontFamily       INHERITS     parent=Georgia                child=Georgia
+  fontSize         INHERITS     parent=20px                   child=20px
+  lineHeight       INHERITS     parent=30px                   child=30px
+  letterSpacing    INHERITS     parent=1px                    child=1px
+  textAlign        INHERITS     parent=center                 child=center
+  visibility       INHERITS     parent=visible                child=visible
+  cursor           INHERITS     parent=help                   child=help
+  borderTopWidth   does not     parent=2px                    child=0px
+  padding          does not     parent=10px                   child=0px
+  margin           does not     parent=5px                    child=0px
+  backgroundColor  does not     parent=rgb(255, 255, 0)       child=rgba(0, 0, 0, 0)
+  width            does not     parent=300px                  child=auto
+  opacity          does not     parent=0.9                    child=1
+
+=== The global keywords ===
+  border: inherit (parent 2px solid red)        rgb(255, 0, 0) / 2px
+  color: initial (NOT the parent navy)          rgb(0, 0, 0)
+  color: unset — color inherits, so →           rgb(0, 0, 128)
+  border-color: unset — does not inherit, so →  rgb(0, 0, 128)
+  font-weight: revert on <b> → UA value         700
+  plain <b> UA font-weight for comparison       700
+
+=== The shorthand reset trap ===
+  .sh-1 border-color: green THEN border: 2px solid  rgb(0, 0, 0)
+  .sh-2 border: 2px solid THEN border-color: green  rgb(0, 128, 0)
+  .sh-3 background-image THEN background: yellow    none
+  green is                                          rgb(0, 128, 0)
+  currentcolor here resolves to                     rgb(0, 0, 0)
+
+=== What a percentage resolves against ===
+  parent is                                             400px wide, 200px tall, font-size 10px
+  width: 50%  → 50% of parent WIDTH                     200px
+  padding-top: 10% → 10% of parent WIDTH (not height!)  40px
+  margin-left: 25% → 25% of parent WIDTH                100px
+  height: 50% → 50% of parent HEIGHT                    100px
+  font-size: 150% → 150% of parent FONT-SIZE            15px
+
+=== Specified vs computed vs used ===
+  specified width                            50%
+  getComputedStyle().width (resolved/used)   200px
+  getBoundingClientRect().width              200
+  specified line-height on .parent           1.5 (unitless)
+  computed line-height (of 20px font)        30px
+  child inherits the NUMBER, not the length  30px

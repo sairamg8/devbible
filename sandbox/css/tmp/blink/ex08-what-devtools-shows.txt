@@ -1,0 +1,26 @@
+engine: Edg/152.0.0.0
+
+=== Every rule that matches #lead, in source order ===
+  p                  spec 0,0,1   color: black          sets: color margin-top margin-right margin-bottom margin-left
+  .note              spec 0,1,0   color: blue           sets: color padding-top padding-right padding-bottom padding-left
+  #lead              spec 1,0,0   color: green          sets: color
+  .note              spec 0,1,0   color: rebeccapurple  sets: color
+  article p.note     spec 0,1,2   color: —              sets: font-weight
+  :where(.note)      spec 0,0,0   color: —              sets: letter-spacing
+
+=== What actually won ===
+  color          rgb(0, 128, 0)
+  fontWeight     700
+  letterSpacing  1px
+  textIndent     2px
+  padding        4px
+
+=== Reading it ===
+  #lead sets green with the highest specificity (1,0,0), so green wins
+  even though .note { color: rebeccapurple } comes LATER in the file.
+  This is what the Styles pane shows as struck-through declarations:
+  every losing rule is still listed, in the order it was beaten.
+  :where(.note) contributed letter-spacing at specificity 0,0,0 —
+  it applied because nothing else set letter-spacing at all.
+  text-indent came from the inline style attribute, which is why
+  DevTools shows it in its own "element.style" block at the top.

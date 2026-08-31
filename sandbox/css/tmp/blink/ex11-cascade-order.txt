@@ -1,0 +1,25 @@
+
+=== What the cascade compares — one criterion per case ===
+  1. source order only (identical selectors)
+     winner: B (green)     expected: B — last wins
+  2. specificity beats source order
+     winner: A (red)       expected: A — #y is more specific, despite coming first
+  3. layer order beats specificity
+     winner: B (green)     expected: B — later layer wins even with a weaker selector
+  4. unlayered beats layered
+     winner: B (green)     expected: B — an unlayered rule beats ANY layer
+  5. !important beats everything normal
+     winner: A (red)       expected: A — important in the FIRST layer wins
+  6. !important INVERTS layer order
+     winner: A (red)       expected: A — for important declarations the EARLIER layer wins
+  7. inline style beats normal author rules
+     winner: C (blue)      expected: inline — element.style outranks the stylesheet
+  8. !important in a stylesheet beats a normal inline style
+     winner: A (red)       expected: A — important author beats normal inline
+
+=== The order, as the cases prove it ===
+  1. origin + importance   (cases 5, 6, 8)
+  2. cascade layer         (cases 3, 4, 6)
+  3. specificity           (case 2)
+  4. source order          (case 1)
+  Inline styles sit between: above normal author rules, below important ones.

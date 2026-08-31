@@ -1,0 +1,34 @@
+engine: Edg/152.0.0.0
+
+=== An invalid declaration is dropped; its neighbours survive ===
+  authored declarations                           4 (color, colour, font-size, padding)
+  longhands kept (padding expands to 4)           5
+  cssText as the engine stored it                 .a { color: green; padding: 10px; }
+  color (valid, kept)                             rgb(0, 128, 0)
+  padding-left (valid, kept)                      10px
+  font-size (invalid value, dropped → inherited)  16px
+
+=== An unknown property does not break the rule ===
+  rule cssText         .b { color: blue; }
+  color still applied  rgb(0, 0, 255)
+
+=== An invalid SELECTOR discards the whole rule ===
+  selectors that survived parsing        [".a",".b",":is(.d)",".e"]
+  .c color (rule was discarded)          rgb(0, 0, 0)
+  .d color (:is() forgave the bad half)  rgb(0, 128, 0)
+  green is                               rgb(0, 128, 0)
+  black (the default) is                 rgb(0, 0, 0)
+
+=== An unclosed brace swallows the rules after it ===
+  total rules in the sheet  4
+  .e color                  rgb(0, 128, 0)
+  .f color                  rgb(0, 0, 0)
+
+=== What the engine reported about any of it ===
+  (nothing — no console message, no error event, no exception)
+
+=== The one API that does tell you: CSS.supports ===
+  CSS.supports('colour','red')          false
+  CSS.supports('color','red')           true
+  CSS.supports('font-size','notasize')  false
+  el.style.color = "notacolor" leaves   ""

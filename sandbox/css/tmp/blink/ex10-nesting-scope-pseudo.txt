@@ -1,0 +1,31 @@
+engine: Edg/152.0.0.0
+
+=== What a nested rule desugars to ===
+  outer selector  .card
+  nested rules    4
+  desugared       ["& .title","&:hover",".inner &","@media (min-width: 1px)"]
+
+=== Nesting: computed results ===
+  color (from .card)             rgb(0, 0, 128)
+  padding (from nested @media)   4px
+  font-style (from .inner &)     italic
+  .title weight (from & .title)  700
+
+=== @scope — does the lower bound hold? ===
+  p inside .widget (in scope)       rgb(0, 128, 0)
+  p inside .slot (below the bound)  rgb(0, 0, 0)
+  green is                          rgb(0, 128, 0)
+  default is                        rgb(0, 0, 0)
+
+=== Pseudo-elements are not in the DOM ===
+  childNodes of .quote                      1
+  querySelector("::before")                 null
+  getComputedStyle(el, "::before").content  "“"
+  its colour                                rgb(255, 0, 0)
+  textContent includes the quote mark?      false
+
+=== Selector cost — :has() vs a class, 5000 elements ===
+  querySelectorAll(".is-checked")         0.02
+  querySelectorAll(".row:has(:checked)")  2.95
+  both return                             500
+  note                                    ms per call, mean of 20

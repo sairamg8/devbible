@@ -1,0 +1,31 @@
+engine: Firefox/154.0
+
+=== document.styleSheets — the CSSOM ===
+  sheetCount      1
+  ruleCount       4
+  ruleTypes       ["CSSStyleRule","CSSStyleRule","CSSMediaRule","CSSStyleRule"]
+  firstSelector   .card
+  mediaCondition  (min-width: 400px)
+
+=== Declarations are normalised on parse, not stored verbatim ===
+  authored #ff0000 reads back as     rgb(255, 0, 0)
+  shorthand padding expands to       22
+  longhands                          color,padding-top,padding-right,padding-bottom,padding-left,border-top-width,border-top-style,border-top-color,border-right-width,border-right-style,border-right-color,border-bottom-width,border-bottom-style,border-bottom-color,border-left-width,border-left-style,border-left-color,border-image-outset,border-image-repeat,border-image-slice,border-image-source,border-image-width
+  border 1px solid reads back as     1px solid
+  border-color with no author value  "currentcolor"
+
+=== Computed value vs specified value ===
+  specified padding                    1em 2em
+  computed padding-left (2em @16px)    32px
+  computed color (media query won)     rgb(0, 128, 0)
+  computed font-size                   16px
+  computed line-height (1.5 unitless)  24px
+
+=== Which pipeline stage a change costs ===
+  before                 (w,h,x)  [98.78334045410156,58,0]
+  after color: purple    (w,h,x)  [98.78334045410156,58,0]
+  after padding: 3em     (w,h,x)  [130.78334045410156,122,0]
+  after translateX(50px) (w,h,x)  [130.78334045410156,122,50]
+  color changed the box?          no
+  padding changed the box?        yes
+  transform changed w/h?          no — only position
