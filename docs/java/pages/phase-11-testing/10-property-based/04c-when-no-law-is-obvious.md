@@ -32,8 +32,7 @@ Sometimes the function genuinely has no inverse, is not idempotent, preserves no
 and takes one argument. Four things still work, in descending order of strength.
 
 **Compare against a simpler implementation.** The slow, obviously-correct version is a test
-oracle. This deserves its own treatment — [04d · Models, oracles and metamorphic
-relations](04d-models-oracles-and-metamorphic-relations.md).
+oracle. This deserves its own treatment — [04d · Models and oracles](04d-models-and-oracles.md).
 
 **Assert only that it does not blow up.** A property whose body is a single call and no
 assertion still asserts something: *this function is total over its declared input type*.
@@ -75,7 +74,7 @@ Ask these in order. Stop at the first yes.
 4. Does it take two or more things that could be supplied in either order? →
    order-independence.
 5. Is there an obviously-correct slow way to compute the same answer? → model comparison
-   ([04d](04d-models-oracles-and-metamorphic-relations.md)).
+   ([04d](04d-models-and-oracles.md)).
 6. Is there a second method whose result must agree with this one? → consistency.
 7. Is it a parser, a formatter, or anything taking a `String` from outside? → totality: it
    must not throw anything undocumented, for any input.
@@ -88,7 +87,9 @@ Ask these in order. Stop at the first yes.
 - The four strong relations are [04 · Finding properties](04-finding-properties.md) and
   [04b · Invariants and order-independence](04b-invariants-and-order-independence.md).
 - Model comparison, which is step 5 of the checklist, is
-  [04d · Models, oracles and metamorphic relations](04d-models-oracles-and-metamorphic-relations.md).
+  [04d · Models and oracles](04d-models-and-oracles.md); relating two runs to each other when
+  there is no model at all is
+  [04e · Metamorphic relations and contract tests](04e-metamorphic-and-contract-tests.md).
 - Generating the arbitrary `String` that makes the totality property work — and widening its
   alphabet beyond jqwik's default — is [05 · Generators](05-generators.md) and
   [05b · Constraining generation](05b-constraining-generation.md).

@@ -128,7 +128,8 @@ the quieter benefits of the technique.
   [04 · Finding properties](04-finding-properties.md).
 - What to do when none of the four fits is
   [04c · When no law is obvious](04c-when-no-law-is-obvious.md); comparing against a model is
-  [04d · Models, oracles and metamorphic relations](04d-models-oracles-and-metamorphic-relations.md).
+  [04d · Models and oracles](04d-models-and-oracles.md), and relating two runs to each other is
+  [04e · Metamorphic relations and contract tests](04e-metamorphic-and-contract-tests.md).
 - The `@Size`, `@IntRange`, `@BigRange`, `@Scale` and `@UniqueElements` annotations used above
   are [05b · Constraining generation](05b-constraining-generation.md); `Assume.that` and why it
   is a last resort are on the same page.

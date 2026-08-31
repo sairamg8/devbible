@@ -130,9 +130,10 @@ class in five minutes: [04c · When no law is obvious](04c-when-no-law-is-obviou
   [04b · Invariants and order-independence](04b-invariants-and-order-independence.md).
 - Totality, generalising a postcondition, cross-method consistency and the five-minute
   checklist are [04c · When no law is obvious](04c-when-no-law-is-obvious.md).
-- Comparing against a simple model, metamorphic relations and jqwik's documented contract-test
-  mechanism are
-  [04d · Models, oracles and metamorphic relations](04d-models-oracles-and-metamorphic-relations.md).
+- Comparing against a simple model or a checker is
+  [04d · Models and oracles](04d-models-and-oracles.md); metamorphic relations and jqwik's
+  documented contract-test mechanism are
+  [04e · Metamorphic relations and contract tests](04e-metamorphic-and-contract-tests.md).
 - Generating the `Order`, `Money` and `Address` values these examples assume is
   [05 · Generators](05-generators.md).
 - Where these relations are worth the effort is [10 · Where it pays](10-where-it-pays.md);
@@ -164,7 +165,7 @@ for a mapper that loses the seventh. If it compares a `BigDecimal` with `equals`
 `compareTo`, the property is red for a mapper that is correct. Before trusting a round-trip
 property over a domain object, write the `equals`/`hashCode` contract properties for that
 object — they are four lines and they are in
-[04d](04d-models-oracles-and-metamorphic-relations.md).
+[04e](04e-metamorphic-and-contract-tests.md).
 
 **★ `@ForAll byte[]` and `@ForAll String` do not generate the same alphabet, and a Base64 round-trip that passes on strings can fail on bytes.**
 jqwik's guide states that when generating characters *"any unicode character might be
