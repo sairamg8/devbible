@@ -25,7 +25,9 @@ sidebar_position: 19
 container in a JUnit `Store` and JUnit closes that store when the extension context ends. This chunk
 is the consequence Spring Boot decided was serious enough to write into the reference manual — and
 the honest counterweight, which is that the problem exists only because Spring caches contexts, so
-for a test with no Spring context the extension is still exactly the right tool.**
+for a test with no Spring context the extension is still exactly the right tool. The two attributes
+on `@Testcontainers`, and the `@Nested` limitation, are
+[03e](03e-the-switches-and-the-limits.md) and [03f](03f-parallelism-and-nested.md).**
 
 ## 🔴 What Boot 4.1 actually says
 

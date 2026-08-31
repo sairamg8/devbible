@@ -28,8 +28,10 @@ declare, and the interface — not the class — that decides what the extension
 genuinely small, and reading it is what makes the rest of this run predictable. The field modifier
 that decides how many containers you get is [03b](03b-static-versus-instance.md); how a container is
 actually stopped and every message the extension can throw is
-[03c](03c-the-store-and-the-messages.md); and why Boot 4.1 now steers you away from all of it for
-Spring tests is [03d](03d-the-lifecycle-argument.md).**
+[03c](03c-the-store-and-the-messages.md); why Boot 4.1 now steers you away from all of it for
+Spring tests is [03d](03d-the-lifecycle-argument.md); and the two attributes and the `@Nested`
+limitation are [03e](03e-the-switches-and-the-limits.md) and
+[03f](03f-parallelism-and-nested.md).**
 
 ## It is a separate artifact, and you do not get it with core
 
@@ -80,7 +82,8 @@ Four things follow directly from that declaration, and all four matter:
   the work, and it implements five JUnit interfaces: `BeforeAllCallback`, `AfterAllCallback`,
   `BeforeEachCallback`, `AfterEachCallback` and `ExecutionCondition`.
 - **Both attributes default to `false`.** Nothing is parallel and nothing is skipped unless you ask.
-  Both are [03d](03d-the-lifecycle-argument.md)'s subject.
+  `disabledWithoutDocker` is [03e](03e-the-switches-and-the-limits.md)'s subject and `parallel` is
+  [03f](03f-parallelism-and-nested.md)'s.
 
 ## `@Container` is an empty marker — and a legal meta-annotation
 
@@ -162,7 +165,7 @@ class PaymentClientTests {
 
 `getDependencies()` is the hook `Startables.deepStart` walks, so a composite can declare what has to
 be up before it. That is also how the `parallel()` switch keeps ordering —
-[03d](03d-the-lifecycle-argument.md).
+[03f](03f-parallelism-and-nested.md).
 
 ### And a second, richer hook: `TestLifecycleAware`
 
