@@ -26,7 +26,7 @@ forty other things, where the defaults live, how data gets into a database and o
 why a test that reads the system clock or generates a random id is a failure scheduled for a
 date nobody chose.**
 
-Three failure modes run through all 33 chunks, and they are the same failure wearing
+Three failure modes run through all 34 chunks, and they are the same failure wearing
 different clothes:
 
 1. **The test states things it does not depend on**, so a reader cannot tell which value produced
@@ -36,7 +36,7 @@ different clothes:
 3. **The test depends on something it did not choose** — the wall clock, a random id, a
    generated name — so a build that is green today is green because of the date.
 
-**33 chunks, ~8,742 lines, 436 gotchas and interview questions.** Read in order; each chunk
+**34 chunks, ~8,999 lines, 450 gotchas and interview questions.** Read in order; each chunk
 links to the next.
 
 | # | Chunk | Tier | What it argues |
@@ -74,6 +74,7 @@ links to the next.
 | 31 | **[07 · Faker and generated data](07-faker-and-generated-data.md)** | <span className="db-tier t-understand">Understand</span> | Generated data earns its place in exactly one region of a fixture |
 | 32 | **[07b · The seed discipline](07b-the-seed-discipline.md)** | <span className="db-tier t-understand">Understand</span> | A seed you did not print is a failure you cannot reproduce, and a seed you hard-coded is a fixe… |
 | 33 | **[07c · Generated ids](07c-generated-ids.md)** | <span className="db-tier t-understand">Understand</span> | UUID.randomUUID() is the right tool for uniqueness and a defect in an assertion, and the deeper… |
+| 34 | **[07d · Seeded randomness in the JDK](07d-seeded-randomness-in-the-jdk.md)** | <span className="db-tier t-understand">Understand</span> | ThreadLocalRandom's javadoc says outright that its seed may not be modified and setSeed throws,… |
 
 ## Where this topic sits
 

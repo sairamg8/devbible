@@ -176,15 +176,18 @@ half needs no Spring context at all
 
 - Which type to inject — `Clock` or the narrower `InstantSource`:
   [06b · What to inject](06b-what-to-inject.md).
-- The values a test passes — `fixed`, `offset`, `tick`, a mutable clock — and why
-  `mock(Clock.class)` and `mockStatic(LocalDate.class)` are the inferior fixes:
+- The values a test passes — `fixed`, `offset`, `tick`, a mutable clock:
   [06c · The clocks a test passes](06c-the-clocks-a-test-passes.md).
-- Declaring the `Clock` bean and replacing it in a slice:
-  [06d · The clock in Spring](06e-the-clock-bean.md).
-- Timestamps written by JPA auditing or by the database, and how to assert on them:
-  [06e · Timestamps you did not write](06g-the-clocks-you-do-not-own.md).
-- Random values, generated ids and seeded generators:
-  [06f · Random values and generated ids](07c-generated-ids-and-seeded-randomness.md).
+- Why `mock(Clock.class)` and `mockStatic(LocalDate.class)` are the inferior fixes:
+  [06d · The two mocks that are not the fix](06d-the-two-mocks-that-are-not-the-fix.md).
+- Declaring the `Clock` bean: [06e · The clock bean](06e-the-clock-bean.md), and replacing it
+  for one test: [06f · Overriding the clock in a slice](06f-overriding-the-clock-in-a-slice.md).
+- Timestamps written by the scheduler, JPA auditing or the database:
+  [06g · The clocks you do not own](06g-the-clocks-you-do-not-own.md), and how to assert on
+  them: [06h · Asserting on a timestamp you did not choose](06h-asserting-on-a-timestamp-you-did-not-choose.md).
+- Generated values, ids and seeded generators: [07 · Faker and generated data](07-faker-and-generated-data.md),
+  [07c · Generated ids](07c-generated-ids.md) and
+  [07d · Seeded randomness in the JDK](07d-seeded-randomness-in-the-jdk.md).
 - Day boundaries, DST and time zones are catalogued from the flake side in
   [14b · Time and determinism](../01-junit-5/14b-time-and-determinism.md).
 - What `Instant` is and why it is not `LocalDateTime`:
