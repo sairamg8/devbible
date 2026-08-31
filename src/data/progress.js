@@ -679,11 +679,33 @@ export function summarise(langKey) {
  * whatever the build machine thought the time was. An absolute stamp stays true.
  */
 export function lastUpdated() {
-  const entries = Object.entries(LANGUAGES)
+  return recentlyUpdated(1)[0] ?? null;
+}
+
+/**
+ * The `count` most recently touched languages, freshest first, each already
+ * summarised.
+ *
+ * This exists so the homepage can *derive* "what moved lately" instead of
+ * carrying a hand-written paragraph about it. The hand-written version went
+ * stale every single time: it still announced Docker and the React patterns
+ * layer weeks after Java had become the thing actually being written. A stamp
+ * that every session already updates as part of its cadence cannot drift.
+ */
+export function recentlyUpdated(count = 3) {
+  return Object.entries(LANGUAGES)
     .filter(([, lang]) => lang.updated)
-    .sort((a, b) => (a[1].updated < b[1].updated ? 1 : -1));
-  if (entries.length === 0) return null;
-  const [key, lang] = entries[0];
-  const [date, time] = lang.updated.split(' ');
-  return {key, label: lang.label, stamp: lang.updated, date, time};
+    // A corpus that was moved in wholesale carries the stamp of the day it was
+    // imported, not of anyone writing it. Left in, the three freshest stamps
+    // were "Jest & RTL, 100%, every scheduled phase written" — true of the
+    // counter and false of the pages. Storybook survives this filter because
+    // only some of its phases are imported and the rest were written here.
+    .filter(([, lang]) => lang.phases.some((p) => p.part !== 'Imported corpus'))
+    .sort((a, b) => (a[1].updated < b[1].updated ? 1 : -1))
+    .slice(0, count)
+    .map(([key, lang]) => {
+      const [date, time] = lang.updated.split(' ');
+      const stats = summarise(key);
+      return {key, label: lang.label, stamp: lang.updated, date, time, ...stats};
+    });
 }
