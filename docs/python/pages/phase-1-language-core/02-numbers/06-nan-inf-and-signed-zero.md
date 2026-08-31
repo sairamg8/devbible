@@ -29,7 +29,7 @@ an infinity, so infinities in Python code almost always arrive from parsing,
 overflow, or another language's arithmetic. This chunk is the values and their
 comparison rules; [06b](06b-detecting-nan-and-containers.md) is how to detect
 them and what they do to your data structures, and
-[06c](06c-signed-zero-and-serialisation.md) is negative zero and the
+**06c** *(not written yet)* is negative zero and the
 serialisation boundary.**
 
 ## The three special values, and where they come from

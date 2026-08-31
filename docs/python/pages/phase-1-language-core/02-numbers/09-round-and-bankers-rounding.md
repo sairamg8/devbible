@@ -76,7 +76,7 @@ conventions, tax rules and card-network specifications frequently mandate
 to reproduce the number by hand. Python's default disagrees with them. The
 `decimal` module is where you say so explicitly — `ROUND_HALF_UP` is one of its
 rounding modes, and `quantize` is how you apply it. See
-[10c](10c-quantize-and-fixed-point-discipline.md).
+**10c** *(not written yet)*.
 
 The library reference records the same rule in the numeric-types table, which
 is where most people first meet it without noticing:

@@ -169,7 +169,7 @@ different points and are not required to agree.
 `1e6` is roughly 2^20 times too strict — the test essentially always fails.
 Using it around `1e-10` is astronomically too loose — the test essentially
 always passes. Scale to the magnitude with `math.isclose`'s `rel_tol`
-([07](07-comparing-floats.md)) or with `math.ulp(x)`.
+(**07** *(not written yet)*) or with `math.ulp(x)`.
 
 **★ `math.ulp(x)` for negative `x` returns `ulp(-x)`, so it is always
 positive.** At an exponent boundary the gap *below* a float is half the gap
@@ -258,7 +258,7 @@ larger operand; `math.ulp(x)` gives the grid spacing at `x`, and
 how an "within N ulps" test is written. An absolute tolerance is only correct
 when you already know the magnitude — most importantly when comparing against
 zero, where a relative tolerance is meaningless
-([07](07-comparing-floats.md)).
+(**07** *(not written yet)*).
 
 **★ What is a subnormal, and why should an application developer care?**
 A value below `sys.float_info.min` in magnitude, represented by dropping the

@@ -82,7 +82,7 @@ print(sys.float_info.dig)                 # decimal digits that survive a round 
 between `1.0` and its successor. At `1e6` the gap is roughly a billion times
 larger; near `1e-300` it is unimaginably smaller. `abs(a - b) < sys.float_info.epsilon`
 is a correct test for values near 1 and a badly wrong one everywhere else.
-[Chunk 07](07-comparing-floats.md) is about doing this properly.
+**Chunk 07** *(not written yet)* is about doing this properly.
 
 ## Why one tenth is not a float
 
@@ -222,8 +222,8 @@ reports and `epsilon` does not. See
 outright: rounding `0.1` to one decimal place cannot move it closer to 1/10,
 because it is already the closest float there is. `round(x, 2)` before an
 equality test is a no-op dressed up as a fix; you need a tolerance
-([07](07-comparing-floats.md)) or a different type
-([12](12-conversions-and-precision-loss.md)).
+(**07** *(not written yet)*) or a different type
+(**12** *(not written yet)*).
 
 **★ Numeric literals with `e` are floats even when they look integral.** `1e6`
 is a `float`, not an `int` — so `1e6` as a list index or a `range` bound is a

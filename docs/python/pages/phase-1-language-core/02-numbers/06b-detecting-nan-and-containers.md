@@ -281,6 +281,6 @@ fix.
 
 ---
 
-← Prev: [NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md) · Index: [Numbers](README.md) · Next → [Signed zero and serialisation](06c-signed-zero-and-serialisation.md)
+← Prev: [NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md) · Index: [Numbers](README.md) · Next → **Signed zero and serialisation** *(not written yet)*
 
 {/* FOOTER */}

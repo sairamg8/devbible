@@ -166,7 +166,7 @@ double-double arithmetic and of every "compensated" algorithm.
 most builds".** On 3.11 and earlier, `sum([0.1] * 10) == 1.0` is not guaranteed.
 A test that asserts a float total to the last bit is asserting the interpreter
 version's accumulator strategy, not your code's correctness. Assert with a
-tolerance ([07](07-comparing-floats.md)).
+tolerance (**07** *(not written yet)*).
 
 **★ `math.fsum` returns a `float`, not an exact value.** It performs a single
 correct rounding of the exact sum. If that exact sum is not representable you
