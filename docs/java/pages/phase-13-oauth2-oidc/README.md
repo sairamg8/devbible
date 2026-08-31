@@ -5,7 +5,7 @@ sidebar_position: 0
 ---
 
 > **Target: OAuth 2.0 + RFC 9700 best practice · OIDC 1.0 · Spring Security
-> 6.x.** Documentation-validated — every page names its sources on a
+> 7.x on Spring Boot 4.1.0 / Framework 7.0.8 / JDK 25.** Documentation-validated — every page names its sources on a
 > `> Verified:` line (the RFCs — 6749, 6750, 7636, 9700 —
 > openid.net specs, the Spring Security reference, jwt.io/RFC 7519 for JWT).
 > No sandbox: pages carry config and code, never fabricated tokens or HTTP
