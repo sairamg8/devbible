@@ -63,6 +63,17 @@ All measured on this machine, 2026-08-13:
 | Engine available locally | **Firefox 153.0.3** (Gecko). `navigator.userAgent` reports `rv:153.0` |
 | Chromium / WebKit | **Not installed.** No Blink or WebKit build exists on this machine |
 | Scripted verification | **`puppeteer-core` 25.6.0** driving `/usr/bin/firefox` over WebDriver BiDi. Confirmed working: computed styles, bounding boxes and `CSS.supports()` all read back from a real render |
+
+**Updated 2026-08-31 — a second engine arrived.** Microsoft Edge is now installed,
+so Blink is reachable and every page below has been cross-checked against it:
+
+| | |
+|---|---|
+| Gecko | **Firefox 154.0** — `/usr/bin/firefox`, which is a wrapper for the **snap** at `/snap/bin/firefox` |
+| Blink | **Edge 152.0.4191.53** — `/usr/bin/microsoft-edge`, driven as a Chrome variant |
+| WebKit | **Still not installed.** Two engines agreeing is *not* "cross-browser" — Safari can differ from both, and this syllabus does not claim otherwise |
+| How | `ENGINE=blink node sandbox/css/ex*.mjs`, defaulting to Gecko when unset. Every one of the twelve committed scripts runs unchanged on either engine; the engine is a harness variable, not a second set of scripts |
+| Both runs | Recorded verbatim in `sandbox/css/tmp/gecko/` and `sandbox/css/tmp/blink/` |
 | Feature-availability data | **`web-features` 3.34.3** — the package behind Baseline. Also present on the registry: `caniuse-db` 1.0.30001809 |
 | Baseline spot-check | `:has()` **Widely available** (2023-12-19) · Container queries **Widely available** (2023-02-14) · Subgrid **Widely available** (2023-09-15) · Nesting **Widely available** (2023-12-11) |
 | Not yet Baseline | Anchor positioning · Scroll-driven animations · Masonry · `calc-size()` · `interpolate-size` · `line-clamp` · `text-wrap: pretty` — all report `baseline: false` |
@@ -131,19 +142,51 @@ recollection. A page shows:
 | The support claim | Baseline status and date from `web-features`, quoted with the feature key |
 | The engine | Named. A measurement is labelled `Firefox 153.0.3` because that is what produced it |
 
-**The single-engine limitation is stated, not hidden.** "Works in Firefox 153"
-is not the same claim as "Baseline: Widely available", so the pages keep the two
-apart: measured behaviour comes from the local render, and cross-browser
-availability comes from `web-features`. Where a topic's whole point is an
-engine *difference*, the page says it could not be verified here rather than
-inventing the other engine's result.
+**The engine limitation is stated, not hidden.** "Works in Firefox 153" is not
+the same claim as "Baseline: Widely available", so the pages keep the two apart:
+measured behaviour comes from a local render, and cross-browser availability
+comes from `web-features`. Where a topic's whole point is an engine *difference*,
+the page says what was and was not measured rather than inventing a result.
+
+### What the Gecko/Blink cross-check found — 2026-08-31
+
+Twelve scripts, both engines. **Four agreed completely**: selector matching
+(`ex09`), cascade order (`ex11`), inheritance and computed values (`ex12`), and
+what DevTools shows (`ex08`). Every conclusion the other eight draw also held on
+both engines — what differed were *values*, and the differences fall in five
+groups:
+
+| # | Difference | Gecko | Blink |
+|---|---|---|---|
+| 1 | **`:is()` drops an invalid argument, and the two serialise it differently** | keeps `:is(.d, ::nonsense)` | reports `:is(.d)` |
+| 2 | **UA form-control padding** | `button` → `1px 4px` | `button` → `1px 6px` |
+| 3 | **Generic font families serialise differently** — same rendered font, different string | `serif`, `sans-serif` | `"Times New Roman"`, `Arial` |
+| 4 | **`border` longhand expansion order in the CSSOM** | grouped by side (top-width, top-style, top-colour, …) | grouped by property (all widths, all styles, all colours) |
+| 5 | **Feature support diverges** — `scroll-driven-animations`, `calc-size`, `interpolate-size`, `text-wrap-pretty`, `text-size-adjust` | all `false` | all `true` |
+
+🔴 **Group 5 is the one that matters most**, because it is this syllabus's own
+argument turned into evidence. All five features are *Limited availability* in
+`web-features`, and Blink ships every one of them. A developer testing in
+Chrome alone would conclude all five are safe. **That is precisely why a
+`CSS.supports()` result from one engine is not a shipping decision** — a claim
+these pages previously had to assert, and can now demonstrate.
+
+Timings differed as timings do (Gecko's FCP floor 17ms vs Blink's 28ms) without
+changing a single conclusion: a `media="print"` sheet does not block first paint
+in either, a normal one blocks for ~630ms in both, and chained `@import`
+serialises the requests in both. `:has()` is more expensive than a pre-computed
+class in both — but by **8× in Gecko and 150× in Blink**, so the *ratio* is
+engine-specific and no page states one as if it were CSS.
 
 ## Open questions — recorded, not silently decided
 
-1. **Should Chromium be installed for cross-engine checks?** Right now Blink
-   behaviour cannot be measured on this machine at all. Baseline data covers
-   *whether* a feature ships; it does not cover the rendering differences that
-   actually bite (scrollbar sizing, form-control defaults, subpixel rounding).
+1. **Resolved 2026-08-31: Blink is now measured.** The question was *"should
+   Chromium be installed for cross-engine checks?"*, recorded because Baseline
+   data covers *whether* a feature ships and not the rendering differences that
+   actually bite. Microsoft Edge turned out to be installed, the harness drives
+   it unchanged, and the cross-check is above. It found exactly the class of
+   difference the question predicted — form-control defaults among them.
+   **WebKit remains unmeasured**, so that half of the question is still open.
 2. **Do visual topics get checked-in screenshots?** Firefox headless produces
    PNGs, verified working. Gradients, `mix-blend-mode` and `clip-path` are hard
    to convey as numbers — but images add repo weight and cannot be diffed.
