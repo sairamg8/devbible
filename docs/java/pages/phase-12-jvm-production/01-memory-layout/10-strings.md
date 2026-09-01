@@ -1,7 +1,7 @@
 ---
 title: "Strings are usually the largest single thing in a Java heap, and since Java 9 they are not what you think they are — a byte array plus a one-byte encoding flag, which halved most heaps and made a small number of applications slightly slower"
 sidebar_label: "10 · Strings in the heap"
-sidebar_position: 66
+sidebar_position: 39
 ---
 
 <span className="db-tier t-understand">Understand</span>

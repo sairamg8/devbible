@@ -1,7 +1,7 @@
 ---
 title: "The only bound on a JVM's thread-stack footprint is thread count multiplied by -Xss, and every one of the numbers in that product is set somewhere other than your JVM flags"
 sidebar_label: "06d · The thread-count arithmetic"
-sidebar_position: 34
+sidebar_position: 23
 ---
 
 <span className="db-tier t-understand">Understand</span>

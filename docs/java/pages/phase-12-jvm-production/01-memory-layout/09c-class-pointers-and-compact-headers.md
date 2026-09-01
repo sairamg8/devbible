@@ -1,7 +1,7 @@
 ---
 title: "Compressed class pointers are a second, separate compression that shrinks the header's class word rather than the heap's references — and on JDK 25 the flag controlling them is already deprecated, because compact object headers are coming and they require it"
 sidebar_label: "09c · Class pointers and compact headers"
-sidebar_position: 64
+sidebar_position: 37
 ---
 
 <span className="db-tier t-understand">Understand</span>

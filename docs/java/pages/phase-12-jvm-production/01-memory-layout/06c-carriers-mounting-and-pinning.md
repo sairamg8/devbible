@@ -1,7 +1,7 @@
 ---
 title: "A virtual thread's frames only live on the heap while it is unmounted, so the carrier pool, the cost of the copy and every remaining cause of pinning are all still native-memory questions on JDK 25"
 sidebar_label: "06c · Carriers, mounting, pinning"
-sidebar_position: 33
+sidebar_position: 22
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Which compression a JVM ended up with is an observation, not a deduction from your flags — the encoding depends on where the operating system let the heap be mapped, so the only correct answer to \"are compressed oops on?\" is a command"
 sidebar_label: "09d · Verifying what the JVM chose"
-sidebar_position: 65
+sidebar_position: 38
 ---
 
 <span className="db-tier t-understand">Understand</span>

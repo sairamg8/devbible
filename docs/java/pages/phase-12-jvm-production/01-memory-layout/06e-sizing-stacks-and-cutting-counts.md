@@ -1,7 +1,7 @@
 ---
 title: "You almost never want a global -Xss change: the supported levers are a per-thread stack size for the one deep path, the JVM's separate flags for its own threads, and — best of all — fewer threads"
 sidebar_label: "06e · Sizing stacks, cutting counts"
-sidebar_position: 35
+sidebar_position: 24
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "There is one case where you want to waste memory on purpose — two threads writing to fields that share a cache line — and the annotation the JVM provides for it is internal, restricted to trusted classes by default, ignored on static fields, and not inherited, which is four reasons the real answer is usually `LongAdder`"
 sidebar_label: "08c2 · False sharing and @Contended"
-sidebar_position: 44
+sidebar_position: 33
 ---
 
 <span className="db-tier t-understand">Understand</span>

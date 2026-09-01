@@ -1,7 +1,7 @@
 ---
 title: "There is no free() for a direct ByteBuffer because its native memory is released by a phantom reference the garbage collector has to notice first, and the only supported way to get deterministic release is to stop using allocateDirect"
 sidebar_label: "07b · Cleaners, deterministic release"
-sidebar_position: 37
+sidebar_position: 26
 ---
 
 <span className="db-tier t-understand">Understand</span>

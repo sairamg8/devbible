@@ -1,7 +1,7 @@
 ---
 title: "The string pool holds literals and nothing else, `intern()` is a native call that costs more than people expect, and the fact that `==` on strings sometimes works is precisely what makes it one of the most durable bugs in Java"
 sidebar_label: "10b · The pool and interning"
-sidebar_position: 67
+sidebar_position: 40
 ---
 
 <span className="db-tier t-understand">Understand</span>

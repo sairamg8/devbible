@@ -1,7 +1,7 @@
 ---
 title: "A mapped buffer is not charged against MaxDirectMemorySize, is not unmapped when you close the channel, and is capped at Integer.MAX_VALUE bytes — three facts that make mmap the region most likely to be missing from your memory model"
 sidebar_label: "07c · Mapped buffers"
-sidebar_position: 38
+sidebar_position: 27
 ---
 
 <span className="db-tier t-understand">Understand</span>

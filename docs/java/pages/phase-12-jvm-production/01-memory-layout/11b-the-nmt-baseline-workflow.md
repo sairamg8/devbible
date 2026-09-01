@@ -1,7 +1,7 @@
 ---
 title: "A single NMT report tells you how memory is distributed, which is almost never the question — the technique is a baseline taken after warm-up and a diff taken after the growth, and it is the difference between \"the process is growing\" and \"the Class category grew by 400 MB\""
 sidebar_label: "11b · The NMT baseline workflow"
-sidebar_position: 70
+sidebar_position: 43
 ---
 
 <span className="db-tier t-understand">Understand</span>

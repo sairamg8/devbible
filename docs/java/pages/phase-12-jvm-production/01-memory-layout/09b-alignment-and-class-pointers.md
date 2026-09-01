@@ -1,7 +1,7 @@
 ---
 title: "You can buy a compressed heap larger than 32 GB by widening object alignment, and the documentation warns in its own note that you may get nothing for it — the one JVM flag whose right answer genuinely differs per application"
 sidebar_label: "09b · Widening object alignment"
-sidebar_position: 63
+sidebar_position: 36
 ---
 
 <span className="db-tier t-understand">Understand</span>

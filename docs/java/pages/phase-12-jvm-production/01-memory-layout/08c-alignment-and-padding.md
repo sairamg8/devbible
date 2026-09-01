@@ -1,7 +1,7 @@
 ---
 title: "Every object is rounded up to a multiple of eight bytes, the JVM reorders your fields to waste as little of that as possible, and the two consequences — that field declaration order means nothing and that a one-byte array costs the same as an eight-byte one — are the whole reason object size arithmetic done on paper is wrong"
 sidebar_label: "08c · Alignment and padding"
-sidebar_position: 43
+sidebar_position: 32
 ---
 
 <span className="db-tier t-understand">Understand</span>

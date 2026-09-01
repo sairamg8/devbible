@@ -1,7 +1,7 @@
 ---
 title: "A virtual thread's stack is an object on the Java heap that grows and shrinks, so -Xss stops being a per-thread reservation and the cost of a million threads moves from a region -Xmx cannot see into one it can"
 sidebar_label: "06b · Virtual thread stacks"
-sidebar_position: 32
+sidebar_position: 21
 ---
 
 <span className="db-tier t-understand">Understand</span>

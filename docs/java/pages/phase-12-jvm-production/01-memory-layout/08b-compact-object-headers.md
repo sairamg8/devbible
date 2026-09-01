@@ -1,7 +1,7 @@
 ---
 title: "Compact object headers delete the class word by folding a 22-bit class reference into the mark word, taking every object's header from twelve or sixteen bytes to eight — a product feature in JDK 25 that you must ask for, the default in Release 27, and one that silently turns itself off if you also ask for legacy locking"
 sidebar_label: "08b · Compact object headers"
-sidebar_position: 42
+sidebar_position: 31
 ---
 
 <span className="db-tier t-understand">Understand</span>

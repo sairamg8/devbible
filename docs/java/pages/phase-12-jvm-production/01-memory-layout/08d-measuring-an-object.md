@@ -1,7 +1,7 @@
 ---
 title: "\"How big is this object?\" has no answer until you say which JVM, because the size depends on header mode, compressed oops and alignment — so the only honest way to answer it is to ask the running JVM, which is exactly what JOL does"
 sidebar_label: "08d · Measuring an object"
-sidebar_position: 61
+sidebar_position: 34
 ---
 
 <span className="db-tier t-understand">Understand</span>

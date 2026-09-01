@@ -1,7 +1,7 @@
 ---
 title: "A direct ByteBuffer is a tiny heap object holding a pointer to native memory that only a phantom reference will ever free, which is why -XX:MaxDirectMemorySize defaults to your heap size and why the JVM calls System.gc() behind your back to honour it"
 sidebar_label: "07 · Direct buffers"
-sidebar_position: 36
+sidebar_position: 25
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Compressed oops make a 64-bit JVM store 32-bit references, which is why a heap that crosses 32 GB can hold less data than it did at 31 GB — the one place in the JVM where asking for more memory gives you less"
 sidebar_label: "09 · Compressed oops"
-sidebar_position: 62
+sidebar_position: 35
 ---
 
 <span className="db-tier t-understand">Understand</span>

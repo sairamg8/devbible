@@ -1,7 +1,7 @@
 ---
 title: "The two lowest bits of the mark word encode three lock states and the identity hash competes with them for the same 64 bits, which is why JDK 25 deprecates legacy stack-locking and why calling identityHashCode writes to an object you thought was immutable"
 sidebar_label: "08e · Mark word: locks and hashes"
-sidebar_position: 41
+sidebar_position: 30
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "When Native Memory Tracking accounts for 1.2 GB and the kernel says the process is using 1.8 GB, the missing 600 MB is not an error in either number — it is everything the JVM did not allocate itself, and finding it means leaving the JVM's tooling behind entirely"
 sidebar_label: "11c · The footprint outside every region"
-sidebar_position: 71
+sidebar_position: 44
 ---
 
 <span className="db-tier t-understand">Understand</span>

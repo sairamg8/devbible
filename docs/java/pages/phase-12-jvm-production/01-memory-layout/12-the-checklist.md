@@ -1,7 +1,7 @@
 ---
 title: "\"The pod grew and the heap is flat\" is not one question but seven, asked in a fixed order, and the value of the order is that each answer eliminates a region — this is the whole topic compressed into the sequence you run at three in the morning"
 sidebar_label: "12 · The checklist"
-sidebar_position: 73
+sidebar_position: 46
 ---
 
 <span className="db-tier t-understand">Understand</span>

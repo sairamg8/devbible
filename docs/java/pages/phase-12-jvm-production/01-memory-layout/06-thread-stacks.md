@@ -1,7 +1,7 @@
 ---
 title: "Every platform thread gets its own fixed-size native stack that is reserved outside the Java heap, which is why -Xmx has nothing to say about the region that actually killed your container"
 sidebar_label: "06 · Thread stacks"
-sidebar_position: 31
+sidebar_position: 20
 ---
 
 <span className="db-tier t-understand">Understand</span>

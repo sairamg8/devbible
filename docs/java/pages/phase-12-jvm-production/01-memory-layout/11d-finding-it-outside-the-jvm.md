@@ -1,7 +1,7 @@
 ---
 title: "Once Native Memory Tracking comes back flat and the process is still growing, every remaining tool is an operating-system tool — and the order you run them in matters more than any single one of them"
 sidebar_label: "11d · Finding it outside the JVM"
-sidebar_position: 72
+sidebar_position: 45
 ---
 
 <span className="db-tier t-understand">Understand</span>

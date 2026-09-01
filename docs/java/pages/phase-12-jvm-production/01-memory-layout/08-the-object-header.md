@@ -1,7 +1,7 @@
 ---
 title: "Every Java object carries a mark word and a class word before its first field, and on JDK 25 the mark word contains no biased-locking bit, four bits reserved for Valhalla and a self-forwarding bit the textbook diagrams do not have"
 sidebar_label: "08 · The object header"
-sidebar_position: 40
+sidebar_position: 29
 ---
 
 <span className="db-tier t-understand">Understand</span>

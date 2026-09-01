@@ -1,7 +1,7 @@
 ---
 title: "Mapping a file costs address space immediately and physical memory lazily, force() promises nothing off a local device, and since JDK 22 an Arena finally gives a mapping a lifetime you control instead of one the collector decides"
 sidebar_label: "07d · Residency, force, arenas"
-sidebar_position: 39
+sidebar_position: 28
 ---
 
 <span className="db-tier t-understand">Understand</span>
