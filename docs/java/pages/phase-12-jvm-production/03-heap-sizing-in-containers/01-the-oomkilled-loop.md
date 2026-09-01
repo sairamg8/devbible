@@ -93,7 +93,7 @@ Outside that, in rough order of usefulness:
 limit allows. Almost always a hard-coded `-Xmx` at or near the container limit combined with
 `-XX:+AlwaysPreTouch`, or `-Xms` set equal to a `-Xmx` that was already too large. This one is
 cheap to diagnose because it is deterministic — see
-[03b · Why not `-Xmx`](03b-why-not-xmx.md) and [09 · `AlwaysPreTouch`](09-alwayspretouch.md).
+[03c · Why not `-Xmx`](03c-why-not-xmx.md) and [09 · `AlwaysPreTouch`](09-alwayspretouch.md).
 
 **Slow and monotonic, hours to days, independent of traffic.** Something is accumulating. If the
 heap is flat, it is native — a classloader leak growing metaspace, thread stacks from an

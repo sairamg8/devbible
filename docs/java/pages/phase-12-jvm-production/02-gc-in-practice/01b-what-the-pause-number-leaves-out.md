@@ -97,7 +97,7 @@ setup that produces a G1 Full GC — concurrent marking cannot finish before the
 generation fills. The tuning guide's remedy for observing Full GCs includes *"Increase the
 number of concurrent marking threads by setting `-XX:ConcGCThreads` explicitly"*, which on a
 CPU-starved container is advice you cannot take. See
-[03d · When G1 goes wrong](03d-g1-when-it-goes-wrong.md).
+[03d · When G1 goes wrong](03e-g1-when-it-goes-wrong.md).
 
 ## `gc+cpu` is the tag that proves it
 
