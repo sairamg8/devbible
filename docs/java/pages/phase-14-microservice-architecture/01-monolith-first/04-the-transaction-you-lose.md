@@ -8,10 +8,8 @@ sidebar_position: 10
 
 > Verified: 2026-09-01 against Chris Richardson, *Pattern: Microservice Architecture* and
 > *Pattern: Monolithic Architecture*
-> ([microservices.io](https://microservices.io/patterns/microservices.html)); the Spring
-> Modulith reference, *Working with Application Events*
-> ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/events.html)); Stefan
-> Tilkov, *Don't start with a monolith*
+> ([microservices.io](https://microservices.io/patterns/microservices.html)); Stefan Tilkov,
+> *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
 > Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
 > **2.1.1**. **No sandbox** — Java and configuration only.
@@ -139,97 +137,12 @@ is the act of asking the business a question it did not know it was being asked*
 almost every split does it silently, at 4pm, in a pull request. That is the shape of the
 cost described in [03 · Who pays for them](01c-who-pays-for-them.md).
 
-## The thing that replaces it, named and handed off
+## Where the sequel picks up
 
-The pattern that replaces the distributed transaction is the **saga**: a sequence of local
-transactions where each step publishes an event that triggers the next, and each step has a
-compensating action that semantically undoes it. Richardson:
-
-> *"Saga, which implements a distributed command as a series of local transactions"*
-
-Sagas are **owned by phase 15 topic 10**, and the messaging infrastructure they run on is
-owned by phase 15 generally. This topic's job is to make sure you price them before you
-commit, not to teach them. [11 · What you write instead](04b-what-you-write-instead.md)
-sizes the work honestly.
-
-The related patterns you will also need, all named by Richardson and all owned elsewhere:
-
-> *"Command-side replica, which replicas read-only data to the service that implements a
-> command"*
->
-> *"API composition, which implements a distributed query as a series of local queries"*
->
-> *"CQRS, which implements a distributed query as a series of local queries"*
->
-> *"Services typically need to use the Transaction Outbox pattern to atomically update
-> persistent business entities and send a message."*
-
-That last one matters for this topic specifically, because Spring Modulith's event
-publication registry **is** a transaction outbox, and it works inside the monolith — see
-[47 · The event publication registry](14c-the-event-publication-registry.md).
-
-## Which operations actually need atomicity — the question to ask before splitting
-
-Not all of them, and the split decision hinges on which. Go through the write paths and
-classify each:
-
-| Operation | Needs atomicity across subdomains? | Why |
-|---|---|---|
-| Place order (reserve + charge) | **Yes** | Money and stock; the business will not accept "usually" |
-| Cancel order (release stock + refund) | Yes, but tolerantly — minutes are fine | Compensation is natural here |
-| Update customer address | No | Single subdomain |
-| Reindex search after a product change | No | Eventual by nature; nobody expects otherwise |
-| Send order confirmation email | No | Already at-least-once and unreliable |
-| Apply a promotion at checkout | Usually yes | Affects the amount charged |
-
-**Every "yes" row is an argument for keeping those subdomains in one service.** This is the
-single most useful concrete input into where the boundary goes, and **02 · Service
-boundaries from bounded contexts** *(not written yet)* owns turning it into a boundary —
-"split where you do not need a transaction" is very close to the whole technique.
-
-## The in-process version of the same discipline
-
-You can practise the discipline without paying for it. Instead of injecting the other
-module's bean and calling it inside the transaction, publish an event and let the other
-module react after commit:
-
-```java
-package com.acme.commerce.ordering;
-
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-@Service
-public class Checkout {
-
-    private final Orders orders;
-    private final ApplicationEventPublisher events;
-
-    Checkout(Orders orders, ApplicationEventPublisher events) {
-        this.orders = orders;
-        this.events = events;
-    }
-
-    @Transactional
-    public OrderId place(Cart cart, PaymentMethod method) {
-        Order order = orders.create(cart);
-        events.publishEvent(new OrderPlaced(order.id(), cart.lines(), order.total()));
-        return order.id();
-    }
-}
-```
-
-What that buys you, in one deployable: the ordering module no longer references
-inventory, payment or shipping at all — so the *design-time* coupling is already gone,
-which is the coupling that makes extraction hard. What it does **not** buy you is the
-distributed failure semantics, because with Spring Modulith's
-`@ApplicationModuleListener` the listener still runs in the same JVM against the same
-database, and its failure is recorded in an event publication log you can resubmit from.
-That is the honest position: [45](14-events-instead-of-bean-references.md) through
-[49](14e-externalization-and-the-seam.md) develop it, and
-[55 · What Modulith does not give you](16b-what-modulith-does-not-give-you.md) states the
-gap.
+[11 · Which operations actually need atomicity](04b-which-operations-need-atomicity.md)
+takes the other half: how to classify write paths by whether they need a transaction, what
+you write in place of one, and the in-process discipline that removes the design-time
+coupling without paying the distributed price yet.
 
 ## Gotchas
 
@@ -254,11 +167,6 @@ in-doubt transactions to resolve. The availability arithmetic belongs to **04 ·
 async** *(not written yet)*; the point here is that 2PC is a way of paying for the split
 and then giving back the benefit.
 
-**★ Compensation is not rollback and the difference is customer-visible.** A rollback leaves
-no trace. A compensation leaves a charge and a refund on the customer's statement, an
-audit row, possibly an email. Business stakeholders who approve "we'll compensate" are often
-approving something they have not visualised. Show them the statement.
-
 **★ Read-your-own-writes goes too, and it breaks the UI before it breaks the backend.** In
 one transaction, the confirmation page reads the order you just wrote. Across services, the
 order service may not yet have processed the event, so the page renders "not found" for
@@ -270,6 +178,27 @@ token — need designing up front.
 tells you the operation did not happen. A timeout tells you nothing at all, and it is the
 common case under load. Any design that only enumerates success and failure has enumerated
 two of three outcomes. [13 · The ambiguous outcome](05b-the-ambiguous-outcome.md).
+
+**★ The rollback also cleaned up your in-memory and cache state, and nothing replaces
+that.** A transaction that rolls back leaves the database as it was; but a split flow that
+half-completes may have already invalidated a cache entry, incremented a counter in Redis,
+written an audit row through a separate connection, or emitted a metric. None of those
+participate in the compensation you write unless you remember them. Enumerate the
+non-database side effects of every step, not just the writes.
+
+**★ Nested subdomain calls hide inside the transaction and only surface at extraction
+time.** `inventory.reserve(…)` may itself call `pricing`, which may call `catalogue`. The
+method you are looking at names three subdomains; the transaction actually spans six. Before
+you price a boundary, walk the call graph one level deeper than feels necessary — a static
+call-graph query or Spring Modulith's own module dependency output
+([51 · Actuator and observability](15b-actuator-and-observability.md)) is faster than
+reading.
+
+**★ A retry inside a transaction is safe; a retry across a service boundary is not.**
+`@Retryable` on a method inside one transaction re-executes work that was rolled back.
+Retrying a network call re-executes work that may have committed on the other side. The
+same annotation, the same intent, opposite correctness properties — and this is the single
+most common way a naive translation of a monolith method produces double charges.
 
 ## Interview questions
 
@@ -292,16 +221,6 @@ work, and possibly different regulatory implications. In a monolith none of this
 decided because the transaction rolled back. Splitting asks the business a question, and the
 failure mode of most splits is that an engineer answers it silently.
 
-**★ How does the transaction requirement inform where you draw service boundaries?**
-It is close to being the technique. Enumerate the write operations, mark the ones that
-require atomicity across two subdomains, and treat every such pair as strongly bonded — a
-boundary drawn between them converts one local transaction into a saga with compensations
-and a partial-failure policy. Operations that are naturally eventual (search indexing,
-notification, reporting, analytics) mark the pairs that are cheap to split. In practice you
-draw the line where you do not need a transaction, which is why "invariants" and
-"transaction boundaries" show up in the bounded-context literature as the primary
-boundary-finding tools.
-
 **★ Why is two-phase commit not the answer?**
 Because it gives back the benefit you paid for. XA requires every participant to be
 available for any distributed write to succeed, so the operation's availability is the
@@ -312,14 +231,24 @@ supported by much of the infrastructure people actually split onto. The industry
 sagas: a series of local transactions with compensating actions, at the cost of eventual
 consistency and explicit compensation logic.
 
-**★ Can you get the design-time decoupling without paying the distributed-consistency
-cost?**
-Partly, and it is the most useful move available. Replace cross-module bean references with
-application events: the ordering module publishes `OrderPlaced` and does not know inventory
-exists. That removes the *design-time* coupling — the import, the constructor parameter, the
-reason the two modules must change together — while the listener still runs in the same JVM
-against the same database, so you keep local transactional semantics and a durable
-publication log you can resubmit from. What you do not get is independent deployment or
-independent failure. It is the right preparation for extraction and it is not extraction.
+**★ A junior engineer translates the monolith's `place(…)` method into four HTTP calls in
+the same order and adds `@Retryable` to each. What goes wrong?**
+Two distinct defects. First, the retry: a retried charge may execute twice, because the
+first attempt can have committed on the payment side and failed on the way back — the
+retry needs an idempotency key that the payment service honours, which is a protocol change,
+not a client-side annotation. Second, the ordering: the method now holds an inventory
+reservation across two more network calls, so under load the reservation hold time is
+whatever the slowest downstream is, and stock availability collapses even though nothing has
+failed. The monolith's ordering was free of both problems because the whole thing was one
+short transaction against one connection.
+
+**★ How would you demonstrate the transaction cost to a sceptical stakeholder in five
+minutes?**
+Show the four-line method, then show the outcome table: five distinct partial states where
+there was previously one binary result. Then ask them, for each state, what the customer
+should see and who cleans it up. The exercise is effective because it converts an abstract
+architectural argument into four unanswered product questions with their name against them,
+and because the natural response — "surely we just roll it back" — is exactly the capability
+that has been removed.
 
 {/* FOOTER */}

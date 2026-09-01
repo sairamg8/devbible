@@ -38,7 +38,7 @@ Sagas belong to phase 15 topic 10. Resilience4j belongs to phase 16.
 | 8 | `03b-the-honest-counterargument.md` | Tilkov's rebuttal, and the case where starting distributed is right |
 | 9 | `03c-four-ways-to-execute-monolith-first.md` | Careful modular monolith, peel at the edges, sacrificial architecture, the duolith |
 | 10 | `04-the-transaction-you-lose.md` | `@Transactional` was doing more work than anyone budgeted for |
-| 11 | `04b-what-you-write-instead.md` | Compensation, idempotency and the outbox — the code the split obliges you to own |
+| 11 | `04b-which-operations-need-atomicity.md` | The atomicity audit as a boundary-finding tool; sagas priced; the in-process event seam |
 | 12 | `05-debugging-across-hops.md` | The stack trace stops at the socket |
 | 13 | `05b-the-ambiguous-outcome.md` | A timeout is not a failure; it is "I do not know", and it is now a state you must model |
 | 14 | `06-deploy-coordination.md` | Independent deployability is a property you have to keep earning |
