@@ -253,4 +253,4 @@ checklist.
 
 ---
 
-← Prev: [The complete theme layer](06-the-complete-stylesheet.md) · Index: [Dark mode](README.md) · Next → **The overlay layer** *(not written yet)*
+← Prev: [The complete theme layer](06-the-complete-stylesheet.md) · Index: [Dark mode](README.md) · Next → [The overlay layer](../06-the-overlay-layer/README.md)

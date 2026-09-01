@@ -24,7 +24,7 @@ Both of those are deliberate, and both are what let the file stay this short.
 | Token | Supplied by | If missing |
 |---|---|---|
 | `--space-2` … `--space-8` | the spacing scale in the `tokens` layer | gaps and padding collapse to their initial values |
-| `--surface-2`, `--surface-3` | **chapter 05 · Dark mode** *(not written yet)* | the media placeholder is transparent |
+| `--surface-2`, `--surface-3` | [chapter 05 · Dark mode](../05-dark-mode/README.md) | the media placeholder is transparent |
 | `--text-muted` | the same theme layer | the compare-at price inherits body colour |
 | `--radius-2` | the shape scale | square corners |
 | `--card-ratio` | **optional** — a placement that wants a different ratio | falls back to `4 / 3`, as written |

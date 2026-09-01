@@ -69,7 +69,7 @@ So a quick-view popover, a tooltip, or an "added to cart" toast rendered
 by the grid around it. The fix is not CSS — it is to render the overlay
 somewhere else in the tree, which is exactly what
 [chapter 4·07](../../phase-4-react-ui/07-modal-portal-focus.md) does with
-`createPortal` and what **chapter 06 · The overlay layer** *(not written yet)*
+`createPortal` and what [chapter 06 · The overlay layer](../06-the-overlay-layer/README.md)
 generalises for this phase.
 
 This is the same shape as the classic clipped-dropdown problem —

@@ -67,11 +67,9 @@ supplies the markup, the sentinel and the state machine;
 [chapter 5·06](../../phase-5-js-functions/06-money-and-dates/README.md) formats
 the price this grid must not assume the width of.
 
-**Forwards:** the skeleton's own construction is **chapter 04 · Skeleton loaders
-and spinners** *(not written yet)*; the tokens every colour here refers to are
-**chapter 05 · Dark mode** *(not written yet)*; the overlays that chunk 04
-proves cannot live inside a card are **chapter 06 · The overlay layer**
-*(not written yet)*.
+**Forwards:** the skeleton's own construction is [chapter 04 · Skeleton loaders and spinners](../04-skeletons-and-spinners/README.md); the tokens every colour here refers to are
+[chapter 05 · Dark mode](../05-dark-mode/README.md); the overlays that chunk 04
+proves cannot live inside a card are [chapter 06 · The overlay layer](../06-the-overlay-layer/README.md).
 
 **Sideways:** the mechanisms are the CSS section —
 [grid](../../../../css/pages/phase-5-grid/README.md),

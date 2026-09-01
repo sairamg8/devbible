@@ -26,8 +26,7 @@ loading state looks like and, more importantly, **what it must not do to the
 layout.**
 
 The construction of the skeleton itself — the shimmer, its timing, when a
-spinner beats a skeleton — is **chapter 04 · Skeleton loaders and spinners**
-*(not written yet)*. What belongs here is the one requirement the grid imposes
+spinner beats a skeleton — is [chapter 04 · Skeleton loaders and spinners](../04-skeletons-and-spinners/README.md). What belongs here is the one requirement the grid imposes
 on it.
 
 ## The skeleton must have the grid's geometry

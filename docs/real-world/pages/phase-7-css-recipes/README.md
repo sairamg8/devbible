@@ -20,7 +20,7 @@ every selector here targets components that already exist.
 | 01 | **[The product grid](01-the-product-grid/README.md)** *(12 chunks)* | <span className="db-tier t-master">Master</span> | One `grid-template-columns` declaration replaces the breakpoint pile-up — and the card adapts to its column, not the viewport |
 | 04 | **[Skeleton loaders and spinners](04-skeletons-and-spinners/README.md)** *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | A loading indicator is a cost, not a courtesy — show nothing for the first 400 ms, and make the skeleton *be* the component |
 | 05 | **[Dark mode](05-dark-mode/README.md)** *(10 chunks)* | <span className="db-tier t-understand">Understand</span> | Three viewer states, not two — the media query cannot tell a user who chose from one who did not, and everything else follows from recovering that third state |
-| 06 | **The overlay layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 06 | **[The overlay layer](06-the-overlay-layer/README.md)** *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | Toasts and modals that never fight the stacking context — because seven of the eleven overlays are in the top layer, and only three `z-index` values survive |
 
 :::note Four chapters, and the numbering has gaps on purpose
 

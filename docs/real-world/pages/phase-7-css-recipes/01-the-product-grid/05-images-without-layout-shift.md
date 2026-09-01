@@ -161,7 +161,7 @@ either side reaching into the other's selectors.
 
 - **Symptom:** the placeholder colour is invisible in dark mode, or blinding in
   light mode. **Cause:** a hard-coded grey. **Fix:** a surface token
-  (`--surface-2`), which is what **chapter 05 · Dark mode** *(not written yet)*
+  (`--surface-2`), which is what [chapter 05 · Dark mode](../05-dark-mode/README.md)
   exists to define — the placeholder is a surface like any other.
 
 - **Symptom:** a product photo has an `alt` that reads out a file name.

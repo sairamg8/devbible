@@ -141,7 +141,7 @@ Everything the previous four chunks decided, in one file. Nothing here is new.
 - **It does not announce anything.** Every word a screen reader hears comes from
   the button's label or the `role="status"` region — never from these elements.
 - **It defines no colour.** `--surface-1`, `--surface-3` and `currentColor` are
-  the whole palette, and **chapter 05 · Dark mode** *(not written yet)* decides
+  the whole palette, and [chapter 05 · Dark mode](../05-dark-mode/README.md) decides
   what they resolve to.
 
 ## Gotchas

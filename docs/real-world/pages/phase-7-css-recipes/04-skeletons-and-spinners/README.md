@@ -70,7 +70,7 @@ mechanics; [chapter 4·06](../../phase-4-react-ui/06-cart-state.md) is why the
 cart needs no indicator at all.
 
 **Forwards:** every colour here is a token — `--surface-1`, `--surface-3` and
-`currentColor` — and **chapter 05 · Dark mode** *(not written yet)* decides what
+`currentColor` — and [chapter 05 · Dark mode](../05-dark-mode/README.md) decides what
 they resolve to.
 
 **Sideways:** the cost model is

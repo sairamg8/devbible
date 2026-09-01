@@ -62,4 +62,4 @@ role/primitive line, explain what `<picture>` cannot see, name the four surfaces
 
 ---
 
-← Prev: [Skeleton loaders and spinners](../04-skeletons-and-spinners/README.md) · Index: [Phase 7](../README.md) · Next → **The overlay layer** *(not written yet)*
+← Prev: [Skeleton loaders and spinners](../04-skeletons-and-spinners/README.md) · Index: [Phase 7](../README.md) · Next → [The overlay layer](../06-the-overlay-layer/README.md)
