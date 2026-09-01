@@ -109,7 +109,7 @@ from the array (rather than writing both) is what stops them diverging:
 
 ```ts
 export const ORDER_STATUSES = [
-  'pending', 'paid', 'packed', 'shipped', 'delivered', 'cancelled',
+  'pending', 'paid', 'shipped', 'delivered', 'cancelled',
 ] as const;
 
 export type OrderStatus = typeof ORDER_STATUSES[number];
