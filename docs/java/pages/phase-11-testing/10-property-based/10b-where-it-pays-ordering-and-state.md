@@ -1,7 +1,7 @@
 ---
 title: "The domains in the previous chunk were pure functions with a definition you could look up, but the same test applies to code that imposes an order or holds state — and there the law is often stronger, because a comparator, a cache, an optimised algorithm and a state machine all make the same kind of claim: that they behave exactly like something simpler, slower or more restrictive"
 sidebar_label: "10b · Where it pays: ordering and state"
-sidebar_position: 43
+sidebar_position: 38
 ---
 
 <span className="db-tier t-when">When Needed</span>

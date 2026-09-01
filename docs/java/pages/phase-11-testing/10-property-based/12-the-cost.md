@@ -1,7 +1,7 @@
 ---
 title: "A property is a thousand test executions wearing one annotation, and the multipliers stack in ways that are invisible in the source — generation, edge-case permutations, discarded draws, a model that does the work twice, and a shrink search that only runs on the day everything is red, which is the day you are waiting"
 sidebar_label: "12 · The cost"
-sidebar_position: 45
+sidebar_position: 40
 ---
 
 <span className="db-tier t-when">When Needed</span>

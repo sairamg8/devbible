@@ -1,7 +1,7 @@
 ---
 title: "A property that passes tells you nothing about what it tested, and the commonest way for property-based testing to waste a team's time is a generator that has quietly been producing the same shape of value for months — statistics are how you make the distribution visible, and coverage checks are how you make the build fail when it drifts"
 sidebar_label: "09 · Statistics: what did it actually generate?"
-sidebar_position: 41
+sidebar_position: 36
 ---
 
 <span className="db-tier t-when">When Needed</span>

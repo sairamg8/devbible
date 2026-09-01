@@ -1,7 +1,7 @@
 ---
 title: "Property-based testing does not pay evenly across a codebase — it pays enormously in a handful of places and barely at all in most, and the places it pays share one feature: the code claims a law that holds for every input, which means a counter-example is a bug rather than a matter of opinion"
 sidebar_label: "10 · Where it pays"
-sidebar_position: 42
+sidebar_position: 37
 ---
 
 <span className="db-tier t-when">When Needed</span>
@@ -217,7 +217,7 @@ subscriptions.
 
 **★ A colleague says "we already have 90% coverage on the parser, why would we add property tests?"**
 Because coverage says the lines ran, not that anything would have noticed them being wrong — the
-argument [11 · Mutation testing](../11-mutation-testing/README.md) makes in full. On a parser
+argument **topic 11 · Mutation testing** makes in full. On a parser
 specifically, the gap is concrete and easy to name: those examples are all documents that *we*
 produced, so the code paths for input we would never emit are either uncovered or covered by an
 example someone wrote to hit the branch rather than to assert anything interesting. A round-trip

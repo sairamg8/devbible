@@ -1,7 +1,7 @@
 ---
 title: "Most code in most systems has no law worth stating, and the failure mode of enthusiasm for property testing is not a wasted afternoon but a test that restates the implementation in the assertion — which passes forever, survives every bug, and looks in review exactly like the good properties next to it"
 sidebar_label: "11 · Where it does not pay"
-sidebar_position: 44
+sidebar_position: 39
 ---
 
 <span className="db-tier t-when">When Needed</span>
@@ -97,7 +97,7 @@ Formatted messages, rendered emails, log lines, currency strings for display. Th
 criterion is taste, and the only mechanical laws available are weak (*"contains the customer
 name"*, *"is not empty"*). Approval tests are the right tool — pin the rendered output, review
 the diff when it changes — which is the technique covered for real systems in
-[../12-real-world-scenarios/README.md](../12-real-world-scenarios/README.md).
+**topic 12 · Real-world testing scenarios**.
 
 ### 5 · Code with no seams
 
@@ -154,7 +154,7 @@ figures are illustrative rather than measured, and there is no benchmark behind 
 - The table-of-cases alternative is
   [03 · Parameterized tests](../03-parameterized-tests/README.md).
 - The honest answer to "is this test checking anything?" is
-  [11 · Mutation testing](../11-mutation-testing/README.md).
+  **topic 11 · Mutation testing**.
 
 ## Gotchas
 

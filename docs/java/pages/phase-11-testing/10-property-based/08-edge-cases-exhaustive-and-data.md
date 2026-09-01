@@ -1,7 +1,7 @@
 ---
 title: "jqwik does not only generate random values — it generates the boundaries first, switches to trying every value when the space is small enough, and will read a fixed table instead when you tell it to, and knowing which of those three modes a property is actually running in is the difference between a property that proves something and one that ran a thousand near-identical tries"
 sidebar_label: "08 · Edge cases, exhaustive generation and data"
-sidebar_position: 40
+sidebar_position: 35
 ---
 
 <span className="db-tier t-when">When Needed</span>

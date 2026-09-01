@@ -98,7 +98,7 @@ Ask these in order. Stop at the first yes.
 - The honest answer to step 8 is [11 · Where it does not pay](11-where-it-does-not-pay.md).
 - Whether a property that survives all this is actually testing anything is
   [12 · The cost](12-the-cost.md), and the way to measure it rather than argue about it is
-  [11 · Mutation testing](../11-mutation-testing/README.md).
+  **topic 11 · Mutation testing**.
 
 ## Gotchas
 
