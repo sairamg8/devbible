@@ -13,7 +13,9 @@ sidebar_position: 8
 > *Observability · Common Tags*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
 > **Spring Framework 7 reference** — *Integration · Observability*
-> ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)).
+> ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)),
+> and the **Prometheus documentation** — *Concepts · Data model*
+> ([prometheus.io](https://prometheus.io/docs/concepts/data_model/)).
 > No JVM was run for this page; no scrape output appears below. JDK 25 · Spring Boot 4.1.0 /
 > Spring Framework 7.0.8 · Micrometer 1.17.0.
 
@@ -142,6 +144,34 @@ That example is not hypothetical, and Spring solves it for you in a specific way
 knowing about — [06b · The URI tag](06b-the-uri-tag.md). The general failure is
 [04b](04b-cardinality.md).
 
+## Which tags are worth having
+
+Micrometer will not tell you, so here is the working list. Every entry on the left is bounded by
+construction; every entry on the right is bounded only by your traffic.
+
+| Almost always worth a tag | Never a tag (put it on the span instead) |
+|---|---|
+| `outcome` — success / failure / a small enum | user id, tenant id in a multi-million-tenant system |
+| `status` — the HTTP status code | the full request URL with query string |
+| `method` — GET, POST, … | order id, session id, request id, trace id |
+| `uri` — the **templated** path ([06b](06b-the-uri-tag.md)) | the raw path, especially on 404 |
+| `exception` — the simple class name | `exception.getMessage()` |
+| `cache`, `pool`, `queue`, `topic` — the configured name | a dynamically generated queue name |
+| `target` — the downstream service, from a fixed list | the resolved IP or hostname of that service |
+| `region`, `stack`, `env` — as common tags ([04a](04a-common-tags.md)) | the pod name, from inside the app |
+
+The `exception` entry deserves a note, because the *class name* is bounded by your dependency
+graph and the *message* is not. `SQLException` is one tag value; `ERROR: duplicate key value
+violates unique constraint "orders_pkey" Detail: Key (id)=(8134) already exists.` is one tag value
+per collision. Spring Boot's own convention takes the simple class name for exactly this reason:
+the `exception` tag is *"the simple class name of any exception that was thrown while handling the
+request."*
+
+The right-hand column is not lost information. It is information that belongs on a
+[trace](../09-distributed-tracing/README.md) as a high-cardinality attribute, where storage is per
+span rather than per distinct value — the routing rule the Observation API makes explicit in
+[04a](04a-common-tags.md).
+
 ## Gotchas
 
 **★ A tag value is a *value*, not a piece of the name — but the registry cannot tell.** Nothing
@@ -179,10 +209,27 @@ explicit: *"Use cases where dynamic behavior is desired, such as defining tags b
 of a request etc., should be implemented in the instrumentation itself rather than in a
 `MeterFilter`."* Filters see only the `Meter.Id`, which is fixed for the life of the meter.
 
-**★ Every common tag multiplies your *entire* metric surface, not one meter.** Adding
-`pod=<name>` as a common tag multiplies every series in the process by the number of pods, and
-does it retroactively across every dashboard. Instance-level identity is usually better supplied
-by the scraper's target labels than by the application.
+**★ An empty-string tag value is not a sentinel on Prometheus — it is an absent label.** The data
+model is explicit: *"Labels with an empty label value are considered equivalent to labels that do
+not exist."* So `.tag("tenant", "")` gives you exactly the split-identity problem that emitting the
+key was supposed to prevent, and it does it only on Prometheus, so it passes your test against a
+`SimpleMeterRegistry`. Use a real word.
+
+**★ Adding a tag to an existing meter forks the series; it does not extend it.** Prometheus:
+*"The change of any label's value, including adding or removing labels, will create a new time
+series."* Shipping a new tag on an existing metric ends the old series and starts a new one. Every
+dashboard spanning the deploy shows a gap and then a jump, and no backfill exists.
+
+**★ Prometheus reserves label names beginning with a double underscore.** *"Label names beginning
+with `__` (two underscores) MUST be reserved for internal Prometheus use."* Also avoid `job` and
+`instance`, which the scraper sets from service discovery, and `le` and `quantile`, which
+histogram and summary queries depend on. Micrometer will let you register any of them.
+
+**★ A tag whose value is derived from an exception message is unbounded by definition.** Messages
+contain ids, values, row counts and file paths. Tag with the simple class name; put the message in
+the log line and the span, where it is stored once per occurrence rather than once per distinct
+string forever.
+
 
 ## Interview questions
 
@@ -216,5 +263,22 @@ series simply stop and new ones start. The usual approach is to emit both for on
 cut the dashboards over, then delete the old instrumentation; a `MeterFilter` that renames can do
 the transitional half without touching call sites
 ([04c · MeterFilter](04c-meterfilter.md)).
+
+**★ Why is an empty string a bad sentinel for a missing tag value?**
+Because on Prometheus it is not a value at all — the data model states that a label with an empty
+value is equivalent to a label that does not exist. So the meter you carefully gave a uniform tag
+set to is exported as two different series families anyway, and you have reintroduced the exact
+bug the sentinel was meant to fix. It is also the worst kind of bug to find, because it does not
+reproduce against an in-memory registry: Micrometer stores the empty string faithfully and only
+the Prometheus exposition collapses it.
+
+**★ What happens to your dashboards when you add a tag to an existing metric?**
+The old series stops and a new one starts, because Prometheus treats adding or removing a label as
+creating a new time series. Queries that select by name and aggregate will bridge the gap; queries
+that pin specific label sets, and any recording rule or alert with a `for` clause spanning the
+deploy, will not. The safe rollout is to add the tag, let both series coexist for one retention
+window if you can, and update the queries that name labels explicitly before you rely on the new
+dimension.
+
 
 {/* FOOTER */}
