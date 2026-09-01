@@ -140,7 +140,7 @@ The guide also lists the environmental causes of a high `Sys`:
 The third one deserves emphasis: **the GC log can itself be the pause.** Logging is
 synchronous by default, so a `write()` that blocks on a saturated disk blocks the VM thread
 inside the safepoint. `-Xlog:async` exists for exactly this, and it is
-[07c · Rotating and shipping GC logs](07c-rotating-and-shipping-gc-logs.md).
+[07c · Rotating and shipping GC logs](07d-rotating-and-shipping-gc-logs.md).
 
 ## Why any of this matters at all: Amdahl
 

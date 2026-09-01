@@ -109,7 +109,7 @@ deprecated path has:
 - **no decorator control.** You get the defaults — uptime, level, tags — and cannot add
   `time` or `pid`, which are the two you want when correlating a GC log with anything else.
 
-The whole of that is [07c · Rotating and shipping GC logs](07c-rotating-and-shipping-gc-logs.md).
+The whole of that is [07c · Rotating and shipping GC logs](07d-rotating-and-shipping-gc-logs.md).
 The reason it belongs here too is that the failure is *silent*: the service starts, the log
 file exists, someone ticks "GC logging enabled" on a checklist, and the volume fills up
 eleven months later.

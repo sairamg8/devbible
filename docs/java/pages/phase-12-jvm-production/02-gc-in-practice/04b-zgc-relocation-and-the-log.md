@@ -168,7 +168,7 @@ The first line of the log names the collector, and ZGC's name is not the short o
 
 ZGC-specific causes from `gcCause.cpp` — `Timer`, `Warmup`, `Allocation Rate`,
 `Allocation Stall`, `Proactive`, `High Usage` — are covered in
-[07b · Reading a GC log](07b-reading-a-gc-log.md), and `Allocation Stall` in particular is
+[07b · Reading a GC log](07c-reading-a-gc-log.md), and `Allocation Stall` in particular is
 [04c](04c-zgc-costs.md).
 
 ## Gotchas
