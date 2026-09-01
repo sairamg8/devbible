@@ -1,7 +1,7 @@
 ---
 title: "Fraction is exact where Decimal is only exact about decimals — it holds 1/3, it normalises to lowest terms on construction, and Fraction(1.1) is not Fraction(11, 10)"
 sidebar_label: "11 · Fraction"
-sidebar_position: 110
+sidebar_position: 113
 ---
 
 <span className="db-tier t-understand">Understand</span>

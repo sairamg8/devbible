@@ -1,7 +1,7 @@
 ---
 title: "as_integer_ratio is the protocol every exact numeric type shares, and a normalised Fraction is hashable — so it groups and keys where a float never can"
 sidebar_label: "11b · Inspecting and constructing"
-sidebar_position: 111
+sidebar_position: 114
 ---
 
 <span className="db-tier t-understand">Understand</span>

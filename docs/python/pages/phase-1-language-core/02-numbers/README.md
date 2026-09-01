@@ -71,6 +71,19 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 9 | **[`round()` and banker's rounding](09-round-and-bankers-rounding.md)** | Round-half-to-even, the `round(2.675, 2)` note the docs call "not a bug", and the return type with and without `ndigits` |
 | 9b | **[`round()` per type, and double rounding](09b-round-per-type-and-double-rounding.md)** | `__round__`, how each numeric type rounds, and the double-rounding trap |
 | 9c | **[Double rounding and policy](09c-double-rounding-and-policy.md)** | Why rounding twice is not rounding once, and choosing a rounding policy deliberately rather than inheriting one |
+| 10 | **[`Decimal` for money](10-decimal-for-money.md)** | Why `float` is disqualified, what `Decimal` guarantees, constructing from strings, and `Decimal` vs integer minor units as the two defensible representations |
+| 10b | **[Contexts, precision and signals](10b-contexts-precision-and-signals.md)** | `getcontext`/`localcontext`, precision as significant digits applied to *results*, the `prec=3` associativity trap, and 3.14's `IEEEContext` |
+| 10c | **[Quantize and fixed-point discipline](10c-quantize-and-fixed-point-discipline.md)** | `quantize` as how you hold two places, its unique InvalidOperation rule, the `traps=[Inexact]` validation idiom, and which operations preserve a fixed point |
+| 10d | **[Signals, flags and traps](10d-signals-flags-and-traps.md)** | The nine signals, which are trapped by default, the exception hierarchy, and flags being sticky until `clear_flags()` |
+| 10e | **[Rounding modes for money](10e-rounding-modes-for-money.md)** | All eight modes with what each is *for*, and why `ROUND_HALF_EVEN` is a default an accountant does not expect |
+| 10f | **[Allocating a total](10f-allocating-a-total-without-losing-a-cent.md)** | Splitting a sum across N shares so the parts add back exactly, and where the remainder cent goes |
+| 10g | **[Tax, percentages and minor units](10g-tax-percentages-and-minor-units.md)** | Percentage arithmetic that survives audit, currency exponents, and working in minor units |
+| 10h | **[`Decimal` and the other numeric types](10h-decimal-and-the-other-numeric-types.md)** | Mixing with `int` and `float`, the `FloatOperation` trap, and comparisons being supported where arithmetic is refused |
+| 10i | **[Special values and stdlib interop](10i-special-values-and-stdlib-interop.md)** | `Decimal` NaN and infinity, `compare`/`compare_signal`, `number_class()`, `is_signed()`, and `Decimal.max` differing from builtin `max` |
+| 10j | **[Contexts across threads](10j-decimal-contexts-across-threads.md)** | `getcontext()` being per-thread, `thread_inherit_context`, `DefaultContext` before threads start, and the contextvar build option |
+| 10k | **[JSON and the wire format](10k-json-and-the-wire-format.md)** | `parse_float=Decimal` receiving the original text, `dumps` needing `default=`, and why a decimal belongs on the wire as a string |
+| 10l | **[SQL storage for `Decimal`](10l-sql-storage-for-decimal.md)** | PostgreSQL `numeric` and `money`, precision-versus-scale overflow, and `sqlite3` having no decimal storage class |
+| 10m | **[`Decimal` versus integer minor units](10m-decimal-versus-integer-minor-units.md)** | The two representations argued out, and which one a given system should pick |
 | 11 | **[`Fraction`](11-fraction.md)** | Exact about rationals where `Decimal` is only exact about decimals, the three constructors, why `Fraction(1.1)` is a power-of-two denominator, and normalisation to lowest terms |
 | 11b | **[Inspecting and constructing](11b-inspecting-and-constructing.md)** | `as_integer_ratio()` as the shared exact-value protocol, `is_integer()`, hashability and dict keys, and 3.14's `from_number` |
 | 11c | **[Approximation and cost](11c-limit-denominator-and-cost.md)** | `limit_denominator` recovering `11/10` and `355/113`, denominator growth as the price of never rounding, and when not to reach for the type |
@@ -90,9 +103,6 @@ links, so this topic carries no dangling link to them:
 | Planned | Position | Covers |
 |---|---|---|
 | `06c-signed-zero-and-serialisation.md` | 62 | `math.copysign` as the only way to detect `-0.0`, `0.0`/`-0.0` collapsing to one dict key, and `json`'s `allow_nan` / `parse_constant` |
-| `10-decimal-for-money.md` | 100 | Contexts, precision as significant digits, `quantize`, rounding modes, traps and signals, and `Decimal` vs integer minor units |
-| `10b-contexts-precision-and-signals.md` | 101 | Named forward from chunk 8c |
-| `10c-quantize-and-fixed-point-discipline.md` | 102 | Named forward from chunk 9 |
 | `14-math-vs-the-operators.md` | 140 | Where `math` and the operators disagree, and which to reach for |
 
 🔴 **`sidebar_position` runs on a ×10 scheme from chunk 4 onward** — the chunks

@@ -268,6 +268,6 @@ in intermediate helpers is wrong because it composes.
 
 ---
 
-← Prev: [round() per type](09b-round-per-type-and-double-rounding.md) · Index: [Numbers](README.md) · Next → **Decimal for money** *(not written yet)*
+← Prev: [round() per type](09b-round-per-type-and-double-rounding.md) · Index: [Numbers](README.md) · Next → [Decimal for money](10-decimal-for-money.md)
 
 {/* FOOTER */}

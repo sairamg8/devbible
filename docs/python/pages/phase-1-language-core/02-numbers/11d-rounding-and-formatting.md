@@ -1,7 +1,7 @@
 ---
 title: "Fraction rounds half to even like everything else, and its format spec supports the float presentation types but not zero-fill"
 sidebar_label: "11d · Rounding and formatting"
-sidebar_position: 113
+sidebar_position: 116
 ---
 
 <span className="db-tier t-understand">Understand</span>

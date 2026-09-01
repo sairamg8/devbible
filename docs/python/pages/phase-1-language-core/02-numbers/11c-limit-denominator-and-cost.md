@@ -1,7 +1,7 @@
 ---
 title: "limit_denominator is how you get 11/10 back out of a float, and unbounded denominator growth is what Fraction charges for never rounding"
 sidebar_label: "11c · Approximation and cost"
-sidebar_position: 112
+sidebar_position: 115
 ---
 
 <span className="db-tier t-understand">Understand</span>
