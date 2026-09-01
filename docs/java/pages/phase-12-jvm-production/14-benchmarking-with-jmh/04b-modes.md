@@ -74,7 +74,7 @@ The caveats are in the javadoc too:
 
 🔴 **"Work-based" versus "time-based" is the distinction that matters.** Every other mode runs
 until the clock says stop. `SingleShotTime` runs until the work is done. That is what makes it
-the right mode for [class loading, first-call and startup costs](../10-packaging-for-deploy/README.md)
+the right mode for [class loading, first-call and startup costs](../10-packaging-for-deploy/01-the-fat-jar.md)
 — the very things every other mode is designed to warm away.
 
 ## The workload with no steady state
