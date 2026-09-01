@@ -10,8 +10,8 @@
     "parked": 2,
     "blocked": 1,
     "topics": 2841,
-    "completed": 2091,
-    "pending": 750,
+    "completed": 2092,
+    "pending": 749,
     "percent": 74
   },
   "languages": [
@@ -397,14 +397,14 @@
       "key": "python",
       "label": "Python",
       "status": "blocked",
-      "percent": 8,
+      "percent": 9,
       "topics": 180,
-      "completed": 15,
-      "pending": 165,
+      "completed": 16,
+      "pending": 164,
       "phases": "1/14",
       "next": "1 · Language core",
       "docs": "/docs/python",
-      "updated": "2026-09-01 14:20",
+      "updated": "2026-09-01 16:05",
       "note": "Blocked behind Java. Resume at phase 1, 02-numbers/04-bool-is-an-int.md."
     }
   ]
