@@ -17,6 +17,7 @@ Owns **turning a build output into a thing that runs**: the executable jar, laye
 | 2 | `02-layered-jars.md` | `layers.idx` as an index, the four layers, and the rate-of-change sort |
 | 2b | `02b-extracting-layers-and-the-image-cache.md` | `tools` jar mode, `extract --layers`, `COPY` order, and what you launch |
 | 2c | `02c-a-real-layered-dockerfile.md` | Multi-stage, ordered `COPY`, and what each layer costs |
+| 2d | `02d-the-cache-variants-of-the-dockerfile.md` | The AOT-cache and CDS variants: forced instruction positions |
 | 3 | `03-base-images.md` | JRE vs JDK, distroless, Alpine/musl, and the debugging you gave up |
 | 3b | `03b-non-root-and-filesystem.md` | `USER`, read-only root, writable tmp, and the dump directory |
 | 4 | `04-jlink.md` | A custom runtime; `jdeps`; when it beats a stock JRE |
@@ -46,7 +47,9 @@ Owns **turning a build output into a thing that runs**: the executable jar, laye
 | 4 | `01d-minimizing-relocating-and-choosing.md` |
 | 5 | `02-layered-jars.md` |
 | 6 | `02b-extracting-layers-and-the-image-cache.md` |
+| 7 | `02c-a-real-layered-dockerfile.md` |
+| 8 | `02d-the-cache-variants-of-the-dockerfile.md` |
 
-🔴 **Next free `sidebar_position` is 7.** The plan's chunk numbers are a plan, not a budget — 01b
-drafted at 406 lines and split three ways, 02 at 352 and split two ways, and the lettered siblings
-were renumbered accordingly (the Dockerfile chunk moved from `02b` to `02c`).
+🔴 **Next free `sidebar_position` is 9.** The plan's chunk numbers are a plan, not a budget — 01b
+drafted at 406 lines and split three ways, 02 at 352 and split two ways, 02c at 322 and split two
+ways. The Dockerfile chunk moved from `02b` to `02c` when 02 split.
