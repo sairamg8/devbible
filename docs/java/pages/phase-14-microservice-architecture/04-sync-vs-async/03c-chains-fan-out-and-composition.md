@@ -67,55 +67,9 @@ It comes with two costs that are easy to miss:
   in sequence is a trickle. Capacity coupling, from
   [02c](02c-the-five-things-coupling-means.md), gets worse.
 
-## Parallel fan-out in Spring, without pretending it is free
-
-`RestClient` is synchronous by design — the Spring Framework reference describes it as
-*"a synchronous HTTP client that exposes a modern, fluent API"* and notes that *"Once
-created, a `RestClient` is safe to use in multiple threads."* Parallelising with it means
-running the calls on separate threads, which on JDK 25 means virtual threads:
-
-```java
-@Service
-class OrderAssembler {
-
-    private final CustomerClient customers;
-    private final InventoryClient inventory;
-    private final PricingClient pricing;
-
-    OrderAssembler(CustomerClient customers, InventoryClient inventory, PricingClient pricing) {
-        this.customers = customers;
-        this.inventory = inventory;
-        this.pricing = pricing;
-    }
-
-    OrderContext assemble(PlaceOrder command) throws InterruptedException {
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-            var customer = scope.fork(() -> customers.byId(command.customerId()));
-            var stock    = scope.fork(() -> inventory.check(command.sku(), command.quantity()));
-            var price    = scope.fork(() -> pricing.quote(command.sku(), command.quantity()));
-
-            scope.join();
-            scope.throwIfFailed();
-
-            return new OrderContext(customer.get(), stock.get(), price.get());
-        }
-    }
-}
-```
-
-Read what `ShutdownOnFailure` encodes: **the first failure cancels the others and the whole
-assembly fails.** That is precisely the availability product, made explicit in code. The
-structure is honest — it says out loud that all three are hard dependencies — and that
-honesty is the reason to prefer it to three sequential calls that fail one at a time in an
-order nobody chose.
-
-If one of the three is *not* a hard dependency, the structure has to say so, and
-`ShutdownOnFailure` is then the wrong scope. See
-[09d · Degrading instead of failing](09d-degrading-instead-of-failing.md) for the version
-where a branch is allowed to fail.
-
-The reactive equivalent with `WebClient` composes the same way with `Mono.zip`, and carries
-the same semantics: if any source errors, the combined `Mono` errors.
+The implementation — `StructuredTaskScope` on JDK 25, the virtual-thread executor fallback,
+and what each one does when a branch fails — is
+[08 · Fanning out in Java](03c2-fanning-out-in-java.md).
 
 ## A service you call twice is one term, not two
 
@@ -193,18 +147,6 @@ made three real improvements.
 Parallelism changes `L_A + L_B + L_C` into `L_A + max(...)`. It leaves `p_A × p_B × p_C`
 exactly where it was. Accept the latency improvement, then repeat the availability question.
 
-**★ A parallel fan-out with `ShutdownOnFailure` fails faster, which reads as a regression in
-your metrics.** Previously a request that was going to fail did so after three sequential
-timeouts; now it fails after one. Error *count* is unchanged, error *latency* drops, and a
-dashboard that tracks "slow requests" will look better while nothing improved. Track outcome
-per dependency, not aggregate latency, or you will mis-attribute the change.
-
-**★ Fan-out multiplies your load on the downstream services by the fan-out width, all at
-once.** Ten parallel branches from a page that is rendered on every session is ten times the
-request rate of the sequential version at the same page-view rate — the same total, delivered
-in a burst. If a downstream service is sized on average rate rather than peak, the switch to
-parallel is what breaks it.
-
 **★ Counting calls instead of distinct services overstates the product and undermines the
 argument.** Someone will check, find that you double-counted a service you call twice, and
 conclude the whole analysis is inflated. Count failure domains.
@@ -214,12 +156,6 @@ The pattern page's drawback about *"inefficient, in-memory joins of large datase
 a composer that fetches all orders and all customers to join them holds both in heap. On a
 service with a modest container limit that is an OOM, which is an availability event caused
 by the composer itself and not by any dependency.
-
-**★ Structured concurrency does not give you per-branch timeouts for free.** `scope.join()`
-waits for all branches; the deadline for the whole assembly has to be applied explicitly, and
-each client still needs its own read timeout or a hung branch holds the scope open. See
-[04c · Timeouts in Spring](04c-timeouts-in-spring.md) and
-[04d](04d-the-timeout-that-is-not-a-timeout.md).
 
 ## Interview questions
 
