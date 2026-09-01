@@ -161,82 +161,6 @@ private static final Duration DEFAULT_MAXIMUM_EXPECTED_DURATION = Duration.ofSec
 [08c · SLOs and the bucket budget](08c-slos-and-the-bucket-budget.md) is where that becomes a
 number of time series.
 
-## `DistributionSummary`
-
-Structurally a timer without the time-unit scaling.
-
-```java
-DistributionSummary payload = DistributionSummary.builder("http.request.payload")
-    .baseUnit("bytes")
-    .minimumExpectedValue(64.0)        // clamp: see below
-    .maximumExpectedValue(10_000_000.0)
-    .register(registry);
-
-payload.record(body.length);
-```
-
-🔴 **The clamp is not optional here in the way it is for a timer.** The reference:
-
-> *"By default, summaries have NO minimum and maximum expected value, so we ship all 276
-> predetermined histogram buckets. You should always clamp distribution summaries with a
-> `minimumExpectedValue` and `maximumExpectedValue` when you intend to ship percentile
-> histograms."*
-
-There is also a `scale(double)` factor applied to each recorded sample — the documented use case
-is ratios in `[0,1]`, scaled by 100 so that `maximumExpectedValue(100)` becomes meaningful and the
-integer bucket generator has somewhere to put them.
-
-## `LongTaskTimer`
-
-The one meter type whose purpose is not obvious until you have been burned by its absence.
-
-> *"The long task timer is a special type of timer that lets you measure time while an event being
-> measured is still running. A normal `Timer` only records the duration after the task is
-> complete."*
-
-> *"Long task timers publish at least the following statistics: Active task count; Total duration
-> of active tasks; The maximum duration of active tasks. Unlike a regular `Timer`, a long task
-> timer does not publish statistics about completed tasks."*
-
-The argument for it, in the reference's words:
-
-> *"If we wanted to alert when this process exceeds a threshold, with a long task timer, we
-> receive that alert at the first reporting interval after we have exceeded the threshold. With a
-> regular timer, we would not receive the alert until the first reporting interval after the
-> process completed, over an hour later!"*
-
-```java
-LongTaskTimer refresh = LongTaskTimer.builder("catalogue.refresh")
-    .description("Nightly catalogue rebuild, in progress")
-    .register(registry);
-
-refresh.record(() -> rebuildCatalogue());
-```
-
-That asymmetry — a plain timer is blind to anything still running — is why a hung request is
-invisible in `http.server.requests` until it finishes or times out. It is the metrics-side
-counterpart of the thread-dump argument in
-[05 · Thread dumps](../05-thread-dumps/README.md): the request that matters is the one that has
-not returned.
-
-## `FunctionCounter` and `FunctionTimer`
-
-For wrapping a value that some other object already maintains monotonically:
-
-```java
-FunctionCounter.builder("cache.evictions", cache, c -> c.stats().evictionCount())
-    .register(registry);
-```
-
-> *"Micrometer cannot guarantee the monotonicity of the count and total time functions for you. By
-> using this signature, you are asserting their monotonicity based on what you know about their
-> definitions."*
-
-The same weak-reference and immutable-`Number` traps apply as for gauges:
-
-> *"Attempting to construct a function-tracking timer with a primitive number or one of its
-> `java.lang` object forms is always incorrect. These numbers are immutable."*
-
 ## Gotchas
 
 **★ A `Timer` already gives you a counter, so adding one is a bug waiting to diverge.**
@@ -252,21 +176,6 @@ can subtract the rates and you keep both signals).
 default `bufferLength` of 3 and an `expiry` that defaults to the registry's step. A quiet
 endpoint's max decays to zero, which reads as "latency improved" and means "no requests".
 
-**★ `LongTaskTimer` values return to zero when nothing is running, and that is correct.**
-The Prometheus implementation page: *"A `LongTaskTimer` only samples tasks that are running at
-scrape time, so its values return to zero when no tasks are in progress."* Alerting on the
-absolute duration of in-progress tasks therefore needs `for:` durations that tolerate the gaps.
-
-**★ Using a `DistributionSummary` for a duration costs you unit scaling and portability.**
-The reference is direct: in every case where you want to measure time, use a `Timer`. A summary
-records raw doubles with no notion of a base time unit, so the number that reaches Prometheus is
-whatever unit you happened to record in, and nothing renames it.
-
-**★ An unclamped `DistributionSummary` with `publishPercentileHistogram` ships 276 buckets per
-tag combination.** Timers are clamped by default (1 ms to 30 s); summaries are not. This is the
-easiest way in the whole library to multiply your series count by a few hundred with one method
-call.
-
 **★ Recording a negative duration into a `Timer` is unsupported.** It happens more often than it
 should, from subtracting timestamps taken from two different clocks, or from
 `System.currentTimeMillis()` across an NTP step. Use `Timer.Sample` / `Timer.start(registry)`,
@@ -279,18 +188,6 @@ uptime, session lifetimes, or anything measured in days on a long-lived instance
 **★ A gauge with no strong reference to its target reports `NaN` or vanishes.**
 The failure is silent and delayed, which is why it gets its own page —
 [03b](03b-the-gauge-that-was-garbage-collected.md).
-
-**★ `FunctionCounter` over a non-monotonic function produces nonsense rather than an error.**
-You asserted monotonicity by choosing the type. A function that can decrease (a cache size, say)
-will make `rate()` produce spikes or drop to zero as the backend interprets the decrease as a
-counter reset.
-
-**★ Re-registering a function timer or gauge under an existing identity is ignored, with a
-warning.** The documented message is *"This Gauge has been already registered … the registration
-will be ignored. Note that subsequent logs will be logged at debug level."* Crucially, the docs
-note this can be caused **indirectly** by a `MeterFilter` that renames or drops tags so that two
-previously-distinct meters collide — so the filter you added for cardinality can silently
-un-register a gauge.
 
 ## Interview questions
 
@@ -307,33 +204,11 @@ because a gauge is only sampled — everything between two scrapes is lost — a
 total has no rate semantics and resets on restart. The documentation's own phrasing, "never gauge
 something you can count", is the test.
 
-**★ What is a `LongTaskTimer` and why is a plain timer not enough?**
-A plain timer only records when the operation finishes, so an operation that is stuck contributes
-nothing at all — the metric for a job that has been hanging for two hours is identical to the
-metric for a job that never started. A `LongTaskTimer` publishes the count, total duration and
-maximum duration of tasks that are *currently running*, so a threshold breach is visible at the
-next reporting interval rather than after completion. Use it for scheduled jobs, migrations,
-long-running imports, and anything whose duration can exceed your scrape interval.
-
 **★ Why does `_max` on a Micrometer timer go down?**
 Because it is a `TimeWindowMax`: a decaying maximum over a ring buffer whose length defaults to 3
 and whose expiry defaults to the registry's step size. When no new values are recorded for the
 window, it resets. The design intent is to surface a latency spike in the interval *after* the
 pressure that caused it, when publishing may have been disrupted — but the consequence for a
 reader is that a falling max means "recently quiet", not "recently faster".
-
-**★ You want to record HTTP response payload sizes. Which meter, and what must you configure?**
-A `DistributionSummary` with `baseUnit("bytes")`, and you must set `minimumExpectedValue` and
-`maximumExpectedValue` before enabling percentile histograms. Timers are clamped by default to
-1 ms–30 s; summaries have no default clamp, and the documentation warns that an unclamped summary
-ships all 276 predetermined buckets — per tag combination.
-
-**★ What is the difference between `Counter` and `FunctionCounter`, and when does the difference
-matter?** A `Counter` owns its value and you increment it. A `FunctionCounter` owns nothing and
-reads a monotonic value out of an object you supply, which is how you expose counters that a
-third-party library already maintains (a cache's eviction count, a client's request total)
-without double-counting them. The difference matters because `FunctionCounter` holds its target
-weakly and trusts your monotonicity assertion — if the function can go down, the backend sees a
-counter reset and the rate graph lies.
 
 {/* FOOTER */}
