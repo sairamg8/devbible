@@ -151,7 +151,7 @@ honest about that rather than reaching for `:debug` in production.
 
 🔴 **That is the native dependency set a JVM needs, with no JVM in it.** `java-base` exists to be
 the runtime stage for a runtime *you* built — which is exactly the output of `jlink`
-(**`04-jlink.md`** *(not written yet)*). It is also the honest explanation for why the Java
+([04](04-jlink.md)). It is also the honest explanation for why the Java
 distroless images are not 2 MiB: fontconfig, freetype and libstdc++ are not optional for a
 general-purpose JVM.
 

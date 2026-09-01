@@ -122,9 +122,9 @@ layer boundaries exist in the *image*, not in the filesystem the JVM sees at run
 **And this is the second time the same layout has paid for itself.** [01](01-the-fat-jar.md) noted
 that the AOT cache *"has to be used with the extracted form of the application, otherwise it has no
 effect"*. The extraction you did for cache-friendly layers is the same extraction the AOT cache
-requires — one step, three benefits: startup, image caching, and cache eligibility. **The concrete
-Dockerfiles, including the AOT and CDS training runs, are `02c-a-real-layered-dockerfile.md`**
-*(not written yet)*.
+requires — one step, three benefits: startup, image caching, and cache eligibility. The concrete
+Dockerfiles, including the AOT and CDS training runs, are
+[02c](02c-a-real-layered-dockerfile.md) and [02d](02d-the-cache-variants-of-the-dockerfile.md).
 
 ## Gotchas
 

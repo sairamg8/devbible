@@ -219,7 +219,7 @@ price of having the outcome tag and it is usually worth paying once per request.
 **★ Two nested timers around the same work measure overlapping intervals, and the outer one is not
 the sum of the inner ones.** That is what a trace is for. If you find yourself building a
 timer hierarchy to explain where time went, you want spans
-([09](../09-distributed-tracing/README.md)), not more meters.
+(**Topic 09 · Distributed tracing**, *not written yet*), not more meters.
 
 ## Interview questions
 

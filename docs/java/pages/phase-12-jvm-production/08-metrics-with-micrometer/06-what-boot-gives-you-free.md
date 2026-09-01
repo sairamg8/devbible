@@ -232,7 +232,7 @@ matters because the `method` tag makes the cardinality proportional to your repo
 
 **★ The startup meters are tagged by the application class's fully qualified name, which makes
 them awkward to aggregate.** `application.ready.time` is genuinely useful for tracking startup
-regressions — see [10 · Packaging for deploy](../10-packaging-for-deploy/README.md) — but the tag
+regressions — see **Topic 10 · Packaging for deploy** *(not written yet)* — but the tag
 is per-application, so a fleet-wide panel needs the tag stripped or the query pinned.
 
 **★ The in-memory `SimpleMeterRegistry` fallback means "metrics work" locally and prove nothing.**

@@ -168,7 +168,7 @@ The same instrumentation carries the order id *for the trace*, where storage is 
 the metric stays two-dimensional and cheap. Boot's own wording: *"Low cardinality tags will be
 added to metrics and traces, while high cardinality tags will only be added to traces."*
 [07b · The Observation API](07b-observation-api.md) is the mechanism;
-[09 · Distributed tracing](../09-distributed-tracing/README.md) is what receives the other half.
+**Topic 09 · Distributed tracing** *(not written yet)* is what receives the other half.
 
 Note also what the observation-level common tags do that `management.metrics.tags` cannot: they
 are *"applied to all observations as low cardinality tags"*, so `region` and `stack` end up on your

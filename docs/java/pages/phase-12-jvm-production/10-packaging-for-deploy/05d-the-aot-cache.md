@@ -258,7 +258,7 @@ makes extraction a requirement rather than an optimisation.
 No, and the name collision is the single most common confusion in this area. The AOT *cache* is a
 JVM feature that stores classes and heap objects from a training run. Spring's AOT *processing* is
 a build-time step that generates bean-definition code. They are complementary and independent —
-**`06-spring-boot-aot-processing.md`** *(not written yet)* is the other one, and topic 11 is a third
+[06](06-spring-boot-aot-processing.md) is the other one, and topic 11 is a third
 thing again.
 
 **★ How does this relate to GraalVM native image?**

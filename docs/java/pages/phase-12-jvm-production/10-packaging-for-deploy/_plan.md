@@ -55,11 +55,54 @@ Owns **turning a build output into a thing that runs**: the executable jar, laye
 | 9 | `03-base-images.md` |
 | 10 | `03b-alpine-and-musl.md` |
 | 11 | `03c-musl-runtime-differences.md` |
+| 12 | `03d-distroless.md` |
+| 13 | `03e-non-root-and-filesystem.md` |
+| 14 | `04-jlink.md` |
+| 15 | `04b-jdeps-and-the-module-set.md` |
+| 16 | `05-class-data-sharing.md` |
+| 17 | `05b-creating-a-cds-archive.md` |
+| 18 | `05c-the-training-run.md` |
+| 19 | `05d-the-aot-cache.md` |
+| 20 | `05e-aot-modes-and-diagnosis.md` |
+| 21 | `05f-when-the-cache-helps.md` |
+| 22 | `06-spring-boot-aot-processing.md` |
+| 23 | `06b-enabling-spring-aot-on-the-jvm.md` |
+| 24 | `06c-what-aot-processing-gives-up.md` |
+| 25 | `07-buildpacks.md` |
+| 26 | `07b-what-paketo-decides.md` |
+| 27 | `08-configuration-at-deploy-time.md` |
+| 28 | `09-image-size-and-startup.md` |
+| 29 | `10-the-checklist.md` |
 
-🔴 **Next free `sidebar_position` is 12.** `03` drafted the Alpine material at 317 lines and it was
-split two ways (234 + 286 L, 16 + 19 ★ — both totals up); distroless then became its own `03d` and
-non-root moved to `03e`.
+## 🔴 STILL OWED — the topic is NOT closed
 
-🔴 **Old plan row `3b` (non-root) is now `3e`.** The plan's chunk numbers are a plan, not a budget — 01b
-drafted at 406 lines and split three ways, 02 at 352 and split two ways, 02c at 322 and split two
-ways. The Dockerfile chunk moved from `02b` to `02c` when 02 split.
+**`README.md` at `sidebar_position: 0`** — `sidebar_label: "Overview"`, argumentative `title:`,
+`t-understand` badge, `> Verified:` line, opening argument, the full 29-row chunk table
+(`| # | Chunk | Tier | What it argues |`) in the reading order above, and a "what this topic is
+really about" section. Copy `../../phase-11-testing/02-assertj/README.md` exactly.
+**That is the only outstanding file.** All 29 content chunks are written.
+
+🔴 **Next free `sidebar_position` is 30** if any further chunk is ever added; the README takes **0**.
+
+## Renumbering that happened (the plan's chunk letters were a plan, not a budget)
+
+| Plan row | Became |
+|---|---|
+| `3` base images | `03` (JRE vs JDK) + `03b` (Alpine/musl port) + `03c` (musl runtime differences) + `03d` (distroless) |
+| `3b` non-root | `03e-non-root-and-filesystem.md` |
+| `4` jlink | `04` + `04b-jdeps-and-the-module-set.md` |
+| `5` CDS | `05` + `05b-creating-a-cds-archive.md` + `05c-the-training-run.md` |
+| `5b` AOT cache | `05d-the-aot-cache.md` + `05e-aot-modes-and-diagnosis.md` |
+| `5c` when AOT helps | `05f-when-the-cache-helps.md` |
+| `6` Spring AOT | `06` + `06b-enabling-spring-aot-on-the-jvm.md` + `06c-what-aot-processing-gives-up.md` |
+| `7` buildpacks | `07` + `07b-what-paketo-decides.md` |
+
+Proven splits this session (drafted whole, then cut on a concept boundary; both totals up each time):
+
+| Drafted | Before | After | Both up? |
+|---|---|---|---|
+| `03b-alpine-and-musl.md` | 1 file · 317 L · 20 ★ | 2 files · 520 L · 35 ★ | ✅ |
+| `05b-creating-a-cds-archive.md` | 1 file · 306 L · 19 ★ | 2 files · 499 L · 34 ★ | ✅ |
+| `06-spring-boot-aot-processing.md` | 1 file · 319 L · 17 ★ | 2 files · 494 L · 31 ★ | ✅ |
+
+Earlier session's splits: `01b` 406 L → 3 files; `02` 352 L → 2 files; `02c` 322 L → 2 files.

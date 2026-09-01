@@ -54,7 +54,7 @@ not "use our JRE":
 
 The word doing the work there is **"JRE-like"**. Even the vendor that ships a JRE image treats
 it as a convenience and points you at building the module set yourself — which is
-**`04-jlink.md`** *(not written yet)*.
+[04](04-jlink.md).
 
 ## What a "JRE" actually removes, module by module
 
@@ -120,7 +120,7 @@ instead. The `jcmd` tool reference states the constraints in one sentence:
 1. **"the same machine."** Two containers in a pod are the same machine only if they share a
    **process namespace**. By default they do not.
 2. **"the same effective user and group identifiers."** Your app container probably runs as a
-   non-root UID (that is **`03c-non-root-and-filesystem.md`** *(not written yet)*). Your debug
+   non-root UID (that is [03e](03e-non-root-and-filesystem.md)). Your debug
    container must run as *that* UID, not root, and not merely as some other non-root user.
 
 Kubernetes' escape hatch for exactly this is the ephemeral container, and its documentation
@@ -154,7 +154,7 @@ It is a real case and this page is not arguing against it. Two things genuinely 
   burden of establishing provenance to just what you need."* Every tool you did not ship is a
   CVE you do not have to triage, argue about, or patch on someone else's schedule.
 - **Size**, which this page deliberately does not quantify — see
-  **`09-image-size-and-startup.md`** *(not written yet)* for what actually moves that number
+  [09](09-image-size-and-startup.md) for what actually moves that number
   and how to measure it in your own registry rather than in a blog post.
 
 The decision that survives contact with production is usually one of:

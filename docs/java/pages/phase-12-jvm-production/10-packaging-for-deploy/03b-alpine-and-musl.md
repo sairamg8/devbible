@@ -135,8 +135,7 @@ size argument is weaker than it looks and the libc change is stronger than it lo
 differs.
 
 The alternative that captures most of the size benefit *without* changing libc is a slim
-Debian-based image plus `jlink`, or a distroless image, which is **`03d-distroless.md`**
-*(not written yet)*.
+Debian-based image plus `jlink`, or a distroless image, which is [03d](03d-distroless.md).
 
 ## Gotchas
 
@@ -148,7 +147,7 @@ unsupported *and* larger — it fails on both the correctness and the size argum
 **★ "Alpine is 6 MB" is a claim about the base image, not about your image.** JEP 386's own
 example puts a single-module Java runtime at 38 MB next to a 5.6 MB base. Whatever your image
 weighs, the runtime and your dependencies dominate it. Read
-**`09-image-size-and-startup.md`** *(not written yet)* before optimising the smallest term.
+[09](09-image-size-and-startup.md) before optimising the smallest term.
 
 **★ The Serviceability Agent's attach mechanism is unsupported on the musl port.** That is the
 JEP's exact scope: `jhsdb` and SA-backed core-dump analysis. It is not a blanket statement about

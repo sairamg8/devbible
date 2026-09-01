@@ -16,7 +16,8 @@ sidebar_position: 24
 > and
 > [`PropertiesMeterFilter`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/PropertiesMeterFilter.java)
 > — and the **Google SRE book** — *Monitoring Distributed Systems · The Four Golden Signals*
-> ([sre.google](https://sre.google/sre-book/monitoring-distributed-systems/)). Series counts are
+> ([sre.google](https://sre.google/sre-book/monitoring-distributed-systems/)) and *Service Level
+> Objectives* ([sre.google](https://sre.google/sre-book/service-level-objectives/)). Series counts are
 > arithmetic on Micrometer's documented bucket counts; no JVM was run. JDK 25 · Spring Boot 4.1.0 ·
 > Micrometer 1.17.0.
 
@@ -80,6 +81,87 @@ request got slower: shift 5% of volume from a fast endpoint to a slow one and th
 count above a fixed boundary does not. When the number is going to appear in a contract or on an
 error budget, it has to be the one that only moves when the thing it measures moves.
 
+## Three words that get used interchangeably and should not be
+
+The SRE book defines all three, and the distinction decides who you argue with about the number:
+
+> *"An **SLI** is a service level indicator — a carefully defined quantitative measure of some
+> aspect of the level of service that is provided."*
+
+> *"An **SLO** is a service level objective: a target value or range of values for a service level
+> that is measured by an SLI. A natural structure for SLOs is thus SLI ≤ target, or lower bound ≤
+> SLI ≤ upper bound."*
+
+> *"Finally, **SLAs** are service level agreements: an explicit or implicit contract with your users
+> that includes consequences of meeting (or missing) the SLOs they contain. … An easy way to tell
+> the difference between an SLO and an SLA is to ask 'what happens if the SLOs aren't met?': if
+> there is no explicit consequence, then you are almost certainly looking at an SLO."*
+
+Micrometer's `serviceLevelObjectives(...)` names the **SLO's boundary**. What it actually gives you
+is the raw material for an **SLI** — a countable ratio — and whether there is an SLA behind it is a
+question for a contract, not a properties file.
+
+The SRE book also gives the canonical shape of an availability SLI, which is the same shape your
+latency SLI should have:
+
+> *"It is often defined in terms of the fraction of well-formed requests that succeed, sometimes
+> called yield."*
+
+Good events over valid events. Which is exactly what the bucket ratio computes.
+
+## Which requests count
+
+Deciding the denominator is where most latency SLIs go wrong, and the SRE book's guidance on error
+latency is the reason:
+
+> *"It's important to distinguish between the latency of successful requests and the latency of
+> failed requests. … an HTTP 500 error triggered due to loss of connection to a database or other
+> critical backend might be served very quickly … On the other hand, a slow error is even worse
+> than a fast error!"*
+
+Three defensible choices, in decreasing order of how often they are right:
+
+**Successful requests only.** The SLI is "of the requests we served correctly, how many were fast
+enough". Errors are counted by a separate availability SLI, so nothing is hidden. This needs the
+`outcome` tag in both the numerator and the denominator:
+
+```promql
+sum(rate(http_server_requests_seconds_bucket{le="0.5",outcome="SUCCESS"}[30m]))
+  /
+sum(rate(http_server_requests_seconds_count{outcome="SUCCESS"}[30m]))
+```
+
+**All requests.** Simpler, and it lets a flood of instant 500s inflate your latency SLI to near
+100% while the service is down. Only acceptable alongside a strict availability SLO that would fire
+first.
+
+**A combined "good event" definition** — a request is good if it succeeded *and* was under the
+boundary. This is the form that maps most directly onto an error budget, and it is one query:
+
+```promql
+sum(rate(http_server_requests_seconds_bucket{le="0.5",outcome="SUCCESS"}[30m]))
+  /
+sum(rate(http_server_requests_seconds_count[30m]))
+```
+
+🔴 Whichever you choose, **write it down next to the number**. An SLI whose denominator nobody can
+state is a number people argue about during an incident.
+
+## In Spring Boot, for the meter you already have
+
+```properties
+management.metrics.distribution.slo.http.server.requests=200ms,1s
+management.metrics.distribution.percentiles-histogram.http.server.requests=false
+```
+
+Two boundaries, no percentile histogram: four extra series per tag combination — two SLO buckets,
+and `count` and `sum` you already had. That is the whole cost of a latency SLI on your primary
+meter.
+
+⚠️ Remember what the `uri` tag does to that: `http.server.requests` is bounded at 100 URI values by
+default, times methods, times outcomes. Even four series per combination is a real number when the
+combination count is in the hundreds. [08d](08d-the-bucket-budget.md) is where that gets decided.
+
 ## Choosing boundaries
 
 - **Use your actual commitment**, not a round number near it. If the promise is 300 ms, the
@@ -116,6 +198,22 @@ start of a budget period, not in the middle of one.
 countable; it does not define the window, the target, or what happens when the budget is exhausted.
 Publishing the bucket and never agreeing the target is a common and expensive half-measure.
 
+**★ An SLI with an unstated denominator is an argument waiting to happen.** "99.2% of requests met
+the objective" is meaningless until someone says whether failed requests were in the denominator.
+Put the query in the runbook, not just the panel.
+
+**★ Including errors in a latency SLI lets an outage improve it.** Connection-refused 500s return
+almost instantly, so during a total outage nearly every request falls under your latency boundary.
+Pair a latency SLI with an availability SLI, or define "good" as successful *and* fast.
+
+**★ Micrometer's option names an SLO boundary; it does not give you an SLO.** The target, the
+window, the error budget and the consequence all live outside the code. The metric makes the breach
+countable and nothing more.
+
+**★ An SLO boundary on a meter with high tag cardinality is still multiplied by that
+cardinality.** Two boundaries on a timer with 300 tag combinations is 600 series. Cheap relative to
+a histogram, not free.
+
 ## Interview questions
 
 
@@ -135,5 +233,31 @@ question that appears in an incident review — how many requests broke the prom
 than approximately. The percentile histogram is the right second purchase, on the handful of meters
 where somebody genuinely reads the distribution. Most services buy them in the opposite order
 because `percentiles-histogram` is the more obvious property name.
+
+**★ What is the difference between an SLI, an SLO and an SLA?**
+An SLI is the measurement — a carefully defined quantitative measure such as "fraction of requests
+served in under 500 ms". An SLO is a target for that measurement, structured as SLI ≤ target or
+bounded on both sides. An SLA is a contract that attaches consequences to missing the SLO; the
+SRE book's test is to ask what happens if the objective is not met, and if there is no explicit
+consequence you have an SLO, not an SLA. Micrometer's `serviceLevelObjectives` supplies the bucket
+boundary, which makes the SLI countable; the target and the consequences are agreements, not
+configuration.
+
+**★ Should failed requests be in your latency SLI?**
+Usually not in the numerator, and the denominator is the real decision. If you count all requests,
+a total outage that returns instant 500s makes almost every request fall under your latency
+boundary, so the latency SLI *improves* during the worst possible event. The two safe forms are
+successful requests only — with a separate availability SLI so the failures are still counted — or
+a combined definition where a good event is one that both succeeded and was fast, over all valid
+requests. What matters most is that the denominator is written down somewhere other than a Grafana
+query, because the number will be quoted in a review by someone who did not write it.
+
+**★ Why is a count above a fixed boundary more stable than a percentile as a contractual number?**
+Because a percentile is a property of the *distribution*, so it moves when the mix of traffic moves
+even if no individual operation got slower — shifting volume between a fast endpoint and a slow one
+changes the p99 without anything changing. A count above a fixed boundary only moves when requests
+cross that boundary. For a number that appears in an error budget or a contract, that difference is
+the whole point: you want a metric that responds to the thing it claims to measure and to nothing
+else.
 
 {/* FOOTER */}

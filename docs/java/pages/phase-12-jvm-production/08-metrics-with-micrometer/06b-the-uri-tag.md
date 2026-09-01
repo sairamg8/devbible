@@ -68,8 +68,8 @@ and `uri`. The high-cardinality set is one key:
 
 That is the whole design in two lines. The **raw** URI is not thrown away — it goes to the trace,
 where storage is per span. Only the *metric* gets the bounded projection.
-[04a · Common tags](04a-common-tags.md) has the routing rule; [09 · Distributed
-tracing](../09-distributed-tracing/README.md) is where `http.url` lands.
+[04a · Common tags](04a-common-tags.md) has the routing rule; **Topic 09 · Distributed
+tracing** *(not written yet)* is where `http.url` lands.
 
 ## And a cap underneath it
 

@@ -190,7 +190,7 @@ limit. Measure in a container with production's limits, not on a workstation.
 
 **★ Spring's build-time AOT processing is a different lever with a similar name.** It reduces the
 *work* at start-up rather than caching the results of doing it, and the two compose —
-**`06-spring-boot-aot-processing.md`** *(not written yet)*.
+[06](06-spring-boot-aot-processing.md).
 
 **★ If start-up still dominates after all of this, the next step is a different technology, not a
 better cache.** GraalVM native image (topic 11) and CRaC (topic 15) are the two answers, and both

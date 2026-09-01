@@ -232,6 +232,6 @@ A build-time Spring profile with inert configuration, so the context can refresh
 dependencies — not disabling the training run, and not standing up a database in the image build.
 `onRefresh` already avoids needing a live database for most applications; what it does not avoid is
 needing valid *properties*, and that is a configuration-management problem, which is
-**`08-configuration-at-deploy-time.md`** *(not written yet)*.
+[08](08-configuration-at-deploy-time.md).
 
 {/* FOOTER */}

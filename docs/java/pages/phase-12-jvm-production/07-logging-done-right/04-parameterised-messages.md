@@ -39,7 +39,7 @@ which is most statements — the work is 100% waste.
 The parameterised form defers it:
 
 > *"After evaluating whether to log or not, and only if the decision is affirmative, will the
-> logger implementation format the message and replace the '{}' pair with the string value of
+> logger implementation format the message and replace the '\{\}' pair with the string value of
 > entry. In other words, this form does not incur the cost of parameter construction in case the
 > log statement is disabled."*
 
@@ -161,9 +161,9 @@ SLF4J's formatter is not `String.format` and not `MessageFormat`:
 
 The anchor is the two characters `{` immediately followed by `}`. Everything else is literal:
 
-> *"SLF4J only cares about the formatting anchor, that is the '{' character immediately followed by
-> '}'. Thus, in case your message contains the '{' or the '}' character, you do not have to do
-> anything special unless the '}' character immediately follows '{'."*
+> *"SLF4J only cares about the formatting anchor, that is the '\{' character immediately followed by
+> '\}'. Thus, in case your message contains the '\{' or the '\}' character, you do not have to do
+> anything special unless the '\}' character immediately follows '\{'."*
 
 So `logger.debug("Set {1,2} differs from {}", "3")` prints `Set {1,2} differs from 3`. To emit a
 literal `{}`, escape the brace with a backslash, which in Java source is a doubled backslash:

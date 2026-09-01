@@ -96,7 +96,7 @@ runtime on identical bytes.
 — [02b](02b-extracting-layers-and-the-image-cache.md) noted that Boot adds
 `spring-boot-jarmode-tools` automatically when the layers index is present. **No JDK, no network, no
 extra tooling in the builder.** *(Base image choice — JRE versus JDK, distroless, Alpine and the
-debugging you give up — is its own argument in `03-base-images.md`* **not written yet**.*)*
+debugging you give up — is its own argument in [03](03-base-images.md).)*
 
 **`ARG JAR_FILE=target/*.jar`** — a default that makes `docker build .` work with no arguments in a
 Maven project, and the comment tells Gradle users to change it to `build/libs/*.jar`.
@@ -146,7 +146,7 @@ layer that is nearly all of the bytes changes rarely; the layer that changes con
 Ordering them the other way round would give you the single-layer behaviour at every commit.
 
 ⚠️ **This page deliberately quotes no sizes.** Actual figures depend entirely on the dependency set,
-and `09-image-size-and-startup.md` *(not written yet)* is where measurement belongs.
+and [09](09-image-size-and-startup.md) is where measurement belongs.
 
 **The same skeleton gains a startup cache with two more instructions — a training run and a flag —
 and where those go is not arbitrary:

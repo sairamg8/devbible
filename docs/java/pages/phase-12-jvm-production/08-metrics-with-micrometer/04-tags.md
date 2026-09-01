@@ -168,7 +168,7 @@ the `exception` tag is *"the simple class name of any exception that was thrown 
 request."*
 
 The right-hand column is not lost information. It is information that belongs on a
-[trace](../09-distributed-tracing/README.md) as a high-cardinality attribute, where storage is per
+trace as a high-cardinality attribute (**Topic 09 · Distributed tracing** *(not written yet)*), where storage is per
 span rather than per distinct value — the routing rule the Observation API makes explicit in
 [04a](04a-common-tags.md).
 

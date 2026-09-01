@@ -90,7 +90,7 @@ layout from [02c](02c-a-real-layered-dockerfile.md) sits on a `jlink`ed runtime 
 | `--include-locales` | *"Includes the list of locales where langtag is a BCP 47 language tag."* | Locale data is large. Requires `--add-modules jdk.localedata` |
 | `--bind-services` | *"Link service provider modules and their dependencies."* | ⚠️ Enormously expanding — see below |
 | `--suggest-providers` | *"Suggest providers that implement the given service types from the module path."* | The targeted alternative to `--bind-services` |
-| `--generate-cds-archive` | *"Generate CDS archive if the runtime image supports the CDS feature."* | Start-up, at link time — chunk **`05-class-data-sharing.md`** *(not written yet)* |
+| `--generate-cds-archive` | *"Generate CDS archive if the runtime image supports the CDS feature."* | Start-up, at link time — chunk [05](05-class-data-sharing.md) |
 | `--limit-modules` | *"Limits the universe of observable modules to those in the transitive closure of the named modules"* | Makes an accidental extra dependency fail at link time |
 | `--launcher` | *"Specifies the launcher command name for the module or the command name for the module and main class"* | Only meaningful for a modular application |
 
@@ -145,7 +145,7 @@ image, on the JDK the man page's examples were written against. They are quoted 
 *shape* of the result (stripping and compression are worth a meaningful fraction, not an order of
 magnitude) and **not** as a prediction about your image. JEP 386's independent figure for a
 `java.base`-only runtime with the server VM is *"38 MB"*. Your own numbers come from measuring your
-own build, which is **`09-image-size-and-startup.md`** *(not written yet)*.
+own build, which is [09](09-image-size-and-startup.md).
 
 ## The bill, in one sentence
 

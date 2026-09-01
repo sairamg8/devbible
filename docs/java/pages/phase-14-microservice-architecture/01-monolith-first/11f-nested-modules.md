@@ -136,9 +136,9 @@ verification failure.
 
 The actuator's `modulith` resource carries the hierarchy explicitly:
 
-> *"$.{moduleName}.parent | (optional) The name of the parent module."*
+> *"$.\{moduleName\}.parent | (optional) The name of the parent module."*
 >
-> *"$.{moduleName}.nested | The names of nested modules, if any."*
+> *"$.\{moduleName\}.nested | The names of nested modules, if any."*
 
 So the nesting is visible at runtime as well as at verification time, which makes it
 reviewable — [51 · Actuator and observability](15b-actuator-and-observability.md).

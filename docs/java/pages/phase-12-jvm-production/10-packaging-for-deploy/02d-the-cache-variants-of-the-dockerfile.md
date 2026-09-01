@@ -19,7 +19,7 @@ sidebar_position: 8
 
 **[02c](02c-a-real-layered-dockerfile.md) is the plain layered Dockerfile. This page adds a startup
 cache to it, which the documentation does with exactly two extra instructions. The interesting part
-is not the flags — [05](05-class-data-sharing.md) and `05d-the-aot-cache.md` *(not written yet)* own
+is not the flags — [05](05-class-data-sharing.md) and [05d](05d-the-aot-cache.md) own
 those — but that both instructions have a forced position, and putting either in the wrong place
 produces an image that builds, runs, and delivers nothing.**
 
@@ -60,10 +60,10 @@ serving traffic. Without it the `RUN` would never finish.
 🔴 **The training run adds a fifth image layer, and it is invalidated by the `application` layer** —
 so it is rebuilt on every commit. That is correct and intended: a cache trained against different
 application classes would be stale. *(What "stale" costs, and when the cache does not help at all,
-is `05c-when-aot-helps-and-when-it-does-not.md`* **not written yet**.*)*
+is [05f](05f-when-the-cache-helps.md).)
 
 **The flags themselves belong to later chunks** — `05-class-data-sharing.md` and
-`05d-the-aot-cache.md` *(not written yet)*. What this page claims is only that the Dockerfile
+[05d](05d-the-aot-cache.md). What this page claims is only that the Dockerfile
 shape is unchanged: extract, copy in order, train, run with the cache.
 
 ## Which one, and the version gate
@@ -117,7 +117,7 @@ probably has no such service.
 🔴 **That is the practical failure mode of adding a cache to a working Dockerfile:** the build starts
 failing in a stage that previously did nothing but copy files, with a stack trace from your own
 application. The fix belongs to configuration — a build-time profile — which is
-`08-configuration-at-deploy-time.md`'s subject *(not written yet)*.
+[08](08-configuration-at-deploy-time.md)'s subject.
 
 ## Gotchas
 

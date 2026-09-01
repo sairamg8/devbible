@@ -46,7 +46,7 @@ it and, importantly, lists everything else the profile turns on:
 
 🔴 **Read the second bullet.** `-Pnative` does not only enable AOT processing — it also reconfigures
 `build-image` to produce a **native image**. If your pipeline runs `spring-boot:build-image`
-(**`07-buildpacks.md`** *(not written yet)*), adding `-Pnative` for the JVM benefit silently changes
+([07](07-buildpacks.md)), adding `-Pnative` for the JVM benefit silently changes
 what that goal builds. Configure the `process-aot` execution directly if you want AOT processing
 without the rest of the profile.
 
