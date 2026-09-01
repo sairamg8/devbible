@@ -45,6 +45,7 @@ Filters are pitest **features** — named strings you switch with `+name` and `-
 | `FRETEQUIV` | on | *"Filters return vals mutants with bytecode equivalent to the unmutated class"* |
 | `FSEQUIVDIV` | on | *"Filters equivalent mutations of the form x * -1 -> x / -1"* |
 | `FSEQUIVEQUALS` | on | *"Filters equivalent mutations that affect only performance in short cutting equals methods"* |
+| `NULLFINALS` | on | *"Filters equivalent mutations to null final field assignments"* |
 | `FINFINC` | on | *"Filters mutations to increments that may cause infinite loops"* |
 | `FFLOOP` | on | Filters mutations to `for`-loop counters that would loop forever |
 | `FINFIT` | on | Filters mutations that would produce an infinite iterator loop |
@@ -56,7 +57,14 @@ Filters are pitest **features** — named strings you switch with `+name` and `-
 | `CLASSLIMIT` | **off** | Caps mutants per class — `+CLASSLIMIT(limit[42])` |
 | `EXPORT` | **off** | Writes the mutated class files into the report directory |
 
-Note the shape of the list: the three `FSEQUIV*`/`FRETEQUIV` entries and the three timeout
+⚠️ **`NULLFINALS` is the fourth equivalence filter and it is easy to miss** — it lives in
+`build/intercept/equivalent` alongside the other three, registered as
+`Feature.named("NULLFINALS").withOnByDefault(true)`. `NullFinalFieldAssignmentFilter` matches, 
+**inside `<init>`/`<clinit>` only**, an `ACONST_NULL` followed by a `PUTFIELD`/`PUTSTATIC` on a
+`final` field: assigning `null` to a final field that the JVM has already zeroed is a mutation
+with no observable effect, so it is filtered rather than reported as a survivor you cannot kill.
+
+Note the shape of the list: the four equivalence entries and the three timeout
 entries (`FINFINC`, `FFLOOP`, `FINFIT`) exist to remove mutants that are *unkillable* or
 *expensive*, not merely noisy — they are the reason a default pitest run does not report a wall of
 timeouts and permanent survivors.
@@ -159,8 +167,8 @@ toolchains, which is itself a signal about how rough they are.
   choose to reverse. These filters are the ones it can.
 - **[02b2 · Logging and `avoidCallsTo`](02b2-logging-and-avoidcallsto.md)** — the one filter with a
   configurable package list, and the reason its default list is not enough on a Log4j 2 codebase.
-- **[04b · Equivalent mutants](04b-equivalent-mutants.md)** — `FRETEQUIV`, `FSEQUIVDIV` and
-  `FSEQUIVEQUALS` are the automated part of a problem that has no complete automated solution.
+- **[04b · Equivalent mutants](04b-equivalent-mutants.md)** — `FRETEQUIV`, `FSEQUIVDIV`,
+  `FSEQUIVEQUALS` and `NULLFINALS` are the automated part of a problem that has no complete automated solution.
 - **[03d · Optional mutators](03d-optional-mutators.md)** — the mirror image: operators that are
   *off* by default because they generate too many equivalent or unstable mutants.
 - **[08 · Test data patterns](../08-test-data-patterns/02c-where-builders-live-and-lombok.md)**
