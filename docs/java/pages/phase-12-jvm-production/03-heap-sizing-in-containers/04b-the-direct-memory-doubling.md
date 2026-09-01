@@ -147,8 +147,9 @@ are [07c · Mapped buffers](../01-memory-layout/07c-mapped-buffers.md) and
 
 Setting `MaxDirectMemorySize` explicitly in a container is close to unconditionally correct. It
 costs nothing when unused, it breaks the coupling between the heap ceiling and the native ceiling,
-and it converts an unattributable OOMKill into `OutOfMemoryError: Cannot reserve N bytes of direct
-buffer memory`, whose message includes the allocated total and the limit.
+and it converts an unattributable OOMKill into
+`OutOfMemoryError: Cannot reserve N bytes of direct buffer memory`,
+whose message includes the allocated total and the limit.
 
 Monitor it with `BufferPoolMXBean`, surfaced by Micrometer as `jvm.buffer.memory.used`,
 `jvm.buffer.count` and `jvm.buffer.total.capacity`, tagged by the pool names above —
@@ -162,8 +163,9 @@ Every heap-size change is silently a direct-memory-ceiling change of equal size.
 that treats the native side as a constant is wrong the moment somebody edits `MaxRAMPercentage`.
 
 **★ `OutOfMemoryError: Direct buffer memory` is not the message.**
-The real string from `Bits` is `Cannot reserve N bytes of direct buffer memory (allocated: …,
-limit: …)`. Alerting on the folklore string matches nothing. Note also that this message is
+The real string from `Bits` is
+`Cannot reserve N bytes of direct buffer memory (allocated: …, limit: …)`.
+Alerting on the folklore string matches nothing. Note also that this message is
 **not** one of the seven the Troubleshooting Guide enumerates —
 [01b](../01-memory-layout/01b-oom-error-versus-oomkilled.md).
 

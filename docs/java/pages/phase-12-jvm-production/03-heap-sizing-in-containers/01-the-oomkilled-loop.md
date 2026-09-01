@@ -135,8 +135,8 @@ separates the two.
 
 **★ The container that died may not be the container you care about.**
 A multi-container pod has per-container limits. A log sidecar or a service-mesh proxy that gets
-killed shows up as a pod-level disturbance while the JVM was entirely innocent. Read `Last
-State` per container, not per pod, before touching a single JVM flag.
+killed shows up as a pod-level disturbance while the JVM was entirely innocent. Read the
+`Last State` field per container, not per pod, before touching a single JVM flag.
 
 **★ `container_memory_working_set_bytes` is not the JVM's RSS.**
 It is the cgroup's charge minus inactive file cache, which means it includes page cache

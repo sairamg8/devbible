@@ -203,10 +203,11 @@ limit change.
 **★ A flag is being applied that appears nowhere in your Helm chart or Dockerfile. How do you find
 it?**
 `jcmd <pid> VM.command_line` shows what the launcher was actually given, including everything
-prepended from `JDK_JAVA_OPTIONS`, `JAVA_TOOL_OPTIONS` and `_JAVA_OPTIONS`; `jcmd <pid> VM.flags
--all` shows the resolved values with their provenance. Working backwards, the usual sources are a
-base image's `ENV JAVA_TOOL_OPTIONS`, a buildpack launcher, an APM or profiler agent's
-installation script, and the undocumented `_JAVA_OPTIONS` set somewhere in the platform.
+prepended from `JDK_JAVA_OPTIONS`, `JAVA_TOOL_OPTIONS` and `_JAVA_OPTIONS`;
+`jcmd <pid> VM.flags -all` shows the resolved values with their provenance. Working backwards,
+the usual sources are a base image's `ENV JAVA_TOOL_OPTIONS`, a buildpack launcher, an APM or
+profiler agent's installation script, and the undocumented `_JAVA_OPTIONS` set somewhere in the
+platform.
 
 **★ What is the precedence between `JAVA_TOOL_OPTIONS`, `JDK_JAVA_OPTIONS` and the command line?**
 Both environment variables *prepend* their contents — `JDK_JAVA_OPTIONS` at the launcher level and

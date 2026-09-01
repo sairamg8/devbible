@@ -208,8 +208,8 @@ memory for a Netty application, 250 threads for a virtual-thread service, a buil
 for an application that generates classes at runtime. The right posture is to use it and then set
 the two or three terms you actually know something about.
 
-**★ A WebFlux service works fine as a plain jar and throws `Cannot reserve … bytes of direct buffer
-memory` as a buildpack image. Explain.**
+**★ A WebFlux service works as a plain jar and throws
+`Cannot reserve … bytes of direct buffer memory` as a buildpack image. Explain.**
 The buildpack sets `-XX:MaxDirectMemorySize=10M` explicitly, because `libjvm`'s
 `DefaultDirectMemory` is 10 MiB. As a plain jar there was no such flag, so the JVM's own default
 applied — which is `Runtime.getRuntime().maxMemory()`, that is, the whole heap ceiling. Netty
