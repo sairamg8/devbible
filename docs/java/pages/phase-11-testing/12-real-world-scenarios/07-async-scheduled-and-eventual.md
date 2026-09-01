@@ -237,7 +237,7 @@ the **cause**, so the assertion is `.withCauseInstanceOf(MailUnavailable.class)`
 - Waiting for the eventual result without a `sleep`, and the executor swap that removes the
   wait entirely: [07a · Waiting without sleeping](07a-waiting-without-sleeping.md).
 - `@Scheduled`, application events and retry policies — the other three things on this
-  chunk's title: [07b · Scheduled jobs, events and retries](07b-scheduled-jobs-events-and-retries.md).
+  chunk's title: [07b · Testing a scheduled job](07b-testing-a-scheduled-job.md).
 - An outbound HTTP call made from an `@Async` method, and why `MockRestServiceServer` is the
   wrong tool for it: [03a](03a-what-the-mock-server-does-not-run.md).
 - The everyday collaborator-mocking pattern question 1 reuses:

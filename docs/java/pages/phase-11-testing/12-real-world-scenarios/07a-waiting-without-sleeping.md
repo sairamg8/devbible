@@ -193,7 +193,7 @@ signature. Polling is what you use when the work genuinely leaves your process.
 - The three questions this chunk's waiting serves, and why two of them need no waiting:
   [07 · Async, scheduled and eventual](07-async-scheduled-and-eventual.md).
 - Driving a scheduled job and an event listener without waiting for either:
-  [07b · Scheduled jobs, events and retries](07b-scheduled-jobs-events-and-retries.md).
+  [07b · Testing a scheduled job](07b-testing-a-scheduled-job.md).
 - Why a Java `Clock` cannot substitute for `jest.advanceTimersByTime`:
   [01c · Where the analogy breaks](01c-where-the-analogy-breaks.md).
 - The eventual assertion at its most necessary — a broker delivering a message to a
