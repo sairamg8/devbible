@@ -69,10 +69,12 @@ jdeps \
   --ignore-missing-deps \
   --multi-release 25 \
   --print-module-deps \
-  --recursive \
   extracted/my-app.jar extracted/lib/*.jar
 ```
 
+- Transitive analysis is already on: `--list-deps`, which `--print-module-deps` builds on,
+  *"transitively analyzes libraries on class path and module path if referenced"*, and
+  `--no-recursive` is what turns it off. `-R`/`--recursive` exists but is not needed here.
 - `--multi-release 25` is not optional in practice: a great many modern libraries ship as
   multi-release jars, and `jdeps` needs to be told which release to analyse.
 - `--ignore-missing-deps` is what stops the run aborting on the first optional dependency your
