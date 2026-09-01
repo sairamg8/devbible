@@ -39,12 +39,12 @@ overview:
 **Fails "stable"** means its mutants get killed by tests that check nothing — a
 `NullPointerException` from the JVM is a test failure, and pitest cannot tell it from an assertion.
 Enabling such an operator raises the score without measuring anything. `CONSTRUCTOR_CALLS` is the
-textbook case ([03d2d](03d2d-the-call-neutralising-operators.md)).
+textbook case ([03d2e](03d2e-the-call-neutralising-operators.md)).
 
 **Fails "few equivalents"** means it produces mutants that cannot be killed at all, which sit in the
 report forever and are also the expensive case, because a survivor runs every covering test to
 completion ([02](02-how-it-works.md)). `INLINE_CONSTS` is the noisiest example
-([03d2c](03d2c-inline-consts-and-remove-increments.md)).
+([03d2c](03d2c-inline-constants.md)).
 
 Read each operator's warning and put it in one of those two buckets. That is the whole decision for
 four of the five optional operators. `REMOVE_CONDITIONALS` is the exception, and pitest gives it a
@@ -172,10 +172,13 @@ something, which freezes your operator set at the moment you wrote it:
   divergence, and the minus-prefix syntax.
 - **[03d2b · Reading a remove-conditionals pair](03d2b-reading-a-remove-conditionals-pair.md)** — what a
   survivor of each specialisation means, why the operator is off, and how to scope it.
-- **[03d2c · `INLINE_CONSTS` and `REMOVE_INCREMENTS`](03d2c-inline-consts-and-remove-increments.md)** —
-  the two optional operators that corrupt a value.
-- **[03d2d · The call-neutralising operators](03d2d-the-call-neutralising-operators.md)** —
-  `CONSTRUCTOR_CALLS` and `NON_VOID_METHOD_CALLS`, plus the honest ranking across all five.
+- **[03d2c · Inline constants](03d2c-inline-constants.md)** and
+  **[03d2d · `REMOVE_INCREMENTS`](03d2d-remove-increments.md)** — the two optional operators that corrupt
+  a value rather than a decision.
+- **[03d2e · The call-neutralising operators](03d2e-the-call-neutralising-operators.md)** —
+  `CONSTRUCTOR_CALLS` and `NON_VOID_METHOD_CALLS`, the two that delete an action.
+- **[03d2f · Adopting an optional operator](03d2f-adopting-an-optional-operator.md)** — the scope, the
+  paired filter, the second execution, and the honest ranking across all five.
 - **[03d3 · The research operators](03d3-the-research-operators.md)** — ABS, AOR, AOD, CRCR, OBBN, ROR
   and UOI, which are most of what remains in `ALL`.
 - **[03 · Mutators](03-mutators.md)** — `CONDITIONALS_BOUNDARY` and `NEGATE_CONDITIONALS`, the two

@@ -242,8 +242,10 @@ else entirely — which is the signature of a class covered only by an integrati
 **★ What does a `REMOVE_CONDITIONALS` survivor tell you that a `NEGATE_CONDITIONALS` survivor does not?**
 Which side. `NEGATE_CONDITIONALS` inverts the comparison, so both branches swap at once and a survivor
 says only that the decision's outcome is unobserved. The remove-conditionals specialisations force one
-branch each, so the pair of results localises the gap: `_ELSE` surviving while `_IF` dies means the
-false case is untested, which on a rule with a happy-path-only suite is exactly the missing test.
+branch each, so the pair of results localises the gap: `_IF` surviving while `_ELSE` dies means the
+false case is untested — the mutant that makes the guarded statements always execute can only be caught
+by an input for which the guard is false — which on a rule with a happy-path-only suite is exactly the
+missing test.
 Branch coverage cannot express this at all — it reports both branches taken as soon as any caller
 exercises them, and has no field for whether either result was checked.
 

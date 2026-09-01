@@ -173,8 +173,12 @@ twice, or listing it inside two groups, is harmless.
 
 - **[03 · Mutators](03-mutators.md)** — the default set and the design criterion.
 - **[03d2 · The optional operator inventory](03d2-the-optional-operator-inventory.md)** —
-  `REMOVE_CONDITIONALS`, `INLINE_CONSTS`, `CONSTRUCTOR_CALLS`, `NON_VOID_METHOD_CALLS` and the
-  experimental operators, with the honest advice on each.
+  `REMOVE_CONDITIONALS` and the rule for reading any optional operator's warning, continuing through
+  [03d2b](03d2b-reading-a-remove-conditionals-pair.md) (reading the pair),
+  [03d2c](03d2c-inline-constants.md) (`INLINE_CONSTS`), [03d2d](03d2d-remove-increments.md)
+  (`REMOVE_INCREMENTS`) and [03d2e](03d2e-the-call-neutralising-operators.md)
+  (`CONSTRUCTOR_CALLS`, `NON_VOID_METHOD_CALLS`), with
+  [03d2f](03d2f-adopting-an-optional-operator.md) on how to put one into a build.
 - **[03d3 · The research operators](03d3-the-research-operators.md)** — AOR, AOD, ABS, CRCR, OBBN,
   ROR and UOI, which is most of what `ALL` adds.
 - **[03b2 · `VOID_METHOD_CALLS`](03b2-void-method-calls.md)** — the case for and against
