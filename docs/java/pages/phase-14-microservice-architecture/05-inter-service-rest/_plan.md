@@ -36,7 +36,9 @@ the library. 🔴 **Phase 9 owns building a REST API**; 05 owns *consuming anoth
   from Jackson 2. Verify against the Boot 4.1 reference before showing any annotation.
 - ⚠️ Verify `RestClient` API surface against the **Framework 7.0.x** reference, and how
   timeouts are actually configured on it (request factory settings) — do not carry over a
-  `RestTemplate` recipe. 🔴 Netflix 5.0 **removed** `RestTemplate` support.
+  `RestTemplate` recipe. ⚠️ Netflix 5.0's `RestTemplate` removal is about the **Eureka transport**
+  only — `@LoadBalanced RestTemplate` still works via Commons 5.0.x. Prefer `RestClient` on the
+  merits, do not claim the old one was removed.
 - ⚠️ Verify OpenFeign **5.0** on the Oakwood train — what changed, and whether the old
   `@EnableFeignClients` shape still holds.
 - ⚠️ Confirm the current RFC number for problem details (9457, which obsoleted 7807) and cite

@@ -51,10 +51,22 @@ wonder why their tutorial differs.
    generated-test story changed — verify what Contract 5.0 generates now before describing
    it, and do not reproduce the classic `RestAssuredMockMvc` generated test from the docs of
    an older train.
-5. 🔴 **`RestTemplate` support was removed from Spring Cloud Netflix 5.0.** The
-   `@LoadBalanced RestTemplate` idiom that every discovery tutorial opens with is gone on
-   this train. Topic 08 must show the current client (`RestClient` / `WebClient` with load
-   balancing) and **say that the old idiom was removed**, not omit it.
+5. ⚠️🔴 **`RestTemplate` support was removed from Spring Cloud Netflix 5.0 — but read what that
+   actually means.** *This note was corrected 2026-09-01 after the first draft overstated it;
+   the correction is itself the lesson.* The removal is about **the Eureka client's own HTTP
+   transport** — how your app talks to the *Eureka server*. `RestTemplateTransportClientFactory`
+   was deprecated for removal in favour of a `RestClient`-based implementation; the Eureka
+   client now uses **`RestClient`, `WebClient` or Jersey** under the hood (add
+   `spring-boot-restclient`; if `spring-boot-webclient` is also present and
+   `eureka.client.webclient.enabled=true`, WebClient wins, otherwise RestClient).
+   🔴 **It does NOT mean `@LoadBalanced RestTemplate` is gone.** Spring Cloud LoadBalancer
+   (Commons **5.0.x**) still lists **`RestTemplate`, `RestClient`, `WebClient` and HTTP Service
+   Clients** as load-balanced clients — `BlockingLoadBalancerClient` serves RestTemplate and
+   RestClient, `ReactorLoadBalancerExchangeFilterFunction` serves WebClient, and **new in
+   5.0.0** are `LoadBalancerRestClientHttpServiceGroupConfigurer` /
+   `LoadBalancerWebClientHttpServiceGroupConfigurer` for HTTP Service Clients (used when the
+   group `baseUrl` is null or its scheme is `lb`). Prefer `RestClient` for new code and say
+   why — but **do not tell the reader their `@LoadBalanced RestTemplate` stopped working.**
 6. 🔴 **gRPC is in Spring Boot itself now** — Boot 4.1 has a `gRPC` reference section, with
    **Spring gRPC 1.0.3** as the project. Topic 06 must be written against *that*, not against
    any of the three community `grpc-spring-boot-starter` forks
