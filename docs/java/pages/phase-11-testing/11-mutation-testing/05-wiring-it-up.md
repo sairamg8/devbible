@@ -198,6 +198,37 @@ JUnit 6 publishes all the Platform artifacts on one version line. It is also why
 launcher version is usually unnecessary and occasionally harmful: if you declare one, the auto-add step
 returns early and yours is used.
 
+**★ The engine, the Maven plugin and the JUnit 5 plugin do not share a version number.**
+`pitest`, `pitest-maven` and `pitest-command-line` move together — 1.30.0 — and
+`pitest-junit5-plugin` is on its own line at 1.2.3. Writing `1.30.0` for the test plugin resolves
+nothing, and writing `1.2.3` for the Maven plugin resolves an ancient release. Two artifacts, two
+version lines, one `<plugin>` element.
+
+**★ `mutationCoverage` is not bound to any lifecycle phase, so `mvn verify` never runs it.**
+Adding the plugin to `<build><plugins>` makes the goal *available*; nothing invokes it. That is the right
+default for a run that can take a long time, and it means CI needs an explicit `<execution>` — usually
+inside a profile, so the analysis configuration stays out of the developer build.
+
+**★ `test-compile` in front of the goal is load-bearing.**
+Pitest mutates compiled classes and finds tests from compiled test classes. Invoking
+`org.pitest:pitest-maven:mutationCoverage` on its own in a clean checkout produces the FAQ's
+*"PIT found no classes to mutate / no tests to run"* symptom, whose three documented causes are an
+incorrect classpath, incorrect filters and an incorrect mutable code path — the first of which is
+"nothing has been compiled".
+
+**★ Omitting `targetClasses` means pitest scans, but only since 1.2.0.**
+*"Before 1.2.0 pitest assumed that all code lives in a package matching the maven group id. In 1.2.0 and
+later versions, the classes to mutate are determined by scanning the maven output directory."* An
+inherited configuration copied from an old project may be compensating for behaviour that no longer
+exists, and the compensation is usually a glob that now excludes half the code.
+
+**★ The mojo adds Kotlin source roots whether or not you have any.**
+`pit.additionalSources` defaults to `src/main/kotlin` and `pit.additionalTestSources` to
+`src/test/kotlin`, because pitest's goal is often invoked directly and the Kotlin plugin's source-root
+configuration is not visible to it. Harmless on a pure Java project; worth knowing before you conclude
+pitest is doing something inexplicable on a mixed one — and remember that the FAQ says Kotlin results
+*"are not generally useful"* without the commercial plugin ([02b3](02b3-the-filter-inventory.md)).
+
 ## Interview questions
 
 **★ Walk me through adding PIT to a Spring Boot 4.1 Maven build.**
@@ -222,5 +253,26 @@ resolves `junit-platform-launcher` at that same version. JUnit 6 publishes all o
 line, so on Boot 4.1 it resolves 6.0.3. What none of that proves is behaviour, and there is an open,
 unreproduced issue claiming zero coverage on Boot 4 — so `dryRun` first, and treat "no tests found" as a
 wiring symptom.
+
+**★ How does a mutation run get into CI if the goal is not bound to a phase?**
+With an explicit `<execution>`, and I would put it in a profile rather than the default build. Adding the
+plugin makes `mutationCoverage` available; nothing invokes it, so `mvn verify` runs the tests and not
+pitest. That default is correct for a run whose cost is proportional to survivors times covering-test
+runtime, and it means the decision "when does this run" is made deliberately: a nightly job, or a profile
+activated in one CI stage, rather than on every developer build. Putting it in a profile has a second
+benefit — the analysis configuration, which is where the operator set, the scope and any thresholds live,
+stays textually separate from the build everyone runs locally, so nobody changes the denominator by
+accident.
+
+**★ Your multi-module build has the tests for `common` living in module `a`. What does pitest do?**
+By default, nothing useful: *"pitest assumes that the unit tests for your code live in the same maven
+module as the code."* Since 1.17.1 there is limited support via the `crossModule` property — if it is set
+for a module, pitest mutates that module's code *and* the code of any modules from the same project that
+it depends on. The trap is duplication: with three modules where `a` and `b` both depend on `common`, and
+`crossModule` set on both, a class in `common` produces three results, one per report. The documentation
+is blunt about the consequence — *"If report aggregation is used without ensuring that each class is
+reported only once, the results are undefined."* So the rule is to set `crossModule` only on the module
+that actually owns the tests, or to make `targetClasses` per module guarantee each class is mutated
+exactly once.
 
 {/* FOOTER */}
