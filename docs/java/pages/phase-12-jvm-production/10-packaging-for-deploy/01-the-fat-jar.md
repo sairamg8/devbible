@@ -90,7 +90,7 @@ superseded; a Dockerfile still using it is written against an older Boot.
 1. **Faster startup**, by removing the nested-jar reading cost.
 2. 🔴 **It is the prerequisite for the AOT cache and CDS.** The documentation says the default
    layout is *"AOT cache and CDS friendly"*, and — decisively —
-   [05b](05b-the-aot-cache.md) records that a cache *"has to be used with the extracted form of the
+   [05d](05d-the-aot-cache.md) records that a cache *"has to be used with the extracted form of the
    application, otherwise it has no effect"*. **The single-file jar silently gets no benefit.**
 
 ⚠️ **Runtime performance is unaffected.** The documentation: *"After startup, you should not expect

@@ -120,7 +120,7 @@ The JDK is unusually candid about what those two words mean:
 
 🔴 **Note where that sentence points: the AOT cache.** The JDK's own tool reference treats CDS as
 the older, less capable mechanism and directs you at
-[05c](05c-the-aot-cache.md). Spring Boot says the same thing in the opposite
+[05d](05d-the-aot-cache.md). Spring Boot says the same thing in the opposite
 direction: *"CDS is the predecessor of AOT cache, but works similarly"* and *"we recommend using
 the AOT cache whenever possible."*
 
@@ -194,7 +194,7 @@ says to *"consider using the AOT cache"* for the full set of optimizations, and 
 recommends *"using the AOT cache whenever possible"*. CDS on JDK 25 is a compatibility choice.
 
 **★ Neither CDS nor the AOT cache does anything for peak throughput.** They change how classes get
-loaded. The JIT still has to warm up, which is [05d](05d-when-the-cache-helps.md) and topic 14's
+loaded. The JIT still has to warm up, which is [05e](05e-when-the-cache-helps.md) and topic 14's
 benchmarking problem.
 
 ## Interview questions
@@ -241,7 +241,7 @@ likely reasons?**
 Three, in order of frequency. The baseline already used the default archive, so you measured the
 delta on top of 1300 already-optimised classes. The archive may not be in use at all — for a Spring
 Boot application it has to be used with the *extracted* form, and a mismatch is a silent no-op
-([05c](05c-the-aot-cache.md)). And class loading may simply not be your dominant start-up cost;
+([05d](05d-the-aot-cache.md)). And class loading may simply not be your dominant start-up cost;
 connection pools, schema validation and remote configuration fetches are unaffected by any archive.
 
 {/* FOOTER */}

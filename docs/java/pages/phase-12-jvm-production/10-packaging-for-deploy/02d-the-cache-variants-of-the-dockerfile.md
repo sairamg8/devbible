@@ -19,7 +19,7 @@ sidebar_position: 8
 
 **[02c](02c-a-real-layered-dockerfile.md) is the plain layered Dockerfile. This page adds a startup
 cache to it, which the documentation does with exactly two extra instructions. The interesting part
-is not the flags — `05-class-data-sharing.md` and `05b-the-aot-cache.md` *(neither written yet)* own
+is not the flags — [05](05-class-data-sharing.md) and `05d-the-aot-cache.md` *(not written yet)* own
 those — but that both instructions have a forced position, and putting either in the wrong place
 produces an image that builds, runs, and delivers nothing.**
 
@@ -63,7 +63,7 @@ application classes would be stale. *(What "stale" costs, and when the cache doe
 is `05c-when-aot-helps-and-when-it-does-not.md`* **not written yet**.*)*
 
 **The flags themselves belong to later chunks** — `05-class-data-sharing.md` and
-`05b-the-aot-cache.md` *(neither written yet)*. What this page claims is only that the Dockerfile
+`05d-the-aot-cache.md` *(not written yet)*. What this page claims is only that the Dockerfile
 shape is unchanged: extract, copy in order, train, run with the cache.
 
 ## Which one, and the version gate
