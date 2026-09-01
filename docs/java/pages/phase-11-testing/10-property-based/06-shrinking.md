@@ -229,7 +229,7 @@ The guide's own example is the fix: signals with a standard frequency of 50 hz v
 should shrink toward 50, not toward 45. Without `shrinkTowards(50)` every report reads as a
 boundary bug at the bottom of the range. The setting exists precisely because *"the default value
 of a number is not 0"* in most domains. It is covered in full in
-[06b](06b-controlling-the-shrinker.md), and it belongs on almost every constrained numeric
+[06c](06c-controlling-the-shrinker.md), and it belongs on almost every constrained numeric
 arbitrary you write.
 
 **★ Data-driven properties do not shrink at all, and the guide gives the reason rather than treating it as a limitation.**
