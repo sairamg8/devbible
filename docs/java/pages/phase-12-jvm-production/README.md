@@ -14,9 +14,9 @@ The payoff of Phase 0's mental model: memory, GC, and the observability tools
 that come *with* the JVM. This is the phase that turns "the service is slow"
 from a mystery into a flame graph.
 
-🚧 **8 of 15 topics closed.** Topics 01–07 and 14 are complete — 189 chunks and seven indexes for
-01–07, plus 19 chunks and an index for 14 — and are linked below. The remaining seven are in
-progress or planned.
+🚧 **9 of 15 topics closed.** Topics 01–07, 14 and 15 are complete — 189 chunks and seven indexes for
+01–07, plus 19 chunks for 14 and 13 for 15, each with an index — and are linked below. The
+remaining six are in progress or planned.
 
 **All 15 topics are planned**: `_PHASE-NOTES.md` (binding: JDK 25 version spine, topic
 boundaries, the phase's hard rules) and a `_plan.md` for every topic are written, so any
@@ -39,7 +39,7 @@ but no index yet, and is deliberately not linked until it has one.
 | 12 | **Graceful shutdown** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | SIGTERM → drain → close pools; readiness interplay |
 | 13 | **JVM flags that matter in 2026** *(not written yet)* | <span className="db-tier t-know">Know</span> | And the ones ergonomics retired |
 | 14 | **[Benchmarking with JMH](14-benchmarking-with-jmh/README.md)** | <span className="db-tier t-know">Know</span> | Why `nanoTime` around a loop measures the JIT, not your code |
-| 15 | **Checkpoint/restore (CRaC)** *(not written yet)* | <span className="db-tier t-when">When Needed</span> | Startup in milliseconds by restoring a snapshot |
+| 15 | **[Checkpoint/restore (CRaC)](15-checkpoint-restore-crac/README.md)** | <span className="db-tier t-when">When Needed</span> | Startup in milliseconds by restoring a snapshot |
 
 ## Phase gate
 

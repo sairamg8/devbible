@@ -160,7 +160,7 @@ Because JMH removes the mechanical errors and cannot remove the interpretive one
 has no way to tell you that the code is off the critical path, that the input is unrealistic,
 or that a significant difference is too small to matter.
 
-That is the end of topic 14. The next topic in the phase is **Checkpoint/restore with CRaC**
-*(not written yet)*.
+That is the end of topic 14. The next topic in the phase is
+[Checkpoint/restore with CRaC](../15-checkpoint-restore-crac/README.md).
 
 {/* FOOTER */}
