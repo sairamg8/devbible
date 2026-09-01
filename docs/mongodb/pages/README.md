@@ -12,19 +12,14 @@ Every worktree and branch in this repo was **merged into `main` and deleted** on
 explicit paths (never `git add -A`) since everyone shares the checkout again.
 :::
 
-:::caution 🟠 Claim stale — session `6f020813`, 2026-08-14
+:::caution 🚧 Phase 6 in progress — session `fa340bd8`, 2026-09-01
 
-All of `docs/mongodb/` is claimed by session `05921047`, which picked it up on
-2026-08-14 after finishing React Phase 14. Work happens in the worktree
-**`devbible-mongodb`, branch `mongodb-pages`** — not on `main` — so other live
-sessions' builds are unaffected until it merges.
+**State: phases 0–5 COMPLETE, phase 6 at 5 of 6 — 39 of 82 topics.**
+All of it is on `main`; the worktree named in older notes is long deleted.
 
-**State: Phases 0–5 COMPLETE — 34 of 82 topics.**
-Next: **Phase 6 · The aggregation pipeline (6 topics)**.
-
-The earlier claim by session `6f020813` was stale: that session finished Phase 0
-and stopped without writing this index; session `632ebd35` repaired two
-uncommitted pages without taking the claim.
+Next file: **`phase-6-aggregation/06-unwind.md`** — the only topic left in phase 6.
+Its Manual source is already fetched and recorded in the store, so it needs no
+re-fetch. Then phase 7 · Indexes and the query planner.
 
 :::
 
@@ -54,7 +49,7 @@ import Progress from '@site/src/components/Progress';
 | [3 · Schema design and modelling](./phase-3-schema-design/README.md) | 6 | ✅ written |
 | [4 · CRUD and DML](./phase-4-crud/README.md) | 6 | ✅ written |
 | [5 · Query operators and projection](./phase-5-query-operators/README.md) | 6 | ✅ written |
-| 6 · The aggregation pipeline | 6 | ⬜ planned |
+| [6 · The aggregation pipeline](./phase-6-aggregation/README.md) | 6 | 🚧 **5 of 6 written** — `$unwind` owed |
 | 7 · Indexes and the query planner | 6 | ⬜ planned |
 | 8 · The Node.js driver, end to end | 6 | ⬜ planned |
 | 9 · Mongoose | 6 | ⬜ planned |

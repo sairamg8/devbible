@@ -95,7 +95,7 @@ export const LANGUAGES = {
   },
   mongodb: {
     label: 'MongoDB',
-    updated: '2026-08-15 07:28',
+    updated: '2026-09-01 21:00',
     docsPath: '/docs/mongodb',
     pagesPath: '/docs/mongodb/pages',
     phases: [
@@ -105,7 +105,7 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-schema-design', name: 'Schema design and modelling', part: 'The document model', topics: 6, pages: 6},
       {n: 4, slug: 'phase-4-crud', name: 'CRUD and DML', part: 'Querying', topics: 6, pages: 6},
       {n: 5, slug: 'phase-5-query-operators', name: 'Query operators and projection', part: 'Querying', topics: 6, pages: 6},
-      {n: 6, slug: 'phase-6-aggregation', name: 'The aggregation pipeline', part: 'Querying', topics: 6, pages: 0},
+      {n: 6, slug: 'phase-6-aggregation', name: 'The aggregation pipeline', part: 'Querying', topics: 6, pages: 5},
       {n: 7, slug: 'phase-7-indexes', name: 'Indexes and the query planner', part: 'Querying', topics: 6, pages: 0},
       {n: 8, slug: 'phase-8-node-driver', name: 'The Node.js driver, end to end', part: 'From Node', topics: 6, pages: 0},
       {n: 9, slug: 'phase-9-mongoose', name: 'Mongoose', part: 'From Node', topics: 6, pages: 0},
