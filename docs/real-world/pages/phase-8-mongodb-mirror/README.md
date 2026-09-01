@@ -25,10 +25,10 @@ MongoDB phases 0–5, and
 |---|---|---|---|
 | 01 | **[Modeling the store as documents](01-modeling-the-store/README.md)** *(7 chunks)* | <span className="db-tier t-understand">Understand</span> | Eleven tables become eight collections — and the three that disappear are the whole argument |
 | 02 | **[The catalog on MongoDB](02-the-catalog/README.md)** *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | Same filters, same sorts, same opaque cursor — but keyset pagination has to be spelled out by hand |
-| 03 | ****Checkout with transactions** *(not written yet)*** *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | The stock decrement needs no transaction; the five-collection write does — and the callback may run twice |
-| 04 | ****The dashboard on the aggregation pipeline** *(not written yet)*** *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | `generate_series` becomes `$densify`, `filter` becomes `$cond`, window functions become `$setWindowFields` |
-| 05 | ****Indexes for this app's queries** *(not written yet)*** *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | Every index derived from a query, ESR instead of leftmost-prefix, and what `explain()` actually reports |
-| 06 | ****Change streams where `LISTEN`/`NOTIFY` was** *(not written yet)*** *(2 chunks)* | <span className="db-tier t-know">Know</span> | A resumable, majority-committed event feed — strictly more than `NOTIFY` gave, and therefore easier to misuse |
+| 03 | **Checkout with transactions** *(not written yet)* *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | The stock decrement needs no transaction; the five-collection write does — and the callback may run twice |
+| 04 | **The dashboard on the aggregation pipeline** *(not written yet)* *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | `generate_series` becomes `$densify`, `filter` becomes `$cond`, window functions become `$setWindowFields` |
+| 05 | **Indexes for this app's queries** *(not written yet)* *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | Every index derived from a query, ESR instead of leftmost-prefix, and what `explain()` actually reports |
+| 06 | **Change streams where `LISTEN`/`NOTIFY` was** *(not written yet)* *(2 chunks)* | <span className="db-tier t-know">Know</span> | A resumable, majority-committed event feed — strictly more than `NOTIFY` gave, and therefore easier to misuse |
 
 ## The gate
 
