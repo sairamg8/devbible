@@ -64,15 +64,35 @@ Cross-referencing that against the seven detail messages from
 | `Java heap space` | **yes** |
 | `GC Overhead limit exceeded` | yes — it is heap exhaustion |
 | `Requested array size exceeds VM limit` | no — a VM limit, not heap exhaustion |
-| `Metaspace` | **no** |
-| `Compressed class space` | **no** |
+| `Metaspace` | ⚠️ **the man page says no — the source says yes** (below) |
+| `Compressed class space` | ⚠️ **same discrepancy** |
 | `request size bytes for reason. Out of swap space?` | **no** |
 | `reason stack_trace (Native method)` | **no** |
-| `Direct buffer memory` | **no** |
+| direct buffer exhaustion | **no** — ⚠️ and the message is *not* the literal `Direct buffer memory`; see below |
 | `unable to create native thread` | **no** — named explicitly in the doc |
 
-Five of the eight ways a JVM can say "out of memory" produce no dump. And they are, without
-exception, the five that are hardest to diagnose without one.
+Most of the ways a JVM can say "out of memory" produce no dump — and they are, without
+exception, the ones that are hardest to diagnose without one.
+
+🔴 **Two corrections to the table above, both established from the JDK 25 source at `jdk-25+36`
+after this page was first written:**
+
+**1 · Metaspace OOMs *do* fire the hook, despite the man page.**
+`src/hotspot/share/memory/metaspace.cpp`'s `report_metadata_oome` calls
+`report_java_out_of_memory`, with the comment `// -XX:+HeapDumpOnOutOfMemoryError and
+-XX:OnOutOfMemoryError support`. So on JDK 25 both `Metaspace` and `Compressed class space` reach
+the same hook the heap messages do. ⚠️ **The man page's "Java Heap exhaustion" wording is
+narrower than the implementation.** Configure for the documented contract — a behaviour that
+contradicts the documentation can be changed without notice — but do not be surprised by a dump
+you were told you would not get.
+
+**2 · There is no message that literally reads `Direct buffer memory`.**
+`java.nio.Bits` throws
+`OutOfMemoryError("Cannot reserve " + size + " bytes of direct buffer memory (allocated: …, limit: …)")`.
+Anything grepping logs for the short string finds nothing — see
+[07 · Direct and mapped buffers](07-direct-and-mapped-buffers.md). The count of distinct
+out-of-memory messages is also larger than eight: the troubleshooting guide documents seven, and
+HotSpot has several more that are real but unlisted.
 
 ## `-XX:HeapDumpPath` and the second outage
 

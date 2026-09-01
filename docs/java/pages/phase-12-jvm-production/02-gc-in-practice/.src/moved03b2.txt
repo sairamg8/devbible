@@ -1,0 +1,68 @@
+## Reference processing, which is the phase people forget
+
+> *"Information about the time taken for processing of Reference Objects is shown in the
+> Reference Processing phase. During the Reference Processing phase, G1 updates the referents
+> of Reference Objects according to the requirements of the particular type of Reference
+> Object. By default, G1 tries to parallelize the sub-phases of Reference Processing using the
+> following heuristic: for every `-XX:ReferencesPerThread` reference Objects start a single
+> thread, bounded by the value in `-XX:ParallelGCThreads`. This heuristic can be disabled by
+> setting `-XX:ReferencesPerThread` to 0 to use all available threads by default, or
+> parallelization disabled completely by `-XX:-ParallelRefProcEnabled`."*
+
+Table 8-1 gives the defaults: `-XX:+ParallelRefProcEnabled` and
+`-XX:ReferencesPerThread=1000`, with *"A value of 0 indicates that the maximum number of
+threads as indicated by the value of `-XX:ParallelGCThreads` will always be used."*
+
+The reason this phase matters more than it should is that a lot of ordinary Java creates
+`Reference` objects without anyone thinking about it: `WeakHashMap`, `ThreadLocal` entries,
+`Cleaner`-based resource release (including every direct `ByteBuffer` — see
+[01 · Memory layout → 07b](../01-memory-layout/07b-cleaners-and-deterministic-release.md)),
+and every cache built on soft references. A service with millions of live weak references
+will spend real pause time here and no amount of young-generation tuning will touch it.
+
+Soft references have an additional lever most people have never seen, and its default is
+surprising:
+
+> *"`-XX:SoftRefLRUPolicyMSPerMB=time` — Sets the amount of time (in milliseconds) a softly
+> reachable object is kept active on the heap after the last time it was referenced. The
+> default value is one second of lifetime per free megabyte in the heap."*
+
+**Per free megabyte.** A soft-reference cache on a large, mostly-empty heap is effectively
+never cleared; the same cache on a nearly-full heap is cleared aggressively. That is a
+retention policy driven by a variable nobody in the application knows about, which is most of
+the argument against soft-reference caches.
+
+
+@@G@@
+**★ Reference Processing is a pause phase, and ordinary code fills it.**
+`WeakHashMap`, `ThreadLocal`, soft-reference caches and every direct `ByteBuffer`'s `Cleaner`
+create `Reference` objects. A large live population of them shows up as Post Evacuate time,
+not as Object Copy time, and it is completely invisible to young-generation tuning.
+
+**★ `-XX:ReferencesPerThread=0` means "use every thread", not "use none".**
+It reads like a disable switch. Table 8-1: *"A value of 0 indicates that the maximum number of
+threads as indicated by the value of `-XX:ParallelGCThreads` will always be used."* The flag
+that actually disables parallelism is `-XX:-ParallelRefProcEnabled`.
+
+**★ `SoftRefLRUPolicyMSPerMB` is per *free* megabyte, so soft caches shrink as the heap
+fills.**
+One second of extra lifetime per free megabyte means a soft-reference cache is nearly
+permanent on a roomy heap and nearly useless on a full one — the opposite of the behaviour
+most people assume, and a retention policy that changes as a side effect of a `-Xmx` change.
+
+
+@@Q@@
+**★ Your pause breakdown shows most of the time in Reference Processing. What is going on and
+what would you do?**
+The application has a large live population of `Reference` objects, and G1 must update every
+referent according to its reference type during the pause. The usual sources are not
+deliberate: `WeakHashMap`, `ThreadLocal` entries on pooled threads, soft-reference caches, and
+every direct `ByteBuffer`, each of which registers a `Cleaner`. The tuning levers are
+`-XX:ReferencesPerThread` (default 1000; one processing thread per that many references,
+bounded by `ParallelGCThreads`; set to 0 to always use the maximum) and
+`-XX:-ParallelRefProcEnabled` to turn parallelism off entirely. But the flags only change how
+fast you process them — the real fix is usually to reduce the population, and for
+soft-reference caches specifically to replace them with a bounded cache, because
+`SoftRefLRUPolicyMSPerMB` ties their lifetime to free heap in a way no application can reason
+about.
+

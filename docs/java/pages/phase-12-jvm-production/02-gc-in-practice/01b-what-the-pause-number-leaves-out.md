@@ -46,7 +46,7 @@ cores that the application would otherwise have had. The G1 chapter says so plai
 This is the fact that makes "just switch to ZGC" wrong in a container with a 1-CPU limit.
 There are no spare cores there; a concurrent collector's work lands on the same quota the
 request handlers are using, and the p99 you were trying to fix gets worse. The cost side of
-that trade is [04b · What ZGC costs](04b-zgc-costs.md); the sizing side is
+that trade is [04b · What ZGC costs](04c-zgc-costs.md); the sizing side is
 [03 · Heap sizing in containers](../03-heap-sizing-in-containers/README.md).
 
 ## How many threads is "concurrent", exactly
@@ -173,7 +173,7 @@ ZGC's documentation is more confident — *"ZGC performs all expensive work conc
 without stopping the execution of application threads for more than a millisecond"* — but it
 is a statement about *pauses*, and pauses are not the only way a collector adds latency. ZGC
 can stall an allocating thread when it cannot reclaim memory fast enough; that stall does
-not appear as a pause anywhere, and it is [04b](04b-zgc-costs.md).
+not appear as a pause anywhere, and it is [04b](04c-zgc-costs.md).
 
 ## The three stalls a healthy GC log cannot show you
 

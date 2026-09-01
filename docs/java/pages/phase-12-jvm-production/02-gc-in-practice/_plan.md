@@ -17,7 +17,7 @@ flag inventory**; **06 owns profilers**. This topic owns the **GC log** and the 
 | 3b | `03b-humongous-allocations.md` | The half-region rule, and the array that fragments a heap |
 | 3c | `03c-g1-when-it-goes-wrong.md` | To-space exhaustion, evacuation failure, full GC |
 | 4 | `04-zgc.md` | 🔴 Generational since 23, non-generational **removed in 24**. Coloured pointers, load barriers |
-| 4b | `04b-zgc-costs.md` | Footprint and CPU as the price of the pause; when it is the wrong choice |
+| 4b | `04c-zgc-costs.md` | Footprint and CPU as the price of the pause; when it is the wrong choice |
 | 5 | `05-parallel-and-serial.md` | Where throughput or a tiny container still wins |
 | 6 | `06-choosing.md` | A decision table driven by the latency target, not by fashion |
 | 7 | `07-unified-logging.md` | `-Xlog:gc*` — the JDK 9+ framework; `-XX:+PrintGCDetails` is gone |

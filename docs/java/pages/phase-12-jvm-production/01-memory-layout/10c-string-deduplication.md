@@ -81,7 +81,7 @@ appears on every row.
 
 The way to find out is to look rather than guess: a heap histogram that shows a very large
 number of `String`/`byte[]` instances relative to the number of *distinct* values you would
-expect is the signal. [Topic 04](../04-out-of-memory-error/_plan.md) owns heap dump analysis,
+expect is the signal. [Topic 04](../04-out-of-memory-error/README.md) owns heap dump analysis,
 and its dominator tree is where duplicate-heavy structures become obvious.
 
 ## Gotchas

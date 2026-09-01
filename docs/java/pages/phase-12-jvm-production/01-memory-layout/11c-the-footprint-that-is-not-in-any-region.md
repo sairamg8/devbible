@@ -196,7 +196,7 @@ returns to baseline. If it is retention, the levers are `MALLOC_ARENA_MAX` to bo
 arenas — accepting more allocator lock contention — or switching to jemalloc or tcmalloc, whose
 retention behaviour differs and which can also profile allocations by call stack.
 
-**★ Why can `OutOfMemoryError: Direct buffer memory` happen while the heap is almost empty?**
+**★ Why can an `OutOfMemoryError` reading `Cannot reserve N bytes of direct buffer memory` happen while the heap is almost empty?**
 Because a direct `ByteBuffer`'s native memory is reclaimed only when the Java `ByteBuffer` object
 becomes unreachable and its `Cleaner` runs — and collection is driven by *heap* pressure. A heap
 with plenty of free space has no reason to collect, so the small Java objects holding large

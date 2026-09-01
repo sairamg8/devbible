@@ -144,7 +144,7 @@ still, because it also gives you type safety and rejects unexpected values.
 
 ⚠️ **A canonicalising map is itself a leak if it is unbounded and the key space is not.**
 `computeIfAbsent` on a map keyed by user input, held for the life of the process, is precisely
-the unbounded-cache failure mode that [topic 04](../04-out-of-memory-error/_plan.md) covers.
+the unbounded-cache failure mode that [topic 04](../04-out-of-memory-error/README.md) covers.
 Scope it to the parse, or bound it, or use a proper cache with eviction.
 
 🔴 **The rule of thumb: if the set of distinct values is small and known, use an enum or a map

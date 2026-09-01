@@ -141,7 +141,7 @@ Today a heap dominated by `byte[]` might be strings, might be I/O buffers, might
 serialised payloads, might be image data.
 
 The histogram cannot tell you which. The **dominator tree** can, because it shows what *retains*
-the arrays. [Topic 04 · `OutOfMemoryError`](../04-out-of-memory-error/_plan.md) owns dump
+the arrays. [Topic 04 · `OutOfMemoryError`](../04-out-of-memory-error/README.md) owns dump
 analysis properly; the point here is only that the question "is my heap full of strings?" got
 harder to answer in Java 9 and the old shortcut no longer works.
 

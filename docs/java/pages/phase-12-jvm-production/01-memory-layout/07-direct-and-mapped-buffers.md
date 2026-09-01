@@ -219,7 +219,10 @@ concurrent.
 application code.** The call is made by the JDK's own NIO allocation path. Grepping the codebase
 for `System.gc()` and finding nothing does not exonerate direct buffers — it points at them.
 
-**★ `OutOfMemoryError: Direct buffer memory` is not a heap problem and a heap dump barely helps.**
+**★ Direct-buffer exhaustion is not a heap problem, and a heap dump barely helps.**
+⚠️ Nor is its message the short string people expect: `java.nio.Bits` throws
+`Cannot reserve N bytes of direct buffer memory (allocated: …, limit: …)`, so a log search for
+`Direct buffer memory` finds nothing.
 The heap objects involved are a few dozen bytes each; the megabytes are native. What the heap dump
 *can* tell you is how many live `DirectByteBuffer` instances exist and what is retaining them,
 which is usually the actual answer — a cache, a pool, or a collection of un-flushed writers.
@@ -267,7 +270,7 @@ free heap and free RAM. If the goal was to stop a library from triggering long s
 pauses, the right flag is `-XX:+ExplicitGCInvokesConcurrent`, which keeps the call effective and
 makes the resulting collection concurrent.
 
-**★ Your service throws `OutOfMemoryError: Direct buffer memory` but the heap is at 30%. Explain
+**★ Your service throws an `OutOfMemoryError` reading `Cannot reserve N bytes of direct buffer memory` but the heap is at 30%. Explain
 the mechanism.**
 The two facts are causally linked, not coincidental. A `DirectByteBuffer` is a tiny heap object
 holding a pointer to a large native allocation, so a large amount of dead *native* memory creates

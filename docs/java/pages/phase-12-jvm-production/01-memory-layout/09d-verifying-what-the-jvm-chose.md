@@ -48,7 +48,7 @@ answer "did my flag actually take effect, or did something override it?" A flag 
 that still shows `=` did not reach the JVM. A flag you never passed that shows `:=` was set
 by ergonomics or by a second flag, and finding out which is the next question.
 
-[13 · JVM flags that matter](../13-jvm-flags-that-matter/_plan.md) owns `PrintFlagsFinal` in
+**13 · JVM flags that matter** *(not written yet)* owns `PrintFlagsFinal` in
 general, including the product/diagnostic/experimental distinction that governs which flags
 appear at all.
 
@@ -69,7 +69,7 @@ and it converts a category of "mysterious few-percent difference between hosts" 
 you can read. This is the single highest-value logging recommendation on the whole subject.
 
 Unified logging is the JDK 9+ framework; `-XX:+PrintGCDetails` and its relatives are gone.
-[Topic 02 · GC in practice](../02-gc-in-practice/_plan.md) owns `-Xlog` properly.
+**Topic 02 · GC in practice** *(not written yet)* owns `-Xlog` properly.
 
 ## 3. A process that is already running — `jcmd`
 
@@ -177,7 +177,7 @@ it inside the container, or with the process's namespace joined.
 **★ A flag that does not exist is fatal, so a failed launch is also information.** On JDK 25
 an unrecognised `-XX:` option prevents startup. If a service refuses to boot after a JDK
 upgrade, a retired flag is the first hypothesis — and `-XX:+IgnoreUnrecognizedVMOptions` is
-how you hide the problem rather than fix it. [Topic 13](../13-jvm-flags-that-matter/_plan.md)
+how you hide the problem rather than fix it. **Topic 13** *(not written yet)*
 owns the retired-flag inventory.
 
 ## Interview questions
@@ -246,7 +246,7 @@ shared PID namespace with the target. Running `jcmd` from the host against a pro
 container's own PID namespace will not find it. The usual answers are to run `jcmd` inside
 the container — which is an argument for a base image that contains the JDK tools rather than
 a bare JRE — or to attach into the process's namespace. This is also why
-[topic 10's](../10-packaging-for-deploy/_plan.md) choice between a JRE and a JDK base image is
+**topic 10's** *(not written yet)* choice between a JRE and a JDK base image is
 an observability decision, not just a size decision.
 
 {/* FOOTER */}

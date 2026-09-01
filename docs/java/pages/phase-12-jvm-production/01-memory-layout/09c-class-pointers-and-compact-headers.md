@@ -54,7 +54,7 @@ The three symptoms are worth telling apart, because they have different fixes:
 | `Compressed class space` | The bounded class-pointer region | Very large class count, or too small a `CompressedClassSpaceSize` |
 | `Java heap space` | The heap | Live set exceeds `-Xmx` |
 
-[Topic 04 · `OutOfMemoryError`](../04-out-of-memory-error/_plan.md) owns the full set of
+[Topic 04 · `OutOfMemoryError`](../04-out-of-memory-error/README.md) owns the full set of
 messages; [04 · Metaspace](04-metaspace.md) owns the region itself.
 
 **`-XX:CompressedClassSpaceSize` defaults to 1 GB**, and you will not find that in the `java`

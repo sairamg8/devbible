@@ -114,7 +114,7 @@ The troubleshooting guide's category list, with what a growing number in each ac
 
 | Category | The guide's description | If it grows |
 |---|---|---|
-| **Java Heap** | *"The heap where objects live"* | Ordinary heap growth — go to [topic 04](../04-out-of-memory-error/_plan.md) |
+| **Java Heap** | *"The heap where objects live"* | Ordinary heap growth — go to [topic 04](../04-out-of-memory-error/README.md) |
 | **Class** | *"Class meta data"* | Metaspace: class count growing, or a classloader leak. See [04 · Metaspace](04-metaspace.md) |
 | **Thread** | *"Memory used by threads, including thread data structure, resource area, handle area"* | Thread count × stack size. See [06 · Thread stacks](06-thread-stacks.md) |
 | **Code** | *"Generated code"* | The JIT's code cache. See [05 · The code cache](05-the-code-cache.md) |
@@ -177,7 +177,7 @@ for an application leak, which is another reason `summary` is the right default.
 **★ `jcmd` must be able to reach the process.** Same user or sufficient privilege, and a shared
 PID namespace. In a container that usually means running `jcmd` *inside* it — which requires the
 JDK tools to be present, an argument against a bare-JRE base image that
-[topic 10](../10-packaging-for-deploy/_plan.md) has to weigh.
+**topic 10** *(not written yet)* has to weigh.
 
 **★ NMT tracks the JVM, not the container.** If something else in the pod is using memory — a
 sidecar, a log shipper — NMT will never mention it, and the container can still be killed.

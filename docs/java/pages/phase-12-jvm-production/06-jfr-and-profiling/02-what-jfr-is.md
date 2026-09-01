@@ -134,7 +134,7 @@ or sending it to a vendor**, and use `scrub` when in doubt.
 ## What it is not
 
 - **It is not a heap analyser.** It records allocation *events* and can tell you what allocates,
-  but "what is retaining this object" is a heap dump question — [topic 04](../04-out-of-memory-error/_plan.md).
+  but "what is retaining this object" is a heap dump question — [topic 04](../04-out-of-memory-error/README.md).
 - **It is not a debugger.** No breakpoints, no variable inspection. JEP 520's non-goals are
   explicit that recording method arguments and non-static field values is out of scope.
 - **It is not a tracing system.** It records within one JVM. Correlating a request across services

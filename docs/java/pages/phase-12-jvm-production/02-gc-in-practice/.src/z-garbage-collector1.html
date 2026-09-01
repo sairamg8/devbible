@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="The Z Garbage Collector">
+      <meta name="DC.Publisher" content="July2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>The Z Garbage Collector</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta property="og:description" content>
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="hotspot-virtual-machine-garbage-collection-tuning-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-07-14T09:00:07-07:00">
+      <meta name="dcterms.title" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta name="dcterms.dateCopyrighted" content="2015, 2026">
+      <meta name="dcterms.category" content="java">
+      <meta name="dcterms.identifier" content="G33936-03">
+      
+      <meta name="dcterms.product" content="en/java/javase/25">
+      <meta name="dcterms.release" content="25">
+      <link rel="prev" href="garbage-first-garbage-collector-tuning.html" title="Previous" type="text/html">
+      <link rel="next" href="other-considerations.html" title="Next" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"java","element_name":"Java","display_in_url":true},"suite":{"short_name":"not-applicable","element_name":"Not Applicable","display_in_url":false},"product_group":{"short_name":"not-applicable","element_name":"Not Applicable","display_in_url":false},"product":{"short_name":"javase","element_name":"Java SE","display_in_url":true},"release":{"short_name":"25","element_name":"25","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.isVersionOf" content="JSGCT">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"The Z Garbage Collector","datePublished":"2026-07-21 CST","dateModified":"2026-07-21 CST"}</script>
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="garbage-first-garbage-collector-tuning.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="other-considerations.html" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD" name="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD"></a>
+         
+         <h2 id="JSGCT-GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD" class="sect2"><span class="enumeration_chapter">9 </span>The Z Garbage Collector
+         </h2>
+         <div class="ind">
+            <div>
+               <p>The <span class="italic">Z Garbage Collector (ZGC)</span> is a scalable low latency garbage collector. ZGC performs all expensive work concurrently, without stopping the execution of application threads for more than a millisecond. It is suitable for applications which require low latency. Pause times are independent of the heap size that is being used. ZGC works well with heap sizes from a few hundred megabytes to 16TB.
+               </p>
+               <p>ZGC has been designed to be adaptive and to require minimal manual configuration. During the execution of the Java program, ZGC dynamically adapts to the workload by resizing generations, scaling the number of GC threads, and adjusting tenuring thresholds. The main tuning knob is to increase the maximum heap size.</p>
+               <div class="infoboxnote" id="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD__GUID-D3B75D78-3B4C-4C1C-8997-BB37F6CDD617">
+                  <p class="notep1">Note:</p>As of JDK 24 ZGC is a generational garbage collector. The <code class="codeph">ZGenerational</code> option has been removed.
+               </div>
+               <div class="section">
+                  <p class="subhead1" id="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD__GUID-D5842A41-3E24-432F-A4CC-5A9E4844C2F8">Topics</p>
+                  
+                  
+                  <ul style="list-style-type: disc;" id="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD__UL_DHC_VG4_KYB">
+                     <li><a href="z-garbage-collector1.html#GUID-FD855EE7-9ED3-46BF-8EA5-A73EB5096DDB">Setting the Heap Size</a></li>
+                     <li><a href="z-garbage-collector1.html#GUID-49A13316-E659-4A24-B548-50C334F1D413">Returning Unused Memory to the Operating System</a></li>
+                     <li><a href="z-garbage-collector1.html#GUID-683A80ED-98CF-43A5-86BC-240E2900E53E">Using Large Pages</a><ul style="list-style-type: disc;" id="GUID-8637B158-4F35-4E2D-8E7B-9DAEF15BB3CD__UL_CSN_J24_KYB">
+                           <li><a href="z-garbage-collector1.html#GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73">Enabling Large Pages On Linux</a></li>
+                           <li><a href="z-garbage-collector1.html#GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F">Enabling Transparent Huge Pages On Linux</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+                  
+               </div>
+            </div>
+            <div class="sect2"><a id="GUID-FD855EE7-9ED3-46BF-8EA5-A73EB5096DDB" name="GUID-FD855EE7-9ED3-46BF-8EA5-A73EB5096DDB"></a><h3 id="JSGCT-GUID-FD855EE7-9ED3-46BF-8EA5-A73EB5096DDB" class="sect3">Setting the Heap Size</h3>
+               <div>
+                  <p>The most important tuning option for ZGC is setting the maximum heap size, which you can set with the <code class="codeph">-Xmx</code> command-line option. Because ZGC is a concurrent collector, you must select a maximum heap size such that the heap can accommodate the live-set of your application and there is enough headroom in the heap to allow allocations to be serviced while the GC is running. How much headroom is needed very much depends on the allocation rate and the live-set size of the application. In general, the more memory you give to ZGC the better. But at the same time, wasting memory is undesirable, so it's all about finding a balance between memory usage and how often the GC needs to run.
+                  </p>
+                  <p>ZGC has another command-line option related to the heap size named <code class="codeph">-XX:SoftMaxHeapSize</code>. It can be used to set a soft limit on how large the Java heap can grow. ZGC will strive to not grow beyond this limit, but is still allowed to grow beyond this limit up to the maximum heap size. ZGC will only use more than the soft limit if that is needed to prevent the Java application from stalling and waiting for the GC to reclaim memory. For example, with the command-line options <code class="codeph">-Xmx5g -XX:SoftMaxHeapSize=4g</code>, ZGC will use 4GB as the limit for its heuristics, but if it can't keep the heap size below 4GB, it is still allowed to temporarily use up to 5GB.
+                  </p>
+               </div>
+            </div>
+            <div class="sect2"><a id="GUID-49A13316-E659-4A24-B548-50C334F1D413" name="GUID-49A13316-E659-4A24-B548-50C334F1D413"></a><h3 id="JSGCT-GUID-49A13316-E659-4A24-B548-50C334F1D413" class="sect3">Returning Unused Memory to the
+        Operating System</h3>
+               <div>
+                  <p>By default, ZGC uncommits unused memory, returning it to the operating system. This is useful for applications and environments where memory footprint is a concern, but might have a negative impact on the latency of Java threads. You can disable this feature with the command-line option <code class="codeph">-XX:-ZUncommit</code>. Furthermore, memory will not be uncommitted so that the heap size shrinks below the minimum heap size, <code class="codeph">-Xms</code>. This means this feature will be implicitly disabled if the minimum heap size, <code class="codeph">-Xms</code>, is configured to be equal to the maximum heap size, <code class="codeph">-Xmx</code>.
+                  </p>
+                  <p>You can configure an uncommit delay by using <code class="codeph">-XX:ZUncommitDelay=<span class="variable" translate="no">&lt;seconds&gt;</span></code>. The default is 300 seconds. This delay specifies for how long memory should have been unused before it's eligible for uncommit.
+                  </p>
+                  <div class="infoboxnote" id="GUID-49A13316-E659-4A24-B548-50C334F1D413__GUID-0AB03930-9713-402C-B5CF-03383FFB812C">
+                     <p class="notep1">Note:</p>
+                     
+                     <p>Allowing the GC to commit and uncommit memory while the application is running could have a negative impact on the latency of Java threads. If extremely low latency is the main reason for running with ZGC, consider running with the same value for <code class="codeph">-Xmx</code> and <code class="codeph">-Xms</code>, and use <code class="codeph">-XX:+AlwaysPreTouch</code> to page in memory before the application starts.
+                     </p>
+                     
+                  </div>
+               </div>
+            </div>
+            <div class="sect2"><a id="GUID-683A80ED-98CF-43A5-86BC-240E2900E53E" name="GUID-683A80ED-98CF-43A5-86BC-240E2900E53E"></a><h3 id="JSGCT-GUID-683A80ED-98CF-43A5-86BC-240E2900E53E" class="sect3">Using Large Pages</h3>
+               <div>
+                  <p>Configuring ZGC to use large pages will generally yield better performance (in terms
+            of throughput, latency and start up time) and comes with no real disadvantage, except
+            that it's slightly more complicated to setup. The setup process typically requires root
+            privileges, which is why it's not enabled by default.</p>
+               </div>
+               <div class="sect3"><a id="GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73" name="GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73"></a><h4 id="JSGCT-GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73" class="sect4">Enabling Large Pages On Linux</h4>
+                  <div>
+                     <p>On Linux x86, large pages (also known as "huge pages") have a size of 2MB.</p>
+                     <p> Let's assume you want a 16GB Java heap. That means you need 16GB / 2MB =
+            8192 huge pages.</p>
+                     <p>The heap requires at least 16GB (8192 pages) of memory to the pool of huge
+            pages. The heap along with other parts of the JVM will use large pages for various
+            internal data structures (such as code heap and marking bitmaps). In this example you
+            will reserve 9216 pages (18GB) to allow for 2GB of non-Java heap allocations to use
+            large pages.</p>
+                     <p>Configure the system's huge page pool to have the required number of pages
+            (requires root privileges):</p><pre class="pre codeblock" id="GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73__codeblock_i2b_c1d_1jc"><code>$ echo 9216 &gt; /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages</code></pre><p>Note that the above command is not guaranteed to be successful if the kernel cannot find enough free huge pages to satisfy the request. Also note that it might take some time for the kernel to process the request. Before proceeding, check the number of huge pages assigned to the pool to make sure the request was successful and has completed:</p><pre class="pre codeblock" id="GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73__codeblock_i2s_d1d_1jc"><code>$ cat /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages
+9216</code></pre><p>Now start the JVM using the <code class="codeph">-XX:+UseLargePages</code> option:
+                     </p><pre class="pre codeblock" id="GUID-D003B0F4-F89F-4CE3-9132-8E45E9D70D73__codeblock_bwg_31d_1jc"><code>$ java -XX:+UseZGC -Xms16G -Xmx16G -XX:+UseLargePages <span class="variable" translate="no">MyApplication</span></code></pre></div>
+               </div>
+               <div class="sect3"><a id="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F" name="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F"></a><h4 id="JSGCT-GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F" class="sect4">Enabling Transparent Huge Pages On
+        Linux</h4>
+                  <div>
+                     <div class="p">An alternative to using explicit large pages (as described previously) is to use transparent huge pages. Use of transparent huge pages is usually not recommended for latency sensitive applications because it tends to cause unwanted latency spikes. However, it might be worth experimenting with to see if or how your workload is affected by it. 
+                        <div class="infoboxnote" id="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F__GUID-E9CFFEB5-A77A-4D6E-A54D-FC1B0E180C0D">
+                           <p class="notep1">Note:</p>On Linux, using ZGC with transparent huge pages enabled requires kernel version 4.7 or later. 
+                        </div>
+                     </div>
+                     <p>Use the following options to enable transparent huge pages in the VM:</p><pre class="pre codeblock" id="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F__codeblock_x55_ncd_1jc"><code>-XX:+UseLargePages -XX:+UseTransparentHugePages</code></pre><p>These options tell the JVM to issue <span class="apiname" translate="no">madvise(...,
+                MADV_HUGEPAGE)</span> calls for memory it maps, which is useful when using
+            transparent huge pages in <code class="codeph">madvise</code> mode.
+                     </p>
+                     <p>To enable transparent huge pages, you also need to configure the kernel by enabling <code class="codeph">madvise</code> mode:
+                     </p><pre class="pre codeblock" id="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F__codeblock_g4n_4cd_1jc"><code>$ echo madvise &gt; /sys/kernel/mm/transparent_hugepage/enabled</code></pre><p>ZGC uses <code class="codeph">shmem</code> huge pages for the heap, so the following
+            kernel setting also needs to be configured:
+                     </p><pre class="pre codeblock" id="GUID-EF8B2CC4-7446-49C7-A2CF-68710DB1BF5F__codeblock_ar1_pcd_1jc"><code>$ echo advise &gt; /sys/kernel/mm/transparent_hugepage/shmem_enabled</code></pre><p>It is important to check these kernel settings when comparing the performance of different GCs. Some Linux distributions forcefully enable transparent huge pages for private pages by configuring <code class="codeph">/sys/kernel/mm/transparent_hugepage/enabled</code> to be set to <code class="codeph">always</code>, while leaving <code class="codeph">/sys/kernel/mm/transparent_hugepage/shmem_enabled</code> at the default <code class="codeph">never</code>. In this case, all GCs but ZGC will make use of transparent huge pages for the heap. See <a href="https://www.kernel.org/doc/Documentation/vm/transhuge.txt" target="_blank">Transparent Hugepage Support</a> for more information.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

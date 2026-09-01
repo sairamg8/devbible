@@ -1,0 +1,397 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xml:lang="en-us" lang="en-us">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="DC.Type" content="topic">
+      <meta name="DC.Title" content="Other Considerations">
+      <meta name="abstract" content="This section covers other situations that affect garbage collection.">
+      <meta name="description" content="This section covers other situations that affect garbage collection.">
+      <meta name="DC.Publisher" content="July2026">
+      <meta name="DC.Format" content="XHTML">
+      <meta name="DC.Identifier" content="GUID-28448147-EC4C-4C94-9A54-54152AD21CB8">
+      <meta name="DC.Language" content="en-US">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="abstract" content="This section covers other situations that affect garbage collection.">
+      <meta name="description" content="This section covers other situations that affect garbage collection.">
+      <title>Other Considerations</title>
+      <meta property="og:site_name" content="Oracle Help Center">
+      <meta property="og:title" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta property="og:description" content="This section covers other situations that affect garbage collection.">
+      <link rel="stylesheet" href="/sp_common/book-template/ohc-book-template/css/book.css">
+      <link rel="shortcut icon" href="/sp_common/book-template/ohc-common/img/favicon.ico">
+      <meta name="application-name" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta name="generator" content="DITA Open Toolkit version 1.8.5 (Mode = doc)">
+      <meta name="plugin" content="SP_docbuilder HTML plugin release 18.2.2">
+      <link rel="alternate" href="hotspot-virtual-machine-garbage-collection-tuning-guide.pdf" title="PDF File" type="application/pdf">
+      <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+      <meta name="dcterms.created" content="2026-07-14T09:00:07-07:00">
+      <meta name="dcterms.title" content="HotSpot Virtual Machine Garbage Collection Tuning Guide">
+      <meta name="dcterms.dateCopyrighted" content="2015, 2026">
+      <meta name="dcterms.category" content="java">
+      <meta name="dcterms.identifier" content="G33936-03">
+      
+      <meta name="dcterms.product" content="en/java/javase/25">
+      <meta name="dcterms.release" content="25">
+      <link rel="prev" href="z-garbage-collector1.html" title="Previous" type="text/html">
+      <script>
+        document.write('<style type="text/css">');
+        document.write('body > .noscript, body > .noscript ~ * { visibility: hidden; }');
+        document.write('</style>');
+     </script>
+      <script data-main="/sp_common/book-template/ohc-book-template/js/book-config" src="/sp_common/book-template/requirejs/require.js"></script>
+      <script>
+            if (window.require === undefined) {
+                document.write('<script data-main="sp_common/book-template/ohc-book-template/js/book-config" src="sp_common/book-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/book-template/ohc-book-template/css/book.css" rel="stylesheet"/>');
+            }
+        </script>
+      <script type="application/json" id="ssot-metadata">{"primary":{"category":{"short_name":"java","element_name":"Java","display_in_url":true},"suite":{"short_name":"not-applicable","element_name":"Not Applicable","display_in_url":false},"product_group":{"short_name":"not-applicable","element_name":"Not Applicable","display_in_url":false},"product":{"short_name":"javase","element_name":"Java SE","display_in_url":true},"release":{"short_name":"25","element_name":"25","display_in_url":true}}}</script>
+      
+    <meta name="dcterms.isVersionOf" content="JSGCT">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Other Considerations","description":"This section covers other situations that affect garbage collection.","datePublished":"2026-07-21 CST","dateModified":"2026-07-21 CST"}</script>
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+   <body>
+      <div class="noscript alert alert-danger text-center" role="alert">
+         <a href="z-garbage-collector1.html" class="pull-left"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+         <a href="#" class="pull-right">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+         <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        
+      </div>
+      <article class>
+         <a id="GUID-28448147-EC4C-4C94-9A54-54152AD21CB8" name="GUID-28448147-EC4C-4C94-9A54-54152AD21CB8"></a>
+         
+         <h2 id="JSGCT-GUID-28448147-EC4C-4C94-9A54-54152AD21CB8" class="sect2"><span class="enumeration_chapter">10 </span>Other Considerations
+         </h2>
+         <div class="ind">
+            <div>
+               <p>This section covers other situations that affect garbage collection.</p>
+               <div class="section">
+                  <p class="subhead1" id="GUID-28448147-EC4C-4C94-9A54-54152AD21CB8__GUID-D489EDE9-8B03-4EDF-BCFB-0093F259CEF8">Topics</p>
+                  <ul style="list-style-type: disc;">
+                     <li><a href="other-considerations.html#GUID-B29C9153-3530-4C15-9154-E74F44E3DAD9" title="Java classes have an internal representation within Java Hotspot VM and are referred to as class metadata.">Class Metadata</a></li>
+                     <li><a href="other-considerations.html#GUID-398EE652-38DC-4DD5-BC5E-BC5627336596">Compact Object Headers</a></li>
+                     <li><a href="other-considerations.html#GUID-9E3E5371-20F5-4B70-A003-9D7851B115AF" title="Another way that applications can interact with garbage collection is by calling full garbage collections explicitly by using System.gc().">Explicit Garbage Collection</a></li>
+                     <li><a href="other-considerations.html#GUID-A7B0991C-661F-47BE-AEDB-74C6BDBDE181" title="Some applications interact with garbage collection by using finalization and weak, soft, or phantom references.">Finalization and Weak, Soft, and Phantom References</a></li>
+                     <li><a href="other-considerations.html#GUID-BFB89453-60C0-42AC-81CA-87D59B0ACE2E" title="Soft references are kept alive longer in the server virtual machine than in the client.">Soft References</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-B29C9153-3530-4C15-9154-E74F44E3DAD9" name="GUID-B29C9153-3530-4C15-9154-E74F44E3DAD9"></a><h3 id="JSGCT-GUID-B29C9153-3530-4C15-9154-E74F44E3DAD9" class="sect3">Class Metadata</h3>
+               <div>
+                  <p>Java classes have an internal representation within Java Hotspot VM and are referred to as class metadata.</p>
+                  <p>In previous releases of Java Hotspot VM, the class metadata was allocated in the so-called permanent generation. Starting with JDK 8, the permanent generation was removed and the class metadata is allocated in native memory. The amount of native memory that can be used for class metadata is by default unlimited. Use the option <code class="codeph">-XX:MaxMetaspaceSize</code> to put an upper limit on the amount of native memory used for class metadata.
+                  </p>
+                  <p>Java Hotspot VM explicitly manages the space used for metadata. Space is requested from the OS and then divided into chunks. A class loader allocates space for metadata from its chunks (a chunk is bound to a specific class loader). When classes are unloaded for a class loader, its chunks are recycled for reuse or returned to the OS. Metadata uses space allocated by <code class="codeph">mmap</code>, not by <code class="codeph">malloc</code>.
+                  </p>
+                  <p>If <code class="codeph">-XX:UseCompressedOops</code> is turned on and <code class="codeph">-XX:UseCompressedClassesPointers</code> is used, then two logically different areas of native memory are used for class metadata. <code class="codeph">-XX:UseCompressedClassPointers</code> uses a 32-bit offset to represent the class pointer in a 64-bit process as does <code class="codeph">-XX:UseCompressedOops</code> for Java object references. A region is allocated for these compressed class pointers (the 32-bit offsets). The size of the region can be set with <code class="codeph">-XX:CompressedClassSpaceSize</code> and is 1 gigabyte (GB) by default. The space for the compressed class pointers is reserved as space allocated by <code class="codeph">-XX:mmap</code> at initialization and committed as needed. The <code class="codeph">-XX:MaxMetaspaceSize</code> applies to the sum of the committed compressed class space and the space for the other class metadata.
+                  </p>
+                  <p>Class metadata is deallocated when the corresponding Java class is unloaded. Java classes are unloaded as a result of garbage collection, and garbage collections may be induced to unload classes and deallocate class metadata. When the space committed for class metadata reaches a certain level (a high-water mark), a garbage collection is induced. After the garbage collection, the high-water mark may be raised or lowered depending on the amount of space freed from class metadata. The high-water mark would be raised so as not to induce another garbage collection too soon. The high-water mark is initially set to the value of the command-line option <code class="codeph">-XX:MetaspaceSize</code>. It is raised or lowered based on the options <code class="codeph">-XX:MaxMetaspaceFreeRatio</code> and <code class="codeph">-XX:MinMetaspaceFreeRatio</code>. If the committed space available for class metadata as a percentage of the total committed space for class metadata is greater than <code class="codeph">-XX:MaxMetaspaceFreeRatio</code>, then the high-water mark will be lowered. If it's less than <code class="codeph">-XX:MinMetaspaceFreeRatio</code>, then the high-water mark will be raised.
+                  </p>
+                  <p>Specify a higher value for the option <code class="codeph"> -XX:MetaspaceSize</code> to avoid early garbage collections induced for class metadata. The amount of class metadata allocated for an application is application-dependent and general guidelines do not exist for the selection of <code class="codeph"> -XX:MetaspaceSize</code>. The default size of <code class="codeph"> -XX:MetaspaceSize</code> is platform-dependent and ranges from 12 MB to about 20 MB.
+                  </p>
+                  <p>Information about the space used for metadata is included in a printout of the heap. The following is typical output:.</p><pre class="pre codeblock"><code>[0,296s][info][gc,heap,exit] Heap
+[0,296s][info][gc,heap,exit] garbage-first heap total 514048K, used 0K [0x00000005ca600000, 0x00000005ca8007d8, 0x00000007c0000000)
+[0,296s][info][gc,heap,exit] region size 2048K, 1 young (2048K), 0 survivors (0K)
+[0,296s][info][gc,heap,exit] Metaspace used 2575K, capacity 4480K, committed 4480K, reserved 1056768K
+[0,296s][info][gc,heap,exit] class space used 238K, capacity 384K, committed 384K, reserved 1048576K</code></pre><p>In the line beginning with <code class="codeph">Metaspace</code>, the <code class="codeph">used</code> value is the amount of space used for loaded classes. The <code class="codeph">capacity</code> value is the space available for metadata in currently allocated chunks. The <code class="codeph">committed</code> value is the amount of space available for chunks. The <code class="codeph">reserved</code> value is the amount of space reserved (but not necessarily committed) for metadata. The line beginning with <code class="codeph">class space</code> contains the corresponding values for the metadata for compressed class pointers.
+                  </p>
+               </div>
+            </div>
+            <div class="sect2"><a id="GUID-398EE652-38DC-4DD5-BC5E-BC5627336596" name="GUID-398EE652-38DC-4DD5-BC5E-BC5627336596"></a><h3 id="JSGCT-GUID-398EE652-38DC-4DD5-BC5E-BC5627336596" class="sect3">Compact Object Headers</h3>
+               <div>
+                  <p>Compact Object Headers reduce the size of every object header in the Java heap from 96 or 128 bits to 64 bits. This will reduce the actual size of every allocated object, reducing live data size, allowing higher deployment density, and  increasing data locality and performance. </p>
+                  <p>They can be enabled using the <code class="codeph">-XX:+UseCompactObjectHeaders</code> option. 
+                  </p>
+                  <p>If enabled, there is a limit of 4 million different loaded classes. If your application is expected to use this many classes, this feature can not be used. </p>
+                  <p>There is more information in <a href="https://openjdk.java.net/jeps/450" target="_blank">JEP 450: Compact Object Headers (Experimental)</a> and <a href="https://openjdk.java.net/jeps/519" target="_blank">JEP 519: Compact Object Headers</a> about this feature.
+                  </p>
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-9E3E5371-20F5-4B70-A003-9D7851B115AF" name="GUID-9E3E5371-20F5-4B70-A003-9D7851B115AF"></a><h3 id="JSGCT-GUID-9E3E5371-20F5-4B70-A003-9D7851B115AF" class="sect3">Explicit Garbage Collection</h3>
+               <div>
+                  <p>Another way that applications can interact with garbage collection is by calling full garbage collections explicitly by using <code class="codeph">System.gc()</code>.
+                  </p>
+                  <p>This can force a major collection to be done when it may not be necessary (for example, when a minor collection would suffice), and so in general should be avoided. The performance effect of explicit garbage collections can be measured by disabling them using the flag <code class="codeph">-XX:+DisableExplicitGC</code>, which causes the VM to ignore calls to <code class="codeph">System.gc()</code>.
+                  </p>
+                  <p>One of the most commonly encountered uses of explicit garbage collection occurs with the distributed garbage collection (DGC) of Remote Method Invocation (RMI). Applications using RMI refer to objects in other virtual machines. Garbage cannot be collected in these distributed applications without occasionally invoking garbage collection of the local heap, so RMI forces full collections periodically. The frequency of these collections can be controlled with properties, as in the following example:</p><pre class="pre codeblock"><code>java -Dsun.rmi.dgc.client.gcInterval=3600000
+    -Dsun.rmi.dgc.server.gcInterval=3600000 ...
+</code></pre><p>This example specifies explicit garbage collection once per hour instead of the default rate of once per minute. However, this may also cause some objects to take much longer to be reclaimed. These properties can be set as high as <code class="codeph">Long.MAX_VALUE</code> to make the time between explicit collections effectively infinite if there's no desire for an upper bound on the timeliness of DGC activity.
+                  </p>
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-A7B0991C-661F-47BE-AEDB-74C6BDBDE181" name="GUID-A7B0991C-661F-47BE-AEDB-74C6BDBDE181"></a><h3 id="JSGCT-GUID-A7B0991C-661F-47BE-AEDB-74C6BDBDE181" class="sect3">Finalization and Weak, Soft, and Phantom References</h3>
+               <div>
+                  <p>Some applications interact with garbage collection by using finalization and weak, soft, or phantom references.</p>
+                  <p>However, the use of finalization is discouraged. It can lead to problems with security,
+            performance, and reliability. For instance, relying on finalization to close file
+            descriptors makes an external resource (descriptors) dependent on garbage collection
+            promptness.</p>
+                  <div class="infoboxnote" id="GUID-A7B0991C-661F-47BE-AEDB-74C6BDBDE181__GUID-EB84E2DB-5571-4394-9BA2-ABA430DEA57C">
+                     <p class="notep1">Note:</p>
+                     
+                     <p>Finalization has been deprecated in JDK 9. It also has been deprecated for removal in
+                JDK 18; see <a href="https://openjdk.java.net/jeps/421" target="_blank">JEP 421: Deprecate Finalization for Removal</a>.
+                     </p>
+                     
+                  </div>
+               </div>
+               <div class="sect3"><a id="GUID-5E090C72-59ED-4BD3-991D-322026AF843E" name="GUID-5E090C72-59ED-4BD3-991D-322026AF843E"></a><h4 id="JSGCT-GUID-5E090C72-59ED-4BD3-991D-322026AF843E" class="sect4">Finalization</h4>
+                  <div>
+                     <p>A class can declare a finalizer &#x2013; the method <span class="apiname" translate="no">protected
+            void finalize()</span> &#x2013; whose body releases any underlying resources. The GC will
+        schedule the finalizer of an unreachable object, which is called before the GC reclaims the
+        object's memory.
+                     </p>
+                     <p>An object becomes unreachable, and thus eligible for garbage collection, when there’s
+            no path from a GC root to the object. GC roots include references from an active thread
+            and internal JVM references; they are the references that keep objects in memory.</p>
+                     <p>See <a href="/pls/topic/lookup?ctx=en/java/javase/25/gctuning&amp;id=JSTGD-GUID-9E45BCA7-A377-49A4-8D62-507F6CF85E4B" target="_blank">Monitoring the Objects Pending Finalization</a> in
+                <span><cite>Java Platform, Standard Edition Troubleshooting Guide</cite></span>  to determine if finalizable objects are
+            building up in your system. In addition, you can use one of these tools:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-5E090C72-59ED-4BD3-991D-322026AF843E__UL_MFX_4DG_2SB">
+                        <li>JDK Mission Control:
+                           <ol id="GUID-5E090C72-59ED-4BD3-991D-322026AF843E__OL_NFX_4DG_2SB">
+                              <li>In the <span class="bold">JVM Browser</span>, right-click your JVM and select
+                            <span class="bold">Start JMX Console</span>.
+                              </li>
+                              <li>In the <span class="bold">MBean Browser</span>, in the <span class="bold">MBean Tree</span>, expand
+                            <span class="bold">java.lang</span> and select <span class="bold">Memory</span>.
+                              </li>
+                              <li>In <span class="bold">MBean Features</span>, the attribute
+                            <span class="bold">ObjectPendingFinalizationCount</span> is the approximate number of
+                        objects that are pending finalization.
+                              </li>
+                           </ol>
+                        </li>
+                        <li><code class="codeph">jcmd</code> tool:
+                           <ul style="list-style-type: disc;" id="GUID-5E090C72-59ED-4BD3-991D-322026AF843E__UL_OFX_4DG_2SB">
+                              <li>
+                                 
+                                 <p>Run the following command to print information about the Java
+                            finalization queue; the value <code class="codeph"><span class="variable" translate="no">&lt;pid&gt;</span></code> is the PID of your JVM:
+                                 </p>
+                                 
+                                 <p><code class="codeph">jcmd <span class="variable" translate="no">&lt;pid&gt;</span>
+                                GC.finalizer_info</code></p>
+                                 
+                              </li>
+                           </ul>
+                        </li>
+                        <li>JDK Flight Recorder:
+                           <ul style="list-style-type: disc;" id="GUID-5E090C72-59ED-4BD3-991D-322026AF843E__UL_PFX_4DG_2SB">
+                              <li>The JDK Flight Recorder (JFR) event,
+                            <code class="codeph">jdk.FinalizerStatistics</code>, identifies classes at run time
+                        that use finalizers. The event is enabled by default in the
+                            <code class="codeph">default.jfc</code> and <code class="codeph">profile.jfc</code> JFR
+                        configuration files. When enabled, JFR emits a
+                            <code class="codeph">jdk.FinalizerStatistics</code> event for each instantiated
+                        class with a non-empty <span class="apiname" translate="no">finalize()</span> method.
+                        The event includes the class that overrides <span class="apiname" translate="no">finalize()</span>, that class's <code class="codeph">CodeSource</code>, the
+                        number of times the class's finalizer has run, and the number of objects
+                        still on the heap (and not yet finalized). See <a href="/pls/topic/lookup?ctx=en/java/javase/25/gctuning&amp;id=JDMUG-GUID-D38849B6-61C7-4ED6-A395-EA4BC32A9FD6" target="_blank">Flight Recorder</a> in
+                            <cite>Java Platform, Standard Edition JDK Mission Control
+                            User Guide</cite> for more information.
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="sect3"><a id="GUID-48F95762-098F-4B76-AB3F-D91FB3CB5435" name="GUID-48F95762-098F-4B76-AB3F-D91FB3CB5435"></a><h4 id="JSGCT-GUID-48F95762-098F-4B76-AB3F-D91FB3CB5435" class="sect4">Migrating from
+        Finalization</h4>
+                  <div>
+                     <p>To avoid finalization, use one of the following techniques:</p>
+                     <ul style="list-style-type: disc;" id="GUID-48F95762-098F-4B76-AB3F-D91FB3CB5435__UL_Y3Q_PJG_2SB">
+                        <li><a href="other-considerations.html#GUID-E9C8D1D9-7DC7-4CDA-8D4D-6EBEF39C177F">The try-with-Resources Statement</a></li>
+                        <li><a href="other-considerations.html#GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394" title="If you foresee that the lifecycle of a resource in your application will live beyond the scope of a try-with-resources statement, then you can use the Cleaner API instead. The Cleaner API allows a program to register a cleaning action for an object that is run some time after the object becomes unreachable.">The Cleaner API</a></li>
+                     </ul>
+                  </div>
+                  <div class="sect4"><a id="GUID-E9C8D1D9-7DC7-4CDA-8D4D-6EBEF39C177F" name="GUID-E9C8D1D9-7DC7-4CDA-8D4D-6EBEF39C177F"></a><h5 id="JSGCT-GUID-E9C8D1D9-7DC7-4CDA-8D4D-6EBEF39C177F" class="sect5">The try-with-Resources
+        Statement</h5>
+                     <div>
+                        <p></p>
+                        <p>The <code class="codeph">try</code>-with-resources statement is a <code class="codeph">try</code> statement
+            that declares one or more resources. A resource is an object that must be closed after
+            the program is finished with it. The <code class="codeph">try</code>-with-resources statement
+            ensures that each resource is closed at the end of the code block, even if one or more
+            exceptions occur. See <a href="https://dev.java/learn/catching-and-handling-exceptions/#anchor_6" target="_blank">The Try-with-resources Statement</a> for more
+            information.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="sect4"><a id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394" name="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394"></a><h5 id="JSGCT-GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394" class="sect5">The Cleaner API</h5>
+                     <div>
+                        <p>If you foresee that the lifecycle of a resource in your application will live
+        beyond the scope of a <code class="codeph">try</code>-with-resources statement, then you can use the
+        Cleaner API instead. The Cleaner API allows a program to register a cleaning action for an
+        object that is run some time after the object becomes unreachable.
+                        </p>
+                        <p>Cleaners enable you to avoid many of the drawbacks of finalizers:</p>
+                        <ul style="list-style-type: disc;" id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394__UL_PDD_J3G_2SB">
+                           <li>More secure: A cleaner must explicitly register an object. In addition, cleaning
+                actions cannot access it so object resurrection is impossible.</li>
+                           <li>Better performance: You have more control over when you register a cleaning action,
+                which means a cleaning action never processes an uninitialized or partially
+                initialized object. You can also cancel an object's cleaning action.</li>
+                           <li>More reliable: You can control which threads run cleaning actions.</li>
+                        </ul>
+                        <p>However, like finalizers, the garbage collector schedules cleaning actions,
+            so they may suffer from unbounded delays. Thus, don’t use the cleaner API in situations
+            where the timely release of a resource is required.</p>
+                        <p>The following is a simple example of a cleaner. It does the following:</p>
+                        <ol id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394__OL_QDD_J3G_2SB">
+                           <li>Defines a cleaning action class, <code class="codeph">State</code>, which
+                initializes the cleaning action and defines the cleaning action itself (by
+                overriding the <code class="codeph">State::run()</code> method).
+                           </li>
+                           <li>Creates an instance of <code class="codeph">Cleaner</code>.
+                           </li>
+                           <li>With this instance of <code class="codeph">Cleaner</code>, registers the object
+                    <code class="codeph">myObject1</code> and a cleaning action (an instance of
+                    <code class="codeph">State</code>).
+                           </li>
+                           <li>To ensure that the garbage collector schedules the cleaner and the
+                cleaning action <code class="codeph">State::run()</code> is performed before the example ends,
+                the example:
+                              <ol type="a" id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394__OL_RDD_J3G_2SB">
+                                 <li>Sets <code class="codeph">myObject1</code> to <code class="codeph">null</code> to
+                        ensure it is phantom unreachable. See <a href="other-considerations.html#GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845" title="There are three reference-object types: SoftReference, WeakReference, and PhantomReference. Each reference-object type corresponds to a different level of reachability. The following are the different levels of reachability, from strongest to weakest, which reflect the life cycle of an object:">.</a></li>
+                                 <li>Calls <span class="apiname" translate="no">System.gc()</span> in a loop to trigger
+                        garbage collection cleanup.
+                                 </li>
+                              </ol>
+                           </li>
+                        </ol>
+                        <div class="figure" id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394__FIG_N4K_43G_2SB">
+                           <p class="titleinfigure">Figure 10-1 CleanerExample</p><pre class="pre codeblock"><code>import java.lang.ref.Cleaner;
+
+public class CleanerExample {
+    
+    // This Cleaner is shared by all CleanerExample instances
+    private static final Cleaner CLEANER = Cleaner.create();
+    private final State state;
+
+    public CleanerExample(String id) {
+        state = new State(id);
+        CLEANER.register(this, state);
+    }
+
+    // Cleaning action class for CleanerExample
+    private static class State implements Runnable {
+        final private String id;
+
+        private State(String id) {
+            this.id = id;
+            System.out.println("Created cleaning action for " + this.id);
+        }
+
+        @Override
+        public void run() {
+            System.out.println("Cleaner garbage collected " + this.id);
+        }
+    }
+
+    public static void main(String[] args) {
+        CleanerExample myObject1 = new CleanerExample("myObject1");
+
+        // Make myObject1 unreachable
+        myObject1 = null;
+
+        System.out.println("-- Give the GC a chance to schedule the Cleaner --");
+        for (int i = 0; i &lt; 100; i++) {
+            
+            // Calling System.gc() in a loop is usually sufficient to trigger
+            // cleanup in a small program like this.
+            System.gc();
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {}
+        }
+        System.out.println("-- Finished --");
+    }
+}</code></pre></div>
+                        <p>This example prints the following:</p><pre class="pre codeblock"><code>Created cleaning action for myObject1
+-- Give the GC a chance to schedule the Cleaner --
+Cleaner garbage collected myObject1
+-- Finished --</code></pre><p>Consider the following if you're implementing a cleaner for a production environment:</p>
+                        <ul style="list-style-type: disc;" id="GUID-D9A15B38-3BDE-491C-915E-6E7BFF9C2394__UL_ZW4_1JZ_2SB">
+                           <li>The cleaning action class (<code class="codeph">State</code> in this example)
+                should be a private implementation detail. In particular, it shouldn't be used from
+                the <code class="codeph">main(String[])</code> method. Thus, your cleaning action class should
+                be immutable whenever practical. A new object should handle creating its own
+                cleaning action class and registering itself with a cleaner within its
+                constructor.
+                           </li>
+                           <li>Classes typically need access to objects within the cleaner action class. The
+                simplest way to do this is for the object to save a reference to the cleaner action
+                class.</li>
+                           <li><span class="apiname" translate="no">Cleaner</span> instances should be shared. In this example, all
+                instances of <code class="codeph">CleanerExample</code> should share a single, static
+                    <span class="apiname" translate="no">Cleaner</span> instance.
+                           </li>
+                        </ul>
+                        <p>See the JavaDoc API documentation for the <a href="../docs/api/java.base/java/lang/ref/Cleaner.html" target="_blank"><span class="apiname" translate="no">Cleaner</span></a> class
+            for more information about implementing a cleaner.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="sect3"><a id="GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845" name="GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845"></a><h4 id="JSGCT-GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845" class="sect4">Reference-Object Types</h4>
+                  <div>
+                     <p>There are three reference-object types: <span class="apiname" translate="no">SoftReference</span>,
+            <span class="apiname" translate="no">WeakReference</span>, and <span class="apiname" translate="no">PhantomReference</span>. Each
+        reference-object type corresponds to a different level of reachability. The following are
+        the different levels of reachability, from strongest to weakest, which reflect the life
+        cycle of an object:
+                     </p>
+                     <ul style="list-style-type: disc;" id="GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845__UL_T1B_THG_2SB">
+                        <li>An object is <span class="italic">strongly reachable</span> if it can be reached by some thread without
+                traversing any reference objects. A newly-created object is strongly reachable by
+                the thread that created it.
+                        </li>
+                        <li>An object is <span class="italic">softly reachable </span>if it is not strongly reachable but can be
+                reached by traversing a soft reference.
+                        </li>
+                        <li>An object is <span class="italic">weakly reachable</span> if it is neither strongly nor softly reachable
+                but can be reached by traversing a weak reference. When the weak references to a
+                weakly-reachable object are cleared, the object becomes eligible for
+                finalization.
+                        </li>
+                        <li>An object is <span class="italic">phantom reachable</span> if it is neither strongly, softly, nor weakly
+                reachable, it has been finalized, and some phantom reference refers to it.
+                        </li>
+                        <li>An object is <span class="italic">unreachable</span>, and therefore eligible for reclamation, when it is
+                not reachable in any of the previous ways.
+                        </li>
+                     </ul>
+                     <p>Each reference-object type encapsulates a single reference to a particular object, which
+            is called the <span class="italic">referent</span>. A reference object provides methods for clearing the
+            referent.
+                     </p>
+                     <p>The following are the most common uses for reference-object instances:</p>
+                     <ul style="list-style-type: disc;" id="GUID-E2EEBB54-9405-481A-8BED-E7AFAD5E4845__UL_U1B_THG_2SB">
+                        <li>To maintain access to an object while still allowing it to be garbage collected if
+                the system needs to free up memory (such as a cached value that can be regenerated
+                if required)</li>
+                        <li>To determine and perhaps take some action when an object has reached a particular
+                reachability level (in combination with the <span class="apiname" translate="no">ReferenceQueue</span>
+                class)
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="props_rev_3"><a id="GUID-BFB89453-60C0-42AC-81CA-87D59B0ACE2E" name="GUID-BFB89453-60C0-42AC-81CA-87D59B0ACE2E"></a><h3 id="JSGCT-GUID-BFB89453-60C0-42AC-81CA-87D59B0ACE2E" class="sect3">Soft References</h3>
+               <div>
+                  <p>Soft references are kept alive longer in the server virtual machine than in the client. </p>
+                  <p>The rate of clearing can be controlled with the command-line option <code class="codeph">-XX:SoftRefLRUPolicyMSPerMB=</code><code class="codeph">&lt;N&gt;</code>, which specifies the number of milliseconds (ms) a soft reference will be kept alive (once it is no longer strongly reachable) for each megabyte of free space in the heap. The default value is 1000 ms per megabyte, which means that a soft reference will survive (after the last strong reference to the object has been collected) for 1 second for each megabyte of free space in the heap. This is an approximate figure because soft references are cleared only during garbage collection, which may occur sporadically.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </article>
+   </body>
+</html>

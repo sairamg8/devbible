@@ -1,0 +1,152 @@
+## They are effectively pinned
+
+> *"Objects in humongous regions are treated differently. G1 typically does not move these
+> objects, but only determines their liveness, and if they are not live, reclaims the space
+> they occupy. G1 only moves humongous objects in a very slow last-resort collection effort."*
+>
+> *"Humongous objects only move in a last-resort collection effort after a first Full GC failed
+> to free enough contiguous memory for another humongous object allocation in a second Full GC
+> in the same pause. This process is very slow. Due to space being unavailable for allocation
+> in heap regions containing the end of humongous objects, it is still possible that G1 exits
+> the VM with an out-of-memory condition."*
+
+Read that last sentence twice. **Two Full GCs inside one pause, and then possibly an
+`OutOfMemoryError` anyway**, because the free space is there but not contiguous.
+
+## They can force a marking cycle at any moment
+
+> *"Allocations of humongous objects may cause garbage collection pauses to occur prematurely.
+> G1 checks the Initiating Heap Occupancy threshold at every humongous object allocation and
+> may force a Concurrent Start young collection immediately, if current occupancy exceeds that
+> threshold and no marking is currently in progress."*
+
+So a burst of large uploads does not just consume old-generation space, it can trigger
+concurrent marking cycles at a rate set by *request traffic*. The GC cause string for this is
+`G1 Humongous Allocation` (from `gcCause.cpp`), which is one of the most informative causes in
+the whole log: seeing it means an allocation, not an occupancy threshold, drove the
+collection.
+
+## Diagnosing it
+
+`-Xlog:gc+heap=info` prints a per-generation region summary at every collection. The format
+string in `g1HeapTransition.cpp`:
+
+```cpp
+  log_info(gc, heap)("Humongous regions: %zu->%zu",
+                     _before._humongous_length, after._humongous_length);
+```
+
+so the line reads `Humongous regions: <before>-><after>`. Note that Eden and Survivor get a
+third parenthesised number (target capacity) and Old and Humongous do not — a formatting
+difference that trips people writing log parsers.
+
+The guide's instruction:
+
+> *"You can determine the number of regions occupied by humongous objects on the Java heap
+> using the `gc+heap=info` logging. Y in the lines `Humongous regions: X->Y` give you the amount
+> of regions occupied by humongous objects. If this number is high compared to the number of
+> old regions, the best option is to try to decrease this number of objects. You can achieve
+> this by increasing the region size using the `-XX:G1HeapRegionSize` option."*
+
+Two remedies, and the guide is clear about their order — **decrease the number of humongous
+objects first**, and only then reach for the region size.
+
+> *"A Full GC could occur before all Java heap memory has been exhausted due to the necessity of
+> finding a contiguous set of regions for them. Potential options in this case are increasing
+> the heap region size by using the option `-XX:G1HeapRegionSize` to decrease the number of
+> humongous objects, or increasing size of the heap. In extreme cases, there might not be enough
+> contiguous space available for G1 to allocate the object even if available memory indicates
+> otherwise. This would lead to a VM exit if that Full GC can not reclaim enough contiguous
+> space. As a result, there are no other options than either decreasing the amount of humongous
+> object allocations as mentioned previously, or increasing the heap."*
+
+## The application-side fix
+
+Doubling the region size halves the number of humongous objects and costs you longer Object
+Copy times and coarser remembered sets ([03b2](03b2-the-four-phases-of-a-pause.md)). It is a
+mitigation. The actual fix is usually one of these:
+
+- **Stream instead of buffering.** A request handler that reads an upload into a `byte[]`
+  allocates one humongous object per request. A handler that copies through a fixed 8 KB
+  buffer allocates nothing humongous ever.
+- **Pre-size growable buffers.** `ByteArrayOutputStream` and `StringBuilder` double their
+  backing array, so producing a 3 MB result allocates arrays of 1 MB, 2 MB *and* 4 MB along the
+  way — three humongous objects instead of one, two of them immediately dead in the old
+  generation. `new ByteArrayOutputStream(expectedSize)` removes the intermediate ones.
+- **Reuse a pooled buffer** where the lifetime is genuinely per-request and bounded.
+- **Cap the size at the edge.** A request-size limit is a GC control as well as a security
+  control.
+- **Use a direct `ByteBuffer`** for large I/O buffers, which moves the bytes out of the heap
+  entirely — with its own costs, in
+  [01 · Memory layout → 07 · Direct and mapped buffers](../01-memory-layout/07-direct-and-mapped-buffers.md).
+
+
+@@G@@
+**★ `ByteArrayOutputStream` and `StringBuilder` produce several humongous objects, not one.**
+They grow by doubling, so building a 3 MB result allocates 1 MB, 2 MB and 4 MB arrays. Two of
+those are immediately garbage — in the old generation. Pre-sizing the buffer is a one-line
+change that removes them.
+
+**★ Humongous allocation can trigger a concurrent marking cycle on its own.**
+G1 checks IHOP *"at every humongous object allocation"* and may force a Concurrent Start
+immediately. That makes marking frequency a function of request traffic rather than of
+occupancy, and it shows up in the log with the cause `G1 Humongous Allocation`.
+
+**★ G1 can exit with `OutOfMemoryError` while free memory exists.**
+The failure is contiguity, not capacity: a humongous object needs a run of adjacent free
+regions, and the guide states that *"there might not be enough contiguous space available for
+G1 to allocate the object even if available memory indicates otherwise"*, leading to *"a VM
+exit"*. A memory graph showing headroom is not evidence against this diagnosis;
+`Humongous regions:` in `gc+heap=info` is the evidence for it.
+
+**★ The last-resort path is two Full GCs in a single pause.**
+Humongous objects move only *"after a first Full GC failed to free enough contiguous memory
+for another humongous object allocation in a second Full GC in the same pause"*. The guide
+calls it *"very slow"*. If you see two Full GCs back to back with no allocation between them,
+this is what happened.
+
+**★ Raising `G1HeapRegionSize` is a mitigation with a bill attached.**
+Bigger regions mean fewer humongous objects and smaller remembered sets, and also more live
+data to evacuate per region, which lengthens Object Copy. The guide recommends *decreasing the
+number of humongous objects* first and treats the flag as the fallback. Re-read
+`gc+phases=debug` afterwards to see where the time went.
+
+## Interview questions
+
+
+@@Q@@
+**★ A service gets `OutOfMemoryError: Java heap space` while the heap graph shows 30% free.
+What would you check?**
+Humongous fragmentation. A humongous object needs a *contiguous* run of free regions, and G1
+does not move humongous objects except in a last-resort path, so a heap can have plenty of
+free regions scattered among pinned humongous ones and still be unable to satisfy a large
+allocation. The tuning guide says exactly this: *"there might not be enough contiguous space
+available for G1 to allocate the object even if available memory indicates otherwise"*, and
+that this *"would lead to a VM exit"*. The evidence is in `-Xlog:gc+heap=info` — a high
+`Humongous regions:` count relative to old regions — and in the GC causes, where you would
+expect `G1 Humongous Allocation` and then `G1 Compaction Pause`. The fix order the guide gives
+is: reduce the number of humongous allocations, then increase the region size, then increase
+the heap.
+
+**★ Where do humongous allocations come from in a typical Spring service?**
+Almost always from buffering something whose size is set by a client. Reading a multipart
+upload or a request body into a `byte[]`; serialising a large response into a
+`ByteArrayOutputStream`; building a big string with `StringBuilder`; a database driver
+materialising a large `BLOB`; a JSON library buffering before writing. Growable buffers are
+the worst offenders because they double, so producing a 3 MB result allocates 1 MB, 2 MB and
+4 MB arrays and discards two of them straight into the old generation. The fixes are ordinary
+engineering rather than GC work: stream rather than buffer, pre-size buffers whose final size
+you can estimate, and enforce a request-size limit at the edge so a client cannot choose your
+allocation size.
+
+**★ Would you raise `G1HeapRegionSize` to fix humongous pressure?**
+As a mitigation, and after trying to reduce the allocations. Doubling the region size doubles
+the threshold, so a whole class of objects stops being humongous, and it also reduces
+cross-region references and therefore remembered set size. What it costs is more live data per
+region to evacuate, which lengthens the Object Copy sub-phase, and coarser granularity in
+choosing a collection set, which makes each Mixed collection less precise. The guide's own
+order is to decrease the number of humongous objects first and use the flag second, and
+whichever you do, the honest check is `-Xlog:gc+phases=debug` before and after to see whether
+the time moved rather than disappeared. Note also that the ergonomic ceiling is 32 MB but the
+settable ceiling on 64-bit is 512 MB — the man page's *"1 MB to 32 MB"* is wrong.
+

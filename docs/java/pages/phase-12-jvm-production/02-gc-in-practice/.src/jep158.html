@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii" /><meta http-equiv="Content-Type" content="text/html; charset=us-ascii" /><title>JEP 158: Unified JVM Logging</title><link rel="shortcut icon" href="/images/nanoduke.ico" /><link rel="stylesheet" type="text/css" href="/page.css" /><script type="text/javascript" src="/page.js"><noscript></noscript></script><script src="https://cdn.usefathom.com/script.js" data-site="KCYJJPZX" defer="yes"></script><style type="text/css" xml:space="preserve">
+      TABLE { border-collapse: collapse; padding: 0px; margin: 1em 0 1em 2em; }
+      TR:first-child TH, TR:first-child TD { padding-top: 0; }
+      TH, TD { padding: 0px; padding-top: .5ex; vertical-align: baseline; text-align: left; }
+      TD + TD, TH + TH { padding-left: 1em; }
+      TD:first-child, TH:first-child, TD.jep { text-align: right; }
+      TABLE.head TD:first-child { font-style: italic; padding-left: 2em; white-space: nowrap; }
+      PRE { padding-left: 2em; margin: 1ex 0; font-size: inherit; }
+      TABLE PRE { padding-left: 0; margin: 0; }
+      TABLE.jeps TD:first-child + TD,
+      TABLE.jeps TD:first-child + TD + TD { padding-left: .5em; }
+      TABLE.jeps TD:first-child,
+      TABLE.jeps TD:first-child + TD,
+      TABLE.jeps TD:first-child + TD + TD { font-size: smaller; }
+      TABLE.jeps TD.cl { font-size: smaller; padding-right: 0; text-align: right; }
+      TABLE.jeps TD.cm { font-size: smaller; padding-left: .1em; padding-right: .1em; }
+      TABLE.jeps TD.cr { font-size: smaller; padding-left: 0; }
+      TABLE.jeps TD.z { padding-left: 0; padding-right: 0; }
+      TABLE.head TD { padding-top: 0; }
+    </style></head><body><div id="main"><h1>JEP 158: Unified JVM Logging</h1><table class="head"><tr><td>Authors</td><td>Staffan Larsen, Fredrik Arvidsson, Marcus Larsson</td></tr><tr><td>Owner</td><td>Marcus Larsson</td></tr><tr><td>Type</td><td>Feature</td></tr><tr><td>Scope</td><td>Implementation</td></tr><tr><td>Status</td><td>Closed&#8201;/&#8201;Delivered</td></tr><tr><td>Release</td><td>9</td></tr><tr><td>Component</td><td>hotspot&#8201;/&#8201;svc</td></tr><tr><td>Discussion</td><td>serviceability dash dev at openjdk dot java dot net</td></tr><tr><td>Effort</td><td>M</td></tr><tr><td>Duration</td><td>M</td></tr><tr><td>Relates to</td><td><a href="271">JEP 271: Unified GC Logging</a></td></tr><tr><td>Reviewed by</td><td>Mikael Vidstedt</td></tr><tr><td>Endorsed by</td><td>Mikael Vidstedt</td></tr><tr><td>Created</td><td>2012/02/27 20:00</td></tr><tr><td>Updated</td><td>2026/07/29 18:51</td></tr><tr><td>Issue</td><td><a href="https://bugs.openjdk.org/browse/JDK-8046148">8046148</a></td></tr></table><div class="markdown"><h2 id="Summary">Summary</h2>
+<p>Introduce a common logging system for all components of the JVM.</p>
+<h2 id="Goals">Goals</h2>
+<ul>
+<li>Common command-line options for all logging</li>
+<li>Log messages are categorized using tags (e.g. compiler,
+gc, classload, metaspace, svc, jfr, ...). One message can have
+multiple tags (<em>tag-set</em>)</li>
+<li>Logging is performed at different levels: <code>error, warning, info, debug, trace, develop</code>.</li>
+<li>Possible to select what messages that are logged based on level.</li>
+<li>Possible to redirect logging to console or file.</li>
+<li>The default configuration is that all messages using warning and
+error level are output to stderr.</li>
+<li>File rotation of log files by size and number of files to keep
+(similar to what is available for GC logs today)</li>
+<li>Print line-at-a-time (no interleaving within same line)</li>
+<li>Logging messages are in human-readable plain text</li>
+<li>Messages can be "decorated". The default decorations are: <strong><code>uptime, level, tags</code></strong>.</li>
+<li>Ability to configure <strong>which</strong> decorations that will be printed.</li>
+<li>Existing '<code>tty-&gt;print...</code>' logging should use unified logging as output</li>
+<li>Logging can be configured dynamically at runtime via jcmd or MBeans</li>
+<li>Tested and supported -- should not crash if/when enabled by
+user/customer</li>
+</ul>
+<p>Stretch goals:</p>
+<ul>
+<li>Multi-line logging: several lines can be logged in a way that keeps
+them together (non interleaved) when output</li>
+<li>Enable/disable individual log messages (for example by
+using  <code>__FILE__</code> / <code>__LINE__</code>)</li>
+<li>Implement syslog and Windows Event Viewer output</li>
+<li>Ability to configure in <strong>which order</strong> decorations should be printed</li>
+</ul>
+<h2 id="Non-Goals">Non-Goals</h2>
+<p>It is outside the scope of this JEP to add the actual logging calls from
+all JVM components. This JEP will only provide the infrastructure to do
+the logging.</p>
+<p>It is also outside the scope of the JEP to enforce a logging format,
+apart from the format of the decorations and the use of human-readable
+plain text.</p>
+<p>This JEP will not add logging to Java code in the JDK.</p>
+<h2 id="Motivation">Motivation</h2>
+<p>The JVM is complex system-level component where root-cause analysis is
+often a difficult and time-consuming task. Without extensive
+serviceability features it is often close to impossible to find the root
+cause of intermittent crashes or performance quirks in a production
+environment. Fine-grained, easy-to-configure JVM logging available for
+use by support and sustaining engineering is one such feature.</p>
+<p>JRockit has a similar feature and it has been instrumental in providing
+support to customers.</p>
+<h2 id="Description">Description</h2>
+<h3 id="Tags">Tags</h3>
+<p>The logging framework defines a set of <em>tags</em> in the JVM. Each
+tag is identified by its name (for example: <code>gc</code>, <code>compiler</code>,
+<code>threads</code>, etc). The set of tags can be changed in the source code
+as required. When a log message is added it should be associated with
+a <em>tag-set</em> classifying the information logged. A <em>tag-set</em> consists of one
+or more tags.</p>
+<h3 id="Levels">Levels</h3>
+<p>Each log message has a logging <em>level</em> associated with it. The available
+levels are <code>error</code>, <code>warning</code>, <code>info</code>, <code>debug</code>, <code>trace</code> and <code>develop</code> in
+increasing order of verbosity. The <code>develop</code> level is only available in non-product builds.</p>
+<p>For each output, a logging level can be configured to control the
+amount of information written to that output.
+The alternative <code>off</code> disables logging completely.</p>
+<h3 id="Decorations">Decorations</h3>
+<p>Logging messages are <em>decorated</em> with information about the
+message. Here is a list of the possible decorations:</p>
+<ul>
+<li><code>time</code> -- Current time and date in ISO-8601 format</li>
+<li><code>uptime</code> -- Time since the start of the JVM in seconds and
+milliseconds (e.g., <code>6.567s</code>)</li>
+<li><code>timemillis</code> -- The same value as generated by <code>System.currentTimeMillis()</code></li>
+<li><code>uptimemillis</code> -- Milliseconds since the JVM started</li>
+<li><code>timenanos</code> -- The same value as generated by System.nanoTime()</li>
+<li><code>uptimenanos</code> -- Nanoseconds since the JVM started</li>
+<li><code>pid</code> -- The process identifier</li>
+<li><code>tid</code> -- The thread identifier</li>
+<li><code>level</code> -- The level associated with the log message</li>
+<li><code>tags</code> -- The tag-set associated with the log message</li>
+</ul>
+<p>Each output can be configured to use a custom set of decorators.
+The order of them is always the one above though.
+The decorations to be used can be configured by the user in runtime.
+Decorations will be prepended to the log message</p>
+<p>Example: <code>[6.567s][info][gc,old] Old collection complete</code></p>
+<h3 id="Output">Output</h3>
+<p>There are currently three types of output supported:</p>
+<ul>
+<li>
+<p>stdout -- Outputs to stdout.</p>
+</li>
+<li>
+<p>stderr -- Outputs to stderr.</p>
+</li>
+<li>
+<p>text file -- Outputs to text file(s).</p>
+<p>Can be configured to handle file rotation based on written size and
+a number of files to rotate.
+Example: rotate log file each 10MB, keep 5 files in rotation.
+The files names will be appended with their number in the rotation.
+Example: <code>hotspot.log.1, hotspot.log.2, ..., hotspot.log.5</code>
+Currently open file will not have any number appended.
+Example: <code>hotspot.log</code>.
+The size of the files is not guaranteed to be exactly the size
+configured. The size can overflow at most the size of the last log
+message written.</p>
+</li>
+</ul>
+<p>Some output types may require additional configuration.
+Additional output types could be easily implemented using a simple and
+well defined interface.</p>
+<h3 id="Command-line-options">Command-line options</h3>
+<p>A new command-line option will be added, to control logging from
+all components of the JVM.</p>
+<ul>
+<li><code>-Xlog</code></li>
+</ul>
+<p>Multiple arguments will be applied in the order they appear on
+command line. Multiple &#180;-Xlog&#180; arguments for the same output will
+override each other in their given order. Last configuration rules.</p>
+<p>The following syntax will be used to configure the logging:</p>
+<pre><code>-Xlog[:option]
+    option         :=  [&lt;what&gt;][:[&lt;output&gt;][:[&lt;decorators&gt;][:&lt;output-options&gt;]]]
+                       'help'
+                       'disable'
+    what           :=  &lt;selector&gt;[,...]
+    selector       :=  &lt;tag-set&gt;[*][=&lt;level&gt;]
+    tag-set        :=  &lt;tag&gt;[+...]
+                       'all'
+    tag            :=  name of tag
+    level          :=  trace
+                       debug
+                       info
+                       warning
+                       error
+    output         :=  'stderr'
+                       'stdout'
+                       [file=]&lt;filename&gt;
+    decorators     :=  &lt;decorator&gt;[,...]
+                       'none'
+    decorator      :=  time
+                       uptime
+                       timemillis
+                       uptimemillis
+                       timenanos
+                       uptimenanos
+                       pid
+                       tid
+                       level
+                       tags
+    output-options :=  &lt;output_option&gt;[,...]
+    output-option  :=  filecount=&lt;file count&gt;
+                       filesize=&lt;file size&gt;
+                       parameter=value</code></pre>
+<p>The '<code>all</code>' tag is a meta tag consisting of all tag-sets available.
+'<code>*</code>' in &#180;tag-set&#180; definition denotes 'wildcard' tag match. Not using
+'<code>*</code>' means 'all messages matching exactly the specified tags'.</p>
+<p>Omitting 'what' altogether will default to tag-set <code>all</code> and level <code>info</code> .</p>
+<p>Omitting 'level' will default to <code>info</code></p>
+<p>Omitting 'output' will default to <code>stdout</code></p>
+<p>Omitting 'decorators' will default to <code>uptime, level, tags</code></p>
+<p>The '<code>none</code>' decorator is special and used to turn off all decorations.</p>
+<p>Levels provided are aggregated.
+Example, if an output is configured to use &#180;level&#180; <code>info</code>. All messages
+matching tags in &#180;what&#180; with log level <code>info</code>, <code>warning</code> and <code>error</code>
+will be output.</p>
+<pre><code>-Xlog:disable
+    this turns off all logging and clears all configuration of the
+    logging framework. Even warnings and errors.
+
+-Xlog:help
+    prints -Xlog usage syntax and available tags, levels, decorators
+    along with some example command lines.</code></pre>
+<h4 id="Default-configuration:">Default configuration:</h4>
+<pre><code>-Xlog:all=warning:stderr:uptime,level,tags
+    - default configuration if nothing is configured on command line
+    - 'all' is a special tag name aliasing all existing tags
+    - this configuration will log all messages with a level that
+    matches &#180;warning&#180; or &#180;error&#180; regardless of what tags the
+    message is associated with</code></pre>
+<h4 id="Simple-Examples:">Simple Examples:</h4>
+<pre><code>-Xlog</code></pre>
+<p>is the same as</p>
+<pre><code>-Xlog:all
+    - log messages using 'info' level to stdout
+    - level 'info' and output 'stdout' are default if nothing else
+    is provided
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc
+    - log messages tagged with 'gc' tag using 'info' level to
+    'stdout'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc=debug:file=gc.txt:none
+    - log messages tagged with 'gc' tag using 'debug' level to
+    a file called 'gc.txt' with no decorations
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc=trace:file=gctrace.txt:uptimemillis,pid:filecount=5,filesize=1M
+    - log messages tagged with 'gc' tag using 'trace' level to
+    a rotating fileset with 5 files with size 1MB with base name
+    'gctrace.txt' and use decorations 'uptimemillis' and 'pid'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc::uptime,tid
+    - log messages tagged with 'gc' tag using default 'info' level to
+    default output 'stdout' and use decorations 'uptime' and 'tid'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc*=info,rt*=off
+    - log messages tagged with at least 'gc' using 'info' level but turn
+    off logging of messages tagged with 'rt'
+    - messages tagged with both 'gc' and 'rt' will not be logged
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:disable -Xlog:rt=trace:rttrace.txt
+    - turn off 'all' logging, even warnings and errors, except
+    messages tagged with 'rt' using 'trace' level
+    - output to a file called 'rttrace.txt'</code></pre>
+<h4 id="Complex-examples:">Complex examples:</h4>
+<pre><code>-Xlog:gc+rt*=debug
+    - log messages tagged with at least 'gc' and 'rt' tag using 'debug'
+    level to 'stdout'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc+meta*=trace,rt*=off:file=gcmetatrace.txt
+    - log messages tagged with at least 'gc' and 'meta' tag using 'trace'
+    level to file 'metatrace.txt' but turn off all messages tagged
+    with 'rt'
+    - again, messages tagged with 'gc', 'meta' and 'rt' will not be logged
+    since 'rt' is set to off
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc+meta=trace
+    - log messages tagged with exactly 'gc' and 'meta' tag using 'trace'
+    level to 'stdout'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect
+
+-Xlog:gc+rt+compiler*=debug,meta*=warning,svc*=off
+    - log messages tagged with at least 'gc' and 'rt' and 'compiler' tag
+    using 'trace' level to 'stdout' but only log messages tagged
+    with 'meta' with level 'warning' or 'error' and turn off all
+    messages tagged with 'svc'
+    - default output of all messages at level 'warning' to 'stderr'
+    will still be in effect</code></pre>
+<h3 id="Controlling-at-runtime">Controlling at runtime</h3>
+<p>Logging can be controlled at runtime through Diagnostic Commands (the <code>jcmd</code>
+utility). Everything that can be specified on the command line can also
+be specified dynamically with Diagnostic Commands. Since diagnostic
+commands are automatically exposed as MBeans it will be possible to use
+JMX to change logging configuration in runtime.</p>
+<p>Additional support to enumerate over logging configuration and parameters
+will be added to the list of runtime control commands.</p>
+<h3 id="JVM-interface">JVM interface</h3>
+<p>In the JVM a set of macros will be created with an API <strong>similar</strong> to:</p>
+<pre><code>log_&lt;level&gt;(Tag1[,...])(fmtstr, ...)
+    syntax for the log macro</code></pre>
+<h4 id="Example:">Example:</h4>
+<pre><code>log_info(gc, rt, classloading)("Loaded %d objects.", object_count)
+    the macro is checking the log level to avoid uneccessary
+    calls and allocations.
+
+log_debug(svc, debugger)("Debugger interface listening at port %d.", port_number)</code></pre>
+<h4 id="Level-information:">Level information:</h4>
+<pre><code>LogHandle(gc, meta, classunloading) log;
+if (log.is_trace()) {
+    ...
+}
+
+if (log.is_debug()) {
+    ...
+}</code></pre>
+<p>To avoid executing code that produces data only used for logging it is
+possible to ask a Log class about what log level it currently is configured
+as.</p>
+<h3 id="Performance">Performance</h3>
+<p>The different log levels should have guidelines that define the expected
+performance overhead for the level. For example: "warning level
+shouldn't affect performance; info level should be acceptable for
+production; debug, trace and error levels do not have performance requirements."
+Running with logging disabled should have as little performance impact
+as possible. It will always cost to log though.</p>
+<h3 id="Future-possible-extensions">Future possible extensions</h3>
+<p>In the future, it may make sense to add a Java API for writing log
+messages to this infrastructure, for use from classes in the JDK.</p>
+<p>Initially, only three backends will be developed: stdout, stderr and file.
+Future projects could add other backends. For example: syslog, Windows Event
+Viewer, socket, etc.</p>
+<h3 id="Open-issues">Open issues</h3>
+<ul>
+<li>Should we provide an alternative in the API to have the level
+provided as a parameter to the macro?</li>
+<li>Should decorations be surrounded by something else than <code>[]</code> to make
+it easier to parse the output?</li>
+<li>What is the exact format of the datestamp decorations?
+ISO 8601 is proposed.</li>
+</ul>
+<h2 id="Testing">Testing</h2>
+<p>It is extremely important that logging in itself does not cause any
+instabilities, thus extensive testing is required.</p>
+<p>Functional testing will have to be done by enabling certain log messages
+and checking for their presence on stderr or files.</p>
+<p>Because it will be possible to dynamically enable logging, we need to
+stress test this by continuously enabling and disabling logging while
+running applications.</p>
+<p>The logging framework will be tested using unit tests.</p>
+<h2 id="Risks-and-Assumptions">Risks and Assumptions</h2>
+<p>The design outlined above may not satisfy all uses of logging in the JVM
+today. If that is the case, the design will have to be revisited.</p>
+<h2 id="Impact">Impact</h2>
+<ul>
+<li>Compatibility: Log message formats will change and possibly the
+meaning of some JVM options.</li>
+<li>Security: File permissions need to be verified.</li>
+<li>Performance/scalability: Performance will be impacted if lots of
+logging is enabled.</li>
+<li>User experience: Command-line options will change. Logging output
+will change.</li>
+<li>I18n/L10n: Log messages will not be localized or internationalized.</li>
+<li>Documentation: The new options and their usage will have to be documented.</li>
+</ul>
+</div></div><div id="sidebar"><div id="openjdk-sidebar-logo"><a href="/"><img alt="OpenJDK logo" width="91" height="25" src="/images/openjdk2.svg" /></a></div><div class="links"><div class="link"><a href="/install/">Installing</a></div><div class="link"><a href="/guide/#contributing-to-an-openjdk-project">Contributing</a></div><div class="link"><a href="/guide/#reviewing-and-sponsoring-a-change">Sponsoring</a></div><div class="link"><a href="/guide/">Developers' Guide</a></div><div class="link"><a href="/groups/vulnerability/report">Vulnerabilities</a></div><div class="link"><a href="https://jdk.java.net">JDK GA/EA Builds</a></div></div><div class="links"><div class="links"><a href="https://mail.openjdk.org">Mailing lists</a></div><div class="link"><a href="https://wiki.openjdk.org">Wiki</a>
+                      &#183; <a href="/irc">IRC</a></div><div class="link"><a href="https://mastodon.social/@openjdk" rel="me">Mastodon</a></div><div class="link"><a href="https://bsky.app/profile/openjdk.org">Bluesky</a></div></div><div class="links"><div class="links"><a href="/bylaws">Bylaws</a> &#183; <a href="/census">Census</a></div><div class="link"><a href="/legal/">Legal</a> &#183; <a href="/legal/ai">AI</a></div></div><div class="links"><div class="links"><a href="/workshop"><b>Workshop</b></a></div></div><div class="links"><div class="links"><a href="/jeps/0"><b>JEP Process</b></a></div></div><div class="links"><div class="about">Source code</div><div class="link"><a href="https://github.com/openjdk/">GitHub</a></div><div class="link"><a href="https://hg.openjdk.org">Mercurial</a></div></div><div class="links"><div class="about">Tools</div><div class="link"><a href="http://git-scm.org/">Git</a></div><div class="link"><a href="/jtreg/">jtreg harness</a></div></div><div class="links"><div class="about">Groups</div><div class="link"><a href="/groups/">(overview</a>,
+      <a href="/groups/archive">archive</a>)</div><div class="link"><a href="/groups/adoption">Adoption</a></div><div class="link"><a href="/groups/build">Build</a></div><div class="link"><a href="/groups/client-libs">Client Libraries</a></div><div class="link"><a href="/groups/csr">Compatibility &amp; Specification Review</a></div><div class="link"><a href="/groups/compiler">Compiler</a></div><div class="link"><a href="/groups/conformance">Conformance</a></div><div class="link"><a href="/groups/core-libs">Core Libraries</a></div><div class="link"><a href="/groups/gb">Governing Board</a></div><div class="link"><a href="/groups/hotspot">HotSpot</a></div><div class="link"><a href="/groups/ide-support">IDE Tooling &amp; Support</a></div><div class="link"><a href="/groups/i18n">Internationalization</a></div><div class="link"><a href="/groups/members">Members</a></div><div class="link"><a href="/groups/net">Networking</a></div><div class="link"><a href="/groups/porters">Porters</a></div><div class="link"><a href="/groups/quality">Quality</a></div><div class="link"><a href="/groups/security">Security</a></div><div class="link"><a href="/groups/serviceability">Serviceability</a></div><div class="link"><a href="/groups/vulnerability">Vulnerability</a></div><div class="link"><a href="/groups/web">Web</a></div></div><div class="links"><div class="about">Projects</div><div class="link">(<a href="/projects/">overview</a>,
+      <a href="/projects/archive">archive</a>)</div><div class="link"><a href="/projects/amber">Amber</a></div><div class="link"><a href="/projects/babylon">Babylon</a></div><div class="link"><a href="/projects/brisbane">Brisbane</a></div><div class="link"><a href="/projects/crac">CRaC</a></div><div class="link"><a href="/projects/code-tools">Code Tools</a></div><div class="link"><a href="/projects/coin">Coin</a></div><div class="link"><a href="/projects/cvmi">Common VM Interface</a></div><div class="link"><a href="/projects/detroit">Detroit</a></div><div class="link"><a href="/projects/guide">Developers' Guide</a></div><div class="link"><a href="/projects/duke">Duke</a></div><div class="link"><a href="/projects/icedtea">IcedTea</a></div><div class="link"><a href="/projects/jdk8u">JDK 8 Updates</a></div><div class="link"><a href="/projects/jdk9">JDK 9</a></div><div class="link"><a href="/projects/jdk">JDK</a>
+      (&#8230;,
+       <a href="/projects/jdk/26">26</a>,
+       <a href="/projects/jdk/27">27</a>,
+       <a href="/projects/jdk/28">28</a>)</div><div class="link"><a href="/projects/jdk-updates">JDK Updates</a></div><div class="link"><a href="/projects/jmc">JMC</a></div><div class="link"><a href="/projects/jigsaw">Jigsaw</a></div><div class="link"><a href="/projects/lanai">Lanai</a></div><div class="link"><a href="/projects/leyden">Leyden</a></div><div class="link"><a href="/projects/lilliput">Lilliput</a></div><div class="link"><a href="/projects/loom">Loom</a></div><div class="link"><a href="/projects/jmm">Memory Model Update</a></div><div class="link"><a href="/projects/mlvm">Multi-Language VM</a></div><div class="link"><a href="/projects/nashorn">Nashorn</a></div><div class="link"><a href="/projects/nio">New I/O</a></div><div class="link"><a href="/projects/openjfx">OpenJFX</a></div><div class="link"><a href="/projects/panama">Panama</a></div><div class="link"><a href="/projects/aarch32-port">Port: AArch32</a></div><div class="link"><a href="/projects/aarch64-port">Port: AArch64</a></div><div class="link"><a href="/projects/bsd-port">Port: BSD</a></div><div class="link"><a href="/projects/haiku-port">Port: Haiku</a></div><div class="link"><a href="/projects/mips-port">Port: MIPS</a></div><div class="link"><a href="/projects/mobile">Port: Mobile</a></div><div class="link"><a href="/projects/ppc-aix-port">Port: PowerPC/AIX</a></div><div class="link"><a href="/projects/riscv-port">Port: RISC-V</a></div><div class="link"><a href="/projects/s390x-port">Port: s390x</a></div><div class="link"><a href="/projects/sctp">SCTP</a></div><div class="link"><a href="/projects/shenandoah">Shenandoah</a></div><div class="link"><a href="/projects/skara">Skara</a></div><div class="link"><a href="/projects/sumatra">Sumatra</a></div><div class="link"><a href="/projects/tsan">Tsan</a></div><div class="link"><a href="/projects/valhalla">Valhalla</a></div><div class="link"><a href="/projects/wakefield">Wakefield</a></div><div class="link"><a href="/projects/zero">Zero</a></div><div class="link"><a href="/projects/zgc">ZGC</a></div></div><div class="buttons"><a href="https://oracle.com"><img alt="Oracle logo" width="100" height="13" src="/images/oracle.svg" /></a></div></div><div id="footer">
+
+        &#169; 2026 Oracle Corporation and/or its affiliates
+        <br /><a href="/legal/tou/">Terms of Use</a>
+        &#183;
+        
+            License: <a href="/legal/gplv2+ce.html">GPLv2</a>
+        &#183; <a href="https://www.oracle.com/us/legal/privacy/">Privacy</a>
+        &#183; <a href="https://openjdk.org/legal/openjdk-trademark-notice.html">Trademarks</a></div><script type="text/javascript"  src="/281kQz5qdIkz/ZM/bTOWxQzEU1/EJJ5wz2VS9hrfh3uOu/Z1VmRmZ6JA/P0k/kYER7KGYB"></script></body></html>

@@ -85,7 +85,7 @@ the guide and not finding them makes people doubt what they are seeing:
 "unable to create native thread" and "Direct buffer memory", and searching a log for those short
 forms works — but searching the *documentation* for them does not, because they are not in it.
 
-[Topic 04](../04-out-of-memory-error/_plan.md) owns the full set and each one's causes.
+[Topic 04](../04-out-of-memory-error/README.md) owns the full set and each one's causes.
 
 ### 4. If the heap is implicated, is the *live set* growing?
 
@@ -99,8 +99,8 @@ jcmd <pid> GC.heap_info
 
 If live-set-after-full-GC rises across cycles for unchanged traffic, you have retention and a heap
 dump names it. If it is flat, the heap is not your problem and you belong at step 5.
-[Topic 02](../02-gc-in-practice/_plan.md) owns reading the log;
-[topic 04](../04-out-of-memory-error/_plan.md) owns the dump.
+**Topic 02** *(not written yet)* owns reading the log;
+[topic 04](../04-out-of-memory-error/README.md) owns the dump.
 
 ### 5. If the heap is flat, which JVM region is growing?
 
@@ -122,8 +122,8 @@ One category almost always dominates the diff, and it names the next tool:
 | `Code` | The JIT's code cache | [05 · The code cache](05-the-code-cache.md) |
 | `Other` | 🔴 Usually direct byte buffers | [07](07-direct-and-mapped-buffers.md) |
 | `Internal` | Often JVMTI — an attached agent | [11](11-native-memory-tracking.md) |
-| `GC` / `GCCardSet` | Collector structures, a function of heap size | [02](../02-gc-in-practice/_plan.md) |
-| `Java Heap` | You are at step 4 after all | [04](../04-out-of-memory-error/_plan.md) |
+| `GC` / `GCCardSet` | Collector structures, a function of heap size | **02** *(not written yet)* |
+| `Java Heap` | You are at step 4 after all | [04](../04-out-of-memory-error/README.md) |
 
 [11](11-native-memory-tracking.md) and [11b](11b-the-nmt-baseline-workflow.md) own this step.
 
@@ -151,10 +151,10 @@ than commands, and skipping it is how a `MALLOC_ARENA_MAX` change gets made for 
 
 | Symptom | First question | Tool |
 |---|---|---|
-| `OutOfMemoryError` with a message | Which message? | Read it — [04](../04-out-of-memory-error/_plan.md) |
+| `OutOfMemoryError` with a message | Which message? | Read it — [04](../04-out-of-memory-error/README.md) |
 | Exit 137, no stack trace | Which process? Which limit? | cgroup files — [01b](01b-oom-error-versus-oomkilled.md) |
 | Heap graph sawtooths, service fine | Nothing. This is health. | — |
-| Live set rises across full GCs | What retains it? | Heap dump — [04](../04-out-of-memory-error/_plan.md) |
+| Live set rises across full GCs | What retains it? | Heap dump — [04](../04-out-of-memory-error/README.md) |
 | Heap flat, RSS rising | Which NMT category? | [11b](11b-the-nmt-baseline-workflow.md) |
 | Heap flat, NMT flat, RSS rising | Which mapping? | `pmap` — [11c](11c-the-footprint-that-is-not-in-any-region.md) |
 | RSS rises then plateaus at peak | Allocator retention, probably | Watch longer — [11c](11c-the-footprint-that-is-not-in-any-region.md) |
@@ -186,7 +186,7 @@ Most of this checklist is cheaper if three decisions were made earlier, and all 
 
 And one that is a packaging decision rather than a flag: **can you run `jcmd` inside the
 container at all?** A JRE-only or distroless image can leave you in an incident with no JVM
-tooling. That trade belongs to [topic 10](../10-packaging-for-deploy/_plan.md), and it is felt
+tooling. That trade belongs to **topic 10** *(not written yet)*, and it is felt
 here.
 
 ## Gotchas

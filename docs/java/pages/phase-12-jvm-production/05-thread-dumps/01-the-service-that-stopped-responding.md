@@ -33,7 +33,7 @@ Two failures look identical from outside and could not be more different underne
 | CPU | Near zero | Pinned, often one core per stuck thread |
 | Threads are | Waiting for something that never arrives | Executing, forever |
 | The dump shows | Threads parked, blocked, or in `Object.wait` | The same frames on repeated dumps, *running* |
-| The tool after the dump | Usually none — the dump names the cause | A profiler ([topic 06](../06-jfr-and-profiling/_plan.md)) |
+| The tool after the dump | Usually none — the dump names the cause | A profiler (**topic 06** *(not written yet)*) |
 
 🔴 **Look at CPU before you do anything else, because it splits the problem in half.** Idle means
 something is waiting: a lock, a socket, a pool, a latch. Busy means something is executing:
@@ -132,7 +132,7 @@ is reached for last.
 A liveness probe that returns a static 200 from a dedicated thread, or from a path that touches no
 pool, keeps reporting healthy while every request thread is blocked. That is not a monitoring
 gap so much as a health check that does not exercise anything —
-[topic 12's graceful shutdown](../12-graceful-shutdown/_plan.md) and topic 08's metrics both
+**topic 12's graceful shutdown** *(not written yet)* and topic 08's metrics both
 touch this, and the dump is what proves it.
 
 **★ One dump cannot distinguish stuck from busy.**

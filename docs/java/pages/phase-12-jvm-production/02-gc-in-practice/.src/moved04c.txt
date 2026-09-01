@@ -1,0 +1,158 @@
+## Returning memory, and the flag interaction that silences it
+
+> *"By default, ZGC uncommits unused memory, returning it to the operating system. This is useful
+> for applications and environments where memory footprint is a concern, but might have a
+> negative impact on the latency of Java threads. You can disable this feature with the
+> command-line option `-XX:-ZUncommit`. Furthermore, **memory will not be uncommitted so that the
+> heap size shrinks below the minimum heap size, `-Xms`. This means this feature will be
+> implicitly disabled if the minimum heap size, `-Xms`, is configured to be equal to the maximum
+> heap size, `-Xmx`.**"*
+>
+> *"You can configure an uncommit delay by using `-XX:ZUncommitDelay=<seconds>`. The default is
+> 300 seconds."*
+
+**`-Xms` equal to `-Xmx` silently disables uncommit.** That pairing is standard advice for
+latency-sensitive services and is repeated in the G1 chapter, so it arrives on ZGC command lines
+by habit — and the tuning guide agrees it is right *for latency*:
+
+> *"Allowing the GC to commit and uncommit memory while the application is running could have a
+> negative impact on the latency of Java threads. If extremely low latency is the main reason for
+> running with ZGC, consider running with the same value for `-Xmx` and `-Xms`, and use
+> `-XX:+AlwaysPreTouch` to page in memory before the application starts."*
+
+So the decision is explicit rather than accidental: fixed heap plus pre-touch for latency, or a
+floating heap for footprint. What you must not do is set `-Xms` equal to `-Xmx` and then wonder
+why the pod never gives memory back.
+
+## Large pages, and the comparison trap
+
+> *"Configuring ZGC to use large pages will generally yield better performance (in terms of
+> throughput, latency and start up time) and comes with no real disadvantage, except that it's
+> slightly more complicated to setup. The setup process typically requires root privileges, which
+> is why it's not enabled by default."*
+>
+> *"An alternative to using explicit large pages … is to use transparent huge pages. Use of
+> transparent huge pages is usually not recommended for latency sensitive applications because it
+> tends to cause unwanted latency spikes."*
+>
+> *"**ZGC uses shmem huge pages for the heap**, so the following kernel setting also needs to be
+> configured: `echo advise > /sys/kernel/mm/transparent_hugepage/shmem_enabled`"*
+>
+> *"It is important to check these kernel settings when comparing the performance of different
+> GCs. Some Linux distributions forcefully enable transparent huge pages for private pages by
+> configuring `/sys/kernel/mm/transparent_hugepage/enabled` to be set to `always`, while leaving
+> `/sys/kernel/mm/transparent_hugepage/shmem_enabled` at the default `never`. In this case, **all
+> GCs but ZGC will make use of transparent huge pages for the heap**."*
+
+That last paragraph is a benchmarking landmine with a name. On a distribution with the common
+default, a G1-versus-ZGC comparison silently gives G1 huge pages and denies them to ZGC, and
+the resulting numbers are about kernel configuration rather than about collectors.
+
+## A documentation conflict worth knowing
+
+The man page says:
+
+> *"`-XX:ZFragmentationLimit=percent` — Sets the maximum acceptable heap fragmentation (in
+> percent) for ZGC. By default, this option is set to 25."*
+
+`z_globals.hpp` at tag `jdk-25+36` says:
+
+```cpp
+product(double, ZFragmentationLimit, 5.0,
+        "Maximum allowed heap fragmentation")
+        range(0, 100)
+
+product(double, ZYoungCompactionLimit, 25.0,
+        "Maximum allowed garbage in young pages")
+        range(0, 100)
+```
+
+⚠️ **The man page's 25 appears to be stale**; the shipped default is 5.0, and 25.0 now belongs
+to a different, generational-only flag. I have not found a release note that settles which
+change moved it, so the honest statement is: **trust the source, verify with
+`-XX:+PrintFlagsFinal`, and do not quote the man page's number.**
+
+## When ZGC is the wrong choice
+
+- **A small heap.** The tuning guide's own range starts at *"a few hundred megabytes"*, and
+  below 32 GB you are trading compressed oops away for a pause guarantee you may not need.
+- **A CPU-limited container.** Barriers plus concurrent threads plus no spare cores equals
+  worse latency than G1, not better.
+- **Throughput is the metric.** *"At the cost of some throughput"* is in the first sentence of
+  the chapter.
+- **The heap is tightly sized.** Concurrent collection needs headroom; without it you get
+  allocation stalls, which are harder to see than pauses.
+- **The pause budget is already met.** If G1's p99 pause is 30 ms against a 200 ms budget,
+  ZGC's improvement is unobservable and its costs are not.
+
+
+@@G@@
+**★ `-Xms` equal to `-Xmx` silently disables `ZUncommit`.**
+The guide states it directly: memory is never uncommitted below `-Xms`, so equal values disable
+the feature implicitly. That pairing arrives on ZGC command lines out of G1 habit, and the
+result is a service that never returns memory while its operators believe it does.
+
+**★ On many Linux distributions a G1-vs-ZGC benchmark gives huge pages to G1 only.**
+ZGC uses shmem huge pages, and the common default leaves `shmem_enabled` at `never` while
+`enabled` is `always`. The guide states the consequence: *"all GCs but ZGC will make use of
+transparent huge pages for the heap"*. Check both sysctl values before believing any comparison.
+
+**★ Transparent huge pages are recommended against for latency-sensitive work by the same
+document that explains how to enable them.**
+*"Use of transparent huge pages is usually not recommended for latency sensitive applications
+because it tends to cause unwanted latency spikes."* Explicit large pages are the recommended
+form, and they need root and a configured pool.
+
+**★ The man page's `ZFragmentationLimit` default of 25 does not match the source's 5.0.**
+`z_globals.hpp` at `jdk-25+36` declares `ZFragmentationLimit` as 5.0; the 25.0 is
+`ZYoungCompactionLimit`. Verify with `-XX:+PrintFlagsFinal` rather than quoting either
+document.
+
+**★ `ZYoungGCThreads` and `ZOldGCThreads` are diagnostic flags.**
+They need `-XX:+UnlockDiagnosticVMOptions` first, and ZGC is designed to size its own thread
+counts. Reaching for them is nearly always a sign that the actual constraint is CPU quota.
+
+**★ Switching to ZGC without measuring throughput is switching on one axis and hoping about
+two others.**
+The chapter's first paragraph says *"at the cost of some throughput"*; JEP 439's risk section
+names barrier overhead; compressed oops are lost; headroom must grow. A change that improves
+p99.9 pause time and costs 15% of peak requests per second may still be right — but it should
+be a decision, not a discovery.
+
+## Interview questions
+
+
+@@Q@@
+**★ Why is `-Xms` equal to `-Xmx` a more consequential choice under ZGC than under G1?**
+Because it disables a feature ZGC has and G1 does not. ZGC uncommits unused memory by default,
+returning it to the operating system after `ZUncommitDelay` seconds — but never below `-Xms`,
+so setting the two equal disables uncommit implicitly. Under G1 the same setting only removes
+resize work. The pairing is standard latency advice and the ZGC chapter endorses it for that
+purpose — *"if extremely low latency is the main reason for running with ZGC, consider running
+with the same value for `-Xmx` and `-Xms`, and use `-XX:+AlwaysPreTouch`"* — but it should be a
+deliberate trade of footprint for latency, not something inherited from a G1 command line.
+`-XX:SoftMaxHeapSize` is usually the better answer in a container, since it gives ZGC a target
+without giving up the reserve.
+
+**★ When would you *not* use ZGC?**
+When the pause budget is already met — if G1's p99 pause is 30 ms against a 200 ms requirement,
+ZGC improves a number nobody is measuring and costs throughput, footprint and headroom that
+somebody is. When CPU is constrained, because barriers and concurrent threads have to be paid
+for and a 1- or 2-CPU container has nothing to pay with. When the heap is small, since below
+32 GB you give up compressed oops for a guarantee you may not need, and the guide's own useful
+range starts at *"a few hundred megabytes"*. When the heap is tightly sized, because a
+concurrent collector without headroom stalls threads instead of pausing. And when throughput is
+the metric being optimised, in which case the honest comparison is not G1 versus ZGC but G1
+versus Parallel.
+
+**★ You are asked to benchmark G1 against ZGC on Linux. What do you check before you start?**
+The transparent huge page settings, because they can decide the result on their own. ZGC uses
+shmem huge pages for the heap, and many distributions ship with
+`/sys/kernel/mm/transparent_hugepage/enabled` set to `always` while
+`shmem_enabled` stays at the default `never` — in which case, in the guide's own words, *"all
+GCs but ZGC will make use of transparent huge pages for the heap"*. That is a comparison of
+kernel configuration wearing a collector's clothes. I would also equalise `-Xms` and `-Xmx`
+across both runs (which incidentally disables ZGC's uncommit, so state it), give both the same
+CPU allocation, and measure throughput and allocation stalls as well as pause times — because
+measuring only pauses guarantees ZGC wins and tells you nothing about whether it should.
+

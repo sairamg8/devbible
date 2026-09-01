@@ -144,7 +144,7 @@ efficiency you gave up. The band in between is strictly worse than the bottom of
 There is a second cost that people forget to count. More heap is not free for the collector
 either: a larger live set means more to mark, more to copy and larger remembered sets. So
 crossing the cliff can raise GC cost at the same time as it lowers effective capacity.
-[Topic 02 · GC in practice](../02-gc-in-practice/_plan.md) owns that side of the argument.
+**Topic 02 · GC in practice** *(not written yet)* owns that side of the argument.
 
 ## When the cliff does not matter
 
@@ -159,7 +159,7 @@ for it the cliff is severe.
 
 That is the question to answer first. If you do not know which describes your heap,
 [08d · Measuring an object](08d-measuring-an-object.md) is how you find out, and a heap
-histogram from [topic 04](../04-out-of-memory-error/_plan.md) will tell you what the heap is
+histogram from [topic 04](../04-out-of-memory-error/README.md) will tell you what the heap is
 mostly made of.
 
 ## Gotchas

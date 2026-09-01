@@ -81,7 +81,7 @@ and it frequently is not.
 
 **★ `jcmd` may not be present in your image.** A JRE-only or distroless base image can leave you
 with a production incident and no JVM tooling at all. That is a packaging decision made months
-earlier — [topic 10](../10-packaging-for-deploy/_plan.md) weighs it — and it is felt exactly here.
+earlier — **topic 10** *(not written yet)* weighs it — and it is felt exactly here.
 
 **★ A native agent allocates outside NMT.** Profilers, APM agents and security agents attach and
 allocate. If the gap appeared when an agent was rolled out fleet-wide, that correlation is the

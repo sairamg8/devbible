@@ -105,7 +105,7 @@ hypothesis is not that it is huge — it is that it references something shared.
 `toFootprint()`'s class breakdown identifies the culprit immediately.
 
 This is the same distinction as **shallow versus retained size** in a heap analyser, and it has
-the same trap: shared structure is counted for whoever you measured. [Topic 04's](../04-out-of-memory-error/_plan.md)
+the same trap: shared structure is counted for whoever you measured. [Topic 04's](../04-out-of-memory-error/README.md)
 dominator tree is the equivalent tool for a whole heap, and it handles sharing properly, which is
 why it — not JOL — is what you use on a real dump.
 
@@ -156,7 +156,7 @@ Measuring is the easy part; the reason to measure is usually one of three decisi
 
 What JOL is *not* for is exploring a production heap. It measures objects you hand it, in a JVM
 you are running. For "what is in this heap", the tool is a heap dump and an analyser, and that is
-[topic 04](../04-out-of-memory-error/_plan.md).
+[topic 04](../04-out-of-memory-error/README.md).
 
 ## Gotchas
 

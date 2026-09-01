@@ -78,8 +78,10 @@ metadata — raising `-Xmx` does not add a byte to either. `Out of swap space?` 
 **04 · `OutOfMemoryError`** *(not written yet)*.
 
 Two of these are not on that list and are worth knowing anyway, because they come from
-regions this topic owns: `OutOfMemoryError: Direct buffer memory` for
-`-XX:MaxDirectMemorySize` — [07 · Direct and mapped buffers](07-direct-and-mapped-buffers.md) —
+regions this topic owns: direct-buffer exhaustion against `-XX:MaxDirectMemorySize` — whose
+message is **not** the short string people grep for but
+`Cannot reserve N bytes of direct buffer memory (allocated: …, limit: …)`, thrown by
+`java.nio.Bits` — [07 · Direct and mapped buffers](07-direct-and-mapped-buffers.md) —
 and `java.lang.OutOfMemoryError: unable to create native thread`, which is a thread-stack and
 process-limit problem, not a heap problem — [06 · Thread stacks](06-thread-stacks.md).
 

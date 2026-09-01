@@ -76,7 +76,7 @@ dump of the same thread proves nothing whatsoever.
 
 ⚠️ Even then, a dump is a poor loop-finding tool compared with a sampling profiler, because three
 samples is a very small sample. It narrows the search to a thread and a rough area; JFR or
-async-profiler ([topic 06](../06-jfr-and-profiling/_plan.md)) tells you where the time actually
+async-profiler (**topic 06** *(not written yet)*) tells you where the time actually
 goes. **Use dumps to identify the loop exists and which thread; use a profiler to find the line.**
 
 ## How far apart, and how many

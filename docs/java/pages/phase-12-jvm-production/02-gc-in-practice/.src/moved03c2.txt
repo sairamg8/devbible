@@ -1,0 +1,116 @@
+## Tuning for throughput and for heap size
+
+The guide's directions, which are the same lever pushed the other way:
+
+> *"The main idea is to increase the maximum pause time by using `-XX:MaxGCPauseMillis`. The
+> generation sizing heuristics will automatically adapt the size of the young generation, which
+> directly determines the frequency of pauses."*
+>
+> *"In some cases, `-XX:G1MaxNewSizePercent`, the maximum allowed young generation size, may
+> limit throughput by limiting young generation size. This can be diagnosed by looking at
+> region summary output of `gc+heap=info` logging. In this case the combined percentage of Eden
+> regions and Survivor regions is close to `-XX:G1MaxNewSizePercent` percent of the total number
+> of regions."*
+>
+> *"You can minimize heap resizing work by disabling it; set the options `-Xms` and `-Xmx` to
+> the same value. In addition, you can use `-XX:+AlwaysPreTouch` to move the operating system
+> work to back virtual memory with physical memory to VM startup time. Both of these measures
+> can be particularly desirable in order to make pause times more consistent."*
+>
+> *"Enabling the use of large pages by using `-XX:+UseLargePages` may also improve throughput."*
+>
+> *"Like other collectors, G1 aims to size the heap so that the time spent in garbage collection
+> is below the ratio determined by the `-XX:GCTimeRatio` option. Adjust this option to make G1
+> meet your requirements."*
+
+`AlwaysPreTouch`, from the man page: *"Requests the VM to touch every page on the Java heap
+after requesting it from the operating system and before handing memory out to the
+application. By default, this option is disabled and all pages are committed as the
+application uses the heap space."* It converts a distributed cost into a startup cost — which
+is a straight win for a long-lived service and a straight loss for anything measured on
+startup time, including a serverless function and a Kubernetes readiness probe with a short
+`initialDelaySeconds`.
+
+## String deduplication, which is G1-only
+
+> *"G1 can optionally try to deduplicate duplicate strings on the Java heap concurrently. …
+> String deduplication is disabled by default. You can enable it using the option
+> `-XX:+UseStringDeduplication`."*
+
+The man page adds the requirement and the mechanism:
+
+> *"`-XX:+UseStringDeduplication` — Enables string deduplication. By default, this option is
+> disabled. To use this option, you must enable the garbage-first (G1) garbage collector.
+> String deduplication reduces the memory footprint of `String` objects on the Java heap by
+> taking advantage of the fact that many `String` objects are identical. Instead of each
+> `String` object pointing to its own character array, identical `String` objects can point to
+> and share the same character array."*
+
+and the age gate, from `globals.hpp`: `StringDeduplicationAgeThreshold` defaults to **3**, with
+the man page noting *"String objects that are promoted to an old heap region before this age
+has been reached are always considered candidates for deduplication."* The full treatment is
+[01 · Memory layout → 10c · String deduplication](../01-memory-layout/10c-string-deduplication.md).
+
+## What the guide says G1 is not, one more time
+
+The comparison section is worth re-reading in the context of a flag table, because it says
+plainly that some of what you might be trying to tune away is inherent:
+
+> *"G1 may exhibit higher overhead than the above collectors, affecting throughput due to its
+> concurrent nature."*
+>
+> *"ZGC aims to provide significantly smaller pause times at further cost of throughput."*
+
+If a flag search has run for a week, the honest reading of those two sentences is that the
+collector choice, not the flag set, is the variable — [06 · Choosing](06-choosing.md).
+
+
+@@G@@
+**★ `-XX:+UseStringDeduplication` requires G1 and does nothing anywhere else.**
+Man page: *"To use this option, you must enable the garbage-first (G1) garbage collector."*
+It is one of the flags people carry when moving from G1 to ZGC, where it is inert.
+
+**★ Raising `MaxGCPauseMillis` is the documented way to increase throughput, and it feels
+wrong.**
+A longer permitted pause lets G1 grow the young generation, which reduces collection
+*frequency*, which reduces total GC overhead. The guide's throughput section leads with
+exactly this. Teams tend to only ever move that number downwards.
+
+**★ If Eden plus Survivor regions sit at 60% of the heap, `G1MaxNewSizePercent` is the
+constraint.**
+The guide gives the diagnosis explicitly: look at `gc+heap=info` region summaries, and if the
+combined Eden and Survivor share is close to `G1MaxNewSizePercent`, the young generation is
+being capped rather than sized. That is a throughput ceiling with no other symptom.
+
+**★ Setting `-Xms` equal to `-Xmx` changes three things at once.**
+It removes heap resizing work (a `Sys`-time source in `gc+cpu`), it fixes the meaning of every
+"percentage of heap in use" flag, and it disables ZGC's uncommit behaviour if you later switch
+collectors. Only the first is usually intended; all three happen.
+
+**★ `-XX:+AlwaysPreTouch` moves cost to startup, which is not always where you want it.**
+It touches every heap page before the application runs. On a long-lived service that removes
+page-fault jitter from the steady state. On anything judged by startup time — a serverless
+function, a pod with a short readiness delay, a CLI — it is a straight regression, and the
+larger the heap the larger the regression.
+
+
+@@Q@@
+**★ You want more throughput out of a G1 service. What is the first flag you change and why?**
+`-XX:MaxGCPauseMillis`, upwards. It reads backwards, but it is the guide's own first
+recommendation: a larger permitted pause lets G1's sizing heuristics grow the young
+generation, which directly reduces the *frequency* of collections and therefore total GC
+overhead. If that does not help and the region summary in `gc+heap=info` shows Eden plus
+Survivor sitting near 60% of regions, the constraint is `G1MaxNewSizePercent` rather than the
+pause goal. Beyond that the guide points at reducing concurrent work — the refinement flags —
+and at pinning `-Xms` to `-Xmx` with `AlwaysPreTouch` to remove resizing work.
+
+**★ Should you set `-XX:+AlwaysPreTouch`?**
+It depends entirely on whether startup time is judged. What it does is commit and touch every
+heap page before the application starts, moving page-fault and zeroing work out of the steady
+state. On a long-lived service with a fixed heap, especially one where consistent pause times
+matter, it is a clear win, and the guide recommends it alongside `-Xms` equal to `-Xmx` for
+exactly that reason — high `Sys` time in `gc+cpu` is one of the symptoms it removes. On
+anything where startup is measured — a serverless function, a pod whose readiness probe has a
+short initial delay, a CLI tool — it is a regression proportional to heap size, because the
+JVM now writes to every page before serving a request.
+
