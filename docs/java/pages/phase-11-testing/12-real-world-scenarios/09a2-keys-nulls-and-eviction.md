@@ -1,7 +1,7 @@
 ---
 title: "The cache-hit test proves reads, and every stale-data incident is a write — so the tests that matter most are the ones about the key the entry landed under, the null that got cached, and the eviction that addressed a different entry"
 sidebar_label: "09a2 · Keys, nulls and eviction"
-sidebar_position: 48
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>

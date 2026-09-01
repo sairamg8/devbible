@@ -1,7 +1,7 @@
 ---
 title: "A message listener annotation does four jobs and exactly one of them is your code, so the fast, exhaustive test of a consumer is a plain method call with no broker in sight — and the entire skill is knowing precisely which four things that test cannot prove"
 sidebar_label: "08 · A message consumer"
-sidebar_position: 64
+sidebar_position: 35
 ---
 
 <span className="db-tier t-master">Master</span>

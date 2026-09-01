@@ -1,7 +1,7 @@
 ---
 title: "The fourth seam is the only one where the problem is time rather than provenance — a class initialises once per class loader and may have read its configuration before your test existed — and past it lies the fifth answer, which is to leave the class alone and put the new behaviour beside it"
 sidebar_label: "11c · Class-init config and the fifth answer"
-sidebar_position: 72
+sidebar_position: 49
 ---
 
 <span className="db-tier t-master">Master</span>

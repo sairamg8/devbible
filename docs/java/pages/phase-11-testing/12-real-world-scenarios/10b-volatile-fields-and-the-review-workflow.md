@@ -1,7 +1,7 @@
 ---
 title: "Every pinned payload contains at least one value that changes on its own — an id, a timestamp, a generated link — and the four ways of dealing with it are not equally good: removing the volatility beats normalising it, normalising beats matching it by shape, and matching by shape beats the thing most teams do, which is give up and go lenient"
 sidebar_label: "10b · Volatile fields and review"
-sidebar_position: 69
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>

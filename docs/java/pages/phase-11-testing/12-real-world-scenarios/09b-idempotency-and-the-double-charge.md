@@ -1,7 +1,7 @@
 ---
 title: "A retry that produces a second charge is not caused by the retry — it is caused by a key that was regenerated on the second attempt, which is why the assertion that matters is not that the call succeeded but that both attempts carried the same idempotency key"
 sidebar_label: "09b · Idempotency: the client side"
-sidebar_position: 49
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>

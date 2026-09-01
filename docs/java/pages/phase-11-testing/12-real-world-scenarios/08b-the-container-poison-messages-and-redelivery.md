@@ -1,7 +1,7 @@
 ---
 title: "A container test exists to answer one question a method call cannot — what happens to a message the handler refuses — and the answer is decided by defaults you did not choose, one of which retries ten times with no delay at all"
 sidebar_label: "08b · The container and poison messages"
-sidebar_position: 66
+sidebar_position: 37
 ---
 
 <span className="db-tier t-master">Master</span>

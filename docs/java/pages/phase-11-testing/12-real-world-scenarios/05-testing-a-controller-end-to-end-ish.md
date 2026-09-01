@@ -1,7 +1,7 @@
 ---
 title: "The controller slice is Java's React Testing Library render: a real request goes in, real JSON comes out, and everything below the service interface is a mock — which makes the interesting question not how to write it but exactly where the slice's edge falls"
 sidebar_label: "05 · A controller, end-to-end-ish"
-sidebar_position: 34
+sidebar_position: 26
 ---
 
 <span className="db-tier t-master">Master</span>

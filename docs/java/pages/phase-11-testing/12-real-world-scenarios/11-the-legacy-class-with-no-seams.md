@@ -1,7 +1,7 @@
 ---
 title: "You cannot safely change code you cannot test and you cannot test this code without changing it, and the way out is not courage — it is a characterization test that records what the thing currently does, bugs included, written before you touch a line"
 sidebar_label: "11 · The legacy class with no seams"
-sidebar_position: 70
+sidebar_position: 47
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "An event listener and a retry policy fail in the same way and for the same reason — the annotation is inert until something enables it, and the test that would have caught that is the one asserting a count rather than an outcome"
 sidebar_label: "07c · Events and retries"
-sidebar_position: 63
+sidebar_position: 34
 ---
 
 <span className="db-tier t-master">Master</span>

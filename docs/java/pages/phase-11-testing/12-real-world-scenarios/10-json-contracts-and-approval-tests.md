@@ -1,7 +1,7 @@
 ---
 title: "Pinning a whole JSON payload is the closest Java gets to a Jest snapshot, and the difference between a test that guards a contract and one that merely detects change is not the tool — it is whether a human can look at the diff and decide, which is a property you design in and Jest's update button designs out"
 sidebar_label: "10 · JSON contracts and approval tests"
-sidebar_position: 68
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>

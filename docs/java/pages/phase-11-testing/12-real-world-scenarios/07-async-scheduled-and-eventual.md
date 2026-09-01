@@ -1,7 +1,7 @@
 ---
 title: "Testing something that happens on another thread is three separate questions wearing one coat — does the work do the right thing, does the wiring actually run it off-thread, and does the caller behave while it is pending — and every flaky async test in your suite is one of the three being answered by accident"
 sidebar_label: "07 · Async, scheduled and eventual"
-sidebar_position: 60
+sidebar_position: 31
 ---
 
 <span className="db-tier t-master">Master</span>

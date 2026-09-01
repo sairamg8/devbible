@@ -1,7 +1,7 @@
 ---
 title: "MockWebServer is a queue with a socket attached, which makes it three lines to set up and structurally unable to fail on a wrong URL — and every socket-based test you add buys transport realism with startup time, port contention and a longer distance between the failure and its cause"
 sidebar_label: "03e · MockWebServer and the cost"
-sidebar_position: 16
+sidebar_position: 18
 ---
 
 <span className="db-tier t-master">Master</span>

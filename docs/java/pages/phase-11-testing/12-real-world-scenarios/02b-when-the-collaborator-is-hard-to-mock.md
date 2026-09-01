@@ -191,7 +191,7 @@ you need to reproduce a bug from a specific date.
 - The ordinary case where the constructor already takes the collaborator:
   [02](02-mocking-a-class-you-own.md) and [02a](02a-building-the-test-class.md).
 - The legacy class with no seams at all, where you write characterization tests first, is
-  **chunk 11 · The legacy class with no seams** in this topic.
+  [11 · The legacy class with no seams](11-the-legacy-class-with-no-seams.md) in this topic.
 - `mockStatic`, `MockedStatic` and the mock-maker plumbing belong to **topic 04 ·
   Mockito**; this chunk uses them, it does not own them.
 

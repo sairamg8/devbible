@@ -1,7 +1,7 @@
 ---
 title: "\"Test this private method\" is the one request in this whole topic that has no testing answer at all — Mockito cannot express it, the library that could has not shipped since 2020, and every route that works is a statement about the design rather than about the test"
 sidebar_label: "02d2 · The private method"
-sidebar_position: 40
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -166,7 +166,7 @@ not a blessing for testing your own private logic. What it costs you:
   about the change.
 
 Use it to get a characterization test around code you are about to change, then delete it
-once the seam exists. That sequencing is **chunk 11 · The legacy class with no seams** in
+once the seam exists. That sequencing is [11 · The legacy class with no seams](11-the-legacy-class-with-no-seams.md) in
 this topic.
 
 ## The one case that is genuinely about mocking: a protected hook
@@ -203,8 +203,8 @@ works because the method is overridable, and private methods are not.
 - Why mocking part of the class under test is a failure mode with its own symptoms:
   [01a · The four failure modes](01a-the-four-failure-modes.md).
 - Characterization tests around code with no seams at all, which is where
-  `ReflectionTestUtils` legitimately earns a temporary place, is **chunk 11 · The legacy class
-  with no seams** in this topic.
+  `ReflectionTestUtils` legitimately earns a temporary place, is [11 · The legacy class
+  with no seams](11-the-legacy-class-with-no-seams.md) in this topic.
 - Spies, partial mocks and `doReturn(...).when(spy)` belong to **topic 04 · Mockito** —
   [`../04-mockito/08-spies.md`](../04-mockito/08-spies.md) and
   [`../04-mockito/08e-partial-mocks.md`](../04-mockito/08e-partial-mocks.md).

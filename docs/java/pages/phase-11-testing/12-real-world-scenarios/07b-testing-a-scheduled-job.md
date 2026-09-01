@@ -1,7 +1,7 @@
 ---
 title: "A scheduled job is two artefacts pretending to be one — a cron string and a body of work — and the only reason anyone waits for a schedule in a test is that the annotated method's signature is legally forbidden from taking the arguments that would make it testable"
 sidebar_label: "07b · Testing a scheduled job"
-sidebar_position: 62
+sidebar_position: 33
 ---
 
 <span className="db-tier t-master">Master</span>

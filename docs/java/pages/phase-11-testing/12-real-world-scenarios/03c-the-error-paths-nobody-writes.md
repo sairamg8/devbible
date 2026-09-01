@@ -1,7 +1,7 @@
 ---
 title: "Every HTTP client test suite has a happy path and a 404, and every HTTP client outage is caused by one of the failures nobody wrote a test for — this chunk does the ones that arrive with a status code, and the assertion worth making is never on Spring's exception type but on your translation of it"
 sidebar_label: "03c · The error paths nobody writes"
-sidebar_position: 11
+sidebar_position: 15
 ---
 
 <span className="db-tier t-master">Master</span>

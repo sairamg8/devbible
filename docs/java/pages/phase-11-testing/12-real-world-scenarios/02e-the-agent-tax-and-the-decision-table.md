@@ -1,7 +1,7 @@
 ---
 title: "Every trick in the 02 band is paid for with a Java agent the JDK has been restricting since 21, a thread-local scope that silently does not apply where you think, and a memory leak the project documents but cannot fix — so the last question of the band is not can I mock this, it is which of refactor, hand-written double or agent am I buying"
 sidebar_label: "02e · The agent tax, and the table"
-sidebar_position: 41
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>

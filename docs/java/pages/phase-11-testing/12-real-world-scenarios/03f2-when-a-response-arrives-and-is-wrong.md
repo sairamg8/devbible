@@ -1,7 +1,7 @@
 ---
 title: "A 200 with an HTML body, a JSON document that stops halfway, an empty success and a pair of redirects pointing at each other are all successes as far as the status line is concerned, and each one surfaces as a different Spring exception from a different place in the client"
 sidebar_label: "03f2 · When the response is wrong"
-sidebar_position: 45
+sidebar_position: 20
 ---
 
 <span className="db-tier t-master">Master</span>

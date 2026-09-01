@@ -1,7 +1,7 @@
 ---
 title: "A vendor client with forty methods is the one shape where Mockito's answer is easiest and worst, because the mock compiles, the test passes, and every stub on it is an unverified guess about somebody else's software"
 sidebar_label: "02d · Vendor clients"
-sidebar_position: 39
+sidebar_position: 9
 ---
 
 <span className="db-tier t-master">Master</span>

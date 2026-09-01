@@ -81,7 +81,7 @@ means construct the actual object in the test.
 | `ApplicationEventPublisher` | **Mock** | It is a boundary, and asserting *what was published* is usually the point of the test. |
 | A `@Transactional` proxy / Spring AOP behaviour | **Real, in a Spring test** | A mock has no proxy at all — a plain unit test can never observe rollback. |
 | Database | **Real, Testcontainers** (**topic 07**) | See the "passed on H2" argument. |
-| Message broker | **Real container** for the container test; **plain method call** for the handler | See **chunk 08 · A message consumer** in this topic. |
+| Message broker | **Real container** for the container test; **plain method call** for the handler | See [08 · A message consumer](08-a-message-consumer.md) in this topic. |
 | `System.getenv` / `System.getProperty` | **Inject configuration** | Boot binds these to a `@ConfigurationProperties` type; take that type as a parameter. |
 | The filesystem | **Real, with JUnit's `@TempDir`** | The API surface is huge and the real one is fast. |
 

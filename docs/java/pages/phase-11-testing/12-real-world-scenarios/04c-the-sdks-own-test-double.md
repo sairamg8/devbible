@@ -1,7 +1,7 @@
 ---
 title: "When the vendor ships its own mock server you should use it — but read what it says it does not do first, because Stripe's own README tells you plainly that stripe-mock will return a success where you asked for a decline"
 sidebar_label: "04c · The SDK's own test double"
-sidebar_position: 32
+sidebar_position: 24
 ---
 
 <span className="db-tier t-master">Master</span>

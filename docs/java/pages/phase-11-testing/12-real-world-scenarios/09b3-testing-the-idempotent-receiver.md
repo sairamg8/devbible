@@ -1,7 +1,7 @@
 ---
 title: "The four tests an idempotent receiver needs, and why the one everybody writes first — two threads and a latch — is flaky in the exact direction that lets the duplicate charge through"
 sidebar_label: "09b3 · Testing the receiver"
-sidebar_position: 51
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>

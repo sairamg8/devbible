@@ -207,7 +207,7 @@ mocking unnecessary.
   **topic 05 · The test pyramid**; the database side belongs to **topic 08 · Test data
   patterns**.
 - Break 3's slice in full is **topic 06 · MockMvc**.
-- Break 4's Java half is **chunk 07 · Async, scheduled and eventual** in this topic.
+- Break 4's Java half is [07 · Async, scheduled and eventual](07-async-scheduled-and-eventual.md) in this topic.
 
 ## Gotchas
 

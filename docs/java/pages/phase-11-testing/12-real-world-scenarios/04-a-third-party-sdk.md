@@ -1,7 +1,7 @@
 ---
 title: "A payment, mail or storage SDK hands you a fat client you cannot mock honestly, so the test you write is not a test of the SDK but a test of the one class you wrote to keep the SDK out of everything else"
 sidebar_label: "04 · A third-party SDK"
-sidebar_position: 30
+sidebar_position: 22
 ---
 
 <span className="db-tier t-master">Master</span>

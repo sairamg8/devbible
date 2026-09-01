@@ -1,7 +1,7 @@
 ---
 title: "content().json(...) defaults to a lenient, extensible comparison, which means the assertion most people write about an outgoing request body cannot fail on an extra field, a null where a value was meant, or a number that grew a decimal place"
 sidebar_label: "03d2 · Asserting the body"
-sidebar_position: 43
+sidebar_position: 17
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -212,7 +212,7 @@ object — a `record` — which removes the question.
   assertion is testing *your* serialization rather than the defaults:
   [03 · Mocking an outbound HTTP API](03-mocking-an-outbound-http-api.md), route B.
 - Pinning a whole payload as a fixture instead of writing the expected JSON inline is the
-  approval-test idea, which is **chunk 10 · JSON contracts and approval tests** in this topic.
+  approval-test idea, which is [10 · JSON contracts and approval tests](10-json-contracts-and-approval-tests.md) in this topic.
 - The money-shaped version of all of this — the amount, the currency, the key — is
   [09b · Idempotency and the double charge](09b-idempotency-and-the-double-charge.md) and
   [04b](04b-the-adapter-and-the-three-test-populations.md).

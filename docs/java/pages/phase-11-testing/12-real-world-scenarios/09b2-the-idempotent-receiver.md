@@ -1,7 +1,7 @@
 ---
 title: "Being the receiver of a retried request is the harder half, because the naive implementation is a check-then-act race that passes every sequential test you can write and duplicates under exactly the concurrency that a retrying client produces"
 sidebar_label: "09b2 · The idempotent receiver"
-sidebar_position: 50
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -147,7 +147,7 @@ unbounded table.
   without the money: [09](09-caching-and-idempotency.md) and
   [09a](09a-the-cache-that-outlives-the-test.md).
 - At-least-once delivery and the consumer-side testing of a redelivered message is
-  **chunk 08 · A message consumer** in this topic.
+  [08 · A message consumer](08-a-message-consumer.md) in this topic.
 - **Topic 07 · Testcontainers** owns running the real database that makes the constraint real.
 
 ## Gotchas

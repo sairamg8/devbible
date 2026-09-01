@@ -1,7 +1,7 @@
 ---
 title: "A cache changes nothing about what a method returns, so the only thing a test can observe is a call that did not happen — and three separate arrangements will each make that call-count assertion pass or fail for reasons that have nothing to do with your caching"
 sidebar_label: "09 · Caching, and the cache-hit test"
-sidebar_position: 46
+sidebar_position: 39
 ---
 
 <span className="db-tier t-master">Master</span>

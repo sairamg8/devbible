@@ -1,7 +1,7 @@
 ---
 title: "Every chunk in this topic answers a question you only have once you are already holding the ticket, so this last one runs in the other direction: here is the ticket, here is which of the preceding chapters applies, and here is the one test worth writing before you touch the code"
 sidebar_label: "12 · The checklist"
-sidebar_position: 80
+sidebar_position: 50
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -55,11 +55,17 @@ and it is worth the ten minutes even when the fix is obvious.
 | "As an authenticated user with role X" | [06 · Security in a test](06-security-in-a-test.md) | Never writing the unauthenticated 401 |
 | `@Async`, a listener, "eventually" | [07 · Async, scheduled and eventual](07-async-scheduled-and-eventual.md) → [07a · Waiting without sleeping](07a-waiting-without-sleeping.md) | `Thread.sleep`, and a suite that is slow *and* flaky |
 | A `@Scheduled` job | [07b · Testing a scheduled job](07b-testing-a-scheduled-job.md) | Waiting for the schedule instead of calling the method |
+| An application event, or a retry policy | [07c · Events and retries](07c-events-and-retries.md) | Assuming a listener is asynchronous, and not knowing the retry defaults |
 | A message consumer | [08 · A message consumer](08-a-message-consumer.md) → [08b · The container and poison messages](08b-the-container-poison-messages-and-redelivery.md) | Testing the handler and calling it done |
+| The payload, and what a handler test cannot prove | [08a · The payload and the boundary](08a-the-payload-and-the-boundary.md) | Believing a green handler test covers deserialisation |
+| A dead-letter destination | [08b2 · Asserting the dead letter](08b2-asserting-the-dead-letter.md) | Asserting redelivery happened rather than that it stopped |
 | A cache | [09 · Caching, and the cache-hit test](09-caching-and-idempotency.md) → [09a · The cache that outlives the test](09a-the-cache-that-outlives-the-test.md) | A cache surviving into the next test, via the context cache |
 | A duplicate charge, a replayed request | [09b · Idempotency: the client side](09b-idempotency-and-the-double-charge.md) | Testing the happy path of a mechanism that exists for the unhappy one |
 | A payload another team consumes | [10 · JSON contracts and approval tests](10-json-contracts-and-approval-tests.md) | An approval test that is a change-detector |
+| A payload with timestamps or ids in it | [10b · Volatile fields and review](10b-volatile-fields-and-the-review-workflow.md) | Pinning a payload that can never match twice |
 | Code with no seams at all | [11 · The legacy class with no seams](11-the-legacy-class-with-no-seams.md) | Refactoring before pinning the current behaviour |
+| "Where does this object come from?" | [11b · Three seams for a collaborator](11b-three-seams-for-a-collaborator.md) | Reaching for a mocking agent before trying a parameter |
+| "*When* was this value read?" | [11c · Class init, config, and the fifth answer](11c-class-init-config-and-the-fifth-answer.md) | Refactoring at all, when sprouting a new class would do |
 
 ## Before the fix: what to write
 

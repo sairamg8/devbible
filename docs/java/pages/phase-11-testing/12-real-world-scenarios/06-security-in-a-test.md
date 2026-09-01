@@ -1,7 +1,7 @@
 ---
 title: "\"As an authenticated user with role X\" has five different mechanisms in Spring Security's test module and they do not do the same thing — one populates a holder for the whole test method, the others decorate a single request, and knowing which is which decides whether your method-security test runs at all"
 sidebar_label: "06 · Security in a test"
-sidebar_position: 36
+sidebar_position: 28
 ---
 
 <span className="db-tier t-master">Master</span>

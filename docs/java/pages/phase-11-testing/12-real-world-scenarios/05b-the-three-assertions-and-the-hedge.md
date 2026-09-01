@@ -1,7 +1,7 @@
 ---
 title: "A controller does three things, so a finished controller test makes three assertions — and the one that is almost always missing is the one that proves the request actually bound to the object the service received"
 sidebar_label: "05b · The three assertions"
-sidebar_position: 35
+sidebar_position: 27
 ---
 
 <span className="db-tier t-master">Master</span>

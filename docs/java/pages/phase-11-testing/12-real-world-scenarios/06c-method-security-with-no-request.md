@@ -1,7 +1,7 @@
 ---
 title: "When the rule lives on a service method rather than on the filter chain the test has no HTTP in it at all, and three separate mechanisms — a context without method security, a self-invocation, an unproxyable method — will each make the annotation do nothing while every positive test stays green"
 sidebar_label: "06c · Method security, no request"
-sidebar_position: 38
+sidebar_position: 30
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "A 429 is the one HTTP error that tells you exactly what to do next, in a header with two legal formats, and almost every client both ignores the instruction and parses only one of the formats"
 sidebar_label: "03g · The 429 and Retry-After"
-sidebar_position: 17
+sidebar_position: 21
 ---
 
 <span className="db-tier t-master">Master</span>

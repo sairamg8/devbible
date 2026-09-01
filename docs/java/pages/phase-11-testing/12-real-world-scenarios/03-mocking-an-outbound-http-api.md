@@ -1,7 +1,7 @@
 ---
 title: "Testing the code that calls somebody else's HTTP API is two tests at two levels, and the reason people write one bad test instead is that they mock RestClient rather than binding a MockRestServiceServer to the builder the client was made from"
 sidebar_label: "03 · Mocking an outbound HTTP API"
-sidebar_position: 9
+sidebar_position: 12
 ---
 
 <span className="db-tier t-master">Master</span>

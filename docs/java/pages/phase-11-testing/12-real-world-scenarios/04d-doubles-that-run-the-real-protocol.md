@@ -1,7 +1,7 @@
 ---
 title: "The best doubles are not mock servers with hardcoded fixtures but real implementations of the protocol — LocalStack, GreenMail, an embedded broker — and the single property that decides how much a test against one is worth is whether the double keeps state"
 sidebar_label: "04d · Doubles that run the protocol"
-sidebar_position: 33
+sidebar_position: 25
 ---
 
 <span className="db-tier t-master">Master</span>

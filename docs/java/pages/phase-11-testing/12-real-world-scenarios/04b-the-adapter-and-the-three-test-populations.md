@@ -1,7 +1,7 @@
 ---
 title: "Once the SDK lives behind one interface, \"how do I test the payment integration\" stops being one question and becomes three with three different answers, and the only one worth agonising over is the four lines of error translation in the adapter's catch blocks"
 sidebar_label: "04b · The three test populations"
-sidebar_position: 31
+sidebar_position: 23
 ---
 
 <span className="db-tier t-master">Master</span>

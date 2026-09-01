@@ -1,7 +1,7 @@
 ---
 title: "Three of the four things that make a class untestable are the same question wearing different clothes — where does this object come from — and each has a smallest move that the compiler verifies and you can revert in one step"
 sidebar_label: "11b · Three seams for a collaborator"
-sidebar_position: 71
+sidebar_position: 48
 ---
 
 <span className="db-tier t-master">Master</span>

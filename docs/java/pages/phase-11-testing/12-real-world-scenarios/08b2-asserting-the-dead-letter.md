@@ -1,7 +1,7 @@
 ---
 title: "Dead-lettering and continuing to consume are two behaviours that fail independently, so they need two assertions — and the second one, publishing a good message after the poison one, is the test that maps onto the incident people actually have"
 sidebar_label: "08b2 · Asserting the dead letter"
-sidebar_position: 67
+sidebar_position: 38
 ---
 
 <span className="db-tier t-master">Master</span>

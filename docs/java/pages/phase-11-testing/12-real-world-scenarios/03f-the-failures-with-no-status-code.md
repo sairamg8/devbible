@@ -1,7 +1,7 @@
 ---
 title: "The failures that arrive without a status code are worse than the ones that have one, because a connect timeout means the request never left and a read timeout means it may already have been processed — and Spring collapses both into the same ResourceAccessException"
 sidebar_label: "03f · Failures with no status code"
-sidebar_position: 44
+sidebar_position: 19
 ---
 
 <span className="db-tier t-master">Master</span>

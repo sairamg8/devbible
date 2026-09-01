@@ -1,7 +1,7 @@
 ---
 title: "Waiting is the part of an async test that decides whether it is fast, honest and diagnosable or slow, flaky and silent — and the three levers are the executor you install, the operator you wait with, and the fact that Awaitility polls on a thread that is not yours"
 sidebar_label: "07a · Waiting without sleeping"
-sidebar_position: 61
+sidebar_position: 32
 ---
 
 <span className="db-tier t-master">Master</span>

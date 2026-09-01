@@ -1,7 +1,7 @@
 ---
 title: "Every HTTP client test in every codebase asserts the response and half of them assert nothing at all about the request, which is why the bugs that reach production are a wrong path, an unencoded query parameter, a missing auth header and an idempotency key that changes on retry"
 sidebar_label: "03d · Asserting what you sent"
-sidebar_position: 42
+sidebar_position: 16
 ---
 
 <span className="db-tier t-master">Master</span>

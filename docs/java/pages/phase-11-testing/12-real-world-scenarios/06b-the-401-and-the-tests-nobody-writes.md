@@ -1,7 +1,7 @@
 ---
 title: "The \"an admin can delete an order\" test passes just as happily on an endpoint with no security at all, so the only tests that can detect a missing rule are the negative ones — and on a POST they routinely pass for the wrong reason because CSRF, not authorization, produced the 403"
 sidebar_label: "06b · The 401 nobody writes"
-sidebar_position: 37
+sidebar_position: 29
 ---
 
 <span className="db-tier t-master">Master</span>

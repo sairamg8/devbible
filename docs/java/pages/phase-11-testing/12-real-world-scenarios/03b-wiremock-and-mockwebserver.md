@@ -1,7 +1,7 @@
 ---
 title: "When the thing you need to test is the transport rather than the request, you need a real socket, and the choice between WireMock and MockWebServer is a choice between a stub server with a matching engine and a queue that hands back whatever you enqueued next"
 sidebar_label: "03b · WireMock and MockWebServer"
-sidebar_position: 10
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>

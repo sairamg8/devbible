@@ -1,7 +1,7 @@
 ---
 title: "A passing cache test is not evidence of a working cache, because the entry it observed may have been left in the reused application context by a test class that ran minutes earlier — and a false pass is the one failure mode nobody investigates"
 sidebar_label: "09a · The cache that outlives the test"
-sidebar_position: 47
+sidebar_position: 40
 ---
 
 <span className="db-tier t-master">Master</span>

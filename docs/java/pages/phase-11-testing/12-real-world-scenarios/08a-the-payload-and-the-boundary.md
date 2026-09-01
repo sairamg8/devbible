@@ -1,7 +1,7 @@
 ---
 title: "The handler test starts from an object you constructed, so it is structurally incapable of catching the failure that actually breaks consumers — the producer changed the payload — and that gap, plus three others, is the exact specification of what a container test is for"
 sidebar_label: "08a · The payload and the boundary"
-sidebar_position: 65
+sidebar_position: 36
 ---
 
 <span className="db-tier t-master">Master</span>
