@@ -181,6 +181,33 @@ line, not the line's colour.
 `detected = false`. `MutationTestUnit` initialises every mutant to `NOT_STARTED` before dispatching it.
 If either appears in output you are looking at a run that did not finish.
 
+**★ A mutant that was filtered has no status at all, which is a fourth thing on top of the ten.**
+Every filter in [02b3](02b3-the-filter-inventory.md) removes candidates *before* they are dispatched, so
+a logging line, a `record` accessor or a loop-counter increment simply produces no entry — not
+`SURVIVED`, not "filtered", nothing. The absence is invisible in the report and shows up only as a
+mutant count lower than the source would lead you to expect. Any reasoning of the form "there is no
+finding here, so this is fine" has to account for it.
+
+**★ `SURVIVED` is the most expensive status to produce, so a report full of findings is also a slow run.**
+Pitest stops at the first failing test, so a kill costs one test on average and a survivor costs *all* of
+its covering tests, run to completion ([02](02-how-it-works.md)). The first pitest run on a weakly
+asserted codebase is therefore the slowest one it will ever have, and it gets faster as you fix things —
+which is the opposite of most people's expectation and worth saying before anyone times it
+([06 · The cost](06-the-cost.md)).
+
+**★ `NO_COVERAGE` on a line you know is covered usually means the covering test was excluded from the run.**
+`excludedTestClasses`, `excludedGroups`, or a surefire `<excludes>` block that pitest copied
+([05 · Wiring it up](05-wiring-it-up.md)) all remove tests from pitest's view without removing them from
+your build. The mutant is then genuinely uncovered *as far as pitest is concerned*, and the report is
+correct about a run that is not the run you thought you configured.
+
+**★ A status can be carried forward from a previous run rather than measured in this one.**
+With incremental analysis enabled, pitest reuses statuses from the history file when it believes nothing
+relevant changed ([05c](05c-scoping-and-incremental.md)). The report does not distinguish a status that
+was measured today from one that was inferred, so "this mutant is killed" may be a statement about last
+week. That is the trade incremental analysis makes, and it is fine as long as nobody reads the report as
+a fresh measurement.
+
 ## Interview questions
 
 **★ What are PIT's possible outcomes for a mutant, and which of them are findings?**
@@ -209,5 +236,35 @@ testing information in the report: those lines are executed by tests that do not
 narrow `targetClasses` to the package that actually matters, re-run, and work the survivors there — and
 I would treat the no-coverage number as an input to a conversation about test coverage, not about
 assertion strength.
+
+**★ Why does PIT report `NO_COVERAGE` separately instead of calling it a survivor?**
+Because it is a different fact requiring different work, even though pitest's own documentation defines
+it as *"the same as Survived except there were no tests that exercised the line"*. A survivor is a line
+your tests execute and do not constrain — the fix is a stronger assertion in a test that already exists,
+and it is the only kind of finding mutation testing produces that no other tool can. A no-coverage mutant
+is a line no test reaches, which JaCoCo already told you, and the fix is a test that does not exist yet.
+The separation also matters for the arithmetic: `NO_COVERAGE` carries `detected = false` *and*
+`hasCoverage() == false`, which is what lets pitest compute a second figure — test strength — that
+excludes uncovered mutants entirely.
+
+**★ A method you know is tested shows no mutants at all in the report. What are the possibilities?**
+Four, and none of them is "the code is perfect". A filter removed the candidates before dispatch —
+logging calls exempt the whole line, `record` and Lombok-generated code is filtered, loop-counter
+increments are filtered. The compiler removed what you wanted mutated — a folded `static final`
+constant, or string concatenation, which becomes `StringBuilder` calls that no default operator touches.
+The operators do not model that construct — nothing in the tool mutates a `String` literal, a regex or
+SQL. Or pitest never saw the class, because `targetClasses` or `excludedClasses` excluded it, or the
+class has no line-number debug information. The mutant count per class, sanity-checked against what the
+class does, is the only way to notice any of these, because a mutant that was never generated appears
+under no status.
+
+**★ Does a killed mutant tell you which test killed it?**
+One test, yes — the report records a killing test per mutant, and the HTML page shows it. That is the
+*first* test that failed, not the set of tests that would have, because pitest stops as soon as one
+fails; the ordering is fastest-first with `FooTest`-named classes weighted up, so the killing test is
+partly an artefact of timing. Getting the full set requires `fullMutationMatrix`, which pitest documents
+as *"a partially supported feature added due to demand from the research community"* whose enabling
+means *"other pitest features are not guaranteed to work correctly"* — and which removes the early exit,
+so every covering test runs against every mutant. It is an investigation tool, not a setting.
 
 {/* FOOTER */}
