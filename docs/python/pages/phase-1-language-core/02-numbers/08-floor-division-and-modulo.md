@@ -277,6 +277,6 @@ either one.
 
 ---
 
-← Prev: **Comparing floats** *(not written yet)* · Index: [Numbers](README.md) · Next → [Ceiling division and integer edges](08b-ceiling-division-and-integer-edges.md)
+← Prev: [Tolerance in tests](07e-tolerance-in-tests.md) · Index: [Numbers](README.md) · Next → [Ceiling division and integer edges](08b-ceiling-division-and-integer-edges.md)
 
 {/* FOOTER */}

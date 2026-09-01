@@ -1,7 +1,7 @@
 {
   "version": 2,
   "generatedFrom": "src/data/progress.js",
-  "updated": "2026-08-31 12:09",
+  "updated": "2026-09-01 16:20",
   "totals": {
     "languages": 28,
     "complete": 20,
@@ -9,10 +9,10 @@
     "notStarted": 1,
     "parked": 2,
     "blocked": 1,
-    "topics": 2840,
-    "completed": 2057,
-    "pending": 783,
-    "percent": 72
+    "topics": 2841,
+    "completed": 2091,
+    "pending": 750,
+    "percent": 74
   },
   "languages": [
     {
@@ -383,14 +383,14 @@
       "key": "java",
       "label": "Java",
       "status": "in-progress",
-      "percent": 69,
-      "topics": 232,
-      "completed": 160,
-      "pending": 72,
-      "phases": "11/17",
-      "next": "11 · Testing",
+      "percent": 83,
+      "topics": 233,
+      "completed": 194,
+      "pending": 39,
+      "phases": "14/17",
+      "next": "14 · Microservice architecture",
       "docs": "/docs/java",
-      "updated": "2026-08-31 10:17",
+      "updated": "2026-09-01 16:20",
       "note": "Active — one session at a time. Cursor: devbible/CURSOR-JAVA.md. Runs to completion before Python."
     },
     {
@@ -404,7 +404,7 @@
       "phases": "1/14",
       "next": "1 · Language core",
       "docs": "/docs/python",
-      "updated": "2026-08-31 12:09",
+      "updated": "2026-09-01 14:20",
       "note": "Blocked behind Java. Resume at phase 1, 02-numbers/04-bool-is-an-int.md."
     }
   ]

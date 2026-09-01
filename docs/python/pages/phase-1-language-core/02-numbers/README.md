@@ -58,6 +58,11 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 5d | **[Accurate float arithmetic](05d-accurate-float-arithmetic.md)** | `sum()`'s 3.12 change, `math.fsum`, `math.sumprod` and `math.fma` |
 | 6 | **[NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md)** | The values, where they come from, and the comparison rules that make NaN unequal to itself |
 | 6b | **[Detecting NaN, and containers](06b-detecting-nan-and-containers.md)** | Identity-first membership, 3.10 identity hashing, and what NaN does to sets, dicts, sorting and `lru_cache` |
+| 7 | **[Comparing floats](07-comparing-floats.md)** | The documented `isclose` formula, `rel_tol` as a fraction of the larger operand, PEP 485's weak symmetric test, and why comparing to `0.0` needs `abs_tol` |
+| 7b | **[isclose edge cases](07b-isclose-edge-cases.md)** | NaN and the special-cased infinities, `cmath.isclose` on the modulus, why `Decimal` needs no tolerance function, and non-transitivity ruling out dicts, dedup and sorting |
+| 7c | **[When `==` is exactly right](07c-when-equality-is-right.md)** | The five cases where float equality is exact — ints under `2**53`, dyadic values, the identical computation, round trips, and sentinels |
+| 7d | **[Epsilons and ULPs](07d-epsilons-and-ulps.md)** | Why a hand-picked epsilon fails at both ends, ordering needing no tolerance, `math.ulp`/`nextafter`, and the comparison decision table |
+| 7e | **[Tolerance in tests](07e-tolerance-in-tests.md)** | `assertAlmostEqual`'s decimal-places model and its `delta`, `pytest.approx`'s asymmetry and absolute floor, and where the three disagree |
 | 8 | **[Floor division and modulo](08-floor-division-and-modulo.md)** | `//` floors rather than truncates, `%` takes the sign of the divisor, and the invariant that ties them together |
 | 8b | **[Ceiling division and integer edges](08b-ceiling-division-and-integer-edges.md)** | `-(-a // b)`, `divmod`, and the edges where the arithmetic stops matching intuition |
 | 8c | **[Zero divisors and the operator protocol](08c-zero-divisors-and-the-operator-protocol.md)** | `ZeroDivisionError`, `__floordiv__`/`__mod__`/`__divmod__` and their reflected forms |
@@ -77,7 +82,6 @@ links, so this topic carries no dangling link to them:
 | Planned | Position | Covers |
 |---|---|---|
 | `06c-signed-zero-and-serialisation.md` | 62 | `math.copysign` as the only way to detect `-0.0`, `0.0`/`-0.0` collapsing to one dict key, and `json`'s `allow_nan` / `parse_constant` |
-| `07-comparing-floats.md` | 70 | `math.isclose`, PEP 485's weak symmetric test, why comparing to zero needs `abs_tol`, `assertAlmostEqual`'s different model, and when `==` is exactly right |
 | `10-decimal-for-money.md` | 100 | Contexts, precision as significant digits, `quantize`, rounding modes, traps and signals, and `Decimal` vs integer minor units |
 | `10b-contexts-precision-and-signals.md` | 101 | Named forward from chunk 8c |
 | `10c-quantize-and-fixed-point-discipline.md` | 102 | Named forward from chunk 9 |
