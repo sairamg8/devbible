@@ -12,8 +12,10 @@ sidebar_position: 11
 > **OpenTelemetry logs data model**
 > ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/logs/data-model/)), the **Spring
 > Boot 4.1 reference, "Structured Logging"**, for `logging.structured.json.rename`/`exclude`/`add`
-> ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)), and the
-> **Spring Boot 4.1.0 source** for `ElasticCommonSchemaStructuredLogFormatter`, which flattens MDC
+> ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)), the
+> **Spring Boot 4.1 configuration-properties appendix** for `logging.structured.json.context.*`
+> ([docs.spring.io](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)),
+> and the **Spring Boot 4.1.0 source** for `ElasticCommonSchemaStructuredLogFormatter`, which flattens MDC
 > entries and key-value pairs into one region
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java)).
 > 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · Logback 1.5.34.
@@ -69,11 +71,12 @@ The remedy is a prefix, and Boot has one built in:
 logging.structured.json.context.prefix=app
 ```
 
-⚠️ **`context.prefix` and `context.include` are read from `StructuredLoggingJsonProperties.Context`
-in Boot 4.1.0's `StructuredLogFormatterFactory`, whose default is include-everything with no
-prefix.** I could not find these two documented in the reference's structured-logging section, so
-treat the exact property path as something to confirm against your Boot version's configuration
-metadata before relying on it — the *concept* (a prefix for contextual pairs) is definitely there.
+Boot's configuration-properties appendix documents both members of that pair:
+**`logging.structured.json.context.prefix`** — *"The prefix to use when inserting context data"* —
+and **`logging.structured.json.context.include`** — *"Whether context data should be included in
+the JSON"*. The second is the escape hatch when a downstream schema forbids unknown members
+outright. Boot 4.1.0's `StructuredLogFormatterFactory` defaults them to include-everything with no
+prefix, so the prefix is opt-in.
 
 Even without the built-in mechanism, prefixing at the source costs nothing:
 
