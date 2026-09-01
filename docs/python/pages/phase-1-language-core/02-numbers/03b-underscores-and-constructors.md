@@ -112,7 +112,7 @@ float("1e-003")         # leading zeros in the exponent are fine
 
 That is why there is no `-0` integer literal, and why `-0.0` is unary minus
 applied to `0.0` — which, unlike the integer case, produces a distinct value.
-See **NaN, infinity and signed zero** *(not written yet)*.
+See [NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md).
 
 One more, easy to miss and occasionally a security issue:
 
@@ -184,7 +184,7 @@ they are for floats.
 applied to the literal `0`, and integer negation of zero is zero. For floats
 `-0.0` is a genuinely distinct value.
 **Fix.** Nothing to fix for `int`; for floats see
-**NaN, infinity and signed zero** *(not written yet)*.
+[NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md).
 
 ## Interview questions
 
@@ -230,4 +230,4 @@ untrusted numeric input needs a `math.isfinite()` check.
 
 ---
 
-← Prev: [Numeric literals](03-numeric-literals.md) · Index: [Numbers](README.md) · Next → [Strings](../03-strings/README.md)
+← Prev: [Numeric literals](03-numeric-literals.md) · Index: [Numbers](README.md) · Next → [`bool` is an `int`](04-bool-is-an-int.md)

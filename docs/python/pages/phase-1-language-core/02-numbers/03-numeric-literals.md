@@ -118,7 +118,7 @@ while `10**17 + 1` is exact.
 
 There is no complex *literal* — `1 + 2j` is `int + imaginary`, evaluated at
 compile time by the constant folder but syntactically an expression. See
-**complex and the numeric tower** *(not written yet)*.
+[complex and the numeric tower](13-complex-and-the-numeric-tower.md).
 
 ## Gotchas
 

@@ -186,4 +186,4 @@ purpose rather than letting `bool`-is-`int` pick for you.
 
 ---
 
-← Prev: [Writing a bool out](04e-booleans-at-a-boundary.md) · Index: [Numbers](README.md) · Next → **Float and IEEE-754** *(not written yet)*
+← Prev: [Writing a bool out](04e-booleans-at-a-boundary.md) · Index: [Numbers](README.md) · Next → [Float and IEEE-754](05-float-and-ieee-754.md)

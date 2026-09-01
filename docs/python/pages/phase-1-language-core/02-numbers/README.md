@@ -35,7 +35,7 @@ precision measured in *significant digits* rather than decimal places, and
 And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 `1`, which is the opposite of what Java, C and JavaScript do.**
 
-🚧 **This topic is in flight** — the chunks below are the ones written so far.
+✅ **This topic is complete — 69 chunks.** Every chunk the index promises exists.
 
 | # | Chunk | Covers |
 |---|---|---|
@@ -58,6 +58,12 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 5d | **[Accurate float arithmetic](05d-accurate-float-arithmetic.md)** | `sum()`'s 3.12 change, `math.fsum`, `math.sumprod` and `math.fma` |
 | 6 | **[NaN, infinity and signed zero](06-nan-inf-and-signed-zero.md)** | The values, where they come from, and the comparison rules that make NaN unequal to itself |
 | 6b | **[Detecting NaN, and containers](06b-detecting-nan-and-containers.md)** | Identity-first membership, 3.10 identity hashing, and what NaN does to sets, dicts, sorting and `lru_cache` |
+| 6c | **[Detecting a signed zero](06c-signed-zero-and-serialisation.md)** | `math.copysign` as the only reliable test, and why dividing cannot work in Python where it does in C |
+| 6d | **[Where `-0.0` comes from](06d-where-negative-zero-comes-from.md)** | The operations that produce it, deliberately and accidentally |
+| 6e | **[What erases the sign](06e-what-erases-the-sign.md)** | `0.0 == -0.0`, identical hashes, one dict key, and the IEEE zero-addition rule behind `sum()` |
+| 6f | **[Printing `-0.0`](06f-printing-negative-zero.md)** | `:.1f` giving `-0.0` and `:g` giving `-0`, the `'z'` option, and PEP 682's account of the workarounds |
+| 6g | **[Across a wire boundary](06g-negative-zero-across-a-boundary.md)** | `-0` being legal JSON per RFC 8259, `allow_nan`, `parse_constant`, and what survives a round trip |
+| 6h | **[Other runtimes and databases](06h-other-runtimes-and-databases.md)** | JavaScript's `Object.is`, PostgreSQL's silence on signed zero, and SQLite type affinity |
 | 7 | **[Comparing floats](07-comparing-floats.md)** | The documented `isclose` formula, `rel_tol` as a fraction of the larger operand, PEP 485's weak symmetric test, and why comparing to `0.0` needs `abs_tol` |
 | 7b | **[isclose edge cases](07b-isclose-edge-cases.md)** | NaN and the special-cased infinities, `cmath.isclose` on the modulus, why `Decimal` needs no tolerance function, and non-transitivity ruling out dicts, dedup and sorting |
 | 7c | **[When `==` is exactly right](07c-when-equality-is-right.md)** | The five cases where float equality is exact — ints under `2**53`, dyadic values, the identical computation, round trips, and sentinels |
@@ -96,19 +102,22 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 13b | **[`cmath`](13b-cmath.md)** | Why two modules exist, the always-complex return, `phase`/`polar`/`rect`, `isfinite` vs `isinf`, and branch cuts via signed zero |
 | 13c | **[The numeric tower](13c-the-numeric-tower.md)** | The `numbers` ABCs rung by rung, `Decimal` deliberately excluded by PEP 3141, `bool` as `Integral`, and annotate-with-builtins-check-with-ABCs |
 
-⚠️ **This topic is incomplete, and these chunks are genuinely missing.** They are
-named in the prose above as plain bold ***(not written yet)*** text rather than as
-links, so this topic carries no dangling link to them:
-
-| Planned | Position | Covers |
-|---|---|---|
-| `06c-signed-zero-and-serialisation.md` | 62 | `math.copysign` as the only way to detect `-0.0`, `0.0`/`-0.0` collapsing to one dict key, and `json`'s `allow_nan` / `parse_constant` |
-| `14-math-vs-the-operators.md` | 140 | Where `math` and the operators disagree, and which to reach for |
+| 14 | **[`math` versus the operators](14-math-vs-the-operators.md)** | The two sentences that govern the whole module: everything returns a float, and behaviour in exceptional cases follows Annex F |
+| 14b | **[floor, ceil and trunc](14b-floor-ceil-and-trunc.md)** | `math.floor` vs `//`, the `__floor__`/`__ceil__` protocol, and the int return |
+| 14c | **[trunc, int and the remainder family](14c-trunc-int-and-the-remainder-family.md)** | `math.trunc` vs `int()` after 3.14, `fmod` vs `%`, `remainder`, and `divmod`'s documented off-by-one on floats |
+| 14d | **[Powers and roots](14d-powers-roots-and-logs.md)** | `math.pow` always returning a float, `**` returning complex for a negative base, `isqrt`, and why `math.sqrt` is the correctly-rounded one |
+| 14e | **[Logarithms and exponentials](14e-logarithms-and-exponentials.md)** | `log(x, base)` vs `log2`/`log10` accuracy, `expm1`/`log1p`, and `int.bit_length()` for huge integers |
+| 14f | **[Aggregation and `abs`](14f-aggregation-and-the-rest.md)** | `fsum`, `prod`, `sumprod` and `fma` against the naive loop, and `abs()` vs `math.fabs` |
+| 14g | **[Geometry and number theory](14g-geometry-and-number-theory.md)** | `dist`, `hypot`'s 3.10 accuracy change, `gcd` and `lcm` |
 
 🔴 **`sidebar_position` runs on a ×10 scheme from chunk 4 onward** — the chunks
 written first hold 1–7, then `04` is 40, `05` is 50, `06` is 60, and split siblings
 take the next integer. That is what leaves room for a split without renumbering
-anything already committed.
+anything already committed — **but it affords only ten slots per chunk, and chunk 10
+needed thirteen.** `10` runs 100–112, so the `Fraction` set was renumbered to 113–116
+and `12` still starts at 120. Check for duplicate positions at every topic close:
+`grep -h '^sidebar_position:' *.md | sort -n -k2 | uniq -c | awk '$1>1'` — the
+README's own position deliberately matches one chunk's, and is the one expected hit.
 
 ## The four questions this topic exists to answer
 

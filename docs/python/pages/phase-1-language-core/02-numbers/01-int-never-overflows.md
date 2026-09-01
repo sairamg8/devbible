@@ -156,7 +156,7 @@ The language reference:
 So `/` on two `int`s silently leaves the exact world. On values below `2**53`
 that is harmless; above it, the result is wrong in the low digits and nothing
 warns you. The floor semantics of `//` are their own subject —
-**floor division and modulo** *(not written yet)*.
+[floor division and modulo](08-floor-division-and-modulo.md).
 
 ## Gotchas
 
@@ -207,7 +207,7 @@ quotient is off by a few units in its last digits.
 `int` operands, and a `float` carries only 53 bits of significand.
 **Fix.** `//` when the answer is meant to be a whole number. For an exact
 non-integer ratio of big integers, `fractions.Fraction(a, b)` — see
-**`Fraction`** *(not written yet)*.
+[`Fraction`](11-fraction.md).
 
 ### Timing a benchmark with numbers that keep growing
 **Symptom.** A "constant work per iteration" loop gets steadily slower.

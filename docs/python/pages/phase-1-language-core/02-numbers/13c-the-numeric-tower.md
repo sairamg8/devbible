@@ -65,7 +65,7 @@ isinstance(Decimal("1.5"), numbers.Number)   # False
 
 So a validator written as `if not isinstance(x, numbers.Real): raise` rejects the
 exact type you were told to use for money in
-**Decimal for money** *(not written yet)*. If a function must accept both, say so:
+[Decimal for money](10-decimal-for-money.md). If a function must accept both, say so:
 
 ```python
 from decimal import Decimal
@@ -79,7 +79,7 @@ if not isinstance(amount, Numeric):
 The reasoning behind the exclusion is that `Decimal`'s equality and hashing
 interoperate with the tower while its *arithmetic* does not behave the way `Real`
 promises — its `//` truncates toward zero rather than flooring, as
-**floor division and modulo** *(not written yet)* covers. A type that is `Real` by
+[floor division and modulo](08-floor-division-and-modulo.md) covers. A type that is `Real` by
 `isinstance` but not by behaviour would be worse than one that is honestly outside.
 
 ### Registering your own numeric type
@@ -158,4 +158,4 @@ excludes `Decimal`. Annotate with built-ins, check with ABCs.
 
 ---
 
-← Prev: [cmath](13b-cmath.md) · Index: [Numbers](README.md) · Next → **math versus the operators** *(not written yet)*
+← Prev: [cmath](13b-cmath.md) · Index: [Numbers](README.md) · Next → [math versus the operators](14-math-vs-the-operators.md)
