@@ -14,7 +14,7 @@ The payoff of Phase 0's mental model: memory, GC, and the observability tools
 that come *with* the JVM. This is the phase that turns "the service is slow"
 from a mystery into a flame graph.
 
-🚧 **6 of 15 topics closed.** Topics 01–06 are complete — 161 chunks and six indexes between
+🚧 **7 of 15 topics closed.** Topics 01–07 are complete — 189 chunks and seven indexes between
 them — and are linked below. The remaining nine are in progress or planned.
 
 **All 15 topics are planned**: `_PHASE-NOTES.md` (binding: JDK 25 version spine, topic
@@ -30,7 +30,7 @@ but no index yet, and is deliberately not linked until it has one.
 | 04 | **[`OutOfMemoryError`](04-out-of-memory-error/README.md)** | <span className="db-tier t-understand">Understand</span> | Heap dumps, MAT, dominator trees — and the usual suspects |
 | 05 | **[Thread dumps](05-thread-dumps/README.md)** | <span className="db-tier t-understand">Understand</span> | `jcmd`/`jstack` — the deadlock diagnosed in two minutes |
 | 06 | **[JFR, Mission Control and async-profiler](06-jfr-and-profiling/README.md)** | <span className="db-tier t-understand">Understand</span> | Always-on profiling; the regex that ate a core |
-| 07 | **Logging done right** *(in progress)* | <span className="db-tier t-master">Master</span> | SLF4J over Logback, structured JSON, MDC on every line |
+| 07 | **[Logging done right](07-logging-done-right/README.md)** | <span className="db-tier t-master">Master</span> | SLF4J over Logback, structured JSON, MDC on every line |
 | 08 | **Metrics with Micrometer** *(in progress)* | <span className="db-tier t-understand">Understand</span> | RED per endpoint; the histogram-vs-average lesson |
 | 09 | **Distributed tracing** *(in progress)* | <span className="db-tier t-know">Know</span> | OpenTelemetry auto-instrumentation across service, DB, queue |
 | 10 | **Packaging for deploy** *(in progress)* | <span className="db-tier t-understand">Understand</span> | Layered jars, JRE base images, non-root, AOT/CDS (JEP 483) |
