@@ -90,7 +90,7 @@ Its own worked explanation of what a sample means:
 
 🔴 **Access is often blocked.** *"OS configuration may limit access to `perf_events` API, e.g., by
 `kernel.perf_event_paranoid` sysctl or by seccomp (which is often the case in a Docker
-container)."* — [9c](9c-running-it-in-a-container.md).
+container)."* — [09c](09c-running-it-in-a-container.md).
 
 ⚠️ **A descriptor per thread.** *"if an application has too many threads and OS limit for the
 maximum number of open descriptors (`ulimit -n`) is too low, an application may run out of file
