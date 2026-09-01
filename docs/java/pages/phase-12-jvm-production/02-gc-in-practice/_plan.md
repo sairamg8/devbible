@@ -21,10 +21,10 @@ flag inventory**; **06 owns profilers**. This topic owns the **GC log** and the 
 | 5 | `05-parallel-and-serial.md` | Where throughput or a tiny container still wins |
 | 6 | `06-choosing.md` | A decision table driven by the latency target, not by fashion |
 | 7 | `07-unified-logging.md` | `-Xlog:gc*` — the JDK 9+ framework; `-XX:+PrintGCDetails` is gone |
-| 7b | `07b-reading-a-gc-log.md` | Line by line: what each field means, what healthy looks like |
-| 7c | `07c-rotating-and-shipping-gc-logs.md` | `filecount`, `filesize`, and always having the log when it matters |
+| 7b | `07c-reading-a-gc-log.md` | Line by line: what each field means, what healthy looks like |
+| 7c | `07d-rotating-and-shipping-gc-logs.md` | `filecount`, `filesize`, and always having the log when it matters |
 | 8 | `08-allocation-rate.md` | The number that predicts GC pressure better than heap size |
-| 8b | `08b-premature-promotion.md` | Survivor sizing, tenuring threshold, and the old gen that fills for no reason |
+| 8b | `08c-premature-promotion.md` | Survivor sizing, tenuring threshold, and the old gen that fills for no reason |
 | 9 | `09-gc-overhead-and-the-death-spiral.md` | `GC overhead limit exceeded`; the 98% rule |
 | 10 | `10-safepoints.md` | Time-to-safepoint, the pause that the GC log does not show |
 | 11 | `11-when-tuning-is-the-wrong-answer.md` | The allocation the code should not have made |
