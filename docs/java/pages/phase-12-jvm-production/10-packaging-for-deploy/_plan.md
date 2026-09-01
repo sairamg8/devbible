@@ -18,8 +18,11 @@ Owns **turning a build output into a thing that runs**: the executable jar, laye
 | 2b | `02b-extracting-layers-and-the-image-cache.md` | `tools` jar mode, `extract --layers`, `COPY` order, and what you launch |
 | 2c | `02c-a-real-layered-dockerfile.md` | Multi-stage, ordered `COPY`, and what each layer costs |
 | 2d | `02d-the-cache-variants-of-the-dockerfile.md` | The AOT-cache and CDS variants: forced instruction positions |
-| 3 | `03-base-images.md` | JRE vs JDK, distroless, Alpine/musl, and the debugging you gave up |
-| 3b | `03b-non-root-and-filesystem.md` | `USER`, read-only root, writable tmp, and the dump directory |
+| 3 | `03-base-images.md` | JRE vs JDK, the `jdk.*` modules you delete, and the debugging you gave up |
+| 3b | `03b-alpine-and-musl.md` | JEP 386, the SA attach limitation, and the 6 MB / 38 MB arithmetic |
+| 3c | `03c-musl-runtime-differences.md` | Thread stacks, the parallel resolver, `ndots`, and JEP 400's residue |
+| 3d | `03d-distroless.md` | No shell, no package manager, the `:debug` JDK swap, and the fixed ENTRYPOINT |
+| 3e | `03e-non-root-and-filesystem.md` | `USER`, read-only root, writable tmp, and the dump directory |
 | 4 | `04-jlink.md` | A custom runtime; `jdeps`; when it beats a stock JRE |
 | 5 | `05-class-data-sharing.md` | Default CDS, AppCDS, `-XX:SharedArchiveFile`, auto-creation |
 | 5b | `05b-the-aot-cache.md` | 🔴 JEP 483 (JDK 24) + **JEP 514 ergonomics** and **JEP 515 method profiling** (JDK 25); training run → `-XX:AOTCache` |
@@ -49,7 +52,14 @@ Owns **turning a build output into a thing that runs**: the executable jar, laye
 | 6 | `02b-extracting-layers-and-the-image-cache.md` |
 | 7 | `02c-a-real-layered-dockerfile.md` |
 | 8 | `02d-the-cache-variants-of-the-dockerfile.md` |
+| 9 | `03-base-images.md` |
+| 10 | `03b-alpine-and-musl.md` |
+| 11 | `03c-musl-runtime-differences.md` |
 
-🔴 **Next free `sidebar_position` is 9.** The plan's chunk numbers are a plan, not a budget — 01b
+🔴 **Next free `sidebar_position` is 12.** `03` drafted the Alpine material at 317 lines and it was
+split two ways (234 + 286 L, 16 + 19 ★ — both totals up); distroless then became its own `03d` and
+non-root moved to `03e`.
+
+🔴 **Old plan row `3b` (non-root) is now `3e`.** The plan's chunk numbers are a plan, not a budget — 01b
 drafted at 406 lines and split three ways, 02 at 352 and split two ways, 02c at 322 and split two
 ways. The Dockerfile chunk moved from `02b` to `02c` when 02 split.
