@@ -162,7 +162,7 @@ Note also that condition evaluation happens here:
 > definitions that don't match their conditions are discarded at this stage."*
 
 **Discarded at build time.** That is the source of every restriction in
-[06b](06b-what-aot-processing-gives-up.md), and it is worth pausing on: the set of beans your
+[06c](06c-what-aot-processing-gives-up.md), and it is worth pausing on: the set of beans your
 application can have is now a property of the artefact, not of the environment it runs in.
 
 ## What comes next
