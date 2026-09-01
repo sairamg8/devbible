@@ -75,6 +75,10 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 11b | **[Inspecting and constructing](11b-inspecting-and-constructing.md)** | `as_integer_ratio()` as the shared exact-value protocol, `is_integer()`, hashability and dict keys, and 3.14's `from_number` |
 | 11c | **[Approximation and cost](11c-limit-denominator-and-cost.md)** | `limit_denominator` recovering `11/10` and `355/113`, denominator growth as the price of never rounding, and when not to reach for the type |
 | 11d | **[Rounding and formatting](11d-rounding-and-formatting.md)** | Half-to-even `__round__`, `floor`/`ceil`/`int()` disagreeing on negatives, the float presentation types, `'#'`, and no zero-fill |
+| 12 | **[Conversions and precision loss](12-conversions-and-precision-loss.md)** | Mixed comparisons using exact values while conversions do not, the conversion matrix, `int()` truncating, and 3.14 dropping the `__trunc__` delegation |
+| 12b | **[Exact and lossy conversions](12b-exact-and-lossy-conversions.md)** | `Decimal(0.1)`'s exact binary expansion, `Fraction(1.1)`'s power-of-two denominator, the `FloatOperation` trap, and why `Decimal + float` raises |
+| 12c | **[Silent loss and boundaries](12c-silent-loss-and-boundaries.md)** | `json`'s `parse_float`, SQLite having no decimal type, `NUMERIC(p,s)` rounding on scale and raising on precision, and `float` annotations accepting `int` |
+| 12d | **[Strings and binary formats](12d-strings-and-binary-formats.md)** | The parsing language being larger than the literal one, `float('inf')` from user input, and `struct`'s `'f'` discarding half a float's precision in silence |
 | 13 | **[`complex`](13-complex-and-the-numeric-tower.md)** | An imaginary literal, the constructor's string grammar, no ordering and no `//`, mixed-type widening, and 3.14's deprecation and `from_number` |
 | 13b | **[`cmath`](13b-cmath.md)** | Why two modules exist, the always-complex return, `phase`/`polar`/`rect`, `isfinite` vs `isinf`, and branch cuts via signed zero |
 | 13c | **[The numeric tower](13c-the-numeric-tower.md)** | The `numbers` ABCs rung by rung, `Decimal` deliberately excluded by PEP 3141, `bool` as `Integral`, and annotate-with-builtins-check-with-ABCs |
@@ -89,7 +93,6 @@ links, so this topic carries no dangling link to them:
 | `10-decimal-for-money.md` | 100 | Contexts, precision as significant digits, `quantize`, rounding modes, traps and signals, and `Decimal` vs integer minor units |
 | `10b-contexts-precision-and-signals.md` | 101 | Named forward from chunk 8c |
 | `10c-quantize-and-fixed-point-discipline.md` | 102 | Named forward from chunk 9 |
-| `12-conversions-and-precision-loss.md` | 120 | `int()` truncating toward zero (and 3.14 dropping the `__trunc__` delegation), `Decimal(float)`'s exact expansion, and `Fraction(1.1)` vs `Fraction(Decimal("1.1"))` |
 | `14-math-vs-the-operators.md` | 140 | Where `math` and the operators disagree, and which to reach for |
 
 🔴 **`sidebar_position` runs on a ×10 scheme from chunk 4 onward** — the chunks

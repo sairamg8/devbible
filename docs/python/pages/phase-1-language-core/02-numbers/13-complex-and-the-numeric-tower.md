@@ -210,4 +210,4 @@ boundary, where `int("12")` succeeding is precisely the behaviour you do not wan
 
 ---
 
-← Prev: **Conversions and precision loss** *(not written yet)* · Index: [Numbers](README.md) · Next → [cmath](13b-cmath.md)
+← Prev: [Strings and binary formats](12d-strings-and-binary-formats.md) · Index: [Numbers](README.md) · Next → [cmath](13b-cmath.md)

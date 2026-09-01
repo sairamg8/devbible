@@ -200,7 +200,7 @@ wanted.** `Decimal(3.14)` is
 `Decimal('3.14')`. The fix is to never let the value be a float: build it from
 the string. If you are stuck with a float, `Decimal(str(x))` uses `repr`'s
 shortest round-tripping form — see
-**12** *(not written yet)* for when that is legitimate and when
+[Conversions and precision loss](12-conversions-and-precision-loss.md) for when that is legitimate and when
 it is laundering. The `decimal` context can enforce the rule for you:
 setting `c.traps[FloatOperation] = True` makes `Decimal(3.14)` raise
 `decimal.FloatOperation`.

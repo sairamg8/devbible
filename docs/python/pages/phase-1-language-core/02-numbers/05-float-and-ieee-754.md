@@ -223,7 +223,7 @@ outright: rounding `0.1` to one decimal place cannot move it closer to 1/10,
 because it is already the closest float there is. `round(x, 2)` before an
 equality test is a no-op dressed up as a fix; you need a tolerance
 ([Comparing floats](07-comparing-floats.md)) or a different type
-(**12** *(not written yet)*).
+([Conversions and precision loss](12-conversions-and-precision-loss.md)).
 
 **★ Numeric literals with `e` are floats even when they look integral.** `1e6`
 is a `float`, not an `int` — so `1e6` as a list index or a `range` bound is a
