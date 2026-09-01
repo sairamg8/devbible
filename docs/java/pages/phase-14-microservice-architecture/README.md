@@ -4,11 +4,18 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: Spring Boot 3.x / Spring Cloud 2023+ era, Kubernetes-first.**
+> **Target: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud
+> 2025.1.x "Oakwood" (every component 5.0.x), Kubernetes-first.**
 > Documentation-validated — every page names its sources on a `> Verified:`
 > line (spring.io projects docs, microservices.io patterns, the Spring Cloud
 > Gateway and Contract references, grpc.io). No sandbox: pages carry code and
 > config, never fabricated logs or traffic captures.
+>
+> 🔴 **Oakwood was a breaking train, so most published samples are wrong here.**
+> `spring-cloud-starter-gateway` and `spring-cloud-starter-parent` no longer
+> resolve, `RestTemplate` support is gone from Spring Cloud Netflix, REST Assured
+> is gone from Spring Cloud Contract, and gRPC now lives in Spring Boot itself.
+> The full list is in `_PHASE-NOTES.md` — read it before writing any page here.
 
 The decision layer. Most microservice pain is not Kafka config — it is
 boundaries drawn wrong, sync calls where events belonged, and a distributed
