@@ -583,7 +583,7 @@ export const LANGUAGES = {
   },
   realworld: {
     label: 'Real World',
-    updated: '2026-08-17 12:11',
+    updated: '2026-09-01 20:26',
     docsPath: '/docs/real-world',
     pagesPath: '/docs/real-world/pages',
     phases: [
@@ -594,7 +594,7 @@ export const LANGUAGES = {
       {n: 4, slug: 'phase-4-react-ui', name: 'The React UI and its hooks', part: 'Frontend', topics: 12, pages: 12},
       {n: 5, slug: 'phase-5-js-functions', name: 'JavaScript custom functions', part: 'Frontend', topics: 10, pages: 10},
       {n: 6, slug: 'phase-6-typescript', name: 'TypeScript across the stack', part: 'Frontend', topics: 8, pages: 1, pagesPlanned: 8},
-      {n: 7, slug: 'phase-7-css-recipes', name: 'CSS recipes', part: 'Completion', topics: 4, pages: 2, pagesPlanned: 4},
+      {n: 7, slug: 'phase-7-css-recipes', name: 'CSS recipes', part: 'Completion', topics: 4, pages: 4},
       {n: 8, slug: 'phase-8-mongodb-mirror', name: 'The MongoDB mirror', part: 'Completion', topics: 6, pages: 0},
     ],
   },
