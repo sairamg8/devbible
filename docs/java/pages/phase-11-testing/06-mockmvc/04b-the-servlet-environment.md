@@ -189,3 +189,5 @@ No. It populates `HttpServletRequest#getUserPrincipal()` only. Spring Security r
 are all unaffected. The right tools are `@WithMockUser`, `@WithUserDetails` or the
 `SecurityMockMvcRequestPostProcessors`.
 
+
+{/* FOOTER */}

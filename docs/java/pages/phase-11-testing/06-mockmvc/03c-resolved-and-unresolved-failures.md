@@ -186,3 +186,5 @@ conclusion is not to change the assertion but to notice that this exception has 
 in production the client gets whatever the container's error handling produces. Map it in a
 `@ControllerAdvice` and the assertion becomes possible and meaningful.
 
+
+{/* FOOTER */}

@@ -225,3 +225,4 @@ that is the tool telling you your code has a rare defect, and the right response
 capture the falsifying sample as a permanent example test. The mechanics of seeds, the
 `.jqwik-database`, and what CI does and does not persist are the whole of
 [07 · Reproducibility](07-reproducibility.md).
+{/* FOOTER */}

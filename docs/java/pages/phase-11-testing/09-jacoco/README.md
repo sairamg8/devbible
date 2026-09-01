@@ -100,3 +100,5 @@ testing** attacks the neighbouring blindness from the input side: coverage canno
 ⚠️ Also worth knowing: **there is no `doc/filtering.html` on jacoco.org** — both that host and
 eclemma.org return 404 for it. The filter list lives in `doc/changes.html`, which is what
 [chunk 05c](05c-what-jacoco-filters-for-free.md) cites.
+
+{/* FOOTER */}

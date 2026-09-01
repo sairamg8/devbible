@@ -179,4 +179,4 @@ Because evaluation short-circuits on the first "disabled" verdict, so any given 
 may not be evaluated on any given run. A condition that provisions or mutates does so
 nondeterministically, which is the definition of a test suite you cannot trust.
 
-{/* FOOTER */}{/* FOOTER */}
+{/* FOOTER */}

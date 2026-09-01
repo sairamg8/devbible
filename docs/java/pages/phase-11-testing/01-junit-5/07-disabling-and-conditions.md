@@ -265,4 +265,4 @@ Run the suite with `-Djunit.jupiter.conditions.deactivate=org.junit.*DisabledCon
 The guide gives this exact example. Nothing in the source changes, `DisabledCondition` is
 simply not evaluated, and the disabled tests execute for real.
 
-{/* FOOTER */}{/* FOOTER */}
+{/* FOOTER */}
