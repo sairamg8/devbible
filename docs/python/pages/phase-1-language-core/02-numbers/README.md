@@ -71,6 +71,10 @@ And division floors toward minus infinity, so `-7 // 2` is `-4` and `-7 % 2` is
 | 9 | **[`round()` and banker's rounding](09-round-and-bankers-rounding.md)** | Round-half-to-even, the `round(2.675, 2)` note the docs call "not a bug", and the return type with and without `ndigits` |
 | 9b | **[`round()` per type, and double rounding](09b-round-per-type-and-double-rounding.md)** | `__round__`, how each numeric type rounds, and the double-rounding trap |
 | 9c | **[Double rounding and policy](09c-double-rounding-and-policy.md)** | Why rounding twice is not rounding once, and choosing a rounding policy deliberately rather than inheriting one |
+| 11 | **[`Fraction`](11-fraction.md)** | Exact about rationals where `Decimal` is only exact about decimals, the three constructors, why `Fraction(1.1)` is a power-of-two denominator, and normalisation to lowest terms |
+| 11b | **[Inspecting and constructing](11b-inspecting-and-constructing.md)** | `as_integer_ratio()` as the shared exact-value protocol, `is_integer()`, hashability and dict keys, and 3.14's `from_number` |
+| 11c | **[Approximation and cost](11c-limit-denominator-and-cost.md)** | `limit_denominator` recovering `11/10` and `355/113`, denominator growth as the price of never rounding, and when not to reach for the type |
+| 11d | **[Rounding and formatting](11d-rounding-and-formatting.md)** | Half-to-even `__round__`, `floor`/`ceil`/`int()` disagreeing on negatives, the float presentation types, `'#'`, and no zero-fill |
 | 13 | **[`complex`](13-complex-and-the-numeric-tower.md)** | An imaginary literal, the constructor's string grammar, no ordering and no `//`, mixed-type widening, and 3.14's deprecation and `from_number` |
 | 13b | **[`cmath`](13b-cmath.md)** | Why two modules exist, the always-complex return, `phase`/`polar`/`rect`, `isfinite` vs `isinf`, and branch cuts via signed zero |
 | 13c | **[The numeric tower](13c-the-numeric-tower.md)** | The `numbers` ABCs rung by rung, `Decimal` deliberately excluded by PEP 3141, `bool` as `Integral`, and annotate-with-builtins-check-with-ABCs |
@@ -85,7 +89,6 @@ links, so this topic carries no dangling link to them:
 | `10-decimal-for-money.md` | 100 | Contexts, precision as significant digits, `quantize`, rounding modes, traps and signals, and `Decimal` vs integer minor units |
 | `10b-contexts-precision-and-signals.md` | 101 | Named forward from chunk 8c |
 | `10c-quantize-and-fixed-point-discipline.md` | 102 | Named forward from chunk 9 |
-| `11-fraction.md` | 110 | When exactness must be rational rather than decimal, `limit_denominator`, and the cost |
 | `12-conversions-and-precision-loss.md` | 120 | `int()` truncating toward zero (and 3.14 dropping the `__trunc__` delegation), `Decimal(float)`'s exact expansion, and `Fraction(1.1)` vs `Fraction(Decimal("1.1"))` |
 | `14-math-vs-the-operators.md` | 140 | Where `math` and the operators disagree, and which to reach for |
 
