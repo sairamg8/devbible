@@ -1,7 +1,7 @@
 ---
 title: "The legacy GC logging flags were not removed in JDK 9 — they are deprecated, still honoured, and translated into unified logging at startup, which is why a service can keep writing an unrotated GC log for years without anyone noticing it forfeited every option that matters"
 sidebar_label: "02c2 · Flags that still work"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>

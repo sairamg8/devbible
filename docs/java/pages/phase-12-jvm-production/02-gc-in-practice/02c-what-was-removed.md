@@ -1,7 +1,7 @@
 ---
 title: "A garbage collection flag on JDK 25 is in one of three states — deprecated, obsolete or removed — and only the third one stops your service from starting, which is why the dangerous stale flags are the ones that produce a warning nobody reads"
 sidebar_label: "02c · What was removed"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 <span className="db-tier t-understand">Understand</span>
