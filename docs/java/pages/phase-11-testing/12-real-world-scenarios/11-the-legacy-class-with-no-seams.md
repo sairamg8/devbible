@@ -157,9 +157,11 @@ seam exists.
 
 ## Where this connects
 
-- The four seam problems — a static call, `new` inside a method, a god constructor, config
-  read at class-init — each with its smallest safe move, and the argument for when *not* to
-  refactor: [11b · The four seams and when not to refactor](11b-the-four-seams-and-when-not-to-refactor.md).
+- Three of the four seam problems — a static call, `new` inside a method and a god
+  constructor — each with its smallest safe move:
+  [11b · Three seams for a collaborator](11b-three-seams-for-a-collaborator.md).
+- The fourth — configuration read at class-init — and the argument for when *not* to refactor
+  at all: [11c · Class-init config and the fifth answer](11c-class-init-config-and-the-fifth-answer.md).
 - The pinned-payload technique used as a golden master:
   [10b · Volatile fields and the review workflow](10b-volatile-fields-and-the-review-workflow.md).
 - Collaborators that are hard to mock, and the refactors that remove the need for a trick:
