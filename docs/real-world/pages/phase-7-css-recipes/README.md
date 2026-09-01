@@ -19,7 +19,7 @@ every selector here targets components that already exist.
 |---|---|---|---|
 | 01 | **[The product grid](01-the-product-grid/README.md)** *(12 chunks)* | <span className="db-tier t-master">Master</span> | One `grid-template-columns` declaration replaces the breakpoint pile-up — and the card adapts to its column, not the viewport |
 | 04 | **[Skeleton loaders and spinners](04-skeletons-and-spinners/README.md)** *(5 chunks)* | <span className="db-tier t-understand">Understand</span> | A loading indicator is a cost, not a courtesy — show nothing for the first 400 ms, and make the skeleton *be* the component |
-| 05 | **Dark mode** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 05 | **[Dark mode](05-dark-mode/README.md)** *(10 chunks)* | <span className="db-tier t-understand">Understand</span> | Three viewer states, not two — the media query cannot tell a user who chose from one who did not, and everything else follows from recovering that third state |
 | 06 | **The overlay layer** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 
 :::note Four chapters, and the numbering has gaps on purpose
@@ -50,8 +50,7 @@ something else — the mechanism is
 @layer reset, tokens, base, layout, components, utilities;
 ```
 
-`reset` normalises, `tokens` declares the custom properties (**chapter 05 ·
-Dark mode** *(not written yet)* owns the theme layer), `base` styles bare
+`reset` normalises, `tokens` declares the custom properties ([chapter 05 · Dark mode](05-dark-mode/README.md) owns the theme layer), `base` styles bare
 elements,
 `layout` holds the page shells, `components` is where almost everything in
 this phase lands, and `utilities` is the deliberate escape hatch that wins
