@@ -1,7 +1,7 @@
 ---
 title: "JDK 25 changed profiling three times over — a CPU-time sampler that finally sees native code, a rewritten sampling mechanism that stopped risking a JVM crash, and exact method timing by instrumentation — and two of the three are explicitly qualified in ways the release notes summaries drop"
 sidebar_label: "08 · What JDK 25 changed"
-sidebar_position: 12
+sidebar_position: 14
 ---
 
 <span className="db-tier t-understand">Understand</span>

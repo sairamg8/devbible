@@ -1,7 +1,7 @@
 ---
 title: "Mission Control is the GUI for reading a recording and it is not simply \"in the JDK\" — it is a separate OpenJDK project shipped by half a dozen vendors, which is why the answer to \"just open it in JMC\" is often that nobody on the team has it"
 sidebar_label: "06 · JDK Mission Control"
-sidebar_position: 13
+sidebar_position: 11
 ---
 
 <span className="db-tier t-understand">Understand</span>

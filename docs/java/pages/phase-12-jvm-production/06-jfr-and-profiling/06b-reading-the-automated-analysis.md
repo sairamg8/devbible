@@ -1,7 +1,7 @@
 ---
 title: "Automated analysis scores a recording against a fixed set of rules and hands you a ranked list of things that look wrong, which is genuinely useful and is also the fastest way to spend a day fixing something that was never your problem"
 sidebar_label: "06b · Reading the automated analysis"
-sidebar_position: 14
+sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>

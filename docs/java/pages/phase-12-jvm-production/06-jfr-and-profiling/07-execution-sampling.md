@@ -1,7 +1,7 @@
 ---
 title: "The classic execution sampler misses threads running native code, does not report the samples it failed to take, and samples only a subset of threads each interval — three deficiencies the JDK itself enumerates, which is why a hot method in a profile is a claim about the sampler as much as about your program"
 sidebar_label: "07 · Execution sampling"
-sidebar_position: 11
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>
