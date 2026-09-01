@@ -1,7 +1,7 @@
 ---
 title: "Twelve topics, and one argument running through all of them: a test is worth what its assertion is worth, and almost everything that makes a suite slow, flaky or useless is a consequence of getting one of four decisions wrong — the level, the isolation, the fidelity of the dependencies, and whether anything would notice if the code were wrong"
 sidebar_label: "07 · What this phase taught"
-sidebar_position: 41
+sidebar_position: 38
 ---
 
 <span className="db-tier t-when">When Needed</span>

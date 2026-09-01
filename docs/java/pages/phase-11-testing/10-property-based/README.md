@@ -136,7 +136,7 @@ produces a test that cannot fail.**
 - **[09 · Coverage with JaCoCo](../09-jacoco/README.md)** can prove code never ran. It cannot
   prove a *combination* of inputs was never walked, which is the blindness generated inputs
   attack.
-- **topic 11 · Mutation testing** attacks the same blindness from
+- [11 · Mutation testing](../11-mutation-testing/README.md) attacks the same blindness from
   the other side — it changes the code and asks whether a test notices. It is also the only
   reliable way to detect the tautological property this topic warns about.
 

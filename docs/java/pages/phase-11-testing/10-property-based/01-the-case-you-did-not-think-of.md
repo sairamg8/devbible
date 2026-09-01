@@ -170,7 +170,7 @@ before you add a dependency, not after.
   is the same idea with the defaults replaced by a distribution.
 - The other technique that attacks "my tests only check what I thought of" from the opposite
   direction — mutating the production code and asking whether any test notices — is
-  **topic 11 · Mutation testing**. The two are complementary: properties widen the inputs,
+  [11 · Mutation testing](../11-mutation-testing/README.md). The two are complementary: properties widen the inputs,
   mutation testing widens the *faults*.
 
 ## Gotchas

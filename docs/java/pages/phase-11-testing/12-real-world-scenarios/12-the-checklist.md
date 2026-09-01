@@ -133,7 +133,7 @@ Before concluding a bug slipped past the suite, find the test and read its asser
 the code path was executed as a side effect of testing something else, so it counted as covered
 and nothing checked the result. That is the coverage argument in
 [09 · JaCoCo](../09-jacoco/README.md), and the tool that finds it deliberately is
-**topic 11 · Mutation testing**.
+[11 · Mutation testing](../11-mutation-testing/README.md).
 
 **★ Writing the test first is a rule people abandon exactly when it matters, because "this fix is obvious".**
 The obvious fixes are the ones most likely to be wrong in a way nobody notices — an off-by-one in

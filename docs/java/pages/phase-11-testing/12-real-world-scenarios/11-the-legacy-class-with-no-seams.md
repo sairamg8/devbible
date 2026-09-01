@@ -132,7 +132,7 @@ There is a tool for making that judgement instead of guessing. Run the character
 under coverage and look at whether the lines you are about to edit are executed — that is
 **topic 09 · JaCoCo**'s branch-versus-line distinction used for its one genuinely diagnostic
 purpose. And if you want to know whether the assertions actually *constrain* those lines
-rather than merely running them, that is **topic 11 · Mutation testing**: change the code
+rather than merely running them, that is [11 · Mutation testing](../11-mutation-testing/README.md): change the code
 under the characterization suite and see whether anything fails. A characterization test that
 survives mutation is a characterization test that will not catch your regression either.
 
@@ -169,8 +169,7 @@ seam exists.
   and [02c · Construction and final classes](02c-construction-and-final-classes.md).
 - Coverage as a diagnostic rather than a target: **topic 09**,
   [../09-jacoco/README.md](../09-jacoco/README.md).
-- Whether the characterization assertions actually constrain anything: **topic 11 ·
-  Mutation testing** *(index not written yet)*.
+- Whether the characterization assertions actually constrain anything: [11 · Mutation testing](../11-mutation-testing/README.md).
 - Builders and object mothers that make constructing the legacy inputs bearable: **topic 08**,
   [../08-test-data-patterns/README.md](../08-test-data-patterns/README.md).
 

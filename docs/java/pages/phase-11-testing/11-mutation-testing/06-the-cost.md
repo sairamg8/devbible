@@ -1,7 +1,7 @@
 ---
 title: "Mutation testing runs your test suite once per surviving mutant, which makes it the most expensive tool in this phase by an order of magnitude — and the honest verdict is not that it is too slow to use, but that it is too slow to use the way people first try to use it, which is across the whole codebase on every push"
 sidebar_label: "06 · The cost"
-sidebar_position: 40
+sidebar_position: 37
 ---
 
 <span className="db-tier t-when">When Needed</span>

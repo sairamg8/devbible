@@ -139,7 +139,7 @@ production class: eight boundaries in one class is not a testing problem.
 - Strictness, `RETURNS_DEEP_STUBS`, `spy()` and `@InjectMocks` mechanics belong to
   **topic 04 · Mockito**. Builders and object mothers for the real values you will
   substitute back in belong to **topic 08 · Test data patterns**. Mutation score as the
-  detector for tests that cannot fail belongs to **topic 11 · Mutation testing**.
+  detector for tests that cannot fail belongs to [11 · Mutation testing](../11-mutation-testing/README.md).
 
 ## Gotchas
 

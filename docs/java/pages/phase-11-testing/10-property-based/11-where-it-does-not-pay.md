@@ -154,7 +154,7 @@ figures are illustrative rather than measured, and there is no benchmark behind 
 - The table-of-cases alternative is
   [03 · Parameterized tests](../03-parameterized-tests/README.md).
 - The honest answer to "is this test checking anything?" is
-  **topic 11 · Mutation testing**.
+  [11 · Mutation testing](../11-mutation-testing/README.md).
 
 ## Gotchas
 

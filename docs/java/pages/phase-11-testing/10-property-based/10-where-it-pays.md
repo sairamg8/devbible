@@ -217,7 +217,7 @@ subscriptions.
 
 **★ A colleague says "we already have 90% coverage on the parser, why would we add property tests?"**
 Because coverage says the lines ran, not that anything would have noticed them being wrong — the
-argument **topic 11 · Mutation testing** makes in full. On a parser
+argument [11 · Mutation testing](../11-mutation-testing/README.md) makes in full. On a parser
 specifically, the gap is concrete and easy to name: those examples are all documents that *we*
 produced, so the code paths for input we would never emit are either uncovered or covered by an
 example someone wrote to hit the branch rather than to assert anything interesting. A round-trip
