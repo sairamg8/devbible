@@ -1,7 +1,7 @@
 ---
 title: "An object earns its way into the old generation by surviving a number of collections that the JVM recalculates every cycle, and when the survivor spaces cannot hold it the promotion happens anyway — which is the most expensive thing a heap can do to you"
 sidebar_label: "03d · Aging and promotion"
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>
