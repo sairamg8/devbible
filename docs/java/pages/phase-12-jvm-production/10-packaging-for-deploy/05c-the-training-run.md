@@ -184,7 +184,7 @@ disabling the training run.
 
 **★ If start-up is dominated by something other than class loading, no archive helps.** Connection
 pool warm-up, schema validation, remote configuration fetches and TLS handshakes are unaffected by
-any archive. Measure where the time goes before optimising it — [05e](05e-when-the-cache-helps.md).
+any archive. Measure where the time goes before optimising it — [05f](05f-when-the-cache-helps.md).
 
 ## Interview questions
 

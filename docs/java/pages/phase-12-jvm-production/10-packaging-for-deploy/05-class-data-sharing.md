@@ -194,7 +194,7 @@ says to *"consider using the AOT cache"* for the full set of optimizations, and 
 recommends *"using the AOT cache whenever possible"*. CDS on JDK 25 is a compatibility choice.
 
 **★ Neither CDS nor the AOT cache does anything for peak throughput.** They change how classes get
-loaded. The JIT still has to warm up, which is [05e](05e-when-the-cache-helps.md) and topic 14's
+loaded. The JIT still has to warm up, which is [05f](05f-when-the-cache-helps.md) and topic 14's
 benchmarking problem.
 
 ## Interview questions
