@@ -52,7 +52,7 @@ msg = java_lang_String::create_from_str(
 
 That list is worth pausing on: it is the complete inventory of the detail messages HotSpot itself
 carries, and **two of them are not in the Troubleshooting Guide's seven**. See
-[02c](02c-the-messages-that-are-not-on-the-list.md).
+[02d](02d-the-messages-that-are-not-on-the-list.md).
 
 The header comment states the consequence plainly:
 
@@ -186,7 +186,7 @@ short string finds both; they are different situations.
 **★ `C heap space` is a HotSpot message that no Oracle guide enumerates.**
 It sits in the same pre-allocated array as `Java heap space` and `Metaspace`. Failing to find it
 in the Troubleshooting Guide's list does not mean you misread the log — see
-[02c](02c-the-messages-that-are-not-on-the-list.md).
+[02d](02d-the-messages-that-are-not-on-the-list.md).
 
 **★ The pool is only used if `java.lang.Throwable` is already initialised.**
 `gen_out_of_memory_error` checks `vmClasses::Throwable_klass()->is_initialized()`. An OOM during

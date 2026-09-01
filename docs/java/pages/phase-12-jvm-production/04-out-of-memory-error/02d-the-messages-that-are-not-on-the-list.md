@@ -53,10 +53,16 @@ throw new OutOfMemoryError
      + RESERVED_MEMORY.get() + ", limit: " + MAX_MEMORY +")");
 ```
 
-So a real line reads `Cannot reserve <N> bytes of direct buffer memory (allocated: <A>, limit:
-<L>)`. **The word "Cannot" starts it and the numbers are in it** — which is the useful part,
-because `allocated` and `limit` tell you immediately whether you are near
-`-XX:MaxDirectMemorySize` or nowhere near it.
+So a real line has this shape — a schematic, with the three byte counts shown as placeholders
+rather than as values from a run:
+
+```
+java.lang.OutOfMemoryError: Cannot reserve <size> bytes of direct buffer memory (allocated: <reserved>, limit: <max>)
+```
+
+**The word "Cannot" starts it and the numbers are in it** — which is the useful part, because
+`allocated` and `limit` tell you immediately whether you are near `-XX:MaxDirectMemorySize` or
+nowhere near it.
 
 An alert rule matching `Direct buffer memory` still fires, because that substring survives inside
 the longer sentence. An alert rule matching `^java.lang.OutOfMemoryError: Direct buffer memory$`

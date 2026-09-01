@@ -56,11 +56,9 @@ fails is likely to be an eight-byte `Integer` box in an unrelated HTTP handler, 
 handler allocates on every request and the scheduler allocates once a minute. The stack trace you
 get is the handler's.
 
-```
-java.lang.OutOfMemoryError: Java heap space
-        at java.base/java.util.Arrays.copyOf(Arrays.java:...)
-        ...
-```
+Schematically — this is the *shape* of such a trace, not a captured one — the top frame is
+whatever grew a buffer: an `Arrays.copyOf` inside a collection resize, a `StringBuilder` append, a
+deserialiser reading the next field.
 
 A trace like that is real evidence of exactly one thing: **the allocation rate at the moment of
 failure**. It tells you nothing about retention. The frames are chosen by arrival order, not by
@@ -75,7 +73,7 @@ Two exceptions worth naming, because for these the trace *is* the bug:
 - **`Cannot reserve N bytes of direct buffer memory …`** — thrown by `java.nio.Bits` on the
   thread that asked for the buffer, which is usually the code holding the buffers open.
 
-Both are covered in [02c · The messages that are not on the list](02c-the-messages-that-are-not-on-the-list.md)
+Both are covered in [02d · The messages that are not on the list](02d-the-messages-that-are-not-on-the-list.md)
 and [02 · The seven documented messages](02-the-seven-documented-messages.md).
 
 ## Whether you can recover depends on which message it was
