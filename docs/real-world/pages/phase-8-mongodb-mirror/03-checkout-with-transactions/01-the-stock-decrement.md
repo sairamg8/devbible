@@ -277,5 +277,5 @@ database and merely more obviously so in one without row locks.
 
 ---
 
-← **Overview** *(not written yet)* ·
+← Index: [Checkout with transactions](README.md) ·
 Next → [The transaction](02-the-transaction.md)

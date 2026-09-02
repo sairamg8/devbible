@@ -261,5 +261,5 @@ that keeps replays off the transaction path; the index is the correctness.
 ---
 
 ← Prev: [The stock decrement](01-the-stock-decrement.md) ·
-**Overview** *(not written yet)* ·
+Index: [Checkout with transactions](README.md) ·
 Next → [What each part is doing](02b-what-each-part-is-doing.md)

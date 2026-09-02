@@ -172,5 +172,5 @@ total we authorised is the total we are committing" is checked explicitly with
 ---
 
 ← Prev: [The transaction](02-the-transaction.md) ·
-**Overview** *(not written yet)* ·
+Index: [Checkout with transactions](README.md) ·
 Next → [Two loops and two labels](03-failure-retries-and-the-callback.md)

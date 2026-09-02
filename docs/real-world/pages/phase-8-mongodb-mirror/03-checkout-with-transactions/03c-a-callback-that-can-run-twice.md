@@ -208,5 +208,5 @@ assumes.
 ---
 
 ← Prev: [The three clocks](03b-the-three-clocks.md) ·
-**Overview** *(not written yet)* ·
-Next → **Write concern and deployment** *(not written yet)*
+Index: [Checkout with transactions](README.md) ·
+Next → [The four transaction options](04-write-concern-and-deployment.md)

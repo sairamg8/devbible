@@ -184,5 +184,5 @@ merely slow on Postgres becomes a retry storm here.
 ---
 
 ← Prev: [What each part is doing](02b-what-each-part-is-doing.md) ·
-**Overview** *(not written yet)* ·
+Index: [Checkout with transactions](README.md) ·
 Next → [The three clocks](03b-the-three-clocks.md)

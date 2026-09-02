@@ -181,5 +181,5 @@ only your own metric tells you the scale.
 ---
 
 ← Prev: [Two loops and two labels](03-failure-retries-and-the-callback.md) ·
-**Overview** *(not written yet)* ·
+Index: [Checkout with transactions](README.md) ·
 Next → [A callback that can run twice](03c-a-callback-that-can-run-twice.md)
