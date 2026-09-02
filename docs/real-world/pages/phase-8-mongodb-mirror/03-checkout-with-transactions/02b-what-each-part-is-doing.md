@@ -74,7 +74,7 @@ The same rule applies between two transactions. The loser's transaction aborts
 with a `TransientTransactionError` label, `withTransaction` runs the callback
 again from the top, the new snapshot shows `stock: 0`, the guard matches
 nothing, and the buyer gets `OutOfStockError` — a clean 409. That retry is the
-subject of **chunk 3** *(not written yet)*, and it is why the
+subject of [chunk 3](03-failure-retries-and-the-callback.md), and it is why the
 callback has to be written the way it is.
 
 **The claims are sequential.** Not for lock ordering — there is none — but
@@ -85,7 +85,8 @@ behaviour."* A `for…of` with `await` is the whole answer.
 
 **`expectedTotalCents` is the authorised amount.** Phase 3 authorised the card
 for the cart total *before* calling this function. If the cart changed in
-between — a second tab added a line, or the retry in chunk 3 re-read a cart that
+between — a second tab added a line, or the retry in
+[chunk 3c](03c-a-callback-that-can-run-twice.md) re-read a cart that
 grew — the transaction must not quietly charge a different amount than was
 authorised. Comparing the recomputed total to the authorised one turns that into
 `CartChangedError`, which the endpoint maps to a 409 and a fresh authorisation.
@@ -106,7 +107,8 @@ Phase 1's table survives with one row changed:
 
 The "answer unknown" row is the one that grew a mechanism: Phase 1 left it
 entirely to the client's replay, whereas the driver now retries the commit
-itself first. Chunk 3 is about what that mechanism costs.
+itself first. [Chunk 3](03-failure-retries-and-the-callback.md) is about what
+that mechanism costs.
 
 ## Gotchas
 
@@ -142,7 +144,8 @@ validation failure here means the checkout code is building bad documents.
 and later return the callback's value — the docs: *"These methods return the
 value that the callback returns."* Older code that ignored the return and read
 results out of closure variables still works, but it is now the *wrong* shape
-for chunk 3, where closure variables are the thing that goes stale across
+for [chunk 3c](03c-a-callback-that-can-run-twice.md), where closure variables
+are the thing that goes stale across
 retries. Return the result; do not stash it.
 
 ## Interview questions
@@ -155,8 +158,8 @@ the first has modified and aborts with a write conflict carrying the
 the top; its new snapshot shows `stock: 0`; its guard matches nothing;
 `claimStock` returns `false`; the callback throws `OutOfStockError`; the
 customer gets a 409 naming the product. Nobody waited on a lock and nothing
-oversold — but the loser's callback ran twice, which is the fact chunk 3 is
-built on.
+oversold — but the loser's callback ran twice, which is the fact
+[chunk 3](03-failure-retries-and-the-callback.md) is built on.
 
 **★ Phase 1 read the cart under `for update`. What replaced the lock?** Nothing
 replaced it; the invariant it protected moved. The lock froze the product rows
@@ -170,4 +173,4 @@ total we authorised is the total we are committing" is checked explicitly with
 
 ← Prev: [The transaction](02-the-transaction.md) ·
 **Overview** *(not written yet)* ·
-Next → **Failure, retries and the callback** *(not written yet)*
+Next → [Two loops and two labels](03-failure-retries-and-the-callback.md)

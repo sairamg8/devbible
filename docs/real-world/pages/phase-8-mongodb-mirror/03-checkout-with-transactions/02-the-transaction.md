@@ -206,7 +206,9 @@ the `catch` *outside* re-reads without a session. That is why the 11000 branch
 sits where it does.
 
 **★ The cart can change between authorisation and commit, and a retry makes it
-more likely.** Chunk 3's retry re-reads the cart from a fresh snapshot. If a
+more likely.** The retry in
+[chunk 3c](03c-a-callback-that-can-run-twice.md) re-reads the cart from a fresh
+snapshot. If a
 second tab pushed a line in between, the recomputed total is higher than the
 authorised hold. Without `expectedTotalCents` the order commits for more than
 the card authorised and the capture fails hours later in the worker.

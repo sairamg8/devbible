@@ -167,7 +167,8 @@ retry and does not apply the `$inc` twice. This is a guarantee that
 lost response leaves the client genuinely unable to tell whether the decrement
 happened.
 
-The caveat that will matter in **chunk 3** *(not written yet)*:
+The caveat that will matter in
+[chunk 3](03-failure-retries-and-the-callback.md):
 **writes inside a transaction are not individually retryable.** The transaction as
 a whole is retried instead, which is a different mechanism with different
 consequences.
