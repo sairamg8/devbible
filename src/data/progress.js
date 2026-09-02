@@ -583,7 +583,7 @@ export const LANGUAGES = {
   },
   realworld: {
     label: 'Real World',
-    updated: '2026-09-02 14:45',
+    updated: '2026-09-02 16:20',
     docsPath: '/docs/real-world',
     pagesPath: '/docs/real-world/pages',
     phases: [
@@ -595,7 +595,7 @@ export const LANGUAGES = {
       {n: 5, slug: 'phase-5-js-functions', name: 'JavaScript custom functions', part: 'Frontend', topics: 10, pages: 10},
       {n: 6, slug: 'phase-6-typescript', name: 'TypeScript across the stack', part: 'Frontend', topics: 8, pages: 5, pagesPlanned: 8},
       {n: 7, slug: 'phase-7-css-recipes', name: 'CSS recipes', part: 'Completion', topics: 4, pages: 4},
-      {n: 8, slug: 'phase-8-mongodb-mirror', name: 'The MongoDB mirror', part: 'Completion', topics: 6, pages: 2, pagesPlanned: 6},
+      {n: 8, slug: 'phase-8-mongodb-mirror', name: 'The MongoDB mirror', part: 'Completion', topics: 6, pages: 3, pagesPlanned: 6},
     ],
   },
   java: {

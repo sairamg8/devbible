@@ -26,7 +26,7 @@ import Progress from '@site/src/components/Progress';
 | **[5 — JS custom functions](./phase-5-js-functions/README.md)** | Fetch wrapper, TTL cache, task queue, event bus, validation engine, Intl formatting | ✅ 10 / 10 |
 | **[6 — TypeScript](./phase-6-typescript/README.md)** | Shared types, zod inference, typed `pg` results, the order state machine, typed Express handlers | 🚧 5 / 8 |
 | **[7 — CSS recipes](./phase-7-css-recipes/README.md)** | Product grid, skeletons, dark mode, overlays (header and checkout form dropped 2026-08-17) | ✅ 4 / 4 |
-| **[8 — The MongoDB mirror](./phase-8-mongodb-mirror/README.md)** | The same data layer on MongoDB for MERN | 🚧 2 / 6 |
+| **[8 — The MongoDB mirror](./phase-8-mongodb-mirror/README.md)** | The same data layer on MongoDB for MERN | 🚧 3 / 6 |
 
 ## The chapter shape
 
