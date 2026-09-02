@@ -81,7 +81,7 @@ production code. The `sys.exit` docs add a second constraint worth knowing:
 process when called from the main thread, and the exception is not
 intercepted."* A `sys.exit()` in a worker thread kills that thread, not the
 process. The cases where `finally` genuinely does **not** run are in
-[03d · When `finally` does not run](03d-when-finally-does-not-run.md).
+[03g · When `finally` does not run](03g-when-finally-does-not-run.md).
 
 ## The return value is computed before `finally` runs
 
@@ -105,7 +105,7 @@ the caller receives, because they are the same object — see
 
 What a `finally` cannot do is change *which* object is returned — unless it
 executes its own `return`, which is the trap in
-[03c](03c-return-break-continue-in-finally.md).
+[03e](03e-return-break-continue-in-finally.md).
 
 ## The exception is not visible inside `finally`
 
@@ -172,7 +172,7 @@ for path in paths:
 
 Every iteration releases exactly once, on all four routes (invalid, terminator,
 processed, raised). The corresponding *unsafe* thing is putting `continue` or
-`break` in the `finally` itself — [03c](03c-return-break-continue-in-finally.md).
+`break` in the `finally` itself — [03e](03e-return-break-continue-in-finally.md).
 
 ## `finally` versus a `while` loop's `else`
 
@@ -196,7 +196,7 @@ later than expected.** Cause: `sys.exit()` raises `SystemExit`; every `finally`
 on the way out runs first, any broad handler upstream can catch it, and it only
 terminates the process at all when raised on the main thread. Fix: do not use
 broad handlers; if you truly must exit immediately without cleanup, that is
-`os._exit` — see [03d](03d-when-finally-does-not-run.md).
+`os._exit` — see [03g](03g-when-finally-does-not-run.md).
 
 **★ Symptom — a `finally` that logs "operation failed" logs it on success too.**
 Cause: `finally` cannot see whether an exception occurred; the reference says the

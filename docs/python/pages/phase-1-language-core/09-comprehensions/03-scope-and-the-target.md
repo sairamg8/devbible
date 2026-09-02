@@ -85,7 +85,7 @@ Three consequences that matter:
 written.** For a list comprehension this is invisible because the whole thing
 runs immediately anyway. For a generator expression it is the difference between
 an exception at definition and an exception at consumption, which is
-[chunk 5b](05b-eager-leftmost-and-one-shot.md)'s subject.
+[chunk 5b](05b-eager-leftmost-and-lazy-rest.md)'s subject.
 
 **Only the leftmost iterable can see class-body names.** That is the whole of
 the class-body trap in [chunk 3b](03b-the-class-body-trap.md).

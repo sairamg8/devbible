@@ -49,7 +49,7 @@ That is the same leftmost-iterable rule from
 [scope](03-scope-and-the-target.md), and it is why `(x ** 2 for x in
 nonexistent)` raises immediately while `(nonexistent for x in range(10))` does
 not. That asymmetry has its own chunk —
-[eager leftmost, lazy everything else](05b-eager-leftmost-and-one-shot.md).
+[eager leftmost, lazy everything else](05b-eager-leftmost-and-lazy-rest.md).
 
 The glossary's definition adds the practical framing:
 
@@ -282,4 +282,4 @@ chunk.
 
 ---
 
-← Prev: [What inlining changed](04b-what-inlining-changed.md) · Index: [Comprehensions](README.md) · Next → [Eager leftmost and one-shot](05b-eager-leftmost-and-one-shot.md)
+← Prev: [What inlining changed](04b-what-inlining-changed.md) · Index: [Comprehensions](README.md) · Next → [Eager leftmost, lazy rest](05b-eager-leftmost-and-lazy-rest.md)
