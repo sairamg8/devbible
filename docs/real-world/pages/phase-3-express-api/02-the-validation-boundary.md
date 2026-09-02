@@ -172,4 +172,4 @@ alone; `.refine` is for *cross-field shape* (min ≤ max), not for state.
 ---
 
 ← Prev: [Project structure](01-project-structure.md) ·
-Next → **Auth** *(not written yet)*
+Next → [Auth](03-auth/README.md)

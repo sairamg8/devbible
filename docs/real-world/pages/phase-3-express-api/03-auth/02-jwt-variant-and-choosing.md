@@ -162,4 +162,4 @@ changed that.
 ---
 
 ← Prev: [Sessions](01-sessions.md) · Topic index: [Auth](README.md) ·
-Next → **Authorization** *(not written yet)*
+Next → [Authorization](../04-authorization.md)

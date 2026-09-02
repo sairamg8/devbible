@@ -127,4 +127,4 @@ from here.
 
 ← Prev: [Error boundaries and retry UX](11-error-boundaries-and-retry.md) ·
 Phase index: [Phase 4 — The React UI](README.md) ·
-Next phase → **Phase 5 · JavaScript custom functions** *(not written yet)*
+Next phase → [Phase 5 · JavaScript custom functions](../phase-5-js-functions/README.md)

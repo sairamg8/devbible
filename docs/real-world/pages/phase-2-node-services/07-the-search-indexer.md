@@ -87,4 +87,4 @@ handler, which is precisely why the outbox was worth building first.
 ---
 
 ← Prev: [The webhook dispatcher](06-the-webhook-dispatcher.md) ·
-Next → **The cache layer** *(not written yet)*
+Next → [The cache layer](08-the-cache-layer.md)

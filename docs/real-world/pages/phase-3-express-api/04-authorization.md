@@ -187,4 +187,4 @@ async createReview({userId, productId, orderId, rating, body}) {
 ---
 
 ← Prev: [Auth](03-auth/README.md) ·
-Next → **Catalog endpoints** *(not written yet)*
+Next → [Catalog endpoints](05-catalog-endpoints.md)

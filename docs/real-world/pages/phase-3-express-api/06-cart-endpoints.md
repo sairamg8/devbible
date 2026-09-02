@@ -187,4 +187,4 @@ export function cartService({pool}) {
 ---
 
 ← Prev: [Catalog endpoints](05-catalog-endpoints.md) ·
-Next → **The checkout endpoint** *(not written yet)*
+Next → [The checkout endpoint](07-the-checkout-endpoint.md)

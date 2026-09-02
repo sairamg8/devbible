@@ -178,4 +178,4 @@ which overlay gets which behaviour is the actual skill.
 ---
 
 ← Prev: [Cart state](06-cart-state.md) ·
-Next → **Upload with progress** *(not written yet)*
+Next → [Upload with progress](08-upload-with-progress.md)

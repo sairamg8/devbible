@@ -182,5 +182,5 @@ export const appFetch =
 
 ---
 
-Next → **The TTL cache with stale-while-revalidate** *(not written yet)* ·
+Next → [The TTL cache with stale-while-revalidate](02-the-ttl-cache.md) ·
 Phase index: [Phase 5 — JavaScript custom functions](README.md)

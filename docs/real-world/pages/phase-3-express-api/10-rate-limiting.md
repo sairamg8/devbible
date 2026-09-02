@@ -178,4 +178,4 @@ router.post('/checkout', requireAuth,
 ---
 
 ← Prev: [The error contract](09-the-error-contract.md) ·
-Next → **Inbound webhooks** *(not written yet)*
+Next → [Inbound webhooks](11-inbound-webhooks.md)

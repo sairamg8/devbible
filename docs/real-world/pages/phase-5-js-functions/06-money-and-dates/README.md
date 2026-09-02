@@ -64,4 +64,4 @@ the last step in the chain and the only one that is allowed to be locale-aware.
 
 ---
 
-Next → **Slug and search normalization** *(not written yet)*
+Next → [Slug and search normalization](../07-slug-and-search-normalization.md)

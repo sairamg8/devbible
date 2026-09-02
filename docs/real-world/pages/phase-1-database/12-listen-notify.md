@@ -135,4 +135,4 @@ cross-database** — it lives and dies with this one Postgres.
 
 ← Prev: [Soft delete and audit columns](11-soft-delete-and-audit.md) ·
 Phase index: [Phase 1 — The database](README.md) ·
-Next phase → **Phase 2 · Node services** *(not written yet)*
+Next phase → [Phase 2 · Node services](../phase-2-node-services/README.md)

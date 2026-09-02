@@ -196,4 +196,4 @@ export function notFound(req, res) {
 ---
 
 ← Prev: [The uploads endpoint](08-the-uploads-endpoint.md) ·
-Next → **Rate limiting** *(not written yet)*
+Next → [Rate limiting](10-rate-limiting.md)

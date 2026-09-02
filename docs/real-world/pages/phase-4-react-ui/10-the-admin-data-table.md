@@ -198,4 +198,4 @@ function OrderRow({order, onChanged}) {
 ---
 
 ← Prev: [Auth in the client](09-auth-in-the-client.md) ·
-Next → **Error boundaries and retry UX** *(not written yet)*
+Next → [Error boundaries and retry UX](11-error-boundaries-and-retry.md)

@@ -204,4 +204,4 @@ same code, both modes.
 ---
 
 ← Prev: [The API boot, assembled](01-the-api-boot.md) ·
-Next → **The upload service** *(not written yet)*
+Next → [The upload service](03-the-upload-service.md)

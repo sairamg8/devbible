@@ -205,4 +205,4 @@ export function CheckoutForm({cart, onPlaced}) {
 ---
 
 ← Prev: [The infinite product list](03-the-infinite-product-list.md) ·
-Next → **`useLocalStorage` and the persisted cart** *(not written yet)*
+Next → [`useLocalStorage` and the persisted cart](05-uselocalstorage-and-cart.md)

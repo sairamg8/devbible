@@ -200,4 +200,4 @@ export function ProductGrid({filters}) {
 ---
 
 ← Prev: [`useDebounce` and the search box](02-usedebounce-and-search.md) ·
-Next → **`useForm` and the checkout form** *(not written yet)*
+Next → [`useForm` and the checkout form](04-useform-and-checkout.md)

@@ -191,4 +191,4 @@ where the work is, by overlaying re-auth. A guard that unmounted on the
 ---
 
 ← Prev: [Upload with progress](08-upload-with-progress.md) ·
-Next → **The admin data table** *(not written yet)*
+Next → [The admin data table](10-the-admin-data-table.md)

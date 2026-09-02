@@ -182,4 +182,4 @@ export function buildJobs({pool, uploads}) {
 ---
 
 ← Prev: [The outbox relay and email worker](04-outbox-relay-and-email.md) ·
-Next → **The webhook dispatcher** *(not written yet)*
+Next → [The webhook dispatcher](06-the-webhook-dispatcher.md)

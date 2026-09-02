@@ -221,4 +221,4 @@ the leftover call site into an immediate, obvious failure rather than a silent
 ---
 
 ← Prev: [Slug and search normalization](07-slug-and-search-normalization.md) ·
-Next → **Optimistic-update helpers** *(not written yet)*
+Next → [Optimistic-update helpers](09-optimistic-update-helpers.md)

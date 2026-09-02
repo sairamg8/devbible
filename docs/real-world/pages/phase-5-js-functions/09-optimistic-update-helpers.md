@@ -231,4 +231,4 @@ teardown; a settled-after-unmount response has nothing to update
 ---
 
 ← Prev: [Feature flags](08-feature-flags.md) ·
-Next → **Debounce and throttle, applied** *(not written yet)*
+Next → [Debounce and throttle, applied](10-debounce-and-throttle-applied.md)

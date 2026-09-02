@@ -191,4 +191,4 @@ last step is small and fast.
 ---
 
 ← Prev: [Modal, portal and focus trap](07-modal-portal-focus.md) ·
-Next → **Auth in the client** *(not written yet)*
+Next → [Auth in the client](09-auth-in-the-client.md)

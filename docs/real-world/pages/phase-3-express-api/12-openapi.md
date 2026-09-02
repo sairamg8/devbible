@@ -158,4 +158,4 @@ is a review conversation before it is a client incident**.
 
 ← Prev: [Inbound webhooks](11-inbound-webhooks.md) ·
 Phase index: [Phase 3 — The Express API](README.md) ·
-Next phase → **Phase 4 · The React UI** *(not written yet)*
+Next phase → [Phase 4 · The React UI](../phase-4-react-ui/README.md)

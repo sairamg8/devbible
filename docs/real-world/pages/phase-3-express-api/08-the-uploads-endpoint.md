@@ -185,4 +185,4 @@ review id — the position cap `0..2` is already the
 ---
 
 ← Prev: [The checkout endpoint](07-the-checkout-endpoint.md) ·
-Next → **The error contract** *(not written yet)*
+Next → [The error contract](09-the-error-contract.md)

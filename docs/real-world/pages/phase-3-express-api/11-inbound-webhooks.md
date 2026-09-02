@@ -187,4 +187,4 @@ a human) are ordinary relay handlers in the worker.
 ---
 
 ← Prev: [Rate limiting](10-rate-limiting.md) ·
-Next → **OpenAPI from the schemas** *(not written yet)*
+Next → [OpenAPI from the schemas](12-openapi.md)

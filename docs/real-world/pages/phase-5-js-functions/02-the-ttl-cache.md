@@ -192,4 +192,4 @@ function ProductPage({slug}) {
 ---
 
 ← Prev: [The fetch wrapper](01-the-fetch-wrapper.md) ·
-Next → **The concurrency-limited task queue** *(not written yet)*
+Next → [The concurrency-limited task queue](03-the-task-queue.md)

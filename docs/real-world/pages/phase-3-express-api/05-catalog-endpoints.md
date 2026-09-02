@@ -181,4 +181,4 @@ export const decodeCursor = (s) => {
 ---
 
 ← Prev: [Authorization](04-authorization.md) ·
-Next → **Cart endpoints** *(not written yet)*
+Next → [Cart endpoints](06-cart-endpoints.md)

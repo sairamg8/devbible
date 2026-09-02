@@ -154,4 +154,4 @@ setCartMirror({count: updated.items.length});
 ---
 
 ← Prev: [`useForm` and the checkout form](04-useform-and-checkout.md) ·
-Next → **Cart state** *(not written yet)*
+Next → [Cart state](06-cart-state.md)

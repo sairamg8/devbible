@@ -184,4 +184,4 @@ export function ErrorPanel({error, onRetry}) {
 ---
 
 ← Prev: [The admin data table](10-the-admin-data-table.md) ·
-Next → **When to switch to TanStack Query** *(not written yet)*
+Next → [When to switch to TanStack Query](12-when-tanstack-query.md)

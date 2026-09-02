@@ -173,4 +173,4 @@ defined the error class; this phase's chapter 09 maps it.
 ---
 
 ← Prev: [Cart endpoints](06-cart-endpoints.md) ·
-Next → **The uploads endpoint** *(not written yet)*
+Next → [The uploads endpoint](08-the-uploads-endpoint.md)

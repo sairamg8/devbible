@@ -228,4 +228,4 @@ key-plus-metadata split already permits.
 ---
 
 ← Prev: [The data layer over raw pg](02-the-data-layer.md) ·
-Next → **The outbox relay and email worker** *(not written yet)*
+Next → [The outbox relay and email worker](04-outbox-relay-and-email.md)

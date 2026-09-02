@@ -207,4 +207,4 @@ progress rows).
 ---
 
 ← Prev: [`useLocalStorage` and the persisted cart](05-uselocalstorage-and-cart.md) ·
-Next → **Modal, portal and focus trap** *(not written yet)*
+Next → [Modal, portal and focus trap](07-modal-portal-focus.md)

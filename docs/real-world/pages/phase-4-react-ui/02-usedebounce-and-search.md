@@ -158,4 +158,4 @@ was set assuming it — the two are a pair, tuned together.
 ---
 
 ← Prev: [`useAsync` and the API client](01-useasync-and-the-api-client.md) ·
-Next → **The infinite product list** *(not written yet)*
+Next → [The infinite product list](03-the-infinite-product-list.md)

@@ -178,4 +178,4 @@ every fetch in the app.
 ---
 
 ← Prev: [The event bus](04-the-event-bus.md) ·
-Next → **Money and dates with `Intl`** *(not written yet)*
+Next → [Money and dates with `Intl`](06-money-and-dates/README.md)

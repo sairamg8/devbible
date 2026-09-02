@@ -168,4 +168,4 @@ because a worker without readiness still deserves observability.
 ---
 
 ← Prev: [The cache layer](08-the-cache-layer.md) ·
-Next → **The ops CLI** *(not written yet)*
+Next → [The ops CLI](10-the-ops-cli.md)

@@ -168,5 +168,5 @@ surfaces have three different body disciplines.
 
 ---
 
-Next → **The validation boundary** *(not written yet)* ·
+Next → [The validation boundary](02-the-validation-boundary.md) ·
 Phase index: [Phase 3 — The Express API](README.md)

@@ -175,5 +175,5 @@ redirects to login on 401 makes half the app impossible to build.
 
 ---
 
-Next → **`useDebounce` and the search box** *(not written yet)* ·
+Next → [`useDebounce` and the search box](02-usedebounce-and-search.md) ·
 Phase index: [Phase 4 — The React UI](README.md)

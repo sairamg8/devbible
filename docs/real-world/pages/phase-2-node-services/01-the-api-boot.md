@@ -184,5 +184,5 @@ process.on('uncaughtException', (err) => {            // log and exit — never 
 
 ---
 
-Next → **The data layer over raw `pg`** *(not written yet)* ·
+Next → [The data layer over raw `pg`](02-the-data-layer.md) ·
 Phase index: [Phase 2 — Node services](README.md)

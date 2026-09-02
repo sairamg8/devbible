@@ -180,4 +180,4 @@ if (!command) {
 
 ← Prev: [The health and metrics kit](09-health-and-metrics.md) ·
 Phase index: [Phase 2 — Node services](README.md) ·
-Next phase → **Phase 3 · The Express API** *(not written yet)*
+Next phase → [Phase 3 · The Express API](../phase-3-express-api/README.md)

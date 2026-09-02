@@ -172,4 +172,4 @@ const relay = createRelay({pool, signal, handlers: {
 ---
 
 ← Prev: [Scheduled jobs](05-scheduled-jobs.md) ·
-Next → **The search indexer job** *(not written yet)*
+Next → [The search indexer job](07-the-search-indexer.md)

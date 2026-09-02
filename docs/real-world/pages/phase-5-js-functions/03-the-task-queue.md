@@ -169,4 +169,4 @@ as the task's signal, which is what makes cancel-while-queued work: an
 ---
 
 ← Prev: [The TTL cache with stale-while-revalidate](02-the-ttl-cache.md) ·
-Next → **The event bus** *(not written yet)*
+Next → [The event bus](04-the-event-bus.md)

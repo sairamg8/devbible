@@ -183,4 +183,4 @@ export function catalogService({pool, cache}) {
 ---
 
 ← Prev: [The search indexer job](07-the-search-indexer.md) ·
-Next → **The health and metrics kit** *(not written yet)*
+Next → [The health and metrics kit](09-health-and-metrics.md)
