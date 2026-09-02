@@ -630,7 +630,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/python/pages',
     phases: [
       {n: 0, slug: 'phase-0-runtime', name: 'The runtime', part: 'Foundations', topics: 12, pages: 12},
-      {n: 1, slug: 'phase-1-language-core', name: 'Language core', part: 'Foundations', topics: 16, pages: 11, pagesPlanned: 16},
+      {n: 1, slug: 'phase-1-language-core', name: 'Language core', part: 'Foundations', topics: 16, pages: 13, pagesPlanned: 16},
       {n: 2, slug: 'phase-2-functions', name: 'Functions, closures and decorators', part: 'Foundations', topics: 10, pages: 0},
       {n: 3, slug: 'phase-3-collections', name: 'Collections in depth', part: 'Data model', topics: 12, pages: 0},
       {n: 4, slug: 'phase-4-classes-data-model', name: 'Classes and the data model', part: 'Data model', topics: 15, pages: 0},

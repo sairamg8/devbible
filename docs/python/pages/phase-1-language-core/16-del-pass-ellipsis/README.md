@@ -64,4 +64,4 @@ singleton object whose only load-bearing use in ordinary code is
 
 ---
 
-← Prev: **PEP 8 and idiom** *(not written yet)* · Index: [Phase 1 — Language core](../README.md) · Next → **Phase 2 — Functions, closures and decorators** *(not written yet)*
+← Prev: [PEP 8 and idiom](../15-pep8-and-idiom/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Phase 2 — Functions, closures and decorators** *(not written yet)*

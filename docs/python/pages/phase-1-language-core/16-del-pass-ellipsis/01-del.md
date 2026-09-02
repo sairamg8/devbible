@@ -185,4 +185,4 @@ substantial work left.
 
 ---
 
-← Prev: **PEP 8 and idiom** *(not written yet)* · Index: [`del`, `pass`, `Ellipsis`](README.md) · Next → [`pass` and `Ellipsis`](02-pass-and-ellipsis.md)
+← Prev: [PEP 8 and idiom](../15-pep8-and-idiom/README.md) · Index: [`del`, `pass`, `Ellipsis`](README.md) · Next → [`pass` and `Ellipsis`](02-pass-and-ellipsis.md)
