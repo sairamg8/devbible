@@ -275,4 +275,4 @@ where they change nothing.
 
 ---
 
-← Prev: [`and` and `or` return operands](03-and-or-return-operands.md) · Index: [Truthiness](README.md) · Next → [`any`, `all`, and the walrus](04-any-all-and-the-walrus.md)
+← Prev: [`and` and `or` return operands](03-and-or-return-operands.md) · Index: [Truthiness](README.md) · Next → [`any` and `all`](04-any-and-all.md)
