@@ -151,7 +151,7 @@ This is where the embed pays. In Postgres, "empty the cart" was
 `delete from cart_items where cart_id = $1` — a multi-row delete whose atomicity
 came from the surrounding transaction. Here it is one atomic write on one
 document, which is why the
-**checkout transaction** *(not written yet)*
+[checkout transaction](../03-checkout-with-transactions/02-the-transaction.md)
 has one fewer thing to worry about: clearing the cart cannot half-happen.
 
 ## Merge on login
@@ -226,7 +226,7 @@ mitigation.
 **★ Nothing stops `items` holding a `productId` that no longer exists.** The
 foreign key is gone. The cart read path must therefore tolerate a missing
 product rather than assume the lookup returns one line per item; the
-**checkout read** *(not written yet)* treats a
+[checkout read](../03-checkout-with-transactions/02-the-transaction.md) treats a
 missing product exactly as it treats zero stock, and the cart page renders the
 line as unavailable rather than crashing on `undefined.priceCents`.
 
@@ -252,7 +252,7 @@ re-running a non-transactional one. The `$pull`-as-you-go version is safe under
 both: a re-run sees the merged lines already gone from the source. A transaction
 would cost a replica-set session, the 60-second transaction lifetime limit, and
 the possibility of the callback body running more than once
-(**03·03** *(not written yet)*),
+([03·3c](../03-checkout-with-transactions/03c-a-callback-that-can-run-twice.md)),
 in exchange for an atomicity nobody in the UI can observe.
 
 **★ Two partial unique indexes replaced two partial unique indexes — so what

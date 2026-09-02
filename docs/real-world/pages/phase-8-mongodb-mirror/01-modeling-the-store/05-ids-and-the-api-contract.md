@@ -168,7 +168,7 @@ the authoritative timestamp — [chunk 4](03-the-order-document.md) does — and
 client-supplied string and the index is an explicit `createIndex` that the
 collection works perfectly well without. Miss it, and the endpoint's replay path
 silently stops working — two orders for one payment, with no error anywhere.
-Chapter **03** *(not written yet)* builds its entire
+[Chapter 03](../03-checkout-with-transactions/README.md) builds its entire
 correctness argument on that index existing.
 
 **★ Resolution B's counter document is the only global serialisation point in

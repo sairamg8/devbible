@@ -178,7 +178,7 @@ but every reference *into* `products` — from carts, orders, reviews — has no
 enforcement at all. Nothing stops a cart holding a `productId` for a product that
 no longer exists. [Chunk 07](06-constraints-that-vanish.md) is the full
 accounting; the cart's answer is that the checkout read
-(**03·02** *(not written yet)*) looks the
+([03·02](../03-checkout-with-transactions/02-the-transaction.md)) looks the
 products up and treats "missing" as "out of stock", which is what the UI wanted
 anyway.
 

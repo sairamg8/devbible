@@ -74,8 +74,8 @@ carts and reviews are disappearing underneath them.
 **Atomicity.** These are five writes across four collections and they are not
 atomic. A crash halfway leaves a user with no sessions but an intact cart. That
 is recoverable and mostly harmless, which is why this does not get a transaction;
-if it did, it would be for the reason chapter
-**03** *(not written yet)* gives, and it would inherit the
+if it did, it would be for the reason
+[chapter 03](../03-checkout-with-transactions/README.md) gives, and it would inherit the
 60-second lifetime limit for an operation that may touch thousands of reviews.
 The safer construction is a background reconciliation that deletes children of
 soft-deleted users, so a crash delays rather than corrupts.
@@ -182,7 +182,7 @@ than drifting into it.
 **★ Nothing stops a `productId` in a cart, order or review from naming a product
 that does not exist.** Every read that joins on one must tolerate the miss.
 Concretely: the checkout read
-(**03·02** *(not written yet)*) treats a
+([03·02](../03-checkout-with-transactions/02-the-transaction.md)) treats a
 missing product exactly as it treats zero stock, and the cart page renders the
 line as unavailable rather than dereferencing `undefined.priceCents`. The
 Postgres FK meant these branches were dead code; here they are the only defence.

@@ -61,4 +61,4 @@ chapter's gate.
 
 Phase index: [Phase 8 — The MongoDB mirror](../README.md) ·
 ← Prev chapter: [Modeling the store as documents](../01-modeling-the-store/README.md) ·
-Next chapter → **Checkout with transactions** *(not written yet)*
+Next chapter → [Checkout with transactions](../03-checkout-with-transactions/README.md)

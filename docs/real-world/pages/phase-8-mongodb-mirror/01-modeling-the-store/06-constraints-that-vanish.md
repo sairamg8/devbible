@@ -46,7 +46,7 @@ rewrite and deserves to be read as an invoice rather than a footnote.**
 Unique indexes behave the way the relational ones did, *including under
 concurrency*, which is the property that matters — checkout's replay guard is a
 unique index and nothing else
-(**chapter 03** *(not written yet)*).
+([chapter 03](../03-checkout-with-transactions/README.md)).
 
 ```js
 // migrations/mongo/002-indexes.js — the uniqueness half of the schema

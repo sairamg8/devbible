@@ -16,7 +16,7 @@ sidebar_position: 0
 > Spine: **MongoDB 8.0** (8.2 minor) · driver **`mongodb` 7.5.0** · **Node 24 LTS**.
 
 The keystone chapter of the phase. It fixes the document model that
-[02](../02-the-catalog/README.md), **03** *(not written yet)*,
+[02](../02-the-catalog/README.md), [03](../03-checkout-with-transactions/README.md),
 **04** *(not written yet)*, **05** *(not written yet)*
 and **06** *(not written yet)* all assume, by taking the
 [eleven tables](../../phase-0-the-app/02-architecture-and-data-model.md) of the
@@ -73,7 +73,7 @@ cardinality patterns — are
 [MongoDB phases 1 and 3](../../../../mongodb/pages/phase-3-schema-design/README.md)
 and are never re-taught here. Everything downstream depends on this chapter:
 [chapter 02](../02-the-catalog/README.md) queries these documents,
-**chapter 03** *(not written yet)* writes five of these
+[chapter 03](../03-checkout-with-transactions/README.md) writes five of these
 collections in one transaction, and
 **chapter 05** *(not written yet)* indexes exactly the fields this
 chapter put where they are.
