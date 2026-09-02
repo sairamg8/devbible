@@ -172,7 +172,7 @@ forgot to `await` something inside — `route`'s explicit `try`/`catch` around
 handler, which is where it belongs — and is easy to skip.** A handler that
 ignores `ctx.userId` compiles perfectly on a route mounted behind
 `requireAuth`. The type cannot express "this route is authenticated"; only the
-mount does. **Chapter 05 · Typed Express handlers** *(not written yet)* covers
+mount does. [Chapter 05 · Typed Express handlers](../05-typed-express-handlers/README.md) covers
 the narrowing wrapper that makes `userId: number` non-null for the routes that
 are actually behind auth.
 

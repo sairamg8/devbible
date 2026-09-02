@@ -57,7 +57,7 @@ Backwards to
 which produces the union this chapter switches on, and to
 [the row types](../03-typing-raw-pg-results/README.md), which are the input to
 every mapper here. Forwards to
-**the typed handlers** *(not written yet)*, where the
+[the typed handlers](../05-typed-express-handlers/README.md), where the
 transition guard becomes an endpoint, and to
 **the custom hooks** *(not written yet)*, whose `AsyncState`
 is the same pattern applied to loading and error.
@@ -66,4 +66,4 @@ is the same pattern applied to loading and error.
 
 Phase index: [Phase 6 — TypeScript across the stack](../README.md) ·
 ← Prev chapter: [Typing raw `pg` results](../03-typing-raw-pg-results/README.md) ·
-Next chapter → **Typed Express handlers** *(not written yet)*
+Next chapter → [Typed Express handlers](../05-typed-express-handlers/README.md)

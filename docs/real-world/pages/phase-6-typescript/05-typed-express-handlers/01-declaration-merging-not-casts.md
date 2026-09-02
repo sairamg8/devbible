@@ -286,5 +286,5 @@ review does not treat it as one.
 
 ---
 
-← **Overview** *(not written yet)* ·
+← [Overview](README.md) ·
 Next → [The five generics in practice](02-the-five-generics-in-practice.md)

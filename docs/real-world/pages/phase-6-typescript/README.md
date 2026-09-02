@@ -20,7 +20,7 @@ the [Phase 1 schema](../phase-1-database/01-the-schema/README.md).
 | 02 | **[zod schemas as the source of truth](02-zod-as-the-source-of-truth/README.md)** *(9 chunks)* | <span className="db-tier t-master">Master</span> | One schema, two artifacts — `z.infer` from request to response, input versus output types, and the status enum four ways |
 | 03 | **[Typing raw `pg` results](03-typing-raw-pg-results/README.md)** *(7 chunks)* | <span className="db-tier t-master">Master</span> | 🔴 The generic is an **assertion**, not a check — a row type per query, what `pg` actually returns, and rows that lie |
 | 04 | **[Discriminated unions: the order state machine](04-discriminated-unions/README.md)** *(4 chunks)* | <span className="db-tier t-master">Master</span> | Impossible states the schema cannot express, the transition table, exhaustiveness in the UI and on the wire |
-| 05 | **Typed Express handlers and middleware** | <span className="db-tier t-understand">Understand</span> | 🚧 **part-written — 2 chunks on disk, owes its `README.md` index and chunk 03** |
+| 05 | **[Typed Express handlers and middleware](05-typed-express-handlers/README.md)** *(7 chunks)* | <span className="db-tier t-understand">Understand</span> | Merge `Request` once instead of casting everywhere, the five positional generics, middleware and `res.locals`, and 🔴 the error handler whose **arity** Express reads and TypeScript cannot see |
 | 06 | **Typing the custom hooks** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 07 | **The typed API client** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 08 | **Utility types in app code** | <span className="db-tier t-know">Know</span> | *(not written yet)* |

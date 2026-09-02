@@ -110,7 +110,7 @@ compare-and-swap, and it comes with the matching disadvantage: **nothing is
 serialised, so nothing is all-or-nothing.** A cart with two products becomes two
 independent writes, and a crash between them leaves one product's stock claimed
 and the other's not. That is precisely the gap
-**chunk 2** *(not written yet)* fills, and it is worth naming now so the
+[chunk 2](02-the-transaction.md) fills, and it is worth naming now so the
 transaction is introduced as the answer to a specific problem rather than as the
 default posture.
 
@@ -274,4 +274,7 @@ comparison, and this stock guard. The unsafe version is always the same shape:
 read the value into JavaScript, decide, then write — which is a race in every
 database and merely more obviously so in one without row locks.
 
-{/* FOOTER */}
+---
+
+← **Overview** *(not written yet)* ·
+Next → [The transaction](02-the-transaction.md)

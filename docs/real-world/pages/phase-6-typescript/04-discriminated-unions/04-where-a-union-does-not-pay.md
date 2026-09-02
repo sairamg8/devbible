@@ -209,4 +209,4 @@ inversion of the intent: the defensive line is what makes the failure silent.
 
 ← Prev: [Exhaustiveness and the wire](03-exhaustiveness-in-the-ui-and-on-the-wire.md) ·
 [Overview](README.md) ·
-Next chapter → **Typed Express handlers** *(not written yet)*
+Next chapter → [Typed Express handlers](../05-typed-express-handlers/README.md)

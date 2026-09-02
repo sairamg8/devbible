@@ -115,7 +115,7 @@ the design.** It has to be: `req` is Express's one global `Request` interface,
 so `valid` has one type for every route, while `Valid<S>` differs per route.
 Nothing the compiler can see connects the middleware that ran to the handler
 that follows. That is not a zod problem — it is an Express-shaped hole, and
-**chapter 05 · Typed Express handlers** *(not written yet)* is where it gets
+[chapter 05 · Typed Express handlers](../05-typed-express-handlers/README.md) is where it gets
 closed properly. What follows is how this app avoids needing it at all.
 
 ## Typing the failure path
