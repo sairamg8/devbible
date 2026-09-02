@@ -93,7 +93,7 @@ x is y            # may be True or False depending on how they were compiled
 None of this is a promise. **Compare strings with `==`.** `is` asks "the same
 object?", and the only string question that should ever be asked that way is
 none at all — reserve `is` for `None`, `True` and `False`, as
-**Comparisons** *(not written yet)* covers.
+[Comparisons](../06-comparisons/README.md) covers.
 
 Since 3.8, comparing against a literal with `is` raises a `SyntaxWarning`
 naming the mistake, which is the interpreter telling you the same thing.

@@ -252,4 +252,4 @@ bound afterwards, and it hides mutation inside a comprehension.
 
 ---
 
-← Prev: [The walrus operator](05-the-walrus-operator.md) · Index: [Truthiness](README.md) · Next → **Comparisons** *(not written yet)*
+← Prev: [The walrus operator](05-the-walrus-operator.md) · Index: [Truthiness](README.md) · Next → [Comparisons](../06-comparisons/README.md)

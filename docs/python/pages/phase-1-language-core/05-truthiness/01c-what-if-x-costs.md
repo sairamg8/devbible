@@ -145,7 +145,7 @@ falls back to the reflected operand. Calling `a.__eq__(b)` yourself skips that
 machinery and hands you the raw sentinel. For six releases that sentinel quietly
 evaluated to `True`, so a comparison that had *failed* looked like it had
 *succeeded*. On 3.14 it raises instead, which is a straight upgrade: a loud bug
-beats a silent one. **Comparisons** *(not written yet)* covers the protocol
+beats a silent one. [Comparisons](../06-comparisons/README.md) covers the protocol
 itself.
 
 The same trap exists one level up, in test code that asserts on a dunder's

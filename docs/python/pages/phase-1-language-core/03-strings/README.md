@@ -59,7 +59,7 @@ the template are the same string.
 - **[`bytes` vs `str`](../04-bytes-and-encoding/README.md)** is the other half of text
   handling: this topic works entirely in `str`, and that one covers getting in
   and out of it.
-- **Comparisons** *(not written yet)* picks up the `is` versus `==` rule
+- **[Comparisons](../06-comparisons/README.md)** picks up the `is` versus `==` rule
   that interning makes tempting to get wrong.
 - **Phase 3 — Collections** relies on string hashability for every `dict` it
   builds.

@@ -232,4 +232,4 @@ parentheses, and `x & 1 == 0` groups as `(x & 1) == 0`, unlike C.
 
 ---
 
-← Prev: **Truthiness** *(not written yet)* · Index: [Comparisons](README.md) · Next → [Consistency rules and runtime dispatch](01b-consistency-and-dispatch.md)
+← Prev: [Truthiness](../05-truthiness/README.md) · Index: [Comparisons](README.md) · Next → [Consistency rules and runtime dispatch](01b-consistency-and-dispatch.md)

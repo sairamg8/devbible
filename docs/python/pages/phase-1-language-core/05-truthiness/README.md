@@ -68,7 +68,7 @@ every trap above.
   this topic leans on — the singleton guarantee behind `is True`, why
   `True + True` is `2`, and [reading a bool in](../02-numbers/04f-reading-a-bool-in.md)
   for parsing rather than truth-testing environment variables and CLI flags.
-- **Comparisons** *(not written yet)* is the next topic and the natural
+- **[Comparisons](../06-comparisons/README.md)** is the next topic and the natural
   sequel: `is` versus `==`, chaining, and the rich-comparison protocol whose
   `NotImplemented` sentinel this topic meets in chunk 1c.
 - **Assignment semantics and aliasing** *(not written yet)* owns the
@@ -83,4 +83,4 @@ every trap above.
 
 ---
 
-← Prev: [`bytes` vs `str`](../04-bytes-and-encoding/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Comparisons** *(not written yet)*
+← Prev: [`bytes` vs `str`](../04-bytes-and-encoding/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [Comparisons](../06-comparisons/README.md)

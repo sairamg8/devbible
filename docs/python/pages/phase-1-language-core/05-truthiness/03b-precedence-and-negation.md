@@ -107,7 +107,7 @@ if 0 <= x < 10:            # chained; x evaluated once
 if x >= 0 and x < 10:      # equivalent, longer
 ```
 
-**Comparisons** *(not written yet)* covers chaining properly, including the fact
+[Comparisons](../06-comparisons/README.md) covers chaining properly, including the fact
 that the middle operand is evaluated exactly once.
 
 ## Trap 3 — `not` with `in` and `is`
