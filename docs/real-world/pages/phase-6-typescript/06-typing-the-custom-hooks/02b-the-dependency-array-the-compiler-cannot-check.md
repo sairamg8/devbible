@@ -76,7 +76,7 @@ That is a real criticism of `useAsync(fn, deps)` and this app accepts it
 knowingly: the deps array is the escape hatch that lets one hook serve the
 catalog, the product page, the cart and the admin table. The alternative — a
 purpose-built hook per resource, with no deps parameter at all — is what
-**chapter 07's route map** *(not written yet)* makes
+[chapter 07's route map](../07-the-typed-api-client/03-the-route-map.md) makes
 cheap enough to reconsider, because the route map is what makes
 `useProduct(slug)` a three-line generated wrapper instead of a hand-written
 hook per endpoint.

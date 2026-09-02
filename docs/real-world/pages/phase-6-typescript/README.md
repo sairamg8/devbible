@@ -22,7 +22,7 @@ the [Phase 1 schema](../phase-1-database/01-the-schema/README.md).
 | 04 | **[Discriminated unions: the order state machine](04-discriminated-unions/README.md)** *(4 chunks)* | <span className="db-tier t-master">Master</span> | Impossible states the schema cannot express, the transition table, exhaustiveness in the UI and on the wire |
 | 05 | **[Typed Express handlers and middleware](05-typed-express-handlers/README.md)** *(7 chunks)* | <span className="db-tier t-understand">Understand</span> | Merge `Request` once instead of casting everywhere, the five positional generics, middleware and `res.locals`, and 🔴 the error handler whose **arity** Express reads and TypeScript cannot see |
 | 06 | **[Typing the custom hooks](06-typing-the-custom-hooks/README.md)** *(16 chunks)* | <span className="db-tier t-understand">Understand</span> | `AsyncState` as a discriminated union the component narrows, generic hooks and where inference comes from, `useRef`'s three overloads, and 🔴 the dependency array **no compiler can check** |
-| 07 | **The typed API client** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 07 | **[The typed API client](07-the-typed-api-client/README.md)** *(12 chunks)* | <span className="db-tier t-understand">Understand</span> | One client typed from the server's own zod schemas — `Response.json()` is `Promise<any>` and that hole is the whole reason it exists; errors as a discriminated result; 🔴 `toJSONSchema` with `target: 'draft-2020-12'` |
 | 08 | **Utility types in app code** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 
 ## Phase gate

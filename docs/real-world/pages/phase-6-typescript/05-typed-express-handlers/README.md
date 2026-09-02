@@ -63,7 +63,7 @@ which types the routes this chapter's generics do not have to, and to
 whose guard becomes an endpoint here. Forwards to
 [Typing the custom hooks](../06-typing-the-custom-hooks/README.md), where the same `AsyncState`
 discipline applies on the client, and to
-**The typed API client** *(not written yet)*, which consumes the `ErrorBody`
+[The typed API client](../07-the-typed-api-client/README.md), which consumes the `ErrorBody`
 this chapter's error handler produces.
 
 ---

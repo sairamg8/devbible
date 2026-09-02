@@ -154,7 +154,7 @@ it on all four and know that idle-retry is a no-op.
 
 **★ `error: ApiFailure` and not `error: Error`.** A `catch` binding is
 `unknown` (the API client's job to classify —
-**chapter 07·04** *(not written yet)*), and
+[chapter 07·04](../07-the-typed-api-client/04-errors-as-a-result.md)), and
 typing the member as `Error` is a claim the hook cannot back: `throw 'nope'`
 from a transform, or a rejected promise carrying a string, both defeat it.
 Declare the member as the classified failure type the client produces and make

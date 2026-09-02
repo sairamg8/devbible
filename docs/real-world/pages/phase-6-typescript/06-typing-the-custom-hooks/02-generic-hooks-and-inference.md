@@ -86,7 +86,7 @@ would give `T = any`. Writing `<Product>` does not check anything: it replaces
 an `any` with a `Product` and every downstream `state.data.price_cents` is
 now a lie the compiler will defend. The hook is not at fault and cannot be
 fixed from inside — **the fix is a parse at the boundary**, which is
-**chapter 07·02** *(not written yet)*:
+[chapter 07·02](../07-the-typed-api-client/02-parsing-the-response.md):
 
 ```ts
 const state = useAsync(async (s) => {
@@ -157,7 +157,7 @@ infers `T = Product | null`, and now `state.data` is nullable in the success
 branch — the exact shape [chunk 01](01-asyncstate-as-a-union.md) removed. A 404
 is not a successful fetch with no data; it is a failure with a code, and the
 client returns a failure result for it
-(**chapter 07·04** *(not written yet)*).
+([chapter 07·04](../07-the-typed-api-client/04-errors-as-a-result.md)).
 
 **★ Annotate an exported hook's return type; do not let it be inferred.**
 Without `: UseAsync<T>` the return type is whatever the implementation happens

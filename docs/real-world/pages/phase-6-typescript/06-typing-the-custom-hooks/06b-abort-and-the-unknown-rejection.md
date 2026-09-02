@@ -150,7 +150,7 @@ compiles perfectly and aborts nothing, so the race and the leak both come back
 while the code *looks* cancel-aware. The parameter's presence is the only
 signal a reviewer gets. A client method that takes the signal and builds the
 request itself —
-**chapter 07·05** *(not written yet)* —
+[chapter 07·05](../07-the-typed-api-client/05-signals-timeouts-and-retries.md) —
 makes the omission impossible rather than merely detectable.
 
 **★ The `active` flag and the `AbortController` are both needed, and neither is

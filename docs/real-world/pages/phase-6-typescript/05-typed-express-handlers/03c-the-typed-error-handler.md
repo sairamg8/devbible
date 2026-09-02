@@ -93,7 +93,7 @@ export type ErrorBody = z.infer<typeof ErrorBody>;
 The twenty-one codes are every string phases 3 and 6 have passed to
 `new ApiError(...)`, collected once. `.catchall(z.unknown())` is what admits
 `product_ids` and `issues` without naming them — the extras are per-code and
-**chapter 07** *(not written yet)* is where the client
+[chapter 07](../07-the-typed-api-client/README.md) is where the client
 narrows them by `code`. Here the point is that `code` is a union of literals,
 so an `ApiError` constructed with a code that is not in the array does not
 compile:

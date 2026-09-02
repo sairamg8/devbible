@@ -188,7 +188,7 @@ not a per-field message, so `formError` is separate from `errors`. Merging them
 into one map would require inventing a field name for `PAYMENT_DECLINED`.
 Mapping specific codes onto specific fields is a per-form decision, made in the
 component, from the discriminated failure type
-**chapter 07·04** *(not written yet)* produces.
+[chapter 07·04](../07-the-typed-api-client/04-errors-as-a-result.md) produces.
 
 ## Interview questions
 

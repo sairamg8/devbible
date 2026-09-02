@@ -62,7 +62,7 @@ which is the code being typed. Forwards to
 [the row types](../03-typing-raw-pg-results/README.md) that feed the mappers,
 [the order state machine](../04-discriminated-unions/README.md) whose union is
 `OrderStatus`, and
-**the typed API client** *(not written yet)*, which parses
+[the typed API client](../07-the-typed-api-client/README.md), which parses
 responses back with the very same schemas.
 
 ---

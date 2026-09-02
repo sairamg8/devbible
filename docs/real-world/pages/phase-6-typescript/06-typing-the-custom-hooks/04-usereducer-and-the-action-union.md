@@ -191,7 +191,7 @@ differs.
 it.** `{type: 'server'; items: any}` compiles and makes `action.items.mpa(…)`
 compile too. This enters through a mapper that returns `any`, usually because
 something upstream called `res.json()` — the same hole
-**chapter 07·01** *(not written yet)* exists to
+[chapter 07·01](../07-the-typed-api-client/01-the-fetch-hole.md) exists to
 close. The reducer is a good place to notice it, because a reducer's inputs
 are the app's own values and should never be `any`.
 
