@@ -262,4 +262,4 @@ mid-checkout.
 
 ← Prev: [Parsing and rendering API errors](04c-parsing-and-rendering-api-errors.md) ·
 [Overview](README.md) ·
-Next → **Signals, timeouts and retries** *(not written yet)*
+Next → [Signals and timeouts](05-signals-timeouts-and-retries.md)

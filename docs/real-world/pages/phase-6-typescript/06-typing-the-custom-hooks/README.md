@@ -88,7 +88,7 @@ originals in [phase 4](../../phase-4-react-ui/README.md), which these chunks
 type rather than redesign. Forwards to
 [chapter 07 · The typed API client](../07-the-typed-api-client/README.md),
 which is where the `T` these hooks carry is actually established, and to
-**chapter 08** *(not written yet)* for the derivations
+[chapter 08](../08-utility-types-in-app-code/README.md) for the derivations
 (`Parameters`, `ReturnType`, `keyof`) that several of these signatures use.
 
 ---

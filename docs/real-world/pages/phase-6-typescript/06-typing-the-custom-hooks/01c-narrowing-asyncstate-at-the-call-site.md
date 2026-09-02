@@ -149,7 +149,7 @@ function ProductPanel({state}: {state: SuccessOf<Product>}) {
 Better still, pass `product: Product` and let the parent's switch be the only
 place the union is mentioned. **The union belongs to the screen that owns the
 fetch;** components below it take data. `Extract` is
-**chapter 08·05** *(not written yet)*.
+[chapter 08·05](../08-utility-types-in-app-code/05-exclude-extract-and-distributivity.md).
 
 ## `assertNever` and why it returns `never`
 

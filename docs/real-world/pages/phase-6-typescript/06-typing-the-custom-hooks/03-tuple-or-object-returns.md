@@ -77,7 +77,7 @@ The second is better for an exported hook and for the same reason
 body checked against the contract instead of defining it. `as const` is the
 right tool inside a function, for a table or a literal whose exact types must
 survive — which is
-**chapter 08·06's** *(not written yet)*
+[chapter 08·06's](../08-utility-types-in-app-code/06-satisfies-versus-annotation.md)
 subject.
 
 ⚠️ **`as const` produces a `readonly` tuple, and `readonly` propagates.** A

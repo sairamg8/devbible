@@ -242,4 +242,4 @@ cannot see.
 
 ← Prev: [Emitting the contract](06-emitting-the-contract.md) ·
 [Overview](README.md) ·
-Next chapter → **Utility types in app code** *(not written yet)*
+Next chapter → [Utility types in app code](../08-utility-types-in-app-code/README.md)

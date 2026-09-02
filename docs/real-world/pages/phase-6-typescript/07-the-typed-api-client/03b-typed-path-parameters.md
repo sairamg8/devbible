@@ -287,4 +287,4 @@ two-directional assertion finds both.
 
 ← Prev: [The route map](03-the-route-map.md) ·
 [Overview](README.md) ·
-Next → **Errors as a result, not a throw** *(not written yet)*
+Next → [Errors as a result](04-errors-as-a-result.md)

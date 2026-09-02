@@ -177,7 +177,7 @@ export function cartReducer(state: Readonly<CartState>, action: CartAction): Car
 …and it is shallow — `state.items.push(x)` still compiles, because
 `Readonly<T>` maps only the top level. `readonly CartItem[]` on the field is
 what stops that one, and
-**chapter 08·02** *(not written yet)*
+[chapter 08·02](../08-utility-types-in-app-code/02-pick-omit-partial-required.md)
 prices how far down that rabbit hole is worth going.
 
 **★ Two actions that differ only in payload shape want two `type` values, not

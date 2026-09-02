@@ -122,7 +122,7 @@ array.** `useState('newest')` infers `string`, so `setSort('pirce_asc')`
 compiles. The sort control's state needs
 `useState<'newest' | 'price_asc' | 'price_desc'>('newest')`, or better, the
 `SortKey` type derived from the same `as const` tuple the query module uses —
-**chapter 08·06** *(not written yet)*.
+[chapter 08·06](../08-utility-types-in-app-code/06-satisfies-versus-annotation.md).
 
 **★ Deriving state you could compute is a type that outlives its purpose.**
 `const [total, setTotal] = useState(0)` alongside `items` gives you two sources

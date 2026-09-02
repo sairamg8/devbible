@@ -213,7 +213,7 @@ separate queries would show four traversals of the same index. If the faceted
 version reports a `COLLSCAN`, something moved above the `$match` or the `$match`
 was dropped, and the single round trip is now the most expensive of the two
 designs. Reading that output is
-**chapter 05, reading `explain()`** *(not written yet)*.
+[05·13](../05-indexes-and-explain/10-explain-verbosity-and-stages.md).
 
 ---
 

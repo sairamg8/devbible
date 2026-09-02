@@ -199,4 +199,4 @@ thing: a response schema, or a mapper that reads named fields and produces
 
 ← Prev: [Driver options](08b-driver-options-and-the-route.md) ·
 [Overview](README.md) ·
-Next chapter → **Indexes for this app's queries** *(not written yet)*
+Next chapter → [Indexes for this app's queries](../05-indexes-and-explain/README.md)

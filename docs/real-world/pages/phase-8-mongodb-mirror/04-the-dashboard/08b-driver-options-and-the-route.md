@@ -107,7 +107,7 @@ can show a total going backwards.
 
 **`hint`** forces an index and belongs in a diagnostic, not in shipped code — the
 argument is
-**chapter 05, `hint()` and the plan cache** *(not written yet)*. One
+[05·16](../05-indexes-and-explain/12-hint-and-the-plan-cache.md)'s. One
 restriction if you do reach for it: *"The `hint` does not apply to `$lookup` and
 `$graphLookup` stages"*, so hinting a pipeline does nothing for the index its join
 needs.
@@ -120,7 +120,7 @@ must specify the same collation or it will not use that index. And **`let`**
 declares pipeline-level variables referenced as `$$name`, which keeps a parameter
 out of the stage bodies — readable, and it makes the pipeline shape constant
 across requests, which matters for the plan cache
-(**chapter 05, `hint()` and the plan cache** *(not written yet)*).
+([05·16](../05-indexes-and-explain/12-hint-and-the-plan-cache.md)).
 
 ## Gotchas
 

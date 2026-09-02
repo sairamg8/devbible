@@ -144,7 +144,7 @@ moment a build script or a test runner needs it — resolves `setTimeout` to the
 Node declaration, and `useRef<number>` stops compiling with an error about
 `Timeout` not being assignable to `number`. `ReturnType<typeof setTimeout>` is
 correct under either lib and needs no edit when the `tsconfig` changes.
-**Chapter 08·01** *(not written yet)*
+[Chapter 08·01](../08-utility-types-in-app-code/01-derive-never-redeclare.md)
 is the general form of that move.
 
 ## Gotchas

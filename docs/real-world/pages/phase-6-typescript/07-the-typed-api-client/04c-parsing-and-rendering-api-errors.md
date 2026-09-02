@@ -122,7 +122,7 @@ function hasExtras(e: ApiError): e is WithExtras {
 Adding a sixth entry to `ERROR_EXTRAS` now widens `WithExtras` and breaks
 `extrasPanel` at build time, while an unmodelled code still degrades to the
 plain message. `Extract` is
-**chapter 08·05** *(not written yet)*.
+[chapter 08·05](../08-utility-types-in-app-code/05-exclude-extract-and-distributivity.md).
 
 ## The contract test
 

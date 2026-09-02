@@ -135,7 +135,7 @@ with your request schema.** `JSON.stringify(anything)` is a `string` and every
 string is a legal body, so the request side has exactly the same hole as the
 response side — with no `any` to blame, because `string` is the honest type of
 a serialised payload. Typing the request means typing what goes *into*
-`JSON.stringify`, which is **the route map's** *(not written yet)* job.
+`JSON.stringify`, which is [the route map's](03-the-route-map.md) job.
 
 ## Gotchas
 

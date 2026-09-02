@@ -102,7 +102,8 @@ free. It is not free in general: a lookup on `reviews.productId` needs
 `{productId: 1}` on `reviews`, and without it every input document causes a
 collection scan of `reviews`. Ten input documents, ten scans.
 
-That index belongs in **chapter 05's index list** *(not written yet)*, derived from this query — which is exactly the method that chapter
+That index belongs in
+[chapter 05's list](../05-indexes-and-explain/02-the-index-list.md), derived from this query — which is exactly the method that chapter
 insists on: **every index comes from a query somebody wrote.**
 
 ## `localField`/`foreignField` versus `let` + `pipeline`

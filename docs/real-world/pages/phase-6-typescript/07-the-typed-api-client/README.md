@@ -72,7 +72,7 @@ Backwards to
 whose schemas this client re-uses on the far side of the wire, and to
 [chapter 05·03c](../05-typed-express-handlers/03c-the-typed-error-handler.md),
 which produced the `ErrorBody` this chapter narrows. Forwards to
-**chapter 08 · Utility types in app code** *(not written yet)*,
+[chapter 08 · Utility types in app code](../08-utility-types-in-app-code/README.md),
 whose `Record`, template-literal and `satisfies` material the route map leans
 on. Sideways to
 [chapter 06](../06-typing-the-custom-hooks/README.md), which consumes every
@@ -82,4 +82,4 @@ type this client produces.
 
 Phase index: [Phase 6 — TypeScript across the stack](../README.md) ·
 ← Prev chapter: [Typing the custom hooks](../06-typing-the-custom-hooks/README.md) ·
-Next chapter → **Utility types in app code** *(not written yet)*
+Next chapter → [Utility types in app code](../08-utility-types-in-app-code/README.md)

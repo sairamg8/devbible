@@ -88,7 +88,7 @@ the handbook states the rule the trick relies on:
 Every member is `unknown`-assignable, so nothing is filtered; the only effect
 is that the conditional distributes over the union and the intersection lands
 on each member individually.
-**Chapter 08·05** *(not written yet)*
+[Chapter 08·05](../08-utility-types-in-app-code/05-exclude-extract-and-distributivity.md)
 owns this mechanism in full, including how to switch it *off*.
 
 ## The component narrows, and cannot forget

@@ -103,7 +103,7 @@ a "just to make it readable" `$addFields` — goes above it.
 
 `{createdAt: {$gte: from, $lt: to}}` — inclusive lower, exclusive upper, and no
 expression wrapped around `$createdAt`. The index derived in
-**chapter 05, the index list** *(not written yet)* is
+[05·02](../05-indexes-and-explain/02-the-index-list.md) is
 `{status: 1, createdAt: -1}` on `orders`, and it serves this `$match` as an
 equality-then-range walk: the `$in` on `status` is an equality predicate (the
 Manual's ESR guideline is explicit that *"When `$in` is used alone, it is an
@@ -160,7 +160,7 @@ included or excluded.
 harmless — "compute the local day first, then filter on it" — and it converts an
 index range scan into a full collection scan plus an expression evaluation per
 document. `explain()` reports it plainly as a `COLLSCAN` where an `IXSCAN` used
-to be (**chapter 05, reading `explain()`** *(not written yet)*). If
+to be ([05·15](../05-indexes-and-explain/11-the-ratio-and-the-sort-stage.md)). If
 you find yourself wanting to filter on a computed value, either compute it at
 write time and index it, or restate the filter in terms of the raw field.
 
@@ -221,7 +221,7 @@ The ratio of `totalDocsExamined` to `nReturned` at the `FETCH`. An `IXSCAN` that
 selects far more documents than the pipeline eventually groups means the index
 narrowed on `status` but the date range is doing most of the work — which is the
 ESR ordering question, and is
-**chapter 05, the method and ESR** *(not written yet)*. It is also
+[05·01](../05-indexes-and-explain/01-the-method-and-esr.md)'s subject. It is also
 worth checking that nothing has crept in above the `$match`, because that turns
 the `IXSCAN` into a `COLLSCAN` and the plan shape is the first thing to read.
 

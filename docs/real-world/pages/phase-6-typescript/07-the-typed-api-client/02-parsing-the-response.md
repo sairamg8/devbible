@@ -212,7 +212,7 @@ the ones it requires. Response schemas are their own declarations —
 way to say so.** The cast `undefined as z.output<S>` in the code above is a
 real assertion and the honest fix is a route map whose `204` routes declare
 their response as `z.void()` or `z.null()` — which is
-**the next chunk** *(not written yet)*, and is the first of several reasons the
+[the next chunk](03-the-route-map.md), and is the first of several reasons the
 client ends up shaped as a map rather than a function.
 
 **★ Parsing inside `useAsync`'s fetcher rather than inside the client puts it

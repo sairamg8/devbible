@@ -114,7 +114,7 @@ four places, which is the phase gate stated for one form.
 `string`, and `Record`'s key parameter is `keyof any`, so leaving the symbols
 and numbers in produces an error about `symbol` not being assignable to
 `string` — several layers away from the `keyof` that caused it. `Extract` is
-the filter, and **chapter 08·05** *(not written yet)*
+the filter, and [chapter 08·05](../08-utility-types-in-app-code/05-exclude-extract-and-distributivity.md)
 is why it works on a union of key types.
 
 ## What the hook cannot type

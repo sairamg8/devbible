@@ -90,11 +90,11 @@ accumulators do — are
 are never re-taught here. The documents these pipelines read are
 [chapter 01's](../01-modeling-the-store/README.md). Every index that keeps the
 opening `$match` off a collection scan is derived in
-**chapter 05** *(not written yet)*, and the `explain()` reading
-that proves it is that chapter's gate.
+[chapter 05](../05-indexes-and-explain/README.md), and the `explain()` reading
+that proves it is [05·15](../05-indexes-and-explain/11-the-ratio-and-the-sort-stage.md).
 
 ---
 
 Phase index: [Phase 8 — The MongoDB mirror](../README.md) ·
 ← Prev chapter: **Checkout with transactions** *(index not written yet)* ·
-Next chapter → **Indexes for this app's queries** *(not written yet)*
+Next chapter → [Indexes for this app's queries](../05-indexes-and-explain/README.md)
