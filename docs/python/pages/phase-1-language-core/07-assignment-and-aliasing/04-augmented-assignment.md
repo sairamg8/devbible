@@ -219,6 +219,15 @@ conditions and is not a guarantee.
 **Fix.** Collect into a list and `"".join(parts)`, or write into an
 `io.StringIO`.
 
+### `xs *= n` on a caller's list
+**Symptom.** A helper "repeats" a sequence and the caller's list is now n times
+longer.
+**Cause.** `list.__imul__` repeats in place, and it repeats *references*, so
+the extra elements are the same objects as the originals.
+**Fix.** `xs = xs * n` for a new list, and see
+[Repetition and shared references](03b-repetition-and-shared-refs.md)
+for why the repeated elements are shared either way.
+
 ### `d = d | other` where `d |= other` was needed (or vice versa)
 **Symptom.** Config merges that do or do not propagate to other holders of the
 dict, inconsistently.

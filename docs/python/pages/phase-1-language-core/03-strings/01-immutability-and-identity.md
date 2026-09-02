@@ -67,7 +67,7 @@ counts[["GET"]] = 1                      # TypeError: unhashable type: 'list'
 **Safe sharing.** Passing a string to a function you did not write carries zero
 risk that it comes back different. Compare with handing over a list, which is
 the central hazard of
-**Assignment semantics and aliasing** *(not written yet)*.
+[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md).
 
 **Caching.** Because the value can never change, CPython is free to reuse one
 object for many equal strings — the interning behaviour below.

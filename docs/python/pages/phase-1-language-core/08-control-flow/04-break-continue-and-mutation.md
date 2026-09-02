@@ -158,7 +158,7 @@ Pattern 1 is right almost every time. Note that it **rebinds** rather than
 mutating, so any other name aliasing the same list still sees the old contents —
 if that matters, use slice assignment to mutate in place:
 `items[:] = [x for x in items if not should_remove(x)]`. That distinction
-belongs to **Assignment semantics and aliasing** *(not written yet)*, and it is
+belongs to [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md), and it is
 the one thing pattern 1 can get wrong.
 
 Pattern 2 has a second flaw worth knowing: `list.remove` scans from the start

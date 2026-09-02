@@ -153,6 +153,26 @@ for attempt in range(3):
     send(dataclasses.replace(base, attempt=attempt))
 ```
 
+## 6 — The test that edits global config and does not restore it
+
+```python
+def test_feature_on():
+    settings.FLAGS["new_checkout"] = True     # no teardown
+    assert checkout(...) == ...
+```
+
+Every test that runs afterwards in the same process has the flag on. The suite
+is green today because no other test exercises that path, and red in six weeks
+when someone adds one — with a failure that has nothing to do with their change.
+
+**Diagnose.** Run the suspect test first, then alone, then last. If the outcome
+of *other* tests depends on where it ran, it is mutating shared state.
+
+**Fix.** `monkeypatch.setitem(settings.FLAGS, "new_checkout", True)`, which
+records the old value and restores it at teardown, or a fixture that
+deep-copies and restores. The structural fix is a frozen settings object plus a
+dependency-injected override, so a test cannot reach in at all.
+
 ## Gotchas
 
 ### The traceback points at the reader, not the writer
@@ -176,6 +196,15 @@ subsequent test in that file is subtly wrong.
 **Cause.** The convention was not enforced.
 **Fix.** Function-scoped fixtures that construct fresh data, or frozen
 structures that cannot be mutated at all.
+
+### Global state edited in a test with no teardown
+**Symptom.** Test outcomes depend on execution order; a test that passes alone
+fails after another test has run.
+**Cause.** A test wrote to a module-level dict, list or class attribute and left
+it that way. The process is shared across the whole suite.
+**Fix.** `monkeypatch.setitem`/`setattr`, which restore automatically, or a
+fixture that snapshots and restores. Never a bare assignment to global state
+inside a test body.
 
 ### A per-request object that turns out to be per-process
 **Symptom.** Load testing shows request data bleeding between concurrent users;
@@ -231,6 +260,13 @@ make the config immutable at construction (frozen dataclass, or nested
 `MappingProxyType` over immutable values) and to express the variation as a
 derived value, so the code that wanted a different host gets its own object.
 
+
+**Q: A test mutates a global settings dict. Why is `monkeypatch` better than
+setting it back at the end of the test?**
+Because a bare restore at the end of the test body does not run if the test
+fails or raises part-way through, so one failing test poisons every test after
+it — turning one red into a cascade. `monkeypatch.setitem` registers the undo
+with the fixture teardown, which runs regardless of outcome.
 
 **Q: Where is the right place to put the single freeze in a web service?**
 At deserialisation and at configuration load — the two points where external

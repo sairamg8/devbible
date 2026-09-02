@@ -112,4 +112,4 @@ writing raises, and the traceback will name the culprit.
 
 ---
 
-← Prev: **Comparisons** *(not written yet)* · Index: [Phase 1 — Language core](../README.md) · Next → [What `=` actually does](01-what-assignment-does.md)
+← Prev: [Comparisons](../06-comparisons/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [What `=` actually does](01-what-assignment-does.md)

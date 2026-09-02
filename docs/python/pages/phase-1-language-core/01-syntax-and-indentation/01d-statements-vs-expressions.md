@@ -179,7 +179,7 @@ rows = [[] for _ in range(3)]   # and this, not [[]] * 3, for the same reason
 ```
 
 Assignment semantics get their own topic later in this phase —
-**07 · Assignment semantics and aliasing** *(not written yet)*; the point here is
+**[07 · Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)**; the point here is
 purely grammatical, the single `starred_expression` on the right of a chain.
 
 ### Statements cannot be arguments, so `del` and `pass` cannot be passed anywhere

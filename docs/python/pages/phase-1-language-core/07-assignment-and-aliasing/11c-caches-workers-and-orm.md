@@ -289,4 +289,4 @@ fake match the real semantics so the difference cannot hide.
 
 ---
 
-← Prev: [Publishing state, and the diagnostic toolkit](11b-publishing-state-and-diagnostics.md) · Index: [Assignment and aliasing](README.md) · Next → **Control flow** *(not written yet)*
+← Prev: [Publishing state, and the diagnostic toolkit](11b-publishing-state-and-diagnostics.md) · Index: [Assignment and aliasing](README.md) · Next → [Control flow](../08-control-flow/README.md)

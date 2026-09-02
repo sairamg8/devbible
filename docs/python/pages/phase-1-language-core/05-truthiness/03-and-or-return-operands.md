@@ -222,7 +222,7 @@ expression whose *purpose* is its side effect belongs on its own line.
 **Symptom — `x = x or []` in a loop reuses the same list across iterations.**
 Cause: the `or` returns the existing object when it is truthy, so a list built
 in a previous pass is carried forward. Fix: this is aliasing rather than
-truthiness — see **Assignment semantics and aliasing** *(not written yet)* — but
+truthiness — see [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md) — but
 the `or` form is what hides it. Prefer an explicit `is None` test.
 
 **Symptom — a type checker complains that a function annotated `-> str` returns

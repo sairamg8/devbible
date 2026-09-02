@@ -289,4 +289,4 @@ example. Change the iterable, or use `continue` or `itertools.islice`.
 
 ---
 
-← Prev: **Assignment semantics and aliasing** *(not written yet)* · Index: [Control flow](README.md) · Next → [`enumerate` and `zip`](02-enumerate-and-zip.md)
+← Prev: [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md) · Index: [Control flow](README.md) · Next → [`enumerate` and `zip`](02-enumerate-and-zip.md)

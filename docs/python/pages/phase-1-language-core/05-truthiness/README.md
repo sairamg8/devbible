@@ -71,7 +71,7 @@ every trap above.
 - **[Comparisons](../06-comparisons/README.md)** is the next topic and the natural
   sequel: `is` versus `==`, chaining, and the rich-comparison protocol whose
   `NotImplemented` sentinel this topic meets in chunk 1c.
-- **Assignment semantics and aliasing** *(not written yet)* owns the
+- **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)** owns the
   mutable-default trap that chunk 2b's `None`-sentinel form fixes.
 - **Exceptions, the working set** *(not written yet)* is where "raise instead of
   returning `None`" becomes a design choice rather than an aside.

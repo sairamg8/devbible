@@ -124,4 +124,4 @@ on the type at all: pass `key=`, use a tuple for multiple levels, and partition 
 
 ---
 
-← Prev: [Truthiness](../05-truthiness/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Assignment semantics and aliasing** *(not written yet)*
+← Prev: [Truthiness](../05-truthiness/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)

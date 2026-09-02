@@ -223,4 +223,4 @@ result is the product, and the cost is that your objects can never be used in a 
 
 ---
 
-← Prev: [`==` is not a boolean](10-when-equality-is-not-a-boolean.md) · Index: [Comparisons](README.md) · Next → **Assignment semantics and aliasing** *(not written yet)*
+← Prev: [`==` is not a boolean](10-when-equality-is-not-a-boolean.md) · Index: [Comparisons](README.md) · Next → [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)

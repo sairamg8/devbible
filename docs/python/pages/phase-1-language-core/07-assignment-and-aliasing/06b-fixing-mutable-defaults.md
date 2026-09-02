@@ -123,7 +123,7 @@ the caller's list empty.
 **Cause.** `or` triggers on any falsy value, so an explicitly passed `[]` is
 replaced by a *different* new list — the caller's list is silently discarded.
 **Fix.** `if items is None:` — test for the sentinel, not for truthiness.
-See **Truthiness** *(not written yet)*.
+See [Truthiness](../05-truthiness/README.md).
 
 ### A default that is a mutable module-level constant
 **Symptom.** `def f(opts=DEFAULT_OPTS)` and one caller's `opts["x"] = 1` edits

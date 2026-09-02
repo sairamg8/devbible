@@ -22,7 +22,7 @@ chunk collects those output-side failures and then the three diagnostics that
 find every pattern in this topic — none of which require understanding the code
 you are debugging.**
 
-## 6 — The getter that publishes internal state
+## 7 — The getter that publishes internal state
 
 ```python
 class Basket:
@@ -40,7 +40,7 @@ when it eventually appears, is inside `checkout`.
 gone. For big collections, a `Sequence` wrapper — see
 [Read-only views](10b-read-only-views-and-boundaries.md).
 
-## 7 — Two "different" objects from the same constructor path
+## 8 — Two "different" objects from the same constructor path
 
 ```python
 def default_permissions():
@@ -57,7 +57,7 @@ name is what makes it invisible: everyone reads it as "a fresh default".
 **Fix.** Return a new object (`list(DEFAULT_PERMS)`), or make `DEFAULT_PERMS` a
 `frozenset` so appending is impossible and the type system says what it is.
 
-## 8 — Serialising a structure another thread is editing
+## 9 — Serialising a structure another thread is editing
 
 ```python
 json.dumps(shared_state)          # RuntimeError: dictionary changed size during iteration
@@ -71,7 +71,7 @@ is wider.
 whole object atomically (`self._state = new_state`), which makes readers
 lock-free by construction.
 
-## 9 — `sort()` on a list you were handed
+## 10 — `sort()` on a list you were handed
 
 ```python
 def top_n(items, n):
@@ -86,21 +86,6 @@ data. Bugs surface far away: a UI that shows items in the wrong order, a
 **Fix.** `sorted(items, key=score, reverse=True)[:n]` — the non-mutating twin.
 The `None` return convention exists precisely so `items = items.sort()` fails
 loudly instead.
-
-## The diagnostic toolkit
-
-```python
-id(obj)                                   # the identity, printed at three points
-a is b                                    # the direct question
-len({id(x) for x in seq}) == len(seq)     # "are these all distinct objects?"
-types.MappingProxyType(d)                 # make writers raise, find them by traceback
-before = copy.deepcopy(x); f(x); assert x == before   # who mutates my input?
-tracemalloc                               # what is growing in a long-lived process
-```
-
-The `MappingProxyType` trick and the deep-copy assertion are the two that find
-real bugs fastest. Neither requires understanding the code you are debugging;
-both convert an invisible write into a traceback at the write site.
 
 ## The diagnostic toolkit
 

@@ -170,7 +170,7 @@ if (chunk := stream.read(4096)):
 ```
 
 Same semantics — `chunk` is a name bound to whatever object `read` returned. It
-is not a copy of the buffer. **Truthiness and the walrus** *(not written yet)*
+is not a copy of the buffer. [Truthiness and the walrus](../05-truthiness/README.md)
 covers where it earns its place; here it is only worth noting that it is an
 extra binding site to look at when hunting for who else holds your object.
 
@@ -289,4 +289,4 @@ holder of a reference to it.
 
 ---
 
-← Prev: **Comparisons** *(not written yet)* · Index: [Assignment and aliasing](README.md) · Next → [Assignment targets and `del`](01b-assignment-targets-and-del.md)
+← Prev: [Comparisons](../06-comparisons/README.md) · Index: [Assignment and aliasing](README.md) · Next → [Assignment targets and `del`](01b-assignment-targets-and-del.md)

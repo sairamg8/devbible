@@ -148,6 +148,31 @@ repetition sharing, which makes it a good sanity check on whether you have
 understood the mechanism. (In 3.12+, `itertools.batched` does this properly and
 is what you should actually write.)
 
+## `xs *= 3` repeats **in place**, which combines both traps
+
+`list` implements `__imul__`, so augmented multiplication extends the existing
+list rather than building a new one — and it extends it with references to the
+objects already in it:
+
+```python
+row = [{}]
+row *= 3          # row is now three references to the SAME dict, in the SAME list
+grid = [row]
+grid *= 3         # and now three references to that one list
+```
+
+Two consequences worth separating:
+
+- **The sharing is the same as `[x] * n`.** Multiplying a list of mutable
+  objects gives you repeated references, whatever the spelling.
+- **The mutation is visible to aliases**, unlike `xs = xs * 3`, which builds a
+  new list and rebinds the name. If a caller handed you `xs`, `xs *= 3` triples
+  *their* list; `xs = xs * 3` does not. That half belongs to
+  [Augmented assignment](04-augmented-assignment.md).
+
+`xs *= 0` is the in-place clear nobody expects — it empties the caller's list,
+because repeating zero times leaves nothing. `xs.clear()` says it out loud.
+
 ## Diagnosing it
 
 ```python
@@ -193,6 +218,14 @@ whole class of bug. Passing `[]` passes a value.
 **Fix.** Pass the callable: `defaultdict(list)`, `defaultdict(dict)`,
 `defaultdict(lambda: {"count": 0})` for a non-trivial default.
 
+### `buf *= 2` used to "double the buffer"
+**Symptom.** A preallocation helper doubles a caller's list and the caller sees
+it; or the doubled half contains the same objects as the first half.
+**Cause.** `list.__imul__` extends in place with repeated references to the
+existing elements.
+**Fix.** `buf = buf + [None] * len(buf)` if a new list is wanted, or
+`buf.extend(make() for _ in range(n))` if fresh objects are wanted.
+
 ### `copy.copy(grid)` "fixes" a shared-row grid
 **Symptom.** A copy is taken to isolate the rows, and writes still leak.
 **Cause.** A shallow copy of a list duplicates the outer list only; if the
@@ -234,6 +267,14 @@ tuple, and since they are all the same iterator, that is n consecutive items
 from `xs`. It is the one case where the sharing is the feature. Prefer
 `itertools.batched(xs, n)` in 3.12+, which also handles the ragged final chunk
 instead of silently dropping it.
+
+**Q: `xs *= 3` versus `xs = xs * 3` — what is the difference for a caller who
+also holds `xs`?**
+`*=` calls `list.__imul__`, which extends the existing list in place, so the
+caller's list becomes three times as long. `xs = xs * 3` builds a new list and
+rebinds only the local name, leaving the caller's list untouched. Both fill the
+result with repeated *references*, so if the elements are mutable the sharing
+problem is identical either way.
 
 **Q: You are handed a nested list and told "make sure my writes do not affect
 the caller". Is `list(x)` enough?**

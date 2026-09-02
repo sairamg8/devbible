@@ -60,7 +60,7 @@ while a loop is walking it: a `dict` will usually tell you, a list never will.
 - **Comprehensions** *(not written yet)* is the next topic and the expression
   form of most loops here — including the honest line where a nested
   comprehension should have stayed a loop.
-- **Assignment semantics and aliasing** *(not written yet)* owns the
+- **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)** owns the
   `items = [...]` versus `items[:] = [...]` distinction that decides whether the
   safe-filtering pattern rebinds or mutates.
 - **Exceptions, the working set** *(not written yet)* is where `try`/`else`
@@ -71,4 +71,4 @@ while a loop is walking it: a `dict` will usually tell you, a list never will.
 
 ---
 
-← Prev: **Assignment semantics and aliasing** *(not written yet)* · Index: [Phase 1 — Language core](../README.md) · Next → **Comprehensions** *(not written yet)*
+← Prev: [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Comprehensions** *(not written yet)*
