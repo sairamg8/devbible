@@ -20,7 +20,7 @@ Almost none of this is exotic. `-7 // 2` is `-4`, not `-3`. `0.1 + 0.2` is not
 is falsy and so is "no result yet". Each is a one-line fact and a production
 incident, and every one of them is here.
 
-🚧 **In flight — 4 of 16.** Topics **01 · Syntax and indentation** (8 chunks + index, 1,900 lines), **02 · Numbers** (69 chunks + index, 17,166 lines), **03 · Strings** (9 + index, ~2,150) and **04 · `bytes` vs `str`** (4 + index, ~1,100) are complete. **Topic 02 closed 2026-09-01** — the float half (IEEE-754, NaN and signed zero, comparing floats, floor division, rounding, `Decimal` for money in thirteen chunks, `Fraction`, conversions, `complex`, the numeric tower, `math` versus the operators) was written by a coordinator and two author forks; **0 over the 300-line cap, 0 MDX hazards, 0 dangling of 489 links, an unbroken footer chain across all 69 chunks, and no duplicate `sidebar_position`.** Topic 04 is still short one planned chunk. Topics 05–16 are unwritten.
+🚧 **In flight — 5 of 16.** Topics **01 · Syntax and indentation** (8 chunks + index, 1,900 lines), **02 · Numbers** (69 chunks + index, 17,166 lines), **03 · Strings** (9 + index, ~2,150), **04 · `bytes` vs `str`** (4 + index, ~1,100) and **05 · Truthiness** (12 + index, 3,261 lines) are complete. **Topic 05 closed 2026-09-02** — the falsy rule and the protocol behind it, what `if x:` actually costs, the empty-versus-missing bug in the five shapes it takes, `and`/`or` returning operands and the precedence traps that follow, `any`/`all` and the `all([])` vacuous truth, and the walrus with its scoping rules; **0 over the 300-line cap, 0 MDX hazards, 0 dangling links, an unbroken footer chain across all 12 chunks, 28 ★ interview questions and 101 gotchas.** **Topics 06 · Comparisons and 07 · Assignment and aliasing are being written now.** Topic 04 is still short one planned chunk. Topics 08–16 are unwritten.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -28,7 +28,7 @@ incident, and every one of them is here.
 | 02 | **[Numbers](02-numbers/README.md)** | <span className="db-tier t-master">Master</span> | `int` never overflows, `float` is IEEE-754 and lies about 0.1, `Decimal` is what money needs, and division floors toward minus infinity — 69 chunks |
 | 03 | **[Strings](03-strings/README.md)** | <span className="db-tier t-master">Master</span> | Immutability, the method vocabulary, and f-strings including `=` and format specs |
 | 04 | **[`bytes` vs `str`](04-bytes-and-encoding/README.md)** | <span className="db-tier t-understand">Understand</span> | Decode at the boundary, work in `str`, encode on the way out |
-| 05 | **Truthiness** *(not written yet)* | <span className="db-tier t-master">Master</span> | Empty things are falsy, `and`/`or` return operands, and the walrus |
+| 05 | **[Truthiness](05-truthiness/README.md)** | <span className="db-tier t-master">Master</span> | Empty things are falsy, `and`/`or` return operands, and the walrus — 12 chunks |
 | 06 | **Comparisons** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Chaining, `is` for `None` only, and rich comparison across types |
 | 07 | **Assignment semantics and aliasing** *(not written yet)* | <span className="db-tier t-master">Master</span> | References, not copies — and when you need `copy` vs `deepcopy` |
 | 08 | **Control flow** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `for`/`else`, `while`/`else`, and `enumerate`/`zip` instead of index arithmetic |

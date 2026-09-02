@@ -36,7 +36,7 @@ enforces at runtime.**
 | `if x == True:` | does `x` equal `1`? | never |
 
 **`if x:`** runs the truth-testing protocol — `__bool__`, falling back to `__len__`,
-defaulting to true. That protocol is **truthiness** *(not written yet)*'s
+defaulting to true. That protocol is [truthiness](../05-truthiness/README.md)'s
 subject; what matters here is that it is the *only* one of the three that respects a
 type's own opinion of itself. An empty list, an empty string, `0`, `None` and a
 zero-length custom container all take the false branch, and that is almost always

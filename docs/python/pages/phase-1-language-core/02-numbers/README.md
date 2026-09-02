@@ -155,7 +155,7 @@ cannot represent `1/3` exactly either; `Fraction` can.
 
 ## Where this connects
 
-- **Truthiness** *(not written yet)* inherits `bool` being an `int`
+- **[Truthiness](../05-truthiness/README.md)** inherits `bool` being an `int`
   subclass: `True + True` is `2`, and `0`, `0.0`, `Decimal(0)` and
   `Fraction(0)` are all falsy.
 - **Comparisons** *(not written yet)* is where NaN's refusal to equal

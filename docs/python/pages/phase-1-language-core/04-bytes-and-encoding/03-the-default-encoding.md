@@ -233,4 +233,4 @@ rather than encoding by hand, so you get both halves right.
 
 ---
 
-← Prev: [Error handlers](02b-error-handlers.md) · Index: [`bytes` vs `str`](README.md) · Next → **Truthiness** *(not written yet)*
+← Prev: [Error handlers](02b-error-handlers.md) · Index: [`bytes` vs `str`](README.md) · Next → [Truthiness](../05-truthiness/README.md)
