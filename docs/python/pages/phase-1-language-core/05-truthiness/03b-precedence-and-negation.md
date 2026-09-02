@@ -226,7 +226,8 @@ the rewrite is safe and PEP 8 asks for it.
 
 **★ Q: `and` or `or` — which binds tighter?**
 `and`. So `a or b and c` means `a or (b and c)`. The full ascending order is
-`or` < `and` < `not` < comparisons < bitwise < arithmetic. Parenthesise whenever
+`or`, then `and`, then `not`, then the comparisons, then bitwise, then
+arithmetic. Parenthesise whenever
 both appear; the reader cannot otherwise tell whether you relied on the
 precedence or forgot it. The classic failure is
 `if is_admin or is_owner and is_active:`, which lets an inactive admin through.
