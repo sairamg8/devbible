@@ -21,7 +21,7 @@ the [Phase 1 schema](../phase-1-database/01-the-schema/README.md).
 | 03 | **[Typing raw `pg` results](03-typing-raw-pg-results/README.md)** *(7 chunks)* | <span className="db-tier t-master">Master</span> | 🔴 The generic is an **assertion**, not a check — a row type per query, what `pg` actually returns, and rows that lie |
 | 04 | **[Discriminated unions: the order state machine](04-discriminated-unions/README.md)** *(4 chunks)* | <span className="db-tier t-master">Master</span> | Impossible states the schema cannot express, the transition table, exhaustiveness in the UI and on the wire |
 | 05 | **[Typed Express handlers and middleware](05-typed-express-handlers/README.md)** *(7 chunks)* | <span className="db-tier t-understand">Understand</span> | Merge `Request` once instead of casting everywhere, the five positional generics, middleware and `res.locals`, and 🔴 the error handler whose **arity** Express reads and TypeScript cannot see |
-| 06 | **Typing the custom hooks** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
+| 06 | **[Typing the custom hooks](06-typing-the-custom-hooks/README.md)** *(16 chunks)* | <span className="db-tier t-understand">Understand</span> | `AsyncState` as a discriminated union the component narrows, generic hooks and where inference comes from, `useRef`'s three overloads, and 🔴 the dependency array **no compiler can check** |
 | 07 | **The typed API client** | <span className="db-tier t-understand">Understand</span> | *(not written yet)* |
 | 08 | **Utility types in app code** | <span className="db-tier t-know">Know</span> | *(not written yet)* |
 

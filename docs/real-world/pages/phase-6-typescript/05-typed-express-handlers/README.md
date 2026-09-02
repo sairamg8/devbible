@@ -61,7 +61,7 @@ Backwards to
 which types the routes this chapter's generics do not have to, and to
 [the transition table](../04-discriminated-unions/02-the-transition-table.md),
 whose guard becomes an endpoint here. Forwards to
-**Typing the custom hooks** *(not written yet)*, where the same `AsyncState`
+[Typing the custom hooks](../06-typing-the-custom-hooks/README.md), where the same `AsyncState`
 discipline applies on the client, and to
 **The typed API client** *(not written yet)*, which consumes the `ErrorBody`
 this chapter's error handler produces.
@@ -70,4 +70,4 @@ this chapter's error handler produces.
 
 Phase index: [Phase 6 — TypeScript across the stack](../README.md) ·
 ← Prev chapter: [Discriminated unions](../04-discriminated-unions/README.md) ·
-Next chapter → **Typing the custom hooks** *(not written yet)*
+Next chapter → [Typing the custom hooks](../06-typing-the-custom-hooks/README.md)

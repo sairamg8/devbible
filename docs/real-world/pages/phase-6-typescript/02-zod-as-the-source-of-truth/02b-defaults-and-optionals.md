@@ -84,7 +84,7 @@ That is a real distinction with a real payoff: the checkout form's `initial`
 may hold `''` for a field the schema requires to be non-empty, and `onSubmit`
 cannot be handed anything but a fully parsed `Address`. The typing of the whole
 hook is
-**chapter 06 · Typing the custom hooks** *(not written yet)*.
+[chapter 06 · Typing the custom hooks](../06-typing-the-custom-hooks/README.md).
 
 ## Gotchas
 

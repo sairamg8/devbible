@@ -233,4 +233,4 @@ refactor to a rest wrapper fails the suite rather than the site.
 
 ← Prev: [The classify table and the handler](03d-the-classify-table-and-the-handler.md) ·
 [Overview](README.md) ·
-Next chapter → **Typing the custom hooks** *(not written yet)*
+Next chapter → [Typing the custom hooks](../06-typing-the-custom-hooks/README.md)

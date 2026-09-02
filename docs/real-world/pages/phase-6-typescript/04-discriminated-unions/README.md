@@ -59,7 +59,7 @@ which produces the union this chapter switches on, and to
 every mapper here. Forwards to
 [the typed handlers](../05-typed-express-handlers/README.md), where the
 transition guard becomes an endpoint, and to
-**the custom hooks** *(not written yet)*, whose `AsyncState`
+[the custom hooks](../06-typing-the-custom-hooks/README.md), whose `AsyncState`
 is the same pattern applied to loading and error.
 
 ---
