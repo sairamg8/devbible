@@ -140,7 +140,7 @@ else:
 In both cases `else` means *"the block completed by the normal route, not the
 abnormal one"*. Seen that way the keyword is consistent, even if it is still the
 wrong word — and knowing the pattern makes `try`/`else` read naturally when you
-meet it in [Exceptions](../11-exceptions/README.md) *(not written yet)*.
+meet it in **Exceptions** *(not written yet)*.
 
 ## When not to use it
 
