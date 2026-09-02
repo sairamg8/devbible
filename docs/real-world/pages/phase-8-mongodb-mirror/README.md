@@ -27,7 +27,7 @@ MongoDB phases 0–5, and
 | 02 | **[The catalog on MongoDB](02-the-catalog/README.md)** *(4 chunks)* | <span className="db-tier t-understand">Understand</span> | Same filters, same sorts, same opaque cursor — but keyset pagination has to be spelled out by hand |
 | 03 | **[Checkout with transactions](03-checkout-with-transactions/README.md)** *(8 chunks)* | <span className="db-tier t-master">Master</span> | The stock decrement needs no transaction; the five-write checkout does — and 🔴 the callback the driver retries **may run more than once** |
 | 04 | **[The dashboard on the aggregation pipeline](04-the-dashboard/README.md)** *(21 chunks)* | <span className="db-tier t-understand">Understand</span> | `generate_series` becomes `$densify`, `FILTER` becomes `$cond`, window functions become `$setWindowFields` — and `$facet` buys one round trip at the price of every index after stage one |
-| 05 | **Indexes for this app's queries** *(not written yet)* *(3 chunks)* | <span className="db-tier t-understand">Understand</span> | Every index derived from a query, ESR instead of leftmost-prefix, and what `explain()` actually reports |
+| 05 | **[Indexes for this app's queries](05-indexes-and-explain/README.md)** *(17 chunks)* | <span className="db-tier t-understand">Understand</span> | Every index derived from a query, **ESR** instead of leftmost-prefix, and what `explain()` actually reports — the ratio, the SORT stage, the plan cache |
 | 06 | **Change streams where `LISTEN`/`NOTIFY` was** *(not written yet)* *(2 chunks)* | <span className="db-tier t-know">Know</span> | A resumable, majority-committed event feed — strictly more than `NOTIFY` gave, and therefore easier to misuse |
 
 ## The gate
