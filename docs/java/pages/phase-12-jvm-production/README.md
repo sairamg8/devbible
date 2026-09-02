@@ -34,7 +34,7 @@ but no index yet, and is deliberately not linked until it has one.
 | 07 | **[Logging done right](07-logging-done-right/README.md)** | <span className="db-tier t-master">Master</span> | SLF4J over Logback, structured JSON, MDC on every line |
 | 08 | **Metrics with Micrometer** *(in progress)* | <span className="db-tier t-understand">Understand</span> | RED per endpoint; the histogram-vs-average lesson |
 | 09 | **Distributed tracing** *(in progress)* | <span className="db-tier t-know">Know</span> | OpenTelemetry auto-instrumentation across service, DB, queue |
-| 10 | **Packaging for deploy** *(in progress)* | <span className="db-tier t-understand">Understand</span> | Layered jars, JRE base images, non-root, AOT/CDS (JEP 483) |
+| 10 | **[Packaging for deploy](10-packaging-for-deploy/README.md)** | <span className="db-tier t-understand">Understand</span> | Layered jars, JRE base images, non-root, AOT/CDS (JEP 483) |
 | 11 | **GraalVM native image** *(not written yet)* | <span className="db-tier t-know">Know</span> | Instant startup vs closed-world limits — where it pays |
 | 12 | **Graceful shutdown** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | SIGTERM → drain → close pools; readiness interplay |
 | 13 | **JVM flags that matter in 2026** *(not written yet)* | <span className="db-tier t-know">Know</span> | And the ones ergonomics retired |
