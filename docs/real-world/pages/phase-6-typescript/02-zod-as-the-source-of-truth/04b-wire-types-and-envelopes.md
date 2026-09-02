@@ -50,7 +50,8 @@ conversion belongs in the mapper: `created_at: row.created_at.toISOString()`.
 **Money stays an integer, and the type says so.** `z.number().int()` on every
 `*_cents` field. The int8 type parser
 ([1·07](../../phase-1-database/07-money-and-time.md)) is what makes that true at
-run time, and **chapter 03** *(not written yet)* is where the type and the
+run time, and [chapter 03](../03-typing-raw-pg-results/README.md) is where the
+type and the
 parser are tied together — because a `number` in a row type is a claim about a
 driver setting, not about the database.
 

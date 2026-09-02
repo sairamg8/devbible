@@ -182,7 +182,7 @@ directions.
 
 The gate for this phase is *rename a column, break the build everywhere it is
 read*. Schemas are the second link in that chain: the query module's row type
-(**chapter 03** *(not written yet)*) feeds a mapper whose return type is
+([chapter 03](../03-typing-raw-pg-results/README.md)) feeds a mapper whose return type is
 `z.infer` of a response schema, and the client's rendering code consumes the
 same `z.infer`. Break the mapper's input and the mapper stops compiling; change
 the response schema and every consumer of the inferred type stops compiling.

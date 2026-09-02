@@ -94,7 +94,8 @@ test('the order_status enum matches ORDER_STATUSES exactly', async () => {
 ⚠️ **Order matters in that assertion and it is not pedantry.** Postgres orders
 enum values by `enumsortorder`, and `ORDER_STATUSES` also encodes the lifecycle
 order that
-**chapter 04 · Discriminated unions** *(not written yet)* builds its transition
+[chapter 04 · Discriminated unions](../04-discriminated-unions/README.md) builds
+its transition
 table from. Asserting set equality would pass while the two lists disagree about
 what comes after `paid`.
 

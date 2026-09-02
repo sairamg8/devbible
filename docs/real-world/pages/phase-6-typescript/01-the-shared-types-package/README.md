@@ -41,7 +41,8 @@ impossible, and say what breaks when two consumers disagree about `strict`.
 ## Where this connects
 
 Everything downstream in this phase imports from here: the zod schemas of
-**chapter 02** *(not written yet)* infer into these shapes, the query modules of
-**chapter 03** *(not written yet)* map rows onto them, and the
+[chapter 02](../02-zod-as-the-source-of-truth/README.md) infer into these shapes,
+the query modules of
+[chapter 03](../03-typing-raw-pg-results/README.md) map rows onto them, and the
 [validation engine](../../phase-5-js-functions/05-the-validation-engine.md)
 checks values against the runtime constants this package exports.

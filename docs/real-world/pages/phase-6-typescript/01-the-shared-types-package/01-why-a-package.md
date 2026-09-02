@@ -75,7 +75,7 @@ this?**
 
 - **Database row types.** `products.deleted_at` is a column, not a field the
   client has any business knowing. Row types live beside their query module —
-  see **chapter 03 · Typing raw `pg` results** *(not written yet)*.
+  see [chapter 03 · Typing raw `pg` results](../03-typing-raw-pg-results/README.md).
 - **Anything importing `pg`, `express`, `fs` or `node:*`.** A single such
   import makes the package unusable in a browser build, and the failure is a
   bundler error at the far end of the repo that reads as the *client's* fault.

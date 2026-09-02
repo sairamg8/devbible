@@ -292,4 +292,4 @@ opinion on this at all.
 
 ← Prev: [Merging, not casts](01-declaration-merging-not-casts.md) ·
 [Overview](README.md) ·
-Next → **Middleware, locals and the error handler** *(not written yet)*
+Next → [Typed middleware](03-typed-middleware.md)
