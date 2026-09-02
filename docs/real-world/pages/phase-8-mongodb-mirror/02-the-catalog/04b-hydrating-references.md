@@ -214,4 +214,8 @@ alone will not do it, because on a fast local database twenty round trips look
 like one slow one, and the symptom scales with cart size rather than with data
 size, so it stays invisible until a customer with a large cart complains.
 
-{/* FOOTER */}
+---
+
+← Prev: [The catalog repository](04-the-catalog-repository.md) ·
+[Overview](README.md) ·
+Next chapter → **Checkout with transactions** *(not written yet)*

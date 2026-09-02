@@ -243,4 +243,8 @@ keyset predicate has to be written out by hand as an `$or`, which
 [chapter 02](../02-the-catalog/README.md) does. Harder to write is not a reason
 to accept a worse algorithm.
 
-{/* FOOTER */}
+---
+
+← Prev: [Ids and the contract](05-ids-and-the-api-contract.md) ·
+[Overview](README.md) ·
+Next → [Constraints that vanish](06-constraints-that-vanish.md)

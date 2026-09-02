@@ -269,4 +269,8 @@ and costs a counter document that serialises every product insert. The `_id`
 sort's simplicity is not a trick worth generalising; it is a property of sorting
 on the unique key itself.
 
-{/* FOOTER */}
+---
+
+← Prev: [The filter document](01-the-filter-document.md) ·
+[Overview](README.md) ·
+Next → [The cursor round trip](02b-the-cursor-round-trip.md)

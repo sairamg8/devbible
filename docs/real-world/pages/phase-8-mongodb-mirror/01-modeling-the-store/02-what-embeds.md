@@ -239,4 +239,8 @@ disqualified `reviews` — an access pattern running across parents rather than
 within one — and it is worth restating because the trigger is never document
 size, it is a new query shape.
 
-{/* FOOTER */}
+---
+
+← Prev: [Eleven tables, eight collections](01-eleven-tables-eight-collections.md) ·
+[Overview](README.md) ·
+Next → [The cart document](02b-the-cart-document.md)

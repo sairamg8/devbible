@@ -269,4 +269,8 @@ prefix-anchored regex branch for short inputs, which can use an ordinary index o
 Atlas Search, where fuzzy matching is a query option. What you cannot do is
 configure your way to it, and saying so early is more useful than trying.
 
-{/* FOOTER */}
+---
+
+← Prev: [The cursor round trip](02b-the-cursor-round-trip.md) ·
+[Overview](README.md) ·
+Next → [The catalog repository](04-the-catalog-repository.md)

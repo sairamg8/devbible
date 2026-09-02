@@ -293,4 +293,8 @@ abandoned migration — and a collection quietly left on moderate has permanentl
 exempted its invalid documents. Defaults that have a meaningful alternative are
 worth stating; defaults that do not are noise.
 
-{/* FOOTER */}
+---
+
+← Prev: [The cursor & the boundary](05b-the-cursor-and-the-boundary.md) ·
+[Overview](README.md) ·
+Next → [What has no equivalent](06b-no-equivalent.md)

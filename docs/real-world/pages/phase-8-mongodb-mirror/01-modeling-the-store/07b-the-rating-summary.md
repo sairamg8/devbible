@@ -259,4 +259,8 @@ which currently rely on the nightly sweep. Making those real-time means calling
 the function is idempotent and has no preconditions. The sweep stays regardless,
 because it is the only thing that catches a path nobody remembered.
 
-{/* FOOTER */}
+---
+
+← Prev: [Denormalisation & staleness](07-denormalization-and-staleness.md) ·
+[Overview](README.md) ·
+Next chapter → [The catalog on MongoDB](../02-the-catalog/README.md)

@@ -227,4 +227,8 @@ already broken. What you cannot do is wait for an error, because there is none �
 the failure is a silently different integer, which is exactly why the string
 form is the right default rather than a defensive measure.
 
-{/* FOOTER */}
+---
+
+← Prev: [What stays a collection](04-what-stays-a-collection.md) ·
+[Overview](README.md) ·
+Next → [The cursor & the boundary](05b-the-cursor-and-the-boundary.md)

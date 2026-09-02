@@ -210,4 +210,7 @@ crisis; it is the moment a *partial* read of the cart becomes a real query
 efficiently and the whole document travels on every read.
 [Chunk 02](02-what-embeds.md) states the size arithmetic that says when.
 
-{/* FOOTER */}
+---
+
+← [Overview](README.md) ·
+Next → [What embeds](02-what-embeds.md)

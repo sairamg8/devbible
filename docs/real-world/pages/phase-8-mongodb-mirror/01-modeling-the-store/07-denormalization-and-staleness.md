@@ -236,4 +236,8 @@ triggers, and the same three questions apply to each. What MongoDB changes is th
 would not have been worth it relationally become worth it here. The reasoning is
 identical; only the threshold moved.
 
-{/* FOOTER */}
+---
+
+← Prev: [What has no equivalent](06b-no-equivalent.md) ·
+[Overview](README.md) ·
+Next → [The rating summary](07b-the-rating-summary.md)

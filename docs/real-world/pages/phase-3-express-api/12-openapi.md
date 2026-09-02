@@ -7,7 +7,8 @@ sidebar_position: 12
 <span className="db-tier t-know">Know</span>
 
 > Verified: 2026-08 against the OpenAPI 3.1 specification and the
-> zod-to-openapi / zod v4 JSON-schema docs. Concept home:
+> zod-to-openapi / zod v4 JSON-schema docs; the `target` union re-checked 2026-09-02
+> in `zod/v4/core/to-json-schema.d.ts` (**zod 4.4.3** in this repo). Concept home:
 > [Express — the REST surface](../../../expressjs/pages/phase-6-rest-surface/README.md).
 
 ## The problem
@@ -17,7 +18,7 @@ The API now has a real contract — schemas at the boundary
 ([ch. 09](09-the-error-contract.md)), stable wire mappers
 ([ch. 05](05-catalog-endpoints.md)). What it doesn't have is a *document*:
 something the frontend team reads, the typed client
-([Phase 6](../../syllabus/02-frontend.md)) generates from, and a partner
+([Phase 6](../phase-6-typescript/README.md)) generates from, and a partner
 can be handed. The rule that makes the document trustworthy: **generated
 from the zod schemas that actually run** — a hand-written spec is a second
 implementation, and second implementations drift.
@@ -49,7 +50,10 @@ const routes = [
   // …one line per public route; the lint step below keeps this honest
 ];
 
-const toSchema = (s) => z.toJSONSchema(s, {target: 'openapi-3.1'});
+// OpenAPI 3.1 documents ARE JSON Schema 2020-12. zod 4.4.3 declares the targets
+// draft-04 | draft-07 | draft-2020-12 | openapi-3.0 — 'openapi-3.1' only compiles
+// because the type also admits `({} & string)`, and it is not a real target.
+const toSchema = (s) => z.toJSONSchema(s, {target: 'draft-2020-12'});
 
 export function buildDocument() {
   const paths = {};

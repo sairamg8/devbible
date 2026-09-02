@@ -266,4 +266,7 @@ errors surface as wrong results rather than as failures, and the compensating
 discipline is that every filter shape gets a test asserting the *count* of
 matching documents, not merely that the call succeeded.
 
-{/* FOOTER */}
+---
+
+← [Overview](README.md) ·
+Next → [Keyset pagination](02-keyset-pagination.md)

@@ -51,7 +51,7 @@ export function validate(schemas) {
 ```
 
 The schemas live next to the routes that use them — and double as the
-API's type source ([Phase 6](../../syllabus/02-frontend.md) infers from
+API's type source ([Phase 6](../phase-6-typescript/README.md) infers from
 them):
 
 ```js

@@ -262,4 +262,8 @@ repository method that takes a callback or returns an async iterator of *domain
 objects*, keeping the driver's cursor inside the layer that knows how to close
 it.
 
-{/* FOOTER */}
+---
+
+← Prev: [Search](03-search.md) ·
+[Overview](README.md) ·
+Next → [Hydrating references](04b-hydrating-references.md)

@@ -236,4 +236,8 @@ escalation, and the change is an HMAC verified in `decodeCursor` before parsing.
 That it would be a change to one function, in one file, is the strongest
 practical argument for having put the codec here rather than inline in a route.
 
-{/* FOOTER */}
+---
+
+← Prev: [Keyset pagination](02-keyset-pagination.md) ·
+[Overview](README.md) ·
+Next → [Search](03-search.md)

@@ -56,3 +56,9 @@ indexed equality predicate instead of a join). Every index these queries need is
 derived in **chapter 05** *(not written yet)*, and the `SORT`
 stage that `explain()` reports when the index and the sort disagree is that
 chapter's gate.
+
+---
+
+Phase index: [Phase 8 — The MongoDB mirror](../README.md) ·
+← Prev chapter: [Modeling the store as documents](../01-modeling-the-store/README.md) ·
+Next chapter → **Checkout with transactions** *(not written yet)*

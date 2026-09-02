@@ -291,4 +291,8 @@ each with a different cost for "all descendants" versus "the breadcrumb". None
 of them is nesting subdocuments, and all of them are a real design exercise the
 current spec lets us skip.
 
-{/* FOOTER */}
+---
+
+← Prev: [The order document](03-the-order-document.md) ·
+[Overview](README.md) ·
+Next → [Ids and the contract](05-ids-and-the-api-contract.md)

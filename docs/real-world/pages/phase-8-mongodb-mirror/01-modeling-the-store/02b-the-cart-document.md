@@ -288,4 +288,8 @@ the object form is defensible; it is rejected here because it also breaks the
 document shape untypeable in [Phase 6](../../phase-6-typescript/README.md). The
 loop is the cheaper price.
 
-{/* FOOTER */}
+---
+
+← Prev: [What embeds](02-what-embeds.md) ·
+[Overview](README.md) ·
+Next → [The order document](03-the-order-document.md)

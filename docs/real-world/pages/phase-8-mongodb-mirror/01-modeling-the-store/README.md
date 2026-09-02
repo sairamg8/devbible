@@ -77,3 +77,8 @@ and are never re-taught here. Everything downstream depends on this chapter:
 collections in one transaction, and
 **chapter 05** *(not written yet)* indexes exactly the fields this
 chapter put where they are.
+
+---
+
+Phase index: [Phase 8 — The MongoDB mirror](../README.md) ·
+Next chapter → [The catalog on MongoDB](../02-the-catalog/README.md)

@@ -288,4 +288,8 @@ one job replaced by a simpler job — but it is the clearest small example of th
 phase's general pattern: a feature that removes work usually moves some of it,
 and the port is only correct if you go looking for where.
 
-{/* FOOTER */}
+---
+
+← Prev: [Constraints that vanish](06-constraints-that-vanish.md) ·
+[Overview](README.md) ·
+Next → [Denormalisation & staleness](07-denormalization-and-staleness.md)

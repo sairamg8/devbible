@@ -264,4 +264,8 @@ for one user's orders, not fine as an audit timeline, which is why
 [chunk 6](05-ids-and-the-api-contract.md) keeps `createdAt` on the document as
 the authoritative time.
 
-{/* FOOTER */}
+---
+
+← Prev: [The cart document](02b-the-cart-document.md) ·
+[Overview](README.md) ·
+Next → [What stays a collection](04-what-stays-a-collection.md)
