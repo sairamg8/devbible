@@ -17,7 +17,7 @@ sidebar_position: 0
 
 The keystone chapter of the phase. It fixes the document model that
 [02](../02-the-catalog/README.md), [03](../03-checkout-with-transactions/README.md),
-**04** *(not written yet)*, **05** *(not written yet)*
+[04](../04-the-dashboard/README.md), **05** *(not written yet)*
 and **06** *(not written yet)* all assume, by taking the
 [eleven tables](../../phase-0-the-app/02-architecture-and-data-model.md) of the
 Postgres schema one at a time and deciding where each one landed — and, more

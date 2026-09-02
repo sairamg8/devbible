@@ -1,0 +1,26 @@
+**★ Why set `maxTimeMS` on every read-side aggregation?**
+Because the documented default is no limit at all: *"If you do not specify a
+value for `maxTimeMS`, operations will not time out."* An HTTP client that has
+already given up does not stop the server; the work continues, holding memory and
+CPU. The server does kill an aggregation when it notices the client disconnected
+— for pipelines without `$out`/`$merge` — but that is a different mechanism with
+different latency. Note the limit is enforced at interrupt points rather than
+instantly, so it bounds the damage without guaranteeing a deadline.
+
+**★ Since MongoDB 6.0 an oversized stage spills to disk by default. Why would you
+set `allowDiskUse: false` on an endpoint?**
+Because the default converts a loud failure into a quiet slowdown, and on a page
+the loud failure is more useful. A stage exceeding 100 megabytes on an
+interactive endpoint means the design is wrong — an unselective `$match`, an
+unbounded `$group` key — and you want to find that out from an error rather than
+from a gradually worsening p99. On a nightly job the opposite is true, which is
+why the option exists per operation.
+
+**★ When would you iterate the cursor instead of calling `toArray()`?**
+When the result size is not bounded by the request. The dashboard's pipelines all
+return thirty rows, twenty rows, or one facet document, so materialising them is
+bounded by construction. An export or a backfill reading every order is not, and
+iterating with a `batchSize` keeps the driver's in-memory set bounded. The one
+case where you have no choice is `$facet`, which produces a single document and
+therefore cannot be streamed at all.
+

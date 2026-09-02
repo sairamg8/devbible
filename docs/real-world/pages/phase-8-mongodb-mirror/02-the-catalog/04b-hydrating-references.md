@@ -97,7 +97,7 @@ gone is simply absent from the result and `?? null` handles it explicitly. With
 to be detected by comparing lengths — which nobody does.
 
 `$lookup` earns its place where the join *filters or aggregates*, which is the
-**dashboard** *(not written yet)*: joining orders to products to rank
+[dashboard](../04-the-dashboard/README.md): joining orders to products to rank
 sellers is a real server-side reduction, and shipping the intermediate result to
 Node to join it would be absurd. The rule that separates the two cases: **use
 `$lookup` when the join makes the result smaller, and `$in` when it makes the

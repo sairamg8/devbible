@@ -1,0 +1,9 @@
+**★ Where do you clamp user input in this stack, and why not in the pipeline?**
+In the route, or at the top of the repository function — before the pipeline is
+constructed. Every cost in the chapter is proportional to the documents the
+leading `$match` selects and to any `n` an accumulator retains, and both come from
+the request. Clamping inside the pipeline is not really possible: a `$limit` is
+applied after the work, and `$topN`'s `n` must be known before the group is
+aggregated. So the bound has to be applied to the *parameter*, in JavaScript, at
+the edge.
+

@@ -207,4 +207,4 @@ does.
 
 ← Prev: [The four transaction options](04-write-concern-and-deployment.md) ·
 Index: [Checkout with transactions](README.md) ·
-Next → **The dashboard on the aggregation pipeline** *(not written yet)*
+Next → [The dashboard on the aggregation pipeline](../04-the-dashboard/README.md)

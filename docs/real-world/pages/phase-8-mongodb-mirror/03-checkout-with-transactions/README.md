@@ -82,4 +82,4 @@ queries and the unique replay guard work are derived in **chapter 05**
 
 ← Prev: [The catalog on MongoDB](../02-the-catalog/README.md) ·
 Index: [Phase 8 overview](../README.md) ·
-Next → **The dashboard on the aggregation pipeline** *(not written yet)*
+Next → [The dashboard on the aggregation pipeline](../04-the-dashboard/README.md)

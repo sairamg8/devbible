@@ -1,0 +1,109 @@
+## `maxTimeMS`, and what "no timeout" means
+
+> *"Specifies a time limit in milliseconds. If you do not specify a value for
+> `maxTimeMS`, operations will not time out."*
+> — [`aggregate`](https://www.mongodb.com/docs/manual/reference/command/aggregate/)
+
+**Not "will time out eventually" — will not time out.** A dashboard query over a
+badly-chosen range with no `maxTimeMS` runs until it finishes, holding server
+resources, while the HTTP client that asked for it has long since given up.
+
+Two qualifications from the same page. The server *"only terminates an operation
+at one of its designated interrupt points"*, so the limit is enforced at
+checkpoints rather than instantaneously — a stage deep in a long computation may
+overrun it. And for pipelines without `$out` or `$merge`, *"If the client that
+issued `aggregate` disconnects before the operation completes, MongoDB marks
+`aggregate` for termination using `killOp`"* — so a browser that closes the tab
+does eventually free the work, but only once the disconnect is noticed.
+
+`maxTimeMS` on every read-side aggregation is the rule; the value is a product
+decision. Five seconds for an admin dashboard says "if this is not fast, it is
+broken, and I would rather show an error than a spinner".
+
+The nightly `$merge` job is the exception: it may legitimately run for minutes,
+it has no impatient client, and killing it half-way leaves a partially merged
+range — so it gets a generous limit or none, and a job-level timeout instead.
+
+## `comment` is the option nobody sets and everybody wants
+
+> *"A user-provided comment to attach to this command. Once set, this comment
+> appears alongside records of this command in the following locations: mongod log
+> messages … Database profiler output … `currentOp` output"*
+
+One string, and it turns "some aggregation is pegging the primary" into "the
+admin dashboard is pegging the primary". Set it on every pipeline the app issues,
+naming the feature rather than the function, so an operator reading `currentOp`
+does not have to map a stage list back to a code path.
+
+## `allowDiskUse`, `readPreference` and `hint`
+
+```js
+orders.aggregate(pipeline, {
+  allowDiskUse: false,               // a live endpoint should not need it
+  readPreference: 'primary',         // the default; state it when it matters
+  maxTimeMS: 5_000,
+  comment: 'admin:dashboard',
+});
+```
+
+`allowDiskUse: false` is worth setting **explicitly** on live endpoints. Since
+MongoDB 6.0 the server-wide `allowDiskUseByDefault` is true, so a stage that
+outgrows 100 MB silently spills instead of failing — which is right for a batch
+job and wrong for a page, where a fast error is more useful than a slow success.
+Setting it false converts the degradation back into a signal.
+
+`readPreference` is where [chunk 18's](07b-merge-and-the-ladder.md) rung 3 lives.
+It is one option, which is exactly why it deserves a comment saying what it costs.
+
+`hint` forces an index and belongs in a diagnostic, not in shipped code — the
+argument is
+[05·07](../05-indexes-and-explain/07-hint-plan-cache-and-live-builds.md)'s. Note
+one restriction if you do reach for it: *"The `hint` does not apply to `$lookup`
+and `$graphLookup` stages"*, so hinting a pipeline does nothing for the index its
+join needs.
+
+## Cursor or `toArray`
+
+`aggregate()` returns a cursor, not a promise. `.toArray()` drains it.
+
+For this chapter's pipelines, `toArray()` is right: thirty daily rows, twenty
+products, one facet document. The result is bounded by the request, so
+materialising it is bounded too.
+
+Iterate the cursor instead when the result is *not* bounded by the request — an
+export, a backfill, a migration reading every order:
+
+```js
+for await (const doc of orders.aggregate(pipeline, {batchSize: 1000})) {
+  await handle(doc);
+}
+```
+
+`batchSize` controls the initial batch and therefore how many documents the
+driver holds at once. It is a memory knob, not a speed knob, and the reason to
+touch it is a document size far from the default's assumptions.
+
+One thing you cannot stream: a `$facet` result
+([chunk 14](05b-facet-limits-and-shape.md)). It is one document, so the cursor
+yields one element and the driver deserialises all of it.
+
+## Where the route sits
+
+```js
+// routes/admin/stats.js
+router.get('/admin/stats', requireAdmin, async (req, res) => {
+  const {from, to} = parseRange(req.query);        // validated + clamped
+  res.json(await req.repos.dashboard.overview({from, to}));
+});
+```
+
+The route validates and clamps the range, calls one repository function, and
+serialises. It does not know there is a pipeline, does not import `mongodb`, and
+does not see an `ObjectId` — which is the Phase 3 contract boundary holding, and
+the whole gate this phase is written toward.
+
+**Clamping the range is the route's job and it is load-bearing.** Every cost in
+this chapter scales with the number of documents the leading `$match` selects,
+and that number is a request parameter. An unclamped `from` is a full collection
+scan available to anyone with an admin cookie.
+

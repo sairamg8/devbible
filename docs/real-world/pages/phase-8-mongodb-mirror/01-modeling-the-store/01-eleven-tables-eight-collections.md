@@ -196,7 +196,7 @@ carries the full argument.
 **★ Does this model make the app faster?** For the product detail page and the
 order history page, unambiguously yes — both become a single document fetch
 where Postgres needs joins. For the dashboard it is a wash or slightly worse
-(chapter **04** *(not written yet)*). For deep catalog pagination on a
+(chapter [04](../04-the-dashboard/README.md)). For deep catalog pagination on a
 computed sort it is worse (chapter [02](../02-the-catalog/README.md)). "Faster"
 is not a property of a data model; it is a property of a model *and* a workload,
 and the honest summary is that this rewrite moved cost from reads the app does

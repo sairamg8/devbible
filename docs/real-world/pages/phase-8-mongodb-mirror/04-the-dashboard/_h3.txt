@@ -1,0 +1,8 @@
+**★ When would you iterate the cursor instead of calling `toArray()`?**
+When the result size is not bounded by the request. The dashboard's pipelines all
+return thirty rows, twenty rows, or one facet document, so materialising them is
+bounded by construction. An export or a backfill reading every order is not, and
+iterating with a `batchSize` keeps the driver's in-memory set bounded. The one
+case where you have no choice is `$facet`, which produces a single document and
+therefore cannot be streamed at all.
+

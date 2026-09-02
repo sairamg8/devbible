@@ -216,7 +216,7 @@ maintainer will actually encounter it.
 hot nor repeated. The product detail page fetches one document and is cached for
 a minute, so joining its approved reviews — or, more simply, issuing a second
 `find` — costs once per cached minute rather than 24 times per browse. The
-**dashboard** *(not written yet)* uses `$lookup` freely for the same
+[dashboard](../04-the-dashboard/README.md) uses `$lookup` freely for the same
 reason: it runs on demand for one admin. Denormalisation buys latency on the hot
 path and costs maintenance forever; spending it anywhere else is a bad trade.
 

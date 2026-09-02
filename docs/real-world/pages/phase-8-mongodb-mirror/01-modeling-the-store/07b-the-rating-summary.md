@@ -156,7 +156,7 @@ more expensive.
 
 For a large catalog the per-product loop becomes a single pipeline that groups
 all reviews at once and writes with `$merge`, which
-**chapter 04** *(not written yet)* develops for the dashboard's
+[chapter 04](../04-the-dashboard/README.md) develops for the dashboard's
 materialised summaries. The per-product form is kept here because it is the same
 code the approval path uses, and one function with two callers is worth more than
 two optimal ones.

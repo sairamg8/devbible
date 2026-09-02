@@ -1,0 +1,15 @@
+**★ `aggregate()` returns a cursor, not a promise.** Forgetting `.toArray()` and
+`await`-ing the cursor gives you the cursor object, and `res.json(cursor)`
+serialises an object with none of the data in it — a `200` with a shape nobody
+expected and no error anywhere.
+
+**★ `batchSize` is a memory knob, not a throughput knob.** It controls the
+initial batch size and how much the driver holds at once. Raising it to "make the
+export faster" usually just raises peak memory; the throughput was bounded by
+something else.
+
+**★ An unclamped date range is a full scan behind an admin cookie.** Every cost
+in this chapter is proportional to the documents the leading `$match` selects,
+and that is user input. Clamp it in the route, along with every `limit` and every
+`n`.
+

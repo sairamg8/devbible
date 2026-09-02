@@ -116,7 +116,7 @@ pays for itself the day someone sets a cluster-wide
 the primary. Every plain catalog read follows it happily; the checkout
 transaction fails, and the explicit option in this object is the thing that
 says why. It is also the reason the "read the dashboard from a secondary"
-optimisation of **chapter 04** *(not written yet)* cannot be applied here: the checkout
+optimisation of [chapter 04](../04-the-dashboard/README.md) cannot be applied here: the checkout
 must be answered by the primary, whatever the rest of the app does.
 
 ## `maxCommitTimeMS: 5_000` — how long the commit may take

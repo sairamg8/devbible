@@ -1,0 +1,16 @@
+**★ Without `maxTimeMS`, an aggregation does not time out.** The Manual says so
+in those words. The HTTP client gives up; the server does not. Set it on every
+read-side pipeline.
+
+**★ `maxTimeMS` is enforced at interrupt points, not instantly.** A long-running
+stage can overrun the limit. It bounds the damage; it does not guarantee the
+deadline, so an HTTP-level timeout is still worth having.
+
+**★ Since 6.0 an oversized stage spills to disk instead of erroring.** The
+default flipped, so the same pipeline that used to fail loudly now gets slowly
+slower. On a live endpoint, `allowDiskUse: false` restores the signal.
+
+**★ `hint` does not apply to `$lookup` or `$graphLookup`.** Hinting a pipeline
+directs the index used for the initial collection scan only; the join still needs
+its own index on `foreignField`.
+
