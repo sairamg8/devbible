@@ -84,7 +84,7 @@ head, *tail = some_tuple      # tail is a list, not a tuple
 The starred target is documented to be assigned a list of the remaining items.
 So `*rest` is one of the few binding forms that *does* create a new container,
 which makes it a cheap way to detach a tail from an iterable — and a hidden
-allocation if the iterable is enormous. **Unpacking** *(not written yet)*
+allocation if the iterable is enormous. [Unpacking](../13-unpacking/README.md)
 covers the form properly; the aliasing point is only that `rest` is a fresh
 list nobody else holds, while `head` is an alias of an element.
 
