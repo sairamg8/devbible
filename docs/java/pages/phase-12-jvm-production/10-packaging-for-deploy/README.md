@@ -38,10 +38,9 @@ calculator nobody configured, or a `@Profile` that was baked into the artefact a
 This topic is the chain of those decisions in the order you meet them, with the CI assertion
 that catches each silent failure.**
 
-Phase 8 owns the build that produces the jar. [11 · GraalVM native
-image](../11-graalvm-native-image/README.md) owns the other way to make a binary.
+Phase 8 owns the build that produces the jar. **11 · GraalVM native image** *(not written yet)* owns the other way to make a binary.
 [03 · Heap sizing in containers](../03-heap-sizing-in-containers/README.md) owns how much memory
-the thing gets, and [12 · Graceful shutdown](../12-graceful-shutdown/README.md) owns how it
+the thing gets, and **12 · Graceful shutdown** *(not written yet)* owns how it
 stops. This topic owns everything in between.
 
 **29 chunks.** Read in order; each links to the next.
