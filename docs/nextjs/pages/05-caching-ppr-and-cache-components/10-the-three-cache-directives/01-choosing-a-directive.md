@@ -122,7 +122,7 @@ resting on a server even briefly — does `use cache: private` become the answer
 If the answer is no, `use cache: private` is the only option, because it is the only one that
 never writes to server storage. If the answer is yes, the choice between `use cache` and
 `use cache: remote` is an economics question, covered in
-**chunk 3 · `use cache: remote`** *(not written yet)*.
+**[chunk 3](03-use-cache-remote.md)**.
 
 ## The decision tree
 
