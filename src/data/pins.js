@@ -143,7 +143,12 @@ export const PINS = {
     label: 'Next.js', source: 'npm:next', policy: 'latest',
     // `nextjs` added 2026-09-03 — the track landed in commit `12349e4e` and the
     // pin that governs it still pointed only at `react`.
-    pin: '16.3.1', checked: '2026-08-31', tracks: ['react', 'nextjs'], names: ['next.js', 'next'],
+    // 🔴 16.3.1 → 16.3.4 is NOT a patch bump. It spans 16.3.3, the August 2026 security
+    // release, which DISABLED AVIF image optimization to mitigate GHSA-2xp9-vwfh-vxw4
+    // (unauthenticated RCE via libheif under sharp). A changed default reclassifies to
+    // `minor` per the triage ladder — and that prose work was done 2026-09-03 across
+    // docs/nextjs/. Do not treat a future 16.3.x the same way without reading the headline.
+    pin: '16.3.4', checked: '2026-09-03', tracks: ['react', 'nextjs'], names: ['next.js', 'next'],
   },
   npm: {
     label: 'npm', source: 'npm:npm', policy: 'latest',

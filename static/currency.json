@@ -5,8 +5,8 @@
   "horizonDays": 60,
   "totals": {
     "pins": 43,
-    "current": 17,
-    "patch": 7,
+    "current": 18,
+    "patch": 6,
     "minor": 5,
     "major": 1,
     "unanchored": 12,
@@ -52,14 +52,14 @@
     "java": "major",
     "git": "none",
     "css": "frozen",
-    "react": "patch",
+    "react": "frozen",
     "jest-rtl": "unanchored",
     "storybook": "minor",
     "redux-toolkit": "unanchored",
     "tanstack-query": "unanchored",
     "framer-motion": "unanchored",
     "angular": "patch",
-    "nextjs": "patch",
+    "nextjs": "none",
     "vite": "unanchored",
     "webpack": "unanchored",
     "babel": "unanchored",
@@ -473,17 +473,17 @@
       "label": "Next.js",
       "source": "npm:next",
       "policy": "latest",
-      "pin": "16.3.1",
+      "pin": "16.3.4",
       "latest": "16.3.4",
       "newestOverall": null,
-      "drift": "patch",
+      "drift": "none",
       "eol": null,
       "events": [],
       "tracks": [
         "react",
         "nextjs"
       ],
-      "pages": 55,
+      "pages": 73,
       "claimed": "16.3.4",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -493,7 +493,7 @@
       ],
       "error": null,
       "note": null,
-      "checked": "2026-08-31"
+      "checked": "2026-09-03"
     },
     "npm": {
       "label": "npm",
@@ -672,7 +672,7 @@
       "tracks": [
         "java"
       ],
-      "pages": 1554,
+      "pages": 1561,
       "claimed": "4.1",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -701,7 +701,7 @@
       "tracks": [
         "java"
       ],
-      "pages": 929,
+      "pages": 935,
       "claimed": "7.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
