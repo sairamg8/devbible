@@ -199,8 +199,7 @@ At whatever the service was doing that is not instrumented. Most often that is w
 than computing: a connection-pool checkout, a lock, a thread-pool queue, or a blocking call
 through a client nobody wrapped. A profiler answers "computing", and a thread dump answers
 "waiting" — which is why this is the point where a tracing investigation hands off to
-[05 · Thread dumps](../05-thread-dumps/README.md) or **06 · JFR and profiling**
-*(not written yet)*.
+[05 · Thread dumps](../05-thread-dumps/README.md) or [06 · JFR and profiling](../06-jfr-mission-control-and-async-profiler/README.md).
 
 **★ Is span kind ever validated?**
 No. It is explicitly a hint to the backend about how to assemble the trace. Nothing checks that a
@@ -209,4 +208,6 @@ parent is a `Server`. The failure mode of a wrong kind is therefore entirely sil
 warning, just a service map with a missing edge or a waterfall that renders in a way nobody can
 explain.
 
-{/* FOOTER */}
+---
+
+← [02 · Traces, spans and context](02-traces-spans-and-context.md) · **Topic index** *(not written yet)* · Next → [03 · Context propagation](03-context-propagation.md)

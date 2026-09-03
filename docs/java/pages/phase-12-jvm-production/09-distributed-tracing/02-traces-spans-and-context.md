@@ -193,7 +193,7 @@ instrumentation sets it.
 and status of your span exist solely in your process until they are exported to the backend.
 The downstream service receives four fields. Any design that assumes "I put an attribute on the
 span so the next service can read it" is wrong; that is what baggage is for
-(**03c** *(not written yet)*), and baggage has real costs.
+([03c](03c-tracestate-and-baggage.md)), and baggage has real costs.
 
 **★ An unstopped span is a lost span and often a leak.** The glossary is explicit that a
 created span *"must"* be stopped. A span that is never ended is never exported, so the work
@@ -280,4 +280,6 @@ produces one distinct operation per request, which makes aggregation meaningless
 backends, blows up the operation-name index. Attributes are indexed for search precisely so that
 you can find a trace by user id without destroying grouping.
 
-{/* FOOTER */}
+---
+
+← [01 · The request that vanished](01-the-request-that-vanished.md) · **Topic index** *(not written yet)* · Next → [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md)

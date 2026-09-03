@@ -211,6 +211,6 @@ current one"* — a later version may append more dash-separated fields. A versi
 therefore accept a dash after the flags and ignore what follows, rather than rejecting the header
 as too long.
 
-[Next: 03b2 · Mutations, the processing model and Boot's defaults](03b2-traceparent-mutations-and-processing.md)
+---
 
-{/* FOOTER */}
+← [03 · Context propagation](03-context-propagation.md) · **Topic index** *(not written yet)* · Next → [03b2 · Mutations and processing](03b2-traceparent-mutations-and-processing.md)

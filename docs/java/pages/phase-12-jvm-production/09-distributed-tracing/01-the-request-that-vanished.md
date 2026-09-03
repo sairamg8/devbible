@@ -195,4 +195,6 @@ is "the downstream work took no time" or "the downstream service was never calle
 downstream service is in fact doing the work, under a brand new trace ID nobody is looking at.
 That is why **03e** *(not written yet)* exists.
 
-{/* FOOTER */}
+---
+
+**Topic index** *(not written yet)* · Next → [02 · Traces, spans and context](02-traces-spans-and-context.md)

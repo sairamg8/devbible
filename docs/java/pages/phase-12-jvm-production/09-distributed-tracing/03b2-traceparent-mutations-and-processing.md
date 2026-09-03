@@ -218,6 +218,6 @@ data, and the propagator beans share that condition (`@ConditionalOnEnabledTraci
 auto-configured builder and [03](03-context-propagation.md) applies. The order matters — a team
 that skipped the annotation and "fixed" a working client has done real damage.
 
-**Next: 03c · tracestate and baggage** *(not written yet)*
+---
 
-{/* FOOTER */}
+← [03b · The traceparent header](03b-the-traceparent-header.md) · **Topic index** *(not written yet)* · Next → [03c · tracestate and baggage](03c-tracestate-and-baggage.md)

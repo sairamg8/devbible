@@ -268,4 +268,6 @@ capture/restore requirement is unchanged. What does change is the cost calculus 
 virtual thread per task there is no pooling, so the stale-context-on-a-reused-worker hazard
 disappears, but the "context never arrived" hazard is exactly as present as before.
 
-{/* FOOTER */}
+---
+
+← [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md) · **Topic index** *(not written yet)* · Next → [03b · The traceparent header](03b-the-traceparent-header.md)
