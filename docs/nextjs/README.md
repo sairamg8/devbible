@@ -11,8 +11,8 @@ sidebar_position: 0
 > **No sandbox run** — this is an inventory plus an imported corpus, not a fresh authoring pass.
 
 The Next.js track, **imported 2026-09-03** from the frontend-bible corpus at
-`/mnt/Storage/Backup/Code/frontend/docs/nextjs`. **19 chapters, 140 pages, 9,434 lines**,
-carried across verbatim.
+`/mnt/Storage/Backup/Code/frontend/docs/nextjs`. **19 chapters, 135 pages**, carried
+across verbatim (140 at import; 5 duplicate appendix pages have since been removed).
 
 Next.js is the second React meta-framework in this bible and the one most likely to be the
 thing you actually ship. The React track teaches you components; this track teaches you the
@@ -106,7 +106,7 @@ Recorded so they can be fixed deliberately:
 - **Depth is well below the devbible norm.** 135 files averaging **~70 lines per page**, one
   file over 300 (`04-data-fetching/01-explanation.md` at 431, inherited unchanged). devbible topics run 250–300 lines per chunk with
   exhaustive gotchas and interview questions. Reaching that bar is roughly a 5–8× expansion.
-- **No `> Verified:` lines** on the 140 imported pages, and the `[D]`/`[O]`/`[R]` badges
+- **No `> Verified:` lines** on the 135 imported pages, and the `[D]`/`[O]`/`[R]` badges
   have not been re-tiered against devbible's four-tier system.
 
 **Changes made to the copied material, in full.** At import (2026-09-03): chapter 1 shipped
