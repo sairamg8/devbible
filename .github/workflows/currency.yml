@@ -68,7 +68,7 @@ jobs:
           BODY=$(printf '%s\n\n```\n%s\n```\n\n%s\n' \
             "Pins that need a human. Patch drift is excluded by design." \
             "$(cat report.txt)" \
-            "Plan: \`project_currency_system.md\` in the memory store. A patch bump never causes a page to be re-read.")
+            "**To act on this:** follow \`.agents/skills/devbible-currency/SKILL.md\` in this repo — it triages each drift class and says what may be edited. Any agent (Claude, Codex, Grok, Amp, Gemini) uses that same file. 🔴 A patch bump never causes a page to be re-read.")
           EXISTING=$(gh issue list --label currency --state open --limit 1 --json number --jq '.[0].number')
           if [ -n "$EXISTING" ]; then
             gh issue comment "$EXISTING" --body "$BODY"

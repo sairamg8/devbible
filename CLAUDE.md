@@ -46,6 +46,12 @@ technology at a time.
 
 Package manager is **yarn**. `yarn start` runs the dev server on :3000.
 
+**Staying current with upstream releases** — a version moved, the weekly `currency`
+workflow opened an issue, or "is X still current": read
+`.agents/skills/devbible-currency/SKILL.md` and follow it. Its
+`references/authoring-contract.md` carries the 300-line cap, chunking mechanics and the
+depth bar, and is required reading before writing or extending any page.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.

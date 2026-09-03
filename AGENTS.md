@@ -29,6 +29,21 @@ memories are never opened.
 
 Package manager: **yarn**. `yarn start` → :3000.
 
+## Currency — keeping up with release cycles
+
+When a product ships a release, when the weekly `currency` workflow opens an issue, or
+on *"is X still current"* / *"bump &lt;product&gt;"*:
+
+🔴 **Read `.agents/skills/devbible-currency/SKILL.md` and follow it.** It is
+agent-neutral — Codex, Amp, Gemini, Cursor and Grok all use that one file.
+
+Before writing or extending any page, also read
+`.agents/skills/devbible-currency/references/authoring-contract.md` — the 300-line cap
+(a file-size cap, **never** a content budget), chunking mechanics, the depth bar for
+gotchas and interview Q&A, the evidence rule, and the MDX traps.
+
+The one rule that makes it usable: **a patch bump never causes a page to be re-read.**
+
 **Explanation cadence:** each topic page must be visible in the UI as written
 (dev server + `src/data/progress.js` bump). After a **complete phase**, run
 `yarn build` once and fix all errors in that pass — not a full build after every
