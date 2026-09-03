@@ -1,7 +1,7 @@
 ---
 title: "The Next.js guide stores a push subscription in a module-level variable and tells you not to, and the schema you replace it with is keyed by endpoint rather than by user"
 sidebar_label: "10m · Storing push subscriptions"
-sidebar_position: 22
+sidebar_position: 19
 description: "Why module state fails on serverless, the endpoint-keyed upsert, one user with many devices, and why an unsubscribe Server Action must filter by the caller."
 ---
 

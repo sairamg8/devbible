@@ -1,7 +1,7 @@
 ---
 title: "The tool every PWA checklist tells you to run has not had a PWA category since Lighthouse 12, and the reason it was deleted is the same reason most published checklists are now wrong"
 sidebar_label: "10u · The Lighthouse PWA category is gone"
-sidebar_position: 30
+sidebar_position: 28
 description: "Lighthouse 12.0.0 removed the PWA category because Chrome's installability criteria changed, what that does to a CI gate keyed on it, and the three-layer audit that replaces it."
 ---
 
@@ -86,8 +86,8 @@ class of defect the others cannot see.
 | Layer | Catches | Covered in |
 |---|---|---|
 | **Manual, in Chrome DevTools' Application panel** | A manifest that 404s, icons that do not resolve, a worker stuck in `waiting`, a cache holding the wrong payload for a URL | [10v](10v-auditing-with-the-application-panel.md) |
-| **Automated, Playwright against a production build** | Manifest presence and fields, icon URLs resolving, offline soft navigation, cache keys, regressions on every commit | [10y](10y-automating-with-playwright-and-the-manual-checklist.md) |
-| **Manual, on real devices before release** | The browser's own install UI, real push delivery, everything on iOS | [10y](10y-automating-with-playwright-and-the-manual-checklist.md) |
+| **Automated, Playwright against a production build** | Manifest presence and fields, icon URLs resolving, offline soft navigation, cache keys, regressions on every commit | [10z](10z-automating-with-playwright-and-the-pre-release-checklist.md) |
+| **Manual, on real devices before release** | The browser's own install UI, real push delivery, everything on iOS | [10z2](10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md) |
 
 All three depend on a prerequisite that is not optional and is the single most common reason a
 PWA "does not work": you must be testing a **production build** in a **secure context**. That is
@@ -148,7 +148,7 @@ module.exports = {
 ```
 
 Installability then moves into the Playwright suite in
-[10y](10y-automating-with-playwright-and-the-manual-checklist.md), where it is asserted directly
+[10z](10z-automating-with-playwright-and-the-pre-release-checklist.md), where it is asserted directly
 against the manifest instead of inferred from a score.
 
 ## Gotchas
@@ -229,7 +229,7 @@ different worker bytes. Update bugs are only visible across two builds.
 **Cause.** The bar Chrome enforces is deliberately low and is being lowered further; the post says
 Chrome intends to experiment with removing manifest field requirements.
 **Fix.** Gate on the checklist in
-[10y](10y-automating-with-playwright-and-the-manual-checklist.md), which asserts the things that
+[10z2](10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md), which asserts the things that
 break in production — `start_url` when unauthenticated, worker scope, cache versioning, push
 subscription expiry — none of which any browser checks for you.
 
@@ -288,4 +288,4 @@ exactly wrong.
 
 ---
 
-← [Chapter 12 overview](01-explanation.md) · Next → [10v · Auditing with the Application panel](10v-auditing-with-the-application-panel.md)
+← [10t2 · The foreground floor](10t2-the-foreground-floor-and-draining-without-background-sync.md) · [Chapter 12 overview](01-explanation.md) · Next → [10v · Auditing with the Application panel](10v-auditing-with-the-application-panel.md)

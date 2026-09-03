@@ -1,7 +1,7 @@
 ---
 title: "The outbox store is one module the page and the service worker both import, and the only two things it must get right are minting the key before the first attempt and claiming a record inside the transaction that reads it"
 sidebar_label: "10s · The outbox store"
-sidebar_position: 28
+sidebar_position: 25
 description: "Opening the IndexedDB outbox, enqueueing with the idempotency key, lease-based claiming that survives a killed context, and migrating queued records across a schema bump."
 ---
 

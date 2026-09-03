@@ -1,7 +1,7 @@
 ---
 title: "A new service worker installs immediately and then waits, which is why the deploy that fixed the bug did not fix it for anyone"
 sidebar_label: "10g · The service worker update lifecycle"
-sidebar_position: 16
+sidebar_position: 13
 description: "install → waiting → activate, skipWaiting and clients.claim, the controllerchange reload, cache versioning, and the unregistering worker you write before you need it."
 ---
 

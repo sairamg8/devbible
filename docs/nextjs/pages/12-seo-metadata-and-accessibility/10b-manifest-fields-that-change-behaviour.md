@@ -1,7 +1,7 @@
 ---
 title: "Most manifest members are decoration; six of them decide where a launch lands, what the window looks like and whether an update is an update"
 sidebar_label: "10b · Manifest fields that change behaviour"
-sidebar_position: 11
+sidebar_position: 8
 description: "start_url, scope, display, display_override, id, icons and theme_color — the manifest members with real consequences, and the ones that fail silently."
 ---
 

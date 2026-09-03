@@ -1,7 +1,7 @@
 ---
 title: "The browser compares your worker byte-for-byte and checks at most once a day for free, so update speed and the ability to recover are both things you build"
 sidebar_label: "10h · Update detection and recovery"
-sidebar_position: 17
+sidebar_position: 14
 description: "registration.update(), the byte-for-byte comparison and its blind spot, the 24-hour cache floor, why controller is null under Shift+reload, and the unregistering worker."
 ---
 

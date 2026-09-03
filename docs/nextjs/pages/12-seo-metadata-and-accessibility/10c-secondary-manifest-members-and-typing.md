@@ -1,7 +1,7 @@
 ---
 title: "The manifest members that shape the install surface rather than the running app — and why the Next.js type is a suggestion, not a contract"
 sidebar_label: "10c · Secondary manifest members and typing"
-sidebar_position: 12
+sidebar_position: 9
 description: "screenshots, shortcuts, prefer_related_applications, orientation and categories, plus what MetadataRoute.Manifest does and does not enforce."
 ---
 

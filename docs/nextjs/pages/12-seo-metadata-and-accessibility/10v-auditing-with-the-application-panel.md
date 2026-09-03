@@ -1,7 +1,7 @@
 ---
 title: "Chrome's Application panel is what replaced the PWA audit, and its Manifest and Service Workers panes answer questions no automated test can — provided you leave its three checkboxes in the state you found them"
 sidebar_label: "10v · Auditing with the Application panel"
-sidebar_position: 31
+sidebar_position: 29
 description: "The Manifest and Service Workers panes: what each one actually tells you about a Next.js PWA, what a missing Installability section does and does not prove, and the emulation checkboxes that lie to you if left on."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Four things about a PWA cannot be automated by anyone, and the only honest way to cover them is a short numbered list with a person's name against each row"
 sidebar_label: "10z2 · The pre-release checklist"
-sidebar_position: 36
+sidebar_position: 34
 description: "The install UI, real push delivery, iOS and the seven-day storage fuse — why each resists automation, how to run the manual rows properly, and the sixteen-row list to run against a deploy candidate."
 ---
 

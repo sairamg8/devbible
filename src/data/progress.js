@@ -487,7 +487,7 @@ export const LANGUAGES = {
       {n: 9, slug: '09-styling-and-ui', name: "Styling and UI", part: 'Imported corpus', topics: 7, pages: 7},
       {n: 10, slug: '10-forms-authentication-and-security-hardening', name: "Forms, authentication and security hardening", part: 'Refreshed for 16.3', topics: 13, pages: 13},
       {n: 11, slug: '11-performance-optimization-turbopack', name: "Performance optimization and Turbopack", part: 'Refreshed for 16.3', topics: 10, pages: 10},
-      {n: 12, slug: '12-seo-metadata-and-accessibility', name: "SEO, metadata and accessibility", part: 'Refreshed for 16.3', topics: 24, pages: 24},
+      {n: 12, slug: '12-seo-metadata-and-accessibility', name: "SEO, metadata and accessibility", part: 'Refreshed for 16.3', topics: 35, pages: 35},
       {n: 13, slug: '13-testing-and-developer-experience', name: "Testing and developer experience", part: 'Refreshed for 16.3', topics: 10, pages: 10},
       {n: 14, slug: '14-agent-driven-development', name: "Agent-driven development", part: 'Imported corpus', topics: 8, pages: 8},
       {n: 15, slug: '15-databases-apis-and-full-stack-patterns', name: "Databases, APIs and full-stack patterns", part: 'Refreshed for 16.3', topics: 12, pages: 12},

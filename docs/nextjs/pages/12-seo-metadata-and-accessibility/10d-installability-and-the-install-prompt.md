@@ -1,7 +1,7 @@
 ---
 title: "The install prompt is a Chromium-only event you may capture but must never depend on, and the only cross-browser install signal is a CSS media query"
 sidebar_label: "10d · Installability and the install prompt"
-sidebar_position: 13
+sidebar_position: 10
 description: "beforeinstallprompt, appinstalled, display-mode: standalone detection, getInstalledRelatedApps, and a progressive install component that degrades to real instructions."
 ---
 

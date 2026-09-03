@@ -1,7 +1,7 @@
 ---
 title: "Browser storage is evicted per origin and all at once, so every cache you write to needs a bound and every response you store needs a reason"
 sidebar_label: "10k · Cache budget and eviction"
-sidebar_position: 20
+sidebar_position: 17
 description: "Opaque responses and padded quota, bounding the /_next/image cache, navigator.storage.persist(), never caching authenticated documents, and when Serwist is the better answer."
 ---
 

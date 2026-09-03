@@ -1,7 +1,7 @@
 ---
 title: "The user tapped Save while offline, and nothing in Next.js will remember it for them — a mutation only survives a closed tab if you wrote it to disk yourself"
 sidebar_label: "10r · The offline write queue"
-sidebar_position: 27
+sidebar_position: 24
 description: "Why experimental.useOffline's retry loop stops at the tab boundary, what a queued mutation record must actually hold, and why the store has to be IndexedDB."
 ---
 

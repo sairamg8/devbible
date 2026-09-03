@@ -1,7 +1,7 @@
 ---
 title: "Offline passes in testing and fails on a train because DevTools cannot emulate a network that answers, and because a cache keyed by URL cannot tell a document from a component stream"
 sidebar_label: "10y · Testing offline and the cache"
-sidebar_position: 34
+sidebar_position: 32
 description: "The two DevTools offline switches and what neither reproduces, soft navigation versus hard reload, and catching an RSC payload cached under a document URL before a user does."
 ---
 

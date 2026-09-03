@@ -1,7 +1,7 @@
 ---
 title: "`useOffline` and a service worker solve two different halves of offline, and a team that conflates them ships the one that does not fix their bug"
 sidebar_label: "10i · Offline strategy and the `useOffline` boundary"
-sidebar_position: 18
+sidebar_position: 15
 description: "Why experimental.useOffline stops at the document request, what a service worker has to answer instead, and the offline fallback page that is the honest minimum."
 ---
 

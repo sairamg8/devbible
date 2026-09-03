@@ -1,7 +1,7 @@
 ---
 title: "Safari puts a seven-day fuse on everything a script wrote, and the only way off it is an installed app that also cannot see the session the user just signed in with"
 sidebar_label: "10q · iOS storage and app containers"
-sidebar_position: 26
+sidebar_position: 23
 description: "The seven-day script-writable storage cap, what it covers, the Home Screen carve-out, and the separate storage container that logs users out the moment they install."
 ---
 
@@ -96,4 +96,4 @@ rather than in a tab.
 
 ---
 
-← [10p · iOS and Safari limits](10p-ios-and-safari-limits.md) · [Chapter 12 overview](01-explanation.md)
+← [10p · iOS and Safari limits](10p-ios-and-safari-limits.md) · [Chapter 12 overview](01-explanation.md) · Next → [10r · The offline write queue](10r-the-offline-write-queue-and-the-durable-outbox.md)

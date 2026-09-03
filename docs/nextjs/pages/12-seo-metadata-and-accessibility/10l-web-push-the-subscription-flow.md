@@ -1,7 +1,7 @@
 ---
 title: "A push subscription is a URL the browser's push service hands you, and everything that goes wrong with push goes wrong while you are obtaining or storing that URL"
 sidebar_label: "10l · Web Push: the subscription flow"
-sidebar_position: 21
+sidebar_position: 18
 description: "VAPID keys and which half is public, the user-gesture rule, userVisibleOnly, why the subscription has to be JSON round-tripped before a Server Action sees it, and storing it properly."
 ---
 

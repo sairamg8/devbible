@@ -1,7 +1,7 @@
 ---
 title: "Knowing whether the app is already installed is a different question from whether it can be installed, and only one of them has a cross-browser answer"
 sidebar_label: "10e · Detecting install state"
-sidebar_position: 14
+sidebar_position: 11
 description: "display-mode: standalone versus getInstalledRelatedApps(), self-listing in related_applications, and keeping the install button a Client Component leaf."
 ---
 

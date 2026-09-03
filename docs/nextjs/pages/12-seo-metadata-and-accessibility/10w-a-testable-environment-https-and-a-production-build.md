@@ -1,7 +1,7 @@
 ---
 title: "Almost every 'my PWA does not work' report is a test environment problem: a development server, an origin that is not a secure context, or a zombie worker from a project you stopped working on last March"
 sidebar_label: "10w · A testable environment"
-sidebar_position: 32
+sidebar_position: 30
 description: "Why localhost needs no TLS but your phone does, why offline must be tested against next build && next start, and how to guarantee a genuinely clean origin before every run."
 ---
 
@@ -116,9 +116,9 @@ is the tool the Next docs name.
 ## A clean origin, proved rather than assumed
 
 A PWA is defined by persistent state, so a test that does not control that state is measuring
-history. Chrome's Storage pane lets you — in the DevTools docs' words — *"unregister service
-workers and clear all caches and storage with a single button click"*, and that button is the
-foundation of every repeatable run. The discipline around it:
+history. Chrome's Storage pane unregisters service workers and clears every cache and storage
+bucket for the origin in one click, and that button is the foundation of every repeatable run. The
+discipline around it:
 
 1. Storage pane → clear site data.
 2. Confirm the Service Workers pane lists nothing for the origin, using **See all registrations** —

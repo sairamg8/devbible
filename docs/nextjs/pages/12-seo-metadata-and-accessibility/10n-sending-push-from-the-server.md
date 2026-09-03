@@ -1,7 +1,7 @@
 ---
 title: "Sending a push message is a signed request to a URL you do not own, and a 404 from it is not an error to log but a row to delete"
 sidebar_label: "10n · Sending push from the server"
-sidebar_position: 23
+sidebar_position: 20
 description: "web-push, setVapidDetails, fanning out with allSettled, statusCode-driven pruning, and which failures must never delete a subscription."
 ---
 

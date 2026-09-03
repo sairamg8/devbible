@@ -81,7 +81,7 @@ PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
 ## What was done, 2026-09-03
 
-The track arrived as 140 imported pages and is now **217**. Four steps ran in one day:
+The track arrived as 140 imported pages and is now **231**. Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
 2. **De-duplicated** the chapter 18/19 appendices.
@@ -91,6 +91,22 @@ The track arrived as 140 imported pages and is now **217**. Four steps ran in on
 4. **Extended** to the concepts with no bullet anywhere: the Adapters API (9 pages), OpenNext,
    immutable static assets, CSP, Authentication with Cache Components, the 2026 CVE record,
    Draft Mode, BFF, SWR and TanStack Query.
+
+A **second run on the same day** closed the items that list left open:
+
+5. **Split the last file over the cap.** Chapter 4's inherited `01-explanation.md` was 431
+   lines — three write-ups concatenated under one heading. It is now four chunks
+   (431 → 970 lines, 0 → 43 ★) in house style, and **eight** 16.2-era claims were corrected
+   against the current docs. Two of them were backwards, not merely stale: `fetch()`'s default
+   leaves an upgraded route **static and stale** rather than fully dynamic, and Route Handlers
+   are **not** cached by default (changed in v15.0.0-RC), so the inherited "this only logs at
+   build time" pitfall taught the opposite of current behaviour.
+6. **Finished the PWA topic.** It taught the read side across 17 chunks and stopped where users
+   actually get hurt. It now covers the **write** side — the durable outbox, the Background
+   Synchronization API and the foreground drain that has to work without it — and **testing and
+   auditing**, whose opening fact reorganises every PWA checklist written before 2024:
+   🔴 **Lighthouse removed the PWA category in 12.0.0**, because Chrome dropped the
+   service-worker install requirement. The audit most guides still tell you to run is gone.
 
 Then a **de-quoting pass**: the new pages were first written with ~12,900 words of Vercel's
 documentation quoted verbatim across 394 blockquotes. All of it was rewritten in our own

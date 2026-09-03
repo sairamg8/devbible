@@ -1,7 +1,7 @@
 ---
 title: "The bug that defines a production PWA — every user stranded on the build you replaced last Tuesday — takes two builds and one open tab to reproduce, and no audit that loads a page once can ever see it"
 sidebar_label: "10x · Reproducing the update bug"
-sidebar_position: 33
+sidebar_position: 31
 description: "Forcing the waiting-worker bug with two builds, forcing the skipWaiting chunk failure, and the harness that tells you which build is actually answering a tab."
 ---
 

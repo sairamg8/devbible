@@ -1,7 +1,7 @@
 ---
 title: "A Next.js PWA is a manifest route, an HTTPS origin and an install affordance — the service worker is a separate decision entirely"
 sidebar_label: "10 · Progressive Web Apps"
-sidebar_position: 10
+sidebar_position: 7
 description: "What actually makes a Next.js app installable: app/manifest.ts as a metadata route, the manifest fields that change behaviour, icons, and why the install prompt is not something you can rely on."
 ---
 
@@ -29,13 +29,24 @@ offline are governed by completely different machinery with completely different
 modes. This page is the narrowest and most load-bearing piece: where the manifest lives in a
 Next.js app, what URL it ends up on, and how Next decides to cache it.
 
-The rest of the topic runs across sixteen siblings; these are its entry points — the manifest members that actually change
+The rest of the topic runs across twenty-seven siblings; these are its entry points — the manifest members that actually change
 behaviour in [10b](10b-manifest-fields-that-change-behaviour.md), install detection and the
 prompt in [10d](10d-installability-and-the-install-prompt.md), service workers in
 [10f](10f-service-workers-in-the-app-router.md), the two halves of "offline" in
 [10i](10i-offline-strategy-and-the-useoffline-boundary.md), push in
 [10l](10l-web-push-the-subscription-flow.md), and the platform that quietly breaks most PWA advice in
 [10p](10p-ios-and-safari-limits.md).
+
+Those cover the **read** side. Two later runs of chunks cover what the first seventeen did not.
+The **write** side starts at [10r](10r-the-offline-write-queue-and-the-durable-outbox.md) — what
+happens to a mutation the user makes while offline, why `experimental.useOffline` does not solve
+it, and how far the Background Synchronization API in
+[10t](10t-background-sync-registering-and-draining.md) can actually be trusted. **Testing and
+auditing** starts at [10u](10u-the-lighthouse-pwa-category-is-gone.md), which opens on the fact
+that reorganises every PWA checklist written before 2024: 🔴 **Lighthouse removed the PWA
+category in 12.0.0**, because Chrome dropped the service-worker install requirement — so the
+audit most guides still tell you to run no longer exists. The manual list that replaces it is in
+[10z2](10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md).
 
 ## The two installability requirements, and only two
 

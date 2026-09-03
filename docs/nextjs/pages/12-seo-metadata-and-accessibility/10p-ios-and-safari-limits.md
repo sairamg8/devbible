@@ -1,7 +1,7 @@
 ---
 title: "Almost every PWA technique works on iOS, but only after the user manually adds the app to the Home Screen, and that one condition invalidates most published advice"
 sidebar_label: "10p · iOS and Safari limits"
-sidebar_position: 25
+sidebar_position: 22
 description: "The 16.4 floor, no beforeinstallprompt, push only for Home Screen web apps, the separate storage container, the seven-day script-writable storage cap and its carve-out."
 ---
 

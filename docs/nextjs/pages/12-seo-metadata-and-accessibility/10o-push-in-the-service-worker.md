@@ -1,7 +1,7 @@
 ---
 title: "The service worker is the only place a push message can become something a user sees, and both of its handlers have a default that is wrong for an installed app"
 sidebar_label: "10o · Push in the service worker"
-sidebar_position: 24
+sidebar_position: 21
 description: "The push handler and the userVisibleOnly promise, icon versus badge, tag as a collapse key, focusing an existing client on notificationclick, and testing over HTTPS."
 ---
 

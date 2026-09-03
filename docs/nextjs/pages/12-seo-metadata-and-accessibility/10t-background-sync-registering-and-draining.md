@@ -1,7 +1,7 @@
 ---
 title: "Background Sync is a request that the browser wake your service worker later, not a guarantee that it will — so the drain has to be correct when it runs twice, and there has to be a foreground path for the browsers that never run it at all"
 sidebar_label: "10t · Background Sync"
-sidebar_position: 29
+sidebar_position: 26
 description: "SyncManager.register and its two documented exceptions, draining the outbox inside waitUntil, and why lastChance is the only documented statement about retry exhaustion."
 ---
 

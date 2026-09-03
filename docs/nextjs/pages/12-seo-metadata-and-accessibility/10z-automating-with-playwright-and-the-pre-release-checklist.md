@@ -1,7 +1,7 @@
 ---
 title: "A Playwright suite is the only part of a PWA test plan that survives contact with a sprint, and every assertion in it has to be phrased from inside the page because a service worker is not a page"
 sidebar_label: "10z · Automating with Playwright"
-sidebar_position: 35
+sidebar_position: 33
 description: "A Playwright config that cannot accidentally test a dev server, a suite covering manifest, icons, start_url, offline navigation and cache contents, and the ways such a suite passes while testing nothing."
 ---
 
