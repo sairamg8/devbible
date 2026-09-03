@@ -28,7 +28,7 @@ You are done with this topic when you can use `partial` to generate safe callbac
 - **[Topic 03 — Scope and closures](../03-scope-and-closures/README.md)** — explains why `partial`'s eager evaluation avoids the closure late-binding loop trap.
 - **[Topic 04 — `lambda`](../04-lambda/README.md)** — contrasts `partial`'s picklability and introspection against anonymous lambdas.
 - **[Topic 05 — Decorators](../05-decorators/README.md)** — details the decorator protocol used by `lru_cache`, `cache`, and `singledispatch`.
-- **Topic 07 — Callables beyond functions** *(not written yet)* — explores `__call__` and the descriptor protocol underlying `partialmethod`.
+- **[Topic 07 — Callables beyond functions](../07-callables-beyond-functions/README.md)** — explores `__call__` and the descriptor protocol underlying `partialmethod`.
 
 ---
 

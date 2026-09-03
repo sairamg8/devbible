@@ -201,4 +201,4 @@ Python creator Guido van Rossum moved `reduce` out of built-ins because complex 
 
 ---
 
-← [lru_cache and cache](02-lru-cache-and-unbounded-cache.md) · [Topic index](README.md) · Next → **Callables beyond functions** *(not written yet)*
+← [lru_cache and cache](02-lru-cache-and-unbounded-cache.md) · [Topic index](README.md) · Next → [Callables beyond functions](../07-callables-beyond-functions/README.md)
