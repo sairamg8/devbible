@@ -14,9 +14,10 @@ The payoff of Phase 0's mental model: memory, GC, and the observability tools
 that come *with* the JVM. This is the phase that turns "the service is slow"
 from a mystery into a flame graph.
 
-🚧 **9 of 15 topics closed.** Topics 01–07, 14 and 15 are complete — 189 chunks and seven indexes for
-01–07, plus 19 chunks for 14 and 13 for 15, each with an index — and are linked below. The
-remaining six are in progress or planned.
+🚧 **11 of 15 topics closed** *(counted off disk, 2026-09-03)*. Topics 01–08, 10, 14 and 15 are
+complete — 189 chunks and seven indexes for 01–07, 33 chunks for 08, 29 for 10, 19 for 14 and 13
+for 15, each with an index — and are linked below. The remaining four are 09 and 12 (part-written,
+chunks on disk without an index) and 11 and 13 (planned, `_plan.md` only).
 
 **All 15 topics are planned**: `_PHASE-NOTES.md` (binding: JDK 25 version spine, topic
 boundaries, the phase's hard rules) and a `_plan.md` for every topic are written, so any
@@ -32,7 +33,7 @@ but no index yet, and is deliberately not linked until it has one.
 | 05 | **[Thread dumps](05-thread-dumps/README.md)** | <span className="db-tier t-understand">Understand</span> | `jcmd`/`jstack` — the deadlock diagnosed in two minutes |
 | 06 | **[JFR, Mission Control and async-profiler](06-jfr-and-profiling/README.md)** | <span className="db-tier t-understand">Understand</span> | Always-on profiling; the regex that ate a core |
 | 07 | **[Logging done right](07-logging-done-right/README.md)** | <span className="db-tier t-master">Master</span> | SLF4J over Logback, structured JSON, MDC on every line |
-| 08 | **Metrics with Micrometer** *(in progress)* | <span className="db-tier t-understand">Understand</span> | RED per endpoint; the histogram-vs-average lesson |
+| 08 | **[Metrics with Micrometer](08-metrics-with-micrometer/README.md)** | <span className="db-tier t-understand">Understand</span> | RED per endpoint; the histogram-vs-average lesson — 33 chunks, 493 ★ |
 | 09 | **Distributed tracing** *(in progress)* | <span className="db-tier t-know">Know</span> | OpenTelemetry auto-instrumentation across service, DB, queue |
 | 10 | **[Packaging for deploy](10-packaging-for-deploy/README.md)** | <span className="db-tier t-understand">Understand</span> | Layered jars, JRE base images, non-root, AOT/CDS (JEP 483) |
 | 11 | **GraalVM native image** *(not written yet)* | <span className="db-tier t-know">Know</span> | Instant startup vs closed-world limits — where it pays |
