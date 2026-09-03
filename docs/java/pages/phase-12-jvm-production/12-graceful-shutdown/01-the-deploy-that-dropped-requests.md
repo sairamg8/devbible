@@ -90,7 +90,7 @@ its own page in this topic:
 4. **Finish in-flight requests** inside a bounded grace period
    ([04b](04b-what-graceful-actually-drains.md)).
 5. **Stop background work** — schedulers, executors, message consumers — without abandoning a
-   half-completed unit ([06](06-executors-and-schedulers.md), **06b** *(not written yet)*).
+   half-completed unit ([06](06-executors-and-schedulers.md), [06b](06b-message-consumers.md)).
 6. **Close resources last** — pools, clients, files (**07** *(not written yet)*).
 7. **Exit before the grace period expires**, or be killed (**08b** *(not written yet)*).
 

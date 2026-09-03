@@ -69,7 +69,7 @@ Spring's graceful shutdown owns **the web server's inbound work**. It does not o
 
 - background tasks and schedulers ([06](06-executors-and-schedulers.md));
 - message consumers, whose "in-flight work" is an unacknowledged message
-  (**06b** *(not written yet)*);
+  ([06b](06b-message-consumers.md));
 - outbound calls your handlers are making — those finish or fail with the request;
 - anything started with a bare `new Thread(...)`, which nothing tracks at all.
 

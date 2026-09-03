@@ -48,7 +48,7 @@ has just been cancelled.
 
 **Closing the message consumer after closing its database connection.** The consumer is still
 processing an in-flight message and cannot commit it, so the message is redelivered — a
-duplicate created by shutdown order alone (**06b** *(not written yet)*).
+duplicate created by shutdown order alone ([06b](06b-message-consumers.md)).
 
 ## How Spring expresses the order
 

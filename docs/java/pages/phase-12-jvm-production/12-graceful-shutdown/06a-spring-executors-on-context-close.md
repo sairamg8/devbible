@@ -197,6 +197,6 @@ is interrupted only when its scheduler is shut down with `shutdownNow`, and only
 Boot's auto-configured executor backed off, and `spring.task.execution.*` configures only that
 instance. Either set the flags on your bean or build it from the auto-configured builder.
 
-Next: **Message consumers** *(not written yet)*.
+Next: [Message consumers](06b-message-consumers.md).
 
 {/* FOOTER */}

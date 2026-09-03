@@ -122,7 +122,7 @@ Verify rather than assume.
 
 ⚠️ **Graceful shutdown covers the *web server*, not your background work.** Schedulers,
 executors and message consumers are separate ([06](06-executors-and-schedulers.md),
-**06b** *(not written yet)*).
+[06b](06b-message-consumers.md)).
 
 ⚠️ **New requests are refused at the network layer**, so a client that has not yet been steered
 away sees a connection error, not a graceful status code.
