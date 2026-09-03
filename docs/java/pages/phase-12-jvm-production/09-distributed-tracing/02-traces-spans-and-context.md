@@ -36,7 +36,7 @@ Micrometer Tracing's glossary, which explicitly borrows Google's Dapper terminol
 🔴 **"Once you create a span, you must stop it at some point in the future."** That sentence is
 the single most common bug in hand-written instrumentation. An unstopped span is never
 reported, and in most implementations it also leaks whatever thread-local state was attached to
-it. **05b · Custom spans** *(not written yet)* is largely about not writing
+it. [05b · Custom spans](05b-custom-spans-and-annotations.md) is largely about not writing
 that bug.
 
 OpenTelemetry's list of what a span contains:
