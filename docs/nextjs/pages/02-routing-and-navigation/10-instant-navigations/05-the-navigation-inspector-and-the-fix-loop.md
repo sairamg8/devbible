@@ -14,9 +14,11 @@ description: "Freezing a page load or client navigation at its shell, the relati
 
 ## Why it exists
 
-> *"Because Next.js disables prefetching in development, it can be hard to understand exactly what a user will see during a particular navigation's loading sequence."*
+Next.js **disables prefetching in development**, which makes it genuinely hard to know what a
+user will see during a given navigation's loading sequence.
 
-> *"The new Navigation Inspector lets you pause page loads and client-side navigations at the shell, so you can see exactly what loading state the user would see."*
+The Navigation Inspector answers that by letting you **pause page loads and client-side
+navigations at the shell**, so the loading state a user would actually see is held on screen.
 
 It is available with Cache Components alone; Partial Prefetching is not required:
 
@@ -34,7 +36,8 @@ export default nextConfig
 
 Open the Next.js DevTools, select **Navigation Inspector**, and turn on **Pause on navigations**. While the toggle is on:
 
-> *"Refresh the page to freeze the initial static UI generated for the route, before any dynamic data streams in. Click a link to freeze the prefetched UI for the destination route."*
+Refreshing freezes the initial static UI generated for the route, before any dynamic data
+streams in. Clicking a link freezes the **prefetched** UI for the destination route.
 
 The panel labels which of the two you are looking at — **Page load** with the target URL, or **Client nav** with both source and target URLs — which is the concrete, visible form of the distinction that runs through this whole topic. Click **Resume** to let the navigation finish.
 
@@ -42,13 +45,17 @@ Walking the store example from [chunk 1](01-what-instant-means.md): refresh `/st
 
 The React DevTools Suspense panel is the natural companion:
 
-> *"it lists the `<Suspense>` boundaries in the tree and lets you toggle each one between its fallback and resolved state, so you can see exactly which boundary covers which part of the page."*
+it lists the `<Suspense>` boundaries in the tree and lets you toggle each between its fallback
+and resolved state — which is how you find out precisely which boundary covers which part of
+the page.
 
 ## The Inspector and the test helper are the same mechanism
 
 This is worth internalising, because it explains why an `instant()` test and an Inspector session always agree:
 
-> *"The start of the `instant()` scope is the same as turning on **Pause on navigations** in the Navigation Inspector, and the end of the scope releases the pause the way **Resume** does."*
+Entering the `instant()` scope does the same thing as turning on **Pause on navigations** in
+the Inspector, and leaving the scope releases the pause exactly as **Resume** does. The test
+helper and the devtool are two interfaces to one mechanism.
 
 The DevTools hold back dynamic content using a `next-instant-navigation-testing` cookie. The Inspector is the interactive front end for that mechanism and `instant()` is the programmatic one; what you see frozen in the panel is what the assertion block sees.
 
@@ -124,17 +131,23 @@ async function getFeatured() {
 }
 ```
 
-> *"The result is cached at the fetch level. The featured list ships with the App Shell."*
+The result is cached at the **fetch level**, and the featured list ships with the App Shell.
 
 And a deployment caveat that bites teams the first time they ship this:
 
-> *"In serverless deployments, in-memory caching with `"use cache"` will not persist across instances. Consider using `"use cache: remote"` for persistent caching."*
+On serverless deployments, in-memory caching with `"use cache"` **will not persist across
+instances** — `"use cache: remote"` is the documented answer where persistence is needed.
 
 ## Passing validation is the floor, not the goal
 
-> *"Validation passing means the navigation is instant. It does not mean the loading states are good. A `<Suspense>` boundary placed high in the tree (say, wrapping the whole page) might satisfy validation, but it replaces most of the page with a single fallback on every navigation."*
+🔴 **Validation passing means the navigation is instant. It does not mean the loading states
+are good.** A `<Suspense>` boundary placed high in the tree — wrapping the whole page, say —
+can satisfy validation while replacing most of the page with a single fallback on every
+navigation.
 
-> *"A product page that keeps the header, image, and description visible with only the price and availability behind a fallback feels faster than a full-page skeleton, even at the same total load time."*
+A product page that keeps the header, image and description visible, with only price and
+availability behind a fallback, feels faster than a full-page skeleton — **at the same total
+load time**. The metric and the experience are not the same thing.
 
 The Inspector is how you tell those two situations apart, because they are indistinguishable in the overlay.
 
@@ -151,12 +164,17 @@ Three levers do the work: **push down** (extract I/O into a Suspense-wrapped chi
 
 And the sentence that keeps an agent from inventing a caching policy:
 
-> *"It does need your app-specific intent, though. Tell it what should appear immediately, what can stream in, and what must stay fresh. When a caching decision is unclear, keep the data fresh behind `<Suspense>` rather than guessing a cache lifetime."*
+What it does need is your app-specific intent: what should appear immediately, what may stream
+in, and what must stay fresh. And when a caching decision is unclear the documented default is
+to **keep the data fresh behind `<Suspense>` rather than guess a cache lifetime** — a wrong
+guess is a correctness bug, a missing cache is only a slow page.
 
 ## Gotchas
 
 **★ The DevTools cookie is scoped to the domain, not the port, so two local projects fight over it.**
-> *"Because cookies are scoped to the domain and not the port, running multiple projects on the same domain (typically `localhost`) means the cookie is shared across them and can cause unexpected behavior."*
+Cookies are scoped to the **domain, not the port**. Run several projects on the same domain —
+`localhost`, typically — and the cookie is shared across all of them, which produces behaviour
+that looks inexplicable until you remember the port is not part of the scope.
 
 The symptom is a second project on another port behaving strangely — freezing when you did not ask it to, or refusing to. Clear the `next-instant-navigation-testing` cookie or close the Navigation Inspector panel when switching between projects. The docs say this will be fixed as part of stabilising the feature.
 

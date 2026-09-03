@@ -59,7 +59,9 @@ export async function ProductDetails({
 
 Two details to carry into code review. The page component **stopped being `async`** — that is the visual tell. And the rule holds for params that `generateStaticParams` covers:
 
-> *"Like `searchParams`, `params` needs a `<Suspense>` boundary, even when the values are predefined by `generateStaticParams`. A statically known param still belongs to one URL."*
+`params` needs a `<Suspense>` boundary exactly as `searchParams` does — **even when the values
+are predefined by `generateStaticParams`**. The reason is the same one that governs the whole
+topic: a statically known param still belongs to one URL.
 
 Everything outside the boundary stays in the shared App Shell; only the URL-specific region renders per navigation.
 
@@ -111,17 +113,25 @@ Without the prop, the shell renders the `<h1>` and the fallback; `q` resolves af
 
 Note the dependency chain: **per-link prefetching only helps if the URL-dependent work is itself cacheable.** The prerender advances through anything static or cached and then stops:
 
-> *"The prerender advances through anything static or cached, then stops at uncached reads and falls back to the surrounding `<Suspense>` boundary."*
+The prerender advances through everything static or cached, then stops at the first uncached
+read and falls back to the surrounding `<Suspense>` boundary.
 
 An uncached `db.search(q)` produces the same fallback with or without the prop, and you paid a server invocation for it.
 
 ## The cost model
 
-> *"Generating the per-link prefetch costs **a server invocation per prefetchable link**, so it is opt-in per link. On pages where all the content is statically renderable, Next.js serves the prefetch from the static cache instead. A page that accesses non-static data is generated per prefetch."*
+Generating a per-link prefetch costs **one server invocation per prefetchable link**, which is
+why it is opt-in per link rather than a default. Where all a page's content is statically
+renderable the prefetch comes from the static cache instead and costs nothing; a page that
+touches non-static data is generated afresh for **each** prefetch.
 
 and:
 
-> *"A per-link prefetch is best-effort. It only helps the navigations where it completes before the click. On a slow connection, on a feed of many links, or on a direct visit, it may not be ready when the user navigates, and the navigation falls back to the App Shell."*
+A per-link prefetch is **best-effort**: it only helps navigations where it finishes before the
+click. On a slow connection, on a feed carrying many links, or on a direct visit, it may not be
+ready in time — and the navigation then falls back to the App Shell. That fallback is the
+designed behaviour, not a failure, but it means per-link prefetching is an optimisation you
+cannot depend on.
 
 | | App Shell | Per-link prefetch with `prefetch={true}` |
 | --- | --- | --- |
@@ -134,7 +144,10 @@ Use it when all three hold: part of the tree depends on URL data; that part has 
 
 For link-dense pages the documented alternative is intent:
 
-> *"When many links to a route are visible at once, such as a grid of cards, each `<Link prefetch={true}>` prefetches that link's content as it enters the viewport, so the grid makes one such server request per card. Prefetch on intent instead. A hover-triggered prefetch fetches only the links the user is likely to click."*
+When many links to a route are visible at once — a grid of cards is the obvious case — each
+`<Link prefetch={true}>` prefetches its own content as it enters the viewport, so the grid
+issues **one server request per card**. Prefetch on *intent* instead: a hover-triggered
+prefetch fetches only the links the user is actually likely to click.
 
 ## Adopting one route at a time
 
@@ -156,7 +169,8 @@ The loop is: audit one destination's links against the five-row table in [chunk 
 npx @next/codemod@canary remove-partial-prefetch ./app
 ```
 
-> *"The codemod removes only the `'partial'` value and leaves other values such as `prefetch = 'force-disabled'` in place."*
+The codemod removes only the `'partial'` value; other values such as
+`prefetch = 'force-disabled'` are left in place.
 
 ## Gotchas
 
@@ -182,12 +196,15 @@ On a slow connection, on a feed of many links, or on a direct visit, the prefetc
 During an incremental migration the destination is still on legacy full prefetch, so there is nothing for the link's URL-data request to resolve against. The dev console error names the destination and offers both fixes: `export const prefetch = 'partial'` on that segment, or enabling `partialPrefetching` app-wide.
 
 **★ `prefetch = 'force-disabled'` does not survive a per-link prefetch of an ancestor.**
-> *"When Next.js performs a per-link prefetch for a segment, all downstream segments are included in the same request. Segments deeper in the tree that are configured with `'force-disabled'` will still be prefetched as part of the response."*
+🔴 A per-link prefetch for a segment includes **all downstream segments in the same request** —
+and segments deeper in the tree configured with `'force-disabled'` **are still prefetched** as
+part of that response. The opt-out does not survive being downstream of an opt-in.
 
 If a deep segment must genuinely never be prefetched, put the opt-out at or above the point links actually target, or remove `prefetch={true}` from the links that pull the ancestor.
 
 **★ The adoption codemod reports success on a path that matched nothing.**
-> *"Pass `./src/app` in a `src/` project. A wrong path reports `0 ok` instead of failing, so check the file count."*
+Pass `./src/app` in a `src/` project. A wrong path reports **`0 ok`** rather than failing, so
+the file count is the only thing that tells you the codemod actually saw your code.
 
 This applies to `remove-partial-prefetch` and to `cache-components-instant-false`. Read the file count in the output, never the exit status.
 

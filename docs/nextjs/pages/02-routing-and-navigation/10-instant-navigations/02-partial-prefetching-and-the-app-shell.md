@@ -14,15 +14,20 @@ description: "What an App Shell is, how it is shared across every link to a rout
 
 ## What an App Shell is
 
-> *"With Partial Prefetching enabled, a `<Link>` prefetches the route's App Shell: its static content and the cached content that doesn't depend on the URL. Next.js builds one App Shell per route and reuses it for every link to that route, rather than prefetching each link separately as it did before."*
+With Partial Prefetching on, a `<Link>` prefetches the route's **App Shell**: its static
+content plus the cached content that does not depend on the URL. Next.js builds **one App Shell
+per route** and reuses it for every link pointing at that route, instead of prefetching each
+link separately the way it used to.
 
 The reference states the before-and-after in request terms:
 
-> *"Before Partial Prefetching, Next.js prefetched per visible link: a page with N links to N routes produced ~N route prefetches as those links entered the viewport."*
+Before Partial Prefetching, prefetching was **per visible link**: a page with N links to N
+routes produced roughly N route prefetches as those links entered the viewport.
 
 and gives the analogy that makes the model click:
 
-> *"The pattern is similar to per-route code splitting in single-page apps: one artifact per route, shared by every link that points to it."*
+The shape is the same as per-route code splitting in a single-page app — one artifact per
+route, shared by every link that points to it.
 
 A category grid with 200 cards pointing at `/store/[slug]` produces **one** App Shell, not 200 prefetches. App Shells are cached on the client, so every one of those cards reuses the same artifact.
 
@@ -30,11 +35,15 @@ A category grid with 200 cards pointing at `/store/[slug]` produces **one** App 
 
 The one thing people expect to be excluded but is not:
 
-> *"Routes that read `cookies()` or `headers()` produce an App Shell that includes session data. The framework auto-detects this and caches the shell per session on the client."*
+A route that reads `cookies()` or `headers()` produces an App Shell containing session data.
+The framework detects that automatically and caches the shell **per session** on the client.
 
 And the rule that follows from it:
 
-> *"`cookies()` and `headers()` don't tie a prefetch to a URL. They vary per session, not per link, so the App Shell still carries session content. Only `params` and `searchParams` are URL data, which varies per link and can't be included in the shared App Shell."*
+The distinction that governs all of this: `cookies()` and `headers()` **do not tie a prefetch
+to a URL**. They vary per *session*, not per link, so the App Shell can still carry session
+content. Only `params` and `searchParams` are URL data — they vary per link, and therefore
+cannot be part of a shared App Shell.
 
 This is the test to run on every piece of content during the audit: **does it differ between two links pointing at the same route?** If yes, it is URL data and no shared artifact can carry it. If it only differs between two *users*, the shell carries it, cached per session on the client.
 
@@ -52,7 +61,10 @@ Read row two twice. `prefetch={true}` used to be the "give me everything" escape
 
 The docs state the consequence without softening it:
 
-> *"After enabling the flag, every `<Link>` prefetches its destination's App Shell, and `<Link prefetch={true}>` no longer includes the route's dynamic content. Audit those links next to preserve what they delivered. A new project has no legacy links to audit and is done here."*
+Once the flag is on, every `<Link>` prefetches its destination's App Shell and
+`<Link prefetch={true}>` **no longer includes the route's dynamic content**. Existing
+`prefetch={true}` links therefore need auditing to preserve what they used to deliver. A new
+project has no legacy links and is finished at this step.
 
 ## The audit: five destinations, five answers
 
@@ -102,7 +114,9 @@ export default async function Page() {
 
 There is a threshold buried in this step that silently undoes the fix:
 
-> *"The App Shell carries cached content whose `stale` time is at least 5 minutes, which holds for the `default` profile used above and every preset except `seconds`. Shorter-lived content streams in after the navigation instead."*
+The App Shell carries cached content whose `stale` time is **at least 5 minutes** — true of the
+`default` profile and of every preset except `seconds`. Anything shorter-lived streams in after
+the navigation instead of riding along in the shell.
 
 ### Content behind `cookies()` or `headers()`
 
@@ -160,7 +174,9 @@ The one case where the prop stays. This is per-link prefetching, and it has its 
 
 ### Real-time content
 
-> *"A prefetch of real-time content would be stale by the click, so there is nothing to preserve. Remove `prefetch={true}` and let the content stream in from behind its `<Suspense>` boundary."*
+Prefetching real-time content is pointless — it would be stale by the time the user clicked, so
+there is nothing to preserve. Drop `prefetch={true}` and let the content stream in from behind
+its `<Suspense>` boundary.
 
 ## Gotchas
 

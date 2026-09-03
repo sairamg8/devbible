@@ -14,11 +14,17 @@ description: "How the build splits a render into an App Shell plus param-specifi
 
 ## The trade-off it removes
 
-> *"When you prerender only *some* of a route's pages at build time with `generateStaticParams`, the rest of the page faced a tradeoff. They could show a loading shell but never get prerendered, or skip the shell and block the first visitor. Now you get both. A page you don't prerender serves an instant loading shell on its first visit, then upgrades to the fully prerendered page in the background. Every later visitor gets the final content from the cache."*
+When `generateStaticParams` prerenders only *some* of a route's pages at build time, the rest
+used to face a choice with no good answer: show a loading shell but never get prerendered, or
+skip the shell and block the first visitor. You now get both halves. A page you did not
+prerender serves an **instant loading shell on its first visit**, then upgrades to the fully
+prerendered page in the background, and every later visitor gets the final content straight
+from the cache.
 
 Both flags are required, and they do different halves of the job:
 
-> *"Cache Components produces the App Shell, while Partial Prefetching upgrades it to a full route once the params are known."*
+Cache Components produces the App Shell; Partial Prefetching upgrades that shell to a full
+route once the params are known.
 
 ```ts title="next.config.ts"
 import type { NextConfig } from 'next'
@@ -33,7 +39,11 @@ export default nextConfig
 
 ## What the build produces
 
-> *"During build, Partial Prerendering splits each render into two parts: The **App Shell**: the generic, reusable part of the page that doesn't depend on URL data. [And] the rest of the statically renderable content: the param-specific prerenders for the URLs you list in `generateStaticParams`."*
+At build time, Partial Prerendering splits each render in two:
+
+- the **App Shell** — the generic, reusable part of the page that does not depend on URL data;
+- the **rest of the statically renderable content** — the param-specific prerenders for
+  exactly the URLs you listed in `generateStaticParams`.
 
 The layout in the documented example prerenders two categories — and, critically, never awaits its own params:
 
@@ -76,7 +86,11 @@ export default function CategoryLayout(props: LayoutProps<'/[category]'>) {
 
 The guide spells out why, and it is the same rule as everywhere else in this topic:
 
-> *"The `await` happens inside the boundary, so for unknown categories Next.js can still generate the App Shell. Keep the read inside the boundary even for the categories `generateStaticParams` covers. A statically known param still belongs to one URL, so awaiting it above the Suspense boundary would tie this layout's App Shell to that URL."*
+Because the `await` sits **inside** the boundary, Next.js can still generate the App Shell for
+categories it does not know about. Keep the read inside the boundary even for the categories
+`generateStaticParams` does cover — a statically known param still belongs to one URL, so
+awaiting it *above* the Suspense boundary would tie that layout's App Shell to that single
+URL.
 
 A nested `generateStaticParams` receives the parent's params:
 
@@ -119,15 +133,26 @@ For that example the build combines into:
 
 Then:
 
-> *"After the first visit, Next.js renders these routes in the background with the now-known params. The next visitor to the same URLs gets the upgraded result."*
+After that first visit, Next.js renders the route in the background with the now-known params,
+and the next visitor to the same URL gets the upgraded result.
 
-> *"A prefetch counts as that first visit. When a `<Link>` to an unlisted URL enters the viewport, or you call `router.prefetch`, Next.js starts the background upgrade before the click, so navigation lands on the upgraded result."*
+**A prefetch counts as that first visit.** When a `<Link>` to an unlisted URL enters the
+viewport, or you call `router.prefetch`, the background upgrade starts *before* the click — so
+the navigation itself lands on the upgraded result rather than triggering the upgrade.
 
 That last sentence is the quietly important one: a listing page full of links to unlisted URLs warms them as those links scroll into view, so in practice the "first visitor pays" case is rarer than it sounds — and your background render volume is driven by viewport impressions, not clicks.
 
 ## What the upgrade produces, and the ordering rule
 
-> *"If every data access is cached and all params are resolved, the upgrade produces a **fully static page**. If all params are resolved but the render still hits uncached data or runtime APIs (`cookies`, `headers`) wrapped in `<Suspense>` boundaries, the upgrade produces a **cached page with those fallbacks**. Params are resolved in route order. A param value not returned by `generateStaticParams` stays unresolved and prevents any deeper params from upgrading."*
+What the upgrade produces depends on what the render touches:
+
+- every data access cached **and** all params resolved → a **fully static page**;
+- all params resolved but the render still hits uncached data or runtime APIs (`cookies`,
+  `headers`) wrapped in `<Suspense>` → a **cached page carrying those fallbacks**.
+
+🔴 **Params resolve in route order, and the chain stops at the first gap.** A param value that
+`generateStaticParams` did not return stays unresolved and **prevents any deeper params from
+upgrading** — so one unlisted segment freezes everything below it.
 
 The third clause is the one that produces confusing production behaviour. If `[category]` is not in `generateStaticParams`, then no `[product]` beneath it can upgrade either, no matter how well the product page is written. Upgrade coverage is therefore a property of the *whole path*, not of the leaf segment.
 
@@ -142,7 +167,9 @@ The third clause is the one that produces confusing production behaviour. If `[c
 
 ## Choosing what to prerender
 
-> *"Every page you prerender increases build work and produces output that has to be stored and deployed. Many routes may never be visited before your next deployment, making that work unnecessary."*
+Every page you prerender adds build work and produces output that has to be stored and
+deployed. Many of those routes may never be visited at all before your next deployment, which
+makes the work that produced them wasted.
 
 The recommendation is to list the routes that benefit most — popular pages, predictable content — and let the rest be generated on demand and upgraded after their first visit.
 
@@ -160,7 +187,8 @@ A product page can be perfectly structured and still never reach a fully prerend
 A `<Link>` to an unlisted URL entering the viewport, or a `router.prefetch` call, triggers the background upgrade before any click. On a long listing page that means background renders proportional to impressions. It is usually what you want — navigation lands on the upgraded result — but it is worth knowing before you look at your render counts.
 
 **★ This behaviour is new in 16.3, so an older deployment shows the opposite symptom.**
-> *"The App Shell for unlisted params is served from Next.js 16.3. Earlier versions wait for a full server render before sending the response."*
+Serving the App Shell for unlisted params starts in **Next.js 16.3**. Earlier versions wait for
+a full server render before sending anything.
 
 If a supposedly instant unlisted URL blocks, check the deployed Next.js version before rewriting the route.
 
@@ -171,7 +199,8 @@ Root parameters are a special case: with Cache Components enabled each one must 
 Every listed param costs build time and produces output that must be stored and deployed, often for URLs nobody visits before the next deploy. Prerender the hot and predictable set; let the tail be generated on demand and upgraded on first contact.
 
 **★ Runtime APIs still need boundaries, and their fallbacks are what ships in the shell.**
-> *"If your components access runtime APIs like `cookies` or `headers`, wrap them in `<Suspense>`. Their fallback UI is included in the static shell instead."*
+Components that reach for runtime APIs such as `cookies` or `headers` must be wrapped in
+`<Suspense>`; what then ships in the static shell is their **fallback UI**, not the component.
 
 An unwrapped `cookies()` read does not merely degrade the upgrade; it prevents a static shell existing at all.
 
@@ -179,7 +208,8 @@ An unwrapped `cookies()` read does not merely degrade the upgrade; it prevents a
 An API to control how often a page upgrades — for example based on traffic — is described as being explored. Do not design a caching strategy around it, and do not assume a fixed cadence exists; what is documented is "upgrade after the first visit, later visitors get the cached result".
 
 **★ `loading.tsx` and inline `<Suspense>` are not equivalent placements.**
-> *"`loading.tsx` puts the boundary at the segment edge, while inline `<Suspense>` lets you place it anywhere in the tree."*
+`loading.tsx` places the boundary at the **segment edge**; an inline `<Suspense>` can go
+anywhere in the tree.
 
 A segment-edge boundary is coarse: it replaces the whole segment with one fallback. Inline boundaries are how you keep the header and description visible while only the price streams.
 

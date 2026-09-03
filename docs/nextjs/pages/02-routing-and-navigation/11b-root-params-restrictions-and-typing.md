@@ -14,7 +14,9 @@ description: "Why root params throw in Client Components, Server Actions and uns
 
 ## The four restrictions
 
-> *"Most of these are permanent constraints of how root parameters work. The exception is Route Handlers, which are not supported yet but are planned for a future release."*
+🔴 **Most of these are permanent constraints** of how root parameters work, not a roadmap.
+The single exception is Route Handlers, which are unsupported today but planned for a future
+release.
 
 ### Server Components only
 
@@ -74,13 +76,14 @@ const getCachedData = unstable_cache(async () => {
 
 This one throws at **runtime**, not at build time, so it survives a green build and fails in production if the path is not exercised in development. The documented fix is not a workaround at all — it is the replacement API:
 
-> *"Use `"use cache"` instead."*
+the documented alternative is `"use cache"`.
 
 `'use cache'` is the directive that can see which root params a cached function reads and fold only those into its key. `unstable_cache` predates that machinery and has no way to express the dependency.
 
 ### Not supported in Route Handlers — yet
 
-> *"`next/root-params` can be used in Server Components. It cannot be used in Client Components, Server Actions, or Route Handlers. Support for Route Handlers is planned for a future release."*
+`next/root-params` works in **Server Components**. It does not work in Client Components,
+Server Actions or Route Handlers — and only the last of those three is planned to change.
 
 **Workaround.** A Route Handler already receives every dynamic segment in *its own* path through the route context. If the handler lives under the root segment — `app/[lang]/api/posts/route.ts` — then `lang` is simply one of its params:
 
@@ -126,7 +129,10 @@ export default async function DocsLayout(
 
 ## Multiple root layouts widen every type
 
-> *"When an application has multiple root layouts with different parameters, getter functions are typed to account for usage in any of all possible routes. A parameter that does not exist in every root layout has the type `string | undefined`."*
+Where an application has **multiple root layouts with different parameters**, the getters are
+typed for use across every possible route. A parameter that does not exist in *every* root
+layout is therefore typed `string | undefined` — the type is telling you the truth about a
+route you may not have had in mind.
 
 Given `app/dashboard/[id]/layout.tsx` (a root layout with `id`) and `app/marketing/layout.tsx` (a root layout without it):
 

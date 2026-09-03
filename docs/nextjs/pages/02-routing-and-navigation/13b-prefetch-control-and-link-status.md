@@ -25,8 +25,10 @@ Plus the two Cache Components additions documented alongside them: [`instant`](1
 
 What is *gone* matters as much as what is there. From the version history:
 
-> *"`v16.0.0` — `dynamic`, `dynamicParams`, `revalidate`, and `fetchCache` removed when Cache Components is enabled."*
-> *"`v16.0.0` — `export const experimental_ppr = true` removed. A codemod is available."*
+**`v16.0.0`** removed `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` when Cache
+Components is enabled.
+**`v16.0.0`** also removed `export const experimental_ppr = true`, with a codemod available to
+migrate.
 
 So a page carrying `export const revalidate = 60` is not merely stale advice under `cacheComponents`; that option no longer exists in that mode, and its replacement is `'use cache'` with `cacheLife`.
 
@@ -40,19 +42,27 @@ export const prefetch: Prefetch = 'partial'
 
 **`'auto'`** is the default and means "let the framework decide based on `partialPrefetching`". The docs ask you not to write it:
 
-> *"The meaningful values to set are `'partial'` and `'force-disabled'`. `'auto'` is the default and is equivalent to omitting the export; don't write `prefetch = 'auto'` explicitly."*
+Only `'partial'` and `'force-disabled'` are worth setting. `'auto'` is the default and is
+exactly equivalent to omitting the export, so writing `prefetch = 'auto'` explicitly adds a
+line that says nothing.
 
 **`'partial'`** opts this destination into Partial Prefetching without the global flag — a `<Link>` pointing at it loads the per-route App Shell instead of the legacy full prefetch. It is the incremental adoption tool covered in [10 · 3 · Per-link prefetching and adoption](10-instant-navigations/03-per-link-prefetching-and-incremental-adoption.md).
 
 **`'force-disabled'`** never prefetches this segment:
 
-> *"Never prefetch this segment. The client will not request segment data ahead of navigation. Use this for segments where prefetching would be wasteful, for example pages behind authentication that are rarely visited."*
+`'force-disabled'` means never prefetch this segment: the client will not request segment data
+ahead of navigation at all. It is for segments where prefetching would be wasted work — pages
+behind authentication that are rarely visited being the documented example.
 
 with two documented holes: it does not prevent metadata about the route being prefetched, and a per-link prefetch of an *ancestor* includes all downstream segments in the same response — `force-disabled` ones included.
 
 ## Intent versus ceiling
 
-> *"A prefetch starts with a `<Link>` that expresses intent (should this destination be prefetched, and how eagerly), and ends at a segment that sets a cost ceiling (how much work is it OK to do ahead of time, for any link that points here). A destination can't know which links target it, so the segment config caps what any `<Link prefetch={true}>` pulls."*
+A prefetch has two ends. It **starts** at a `<Link>` expressing intent — should this
+destination be prefetched, and how eagerly — and it **ends** at a segment setting a cost
+ceiling: how much work is acceptable ahead of time, for any link pointing here. A destination
+cannot know which links target it, which is why the segment config **caps** what any
+`<Link prefetch={true}>` is able to pull.
 
 | | `'partial'` destination | `'force-disabled'` destination |
 | --- | --- | --- |
@@ -64,7 +74,10 @@ The link always wins downward: `prefetch={false}` skips prefetching whatever the
 
 One cost note that decides where you spend server CPU:
 
-> *"On pages where all the content is statically renderable, Next.js serves prefetches from the static cache (or a CDN). If a page accesses non-static data like cookies or headers, it's prefetched at runtime with a fresh server render, which costs server CPU per page view."*
+Where all of a page's content is statically renderable, prefetches are served from the static
+cache or a CDN. Where a page reaches for non-static data such as cookies or headers, the
+prefetch happens **at runtime with a fresh server render** — which costs server CPU on every
+page view, not every navigation.
 
 ## `useLinkStatus`
 
@@ -100,12 +113,16 @@ function Menubar() {
 
 It returns one property: `pending`, *"`true` before history updates, `false` after"*. The documented conditions for it being useful are narrow:
 
-> *"Prefetching is disabled or in progress meaning navigation is blocked."*
-> *"The destination route is dynamic **and** doesn't include a `loading.js` file that would allow an instant navigation."*
+prefetching is disabled or still in progress, which means the navigation is blocked.
+the destination route is dynamic **and** has no `loading.js` file that would permit an instant
+navigation. Both conditions have to hold.
 
 and the framing is deliberately grudging:
 
-> *"Navigation is typically fast. Use `useLinkStatus` as a quick patch when you identify a slow transition, then iterate to fix the root cause with prefetching or a `loading.js` fallback."*
+Navigation is typically fast, so treat `useLinkStatus` as a **quick patch** once you have
+identified a slow transition — then go back and fix the root cause with prefetching or a
+`loading.js` fallback. A pending indicator that becomes permanent furniture is a slow
+navigation nobody fixed.
 
 The docs' own CSS pattern for it starts the hint invisible with reserved space and delays the animation, so a fast navigation shows nothing at all:
 
@@ -134,7 +151,8 @@ The docs' own CSS pattern for it starts the hint invisible with reserved space a
 Two documented facts collide: *"If the linked route has been prefetched, the pending state will be skipped"*, and Next.js does not prefetch in development. So the pending phase you can see locally is an artefact of the dev server. If the destination is static and prefetched, production users skip it entirely. That is the *good* outcome — but it means the component is untested by your local experience, and it is why the hook is documented as most useful with `prefetch={false}`.
 
 **★ `useLinkStatus` in the Pages Router is a silent no-op.**
-> *"This hook is not supported in the Pages Router and always returns `{ pending: false }`."*
+The hook is **not supported in the Pages Router**, where it always returns
+`{ pending: false }` — it fails silently rather than erroring.
 
 No warning, no error — the indicator simply never fires. In a codebase with both routers, a shared component using it will work on one side of the app and quietly do nothing on the other.
 
@@ -142,7 +160,9 @@ No warning, no error — the indicator simply never fires. In a codebase with bo
 Rendered outside a `<Link>` subtree it has no link to report on. It also needs `'use client'`, so putting it in a shared server-rendered nav means splitting the indicator into its own client file — which is exactly what the documented example does.
 
 **★ Inline indicators cause layout shift unless you reserve the space.**
-> *"Inline indicators can easily introduce layout shifts. Prefer a fixed-size, always-rendered hint element and toggle its opacity, or use an animation."*
+Inline indicators introduce layout shift very easily. Prefer a **fixed-size, always-rendered**
+hint element whose opacity you toggle, or an animation — anything that does not change the box
+when it appears.
 
 The documented CSS uses `visibility: hidden` on a fixed-size element rather than conditional rendering, plus a 100 ms animation delay so a fast navigation never flashes.
 

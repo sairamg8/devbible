@@ -16,7 +16,8 @@ description: "How next/root-params generates a getter per root segment, why only
 
 The module exports one async function per root segment, named after the folder:
 
-> *"The export names are generated from your dynamic segment folder names. For example, if your root layout is inside `app/[locale]`, you import `locale` from `next/root-params`."*
+The export names are generated from your dynamic segment folder names — a root layout inside
+`app/[locale]` gives you a `locale` import from `next/root-params`.
 
 ```tsx title="app/[lang]/layout.tsx"
 import { lang } from 'next/root-params'
@@ -34,7 +35,9 @@ Each getter returns a promise. There is no argument and no context object to thr
 
 ## What counts as a root param
 
-> *"Root parameters are the dynamic segments that appear before the root layout. Unlike the regular `params` prop, root parameter getters can be called from any Server Component in your application without prop drilling."*
+Root parameters are the dynamic segments appearing **before** the root layout. Unlike the
+ordinary `params` prop, their getters can be called from any Server Component in the
+application without prop-drilling.
 
 Given `app/[lang]/layout.tsx` and `app/[lang]/posts/[slug]/page.tsx`, only `lang` is a root param. `slug` is an ordinary route param and still arrives through `props.params`:
 
@@ -60,7 +63,10 @@ export default async function PostPage(
 
 This is the part worth understanding rather than memorising, because it explains why the API cannot simply be extended to all params:
 
-> *"The root layout is the top-level rendering boundary. The route parameters before it are shared by all routes under that root layout, which is what makes them safe to access from any Server Component in that tree. Route parameters deeper in the route vary depending on which child page is being rendered."*
+The reason that is safe is structural. The root layout is the top-level rendering boundary, so
+route parameters sitting before it are **shared by every route beneath it** — which is what
+makes them readable from anywhere in that tree. Parameters deeper in the route vary depending
+on which child page is rendering, and cannot offer the same guarantee.
 
 ```txt
 app/
@@ -91,13 +97,16 @@ export async function getTranslations() {
 }
 ```
 
-> *"You do not need to add `import 'server-only'` to files that use `next/root-params`. The import already fails at build time if used in a Client Component."*
+There is no need to add `import 'server-only'` to a file using `next/root-params` — the import
+already fails at build time if it reaches a Client Component.
 
 ## The caching payoff
 
 This is the reason to prefer a root param getter over the `params` prop even where both would work:
 
-> *"Because root parameter getters are imported functions, Next.js can track which ones a cached function uses. Only those root parameters become part of the cache key, so cache entries are not split across unrelated parameter values."*
+Because the getters are **imported functions**, Next.js can track which ones a cached function
+actually calls. Only those root parameters join the cache key, so entries are not fragmented
+across parameter values the function never read.
 
 ```tsx title="app/[lang]/components/cached-nav.tsx"
 import { lang } from 'next/root-params'
@@ -146,7 +155,9 @@ Both work. The first keeps the read colocated with the use and lets the framewor
 
 ## Root params and `generateStaticParams`
 
-> *"Root parameters are available as soon as you create the routes that define them. A `generateStaticParams` function is only required with Cache Components, where each root parameter must have at least one value or the build fails."*
+Root parameters work as soon as the routes defining them exist. `generateStaticParams` is
+required **only** with Cache Components — and there each root parameter must have at least one
+value or the build fails.
 
 ```tsx title="app/[lang]/layout.tsx"
 import { lang } from 'next/root-params'
@@ -192,7 +203,9 @@ export async function generateStaticParams() {
 ## Gotchas
 
 **★ A kebab-cased segment name is a hard error, not a silent skip.**
-> *"Root parameter names must be valid JavaScript function identifiers. Kebab-cased segment names (e.g. `[post-slug]`) are not supported and will cause an error at dev time or during build."*
+Names must be **valid JavaScript function identifiers**, which follows from the getters being
+imports. Kebab-cased segment names such as `[post-slug]` are unsupported and error at dev time
+or during the build.
 
 The export name is generated from the folder name, and `post-slug` is not a legal identifier. This bites hardest on an existing app being upgraded, where a directory named years ago suddenly has to be renamed — and renaming a segment changes URLs, so it is a redirect exercise, not a rename.
 
@@ -203,7 +216,8 @@ Root params are the one place where `generateStaticParams` becomes mandatory: *"
 If your root layout is `app/layout.tsx` and the locale segment is `app/[lang]/layout.tsx`, then `lang` is **not** a root param — the root layout is the one containing `<html>` and `<body>`, and it must sit *inside* `app/[lang]/` for `lang` to be root. Getting this wrong produces a module that does not export the name you expect.
 
 **★ The types do not exist until something generates them.**
-> *"Types for the `next/root-params` exports are generated during `next dev`, `next build`, or `next typegen`, the same as `PageProps` and `LayoutProps`."*
+Types for the `next/root-params` exports are generated during `next dev`, `next build` or
+`next typegen` — the same pipeline that produces `PageProps` and `LayoutProps`.
 
 A fresh clone that runs `tsc` before ever running `next dev` will not find the module's exports. Add `next typegen` ahead of type checking in CI, the same way you would for the route-aware helpers.
 

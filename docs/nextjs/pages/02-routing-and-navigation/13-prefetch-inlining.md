@@ -16,21 +16,31 @@ description: "Why Next.js 16 traded transfer size for request count, what experi
 
 The 16.0 upgrade guide sets up the problem:
 
-> *"**Layout deduplication**: When prefetching multiple URLs with a shared layout, the layout is downloaded once. **Incremental prefetching**: Next.js only prefetches parts not already in cache, rather than entire pages. […] However, you may see more individual prefetch requests with much lower total transfer sizes. We believe this is the right trade-off for nearly all applications."*
+Two mechanisms were already in play. **Layout deduplication**: prefetching several URLs that
+share a layout downloads that layout once. **Incremental prefetching**: only the parts not
+already in cache are fetched, rather than whole pages. Both trade request *count* for transfer
+*size* — the documented expectation is more individual prefetch requests at much lower total
+transfer, which Vercel considers the right trade-off for nearly all applications.
 
 Fine-grained prefetching means many small responses. Many small responses over HTTP is not free — connection scheduling, per-request overhead, and on some infrastructure, per-request cost. 16.3's answer:
 
-> *"In 16.3, prefetches below a certain payload size are automatically bundled together to reduce the overall amount of prefetch requests your app makes. Prefetches for larger shared segments still remain separate, so they can be reused across multiple routes."*
+16.3 pushes back the other way. Prefetches below a certain payload size are **automatically
+bundled together**, cutting the overall number of prefetch requests. Larger shared segments
+stay separate, precisely so they remain reusable across multiple routes.
 
 ## The trade being made
 
-> *"When the App Router prefetches a route, it can bundle small segment responses into a single response instead of requesting each one separately. This reduces the number of prefetch requests at the cost of duplicating some shared segment data across routes. This behavior is on by default, and most apps should leave it that way."*
+When the App Router prefetches a route it can bundle small segment responses into a single
+response rather than requesting each one. That reduces request count **at the cost of
+duplicating some shared segment data across routes** — a deliberate trade, on by default, and
+most applications should leave it alone.
 
 Read the cost clause carefully. A segment that is shared by several routes and gets inlined into each of their bundles is now downloaded once *per bundle* rather than once in total. That is why the size cut-off exists at all: small segments are cheap to duplicate, large ones are not, so large shared segments stay separate and keep their deduplication.
 
 The two knobs sit at exactly that boundary:
 
-> *"Lower thresholds keep more per-segment deduplication; higher thresholds inline more data and cut request count further."*
+Lower thresholds preserve more per-segment deduplication; higher thresholds inline more data
+and cut the request count further. The dial runs between those two costs.
 
 ## Configuration
 
@@ -87,7 +97,9 @@ You can have either without the other. Inlining is on by default regardless of w
 
 The reference gives exactly two reasons:
 
-> *"The `experimental.prefetchInlining` option lets you override this behavior or disable inlining while debugging navigation issues or measuring request volume. For most applications, there is no need to change the default behavior."*
+`experimental.prefetchInlining` exists to override the behaviour or disable inlining entirely —
+useful while debugging a navigation problem or measuring request volume. For most applications
+there is no reason to change the default.
 
 Debugging a specific navigation, where seeing one request per segment in the network panel makes the waterfall legible; and measuring, where bundling makes per-segment attribution impossible. Both are temporary local changes, not production settings.
 
@@ -97,7 +109,9 @@ Debugging a specific navigation, where seeing one request per segment in the net
 The behaviour ships on by default, so many people first meet the name in a release note and reach for the top level of `next.config.ts`. It lives under `experimental`. A misplaced key does not turn inlining off — it does nothing, and the default behaviour continues, which is the most confusing possible outcome when you are trying to debug.
 
 **★ The behaviour is permanent; only the option is experimental.**
-> *"The inlining behavior is a permanent part of the App Router. Only the `experimental.prefetchInlining` configuration is experimental, so its options may still change."*
+🔴 **Read the `experimental.` prefix carefully.** The inlining *behaviour* is a **permanent**
+part of the App Router. Only the `experimental.prefetchInlining` **configuration** is
+experimental, so its options may still change. The flag is not what turns the feature on.
 
 So do not read the experimental banner as "this might disappear". Read it as "the shape of `maxSize` / `maxBundleSize` might change". Depend on the behaviour freely; pin nothing to the option names.
 

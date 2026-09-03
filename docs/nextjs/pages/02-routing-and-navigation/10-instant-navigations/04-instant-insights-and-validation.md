@@ -14,14 +14,24 @@ description: "How Cache Components validation simulates page loads and client na
 
 ## What validation actually checks
 
-> *"By **default** (`validationLevel: 'warning'`), Cache Components apps validate every Page and Default segment in development. Validation surfaces what would keep navigations into a segment from being instant — which navigations would block, where a `<Suspense>` boundary is missing, and which data is reaching the user uncached."*
+Under the framework default — `validationLevel: 'warning'` — a Cache Components app validates
+**every Page and Default segment**, in development only. What it surfaces is anything that
+would stop a navigation into that segment being instant: which navigations would block, where
+a `<Suspense>` boundary is missing, and which data is reaching the user uncached.
 
 Crucially it does not check one thing; it checks each entry path separately:
 
-> *"For a route like `/shop/[slug]`, validation checks:*
-> *• **Page load**: the full tree renders from the root. The root layout `<Suspense>` catches everything.*
-> *• **Client navigation** (e.g. from `/shop/shoes` to `/shop/hats`): the `/shop` layout is already mounted and only the page below it re-renders. A `<Suspense>` boundary in the root layout does not cover this navigation.*
-> *Each case is validated independently. A `<Suspense>` boundary that covers one navigation path might not cover another. This is why a page can pass the page load check but fail for client navigations, and why catching these issues by hand is difficult as the number of routes grows."*
+Take a route like `/shop/[slug]`. Validation checks two entry paths separately:
+
+- **Page load** — the full tree renders from the root, so a `<Suspense>` boundary in the root
+  layout catches everything below it.
+- **Client navigation** — going from `/shop/shoes` to `/shop/hats`, the `/shop` layout is
+  already mounted and only the page beneath it re-renders. A boundary sitting in the root
+  layout does **not** cover that navigation, because the root layout never re-renders.
+
+Each case is validated independently, because a boundary that covers one navigation path may
+not cover the other. That is why a page can pass the page-load check and still fail for client
+navigations — and why auditing this by hand stops being feasible as the route count grows.
 
 Validation triggers at **every shared layout boundary** in the route, runs on page loads and on HMR updates, and uses the real request from your browser — so `[slug]` is checked against the actual values you navigate to, not a synthetic placeholder.
 
@@ -29,7 +39,8 @@ Validation triggers at **every shared layout boundary** in the route, runs on pa
 
 Each insight names the specific component that would block and offers three fixes — **Stream** (wrap it in `<Suspense>`), **Cache** (give it `'use cache'`), **Block** (opt the segment out with `instant = false`). Each card links a walkthrough with patterns and trade-offs, and each carries a **Copy prompt** button:
 
-> *"Each insight also provides a prompt that teaches your agent how to apply your chosen fix."*
+Every insight also carries a prompt written to teach a coding agent how to apply whichever fix
+you picked.
 
 That is the actual delivery mechanism for this feature. The panel is not just a list of warnings; it is a set of machine-readable instructions aimed at a coding agent, which is why the guide's recommended workflow is agent-driven.
 
@@ -58,12 +69,13 @@ export const instant: InstantConfig = true
 - **`false`** — this segment is allowed to block on navigation.
 - **object** — opt in with a `level`. Today `'warning'` is the only value:
 
-> *"In the future a validation level that supports validation during build will be supported. Unless you are enabling experimental validation modes there is no need to specify level since the only level available is `"warning"`."*
+A level that validates during the **build** is described as future work. Until then there is no
+reason to specify `level` at all, because `'warning'` is the only value available.
 
 Two hard constraints from the reference:
 
-> *"The `instant` export only works when `cacheComponents` is enabled."*
-> *"`instant` cannot be used in Client Components. It will throw an error."*
+The `instant` export works **only** when `cacheComponents` is enabled, and it **cannot** be
+used in a Client Component — doing so throws.
 
 ## Turning down the volume globally
 
@@ -89,13 +101,18 @@ export default nextConfig
 
 And a warning about the default itself:
 
-> *"The framework default may change in future versions to opt users into higher levels of validation. Because this feature is experimental, that change is not considered a breaking change. To pin a specific behavior, set `validationLevel` explicitly."*
+The framework default may be raised in a future version to opt users into stricter validation,
+and because the feature is experimental that change **is not considered a breaking change**.
+Setting `validationLevel` explicitly is how you pin the behaviour you want.
 
 ## Opting out, and the two different things `false` does
 
 The first meaning is local and mild:
 
-> *"Set `instant = false` on the page or layout file. This opts the segment out of validation feedback. The segment may still navigate instantly if its structure supports it; the framework just won't surface insights for it. Navigations between sibling segments below are still validated."*
+Setting `instant = false` on a page or layout opts that segment out of **validation feedback**
+only. The segment may still navigate instantly if its structure supports it — the framework
+simply stops surfacing insights for it. Navigations between sibling segments beneath it are
+still validated.
 
 So `instant = false` on `app/dashboard/layout.tsx` stops flagging navigations into `/dashboard` from outside, while navigations between `/dashboard/a` and `/dashboard/b` are still checked. That is exactly the useful shape: a shared layout that cannot load instantly, wrapping pages that must.
 
@@ -109,17 +126,26 @@ export const instant = true
 
 The docs are explicit that you should *not* sprinkle `false` around defensively:
 
-> *"You don't need to add `false` to ancestors of an instant page just because they do something blocking — a higher-up `instant = true` doesn't force its descendants to validate, and leaving an ancestor unconfigured is fine. Reach for `false` only when you've configured a deeper page as instant and need to exempt navigations that pass through a blocking ancestor."*
+There is no need to add `false` to an ancestor merely because it does something blocking. A
+higher-up `instant = true` does not force its descendants to validate, and leaving an ancestor
+unconfigured is perfectly fine. Reach for `false` only when you have configured a deeper page
+as instant and need to exempt navigations that pass through a blocking ancestor.
 
 The second meaning is global and severe. Cache Components separately validates that each page produces a **non-empty static shell** at prerender time, and that check obeys a different precedence:
 
-> *"To opt a route out of this validation, ensure the highest `instant` config in the route's tree is `false` — a `false` higher in the tree takes precedence over any deeper `true` for the static-shell check. Setting `false` on the root layout disables static shell validation for the entire app. Place the `false` as low as possible."*
+To opt a route out of that check, the **highest** `instant` config in the route's tree must be
+`false` — for the static-shell check a `false` higher in the tree takes precedence over any
+deeper `true`. Setting `false` on the root layout therefore disables static-shell validation
+for the entire application. Place the `false` as low as it will go.
 
 One `export const instant = false` in `app/layout.tsx` therefore turns off static-shell validation everywhere, and nothing else changes to tell you.
 
 ## What an opted-out segment costs
 
-> *"For opted-out segments, the navigation blocks on the server. If the content depends on cookies or headers but has a known cache lifetime, caching it with `use cache: private` lets the App Shell carry it ahead of the click instead of opting out, as long as its `stale` time is at least 5 minutes."*
+For an opted-out segment the navigation **blocks on the server**. If the content depends on
+cookies or headers but has a known cache lifetime, caching it with `use cache: private` lets
+the App Shell carry it ahead of the click instead of opting out — provided its `stale` time is
+at least **5 minutes**.
 
 `instant = false` is an honest declaration, not a fix. It is the right answer when the structural change is not worth the work — and the wrong answer when a five-minute private cache would have carried the content into the shell.
 
@@ -138,7 +164,7 @@ Every insight is development-only. A team that only ever sees the app through CI
 For the static-shell check, a `false` higher in the tree beats any deeper `true` — the opposite of what "more specific wins" instincts predict. Place the opt-out as low as it can go, and treat an `instant = false` in `app/layout.tsx` as a change that needs a comment explaining why the whole application is exempt.
 
 **★ The default validation level is experimental and may change without a breaking-change notice.**
-Vercel reserves the right to raise the framework default, and says explicitly that because the feature is experimental *"that change is not considered a breaking change."* If your team relies on a particular volume of feedback — or on validation *not* getting stricter mid-upgrade — set `experimental.instantInsights.validationLevel` explicitly rather than inheriting the default.
+Vercel reserves the right to raise the framework default, and says explicitly that because the feature is experimental that raising it is not treated as a breaking change. If your team relies on a particular volume of feedback — or on validation *not* getting stricter mid-upgrade — set `experimental.instantInsights.validationLevel` explicitly rather than inheriting the default.
 
 **★ `level` accepts only `'warning'`, so there is no build-time enforcement to configure yet.**
 Writing `instant = { level: 'warning' }` is equivalent to `instant = true` under default settings. A build-capable level is described as future work. Do not design a CI gate around this export; use `instant()` tests.

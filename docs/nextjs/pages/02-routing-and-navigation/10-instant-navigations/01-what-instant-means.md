@@ -16,11 +16,14 @@ description: "The definition of an instant navigation, why a direct visit and a 
 
 The guide does not leave "instant" to taste:
 
-> *"A navigation is **instant** when the browser can start rendering the new page the moment the user clicks, with static, cached, and fallback content showing up right away, while the server streams the remaining content into its fallbacks."*
+A navigation is **instant** when the browser can begin rendering the new page the moment the
+user clicks — static, cached and fallback content appearing right away — while the server
+streams the remaining content into those fallbacks.
 
 And immediately qualifies it:
 
-> *"This definition assumes caches are warm. Cold caches still require the server to compute the cached result once, so the first navigation to a route may still wait."*
+That definition assumes **warm caches**. A cold cache still requires the server to compute the
+cached result once, so the very first navigation to a route may still wait.
 
 Both halves matter. The first says *instant* is about what is already on the client at the moment of the click, not about total load time. The second says a "not instant" report from a real user on a cold cache is not necessarily a structural bug — but a *structurally* non-instant route is never instant, warm cache or not.
 
@@ -39,7 +42,8 @@ export default nextConfig
 
 `cacheComponents` is the Cache Components / Partial Prerendering model — the `'use cache'` directive, the static shell, the validation. `partialPrefetching` changes what a `<Link>` downloads. The dependency is hard, not advisory:
 
-> *"`partialPrefetching` requires `cacheComponents`. Without it, `next dev` and `next build` throw at config validation."*
+`partialPrefetching` **requires** `cacheComponents`. Without it, both `next dev` and
+`next build` throw at config validation — this is not a silent no-op.
 
 There is no "just try partial prefetching" path. Enabling `cacheComponents` on an existing app is itself a migration — it surfaces build errors for uncached data outside `<Suspense>` — which is why Vercel ships a codemod that opts every route out first (`cache-components-instant-false`) so you can re-enter route by route.
 
@@ -51,13 +55,22 @@ The single most expensive misunderstanding in this whole area is treating "the s
 
 **The App Shell** is what a *client navigation* gets: a per-route artifact containing the route's rendered output minus anything that depends on that link's URL. Partial Prefetching builds one App Shell per route and reuses it for every link pointing at that route.
 
-> *"A direct visit and a client navigation to the same route can produce different initial UI. **Direct visits** get the **static shell** as HTML, typically from a CDN. **Client navigations** only re-render below the layout the current and destination routes share, so the fallback UI defined by a `<Suspense>` boundary above that point can't be used during the transition."*
+A direct visit and a client navigation to the **same route** can produce different initial UI:
+
+- **Direct visits** receive the **static shell** as HTML, typically served from a CDN.
+- **Client navigations** re-render only *below* the layout the current and destination routes
+  share — so fallback UI defined by a `<Suspense>` boundary above that shared point simply
+  cannot be used during the transition.
 
 Concretely: navigating `/store/shoes` → `/store/hats`, the `/store` layout is already mounted. Only the page below it re-renders. A `<Suspense>` in `app/layout.tsx` covers the page load and covers *nothing* on that navigation. This is why a route can pass "is the first paint good?" by hand and still block on every in-app click.
 
 The same asymmetry bites client hooks:
 
-> *"`useSearchParams()` suspends during server rendering because search params are not available at build time. But on a client navigation, the router already has the params from the URL and the hook resolves synchronously. The same component can render immediately on a client navigation but sit behind a fallback on a page load."*
+`useSearchParams()` suspends during server rendering, because search params are not available
+at build time. On a client navigation, though, the router already holds the params from the URL
+and the hook resolves **synchronously**. The consequence is worth stating plainly: the very
+same component can render immediately on a client navigation and sit behind a fallback on a
+page load.
 
 So the asymmetry runs both ways. Neither direction of test substitutes for the other, which is why the `instant()` Playwright helper takes both a `page.goto()` case and a click case — see [10 · Testing that a navigation stays instant](../../13-testing-and-developer-experience/10-the-instant-playwright-helper.md).
 
@@ -117,13 +130,17 @@ Note what the page component does **not** do: it never writes `await props.param
 
 The release notes put the mechanism plainly:
 
-> *"We've fixed this by letting components that render dynamic UI either define inline loading states with Suspense, or mark part of their UI as prerenderable with `'use cache'`. In either case, Next.js can extract this UI and load it into the client prior to a navigation, making your app feel as snappy as an SPA once users start clicking around it."*
+The fix was to let a component rendering dynamic UI do one of two things: define an inline
+loading state with Suspense, or mark part of its UI prerenderable with `'use cache'`. Either
+way Next.js can extract that UI and load it into the client **ahead of** a navigation, which is
+what makes the app feel as responsive as an SPA once a user starts clicking around.
 
 ## The one caching variant that cannot help the static shell
 
 `'use cache: private'` caches a function that reads `cookies()` or `headers()` directly. It is genuinely useful — it is how you cache per-session lookups — but the guide is explicit about its limit:
 
-> *"The result is cached in the browser only, not on the server. **It can't be part of the static shell.**"*
+The result is cached **in the browser only**, never on the server — and it therefore **cannot
+be part of the static shell**.
 
 It *can* land in the App Shell for a client navigation (the shell is cached per session on the client), which is exactly the split people get wrong: a route that looks instant when you click around and blocks on a hard refresh.
 
@@ -131,7 +148,9 @@ It *can* land in the App Shell for a client navigation (the shell is cached per 
 
 A fallback is not inert markup. It renders.
 
-> *"A fallback may access `cookies()`, `headers()`, or the full URL. At build time, the fallback itself suspends, and a `<Suspense>` boundary further up the tree is needed."*
+A fallback is allowed to read `cookies()`, `headers()` or the full URL. The cost is that at
+build time the **fallback itself suspends**, so a `<Suspense>` boundary further up the tree
+becomes necessary.
 
 Cached values — a timestamp, a cached fetch — can sit directly in a fallback. A `cookies()` read in a fallback pushes the problem one level up.
 
@@ -149,17 +168,24 @@ Instant Navigations is a suite, not a feature:
 
 And the sentence that should decide whether you treat this as optional:
 
-> *"The behaviors behind Instant Navigations will become the default in a future major version, as they're part of our work over the last year to simplify Next.js back to its roots: dynamic by default, with no hidden or implicit caching."*
+These behaviours **become the default in a future major version**. Vercel frames them as part
+of a year's work simplifying Next.js back to its roots — dynamic by default, with no hidden or
+implicit caching — which is the reason to treat adoption as a migration you schedule rather
+than an experiment you defer.
 
 ## A Client Component page is instant, and that is not always the answer
 
 A page whose top-level file starts with `'use client'` soft-navigates like an SPA: no server render at navigation time, so it is instant by construction. The dev overlay deliberately does not offer this as a fix card:
 
-> *"The dev overlay doesn't include this in its fix cards because it has bigger implications than the recommended approaches, which keep the page in the server-component model. Reach for `"use client"` when the page is fully interactive and must be a client component."*
+The dev overlay deliberately leaves this out of its fix cards, because it carries bigger
+implications than the recommended approaches — those keep the page inside the server-component
+model. Reach for `"use client"` only when the page is fully interactive and genuinely must be a
+Client Component.
 
 And it buys you nothing on the direct-visit path:
 
-> *"`"use client"` doesn't skip validation for the static shell. Hooks like `useSearchParams()` still need a `<Suspense>` boundary."*
+`"use client"` does **not** exempt a page from static-shell validation. Hooks such as
+`useSearchParams()` still need a `<Suspense>` boundary around them.
 
 ## Gotchas
 
