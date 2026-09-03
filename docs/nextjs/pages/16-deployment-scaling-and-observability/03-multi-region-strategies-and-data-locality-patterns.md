@@ -18,22 +18,21 @@ description: "Multi-region strategies and data-locality patterns."
 
 This page is the **single-topic explanation** for **Multi-region strategies and data-locality patterns.**, under the syllabus chapter *Deployment, Scaling, and Observability* (exact concept wording from the devbible syllabus).
 
-:::warning `preferredRegion` is deprecated — verified 2026-09-03
-
-The **`preferredRegion`** route segment config is **marked deprecated** in the current API
-reference. Any region-pinning or data-locality strategy built on it needs re-checking against
-current guidance before you rely on it.
-
-This matters more than a normal deprecation because `preferredRegion` was the usual way to
-express "run this route near its data." Removing it does not remove the problem, so treat the
-placement decision as live rather than settled, and check the
-[route segment config reference](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
-for what replaces it.
-
-**Related, from the same release:** App Router SSR moved from web streams to **native Node.js
-streams**, handling up to **22% more requests under load** with no application changes —
-which shifts the capacity arithmetic behind any multi-region sizing done on older numbers.
-:::
+> ⚠️ **`preferredRegion` is deprecated — verified 2026-09-03**
+>
+> The **`preferredRegion`** route segment config is **marked deprecated** in the current API
+> reference. Any region-pinning or data-locality strategy built on it needs re-checking against
+> current guidance before you rely on it.
+>
+> This matters more than a normal deprecation because `preferredRegion` was the usual way to
+> express "run this route near its data." Removing it does not remove the problem, so treat the
+> placement decision as live rather than settled, and check the
+> [route segment config reference](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
+> for what replaces it.
+>
+> **Related, from the same release:** App Router SSR moved from web streams to **native Node.js
+> streams**, handling up to **22% more requests under load** with no application changes —
+> which shifts the capacity arithmetic behind any multi-region sizing done on older numbers.
 
 ## Why this concept matters
 
