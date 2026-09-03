@@ -52,7 +52,7 @@ provides, never as a synonym for shorter.
 - [Comprehensions](../09-comprehensions/README.md) owns the honest line where a
   comprehension should have stayed a loop — the concrete form of "pythonic does
   not mean shortest".
-- **Exceptions, the working set** *(not written yet)* owns the bare-`except:`
+- [Exceptions, the working set](../11-exceptions/README.md) owns the bare-`except:`
   recommendation and why `KeyboardInterrupt` derives from `BaseException`.
 - **Phase 7 — Packaging, projects and tooling** is where `pyproject.toml`,
   `ruff` and the type checker get configured properly rather than described.

@@ -63,7 +63,7 @@ while a loop is walking it: a `dict` will usually tell you, a list never will.
 - **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)** owns the
   `items = [...]` versus `items[:] = [...]` distinction that decides whether the
   safe-filtering pattern rebinds or mutates.
-- **Exceptions, the working set** *(not written yet)* is where `try`/`else`
+- [Exceptions, the working set](../11-exceptions/README.md) is where `try`/`else`
   earns the parallel this topic draws with `for`/`else`, and where the
   never-`break`-from-`finally` rule belongs properly.
 - **Phase 5 — Iterators, generators, context managers** is where the iterator

@@ -60,7 +60,7 @@ means*.
 - **[Unpacking](../13-unpacking/README.md)** — a function returning a bare tuple
   has its arity checked only at runtime, which is one more reason to return a
   `NamedTuple` once the "no result" case needs a shape of its own.
-- **Exceptions, the working set** *(not written yet)* owns the third contract
+- [Exceptions, the working set](../11-exceptions/README.md) owns the third contract
   properly: what to raise, how to chain it, and why a custom exception type
   beats a `None` the caller forgot to check.
 - **Phase 6 — Typing** is where `X | None` stops being documentation and starts

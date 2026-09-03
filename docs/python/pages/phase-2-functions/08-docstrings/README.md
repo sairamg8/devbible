@@ -26,7 +26,7 @@ You are done with this topic when you can format a multi-line docstring accordin
 
 - **[Topic 01 — `def` and `return`](../01-def-and-return/README.md)** — functions store docstrings in their code objects.
 - **[Topic 05 — Decorators](../05-decorators/README.md)** — explains why decorators must use `@functools.wraps` to prevent docstring erasure.
-- **Topic 09 — Annotations at runtime** *(not written yet)* — explores type annotations alongside docstrings for complete function self-documentation.
+- **[Topic 09 — Annotations at runtime](../09-annotations-at-runtime/README.md)** — explores type annotations alongside docstrings for complete function self-documentation.
 
 ---
 

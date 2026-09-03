@@ -278,4 +278,4 @@ must come first; a starred sequence pattern happily matches zero elements.
 
 ---
 
-← Prev: [Sequence, mapping and class patterns](02-sequence-mapping-class-patterns.md) · Index: [`match` — structural pattern matching](README.md) · Next → **Exceptions, the working set** *(not written yet)*
+← Prev: [Sequence, mapping and class patterns](02-sequence-mapping-class-patterns.md) · Index: [`match` — structural pattern matching](README.md) · Next → [Exceptions, the working set](../11-exceptions/README.md)

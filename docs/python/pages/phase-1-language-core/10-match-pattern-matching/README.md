@@ -57,7 +57,7 @@ that raises.
   applies inside a pattern.
 - **[Control flow](../08-control-flow/README.md)** — `match` is a statement, so
   `break` inside one belongs to the enclosing *loop*, not to the match.
-- **Exceptions, the working set** *(not written yet)* is the contrast this topic
+- [Exceptions, the working set](../11-exceptions/README.md) is the contrast this topic
   keeps drawing: `match` turns malformed input into a non-match, where a
   defensive lookup turns it into a `KeyError`.
 - **Phase 4 — Classes and the data model** is where `__match_args__` belongs
@@ -68,4 +68,4 @@ that raises.
 
 ---
 
-← Prev: [Comprehensions](../09-comprehensions/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Exceptions, the working set** *(not written yet)*
+← Prev: [Comprehensions](../09-comprehensions/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [Exceptions, the working set](../11-exceptions/README.md)

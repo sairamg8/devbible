@@ -53,7 +53,7 @@ singleton object whose only load-bearing use in ordinary code is
   reference paragraph.
 - **[Control flow](../08-control-flow/04-break-continue-and-mutation.md)** is
   why `del` inside a loop over the same container skips elements or raises.
-- **Exceptions, the working set** *(not written yet)* is where
+- [Exceptions, the working set](../11-exceptions/README.md) is where
   `contextlib.suppress` belongs properly, alongside the rest of the argument
   against swallowing.
 - **Phase 4 — Classes and the data model** owns `__del__`, `__delitem__` and

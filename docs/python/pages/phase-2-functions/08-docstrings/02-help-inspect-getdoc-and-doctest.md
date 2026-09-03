@@ -146,4 +146,4 @@ Append `# doctest: +ELLIPSIS` to the example line and replace variable parts of 
 
 ---
 
-← [PEP 257 and docstring formats](01-pep-257-and-major-docstring-formats.md) · [Topic index](README.md) · Next → **Annotations at runtime** *(not written yet)*
+← [PEP 257 and docstring formats](01-pep-257-and-major-docstring-formats.md) · [Topic index](README.md) · Next → [Annotations at runtime](../09-annotations-at-runtime/README.md)

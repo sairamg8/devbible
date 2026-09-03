@@ -20,7 +20,7 @@ import Progress from '@site/src/components/Progress';
 |---|---|---|
 | **[0 · The runtime](phase-0-runtime/README.md)** | 12 | ✅ **Complete — 12 of 12** · 134 files, 31,030 lines, 0 over the cap, 0 dangling of 877 links, 0 MDX hazards |
 | **[1 · Language core](phase-1-language-core/README.md)** | 16 | 🚧 **In flight — 15 of 16** · 01 · Syntax (8 chunks), 02 · Numbers (**69**), 03 · Strings (9), 04 · bytes vs str (4), 05 · Truthiness (12), 06 · Comparisons (23), 07 · Assignment and aliasing (25), 08 · Control flow (6), 09 · Comprehensions (**19**, closed 2026-09-03), 10 · `match` (4), 11 · Exceptions (**27**, closed 2026-09-03), 13 · Unpacking (3), 14 · `None` (2), 15 · PEP 8 (2), 16 · `del`, `pass`, `Ellipsis` (2) — 0 over the cap, 0 MDX hazards, 0 dangling links, unbroken footer chains, no duplicate `sidebar_position`. Only 12 · EAFP vs LBYL remains — no longer held, since 11 has closed |
-| **[2 · Functions, closures and decorators](phase-2-functions/README.md)** | 10 | 🚧 **In flight — 8 of 10** · 01 · def and return (2 chunks), 02 · Parameters in full (4), 03 · Scope and closures (4), 04 · lambda (2), 05 · Decorators (4), 06 · functools (3), 07 · Callables beyond functions (2), 08 · Docstrings (2) |
+| **[2 · Functions, closures and decorators](phase-2-functions/README.md)** | 10 | 🚧 **In flight — 9 of 10** · 01 · def and return (2 chunks), 02 · Parameters in full (4), 03 · Scope and closures (4), 04 · lambda (2), 05 · Decorators (4), 06 · functools (3), 07 · Callables beyond functions (2), 08 · Docstrings (2), 09 · Annotations at runtime (2) |
 | 3 · Collections in depth | 12 | Planned |
 | 4 · Classes and the data model | 15 | Planned |
 | 5 · Iterators, generators, context managers | 10 | Planned |

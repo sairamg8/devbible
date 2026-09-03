@@ -73,7 +73,7 @@ every trap above.
   `NotImplemented` sentinel this topic meets in chunk 1c.
 - **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)** owns the
   mutable-default trap that chunk 2b's `None`-sentinel form fixes.
-- **Exceptions, the working set** *(not written yet)* is where "raise instead of
+- [Exceptions, the working set](../11-exceptions/README.md) is where "raise instead of
   returning `None`" becomes a design choice rather than an aside.
 - **`None` and the "no result" contract** *(not written yet)* is the full
   treatment of the return-shape decision chunk 2b sketches.
