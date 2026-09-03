@@ -21,10 +21,13 @@ underneath.
 
 ## 🔴 Read this before you trust a page
 
-This corpus was authored against **Next.js 16.2, with 16.3 still in preview**. It was
-imported as-is, on the instruction to copy rather than rewrite. A verification pass on
-**2026-09-03** found the version layer has drifted. **The structure is sound; some facts are
-not.**
+This corpus was authored against **Next.js 16.2, with 16.3 still in preview**, and imported
+as-is. A verification pass on **2026-09-03** found the version layer had drifted.
+
+✅ **Steps 1–2 of the refresh were applied 2026-09-03.** **13 pages now carry an inline
+correction callout** naming what changed upstream, and the chapter 18/19 appendix duplication
+is fixed. **The structure is sound; the corrected facts are flagged in place.** What remains
+is additive — see *Still open* below.
 
 | | Corpus says | Upstream, 2026-09-03 |
 |---|---|---|
@@ -35,7 +38,8 @@ not.**
 | React | 19.2+ | App Router **bundles React canary** |
 | React Compiler | "stable … Rust" | `reactCompiler` **stable**; the **Rust port is experimental** |
 
-Three findings that change what a page tells you to do:
+The three findings that changed what a page tells you to do — **all three now carry a
+correction callout on the page itself**:
 
 1. **AVIF is currently disabled upstream.** Chapter 9 teaches `next/image` with AVIF output.
    The August 2026 security release **turned AVIF optimization off** to mitigate
@@ -75,24 +79,38 @@ an `01-explanation.md` overview, then one page per concept.
 The running project throughout is **SprintDesk**, a multi-tenant SaaS task dashboard, with a
 PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
+## Still open
+
+**Steps 3 and 4 of the refresh are not done** — they change the syllabus shape and need their
+own go-ahead:
+
+- **Absorb the ten features that shipped in 16.3** into the chapters that already have a home
+  for them: `catchError` + `retry()` (§7), root params (§2), the real Instant Navigations
+  names (§2), the `instant()` Playwright helper and TypeScript 7 (§13), glob imports,
+  prefetch inlining, immutable static assets, Node.js-streams SSR (§11/§16), `useOffline` (§7).
+- **Extend to the ~15 documented concepts with no bullet anywhere**: `use cache: private` /
+  `use cache: remote` (the largest single gap), `forbidden()`/`unauthorized()` +
+  `authInterrupts`, Draft Mode, CSP, Authentication with Cache Components, Multi-tenant,
+  PWAs, `useLinkStatus`, `refresh()`, OpenNext and the 13-page Adapters section.
+
 ## Known defects carried over from the source
 
-These were in the corpus before the import and were **not** silently fixed — they are
-recorded here so they can be fixed deliberately:
+Recorded so they can be fixed deliberately:
 
-- **Chapters 18 and 19 duplicate the appendices.** Appendices A–E appear in full in both,
-  in the syllabus and on disk (`18-capstone…/` holds `06-appendix-b-…` and
-  `09-appendix-e-…`; `19-appendices/` holds them again).
+- ✅ ~~**Chapters 18 and 19 duplicate the appendices.**~~ **Fixed 2026-09-03** — chapter 18's
+  five byte-identical copies were deleted (0 inbound links). Appendices live in chapter 19
+  only, and **Appendix E was rewritten from a watchlist into a shipped/withdrawn record**.
 - **Every chapter has two files prefixed `01-`** — `01-explanation.md` alongside
   `01-<first-topic>.md`. Cosmetic only: `sidebar_position` values do not collide, so the
   sidebar renders correctly.
-- **Depth is well below the devbible norm.** 140 files across 9,434 lines averages **~67
-  lines per page**, one file over 300. devbible topics run 250–300 lines per chunk with
+- **Depth is well below the devbible norm.** 135 files averaging **~70 lines per page**, one
+  file over 300 (`04-data-fetching/01-explanation.md` at 431, inherited unchanged). devbible topics run 250–300 lines per chunk with
   exhaustive gotchas and interview questions. Reaching that bar is roughly a 5–8× expansion.
 - **No `> Verified:` lines** on the 140 imported pages, and the `[D]`/`[O]`/`[R]` badges
   have not been re-tiered against devbible's four-tier system.
 
-**One thing was changed during the import:** chapter 1 shipped two differing files both at
-`sidebar_position: 4` (`04-versioning-and-lts-model-…md` at 65 lines and `…-2.md` at 32).
-The shorter one was moved to `4.5` so the sidebar order is deterministic. Nothing else was
-edited.
+**Changes made to the copied material, in full.** At import (2026-09-03): chapter 1 shipped
+two differing files both at `sidebar_position: 4`, and the shorter moved to `4.5`; 18 broken
+relative links were repointed (13 already broken in the source, 5 broken by the move).
+Then, under steps 1–2: **13 pages gained a correction callout** and **5 duplicate appendix
+pages were deleted from chapter 18**. No other prose was edited.

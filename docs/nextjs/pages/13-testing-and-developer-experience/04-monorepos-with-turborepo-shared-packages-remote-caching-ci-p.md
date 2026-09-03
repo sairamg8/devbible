@@ -16,6 +16,30 @@ description: "Monorepos with Turborepo: shared packages, remote caching, CI pipe
 > 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
 > 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
 
+:::warning Tooling has moved — verified 2026-09-03
+
+Three changes this page predates.
+
+**1 · `next lint` was removed in Next.js 16.** `next build` **no longer runs the linter**.
+Run linters from npm scripts instead. Projects on the old flow migrate with a codemod:
+
+```bash
+npx @next/codemod@canary next-lint-to-eslint-cli .
+```
+
+**2 · Biome is now a first-class choice.** `create-next-app` prompts for **ESLint / Biome /
+None** — ESLint for rule coverage, Biome for speed and formatting in one tool.
+
+**3 · `create-next-app` scaffolds `AGENTS.md` by default**, plus a `CLAUDE.md` that
+references it, so coding agents read version-matched guidance. The recommended-defaults path
+is TypeScript, ESLint, Tailwind, App Router, Turbopack and `AGENTS.md`, with import alias
+`@/*`. See chapter 14.
+
+**Also worth knowing:** Turbopack is the **default bundler** — `next dev --webpack` /
+`next build --webpack` opts out — and `next build` can type-check with **TypeScript 7** (a
+10× native port) via `useTypeScriptCli`. The TypeScript floor is still 5.1.
+:::
+
 ## 1. Under-The-Hood Mechanics
 
 ### Layers

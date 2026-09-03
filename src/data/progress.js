@@ -472,7 +472,7 @@ export const LANGUAGES = {
   },
   nextjs: {
     label: 'Next.js',
-    updated: '2026-09-03 00:00',
+    updated: '2026-09-03 02:30',
     docsPath: '/docs/nextjs',
     pagesPath: '/docs/nextjs/pages',
     phases: [
@@ -493,7 +493,7 @@ export const LANGUAGES = {
       {n: 15, slug: '15-databases-apis-and-full-stack-patterns', name: "Databases, APIs and full-stack patterns", part: 'Imported corpus', topics: 7, pages: 7},
       {n: 16, slug: '16-deployment-scaling-and-observability', name: "Deployment, scaling and observability", part: 'Imported corpus', topics: 7, pages: 7},
       {n: 17, slug: '17-advanced-ecosystem-topics', name: "Advanced ecosystem topics", part: 'Imported corpus', topics: 5, pages: 5},
-      {n: 18, slug: '18-capstone-decision-trees-and-outlook', name: "Capstone, decision trees and outlook", part: 'Imported corpus', topics: 10, pages: 10},
+      {n: 18, slug: '18-capstone-decision-trees-and-outlook', name: "Capstone, decision trees and outlook", part: 'Imported corpus', topics: 5, pages: 5},
       {n: 19, slug: '19-appendices', name: "Appendices", part: 'Imported corpus', topics: 6, pages: 6},
     ],
   },

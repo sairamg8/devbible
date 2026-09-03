@@ -6,8 +6,9 @@ sidebar_position: 5
 
 > Verified: 2026-09-03 against the [live docs navigation](https://nextjs.org/docs) and the
 > [Next.js blog](https://nextjs.org/blog).
-> ⚠️ Imported syllabus verbatim; drift flagged inline. **Chapters 18 and 19 duplicate the
-> appendices — a defect carried over from the source, recorded rather than silently fixed.**
+> ⚠️ Imported syllabus verbatim; drift flagged inline.
+> ✅ **The chapter 18/19 appendix duplication was FIXED on 2026-09-03**; Appendix E has been
+> rewritten from a watchlist into a shipped/withdrawn record.
 
 ## 15 · Databases, APIs, and Full-Stack Patterns
 
@@ -60,9 +61,10 @@ sidebar_position: 5
     migration. And the honest counter-example: the **retired Skills** (chapter 14) — a
     previewed feature withdrawn rather than stabilized.
 - **Appendices A–E.**
-  - 🔴 **Duplication defect.** Chapter 18 closes by listing Appendices A–E in full, and
-    chapter 19 repeats all five **verbatim** — in the syllabus and on disk. Carried over
-    from the source, not fixed during import. Appendices should live in chapter 19 only.
+  - ✅ **FIXED 2026-09-03.** Chapter 18 used to close by listing Appendices A–E in full while
+    chapter 19 repeated all five **verbatim** — five byte-identical duplicate pages. Chapter
+    18's copies were deleted (0 inbound links); **the appendices now live in chapter 19
+    only.**
 
 ## 19 · Appendices
 
