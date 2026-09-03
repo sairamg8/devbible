@@ -79,10 +79,26 @@ an `01-explanation.md` overview, then one page per concept.
 The running project throughout is **SprintDesk**, a multi-tenant SaaS task dashboard, with a
 PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
-## Still open
+## What was done, 2026-09-03
 
-**Steps 3 and 4 of the refresh are not done** — they change the syllabus shape and need their
-own go-ahead:
+The track arrived as 140 imported pages and is now **190**. Four steps ran in one day:
+
+1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
+2. **De-duplicated** the chapter 18/19 appendices.
+3. **Absorbed** what 16.3 shipped: the three cache directives (8 chunks), `catchError` and the
+   error model, auth interrupts, `useOffline`, Instant Navigations (6 chunks), root params,
+   prefetch inlining, the `instant()` helper, TypeScript 7.
+4. **Extended** to the concepts with no bullet anywhere: the Adapters API (9 pages), OpenNext,
+   immutable static assets, CSP, Authentication with Cache Components, the 2026 CVE record,
+   Draft Mode, BFF, SWR and TanStack Query.
+
+Then a **de-quoting pass**: the new pages were first written with ~12,900 words of Vercel's
+documentation quoted verbatim across 394 blockquotes. All of it was rewritten in our own
+voice, with **zero facts lost** — verified by diffing every identifier, number and cited URL
+against the pre-rewrite commit. Eight quotes survive, one per page, each under 25 words and
+each kept because the exact wording is normative.
+
+### Still open
 
 - **Absorb the ten features that shipped in 16.3** into the chapters that already have a home
   for them: `catchError` + `retry()` (§7), root params (§2), the real Instant Navigations
