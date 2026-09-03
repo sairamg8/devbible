@@ -164,7 +164,7 @@ export const LANGUAGES = {
   },
   nodejs: {
     label: 'Node.js',
-    updated: '2026-08-14 07:33',
+    updated: '2026-09-03 07:57',
     docsPath: '/docs/nodejs',
     pagesPath: '/docs/nodejs/pages',
     phases: [
@@ -176,7 +176,7 @@ export const LANGUAGES = {
       {n: 5, slug: 'phase-5-http-processes', name: 'Networking, HTTP, processes', part: 'Core I/O', topics: 30, pages: 26},
       {n: 6, slug: 'phase-6-data-access', name: 'Data access', part: 'Application', topics: 16, pages: 16},
       {n: 7, slug: 'phase-7-background-work', name: 'Background work and resilience', part: 'Application', topics: 16, pages: 16},
-      {n: 8, slug: 'phase-8-security', name: 'Security', part: 'Application', topics: 27, pages: 27},
+      {n: 8, slug: 'phase-8-security', name: 'Security', part: 'Application', topics: 28, pages: 28},
       {n: 9, slug: 'phase-9-testing', name: 'Testing', part: 'Application', topics: 20, pages: 20},
       {n: 10, slug: 'phase-10-observability', name: 'Observability and performance', part: 'Production', topics: 23, pages: 23},
       {n: 11, slug: 'phase-11-deployment', name: 'Deployment and operations', part: 'Production', topics: 14, pages: 14},

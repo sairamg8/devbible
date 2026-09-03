@@ -58,6 +58,7 @@ generalises it.
 | 25 | **[Web Crypto API](./25-web-crypto.md)** | <span className="db-tier t-know">Know</span> | `extractable: false` is the one thing `node:crypto` cannot express; constant-time verify is built in |
 | 26 | **[Encryption and keys](./26-encryption-and-keys.md)** | <span className="db-tier t-know">Know</span> | Two messages, one IV: XOR returned the second plaintext with no key involved |
 | 27 | **[Audit logging](./27-audit-logging.md)** | <span className="db-tier t-when">When Needed</span> | A hash chain catches edits and deletions and reports **truncation as intact** — anchor the head externally |
+| 28 | **[bcrypt](./28-bcrypt/README.md)** | <span className="db-tier t-understand">Understand</span> | The hash you inherit: the limit is **72 bytes not characters**, the sync API blocks the whole event loop, and it is a native addon that fails at startup on Alpine |
 
 ## Where this connects
 

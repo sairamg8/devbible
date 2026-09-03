@@ -7,7 +7,10 @@ sidebar_position: 1
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08 on **Node 24.19.0** — `scrypt` and the hash functions from the
-> built-in `node:crypto`.
+> built-in `node:crypto`. The console output below is real, from two committed scripts:
+> `sandbox/p8-security/ex1-crypto.mjs` (the bare-hash rate table and the scrypt cost
+> curve) and `sandbox/p8-security/ex4-throughput.mjs` (the thread-pool table).
+> Provenance added 2026-09-03; the numbers themselves are unchanged.
 
 **A password hash must be slow on purpose.** Every other property — the salt, the
 algorithm's name, the output format — is secondary to that one idea. A fast hash is
@@ -46,7 +49,7 @@ excellent at being fast, which is precisely the property you do not want.
 |---|---|---|
 | **argon2id** | **First choice** | Winner of the Password Hashing Competition; memory-hard and side-channel resistant. Needs the `argon2` package |
 | **scrypt** | **Good, and built in** | Memory-hard, in `node:crypto`, zero dependencies |
-| **bcrypt** | Acceptable | Everywhere, well understood; capped at 72 bytes of input |
+| **bcrypt** | Acceptable | Everywhere, well understood; capped at 72 bytes of input — [28 · bcrypt](./28-bcrypt/README.md) |
 | PBKDF2 | Only if mandated | Not memory-hard — cheap to attack on a GPU. Chosen for FIPS compliance, not security |
 | sha256 / sha512 | **No** | Fast by design |
 | md5 / sha1 | **No** | Fast *and* broken |
@@ -205,8 +208,10 @@ processes; never use `scryptSync`.
 **Fix:** Hash anyway on the miss; return an identical message either way.
 
 **Symptom:** A long password is silently truncated
-**Cause:** bcrypt ignores input past 72 bytes.
-**Fix:** argon2id or scrypt; or pre-hash before bcrypt, deliberately.
+**Cause:** bcrypt ignores input past 72 bytes — and the limit is in *bytes*, so non-ASCII
+passwords hit it sooner than their length suggests.
+**Fix:** argon2id or scrypt; or pre-hash before bcrypt, deliberately. The full trap, and
+the three ways out, are on [28 · bcrypt](./28-bcrypt/README.md).
 
 ## Interview questions
 

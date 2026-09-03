@@ -123,6 +123,7 @@ their weekend.
 | **Web Crypto API** — the standards-based alternative to `node:crypto` | <span className="db-tier t-know">Know</span> |
 | Symmetric and asymmetric encryption, signing, key management | <span className="db-tier t-know">Know</span> |
 | Audit logging and tamper-evidence | <span className="db-tier t-when">When Needed</span> |
+| **bcrypt in depth** — the companion to *Password storage* above, for the codebases that already use it: the 72-**byte** truncation, the cost factor stored inside the hash, the sync APIs that block the event loop, and the native addon that fails on Alpine | <span className="db-tier t-understand">Understand</span> |
 
 ---
 

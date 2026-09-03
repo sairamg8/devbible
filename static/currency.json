@@ -4,8 +4,8 @@
   "generated": "2026-09-03",
   "horizonDays": 60,
   "totals": {
-    "pins": 42,
-    "current": 17,
+    "pins": 43,
+    "current": 18,
     "patch": 6,
     "minor": 5,
     "major": 1,
@@ -470,7 +470,7 @@
         "react",
         "nextjs"
       ],
-      "pages": 9,
+      "pages": 13,
       "claimed": "16.3.1",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -525,6 +525,31 @@
       "error": null,
       "note": null,
       "checked": "2026-08-31"
+    },
+    "bcrypt": {
+      "label": "bcrypt",
+      "source": "npm:bcrypt",
+      "policy": "latest",
+      "pin": "6.0.0",
+      "latest": "6.0.0",
+      "newestOverall": null,
+      "drift": "none",
+      "eol": null,
+      "events": [],
+      "tracks": [
+        "nodejs",
+        "expressjs",
+        "real-world"
+      ],
+      "pages": 3,
+      "claimed": "6.0.0",
+      "claimedDrift": "none",
+      "claimedMatchesPin": true,
+      "unbolded": null,
+      "minority": null,
+      "error": null,
+      "note": "Native addon (node-gyp-build). Versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars — a real upgrade boundary, not just a version number.",
+      "checked": "2026-09-03"
     },
     "zod": {
       "label": "Zod",

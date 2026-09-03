@@ -153,6 +153,16 @@ export const PINS = {
     label: 'undici', source: 'npm:undici', policy: 'latest',
     pin: '8.10.0', checked: '2026-08-31', tracks: ['nodejs'], names: ['undici'],
   },
+  // Added 2026-09-03 under the library necessity test: password storage cannot be
+  // taught without it. 6.0.0 published 2025-05-11; `engines: {node: '>= 18'}`.
+  // ⚠️ NOT installed in this checkout — pages about it are doc-verified (T2), never
+  // probed, because a probe needs the package present at the pinned version.
+  bcrypt: {
+    label: 'bcrypt', source: 'npm:bcrypt', policy: 'latest',
+    pin: '6.0.0', checked: '2026-09-03', tracks: ['nodejs', 'expressjs', 'real-world'],
+    names: ['bcrypt'],
+    note: 'Native addon (node-gyp-build). Versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars — a real upgrade boundary, not just a version number.',
+  },
   zod: {
     label: 'Zod', source: 'npm:zod', policy: 'latest',
     // `real-world` added 2026-09-03: 17 pages there bold **zod 4.4.3** and were
