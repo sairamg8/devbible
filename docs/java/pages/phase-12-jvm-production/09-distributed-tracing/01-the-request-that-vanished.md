@@ -27,7 +27,7 @@ both signals, and closing it requires a third one.**
 
 ## What the other two signals structurally cannot do
 
-**08 · Metrics with Micrometer** *(not written yet)* owns aggregates. A metric is a number
+[08 · Metrics with Micrometer](../08-metrics-with-micrometer/README.md) owns aggregates. A metric is a number
 per time window per tag set: request count, error count, a latency distribution. Aggregation
 is exactly what makes metrics cheap enough to keep for a year at one-second resolution, and it
 is also what destroys the individual request. A p99 of 4 seconds tells you that one request in
@@ -35,7 +35,7 @@ a hundred took 4 seconds. It cannot tell you *which* request, and there is no dr
 because the individual observation was discarded at the moment it was folded into the
 histogram.
 
-**07 · Logging done right** *(not written yet)* owns the per-event record. A log line does
+[07 · Logging done right](../07-logging-done-right/README.md) owns the per-event record. A log line does
 keep the individual event — but it keeps it *per process*. Service A logs, service B logs, and
 nothing in either line says the two lines describe the same user request. You can try to close
 that with timestamps, and it fails as soon as there is any concurrency: at 200 requests per
