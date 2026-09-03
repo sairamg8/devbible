@@ -258,8 +258,15 @@ wc -l <dir>/*.md                              # nothing over 300
 grep -c '^\*\*★' <dir>/*.md                   # compare against the BEFORE count
 grep -L '^<span className="db-tier' <dir>/*.md   # every page has a tier badge
 grep -L '^> Verified:' <dir>/*.md                # every page has provenance
+grep -rln '^{/\* FOOTER \*/}$' <dir>            # 🔴 must be EMPTY at topic close
+grep -h '^sidebar_position:' <dir>/*.md | sort -n | uniq -d   # must print nothing
 python3 /mnt/Storage/my-learning/claude/shared/scripts/mdxcheck.py --no-rawtag <dir>
 ```
 
 Plus: `sidebar_position` unique and gap-free, every link resolving to a real file, and
 `## Gotchas` + `## Interview questions` present and exhausted on every content page.
+
+🔴 **The footer grep catches what nothing else does.** `{/* FOOTER */}` is the marker a
+fork leaves for the coordinator to replace with the real `← Prev · Index · Next →` line.
+It is a valid MDX comment with no link to resolve, so **every other check passes a page
+that has no navigation at all** — 1,241 pages shipped that way before anyone noticed.

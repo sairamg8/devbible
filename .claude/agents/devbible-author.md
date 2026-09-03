@@ -117,10 +117,17 @@ they actually understood it.
 
 ```bash
 wc -l <your dir>/*.md                                                   # nothing over 300
+grep -h '^sidebar_position:' <your dir>/*.md | sort -n | uniq -d        # must be empty
 python3 /mnt/Storage/my-learning/claude/shared/scripts/mdxcheck.py --no-rawtag <your dir>   # 0 hazards
 ```
 Plus: every link you wrote resolves to a real file, and `sidebar_position` is unique and
 gap-free in your directory.
+
+🔴 **Keep writing `{/* FOOTER */}` — that is still your contract, not a defect.** But
+**say in your report how many files carry one**, because replacing them is the
+coordinator's job at topic close and it is the step that gets skipped: 1,241 pages across
+48 topics shipped with the marker still in place, and no check catches it. Name the count
+so the coordinator cannot lose it.
 
 ## Report back
 

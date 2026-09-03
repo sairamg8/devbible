@@ -154,8 +154,15 @@ wc -l <topic dir>/*.md                                    # nothing over 300
 grep -c '^\*\*★' <topic dir>/*.md                         # vs the BEFORE count
 grep -L '^<span className="db-tier' <topic dir>/*.md      # every page badged
 grep -L '^> Verified:' <topic dir>/*.md                   # every page sourced
+grep -rln '^{/\* FOOTER \*/}$' <topic dir>               # 🔴 EMPTY at topic close
+grep -h '^sidebar_position:' <topic dir>/*.md | sort -n | uniq -d   # no duplicates
 python3 /mnt/Storage/my-learning/claude/shared/scripts/mdxcheck.py --no-rawtag <topic dir>
 ```
+
+🔴 **A topic is not closed while a `{/* FOOTER */}` remains in it.** The marker is what a
+fork leaves for the coordinator; it is a valid MDX comment with no link to resolve, so
+the cap, MDX and link checks all pass a page with **no navigation at all**. 1,241 pages
+across 48 topics shipped that way — see `project_footer_cleanup_scope.md` in the store.
 
 Plus: every link resolves to a file that **exists right now** (`ls` it — a dangling
 link breaks the build for every other session), and `sidebar_position` is unique and

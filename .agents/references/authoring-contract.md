@@ -207,11 +207,22 @@ roughly 25–30% of topics — if everything is MASTER the labels carry no infor
 ```bash
 wc -l <topic dir>/*.md                       # nothing over 300
 grep -c '^\*\*★' <topic dir>/*.md            # compare against the BEFORE count
+grep -rln '^{/\* FOOTER \*/}$' <topic dir>   # 🔴 MUST BE EMPTY AT TOPIC CLOSE
+grep -h '^sidebar_position:' <topic dir>/*.md | sort -n | uniq -d   # must print nothing
 python3 /mnt/Storage/my-learning/claude/shared/scripts/mdxcheck.py --no-rawtag <topic dir>
 ```
 
 Plus: every link resolves to a file that exists, and `sidebar_position` is unique and
 gap-free in the directory.
+
+🔴 **Why those two greps are here.** Both defects are invisible to every other check:
+
+- **`{/* FOOTER */}`** is a valid MDX comment with no link to resolve, so the cap check,
+  `mdxcheck.py` and the link resolver all pass a page that has **no navigation at all**.
+  It is *correct* while the topic is being written and a defect the moment it closes.
+  Measured 2026-09-03: **1,241 pages across 48 topics** shipped this way.
+- **A duplicate `sidebar_position`** is a silent reordering, not an error — every check
+  passes it, and the sidebar quietly renders in the wrong order.
 
 Report per file: path, line count, gotcha count, interview-question count; every claim
 you could **not** confirm and what you wrote instead; and anything wrong outside your
