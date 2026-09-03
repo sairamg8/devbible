@@ -196,4 +196,6 @@ A parameter that does not exist in every root layout is typed `string | undefine
 **★ Why does a file using `next/root-params` not need `import 'server-only'`?**
 Because the import already fails at build time if it is reached from a Client Component. The `server-only` package exists to convert a would-be runtime leak into a build error, and this module already has that property.
 
-{/* FOOTER */}
+---
+
+← [11 · Root params](11-root-params.md) · [Chapter 2 overview](01-explanation.md) · Next → [13 · Prefetch inlining](13-prefetch-inlining.md)

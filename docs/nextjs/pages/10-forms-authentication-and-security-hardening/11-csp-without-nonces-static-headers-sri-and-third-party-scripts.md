@@ -268,4 +268,6 @@ Runtime style injection creates `style` elements that `style-src 'self'` does no
 **★ Why is setting the CSP in both `next.config.js` and the proxy a bug rather than belt-and-braces?**
 Because browsers enforce multiple `Content-Security-Policy` headers as an intersection, not a union. The effective policy is the strictest combination of both, which will usually block resources each policy individually permits, and neither header looks wrong when inspected alone. Choose one delivery mechanism and keep the policy in one place.
 
-{/* FOOTER */}
+---
+
+← [CSP: nonces and the dynamic-rendering tax](10-content-security-policy-nonces-and-the-dynamic-rendering-tax.md) · [Chapter 10 overview](01-explanation.md) · Next → [Auth with Cache Components: the session read](12-authentication-with-cache-components-reading-the-session.md)

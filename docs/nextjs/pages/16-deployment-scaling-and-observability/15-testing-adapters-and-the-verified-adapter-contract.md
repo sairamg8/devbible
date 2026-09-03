@@ -218,4 +218,6 @@ Yes, on the same public API with the same test suite. It simply will not be list
 **★ Why does the reference workflow default to testing against `canary`?**
 Because the point of the suite for a platform is early warning. Testing the release your users already run confirms yesterday's state; testing canary surfaces contract changes while they can still be discussed — which is the mechanism behind the working group's early-access commitment and behind the promise that breaking changes come with lead time proportional to their scope.
 
-{/* FOOTER */}
+---
+
+← [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md) · [Chapter 16 overview](01-explanation.md) · Next → [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md)

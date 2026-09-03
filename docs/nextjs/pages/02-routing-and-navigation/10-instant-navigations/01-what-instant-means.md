@@ -259,4 +259,6 @@ Yes. Vercel states the behaviours behind Instant Navigations become the default 
 **★ What is the difference between the static shell and the App Shell, and who receives each?**
 The static shell is the prerendered HTML a direct visit receives from the document response, usually via a CDN; it is produced by Cache Components prerendering the tree until it hits uncached data or runtime APIs. The App Shell is a per-route artifact containing the route's rendered output minus anything that depends on a link's URL; Partial Prefetching builds one per route, shares it across every link to that route, and the client uses it during a soft navigation. They can contain different things — `'use cache: private'` content reaches the App Shell but never the static shell.
 
-{/* FOOTER */}
+---
+
+[Topic index](README.md) · Next → [2 · Partial Prefetching and the App Shell](02-partial-prefetching-and-the-app-shell.md)

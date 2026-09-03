@@ -153,4 +153,6 @@ No. Suspense coordinates what the user sees while waiting; it does not change wh
 **★ Why should a Server Component providing initial data not fetch it from your own Route Handler?**
 Because a server-side `fetch` is a real HTTP round trip to an absolute URL. At build time nothing is listening, so a prerendered component fails the build; at runtime it costs a trip out through your public domain to reach code in the same process. Call the same function the Route Handler calls. The handler still exists — the browser needs a URL for revalidation and polling — but the server does not use it.
 
-{/* FOOTER */}
+---
+
+← [BFF: security and caveats](13-bff-security-and-the-caveats-that-decide-when-not-to-use-one.md) · [Chapter 4 overview](01-explanation.md) · Next → [SWR: fetching and the server handoff](15-swr-in-the-app-router-fallbacks-keys-and-mutations.md)

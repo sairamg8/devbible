@@ -153,4 +153,6 @@ Only the configuration option. The reference states that the inlining behaviour 
 **★ In what units are `maxSize` and `maxBundleSize` expressed, and why does that matter?**
 Bytes of the gzip-compressed segment response. It matters because sizing them against uncompressed payloads — the numbers you see in an editor or a build listing — leads to thresholds several times off, producing either far more inlining than intended or none at all.
 
-{/* FOOTER */}
+---
+
+← [11b · Root params: restrictions and typing](11b-root-params-restrictions-and-typing.md) · [Chapter 2 overview](01-explanation.md) · Next → [13b · Prefetch control and link status](13b-prefetch-control-and-link-status.md)

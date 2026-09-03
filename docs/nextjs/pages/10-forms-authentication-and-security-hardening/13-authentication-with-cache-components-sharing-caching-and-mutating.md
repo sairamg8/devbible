@@ -283,4 +283,6 @@ It is for routes that depend on the URL — a `params` or `searchParams` value �
 **★ Why does `updateTag` sometimes appear to do nothing?**
 Because it only refreshes cache entries carrying a matching `cacheTag`, and there are two ways to have none: the read was never inside a cached scope (an uncached read has no tag to update), or the tag string differs between the read and the write. Defining the tag once in a shared module — the same helper used by `cacheTag` and by `updateTag` — removes the second failure entirely.
 
-{/* FOOTER */}
+---
+
+← [Auth with Cache Components: the session read](12-authentication-with-cache-components-reading-the-session.md) · [Chapter 10 overview](01-explanation.md) · Next → [The 2026 CVE record](14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md)

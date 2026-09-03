@@ -125,4 +125,6 @@ By adding Playwright for this class of test, or not adopting it. Upstream docume
 **★ How should a team treat an `instant()` failure on a pull request that did not touch the route?**
 As the intended behaviour of the suite, not as flakiness. These tests pin a property that edits anywhere in the shared tree can violate — a moved `<Suspense>` boundary, a new runtime API read in a layout. Retrying a red test throws away the only signal you get before users do. Open the Navigation Inspector on that navigation and compare the shell against what the test expects.
 
-{/* FOOTER */}
+---
+
+← [10 · The instant() Playwright helper](10-the-instant-playwright-helper.md) · [Chapter 13 overview](01-explanation.md) · Next → [12 · TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md)

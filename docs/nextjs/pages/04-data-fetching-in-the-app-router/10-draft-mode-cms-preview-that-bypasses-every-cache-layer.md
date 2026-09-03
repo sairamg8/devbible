@@ -269,4 +269,6 @@ It is an unauthenticated endpoint that grants a cache bypass. Any caller can obt
 **★ The CMS serves drafts from a different URL than published content. What changes?**
 Only where you read from. Branch the base URL on `isEnabled` inside your data function; everything else stays the same, because the cache bypass applies on both branches of the fork — the conditional decides the upstream, not whether caching is skipped. The page component still does not need to know it is previewing.
 
-{/* FOOTER */}
+---
+
+← [**Project Milestone:** scaffold SprintDesk](06-project-milestone-scaffold-sprintdesk.md) · [Chapter 4 overview](01-explanation.md) · Next → [Backend for Frontend: the API layer](11-backend-for-frontend-route-handlers-as-a-public-api-layer.md)

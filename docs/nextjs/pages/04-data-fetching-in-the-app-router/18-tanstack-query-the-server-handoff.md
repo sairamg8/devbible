@@ -154,4 +154,6 @@ Because the key is the join between the server-side dehydrated state and the bro
 **★ The hydrated data appears and is then immediately replaced by a client fetch. What did you forget?**
 `staleTime`. TanStack Query treats data as stale by default, so a hook mounting with hydrated data refetches at once, throwing away the server's work and producing a visible flash if the values differ. Setting `staleTime` on the shared options — 30 seconds in the documented example — defines a window in which the hydrated value is accepted as fresh.
 
-{/* FOOTER */}
+---
+
+← [TanStack Query: provider and client fetching](17-tanstack-query-in-the-app-router-provider-and-hydration.md) · [Chapter 4 overview](01-explanation.md) · Next → [TanStack Query with Cache Components](19-tanstack-query-with-cache-components-and-mutations.md)

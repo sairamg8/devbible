@@ -227,4 +227,6 @@ Not under Partial Prefetching. All hundred cards point at one route and therefor
 **★ Why is "remove `prefetch={true}`" the correct answer for a real-time widget?**
 Because a prefetch of content that must be fresh per request is stale by the time of the click, so the prefetch buys nothing and costs a server invocation per visible link. The content should sit behind a `<Suspense>` boundary and stream in after navigation; the shell shows its fallback, which is the same UI the user would have seen either way.
 
-{/* FOOTER */}
+---
+
+← [1 · What \"instant\" means](01-what-instant-means.md) · [Topic index](README.md) · Next → [3 · Per-link prefetching and adoption](03-per-link-prefetching-and-incremental-adoption.md)

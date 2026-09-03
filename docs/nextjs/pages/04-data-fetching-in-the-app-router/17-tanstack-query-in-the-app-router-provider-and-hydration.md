@@ -192,4 +192,6 @@ Because a query client and a client-component boundary are costs, and a root pro
 **★ Rendering a `QueryClientProvider` in a layout makes its children Client Components. True or false?**
 False. `Providers` itself is a Client Component, but `{children}` are passed in as an already-rendered prop from the Server Component layout above, so they keep their own environment. Only components imported *into* a `'use client'` module cross the boundary; children passed through it do not.
 
-{/* FOOTER */}
+---
+
+← [SWR with Cache Components and mutations](16-swr-with-cache-components-and-mutations.md) · [Chapter 4 overview](01-explanation.md) · Next → [TanStack Query: the server handoff](18-tanstack-query-the-server-handoff.md)

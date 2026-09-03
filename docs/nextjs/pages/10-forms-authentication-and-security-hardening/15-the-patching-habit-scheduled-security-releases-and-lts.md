@@ -172,4 +172,6 @@ As an input-validation boundary rather than a convenience list. Every allowed ho
 **★ What is the correct sequence when a critical patch also removes a feature?**
 Ship the patch, then handle the behaviour change. The AVIF fix disabled AVIF optimization outright because the real fix had to land upstream, so upgrading changed what the image pipeline emitted. That is a genuine product change and still not a reason to run an unauthenticated RCE for another sprint. Decide the policy in advance, so the decision is not being made under pressure by whoever happens to be on call.
 
-{/* FOOTER */}
+---
+
+← [The 2026 CVE record](14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md) · [Chapter 10 overview](01-explanation.md)

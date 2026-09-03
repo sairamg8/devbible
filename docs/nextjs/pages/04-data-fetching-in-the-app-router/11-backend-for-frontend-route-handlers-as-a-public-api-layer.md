@@ -274,4 +274,6 @@ A Server Component reads its data directly from the source; that is the default 
 **★ Why does the documented weather endpoint use `POST` for what is conceptually a read?**
 To keep latitude and longitude out of the URL. `GET` request URLs are cached and logged — by CDNs, by reverse proxies, by application logs, and in `Referer` headers on outbound links — so anything sensitive in a query string is copied into places you do not control. The choice is about where the data ends up, not about encryption.
 
-{/* FOOTER */}
+---
+
+← [Draft Mode](10-draft-mode-cms-preview-that-bypasses-every-cache-layer.md) · [Chapter 4 overview](01-explanation.md) · Next → [BFF: proxying, webhooks, callbacks](12-bff-proxying-webhooks-and-callback-routes.md)

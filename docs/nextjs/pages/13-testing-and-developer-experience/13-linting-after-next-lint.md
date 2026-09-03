@@ -282,4 +282,6 @@ Register `@next/eslint-plugin-next` directly and spread only `nextPlugin.configs
 **★ What is the `AGENTS.md` file `create-next-app` writes, and why does the block inside it keep coming back?**
 It is an instruction file for coding agents, included by default along with a `CLAUDE.md` that references it. `next dev` writes and maintains a version-matched block inside it that points agents at the docs bundled in `node_modules/next/dist/docs/`, so an agent works from the Next.js version you actually have rather than its training data. Deleting the block only produces an uncommitted change that the next `next dev` restores; the documented advice is to commit it.
 
-{/* FOOTER */}
+---
+
+← [12 · TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md) · [Chapter 13 overview](01-explanation.md)

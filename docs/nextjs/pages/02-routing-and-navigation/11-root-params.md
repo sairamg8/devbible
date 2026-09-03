@@ -255,4 +255,6 @@ An error at dev time or during the build, because the export name is derived fro
 **★ A clean CI checkout runs `tsc` and cannot resolve `lang` from `next/root-params`. Why?**
 Because those types are generated, not shipped — they are produced by `next dev`, `next build` or `next typegen`, the same as `PageProps` and `LayoutProps`. Run `next typegen` before the type-check step.
 
-{/* FOOTER */}
+---
+
+← [**Localized routing (i18n):** locale-prefixed routes, locale detection in `proxy.ts`, and diction…](08-localized-routing-i18n-locale-prefixed-routes-locale-detecti.md) · [Chapter 2 overview](01-explanation.md) · Next → [11b · Root params: restrictions and typing](11b-root-params-restrictions-and-typing.md)

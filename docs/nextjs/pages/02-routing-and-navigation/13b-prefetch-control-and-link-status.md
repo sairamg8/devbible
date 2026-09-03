@@ -207,4 +207,6 @@ Render it unconditionally at a fixed size with `visibility: hidden` and zero opa
 **★ A page in a Cache Components app still exports `revalidate = 60`. What do you tell the author?**
 That the option was removed when `cacheComponents` is enabled — along with `dynamic`, `dynamicParams` and `fetchCache` — and the replacement is `'use cache'` with a `cacheLife` profile. The same 16.0 change removed `experimental_ppr`, for which a codemod exists; PPR is now opted into with the `cacheComponents` config instead.
 
-{/* FOOTER */}
+---
+
+← [13 · Prefetch inlining](13-prefetch-inlining.md) · [Chapter 2 overview](01-explanation.md)

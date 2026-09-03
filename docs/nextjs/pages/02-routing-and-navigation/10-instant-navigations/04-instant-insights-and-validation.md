@@ -204,4 +204,6 @@ When the structural fix is not worth the work, or the route is not a priority �
 **★ Which routes does validation skip by default, and why does that matter?**
 The framework-synthesized `/_global-error` and `/_not-found` routes are excluded from implicit validation. It matters because those are the pages users reach when something has already failed, so a blocking not-found page compounds a bad moment. Opt them in explicitly with an `instant` export if the app leans on them.
 
-{/* FOOTER */}
+---
+
+← [3 · Per-link prefetching and adoption](03-per-link-prefetching-and-incremental-adoption.md) · [Topic index](README.md) · Next → [5 · Navigation Inspector and the fix loop](05-the-navigation-inspector-and-the-fix-loop.md)

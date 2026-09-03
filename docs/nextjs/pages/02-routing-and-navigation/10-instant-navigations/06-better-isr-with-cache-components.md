@@ -239,4 +239,6 @@ No. Every prerendered page costs build time and produces output that must be sto
 **★ Can you control how often a page upgrades?**
 Not in 16.3.4. Vercel describes an API to control upgrade frequency, for example based on traffic, as something they are exploring. The documented behaviour is that a page upgrades after its first visit and subsequent visitors receive the cached, upgraded result; anything beyond that is not something the docs settle today.
 
-{/* FOOTER */}
+---
+
+← [5 · Navigation Inspector and the fix loop](05-the-navigation-inspector-and-the-fix-loop.md) · [Topic index](README.md)

@@ -222,4 +222,6 @@ Observe, Test, Fix, Verify. Read the validation insights and pick the exact navi
 **★ You applied a fix, the insight cleared, and the shell looks exactly as it did before. What does that tell you?**
 That the refactor probably did not take effect. Identical before/after captures are the documented signature of a change that did not land — a boundary added around the wrong component, or a `'use cache'` whose `stale` time is under five minutes and therefore never reaches the App Shell. Verify with a capture, not with the absence of a warning.
 
-{/* FOOTER */}
+---
+
+← [4 · Instant Insights and validation](04-instant-insights-and-validation.md) · [Topic index](README.md) · Next → [6 · Better ISR](06-better-isr-with-cache-components.md)

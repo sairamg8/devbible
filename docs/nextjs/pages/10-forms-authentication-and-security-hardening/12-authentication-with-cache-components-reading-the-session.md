@@ -225,4 +225,6 @@ Incrementally. Instant-navigation validation will flag all of them, which is inf
 **★ What does `import 'server-only'` protect against in the session module?**
 An accidental import from a Client Component. Without it, importing `lib/session.ts` from a `'use client'` file compiles successfully and ships `SESSION_PASSWORD` and the session-unsealing logic into the browser bundle. With it, that import is a build error. It is one line and it converts a silent credential leak into a failed CI run.
 
-{/* FOOTER */}
+---
+
+← [CSP without nonces: SRI and static headers](11-csp-without-nonces-static-headers-sri-and-third-party-scripts.md) · [Chapter 10 overview](01-explanation.md) · Next → [Auth with Cache Components: sharing and caching](13-authentication-with-cache-components-sharing-caching-and-mutating.md)

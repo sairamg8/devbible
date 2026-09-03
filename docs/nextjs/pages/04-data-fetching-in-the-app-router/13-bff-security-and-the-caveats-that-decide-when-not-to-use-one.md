@@ -253,4 +253,6 @@ Because the counter is per instance, so the effective limit multiplies by the nu
 **★ Why does the guide recommend uploading files from the browser directly to storage?**
 To keep the bytes out of your function. Routing an upload through a Route Handler spends that function's memory, execution time and bandwidth, and on a serverless host you may not be able to buffer to disk at all. Uploading from the browser and storing the returned URI reduces request size and removes a path from attacker-supplied bytes to your process — which, given the 2026 image-decoder advisories, is a security argument as much as a performance one.
 
-{/* FOOTER */}
+---
+
+← [BFF: proxying, webhooks, callbacks](12-bff-proxying-webhooks-and-callback-routes.md) · [Chapter 4 overview](01-explanation.md) · Next → [Client-side data fetching: choosing](14-client-side-data-fetching-and-when-it-is-still-correct.md)

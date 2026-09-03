@@ -216,4 +216,6 @@ Returning visitors stop re-downloading unchanged assets after a deployment, beca
 **★ How does this interact with the adapter compatibility test suite?**
 The harness requires the logs script to print a `NEXT_SUPPORTS_IMMUTABLE_ASSETS:` marker, because whether the adapter supports immutable assets changes which URL shape the tests must assert — `/_next/static/immutable/*` without `?dpl`, versus deployment-scoped assets with it. Declaring support the storage layer has not implemented produces failures that look like CDN misconfiguration.
 
-{/* FOOTER */}
+---
+
+← [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md) · [Chapter 16 overview](01-explanation.md)

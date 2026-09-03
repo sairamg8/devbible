@@ -197,4 +197,6 @@ Whether `/_next/data/<buildId>/...` URLs are normalized during matching. It affe
 **★ Your platform runs middleware at the CDN edge. Which field decides whether to invoke it, and why is it pre-compiled?**
 `outputs.middleware.config.matchers`, and separately `routing.middlewareMatchers`. Each carries a `sourceRegex` plus `has`/`missing` conditions. They are pre-compiled so the edge can decide *not* to invoke the function — the decision has to be cheaper than the invocation, or matchers would be pointless.
 
-{/* FOOTER */}
+---
+
+← [Adapter output types](12-adapter-output-types-what-a-build-actually-is.md) · [Chapter 16 overview](01-explanation.md) · Next → [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md)

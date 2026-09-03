@@ -163,4 +163,6 @@ Yes, but not to 7. The floor is 5.1.0, raised as part of the 16.0 requirements a
 **★ CI type-checks a fresh clone and cannot find `PageProps`. What is missing?**
 The type generation step. `next-env.d.ts` and the route-aware helpers are generated during `next dev`, `next build` or `next typegen`, so a job that runs `tsc` on a clean checkout has nothing to resolve them against. Run `next typegen` first. The same reasoning is why `next-env.d.ts` should be gitignored rather than committed — it is generated output that Next.js manages.
 
-{/* FOOTER */}
+---
+
+← [10b · Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md) · [Chapter 13 overview](01-explanation.md) · Next → [13 · Linting after next lint](13-linting-after-next-lint.md)

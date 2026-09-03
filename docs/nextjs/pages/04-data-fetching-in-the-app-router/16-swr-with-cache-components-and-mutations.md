@@ -150,4 +150,6 @@ No. They govern separate caches — SWR's browser cache and the Next.js server c
 **★ What makes `cacheLife('max')` a defensible choice for a product read?**
 Only the presence of an invalidation path. The documented example pairs it with a `cacheTag` of the form `product:<id>` and a Server Action calling `updateTag`, so writes are what refresh the entry rather than time. Without that pairing, `max` is a permanently stale value with no mechanism to change. Lifetime and invalidation are one decision.
 
-{/* FOOTER */}
+---
+
+← [SWR: fetching and the server handoff](15-swr-in-the-app-router-fallbacks-keys-and-mutations.md) · [Chapter 4 overview](01-explanation.md) · Next → [TanStack Query: provider and client fetching](17-tanstack-query-in-the-app-router-provider-and-hydration.md)

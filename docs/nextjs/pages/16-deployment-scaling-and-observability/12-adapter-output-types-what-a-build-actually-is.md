@@ -255,4 +255,6 @@ Because Next.js allows exactly one middleware/proxy file per project. The output
 **★ An output has `runtime: 'edge'`. What should a new adapter do?**
 Support it if it must, but not build for it. The output-types reference annotates the field with a note that the Edge Runtime is deprecated, and the invoking-entrypoints page repeats the same guidance from the other direction: new routes should use the Node.js runtime. The Node.js entrypoint interface — `handler(req, res, ctx)` over `IncomingMessage`/`ServerResponse` — is the path that will still be there in two majors.
 
-{/* FOOTER */}
+---
+
+← [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md) · [Chapter 16 overview](01-explanation.md) · Next → [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md)

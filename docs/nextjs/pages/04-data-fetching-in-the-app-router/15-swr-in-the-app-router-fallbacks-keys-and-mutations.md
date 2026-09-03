@@ -256,4 +256,6 @@ So the fallback lives next to the component that consumes it. A root-level provi
 **★ A conditional SWR key is `null`, not `''`. Why does that distinction matter?**
 `null` is SWR's signal not to fetch at all, which is what an autocomplete needs before the user has typed. An empty string is a perfectly valid key, so SWR will fire a request against it — producing a request on first render against a URL that is missing its query, and a cache entry keyed on nothing.
 
-{/* FOOTER */}
+---
+
+← [Client-side data fetching: choosing](14-client-side-data-fetching-and-when-it-is-still-correct.md) · [Chapter 4 overview](01-explanation.md) · Next → [SWR with Cache Components and mutations](16-swr-with-cache-components-and-mutations.md)

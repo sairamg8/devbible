@@ -157,4 +157,6 @@ Because a test written against an already-passing route has never demonstrated t
 **★ What kinds of change do these tests catch that a code review of the route would not?**
 Changes made somewhere else entirely. The two examples the release notes give are a component that reads `cookies()` being added to a shared header, which de-opts the route to request-time rendering, and a `<Suspense>` boundary being moved during a refactor so part of the page starts blocking. Neither edit touches the route file, so neither would show up in a review of that route.
 
-{/* FOOTER */}
+---
+
+← [**Project Milestone:** SprintDesk test suite](05-project-milestone-sprintdesk-test-suite.md) · [Chapter 13 overview](01-explanation.md) · Next → [10b · Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md)

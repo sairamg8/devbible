@@ -207,4 +207,6 @@ Because it removes the largest source of divergence between Next.js and a third-
 **★ Both hooks are optional. What is a legitimate adapter that implements only one?**
 An observability or build-audit adapter implements `onBuildComplete` alone: it records route counts, output sizes and dependency traces for a platform's build analytics without changing anything. Conversely, an adapter that only needs to declare a platform capability — `supportsImmutableAssets`, a cache handler path, a forced `output` mode — implements `modifyConfig` alone and lets the platform's existing pipeline consume `.next/` as before.
 
-{/* FOOTER */}
+---
+
+← [**Project Milestone:** SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md) · [Chapter 16 overview](01-explanation.md) · Next → [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md)

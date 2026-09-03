@@ -265,4 +265,6 @@ It propagates trust: a script that satisfies the policy through its nonce is all
 **★ You inherit an app with a nonce CSP, no ISR, and a rising bill. What is the first question?**
 Whether the nonce is required. The docs list the legitimate triggers — a prohibition on `'unsafe-inline'`, sensitive data, specific inline scripts that must be allowed while others are blocked, or a compliance mandate. If none applies, a static CSP set through `next.config.js` headers, or the experimental SRI hash approach, restores static generation and CDN caching without weakening the actual threat model.
 
-{/* FOOTER */}
+---
+
+← [**Project Milestone:** SprintDesk auth (Auth.js), team-scoped authorization in the data layer, ha…](06-project-milestone-sprintdesk-auth-authjs.md) · [Chapter 10 overview](01-explanation.md) · Next → [CSP without nonces: SRI and static headers](11-csp-without-nonces-static-headers-sri-and-third-party-scripts.md)

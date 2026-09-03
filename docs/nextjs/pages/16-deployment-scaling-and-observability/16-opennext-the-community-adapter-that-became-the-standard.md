@@ -179,4 +179,6 @@ Probably not yet. The existing integrations predate the API and were built by re
 **★ Why did the Next.js team collaborate with OpenNext instead of competing with it?**
 Because OpenNext had already demonstrated both the demand and the shape of the solution, and because the framework's credibility depended on the answer. The team's stated position is that Next.js is used by millions of developers, that many of them run on infrastructure which is not Vercel, and that those developers deserve the same level of reliability and the same access to new features as everyone else. Making the same public contract serve Vercel's own adapter is what makes that claim checkable.
 
-{/* FOOTER */}
+---
+
+← [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md) · [Chapter 16 overview](01-explanation.md) · Next → [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md)

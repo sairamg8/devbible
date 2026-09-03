@@ -215,4 +215,6 @@ It must authenticate the caller — the documented handler compares a query-stri
 **★ Why is `proxy` alone insufficient as an authorization layer?**
 Because it is one filter in front of many entry points, and anything that bypasses it or routes around it reaches the data unguarded. The guide says so directly — `proxy` is not to be relied on alone for authentication and authorization — and the 2026 record supplies two concrete instances: a middleware/proxy bypass triggered by Turbopack plus a single `i18n.locales` entry, and global disclosure of Server Function endpoint IDs that lets an action be invoked without going through any page. Authorization has to be re-verified in the Route Handler or Server Action, next to the data.
 
-{/* FOOTER */}
+---
+
+← [Backend for Frontend: the API layer](11-backend-for-frontend-route-handlers-as-a-public-api-layer.md) · [Chapter 4 overview](01-explanation.md) · Next → [BFF: security and caveats](13-bff-security-and-the-caveats-that-decide-when-not-to-use-one.md)

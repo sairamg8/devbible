@@ -269,4 +269,6 @@ Only for compatibility with existing `runtime = 'edge'` routes. Both the output-
 **★ Is PPR resume required for a platform to support PPR?**
 No. The feature matrix marks "Edge Stitching" as *optional* for Partial Prerendering and states that all features work correctly from a single origin server. Resume is a performance-fidelity optimization that moves the shell to the edge; a container serving PPR from one origin is functionally correct and passes the same test suite.
 
-{/* FOOTER */}
+---
+
+← [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md) · [Chapter 16 overview](01-explanation.md) · Next → [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md)

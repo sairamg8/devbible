@@ -237,4 +237,6 @@ Because a destination cannot know which links target it. The link expresses inte
 **★ Is `prefetch = 'force-disabled'` an absolute guarantee?**
 No, on two counts. It does not prevent Next.js prefetching route metadata, and when a per-link prefetch runs for an ancestor segment, all downstream segments are included in that response — including `force-disabled` ones. It guarantees that the client will not request that segment's data *for a prefetch that targets it*, not that the data can never arrive early.
 
-{/* FOOTER */}
+---
+
+← [2 · Partial Prefetching and the App Shell](02-partial-prefetching-and-the-app-shell.md) · [Topic index](README.md) · Next → [4 · Instant Insights and validation](04-instant-insights-and-validation.md)

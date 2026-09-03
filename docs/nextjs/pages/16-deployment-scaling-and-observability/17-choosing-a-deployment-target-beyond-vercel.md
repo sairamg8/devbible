@@ -233,4 +233,6 @@ The App Router's rendering layer replaced web streams with native Node.js stream
 **★ When is a static export the right answer, and when is it a trap?**
 Right when the site genuinely has no server-side needs — documentation, marketing, a client-rendered SPA whose data comes from a separate API. A trap the moment authentication, ISR, Server Actions or dynamic Route Handlers appear on the roadmap, because export supports only `GET` handlers with `dynamic = 'force-static'` and nothing that needs the Next.js runtime. A container costs about the same effort and keeps every option available.
 
-{/* FOOTER */}
+---
+
+← [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md) · [Chapter 16 overview](01-explanation.md) · Next → [Immutable static assets](18-immutable-static-assets-across-deployments.md)

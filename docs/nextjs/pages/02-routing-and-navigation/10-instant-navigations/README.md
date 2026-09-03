@@ -44,4 +44,6 @@ export default nextConfig
 - Prefetch request volume and the `prefetch` segment config in isolation are in [13 · Prefetch inlining](../13-prefetch-inlining.md) and [13b · Prefetch control and link status](../13b-prefetch-control-and-link-status.md).
 - The `<Link>` and `useRouter` fundamentals this builds on are in [04 · Navigation mechanics](../04-navigation-mechanics-link-userouter-redirect-notfound.md) and [05 · Prefetching fundamentals](../05-prefetching-fundamentals-and-the-native-view-transitions-api.md).
 
-{/* FOOTER */}
+---
+
+Start → [1 · What "instant" means](01-what-instant-means.md)
