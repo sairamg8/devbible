@@ -73,7 +73,7 @@ recovery is the same. `FileNotFoundError` and `PermissionError` are both
 **2 · Am I catching a family on purpose?** `LookupError` for
 `KeyError`-or-`IndexError`, `ArithmeticError` for the numeric ones, `OSError` for
 "the operating system said no", and your own package's base class for "this
-library failed" — see **07 · Custom exceptions** *(not written yet)*.
+library failed" — see [07 · Custom exceptions](07-custom-exceptions.md).
 
 **3 · Is the distinction I need actually in the type, or in an attribute?**
 Sometimes the type is right and the discrimination is data:
@@ -148,7 +148,7 @@ defences:
 - At your own module boundaries, convert: catch the library's exception and raise
   your own, with `from` so the original survives. See
   [06b · Exception chaining](06b-exception-chaining.md) and
-  **07 · Custom exceptions** *(not written yet)*.
+  [07 · Custom exceptions](07-custom-exceptions.md).
 
 ## PEP 8's rule, from the other side
 
