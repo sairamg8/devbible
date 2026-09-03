@@ -70,7 +70,9 @@ A composite wrapper that enforces trace coherence across distributed hops:
 | **Local Parent Sampled** | In-process child span created | Inherits parent's sampled state |
 
 Without `ParentBased`, every hop rolls its own dice. If Service A calls Service B calls Service C, and all three run independent 10% ratio samplers:
-$$\text{Probability of complete trace} = 0.10 \times 0.10 \times 0.10 = 0.001 \quad (0.1\%)$$
+```text
+Probability of complete trace = 0.10 × 0.10 × 0.10 = 0.001   (0.1%)
+```
 
 99.9% of your traces become fragmented orphan spans. `ParentBased` guarantees that if Service A chooses to sample, Services B and C record their child spans unconditionally.
 
@@ -150,7 +152,7 @@ Head sampling makes the sampling decision at the root ingress of a trace (when t
 If downstream services use independent probabilistic sampling without considering parentage, the probability of capturing an end-to-end trace drops exponentially with every network hop (e.g. $0.1^3 = 0.001$). `ParentBased` sampling ensures that if the root service decides to sample a request, all downstream services respect the incoming `traceparent` sampled flag (`01`) and record their respective child spans, ensuring unbroken waterfalls.
 
 **★ How does `TraceIdRatioBased` determine whether a trace is sampled?**  
-The sampler extracts the lower 64 bits of the 128-bit `trace-id` (an unsigned 64-bit integer), normalizes it against the maximum unsigned 64-bit value ($2^{64}-1$) to produce a ratio between `0.0` and `1.0`, and compares it to the configured sampling probability. If the normalized value is strictly less than the configured ratio, the trace is sampled. Because the decision is a mathematical function of the trace ID, any service evaluating the same trace ID arrives at the identical decision.
+The sampler extracts the lower 64 bits of the 128-bit `trace-id` (an unsigned 64-bit integer), normalizes it against the maximum unsigned 64-bit value (`2^64 - 1`) to produce a ratio between `0.0` and `1.0`, and compares it to the configured sampling probability. If the normalized value is strictly less than the configured ratio, the trace is sampled. Because the decision is a mathematical function of the trace ID, any service evaluating the same trace ID arrives at the identical decision.
 
 **★ What happens if an attribute used for a sampling decision is added after `span.start()`?**  
 The attribute has zero effect on the sampling decision. OpenTelemetry head samplers evaluate `shouldSample()` once, before the span is instantiated. Attributes added after span creation (via `span.setAttribute()`) are stored on the span if sampled, but cannot retroactively change an unsampled decision.

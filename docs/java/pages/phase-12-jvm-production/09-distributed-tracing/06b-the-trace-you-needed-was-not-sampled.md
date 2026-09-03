@@ -114,10 +114,18 @@ App Fleet ──> Tier 1 OTel Collectors (Router with loadbalancing exporter)
 ### 2. Collector memory sizing
 A collector running tail sampling must hold thousands of active traces in RAM. The memory formula is:
 
-$$\text{RAM Required} = \text{Traces per second} \times \text{Average spans per trace} \times \text{Bytes per span} \times \text{decision\_wait (sec)} \times 1.5$$
+```text
+RAM required = traces per second
+             × average spans per trace
+             × bytes per span
+             × decision_wait (sec)
+             × 1.5
+```
 
 If your system processes 5,000 requests/sec with 10 spans per trace at 2 KB per span, a 10-second `decision_wait` requires:
-$$5{,}000 \times 10 \times 2{,}048 \times 10 \times 1.5 \approx 1.53\text{ GB RAM}$$
+```text
+5,000 × 10 × 2,048 × 10 × 1.5 ≈ 1.53 GB RAM
+```
 During traffic spikes, collector memory will surge, which is why the `memory_limiter` processor is mandatory.
 
 ## Gotchas
