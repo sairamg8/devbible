@@ -168,8 +168,7 @@ The motivating case in the docs is exactly the asynchronous one:
 > trace."*
 
 **A link is what you use when a parent-child edge would be a lie** — most often across a queue,
-where the consumer may run minutes later or fan one message out to many consumers.
-**03e · Propagation that breaks** *(not written yet)* returns to this.
+[03e · Propagation that breaks](03e-propagation-that-breaks.md) returns to this.
 
 ## Status
 

@@ -79,7 +79,7 @@ meaning.
 
 The uniform consequence: **a malformed header does not produce an error, it produces a new
 trace.** From the backend's perspective that is indistinguishable from the caller never having
-sent a header at all, which is why **03e** *(not written yet)* lists "a proxy that
+sent a header at all, which is why [03e](03e-propagation-that-breaks.md) lists "a proxy that
 rewrote the header case" alongside "a client that never injected one".
 
 ## What Spring Boot 4.1 does with it

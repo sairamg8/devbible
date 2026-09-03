@@ -114,7 +114,7 @@ three services, and the best one after. Before you commit:
   (**06b** *(not written yet)*).
 - **Propagation is where it actually breaks.** Every thread pool, every queue, every proxy is
   a place the context can be dropped, and a dropped context produces a *smaller, plausible
-  looking trace* rather than an error (**03e** *(not written yet)*).
+  looking trace* rather than an error ([03e](03e-propagation-that-breaks.md)).
 
 ## Gotchas
 
@@ -193,7 +193,7 @@ Because it is plausible. If the trace is missing you know you have no data. If t
 dropped at one hop, you get a complete-looking trace that simply ends, and the natural reading
 is "the downstream work took no time" or "the downstream service was never called". The
 downstream service is in fact doing the work, under a brand new trace ID nobody is looking at.
-That is why **03e** *(not written yet)* exists.
+That is why [03e](03e-propagation-that-breaks.md) exists.
 
 ---
 
