@@ -50,7 +50,7 @@ have more than one:
    the signal never reached the JVM at all — the shell-wrapper problem in
    [02b](02b-the-shell-that-swallowed-sigterm.md).
 2. **The application stops accepting before the routing layer stops sending**
-   (**08** *(not written yet)*) — the propagation gap above.
+   ([08](08-readiness-and-the-load-balancer.md)) — the propagation gap above.
 3. **In-flight requests are cut off** because the server does not drain, or drains for less
    time than the slowest request takes ([04](04-spring-graceful-shutdown.md)).
 4. **Something below the web layer closes first** — the connection pool, the cache client, a
@@ -84,7 +84,7 @@ its own page in this topic:
 
 1. **Receive the signal** — `SIGTERM` reaches the JVM, not a shell ([02](02-signals.md)).
 2. **Fail readiness first**, and keep serving, so the routing layer removes you before you stop
-   accepting (**08** *(not written yet)*).
+   accepting ([08](08-readiness-and-the-load-balancer.md)).
 3. **Stop accepting new work** at the network layer, while continuing to finish what is in
    flight ([04](04-spring-graceful-shutdown.md)).
 4. **Finish in-flight requests** inside a bounded grace period

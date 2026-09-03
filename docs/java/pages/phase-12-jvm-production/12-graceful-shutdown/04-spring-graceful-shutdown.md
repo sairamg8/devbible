@@ -80,7 +80,7 @@ with the specific answer for the three supported servers:
 
 🔴 **Stopping at the network layer means a connection refused or reset, not a tidy 503.** For a
 client this is indistinguishable from a crash — which is exactly why the readiness handshake in
-**08** *(not written yet)* matters: nothing should still be *sending* by the
+[08](08-readiness-and-the-load-balancer.md) matters: nothing should still be *sending* by the
 time this happens.
 
 ⚠️ **Persistent connections complicate it.** A keep-alive connection already established may

@@ -20,7 +20,7 @@ still reports success.**
 ## The order
 
 1. **Fail readiness.** Tell the routing layer to stop sending — and keep serving while that
-   propagates (**08** *(not written yet)*).
+   propagates ([08](08-readiness-and-the-load-balancer.md)).
 2. **Stop accepting new work.** The web server refuses new connections; message consumers stop
    fetching; schedulers stop firing new tasks.
 3. **Finish work in flight.** In-flight requests complete, in-flight messages are processed and

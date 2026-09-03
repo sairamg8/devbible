@@ -59,7 +59,7 @@ The documentation flags keep-alive as a complication:
 An established keep-alive connection can carry a *new* request into a server that has begun
 draining. Different servers handle that differently; the reference points at each server's
 `shutDownGracefully` API documentation. ⚠️ **In practice this is another argument for the
-readiness handshake** (**08** *(not written yet)*): the reliable way to stop
+readiness handshake** ([08](08-readiness-and-the-load-balancer.md)): the reliable way to stop
 new requests arriving on old connections is for the routing layer to stop using the instance
 before the drain begins.
 
