@@ -61,7 +61,10 @@ export const PINS = {
   },
   mongodb: {
     label: 'MongoDB', source: 'eol:mongodb', policy: 'latest',
-    pin: '8.0', checked: '2026-08-31', tracks: ['mongodb'], names: ['mongodb', 'mongo'],
+    // `nodejs` added 2026-09-03: `phase-6-data-access/05-mongodb-from-node.md`
+    // bolds a server version. ⚠️ `docs/java` is deliberately NOT here — its
+    // matches are *Spring Data MongoDB* 5.1, a different product.
+    pin: '8.0', checked: '2026-08-31', tracks: ['mongodb', 'nodejs'], names: ['mongodb', 'mongo'],
   },
   redis: {
     label: 'Redis', source: 'eol:redis', policy: 'latest',
@@ -138,7 +141,9 @@ export const PINS = {
   },
   next: {
     label: 'Next.js', source: 'npm:next', policy: 'latest',
-    pin: '16.3.1', checked: '2026-08-31', tracks: ['react'], names: ['next.js', 'next'],
+    // `nextjs` added 2026-09-03 — the track landed in commit `12349e4e` and the
+    // pin that governs it still pointed only at `react`.
+    pin: '16.3.1', checked: '2026-08-31', tracks: ['react', 'nextjs'], names: ['next.js', 'next'],
   },
   npm: {
     label: 'npm', source: 'npm:npm', policy: 'latest',
@@ -150,7 +155,9 @@ export const PINS = {
   },
   zod: {
     label: 'Zod', source: 'npm:zod', policy: 'latest',
-    pin: '4.4.3', checked: '2026-08-31', tracks: ['nodejs', 'expressjs'], names: ['zod'],
+    // `real-world` added 2026-09-03: 17 pages there bold **zod 4.4.3** and were
+    // invisible to the scan while it ignored `tracks`. Zod is a minor behind.
+    pin: '4.4.3', checked: '2026-08-31', tracks: ['nodejs', 'expressjs', 'real-world'], names: ['zod'],
   },
   valibot: {
     label: 'Valibot', source: 'npm:valibot', policy: 'latest',

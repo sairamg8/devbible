@@ -154,7 +154,7 @@ async function resolve(pin) {
  * that already exist (one product pinned at two versions across the corpus).
  */
 function scanPages() {
-  const hits = Object.fromEntries(Object.keys(PINS).map((k) => [k, {pages: 0, versions: {}, files: []}]));
+  const hits = Object.fromEntries(Object.keys(PINS).map((k) => [k, {pages: 0, versions: {}, weak: {}, files: []}]));
   const walk = (dir) => {
     for (const e of fs.readdirSync(dir, {withFileTypes: true})) {
       const p = path.join(dir, e.name);
@@ -163,7 +163,14 @@ function scanPages() {
       const lines = fs.readFileSync(p, 'utf8').split('\n').filter((l) => l.startsWith('> Verified:'));
       if (!lines.length) continue;
       const blob = lines.join(' ').toLowerCase();
+      // 🔴 A pin governs only the tracks it declares. Scanning all of `docs/`
+      // let one product's pages vote on another product's pin: `Spring Data
+      // MongoDB 5.1` and `Spring Data Redis 4.1` sit on `docs/java` pages and
+      // outvoted the real server pins, reporting two false mismatches for a
+      // week. The `tracks` field already says which directories a pin owns.
+      const track = path.relative(DOCS, p).split(path.sep)[0];
       for (const [key, pin] of Object.entries(PINS)) {
+        if (!pin.tracks.includes(track)) continue;
         for (const name of pin.names) {
           // `**node 24.19.0**`, `node 24.19.0`, `node@24.19.0`, `node v24`
           const esc = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -174,7 +181,15 @@ function scanPages() {
           if (!found.length) continue;
           hits[key].pages++;
           hits[key].files.push(path.relative(ROOT, p));
-          for (const v of found) hits[key].versions[v] = (hits[key].versions[v] ?? 0) + 1;
+          // 🔴 Only a BOLD version may decide that the corpus disagrees with
+          // pins.js. An unbolded number is usually a deliberate citation — the
+          // page ABOUT Podman 6 cites the v6.0.0 release notes, and the page
+          // about Storybook 10 cites the 9.0 migration guide. Both were
+          // reported as mismatches. Plain claims are still tallied, in `weak`,
+          // because a track that never bolds (Python: 269 pages) is a real
+          // finding of its own — just not a contradiction.
+          const tally = bold.length ? hits[key].versions : hits[key].weak;
+          for (const v of found) tally[v] = (tally[v] ?? 0) + 1;
           break;                                          // one hit per pin per page
         }
       }
@@ -199,6 +214,14 @@ const entries = await pool(Object.entries(PINS), async ([key, pin]) => {
     const ranked = s ? Object.entries(s.versions).sort((a, b) => b[1] - a[1]) : [];
     const modal = ranked[0]?.[0] ?? null;
     const minority = ranked.slice(1).map(([v, n]) => `${v}×${n}`);
+    // What the pages say when none of them bolds a version. Reported, never failed on.
+    const weakModal = s ? (Object.entries(s.weak).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null) : null;
+    // 🔴 Classify corpus-vs-pins on the SAME ladder as upstream drift, for the
+    // same reason: a page naming the line (`7.0` against a pin of `7.0.9`) is
+    // not disagreeing, and a patch difference (`4.1.0` vs `4.1.1`) is not work.
+    // A plain `cmp(...) === 0` called both of those defects, which is how four
+    // of six reported mismatches were noise.
+    const claimedDrift = modal && pin.pin ? drift(modal, pin.pin, pin.patchIndex) : null;
     return [key, {
       label: pin.label,
       source: pin.source,
@@ -214,7 +237,9 @@ const entries = await pool(Object.entries(PINS), async ([key, pin]) => {
       // What the pages themselves say, vs what pins.js declares. A mismatch is
       // the real defect; the trailing minority is context, not a failure.
       claimed: modal,
-      claimedMatchesPin: modal && pin.pin ? cmp(modal, pin.pin) === 0 : null,
+      claimedDrift,
+      claimedMatchesPin: claimedDrift === null ? null : claimedDrift === 'none',
+      unbolded: weakModal,
       minority: minority.length ? minority : null,
       error: up.error ?? null,
       note: pin.note ?? null,
@@ -225,7 +250,14 @@ const entries = await pool(Object.entries(PINS), async ([key, pin]) => {
 const pins = Object.fromEntries(entries);
 const at = (lvl) => entries.filter(([, p]) => p.drift === lvl).length;
 const events = entries.flatMap(([k, p]) => p.events.map((e) => ({pin: k, ...e})));
-const inconsistent = entries.filter(([, p]) => p.claimedMatchesPin === false).map(([k]) => k);
+// 🔴 Only a MINOR-or-worse disagreement is a defect. Patch and line-level
+// differences land in the JSON and are ignored by `--check`, exactly as a patch
+// bump upstream is ignored — a checker that cries wolf is muted, and then the
+// major that mattered is skimmed past.
+const inconsistent = entries.filter(([, p]) => p.claimedDrift === 'minor' || p.claimedDrift === 'major').map(([k]) => k);
+// Pages name the product but none bolds a version, so the corpus has no pin to
+// check. Not a contradiction — a gap in provenance, reported separately.
+const unbolded = entries.filter(([, p]) => p.pages && !p.claimed).map(([k]) => k);
 const unreachable = entries.filter(([, p]) => p.error && p.error !== 'offline').map(([k]) => k);
 
 // Per-language rollup: a track is as stale as its worst pin.
@@ -247,9 +279,9 @@ const json = JSON.stringify({
     pins: entries.length,
     current: at('none'), patch: at('patch'), minor: at('minor'), major: at('major'),
     unanchored: at('unanchored'), unreachable: unreachable.length,
-    inconsistent: inconsistent.length, events: events.length,
+    inconsistent: inconsistent.length, unbolded: unbolded.length, events: events.length,
   },
-  events, inconsistent, unreachable, tracks, pins,
+  events, inconsistent, unbolded, unreachable, tracks, pins,
 }, null, 2) + '\n';
 
 fs.writeFileSync(OUT, json);
@@ -257,13 +289,15 @@ console.log(`wrote ${path.relative(ROOT, OUT)}`);
 
 // ── report ──────────────────────────────────────────────────────────────────
 const ICON = {none: '✅', patch: '·', minor: '⚠️ ', major: '🔴', unanchored: '❔', unknown: '？', frozen: '🧊'};
+const isInconsistent = new Set(inconsistent);
 for (const [key, p] of entries) {
-  if (p.drift === 'none' && p.claimedMatchesPin !== false && !p.events.length) continue;
+  if (p.drift === 'none' && !isInconsistent.has(key) && !p.events.length) continue;
   const pages = p.pages ? ` ${p.pages}p` : '';
-  console.log(`${ICON[p.drift] ?? ' '} ${p.label.padEnd(18)} ${String(p.pin ?? '—').padEnd(10)} → ${String(p.latest ?? p.error).padEnd(10)}${pages}${p.claimedMatchesPin === false ? `  🔴 pages say ${p.claimed}` : ''}${p.minority ? `  (also ${p.minority.slice(0, 3).join(', ')})` : ''}`);
+  console.log(`${ICON[p.drift] ?? ' '} ${p.label.padEnd(18)} ${String(p.pin ?? '—').padEnd(10)} → ${String(p.latest ?? p.error).padEnd(10)}${pages}${isInconsistent.has(key) ? `  🔴 pages say ${p.claimed}` : ''}${p.minority ? `  (also ${p.minority.slice(0, 3).join(', ')})` : ''}`);
 }
+if (unbolded.length) console.log(`\n❔ no bolded version on any page — nothing to check against pins.js: ${unbolded.map((k) => PINS[k].label).join(', ')}`);
 for (const e of events) console.log(`📅 ${PINS[e.pin].label} — ${e.kind.toUpperCase()} for cycle ${e.cycle} on ${e.date} (${e.inDays} days)`);
-console.log(`\n${at('none')} current · ${at('patch')} patch · ${at('minor')} minor · ${at('major')} major · ${at('unanchored')} unanchored · ${inconsistent.length} inconsistent`);
+console.log(`\n${at('none')} current · ${at('patch')} patch · ${at('minor')} minor · ${at('major')} major · ${at('unanchored')} unanchored · ${inconsistent.length} inconsistent · ${unbolded.length} unbolded`);
 
 if (CHECK) {
   const fail = at('minor') + at('major') + events.length + unreachable.length;
