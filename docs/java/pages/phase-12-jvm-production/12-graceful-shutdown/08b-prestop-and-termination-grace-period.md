@@ -156,7 +156,7 @@ that can block is a way to guarantee every pod is SIGKILLed.
 moment your `preStop` does something — deregisters from a discovery service, posts a notification,
 writes a file — you have taken on a duplicate-execution problem in the one place where you have no
 logs and no error handling. This is the third place in this topic where the answer is idempotency;
-**09 · Idempotency as the backstop** *(not written yet)* is where it is finally addressed as a
+[09 · Idempotency as the backstop](09-idempotency-as-the-backstop.md) is where it is finally addressed as a
 subject rather than a footnote.
 
 ## Gotchas

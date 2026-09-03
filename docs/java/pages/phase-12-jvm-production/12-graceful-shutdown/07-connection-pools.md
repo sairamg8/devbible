@@ -127,8 +127,7 @@ abort survivable rather than catastrophic.
 **★ The data is safe; the *caller's knowledge* is not.** The write did not happen, but the caller
 saw a `SQLException` from which it cannot tell whether the commit landed. If the caller is an HTTP
 request, the client gets a 500 and may retry. If the caller is a message listener
-([06b](06b-message-consumers.md)), the message is redelivered. **09 · Idempotency as the backstop**
-*(not written yet)* is where that ambiguity is finally addressed, and this is the second of the
+([06b](06b-message-consumers.md)), the message is redelivered. [09 · Idempotency as the backstop](09-idempotency-as-the-backstop.md) is where that ambiguity is finally addressed, and this is the second of the
 three places in the topic that hands it the same problem.
 
 **★ The dangerous case is not one statement — it is a multi-statement unit that was not in a

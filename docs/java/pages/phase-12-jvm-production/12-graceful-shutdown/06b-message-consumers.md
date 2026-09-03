@@ -105,7 +105,7 @@ including the records you already processed successfully.** Not one record — u
 
 **★ `RECORD` narrows the window to one record and costs a commit per record.** That is the real
 trade, and it is a throughput decision rather than a correctness one, because the correctness
-answer is the same either way — see **09 · Idempotency as the backstop** *(not written yet)*. A
+answer is the same either way — see [09 · Idempotency as the backstop](09-idempotency-as-the-backstop.md). A
 consumer that is idempotent does not need a narrow window; a consumer that is not is broken at
 `RECORD` too, just less often.
 

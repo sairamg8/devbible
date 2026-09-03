@@ -97,7 +97,7 @@ its own page in this topic:
 🔴 **And accept that it is best-effort.** A node can vanish; a `SIGKILL` can arrive; a network
 partition can strand an in-flight request. Graceful shutdown reduces the number of failures it
 is possible to prevent — it does not make the system exactly-once
-(**09** *(not written yet)*).
+([09](09-idempotency-as-the-backstop.md)).
 
 ## The good news about Spring Boot 4.1
 
@@ -123,7 +123,7 @@ The dropped ones are not in your logs at all.
 
 ⚠️ **Client retries hide the problem and shift the cost.** An idempotent GET retried
 transparently is invisible; a non-idempotent POST retried is a duplicate
-(**09** *(not written yet)*).
+([09](09-idempotency-as-the-backstop.md)).
 
 ⚠️ **Scale-in has the same failure mode as a deploy** and is often more frequent. So does a
 node drain, a spot-instance reclaim and an eviction.

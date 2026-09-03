@@ -102,7 +102,7 @@ executors outlive the web layer's drain.
 managed executor.
 
 ⚠️ **A long-running upload cut mid-stream leaves a partial object** wherever it was being
-written. Idempotency and cleanup are the backstop (**09** *(not written yet)*).
+written. Idempotency and cleanup are the backstop ([09](09-idempotency-as-the-backstop.md)).
 
 ⚠️ **Clients differ in how they treat a WebSocket close code.** Choosing a code that signals
 "go away and reconnect" rather than "fatal error" is part of the design.
