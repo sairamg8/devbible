@@ -194,4 +194,4 @@ They use `inspect.signature(func)` to introspect the function's parameter names,
 
 ---
 
-← [Positional-only and keyword-only](03-positional-only-and-keyword-only.md) · [Topic index](README.md) · Next → **Scope and closures** *(not written yet)*
+← [Positional-only and keyword-only](03-positional-only-and-keyword-only.md) · [Topic index](README.md) · Next → [Scope and closures](../03-scope-and-closures/README.md)

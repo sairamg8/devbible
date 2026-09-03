@@ -29,7 +29,7 @@ You are done with this topic when you can explain why `def f(a, items=[])` share
 
 - **[Phase 1 — Assignment semantics and aliasing](../../phase-1-language-core/07-assignment-and-aliasing/README.md)** — explains why mutable objects passed as arguments or stored as defaults mutate across references.
 - **[Topic 01 — `def` and `return`](../01-def-and-return/README.md)** — establishes `def` as an executable runtime statement where parameter evaluation occurs.
-- **Topic 03 — Scope and closures** *(not written yet)* — explores how parameters form local variable scopes and bind free variables in closures.
+- **[Topic 03 — Scope and closures](../03-scope-and-closures/README.md)** — explores how parameters form local variable scopes and bind free variables in closures.
 - **Topic 05 — Decorators** *(not written yet)* — relies directly on `*args, **kwargs`, `functools.wraps`, and `ParamSpec` to preserve caller contracts.
 
 ---
