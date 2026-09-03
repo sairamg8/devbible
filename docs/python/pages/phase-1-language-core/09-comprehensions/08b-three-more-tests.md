@@ -220,4 +220,4 @@ line can hold a comment, a ticket number and a `git blame`.
 
 ---
 
-← Prev: [When it should have been a loop](08-when-it-should-have-been-a-loop.md) · Index: [Comprehensions](README.md) · Next → **When the comprehension is right** *(not written yet)*
+← Prev: [When it should have been a loop](08-when-it-should-have-been-a-loop.md) · Index: [Comprehensions](README.md) · Next → [When it is right](09-when-the-comprehension-is-right.md)
