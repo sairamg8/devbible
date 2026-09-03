@@ -23,12 +23,12 @@ Two rows here are tiered **Master** because they produce the bugs that survive
 review: a signature that grows badly, and a closure that captures a loop
 variable by reference and hands every callback the last value.
 
-🚧 **In flight — 1 of 10.** Phase 1 is 13 of 16 with three topics in flight.
+🚧 **In flight — 2 of 10.** Phase 1 is 13 of 16 with three topics in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
 | 01 | **[def and return](./01-def-and-return/README.md)** | <span className="db-tier t-understand">Understand</span> | Functions as first-class values, and the forgotten return |
-| 02 | **Parameters in full** *(not written yet)* | <span className="db-tier t-master">Master</span> | Defaults evaluated once, `*args`/`**kwargs`, keyword-only, positional-only |
+| 02 | **[Parameters in full](./02-parameters-in-full/README.md)** | <span className="db-tier t-master">Master</span> | Defaults evaluated once, `*args`/`**kwargs`, keyword-only, positional-only |
 | 03 | **Scope and closures** *(not written yet)* | <span className="db-tier t-master">Master</span> | LEGB, `global`/`nonlocal`, and the late-binding loop bug |
 | 04 | **`lambda`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | Idiomatic as `key=`, a smell as a named function |
 | 05 | **Decorators** *(not written yet)* | <span className="db-tier t-master">Master</span> | Written from scratch, `functools.wraps`, arguments, stacking |

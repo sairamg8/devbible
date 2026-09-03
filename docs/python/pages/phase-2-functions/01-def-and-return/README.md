@@ -26,7 +26,7 @@ You are done with this topic when you can explain why `button.on_click(handler()
 
 - **[Phase 1 — Assignment semantics and aliasing](../../phase-1-language-core/07-assignment-and-aliasing/README.md)** — explains why function names are references to callable objects in heap memory rather than compile-time symbols.
 - **[Phase 1 — `None` and the no-result contract](../../phase-1-language-core/14-none-and-no-result/README.md)** — details the convention of distinguishing "no result found" from empty results and errors.
-- **Topic 02 — Parameters in full** *(not written yet)* — explores what happens to parameter definitions, default argument evaluation, and signature enforcement when `def` executes.
+- **[Topic 02 — Parameters in full](../02-parameters-in-full/README.md)** — explores what happens to parameter definitions, default argument evaluation, and signature enforcement when `def` executes.
 - **Topic 05 — Decorators** *(not written yet)* — builds directly upon first-class functions and runtime `def` execution to wrap and transform callables dynamically.
 
 ---

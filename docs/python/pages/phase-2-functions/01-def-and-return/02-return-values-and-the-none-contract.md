@@ -220,4 +220,4 @@ In a normal function, `return x` delivers `x` directly to the caller. In a gener
 
 ---
 
-← [The def statement and first-class functions](01-def-statement-and-first-class-functions.md) · [Topic index](README.md) · Next → **Parameters in full** *(not written yet)*
+← [The def statement and first-class functions](01-def-statement-and-first-class-functions.md) · [Topic index](README.md) · Next → [Parameters in full](../02-parameters-in-full/README.md)
