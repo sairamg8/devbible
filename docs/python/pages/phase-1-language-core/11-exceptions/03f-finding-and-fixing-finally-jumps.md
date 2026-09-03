@@ -179,7 +179,7 @@ code with this bug is code that will bite the day someone revives it.
 Cause: `SyntaxWarning` covers other compiler diagnostics, notably the
 `assert (x, "msg")` always-true tuple warning and invalid escape sequences in
 string literals. Fix: none needed — every one of those is also a real bug. See
-**10 · `assert`** *(not written yet)*.
+[10 · `assert`](10-assert.md).
 
 ## Interview questions
 

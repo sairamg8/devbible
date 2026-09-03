@@ -178,7 +178,7 @@ to whichever caller first tries to use the missing result, which is where you
 will read about it in a `TypeError: 'NoneType' object is not subscriptable`.
 Which of those a function should do is the
 `None`-versus-raise contract question, and it belongs to
-**`None`, and the "no result" contract** *(not written yet)*.
+[`None`, and the "no result" contract](../14-none-and-no-result/README.md).
 
 ## Gotchas
 

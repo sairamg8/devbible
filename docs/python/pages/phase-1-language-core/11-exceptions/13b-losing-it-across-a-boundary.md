@@ -1,7 +1,7 @@
 ---
 title: "The boundaries that drop a traceback for you: an un-awaited task, an unexamined future, another process, another thread"
 sidebar_label: "13b · Losing it across a boundary"
-sidebar_position: 135
+sidebar_position: 136
 ---
 
 <span className="db-tier t-master">Master</span>

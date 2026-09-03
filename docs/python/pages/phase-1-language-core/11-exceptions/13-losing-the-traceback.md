@@ -1,7 +1,7 @@
 ---
 title: "Six ways your own code throws the diagnosis away, and the one-line fix for each"
 sidebar_label: "13 · Losing the traceback"
-sidebar_position: 134
+sidebar_position: 135
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -50,7 +50,7 @@ log.error("could not process order", exc_info=exc)  # anywhere, given the object
 
 The docs are explicit that `Logger.exception` *"should only be called from an
 exception handler"*, and that `exc_info` accepts *"an exception tuple … or an
-exception instance"*. See **logging exceptions** *(not written yet)*.
+exception instance"*. See [logging exceptions](12-logging-exceptions.md).
 
 Worse than useless when the exception has no message: `str(SomeError())` is
 `''`, and the log line reads `could not process order: `.
@@ -68,7 +68,7 @@ This is not "handling"; it is deciding that no failure of `cache.delete` will
 ever matter, forever, including the ones that do not exist yet. If ignoring is
 genuinely right, say which error you are ignoring and why — see
 [the bare `except:`](04b-the-bare-except.md) and
-**`suppress` and warnings** *(not written yet)*.
+[`suppress` and the explicit ignore](11-suppress-and-the-explicit-ignore.md).
 
 ```python
 with contextlib.suppress(KeyError):     # names the error, and only that error
@@ -199,4 +199,4 @@ page is a variation of losing that object early.
 
 ------
 
-← Prev: **Logging exceptions** *(not written yet)* · Index: [Exceptions](README.md) · Next → [Losing it across a boundary](13b-losing-it-across-a-boundary.md)
+← Prev: [Logging exceptions](12-logging-exceptions.md) · Index: [Exceptions](README.md) · Next → [Losing it across a boundary](13b-losing-it-across-a-boundary.md)

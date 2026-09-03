@@ -95,7 +95,7 @@ finally:
 
 `contextlib.suppress` documents the intent in a way `try: ... except OSError:
 pass` does not — see
-**11 · `suppress`, warnings and the explicit ignore** *(not written yet)*.
+[11 · `suppress` and the explicit ignore](11-suppress-and-the-explicit-ignore.md).
 If the cleanup failure is worth knowing about but must not replace the original:
 
 ```python

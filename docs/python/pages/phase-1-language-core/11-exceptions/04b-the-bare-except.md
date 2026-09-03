@@ -68,7 +68,7 @@ The fix is one word:
 
 Now `KeyboardInterrupt` and `SystemExit` propagate, the loop's `finally` blocks
 run, and the process exits. (`logger.exception` rather than `logger.error` is the
-other half of the fix — see **13** *(not written yet)*.)
+other half of the fix — see [13](13-losing-the-traceback.md).)
 
 ## PEP 8's rule and its two exceptions
 
@@ -184,7 +184,7 @@ with contextlib.suppress(CacheMissError):
     cache.delete(key)
 ```
 
-See **11 · `suppress` and warnings** *(not written yet)*. A `pass` in a
+See [11 · `suppress` and the explicit ignore](11-suppress-and-the-explicit-ignore.md). A `pass` in a
 handler should always name a specific exception; a `pass` under `except
 Exception:` is nearly always an unfinished thought.
 

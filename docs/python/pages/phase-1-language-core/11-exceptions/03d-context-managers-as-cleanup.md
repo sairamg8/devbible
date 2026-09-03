@@ -132,7 +132,7 @@ def ignore_missing():
 
 Do that only when suppression is the documented purpose of the manager. There is
 already a built-in for the general case —
-**`contextlib.suppress`** *(not written yet)*.
+[`contextlib.suppress`](11-suppress-and-the-explicit-ignore.md).
 
 ## Gotchas
 

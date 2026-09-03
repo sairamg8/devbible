@@ -296,4 +296,4 @@ to `else` or out of the statement.
 
 ---
 
-← Prev: **`match` — structural pattern matching** *(not written yet)* · Index: [Exceptions](README.md) · Next → [The `else` clause](02-the-else-clause.md)
+← Prev: [`match` — structural pattern matching](../10-match-pattern-matching/README.md) · Index: [Exceptions](README.md) · Next → [The `else` clause](02-the-else-clause.md)
