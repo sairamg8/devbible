@@ -108,7 +108,7 @@ three services, and the best one after. Before you commit:
 - **Volume is per-span, not per-request.** One request through six services with a database
   call each is a dozen-plus spans. At 1,000 requests/second that is five figures of spans per
   second before sampling.
-- **You will not keep all of it**, which means **06 · Sampling** *(not written yet)* is not an
+- **You will not keep all of it**, which means [06 · Sampling](06-sampling.md) is not an
   optimisation you add later — it is a decision you make on day one, and the wrong decision is
   invisible until the day you need a trace that was never recorded
   (**06b** *(not written yet)*).

@@ -105,7 +105,7 @@ bits) of the Span Flags field are reserved for the 8 bits of Trace Context flags
 W3C Trace Context Level 2 Candidate Recommendation."*
 
 Why a *random* flag matters to a tracing pipeline: probability samplers hash the trace id
-(**06** *(not written yet)*), and a hash of a non-random id is not a fair coin. The flag lets a
+([06](06-sampling.md)), and a hash of a non-random id is not a fair coin. The flag lets a
 downstream sampler know whether the id it is about to hash was generated the way the sampling
 maths assumes.
 
@@ -123,7 +123,7 @@ And the precise semantics of the one flag defined in version `00`:
 
 Read that asymmetry carefully. **Set means "may have recorded"; unset means "did not."** A `1` is
 not a promise that the caller's spans exist — the caller's exporter may still drop them. A `0` is
-a statement of fact. That is why a downstream `ParentBased` sampler (**06** *(not written yet)*) treats
+a statement of fact. That is why a downstream `ParentBased` sampler ([06](06-sampling.md)) treats
 `0` as decisive and `1` as "follow the parent unless configured otherwise".
 
 The specification's guidance for a participant, all `SHOULD`:
