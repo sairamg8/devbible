@@ -479,7 +479,7 @@ export const LANGUAGES = {
       {n: 1, slug: '01-introduction-to-next-js', name: "Introduction to Next.js", part: 'Imported corpus', topics: 9, pages: 9},
       {n: 2, slug: '02-routing-and-navigation', name: "Routing and navigation", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 3, slug: '03-server-components-vs-client-components', name: "Server Components vs Client Components", part: 'Imported corpus', topics: 7, pages: 7},
-      {n: 4, slug: '04-data-fetching-in-the-app-router', name: "Data fetching in the App Router", part: 'Refreshed for 16.3', topics: 18, pages: 18},
+      {n: 4, slug: '04-data-fetching-in-the-app-router', name: "Data fetching in the App Router", part: 'Refreshed for 16.3', topics: 21, pages: 21},
       {n: 5, slug: '05-caching-ppr-and-cache-components', name: "Caching, PPR and Cache Components", part: 'Imported corpus', topics: 16, pages: 16},
       {n: 6, slug: '06-ssg-isr-and-ssr-strategy', name: "SSG, ISR and SSR strategy", part: 'Imported corpus', topics: 7, pages: 7},
       {n: 7, slug: '07-error-handling-loading-states-and-resilience', name: "Error handling, loading states and resilience", part: 'Refreshed for 16.3', topics: 14, pages: 14},
