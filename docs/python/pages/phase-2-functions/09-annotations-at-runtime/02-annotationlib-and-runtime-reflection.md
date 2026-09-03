@@ -134,4 +134,4 @@ No. It returns only the annotations defined directly on the specified class. To 
 
 ---
 
-← [Deferred evaluation & __annotate__](01-deferred-evaluation-and-the-annotate-protocol.md) · [Topic index](README.md) · Next → **Recursion and the limit** *(not written yet)*
+← [Deferred evaluation & __annotate__](01-deferred-evaluation-and-the-annotate-protocol.md) · [Topic index](README.md) · Next → [Recursion and the limit](../10-recursion-and-the-limit/README.md)
