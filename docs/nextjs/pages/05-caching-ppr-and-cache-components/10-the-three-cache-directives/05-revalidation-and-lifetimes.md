@@ -27,6 +27,9 @@ on-demand — are not alternatives; the useful configurations usually pair them.
 | **Time-based** | `cacheLife` | Content that drifts on its own — a list of recent posts |
 | **On-demand** | `cacheTag` + `revalidateTag` / `updateTag` | Content that changes at a known moment — a post its author edits |
 
+🔴 **`revalidateTag` takes a required second argument and `updateTag` is Server-Action-only —
+both are covered in [5b](05b-revalidatetag-and-updatetag.md).**
+
 A blog post that changes only when edited takes a long `cacheLife` such as `max` plus a
 `cacheTag`, invalidated on save. A list of recent posts that drifts through the day takes a
 shorter profile such as `hours` and refreshes itself with no manual invalidation.
@@ -248,16 +251,6 @@ the boundary.
 cannot resolve at build time.
 
 **Fix.** Use `fetch` deduplication, or keep cached and uncached contexts in separate stores.
-
-### Assuming `revalidateTag` and `updateTag` are interchangeable
-
-**Symptom.** A mutation appears not to take effect immediately for the user who made it.
-
-**Cause.** They are different tools for the same tag vocabulary — `updateTag` is the
-synchronous-mutation path, `revalidateTag` the general invalidation path.
-
-**Fix.** Use `updateTag` in the Server Action that performed the mutation, so the acting user
-sees their own write.
 
 ## Interview questions
 

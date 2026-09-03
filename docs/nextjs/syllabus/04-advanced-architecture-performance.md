@@ -48,7 +48,9 @@ sidebar_position: 4
     added to a shared header de-opts the route; a moved `<Suspense>` boundary starts blocking.
 - Type-safety as testing: strict TS config, typed routes, Zod contract tests.
   - ➕ **Missing: TypeScript 7** — a 10× native port, released 2026-07. `next build` can use
-    it for type checking via `useTypeScriptCli`. Floor stays TS 5.1.
+    it for type checking. ⚠️ **`experimental.useTypeScriptCli` is an opt-OUT** — the
+    project-local `tsc` is already the default; setting it `false` makes the build exit on
+    TS 7. Adopting TS 7 is just installing it. Floor stays TS 5.1.
 - Monorepos with Turborepo: shared packages, remote caching, CI pipelines.
   - ⚠️ **Linting moved.** `next build` no longer runs the linter; ESLint **or Biome** run
     from npm scripts, with the `next-lint-to-eslint-cli` codemod for old projects.

@@ -18,6 +18,19 @@ description: "Chapter 15 overview"
 
 Full-stack Next is **where React meets data**: serverless Postgres, ORMs/query builders, Route Handlers vs Server Actions, and realtime. Connection pooling and authorization matter more than which ORM logo you pick.
 
+:::warning `revalidateTag` signature changed — verified 2026-09-03
+
+The call below uses the **single-argument** form, which the current API reference marks
+**deprecated**. `revalidateTag` now takes a second `profile` argument saying how long stale
+content may still be served: `revalidateTag(tag, 'max')` for stale-while-revalidate, or
+`revalidateTag(tag, { expire: 0 })` to expire immediately. The no-profile form behaves like
+`{ expire: 0 }` and only works while TypeScript errors are suppressed.
+
+**Inside a Server Action, prefer `updateTag(tag)`** — it is the read-your-own-writes path, so
+the user who made the change sees it. See
+[the three cache directives, chunk 5b](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/05b-revalidatetag-and-updatetag.md).
+:::
+
 ## 1. Under-The-Hood Mechanics
 
 ### Data stack choices

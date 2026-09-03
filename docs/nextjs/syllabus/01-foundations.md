@@ -41,7 +41,7 @@ is **20.9**; the App Router bundles **React canary**.
   - ⚠️ **Shipped, and renamed.** GA in 16.3, opt-in behind `cacheComponents: true` + `partialPrefetching: true`. The real feature set: **Instant Insights**, **Partial Prefetching**, **Navigation Inspector**, better ISR, and the `instant()` Playwright helper. Vercel states these become the **default in a future major**.
 - The `proxy.ts` layer (successor to `middleware.ts`): request interception, rewrites, and its security limits (never as the sole auth gate).
 - **Localized routing (i18n):** locale-prefixed routes, locale detection in `proxy.ts`, and dictionary loading patterns.
-  - ➕ **Missing:** **root params** (`next/root-params`) — read `[lang]` from any Server Component with no prop-drilling, and inside `use cache` scopes. Also **`prefetchInlining`** and **`useLinkStatus`**.
+  - ➕ **Missing:** **root params** (`next/root-params`) — read `[lang]` from any Server Component with no prop-drilling, and inside `use cache` scopes. ⚠️ Most of the gaps are **permanent constraints**, not a roadmap: Server Actions and `unstable_cache` are not planned; **Route Handlers are the stated exception**. Also **`experimental.prefetchInlining`** (⚠️ already **on by default** — the flag only tunes or disables it) and **`useLinkStatus`**.
 
 ## 3 · Server Components vs. Client Components
 

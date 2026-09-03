@@ -33,6 +33,7 @@ storage locations with three different visibility guarantees.
 | 3 | [`use cache: remote`](03-use-cache-remote.md) | When a shared durable cache earns its cost, and the four cases where it is worse than nothing |
 | 4 | [`use cache: private`](04-use-cache-private.md) | The compliance escape hatch, and the two `cacheLife` thresholds that gate prefetching and the App Shell |
 | 5 | [Revalidation and lifetimes](05-revalidation-and-lifetimes.md) | Time-based vs on-demand; the `default` profile's real numbers; the nested short-lived build failure; the 50-second timeout |
+| 5b | [`revalidateTag` vs `updateTag`](05b-revalidatetag-and-updatetag.md) | The two-argument signature and its deprecated single-arg form; the profile that decides how long stale is served; why `updateTag` is Server-Action-only |
 
 ## The one-paragraph version
 
@@ -57,3 +58,5 @@ that protects a backend from one that is a network round trip attached to a perm
    of entries.
 5. **A hang and an immediate failure are different bugs.** Direct `cookies()` inside
    `use cache` fails at once; an *indirect* runtime Promise times out after 50 seconds.
+6. **`revalidateTag(tag)` is deprecated.** It takes a second `profile` argument now, and
+   inside a Server Action `updateTag(tag)` is usually what you actually want.

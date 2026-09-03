@@ -37,7 +37,10 @@ is TypeScript, ESLint, Tailwind, App Router, Turbopack and `AGENTS.md`, with imp
 
 **Also worth knowing:** Turbopack is the **default bundler** — `next dev --webpack` /
 `next build --webpack` opts out — and `next build` can type-check with **TypeScript 7** (a
-10× native port) via `useTypeScriptCli`. The TypeScript floor is still 5.1.
+10× native port). ⚠️ **`experimental.useTypeScriptCli` is an opt-OUT, not the switch that
+turns TS 7 on** — `next build` already runs your project-local `tsc` by default; adopting TS 7
+is just installing it. Setting the flag to `false` makes the build **exit** on TS 7. The
+TypeScript floor is still 5.1.
 :::
 
 ## 1. Under-The-Hood Mechanics
