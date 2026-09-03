@@ -652,13 +652,13 @@ export const LANGUAGES = {
   },
   python: {
     label: 'Python',
-    updated: '2026-09-03 19:13',
+    updated: '2026-09-03 19:23',
     docsPath: '/docs/python',
     pagesPath: '/docs/python/pages',
     phases: [
       {n: 0, slug: 'phase-0-runtime', name: 'The runtime', part: 'Foundations', topics: 12, pages: 12},
       {n: 1, slug: 'phase-1-language-core', name: 'Language core', part: 'Foundations', topics: 16, pages: 14, pagesPlanned: 16},
-      {n: 2, slug: 'phase-2-functions', name: 'Functions, closures and decorators', part: 'Foundations', topics: 10, pages: 3, pagesPlanned: 10},
+      {n: 2, slug: 'phase-2-functions', name: 'Functions, closures and decorators', part: 'Foundations', topics: 10, pages: 4, pagesPlanned: 10},
       {n: 3, slug: 'phase-3-collections', name: 'Collections in depth', part: 'Data model', topics: 12, pages: 0},
       {n: 4, slug: 'phase-4-classes-data-model', name: 'Classes and the data model', part: 'Data model', topics: 15, pages: 0},
       {n: 5, slug: 'phase-5-iterators-generators', name: 'Iterators, generators, context managers', part: 'Data model', topics: 10, pages: 0},

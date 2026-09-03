@@ -176,4 +176,4 @@ By wrapping the outer object in a `weakref.ref(obj)` before constructing the clo
 
 ---
 
-← [Closures and late-binding](03-closures-and-the-late-binding-trap.md) · [Topic index](README.md) · Next → **lambda** *(not written yet)*
+← [Closures and late-binding](03-closures-and-the-late-binding-trap.md) · [Topic index](README.md) · Next → [lambda](../04-lambda/README.md)
