@@ -88,7 +88,7 @@ operations the same way:
   parent of the span this service is about to create.
 
 The format is standardised: [W3C `traceparent`](03b-the-traceparent-header.md), plus
-`tracestate`, plus optionally B3 for older fleets (**03d** *(not written yet)*).
+[03c · `tracestate`](03c-tracestate-and-baggage.md), plus optionally B3 for older fleets ([03d](03d-b3-and-the-other-formats.md)).
 
 **The critical asymmetry: extraction is nearly always automatic and injection nearly always is
 not.** Any instrumented server framework extracts on the way in, because it owns the entry

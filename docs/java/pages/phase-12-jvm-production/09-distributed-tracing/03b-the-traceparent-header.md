@@ -143,7 +143,7 @@ The deferred design has to be fleet-wide or it silently drops the downstream hal
 
 **★ The third field is the caller's span id, not "the span id".** The spec names it `parent-id`
 for that reason. A receiver that copies it into its own span's id — which B3 implementations
-historically did on purpose (shared span ids; see **03d** *(not written yet)*) — is
+historically did on purpose (shared span ids; see [03d](03d-b3-and-the-other-formats.md)) — is
 producing a different tree than W3C tooling expects.
 
 **★ Comparing `trace-flags` as a number breaks the day the second bit is used.** Level 2 assigns

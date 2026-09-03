@@ -95,7 +95,7 @@ and `consume = List.of(PropagationType.values())`, which the reference documents
 
 So a Boot 4.1 service **emits only `traceparent`** and **accepts `traceparent`, single-header `b3`
 and the `X-B3-*` set** — the right shape for a fleet that is mid-migration from Zipkin-era formats
-(**03d** *(not written yet)*). The consume list is deliberately wide and the produce
+([03d](03d-b3-and-the-other-formats.md)). The consume list is deliberately wide and the produce
 list deliberately narrow: reading three formats costs a header lookup, writing three costs bytes
 on every outbound call forever.
 
