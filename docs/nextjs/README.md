@@ -91,7 +91,7 @@ own go-ahead:
 - **Extend to the ~15 documented concepts with no bullet anywhere**: `use cache: private` /
   `use cache: remote` (the largest single gap), `forbidden()`/`unauthorized()` +
   `authInterrupts`, Draft Mode, CSP, Authentication with Cache Components, Multi-tenant,
-  PWAs, `useLinkStatus`, `refresh()`, OpenNext and the 13-page Adapters section.
+  PWAs, `useLinkStatus`, `refresh()`, OpenNext and the 12-page Adapters section.
 
 ## Known defects carried over from the source
 
