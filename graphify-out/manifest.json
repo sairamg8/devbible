@@ -9924,9 +9924,9 @@
     "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
   },
   "src/data/progress.js": {
-    "mtime": 1788405968.9160614,
-    "seen": 1788407868.6219225,
-    "ast_hash": "a53873245d15536d6540863197334c72",
+    "mtime": 1788445720.1167893,
+    "seen": 1788447200.644024,
+    "ast_hash": "5da710c5052f2389d4dde9d0f4ab12b3",
     "semantic_hash": ""
   },
   "src/pages/index.js": {
@@ -9984,9 +9984,9 @@
     "semantic_hash": ""
   },
   "docs/README.md": {
-    "mtime": 1788406606.1491842,
-    "seen": 1788407868.621959,
-    "ast_hash": "84ed50cdb8a7916128376d68ec7ce83c",
+    "mtime": 1788445728.1198325,
+    "seen": 1788447200.6441305,
+    "ast_hash": "42c511bcf313a069e092e6082b0c94d8",
     "semantic_hash": ""
   },
   "docs/babel/README.md": {
@@ -24900,9 +24900,9 @@
     "semantic_hash": "35255790dc1a414bf02578f4b4c4a28d"
   },
   "docs/python/pages/README.md": {
-    "mtime": 1788272636.6097193,
-    "seen": 1788407868.6270757,
-    "ast_hash": "da152c77b26bf9f3aea72ca37dd5bcd5",
+    "mtime": 1788445723.711809,
+    "seen": 1788447200.6655462,
+    "ast_hash": "216e887875a65d87d4d2fc71384c7ad5",
     "semantic_hash": ""
   },
   "docs/python/syllabus/01-foundations.md": {
@@ -38772,8 +38772,8 @@
     "semantic_hash": ""
   },
   "static/currency.json": {
-    "mtime": 1788406855.8663685,
-    "seen": 1788407868.6219265,
+    "mtime": 1788430904.866669,
+    "seen": 1788441491.4001,
     "ast_hash": "14a9cb974b6c6f2baed40de9a18bc21c",
     "semantic_hash": ""
   },
@@ -40050,9 +40050,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/README.md": {
-    "mtime": 1788361412.7090375,
-    "seen": 1788407868.6274433,
-    "ast_hash": "151ccc426d78d27a40508deb05cb15b1",
+    "mtime": 1788445331.0611782,
+    "seen": 1788447200.6676676,
+    "ast_hash": "07b767262174de5d7564c56adff5d7b8",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-11-testing/12-real-world-scenarios/_category_.json": {
@@ -44514,15 +44514,15 @@
     "semantic_hash": ""
   },
   "docs/java/pages/phase-12-jvm-production/09-distributed-tracing/06-sampling.md": {
-    "mtime": 1788407722.345138,
-    "seen": 1788407868.6241946,
-    "ast_hash": "2ed45803ff4a6a3fd23c096da5481132",
+    "mtime": 1788439640.4004056,
+    "seen": 1788441491.4023721,
+    "ast_hash": "abe691fa1fcf27d4ff43469875940335",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-12-jvm-production/09-distributed-tracing/06b-the-trace-you-needed-was-not-sampled.md": {
-    "mtime": 1788407726.2111478,
-    "seen": 1788407868.6241956,
-    "ast_hash": "fcbc7cce92e873ddec006b3e8286422a",
+    "mtime": 1788439640.406435,
+    "seen": 1788441491.4023736,
+    "ast_hash": "46e3df3c8a9fa54deec4c8713ec11449",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-12-jvm-production/09-distributed-tracing/08-cost-and-overhead.md": {
@@ -45018,9 +45018,9 @@
     "semantic_hash": ""
   },
   "docs/nextjs/README.md": {
-    "mtime": 1788405994.5985813,
-    "seen": 1788407868.6261497,
-    "ast_hash": "e61c2005bc6db4683effaee1b45e54a9",
+    "mtime": 1788438374.3374503,
+    "seen": 1788441491.4040494,
+    "ast_hash": "a7611f9a104c694b6c1421c826178676",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/01-introduction-to-next-js/01-evolution-from-pages-router-to-app-router-why-app-router-is.md": {
@@ -45240,111 +45240,111 @@
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/01-explanation.md": {
-    "mtime": 1788399901.223637,
-    "seen": 1788407868.6261895,
-    "ast_hash": "8f9e34d7aa47319631be19124a295f61",
+    "mtime": 1788431672.0988705,
+    "seen": 1788441491.404091,
+    "ast_hash": "e148a0a6e849750a709dc39e400fefc7",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/01-fetch-in-server-components-automatic-request-deduplication.md": {
-    "mtime": 1788399901.2241359,
-    "seen": 1788407868.6261904,
-    "ast_hash": "50b0ff3884ee6f14801e6181a5b5cbb0",
+    "mtime": 1788438347.5290082,
+    "seen": 1788441491.4040918,
+    "ast_hash": "25c11cc6e43562a22e6c7e6a9a633981",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/02-async-components-streaming-with-suspense-granular-ui-blocks.md": {
-    "mtime": 1788399901.223945,
-    "seen": 1788407868.6261916,
-    "ast_hash": "e3910e4f741f1faac221734c007790e5",
+    "mtime": 1788438347.529328,
+    "seen": 1788441491.404099,
+    "ast_hash": "7413487cdbf0d8910e43ae7ef3e95ad0",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/03-static-vs-dynamic-rendering-force-dynamic-force-static-reval.md": {
-    "mtime": 1788399901.2244434,
-    "seen": 1788407868.6261923,
-    "ast_hash": "9f8f907d13fe1ae6e941671b492a825f",
+    "mtime": 1788438347.5295908,
+    "seen": 1788441491.4041018,
+    "ast_hash": "f47f1738b9f1ea9e078d0f663c4d4ccd",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/04-route-handlers-routets-for-restful-apis.md": {
-    "mtime": 1788399599.4812376,
-    "seen": 1788407868.626193,
-    "ast_hash": "f1af808621f24a065ef373a442a85d55",
+    "mtime": 1788438347.5299304,
+    "seen": 1788441491.404105,
+    "ast_hash": "9dba5a14cbe296fb53ca7455a11aa08f",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/05-server-actions-mutations-form-submissions-progressive-enhanc.md": {
-    "mtime": 1788399599.4815001,
-    "seen": 1788407868.626194,
-    "ast_hash": "8151e212e392120898fb9fe45bf7772a",
+    "mtime": 1788438347.530746,
+    "seen": 1788441491.4041107,
+    "ast_hash": "b1d12b182499ccb9d0e9fe08c4c0e844",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/06-project-milestone-scaffold-sprintdesk.md": {
-    "mtime": 1788399599.4817495,
-    "seen": 1788407868.626195,
-    "ast_hash": "3c89b0ff4a77327920889288f344715e",
+    "mtime": 1788438347.5314236,
+    "seen": 1788441491.404115,
+    "ast_hash": "116595985db699f36f48d3cd0af5c179",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/10-draft-mode-cms-preview-that-bypasses-every-cache-layer.md": {
-    "mtime": 1788407619.6035554,
-    "seen": 1788407868.626196,
-    "ast_hash": "250789bc81d81924c546e0425e65e7ab",
+    "mtime": 1788438347.5316875,
+    "seen": 1788441491.4041176,
+    "ast_hash": "0864215426e433415db0e66e696e96df",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/11-backend-for-frontend-route-handlers-as-a-public-api-layer.md": {
-    "mtime": 1788407619.6036673,
-    "seen": 1788407868.626197,
-    "ast_hash": "1e5ab8afcfa6726872030b88117eb07d",
+    "mtime": 1788438347.5317664,
+    "seen": 1788441491.4041183,
+    "ast_hash": "d09450d05fd38c48ddb23c7233c471c5",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/12-bff-proxying-webhooks-and-callback-routes.md": {
-    "mtime": 1788407619.6037679,
-    "seen": 1788407868.626198,
-    "ast_hash": "c3a8d84ce80604be3d02ec1fc5f94bad",
+    "mtime": 1788438347.5318341,
+    "seen": 1788441491.4041193,
+    "ast_hash": "2ec6263b9179cc66322db714d63c2c68",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/13-bff-security-and-the-caveats-that-decide-when-not-to-use-one.md": {
-    "mtime": 1788407619.6038706,
-    "seen": 1788407868.626199,
-    "ast_hash": "d70e8bb6f6487ac191b08fbe53b320e9",
+    "mtime": 1788438347.5319178,
+    "seen": 1788441491.40412,
+    "ast_hash": "4b9ab0b30428b0d2e135ed21e2423f11",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/14-client-side-data-fetching-and-when-it-is-still-correct.md": {
-    "mtime": 1788407619.603987,
-    "seen": 1788407868.6261997,
-    "ast_hash": "1e9317c35fa765a94813ab8bae5b5791",
+    "mtime": 1788438347.5319915,
+    "seen": 1788441491.4041212,
+    "ast_hash": "817e24feb71f25e8c2022f3830d00192",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/15-swr-in-the-app-router-fallbacks-keys-and-mutations.md": {
-    "mtime": 1788407619.6041,
-    "seen": 1788407868.626201,
-    "ast_hash": "7f1de8405e446ae0bdc27959b09f3c46",
+    "mtime": 1788438347.5320573,
+    "seen": 1788441491.4041219,
+    "ast_hash": "752eb1d47e86b4ca1cd6ddb623dbc2e1",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/16-swr-with-cache-components-and-mutations.md": {
-    "mtime": 1788407619.6041923,
-    "seen": 1788407868.6262016,
-    "ast_hash": "3896a142d57982d7b08b71aef31e6e69",
+    "mtime": 1788438347.532122,
+    "seen": 1788441491.4041228,
+    "ast_hash": "c5864b7dffae2f43bebb6a8a6f64decc",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/17-tanstack-query-in-the-app-router-provider-and-hydration.md": {
-    "mtime": 1788407619.6042984,
-    "seen": 1788407868.6262026,
-    "ast_hash": "87e36a2f2cda13c289ed2d5180b2aca3",
+    "mtime": 1788438347.5321958,
+    "seen": 1788441491.4041245,
+    "ast_hash": "d0755342d90a01cf443389ff5caa76ca",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/18-tanstack-query-the-server-handoff.md": {
-    "mtime": 1788407619.6044097,
-    "seen": 1788407868.6262035,
-    "ast_hash": "52adefcaff1995f379e0ff410ddafc43",
+    "mtime": 1788438347.5322587,
+    "seen": 1788441491.4041255,
+    "ast_hash": "a3e3cf97a195c3132cd06cf35bbff675",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/19-tanstack-query-with-cache-components-and-mutations.md": {
-    "mtime": 1788407735.6781716,
-    "seen": 1788407868.626205,
-    "ast_hash": "cc02ef506ec07073427c82b5185e7979",
+    "mtime": 1788438347.5323284,
+    "seen": 1788441491.4041264,
+    "ast_hash": "2ed0df50bf392e54a0e809d4d28a82aa",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/04-data-fetching-in-the-app-router/19b-tanstack-query-mutations-with-cache-components.md": {
-    "mtime": 1788407735.678741,
-    "seen": 1788407868.6262057,
-    "ast_hash": "5644a559d3f9fa1e7caa983c9081c670",
+    "mtime": 1788438347.5324078,
+    "seen": 1788441491.4041276,
+    "ast_hash": "8cf38ccbd831b96d6a0170c61bc4969f",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/05-caching-ppr-and-cache-components/01-explanation.md": {
@@ -45852,81 +45852,81 @@
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10-progressive-web-apps.md": {
-    "mtime": 1788406691.1817372,
-    "seen": 1788407868.6262825,
-    "ast_hash": "59f1aa84fdbab0dbdecdca695f59f0d8",
+    "mtime": 1788432715.76689,
+    "seen": 1788441491.404224,
+    "ast_hash": "aa3763b0fd56a1f27bff29f96e9de432",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10b-manifest-fields-that-change-behaviour.md": {
-    "mtime": 1788406832.2699897,
-    "seen": 1788407868.6262834,
-    "ast_hash": "8f21aa9e5597933146666f433e3340fa",
+    "mtime": 1788432715.7670538,
+    "seen": 1788441491.4042256,
+    "ast_hash": "e4e4ca4984826e3c2b6aeb424bd431a2",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10c-secondary-manifest-members-and-typing.md": {
-    "mtime": 1788406855.5840971,
-    "seen": 1788407868.626285,
-    "ast_hash": "954a3f56f5bba3318afffd6286b793d4",
+    "mtime": 1788432715.76715,
+    "seen": 1788441491.4042265,
+    "ast_hash": "dee3aa18b1d1153f114fb930f2140834",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10d-installability-and-the-install-prompt.md": {
-    "mtime": 1788406954.9058392,
-    "seen": 1788407868.6262858,
-    "ast_hash": "0d06ee4662fa7f33fc8de3dbc059fc99",
+    "mtime": 1788432715.7672658,
+    "seen": 1788441491.4042273,
+    "ast_hash": "60f805cf34fad5c6d1b9f056bf1c9684",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10e-detecting-install-state.md": {
-    "mtime": 1788406986.1578681,
-    "seen": 1788407868.6262867,
-    "ast_hash": "2334644add0a80318a5ba15356a46558",
+    "mtime": 1788432715.7673454,
+    "seen": 1788441491.4042287,
+    "ast_hash": "bef3e9aa1d5dc9f50cd660d7ecc78537",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10f-service-workers-in-the-app-router.md": {
-    "mtime": 1788407290.259353,
-    "seen": 1788407868.6262877,
-    "ast_hash": "5e75bbe9118d5910b9a1b941d0b85cba",
+    "mtime": 1788432715.7674177,
+    "seen": 1788441491.4042296,
+    "ast_hash": "1142a941a1d9d23cac2bf03fa2c71ffa",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10g-the-service-worker-update-lifecycle.md": {
-    "mtime": 1788407392.3999164,
-    "seen": 1788407868.6262884,
-    "ast_hash": "425462fac2c95f67937e7dc6b8012910",
+    "mtime": 1788432715.7674847,
+    "seen": 1788441491.4042304,
+    "ast_hash": "3845944b682aec4d65cc9210aa77b2a4",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10h-service-worker-update-detection-and-recovery.md": {
-    "mtime": 1788407392.4113047,
-    "seen": 1788407868.6262894,
-    "ast_hash": "0763462c1c1f80b96ad8e6cedbb61c18",
+    "mtime": 1788432715.7675557,
+    "seen": 1788441491.4042313,
+    "ast_hash": "c061b7048668313a6efff466bda32e26",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10i-offline-strategy-and-the-useoffline-boundary.md": {
-    "mtime": 1788407476.070516,
-    "seen": 1788407868.62629,
-    "ast_hash": "30620cf4780a934a62783f3380c07868",
+    "mtime": 1788432715.7676373,
+    "seen": 1788441491.4042325,
+    "ast_hash": "a2b7cfec3c13e5fc11a3d4f1907f5f98",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10j-caching-next-asset-classes-in-a-service-worker.md": {
-    "mtime": 1788407608.8036919,
-    "seen": 1788407868.626291,
-    "ast_hash": "ef094d541ef3a35b863cc73fc30975fb",
+    "mtime": 1788432715.768357,
+    "seen": 1788441491.4042335,
+    "ast_hash": "61e06247df87dac6a92e33317f0980f4",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10k-service-worker-cache-budget-and-eviction.md": {
-    "mtime": 1788407653.8033354,
-    "seen": 1788407868.6262925,
-    "ast_hash": "c9dba3bb07edc06bf47364ec83b8ea3d",
+    "mtime": 1788432715.768443,
+    "seen": 1788441491.4042342,
+    "ast_hash": "a622dc085ce21de31e0af01b900104bb",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10l-web-push-the-subscription-flow.md": {
-    "mtime": 1788407783.40787,
-    "seen": 1788407868.626293,
-    "ast_hash": "c4cad011ebca601f05874af0fd667f68",
+    "mtime": 1788432715.7685275,
+    "seen": 1788441491.4042354,
+    "ast_hash": "818a7512bcc4526ac2922d5cd7e28c96",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/12-seo-metadata-and-accessibility/10m-storing-push-subscriptions.md": {
-    "mtime": 1788407817.0258887,
-    "seen": 1788407868.626294,
-    "ast_hash": "a93edee8a6b5493985b689933ac65df3",
+    "mtime": 1788432715.7686067,
+    "seen": 1788441491.4042363,
+    "ast_hash": "0d0300fa121be7ed16bb4eddad9d8df5",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/13-testing-and-developer-experience/01-explanation.md": {
@@ -46044,9 +46044,9 @@
     "semantic_hash": ""
   },
   "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/01-explanation.md": {
-    "mtime": 1788403503.543131,
-    "seen": 1788407868.6263132,
-    "ast_hash": "3810e7c60d6e0994b8451f19c8689fba",
+    "mtime": 1788407977.2162783,
+    "seen": 1788441491.4042742,
+    "ast_hash": "8c26d17b03a39d7a9eab614cb603f761",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/15-databases-apis-and-full-stack-patterns/02-hybrid-api-design-route-handlers-and-server-actions-side-by.md": {
@@ -46656,9 +46656,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/05-truthiness/README.md": {
-    "mtime": 1788359961.6997705,
-    "seen": 1788407868.62734,
-    "ast_hash": "3338f8fcb7439c3fd5a4ad0098a1d703",
+    "mtime": 1788445331.0340643,
+    "seen": 1788447200.6669745,
+    "ast_hash": "1af7a728fb534034828c1ca7e25bdcaf",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/06-comparisons/01-the-six-operators.md": {
@@ -46956,9 +46956,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/07-assignment-and-aliasing/README.md": {
-    "mtime": 1788359944.4505057,
-    "seen": 1788407868.6273916,
-    "ast_hash": "84d08f8083de26049116d9586a36b731",
+    "mtime": 1788442821.2806528,
+    "seen": 1788447200.6672792,
+    "ast_hash": "71e76c527288e2c2d306ae3446bb7ac5",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/08-control-flow/01-the-for-statement.md": {
@@ -46980,9 +46980,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/08-control-flow/03-for-else-and-while-else.md": {
-    "mtime": 1788359671.5295513,
-    "seen": 1788407868.6273947,
-    "ast_hash": "ef21bdb667e9a2bc078f543d957a5013",
+    "mtime": 1788445331.0553555,
+    "seen": 1788447200.6672997,
+    "ast_hash": "c898bb173e002d2c0861ce170b87f826",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/08-control-flow/03b-nested-loops.md": {
@@ -46992,15 +46992,15 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/08-control-flow/04-break-continue-and-mutation.md": {
-    "mtime": 1788359961.700393,
-    "seen": 1788407868.627396,
-    "ast_hash": "fb248cb1535c8892c6b092cde47f9881",
+    "mtime": 1788442821.2803907,
+    "seen": 1788447200.667311,
+    "ast_hash": "0ac8842c88f08ee8dd6874ec6c7a771b",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/08-control-flow/README.md": {
-    "mtime": 1788359961.7003016,
-    "seen": 1788407868.627397,
-    "ast_hash": "b36a2c6cbff6f1cec58939bfc7a3a8e4",
+    "mtime": 1788445331.0549555,
+    "seen": 1788447200.6673164,
+    "ast_hash": "07e20067b09049ce31eee688ded9cea0",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/09-comprehensions/01-the-four-forms.md": {
@@ -47106,15 +47106,15 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/09-comprehensions/08b-three-more-tests.md": {
-    "mtime": 1788400938.0755775,
-    "seen": 1788407868.6274123,
-    "ast_hash": "16983e9a3375cb931a1992e19cb8d774",
+    "mtime": 1788442723.5334017,
+    "seen": 1788447200.6674137,
+    "ast_hash": "4eb9baf833f28780e57dc8ba02272f63",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/10-match-pattern-matching/01-what-match-is.md": {
-    "mtime": 1788360167.677026,
-    "seen": 1788407868.6274133,
-    "ast_hash": "d99050f672054872fd0e039fde90244e",
+    "mtime": 1788442821.2804952,
+    "seen": 1788447200.6674318,
+    "ast_hash": "094fad93decd71bd2734466a9d9b0ae8",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/10-match-pattern-matching/01b-capture-versus-value-patterns.md": {
@@ -47130,105 +47130,105 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/10-match-pattern-matching/03-guards-or-and-as.md": {
-    "mtime": 1788360386.6897333,
-    "seen": 1788407868.6274161,
-    "ast_hash": "2831293cd9ef0861abace92d7b5440ed",
+    "mtime": 1788445331.053981,
+    "seen": 1788447200.6674469,
+    "ast_hash": "e38c4063a6e1bfa50fff1fb658162c37",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/10-match-pattern-matching/README.md": {
-    "mtime": 1788360419.3070922,
-    "seen": 1788407868.6274168,
-    "ast_hash": "ada89a5ca5c741eb8b4da565aaadd12a",
+    "mtime": 1788445331.0531545,
+    "seen": 1788447200.6674519,
+    "ast_hash": "5c3e06ffc9576b129011e48416b79a07",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/01-the-four-clauses.md": {
-    "mtime": 1788400938.0760663,
-    "seen": 1788407868.6274176,
-    "ast_hash": "be3eb85d06209e29d730b4e051f7a058",
+    "mtime": 1788445210.502863,
+    "seen": 1788447200.6674569,
+    "ast_hash": "f84269128f05306cd7146d3fe1f47e79",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/02-the-else-clause.md": {
-    "mtime": 1788360396.1688375,
-    "seen": 1788407868.627419,
+    "mtime": 1788443643.605057,
+    "seen": 1788447200.667462,
     "ast_hash": "d1580c4e0df773adbadc45d8ae403e54",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03-finally-and-its-guarantees.md": {
-    "mtime": 1788361086.6636953,
-    "seen": 1788407868.62742,
+    "mtime": 1788443643.6057897,
+    "seen": 1788447200.6674676,
     "ast_hash": "4a4ee3708872633f75eed3e16c39e4b8",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03b-finally-cleanup-patterns.md": {
-    "mtime": 1788400938.0763357,
-    "seen": 1788407868.6274207,
-    "ast_hash": "68e6b6ec6b7073bd238aa84b9d2eadd5",
+    "mtime": 1788445196.264967,
+    "seen": 1788447200.6674721,
+    "ast_hash": "426b1c82e1f1840e0251e799dab4be27",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03c-cleanup-ownership-and-state.md": {
-    "mtime": 1788360736.0191963,
-    "seen": 1788407868.6274219,
+    "mtime": 1788443643.605317,
+    "seen": 1788447200.6674778,
     "ast_hash": "54844491d969881edb0d6817b8a8d2fe",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03d-context-managers-as-cleanup.md": {
-    "mtime": 1788400938.07652,
-    "seen": 1788407868.6274228,
-    "ast_hash": "8e66da9a9bd45369881ba183569a80aa",
+    "mtime": 1788445196.2656372,
+    "seen": 1788447200.6674829,
+    "ast_hash": "3114cb90f22919a2cb6afd1c6ead12df",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03e-return-break-continue-in-finally.md": {
-    "mtime": 1788360955.8351476,
-    "seen": 1788407868.6274235,
+    "mtime": 1788443643.6055505,
+    "seen": 1788447200.6674879,
     "ast_hash": "4bf2b66647f86c587371e3296bca266e",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03f-finding-and-fixing-finally-jumps.md": {
-    "mtime": 1788400938.0768383,
-    "seen": 1788407868.6274242,
-    "ast_hash": "c06b16145ca92e1cef981f556458e7e4",
+    "mtime": 1788445196.266095,
+    "seen": 1788447200.6674936,
+    "ast_hash": "a4839704e7b3e52918f6633112ce044f",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/03g-when-finally-does-not-run.md": {
-    "mtime": 1788361068.195583,
-    "seen": 1788407868.6274252,
+    "mtime": 1788443643.6059234,
+    "seen": 1788447200.6674986,
     "ast_hash": "377400452c4cb1ee865e8bc90a07e649",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/04-the-exception-hierarchy.md": {
-    "mtime": 1788400938.0770082,
-    "seen": 1788407868.6274266,
-    "ast_hash": "6ba2780175a7c655cff67e8f259e75d5",
+    "mtime": 1788445196.266717,
+    "seen": 1788447200.6675029,
+    "ast_hash": "d20111dc51c1f6f589681cd535253f40",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/04b-the-bare-except.md": {
-    "mtime": 1788400938.0772479,
-    "seen": 1788407868.6274273,
-    "ast_hash": "e1ea3f85255f94304a0412bcacd15aaa",
+    "mtime": 1788445196.2670827,
+    "seen": 1788447200.6675074,
+    "ast_hash": "205d50fe2b4bb7781f9020e1132a26bc",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/05-catching-specific-types.md": {
-    "mtime": 1788361359.9401789,
-    "seen": 1788407868.6274283,
+    "mtime": 1788443643.6068466,
+    "seen": 1788447200.6675127,
     "ast_hash": "f54c9ed443545c9be65f79d01a4dec7e",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/05b-choosing-the-exception-type.md": {
-    "mtime": 1788400938.077488,
-    "seen": 1788407868.6274295,
-    "ast_hash": "71ae5aa3a9099f8a478989704899e89a",
+    "mtime": 1788443643.6067343,
+    "seen": 1788447200.6675177,
+    "ast_hash": "79efde35f556c9daf3b42fa14db72431",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/05c-the-as-target-is-deleted.md": {
-    "mtime": 1788400938.0776486,
-    "seen": 1788407868.62743,
-    "ast_hash": "40a47ec830c8586980459e62a00a979a",
+    "mtime": 1788443982.2340193,
+    "seen": 1788447200.6675227,
+    "ast_hash": "06dcedbbb5b2a71b204eb2957986de83",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/06-the-raise-statement.md": {
-    "mtime": 1788400938.0778008,
-    "seen": 1788407868.6274307,
-    "ast_hash": "044243ab6cfcca5192caea97acb1334e",
+    "mtime": 1788445210.5034244,
+    "seen": 1788447200.667527,
+    "ast_hash": "135bbc1782f2e2da7f048b5cce8cfcb5",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/13-unpacking/01-tuple-assignment.md": {
@@ -47268,9 +47268,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/14-none-and-no-result/README.md": {
-    "mtime": 1788360944.8168335,
-    "seen": 1788407868.6274369,
-    "ast_hash": "137856e7d424db31e8c3e4e65818493a",
+    "mtime": 1788445331.0559583,
+    "seen": 1788447200.6676311,
+    "ast_hash": "f268cbd60034e04236a1efe5cd39c3b2",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/15-pep8-and-idiom/01-what-pep8-actually-says.md": {
@@ -47286,9 +47286,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/15-pep8-and-idiom/README.md": {
-    "mtime": 1788361380.9313061,
-    "seen": 1788407868.6274395,
-    "ast_hash": "14869734f241d50159630cb21b3eeb4d",
+    "mtime": 1788445331.0285802,
+    "seen": 1788447200.6676466,
+    "ast_hash": "ca5325d0833e686bf7b565bf14c80fdb",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/16-del-pass-ellipsis/01-del.md": {
@@ -47304,15 +47304,15 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/16-del-pass-ellipsis/README.md": {
-    "mtime": 1788361393.0625951,
-    "seen": 1788407868.627442,
-    "ast_hash": "afeda73b1348c34fd395b4911affb6ac",
+    "mtime": 1788445331.0325155,
+    "seen": 1788447200.6676624,
+    "ast_hash": "a7ce65fe63ef0d2896c28794c2596989",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/README.md": {
-    "mtime": 1788361522.3719733,
-    "seen": 1788407868.6274443,
-    "ast_hash": "f32c46214f31c1a10de77d51b315d58f",
+    "mtime": 1788445711.4757428,
+    "seen": 1788447200.667825,
+    "ast_hash": "b2a35096808e918b37f53e63a7278f75",
     "semantic_hash": ""
   },
   "docs/real-world/pages/phase-6-typescript/02-zod-as-the-source-of-truth/01-one-schema-two-artifacts.md": {
@@ -48447,6 +48447,594 @@
     "mtime": 1788157702.3318903,
     "seen": 1788407868.628699,
     "ast_hash": "0ee35e176e6c6981cd8dbe7a67b690e2",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/01-def-and-return/_category_.json": {
+    "mtime": 1788441204.300008,
+    "seen": 1788441491.3990643,
+    "ast_hash": "bc24a23e4e7cc4ac2ff5f2f49a7e5aab",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01b-server-actions-and-mutations.md": {
+    "mtime": 1788438347.5287297,
+    "seen": 1788441491.4040937,
+    "ast_hash": "8e1c64aac58e41469222fb79555e5adf",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01c-server-action-hooks-optimistic-ui-and-security.md": {
+    "mtime": 1788438347.5288634,
+    "seen": 1788441491.4040947,
+    "ast_hash": "160c91a6245ea8bb8bd7e6328181fc4b",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01d-route-handlers-and-their-caching-model.md": {
+    "mtime": 1788438347.5289414,
+    "seen": 1788441491.4040956,
+    "ast_hash": "d07ffb58d4597b2f84a5023852a21069",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01g-react-cache-connection-and-non-fetch-memoization.md": {
+    "mtime": 1788438347.5290895,
+    "seen": 1788441491.4040968,
+    "ast_hash": "41625e00743e233ce31d514a09c55545",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01h-parallel-and-sequential-fetching-and-the-shape-of-a-route.md": {
+    "mtime": 1788438347.5291698,
+    "seen": 1788441491.4040976,
+    "ast_hash": "011cdaad93fad5d081589936a79f688e",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/01i-co-location-preloading-and-where-the-fetch-call-belongs.md": {
+    "mtime": 1788438347.5292568,
+    "seen": 1788441491.4040983,
+    "ast_hash": "3944427417e08735e5e8d8f4f85af327",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/02b-where-to-put-boundaries-loading-js-and-granular-streaming.md": {
+    "mtime": 1788438347.5294094,
+    "seen": 1788441491.4041002,
+    "ast_hash": "1489099e5a179afbdce01e17c4d4dbca",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/02c-streaming-after-the-shell-status-codes-errors-and-infrastructure.md": {
+    "mtime": 1788438347.529485,
+    "seen": 1788441491.4041011,
+    "ast_hash": "a515ecb9bde08dee6b87bc6ff8004614",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md": {
+    "mtime": 1788438347.5297053,
+    "seen": 1788441491.4041026,
+    "ast_hash": "d5e68bd8291c1c075ee4a7d241ccc278",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md": {
+    "mtime": 1788438347.5298104,
+    "seen": 1788441491.4041038,
+    "ast_hash": "b90555e7404efe633f89ad0b796bf9c0",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/04b-constructing-the-response-status-codes-and-streaming.md": {
+    "mtime": 1788438347.5300481,
+    "seen": 1788441491.404106,
+    "ast_hash": "a9a71541c9882def50d3bdca9d07d901",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/04c-error-responses-a-client-can-branch-on.md": {
+    "mtime": 1788438347.5302055,
+    "seen": 1788441491.404107,
+    "ast_hash": "a5a0344b146a9e26622f31fcd04977f5",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/04d-cookies-headers-and-the-url.md": {
+    "mtime": 1788438347.5303366,
+    "seen": 1788441491.4041083,
+    "ast_hash": "4349a8895a6a53009a025a6329ef1d35",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/04e-reading-the-request-body-and-validating-at-the-boundary.md": {
+    "mtime": 1788438347.5304706,
+    "seen": 1788441491.404109,
+    "ast_hash": "7418537e0dd03cd863e5072df2b8c3ec",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/04f-caching-runtime-cors-and-the-public-endpoint-contract.md": {
+    "mtime": 1788438347.5306134,
+    "seen": 1788441491.4041097,
+    "ast_hash": "ea3dac4937c7186b73eccbfea129f8a9",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/05b-invoking-an-action-and-what-progressive-enhancement-really-buys.md": {
+    "mtime": 1788438347.5308962,
+    "seen": 1788441491.4041116,
+    "ast_hash": "05aced147f2daf16dd450c1bb55b3c8c",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/05c-what-crosses-the-wire.md": {
+    "mtime": 1788438347.531025,
+    "seen": 1788441491.404112,
+    "ast_hash": "2c2c54dee4475bc2c30ce5e2fb1029b4",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/05d-the-action-hooks-in-depth.md": {
+    "mtime": 1788438347.5311604,
+    "seen": 1788441491.404113,
+    "ast_hash": "dc8dbbb5c69466567d21c4138ccf302d",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/05e-errors-authorization-and-when-a-route-handler-is-the-right-tool.md": {
+    "mtime": 1788438347.5313137,
+    "seen": 1788441491.404114,
+    "ast_hash": "3fa0625eea70f16398d7a556f8050d4e",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/06b-the-routes-the-action-and-the-route-handler.md": {
+    "mtime": 1788438347.531513,
+    "seen": 1788441491.4041157,
+    "ast_hash": "9ff22f47202eee351dbf8a94f7e3597c",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/04-data-fetching-in-the-app-router/06c-acceptance-criteria-and-the-cache-components-variant.md": {
+    "mtime": 1788438347.531607,
+    "seen": 1788441491.4041164,
+    "ast_hash": "3d9f7f5750288d0dc13cfaa0e6395fbb",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10n-sending-push-from-the-server.md": {
+    "mtime": 1788432715.7686985,
+    "seen": 1788441491.4042373,
+    "ast_hash": "0bca212e968b69427249ec814d760377",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10o-push-in-the-service-worker.md": {
+    "mtime": 1788432715.7687736,
+    "seen": 1788441491.404238,
+    "ast_hash": "d5e2031dc88604ef3c226529c3c736a0",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10p-ios-and-safari-limits.md": {
+    "mtime": 1788432715.7688534,
+    "seen": 1788441491.404239,
+    "ast_hash": "e2f9dbaee05d08b2ca6e0b86e4880ef9",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10q-ios-storage-and-installed-app-containers.md": {
+    "mtime": 1788432715.7689352,
+    "seen": 1788441491.4042397,
+    "ast_hash": "705693382f01fe70262fa2d2a979881f",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10r-the-offline-write-queue-and-the-durable-outbox.md": {
+    "mtime": 1788432715.769029,
+    "seen": 1788441491.404241,
+    "ast_hash": "145d6f38f6542450c772325c6c061ea9",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10s-the-outbox-module-and-idempotent-delivery.md": {
+    "mtime": 1788432715.7691178,
+    "seen": 1788441491.4042423,
+    "ast_hash": "1f83187983dfb278d6b659f5f6988d5d",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10t-background-sync-registering-and-draining.md": {
+    "mtime": 1788432715.7692585,
+    "seen": 1788441491.404243,
+    "ast_hash": "eba3c1dfadd95fe379b82a0f2fa15465",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10t2-the-foreground-floor-and-draining-without-background-sync.md": {
+    "mtime": 1788432715.7693923,
+    "seen": 1788441491.4042437,
+    "ast_hash": "274c2a5b64b7abbd5c56e538a8ccc145",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10u-the-lighthouse-pwa-category-is-gone.md": {
+    "mtime": 1788432715.7694898,
+    "seen": 1788441491.4042444,
+    "ast_hash": "324fd00a6831d3fac53d788b3d6fa5f8",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10v-auditing-with-the-application-panel.md": {
+    "mtime": 1788432715.7695906,
+    "seen": 1788441491.4042451,
+    "ast_hash": "f88fd8b87450061f2bb710d802942ab8",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10w-a-testable-environment-https-and-a-production-build.md": {
+    "mtime": 1788432715.7696912,
+    "seen": 1788441491.4042459,
+    "ast_hash": "7a59cc228e4ff53c3476e32434dd1644",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10x-reproducing-the-failures-deliberately.md": {
+    "mtime": 1788432715.7697845,
+    "seen": 1788441491.4042466,
+    "ast_hash": "01369675a7db01f92193215f1795cfee",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10y-testing-offline-and-what-the-cache-really-holds.md": {
+    "mtime": 1788432715.7698832,
+    "seen": 1788441491.4042473,
+    "ast_hash": "584987bddcfbdd14b43d412abd607c2b",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10z-automating-with-playwright-and-the-pre-release-checklist.md": {
+    "mtime": 1788432715.7699742,
+    "seen": 1788441491.404248,
+    "ast_hash": "26b68840374c013851dd19390f171133",
+    "semantic_hash": ""
+  },
+  "docs/nextjs/pages/12-seo-metadata-and-accessibility/10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md": {
+    "mtime": 1788432715.7700763,
+    "seen": 1788441491.4042487,
+    "ast_hash": "1ce66ad96ad03da42d8cfdaa374c5470",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/01-def-and-return/01-def-statement-and-first-class-functions.md": {
+    "mtime": 1788441285.918343,
+    "seen": 1788441491.4053602,
+    "ast_hash": "35e48d2fbbb3a1cb57d6ad3586f71950",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/01-def-and-return/02-return-values-and-the-none-contract.md": {
+    "mtime": 1788442292.668144,
+    "seen": 1788447200.6676793,
+    "ast_hash": "7dd8b9d91abf51ae0a99365eaae4a700",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/01-def-and-return/README.md": {
+    "mtime": 1788442297.884202,
+    "seen": 1788447200.6676846,
+    "ast_hash": "73c1825fa0d91561cfd96511d47e4c4c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/_category_.json": {
+    "mtime": 1788441440.1879766,
+    "seen": 1788447200.6410618,
+    "ast_hash": "0c5b4c5c892973f12717bbce40388acf",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/_category_.json": {
+    "mtime": 1788442490.4553447,
+    "seen": 1788447200.641067,
+    "ast_hash": "1e1f0682a6673bf1134134baeea6175e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/04-lambda/_category_.json": {
+    "mtime": 1788443355.4191375,
+    "seen": 1788447200.64107,
+    "ast_hash": "b11cb7412e8ed239149551c237f02aed",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/_category_.json": {
+    "mtime": 1788443690.0875075,
+    "seen": 1788447200.6410728,
+    "ast_hash": "fd58d9a9d9f1ba434532c61a068b0cf6",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/06-functools/_category_.json": {
+    "mtime": 1788444609.254304,
+    "seen": 1788447200.641075,
+    "ast_hash": "68f52dd49f5cbc0d71ce2dd895f21392",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/07-callables-beyond-functions/_category_.json": {
+    "mtime": 1788444969.1447966,
+    "seen": 1788447200.6410775,
+    "ast_hash": "23145679a840afb0341690be4dd6ed58",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/08-docstrings/_category_.json": {
+    "mtime": 1788445191.9099364,
+    "seen": 1788447200.64108,
+    "ast_hash": "b5bcdadf832941f70d7ac01fd515953b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/09-annotations-at-runtime/_category_.json": {
+    "mtime": 1788445402.3190727,
+    "seen": 1788447200.641082,
+    "ast_hash": "fec4abc66e9799a787e06065c23bdbbe",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/10-recursion-and-the-limit/_category_.json": {
+    "mtime": 1788445624.7372742,
+    "seen": 1788447200.6410842,
+    "ast_hash": "41ee2a46b9c094ac4473a4424b495af2",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/09-comprehensions/09-when-the-comprehension-is-right.md": {
+    "mtime": 1788442702.2017007,
+    "seen": 1788447200.66742,
+    "ast_hash": "67c3656d178ec475d2e23fb4af0bd94d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/09-comprehensions/README.md": {
+    "mtime": 1788442723.5698009,
+    "seen": 1788447200.6674254,
+    "ast_hash": "a30c52993e91868489925ebbcfc6924e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/06b-exception-chaining.md": {
+    "mtime": 1788443643.607148,
+    "seen": 1788447200.6675315,
+    "ast_hash": "16de8e9f9d18d938a177fb56326ce8ee",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/07-custom-exceptions.md": {
+    "mtime": 1788443643.6075196,
+    "seen": 1788447200.667537,
+    "ast_hash": "1522074298253a1de9967ae7fb93b2d7",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/08-exception-groups.md": {
+    "mtime": 1788443783.2876334,
+    "seen": 1788447200.667542,
+    "ast_hash": "7a6603abeea99bc7a2e44fa58aba5d99",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/08b-split-subgroup-and-subclasses.md": {
+    "mtime": 1788443860.2872043,
+    "seen": 1788447200.667549,
+    "ast_hash": "7a9079630424492249ecf55dd2302780",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/08c-except-star-semantics.md": {
+    "mtime": 1788444106.5190566,
+    "seen": 1788447200.6675549,
+    "ast_hash": "ccb6ddd6229fc1e0ed97c91c92b6a69b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/09-traceback-objects.md": {
+    "mtime": 1788444091.6091568,
+    "seen": 1788447200.667559,
+    "ast_hash": "8cb0f9bdb2eba8ba19161f31a24a4d4b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/10-assert.md": {
+    "mtime": 1788445196.2686315,
+    "seen": 1788447200.667564,
+    "ast_hash": "aaedc1fd78c40bc0aac2601eeaeece5a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/11-suppress-and-the-explicit-ignore.md": {
+    "mtime": 1788445078.1063216,
+    "seen": 1788447200.6675687,
+    "ast_hash": "df22773cd99f346282c3b7318152eb6c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/11b-warnings.md": {
+    "mtime": 1788445196.269118,
+    "seen": 1788447200.667573,
+    "ast_hash": "70efc94468f5d72304335bd04048b12d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/12-logging-exceptions.md": {
+    "mtime": 1788445178.719865,
+    "seen": 1788447200.6675782,
+    "ast_hash": "fcf64a56b8b3541cf6539e718da7b7a4",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/13-losing-the-traceback.md": {
+    "mtime": 1788445196.2698095,
+    "seen": 1788447200.6675823,
+    "ast_hash": "54751d33f90227f32300e77461c1877a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/13b-losing-it-across-a-boundary.md": {
+    "mtime": 1788445108.1932325,
+    "seen": 1788447200.6675863,
+    "ast_hash": "c8684f6f3032098105ead495b65a9e23",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/11-exceptions/README.md": {
+    "mtime": 1788445276.8663952,
+    "seen": 1788447200.6675906,
+    "ast_hash": "2ab2a9c1ad2b9589676d02adbe81808c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/01-default-values-and-the-mutable-trap.md": {
+    "mtime": 1788441530.626348,
+    "seen": 1788447200.6676888,
+    "ast_hash": "a1613b7e5af32e6550a066b4b9c161ca",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/02-variadic-args-and-kwargs.md": {
+    "mtime": 1788441815.6905186,
+    "seen": 1788447200.6676939,
+    "ast_hash": "40b3a23bd84a78c798e1e1e1a4a3d83b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/03-positional-only-and-keyword-only.md": {
+    "mtime": 1788441840.2646196,
+    "seen": 1788447200.6676989,
+    "ast_hash": "66d1cc706e3f55417e23fba57f62a4dc",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/04-signature-design-and-evolution.md": {
+    "mtime": 1788442943.00438,
+    "seen": 1788447200.667704,
+    "ast_hash": "4f0a0c888a3d319f772d5c85b652b245",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/02-parameters-in-full/README.md": {
+    "mtime": 1788442948.9524462,
+    "seen": 1788447200.6677084,
+    "ast_hash": "deeae3ff28a71a9001db13b699cfb85b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/01-legb-and-unboundlocalerror.md": {
+    "mtime": 1788442677.520426,
+    "seen": 1788447200.6677136,
+    "ast_hash": "8b5ac0491c101e88dcc6a21724043577",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/02-mutating-enclosing-state-global-vs-nonlocal.md": {
+    "mtime": 1788442710.4347923,
+    "seen": 1788447200.6677182,
+    "ast_hash": "b75f6b57cc6cbb9a25238e544f109f7d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/03-closures-and-the-late-binding-trap.md": {
+    "mtime": 1788442741.1901345,
+    "seen": 1788447200.6677227,
+    "ast_hash": "fb95d8ecf79a6f0db5491bc19a37b5d7",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/04-closure-memory-retention-and-inspection.md": {
+    "mtime": 1788443583.2670703,
+    "seen": 1788447200.6677277,
+    "ast_hash": "70ab65144572a659ae428b177cdf8f04",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/03-scope-and-closures/README.md": {
+    "mtime": 1788442920.6091309,
+    "seen": 1788447200.6677318,
+    "ast_hash": "059f9171b56ec4f19b2823acf9696da5",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/04-lambda/01-syntax-restrictions-and-key-functions.md": {
+    "mtime": 1788443557.2419636,
+    "seen": 1788447200.6677353,
+    "ast_hash": "82a45ad0ab2391497b0889b938141c5e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/04-lambda/02-the-named-lambda-smell-and-pep8.md": {
+    "mtime": 1788444179.3915207,
+    "seen": 1788447200.6677399,
+    "ast_hash": "9a193a8bcb77324423dc1d9f366d3c27",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/04-lambda/README.md": {
+    "mtime": 1788444183.3595374,
+    "seen": 1788447200.6677442,
+    "ast_hash": "e14846e3fb1c3d7c9b7491d6e609aaaa",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/01-the-decorator-protocol-from-scratch.md": {
+    "mtime": 1788443878.1892776,
+    "seen": 1788447200.6677482,
+    "ast_hash": "080930bfc4b20050de8893674b9383e8",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/02-metadata-preservation-with-functools-wraps.md": {
+    "mtime": 1788443908.1944005,
+    "seen": 1788447200.667752,
+    "ast_hash": "d699a55ec9256bb555ee6bcd16645eb5",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/03-decorators-taking-arguments-and-factories.md": {
+    "mtime": 1788444138.6003516,
+    "seen": 1788447200.6677568,
+    "ast_hash": "1f49ac76f5d1932930652dd3a5ccacb8",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/04-stacking-decorators-and-class-decorators.md": {
+    "mtime": 1788444784.2530296,
+    "seen": 1788447200.6677635,
+    "ast_hash": "9cb3e3e1ecc9910e6ec5f439a6c86258",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/05-decorators/README.md": {
+    "mtime": 1788444800.5870974,
+    "seen": 1788447200.667768,
+    "ast_hash": "fce126ca8bc62a8fed711134f2beaf5d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/06-functools/01-partial-and-freezing-callables.md": {
+    "mtime": 1788444704.0797946,
+    "seen": 1788447200.6677725,
+    "ast_hash": "b59af1f8f9ee1c842a320684cd0adfb9",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/06-functools/02-lru-cache-and-unbounded-cache.md": {
+    "mtime": 1788444743.9868627,
+    "seen": 1788447200.667777,
+    "ast_hash": "d4ce6dc44c3f75e2f652478965273827",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/06-functools/03-singledispatch-and-reduce.md": {
+    "mtime": 1788445071.871288,
+    "seen": 1788447200.6677833,
+    "ast_hash": "aee63dfaa1c737be98ea1ea9e26f7a9b",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/06-functools/README.md": {
+    "mtime": 1788445078.0543213,
+    "seen": 1788447200.6677876,
+    "ast_hash": "942cf8ee30993674a6a409b762938a96",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/07-callables-beyond-functions/01-the-call-dunder-and-stateful-instances.md": {
+    "mtime": 1788445041.7521253,
+    "seen": 1788447200.6677916,
+    "ast_hash": "d54cfdfecccb40f3ec9936f70e01f4f1",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/07-callables-beyond-functions/02-bound-methods-and-the-reality-of-self.md": {
+    "mtime": 1788445317.722616,
+    "seen": 1788447200.6677952,
+    "ast_hash": "56fc15d37f1b80d2a5e7fd056f99c466",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/07-callables-beyond-functions/README.md": {
+    "mtime": 1788445053.1061866,
+    "seen": 1788447200.667798,
+    "ast_hash": "af5275c463f948112d883b06795e6ba6",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/08-docstrings/01-pep-257-and-major-docstring-formats.md": {
+    "mtime": 1788445288.3280616,
+    "seen": 1788447200.6678004,
+    "ast_hash": "0408d4c58fcaefb038d13f62605d6c2d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/08-docstrings/02-help-inspect-getdoc-and-doctest.md": {
+    "mtime": 1788445508.9256487,
+    "seen": 1788447200.6678038,
+    "ast_hash": "6bfd83d8eabc99745a4fe2293fec4797",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/08-docstrings/README.md": {
+    "mtime": 1788445519.6527066,
+    "seen": 1788447200.6678061,
+    "ast_hash": "b1a32c4cb8d0a36ae110f6399aeb03fc",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/09-annotations-at-runtime/01-deferred-evaluation-and-the-annotate-protocol.md": {
+    "mtime": 1788445478.3044832,
+    "seen": 1788447200.6678085,
+    "ast_hash": "e0b91a07fb0209ed58fb100315e75e5e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/09-annotations-at-runtime/02-annotationlib-and-runtime-reflection.md": {
+    "mtime": 1788445704.9787076,
+    "seen": 1788447200.6678114,
+    "ast_hash": "4a19f24c2898ffea3eaca3bbda4c877c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/09-annotations-at-runtime/README.md": {
+    "mtime": 1788445490.0245466,
+    "seen": 1788447200.6678135,
+    "ast_hash": "54cee16e7f9a77f5c735eb11d2523f84",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/10-recursion-and-the-limit/01-recursion-error-and-the-c-stack.md": {
+    "mtime": 1788445677.5255594,
+    "seen": 1788447200.6678162,
+    "ast_hash": "6111872e67937d15438ecebdcbec071d",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/10-recursion-and-the-limit/02-tail-call-optimization-and-iteration.md": {
+    "mtime": 1788445662.5964787,
+    "seen": 1788447200.6678195,
+    "ast_hash": "6fdd08ec42c8b0f93c1fe4c02eef1aec",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-2-functions/10-recursion-and-the-limit/README.md": {
+    "mtime": 1788445685.1956007,
+    "seen": 1788447200.6678216,
+    "ast_hash": "b771fc6804a4357555c453a16b7ed655",
     "semantic_hash": ""
   }
 }
