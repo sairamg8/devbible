@@ -95,8 +95,8 @@ Spring Framework 7 instruments its own code and publishes observations if an
 | `"tasks.scheduled.execution"` | *"Processing time for an execution of a `@Scheduled` task"* |
 
 Note the shape: a client/server pair for HTTP and a publish/process pair for JMS. The framework
-is already modelling the two-span structure for you. **05 · Wiring it in Spring
-Boot** *(not written yet)* covers what has to be true for these to fire, and
+is already modelling the two-span structure for you. [05 · Wiring it in Spring
+Boot](05-wiring-it-in-spring-boot.md) covers what has to be true for these to fire, and
 [03e](03e-propagation-that-breaks.md) covers the ones that require explicit registry wiring —
 `@Scheduled` and JMS both do.
 
