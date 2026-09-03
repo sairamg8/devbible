@@ -1,7 +1,7 @@
 ---
 title: "The SprintDesk routes, the createTask Server Action and the JSON Route Handler — where the two Suspense boundaries go, and why a hidden form field is re-validated on the server before anything is written"
 sidebar_label: "06b · Routes, action and handler"
-sidebar_position: 6.1
+sidebar_position: 26
 description: "Part two of the chapter 4 milestone: generateStaticParams for team slugs, a board page with two deliberate Suspense boundaries, a Server Action that revalidates by tag, the progressive-enhancement form, and a Route Handler that shares the cached read."
 ---
 

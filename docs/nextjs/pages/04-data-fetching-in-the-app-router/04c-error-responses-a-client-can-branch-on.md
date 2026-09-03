@@ -1,7 +1,7 @@
 ---
 title: "Every Route Handler eventually returns an error, and there are exactly two ways to get it wrong: shipping the caught exception's own message to the browser, and shipping a different envelope from every endpoint so no client can branch on any of them"
 sidebar_label: "04c · Error responses"
-sidebar_position: 4.2
+sidebar_position: 16
 description: "One error envelope served as application/problem+json, a wrapper that guarantees it on every path without swallowing redirect(), what must never appear in a body sent to a client, correlation ids, per-field validation errors, and Retry-After for 429 and 503."
 ---
 

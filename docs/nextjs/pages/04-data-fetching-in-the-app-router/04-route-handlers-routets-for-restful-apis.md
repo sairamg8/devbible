@@ -1,7 +1,7 @@
 ---
 title: "A route.ts file has no router inside it — the named exports ARE the routing table, which is why a verb you did not export is a 405 nothing in your code produced and why the export name, not the function, is the routing decision"
 sidebar_label: "04 · Route Handlers"
-sidebar_position: 4
+sidebar_position: 14
 description: "The seven verb exports and what the framework does with the ones you skip, how a REST resource maps onto the App Router file tree, choosing between POST/PUT/PATCH/DELETE on safety and idempotence, and the two optional handler parameters including the params promise."
 ---
 

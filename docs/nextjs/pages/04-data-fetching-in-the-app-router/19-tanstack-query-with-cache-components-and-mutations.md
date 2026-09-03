@@ -1,5 +1,5 @@
 ---
-sidebar_position: 19
+sidebar_position: 37
 title: "TanStack Query reads the clock, Cache Components forbids reading the clock during a prerender — so caching the server read means building the dehydrated state by hand"
 sidebar_label: "TanStack Query with Cache Components"
 description: "Caching the server read behind 'use cache' with cacheLife and cacheTag, why dehydrate() raises a current-time prerender error, a hand-built prerenderable hydration state, and coordinating optimistic mutations with updateTag."

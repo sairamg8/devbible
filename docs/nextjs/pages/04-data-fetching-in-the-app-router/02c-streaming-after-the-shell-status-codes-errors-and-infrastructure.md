@@ -1,7 +1,7 @@
 ---
 title: "The moment the first chunk leaves the server the status code is `200` and the headers are gone — so `notFound()`, `redirect()` and every thrown error after that point are handled inside the HTML, and half of production streaming bugs are a proxy that buffered the whole thing anyway"
 sidebar_label: "02c · streaming after the shell"
-sidebar_position: 2.2
+sidebar_position: 10
 description: "What happens once streaming has started: the committed HTTP status code, notFound and redirect mid-stream, error.js boundaries interacting with Suspense, bots and blocking metadata, and every layer that can buffer a streamed response."
 ---
 

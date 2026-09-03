@@ -1,7 +1,7 @@
 ---
 title: "There is no res in a Route Handler, so res.status, res.json, res.redirect and res.sendFile all become something you assemble — and the assembly is where a 204 throws, a redirect gets swallowed by your own try/catch, and a proxied download times out on the first large file"
 sidebar_label: "04b · Constructing the response"
-sidebar_position: 4.1
+sidebar_position: 15
 description: "Response.json versus the constructor, a status-code table for a real REST API, 201 with Location, why 204 must carry a null body, ETags and conditional GET, the two kinds of redirect and their different control flow, and streaming and file responses including the cancel callback everyone omits."
 ---
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 18
+sidebar_position: 36
 title: "The TanStack server handoff dehydrates a query that has not resolved yet — an unawaited prefetch, a shouldDehydrateQuery override, and a queryFn that is different on the server"
 sidebar_label: "TanStack Query: the server handoff"
 description: "Providing initial data from a Server Component with an unawaited prefetchQuery, dehydrating pending queries into a HydrationBoundary, overriding queryFn on the server, and the shared query-options contract with staleTime."

@@ -1,7 +1,7 @@
 ---
 title: "Request memoization is a per-render deduplication pass, not a cache — it matches only byte-identical GET calls, dies at the end of the render, and the moment two call sites drift apart it stops working with no error and no log line"
 sidebar_label: "01 · fetch and deduplication"
-sidebar_position: 1
+sidebar_position: 4
 description: "How request memoization actually works in Server Components: why it is a separate layer from the Data Cache, the exact identity rule that decides a hit, its per-render lifetime, opting out, and the places it does not apply."
 ---
 

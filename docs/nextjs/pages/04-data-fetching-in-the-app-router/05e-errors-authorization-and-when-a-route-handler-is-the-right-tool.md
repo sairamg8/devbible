@@ -1,7 +1,7 @@
 ---
 title: "An action that returns its failures keeps the user on the form and an action that throws them replaces the page — and the third decision, which nobody frames as a decision, is that some of what you are writing as a Server Action was always supposed to be a Route Handler"
 sidebar_label: "05e · Errors, authorization and choosing"
-sidebar_position: 5.4
+sidebar_position: 24
 description: "A discriminated result union the UI can switch on, unauthorized() and forbidden() under authInterrupts, why redirect() must not sit inside a try/catch, authorization as a separate question from validation, pairing the tag you invalidate with the tag your loader sets, and the decision table for action versus handler."
 ---
 

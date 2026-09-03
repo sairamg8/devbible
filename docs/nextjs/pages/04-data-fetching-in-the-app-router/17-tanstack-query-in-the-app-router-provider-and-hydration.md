@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 35
 title: "TanStack Query in the App Router needs one query client per server render and exactly one in the browser — get that branch wrong in either direction and you have a data leak or a useless cache"
 sidebar_label: "TanStack Query: provider and client fetching"
 description: "The per-render server query client and the singleton browser client, why the provider belongs in the nearest shared layout, and useQuery versus useSuspenseQuery including enabled, isFetching and array query keys."

@@ -1,7 +1,7 @@
 ---
 title: "The request body is a stream you may consume exactly once, which is why webhook signature verification is the shape it is — and why every FormData value is a string, an unchecked checkbox is absent rather than false, and an empty POST body becomes a 500 unless you catch it"
 sidebar_label: "04e · Reading the body"
-sidebar_position: 4.4
+sidebar_position: 18
 description: "json, text, formData, arrayBuffer and the raw stream; no bodyParser; single-use bodies and request.clone(); verifying a webhook signature over raw bytes; media-type and empty-body guards; what FormData can and cannot carry; and validating at the boundary with a schema the client can share."
 ---
 

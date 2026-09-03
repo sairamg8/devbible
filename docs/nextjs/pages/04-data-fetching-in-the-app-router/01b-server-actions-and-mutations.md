@@ -1,7 +1,7 @@
 ---
 title: "A Server Action is a public POST endpoint wearing a function call, and the API you choose to invalidate with is what decides whether the user sees their own write in the same response"
 sidebar_label: "01b · Server Actions: the model"
-sidebar_position: 0.1
+sidebar_position: 1
 description: "How 'use server' compiles to an endpoint, why a form's action prop is where progressive enhancement stops, why one response carries both the return value and re-rendered UI, updateTag versus revalidateTag, and the client's sequential dispatch."
 ---
 

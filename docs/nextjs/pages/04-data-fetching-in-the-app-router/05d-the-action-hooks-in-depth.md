@@ -1,7 +1,7 @@
 ---
 title: "useActionState is a reducer over the network — each dispatch receives the previous call's return value as its first argument — and the caveat that decides your error strategy is that a dispatch which throws cancels every queued action and hands control to the nearest Error Boundary"
 sidebar_label: "05d · The action hooks in depth"
-sidebar_position: 5.3
+sidebar_position: 23
 description: "The useActionState signature and its full caveat list, why a thrown action reaches an Error Boundary and a returned one does not, refilling a form the automatic reset just cleared, the key-remount trick, useFormStatus versus the third tuple element, and optimistic list keys and rollback."
 ---
 

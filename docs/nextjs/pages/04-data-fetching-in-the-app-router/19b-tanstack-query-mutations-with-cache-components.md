@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 38
 title: "One click updates two caches, and coordinating them is about identity and invalidation — never about matching their durations"
 sidebar_label: "TanStack Query: mutations with Cache Components"
 description: "The optimistic useMutation contract, the four-step order inside onMutate, resolving the user id server-side, and why updateTag rather than revalidateTag for the writer's own change."

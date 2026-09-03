@@ -1,7 +1,7 @@
 ---
 title: "Where you put an `await` decides the shape of the whole route — a dependency deserves a waterfall, an independent read never does, and one `await` at the top of a layout serialises and de-prerenders everything beneath it"
 sidebar_label: "01h · parallel and sequential fetching"
-sidebar_position: 1.2
+sidebar_position: 6
 description: "Parallel versus sequential data fetching in Server Components: why layouts and pages already render in parallel, how an await in the wrong place serialises a tree, Promise.all versus allSettled, the preload pattern, and why co-locating fetches beats prop drilling."
 ---
 

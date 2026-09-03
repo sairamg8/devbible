@@ -1,7 +1,7 @@
 ---
 title: "The React 19 action hooks give a form pending state, optimistic state and a returned result — and the one thing none of them give you is authorization, which has to be inside the action every single time"
 sidebar_label: "01c · Action hooks and security"
-sidebar_position: 0.2
+sidebar_position: 2
 description: "useActionState, useFormStatus and useOptimistic with the signatures as installed, a production add-to-cart that holds together, the Server Action security boundary, and the deployment failure mode nobody warns you about."
 ---
 

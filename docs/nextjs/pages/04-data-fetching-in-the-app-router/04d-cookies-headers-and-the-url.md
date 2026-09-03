@@ -1,7 +1,7 @@
 ---
 title: "Every input to a Route Handler has two doors — next/headers and NextRequest — and the one that surprises people is request.cookies.set, which mutates the request the server is holding and never reaches the browser at all"
 sidebar_label: "04d · Cookies, headers and the URL"
-sidebar_position: 4.3
+sidebar_position: 17
 description: "cookies() and headers() versus request.cookies and request.headers, why request.cookies.set never reaches a browser, the nextUrl surface, the ip and geo removal in v15.0.0, and query parameters that survive repeated keys and empty values."
 ---
 

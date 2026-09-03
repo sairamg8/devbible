@@ -1,7 +1,7 @@
 ---
 title: "Route Handlers have not been cached by default since Next 15, and every write-up that says a GET handler is statically evaluated unless you read a search param is describing a version you are not running"
 sidebar_label: "01d · Route Handlers"
-sidebar_position: 0.3
+sidebar_position: 3
 description: "route.ts as a Web-standard request handler: the supported verbs, why params is a Promise, the real caching default and how to opt back into static, what Cache Components changes, and why request memoization does not reach here."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Every argument to a Server Action and every value it returns is serialized across a network boundary, so the list of supported types is a hard API contract — and the entries most likely to bite are 'class instances are not supported' and 'events from event handlers are not supported'"
 sidebar_label: "05c · What crosses the wire"
-sidebar_position: 5.2
+sidebar_position: 22
 description: "The complete supported and unsupported type lists for Server Function arguments and return values, why an ORM row or a Decimal fails while a Date succeeds, why onClick={action} sends an event, promises as arguments, the 1MB body cap, and constraining returns."
 ---
 

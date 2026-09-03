@@ -1,7 +1,7 @@
 ---
 title: "How to prove the SprintDesk scaffold actually works — eight acceptance criteria you can check yourself, the deduplication step the scaffold is still missing, and the same milestone rebuilt with Cache Components on"
 sidebar_label: "06c · Acceptance criteria and Cache Components"
-sidebar_position: 6.2
+sidebar_position: 27
 description: "Part three of the chapter 4 milestone: React cache for non-fetch deduplication, eight checkable acceptance criteria, the phase gate, and the diff that converts the whole scaffold to use cache, cacheTag and updateTag."
 ---
 

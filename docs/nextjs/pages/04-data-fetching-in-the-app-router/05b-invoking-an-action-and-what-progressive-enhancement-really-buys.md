@@ -1,7 +1,7 @@
 ---
 title: "There are three ways to invoke a Server Action and only two of them wrap the call in a Transition for you — and the progressive enhancement everyone advertises survives exactly as long as the form's action prop is a server-function reference and not an arrow you wrote inside a Client Component"
 sidebar_label: "05b · Invoking an action"
-sidebar_position: 5.1
+sidebar_position: 21
 description: "form action, button formAction with several submit buttons on one form, event handlers and startTransition, why a call outside a transition logs an error, passing extra arguments with hidden inputs and closures, the permalink parameter, and the automatic form reset."
 ---
 

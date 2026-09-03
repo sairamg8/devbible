@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 28
 title: "Draft Mode is a per-request cache bypass wearing a cookie: it turns off the fetch cache, 'use cache', unstable_cache and the ISR response cache for one editor while everyone else keeps the cached page"
 sidebar_label: "Draft Mode"
 description: "What Draft Mode actually disables, the CMS preview contract, securing the entry route with a shared secret without opening a redirect, reading isEnabled inside a cache scope, and why the exit link must not be a Link."
@@ -271,4 +271,4 @@ Only where you read from. Branch the base URL on `isEnabled` inside your data fu
 
 ---
 
-← [**Project Milestone:** scaffold SprintDesk](06-project-milestone-scaffold-sprintdesk.md) · [Chapter 4 overview](01-explanation.md) · Next → [Backend for Frontend: the API layer](11-backend-for-frontend-route-handlers-as-a-public-api-layer.md)
+← [06c · Acceptance criteria and the Cache Components variant](06c-acceptance-criteria-and-the-cache-components-variant.md) · [Chapter 4 overview](01-explanation.md) · Next → [Backend for Frontend: the API layer](11-backend-for-frontend-route-handlers-as-a-public-api-layer.md)

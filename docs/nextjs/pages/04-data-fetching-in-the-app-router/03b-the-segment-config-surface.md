@@ -1,7 +1,7 @@
 ---
 title: "The four values of `dynamic`, the three of segment `revalidate` and the seven of `fetchCache`, read as what they actually do — and why `force-static` is the one that will hurt you, because it does not error, it lies"
 sidebar_label: "03b · The segment config surface"
-sidebar_position: 3.1
+sidebar_position: 12
 description: "Route segment config in Next.js 16, value by value: dynamic, revalidate, fetchCache, dynamicParams, generateStaticParams and the newer instant/prefetch options — with the cross-segment rules that decide which one wins."
 ---
 

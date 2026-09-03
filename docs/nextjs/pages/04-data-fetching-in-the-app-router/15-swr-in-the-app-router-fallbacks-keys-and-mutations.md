@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 33
 title: "SWR in the App Router hinges on one string: the fallback key and the useSWR key must match exactly, or the server's data is silently ignored and the browser fetches anyway"
 sidebar_label: "SWR: fetching and the server handoff"
 description: "Fetching with useSWR inline and under Suspense, providing initial data from a Server Component through SWRConfig fallback with an unawaited promise, the shared key contract, and why SWR treats fallback data as stale."

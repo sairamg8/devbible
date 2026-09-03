@@ -1,7 +1,7 @@
 ---
 title: "Configuring a Route Handler means choosing between two configuration worlds — the one where dynamic, revalidate and fetchCache exist and the one where Cache Components removed them — and then accepting the sentence the docs state without qualification: any client can access your endpoint"
 sidebar_label: "04f · Config, runtime and CORS"
-sidebar_position: 4.5
+sidebar_position: 19
 description: "The route segment config options a handler accepts and the four that v16 removes under Cache Components, opting a GET back into caching, runtime and maxDuration, CORS headers the automatic OPTIONS does not give you, and what 'publicly reachable' obliges you to do."
 ---
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 29
 title: "Next.js as a Backend for Frontend is an API layer, not a backend replacement — publicly reachable, any HTTP method, and any content type you care to serve"
 sidebar_label: "Backend for Frontend: the API layer"
 description: "Route Handlers as public endpoints, the error-handling shape and what not to leak through it, serving non-UI content types, Accept-header content negotiation with Vary, and consuming request payloads exactly once."

@@ -1,7 +1,7 @@
 ---
 title: "A route is prerendered until something in it reads the request — `force-dynamic` and `force-static` are overrides on a legacy model, not the mechanism, and turning on Cache Components removes them from the framework entirely"
 sidebar_label: "03 · Static vs dynamic rendering"
-sidebar_position: 3
+sidebar_position: 11
 description: "What actually decides whether a route renders at build time or per request in Next.js 16: Request-time APIs, the positional rule that splits one page into a static half and a dynamic half, Suspense as the shell boundary, and how to read what the build decided."
 ---
 

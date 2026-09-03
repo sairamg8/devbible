@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 32
 title: "Most Client Components do not need a data-fetching library — pass a promise and unwrap it with use(); reach for SWR or TanStack Query when you need a shared browser cache"
 sidebar_label: "Client-side data fetching: choosing"
 description: "When client-side fetching is still correct in the App Router, the three loading patterns each library supports, the three cache layers that appear when Cache Components is on, and how to coordinate mutations across them."

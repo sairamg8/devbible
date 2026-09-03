@@ -1,5 +1,5 @@
 ---
-sidebar_position: 16
+sidebar_position: 34
 title: "Once the server read is cached and tagged, SWR and Next.js hold two independent caches of the same fact — and a mutation has to update both"
 sidebar_label: "SWR with Cache Components and mutations"
 description: "Caching the server-side read that feeds an SWR fallback with 'use cache', cacheLife and cacheTag, extending the key contract to carry a tag, and coordinating optimistic browser mutations with updateTag on the server."

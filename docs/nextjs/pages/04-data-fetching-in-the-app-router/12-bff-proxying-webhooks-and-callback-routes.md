@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 30
 title: "The other half of a BFF is everything that forwards: proxy handlers, the one-file proxy, webhooks that must authenticate themselves, and callbacks that must not become open redirects"
 sidebar_label: "BFF: proxying, webhooks, callbacks"
 description: "Proxying to an upstream backend without creating an SSRF, the NextRequest and NextResponse extensions, revalidation webhooks and OAuth callback routes, the single project-level proxy file, and what the automatic OPTIONS handler does not give you."

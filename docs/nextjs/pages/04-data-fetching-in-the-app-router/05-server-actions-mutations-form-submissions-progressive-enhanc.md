@@ -1,7 +1,7 @@
 ---
 title: "'use server' does not mean 'this runs on the server' — it means 'compile every export of this scope into a public POST endpoint', which is why a helper you exported from an actions file for a unit test is now reachable by anyone on the internet"
 sidebar_label: "05 · The 'use server' directive"
-sidebar_position: 5
+sidebar_position: 20
 description: "The two placements of 'use server' and the caveats that govern them, why importing an action from client code requires module scope, what an inline action in a Server Component can and cannot do, why every export of a 'use server' module is an endpoint, and the confusion with 'use client'."
 ---
 

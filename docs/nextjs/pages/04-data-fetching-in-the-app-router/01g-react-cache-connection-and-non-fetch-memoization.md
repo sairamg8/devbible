@@ -1,7 +1,7 @@
 ---
 title: "`React.cache()` is the memoization primitive for everything Next.js did not patch — and it compares arguments with shallow `Object.is` equality, which means an object literal at the call site guarantees a miss every single time"
 sidebar_label: "01g · React.cache and connection"
-sidebar_position: 1.1
+sidebar_position: 5
 description: "Deduplicating ORM and database work with React.cache(): the argument-identity rule, why calling cache() in the wrong place creates a fresh table, cached errors, the preload pattern, and how connection() interacts with all of it."
 ---
 

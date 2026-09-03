@@ -1,7 +1,7 @@
 ---
 title: "Build the SprintDesk scaffold, starting with a data layer that performs real asynchronous I/O — because an in-memory constant makes every claim in this chapter vacuously true and teaches you nothing"
 sidebar_label: "06 · Milestone: scaffold SprintDesk"
-sidebar_position: 6
+sidebar_position: 25
 description: "The chapter 4 project milestone, part one: what is in scope and what is deliberately deferred, the route shape, the file-backed data layer, and the cached read with unstable_cache, a tag and a revalidation floor."
 ---
 
@@ -243,4 +243,4 @@ No, they cover different failure modes. The tag handles writes this application 
 
 ---
 
-← [05 · Server Actions and mutations](05-server-actions-mutations-form-submissions-progressive-enhanc.md) · [Chapter 4 overview](01-explanation.md) · Next → [06b · The routes, the action and the handler](06b-the-routes-the-action-and-the-route-handler.md)
+← [05e · Errors, authorization and when a Route Handler is right](05e-errors-authorization-and-when-a-route-handler-is-the-right-tool.md) · [Chapter 4 overview](01-explanation.md) · Next → [06b · The routes, the action and the handler](06b-the-routes-the-action-and-the-route-handler.md)

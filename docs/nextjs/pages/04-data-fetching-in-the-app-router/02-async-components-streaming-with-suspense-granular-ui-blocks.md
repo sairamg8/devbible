@@ -1,7 +1,7 @@
 ---
 title: "An async Server Component is coherent because the server renderer emits a stream rather than a tree, and a `<Suspense>` boundary is the seam in that stream — the shell flushes with the fallback in it, and the real HTML arrives later with a script that swaps it in"
 sidebar_label: "02 · async components and streaming"
-sidebar_position: 2
+sidebar_position: 8
 description: "Why a Server Component is allowed to be async, what a Suspense boundary actually does to the HTML stream, the static shell, the component payload, selective hydration, and why one await above a boundary blocks everything below it."
 ---
 

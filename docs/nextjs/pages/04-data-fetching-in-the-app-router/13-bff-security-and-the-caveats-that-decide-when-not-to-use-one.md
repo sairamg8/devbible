@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 31
 title: "The most important sentence in the Backend-for-Frontend guide is a caveat: do not fetch from your own Route Handlers in a Server Component — it fails the build at build time and costs a round trip at runtime"
 sidebar_label: "BFF: security and caveats"
 description: "Where headers may safely go, rate limiting, payload verification, library factory patterns, and the four caveats — Server Components, Server Actions, export mode, and the lambda deployment environment — that bound the whole pattern."

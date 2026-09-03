@@ -1,7 +1,7 @@
 ---
 title: "`loading.js` is a `<Suspense>` boundary you did not get to place, and the one thing it does not wrap is the layout in its own segment — which is exactly where the uncached fetch that blocks your navigation usually lives"
 sidebar_label: "02b · where to put boundaries"
-sidebar_position: 2.1
+sidebar_position: 9
 description: "Choosing where Suspense boundaries go: what loading.js wraps and what it deliberately does not, sibling versus nested boundaries, pushing dynamic access down, and how boundary placement decides LCP, CLS and INP."
 ---
 

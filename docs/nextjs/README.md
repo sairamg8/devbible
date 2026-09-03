@@ -81,7 +81,7 @@ PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
 ## What was done, 2026-09-03
 
-The track arrived as 140 imported pages and is now **231**. Four steps ran in one day:
+The track arrived as 140 imported pages and is now **249**. Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
 2. **De-duplicated** the chapter 18/19 appendices.
@@ -107,6 +107,15 @@ A **second run on the same day** closed the items that list left open:
    auditing**, whose opening fact reorganises every PWA checklist written before 2024:
    🔴 **Lighthouse removed the PWA category in 12.0.0**, because Chrome dropped the
    service-worker install requirement. The audit most guides still tell you to run is gone.
+7. **Rewrote chapter 4's six imported stubs.** They averaged 45 lines and three were
+   byte-identical to each other — the same block copy-pasted under different titles. They are
+   now **24 chunks**. This closed a contradiction the corpus was shipping: `01d` and `04`
+   taught opposite Route Handler caching rules. Beyond that, three version-history findings
+   that change what you write: `request.ip` and `request.geo` were **removed in v15.0.0** and
+   read `undefined`, so a rate limiter keyed on them silently collapses to a single bucket;
+   **v16.0.0 removes `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` when Cache
+   Components is on**; and `force-static` does not error but **blanks** `cookies()` and
+   `headers()`, so an auth check quietly takes the logged-out branch.
 
 Then a **de-quoting pass**: the new pages were first written with ~12,900 words of Vercel's
 documentation quoted verbatim across 394 blockquotes. All of it was rewritten in our own

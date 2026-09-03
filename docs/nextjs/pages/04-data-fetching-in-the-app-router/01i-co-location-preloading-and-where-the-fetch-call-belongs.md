@@ -1,7 +1,7 @@
 ---
 title: "Lifting every fetch into an ancestor is the client-side reflex that costs you streaming — co-locate the call with the component that uses the value, centralise the loader function instead, and preload when you need work to start before the tree reaches it"
 sidebar_label: "01i · co-location and preloading"
-sidebar_position: 1.3
+sidebar_position: 7
 description: "Where the fetch call belongs in a Server Component tree: why prop drilling to avoid duplicates is a false economy, what co-location buys you for streaming, the preload pattern built on React.cache, and the unhandled-rejection trap that comes with it."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The two questions this chapter exists to answer at 2am — why is my page stale, and why is my page dynamic when I never asked for it — each traced from symptom to the one mechanism that produced it"
 sidebar_label: "03c · Diagnosing stale and dynamic"
-sidebar_position: 3.2
+sidebar_position: 13
 description: "An ordered diagnostic procedure for the two failure modes of App Router rendering: content that will not refresh, and routes that render per request. Every cause named, every fix in code, and a short list of things people blame that the documentation does not support."
 ---
 
