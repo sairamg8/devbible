@@ -247,40 +247,40 @@ symbols, `WeakMap` and `WeakSet`.
 
 ## Interview questions
 
-**Q. Can a cached component accept `children`?**
+**★ Can a cached component accept `children`?**
 Yes. Slots pass through without joining the cache entry, **provided the cached body does not
 reference them**. This is why a cached `layout` does not cache its children.
 
-**Q. What breaks pass-through?**
+**★ What breaks pass-through?**
 Introspecting the slot — reading, mapping or modifying it — or, for a Server Action, calling
 it inside the cached body.
 
-**Q. Do arguments and return values follow the same serialization rules?**
+**★ Do arguments and return values follow the same serialization rules?**
 No. Arguments use Server Component serialization; return values use Client Component
 serialization, which is more permissive. You can return JSX but not accept it as an argument
 except as pass-through.
 
-**Q. Name types that cannot be passed to a cached function.**
+**★ Name types that cannot be passed to a cached function.**
 Class instances, functions (except as pass-through), symbols, `WeakMap`, `WeakSet`, and `URL`
 instances.
 
-**Q. A cached function takes one `filter` argument but you see thousands of entries. Why?**
+**★ A cached function takes one `filter` argument but you see thousands of entries. Why?**
 Closure capture. Variables referenced from an outer scope are bound as arguments and become
 part of the key, so a captured `userId` multiplies entries by the number of users.
 
-**Q. How do you fix closure capture?**
+**★ How do you fix closure capture?**
 Hoist the function to module scope and pass everything it needs explicitly, so the key is
 exactly its parameter list.
 
-**Q. How do you cache per-user-preference data without one entry per user?**
+**★ How do you cache per-user-preference data without one entry per user?**
 Cache on the dimension with few unique values that the preference *selects* — language,
 currency, category — and filter or select the rest in memory.
 
-**Q. What is the most dangerous failure mode of a shared cache directive?**
+**★ What is the most dangerous failure mode of a shared cache directive?**
 Caching a per-user payload where the user identifier is *not* in the key. Every user then
 shares one entry. It passes single-user testing and leaks data under real traffic.
 
-**Q. If a cached function reads root params, do all of the route's root params enter its key?**
+**★ If a cached function reads root params, do all of the route's root params enter its key?**
 No — only the ones it actually reads.
 
 ---

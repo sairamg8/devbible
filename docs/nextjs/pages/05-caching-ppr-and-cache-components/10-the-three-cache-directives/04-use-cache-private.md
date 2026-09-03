@@ -235,40 +235,40 @@ source.
 
 ## Interview questions
 
-**Q. What is `use cache: private` for?**
+**★ What is `use cache: private` for?**
 Two cases only: caching a function that already accesses runtime data where refactoring to
 pass values as arguments is impractical, and compliance requirements that prevent storing
 certain data on the server even temporarily.
 
-**Q. Where are its results stored?**
+**★ Where are its results stored?**
 In the browser's memory only. Never on the server, and they do not persist across page
 reloads.
 
-**Q. Which request APIs can it read?**
+**★ Which request APIs can it read?**
 `cookies()`, `headers()` and `searchParams`. **Not `connection()`** — that is banned in every
 cache scope.
 
-**Q. What does it give up relative to `use cache`?**
+**★ What does it give up relative to `use cache`?**
 All server-side caching. It executes on every server render, is excluded from static shell
 generation, and cannot use a custom cache handler.
 
-**Q. What are the two `cacheLife` thresholds and what does each gate?**
+**★ What are the two `cacheLife` thresholds and what does each gate?**
 `stale` ≥ **30 seconds** for per-link prefetching to work; `stale` ≥ **5 minutes** for content
 to be included in the route's App Shell.
 
-**Q. Why isn't it the safe default for anything user-related?**
+**★ Why isn't it the safe default for anything user-related?**
 It permanently forfeits prerendering and server-side caching. Most user-related data is better
 served by extracting the low-cardinality preference and caching the shared thing it selects.
 
-**Q. Can it nest with `use cache: remote`?**
+**★ Can it nest with `use cache: remote`?**
 No — in neither direction. `remote` inside `private` and `private` inside `remote` are both
 prohibited.
 
-**Q. Does `private` provide any security guarantee about who can read the data?**
+**★ Does `private` provide any security guarantee about who can read the data?**
 No. It constrains **where the result is stored**, not who may request it. Authorization still
 belongs in the data access layer.
 
-**Q. When was it introduced?**
+**★ When was it introduced?**
 `v16.0.0`, with the Cache Components feature.
 
 ---

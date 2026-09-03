@@ -247,44 +247,44 @@ filesystem or a database. If it changes at deploy time, a glob is correct and ch
 
 ## Interview questions
 
-**Q. What does `import.meta.glob` return by default?**
+**★ What does `import.meta.glob` return by default?**
 An object keyed by file path **relative to the calling file**, whose values are thunks —
 functions returning a `Promise` for each module. Nothing loads until a thunk is called.
 
-**Q. What changes with `{ eager: true }`?**
+**★ What changes with `{ eager: true }`?**
 Every matched module is imported up front and each value becomes the module object directly
 rather than a thunk.
 
-**Q. Why is this better than `fs.readdir` in a Server Component?**
+**★ Why is this better than `fs.readdir` in a Server Component?**
 Because the results are real module imports, so the bundler's dependency graph knows about the
 files. That is what brings **HMR** to a Server Component reading from disk, and it lets the
 files be bundled rather than read at runtime.
 
-**Q. What does the `import` option do?**
+**★ What does the `import` option do?**
 Selects a specific named export from each matched module, in both lazy and eager modes — so you
 get a map of values rather than a map of namespaces.
 
-**Q. How do you load matched files as raw text or as URLs?**
+**★ How do you load matched files as raw text or as URLs?**
 `query: '?raw'` and `query: '?url'`. `query` also accepts an object, whose keys and values are
 URL-encoded into a query string.
 
-**Q. How do you exclude files from a glob?**
+**★ How do you exclude files from a glob?**
 Pass an array of patterns and prefix the exclusions with `!`, for example
 `['./src/**/*.js', '!**/*.test.js']`.
 
-**Q. Which two Vite APIs are not supported, and what replaces them?**
+**★ Which two Vite APIs are not supported, and what replaces them?**
 `as` (deprecated in Vite 5) → use `query: '?raw'` or `query: '?url'`. `import.meta.globEager()`
 → use `{ eager: true }`.
 
-**Q. What is required to glob a directory of Markdown files?**
+**★ What is required to glob a directory of Markdown files?**
 A loader registered under `turbopack.rules` in `next.config.js`. The glob resolves paths; it
 does not teach Turbopack a file format it does not already handle.
 
-**Q. Is this available under webpack?**
+**★ Is this available under webpack?**
 No. It requires Turbopack — which also means it is unavailable on platforms that fall back to
 WASM bindings, where Turbopack does not run at all.
 
-**Q. What TypeScript type do you get back?**
+**★ What TypeScript type do you get back?**
 `Record<string, () => Promise<unknown>>` lazily, `Record<string, unknown>` eagerly, with types
 available automatically under `"moduleResolution": "bundler"`, `"node16"` or `"nodenext"`.
 Because both are `unknown`, validate rather than cast.

@@ -199,39 +199,39 @@ update a live region exists for.
 
 ## Interview questions
 
-**Q. What does `experimental.useOffline` change?**
+**★ What does `experimental.useOffline` change?**
 A failed navigation, RSC data fetch, prefetch or Server Action no longer throws when the
 network is down. Next.js keeps it pending and retries when the connection returns.
 
-**Q. What is *not* covered?**
+**★ What is *not* covered?**
 Full page reloads while offline, direct `fetch()` in Client Components, and client data
 libraries like React Query or SWR, which keep their own retry policy.
 
-**Q. Why is `useOffline()` better than `navigator.onLine`?**
+**★ Why is `useOffline()` better than `navigator.onLine`?**
 `navigator.onLine` only reflects the OS network interface, so a device on WiFi with no upstream
 internet still reports online. `useOffline` also flips true when an actual navigation, prefetch
 or Server Action fetch fails.
 
-**Q. What does it return during SSR and hydration?**
+**★ What does it return during SSR and hydration?**
 `false`. The first accurate value comes after the app mounts, so treat the initial value as
 unknown rather than authoritative.
 
-**Q. Why does the guide enable Cache Components and Partial Prefetching alongside it?**
+**★ Why does the guide enable Cache Components and Partial Prefetching alongside it?**
 Cache Components lets the Suspense boundary sit next to the uncached data with the App Shell
 around it; Partial Prefetching makes that shell the unit a `<Link>` prefetches — and the
 prefetch is what makes the shell renderable offline.
 
-**Q. What if you are not using Cache Components?**
+**★ What if you are not using Cache Components?**
 A route-level `loading.tsx` gives Next.js the same boundary to prefetch as the route's shell.
 
-**Q. What is the UX problem the hook exists to solve?**
+**★ What is the UX problem the hook exists to solve?**
 A pending request renders the normal loading state, so "offline" and "slow server" look
 identical. The hook lets the fallback say which it is.
 
-**Q. What would you need for genuine full-offline loading?**
+**★ What would you need for genuine full-offline loading?**
 A service worker — the Progressive Web Apps guide, not this flag.
 
-**Q. On a route like `/chats/[id]`, what renders offline?**
+**★ On a route like `/chats/[id]`, what renders offline?**
 The shared App Shell. The messages behind the Suspense boundary load on reconnect — unless the
 route also prefetched its per-link URL data, in which case they render immediately.
 

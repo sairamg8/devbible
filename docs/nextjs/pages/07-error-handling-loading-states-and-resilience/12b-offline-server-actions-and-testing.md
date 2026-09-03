@@ -161,38 +161,38 @@ fallback plus a banner — which you can build against your own detection if you
 
 ## Interview questions
 
-**Q. What happens to a Server Action called with no network, with the flag enabled?**
+**★ What happens to a Server Action called with no network, with the flag enabled?**
 It does not reject. The call stays pending, retries when the connection returns, and the
 awaited promise resolves with the server's response.
 
-**Q. What code does that let you delete?**
+**★ What code does that let you delete?**
 The try/catch around the network failure, the retry loop, and any reconnection handler in the
 component.
 
-**Q. What UI problem does it create?**
+**★ What UI problem does it create?**
 A disabled, pending button for an indefinite period with nothing explaining why.
 
-**Q. How do you solve that?**
+**★ How do you solve that?**
 `useTransition` for whether something is in flight, `useOffline()` for why it is slow, and
 branch the label on both.
 
-**Q. What happens if the user clicks a link while an action is pending offline?**
+**★ What happens if the user clicks a link while an action is pending offline?**
 The navigation queues behind the same connectivity signal; both resolve on reconnect. It looks
 like a frozen UI, which is why an app-wide banner is recommended.
 
-**Q. Why must offline behaviour be tested against a production build?**
+**★ Why must offline behaviour be tested against a production build?**
 Prefetching is disabled in development, and the prefetched App Shell is what renders offline.
 In dev there is no shell, so the feature appears broken.
 
-**Q. How do you simulate offline?**
+**★ How do you simulate offline?**
 Chrome DevTools → Network → Offline, Firefox's Network Monitor throttling, or genuinely toggle
 airplane mode. The real-world test surfaces partial failures a clean toggle never produces.
 
-**Q. Is a pending action durable across a page reload?**
+**★ Is a pending action durable across a page reload?**
 No. It lives in the page's runtime. Anything that must survive a reload or a closed tab needs
 real queueing — this is not offline-first write support.
 
-**Q. Does the flag change how server-returned errors are handled?**
+**★ Does the flag change how server-returned errors are handled?**
 No. It covers network failures. Errors the server returns still need modelling as return
 values, typically through `useActionState`.
 

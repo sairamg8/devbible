@@ -226,37 +226,37 @@ goes through.
 
 ## Interview questions
 
-**Q. What do `unauthorized()` and `forbidden()` do?**
+**★ What do `unauthorized()` and `forbidden()` do?**
 Throw `NEXT_HTTP_ERROR_FALLBACK;401` / `;403`, terminate rendering of the route segment, inject
 `<meta name="robots" content="noindex" />`, and render `unauthorized.js` / `forbidden.js`.
 
-**Q. What is their stability status?**
+**★ What is their stability status?**
 **Experimental**, behind `experimental.authInterrupts`, and explicitly not recommended for
 production.
 
-**Q. When did they arrive?**
+**★ When did they arrive?**
 `v15.1.0`.
 
-**Q. Where can they be called?**
+**★ Where can they be called?**
 Server Components, Server Functions, and Route Handlers.
 
-**Q. Why might a 401 page be served with a 200 status?**
+**★ Why might a 401 page be served with a 200 status?**
 Because the check ran inside a `<Suspense>` boundary, after the response began streaming. The
 status cannot change once streaming has started.
 
-**Q. How do you get a real 401 or 403 status?**
+**★ How do you get a real 401 or 403 status?**
 Run the check before the response streams — in `proxy`.
 
-**Q. What does Cache Components do to this trade-off?**
+**★ What does Cache Components do to this trade-off?**
 It makes the streaming case the default: every dynamic route streams a static shell first, so
 checks in the render path will almost always be too late for the status code.
 
-**Q. When is 403 the right code rather than 401?**
+**★ When is 403 the right code rather than 401?**
 When the request **is** authenticated but lacks the required role. 401 is for requests that are
 not signed in — and it is the one with a useful next action, so `unauthorized.js` is where a
 login form belongs.
 
-**Q. Is guarding the page enough?**
+**★ Is guarding the page enough?**
 No. A Server Action is a separate entry point, callable without rendering the page. Put the
 guard in the DAL so every entry point passes through it.
 

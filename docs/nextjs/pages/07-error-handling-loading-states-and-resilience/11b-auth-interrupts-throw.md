@@ -168,36 +168,36 @@ that path short enough to actually verify.
 
 ## Interview questions
 
-**Q. Why does a `try/catch` break `unauthorized()` and `forbidden()`?**
+**★ Why does a `try/catch` break `unauthorized()` and `forbidden()`?**
 They work by throwing a framework sentinel. A catch intercepts it like any other exception, so
 the interrupt is suppressed and no 401/403 UI renders.
 
-**Q. What is the fix?**
+**★ What is the fix?**
 `unstable_rethrow(e)` at the top of the catch, so framework interrupts pass through while real
 errors are still handled.
 
-**Q. Which other framework functions share this hazard?**
+**★ Which other framework functions share this hazard?**
 `notFound()`, `redirect()` and `permanentRedirect()` — all implemented as throws.
 
-**Q. What happens if the call sits in an un-awaited promise?**
+**★ What happens if the call sits in an un-awaited promise?**
 It throws where nothing catches it, no UI renders, and rendering continues — so the protected
 page is served. Development logs `⨯ unhandledRejection: NEXT_HTTP_ERROR_FALLBACK;401`.
 
-**Q. Why is that specifically a security problem rather than a bug?**
+**★ Why is that specifically a security problem rather than a bug?**
 Because the failure is silent and fails *open*. There is no error page to notice; the protected
 content simply renders.
 
-**Q. Should you write `return unauthorized()`?**
+**★ Should you write `return unauthorized()`?**
 No. Its return type is `never`; it throws and execution stops.
 
-**Q. Can either be called in the root layout?**
+**★ Can either be called in the root layout?**
 No, for both.
 
-**Q. Where should the authorization check actually live?**
+**★ Where should the authorization check actually live?**
 In the Data Access Layer, so there is one place to audit and every entry point — page, Server
 Action, Route Handler — passes through it.
 
-**Q. A reviewer sees a session check on the page and approves it. What might they have missed?**
+**★ A reviewer sees a session check on the page and approves it. What might they have missed?**
 Whether the interrupt's throw can actually reach the framework — a surrounding `try/catch`, or
 a promise that is never awaited.
 

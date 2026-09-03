@@ -240,43 +240,43 @@ export function formatCurrency(n: number) { return `$${n}` }   // not async
 
 ## Interview questions
 
-**Q. What are the three cache directives and what distinguishes them?**
+**★ What are the three cache directives and what distinguishes them?**
 `use cache` (server memory or a cache handler, shared across users), `use cache: remote` (a
 remote handler, shared across users and across server instances) and `use cache: private`
 (no server storage at all — browser memory, per client). All three need `cacheComponents: true`.
 
-**Q. Which request APIs can each read?**
+**★ Which request APIs can each read?**
 `use cache` and `use cache: remote` can read none of `cookies()`, `headers()`, `searchParams`.
 `use cache: private` can read all three. **`connection()` is banned in all of them.**
 
-**Q. The preferred way to use request data with a cached function?**
+**★ The preferred way to use request data with a cached function?**
 Read it **outside** the cached scope and pass it as an argument. `use cache: private` is for
 compliance requirements or when refactoring genuinely is not possible.
 
-**Q. Why is `use cache: private` not simply the safest default?**
+**★ Why is `use cache: private` not simply the safest default?**
 It gives up server-side caching entirely: the function runs on every server render and is
 excluded from static shell generation. It is a targeted escape hatch, not a safe default.
 
-**Q. Where does the restriction on request APIs apply — only in the cached function itself?**
+**★ Where does the restriction on request APIs apply — only in the cached function itself?**
 Along the whole call stack. A helper called by the cached function that reads `cookies()`
 fails the same way.
 
-**Q. Can a forbidden request-API read survive `next build`?**
+**★ Can a forbidden request-API read survive `next build`?**
 Yes. On a dynamically rendered route the failure surfaces when the route runs, so it can pass
 the build and fail under `next start`.
 
-**Q. Your dashboard shows global stats, identical for every user, behind an auth check, and
+**★ Your dashboard shows global stats, identical for every user, behind an auth check, and
 the query is expensive. Which directive?**
 `use cache: remote`. It renders at request time (so plain `use cache` gets poor server-side
 utilization in serverless), the value is shared by everyone, and the upstream is expensive.
 Add `cacheLife` to bound the upstream to one query per window.
 
-**Q. When is `use cache: remote` the wrong call?**
+**★ When is `use cache: remote` the wrong call?**
 When the operation is already fast (under ~50ms), when the data changes every few seconds, or
 when the cache key carries mostly-unique values per request — search filters, price ranges,
 user IDs. Utilization approaches zero while you still pay the lookup.
 
-**Q. What does it take to prerender a whole route with `use cache`?**
+**★ What does it take to prerender a whole route with `use cache`?**
 The directive on **every segment file the route renders** — the `page`, the `layout`, and any
 parallel-route slots. Each segment is a separate entry point cached independently.
 

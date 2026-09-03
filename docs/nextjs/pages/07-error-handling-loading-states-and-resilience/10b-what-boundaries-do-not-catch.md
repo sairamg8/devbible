@@ -259,40 +259,40 @@ sits in a stale state.
 
 ## Interview questions
 
-**Q. What do error boundaries actually catch?**
+**★ What do error boundaries actually catch?**
 Errors thrown during **rendering**, so a fallback UI can replace the crashed subtree.
 
-**Q. Do they catch errors in event handlers?**
+**★ Do they catch errors in event handlers?**
 No. Those run after rendering. Catch manually and store in state.
 
-**Q. What is the one interaction path that does reach a boundary?**
+**★ What is the one interaction path that does reach a boundary?**
 An unhandled error inside `startTransition` from `useTransition`.
 
-**Q. Why does that matter in practice?**
+**★ Why does that matter in practice?**
 Server Actions are usually invoked inside transitions, so a mutation failure that is not
 modelled as a return value will replace part of the page with the error fallback.
 
-**Q. Why does a `try/catch` break `redirect()`?**
+**★ Why does a `try/catch` break `redirect()`?**
 `redirect()` works by throwing a framework sentinel; a catch intercepts it like any other
 exception.
 
-**Q. What is the fix?**
+**★ What is the fix?**
 `unstable_rethrow(e)` at the top of the catch block, so framework interrupts pass through while
 real errors are still handled.
 
-**Q. Does `catchError` have the same problem?**
+**★ Does `catchError` have the same problem?**
 No — not interfering with `notFound()` and `redirect()` is one of the two things it was built
 to fix. The hazard is limited to catches you write yourself.
 
-**Q. What is the difference between an expected error and an uncaught exception?**
+**★ What is the difference between an expected error and an uncaught exception?**
 Expected errors happen during normal operation — validation, a failed request — and should be
 returned to the client. Uncaught exceptions are bugs, and those are boundary material.
 
-**Q. What is the guidance for expected errors in Server Functions specifically?**
+**★ What is the guidance for expected errors in Server Functions specifically?**
 Avoid `try`/`catch` and throwing; model them as **return values**, surfaced with
 `useActionState`.
 
-**Q. What accessibility detail belongs on a rendered action error?**
+**★ What accessibility detail belongs on a rendered action error?**
 `aria-live="polite"`, so the message is announced rather than silently inserted.
 
 ---

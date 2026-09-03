@@ -203,35 +203,35 @@ scope a `cacheLife` short enough that it cannot be stored in the shell — see
 
 ## Interview questions
 
-**Q. Why would one page use all three directives?**
+**★ Why would one page use all three directives?**
 Because one page has three kinds of data: shared-and-static, shared-and-request-time, and
 per-user. The unit of choice is a piece of data, not an application.
 
-**Q. Which nesting combinations are illegal, and why?**
+**★ Which nesting combinations are illegal, and why?**
 `remote` inside `private`, and `private` inside `remote` — both directions. `private` promises
 the value never rests on a server and `remote` promises it does; nesting would falsify one.
 
-**Q. Is `remote` inside a plain `use cache` allowed?**
+**★ Is `remote` inside a plain `use cache` allowed?**
 Yes. The inner remote cache does its work when the outer scope is deferred to request time.
 
-**Q. What is `connection()` for?**
+**★ What is `connection()` for?**
 Deliberately deferring a component to request time when nothing else in it would have. Without
 it, a scope that reads no request data is a candidate for the static shell.
 
-**Q. What exactly goes into a cache key?**
+**★ What exactly goes into a cache key?**
 The build ID (or `deploymentId`), a hash of the function's location and signature, the
 serializable arguments, and — in development only — an HMR refresh hash.
 
-**Q. Why do cache entries not survive a deployment?**
+**★ Why do cache entries not survive a deployment?**
 The key includes the build ID. Between builds a function's identity or return shape can
 change, so reusing entries could serve malformed data. Use `unstable_cache` or the `fetch`
 cache when cross-deploy persistence is required.
 
-**Q. You need a per-user ranking of a shared, expensive list. How do you structure it?**
+**★ You need a per-user ranking of a shared, expensive list. How do you structure it?**
 Do not nest. Compute the shared list in a `use cache: remote` scope, call it *outside*, and
 pass the result into a `use cache: private` scope that applies the per-user ranking.
 
-**Q. A price is correct locally and stale in production. What is the first thing to check?**
+**★ A price is correct locally and stale in production. What is the first thing to check?**
 Whether the scope reads anything request-specific. If it does not, it was prerendered into the
 static shell. Add `await connection()` or shorten its `cacheLife`.
 

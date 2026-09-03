@@ -232,41 +232,41 @@ for correctness-critical invalidations outside Server Actions.
 
 ## Interview questions
 
-**Q. What is the current signature of `revalidateTag`?**
+**★ What is the current signature of `revalidateTag`?**
 `revalidateTag(tag: string, profile: string | { expire?: number })`. The single-argument form
 is **deprecated** and only works while TypeScript errors are suppressed.
 
-**Q. What does the profile control?**
+**★ What does the profile control?**
 How long stale content may still be served while revalidation runs. Past that window a request
 blocks.
 
-**Q. Which profile is recommended, and why?**
+**★ Which profile is recommended, and why?**
 `'max'` — a one-year window, long enough that requests are always served stale while the
 revalidation happens in the background.
 
-**Q. What does `{ expire: 0 }` do?**
+**★ What does `{ expire: 0 }` do?**
 Stale is never served, so the next request is a blocking revalidate. It is also exactly what
 the deprecated no-profile form did.
 
-**Q. Where can `updateTag` be called?**
+**★ Where can `updateTag` be called?**
 **Server Actions only.** It throws in Route Handlers, Client Components, or anywhere else.
 
-**Q. What problem does `updateTag` solve?**
+**★ What problem does `updateTag` solve?**
 Read-your-own-writes. It expires the data immediately so the user who just made a change sees
 it, rather than the stale cached copy.
 
-**Q. A webhook needs to invalidate a tag immediately. What do you call?**
+**★ A webhook needs to invalidate a tag immediately. What do you call?**
 `revalidateTag(tag, { expire: 0 })` — `updateTag` is unavailable outside Server Actions.
 
-**Q. How are tags assigned to cached data?**
+**★ How are tags assigned to cached data?**
 `fetch(url, { next: { tags: [...] } })` for fetch caching, or `cacheTag(...)` inside a
 `'use cache'` scope.
 
-**Q. What are the limits on a tag?**
+**★ What are the limits on a tag?**
 Case-sensitive, maximum 256 characters. A longer tag is **never assigned**, so revalidating it
 does nothing and reports no error.
 
-**Q. Does `revalidateTag` refresh every affected page immediately?**
+**★ Does `revalidateTag` refresh every affected page immediately?**
 No. Revalidation is triggered by a request, so pages refresh as they are visited.
 
 ---

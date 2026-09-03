@@ -207,31 +207,31 @@ widget — using `catchError` where no route segment corresponds to that granula
 
 ## Interview questions
 
-**Q. What two problems does `catchError` solve?**
+**★ What two problems does `catchError` solve?**
 Stock React boundaries interfered with `notFound()` and `redirect()`, and could only reset
 client state — there was no way to retry a Server Component that failed during rendering.
 
-**Q. What does `retry()` do that a React reset does not?**
+**★ What does `retry()` do that a React reset does not?**
 It refetches the boundary's children, which can include re-rendering Server Components.
 
-**Q. What is the `catchError` fallback's signature?**
+**★ What is the `catchError` fallback's signature?**
 Two arguments: your own props first, then an `ErrorInfo` object with `error` and `retry`. It is
 not a normal one-argument component.
 
-**Q. What is the second prop of an `error.js` component?**
+**★ What is the second prop of an `error.js` component?**
 `retry`. Not `reset` — that is the older name and is `undefined` today.
 
-**Q. Where can `catchError` boundaries be placed, versus `error.js`?**
+**★ Where can `catchError` boundaries be placed, versus `error.js`?**
 `error.js` sits at a route segment. A `catchError` boundary is a component and can wrap any
 part of the tree, at any granularity.
 
-**Q. Why must `global-error.js` include `<html>` and `<body>`?**
+**★ Why must `global-error.js` include `<html>` and `<body>`?**
 Because it replaces the root layout or template when active, so nothing else emits those tags.
 
-**Q. Must an error boundary be a Client Component?**
+**★ Must an error boundary be a Client Component?**
 Yes — `error.js`, `global-error.js` and `catchError` fallbacks all require `'use client'`.
 
-**Q. Where does an error go if several boundaries are in scope?**
+**★ Where does an error go if several boundaries are in scope?**
 To the **nearest** parent boundary. That is what makes placement a design decision rather than
 a formality.
 

@@ -252,42 +252,42 @@ un-refactorable code, not for "this request involved a user."
 
 ## Interview questions
 
-**Q. What problem does `use cache: remote` solve?**
+**★ What problem does `use cache: remote` solve?**
 In-memory entries are evicted, memory-constrained, and in serverless not shared across
 instances or preserved across requests. `remote` provides durable caching shared by every
 server instance.
 
-**Q. What does it cost?**
+**★ What does it cost?**
 Infrastructure (storage, network) and a cache-handler lookup on every access.
 
-**Q. Where does remote caching provide the most value?**
+**★ Where does remote caching provide the most value?**
 For content deferred to request time — outside the static shell — typically because the
 component reads `cookies()`, `headers()` or `searchParams` and sits inside a Suspense boundary.
 
-**Q. Name four situations where it is the wrong tool.**
+**★ Name four situations where it is the wrong tool.**
 An existing key-value store already wrapping the data layer; operations already under ~50ms;
 cache keys with mostly-unique values per request; data that changes every few seconds.
 
-**Q. Why is a bigger cache entry sometimes the better design?**
+**★ Why is a bigger cache entry sometimes the better design?**
 Because hit rate is decided by key cardinality. Caching all products in a category — rather
 than per price filter — trades storage for a hit rate that actually protects the backend.
 
-**Q. How do you cache per-user-preference data without one entry per user?**
+**★ How do you cache per-user-preference data without one entry per user?**
 Cache the shared thing the preference selects: `getCMSContent(language)`, not
 `getUserProfile(sessionId)`. Tens of entries instead of thousands.
 
-**Q. Do remote cache entries persist across deploys?**
+**★ Do remote cache entries persist across deploys?**
 No. The key includes `deploymentId` or the build ID. Intentional — a function's identity or
 return shape may change between builds.
 
-**Q. What is `connection()` for in this context?**
+**★ What is `connection()` for in this context?**
 Explicitly deferring a component to request time when nothing else in it would have, so a
 value that must be current does not get frozen into the static shell.
 
-**Q. Which deployment target does `use cache: remote` not support?**
+**★ Which deployment target does `use cache: remote` not support?**
 Static export.
 
-**Q. Your CMS is rate-limited and struggles with concurrent revalidation of static content.
+**★ Your CMS is rate-limited and struggles with concurrent revalidation of static content.
 Does `remote` help, given the content is in the static shell?**
 Yes — this is the documented exception. It acts as a shared layer that collapses concurrent
 revalidation requests into one.

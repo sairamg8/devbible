@@ -135,36 +135,36 @@ work available, and read the security blog alongside the release notes.
 
 ## Interview questions
 
-**Q. What changed in the App Router's rendering layer in 16.3?**
+**★ What changed in the App Router's rendering layer in 16.3?**
 Web streams were replaced with native Node.js streams, removing the overhead of converting
 between the two during server-side rendering.
 
-**Q. What did it buy, and what did it cost to adopt?**
+**★ What did it buy, and what did it cost to adopt?**
 Up to **22% more requests handled under load**, with **no changes to application code**. The
 cost is the version bump.
 
-**Q. Why was there a conversion in the first place?**
+**★ Why was there a conversion in the first place?**
 Node has its own stream implementation predating the web standard. The rendering layer was
 built against web streams — the type React's server renderer targets and browsers and edge
 runtimes use — while running on a Node.js server, so every render adapted one to the other.
 
-**Q. Is 22% a page-speed number?**
+**★ Is 22% a page-speed number?**
 No. It is throughput at saturation. It shows up as capacity and cost headroom, not as LCP.
 
-**Q. Does it apply to the Edge runtime?**
+**★ Does it apply to the Edge runtime?**
 No. Edge is a Web-APIs environment where web streams are native, so there was no conversion to
 remove.
 
-**Q. Your Suspense fallbacks never appear in production but work locally. Where do you look?**
+**★ Your Suspense fallbacks never appear in production but work locally. Where do you look?**
 At every hop between the server and the browser. Load balancers must support chunked transfer
 encoding or HTTP/2 streaming — some buffer by default — and reverse proxies must pass chunked
 responses through unbuffered. A buffered hop produces no error; it just waits for the whole
 response.
 
-**Q. Why does a buffered proxy make Suspense pointless rather than merely slower?**
+**★ Why does a buffered proxy make Suspense pointless rather than merely slower?**
 Because the browser receives nothing until the response is complete, so no fallback ever
 renders and TTFB collapses to the slowest dependency on the page.
 
-**Q. How would you measure this change honestly?**
+**★ How would you measure this change honestly?**
 Under load, at saturation — requests per second at a fixed latency and error budget. A single
 request on an idle server leaves the difference inside the noise.

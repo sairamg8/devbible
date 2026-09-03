@@ -254,36 +254,36 @@ cannot resolve at build time.
 
 ## Interview questions
 
-**Q. What are the two revalidation strategies, and are they exclusive?**
+**★ What are the two revalidation strategies, and are they exclusive?**
 Time-based via `cacheLife`, and on-demand via `cacheTag` with `revalidateTag`/`updateTag`.
 Not exclusive — the common configuration pairs a long lifetime with tag invalidation.
 
-**Q. What does the `default` cacheLife profile actually specify?**
+**★ What does the `default` cacheLife profile actually specify?**
 `stale` 5 minutes (client), `revalidate` 15 minutes (server), and `expire` never by time.
 
-**Q. Why set `cacheLife` even when the default would do?**
+**★ Why set `cacheLife` even when the default would do?**
 So the lifetime is explicit at the call site rather than depending on the default profile or
 on a surrounding cache.
 
-**Q. What happens when you nest a short-lived cache inside one with no explicit lifetime?**
+**★ What happens when you nest a short-lived cache inside one with no explicit lifetime?**
 The build fails during prerendering. State the lifetime on the outer scope.
 
-**Q. A build hangs and fails after ~50 seconds. What is happening?**
+**★ A build hangs and fails after ~50 seconds. What is happening?**
 A cached scope is awaiting a Promise that resolves to runtime or uncached data created outside
 the cache boundary, so it cannot resolve during prerendering.
 
-**Q. How do you tell that apart from a direct request-API read?**
+**★ How do you tell that apart from a direct request-API read?**
 A direct `cookies()`/`headers()` call inside `use cache` fails **immediately** with
 `next-request-in-use-cache`. The indirect case **times out**.
 
-**Q. Three ways a runtime Promise reaches a cached scope?**
+**★ Three ways a runtime Promise reaches a cached scope?**
 Passed as a prop, captured through a closure, or retrieved from shared storage such as a Map.
 
-**Q. Can uncached and cached functions coexist in one module?**
+**★ Can uncached and cached functions coexist in one module?**
 Yes. An uncached function called from inside a cached one runs only when the cached one runs,
 and can still be exported for callers that need fresh data.
 
-**Q. Do `cacheLife` and `cacheTag` apply on the client too?**
+**★ Do `cacheLife` and `cacheTag` apply on the client too?**
 Yes — both integrate across the client and server caching layers, so the semantics are
 configured once and apply in both.
 

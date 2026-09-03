@@ -211,41 +211,41 @@ stay forbidden **even when Draft Mode is active**.
 
 ## Interview questions
 
-**Q. What is `use cache` primarily designed to do?**
+**★ What is `use cache` primarily designed to do?**
 Include otherwise-uncached data in the **static shell**. Runtime caching via the in-memory LRU
 is a secondary capability whose usefulness depends on the hosting environment.
 
-**Q. How does runtime cache behaviour differ between serverless and self-hosted?**
+**★ How does runtime cache behaviour differ between serverless and self-hosted?**
 Serverless: entries typically do not persist across requests, because each request can hit a
 different instance whose memory is discarded. Self-hosted: entries persist, bounded by
 `cacheMaxMemorySize`.
 
-**Q. If server-side hit rate is poor in serverless, is `use cache` pointless there?**
+**★ If server-side hit rate is poor in serverless, is `use cache` pointless there?**
 No. It still tells Next.js what can be prefetched and defines stale times for client-side
 navigation — neither depends on a server-side hit.
 
-**Q. What is the client-side stale-time floor?**
+**★ What is the client-side stale-time floor?**
 **30 seconds**, enforced by the client router regardless of configuration. The
 `x-nextjs-stale-time` header communicates the lifetime from server to client.
 
-**Q. Why can't you pass data into a cached scope with `React.cache`?**
+**★ Why can't you pass data into a cached scope with `React.cache`?**
 `React.cache` is isolated inside `use cache` boundaries — values set outside are not visible
 inside. This keeps cached functions self-contained and predictable. Use arguments.
 
-**Q. What happens to caching under Draft Mode?**
+**★ What happens to caching under Draft Mode?**
 All cached functions and components re-execute on every request and nothing is written to the
 cache, so draft content is always fresh.
 
-**Q. Which request API may be read inside a cached scope, and which stay forbidden under Draft
+**★ Which request API may be read inside a cached scope, and which stay forbidden under Draft
 Mode?**
 `draftMode()`'s `isEnabled` may be read. `cookies()` and `headers()` remain forbidden even
 when Draft Mode is active. Calling `enable()`/`disable()` inside a cached scope throws.
 
-**Q. How do you inspect what the cache is doing?**
+**★ How do you inspect what the cache is doing?**
 `NEXT_PRIVATE_DEBUG_CACHE=1` for verbose logging in dev or against a production build. In
 development, logs replayed from cached functions carry a `Cache` prefix.
 
-**Q. What does a too-short cache life do to the static shell?**
+**★ What does a too-short cache life do to the static shell?**
 It leaves a hole that resolves at request time instead of being stored in the shell.
 
 ---
