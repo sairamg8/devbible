@@ -13,8 +13,8 @@ sidebar_position: 1
 > Promise<unknown>; readonly text: () => Promise<string>; }` and
 > `export declare class Response extends BodyMixin { readonly ok: boolean;
 > readonly status: number; … }` — plus `@types/node`'s
-> `web-globals/fetch.d.ts`, whose `type _Response = typeof globalThis extends
-> { onmessage: any } ? {} : undici.Response;` decides which of the two you get.
+> `web-globals/fetch.d.ts`, whose `type _Response = typeof globalThis extends { onmessage: any } ? {} : undici.Response;`
+> decides which of the two you get.
 > MDN on [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch)
 > for the rejection behaviour.
 > Target: **TypeScript 7.0.2** (phase spine), Node **24.20.0**.

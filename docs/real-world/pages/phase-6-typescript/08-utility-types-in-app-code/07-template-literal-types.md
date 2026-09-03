@@ -198,8 +198,7 @@ parameter. That is the *reading* direction of the feature, as opposed to the
 release.
 
 **★ What is key remapping and where is it worth using?**
-The `as` clause in a mapped type — `[K in keyof T as \`get${Capitalize<string &
-K>}\`]` — which renames or, by mapping to `never`, removes keys. It is worth it
+The `as` clause in a mapped type — ``[K in keyof T as `get${Capitalize<string & K>}`]`` — which renames or, by mapping to `never`, removes keys. It is worth it
 for transforming a shape you do not control, such as snake_case database rows
 into camelCase DTOs, and it is not worth it for generating getters from a data
 type. This app does the snake-to-camel transformation at the schema level
