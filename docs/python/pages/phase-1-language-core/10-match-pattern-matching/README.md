@@ -68,4 +68,4 @@ that raises.
 
 ---
 
-← Prev: **Comprehensions** *(not written yet)* · Index: [Phase 1 — Language core](../README.md) · Next → **Exceptions, the working set** *(not written yet)*
+← Prev: [Comprehensions](../09-comprehensions/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Exceptions, the working set** *(not written yet)*

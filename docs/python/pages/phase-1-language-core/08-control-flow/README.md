@@ -57,7 +57,7 @@ while a loop is walking it: a `dict` will usually tell you, a list never will.
   sentinel loop tests *equality*, unlike `while chunk := read():`, and
   `for`/`else`'s "not found" branch is the control-flow form of the
   [empty-versus-missing](../05-truthiness/02-empty-versus-missing.md) distinction.
-- **Comprehensions** *(not written yet)* is the next topic and the expression
+- [Comprehensions](../09-comprehensions/README.md) is the next topic and the expression
   form of most loops here — including the honest line where a nested
   comprehension should have stayed a loop.
 - **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)** owns the
@@ -71,4 +71,4 @@ while a loop is walking it: a `dict` will usually tell you, a list never will.
 
 ---
 
-← Prev: [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **Comprehensions** *(not written yet)*
+← Prev: [Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [Comprehensions](../09-comprehensions/README.md)

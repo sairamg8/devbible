@@ -49,7 +49,7 @@ provides, never as a synonym for shorter.
   owns `is None` and why `==` is not merely slower but wrong on some types.
 - **[Assignment semantics and aliasing](../07-assignment-and-aliasing/README.md)**
   owns the mutable-default rule that `ruff`'s `B006` enforces.
-- **Comprehensions** *(not written yet)* owns the honest line where a
+- [Comprehensions](../09-comprehensions/README.md) owns the honest line where a
   comprehension should have stayed a loop — the concrete form of "pythonic does
   not mean shortest".
 - **Exceptions, the working set** *(not written yet)* owns the bare-`except:`

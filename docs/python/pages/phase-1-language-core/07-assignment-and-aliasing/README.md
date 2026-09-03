@@ -103,7 +103,7 @@ writing raises, and the traceback will name the culprit.
 - **[`bytes` vs `str`](../04-bytes-and-encoding/README.md)** is where
   `bytearray` and `memoryview` — the mutable buffer and the view over it —
   actually get used.
-- **Comprehensions** *(not written yet)* is the tool that fixes `[[]] * 3`, and
+- [Comprehensions](../09-comprehensions/README.md) is the tool that fixes `[[]] * 3`, and
   the place where "build a new object per iteration" becomes idiom.
 - **Functions and scope** in Phase 2 owns default arguments properly; this
   topic owns their aliasing half.

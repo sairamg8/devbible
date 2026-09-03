@@ -291,4 +291,4 @@ it removes the wrong object. Remove by index, or rebuild the list.
 
 ---
 
-← Prev: [Nested loops](03b-nested-loops.md) · Index: [Control flow](README.md) · Next → **Comprehensions** *(not written yet)*
+← Prev: [Nested loops](03b-nested-loops.md) · Index: [Control flow](README.md) · Next → [Comprehensions](../09-comprehensions/README.md)

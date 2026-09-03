@@ -172,4 +172,4 @@ methods are called or how many times."* So do not put side effects in
 
 ---
 
-← Prev: **Comprehensions** *(not written yet)* · Index: [`match` — structural pattern matching](README.md) · Next → [Capture versus value patterns](01b-capture-versus-value-patterns.md)
+← Prev: [Comprehensions](../09-comprehensions/README.md) · Index: [`match` — structural pattern matching](README.md) · Next → [Capture versus value patterns](01b-capture-versus-value-patterns.md)
