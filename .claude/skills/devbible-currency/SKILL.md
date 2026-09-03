@@ -8,9 +8,15 @@ description: "Keep devbible current with upstream release cycles. Use when the w
 🔴 **Read `.agents/skills/devbible-currency/SKILL.md` and follow it.** That file is the
 procedure; this one is only the door Claude Code comes through.
 
-Before writing or extending any page, also read
-`.agents/skills/devbible-currency/references/authoring-contract.md` — the 300-line cap
-(a file-size cap, **never** a content budget), chunking mechanics, the depth bar for
-gotchas and interview Q&A, the evidence rule, and the MDX traps.
+Before touching any page, also read its two references:
 
-Do not restate or summarise either file here. The body lives in one place on purpose.
+- **`references/authoring-contract.md`** — the 300-line cap (a file-size cap, **never**
+  a content budget), chunking mechanics, the depth bar for gotchas and interview Q&A,
+  the evidence rule, the MDX traps.
+- **`references/house-style.md`** — tier badges and their exact labels
+  (Master · Understand · Know · When Needed), title and `sidebar_label` form, the
+  `> Verified:` line, the canonical `## Gotchas` / `## Interview questions` headings,
+  `**★ ` entry markers, how the corpus highlights, footer form. Every convention
+  counted off the corpus rather than guessed.
+
+Do not restate or summarise these files here. The body lives in one place on purpose.

@@ -30,6 +30,7 @@ that mattered is skimmed past. Every rule below protects that.
 |---|---|
 | `instructions.md` | The standing brief — tiers, granularity, the cap, `> Verified:` format (§4–§6, §9–§10) |
 | **`references/authoring-contract.md`** | 🔴 **Required before writing or extending any page.** The 300-line cap, chunking mechanics, depth bar, evidence rule, MDX traps |
+| **`references/house-style.md`** | 🔴 **Required before touching any page.** Tier badges and their exact labels, title/`sidebar_label` form, the `> Verified:` line, the canonical section headings, `★` entry markers, how the corpus highlights, footers. Every convention counted off the corpus, not guessed |
 | `src/data/pins.js` | Header comment defines `policy`, `pin`, `tracks`, `names`, `patchIndex` |
 
 Never invent version facts. Every number written to a page comes from a command run in
@@ -100,6 +101,12 @@ If step 3 prints anything, `git checkout -- docs` and redo it per file.
 A security fix, a changed default, a deprecation → reclassify to `minor` and go to §3.
 Bumping the date is only honest because the patch contract says the surface did not
 move; when it did, that reasoning is void.
+
+🔴 **Preserve the bolding.** The scanner reads **bold** in a `> Verified:` line as the
+page's own pin and plain text as a historical citation. A sed that strips `**PostgreSQL
+18.4**` down to plain text silently changes what the tooling thinks the page claims —
+and the page then stops appearing in its own blast radius. See
+`references/house-style.md`.
 
 Then in `pins.js`: set `pin` to the new version, `checked` to today. Never back-date
 `checked`.
@@ -183,7 +190,7 @@ A campaign opened **ahead** of the date, never a same-day scramble:
 
 ## The edit contract
 
-Five rules, non-negotiable — they are what separates this from find-and-replace.
+Six rules, non-negotiable — they are what separates this from find-and-replace.
 
 1. **Version and date move together.** A bumped version under a stale date reads as
    verified and is not. A stale version under a fresh date is a lie. Both or neither.
@@ -193,10 +200,17 @@ Five rules, non-negotiable — they are what separates this from find-and-replac
    Record `wc -l` and `grep -c '^\*\*★'` before; after a split, **both totals must go
    UP**. See `references/authoring-contract.md`.
 3. **Evidence, not memory.** `> Verified:` names what you actually checked and how. No
-   fabricated console output, ever. No new sandbox scripts.
-4. **Additive.** Never delete a page, section or review to make a version fit.
+   fabricated console output, ever. No new sandbox scripts — and 🔴 **a new or edited
+   page must not gain a ` ```console ` block**, because that is program output and
+   there is no sandbox to produce it.
+4. **Match the house style exactly** — tier badge, `sidebar_label` with its `·`
+   separator, the canonical `## Gotchas` / `## Interview questions` headings, `**★ `
+   entry markers, footer form. `references/house-style.md` carries all of it, measured.
+   ⚠️ Do not introduce `:::note` admonitions; 110 exist across 6,079 files and they are
+   not house style.
+5. **Additive.** Never delete a page, section or review to make a version fit.
    Deprecated material gets `⚠ Deprecated` and a pointer to its successor.
-5. **Reviews are historical records.** `docs/*/reviews/` is never updated to match a
+6. **Reviews are historical records.** `docs/*/reviews/` is never updated to match a
    new version.
 
 ## Commit cadence
