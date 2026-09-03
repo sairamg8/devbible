@@ -81,7 +81,7 @@ PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
 ## What was done, 2026-09-03
 
-The track arrived as 140 imported pages and is now **229**. Four steps ran in one day:
+The track arrived as 140 imported pages and is now **217**. Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
 2. **De-duplicated** the chapter 18/19 appendices.
