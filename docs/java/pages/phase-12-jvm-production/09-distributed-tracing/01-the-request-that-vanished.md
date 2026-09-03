@@ -136,7 +136,7 @@ explicitly and does not depend on clocks agreeing.
 **★ Traces are exported asynchronously and can be dropped.** Spans go into a bounded in-memory
 queue and are flushed in batches. The queue can overflow, the exporter can fail, and the
 process can exit before the flush. A missing span is not proof the work did not happen — see
-**08 · Cost and overhead** *(not written yet)*.
+[08 · Cost and overhead](08-cost-and-overhead.md).
 
 **★ The first trace you look at will have gaps, and the gaps are yours.** Auto-instrumentation
 covers frameworks; it does not cover your thread pools, your custom transports or your batch

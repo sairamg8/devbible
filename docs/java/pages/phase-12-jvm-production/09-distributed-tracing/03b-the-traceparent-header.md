@@ -163,7 +163,7 @@ caller's span, never the origin. The trace id is the only end-to-end constant.
 **★ Sampled `= 1` means "may have recorded", not "did record".** The spec is explicit about the
 asymmetry. A downstream that sees `1` and records, while the upstream's exporter dropped its spans,
 produces a trace with a missing root. That is a cost-and-overhead symptom
-(**08** *(not written yet)*), not a propagation bug.
+([08](08-cost-and-overhead.md)), not a propagation bug.
 
 **★ Deferred (tail) sampling is told to start traces with `sampled = 0`.** *"It should be set to `0`
 as the default option when the trace is initiated by this component."* Every `ParentBased` sampler
