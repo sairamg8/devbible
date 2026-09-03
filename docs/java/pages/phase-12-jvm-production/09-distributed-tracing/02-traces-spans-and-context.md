@@ -281,4 +281,4 @@ you can find a trace by user id without destroying grouping.
 
 ---
 
-← [01 · The request that vanished](01-the-request-that-vanished.md) · **Topic index** *(not written yet)* · Next → [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md)
+← [01 · The request that vanished](01-the-request-that-vanished.md) · [Topic index](README.md) · Next → [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md)

@@ -221,4 +221,4 @@ The span clock never stops, the span is never exported to the telemetry collecto
 
 ---
 
-← [05 · Wiring in Spring Boot](05-wiring-it-in-spring-boot.md) · **Topic index** *(not written yet)* · Next → [06 · Sampling](06-sampling.md)
+← [05 · Wiring in Spring Boot](05-wiring-it-in-spring-boot.md) · [Topic index](README.md) · Next → [06 · Sampling](06-sampling.md)

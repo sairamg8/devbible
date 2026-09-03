@@ -192,4 +192,4 @@ Tracing propagation across HTTP calls relies on client request interceptors (`Ob
 
 ---
 
-← [03e · Propagation that breaks](03e-propagation-that-breaks.md) · **Topic index** *(not written yet)* · Next → [05b · Custom spans and annotations](05b-custom-spans-and-annotations.md)
+← [03e · Propagation that breaks](03e-propagation-that-breaks.md) · [Topic index](README.md) · Next → [05b · Custom spans and annotations](05b-custom-spans-and-annotations.md)

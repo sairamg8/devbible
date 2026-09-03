@@ -220,4 +220,4 @@ that skipped the annotation and "fixed" a working client has done real damage.
 
 ---
 
-← [03b · The traceparent header](03b-the-traceparent-header.md) · **Topic index** *(not written yet)* · Next → [03c · tracestate and baggage](03c-tracestate-and-baggage.md)
+← [03b · The traceparent header](03b-the-traceparent-header.md) · [Topic index](README.md) · Next → [03c · tracestate and baggage](03c-tracestate-and-baggage.md)

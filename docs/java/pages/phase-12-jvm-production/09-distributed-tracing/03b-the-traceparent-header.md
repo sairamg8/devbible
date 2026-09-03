@@ -213,4 +213,4 @@ as too long.
 
 ---
 
-← [03 · Context propagation](03-context-propagation.md) · **Topic index** *(not written yet)* · Next → [03b2 · Mutations and processing](03b2-traceparent-mutations-and-processing.md)
+← [03 · Context propagation](03-context-propagation.md) · [Topic index](README.md) · Next → [03b2 · Mutations and processing](03b2-traceparent-mutations-and-processing.md)

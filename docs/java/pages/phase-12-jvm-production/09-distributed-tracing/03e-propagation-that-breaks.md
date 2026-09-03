@@ -230,4 +230,4 @@ The executing thread retains the span and trace context in its `ThreadLocal` map
 
 ---
 
-← [03d · B3 and other formats](03d-b3-and-the-other-formats.md) · **Topic index** *(not written yet)* · Next → [05 · Wiring in Spring Boot](05-wiring-it-in-spring-boot.md)
+← [03d · B3 and other formats](03d-b3-and-the-other-formats.md) · [Topic index](README.md) · Next → [05 · Wiring in Spring Boot](05-wiring-it-in-spring-boot.md)

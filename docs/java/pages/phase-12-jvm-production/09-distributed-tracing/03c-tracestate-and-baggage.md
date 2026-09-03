@@ -206,4 +206,4 @@ In time-series monitoring systems like Prometheus, every unique combination of t
 
 ---
 
-← [03b2 · Mutations and processing](03b2-traceparent-mutations-and-processing.md) · **Topic index** *(not written yet)* · Next → [03d · B3 and the other formats](03d-b3-and-the-other-formats.md)
+← [03b2 · Mutations and processing](03b2-traceparent-mutations-and-processing.md) · [Topic index](README.md) · Next → [03d · B3 and the other formats](03d-b3-and-the-other-formats.md)

@@ -197,4 +197,4 @@ That is why [03e](03e-propagation-that-breaks.md) exists.
 
 ---
 
-**Topic index** *(not written yet)* · Next → [02 · Traces, spans and context](02-traces-spans-and-context.md)
+← [Topic index](README.md) · Next → [02 · Traces, spans and context](02-traces-spans-and-context.md)

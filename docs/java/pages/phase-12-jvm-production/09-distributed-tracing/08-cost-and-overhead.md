@@ -158,4 +158,4 @@ First, filter out high-frequency infrastructure traffic (health checks, metric s
 
 ---
 
-← [06b · Tail sampling](06b-the-trace-you-needed-was-not-sampled.md) · **Topic index** *(not written yet)*
+← [06b · Tail sampling](06b-the-trace-you-needed-was-not-sampled.md) · [Topic index](README.md) · Next topic → [10 · Packaging for deploy](../10-packaging-for-deploy/README.md)

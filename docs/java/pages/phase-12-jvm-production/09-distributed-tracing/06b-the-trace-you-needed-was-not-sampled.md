@@ -153,4 +153,4 @@ When `decision_wait` expires, the collector evaluates its policies, exports or d
 
 ---
 
-← [06 · Sampling](06-sampling.md) · **Topic index** *(not written yet)* · Next → [08 · Cost and overhead](08-cost-and-overhead.md)
+← [06 · Sampling](06-sampling.md) · [Topic index](README.md) · Next → [08 · Cost and overhead](08-cost-and-overhead.md)

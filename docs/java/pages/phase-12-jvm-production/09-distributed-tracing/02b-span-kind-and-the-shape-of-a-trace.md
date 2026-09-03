@@ -210,4 +210,4 @@ explain.
 
 ---
 
-← [02 · Traces, spans and context](02-traces-spans-and-context.md) · **Topic index** *(not written yet)* · Next → [03 · Context propagation](03-context-propagation.md)
+← [02 · Traces, spans and context](02-traces-spans-and-context.md) · [Topic index](README.md) · Next → [03 · Context propagation](03-context-propagation.md)

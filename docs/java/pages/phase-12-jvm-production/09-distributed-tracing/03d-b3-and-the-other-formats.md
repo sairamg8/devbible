@@ -195,4 +195,4 @@ Datadog represents trace and span IDs as 64-bit unsigned decimal integers as ASC
 
 ---
 
-← [03c · tracestate and baggage](03c-tracestate-and-baggage.md) · **Topic index** *(not written yet)* · Next → [03e · Propagation that breaks](03e-propagation-that-breaks.md)
+← [03c · tracestate and baggage](03c-tracestate-and-baggage.md) · [Topic index](README.md) · Next → [03e · Propagation that breaks](03e-propagation-that-breaks.md)

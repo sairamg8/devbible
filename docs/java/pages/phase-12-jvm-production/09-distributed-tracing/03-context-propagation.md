@@ -270,4 +270,4 @@ disappears, but the "context never arrived" hazard is exactly as present as befo
 
 ---
 
-← [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md) · **Topic index** *(not written yet)* · Next → [03b · The traceparent header](03b-the-traceparent-header.md)
+← [02b · Span kind and the shape of a trace](02b-span-kind-and-the-shape-of-a-trace.md) · [Topic index](README.md) · Next → [03b · The traceparent header](03b-the-traceparent-header.md)
