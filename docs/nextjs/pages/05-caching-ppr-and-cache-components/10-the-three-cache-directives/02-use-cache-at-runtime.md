@@ -36,7 +36,7 @@ each static-shell revalidation. On a self-hosted server, the cached output is re
 is still fresh.
 
 This is precisely the gap **`use cache: remote`** exists to close — see
-**chunk 3 · `use cache: remote`** *(not written yet)*.
+**[chunk 3](03-use-cache-remote.md)**.
 
 > Even where the server-side hit rate is poor, `use cache` still earns its place: it tells
 > Next.js **what can be prefetched** and **defines stale times for client-side navigation**.

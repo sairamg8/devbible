@@ -137,7 +137,7 @@ rests on a server; `remote` guarantees it does. Nesting either inside the other 
 of those promises false, so the framework refuses rather than silently picking a winner.
 
 Nesting a plain `use cache` inside another also has a lifetime rule attached, covered in
-**chunk 5 · revalidation and lifetimes** *(not written yet)*: a short-lived cache nested inside one with no
+**[chunk 5](05-revalidation-and-lifetimes.md)**: a short-lived cache nested inside one with no
 explicit `cacheLife` fails the build during prerendering.
 
 ## Gotchas
@@ -199,7 +199,7 @@ you, because nothing is wrong from the framework's point of view.
 
 **Fix.** Call `await connection()` in the component that must run per request, or give the
 scope a `cacheLife` short enough that it cannot be stored in the shell — see
-**chunk 5 · revalidation and lifetimes** *(not written yet)* for those thresholds.
+**[chunk 5](05-revalidation-and-lifetimes.md)** for those thresholds.
 
 ## Interview questions
 
