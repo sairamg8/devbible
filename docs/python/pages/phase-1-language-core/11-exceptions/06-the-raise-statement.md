@@ -35,7 +35,7 @@ raise_stmt: "raise" [expression ["from" expression]]
 - `raise` — re-raise the active exception.
 - `raise X` — raise `X`, chaining implicitly to whatever was being handled.
 - `raise X from Y` — raise `X`, chaining explicitly. That is
-  **06b** *(not written yet)*.
+  [06b](06b-exception-chaining.md).
 
 ## Bare `raise`
 
@@ -226,7 +226,7 @@ the end of it.
 **Symptom — an exception raised inside an `except` block loses its relationship
 to the original.** Cause: it does not — implicit chaining attaches the original
 as `__context__`. What *does* lose it is `raise ... from None`. Fix: see
-**06b · Exception chaining** *(not written yet)*.
+[06b · Exception chaining](06b-exception-chaining.md).
 
 ## Interview questions
 
@@ -277,4 +277,4 @@ the re-raise.
 
 ---
 
-← Prev: [The deleted `as` target](05c-the-as-target-is-deleted.md) · Index: [Exceptions](README.md) · Next → **Exception chaining** *(not written yet)*
+← Prev: [The deleted `as` target](05c-the-as-target-is-deleted.md) · Index: [Exceptions](README.md) · Next → [Exception chaining](06b-exception-chaining.md)

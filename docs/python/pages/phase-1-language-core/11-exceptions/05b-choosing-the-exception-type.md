@@ -147,7 +147,7 @@ defences:
 - Prefer the library's documented base class over an observed leaf class.
 - At your own module boundaries, convert: catch the library's exception and raise
   your own, with `from` so the original survives. See
-  **06b · Exception chaining** *(not written yet)* and
+  [06b · Exception chaining](06b-exception-chaining.md) and
   **07 · Custom exceptions** *(not written yet)*.
 
 ## PEP 8's rule, from the other side

@@ -272,7 +272,7 @@ The `finally` clause of the same statement still runs, and then the new exceptio
 propagates — with the original attached as its `__context__`, which is what
 produces the *"During handling of the above exception, another exception
 occurred"* traceback. See
-**06b · Exception chaining** *(not written yet)*.
+[06b · Exception chaining](06b-exception-chaining.md).
 
 **Q: How does the interpreter decide which `except` clause matches?**
 Linearly, first match wins, using the same check as `isinstance`: a clause
