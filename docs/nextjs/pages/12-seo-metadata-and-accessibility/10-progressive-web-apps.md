@@ -29,13 +29,13 @@ offline are governed by completely different machinery with completely different
 modes. This page is the narrowest and most load-bearing piece: where the manifest lives in a
 Next.js app, what URL it ends up on, and how Next decides to cache it.
 
-The rest of the topic runs across six siblings — the manifest members that actually change
+The rest of the topic runs across sixteen siblings; these are its entry points — the manifest members that actually change
 behaviour in [10b](10b-manifest-fields-that-change-behaviour.md), install detection and the
-prompt in [10c](10c-installability-and-the-install-prompt.md), service workers in
-[10d](10d-service-workers-in-the-app-router.md), the two halves of "offline" in
-[10e](10e-offline-strategy-and-the-useoffline-boundary.md), push in
-[10f](10f-web-push-notifications.md), and the platform that quietly breaks most PWA advice in
-[10g](10g-ios-and-safari-limits.md).
+prompt in [10d](10d-installability-and-the-install-prompt.md), service workers in
+[10f](10f-service-workers-in-the-app-router.md), the two halves of "offline" in
+[10i](10i-offline-strategy-and-the-useoffline-boundary.md), push in
+[10l](10l-web-push-the-subscription-flow.md), and the platform that quietly breaks most PWA advice in
+[10p](10p-ios-and-safari-limits.md).
 
 ## The two installability requirements, and only two
 
@@ -52,7 +52,7 @@ Two consequences follow immediately:
 2. If you *do* write a service worker, it is because you want offline behaviour or push — two
    things you should be able to justify independently. A service worker whose only job is to
    satisfy an install requirement that no longer exists is pure liability — see the update
-   lifecycle in [10d](10d-service-workers-in-the-app-router.md).
+   lifecycle in [10f](10f-service-workers-in-the-app-router.md).
 
 ## The manifest is a route, not a file you copy into `public/`
 
@@ -279,4 +279,6 @@ One wins and the other is dead. Discovery walks an ordered extension list — th
 extensions first, then your page extensions — and takes the first hit. Relying on that order
 is relying on an implementation detail; ship one file.
 
-{/* FOOTER */}
+---
+
+[Chapter 12 overview](01-explanation.md) · Next → [10b · Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md)

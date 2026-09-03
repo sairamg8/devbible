@@ -200,4 +200,6 @@ person writing the manifest. An out-of-scope URL is one of *your own* routes tha
 sit outside a prefix you never explicitly set, because you left `scope` to be inferred from
 `start_url`. That is why `scope: '/'` is worth writing even when it looks redundant.
 
-{/* FOOTER */}
+---
+
+← [10 · Progressive Web Apps](10-progressive-web-apps.md) · [Chapter 12 overview](01-explanation.md) · Next → [10c · Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md)

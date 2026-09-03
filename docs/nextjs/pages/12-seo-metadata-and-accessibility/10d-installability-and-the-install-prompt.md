@@ -177,7 +177,7 @@ sniff — it tells you the engine has the event even when it has not fired yet, 
 common case on a first visit before Chromium has decided you are install-worthy. And the iOS
 branch is deliberately the only user-agent test in the file, because there is genuinely no
 feature to detect there; the constraints behind it are in
-[10h](10h-ios-and-safari-limits.md).
+[10p](10p-ios-and-safari-limits.md).
 
 ## Gotchas
 
@@ -267,4 +267,6 @@ deciding the app is installable — no handler can conjure it. The usual causes 
 unsuitable icon and `prefer_related_applications: true`, which MDN says must be `false` or
 omitted for Chromium to offer an install.
 
-{/* FOOTER */}
+---
+
+← [10c · Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md) · [Chapter 12 overview](01-explanation.md) · Next → [10e · Detecting install state](10e-detecting-install-state.md)

@@ -195,4 +195,6 @@ list containing a URL that 404s — `cache.addAll()` rejects as a unit. Split re
 from optional ones and settle the optional ones individually, so one missing font does not
 block every future update.
 
-{/* FOOTER */}
+---
+
+← [10g · The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md) · [Chapter 12 overview](01-explanation.md) · Next → [10i · Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md)

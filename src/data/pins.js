@@ -168,6 +168,17 @@ export const PINS = {
     names: ['bcrypt'],
     note: 'Native addon (node-gyp-build). Versions < 5.0.0 mishandle NUL bytes and truncate at 255 chars — a real upgrade boundary, not just a version number.',
   },
+  // Added 2026-09-03 under the library necessity test: the Next.js PWA guide's push
+  // chapter cannot be taught without it — sending a Web Push message requires VAPID JWT
+  // signing plus aes128gcm payload encryption, which nobody hand-rolls. 3.6.7 confirmed
+  // against registry.npmjs.org on 2026-09-03.
+  // ⚠️ NOT installed in this checkout — pages about it are doc-verified (T2), never probed.
+  webpush: {
+    label: 'web-push', source: 'npm:web-push', policy: 'latest',
+    pin: '3.6.7', checked: '2026-09-03', tracks: ['nextjs'],
+    names: ['web-push'],
+    note: 'Server side of Web Push only. The browser half (PushManager, VAPID public key) is platform API and has no pin.',
+  },
   zod: {
     label: 'Zod', source: 'npm:zod', policy: 'latest',
     // `real-world` added 2026-09-03: 17 pages there bold **zod 4.4.3** and were

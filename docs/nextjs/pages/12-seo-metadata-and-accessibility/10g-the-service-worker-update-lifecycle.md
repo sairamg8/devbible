@@ -193,5 +193,6 @@ it the browser may consider the handler complete as soon as it returns and termi
 worker, leaving a cache half-populated or old caches undeleted. Every asynchronous lifecycle
 handler needs it.
 
+---
 
-{/* FOOTER */}
+← [10f · Service workers in the App Router](10f-service-workers-in-the-app-router.md) · [Chapter 12 overview](01-explanation.md) · Next → [10h · Update detection and recovery](10h-service-worker-update-detection-and-recovery.md)

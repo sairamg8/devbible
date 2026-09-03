@@ -34,7 +34,7 @@ consequences:
 - **Ask for persistence if the app genuinely needs it.** `navigator.storage.persist()` requests
   that the origin's storage not be cleared under pressure, and `navigator.storage.estimate()`
   reports usage and quota. Both are advisory: the browser decides, and Safari's behaviour here
-  is its own topic — see [10l](10l-ios-and-safari-limits.md).
+  is its own topic — see [10p](10p-ios-and-safari-limits.md).
 
 ```js title="public/sw.js (excerpt)"
 async function putBounded(cacheName, request, response, maxEntries) {
@@ -214,4 +214,6 @@ Nothing, if you meant it: it searches every cache in the origin. That is usually
 meant, because it will happily return an entry from a previous deploy's version-keyed cache and
 undo the whole point of versioning the name. Open the specific cache and match against that.
 
-{/* FOOTER */}
+---
+
+← [10j · Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md) · [Chapter 12 overview](01-explanation.md) · Next → [10l · Web Push: the subscription flow](10l-web-push-the-subscription-flow.md)

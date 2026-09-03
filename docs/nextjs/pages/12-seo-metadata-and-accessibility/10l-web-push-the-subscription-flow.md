@@ -23,7 +23,7 @@ wrong half of the VAPID pair shipped to the browser, a `subscribe()` call that w
 gesture, a subscription object that could not cross the Server Action boundary, or one stored
 in a place that does not survive a deploy. This page is obtaining it in the browser; storing it
 safely is [10m](10m-storing-push-subscriptions.md), and sending is
-[10n](10n-sending-push-and-the-worker-handlers.md).
+[10n](10n-sending-push-from-the-server.md).
 
 ## VAPID: which key goes where
 
@@ -162,7 +162,7 @@ above. Ask at a moment where the value is obvious, not on first paint.
 **Symptom.** `subscribe()` rejects in Chrome and Edge.
 **Cause.** MDN documents that those browsers require it to be `true`. There is no silent push.
 **Fix.** Pass `userVisibleOnly: true`, and make sure the worker really does show a notification
-for every message — see [10n](10n-sending-push-and-the-worker-handlers.md).
+for every message — see [10o](10o-push-in-the-service-worker.md).
 
 ### Passing the `PushSubscription` object straight to a Server Action
 **Symptom.** A serialisation error, or a stored row whose `keys` are empty.
@@ -223,4 +223,6 @@ is therefore a re-subscribe event: have the client compare its existing
 `options.applicationServerKey` against the current one and re-subscribe on a mismatch, and keep
 the old private key alive long enough to drain in-flight sends.
 
-{/* FOOTER */}
+---
+
+← [10k · Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md) · [Chapter 12 overview](01-explanation.md) · Next → [10m · Storing push subscriptions](10m-storing-push-subscriptions.md)

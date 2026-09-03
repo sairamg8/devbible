@@ -197,4 +197,6 @@ That means new spec members can be emitted before the type knows about them, and
 a type-level cast to smuggle one in silently disables checking on everything else — spread a
 typed base object instead of casting the whole return.
 
-{/* FOOTER */}
+---
+
+← [10b · Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md) · [Chapter 12 overview](01-explanation.md) · Next → [10d · Installability and the install prompt](10d-installability-and-the-install-prompt.md)

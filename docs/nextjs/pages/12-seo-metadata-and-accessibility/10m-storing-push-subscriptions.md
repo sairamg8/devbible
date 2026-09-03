@@ -87,7 +87,7 @@ You find out in exactly two places:
 
 1. **At send time**, when the push service rejects the request for a subscription it no longer
    recognises. That is the reliable signal, and pruning on it is covered in
-   [10n](10n-sending-push-and-the-worker-handlers.md).
+   [10n](10n-sending-push-from-the-server.md).
 2. **In the worker**, via the `pushsubscriptionchange` event, which fires when a subscription is
    replaced by the browser. ⚠️ Support for it is uneven across engines and neither the Next.js
    guide nor MDN presents it as something you can depend on — treat it as an optimisation, not
@@ -208,4 +208,6 @@ carries the old `userId`. Two fixes together: re-point the row on every subscrib
 `update` branch of an endpoint-keyed upsert does for free, and unsubscribe as part of sign-out
 rather than only when the user toggles notifications off.
 
-{/* FOOTER */}
+---
+
+← [10l · Web Push: the subscription flow](10l-web-push-the-subscription-flow.md) · [Chapter 12 overview](01-explanation.md) · Next → [10n · Sending push from the server](10n-sending-push-from-the-server.md)

@@ -273,4 +273,6 @@ Launching from the home screen is a document request for `start_url`, and you on
 `/offline`. Either precache `start_url` itself, or accept that the launch falls back to the
 offline page — which is a legitimate choice, but it should be a choice rather than a surprise.
 
-{/* FOOTER */}
+---
+
+← [10h · Update detection and recovery](10h-service-worker-update-detection-and-recovery.md) · [Chapter 12 overview](01-explanation.md) · Next → [10j · Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md)

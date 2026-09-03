@@ -169,4 +169,6 @@ Outside a top-level secure context — notably inside an iframe, or over plain H
 `InvalidStateError`. Since neither condition is one your install UI can fix, the correct
 handling is a caught, ignored rejection that leaves the component's existing state alone.
 
-{/* FOOTER */}
+---
+
+← [10d · Installability and the install prompt](10d-installability-and-the-install-prompt.md) · [Chapter 12 overview](01-explanation.md) · Next → [10f · Service workers in the App Router](10f-service-workers-in-the-app-router.md)

@@ -210,6 +210,6 @@ should return early for any non-`GET` request, and specifically for a `POST` car
 `next-action` header. Retrying framework requests on reconnect is what
 `experimental.useOffline` does, once, at the framework layer that knows what is in flight.
 
+---
 
-
-{/* FOOTER */}
+← [10i · Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md) · [Chapter 12 overview](01-explanation.md) · Next → [10k · Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md)

@@ -23,7 +23,7 @@ running in a context with no DOM, no `window`, and a lifecycle that outlives the
 registered it.** Nothing in the App Router — not `use cache`, not ISR, not Draft Mode — knows
 it exists. This page is placement, scope and registration; the update lifecycle — the part that
 produces "I deployed and nothing changed" — is [10g](10g-the-service-worker-update-lifecycle.md),
-and what to actually cache is [10h](10h-offline-strategy-and-the-useoffline-boundary.md).
+and what to actually cache is [10i](10i-offline-strategy-and-the-useoffline-boundary.md).
 
 ## What you are actually deploying
 
@@ -241,4 +241,6 @@ a potentially trustworthy origin; for anything else, `next dev --experimental-ht
 locally trusted `mkcert` certificate for development, and the docs state plainly that production
 needs properly issued certificates.
 
-{/* FOOTER */}
+---
+
+← [10e · Detecting install state](10e-detecting-install-state.md) · [Chapter 12 overview](01-explanation.md) · Next → [10g · The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md)
