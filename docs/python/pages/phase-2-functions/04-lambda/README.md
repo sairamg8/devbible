@@ -27,7 +27,7 @@ You are done with this topic when you can explain the grammatical limitations of
 
 - **[Topic 01 — `def` and `return`](../01-def-and-return/README.md)** — explains why standard `def` statements should be preferred for any callable assigned to a name.
 - **[Topic 03 — Scope and closures](../03-scope-and-closures/README.md)** — explains how lambdas create closures and how default argument capture (`lambda i=i: ...`) cures the late-binding loop bug.
-- **Topic 05 — Decorators** *(not written yet)* — explores higher-order functions that wrap callables.
+- **[Topic 05 — Decorators](../05-decorators/README.md)** — explores higher-order functions that wrap callables.
 
 ---
 

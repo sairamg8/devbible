@@ -151,4 +151,4 @@ No. In CPython, both `def` and `lambda` generate an identical `types.FunctionTyp
 
 ---
 
-← [Syntax and key functions](01-syntax-restrictions-and-key-functions.md) · [Topic index](README.md) · Next → **Decorators** *(not written yet)*
+← [Syntax and key functions](01-syntax-restrictions-and-key-functions.md) · [Topic index](README.md) · Next → [Decorators](../05-decorators/README.md)

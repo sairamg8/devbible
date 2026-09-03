@@ -23,7 +23,7 @@ Two rows here are tiered **Master** because they produce the bugs that survive
 review: a signature that grows badly, and a closure that captures a loop
 variable by reference and hands every callback the last value.
 
-🚧 **In flight — 4 of 10.** Phase 1 is 14 of 16 with one topic in flight.
+🚧 **In flight — 5 of 10.** Phase 1 is 14 of 16 with one topic in flight.
 
 | # | Page | Tier | In one line |
 |---|---|---|---|
@@ -31,7 +31,7 @@ variable by reference and hands every callback the last value.
 | 02 | **[Parameters in full](./02-parameters-in-full/README.md)** | <span className="db-tier t-master">Master</span> | Defaults evaluated once, `*args`/`**kwargs`, keyword-only, positional-only |
 | 03 | **[Scope and closures](./03-scope-and-closures/README.md)** | <span className="db-tier t-master">Master</span> | LEGB, `global`/`nonlocal`, and the late-binding loop bug |
 | 04 | **[lambda](./04-lambda/README.md)** | <span className="db-tier t-understand">Understand</span> | Idiomatic as `key=`, a smell as a named function |
-| 05 | **Decorators** *(not written yet)* | <span className="db-tier t-master">Master</span> | Written from scratch, `functools.wraps`, arguments, stacking |
+| 05 | **[Decorators](./05-decorators/README.md)** | <span className="db-tier t-master">Master</span> | Written from scratch, `functools.wraps`, arguments, stacking |
 | 06 | **`functools`** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `partial`, `cache`, `singledispatch`, `reduce` |
 | 07 | **Callables beyond functions** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | `__call__`, bound methods, and what `self` actually is |
 | 08 | **Docstrings** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | The format your team uses, and `help()` |
