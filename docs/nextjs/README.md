@@ -81,7 +81,7 @@ PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
 ## What was done, 2026-09-03
 
-The track arrived as 140 imported pages and is now **190**. Four steps ran in one day:
+The track arrived as 140 imported pages and is now **215**. Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
 2. **De-duplicated** the chapter 18/19 appendices.
@@ -97,6 +97,18 @@ documentation quoted verbatim across 394 blockquotes. All of it was rewritten in
 voice, with **zero facts lost** — verified by diffing every identifier, number and cited URL
 against the pre-rewrite commit. Eight quotes survive, one per page, each under 25 words and
 each kept because the exact wording is normative.
+
+### Then brought to house style
+
+Measured against `.agents/references/house-style.md` rather than guessed: real
+`← Prev · Index · Next →` footers replacing 40 `{/* FOOTER */}` markers (a valid MDX comment
+with no link, which every other check passes while the page has no navigation at all);
+`**★ ` entry markers, which are also the project's split-proof counter; and every `:::`
+admonition converted to the corpus form of bold lead-ins with 🔴/⚠️.
+
+The version pin in `src/data/pins.js` is current at **16.3.4**. 🔴 It carries a comment
+explaining that 16.3.1 → 16.3.4 was **not** a patch bump — it spans the August security
+release that disabled AVIF — so a future 16.3.x is not treated mechanically.
 
 ### Still open
 
