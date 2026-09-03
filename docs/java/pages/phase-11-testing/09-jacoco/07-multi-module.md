@@ -162,7 +162,7 @@ Aggregation gives you a project number; it does not tell you what to enforce. Th
 - **[03c · Lines do not add up](03c-line-coverage-needs-debug-info.md)** — why averaging module
   percentages is wrong even before you consider module size.
 - **[04 · Thresholds](04-thresholds.md)** — the per-module rules worth enforcing.
-- **[Phase 8 · Layout and multi-module](../../phase-8-build-dependencies/06-layout-and-multi-module/)**
+- **[Phase 8 · Layout and multi-module](../../phase-8-build-dependencies/06-layout-and-multi-module/README.md)**
   owns the reactor itself.
 
 ## Gotchas

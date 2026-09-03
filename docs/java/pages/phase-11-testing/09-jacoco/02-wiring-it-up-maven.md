@@ -174,7 +174,7 @@ regardless, since an unpinned plugin version makes builds non-reproducible.
 - **[02d · Integration tests](02d-integration-tests-and-failsafe.md)** — the `-integration`
   goals and `merge`.
 - **[04 · Thresholds](04-thresholds.md)** — the `check` goal's rule syntax in full.
-- **[Phase 8 · Maven core](../../phase-8-build-dependencies/01-maven-core/)** owns the lifecycle,
+- **[Phase 8 · Maven core](../../phase-8-build-dependencies/01-maven-core/README.md)** owns the lifecycle,
   phases and plugin binding themselves; this page assumes them.
 
 ## Gotchas

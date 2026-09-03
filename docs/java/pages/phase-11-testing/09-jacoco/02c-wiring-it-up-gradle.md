@@ -203,7 +203,7 @@ directions, and both failures are quiet.
   defaults are the wrong starting point.
 - **[05 · Exclusions](05-exclusions.md)** — what deserves excluding, and the two very different
   places you can do it.
-- **[Phase 8 · Gradle](../../phase-8-build-dependencies/04-gradle/)** owns the build tool
+- **[Phase 8 · Gradle](../../phase-8-build-dependencies/04-gradle/README.md)** owns the build tool
   itself — task graphs, `finalizedBy` versus `dependsOn`, and configuration avoidance.
 
 ## Gotchas

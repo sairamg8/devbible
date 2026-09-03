@@ -142,7 +142,7 @@ flag and on how the code is formatted.
   and why the "at least one instruction" rule is what makes lines the weaker one.
 - **[06c · The class that reads 0%](06c-the-zero-percent-class.md)** — the other family of
   problems caused by class files differing between run and report.
-- **[Phase 8 · javac flags](../../phase-8-build-dependencies/11-javac-flags/)** owns `-g` and
+- **[Phase 8 · javac flags](../../phase-8-build-dependencies/11-javac-flags/README.md)** owns `-g` and
   the rest of the compiler's options; this chunk only names the consequence for coverage.
 
 ## Gotchas
