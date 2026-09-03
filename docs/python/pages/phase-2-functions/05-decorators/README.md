@@ -30,7 +30,7 @@ You are done with this topic when you can implement a decorator from scratch, pr
 - **[Topic 01 — `def` and `return`](../01-def-and-return/README.md)** — establishes functions as first-class objects that can be passed to and returned from other functions.
 - **[Topic 02 — Parameters in full](../02-parameters-in-full/README.md)** — explains `*args, **kwargs` forwarding and `ParamSpec` signature preservation.
 - **[Topic 03 — Scope and closures](../03-scope-and-closures/README.md)** — decorators are closures that capture the wrapped function in heap cell objects.
-- **Topic 06 — `functools`** *(not written yet)* — explores `lru_cache`, `cache`, and `singledispatch`, which are standard library decorators.
+- **[Topic 06 — `functools`](../06-functools/README.md)** — explores `lru_cache`, `cache`, and `singledispatch`, which are standard library decorators.
 
 ---
 

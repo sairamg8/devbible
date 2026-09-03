@@ -181,4 +181,4 @@ It receives the constructed class object itself (`MyClass`), after all class bod
 
 ---
 
-← [Decorators taking arguments](03-decorators-taking-arguments-and-factories.md) · [Topic index](README.md) · Next → **functools** *(not written yet)*
+← [Decorators taking arguments](03-decorators-taking-arguments-and-factories.md) · [Topic index](README.md) · Next → [functools](../06-functools/README.md)
