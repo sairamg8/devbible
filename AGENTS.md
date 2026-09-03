@@ -49,6 +49,23 @@ Before touching any page, also read its two references:
 
 The one rule that makes it usable: **a patch bump never causes a page to be re-read.**
 
+## Writing a topic
+
+To write, extend, or re-validate a topic — *"explain X properly"*, *"extend topic X"*,
+*"validate topic X against the docs"*:
+
+🔴 **Read `.agents/skills/devbible-topic/SKILL.md` and follow it.** Also agent-neutral.
+
+It owns the depth bar (exhaustive gotchas, pitfalls, runnable examples, interview Q&A),
+pulling in surrounding libraries a fullstack build needs (jwt, bcrypt, multer — each
+arriving with its own pin), and verifying every claim against primary sources at the
+cheapest sufficient tier. Its extra reference is
+`.agents/references/verification.md` — how to be accurate **without a sandbox**.
+
+🔴 **The two skills never merge.** `devbible-currency` sweeps versions across the whole
+corpus; `devbible-topic` validates content for **one named topic**. A bare *"check for
+update"* means the version sweep, never a corpus-wide content re-read.
+
 **Explanation cadence:** each topic page must be visible in the UI as written
 (dev server + `src/data/progress.js` bump). After a **complete phase**, run
 `yarn build` once and fix all errors in that pass — not a full build after every

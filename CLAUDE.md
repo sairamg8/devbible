@@ -54,6 +54,13 @@ required reading before touching any page — `.agents/references/authoring-cont
 badges, `> Verified:` line, section headings, `★` markers, footers — measured off the
 corpus).
 
+**Writing, extending or re-validating a topic** — read
+`.agents/skills/devbible-topic/SKILL.md` and follow it. It owns the depth bar, pulling
+in surrounding libraries (jwt, bcrypt, multer — each with its own pin), and verifying
+claims against primary sources **without a sandbox**
+(`.agents/references/verification.md`). 🔴 The two skills never merge: currency sweeps
+versions corpus-wide, `devbible-topic` validates content for one **named** topic.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
