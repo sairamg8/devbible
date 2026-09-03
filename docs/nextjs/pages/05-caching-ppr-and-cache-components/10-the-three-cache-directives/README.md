@@ -2,7 +2,7 @@
 title: "The three cache directives"
 sidebar_label: "10 · The three cache directives"
 sidebar_position: 0
-description: "use cache, use cache: remote and use cache: private — seven chunks covering the choice, composition, keys, runtime behaviour, and lifetimes."
+description: "use cache, use cache: remote and use cache: private — eight chunks covering the choice, composition, keys, runtime behaviour, lifetimes and tag invalidation."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -47,7 +47,7 @@ the upstream is rate-limited, slow, expensive or flaky **and** the cache key has
 values. That last conjunction is the one people skip, and it is what separates a remote cache
 that protects a backend from one that is a network round trip attached to a permanent miss.
 
-## The five facts most likely to catch you
+## The six facts most likely to catch you
 
 1. **`connection()` is banned in every cache scope** — including `private`, which relaxes the
    other three restrictions.
