@@ -59,7 +59,11 @@ resolved = build_tree.__annotate__(1)
 ```
 
 ### 2. `Format.VALUE_WITH_FAKE_GLOBALS` (Format 2)
-Evaluates annotations while isolating global lookups. Undefined identifiers evaluate to forward-reference proxies rather than looking into runtime globals that may have changed. This mode is used by static and cross-module inspection tools.
+🔴 **Internal only — never pass this one yourself.** It is the signal `annotationlib` sends when it runs an `__annotate__` function inside a rigged environment with fake globals, which is the machinery it uses to implement the `FORWARDREF` and `STRING` formats. The library reference is explicit about both halves:
+
+> Special value used to signal that an annotate function is being evaluated in a special environment with fake globals. When passed this value, annotate functions should either return the same value as for the `Format.VALUE` format, or raise `NotImplementedError` to signal that they do not support execution in this environment. **This format is only used internally and should not be passed to the functions in this module.**
+
+So it matters in exactly one situation: if you hand-write an `__annotate__` function, it has to answer this format — either by behaving like `VALUE` or by raising `NotImplementedError`. It does not produce `ForwardRef` proxies; that is `FORWARDREF`, below.
 
 ### 3. `Format.FORWARDREF` (Format 3)
 Evaluates annotations to real types where possible, but if an identifier is not yet defined, it wraps the missing symbol in an `annotationlib.ForwardRef` proxy rather than raising `NameError`:
@@ -116,7 +120,7 @@ It is a compiler-generated function attached to functions, classes, and modules 
 PEP 563 turned all annotations into strings at compile time. While this solved forward references and startup overhead, it broke runtime libraries like Pydantic, FastAPI, and dataclasses, which rely on actual type objects to perform runtime data validation and serialization. These libraries had to resort to `eval()`, which was brittle and caused scope resolution failures.
 
 **Q: What are the four format arguments supported by the `__annotate__` protocol?**
-PEP 749 defines four formats in `annotationlib.Format`: `VALUE` (1, evaluated runtime types), `VALUE_WITH_FAKE_GLOBALS` (2, isolated global scope evaluation), `FORWARDREF` (3, real types with missing symbols wrapped in `ForwardRef` proxies), and `STRING` (4, raw source-code text strings).
+PEP 749 defines four formats in `annotationlib.Format`: `VALUE` (1, evaluated runtime types), `VALUE_WITH_FAKE_GLOBALS` (2, internal only — the signal that an annotate function is running with fake globals, which user code must not pass), `FORWARDREF` (3, real types with missing symbols wrapped in `ForwardRef` proxies), and `STRING` (4, raw source-code text strings).
 
 **Q: What happens when you access the legacy `__annotations__` dictionary on a function in Python 3.14?**
 Accessing `func.__annotations__` invokes `func.__annotate__(1)` to evaluate the annotations into real Python types. The resulting dictionary is then cached on `func.__dict__["__annotations__"]` so that repeated accesses incur no re-evaluation overhead.

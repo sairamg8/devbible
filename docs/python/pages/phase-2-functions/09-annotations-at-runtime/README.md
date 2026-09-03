@@ -15,7 +15,7 @@ sidebar_position: 9
 
 | # | Chunk | Covers |
 |---|---|---|
-| 1 | **[Deferred evaluation and __annotate__](./01-deferred-evaluation-and-the-annotate-protocol.md)** | Eager evaluation vs stringification vs deferred evaluation; compiler-generated `__annotate__` code objects; Format 1 (VALUE), 2 (VALUE_WITH_FAKE_GLOBALS), 3 (FORWARDREF), 4 (STRING); legacy `__annotations__` backward compatibility; PEP 563 future import coexistence |
+| 1 | **[Deferred evaluation and __annotate__](./01-deferred-evaluation-and-the-annotate-protocol.md)** | Eager evaluation vs stringification vs deferred evaluation; compiler-generated `__annotate__` code objects; Format 1 (VALUE), 2 (VALUE_WITH_FAKE_GLOBALS — internal only), 3 (FORWARDREF), 4 (STRING); legacy `__annotations__` backward compatibility; PEP 563 future import coexistence |
 | 2 | **[annotationlib and runtime reflection](./02-annotationlib-and-runtime-reflection.md)** | The `annotationlib` module; canonical extraction via `get_annotations()`; handling missing types via `ForwardRef` proxies; class inheritance and MRO schema extraction; cold-start performance improvements |
 
 ## Phase gate
