@@ -94,7 +94,7 @@ zero-ish". Fix: test presence explicitly, or compare against the sentinel.
 ```python
 count = d.get("count")
 if count is not None:
-    ...
+    report.append(f"{d['name']}: {count}")
 ```
 
 Falsy-versus-absent is the single most productive bug in this area and
