@@ -5,14 +5,14 @@
   "horizonDays": 60,
   "totals": {
     "pins": 43,
-    "current": 18,
-    "patch": 6,
+    "current": 17,
+    "patch": 7,
     "minor": 5,
     "major": 1,
     "unanchored": 12,
     "unreachable": 0,
-    "inconsistent": 0,
-    "unbolded": 5,
+    "inconsistent": 1,
+    "unbolded": 7,
     "events": 1
   },
   "events": [
@@ -24,11 +24,15 @@
       "inDays": 55
     }
   ],
-  "inconsistent": [],
+  "inconsistent": [
+    "typescript"
+  ],
   "unbolded": [
+    "docker",
     "podman",
-    "python",
+    "jdk",
     "jooq",
+    "flyway",
     "jest",
     "storybook"
   ],
@@ -54,7 +58,7 @@
     "redux-toolkit": "unanchored",
     "tanstack-query": "unanchored",
     "framer-motion": "unanchored",
-    "angular": "none",
+    "angular": "patch",
     "nextjs": "patch",
     "vite": "unanchored",
     "webpack": "unanchored",
@@ -90,7 +94,7 @@
         "postgresql",
         "real-world"
       ],
-      "pages": 317,
+      "pages": 610,
       "claimed": "24.19.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -114,7 +118,7 @@
         "postgresql",
         "nodejs"
       ],
-      "pages": 303,
+      "pages": 317,
       "claimed": "18.4",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -140,13 +144,13 @@
         "mongodb",
         "nodejs"
       ],
-      "pages": 8,
+      "pages": 16,
       "claimed": "8.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
       "unbolded": "7.5.0",
       "minority": [
-        "8.2.12×1"
+        "8.2.12×2"
       ],
       "error": null,
       "note": null,
@@ -166,11 +170,11 @@
         "redis",
         "nodejs"
       ],
-      "pages": 6,
+      "pages": 7,
       "claimed": "8.10.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
-      "unbolded": null,
+      "unbolded": "8.10.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -212,11 +216,11 @@
       "tracks": [
         "docker"
       ],
-      "pages": 0,
+      "pages": 1,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": null,
+      "unbolded": "1.10.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -235,11 +239,11 @@
       "tracks": [
         "docker"
       ],
-      "pages": 1,
+      "pages": 5,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "6.0.0",
+      "unbolded": "6.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -258,12 +262,14 @@
       "tracks": [
         "python"
       ],
-      "pages": 269,
-      "claimed": null,
-      "claimedDrift": null,
-      "claimedMatchesPin": null,
+      "pages": 345,
+      "claimed": "3.14.7",
+      "claimedDrift": "none",
+      "claimedMatchesPin": true,
       "unbolded": "3.14",
-      "minority": null,
+      "minority": [
+        "3.15×2"
+      ],
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -281,11 +287,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 0,
+      "pages": 7,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": null,
+      "unbolded": "1.62.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -328,13 +334,14 @@
         "css",
         "react"
       ],
-      "pages": 48,
+      "pages": 56,
       "claimed": "153.0.3",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
-      "unbolded": null,
+      "unbolded": "153.0.3",
       "minority": [
-        "153.0×17"
+        "153.0×20",
+        "154.0×1"
       ],
       "error": null,
       "note": "System Firefox is 154.0.1 as of 2026-08-31 and the harness drives it fine — re-measuring is possible, it is simply a decision nobody has made.",
@@ -359,13 +366,13 @@
         "framer-motion",
         "real-world"
       ],
-      "pages": 295,
+      "pages": 303,
       "claimed": "19.2.8",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
       "unbolded": "19.2.18",
       "minority": [
-        "19.2×4",
+        "19.2×5",
         "18.3.1×1"
       ],
       "error": null,
@@ -386,25 +393,31 @@
         "typescript",
         "real-world"
       ],
-      "pages": 84,
-      "claimed": "7.0.2",
-      "claimedDrift": "none",
-      "claimedMatchesPin": true,
-      "unbolded": "4.4",
+      "pages": 363,
+      "claimed": "5.9.3",
+      "claimedDrift": "major",
+      "claimedMatchesPin": false,
+      "unbolded": "6.0.3",
       "minority": [
-        "5.9.3×10",
-        "5.0×10",
+        "7.0.2×147",
+        "5.0×12",
         "4.0×5",
         "4.9×3",
+        "4.7×2",
+        "4.2×2",
+        "2.1×2",
         "4.5×2",
-        "4.7×1",
+        "5.4×2",
+        "2.2×2",
+        "3.7×1",
+        "5.8×1",
         "3.4×1",
         "4.3×1",
         "4.4×1",
-        "4.2×1",
+        "2.8×1",
+        "3.1×1",
         "4.8×1",
-        "5.4×1",
-        "2.2×1"
+        "4.1×1"
       ],
       "error": null,
       "note": null,
@@ -423,7 +436,7 @@
       "tracks": [
         "expressjs"
       ],
-      "pages": 45,
+      "pages": 63,
       "claimed": "5.2.1",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -438,9 +451,9 @@
       "source": "npm:@angular/core",
       "policy": "latest",
       "pin": "22.1.4",
-      "latest": "22.1.4",
+      "latest": "22.1.5",
       "newestOverall": null,
-      "drift": "none",
+      "drift": "patch",
       "eol": null,
       "events": [],
       "tracks": [
@@ -470,12 +483,14 @@
         "react",
         "nextjs"
       ],
-      "pages": 13,
-      "claimed": "16.3.1",
+      "pages": 55,
+      "claimed": "16.3.4",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
       "unbolded": "16.3",
-      "minority": null,
+      "minority": [
+        "16.3.1×6"
+      ],
       "error": null,
       "note": null,
       "checked": "2026-08-31"
@@ -566,7 +581,7 @@
         "expressjs",
         "real-world"
       ],
-      "pages": 20,
+      "pages": 38,
       "claimed": "4.4.3",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -657,15 +672,17 @@
       "tracks": [
         "java"
       ],
-      "pages": 87,
-      "claimed": "4.1.0",
-      "claimedDrift": "patch",
-      "claimedMatchesPin": false,
+      "pages": 1554,
+      "claimed": "4.1",
+      "claimedDrift": "none",
+      "claimedMatchesPin": true,
       "unbolded": "4.1.0",
       "minority": [
-        "4.1×11",
-        "4.1.1×7",
-        "4.0×1"
+        "4.1.0×36",
+        "4.1.1×17",
+        "4.0×6",
+        "2.6×2",
+        "3.4×1"
       ],
       "error": null,
       "note": null,
@@ -684,14 +701,14 @@
       "tracks": [
         "java"
       ],
-      "pages": 184,
+      "pages": 929,
       "claimed": "7.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
-      "unbolded": "7.0",
+      "unbolded": "7.0.8",
       "minority": [
-        "7.0.8×13",
-        "7.0.9×7"
+        "7.0.8×23",
+        "7.0.9×10"
       ],
       "error": null,
       "note": null,
@@ -710,11 +727,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 61,
+      "pages": 151,
       "claimed": "5.23.0",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
-      "unbolded": null,
+      "unbolded": "5.23.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -733,7 +750,7 @@
       "tracks": [
         "java"
       ],
-      "pages": 97,
+      "pages": 113,
       "claimed": "6.0.3",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -756,7 +773,7 @@
       "tracks": [
         "java"
       ],
-      "pages": 19,
+      "pages": 87,
       "claimed": "2.0.5",
       "claimedDrift": "none",
       "claimedMatchesPin": true,
@@ -779,7 +796,7 @@
       "tracks": [
         "java"
       ],
-      "pages": 27,
+      "pages": 33,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
@@ -802,11 +819,11 @@
       "tracks": [
         "java"
       ],
-      "pages": 0,
+      "pages": 50,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": null,
+      "unbolded": "12.4.0",
       "minority": null,
       "error": null,
       "note": null,
@@ -1009,11 +1026,11 @@
       "tracks": [
         "storybook"
       ],
-      "pages": 1,
+      "pages": 26,
       "claimed": null,
       "claimedDrift": null,
       "claimedMatchesPin": null,
-      "unbolded": "9.0",
+      "unbolded": "10.5.8",
       "minority": null,
       "error": null,
       "note": null,

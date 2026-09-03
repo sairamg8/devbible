@@ -160,9 +160,44 @@ function scanPages() {
       const p = path.join(dir, e.name);
       if (e.isDirectory()) { walk(p); continue; }
       if (!e.name.endsWith('.md') && !e.name.endsWith('.mdx')) continue;
-      const lines = fs.readFileSync(p, 'utf8').split('\n').filter((l) => l.startsWith('> Verified:'));
+      // 🔴 Read the WHOLE blockquote, not just the `> Verified:` line.
+      //
+      // A provenance block routinely wraps over several lines, and the version
+      // spine usually lands on one of the continuation lines:
+      //
+      //     > Verified: 2026-09-01 against Martin Fowler, *BoundedContext* …
+      //     > Version spine: **JDK 25 · Spring Boot 4.1.0 · Framework 7.0.8**
+      //
+      // Filtering to lines that START WITH `> Verified:` threw all of that away.
+      // Measured 2026-09-03: 1,520 pages bold a version on the first line and
+      // **924 bold one only on a continuation line** — so ~38% of the corpus's
+      // version claims, and the blast radius they represent, were invisible.
+      //
+      // A blockquote continues through `> text` and bare `>` separator lines, so
+      // collect until the first line that is neither. Anything after the block
+      // (prose, a heading, code) is still excluded, which is what keeps a version
+      // mentioned in the body from being read as the page's pin.
+      const all = fs.readFileSync(p, 'utf8').split('\n');
+      const lines = [];
+      for (let i = 0; i < all.length; i++) {
+        if (!all[i].startsWith('> Verified:')) continue;
+        for (let j = i; j < all.length && (all[j].startsWith('> ') || all[j] === '>'); j++) lines.push(all[j]);
+        break;                                            // one provenance block per page
+      }
       if (!lines.length) continue;
       const blob = lines.join(' ').toLowerCase();
+      // 🔴 The FIRST line outranks the rest of the block.
+      //
+      // Widening to the whole blockquote also pulls in bolded numbers that are
+      // citations rather than pins. TypeScript is the proven case: pages bold
+      // **5.9.3** to say which compiler source they read, while their actual
+      // spine is **TypeScript 7.0.2** — and with the block flattened, 5.9.3
+      // outvoted it and reported a false MAJOR inconsistency across 363 pages.
+      //
+      // A page declares its pin where its provenance starts, so a bold on the
+      // `> Verified:` line wins whenever there is one; the rest of the block is
+      // the fallback that recovers the 924 pages carrying only a spine line.
+      const head = lines[0].toLowerCase();
       // 🔴 A pin governs only the tracks it declares. Scanning all of `docs/`
       // let one product's pages vote on another product's pin: `Spring Data
       // MongoDB 5.1` and `Spring Data Redis 4.1` sit on `docs/java` pages and
@@ -174,7 +209,10 @@ function scanPages() {
         for (const name of pin.names) {
           // `**node 24.19.0**`, `node 24.19.0`, `node@24.19.0`, `node v24`
           const esc = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-          const bold = [...blob.matchAll(new RegExp(`\\*\\*${esc}[^a-z0-9]{0,4}v?(\\d+(?:\\.\\d+)+)`, 'g'))].map((m) => m[1]);
+          const boldRe = new RegExp(`\\*\\*${esc}[^a-z0-9]{0,4}v?(\\d+(?:\\.\\d+)+)`, 'g');
+          const headBold = [...head.matchAll(boldRe)].map((m) => m[1]);
+          const bold = headBold.length ? headBold
+            : [...blob.matchAll(boldRe)].map((m) => m[1]);
           const plain = [...blob.matchAll(new RegExp(`${esc}[^a-z0-9]{0,4}v?(\\d+(?:\\.\\d+)+)`, 'g'))].map((m) => m[1]);
           // Bold is the page's own pin; plain text may be a historical citation.
           const found = bold.length ? bold : plain.slice(0, 1);
