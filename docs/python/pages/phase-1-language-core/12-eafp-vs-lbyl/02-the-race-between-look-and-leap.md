@@ -104,17 +104,26 @@ def bump(key: str) -> None:
     with counts_lock:
         counts[key] = counts.get(key, 0) + 1
 
-# Also correct for the specific case of counting — one call, one operation.
+# 🔴 NOT a fix. A Counter reads and writes too — the short line hides the same pair.
 tally = Counter()
 def bump_counter(key: str) -> None:
-    tally[key] += 1          # still read-modify-write; still needs the lock in free-threaded code
+    tally[key] += 1
+
+# Correct without a lock: give each thread its own tally, and merge on the owning thread.
+def worker(keys: list[str]) -> Counter:
+    local = Counter()
+    for key in keys:
+        local[key] += 1      # single-threaded; nothing else can reach `local`
+    return local             # the caller merges: total.update(local)
 ```
 
-That last line is deliberately labelled: `Counter.__iadd__` on an item is *not*
-documented as atomic, and the free-threading HOWTO's advice is to use a lock rather than
-rely on a container's internals. When you need a counter across threads, take the lock —
-`queue.Queue` and `threading.Lock` are the documented tools, and "the container is
-probably atomic" is not a design.
+The middle example is the one to internalise: `Counter[key] += 1` looks atomic because it
+is one short line, and it is a read followed by a write like any other. No container
+documents item-level atomicity, and the free-threading HOWTO's advice is explicitly to
+use a lock rather than rely on a container's internals. So when a count must be shared,
+either take the lock across the pair or remove the sharing — a per-thread `Counter` merged
+at the end has no gap at all, because nothing else can reach it while it is being
+updated.
 
 ## Gotchas
 
