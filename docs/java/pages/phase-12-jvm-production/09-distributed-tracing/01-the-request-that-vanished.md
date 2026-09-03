@@ -111,7 +111,7 @@ three services, and the best one after. Before you commit:
 - **You will not keep all of it**, which means [06 · Sampling](06-sampling.md) is not an
   optimisation you add later — it is a decision you make on day one, and the wrong decision is
   invisible until the day you need a trace that was never recorded
-  (**06b** *(not written yet)*).
+  ([06b](06b-the-trace-you-needed-was-not-sampled.md)).
 - **Propagation is where it actually breaks.** Every thread pool, every queue, every proxy is
   a place the context can be dropped, and a dropped context produces a *smaller, plausible
   looking trace* rather than an error ([03e](03e-propagation-that-breaks.md)).

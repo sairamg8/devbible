@@ -160,4 +160,4 @@ Head sampling discards a significant percentage of spans (e.g. 90% under Boot's 
 
 ---
 
-← [05b · Custom spans and annotations](05b-custom-spans-and-annotations.md) · **Topic index** *(not written yet)* · Next → **06b · The trace you needed was not sampled** *(not written yet)*
+← [05b · Custom spans and annotations](05b-custom-spans-and-annotations.md) · **Topic index** *(not written yet)* · Next → [06b · Tail sampling](06b-the-trace-you-needed-was-not-sampled.md)

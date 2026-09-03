@@ -135,7 +135,7 @@ The specification's guidance for a participant, all `SHOULD`:
 > `0` as the default option when the trace is initiated by this component."*
 
 That last sentence is the one tail-sampling deployments trip over: a service that defers its
-decision to a collector (**06b** *(not written yet)*) is told to start new
+decision to a collector ([06b](06b-the-trace-you-needed-was-not-sampled.md)) is told to start new
 traces with `sampled = 0`, and every downstream `ParentBased` sampler will then honour that zero.
 The deferred design has to be fleet-wide or it silently drops the downstream half.
 
