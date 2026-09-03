@@ -39,10 +39,10 @@ agent-neutral — Codex, Amp, Gemini, Cursor and Grok all use that one file.
 
 Before touching any page, also read its two references:
 
-- `references/authoring-contract.md` — the 300-line cap (a file-size cap, **never** a
+- `.agents/references/authoring-contract.md` — the 300-line cap (a file-size cap, **never** a
   content budget), chunking mechanics, the depth bar for gotchas and interview Q&A, the
   evidence rule, the MDX traps.
-- `references/house-style.md` — tier badges and their exact labels (Master · Understand
+- `.agents/references/house-style.md` — tier badges and their exact labels (Master · Understand
   · Know · When Needed), title and `sidebar_label` form, the `> Verified:` line, the
   canonical section headings, `**★ ` entry markers, how the corpus highlights, footers.
   Measured off the corpus, not guessed.

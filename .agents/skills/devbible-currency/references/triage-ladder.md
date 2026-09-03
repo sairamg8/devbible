@@ -48,7 +48,7 @@ Reported as `❔ no bolded version on any page`. Not a contradiction — the cor
 pin there to check, so the track's provenance is weaker than it looks.
 
 **Do not mass-bold pages to clear it.** Fixing it means the owning session bolding the
-version spine as it next touches each page (see `references/house-style.md`). Report the
+version spine as it next touches each page (see `../../../references/house-style.md`). Report the
 list; leave the pages alone.
 
 ### 2 · `patch` — mechanical, no prose read
@@ -78,7 +78,7 @@ move; when it did, that reasoning is void.
 page's own pin and plain text as a historical citation. A sed that strips `**PostgreSQL
 18.4**` down to plain text silently changes what the tooling thinks the page claims —
 and the page then stops appearing in its own blast radius. See
-`references/house-style.md`.
+`../../../references/house-style.md`.
 
 Then in `pins.js`: set `pin` to the new version, `checked` to today. Never back-date
 `checked`.
@@ -93,7 +93,7 @@ Then in `pins.js`: set `pin` to the new version, `checked` to today. Never back-
    A minor is not a licence to re-read the track.
 4. Edit prose → version → date, in that order, one commit per file.
    🔴 **If the edit would push a file past 300 lines, read
-   `references/authoring-contract.md` and chunk it. Never condense to fit.**
+   `../../../references/authoring-contract.md` and chunk it. Never condense to fit.**
 5. Bump `pin` and `checked` in `pins.js`.
 
 If a delta introduces material the corpus has no page for, that is a **syllabus
@@ -111,7 +111,7 @@ should not exist.
 3. **Stop and get direction.** A major is a campaign scoped by the user, one technology
    at a time — the working agreement is *build only the step that was asked, then stop
    and report*.
-4. New pages written during the campaign follow `references/authoring-contract.md` in
+4. New pages written during the campaign follow `../../../references/authoring-contract.md` in
    full — tier badge, exhausted gotchas, exhausted interview Q&A, chunked past 300
    lines.
 5. `pins.js` is bumped **last**, when the pages actually match the new major. Leaving

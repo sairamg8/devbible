@@ -49,8 +49,8 @@ Package manager is **yarn**. `yarn start` runs the dev server on :3000.
 **Staying current with upstream releases** — a version moved, the weekly `currency`
 workflow opened an issue, or "is X still current": read
 `.agents/skills/devbible-currency/SKILL.md` and follow it. Its two references are
-required reading before touching any page — `references/authoring-contract.md` (the
-300-line cap, chunking mechanics, depth bar) and `references/house-style.md` (tier
+required reading before touching any page — `.agents/references/authoring-contract.md` (the
+300-line cap, chunking mechanics, depth bar) and `.agents/references/house-style.md` (tier
 badges, `> Verified:` line, section headings, `★` markers, footers — measured off the
 corpus).
 

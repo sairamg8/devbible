@@ -29,8 +29,8 @@ that mattered is skimmed past. Every rule below protects that.
 | File | Why |
 |---|---|
 | `instructions.md` | The standing brief — tiers, granularity, the cap, `> Verified:` format (§4–§6, §9–§10) |
-| **`references/authoring-contract.md`** | 🔴 **Required before writing or extending any page.** The 300-line cap, chunking mechanics, depth bar, evidence rule, MDX traps |
-| **`references/house-style.md`** | 🔴 **Required before touching any page.** Tier badges and their exact labels, title/`sidebar_label` form, the `> Verified:` line, the canonical section headings, `★` entry markers, how the corpus highlights, footers. Every convention counted off the corpus, not guessed |
+| **`../../references/authoring-contract.md`** | 🔴 **Required before writing or extending any page.** The 300-line cap, chunking mechanics, depth bar, evidence rule, MDX traps |
+| **`../../references/house-style.md`** | 🔴 **Required before touching any page.** Tier badges and their exact labels, title/`sidebar_label` form, the `> Verified:` line, the canonical section headings, `★` entry markers, how the corpus highlights, footers. Every convention counted off the corpus, not guessed |
 | `src/data/pins.js` | Header comment defines `policy`, `pin`, `tracks`, `names`, `patchIndex` |
 
 Never invent version facts. Every number written to a page comes from a command run in
@@ -88,14 +88,14 @@ Six rules, non-negotiable — they are what separates this from find-and-replace
    push a file past 300 lines. If a minor genuinely needs more room, **chunk on a
    concept boundary** — never condense, never drop a gotcha or a question to fit.
    Record `wc -l` and `grep -c '^\*\*★'` before; after a split, **both totals must go
-   UP**. See `references/authoring-contract.md`.
+   UP**. See `../../references/authoring-contract.md`.
 3. **Evidence, not memory.** `> Verified:` names what you actually checked and how. No
    fabricated console output, ever. No new sandbox scripts — and 🔴 **a new or edited
    page must not gain a ` ```console ` block**, because that is program output and
    there is no sandbox to produce it.
 4. **Match the house style exactly** — tier badge, `sidebar_label` with its `·`
    separator, the canonical `## Gotchas` / `## Interview questions` headings, `**★ `
-   entry markers, footer form. `references/house-style.md` carries all of it, measured.
+   entry markers, footer form. `../../references/house-style.md` carries all of it, measured.
    ⚠️ Do not introduce `:::note` admonitions; 110 exist across 6,079 files and they are
    not house style.
 5. **Additive.** Never delete a page, section or review to make a version fit.
@@ -187,8 +187,8 @@ early — the dated `event` class in `references/triage-ladder.md`.
 
 Its three references, all required reading at the points named above:
 `references/triage-ladder.md` (what each drift class licenses) ·
-`references/authoring-contract.md` (the 300-line cap and chunking) ·
-`references/house-style.md` (how a page must look).
+`../../references/authoring-contract.md` (the 300-line cap and chunking) ·
+`../../references/house-style.md` (how a page must look).
 
 The body lives **only in this file and its `references/`**. Adapters are pointers and
 must stay pointers — a duplicated procedure drifts, and then two agents fix the same
