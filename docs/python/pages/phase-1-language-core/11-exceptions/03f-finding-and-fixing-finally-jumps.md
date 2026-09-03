@@ -78,7 +78,7 @@ cannot appear in an except* block`. The PEP's reason is different from the
 `ExceptionGroup` are assumed to be independent, and the presence or absence of
 one of them should not impact handling of the others"* — and it shows what the
 designers do when they get to choose freely. See
-[08b · `except*` semantics](08b-except-star-semantics.md).
+**08b · `except*` semantics** *(not written yet)*.
 
 ## Sweeping a codebase
 
@@ -179,7 +179,7 @@ code with this bug is code that will bite the day someone revives it.
 Cause: `SyntaxWarning` covers other compiler diagnostics, notably the
 `assert (x, "msg")` always-true tuple warning and invalid escape sequences in
 string literals. Fix: none needed — every one of those is also a real bug. See
-[10 · `assert`](10-assert.md).
+**10 · `assert`** *(not written yet)*.
 
 ## Interview questions
 

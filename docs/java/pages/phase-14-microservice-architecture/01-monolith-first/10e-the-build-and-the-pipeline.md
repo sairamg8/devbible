@@ -123,7 +123,7 @@ The no-change default is conservative and configurable:
 > default. This can be customized by setting the spring.modulith.test.on-no-changes property
 > to skip-all."*
 
-[44 · Change-aware test execution](13f-change-aware-test-execution.md) covers the detail,
+**44 · Change-aware test execution** *(not written yet)* covers the detail,
 including the caveat about sibling sub-modules and build-logic directories.
 
 **The point for this chunk:** a modular monolith can have a pipeline whose cost scales with

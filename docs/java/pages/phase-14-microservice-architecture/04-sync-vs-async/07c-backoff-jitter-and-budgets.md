@@ -110,7 +110,7 @@ The SRE book:
 circuit breakers introduce modal behaviour that is hard to test and can lengthen recovery. That is
 a genuinely contrarian position relative to most microservice writing, it comes from the
 organisation with the most experience of the failure mode, and it is worth carrying into
-[37 · Circuit breaking as a consequence](07g-circuit-breaking-as-a-consequence.md).
+**37 · Circuit breaking as a consequence** *(not written yet)*.
 
 The property that makes a token bucket better behaved than a breaker: **it degrades continuously
 rather than switching state.** As failures rise, the retry rate falls smoothly to a trickle; there
@@ -197,7 +197,7 @@ end.
 **★ Amazon's guidance prefers a token bucket to a circuit breaker, and gives reasons.** Breakers
 introduce modal behaviour that is hard to test and can extend recovery time. This contradicts most
 microservice writing. It does not mean breakers are wrong; it means the trade is real and the
-default choice deserves a moment's thought — [37](07g-circuit-breaking-as-a-consequence.md).
+default choice deserves a moment's thought — **37** *(not written yet)*.
 
 **★ A per-call retry budget is not a budget.** The bucket must be shared across all calls to a
 dependency in the process — that is what bounds total amplification. A budget scoped to a single

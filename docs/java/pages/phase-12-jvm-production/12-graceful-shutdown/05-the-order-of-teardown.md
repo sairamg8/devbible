@@ -20,7 +20,7 @@ still reports success.**
 ## The order
 
 1. **Fail readiness.** Tell the routing layer to stop sending — and keep serving while that
-   propagates ([08](08-readiness-and-the-load-balancer.md)).
+   propagates (**08** *(not written yet)*).
 2. **Stop accepting new work.** The web server refuses new connections; message consumers stop
    fetching; schedulers stop firing new tasks.
 3. **Finish work in flight.** In-flight requests complete, in-flight messages are processed and
@@ -40,7 +40,7 @@ before requests have finished.** Every bug in this topic is a violation of that 
 and if it stops in the same phase as — or earlier than — the web layer, in-flight requests fail
 on `getConnection()`. ⚠️ The symptom is a burst of pool-related exceptions *during* shutdown,
 which looks like a pool problem and is an ordering problem
-([07](07-connection-pools.md)).
+(**07** *(not written yet)*).
 
 **Stopping the executor the web layer is waiting on.** Async handlers finish on an executor
 ([04b](04b-what-graceful-actually-drains.md)). Stop it early and the drain waits for work that
@@ -48,7 +48,7 @@ has just been cancelled.
 
 **Closing the message consumer after closing its database connection.** The consumer is still
 processing an in-flight message and cannot commit it, so the message is redelivered — a
-duplicate created by shutdown order alone ([06b](06b-message-consumers.md)).
+duplicate created by shutdown order alone (**06b** *(not written yet)*).
 
 ## How Spring expresses the order
 

@@ -68,7 +68,7 @@ The fix is one word:
 
 Now `KeyboardInterrupt` and `SystemExit` propagate, the loop's `finally` blocks
 run, and the process exits. (`logger.exception` rather than `logger.error` is the
-other half of the fix — see [13](13-losing-the-traceback.md).)
+other half of the fix — see **13** *(not written yet)*.)
 
 ## PEP 8's rule and its two exceptions
 
@@ -184,7 +184,7 @@ with contextlib.suppress(CacheMissError):
     cache.delete(key)
 ```
 
-See [11 · `suppress` and warnings](11-suppress-and-warnings.md). A `pass` in a
+See **11 · `suppress` and warnings** *(not written yet)*. A `pass` in a
 handler should always name a specific exception; a `pass` under `except
 Exception:` is nearly always an unfinished thought.
 
@@ -214,7 +214,7 @@ Fix: it should not be there at all, but if it is, move it to the end.
 successful when every item failed.** Cause: the handler logs and continues but
 nothing aggregates the failures. Fix: collect failures and decide at the end —
 raise, or return a partial-success result the caller can act on. Consider
-`ExceptionGroup` — [08](08-exception-groups.md).
+`ExceptionGroup` — **08** *(not written yet)*.
 
 **Symptom — a broad handler in a library swallows the caller's cancellation.**
 Cause: `asyncio.CancelledError` is a `BaseException`, so `except Exception:` is

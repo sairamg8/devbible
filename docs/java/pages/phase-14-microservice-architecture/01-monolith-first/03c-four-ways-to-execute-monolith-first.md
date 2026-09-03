@@ -41,7 +41,7 @@ network.
 The honest 2026 update is that the mechanism has changed — module boundaries are now
 verifiable by a test, which they were not when he wrote that — but the *data* half is still
 convention rather than tooling. Spring Modulith's application-module-aware Flyway support
-([52](15c-module-aware-flyway.md)) is the closest anything comes, and it organises
+(**52** *(not written yet)*) is the closest anything comes, and it organises
 migrations, not access.
 
 This is the strategy the whole second half of this topic equips you to execute. Do not
@@ -61,8 +61,8 @@ Two things people get wrong about this one.
 Notifications, document generation, search indexing, recommendation, export, audit. These
 extract cleanly because everything they need arrives as an event and nothing waits for
 their answer. The core — ordering, inventory, pricing — is where every dependency converges
-and is the last thing you extract, if ever. [54 · Choosing what to extract
-first](16-choosing-what-to-extract-first.md) turns this into a scoring exercise.
+and is the last thing you extract, if ever. **54 · Choosing what to extract
+first** *(not written yet)* turns this into a scoring exercise.
 
 **"The monolith is relatively quiescent" is the success condition, not a side effect.** If
 the core monolith is still changing constantly, you have a distributed system *and* a big

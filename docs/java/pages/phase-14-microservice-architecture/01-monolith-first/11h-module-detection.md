@@ -61,7 +61,7 @@ The three attributes, verbatim:
 `sharedModules` is the one with day-to-day consequences: it changes what
 `@ApplicationModuleTest` bootstraps, so a module that every test needs — configuration,
 security, a clock — can be declared once instead of being mocked in every test.
-[40 · Bootstrap modes](13b-bootstrap-modes.md) covers the interaction.
+**40 · Bootstrap modes** *(not written yet)* covers the interaction.
 
 `additionalPackages` matters when your code does not all live under the application class's
 package — a common shape when integrations or generated adapters sit in a sibling package

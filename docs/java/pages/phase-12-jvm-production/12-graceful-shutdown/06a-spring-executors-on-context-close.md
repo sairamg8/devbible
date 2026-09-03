@@ -52,7 +52,7 @@ while ongoing tasks are being completed. If you want this executor to block and 
 termination of tasks before the rest of the container continues to shut down — for example, in order
 to keep up other resources that your tasks may need —, set the `awaitTerminationSeconds` property
 instead of or in addition to this property."* Without it, the pool is torn down while the connection
-pool it needs ([07](07-connection-pools.md)) is next in line.
+pool it needs (**07** *(not written yet)*) is next in line.
 
 ## The coordinated stop phase, and how you opt out of it
 
@@ -106,7 +106,7 @@ for currently executing tasks that aren't reacting to thread interruption."*
 
 ⚠️ **The 15s above is not a free choice.** It must fit inside `spring.lifecycle.timeout-per-shutdown-phase`
 ([04](04-spring-graceful-shutdown.md)) and, with the web drain and the preStop sleep, inside
-`terminationGracePeriodSeconds` ([08b](08b-prestop-and-termination-grace-period.md)). Add them up.
+`terminationGracePeriodSeconds` (**08b** *(not written yet)*). Add them up.
 
 For a pool you build yourself, the same knobs in code:
 
@@ -197,6 +197,6 @@ is interrupted only when its scheduler is shut down with `shutdownNow`, and only
 Boot's auto-configured executor backed off, and `spring.task.execution.*` configures only that
 instance. Either set the flags on your bean or build it from the auto-configured builder.
 
-Next: [Message consumers](06b-message-consumers.md).
+Next: **Message consumers** *(not written yet)*.
 
 {/* FOOTER */}

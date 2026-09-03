@@ -171,7 +171,7 @@ The treacle is not a metaphor for difficulty; it is a metaphor for *concealment*
 implies "and then, at some point, not". If nobody has written down the trigger condition —
 team count, pipeline duration, an availability requirement one subdomain cannot meet — then
 the strategy silently becomes "monolith forever", which is fine right up until it is not.
-Write the trigger into a decision record: [56 · The decision record](17-the-decision-record.md).
+Write the trigger into a decision record: **56 · The decision record** *(not written yet)*.
 
 **★ Quoting Fowler's observation without his caveat is misuse of the source.** He describes
 the evidence as anecdotes and says *"anybody's advice on these topics must be seen as

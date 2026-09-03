@@ -77,7 +77,7 @@ The related patterns you will also need, all named by Richardson and all owned e
 
 That last one matters for this topic specifically, because Spring Modulith's event
 publication registry **is** a transaction outbox and it works inside the monolith — see
-[47 · The event publication registry](14c-the-event-publication-registry.md).
+**47 · The event publication registry** *(not written yet)*.
 
 ### Sizing the work honestly
 
@@ -138,9 +138,9 @@ coupling that makes extraction hard.
 What it does **not** buy: distributed failure semantics. With Spring Modulith's
 `@ApplicationModuleListener` the listener still runs in the same JVM against the same
 database, and its failure is recorded in an event publication log you can resubmit from.
-[45 · Events instead of bean references](14-events-instead-of-bean-references.md) through
-[49 · Externalisation and the seam](14e-externalization-and-the-seam.md) develop this, and
-[55 · What Modulith does not give you](16b-what-modulith-does-not-give-you.md) states the
+**45 · Events instead of bean references** *(not written yet)* through
+**49 · Externalisation and the seam** *(not written yet)* develop this, and
+**55 · What Modulith does not give you** *(not written yet)* states the
 gap plainly.
 
 The Spring Modulith reference is careful about exactly this trade, and the sentence is worth
@@ -187,7 +187,7 @@ listener that throws still fails the whole write. If you want the decoupled beha
 have to say so — `@ApplicationModuleListener`, which is `@Async` plus
 `@TransactionalEventListener` plus `@Transactional(propagation = REQUIRES_NEW)`. Teams that
 switch from bean calls to events and see no behaviour change have usually not made this
-step yet. [46 · @ApplicationModuleListener](14b-applicationmodulelistener.md).
+step yet. **46 · @ApplicationModuleListener** *(not written yet)*.
 
 **★ Moving to events removes design-time coupling immediately and runtime coupling not at
 all — say which one you meant.** In one process, if the listener runs synchronously the

@@ -50,9 +50,9 @@ clause onto the mechanism that answers it:
 | Tilkov's coupling mechanism | What answers it in Spring Modulith |
 |---|---|
 | *"communicate based on abstractions that are shared because they all use the same libraries"* | Module-internal packages are unreachable; the module's API is its base package. [29 · API and internal packages](11c-api-and-internal-packages.md) |
-| *"communicate using means that are only available when they are hosted in the same process"* | Prefer application events to bean references. [45 · Events instead of bean references](14-events-instead-of-bean-references.md) |
+| *"communicate using means that are only available when they are hosted in the same process"* | Prefer application events to bean references. **45 · Events instead of bean references** *(not written yet)* |
 | *"freely share domain objects"* | `ApplicationModules.verify()` rejects references into another module's internals. [35 · Verifying the arrangement](12-verifying-the-arrangement.md) |
-| *"rely on the same, shared persistence model"* | Nothing in Modulith prevents this — see the honest gap list, [55](16b-what-modulith-does-not-give-you.md), and [38 · What verification cannot see](12d-what-verification-cannot-see.md) |
+| *"rely on the same, shared persistence model"* | Nothing in Modulith prevents this — see the honest gap list, **55** *(not written yet)*, and [38 · What verification cannot see](12d-what-verification-cannot-see.md) |
 | *"assume database transactions are readily available so that there's no need for compensation"* | Not prevented either — this is the real, unclosed gap |
 | *"easy to refactor things and move them around"* | This one is a **feature** during the phase where boundaries are still being learned |
 

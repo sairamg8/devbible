@@ -169,7 +169,7 @@ class ModuleBoundaryTest {
 ```
 
 If you are on Spring Modulith 2.1.1 the equivalent is one line — see
-[34 · Verifying the boundary](25-verifying-the-boundary.md). Use that instead where you can;
+**34 · Verifying the boundary** *(not written yet)*. Use that instead where you can;
 this version exists for the many codebases that cannot adopt it.
 
 ## Step 5 — the other signals worth grepping for once

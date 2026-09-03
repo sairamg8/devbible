@@ -28,7 +28,7 @@ cut off by a 20-second phase timeout, gracefully-configured or not.
 
 🔴 **Measure the p99.9 of your slowest endpoint before choosing the timeout**, and remember the
 whole chain has to fit inside Kubernetes' grace period
-([08b](08b-prestop-and-termination-grace-period.md)).
+(**08b** *(not written yet)*).
 
 ## The connections that do not end by themselves
 
@@ -59,7 +59,7 @@ The documentation flags keep-alive as a complication:
 An established keep-alive connection can carry a *new* request into a server that has begun
 draining. Different servers handle that differently; the reference points at each server's
 `shutDownGracefully` API documentation. ⚠️ **In practice this is another argument for the
-readiness handshake** ([08](08-readiness-and-the-load-balancer.md)): the reliable way to stop
+readiness handshake** (**08** *(not written yet)*): the reliable way to stop
 new requests arriving on old connections is for the routing layer to stop using the instance
 before the drain begins.
 
@@ -69,7 +69,7 @@ Spring's graceful shutdown owns **the web server's inbound work**. It does not o
 
 - background tasks and schedulers ([06](06-executors-and-schedulers.md));
 - message consumers, whose "in-flight work" is an unacknowledged message
-  ([06b](06b-message-consumers.md));
+  (**06b** *(not written yet)*);
 - outbound calls your handlers are making — those finish or fail with the request;
 - anything started with a bare `new Thread(...)`, which nothing tracks at all.
 
@@ -102,7 +102,7 @@ executors outlive the web layer's drain.
 managed executor.
 
 ⚠️ **A long-running upload cut mid-stream leaves a partial object** wherever it was being
-written. Idempotency and cleanup are the backstop ([09](09-idempotency-as-the-backstop.md)).
+written. Idempotency and cleanup are the backstop (**09** *(not written yet)*).
 
 ⚠️ **Clients differ in how they treat a WebSocket close code.** Choosing a code that signals
 "go away and reconnect" rather than "fatal error" is part of the design.

@@ -95,9 +95,9 @@ Spring Framework 7 instruments its own code and publishes observations if an
 | `"tasks.scheduled.execution"` | *"Processing time for an execution of a `@Scheduled` task"* |
 
 Note the shape: a client/server pair for HTTP and a publish/process pair for JMS. The framework
-is already modelling the two-span structure for you. [05 · Wiring it in Spring
-Boot](05-wiring-it-in-spring-boot.md) covers what has to be true for these to fire, and
-[03e](03e-propagation-that-breaks.md) covers the ones that require explicit registry wiring —
+is already modelling the two-span structure for you. **05 · Wiring it in Spring
+Boot** *(not written yet)* covers what has to be true for these to fire, and
+**03e** *(not written yet)* covers the ones that require explicit registry wiring —
 `@Scheduled` and JMS both do.
 
 ## Reading the shape of a trace
@@ -121,7 +121,7 @@ where this topic hands off to [05 · Thread dumps](../05-thread-dumps/README.md)
 
 **A `Server` span with no parent when there should be one.** The caller's context did not
 arrive. The trace looks like it starts at the second service. That is a propagation failure,
-covered in [03e](03e-propagation-that-breaks.md).
+covered in **03e** *(not written yet)*.
 
 **A `Client` span with no matching `Server` span.** Either the callee is not instrumented, or
 the callee dropped the incoming context and started a new trace. Both look the same from here;

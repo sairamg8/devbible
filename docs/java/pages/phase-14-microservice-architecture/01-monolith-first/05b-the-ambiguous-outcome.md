@@ -138,8 +138,8 @@ inside the monolith: the lost publication. The reference:
 Because the log entry is written **in the original business transaction**, there is no
 window where the order commits and the notification of it is lost. That is the outbox
 property, and it is the single most important thing to have in place *before* you extract a
-module — see [47 · The event publication registry](14c-the-event-publication-registry.md)
-and [48 · Publication lifecycle and failure](14d-publication-lifecycle-and-failure.md).
+module — see **47 · The event publication registry** *(not written yet)*
+and **48 · Publication lifecycle and failure** *(not written yet)*.
 
 What it does not give you: the listener still runs in the same JVM, so there is no network,
 no timeout, and no ambiguous outcome. Practising with the registry teaches you the

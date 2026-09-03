@@ -142,7 +142,7 @@ schema. `@ApplicationModuleTest` produces the same conditions. Which means:
 
 Each of those failures is diagnostic. Treat a difficult module test as information about the
 boundary, not as a testing problem to be worked around by widening the bootstrap —
-[41 · Efferent dependencies and mocks](13c-efferent-dependencies-and-mocks.md).
+**41 · Efferent dependencies and mocks** *(not written yet)*.
 
 ## Gotchas
 
@@ -174,7 +174,7 @@ statements can be true and correct simultaneously.
 **★ A module test that needs many mocks is a boundary report, not a test problem.** The
 temptation is to switch bootstrap mode to `ALL_DEPENDENCIES` and move on. The reference
 advises against it explicitly, and the number of mocks is a coupling metric you get for free
-— see [41](13c-efferent-dependencies-and-mocks.md).
+— see **41** *(not written yet)*.
 
 **★ `@ApplicationModuleTest` still starts a Spring context, so it is not a unit test.** It
 is faster than `@SpringBootTest` because the context is smaller, and it is far slower than a

@@ -76,8 +76,8 @@ it warns:
 
 **Events still in the queue at that point are lost.** For a service being shut down because
 something is wrong, the final seconds of logging are the interesting ones, and one second is not
-long. This interacts directly with graceful shutdown — [12 · Graceful
-shutdown](../12-graceful-shutdown/README.md) — and with the fact that a SIGKILL gives `stop()` no
+long. This interacts directly with graceful shutdown — **12 · Graceful
+shutdown** *(not written yet)* — and with the fact that a SIGKILL gives `stop()` no
 opportunity to run at all.
 
 ## Configuring it deliberately

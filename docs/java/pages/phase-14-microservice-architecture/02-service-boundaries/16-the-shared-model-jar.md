@@ -66,8 +66,8 @@ identical. Contract evolution is **05 · Inter-service REST** *(not written yet)
 **Small immutable values and utilities — usually fine.** `Money`, `CountryCode`, `Sku`,
 `Currency`, a `Result` type, a correlation-id holder. They change rarely, they carry no
 business decision, and if they do change everyone genuinely does want the change. This is a
-legitimate shared kernel — with the rules in [45 · Shared
-kernel](33-shared-kernel.md).
+legitimate shared kernel — with the rules in **45 · Shared
+kernel** *(not written yet)*.
 
 ## The test
 

@@ -151,7 +151,7 @@ for item in items:
 ```
 
 That is the standard pattern for building an
-[`ExceptionGroup`](08-exception-groups.md) and it is fine for a bounded batch. If
+**`ExceptionGroup`** *(not written yet)* and it is fine for a bounded batch. If
 the list is long-lived, either format the traceback eagerly with
 `traceback.format_exception(e)` and store the strings, or clear it with
 `e.with_traceback(None)` — accepting that you then lose the traceback in the

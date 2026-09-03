@@ -139,7 +139,7 @@ build is a conversation, whereas a silent second writer is an incident.
 
 Within one deployable, the equivalent enforcement is module visibility plus the ArchUnit or
 Spring Modulith rules in [15 · Finding it in the code](09b-finding-it-in-the-code.md) and
-[34 · Verifying the boundary](25-verifying-the-boundary.md).
+**34 · Verifying the boundary** *(not written yet)*.
 
 ## Where the register lives
 

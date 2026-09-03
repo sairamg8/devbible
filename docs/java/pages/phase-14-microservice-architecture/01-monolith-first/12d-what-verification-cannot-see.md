@@ -50,7 +50,7 @@ This is Tilkov's objection stated as a mechanism:
   is a string and no static analysis you will realistically write parses it.
 - **Prefix per-module Flyway migrations** and use Spring Modulith's module-aware Flyway
   support, which physically separates them —
-  [52 · Module-aware Flyway](15c-module-aware-flyway.md).
+  **52 · Module-aware Flyway** *(not written yet)*.
 
 ### 2. Ambient transactions
 
@@ -85,7 +85,7 @@ both — and share no types. Note that the module definition in the reference ex
 configuration properties as part of a module's *required interface*, so the model knows the
 concept even though verification does not check the sharing. The Application Module Canvas
 surfaces each module's properties, which is the practical mitigation
-([50 · Documenter and the canvas](15-documenter-and-the-canvas.md)).
+(**50 · Documenter and the canvas** *(not written yet)*).
 
 ### 5. HTTP paths, queue names, cache keys, file paths, scheduler expressions
 
@@ -99,7 +99,7 @@ Module B works only if module A's listener ran first. Module B assumes A's data 
 Module B breaks when A changes an event's *meaning* while keeping its shape. No structural
 analysis detects semantic dependencies — this is what tests are for, and specifically what
 module integration tests with the Scenario API are for
-([43 · The Scenario API](13e-the-scenario-api.md)).
+(**43 · The Scenario API** *(not written yet)*).
 
 ### 7. The size and shape of the API itself
 

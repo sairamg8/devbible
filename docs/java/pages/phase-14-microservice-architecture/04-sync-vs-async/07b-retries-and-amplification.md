@@ -131,7 +131,7 @@ The SRE book's version:
 
 The last clause is a **server-side** obligation and it is frequently missed: if you are overloaded,
 say so distinctly, so callers can distinguish "you broke" from "I am saturated" and behave
-differently. [38 · Backpressure and load shedding](07h-backpressure-and-load-shedding.md).
+differently. **38 · Backpressure and load shedding** *(not written yet)*.
 
 And the hardest constraint of all:
 

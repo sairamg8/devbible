@@ -150,9 +150,9 @@ often excellent). The boundary is the **contract about what may change independe
 the deployment topology is an implementation of it.
 
 This distinction is why the modular monolith is a legitimate destination and not a
-consolation prize. [33 · Package structure is the
-boundary](24-package-structure-is-the-boundary.md) and
-[34 · Verifying the boundary](25-verifying-the-boundary.md) show a boundary that is
+consolation prize. **33 · Package structure is the
+boundary** *(not written yet)* and
+**34 · Verifying the boundary** *(not written yet)* show a boundary that is
 enforced by the compiler and a test, with no network anywhere. That boundary is more real
 than a REST API between two services that share a database.
 

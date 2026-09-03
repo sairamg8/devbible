@@ -86,7 +86,7 @@ Richardson lists the cheaper mitigations explicitly:
 
 Spring Modulith adds one more that is specific to this architecture: change-aware test
 execution, which runs only the modules a commit could have affected — see
-[44 · Change-aware test execution](13f-change-aware-test-execution.md).
+**44 · Change-aware test execution** *(not written yet)*.
 
 ### 4. Support multiple technology stacks
 

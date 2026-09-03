@@ -69,7 +69,7 @@ Expanded into the bill this topic has been itemising:
 | You inherit timeouts as an obligation | [13](04c-timeouts-in-spring.md), [15](04d-the-timeout-that-is-not-a-timeout.md) |
 | You inherit retries, and therefore idempotency | [31](07b-retries-and-amplification.md), [33](07d-idempotency-on-the-wire.md) |
 | A slow callee consumes your capacity | [16](04e-bimodal-latency-and-exhaustion.md) |
-| You must decide what a timeout means | [35 · The unknown outcome](07f-the-unknown-outcome.md) |
+| You must decide what a timeout means | **35 · The unknown outcome** *(not written yet)* |
 
 **Six obligations, all of which land on the caller, none of which the callee's team pays for.**
 That asymmetry is the real reason request/reply is over-used: the cost is externalised onto

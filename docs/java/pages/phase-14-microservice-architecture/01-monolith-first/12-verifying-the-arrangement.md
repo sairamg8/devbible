@@ -75,7 +75,7 @@ The fix for a cycle is always one of three moves, and the third is usually right
 3. **Replace one direction with an event.** `ordering` publishes `OrderPlaced`; `inventory`
    listens. The compile-time edge disappears entirely, because the listener depends on the
    event type in ordering's API and ordering depends on nothing.
-   [45 · Events instead of bean references](14-events-instead-of-bean-references.md).
+   **45 · Events instead of bean references** *(not written yet)*.
 
 ### Rule 2 — no reaching into internals
 

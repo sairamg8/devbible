@@ -103,7 +103,7 @@ Compute it in both directions, because it is asymmetric and the asymmetry is the
 - **One direction high, the other low.** A changes whenever B does, but B often changes alone.
   That is an upstream/downstream relationship: B is upstream, A is downstream and conformist
   or dependent. This maps directly onto the context-mapping relationships in
-  [43 · Context mapping](30-context-mapping.md), and it is derived from data rather than from
+  **43 · Context mapping** *(not written yet)*, and it is derived from data rather than from
   a workshop.
 - **Both low.** Independent. A boundary here is cheap and probably correct.
 

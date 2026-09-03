@@ -112,8 +112,8 @@ public final class StockItem {
 `Sku` appears in both, and that is fine — it is an identifier, a shared *value*, not a
 shared model. Sharing identifiers across contexts is normal and necessary; sharing
 behaviour and rules across contexts is what destroys boundaries. The distinction is drawn
-carefully in [28 · Published language vs
-aggregate](28-published-language-vs-aggregate.md).
+carefully in **28 · Published language vs
+aggregate** *(not written yet)*.
 
 ## Where the shared identifier is also a lie
 

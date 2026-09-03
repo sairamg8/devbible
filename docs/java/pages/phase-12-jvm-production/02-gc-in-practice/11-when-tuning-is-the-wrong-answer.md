@@ -74,7 +74,7 @@ yours. And the failure mode is worse than "no improvement": a flag that was righ
 be removed — an unrecognised `-XX:` option **fails the launch** on JDK 25 unless
 `-XX:+IgnoreUnrecognizedVMOptions` is set, which is itself a bad idea because it silences the
 next one too. The retired inventory is
-[13 · JVM flags that matter](../13-jvm-flags-that-matter/README.md), and the flags that survive
+**13 · JVM flags that matter** *(not written yet)*, and the flags that survive
 are [02c2 · Flags that still work](02c2-flags-that-still-work.md).
 
 There is also a compounding effect specific to this area. Each flag removes an ergonomic

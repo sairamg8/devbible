@@ -72,7 +72,7 @@ alertable rather than being a 500 in somebody's log.
 dependency to be soft about. Reference data — names, titles, categories, addresses, tiers —
 can be replicated into the caller and read from its own store. [06c · The read that could
 have been a copy](06c-the-read-that-could-have-been-a-copy.md) and
-[09e](09e-the-local-copy-in-practice.md).
+**09e** *(not written yet)*.
 
 **2 · Serve a cached answer.** The call happens, and on failure you serve the last value you
 saw. This is weaker than a copy because the cache can be cold — a fresh pod that has never
@@ -237,8 +237,8 @@ one, which protects the caller's resources and stops the failure spreading — g
 valuable, and phase 16 covers it. But if the fallback behind the breaker is "throw an
 exception", the operation still fails and the dependency is still hard. What makes it soft is
 the *content* of the fallback, and the breaker is only the mechanism that decides when to use
-it. See [07g · Circuit breaking as a
-consequence](07g-circuit-breaking-as-a-consequence.md) and
+it. See **07g · Circuit breaking as a
+consequence** *(not written yet)* and
 [Phase 16 · Resilience and operations](../../phase-16-resilience-operations/README.md).
 
 {/* FOOTER */}

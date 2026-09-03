@@ -114,7 +114,7 @@ they work:
   the proportion of wall clock spent collecting, approaching 1. Pause-duration percentiles do not
   show it well, because the individual collections may not be unusually long — there are simply
   no gaps between them. Micrometer's GC metrics and the derived time fraction are
-  [08 · Metrics with Micrometer](../08-metrics-with-micrometer/README.md).
+  **08 · Metrics with Micrometer** *(not written yet)*.
 - **`-Xlog:gc+ergo=trace` as an early-warning channel** — but note the asymmetry this page is
   about: on G1 the "would exceed overhead limit" message from
   [09](09-gc-overhead-and-the-death-spiral.md) is never emitted either, because the code that

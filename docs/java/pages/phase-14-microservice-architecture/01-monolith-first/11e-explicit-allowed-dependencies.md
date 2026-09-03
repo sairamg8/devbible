@@ -100,8 +100,8 @@ package com.acme.commerce.catalogue;
 Three things this arrangement buys immediately:
 
 - `ordering` cannot call `inventory`. If it needs inventory to react to something, it must
-  publish an event — which is exactly the design [45 · Events instead of bean
-  references](14-events-instead-of-bean-references.md) argues for, now enforced rather than
+  publish an event — which is exactly the design **45 · Events instead of bean
+  references** *(not written yet)* argues for, now enforced rather than
   encouraged.
 - `catalogue` with an empty list is pinned as a leaf. Any future dependency it acquires
   fails the build, which is how you protect the one module everybody depends on from
@@ -146,7 +146,7 @@ Declaring `allowedDependencies` on all seven modules at once, in an existing cod
 produces an unreadable failure list. The order that works:
 
 1. **Print the current graph.** `modules.forEach(System.out::println)`, or the actuator's
-   `modulith` resource at runtime ([51](15b-actuator-and-observability.md)), which reports
+   `modulith` resource at runtime (**51** *(not written yet)*), which reports
    each module's outgoing dependencies and their kind — `DEFAULT`, `USES_COMPONENT` or
    `EVENT_LISTENER`.
 2. **Start with the leaves.** Declare `allowedDependencies = {}` on modules that genuinely

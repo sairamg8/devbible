@@ -124,13 +124,13 @@ be here at all". Only the second one changes the outage profile.
 3. **Degrade instead of failing.** If the hop must stay, decide what you serve when it
    fails. A hard dependency you can serve a partial answer past is a soft dependency, and
    soft dependencies do not enter the availability product. See
-   [03e](03e-hard-and-soft-dependencies.md) and [09d · Degrading instead of
-   failing](09d-degrading-instead-of-failing.md).
+   [03e](03e-hard-and-soft-dependencies.md) and **09d · Degrading instead of
+   failing** *(not written yet)*.
 
 Circuit breakers, bulkheads and retries are *not* on this list. They change how a failure
 manifests — fast rejection instead of a slow pile-up — which matters enormously for blast
 radius, but they do not make the endpoint succeed when the dependency is down. They are
-covered as an inherited consequence in [07g](07g-circuit-breaking-as-a-consequence.md) and
+covered as an inherited consequence in **07g** *(not written yet)* and
 taught in phase 16.
 
 ## Gotchas
@@ -164,7 +164,7 @@ trade at all until you must.
 Adding "and show the loyalty tier on the confirmation page" adds a fourth client call to a
 controller that had three. Nobody thinks of a display field as an availability change. This
 is the single most common way an endpoint's dependency count grows, and it is why the
-inventory in [10b](10b-the-interaction-inventory.md) is worth maintaining rather than
+inventory in **10b** *(not written yet)* is worth maintaining rather than
 computing once.
 
 ## Interview questions
@@ -213,7 +213,7 @@ Read the code for each externally reachable operation and list the remote calls 
 succeed before a 2xx can be returned, distinguishing those with a real fallback from those
 without. That list — per operation, not per service — is the runtime coupling, and its
 length is the exponent in the availability arithmetic. It costs an afternoon and it is the
-input to every other decision in this topic. [10b · The interaction
-inventory](10b-the-interaction-inventory.md) is the format.
+input to every other decision in this topic. **10b · The interaction
+inventory** *(not written yet)* is the format.
 
 {/* FOOTER */}

@@ -80,7 +80,7 @@ Database-per-service** *(not written yet)* owns the read-model discussion.
 
 *Objection*: "the user will place an order and not see it in the list." *Answer*: a real problem
 with a well-known set of solutions — read-your-writes handling on the client — and it is
-[39 · Eventual consistency reaches the UI](08b-eventual-consistency-reaches-the-ui.md), not an
+**39 · Eventual consistency reaches the UI** *(not written yet)*, not an
 argument for a synchronous index write.
 
 ## 6 · Analytics and metrics

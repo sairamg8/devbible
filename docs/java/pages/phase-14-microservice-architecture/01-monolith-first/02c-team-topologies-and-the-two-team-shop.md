@@ -64,7 +64,7 @@ And the fourth type is a cost line most split proposals omit entirely: once you 
 than a handful of services, someone has to own the pipeline templates, the base images, the
 deploy tooling, the service scaffolding and the observability stack. That is a **platform
 team**, and it is headcount that produces no customer-facing features. See
-[19 · The organisational costs](09-the-organisational-costs.md).
+**19 · The organisational costs** *(not written yet)*.
 
 ## Cognitive load is the constraint that sets team size and service count
 

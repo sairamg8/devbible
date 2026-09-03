@@ -125,7 +125,7 @@ carry a written answer, from the party who will pay, to each of these:
    If the answer is "we wouldn't", you have made an irreversible decision, which is a
    different category of decision and deserves a different level of scrutiny.
 
-[56 · The decision record](17-the-decision-record.md) turns this into an ADR template you
+**56 · The decision record** *(not written yet)* turns this into an ADR template you
 can paste.
 
 ## Why this chunk sits before the Conway's law chunks

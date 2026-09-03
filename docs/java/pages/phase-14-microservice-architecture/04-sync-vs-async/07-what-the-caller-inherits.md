@@ -29,8 +29,8 @@ expensive, and it is not on anyone's estimate.**
 | 2 | **Retry policy** | is a second attempt worth the load it causes? | [32](07b-retries-and-amplification.md), [33](07c-backoff-jitter-and-budgets.md) |
 | 3 | **Idempotency** | is a second attempt *safe*? | [34](07d-idempotency-on-the-wire.md) |
 | 4 | **Failure semantics** | what does the operation do when this fails? | [10](03e-hard-and-soft-dependencies.md) |
-| 5 | **Unknown-outcome handling** | what does a timeout *mean* about what happened? | [36](07f-the-unknown-outcome.md) |
-| 6 | **Concurrency bound** | how much of me can this dependency consume? | [16](04e-bimodal-latency-and-exhaustion.md), [37](07g-circuit-breaking-as-a-consequence.md) |
+| 5 | **Unknown-outcome handling** | what does a timeout *mean* about what happened? | **36** *(not written yet)* |
+| 6 | **Concurrency bound** | how much of me can this dependency consume? | [16](04e-bimodal-latency-and-exhaustion.md), **37** *(not written yet)* |
 
 Six decisions. **A hop with fewer than six answers is a hop with defaults chosen by whoever wrote
 the HTTP library**, and none of those defaults were chosen with your budget or your SLO in mind.
@@ -58,12 +58,12 @@ Obligations 1 to 4 and 6 are at least well known. Obligation 5 — deciding what
 is the one that produces real defects, because a timeout is not a failure. It is an **unknown
 outcome**: the request may have been fully processed, partially processed, or never received, and
 the caller cannot tell which. For a read that is uninteresting. For a write it is the whole
-problem, and it is [36 · The unknown outcome](07f-the-unknown-outcome.md).
+problem, and it is **36 · The unknown outcome** *(not written yet)*.
 
 ## What a fully-specified hop looks like
 
 Not code — a record. This belongs beside the client, in the design document, and ideally in the
-inventory of [48](10b-the-interaction-inventory.md):
+inventory of **48** *(not written yet)*:
 
 ```text
 Dependency:        Pricing Service · GET /quote
@@ -97,7 +97,7 @@ A useful check on whether an asynchronous redesign has actually helped:
 large and under-appreciated benefit: a local transaction either committed or it did not, and you
 know which. And idempotency does *not* disappear — it moves to the consumer, where at-least-once
 delivery makes duplicates a certainty rather than a possibility.
-[35 · Idempotent consumers](07e-idempotent-consumers.md).
+**35 · Idempotent consumers** *(not written yet)*.
 
 ## The rule that follows
 

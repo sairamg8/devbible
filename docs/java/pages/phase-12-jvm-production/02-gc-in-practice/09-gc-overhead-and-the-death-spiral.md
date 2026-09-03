@@ -83,7 +83,7 @@ you the conjunction is deliberate. And `GCOverheadLimitThreshold` being a `devel
 dwelling on: the "five consecutive collections" requirement is real, it materially changes when
 the error fires, and **you cannot tune it on a production JVM** — a `develop` flag does not exist
 in a product build, so setting it is not a no-op, it is a failed launch. The live/retired flag
-inventory is [13 · JVM flags that matter](../13-jvm-flags-that-matter/README.md).
+inventory is **13 · JVM flags that matter** *(not written yet)*.
 
 ## The five preconditions, from `gcOverheadChecker.cpp`
 

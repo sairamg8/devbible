@@ -108,13 +108,13 @@ three services, and the best one after. Before you commit:
 - **Volume is per-span, not per-request.** One request through six services with a database
   call each is a dozen-plus spans. At 1,000 requests/second that is five figures of spans per
   second before sampling.
-- **You will not keep all of it**, which means [06 · Sampling](06-sampling.md) is not an
+- **You will not keep all of it**, which means **06 · Sampling** *(not written yet)* is not an
   optimisation you add later — it is a decision you make on day one, and the wrong decision is
   invisible until the day you need a trace that was never recorded
-  ([06b](06b-the-trace-you-needed-was-not-sampled.md)).
+  (**06b** *(not written yet)*).
 - **Propagation is where it actually breaks.** Every thread pool, every queue, every proxy is
   a place the context can be dropped, and a dropped context produces a *smaller, plausible
-  looking trace* rather than an error ([03e](03e-propagation-that-breaks.md)).
+  looking trace* rather than an error (**03e** *(not written yet)*).
 
 ## Gotchas
 
@@ -136,7 +136,7 @@ explicitly and does not depend on clocks agreeing.
 **★ Traces are exported asynchronously and can be dropped.** Spans go into a bounded in-memory
 queue and are flushed in batches. The queue can overflow, the exporter can fail, and the
 process can exit before the flush. A missing span is not proof the work did not happen — see
-[08 · Cost and overhead](08-cost-and-overhead.md).
+**08 · Cost and overhead** *(not written yet)*.
 
 **★ The first trace you look at will have gaps, and the gaps are yours.** Auto-instrumentation
 covers frameworks; it does not cover your thread pools, your custom transports or your batch
@@ -193,6 +193,6 @@ Because it is plausible. If the trace is missing you know you have no data. If t
 dropped at one hop, you get a complete-looking trace that simply ends, and the natural reading
 is "the downstream work took no time" or "the downstream service was never called". The
 downstream service is in fact doing the work, under a brand new trace ID nobody is looking at.
-That is why [03e](03e-propagation-that-breaks.md) exists.
+That is why **03e** *(not written yet)* exists.
 
 {/* FOOTER */}

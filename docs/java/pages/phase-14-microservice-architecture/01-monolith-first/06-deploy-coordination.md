@@ -130,7 +130,7 @@ explicit payload types**, and treat those payload types as if they were already 
 contracts — additive changes only, no enums you will extend, no domain entities embedded
 whole. If a team cannot maintain that discipline when the compiler is still checking it,
 they will not maintain it when the compiler is not.
-[49 · Externalisation and the seam](14e-externalization-and-the-seam.md).
+**49 · Externalisation and the seam** *(not written yet)*.
 
 ## Gotchas
 

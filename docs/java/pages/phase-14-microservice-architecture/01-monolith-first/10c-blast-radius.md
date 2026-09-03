@@ -95,7 +95,7 @@ inside a monolith.
 
 **Asynchronous handoff at module boundaries.** `@ApplicationModuleListener` runs the listener
 on a separate executor in its own transaction, so a slow or failing consumer does not block
-the producer's request thread. [46 · @ApplicationModuleListener](14b-applicationmodulelistener.md).
+the producer's request thread. **46 · @ApplicationModuleListener** *(not written yet)*.
 
 ## What you genuinely cannot do
 

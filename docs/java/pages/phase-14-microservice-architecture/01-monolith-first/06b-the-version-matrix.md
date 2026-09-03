@@ -113,9 +113,9 @@ is one dimension, not `S` dimensions.
 This is also the honest limit of the modular monolith rehearsal: modules deploy together, so
 you never experience version skew *between* modules. What you can rehearse is the schema
 compatibility discipline — see phase 10's Flyway topic and Spring Modulith's per-module
-migration support, [52 · Module-aware Flyway](15c-module-aware-flyway.md) — and the habit of
+migration support, **52 · Module-aware Flyway** *(not written yet)* — and the habit of
 treating event payloads as versioned contracts,
-[49 · Externalisation and the seam](14e-externalization-and-the-seam.md).
+**49 · Externalisation and the seam** *(not written yet)*.
 
 ## Gotchas
 

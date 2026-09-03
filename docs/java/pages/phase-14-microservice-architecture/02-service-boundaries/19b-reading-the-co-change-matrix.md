@@ -41,7 +41,7 @@ One module coupled to everything, with everything else mutually independent. Thr
 things produce this and they need different responses:
 
 - A **shared kernel** — a values module everyone uses. Fine, if it is small and rule-free
-  ([46 · Shared kernel](33-shared-kernel.md)).
+  (**46 · Shared kernel** *(not written yet)*).
 - A **god module** — it holds rules that belong elsewhere ([25 · The god
   service](17-the-god-service.md)).
 - A **cross-cutting concern** — logging, security, an application shell. Usually fine.
@@ -75,7 +75,7 @@ every upstream change, which is what an anticorruption layer exists to stop.
 
 **Action:** check whether A has an ACL. If it does, the ACL is not doing its job — most likely
 because A's model mirrors B's rather than being A's own. See
-[41 · Anticorruption layer](29-anticorruption-layer.md).
+**41 · Anticorruption layer** *(not written yet)*.
 
 ### 6. The isolate
 

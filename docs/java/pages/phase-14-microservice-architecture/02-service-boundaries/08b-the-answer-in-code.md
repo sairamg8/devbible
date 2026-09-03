@@ -118,8 +118,8 @@ class SalesOrderProgressListener {
 While these two modules live in one deployable, that listener is an in-process boundary you
 can verify with a test. When Fulfilment moves to its own service, the same event becomes a
 message and the listener barely changes — which is the argument for drawing the boundary in
-code first, made in [33 · Package structure is the
-boundary](24-package-structure-is-the-boundary.md).
+code first, made in **33 · Package structure is the
+boundary** *(not written yet)*.
 
 ## When the answer is "it depends on who you ask"
 
@@ -166,7 +166,7 @@ than best-effort.
 **★ Publishing the aggregate inside the event.** `new ShipmentDispatched(shipment)` hands
 the consumer your internal model and makes every field of it a public contract. Publish
 identifiers and the few facts the event is about; see
-[38 · Published language vs aggregate](28-published-language-vs-aggregate.md).
+**38 · Published language vs aggregate** *(not written yet)*.
 
 **★ Symptom: the consumer needs three more fields, so the event grows every sprint.**
 Cause: the event was designed as a data-transfer object rather than as a statement of what

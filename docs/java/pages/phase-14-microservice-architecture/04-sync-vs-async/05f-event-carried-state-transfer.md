@@ -67,7 +67,7 @@ public record CustomerProfileChanged(
 
 The `version` field is not decoration. It is what makes the consumer's projection correct under
 out-of-order and duplicate delivery, which are both normal — see
-[40 · Duplicates and ordering](08c-duplicates-and-ordering.md).
+**40 · Duplicates and ordering** *(not written yet)*.
 
 The consumer's side is a projection into its own store, and the only interesting line is the
 version guard:

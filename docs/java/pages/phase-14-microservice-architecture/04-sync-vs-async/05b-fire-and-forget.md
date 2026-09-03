@@ -31,7 +31,7 @@ recoverable.
 | Knowing the work succeeded | Yes — via a status resource, an event back, or a reconciliation job |
 | Knowing the work happened *yet* | No, by construction. That is the point |
 | The ability to react to a business failure inline | No — the failure is handled by the consumer or by a compensating flow |
-| Ordering relative to the sender's other work | Partially, at cost — see [40](08c-duplicates-and-ordering.md) |
+| Ordering relative to the sender's other work | Partially, at cost — see **40** *(not written yet)* |
 | Knowing the message was accepted | **No.** This is not given up, and believing it is causes the mistake below |
 
 That last row is the one to internalise. **Fire-and-forget does not mean "throw it and hope".**
@@ -169,7 +169,7 @@ broker failure produces duplicate work. See
 **★ Ordering is not preserved just because you sent in order.** Two notifications published a
 millisecond apart can be processed in either order by a multi-consumer subscriber. If the
 consumer's correctness depends on order, you have a requirement the shape does not provide —
-[40 · Duplicates and ordering](08c-duplicates-and-ordering.md).
+**40 · Duplicates and ordering** *(not written yet)*.
 
 **★ Fire-and-forget hides latency rather than removing work.** The consumer still does the work,
 still needs capacity, and still falls behind under load. What changes is that the backlog is

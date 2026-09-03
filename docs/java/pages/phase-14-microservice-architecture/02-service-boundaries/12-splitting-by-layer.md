@@ -197,8 +197,8 @@ sides of one subdomain change together whenever the domain changes.
 
 **★ Symptom: an integration service that everybody's changes go through.** Cause: all
 anticorruption layers in one deployable. Fix: an ACL belongs to the downstream context that
-needs the translation, in that context's service — see [41 · Where the ACL
-lives](29b-where-the-acl-lives.md).
+needs the translation, in that context's service — see **41 · Where the ACL
+lives** *(not written yet)*.
 
 **★ Assuming the layered split is safe because it is easy to reverse.** It is easy to
 reverse technically and hard to reverse politically, because by then three teams own three

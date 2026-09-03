@@ -187,7 +187,7 @@ they also change in dozens of jurisdictions every year.
 anticorruption layer around a generic subdomain. Fix: the port-and-adapter pair above. The
 test is a grep — if the vendor's package name appears outside one adapter package, the
 insulation is not there. An ArchUnit rule makes it permanent; see
-[26 · ArchUnit rules](26-archunit-rules.md).
+**26 · ArchUnit rules** *(not written yet)*.
 
 **★ Classifying by how interesting the code is.** Core is about business differentiation,
 not technical difficulty. A gnarly distributed scheduler may be entirely generic; a

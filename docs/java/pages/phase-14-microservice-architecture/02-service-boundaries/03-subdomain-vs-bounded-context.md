@@ -144,8 +144,8 @@ com.retailer
 
 That layout is exactly Spring Modulith's default convention — *"each direct sub-package of
 the main package is considered an application module package"* — which means the boundary
-is verifiable by a single test the day you create it. [34 · Verifying the
-boundary](25-verifying-the-boundary.md) shows the test; the framework tour belongs to
+is verifiable by a single test the day you create it. **34 · Verifying the
+boundary** *(not written yet)* shows the test; the framework tour belongs to
 **01 · Monolith first** *(not written yet)*.
 
 ## Gotchas
@@ -173,8 +173,8 @@ about the problem space.
 
 **★ Treating "one context per subdomain" as a rule that must be satisfied immediately.**
 It is the target shape, not an entry requirement. Getting from 1:3 to 1:1 is a migration
-with real cost, priced in [42 · The cost of changing a
-boundary](42-the-cost-of-changing-a-boundary.md), and it is frequently not worth paying for
+with real cost, priced in **42 · The cost of changing a
+boundary** *(not written yet)*, and it is frequently not worth paying for
 a subdomain nobody is currently blocked on.
 
 ## Interview questions

@@ -79,7 +79,7 @@ Hours, reversible, invisible to anyone outside the team.
 **Wrong service boundary:** migrate data between databases, version and deprecate APIs,
 coordinate with every consumer, run a dual-write window, change team ownership. Weeks to
 quarters, and politically hard because someone's remit shrinks. Priced in
-[54 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md).
+**54 · The cost of changing a boundary** *(not written yet)*.
 
 The starting shape, with the guessed boundaries made real by the compiler and a test:
 

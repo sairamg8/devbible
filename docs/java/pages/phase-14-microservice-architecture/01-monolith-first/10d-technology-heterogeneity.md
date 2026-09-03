@@ -87,7 +87,7 @@ inconvenience.
 **1. Make the constraint visible.** Maintain, per module, a list of dependencies that are
 not on the current generation, and review it. Spring Modulith's Application Module Canvas
 gives you part of this for free, since it enumerates each module's components and configuration
-properties — [50 · Documenter and the canvas](15-documenter-and-the-canvas.md). The
+properties — **50 · Documenter and the canvas** *(not written yet)*. The
 dependency half needs your build tool: phase 8 owns Maven dependency analysis.
 
 **2. Put an anti-corruption layer around the offending library.** If the vendor SDK lives

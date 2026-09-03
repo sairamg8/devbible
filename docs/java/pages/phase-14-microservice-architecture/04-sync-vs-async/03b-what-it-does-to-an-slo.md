@@ -157,7 +157,7 @@ have. It is a fix for a different problem.
 **★ An SLO agreed before the dependency graph existed will be enforced after it does.**
 Targets are set early, when the service is one process and a database, and dependencies
 accrete quietly over a year. Nobody revisits the arithmetic when the fourth client field is
-added. The interaction inventory in [10b](10b-the-interaction-inventory.md) exists to make
+added. The interaction inventory in **10b** *(not written yet)* exists to make
 the accretion visible while it is happening.
 
 ## Interview questions

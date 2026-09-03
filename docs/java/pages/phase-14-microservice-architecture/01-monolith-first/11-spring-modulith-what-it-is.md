@@ -46,10 +46,10 @@ Five capabilities, and they map exactly onto the costs this topic has been prici
 | Capability | The cost it addresses | Chunks |
 |---|---|---|
 | Structural validation | Boundaries erode under delivery pressure | [35](12-verifying-the-arrangement.md)–[38](12d-what-verification-cannot-see.md) |
-| Documentation of the arrangement | Architecture documents go stale silently | [50](15-documenter-and-the-canvas.md) |
-| Per-module integration tests | Test isolation and build time | [39](13-the-module-test-slice.md)–[44](13f-change-aware-test-execution.md) |
-| Runtime observation | Per-module attribution without distributed tracing | [51](15b-actuator-and-observability.md) |
-| Loosely coupled interaction | Design-time coupling, the thing that blocks extraction | [45](14-events-instead-of-bean-references.md)–[49](14e-externalization-and-the-seam.md) |
+| Documentation of the arrangement | Architecture documents go stale silently | **50** *(not written yet)* |
+| Per-module integration tests | Test isolation and build time | [39](13-the-module-test-slice.md)–**44** *(not written yet)* |
+| Runtime observation | Per-module attribution without distributed tracing | **51** *(not written yet)* |
+| Loosely coupled interaction | Design-time coupling, the thing that blocks extraction | **45** *(not written yet)*–**49** *(not written yet)* |
 
 ## What an application module is, per the definition
 
@@ -69,7 +69,7 @@ Five capabilities, and they map exactly onto the costs this topic has been prici
 Two things worth noticing. First, **application events are part of the provided interface**,
 on equal footing with beans — the framework's model of a module treats "what I publish" as
 part of "what I expose", which is why the event-based integration story in chunks
-[45](14-events-instead-of-bean-references.md)–[49](14e-externalization-and-the-seam.md) is
+**45** *(not written yet)*–**49** *(not written yet)* is
 not a side feature. Second, the required interface explicitly includes **configuration
 properties**, which is a coupling channel most architecture diagrams ignore entirely.
 
@@ -159,7 +159,7 @@ references* and nothing else — an important limitation covered in
 >
 > *"Streamline observability infrastructure"*
 
-The second is `@ModuleSlicing` — [42 · ModuleSlicing](13d-moduleslicing.md) — and it is the
+The second is `@ModuleSlicing` — **42 · ModuleSlicing** *(not written yet)* — and it is the
 one that most changes day-to-day work, because it lets a module test also be a `@DataJpaTest`
 rather than a full application context.
 

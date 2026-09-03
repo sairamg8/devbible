@@ -80,7 +80,7 @@ with the specific answer for the three supported servers:
 
 🔴 **Stopping at the network layer means a connection refused or reset, not a tidy 503.** For a
 client this is indistinguishable from a crash — which is exactly why the readiness handshake in
-[08](08-readiness-and-the-load-balancer.md) matters: nothing should still be *sending* by the
+**08** *(not written yet)* matters: nothing should still be *sending* by the
 time this happens.
 
 ⚠️ **Persistent connections complicate it.** A keep-alive connection already established may
@@ -104,7 +104,7 @@ terminationGracePeriodSeconds: 45
 ```
 
 ⚠️ **The numbers must nest**: preStop wait + Spring's phases + exit, all inside
-`terminationGracePeriodSeconds`. Deriving them is [08b](08b-prestop-and-termination-grace-period.md).
+`terminationGracePeriodSeconds`. Deriving them is **08b** *(not written yet)*.
 
 ## Gotchas
 
@@ -122,7 +122,7 @@ Verify rather than assume.
 
 ⚠️ **Graceful shutdown covers the *web server*, not your background work.** Schedulers,
 executors and message consumers are separate ([06](06-executors-and-schedulers.md),
-[06b](06b-message-consumers.md)).
+**06b** *(not written yet)*).
 
 ⚠️ **New requests are refused at the network layer**, so a client that has not yet been steered
 away sees a connection error, not a graceful status code.

@@ -104,7 +104,7 @@ Read what those names mean against the source's own arithmetic:
 experienced.** If reaching the safepoint took 400 ms and the collection took 8 ms, `-Xlog:gc`
 reports a healthy 8 ms pause and the request that was in flight lost 408 ms. Every dashboard
 built on GC pause metrics — including the Micrometer ones in
-[08 · Metrics with Micrometer](../08-metrics-with-micrometer/README.md) — inherits this blind
+**08 · Metrics with Micrometer** *(not written yet)* — inherits this blind
 spot, because they are sourced from GC notifications rather than from safepoint records.
 
 This is the concrete answer to the question raised in

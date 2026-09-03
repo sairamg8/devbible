@@ -79,7 +79,7 @@ meaning.
 
 The uniform consequence: **a malformed header does not produce an error, it produces a new
 trace.** From the backend's perspective that is indistinguishable from the caller never having
-sent a header at all, which is why [03e](03e-propagation-that-breaks.md) lists "a proxy that
+sent a header at all, which is why **03e** *(not written yet)* lists "a proxy that
 rewrote the header case" alongside "a client that never injected one".
 
 ## What Spring Boot 4.1 does with it
@@ -95,7 +95,7 @@ and `consume = List.of(PropagationType.values())`, which the reference documents
 
 So a Boot 4.1 service **emits only `traceparent`** and **accepts `traceparent`, single-header `b3`
 and the `X-B3-*` set** — the right shape for a fleet that is mid-migration from Zipkin-era formats
-([03d](03d-b3-and-the-other-formats.md)). The consume list is deliberately wide and the produce
+(**03d** *(not written yet)*). The consume list is deliberately wide and the produce
 list deliberately narrow: reading three formats costs a header lookup, writing three costs bytes
 on every outbound call forever.
 
@@ -218,6 +218,6 @@ data, and the propagator beans share that condition (`@ConditionalOnEnabledTraci
 auto-configured builder and [03](03-context-propagation.md) applies. The order matters — a team
 that skipped the annotation and "fixed" a working client has done real damage.
 
-[Next: 03c · tracestate and baggage](03c-tracestate-and-baggage.md)
+**Next: 03c · tracestate and baggage** *(not written yet)*
 
 {/* FOOTER */}

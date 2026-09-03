@@ -120,7 +120,7 @@ Five groupings that pay for themselves:
 - **`Warning` is an `Exception`.** Warnings are exception *classes* even though
   they are normally not raised; `warnings.simplefilter("error")` turns them into
   real raises, at which point `except Exception:` catches them. See
-  [11 · Warnings versus exceptions](11-suppress-and-warnings.md).
+  **11 · Warnings versus exceptions** *(not written yet)*.
 
 ## `StopIteration` lives under `Exception`, and that has consequences
 

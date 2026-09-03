@@ -78,7 +78,7 @@ The `JvmGcMetrics` binder publishes a counter whose description states the mecha
 **`rate(jvm_gc_memory_allocated_bytes_total[5m])` is your allocation rate**, and
 `rate(jvm_gc_memory_promoted_bytes_total[5m])` is your promotion rate. Together with
 `jvm.gc.live.data.size` those three panels answer more GC questions than any pause histogram.
-Micrometer itself is [08 · Metrics with Micrometer](../08-metrics-with-micrometer/README.md).
+Micrometer itself is **08 · Metrics with Micrometer** *(not written yet)*.
 
 ⚠️ Note the definition of `jvm.gc.memory.allocated`: it is derived from young-pool size deltas
 observed at collection boundaries, so it is an *estimate* sampled at collection frequency, not a

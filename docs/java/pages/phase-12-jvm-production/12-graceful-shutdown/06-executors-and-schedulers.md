@@ -160,7 +160,7 @@ catch (InterruptedException e) { /* ignored */ }   // 🔴 the interrupt is gone
 
 Restore it — `Thread.currentThread().interrupt()` — or let it propagate. The unit of work should be
 the unit you can afford to repeat, because after `SIGKILL` it will be
-([09](09-idempotency-as-the-backstop.md)).
+(**09** *(not written yet)*).
 
 ## Gotchas
 

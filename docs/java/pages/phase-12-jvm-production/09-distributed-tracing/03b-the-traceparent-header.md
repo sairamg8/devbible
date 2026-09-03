@@ -105,7 +105,7 @@ bits) of the Span Flags field are reserved for the 8 bits of Trace Context flags
 W3C Trace Context Level 2 Candidate Recommendation."*
 
 Why a *random* flag matters to a tracing pipeline: probability samplers hash the trace id
-([06](06-sampling.md)), and a hash of a non-random id is not a fair coin. The flag lets a
+(**06** *(not written yet)*), and a hash of a non-random id is not a fair coin. The flag lets a
 downstream sampler know whether the id it is about to hash was generated the way the sampling
 maths assumes.
 
@@ -123,7 +123,7 @@ And the precise semantics of the one flag defined in version `00`:
 
 Read that asymmetry carefully. **Set means "may have recorded"; unset means "did not."** A `1` is
 not a promise that the caller's spans exist — the caller's exporter may still drop them. A `0` is
-a statement of fact. That is why a downstream `ParentBased` sampler ([06](06-sampling.md)) treats
+a statement of fact. That is why a downstream `ParentBased` sampler (**06** *(not written yet)*) treats
 `0` as decisive and `1` as "follow the parent unless configured otherwise".
 
 The specification's guidance for a participant, all `SHOULD`:
@@ -135,7 +135,7 @@ The specification's guidance for a participant, all `SHOULD`:
 > `0` as the default option when the trace is initiated by this component."*
 
 That last sentence is the one tail-sampling deployments trip over: a service that defers its
-decision to a collector ([06b](06b-the-trace-you-needed-was-not-sampled.md)) is told to start new
+decision to a collector (**06b** *(not written yet)*) is told to start new
 traces with `sampled = 0`, and every downstream `ParentBased` sampler will then honour that zero.
 The deferred design has to be fleet-wide or it silently drops the downstream half.
 
@@ -143,7 +143,7 @@ The deferred design has to be fleet-wide or it silently drops the downstream hal
 
 **★ The third field is the caller's span id, not "the span id".** The spec names it `parent-id`
 for that reason. A receiver that copies it into its own span's id — which B3 implementations
-historically did on purpose (shared span ids; see [03d](03d-b3-and-the-other-formats.md)) — is
+historically did on purpose (shared span ids; see **03d** *(not written yet)*) — is
 producing a different tree than W3C tooling expects.
 
 **★ Comparing `trace-flags` as a number breaks the day the second bit is used.** Level 2 assigns
@@ -163,7 +163,7 @@ caller's span, never the origin. The trace id is the only end-to-end constant.
 **★ Sampled `= 1` means "may have recorded", not "did record".** The spec is explicit about the
 asymmetry. A downstream that sees `1` and records, while the upstream's exporter dropped its spans,
 produces a trace with a missing root. That is a cost-and-overhead symptom
-([08](08-cost-and-overhead.md)), not a propagation bug.
+(**08** *(not written yet)*), not a propagation bug.
 
 **★ Deferred (tail) sampling is told to start traces with `sampled = 0`.** *"It should be set to `0`
 as the default option when the trace is initiated by this component."* Every `ParentBased` sampler

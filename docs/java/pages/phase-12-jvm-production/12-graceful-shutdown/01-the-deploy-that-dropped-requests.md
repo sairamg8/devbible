@@ -50,7 +50,7 @@ have more than one:
    the signal never reached the JVM at all — the shell-wrapper problem in
    [02b](02b-the-shell-that-swallowed-sigterm.md).
 2. **The application stops accepting before the routing layer stops sending**
-   ([08](08-readiness-and-the-load-balancer.md)) — the propagation gap above.
+   (**08** *(not written yet)*) — the propagation gap above.
 3. **In-flight requests are cut off** because the server does not drain, or drains for less
    time than the slowest request takes ([04](04-spring-graceful-shutdown.md)).
 4. **Something below the web layer closes first** — the connection pool, the cache client, a
@@ -84,20 +84,20 @@ its own page in this topic:
 
 1. **Receive the signal** — `SIGTERM` reaches the JVM, not a shell ([02](02-signals.md)).
 2. **Fail readiness first**, and keep serving, so the routing layer removes you before you stop
-   accepting ([08](08-readiness-and-the-load-balancer.md)).
+   accepting (**08** *(not written yet)*).
 3. **Stop accepting new work** at the network layer, while continuing to finish what is in
    flight ([04](04-spring-graceful-shutdown.md)).
 4. **Finish in-flight requests** inside a bounded grace period
    ([04b](04b-what-graceful-actually-drains.md)).
 5. **Stop background work** — schedulers, executors, message consumers — without abandoning a
-   half-completed unit ([06](06-executors-and-schedulers.md), [06b](06b-message-consumers.md)).
-6. **Close resources last** — pools, clients, files ([07](07-connection-pools.md)).
-7. **Exit before the grace period expires**, or be killed ([08b](08b-prestop-and-termination-grace-period.md)).
+   half-completed unit ([06](06-executors-and-schedulers.md), **06b** *(not written yet)*).
+6. **Close resources last** — pools, clients, files (**07** *(not written yet)*).
+7. **Exit before the grace period expires**, or be killed (**08b** *(not written yet)*).
 
 🔴 **And accept that it is best-effort.** A node can vanish; a `SIGKILL` can arrive; a network
 partition can strand an in-flight request. Graceful shutdown reduces the number of failures it
 is possible to prevent — it does not make the system exactly-once
-([09](09-idempotency-as-the-backstop.md)).
+(**09** *(not written yet)*).
 
 ## The good news about Spring Boot 4.1
 
@@ -123,7 +123,7 @@ The dropped ones are not in your logs at all.
 
 ⚠️ **Client retries hide the problem and shift the cost.** An idempotent GET retried
 transparently is invisible; a non-idempotent POST retried is a duplicate
-([09](09-idempotency-as-the-backstop.md)).
+(**09** *(not written yet)*).
 
 ⚠️ **Scale-in has the same failure mode as a deploy** and is often more frequent. So does a
 node drain, a spot-instance reclaim and an eviction.

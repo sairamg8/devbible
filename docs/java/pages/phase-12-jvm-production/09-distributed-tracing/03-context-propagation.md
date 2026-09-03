@@ -39,7 +39,7 @@ Micrometer Tracing's glossary is more explicit that there are two boundaries:
 
 🔴 **"through the process (for example, over threads) *and* over the network."** Two mechanisms.
 This page covers both and the split; [03b](03b-the-traceparent-header.md) covers the wire format
-in detail and [03e](03e-propagation-that-breaks.md) covers every way the in-process half fails.
+in detail and **03e** *(not written yet)* covers every way the in-process half fails.
 
 ## Mechanism 1 · in-process, and why it is a `ThreadLocal`
 
@@ -88,7 +88,7 @@ operations the same way:
   parent of the span this service is about to create.
 
 The format is standardised: [W3C `traceparent`](03b-the-traceparent-header.md), plus
-`tracestate`, plus optionally B3 for older fleets ([03d](03d-b3-and-the-other-formats.md)).
+`tracestate`, plus optionally B3 for older fleets (**03d** *(not written yet)*).
 
 **The critical asymmetry: extraction is nearly always automatic and injection nearly always is
 not.** Any instrumented server framework extracts on the way in, because it owns the entry
@@ -125,7 +125,7 @@ inbound HTTP ──► extract traceparent  ──► set current span (thread-l
 
 Read the diagram for the failure modes rather than the happy path. There are exactly two places
 context is lost: **the thread hop where nothing captured a snapshot**, and **the outbound call
-whose client was not instrumented**. Everything in [03e](03e-propagation-that-breaks.md) is a
+whose client was not instrumented**. Everything in **03e** *(not written yet)* is a
 variation on one of those two.
 
 ## Spring Boot's opt-ins, by name

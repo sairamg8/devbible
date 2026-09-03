@@ -36,7 +36,7 @@ Micrometer Tracing's glossary, which explicitly borrows Google's Dapper terminol
 🔴 **"Once you create a span, you must stop it at some point in the future."** That sentence is
 the single most common bug in hand-written instrumentation. An unstopped span is never
 reported, and in most implementations it also leaks whatever thread-local state was attached to
-it. [05b · Custom spans](05b-custom-spans-and-annotations.md) is largely about not writing
+it. **05b · Custom spans** *(not written yet)* is largely about not writing
 that bug.
 
 OpenTelemetry's list of what a span contains:
@@ -169,7 +169,7 @@ The motivating case in the docs is exactly the asynchronous one:
 
 **A link is what you use when a parent-child edge would be a lie** — most often across a queue,
 where the consumer may run minutes later or fan one message out to many consumers.
-[03e · Propagation that breaks](03e-propagation-that-breaks.md) returns to this.
+**03e · Propagation that breaks** *(not written yet)* returns to this.
 
 ## Status
 
@@ -193,7 +193,7 @@ instrumentation sets it.
 and status of your span exist solely in your process until they are exported to the backend.
 The downstream service receives four fields. Any design that assumes "I put an attribute on the
 span so the next service can read it" is wrong; that is what baggage is for
-([03c](03c-tracestate-and-baggage.md)), and baggage has real costs.
+(**03c** *(not written yet)*), and baggage has real costs.
 
 **★ An unstopped span is a lost span and often a leak.** The glossary is explicit that a
 created span *"must"* be stopped. A span that is never ended is never exported, so the work

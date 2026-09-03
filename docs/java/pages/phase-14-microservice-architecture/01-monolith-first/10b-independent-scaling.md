@@ -179,7 +179,7 @@ for the scheduler, an external cache — rather than by restructuring the applic
 Autoscaling on CPU or request count scales the whole application because one module is
 expensive. Before splitting, get per-module attribution — Spring Modulith's observability
 support gives you per-module spans and event counters
-([51](15b-actuator-and-observability.md)) — so you know which module is driving the fleet
+(**51** *(not written yet)*) — so you know which module is driving the fleet
 size rather than guessing.
 
 **★ Availability requirements segregate as usefully as resource requirements, and are

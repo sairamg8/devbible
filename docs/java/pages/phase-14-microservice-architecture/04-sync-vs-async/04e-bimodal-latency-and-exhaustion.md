@@ -90,7 +90,7 @@ shape of the distribution, not on the mean.**
 
 This is the argument for circuit breaking, stated as a resource-protection measure rather than
 as a resilience buzzword. **Phase 16 owns the implementation**; see
-[07g · Circuit breaking as a consequence](07g-circuit-breaking-as-a-consequence.md) for what
+**07g · Circuit breaking as a consequence** *(not written yet)* for what
 belongs here.
 
 > *"Having deadlines several orders of magnitude longer than the mean request latency is
@@ -148,10 +148,10 @@ In order of effectiveness, and none of them is "hope the dependency stays up":
    the deadline" into "return immediately", removing the `time held` term entirely for the
    duration of the outage.
 4. **Shed load at the entry point** rather than queueing it. See
-   [07h · Backpressure and load shedding](07h-backpressure-and-load-shedding.md).
+   **07h · Backpressure and load shedding** *(not written yet)*.
 5. **Virtual threads**, which change *which* resource is exhausted but not whether the requests
    fail. They are a genuine improvement and not a solution — see
-   [09c](09c-blocking-cost-and-virtual-threads.md).
+   **09c** *(not written yet)*.
 
 ## Gotchas
 

@@ -118,7 +118,7 @@ exists to fix.
 
 If one of the three is *not* a hard dependency, the structure has to say so, and the
 all-or-nothing joiner is then the wrong policy. See
-[09d · Degrading instead of failing](09d-degrading-instead-of-failing.md) for the version
+**09d · Degrading instead of failing** *(not written yet)* for the version
 where a branch is allowed to fail.
 
 The reactive equivalent with `WebClient` composes the same way with `Mono.zip`, and carries
@@ -215,6 +215,6 @@ No. It changes which resource runs out when a dependency is slow: platform threa
 pin, so the caller can hold far more in-flight requests before it degrades. That is a real
 capacity improvement and it is not an availability improvement — every one of those in-flight
 requests still fails when its deadline expires. See
-[09c · Blocking cost and virtual threads](09c-blocking-cost-and-virtual-threads.md).
+**09c · Blocking cost and virtual threads** *(not written yet)*.
 
 {/* FOOTER */}

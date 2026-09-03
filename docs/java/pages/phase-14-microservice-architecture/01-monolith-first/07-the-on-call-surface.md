@@ -122,7 +122,7 @@ tooling.
 
 The part you can rehearse in-process: Spring Modulith's actuator and observability support
 give per-module metrics and spans inside one deployable —
-[51 · Actuator and observability](15b-actuator-and-observability.md). Two counters exist for
+**51 · Actuator and observability** *(not written yet)*. Two counters exist for
 event publications:
 
 > *"module.events.published – a counter summarizing all event publications."*

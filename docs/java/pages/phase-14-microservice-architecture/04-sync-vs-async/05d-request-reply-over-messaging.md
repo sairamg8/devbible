@@ -159,7 +159,7 @@ shape adopted for resilience can measurably worsen the latency budget.
 and the broker redelivers the request to another consumer, the operation may execute twice while
 the caller believes it failed. That makes idempotency mandatory here in a way it is not for a
 plain HTTP call that failed to connect —
-[34 · Idempotent consumers](07e-idempotent-consumers.md).
+**34 · Idempotent consumers** *(not written yet)*.
 
 **★ It is often adopted as a stepping stone and then never moved past.** "We'll start with
 request/reply over the broker and make it event-driven later" is a plan that leaves the system

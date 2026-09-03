@@ -84,7 +84,7 @@ interaction an event. What they got:
 
 - A business flow that exists in no artefact, only in the union of eleven subscriptions.
 - Eventual consistency in places the product never asked for it — the user creates something and
-  cannot see it, which is [39](08b-eventual-consistency-reaches-the-ui.md).
+  cannot see it, which is **39** *(not written yet)*.
 - Request/reply reimplemented over queues wherever the answer was genuinely needed, which is
   [21](05d-request-reply-over-messaging.md) — the worst cell in the whole design space.
 - A broker that must be clustered, monitored, upgraded and understood by whoever is on call.
@@ -136,7 +136,7 @@ an implementation.
 **★ A shape chosen at design time gets silently changed by a feature request.** "Also show the
 loyalty tier" adds a synchronous hop to an endpoint whose shape was carefully decided. Nothing in
 review flags it as an architecture change. This is why the inventory in
-[48](10b-the-interaction-inventory.md) is a living document rather than a one-off exercise.
+**48** *(not written yet)* is a living document rather than a one-off exercise.
 
 **★ Event-carried state transfer is skipped because it "duplicates data", as though that were
 self-evidently disqualifying.** It is a cost, and it is usually a much smaller cost than a hard

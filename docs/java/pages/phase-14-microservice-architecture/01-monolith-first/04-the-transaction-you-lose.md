@@ -191,7 +191,7 @@ time.** `inventory.reserve(…)` may itself call `pricing`, which may call `cata
 method you are looking at names three subdomains; the transaction actually spans six. Before
 you price a boundary, walk the call graph one level deeper than feels necessary — a static
 call-graph query or Spring Modulith's own module dependency output
-([51 · Actuator and observability](15b-actuator-and-observability.md)) is faster than
+(**51 · Actuator and observability** *(not written yet)*) is faster than
 reading.
 
 **★ A retry inside a transaction is safe; a retry across a service boundary is not.**

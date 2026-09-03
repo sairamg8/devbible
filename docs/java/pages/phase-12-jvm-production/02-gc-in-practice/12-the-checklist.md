@@ -118,7 +118,7 @@ order:
 4. **A collector change**, deliberately, with its cost accepted.
 
 Verify against [02c2 · Flags that still work](02c2-flags-that-still-work.md) and
-[13 · JVM flags that matter](../13-jvm-flags-that-matter/README.md) — an unrecognised `-XX:`
+**13 · JVM flags that matter** *(not written yet)* — an unrecognised `-XX:`
 option fails the launch on JDK 25.
 
 ## The configuration to have in place beforehand

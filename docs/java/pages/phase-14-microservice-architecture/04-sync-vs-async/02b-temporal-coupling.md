@@ -116,7 +116,7 @@ than magical:
 - That swap is usually a very good deal, because infrastructure is easier to make highly
   available than an application is.
 - It is not a free deal, and pretending it is leads to the surprise in
-  [08d · The broker is a dependency too](08d-the-broker-is-a-dependency-too.md).
+  **08d · The broker is a dependency too** *(not written yet)*.
 
 The store does not have to be a broker. A row in your own database, written in the same
 transaction as the business change and drained by a poller, is a durable handoff with the
@@ -225,7 +225,7 @@ before production shows it to you.
 path.** If the consumer fails permanently on a message and the broker redelivers forever,
 the work is never done and nobody is told. The caller is decoupled; the *business outcome*
 is not. Durable handoff removes the availability dependency and creates an obligation to
-monitor completion — see [08 · Async is not free](08-async-is-not-free.md).
+monitor completion — see **08 · Async is not free** *(not written yet)*.
 
 ## Interview questions
 

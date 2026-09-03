@@ -173,7 +173,7 @@ the tell is that the copies are of *transactional* rather than *reference* data.
 **★ It is an investment, and investments can be misallocated.** A completion path, a status
 resource, a reconciliation job and three alarms is real work. On a low-traffic endpoint with a
 reliable dependency it is worth less than the availability it buys. Spend it on the endpoints in
-[48 · The interaction inventory](10b-the-interaction-inventory.md) with the worst arithmetic.
+**48 · The interaction inventory** *(not written yet)* with the worst arithmetic.
 
 ## Interview questions
 

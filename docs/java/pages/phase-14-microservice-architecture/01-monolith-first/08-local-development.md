@@ -134,7 +134,7 @@ With a diagnostic attached that is worth quoting in a design review:
 So: fast module-scoped tests, a mocking discipline identical to what you will need after
 extraction, and a coupling metric — the number of `@MockitoBean` declarations a module test
 needs. [39 · The module test slice](13-the-module-test-slice.md) through
-[44 · Change-aware test execution](13f-change-aware-test-execution.md) cover the whole
+**44 · Change-aware test execution** *(not written yet)* cover the whole
 facility.
 
 **What it does not give you:** running the module in a separate process, version skew,

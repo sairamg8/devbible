@@ -186,7 +186,7 @@ across has left the semantic coupling entirely intact while looking like it solv
 through a gateway or a mesh sidecar, the caller's own metrics may show a healthy client and
 the failure appears as a generic 503 from the proxy. The dependency is still there and is
 now harder to attribute. Whatever the topology, the caller should record per-dependency
-outcome — which is why the inventory in [10b](10b-the-interaction-inventory.md) is worth
+outcome — which is why the inventory in **10b** *(not written yet)* is worth
 keeping current.
 
 ## Interview questions

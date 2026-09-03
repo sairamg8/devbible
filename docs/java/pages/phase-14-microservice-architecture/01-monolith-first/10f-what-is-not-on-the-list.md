@@ -99,7 +99,7 @@ failure, different technology stacks, hard security isolation, data residency se
 different availability tiers. Tilkov's list of the coupling mechanisms it does not prevent —
 the shared persistence model and ambient transactions — is in
 [08 · The honest counterargument](03b-the-honest-counterargument.md), and the honest gap
-list is [55 · What Modulith does not give you](16b-what-modulith-does-not-give-you.md).
+list is **55 · What Modulith does not give you** *(not written yet)*.
 
 Overstating the modular monolith is the fastest way to lose the argument, because everything
 above is checkable in five minutes.

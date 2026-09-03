@@ -130,7 +130,7 @@ The reference describes what that does:
 With tag keys `module.identifier`, `module.invocation-type` (*"Type of invocation ('event
 listener' or 'bean')"*), `module.method` and `module.name`. So you get per-module spans, in
 one process, with no correlation protocol to design —
-[51 · Actuator and observability](15b-actuator-and-observability.md) covers it. That is the
+**51 · Actuator and observability** *(not written yet)* covers it. That is the
 observability *practice* without the observability *bill*, which makes it a good place to
 find out whether your team will actually maintain dashboards before you depend on them.
 

@@ -117,7 +117,7 @@ Three further details matter:
   the thing you care about.
 
 The only reliable way to know what your JVM has is `-XX:+PrintFlagsFinal`, which is the general
-argument of [13 · JVM flags that matter](../13-jvm-flags-that-matter/README.md): the declared
+argument of **13 · JVM flags that matter** *(not written yet)*: the declared
 default and the effective value are different questions, and ergonomics is the reason.
 
 ## Gotchas

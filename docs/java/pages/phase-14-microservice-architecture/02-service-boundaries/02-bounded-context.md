@@ -45,8 +45,8 @@ The alternative Fowler names is **multiple canonical models**:
 Two things in that sentence are load-bearing. "Completely different models" — not
 sub-classes, not optional fields, genuinely different types. And "mechanisms to map" — the
 translation is a first-class piece of software you write and own, not an accident. That
-mechanism is the anticorruption layer in [29 · Anticorruption
-layer](29-anticorruption-layer.md).
+mechanism is the anticorruption layer in **29 · Anticorruption
+layer** *(not written yet)*.
 
 ## The boundary is drawn by language, and language is drawn by people
 

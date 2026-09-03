@@ -141,7 +141,7 @@ The actuator's `modulith` resource carries the hierarchy explicitly:
 > *"$.\{moduleName\}.nested | The names of nested modules, if any."*
 
 So the nesting is visible at runtime as well as at verification time, which makes it
-reviewable — [51 · Actuator and observability](15b-actuator-and-observability.md).
+reviewable — **51 · Actuator and observability** *(not written yet)*.
 
 ## Gotchas
 

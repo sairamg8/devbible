@@ -154,7 +154,7 @@ Worth saying, because using it as though it were complete leads to specific erro
   eleventh consideration, always against.
 - **It says nothing about migration cost.** The forces score the destination, not the journey,
   and the journey is often the deciding factor
-  ([55 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md)).
+  (**55 · The cost of changing a boundary** *(not written yet)*).
 - **It is symmetric in appearance and not in practice.** Splitting is easy and merging is
   hard, so an equal balance of forces should resolve toward *not* splitting.
 

@@ -148,7 +148,7 @@ the worst cell in the grid: full coupling cost, no result, and silent errors.
 retries until acknowledged, or fails when there is no consumer, or blocks on a broker publish
 confirm with a short timeout, the coupling is back. Publisher confirms are usually the right
 choice — they are what makes the handoff durable — but they mean the *broker* must be up, which
-is [41 · The broker is a dependency too](08d-the-broker-is-a-dependency-too.md), not that the
+is **41 · The broker is a dependency too** *(not written yet)*, not that the
 consumer must be.
 
 **★ Choosing pub/sub for a single known consumer buys extensibility you may never use and costs

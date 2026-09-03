@@ -73,7 +73,7 @@ deployable, which *Service per team* warns against.
 one service, splitting a service means partitioning its subdomains, which is clean if the
 subdomains were properly separated inside it. That is the whole argument for enforcing
 subdomain boundaries in-process before you consider network boundaries — see
-[33 · Package structure is the boundary](24-package-structure-is-the-boundary.md).
+**33 · Package structure is the boundary** *(not written yet)*.
 
 ## Where the folk rule comes from, and when it is right
 
@@ -200,7 +200,7 @@ reasons instead.
 **★ Symptom: a capability that two services both claim.** Cause: a subdomain was split
 rather than assigned. Fix: pick one owner and move the rest; there is no version of this
 that works with shared ownership. Which owner is the subject of
-[39 · Moving a capability](39-moving-a-capability.md).
+**39 · Moving a capability** *(not written yet)*.
 
 **★ Putting several subdomains in one service and then not enforcing the internal
 boundary.** This is the failure the folk rule is defending against and it is real. Within

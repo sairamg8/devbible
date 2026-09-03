@@ -150,7 +150,7 @@ retains 10% of the flood, which is still a flood. Sample per signature instead.
 **★ A timing in a log line is a metric in the wrong place.**
 It is written once, parsed later, and answers one question badly. A histogram answers percentile
 questions correctly and costs a fraction as much to store —
-[08 · Metrics](../08-metrics-with-micrometer/README.md).
+**08 · Metrics** *(not written yet)*.
 
 **★ Effective level, not configured level, is what generates volume.**
 A package inheriting `DEBUG` from a parent appears nowhere in the configuration. Auditing the

@@ -201,11 +201,11 @@ retry policy has to fit inside it.
 **★ Idempotency is the provider's decision, so your retry policy depends on someone else's API
 design.** You cannot make a third party's `POST` idempotent. If they offer no key and no lookup,
 the correct policy for that hop is not to retry writes, and the correct place to record that is the
-inventory in [48](10b-the-interaction-inventory.md).
+inventory in **48** *(not written yet)*.
 
 **★ A retried request can succeed *and* the caller still not know.** The retry itself can time out.
 Idempotency makes repetition safe; it does not make the outcome knowable. That is
-[36 · The unknown outcome](07f-the-unknown-outcome.md).
+**36 · The unknown outcome** *(not written yet)*.
 
 ## Interview questions
 
