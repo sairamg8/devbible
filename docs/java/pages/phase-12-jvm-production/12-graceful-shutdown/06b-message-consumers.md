@@ -158,7 +158,7 @@ Kubernetes terminationGracePeriodSeconds   30s   total, covers everything below
 
 **★ The one number that is a total is Kubernetes'; every other number on that list is per-thing.**
 Add the ones on your own path and compare against 30 seconds before you touch anything. That
-comparison is the content of **08b** *(not written yet)*; the reason it belongs here too is that
+comparison is the content of [08b](08b-prestop-and-termination-grace-period.md); the reason it belongs here too is that
 consumers are usually the longest single item on the list.
 
 ## Containers are not beans

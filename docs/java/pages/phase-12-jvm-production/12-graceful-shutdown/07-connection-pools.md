@@ -88,7 +88,7 @@ better than any documentation could.
 
 **★ Ten seconds, again.** Kafka's `shutdownTimeout` is 10s, AMQP's is 5s, this loop is 10s, and
 Kubernetes' `terminationGracePeriodSeconds` — the only total — is 30s. Stack them on your own
-service's path before changing any of them; **08b** *(not written yet)* is where that arithmetic
+service's path before changing any of them; [08b](08b-prestop-and-termination-grace-period.md) is where that arithmetic
 is done properly.
 
 ## What an abort does to the query
@@ -165,7 +165,7 @@ belongs.
    what it cannot do is force a listener that ignores interruption to return
    ([06](06-executors-and-schedulers.md), [06b](06b-message-consumers.md)).
 4. **Only then, look at the deadlines.** If everything stops correctly and you are still being
-   killed, the total is too small — **08b** *(not written yet)*.
+   killed, the total is too small — [08b](08b-prestop-and-termination-grace-period.md).
 
 ## Gotchas
 

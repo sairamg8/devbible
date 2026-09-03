@@ -106,7 +106,7 @@ for currently executing tasks that aren't reacting to thread interruption."*
 
 ⚠️ **The 15s above is not a free choice.** It must fit inside `spring.lifecycle.timeout-per-shutdown-phase`
 ([04](04-spring-graceful-shutdown.md)) and, with the web drain and the preStop sleep, inside
-`terminationGracePeriodSeconds` (**08b** *(not written yet)*). Add them up.
+`terminationGracePeriodSeconds` ([08b](08b-prestop-and-termination-grace-period.md)). Add them up.
 
 For a pool you build yourself, the same knobs in code:
 

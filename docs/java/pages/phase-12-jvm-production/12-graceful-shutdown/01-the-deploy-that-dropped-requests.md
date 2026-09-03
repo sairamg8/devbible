@@ -92,7 +92,7 @@ its own page in this topic:
 5. **Stop background work** — schedulers, executors, message consumers — without abandoning a
    half-completed unit ([06](06-executors-and-schedulers.md), [06b](06b-message-consumers.md)).
 6. **Close resources last** — pools, clients, files ([07](07-connection-pools.md)).
-7. **Exit before the grace period expires**, or be killed (**08b** *(not written yet)*).
+7. **Exit before the grace period expires**, or be killed ([08b](08b-prestop-and-termination-grace-period.md)).
 
 🔴 **And accept that it is best-effort.** A node can vanish; a `SIGKILL` can arrive; a network
 partition can strand an in-flight request. Graceful shutdown reduces the number of failures it

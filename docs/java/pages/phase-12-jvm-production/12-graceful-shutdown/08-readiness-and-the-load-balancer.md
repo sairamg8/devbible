@@ -130,7 +130,7 @@ Boot's guide is direct about the conclusion:
 ## The fix is a delay before SIGTERM, not a longer drain
 
 The only place to insert time *before* your process starts refusing connections is the `preStop`
-hook, which runs before the signal is delivered. That is **08b** *(not written yet)* in full; the
+hook, which runs before the signal is delivered. That is [08b](08b-prestop-and-termination-grace-period.md) in full; the
 part that belongs here is why it is a `preStop` sleep and not a bigger
 `spring.lifecycle.timeout-per-shutdown-phase`:
 

@@ -104,7 +104,7 @@ terminationGracePeriodSeconds: 45
 ```
 
 ⚠️ **The numbers must nest**: preStop wait + Spring's phases + exit, all inside
-`terminationGracePeriodSeconds`. Deriving them is **08b** *(not written yet)*.
+`terminationGracePeriodSeconds`. Deriving them is [08b](08b-prestop-and-termination-grace-period.md).
 
 ## Gotchas
 

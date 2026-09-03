@@ -28,7 +28,7 @@ cut off by a 20-second phase timeout, gracefully-configured or not.
 
 🔴 **Measure the p99.9 of your slowest endpoint before choosing the timeout**, and remember the
 whole chain has to fit inside Kubernetes' grace period
-(**08b** *(not written yet)*).
+([08b](08b-prestop-and-termination-grace-period.md)).
 
 ## The connections that do not end by themselves
 
