@@ -20,7 +20,7 @@ import Progress from '@site/src/components/Progress';
 |---|---|---|
 | **[0 · The runtime](phase-0-runtime/README.md)** | 12 | ✅ **Complete — 12 of 12** · 134 files, 31,030 lines, 0 over the cap, 0 dangling of 877 links, 0 MDX hazards |
 | **[1 · Language core](phase-1-language-core/README.md)** | 16 | 🚧 **In flight — 4 of 16** · 01 · Syntax (8 chunks), 02 · Numbers (**69**, closed 2026-09-01), 03 · Strings (9), 04 · bytes vs str (4) — 0 over the cap, 0 MDX hazards, 0 dangling of 489 links, unbroken footer chain, no duplicate `sidebar_position`. Topic 05 · Truthiness next |
-| 2 · Functions, closures and decorators | 10 | Planned |
+| **[2 · Functions, closures and decorators](phase-2-functions/README.md)** | 10 | 🚧 **In flight — 1 of 10** · 01 · def and return closed (2 chunks + index, 463 lines, 6 ★) |
 | 3 · Collections in depth | 12 | Planned |
 | 4 · Classes and the data model | 15 | Planned |
 | 5 · Iterators, generators, context managers | 10 | Planned |
