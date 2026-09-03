@@ -20,9 +20,10 @@ The second half of that story is the working group. In collaboration with Vercel
 
 The framework side of the story is unusually candid about who did what. Next.js's own account is that OpenNext filled the gap: it translated Next.js build output into something providers could consume, mapping framework semantics onto each provider's primitives. What started as a compatibility layer became an early production-grade adapter, particularly on AWS, with Cloudflare and Netlify joining the effort later. The conclusion the framework team draws from it is the design premise of the Adapter API itself — OpenNext showed that Next.js build output can serve as a stable, defined interface that adapters target directly.
 
-Dorseuil Nicolas of OpenNext frames the outcome as a transformation rather than an acquisition: the collaboration between OpenNext and the Next.js team turned a community-driven workaround into an official standard, which he offers as evidence that the future of web frameworks is built on openness and shared innovation.
-
-Fred K Schott, an engineer at Cloudflare, explains why Cloudflare was there from the beginning: they believed developers deserved a stable, open contract for deploying Next.js apps anywhere, and the official Adapter API is what makes that vision real.
+Both projects describe the result the same way: a community workaround became an official
+standard rather than being absorbed by one. That framing matters practically, not
+sentimentally — it is why the contract a third-party adapter targets is now a documented API
+with a stability guarantee instead of a build output someone reverse-engineered.
 
 ## Three adapters, three maintainers
 
