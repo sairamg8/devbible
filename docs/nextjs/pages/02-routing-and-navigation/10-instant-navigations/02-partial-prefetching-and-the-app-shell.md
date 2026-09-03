@@ -179,6 +179,12 @@ The App Shell is what a *client navigation* receives. A direct visit gets the st
 **★ Session content in the shell is a per-session client cache, not a shared server artifact.**
 Because Next.js auto-detects `cookies()` / `headers()` reads and caches that route's shell per session on the client, the "one artifact per route" bound is really "one per route per session" for such routes. That is still bounded by route count for any one user, but it does mean a route that reads a cookie in a shared layout makes *every* route below it session-scoped — which is exactly the regression the `instant()` helper is designed to catch.
 
+**★ Blanket `prefetch={false}` on a long list is now a pessimisation, not an optimisation.**
+Under the old model, many links meant many prefetches, so disabling prefetch on lists was sound advice. It no longer is: *"The App Shell is shared across every link to a given route, regardless of dynamic params, so rendering many `<Link>`s to the same destination doesn't multiply the work."* A hundred cards pointing at `/store/[slug]` cost one App Shell. Turning prefetch off on all of them buys nothing and gives up the instant navigation. The cost you were worried about now attaches to `prefetch={true}`, not to the default.
+
+**★ The audit is per destination, not per link.**
+Four different components can link to `/dashboard`, and the fix for what its `prefetch={true}` used to deliver — caching the data, or caching the lookup behind a session value — lives in the destination's own files. Editing one link site and moving on leaves the other three links carrying a prop that no longer does what its author intended. Work through destinations, then sweep the links that point at each one.
+
 **★ A new project has nothing to audit, and that is the only case where this is a one-line change.**
 The adoption guide says so directly. If you are starting fresh, put both flags in `next.config.ts` on day one and let validation teach the structure as you write routes. Retrofitting is strictly harder than never having written `prefetch={true}` in the first place.
 
@@ -198,6 +204,9 @@ That content is session data, not URL data, so the shared App Shell can carry it
 
 **★ You cached a fetch with `'use cache'` and the content still streams in after navigation. Give two plausible causes.**
 Either the cache profile's `stale` time is under five minutes — the App Shell only carries cached content with `stale` of at least five minutes, which excludes the `seconds` preset — or the content depends on URL data, in which case no amount of caching puts it in the *shared* shell and you need `prefetch={true}` on the links to resolve it per link.
+
+**★ A colleague proposes `prefetch={false}` on every card in a 100-item grid to cut prefetch traffic. Is that right?**
+Not under Partial Prefetching. All hundred cards point at one route and therefore share a single App Shell — the docs note that rendering many links to the same destination does not multiply the work. Disabling prefetch on them gives up instant navigation for no saving. The cost worth managing is `prefetch={true}`, which is per visible link; the default `<Link>` is already cheap.
 
 **★ Why is "remove `prefetch={true}`" the correct answer for a real-time widget?**
 Because a prefetch of content that must be fresh per request is stale by the time of the click, so the prefetch buys nothing and costs a server invocation per visible link. The content should sit behind a `<Suspense>` boundary and stream in after navigation; the shell shows its fallback, which is the same UI the user would have seen either way.
