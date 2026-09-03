@@ -141,7 +141,7 @@ topic.
   bomb, and the four filters that defuse it.
 - [05 · RED and USE](05-red-and-use.md) — what to measure, from two published methodologies.
 - [08 · Percentiles](08-percentiles.md) — the single most valuable distinction in the topic.
-- **12 · The checklist** *(not written yet)* — instrumenting a new service, in order.
+- [12 · The checklist](12-the-checklist.md) — instrumenting a new service, in order.
 
 ## Gotchas
 
