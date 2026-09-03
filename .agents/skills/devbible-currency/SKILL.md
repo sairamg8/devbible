@@ -52,7 +52,7 @@ to report, not that the tool broke.
 Read the trailing summary first; it classifies everything:
 
 ```
-17 current · 6 patch · 5 minor · 1 major · 12 unanchored · 6 inconsistent
+17 current · 6 patch · 5 minor · 1 major · 12 unanchored · 0 inconsistent · 5 unbolded
 ```
 
 Work the ladder **in order**. Inconsistencies before drift: they are defects that exist
@@ -64,20 +64,47 @@ today, they are cheap, and fixing them stops the scanner reporting noise every w
 
 ### 1 · `inconsistent` — "pages say X" (first, always)
 
-The scanner found the corpus naming a different version than `pins.js` declares.
+A **bold** version in a `> Verified:` line, inside one of the pin's own `tracks`,
+disagreeing with `pins.js` by a **minor or more**. The detector already filters out
+cross-track matches, line-level pins and patch differences (see below), so a surviving
+flag is worth taking seriously.
 
-🔴 **This is a claim, not proof. Confirm before touching anything.** The scanner matches
-a pin's `names` anywhere in a `> Verified:` block, so a page reading `against the
-**MongoDB Manual (8.0)** with driver 5.1` is reported as "pages say 5.1" and is
-perfectly correct as written.
+🔴 **It is still a claim, not proof. Confirm before touching anything.**
 
 ```bash
 grep -rn '^> Verified:' docs/<track> --include=*.md | grep -i '<product>' | head -20
 ```
 
-- **False positive** → widen or narrow that pin's `names` in `pins.js` so it stops
-  matching. No page is edited.
-- **Real** → treat as drift of that page's class and continue down the ladder.
+Read the **whole** matched line. The classic false positive is a **different product
+with the same name in it** — `Spring Data MongoDB 5.1` is not MongoDB, and
+`Spring Data Redis 4.1` is not Redis.
+
+- **False positive** → fix the *pin*, never a page: narrow `names`, or correct `tracks`
+  so the pin stops seeing pages it does not govern.
+- **Real** → treat it as drift of that page's class and continue down the ladder.
+
+⚠️ **Widening `tracks` cuts both ways.** It is also how blast radius is lost: a pin that
+does not name a track cannot see pages there. When you touch `tracks`, re-run and check
+the `Np` page counts moved the way you expected.
+
+**What the detector already handles, so you do not have to** (all three added
+2026-09-03 after every one of six reported inconsistencies turned out to be noise):
+
+- **Track scoping** — a pin only sees pages under its declared `tracks`.
+- **Prefix-aware, class-based comparison** — a page naming the line (`7.0` against a pin
+  of `7.0.9`) is not disagreeing, and a patch difference (`4.1.0` vs `4.1.1`) is
+  reported but never flagged. Patch drift is not work, here as everywhere.
+- **Bold-only voting** — only a bold version may contradict `pins.js`. A page *about*
+  Podman 6 citing the v6.0.0 release notes is a citation, not a pin.
+
+### 1b · `unbolded` — pages name the product, none bolds a version
+
+Reported as `❔ no bolded version on any page`. Not a contradiction — the corpus has no
+pin there to check, so the track's provenance is weaker than it looks.
+
+**Do not mass-bold pages to clear it.** Fixing it means the owning session bolding the
+version spine as it next touches each page (see `references/house-style.md`). Report the
+list; leave the pages alone.
 
 ### 2 · `patch` — mechanical, no prose read
 
@@ -235,6 +262,19 @@ git commit -m "currency: refresh after <product> bump"
 
 Build **once** at the end of a campaign (`yarn build`) and fix everything in that pass
 — never a full build per page.
+
+## 🔴 Check the lanes before editing any page
+
+Drift does not respect lane boundaries, and this checkout is shared. Before touching
+`docs/<track>/`, open **`/mnt/Storage/my-learning/claude/devbible/LOCKS.md`** and check
+whether another session holds that language.
+
+**A locked lane is reported, not fixed** — the tool reports, the owning session fixes.
+Editing another lane's pages mid-write is how two sessions collide in one file.
+
+Tooling is not lane-owned: `src/data/pins.js`, `scripts/currency.mjs` and
+`static/currency.json` are safe to fix from a currency session. `src/data/progress.js`
+is **not** — several sessions collide there.
 
 ## Scope — what this never does
 
