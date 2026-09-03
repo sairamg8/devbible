@@ -59,7 +59,7 @@ Three facts fall straight out of the grammar, before any semantics:
 - **`except` and `except*` cannot be mixed.** They are separate productions, and
   the reference states it directly: *"A `try` statement can have either `except`
   or `except*` clauses, but not both."* See
-  **08 · Exception groups** *(not written yet)*.
+  [08 · Exception groups](08-exception-groups.md).
 
 ## The execution order, in full
 

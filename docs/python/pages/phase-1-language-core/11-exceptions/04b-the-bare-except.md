@@ -214,7 +214,7 @@ Fix: it should not be there at all, but if it is, move it to the end.
 successful when every item failed.** Cause: the handler logs and continues but
 nothing aggregates the failures. Fix: collect failures and decide at the end —
 raise, or return a partial-success result the caller can act on. Consider
-`ExceptionGroup` — **08** *(not written yet)*.
+`ExceptionGroup` — [08](08-exception-groups.md).
 
 **Symptom — a broad handler in a library swallows the caller's cancellation.**
 Cause: `asyncio.CancelledError` is a `BaseException`, so `except Exception:` is

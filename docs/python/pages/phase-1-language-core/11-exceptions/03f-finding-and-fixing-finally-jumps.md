@@ -78,7 +78,7 @@ cannot appear in an except* block`. The PEP's reason is different from the
 `ExceptionGroup` are assumed to be independent, and the presence or absence of
 one of them should not impact handling of the others"* — and it shows what the
 designers do when they get to choose freely. See
-**08b · `except*` semantics** *(not written yet)*.
+[08c · `except*` semantics](08c-except-star-semantics.md).
 
 ## Sweeping a codebase
 
