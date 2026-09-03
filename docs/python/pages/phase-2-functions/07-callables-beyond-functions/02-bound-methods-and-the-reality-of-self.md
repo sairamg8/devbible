@@ -183,4 +183,4 @@ A bound method retains a strong reference to its instance via `__self__`. If a b
 
 ---
 
-← [__call__ and stateful instances](01-the-call-dunder-and-stateful-instances.md) · [Topic index](README.md) · Next → **Docstrings** *(not written yet)*
+← [__call__ and stateful instances](01-the-call-dunder-and-stateful-instances.md) · [Topic index](README.md) · Next → [Docstrings](../08-docstrings/README.md)
