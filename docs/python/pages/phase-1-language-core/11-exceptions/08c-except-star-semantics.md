@@ -289,4 +289,4 @@ independently.
 
 ---
 
-← Prev: [`split`, `subgroup` and subclasses](08b-split-subgroup-and-subclasses.md) · Index: [Exceptions](README.md) · Next → [`assert`](10-assert.md)
+← Prev: [`split`, `subgroup` and subclasses](08b-split-subgroup-and-subclasses.md) · Index: [Exceptions](README.md) · Next → [Traceback objects](09-traceback-objects.md)
