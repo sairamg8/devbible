@@ -472,7 +472,7 @@ export const LANGUAGES = {
   },
   nextjs: {
     label: 'Next.js',
-    updated: '2026-09-03 02:30',
+    updated: '2026-09-03 03:20',
     docsPath: '/docs/nextjs',
     pagesPath: '/docs/nextjs/pages',
     phases: [
@@ -643,7 +643,7 @@ export const LANGUAGES = {
       {n: 9, slug: 'phase-9-spring-boot', name: 'Spring Boot and the web', part: 'Application', topics: 16, pages: 16},
       {n: 10, slug: 'phase-10-data-access', name: 'Data access', part: 'Application', topics: 14, pages: 14},
       {n: 11, slug: 'phase-11-testing', name: 'Testing', part: 'Production', topics: 12, pages: 12},
-      {n: 12, slug: 'phase-12-jvm-production', name: 'The JVM in production', part: 'Production', topics: 15, pages: 11, pagesPlanned: 15},
+      {n: 12, slug: 'phase-12-jvm-production', name: 'The JVM in production', part: 'Production', topics: 15, pages: 12, pagesPlanned: 15},
       {n: 13, slug: 'phase-13-oauth2-oidc', name: 'OAuth2, OIDC and service security', part: 'Distributed', topics: 14, pages: 3},
       {n: 14, slug: 'phase-14-microservice-architecture', name: 'Microservice architecture', part: 'Distributed', topics: 12, pages: 0},
       {n: 15, slug: 'phase-15-messaging-event-driven', name: 'Messaging and event-driven', part: 'Distributed', topics: 14, pages: 0},

@@ -14,10 +14,10 @@ The payoff of Phase 0's mental model: memory, GC, and the observability tools
 that come *with* the JVM. This is the phase that turns "the service is slow"
 from a mystery into a flame graph.
 
-🚧 **11 of 15 topics closed** *(counted off disk, 2026-09-03)*. Topics 01–08, 10, 14 and 15 are
-complete — 189 chunks and seven indexes for 01–07, 33 chunks for 08, 29 for 10, 19 for 14 and 13
-for 15, each with an index — and are linked below. The remaining four are 09 and 12 (part-written,
-chunks on disk without an index) and 11 and 13 (planned, `_plan.md` only).
+🚧 **12 of 15 topics closed** *(counted off disk, 2026-09-03)*. Topics 01–08, 10, 12, 14 and 15
+are complete — 189 chunks and seven indexes for 01–07, 33 chunks for 08, 29 for 10, 16 for 12, 19
+for 14 and 13 for 15, each with an index — and are linked below. The remaining three are 09
+(part-written: 6 chunks on disk, no index) and 11 and 13 (planned, `_plan.md` only).
 
 **All 15 topics are planned**: `_PHASE-NOTES.md` (binding: JDK 25 version spine, topic
 boundaries, the phase's hard rules) and a `_plan.md` for every topic are written, so any
@@ -37,7 +37,7 @@ but no index yet, and is deliberately not linked until it has one.
 | 09 | **Distributed tracing** *(in progress)* | <span className="db-tier t-know">Know</span> | OpenTelemetry auto-instrumentation across service, DB, queue |
 | 10 | **[Packaging for deploy](10-packaging-for-deploy/README.md)** | <span className="db-tier t-understand">Understand</span> | Layered jars, JRE base images, non-root, AOT/CDS (JEP 483) |
 | 11 | **GraalVM native image** *(not written yet)* | <span className="db-tier t-know">Know</span> | Instant startup vs closed-world limits — where it pays |
-| 12 | **Graceful shutdown** *(not written yet)* | <span className="db-tier t-understand">Understand</span> | SIGTERM → drain → close pools; readiness interplay |
+| 12 | **[Graceful shutdown](12-graceful-shutdown/README.md)** | <span className="db-tier t-understand">Understand</span> | SIGTERM → drain → close pools; readiness interplay — 16 chunks, 232 ★ |
 | 13 | **JVM flags that matter in 2026** *(not written yet)* | <span className="db-tier t-know">Know</span> | And the ones ergonomics retired |
 | 14 | **[Benchmarking with JMH](14-benchmarking-with-jmh/README.md)** | <span className="db-tier t-know">Know</span> | Why `nanoTime` around a loop measures the JIT, not your code |
 | 15 | **[Checkpoint/restore (CRaC)](15-checkpoint-restore-crac/README.md)** | <span className="db-tier t-when">When Needed</span> | Startup in milliseconds by restoring a snapshot |
