@@ -6,7 +6,7 @@ sidebar_position: 91
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-03 against Python 3.14 Library Reference (annotationlib module, inspect.get_annotations, PEP 749).
+> Verified: 2026-09-03 against [PEP 749](https://peps.python.org/pep-0749/), [Python 3.14 annotationlib documentation](https://docs.python.org/3.14/library/annotationlib.html).
 > Target: **CPython 3.14** (3.14.7). Documentation-validated; **no sandbox run**.
 
 **With PEP 749, Python 3.14 introduces `annotationlib` as the standard library's dedicated subsystem for introspecting type annotations. Rather than relying on splintered legacy utilities (`typing.get_type_hints()` or manual `obj.__annotations__` reads), modern libraries use `annotationlib.get_annotations()`. This function provides a clean, unified reflection interface across functions, classes, and modules, handling descriptor unwrapping and exposing the standardized `Format` enum. For backend frameworks such as Pydantic, FastAPI, and Beanie, `annotationlib` accelerates application boot times and provides crash-resilient forward references via `Format.FORWARDREF`.**
@@ -29,24 +29,21 @@ def create_order(item_id: int, quantity: int = 1) -> bool:
 
 # Canonical extraction in Python 3.14:
 annotations = annotationlib.get_annotations(create_order, format=Format.VALUE)
-print(annotations)
-# {'item_id': <class 'int'>, 'quantity': <class 'int'>, 'return': <class 'bool'>}
+# Returns: {'item_id': <class 'int'>, 'quantity': <class 'int'>, 'return': <class 'bool'>}
 ```
 
 ## Exploring the `Format` enum
 
-The `Format` enum governs how `annotationlib` executes the underlying `__annotate__` function:
+The `annotationlib.Format` enum governs how `annotationlib` evaluates annotations via the target's `__annotate__` function:
 
 ```python
 from annotationlib import get_annotations, Format
 
 # 1. Format.VALUE (default): Real evaluated types
 val_types = get_annotations(create_order, format=Format.VALUE)
-print(val_types['item_id'] is int)  # True
 
-# 2. Format.SOURCE: Exact source-code strings without evaluation
-src_types = get_annotations(create_order, format=Format.SOURCE)
-print(src_types['item_id'])  # 'int' (a string)
+# 2. Format.STRING: Exact source-code strings without evaluation
+src_types = get_annotations(create_order, format=Format.STRING)
 
 # 3. Format.FORWARDREF: Resilient evaluation with proxy objects
 # Returns real types for existing classes, and ForwardRef proxies for missing classes
@@ -62,13 +59,12 @@ from annotationlib import get_annotations, Format
 def register_webhook(url: str, payload: PendingPayload) -> None:
     pass
 
-# PendingPayload is NOT defined yet!
+# PendingPayload is NOT defined yet:
 # format=Format.VALUE would raise NameError: name 'PendingPayload' is not defined
 
-# format=Format.FORWARDREF safely returns a ForwardRef proxy:
+# format=Format.FORWARDREF safely returns an annotationlib.ForwardRef proxy:
 hints = get_annotations(register_webhook, format=Format.FORWARDREF)
-print(hints['payload'])
-# ForwardRef('PendingPayload')
+# hints['payload'] is ForwardRef('PendingPayload')
 ```
 
 Validation frameworks use `Format.FORWARDREF` to parse schema structures without crashing if a type is not yet imported.
@@ -93,8 +89,7 @@ def get_full_schema(cls) -> dict:
         fields.update(annotationlib.get_annotations(base, format=Format.VALUE))
     return fields
 
-print(get_full_schema(UserRecord))
-# {'id': <class 'int'>, 'username': <class 'str'>}
+# get_full_schema(UserRecord) yields: {'id': <class 'int'>, 'username': <class 'str'>}
 ```
 
 ## Performance benefits in backend services
@@ -129,8 +124,8 @@ Under deferred evaluation (PEP 649), annotations are stored in separate code obj
 **Q: Does `annotationlib.get_annotations()` on a class automatically return inherited annotations?**
 No. It returns only the annotations defined directly on the specified class. To inspect all inherited annotations, a framework must iterate through `cls.__mro__` and aggregate the annotations from each base class.
 
-**Q: What is the difference between `Format.VALUE` and `Format.SOURCE` in `annotationlib`?**
-`Format.VALUE` evaluates annotations in their definition scope and returns actual Python type objects (such as `<class 'int'>`). `Format.SOURCE` does not evaluate expressions; it returns the exact string text as written in the source code (such as `'int'`).
+**Q: What is the difference between `Format.VALUE` and `Format.STRING` in `annotationlib`?**
+`Format.VALUE` evaluates annotations in their definition scope and returns actual Python type objects (such as `<class 'int'>`). `Format.STRING` does not evaluate expressions; it returns the exact string text as written in the source code (such as `'int'`).
 
 ---
 

@@ -6,11 +6,10 @@ sidebar_position: 51
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-03 against Python 3.14 Library Reference (functools module, inspect module),
-> PEP 612 (ParamSpec).
+> Verified: 2026-09-03 against [Python 3.14 functools](https://docs.python.org/3.14/library/functools.html#functools.wraps), [inspect](https://docs.python.org/3.14/library/inspect.html#inspect.unwrap), [PEP 612](https://peps.python.org/pep-0612/).
 > Target: **CPython 3.14** (3.14.7). Documentation-validated; **no sandbox run**.
 
-**When a decorator replaces an original function with an inner wrapper, Python's reflection system binds the wrapper's metadata instead of the original function's. Consequently, `__name__`, `__doc__`, `__module__`, `__qualname__`, and `__annotations__` are erased, degrading tracebacks, breaking documentation generators, and resetting framework registries. Decorating the inner wrapper with `@functools.wraps(func)` copies these canonical attributes, merges custom attributes via `__dict__`, and assigns the `__wrapped__` attribute pointing to the underlying target. The `__wrapped__` attribute enables `inspect.unwrap()` for unit testing and empowers static type checkers to maintain parameter signatures via PEP 612 `ParamSpec`.**
+**When a decorator replaces an original function with an inner wrapper, Python's reflection system binds the wrapper's metadata instead of the original function's. Consequently, `__name__`, `__doc__`, `__module__`, `__qualname__`, and `__annotations__` are erased, degrading tracebacks, breaking documentation generators, and resetting framework registries. Decorating the inner wrapper with `@functools.wraps(func)` copies these canonical attributes, merges custom attributes via `__dict__`, and assigns the `__wrapped__` attribute pointing to the underlying target. The `__wrapped__` attribute enables `inspect.unwrap()` for unit testing of inner callables, while static type checkers maintain parameter signatures independently via PEP 612 `ParamSpec`.**
 
 ## The metadata erasure catastrophe
 
@@ -66,7 +65,7 @@ print(calculate_vat.__annotations__)# {'subtotal': <class 'float'>, 'rate': <cla
 ```
 
 The standard library specifies two tuples controlling attribute copying:
-- `WRAPPER_ASSIGNMENTS`: `('__module__', '__name__', '__qualname__', '__doc__', '__annotations__')` — copied directly from `func` to `wrapper`.
+- `WRAPPER_ASSIGNMENTS`: `('__module__', '__name__', '__qualname__', '__doc__', '__annotations__', '__type_params__')` — copied directly from `func` to `wrapper` (`__type_params__` added in Python 3.12 for PEP 695 type parameters).
 - `WRAPPER_UPDATES`: `('__dict__',)` — merges the original function's attribute dictionary into the wrapper's dictionary.
 
 ## The `__wrapped__` attribute and `inspect.unwrap`
