@@ -153,6 +153,11 @@ is **not** — several sessions collide there.
   `currency.json` — only the `pages` count survives. Re-derive the blast radius with
   the grep in the `patch` class of `references/triage-ladder.md`; do not expect a
   file list in the JSON.
+- ✅ **Fixed 2026-09-03:** the scanner used to read only the `> Verified:` line, so a
+  version spine on a continuation line was invisible — 924 pages' worth. It now reads
+  the whole blockquote, with **the first line outranking the rest** so a cited version
+  cannot outvote the page's own pin. Page attributions went 1,973 → 5,217. If you are
+  comparing against a report generated before that date, its page counts are ~60% low.
 - **The freshness cliff.** Almost every `> Verified:` line says `2026-08` — the corpus
   was written in one burst, so any *"stale after N months"* rule turns the whole site
   red on a single day and gets switched off. The intended fix is a per-track

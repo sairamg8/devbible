@@ -87,6 +87,11 @@ Rules:
 - Bold the **version being pinned** — `**PostgreSQL 18.4**`. The currency scanner reads
   bold as the page's own pin and plain text as a historical citation, so **bolding the
   wrong number changes what the tooling thinks the page claims.**
+- 🔴 **Put the pinned version on the `> Verified:` line itself when you can.** The
+  scanner reads the whole blockquote, but **the first line outranks the rest** — that is
+  how it tells the page's own pin from a version it merely cites. A page bolding two
+  versions (the build you enumerated, and the one you cross-checked against) is fine and
+  common; just make sure the one you are pinning is the one on the first line.
 - Link the real source. A bare product name with no URL is weaker than the corpus norm.
 - Say when nothing was run. `**no timings**` / `**no sandbox run**` is honest and
   common; silence implies measurement that did not happen.
