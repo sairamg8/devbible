@@ -14,35 +14,39 @@ description: "The Next.js adapter compatibility test harness — the deploy, log
 
 ## What "supported" means now
 
-> *"**Functional fidelity** means every Next.js feature works correctly. The adapter test suite is the contract: if a platform's adapter passes the tests, it supports Next.js. This is binary: it passes or it doesn't."*
+The platform guide splits the word into two claims that behave differently.
 
-> *"**Performance fidelity** means features achieve their optimal performance characteristics. Examples include PPR's static shell served at CDN latency rather than origin latency, or ISR serving stale content instantly with sub-second revalidation propagation. Performance fidelity is a spectrum that every platform will achieve differently based on their architecture."*
+**Functional fidelity** means every Next.js feature works correctly, and the adapter test suite is the contract that decides it: if a platform's adapter passes the tests, it supports Next.js. There is no partial credit and no negotiation —
 
-And the conclusion that follows:
+> *"This is binary: it passes or it doesn't."*
 
-> *"A platform that achieves functional fidelity is a fully supported deployment target for Next.js. Performance fidelity is how platforms differentiate, and it improves incrementally over time."*
+**Performance fidelity** means features achieve their optimal performance characteristics. The guide's own examples are PPR's static shell served at CDN latency rather than origin latency, and ISR serving stale content instantly with sub-second revalidation propagation. Unlike the first claim this one is a spectrum, and every platform will achieve it differently based on its architecture.
 
-The March 2026 post describes what the suite covers:
+The conclusion that follows is the important one for anybody choosing a host: a platform that achieves functional fidelity is a fully supported deployment target for Next.js, full stop. Performance fidelity is how platforms differentiate from one another, and it is expected to improve incrementally over time rather than being present or absent.
 
-> *"It covers streaming behavior, caching interactions, client navigation, and real-world edge cases. When a new feature ships, its behavior is encoded in these tests."*
+The March 2026 post describes what the suite actually covers: streaming behaviour, caching interactions, client navigation, and real-world edge cases. And it states the maintenance rule that keeps that list current — when a new feature ships, its behaviour is encoded in these tests.
 
-> *"Adapter authors can run the suite using any adapter and get a pass/fail answer for each feature. This is the same test suite Vercel uses for its own adapter, so the correctness bar is shared across all providers."*
+Two properties of the suite matter for a platform team. Adapter authors can run it using any adapter and get a pass/fail answer for each individual feature. And it is the same test suite Vercel uses for its own adapter, which means the correctness bar is shared across every provider rather than being a lower bar defined for outsiders.
 
 ## The harness contract
 
 The suite is the Next.js repository's own e2e tests, run in `deploy` mode against a real deployment produced by your adapter. Next.js creates an isolated temporary application per test, and then calls out to your scripts.
 
-> *"The test harness looks for these environment variables: `NEXT_TEST_DEPLOY_SCRIPT_PATH`: Path to the executable that builds and deploys the isolated test app · `NEXT_TEST_DEPLOY_LOGS_SCRIPT_PATH`: Path to the executable that returns build and runtime logs for that deployment · `NEXT_TEST_CLEANUP_SCRIPT_PATH`: Path to the optional executable that tears the deployment down after the test run"*
+The harness locates those scripts through three environment variables:
+
+- `NEXT_TEST_DEPLOY_SCRIPT_PATH` — the path to the executable that builds and deploys the isolated test app.
+- `NEXT_TEST_DEPLOY_LOGS_SCRIPT_PATH` — the path to the executable that returns build and runtime logs for that deployment.
+- `NEXT_TEST_CLEANUP_SCRIPT_PATH` — the path to the **optional** executable that tears the deployment down after the test run.
 
 All three run with `cwd` set to the isolated temporary app. The logs and cleanup scripts additionally receive `NEXT_TEST_DIR` and `NEXT_TEST_DEPLOY_URL`.
 
 ### The deploy script contract
 
-> *"Exit with a non-zero code on failure. · Print the deployment URL to `stdout`. This will be used to verify the deployment. Avoid writing anything else to `stdout`. · Write diagnostic output to `stderr` or to files inside the working directory."*
+The docs give the deploy script three rules. It must exit with a non-zero code on failure. It must print the deployment URL to `stdout`, because that is what the harness uses to verify the deployment — and it must avoid writing anything else to `stdout` at all. Anything diagnostic goes to `stderr`, or into files inside the working directory.
 
-That middle bullet is the whole protocol: **stdout is a single URL channel**. Anything else on stdout — a build banner, a progress spinner, an npm notice — is parsed as part of the deployment URL.
+That middle rule is the whole protocol: **stdout is a single URL channel**. Anything else on stdout — a build banner, a progress spinner, an npm notice — is parsed as part of the deployment URL.
 
-> *"Because the deploy script and logs script run as separate processes, any data you want to use later, such as build IDs or server logs, should be persisted to files inside the working directory."*
+There is a second constraint that follows from process boundaries. The deploy script and the logs script run as separate processes, so anything you want to use later — build IDs, server logs — has to be persisted to files inside the working directory. Nothing else survives the gap.
 
 ```bash filename="scripts/e2e-deploy.sh"
 #!/usr/bin/env bash
@@ -85,9 +89,7 @@ Note the `>&2` on the Node one-liner. Every diagnostic in this script is deliber
 
 ### The logs script contract
 
-> *"Its output must include lines starting with: `BUILD_ID:` · `DEPLOYMENT_ID:` · `NEXT_SUPPORTS_IMMUTABLE_ASSETS:`"*
-
-> *"After those markers, the logs script can print any additional build or server logs that would help debug failures."*
+The logs script has one hard requirement: its output must include lines starting with each of three markers — `BUILD_ID:`, `DEPLOYMENT_ID:` and `NEXT_SUPPORTS_IMMUTABLE_ASSETS:`. After those markers it may print anything else that would help debug a failure, build or server logs included.
 
 ```bash filename="scripts/e2e-logs.sh"
 #!/usr/bin/env bash
@@ -103,13 +105,13 @@ if [ -f ".adapter-server.log" ]; then
 fi
 ```
 
-> *"One pattern is to have the deploy script write `.adapter-build.log` and `.adapter-server.log`, then have the logs script replay those files so the harness can extract the required markers. This is one option, each platform has different ways to get the logs."*
+The docs suggest one pattern for satisfying that requirement and are careful to present it as a suggestion rather than a rule: have the deploy script write `.adapter-build.log` and `.adapter-server.log`, then have the logs script replay those files so the harness can extract the markers it needs. Each platform has different ways of getting at its logs, and any of them is fine so long as the markers appear.
 
 Those three markers are not decoration. `BUILD_ID` and `DEPLOYMENT_ID` let tests assert skew-protection behaviour; `NEXT_SUPPORTS_IMMUTABLE_ASSETS` tells the harness whether to expect `/_next/static/immutable/*` URLs without `?dpl`. Reporting `1` when your adapter does not actually serve immutable assets will fail asset tests in a way that looks like a caching bug.
 
 ### The cleanup script contract
 
-> *"The cleanup script can be used to clean up any resources created by the deploy script. It runs after the tests have completed."*
+The cleanup script is for tearing down any resources the deploy script created, and it runs after the tests have completed.
 
 Optional, and the only one of the three that is. On a suite sharded sixteen ways, forgetting it means sixteen concurrent streams of orphaned deployments.
 
@@ -151,19 +153,18 @@ The workflow checks out `canary` by default and `fetch-depth: 25`. Testing again
 
 ## What "verified" buys, and what it does not
 
-> *"A **verified adapter** is one that meets two requirements: 1. **Open source.** The adapter source code is publicly available so the community and the Next.js team can inspect, contribute to, and verify it. 2. **Runs the compatibility test suite.** The platform provides a way to run the full Next.js compatibility test suite against their adapter. This gives visibility into which features work, which are in progress, and where gaps remain."*
+A **verified adapter** is one that meets exactly two requirements, and the docs enumerate them as such.
 
-Verified adapters *"are hosted under the Next.js GitHub organization, listed as supported deployment targets in the Next.js documentation, and maintained by their respective platform teams."*
+1. **Open source.** The adapter's source code is publicly available, so the community and the Next.js team can inspect it, contribute to it and verify it.
+2. **Runs the compatibility test suite.** The platform provides a way to run the full Next.js compatibility test suite against the adapter. The stated benefit is visibility: which features work, which are in progress, and where gaps remain.
 
-The commitments the Next.js team makes in return:
+Verified adapters are hosted under the Next.js GitHub organization, are listed as supported deployment targets in the Next.js documentation, and are maintained by their respective platform teams — hosting location does not transfer ownership.
 
-> *"**Coordinated testing.** Before major releases, we work with platform teams to run the compatibility test suite and surface issues early. · **Early access.** Adapter authors receive early access to API changes during RFCs and release candidates. · **Direct support.** When the adapter contract needs updating, we work directly with adapter teams."*
+In return the Next.js team makes three commitments. **Coordinated testing**: before major releases they work with platform teams to run the compatibility test suite and surface issues early. **Early access**: adapter authors get early access to API changes during RFCs and release candidates. **Direct support**: when the adapter contract itself needs updating, the framework team works directly with the adapter teams.
 
-And the deliberate carve-out for closed-source platforms:
+There is a deliberate carve-out for closed-source platforms. They can build adapters on exactly the same public API and run exactly the same test suite. What they cannot get is the verified listing, and the docs give the reason plainly: the Next.js team cannot verify what it cannot inspect.
 
-> *"Platforms can build closed-source adapters on the same public API and test suite. However, closed-source adapters will not be listed as verified, since the Next.js team cannot verify what it cannot inspect."*
-
-As of the versions checked on 2026-09-03, the Deploying page lists **Vercel** and **Bun** as verified adapters, notes that *"Cloudflare and Netlify are working on verified adapters built on the Adapter API"*, and says of results: *"Publicly visible test results for each adapter are coming soon."* Everything else on that page — Appwrite Sites, AWS Amplify Hosting, Cloudflare, Deno Deploy, Firebase App Hosting, Netlify — is listed under "Other Platforms" with the caveat that those integrations *"are not built on the public Adapter API and are not verified by the Next.js team, so feature support and compatibility may vary."*
+As of the versions checked on 2026-09-03, the Deploying page lists **Vercel** and **Bun** as verified adapters, notes that Cloudflare and Netlify are working on verified adapters built on the Adapter API, and says that publicly visible test results for each adapter are still to come. Everything else on that page — Appwrite Sites, AWS Amplify Hosting, Cloudflare, Deno Deploy, Firebase App Hosting, Netlify — appears under "Other Platforms", with the caveat that those integrations are not built on the public Adapter API, are not verified by the Next.js team, and may therefore vary in feature support and compatibility.
 
 ## Gotchas
 
@@ -171,7 +172,7 @@ As of the versions checked on 2026-09-03, the Deploying page lists **Vercel** an
 The harness reads stdout as the URL. An `npm notice`, a CLI progress bar, or a stray `echo "deploying..."` is concatenated into it and every test fails with what looks like a total outage. Route every diagnostic to stderr — the documented script does this even for its own inline Node call, with `>&2`.
 
 **★ Expecting state to survive between the deploy script and the logs script.**
-They are separate processes. Shell variables, exported environment, in-memory handles: none of it carries. The docs are explicit that *"any data you want to use later, such as build IDs or server logs, should be persisted to files inside the working directory."* Write `.adapter-build.log` in deploy, read it in logs.
+They are separate processes. Shell variables, exported environment, in-memory handles: none of it carries. The docs make the requirement explicit — anything you want to use later, build IDs and server logs included, must be persisted to files inside the working directory. Write `.adapter-build.log` in deploy, read it in logs.
 
 **★ Reporting `NEXT_SUPPORTS_IMMUTABLE_ASSETS: 1` aspirationally.**
 The marker tells the harness which asset URLs to expect — `/_next/static/immutable/*` without `?dpl` versus deployment-scoped assets with it. Claiming support you have not implemented makes asset tests fail in a way that reads like a CDN configuration problem rather than a mis-declared capability.
@@ -186,7 +187,7 @@ The documented workflow defaults to `ref: 'canary'`. Testing against the version
 `IS_TURBOPACK_TEST: 1` is in the documented environment. Turbopack is the default bundler in Next.js 16, so an adapter validated only against a Webpack build has validated a configuration most of its users do not have — including different chunk naming, which is exactly the surface `assets`, `assetsHashes` and immutable asset hashing touch.
 
 **★ Reading "verified" as "everything works".**
-Verification is open source *plus* running the suite. The docs describe the suite's value as visibility — *"which features work, which are in progress, and where gaps remain"* — and note that public per-adapter results are still coming. Read the platform's own results before assuming a feature is covered.
+Verification is open source *plus* running the suite. The docs describe the suite's value as visibility — which features work, which are in progress, and where gaps remain — and note that public per-adapter results are still coming. Read the platform's own results before assuming a feature is covered.
 
 **★ Assuming a closed-source adapter is a second-class citizen technically.**
 It is not; it is a second-class citizen *reputationally*. The same public API and the same test suite are available. The only thing withheld is the verified listing, and the stated reason is inspectability, not capability.
@@ -194,13 +195,13 @@ It is not; it is a second-class citizen *reputationally*. The same public API an
 ## Interview questions
 
 **★ How does Next.js define whether a platform "supports" the framework?**
-By the adapter compatibility test suite, which is binary: *"if a platform's adapter passes the tests, it supports Next.js. This is binary: it passes or it doesn't."* That is functional fidelity. Performance fidelity — shell served at CDN latency, sub-second revalidation propagation — is a separate spectrum on which platforms differentiate, and it does not affect whether the platform is a supported target.
+By the adapter compatibility test suite. The suite is the contract, and passing it is what makes a platform a supporting platform — the docs state the rule as binary, with the adapter either passing or not. That is functional fidelity. Performance fidelity — shell served at CDN latency, sub-second revalidation propagation — is a separate spectrum on which platforms differentiate, and it does not affect whether the platform is a supported target.
 
 **★ What is the entire integration surface a platform must implement to run the suite?**
 Three executables, pointed at by `NEXT_TEST_DEPLOY_SCRIPT_PATH`, `NEXT_TEST_DEPLOY_LOGS_SCRIPT_PATH` and `NEXT_TEST_CLEANUP_SCRIPT_PATH`. Deploy builds and deploys the isolated test app and prints its URL to stdout; logs prints `BUILD_ID:`, `DEPLOYMENT_ID:` and `NEXT_SUPPORTS_IMMUTABLE_ASSETS:` followed by any diagnostics; cleanup (optional) tears the deployment down.
 
 **★ Why must the deploy script keep stdout clean?**
-Because stdout *is* the URL channel. The harness takes what the deploy script prints and uses it to verify the deployment. The docs say to *"avoid writing anything else to stdout"* and to send diagnostics to stderr or to files in the working directory.
+Because stdout *is* the URL channel. The harness takes what the deploy script prints and uses it to verify the deployment. The docs instruct you to avoid writing anything else to stdout, and to send diagnostics to stderr or to files in the working directory instead.
 
 **★ Why do the logs come from a separate script rather than the deploy script's output?**
 Because they run as separate processes at different times — logs runs after the deployment exists and receives `NEXT_TEST_DEPLOY_URL`, so it can pull runtime logs from a live deployment. That separation is also why the docs insist on persisting anything you need later to files: nothing in the deploy process's memory or environment reaches the logs process.
@@ -209,10 +210,10 @@ Because they run as separate processes at different times — logs runs after th
 `BUILD_ID:`, `DEPLOYMENT_ID:` and `NEXT_SUPPORTS_IMMUTABLE_ASSETS:`. The first two let tests assert build identity and skew-protection behaviour; the third tells the harness whether to expect immutable asset URLs served without the `?dpl` query parameter, which changes what a correct asset response looks like.
 
 **★ What are the two requirements for verified status, and what does the framework team commit to in return?**
-Open source, and running the full compatibility test suite. In return: coordinated testing before major releases, early access to API changes during RFCs and release candidates, and direct support when the adapter contract needs updating. Verified adapters live under the Next.js GitHub organization and are listed in the docs, but remain owned by their platform teams — *"Publishing rights, release cadence, and implementation decisions are theirs."*
+Open source, and running the full compatibility test suite. In return: coordinated testing before major releases, early access to API changes during RFCs and release candidates, and direct support when the adapter contract needs updating. Verified adapters live under the Next.js GitHub organization and are listed in the docs, but remain owned by their platform teams — publishing rights, release cadence and implementation decisions all stay with the platform.
 
 **★ Can a closed-source platform build an adapter?**
-Yes, on the same public API with the same test suite. It simply will not be listed as verified, and the stated reason is that *"the Next.js team cannot verify what it cannot inspect."* Nothing technical is withheld.
+Yes, on the same public API with the same test suite. It simply will not be listed as verified, and the stated reason is that the Next.js team cannot verify what it cannot inspect. Nothing technical is withheld.
 
 **★ Why does the reference workflow default to testing against `canary`?**
 Because the point of the suite for a platform is early warning. Testing the release your users already run confirms yesterday's state; testing canary surfaces contract changes while they can still be discussed — which is the mechanism behind the working group's early-access commitment and behind the promise that breaking changes come with lead time proportional to their scope.

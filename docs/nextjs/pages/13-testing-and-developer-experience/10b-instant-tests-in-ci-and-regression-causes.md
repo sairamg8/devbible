@@ -14,7 +14,7 @@ description: "Enabling the testing API for next start with exposeTestingApiInPro
 
 ## Where the tests can run
 
-> *"Run these against `next dev`, where the testing API is enabled automatically. To run them in CI against a production build, set `exposeTestingApiInProductionBuild` so `next start` exposes the same API."*
+The guide gives two environments and one switch between them. Run these tests against `next dev`, where the testing API is enabled for you automatically. To run them in CI against a production build instead, set `exposeTestingApiInProductionBuild`, which makes `next start` expose that same API.
 
 ```ts title="next.config.ts"
 import type { NextConfig } from 'next'
@@ -27,11 +27,9 @@ const nextConfig: NextConfig = {
 export default nextConfig
 ```
 
-The rest is ordinary Playwright practice from the Next.js guide:
+The rest is ordinary Playwright practice from the Next.js guide. Playwright simulates a user navigating your application across three browsers — Chromium, Firefox and WebKit — and doing so requires your Next.js server to be running. The guide's own recommendation is to run your tests against your production code, because that more closely resembles how the application will behave for real users.
 
-> *"Playwright will simulate a user navigating your application using three browsers: Chromium, Firefox and Webkit, this requires your Next.js server to be running. We recommend running your tests against your production code to more closely resemble how your application will behave."*
-
-> *"Playwright will by default run your tests in the headless mode. To install all the Playwright dependencies, run `npx playwright install-deps`."*
+Two operational details from the same guide: Playwright runs your tests in headless mode by default, and installing everything it needs is a single command, `npx playwright install-deps`.
 
 Build and start, then run the suite against it; or let Playwright's `webServer` option start the server and wait for it. The one thing to avoid is pointing an `instant()` suite at `next dev` in CI and treating a pass as evidence about production.
 
@@ -57,9 +55,7 @@ Then build the E2E artefact with `E2E=true next build` and ship the plain one. T
 
 ## What actually breaks these tests
 
-The two causes named in the release notes are worth memorising, because they share a property: **neither one edits the route under test.**
-
-> *"Maybe a component that reads `cookies()` gets added to a shared header and de-opts the route to request-time rendering, or a `<Suspense>` boundary moves during a refactor and part of the page starts blocking."*
+The two causes named in the release notes are worth memorising, because they share a property: **neither one edits the route under test.** The first is a component that reads `cookies()` being added to a shared header, which de-opts the route to request-time rendering. The second is a `<Suspense>` boundary moving during a refactor, after which part of the page starts blocking.
 
 **A `cookies()` read in a shared header.** The read is a runtime API, so the component cannot be prerendered; if it is not wrapped in a `<Suspense>` boundary the route de-opts to request-time rendering, and every route that renders that header loses content from its shell. The failure is wide — dozens of tests going red from a one-line change in a component nobody thought of as routing code. That width is the signal, not noise: read it as "a shared ancestor changed", and go look at the header rather than at the thirty routes.
 
@@ -79,9 +75,9 @@ Within a suite, these are not a replacement for your existing end-to-end tests. 
 
 ## The agent-driven version
 
-> *"The `next-cache-components-optimizer` Skill packages this loop. It confirms the target UI renders normally, writes an `instant()` test that fails before the fix, then works it to green against a production-like build and ships it as a regression guard. Use it for the initial load (hard navigation), client-side navigation (soft navigation), or both."*
+The release notes package this whole loop as a Skill, `next-cache-components-optimizer`, and describe it performing the same four steps by hand: it confirms the target UI renders normally, writes an `instant()` test that fails before the fix, then works that test to green against a production-like build, and finally ships it as a regression guard. The notes say it can be pointed at the initial load (a hard navigation), at client-side navigation (a soft navigation), or at both.
 
-Note "against a production-like build" — the Skill's own workflow assumes you have solved the environment question above.
+Note the phrase "against a production-like build" — the Skill's own workflow assumes you have solved the environment question above.
 
 ## Gotchas
 
@@ -89,9 +85,7 @@ Note "against a production-like build" — the Skill's own workflow assumes you 
 The testing API is enabled automatically there, so the tests run and pass, but development does not prefetch. The client-navigation test is exercising a navigation whose App Shell was never prefetched. Run the suite against `next build` plus `next start` with `exposeTestingApiInProductionBuild` before you trust it as a gate.
 
 **★ The DevTools cookie is scoped to the domain, not the port.**
-> *"Because cookies are scoped to the domain and not the port, running multiple projects on the same domain (typically `localhost`) means the cookie is shared across them and can cause unexpected behavior."*
-
-The `next-instant-navigation-testing` cookie is the mechanism both the Inspector and `instant()` use to hold content back. Two projects on `localhost`, or a suite running while you have the Navigation Inspector paused in a browser on the same machine, can interfere. Clear the cookie or close the panel when switching projects; the docs say this will be fixed as part of stabilising the feature.
+The docs warn about this directly: *"cookies are scoped to the domain and not the port"*, so running multiple projects on the same domain — typically `localhost` — means the cookie is shared between them and can cause unexpected behaviour. The `next-instant-navigation-testing` cookie is the mechanism both the Inspector and `instant()` use to hold content back. Two projects on `localhost`, or a suite running while you have the Navigation Inspector paused in a browser on the same machine, can interfere. Clear the cookie or close the panel when switching projects; the docs say this will be fixed as part of stabilising the feature.
 
 **★ Leaving `exposeTestingApiInProductionBuild` on in the artefact you ship.**
 The docs describe the flag as the way to expose the same testing API from `next start` for CI, and take no position on shipping it. There is no product reason for that API to be reachable by users, so gate it behind an environment variable and build the E2E artefact separately — accepting that you are then not testing byte-identical output.

@@ -47,11 +47,11 @@ The alternatives, for cases that need no logic: `proxy` rewrites, or `rewrites()
 
 ## `NextRequest` and `NextResponse`
 
-> *"Next.js extends the `Request` and `Response` Web APIs with methods that simplify common operations. These extensions are available in both Route Handlers and Proxy."*
+Next.js extends the Web `Request` and `Response` APIs with methods that simplify the operations you keep writing by hand, and those extensions are available in both Route Handlers and Proxy — the same objects, the same helpers, in both places.
 
-> *"`NextRequest` includes the `nextUrl` property, which exposes parsed values from the incoming request […] `NextResponse` provides helpers like `next()`, `json()`, `redirect()`, and `rewrite()`."*
+On the request side, `NextRequest` adds the `nextUrl` property, which exposes already-parsed values from the incoming request instead of making you construct a `URL` yourself. On the response side, `NextResponse` supplies helpers the plain Web API has no equivalent for: `next()`, `json()`, `redirect()` and `rewrite()`.
 
-> *"You can pass `NextRequest` to any function expecting `Request`. Likewise, you can return `NextResponse` where a `Response` is expected."*
+The important structural point is that these are supersets, not substitutes. You can hand a `NextRequest` to any function whose parameter is typed as a `Request`, and you can return a `NextResponse` anywhere a `Response` is expected. Nothing in your own code or in a third-party library has to know about the Next.js types for the extended objects to flow through it.
 
 ```ts filename="/app/echo-pathname/route.ts"
 import { type NextRequest, NextResponse } from 'next/server'
@@ -129,7 +129,7 @@ Every attribute on that cookie is doing work: `secure` keeps it off plaintext co
 
 ## Proxy, and its one-file limit
 
-> *"Only one `proxy` file is allowed per project. Use `config.matcher` to target specific paths."*
+A project gets exactly one `proxy` file — the docs permit no more than one, anywhere in the tree. Scoping is therefore not done by adding files but by narrowing what the single file runs on, which is what `config.matcher` is for: it targets the specific paths the proxy should see and leaves everything else untouched.
 
 ```ts filename="proxy.ts"
 import { isAuthenticated } from '@lib/auth'
@@ -163,7 +163,7 @@ export function proxy(request: Request) {
 
 ## Preflight
 
-> *"Preflight requests use the `OPTIONS` method to ask the server if a request is allowed based on origin, method, and headers. If `OPTIONS` is not defined, Next.js adds it automatically and sets the `Allow` header based on the other defined methods."*
+A preflight is the browser using the `OPTIONS` method to ask your server, before it sends the real request, whether that request is permitted given its origin, its method and its headers. If your `route.ts` does not export an `OPTIONS` handler, Next.js adds one for you and populates the `Allow` header from whichever other methods the file does define.
 
 The automatic `OPTIONS` handles the `Allow` header. It does **not** supply CORS headers — those are yours to set.
 ## Gotchas
@@ -190,12 +190,12 @@ The callback example sets both, plus `expires: undefined` for a session-lifetime
 `new Request(proxyURL, request)` carries the original headers, including `Host`, `Cookie` and any `Authorization` the browser sent. Forwarding a session cookie to a third-party origin is a credential leak; forwarding `Host` is what makes some upstreams route incorrectly. Build the outbound request's headers explicitly rather than inheriting them wholesale.
 
 **★ Using `proxy` for authentication and stopping there.**
-The documented proxy returns 401 for unauthenticated `/api/*` requests, and the guide's own security section is blunt about the limit: *"Do not rely on proxy alone for authentication and authorization."* Two of the July 2026 CVEs sit on exactly this seam — a Turbopack single-locale proxy bypass, and endpoint-ID disclosure that lets a Server Function be invoked directly. Re-verify next to the data.
+The documented proxy returns 401 for unauthenticated `/api/*` requests, and the guide's own security section is blunt about the limit — `proxy` alone is not sufficient for authentication and authorization. Two of the July 2026 CVEs sit on exactly this seam — a Turbopack single-locale proxy bypass, and endpoint-ID disclosure that lets a Server Function be invoked directly. Re-verify next to the data.
 
 ## Interview questions
 
 **★ What makes the documented proxy handler safe against SSRF, and what would break it?**
-The destination origin is hard-coded: `new URL(pathname, 'https://nextjs.org')`. Only the path comes from the request. Deriving the origin from request input — a header, a query parameter, a rewrite rule built from user data — is the SSRF shape disclosed as CVE-2026-64645, where a rule could be pointed at an arbitrary hostname *"regardless of the rule's hostname suffix"*. Validate against exact hosts, never suffixes.
+The destination origin is hard-coded: `new URL(pathname, 'https://nextjs.org')`. Only the path comes from the request. Deriving the origin from request input — a header, a query parameter, a rewrite rule built from user data — is the SSRF shape disclosed as CVE-2026-64645, where a rule could be pointed at an arbitrary hostname irrespective of the hostname suffix that rule was supposed to be constrained to. Validate against exact hosts, never suffixes.
 
 **★ How does the callback-URL example prevent an open redirect?**
 It resolves the caller-supplied `redirect_url` against the request URL and then compares origins: `if (destination.origin !== request.nextUrl.origin) return 400`. Resolving first is what makes the check correct — it normalises protocol-relative and relative inputs before the comparison, so `//evil.example.com` cannot slip past a naive string test.
@@ -207,12 +207,12 @@ It adds one automatically and sets the `Allow` header based on the other methods
 It is a single project-level interception point, which is what makes its ordering relative to routing well-defined. Scope it with `config.matcher`, which supports path patterns plus `has` and `missing` conditions on headers and cookies — so one file can behave differently per route without becoming per-directory middleware.
 
 **★ What is the difference between `NextResponse.next({ request: { headers } })` and setting headers on the response?**
-The first modifies the headers your *server* receives for the remainder of the request; the client never sees them. The second sends them to the browser. The guide's security section draws the distinction precisely because people conflate them: *"If sensitive values were appended to these headers, they will be visible to clients."* Internal correlation IDs, resolved tenant identifiers and decoded claims belong on the request; only what the browser needs belongs on the response.
+The first modifies the headers your *server* receives for the remainder of the request; the client never sees them. The second sends them to the browser. The guide's security section draws the distinction precisely because people conflate them: any sensitive value appended to a response header is, by construction, visible to clients. Internal correlation IDs, resolved tenant identifiers and decoded claims belong on the request; only what the browser needs belongs on the response.
 
 **★ A webhook endpoint calls `revalidateTag`. What must it check first, and what is better than a shared token?**
 It must authenticate the caller — the documented handler compares a query-string token against `process.env.REVALIDATE_SECRET_TOKEN` and returns 401 otherwise, then requires a `tag` parameter and returns 400 without one. Better than a shared token is a provider-issued signature over the request body, verified with a constant-time comparison, because a token in a query string is logged by every hop it passes through and cannot be scoped to a payload.
 
 **★ Why is `proxy` alone insufficient as an authorization layer?**
-Because it is one filter in front of many entry points, and anything that bypasses it or routes around it reaches the data unguarded. The guide says so directly — *"Do not rely on proxy alone for authentication and authorization"* — and the 2026 record supplies two concrete instances: a middleware/proxy bypass triggered by Turbopack plus a single `i18n.locales` entry, and global disclosure of Server Function endpoint IDs that lets an action be invoked without going through any page. Authorization has to be re-verified in the Route Handler or Server Action, next to the data.
+Because it is one filter in front of many entry points, and anything that bypasses it or routes around it reaches the data unguarded. The guide says so directly — `proxy` is not to be relied on alone for authentication and authorization — and the 2026 record supplies two concrete instances: a middleware/proxy bypass triggered by Turbopack plus a single `i18n.locales` entry, and global disclosure of Server Function endpoint IDs that lets an action be invoked without going through any page. Authorization has to be re-verified in the Route Handler or Server Action, next to the data.
 
 {/* FOOTER */}

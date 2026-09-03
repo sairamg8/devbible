@@ -28,42 +28,42 @@ routing: {
 }
 ```
 
-The documented meaning of each, verbatim:
+What the reference says each phase holds:
 
 | Phase | Meaning |
 | --- | --- |
-| `beforeMiddleware` | *"Routes applied before middleware execution. These include generated header and redirect behavior."* |
-| `middlewareMatchers` | *"Middleware matcher definitions emitted for this build. Use these to decide whether middleware should be invoked for a given request."* |
-| `beforeFiles` | *"Rewrite routes checked before filesystem route matching."* |
-| `afterFiles` | *"Rewrite routes checked after filesystem route matching."* |
-| `dynamicRoutes` | *"Dynamic matchers generated from route segments such as `[slug]` and catch-all routes."* |
-| `onMatch` | *"Routes that apply after a successful match, such as immutable cache headers for hashed static assets."* |
-| `fallback` | *"Final rewrite routes checked when earlier phases did not produce a match."* |
+| `beforeMiddleware` | Routes applied **before** middleware executes. These include the generated header and redirect behaviour. |
+| `middlewareMatchers` | The middleware matcher definitions emitted for this build. A platform uses them to decide whether middleware should be invoked for a given request at all. |
+| `beforeFiles` | Rewrite routes checked **before** filesystem route matching. |
+| `afterFiles` | Rewrite routes checked **after** filesystem route matching. |
+| `dynamicRoutes` | Dynamic matchers generated from route segments such as `[slug]`, and from catch-all routes. |
+| `onMatch` | Routes that apply *after* a successful match — the reference's own example is immutable cache headers for hashed static assets. |
+| `fallback` | The final rewrite routes, checked only when none of the earlier phases produced a match. |
 
 Two of these correspond to the two halves of `rewrites()` in `next.config.js` — `beforeFiles` and `afterFiles` — and their ordering relative to the filesystem is the entire reason the config takes an object with those keys instead of a flat array. `fallback` is the third key, checked only when nothing else matched.
 
-`onMatch` is the one most adapters overlook. The API reference gives the canonical example: *"Routes applied after a successful match (for example immutable static asset cache headers)."* If your platform serves `/_next/static/*` directly from object storage and never consults `onMatch`, those assets go out without `Cache-Control: public, max-age=31536000, immutable` and every browser re-downloads the entire bundle on every visit.
+`onMatch` is the one most adapters overlook, and the API reference's canonical example of it is exactly the case that hurts: rules applied after a successful match, such as the immutable cache headers for hashed static assets. If your platform serves `/_next/static/*` directly from object storage and never consults `onMatch`, those assets go out without `Cache-Control: public, max-age=31536000, immutable` and every browser re-downloads the entire bundle on every visit.
 
 ## Common route fields
 
-Each entry in every phase can carry:
+Each entry in every phase can carry the following, as the reference describes them:
 
-- `source` — *"Original route pattern (optional for generated internal rules)"*
-- `sourceRegex` — *"Compiled regex for matching requests"*
-- `destination` — *"Internal destination or redirect destination"*
-- `headers` — *"Headers to apply"*
-- `has` — *"Positive matching conditions"*
-- `missing` — *"Negative matching conditions"*
-- `status` — *"Redirect status code"*
-- `priority` — *"Internal route priority flag"*
+- `source` — the original route pattern. It is **optional**, because internally generated rules may not have one.
+- `sourceRegex` — the compiled regex used to match requests.
+- `destination` — the internal destination, or the redirect destination.
+- `headers` — headers to apply.
+- `has` — the positive matching conditions.
+- `missing` — the negative matching conditions.
+- `status` — the redirect status code.
+- `priority` — an internal route priority flag.
 
 `source` being optional is the tell that some of these rules were generated rather than authored. A rule from `headers()` in `next.config.js` has a `source`; an internal rule Next.js synthesised may not. Never key logic on `source` — match on `sourceRegex`.
 
-`shouldNormalizeNextData` is the Pages Router compatibility switch: *"Whether `/_next/data/<buildId>/...` URLs should be normalized during matching."* A platform that skips this will fail to route client-side data requests on Pages Router apps.
+`shouldNormalizeNextData` is the Pages Router compatibility switch. It states whether `/_next/data/<buildId>/...` URLs should be normalized during matching. A platform that skips this will fail to route client-side data requests on Pages Router apps.
 
 ## `@next/routing` — do not reimplement this
 
-> *"You can use `@next/routing` to reproduce Next.js route matching behavior with data from `onBuildComplete`."*
+The docs' own recommendation is to stop here and take the library: `@next/routing` exists to reproduce Next.js route matching behaviour using the data `onBuildComplete` already handed you. Nothing else needs to be derived.
 
 The package takes the pathnames of every routable output plus the `routing` object, and returns a routing decision:
 
@@ -98,19 +98,19 @@ const result = await resolveRoutes({
 
 ### What `resolveRoutes()` returns
 
-- `middlewareResponded` — *"`true` when middleware already sent a response (the adapter should not invoke an entrypoint)."*
-- `externalRewrite` — *"A `URL` when routing resolved to an external rewrite destination."*
-- `redirect` — *"An object with `url` (`URL`) and `status` when the request should be redirected."*
-- `resolvedPathname` — *"The route pathname selected by Next.js routing. For dynamic routes, this is the matched route template such as `/blog/[slug]`."*
-- `resolvedQuery` — *"The final query after rewrites or middleware have added or replaced search params."*
-- `invocationTarget` — *"The concrete pathname and query to invoke for the matched route."*
-- `resolvedHeaders` — *"A `Headers` object containing any headers added or modified during routing."*
-- `status` — *"An HTTP status code set by routing (for example from a redirect or rewrite rule)."*
-- `routeMatches` — *"A record of named matches extracted from dynamic route segments."*
+- `middlewareResponded` — `true` when middleware has **already sent a response**, in which case the adapter must not go on to invoke an entrypoint.
+- `externalRewrite` — a `URL`, present when routing resolved to an external rewrite destination.
+- `redirect` — an object carrying `url` (a `URL`) and `status`, present when the request should be redirected.
+- `resolvedPathname` — the route pathname Next.js routing selected. For a dynamic route this is the matched route *template*, such as `/blog/[slug]`.
+- `resolvedQuery` — the final query, after rewrites or middleware have added or replaced search params.
+- `invocationTarget` — the concrete pathname and query to invoke for the matched route.
+- `resolvedHeaders` — a `Headers` object containing any headers added or modified during routing.
+- `status` — an HTTP status code set by routing, for example by a redirect or a rewrite rule.
+- `routeMatches` — a record of the named matches extracted from the dynamic route segments.
 
 ### The distinction that catches everyone
 
-> *"For example, if `/blog/post-1?draft=1` matches `/blog/[slug]?slug=post-1`, `resolvedPathname` is `/blog/[slug]` while `invocationTarget.pathname` is `/blog/post-1`."*
+The docs illustrate it with one request. Take `/blog/post-1?draft=1` matching the route `/blog/[slug]` with `slug=post-1`: `resolvedPathname` comes back as `/blog/[slug]`, while `invocationTarget.pathname` comes back as `/blog/post-1`.
 
 `resolvedPathname` is the **template** — the identity you use to look up which function to invoke and which prerender group applies. `invocationTarget` is the **concrete URL** you hand that function. Swapping them produces one of two failures: invoking with the template (the route handler sees a literal `[slug]`) or looking up the function by the concrete path (nothing matches, 404 on every dynamic route). Both are trivially reproducible and both have shipped.
 
@@ -146,7 +146,7 @@ async function handleRequest(request, { routing, outputs, buildId, config }) {
 
 ## The `rsc` field
 
-`routing.rsc` is documented as *"Route metadata used for React Server Components routing behavior."* The reference does not enumerate its shape on this page. **I could not confirm the full structure of `routing.rsc` from the documentation**; treat it as opaque data to be passed through to `resolveRoutes` rather than something to interpret yourself. The related concern — which request headers make an RSC response differ — is set out on the CDN Caching guide, which names `rsc`, `next-router-state-tree`, `next-router-prefetch`, `next-router-segment-prefetch` and `next-url` as the `Vary` headers App Router responses carry.
+`routing.rsc` is described only as the route metadata used for React Server Components routing behaviour. The reference does not enumerate its shape on this page. **I could not confirm the full structure of `routing.rsc` from the documentation**; treat it as opaque data to be passed through to `resolveRoutes` rather than something to interpret yourself. The related concern — which request headers make an RSC response differ — is set out on the CDN Caching guide, which names `rsc`, `next-router-state-tree`, `next-router-prefetch`, `next-router-segment-prefetch` and `next-url` as the `Vary` headers App Router responses carry.
 
 ## Gotchas
 
@@ -163,7 +163,7 @@ The phases are ordered and the order is the specification. A `beforeFiles` rewri
 Middleware that returned a 401 or a rewrite response has already produced the answer. Invoking the page anyway either double-sends or discards the middleware response — and in the 401 case, ships the protected page's body. Check `middlewareResponded` before anything else in the result.
 
 **★ Keying routing logic on `source` instead of `sourceRegex`.**
-`source` is documented as *"optional for generated internal rules"*, so any rule Next.js synthesised may not have one. Code that does `route.source.startsWith('/api')` throws on internal rules; code that filters on `source` silently drops them. `sourceRegex` is always present.
+The reference marks `source` as optional precisely because internally generated rules do not have one, so any rule Next.js synthesised may arrive without it. Code that does `route.source.startsWith('/api')` throws on internal rules; code that filters on `source` silently drops them. `sourceRegex` is always present.
 
 **★ Forgetting `shouldNormalizeNextData` on a Pages Router app.**
 Client-side navigations in the Pages Router request `/_next/data/<buildId>/path.json`. Without normalization during matching, those URLs do not match any route and every client-side navigation falls back to a full document load — a performance regression that no error surfaces.
@@ -172,7 +172,7 @@ Client-side navigations in the Pages Router request `/_next/data/<buildId>/path.
 Catch-all segments, optional catch-alls, `has`/`missing` conditions, `basePath`, `i18n` locale prefixes, trailing-slash normalization and priority flags interact in ways that take a long time to get exactly right and no time at all to get subtly wrong. The package exists because the framework team concluded the same thing. Use it, and spend your effort on `invokeMiddleware` and on invoking entrypoints.
 
 **★ Passing the raw request query to the entrypoint instead of `resolvedQuery`.**
-Rewrites and middleware can add or replace search params — a rewrite from `/blog/post-1` to `/blog/[slug]` supplies `slug=post-1`. `resolvedQuery` is *"the final query after rewrites or middleware have added or replaced search params"*; the original URL's query is not. A page whose `searchParams` are missing a value the rewrite injected is this bug.
+Rewrites and middleware can add or replace search params — a rewrite from `/blog/post-1` to `/blog/[slug]` supplies `slug=post-1`. `resolvedQuery` is defined as the final query *after* rewrites or middleware have added or replaced search params; the original URL's query is not that. A page whose `searchParams` are missing a value the rewrite injected is this bug.
 
 ## Interview questions
 
@@ -180,7 +180,7 @@ Rewrites and middleware can add or replace search params — a rewrite from `/bl
 `beforeMiddleware` (generated header and redirect behaviour), then middleware itself if `middlewareMatchers` matched, then `beforeFiles` rewrites (checked before the filesystem, so they can shadow real files), then filesystem matching, then `afterFiles` rewrites (checked after, so real files win), then `dynamicRoutes` (matchers generated from `[slug]` and catch-all segments), then `onMatch` (rules applied after a successful match, such as immutable cache headers), then `fallback` (final rewrites when nothing matched).
 
 **★ What is the difference between `resolvedPathname` and `invocationTarget.pathname`?**
-`resolvedPathname` is the route template Next.js selected — `/blog/[slug]` — and is the identity you use to find the function and the prerender group. `invocationTarget.pathname` is the concrete URL — `/blog/post-1` — and is what you hand the function so it renders the right content. The documentation gives exactly this example.
+`resolvedPathname` is the route template Next.js selected — `/blog/[slug]` — and is the identity you use to find the function and the prerender group. `invocationTarget.pathname` is the concrete URL — `/blog/post-1` — and is what you hand the function so it renders the right content. The documentation gives exactly this example, using the request `/blog/post-1?draft=1`.
 
 **★ Why does `resolveRoutes` take an `invokeMiddleware` callback rather than running middleware itself?**
 Because *how* middleware runs is the platform's business — a Lambda invocation, a Worker call, a local function in the same process — while *when* it runs is Next.js's. Inverting control at that seam is what lets one resolver serve every platform without knowing anything about their runtimes.

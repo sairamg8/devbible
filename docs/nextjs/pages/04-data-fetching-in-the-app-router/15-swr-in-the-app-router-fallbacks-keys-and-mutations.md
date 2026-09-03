@@ -51,7 +51,7 @@ export function ProductAutocomplete({ query }: { query: string }) {
 }
 ```
 
-> *"A conditional key delays the request until the interaction provides an input."*
+A conditional key is how SWR defers work: the request is delayed until the interaction actually supplies an input, and until then there is nothing to fetch.
 
 Passing `null` as the key is SWR's idiom for "not yet". It is not the same as passing an empty string, which is a valid key and will fire a request.
 
@@ -90,21 +90,21 @@ function ProductResults({ query }: { query: string }) {
 }
 ```
 
-> *"With an unconditional key, SWR defines `data` after Suspense resolves. Handle request errors with the nearest error boundary."*
+With an unconditional key, SWR guarantees `data` is defined once Suspense has resolved — which is why the component above dereferences it without a null check. Request errors are not returned to you in that mode; they go to the nearest error boundary.
 
-> *"The `isLoading` value is `true` when a request is running and there is no loaded data to display. The `isValidating` value is `true` whenever a request is running, including background revalidation."*
+The two booleans mean different things, and the docs define both. `isLoading` is `true` when a request is running *and* there is no loaded data to display. `isValidating` is `true` whenever a request is running at all, background revalidation included.
 
-> *"With `suspense: true`, Suspense handles the initial no-data state. Later revalidation for the same key keeps the current data rendered instead of showing the Suspense fallback again. Use `isValidating` to provide background refresh feedback."*
+Under `suspense: true`, Suspense itself takes care of the initial no-data state. A later revalidation of the same key keeps the current data on screen rather than dropping back to the Suspense fallback a second time, so if you want the user to know a background refresh is happening, `isValidating` is the value to render it from.
 
 So the two booleans partition cleanly: `isLoading` is "nothing to show yet", `isValidating` is "a request is in flight". Under Suspense the first is handled for you and the second is the only one you still render.
 
-> *"**Good to know:** Independent Suspense reads can start in parallel when they render in sibling components. Multiple Suspense reads in one component run sequentially."*
+A "good to know" worth promoting to a rule: independent Suspense reads only start in parallel when they render in **sibling components**. Put several Suspense reads inside one component and they run one after another.
 
-Note also the structure of the outer component: the interactive shell stays *outside* the boundary. *"Keep the interactive shell outside the boundary so it remains available while the results load."* Wrapping the input in the same boundary as the results would blank the input every time the query changes.
+Note also the structure of the outer component: the interactive shell stays *outside* the boundary, which is exactly what the guide asks for — keeping it outside is what leaves it available to the user while the results load. Wrapping the input in the same boundary as the results would blank the input every time the query changes.
 
 ## Server-provided initial data
 
-> *"Use the server-provided data pattern when the initial render needs the data and SWR should continue managing it in the browser. With SWR 2.3.0 and React 19, a Server Component can provide fallback data before the client takes over."*
+Reach for the server-provided data pattern when two things are true at once: the initial render needs the data, and SWR should go on managing that data in the browser afterwards. The version floor is explicit — with SWR 2.3.0 and React 19, a Server Component can supply the fallback data before the client takes over.
 
 ```tsx filename="app/products/[id]/page.tsx"
 import { Suspense } from 'react'
@@ -139,9 +139,9 @@ function ProductData({ id }: { id: string }) {
 }
 ```
 
-> *"Scope `<SWRConfig>` to the route segment that owns the data. The provider keeps the `fallback` close to its consumer and avoids adding feature data to a shared layout."*
+The placement instruction is specific: scope `<SWRConfig>` to the route segment that owns the data. Doing so keeps the `fallback` next to the component that consumes it and stops feature-specific data from accumulating in a shared layout.
 
-> *"In the page example, the Promise returned by `params.then()` keeps the fallback visible until the route parameters resolve. `ProductData` then creates a separate, unawaited `getProduct(id)` Promise for the SWR `fallback`. React passes that Promise through the React Server Component payload, and the component reading the matching key suspends until the data resolves."*
+The two promises in that page are doing separate jobs. The Promise returned by `params.then()` is what keeps the fallback visible until the route parameters have resolved. `ProductData` then creates a second, deliberately unawaited `getProduct(id)` Promise and passes it as the SWR `fallback`. React ships that Promise through the React Server Component payload, and whichever component reads the matching key suspends until it resolves.
 
 Both promises are deliberate. `params.then(...)` renders the children only once params resolve, without the page component itself becoming async and blocking. `getProduct(id)` is left unawaited so that only the component reading that key waits on it.
 
@@ -174,29 +174,30 @@ export function ProductView({ id }: { id: string }) {
 }
 ```
 
-> *"The fallback and Client Component must use the same SWR key. Define the key once so both call sites share the same identity."*
+The fallback and the Client Component are required to use the same SWR key, and the docs' remedy is structural rather than disciplinary: define the key once so both call sites are literally sharing one identity rather than two strings that happen to agree.
 
-> *"**Good to know:** The `fallback` key and the `useSWR` key must match exactly. If they drift, SWR ignores the fallback value and fetches on the client."*
+The match has to be exact. If the `fallback` key and the `useSWR` key drift apart, SWR ignores the fallback value entirely and fetches on the client instead.
 
 There is no warning, no error, no dev-mode notice. The page still works. It simply does a client round trip you thought you had eliminated, and the regression is invisible in every test that only asserts the rendered output.
 
 ### The key is also a URL
 
-> *"The SWR key points to a Route Handler with a `GET` method. The Route Handler can call the same `getProduct` function that provides the fallback, while the browser uses the URL for revalidation and polling."*
+The SWR key in this pattern is a URL pointing at a Route Handler that exports `GET`. That handler can call the very same `getProduct` function that produced the fallback, while the browser uses the URL for revalidation and polling.
 
 That dual role is elegant and worth stating plainly: the same string is SWR's cache identity *and* the endpoint the browser hits to refresh it. The Route Handler and the server-side fallback call the same function, so there is one implementation of "get a product" with two entry points.
 
 ## Fallback data is stale by default
 
-> *"The `fallback` provides the hook's initial value. By default, SWR treats fallback data as stale and starts a browser revalidation after hydration."*
+The `fallback` supplies the hook's initial value, and SWR's default treatment of that value is to consider it stale — so a browser revalidation starts as soon as hydration completes. You get the server's data instantly and a network request anyway.
 
-> *"SWR does not provide a time-based freshness window for fallback data. Setting `revalidateIfStale: false` skips revalidation when the hook mounts with cached data. This setting applies to every mount, unlike TanStack Query's `staleTime`."*
+There is no time-based freshness window for fallback data in SWR. The only lever is `revalidateIfStale: false`, which skips revalidation whenever the hook mounts with cached data — and the docs draw the comparison themselves: that setting applies to *every* mount, unlike TanStack Query's `staleTime`.
 
 This is the single largest behavioural difference from TanStack Query. TanStack's `staleTime` is a *duration*: fresh for 30 seconds, then refetch. SWR's `revalidateIfStale: false` is a *switch*: never revalidate on mount, ever. There is no middle setting.
 
-> *"Focus, reconnect, polling, and `mutate` can still revalidate the key. To refresh on a schedule, set `refreshInterval`."*
+Focus, reconnect, polling and `mutate` all remain able to revalidate the key regardless. If what you want is a scheduled refresh rather than an event-driven one, that is what `refreshInterval` is for.
 
 So `revalidateIfStale: false` does not freeze the data — it only removes the on-mount revalidation. Focus and reconnect revalidation remain on unless you turn them off separately.
+
 ## Gotchas
 
 **★ A fallback key that does not exactly match the `useSWR` key.**
@@ -212,19 +213,19 @@ The pattern depends on the promise being unawaited: React serializes it into the
 It is a switch, not a duration: it disables on-mount revalidation permanently, on every mount, not for a window. The docs draw the contrast explicitly against TanStack Query's `staleTime`. If you want a time window in SWR, you have to build it.
 
 **★ Assuming `revalidateIfStale: false` freezes the data.**
-It only removes revalidation on mount. *"Focus, reconnect, polling, and `mutate` can still revalidate the key."* If you genuinely want no background traffic, disable those individually.
+It only removes revalidation on mount — focus, reconnect, polling and `mutate` can all still revalidate the key. If you genuinely want no background traffic, disable those individually.
 
 **★ Reading `isLoading` under `suspense: true` and rendering nothing.**
 With Suspense handling the initial no-data state, `isLoading` is not the signal you want for background refreshes — `isValidating` is. Rendering a spinner on `isLoading` under Suspense produces UI that never appears, so a background refresh gives the user no feedback at all.
 
 **★ Wrapping the interactive control in the same Suspense boundary as the results.**
-The documented autocomplete deliberately keeps the input outside the boundary: *"Keep the interactive shell outside the boundary so it remains available while the results load."* Inside it, every keystroke unmounts the input, and focus and cursor position go with it.
+The documented autocomplete deliberately keeps the input outside the boundary, so the interactive shell stays available to the user while the results load. Inside it, every keystroke unmounts the input, and focus and cursor position go with it.
 
 **★ Multiple `suspense: true` reads inside one component.**
-They run sequentially. *"Independent Suspense reads can start in parallel when they render in sibling components. Multiple Suspense reads in one component run sequentially."* Split them into siblings if they are independent.
+They run sequentially. Independent Suspense reads only start in parallel when they render in sibling components; several of them inside a single component run one after another. Split them into siblings if they are independent.
 
 **★ Reusing one `<SWRConfig>` in the root layout for every feature's fallback.**
-The guide says to *"Scope `<SWRConfig>` to the route segment that owns the data"* so the provider stays next to its consumer. A root-level provider accumulates every feature's keys, makes the layout depend on data it does not render, and turns any fallback change into a change to the whole application's shell.
+The guide's instruction is to scope `<SWRConfig>` to the route segment that owns the data, so the provider stays next to its consumer. A root-level provider accumulates every feature's keys, makes the layout depend on data it does not render, and turns any fallback change into a change to the whole application's shell.
 
 **★ Building the SWR key inline in the component instead of importing it.**
 Writing the template literal `/api/products/${id}` inline at the `useSWR` call site looks harmless and is the mechanism by which keys drift. The moment the server-side fallback is written with a trailing slash, a query parameter, or a different casing, the two stop matching. One exported builder, imported at both call sites, removes the failure mode entirely.
@@ -244,7 +245,7 @@ Because React serializes an unawaited promise through the RSC payload, and only 
 `isLoading` is true when a request is running *and there is no data to display*. `isValidating` is true whenever a request is running, including background revalidation. Under `suspense: true`, Suspense already handles the no-data case and later revalidations keep the current data rendered rather than re-showing the fallback — so `isValidating` is the one to render background-refresh feedback from.
 
 **★ How does SWR's `revalidateIfStale: false` differ from TanStack Query's `staleTime`?**
-`staleTime` is a duration: data is considered fresh for that long, then refetched. `revalidateIfStale: false` is a switch that applies to every mount forever — SWR *"does not provide a time-based freshness window for fallback data."* It also only affects on-mount revalidation; focus, reconnect, polling and `mutate` still revalidate the key.
+`staleTime` is a duration: data is considered fresh for that long, then refetched. `revalidateIfStale: false` is a switch that applies to every mount forever — SWR offers no time-based freshness window for fallback data at all. It also only affects on-mount revalidation; focus, reconnect, polling and `mutate` still revalidate the key.
 
 **★ Why does the SWR key double as a Route Handler URL?**
 Because the browser needs an endpoint to revalidate and poll against, and the cache identity has to be a string anyway. Making them the same string means one implementation — the Route Handler calls the same `getProduct` function that supplies the server-side fallback — with two entry points, and no third string to keep in sync.

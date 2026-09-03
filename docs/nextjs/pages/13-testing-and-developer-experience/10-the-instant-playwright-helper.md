@@ -14,13 +14,11 @@ description: "Installing @next/playwright, the two test shapes every route needs
 
 ## What it is for
 
-> *"Another common failure mode is a page that navigates instantly today becoming slow tomorrow. Maybe a component that reads `cookies()` gets added to a shared header and de-opts the route to request-time rendering, or a `<Suspense>` boundary moves during a refactor and part of the page starts blocking. Either way, UI that used to appear immediately no longer does."*
+The failure mode the guide names is not a page that was never instant — it is a page that navigates instantly today and becomes slow tomorrow. It offers two concrete ways that happens. A component that reads `cookies()` gets added to a shared header, which de-opts the route to request-time rendering. Or a `<Suspense>` boundary is moved during a refactor, and part of the page starts blocking as a result. Either way, UI that used to appear immediately no longer does.
 
 Neither of those edits touches the route you carefully made instant. That is why this needs a test rather than a review checklist.
 
-The guide is explicit about why structural validation is not enough:
-
-> *"Validation catches structural problems during development, but as the codebase grows, the structural checks can only tell you that a shell exists. They can't tell you whether the right content is in it. E2E tests close that gap: they assert on what the user actually sees when the navigation completes, catching regressions before they ship."*
+The guide is equally explicit about why structural validation alone is not enough. Validation catches structural problems during development, but as a codebase grows those structural checks can only tell you *that* a shell exists — they cannot tell you whether the right content is in it. End-to-end tests are what close that gap, because they assert on what the user actually sees when the navigation completes, and so catch regressions before they ship rather than after.
 
 ## Install
 
@@ -46,19 +44,18 @@ import { instant } from '@next/playwright'
 
 `instant(page, callback, options?)`. Everything asserted inside the callback runs against the instant UI; dynamic content is released when the callback returns.
 
-> *"Inside the callback, an initial page load shows the static UI and a client navigation shows the destination's prefetched UI. Other dynamic content remains blocked until the callback finishes."*
+The docs describe what the page looks like inside that callback, and it differs by entry path: an initial page load shows the static UI, while a client navigation shows the destination's *prefetched* UI. Everything else that is dynamic stays blocked until the callback finishes.
 
-And, tying it back to the DevTools:
-
-> *"The start of the `instant()` scope is the same as turning on **Pause on navigations** in the Navigation Inspector, and the end of the scope releases the pause the way **Resume** does."*
+The mechanism is the same one the DevTools expose by hand. Opening the `instant()` scope is equivalent to switching on **Pause on navigations** in the Navigation Inspector, and closing the scope releases that pause exactly as clicking **Resume** does.
 
 So it is not a timing heuristic. There is no threshold in milliseconds and nothing flaky about it: the page is genuinely frozen at its shell for the duration of the block.
 
 ## Two tests, because a route has two entry paths
 
-> *"A route can be reached two ways, and a `<Suspense>` boundary can cover one without covering the other:*
-> *• **Initial page load**: Use `page.goto()` to test the static UI from the document response.*
-> *• **Client navigation**: Click a `<Link>` to test the destination's prefetched UI. Per-link prefetching can add request-specific content to this UI."*
+The guide's reasoning for writing two tests is that a route can be reached two ways, and a `<Suspense>` boundary can cover one of them without covering the other.
+
+- **Initial page load** — use `page.goto()` to test the static UI that came from the document response.
+- **Client navigation** — click a `<Link>` to test the destination's prefetched UI. Per-link prefetching can add request-specific content to that UI, so it is not necessarily the same set of content as the document response produced.
 
 ```ts title="e2e/navigation.test.ts"
 import { test, expect } from '@playwright/test'
@@ -93,17 +90,13 @@ test.describe('Product page (/store/[slug])', () => {
 
 Four structural details in that file, each of which is a bug if you omit it.
 
-**`baseURL` is passed when `page.goto()` is the first navigation.**
-
-> *"Pass Playwright's `baseURL` to `instant()` when `page.goto()` is the first navigation. The helper needs the origin before requesting the document."*
+**`baseURL` is passed when `page.goto()` is the first navigation.** The docs give both the rule and the reason: pass Playwright's `baseURL` to `instant()` whenever `page.goto()` is the first navigation of the test, because the helper needs to know the origin before it requests the document.
 
 The client-navigation test does not need it, because `page.goto('/store/shoes')` outside the scope has already established the origin.
 
-**`waitForURL` comes before any assertion on the destination.**
+**`waitForURL` comes before any assertion on the destination.** For client navigations the guide requires waiting for the destination URL before asserting on its UI, and explains what goes wrong without it: a shared selector can match the *source* page before the destination has committed. There is a second benefit it names too — if the prefetched destination cannot commit at all, the URL wait times out and the test fails.
 
-> *"For client navigations, wait for the destination URL before asserting on its UI. Otherwise, a shared selector can match the source page before the destination commits. If the prefetched destination cannot commit, the URL wait times out and the test fails."*
-
-Both halves matter. Without it your assertion can pass against the *source* page — the exact false green this test exists to prevent — and with it, a destination that cannot commit fails loudly instead of silently.
+Both halves matter. Without it your assertion can pass against the source page — the exact false green this test exists to prevent — and with it, a destination that cannot commit fails loudly instead of silently.
 
 **There is a negative assertion inside the scope.** `toHaveCount(0)` on the streamed content is what pins the boundary. Without it the test says "the title is instant" and stays green if the entire rest of the page also becomes instant, or if a `<Suspense>` boundary vanishes and the whole page starts blocking behind something else.
 
@@ -111,9 +104,7 @@ Both halves matter. Without it your assertion can pass against the *source* page
 
 ## The order you write it in
 
-The documented loop puts the test *before* the fix:
-
-> *"**Test**: confirm the target UI renders normally, then write an `instant()` test and verify that it fails before changing the route."*
+The documented loop puts the test *before* the fix. Its Test step is two actions in sequence: confirm the target UI renders normally, then write an `instant()` test and verify that it **fails** — before you change anything about the route.
 
 This is not ceremony. An `instant()` test that was never seen to fail may be asserting on the wrong selectors, may be scoped around a navigation that never happens, or may be passing because the assertion matched the source page. Watching it go red first is the only cheap proof that it is wired to the thing you think it is.
 
@@ -141,17 +132,15 @@ The testing API is enabled automatically in `next dev`, so the tests run there w
 The documented loop is: confirm the target UI renders normally, write the test, watch it fail, then apply the fix. A test authored against an already-passing route can be scoped around a navigation that never happens or asserting on selectors that match either page, and nothing will ever tell you.
 
 **★ Testing every route.**
-> *"Focus these tests on the user flows that matter most."*
-
-Each of these tests freezes a navigation and asserts on shell contents, which means each one becomes a review conversation the first time someone refactors a shared layout. Spend that budget on the flows where an instant navigation is actually part of the product.
+The guide's scoping advice is one sentence — *"Focus these tests on the user flows that matter most."* Each of these tests freezes a navigation and asserts on shell contents, which means each one becomes a review conversation the first time someone refactors a shared layout. Spend that budget on the flows where an instant navigation is actually part of the product.
 
 ## Interview questions
 
 **★ What does `instant()` actually do to the page, and why is it not a timing assertion?**
-It opens a scope in which dynamic content is held back, so everything asserted inside runs against the UI that was available without waiting for the network. The documentation says entering the scope is equivalent to enabling **Pause on navigations** in the Navigation Inspector, and leaving it is equivalent to clicking **Resume**. There is no millisecond threshold anywhere, which is why the tests are not flaky under load.
+It opens a scope in which dynamic content is held back, so everything asserted inside runs against the UI that was available without waiting for the network. The documentation equates entering the scope with enabling **Pause on navigations** in the Navigation Inspector, and leaving it with clicking **Resume**. There is no millisecond threshold anywhere, which is why the tests are not flaky under load.
 
 **★ Why does a single route need two `instant()` tests?**
-Because it has two entry paths that produce different initial UI. A `page.goto()` exercises the static shell delivered by the document response, where every `<Suspense>` boundary in the tree is available. A link click exercises the destination's prefetched App Shell, where only boundaries below the shared layout apply. A boundary can cover one path and not the other, so one test cannot stand in for the other.
+Because it has two entry paths that produce different initial UI. A `page.goto()` exercises the static shell delivered by the document response, where every `<Suspense>` boundary in the tree is available. A link click exercises the destination's prefetched App Shell, where only boundaries below the shared layout apply — and per-link prefetching can add request-specific content to it. A boundary can cover one path and not the other, so one test cannot stand in for the other.
 
 **★ Why must `waitForURL` come before assertions in a client-navigation test?**
 Because between the click and the destination committing, a shared selector can match the source page, and the assertion passes against the wrong page — the exact false green the test exists to prevent. It also converts a destination that cannot commit into a timeout failure rather than a silent pass.

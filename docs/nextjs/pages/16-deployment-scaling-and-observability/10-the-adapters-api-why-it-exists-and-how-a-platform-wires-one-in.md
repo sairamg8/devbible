@@ -14,26 +14,19 @@ description: "What a Next.js adapter is, why the API was created, how adapterPat
 
 ## Why this API exists, in the words of the people who needed it
 
-The March 2026 announcement quotes the problem directly:
+The March 2026 announcement states the problem from the provider's side. Philippe Serhal, an engineer at Netlify, describes what happened when the Next.js team offered to discuss Netlify's challenges: the team began compiling a laundry list of specific issues to share, and it quickly became clear that the common thread among **90%** of those issues was a single thing — the absence of a documented, stable mechanism to configure and read build output. That, above everything else on the list, was what Netlify needed.
 
-> *"When the Next.js team reached out with an offer to discuss Netlify's challenges, we started compiling a laundry list of specific issues to share, but it quickly became clear that the common thread among 90% of these was simply the lack of a documented, stable mechanism to configure and read build output. That was what we needed above all."*
-> — Philippe Serhal, Engineer at Netlify
+The framework team's own framing of the gap is the mirror image: the missing piece was an upstream, stable, public contract that providers could build against.
 
-And the framework team's own framing:
+Two consequences of that framing matter more than the API surface itself.
 
-> *"The missing piece was an upstream, stable, public contract that providers could build against."*
+The first is that there is no second, better API behind this one. Vercel's adapter uses the same public contract every other adapter uses — no private hooks, no special integration path — and Vercel's adapter is open source.
 
-Two consequences matter more than the API surface itself:
-
-> *"Vercel's adapter uses this same public contract, with no private hooks or special integration path. It is open source."*
-
-> *"Adapters implement two hooks: `modifyConfig` (when configuration loads) and `onBuildComplete` (when the full output is available). Breaking changes require a new major version of Next.js."*
+The second is the versioning promise. Adapters implement two hooks: `modifyConfig`, which runs when configuration loads, and `onBuildComplete`, which runs when the full build output is available. Breaking changes to that contract require a new major version of Next.js.
 
 That last sentence is the value proposition. Before it, a Next.js patch release could reshape a manifest and break a provider's deploy path on a Tuesday. Now the shape of `onBuildComplete`'s argument is inside the semver contract.
 
-The post also names the design principle for everything that follows:
-
-> *"On build, Next.js now produces a typed, versioned description of your application: routes, prerenders, static assets, runtime targets, dependencies, caching rules, and routing decisions. The adapter consumes this output and maps it onto a provider's infrastructure."*
+The post also names the design principle for everything that follows. On build, Next.js now produces a typed, versioned description of your application: routes, prerenders, static assets, runtime targets, dependencies, caching rules and routing decisions. The adapter consumes that description and maps it onto a provider's infrastructure. Nothing in the adapter's job is inference — every fact it needs is a field it is handed.
 
 ## Wiring an adapter in — two mechanisms, two audiences
 
@@ -48,9 +41,7 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-A **platform** that wants its users to do nothing sets an environment variable in its build container instead. The docs state the intent:
-
-> *"Alternatively `NEXT_ADAPTER_PATH` can be set to enable zero-config usage in deployment platforms."*
+A **platform** that wants its users to do nothing sets an environment variable in its build container instead. The docs give `NEXT_ADAPTER_PATH` as the alternative to `adapterPath`, and state its purpose plainly: it exists to enable zero-config usage in deployment platforms.
 
 ```bash filename="Terminal"
 NEXT_ADAPTER_PATH=/opt/platform/adapter/dist/index.js next build
@@ -62,9 +53,7 @@ This is why a hosted build "just works" without a config edit — and why an ada
 
 ## The interface
 
-An adapter is a plain module. Nothing is registered and nothing is discovered by convention:
-
-> *"An adapter is a module that exports an object implementing the `NextAdapter` interface."*
+An adapter is a plain module. Nothing is registered and nothing is discovered by convention: the docs define an adapter as a module that exports an object implementing the `NextAdapter` interface, and that is the entire discovery mechanism.
 
 ```typescript
 import type { NextAdapter } from 'next'
@@ -127,11 +116,9 @@ The `name` field is the only required member. It is what a platform surfaces in 
 
 ## Where the adapter stops
 
-This is the single most common misconception about the API, and the runtime-integration page states the boundary explicitly:
+This is the single most common misconception about the API, and the runtime-integration page draws the boundary explicitly. The Deployment Adapter API is a **build-time** interface: it tells your platform what was built and how requests should be routed. **Runtime** behaviour — request handling, streaming and caching — is handled by the Next.js server itself and by two cache interfaces, `cacheHandler` and `cacheHandlers`. Nothing an adapter returns is consulted while a request is being served.
 
-> *"The Deployment Adapter API is a **build-time** interface. It tells your platform what was built and how to route requests. **Runtime** behavior (request handling, streaming, caching) is handled by the Next.js server itself and by the cache interfaces `cacheHandler` and `cacheHandlers`."*
-
-> *"**Adapter** (build-time): processes build outputs, configures routing, and sets up platform-specific infrastructure. **Cache Interfaces** (runtime): `cacheHandler` manages ISR/server cache storage and revalidation across instances; `cacheHandlers` configures `'use cache'` directive backends and tag coordination."*
+The docs split the responsibilities the same way. The **adapter**, at build time, processes build outputs, configures routing and sets up platform-specific infrastructure. The **cache interfaces**, at runtime, do the rest: `cacheHandler` manages ISR and server-cache storage and revalidation across instances, and `cacheHandlers` configures the backends for the `'use cache'` directive together with tag coordination.
 
 So the complete integration surface is three things:
 
@@ -141,23 +128,21 @@ So the complete integration surface is three things:
 | `cacheHandler` (singular) | Runtime | ISR, route handlers, patched `fetch` / `unstable_cache`, image optimization |
 | `cacheHandlers` (plural) | Runtime | `'use cache'` directive backends and tag coordination |
 
-An adapter implementing only the build hook produces a working deployment on a single instance. It is the *multi-instance* case — revalidation propagating across servers — where the runtime cache interfaces stop being optional. The Deploying to Platforms matrix lists "Shared Cache" as **Recommended** for ISR (time-based and on-demand), PPR and Cache Components, and explains what "recommended" buys you:
-
-> *"Without shared cache, each instance maintains its own cache independently — features still work correctly on each instance, but revalidation events don't propagate across instances."*
+An adapter implementing only the build hook produces a working deployment on a single instance. It is the *multi-instance* case — revalidation propagating across servers — where the runtime cache interfaces stop being optional. The Deploying to Platforms matrix lists "Shared Cache" as **Recommended** for ISR (time-based and on-demand), PPR and Cache Components, and is precise about what "recommended" rather than "required" means: without a shared cache each instance maintains its own cache independently, so every feature still works correctly on each instance in isolation — what you lose is propagation, because a revalidation event on one instance does not reach the others.
 
 ## Before you write one: check whether you need one
 
-> *"To run Next.js, your platform needs **a Node.js server**. That's it."*
+The platform requirement Next.js actually states is far smaller than the adapter API suggests:
 
-> *"A single `next start` process handles every Next.js feature correctly: Server Components, ISR, PPR, Cache Components, Server Actions, Proxy, and `after()`."*
+> *"To run Next.js, your platform needs a Node.js server. That's it."*
 
-The only extra dependency named is `sharp`, required for Image Optimization. An adapter is not how you make Next.js work; it is how you make Next.js work *as native primitives of your platform* — one function per route, static assets on object storage, routing executed at the CDN instead of inside the Node process.
+A single `next start` process handles every Next.js feature correctly: Server Components, ISR, PPR, Cache Components, Server Actions, Proxy and `after()`. The only extra dependency named anywhere in the requirements is `sharp`, which Image Optimization needs. An adapter is not how you make Next.js work; it is how you make Next.js work *as native primitives of your platform* — one function per route, static assets on object storage, routing executed at the CDN instead of inside the Node process.
 
-The guide's own framing of what "supported" means is worth internalising before you invest in an adapter:
+The guide's own framing of what "supported" means is worth internalising before you invest in an adapter, because it splits into two claims that behave completely differently.
 
-> *"**Functional fidelity** means every Next.js feature works correctly. The adapter test suite is the contract: if a platform's adapter passes the tests, it supports Next.js. This is binary: it passes or it doesn't."*
+**Functional fidelity** means every Next.js feature works correctly. The adapter test suite is the contract: if a platform's adapter passes the tests, it supports Next.js. This claim is binary — it passes or it doesn't, with no partial credit.
 
-> *"**Performance fidelity** means features achieve their optimal performance characteristics. […] Performance fidelity is a spectrum that every platform will achieve differently based on their architecture."*
+**Performance fidelity** means features achieve their optimal performance characteristics. This one is a spectrum, and the docs say so directly: every platform will achieve it differently based on its architecture. A platform can sit anywhere on that spectrum and still be a fully supported target, because support is decided by the first claim, not the second.
 
 ## Gotchas
 
@@ -194,27 +179,27 @@ Teams reach for the adapter API because it is the new, framework-blessed surface
 `adapterPath: './my-adapter.js'` looks equivalent to `require.resolve('./my-adapter.js')` and is not: the documented form resolves the specifier through Node's resolver relative to the config file, while a bare string is at the mercy of the builder's working directory. On a hosted builder that runs `next build` from a workspace root, the two differ. Always use `require.resolve`.
 
 **★ Assuming "verified adapter" means "every feature works".**
-Verification means open source plus running the suite; it does not by itself assert a passing score. The docs are explicit that the suite *"gives visibility into which features work, which are in progress, and where gaps remain"*, and that on the Deploying page *"Publicly visible test results for each adapter are coming soon."* Read the platform's own results, not the badge.
+Verification means open source plus running the suite; it does not by itself assert a passing score. The docs describe the suite's purpose as giving visibility into which features work, which are in progress and where gaps remain — that is a status report, not a pass mark. And the Deploying page says publicly visible test results for each adapter are still coming, so at the time of writing there is no central scoreboard to read. Read the platform's own results, not the badge.
 
 ## Interview questions
 
 **★ What problem did the Adapters API solve, and what did platforms do before it?**
-Before 16.2 a platform that wanted to run Next.js on its own primitives had to reverse-engineer `.next/` — the routes manifest, the prerender manifest, the standalone trace — none of which were a public contract, and any release could change them. The API replaces that with a typed description of the build handed over by the framework plus a semver promise: *"Breaking changes require a new major version of Next.js."* Netlify's own summary was that 90% of their specific issues shared one root cause, *"the lack of a documented, stable mechanism to configure and read build output."*
+Before 16.2 a platform that wanted to run Next.js on its own primitives had to reverse-engineer `.next/` — the routes manifest, the prerender manifest, the standalone trace — none of which were a public contract, and any release could change them. The API replaces that with a typed description of the build handed over by the framework plus a semver promise: breaking changes to the adapter contract require a new major version of Next.js. Netlify's own summary of the era was that 90% of the specific issues they had compiled shared one root cause, which was the lack of a documented, stable mechanism to configure and read build output.
 
 **★ Is the adapter a runtime interface?**
 No. It is explicitly build-time. Request handling, streaming and caching at runtime belong to the Next.js server and to `cacheHandler` (ISR, route handlers, patched `fetch` and `unstable_cache`, image optimization) and `cacheHandlers` (`'use cache'` backends and tag coordination). The full platform integration surface is the adapter plus those two cache interfaces — and a platform that ships only the adapter still works correctly on a single instance.
 
 **★ Does Vercel's adapter have privileged access to the framework?**
-No, and this is on the record twice. The platform guide says *"There are no private framework hooks or integration paths: Vercel's adapter uses the same public API as every other adapter."* The `adapterPath` reference points at `nextjs/adapter-vercel` as *"a full reference implementation"*, and it is open source.
+No, and this is on the record twice. The platform guide states that there are no private framework hooks or integration paths and that Vercel's adapter uses the same public API as every other adapter. The `adapterPath` reference then points readers at `nextjs/adapter-vercel` as a full reference implementation, which is only meaningful because it is open source and uses nothing you cannot use.
 
 **★ How does a platform enable an adapter without asking users to change their config?**
-By setting `NEXT_ADAPTER_PATH` in the build environment. `adapterPath` in `next.config.js` is the developer-facing route; the environment variable is the platform-facing one, described as enabling *"zero-config usage in deployment platforms."*
+By setting `NEXT_ADAPTER_PATH` in the build environment. `adapterPath` in `next.config.js` is the developer-facing route; the environment variable is the platform-facing one, and the docs describe its purpose as enabling zero-config usage in deployment platforms — the user's repository stays untouched.
 
 **★ What is the minimum a platform needs to run Next.js, adapter or not?**
-A Node.js server. *"To run Next.js, your platform needs a Node.js server. That's it."* A single `next start` handles Server Components, ISR, PPR, Cache Components, Server Actions, Proxy and `after()` correctly. The one extra package is `sharp`, for Image Optimization. Streaming support is needed for PPR and Server Components to deliver progressively — without it responses are buffered and sent whole, which still works but loses the streaming benefit.
+A Node.js server, and the docs say nothing more is required. A single `next start` handles Server Components, ISR, PPR, Cache Components, Server Actions, Proxy and `after()` correctly. The one extra package is `sharp`, for Image Optimization. Streaming support is needed for PPR and Server Components to deliver progressively — without it responses are buffered and sent whole, which still works but loses the streaming benefit.
 
 **★ What is the difference between functional fidelity and performance fidelity, and why does the distinction exist?**
-Functional fidelity is binary: the adapter passes the compatibility suite or it does not, and passing means every feature works correctly. Performance fidelity is a spectrum — PPR's static shell served at CDN latency rather than origin latency, ISR revalidation propagating sub-second — and is how platforms differentiate. The distinction exists so that "supported" is a testable claim rather than a marketing one: a platform achieving functional fidelity is a fully supported deployment target regardless of where it sits on the performance spectrum.
+Functional fidelity is binary: the adapter passes the compatibility suite or it does not, and passing means every feature works correctly — the suite is the contract that decides whether a platform supports Next.js. Performance fidelity is a spectrum — PPR's static shell served at CDN latency rather than origin latency, ISR revalidation propagating sub-second — and the docs say explicitly that every platform will achieve it differently based on its architecture. The distinction exists so that "supported" is a testable claim rather than a marketing one: a platform achieving functional fidelity is a fully supported deployment target regardless of where it sits on the performance spectrum.
 
 **★ Why is `sourceRegex` on the `Route` type such an important design decision?**
 Because it removes the largest source of divergence between Next.js and a third-party router. Route matching in Next.js involves a specific path-to-regexp dialect, catch-all and optional-catch-all segments, `has`/`missing` conditions and ordering across seven phases. Handing the platform a compiled regex plus the already-evaluated conditions means the platform executes Next.js's decision rather than re-deriving it — which is exactly the class of bug that made pre-adapter integrations drift after every release.

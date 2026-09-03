@@ -14,7 +14,7 @@ description: "The two alternatives to nonce-based CSP — a static Content-Secur
 
 ## The static header
 
-> *"For applications that do not require nonces, you can set the CSP header directly in your `next.config.js` file:"*
+If your application does not actually require nonces, the docs let you skip the proxy entirely and set the CSP header directly in `next.config.js`:
 
 ```js filename="next.config.js"
 const isDev = process.env.NODE_ENV === 'development'
@@ -66,9 +66,9 @@ The `source: '/(.*)'` pattern applies the header to every route including static
 
 ## Subresource Integrity: strict *and* static
 
-> *"As an alternative to nonces, Next.js offers experimental support for hash-based CSP using Subresource Integrity (SRI). This approach allows you to maintain static generation while still having a strict CSP."*
+Next.js ships **experimental** support for hash-based CSP built on Subresource Integrity, offered explicitly as the alternative to nonces. The claim attached to it is the one that matters: it lets you keep static generation while still running a strict CSP.
 
-> *"Instead of using nonces, SRI generates cryptographic hashes of your JavaScript files at build time. These hashes are added as `integrity` attributes to script tags, allowing browsers to verify that files haven't been modified during transit."*
+The mechanism is entirely build-time. Rather than minting a per-request value, SRI computes cryptographic hashes of your JavaScript files during the build and emits them as `integrity` attributes on the script tags. The browser then uses those attributes to verify that the files were not modified in transit.
 
 ```js filename="next.config.js"
 /** @type {import('next').NextConfig} */
@@ -123,19 +123,13 @@ module.exports = {
 }
 ```
 
-The benefits, verbatim:
+The docs list four benefits. **Static generation** — pages can still be statically generated and cached. **CDN compatibility** — those static pages work with CDN caching. **Better performance** — no server-side rendering is required on each request. And **build-time security** — hashes are generated at build time, which is what guarantees the integrity check.
 
-> *"**Static generation**: Pages can be statically generated and cached · **CDN compatibility**: Static pages work with CDN caching · **Better performance**: No server-side rendering required for each request · **Build-time security**: Hashes are generated at build time, ensuring integrity"*
-
-And the limitations, equally verbatim:
-
-> *"**Experimental**: Feature may change or be removed · **App Router only**: Not supported in Pages Router · **Build-time only**: Cannot handle dynamically generated scripts"*
+Three limitations sit against them. The feature is **experimental**, and the docs say it may change or be removed. It is **App Router only** and is not supported in the Pages Router. And it is **build-time only**, so it cannot handle dynamically generated scripts.
 
 "Build-time only" is the one that determines whether this works for you. Any script whose contents are decided at request time — a server-rendered inline JSON blob, a per-tenant configuration script, an analytics snippet templated with a user identifier — has no build-time hash and will be blocked. Data that must reach the client at request time should travel as data (a props value, an RSC payload, a `data-` attribute read by a hashed script), not as generated JavaScript.
 
-The docs also note the two mechanisms compose:
-
-> *"For dynamic rendering scenarios, you can still generate nonces with proxy if needed, combining both SRI integrity attributes and nonce-based CSP approaches."*
+The docs also note that the two mechanisms compose: for dynamic rendering scenarios you can still generate nonces in the proxy where you need them, running SRI integrity attributes and nonce-based CSP together rather than choosing between them.
 
 That is the escape hatch for a mostly-static site with a handful of genuinely dynamic routes: SRI everywhere, plus a proxy scoped by matcher to only those routes.
 
@@ -180,7 +174,7 @@ Three directives for one integration, and that is the minimum: the tag manager's
 
 ## The violations you will actually hit
 
-> *"1. **Inline styles**: Use CSS-in-JS libraries that support nonces or move styles to external files · 2. **Dynamic imports**: Ensure dynamic imports are allowed in your script-src policy · 3. **WebAssembly**: Add `'wasm-unsafe-eval'` if using WebAssembly · 4. **Service workers**: Add appropriate policies for service worker scripts"*
+The guide enumerates four common violations and the remedy for each. **Inline styles**: either use a CSS-in-JS library that supports nonces, or move the styles into external files. **Dynamic imports**: make sure your `script-src` policy actually permits them. **WebAssembly**: add `'wasm-unsafe-eval'` if the application uses WASM. **Service workers**: add the appropriate policies for the service worker's own scripts.
 
 Inline styles are the one that surprises people. A CSS-in-JS runtime injects `style` elements during render; unless it accepts a nonce, `style-src 'self'` blocks them and the page renders unstyled. This is why the documented development policy relaxes `style-src` to `'unsafe-inline'` while keeping `script-src` strict — and why a build-time CSS solution (CSS Modules, Tailwind, or any library that emits a stylesheet rather than runtime `style` tags) removes the problem entirely rather than working around it.
 
@@ -188,7 +182,7 @@ Dynamic imports are what `'strict-dynamic'` exists for: a nonce-trusted script l
 
 ## Production issues the docs call out
 
-> *"**Nonce not applied**: Ensure your proxy runs on all necessary routes · **Static assets blocked**: Verify your CSP allows Next.js static assets · **Third-party scripts**: Add necessary domains to your CSP policy"*
+Three production problems the guide names, with its own diagnosis for each. **Nonce not applied** — check that your proxy is actually running on all the routes that need it. **Static assets blocked** — verify that your CSP permits Next.js's own static assets. **Third-party scripts** — add the required domains to the policy.
 
 The first one is the matcher problem in reverse: a matcher tightened to exclude prefetches and assets can also, through one regex mistake, exclude a real route — which then renders with no policy at all. A CSP that silently stops applying is worse than one that visibly breaks, because nothing reports it.
 
@@ -211,8 +205,8 @@ Read top to bottom rather than left to right. If nothing in your application gen
 
 | Version | Change |
 | --- | --- |
-| `v14.0.0` | *"Experimental SRI support added for hash-based CSP"* |
-| `v13.4.20` | *"Recommended for proper nonce handling and CSP header parsing."* |
+| `v14.0.0` | Experimental SRI support added, for hash-based CSP |
+| `v13.4.20` | The version from which Next.js is recommended for proper nonce handling and CSP header parsing |
 
 The SRI feature has been experimental for two major versions. **I could not confirm from the documentation any plan or timeline for stabilising it**; the limitation note still says the feature *"may change or be removed"*, and that should be weighed as a real risk on a long-lived application.
 
@@ -243,7 +237,7 @@ The recommended matcher excludes `api`, `_next/static`, `_next/image`, `favicon.
 It is App Router only. On Pages Router the config is accepted and the integrity attributes do not appear, leaving you with a strict policy and no way to satisfy it — a fully broken site with a correct-looking configuration.
 
 **★ Treating an experimental feature as a permanent architectural decision.**
-SRI has been experimental since `v14.0.0` and the docs still say it *"may change or be removed"*. That is acceptable for a policy layer you can swap for a static header in one commit; it is not acceptable if your compliance evidence names it. Keep the fallback policy written down.
+SRI has been experimental since `v14.0.0` and the docs still say the feature may change or be removed. That is acceptable for a policy layer you can swap for a static header in one commit; it is not acceptable if your compliance evidence names it. Keep the fallback policy written down.
 
 **★ Setting the CSP in `next.config.js` headers *and* in the proxy.**
 Both apply. Browsers enforce multiple `Content-Security-Policy` headers as the *intersection* of the policies, so the result is stricter than either — usually strict enough to block your own scripts, and confusing to debug because each policy looks correct on its own. Pick one delivery mechanism.
@@ -260,10 +254,10 @@ Everything except inline script execution. `default-src 'self'` restricts where 
 Because a hash of a file is a property of the file, not of the request. It can be computed at build time and remains valid for every visitor, so the HTML containing the `integrity` attribute is identical for everyone and can be prerendered and cached. A nonce is a per-request secret and, by definition, cannot appear in a shared artefact.
 
 **★ What breaks under SRI that works under nonces?**
-Anything whose script *content* is produced at request time — a server-rendered configuration or state blob, a per-tenant snippet, an analytics tag templated with a user identifier. The docs state the limitation as *"Build-time only: Cannot handle dynamically generated scripts."* The remedy is to pass request-time information as data rather than as generated code.
+Anything whose script *content* is produced at request time — a server-rendered configuration or state blob, a per-tenant snippet, an analytics tag templated with a user identifier. The docs state the limitation as being build-time only: SRI cannot handle dynamically generated scripts. The remedy is to pass request-time information as data rather than as generated code.
 
 **★ Can you combine SRI and nonces?**
-Yes, and the docs suggest it for mixed applications: *"For dynamic rendering scenarios, you can still generate nonces with proxy if needed, combining both SRI integrity attributes and nonce-based CSP approaches."* The practical shape is SRI for the whole site plus a proxy matcher scoped to only the routes that genuinely need per-request scripts, so the dynamic-rendering cost is paid only where it is earned.
+Yes, and the docs suggest it for mixed applications — for dynamic rendering scenarios you can still generate nonces in the proxy, combining SRI integrity attributes with the nonce-based approach. The practical shape is SRI for the whole site plus a proxy matcher scoped to only the routes that genuinely need per-request scripts, so the dynamic-rendering cost is paid only where it is earned.
 
 **★ Adding Google Tag Manager under a strict CSP requires which directives, and what is the hidden cost?**
 `script-src` must allow `https://www.googletagmanager.com` (or trust it via `'strict-dynamic'` from a nonce-carrying script), `connect-src` must allow `https://www.google-analytics.com` for the beacon, and `img-src` must allow it for the tracking pixel. The hidden cost is that reading the nonce with `headers()` in the root layout makes the entire application dynamically rendered — and that a tag manager which lets non-engineers add further tags expands the policy in ways no code review sees.

@@ -21,21 +21,17 @@ description: "The four deployment options, the feature/infrastructure matrix, th
 | Static export | Limited |
 | Adapters | Varies (verified adapters run the test suite) |
 
-Node and Docker are documented as supporting **all** Next.js features. That is not a hedge; the platform guide restates it: *"A single `next start` process handles every Next.js feature correctly: Server Components, ISR, PPR, Cache Components, Server Actions, Proxy, and `after()`."*
+Node and Docker are documented as supporting **all** Next.js features. That is not a hedge; the platform guide restates it as a claim about one process, naming the features individually — a single `next start` process handles Server Components, ISR, PPR, Cache Components, Server Actions, Proxy and `after()` correctly, all of them, on its own.
 
-`output: 'standalone'` is what makes the container small:
+`output: 'standalone'` is what makes the container small. It creates a folder at `.next/standalone`, and the point of that folder is that it can be deployed on its own — without installing `node_modules` at the destination at all.
 
-> *"This will create a folder at `.next/standalone` which can then be deployed on its own without installing `node_modules`."*
-
-With a trap worth naming up front:
-
-> *"This minimal server does not copy the `public` or `.next/static` folders by default as these should ideally be handled by a CDN instead, although these folders can be copied to the `standalone/public` and `standalone/.next/static` folders manually"*
+There is a trap in it worth naming up front. That minimal server does **not** copy the `public` or `.next/static` folders by default, and the docs give the reasoning: ideally those should be handled by a CDN instead. They can be copied into `standalone/public` and `standalone/.next/static` manually if you are not putting them on a CDN, but nothing does it for you.
 
 ```bash filename="Terminal"
 cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/
 ```
 
-Static export is the only option with real feature loss: *"Running as a static export does not support Next.js features that require a server."*
+Static export is the only option with real feature loss, and the docs draw the line in one sentence: running as a static export does not support the Next.js features that require a server.
 
 ## The capability matrix
 
@@ -50,25 +46,27 @@ Static export is the only option with real feature loss: *"Running as a static e
 | Server Actions | Required | No | No | POST requests with streaming response |
 | `after()` | No | No | No | Requires graceful shutdown support |
 
-Two definitions carry the weight:
+Two definitions carry the weight of that table. **Streaming Required** is a two-sided obligation:
 
-> *"**Streaming Required** means the platform must support chunked transfer encoding or HTTP/2 streaming and must not buffer the response before sending it to the client."*
+> *"the platform must support chunked transfer encoding or HTTP/2 streaming and must not buffer the response before sending it to the client"*
 
-> *"**Shared Cache Recommended** means multiple server instances benefit from shared cache backends to coordinate. […] Without shared cache, each instance maintains its own cache independently — features still work correctly on each instance, but revalidation events don't propagate across instances."*
+Supporting the mechanism is not enough if something in the path still holds the bytes.
 
-Note what "Edge Stitching" is not: *"The 'Edge Stitching' column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."*
+**Shared Cache Recommended** means multiple server instances benefit from shared cache backends in order to coordinate with each other — and the docs are careful about what "recommended" concedes. Without a shared cache each instance maintains its own cache independently, and every feature still works correctly on each instance; what breaks is propagation, because revalidation events do not travel between instances.
+
+Note what "Edge Stitching" is not. The docs label that column a **performance optimization** rather than a correctness requirement, and state the fallback explicitly: all features work correctly from a single origin server.
 
 ## The five things multi-instance changes
 
 ### 1 · The Server Function encryption key
 
-> *"Next.js encrypts Server Function closure variables before sending them to the client. By default, a unique encryption key is generated for each build. When running multiple server instances, all instances must use the same encryption key. Otherwise, a Server Function encrypted by one instance cannot be decrypted by another, causing "Failed to find Server Action" errors."*
+Next.js encrypts the closure variables of a Server Function before sending them to the client, and by default it generates a unique encryption key for each build. The docs turn that into a hard requirement the moment you scale out: when running multiple server instances, all instances must use the same encryption key. If they do not, a Server Function encrypted by one instance cannot be decrypted by another, and the failure surfaces as `Failed to find Server Action` errors.
 
 ```bash
 NEXT_SERVER_ACTIONS_ENCRYPTION_KEY=your-generated-key next build
 ```
 
-> *"The key must be a base64-encoded value with a valid AES key length (16, 24, or 32 bytes). Next.js generates 32-byte keys by default."*
+The key's format is constrained: it must be a base64-encoded value with a valid AES key length — 16, 24 or 32 bytes. Next.js itself generates 32-byte keys by default, so 32 is the size to match unless you have a reason not to.
 
 This is the single most misdiagnosed self-hosting failure. Server Actions work perfectly in staging with one replica and fail intermittently in production with three — because a form submitted against replica A is decrypted by replica B.
 
@@ -88,39 +86,31 @@ module.exports = {
 }
 ```
 
-The symptoms it prevents are worth memorising because they look like three unrelated bugs:
+The symptoms it prevents are worth memorising because they look like three unrelated bugs. **Missing assets**: the client requests JavaScript or CSS files that no longer exist on the server. **Server Function mismatches**: the client invokes a Server Function using an ID from a previous build, which the server no longer recognises. **Navigation failures**: prefetched page data from an old deployment turns out to be incompatible with the new server.
 
-> *"**Missing assets**: The client requests JavaScript or CSS files that no longer exist on the server · **Server Function mismatches**: The client invokes a Server Function using an ID from a previous build that the server no longer recognizes · **Navigation failures**: Prefetched page data from an old deployment is incompatible with the new server"*
+And then there is the limit of what it does, which the docs state bluntly. Next.js does not read the `?dpl=` query parameter on incoming requests at all. The parameter exists for cache busting — making browsers and CDNs fetch fresh assets — and not for routing.
 
-And the limit of what it does, stated bluntly:
-
-> *"Next.js does not read the `?dpl=` query parameter on incoming requests. The query parameter is for cache busting (ensuring browsers and CDNs fetch fresh assets), not for routing."*
-
-> *"A per-deployment value only avoids skew if requests are also routed by deployment. Next.js does not route on `?dpl=`, so that routing comes from your host or CDN. Without it, clients that reach an instance from another deployment during a rollout will reload rather than navigate."*
+The consequence is spelled out. A per-deployment value only avoids skew if requests are *also* routed by deployment, and since Next.js does not route on `?dpl=`, that routing has to come from your host or your CDN. Without it, a client that reaches an instance belonging to a different deployment during a rollout will reload the page rather than navigate.
 
 So `deploymentId` converts a broken navigation into a full page reload. It does not make the navigation work — that requires deployment-aware routing at your load balancer.
 
 ### 3 · A shared cache
 
-> *"By default, Next.js uses an in-memory cache that is not shared across instances. For consistent caching behavior, use `'use cache: remote'` with a custom cache handler that stores data in external storage."*
+By default Next.js uses an in-memory cache, and that cache is not shared across instances. The documented route to consistent caching behaviour is `'use cache: remote'` together with a custom cache handler that stores the data in external storage.
 
 Two config surfaces, for two cache paths: `cacheHandler` covers ISR, route handlers, patched `fetch`/`unstable_cache` and image optimization; `cacheHandlers` configures `'use cache'` backends.
 
 ### 4 · Tag coordination
 
-Shared storage alone is not enough, because invalidation is a broadcast problem:
+Shared storage alone is not enough, because invalidation is a broadcast problem. By default, calling `revalidateTag()` on one instance invalidates the cache only on that instance — the other instances carry on serving stale content until they independently discover the invalidation for themselves.
 
-> *"By default, calling `revalidateTag()` on one instance only invalidates the cache on that instance. Other instances continue serving stale content until they independently discover the invalidation."*
-
-> *"To coordinate tag invalidation across instances, implement the `refreshTags()` method in your custom cache handler. This method is called before each request and should sync tag state from shared storage (like Redis) so all instances learn about invalidations promptly."*
+The fix has a name and a schedule. Implement the `refreshTags()` method on your custom cache handler; Next.js calls it before each request, and the method should sync tag state from shared storage — Redis, for example — so that every instance learns about invalidations promptly.
 
 `refreshTags()` running *before each request* is the design decision to notice: it makes invalidation eventually-consistent on a per-request granularity rather than requiring a pub/sub fan-out.
 
 ### 5 · Streaming, end to end
 
-Streaming is a property of the whole path, and any hop can break it:
-
-> *"**Load balancers** must support chunked transfer encoding or HTTP/2 streaming. Some cloud load balancers (for example, AWS ALB with Lambda integration) may buffer responses by default. · **Reverse proxies** between the load balancer and Next.js must also pass through chunked responses without buffering."*
+Streaming is a property of the whole path, and any hop can break it. The self-hosting guide splits the responsibility in two. **Load balancers** must support chunked transfer encoding or HTTP/2 streaming, and it names the specific hazard: some cloud load balancers, AWS ALB with Lambda integration among them, may buffer responses by default. **Reverse proxies** sitting between the load balancer and Next.js must also pass chunked responses straight through without buffering them.
 
 For nginx, the documented fix:
 
@@ -137,11 +127,11 @@ module.exports = {
 }
 ```
 
-> *"If using Partial Prerendering, streaming support is required. Without it, the static shell and dynamic content are delivered together after the full render completes, eliminating PPR's time-to-first-byte advantage."*
+For PPR specifically, streaming support is not optional — it is required. Without it the static shell and the dynamic content are delivered together, after the full render has completed, which eliminates PPR's time-to-first-byte advantage entirely.
 
 ### And one more: graceful shutdown for `after()`
 
-> *"When stopping the server, ensure a graceful shutdown by sending `SIGINT` or `SIGTERM` signals and waiting. The Next.js server will finish in-flight requests and execute any pending `after()` callbacks before exiting. Platforms should allow a configurable drain period (10-30 seconds is recommended)."*
+When stopping the server, the docs ask for a graceful shutdown: send `SIGINT` or `SIGTERM`, then wait. Given that chance, the Next.js server finishes its in-flight requests and executes any pending `after()` callbacks before it exits. The guidance to platforms is to allow a configurable drain period, with 10–30 seconds recommended.
 
 Kubernetes' default `terminationGracePeriodSeconds` is 30, which is inside that window — but a `SIGKILL`-happy rollout or a 5-second grace period silently drops every pending `after()` callback, and nothing logs it.
 
@@ -155,15 +145,11 @@ Next.js sets `Cache-Control` by rendering strategy:
 
 Hashed static assets get `public, max-age=31536000, immutable`.
 
-The gap that surprises people:
+The gap that surprises people is that CDN-level caching on its own does not support on-demand revalidation. `revalidateTag()` and `revalidatePath()` invalidate the Next.js *server* cache; the CDN goes on serving its own cached copy until the `s-maxage` TTL expires. To make on-demand revalidation reach the CDN you have to trigger CDN purges alongside the revalidation call.
 
-> *"CDN-level caching alone does not support on-demand revalidation (`revalidateTag()` / `revalidatePath()`): those calls invalidate the Next.js server cache, but the CDN will continue serving its cached copy until the `s-maxage` TTL expires. To propagate on-demand revalidation to the CDN, trigger CDN purges alongside your revalidation call."*
+The documented pattern is therefore two steps: call `revalidateTag()` or `revalidatePath()`, then call your CDN's purge API for the affected keys — and the docs specify that this includes both the HTML and the RSC variants of each key, not just the HTML.
 
-The documented pattern is: call `revalidateTag()`/`revalidatePath()`, then call your CDN's purge API *"for the affected keys (including both HTML and RSC variants)"*.
-
-App Router responses also carry a `Vary` on custom headers — `rsc`, `next-router-state-tree`, `next-router-prefetch`, `next-router-segment-prefetch`, and `next-url` for interception routes — which many CDNs handle poorly. And an ordering rule:
-
-> *"`proxy.js` (previously Middleware) should run before the CDN cache so it remains the source of truth for auth, redirects, and rewrites. If your deployment places `proxy.js` behind the CDN, configure the cache layer to bypass caching for routes that depend on `proxy.js` decisions."*
+App Router responses also carry a `Vary` on custom headers — `rsc`, `next-router-state-tree`, `next-router-prefetch`, `next-router-segment-prefetch`, and `next-url` for interception routes — which many CDNs handle poorly. And there is an ordering rule. `proxy.js`, previously called Middleware, should run *before* the CDN cache, so that it remains the source of truth for auth, redirects and rewrites. If your deployment puts `proxy.js` behind the CDN instead, the docs require a compensating measure: configure the cache layer to bypass caching for any route whose behaviour depends on a `proxy.js` decision.
 
 ## The CDN primitive table
 
@@ -176,17 +162,13 @@ App Router responses also carry a `Vary` on custom headers — `rsc`, `next-rout
 | Azure | Functions | Managed Redis | Blob Storage | Yes (server) |
 | Google Cloud | Cloud Run | Various KV | Cloud Storage | Yes (server) |
 
-With the caveat printed directly beneath it:
-
-> *"These are available building blocks, not finished integrations. Most community adapters today deploy Next.js as a Docker container or Node.js server without leveraging CDN-specific primitives like edge KV or PPR resuming."*
+With the caveat printed directly beneath it: these are available building blocks, not finished integrations. As the guide characterises the current state, most community adapters deploy Next.js as a Docker container or a Node.js server and do not leverage CDN-specific primitives such as edge KV or PPR resuming at all.
 
 ## Capacity arithmetic moved in 16.3
 
-If your instance-count model was built on numbers from 16.2 or earlier, it is now conservative:
+If your instance-count model was built on numbers from 16.2 or earlier, it is now conservative. The 16.3 release replaced web streams with native Node.js streams in the App Router's rendering layer, which removes the overhead of converting between the two during server-side rendering.
 
-> *"We replaced web streams with native Node.js streams in the App Router rendering layer, removing the overhead of converting between the two during server-side rendering."*
-
-> *"In our benchmarks, apps handle up to 22% more requests under load, with no changes to application code."*
+The number attached to that change in the release notes is that, in Vercel's benchmarks, apps handle **up to 22% more requests under load** — with no changes to application code.
 
 Two disciplines follow. First, re-measure before adding replicas — the same fleet may already have headroom. Second, treat "up to 22%" as what it says: a benchmark ceiling for SSR-bound workloads, not a guarantee for a workload dominated by database latency.
 
@@ -199,7 +181,7 @@ Each build generates its own Server Function encryption key, so a form encrypted
 The minimal server does not copy them, by design, because they should be on a CDN. Deploy the standalone folder alone and the site loads with no styles, no scripts and no images. Either copy both into the standalone tree or actually put them on a CDN — but pick one deliberately.
 
 **★ Believing `deploymentId` makes rolling deployments seamless.**
-It converts a *broken* client navigation into a *full page reload*, which loses `useState` and anything else not in the URL or local storage. Actual seamlessness requires deployment-aware routing, and Next.js explicitly does not provide it: *"Next.js does not read the `?dpl=` query parameter on incoming requests."* That routing is your load balancer's job.
+It converts a *broken* client navigation into a *full page reload*, which loses `useState` and anything else not in the URL or local storage. Actual seamlessness requires deployment-aware routing, and Next.js explicitly does not provide it — it never reads the `?dpl=` query parameter on an incoming request, because that parameter exists for cache busting rather than for routing. Deployment-aware routing is your load balancer's job.
 
 **★ Adding a shared cache and expecting `revalidateTag()` to propagate.**
 Shared storage makes entries visible; it does not tell other instances that a tag was invalidated. Implement `refreshTags()` on the cache handler so each instance syncs tag state from shared storage before serving a request. Without it, instances serve stale content until their own TTLs lapse.
@@ -220,7 +202,7 @@ Nothing errors. The static shell and the dynamic content simply arrive together,
 Export is the only option in the matrix with genuine feature loss, and the boundary is sharp: anything requiring the Next.js runtime is unsupported. Route Handlers survive only as `GET` with `dynamic = 'force-static'`. If there is any prospect of authentication, ISR or Server Actions, the container is the same amount of work and keeps every door open.
 
 **★ Sizing the fleet on pre-16.3 SSR throughput numbers.**
-The App Router's rendering layer moved from web streams to native Node.js streams in 16.3, and the release reports *"up to 22% more requests under load, with no changes to application code."* A capacity model carried forward from 16.2 will over-provision an SSR-bound service. Re-measure rather than either ignoring the change or assuming it applies to a database-bound workload.
+The App Router's rendering layer moved from web streams to native Node.js streams in 16.3, and the release reports apps handling up to 22% more requests under load with no changes to application code. A capacity model carried forward from 16.2 will over-provision an SSR-bound service. Re-measure rather than either ignoring the change or assuming it applies to a database-bound workload.
 
 ## Interview questions
 
@@ -228,10 +210,10 @@ The App Router's rendering layer moved from web streams to native Node.js stream
 A Node.js server, plus `sharp` for Image Optimization. That covers every feature: Server Components, ISR, PPR, Cache Components, Server Actions, Proxy and `after()`. Streaming support is needed for PPR and Server Components to deliver progressively — without it responses are buffered and sent whole, which still works but loses the benefit. Everything else — CDN caching, edge compute, shared cache — improves performance and multi-instance consistency rather than enabling features.
 
 **★ A team moves from one replica to three and Server Actions start failing intermittently. What is wrong?**
-The Server Function encryption key. Next.js encrypts closure variables for Server Functions and generates a unique key per build; with multiple instances, all of them must share it or an action encrypted by one cannot be decrypted by another, producing "Failed to find Server Action". Fix it by setting `NEXT_SERVER_ACTIONS_ENCRYPTION_KEY` (base64, 16/24/32 bytes) at build time across the fleet.
+The Server Function encryption key. Next.js encrypts closure variables for Server Functions and generates a unique key per build; with multiple instances, all of them must share it or an action encrypted by one cannot be decrypted by another, producing `Failed to find Server Action`. Fix it by setting `NEXT_SERVER_ACTIONS_ENCRYPTION_KEY` (base64, 16/24/32 bytes) at build time across the fleet.
 
 **★ What exactly does `deploymentId` protect against, and what does it not do?**
-It protects against version skew: missing assets, Server Function ID mismatches, and prefetched page data from an old deployment. It appends `?dpl=` to asset URLs, sends and reads deployment-ID headers on navigations, sets a `data-dpl-id` attribute, and includes itself in the `'use cache'` cache key. What it does *not* do is route: Next.js never reads `?dpl=` from an incoming request. A skew mismatch triggers a hard reload, not a correct navigation — deployment-aware routing has to come from the host or CDN.
+It protects against version skew: missing assets, Server Function ID mismatches, and prefetched page data from an old deployment. It appends `?dpl=` to asset URLs, sends and reads deployment-ID headers on navigations, sets a `data-dpl-id` attribute, and includes itself in the `'use cache'` cache key. What it does *not* do is route: Next.js never reads `?dpl=` from an incoming request, because the parameter is for cache busting rather than routing. A skew mismatch triggers a hard reload, not a correct navigation — deployment-aware routing has to come from the host or CDN.
 
 **★ You have a shared Redis cache handler and `revalidateTag()` still does not propagate. Why?**
 Because shared storage and tag coordination are different problems. `revalidateTag()` invalidates on the instance that ran it; other instances have no idea until they check. The cache handler must implement `refreshTags()`, which Next.js calls before each request so the instance can sync tag state from shared storage before deciding whether its cached entry is still valid.

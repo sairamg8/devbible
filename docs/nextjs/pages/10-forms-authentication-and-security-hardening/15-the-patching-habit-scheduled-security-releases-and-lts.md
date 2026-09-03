@@ -10,25 +10,23 @@ description: "The Next.js security release program, why it exists, what the Acti
 > Verified: 2026-09-03 against [Next.js Security Release and Our Next Patch Release](https://nextjs.org/blog/next-security-release-program) (13 July 2026), [July 2026 Security Release](https://nextjs.org/blog/july-2026-security-release), [Upcoming August Security Release](https://nextjs.org/blog/upcoming-nextjs-security-release-august-2026), [Update: August Next.js Security Release](https://nextjs.org/blog/nextjs-security-release-august-2026-update), and [August 2026 Security Release](https://nextjs.org/blog/august-2026-security-release).
 > Target: **Next.js 16.3.4**. **16.3 = Active LTS, 15.5 = Maintenance LTS.** Prior page: [14 · The 2026 CVE record](14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md).
 
-**In July 2026 the Next.js team explained why they were formalising a security release schedule, and the reason is worth quoting rather than paraphrasing: the volume of vulnerability research is rising fast, driven by LLM-assisted discovery. They cite Mozilla disclosing 271 issues in a single Firefox release, all surfaced by an AI research tool, and say plainly that they run the same class of tooling against Next.js themselves. That changes what "keeping up" means. An unscheduled emergency patch every few months is something a team absorbs; a monthly cadence with pre-announced severities is something a team has to build a process around. This page is that process.**
+**In July 2026 the Next.js team explained why they were formalising a security release schedule, and the reason is worth stating precisely: the volume of vulnerability research is rising fast, driven by LLM-assisted discovery. They cite Mozilla disclosing 271 issues in a single Firefox release, all surfaced by an AI research tool, and say plainly that they run the same class of tooling against Next.js themselves. That changes what "keeping up" means. An unscheduled emergency patch every few months is something a team absorbs; a monthly cadence with pre-announced severities is something a team has to build a process around. This page is that process.**
 
 ## Why the program exists
 
-> *"We invest in security at every stage of the Next.js lifecycle, from static analysis and scanning as code is authored, through auditable package publication, to close collaboration with researchers who responsibly disclose vulnerabilities. The React2Shell exploit disclosed last December is an example of that process working as intended, and we've continued to mature our security program since then."*
+The team's own account of its security investment spans the whole lifecycle: static analysis and scanning while code is being authored, auditable package publication, and close collaboration with researchers who disclose vulnerabilities responsibly. They point at the React2Shell exploit disclosed the previous December as an example of that process working as intended, and say the program has continued to mature since.
 
-> *"The volume of vulnerability research across the industry is rising fast, driven by LLM-assisted discovery: Mozilla recently disclosed 271 issues in a single Firefox release, all surfaced by Anthropic's Mythos Preview. We run the same class of tooling against Next.js ourselves, through deepsec, our own researchers, and an expanded bug bounty scope, so more issues reach us before they are discovered by attackers."*
+The reason for changing the release model is a change in arrival rate. The volume of vulnerability research across the industry is rising fast, driven by LLM-assisted discovery — the example they give is Mozilla disclosing **271 issues in a single Firefox release**, all of them surfaced by Anthropic's Mythos Preview. Vercel runs the same class of tooling against Next.js itself, through `deepsec`, through its own researchers, and through an expanded bug bounty scope, with the stated goal of having more issues reach them before attackers find them.
 
-And the honest assessment of what the old model cost users:
-
-> *"Historically, the team has published ad-hoc patches for security fixes. These were infrequent, but came with no advance notice and caused disruption for our users."*
-
-> *"This kind of scheduled, pre-announced security release has become standard practice for major open source projects, and we think it's the right model for Next.js at its current scale."*
+The post is also honest about what the old model cost users. Historically the team published ad-hoc patches for security fixes; these were infrequent, but they arrived with no advance notice and caused disruption. The new arrangement is presented as an industry norm rather than an innovation — scheduled, pre-announced security releases have become standard practice for major open source projects, and the team judges it the right model for Next.js at its current scale.
 
 ## What the schedule actually promises
 
-> *"Here's what you can expect going forward: roughly once a month, we'll publish advance notice of upcoming security releases here on the Next.js blog. Each announcement will include the expected release timeline and the highest anticipated severity among the vulnerabilities it covers. This lead time lets you plan your upgrades, and it lets us coordinate with hosting providers and other platform partners to deploy mitigations, such as firewall rules, that help protect applications that haven't been patched yet."*
+Roughly once a month, Vercel publishes advance notice of an upcoming security release on the Next.js blog. Each announcement carries two specific pieces of information: the expected release timeline, and the **highest anticipated severity** among the vulnerabilities that release will cover.
 
-Three commitments in that paragraph, and each has an operational implication:
+The lead time is described as serving two audiences at once. It lets you plan your upgrades, and it lets Vercel coordinate with hosting providers and other platform partners so they can deploy mitigations — firewall rules are the example given — that help protect applications which have not been patched yet.
+
+Three commitments are embedded in that, and each has an operational implication:
 
 | Commitment | What you do with it |
 | --- | --- |
@@ -38,21 +36,21 @@ Three commitments in that paragraph, and each has an operational implication:
 
 And the carve-out for the cases a schedule cannot serve:
 
-> *"For urgent disclosures that cannot wait, or vulnerabilities that are already being exploited in the wild, we will still publish ad-hoc patches. We remain committed to securing your code as quickly as possible."*
+For urgent disclosures that cannot wait, and for vulnerabilities already being exploited in the wild, ad-hoc patches will still be published. The schedule is a default, not a ceiling on how fast a fix can ship.
 
 ## The schedule slips, and the slippage is itself information
 
 Watch what actually happened across the two 2026 cycles.
 
-**July.** Announced 13 July for a 20 July release, *"including patch releases for Next.js 16.2 and 15.5, addressing multiple security issues. It includes fixes for 4 high and 5 medium severity vulnerabilities."* Then: *"July 20, 2026: The July security release originally targeted for July 20 is now expected on July 21, 2026."* Shipped 21 July as 16.2.11 and 15.5.21.
+**July.** Announced on 13 July for a 20 July release, described as including patch releases for Next.js 16.2 and 15.5 addressing multiple security issues — specifically fixes for **4 high and 5 medium** severity vulnerabilities. An update dated 20 July then moved the target: the release originally aimed at 20 July was now expected on 21 July 2026. It shipped on 21 July as 16.2.11 and 15.5.21.
 
-**August.** Announced for 26 August, expected to address *"one critical severity vulnerability"*. Then, on 25 August:
+**August.** Announced for 26 August, expected to address **one critical severity vulnerability**. Then, on 25 August, the forecast was revised.
 
-> *"The release is now expected to address **two critical severity vulnerabilities** rather than one. The newly identified issue prompted us to move the release forward. We are addressing both vulnerabilities in the same release so users only need to upgrade once."*
+The update stated that the release was now expected to address **two critical severity vulnerabilities** rather than one, that the newly identified issue had prompted them to move the release *forward*, and that both vulnerabilities would be addressed in the same release so that users only need to upgrade once.
 
 The release moved **earlier**, not later, and the scope grew from one critical to two. That is the pattern to internalise: a pre-announcement is a forecast, and the forecast is revised. A team that reads the announcement, books the window, and never re-checks will discover on the 26th that the patch shipped on the 25th and the severity doubled.
 
-The last sentence is also a design decision worth respecting from the consuming side: *"so users only need to upgrade once."* Batching is done deliberately to reduce your upgrade count. Upgrading eagerly to a canary to get one fix early defeats it.
+That last clause is also a design decision worth respecting from the consuming side — both fixes ride in one release so that users only need to upgrade once. Batching is done deliberately to reduce your upgrade count. Upgrading eagerly to a canary to get one fix early defeats it.
 
 ## The LTS split is what makes patching cheap
 
@@ -69,7 +67,7 @@ That reframes the version decision. A team pinned to `15.5.x` is not "behind"; i
 
 The July release also names a third channel:
 
-> *"These fixes are also available in the latest Next.js 16.3 canary (`v16.3.0-canary.92`) and preview (`v16.3.0-preview.7`) releases, and will be included in `v16.3.0` once it reaches a stable release."*
+The same fixes were also available in the latest Next.js 16.3 canary (`v16.3.0-canary.92`) and preview (`v16.3.0-preview.7`) releases, and were slated for inclusion in `v16.3.0` once that reached stable.
 
 Canary and preview carry the fixes early. They are not a patching strategy — they carry everything else early too.
 
@@ -89,7 +87,7 @@ Nothing here is exotic. The reason teams fail at it is that each individual step
 
 **6 · Rehearse the rollback.** A security patch that disables a feature — as the AVIF patch did — changes behaviour. You want to have already decided whether you ship first and investigate the behaviour change second. For an unauthenticated RCE the answer is always ship first.
 
-**7 · Have somewhere to send a report.** *"Any questions or concerns regarding our security programs or vulnerability management can be sent to `security@vercel.com`."* And on the other side of the relationship: *"We work with a talented set of researchers to secure Next.js and other open source frameworks through Vercel's Open Source Bug Bounty. Anyone interested in contributing to the security of eligible frameworks is encouraged to participate there."*
+**7 · Have somewhere to send a report.** The blog names `security@vercel.com` as the address for any question or concern about the security program or about vulnerability management. And on the other side of the relationship, Vercel works with researchers to secure Next.js and other open source frameworks through its Open Source Bug Bounty, and encourages anyone interested in contributing to the security of eligible frameworks to take part there.
 
 ## The part nobody schedules: dependency review
 
@@ -128,7 +126,7 @@ The August announcement said one critical. The release contained two, because a 
 Dependency scanners fire when an advisory becomes public — which is at release time or after. The pre-announcement gives roughly a week of lead time with a severity attached. That week is the entire value of the program, and a scanner cannot give it to you. Note also that the August AVIF critical was assigned **no CVE ID**, so a CVE-keyed alerting pipeline would not have fired on it at all.
 
 **★ Upgrading to a canary to get one fix early.**
-The fixes land in canary and preview first, but so does every other unreleased change. Taking a canary into production to get ahead of a scheduled patch trades a known, scoped risk for an unknown, unscoped one — and it defeats the batching the team does deliberately *"so users only need to upgrade once."*
+The fixes land in canary and preview first, but so does every other unreleased change. Taking a canary into production to get ahead of a scheduled patch trades a known, scoped risk for an unknown, unscoped one — and it defeats the batching the team does deliberately so that users only need to upgrade once.
 
 **★ Auditing direct dependencies only.**
 `libheif` is not in your `package.json`. It is inside `sharp`, which is a Next.js dependency for image optimization. The 2026 record's most severe entry lived two levels down. Your lockfile, not your manifest, is the artefact that answers whether you ship a vulnerable component.
@@ -143,12 +141,12 @@ The AVIF patch disabled a feature. That is a real product change and it is still
 When someone on your team finds something, the window between "we noticed" and "someone else notices" is the risk. `security@vercel.com` is the documented contact, and Vercel's Open Source Bug Bounty on HackerOne is the structured route. Put both in your incident runbook before you need them.
 
 **★ Assuming your hosting provider's mitigations cover you.**
-The program notes that lead time *"lets us coordinate with hosting providers and other platform partners to deploy mitigations, such as firewall rules, that help protect applications that haven't been patched yet."* Those are stopgaps for the unpatched, offered where a platform can implement them — and the August Windows critical had *no known workaround* at all. A WAF rule is not a patch.
+The program notes that the lead time lets Vercel coordinate with hosting providers and other platform partners to deploy mitigations — firewall rules being the named example — that help protect applications which have not been patched yet. Those are stopgaps for the unpatched, offered where a platform can implement them — and the August Windows critical had *no known workaround* at all. A WAF rule is not a patch.
 
 ## Interview questions
 
 **★ Why did Next.js move to a scheduled security release model in July 2026?**
-Because the arrival rate of vulnerability reports changed. The announcement cites LLM-assisted discovery explicitly, including Mozilla disclosing 271 issues in a single Firefox release surfaced by an AI research tool, and states that the Next.js team runs the same class of tooling against itself through `deepsec`, its own researchers and an expanded bug bounty. The previous ad-hoc model was described as infrequent but disruptive, *"with no advance notice"*.
+Because the arrival rate of vulnerability reports changed. The announcement cites LLM-assisted discovery explicitly, including Mozilla disclosing 271 issues in a single Firefox release surfaced by an AI research tool, and states that the Next.js team runs the same class of tooling against itself through `deepsec`, its own researchers and an expanded bug bounty. The previous ad-hoc model was described as infrequent but disruptive, arriving with no advance notice at all.
 
 **★ What exactly does a pre-announcement contain, and what should a team do with it?**
 The expected release timeline and the highest anticipated severity among the vulnerabilities the release will cover. A team uses the timeline to book an upgrade window in advance rather than reacting to an interrupt, and uses the severity to decide immediately whether this is routine maintenance or a drop-everything. It is also the window in which hosting providers can deploy stopgap mitigations for applications that will not have patched yet.

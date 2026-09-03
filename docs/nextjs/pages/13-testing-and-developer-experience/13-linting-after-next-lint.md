@@ -14,8 +14,11 @@ description: "What the next lint removal actually broke, what the next-lint-to-e
 
 ## What was removed
 
+The upgrade guide states the change in three short clauses, and the third is the one that costs people months:
+
 > *"The `next lint` command has been removed. Use Biome or ESLint directly. `next build` no longer runs linting."*
-> *"The `eslint` option in the Next.js config file is also removed."*
+
+The guide adds a fourth casualty separately: the `eslint` option in the Next.js config file is also removed.
 
 ```js title="next.config.mjs"
 /** @type {import('next').NextConfig} */
@@ -27,7 +30,7 @@ const nextConfig = {
 export default nextConfig
 ```
 
-So three things went at once: the command, the build-time integration, and the config surface (`ignoreDuringBuilds`, `dirs`) that only existed to configure the build-time integration. The ESLint reference confirms the config side: *"As part of the removal, the `eslint` option in your Next config file is no longer needed and can be safely removed."*
+So three things went at once: the command, the build-time integration, and the config surface (`ignoreDuringBuilds`, `dirs`) that only existed to configure the build-time integration. The ESLint reference confirms the config side from its own angle — as part of the removal, the `eslint` option in your Next config file is no longer needed and can be safely deleted.
 
 ## The codemod, and the thing to check afterwards
 
@@ -35,7 +38,7 @@ So three things went at once: the command, the build-time integration, and the c
 npx @next/codemod@canary next-lint-to-eslint-cli .
 ```
 
-> *"It: Creates an `eslint.config.mjs` file with Next.js recommended configurations · Updates `package.json` scripts to use `eslint .` instead of `next lint` · Adds necessary ESLint dependencies to `package.json` · Preserves existing ESLint configurations when found."*
+The codemod's documented behaviour is four steps. It creates an `eslint.config.mjs` carrying the Next.js recommended configurations. It updates the `package.json` scripts so they run `eslint .` rather than `next lint`. It adds the necessary ESLint dependencies to `package.json`. And it preserves any existing ESLint configuration it finds rather than overwriting it.
 
 ```json title="package.json"
 {
@@ -116,10 +119,11 @@ The plugin ships rules you will actually meet: `@next/next/no-img-element`, `@ne
 Which linter would you like to use? ESLint / Biome / None
 ```
 
-with `--eslint`, `--biome` and `--no-linter` as the non-interactive equivalents. The distinction that matters:
+with `--eslint`, `--biome` and `--no-linter` as the non-interactive equivalents. The distinction that matters is how the docs characterise each option.
 
-> *"**ESLint**: The traditional and most popular JavaScript linter. Includes Next.js-specific rules from `@next/eslint-plugin-next`."*
-> *"**Biome**: A fast, modern linter and formatter that combines the functionality of ESLint and Prettier. Includes built-in Next.js and React domain support for optimal performance."*
+**ESLint** is described as the traditional and most popular JavaScript linter, and the Next.js-specific rules it brings come from `@next/eslint-plugin-next`.
+
+**Biome** is described as a fast, modern linter *and formatter* that combines the functionality of ESLint and Prettier — and its Next.js coverage is characterised as built-in Next.js and React domain support, included for optimal performance.
 
 Scripts, per the installation guide:
 
@@ -157,11 +161,11 @@ const eslintConfig = defineConfig([
 export default eslintConfig
 ```
 
-The critical difference for an existing codebase is that the Next.js-specific rules live in `@next/eslint-plugin-next`, and Biome's coverage is described as *"built-in Next.js and React domain support"* rather than as a port of that plugin. If your team relies on specific `@next/next/*` rules, verify Biome covers the ones you care about before switching.
+The critical difference for an existing codebase is that the Next.js-specific rules live in `@next/eslint-plugin-next`, and Biome's coverage is only ever described as built-in Next.js and React *domain support* — never as a port of that plugin. If your team relies on specific `@next/next/*` rules, verify Biome covers the ones you care about before switching.
 
 ## Flat config is now the default
 
-> *"`@next/eslint-plugin-next` now defaults to ESLint Flat Config format, aligning with ESLint v10 which will drop legacy config support."*
+`@next/eslint-plugin-next` now defaults to the ESLint Flat Config format, and the upgrade guide gives the reason it moved: it aligns the plugin with ESLint v10, which will drop legacy config support altogether.
 
 If you are still on `.eslintrc.*`, that is now borrowed time on two fronts — the plugin's default and ESLint v10 itself.
 
@@ -191,7 +195,7 @@ const eslintConfig = defineConfig([
 export default eslintConfig
 ```
 
-> *"This approach eliminates the risk of collisions or errors that can occur when the same plugins or parsers are imported across multiple configurations."*
+The reference's justification for that path is precise: registering the plugin directly eliminates the risk of the collisions and errors that occur when the same plugins or parsers get imported across multiple configurations.
 
 **Spread the shareable config** only for straightforward setups, remembering that ESLint applies configs in order so later entries override earlier ones for matching files.
 
@@ -216,11 +220,9 @@ Would you like to use the recommended Next.js defaults?
     Yes, use recommended defaults - TypeScript, ESLint, Tailwind CSS, App Router, AGENTS.md
 ```
 
-`--agents-md` is on by default and *"Include `AGENTS.md` and `CLAUDE.md` to guide coding agents"* — the `CLAUDE.md` simply references `AGENTS.md`. For an existing project, `npx @next/codemod@canary agents-md` sets it up.
+`--agents-md` is on by default, and its documented purpose is to include `AGENTS.md` and `CLAUDE.md` to guide coding agents — where the `CLAUDE.md` simply references `AGENTS.md`. For an existing project, `npx @next/codemod@canary agents-md` sets it up.
 
-The block inside `AGENTS.md` is *managed*: `next dev` writes and maintains a version-matched section, delimited by a `BEGIN:nextjs-agent-rules` / `END:nextjs-agent-rules` HTML-comment pair, pointing agents at the docs bundled in `node_modules/next/dist/docs/`. The upgrade guide anticipates the obvious reaction:
-
-> *"This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean."*
+The block inside `AGENTS.md` is *managed*: `next dev` writes and maintains a version-matched section, delimited by a `BEGIN:nextjs-agent-rules` / `END:nextjs-agent-rules` HTML-comment pair, pointing agents at the docs bundled in `node_modules/next/dist/docs/`. The upgrade guide anticipates the obvious reaction and heads it off: the block is written and re-added by `next dev` — you can verify that in `node_modules/next/dist/server/lib/generate-agent-files.js` — so removing it from a diff only re-creates the same uncommitted change, and committing it with your work is what keeps the tree clean.
 
 ## Gotchas
 
@@ -240,7 +242,7 @@ It writes a `FlatCompat` shim over `next/core-web-vitals` and `next/typescript`,
 Biome combines linting and formatting, so it displaces Prettier. ESLint contains formatting rules that conflict with Prettier, which is why `eslint-config-prettier/flat` is a documented addition rather than an optional nicety. Picking a linter without deciding the formatting question leaves two tools disagreeing about your source on every save.
 
 **★ Biome's Next.js coverage is not a port of `@next/eslint-plugin-next`.**
-The docs describe *"built-in Next.js and React domain support"*, which is a different claim from implementing the twenty-odd `@next/next/*` rules. If your codebase depends on specific ones — `no-html-link-for-pages` and `no-async-client-component` are the two that catch real bugs rather than style — confirm the equivalent exists before migrating.
+The docs claim built-in Next.js and React *domain support*, which is a different claim from implementing the twenty-odd `@next/next/*` rules. If your codebase depends on specific ones — `no-html-link-for-pages` and `no-async-client-component` are the two that catch real bugs rather than style — confirm the equivalent exists before migrating.
 
 **★ Spreading `eslint-config-next` into a config that already has `airbnb` or `react-app` produces plugin collisions.**
 The reference names the exact triggers: `react`, `react-hooks`, `jsx-a11y` or `import` already configured, custom `parserOptions`, or `eslint-plugin-import` with custom resolvers. In those cases register `@next/eslint-plugin-next` directly and spread only its recommended rules, rather than the whole shareable config.

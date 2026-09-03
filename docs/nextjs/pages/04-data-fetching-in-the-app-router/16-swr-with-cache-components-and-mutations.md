@@ -28,9 +28,9 @@ export async function getProduct(id: string) {
 }
 ```
 
-> *"This example uses `cacheLife('max')` because writes invalidate the product tag. Within the cache profile, `stale` controls how long the Next.js client cache can reuse a prefetched payload, while `revalidate` and `expire` control the server cache."*
+The docs justify `cacheLife('max')` here on one ground: writes invalidate the product tag, so nothing is relying on time to become correct. They also split the profile's fields by which cache each one governs — `stale` controls how long the Next.js **client** cache may reuse a prefetched payload, while `revalidate` and `expire` control the **server** cache. Same profile, two consumers.
 
-> *"SWR owns a separate browser cache, so its revalidation options do not need to match `cacheLife`."*
+SWR sits outside both of those. It owns a separate browser cache, and the docs state plainly that its revalidation options do not have to match `cacheLife` at all.
 
 `cacheLife('max')` is only safe *because* the tag is invalidated on write. A `max` profile on data with no invalidation path is a permanent stale value.
 
@@ -43,7 +43,7 @@ Extend the contract so both identities live together:
  }
 ```
 
-> *"The server function can then call `cacheTag(productCache.tag(id))`. Keep this contract free of server-only and client-only imports so both cache layers can reuse it."*
+The server function then calls `cacheTag(productCache.tag(id))` using that same module. The condition attached is that the contract module stays free of both server-only and client-only imports, so that both cache layers are able to reuse it.
 
 That last clause is a real constraint: the module is imported from a Server Component *and* from a `'use client'` file, so it must contain nothing but pure string construction. An `import 'server-only'` in it breaks the client; a React import breaks the server usage.
 
@@ -86,7 +86,7 @@ export function MarkReadButton() {
 }
 ```
 
-> *"SWR shows the optimistic value immediately and rolls it back if the write fails. This example keeps the optimistic value after the action succeeds because the final value is known."*
+SWR renders the optimistic value immediately and rolls it back if the write fails. This particular example goes further and keeps the optimistic value even after the action succeeds — the docs give the reason as the final value already being known, so there is nothing to go and ask the server for.
 
 Each option is load-bearing. `optimisticData` is what renders instantly. `revalidate: false` is correct *only because* the final value is known — the action returns `{ count: 0 }` and there is nothing to re-fetch. `rollbackOnError: true` restores the previous value on failure. `throwOnError: false` keeps the rejection from propagating out of the click handler.
 
@@ -107,15 +107,16 @@ export async function markActivityReadAction() {
 }
 ```
 
-> *"The optimistic SWR value updates the current screen. `updateTag` ensures the next cached server read returns fresh activity."*
+The two calls address two different surfaces. The optimistic SWR value updates the screen the user is looking at right now; `updateTag` is what makes the *next* cached server read return fresh activity rather than the pre-write value.
 
-> *"**Good to know:** Call `updateTag` when a Server Action changes a cached read that must reflect the write immediately. An uncached read does not have a server tag to update."*
+The rule for when to reach for it: call `updateTag` when a Server Action changes a cached read that has to reflect the write immediately. If the read was never cached, there is no server tag there to update, and the call has nothing to act on.
 
 Note `getCurrentUserId()` is called inside the action rather than the id being passed in from the client. The tag is built from a server-derived identity, so a caller cannot address another user's cache.
+
 ## Gotchas
 
 **★ Putting `import 'server-only'` (or anything React) in the cache-contract module.**
-It is imported from a Server Component *and* from a `'use client'` component, so it must contain only pure string construction. The docs say to *"Keep this contract free of server-only and client-only imports so both cache layers can reuse it."* Violate that and one of the two call sites fails to build.
+It is imported from a Server Component *and* from a `'use client'` component, so it must contain only pure string construction. The docs' instruction is to keep the contract free of server-only and client-only imports precisely so both cache layers can reuse it. Violate that and one of the two call sites fails to build.
 
 **★ Setting `cacheLife('max')` on a read with no invalidation path.**
 `max` is only correct because writes call `updateTag` on the matching tag. Without that, `max` is a permanent stale value with no mechanism to ever refresh it. The lifetime and the invalidation strategy are one decision, not two.
@@ -130,7 +131,7 @@ The documented action calls `getCurrentUserId()` itself and builds the tag from 
 The whole point of the extended contract is that one module owns both identities, so `cacheTag(productCache.tag(id))` on the server and `useSWR(productCache.key(id))` in the browser cannot drift. Splitting them across a server module and a client module reintroduces exactly the class of silent mismatch the contract exists to prevent.
 
 **★ Assuming SWR's revalidation options must line up with `cacheLife`.**
-They are independent caches with independent policies: *"SWR owns a separate browser cache, so its revalidation options do not need to match `cacheLife`."* Trying to keep a `refreshInterval` in step with a server `revalidate` produces a coupling nobody asked for and no correctness benefit — identity is what must be shared, not duration.
+They are independent caches with independent policies — SWR owns its own browser cache, and its revalidation options are under no obligation to match `cacheLife`. Trying to keep a `refreshInterval` in step with a server `revalidate` produces a coupling nobody asked for and no correctness benefit — identity is what must be shared, not duration.
 
 ## Interview questions
 

@@ -14,7 +14,7 @@ description: "Providing initial data from a Server Component with an unawaited p
 
 ## The server handoff: dehydrate a *pending* query
 
-> *"TanStack Query 5.40.0 or later can dehydrate pending queries. Start `prefetchQuery` without awaiting it, then pass the dehydrated state to `<HydrationBoundary>`. Override `queryFn` on the server because the Route Handler's relative URL only resolves in the browser"*
+Dehydrating a query that has not settled requires **TanStack Query 5.40.0 or later**; before that version the capability does not exist. The recipe the docs give is three moves. Start `prefetchQuery` without awaiting it. Pass the resulting dehydrated state to `<HydrationBoundary>`. And override `queryFn` on the server, for a specific reason — the shared query function fetches the Route Handler by a relative URL, and a relative URL only resolves in the browser.
 
 ```tsx filename="app/products/[id]/page.tsx"
 import { Suspense } from 'react'
@@ -63,7 +63,7 @@ function ProductData({ id }: { id: string }) {
 
 Three details, each of which is a bug if you omit it.
 
-**`void queryClient.prefetchQuery(...)`** starts the query without awaiting. The comment says why: *"Not awaited, so rendering is not blocked."* The `void` is there so a linter does not flag the floating promise.
+**`void queryClient.prefetchQuery(...)`** starts the query without awaiting. The comment in the documented snippet says why: not awaiting it is what keeps rendering unblocked. The `void` is there so a linter does not flag the floating promise.
 
 **The `shouldDehydrateQuery` override.** By default `dehydrate` only serializes *settled* queries, so an unawaited prefetch would be dropped entirely and the browser would fetch from scratch. Adding `|| query.state.status === 'pending'` is what carries the in-flight query across.
 
@@ -91,13 +91,13 @@ export const productCache = {
 }
 ```
 
-> *"The server and Client Component must use the same query key. Keep the key and query options together so both call sites share the same identity."*
+The server and the Client Component are required to use the same query key, and the docs' structural remedy is to keep the key and the query options together so that both call sites are sharing one identity rather than maintaining two copies of it.
 
-> *"The query function fetches a Route Handler so it can run on the client. The `staleTime` prevents an immediate client refetch by keeping the hydrated data fresh for 30 seconds. Choose a duration based on how quickly the data can change."*
+Two things in those options are deliberate. The query function fetches a Route Handler specifically so that it is able to run on the client. And the `staleTime` exists to prevent an immediate client refetch, by keeping the hydrated data fresh for 30 seconds — a number the docs frame as a choice you make based on how quickly the data can change, not a recommended constant.
 
 Without `staleTime`, TanStack Query treats hydrated data as stale and refetches on mount — the same default SWR has, and the same wasted round trip. Unlike SWR, TanStack expresses the fix as a duration rather than a switch.
 
-> *"Larger features can place query options in a separate client-facing module as long as every caller imports the key from the same cache contract."*
+Larger features are allowed to move the query options out into a separate client-facing module. The condition on that split is that every caller still imports the key from the same cache contract — the options may move, the identity may not fork.
 
 ```tsx filename="app/products/[id]/product-view.tsx"
 'use client'
@@ -112,11 +112,12 @@ export function ProductView({ id }: { id: string }) {
 }
 ```
 
-> *"As with SWR, `params.then()` resolves the `id` inside `<Suspense>`, and `ProductData` prefetches below the boundary."*
+The page structure is the same one the SWR guide uses: `params.then()` resolves the `id` inside `<Suspense>`, and `ProductData` does its prefetching below that boundary.
+
 ## Gotchas
 
 **★ Awaiting `prefetchQuery` on the server.**
-It blocks the Server Component until the data resolves, which removes the streaming behaviour the surrounding Suspense boundary was there to provide. The documented call is `void queryClient.prefetchQuery(...)` with the comment *"Not awaited, so rendering is not blocked."*
+It blocks the Server Component until the data resolves, which removes the streaming behaviour the surrounding Suspense boundary was there to provide. The documented call is `void queryClient.prefetchQuery(...)`, with a comment recording that it is deliberately not awaited so rendering is not blocked.
 
 **★ Calling `dehydrate` without the `shouldDehydrateQuery` override.**
 The default only serializes settled queries, so an unawaited prefetch is silently dropped from the dehydrated state and the browser refetches from scratch. The page works; the handoff simply never happened. The override is `defaultShouldDehydrateQuery(query) || query.state.status === 'pending'`, and it requires TanStack Query 5.40.0 or later.
@@ -131,7 +132,7 @@ TanStack Query considers data stale by default, so the browser refetches immedia
 The dehydrated state is matched to a query by key, so two hand-written keys that differ in any element — an extra segment, a number where a string was used, a different order — mean the hydration boundary carries data no hook ever reads. Export one `key` builder and one `options` builder and import both at every call site.
 
 **★ Putting a server-only import in the shared query-options module.**
-It is imported by the Server Component that prefetches *and* by the `'use client'` component that reads. The guide allows splitting options into a separate client-facing module *"as long as every caller imports the key from the same cache contract"* — but whatever holds the key must be importable from both sides, which means no `server-only`, no database client, and no client-only APIs.
+It is imported by the Server Component that prefetches *and* by the `'use client'` component that reads. The guide allows splitting options into a separate client-facing module, on the condition that every caller still imports the key from the same cache contract — but whatever holds the key must be importable from both sides, which means no `server-only`, no database client, and no client-only APIs.
 
 ## Interview questions
 
@@ -148,7 +149,7 @@ Preventing an immediate refetch after hydration. Without it, TanStack Query trea
 So the page component itself does not become async and block. The returned promise keeps the Suspense fallback visible until the route parameters resolve, and `ProductData` — which does the prefetching — renders below that boundary. It is the same technique the SWR guide uses, for the same reason.
 
 **★ Why does the shared contract keep the key and the options together?**
-Because the key is the join between the server-side dehydrated state and the browser-side hook, and a hand-written duplicate is the one thing that silently breaks the handoff. Colocating `key` and `options` means both call sites derive the identity from the same function. For larger features the guide permits a separate client-facing options module *"as long as every caller imports the key from the same cache contract."*
+Because the key is the join between the server-side dehydrated state and the browser-side hook, and a hand-written duplicate is the one thing that silently breaks the handoff. Colocating `key` and `options` means both call sites derive the identity from the same function. For larger features the guide permits a separate client-facing options module, provided every caller still imports the key from that one shared cache contract.
 
 **★ The hydrated data appears and is then immediately replaced by a client fetch. What did you forget?**
 `staleTime`. TanStack Query treats data as stale by default, so a hook mounting with hydrated data refetches at once, throwing away the server's work and producing a visible flash if the values differ. Setting `staleTime` on the shared options — 30 seconds in the documented example — defines a window in which the hydrated value is accepted as fresh.

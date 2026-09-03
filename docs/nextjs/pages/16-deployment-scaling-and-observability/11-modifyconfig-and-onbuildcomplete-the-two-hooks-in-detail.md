@@ -14,18 +14,20 @@ description: "The lifecycle, parameters and failure modes of modifyConfig and on
 
 ## `modifyConfig` — capability negotiation, not build configuration
 
+The reference defines when the hook runs in one sentence, and the scope of it is wider than the name suggests:
+
 > *"Called for any CLI command that loads the `next.config.js` file to allow modification of the configuration."*
 
 Read that again: **any CLI command**. `next dev`, `next build`, `next start`, `next info` — anything that loads the config calls your hook. That is why `ctx.phase` exists and why every published adapter branches on it first.
 
-The parameters, verbatim:
+The parameters, as the reference defines them:
 
-- `config` — *"The complete Next.js configuration object"*
-- `ctx.phase` — *"The current build phase"*
-- `ctx.nextVersion` — *"Version of Next.js being used"*
-- `ctx.projectDir` — *"Absolute path to the Next.js project directory"*
+- `config` — the complete Next.js configuration object.
+- `ctx.phase` — the current build phase.
+- `ctx.nextVersion` — the version of Next.js being used.
+- `ctx.projectDir` — the absolute path to the Next.js project directory.
 
-**Returns:** *"The modified configuration object (can be async)"*.
+**Returns:** the modified configuration object, and the hook may be async — returning a promise for the config is explicitly allowed.
 
 ```js filename="my-adapter.js"
 /** @type {import('next').NextAdapter} */
@@ -63,9 +65,7 @@ async modifyConfig(config, { phase }) {
 }
 ```
 
-The `??` is load-bearing. `config.supportsImmutableAssets ?? true` respects an explicit `false` from the user's own `next.config.js` and only supplies a default when the user said nothing. An adapter that wrote `config.supportsImmutableAssets = true` unconditionally would override a deliberate opt-out — and the `supportsImmutableAssets` reference warns exactly what that costs:
-
-> *"Enabling this feature when your provider or adapter does not support it can result in broken deployments."*
+The `??` is load-bearing. `config.supportsImmutableAssets ?? true` respects an explicit `false` from the user's own `next.config.js` and only supplies a default when the user said nothing. An adapter that wrote `config.supportsImmutableAssets = true` unconditionally would override a deliberate opt-out — and the `supportsImmutableAssets` reference is blunt about the consequence: turning the feature on when your provider or adapter does not actually support it can result in broken deployments. Not degraded caching, not a warning in the log — broken.
 
 ### `nextVersion` is how an adapter survives a framework major
 
@@ -86,27 +86,27 @@ The signature returns a config, and the type permits a promise. Spreading a new 
 
 ## `onBuildComplete` — the whole build, described exactly once
 
-> *"Called after the build process completes with detailed information about routes and outputs."*
+The reference is equally terse about the second hook: it is called after the build process completes, and it is handed detailed information about the routes and the outputs that build produced. Once, at the end, with everything known.
 
 The context object splits into three groups, and it is worth holding them apart mentally because they answer different questions.
 
 **Where things are on disk.**
 
-| Field | Documented meaning |
+| Field | What the reference says it holds |
 | --- | --- |
-| `projectDir` | *"Absolute path to the Next.js project directory"* |
-| `repoRoot` | *"Absolute path to the detected repository root"* |
-| `distDir` | *"Absolute path to the build output directory"* |
+| `projectDir` | The absolute path to the Next.js project directory |
+| `repoRoot` | The absolute path to the *detected* repository root |
+| `distDir` | The absolute path to the build output directory |
 
 **What identifies this build.**
 
-| Field | Documented meaning |
+| Field | What the reference says it holds |
 | --- | --- |
-| `buildId` | *"Unique identifier for the current build"* |
-| `nextVersion` | *"Version of Next.js being used"* |
-| `config` | *"The final Next.js configuration (with `modifyConfig` applied)"* |
+| `buildId` | A unique identifier for the current build |
+| `nextVersion` | The version of Next.js being used |
+| `config` | The **final** Next.js configuration — the one with `modifyConfig` already applied |
 
-**What was built, and how to reach it.** `outputs` — *"Detailed information about all build outputs organized by type"* — and `routing` — *"Object containing Next.js routing phases and metadata"*. Each is large enough to have its own reference page, and each is covered separately in this chapter.
+**What was built, and how to reach it.** `outputs` carries detailed information about all build outputs, organised by type; `routing` is the object holding Next.js's routing phases and their metadata. Each is large enough to have its own reference page, and each is covered separately in this chapter.
 
 A skeleton that touches every group:
 
@@ -155,25 +155,26 @@ module.exports = adapter
 
 ### `buildId` is not `deploymentId`
 
-`buildId` identifies the build; the separate `deploymentId` config option identifies the *deployment* and drives skew protection. They are related but not interchangeable — and since 16.2 they interact:
-
-> *"Pages Router detects version skew from the response header rather than the build ID, and the build ID is constant when `deploymentId` is set."*
+`buildId` identifies the build; the separate `deploymentId` config option identifies the *deployment* and drives skew protection. They are related but not interchangeable — and since 16.2 they interact. In that release the Pages Router stopped detecting version skew from the build ID and started detecting it from the response header instead, and as a direct consequence the build ID is now held constant whenever `deploymentId` is set.
 
 An adapter that keys platform storage on `buildId` while the app sets `deploymentId` will find that key stops changing between deployments. Key on whichever identity your platform actually rotates.
 
 ### The `output: 'export'` special case
 
-One shape of build makes almost the entire `outputs` object empty:
-
-> *"When `config.output` is set to `'export'`, only `outputs.staticFiles` is populated. All other arrays (`pages`, `appPages`, `pagesApi`, `appRoutes`, `prerenders`) will be empty since the entire application is exported as static files."*
+One shape of build makes almost the entire `outputs` object empty. When `config.output` is set to `'export'`, only `outputs.staticFiles` is populated; every other array — `pages`, `appPages`, `pagesApi`, `appRoutes` and `prerenders` — comes back empty, because the entire application has been exported as static files and there is no compute left to describe.
 
 An adapter that iterates `outputs.appPages` and concludes "no routes, something went wrong" is looking at a perfectly healthy static export. Branch on `config.output` before validating.
 
 ## What adapters are actually built for
 
-The Use Cases page enumerates the intended shapes, and they are broader than "deploy to my cloud":
+The Use Cases page enumerates six intended shapes, and they are broader than "deploy to my cloud":
 
-> *"**Deployment Platform Integration**: Automatically configure build outputs for specific hosting platforms · **Asset Processing**: Transform or optimize build outputs · **Monitoring Integration**: Collect build metrics and route information · **Custom Bundling**: Package outputs in platform-specific formats · **Build Validation**: Ensure outputs meet specific requirements · **Route Generation**: Use processed route information to generate platform-specific routing configs"*
+- **Deployment platform integration** — automatically configure build outputs for a specific hosting platform.
+- **Asset processing** — transform or optimize the build outputs.
+- **Monitoring integration** — collect build metrics and route information.
+- **Custom bundling** — package the outputs in a platform-specific format.
+- **Build validation** — ensure the outputs meet specific requirements.
+- **Route generation** — use the processed route information to generate platform-specific routing configuration.
 
 Three of those six — monitoring, validation, route generation — are read-only. A CI check that fails the build when a route's traced dependency set exceeds a size budget, or when a new dynamic route appears without a matching CDN rule, is a legitimate adapter that ships nothing anywhere.
 
@@ -194,7 +195,7 @@ async modifyConfig(config, { phase }) {
 A user sets `supportsImmutableAssets: false` to work around a CDN problem; the adapter sets it to `true` on every build and the workaround silently stops working. Use nullish coalescing so an explicit `false` survives, exactly as the documented example does: `config.supportsImmutableAssets = config.supportsImmutableAssets ?? true`. The same discipline applies to any capability flag an adapter defaults.
 
 **★ Reading the user's `next.config.js` again inside `onBuildComplete`.**
-Your adapter's own `modifyConfig` changes appear not to have taken effect, because `onBuildComplete` receives *"The final Next.js configuration (with `modifyConfig` applied)"* and re-`require`ing the file gives you the pre-modification object. Only ever read `ctx.config`:
+Your adapter's own `modifyConfig` changes appear not to have taken effect. The cause is that `ctx.config` is documented as the *final* configuration — the one with `modifyConfig` already applied — while re-`require`ing the file from disk gives you the pre-modification object your hook was handed in the first place. Only ever read `ctx.config`:
 
 ```js
 async onBuildComplete({ config }) {
@@ -204,7 +205,7 @@ async onBuildComplete({ config }) {
 ```
 
 **★ Assuming `projectDir === repoRoot`.**
-Traced dependency paths resolve to nothing in a monorepo and the packaged function is missing half its `node_modules`. Output `assets` are keyed by *"relative path from repo root"*, and in a pnpm or Turborepo layout the repo root is several levels above the Next.js app. Resolve asset keys against `repoRoot`, and place the function entry relative to `projectDir`:
+Traced dependency paths resolve to nothing in a monorepo and the packaged function is missing half its `node_modules`. Output `assets` are documented as a map whose *keys* are paths relative to the repo root and whose values are absolute paths — and in a pnpm or Turborepo layout the repo root is several levels above the Next.js app. Resolve asset keys against `repoRoot`, and place the function entry relative to `projectDir`:
 
 ```js
 for (const [relKey, absPath] of Object.entries(page.assets)) {
@@ -240,7 +241,7 @@ if (config.output === 'export') {
 ```
 
 **★ Keying platform storage on `buildId` in an app that sets `deploymentId`.**
-Since 16.2 *"the build ID is constant when `deploymentId` is set"*, so a cache namespace or asset prefix derived from `buildId` stops rotating between deployments and starts serving the previous deployment's artefacts. Key on `config.deploymentId` when it is present, and fall back to `buildId` only when it is not.
+Since 16.2 the build ID is deliberately held constant when `deploymentId` is set, so a cache namespace or asset prefix derived from `buildId` stops rotating between deployments and starts serving the previous deployment's artefacts. Key on `config.deploymentId` when it is present, and fall back to `buildId` only when it is not.
 
 **★ Doing unbounded work in `onBuildComplete` and blowing the builder's time limit.**
 The hook is awaited as part of `next build`, so every upload, hash and API call happens inside the build's wall clock. A build that succeeded locally times out on a hosted builder with a tighter limit. Batch uploads with bounded concurrency, and skip content you can prove is already present — which for content-addressed assets is exactly what `immutableHash` is for.
@@ -254,10 +255,10 @@ The hook is awaited as part of `next build`, so every upload, hash and API call 
 Because it is not build-specific. It fires on any config load. Without branching on `phase === 'phase-production-build'`, an adapter mutates the development configuration too, which produces local-only bugs that never reproduce in CI — the most expensive kind.
 
 **★ You need to know whether immutable assets were enabled for this build. Where do you read it?**
-From `ctx.config` inside `onBuildComplete`, never from the user's config file. The reference defines the field as *"The final Next.js configuration (with `modifyConfig` applied)"*, so it already reflects whatever your own hook decided — including the case where the user's explicit `false` overrode your default.
+From `ctx.config` inside `onBuildComplete`, never from the user's config file. The reference defines that field as the final Next.js configuration with `modifyConfig` applied, so it already reflects whatever your own hook decided — including the case where the user's explicit `false` overrode your default.
 
 **★ In a monorepo, which path do you resolve traced assets against, and why?**
-`repoRoot`. Every function-shaped output documents `assets` as *"key: relative path from repo root, value: absolute path"*. `projectDir` points at the Next.js app, which in a workspace is typically `packages/web` — several levels below where the keys are anchored. Using `projectDir` produces paths that either do not exist or, worse, exist and point at the wrong file.
+`repoRoot`. Every function-shaped output documents `assets` the same way: the key is the path relative to the repo root and the value is the absolute path. `projectDir` points at the Next.js app, which in a workspace is typically `packages/web` — several levels below where the keys are anchored. Using `projectDir` produces paths that either do not exist or, worse, exist and point at the wrong file.
 
 **★ How would you write an adapter that deploys nothing?**
 Implement only `onBuildComplete` and treat it as a report. The Use Cases page explicitly names monitoring integration, build validation and route generation as adapter use cases. A CI adapter can assert that no route's traced dependency set exceeds a size budget, that every dynamic route has a matching CDN rule, or simply emit route counts and output sizes as build metrics — and then return without writing anything outside the build directory.

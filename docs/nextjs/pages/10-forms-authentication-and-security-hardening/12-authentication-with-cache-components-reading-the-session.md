@@ -14,7 +14,7 @@ description: "Why 'use cache' cannot read cookies, what 'use cache: private' is 
 
 ## The premise
 
-> *"With Cache Components enabled, a session read happens at request time, so it can't be prerendered into the static shell. Authenticated UI streams in behind a `<Suspense>` boundary instead, and data derived from the session can still be cached."*
+With Cache Components enabled, a session read is a request-time read, and a request-time read cannot be prerendered into the static shell. The consequence the guide draws is a shape rather than a prohibition: authenticated UI streams in behind a `<Suspense>` boundary instead of blocking the shell, and data *derived* from the session can still be cached even though the session read itself cannot.
 
 Enable the flag first:
 
@@ -34,19 +34,17 @@ The directives themselves — plain `'use cache'`, `'use cache: remote'` and `'u
 
 The guide does not stop at "it throws". It gives two reasons that survive every clever workaround:
 
-> *"neither a plain `use cache` nor `use cache: remote` can call `cookies()`, and you can't extract the value and pass it in either, because:"*
+Neither a plain `use cache` nor a `use cache: remote` scope can call `cookies()`. The guide then closes the obvious escape hatch — you cannot extract the cookie value and pass it in as an argument — and gives two reasons.
 
-> *"A session helper reads the cookie deep inside its own code, so there's nothing to lift out."*
+The first is structural: a session helper reads the cookie deep inside its own code, so there is nothing available for you to lift out and hoist to the call site.
 
-> *"Validating it compares a token's expiry against the current time (iron-session's `unsealData` rejects an expired seal), so the read is request- and time-dependent."*
+The second is about time. Validating the cookie compares a token's expiry against the current time — the guide's concrete example is iron-session's `unsealData`, which rejects a seal that has expired — so the read is request-dependent *and* time-dependent.
 
 The first kills the obvious refactor: you cannot hoist the cookie read out of `getSession()` because your auth library owns that code. The second kills the clever one: even if you *could* pass the raw cookie in as an argument, validation compares a token's expiry against the current time, so the same input produces different answers at different moments — which is the definition of an uncacheable function.
 
-> *"That's what `use cache: private` is for: it reads `cookies()` and `headers()` directly, keeping the result in the browser only, never on the server."*
+`use cache: private` is the directive that exists for exactly this case. It reads `cookies()` and `headers()` directly, and it keeps the result in the browser only — never on the server.
 
-And the boundary of what the private cache stores:
-
-> *"The `'use cache: private'` directive allows functions to access runtime request APIs like `cookies()`, `headers()`, and `searchParams` within a cached scope. However, results are **never stored on the server**, they're cached only in the browser's memory and do not persist across page reloads."*
+The boundary of what it stores is stated precisely. The directive lets a function reach runtime request APIs — `cookies()`, `headers()` and `searchParams` — from inside a cached scope. The results, however, are **never stored on the server**: they are cached in the browser's memory alone, and they do not persist across page reloads.
 
 Browser memory, gone on reload. That is not a weaker cache — it is a different one, and it is the correct storage tier for "who is this person" precisely because it is not shared and not durable.
 
@@ -103,7 +101,7 @@ export async function getCurrentUser(): Promise<User> {
 
 The detail that makes this safe:
 
-> *"The `redirect()` calls throw to interrupt rendering rather than return a value, so they aren't cached. Only a resolved user is."*
+`redirect()` interrupts rendering by throwing rather than by returning a value, so a redirect is never what gets cached. The only thing that ends up in the cache is a resolved user.
 
 A `redirect()` inside a cached scope is not a cached "no". It throws, the scope produces no value, and the next request re-evaluates. A logged-out state is never memoised as a result.
 
@@ -111,7 +109,9 @@ A `redirect()` inside a cached scope is not a cached "no". It throws, the scope 
 
 ## Step 2 — stream it, do not block on it
 
-> *"A component that reads the session must sit behind a `<Suspense>` boundary. With Cache Components, reading `cookies()` outside a boundary is a build error. The boundary is also what keeps the rest of the page fast. Anything outside it prerenders into the static shell and loads instantly, as long as it's static or wrapped in `use cache` and doesn't read runtime data of its own. Only the section behind the boundary waits for the request."*
+Any component that reads the session has to sit behind a `<Suspense>` boundary — with Cache Components on, reading `cookies()` outside a boundary is a **build error**, not a runtime surprise.
+
+That boundary is doing double duty. Everything outside it prerenders into the static shell and loads instantly, on two conditions the guide states: it is either static or wrapped in `use cache`, and it does not read runtime data of its own. Only the section *behind* the boundary has to wait for the request.
 
 ```tsx filename="app/page.tsx"
 import { Suspense } from 'react'
@@ -152,13 +152,13 @@ async function Dashboard() {
 
 And the placement rule that decides whether any of this helps:
 
-> *"Keep the session read out of a layout's top level, too. A top-level `await` on the session in a layout holds the whole segment, including `{children}`, behind that request, so push it into a component inside a boundary."*
+Keep the session read out of a layout's top level as well. A top-level `await` on the session inside a layout holds the entire segment behind that request — `{children}` included — so the read belongs pushed down into a component that sits inside a boundary.
 
 This is the single highest-leverage sentence in the guide. A layout that awaits the session at its top level converts every page under it into a fully blocked render. The static shell disappears, not because any page did something wrong, but because their shared parent did.
 
 ## Migrating an existing application
 
-> *"With Cache Components enabled, instant navigation validation flags every route that reads the session, because a request read can't be prerendered into the static shell. You don't have to resolve them all before shipping. Set `export const instant = false` on the page or layout to let it keep blocking on the server, then adopt the patterns below one route at a time."*
+Turning Cache Components on makes instant-navigation validation flag every route that reads the session, for the reason already established: a request read cannot be prerendered into the static shell. The guide is explicit that you do not have to resolve all of them before shipping. Setting `export const instant = false` on a page or layout lets that route carry on blocking on the server, and you then adopt the patterns route by route.
 
 ```tsx
 export const instant = false
@@ -188,7 +188,7 @@ export default function Layout({ children }) {
 It does not work, for two independent reasons the guide names: the cookie read lives deep inside your auth library so there is nothing to lift out, and validation compares the token's expiry against the current time, so the same argument yields different results at different moments. `'use cache: private'` exists for exactly this.
 
 **★ Expecting `'use cache: private'` results to survive a page reload.**
-They are held in browser memory only and *"do not persist across page reloads"*. Treat it as a per-navigation memo, not as storage. Anything that must survive a reload has to be re-derived — which is fine, because the session cookie is still there.
+They are held in browser memory only, and the docs are explicit that they do not persist across page reloads. Treat it as a per-navigation memo, not as storage. Anything that must survive a reload has to be re-derived — which is fine, because the session cookie is still there.
 
 **★ Calling `connection()` inside either cache directive.**
 It is prohibited in both plain `'use cache'` and `'use cache: private'`, because connection-specific information cannot be safely cached under any policy. If a page needs `connection()` — as a nonce-bearing CSP page does — that render is not cacheable at all, and the two features cannot be combined on the same component.
@@ -211,7 +211,7 @@ Every route that reads the session will be flagged, because a request read canno
 Because `cookies()`, `headers()` and `searchParams` are forbidden inside a plain `'use cache'` scope — the result would be shared server-side across users. Passing the cookie in fails for two further reasons the guide states: the cookie read happens deep inside the auth library's own code, so there is nothing to hoist out; and validation compares the token's expiry to the current time, making the function time-dependent as well as request-dependent. A function whose output varies with the clock is not cacheable on any key.
 
 **★ What exactly is `'use cache: private'`, and where does its result live?**
-A cache scope that may read `cookies()`, `headers()` and `searchParams`, whose results are *"never stored on the server"* and are held only in the browser's memory, not surviving a page reload. It exists so that a request-dependent read can still have a cache lifetime — which is what lets a route's authenticated App Shell be prefetched — without any per-user data being written to shared server storage. `connection()` remains prohibited.
+A cache scope that may read `cookies()`, `headers()` and `searchParams`, whose results are never stored on the server and are held only in the browser's memory, not surviving a page reload. It exists so that a request-dependent read can still have a cache lifetime — which is what lets a route's authenticated App Shell be prefetched — without any per-user data being written to shared server storage. `connection()` remains prohibited.
 
 **★ Why must authenticated UI sit behind Suspense, and what is the cost of getting the boundary placement wrong?**
 Because a session read happens at request time and cannot be prerendered into the static shell, so with Cache Components enabled reading `cookies()` outside a boundary is a build error. Placement matters because everything outside the boundary prerenders and loads instantly. A session read at the top level of a layout holds the entire segment including `{children}`, so every page under it loses its static shell — and nothing in those pages' own code explains why.
@@ -220,7 +220,7 @@ Because a session read happens at request time and cannot be prerendered into th
 No. `redirect()` throws to interrupt rendering rather than returning a value, so the scope produces no cacheable result and only a resolved user is ever stored. That is what makes it safe to put the authorization guard inside the cached function instead of wrapping it.
 
 **★ How do you adopt Cache Components in an application whose every route reads the session?**
-Incrementally. Instant-navigation validation will flag all of them, which is information rather than a blocker. Set `export const instant = false` on a page or layout to let it keep blocking on the server, then convert routes one at a time to the Suspense-plus-private-cache pattern. The guide explicitly says *"You don't have to resolve them all before shipping."*
+Incrementally. Instant-navigation validation will flag all of them, which is information rather than a blocker. Set `export const instant = false` on a page or layout to let it keep blocking on the server, then convert routes one at a time to the Suspense-plus-private-cache pattern. The guide explicitly says you do not have to resolve them all before shipping.
 
 **★ What does `import 'server-only'` protect against in the session module?**
 An accidental import from a Client Component. Without it, importing `lib/session.ts` from a `'use client'` file compiles successfully and ships `SESSION_PASSWORD` and the session-unsealing logic into the browser bundle. With it, that import is a build error. It is one line and it converts a silent credential leak into a failed CI run.

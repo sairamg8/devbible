@@ -14,25 +14,21 @@ description: "When client-side fetching is still correct in the App Router, the 
 
 ## The default is no library
 
-> *"Many apps can provide responsive interactions without a client data-fetching library. If a Client Component only needs to read server data once, pass it a Promise and unwrap it with React's `use()`."*
-
-> *"This avoids adding a library for data that never revalidates on the client."*
+The guide opens by asserting that many applications deliver responsive interactions with no client data-fetching library at all. Its rule of thumb: if a Client Component only needs to read server data once, hand it a Promise and unwrap that with React's `use()`. The justification is stated just as directly — doing it this way avoids pulling in a library to manage data that is never going to revalidate on the client in the first place.
 
 For interaction patterns — pending states, optimistic UI, transitions — the pointer is to Server Functions rather than to a fetching library. A library is not the answer to "this button needs to feel fast".
 
 ## When a library is the answer
 
-> *"Use a client data-fetching library such as SWR, TanStack Query, or Apollo Client when Client Components need a shared browser cache. These libraries can add focus revalidation, interval polling, request deduplication, or optimistic updates across components."*
+The trigger the docs give for reaching for SWR, TanStack Query or Apollo Client is a single condition: Client Components need a **shared browser cache**. What such a library then buys you is a specific list — revalidation on window focus, polling at an interval, deduplication of identical in-flight requests, and optimistic updates that are visible across components rather than inside one.
 
 The operative words are *shared browser cache*. Every capability listed depends on more than one component agreeing on an identity for the same data. One component reading one value once does not need that.
 
-The Backend-for-Frontend guide adds the orthogonal reason — data the server simply cannot produce:
-
-> *"Server Components cover most data-fetching needs. However, fetching data client side might be necessary for: Data that depends on client-only Web APIs: Geo-location API · Storage API · Audio API · File API · Frequently polled data"*
+The Backend-for-Frontend guide adds the orthogonal reason — data the server simply cannot produce. Its position is that Server Components cover most data-fetching needs, with two exceptions. Data that depends on Web APIs which exist only on the client — it names the Geo-location API, the Storage API, the Audio API and the File API — and data that is frequently polled.
 
 ## The three patterns
 
-> *"First decide whether the initial view needs data from the server or can wait for a browser request after hydration."*
+The first decision the guide asks you to make is not which library but which of two things is true: does the initial view need data from the server, or can it wait for a browser request issued after hydration? Everything below follows from that answer.
 
 | Pattern | SWR | TanStack Query | When data becomes available |
 | --- | --- | --- | --- |
@@ -40,23 +36,23 @@ The Backend-for-Frontend guide adds the orthogonal reason — data the server si
 | Suspense loading states | `useSWR` with `suspense: true` | `useSuspenseQuery` | Browser request after hydration |
 | Provided by the server | `<SWRConfig fallback>` | `<HydrationBoundary>` | Initial render or streamed from server |
 
-> *"Use inline loading states when each component should render its own loading UI. Use Suspense to define loading UI at a boundary and coordinate which parts of the interface reveal together or progressively."*
+Inline loading states are the right choice when each component should render its own loading UI. Suspense is the right choice when you want the loading UI defined at a boundary, so you can coordinate which parts of the interface reveal together and which reveal progressively.
 
-> *"Suspense coordinates rendering, while the data library and component structure determine when requests start."*
+The sentence that matters most, though, is the one drawing the line between the two responsibilities: Suspense coordinates *rendering*, while the data library and your component structure determine *when requests start*.
 
 That last sentence separates two things people conflate. Suspense decides *what the user sees while waiting*; it does not decide *when the request goes out*. Putting two reads behind one boundary does not make them parallel — component structure does.
 
-> *"For browser-driven interactions such as autocomplete, you can use either client-only pattern. The initial result waits for hydration and a browser request, which is often the right tradeoff for data that is not needed until an interaction."*
+For browser-driven interactions — autocomplete is the docs' example — either of the two client-only patterns works. The first result does have to wait for hydration and then a browser request, and the guide's judgement is that this is often the right tradeoff precisely because the data is not needed until the user interacts.
 
 And the third pattern, which is the interesting one:
 
-> *"Provide initial data from a Server Component when the server knows what the initial render needs. The value can be included in the initial render or streamed through Suspense. The library receives it in the React Server Component payload and can continue managing it in the browser."*
+Provide the initial data from a Server Component whenever the server already knows what the initial render needs. That value can either be included in the initial render or streamed in through Suspense. Either way, the library receives it inside the React Server Component payload and carries on managing it in the browser from there.
 
 The server hands over a value; the library takes ownership from there. That handoff is where all the subtlety lives, and it is what the next two pages are about.
 
 ## Three caches, once Cache Components is on
 
-> *"Providing initial data and caching it on the server are independent choices. Add Cache Components when the server read or rendered view should be reused."*
+Providing initial data and caching that data on the server are two separate decisions, and the docs are careful to keep them apart. You add Cache Components when the server read, or the rendered view it produced, is something that ought to be reused — not merely because a Client Component wanted a head start.
 
 | Layer | What it stores | Freshness control |
 | --- | --- | --- |
@@ -64,11 +60,9 @@ The server hands over a value; the library takes ownership from there. That hand
 | Next.js client cache | React Server Component payloads for visited and prefetched routes | `cacheLife` `stale` |
 | Client data-fetching library | Browser data stored under an SWR key or TanStack query key | The library's revalidation options and mutations |
 
-> *"Next.js prefetching can place a route's React Server Component payload in the client cache before navigation."*
+That middle layer fills itself: Next.js prefetching can put a route's React Server Component payload into the client cache before the user has navigated anywhere.
 
-And the rule that governs all three:
-
-> *"The cache layers keep independent freshness policies and do not need matching durations. Cache identities and mutation invalidation must stay coordinated across layers."*
+And the rule that governs all three is that the layers keep independent freshness policies and are not required to have matching durations — but cache *identities*, and the invalidation a mutation performs, must stay coordinated across all of them.
 
 Read that twice, because it is counter-intuitive in a useful way. **Durations do not need to match** — a server cache measured in hours and a browser `staleTime` measured in seconds are a perfectly coherent pair. **Identities do.** If the server tags data as `product:42` and the browser keys it as `/api/products/42`, a mutation has to know both, and the two strings have to be derivable from the same source of truth or they will drift.
 
@@ -76,11 +70,11 @@ The cache directives themselves — plain `'use cache'`, `'use cache: remote'` a
 
 ## Coordinating mutations
 
-> *"**Server Components** provide the initial data, scoped to the segment that owns it. · **The data-fetching library** stores the browser value under a shared cache identity. · **Mutations** can update the browser cache immediately and invalidate cached server data so the next render can read a fresh value."*
+The docs divide the responsibility three ways. **Server Components** supply the initial data, scoped to the route segment that owns it. **The data-fetching library** holds the browser's copy under a shared cache identity. **Mutations** do two things at once — update the browser cache immediately, and invalidate the cached server data so that the next render reads a fresh value.
 
-> *"An optimistic update should restore the previous browser value if the write fails. If the server read is not cached, there is no server tag to invalidate."*
+Two conditions attach to that. An optimistic update must be able to restore the previous browser value if the write fails. And if the server read was not cached in the first place, there is simply no server tag there to invalidate.
 
-That second sentence is the one that saves an afternoon. `updateTag` on a read that was never wrapped in a cached scope does nothing at all — successfully, silently.
+That last clause is the one that saves an afternoon. `updateTag` on a read that was never wrapped in a cached scope does nothing at all — successfully, silently.
 
 ### Choosing an invalidation call
 
@@ -110,22 +104,22 @@ The guide's default is explicit: pass the promise and unwrap it with `use()`. A 
 Pending feedback, optimistic UI and transitions are React and Server Function concerns. A client cache does not make a mutation feel faster; `useOptimistic` and a transition do. Installing SWR to fix a sluggish button is solving the wrong layer.
 
 **★ Assuming Suspense makes two reads parallel.**
-*"Suspense coordinates rendering, while the data library and component structure determine when requests start."* Two sequential reads inside one component are still sequential behind a boundary. Parallelism comes from putting independent reads in sibling components.
+Suspense coordinates rendering; the data library and your component structure are what determine when requests start. Two sequential reads inside one component are still sequential behind a boundary. Parallelism comes from putting independent reads in sibling components.
 
 **★ Trying to make the three cache layers agree on durations.**
-They are independent by design, and the docs say so: *"The cache layers keep independent freshness policies and do not need matching durations."* Matching a browser `staleTime` to a server `cacheLife` is effort spent producing a constraint nobody needed. What must agree is identity.
+They are independent by design, and the docs say so — the layers keep their own freshness policies and are not expected to have matching durations. Matching a browser `staleTime` to a server `cacheLife` is effort spent producing a constraint nobody needed. What must agree is identity.
 
 **★ Letting the server tag and the browser key drift apart.**
 The server invalidates `product:42`; the browser caches under `/api/products/42`. Nothing enforces a relationship between those two strings, so a rename on one side silently breaks invalidation on the other. Derive both from one shared module — the pattern both library guides converge on.
 
 **★ Calling `updateTag` on data that was never cached.**
-*"If the server read is not cached, there is no server tag to invalidate."* The call succeeds and changes nothing, so the next render reads the same uncached value it would have read anyway — which is fine — while you believe you have wired up invalidation, which is not.
+If the server read is not cached, there is no server tag for the call to invalidate. The call succeeds and changes nothing, so the next render reads the same uncached value it would have read anyway — which is fine — while you believe you have wired up invalidation, which is not.
 
 **★ Using `revalidateTag(tag, 'max')` for the writer's own update.**
 It serves stale data while revalidating, so the user who just clicked sees their change missing on the next render. That is the correct behaviour for passive updates and the wrong behaviour for the person who made the change. `updateTag` makes the next read wait for fresh data.
 
 **★ Firing an optimistic update with no rollback path.**
-*"An optimistic update should restore the previous browser value if the write fails."* Without rollback, a failed write leaves the browser cache asserting something the server never accepted, and the divergence survives until something else revalidates that key — potentially never.
+The docs make restoring the previous browser value on a failed write part of what an optimistic update *is*. Without rollback, a failed write leaves the browser cache asserting something the server never accepted, and the divergence survives until something else revalidates that key — potentially never.
 
 **★ Fetching from your own Route Handler inside a Server Component to feed the library.**
 A Server Component must read from the source directly; fetching its own handler fails a prerendered build and costs a round trip when dynamic. Provide initial data by calling the same function the handler calls. The handler stays for the browser, which genuinely needs a URL.
@@ -145,13 +139,13 @@ Inline loading states (`useSWR` / `useQuery`), where each component renders its 
 The Next.js server cache, holding cached data and Server Component output, controlled by `cacheLife`'s `revalidate` and `expire`. The Next.js client cache, holding RSC payloads for visited and prefetched routes, controlled by `cacheLife`'s `stale`. And the data library's own browser cache, keyed by an SWR key or a TanStack query key, controlled by that library's revalidation options and mutations.
 
 **★ Must those layers share freshness durations?**
-No, and trying to make them is wasted effort: *"The cache layers keep independent freshness policies and do not need matching durations."* What must be coordinated is *identity* — the server tag and the browser key — and mutation invalidation, so that a write updates every layer that holds the affected value.
+No, and trying to make them is wasted effort — the docs state that the layers hold independent freshness policies and do not need matching durations. What must be coordinated is *identity* — the server tag and the browser key — and mutation invalidation, so that a write updates every layer that holds the affected value.
 
 **★ Compare `updateTag`, `revalidateTag(tag, 'max')` and `revalidateTag(tag, { expire: 0 })`.**
 `updateTag` is for a Server Action whose change must be visible immediately; the next server read waits for fresh data. `revalidateTag(tag, 'max')` is for passive updates where stale data is acceptable; the next read serves stale while revalidating in the background. `revalidateTag(tag, { expire: 0 })` is for a webhook or external system that requires immediate expiration; the next read waits. The choice is really "is someone waiting for this specific change".
 
 **★ You call `updateTag` after a mutation and nothing refreshes. What are the two causes?**
-Either the server read was never inside a cached scope, so there is no tag to update — the docs say plainly that *"If the server read is not cached, there is no server tag to invalidate"* — or the tag string used at write time differs from the one used at read time. Both fail silently, which is why both guides recommend defining the key and the tag once in a shared contract module.
+Either the server read was never inside a cached scope, so there is no tag to update — the docs say plainly that an uncached server read leaves no server tag to invalidate — or the tag string used at write time differs from the one used at read time. Both fail silently, which is why both guides recommend defining the key and the tag once in a shared contract module.
 
 **★ Does Suspense make independent reads run in parallel?**
 No. Suspense coordinates what the user sees while waiting; it does not change when requests start. Component structure does: independent reads in sibling components start in parallel, while multiple reads inside a single component run sequentially. Both library guides repeat this warning about their own Suspense hooks.

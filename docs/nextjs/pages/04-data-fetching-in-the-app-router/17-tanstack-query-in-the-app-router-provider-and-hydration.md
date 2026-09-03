@@ -38,9 +38,7 @@ export function Providers({ children }: { children: ReactNode }) {
 }
 ```
 
-> *"Create a new query client for each server render and reuse one query client in the browser."*
-
-The comment in the documented code states both halves: *"Keep server requests isolated and preserve the browser cache across renders."*
+The rule has two halves: create a **new** query client for every server render, and reuse **one** query client in the browser. The comment carried in the documented code explains why each half exists — isolating server requests from one another, and preserving the browser cache across renders.
 
 Both halves are load-bearing and they fail in opposite directions.
 
@@ -58,13 +56,13 @@ export default function Layout({ children }: LayoutProps<'/products'>) {
 }
 ```
 
-> *"Render the provider from the nearest shared layout."*
+The placement instruction is to render the provider from the *nearest shared layout* — the closest layout that all the consuming routes have in common.
 
 Nearest, not root. A provider in the root layout gives every route in the application a query client whether or not it uses one.
 
 ## Client fetching with `useQuery`
 
-> *"Use `useQuery` when the component should render its own loading and error states. The `enabled` option delays the request until the interaction provides an input"*
+Reach for `useQuery` when the component itself should render its own loading and error states rather than delegating them to a boundary. The `enabled` option is the deferral mechanism: it holds the request back until the interaction has actually provided an input to query with.
 
 ```tsx filename="app/product-autocomplete.tsx"
 'use client'
@@ -142,15 +140,12 @@ function ProductResults({ query }: { query: string }) {
 }
 ```
 
-> *"Keep the interactive shell outside the boundary so it remains available while the results load."*
+Four things the docs establish about this shape. The interactive shell stays outside the Suspense boundary, so it remains available to the user while the results are loading. Errors are not returned from the hook: if the initial request fails, `useSuspenseQuery` propagates the error to the nearest error boundary. Once a query has data, subsequent refetches of the same query keep the cached data rendered instead of falling back to the Suspense fallback again — which means background-refresh feedback has to come from `isFetching`, because the fallback will not reappear to signal it.
 
-> *"If the initial request fails, `useSuspenseQuery` propagates the error to the nearest error boundary."*
-
-> *"After a query has data, later refetches for the same query keep the cached data rendered instead of showing the Suspense fallback again. Use `isFetching` to provide background refresh feedback."*
-
-> *"**Good to know:** Multiple `useSuspenseQuery` calls in one component run sequentially. Put independent queries in sibling components, or use `useSuspenseQueries`."*
+And the one that governs structure rather than appearance: multiple `useSuspenseQuery` calls inside a single component run sequentially. Independent queries belong in sibling components, or in a single `useSuspenseQueries` call.
 
 `useSuspenseQuery` has no `enabled` option in this pattern — the guard is the early `return null` before the boundary. There is no "suspended but disabled" state; a suspense query either runs or is not rendered.
+
 ## Gotchas
 
 **★ A module-level `QueryClient` shared by every server render.**
@@ -160,7 +155,7 @@ On the server, one client per process is shared across concurrent requests, so t
 The mirror-image mistake. Recreating the client on each render of the provider throws away the cache continuously, so every navigation refetches everything and the library provides nothing but overhead. `browserQueryClient ??= new QueryClient()` creates it exactly once per session.
 
 **★ Rendering the provider from the root layout.**
-The guide says to render it *"from the nearest shared layout"*. A root provider gives every route a query client and a client-component boundary it may not need, and makes an unrelated feature's provider configuration part of the application shell.
+The guide says to render it from the nearest shared layout, not from the top of the tree. A root provider gives every route a query client and a client-component boundary it may not need, and makes an unrelated feature's provider configuration part of the application shell.
 
 **★ Multiple `useSuspenseQuery` calls in one component.**
 They run sequentially, producing a request waterfall. Move independent queries into sibling components, or use `useSuspenseQueries`. This is the same warning the SWR guide gives about its own Suspense mode, and it catches people equally often.

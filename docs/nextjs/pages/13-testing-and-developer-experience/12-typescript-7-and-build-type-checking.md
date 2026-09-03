@@ -14,9 +14,9 @@ description: "Why next build uses the project-local tsc CLI by default in 16.3, 
 
 ## The state of play in 16.3
 
-> *"By default, `next build` runs the project-local `tsc` command instead of loading the TypeScript JavaScript compiler API. This supports TypeScript 6 and enables TypeScript 7 while its JavaScript API is unavailable."*
+By default, `next build` runs the project-local `tsc` command rather than loading the TypeScript JavaScript compiler API. The docs give both reasons for that choice in one sentence: it supports TypeScript 6, and it enables TypeScript 7 while that version's JavaScript API is unavailable.
 
-> *"Next.js uses the project-local `tsc` CLI by default, so no additional configuration is required. To use the JavaScript compiler API instead, set `experimental.useTypeScriptCli` to `false`."*
+Because the CLI is the default, the reference is explicit that no additional configuration is required to get it. The only configuration in this area moves you the other way — setting `experimental.useTypeScriptCli` to `false` is what asks Next.js to use the JavaScript compiler API instead.
 
 Adoption is therefore one command:
 
@@ -28,17 +28,13 @@ pnpm add -D typescript@^7
 npm install -D typescript@^7
 ```
 
-The release blog frames the payoff:
-
-> *"Typescript 7 was released last month, which is a 10x faster native port of TypeScript with much faster type checking."*
+The release blog frames the payoff in a single line: TypeScript 7, released the month before 16.3, is a 10x faster native port of TypeScript with much faster type checking.
 
 That figure is Microsoft's for the compiler itself, not a Next.js benchmark of your build. What Next.js claims is narrower — that `next build` *can* use TypeScript 7 for type checking — and the share of your build that is type checking decides how much of the compiler's speedup you actually see.
 
 ## The floor did not move
 
-Next.js 16's minimum is still TypeScript **5.1.0**:
-
-> *"TypeScript 5+ | Minimum version now `5.1.0`"*
+Next.js 16's minimum is still TypeScript **5.1.0**. The upgrade guide's requirements table lists TypeScript 5+ with the minimum version now at `5.1.0`, and nothing in 16.3 changed that.
 
 So TypeScript 7 is a per-project choice, not a framework requirement. The CLI checker is what makes both ends of that range work through one code path.
 
@@ -46,27 +42,19 @@ So TypeScript 7 is a per-project choice, not a framework requirement. The CLI ch
 
 Four behaviours, from the reference, each with a practical consequence.
 
-**Next.js still does its own preparation.**
-
-> *"Next.js continues to generate `next-env.d.ts` and route types and to apply its recommended `tsconfig` settings before running the checker."*
+**Next.js still does its own preparation.** The reference is specific about what survives the switch: Next.js continues to generate `next-env.d.ts` and the route types, and to apply its recommended `tsconfig` settings, before it runs the checker at all.
 
 So `PageProps`, `LayoutProps` and `RouteContext` are still generated before `tsc` runs; the CLI checker does not bypass typegen.
 
-**Diagnostics come straight from `tsc`.**
-
-> *"TypeScript diagnostics are printed directly from `tsc`. Next.js-specific code frames and error rewriting are not applied."*
+**Diagnostics come straight from `tsc`.** TypeScript's diagnostics are printed directly from the compiler, and the reference names what is dropped in the process: Next.js-specific code frames and error rewriting are not applied.
 
 This is the real ergonomic cost. Errors about a page's props or a route handler's context arrive as plain TypeScript diagnostics rather than the framework-annotated messages that explained *why* a page's signature has to look a particular way.
 
-**The checked file set is wider than it used to be.**
-
-> *"The complete project selected by the configured `tsconfig` file is checked, including test files and `.next/dev/types` when included."*
+**The checked file set is wider than it used to be.** What gets checked is the complete project selected by the configured `tsconfig` file — and the reference calls out two categories people do not expect: test files, and `.next/dev/types` where that is included.
 
 A monorepo or an app whose `tsconfig.json` includes `**/*.ts` now type-checks its Playwright specs, its Jest helpers and its mocks as part of `next build`. Nothing is wrong with that — it is arguably what you wanted all along — but it can turn a previously-green build red on code the build never used to look at.
 
-**`--debug-build-paths` no longer narrows it.**
-
-> *"The `--debug-build-paths` option does not limit this set and produces a warning when combined with the CLI checker."*
+**`--debug-build-paths` no longer narrows it.** The reference says the option does not limit that file set, and that combining it with the CLI checker produces a warning.
 
 ## The two escape hatches, and what each one skips
 
@@ -97,7 +85,7 @@ export default nextConfig
 
 This is the honest tool for the "the build checks shared dependencies that do not meet our standards" problem, and for staged migrations to stricter settings: the editor stays strict via `tsconfig.json` while the production build uses the relaxed project.
 
-`typescript.ignoreBuildErrors` skips type checking entirely — *"including the CLI checker"* — and the docs' own warning is unusually direct:
+`typescript.ignoreBuildErrors` skips type checking entirely, and the reference is careful to say that the CLI checker is included in what gets skipped:
 
 ```ts title="next.config.ts"
 const nextConfig: NextConfig = {
@@ -111,15 +99,15 @@ const nextConfig: NextConfig = {
 }
 ```
 
-> *"If disabled, be sure you are running type checks as part of your build or deploy process, otherwise this can be very dangerous."*
+The docs' own warning about that option is unusually direct: if you disable type checking, be sure you are running type checks somewhere else in your build or deploy process, because otherwise this can be very dangerous.
 
 The narrower version of that advice is worth adopting regardless: run `tsc --noEmit` as its own CI step so type errors have a named, fast-failing job rather than hiding inside the build.
 
 ## Type generation is a build step, not a package
 
-`next-env.d.ts` and the route-aware helpers are generated by `next dev`, `next build` or `next typegen`. A CI job that type-checks before any of those has run will fail on missing globals. `next-env.d.ts` is also explicitly not yours to keep:
+`next-env.d.ts` and the route-aware helpers are generated by `next dev`, `next build` or `next typegen`. A CI job that type-checks before any of those has run will fail on missing globals.
 
-> *"`next-env.d.ts` is managed by Next.js. Its contents are an implementation detail and may change over time. Add it to `.gitignore`. If your project already tracks the file, remove it from Git. Do not edit this file manually."*
+`next-env.d.ts` is also explicitly not yours to keep. The docs state that the file is managed by Next.js, that its contents are an implementation detail which may change over time, and that it should be added to `.gitignore`. If your project already tracks it, the instruction is to remove it from Git — and never to edit it by hand.
 
 For the typed-routes and `typedEnv` side of this, see [03 · Type safety as testing](03-type-safety-as-testing-strict-ts-config-typed-routes-zod-con.md).
 
@@ -129,9 +117,7 @@ For the typed-routes and `typedEnv` side of this, see [03 · Type safety as test
 The CLI checker is already the default in 16.3. Nothing needs enabling to use TypeScript 7 — you install it and `next build` picks up the project-local binary. Adding `useTypeScriptCli: true` to a config is harmless and misleading; the value that changes behaviour is `false`.
 
 **★ `useTypeScriptCli: false` while on TypeScript 7 makes the build exit.**
-> *"If you opt out while using TypeScript 7, `next build` exits because the TypeScript JavaScript compiler API is unavailable."*
-
-TypeScript 7 does not currently provide that API, so there is nothing for Next.js to load. The realistic path into this is a config that predates the upgrade, or someone opting out to get the friendlier Next.js error formatting back without noticing the dependency bump landed in the same release train.
+The reference states the outcome without hedging: *"If you opt out while using TypeScript 7, `next build` exits because the TypeScript JavaScript compiler API is unavailable."* TypeScript 7 does not currently provide that API, so there is nothing for Next.js to load. The realistic path into this is a config that predates the upgrade, or someone opting out to get the friendlier Next.js error formatting back without noticing the dependency bump landed in the same release train.
 
 **★ Turning on the CLI checker turns on type-checking for your test files.**
 The checker covers the complete project selected by your `tsconfig`, including test files and `.next/dev/types` where included. If your specs were previously only checked by an editor or a separate `tsc` run with different settings, `next build` may now fail on them. That is a legitimate finding, but it arrives as a build failure in whatever pull request happens to be next, which is a bad moment to discover it. Run `tsc --noEmit` over the same project before you upgrade.
@@ -143,12 +129,10 @@ Diagnostics are printed straight from `tsc`. Errors on page props, layout props 
 People reach for it precisely when a build is slow or failing broadly. It limits build paths, not the type-check file set, and combining it with the CLI checker produces a warning. Use `typescript.tsconfigPath` with a narrower project if you genuinely need a smaller check.
 
 **★ `ignoreBuildErrors` disables the CLI checker too, and hides the problem completely.**
-It is not "check but do not fail" — it skips the step. A repository that sets it and has no separate `tsc --noEmit` job has no type checking in CI at all, while still looking like it does because the build is green. If you set it, add the standalone check in the same commit.
+It is not "check but do not fail" — it skips the step, and the docs say the CLI checker is included in that. A repository that sets it and has no separate `tsc --noEmit` job has no type checking in CI at all, while still looking like it does because the build is green. If you set it, add the standalone check in the same commit.
 
 **★ Only `tsconfig.json` is watched in development.**
-> *"In development, only `tsconfig.json` is watched for changes. If you edit a different file name via `typescript.tsconfigPath`, restart the dev server to apply changes."*
-
-Editing `tsconfig.build.json` and seeing nothing change is not a caching bug.
+The reference spells out the limit and the workaround together: in development only `tsconfig.json` is watched for changes, so if you point `typescript.tsconfigPath` at a differently-named file you have to restart the dev server for edits to it to apply. Editing `tsconfig.build.json` and seeing nothing change is not a caching bug.
 
 **★ A fresh clone that runs `tsc` before `next typegen` fails on generated globals.**
 `next-env.d.ts`, `PageProps`, `LayoutProps` and `RouteContext` are produced by `next dev`, `next build` or `next typegen`. Put `next typegen` immediately before the type-check step in CI. And do not commit `next-env.d.ts` — it is managed by Next.js, its contents are an implementation detail, and it should be gitignored.
