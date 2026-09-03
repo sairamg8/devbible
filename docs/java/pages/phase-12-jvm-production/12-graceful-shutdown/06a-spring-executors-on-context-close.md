@@ -52,7 +52,7 @@ while ongoing tasks are being completed. If you want this executor to block and 
 termination of tasks before the rest of the container continues to shut down — for example, in order
 to keep up other resources that your tasks may need —, set the `awaitTerminationSeconds` property
 instead of or in addition to this property."* Without it, the pool is torn down while the connection
-pool it needs (**07** *(not written yet)*) is next in line.
+pool it needs ([07](07-connection-pools.md)) is next in line.
 
 ## The coordinated stop phase, and how you opt out of it
 

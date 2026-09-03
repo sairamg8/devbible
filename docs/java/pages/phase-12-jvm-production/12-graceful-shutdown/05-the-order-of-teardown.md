@@ -40,7 +40,7 @@ before requests have finished.** Every bug in this topic is a violation of that 
 and if it stops in the same phase as — or earlier than — the web layer, in-flight requests fail
 on `getConnection()`. ⚠️ The symptom is a burst of pool-related exceptions *during* shutdown,
 which looks like a pool problem and is an ordering problem
-(**07** *(not written yet)*).
+([07](07-connection-pools.md)).
 
 **Stopping the executor the web layer is waiting on.** Async handlers finish on an executor
 ([04b](04b-what-graceful-actually-drains.md)). Stop it early and the drain waits for work that

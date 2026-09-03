@@ -82,7 +82,7 @@ property that fixes it is one line.
 **★ Ten seconds is a cap on waiting, not a promise of finishing.** When it expires, `stop()`
 returns and the context carries on closing — while the consumer thread may still be inside your
 listener, now racing a `DataSource` that is about to be closed
-(**07 · Connection pools** *(not written yet)*).
+([07 · Connection pools](07-connection-pools.md)).
 
 ## Why the offset is the thing that matters
 
