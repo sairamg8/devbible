@@ -251,4 +251,4 @@ an API boundary, `raise TypeError`.
 
 ---
 
-← Prev: [Traceback objects](09-traceback-objects.md) · Index: [Exceptions](README.md) · Next → [`suppress`, warnings and the explicit ignore](11-suppress-and-warnings.md)
+← Prev: [Traceback objects](09-traceback-objects.md) · Index: [Exceptions](README.md) · Next → **`suppress`, warnings and the explicit ignore** *(not written yet)*
