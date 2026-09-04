@@ -49,7 +49,7 @@ The reference manual lists five claims for an executable produced by Native Imag
 > *- Can be packaged into a lightweight container image for fast and efficient deployment*
 > *- Presents a reduced attack surface"*
 
-⚠️ **"Delivers peak performance immediately, with no warmup" is not the same claim as "delivers a warmed JVM's peak performance."** It says the binary reaches *its own* ceiling at once. Whether that ceiling is above or below a warmed HotSpot depends on the workload and on which GraalVM distribution you built with — [07c](07c-getting-throughput-back.md) is the honest version of that sentence and it is the single most over-read line in GraalVM's documentation.
+⚠️ **"Delivers peak performance immediately, with no warmup" is not the same claim as "delivers a warmed JVM's peak performance."** It says the binary reaches *its own* ceiling at once. Whether that ceiling is above or below a warmed HotSpot depends on the workload and on which GraalVM distribution you built with — **07c · Getting throughput back** *(not written yet)* is the honest version of that sentence and it is the single most over-read line in GraalVM's documentation.
 
 Spring Boot's reference frames the same thing from the deployment side:
 
@@ -73,7 +73,7 @@ The benefit is proportional to **how often you pay start-up** and **how many cop
 
 And the list where it is not:
 
-- **A long-lived service under sustained load.** It starts once a week. Start-up is not on anyone's critical path, and you traded a warmed JIT for a compiler's static guess. See [09](09-when-it-pays.md).
+- **A long-lived service under sustained load.** It starts once a week. Start-up is not on anyone's critical path, and you traded a warmed JIT for a compiler's static guess. See **09 · When it pays** *(not written yet)*.
 - **A service whose start-up is dominated by I/O.** Connection pools, schema migrations, remote configuration fetches and cache warming still happen at run time in a native image, exactly as they do on a JVM. Native image removes *class loading and initialisation*; it does not remove *your* initialisation. If half your start-up budget is Flyway, you will halve at best.
 - **A service with a large dynamic surface.** Heavy reflection, bytecode generation, plugin class loading, or a dependency that does any of these without shipping metadata. The cost lands as build failures and, worse, as run-time failures that do not reproduce on the JVM ([03](03-what-breaks.md)).
 - **Anything where the fix is "make start-up smaller".** Deferring work off the start-up path, dropping unused auto-configuration and not eagerly opening pools are free, reversible and often bigger. Try them first.
@@ -105,7 +105,7 @@ Not "is native image faster". The decision is: **are you willing to convert a cl
 
 **★ Symptom: the native build is adopted to fix a start-up problem, and start-up barely moves.** Cause: the start-up budget was dominated by I/O — pool creation, migrations, remote config — not by class loading. Native image removes *class loading and initialisation of the framework*, not your own work at run time. Fix: measure the budget first. Time from process start to "Spring context refreshed" versus context-refreshed to "ready" tells you which half you are attacking; only the first half is native image's to take.
 
-**★ Symptom: "peak performance immediately, with no warmup" is read as "faster than a warmed JVM".** Cause: the sentence is about *warm-up curve shape*, not about the ceiling. Fix: read it as "the curve is flat from t=0", then ask separately how high the flat line is — which is [07c](07c-getting-throughput-back.md), and which depends on the distribution you built with.
+**★ Symptom: "peak performance immediately, with no warmup" is read as "faster than a warmed JVM".** Cause: the sentence is about *warm-up curve shape*, not about the ceiling. Fix: read it as "the curve is flat from t=0", then ask separately how high the flat line is — which is **07c · Getting throughput back** *(not written yet)*, and which depends on the distribution you built with.
 
 **★ Symptom: a native binary built on a developer laptop will not run on the deployment host.** Cause: *"A GraalVM Native Image is a complete, platform-specific executable"*, and Spring Boot's reference notes that `native-image` **does not support cross-compilation**. Fix: build in a container that matches the target OS, architecture and libc, or use buildpacks, which do exactly that for you — see [06](06-building-one.md).
 

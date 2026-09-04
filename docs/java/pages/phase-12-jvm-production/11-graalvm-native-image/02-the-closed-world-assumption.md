@@ -150,7 +150,7 @@ That is the trade in one line. Closure is not bureaucracy; it is the mechanism t
 
 ## Gotchas
 
-**★ Symptom: a code path that works on the JVM throws at run time in the native binary, and only under one input.** Cause: the path was not reachable from `main` through statically resolvable calls, so it is not in the binary; you only hit it with the input that reaches it. Fix: this is not a bug to be debugged in isolation — it is the closed world. Either make the target constant so the analysis sees it, or register metadata ([03b](03b-reachability-metadata.md)), and make your native test suite exercise the path ([08](08-testing-a-native-image.md)).
+**★ Symptom: a code path that works on the JVM throws at run time in the native binary, and only under one input.** Cause: the path was not reachable from `main` through statically resolvable calls, so it is not in the binary; you only hit it with the input that reaches it. Fix: this is not a bug to be debugged in isolation — it is the closed world. Either make the target constant so the analysis sees it, or register metadata ([03b](03b-reachability-metadata.md)), and make your native test suite exercise the path (**08 · Testing a native image** *(not written yet)*).
 
 **★ Symptom: the build succeeds but the produced artefact will not run without a JVM.** Cause: a fallback file — *"If the `native-image` builder is unable to optimize an application at build time, it generates a so-called "fallback file" that requires a Java VM to run."* Fix: treat "did we get a real native executable" as an explicit CI assertion, not an assumption. Run the produced binary in the JVM-free base image you actually deploy to, in the same pipeline that built it; a fallback file fails there immediately and loudly.
 

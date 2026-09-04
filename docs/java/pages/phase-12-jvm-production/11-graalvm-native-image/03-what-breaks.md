@@ -165,7 +165,7 @@ static Path materialise(String resourceName) throws IOException {
 
 **★ Symptom: `-Djava.security.manager` in the run command changes nothing.** Cause: `System.getSecurityManager()` *"always returns `null`"* in a native image. Fix: whatever the manager was enforcing has to move somewhere real — OS-level sandboxing, container capabilities, or code-level checks. Do not ship a binary that believes it is sandboxed.
 
-**★ Symptom: an APM agent, a profiler or a coverage tool attaches and reports nothing.** Cause: JVMTI is not supported, because there is no bytecode at run time. Fix: use JFR (`--enable-monitoring=jfr`), `jcmd`, heap dumps, NMT and `perf`, all covered in [07b](07b-no-jit-no-jfr-no-jstack.md). For coverage, measure it on the JVM test run — which is where you should be running the bulk of your tests anyway ([08](08-testing-a-native-image.md)).
+**★ Symptom: an APM agent, a profiler or a coverage tool attaches and reports nothing.** Cause: JVMTI is not supported, because there is no bytecode at run time. Fix: use JFR (`--enable-monitoring=jfr`), `jcmd`, heap dumps, NMT and `perf`, all covered in [07b](07b-no-jit-no-jfr-no-jstack.md). For coverage, measure it on the JVM test run — which is where you should be running the bulk of your tests anyway (**08 · Testing a native image** *(not written yet)*).
 
 **★ Symptom: a build command copied from an article fails on `--enable-http`.** Cause: *"The `--enable-http`, `--enable-https`, and `--enable-url-protocols` options are deprecated. Use reachability metadata instead."* Fix: delete them and let metadata handle URL protocols; the URL Protocols page in the reference covers the current mechanism.
 

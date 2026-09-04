@@ -83,7 +83,7 @@ and names the two configurations that make it likely:
 
 > *"Native Image compilation is memory-intensive, particularly when building large projects or when using `-H:Preserve=all` or `--pgo-instrument`."*
 
-**Both of those are discovery-mode settings** ([03b](03b-reachability-metadata.md), [07c](07c-getting-throughput-back.md)). If your *normal* build needs them, you have a metadata problem or a profiling workflow problem, not a memory problem.
+**Both of those are discovery-mode settings** ([03b](03b-reachability-metadata.md), **07c · Getting throughput back** *(not written yet)*). If your *normal* build needs them, you have a metadata problem or a profiling workflow problem, not a memory problem.
 
 ## Making it faster
 
@@ -104,7 +104,7 @@ The pipeline shape that survives contact with a real team:
 | Trigger | What runs | Why |
 |---|---|---|
 | Every commit / PR | JVM build + full JVM test suite | Fast feedback; this is where correctness is established |
-| Every commit / PR | JVM run with `-Dspring.aot.enabled=true` | Cheap proof that the AOT-generated context is valid ([08](08-testing-a-native-image.md)) |
+| Every commit / PR | JVM run with `-Dspring.aot.enabled=true` | Cheap proof that the AOT-generated context is valid (**08 · Testing a native image** *(not written yet)*) |
 | Merge to main, or nightly | Native build + `nativeTest` with `-XX:MissingRegistrationReportingMode=Exit` | Catches metadata gaps without gating every push |
 | Release | Native build on the target platform, then run the binary in the deployment image | The only thing that proves you did not produce a fallback file |
 
@@ -130,7 +130,7 @@ Spring Boot's own testing guidance points the same way:
 
 **★ Symptom: the team tries to cache the native build between CI runs and it never hits.** Cause: whole-program analysis is not incremental; there is no documented incremental mode. Fix: cache the *Maven or Gradle* dependency resolution and the JVM build outputs, which do cache, and accept that the `native-image` step is full every time. The lever is reachability, not caching.
 
-**★ Symptom: PGO is adopted and CI time roughly doubles.** Cause: the PGO workflow is two builds plus a representative run — `--pgo-instrument`, then execute, then `--pgo` — and the reference notes the instrumented build is memory-intensive. Fix: run the PGO pipeline on a schedule for release candidates, not per commit, and store the `.iprof` profile as a build artefact so the optimised build can be reproduced without redoing the instrumented run ([07c](07c-getting-throughput-back.md)).
+**★ Symptom: PGO is adopted and CI time roughly doubles.** Cause: the PGO workflow is two builds plus a representative run — `--pgo-instrument`, then execute, then `--pgo` — and the reference notes the instrumented build is memory-intensive. Fix: run the PGO pipeline on a schedule for release candidates, not per commit, and store the `.iprof` profile as a build artefact so the optimised build can be reproduced without redoing the instrumented run (**07c · Getting throughput back** *(not written yet)*).
 
 **★ Symptom: nightly native builds have been failing for weeks and nobody noticed.** Cause: it is not gating anything, so nothing is on fire. Fix: alert on it like a production job. A native pipeline that is red by default gives you all the cost of native image and none of the assurance.
 

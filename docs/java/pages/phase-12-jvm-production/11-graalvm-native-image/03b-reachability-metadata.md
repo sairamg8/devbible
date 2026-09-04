@@ -137,7 +137,7 @@ Two run-time switches come with it, and they are the most useful diagnostic pair
 
 > *"To detect places where the application accidentally ignores a missing registration error (with `catch (Throwable t)` blocks), pass `-XX:MissingRegistrationReportingMode=Exit` when starting the application. The application will then unconditionally print the error message with the stack trace and exit immediately. This behavior is ideal for running application tests to guarantee all metadata is included."*
 
-🔴 **`Exit` in CI, `Warn` when you are investigating.** A `catch (Throwable)` somewhere in a framework can convert a missing registration into a fallback path that "works" until the day it does not, and `Exit` is the only thing that finds it. Put it on the native test run ([08](08-testing-a-native-image.md)).
+🔴 **`Exit` in CI, `Warn` when you are investigating.** A `catch (Throwable)` somewhere in a framework can convert a missing registration into a fallback path that "works" until the day it does not, and `Exit` is the only thing that finds it. Put it on the native test run (**08 · Testing a native image** *(not written yet)*).
 
 ## `-H:Preserve` — the escape hatch and its price
 

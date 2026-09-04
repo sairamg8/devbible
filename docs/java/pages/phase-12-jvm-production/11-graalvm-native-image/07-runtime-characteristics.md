@@ -50,7 +50,7 @@ The policy is documented as a deliberate footprint bias:
 
 > *"By default, the Serial GC tries to find a size for the generations that provides good throughput, but to not increase sizes further when doing so gives diminishing returns. It also tries to maintain a ratio between the time spent in young collections and in full collections to keep the footprint small."*
 
-🔴 **Non-parallel, non-concurrent, stop-the-world.** For a latency-sensitive service with a multi-gigabyte heap, that is the headline fact of this page and the strongest argument that native image plus Community Edition is the wrong shape for such a service ([09](09-when-it-pays.md)).
+🔴 **Non-parallel, non-concurrent, stop-the-world.** For a latency-sensitive service with a multi-gigabyte heap, that is the headline fact of this page and the strongest argument that native image plus Community Edition is the wrong shape for such a service (**09 · When it pays** *(not written yet)*).
 
 ## 🔴 Heap sizing: the number that will surprise you
 
@@ -133,7 +133,7 @@ GC observability is deliberately minimal:
 
 **★ Symptom: `-Xlog:gc*` produces nothing.** Cause: unified logging is HotSpot's; the native runtime has `-XX:+PrintGC` and `-XX:+VerboseGC`. Fix: use those, and for anything structured, build with `--enable-monitoring=jfr` and read the GC events in JMC — remembering that the JFR reference marks the GC events as available with Serial GC.
 
-**★ Symptom: pause times are far worse than the same application on a JVM.** Cause: Serial GC is *"simple (non-parallel, non-concurrent) stop and copy"*. A heap that G1 or ZGC handled with short concurrent phases is now collected by one thread with the world stopped. Fix: reduce the heap and the allocation rate, or move to Oracle GraalVM and `--gc=G1` on Linux, or conclude that this workload wants a JVM ([09](09-when-it-pays.md)).
+**★ Symptom: pause times are far worse than the same application on a JVM.** Cause: Serial GC is *"simple (non-parallel, non-concurrent) stop and copy"*. A heap that G1 or ZGC handled with short concurrent phases is now collected by one thread with the world stopped. Fix: reduce the heap and the allocation rate, or move to Oracle GraalVM and `--gc=G1` on Linux, or conclude that this workload wants a JVM (**09 · When it pays** *(not written yet)*).
 
 **★ Symptom: the process holds far more RSS than the live set justifies, and never gives it back.** Cause: `-XX:MaxHeapFree` governs *"maximum total size (in bytes) of free memory chunks that remain reserved for allocations after a collection and are therefore not returned to the operating system."* Fix: set it, and consider `-XX:+CollectYoungGenerationSeparately`, which the reference notes *"may reduce the memory footprint during full GCs. However, full GCs may take more time."* That is the trade, stated.
 

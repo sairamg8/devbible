@@ -90,7 +90,7 @@ plugins {
 - `imageName` — *"If a custom image name is not supplied, the artifact ID of the project will be used by default."*
 - `buildArgs` — the pass-through for any `native-image` option.
 - `mainClass` — only needed *"If the execution fails with the `no main manifest attribute, in target/<name>.jar` error"*; otherwise the plugin consults the shade, assembly and jar plugin configurations in that order.
-- `skipNativeBuild`, `skipNativeTests`, `skipTestExecution`, `failNoTests`, `debug` — the CI controls, and [08](08-testing-a-native-image.md) covers the test-specific ones.
+- `skipNativeBuild`, `skipNativeTests`, `skipTestExecution`, `failNoTests`, `debug` — the CI controls, and **08 · Testing a native image** *(not written yet)* covers the test-specific ones.
 
 **The plugin also brings the metadata repository in for free** — see [03b](03b-reachability-metadata.md) — which is most of why this route is easier than driving `native-image` yourself.
 
