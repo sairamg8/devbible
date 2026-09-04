@@ -1,7 +1,7 @@
 ---
 title: "06 — File extensions"
-sidebar_label: "06 · File extensions"
-sidebar_position: 6
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

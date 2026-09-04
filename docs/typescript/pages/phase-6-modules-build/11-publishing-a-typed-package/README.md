@@ -1,7 +1,7 @@
 ---
 title: "Publishing a typed package"
-sidebar_label: "11 · Publishing a typed package"
-sidebar_position: 11
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

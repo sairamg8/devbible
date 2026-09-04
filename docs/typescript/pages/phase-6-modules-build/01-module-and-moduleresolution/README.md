@@ -1,7 +1,7 @@
 ---
 title: "01 — `module` and `moduleResolution`"
-sidebar_label: "01 · `module` and `moduleResolution`"
-sidebar_position: 1
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-master">Master</span>

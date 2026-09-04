@@ -1,7 +1,7 @@
 ---
 title: "`skipLibCheck`"
-sidebar_label: "10 · skipLibCheck"
-sidebar_position: 10
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

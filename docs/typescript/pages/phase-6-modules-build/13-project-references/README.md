@@ -1,7 +1,7 @@
 ---
 title: "Project references and `tsc -b`"
-sidebar_label: "13 · Project references and tsc -b"
-sidebar_position: 13
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

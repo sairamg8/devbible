@@ -1,7 +1,7 @@
 ---
 title: "`isolatedDeclarations`"
-sidebar_label: "15 · isolatedDeclarations"
-sidebar_position: 15
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

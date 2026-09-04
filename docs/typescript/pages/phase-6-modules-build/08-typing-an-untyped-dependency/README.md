@@ -1,7 +1,7 @@
 ---
 title: "Typing an untyped dependency"
-sidebar_label: "08 · Typing an untyped dependency"
-sidebar_position: 8
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

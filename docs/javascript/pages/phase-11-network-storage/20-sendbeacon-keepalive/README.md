@@ -1,7 +1,7 @@
 ---
 title: "20 · `sendBeacon` and keepalive"
 sidebar_label: "Overview"
-sidebar_position: 20
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

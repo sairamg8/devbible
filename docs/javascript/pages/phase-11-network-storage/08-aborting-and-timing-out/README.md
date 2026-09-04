@@ -1,7 +1,7 @@
 ---
 title: "08 · Aborting and timing out"
 sidebar_label: "Overview"
-sidebar_position: 8
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

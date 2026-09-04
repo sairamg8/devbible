@@ -1,7 +1,7 @@
 ---
 title: "Sharing types across a monorepo"
-sidebar_label: "12 · Sharing types across a monorepo"
-sidebar_position: 12
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

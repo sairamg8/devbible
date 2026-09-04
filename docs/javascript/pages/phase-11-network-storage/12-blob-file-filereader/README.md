@@ -1,7 +1,7 @@
 ---
 title: "12 · `Blob`, `File`, `FileReader` and object URLs"
 sidebar_label: "Overview"
-sidebar_position: 12
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

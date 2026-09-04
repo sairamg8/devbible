@@ -1,7 +1,7 @@
 ---
 title: "14 · Same-origin and `postMessage`"
 sidebar_label: "Overview"
-sidebar_position: 14
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>
