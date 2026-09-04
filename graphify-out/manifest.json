@@ -9924,16 +9924,16 @@
     "semantic_hash": "03c2cef8ff142e14b3e4e9e2cbe189ae"
   },
   "src/data/progress.js": {
-    "mtime": 1788445720.1167893,
-    "seen": 1788447200.644024,
-    "ast_hash": "5da710c5052f2389d4dde9d0f4ab12b3",
+    "mtime": 1788491528.9808931,
+    "seen": 1788491627.8018565,
+    "ast_hash": "468764fc8a8ced9ad240d9e33ba80f7d",
     "semantic_hash": ""
   },
   "src/pages/index.js": {
-    "mtime": 1788158741.1058745,
-    "seen": 1788162849.3451755,
-    "ast_hash": "c5a13faad374628ae003442b9fa1601f",
-    "semantic_hash": "c5a13faad374628ae003442b9fa1601f"
+    "mtime": 1788490873.9167275,
+    "seen": 1788491627.8018587,
+    "ast_hash": "cd20fcc9de75bc7854bc0d4581e78ebd",
+    "semantic_hash": ""
   },
   "src/theme/DocSidebar/index.js": {
     "mtime": 1786613629.5171108,
@@ -14286,9 +14286,9 @@
     "semantic_hash": "c486277196373d9775bf186e235a4b04"
   },
   "docs/java/pages/README.md": {
-    "mtime": 1788340035.9578524,
-    "seen": 1788407868.6226509,
-    "ast_hash": "15e9098293efa7afc591052cfd851ae0",
+    "mtime": 1788491055.0913324,
+    "seen": 1788491627.8027685,
+    "ast_hash": "787da831a4c0260bb6071522838f648d",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-0-platform-jvm/01-what-java-is/01-source-to-bytecode.md": {
@@ -14682,10 +14682,10 @@
     "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/README.md": {
-    "mtime": 1788167421.8091304,
-    "seen": 1788259233.6403313,
-    "ast_hash": "d801218e0cb998314e6040604b960405",
-    "semantic_hash": "d801218e0cb998314e6040604b960405"
+    "mtime": 1788491055.0894952,
+    "seen": 1788491627.8049345,
+    "ast_hash": "df8403e9a8c7fede3508e4f5a1a1a949",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/README.md": {
     "mtime": 1788228474.394542,
@@ -16386,10 +16386,10 @@
     "semantic_hash": "96a67791961f5c0fa5971702f61dfbb4"
   },
   "docs/javascript/pages/phase-11-network-storage/08-aborting-and-timing-out/README.md": {
-    "mtime": 1786762502.4320798,
-    "seen": 1787902474.1752107,
-    "ast_hash": "f01c0e1ab048b2fa0c5860de2c485f36",
-    "semantic_hash": "f01c0e1ab048b2fa0c5860de2c485f36"
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8057735,
+    "ast_hash": "d4a8b5b512d24dbc0188c13650a6473b",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/09-cookies/01-the-api-and-the-attributes.md": {
     "mtime": 1786762775.4720564,
@@ -16404,10 +16404,10 @@
     "semantic_hash": "811ae1253a78ed80e672b065c36ada21"
   },
   "docs/javascript/pages/phase-11-network-storage/09-cookies/README.md": {
-    "mtime": 1786762721.429061,
-    "seen": 1787902474.1752198,
-    "ast_hash": "6c7a640bb1f69ef523c45d2f256d699e",
-    "semantic_hash": "6c7a640bb1f69ef523c45d2f256d699e"
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8057775,
+    "ast_hash": "104c60b7a3c63eedb30fcb576a2bd1d9",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/10-web-storage/01-the-api-and-what-it-costs.md": {
     "mtime": 1786762990.178038,
@@ -16422,10 +16422,10 @@
     "semantic_hash": "19f66f86709ebd0f67ad5bac2c4a85f9"
   },
   "docs/javascript/pages/phase-11-network-storage/10-web-storage/README.md": {
-    "mtime": 1786762931.7050428,
-    "seen": 1787902474.1752288,
-    "ast_hash": "6e9d31259be82e9492a7222723ac3e3d",
-    "semantic_hash": "6e9d31259be82e9492a7222723ac3e3d"
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8057802,
+    "ast_hash": "9cfc553b9567ff7cb1f4bb99684a395e",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/11-uploading-files/01-getting-the-file.md": {
     "mtime": 1786763230.404017,
@@ -16446,10 +16446,10 @@
     "semantic_hash": "806b5e073f8b10e2ff4da15bb267727d"
   },
   "docs/javascript/pages/phase-11-network-storage/11-uploading-files/README.md": {
-    "mtime": 1786763386.9411662,
-    "seen": 1787902474.1752412,
-    "ast_hash": "1fb40f41b3565b68869ae32f42a2b893",
-    "semantic_hash": "1fb40f41b3565b68869ae32f42a2b893"
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8057852,
+    "ast_hash": "7f8e465f3fdfed3b1b834213ef15cf63",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/12-blob-file-filereader/01-blob-and-file.md": {
     "mtime": 1786763514.1709926,
@@ -16464,10 +16464,10 @@
     "semantic_hash": "3337777cc87a4b5237c5df669521ca76"
   },
   "docs/javascript/pages/phase-11-network-storage/12-blob-file-filereader/README.md": {
-    "mtime": 1786763453.143998,
-    "seen": 1787902474.1752493,
-    "ast_hash": "a91598201ae2dde37b4ec7afdec643b2",
-    "semantic_hash": "a91598201ae2dde37b4ec7afdec643b2"
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8057888,
+    "ast_hash": "3011f9eda43dbe485da10529319ded5d",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/13-websocket/01-connecting.md": {
     "mtime": 1786775363.894479,
@@ -16500,10 +16500,10 @@
     "semantic_hash": "0a5658de12ab384ccb30495590f95125"
   },
   "docs/javascript/pages/phase-11-network-storage/13-websocket/README.md": {
-    "mtime": 1786775358.4811814,
-    "seen": 1787902474.1752658,
-    "ast_hash": "3e00616fb33b071c6b999a0bafee9067",
-    "semantic_hash": "3e00616fb33b071c6b999a0bafee9067"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.8057942,
+    "ast_hash": "a159b20502832721a213e04583854a8b",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/14-same-origin-and-postmessage/01-what-an-origin-is.md": {
     "mtime": 1786776340.6802447,
@@ -16518,10 +16518,10 @@
     "semantic_hash": "e14e9699e777c61b928f4d06aa21e232"
   },
   "docs/javascript/pages/phase-11-network-storage/14-same-origin-and-postmessage/README.md": {
-    "mtime": 1786776340.6804013,
-    "seen": 1787902474.1752753,
-    "ast_hash": "9ddf8074dd47333d98cc78e1cde4fcdd",
-    "semantic_hash": "9ddf8074dd47333d98cc78e1cde4fcdd"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.8057976,
+    "ast_hash": "70e7c2ee505f6e883976d166b84067a2",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/15-csp/01-what-a-policy-breaks.md": {
     "mtime": 1786776634.9137833,
@@ -16536,10 +16536,10 @@
     "semantic_hash": "8ae67fa132abfaaddce1eb788073bf63"
   },
   "docs/javascript/pages/phase-11-network-storage/15-csp/README.md": {
-    "mtime": 1786776634.9140399,
-    "seen": 1787902474.1752837,
-    "ast_hash": "646211108249d5da6553afe4367ba5cc",
-    "semantic_hash": "646211108249d5da6553afe4367ba5cc"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.805801,
+    "ast_hash": "90f4b5a8741bb8e6be029e57d1b22dea",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/16-indexeddb/01-the-shape-of-it.md": {
     "mtime": 1786776766.5507905,
@@ -16548,10 +16548,10 @@
     "semantic_hash": "d7a2e86e637e31033b7412ada4187728"
   },
   "docs/javascript/pages/phase-11-network-storage/16-indexeddb/README.md": {
-    "mtime": 1786776781.3147893,
-    "seen": 1787902474.1752894,
-    "ast_hash": "0d4d3e1f65e3b103de02071df731234f",
-    "semantic_hash": "0d4d3e1f65e3b103de02071df731234f"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.8058033,
+    "ast_hash": "a4aa329daddacca50ff812ff69578deb",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/17-service-workers/01-the-lifecycle-and-the-cache.md": {
     "mtime": 1786776903.1047788,
@@ -16560,10 +16560,10 @@
     "semantic_hash": "2dfb10913d30af245e4fee8c8143dba1"
   },
   "docs/javascript/pages/phase-11-network-storage/17-service-workers/README.md": {
-    "mtime": 1786776918.2277775,
-    "seen": 1787902474.1752949,
-    "ast_hash": "1fe2d4408accb575829a5000afb51966",
-    "semantic_hash": "1fe2d4408accb575829a5000afb51966"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.805805,
+    "ast_hash": "54df7af54a472b70e9da124254d0e1c1",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/18-server-sent-events/01-eventsource-and-the-stream-format.md": {
     "mtime": 1786777056.8107655,
@@ -16572,10 +16572,10 @@
     "semantic_hash": "4847880aa2a7b42dfc55167a6bfcf71f"
   },
   "docs/javascript/pages/phase-11-network-storage/18-server-sent-events/README.md": {
-    "mtime": 1786777078.6387637,
-    "seen": 1787902474.1753006,
-    "ast_hash": "f1c8e084b7a4cdb41fa9f6040624feaa",
-    "semantic_hash": "f1c8e084b7a4cdb41fa9f6040624feaa"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.8058069,
+    "ast_hash": "d63bfa55b459a80eb857a4ab6e3b829d",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/19-streams/01-the-three-streams.md": {
     "mtime": 1786777226.367751,
@@ -16584,10 +16584,10 @@
     "semantic_hash": "d1298f579e38e52ed24f0f9cfbd93896"
   },
   "docs/javascript/pages/phase-11-network-storage/19-streams/README.md": {
-    "mtime": 1786777248.770749,
-    "seen": 1787902474.175307,
-    "ast_hash": "9117f639c9dd9de072520248438f4b4f",
-    "semantic_hash": "9117f639c9dd9de072520248438f4b4f"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.8058088,
+    "ast_hash": "caef7b068bf496169473c8e713448033",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/20-sendbeacon-keepalive/01-sending-on-the-way-out.md": {
     "mtime": 1786777500.4119918,
@@ -16596,10 +16596,10 @@
     "semantic_hash": "a35f6d893f557aca5a25127350c17da7"
   },
   "docs/javascript/pages/phase-11-network-storage/20-sendbeacon-keepalive/README.md": {
-    "mtime": 1786777513.486991,
-    "seen": 1787902474.1753135,
-    "ast_hash": "b235326c1158fbade4eb902d7b43c641",
-    "semantic_hash": "b235326c1158fbade4eb902d7b43c641"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.805811,
+    "ast_hash": "37dd0474bfd09fb2c90e969b390cd795",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/21-xmlhttprequest/01-what-it-still-does.md": {
     "mtime": 1786777601.7109833,
@@ -16608,10 +16608,10 @@
     "semantic_hash": "911a51f93ef280598fa42cc16a65bdb8"
   },
   "docs/javascript/pages/phase-11-network-storage/21-xmlhttprequest/README.md": {
-    "mtime": 1786777618.3889818,
-    "seen": 1787902474.1753192,
-    "ast_hash": "8c20c445c4eb9ead3839788cca78ee75",
-    "semantic_hash": "8c20c445c4eb9ead3839788cca78ee75"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.805813,
+    "ast_hash": "f77240e484528a5dc1aff6a545f22f86",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-11-network-storage/README.md": {
     "mtime": 1786777646.2859106,
@@ -17808,10 +17808,10 @@
     "semantic_hash": "1eb99535da17816444a51490aa9accb0"
   },
   "docs/javascript/pages/phase-18-storefront/11-infinite-scroll-and-lazy-images/README.md": {
-    "mtime": 1786778037.2809458,
-    "seen": 1787902474.175947,
-    "ast_hash": "50b2c3cb37e596f7955ef3ac90b6be77",
-    "semantic_hash": "50b2c3cb37e596f7955ef3ac90b6be77"
+    "mtime": 1788490691.8054276,
+    "seen": 1788491627.806034,
+    "ast_hash": "120950b69f85bd22aa9fd5445188a5ac",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-18-storefront/12-long-lists-without-freezing/01-why-a-long-list-freezes.md": {
     "mtime": 1786778738.703885,
@@ -17832,10 +17832,10 @@
     "semantic_hash": "b703cef97bbd5373a8c7ec9578b94b68"
   },
   "docs/javascript/pages/phase-18-storefront/12-long-lists-without-freezing/README.md": {
-    "mtime": 1786779153.7088494,
-    "seen": 1787902474.175965,
-    "ast_hash": "f20384d470033cfc9051f709f56b6db5",
-    "semantic_hash": "f20384d470033cfc9051f709f56b6db5"
+    "mtime": 1788490691.8064277,
+    "seen": 1788491627.806038,
+    "ast_hash": "16f79d47dbc5bdeb2b6dfc8aed0b76b4",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-18-storefront/15-review-uploads/01-the-photo-list.md": {
     "mtime": 1786778856.5878751,
@@ -17862,10 +17862,10 @@
     "semantic_hash": "a120f1fbf7bc8e375fe390c64af98efc"
   },
   "docs/javascript/pages/phase-18-storefront/15-review-uploads/README.md": {
-    "mtime": 1786779294.1698372,
-    "seen": 1787902474.175979,
-    "ast_hash": "d564222ecded605eb7a656ea758018cf",
-    "semantic_hash": "d564222ecded605eb7a656ea758018cf"
+    "mtime": 1788490691.8064277,
+    "seen": 1788491627.8060427,
+    "ast_hash": "8a08e26006fc6a7db67937eb8536bc2c",
+    "semantic_hash": ""
   },
   "docs/javascript/pages/phase-18-storefront/README.md": {
     "mtime": 1786779330.960834,
@@ -28050,10 +28050,10 @@
     "semantic_hash": "8667cee88b0b5ca9362355a8919001f8"
   },
   "docs/storybook/pages/phase-3-decorators/03-providers-in-decorators.md": {
-    "mtime": 1786706138.9508064,
-    "seen": 1787902474.1815102,
-    "ast_hash": "2afcc523e5e001b0ddb38f72255f3c62",
-    "semantic_hash": "2afcc523e5e001b0ddb38f72255f3c62"
+    "mtime": 1788491146.8593783,
+    "seen": 1788491627.8094828,
+    "ast_hash": "798007ff89980d08310f99865c861b9d",
+    "semantic_hash": ""
   },
   "docs/storybook/pages/phase-3-decorators/04-the-story-context.md": {
     "mtime": 1786706138.9508064,
@@ -29964,10 +29964,10 @@
     "semantic_hash": "b17e2874cd4ee52f80a5b874a4df027e"
   },
   "docs/typescript/pages/phase-6-modules-build/01-module-and-moduleresolution/README.md": {
-    "mtime": 1786952039.4074476,
-    "seen": 1787902474.182421,
-    "ast_hash": "292a4c49aaeca67473af155576730072",
-    "semantic_hash": "292a4c49aaeca67473af155576730072"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099027,
+    "ast_hash": "85647185699640f694ecfd9f866ea490",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/02-import-type-and-verbatim-module-syntax/01-import-elision.md": {
     "mtime": 1786952183.5961258,
@@ -30006,10 +30006,10 @@
     "semantic_hash": "e6b17e48f174a4103d9cb1e02696e83d"
   },
   "docs/typescript/pages/phase-6-modules-build/02-import-type-and-verbatim-module-syntax/README.md": {
-    "mtime": 1786952132.993886,
-    "seen": 1787902474.1824396,
-    "ast_hash": "e2f92e949093e5abdd9767ebea163c2d",
-    "semantic_hash": "e2f92e949093e5abdd9767ebea163c2d"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099105,
+    "ast_hash": "d4761e26469f138c56036decc41d2eb4",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/03-path-aliases/01-what-paths-does.md": {
     "mtime": 1786952697.839582,
@@ -30042,10 +30042,10 @@
     "semantic_hash": "24045a0934fda8e5f277519c9693fa6d"
   },
   "docs/typescript/pages/phase-6-modules-build/03-path-aliases/README.md": {
-    "mtime": 1786952642.376317,
-    "seen": 1787902474.1824548,
-    "ast_hash": "0752529962eef5e7416d65ab165c4541",
-    "semantic_hash": "0752529962eef5e7416d65ab165c4541"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099184,
+    "ast_hash": "55ab43c715f23dc9bcecc30b25755f4b",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/04-lib-target-ambient/01-two-different-jobs.md": {
     "mtime": 1786963136.9593503,
@@ -30096,10 +30096,10 @@
     "semantic_hash": "a0f5682d888b2196ab2d97d158b12d1a"
   },
   "docs/typescript/pages/phase-6-modules-build/04-lib-target-ambient/README.md": {
-    "mtime": 1786963990.5889175,
-    "seen": 1787902474.182484,
-    "ast_hash": "96080f1eb688dd24ca2420fd8afd18a4",
-    "semantic_hash": "96080f1eb688dd24ca2420fd8afd18a4"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099287,
+    "ast_hash": "3441096878ba50019d73d407c7850e40",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/05-isolatedmodules/01-the-one-file-compiler.md": {
     "mtime": 1786964230.822835,
@@ -30132,10 +30132,10 @@
     "semantic_hash": "f50760b8bbf5ed208ff50d6d9e2041bb"
   },
   "docs/typescript/pages/phase-6-modules-build/05-isolatedmodules/README.md": {
-    "mtime": 1786964507.8723977,
-    "seen": 1787902474.1825,
-    "ast_hash": "d91b214baf3c595bfb17ff9cf7ff69f8",
-    "semantic_hash": "d91b214baf3c595bfb17ff9cf7ff69f8"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099358,
+    "ast_hash": "14c1d5723e0d37b6277c770e90067b79",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/06-file-extensions/01-the-extension-table.md": {
     "mtime": 1786964759.8416061,
@@ -30162,10 +30162,10 @@
     "semantic_hash": "d6fd92f063fef3aaab293d8fcf7176fe"
   },
   "docs/typescript/pages/phase-6-modules-build/06-file-extensions/README.md": {
-    "mtime": 1786964959.7534251,
-    "seen": 1787902474.1825142,
-    "ast_hash": "b1c9bed49eecf515b2b1c5bbd986046b",
-    "semantic_hash": "b1c9bed49eecf515b2b1c5bbd986046b"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.809942,
+    "ast_hash": "426bba31e890e013b76d26a1f53d4ee7",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/07-authoring-d-ts-files/01-what-a-declaration-file-is.md": {
     "mtime": 1786951170.6534562,
@@ -30246,10 +30246,10 @@
     "semantic_hash": "fb7ddb6b23edd5d90bcbdd33f6d4b112"
   },
   "docs/typescript/pages/phase-6-modules-build/07-authoring-d-ts-files/README.md": {
-    "mtime": 1786968124.9615123,
-    "seen": 1787902474.1825602,
-    "ast_hash": "aacee045ac95487e6db66a23a5558c26",
-    "semantic_hash": "aacee045ac95487e6db66a23a5558c26"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099566,
+    "ast_hash": "2d0dc45e7234559e77d7ba3ac3e03243",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/08-typing-an-untyped-dependency/01-reading-the-symptom.md": {
     "mtime": 1786966459.949191,
@@ -30288,10 +30288,10 @@
     "semantic_hash": "53581fe1183539516adff2b9c7039810"
   },
   "docs/typescript/pages/phase-6-modules-build/08-typing-an-untyped-dependency/README.md": {
-    "mtime": 1786952396.773144,
-    "seen": 1787902474.1825812,
-    "ast_hash": "a5532928834b0595e7d72a7358d6b7ef",
-    "semantic_hash": "a5532928834b0595e7d72a7358d6b7ef"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.8099647,
+    "ast_hash": "80a944a0bf0b753fbf8f1622a68d56f8",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/09-esmoduleinterop-and-default-imports/01-what-a-default-import-means.md": {
     "mtime": 1786952609.9641623,
@@ -30324,10 +30324,10 @@
     "semantic_hash": "f5bc80cb6c348268da7440fad1adec94"
   },
   "docs/typescript/pages/phase-6-modules-build/09-esmoduleinterop-and-default-imports/README.md": {
-    "mtime": 1786952950.6547894,
-    "seen": 1787902474.1825986,
-    "ast_hash": "1afc4ad7f401081367cd2059948124ac",
-    "semantic_hash": "1afc4ad7f401081367cd2059948124ac"
+    "mtime": 1788490691.8084276,
+    "seen": 1788491627.809971,
+    "ast_hash": "1f57d6d78ef3f885398955d829491e8c",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/10-skiplibcheck/01-what-it-actually-skips.md": {
     "mtime": 1786966095.741916,
@@ -30378,10 +30378,10 @@
     "semantic_hash": "96756420d0ef6253f466643d1b86dc80"
   },
   "docs/typescript/pages/phase-6-modules-build/10-skiplibcheck/README.md": {
-    "mtime": 1786966438.3817782,
-    "seen": 1787902474.1826248,
-    "ast_hash": "9279bd9e1e59513102978f3d112b89be",
-    "semantic_hash": "9279bd9e1e59513102978f3d112b89be"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.809981,
+    "ast_hash": "116345fea42bcc1fe0ff7624a1dd03af",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/11-publishing-a-typed-package/01-the-one-rule.md": {
     "mtime": 1786964954.7984746,
@@ -30438,10 +30438,10 @@
     "semantic_hash": "ce876e136761eadadaadae1faf470508"
   },
   "docs/typescript/pages/phase-6-modules-build/11-publishing-a-typed-package/README.md": {
-    "mtime": 1786964926.7672915,
-    "seen": 1787902474.182656,
-    "ast_hash": "e33f8723864a33ddd3d673c791f77c49",
-    "semantic_hash": "e33f8723864a33ddd3d673c791f77c49"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8099911,
+    "ast_hash": "be08a9faa2eda1698b89a1a6ccfcc1b1",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/12-sharing-types-across-a-monorepo/01-the-question-and-the-compilers-answer.md": {
     "mtime": 1786966095.7421305,
@@ -30480,10 +30480,10 @@
     "semantic_hash": "21e3c5a3add91fe3be0ac7ad633a3e24"
   },
   "docs/typescript/pages/phase-6-modules-build/12-sharing-types-across-a-monorepo/README.md": {
-    "mtime": 1786966438.381962,
-    "seen": 1787902474.1826777,
-    "ast_hash": "63179c1d7bc55f3ffcc4f3a3e23e823b",
-    "semantic_hash": "63179c1d7bc55f3ffcc4f3a3e23e823b"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8099985,
+    "ast_hash": "1f692a84d833901ee9afe157c2865250",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/13-project-references/01-what-tsc-b-does.md": {
     "mtime": 1786965816.2784252,
@@ -30510,10 +30510,10 @@
     "semantic_hash": "7730529092f3ac44bd6f7858661a243d"
   },
   "docs/typescript/pages/phase-6-modules-build/13-project-references/README.md": {
-    "mtime": 1786966438.3818953,
-    "seen": 1787902474.1826925,
-    "ast_hash": "52a258ba5461c625e8f409ab992df4f4",
-    "semantic_hash": "52a258ba5461c625e8f409ab992df4f4"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8100047,
+    "ast_hash": "987aa589907c9fadee24ca8e709802fb",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/14-incremental-builds/01-what-is-in-a-tsbuildinfo.md": {
     "mtime": 1786966274.0820553,
@@ -30534,10 +30534,10 @@
     "semantic_hash": "8db0f2f8176ffda9a6ba65ec535fc27b"
   },
   "docs/typescript/pages/phase-6-modules-build/14-incremental-builds/README.md": {
-    "mtime": 1786966410.7237005,
-    "seen": 1787902474.1827044,
-    "ast_hash": "f24b2cf357480ff492a1a6a79ab70d86",
-    "semantic_hash": "f24b2cf357480ff492a1a6a79ab70d86"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8100088,
+    "ast_hash": "4b20b63a2e1f19ca2171b3f6bfccefd0",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/15-isolateddeclarations/01-what-it-requires-and-why.md": {
     "mtime": 1786967758.9526193,
@@ -30558,10 +30558,10 @@
     "semantic_hash": "1a4daa38d0a47fb3431beaf37e3c27f7"
   },
   "docs/typescript/pages/phase-6-modules-build/15-isolateddeclarations/README.md": {
-    "mtime": 1786968300.1882458,
-    "seen": 1787902474.1827152,
-    "ast_hash": "6cfdcb846c85ae64ad6f46fb953d9118",
-    "semantic_hash": "6cfdcb846c85ae64ad6f46fb953d9118"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8100135,
+    "ast_hash": "941cc1b5f0c14b011012ba6850fe3483",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/16-typing-non-code-imports/01-the-three-mechanisms.md": {
     "mtime": 1786967989.3265748,
@@ -30582,10 +30582,10 @@
     "semantic_hash": "16bd04b5a09625027ce9bf30ec9eb9b7"
   },
   "docs/typescript/pages/phase-6-modules-build/16-typing-non-code-imports/README.md": {
-    "mtime": 1786968116.4521291,
-    "seen": 1787902474.1827269,
-    "ast_hash": "d034ad2cad033edc7d38ae3744579497",
-    "semantic_hash": "d034ad2cad033edc7d38ae3744579497"
+    "mtime": 1788490691.8094277,
+    "seen": 1788491627.8100183,
+    "ast_hash": "792eebdd0a36c346cc9ba9ff33ee6d25",
+    "semantic_hash": ""
   },
   "docs/typescript/pages/phase-6-modules-build/README.md": {
     "mtime": 1786968169.920711,
@@ -39978,10 +39978,10 @@
     "semantic_hash": "b6b29cd4309ffa7a480159865a795d8a"
   },
   "docs/python/pages/phase-1-language-core/03-strings/02b-replacing-case-and-classification.md": {
-    "mtime": 1787939030.836956,
-    "seen": 1788162849.428508,
-    "ast_hash": "21abb382392da4848fa116b6e708b7dd",
-    "semantic_hash": "21abb382392da4848fa116b6e708b7dd"
+    "mtime": 1788488873.1125455,
+    "seen": 1788491627.8081806,
+    "ast_hash": "f10a7e634b1d0206784314bf78e3893e",
+    "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/03-strings/03-f-strings.md": {
     "mtime": 1787939030.8376276,
@@ -40050,9 +40050,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/README.md": {
-    "mtime": 1788445331.0611782,
-    "seen": 1788447200.6676676,
-    "ast_hash": "07b767262174de5d7564c56adff5d7b8",
+    "mtime": 1788491308.6516387,
+    "seen": 1788491627.8084977,
+    "ast_hash": "b84424b5f00526a7467b03e5488f263b",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-11-testing/12-real-world-scenarios/_category_.json": {
@@ -42666,8 +42666,8 @@
     "semantic_hash": ""
   },
   "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/_plan.md": {
-    "mtime": 1788165538.9509058,
-    "seen": 1788259233.6402628,
+    "mtime": 1788490881.6205888,
+    "seen": 1788491627.8047285,
     "ast_hash": "a0c8b4cb046ac971d708f32564149874",
     "semantic_hash": "a0c8b4cb046ac971d708f32564149874"
   },
@@ -42678,10 +42678,10 @@
     "semantic_hash": "afb8ff62763e0cdc6883aa3b94b7a283"
   },
   "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/_plan.md": {
-    "mtime": 1788165538.961906,
-    "seen": 1788259233.6402645,
-    "ast_hash": "4b15738b4b7d995b2bec3436d5148cf4",
-    "semantic_hash": "4b15738b4b7d995b2bec3436d5148cf4"
+    "mtime": 1788490768.1680984,
+    "seen": 1788491627.8047683,
+    "ast_hash": "3c272f93d9e6b4ed08ba84f0bd93c135",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-12-jvm-production/14-benchmarking-with-jmh/_plan.md": {
     "mtime": 1788165538.966906,
@@ -42702,478 +42702,478 @@
     "semantic_hash": "7224b85b985dbeb3a672b9f87d3c39ed"
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/01-the-password-anti-pattern.md": {
-    "mtime": 1788166128.5226552,
-    "seen": 1788259233.6402686,
-    "ast_hash": "406e9cea0b9a2bd608688f1ef3e50ab6",
-    "semantic_hash": "406e9cea0b9a2bd608688f1ef3e50ab6"
+    "mtime": 1788489206.2191808,
+    "seen": 1788491627.8048213,
+    "ast_hash": "fffcc1fb78f28fa1d25f62aa3d62cd95",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/02-authorization-is-not-authentication.md": {
-    "mtime": 1788165831.4953134,
-    "seen": 1788259233.6402693,
-    "ast_hash": "b61d73639b8b90cb047d1b24df90c153",
-    "semantic_hash": "b61d73639b8b90cb047d1b24df90c153"
+    "mtime": 1788489156.0079787,
+    "seen": 1788491627.8048224,
+    "ast_hash": "a1c1bd80a62d3a0e045c7c46eb4472f4",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/03-what-came-before.md": {
-    "mtime": 1788165944.2448559,
-    "seen": 1788259233.64027,
-    "ast_hash": "b33ff7d150187df88408182acc387bf2",
-    "semantic_hash": "b33ff7d150187df88408182acc387bf2"
+    "mtime": 1788489206.2193232,
+    "seen": 1788491627.8048239,
+    "ast_hash": "a2367f04f5930d546468aa88be15052e",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/04-a-framework-not-a-protocol.md": {
-    "mtime": 1788166026.5042515,
-    "seen": 1788259233.640271,
-    "ast_hash": "4896282b26950e59479c5729f0a4a759",
-    "semantic_hash": "4896282b26950e59479c5729f0a4a759"
+    "mtime": 1788489206.2194123,
+    "seen": 1788491627.8048248,
+    "ast_hash": "62fea8fb16dc505244c1531862482fac",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/05-when-you-do-not-need-oauth2.md": {
-    "mtime": 1788166112.8976672,
-    "seen": 1788259233.640272,
-    "ast_hash": "988f2896a1c59d5160040fbe693f61ee",
-    "semantic_hash": "988f2896a1c59d5160040fbe693f61ee"
+    "mtime": 1788489156.0084324,
+    "seen": 1788491627.8048258,
+    "ast_hash": "ac1cdb31b564a20535d639b99f02ec57",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/README.md": {
-    "mtime": 1788166162.5609062,
-    "seen": 1788259233.6402726,
-    "ast_hash": "50dd58145091fac309d2bf3d50ded5d3",
-    "semantic_hash": "50dd58145091fac309d2bf3d50ded5d3"
+    "mtime": 1788489206.2195199,
+    "seen": 1788491627.8048282,
+    "ast_hash": "4630360f5fbd5d86ac3f47936df232a2",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/01-the-four-roles.md": {
-    "mtime": 1788166303.5955846,
-    "seen": 1788259233.640273,
-    "ast_hash": "07588e0f048ae764f670aad2b018d185",
-    "semantic_hash": "07588e0f048ae764f670aad2b018d185"
+    "mtime": 1788489206.220692,
+    "seen": 1788491627.8048294,
+    "ast_hash": "e7be2942c8954b8b73750ef158042c95",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/02-confidential-and-public-clients.md": {
-    "mtime": 1788166519.527663,
-    "seen": 1788259233.6402743,
-    "ast_hash": "f7de7347f278a376ada1825a41623340",
-    "semantic_hash": "f7de7347f278a376ada1825a41623340"
+    "mtime": 1788489156.0091774,
+    "seen": 1788491627.804831,
+    "ast_hash": "2e052c16992ac63cbb68e8c99ee3faba",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/03-client-authentication.md": {
-    "mtime": 1788166519.5026233,
-    "seen": 1788259233.640275,
-    "ast_hash": "c44a449f6afd9736a46c08daf1df424a",
-    "semantic_hash": "c44a449f6afd9736a46c08daf1df424a"
+    "mtime": 1788489156.0092988,
+    "seen": 1788491627.8048322,
+    "ast_hash": "745a53847a3bd031c8fce78dd68f6a79",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/04-front-channel-and-back-channel.md": {
-    "mtime": 1788166607.4520466,
-    "seen": 1788259233.640276,
-    "ast_hash": "197a9d6ca9fea62d138f304be766f0fe",
-    "semantic_hash": "197a9d6ca9fea62d138f304be766f0fe"
+    "mtime": 1788489206.2208428,
+    "seen": 1788491627.8048346,
+    "ast_hash": "31bce761589c7bf2b76552f1a905899c",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/05-registration-and-redirect-uris.md": {
-    "mtime": 1788166694.2474642,
-    "seen": 1788259233.640277,
-    "ast_hash": "b53ca05497c067d2e435af36a88fc7de",
-    "semantic_hash": "b53ca05497c067d2e435af36a88fc7de"
+    "mtime": 1788489156.0095394,
+    "seen": 1788491627.8048358,
+    "ast_hash": "ad160517d9471de195585160fe9bfa14",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/06-mapping-onto-your-stack.md": {
-    "mtime": 1788166794.3529458,
-    "seen": 1788259233.6402779,
-    "ast_hash": "0b28b51ba61fb806e6bce694f6f52c35",
-    "semantic_hash": "0b28b51ba61fb806e6bce694f6f52c35"
+    "mtime": 1788489156.0096812,
+    "seen": 1788491627.8048368,
+    "ast_hash": "66a4cbdb98a024384fb6e57f525ac0c0",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/README.md": {
-    "mtime": 1788166841.7340806,
-    "seen": 1788259233.6402786,
-    "ast_hash": "01298d2a0a129b343e73260f3205aed0",
-    "semantic_hash": "01298d2a0a129b343e73260f3205aed0"
+    "mtime": 1788489206.2209713,
+    "seen": 1788491627.804838,
+    "ast_hash": "a3e6cf9e7ec5c889bc993de34699745d",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/01-the-flow-end-to-end.md": {
-    "mtime": 1788167613.262684,
-    "seen": 1788259233.6402793,
-    "ast_hash": "9028767b9b4c7fac73d75f292f8ac9e8",
-    "semantic_hash": "9028767b9b4c7fac73d75f292f8ac9e8"
+    "mtime": 1788489206.2168987,
+    "seen": 1788491627.8048394,
+    "ast_hash": "702da5f90db055994878926b5ca8fe6d",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/01b-why-a-code-at-all.md": {
-    "mtime": 1788165852.5364146,
-    "seen": 1788259233.6402802,
-    "ast_hash": "003cdb23888f5833588fbdea16d4d254",
-    "semantic_hash": "003cdb23888f5833588fbdea16d4d254"
+    "mtime": 1788489156.010854,
+    "seen": 1788491627.80484,
+    "ast_hash": "80a7fa001ac6bc28dcb722a2172bd1c1",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/02-the-authorization-request.md": {
-    "mtime": 1788167613.2629614,
-    "seen": 1788259233.6402807,
-    "ast_hash": "c427ff9e62ff2823706c7e25ef82714b",
-    "semantic_hash": "c427ff9e62ff2823706c7e25ef82714b"
+    "mtime": 1788489156.0109937,
+    "seen": 1788491627.8048415,
+    "ast_hash": "03592a840f0e9584914eae4f48352d5a",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/02b-when-a-parameter-is-wrong.md": {
-    "mtime": 1788166032.0312781,
-    "seen": 1788259233.6402817,
-    "ast_hash": "9a4a6ea785a069f2ad2a86aced7a991f",
-    "semantic_hash": "9a4a6ea785a069f2ad2a86aced7a991f"
+    "mtime": 1788489156.0111046,
+    "seen": 1788491627.8048427,
+    "ast_hash": "95d06154b8650342392e536f3bdcc73e",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/03-the-authorization-code.md": {
-    "mtime": 1788167613.263129,
-    "seen": 1788259233.6402824,
-    "ast_hash": "0c480a5cac7f4fff07197e8e037bf623",
-    "semantic_hash": "0c480a5cac7f4fff07197e8e037bf623"
+    "mtime": 1788489206.2171583,
+    "seen": 1788491627.8048437,
+    "ast_hash": "a00c9ea6bdcbfa03cffe0fbc402d5e20",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/04-the-token-exchange.md": {
-    "mtime": 1788167613.263243,
-    "seen": 1788259233.640283,
-    "ast_hash": "822e08a6fea7d7b9db79dcabbae3d7eb",
-    "semantic_hash": "822e08a6fea7d7b9db79dcabbae3d7eb"
+    "mtime": 1788489206.217283,
+    "seen": 1788491627.8048446,
+    "ast_hash": "dcf46d034ca3ad1612b72dff39153d19",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/04b-client-authentication.md": {
-    "mtime": 1788166305.1865923,
-    "seen": 1788259233.6402838,
-    "ast_hash": "58b010528558021661c2c6225af91a1e",
-    "semantic_hash": "58b010528558021661c2c6225af91a1e"
+    "mtime": 1788489206.217388,
+    "seen": 1788491627.8048456,
+    "ast_hash": "b90041e6a64811e9e61b22ee36f36faa",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/05-the-interception-attack.md": {
-    "mtime": 1788166426.1701453,
-    "seen": 1788259233.6402848,
-    "ast_hash": "62246c3f7340665e51329fa8a2d204bb",
-    "semantic_hash": "62246c3f7340665e51329fa8a2d204bb"
+    "mtime": 1788489156.0115542,
+    "seen": 1788491627.8048463,
+    "ast_hash": "88cb505d403185f90c430a8d176866ae",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/06-the-code-verifier.md": {
-    "mtime": 1788167613.2634387,
-    "seen": 1788259233.6402855,
-    "ast_hash": "698b7588263a46686ea6caddac908c80",
-    "semantic_hash": "698b7588263a46686ea6caddac908c80"
+    "mtime": 1788489156.0116699,
+    "seen": 1788491627.804848,
+    "ast_hash": "59a456ca7e34f65791cb9e6b2df67065",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/07-s256-vs-plain.md": {
-    "mtime": 1788166590.928967,
-    "seen": 1788259233.6402864,
-    "ast_hash": "764266d6a422e47729ad73994b7517b7",
-    "semantic_hash": "764266d6a422e47729ad73994b7517b7"
+    "mtime": 1788489156.0118282,
+    "seen": 1788491627.804849,
+    "ast_hash": "29f024ca4c1555c366652099df35fcf3",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/08-server-side-pkce-verification.md": {
-    "mtime": 1788167613.2635622,
-    "seen": 1788259233.6402872,
-    "ast_hash": "f543e5f8e35dc2a89afc83ab7bed3051",
-    "semantic_hash": "f543e5f8e35dc2a89afc83ab7bed3051"
+    "mtime": 1788489156.0119576,
+    "seen": 1788491627.80485,
+    "ast_hash": "89d5a1bcb4de0eabb74e2083b94f7527",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/09-the-pkce-downgrade-attack.md": {
-    "mtime": 1788166725.3676138,
-    "seen": 1788259233.640288,
-    "ast_hash": "d37760252670152635ad4e0a7dec4f1a",
-    "semantic_hash": "d37760252670152635ad4e0a7dec4f1a"
+    "mtime": 1788489156.0121012,
+    "seen": 1788491627.8048513,
+    "ast_hash": "0277c9522fd1c40c661153e712608642",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/10-what-state-defends.md": {
-    "mtime": 1788166833.0732489,
-    "seen": 1788259233.6402886,
-    "ast_hash": "2650e11b678b5537c841b3e3913bb4d9",
-    "semantic_hash": "2650e11b678b5537c841b3e3913bb4d9"
+    "mtime": 1788489156.0122485,
+    "seen": 1788491627.8048525,
+    "ast_hash": "0a36c926525582f689c4033206fea1ca",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/10b-state-vs-pkce.md": {
-    "mtime": 1788166900.6462057,
-    "seen": 1788259233.6402898,
-    "ast_hash": "fc28d536612338a2b794cd568cf4b9af",
-    "semantic_hash": "fc28d536612338a2b794cd568cf4b9af"
+    "mtime": 1788489156.0124028,
+    "seen": 1788491627.804854,
+    "ast_hash": "cca5c3bdf24b9a7eddda27354632fbd6",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/11-authorization-code-injection.md": {
-    "mtime": 1788167613.2637937,
-    "seen": 1788259233.6402905,
-    "ast_hash": "73b1e898be20df06235aa6bee4b68bef",
-    "semantic_hash": "73b1e898be20df06235aa6bee4b68bef"
+    "mtime": 1788489156.0125964,
+    "seen": 1788491627.8048556,
+    "ast_hash": "083355fe140f4e44a07d3b09b1d61405",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/12-redirect-uri-exact-matching.md": {
-    "mtime": 1788167613.2638936,
-    "seen": 1788259233.6402912,
-    "ast_hash": "e06b12a04091398179bee15a171ef97c",
-    "semantic_hash": "e06b12a04091398179bee15a171ef97c"
+    "mtime": 1788489156.0127625,
+    "seen": 1788491627.8048568,
+    "ast_hash": "c7bcb1c5c460511ac4c725dd2dd0903e",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/12b-native-apps-and-loopback.md": {
-    "mtime": 1788167128.1331306,
-    "seen": 1788259233.6402922,
-    "ast_hash": "8bbaf9208109692a78032d9933375813",
-    "semantic_hash": "8bbaf9208109692a78032d9933375813"
+    "mtime": 1788489156.0129015,
+    "seen": 1788491627.8048587,
+    "ast_hash": "6ca474654c7d8eb70294285365634845",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/13-the-mix-up-attack.md": {
-    "mtime": 1788167190.582821,
-    "seen": 1788259233.6402931,
-    "ast_hash": "5e1d09cbab156c2a98a47249ad69b420",
-    "semantic_hash": "5e1d09cbab156c2a98a47249ad69b420"
+    "mtime": 1788489156.0130098,
+    "seen": 1788491627.8048599,
+    "ast_hash": "bb19db57adae878a3a58e253f2cc88c8",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/14-code-replay-and-idempotency.md": {
-    "mtime": 1788167264.2799773,
-    "seen": 1788259233.6402938,
-    "ast_hash": "52de67cb5d170ec4cfa950d07857fc97",
-    "semantic_hash": "52de67cb5d170ec4cfa950d07857fc97"
+    "mtime": 1788489156.013114,
+    "seen": 1788491627.804861,
+    "ast_hash": "10a3e047591c16cb9f240118c4f81512",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/15-referrer-and-history-leakage.md": {
-    "mtime": 1788167328.4201136,
-    "seen": 1788259233.640295,
-    "ast_hash": "11b2c3a62d5972b0a77c1a12b18aa5e1",
-    "semantic_hash": "11b2c3a62d5972b0a77c1a12b18aa5e1"
+    "mtime": 1788489156.0132449,
+    "seen": 1788491627.8048623,
+    "ast_hash": "468cbf01303b3231525133c0a72ed390",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/04-client-credentials/01-the-grant-with-no-user.md": {
-    "mtime": 1788166984.1363828,
-    "seen": 1788259233.6402957,
-    "ast_hash": "c2d4d27fea36a4678d8216f18bcbddb5",
-    "semantic_hash": "c2d4d27fea36a4678d8216f18bcbddb5"
+    "mtime": 1788489156.013598,
+    "seen": 1788491627.8048651,
+    "ast_hash": "69f58e2c6b4bd7d7f828e70dd20fb1da",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/04-client-credentials/02-why-not-just-an-api-key.md": {
-    "mtime": 1788167065.9515564,
-    "seen": 1788259233.6402962,
-    "ast_hash": "0c2952509940aceb0938c9c3068e7ec7",
-    "semantic_hash": "0c2952509940aceb0938c9c3068e7ec7"
+    "mtime": 1788489156.0136838,
+    "seen": 1788491627.804866,
+    "ast_hash": "5e1bb4de11053eb5b52173748af9422b",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/04-client-credentials/03-when-there-is-a-user-after-all.md": {
-    "mtime": 1788167150.4227357,
-    "seen": 1788259233.6402972,
-    "ast_hash": "9f83e6e6347680cab1008ad846c9d5cf",
-    "semantic_hash": "9f83e6e6347680cab1008ad846c9d5cf"
+    "mtime": 1788489206.2205074,
+    "seen": 1788491627.8048668,
+    "ast_hash": "ec4236c0137cb19bff03ce0f8ee76e68",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/04-client-credentials/README.md": {
-    "mtime": 1788167196.7588341,
-    "seen": 1788259233.6402981,
-    "ast_hash": "6c60beb2a7b65c2c7078c4b021be2b64",
-    "semantic_hash": "6c60beb2a7b65c2c7078c4b021be2b64"
+    "mtime": 1788489206.2205832,
+    "seen": 1788491627.804868,
+    "ast_hash": "e595ec8f5a1db04857d59d4dfd7bf779",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/01-three-tokens-three-roles.md": {
-    "mtime": 1788167613.2642627,
-    "seen": 1788259233.640299,
-    "ast_hash": "d986902ff2a2cba81d57a68b975084bf",
-    "semantic_hash": "d986902ff2a2cba81d57a68b975084bf"
+    "mtime": 1788489206.219651,
+    "seen": 1788491627.804869,
+    "ast_hash": "afe5ccc661c186473b40a97c065aa3c2",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/02-the-access-token-is-opaque-by-contract.md": {
-    "mtime": 1788167613.264353,
-    "seen": 1788259233.6403,
-    "ast_hash": "7fb3b18587671ccd9a3ac86f13faa2f8",
-    "semantic_hash": "7fb3b18587671ccd9a3ac86f13faa2f8"
+    "mtime": 1788489156.0146945,
+    "seen": 1788491627.80487,
+    "ast_hash": "7bf54e9d80abcb7dabbb7e48fb6d55f9",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/02b-what-parsing-an-access-token-costs-you.md": {
-    "mtime": 1788166258.8923695,
-    "seen": 1788259233.640301,
-    "ast_hash": "de2ce93485c4f9bd79eb629e42496f7f",
-    "semantic_hash": "de2ce93485c4f9bd79eb629e42496f7f"
+    "mtime": 1788489156.0148053,
+    "seen": 1788491627.8048708,
+    "ast_hash": "2a3725ae05a6d1871beb535e953d5b3a",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/03-the-token-response.md": {
-    "mtime": 1788167613.26447,
-    "seen": 1788259233.640302,
-    "ast_hash": "c33315f31689a6c4d5f5049c261b3538",
-    "semantic_hash": "c33315f31689a6c4d5f5049c261b3538"
+    "mtime": 1788489206.2198071,
+    "seen": 1788491627.8048723,
+    "ast_hash": "eca81dc45d591cd35f7e823bb39544d0",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/03b-the-token-error-response.md": {
-    "mtime": 1788167613.2645593,
-    "seen": 1788259233.6403027,
-    "ast_hash": "31aaff5ab4a071f79d9e5763238d56b4",
-    "semantic_hash": "31aaff5ab4a071f79d9e5763238d56b4"
+    "mtime": 1788489156.0150166,
+    "seen": 1788491627.804874,
+    "ast_hash": "3f0ff290e73c321f9b0cfacad21bbcb4",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/04-bearer-tokens-and-the-authorization-header.md": {
-    "mtime": 1788166533.1686893,
-    "seen": 1788259233.6403034,
-    "ast_hash": "3138bfb5ef9c4e1cb43df61eee89b70e",
-    "semantic_hash": "3138bfb5ef9c4e1cb43df61eee89b70e"
+    "mtime": 1788489156.0151155,
+    "seen": 1788491627.8048759,
+    "ast_hash": "94a70df2404c1b04bbac20a78135c770",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/04b-safeguarding-a-bearer-token.md": {
-    "mtime": 1788167613.264709,
-    "seen": 1788259233.640304,
-    "ast_hash": "f78deb62ab48568e9b62985cf8e88386",
-    "semantic_hash": "f78deb62ab48568e9b62985cf8e88386"
+    "mtime": 1788489206.2199578,
+    "seen": 1788491627.8048768,
+    "ast_hash": "e07e5292088e22c0ae959c137acb2d59",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/04c-the-form-and-query-transports.md": {
-    "mtime": 1788166686.2404256,
-    "seen": 1788259233.6403046,
-    "ast_hash": "49ac1c6c9784f21f528ff7bf1f8c9974",
-    "semantic_hash": "49ac1c6c9784f21f528ff7bf1f8c9974"
+    "mtime": 1788489156.015298,
+    "seen": 1788491627.8048775,
+    "ast_hash": "43581f505c1aa3265f3723bc6fb74284",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/05-www-authenticate-challenges.md": {
-    "mtime": 1788166786.3651824,
-    "seen": 1788259233.6403055,
-    "ast_hash": "ac5d45ea37fb544a986e0cbe4df07432",
-    "semantic_hash": "ac5d45ea37fb544a986e0cbe4df07432"
+    "mtime": 1788489156.015378,
+    "seen": 1788491627.8048782,
+    "ast_hash": "f3e0ac979abaae17c248e102f0c1a74f",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/05b-implementing-and-consuming-the-challenge.md": {
-    "mtime": 1788166827.9770513,
-    "seen": 1788259233.6403062,
-    "ast_hash": "0d68bea619f144532086d72ce69c865e",
-    "semantic_hash": "0d68bea619f144532086d72ce69c865e"
+    "mtime": 1788489206.2200956,
+    "seen": 1788491627.804879,
+    "ast_hash": "b7db4cf3cb82e9a24e330258ca568920",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/06-what-a-bearer-token-cannot-do.md": {
-    "mtime": 1788167613.264887,
-    "seen": 1788259233.640307,
-    "ast_hash": "c5c92b9814cd1a5c3c8243ee57450b55",
-    "semantic_hash": "c5c92b9814cd1a5c3c8243ee57450b55"
+    "mtime": 1788489156.0155766,
+    "seen": 1788491627.8048801,
+    "ast_hash": "66759d492332c29a350df1b665d0793a",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/06b-dpop-and-choosing-a-constraint.md": {
-    "mtime": 1788166982.9393802,
-    "seen": 1788259233.640308,
-    "ast_hash": "881b66ba20e40bac71c10c899ec1caaa",
-    "semantic_hash": "881b66ba20e40bac71c10c899ec1caaa"
+    "mtime": 1788489156.0157075,
+    "seen": 1788491627.8048818,
+    "ast_hash": "110fa5e157491d34c2be2d74442913ec",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/07-access-token-lifetime-as-a-design-decision.md": {
-    "mtime": 1788167613.2650166,
-    "seen": 1788259233.6403084,
-    "ast_hash": "ee4a28da2706529f456410e782bf8966",
-    "semantic_hash": "ee4a28da2706529f456410e782bf8966"
+    "mtime": 1788489156.0157907,
+    "seen": 1788491627.804883,
+    "ast_hash": "faff9fed4c55452b09e69b834a984be7",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/07b-the-long-lived-access-token-failure.md": {
-    "mtime": 1788167613.265101,
-    "seen": 1788259233.6403093,
-    "ast_hash": "221458e9455abb980fbd28bbf30d97c7",
-    "semantic_hash": "221458e9455abb980fbd28bbf30d97c7"
+    "mtime": 1788489206.220266,
+    "seen": 1788491627.804884,
+    "ast_hash": "8de85bed74b0cd9c60ae09052d2d5858",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/08-refresh-tokens-what-they-are-for.md": {
-    "mtime": 1788167613.265204,
-    "seen": 1788259233.64031,
-    "ast_hash": "c00af86b6ba63ac15aa772f8cd86cab2",
-    "semantic_hash": "c00af86b6ba63ac15aa772f8cd86cab2"
+    "mtime": 1788489156.015945,
+    "seen": 1788491627.804885,
+    "ast_hash": "f746b42766f6fbec108635a6f297b40b",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/08b-why-a-resource-server-must-never-see-one.md": {
-    "mtime": 1788167613.2652893,
-    "seen": 1788259233.640311,
-    "ast_hash": "948bb87e8c7b3cb26251802175a2b84e",
-    "semantic_hash": "948bb87e8c7b3cb26251802175a2b84e"
+    "mtime": 1788489156.0160332,
+    "seen": 1788491627.8048859,
+    "ast_hash": "4c84727248aaf3c77b2ba8d6776cdff9",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/01-encoded-not-encrypted.md": {
-    "mtime": 1788167613.265416,
-    "seen": 1788259233.6403117,
-    "ast_hash": "e562fcec32ff01146d9458e1a11da101",
-    "semantic_hash": "e562fcec32ff01146d9458e1a11da101"
+    "mtime": 1788489206.2179468,
+    "seen": 1788491627.8048878,
+    "ast_hash": "f7415774414bbba7cc1673862fad9b45",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/02-compact-serialization.md": {
-    "mtime": 1788167613.2655227,
-    "seen": 1788259233.6403127,
-    "ast_hash": "20afb3118877880f8e59234e75c9523f",
-    "semantic_hash": "20afb3118877880f8e59234e75c9523f"
+    "mtime": 1788489156.0167046,
+    "seen": 1788491627.8048897,
+    "ast_hash": "8f85bcff0c4267e8c699236865c3b8f8",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/02b-base64url-and-json-traps.md": {
-    "mtime": 1788167613.2656243,
-    "seen": 1788259233.6403131,
-    "ast_hash": "d4c9a7726c3a8c5ba128c1b770a148e1",
-    "semantic_hash": "d4c9a7726c3a8c5ba128c1b770a148e1"
+    "mtime": 1788489156.0168142,
+    "seen": 1788491627.8048906,
+    "ast_hash": "4e4835f46e62c85cefe5afadb5cc00c3",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/03-the-jose-header.md": {
-    "mtime": 1788167613.2657535,
-    "seen": 1788259233.6403139,
-    "ast_hash": "7e91c0d21ec3b3a394e1facdb08fdc6a",
-    "semantic_hash": "7e91c0d21ec3b3a394e1facdb08fdc6a"
+    "mtime": 1788489156.0169246,
+    "seen": 1788491627.8048916,
+    "ast_hash": "8a117469489c8d0fd95aa64934f97c27",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/03b-explicit-typing.md": {
-    "mtime": 1788167613.2658732,
-    "seen": 1788259233.6403143,
-    "ast_hash": "b5e623876b7b8b27abab302d157cceaf",
-    "semantic_hash": "b5e623876b7b8b27abab302d157cceaf"
+    "mtime": 1788489156.0170288,
+    "seen": 1788491627.8048928,
+    "ast_hash": "6325137c17c86189d34c580dbc43841a",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/03c-the-spring-7-typ-collision.md": {
-    "mtime": 1788167613.2659798,
-    "seen": 1788259233.640315,
-    "ast_hash": "49e06efd9333ee687fd67de0e324a617",
-    "semantic_hash": "49e06efd9333ee687fd67de0e324a617"
+    "mtime": 1788489156.017135,
+    "seen": 1788491627.804894,
+    "ast_hash": "8e63a320c32e5eb47e4219e5f79fb6a8",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/03d-kid-cty-and-crit.md": {
-    "mtime": 1788167613.2661088,
-    "seen": 1788259233.6403165,
-    "ast_hash": "50228b980a9cad86b04d774b6e8d64ae",
-    "semantic_hash": "50228b980a9cad86b04d774b6e8d64ae"
+    "mtime": 1788489206.2181828,
+    "seen": 1788491627.8048952,
+    "ast_hash": "a95ffa327af580a74bf707052ed29841",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/03e-the-dangerous-headers.md": {
-    "mtime": 1788166920.125247,
-    "seen": 1788259233.640317,
-    "ast_hash": "c8dd12b53d7d99d405f089d0856caf29",
-    "semantic_hash": "c8dd12b53d7d99d405f089d0856caf29"
+    "mtime": 1788489156.0173624,
+    "seen": 1788491627.8048964,
+    "ast_hash": "4ea0fcb15d2578f91300cc21a264125d",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/04-registered-claims-identity.md": {
-    "mtime": 1788167099.6082902,
-    "seen": 1788259233.6403177,
-    "ast_hash": "29a0a7744700064d7a6ed6ac6ff0aa8a",
-    "semantic_hash": "29a0a7744700064d7a6ed6ac6ff0aa8a"
+    "mtime": 1788489206.2183213,
+    "seen": 1788491627.804897,
+    "ast_hash": "69e3b206857609bfd0720413d0e4197e",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/04b-the-audience-claim.md": {
-    "mtime": 1788167302.2469523,
-    "seen": 1788259233.6403182,
-    "ast_hash": "91c12b0d4ccf821f5749f7629e3f6770",
-    "semantic_hash": "91c12b0d4ccf821f5749f7629e3f6770"
+    "mtime": 1788489206.2184064,
+    "seen": 1788491627.8048978,
+    "ast_hash": "aa3765a1b4b60aaeafc6f2440caa1f86",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/04c-configuring-audience-validation.md": {
-    "mtime": 1788167613.2663646,
-    "seen": 1788259233.6403189,
-    "ast_hash": "fc9f591121889ecff173aa57e3a6df3e",
-    "semantic_hash": "fc9f591121889ecff173aa57e3a6df3e"
+    "mtime": 1788489156.0176854,
+    "seen": 1788491627.8048987,
+    "ast_hash": "6d742193d91c0d672ba22e94d3408afd",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/01-the-layer-oauth2-was-missing.md": {
-    "mtime": 1788167344.4711475,
-    "seen": 1788259233.6403198,
-    "ast_hash": "99e2c586042b95a3f9985f7083397748",
-    "semantic_hash": "99e2c586042b95a3f9985f7083397748"
+    "mtime": 1788489788.2500339,
+    "seen": 1788491627.8049006,
+    "ast_hash": "d09dbccd759cfc8125fcdaf979718808",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/01-what-the-starter-gives-you.md": {
-    "mtime": 1788167613.2665505,
-    "seen": 1788259233.640321,
-    "ast_hash": "4ea8d84248fe997331c2eae23fc93629",
-    "semantic_hash": "4ea8d84248fe997331c2eae23fc93629"
+    "mtime": 1788489363.365795,
+    "seen": 1788491627.8049164,
+    "ast_hash": "5b25bd8af3d07a688a8e02d37a51b7cc",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/02-issuer-uri.md": {
-    "mtime": 1788167613.266696,
-    "seen": 1788259233.6403215,
-    "ast_hash": "52ba52e3982afddf6cf28a372f477299",
-    "semantic_hash": "52ba52e3982afddf6cf28a372f477299"
+    "mtime": 1788489363.3659353,
+    "seen": 1788491627.8049176,
+    "ast_hash": "b10cfbf7c22cd8ebe36d26ad547033a7",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/02b-jwk-set-uri-and-static-keys.md": {
-    "mtime": 1788166554.414262,
-    "seen": 1788259233.6403222,
-    "ast_hash": "2a2d6c053737d2569d44259c435cd898",
-    "semantic_hash": "2a2d6c053737d2569d44259c435cd898"
+    "mtime": 1788489363.36602,
+    "seen": 1788491627.8049185,
+    "ast_hash": "20e5d7e82f4bc955dbe1e4e3ce00c9c7",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/02c-trusted-algorithms.md": {
-    "mtime": 1788167613.2668335,
-    "seen": 1788259233.6403234,
-    "ast_hash": "18c692a6758d784b68bccdbe73619429",
-    "semantic_hash": "18c692a6758d784b68bccdbe73619429"
+    "mtime": 1788489363.3660865,
+    "seen": 1788491627.8049192,
+    "ast_hash": "f11436f3f50d94668298222147ade8ab",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/03-startup-coupling.md": {
-    "mtime": 1788167613.2669215,
-    "seen": 1788259233.6403239,
-    "ast_hash": "ab23f4aca95aea7ab873f9c001208e9f",
-    "semantic_hash": "ab23f4aca95aea7ab873f9c001208e9f"
+    "mtime": 1788489363.3661518,
+    "seen": 1788491627.8049207,
+    "ast_hash": "6ec2189c305ce9b829db6f1e717d95b3",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/03b-timeouts-and-the-jwk-cache.md": {
-    "mtime": 1788166741.3834364,
-    "seen": 1788259233.6403248,
-    "ast_hash": "9305b0d7035ac899b3cfcab66858571d",
-    "semantic_hash": "9305b0d7035ac899b3cfcab66858571d"
+    "mtime": 1788489363.3662202,
+    "seen": 1788491627.8049214,
+    "ast_hash": "eeb337c689f6ebee6ae44c8f7d288668",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/04-the-filter-chain.md": {
-    "mtime": 1788167613.2670763,
-    "seen": 1788259233.6403255,
-    "ast_hash": "52814ad5021950baa46be49d89305387",
-    "semantic_hash": "52814ad5021950baa46be49d89305387"
+    "mtime": 1788489363.3663156,
+    "seen": 1788491627.8049223,
+    "ast_hash": "e8dc3ed6871d1e5d8559ac0b2e938133",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/04b-matcher-order.md": {
-    "mtime": 1788166888.2741795,
-    "seen": 1788259233.6403263,
-    "ast_hash": "37a06f394182d6082b4ced407272ea2c",
-    "semantic_hash": "37a06f394182d6082b4ced407272ea2c"
+    "mtime": 1788489363.366388,
+    "seen": 1788491627.8049233,
+    "ast_hash": "7ef3bf2ecbaa8069b060376015dc4f68",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/04c-stateless-csrf-cors.md": {
-    "mtime": 1788166959.4583304,
-    "seen": 1788259233.640327,
-    "ast_hash": "0ce4853e388edc5bb6fa5c1ccc6aa7b7",
-    "semantic_hash": "0ce4853e388edc5bb6fa5c1ccc6aa7b7"
+    "mtime": 1788489363.3664908,
+    "seen": 1788491627.8049247,
+    "ast_hash": "c050304014d15b0f5cce7f97f0ed2896",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/05-the-request-path.md": {
-    "mtime": 1788167613.2672708,
-    "seen": 1788259233.6403275,
-    "ast_hash": "4753422238bc6d7fc79d226095ebc807",
-    "semantic_hash": "4753422238bc6d7fc79d226095ebc807"
+    "mtime": 1788489363.3666523,
+    "seen": 1788491627.8049254,
+    "ast_hash": "94691884a65bf134f9f0f8147ac02c17",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/05b-bearer-token-resolution.md": {
-    "mtime": 1788167176.5023217,
-    "seen": 1788259233.6403282,
-    "ast_hash": "8394386de1aa46ab8ca8cfa26a3ca579",
-    "semantic_hash": "8394386de1aa46ab8ca8cfa26a3ca579"
+    "mtime": 1788489363.3667655,
+    "seen": 1788491627.8049262,
+    "ast_hash": "e9a793d46f2686820bdd1083004074ea",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/05c-alternative-token-transports.md": {
-    "mtime": 1788167165.0239894,
-    "seen": 1788259233.640329,
-    "ast_hash": "93a04171a3f8350b1f920724cce3540b",
-    "semantic_hash": "93a04171a3f8350b1f920724cce3540b"
+    "mtime": 1788489363.3668785,
+    "seen": 1788491627.8049269,
+    "ast_hash": "92426a1720f6f6a6d53df394fbd9e9e1",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/06-the-default-validators.md": {
-    "mtime": 1788167613.267464,
-    "seen": 1788259233.6403298,
-    "ast_hash": "21ce2d154ed4c62f8f377b838b6905e5",
-    "semantic_hash": "21ce2d154ed4c62f8f377b838b6905e5"
+    "mtime": 1788489363.367064,
+    "seen": 1788491627.8049302,
+    "ast_hash": "f6327c66a87261039cc7269b76b2ccbb",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/06b-composing-validators.md": {
-    "mtime": 1788167613.2675748,
-    "seen": 1788259233.6403303,
-    "ast_hash": "e1cebc796ddbc4f1094c3ae637b3800c",
-    "semantic_hash": "e1cebc796ddbc4f1094c3ae637b3800c"
+    "mtime": 1788489363.367164,
+    "seen": 1788491627.8049314,
+    "ast_hash": "a24aa7c23f54e8b0da49af9309abfd3d",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-13-oauth2-oidc/_PHASE-NOTES.md": {
     "mtime": 1788165556.6291678,
@@ -43422,202 +43422,202 @@
     "semantic_hash": "f6f52cf4f84ef2bc02e6a2dc9b20d36a"
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/01-what-a-boundary-is.md": {
-    "mtime": 1788400938.0447862,
-    "seen": 1788407868.62442,
-    "ast_hash": "b9842abe9696c25c622c27a6ef16099a",
+    "mtime": 1788491488.8972204,
+    "seen": 1788491627.8049893,
+    "ast_hash": "89725a2edc31718c15a7dcd6ea51f742",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/02-bounded-context.md": {
-    "mtime": 1788400938.0451972,
-    "seen": 1788407868.6244211,
-    "ast_hash": "b95c0ba9f3e3b8a6a9784ac3101eb27e",
+    "mtime": 1788491488.8973882,
+    "seen": 1788491627.8049908,
+    "ast_hash": "1272d6d7d191f7a9a33c28b57548e106",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/02b-the-same-word-two-meanings.md": {
-    "mtime": 1788400938.0455527,
-    "seen": 1788407868.6244218,
-    "ast_hash": "ff4342647f3ec01c6a2f00f6b56bfafb",
+    "mtime": 1788491488.8974838,
+    "seen": 1788491627.8049912,
+    "ast_hash": "93b2830c1529b390e8362f6087f6be4a",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/02c-the-language-tells-you.md": {
-    "mtime": 1788400938.0458782,
-    "seen": 1788407868.624423,
-    "ast_hash": "9cbbb660d6ca2c469a736322d46429f9",
+    "mtime": 1788491488.897584,
+    "seen": 1788491627.8049924,
+    "ast_hash": "3928c2fbb08cb1162c798e984d502609",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/03-subdomain-vs-bounded-context.md": {
-    "mtime": 1788400938.0462039,
-    "seen": 1788407868.624424,
-    "ast_hash": "4d1358a3ae93c96cdf02e7e5f12290df",
+    "mtime": 1788491488.8976824,
+    "seen": 1788491627.8049936,
+    "ast_hash": "eb01d77fa7fdd3ab77c045190aa1c9de",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/03b-core-supporting-generic.md": {
-    "mtime": 1788400938.0464199,
-    "seen": 1788407868.624425,
-    "ast_hash": "5f99f83e47e0e034be1ad465afb70e6c",
+    "mtime": 1788491488.8977642,
+    "seen": 1788491627.8049946,
+    "ast_hash": "901b69e521180e4c0c65888fc5bb925d",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/04-a-service-is-not-a-context.md": {
-    "mtime": 1788400938.046817,
-    "seen": 1788407868.6244256,
-    "ast_hash": "4664ae52ff7079a2f38ec30ae19928d4",
+    "mtime": 1788491488.8978837,
+    "seen": 1788491627.8049953,
+    "ast_hash": "ad81cdfd9397cde2ee31752bedab060d",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/05-one-service-one-capability.md": {
-    "mtime": 1788229519.4049673,
-    "seen": 1788259233.640372,
-    "ast_hash": "25bc535540f7fd4b7f304607f0f86259",
-    "semantic_hash": "25bc535540f7fd4b7f304607f0f86259"
+    "mtime": 1788491488.8979733,
+    "seen": 1788491627.804996,
+    "ast_hash": "a613fa06b2561673dc3c931a8cf0641a",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/06-invariants-are-the-criterion.md": {
-    "mtime": 1788229607.2464933,
-    "seen": 1788259233.6403728,
-    "ast_hash": "f7648df869ecabe6288e12c2c9874ce7",
-    "semantic_hash": "f7648df869ecabe6288e12c2c9874ce7"
+    "mtime": 1788491488.8980675,
+    "seen": 1788491627.804997,
+    "ast_hash": "2c1c584be41b807bc485dc577c1c5485",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/07-finding-the-invariants.md": {
-    "mtime": 1788229711.4611173,
-    "seen": 1788259233.6403735,
-    "ast_hash": "5622d0eefec6d29c587c6e88d9af8a88",
-    "semantic_hash": "5622d0eefec6d29c587c6e88d9af8a88"
+    "mtime": 1788491488.8981557,
+    "seen": 1788491627.8049982,
+    "ast_hash": "804ac0b7fe2957b9ce5cfc9176dde8dc",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/07b-false-invariants.md": {
-    "mtime": 1788229790.6005912,
-    "seen": 1788259233.6403742,
-    "ast_hash": "1a76cee036e0d734219c5aabb7a8717b",
-    "semantic_hash": "1a76cee036e0d734219c5aabb7a8717b"
+    "mtime": 1788491488.8982363,
+    "seen": 1788491627.8049994,
+    "ast_hash": "d5abd1f22c3084076a4ce9662f4c7391",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/08-whose-job-is-it.md": {
-    "mtime": 1788229906.3943396,
-    "seen": 1788259233.640375,
-    "ast_hash": "599df7b61217952e28bd5cc9d512db48",
-    "semantic_hash": "599df7b61217952e28bd5cc9d512db48"
+    "mtime": 1788491488.898309,
+    "seen": 1788491627.8050005,
+    "ast_hash": "3c994a5ae71039721454f4c716512113",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/08b-the-answer-in-code.md": {
-    "mtime": 1788400938.0470352,
-    "seen": 1788407868.6244323,
-    "ast_hash": "edeaafaa9aa232af8bb38a7e47fd196e",
+    "mtime": 1788491488.8983848,
+    "seen": 1788491627.8050017,
+    "ast_hash": "4f894c7cdb2b2aa03974124571404422",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/09-the-transaction-boundary.md": {
-    "mtime": 1788230042.087097,
-    "seen": 1788259233.6403763,
-    "ast_hash": "7cde9ebe4152d9a0eb24e06e0145630e",
-    "semantic_hash": "7cde9ebe4152d9a0eb24e06e0145630e"
+    "mtime": 1788491488.8984663,
+    "seen": 1788491627.8050027,
+    "ast_hash": "9b1fdd1a44d02f9e43e7b6adffbe7e0f",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/09b-finding-it-in-the-code.md": {
-    "mtime": 1788400938.047229,
-    "seen": 1788407868.6244347,
-    "ast_hash": "98fa08af783ae825767a0d85fd1e6ea8",
+    "mtime": 1788491488.8985746,
+    "seen": 1788491627.805004,
+    "ast_hash": "15c765cce0046e7fd17abb276ef14b59",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/10-who-owns-the-data.md": {
-    "mtime": 1788230371.1690671,
-    "seen": 1788259233.6403775,
-    "ast_hash": "2320aa5ae8720856885cbcc86c816746",
-    "semantic_hash": "2320aa5ae8720856885cbcc86c816746"
+    "mtime": 1788491488.8986576,
+    "seen": 1788491627.8050046,
+    "ast_hash": "e63ff4d45a5a8debebfb8e93655f2659",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/10b-the-ownership-register.md": {
-    "mtime": 1788400938.0474477,
-    "seen": 1788407868.6244364,
-    "ast_hash": "7c07beb48247376840f749944e8e0264",
+    "mtime": 1788491488.8987603,
+    "seen": 1788491627.805006,
+    "ast_hash": "639d3f5ee43ea4cff06f647d048942e2",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/11-reasons-to-break-the-rule.md": {
-    "mtime": 1788230517.8929036,
-    "seen": 1788259233.6403794,
-    "ast_hash": "d3875d046129497cdd5fa90f4ced27d3",
-    "semantic_hash": "d3875d046129497cdd5fa90f4ced27d3"
+    "mtime": 1788491488.89885,
+    "seen": 1788491627.8050075,
+    "ast_hash": "5c117a0902544ce1585bb22edf533b94",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/12-splitting-by-layer.md": {
-    "mtime": 1788400938.0477567,
-    "seen": 1788407868.6244383,
-    "ast_hash": "d6fc51994529415c6a6fc1a914693049",
+    "mtime": 1788491488.8989415,
+    "seen": 1788491627.805009,
+    "ast_hash": "8252109fb90aebce2f8b62fe776b83ae",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/13-entity-services.md": {
-    "mtime": 1788230661.4306352,
-    "seen": 1788259233.6403809,
-    "ast_hash": "c3465ff43a83524d74cd7505b279fb15",
-    "semantic_hash": "c3465ff43a83524d74cd7505b279fb15"
+    "mtime": 1788491488.8990183,
+    "seen": 1788491627.8050098,
+    "ast_hash": "7f93d8010ceeacb83b30c2c75c338b6f",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/13b-crud-is-not-a-capability.md": {
-    "mtime": 1788230739.0220306,
-    "seen": 1788259233.6403813,
-    "ast_hash": "2d96ff100767be43298906a3b539acb9",
-    "semantic_hash": "2d96ff100767be43298906a3b539acb9"
+    "mtime": 1788491488.8990927,
+    "seen": 1788491627.8050103,
+    "ast_hash": "00f0ce7a882e230e0c49354b97309a62",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/14-conway-and-the-org-chart.md": {
-    "mtime": 1788230808.9653873,
-    "seen": 1788259233.6403823,
-    "ast_hash": "edd6a019245f81d76ee74aa12ea27f2d",
-    "semantic_hash": "edd6a019245f81d76ee74aa12ea27f2d"
+    "mtime": 1788491488.8991716,
+    "seen": 1788491627.8050115,
+    "ast_hash": "c10c2406e8f8e71ad4885eeb3f5698cc",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/15-too-small.md": {
-    "mtime": 1788230890.9038048,
-    "seen": 1788259233.6403835,
-    "ast_hash": "5ab4975277420db39bc7e913d5b4e9cc",
-    "semantic_hash": "5ab4975277420db39bc7e913d5b4e9cc"
+    "mtime": 1788491488.899246,
+    "seen": 1788491627.8050127,
+    "ast_hash": "f6b3340284ea55382cbcaa3da86f3231",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/16-the-shared-model-jar.md": {
-    "mtime": 1788400938.0480618,
-    "seen": 1788407868.624443,
-    "ast_hash": "69239a12f3a7a25aa9947b9eba62045f",
+    "mtime": 1788491488.899319,
+    "seen": 1788491627.8050134,
+    "ast_hash": "5fbc402dc98eb4adaa745decb2a2b6bd",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/17-the-god-service.md": {
-    "mtime": 1788231033.291489,
-    "seen": 1788259233.6403847,
-    "ast_hash": "9781913aecf4805bf5d532e954846b37",
-    "semantic_hash": "9781913aecf4805bf5d532e954846b37"
+    "mtime": 1788491488.8993955,
+    "seen": 1788491627.8050146,
+    "ast_hash": "633d60a480609b8b88d02f621a4186c4",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/18-boundaries-from-a-whiteboard.md": {
-    "mtime": 1788400938.048263,
-    "seen": 1788407868.6244452,
-    "ast_hash": "ad90e86e43bf291b1d98cfe0617790ab",
+    "mtime": 1788491488.8994696,
+    "seen": 1788491627.805016,
+    "ast_hash": "744a8430b2eaf1921d9afa4e4de6ddb1",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/19-change-history-as-evidence.md": {
-    "mtime": 1788400938.0485818,
-    "seen": 1788407868.6244462,
-    "ast_hash": "7b045399ecb222f402be54656bb60649",
+    "mtime": 1788491488.8995507,
+    "seen": 1788491627.8050168,
+    "ast_hash": "607f02d434326b5abaa5edef38bc64bc",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/19b-reading-the-co-change-matrix.md": {
-    "mtime": 1788400938.048805,
-    "seen": 1788407868.6244469,
-    "ast_hash": "558e0fde8cd28b9242b7a45c1d4c003e",
+    "mtime": 1788491488.899624,
+    "seen": 1788491627.805018,
+    "ast_hash": "65684fbff86dcbd167ed53e1c02c3c0e",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/20-event-storming.md": {
-    "mtime": 1788231399.350037,
-    "seen": 1788259233.6403878,
-    "ast_hash": "2cfd143fd026bfa7acd7c6294bd0e43c",
-    "semantic_hash": "2cfd143fd026bfa7acd7c6294bd0e43c"
+    "mtime": 1788491488.8996997,
+    "seen": 1788491627.805019,
+    "ast_hash": "87ec9b333a5337a8985f071eb129ea33",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/21-system-operations-first.md": {
-    "mtime": 1788231468.4513292,
-    "seen": 1788259233.6403887,
-    "ast_hash": "af3b0e9960aa3c588833af9a3d0eebd3",
-    "semantic_hash": "af3b0e9960aa3c588833af9a3d0eebd3"
+    "mtime": 1788491488.8997743,
+    "seen": 1788491627.8050196,
+    "ast_hash": "b9cc5820552d69f1fae75ad045687322",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/22-the-ten-forces.md": {
-    "mtime": 1788400938.0490088,
-    "seen": 1788407868.624451,
-    "ast_hash": "084f6e2cbd5d37991dbdba90ea4d5484",
+    "mtime": 1788491488.8999116,
+    "seen": 1788491627.80502,
+    "ast_hash": "e8f689a21a79b40c420fec20f1ba51a3",
     "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/22b-scoring-one-cut.md": {
-    "mtime": 1788231624.5969362,
-    "seen": 1788259233.6403902,
-    "ast_hash": "60275e3c582f117c1254f58a63f52ee6",
-    "semantic_hash": "60275e3c582f117c1254f58a63f52ee6"
+    "mtime": 1788491488.9000082,
+    "seen": 1788491627.8050215,
+    "ast_hash": "c75b730bc459deadbd00a563c44aefee",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/23-the-monolith-already-told-you.md": {
-    "mtime": 1788231699.1672199,
-    "seen": 1788259233.6403906,
-    "ast_hash": "7ffd08372f670cdb55d8e97a2b0751ba",
-    "semantic_hash": "7ffd08372f670cdb55d8e97a2b0751ba"
+    "mtime": 1788491488.9000826,
+    "seen": 1788491627.8050222,
+    "ast_hash": "1d6fa0410fe63193f624f6bac28c3ecc",
+    "semantic_hash": ""
   },
   "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/_plan.md": {
     "mtime": 1788228889.7750595,
@@ -44238,9 +44238,9 @@
     "semantic_hash": ""
   },
   ".agents/references/house-style.md": {
-    "mtime": 1788406047.9978745,
-    "seen": 1788407868.6219306,
-    "ast_hash": "07da8167ef539f53e59b186c950957f5",
+    "mtime": 1788490691.8044276,
+    "seen": 1788491627.8018672,
+    "ast_hash": "c38ba222b588d4d833319b2a7a0e2f51",
     "semantic_hash": ""
   },
   ".agents/references/verification.md": {
@@ -45018,9 +45018,9 @@
     "semantic_hash": ""
   },
   "docs/nextjs/README.md": {
-    "mtime": 1788438374.3374503,
-    "seen": 1788441491.4040494,
-    "ast_hash": "a7611f9a104c694b6c1421c826178676",
+    "mtime": 1788490925.2407916,
+    "seen": 1788491627.8066397,
+    "ast_hash": "613f81447095191d93d551fdf0f00958",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/01-introduction-to-next-js/01-evolution-from-pages-router-to-app-router-why-app-router-is.md": {
@@ -45168,9 +45168,9 @@
     "semantic_hash": ""
   },
   "docs/nextjs/pages/02-routing-and-navigation/10-instant-navigations/README.md": {
-    "mtime": 1788407647.939234,
-    "seen": 1788407868.6261775,
-    "ast_hash": "463b080e52cc48f2593d4bc90416b2c3",
+    "mtime": 1788490691.8074276,
+    "seen": 1788491627.8066711,
+    "ast_hash": "84d265d9522c0c291ea72e672ef387e0",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/02-routing-and-navigation/11-root-params.md": {
@@ -45438,9 +45438,9 @@
     "semantic_hash": ""
   },
   "docs/nextjs/pages/05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md": {
-    "mtime": 1788403578.2779422,
-    "seen": 1788407868.626218,
-    "ast_hash": "057cb90c1ea2baaac07b30c68c4d8594",
+    "mtime": 1788490691.8074276,
+    "seen": 1788491627.8067544,
+    "ast_hash": "b3efa265c44174080dd678937d424ba8",
     "semantic_hash": ""
   },
   "docs/nextjs/pages/06-ssg-isr-and-ssr-strategy/01-choosing-a-rendering-pattern-seo-build-time-data-velocity-pe.md": {
@@ -47232,9 +47232,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/13-unpacking/01-tuple-assignment.md": {
-    "mtime": 1788360544.3944685,
-    "seen": 1788407868.6274314,
-    "ast_hash": "342e06b3ae678e0dc44c31755e676716",
+    "mtime": 1788488873.112381,
+    "seen": 1788491627.8084798,
+    "ast_hash": "cb793ac2a8061c45a881c402ad577d5b",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/13-unpacking/02-starred-unpacking.md": {
@@ -47250,9 +47250,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/13-unpacking/README.md": {
-    "mtime": 1788360715.0903468,
-    "seen": 1788407868.6274343,
-    "ast_hash": "64a2d2a45bf5a8eacc4b46f348dcb031",
+    "mtime": 1788488886.7954888,
+    "seen": 1788491627.808484,
+    "ast_hash": "e3e0718feb897d399c0ba3e92e1aa6f7",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/14-none-and-no-result/01-what-none-is.md": {
@@ -48798,9 +48798,9 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/11-suppress-and-the-explicit-ignore.md": {
-    "mtime": 1788445078.1063216,
-    "seen": 1788447200.6675687,
-    "ast_hash": "df22773cd99f346282c3b7318152eb6c",
+    "mtime": 1788488873.1120572,
+    "seen": 1788491627.8083978,
+    "ast_hash": "ed7b7bd2e121767990b101c1bc79ffbf",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/11b-warnings.md": {
@@ -48822,15 +48822,15 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/13b-losing-it-across-a-boundary.md": {
-    "mtime": 1788445108.1932325,
-    "seen": 1788447200.6675863,
-    "ast_hash": "c8684f6f3032098105ead495b65a9e23",
+    "mtime": 1788488873.1121814,
+    "seen": 1788491627.8084035,
+    "ast_hash": "1900b67b7f90124fdf9e8fd8141ec361",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-1-language-core/11-exceptions/README.md": {
-    "mtime": 1788445276.8663952,
-    "seen": 1788447200.6675906,
-    "ast_hash": "2ab2a9c1ad2b9589676d02adbe81808c",
+    "mtime": 1788488873.1118934,
+    "seen": 1788491627.8084047,
+    "ast_hash": "cd840b0eed53a124d94a205de0b87fb3",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/02-parameters-in-full/01-default-values-and-the-mutable-trap.md": {
@@ -48918,15 +48918,15 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/05-decorators/02-metadata-preservation-with-functools-wraps.md": {
-    "mtime": 1788443908.1944005,
-    "seen": 1788447200.667752,
-    "ast_hash": "d699a55ec9256bb555ee6bcd16645eb5",
+    "mtime": 1788447816.03753,
+    "seen": 1788491627.808525,
+    "ast_hash": "39315a785edfae6064d083d1d2f26eb8",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/05-decorators/03-decorators-taking-arguments-and-factories.md": {
-    "mtime": 1788444138.6003516,
-    "seen": 1788447200.6677568,
-    "ast_hash": "1f49ac76f5d1932930652dd3a5ccacb8",
+    "mtime": 1788447847.1976738,
+    "seen": 1788491627.8085263,
+    "ast_hash": "74fc2894c1518e5190077453abfef565",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/05-decorators/04-stacking-decorators-and-class-decorators.md": {
@@ -49002,21 +49002,21 @@
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/09-annotations-at-runtime/01-deferred-evaluation-and-the-annotate-protocol.md": {
-    "mtime": 1788445478.3044832,
-    "seen": 1788447200.6678085,
-    "ast_hash": "e0b91a07fb0209ed58fb100315e75e5e",
+    "mtime": 1788451233.2336824,
+    "seen": 1788491627.808556,
+    "ast_hash": "2f7751b2c97017cacc0a4b1b397142d3",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/09-annotations-at-runtime/02-annotationlib-and-runtime-reflection.md": {
-    "mtime": 1788445704.9787076,
-    "seen": 1788447200.6678114,
-    "ast_hash": "4a19f24c2898ffea3eaca3bbda4c877c",
+    "mtime": 1788447774.9583402,
+    "seen": 1788491627.808557,
+    "ast_hash": "f3c4562db447de7879ebf40f7ddd8510",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/09-annotations-at-runtime/README.md": {
-    "mtime": 1788445490.0245466,
-    "seen": 1788447200.6678135,
-    "ast_hash": "54cee16e7f9a77f5c735eb11d2523f84",
+    "mtime": 1788451233.2339947,
+    "seen": 1788491627.8085577,
+    "ast_hash": "8d79cc29981c434119d6ca632b36893b",
     "semantic_hash": ""
   },
   "docs/python/pages/phase-2-functions/10-recursion-and-the-limit/01-recursion-error-and-the-c-stack.md": {
@@ -49035,6 +49035,792 @@
     "mtime": 1788445685.1956007,
     "seen": 1788447200.6678216,
     "ast_hash": "b771fc6804a4357555c453a16b7ed655",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/01-why-oauth2-exists/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983117,
+    "ast_hash": "7b59fae24f6ef3d0ddfee4e977c4452b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/02-the-four-roles/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.798316,
+    "ast_hash": "c22427a86057710c0e031e6b9559b239",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983196,
+    "ast_hash": "98a838e775179f32c28f7c8a5bef097b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/04-client-credentials/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983227,
+    "ast_hash": "08907a2ccca125f0e154debcca37e5e5",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983282,
+    "ast_hash": "32c30e5780cb32831df9a8ea07b7de17",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983308,
+    "ast_hash": "6d657ba7ad1ef018052316a966f3abd9",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/_category_.json": {
+    "mtime": 1788488815.447233,
+    "seen": 1788491627.7983327,
+    "ast_hash": "39300c754f09b2004c21befac0ce892e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/_category_.json": {
+    "mtime": 1788490863.7914817,
+    "seen": 1788491627.7996218,
+    "ast_hash": "6c2f787fdf794953b65d1acf5d0bdb1c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/_category_.json": {
+    "mtime": 1788451881.930772,
+    "seen": 1788491627.799625,
+    "ast_hash": "0eef05986d845a600d88d4fb7f735c9d",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/01-what-problem-it-solves.md": {
+    "mtime": 1788490881.61846,
+    "seen": 1788491627.8047032,
+    "ast_hash": "f05451f1b372c1b931017af12f0eaec1",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/01b-the-distribution-and-the-licence.md": {
+    "mtime": 1788490881.617955,
+    "seen": 1788491627.8047068,
+    "ast_hash": "77505e8dfa9d004c633e142e5d916273",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/02-the-closed-world-assumption.md": {
+    "mtime": 1788490881.618718,
+    "seen": 1788491627.8047082,
+    "ast_hash": "6f8996771a7fc190eeec273e74978a05",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/03-what-breaks.md": {
+    "mtime": 1788490881.6192164,
+    "seen": 1788491627.80471,
+    "ast_hash": "d2b0bbb8edda39746463c371c171e79b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/03b-reachability-metadata.md": {
+    "mtime": 1788490881.618897,
+    "seen": 1788491627.8047125,
+    "ast_hash": "0b5f03bf7f2c004e6ea0c2fc7ddaf9da",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/03c-the-tracing-agent.md": {
+    "mtime": 1788490881.6190546,
+    "seen": 1788491627.8047137,
+    "ast_hash": "03d7cd3c436846b6f2e9d0f3b77dfe50",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/04-build-time-vs-run-time-initialisation.md": {
+    "mtime": 1788490881.6195023,
+    "seen": 1788491627.804715,
+    "ast_hash": "b7640de82d7ecebb3f2b5795e3a16704",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/04b-the-secret-baked-into-the-image.md": {
+    "mtime": 1788490881.6193657,
+    "seen": 1788491627.8047173,
+    "ast_hash": "dd8e048d2ecfdbcd13c82b1c6dbc3d04",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/05-spring-boot-aot.md": {
+    "mtime": 1788490881.6198158,
+    "seen": 1788491627.8047183,
+    "ast_hash": "c5a819a2ec549e2aaf14d5a7dccc48b1",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/05b-what-spring-gives-up.md": {
+    "mtime": 1788490881.61968,
+    "seen": 1788491627.8047204,
+    "ast_hash": "0ce9522c124f97fa8686cd921f97ebfe",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/06-building-one.md": {
+    "mtime": 1788490881.6201167,
+    "seen": 1788491627.8047225,
+    "ast_hash": "c8c0b812a0f36a3c46ac5555c6ede322",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/06b-the-build-that-takes-ten-minutes.md": {
+    "mtime": 1788490881.6199691,
+    "seen": 1788491627.8047237,
+    "ast_hash": "7ceb7884341f009c500dc78e1d0c2f92",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/07-runtime-characteristics.md": {
+    "mtime": 1788490881.6204083,
+    "seen": 1788491627.8047256,
+    "ast_hash": "45412d9ec3e58e7f10d8ad8922755fa9",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/11-graalvm-native-image/07b-no-jit-no-jfr-no-jstack.md": {
+    "mtime": 1788490881.62026,
+    "seen": 1788491627.8047273,
+    "ast_hash": "cf6504e16c12aa0c100070449832e0cd",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/01-the-flags-you-inherited.md": {
+    "mtime": 1788490782.088349,
+    "seen": 1788491627.8047569,
+    "ast_hash": "ae2d8d74ee53d9280b24d434be103fce",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/02-the-three-kinds.md": {
+    "mtime": 1788490782.08794,
+    "seen": 1788491627.804758,
+    "ast_hash": "7a59963d291fb4ee210b75c4a311e829",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/02b-unlocking-diagnostic-and-experimental.md": {
+    "mtime": 1788490768.1670885,
+    "seen": 1788491627.804759,
+    "ast_hash": "4a263510e28a1c826c6a3cdd93e20b6b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/03-ergonomics.md": {
+    "mtime": 1788490782.0873003,
+    "seen": 1788491627.80476,
+    "ast_hash": "76eed7ee8a23ea715575bec1aa419a76",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/04-printflagsfinal.md": {
+    "mtime": 1788490782.0888176,
+    "seen": 1788491627.804761,
+    "ast_hash": "94f23275f29bf4b7d7621067fb0aae35",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/04b-vm-flags-on-a-running-process.md": {
+    "mtime": 1788490768.1674762,
+    "seen": 1788491627.8047626,
+    "ast_hash": "8b3bc6e0bec7be28f75a8a134f799d9a",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/05-the-live-list-memory.md": {
+    "mtime": 1788490768.1679823,
+    "seen": 1788491627.8047647,
+    "ast_hash": "4a5ee026853fa2e49eac2edf83cda2a3",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/05b-the-ceilings-that-are-not-the-heap.md": {
+    "mtime": 1788490768.1677458,
+    "seen": 1788491627.8047657,
+    "ast_hash": "e9907f73c8bd43818ede254ade6706a2",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-12-jvm-production/13-jvm-flags-that-matter/05c-the-live-list-gc.md": {
+    "mtime": 1788490768.167863,
+    "seen": 1788491627.8047667,
+    "ast_hash": "88e198a07eb29a1df16766cf73478ab8",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/03-authorization-code-pkce/README.md": {
+    "mtime": 1788488915.062453,
+    "seen": 1788491627.8048637,
+    "ast_hash": "9cc488517ef90ef47ea10cb252a318fc",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/05-the-three-tokens/README.md": {
+    "mtime": 1788488987.0226607,
+    "seen": 1788491627.8048866,
+    "ast_hash": "973f0fd40559f8c3db5e4a47f5662ebe",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/06-jwt-anatomy-and-validation/README.md": {
+    "mtime": 1788489051.9035165,
+    "seen": 1788491627.8048997,
+    "ast_hash": "70af957b4357cfc92f146daaeb6514e2",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/02-the-authentication-request.md": {
+    "mtime": 1788489788.2495134,
+    "seen": 1788491627.8049014,
+    "ast_hash": "f212cb01a5978d9fdd469aa3d99341f2",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/02b-the-parameters-about-the-human.md": {
+    "mtime": 1788490359.6732395,
+    "seen": 1788491627.804902,
+    "ast_hash": "450ede2ebde2203fd60d02519f1a9320",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/03-validating-an-id-token.md": {
+    "mtime": 1788490008.5630214,
+    "seen": 1788491627.8049037,
+    "ast_hash": "1520e12ad487c63a3909fc6233cca11e",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/03b-signature-time-and-the-conditional-checks.md": {
+    "mtime": 1788489986.9980915,
+    "seen": 1788491627.8049054,
+    "ast_hash": "f0cf06b9354a72af776cd4e9a938a1f5",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/04-nonce-state-and-the-three-bindings.md": {
+    "mtime": 1788490283.2502775,
+    "seen": 1788491627.804906,
+    "ast_hash": "2efb417aa71c88b327e6d3470341ead4",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/04b-generating-and-storing-them.md": {
+    "mtime": 1788490324.5564451,
+    "seen": 1788491627.804907,
+    "ast_hash": "4a70c2948347d00ba9cddef74f265623",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/05-discovery-and-the-well-known-document.md": {
+    "mtime": 1788490482.7899683,
+    "seen": 1788491627.8049076,
+    "ast_hash": "a653e3ac9a3565f33d1c694187669c0e",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/05b-the-metadata-document.md": {
+    "mtime": 1788490519.4249413,
+    "seen": 1788491627.8049083,
+    "ast_hash": "064f11de5613c2db0442ceddeb5e7a2c",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/06-standard-scopes-and-claims.md": {
+    "mtime": 1788490612.8500788,
+    "seen": 1788491627.8049095,
+    "ast_hash": "76b4bef11dc8d27b3c169690c851db7f",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/07-the-userinfo-endpoint.md": {
+    "mtime": 1788490695.8584456,
+    "seen": 1788491627.8049111,
+    "ast_hash": "c6ad4074244f0d953ca6e65461eaa293",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/08-sub-is-not-an-email.md": {
+    "mtime": 1788490798.4329278,
+    "seen": 1788491627.8049126,
+    "ast_hash": "a2f4154eb0860b494235f933577c495c",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/09-response-types-and-modes.md": {
+    "mtime": 1788490889.3163562,
+    "seen": 1788491627.804914,
+    "ast_hash": "dfed00ff0bb06977abed7ac45a137561",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/10-logout.md": {
+    "mtime": 1788490994.735815,
+    "seen": 1788491627.8049147,
+    "ast_hash": "83ba8fe6ef48c90534f2bae5d3372cec",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/07-openid-connect/README.md": {
+    "mtime": 1788491042.5099392,
+    "seen": 1788491627.8049154,
+    "ast_hash": "2c7ed7d20ab2cc260fded1e2c943062b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/05d-step-7-surprises-and-the-debug-table.md": {
+    "mtime": 1788489363.3669703,
+    "seen": 1788491627.804929,
+    "ast_hash": "de9727ec57aa470ae41d2e71545681f4",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-13-oauth2-oidc/08-spring-security-resource-server/README.md": {
+    "mtime": 1788489388.1391885,
+    "seen": 1788491627.8049324,
+    "ast_hash": "8c386e5dac1c025850e8b5790fc25d7f",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/24-package-structure-is-the-boundary.md": {
+    "mtime": 1788491488.9001575,
+    "seen": 1788491627.805023,
+    "ast_hash": "0af08f40db9a5df64fc628166be90c7c",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/25-verifying-the-boundary.md": {
+    "mtime": 1788491488.9002233,
+    "seen": 1788491627.8050237,
+    "ast_hash": "620e1956286db43952ef393d7b5734c7",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/25b-named-interfaces.md": {
+    "mtime": 1788491488.9012012,
+    "seen": 1788491627.8050246,
+    "ast_hash": "acde7a2cc4f8fe452f5372df0140d65a",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/26-archunit-rules.md": {
+    "mtime": 1788491488.9013162,
+    "seen": 1788491627.8050253,
+    "ast_hash": "3ce047b4834a6854ebc740201bfd8fec",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/27-build-modules-and-jpms.md": {
+    "mtime": 1788491488.9013968,
+    "seen": 1788491627.8050263,
+    "ast_hash": "abc6c54f8eb4a662a15729097e9bf36c",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/28-published-language-vs-aggregate.md": {
+    "mtime": 1788491488.9014685,
+    "seen": 1788491627.8050272,
+    "ast_hash": "5d06c4097ad4c0eabe37ac8177a70b62",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/28b-never-publish-the-aggregate.md": {
+    "mtime": 1788491488.9015517,
+    "seen": 1788491627.8050282,
+    "ast_hash": "04d35a0b5f53297723c1f2aae88138ab",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/29-anticorruption-layer.md": {
+    "mtime": 1788491488.901802,
+    "seen": 1788491627.8050287,
+    "ast_hash": "fd772ceb87846e36ada97f29aa7e5981",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/29b-where-the-acl-lives.md": {
+    "mtime": 1788491488.9019344,
+    "seen": 1788491627.8050299,
+    "ast_hash": "ef2cc63db68931a66fb9a745eeb3a1cb",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/30-context-mapping.md": {
+    "mtime": 1788491488.9020436,
+    "seen": 1788491627.805031,
+    "ast_hash": "843329716af2e41dacc62de3cfbd7a0c",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/31-customer-supplier.md": {
+    "mtime": 1788491488.9021282,
+    "seen": 1788491627.805032,
+    "ast_hash": "c026a5a99c600ec8ef16ccae41bb381e",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/32-conformist.md": {
+    "mtime": 1788491488.902202,
+    "seen": 1788491627.8050334,
+    "ast_hash": "0f8f02e1849a53931400c225c7b1d33b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/33-shared-kernel.md": {
+    "mtime": 1788491488.9022753,
+    "seen": 1788491627.8050344,
+    "ast_hash": "de763e3e75dad3e7088876896493c062",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/34-open-host-and-published-language.md": {
+    "mtime": 1788491488.9023542,
+    "seen": 1788491627.8050354,
+    "ast_hash": "c17d27b1c966ed5fb185c9a634084e65",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/35-partnership-and-separate-ways.md": {
+    "mtime": 1788491488.902424,
+    "seen": 1788491627.805036,
+    "ast_hash": "d3ae4d30f6fb5f1850e6d7f4dbf8c898",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/36-choosing-a-relationship.md": {
+    "mtime": 1788491488.9025047,
+    "seen": 1788491627.8050368,
+    "ast_hash": "8e0c8e528a34657fba6938b114778d53",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/37-the-tells-of-a-wrong-boundary.md": {
+    "mtime": 1788491488.9026113,
+    "seen": 1788491627.8050375,
+    "ast_hash": "cc3687067da11b85990c369407d3479e",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/38-merging-two-services.md": {
+    "mtime": 1788491488.9027,
+    "seen": 1788491627.805039,
+    "ast_hash": "44277f3556d70c31599f1a7cbe75b7a8",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/39-moving-a-capability.md": {
+    "mtime": 1788491488.9027784,
+    "seen": 1788491627.8050396,
+    "ast_hash": "025ecfbdfb5faef0dda4e9cf25f4707b",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/40-splitting-a-service.md": {
+    "mtime": 1788491488.9028609,
+    "seen": 1788491627.8050406,
+    "ast_hash": "ffa2d40edf4835218f91a4ea24c9bc9a",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/41-strangler-extraction.md": {
+    "mtime": 1788491488.902932,
+    "seen": 1788491627.8050413,
+    "ast_hash": "c08ea8a4b2e93f3d56b3499ee0548d53",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/42-the-cost-of-changing-a-boundary.md": {
+    "mtime": 1788491488.903007,
+    "seen": 1788491627.8050423,
+    "ast_hash": "aefbfb3dcf2a1ff058009a3192caf020",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/43-when-not-to-fix-it.md": {
+    "mtime": 1788491488.9031062,
+    "seen": 1788491627.8050427,
+    "ast_hash": "483750f6b8850eff88ad67b81d7211f4",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/44-worked-example-operations-and-aggregates.md": {
+    "mtime": 1788491488.9036632,
+    "seen": 1788491627.8050435,
+    "ast_hash": "0e20ad6e97b1e00bb8bca99f4981aef2",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/44b-worked-example-candidate-cuts.md": {
+    "mtime": 1788491488.9037604,
+    "seen": 1788491627.8050447,
+    "ast_hash": "4f03ba188687224976a37ab80f31c0c8",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/44c-worked-example-two-teams-and-twelve.md": {
+    "mtime": 1788491488.903849,
+    "seen": 1788491627.8050456,
+    "ast_hash": "fd9386083a2adcd12f7e7ee00b1cd442",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/45-the-checklist.md": {
+    "mtime": 1788491488.9039233,
+    "seen": 1788491627.8050473,
+    "ast_hash": "065074d575dadcc48bd29c0d044d9128",
+    "semantic_hash": ""
+  },
+  "docs/java/pages/phase-14-microservice-architecture/02-service-boundaries/README.md": {
+    "mtime": 1788491458.0674045,
+    "seen": 1788491627.805048,
+    "ast_hash": "28645a17b240c1d0a3dacd2e7c580a71",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/01-the-two-names.md": {
+    "mtime": 1788488831.4819613,
+    "seen": 1788491627.8084073,
+    "ast_hash": "7643f0659e4a0332ffc2ad174b13c1ac",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/01b-why-python-leans-eafp.md": {
+    "mtime": 1788488831.3681207,
+    "seen": 1788491627.808409,
+    "ast_hash": "babad78a491f553f31def315e272b305",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/02-the-race-between-look-and-leap.md": {
+    "mtime": 1788488831.3873794,
+    "seen": 1788491627.8084106,
+    "ast_hash": "5bd6839dcc3c3cea7cb7c0acecc2f954",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/02b-the-filesystem-and-the-atomic-flag.md": {
+    "mtime": 1788488831.3779526,
+    "seen": 1788491627.8084114,
+    "ast_hash": "cadc2c0a42080905af3f6ac45a612662",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/02c-databases-queues-and-when-lbyl-clears.md": {
+    "mtime": 1788488831.3818393,
+    "seen": 1788491627.8084133,
+    "ast_hash": "be38fab69cae5159d914ea862b02e980",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/03-mappings-the-decision-table.md": {
+    "mtime": 1788488831.4032364,
+    "seen": 1788491627.8084142,
+    "ast_hash": "922efa8edf489408a9b039e462047cf5",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/03b-writing-on-a-miss.md": {
+    "mtime": 1788488831.3918383,
+    "seen": 1788491627.808415,
+    "ast_hash": "3651b652709d45c31c0a37e66e6b14af",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/03c-sequences-sets-and-nested-lookups.md": {
+    "mtime": 1788488831.3994741,
+    "seen": 1788491627.8084166,
+    "ast_hash": "c9bb81215cae43521cb78588ce429c3c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/04-hasattr-is-eafp-in-disguise.md": {
+    "mtime": 1788488831.4131558,
+    "seen": 1788491627.8084176,
+    "ast_hash": "39df27fd593803b8448109a69cbb591f",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/04b-duck-typing-and-the-type-shaped-check.md": {
+    "mtime": 1788488831.406614,
+    "seen": 1788491627.8084185,
+    "ast_hash": "be37248f8c21162425e9a299189d929a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/04c-protocols-and-structural-checks.md": {
+    "mtime": 1788488831.4098773,
+    "seen": 1788491627.8084192,
+    "ast_hash": "db349a80895839d0b7a8ec32b8bc1431",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05-where-lbyl-is-right.md": {
+    "mtime": 1788490921.537508,
+    "seen": 1788491627.8084207,
+    "ast_hash": "cdf0f04cc466dc5d520a960995323895",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05b-assert-is-not-validation.md": {
+    "mtime": 1788488831.4164884,
+    "seen": 1788491627.8084219,
+    "ast_hash": "8c2a677465e8cce17016fea209ee4167",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05c-the-quiet-boundaries.md": {
+    "mtime": 1788490499.8203468,
+    "seen": 1788491627.8084245,
+    "ast_hash": "736600ede2181704c26d7d8ad08d975c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05d-irreversible-leaps.md": {
+    "mtime": 1788488831.4228213,
+    "seen": 1788491627.8084252,
+    "ast_hash": "48a60fd4f24a90f661478628acfdc1ab",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05e-claim-then-leap.md": {
+    "mtime": 1788488831.426118,
+    "seen": 1788491627.808426,
+    "ast_hash": "009f1ac820d6775376920945fecdbe6a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05f-the-asymmetry.md": {
+    "mtime": 1788488831.4295044,
+    "seen": 1788491627.8084283,
+    "ast_hash": "3e706ce6d4a921ecfb846a4340d57679",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05g-closing-the-gap-with-a-lock.md": {
+    "mtime": 1788488831.4325829,
+    "seen": 1788491627.8084292,
+    "ast_hash": "f6e71f703a0d62bf1c493938b86ea750",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05h-aggregating-failures.md": {
+    "mtime": 1788488831.4358168,
+    "seen": 1788491627.8084302,
+    "ast_hash": "2915daeb907b409d5a9de4694f565c8c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05i-the-check-is-the-rule.md": {
+    "mtime": 1788491275.512874,
+    "seen": 1788491627.808431,
+    "ast_hash": "189259ccd114440dc8fa0d0684be4f37",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/01-type-checkers-and-silent-apis.md": {
+    "mtime": 1788491148.623908,
+    "seen": 1788491627.8084316,
+    "ast_hash": "65a10f737453a0f26a716b549a8b8003",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/02-the-raising-contract.md": {
+    "mtime": 1788491148.6245866,
+    "seen": 1788491627.8084323,
+    "ast_hash": "ef11260a53f433c378ff51d9f738065a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/03-versioning-the-failure-channel.md": {
+    "mtime": 1788491148.6248083,
+    "seen": 1788491627.8084342,
+    "ast_hash": "9e3a81230fd3522ea5cfb107f980e6e5",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/04-the-bill-every-caller-pays.md": {
+    "mtime": 1788491148.6249847,
+    "seen": 1788491627.8084354,
+    "ast_hash": "6d4bf2ee4d2e2d262b4a9d9553bb08be",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/05-choosing-a-sentinel.md": {
+    "mtime": 1788491148.6251178,
+    "seen": 1788491627.808437,
+    "ast_hash": "9d13e30f9fa95d0d008d86fe867e2e16",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/06-the-sentinel-object.md": {
+    "mtime": 1788491148.6252332,
+    "seen": 1788491627.8084395,
+    "ast_hash": "332f9aff4d87cb532c7e0e1ff97a4b66",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/07-typing-the-sentinel.md": {
+    "mtime": 1788491148.625351,
+    "seen": 1788491627.8084412,
+    "ast_hash": "c3846fa30fdfc33322d2dcdc0f58bf0e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/08-overloads.md": {
+    "mtime": 1788491148.6254752,
+    "seen": 1788491627.8084426,
+    "ast_hash": "222ae9b935c5ea122177fa8e234a8cc0",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/09-union-returns-and-exhaustiveness.md": {
+    "mtime": 1788491148.6255937,
+    "seen": 1788491627.8084447,
+    "ast_hash": "fb245c9246ff50a6bda6b36fde210fda",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/10-exhaustiveness-and-assert-never.md": {
+    "mtime": 1788491148.6257098,
+    "seen": 1788491627.808447,
+    "ast_hash": "7d8847fe6b0b05b8127d66b76eb82c46",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/README.md": {
+    "mtime": 1788491061.8630636,
+    "seen": 1788491627.8084483,
+    "ast_hash": "c2d948c3e4b4664cacef70343323c87a",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06-narrowing-the-try.md": {
+    "mtime": 1788491275.5160758,
+    "seen": 1788491627.8084505,
+    "ast_hash": "9172128c13128afb513a3c5e0de61c57",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06b-a-worked-width-repair.md": {
+    "mtime": 1788491233.233736,
+    "seen": 1788491627.808452,
+    "ast_hash": "29b923766ab7ba3cc30a9f56692eaa57",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06c-the-breadth-of-one-class.md": {
+    "mtime": 1788491233.233872,
+    "seen": 1788491627.8084538,
+    "ast_hash": "cc54db5301f4abc82aebf8fddf5d996c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06d-the-lookup-classes.md": {
+    "mtime": 1788491233.233992,
+    "seen": 1788491627.8084555,
+    "ast_hash": "b9438007955bff6fe95d5383605bbf02",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06e-attribute-value-and-exception.md": {
+    "mtime": 1788491233.2341123,
+    "seen": 1788491627.8084567,
+    "ast_hash": "5edce78a588bcd355d61a11fdeb2a734",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06f-whose-exception-is-it.md": {
+    "mtime": 1788491233.2342255,
+    "seen": 1788491627.8084586,
+    "ast_hash": "66ba1f22e0b3d13cf48d3ede4d195d6c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06g-width-at-a-boundary.md": {
+    "mtime": 1788491233.234338,
+    "seen": 1788491627.8084607,
+    "ast_hash": "e44cb05b02cea601b2e0136a6d361b24",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06h-finally-and-the-widest-handler.md": {
+    "mtime": 1788491233.2344568,
+    "seen": 1788491627.8084629,
+    "ast_hash": "6ab90fbc86a281be25839cf6e2ffab35",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06i-when-cleanup-raises-and-the-grammar-refuses.md": {
+    "mtime": 1788491233.2358558,
+    "seen": 1788491627.8084655,
+    "ast_hash": "bd637e05a68ddebd6029eff3a643264c",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06j-ambient-state-the-guard-cannot-see.md": {
+    "mtime": 1788491233.2360947,
+    "seen": 1788491627.808467,
+    "ast_hash": "4603e3c12b0a192ec6c994b6266290ac",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06k-the-jump-that-discards.md": {
+    "mtime": 1788491233.2357347,
+    "seen": 1788491627.8084679,
+    "ast_hash": "3e443899583123838cc17ca3c564e5f6",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06l-the-else-you-cannot-write.md": {
+    "mtime": 1788491233.2359726,
+    "seen": 1788491627.80847,
+    "ast_hash": "82040c15c86f4c7dce58026bbc7e2b12",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/06m-the-guard-the-platform-deletes.md": {
+    "mtime": 1788491233.236213,
+    "seen": 1788491627.8084712,
+    "ast_hash": "dc77683f6d848b1645b7e97b88086e4f",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07-the-cost-argument.md": {
+    "mtime": 1788491275.5168738,
+    "seen": 1788491627.8084722,
+    "ast_hash": "be6a4ee812c8589ae46ca6a149d014b6",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07b-the-miss-rate-decides.md": {
+    "mtime": 1788491233.2367456,
+    "seen": 1788491627.8084729,
+    "ast_hash": "0e5a8d8af5e0558387c3d2187dfaeb50",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07c-the-double-work-argument.md": {
+    "mtime": 1788491233.2368212,
+    "seen": 1788491627.808474,
+    "ast_hash": "d77844c43e5b9f0ea7318514ec986f3e",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07d-where-the-cost-actually-is.md": {
+    "mtime": 1788491233.23689,
+    "seen": 1788491627.8084748,
+    "ast_hash": "bb66952ee80e13d6a0176775ebdcc9e6",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07e-measuring-instead-of-arguing.md": {
+    "mtime": 1788491233.236972,
+    "seen": 1788491627.8084764,
+    "ast_hash": "004b7b6b7031647f6b3773f6ddb5e7da",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07f-the-costs-that-actually-decide.md": {
+    "mtime": 1788491233.2370412,
+    "seen": 1788491627.8084772,
+    "ast_hash": "2982ad26d1861365964f3304d90cee09",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/07g-provability-and-the-order-to-decide.md": {
+    "mtime": 1788491233.2371016,
+    "seen": 1788491627.8084779,
+    "ast_hash": "ca88f25a43dcdd1083529d444c305a52",
+    "semantic_hash": ""
+  },
+  "docs/python/pages/phase-1-language-core/12-eafp-vs-lbyl/README.md": {
+    "mtime": 1788491266.3023448,
+    "seen": 1788491627.8084788,
+    "ast_hash": "d24ab618b90576c93d2dd8a51ea89280",
     "semantic_hash": ""
   }
 }
