@@ -55,6 +55,8 @@ two backwards will appear to work for a long time before it fails in a way nobod
 | 7 | **[Generating and storing them](04b-generating-and-storing-them.md)** | <span className="db-tier t-master">Master</span> | Entropy and lifecycle — why a session-scoped slot breaks on the second tab, and where the pending record lives when you scale out |
 | 8 | **[Discovery](05-discovery-and-the-well-known-document.md)** | <span className="db-tier t-understand">Understand</span> | Nine configuration values become one — and §4.3's rule that the issuer, the document's `issuer` and every `iss` are one string |
 | 9 | **[The metadata document](05b-the-metadata-document.md)** | <span className="db-tier t-understand">Understand</span> | The seven REQUIRED members, the RS256 guarantee, and why an absent optional member proves nothing |
+| 10 | **[Standard scopes and claims](06-standard-scopes-and-claims.md)** | <span className="db-tier t-understand">Understand</span> | `openid` is a switch, the other four are bundles — and `email_verified` is the claim that matters, not `email` |
+| 11 | **[The UserInfo endpoint](07-the-userinfo-endpoint.md)** | <span className="db-tier t-understand">Understand</span> | 🔴 The one call your client makes with the *access* token — unsigned, unaddressed, bound to your login only by the `sub` cross-check |
 
 ## The five things this topic is really about
 
@@ -91,10 +93,6 @@ user's name comes from UserInfo or your own store, not from a token minted an ho
 The topic's spine — the artefact, the request, and the validation procedure — is complete.
 The following are named in the boundary this phase set for topic 07 and are not written yet:
 
-- **06 · Standard scopes and claims** *(not written yet)* — `profile`, `email`, `address`,
-  `phone`, and reading `claims_supported` instead of guessing.
-- **07 · The UserInfo endpoint** *(not written yet)* — when to call it, what it costs, and
-  the `sub` cross-check.
 - **08 · `sub` is not an email** *(not written yet)* — the stable-identifier argument,
   account linking, and public versus pairwise subject identifiers.
 - **09 · Response types and response modes** *(not written yet)* — the hybrid family,
