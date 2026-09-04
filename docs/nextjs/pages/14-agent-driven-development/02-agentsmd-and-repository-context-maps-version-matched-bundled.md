@@ -189,4 +189,4 @@ Because the framework knows the default and only your team knows the consequence
 
 ---
 
-← [Why the framework ships agent infrastructure](01-why-the-framework-now-ships-agent-infrastructure-the-shift-f.md) · [Chapter 14 overview](01-explanation.md) · Next → **The Next.js DevTools MCP server** *(not written yet)*
+← [Why the framework ships agent infrastructure](01-why-the-framework-now-ships-agent-infrastructure-the-shift-f.md) · [Chapter 14 overview](01-explanation.md) · Next → [The Next.js DevTools MCP server](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md)
