@@ -13,7 +13,7 @@ sidebar_position: 0
 The Next.js track, **imported 2026-09-03** from the frontend-bible corpus at
 `/mnt/Storage/Backup/Code/frontend/docs/nextjs`. **19 chapters, 140 pages** carried across
 verbatim; 5 duplicate appendix pages were removed and the track has since grown to
-**247 content pages**, of which **121 are authored or re-verified here**.
+**265 content pages**, of which **158 are authored or re-verified here**.
 
 Next.js is the second React meta-framework in this bible and the one most likely to be the
 thing you actually ship. The React track teaches you components; this track teaches you the
@@ -90,7 +90,7 @@ import Progress from '@site/src/components/Progress';
 `> Verified:` line — written or re-written *here*, against the current docs. The imported
 pages still read fine and are still linked; they are simply not yet vouched for, so they
 score zero. That is the same rule Storybook's imported pages are held to, and it is why a
-track with 247 readable pages reads 49 %.
+track with 265 readable pages reads 60 %.
 
 ## What was done, 2026-09-03
 
@@ -174,10 +174,11 @@ Recorded so they can be fixed deliberately:
   exhaustive gotchas and interview questions, so reaching the bar is roughly a 5–8×
   expansion per page. ✅ The last file over the cap — `04-data-fetching/01-explanation.md`
   at 431 lines — was **split** 2026-09-03, and the track now has **0 files over 300**.
-- 🚧 **No `> Verified:` line and no devbible tier badge on 126 of the 247 pages.** The
+- 🚧 **No `> Verified:` line and no devbible tier badge on 107 of the 265 pages.** The
   `[D]`/`[O]`/`[R]` badges the import carried have not been re-tiered against devbible's
-  four-tier system. **Nine chapters are wholly un-backfilled** — 1, 3, 6, 9, 14, 17, 18, 19
-  and the two chapter READMEs — and this backfill is the next piece of work on the track.
+  four-tier system. **Five chapters are wholly un-backfilled** — 6, 9, 14, 18, 19 — and this
+  backfill is the next piece of work on the track. Chapters **1, 3, 4 and 17 are fully
+  authored**; 17 was closed 2026-09-04 and is, with 4, the model to copy.
   Chapter 4 is the only fully authored chapter and is the model to copy.
 
 **Changes made to the copied material, in full.** At import (2026-09-03): chapter 1 shipped
