@@ -143,6 +143,37 @@ The line that makes this document worth writing is the gate check, because it is
 that can stop the decision, and it is the one that would otherwise be discovered after the
 migration.
 
+## 🔴 Two of the ten are not preferences. They are hard constraints wearing a force's clothes
+
+The framework presents ten forces as commensurable things to weigh, and nine of them are. Two are
+not, and treating them as scorable line items is how a scoring exercise approves a design that cannot
+work.
+
+| Force | Reads as | Is actually |
+|---|---|---|
+| **Prefer ACID over BASE** | *"it's easier to implement an operation as an ACID transaction"* — a convenience preference | 🔴 [09 · The transaction boundary](09-the-transaction-boundary.md). When a real invariant must hold at every instant, this is not a preference at all — eventual consistency is a **wrong answer**, not a costlier one |
+| **Minimize design time coupling** | a productivity concern | 🔴 [37 · The tells of a wrong boundary](37-the-tells-of-a-wrong-boundary.md). At its limit it is lockstep deployment, which means the boundary does not exist |
+
+**The distinction is between a cost and a defect.** Nine forces name costs, and costs trade against
+each other — that is what scoring is for. These two, at their extremes, name **defects**: an oversell
+that appears under concurrency, or two services that were never independently deployable. A total that
+offsets a defect against five advantages will approve it, and the score will look reasonable.
+
+🔴 **So the procedure has two phases, and the framework only describes the second:**
+
+1. **Legality.** Does any invariant that must hold transactionally span this cut? Can each side be
+   deployed without the other? These are pass/fail and they come first.
+2. **Scoring.** Among the cuts that survive, weigh the remaining forces.
+
+**Read the two rows above as the trigger for phase 1**, not as entries in phase 2. When a candidate
+scores badly on *prefer ACID over BASE*, the right next question is not "how much is that worth
+against team autonomy" — it is "is there an actual invariant here, or merely an operation that would
+be more convenient in one transaction?" The first answer disqualifies the cut. The second is a cost
+like any other, and goes back into the scoring.
+
+This is the same argument [44b · Worked example: candidate cuts](44b-worked-example-candidate-cuts.md)
+reaches from the worked-example side: the forces choose among legal cuts and do not decide legality.
+
 ## Where the framework is weak
 
 Worth saying, because using it as though it were complete leads to specific errors.
@@ -189,6 +220,19 @@ favour splitting.
 straightforward, merging later is expensive and politically hard. An even balance should
 resolve toward keeping things together.
 
+**★ Symptom: a cut scores 7–3 and ships an oversell defect under load.**
+Cause: *prefer ACID over BASE* was scored as a preference when a genuine transactional invariant was
+at stake. A weighted total will always let five advantages outvote one line item.
+Fix: run legality before scoring. Ask whether an invariant must hold at every instant across the cut;
+if yes, the candidate is disqualified rather than penalised, and no total redeems it.
+
+**★ Symptom: the scoring exercise produces a number and the room still cannot decide.**
+Cause: the forces were treated as commensurable when two of them were actually asking pass/fail
+questions, so the total mixes costs and defects and means nothing.
+Fix: separate the two phases explicitly on the template — a legality section that is pass/fail and a
+scoring section that is weighed — so that a disqualifying answer stops the exercise instead of being
+averaged into it.
+
 ## Interview questions
 
 **★ What are the dark energy and dark matter forces, and what is the point of framing them
@@ -232,6 +276,18 @@ zero, not guessed. Check the consistency gate separately and record the specific
 operations write aggregates that would span the new line. Add the fixed per-service cost. Then
 decide, record the decision with the evidence, and — the part people skip — record what would
 make you revisit it.
+
+**★ The framework presents ten commensurable forces. Are they actually commensurable?**
+Nine of them are; two are not, and that is the most important thing to know before running a scoring
+exercise. *Prefer ACID over BASE* reads as a convenience preference — *"it's easier to implement an
+operation as an ACID transaction"* — but when a real invariant has to hold at every instant, eventual
+consistency is not a costlier answer, it is a wrong one. *Minimize design time coupling* reads as a
+productivity concern, and at its limit it is lockstep deployment, which means the boundary does not
+exist. Nine forces name costs, which trade against each other, and those two at their extremes name
+defects, which do not. So the procedure has two phases and the framework describes only the second:
+first legality — does an invariant span this cut, can each side deploy alone — which is pass/fail,
+then scoring among whatever survives. A total that offsets a defect against five advantages will
+approve a design that cannot work, and it will look reasonable doing it.
 
 ---
 

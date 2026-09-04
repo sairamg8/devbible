@@ -1,7 +1,7 @@
 ---
 title: "A monolith that has been running for five years has already discovered most of its own seams, and they are recorded in package structure, schema clustering, deployment fear and the shape of the on-call rota — reading them is faster and more honest than modelling from scratch"
 sidebar_label: "23 · The monolith already told you"
-sidebar_position: 41
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -147,6 +147,33 @@ Every long-lived system has them, and each is a boundary problem with a receipt:
 | A support runbook for fixing data | An unenforced rule with a known failure rate |
 | A retry loop with a comment about a race | A check-then-act that should be one operation |
 
+## The signals are not equally trustworthy, and they disagree
+
+Seven signals produce seven answers, and they will not agree. Ranking them by how much weight to give
+a conflict is what turns a list into a decision procedure.
+
+| Rank | Signal | Why it ranks here | How it fails |
+|---|---|---|---|
+| **1** | 🔴 **The schema's connected components** | Hardest to fake and hardest to argue with. Foreign keys and shared tables are facts about what must commit together | Blind to coupling expressed in code rather than in constraints |
+| **2** | 🔴 **The incident log** | Records what actually failed together in production, which no design document does | Sparse; a quiet year tells you little |
+| **3** | Packages that stopped talking | Direct evidence of a seam that already holds | A package can be quiet because it is dead rather than because it is separable |
+| **4** | The on-call rota and escalations | Records who the organisation already believes owns what | Reflects history and staffing as much as design |
+| **5** | Deployment fear | Strong signal, entirely qualitative | Fear tracks blast radius and recent incidents, not structure |
+| **6** | The workarounds | Show where the current structure fights people | Points at symptoms; the cause may be elsewhere |
+| **7** | The parts nobody has changed | Cheap to gather | 🔴 **Weakest.** Stability is ambiguous — a stable module may be well-bounded, obsolete, or merely unloved |
+
+**When two signals disagree, prefer the one that is a record of something that happened.** The schema
+and the incident log are records; deployment fear and stability are inferences. A team that "knows"
+two modules are separable while the schema shows a foreign key between them is describing an
+intention, and the foreign key is describing the system.
+
+🔴 **The specific conflict worth planning for:** the packages look cleanly separated and the schema
+does not. That combination is extremely common, and it means the code boundary was maintained while
+the data boundary was not — which is exactly the situation
+[25 · Verifying the boundary](25-verifying-the-boundary.md) warns that a green `verify()` cannot
+detect. The schema wins that argument every time, because extraction is blocked by the data, not by
+the imports.
+
 ## Putting it together
 
 Each signal produces candidates. The ones that appear in several are the ones to act on:
@@ -197,6 +224,19 @@ decisions under deadline. Where the import graph and the domain model disagree, 
 graph is evidence about the current system and the domain model is an aspiration; both are
 useful and they are not the same kind of thing.
 
+**★ Symptom: the package structure says two modules are separable and the schema says they are not.**
+Cause: the code boundary was maintained and the data boundary was not. This is the single most common
+conflict between signals and it is not a tie.
+Fix: the schema wins. Extraction is blocked by shared tables and foreign keys, not by imports, and no
+amount of clean package structure changes that — it is precisely the coupling a green
+`ApplicationModules.verify()` cannot see.
+
+**★ Symptom: a module nobody has touched in two years is proposed as the first extraction.**
+Cause: stability read as evidence of a good boundary. It is the weakest of the seven signals because
+it is ambiguous three ways — the module may be well-bounded, obsolete, or simply unloved.
+Fix: check which before proposing anything. A dead module should be deleted rather than extracted, and
+an unloved one will be someone's new on-call burden for no gain.
+
 ## Interview questions
 
 **★ You are asked to decompose a five-year-old monolith. What do you read first?**
@@ -242,6 +282,18 @@ convention nobody documented. None of them appears in an import graph or in a de
 analysis, which is why the incident log is the tool that finds them. It is also why a service
 split along a boundary like that fails: the coupling migrates with the code and reappears as
 two services that go down together.
+
+**★ Your seven signals disagree. Which do you trust, and why?**
+Rank them by whether they are a **record** or an **inference**. The schema's connected components and
+the incident log are records of what actually must commit together and what actually failed together;
+deployment fear, stability and workarounds are inferences people draw. Records beat inferences, so a
+team that is confident two modules are separable while a foreign key sits between them is describing
+an intention rather than the system. The specific conflict worth expecting is clean packages against a
+tangled schema, which is extremely common and is not a tie — it means the code boundary was maintained
+while the data boundary was not, extraction is blocked by the data rather than by the imports, and it
+is exactly the coupling a green module-verification test cannot see. And the weakest signal is the one
+that is cheapest to gather: a module nobody has changed may be well-bounded, obsolete or merely
+unloved, and those want three different responses.
 
 ---
 

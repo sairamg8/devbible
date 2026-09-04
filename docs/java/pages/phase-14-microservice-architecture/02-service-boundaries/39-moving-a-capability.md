@@ -1,7 +1,7 @@
 ---
 title: "Moving an aggregate across service boundaries requires a zero-downtime expand-and-contract migration rather than a high-risk cutover"
 sidebar_label: "39 · Moving a capability"
-sidebar_position: 66
+sidebar_position: 67
 ---
 
 <span className="db-tier t-master">Master</span>

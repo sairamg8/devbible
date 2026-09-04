@@ -145,29 +145,8 @@ Naming that honestly matters. Calling it "two services" would imply independence
 exist and would invite the two instances to diverge, at which point you have two codebases
 with one model and no owner for the difference.
 
-## What to do about the original problem
-
-Neither proposal addressed the actual complaint: the team is stretched because `inventory`
-holds too much. The gate analysis suggests where to look instead.
-
-The aggregates in `inventory` are `StockItem` (with its reservations), `Transfer`, `StockTake`
-and `SupplierReceipt`. Which of them share an invariant with `StockItem`?
-
-- `Transfer` — adjusts `onHand` at two warehouses. Writes `StockItem`. Coupled.
-- `StockTake` — adjusts `onHand`, must not invalidate reservations. Coupled.
-- `SupplierReceipt` — increases `onHand`. Writes `StockItem`, but **only upward**. An increase
-  can never violate `onHand − reserved ≥ 0`. Whose job is it to make receipt and stock level
-  consistent? The system's — the goods-in clerk scans a delivery and nobody is waiting for the
-  stock figure to move in the same instant.
-
-So `SupplierReceipt` is separable, and `inventory-receiving` is a viable service: it owns
-supplier deliveries, discrepancies, and goods-in workflow, and it publishes
-`GoodsReceived` events that Inventory applies. That is a genuine domain split, it passes the
-gate, and it removes a meaningful chunk of the team's surface.
-
-**The generalisable move:** when a cut fails the gate, look for the operations that touch the
-shared state in only one direction, or where the whose-job answer is "the system's". Those are
-where the real seams are, and they are usually not where the conceptual vocabulary suggests.
+Two proposals, both of which involve building something. The option nobody writes up is
+[22c · Proposal C, do nothing](22c-proposal-c-do-nothing.md).
 
 ## Gotchas
 
@@ -246,6 +225,7 @@ cancellation flow, the customer communication and the compensation are designed 
 What makes it a defect is when nobody enumerated the invariant and the drift shows up later as
 a reconciliation job.
 
+
 ---
 
-← [The ten forces](22-the-ten-forces.md) · [Topic index](README.md) · Next → [The monolith already told you](23-the-monolith-already-told-you.md)
+← [The ten forces](22-the-ten-forces.md) · [Topic index](README.md) · Next → [Proposal C, do nothing](22c-proposal-c-do-nothing.md)

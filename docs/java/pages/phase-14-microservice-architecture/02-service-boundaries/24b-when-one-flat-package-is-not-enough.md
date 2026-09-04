@@ -1,7 +1,7 @@
 ---
 title: "Java's package-private boundary stops at one flat package — the moment a bounded context needs sub-packages, javac gives up, Spring Modulith inverts the rule, and JPMS is the only mechanism that makes `public` mean anything at all"
 sidebar_label: "24b · When one flat package is not enough"
-sidebar_position: 43
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>

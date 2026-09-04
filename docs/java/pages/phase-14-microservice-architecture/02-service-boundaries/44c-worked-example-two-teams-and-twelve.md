@@ -1,7 +1,7 @@
 ---
 title: "The same domain produces two radically different architectures depending on team topology — an honest comparison of two teams versus twelve teams"
 sidebar_label: "44c · Worked example: two teams vs twelve"
-sidebar_position: 74
+sidebar_position: 75
 ---
 
 <span className="db-tier t-master">Master</span>

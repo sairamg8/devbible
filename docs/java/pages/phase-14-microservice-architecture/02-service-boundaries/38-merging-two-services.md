@@ -1,7 +1,7 @@
 ---
 title: "Merging two services is a disciplined engineering migration, not a defeat — a six-step procedure that collapses an artificial network boundary back into a modular in-process package without downtime"
 sidebar_label: "38 · Merging two services"
-sidebar_position: 65
+sidebar_position: 66
 ---
 
 <span className="db-tier t-master">Master</span>

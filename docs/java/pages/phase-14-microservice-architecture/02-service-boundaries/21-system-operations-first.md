@@ -102,6 +102,35 @@ derived from behaviour rather than from the schema.
 on two or more of them"* — but each cross-boundary read becomes an API call, a replica or a
 composed query. Count them per candidate partition to estimate integration cost.
 
+## Where to find the operations when nobody wrote them down
+
+"List the system operations" is easy advice and hard to start, because most systems have no document
+that contains them. They are recoverable from four artefacts, and the order matters — the first two
+are cheap and incomplete, the last two are where the operations that break boundaries hide.
+
+| Source | What it yields | Blind spot |
+|---|---|---|
+| **API gateway / access logs, grouped by route and method** | The operations external clients actually invoke, ranked by real volume | Everything that is not an HTTP request |
+| **UI screens and their primary actions** | The user-facing operations, named the way users name them | Anything without a screen |
+| 🔴 **Scheduled jobs, batch runs and cron** | Operations nobody thinks of as operations | — |
+| 🔴 **Admin tools, support consoles and runbooks** | Operations performed *on* the system by staff | — |
+
+```bash
+# The operations your users actually perform, ranked. Method + normalised path.
+awk '{print $6, $7}' access.log   | sed -E 's#/[0-9a-f-]{8,}#/{id}#g; s#/[0-9]+#/{id}#g'   | sort | uniq -c | sort -rn | head -40
+```
+
+🔴 **The bottom two rows are where boundary violations live, and they are systematically omitted.**
+A nightly reconciliation job that writes to three aggregates is a system operation with the widest
+transactional reach in the system, and it appears in no API document and on no screen. So is the
+support tool that lets an agent cancel an order and refund it in one click. A partition designed from
+the HTTP surface alone will place a boundary directly through both of them, and the failure will
+surface months later as a batch job that cannot be made consistent.
+
+**The practical instruction:** before scoring any partition, go and ask what runs on a schedule and
+what the support team can do. Both lists are short, both are quick to obtain, and both routinely
+change the answer.
+
 ## Grouping into subdomains
 
 With the table in hand the grouping is close to mechanical:
@@ -185,6 +214,23 @@ minutes and catches it.
 four services is normal in any decomposition and has well-known solutions. It is a data-access
 problem for topic 03, not evidence that the boundaries are wrong.
 
+**★ Symptom: the partition scores well and a nightly job cannot be made consistent under it.**
+Cause: the operation list was built from the HTTP surface. A batch job is a system operation — often
+the one with the widest transactional reach — and it appears in no API document and on no screen.
+Fix: enumerate scheduled work before scoring anything. `crontab`, the scheduler's job list, and the
+`@Scheduled` annotations in the codebase are three minutes of work that routinely change the answer:
+```bash
+grep -rn '@Scheduled' src/main/java | sed 's/.*@Scheduled/@Scheduled/'
+```
+
+**★ Symptom: a support tool turns out to write across three services, discovered after the split.**
+Cause: operations performed *on* the system by staff were not counted as operations. The support
+console's "cancel and refund" button is a single business operation with a single expectation of
+atomicity, and nobody modelled it.
+Fix: ask the support team what their tools can do, and add each capability to the operation list.
+It is the shortest useful conversation available in a decomposition exercise and it is almost never
+had.
+
 ## Interview questions
 
 **★ Why start a decomposition from system operations rather than from the data model?**
@@ -227,6 +273,18 @@ standard answers — API composition or a dedicated read model fed by events —
 the data-side topic rather than to the boundary decision. What would invalidate the boundaries
 is a *command* whose write set spans five services, because that is a distributed transaction
 you cannot have.
+
+**★ Nobody has written down the system operations. Where do you actually get them from?**
+Four artefacts, and the order matters because the cheap ones are incomplete in a specific direction.
+Access logs grouped by route and normalised path give you what external clients really invoke, ranked
+by volume. UI screens give the user-facing operations named the way users name them. Then the two that
+matter most and are almost always skipped: **scheduled jobs** and **admin or support tooling**. A
+nightly reconciliation that writes three aggregates is a system operation with the widest transactional
+reach in the system and appears in no API document; a support console's "cancel and refund" button is
+one business operation with one expectation of atomicity and appears on no customer-facing screen. A
+partition designed from the HTTP surface alone will run a boundary straight through both, and the
+failure shows up months later as a batch job that cannot be made consistent. Both lists are short and
+quick to obtain, which is what makes omitting them expensive rather than excusable.
 
 ---
 

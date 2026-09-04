@@ -1,7 +1,7 @@
 ---
 title: "Selecting a context mapping pattern is a function of organizational power, domain differentiation, and integration cost — a deterministic decision matrix matching technical architecture to team reality"
 sidebar_label: "36 · Choosing a relationship"
-sidebar_position: 63
+sidebar_position: 64
 ---
 
 <span className="db-tier t-master">Master</span>
