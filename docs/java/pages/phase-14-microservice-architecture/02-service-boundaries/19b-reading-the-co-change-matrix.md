@@ -146,22 +146,8 @@ monolith** *(not written yet)*.
 agreement about what a bounded context is, and it cannot be argued with. It is also the only
 metric in this topic that measures the thing a service boundary was actually bought for.
 
-## Turning a finding into a proposal
-
-A finding is not a plan. The shape of a proposal that gets accepted:
-
-1. **The measurement.** Two modules, the co-change ratio in each direction, the window, and
-   the number of commits it is based on.
-2. **The mechanism.** Which specific commits, and what they were doing. "Fourteen of these
-   were adding a field to the shared status enum."
-3. **The cost of the status quo.** Ordered releases per quarter, blocked tickets, incidents.
-4. **The smallest change that would help.** Often not a merge or a split — often moving one
-   rule, deleting one shared type, or replacing one read-then-decide.
-5. **The measurement that would show it worked.** Re-run the same query in a quarter.
-
-Step 4 is where most analyses fail. A co-change finding tends to produce a proposal to
-restructure, and the actionable version is usually much smaller: a single shared enum, a single
-duplicated rule, a single leaked internal package.
+Whether a given cell means anything at all — support, and the four things that produce co-change —
+is [19c · When a cell means nothing](19c-when-a-cell-means-nothing.md).
 
 ## Gotchas
 
@@ -186,14 +172,6 @@ number of releases each had, and be suspicious of any pair where one has very fe
 coupled" to "restructure" is too large to be accepted. Fix: find the mechanism in the actual
 commits and propose the smallest change that addresses it — usually one shared type or one
 duplicated rule, not a re-architecture.
-
-**★ Using authorship data as performance data.** It is architecture evidence about ownership
-and it is toxic the moment anyone reads it as productivity. State that constraint out loud
-before circulating it, or expect the analysis to be the last one you are allowed to run.
-
-**★ Trusting a co-release number when both services deploy from one pipeline.** If a shared
-pipeline deploys everything on every merge, co-release is an artefact of the tooling. Check
-how deployment is triggered before interpreting the number.
 
 ## Interview questions
 
@@ -231,15 +209,7 @@ reads another's data and decides. Fixing that one thing is a week, ships indepen
 can be verified by re-running the same query next quarter — which is a proposal that gets
 approved, unlike a re-architecture.
 
-**★ What are the ethical and practical constraints on using authorship data?**
-Practically, it is architecture evidence about ownership and nothing else — it says who
-touched what, not who was productive, and it is heavily distorted by who happened to be on
-which project. Ethically, the moment it is read as a performance signal it stops being usable,
-because people will change their commit behaviour and the data becomes worthless as well as
-harmful. State the constraint explicitly whenever you circulate it, aggregate to team rather
-than individual where you can, and be prepared to drop the analysis rather than let it be
-repurposed.
 
 ---
 
-← [Change history as evidence](19-change-history-as-evidence.md) · [Topic index](README.md) · Next → [Event storming](20-event-storming.md)
+← [Change history as evidence](19-change-history-as-evidence.md) · [Topic index](README.md) · Next → [When a cell means nothing](19c-when-a-cell-means-nothing.md)

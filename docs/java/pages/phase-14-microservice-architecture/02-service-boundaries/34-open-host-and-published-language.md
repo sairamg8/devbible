@@ -1,7 +1,7 @@
 ---
 title: "An Open Host Service exposes a standardized, public protocol that enables dozens of downstream consumers to integrate without bespoke upstream negotiations — paired with a Published Language to guarantee backwards compatibility"
 sidebar_label: "34 · Open host and published language"
-sidebar_position: 60
+sidebar_position: 61
 ---
 
 <span className="db-tier t-master">Master</span>

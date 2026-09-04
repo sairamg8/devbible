@@ -1,7 +1,7 @@
 ---
 title: "Living with an imperfect boundary is often the rational economic choice — mitigating coupling through read replicas, caching, and circuit breakers"
 sidebar_label: "43 · When not to fix it"
-sidebar_position: 70
+sidebar_position: 71
 ---
 
 <span className="db-tier t-master">Master</span>

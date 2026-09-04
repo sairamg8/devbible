@@ -1,7 +1,7 @@
 ---
 title: "Boundary verification is a CI gate that turns architectural intent into an automated build failure — ApplicationModules.verify() proves a candidate service line holds before anyone spends months extracting it to Kubernetes"
 sidebar_label: "25 · Verifying the boundary"
-sidebar_position: 43
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>

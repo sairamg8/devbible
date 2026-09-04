@@ -1,7 +1,7 @@
 ---
 title: "Event storming is the fastest way to get a room's model of a domain onto a wall, and its most valuable output is not the events — it is the pink stickers marking the places where the room disagreed"
 sidebar_label: "20 · Event storming"
-sidebar_position: 36
+sidebar_position: 37
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -144,6 +144,29 @@ The wall names the event and the policy; the code is a transcription. That corre
 worth protecting, because it means a domain expert can read the listener class names and
 recognise their own process.
 
+## The facilitation failures, which are the ones that actually happen
+
+The technique is simple and its failure modes are social. Four are common enough to plan against, and
+each has a mechanical countermeasure rather than an appeal to better facilitation.
+
+| Failure | What it looks like | Countermeasure |
+|---|---|---|
+| **The loudest voice** | One senior engineer's model on the wall, unanimously agreed | Everyone writes events **silently and simultaneously** for the first fifteen minutes, before anything is discussed |
+| **The absent expert** | The room agrees confidently and is wrong about how refunds work | 🔴 Do not run it without someone who has done the job. A room of engineers models the software, not the domain |
+| **Solution smuggling** | Events named `OrderRecordUpdated`, `PaymentRowInserted` | Reject any event whose name would not survive being said to a customer. Events are past-tense **business** facts |
+| **Premature convergence** | Hot spots resolved in the session so the wall looks finished | Hot spots are the output. A wall with no unresolved orange is a wall that stopped asking |
+
+🔴 **The third row is worth enforcing strictly**, because it is how a session produces a model of the
+existing database instead of a model of the domain. `OrderPlaced`, `PaymentDeclined`,
+`ShipmentDispatched` are things that happened in the business. `OrderTableUpdated` is a thing that
+happened in Postgres, and a boundary drawn around it will follow the schema you already have.
+
+**Remote sessions degrade in one specific way**, and it is worth naming rather than pretending
+otherwise: the parallelism goes. A physical wall lets fifteen people write simultaneously and cluster
+by walking; most tools serialise attention onto one cursor, so the session becomes a discussion with
+sticky notes rather than a parallel modelling exercise. The mitigation is to keep the silent-writing
+phase strictly individual and time-boxed, then do only the clustering together.
+
 ## What event storming cannot tell you
 
 Be explicit about this in the room, because otherwise the wall gets treated as an
@@ -193,6 +216,26 @@ input; without them it is an expensive whiteboard session.
 a markdown file, and record the hot spots with owners. A wall that exists only as a photograph
 in someone's phone has a half-life of about a month.
 
+**★ Symptom: the wall is finished, everyone agrees, and the model matches the current database schema.**
+Cause: solution smuggling. The events were named after tables and updates rather than after business
+facts, so the exercise recovered the existing implementation.
+Fix: reject any event whose name would not survive being said to a customer. `PaymentDeclined` passes;
+`PaymentRowInserted` does not, and a boundary drawn around the second will follow the schema you
+already have.
+
+**★ Symptom: a confident session with no domain expert in the room.**
+Cause: the participants modelled the software they maintain, which they know, rather than the business
+it serves, which they infer.
+Fix: do not run it. A session without someone who has actually done the job produces a high-confidence
+model of the current implementation, and its confidence is the dangerous part — it is harder to
+dislodge later than no model at all.
+
+**★ Symptom: the wall has no unresolved hot spots at the end of the session.**
+Cause: they were argued to a conclusion in the room to make the wall look finished.
+Fix: treat the hot spots as the deliverable. Unresolved disagreement about what a word means is the
+boundary evidence you came for, and resolving it by consensus in a room without the relevant expert
+converts real evidence into a guess everyone now believes.
+
 ## Interview questions
 
 **★ What is event storming actually good for, and what is it not good for?**
@@ -236,6 +279,18 @@ corrections, partial fulfilment — because that is where responsibility changes
 the real disagreements live. And a follow-up step that is not a workshop: take the candidate
 boundaries off the wall and test them against the invariants and the commit history, because
 the wall cannot tell you which candidates are affordable.
+
+**★ What are the failure modes of an event-storming session, and what stops each one?**
+They are social rather than technical, and each has a mechanical countermeasure. The loudest voice
+produces one person's model with unanimous agreement — stopped by making the first fifteen minutes
+silent and simultaneous, so the wall has everyone's events on it before anyone speaks. The absent
+domain expert produces a confident model of the software rather than the business — stopped by not
+running the session, because a confidently wrong model is harder to dislodge than none. Solution
+smuggling produces events named after tables, which recovers the schema you already have — stopped by
+rejecting any event name that would not survive being said to a customer. And premature convergence
+resolves the hot spots to make the wall look finished, which discards the deliverable: unresolved
+disagreement about what a word means is precisely the boundary evidence the session exists to
+surface.
 
 ---
 
