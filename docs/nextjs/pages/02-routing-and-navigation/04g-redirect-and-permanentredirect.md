@@ -278,4 +278,4 @@ They tested a Server Action form submission path, which is the documented except
 
 ---
 
-← [04f · Prefetching by hand](04f-prefetching-by-hand-and-ejecting-from-link.md) · [Chapter 2 overview](01-explanation.md) · Next → **04h · `notFound()` and `not-found.js`** *(not written yet)*
+← [04f · Prefetching by hand](04f-prefetching-by-hand-and-ejecting-from-link.md) · [Chapter 2 overview](01-explanation.md) · Next → [04h · `notFound()`](04h-notfound-and-the-not-found-boundary.md)
