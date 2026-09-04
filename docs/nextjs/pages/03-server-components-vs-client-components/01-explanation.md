@@ -1,127 +1,55 @@
 ---
+title: "The server/client split is one rule with a long tail of consequences — this chapter is the tail: the decision procedure, the composition catalogue, the primitives that exist because of the boundary, and how to enforce it at build time"
+sidebar_label: "01 · Overview: the server/client split"
 sidebar_position: 0
-title: "Overview"
-sidebar_label: "Overview"
-description: "Chapter 3 overview"
+description: "Chapter 3 overview: what each page settles, how this chapter divides from chapter 1, and the three corrections made to this page's own earlier content."
 ---
 
-# ▲ Server Components vs. Client Components
+<span className="db-tier t-master">Master</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (page header `version: 16.3.4`, `lastUpdated` 2026-08-25), via research banked for this track on 2026-09-04.
+> Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**Chapter 1 establishes the rule: `'use client'` marks a boundary between two module graphs, imports cross it and children do not. That rule is short. Its consequences are not, and this chapter is where they live — when to opt in at all, the full catalogue of composition patterns, the React primitives that exist because components now live on both sides of a boundary, how to make a boundary violation a build error rather than a silent leak, and how the whole thing shows up in your Core Web Vitals.**
 
+## Read chapter 1 first
 
+This chapter deliberately does **not** restate the mechanics. If any of the following is unfamiliar, start there:
 
-> **Source:** devbible pilot `server-vs-client-components.md` (authoritative for this syllabus chapter)
+- [**ch1 · 03 · Core philosophy**](../01-introduction-to-next-js/03-core-philosophy-server-first-rendering.md) — the module-graph rule, the children exception, the RSC payload, prop serializability, the empty-string env var trap, provider placement.
+- [**ch1 · 03b · Hybrid static/dynamic**](../01-introduction-to-next-js/03b-hybrid-static-dynamic-and-the-cost-model.md) — how rendering strategy is acquired rather than declared, and the cost asymmetry.
 
-The single biggest mental shift moving into the App Router is that a component is *not* client-side JavaScript by default anymore — it's a Server Component unless you explicitly say otherwise. Getting this model right is mostly about knowing what each kind of component can and can't do, and drawing the boundary between them as late as possible.
+## What each page settles
 
-## The default: everything is a Server Component
+| Page | What it owns |
+|---|---|
+| [**01 · Default architecture (RSC)**](01-default-architecture-everything-is-a-server-component-rsc.md) | What a Server Component *is* — why it is a security boundary and not only a performance one, why it can be `async`, and why it is not SSR |
+| [**02 · `'use client'`: when to opt in**](02-use-client-when-and-why-to-opt-in-interactivity-browser-apis.md) | The decision procedure: the four reasons, the reflex to resist, and why placement matters more than permission |
+| [**03 · Composition patterns**](03-composition-patterns-server-to-client-boundaries.md) | Slots, named slots, providers, unlimited interleaving, the serializable-props rule, and the cases no pattern solves |
+| [**04 · React 19.2 primitives**](04-react-192-primitives-useeffectevent-for-non-reactive-side-ef.md) | `useEffectEvent` and `Activity` — additions that exist because of the boundary |
+| [**05 · Enforcing boundaries**](05-enforcing-boundaries-with-server-only-client-only-packages.md) | `server-only` / `client-only`: turning a silent leak into a build-time error |
+| [**06 · Bundle size and Core Web Vitals**](06-bundle-size-implications-and-core-web-vitals-impact.md) | The measurement side — how a boundary decision shows up in the metrics |
 
-A **Server Component (RSC)** renders entirely on the server (or at build time) and ships **zero JavaScript** to the browser for that component — the client receives already-rendered output, not the code that produced it.
+## The one-paragraph version
 
-```tsx
-// app/products/page.tsx — a Server Component by default, no directive needed
-async function ProductsPage() {
-  const products = await db.product.findMany() // direct data access, no API route needed
-  return (
-    <ul>
-      {products.map((p) => (
-        <li key={p.id}>{p.name}</li>
-      ))}
-    </ul>
-  )
-}
+Every component is a Server Component until something marks it otherwise. A Server Component renders once on the server, ships none of its own code to the browser, and can therefore hold secrets and query a database directly — but it has no state, no effects, no event handlers and no context, all for the same reason: it renders once and never reaches the browser. `'use client'` opts a subtree out, and because everything that file *imports* joins the client bundle, the directive belongs on the smallest component that needs it. Server Components can still appear *inside* Client Components, as long as they arrive as props rather than imports.
 
-export default ProductsPage
-```
+## ⚠️ Three corrections to this page's own earlier content
 
-Two things stand out here that are impossible in a traditional React app: the component is `async` and awaits a database call directly, and none of that database code — or its credentials, its query logic, its dependencies — is ever sent to the browser. This is a **secure execution environment** by construction: secrets and privileged logic simply never cross the server/client boundary, because the component that touches them never ships as client code at all.
+This overview previously contained three claims that were checked on 2026-09-04 and did not hold. They are recorded rather than quietly removed, because all three are common enough to be worth naming:
 
-## `'use client'`: opting in, not opting out
+**1 · "React context that a Server Component needs to read".** This was listed as a reason to reach for `'use client'`, implying a Server Component can read context given a client provider. **It cannot. React context is not supported in Server Components at all.** The correct statement is that context requires both the provider *and* its consumers to be Client Components — the provider's `children` are unaffected and still render on the server. The four genuine reasons are state and event handlers, lifecycle logic, browser-only APIs, and custom hooks built on those.
 
-Interactivity — state, effects, event handlers, browser-only APIs — requires actual JavaScript running in the browser. The `'use client'` directive at the top of a file marks that file (and everything it imports) as a **Client Component**, compiled and shipped to the browser like a traditional React component:
+**2 · "importing a Server Component from inside a Client Component (which isn't even allowed)".** Nothing is disallowed and nothing errors. The import **silently pulls the component into the client module graph**, so it stops being a Server Component — and the failure surfaces later, at whatever server-only code it touches. Describing it as forbidden sends people looking for an error message that never appears. See [03 · Composition patterns](03-composition-patterns-server-to-client-boundaries.md).
 
-```tsx
-'use client'
+**3 · "not functions, class instances, or `Date` objects passed directly without conversion".** Functions and class instances are correct. **`Date` is not** — React serializes `Date`, along with `Map` and `Set`, in the RSC payload. Converting dates to strings before passing them is unnecessary, and doing it costs you type fidelity on the other side.
 
-import { useState } from 'react'
+## The workflow this chapter argues for
 
-export function LikeButton({ initialCount }: { initialCount: number }) {
-  const [count, setCount] = useState(initialCount) // requires client JS
-  return <button onClick={() => setCount((c) => c + 1)}>♥ {count}</button>
-}
-```
+Build the page as Server Components. Run it. Add `'use client'` only when you hit something that genuinely needs one of the four reasons — and add it to the smallest leaf that needs it, never to a page or layout, and never preemptively.
 
-Reach for `'use client'` specifically when a component needs:
-- **State or effects** (`useState`, `useEffect`, `useReducer`)
-- **Event handlers** (`onClick`, `onChange`, anything requiring interactivity)
-- **Browser-only APIs** (`localStorage`, `window`, `IntersectionObserver`)
-- **React context** that a Server Component needs to read (context requires a client provider)
+The default is the performance-correct choice, which inverts the Pages Router's model where everything shipped as client JavaScript unless you worked to avoid it. **The lazy path and the right path are now the same path**, which is the strongest argument for the design and the reason the burden of proof sits on the client boundary rather than on staying server-side.
 
-Everything else should stay a Server Component by default — not as a micro-optimization, but because it's strictly less capable to make something client-side than to leave it server-side, so the burden of proof is on the client boundary, not on staying server-rendered.
+---
 
-## Composition: keeping client boundaries small
-
-`'use client'` marks a **boundary**, not an isolated island — everything imported into that file also becomes part of the client bundle. The pattern that keeps bundles small is passing Server Components *into* Client Components as `children`, rather than importing a Server Component from inside a Client Component (which isn't even allowed):
-
-```tsx
-'use client'
-// Interactive.tsx — only the tab-switching logic is client code
-export function Tabs({ children }: { children: React.ReactNode }) {
-  const [active, setActive] = useState(0)
-  return <div>{/* tab buttons */}{children}</div>
-}
-```
-
-```tsx
-// page.tsx — a Server Component, passed as children into the client Tabs
-import { Tabs } from './Interactive'
-import { ExpensiveServerRenderedReport } from './Report' // stays server-only
-
-export default function Page() {
-  return (
-    <Tabs>
-      <ExpensiveServerRenderedReport /> {/* never bundled for the client */}
-    </Tabs>
-  )
-}
-```
-
-This "children-as-slots" pattern is the core composition technique of the App Router: `Tabs` only needs to *render* its children, not know what they are, so the heavy Server Component work never gets pulled across the boundary.
-
-### Serializable props across the boundary
-
-Props passed from a Server Component into a Client Component cross a real network-like boundary (even in the same request) and must be serializable — plain objects, arrays, strings, numbers; not functions, class instances, or `Date` objects passed directly without conversion. This is a frequent source of confusing errors when a Server Component tries to pass a callback down to a Client Component (not possible — event handlers must be defined *inside* the Client Component itself).
-
-## React 19.2 primitives for the RSC world
-
-Two additions specifically address friction that showed up once components started living on both sides of the boundary:
-
-- **`useEffectEvent`** — extracts non-reactive logic out of an effect (e.g. reading the latest value of a prop inside an event handler defined in the effect) without that logic becoming a reactive dependency that re-triggers the effect. Useful for keeping effect dependency arrays honest instead of suppressing lint warnings.
-- **`<Activity>`** — preserves a subtree's state and DOM while it's visually hidden ("offscreen"), instead of unmounting it — e.g. keeping a background tab's scroll position and form state intact instead of losing it every time the user switches away and back.
-
-## Enforcing the boundary: `server-only` and `client-only`
-
-Nothing stops a Server-Component-only utility (e.g. one that reads an API secret from `process.env`) from accidentally being imported into a file that later gets marked `'use client'` — the import would still compile, and the secret would leak into the client bundle. The `server-only` package makes that a build-time error instead of a silent leak:
-
-```ts
-// db.ts
-import 'server-only' // throws a build error if this file is ever imported client-side
-
-export async function getSecretConfig() {
-  return process.env.INTERNAL_API_KEY
-}
-```
-
-`client-only` is the mirror image — for code that depends on browser globals and should error loudly if accidentally imported into server code, rather than crashing at runtime with a cryptic `window is not defined`.
-
-## Why this affects bundle size and Core Web Vitals directly
-
-Every component kept as a Server Component is JavaScript the browser never has to download, parse, or execute — directly reducing Total Blocking Time and Time to Interactive. The App Router's default-server model is, in effect, a forcing function toward smaller client bundles: the "lazy" choice (not adding `'use client'`) is also the performance-correct one, which inverts the old default in the Pages Router, where every component shipped as client JavaScript unless you went out of your way to avoid it.
-
-**The practical workflow:** build the page as Server Components first, run it, and only add `'use client'` to the smallest possible leaf components once you hit something that genuinely needs interactivity — not to an entire page, and not preemptively "just in case."
+Next → [01 · Default architecture: everything is a Server Component](01-default-architecture-everything-is-a-server-component-rsc.md)
