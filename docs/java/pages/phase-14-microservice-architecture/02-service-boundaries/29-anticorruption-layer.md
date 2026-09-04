@@ -6,12 +6,29 @@ sidebar_position: 46
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
-> Anticorruption Layer; Martin Fowler *Anticorruption Layer Pattern*
-> ([martinfowler.com](https://martinfowler.com/bliki/AntiCorruptionLayer.html)).
+> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design Reference* (2015),
+> *Anticorruption Layer*, reproduced verbatim in the ddd-crew *Context Mapping Guide*
+> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)); Eric Evans,
+> *Domain-Driven Design* (Addison-Wesley, 2003), Chapter 14 *Maintaining Model Integrity*.
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a clean downstream domain must integrate with a legacy monolith, an external vendor API, or an upstream service whose model is incompatible, adopting the upstream vocabulary directly poisons the downstream domain. Evans' Anticorruption Layer (ACL) is an architectural barrier composed of an interface (port), an external client (adapter), and a translation mechanism (translator). The ACL translates incoming and outgoing data between the foreign schema and your internal ubiquitous language. By confining all foreign quirks, legacy integer codes, and external payload structures strictly to this boundary layer, the downstream domain remains pure, decoupled, and completely insulated from changes in upstream systems.**
+## What the pattern actually says
+
+One sentence, and every word in it is doing work:
+
+> *"As a downstream client, create an isolating layer to provide your system with functionality of
+> the upstream system in terms of your own domain model."*
+
+**"As a downstream client"** — the ACL belongs to the consumer, always. It is not a shared service
+and not something the upstream builds for you; that is
+[29b · Where the ACL lives](29b-where-the-acl-lives.md)'s whole subject.
+
+**"functionality … in terms of your own domain model"** — note that the deliverable is *functionality*
+expressed in your language, not a mapping of their types onto yours. An ACL that turns
+`LegacyPaymentDto` into `PaymentDto` field-for-field has translated a data structure and left the
+*concepts* foreign. If your domain still has to know that a settlement takes two steps because the
+vendor's API does, the corruption crossed the layer.
 
 ## The danger of semantic pollution
 
@@ -167,6 +184,9 @@ record LegacyBankResponse(int RET_CODE_INT, String AUTH_STR_TOKEN, String FLAG_B
 - **Independent testability:** Domain unit tests mock `PaymentGatewayPort` using clean domain objects, never needing to construct bizarre foreign legacy JSON payloads.
 - **Explicit boundary ownership:** The translator is the only class in the entire application that knows how the external system works.
 
+Whether the layer you built is a barrier or a rename — and when not to build one at all — is
+[29c · Mapper or barrier](29c-mapper-or-barrier.md).
+
 ## Gotchas
 
 **★ Symptom: External vendor exceptions (`StripeException`, `HttpClientErrorException`) leak into domain services.**
@@ -196,9 +216,7 @@ The downstream system always owns the Anticorruption Layer. The downstream conte
 **★ How does the Anticorruption Layer pattern relate to the Ports and Adapters (Hexagonal) architecture?**
 An ACL is a direct application of Ports and Adapters. The domain defines a port (a clean Java interface expressed in domain terms), while the ACL serves as the adapter implementing that port. The adapter handles external network transport and utilizes a translator to map foreign data into the port's domain types before returning control to the core domain.
 
-**★ When should a team choose a Conformist relationship instead of building an Anticorruption Layer?**
-A team should choose Conformist when the upstream model is well-designed, industry-standard, and matches the downstream context's conceptual needs, or when the cost of translating between models exceeds the benefit of maintaining a distinct ubiquitous language. An ACL is justified when the upstream model is legacy, unstable, poorly designed, or semantically misaligned with the downstream domain.
 
 ---
 
-← [Never publish the aggregate](28b-never-publish-the-aggregate.md) · [Topic index](README.md) · Next → [Where the ACL lives](29b-where-the-acl-lives.md)
+← [The event has a longer half-life](28d-the-event-has-a-longer-half-life.md) · [Topic index](README.md) · Next → [Where the ACL lives](29b-where-the-acl-lives.md)

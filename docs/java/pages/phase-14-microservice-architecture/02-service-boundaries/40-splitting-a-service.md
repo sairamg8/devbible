@@ -1,7 +1,7 @@
 ---
 title: "Splitting a service must be executed in-process first — extracting across the network only after module boundaries and data isolation hold"
 sidebar_label: "40 · Splitting a service"
-sidebar_position: 58
+sidebar_position: 59
 ---
 
 <span className="db-tier t-master">Master</span>

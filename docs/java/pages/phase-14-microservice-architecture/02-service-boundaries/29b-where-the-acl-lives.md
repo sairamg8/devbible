@@ -159,4 +159,4 @@ Generally no. Two different downstream services belong to different bounded cont
 
 ---
 
-← [Anticorruption layer](29-anticorruption-layer.md) · [Topic index](README.md) · Next → [Context mapping](30-context-mapping.md)
+← [Anticorruption layer](29-anticorruption-layer.md) · [Topic index](README.md) · Next → [Mapper or barrier](29c-mapper-or-barrier.md)
