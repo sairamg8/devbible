@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 13
 title: "The outputs object is the honest inventory of a Next.js build: seven arrays, and a prerender classification that finally says out loud which responses need compute"
 sidebar_label: "Adapter output types"
 description: "Every build output type an adapter receives — pages, pagesApi, appPages, appRoutes, prerenders, staticFiles, middleware — plus the routeType/response/compute prerender classification and the fields that matter when packaging functions."

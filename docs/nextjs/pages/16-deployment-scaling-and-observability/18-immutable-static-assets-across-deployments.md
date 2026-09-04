@@ -1,5 +1,5 @@
 ---
-sidebar_position: 18
+sidebar_position: 19
 title: "Skew protection made every deployment re-download every byte; immutable static assets in 16.3 fix that by admitting content-addressed files cannot skew"
 sidebar_label: "Immutable static assets"
 description: "Why ?dpl exists, what supportsImmutableAssets changes, the /_next/static/immutable/* namespace, the adapter's obligations around immutableHash, and outputHashSalt as the collision escape hatch."

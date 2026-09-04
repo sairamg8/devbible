@@ -1,5 +1,5 @@
 ---
-sidebar_position: 17
+sidebar_position: 18
 title: "Deploying beyond Vercel is a capability question, not a loyalty question — and the honest answer is that a Node.js server plus sharp gets you every feature"
 sidebar_label: "Deploying beyond Vercel"
 description: "The four deployment options, the feature/infrastructure matrix, the CDN primitive table, and the five things a multi-instance self-hosted Next.js deployment must configure before it is correct."

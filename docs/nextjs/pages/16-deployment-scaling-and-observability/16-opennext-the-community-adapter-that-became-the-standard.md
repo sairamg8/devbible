@@ -1,5 +1,5 @@
 ---
-sidebar_position: 16
+sidebar_position: 17
 title: "OpenNext reverse-engineered Next.js for three years, proved the build output could be a contract, and then got that contract adopted upstream"
 sidebar_label: "OpenNext"
 description: "What OpenNext is, how the AWS/Cloudflare/Netlify adapters are structured, the wrapper–converter override model, and how the project's compatibility layer became the official Adapter API."

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 16
 title: "\"Supported\" stopped being a marketing claim: the adapter compatibility suite is a pass/fail contract, and three shell scripts are the entire integration surface"
 sidebar_label: "Testing adapters, verified status"
 description: "The Next.js adapter compatibility test harness — the deploy, logs and cleanup script contracts, the environment variables that drive them, and what open-source plus a passing suite buys a platform."

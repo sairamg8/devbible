@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 12
 title: "modifyConfig fires on every CLI command that loads the config, not just the build — and onBuildComplete is the one moment the whole build is describable"
 sidebar_label: "The two adapter hooks in detail"
 description: "The lifecycle, parameters and failure modes of modifyConfig and onBuildComplete, including phase branching, repoRoot versus projectDir in monorepos, and reading back the final config."

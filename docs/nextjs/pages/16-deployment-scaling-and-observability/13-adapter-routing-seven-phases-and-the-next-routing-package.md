@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 14
 title: "Next.js routing is seven ordered phases, and an adapter either replays them exactly or ships subtle 404s — which is why @next/routing exists"
 sidebar_label: "Adapter routing and @next/routing"
 description: "The seven routing phases exposed in onBuildComplete, the common route fields, and how resolveRoutes from @next/routing reproduces Next.js route matching without reimplementing it."

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 title: "The Adapters API is the build-time contract that ended platform reverse-engineering — a typed description of your build, and a promise it only breaks on a major version"
 sidebar_label: "The Adapters API — why it exists"
 description: "What a Next.js adapter is, why the API was created, how adapterPath and NEXT_ADAPTER_PATH wire one in, the NextAdapter interface, and where the build-time contract stops and the runtime cache interfaces begin."

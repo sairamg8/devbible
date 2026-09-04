@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 15
 title: "The adapter is build-time, but the code it packages still has to be called: handler(req, res, ctx), waitUntil, onCacheEntryV2, and the POST-with-postponed-state resume protocol"
 sidebar_label: "Invoking entrypoints, and PPR resume"
 description: "How an adapter invokes Node.js and Edge build entrypoints, what requestMeta and waitUntil are for, and the full PPR seed-and-resume flow using fallback.postponedState and onCacheEntryV2."
