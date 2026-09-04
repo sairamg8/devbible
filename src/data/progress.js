@@ -489,7 +489,7 @@ export const LANGUAGES = {
       {n: 11, slug: '11-performance-optimization-turbopack', name: "Performance optimization and Turbopack", part: 'Refreshed for 16.3', topics: 10, pages: 2, pagesPlanned: 10},
       {n: 12, slug: '12-seo-metadata-and-accessibility', name: "SEO, metadata and accessibility", part: 'Refreshed for 16.3', topics: 35, pages: 28, pagesPlanned: 35},
       {n: 13, slug: '13-testing-and-developer-experience', name: "Testing and developer experience", part: 'Refreshed for 16.3', topics: 10, pages: 4, pagesPlanned: 10},
-      {n: 14, slug: '14-agent-driven-development', name: "Agent-driven development", part: 'Refreshed for 16.3', topics: 8, pages: 3, pagesPlanned: 8},
+      {n: 14, slug: '14-agent-driven-development', name: "Agent-driven development", part: 'Refreshed for 16.3', topics: 8, pages: 4, pagesPlanned: 8},
       {n: 15, slug: '15-databases-apis-and-full-stack-patterns', name: "Databases, APIs and full-stack patterns", part: 'Refreshed for 16.3', topics: 12, pages: 5, pagesPlanned: 12},
       {n: 16, slug: '16-deployment-scaling-and-observability', name: "Deployment, scaling and observability", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 17, slug: '17-advanced-ecosystem-topics', name: "Advanced ecosystem topics", part: 'Refreshed for 16.3', topics: 18, pages: 18},
