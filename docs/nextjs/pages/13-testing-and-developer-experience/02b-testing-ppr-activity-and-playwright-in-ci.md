@@ -1,7 +1,7 @@
 ---
 title: "Cache Components makes Partial Prerendering the default and makes React Activity keep the previous route in the DOM, and that second change quietly invalidates a large class of existing end-to-end tests"
 sidebar_label: "2b · PPR, Activity and CI"
-sidebar_position: 101
+sidebar_position: 4
 description: "Reading the build table as a testable contract, why hidden Activity content still matches DOM queries and which locators survive it, the visibility-aware fallbacks, and the CI shape — sharding, retries, artefacts and the flake budget."
 ---
 
@@ -194,4 +194,6 @@ Retries convert intermittent failures into passes, which hides degradation. Play
 **★ Why upload artefacts with `if: !cancelled()` rather than `if: failure()`?**
 Because a merged report needs the blob reports from the shards that passed as well as the ones that failed, and because the run you most want a trace from is often one that was flaky and therefore ultimately green. Conditioning on failure throws away exactly the evidence you need for the failure mode that is hardest to reproduce.
 
-{/* FOOTER */}
+---
+
+← [End-to-end flows with Playwright](02-end-to-end-flows-with-playwright-testing-streaming-and-ppr-b.md) · [Chapter 13 overview](01-explanation.md) · Next → [Strict TS config as a test suite](03-type-safety-as-testing-strict-ts-config-typed-routes-zod-con.md)

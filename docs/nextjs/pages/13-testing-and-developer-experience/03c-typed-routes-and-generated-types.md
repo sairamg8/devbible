@@ -1,7 +1,7 @@
 ---
 title: "typedRoutes makes your route tree into a union type, but that union is a generated build artefact — so every failure mode of typed routes is really a failure to regenerate"
 sidebar_label: "3c · Typed routes and generated types"
-sidebar_position: 103
+sidebar_position: 7
 description: "Enabling typedRoutes, exactly what it types in each router, the Route<T> generic for wrapper components, the .next/types artefact and the tsconfig include it needs, next typegen in CI and monorepos, the PageProps/LayoutProps/RouteContext helpers, and typedEnv's production blind spot."
 ---
 
@@ -256,4 +256,6 @@ It prevents one cause of a 404: a link to a path with no matching route file. It
 **★ Is `experimental.typedEnv` a replacement for validating environment variables?**
 No, and treating it as one is the trap. It generates editor types from the variables that happened to be loaded at development runtime, explicitly excluding `.env.production*` files. So it can autocomplete a variable that does not exist in the environment you deploy to, which is precisely the failure it looks like it prevents. It is an IntelliSense feature. Validation means parsing `process.env` once, at startup, with a schema that fails loudly.
 
-{/* FOOTER */}
+---
+
+← [Module syntax and where types stop](03b-module-syntax-and-where-types-stop.md) · [Chapter 13 overview](01-explanation.md) · Next → [Zod at the request boundaries](03d-zod-contract-tests-at-the-boundaries.md)

@@ -1,7 +1,7 @@
 ---
 title: "Affected-package filtering is the whole reason a monorepo CI stays fast, and it is defeated by the one setting almost every CI checkout ships with by default — a shallow clone"
 sidebar_label: "4d · Turborepo in CI"
-sidebar_position: 108
+sidebar_position: 13
 description: "TURBO_TOKEN and TURBO_TEAM, why the turbo major must be pinned in CI, --affected and the shallow-clone trap, turbo query affected and its exit codes, the --filter microsyntax, wiring Jest, Vitest and Playwright suites into the task graph, and an honest account of where the cache saves time versus where it lies."
 ---
 
@@ -294,4 +294,6 @@ The proportion of the pipeline that Turborepo can influence at all. Dependency i
 **★ Is remote caching safe on a repository with untrusted contributors?**
 Not without care. Cache artefacts include captured logs, so anything a build prints is shared; and a write-capable token in a workflow that runs fork-authored code is a supply-chain hazard, because a malicious PR could poison the cache for everyone. The defensible arrangement is that fork pull requests run without the token — local cache only, slower, correct — while trusted branches populate the shared cache, with `signature` verification enabled and build scripts audited for what they print.
 
-{/* FOOTER */}
+---
+
+← [Hashing, caching and poisoning](04c-hashing-caching-and-cache-poisoning.md) · [Chapter 13 overview](01-explanation.md) · Next → [The `instant()` Playwright helper](10-the-instant-playwright-helper.md)

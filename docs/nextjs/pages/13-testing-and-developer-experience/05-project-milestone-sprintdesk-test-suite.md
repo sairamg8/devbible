@@ -1,7 +1,7 @@
 ---
 title: "Project Milestone — SprintDesk's test suite is finished when every layer has written down what it cannot cover, because a suite trusted for things it does not check is worse than no suite"
 sidebar_label: "5 · Milestone: SprintDesk test suite"
-sidebar_position: 5
+sidebar_position: 18
 description: "The five test layers and the exact boundary between them, unit coverage on the data layer including the tenancy invariant test that is worth more than the rest combined, fixture strategy that survives parallel runs, and coverage configured as a ratchet rather than a target."
 ---
 
@@ -268,4 +268,6 @@ No source states one, and a number chosen by opinion becomes a thing to argue ab
 **★ Why is there no "integration test of the board page"?**
 Because the board page is an `async` Server Component, and the Next.js testing guide recommends end-to-end testing over unit testing for `async` components — the jsdom-based renderers do not resolve a component that returns a promise. The layer that would sit there does not exist as a supported thing. What replaces it is a unit test of the data function the page awaits, plus a Playwright test of the rendered route, and the honest consequence is that the wiring between them — that the page calls the right function with the right scope — is only checked end-to-end.
 
-{/* FOOTER */}
+---
+
+← [Linting after `next lint`](13-linting-after-next-lint.md) · [Chapter 13 overview](01-explanation.md) · Next → [The Playwright flows: auth and board CRUD](05b-the-playwright-flows-auth-and-board-crud.md)

@@ -1,7 +1,7 @@
 ---
 title: "Import elision is the one place where erasing types changes what your program does at runtime, and in an App Router codebase the module graph is a boundary you can ship a secret across"
 sidebar_label: "3b · Module syntax and where types stop"
-sidebar_position: 102
+sidebar_position: 6
 description: "What verbatimModuleSyntax changes about emitted imports, why a type-only refactor can add or remove a runtime import, the import type discipline that keeps server modules out of client bundles, and the five places where the type system's authority ends."
 ---
 
@@ -173,4 +173,6 @@ Only for its type side. A TypeScript `enum` compiles to a real object, so `Statu
 **★ Give a case where `verbatimModuleSyntax` makes a working build fail, and say whether that is good.**
 A `next.config.ts` that uses ES import syntax but is resolved as CommonJS: the flag forbids emitting `require` from `import`, so the file errors. That is good, because the previous behaviour was TypeScript silently rewriting your module system — the same rewrite that makes a file behave differently depending on which bundler consumed it. The failure names a real ambiguity, and the fix (`next.config.mts`, or Node's native resolver) resolves the ambiguity rather than hiding it.
 
-{/* FOOTER */}
+---
+
+← [Strict TS config as a test suite](03-type-safety-as-testing-strict-ts-config-typed-routes-zod-con.md) · [Chapter 13 overview](01-explanation.md) · Next → [Typed routes and generated types](03c-typed-routes-and-generated-types.md)

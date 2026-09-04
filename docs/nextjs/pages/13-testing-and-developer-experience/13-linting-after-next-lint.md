@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 17
 title: "next lint was removed in Next.js 16 and next build no longer runs the linter, so an upgraded project silently stops linting until you wire ESLint or Biome up yourself"
 sidebar_label: "13 · Linting after next lint"
 description: "What the next lint removal actually broke, what the next-lint-to-eslint-cli codemod writes and how its output differs from the current recommended config, choosing between ESLint and Biome in create-next-app, and the AGENTS.md block next dev maintains."
@@ -284,4 +284,4 @@ It is an instruction file for coding agents, included by default along with a `C
 
 ---
 
-← [12 · TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md) · [Chapter 13 overview](01-explanation.md)
+← [TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md) · [Chapter 13 overview](01-explanation.md) · Next → [Milestone: the SprintDesk test suite](05-project-milestone-sprintdesk-test-suite.md)

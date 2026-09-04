@@ -183,7 +183,16 @@ export const PINS = {
     label: 'Zod', source: 'npm:zod', policy: 'latest',
     // `real-world` added 2026-09-03: 17 pages there bold **zod 4.4.3** and were
     // invisible to the scan while it ignored `tracks`. Zod is a minor behind.
-    pin: '4.4.3', checked: '2026-08-31', tracks: ['nodejs', 'expressjs', 'real-world'], names: ['zod'],
+    // `nextjs` added 2026-09-04, same defect: 18+ pages under docs/nextjs/pages name
+    // zod and five bold **4.4.3**, and the scan could not see any of them.
+    pin: '4.4.3', checked: '2026-08-31', tracks: ['nodejs', 'expressjs', 'real-world', 'nextjs'], names: ['zod'],
+  },
+  turbo: {
+    label: 'Turborepo', source: 'npm:turbo', policy: 'latest',
+    // Added 2026-09-04 with nextjs ch13 topic 04, which teaches it across four pages.
+    // A monorepo reference implementation cannot be built without it, so it clears the
+    // library-scope bar. Note turborepo.com now 301s to turborepo.dev.
+    pin: '2.10.12', checked: '2026-09-04', tracks: ['nextjs'], names: ['turborepo', 'turbo'],
   },
   valibot: {
     label: 'Valibot', source: 'npm:valibot', policy: 'latest',

@@ -1,7 +1,7 @@
 ---
 title: "Turborepo assumes your tasks are deterministic, so anything that changes a task's behaviour without changing its hash is not a cache miss you lost — it is a wrong answer you shipped"
 sidebar_label: "4c · Hashing, caching and poisoning"
-sidebar_position: 107
+sidebar_position: 12
 description: "The global hash versus the task hash and what feeds each, why a change to a root dependency misses every cache in the repo, Strict Environment Variable Mode and framework inference, why .env files are invisible to the hash, logs as cache artefacts, remote caching, and the cases where caching is slower than executing."
 ---
 
@@ -211,4 +211,6 @@ The files each task declared in `outputs`, and the task's captured stdout and st
 **★ When is caching a task the wrong call?**
 When the round trip costs more than the work. The docs name three cases: tasks fast enough that hashing and restoring dominate, artefacts large enough that transfer dominates, and tools that already maintain their own incremental cache, where you end up restoring one cache in order to invalidate another. A `lint` task over a tiny package and a Next.js build whose `outputs` accidentally include `.next/cache` are the two you will actually meet.
 
-{/* FOOTER */}
+---
+
+← [Shared packages and transpilation](04b-shared-packages-and-transpilation.md) · [Chapter 13 overview](01-explanation.md) · Next → [Turborepo in CI](04d-turborepo-in-ci-and-affected-filtering.md)

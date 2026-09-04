@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 14
 title: "The instant() helper from @next/playwright scopes your assertions to the UI that exists before the network answers, which turns \"this navigation is instant\" from a feeling into a failing test"
 sidebar_label: "10 · The instant() Playwright helper"
 description: "Installing @next/playwright, the two test shapes every route needs, what the instant() scope actually does to the page, and the assertion discipline that stops these tests passing vacuously."
@@ -159,4 +159,4 @@ Changes made somewhere else entirely. The two examples the release notes give ar
 
 ---
 
-← [**Project Milestone:** SprintDesk test suite](05-project-milestone-sprintdesk-test-suite.md) · [Chapter 13 overview](01-explanation.md) · Next → [10b · Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md)
+← [Turborepo in CI](04d-turborepo-in-ci-and-affected-filtering.md) · [Chapter 13 overview](01-explanation.md) · Next → [Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md)

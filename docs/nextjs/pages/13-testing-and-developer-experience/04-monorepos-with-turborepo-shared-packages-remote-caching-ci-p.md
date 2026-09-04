@@ -1,7 +1,7 @@
 ---
 title: "Turborepo is a task scheduler wrapped around a content-addressed cache, so every real problem it causes is either a hash that did not include something or an output that was never declared"
 sidebar_label: "4 · Turborepo: the task graph"
-sidebar_position: 4
+sidebar_position: 10
 description: "How turbo matches tasks to package.json scripts, the four forms of dependsOn, why an undeclared outputs key silently disables caching, what setting inputs opts you out of, the tasks that must never be cached, root tasks and package configurations, and the Next.js 16 tooling changes a monorepo feels first."
 ---
 
@@ -211,4 +211,6 @@ Because Turborepo's model is "run a script to completion, then cache its outputs
 **★ In a monorepo on Next.js 16, what silently stopped happening after an upgrade?**
 Linting. `next lint` was removed and `next build` no longer runs the linter, so a pipeline whose only quality gate was `turbo run build` now lints nothing and stays green. The monorepo-specific consequence is that the fix is per package — a `lint` script in each, and a `lint` task with `"outputs": []` — because a single root-level lint task rehashes the whole repository on every commit and stops being cacheable in any useful sense.
 
-{/* FOOTER */}
+---
+
+← [Env schemas and contract tests](03e-env-schemas-and-contract-tests.md) · [Chapter 13 overview](01-explanation.md) · Next → [Shared packages and transpilation](04b-shared-packages-and-transpilation.md)

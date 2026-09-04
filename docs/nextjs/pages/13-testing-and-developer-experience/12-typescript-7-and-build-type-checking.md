@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 16
 title: "next build already shells out to your project's tsc rather than loading the TypeScript compiler API, so adopting TypeScript 7 is a dependency bump — and the flag people reach for is an opt-out that breaks the build on TS 7"
 sidebar_label: "12 · TypeScript 7 and build type checking"
 description: "Why next build uses the project-local tsc CLI by default in 16.3, what you lose when it does, why experimental.useTypeScriptCli: false exits the build on TypeScript 7, and the wider file set the CLI checker covers."
@@ -165,4 +165,4 @@ The type generation step. `next-env.d.ts` and the route-aware helpers are genera
 
 ---
 
-← [10b · Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md) · [Chapter 13 overview](01-explanation.md) · Next → [13 · Linting after next lint](13-linting-after-next-lint.md)
+← [Instant tests in CI](10b-instant-tests-in-ci-and-regression-causes.md) · [Chapter 13 overview](01-explanation.md) · Next → [Linting after `next lint`](13-linting-after-next-lint.md)

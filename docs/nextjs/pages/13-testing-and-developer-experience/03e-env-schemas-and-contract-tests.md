@@ -1,7 +1,7 @@
 ---
 title: "The obvious way to validate environment variables — hand the whole process.env object to a schema — is the one way Next.js documents as not working, and a contract test against a third-party API is a different test from the schema test that looks identical"
 sidebar_label: "3e · Env schemas and contract tests"
-sidebar_position: 105
+sidebar_position: 9
 description: "Why Schema.parse(process.env) breaks NEXT_PUBLIC inlining, splitting the server and client env schemas, when a throwing env module fails the build instead of the request, .env.test and loadEnvConfig, and the two-test split that makes third-party contract tests useful instead of flaky."
 ---
 
@@ -282,4 +282,6 @@ Read the parse error to classify the change: a removed field or a changed type i
 **★ How do you test code that depends on a third party without hitting it in CI?**
 Three layers, each with a different double. Unit tests parse a committed fixture with no network at all. Integration tests inject a fake client implementing the same interface, so the mapping from parsed response to domain object is exercised. End-to-end tests intercept at the network layer — Playwright's `page.route(...).fulfill(...)` — so the browser sees a controlled response and the rest of the stack is real. The live API appears in exactly one place, the scheduled contract test, and its job is to tell you the fixtures have gone stale.
 
-{/* FOOTER */}
+---
+
+← [Zod at the request boundaries](03d-zod-contract-tests-at-the-boundaries.md) · [Chapter 13 overview](01-explanation.md) · Next → [Turborepo: the task graph](04-monorepos-with-turborepo-shared-packages-remote-caching-ci-p.md)

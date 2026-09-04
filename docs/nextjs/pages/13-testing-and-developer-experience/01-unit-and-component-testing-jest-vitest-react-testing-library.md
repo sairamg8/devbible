@@ -259,4 +259,6 @@ Because in Vitest 4 those assertions were auto-awaited at the end of the test wi
 **★ How do you decide something belongs in Playwright rather than in a unit test?**
 Ask whether the behaviour depends on anything jsdom does not have: real navigation, real streaming of a response, layout and visibility, the framework's request lifecycle, or a browser engine. If the answer is yes for any of them, no amount of mocking will make a jsdom test meaningful — you will be asserting on the shape of your mocks. Async Server Components, streaming boundaries and full request flows all fall on that side of the line.
 
-{/* FOOTER */}
+---
+
+← [Chapter 13 overview](01-explanation.md) · [Chapter 13 overview](01-explanation.md) · Next → [Server Components and Actions](01b-testing-server-components-and-server-actions.md)

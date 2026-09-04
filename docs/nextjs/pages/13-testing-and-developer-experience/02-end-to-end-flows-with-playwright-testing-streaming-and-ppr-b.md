@@ -1,7 +1,7 @@
 ---
 title: "Every meaningful property of a streaming Next.js app — what arrives first, what the user can act on, what the server actually persisted — is only observable in a browser against a production build, which is why the Playwright config is the most consequential file in your test suite"
 sidebar_label: "2 · End-to-end flows with Playwright"
-sidebar_position: 2
+sidebar_position: 3
 description: "Why next start and not next dev, the webServer options that matter and the one that is deprecated, the setup project pattern for authentication, web-first assertions versus the manual assertions that never wait, and how to assert on streaming order rather than on a final state."
 ---
 
@@ -253,4 +253,6 @@ Because the CSS class is an implementation detail with no contract behind it —
 **★ What is `trace: 'on-first-retry'` buying you?**
 A full recording — DOM snapshots, network, console, actions — for exactly the runs that failed once and are being retried, and nothing for the runs that passed. `trace: 'on'` gives you the same debugging power plus an artefact for every passing test, which on a large suite is gigabytes of storage per run for data nobody will open.
 
-{/* FOOTER */}
+---
+
+← [Server Components and Actions](01b-testing-server-components-and-server-actions.md) · [Chapter 13 overview](01-explanation.md) · Next → [PPR, Activity and CI](02b-testing-ppr-activity-and-playwright-in-ci.md)

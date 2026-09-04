@@ -1,7 +1,7 @@
 ---
 title: "Turbopack transpiles workspace packages automatically in Next.js 16, which retires most transpilePackages advice — but the internal-package style you choose still decides whether Turborepo can cache anything at all"
 sidebar_label: "4b · Shared packages and transpilation"
-sidebar_position: 106
+sidebar_position: 11
 description: "Just-in-Time, Compiled and Publishable internal packages and what each costs, why a JIT package is structurally uncacheable, the three cases where transpilePackages is still required, the serverExternalPackages conflict that throws at build start, and outputFileTracingRoot for standalone output."
 ---
 
@@ -190,4 +190,6 @@ Because the two conditions serve different consumers. TypeScript resolves `types
 **★ A teammate proposes bundling every internal package with Rollup "for consistency". What is the argument against?**
 The Turborepo docs' own position — the majority of compiled packages should use `tsc`, with a bundler only for specific needs. A bundler in an internal package adds a configuration file, a plugin chain, its own module-format decisions and a second source of resolution bugs, in exchange for benefits (tree-shaking a published artefact, multiple output formats, minification) that only matter when the package leaves the repository. Internal consumers are themselves bundled by the app, which does the tree-shaking anyway.
 
-{/* FOOTER */}
+---
+
+← [Turborepo: the task graph](04-monorepos-with-turborepo-shared-packages-remote-caching-ci-p.md) · [Chapter 13 overview](01-explanation.md) · Next → [Hashing, caching and poisoning](04c-hashing-caching-and-cache-poisoning.md)

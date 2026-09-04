@@ -1,7 +1,7 @@
 ---
 title: "strict: true is a family of nine checks, and the two flags that catch the bugs your unit tests were going to catch are not in it"
 sidebar_label: "3 · Strict TS config as a test suite"
-sidebar_position: 3
+sidebar_position: 5
 description: "What strict actually enables, why noUncheckedIndexedAccess and exactOptionalPropertyTypes sit outside the family, the App Router code paths where each one fires, and a migration order that does not stall a team on 4,000 new errors."
 ---
 
@@ -275,4 +275,6 @@ When it is off in a shared dependency you do not control and the build validates
 **★ Is a type check a substitute for a test?**
 For the class of properties it can express, it is strictly better: it is exhaustive over call sites, it costs nothing per assertion, and it cannot go stale. For everything else it is not a test at all, because types are erased. It cannot tell you whether the value that arrived at runtime matches the type you wrote — that is a parsing problem, and it belongs to a schema at the boundary. The right mental model is a division of labour: types cover the interior of the program, parsers cover its edges, and tests cover behaviour that neither can express.
 
-{/* FOOTER */}
+---
+
+← [PPR, Activity and CI](02b-testing-ppr-activity-and-playwright-in-ci.md) · [Chapter 13 overview](01-explanation.md) · Next → [Module syntax and where types stop](03b-module-syntax-and-where-types-stop.md)

@@ -1,7 +1,7 @@
 ---
 title: "An async Server Component is not unit-testable today and a Server Action is trivially unit-testable, and both facts come from the same place — what the compiler leaves behind for a Node process to import"
 sidebar_label: "1b · Server Components and Actions"
-sidebar_position: 100
+sidebar_position: 2
 description: "Why a synchronous Server Component renders in jsdom and an async one does not, the three tests every Server Action needs and why shape validation is only one of them, testing Route Handlers as plain functions, and the .env.local rule that makes test runs reproducible."
 ---
 
@@ -262,4 +262,6 @@ Shared mutable state across parallel workers — almost always a test database. 
 **★ How would you test a Route Handler that reads `cookies()`?**
 Not by calling the exported function, because `cookies()` is request-scoped and the framework populates it during a real request that is not happening here. Either restructure so the handler receives the session or the relevant value as an argument — which makes it a pure function of its inputs and trivially testable — or drive it through Playwright's `request` fixture against a running server, which exercises the real lifecycle.
 
-{/* FOOTER */}
+---
+
+← [Unit and component testing](01-unit-and-component-testing-jest-vitest-react-testing-library.md) · [Chapter 13 overview](01-explanation.md) · Next → [End-to-end flows with Playwright](02-end-to-end-flows-with-playwright-testing-streaming-and-ppr-b.md)

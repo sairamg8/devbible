@@ -1,7 +1,7 @@
 ---
 title: "A type is a promise about the interior of your program and a schema is a check at its edge, and the two request-shaped edges of an App Router app — searchParams and FormData — are typed accurately enough that nobody notices they are unvalidated"
 sidebar_label: "3d · Zod at the request boundaries"
-sidebar_position: 104
+sidebar_position: 8
 description: "Choosing between parse, safeParse and parseAsync, parsing searchParams including repeated keys and the degrade-don't-404 rule, parsing FormData in a Server Action including files and multi-value fields, the flattenError shape useActionState wants, and route handler bodies."
 ---
 
@@ -278,4 +278,6 @@ In a leaf module with no server-only imports. Schemas are values, so `import typ
 **★ What does `.parse` returning a deep clone imply for performance-sensitive paths?**
 That parsing a large payload costs an allocation proportional to the payload, not a constant. For a request body that is already small this is irrelevant. For a hot path where you only need a yes-or-no answer, Zod 4.5 added `.validate()`, a boolean type guard that never builds an error object — but it is absent from 4.4.3, which is what this corpus pins, so on the current version the honest answer is `safeParse` and accept the clone. Do not micro-optimise a request-boundary parse; the network call next to it is four orders of magnitude more expensive.
 
-{/* FOOTER */}
+---
+
+← [Typed routes and generated types](03c-typed-routes-and-generated-types.md) · [Chapter 13 overview](01-explanation.md) · Next → [Env schemas and contract tests](03e-env-schemas-and-contract-tests.md)

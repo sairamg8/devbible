@@ -1,7 +1,7 @@
 ---
 title: "The end-to-end half of the milestone is two flows, and both are harder than they look for the same reason — under Cache Components a page has no single moment of being loaded and the route you navigated away from is still in the DOM"
 sidebar_label: "5b · The Playwright flows"
-sidebar_position: 109
+sidebar_position: 19
 description: "Two authenticated storage states because one cannot test tenant isolation, the auth flow acceptance criteria, board CRUD including how to assert an optimistic update actually rendered, proving revalidateTag end-to-end, and the phase gate for the whole chapter."
 ---
 
@@ -259,4 +259,6 @@ Because a board that renders plausibly is indistinguishable, to a browser test, 
 **★ What belongs in the E2E suite and what should be pushed down a layer?**
 Push down anything whose correctness can be decided without a browser — mapping, ordering, formatting, validation, authorization logic. Keep in E2E the things that only exist in a real browser against a production build: navigation, streaming order, prefetching and instant navigation, optimistic update and rollback, session handling, and the negative cross-tenant assertions. The test is not "could this be written in Playwright" — almost anything could — but "does running it in a browser tell me something a cheaper layer cannot".
 
-{/* FOOTER */}
+---
+
+← [Milestone: the SprintDesk test suite](05-project-milestone-sprintdesk-test-suite.md) · [Chapter 13 overview](01-explanation.md) · Next → [Chapter 14 · Agent-driven development](../14-agent-driven-development/01-explanation.md)

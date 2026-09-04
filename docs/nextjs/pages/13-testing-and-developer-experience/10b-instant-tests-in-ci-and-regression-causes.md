@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 15
 title: "An instant() test that only ever runs against next dev is testing an environment with prefetching switched off, so getting these tests into CI against a production build is the whole point"
 sidebar_label: "10b · Instant tests in CI"
 description: "Enabling the testing API for next start with exposeTestingApiInProductionBuild, the localhost cookie collision to avoid in parallel runs, the two named regression causes and why they fail wide, and where instant() sits among the Cypress, Jest, Playwright and Vitest guides."
@@ -127,4 +127,4 @@ As the intended behaviour of the suite, not as flakiness. These tests pin a prop
 
 ---
 
-← [10 · The instant() Playwright helper](10-the-instant-playwright-helper.md) · [Chapter 13 overview](01-explanation.md) · Next → [12 · TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md)
+← [The `instant()` Playwright helper](10-the-instant-playwright-helper.md) · [Chapter 13 overview](01-explanation.md) · Next → [TypeScript 7 and build type checking](12-typescript-7-and-build-type-checking.md)
