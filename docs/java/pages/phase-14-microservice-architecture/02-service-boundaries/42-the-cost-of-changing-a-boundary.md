@@ -59,7 +59,7 @@ Each newly carved service demands independent cloud infrastructure:
 ### 5. Conway's Law and team organizational friction
 Code follows communication structures. Changing a service boundary disrupts team ownership:
 - Determining which squad owns on-call rotations, bug triage, and feature roadmaps for the restructured services.
-- Sprint velocity typically drops by 30% to 50% across affected teams during the active migration period as feature delivery halts in favor of architectural plumbing.
+- Feature delivery on the affected teams stalls for the duration of the migration while capacity goes into architectural plumbing. Budget for a velocity drop you cannot size in advance and will not recover until cutover completes — and note that nobody can give you a credible number for it, because it depends entirely on how much of the team's capacity the migration consumes.
 
 ### 6. The operational dual-run tax
 Zero-downtime migrations require running the old and new systems concurrently:
@@ -75,7 +75,7 @@ A boundary refactoring should only proceed when the ongoing "coupling tax" of th
 | **Release Coordination** | Independent releases, occasional minor sync | Every release requires simultaneous coordinated lockstep deployment |
 | **Cross-Service Calls** | Mostly async events, rare synchronous HTTP | Hundreds of synchronous HTTP calls per user request; cascading timeouts |
 | **Data Consistency** | Eventual consistency acceptable; few rollbacks | Constant distributed transaction failures; inconsistent state across services |
-| **Team Velocity** | Minor PR friction across boundaries | Multi-repo PRs required for 80% of sprint tasks; constant blocker meetings |
+| **Team Velocity** | Minor PR friction across boundaries | Most sprint tasks need multi-repo PRs; constant blocker meetings |
 | **Change Frequency** | Low change rate; code is stable | High churn; domain logic constantly changes across the boundary |
 
 ## Gotchas

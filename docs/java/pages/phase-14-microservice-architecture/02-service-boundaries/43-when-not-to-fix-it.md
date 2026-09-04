@@ -70,9 +70,11 @@ import org.springframework.web.client.RestClient;
 
 import java.util.Optional;
 
+// src/main/java/com/example/containment/client/CustomerSummary.java
 public record CustomerSummary(String customerId, String displayName, String tier) {}
 
 @Service
+// src/main/java/com/example/containment/client/ResilientCustomerClient.java
 public class ResilientCustomerClient {
 
     private final RestClient restClient;

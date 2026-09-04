@@ -46,6 +46,7 @@ import org.springframework.web.client.RestClient;
 
 // Downstream customer client expecting negotiated contract
 @Component
+// src/main/java/com/retailer/order/client/CustomerProfileClient.java
 public class CustomerProfileClient {
 
     private final RestClient restClient;
@@ -66,6 +67,7 @@ public class CustomerProfileClient {
 }
 
 // Negotiated contract record authored to meet downstream Order validation needs
+// src/main/java/com/retailer/order/client/CustomerVerification.java
 public record CustomerVerification(
     UUID customerId,
     boolean eligibleForCredit,

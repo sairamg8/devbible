@@ -67,7 +67,7 @@ public class OrderFulfillmentCoordinator {
 
     @Transactional
     public void fulfillOrder(UUID orderId) {
-        // Direct local Java method call: 5 microseconds instead of 40ms over HTTP
+        // Direct local Java method call: no serialization, no socket, no timeout budget
         ShippingManifestRecord manifest = shippingService.generateManifest(orderId);
         // Both operations now participate in a single local ACID transaction
     }

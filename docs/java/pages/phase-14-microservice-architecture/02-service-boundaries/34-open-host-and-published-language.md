@@ -53,6 +53,7 @@ import org.springframework.web.bind.annotation.RestController;
 // 1. Open Host Service: Standardized public protocol for all consumers
 @RestController
 @RequestMapping("/public/v1/products")
+// src/main/java/com/retailer/catalog/web/CatalogOpenHostController.java
 public class CatalogOpenHostController {
 
     private final ProductCatalogQueryService queryService;
@@ -86,6 +87,7 @@ public class CatalogOpenHostController {
 }
 
 // 2. Published Language: Stable, immutable contract independent of internal JPA entities
+// src/main/java/com/retailer/catalog/web/ProductPublishedRepresentation.java
 public record ProductPublishedRepresentation(
     UUID productId,
     String sku,

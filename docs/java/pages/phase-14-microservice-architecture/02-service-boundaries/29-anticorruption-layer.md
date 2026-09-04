@@ -63,10 +63,12 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 // 1. Domain Port: Expressed exclusively in downstream ubiquitous language
+// src/main/java/com/retailer/billing/domain/PaymentGatewayPort.java
 public interface PaymentGatewayPort {
     PaymentResult authorizePayment(UUID customerId, BigDecimal amount);
 }
 
+// src/main/java/com/retailer/billing/domain/PaymentResult.java
 public record PaymentResult(
     boolean approved,
     String authorizationCode,
@@ -81,6 +83,7 @@ public record PaymentResult(
     }
 }
 
+// src/main/java/com/retailer/billing/domain/DeclineReason.java
 public enum DeclineReason {
     INSUFFICIENT_FUNDS,
     EXPIRED_CARD,

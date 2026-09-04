@@ -94,7 +94,7 @@ module com.retailer.order {
 
 ## Multi-module vs Microservices: the architectural sweet spot
 
-A multi-module architecture with either Gradle `implementation` scoping or JPMS provides 90% of the operational benefits of microservices without the distributed systems penalty:
+A multi-module architecture with either Gradle `implementation` scoping or JPMS provides most of the operational benefits of microservices without the distributed systems penalty:
 
 - **Compilation firewalls:** Accidental cross-domain coupling is rejected at compile time.
 - **Independent team ownership:** Teams own their respective module directories and `pom.xml`/`build.gradle` definitions.

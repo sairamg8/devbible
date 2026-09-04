@@ -72,13 +72,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 // Public API surface exposed to other packages
+// src/main/java/com/retailer/order/OrderPlacementApi.java
 public interface OrderPlacementApi {
     OrderSummary placeOrder(PlaceOrderCommand command);
 }
 
+// src/main/java/com/retailer/order/PlaceOrderCommand.java
 public record PlaceOrderCommand(UUID customerId, List<OrderItemRequest> items) {}
+// src/main/java/com/retailer/order/OrderItemRequest.java
 public record OrderItemRequest(UUID productId, int quantity, BigDecimal unitPrice) {}
+// src/main/java/com/retailer/order/OrderSummary.java
 public record OrderSummary(UUID orderId, UUID customerId, BigDecimal totalAmount, Instant createdAt) {}
+// src/main/java/com/retailer/order/OrderPlacedEvent.java
 public record OrderPlacedEvent(UUID orderId, UUID customerId, BigDecimal totalAmount) {}
 
 // Package-private implementation details hidden from other packages

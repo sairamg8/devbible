@@ -54,6 +54,7 @@ import java.util.List;
 import java.util.UUID;
 
 // 1. Published Language: Public immutable command contract
+// src/main/java/com/retailer/order/PlaceOrderCommand.java
 public record PlaceOrderCommand(
     UUID customerId,
     List<OrderItemDto> items
@@ -64,9 +65,11 @@ public record PlaceOrderCommand(
     }
 }
 
+// src/main/java/com/retailer/order/OrderItemDto.java
 public record OrderItemDto(UUID productId, int quantity, BigDecimal unitPrice) {}
 
 // 2. Published Language: Public immutable representation contract
+// src/main/java/com/retailer/order/OrderSummary.java
 public record OrderSummary(
     UUID orderId,
     UUID customerId,
@@ -76,6 +79,7 @@ public record OrderSummary(
 ) {}
 
 // 3. Published Language: Public domain event
+// src/main/java/com/retailer/order/OrderPlacedEvent.java
 public record OrderPlacedEvent(
     UUID orderId,
     UUID customerId,

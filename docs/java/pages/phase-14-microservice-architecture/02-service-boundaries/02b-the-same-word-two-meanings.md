@@ -173,13 +173,16 @@ layers again, scattered and unnamed.
 The version that admits the boundary:
 
 ```java
-// com.retailer.sales
+// src/main/java/com/retailer/sales/SalesOrderStatus.java
+package com.retailer.sales;
 public enum SalesOrderStatus { DRAFT, PLACED, CANCELLED, COMPLETED }
 
-// com.retailer.billing
+// src/main/java/com/retailer/billing/PaymentStatus.java
+package com.retailer.billing;
 public enum PaymentStatus { PENDING, AUTHORISED, CAPTURED, FAILED, REFUNDED }
 
-// com.retailer.fulfilment
+// src/main/java/com/retailer/fulfilment/ShipmentStatus.java
+package com.retailer.fulfilment;
 public enum ShipmentStatus { AWAITING_STOCK, PICKING, PACKED, DISPATCHED, DELIVERED }
 ```
 

@@ -15,7 +15,7 @@ sidebar_position: 52
 ## Why aggregates end up in the wrong service
 
 Aggregates are misallocated across services for predictable reasons:
-1. **Initial domain ambiguity**: At project launch, the `ReturnRequest` aggregate was placed in `CatalogService` because returns referenced product SKUs. Two years later, 95% of its interactions are with `InventoryService` and `BillingService`.
+1. **Initial domain ambiguity**: At project launch, the `ReturnRequest` aggregate was placed in `CatalogService` because returns referenced product SKUs. Two years later, almost all of its interactions are with `InventoryService` and `BillingService`.
 2. **Feature drift**: A small auxiliary table grew into a complex domain model with independent lifecycle states.
 3. **Conway's Law shifts**: Team ownership reorganized, leaving one squad maintaining an isolated table inside a repository owned by another squad.
 
@@ -53,19 +53,24 @@ import java.time.Instant;
 import java.util.Objects;
 import java.util.Optional;
 
+// src/main/java/com/example/migration/verifier/ParityDiscrepancy.java
 public record ParityDiscrepancy(String aggregateId, String fieldName, Object sourceValue, Object targetValue, Instant detectedAt) {}
 
+// src/main/java/com/example/migration/verifier/ReturnAggregateState.java
 public record ReturnAggregateState(String returnId, String orderId, String status, long amountCents) {}
 
+// src/main/java/com/example/migration/verifier/ReturnSourceClient.java
 public interface ReturnSourceClient {
     Optional<ReturnAggregateState> fetchFromSource(String returnId);
 }
 
+// src/main/java/com/example/migration/verifier/ReturnTargetClient.java
 public interface ReturnTargetClient {
     Optional<ReturnAggregateState> fetchFromTarget(String returnId);
 }
 
 @Service
+// src/main/java/com/example/migration/verifier/ParityVerificationService.java
 public class ParityVerificationService {
 
     private final ReturnSourceClient sourceClient;

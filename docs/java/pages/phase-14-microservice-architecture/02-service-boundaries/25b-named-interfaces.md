@@ -77,10 +77,12 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 // Public interface inside the named "spi" slice
+// src/main/java/com/retailer/order/spi/OrderEventPublisherSpi.java
 public interface OrderEventPublisherSpi {
     void publishOrderCompleted(OrderCompletedPayload payload);
 }
 
+// src/main/java/com/retailer/order/spi/OrderCompletedPayload.java
 public record OrderCompletedPayload(UUID orderId, UUID customerId, BigDecimal totalAmount) {}
 ```
 

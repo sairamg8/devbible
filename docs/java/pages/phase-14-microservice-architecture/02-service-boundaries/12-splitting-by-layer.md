@@ -131,7 +131,7 @@ public class OrderBusinessService {
         }
         stock.setReserved(stock.reserved() + request.quantity());
         stockData.update(stock);                               // write over the network
-        var row = new OrderRow(/* ... */);
+        var row = new OrderRow(order.id(), order.customerId(), order.totalCents(), order.placedAt());
         return orderData.insert(row);                          // second write, no atomicity
     }
 }

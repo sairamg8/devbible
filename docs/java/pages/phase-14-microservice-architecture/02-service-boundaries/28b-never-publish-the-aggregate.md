@@ -62,6 +62,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 // 1. Published Request Contract: Whitelist of allowed input fields
+// src/main/java/com/retailer/order/CreateOrderRequest.java
 public record CreateOrderRequest(
     UUID customerId,
     BigDecimal totalAmount
@@ -75,6 +76,7 @@ public record CreateOrderRequest(
 }
 
 // 2. Published Response Contract: Stable representation independent of database columns
+// src/main/java/com/retailer/order/OrderResponse.java
 public record OrderResponse(
     UUID orderId,
     UUID customerId,
