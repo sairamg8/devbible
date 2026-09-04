@@ -111,6 +111,37 @@ public record CustomerId(UUID value) {
 }
 ```
 
+## The kernel's real cost is a release calendar, not a jar
+
+The four rules above are about *contents*. The reason Shared Kernel is the highest-risk pattern on the
+map is about *time*, and it is worth stating separately because a kernel can satisfy every content
+rule and still paralyse two teams.
+
+**A shared kernel makes two independent release trains into one coupled one.** The consultation clause
+in the definition — the shared subset *"shouldn't be changed without consultation with the other
+team"* — has an operational shape:
+
+1. Team A needs a field on `Money`. It cannot ship it alone.
+2. Team B must review, and B's reviewers are busy with B's roadmap, not A's.
+3. When it merges, both services need the new kernel version to stay consistent.
+4. Which means A and B now deploy in a coordinated order, for a change that belonged to A.
+
+🔴 **That is the whole cost, and it recurs on every kernel change.** Everything else — the naming, the
+package layout, the semantic versioning — is machinery for reducing how often step 1 happens. If your
+kernel changes monthly, you have two services with one release calendar and should ask whether they
+are two services. If it changes yearly, the pattern is working, and the reason it is working is that
+the kernel is small.
+
+**The measurement that tells you which one you have:**
+
+```bash
+# How often has the coupled release train actually fired?
+git log --oneline --since="12 months ago" -- shared-kernel/src/main/java | wc -l
+```
+
+A number in single digits is a kernel. A number in the dozens is a
+[16 · shared model jar](16-the-shared-model-jar.md) that has been given rules and a nicer name.
+
 ## When and how to dismantle a Shared Kernel
 
 As organizations scale, the coordination tax of a Shared Kernel inevitably exceeds its benefits. When the two teams grow from six engineers to thirty, scheduling joint reviews for small kernel changes creates release gridlock.
@@ -138,6 +169,31 @@ Fix: Strictly enforce that the shared kernel contains only immutable records and
 Cause: Lack of joint CI verification.
 Fix: Configure CI to run both teams' test suites against the shared kernel branch before permitting a release.
 
+**★ Symptom: the kernel obeys every content rule and the two teams still cannot ship independently.**
+Cause: the rules govern what is *in* the kernel, not how often it *changes*. A pure, tiny, dependency-
+free kernel that changes every sprint still couples two release trains every sprint.
+Fix: measure the change rate before defending the contents, and treat a high rate as a boundary
+finding rather than a governance problem:
+```bash
+git log --oneline --since="12 months ago" -- shared-kernel/src/main/java | wc -l
+```
+Dozens of changes a year means the two contexts share a model that is still moving, which is evidence
+they are one context — merge them ([38 · Merging two services](38-merging-two-services.md)) — or that
+the kernel is carrying something that belongs to only one of them.
+
+**★ Symptom: a value type in the kernel gained a method that encodes one team's business rule.**
+Cause: the admission criteria were applied at creation and never re-applied. `Money.applyLoyaltyDiscount()`
+is a billing rule living in shared code, and shipping means shipping *shipping*'s deployment too.
+Fix: the kernel holds representation, never policy. The rule moves back to the team that owns it,
+operating on the shared type from outside:
+```java
+// in the kernel: representation only
+public record Money(BigDecimal amount, Currency currency) { public Money plus(Money other) { … } }
+
+// in billing, not the kernel: the rule
+Money discounted = loyaltyPolicy.apply(order.total());
+```
+
 **★ Symptom: The shared kernel depends on Spring Boot 4.1, preventing one team from upgrading their service independently.**
 Cause: Adding framework dependencies to the kernel.
 Fix: Strip all framework libraries from the kernel. It must compile against standard Java SE with zero third-party dependencies.
@@ -152,6 +208,17 @@ Only pure, immutable value objects (e.g. `Money`, `Address`), universal domain i
 
 **★ How should a team govern code changes in a Shared Kernel?**
 Through mandatory dual-ownership: any pull request modifying the kernel must require automated approval from designated code owners representing each collaborating team. Furthermore, CI pipelines must automatically run the full regression test suites of all consuming services against the proposed kernel changes before merging.
+
+**★ A shared kernel passes every content rule — pure value types, no framework dependencies, dual ownership. Why might it still be the wrong pattern?**
+Because the content rules govern what is in it and the cost is about how often it changes. The
+consultation clause — the shared subset *"shouldn't be changed without consultation with the other
+team"* — means every kernel change requires the other team's review, on their schedule, followed by
+a coordinated deployment. A kernel that changes yearly makes that a rounding error; a kernel that
+changes monthly has merged two release calendars into one, and the teams are independent on paper
+only. The measurement is a `git log` over the kernel path: single digits a year is a kernel, dozens
+is a shared model jar with rules. And a kernel that keeps changing is usually telling you the two
+contexts share a model that is still moving, which is an argument for merging them rather than for
+governing the jar harder.
 
 **★ Why is code duplication often preferable to a Shared Kernel?**
 In a distributed microservice architecture, team autonomy is paramount. Maintaining a Shared Kernel forces continuous cross-team coordination, meetings, and synchronized releases. Duplicating a 30-line `Money` record into two separate services costs a few minutes of typing, but removes the cross-team coordination overhead entirely, allowing both teams to ship independently.

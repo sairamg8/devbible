@@ -102,6 +102,26 @@ public record ShippingBoxRecommendation(String boxType, boolean requiresFreight)
 
 The downstream team accepts that if the `Catalog` team modifies `DimensionSpec` or renames `lengthCm`, the `Fulfillment` service must update its code in response. In exchange, `Fulfillment` avoided writing thousands of lines of redundant domain mapping classes.
 
+## Conforming is a decision with an expiry date
+
+The pattern's real risk is not choosing it — it is choosing it once and never revisiting it. A
+supporting subdomain conforms to a vendor; two years later the business has built a differentiator on
+top of it and nobody re-ran the decision.
+
+**Write the review trigger down when you conform.** Three that are worth naming explicitly:
+
+| Trigger | What it means | Move to |
+|---|---|---|
+| The subdomain is reclassified **core** | You are now competing on something whose vocabulary you do not own | [29 · Anticorruption layer](29-anticorruption-layer.md) |
+| The upstream breaks you twice in a year | The stability that justified conforming was not real | ACL, or a different vendor |
+| A vendor swap enters the roadmap | Conforming means the swap touches domain code everywhere | ACL, built **before** the swap starts |
+
+🔴 **The third one is the expensive one, and it arrives with no warning.** Conforming makes today
+cheap and makes vendor replacement a domain-wide rewrite, because the vendor's nouns are your nouns.
+That cost is invisible right up until procurement changes supplier, at which point it is the whole
+project. If a vendor swap is even plausible — regulated markets, single-supplier risk, an expiring
+contract — the ACL is cheaper bought early.
+
 ## The trap: conforming in a core domain
 
 The disaster scenario for Conformist occurs when a team conforms in its **Core Domain**—the primary business capability that differentiates the business from competitors.
@@ -122,6 +142,25 @@ Fix: Refactor the downstream service: define a domain port reflecting your busin
 Cause: Dogmatic adherence to "always use an ACL" without evaluating whether semantic translation is actually occurring.
 Fix: Eliminate the 1:1 pass-through ACL and conform directly to the upstream contract, reducing codebase complexity.
 
+**★ Symptom: the vendor is being replaced, and the change touches four hundred files across the domain.**
+Cause: conforming was the right decision and was never revisited. The vendor's vocabulary is the
+domain's vocabulary, so replacing the vendor is a rewrite rather than a new adapter.
+Fix: there is no cheap fix at this point — the work is to introduce the ACL you did not build, behind
+the existing calls, one bounded context at a time. The lesson is upstream of the incident: record a
+review trigger when you conform, and treat "a vendor swap is plausible" as a reason to pay for the
+layer early.
+```java
+// Step 1 of the retrofit: a port named in YOUR language, with the conformist call behind it
+public interface PaymentGatewayPort { PaymentResult charge(UUID orderId, BigDecimal amount); }
+```
+
+**★ Symptom: the team conformed to a "stable industry standard" that has now issued three breaking changes in a year.**
+Cause: stability was assumed from the vendor's reputation rather than observed from its changelog.
+Fix: conformity is a bet on the upstream's change rate, so check the bet against evidence before
+making it and re-check it periodically. Two breaking changes in a year is the signal to build the
+layer — the translation cost you avoided is now being paid in emergency domain edits instead, at a
+worse time and without a plan.
+
 **★ Symptom: Downstream adopts upstream's database schema conventions, including database column naming quirks.**
 Cause: Conforming to an upstream persistence model instead of an upstream Published Language.
 Fix: Conform only to public, versioned API contracts, never to another service's internal database tables.
@@ -136,6 +175,15 @@ A Core Domain represents an organization's unique competitive advantage and must
 
 **★ How does Conformist differ from Customer-Supplier?**
 In Customer-Supplier, downstream has leverage over upstream; upstream actively negotiates interface contracts and prioritizes downstream requirements in its roadmap. In Conformist, downstream has zero leverage; upstream develops its API independently, and downstream must either accept the upstream contract as-is or bear the cost of an Anticorruption Layer.
+
+**★ What does conforming cost, and when does the bill arrive?**
+It costs nothing today, which is the point, and it charges in two situations that both arrive without
+notice. The first is a **subdomain reclassification**: something you treated as supporting becomes a
+differentiator, and you are now competing on a capability whose vocabulary belongs to a vendor and
+cannot express what you want to build. The second is a **vendor swap**, which is where the pattern is
+most expensive — because the vendor's nouns are your domain's nouns, replacement is a domain-wide
+rewrite rather than one new adapter. Neither cost is visible while conforming is working, which is
+why the decision needs a written review trigger rather than a review someone remembers to do.
 
 **★ When should a team migrate from a Conformist relationship to an Anticorruption Layer?**
 A team should migrate to an ACL when: (1) upstream model quality deteriorates, introducing breaking changes or legacy quirks; (2) downstream domain evolves into a strategic core capability requiring distinct ubiquitous language; or (3) the team prepares to replace the upstream vendor, requiring an abstraction layer to insulate downstream logic during the transition.
