@@ -14,7 +14,7 @@ sidebar_position: 25
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)); and
 > **GDPR Article 5(1)(e)** (storage limitation)
 > ([eur-lex.europa.eu](https://eur-lex.europa.eu/eli/reg/2016/679/oj)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Log volume is one of the few engineering decisions where the person creating the cost and the
 person paying it are reliably different people, and there is no feedback between them until a

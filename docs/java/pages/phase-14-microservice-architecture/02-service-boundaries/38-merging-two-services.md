@@ -9,7 +9,7 @@ sidebar_position: 51
 > Verified: 2026-09-04 against Sam Newman, *Monolith to Microservices* (O'Reilly), Chapter 5:
 > Merging Services Together; Martin Fowler *Refactoring to a Modular Monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/modular-monolith.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When an engineering organization discovers that two microservices suffer from lockstep deployments, chatty network dependencies, or split transactional invariants, the only responsible architectural remedy is to merge them. Sunk cost fallacy and cultural embarrassment often prevent teams from taking this step, leading to increasingly fragile workarounds like distributed transactions, cross-service caching, and multi-repo release trains. Merging two services is a routine, disciplined refactoring that restores high cohesion, simplifies deployment pipelines, and eliminates network latency. Executing a merge without production downtime requires a structured six-step migration: creating an in-process module, proxying traffic, replacing remote clients with local beans, consolidating databases, and retiring the redundant container.**
 

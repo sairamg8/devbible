@@ -13,7 +13,7 @@ sidebar_position: 2
 > path, `@AutoConfiguration` and its `before`/`after`/`beforeName`/`afterName`
 > attributes, `@AutoConfigureOrder` and its ordering caveat), and the Spring
 > Boot 4.0 Migration Guide (package relocations under the modularization).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@SpringBootApplication` is three annotations in a trench coat, and only one
 of them is interesting. It expands to `@SpringBootConfiguration` +

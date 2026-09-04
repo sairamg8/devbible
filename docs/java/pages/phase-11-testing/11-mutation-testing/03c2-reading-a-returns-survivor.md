@@ -11,8 +11,8 @@ sidebar_position: 12
 > *False returns*, *True returns*, *Null returns* and *Primitive returns* sections — and pitest
 > 1.30.0 source at the `1.30.0` tag (`mutators/returns/`,
 > `build/intercept/equivalent/EmptyReturnsFilter.java`). Assertion APIs from the **AssertJ 3.27.7**
-> javadoc as managed by Spring Boot 4.1.0.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> javadoc as managed by Spring Boot 4.1.1.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Mutator behaviour is quoted from pitest's docs and
 > read from its source; the Java on this page is illustrative source, never a run.

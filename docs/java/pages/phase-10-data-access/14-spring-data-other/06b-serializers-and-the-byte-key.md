@@ -15,7 +15,7 @@ sidebar_position: 20
 > Redis 4.1.0 API
 > ([…/serializer/package-summary.html](https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/serializer/package-summary.html)).
 > The Java serialization stream header is from the Java Object Serialization
-> Specification. JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Redis 8.
+> Specification. JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Redis 8.
 
 **Redis stores bytes. Your code has objects. Something has to convert, and in Spring Data
 Redis that something is configured in five independent places on one object, defaults to

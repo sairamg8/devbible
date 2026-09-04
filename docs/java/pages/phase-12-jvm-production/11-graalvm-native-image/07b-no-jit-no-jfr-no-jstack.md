@@ -16,7 +16,7 @@ sidebar_position: 14
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/metadata/Compatibility/)) and "Build Options"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/));
 > the `--enable-monitoring` value list cross-checked against `VMInspectionOptions.java` on the `release/graal-vm/25.3` branch of `oracle/graal`.
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — the option and event lists below are transcribed from documentation and source, not from a running binary.
 
 **"You lose your observability" is the summary everyone repeats and it is wrong in an expensive way. JFR works. `jcmd` works. Heap dumps work. Thread dumps work. Native memory tracking works. What is true is that every one of them must be compiled in at build time, that a handful of JFR event families genuinely do not exist, and that the entire JVMTI-and-attach family — `-javaagent`, APM agents, `jstack` on a process you did not prepare — is gone permanently. The practical consequence is that observability becomes a build decision, and a binary shipped without it cannot be given it in an incident.**

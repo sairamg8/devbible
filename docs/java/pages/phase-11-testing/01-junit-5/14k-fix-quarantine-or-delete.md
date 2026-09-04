@@ -15,7 +15,7 @@ sidebar_position: 61
 > ([maven.apache.org](https://maven.apache.org/surefire/maven-surefire-plugin/examples/rerun-failing-tests.html));
 > the Develocity flaky-test detection guide
 > ([docs.gradle.com](https://docs.gradle.com/develocity/2026.1/guides/flaky-test-detection-guide/)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[14e](14e-retry-is-not-a-fix.md) argues why retry is not an answer. This is the list of answers
 that are, in the order you should try them, and an honest accounting of the retry tooling that

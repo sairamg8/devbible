@@ -16,7 +16,7 @@ sidebar_position: 31
 > Garbage Collector Tuning → Unusual System or Real-Time Usage", which names log writing as a
 > cause of high system time and recommends `-Xlog:async`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-first-garbage-collector-tuning.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A GC log is only useful if it still exists when you go looking for it, and if writing it did
 not itself cause the problem you are investigating. Both of those are configuration, both have

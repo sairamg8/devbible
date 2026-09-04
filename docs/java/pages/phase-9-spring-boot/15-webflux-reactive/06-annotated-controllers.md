@@ -14,7 +14,7 @@ sidebar_position: 6
 > `spring-boot-starter-webflux` starter, Reactor Netty as the default server,
 > and the behaviour when both web starters are present
 > (docs.spring.io/spring-boot/reference/web/reactive.html) — and the Spring
-> Boot 4.0 migration guide's starter renames. Spring Boot 4.1.0, Spring
+> Boot 4.0 migration guide's starter renames. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **WebFlux offers two programming models over the same runtime, and the first

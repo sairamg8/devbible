@@ -6,13 +6,13 @@ sidebar_position: 6
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Health · Kubernetes Probes*
 > (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the default
 > composition of the liveness and readiness groups, the
 > `management.endpoint.health.group.readiness.include` example, and
 > `AvailabilityChangeEvent` / `LivenessState` / `ReadinessState` in the
-> `org.springframework.boot.availability` package). Spring Boot 4.1.0, Spring
+> `org.springframework.boot.availability` package). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **The single most expensive mistake in this whole topic is wiring a database

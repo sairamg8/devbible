@@ -16,7 +16,7 @@ sidebar_position: 7
 > and the PostgreSQL 18 documentation for `statement_timeout` and
 > `pg_stat_activity`
 > ([postgresql.org/docs/18/](https://www.postgresql.org/docs/18/)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **HikariCP's sizing guide ends with a warning it calls *Caveat Lector*: "Pool
 sizing is ultimately very specific to deployments." The specific deployment it

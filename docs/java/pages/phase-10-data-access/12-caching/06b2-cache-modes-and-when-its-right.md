@@ -11,7 +11,7 @@ sidebar_position: 21
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)),
 > and the chapter source on the `7.4` branch
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/documentation/src/main/asciidoc/userguide/chapters/caching/Caching.adoc)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Two things finish the query cache. Hibernate exposes read and write participation as separate,
 per-operation modes, which gives it a proper force-refresh that Spring's `condition` attribute

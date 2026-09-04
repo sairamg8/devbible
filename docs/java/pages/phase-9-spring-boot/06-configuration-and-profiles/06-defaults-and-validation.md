@@ -12,7 +12,7 @@ sidebar_position: 6
 > recommended, `@Validated` and nested `@Valid`, and the
 > `configurationPropertiesValidator` bean and its `static` requirement), plus
 > the Spring Boot 4.0 release notes for Bean Validation no longer arriving
-> transitively. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> transitively. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A property that nobody set has exactly three legitimate answers, and choosing
 between them is the whole of this chunk: give it a default, let it be null and

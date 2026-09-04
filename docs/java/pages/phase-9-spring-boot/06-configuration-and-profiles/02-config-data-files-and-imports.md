@@ -15,7 +15,7 @@ sidebar_position: 2
 > `spring.config.activate.on-profile` / `on-cloud-platform`, location groups
 > with `;`, and the extension/encoding hints in square brackets), plus the
 > YAML 1.1 implicit-typing behaviour of SnakeYAML, which Spring uses to parse
-> `.yml`. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `.yml`. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **"Config data" is a specific, named subsystem, not a synonym for "the
 properties file". It is the machinery that decides which files exist, where it

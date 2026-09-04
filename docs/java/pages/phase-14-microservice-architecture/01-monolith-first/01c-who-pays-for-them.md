@@ -12,7 +12,7 @@ sidebar_position: 3
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)); Chris
 > Richardson, *Pattern: Microservice Architecture*
 > ([microservices.io](https://microservices.io/patterns/microservices.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Splitting a system is a transaction with an unusual property: the benefits arrive
 immediately and land on the development team, while the costs arrive gradually and land

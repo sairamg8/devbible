@@ -18,7 +18,7 @@ sidebar_position: 23
 > and the **Eclipse Memory Analyzer documentation**
 > ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/)).
 > **No sandbox** — commands and their documented behaviour only. No captured output.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the topic compressed into the sequence you run when a service has just died and you have
 a log line and a PID. The order is the content: each step is chosen because it eliminates the most

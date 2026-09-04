@@ -14,7 +14,7 @@ sidebar_position: 6
 > `springdoc.override-with-generic-response` and `springdoc.auto-tag-classes`,
 > and the Spring Framework reference for `@RestController` semantics as
 > already established in [topic 07](../07-rest-controllers/README.md).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Swagger Core ships around fifty annotations and you need about seven of them.
 The temptation with a generated document is to annotate everything, which

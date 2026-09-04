@@ -13,7 +13,7 @@ sidebar_position: 27
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/implementations/prometheus.html)),
 > and the **Prometheus documentation** — *Concepts · Metric types*
 > ([prometheus.io](https://prometheus.io/docs/concepts/metric_types/)).
-> No JVM was run for this page and no scrape output appears below. JDK 25 · Spring Boot 4.1.0 ·
+> No JVM was run for this page and no scrape output appears below. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0 · Micrometer Tracing 1.7.0 · Prometheus Java client 1.5.1.
 
 **The permanent complaint about metrics is that they tell you something is wrong and nothing about

@@ -17,7 +17,7 @@ sidebar_position: 7
 > ([`globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/globals.hpp)).
 > Every figure below is either quoted from those sources or arithmetic performed here and
 > labelled as such. Nothing was measured.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`MaxRAMPercentage=70` is not a decision, it is the *result* of a decision you have not made
 yet. The decision is: what is the other 30 percent for, and is 30 percent enough for it? That

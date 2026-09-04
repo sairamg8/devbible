@@ -14,7 +14,7 @@ sidebar_position: 35
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html))
 > and the Spring Boot 4.1 `TransactionProperties` javadoc
 > ([docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/transaction/autoconfigure/TransactionProperties.html](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/transaction/autoconfigure/TransactionProperties.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **There are two levers. `rollbackFor` and `noRollbackFor` change one method;
 `@EnableTransactionManagement(rollbackOn = ALL_EXCEPTIONS)` changes the default

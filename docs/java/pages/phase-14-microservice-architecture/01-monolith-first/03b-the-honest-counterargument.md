@@ -11,7 +11,7 @@ sidebar_position: 8
 > Fowler, *Monolith First*
 > ([martinfowler.com](https://martinfowler.com/bliki/MonolithFirst.html)); Sam Newman as
 > quoted therein.
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **A reference page that only gives you the argument it agrees with has taught you a slogan,
 not a decision. The counterargument to monolith-first is good, it was published on Fowler's

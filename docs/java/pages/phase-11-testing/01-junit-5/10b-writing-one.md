@@ -16,7 +16,7 @@ sidebar_position: 27
 > ([keeping-state-in-extensions](https://docs.junit.org/6.0.3/extensions/keeping-state-in-extensions.html));
 > javadoc for `EngineTestKit`
 > ([EngineTestKit](https://docs.junit.org/6.0.3/api/org.junit.platform.testkit/org/junit/platform/testkit/engine/EngineTestKit.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **The catalogue in [10](10-extensions.md) is a list of interfaces; this is what one looks
 like when it is finished. The guide's `RandomNumberExtension` is the example worth studying

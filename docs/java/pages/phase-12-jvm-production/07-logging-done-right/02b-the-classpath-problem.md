@@ -14,9 +14,9 @@ sidebar_position: 3
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)), the
 > **Spring Boot how-to, "Configure Log4j for Logging"**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/how-to/logging.html)), and
-> **`spring-boot-dependencies:4.1.0`**
+> **`spring-boot-dependencies:4.1.1`**
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **A dependency tree of any size contains libraries that log through SLF4J, libraries that log
 through Commons Logging, libraries that log through Log4j, and the JDK itself logging through

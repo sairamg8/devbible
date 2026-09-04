@@ -12,7 +12,7 @@ sidebar_position: 14
 > ([sql-execution/fetching](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/))
 > and *Lazy fetching*
 > ([fetching/lazy-fetching](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/lazy-fetching/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Everything up to this point built a tree. `fetch()` and its relatives are where a connection is
 taken, SQL is rendered and rows come back — and jOOQ offers a dozen of them because "how many rows

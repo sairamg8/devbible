@@ -6,7 +6,7 @@ sidebar_position: 7
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Health · Health Groups*
 > (docs.spring.io/spring-boot/reference/actuator/endpoints.html:
 > `management.endpoint.health.group.<name>.include` / `.exclude`, the
@@ -16,7 +16,7 @@ sidebar_position: 7
 > *Web · Graceful Shutdown*
 > (docs.spring.io/spring-boot/reference/web/graceful-shutdown.html: `server.shutdown`,
 > `spring.lifecycle.timeout-per-shutdown-phase`, the supported servers, and the
-> `SmartLifecycle` ordering). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `SmartLifecycle` ordering). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A health group is a named subset of the contributor tree with its own status
 mapping and its own display rules, and it is the mechanism that resolves the

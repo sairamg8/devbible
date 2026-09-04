@@ -12,7 +12,7 @@ sidebar_position: 40
 > [`MockitoExtension`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-extensions/mockito-junit-jupiter/src/main/java/org/mockito/junit/jupiter/MockitoExtension.java)
 > — `public class MockitoExtension implements BeforeEachCallback, AfterEachCallback,
 > ParameterResolver`, whose `beforeEach` calls `mockitoSession().initMocks(...).startMocking()`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source, never
 > a fabricated test run.
 

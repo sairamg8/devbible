@@ -9,8 +9,8 @@ sidebar_position: 34
 > Verified: 2026-08-30 — this page introduces no claim of its own. Every line links to the chunk
 > that argues and sources it, against the Spring Framework 7.0.x, Spring Boot 4.1.1 and Spring
 > Security 7.1.1 references and sources as cited there.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — no suite was run.
 
 **The closing chunk of the topic, meant to be used rather than read. A controller test has a

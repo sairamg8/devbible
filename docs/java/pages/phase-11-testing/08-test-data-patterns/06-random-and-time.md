@@ -12,8 +12,8 @@ sidebar_position: 23
 > ([InstantSource](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/InstantSource.html))
 > and `java.time.LocalDate`
 > ([LocalDate](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/LocalDate.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers
 > 2.0.5, Awaitility 4.3.0. **There is no sandbox on this machine** — this page carries
 > Java source and documented behaviour, never a test run, a timing or a console
 > transcript.

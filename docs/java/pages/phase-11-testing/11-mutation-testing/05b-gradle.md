@@ -16,7 +16,7 @@ sidebar_position: 33
 > and its javadoc). Release facts from the
 > [gradle-pitest-plugin releases](https://github.com/szpak/gradle-pitest-plugin/releases) and Maven
 > Central metadata for `info.solidsoft.gradle.pitest:gradle-pitest-plugin`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** The Gradle below is configuration read from the
 > plugin's own README and source. **No build output, score or timing on this page came from a run.**
 

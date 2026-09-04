@@ -15,7 +15,7 @@ sidebar_position: 12
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/4.1.x/module/spring-boot-cache/src/main/java/org/springframework/boot/cache/autoconfigure/RedisCacheConfiguration.java)),
 > and the `java.io.Serializable` javadoc
 > ([docs.oracle.com/en/java/javase/25/docs/api](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/Serializable.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1, Redis 8.
 
 **A local cache stores object references. A remote cache stores bytes, and bytes need a schema.
 Spring Boot picks one for you — `JdkSerializationRedisSerializer` — and that choice is the

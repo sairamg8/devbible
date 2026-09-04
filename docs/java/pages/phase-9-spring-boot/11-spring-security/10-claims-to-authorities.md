@@ -15,7 +15,7 @@ sidebar_position: 10
 > `OAuth2AuthorizationManagers.hasScope`) and *Session Management*
 > (docs.spring.io/spring-security/reference/servlet/authentication/session-management.html
 > — `SessionCreationPolicy.STATELESS` and `NullSecurityContextRepository`).
-> Spring Boot 4.1.0, Spring Security 7.x, JDK 25.
+> Spring Boot 4.1.1, Spring Security 7.x, JDK 25.
 
 **A verified token is a bag of claims; your authorization rules are written
 against `GrantedAuthority` strings. The converter between the two is small,

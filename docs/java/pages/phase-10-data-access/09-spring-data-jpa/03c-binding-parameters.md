@@ -16,7 +16,7 @@ sidebar_position: 14
 > [`QueryParameterSetterFactory`](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/repository/query/QueryParameterSetterFactory.java);
 > the `-parameters` default read from
 > [`spring-boot-starter-parent`](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-parent/)
-> and the Boot Gradle plugin's `JavaPluginAction`. JDK 25, Spring Boot 4.1.0,
+> and the Boot Gradle plugin's `JavaPluginAction`. JDK 25, Spring Boot 4.1.1,
 > Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **A `@Query` string is not compiled against your method signature, so the link

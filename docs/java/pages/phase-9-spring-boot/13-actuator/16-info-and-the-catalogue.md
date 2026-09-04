@@ -6,7 +6,7 @@ sidebar_position: 16
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Application Information*
 > (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the
 > auto-configured `InfoContributor` beans `build`, `env`, `git`, `java`, `os`,
@@ -16,7 +16,7 @@ sidebar_position: 16
 > properties, the `env` contributor exposing every `Environment` property whose
 > name starts with `info.`, `management.info.git.mode: "full"`, and the
 > statement that the Maven and Gradle plugins can both generate the build-info
-> file). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> file). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`/info` is the smallest complete demonstration of how Actuator thinks. The
 endpoint exists, it is accessible, and the first time you expose it, it returns

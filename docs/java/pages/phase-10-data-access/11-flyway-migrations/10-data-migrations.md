@@ -16,7 +16,7 @@ sidebar_position: 31
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/documentation/Reference))
 > and Flyway's *Migration Transaction Handling*
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/migration-transaction-handling-273973399.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Everything in this topic so far has been about the catalogue: columns, constraints, indexes, types.
 Sooner or later a migration's job is *rows* — backfill a new column, normalise a value, split a name

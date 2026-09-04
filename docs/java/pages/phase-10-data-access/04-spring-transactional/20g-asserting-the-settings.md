@@ -10,7 +10,7 @@ sidebar_position: 59
 > ([.../transaction/support/TransactionSynchronizationManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html))
 > and the `TransactionAspectSupport` javadoc
 > ([.../transaction/interceptor/TransactionAspectSupport.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **[20f](20f-asserting-the-boundary-exists.md) proved a transaction exists. This chunk
 reads its settings back — and the reason that is a separate skill is that there are

@@ -17,7 +17,7 @@ sidebar_position: 8
 > — `ParameterErrors` implementing `org.springframework.validation.Errors`, and
 > the `MessageSourceResolvable` error codes) and *Error Responses*
 > (docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-rest-exceptions.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The two validation exceptions are "designed to be very similar" and can be
 "handled with almost identical code" — but the payloads are not the same shape,

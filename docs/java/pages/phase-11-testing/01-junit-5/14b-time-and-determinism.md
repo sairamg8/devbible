@@ -14,7 +14,7 @@ sidebar_position: 52
 > ([HashMap](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/HashMap.html))
 > and `java.nio.charset.Charset`
 > ([Charset](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/charset/Charset.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every item here is a global the JVM will happily supply a default for, so the code compiles,
 the test passes on your machine, and the value it actually depended on was never written down.

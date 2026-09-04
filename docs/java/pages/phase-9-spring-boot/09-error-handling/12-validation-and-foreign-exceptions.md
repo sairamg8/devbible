@@ -15,7 +15,7 @@ sidebar_position: 12
 > javadoc (`handleMethodArgumentNotValid`,
 > `handleHandlerMethodValidationException`). Boot 4's non-transitive Bean
 > Validation confirmed against the **Spring Boot 4.0 Release Notes** (GitHub
-> wiki). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> wiki). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Validation is the error path every API exercises most and documents least, and
 it is the one place where Spring hands you two different exceptions for what a

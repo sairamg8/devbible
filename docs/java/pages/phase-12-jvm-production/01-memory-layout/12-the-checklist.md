@@ -12,7 +12,7 @@ sidebar_position: 46
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > the **JDK 25 Troubleshooting Guide**
 > ([docs.oracle.com/en/java/javase/25/troubleshoot/](https://docs.oracle.com/en/java/javase/25/troubleshoot/))
-> and the **HotSpot GC Tuning Guide** for JDK 25. JDK 25 · Spring Boot 4.1.0.
+> and the **HotSpot GC Tuning Guide** for JDK 25. JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — commands and their documented behaviour only. No captured output.
 
 **Everything in this topic exists to make one moment go well: a service is using more memory than

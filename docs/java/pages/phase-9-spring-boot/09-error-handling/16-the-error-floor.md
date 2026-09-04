@@ -18,7 +18,7 @@ sidebar_position: 16
 > `NoHandlerFoundException` / `NoResourceFoundException` handlers
 > (docs.spring.io/spring-framework/docs/current/javadoc-api).
 > `ExceptionHandlerExceptionResolver`'s behaviour when a handler method itself
-> throws is cited from the Framework **source**. Spring Boot 4.1.0, Spring
+> throws is cited from the Framework **source**. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **`/error` is the floor of your error contract: the shape a client receives when

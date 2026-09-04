@@ -16,7 +16,7 @@ sidebar_position: 16
 > and the **JDK 25 Troubleshooting Guide**'s characterisation of a Java-language memory leak
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshooting-memory-leaks.html)).
 > **No sandbox** — the Java below is illustrative source, never a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The guide's definition of a Java memory leak is precise and worth holding on to: *"the
 application is unintentionally holding references to objects, which prevents the objects from

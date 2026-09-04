@@ -12,7 +12,7 @@ sidebar_position: 17
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Hibernate ORM 7.4 *Introduction* §3.17 *Set, List, or Collection?* and §9.12
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Hibernate does not treat your collection field as "some collection". It inspects the
 declared type and assigns it a *classification*, and the classification determines the

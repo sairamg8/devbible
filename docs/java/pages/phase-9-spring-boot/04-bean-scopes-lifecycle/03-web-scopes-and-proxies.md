@@ -12,7 +12,7 @@ sidebar_position: 3
 > the proxy mechanism, `proxy-target-class` / `TARGET_CLASS` vs `INTERFACES`, the
 > note that CGLIB proxies do not intercept private methods, and the
 > `@RequestScope`/`@SessionScope`/`@ApplicationScope` composed annotations).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A request-scoped bean injected into a singleton is the prototype trap again,
 with a sharper edge: at startup there is no request to resolve against at all.

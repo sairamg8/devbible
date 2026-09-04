@@ -10,7 +10,7 @@ sidebar_position: 19
 > ([crud-with-updatablerecords](https://www.jooq.org/doc/latest/manual/sql-execution/crud-with-updatablerecords/))
 > and *Code generation — Records*
 > ([codegen-records](https://www.jooq.org/doc/latest/manual/code-generation/codegen-object-types/codegen-records/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The manual is candid that this API exists to do what an ORM does: *"jOOQ facilitates CRUD using
 a specific API involving `org.jooq.UpdatableRecord` types"*, reducing the boilerplate of

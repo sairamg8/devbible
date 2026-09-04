@@ -14,7 +14,7 @@ sidebar_position: 2
 > ([.../onetomany](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/onetomany))
 > and `@OneToOne`
 > ([.../onetoone](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/onetoone)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **There is one foreign-key column and there may be two Java fields describing it. The
 owning side is whichever field maps that column for real. Everything else — `mappedBy`,

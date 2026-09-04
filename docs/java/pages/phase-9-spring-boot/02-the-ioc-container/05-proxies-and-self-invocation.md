@@ -13,7 +13,7 @@ sidebar_position: 5
 > `private` method constraints), the *Declarative Transaction Management*
 > section on proxy-mode limitations, and the Spring Boot reference for
 > `spring.aop.proxy-target-class`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The object the container injects into your class is frequently not an
 instance of the class you wrote. It is a generated wrapper that implements the

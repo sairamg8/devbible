@@ -13,7 +13,7 @@ sidebar_position: 4
 > used inside `BeanPostProcessor` or `BeanFactoryPostProcessor` types) and
 > *Constructor-based or setter-based DI*
 > (docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html
-> — the constructor-argument code smell). Spring Boot 4.1.0, Spring Framework
+> — the constructor-argument code smell). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **`@Autowired` on a private field is the shortest thing to type and the only

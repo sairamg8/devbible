@@ -13,7 +13,7 @@ sidebar_position: 32
 > [errcodes-appendix](https://www.postgresql.org/docs/18/errcodes-appendix.html))
 > and the `NamedParameterUtils` javadoc
 > ([.../jdbc/core/namedparam/NamedParameterUtils.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/namedparam/NamedParameterUtils.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Two tests are still missing after [chunk 12h](12h-what-to-assert.md), and both are
 cheap. One asks whether the queries nobody called still parse against today's schema —

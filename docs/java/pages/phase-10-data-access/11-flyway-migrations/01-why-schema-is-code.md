@@ -14,7 +14,7 @@ sidebar_position: 1
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Spring Boot 4.1 how-to *Use a Higher-level Database Migration Tool*
 > ([docs.spring.io/spring-boot/how-to/data-initialization.html](https://docs.spring.io/spring-boot/how-to/data-initialization.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Your Java code is thrown away and replaced on every deploy. Your database is not — it is the
 same rows, carried forward, one version to the next, for years. That asymmetry is the whole

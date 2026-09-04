@@ -13,7 +13,7 @@ sidebar_position: 12
 > `RestClientResponseException`, `HttpStatusCodeException`,
 > `HttpClientErrorException`, `HttpServerErrorException` and
 > `ResourceAccessException`
-> (docs.spring.io/spring-framework/docs/current/javadoc-api/). Spring Boot 4.1.0,
+> (docs.spring.io/spring-framework/docs/current/javadoc-api/). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Spring's client exception hierarchy has one branch that decides whether your

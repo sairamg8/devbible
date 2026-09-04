@@ -10,7 +10,7 @@ sidebar_position: 11
 > (docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-rest-exceptions.html)
 > for the mapping mechanics, with status-code semantics taken from **RFC 9110**
 > (HTTP Semantics) — 404 §15.5.5, 409 §15.5.10, 422 §15.5.21, 429 per RFC 6585
-> and 503 §15.6.4. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> and 503 §15.6.4. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The machinery is settled by this point. What is left is the part no framework
 can decide for you: how many exception types your domain should have, and which

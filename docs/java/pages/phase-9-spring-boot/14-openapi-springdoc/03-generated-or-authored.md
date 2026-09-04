@@ -11,7 +11,7 @@ sidebar_position: 3
 > latest release 1.5), OpenAPI Generator's generator documentation
 > (openapi-generator.tech/docs/generators/typescript-fetch, and the
 > `openapi-generator-maven-plugin` release 7.24.0 on Maven Central), and the
-> OpenAPI Specification v3.1.1. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> OpenAPI Specification v3.1.1. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **There are three ways a Spring service can have an OpenAPI document, and almost
 every team picks one by accident — usually by adding a dependency because a

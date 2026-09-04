@@ -15,7 +15,7 @@ sidebar_position: 2
 > `pitest-junit5-plugin-1.2.3.pom` and jar; the
 > [gradle-pitest-plugin 1.19.0 release notes](https://github.com/szpak/gradle-pitest-plugin/releases);
 > and pitest's own `pitest-parent` POM (`asm.version`, `maven.compiler` `release`).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Artifact facts here come from published POMs,
 > published jars and release notes — never from a run.

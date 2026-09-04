@@ -15,7 +15,7 @@ sidebar_position: 8
 > `WebApplicationContextRunner`, `ReactiveWebApplicationContextRunner`,
 > `FilteredClassLoader`, and the native-image limitation), plus the Spring Boot
 > 4.0 Migration Guide for the auto-configuration package relocations.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **There are two ways to change what auto-configuration does, and choosing wrong
 is the most common self-inflicted wound in a Boot codebase. Defining your own

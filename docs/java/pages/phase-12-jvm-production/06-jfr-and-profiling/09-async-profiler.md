@@ -13,7 +13,7 @@ sidebar_position: 15
 > profilers and of `AsyncGetCallTrace` ([openjdk.org](https://openjdk.org/jeps/518)).
 > 🔴 **No sandbox** — no flame graph, sample count or measurement below is a captured run. The
 > command forms are the project's own documented examples.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **JFR is the supported, built-in, always-on option and it is the right default. async-profiler is
 the one that sees what JFR cannot, and the honest comparison is not "which is better" but "which

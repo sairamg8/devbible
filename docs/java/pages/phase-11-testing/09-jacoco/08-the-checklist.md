@@ -10,7 +10,7 @@ sidebar_position: 22
 > links to; every documented claim it repeats is cited there against **JaCoCo 0.8.15**'s
 > `doc/counters.html`, `doc/classids.html`, `doc/faq.html`, `doc/changes.html` and the Maven mojo
 > pages, and against the **Gradle user manual**. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine.**
 
 **You have been handed a project with a coverage report and a number. This chunk is what to do

@@ -13,7 +13,7 @@ sidebar_position: 19
 > Melvin E. Conway, *How Do Committees Invent?* (1968)
 > ([melconway.com](https://www.melconway.com/Home/Committees_Paper.html)); Martin Fowler,
 > *Conway's Law* ([martinfowler.com](https://martinfowler.com/bliki/ConwaysLaw.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Some of a split's costs are not paid in code or in infrastructure. They are paid in
 meetings, in things nobody owns, in standards that erode, and in the quadratic growth of

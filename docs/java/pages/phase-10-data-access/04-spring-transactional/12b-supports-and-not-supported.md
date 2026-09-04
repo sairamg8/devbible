@@ -14,7 +14,7 @@ sidebar_position: 32
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html))
 > and the `AbstractPlatformTransactionManager` javadoc and source
 > ([github.com/spring-projects/spring-framework/.../transaction/support/AbstractPlatformTransactionManager.java](https://github.com/spring-projects/spring-framework/blob/main/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 12](12-the-other-propagations.md) covered the two assertions. These two
 adapt instead of refusing, which is what makes them look like the safe choices

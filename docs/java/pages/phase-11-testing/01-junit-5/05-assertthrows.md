@@ -12,7 +12,7 @@ sidebar_position: 9
 > ([assertions](https://docs.junit.org/6.0.3/writing-tests/assertions.html)); `Assertions`
 > javadoc
 > ([Assertions](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **An exception is a behaviour like any other and deserves a test that names it. Jupiter
 gives you three assertions for the job, and the difference between the first two is not

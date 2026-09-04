@@ -16,7 +16,7 @@ sidebar_position: 23
 > `timestampedReports`, `verbose`) and the FAQ's *"Can I see the source code of the mutants?"* entry.
 > CSV and XML shapes from `pitest-entry/.../report/csv/CSVReportListener.java` and
 > `report/xml/XMLReportListener.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Everything below is read from pitest's published
 > templates and source. **No screenshot, page, score or count on this page came from a run.**
 

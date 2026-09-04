@@ -13,7 +13,7 @@ sidebar_position: 16
 > Richardson, *Pattern: Microservice Architecture*
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); Team
 > Topologies, *Key Concepts* ([teamtopologies.com](https://teamtopologies.com/key-concepts)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — the
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — the
 > counts below are structural arithmetic, not observations from a production estate.
 
 **Every service you create is a permanent operational object. It needs alerts that someone

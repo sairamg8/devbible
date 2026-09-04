@@ -15,7 +15,7 @@ sidebar_position: 13
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9700.txt));
 > `draft-ietf-oauth-browser-based-apps-27` §5.2.2 — an Internet-Draft
 > ([ietf.org](https://www.ietf.org/archive/id/draft-ietf-oauth-browser-based-apps-27.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **For a bearer token, "lifetime" and "blast radius" are the same quantity measured in
 different units. [06](06-what-a-bearer-token-cannot-do.md) established that a stolen access

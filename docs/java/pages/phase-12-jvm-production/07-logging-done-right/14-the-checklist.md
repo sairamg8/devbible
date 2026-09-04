@@ -11,7 +11,7 @@ sidebar_position: 28
 > its evidence. The underlying sources are the **SLF4J** and **Logback** documentation and
 > sources, the **Spring Boot 4.1** logging and Actuator references, the **OWASP Logging Cheat
 > Sheet**, **PCI DSS v4.0** and **GDPR** Articles 5 and 32.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A Master-tier topic earns its tier by being usable under pressure. These are the two artefacts
 worth keeping: a review checklist short enough to actually apply to a single line, and a

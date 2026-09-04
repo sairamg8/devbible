@@ -14,7 +14,7 @@ sidebar_position: 27
 > `pitest-html-report/.../MutationTotals.java`, and `org.pitest.mutationtest.DetectionStatus`.
 > Metric definitions from the [Maven quick start](https://pitest.org/quickstart/maven/) entries for
 > `mutationThreshold`, `coverageThreshold` and `testStrengthThreshold`, quoted verbatim.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Every formula below is read from published source and
 > every worked figure is arithmetic performed on this page. **No score, count or console output came
 > from a run.**

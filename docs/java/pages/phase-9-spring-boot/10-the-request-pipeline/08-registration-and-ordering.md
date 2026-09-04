@@ -14,7 +14,7 @@ sidebar_position: 8
 > `OrderedFilter.REQUEST_WRAPPER_FILTER_MAX_ORDER` and `logging.level.web=debug`),
 > the `OncePerRequestFilter` javadoc (dispatch types and the already-filtered
 > attribute), and the Spring Framework 7.0 reference *Web MVC → MVC Config →
-> Interceptors* (`MappedInterceptor`). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> Interceptors* (`MappedInterceptor`). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **Filter order and interceptor order look like the same problem and are solved in

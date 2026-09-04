@@ -11,12 +11,12 @@ sidebar_position: 9
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)), the
 > **SLF4J 2.0.18 manual** on key-value pairs — *"Key-value pairs are particularly useful in
 > conjunction with log data analysers which can interpret them automatically"*
-> ([slf4j.org](https://www.slf4j.org/manual.html)), and the **Spring Boot 4.1.0 source** for
+> ([slf4j.org](https://www.slf4j.org/manual.html)), and the **Spring Boot 4.1.1 source** for
 > `ElasticCommonSchemaStructuredLogFormatter`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java)).
 > 🔴 **No sandbox.** The JSON shapes on this page are **derived from the formatter's source code**
 > or presented as labelled schematics — none is a captured log line.
-> JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **The default log format encodes structured data — a timestamp, a level, a thread, a logger, a set
 of values — into a sentence, and then the log aggregator spends CPU and regexes turning it back

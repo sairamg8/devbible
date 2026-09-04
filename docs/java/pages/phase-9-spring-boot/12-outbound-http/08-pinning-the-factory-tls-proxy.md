@@ -12,7 +12,7 @@ sidebar_position: 8
 > `InetAddressFilter`
 > (docs.spring.io/spring-boot/reference/io/rest-client.html) — the Spring Boot
 > how-to *HTTP Clients* (docs.spring.io/spring-boot/how-to/http-clients.html),
-> and the Spring Boot 4.1.0 API for `org.springframework.boot.http.client`. Spring
+> and the Spring Boot 4.1.1 API for `org.springframework.boot.http.client`. Spring
 > Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
 
 **Which HTTP library executes your outbound calls is, by default, a function of

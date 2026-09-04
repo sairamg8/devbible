@@ -13,7 +13,7 @@ sidebar_position: 4
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jmap.html)),
 > and the **JDK 25 Troubleshooting Guide**, "Diagnostic Tools"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A heap dump answers one question — what is keeping objects on the Java heap alive — and it
 is the most expensive way to ask any question in this phase. This page is about *acquiring*

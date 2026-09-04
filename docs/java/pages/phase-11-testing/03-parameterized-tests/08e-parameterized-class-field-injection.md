@@ -15,7 +15,7 @@ sidebar_position: 20
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedClass.html))
 > and `@AggregateWith`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/aggregator/AggregateWith.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08d](08d-parameterized-class-injection.md) covered the constructor route and the switch that
 selects between them. This is the other route: `@Parameter` fields. It is mandatory under

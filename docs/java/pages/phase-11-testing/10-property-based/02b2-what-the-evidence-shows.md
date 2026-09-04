@@ -15,7 +15,7 @@ sidebar_position: 5
 > `Try` and `ExecutionRequest`; and against the **Spring Framework 7.0 release notes**
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes))
 > for the JUnit 6 baseline.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > 🔴 **No sandbox, no build, no JVM and no test run on this machine.** Everything below is
 > static inspection of published artifacts and official release notes. The page is explicit
 > about the boundary between what that establishes and what it does not.

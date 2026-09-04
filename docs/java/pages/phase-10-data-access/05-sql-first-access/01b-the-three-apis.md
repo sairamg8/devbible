@@ -13,7 +13,7 @@ sidebar_position: 2
 > ([.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)),
 > and the `JdbcClient` javadoc
 > ([.../simple/JdbcClient.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/JdbcClient.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Spring's JDBC support does not hide your SQL, translate it, or generate it — it
 takes the resource handling, the loop and the exception plumbing, and leaves you the

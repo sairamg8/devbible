@@ -13,7 +13,7 @@ sidebar_position: 20
 > **JEP 483 · Ahead-of-Time Class Loading & Linking** ([openjdk.org](https://openjdk.org/jeps/483)).
 > 🔴 **No sandbox** — the three log and error lines shown below are **quoted from the `java` tool
 > reference's own examples** and are attributed as such; nothing here was executed. JDK 25 · Spring
-> Boot 4.1.0 / Spring Framework 7.0.8.
+> Boot 4.1.0 / Spring Framework 7.0.9.
 
 **[05d](05d-the-aot-cache.md) built a cache. This chunk is about the fact that having one is not the
 same as using one. An AOT cache is an *optimisation*, and the JVM's default behaviour when it cannot

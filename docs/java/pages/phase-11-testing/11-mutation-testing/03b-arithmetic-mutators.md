@@ -11,7 +11,7 @@ sidebar_position: 9
 > *Increments Mutator* and *Invert Negatives Mutator* sections, quoted verbatim — and the
 > [Basic concepts](https://pitest.org/quickstart/basic_concepts/) page. Filter feature names from
 > pitest 1.30.0 source (`FINFINC`, `FFLOOP`, `FINFIT`).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Mutator behaviour is quoted from pitest's docs;
 > the Java on this page is illustrative source, never a run.

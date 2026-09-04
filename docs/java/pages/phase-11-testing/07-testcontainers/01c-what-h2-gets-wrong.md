@@ -12,8 +12,8 @@ sidebar_position: 3
 > ([grammar.html](https://www.h2database.com/html/grammar.html)) — and the **PostgreSQL 18
 > manual**, *Lexical Structure → Identifiers and Key Words*
 > ([sql-syntax-lexical](https://www.postgresql.org/docs/18/sql-syntax-lexical.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, Testcontainers 2.0.5, **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, Testcontainers 2.0.5, **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Every claim on this page and
 > its siblings is read out of documentation or source; nothing here is a query log, a timing or a

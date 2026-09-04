@@ -13,7 +13,7 @@ sidebar_position: 29
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/TypedArgumentConverter.html))
 > and `ArgumentConversionException`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/ArgumentConversionException.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08m](08m-writing-a-converter.md) picked the base class. This chunk is the two things that are
 easiest to get wrong once you have one: what your `convert` method does when it is handed `null`,

@@ -16,7 +16,7 @@ sidebar_position: 9
 > ([MigrationInfoImpl.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/info/MigrationInfoImpl.java)),
 > and the *Placeholders* and *Java-based migrations* references
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/flyway-concepts/migrations/java-based-migrations)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[04](04-checksums-and-immutability.md) is the half people know: change the SQL, and `validate`
 tells you. This is the half that decides whether you trust the tool or the discipline. Two

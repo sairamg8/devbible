@@ -14,7 +14,7 @@ sidebar_position: 17
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and the `AbstractPlatformTransactionManager` javadoc
 > ([.../transaction/support/AbstractPlatformTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/AbstractPlatformTransactionManager.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 6b](06b-which-manager-you-have.md) listed the implementations. This one
 answers the question a Boot developer actually has: which one do I have, and who

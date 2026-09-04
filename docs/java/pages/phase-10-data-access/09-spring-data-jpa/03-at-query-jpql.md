@@ -14,7 +14,7 @@ sidebar_position: 12
 > Jakarta Persistence 3.2 §4 (the query language); Hibernate ORM 7.4 User Guide,
 > "A Guide to Hibernate Query Language"
 > ([HQL](https://docs.jboss.org/hibernate/orm/7.0/querylanguage/html_single/Hibernate_Query_Language.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **`@Query` is the point where the abstraction stops guessing. A derived name is an

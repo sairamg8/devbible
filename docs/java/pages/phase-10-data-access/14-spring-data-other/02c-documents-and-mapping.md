@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/mapping/mapping.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/mapping/mapping.html)),
 > and the *Template CRUD* chapter for `@Version` semantics
 > ([…/mongodb/template-crud-operations.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-crud-operations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
 
 **A JPA entity needs `@Entity` and a persistence unit; a MongoDB document needs almost
 nothing. A plain class with a field called `id` is already mappable, because the

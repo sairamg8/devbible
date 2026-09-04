@@ -9,7 +9,7 @@ sidebar_position: 45
 > Verified: 2026-08-31 against the **JDK 25 Troubleshooting Guide**
 > ([docs.oracle.com/en/java/javase/25/troubleshoot/](https://docs.oracle.com/en/java/javase/25/troubleshoot/))
 > for NMT's scope, and the Linux `proc(5)`, `pmap(1)` and `mallopt(3)` manual pages for the
-> operating-system side. JDK 25 · Spring Boot 4.1.0 · Linux containers assumed.
+> operating-system side. JDK 25 · Spring Boot 4.1.1 · Linux containers assumed.
 > **No sandbox and no container here** — commands and their documented behaviour only.
 > **No captured `pmap`, `smaps` or NMT output**, and no invented byte counts.
 

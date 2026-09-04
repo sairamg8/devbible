@@ -11,8 +11,8 @@ sidebar_position: 6
 > constructor injection goodness"*, §40 *"stricter" Mockito* and its unnecessary-stubbing
 > detection, §12 stubbing with exceptions — read from `mockito-core-5.23.0-javadoc.jar` on
 > Maven Central.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output.
 

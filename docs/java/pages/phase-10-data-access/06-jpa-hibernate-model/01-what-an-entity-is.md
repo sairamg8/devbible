@@ -12,7 +12,7 @@ sidebar_position: 1
 > ([docs.hibernate.org/orm/7.4/userguide/...](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Jakarta Persistence 3.2 specification §2.1 *The Entity Class*
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Most people meet JPA as a pile of annotations and learn the annotations one at a
 time. That is backwards, and it is why the surprises later feel like magic. Start

@@ -14,7 +14,7 @@ sidebar_position: 5
 > `reactor.schedulers.defaultBoundedElasticOnVirtualThreads` property for Java
 > 21+, and the `publishOn`/`subscribeOn` semantics — and the Spring Framework
 > reference *Web on Reactive Stack → WebFlux → Concurrency Model*.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Reactor is concurrency-agnostic: an operator chain does not, by itself,
 introduce any threading at all. Every stage runs on whatever thread delivered

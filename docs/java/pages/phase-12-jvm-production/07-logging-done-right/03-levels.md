@@ -12,7 +12,7 @@ sidebar_position: 5
 > ([slf4j.org](https://www.slf4j.org/faq.html)), and the **Spring Boot 4.1 reference, "Logging"**
 > for `logging.level.*`, log groups and the supported level names
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Five levels, and teams argue about them forever because they are usually defined by *severity* —
 a subjective scale on which everything drifts upward. Define them instead by **who is expected to

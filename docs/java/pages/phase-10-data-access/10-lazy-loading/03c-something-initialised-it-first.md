@@ -14,7 +14,7 @@ sidebar_position: 9
 > and the `7.4` source of `org.hibernate.proxy.AbstractLazyInitializer`, whose `initialized`
 > flag makes initialisation permanent for the life of the object
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/proxy/AbstractLazyInitializer.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **The previous chunk's two groups are static: either the session was still open, or the field
 never held a proxy in the first place. This group is dynamic, and it is why the same request

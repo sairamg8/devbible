@@ -9,7 +9,7 @@ sidebar_position: 3
 > Verified: 2026-09-01 against Martin Fowler, *BoundedContext*
 > ([martinfowler.com](https://martinfowler.com/bliki/BoundedContext.html)) and
 > *MultipleCanonicalModels* as referenced there; Eric Evans, *Domain-Driven Design* (2003),
-> Ch. 14, cited by concept. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 ·
+> Ch. 14, cited by concept. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 ·
 > Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Polysemy — one word, several meanings — is the cheapest and most reliable boundary

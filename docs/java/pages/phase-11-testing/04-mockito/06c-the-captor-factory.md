@@ -13,7 +13,7 @@ sidebar_position: 25
 > [`ArgumentCaptorTest`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/test/java/org/mockito/ArgumentCaptorTest.java)
 > (`captor_calls_forClass_with_the_inferred_argument`,
 > `captor_called_with_explicit_varargs_is_invalid`).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

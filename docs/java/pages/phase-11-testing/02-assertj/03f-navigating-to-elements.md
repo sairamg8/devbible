@@ -11,7 +11,7 @@ sidebar_position: 11
 > `assertj-core` 3.27.7 API (`AbstractIterableAssert.first`, `last`, `element`,
 > `singleElement`, `allSatisfy`, `anySatisfy`, `noneSatisfy`, `allMatch`, `anyMatch`,
 > `noneMatch`, `org.assertj.core.api.InstanceOfAssertFactories`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[03e](03e-filtering-and-navigating.md) narrowed the collection to a subset. This chunk
 narrows it to a single element, or asserts on every element in turn. Both moves have the

@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/metadata/Compatibility/)), "Dynamic Features of Java"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/dynamic-features/)) and "Build Options"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — error type names below are quoted from the reference, not reproduced from a run.
 
 **There are two different lists here and conflating them wastes days. The first is *dynamic features that need metadata*: reflection, JNI, resources, resource bundles, serialization and the Foreign Function and Memory API all still work, but only for the elements you declared. The second is *behaviour that is simply different*: finalizers never run, the security manager is inert, JVMTI does not exist, and `sun.misc.Unsafe` field offsets need special handling. The first list is a configuration problem with a known workflow. The second list is a design problem, and no amount of metadata fixes it.**

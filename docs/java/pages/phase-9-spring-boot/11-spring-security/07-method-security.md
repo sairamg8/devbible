@@ -11,7 +11,7 @@ sidebar_position: 7
 > — `@EnableMethodSecurity` and its defaults, `@PreAuthorize`, `@PostAuthorize`,
 > `@PreFilter`, `@PostFilter`, the SpEL methods, meta-annotations and
 > `AnnotationTemplateExpressionDefaults`, `@P`, and the note that the security
-> starter does not activate method-level authorization). Spring Boot 4.1.0,
+> starter does not activate method-level authorization). Spring Boot 4.1.1,
 > Spring Security 7.x, JDK 25.
 
 **URL rules protect *paths*; method security protects *behaviour*. The

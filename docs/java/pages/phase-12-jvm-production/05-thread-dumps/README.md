@@ -21,7 +21,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** Every dump fragment in this topic is either quoted from Oracle's
 > documentation with attribution, or explicitly labelled a schematic. No captured runs, no
 > fabricated stacks, no invented numbers.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A thread dump is the highest information-per-second diagnostic the JVM offers: one command, no
 setup, no agent, no flag set yesterday — and it returns the complete state of every thread plus

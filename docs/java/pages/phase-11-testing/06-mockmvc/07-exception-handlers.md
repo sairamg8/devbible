@@ -14,8 +14,8 @@ sidebar_position: 17
 > javadoc, and `WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers` — plus the
 > **Spring Boot 4.1.1** sources for `AutoConfigureWebMvc.imports`, `ProblemDetailsExceptionHandler`
 > and [`DefaultErrorAttributes`](https://github.com/spring-projects/spring-boot/blob/v4.1.1/module/spring-boot-webmvc/src/main/java/org/springframework/boot/webmvc/error/DefaultErrorAttributes.java).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, Mockito 5.23.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, Mockito 5.23.0,
 > AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 

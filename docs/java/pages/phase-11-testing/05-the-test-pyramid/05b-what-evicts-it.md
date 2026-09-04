@@ -12,8 +12,8 @@ sidebar_position: 9
 > and *Testing → Annotations → `@DirtiesContext`*
 > ([annotation-dirtiescontext](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-dirtiescontext.html));
 > all enum values and quoted sentences read from those two pages.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no suite was run and no timings appear on this page.
 
 **[05](05-the-context-cache.md) was about how contexts get *created* — a key with ten

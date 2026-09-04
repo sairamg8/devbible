@@ -11,8 +11,8 @@ sidebar_position: 2
 > ([java.testcontainers.org/modules/databases](https://java.testcontainers.org/modules/databases/))
 > and the H2 2.x documentation *Features → Compatibility*
 > ([h2database.com/html/features.html](https://www.h2database.com/html/features.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, **Testcontainers 2.0.5**, **H2 2.4.240**, PostgreSQL JDBC
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, **Testcontainers 2.0.5**, **H2 2.4.240**, PostgreSQL JDBC
 > 42.7.11, JUnit Jupiter 6.0.3. **There is no Docker and no sandbox on this machine** —
 > this page carries Java source and documented configuration, never a container log, a
 > startup timing or a test run.

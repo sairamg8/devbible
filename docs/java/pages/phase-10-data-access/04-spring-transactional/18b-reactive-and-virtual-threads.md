@@ -17,7 +17,7 @@ sidebar_position: 50
 > ([.../transaction/support/TransactionSynchronizationManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html))
 > and JEP 491 *Synchronize Virtual Threads without Pinning*
 > ([openjdk.org/jeps/491](https://openjdk.org/jeps/491)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, HikariCP 7.0.2.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, HikariCP 7.0.2.
 
 **Spring has two transaction models, not one. The imperative model binds to a
 thread; the reactive model binds to the Reactor subscriber context and travels

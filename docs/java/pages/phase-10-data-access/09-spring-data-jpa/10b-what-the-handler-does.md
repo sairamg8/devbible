@@ -14,7 +14,7 @@ sidebar_position: 45
 > ([spring-data-commons](https://github.com/spring-projects/spring-data-commons/blob/main/src/main/java/org/springframework/data/auditing/AuditingHandlerSupport.java));
 > and Jakarta Persistence 3.2 §4.11 on bulk operations
 > ([jakarta.ee](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **[10](10-auditing-and-lifecycle.md) wired it up. This chunk is what actually runs — forty

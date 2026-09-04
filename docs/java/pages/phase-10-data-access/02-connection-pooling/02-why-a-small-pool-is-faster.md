@@ -10,7 +10,7 @@ sidebar_position: 2
 > ([github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing))
 > and the HikariCP 7.0.2 README
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Almost every connection pool that has ever been tuned in a panic was tuned
 upward, and almost every one of those changes made the system slower. The

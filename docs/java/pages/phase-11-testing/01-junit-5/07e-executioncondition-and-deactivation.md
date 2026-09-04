@@ -15,7 +15,7 @@ sidebar_position: 20
 > ([ExecutionCondition](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExecutionCondition.html))
 > and `ConditionEvaluationResult`
 > ([ConditionEvaluationResult](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ConditionEvaluationResult.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **`@Disabled`, `@EnabledOnOs`, `@DisabledIf` and everything else in
 [07](07-disabling-and-conditions.md)–[07d](07d-custom-conditions.md) are implementations of

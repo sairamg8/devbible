@@ -14,7 +14,7 @@ sidebar_position: 0
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/checkpoint-restore.html)),
 > and the **Spring Boot 4.1** reference "Checkpoint and Restore With the JVM". JVM behaviour
 > cross-checked against the **HotSpot compilation policy** header at `jdk-25+36`.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · `org.crac:crac` 1.4.0+.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · `org.crac:crac` 1.4.0+.
 > 🔴 **No sandbox** — no checkpoint was taken, no image created and no restore timed. Every
 > transcript, exception and quotation on these pages comes from the projects' own
 > documentation and is attributed where it appears; **no startup or restore number is quoted as

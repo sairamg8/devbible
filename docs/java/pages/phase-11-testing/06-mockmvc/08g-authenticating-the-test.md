@@ -19,8 +19,8 @@ sidebar_position: 29
 > and [Running a Test as a User in Spring MVC Test](https://docs.spring.io/spring-security/reference/servlet/test/mockmvc/authentication.html)
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/test/method.html)),
 > read as asciidoc at tag `7.1.1`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Spring Security 7.1.1, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Spring Security 7.1.1, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java and library source, never a fabricated test run.
 
 **Everything so far has been about why the slice says no. This is how to make it say yes.

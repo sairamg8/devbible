@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference *JSON* chapter
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference *JSON* chapter
 > (docs.spring.io — the auto-configured `JsonMapper` bean, the
 > `spring.jackson.default-property-inclusion`, `spring.jackson.serialization.*`,
 > `spring.jackson.deserialization.*` and `spring.jackson.time-zone` properties,
@@ -16,7 +16,7 @@ sidebar_position: 10
 > (the `Jackson2ObjectMapperBuilderCustomizer` → `JsonMapperBuilderCustomizer`
 > rename), and the spring.io blog *Introducing Jackson 3 support in Spring*
 > (2025-10-07). Jackson annotations remain in
-> `com.fasterxml.jackson.annotation`. Spring Boot 4.1.0, JDK 25.
+> `com.fasterxml.jackson.annotation`. Spring Boot 4.1.1, JDK 25.
 
 **Four settings shape the JSON your API emits more than any code you write:
 whether nulls appear, what case property names use, how instants are rendered,

@@ -11,7 +11,7 @@ sidebar_position: 3
 > *Fine-tuning Annotation-based Autowiring with Qualifiers* and *Bean Scopes*
 > (docs.spring.io/spring-framework/reference/core/beans/) — and the **Spring
 > Boot 2.6 release notes** for the prohibition of circular references by
-> default. `@Fallback` is Framework 6.2+. Spring Boot 4.1.0, Spring Framework
+> default. `@Fallback` is Framework 6.2+. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Dependency injection is a plain-Java design constraint — a class never

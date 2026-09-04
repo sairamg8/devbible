@@ -8,7 +8,7 @@ sidebar_position: 55
 
 > Verified: 2026-09-04 against Sam Newman, *Building Microservices* (2nd ed., O'Reilly), Chapter 3: How to Model
 > Microservices; Michael Nygard, *Release It!* (2nd ed., Pragmatic Bookshelf).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **In a monolith, refactoring an architectural boundary is a compiler-assisted operation: moving classes into new packages, updating method signatures, and running unit tests. In a distributed microservice architecture, redrawing a boundary is a multi-quarter engineering initiative involving database migrations, data parity verification, consumer contract coordination, infrastructure provisioning, and organizational realignment. Architects frequently underestimate this cost, treating microservices as lightweight lego bricks that can be freely split or combined. Before initiating a boundary change, engineering leadership must conduct an honest cost accounting against the six major dimensions of distributed migration debt.**
 

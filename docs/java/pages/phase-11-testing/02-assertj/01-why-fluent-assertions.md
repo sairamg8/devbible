@@ -11,7 +11,7 @@ sidebar_position: 1
 > ([assertj.github.io/doc](https://assertj.github.io/doc/#assertj-core-simple-example)) —
 > and the `assertj-core` 3.27.7 sources (`org.assertj.core.error.ShouldBeEqual`,
 > `org.assertj.core.internal.Failures`, `org.assertj.core.configuration.Configuration`).
-> JDK 25 · Spring Boot 4.1.0, which manages **AssertJ Core 3.27.7** via `assertj-bom`
+> JDK 25 · Spring Boot 4.1.1, which manages **AssertJ Core 3.27.7** via `assertj-bom`
 > and **JUnit Jupiter 6.0.3** via `junit-bom`.
 
 **A passing test produces nothing you read. A failing test produces one paragraph, and

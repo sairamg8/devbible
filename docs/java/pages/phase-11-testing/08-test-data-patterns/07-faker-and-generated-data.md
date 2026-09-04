@@ -12,7 +12,7 @@ sidebar_position: 31
 > shown on the *Getting started* page at the time of writing are `net.datafaker:datafaker:2.7.0`;
 > **check the current version before copying it**, and note that Datafaker is not managed by
 > `spring-boot-dependencies`, so no version comes from the Boot BOM. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit
 > Jupiter 6.0.3, AssertJ 3.27.7. **No sandbox** — Java source and documented behaviour only,
 > never a run, and no example output is reproduced from any generator.
 

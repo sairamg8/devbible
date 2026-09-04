@@ -11,7 +11,7 @@ sidebar_position: 10
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); Stefan Tilkov,
 > *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Modulith
 > **2.1.1**. **No sandbox** — Java and configuration only.
 
 **A monolith gives you atomicity for free, across every subdomain, on every write path,

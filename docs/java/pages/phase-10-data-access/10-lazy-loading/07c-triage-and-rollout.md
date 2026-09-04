@@ -14,7 +14,7 @@ sidebar_position: 25
 > and the `3.x` source of `tools.jackson.datatype.hibernate7.Hibernate7ProxySerializer`, which
 > writes `null` for an uninitialised proxy when `FORCE_LAZY_LOADING` is off
 > ([github.com/FasterXML/jackson-datatype-hibernate](https://github.com/FasterXML/jackson-datatype-hibernate/blob/3.x/hibernate7/src/main/java/tools/jackson/datatype/hibernate7/Hibernate7ProxySerializer.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **A list of forty stack traces is not a plan. The failures fall into five kinds with five
 different fixes, and the most common way this migration sprawls is that somebody fixes a

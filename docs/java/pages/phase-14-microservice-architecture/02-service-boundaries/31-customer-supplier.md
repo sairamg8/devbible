@@ -9,7 +9,7 @@ sidebar_position: 44
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Customer-Supplier Development Teams; Vaughn Vernon, *Implementing Domain-Driven Design*
 > (Addison-Wesley), Chapter 3: Context Maps.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **A Customer-Supplier relationship exists only when the downstream team possesses genuine organizational authority or executive mandate over the upstream provider. In this pattern, the upstream team acts as a dedicated supplier whose success is evaluated by how effectively it fulfills the downstream customer's business requirements. The downstream customer submits feature requests, negotiates interface contracts, and directly influences upstream sprint priorities and delivery schedules. When organizations claim to practice Customer-Supplier without executive alignment or shared management backing, the downstream team discovers it has no real leverage, upstream delivers whatever it chooses, and the dynamic collapses into an uncooperative Conformist relationship.**
 

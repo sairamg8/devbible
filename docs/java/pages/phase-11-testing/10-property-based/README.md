@@ -12,8 +12,8 @@ sidebar_position: 0
 > configuration; the **JUnit 5 / Jupiter** platform documentation for the engine question; the
 > **JDK 25 javadoc** for `java.util.Comparator`, `java.util.List.sort` and `java.math.BigDecimal`;
 > and Maven Central for the version facts.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox, no Docker and no build on this machine.** Every chunk carries Java source and
 > documented behaviour. **There is no run output anywhere in this topic** — no seeds from a real
 > failure, no timings, no suite durations. The two report blocks that appear are reproduced from

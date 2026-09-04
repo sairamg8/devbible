@@ -14,7 +14,7 @@ sidebar_position: 13
 > `server.error.include-stacktrace` → `spring.web.error.include-stacktrace`,
 > and likewise for `include-message`, `include-binding-errors`,
 > `include-exception`, `include-path`, `server.error.path` and
-> `server.error.whitelabel.enabled`. Spring Boot 4.1.0, Spring Framework
+> `server.error.whitelabel.enabled`. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **An error response is the one place where a service, under stress, volunteers

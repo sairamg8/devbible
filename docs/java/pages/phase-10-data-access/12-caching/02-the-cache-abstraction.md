@@ -13,7 +13,7 @@ sidebar_position: 2
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/Cacheable.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/Cacheable.html)),
 > and the Spring Boot 4.1 reference *Caching*
 > ([docs.spring.io/spring-boot/reference/io/caching.html](https://docs.spring.io/spring-boot/reference/io/caching.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The abstraction is deliberately small: a `CacheManager` hands out named `Cache`s, an
 interceptor computes a key from the method arguments, and a hit returns the stored value

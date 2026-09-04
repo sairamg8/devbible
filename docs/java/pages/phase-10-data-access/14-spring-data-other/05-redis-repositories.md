@@ -15,7 +15,7 @@ sidebar_position: 14
 > ([…/redis-repositories/keyspaces.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/keyspaces.html))
 > and *Persisting References / anatomy of a save*
 > ([…/redis-repositories/anatomy.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/anatomy.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0,
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0,
 > Lettuce 7.5.2, Redis 8.
 
 **A Redis repository stores each entity as a Redis hash under a key built from a keyspace

@@ -16,7 +16,7 @@ sidebar_position: 12
 > `OAuth2ResourceServerConfigurer.BearerTokenRequestMatcher`
 > ([github.com](https://github.com/spring-projects/spring-security)) — **RFC 6750** §2.2,
 > §2.3, §5 ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6750)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **`DefaultBearerTokenResolver` ships with two transports switched off and one header name
 that can be changed, and every one of those knobs exists for a real client that could not

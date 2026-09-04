@@ -13,7 +13,7 @@ sidebar_position: 10
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/LazyInitializationException.html)),
 > and Jakarta Persistence 3.2 `FetchType`
 > ([jakarta.ee/specifications/persistence/3.2/apidocs/](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/fetchtype)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Everything in this topic so far has been about the exception. This chunk is about the
 design mistake that produces it, and it is one line of Java: a `@Transactional` method whose

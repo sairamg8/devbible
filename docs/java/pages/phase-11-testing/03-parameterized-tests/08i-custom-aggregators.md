@@ -16,7 +16,7 @@ sidebar_position: 24
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/aggregator/AggregateWith.html))
 > and `ArgumentsAggregationException`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/aggregator/ArgumentsAggregationException.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08b](08b-aggregation.md) solved the wide-signature problem with `ArgumentsAccessor`, at the
 cost of putting four `get` calls at the top of the test method. If two tests read the same

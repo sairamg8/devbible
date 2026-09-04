@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference *JSON* chapter
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference *JSON* chapter
 > (docs.spring.io — `@JacksonComponent` registering `ValueSerializer` and
 > `ValueDeserializer` beans with the auto-configured `JsonMapper`, the
 > `ObjectValueSerializer`/`ObjectValueDeserializer` base classes, `@JacksonMixin`
@@ -17,7 +17,7 @@ sidebar_position: 11
 > (2025-10-07 — `ValueSerializer`/`ValueDeserializer` replacing
 > `JsonSerializer`/`JsonDeserializer`, and `Jackson2ObjectMapperBuilder` being
 > withdrawn in favour of Jackson's own `JsonMapper.Builder`).
-> Spring Boot 4.1.0, JDK 25.
+> Spring Boot 4.1.1, JDK 25.
 
 **There is exactly one auto-configured `JsonMapper` in a Boot application, and
 it serialises everything — your REST responses, your message payloads, your

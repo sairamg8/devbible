@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and *Core → AOP → Proxying mechanisms*
 > ([docs.spring.io/spring-framework/reference/core/aop/proxying.html](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 2b](02b-where-the-annotation-lives.md) was about which annotation the
 interceptor finds. This one is about the methods it cannot reach even when the

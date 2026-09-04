@@ -11,7 +11,7 @@ sidebar_position: 8
 > `Assertions.assertAll(String, Stream)` javadoc, which carries the exception-handling
 > contract for the whole family
 > ([Assertions](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Sequential assertions stop at the first failure. If a response object has six fields and
 three are wrong, you learn about one per run, and each run is a full build. `assertAll`

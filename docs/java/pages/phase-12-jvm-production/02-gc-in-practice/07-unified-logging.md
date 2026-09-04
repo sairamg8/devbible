@@ -16,7 +16,7 @@ sidebar_position: 27
 > and the **HotSpot Virtual Machine Garbage Collection Tuning Guide, Release 25** for the
 > recommended GC tag selections
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-first-garbage-collector-tuning.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Unified logging replaced every `-XX:+PrintGC…` flag with one option that has a grammar, and
 the grammar has two rules that produce silent failure: tag selection is an *exact set* match

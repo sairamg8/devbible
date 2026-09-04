@@ -12,7 +12,7 @@ sidebar_position: 3
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/NullSource.html))
 > and `@EmptySource`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/EmptySource.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Three annotations, no attributes, and they cover the two inputs that break more production
 code than every other input combined. They exist as separate annotations for a concrete

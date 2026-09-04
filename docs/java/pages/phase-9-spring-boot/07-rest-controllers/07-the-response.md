@@ -6,14 +6,14 @@ sidebar_position: 7
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Handler Methods → ResponseEntity*
 > (docs.spring.io — the builder methods `ok`, `created(URI)`, `noContent`,
 > `status`, `badRequest`, the `eTag` and `lastModified` builders, and the
 > `Resource` return type for file content), and RFC 9110 *HTTP Semantics*
 > (the method and status-code definitions, safe and idempotent method
 > properties, and the `Location`, `ETag` and `If-Match` header semantics).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A status code is the only part of your response every client, proxy, cache and
 monitoring system understands without being told anything about your API. That

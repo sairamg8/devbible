@@ -20,7 +20,7 @@ sidebar_position: 5
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)) and
 > from every chapter of the JDK 25 GC tuning guide — checked by full-text search of all twelve
 > fetched chapters, zero occurrences in either document.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Shenandoah is the only collector in this topic whose availability is a question. It is
 compiled in or out at build time, and the JVM's reaction to asking for a collector that was

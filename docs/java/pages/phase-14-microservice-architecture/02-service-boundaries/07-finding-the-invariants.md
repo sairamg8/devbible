@@ -13,7 +13,7 @@ sidebar_position: 10
 > which defines a system operation as *"an externally invokable behavior implemented by the
 > application. It reads and/or writes one or more business entities, a.k.a. DDD
 > aggregates."*
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The invariant list is the highest-value artefact in a decomposition exercise and almost

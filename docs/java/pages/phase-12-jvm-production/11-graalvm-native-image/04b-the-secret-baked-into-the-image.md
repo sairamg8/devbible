@@ -13,7 +13,7 @@ sidebar_position: 8
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/guides/create-heap-dump/));
 > the **Spring Boot reference**, "Advanced Native Images Topics"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/advanced-topics.html)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — no binary was inspected to write this page; every mechanism below is quoted from documentation.
 
 **[04](04-build-time-vs-run-time-initialisation.md) established that build-time initialisation stores static state in the image heap and that the image heap is copied out of the binary at start-up. Turn that around and it says something uncomfortable: whatever your static initialisers touched during the build is *inside a file*. Combine it with resource embedding — where a glob pattern decides which files are copied into the executable — and you have two independent, silent paths for a production credential to end up in an artefact that gets pushed to a registry, cached on a build agent, and copied onto a laptop. This is a security failure mode, not a performance footnote, and it needs a control in your build rather than a note in your wiki.**

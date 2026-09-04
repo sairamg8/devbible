@@ -15,7 +15,7 @@ sidebar_position: 40
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html))
 > and the PostgreSQL 18 manual *Transaction Isolation*
 > ([postgresql.org/docs/18/transaction-iso.html](https://www.postgresql.org/docs/18/transaction-iso.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 
 propagate it. There are three designs that are actually coherent. Pick one on

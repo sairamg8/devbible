@@ -10,7 +10,7 @@ sidebar_position: 30
 > ([extensions/registering-extensions](https://docs.junit.org/6.0.3/extensions/registering-extensions.html));
 > javadoc for `@RegisterExtension`
 > ([RegisterExtension](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/RegisterExtension.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **`@ExtendWith` ([10d](10d-registering-extensions.md)) hands a class reference to Jupiter,
 which constructs the instance and never gives it back. `@RegisterExtension` inverts that:

@@ -13,7 +13,7 @@ sidebar_position: 18
 > the **Spring Boot 4.1 production-ready reference · Observability — Micrometer Observation
 > Annotations support**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)).
-> No JVM was run for this page and no timings appear below. JDK 25 · Spring Boot 4.1.0 ·
+> No JVM was run for this page and no timings appear below. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0.
 
 **There are four ways to time a block of code and they are not interchangeable. Two of them force

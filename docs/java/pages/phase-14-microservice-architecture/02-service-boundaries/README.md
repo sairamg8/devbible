@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley); Vaughn Vernon, *Implementing Domain-Driven Design* (Addison-Wesley); Sam Newman, *Building Microservices* (2nd ed., O'Reilly) & *Monolith to Microservices* (O'Reilly); Neal Ford & Mark Richards, *Software Architecture: The Hard Parts* (O'Reilly).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **A service boundary is not an arbitrary box on a whiteboard or a network convenience; it is a profound organizational and transactional commitment that everything inside can change independently without cross-team negotiation. Deriving resilient service boundaries requires mapping bounded contexts and ubiquitous language, anchoring cuts to transactional aggregate invariants, enforcing seams in-process with Spring Modulith and ArchUnit, and balancing dark energy against dark matter forces. Getting boundaries wrong yields the distributed monolith; getting them right delivers genuine team autonomy, fault isolation, and independent deployability.**
 

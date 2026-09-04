@@ -12,7 +12,7 @@ sidebar_position: 10
 > ([assertions](https://docs.junit.org/6.0.3/writing-tests/assertions.html)); Spring
 > Framework 7.0 `ProblemDetail` reference
 > ([web mvc / error responses](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-rest-exceptions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[05](05-assertthrows.md) argued for asserting on the exception rather than only its
 type. This chunk draws the other boundary: *which* parts of the exception. The default

@@ -14,7 +14,7 @@ sidebar_position: 6
 > `spring-boot-starter-parent-4.1.0.pom` and `spring-boot-dependencies-4.1.0.pom` on
 > **Maven Central**; and `net.jqwik:jqwik-spring`'s `maven-metadata.xml` and
 > `jqwik-spring-0.12.0.pom` on Maven Central.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7.
 > ⚠️ **No sandbox, no build and no test run on this machine.** The build files below are
 > written from published POMs and documented plugin defaults; none of them has been executed

@@ -14,11 +14,11 @@ sidebar_position: 10
 > ([errcodes-appendix](https://www.postgresql.org/docs/18/errcodes-appendix.html)) and
 > *Transaction Isolation*
 > ([transaction-iso](https://www.postgresql.org/docs/18/transaction-iso.html)) — and **Spring
-> Framework 7.0.8 source read at tag `v7.0.8`**:
+> Framework 7.0.9 source read at tag `v7.0.8`**:
 > [`SQLStateSQLExceptionTranslator.java`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-jdbc/src/main/java/org/springframework/jdbc/support/SQLStateSQLExceptionTranslator.java)
 > and
 > [`SQLExceptionSubclassTranslator.java`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-jdbc/src/main/java/org/springframework/jdbc/support/SQLExceptionSubclassTranslator.java).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing or a test run.

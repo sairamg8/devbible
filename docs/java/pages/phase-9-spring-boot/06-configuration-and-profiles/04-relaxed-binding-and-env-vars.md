@@ -10,7 +10,7 @@ sidebar_position: 4
 > Configuration · Type-safe Configuration Properties · Relaxed Binding*
 > (docs.spring.io/spring-boot/reference — the four property-source formats and
 > their notes, the "Binding From Environment Variables" rules, and the map-key
-> bracket-notation requirement). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> bracket-notation requirement). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **An operating system will not let you put a dot in an environment variable

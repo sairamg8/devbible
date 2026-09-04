@@ -10,7 +10,7 @@ sidebar_position: 50
 > ([writing-tests/timeouts](https://docs.junit.org/6.0.3/writing-tests/timeouts.html));
 > the Awaitility documentation
 > ([awaitility/wiki/Usage](https://github.com/awaitility/awaitility/wiki/Usage)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8, Awaitility 4.3.0.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9, Awaitility 4.3.0.
 
 **[13](13-timeouts.md), [13b](13b-thread-modes.md) and [13c](13c-timeout-configuration.md) are
 the mechanism. This is the judgement: a timeout is a very poor assertion and a very good safety

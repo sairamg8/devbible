@@ -6,7 +6,7 @@ sidebar_position: 17
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints* (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the
 > table of built-in endpoint IDs and descriptions — `auditevents`, `beans`,
 > `caches`, `conditions`, `configprops`, `env`, `flyway`, `health`,
@@ -18,7 +18,7 @@ sidebar_position: 17
 > and requiring an `HttpExchangeRepository` bean; `auditevents` requiring an
 > `AuditEventRepository` bean; `heapdump` returning HPROF on HotSpot and PHD on
 > OpenJ9; `shutdown` being disabled by default; and the discovery page available
-> at `/actuator`). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> at `/actuator`). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Around twenty endpoints ship and one is exposed. The catalogue is worth
 learning the way a runbook is worth reading before an outage: not so you can

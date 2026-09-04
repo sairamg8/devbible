@@ -13,7 +13,7 @@ sidebar_position: 4
 > (docs.spring.io/spring-boot/reference/) — and the Spring Boot **2.6** release
 > notes (circular references prohibited by default) and **3.4** release notes
 > (graceful shutdown enabled by default). Framework 7.0 removed
-> `javax.annotation` support. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `javax.annotation` support. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every bean you write is one object, shared by every request thread at once,
 and that single fact generates most of what this topic contains. It is why

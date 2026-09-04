@@ -6,14 +6,14 @@ sidebar_position: 2
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Request Mapping* (docs.spring.io — the
 > `consumes`/`produces` sections including the explicit statement that
 > method-level declarations **override** rather than extend class-level ones,
 > the negation syntax, the `params` and `headers` condition forms with the
 > advice not to use `headers` for `Content-Type`/`Accept`, transparent HTTP HEAD
 > support and automatic OPTIONS with the `Allow` header, and the explicit
-> `RequestMappingInfo` / `registerMapping` example). Spring Boot 4.1.0,
+> `RequestMappingInfo` / `registerMapping` example). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **`consumes` and `produces` do not describe your response — they decide whether

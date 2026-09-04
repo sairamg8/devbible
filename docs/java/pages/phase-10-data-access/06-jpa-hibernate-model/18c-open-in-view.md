@@ -16,7 +16,7 @@ sidebar_position: 40
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/7.0.x/spring-orm/src/main/java/org/springframework/orm/jpa/vendor/HibernateJpaDialect.java)),
 > and the Hibernate ORM 7.4 *User Guide* §8.3 *Connection handling modes* and Appendix A.3
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **Every page in this topic assumed the persistence context lives as long as the transaction.
 In a default Spring Boot web application it does not: an `EntityManager` is bound to the

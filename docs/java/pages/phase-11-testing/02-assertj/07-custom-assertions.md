@@ -15,7 +15,7 @@ sidebar_position: 19
 > [`Condition`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/Condition.java);
 > plus the AssertJ Core documentation
 > ([assertj.github.io/doc](https://assertj.github.io/doc/)).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Twelve tests that each write `assertThat(order.status()).isEqualTo(CONFIRMED)` are twelve
 places that know how "confirmed" is represented. A custom assertion —

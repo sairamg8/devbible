@@ -13,7 +13,7 @@ sidebar_position: 31
 > ([.../jdbc/core/simple/JdbcClient.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/JdbcClient.html))
 > and the Jakarta Persistence 3.2 specification API
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/apidocs/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **A test against a real PostgreSQL ([chunk 12g](12g-testcontainers-and-serviceconnection.md))
 can now assert something real. The question is what. There is a list of claims only a

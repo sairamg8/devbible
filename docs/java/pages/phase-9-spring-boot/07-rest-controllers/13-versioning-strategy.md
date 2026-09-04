@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → MVC Config → API Versioning* (docs.spring.io — the four resolution
 > strategies `useRequestHeader`, `useQueryParam`, `usePathSegment` and
 > `useMediaTypeParameter`; `usePathSegment` requiring the segment to be declared
@@ -15,7 +15,7 @@ sidebar_position: 13
 > implementation setting RFC 9745 `Deprecation`, RFC 8594 `Sunset` and `Link`
 > headers; and `InvalidApiVersionException` producing HTTP 400), RFC 9745
 > (the `Deprecation` header field) and RFC 8594 (the `Sunset` header field).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Choosing where the version lives is the decision on this page that you cannot
 walk back, because it is encoded in every client integration ever written

@@ -14,7 +14,7 @@ sidebar_position: 4
 > [messaging](https://microservices.io/patterns/communication-style/messaging.html)), and
 > Martin Fowler & James Lewis, "Microservices"
 > ([martinfowler.com](https://martinfowler.com/articles/microservices.html)) for "smart
-> endpoints and dumb pipes". Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework
+> endpoints and dumb pipes". Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework
 > 7.0.8. **No sandbox.**
 
 **"Loosely coupled" is unfalsifiable as stated, which is why architecture debates about it

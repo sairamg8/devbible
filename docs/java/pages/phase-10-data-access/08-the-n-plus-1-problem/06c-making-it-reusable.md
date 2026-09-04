@@ -13,7 +13,7 @@ sidebar_position: 14
 > ([docs.spring.io/spring-boot/reference/testing/](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html))
 > and the AssertJ documentation on custom assertions
 > ([assertj.github.io/doc/](https://assertj.github.io/doc/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, JUnit 5.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, JUnit 5.
 
 **A good practice that requires fifteen lines of boilerplate per test is a
 practice that gets abandoned. This chunk is the plumbing that reduces

@@ -18,7 +18,7 @@ sidebar_position: 13
 > [Relative Execution Order](https://docs.junit.org/6.0.3/extensions/relative-execution-order-of-user-code-and-extensions.html))
 > and [`ExtensionContext`](https://github.com/junit-team/junit-framework/blob/r6.0.3/junit-jupiter-api/src/main/java/org/junit/jupiter/api/extension/ExtensionContext.java)
 > at tag `r6.0.3`.
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — only source that was read and documentation that was quoted.
 

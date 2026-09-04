@@ -7,7 +7,7 @@ sidebar_position: 11
 <span className="db-tier t-know">Know</span>
 
 > Verified: 2026-09-03 against the **Micrometer Observation 1.17.0 documentation** ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/observation.html)); **Micrometer Tracing 1.7.0 Reference** — *Creating Spans manually* ([docs.micrometer.io](https://docs.micrometer.io/tracing/reference/manual-span-creation.html)); and **OpenTelemetry Semantic Conventions 1.30** ([opentelemetry.io](https://opentelemetry.io/docs/specs/semconv/)).
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
 > 🔴 **No sandbox run** — APIs and aspect behaviors verified against upstream source definitions.
 
 **Framework auto-instrumentation provides boundary visibility: the moment an HTTP request reaches a controller, the moment a database query executes, and the moment an outbound REST call leaves the process. But complex workflows—order validation, cryptographic signing, PDF generation, or batch calculation—often show up in trace waterfalls as an opaque five-second gap between two database calls. Custom instrumentation fills this gap. In modern Spring Boot, you do this through Micrometer's dual-purpose `Observation` API, declarative `@Observed` annotations, or direct `Tracer` span management. The art of custom instrumentation is restraint: distributed tracing is not a profiler, and turning every private method into a span destroys tracing performance.**

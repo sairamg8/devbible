@@ -14,7 +14,7 @@ sidebar_position: 26
 > ([docs.spring.io/.../jdbc/parameter-handling.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/parameter-handling.html))
 > and the PostgreSQL 18 manual *Lexical Structure*
 > ([postgresql.org/docs/18/sql-syntax-lexical.html](https://www.postgresql.org/docs/18/sql-syntax-lexical.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Three places a query can live, and the argument between them is usually conducted
 on taste. There is a better criterion. Two of the three make your SQL reachable as

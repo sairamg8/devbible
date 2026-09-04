@@ -13,7 +13,7 @@ sidebar_position: 23
 > and "Pattern: API Composition"
 > ([microservices.io](https://microservices.io/patterns/data/api-composition.html)).
 > 🔴 **No sandbox, and no broker or outbox mechanics** — phase 15 owns those. Version spine:
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every other technique in this topic makes a synchronous hop cheaper, safer or more graceful.
 Event-carried state transfer deletes it. The consumer keeps its own copy of the fields it needs,

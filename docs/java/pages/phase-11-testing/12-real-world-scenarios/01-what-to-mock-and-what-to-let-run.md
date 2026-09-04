@@ -11,8 +11,8 @@ sidebar_position: 1
 > and `@DoNotMock`, read from `mockito-core-5.23.0-javadoc.jar` on Maven Central; and the
 > **Spring Framework 7.0.x** testing reference, *Testing Client Applications*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-client.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no Docker and no test runs on this machine** — every page in this topic
 > carries Java source and documented behaviour, never console output.
 

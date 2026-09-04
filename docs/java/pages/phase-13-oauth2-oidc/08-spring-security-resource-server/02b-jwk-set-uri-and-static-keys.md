@@ -16,7 +16,7 @@ sidebar_position: 3
 > `exactlyOneAlgorithm()`) and `OAuth2ResourceServerProperties`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server))
 > — **RFC 9068** §4 ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc9068)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Four key sources, and the choice is a choice about *rotation*. A JWK set lets the
 authorization server change keys without telling you; a hard-coded public key means every

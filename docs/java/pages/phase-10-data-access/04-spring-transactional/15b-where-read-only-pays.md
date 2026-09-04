@@ -14,7 +14,7 @@ sidebar_position: 44
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and *Transaction propagation*
 > ([.../declarative/tx-propagation.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html)).
-> JDK 25, Spring Framework 7.0.8, Hibernate ORM 7.4.1, Spring Data JPA 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Hibernate ORM 7.4.1, Spring Data JPA 4.1.0.
 
 **Two things about `readOnly` matter more than the four layers in
 [15](15-read-only.md). The benefit is almost entirely an ORM benefit — no dirty

@@ -13,7 +13,7 @@ sidebar_position: 14
 > (jakarta.ee/specifications/bean-validation/3.1/), and the Spring Framework
 > reference *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A constraint's message is not a string, it is a *template*, and two entirely
 separate machines can end up rendering it. Hibernate Validator interpolates the

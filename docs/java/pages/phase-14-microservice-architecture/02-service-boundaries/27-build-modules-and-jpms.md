@@ -8,7 +8,7 @@ sidebar_position: 38
 
 > Verified: 2026-09-04 against Java SE 25 Platform Module System specification (JSR 376);
 > Apache Maven Dependency Mechanism reference; Gradle Multi-project builds documentation.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Physical build modularity and runtime module systems provide hard compiler boundaries that prevent accidental architectural drift before a single test runs. A multi-module Maven or Gradle build creates distinct compilation units: module `order` cannot see classes in module `billing` unless a dependency is explicitly declared in `pom.xml` or `build.gradle`. The Java Platform Module System (JPMS, JSR 376) takes this further: `module-info.java` enforces strong encapsulation at the JVM level, allowing public classes to remain hidden unless their enclosing package is explicitly exported, and preventing reflective introspection into domain internals. Understanding the precise boundaries enforced by Maven and Gradle versus JPMS determines how cleanly a modular monolith can be developed, maintained, and eventually split into microservices.**
 

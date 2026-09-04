@@ -12,7 +12,7 @@ sidebar_position: 9
 > ([commands.html](https://www.h2database.com/html/commands.html)) — and the **PostgreSQL 18
 > manual**, *Transaction Isolation*
 > ([transaction-iso](https://www.postgresql.org/docs/18/transaction-iso.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing or a test run.

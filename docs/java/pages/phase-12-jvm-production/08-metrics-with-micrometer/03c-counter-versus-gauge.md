@@ -12,7 +12,7 @@ sidebar_position: 5
 > and the **Prometheus documentation** — *Concepts · Metric types*
 > ([prometheus.io](https://prometheus.io/docs/concepts/metric_types/)).
 > No JVM was run for this page and no scrape output appears below that was not quoted from a
-> document. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0 ·
+> document. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0 ·
 > Prometheus Java client 1.5.1.
 
 **The question "counter or gauge?" sounds like a storage question and is actually a question

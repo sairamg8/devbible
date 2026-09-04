@@ -15,7 +15,7 @@ sidebar_position: 30
 > and the Testcontainers JUnit 5 and JDBC module documentation
 > ([junit_5](https://java.testcontainers.org/test_framework_integration/junit_5/),
 > [jdbc](https://java.testcontainers.org/modules/databases/jdbc/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18, Testcontainers 1.x.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18, Testcontainers 1.x.
 
 **[Chunk 12f](12f-the-real-database.md) argued that the database under a SQL-first
 repository test has to be PostgreSQL. This is how you get one, and the modern answer

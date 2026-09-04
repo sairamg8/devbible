@@ -12,7 +12,7 @@ sidebar_position: 5
 > `@ConditionalOnMissingBean`, `@ConditionalOnProperty` and
 > `ConditionEvaluationReport` API javadocs, the Actuator `conditions` endpoint
 > documentation, and the **Spring Boot 4.0 Migration Guide** and 4.0.0 release
-> announcement for the modularization and starter renames. Spring Boot 4.1.0,
+> announcement for the modularization and starter renames. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Auto-configuration is not magic and it is not reflection over your code. It is

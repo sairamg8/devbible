@@ -15,8 +15,8 @@ sidebar_position: 24
 > and `AbstractConfiguredSecurityBuilder`; the **Spring Framework 7.0.9**
 > [`HeaderContentNegotiationStrategy`](https://github.com/spring-projects/spring-framework/blob/v7.0.9/spring-web/src/main/java/org/springframework/web/accept/HeaderContentNegotiationStrategy.java);
 > and the **Spring Boot 4.1.1** `ServletWebSecurityAutoConfiguration` plus its own
-> `MockMvcSecurityIntegrationTests`. Version spine from `spring-boot-dependencies:4.1.0`:
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Spring Security
+> `MockMvcSecurityIntegrationTests`. Version spine from `spring-boot-dependencies:4.1.1`:
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Spring Security
 > 7.1.1, AssertJ 3.27.7.
 > **No sandbox** — this page carries library source and derives behaviour from it; it does
 > not report a test run.

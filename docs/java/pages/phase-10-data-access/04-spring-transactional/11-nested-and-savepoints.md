@@ -15,7 +15,7 @@ sidebar_position: 29
 > ([.../org/springframework/jdbc/datasource/DataSourceTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html))
 > and the `JdbcTransactionObjectSupport` and `ConnectionHolder` sources
 > ([github.com/spring-projects/spring-framework/.../jdbc/datasource/JdbcTransactionObjectSupport.java](https://github.com/spring-projects/spring-framework/blob/main/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/JdbcTransactionObjectSupport.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **`NESTED` sits between `REQUIRED` and `REQUIRES_NEW` and is almost always
 described wrongly, as "a transaction inside a transaction". It is not. The

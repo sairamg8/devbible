@@ -13,7 +13,7 @@ sidebar_position: 5
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/CsvSource.html)),
 > and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A `String[]` of CSV records is a table with quotation marks and commas in the way. A text
 block is the same table with nothing in the way — and it unlocks two things the array form

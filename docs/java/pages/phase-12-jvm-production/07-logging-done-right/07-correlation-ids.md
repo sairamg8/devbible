@@ -6,7 +6,7 @@ sidebar_position: 16
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-01 against the **Spring Boot 4.1.0 source** for `CorrelationIdFormatter`
+> Verified: 2026-09-01 against the **Spring Boot 4.1.1 source** for `CorrelationIdFormatter`
 > (`DEFAULT = CorrelationIdFormatter.of("traceId(32),spanId(16)")`, W3C-based)
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/CorrelationIdFormatter.java))
 > and for `logback/defaults.xml`, which registers the `correlationId` conversion word and uses
@@ -20,7 +20,7 @@ sidebar_position: 16
 > ([docs.spring.io](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)),
 > and the **W3C Trace Context** recommendation
 > ([w3.org](https://www.w3.org/TR/trace-context/)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · Logback 1.5.34.
 > **Span propagation, sampling and the tracing backend belong to 09 · Distributed tracing**
 > *(not written yet)*; this chunk owns only the logging half.
 

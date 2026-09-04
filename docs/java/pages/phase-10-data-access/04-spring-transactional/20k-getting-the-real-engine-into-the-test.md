@@ -12,7 +12,7 @@ sidebar_position: 63
 > the Spring Boot generated *Test Auto-configuration Classes* appendix
 > ([docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html](https://docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html))
 > and the Spring Boot reference *Testing → Testcontainers* and *Service Connections*
-> sections. JDK 25, Spring Framework 7.0.8, Spring Boot 4.1, PostgreSQL 18.
+> sections. JDK 25, Spring Framework 7.0.9, Spring Boot 4.1, PostgreSQL 18.
 
 **[20j](20j-the-fixture-and-the-real-database.md) argued that an in-memory database
 removes the engine behaviour a transaction test exists to check. Getting the real engine

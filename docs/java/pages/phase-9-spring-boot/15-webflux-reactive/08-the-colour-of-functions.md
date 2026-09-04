@@ -14,7 +14,7 @@ sidebar_position: 8
 > `Schedulers.boundedElastic()` and its cores × 10 cap, the Spring Data R2DBC
 > reference (docs.spring.io/spring-data/relational/reference/r2dbc.html), and
 > the Spring Framework reference on reactive transaction management
-> (`ReactiveTransactionManager`, `TransactionalOperator`). Spring Boot 4.1.0,
+> (`ReactiveTransactionManager`, `TransactionalOperator`). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Non-blocking is not a property of your code; it is a property of the entire

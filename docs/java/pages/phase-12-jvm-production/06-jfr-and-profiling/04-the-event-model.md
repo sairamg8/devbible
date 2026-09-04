@@ -15,7 +15,7 @@ sidebar_position: 7
 > and the **JDK 25 `jcmd` tool reference** for `JFR.configure`'s `stackdepth` default
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox** — no event table, count or measurement below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A recording is a stream of typed events on one timeline. Understanding two things about that
 stream — how the events differ in kind, and that the schema travels with the file — is what

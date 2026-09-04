@@ -9,7 +9,7 @@ sidebar_position: 18
 > Verified: 2026-09-01 against Vaughn Vernon, *Effective Aggregate Design, Part I and Part
 > II: Making Aggregates Work Together* (2011), section *"Reasons To Break the Rules"*
 > ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/), CC BY-ND 3.0).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **A rule everyone repeats and nobody is allowed to break becomes dogma; a rule with no

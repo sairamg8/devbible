@@ -11,7 +11,7 @@ sidebar_position: 39
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and Spring Boot 4.1's `HibernateMetricsAutoConfiguration`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-hibernate/src/main/java/org/springframework/boot/hibernate/autoconfigure/metrics/HibernateMetricsAutoConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **`Statistics` exposes something like sixty methods across twelve categories. For the
 questions this topic raises — why did that write happen, why is this transaction slow, is

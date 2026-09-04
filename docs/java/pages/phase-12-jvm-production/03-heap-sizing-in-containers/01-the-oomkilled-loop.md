@@ -15,7 +15,7 @@ sidebar_position: 1
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshooting-memory-leaks.html));
 > and the **JDK 25 `java` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **An OOMKill is the only JVM failure mode where the JVM is not a witness. The kernel decides,
 `SIGKILL` is delivered, and the process stops between two instructions — no shutdown hook, no

@@ -13,7 +13,7 @@ sidebar_position: 33
 > ([docs.spring.io/spring-data/jpa/docs/current/api](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/EntityGraph.html)),
 > and the Jakarta Persistence 3.2 specification §3.8.1
 > ([jakarta.ee/specifications/persistence/3.2](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **Everything [chunk 9c](09c-named-entity-graphs.md) objects to about named graphs
 is solved by one annotation placement: `@EntityGraph(attributePaths = …)` on the

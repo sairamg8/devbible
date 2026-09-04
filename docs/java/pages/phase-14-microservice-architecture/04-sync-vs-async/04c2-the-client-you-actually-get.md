@@ -11,7 +11,7 @@ sidebar_position: 14
 > Spring Framework 7.0.x reference, "REST Clients"
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)),
 > and `_PHASE-NOTES.md` fact 5 on Spring Cloud LoadBalancer (Commons **5.0.x**).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 ·
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 ·
 > Spring Cloud train 2025.1.x.
 
 **[13 · Timeouts in Spring](04c-timeouts-in-spring.md) established that the timeout properties

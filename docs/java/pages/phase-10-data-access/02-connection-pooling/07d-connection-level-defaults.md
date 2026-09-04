@@ -15,7 +15,7 @@ sidebar_position: 21
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)),
 > and the Spring Framework 7.0 reference for `@Transactional`
 > ([docs.spring.io/spring-framework/reference/7.0/data-access/transaction.html](https://docs.spring.io/spring-framework/reference/7.0/data-access/transaction.html)).
-> JDK 25, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18, Spring Boot 4.1.0.
+> JDK 25, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18, Spring Boot 4.1.1.
 
 **[Chunk 7c](07c-scoping-state-correctly.md) put per-request state inside a
 transaction. This chunk covers the other safe place: settings that should hold

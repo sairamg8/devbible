@@ -14,7 +14,7 @@ sidebar_position: 22
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/AfterEach.html))
 > pages, and the JUnit 6.0.3 User Guide, "Lifecycle and Interoperability"
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08f](08f-parameterized-class-lifecycle.md) covered declaring one invocation hook. Declaring
 more than one, or inheriting one, is a separate subject with three documented rules — and the

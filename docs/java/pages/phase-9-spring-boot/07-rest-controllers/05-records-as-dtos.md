@@ -12,12 +12,12 @@ sidebar_position: 5
 > backwards-incompatible changes), the spring.io blog *Introducing Jackson 3
 > support in Spring* (2025-10-07 — the `tools.jackson` package move,
 > `JsonMapper` replacing mutable `ObjectMapper` as the entry point, and
-> `JacksonJsonHttpMessageConverter`), the Spring Boot 4.1.0 reference *JSON*
+> `JacksonJsonHttpMessageConverter`), the Spring Boot 4.1.1 reference *JSON*
 > chapter (docs.spring.io — the auto-configured `JsonMapper` bean), and the
-> Spring Framework 7.0.8 reference on the `-parameters` requirement for formal
+> Spring Framework 7.0.9 reference on the `-parameters` requirement for formal
 > parameter names. Record component retention is a class-file property (JVMS
 > `Record` attribute), distinct from `-parameters`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A record is the right shape for a request or response body for one reason that
 has nothing to do with brevity: a DTO's job is to be a *value* that crosses a

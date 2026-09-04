@@ -15,7 +15,7 @@ sidebar_position: 11
 > and "Advanced Native Images Topics"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/advanced-topics.html));
 > the **Native Build Tools 1.1.1 Maven plugin** reference ([graalvm.github.io](https://graalvm.github.io/native-build-tools/latest/maven-plugin.html)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Native Build Tools 1.1.1**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Native Build Tools 1.1.1**.
 > Documentation-validated; **no sandbox run**.
 
 **The `native-image` tool is a compiler that links against your operating system's C toolchain, so a native build is a cross-language build with a platform-specific output. That single fact drives every decision on this page: whether you install a toolchain on the build agent or delegate it to a container, whether the artefact is per-platform, and where in the pipeline the build lives. Spring Boot supports two routes and GraalVM documents a third; they produce the same kind of artefact by very different means.**

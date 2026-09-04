@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([docs.spring.io/spring-framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/interceptor/SimpleCacheErrorHandler.html)),
 > and the Spring Data Redis 4.1 reference *Redis Cache*
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-cache.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-cache.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
 
 **Once the cache is out of process it can fail independently of your application, and the
 framework has a documented default for what happens then: the exception is thrown at the caller.

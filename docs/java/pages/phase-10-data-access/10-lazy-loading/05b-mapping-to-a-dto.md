@@ -14,7 +14,7 @@ sidebar_position: 17
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)),
 > and Jakarta Persistence 3.2 §4.9.2 on constructor expressions in the `SELECT` clause
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Once you have accepted that a record leaves the transaction, the remaining question is how
 the record gets built — and every option has a different answer to the only question this

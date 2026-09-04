@@ -14,7 +14,7 @@ sidebar_position: 18
 > ([MigrationInfoImpl.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/info/MigrationInfoImpl.java))
 > and the *Repair* command reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/repair-277578892.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **The `baseline` command of [06](06-baselining.md) solves the existing database. A baseline
 *migration* solves the opposite case — the empty one, which would otherwise have to replay every

@@ -12,7 +12,7 @@ sidebar_position: 23
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and the **jqwik 1.10.1
 > javadoc** for `net.jqwik.api.Combinators`
 > ([jqwik.net](https://jqwik.net/docs/1.10.1/javadoc/net/jqwik/api/Combinators.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **No sandbox and no test run on this machine.** Every signature, default and warning

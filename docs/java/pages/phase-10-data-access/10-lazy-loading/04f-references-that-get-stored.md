@@ -14,7 +14,7 @@ sidebar_position: 15
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)),
 > and the Spring Framework 7.0 reference on `@TransactionalEventListener` phases
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/event.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/event.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **A future or a stream at least looks like it is going somewhere. This half of the family does
 not move the reference at all — it puts it down and walks away. An entity in an HTTP session,

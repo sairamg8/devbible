@@ -22,7 +22,7 @@ sidebar_position: 22
 > [`gc/shared/gcCause.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcCause.cpp)
 > and [`jfr/metadata/metadata.xml`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/jfr/metadata/metadata.xml)
 > for the `jdk.ZAllocationStall` event.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Nothing about ZGC is free, and the bill arrives in four currencies: CPU spent on barriers
 and concurrent threads, heap headroom that has to exceed the live set by an amount nobody can

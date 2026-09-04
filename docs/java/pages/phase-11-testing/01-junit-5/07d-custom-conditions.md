@@ -16,7 +16,7 @@ sidebar_position: 19
 > ([ExecutionCondition](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExecutionCondition.html))
 > and `ConditionEvaluationResult`
 > ([ConditionEvaluationResult](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ConditionEvaluationResult.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **When none of the built-in conditions fits, Jupiter offers two escape hatches at very
 different levels: `@EnabledIf`/`@DisabledIf`, which point at a `boolean` method by name,

@@ -12,7 +12,7 @@ sidebar_position: 13
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)); the Spring
 > Modulith reference, *Working with Application Events*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/events.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > timings, error strings or retry counts here come from a run.
 
 **Every failure-handling instinct a Java developer has was trained on a two-outcome world:

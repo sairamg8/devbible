@@ -13,7 +13,7 @@ sidebar_position: 26
 > ([docs.spring.io/spring-framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/CacheEvict.html))
 > and the `TransactionSynchronization` javadoc
 > ([docs.spring.io/spring-framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, PostgreSQL 18.
 
 **[7](07-invalidation.md) established that the eviction and the commit happen at different
 instants. This chunk is about the two levers you have over *when* the eviction fires — the

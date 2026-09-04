@@ -13,7 +13,7 @@ sidebar_position: 15
 > ([docs.spring.io/spring-data/redis](https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/cache/RedisCacheManager.RedisCacheManagerBuilder.html)),
 > and Boot 4.1.x `CacheProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/4.1.x/module/spring-boot-cache/src/main/java/org/springframework/boot/cache/autoconfigure/CacheProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1, Redis 8.
 
 **[5c](05c-expiry-and-eviction.md) argued that you need a TTL so the instance does not fill up.
 This chunk is about the harder half: which TTL, applied to which cache, through which of three

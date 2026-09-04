@@ -18,7 +18,7 @@ sidebar_position: 13
 > and `common/variables.bzl` in **distroless**
 > ([github.com](https://github.com/GoogleContainerTools/distroless)).
 > 🔴 **No sandbox** — no pod was created and no dump was written. Every default path below is
-> quoted from the `java` tool reference. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> quoted from the `java` tool reference. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Hardening a container is easy to *specify* and easy to get subtly wrong: `runAsNonRoot: true`
 and `readOnlyRootFilesystem: true` are two lines, the application keeps serving traffic, and

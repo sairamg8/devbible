@@ -15,7 +15,7 @@ sidebar_position: 54
 > ([jakarta.ee/specifications/persistence/3.2/apidocs/.../flushmodetype](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/flushmodetype))
 > and the PostgreSQL 18 manual *SET CONSTRAINTS*
 > ([postgresql.org/docs/18/sql-set-constraints.html](https://www.postgresql.org/docs/18/sql-set-constraints.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **A rolled-back test transaction never commits, so it often never flushes, so the
 database never sees most of your statements. Everything the database would have

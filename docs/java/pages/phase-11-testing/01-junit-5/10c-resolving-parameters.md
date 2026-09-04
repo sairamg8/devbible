@@ -8,7 +8,7 @@ sidebar_position: 28
 
 > Verified: 2026-08-27 against the JUnit 6.0.3 User Guide — "Parameter Resolution"
 > ([parameter-resolution](https://docs.junit.org/6.0.3/extensions/parameter-resolution.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every argument a Jupiter test method receives arrives through a `ParameterResolver` —
 `TestInfo`, `TestReporter`, `RepetitionInfo`, `@TempDir Path`, a Mockito `@Mock` parameter,

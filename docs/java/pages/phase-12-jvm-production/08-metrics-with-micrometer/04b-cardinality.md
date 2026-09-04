@@ -14,7 +14,7 @@ sidebar_position: 10
 > **Spring Framework 7 reference** — *Integration · Observability*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)).
 > No JVM was run for this page and no series counts below are measurements — every number is
-> arithmetic on the documented bucket counts, shown with its working. JDK 25 · Spring Boot 4.1.0 ·
+> arithmetic on the documented bucket counts, shown with its working. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0.
 
 **A tag with an unbounded value set does not degrade your metrics; it destroys the system that

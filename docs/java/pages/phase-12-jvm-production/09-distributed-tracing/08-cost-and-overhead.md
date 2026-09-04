@@ -6,8 +6,8 @@ sidebar_position: 14
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-03 against the **OpenTelemetry SDK Specification — BatchSpanProcessor** ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/trace/sdk/#batching-processor)); **OpenTelemetry Semantic Conventions**; and **Spring Boot 4.1.0 reference** — *Actuator → Tracing* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
+> Verified: 2026-09-03 against the **OpenTelemetry SDK Specification — BatchSpanProcessor** ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/trace/sdk/#batching-processor)); **OpenTelemetry Semantic Conventions**; and **Spring Boot 4.1.1 reference** — *Actuator → Tracing* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
 > 🔴 **No sandbox run** — buffer configurations, drop policies, and tuning properties verified against OpenTelemetry SDK specifications.
 
 **Distributed tracing is not free. Every span created incurs a tax across four distinct physical resources: CPU cycles to read system clocks and serialize headers, JVM heap memory to buffer span attributes, network bandwidth to transmit protobuf payloads to collectors, and disk I/O in backend storage engines. In high-throughput architectures, unconstrained tracing can degrade application throughput and overwhelm network interfaces. Keeping tracing sustainable requires understanding the asynchronous `BatchSpanProcessor` queue, tuning exporter thresholds, and knowing exactly what telemetry to discard before it enters your pipelines.**

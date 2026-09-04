@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Hibernate ORM 7.4 *Introduction* §3.17 and §3.26 *equals() and hashCode()*
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Setting the owning side fixes the database. Setting both sides fixes the object graph
 as well, and the object graph is what the rest of your transaction reads. The standard

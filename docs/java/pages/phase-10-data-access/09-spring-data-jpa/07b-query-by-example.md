@@ -9,7 +9,7 @@ sidebar_position: 35
 > Verified: 2026-08 against the Spring Data JPA 4.1 reference — "Query by Example"
 > ([repositories/query-by-example.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-by-example.html)),
 > including the *Usage*, *Example Matchers* and `StringMatcher` sections.
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 > ⚠️ `…/reference/jpa/query-by-example.html` returns 404 — the live path is under
 > `/reference/repositories/`.

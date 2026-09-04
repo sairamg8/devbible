@@ -16,7 +16,7 @@ sidebar_position: 36
 > *"PIT is taking forever to run"*. Gradle equivalents from `PitestPluginExtension.groovy` on the
 > gradle-pitest-plugin `master` branch (`historyInputLocation`, `historyOutputLocation`,
 > `enableDefaultIncrementalAnalysis`, `setWithHistory`).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Behaviour is read from pitest's documentation and the
 > plugins' source. **No timing, speed-up figure or run outcome on this page came from executing
 > anything.**

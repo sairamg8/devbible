@@ -13,7 +13,7 @@ sidebar_position: 1
 > documentation in the javadoc *"because it guarantees consistency between what's on the web
 > and what's in the source code"*, so the source and
 > [site.mockito.org](https://site.mockito.org/) are the same text.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

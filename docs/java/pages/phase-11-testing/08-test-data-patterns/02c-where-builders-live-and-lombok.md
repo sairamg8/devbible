@@ -13,8 +13,8 @@ sidebar_position: 5
 > ([docs.gradle.org/current/userguide/java_testing.html](https://docs.gradle.org/current/userguide/java_testing.html)),
 > for the `java-test-fixtures` plugin, its source set and its visibility rules. Maven's
 > `test-jar` route is the **Maven JAR plugin**'s documented goal.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no builds run on this machine** — build files and Java source are shown
 > as documented, never as command output.
 

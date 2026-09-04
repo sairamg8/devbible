@@ -13,7 +13,7 @@ sidebar_position: 3
 > re-injection case, the "constructors for mandatory, setters for optional" rule
 > of thumb, and the constructor-argument-count code smell) and *Using
 > `@Autowired`* (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html
-> — `required = false` semantics). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> — `required = false` semantics). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **The three remaining injection questions all resolve the same way: the

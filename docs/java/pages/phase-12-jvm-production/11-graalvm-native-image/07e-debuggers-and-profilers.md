@@ -13,7 +13,7 @@ sidebar_position: 18
 > "Debugging and Diagnostics" and "Native Image Compatibility Guide";
 > all read from `docs/reference-manual/native-image/` on the **`release/graal-vm/25.3`** branch of
 > [`oracle/graal`](https://github.com/oracle/graal/tree/release/graal-vm/25.3/docs/reference-manual/native-image).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — no debugger was attached, no `perf record` was executed
 > and no flame graph was rendered. Every limitation below is transcribed from the reference's own lists.
 

@@ -14,7 +14,7 @@ sidebar_position: 17
 > `SecurityEvaluationContextExtension` read from the Spring Security source
 > ([spring-security-data](https://github.com/spring-projects/spring-security/blob/main/data/src/main/java/org/springframework/security/data/repository/query/SecurityEvaluationContextExtension.java));
 > Jakarta Persistence 3.2 §4.6.9 (`like … escape`).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **Past the entity name, every expression in a query is doing something to a
 value: reading an argument by index, pulling a root object an extension

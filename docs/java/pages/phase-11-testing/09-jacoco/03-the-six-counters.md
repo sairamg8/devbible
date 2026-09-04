@@ -8,7 +8,7 @@ sidebar_position: 7
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/counters.html`, with the counter
 > definitions quoted directly, plus `check-mojo.html` for the counter names accepted in rules.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine.** Every number on this page is either quoted
 > from JaCoCo's documentation or arithmetic on a worked example you can check by reading it.

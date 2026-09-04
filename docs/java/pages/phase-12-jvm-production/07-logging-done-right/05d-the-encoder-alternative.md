@@ -11,13 +11,13 @@ sidebar_position: 12
 > ([github.com/logfellow](https://github.com/logfellow/logstash-logback-encoder/blob/logstash-logback-encoder-9.0/README.md)),
 > its **published 9.0 pom** (`tools.jackson.core:jackson-databind` 3.0.1, `logback-classic` 1.5.20)
 > ([repo1.maven.org](https://repo1.maven.org/maven2/net/logstash/logback/logstash-logback-encoder/9.0/logstash-logback-encoder-9.0.pom)),
-> the **`spring-boot-dependencies:4.1.0` pom** for the Jackson 2 / Jackson 3 split
+> the **`spring-boot-dependencies:4.1.1` pom** for the Jackson 2 / Jackson 3 split
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)),
 > and the **Spring Boot 4.1 reference, "Structured Logging"**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)).
 > 🔴 **No sandbox.** No throughput, latency or drop figures on this page are measurements; the
 > behaviour described is quoted from the projects' own documentation.
-> JDK 25 · Spring Boot 4.1.0 · Logback 1.5.34 · logstash-logback-encoder 9.0.
+> JDK 25 · Spring Boot 4.1.1 · Logback 1.5.34 · logstash-logback-encoder 9.0.
 
 **Before Spring Boot 3.4 there was no built-in JSON logging, so "add logstash-logback-encoder" was
 the answer to every structured-logging question and the habit stuck. In Boot 4.1 the built-in

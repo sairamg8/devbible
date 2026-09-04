@@ -14,7 +14,7 @@ sidebar_position: 17
 > `build/intercept/timeout/AvoidForLoopCountersFilterFactory.java` and
 > `build/intercept/timeout/InfiniteIteratorLoopFilterFactory.java`. `TIMED_OUT`'s detected flag from
 > `org.pitest.mutationtest.DetectionStatus`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Operator behaviour is quoted from pitest's
 > documentation and read from its published source; the Java on this page is illustrative source,

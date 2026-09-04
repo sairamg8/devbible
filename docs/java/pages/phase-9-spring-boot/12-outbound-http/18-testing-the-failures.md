@@ -10,7 +10,7 @@ sidebar_position: 18
 > Client Applications*, which recommends a dedicated mock web server for
 > transport-layer and network-condition testing
 > (docs.spring.io/spring-framework/reference/testing/spring-mvc-test-client.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every argument in this topic has been about a failure mode — a timeout, an
 exhausted pool, a 500 that should have been a 502, a retry that duplicated an

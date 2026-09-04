@@ -14,7 +14,7 @@ sidebar_position: 10
 > suffixes, converting periods with `@PeriodUnit` and the `y`/`m`/`w`/`d`
 > suffixes, and converting data sizes with `@DataSizeUnit` and the
 > `B`/`KB`/`MB`/`GB`/`TB` suffixes), and the *Relaxed Binding 2.0* design note
-> for lenient enum matching. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> for lenient enum matching. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every property arrives as text, and the interesting question is who turns it
 into a `Duration`. Boot's answer is a conversion service applied during binding,

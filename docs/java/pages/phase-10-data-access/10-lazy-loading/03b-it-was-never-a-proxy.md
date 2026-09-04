@@ -16,7 +16,7 @@ sidebar_position: 8
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)),
 > and `org.hibernate.cfg.TransactionSettings.ENABLE_LAZY_LOAD_NO_TRANS`
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/TransactionSettings.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/TransactionSettings.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Nothing throws unless the field holds an uninitialised proxy. Group A kept the session
 open; this group arranges for there to be no proxy in the first place — and it is bigger,

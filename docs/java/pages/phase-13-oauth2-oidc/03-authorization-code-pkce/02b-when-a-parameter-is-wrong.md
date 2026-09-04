@@ -12,7 +12,7 @@ sidebar_position: 4
 > ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt)); RFC 7636
 > §4.4.1 (Error Response)
 > ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **An authorization server that has already decided your `redirect_uri` is legitimate will
 report errors *to that URI*, as query parameters. An authorization server that has not — or

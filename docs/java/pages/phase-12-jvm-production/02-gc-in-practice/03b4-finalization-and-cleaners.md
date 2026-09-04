@@ -16,7 +16,7 @@ sidebar_position: 12
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)),
 > and **JEP 421 · Deprecate Finalization for Removal**
 > ([openjdk.org/jeps/421](https://openjdk.org/jeps/421)) as cited by the guide.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Finalization is deprecated for removal, is slower than its reputation suggests for a
 mechanical reason worth understanding, and is still present in a surprising amount of running

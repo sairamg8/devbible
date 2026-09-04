@@ -15,7 +15,7 @@ sidebar_position: 32
 > ([jooq-in-7-steps-step1](https://www.jooq.org/doc/latest/manual/getting-started/tutorials/jooq-in-7-steps/jooq-in-7-steps-step1/)).
 > Prices and edition contents were read in **2026-08** and change; treat
 > [01b](01b-the-licence-question.md) and jooq.org as the authority.
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[09](09-the-cost.md) is the build's share of the invoice. This is the rest of it, and it is the
 part that decides adoptions: a team that has to be able to read SQL in review, a licence whose price

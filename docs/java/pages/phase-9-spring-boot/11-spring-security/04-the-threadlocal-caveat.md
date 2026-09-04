@@ -13,7 +13,7 @@ sidebar_position: 4
 > `DelegatingSecurityContext*` family and the `DelegatingSecurityContextRunnable`
 > implementation) and *Servlet Architecture*
 > (docs.spring.io/spring-security/reference/servlet/architecture.html —
-> `FilterChainProxy` clearing the context). Spring Boot 4.1.0, Spring Security
+> `FilterChainProxy` clearing the context). Spring Boot 4.1.1, Spring Security
 > 7.x, JDK 25.
 
 **The identity is ambient: any code, at any depth, can ask who the caller is

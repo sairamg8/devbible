@@ -14,7 +14,7 @@ sidebar_position: 3
 > `configure` ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jfr.html)).
 > 🔴 **No sandbox** — no overhead figure below is a measurement taken here. Every number is quoted
 > from the JDK's documentation and attributed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Whether to run JFR continuously in production is the one decision in this topic that has an
 organisational answer as well as a technical one, and it is usually settled by somebody quoting

@@ -14,7 +14,7 @@ sidebar_position: 36
 > ([LauncherSession](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/LauncherSession.html))
 > and `LauncherSessionListener`
 > ([LauncherSessionListener](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/LauncherSessionListener.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **The root extension context ([10j](10j-store-cleanup.md)) is the widest thing *inside* one
 engine. `StoreScope` goes wider than that — to the launcher's execution request, and to the

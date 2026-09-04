@@ -13,11 +13,11 @@ sidebar_position: 16
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/naming.html)),
 > the **Spring Boot 4.1 production-ready reference · Metrics**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`WebMvcObservationAutoConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-webmvc/src/main/java/org/springframework/boot/webmvc/autoconfigure/WebMvcObservationAutoConfiguration.java)
 > and
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java).
-> No JVM was run for this page. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 ·
+> No JVM was run for this page. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 ·
 > Micrometer 1.17.0.
 
 **Micrometer names the URI tag as the canonical sneaky cardinality bomb, and then Spring defuses it

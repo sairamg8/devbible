@@ -11,7 +11,7 @@ sidebar_position: 0
 > sections are the primary narrative source, with `MockSettings`, `ArgumentCaptor`, `InjectMocks`,
 > `MockitoExtension` and the classes in `mockito-core/src/main/java/org/mockito/internal/` read
 > directly for behaviour the javadoc leaves implicit.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — every exception string on these pages is assembled from Mockito's own
 > `Reporter` source, never captured from a console, and no test was run.

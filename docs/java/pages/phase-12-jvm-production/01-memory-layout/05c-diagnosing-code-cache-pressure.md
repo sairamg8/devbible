@@ -12,7 +12,7 @@ sidebar_position: 19
 > and the **JDK 25 `java` tool reference** for `-Xlog:codecache`,
 > `-XX:ReservedCodeCacheSize` and `-XX:+UseCodeCacheFlushing`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[05b](05b-when-the-code-cache-fills.md) described what the JVM does when a code heap fills.
 This page is what it does to you, and how to find it — because the symptom looks like an

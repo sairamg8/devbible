@@ -11,7 +11,7 @@ sidebar_position: 38
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Spring Boot 4.1 reference *Logging*
 > ([docs.spring.io/spring-boot/reference/features/logging.html](https://docs.spring.io/spring-boot/reference/features/logging.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Everything in this topic is about work you did not write: an `UPDATE` from a setter, a
 flush from a query, an extra `SELECT` from a proxy. A log of executed SQL shows you the

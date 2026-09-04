@@ -18,7 +18,7 @@ sidebar_position: 30
 > the *Microservice Architecture Glossary*
 > ([microservices.io](https://microservices.io/articles/glossary)), which classifies system
 > operations as commands and queries, local or distributed.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The single procedural change that most improves a decomposition is to start from behaviour.

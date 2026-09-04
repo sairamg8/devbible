@@ -13,7 +13,7 @@ sidebar_position: 41
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html))
 > for `-XX:+UseStringDeduplication` and `-XX:StringDeduplicationAgeThreshold`. Collector support
 > checked against the JDK 18 GC changelogs — it is **no longer G1-only**.
-> JDK 25 · Spring Boot 4.1.0.
+> JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — Java source, quoted documentation and arithmetic only. No captured output.
 
 **[10b](10b-the-pool-and-interning.md) covered the mechanisms that collapse `String` *objects*.

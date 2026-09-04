@@ -13,7 +13,7 @@ sidebar_position: 4
 > ([docs.hibernate.org/orm/7.4/introduction/...](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Spring Boot 4.1 reference *Data → SQL databases*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **There are two names in play and they belong to two different worlds. The **entity
 name** is what you write in JPQL. The **table name** is what appears in SQL. They

@@ -12,7 +12,7 @@ sidebar_position: 13
 > when to disable, `HttpSessionCsrfTokenRepository`, `CookieCsrfTokenRepository.withHttpOnlyFalse()`,
 > `XorCsrfTokenRequestAttributeHandler` and BREACH protection, deferred token
 > loading, the SPA guidance and `csrf.spa()`, `CsrfAuthenticationStrategy` and
-> `CsrfLogoutHandler`). Spring Boot 4.1.0, Spring Security 7.x, JDK 25.
+> `CsrfLogoutHandler`). Spring Boot 4.1.1, Spring Security 7.x, JDK 25.
 
 **`csrf.disable()` is correct for one kind of application and reckless for
 another, and the two look almost identical from the outside. The question is not

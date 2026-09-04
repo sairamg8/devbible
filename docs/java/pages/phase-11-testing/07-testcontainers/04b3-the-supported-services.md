@@ -6,14 +6,14 @@ sidebar_position: 22
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0** reference at tag `v4.1.0`
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1** reference at tag `v4.1.0`
 > ([`testing/testcontainers.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/testcontainers.adoc)),
 > transcribed from its "service connection factories" table, and cross-checked against the module
 > sources and `META-INF/spring.factories` files in the same tree — specifically
 > [`RedisContainerConnectionDetailsFactory`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-data-redis/src/main/java/org/springframework/boot/data/redis/testcontainers/RedisContainerConnectionDetailsFactory.java)
 > and
 > [`spring-boot-hazelcast/src/main/resources/META-INF/spring.factories`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-hazelcast/src/main/resources/META-INF/spring.factories).
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.
 

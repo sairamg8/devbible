@@ -9,8 +9,8 @@ sidebar_position: 34
 > Verified: 2026-09-04 against microservices.io *Decompose by business capability*
 > ([microservices.io](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html));
 > Martin Fowler *Package by Feature* ([martinfowler.com](https://martinfowler.com/bliki/PackageByFeature.html));
-> Spring Framework 7.0.8 documentation on component scanning and constructor injection.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
+> Spring Framework 7.0.9 documentation on component scanning and constructor injection.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
 
 **A package in Java is not a folder for grouping similar technical artifacts; it is the primary encapsulation mechanism provided by the language. When a codebase is structured by layer—controllers, services, repositories—every single domain entity and repository interface must be declared `public`, destroying encapsulation and inviting any class in the system to bypass business invariants. Structuring packages by business feature or bounded context enables package-private visibility to hide internal entities, domain services, and database persistence behind a narrow, explicitly published API. If you cannot prevent illegal cross-boundary coupling using Java's package access modifier in-process, deploying services across a network will not solve the problem—it will merely turn compile-time errors into runtime distributed failures.**
 

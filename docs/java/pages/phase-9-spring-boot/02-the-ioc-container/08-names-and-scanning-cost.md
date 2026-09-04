@@ -12,9 +12,9 @@ sidebar_position: 8
 > — `AnnotationBeanNameGenerator`, `FullyQualifiedAnnotationBeanNameGenerator`,
 > and the `FullyQualifiedConfigurationBeanNameGenerator` added in 7.0),
 > spring-projects/spring-framework issue #30431 (`spring-context-indexer`
-> deprecated in 6.1 in favour of AOT), and the Framework 7.0.8 Javadoc
+> deprecated in 6.1 in favour of AOT), and the Framework 7.0.9 Javadoc
 > deprecation list for `org.springframework.context.index`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every bean has a name whether you chose one or not, and that name is part of
 your application's contract in ways that are easy to miss — it is what

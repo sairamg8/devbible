@@ -16,7 +16,7 @@ sidebar_position: 20
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/TransactionSettings.html)),
 > and the Spring Framework 7.0 reference on proxy-based `@Transactional`
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The previous chunk's two candidates at least ran in the right place. These two do not. Moving
 `@Transactional` onto the controller is applied overwhelmingly to serialisation failures, and

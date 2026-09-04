@@ -13,8 +13,8 @@ sidebar_position: 25
 > `BasicAuthenticationEntryPoint`; the **Spring Framework 7.0.9**
 > [`MvcTestResultAssert`](https://github.com/spring-projects/spring-framework/blob/v7.0.9/spring-test/src/main/java/org/springframework/test/web/servlet/assertj/MvcTestResultAssert.java);
 > and the **Spring Boot 4.1.1** `ServletWebSecurityAutoConfiguration`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Spring Security 7.1.1, Mockito 5.23.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Spring Security 7.1.1, Mockito 5.23.0,
 > AssertJ 3.27.7.
 > **No sandbox** — this page carries library source and derives behaviour from it; it does
 > not report a test run.

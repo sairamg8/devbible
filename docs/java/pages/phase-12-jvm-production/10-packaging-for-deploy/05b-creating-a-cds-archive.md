@@ -13,7 +13,7 @@ sidebar_position: 17
 > `-XX:SharedClassListFile` and `-XX:DumpLoadedClassList` entries
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
 > 🔴 **No sandbox** — nothing was dumped or run, and no archive size or dump duration below is a
-> measurement. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> measurement. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[05](05-class-data-sharing.md) established what a CDS archive is and that a default one is
 already in use on every start. This chunk is the mechanics of making one that covers your own

@@ -14,7 +14,7 @@ sidebar_position: 15
 > three routes to making an operation repeatable — belong to **Phase 14** and are not re-taught
 > here; see
 > [Phase 14 · Idempotency on the wire](../../phase-14-microservice-architecture/04-sync-vs-async/07d-idempotency-on-the-wire.md).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything in this topic has been an exercise in making a window smaller. The drain shrinks the
 set of requests cut off. `stopImmediate` shrinks the batch that gets replayed. The `preStop` sleep

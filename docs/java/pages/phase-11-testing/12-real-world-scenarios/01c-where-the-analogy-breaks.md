@@ -15,8 +15,8 @@ sidebar_position: 4
 > the **JUnit 6** user guide, *Parallel Execution*
 > ([docs.junit.org](https://docs.junit.org/current/user-guide/)); and the **Spring Framework
 > 7.0.x** testing reference for bean overrides and the MVC test slice.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, Awaitility 4.3.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, Awaitility 4.3.0.
 > ⚠️ **No sandbox and no test runs on this machine** — source and documented behaviour only.
 
 **[01b](01b-the-js-to-java-map.md) is the translation table. This chunk is the four rows

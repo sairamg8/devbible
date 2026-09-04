@@ -18,7 +18,7 @@ sidebar_position: 10
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp)
 > at tag `jdk-25+36` for `GCCardSizeInBytes`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"The pause was 400 ms" is not a diagnosis, it is a measurement, and the gap between the two
 is one command-line flag wide. G1 divides every collection into four named phases with named

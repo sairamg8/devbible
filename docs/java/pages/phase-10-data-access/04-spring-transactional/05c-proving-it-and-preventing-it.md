@@ -11,7 +11,7 @@ sidebar_position: 14
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and *Transaction management in the TestContext framework*
 > ([docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 5b](05b-detecting-a-dead-annotation.md)'s three techniques all answer
 "is it broken right now". They are diagnostics: you add them, learn something,

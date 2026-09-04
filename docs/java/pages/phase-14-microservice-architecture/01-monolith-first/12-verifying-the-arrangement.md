@@ -12,7 +12,7 @@ sidebar_position: 35
 > *Fundamentals*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)); the
 > published `spring-modulith-core:2.1.1` POM (ArchUnit 1.4.2).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** — no
 > verification output on this page was produced by a run.
 
 **Everything else in this topic is argument. This is the mechanism. One test class, three

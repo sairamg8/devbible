@@ -20,7 +20,7 @@ sidebar_position: 19
 > committed"* (docs.spring.io/spring-boot/reference/web/servlet.html).
 > `DispatcherServlet.processHandlerException` and
 > `HandlerExecutionChain.triggerAfterCompletion` are cited from the Framework
-> **source**. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> **source**. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **There is a point in every response after which your error handling is
 decoration. Once the status line and headers are on the wire, no advice, no

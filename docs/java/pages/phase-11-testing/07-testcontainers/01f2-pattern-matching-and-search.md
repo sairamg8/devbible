@@ -13,7 +13,7 @@ sidebar_position: 7
 > and *→ PostgreSQL Compatibility Mode*
 > ([features.html](https://www.h2database.com/html/features.html)) and *Tutorial → Fulltext
 > Search* ([tutorial.html](https://www.h2database.com/html/tutorial.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing or a test run.

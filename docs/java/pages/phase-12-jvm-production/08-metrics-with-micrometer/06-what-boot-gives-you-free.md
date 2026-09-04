@@ -13,9 +13,9 @@ sidebar_position: 15
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)),
 > the **Spring Framework 7 reference · Integration · Observability**
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)),
-> and **`spring-boot-dependencies:4.1.0`** for artifact names. Actuator itself is Phase 9 topic 13
+> and **`spring-boot-dependencies:4.1.1`** for artifact names. Actuator itself is Phase 9 topic 13
 > — this page is about the meters, not the endpoints. No JVM was run for this page. JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **The most common mistake in a first metrics review is instrumenting something Boot already
 instruments. The second most common is assuming that because Boot instruments a category, it has

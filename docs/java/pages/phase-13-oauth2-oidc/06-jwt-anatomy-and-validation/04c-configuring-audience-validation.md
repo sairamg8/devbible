@@ -15,7 +15,7 @@ sidebar_position: 11
 > ([Spring reference](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt),
 > [rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **`JwtValidators.createDefault()` contains a type validator, a timestamp validator and an
 X.509 thumbprint validator. It does not contain an audience validator, and `issuer-uri` does

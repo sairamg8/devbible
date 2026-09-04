@@ -9,7 +9,7 @@ sidebar_position: 43
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Context Map; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
 > ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **A microservice architecture cannot be designed solely by drawing technical boxes on a white board; it must account for organizational dynamics, team autonomy, and leverage. Evans' Context Map is both an architectural and organizational model that makes explicit the relationships between bounded contexts. Every interaction between domains falls into one of three fundamental structural categories: asymmetric upstream/downstream relationships where upstream dictates contracts, mutually dependent relationships where teams must synchronize releases, or completely independent domains going separate ways. By documenting these relationships before authoring code, engineering teams prevent unrealistic assumptions about API stability, cross-team cooperation, and operational independence.**
 

@@ -10,8 +10,8 @@ sidebar_position: 11
 > ([display-names](https://docs.junit.org/6.0.3/writing-tests/display-names.html)) and
 > "Release Notes"
 > ([release-notes](https://docs.junit.org/6.0.3/release-notes.html), the 6.0.0 section on
-> control characters). JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
-> Spring Framework 7.0.8.
+> control characters). JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
+> Spring Framework 7.0.9.
 
 **The test report is the only artefact of your test suite that a non-author reads. Jupiter
 gives you three ways to control what it says — an explicit `@DisplayName`, a generator

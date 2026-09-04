@@ -10,7 +10,7 @@ sidebar_position: 8
 > ([jooq-with-flyway](http://www.jooq.org/doc/latest/manual/getting-started/tutorials/jooq-with-flyway/))
 > and *Configuration and setup of the generator*
 > ([codegen-configuration](http://www.jooq.org/doc/latest/manual/code-generation/codegen-configuration/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **`DDLDatabase` proves your DDL parses. It does not prove PostgreSQL would accept it, and it
 cannot show the generator anything PostgreSQL derived on its own — a domain's underlying type, a

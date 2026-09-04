@@ -17,7 +17,7 @@ sidebar_position: 10
 > and the `missingMethodInvocation`, `unfinishedVerificationException` and
 > `invalidUseOfMatchers` messages in
 > [`Reporter`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/internal/exceptions/Reporter.java).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source and
 > the library's own lookup table, never a fabricated test run.
 

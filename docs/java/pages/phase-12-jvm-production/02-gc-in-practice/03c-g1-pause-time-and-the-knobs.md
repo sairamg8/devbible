@@ -22,7 +22,7 @@ sidebar_position: 13
 > at tag `jdk-25+36` for every flag's default **and its `EXPERIMENTAL` / `DIAGNOSTIC` /
 > `MANAGEABLE` classification**, which is where the documentation and the implementation
 > disagree most.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The G1 tuning chapter's first recommendation is to change nothing, and its second is that
 if you must change something, change the pause goal and the heap size. Everything after that

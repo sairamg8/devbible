@@ -12,7 +12,7 @@ sidebar_position: 19
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/beans/context-introduction.html)),
 > and RFC 9110 §15.3.3
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html#name-202-accepted)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Notification — "fire-and-forget" in everyday speech — is the shape where the sender's work is
 complete the moment the message is durably accepted. It is the only interaction style that

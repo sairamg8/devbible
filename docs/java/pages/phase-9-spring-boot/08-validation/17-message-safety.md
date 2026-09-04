@@ -12,7 +12,7 @@ sidebar_position: 17
 > (docs.hibernate.org/validator/9.1/api/), HV-1816 and the associated advisory
 > for the change of default in 6.2/7.0, and the `LocalValidatorFactoryBean`
 > javadoc for `setConfigurationInitializer`
-> (docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/). Spring Boot 4.1.0,
+> (docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **A constraint message is a template plus data, and on the wrong day the data is

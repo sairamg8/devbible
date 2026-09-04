@@ -6,7 +6,7 @@ sidebar_position: 18
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints* (docs.spring.io/spring-boot/reference/actuator/endpoints.html:
 > *"By default, access to all endpoints except for `shutdown` and `heapdump` is
 > unrestricted"*; the `NONE` / `READ_ONLY` / `UNRESTRICTED` access values;
@@ -22,7 +22,7 @@ sidebar_position: 18
 > actuator endpoint now defaults to `access=NONE`"*). The exposure figures cited
 > below are from Wiz's published survey of internet-exposed Spring Boot Actuator
 > deployments (wiz.io/blog/spring-boot-actuator-misconfigurations) — vendor
-> research, named as such, not primary documentation. Spring Boot 4.1.0, Spring
+> research, named as such, not primary documentation. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **🔴 `GET /actuator/heapdump` returns a file containing everything in the

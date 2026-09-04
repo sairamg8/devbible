@@ -14,7 +14,7 @@ sidebar_position: 6
 > and "Packaging → Efficient Deployments"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/efficient.html)).
 > 🔴 **No sandbox** — no build was run and no image size, layer size or push duration below is a
-> measurement. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> measurement. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02](02-layered-jars.md) described what `layers.idx` is and why the four layers are sorted the way
 they are. This page is the part that can go wrong: the command that reads the index, the ordering

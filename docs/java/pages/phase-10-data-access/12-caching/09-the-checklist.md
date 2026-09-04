@@ -15,7 +15,7 @@ sidebar_position: 34
 > the Hibernate ORM 7.4 *User Guide* §14 *Caching*
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and PostgreSQL 18 ([postgresql.org/docs/18](https://www.postgresql.org/docs/18/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
 
 **Three lines of annotation add a second copy of your data with a consistency model nobody wrote
 down, a memory budget nobody sized, a serialization format nobody chose, and an invalidation

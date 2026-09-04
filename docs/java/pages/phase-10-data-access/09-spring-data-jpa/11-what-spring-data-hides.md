@@ -12,7 +12,7 @@ sidebar_position: 46
 > ([jpa/query-methods.html](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html));
 > and PostgreSQL 18 "LIMIT and OFFSET"
 > ([postgresql.org](https://www.postgresql.org/docs/18/queries-limit.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **This is the closing argument of the topic. Spring Data JPA is an excellent abstraction

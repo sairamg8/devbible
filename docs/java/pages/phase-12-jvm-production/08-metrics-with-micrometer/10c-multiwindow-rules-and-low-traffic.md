@@ -12,7 +12,7 @@ sidebar_position: 30
 > expressions are the Workbook's; the recording rules re-point them at the Micrometer series names
 > established in [08c](08c-slos-and-the-bucket-budget.md) and the **Spring Boot 4.1 production-ready
 > reference · Metrics** ([docs.spring.io](https://docs.spring.io/spring-boot/4.1.0/reference/actuator/metrics.html)).
-> No alert was fired and no JVM was run for this page. JDK 25 · Spring Boot 4.1.0 · Micrometer
+> No alert was fired and no JVM was run for this page. JDK 25 · Spring Boot 4.1.1 · Micrometer
 > 1.17.0.
 
 **[10b](10b-burn-rate-alerts.md) ended with a rule that pages correctly and then keeps paging for

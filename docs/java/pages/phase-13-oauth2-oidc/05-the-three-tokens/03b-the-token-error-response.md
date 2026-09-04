@@ -12,7 +12,7 @@ sidebar_position: 5
 > Response) ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc7009.txt));
 > RFC 9449 §5 (DPoP Access Token Request)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9449.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A token endpoint failure is not a generic "auth broke". RFC 6749 §5.2 defines six error
 codes, and each of them points at a specific, different thing: your client registration,

@@ -11,7 +11,7 @@ sidebar_position: 18
 > [`SoftAssertionsExtension`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/junit/jupiter/SoftAssertionsExtension.java)
 > and
 > [`InjectSoftAssertions`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/junit/jupiter/InjectSoftAssertions.java).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[06](06-soft-assertions.md) established that the raw `new SoftAssertions()` form has a
 failure mode where a forgotten `assertAll()` makes the test unfailable. The Jupiter

@@ -11,8 +11,8 @@ sidebar_position: 28
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-testbean.html))
 > and *`@MockitoBean` and `@MockitoSpyBean`*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-mockitobean.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, **Spring
-> Framework 7.0.8**, JUnit Jupiter 6.0.3, Mockito 5.23.0. ⚠️ Boot 4 removed `@MockBean` and
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, **Spring
+> Framework 7.0.9**, JUnit Jupiter 6.0.3, Mockito 5.23.0. ⚠️ Boot 4 removed `@MockBean` and
 > `@SpyBean`; the annotations are `@MockitoBean` and `@MockitoSpyBean` and they live in Spring
 > Framework, in `org.springframework.test.context.bean.override.mockito`. **No sandbox** — Java
 > source and documented configuration only, never a run.

@@ -16,7 +16,7 @@ sidebar_position: 12
 > ([Nested](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Nested.html));
 > and **JLS SE 25 §8.1.3** on `static` members in inner classes
 > ([jls-8.html](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **A test class with twenty methods, each of which starts by building the same object into a
 slightly different state, is a class that has a structure and is hiding it. `@Nested` makes

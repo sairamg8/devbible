@@ -14,7 +14,7 @@ sidebar_position: 24
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-createindex.html))
 > and `pg_locks`
 > ([postgresql.org](https://www.postgresql.org/docs/18/view-pg-locks.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08a](08a-adding-things-safely.md) and [08a2](08a2-adding-indexes-and-enum-values.md) were about
 statements that do too much work. This chunk is about the statement that does *no* work at all and

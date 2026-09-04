@@ -15,7 +15,7 @@ sidebar_position: 38
 > `modules/jdbc/src/main/java/org/testcontainers/containers/JdbcDatabaseContainerProvider.java` and
 > `modules/r2dbc/src/main/java/org/testcontainers/r2dbc/R2DBCDatabaseContainerProvider.java`, read
 > directly.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

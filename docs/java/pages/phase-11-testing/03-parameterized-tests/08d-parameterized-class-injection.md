@@ -15,7 +15,7 @@ sidebar_position: 19
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/Parameter.html))
 > pages, and the 6.0.1 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08c](08c-parameterized-classes.md) established what a parameterized class is. This chunk is
 the mechanism that gets the row into the instance, and it has one genuinely surprising rule:

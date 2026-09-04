@@ -13,7 +13,7 @@ sidebar_position: 1
 > (docs.spring.io/spring-framework/reference/web/webflux/new-framework.html) —
 > the Spring Boot reference *Reactive Web Applications*
 > (docs.spring.io/spring-boot/reference/web/reactive.html), and JEP 444
-> (Virtual Threads). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> (Virtual Threads). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Reactive web frameworks were the answer to a specific, real and now largely
 solved problem: a platform thread parked on a blocking call was an expensive

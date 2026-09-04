@@ -18,7 +18,7 @@ sidebar_position: 1
 > and `src/hotspot/share/gc/shared/gc_globals.hpp` at tag `jdk-25+36`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp))
 > for the shipped defaults of `MaxGCPauseMillis`, `GCPauseIntervalMillis` and `GCTimeRatio`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every conversation about "which collector should we use" goes wrong in the same place: the
 participants have not agreed on what they are optimising. There are three quantities in

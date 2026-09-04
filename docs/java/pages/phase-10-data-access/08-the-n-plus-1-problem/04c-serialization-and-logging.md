@@ -13,7 +13,7 @@ sidebar_position: 7
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Spring Boot 4.1 reference *Data → JPA and Spring Data*
 > ([docs.spring.io/spring-boot/reference/](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Every shape so far had a loop somewhere, even if it was in another file. These
 two have no loop at all — the iteration is inside a library, driven by

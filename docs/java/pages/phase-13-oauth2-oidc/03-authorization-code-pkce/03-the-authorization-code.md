@@ -11,7 +11,7 @@ sidebar_position: 5
 > Request) ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt));
 > RFC 7636 §4.4 (Server Associates the Code Challenge with the Authorization Code)
 > ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A code is a row in the authorization server's database with an expiry, a used flag, a
 `client_id`, a `redirect_uri`, a set of granted scopes, the authenticated subject, and — since

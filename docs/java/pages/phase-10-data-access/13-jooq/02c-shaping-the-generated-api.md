@@ -16,7 +16,7 @@ sidebar_position: 6
 > ([codegen-interfaces](https://www.jooq.org/doc/latest/manual/code-generation/codegen-interfaces/))
 > and *Custom data type bindings*
 > ([custom-data-type-bindings](http://www.jooq.org/doc/latest/manual/code-generation/custom-data-type-bindings/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **A generated API is only as good as the schema it reflects, and real schemas contain
 `char(1)` booleans, `varchar` enums, `numeric` money and columns whose type JDBC has no

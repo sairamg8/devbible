@@ -9,7 +9,7 @@ sidebar_position: 11
 > Verified: 2026-08-31 against the **jqwik 1.10.1 user guide**, sections *Failure Reporting*,
 > *Optional @Property Attributes*, *Result Shrinking* and *Assumptions*
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > 🔴 **No sandbox and no test run on this machine.** The report fields below are described

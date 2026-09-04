@@ -11,7 +11,7 @@ sidebar_position: 3
 > (signature base string), §3.4.2 (HMAC-SHA1), §3.4.3 (RSA-SHA1), §3.4.4 (PLAINTEXT) —
 > and RFC 6749 §1.8 (Interoperability), at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc5849).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **OAuth 2.0 is not the first attempt and it is not obviously the better one. OAuth 1.0
 delivered a stronger property — every request cryptographically signed by the client, so

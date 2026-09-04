@@ -13,8 +13,8 @@ sidebar_position: 28
 > [`SpringBootMockMvcBuilderCustomizer`](https://github.com/spring-projects/spring-boot/blob/v4.1.1/module/spring-boot-webmvc-test/src/main/java/org/springframework/boot/webmvc/test/autoconfigure/SpringBootMockMvcBuilderCustomizer.java)
 > and `AnnotationCustomizableTypeExcludeFilter`; plus the **Spring Security 7.1.1**
 > `@EnableMethodSecurity` javadoc.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Spring Security 7.1.1, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Spring Security 7.1.1, AssertJ 3.27.7.
 > ⚠️ The claim that Boot auto-configures no method security is **verified by absence** —
 > a search of the 4.1.1 tree finds no such auto-configuration class and no `.imports` entry
 > for one. No documentation sentence states it either way; if you need certainty for a

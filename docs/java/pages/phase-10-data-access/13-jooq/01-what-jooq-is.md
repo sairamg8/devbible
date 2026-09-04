@@ -12,7 +12,7 @@ sidebar_position: 1
 > ([jooq.org/doc/latest/manual/code-generation/](https://www.jooq.org/doc/latest/manual/code-generation/))
 > — and the jOOQ downloads page for the current release
 > ([jooq.org/download/](https://www.jooq.org/download/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **jOOQ runs a code generator over your real schema and emits a Java class per table and a
 typed constant per column. You then write SQL — genuinely SQL, clause for clause — out of

@@ -16,7 +16,7 @@ sidebar_position: 11
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.State.html)).
 > 🔴 **No sandbox** — the stack shape below is assembled from the verified call chain in those
 > sources and is labelled a schematic; it is not a captured dump.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Connection-pool exhaustion is the most common specific instance of the shape in
 [06](06-pool-exhaustion.md), and it is worth its own page because it has a stack signature you can

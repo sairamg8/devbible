@@ -14,7 +14,7 @@ sidebar_position: 37
 > `core/src/main/java/org/testcontainers/containers/GenericContainer.java` and
 > `modules/jdbc/src/main/java/org/testcontainers/containers/JdbcDatabaseContainer.java`, read
 > directly.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

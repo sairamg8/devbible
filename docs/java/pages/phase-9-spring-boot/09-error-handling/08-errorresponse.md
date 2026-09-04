@@ -16,7 +16,7 @@ sidebar_position: 8
 > `ErrorResponseException` as *"a basic `ErrorResponse` implementation that
 > others can use as a convenient base class"*) and the `ResponseStatusException`
 > javadoc (subclass of `ErrorResponseException`, implements `ErrorResponse`).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`ErrorResponse` is the interface that lets an *exception* carry its own HTTP
 mapping — status, required headers and a `ProblemDetail` body — instead of

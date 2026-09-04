@@ -12,7 +12,7 @@ sidebar_position: 51
 > ([writing-tests/test-execution-order](https://docs.junit.org/6.0.3/writing-tests/test-execution-order.html))
 > and "Test Instance Lifecycle"
 > ([writing-tests/test-instance-lifecycle](https://docs.junit.org/6.0.3/writing-tests/test-instance-lifecycle.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **A test that sometimes passes and sometimes fails, with no change to the code, is not a test.
 It has stopped being a claim about behaviour ([01](01-what-a-test-is-for.md)) and become a coin

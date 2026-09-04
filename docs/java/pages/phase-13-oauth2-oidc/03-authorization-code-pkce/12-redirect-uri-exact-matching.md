@@ -14,7 +14,7 @@ sidebar_position: 16
 > URI Manipulation) ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt));
 > RFC 3986 §6.2.1 (Simple String Comparison)
 > ([rfc-editor.org/rfc/rfc3986](https://www.rfc-editor.org/rfc/rfc3986.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **The redirect URI is the address the authorization server will hand a live credential to. Any
 looseness in how it decides that address is acceptable is directly convertible into "hand the

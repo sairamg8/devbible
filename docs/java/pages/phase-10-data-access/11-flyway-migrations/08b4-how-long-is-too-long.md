@@ -16,7 +16,7 @@ sidebar_position: 27
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/migration-transaction-handling-273973399.html))
 > and Spring Boot 4.1's `FlywayAutoConfiguration`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08b](08b-locks-and-long-migrations.md) through [08b3](08b3-retrying-a-blocked-migration.md) were
 about contention. This one is about duration. A `CREATE INDEX CONCURRENTLY` or a `VALIDATE

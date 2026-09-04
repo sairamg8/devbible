@@ -9,7 +9,7 @@ sidebar_position: 41
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Anticorruption Layer; Martin Fowler *Anticorruption Layer Pattern*
 > ([martinfowler.com](https://martinfowler.com/bliki/AntiCorruptionLayer.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a clean downstream domain must integrate with a legacy monolith, an external vendor API, or an upstream service whose model is incompatible, adopting the upstream vocabulary directly poisons the downstream domain. Evans' Anticorruption Layer (ACL) is an architectural barrier composed of an interface (port), an external client (adapter), and a translation mechanism (translator). The ACL translates incoming and outgoing data between the foreign schema and your internal ubiquitous language. By confining all foreign quirks, legacy integer codes, and external payload structures strictly to this boundary layer, the downstream domain remains pure, decoupled, and completely insulated from changes in upstream systems.**
 

@@ -14,7 +14,7 @@ sidebar_position: 7
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/Arguments.html))
 > pages, and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Every other source encodes cases as literals in an annotation. `@MethodSource` runs Java, so
 a case can be a constructed aggregate, a value computed from another value, or anything with

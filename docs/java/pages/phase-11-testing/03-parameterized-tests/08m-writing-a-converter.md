@@ -16,7 +16,7 @@ sidebar_position: 28
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/TypedArgumentConverter.html)),
 > plus the 6.0.1 entry in the release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08l](08l-explicit-conversion.md) argued *why* you name a converter and settled how it must be
 declared and instantiated. This chunk is the class you plug into the annotation. There are three

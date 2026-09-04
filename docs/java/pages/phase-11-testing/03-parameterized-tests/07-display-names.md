@@ -12,7 +12,7 @@ sidebar_position: 12
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedTest.html))
 > and `ParameterizedInvocationConstants`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedInvocationConstants.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Ten copy-pasted `@Test` methods each have a name that says what they check. One
 `@ParameterizedTest` with ten rows has one method name and ten invocations, and the only thing

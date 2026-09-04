@@ -6,12 +6,12 @@ sidebar_position: 23
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0** reference at tag `v4.1.0` —
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1** reference at tag `v4.1.0` —
 > [`testing/testcontainers.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/testcontainers.adoc)
 > (the "SSL with Service Connections" section and its `include-code` samples) and
 > [`features/dev-services.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/features/dev-services.adoc)
 > (the Docker Compose service-connection table and SSL labels).
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.
 

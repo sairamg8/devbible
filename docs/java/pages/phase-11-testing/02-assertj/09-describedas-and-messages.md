@@ -13,7 +13,7 @@ sidebar_position: 23
 > and `overridingErrorMessage`, `withFailMessage`, `descriptionText()` and
 > `getWritableAssertionInfo()` on
 > [`AbstractAssert`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/AbstractAssert.java).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[01 · Why fluent assertions](01-why-fluent-assertions.md) argued that the failure message
 is the product. This is the page about controlling it. There are two mechanisms and they are

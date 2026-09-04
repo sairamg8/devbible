@@ -15,8 +15,8 @@ sidebar_position: 38
 > ([docs.spring.io](https://docs.spring.io/spring-kafka/reference/testing.html)) for
 > `KafkaTestUtils`; and the **Awaitility 4.3.0** `ConditionFactory` javadoc
 > ([javadoc.io](https://javadoc.io/static/org.awaitility/awaitility/4.3.0/org/awaitility/core/ConditionFactory.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
 > Awaitility 4.3.0.
 > ⚠️ **No sandbox, no Docker and no broker on this machine** — Java source and documented
 > behaviour only. 🔴 **No container logs, no run output, no timings anywhere on this page.**

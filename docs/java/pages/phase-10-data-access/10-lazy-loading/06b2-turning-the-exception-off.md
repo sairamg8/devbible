@@ -16,7 +16,7 @@ sidebar_position: 21
 > ([docs.spring.io/spring-framework/reference/data-access/orm/jpa.html](https://docs.spring.io/spring-framework/reference/data-access/orm/jpa.html)),
 > and the Hibernate ORM 7.4 *Introduction* §5.1 on persistence-context lifetime
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The candidates so far have all tried to keep a session alive long enough for somebody to
 read through it. These three go the other way: make the read succeed without a session, make

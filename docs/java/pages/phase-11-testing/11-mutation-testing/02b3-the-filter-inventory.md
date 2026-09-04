@@ -13,7 +13,7 @@ sidebar_position: 6
 > [Maven quick start](https://pitest.org/quickstart/maven/) (`features`, `extraFeatures`,
 > `avoidCallsTo`, `verbose`), [Basic concepts](https://pitest.org/quickstart/basic_concepts/) and
 > the [FAQ](https://pitest.org/faq/).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Feature names and defaults are read from
 > published source; the authoritative list for *your* version is the one pitest prints with

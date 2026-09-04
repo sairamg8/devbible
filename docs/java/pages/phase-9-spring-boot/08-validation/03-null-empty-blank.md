@@ -12,7 +12,7 @@ sidebar_position: 3
 > the rule that *"the validation of `null` is considered valid by default"*),
 > and the Spring Framework reference *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Almost every constraint in the specification treats `null` as valid. This is
 not an oversight, it is the design: optionality is expressed by exactly one

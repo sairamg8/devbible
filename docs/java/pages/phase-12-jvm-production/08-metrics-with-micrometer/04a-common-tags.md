@@ -14,8 +14,8 @@ sidebar_position: 9
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)),
 > the **Spring Framework 7 reference** — *Integration · Observability*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)),
-> and **`spring-boot-dependencies:4.1.0`** for the managed versions. No JVM was run for this page.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> and **`spring-boot-dependencies:4.1.1`** for the managed versions. No JVM was run for this page.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **[04 · Tags](04-tags.md) was about the tags you write at the call site. This page is about the
 ones you do not: the environment dimensions applied to every meter in the process. They are the

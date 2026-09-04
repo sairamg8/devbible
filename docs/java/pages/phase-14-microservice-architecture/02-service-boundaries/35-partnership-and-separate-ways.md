@@ -9,7 +9,7 @@ sidebar_position: 48
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Partnership & Separate Ways; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
 > ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **At the two outer poles of context mapping lie Partnership and Separate Ways—the maximum and minimum degrees of organizational coupling. In a Partnership, two teams bind their delivery roadmaps together: neither can succeed without the other, requiring synchronized sprint cadences, joint API design, and coordinated deployments. At the opposite extreme, Separate Ways is an intentional architectural decision to refuse technical integration altogether: teams determine that the operational, cognitive, and coordination costs of connecting their systems exceed the business value of shared data, choosing code duplication or manual handoffs to preserve absolute autonomy. Both patterns are legitimate architectural choices when chosen deliberately, and both become catastrophic failures when fallen into by accident.**
 

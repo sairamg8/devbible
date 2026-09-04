@@ -13,7 +13,7 @@ sidebar_position: 8
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jfr.html)).
 > 🔴 **No sandbox** — the Java below is illustrative source, not a captured run. No output, timing
 > or event count here is a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The JVM's own events tell you what the runtime did; your events tell you what the application
 did. This page is how to define one and — the part that costs people an afternoon — which field

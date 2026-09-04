@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints* (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the
 > full endpoint catalogue with its "requires a bean" notes, the exposure
 > defaults table showing `management.endpoints.web.exposure.include` defaulting
@@ -14,7 +14,7 @@ sidebar_position: 2
 > `management.endpoint.<id>.access`, `management.endpoints.access.default` and
 > `management.endpoints.access.max-permitted`) and *How-to · Actuator*
 > (docs.spring.io/spring-boot/how-to/actuator.html for `management.server.port`
-> and `management.server.address`). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> and `management.server.address`). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **Three independent gates stand between an endpoint existing and you being able

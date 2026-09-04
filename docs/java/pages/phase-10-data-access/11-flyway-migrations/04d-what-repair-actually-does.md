@@ -12,7 +12,7 @@ sidebar_position: 11
 > ([JdbcTableSchemaHistory.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/schemahistory/JdbcTableSchemaHistory.java))
 > and the *Repair* command reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/repair-277578892.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **`repair` is the command people reach for when a deployment will not start, and it is almost
 always reached for without knowing what it does. The one sentence worth memorising before ever

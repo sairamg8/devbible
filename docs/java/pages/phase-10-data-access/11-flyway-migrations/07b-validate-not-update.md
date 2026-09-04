@@ -14,7 +14,7 @@ sidebar_position: 20
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java))
 > and the Hibernate 7.4 schema-validation behaviour recorded in
 > [06 · `update` is never production](../06-jpa-hibernate-model/17b-why-update-is-never-production.md).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18, Hibernate ORM 7.4.1.
 
 **[06 · `ddl-auto`](../06-jpa-hibernate-model/17-ddl-auto.md) and
 [06 · why `update` is never production](../06-jpa-hibernate-model/17b-why-update-is-never-production.md)

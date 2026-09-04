@@ -11,7 +11,7 @@ sidebar_position: 10
 > `ThreadPoolTaskExecutor` and `ScheduledAnnotationBeanPostProcessor` (same javadoc tree), and the
 > **Spring Boot 4.1 application-properties appendix** for `spring.task.execution.*` and
 > `spring.task.scheduling.*` ([docs.spring.io](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8. 🔴 **No sandbox** — no context was closed.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9. 🔴 **No sandbox** — no context was closed.
 
 **[06](06-executors-and-schedulers.md) was the JDK contract. This is what Spring does with it on
 your behalf when the context closes — which is more than it used to, and less than most people

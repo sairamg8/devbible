@@ -15,7 +15,7 @@ sidebar_position: 6
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)); Melvin E.
 > Conway, *How Do Committees Invent?* (1968)
 > ([melconway.com](https://www.melconway.com/Home/Committees_Paper.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Conway's law tells you the shape of the system follows the shape of the organisation.
 Team Topologies tells you what shape the organisation should be for fast delivery, and the

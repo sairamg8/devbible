@@ -12,7 +12,7 @@ sidebar_position: 4
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/CsvSource.html)),
 > and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A `@CsvSource` record is a test case and a column is a variable, which makes a table of
 cases something a reviewer can scan vertically for a missing combination — the one review

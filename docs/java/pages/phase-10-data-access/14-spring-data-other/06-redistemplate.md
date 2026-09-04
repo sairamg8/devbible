@@ -13,7 +13,7 @@ sidebar_position: 19
 > ([docs.spring.io/spring-boot/reference/data/nosql.html](https://docs.spring.io/spring-boot/reference/data/nosql.html)),
 > and the source of `DataRedisAutoConfiguration` at tag `v4.1.0`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-data-redis/src/main/java/org/springframework/boot/data/redis/autoconfigure/DataRedisAutoConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Lettuce 7.5.2, Jedis 7.4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Lettuce 7.5.2, Jedis 7.4.1, Redis 8.
 
 **Everything the repository could not reach in the previous five chunks is reachable here.
 `RedisTemplate` is not a fallback or an advanced tool — for most applications it is the

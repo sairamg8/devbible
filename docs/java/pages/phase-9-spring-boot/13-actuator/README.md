@@ -6,15 +6,15 @@ sidebar_position: 0
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 / 2026-08-20 against the Spring Boot 4.1.0 reference —
+> Verified: 2026-08-19 / 2026-08-20 against the Spring Boot 4.1.1 reference —
 > *Actuator · Endpoints*, *Health*, *Kubernetes Probes*, *Metrics* and
 > *Observability* (docs.spring.io/spring-boot/reference/actuator/) and the
-> Spring Boot 4.1.0 how-to *Actuator*
+> Spring Boot 4.1.1 how-to *Actuator*
 > (docs.spring.io/spring-boot/how-to/actuator.html), plus the Micrometer 1.17
 > reference (docs.micrometer.io/micrometer/reference/) for meter types,
 > histograms and percentiles, and the Observation API. Version-specific defaults
 > are cross-checked against the Spring Boot 3.4 and 3.5 release notes where a
-> behaviour changed. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> behaviour changed. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Actuator is a set of production interfaces bolted onto your application, and
 almost every mistake made with it comes from treating it as one feature with one

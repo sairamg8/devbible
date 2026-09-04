@@ -14,7 +14,7 @@ sidebar_position: 1
 > ([diagnostic-tools](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)),
 > and the JDK 25 HotSpot source `src/hotspot/share/nmt/memTag.hpp` at tag `jdk-25+36`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/nmt/memTag.hpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Almost every production Java memory incident that takes more than an hour to diagnose
 starts with somebody treating `-Xmx` as the size of the process. It is not. It is the

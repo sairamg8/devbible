@@ -16,7 +16,7 @@ sidebar_position: 23
 > ([github.com/spring-projects/spring-framework/.../AbstractPlatformTransactionManager.java](https://github.com/spring-projects/spring-framework/blob/main/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java))
 > and the Spring Boot 4.1 `TransactionManagerCustomizer` javadoc
 > ([.../boot/transaction/autoconfigure/TransactionManagerCustomizer.html](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/transaction/autoconfigure/TransactionManagerCustomizer.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 8b](08b-whose-settings-win.md) is the rule: a participating transaction
 silently discards its own isolation, timeout and read-only flag. This chunk is the one

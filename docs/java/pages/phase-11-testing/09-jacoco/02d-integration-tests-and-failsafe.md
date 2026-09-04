@@ -9,7 +9,7 @@ sidebar_position: 6
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s mojo documentation —
 > `prepare-agent-mojo.html`, `prepare-agent-integration-mojo.html`, `report-mojo.html`,
 > `maven.html` — and the **Gradle user manual**'s JaCoCo plugin page. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
 > Testcontainers 2.0.5.
 > ⚠️ **No Docker, no build and no test runs on this machine** — configuration and documented
 > behaviour only, never output.

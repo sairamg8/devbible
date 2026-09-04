@@ -19,7 +19,7 @@ sidebar_position: 5
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
 > All arithmetic below is derived by hand from that source and is labelled as such — it is not
 > the output of running anything.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The man page tells you the defaults. It does not tell you how they combine, and the combination
 has two consequences that look like bugs until you read the code: between roughly 250 MB and

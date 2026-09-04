@@ -18,7 +18,7 @@ sidebar_position: 24
 > ([.../transaction/support/AbstractPlatformTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/AbstractPlatformTransactionManager.html))
 > and the Spring Data JPA 4.1 reference *Transactionality*
 > ([docs.spring.io/spring-data/jpa/reference/jpa/transactions.html](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **This is the code, and it looks defensive and correct.**
 

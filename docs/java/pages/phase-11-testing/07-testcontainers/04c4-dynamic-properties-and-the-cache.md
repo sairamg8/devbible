@@ -6,14 +6,14 @@ sidebar_position: 29
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Framework 7.0.8** reference —
+> Verified: 2026-08-31 against the **Spring Framework 7.0.9** reference —
 > [Context Caching](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/caching.adoc)
 > (the cache-key component list, quoted verbatim) and
 > [Context Configuration with Dynamic Property Sources](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/dynamic-property-sources.adoc)
 > (the `@DirtiesContext` tip) — plus the `spring-test` sources at the same tag,
 > [`DynamicPropertiesContextCustomizer`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-test/src/main/java/org/springframework/test/context/support/DynamicPropertiesContextCustomizer.java)
 > and `DynamicPropertiesContextCustomizerFactory`, read directly for the equality and search rules.
-> Version spine: JDK 25, Spring Boot 4.1.0 / Spring Framework 7.0.8, **Testcontainers 2.0.5**,
+> Version spine: JDK 25, Spring Boot 4.1.1 / Spring Framework 7.0.9, **Testcontainers 2.0.5**,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.

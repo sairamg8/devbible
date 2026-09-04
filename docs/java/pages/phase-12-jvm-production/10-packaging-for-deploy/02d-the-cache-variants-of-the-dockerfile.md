@@ -15,7 +15,7 @@ sidebar_position: 8
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/aot-cache.html)).
 > 🔴 **No sandbox** — no image was built and no startup timing below is a measurement. Both
 > Dockerfile fragments are quoted from the documentation, not composed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02c](02c-a-real-layered-dockerfile.md) is the plain layered Dockerfile. This page adds a startup
 cache to it, which the documentation does with exactly two extra instructions. The interesting part

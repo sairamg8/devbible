@@ -12,7 +12,7 @@ sidebar_position: 2
 > Fowler, *Microservice Premium*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)) and
 > *Conway's Law* ([martinfowler.com](https://martinfowler.com/bliki/ConwaysLaw.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **The case against splitting is worthless if it is a case against benefits that are real.
 They are real. Richardson's five "dark energy" forces are the honest, complete list of what

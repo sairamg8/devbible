@@ -14,7 +14,7 @@ sidebar_position: 50
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/))
 > and the Spring Data JPA 4.1 reference on projections and paging
 > ([docs.spring.io/spring-data/jpa/reference/](https://docs.spring.io/spring-data/jpa/reference/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Three services, three N+1s, three different fixes — and in all three cases the *same*
 association is involved. This is the first: a paged order list that renders 25 rows of

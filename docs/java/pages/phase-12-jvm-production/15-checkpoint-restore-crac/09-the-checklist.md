@@ -11,7 +11,7 @@ sidebar_position: 13
 > [step-by-step](https://github.com/CRaC/docs/blob/master/STEP-BY-STEP.md),
 > [best practices](https://github.com/CRaC/docs/blob/master/best-practices.md)), the **Spring
 > Framework 7.0** and **Spring Boot 4.1** checkpoint/restore references.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8. 🔴 **No sandbox.**
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9. 🔴 **No sandbox.**
 
 **Two lists. The first decides whether to try. The second decides whether what you produced is
 allowed to run.**

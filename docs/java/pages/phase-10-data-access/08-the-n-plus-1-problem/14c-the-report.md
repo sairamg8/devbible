@@ -13,7 +13,7 @@ sidebar_position: 51
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Hibernate ORM 7.4 *Introduction* §9 *Fetching and lazy loading*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The second service is a monthly settlement report: every order settled in a period, each
 one contributing its lines and its payments to a document. Same `Order`, same `lines`, and a

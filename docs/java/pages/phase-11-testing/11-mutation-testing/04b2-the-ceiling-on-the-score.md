@@ -15,7 +15,7 @@ sidebar_position: 26
 > `org.pitest.mutationtest.DetectionStatus`, `statistics/MutationStatistics.getTotalSurvivingMutations`
 > and `pitest-maven/.../PitMojo` (`maxSurviving`, default `-1`).
 > `funmodifiablecollection`'s description from `build/intercept/defensive` in the same tag.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
 > Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Every figure quoted is from pitest's documentation or
 > source. **No ceiling, score or mutant count on this page came from a run.**

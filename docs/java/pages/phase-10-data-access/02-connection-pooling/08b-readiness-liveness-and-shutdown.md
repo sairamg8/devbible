@@ -13,7 +13,7 @@ sidebar_position: 23
 > ([docs.spring.io/spring-boot/reference/web/graceful-shutdown.html](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html)),
 > and the HikariCP 7.0.2 README
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[Chunk 8](08-starting-up-or-failing-fast.md) chose whether the pool blocks
 startup. This chunk is the half that makes that choice safe — what the

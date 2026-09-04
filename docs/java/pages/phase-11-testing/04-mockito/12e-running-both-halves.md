@@ -15,7 +15,7 @@ sidebar_position: 56
 > [08c · Parameterized classes](../03-parameterized-tests/08c-parameterized-classes.md) and the
 > tag-syntax behaviour in [06d · Tagging](../01-junit-5/06d-tagging.md). The contract test is a
 > test-design pattern, not an API.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Mockito 5.23.0, **JUnit Jupiter 6.0.3**. **No sandbox** — this page carries Java source, never a
 > fabricated test run.
 

@@ -15,7 +15,7 @@ sidebar_position: 19
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)) and
 > *Metrics · Spring Data Repository Metrics*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)).
-> No JVM was run for this page. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> No JVM was run for this page. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **An annotation that silently does nothing is worse than no annotation, because it looks like
 instrumentation in code review and produces no metric in production. `@Timed` has five independent

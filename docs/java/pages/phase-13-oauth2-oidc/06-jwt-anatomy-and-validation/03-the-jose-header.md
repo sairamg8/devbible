@@ -15,7 +15,7 @@ sidebar_position: 4
 > ([rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt),
 > [NimbusJwtDecoder javadoc](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/NimbusJwtDecoder.html))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **The header is the chicken-and-egg problem of JWT validation. It tells you which algorithm
 to use and which key to use, and you need both before you can verify the signature that

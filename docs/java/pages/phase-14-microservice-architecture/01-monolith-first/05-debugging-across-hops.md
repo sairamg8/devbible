@@ -12,7 +12,7 @@ sidebar_position: 12
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); the Spring
 > Modulith reference, *Production-ready Features*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/production-ready.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > log excerpts, traces or timings on this page are reproduced from a run, because none was
 > made.
 

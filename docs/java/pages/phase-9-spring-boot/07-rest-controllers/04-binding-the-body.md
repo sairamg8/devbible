@@ -6,14 +6,14 @@ sidebar_position: 4
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Handler Methods → Method Arguments*
 > (docs.spring.io — `@RequestBody`, `@RequestPart`, `@ModelAttribute`,
 > `UriComponentsBuilder`, the requirement that `Errors`/`BindingResult`
 > immediately follow the validated argument, and the fallback rule that
 > unannotated **simple** types resolve as `@RequestParam` while **complex**
 > types resolve as `@ModelAttribute`, with simplicity judged by
-> `BeanUtils.isSimpleProperty`). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> `BeanUtils.isSimpleProperty`). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **The most damaging bug in Spring MVC binding produces no exception, no log line

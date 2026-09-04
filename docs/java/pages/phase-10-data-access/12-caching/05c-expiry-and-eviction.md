@@ -13,7 +13,7 @@ sidebar_position: 14
 > Redis *Key eviction* ([redis.io/docs](https://redis.io/docs/latest/develop/reference/eviction/))
 > and `redis.conf` on the Redis 8.0 branch
 > ([github.com/redis/redis](https://github.com/redis/redis/blob/8.0/redis.conf)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1, Redis 8.
 
 **Two defaults, each defensible alone. Spring Data Redis ships `Key Expiration: None`, because
 it cannot know whether your key space is bounded. Redis ships `maxmemory-policy noeviction`,

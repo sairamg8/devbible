@@ -11,7 +11,7 @@ sidebar_position: 20
 > Spring Framework 7.0.x reference "REST Clients"
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)),
 > and RFC 9110 §9.2.2 ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Request/reply gets a bad press in microservice writing, and most of it is unearned. It is the
 right shape whenever the caller genuinely cannot proceed without the answer, its properties are

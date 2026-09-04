@@ -14,7 +14,7 @@ sidebar_position: 23
 > ([docs.hibernate.org/orm/7.0/userguide/](https://docs.hibernate.org/orm/7.0/userguide/html_single/Hibernate_User_Guide.html))
 > and the `JpaTransactionManager` javadoc
 > ([docs.spring.io/.../orm/jpa/JpaTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/orm/jpa/JpaTransactionManager.html)).
-> JDK 25, Spring Framework 7.0.8, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Framework 7.0.9, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Save an entity, then run a `JdbcClient` count in the same transaction, and the
 count is the old one. Nothing is broken. JPA's auto-flush is triggered by *queries

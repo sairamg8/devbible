@@ -13,7 +13,7 @@ sidebar_position: 38
 > [`runtime/globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/globals.hpp)
 > for the declared defaults and descriptions of `SafepointTimeout`, `SafepointTimeoutDelay`,
 > `AbortVMOnSafepointTimeout`, `GuaranteedSafepointInterval`, `SafepointALot` and
-> `HandshakeTimeout`. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> `HandshakeTimeout`. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A garbage collection pause has two parts, and the GC log shows you one of them. Before the
 collector can touch a single object, every application thread has to reach a point where the JVM

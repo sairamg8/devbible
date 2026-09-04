@@ -7,7 +7,7 @@ sidebar_position: 13
 <span className="db-tier t-know">Know</span>
 
 > Verified: 2026-09-03 against the **OpenTelemetry Collector Contrib `tail_sampling` processor documentation** ([github.com/open-telemetry/opentelemetry-collector-contrib](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/tailsamplingprocessor)); the **OpenTelemetry Load-Balancing Exporter specification**; and production telemetry topology patterns.
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · OpenTelemetry Collector Contrib 0.120+**.
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · OpenTelemetry Collector Contrib 0.120+**.
 > 🔴 **No sandbox run** — pipeline topologies, configuration parameters, and memory formulas verified against OpenTelemetry Collector components.
 
 **The fundamental tragedy of head sampling is that it makes its decision when it knows the least. At the instant a request hits your ingress gateway, the head sampler rolls a ten-sided die and decides to drop 90% of requests. Five hundred milliseconds later, when that request crashes with a `NullPointerException` on hop seven or stalls for nine seconds in a database lock acquisition, it is too late: the trace was discarded at the front door. You receive a PagerDuty alert for an error spike, open your tracing backend, and find nothing. Tail sampling reverses this architecture: applications transmit telemetry to an OpenTelemetry Collector fleet that buffers full traces in memory and decides what to keep only after the request has finished.**

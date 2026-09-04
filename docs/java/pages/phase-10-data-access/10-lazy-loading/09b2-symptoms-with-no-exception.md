@@ -12,7 +12,7 @@ sidebar_position: 35
 > ([github.com/FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind/blob/2.19/src/main/java/com/fasterxml/jackson/databind/ser/impl/UnknownSerializer.java)),
 > and the Jakarta Persistence 3.2 `FetchType` and `OneToOne` javadocs
 > ([jakarta.ee/specifications/persistence/3.2/apidocs/](https://jakarta.ee/specifications/persistence/3.2/apidocs/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
 > PostgreSQL 18.
 
 **[09b](09b-symptom-to-chunk.md) covered the symptoms that at least announce themselves as

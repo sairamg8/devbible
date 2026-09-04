@@ -15,7 +15,7 @@ sidebar_position: 26
 > **Spring Boot 4.1** Actuator reference for endpoint exposure defaults
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html)).
 > Responses carry `Content-Type: application/vnd.spring-boot.actuator.v3+json`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The alternative to changing a log level at runtime is a deploy — which means the diagnostic
 information you wanted describes a process that no longer exists, in a state you have just

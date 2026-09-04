@@ -11,11 +11,11 @@ sidebar_position: 11
 > and *Concepts · Histograms and Percentiles*, the **Spring Boot 4.1 production-ready reference**
 > — *Metrics · Customizing Individual Metrics* and *Per-meter Properties*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`MetricsAutoConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsAutoConfiguration.java)
 > and
 > [`MeterRegistryPostProcessor`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessor.java).
-> No JVM was run for this page. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> No JVM was run for this page. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **Every other page in this topic changes a metric by changing the call site. This one does not.
 A `MeterFilter` intercepts meters as they are *registered* on a registry, and can refuse them,

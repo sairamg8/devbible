@@ -14,7 +14,7 @@ sidebar_position: 15
 > ([.../cascadetype](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/cascadetype))
 > and the PostgreSQL 18 manual *§5.5 Constraints → Foreign Keys*
 > ([postgresql.org/docs/18/ddl-constraints.html](https://www.postgresql.org/docs/18/ddl-constraints.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **`REMOVE` is the only cascade type that destroys data, so it is the only one where
 getting the direction wrong is unrecoverable. The direction is always parent to part.

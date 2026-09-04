@@ -13,7 +13,7 @@ sidebar_position: 7
 > (`TIMED_OUT(true)`) and its `getForErrorExitCode`. Release history from the
 > [GitHub releases](https://github.com/hcoles/pitest/releases) — 1.25.5 *"Single threaded mutant
 > timeout detection"*.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no build and no timings on this machine.** The formula and the defaults are
 > quoted from pitest's documentation; no measured duration on this page came from a run.

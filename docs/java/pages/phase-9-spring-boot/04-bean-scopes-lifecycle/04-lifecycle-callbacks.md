@@ -14,7 +14,7 @@ sidebar_position: 4
 > once" rule, and the recommendation of the JSR-250 annotations) and the
 > **Spring Framework 7.0 release notes**
 > (github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes
-> — removal of `javax.annotation` support). Spring Boot 4.1.0, Spring Framework
+> — removal of `javax.annotation` support). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **There are three ways to be told a bean has been created and three to be told

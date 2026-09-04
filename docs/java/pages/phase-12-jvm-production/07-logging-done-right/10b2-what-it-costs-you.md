@@ -13,7 +13,7 @@ sidebar_position: 23
 > [`AsyncAppenderBase`](https://github.com/qos-ch/logback/blob/master/logback-core/src/main/java/ch/qos/logback/core/AsyncAppenderBase.java),
 > whose `stop()` calls `worker.join(maxFlushTime)` with `DEFAULT_MAX_FLUSH_TIME = 1000` and then
 > warns *"Max queue flush timeout (… ms) exceeded. Approximately …"*.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[10b](10b-async-appender.md) covered the queue and its discard policy — the behaviours that lose
 events under load. This page is the two side effects that are not about load at all: caller data

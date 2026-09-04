@@ -14,7 +14,7 @@ sidebar_position: 13
 > and [`../01-memory-layout/08d-measuring-an-object.md`](../01-memory-layout/08d-measuring-an-object.md).
 > **No sandbox** — no dump was opened and no size figure below is measured; the arithmetic shown
 > is arithmetic, not output.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every column in a heap-dump tool is one of these two numbers and confusing them wastes entire
 investigations. Shallow heap is what the object itself occupies: header, fields, and for a

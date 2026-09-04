@@ -6,14 +6,14 @@ sidebar_position: 8
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics* (docs.spring.io/spring-boot/reference/actuator/metrics.html: the
 > composite `MeterRegistry`, the supported registry list,
 > `management.defaults.metrics.export.enabled`,
 > `management.metrics.use-global-registry`, and the caveat about the static
 > `Metrics` class) and the Micrometer 1.17 `io.micrometer.core.instrument`
 > javadoc for `Counter`, `Gauge`, `Timer`, `LongTaskTimer` and
-> `DistributionSummary`. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `DistributionSummary`. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Micrometer is to metrics what SLF4J is to logging: a vendor-neutral facade
 your code compiles against, with the decision about where the data goes made by

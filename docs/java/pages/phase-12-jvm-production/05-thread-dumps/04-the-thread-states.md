@@ -13,7 +13,7 @@ sidebar_position: 5
 > Detected" and "No Thread Dump"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox** — no dump fragment here is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every thread in a dump carries one of six `java.lang.Thread.State` values, and the useful skill
 is not memorising them but knowing what each one implicates. `BLOCKED` implicates another thread.

@@ -10,7 +10,7 @@ sidebar_position: 15
 > ([sql-execution/fetching/pojos](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/pojos/))
 > and *Code generation — POJOs*
 > ([codegen-pojos](https://www.jooq.org/doc/latest/manual/code-generation/codegen-object-types/codegen-pojos/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **A `Record` is a fine thing to hold inside a repository and a poor thing to return from one — it
 is jOOQ's type, it knows about the database, and it drags the DSL into every layer above. So every

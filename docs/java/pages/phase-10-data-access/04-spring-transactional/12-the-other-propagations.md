@@ -12,7 +12,7 @@ sidebar_position: 31
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html))
 > and the `AbstractPlatformTransactionManager` javadoc and source
 > ([github.com/spring-projects/spring-framework/.../transaction/support/AbstractPlatformTransactionManager.java](https://github.com/spring-projects/spring-framework/blob/main/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Three propagations do the work — `REQUIRED`, `REQUIRES_NEW`, `NESTED`. The
 remaining four are usually skimmed as a list of definitions, which is a mistake:

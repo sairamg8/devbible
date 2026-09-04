@@ -6,14 +6,14 @@ sidebar_position: 23
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-31 against the **Spring Framework 7.0.8** javadoc for
+> Verified: 2026-08-31 against the **Spring Framework 7.0.9** javadoc for
 > `@MockitoBean` in `org.springframework.test.context.bean.override.mockito`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/bean/override/mockito/MockitoBean.html))
-> — `REPLACE_OR_CREATE` and `enforceOverride` — and the **Spring Framework 7.0.8**
+> — `REPLACE_OR_CREATE` and `enforceOverride` — and the **Spring Framework 7.0.9**
 > reference for `JavaMailSender`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/email.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — this page carries Java source and
 > documented behaviour, never console output.
 

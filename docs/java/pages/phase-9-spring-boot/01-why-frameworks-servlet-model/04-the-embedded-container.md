@@ -14,7 +14,7 @@ sidebar_position: 4
 > Spring Boot 4.0 Migration Guide (github.com/spring-projects/spring-boot
 > wiki — the `spring-boot-starter-web` → `spring-boot-starter-webmvc` rename,
 > the Servlet 6.1 baseline, the removal of Undertow support).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, Tomcat 11.0.22, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, Tomcat 11.0.22, JDK 25.
 
 **For twenty years a Java web application was a guest: you built a `.war` and
 handed it to a container somebody else installed, versioned and restarted.

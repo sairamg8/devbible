@@ -17,7 +17,7 @@ sidebar_position: 13
 > Spring Boot reference *Validation*
 > (docs.spring.io/spring-boot/reference/io/validation.html — method validation
 > being enabled automatically when a JSR-303 implementation is on the
-> classpath, and the `@Validated` type-level example). Spring Boot 4.1.0,
+> classpath, and the `@Validated` type-level example). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **The same constraint annotations work on any Spring bean's methods, and on

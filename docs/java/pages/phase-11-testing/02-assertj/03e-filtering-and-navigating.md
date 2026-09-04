@@ -12,7 +12,7 @@ sidebar_position: 10
 > (`AbstractIterableAssert.filteredOn` overloads, `filteredOnNull`,
 > `filteredOnAssertions`, `org.assertj.core.api.filter.Filters`,
 > `org.assertj.core.api.Condition`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **A collection assertion answers a question about a whole collection. Often the question you
 actually have is about a *part* of it — the hobbits in the fellowship, the failed orders, the

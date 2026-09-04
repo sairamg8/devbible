@@ -13,7 +13,7 @@ sidebar_position: 2
 > [`spring-boot-starter-test-4.1.0.pom`](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-test/4.1.0/spring-boot-starter-test-4.1.0.pom)
 > and the managed version from
 > [`spring-boot-dependencies-4.1.0.pom`](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **"JUnit 5" is not one library, and the single most common build failure in this space —
 tests compile, tests are green in the IDE, and Maven reports zero tests run — comes

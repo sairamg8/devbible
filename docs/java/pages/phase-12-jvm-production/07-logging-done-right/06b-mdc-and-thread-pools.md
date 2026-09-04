@@ -15,7 +15,7 @@ sidebar_position: 14
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/task/support/ContextPropagatingTaskDecorator.html)).
 > 🔴 **No sandbox.** No log output on this page is captured; the interleavings shown are labelled
 > schematics.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **This is the most consequential bug in the whole topic, and it is a bug of omission: nobody writes
 it, it appears when someone forgets to write the cleanup. A servlet container's thread pool hands

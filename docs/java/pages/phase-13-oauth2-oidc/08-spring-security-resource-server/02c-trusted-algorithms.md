@@ -14,7 +14,7 @@ sidebar_position: 4
 > defaults to `Arrays.asList("RS256")`) and `JwtDecoderConfiguration#jwsAlgorithms`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server))
 > — **RFC 9068** §4 ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc9068)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **The algorithm list is an allow-list, not a hint. It is the only configuration in a
 resource server that says "I will not accept a signature made this way", and because the

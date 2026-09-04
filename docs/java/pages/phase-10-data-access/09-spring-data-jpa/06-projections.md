@@ -10,7 +10,7 @@ sidebar_position: 30
 > ([projections.html](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html)),
 > the *Introduction*, *Interface-based Projections*, *Closed Projections* and *Open
 > Projections* sections plus *Using Projections with JPA*.
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Every chunk so far has treated the return type as the shape of the answer. It is

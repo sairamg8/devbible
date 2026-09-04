@@ -15,7 +15,7 @@ sidebar_position: 22
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/CacheSettings.html))
 > and Jakarta Persistence 3.2 §11.1.7 `Cacheable`
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Opting an entity into the second-level cache is two annotations and one real decision. The
 annotations are `jakarta.persistence.@Cacheable` and `org.hibernate.annotations.@Cache`, they come

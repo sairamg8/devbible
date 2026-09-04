@@ -14,7 +14,7 @@ sidebar_position: 5
 > *Session Management*
 > (docs.spring.io/spring-security/reference/servlet/authentication/session-management.html),
 > plus the Spring Security 7.0 configuration-migration notes on the removal of
-> `and()`. Spring Boot 4.1.0, Spring Security 7.x, JDK 25.
+> `and()`. Spring Boot 4.1.1, Spring Security 7.x, JDK 25.
 
 **A `SecurityFilterChain` bean is the whole configuration surface. There is no
 `WebSecurityConfigurerAdapter` any more, there is no `and()` any more, and in

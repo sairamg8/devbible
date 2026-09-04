@@ -12,7 +12,7 @@ sidebar_position: 5
 > `withPrecision` / `withinPercentage`) and the AssertJ Core documentation, "Specifying how
 > to compare specific types or fields in the comparison"
 > ([assertj.github.io/doc](https://assertj.github.io/doc/#assertj-core-recursive-comparison-comparators)).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **IEEE 754 binary doubles cannot represent most decimal fractions exactly, so a computed
 `double` is almost never bit-identical to a literal you type. Every assertion library

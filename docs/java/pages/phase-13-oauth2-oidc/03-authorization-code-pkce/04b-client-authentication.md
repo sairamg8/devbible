@@ -14,7 +14,7 @@ sidebar_position: 7
 > ([datatracker.ietf.org/doc/html/rfc8252](https://datatracker.ietf.org/doc/html/rfc8252));
 > Spring Security reference, "OAuth 2.0 Client · Core Interfaces and Classes" (docs show
 > 7.1.1) ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/client/core.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **"Confidential client" is not a description of your intentions; it is a claim that the
 credential cannot be extracted by anyone who has the application. A server-side web app

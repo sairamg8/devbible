@@ -14,7 +14,7 @@ sidebar_position: 59
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Jakarta Persistence 3.2 specification's `FetchType` and `EntityGraph`
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **Everything in this topic reduces to one boundary. A mapping describes a relationship that is
 true of the data — this order has lines, this line belongs to a product — and that statement is

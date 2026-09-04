@@ -15,8 +15,8 @@ sidebar_position: 0
 > `check-mojo.html`. Plus the **Gradle user manual**'s JaCoCo plugin page, the **Jakarta
 > Annotations 3.0** javadoc for `jakarta.annotation.Generated`, and **Project Lombok**'s
 > configuration documentation for `lombok.addLombokGeneratedAnnotation`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
 > Testcontainers 2.0.5.
 > ⚠️ **0.8.15 (2026/06/04) is the current release** — version strings like
 > `0.8.16.202608270545` on jacoco.org are snapshots. It officially supports **Java 26** class

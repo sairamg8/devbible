@@ -14,7 +14,7 @@ sidebar_position: 12
 > — `@Validated` carrying group classes) and *Validation* for
 > `@RequestMapping` methods
 > (docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-validation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A group is a marker interface that partitions the constraints on a type, so
 one class can carry two rulesets — the create case and the update case being

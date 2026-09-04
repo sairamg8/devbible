@@ -15,7 +15,7 @@ sidebar_position: 17
 > ergonomic sizing and the tier levels, and `src/hotspot/share/code/codeCache.cpp` for
 > `initialize_heaps` and the segment layout
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/code/codeCache.cpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every method the JIT compiles produces machine code, and that machine code has to live
 somewhere. It is not on the heap, it is not in metaspace, and it is not bounded by `-Xmx` — it

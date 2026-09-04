@@ -16,7 +16,7 @@ sidebar_position: 20
 > docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-async.html); the
 > `ExceptionHandlerExceptionResolver` behaviour when a handler method itself
 > throws, cited from the Framework **source**; and RFC 9457 for what a problem
-> document is and is not. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> document is and is not. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every other chunk in this topic has ended with a fix. This one cannot, because
 the failures it covers happen after the only channel you have has closed. What

@@ -15,7 +15,7 @@ sidebar_position: 64
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP))
 > and the PostgreSQL 18 manual *Client Connection Defaults*
 > ([postgresql.org/docs/18/runtime-config-client.html](https://www.postgresql.org/docs/18/runtime-config-client.html)).
-> JDK 25, Spring Framework 7.0.8, HikariCP 7.0.2, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, HikariCP 7.0.2, PostgreSQL 18.
 
 **An open transaction holds three scarce things at once: a pooled connection, any
 locks it has taken, and a snapshot the database cannot vacuum past. All three are

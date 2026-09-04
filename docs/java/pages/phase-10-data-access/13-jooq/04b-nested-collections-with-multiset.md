@@ -9,7 +9,7 @@ sidebar_position: 16
 > Verified: 2026-08 against the jOOQ 3.21 manual — *MULTISET value constructor*
 > ([multiset-value-constructor](https://www.jooq.org/doc/latest/manual/sql-building/column-expressions/multiset-value-constructor/))
 > and *POJOs* ([sql-execution/fetching/pojos](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/pojos/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Every data-access technology has to answer the same question: how do you load an order with its
 lines in one round trip without multiplying the order across every line? JPA answers with a fetch

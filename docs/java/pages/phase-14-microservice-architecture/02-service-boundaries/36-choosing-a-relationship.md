@@ -9,7 +9,7 @@ sidebar_position: 49
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Context Map; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
 > ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Choosing the wrong context mapping relationship is among the most expensive architectural mistakes in microservices: building an Anticorruption Layer where Conformist was appropriate wastes months authoring redundant translation mappers, while conforming to an uncooperative upstream poisons your core domain with external technical debt. Selecting the correct relationship pattern is not a matter of architectural taste; it is a deterministic calculation governed by three forces: organizational leverage between the teams, the strategic classification of the downstream domain (Core vs Supporting vs Generic), and the quality and stability of the upstream interface. A systematic decision matrix cuts through architectural dogma and matches pattern to operational reality.**
 

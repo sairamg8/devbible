@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Hibernate ORM
+> **Target: JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Hibernate ORM
 > 7.4.1 (Jakarta Persistence 3.2) · Spring Data JPA 4.1.0 · HikariCP 7.0.2 ·
 > Flyway 12.4.0 · PostgreSQL 18.**
 > ⚠️ Boot 4.1's baseline is **JDK 17** — 25 is the recommended LTS, not the floor.

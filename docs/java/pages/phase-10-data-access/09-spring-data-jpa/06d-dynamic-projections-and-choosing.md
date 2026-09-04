@@ -13,7 +13,7 @@ sidebar_position: 33
 > ([query-methods-details.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html));
 > and the Spring Data JPA source for `QueryParameterSetterFactory`
 > ([github.com/spring-projects/spring-data-jpa](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/repository/query/QueryParameterSetterFactory.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **So far the projection has been fixed at compile time by the method's return type. A

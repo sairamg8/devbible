@@ -10,7 +10,7 @@ sidebar_position: 26
 > with combine*, *Combining Arbitraries vs Flat Mapping*, *Flat Mapping*, *Uniqueness
 > Constraints*, *Collection Sizes* and *Default Parameter Generation*
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **No sandbox and no test run on this machine.** The code below is source, not a run;

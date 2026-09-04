@@ -9,14 +9,14 @@ sidebar_position: 2
 > Verified: 2026-09-01 against the **Micrometer 1.17 reference** — *Concepts · Purpose*,
 > *Concepts · Registry*
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/registry.html)),
-> the **`spring-boot-dependencies:4.1.0` POM** from Maven Central
+> the **`spring-boot-dependencies:4.1.1` POM** from Maven Central
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)),
 > the **`micrometer-bom:1.17.0` POM**
 > ([repo1.maven.org](https://repo1.maven.org/maven2/io/micrometer/micrometer-bom/1.17.0/micrometer-bom-1.17.0.pom)),
-> the **`spring-boot-starter-actuator:4.1.0` POM**, and the **Spring Boot 4.1.0 reference** —
+> the **`spring-boot-starter-actuator:4.1.0` POM**, and the **Spring Boot 4.1.1 reference** —
 > *Actuator · Metrics · Getting Started*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/4.1.0/reference/actuator/metrics.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **Micrometer is a vendor-neutral instrumentation API with pluggable backends: you write against
 `MeterRegistry` and a registry implementation on the classpath decides where the numbers go. The

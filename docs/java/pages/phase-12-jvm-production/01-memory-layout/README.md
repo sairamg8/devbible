@@ -19,7 +19,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** There is no JVM running behind these pages: every output shape is quoted
 > from documentation and attributed, or is arithmetic shown as arithmetic. No GC log line, heap
 > dump summary, NMT report or measurement here is fabricated.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`-Xmx` bounds the Java heap. It does not bound metaspace, the code cache, thread stacks, direct
 or mapped buffers, GC data structures, the compilers' arenas, symbol tables or the native

@@ -13,7 +13,7 @@ sidebar_position: 7
 > `ProblemDetailJacksonMixin` unwrapping the properties `Map` and re-inserting
 > unknown properties on deserialization, and the copy constructor for
 > subclasses). Boot 4 Jackson customiser rename confirmed against the **Spring
-> Boot 4.0 Release Notes** (GitHub wiki). Spring Boot 4.1.0, Spring Framework
+> Boot 4.0 Release Notes** (GitHub wiki). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **RFC 9457's five fields are a floor, not a ceiling — the spec expects services

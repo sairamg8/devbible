@@ -10,7 +10,7 @@ sidebar_position: 4
 > ([github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing))
 > and the Spring Boot reference *SQL Databases*
 > ([docs.spring.io/spring-boot](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 3](03-the-connection-budget.md) showed that the floor is
 `Tn x (Cm - 1) + 1`, and that the coefficient is `Cm - 1`. That is the whole

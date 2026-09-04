@@ -15,7 +15,7 @@ sidebar_position: 4
 > (`report_metadata_oome`) and `hotspot/share/runtime/arguments.cpp` (`special_jvm_flags[]`, for
 > the `UseCompressedClassPointers` deprecation)
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/memory/metaspace.cpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`Metaspace`, `Compressed class space`, `request size bytes for reason. Out of swap space?` and
 `reason stack_trace (Native method)` are the four documented messages that have nothing to do with

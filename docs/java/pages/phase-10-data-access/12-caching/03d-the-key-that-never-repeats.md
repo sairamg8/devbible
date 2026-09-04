@@ -15,7 +15,7 @@ sidebar_position: 9
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-cache.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-cache.html))
 > and the `RedisCache` javadoc
 > ([docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/cache/RedisCache.html](https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/cache/RedisCache.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Spring Data Redis 4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Spring Data Redis 4.1.
 
 **[3c](03c-keys-that-silently-vary.md) was about a key that carries too little and therefore
 serves the wrong answer. This is the mirror image: a key that carries too much never matches

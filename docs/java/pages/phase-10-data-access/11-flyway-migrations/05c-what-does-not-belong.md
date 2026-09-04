@@ -14,7 +14,7 @@ sidebar_position: 15
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-refreshmaterializedview.html))
 > and Flyway 12's `SqlMigrationResolver`
 > ([SqlMigrationResolver.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/resolver/sql/SqlMigrationResolver.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[05b](05b-what-belongs-in-a-repeatable-migration.md) listed the objects a repeatable migration can
 legitimately describe. This is the complement, and it is the more useful half, because the failure

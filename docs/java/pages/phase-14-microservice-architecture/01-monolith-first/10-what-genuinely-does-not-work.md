@@ -12,7 +12,7 @@ sidebar_position: 21
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)); Stefan
 > Tilkov, *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Everything up to here has argued that the split's costs are systematically under-priced.
 That argument only survives if the benefits are stated at full strength. Here is the list of

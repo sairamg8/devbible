@@ -16,7 +16,7 @@ sidebar_position: 34
 > `maxSurviving`, `reportAggregatorProperties`). Threshold semantics and the integer blind spot from the
 > [Maven quick start](https://pitest.org/quickstart/maven/); `maxSurviving`'s comparison from pitest
 > 1.30.0's `statistics/MutationStatistics.getTotalSurvivingMutations`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Everything below is read from the plugin's published
 > README and source. **No build output, error message from a run, score or timing on this page came from
 > executing anything.**

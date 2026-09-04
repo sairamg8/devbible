@@ -13,10 +13,10 @@ sidebar_position: 26
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)), the
 > **Micrometer 1.17 reference · Implementations · Prometheus**
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/implementations/prometheus.html))
-> and *Concepts · Rate Aggregation*, and **`spring-boot-dependencies:4.1.0`** for artifact and
+> and *Concepts · Rate Aggregation*, and **`spring-boot-dependencies:4.1.1`** for artifact and
 > client versions. Actuator endpoint exposure is Phase 9 topic 13 —
 > [02 · Exposure, access and ports](../../phase-9-spring-boot/13-actuator/02-exposure-access-and-ports.md).
-> No JVM was run for this page and no scrape output appears below. JDK 25 · Spring Boot 4.1.0 ·
+> No JVM was run for this page and no scrape output appears below. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0 · Prometheus Java client 1.5.1.
 
 **A push-based backend receives what your process decided to send. A pull-based one comes and takes

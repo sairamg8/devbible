@@ -14,7 +14,7 @@ sidebar_position: 23
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-jcache/src/main/java/org/hibernate/cache/jcache/MissingCacheStrategy.java)),
 > and `org.hibernate.cfg.CacheSettings`
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/CacheSettings.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Most second-level cache configuration you will find online is for Hibernate 5, and three
 specific things changed or are surprising enough that copying it produces an application which

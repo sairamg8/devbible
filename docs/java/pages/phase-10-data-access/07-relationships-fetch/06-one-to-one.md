@@ -12,7 +12,7 @@ sidebar_position: 9
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Hibernate ORM 7.4 *User Guide* §3.8.3 *@OneToOne*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **A one-to-one association is stored exactly like a many-to-one — a foreign key on one
 of the two tables — with a `UNIQUE` constraint added so the "one" holds in both

@@ -13,7 +13,7 @@ sidebar_position: 3
 > (ID Token) ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html));
 > Spring Security 7.x reference — OAuth 2.0 Client, Authorized Clients
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/client/authorized-clients.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **[02](02-the-access-token-is-opaque-by-contract.md) argued the rule. This chunk is the
 practical half: teams do not parse access tokens out of malice, they parse them because they

@@ -14,7 +14,7 @@ sidebar_position: 11
 > ([docs.spring.io/spring-boot/reference/io/caching.html](https://docs.spring.io/spring-boot/reference/io/caching.html))
 > and Boot 4.1.x `RedisCacheConfiguration` on the `4.1.x` branch
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/4.1.x/module/spring-boot-cache/src/main/java/org/springframework/boot/cache/autoconfigure/RedisCacheConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
 
 **A `ConcurrentHashMap` cache is per-JVM, so with three pods you have three caches, three copies
 of every entry and three different opinions about what the answer is. Redis fixes that by

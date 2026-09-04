@@ -13,7 +13,7 @@ sidebar_position: 26
 > and the Hibernate ORM 7.4 *Introduction* §4.10 *LOBs* and §9.15 *Using the bytecode
 > enhancer*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0,
 > Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Everything in this topic so far has been about a reference that was not followed. Column

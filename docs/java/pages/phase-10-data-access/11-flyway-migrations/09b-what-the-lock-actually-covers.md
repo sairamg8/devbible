@@ -13,7 +13,7 @@ sidebar_position: 29
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/documentation/Reference/Configuration)),
 > and PostgreSQL 18's *Advisory Locks*
 > ([postgresql.org](https://www.postgresql.org/docs/18/explicit-locking.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[09](09-many-instances-one-database.md) established that Flyway serialises concurrent runs with a
 PostgreSQL advisory lock and that a losing instance polls for about fifty seconds before failing

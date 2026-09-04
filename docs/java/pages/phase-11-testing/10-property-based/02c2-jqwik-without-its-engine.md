@@ -12,7 +12,7 @@ sidebar_position: 7
 > `JqwikSession` API; and against **Maven Central** for `net.jqwik:jqwik-spring`'s
 > `maven-metadata.xml` and `jqwik-spring-0.12.0.pom`
 > ([repo1.maven.org](https://repo1.maven.org/maven2/net/jqwik/jqwik-spring/)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test run on this machine** — Java source and documented behaviour
 > only.

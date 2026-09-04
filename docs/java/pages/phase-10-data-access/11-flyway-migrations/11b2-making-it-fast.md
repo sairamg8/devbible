@@ -16,7 +16,7 @@ sidebar_position: 39
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway))
 > and Flyway 12's *cleanDisabled* setting
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/configuration/flyway-namespace/flyway-clean-disabled-setting)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
 
 **A PostgreSQL container per test class is what turns "we should test the migrations" into "the build
 takes eleven minutes" into "we deleted that test". There are three ways to make it cheaper and they

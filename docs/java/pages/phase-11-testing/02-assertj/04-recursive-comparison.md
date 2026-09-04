@@ -11,7 +11,7 @@ sidebar_position: 12
 > `assertj-core` 3.27.7 API (`AbstractObjectAssert.usingRecursiveComparison`,
 > `RecursiveComparisonAssert`, `RecursiveComparisonConfiguration`,
 > `withStrictTypeChecking`, `usingOverriddenEquals`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **`isEqualTo` on a domain object asks that object's `equals` whether the test passes. That
 is a problem twice over: an entity's `equals` is often written for JPA identity rather than

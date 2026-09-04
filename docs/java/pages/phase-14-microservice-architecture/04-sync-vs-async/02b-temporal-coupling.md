@@ -13,7 +13,7 @@ sidebar_position: 3
 > Chris Richardson, "A phone company's customer experience: a great example of undesirable
 > tight runtime coupling"
 > ([microservices.io](https://microservices.io/post/architecture/2025/01/07/phone-company-cx-tight-runtime-coupling.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9. **No sandbox.**
 
 **Runtime coupling is a degree; temporal coupling is the specific mechanism that produces
 it. Two parties are temporally coupled when they must both be available *at the same

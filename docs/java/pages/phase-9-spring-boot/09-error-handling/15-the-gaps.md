@@ -16,7 +16,7 @@ sidebar_position: 15
 > `WebMvcConfigurationSupport` javadoc for the `handlerExceptionResolver`
 > composite bean (docs.spring.io/spring-framework/docs/current/javadoc-api).
 > One behaviour is cited from the Framework **source**, where the reference is
-> silent, and is marked as such. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> silent, and is marked as such. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **Everything in the preceding fourteen chunks is true inside exactly one window:

@@ -20,7 +20,7 @@ sidebar_position: 24
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox.** No timing, throughput or latency figure on this page is a measurement; the
 > shapes described are derived from the quoted source, not observed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A service that scales linearly to some number of concurrent requests and then flatly refuses to
 go further has a serialisation point somewhere. Logging is a candidate that almost nobody

@@ -10,7 +10,7 @@ sidebar_position: 16
 > [Mutation operators](https://pitest.org/quickstart/mutators/) page — the *Inline Constant Mutator*
 > section, its constant-type table, its constant-folding example and the page's numbered footnotes 1,
 > 2 and 3, quoted verbatim — and the *Invert Negatives Mutator* section's note on negative constants.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Operator behaviour is quoted from pitest's
 > documentation; the Java on this page is illustrative source, never a run.

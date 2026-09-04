@@ -12,7 +12,7 @@ sidebar_position: 28
 > ([getting-started/use-cases](https://www.jooq.org/doc/latest/manual/getting-started/use-cases/)) —
 > and the Hibernate ORM 7 `@Immutable` javadoc
 > ([docs.hibernate.org/orm/7.0/javadocs/…/annotations/Immutable.html](https://docs.hibernate.org/orm/7.0/javadocs/org/hibernate/annotations/Immutable.html)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The wiring in [08b](08b-using-both.md) is free. The modelling is not. Once both libraries are on
 the classpath you have two independently-derived models of one schema, and the only thing standing

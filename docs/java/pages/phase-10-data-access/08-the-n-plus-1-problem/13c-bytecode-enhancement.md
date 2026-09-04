@@ -13,7 +13,7 @@ sidebar_position: 47
 > Enhancement* / §29.1.1 *Runtime Bytecode Enhancement*, §29.5.1 (Gradle plugin) and
 > §29.6.1 (Maven plugin)
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2.
 
 **Two of the N+1 shapes in this topic cannot be fixed by any annotation, any query and any

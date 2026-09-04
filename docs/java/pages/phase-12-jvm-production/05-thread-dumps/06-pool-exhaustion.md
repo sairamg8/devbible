@@ -13,7 +13,7 @@ sidebar_position: 10
 > Hung Process"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox** — every dump fragment below is a marked schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Pool exhaustion is what most "the service stopped responding" incidents turn out to be, and it
 is the one finding you can make at a glance rather than by reading. You are not looking for a

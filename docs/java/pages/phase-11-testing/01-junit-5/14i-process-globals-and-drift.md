@@ -19,7 +19,7 @@ sidebar_position: 58
 > the OpenJDK quality outreach note on CLDR 42
 > ([inside.java](https://inside.java/2024/03/29/quality-heads-up/)) and the Oracle JDK 23 release
 > notes ([23all-relnotes](https://www.oracle.com/java/technologies/javase/23all-relnotes.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every item in this chunk is shared by the whole JVM process, or supplied by the machine the
 process happens to be running on. A test that writes one is writing a global; a test that reads

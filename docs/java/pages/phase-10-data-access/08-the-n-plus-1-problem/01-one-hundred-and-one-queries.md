@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the `org.hibernate.annotations.FetchMode` javadoc in the Hibernate 7.4 source
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/annotations/FetchMode.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Before any definition, look at the code. It is nine lines, every line is
 ordinary, and it issues one hundred and one SQL statements where you expected

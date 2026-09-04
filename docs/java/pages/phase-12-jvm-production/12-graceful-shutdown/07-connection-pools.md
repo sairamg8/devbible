@@ -17,7 +17,7 @@ sidebar_position: 12
 > and the **Spring Boot 4.1** reference · *Graceful Shutdown* for the phase in which the lifecycle
 > timeout applies ([docs.spring.io](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html)).
 > 🔴 **No sandbox.** No pool was closed and no query was aborted. Every quoted sentence is from the
-> javadoc or from source at the named path. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> javadoc or from source at the named path. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything up to here has had a timeout attached to it. The web server drains for a configured
 period, executors wait for `awaitTermination`, listener containers block for `shutdownTimeout`.

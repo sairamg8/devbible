@@ -12,7 +12,7 @@ sidebar_position: 21
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/migrations-271585107.html))
 > and Spring Boot 4.1's `FlywayAutoConfiguration`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Everything up to here has treated a migration as something that happens to a database. In a
 running service it happens to a database that code is actively using — and during a rolling

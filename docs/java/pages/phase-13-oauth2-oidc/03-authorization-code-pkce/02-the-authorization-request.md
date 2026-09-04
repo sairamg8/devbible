@@ -13,7 +13,7 @@ sidebar_position: 3
 > ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636));
 > RFC 9700 §2.1, §2.1.1
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **The authorization request is a GET the browser performs against the authorization
 server's authorization endpoint. It is unauthenticated — the authorization server has no

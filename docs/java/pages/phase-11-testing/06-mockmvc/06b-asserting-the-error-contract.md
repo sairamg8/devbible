@@ -11,8 +11,8 @@ sidebar_position: 16
 > and the `ModelAssert` returned by `.model()`; and against **Jakarta Bean Validation 3.1**, which
 > specifies no ordering for the `ConstraintViolation` set. Message interpolation and message codes
 > belong to [08 · Validation](../../phase-9-spring-boot/08-validation/14-messages-and-interpolation.md).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **[06](06-validation-errors.md) established the mechanism: which exception each failure raises, why

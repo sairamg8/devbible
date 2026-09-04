@@ -15,7 +15,7 @@ sidebar_position: 14
 > ([docker-library/docs](https://github.com/docker-library/docs/blob/master/eclipse-temurin/content.md)).
 > 🔴 **No sandbox** — nothing was linked or built here. The two size figures in this page are
 > **quoted from the `jlink` man page's own example output** and are attributed as such; they are
-> not measurements of anything you will build. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> not measurements of anything you will build. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every previous chunk in this run has shaved the image from the outside: a smaller base
 ([03b](03b-alpine-and-musl.md)), fewer programs ([03d](03d-distroless.md)), better layer reuse

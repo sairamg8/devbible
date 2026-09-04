@@ -10,7 +10,7 @@ sidebar_position: 1
 > and v3.2.0 (19 September 2025) at spec.openapis.org/oas/latest.html and
 > spec.openapis.org/oas/v3.1.1.html, and the springdoc-openapi properties
 > reference (springdoc.org/properties.html) for the version springdoc emits.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **An OpenAPI document is not documentation. It is a *description* — a JSON or
 YAML file that states, in a format other programs can read without guessing,

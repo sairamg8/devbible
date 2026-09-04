@@ -13,7 +13,7 @@ sidebar_position: 30
 > [using-jooq-with-jpa-entities](https://www.jooq.org/doc/latest/manual/sql-execution/alternative-execution-models/using-jooq-with-jpa/using-jooq-with-jpa-entities/))
 > and the `@Modifying` behaviour recorded in
 > [Topic 09 · 04b](../09-spring-data-jpa/04b-flush-clear-and-the-stale-context.md).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[08d](08d-the-stale-persistence-context.md) is the damage; this is the toolbox. Six entries,
 ordered by how much you should prefer them: the first two are design decisions and the other four

@@ -15,7 +15,7 @@ sidebar_position: 21
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.Builder.OfVirtual.html));
 > and the **JDK 25 core-libraries "Virtual Threads" guide**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A platform thread's stack is a fixed-size native reservation made by the operating system.
 A virtual thread's stack is a Java object on the garbage-collected heap that grows and shrinks

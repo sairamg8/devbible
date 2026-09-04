@@ -14,7 +14,7 @@ sidebar_position: 5
 > ([rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt),
 > [rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **An authorization server signs every kind of token it issues with the same key: ID tokens,
 access tokens, logout tokens, DPoP proofs, software statements. A resource server that checks

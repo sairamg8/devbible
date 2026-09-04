@@ -12,7 +12,7 @@ sidebar_position: 5
 > ([w3.org](https://www.w3.org/TR/trace-context-2/)); and the **OpenTelemetry Trace SDK
 > specification**, *Span flags* ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/trace/sdk/)).
 > 🔴 **No sandbox** — every header value below is the specification's own example. JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0.
 
 **The whole of wire propagation for a trace is one HTTP header of fixed length. That is its
 virtue: fast to parse, impossible to half-send, and identical across every vendor. It is also why

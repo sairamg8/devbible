@@ -9,7 +9,7 @@ sidebar_position: 1
 > Verified: 2026-08-31 against RFC 6749 §1.1 (Roles), §1.2 (Protocol Flow), §2.1 (Client
 > Types), §2.2 (Client Identifier) and the Abstract, at
 > [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Before OAuth2 there was one party on the far side of the wire: "the server". It stored your
 password, checked it, held your data and decided who could read it. OAuth2's contribution is

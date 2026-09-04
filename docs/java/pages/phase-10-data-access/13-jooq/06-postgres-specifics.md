@@ -8,7 +8,7 @@ sidebar_position: 21
 
 > Verified: 2026-08 against the jOOQ 3.21 manual — *Window functions*
 > ([column-expressions/window-functions](https://www.jooq.org/doc/latest/manual/sql-building/column-expressions/window-functions/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Ask why a team adopted jOOQ and the answer is rarely "type safety" — it is usually a specific
 query somebody could not write. Running totals, rank within group, this row compared with the

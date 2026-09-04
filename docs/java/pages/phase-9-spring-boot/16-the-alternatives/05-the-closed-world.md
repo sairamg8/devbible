@@ -10,7 +10,7 @@ sidebar_position: 5
 > Metadata* (graalvm.org/latest/reference-manual/native-image/metadata/) and the
 > Spring Boot reference *Introducing GraalVM Native Images* and *Advanced Native
 > Images Topics* (docs.spring.io/spring-boot/reference/packaging/native-image/).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Native image is the most oversold technology in the Java ecosystem and the
 one most worth understanding accurately, because the pitch — instant startup,

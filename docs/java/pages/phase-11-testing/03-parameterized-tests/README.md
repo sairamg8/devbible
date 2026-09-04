@@ -13,7 +13,7 @@ sidebar_position: 0
 > ([docs.junit.org/6.0.3/api](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/module-summary.html))
 > and the JUnit 6 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **JUnit Jupiter 6.0.3**, AssertJ 3.27.7. 🔴 **JUnit is at 6, not 5** — several rules here
 > changed in 6.0 and every page says which. **No sandbox** — these pages carry Java source and
 > sentences quoted from the documentation, never a fabricated test run.

@@ -13,8 +13,8 @@ sidebar_position: 32
 > ([Random](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Random.html)).
 > ⚠️ The Datafaker documentation states that seeding makes instantiation "predictable"; it does
 > **not** state that a given seed yields the same values across Datafaker versions, and no such
-> guarantee is claimed here. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring
-> Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7. Datafaker is **not**
+> guarantee is claimed here. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring
+> Boot 4.1.0, Spring Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7. Datafaker is **not**
 > managed by the Boot BOM. **No sandbox** — Java source and documented behaviour only, never a
 > run, and no generated value is reproduced as if observed.
 

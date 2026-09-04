@@ -13,7 +13,7 @@ sidebar_position: 13
 > and the Hibernate ORM 7.4 *Introduction* §5.1 on persistence-context lifetime and thread
 > confinement and §5.5 on `merge`
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **"Am I in a transaction?" is the wrong question, and answering it correctly is why so many
 people get stuck. The question that matters is "is the object in my hand managed by the

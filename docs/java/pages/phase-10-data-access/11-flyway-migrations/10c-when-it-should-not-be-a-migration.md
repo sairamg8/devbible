@@ -14,7 +14,7 @@ sidebar_position: 34
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/configuration/flyway-namespace/flyway-lock-retry-count-setting)),
 > and Spring Boot 4.1's `FlywayProperties` and `FlywayMigrationInitializer`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[10](10-data-migrations.md) showed what a data migration costs, [10b](10b-batching-a-backfill.md)
 showed how to make one survivable and [10b2](10b2-keeping-each-batch-cheap.md) how to make each batch

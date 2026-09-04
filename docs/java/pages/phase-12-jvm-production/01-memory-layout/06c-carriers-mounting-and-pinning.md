@@ -14,7 +14,7 @@ sidebar_position: 22
 > between `synchronized` and `java.util.concurrent.locks`"*, *"Future Work"* and *"Alternatives"*
 > ([openjdk.org](https://openjdk.org/jeps/491)); and the **JDK 25 core-libraries "Virtual
 > Threads" guide** ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[06b](06b-virtual-thread-stacks.md) established that a virtual thread's stack is a heap
 object. This chunk covers the half of the story that is still native: the carrier platform

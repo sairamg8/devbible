@@ -8,7 +8,7 @@ sidebar_position: 25
 
 > Verified: 2026-08 — this chunk is a synthesis of Phase 10 and makes no new documented
 > claims; every assertion it summarises is sourced on the chunk it links to. JDK 25,
-> Spring Boot 4.1.0, Hibernate 7.4.1, Spring Data JPA 4.1.0, Spring Data MongoDB 5.1.0,
+> Spring Boot 4.1.1, Hibernate 7.4.1, Spring Data JPA 4.1.0, Spring Data MongoDB 5.1.0,
 > Spring Data Redis 4.1.0, jOOQ, PostgreSQL, MongoDB 8, Redis 8.
 
 **Phase 10 started with a `Connection` and ended with a store that has no schema. In

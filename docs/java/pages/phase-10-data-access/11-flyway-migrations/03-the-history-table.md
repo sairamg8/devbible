@@ -15,7 +15,7 @@ sidebar_position: 5
 > *Validate* ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/commands/validate))
 > and the *Flyway Table Setting* reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/flyway-table-setting-277579042.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Everything Flyway does is one comparison. On one side, the migrations it can resolve from
 `locations` — the files. On the other, the rows in `flyway_schema_history` — the facts. `migrate`

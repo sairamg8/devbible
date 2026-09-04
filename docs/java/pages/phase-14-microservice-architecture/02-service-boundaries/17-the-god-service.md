@@ -12,7 +12,7 @@ sidebar_position: 25
 > ([microservices.io](https://microservices.io/patterns/decomposition/self-contained-service.html))
 > and *Dark matter force: minimize runtime coupling*
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The god service arrives as a fix. Someone notices that the business rules are scattered

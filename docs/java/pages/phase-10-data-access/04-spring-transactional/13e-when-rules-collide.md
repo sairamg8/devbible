@@ -14,7 +14,7 @@ sidebar_position: 38
 > and the Spring Framework 7.0 reference *Rolling back a declarative transaction*,
 > section *Strongest matching rule wins*
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **[Chunk 13d](13d-the-matching-algorithm.md) showed the loop: score every rule
 with `getDepth`, keep the lowest score, fall back to the default if nothing

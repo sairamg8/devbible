@@ -14,7 +14,7 @@ sidebar_position: 8
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)),
 > and the **JDK 25 `jcmd` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02](02-the-process-map.md) covered the four regions that explain most of a JVM's
 footprint. This page covers the rest — including the two that grow with your heap and have no

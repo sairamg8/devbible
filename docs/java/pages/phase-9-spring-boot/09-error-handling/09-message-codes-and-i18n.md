@@ -15,7 +15,7 @@ sidebar_position: 9
 > updates the corresponding `ProblemDetail` fields accordingly"*, the code
 > scheme `problemDetail.type.[FQCN]` / `problemDetail.title.[FQCN]` /
 > `problemDetail.[FQCN][suffix]`, and the per-exception message-argument
-> table). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> table). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every `ProblemDetail` Spring builds for its own exceptions is
 message-source-resolvable, which means you can retitle and reword all of them —

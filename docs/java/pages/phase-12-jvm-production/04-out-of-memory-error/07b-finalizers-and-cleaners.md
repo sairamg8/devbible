@@ -16,7 +16,7 @@ sidebar_position: 22
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)), and the
 > **Eclipse Memory Analyzer documentation** for the `Finalizable` and `Unfinalized` GC root types
 > ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/concepts/gcroots.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Finalization is deprecated for removal and almost nobody writes a `finalize` method any more, and
 yet it still causes `OutOfMemoryError: Java heap space` in production — because the objects with

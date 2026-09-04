@@ -15,7 +15,7 @@ sidebar_position: 28
 > compared against the same file on the `6.2` and `6.6` branches; and the Hibernate ORM 7.4
 > *Introduction* §9.15 *Using the bytecode enhancer*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0,
 > Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **[08](08-lazy-basic-attributes.md) and [08b](08b-the-lob-reflex-and-the-group.md) were about a

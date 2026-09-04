@@ -16,7 +16,7 @@ sidebar_position: 30
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Spring Framework 7.0 reference *Understanding the Cache Abstraction*
 > ([docs.spring.io/spring-framework/reference/integration/cache/strategies.html](https://docs.spring.io/spring-framework/reference/integration/cache/strategies.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[1 · Caching is a decision](01-caching-is-a-decision.md) opened this topic by putting caching
 fourth in a list of four moves. This chunk is the case for the first three, and it is not an

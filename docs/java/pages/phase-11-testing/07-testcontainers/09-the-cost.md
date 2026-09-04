@@ -12,7 +12,7 @@ sidebar_position: 48
 > ([java.testcontainers.org](https://java.testcontainers.org/supported_docker_environment/continuous_integration/dind_patterns/))
 > documentation, and the **2.0.5** sources at tag `2.0.5`
 > ([github.com/testcontainers](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Testcontainers 2.0.5, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > benchmark — and this page in particular refuses to give you a number, because the honest ones are

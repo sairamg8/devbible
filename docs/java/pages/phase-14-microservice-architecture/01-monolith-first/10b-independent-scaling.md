@@ -12,7 +12,7 @@ sidebar_position: 22
 > *Microservice Premium*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)); Spring Boot
 > 4.1 reference, profiles.
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > throughput, memory or instance-count figures on this page were measured.
 
 **A monolith scales horizontally. Richardson says so in the pattern's own example section.

@@ -11,7 +11,7 @@ sidebar_position: 3
 > Processing Requirements); RFC 8705 (*OAuth 2.0 Mutual-TLS Client Authentication and
 > Certificate-Bound Access Tokens*); and RFC 9700 §2.2.1 — at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc7523).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A client secret is a bearer credential for your entire application. It goes over the wire
 on every token request, sits in a configuration store, gets copied into a `.env`, appears in

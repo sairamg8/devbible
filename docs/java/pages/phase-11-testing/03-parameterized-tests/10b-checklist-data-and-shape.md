@@ -11,7 +11,7 @@ sidebar_position: 37
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
 > Every quote below is one already verified in the chunk it links to; this page adds no new claims
 > about JUnit's behaviour.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[10](10-the-checklist.md) covered the report, the rows that can pass wrongly, and the source.
 These four groups are the ones that need a fact you have to know rather than a judgement you can

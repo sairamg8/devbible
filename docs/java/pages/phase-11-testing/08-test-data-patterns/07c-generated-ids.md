@@ -11,8 +11,8 @@ sidebar_position: 33
 > ([UUID](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/UUID.html)).
 > The seeded-generator APIs (`Random`, `ThreadLocalRandom`, `RandomGenerator`,
 > `RandomGeneratorFactory`) are verified in
-> [07d](07d-seeded-randomness-in-the-jdk.md). Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7. **No sandbox** — Java source and
+> [07d](07d-seeded-randomness-in-the-jdk.md). Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7. **No sandbox** — Java source and
 > documented behaviour only, never a run, and no generated identifier is reproduced as if
 > observed.
 

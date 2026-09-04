@@ -15,7 +15,7 @@ sidebar_position: 13
 > ([docs.spring.io/spring-boot/reference/testing/](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html))
 > and the JUnit 5 user guide on extensions
 > ([junit.org/junit5/docs/current/user-guide/](https://junit.org/junit5/docs/current/user-guide/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, JUnit 5.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, JUnit 5.
 
 **Every other section of this topic tells you how to find an N+1 that already
 exists. This one stops the next one. The argument is

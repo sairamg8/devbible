@@ -8,8 +8,8 @@ sidebar_position: 21
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `report-mojo.html` (formats, output directory)
 > and `check-mojo.html` (`haltOnFailure`, `jacoco.skip`), and the **Gradle user manual**'s JaCoCo
-> page for the `reports` block. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25,
-> Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> page for the `reports` block. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25,
+> Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build, no CI and no test runs on this machine.** No specific CI product's configuration
 > is quoted, because none was verified — the shapes below are described generically and you should
 > check your platform's own documentation for exact syntax.

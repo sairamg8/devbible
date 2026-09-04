@@ -24,7 +24,7 @@ sidebar_position: 18
 > for `G1ReservePercent` and `G1NumCollectionsKeepPinned`.
 > The example log line in "The exact log line" below is **quoted verbatim from the tuning
 > guide**, not produced by any run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A healthy G1 log contains young collections, occasional Concurrent Start / Remark / Cleanup
 sequences, and Mixed collections. It does not contain `Evacuation Failure` and it does not

@@ -10,7 +10,7 @@ sidebar_position: 9
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html))
 > and the `@FieldSource` javadoc
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/FieldSource.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **When a factory method's entire body is `return List.of(...)`, the method is ceremony.
 `@FieldSource` points at the constant directly. It is the newest of the built-in sources —

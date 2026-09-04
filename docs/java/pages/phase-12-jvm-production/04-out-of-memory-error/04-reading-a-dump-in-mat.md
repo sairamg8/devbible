@@ -16,7 +16,7 @@ sidebar_position: 12
 > which names MAT and YourKit as examples and *"no specific product is recommended"*.
 > **No sandbox** — no dump was opened for these pages; every behaviour described is quoted from
 > the tool's documentation, and no histogram, tree or retained size is reproduced from memory.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Opening a heap dump for the first time is disorienting because the default view — the class
 histogram — is the wrong one. It ranks classes by bytes, and in every Java application the top of

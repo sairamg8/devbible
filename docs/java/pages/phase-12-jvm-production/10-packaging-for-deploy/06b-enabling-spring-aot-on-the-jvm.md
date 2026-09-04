@@ -14,7 +14,7 @@ sidebar_position: 23
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/aot.html)). Documented at
 > Spring Boot 4.1.x / Spring Framework 7.0.x. 🔴 **No sandbox** — the one log fragment below is
 > **quoted from the Spring Boot reference**; nothing here was built or run. JDK 25 · Spring Boot
-> 4.1.0 / Spring Framework 7.0.8.
+> 4.1.0 / Spring Framework 7.0.9.
 
 **[06](06-spring-boot-aot-processing.md) explained what the AOT engine generates. This chunk is the
 two-line operation of switching it on for a JVM deployment, why those two lines are dangerous

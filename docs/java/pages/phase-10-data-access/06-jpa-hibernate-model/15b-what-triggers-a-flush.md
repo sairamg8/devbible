@@ -13,7 +13,7 @@ sidebar_position: 30
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the `SynchronizeableQuery` javadoc
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/query/SynchronizeableQuery.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/query/SynchronizeableQuery.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Auto-flush exists so that a query cannot return results that contradict what you already
 did in this unit of work. To decide whether that risk exists, Hibernate compares the tables

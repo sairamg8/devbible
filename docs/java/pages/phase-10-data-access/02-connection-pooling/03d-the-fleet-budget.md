@@ -13,7 +13,7 @@ sidebar_position: 6
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)),
 > and the HikariCP wiki *About Pool Sizing*
 > ([github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[Chunk 3c](03c-the-server-side-ceiling.md) established that the database has a
 fixed, boot-time budget and that only part of it is yours.

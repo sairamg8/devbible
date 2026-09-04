@@ -10,7 +10,7 @@ sidebar_position: 9
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP),
 > raw at tag `HikariCP-7.0.2`) and its source
 > (`pool/HikariPool.java`, `pool/PoolBase.java`, `HikariConfig.java`).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Six HikariCP properties are durations in milliseconds, they sit next to each
 other in the documentation, and people copy them around as a block. They measure

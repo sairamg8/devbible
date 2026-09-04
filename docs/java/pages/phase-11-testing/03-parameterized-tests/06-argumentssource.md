@@ -12,7 +12,7 @@ sidebar_position: 11
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/ArgumentsProvider.html))
 > and `ParameterDeclarations`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/support/ParameterDeclarations.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`@ValueSource`, `@CsvSource`, `@EnumSource`, `@MethodSource`, `@NullSource` — every one of
 them is declared `@ArgumentsSource(SomeProvider.class)`. There is one extension point and eight

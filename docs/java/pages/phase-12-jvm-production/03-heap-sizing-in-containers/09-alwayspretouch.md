@@ -13,7 +13,7 @@ sidebar_position: 15
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp)
 > and
 > [`gc/z/z_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/z/z_globals.hpp).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The most dangerous property of a container-sized JVM is that a wrong number does not fail
 immediately. `-Xmx` reserves address space, the heap commits lazily, committed pages become

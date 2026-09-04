@@ -13,7 +13,7 @@ sidebar_position: 9
 > (docs.spring.io/spring-framework/docs/current/javadoc-api), the Framework
 > reference *Web MVC → Filters* for `ShallowEtagHeaderFilter`, and the Spring Boot
 > 4.1 reference *Enable HTTP Response Compression*
-> (docs.spring.io/spring-boot/how-to/webserver.html). Spring Boot 4.1.0, Spring
+> (docs.spring.io/spring-boot/how-to/webserver.html). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **The servlet body is a stream, and a stream can be read once. That single

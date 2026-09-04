@@ -13,7 +13,7 @@ sidebar_position: 5
 > `spring.data.mongodb.field-naming-strategy` and
 > `spring.data.mongodb.auto-index-creation`
 > ([docs.spring.io/spring-boot/appendix/application-properties/](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0.
 
 **Three of the mapping layer's defaults are global switches rather than per-property
 annotations: how a Java property name becomes a stored key, whether `@Indexed` actually

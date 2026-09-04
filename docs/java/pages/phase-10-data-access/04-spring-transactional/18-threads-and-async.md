@@ -16,7 +16,7 @@ sidebar_position: 49
 > ([.../integration/scheduling.html](https://docs.spring.io/spring-framework/reference/integration/scheduling.html))
 > and the JDBC *Controlling Database Connections* reference
 > ([.../data-access/jdbc/connections.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/connections.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **A Spring transaction is a JDBC `Connection` (or an `EntityManager`) stored in a
 `ThreadLocal`. Every piece of machinery that finds "the current transaction"

@@ -8,8 +8,8 @@ sidebar_position: 9
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/counters.html`, with the line-counter
 > definition and its two caveats quoted directly. `javac` flag behaviour from the **JDK 25**
-> tool documentation. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25,
-> Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> tool documentation. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25,
+> Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — documented behaviour and configuration
 > only, never build output.
 

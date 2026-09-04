@@ -14,7 +14,7 @@ sidebar_position: 26
 > ([docs.hibernate.org/orm/7.4/userguide](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and *A Short Guide to Hibernate 7* §5.7 *Entity graphs and eager fetching*
 > ([docs.hibernate.org/orm/7.4/introduction](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, Spring Boot 4.1.0.
+> JDK 25, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, Spring Boot 4.1.1.
 
 **A `join fetch` puts the fetch plan inside a query string, so fetching the same
 rows with a different plan means writing a second query. An entity graph puts the

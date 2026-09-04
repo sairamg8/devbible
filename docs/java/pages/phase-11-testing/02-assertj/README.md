@@ -11,7 +11,7 @@ sidebar_position: 2
 > **3.27.7** sources on GitHub (tag `assertj-build-3.27.7`) — the doc site truncates before
 > several sections, so the class javadocs are the primary source for soft assertions,
 > custom assertions, `Optional`, temporal assertions and descriptions.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **AssertJ Core 3.27.7**, JUnit Jupiter 6.0.3. **No sandbox** — these pages carry Java
 > source and failure messages quoted from the documentation, never a fabricated test run.
 

@@ -12,7 +12,7 @@ sidebar_position: 5
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and the **JDK 25 Troubleshooting Guide**, "Diagnostic Tools → Native Memory Tracking"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Container sizing policy belongs to `03 · Heap sizing in containers` *(not written yet)*.
 What belongs here, in the memory-layout topic, is the arithmetic underneath it: what the

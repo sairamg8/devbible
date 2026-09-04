@@ -16,7 +16,7 @@ sidebar_position: 14
 > sizing rule and the `terminationGracePeriodSeconds` guidance
 > ([docs.spring.io](https://docs.spring.io/spring-boot/how-to/deployment/cloud.html)).
 > 🔴 **No sandbox.** No pod was deleted and no hook was executed. Every number here is a documented
-> default or a documented example, attributed. JDK 25 · Spring Boot 4.1.0.
+> default or a documented example, attributed. JDK 25 · Spring Boot 4.1.1.
 
 **[08](08-readiness-and-the-load-balancer.md) established that the fix for the propagation window
 is a delay before SIGTERM rather than a longer drain. This page is that delay: what it looks like,

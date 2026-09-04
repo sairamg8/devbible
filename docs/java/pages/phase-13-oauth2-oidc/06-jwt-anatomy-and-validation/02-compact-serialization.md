@@ -12,7 +12,7 @@ sidebar_position: 2
 > §6.1 (Example Unsecured JWT), §7.2 (Validating a JWT).
 > ([rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc7519](https://www.rfc-editor.org/rfc/rfc7519.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every JWT you will handle is a JWS in compact serialization: exactly two dot characters,
 three base64url segments, no whitespace, no line breaks. The format is dull, and that is

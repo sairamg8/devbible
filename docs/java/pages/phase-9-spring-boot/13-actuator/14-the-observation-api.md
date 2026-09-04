@@ -6,7 +6,7 @@ sidebar_position: 14
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Observability* (docs.spring.io/spring-boot/reference/actuator/observability.html:
 > Boot auto-configuring an `ObservationRegistry`; beans of type
 > `ObservationPredicate`, `GlobalObservationConvention`, `ObservationFilter` and
@@ -19,7 +19,7 @@ sidebar_position: 14
 > (docs.micrometer.io/micrometer/reference/observation/components.html:
 > `ObservationHandler` lifecycle methods, `Observation.Context` as a Map-like
 > container, and `DefaultMeterObservationHandler` producing timers, long task
-> timers and counters for signalled events). Spring Boot 4.1.0, Spring Framework
+> timers and counters for signalled events). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Everything up to this chunk taught you to record a duration. The Observation

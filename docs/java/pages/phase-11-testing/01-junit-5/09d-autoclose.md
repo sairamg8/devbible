@@ -8,7 +8,7 @@ sidebar_position: 25
 
 > Verified: 2026-08-27 against the JUnit 6.0.3 User Guide — "Built-in Extensions"
 > ([built-in-extensions](https://docs.junit.org/6.0.3/writing-tests/built-in-extensions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **The second of Jupiter's two default-registered user-facing extensions. `@AutoClose` is
 four lines of documentation and three sharp edges: a `null` field is skipped with only a log

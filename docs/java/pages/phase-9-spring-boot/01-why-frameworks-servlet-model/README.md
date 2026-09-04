@@ -11,7 +11,7 @@ sidebar_position: 1
 > (docs.spring.io/spring-framework/reference/web/), the Spring Boot reference
 > *Servlet Web Applications* (docs.spring.io/spring-boot/reference/web/servlet.html),
 > the Spring Boot 4.0 Migration Guide, JEP 444 and JEP 491.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
 
 **Spring MVC is not a web server and it does not speak HTTP. Underneath it sits
 a servlet container — a socket, a parser, a thread pool and a mapping table —

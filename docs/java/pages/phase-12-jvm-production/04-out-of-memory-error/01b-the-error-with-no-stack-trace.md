@@ -14,7 +14,7 @@ sidebar_position: 2
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/memory/universe.cpp)),
 > and the **JDK 25 API documentation** for `java.lang.OutOfMemoryError`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/OutOfMemoryError.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`java.lang.OutOfMemoryError: Java heap space` with no `at` lines under it is not a logging
 misconfiguration, not `-XX:-OmitStackTraceInFastThrow`, and not a truncated log. It is HotSpot

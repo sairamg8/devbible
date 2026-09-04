@@ -8,7 +8,7 @@ sidebar_position: 58
 
 > Verified: 2026-09-04 against Neal Ford & Mark Richards, *Software Architecture: The Hard Parts* (O'Reilly),
 > Chapter 2: Architectural Quanta and Granularity; Sam Newman, *Building Microservices* (2nd ed., O'Reilly).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Architectural boundaries should never be chosen by subjective intuition or fashion. In *Software Architecture: The Hard Parts*, Neal Ford and Mark Richards introduce the framework of Dark Energy (repulsive forces pushing components into separate microservices) and Dark Matter (attractive forces pulling components together into a single deployable). Using the four domain aggregates established in the previous chapter (`Order`, `Payment`, `Inventory`, and `Shipment`), we evaluate four distinct candidate cuts against these competing forces to objectively determine where to draw the boundary.**
 

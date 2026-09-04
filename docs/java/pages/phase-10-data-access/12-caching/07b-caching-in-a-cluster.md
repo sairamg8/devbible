@@ -15,7 +15,7 @@ sidebar_position: 25
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)),
 > and the Redis *Client-side caching introduction*
 > ([redis.io/docs](https://redis.io/docs/latest/develop/clients/client-side-caching/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8.
 
 **Every mechanism in [7 · Invalidation](07-invalidation.md) assumed the eviction reached the
 cache. Run more than one instance with a local cache and it reaches *a* cache — the one in the

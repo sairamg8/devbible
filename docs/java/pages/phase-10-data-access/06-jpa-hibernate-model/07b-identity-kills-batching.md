@@ -13,7 +13,7 @@ sidebar_position: 11
 > ([docs.hibernate.org/orm/7.4/introduction/...](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the `java.sql.Statement#addBatch`/`executeBatch` javadoc for JDK 25
 > ([docs.oracle.com/en/java/javase/25/docs/api/](https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/java/sql/Statement.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18, pgJDBC 42.7.x.
 
 **Someone adds `spring.jpa.properties.hibernate.jdbc.batch_size=50` to fix a slow bulk
 import. Nothing changes. They increase it to 500. Still nothing. The reason is not

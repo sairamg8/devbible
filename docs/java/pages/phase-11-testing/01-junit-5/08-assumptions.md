@@ -12,7 +12,7 @@ sidebar_position: 21
 > ([Assumptions](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Assumptions.html))
 > and `TestExecutionResult.Status`
 > ([TestExecutionResult.Status](https://docs.junit.org/6.0.3/api/org.junit.platform.engine/org/junit/platform/engine/TestExecutionResult.Status.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **An assertion says "this must be true or the code is wrong". An assumption says "this must
 be true or the *question is not meaningful here*". They are opposite claims that look

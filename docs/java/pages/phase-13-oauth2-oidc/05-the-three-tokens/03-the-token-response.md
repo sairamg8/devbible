@@ -13,7 +13,7 @@ sidebar_position: 4
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc6750.txt)); OpenID Connect Core 1.0
 > §3.1.3.3 (Successful Token Response)
 > ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Everything the client is entitled to know about its tokens arrives in one JSON object, and
 that object is specified tightly enough that you should be able to recite it. Five

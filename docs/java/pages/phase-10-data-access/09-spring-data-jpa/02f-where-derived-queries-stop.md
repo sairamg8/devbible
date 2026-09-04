@@ -13,7 +13,7 @@ sidebar_position: 11
 > ([query-methods.html](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html))
 > and "Specifications"
 > ([specifications.html](https://docs.spring.io/spring-data/jpa/reference/jpa/specifications.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **There are two boundaries, and people usually notice the wrong one. The hard
 boundary is what the grammar cannot express — grouping, left joins, aggregates,

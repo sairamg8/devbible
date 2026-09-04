@@ -13,8 +13,8 @@ sidebar_position: 29
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)), the
 > **Kubernetes API reference** ([kubernetes.io](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)),
 > and **JEPs 220, 386, 483, 514 and 515** ([openjdk.org](https://openjdk.org/jeps/483)).
-> 🔴 **No sandbox** — nothing on this page was built, run or measured. JDK 25 · Spring Boot 4.1.0 /
-> Spring Framework 7.0.8.
+> 🔴 **No sandbox** — nothing on this page was built, run or measured. JDK 25 · Spring Boot 4.1.1 /
+> Spring Framework 7.0.9.
 
 **A checklist is only useful if every item names the failure it prevents. This one does, and it ends
 with the decisions a checklist cannot make for you — because the recurring theme of this topic is

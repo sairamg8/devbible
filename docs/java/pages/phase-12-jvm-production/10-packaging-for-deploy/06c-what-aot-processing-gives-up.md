@@ -15,7 +15,7 @@ sidebar_position: 24
 > and the **Spring Boot Maven plugin** reference, "Ahead-of-Time Processing"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/maven-plugin/aot.html)). Documented at Spring
 > Boot 4.1.x / Spring Framework 7.0.x. 🔴 **No sandbox** — nothing here was built or run. JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[06](06-spring-boot-aot-processing.md) and [06b](06b-enabling-spring-aot-on-the-jvm.md) were about
 what AOT processing does and how to switch it on. This chunk is the invoice. Every restriction below

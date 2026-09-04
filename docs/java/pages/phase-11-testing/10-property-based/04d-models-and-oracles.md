@@ -10,7 +10,7 @@ sidebar_position: 17
 > *Optional @Property Attributes* (`tries`) and *Arbitrary Provider Methods*
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and the **JDK 25 javadoc**
 > for `java.math.BigDecimal.equals` and `compareTo`.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **"Test oracle" is a term from the testing literature, not from jqwik's documentation.**

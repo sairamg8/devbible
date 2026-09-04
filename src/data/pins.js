@@ -202,11 +202,11 @@ export const PINS = {
   // ── The Java stack ─────────────────────────────────────────────────────────
   springBoot: {
     label: 'Spring Boot', source: 'eol:spring-boot', policy: 'latest',
-    pin: '4.1.1', checked: '2026-08-31', tracks: ['java'], names: ['spring boot'],
+    pin: '4.1.1', checked: '2026-09-04', tracks: ['java'], names: ['spring boot'],
   },
   springFramework: {
     label: 'Spring Framework', source: 'eol:spring-framework', policy: 'latest',
-    pin: '7.0.9', checked: '2026-08-31', tracks: ['java'], names: ['spring framework'],
+    pin: '7.0.9', checked: '2026-09-04', tracks: ['java'], names: ['spring framework'],
   },
   mockito: {
     label: 'Mockito', source: 'gh:mockito/mockito', policy: 'latest',

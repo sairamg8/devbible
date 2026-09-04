@@ -8,14 +8,14 @@ sidebar_position: 10
 
 > Verified: 2026-09-01 against the **Mockito 5.23.0** sources on GitHub, tag `v5.23.0` —
 > [`Mockito.java`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/Mockito.java)
-> §39 and §48 for what the mock makers intercept; the **Spring Framework 7.0.8** source of
+> §39 and §48 for what the mock makers intercept; the **Spring Framework 7.0.9** source of
 > [`ReflectionTestUtils`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-test/src/main/java/org/springframework/test/util/ReflectionTestUtils.java),
 > whose class javadoc is quoted below; and **Maven Central**'s release list for
 > `org.powermock:powermock-core`
 > ([search.maven.org](https://search.maven.org/artifact/org.powermock/powermock-core)),
 > whose newest version is **2.0.9, published 2020-11-01**.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output.
 

@@ -15,7 +15,7 @@ sidebar_position: 60
 > ([docs.jboss.org/hibernate/orm/7.4/javadocs/](https://docs.jboss.org/hibernate/orm/7.4/javadocs/org/hibernate/Hibernate.html))
 > and the Spring Boot 4.1 properties appendix
 > ([docs.spring.io/spring-boot/appendix/application-properties/](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **N+1 reaches production because it passes review — every query is fast, every query is
 correct, and nothing in the diff looks like data access. This is what to look at instead, in

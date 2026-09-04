@@ -15,8 +15,8 @@ sidebar_position: 3
 > `META-INF/spring/…WebMvcTest.includes` resource contributed by `spring-boot-security-test`;
 > plus the Spring Boot 4.1 reference "Testing Spring Boot Applications"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, **Spring Boot 4.1.0** (sources
-> read at 4.1.1), Spring Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, **Spring Boot 4.1.1** (sources
+> read at 4.1.1), Spring Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **[01](01-no-socket-no-server.md) said a `MockMvc` test can be built two ways, and that the

@@ -12,7 +12,7 @@ sidebar_position: 10
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/cfg/JdbcSettings.java)),
 > and Spring Boot 4.1's `JpaProperties` and `HibernateJpaVendorAdapter`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/4.1.x/module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/autoconfigure/JpaProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **[Chunk 2](02-why-nobody-sees-it.md) argued that the emitted SQL is the only
 place N+1 is visible. This chunk is how to make it visible — and the first thing

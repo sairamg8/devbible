@@ -13,7 +13,7 @@ sidebar_position: 11
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Jakarta Persistence 3.2 `@MapsId` javadoc
 > ([.../mapsid](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/mapsid)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **The previous chunk explained why the inverse side of a `@OneToOne` cannot be lazy: the
 provider must know whether the row exists before it can choose between `null` and a

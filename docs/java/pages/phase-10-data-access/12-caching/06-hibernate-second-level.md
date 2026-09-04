@@ -14,7 +14,7 @@ sidebar_position: 19
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/documentation/src/main/asciidoc/userguide/chapters/caching/Caching.adoc)),
 > and Jakarta Persistence 3.2 §11.1.7 `Cacheable`
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Everything before this chunk was Spring's cache abstraction: you choose what to cache, you
 choose the key, and the cache sits in front of a method. Hibernate's second-level cache is a

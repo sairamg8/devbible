@@ -14,7 +14,7 @@ sidebar_position: 27
 > ([docs.spring.io/spring-boot/3.5/appendix/.../slices.html](https://docs.spring.io/spring-boot/3.5/appendix/test-auto-configuration/slices.html)),
 > and the Spring Framework 7.0 reference *Testing → Executing SQL scripts*
 > ([docs.spring.io/.../executing-sql.html](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/executing-sql.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **A repository built the way [chunk 12](12-testing-and-the-shape-of-a-repository.md)
 describes is a class with one collaborator, so the only interesting test is the one

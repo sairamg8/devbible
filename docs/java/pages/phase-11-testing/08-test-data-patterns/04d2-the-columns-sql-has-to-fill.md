@@ -9,13 +9,13 @@ sidebar_position: 15
 > Verified: 2026-08-31 against the **Spring Framework 7.0.x** testing reference,
 > *Executing SQL Scripts*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/executing-sql.html)),
-> and the Spring Boot 4.1.0 javadoc for
+> and the Spring Boot 4.1.1 javadoc for
 > [`DataJpaTest`](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/data/jpa/test/autoconfigure/DataJpaTest.html).
 > The sequence and identity-generator behaviour described here is JPA/Hibernate and
 > PostgreSQL semantics, not a Spring feature; the one claim I could not settle from the
 > documentation is flagged inline.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No database and no sandbox on this machine** — SQL and Java source only, never the
 > output of a run.
 

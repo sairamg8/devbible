@@ -11,7 +11,7 @@ sidebar_position: 7
 > the Hibernate ORM 7.4 *User Guide* §25 *Envers → @OneToMany with @JoinColumn* and
 > §31.4 *Associations*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Adding `@JoinColumn` to a unidirectional `@OneToMany` switches the physical mapping
 from an association table to a real foreign-key column on the child's table. That is a

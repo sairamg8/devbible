@@ -10,7 +10,7 @@ sidebar_position: 43
 > Native Memory Tracking sections
 > ([docs.oracle.com/en/java/javase/25/troubleshoot/](https://docs.oracle.com/en/java/javase/25/troubleshoot/)) —
 > the `baseline`, `summary.diff` and `detail.diff` subcommands and the documented overhead
-> figures are taken from it. JDK 25 · Spring Boot 4.1.0.
+> figures are taken from it. JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — commands and their described behaviour only. **No captured NMT output.**
 
 **[11](11-native-memory-tracking.md) covered what NMT accounts for and how to read a report.

@@ -17,7 +17,7 @@ sidebar_position: 34
 > and the `TransientDataAccessException` and `ObjectOptimisticLockingFailureException`
 > javadocs
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/orm/ObjectOptimisticLockingFailureException.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **The same event — an `UPDATE` that matched no rows — surfaces under four different type
 names depending on which API you are holding. Knowing which one you will actually catch is

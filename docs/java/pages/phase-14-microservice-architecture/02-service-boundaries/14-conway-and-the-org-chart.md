@@ -13,7 +13,7 @@ sidebar_position: 22
 > which states *"Each service is owned by a team, which has sole responsibility for making
 > changes"* and sizes a codebase *"so as to not exceed the cognitive capacity of team"*;
 > Skelton and Pais, *Team Topologies* (2019), cited by concept and referenced by that
-> pattern. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud
+> pattern. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud
 > train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Conway's 1968 observation is that an organisation designing a system produces a design

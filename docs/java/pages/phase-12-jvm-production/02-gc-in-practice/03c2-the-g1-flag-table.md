@@ -24,7 +24,7 @@ sidebar_position: 14
 > for `StringDeduplicationAgeThreshold`, and
 > [`opto/c2_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/opto/c2_globals.hpp)
 > for `ReduceInitialCardMarks`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Oracle publishes two tables of G1 defaults and neither has the column that decides whether
 a flag will start your JVM. This page merges them and adds it: `EXPERIMENTAL`, `DIAGNOSTIC`,

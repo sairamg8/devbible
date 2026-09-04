@@ -14,7 +14,7 @@ sidebar_position: 33
 > and the JDK 25 source for `jdk.internal.vm.annotation.Contended` and
 > `java.util.concurrent.atomic.Striped64`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/java.base/share/classes/java/util/concurrent/atomic/Striped64.java)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08c](08c-alignment-and-padding.md) treated padding as waste the JVM minimises. This page is
 the one case where padding is the point: when two threads write to two different fields that

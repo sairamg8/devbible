@@ -12,7 +12,7 @@ sidebar_position: 32
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/prefer-acid-over-base.html));
 > Vaughn Vernon, *Effective Aggregate Design, Part I* (2011)
 > ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/), CC BY-ND 3.0), for
-> the invariant test. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring
+> the invariant test. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring
 > Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Every worked example in architecture writing scores a boundary that turns out to be right,

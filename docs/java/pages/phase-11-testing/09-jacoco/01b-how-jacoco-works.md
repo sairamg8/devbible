@@ -8,8 +8,8 @@ sidebar_position: 2
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s documentation — `implementation.html`,
 > `classids.html`, `counters.html`, `faq.html`, `agent.html`, `changes.html` — and the Maven
-> plugin's `prepare-agent-mojo.html`. Version spine from `spring-boot-dependencies:4.1.0`:
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> plugin's `prepare-agent-mojo.html`. Version spine from `spring-boot-dependencies:4.1.1`:
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine** — configuration and documented behaviour only,
 > never output from a run.
 

@@ -10,7 +10,7 @@ sidebar_position: 1
 > Configuration* (docs.spring.io/spring-boot/reference — the complete ordered
 > `PropertySource` list, the config-data file sub-order, and the
 > `SPRING_APPLICATION_JSON` and `RandomValuePropertySource` entries).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Spring Boot does not have "a configuration file". It has an `Environment` — an
 ordered stack of property sources, fifteen of them in the documented list — and

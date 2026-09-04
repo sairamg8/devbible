@@ -6,13 +6,13 @@ sidebar_position: 27
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Framework 7.0.8** reference —
+> Verified: 2026-08-31 against the **Spring Framework 7.0.9** reference —
 > [Context Configuration with Dynamic Property Sources](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/dynamic-property-sources.adoc)
 > (the "Precedence" section, quoted verbatim) — and the
 > [`DynamicPropertyRegistrar`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-test/src/main/java/org/springframework/test/context/DynamicPropertyRegistrar.java)
-> javadoc at the same tag, which repeats the precedence rule; plus the **Spring Boot 4.1.0**
+> javadoc at the same tag, which repeats the precedence rule; plus the **Spring Boot 4.1.1**
 > reference at `v4.1.0` for the service-connection comparison.
-> Version spine: JDK 25, Spring Boot 4.1.0 / Spring Framework 7.0.8, **Testcontainers 2.0.5**,
+> Version spine: JDK 25, Spring Boot 4.1.1 / Spring Framework 7.0.9, **Testcontainers 2.0.5**,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.

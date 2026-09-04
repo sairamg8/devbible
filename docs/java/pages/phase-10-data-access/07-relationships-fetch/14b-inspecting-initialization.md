@@ -12,7 +12,7 @@ sidebar_position: 25
 > ([.../persistenceunitutil](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/persistenceunitutil))
 > and the Hibernate ORM 7.4 *Introduction* §5.6 *Proxies and lazy fetching*
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **"Is this loaded?" is a question you can ask without loading it, and there are two APIs
 for asking — the specification's `PersistenceUnitUtil` and Hibernate's `Hibernate` class,

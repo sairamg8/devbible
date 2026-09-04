@@ -15,7 +15,7 @@ sidebar_position: 7
 > ([docs.spring.io](https://docs.spring.io/spring-boot/maven-plugin/packaging.html)).
 > 🔴 **No sandbox** — no image was built and no size, layer size or startup timing below is a
 > measurement. Every Dockerfile on this page is quoted from the documentation, not composed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02](02-layered-jars.md) gave the model and [02b](02b-extracting-layers-and-the-image-cache.md)
 gave the commands. This is the artefact those two pages have been describing: the Dockerfile Spring

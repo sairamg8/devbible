@@ -13,7 +13,7 @@ sidebar_position: 29
 > and the Jakarta Persistence 3.2 specification §3.2.4 *Synchronization to the Database*
 > and the `FlushModeType` javadoc
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **A flush turns the persistence context's pending state changes into `INSERT`, `UPDATE` and
 `DELETE` statements and sends them on the current connection. A commit ends the database

@@ -20,7 +20,7 @@ sidebar_position: 0
 > Articles 5 and 32.
 > 🔴 **No sandbox.** No timing, throughput, volume or cost figure on these pages is a
 > measurement. Every quoted string is from documentation or from source, and attributed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the phase's only <span className="db-tier t-master">Master</span> topic, and the reason
 is that logging is the one production concern where the defects are silent by construction. A

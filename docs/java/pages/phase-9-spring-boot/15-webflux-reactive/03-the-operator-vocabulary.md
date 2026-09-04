@@ -9,7 +9,7 @@ sidebar_position: 3
 > Verified: 2026-08-19 against the Reactor 3 reference guide — *Reactor Core
 > Features*, *Handling Errors* and the *Which operator do I need?* appendix
 > (projectreactor.io/docs/core/release/reference/) — and the `Mono`/`Flux`
-> Javadoc for `flatMap` concurrency defaults. Spring Boot 4.1.0, Spring
+> Javadoc for `flatMap` concurrency defaults. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Control flow in a reactive codebase is not a language feature any more; it is

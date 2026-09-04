@@ -6,7 +6,7 @@ sidebar_position: 13
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics · Per-meter Properties*
 > (docs.spring.io/spring-boot/reference/actuator/metrics.html:
 > `management.metrics.distribution.slo` publishing a cumulative histogram with
@@ -20,7 +20,7 @@ sidebar_position: 13
 > those within the range set by minimumExpectedValue and maximumExpectedValue,
 > inclusive"*, `serviceLevelObjectives`) and the Micrometer
 > `io.micrometer.core.instrument.config.MeterFilter` and
-> `DistributionStatisticConfig` javadoc. Spring Boot 4.1.0, Spring Framework
+> `DistributionStatisticConfig` javadoc. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Buckets are published per time series, not per meter — so turning on a

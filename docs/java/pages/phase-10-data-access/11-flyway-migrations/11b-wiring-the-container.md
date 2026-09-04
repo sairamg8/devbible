@@ -14,7 +14,7 @@ sidebar_position: 38
 > ([github.com/testcontainers](https://github.com/testcontainers/testcontainers-java/blob/main/modules/postgresql/src/main/java/org/testcontainers/postgresql/PostgreSQLContainer.java))
 > and Spring Boot's `FlywayContainerConnectionDetailsFactory`
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/testcontainers/FlywayContainerConnectionDetailsFactory.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
 
 **[11](11-testing-migrations.md) argued that the migrations test needs a real PostgreSQL. Getting one
 into a Spring Boot test is three lines of code and two decisions, and both decisions have a failure

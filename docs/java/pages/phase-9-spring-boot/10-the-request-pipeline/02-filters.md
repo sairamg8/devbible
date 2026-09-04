@@ -16,7 +16,7 @@ sidebar_position: 2
 > are used to resolve exceptions thrown during request processing"), the
 > `OncePerRequestFilter` javadoc, and the Spring Boot 4.1 Actuator *Tracing*
 > reference for `logging.pattern.correlation` and the baggage properties.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A filter is the only layer that runs for every request the container accepts —
 including the ones that 404, the ones with a malformed body, and the ones your

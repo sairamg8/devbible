@@ -13,7 +13,7 @@ sidebar_position: 6
 > [`OngoingStubbing`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/stubbing/OngoingStubbing.java)
 > — `thenReturn`, `thenThrow(Throwable...)`, `thenThrow(Class)` — and of
 > [`Mockito.when`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/Mockito.java#L2915).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

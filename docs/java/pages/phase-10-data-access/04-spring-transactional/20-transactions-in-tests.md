@@ -11,7 +11,7 @@ sidebar_position: 53
 > ([docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html))
 > and the `TestTransaction` javadoc
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/TestTransaction.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/TestTransaction.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **The same annotation, a completely different contract. On a service method,
 `@Transactional` commits unless something goes wrong. On a test method, it rolls

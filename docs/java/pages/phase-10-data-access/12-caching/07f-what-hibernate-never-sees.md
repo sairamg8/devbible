@@ -15,7 +15,7 @@ sidebar_position: 29
 > ([docs.jboss.org/hibernate/orm/7.4/javadocs](https://docs.jboss.org/hibernate/orm/7.4/javadocs/org/hibernate/query/SynchronizeableQuery.html))
 > and the Jakarta Persistence 3.2 specification §4.11 *Bulk Update and Delete Operations*
 > ([jakarta.ee/specifications/persistence/3.2](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[7e](07e-the-writes-the-cache-never-sees.md) is the same problem for the Spring cache abstraction,
 where at least you can see the annotation that is missing. Hibernate's second-level cache is worse in

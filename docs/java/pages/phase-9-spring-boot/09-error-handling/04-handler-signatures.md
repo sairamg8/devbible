@@ -13,7 +13,7 @@ sidebar_position: 4
 > including `ErrorResponse`/`ProblemDetail`, and the `produces` attribute with
 > media-type mapping) and *Controller Advice*
 > (docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-advice.html
-> — global handlers applied after local ones). Spring Boot 4.1.0, Spring
+> — global handlers applied after local ones). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **An `@ExceptionHandler` method is an ordinary handler method whose "request" is

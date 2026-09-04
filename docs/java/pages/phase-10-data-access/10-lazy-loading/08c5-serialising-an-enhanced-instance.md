@@ -20,7 +20,7 @@ sidebar_position: 32
 > ([docs.oracle.com/en/java/javase/25/](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/io/Serializable.html))
 > and the *Java Object Serialization Specification* §4.6 *Stream Unique Identifiers*
 > ([docs.oracle.com/en/java/javase/25/docs/specs/serialization/](https://docs.oracle.com/en/java/javase/25/docs/specs/serialization/class.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0,
 > Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **[08c4](08c4-the-enhanced-instance.md) was about what an enhanced instance is while it is in

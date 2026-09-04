@@ -14,7 +14,7 @@ sidebar_position: 32
 > `src/hotspot/share/oops/arrayOop.hpp` for the array length placement
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/classfile/fieldLayoutBuilder.cpp)).
 > ⚠️ `CompactFields` **no longer exists** in JDK 25's `globals.hpp`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08](08-the-object-header.md) gave the header its bytes and
 [08b](08b-compact-object-headers.md) took some of them away. This page is what happens to

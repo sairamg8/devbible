@@ -9,7 +9,7 @@ sidebar_position: 16
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/changes.html`, which is where the filter
 > list and its per-version history live — ⚠️ **there is no `doc/filtering.html`**; both
 > `jacoco.org` and `eclemma.org` return 404 for that path. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — documented behaviour only.
 
 **A great many hand-written coverage exclusions exist to hide code JaCoCo already hides. The

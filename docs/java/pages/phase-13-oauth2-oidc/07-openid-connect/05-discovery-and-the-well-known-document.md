@@ -17,7 +17,7 @@ sidebar_position: 8
 > the Spring Security 7.x `ClientRegistrations.fromIssuerLocation` /
 > `NimbusJwtDecoder.withIssuerLocation` behaviour
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — quoted specification text and illustrative configuration; the metadata
 > document shown is a structural example, not a captured response.
 

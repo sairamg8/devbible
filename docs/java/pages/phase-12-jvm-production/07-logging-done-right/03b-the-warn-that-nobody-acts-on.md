@@ -14,7 +14,7 @@ sidebar_position: 6
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)).
 > 🔴 **No sandbox.** No counts, rates or volumes on this page are measurements; the arithmetic is
 > presented as arithmetic.
-> JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Every service of a certain age has a set of WARN lines that fire constantly and that everyone has
 learned to scroll past. They are not harmless. They are the reason nobody notices the new WARN

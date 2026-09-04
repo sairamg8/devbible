@@ -15,7 +15,7 @@ sidebar_position: 12
 > and the pgJDBC documentation for `prepareThreshold`,
 > `preparedStatementCacheQueries` and `preparedStatementCacheSizeMiB`
 > ([jdbc.postgresql.org/documentation/use/](https://jdbc.postgresql.org/documentation/use/)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **Spring's named-parameter support lets you bind a whole collection to one
 placeholder, which looks like it solved the `IN (?)` problem from

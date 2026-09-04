@@ -16,7 +16,7 @@ sidebar_position: 16
 > ([Disabled](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Disabled.html))
 > and `TestExecutionListener`
 > ([TestExecutionListener](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/TestExecutionListener.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **There is one mechanism here, not two. `@Disabled` is not special-cased in the engine: it
 is handled by a built-in `ExecutionCondition` called `DisabledCondition`, exactly like

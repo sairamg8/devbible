@@ -18,7 +18,7 @@ the **JDK 25 `java` tool reference** — `-XX:MaxTenuringThreshold`,
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp))
 > for `InitialTenuringThreshold`, `PretenureSizeThreshold`, `AlwaysTenure` and `NeverTenure`,
 > none of which appear in the man page.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03](03-the-heap.md) laid out the spaces. This page is the policy that moves objects
 between them: how an age is counted, how the tenuring threshold is chosen and re-chosen every

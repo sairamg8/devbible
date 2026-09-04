@@ -9,12 +9,12 @@ sidebar_position: 20
 > Verified: 2026-08-28 against the Spring Framework 7.0.x reference *Testing → TestContext
 > Framework → Context Caching*
 > ([caching](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/caching.html))
-> and the Spring Boot 4.1.0 reference *Testing*
+> and the Spring Boot 4.1.1 reference *Testing*
 > ([spring-boot-applications](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html));
 > the claims about caching, forking and the cache statistics are the ones already sourced in
 > [05](05-the-context-cache.md).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox, no suite was run, and there are no timings on this page.** Every number below
 > is arithmetic on quantities you measure yourself, not a measurement of ours.
 

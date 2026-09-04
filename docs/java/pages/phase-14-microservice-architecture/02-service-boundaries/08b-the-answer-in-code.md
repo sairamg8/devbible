@@ -14,7 +14,7 @@ sidebar_position: 13
 > `@Transactional(propagation = Propagation.REQUIRES_NEW)` and `@TransactionalEventListener`
 > — and microservices.io *Self-contained Service*
 > ([microservices.io](https://microservices.io/patterns/decomposition/self-contained-service.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **[08 · Whose job is it?](08-whose-job-is-it.md) produces one of two answers, and each answer

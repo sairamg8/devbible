@@ -13,7 +13,7 @@ sidebar_position: 21
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/BeforeParameterizedClassInvocation.html))
 > and `@ParameterizedClass`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedClass.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A parameterized class has three nested scopes — the class, the invocation, the test method —
 and Jupiter's original two hooks only cover the outer and inner ones. `@BeforeAll` fires once

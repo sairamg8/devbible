@@ -12,7 +12,7 @@ sidebar_position: 34
 > (whose javadoc is quoted verbatim) and `TestcontainersExtension.java`,
 > `core/src/main/java/org/testcontainers/containers/GenericContainer.java` and
 > `core/src/main/java/org/testcontainers/lifecycle/Startables.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

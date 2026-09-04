@@ -12,7 +12,7 @@ sidebar_position: 9
 > ([jooq-with-flyway](http://www.jooq.org/doc/latest/manual/getting-started/tutorials/jooq-with-flyway/)),
 > which names Testcontainers as a third-party tool and links a separate article
 > ([blog.jooq.org](https://blog.jooq.org/using-testcontainers-to-generate-jooq-code/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The previous route needed you to supply an empty PostgreSQL. This one supplies its own: start a
 container, run the migrations into it, generate, stop the container — one Maven execution, no

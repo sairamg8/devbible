@@ -13,7 +13,7 @@ sidebar_position: 7
 > *Concepts · Metric types*
 > ([prometheus.io](https://prometheus.io/docs/prometheus/latest/querying/functions/)).
 > No JVM was run for this page. The worked arithmetic below is quoted from the Micrometer *Rate
-> Aggregation* page, not measured. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 ·
+> Aggregation* page, not measured. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 ·
 > Micrometer 1.17.0 · Prometheus Java client 1.5.1.
 
 **[03c](03c-counter-versus-gauge.md) argued that a counter is a promise. This page is what the

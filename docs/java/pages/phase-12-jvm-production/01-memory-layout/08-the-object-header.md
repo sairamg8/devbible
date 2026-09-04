@@ -16,7 +16,7 @@ sidebar_position: 29
 > `src/hotspot/share/oops/arrayOop.hpp`, `src/hotspot/share/oops/objLayout.hpp` and
 > `src/hotspot/share/runtime/globals.hpp` (`LockingMode`, `UseObjectMonitorTable`,
 > `UseCompactObjectHeaders`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **There is no such thing as a Java object that costs exactly the sum of its fields. Before the
 first field sits a header the JVM uses for four unrelated jobs — garbage collection, type

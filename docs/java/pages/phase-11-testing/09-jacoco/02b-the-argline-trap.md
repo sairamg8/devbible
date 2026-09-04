@@ -8,7 +8,7 @@ sidebar_position: 4
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `prepare-agent-mojo.html` and
 > `prepare-agent-integration-mojo.html`, and `classids.html` for the alternative cause of a
-> 0% report. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> 0% report. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > JUnit Jupiter 6.0.3, Maven Surefire as managed by Boot.
 > ⚠️ **No build on this machine** — POM configuration and documented behaviour only, never
 > build output.

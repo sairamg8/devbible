@@ -15,7 +15,7 @@ sidebar_position: 32
 > [pitest GitHub releases](https://github.com/hcoles/pitest/releases). `jvmArgs`, `avoidCallsTo` and
 > `excludedTestClasses` semantics from the
 > [Maven quick start](https://pitest.org/quickstart/maven/).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Everything below is read from published source and
 > release notes. **No console output, coverage figure or run outcome on this page came from a run.**

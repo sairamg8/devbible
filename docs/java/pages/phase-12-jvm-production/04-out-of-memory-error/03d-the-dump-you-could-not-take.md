@@ -14,7 +14,7 @@ sidebar_position: 11
 > levels ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/tasks/batch.html)),
 > and the **JDK 25 HotSpot source at tag `jdk-25+36`**, `services/heapDumper.cpp`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/services/heapDumper.cpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A heap dump is the most expensive diagnostic in this phase and the one most likely to fail
 halfway. It stops the world for the length of a full-heap walk, it writes a file roughly the size

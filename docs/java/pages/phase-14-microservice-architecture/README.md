@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud
+> **Target: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Cloud
 > 2025.1.x "Oakwood" (every component 5.0.x), Kubernetes-first.**
 > Documentation-validated — every page names its sources on a `> Verified:`
 > line (spring.io projects docs, microservices.io patterns, the Spring Cloud

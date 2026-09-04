@@ -15,7 +15,7 @@ sidebar_position: 5
 > (`Allocation::check_out_of_memory`), `gc/parallel/parallelScavengeHeap.cpp`,
 > `gc/g1/g1CollectedHeap.cpp`, `gc/serial/serialHeap.cpp` and `gc/z/zCollectedHeap.cpp`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/memAllocator.cpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every article about `GC overhead limit exceeded` presents it as a general JVM behaviour. It is
 not. The check is implemented in Parallel GC's allocation path and nowhere else; G1, Serial and

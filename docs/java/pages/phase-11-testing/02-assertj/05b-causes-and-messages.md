@@ -12,7 +12,7 @@ sidebar_position: 15
 > `hasMessageContaining`, `hasMessageMatching`, `hasCauseInstanceOf`,
 > `hasCauseExactlyInstanceOf`, `hasRootCause`, `hasRootCauseMessage`,
 > `hasRootCauseInstanceOf`, `hasNoCause`, `cause()`, `rootCause()`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[05](05-exceptions.md) got you an exception. This chunk is what to say about it. The
 message assertions are the ones everybody uses and the ones that break on a typo fix; the

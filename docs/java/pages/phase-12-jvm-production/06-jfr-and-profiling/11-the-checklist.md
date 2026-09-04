@@ -15,7 +15,7 @@ sidebar_position: 19
 > and the **async-profiler 4.5** documentation
 > ([github.com/async-profiler/async-profiler](https://github.com/async-profiler/async-profiler)).
 > 🔴 **No sandbox** — this page prescribes commands; it does not report their output.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the page to open when something is burning CPU or has got slower. It is ordered so the
 questions that eliminate the most, for the least cost, come first — and the first two are about

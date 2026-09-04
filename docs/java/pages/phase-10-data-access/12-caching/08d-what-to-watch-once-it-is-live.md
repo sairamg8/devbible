@@ -15,7 +15,7 @@ sidebar_position: 33
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the PostgreSQL 18 documentation *F.32 pg_stat_statements*
 > ([postgresql.org/docs/18/pgstatstatements.html](https://www.postgresql.org/docs/18/pgstatstatements.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Micrometer 1.17, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Micrometer 1.17, PostgreSQL 18.
 
 **[8c](08c-what-to-measure-first.md) is the evidence you gather before the annotation.
 This is the evidence afterwards — and its defining feature is an absence: every meter available to

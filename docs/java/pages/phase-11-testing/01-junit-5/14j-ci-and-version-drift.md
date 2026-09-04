@@ -14,7 +14,7 @@ sidebar_position: 59
 > ([23all-relnotes](https://www.oracle.com/java/technologies/javase/23all-relnotes.html));
 > the JUnit 6.0.3 User Guide — "Parallel Execution"
 > ([writing-tests/parallel-execution](https://docs.junit.org/6.0.3/writing-tests/parallel-execution.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[14i](14i-process-globals-and-drift.md) is the globals inside your process. This is everything
 outside it: the machine the suite runs on, and the versions of the things it runs against. Both

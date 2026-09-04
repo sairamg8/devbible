@@ -13,7 +13,7 @@ sidebar_position: 7
 > for REST using @ControllerAdvice*, the `swagger-annotations-jakarta` 2.2.52
 > annotation set, and RFC 9457 as covered in
 > [topic 09](../09-error-handling/06-problemdetail-and-rfc-9457.md).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A generated document describes the success response and, left alone, almost
 nothing else — which makes it a description of what happens when everything

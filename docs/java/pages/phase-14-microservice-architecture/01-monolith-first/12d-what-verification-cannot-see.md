@@ -14,7 +14,7 @@ sidebar_position: 38
 > published `spring-modulith-core:2.1.1` POM (`com.tngtech.archunit:archunit:1.4.2`); Stefan
 > Tilkov, *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **A green `verify()` is worth a lot and it is not what most teams think it is. The engine is
 ArchUnit analysing bytecode, so the unit of analysis is a *type reference*. Everything that

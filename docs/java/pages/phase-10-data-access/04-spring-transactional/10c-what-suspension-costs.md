@@ -17,7 +17,7 @@ sidebar_position: 28
 > ([postgresql.org/docs/18/runtime-config-client.html](https://www.postgresql.org/docs/18/runtime-config-client.html))
 > and *Routine Vacuuming*
 > ([postgresql.org/docs/18/routine-vacuuming.html](https://www.postgresql.org/docs/18/routine-vacuuming.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **"Suspend" sounds like something that happens to the transaction. It is not. It
 is something that happens to the *thread*: Spring unbinds a resource holder from

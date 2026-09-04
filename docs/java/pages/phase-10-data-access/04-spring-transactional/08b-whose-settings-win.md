@@ -15,7 +15,7 @@ sidebar_position: 22
 > ([.../transaction/support/AbstractPlatformTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/AbstractPlatformTransactionManager.html))
 > and the PostgreSQL 18 manual *SET TRANSACTION*
 > ([postgresql.org/docs/18/sql-set-transaction.html](https://www.postgresql.org/docs/18/sql-set-transaction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 8](08-propagation-required.md) established that several logical scopes
 map onto one physical transaction. This is the bill for that: three of

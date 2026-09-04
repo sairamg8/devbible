@@ -12,7 +12,7 @@ sidebar_position: 9
 > microservices.io *Dark matter force: Prefer ACID over BASE*
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/prefer-acid-over-base.html));
 > Eric Evans, *Domain-Driven Design* (2003), Ch. 6, cited by concept.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Team size, org chart, change rate, capability, language — every criterion in this topic

@@ -12,7 +12,7 @@ sidebar_position: 48
 > ([writing-tests/assertions](https://docs.junit.org/6.0.3/writing-tests/assertions.html));
 > javadoc for `Assertions`
 > ([Assertions](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **`@Timeout` has a `threadMode` attribute with three values, and choosing between them is not a
 performance decision — it decides whether your test's framework-managed state survives. The

@@ -11,7 +11,7 @@ sidebar_position: 16
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-repositories/mapping.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/mapping.html))
 > and *Usage*, for `PartialUpdate` and the note on referenced objects
 > ([…/redis-repositories/usage.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/usage.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0, Redis 8.
 
 **A Redis hash is a flat map of string fields to string values. A Java object is a tree.
 The mapping between them is a path-flattening scheme, and it is worth learning not because

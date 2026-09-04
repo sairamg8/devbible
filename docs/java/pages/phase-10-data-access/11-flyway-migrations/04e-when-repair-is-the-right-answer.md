@@ -14,7 +14,7 @@ sidebar_position: 12
 > ([DbRepair.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/command/DbRepair.java))
 > and Spring Boot 4.1's `FlywayAutoConfiguration` / `FlywayMigrationStrategy`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[04d](04d-what-repair-actually-does.md) is what the command does. This is the part that decides
 whether running it was a fix or a cover-up, and the test is a single question asked honestly:

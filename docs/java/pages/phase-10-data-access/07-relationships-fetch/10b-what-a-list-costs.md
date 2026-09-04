@@ -14,7 +14,7 @@ sidebar_position: 18
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/loader/MultipleBagFetchException.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/loader/MultipleBagFetchException.html))
 > and the Jakarta Persistence 3.2 `@OrderColumn` javadoc
 > ([.../ordercolumn](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/ordercolumn)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **A `List` promises two things Java programmers take for granted: order, and the same
 element twice. A relational table gives you neither for free. Hibernate's answer is the

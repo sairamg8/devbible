@@ -13,7 +13,7 @@ sidebar_position: 53
 > from [01b · Mock, stub, spy, fake](01b-mock-stub-spy-fake.md). The contract-test technique
 > below is a test-design pattern, not a Mockito API — nothing on this page is claimed as
 > Mockito documentation.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

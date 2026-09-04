@@ -13,7 +13,7 @@ sidebar_position: 56
 > ([.../boot/jpa/test/autoconfigure/TestEntityManager.html](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/jpa/test/autoconfigure/TestEntityManager.html))
 > and the Jakarta Persistence 3.2 `FlushModeType` javadoc
 > ([jakarta.ee/specifications/persistence/3.2/apidocs/.../flushmodetype](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/flushmodetype)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Chunks [20b](20b-the-false-positives.md) and [20c](20c-the-other-ways-a-test-lies.md)
 are about the ways a transaction test lies. This one and the four after it are about

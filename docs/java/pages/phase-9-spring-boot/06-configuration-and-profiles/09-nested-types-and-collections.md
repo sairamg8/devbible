@@ -12,7 +12,7 @@ sidebar_position: 9
 > notation for lists and sets, map binding and the bracket-notation rule for
 > keys, the `@Name` annotation for reserved keywords, and the *Merging Complex
 > Types* section: a list configured in more than one place is **replaced**, a
-> map is **merged**). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> map is **merged**). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Configuration is a tree, and the two shapes at its leaves behave in opposite
 ways when two sources both supply them. A list is replaced wholesale by the

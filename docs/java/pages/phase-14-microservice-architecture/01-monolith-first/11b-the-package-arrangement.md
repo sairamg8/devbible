@@ -9,7 +9,7 @@ sidebar_position: 28
 > Verified: 2026-09-01 against the Spring Modulith reference, *Fundamentals* — "Simple
 > Application Modules" and "The ApplicationModules Type"
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** —
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** —
 > the console output quoted below is reproduced from the reference documentation, not
 > produced by running anything here.
 

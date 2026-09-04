@@ -11,7 +11,7 @@ sidebar_position: 8
 > ([docs.spring.io/spring-framework/reference/core/aop/proxying.html](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html))
 > and *Using `@Transactional`*
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 3](03-the-self-invocation-trap.md) is caught in review, eventually — a
 method calling a method is at least visible. These three are not, because none of

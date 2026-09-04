@@ -15,7 +15,7 @@ sidebar_position: 14
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/main/spring-jdbc/src/main/java/org/springframework/jdbc/support/JdbcAccessor.java)),
 > and the `PersistenceExceptionTranslationPostProcessor` javadoc
 > ([docs.spring.io/.../dao/annotation/PersistenceExceptionTranslationPostProcessor.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/dao/annotation/PersistenceExceptionTranslationPostProcessor.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **"Exception translation" names two different things in Spring, and they run in
 different places for different technologies. `JdbcTemplate` translates

@@ -17,8 +17,8 @@ sidebar_position: 22
 > and its `@ConditionalOnMissingBean` registration.
 > Deeper on the base class itself:
 > [10 · ResponseEntityExceptionHandler](../../phase-9-spring-boot/09-error-handling/10-responseentityexceptionhandler.md).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **[07e](07e-what-the-handler-produces.md) covered the three ways to declare a status that write no

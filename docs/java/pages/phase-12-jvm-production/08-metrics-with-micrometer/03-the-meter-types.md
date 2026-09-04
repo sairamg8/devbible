@@ -11,7 +11,7 @@ sidebar_position: 3
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/meters.html)),
 > and the **Micrometer 1.17.0 sources** at tag `v1.17.0` —
 > [`AbstractTimerBuilder`](https://github.com/micrometer-metrics/micrometer/blob/v1.17.0/micrometer-core/src/main/java/io/micrometer/core/instrument/AbstractTimerBuilder.java).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **A meter type is a claim about how the number composes over time and across instances, and
 choosing the wrong one produces a series that looks fine and cannot be queried usefully. The

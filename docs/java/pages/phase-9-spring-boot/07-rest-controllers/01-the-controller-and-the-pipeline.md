@@ -6,7 +6,7 @@ sidebar_position: 1
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Request Mapping*
 > (docs.spring.io — the shortcut annotations, the composed-annotation
 > definition, the `PathPattern` syntax table, and the rule that
@@ -17,7 +17,7 @@ sidebar_position: 1
 > (`PathPatternParser.setMatchOptionalTrailingSeparator()` removed in 7.0),
 > and the spring.io blog *Introducing Jackson 3 support in Spring*
 > (2025-10-07 — `JacksonJsonHttpMessageConverter` replacing
-> `MappingJackson2HttpMessageConverter`). Spring Boot 4.1.0,
+> `MappingJackson2HttpMessageConverter`). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **`@RestController` is not a kind of controller. It is a plain `@Controller`

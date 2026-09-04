@@ -15,10 +15,10 @@ sidebar_position: 11
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)), the
 > **Spring Boot 4.1 configuration-properties appendix** for `logging.structured.json.context.*`
 > ([docs.spring.io](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)),
-> and the **Spring Boot 4.1.0 source** for `ElasticCommonSchemaStructuredLogFormatter`, which flattens MDC
+> and the **Spring Boot 4.1.1 source** for `ElasticCommonSchemaStructuredLogFormatter`, which flattens MDC
 > entries and key-value pairs into one region
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · Logback 1.5.34.
 
 **Once logs are structured, the field names become a contract. Dashboards, saved searches, alert
 rules, index mappings and retention policies all key on them, and every one of those consumers

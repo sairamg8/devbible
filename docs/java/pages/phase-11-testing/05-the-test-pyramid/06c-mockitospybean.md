@@ -12,8 +12,8 @@ sidebar_position: 13
 > and *Testing → Annotations → `@MockitoSpyBean`*
 > ([annotation-mockitobean](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-mockitobean.html)),
 > with spy semantics cross-checked against Mockito 5.23.0.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, Mockito 5.23.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, Mockito 5.23.0.
 > **No sandbox** — Java source only.
 
 **Of the three bean overrides, this is the only one that keeps your application's real object.

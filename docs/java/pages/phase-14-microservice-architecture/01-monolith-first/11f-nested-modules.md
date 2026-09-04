@@ -11,7 +11,7 @@ sidebar_position: 32
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)) —
 > and *Production-ready Features* — the actuator's `parent` and `nested` JSON fields
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/production-ready.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**; feature available
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**; feature available
 > since Spring Modulith **1.3**. **No sandbox.**
 
 **Some modules are genuinely large. Inventory in a real commerce system might contain stock

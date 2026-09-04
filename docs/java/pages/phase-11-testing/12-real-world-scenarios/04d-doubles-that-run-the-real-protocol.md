@@ -12,8 +12,8 @@ sidebar_position: 25
 > ([github.com/greenmail-mail-test/greenmail](https://github.com/greenmail-mail-test/greenmail/blob/master/greenmail-junit5/src/main/java/com/icegreen/greenmail/junit5/GreenMailExtension.java))
 > — package `com.icegreen.greenmail.junit5`, artifact `com.icegreen:greenmail-junit5`,
 > 2.1.3, which is ⚠️ **not** managed by the Spring Boot BOM and must be pinned by you.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no Docker on this machine** — this page carries Java source and
 > documented behaviour, never container logs, timings or test output.
 

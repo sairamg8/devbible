@@ -10,7 +10,7 @@ sidebar_position: 8
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/checkpoint-restore.html))
 > and the **Spring Boot 4.1** reference, "Checkpoint and Restore With the JVM"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/checkpoint-restore.html)).
-> Version spine: Spring Boot 4.1.0 / Spring Framework 7.0.8, JDK 25.
+> Version spine: Spring Boot 4.1.1 / Spring Framework 7.0.9, JDK 25.
 > 🔴 **No sandbox** — no application was checkpointed for this page.
 
 **The insight that makes Spring's support small is that "prepare for a checkpoint" is

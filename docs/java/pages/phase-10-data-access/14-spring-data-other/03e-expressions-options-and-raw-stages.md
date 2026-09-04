@@ -11,7 +11,7 @@ sidebar_position: 11
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/aggregation-framework.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/aggregation-framework.html))
 > and the `Aggregation` javadoc for `stage(String)` / `stage(Bson)`, *"Since: 4.0"*
 > ([docs.spring.io/spring-data/mongodb/docs/current/api/…/aggregation/Aggregation.html](https://docs.spring.io/spring-data/mongodb/docs/current/api/org/springframework/data/mongodb/core/aggregation/Aggregation.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0,
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0,
 > MongoDB 8.
 
 **Stages are the skeleton of a pipeline; expressions are what happens inside them, and

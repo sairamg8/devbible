@@ -13,7 +13,7 @@ sidebar_position: 3
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java))
 > and the Redgate Flyway *PostgreSQL* database reference
 > ([documentation.red-gate.com/flyway/reference/database-driver-reference/postgresql-database](https://documentation.red-gate.com/flyway/reference/database-driver-reference/postgresql-database)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Boot's default is `classpath:db/migration` and most projects never change it, which is
 correct and also means most people never learn what the setting does — until the day a profile,

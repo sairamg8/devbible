@@ -10,7 +10,7 @@ sidebar_position: 1
 > its REQUIRED/OPTIONAL markings — and §1 (Introduction), at
 > [openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html);
 > and RFC 6749 §1.1, RFC 6750 §1, RFC 7519 §4.1.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **OpenID Connect is often described as "OAuth2 plus identity", which makes it sound like a
 large addition. It is not. It is one token, defined in one section, with ten claims — and

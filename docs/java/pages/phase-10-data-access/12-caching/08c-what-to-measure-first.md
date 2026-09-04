@@ -19,7 +19,7 @@ sidebar_position: 32
 > and the PostgreSQL 18 documentation *F.32 pg_stat_statements* and *14.1 Using EXPLAIN*
 > ([postgresql.org/docs/18/pgstatstatements.html](https://www.postgresql.org/docs/18/pgstatstatements.html),
 > [postgresql.org/docs/18/using-explain.html](https://www.postgresql.org/docs/18/using-explain.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Micrometer 1.17, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Micrometer 1.17, PostgreSQL 18.
 
 **[8](08-when-not-to-cache.md) and [8b](08b-when-the-cache-is-the-wrong-risk.md) are reasons to say
 no. This is what you need in hand to say yes — five numbers, four of which are cheap to obtain and

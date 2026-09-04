@@ -13,7 +13,7 @@ sidebar_position: 11
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Spring Boot 4.1 reference *Logging* and *Actuator → Loggers*
 > ([docs.spring.io/spring-boot/reference/](https://docs.spring.io/spring-boot/reference/features/logging.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Two properties print the same SQL. One of them goes through your logging
 framework and one of them does not, and everything else follows from that. This

@@ -10,7 +10,7 @@ sidebar_position: 10
 > Property*, *Failure Reporting*, *Creating an Example-based Test* and *Assertions*
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and the **AssertJ 3.27.7**
 > API for the assertions used in the examples.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — ⚠️ read
 > [02b · The version collision](02b-the-version-collision.md) before adding it to a Boot 4.1
 > build.

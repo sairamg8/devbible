@@ -15,7 +15,7 @@ sidebar_position: 14
 > [openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html);
 > RFC 7009 (OAuth 2.0 Token Revocation)
 > ([datatracker.ietf.org/doc/html/rfc7009](https://datatracker.ietf.org/doc/html/rfc7009)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 >
 > ⚠️ **Provenance limit.** RP-Initiated Logout, Front-Channel Logout, Back-Channel Logout and
 > Session Management are **separate specifications** from Core 1.0, published alongside it at

@@ -10,7 +10,7 @@ sidebar_position: 18
 > ([conditional-test-execution](https://docs.junit.org/6.0.3/writing-tests/conditional-test-execution.html));
 > javadoc for `TestExecutionListener`
 > ([TestExecutionListener](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/TestExecutionListener.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[07b](07b-the-built-in-conditions.md) covered the conditions that read the platform — the
 OS and the JRE — which are facts about the machine that nobody has to remember to set.

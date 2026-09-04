@@ -6,14 +6,14 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-28 against the Spring Boot 4.1.0 reference *Testing → Auto-configured Tests*
+> Verified: 2026-08-28 against the Spring Boot 4.1.1 reference *Testing → Auto-configured Tests*
 > and *Features → Developing Auto-configuration → Condition Evaluation Report*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)),
 > the Boot 4.1.0 javadoc for `TypeExcludeFilters`, `OverrideAutoConfiguration`,
 > `ImportAutoConfiguration` and `WebMvcTypeExcludeFilter`, and the Spring Framework 7.0.x
 > reference *Core → `@Import`*.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — exception text below is the standard `NoSuchBeanDefinitionException` shape as
 > documented, not captured from a run.
 

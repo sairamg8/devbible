@@ -13,7 +13,7 @@ sidebar_position: 16
 > ([openjdk.org](https://openjdk.org/jeps/509)).
 > 🔴 **No sandbox** — no flame graph, sample count or percentage below is a captured run. The
 > worked example is the project documentation's own.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A flame graph is the standard way to look at a profile, and it is routinely misread in exactly
 one way: as something happening over time. It is not. Understanding how one is built from samples

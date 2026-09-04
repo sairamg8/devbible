@@ -12,7 +12,7 @@ sidebar_position: 26
 > and the **JDK 25 `java` tool reference** for `JAVA_TOOL_OPTIONS` and `JDK_JAVA_OPTIONS`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
 > 🔴 **No sandbox** — no image was built or run, and no heap size, image size or flag value below is
-> a measurement. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> a measurement. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[07](07-buildpacks.md) covered the goal and its parameters. This chunk is the part a review should
 actually be about: the buildpack does not merely build your image, it configures your JVM at every

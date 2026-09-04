@@ -12,7 +12,7 @@ sidebar_position: 19
 > (Idempotent Methods) ([rfc-editor.org/rfc/rfc9110](https://www.rfc-editor.org/rfc/rfc9110.html));
 > RFC 9700 §4.5 (Authorization Code Injection)
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A callback URL is a `GET` that must be executed exactly once, and HTTP `GET` is defined as
 safe and idempotent. Every layer between the browser and your handler — the browser's own

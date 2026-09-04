@@ -12,7 +12,7 @@ sidebar_position: 13
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and the **JUnit Jupiter
 > 6.0.3** user guide ([docs.junit.org](https://docs.junit.org/6.0.3/user-guide/)) for the
 > Jupiter lifecycle it is contrasted with.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no test run on this machine** — documented lifecycle semantics only.
 
 **Jupiter's test tree is two levels: a class contains test methods, and each method gets a

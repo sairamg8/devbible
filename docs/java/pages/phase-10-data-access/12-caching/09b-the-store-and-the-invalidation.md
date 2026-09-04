@@ -15,7 +15,7 @@ sidebar_position: 35
 > the Hibernate ORM 7.4 *User Guide* §14 *Caching*
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Redis 8 documentation ([redis.io/docs](https://redis.io/docs/latest/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
 
 **[9](09-the-checklist.md) reviews the annotation: whether it should exist, the method it sits on,
 the name and the key. Everything on this page is outside the changed file, which is exactly why it

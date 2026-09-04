@@ -9,7 +9,7 @@ sidebar_position: 40
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Context Map; Martin Fowler *Data Transfer Object*
 > ([martinfowler.com](https://martinfowler.com/eaaCatalog/dataTransferObject.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **The fastest way to destroy a service boundary is to configure an HTTP controller or a message producer that serializes domain entities directly over the wire. What looks like developer convenience—saving the effort of writing explicit DTO records and mappers—silently binds every external consumer to your internal database schema, ORM annotations, and table relationships. The moment you rename an internal column, normalize a table, or introduce an internal state transition, you trigger cascading failures in downstream systems. A true service boundary demands that nothing leaves or enters the context except explicitly versioned, immutable transfer contracts, ensuring the internal domain model remains free to evolve without external negotiation.**
 

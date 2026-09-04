@@ -15,7 +15,7 @@ sidebar_position: 6
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/flyway-execute-in-transaction-setting-277578997.html)),
 > *Mixed* and *Group* settings, and PostgreSQL 18's `CREATE INDEX`
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-createindex.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **PostgreSQL runs DDL inside transactions, and Flyway writes the history row inside the same
 transaction as the migration that earned it. So a failed migration on PostgreSQL is normally a

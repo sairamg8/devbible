@@ -11,7 +11,7 @@ sidebar_position: 14
 > microservices.io *Dark matter force: Prefer ACID over BASE*
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/prefer-acid-over-base.html));
 > the Spring Framework 7.0.x reference on declarative transaction management, cited by
-> concept. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud
+> concept. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud
 > train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **A service boundary is also a transaction boundary, always, with no exceptions and no

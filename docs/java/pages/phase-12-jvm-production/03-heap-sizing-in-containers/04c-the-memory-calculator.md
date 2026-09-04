@@ -17,7 +17,7 @@ sidebar_position: 9
 > [`calc/stack.go`](https://github.com/paketo-buildpacks/libjvm/blob/main/calc/stack.go),
 > [`helper/memory_calculator.go`](https://github.com/paketo-buildpacks/libjvm/blob/main/helper/memory_calculator.go).
 > Arithmetic below is derived here from those constants and labelled as such.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **If you built your image with `mvn spring-boot:build-image`, `pack build` or Spring Boot's Gradle
 `bootBuildImage`, you are already using a container-sizing strategy — you just did not write it.

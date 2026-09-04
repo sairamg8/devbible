@@ -12,7 +12,7 @@ sidebar_position: 1
 > and the **JDK 25 `java` tool reference** for class-path and jar behaviour
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
 > 🔴 **No sandbox** — no build was run and no image size or startup timing below is a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"Fat jar" is a single name for two quite different things, and the difference decides whether
 your application works. A *shaded* jar unpacks every dependency and merges the classes together. A

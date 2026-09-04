@@ -10,7 +10,7 @@ sidebar_position: 7
 > — the global HTTP client configuration section
 > (docs.spring.io/spring-boot/reference/io/rest-client.html) — and the Spring
 > Boot 4.0 Configuration Changelog for the
-> `spring.http.client.*` → `spring.http.clients.*` renames. Spring Boot 4.1.0,
+> `spring.http.client.*` → `spring.http.clients.*` renames. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Every timeout in this topic should be a property, not a line of Java, for one

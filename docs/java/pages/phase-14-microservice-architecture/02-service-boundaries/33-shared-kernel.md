@@ -9,7 +9,7 @@ sidebar_position: 46
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Shared Kernel; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
 > ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **A Shared Kernel is a deliberately shared subset of the domain model, code, or database schema that two bounded contexts agree to maintain jointly. Unlike an accidental `common-utils` grab bag, a Shared Kernel represents an explicit mutual dependency: neither team can alter any class, method, or database table inside the kernel without consulting the other team and verifying both test suites. Because any change requires dual consultation, synchronized testing, and coordinated deployments, a Shared Kernel is the most expensive relationship pattern in Domain-Driven Design. It is justifiable only when the cost of translating between two closely related subdomains exceeds the high coordination overhead of co-ownership, and it survives only when protected by strict size constraints and automated CI gates.**
 

@@ -15,7 +15,7 @@ sidebar_position: 65
 > ([postgresql.org/docs/18/transaction-iso.html](https://www.postgresql.org/docs/18/transaction-iso.html))
 > and *Client Connection Defaults*
 > ([postgresql.org/docs/18/runtime-config-client.html](https://www.postgresql.org/docs/18/runtime-config-client.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Two structural rules follow from
 [21](21-what-belongs-in-a-transaction.md), and between them they cover most real

@@ -11,7 +11,7 @@ sidebar_position: 26
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the `@NaturalId` javadoc
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/annotations/NaturalId.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/annotations/NaturalId.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Three methods every Java developer writes without thinking, and all three are traps on
 an entity with associations. `toString` recurses forever across a bidirectional pair.

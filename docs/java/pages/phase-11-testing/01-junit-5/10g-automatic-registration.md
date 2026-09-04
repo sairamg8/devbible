@@ -10,7 +10,7 @@ sidebar_position: 32
 > ([extensions/registering-extensions](https://docs.junit.org/6.0.3/extensions/registering-extensions.html))
 > and "Configuration Parameters"
 > ([running-tests/configuration-parameters](https://docs.junit.org/6.0.3/running-tests/configuration-parameters.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **The third registration route has no trace in the test source at all. That is its entire
 value and its entire danger: a stranger looking at a red test has nothing to search for.

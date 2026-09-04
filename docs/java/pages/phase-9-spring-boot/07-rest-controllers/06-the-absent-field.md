@@ -12,7 +12,7 @@ sidebar_position: 6
 > document means *remove the member*, and absence means *leave it unchanged*),
 > RFC 6902 (JSON Patch — an explicit operation array), and the Jakarta
 > Validation 3.1 specification page (jakarta.ee — records support).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A record component always has a value. If the JSON omits a field, Jackson
 supplies the type's default — `null` for a reference, `0` for an `int`, `false`

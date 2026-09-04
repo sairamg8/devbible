@@ -11,7 +11,7 @@ sidebar_position: 5
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/)) and "Build Configuration"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildConfiguration/));
 > the **GraalVM Reachability Metadata Repository** ([github.com](https://github.com/oracle/graalvm-reachability-metadata)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run**.
 
 **Metadata is the mechanism by which a closed world admits the dynamic bits you actually need. There are four ways to supply it, in a clear order of preference, and the whole ecosystem is mid-migration: the current format is a single `reachability-metadata.json` per artefact, the older five-file split is still accepted, and a new "exact" mode is on its way to becoming the default. Understanding the conditional-entry mechanism — `typeReached` — is what separates a metadata file that costs a few kilobytes from one that inflates every image that depends on your library.**

@@ -13,7 +13,7 @@ sidebar_position: 6
 > meta-annotation composition and `@AliasFor` for custom stereotypes), and the
 > Framework 7.0 reference on `PersistenceExceptionTranslationPostProcessor`
 > and the `DataAccessException` hierarchy.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@Service`, `@Repository` and `@Controller` are all meta-annotated with
 `@Component`, and to the scanner they are interchangeable — which leads almost

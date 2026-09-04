@@ -10,7 +10,7 @@ sidebar_position: 20
 > ([crud-with-updatablerecords/optimistic-locking](https://www.jooq.org/doc/latest/manual/sql-execution/crud-with-updatablerecords/optimistic-locking/))
 > and *CRUD with UpdatableRecords*
 > ([crud-with-updatablerecords](https://www.jooq.org/doc/latest/manual/sql-execution/crud-with-updatablerecords/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Two users open the same order, both edit it, both save. Without a mechanism the second save wins
 silently and the first user's change is gone with no error anywhere. JPA solves this with

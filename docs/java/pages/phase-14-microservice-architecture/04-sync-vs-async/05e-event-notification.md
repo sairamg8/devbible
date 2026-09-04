@@ -13,7 +13,7 @@ sidebar_position: 22
 > and "Pattern: Messaging"
 > ([microservices.io](https://microservices.io/patterns/communication-style/messaging.html)).
 > 🔴 **No sandbox, and no broker mechanics** — phase 15 owns those. Version spine: JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Event notification is the pattern where a service announces that something happened and does
 not care who listens or what they do about it. Fowler's definition emphasises exactly that

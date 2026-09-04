@@ -14,7 +14,7 @@ sidebar_position: 7
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/flyway-ignore-migration-patterns-setting-277579006.html))
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **A row in `flyway_schema_history` has no state. A file in `db/migration` has no state. A *state*
 only exists for a pairing of the two, and it is Flyway's answer to one question: does this pair

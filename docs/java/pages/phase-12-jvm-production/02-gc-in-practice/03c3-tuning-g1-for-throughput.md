@@ -18,7 +18,7 @@ sidebar_position: 15
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html));
 > and [`runtime/globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/globals.hpp)
 > at tag `jdk-25+36` for `UseStringDeduplication` and `StringDeduplicationAgeThreshold`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **G1's defaults are aimed at *"relatively small, uniform pauses at high throughput"* — a
 compromise, not a maximum of either. When throughput is what you are judged on, the guide's

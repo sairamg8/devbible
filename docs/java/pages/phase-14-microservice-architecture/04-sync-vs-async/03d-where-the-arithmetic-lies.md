@@ -13,7 +13,7 @@ sidebar_position: 9
 > ([martinfowler.com](https://martinfowler.com/articles/microservices.html)).
 > 🔴 **Arithmetic only.** No figure here was measured, and this page is largely about why the
 > arithmetic should not be treated as a measurement. Version spine: JDK 25 · Spring Boot
-> 4.1.0 / Spring Framework 7.0.8.
+> 4.1.0 / Spring Framework 7.0.9.
 
 **A page that teaches `pⁿ` and stops there has taught you something you will be embarrassed
 by in a design review, because the first competent person you meet will point out that the

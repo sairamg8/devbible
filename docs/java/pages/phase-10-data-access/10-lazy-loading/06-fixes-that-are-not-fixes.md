@@ -14,7 +14,7 @@ sidebar_position: 19
 > and the `7.4` source of `org.hibernate.Hibernate.initialize` and
 > `org.hibernate.proxy.AbstractLazyInitializer.initialize`
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/Hibernate.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **A pull request titled "fix LazyInitializationException" almost always contains one of about
 ten changes, and this topic works through all of them. Each of them makes the failing test pass, and none of them changes the fact that a

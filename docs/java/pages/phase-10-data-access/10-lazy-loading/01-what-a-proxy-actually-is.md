@@ -14,7 +14,7 @@ sidebar_position: 1
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/proxy/HibernateProxy.html)),
 > and the `7.4` source of `org.hibernate.proxy.AbstractLazyInitializer`
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/proxy/AbstractLazyInitializer.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **The thing in a lazy field is not one object, it is two. There is a generated subclass of
 your entity — that is the part everyone knows — and behind it there is a `LazyInitializer`

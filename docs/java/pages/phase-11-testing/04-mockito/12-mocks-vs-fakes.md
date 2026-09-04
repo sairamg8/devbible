@@ -14,7 +14,7 @@ sidebar_position: 52
 > (*"Keep the testing code compact and readable"*, *"Don't mock everything, it's an
 > anti-pattern"*). The mock/stub/fake vocabulary is
 > [01b · Mock, stub, spy, fake](01b-mock-stub-spy-fake.md)'s.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

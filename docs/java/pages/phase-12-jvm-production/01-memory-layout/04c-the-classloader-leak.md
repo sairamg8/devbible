@@ -13,7 +13,7 @@ sidebar_position: 16
 > and the **JDK 25 `jcmd` tool reference** for `VM.metaspace`, `VM.classloader_stats` and
 > `VM.classloaders`, including their documented impact levels
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The classloader leak is the reason metaspace has a reputation. It is not a leak of objects,
 it does not grow the heap, a heap dump does not show its cost, and the thing being retained is

@@ -18,7 +18,7 @@ sidebar_position: 43
 > ([jdbc.postgresql.org/documentation/use/](https://jdbc.postgresql.org/documentation/use/))
 > and the PostgreSQL 18 manual *SET TRANSACTION*
 > ([postgresql.org/docs/18/sql-set-transaction.html](https://www.postgresql.org/docs/18/sql-set-transaction.html)).
-> JDK 25, Spring Framework 7.0.8, Hibernate ORM 7.4.1, pgjdbc 42.7.13,
+> JDK 25, Spring Framework 7.0.9, Hibernate ORM 7.4.1, pgjdbc 42.7.13,
 > PostgreSQL 18.
 
 **`@Transactional(readOnly = true)` does not make your transaction read-only. It

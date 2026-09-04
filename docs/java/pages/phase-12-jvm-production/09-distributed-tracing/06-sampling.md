@@ -6,8 +6,8 @@ sidebar_position: 12
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-03 against the **OpenTelemetry Specification — Samplers** ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/trace/sdk/#sampler)); the **W3C Trace Context Recommendation** — section 3.2.4 *Trace-flags* ([w3.org](https://www.w3.org/TR/trace-context/)); and **Spring Boot 4.1.0 reference** — *Actuator → Tracing → Sampling* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
+> Verified: 2026-09-03 against the **OpenTelemetry Specification — Samplers** ([opentelemetry.io](https://opentelemetry.io/docs/specs/otel/trace/sdk/#sampler)); the **W3C Trace Context Recommendation** — section 3.2.4 *Trace-flags* ([w3.org](https://www.w3.org/TR/trace-context/)); and **Spring Boot 4.1.1 reference** — *Actuator → Tracing → Sampling* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
 > 🔴 **No sandbox run** — algorithms, probability bitmask rules, and property configurations verified against OpenTelemetry SDK and Spring Boot sources.
 
 **At 10,000 requests per second across a 15-service microservice graph, recording every single span generates 150,000 spans every second—hundreds of gigabytes of network telemetry and massive cloud storage bills. Distributed tracing cannot scale without sampling. But sampling cannot be applied arbitrarily at every service hop: if three sequential services each independently sample at 10%, only 0.1% (one in a thousand) of end-to-end traces survive intact. Modern tracing solves this using head sampling governed by `ParentBased` delegation: the root ingress service makes the sampling decision once, writes it into the W3C `traceparent` flags, and downstream services obey that decision.**

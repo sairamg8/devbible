@@ -15,7 +15,7 @@ sidebar_position: 18
 > javadocs, and the Spring Framework 7.0 reference *Understanding the Spring Framework
 > transaction abstraction*
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/strategies.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/strategies.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 6](06-the-transaction-manager.md) covered what you hand the manager.
 This is what it hands back. `TransactionStatus` is easy to skim past as

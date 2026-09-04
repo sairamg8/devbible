@@ -16,7 +16,7 @@ sidebar_position: 11
 > (Authorization Request Header Field), §2.2 (Form-Encoded Body Parameter), §2.3 (URI Query
 > Parameter), §3.1 (Error Codes)
 > ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6750)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Before any cryptography happens, a string has to come out of the request, and the object
 that does it has more opinions than its name suggests. `DefaultBearerTokenResolver` enforces

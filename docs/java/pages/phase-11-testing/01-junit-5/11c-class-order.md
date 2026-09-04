@@ -12,7 +12,7 @@ sidebar_position: 39
 > ([release-notes](https://docs.junit.org/6.0.3/release-notes.html));
 > javadoc for `@Order`
 > ([Order](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Order.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Method ordering ([11](11-execution-order.md)) is usually a symptom. Class ordering is
 usually an optimisation — the guide's own motivating examples are "fail fast" and "schedule

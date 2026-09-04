@@ -13,7 +13,7 @@ sidebar_position: 37
 > ([jpa/specifications.html](https://docs.spring.io/spring-data/jpa/reference/jpa/specifications.html)),
 > and Jakarta Persistence 3.2 §4.11 on bulk operations
 > ([jakarta.ee](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **A specification is a lambda you hand to the framework, and it is easy to assume it is

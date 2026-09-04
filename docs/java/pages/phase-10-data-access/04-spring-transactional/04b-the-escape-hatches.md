@@ -13,7 +13,7 @@ sidebar_position: 10
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html))
 > and *Declarative transaction management*
 > ([.../transaction/declarative.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 4](04-fixing-self-invocation.md) covered the two fixes that restructure
 the call. These two do something else: the first reaches into Spring's AOP

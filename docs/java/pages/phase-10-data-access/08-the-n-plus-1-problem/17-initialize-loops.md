@@ -13,7 +13,7 @@ sidebar_position: 57
 > and the Hibernate ORM 7.4 *User Guide* §12.8 *Batch fetching* and §31.6.1 *Fetching
 > associations*
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **`Hibernate.initialize` is a legitimate API with a documented purpose, and wrapping it in a
 loop over a list of parents produces exactly the statement pattern this whole topic is about

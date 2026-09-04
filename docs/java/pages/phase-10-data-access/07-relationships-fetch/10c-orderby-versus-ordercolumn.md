@@ -15,7 +15,7 @@ sidebar_position: 19
 > and the Hibernate ORM 7.4 *Introduction* §9.12 *Ordered and sorted collections and map
 > keys*
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Two annotations with confusingly similar names doing genuinely different jobs.
 `@OrderBy` derives an order from data that is already there. `@OrderColumn` stores the

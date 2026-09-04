@@ -17,7 +17,7 @@ sidebar_position: 66
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html))
 > and the `TransactionSynchronizationManager` javadoc
 > ([.../transaction/support/TransactionSynchronizationManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Almost every failure in this topic is silent. There is no exception, no warning
 and no log line — only data that should not exist. So the diagnosis has to be a

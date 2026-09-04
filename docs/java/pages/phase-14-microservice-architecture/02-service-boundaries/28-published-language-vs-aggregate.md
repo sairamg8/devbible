@@ -9,7 +9,7 @@ sidebar_position: 39
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Bounded Context & Published Language; Martin Fowler *Published Language*
 > ([martinfowler.com](https://martinfowler.com/bliki/PublishedLanguage.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **In Domain-Driven Design, a Bounded Context exists to protect the conceptual integrity of an internal domain model, not to expose it nakedly to external callers. The aggregate root is designed exclusively to enforce transactional business invariants inside the boundary; it was never intended to be serialized over a network or shared across package boundaries. The published language is an explicitly authored, backwards-compatible contract—modeled as immutable Java records or schema definitions—optimized for external consumers. When teams confuse the two by exposing aggregate roots or entities directly as API representations, every internal database migration or domain refactoring becomes a breaking change for external clients, turning autonomous services back into a tightly coupled distributed monolith.**
 

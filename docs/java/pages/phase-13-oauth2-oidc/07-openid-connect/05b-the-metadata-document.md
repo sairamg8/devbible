@@ -14,10 +14,10 @@ sidebar_position: 9
 > ([datatracker.ietf.org/doc/html/rfc8414](https://datatracker.ietf.org/doc/html/rfc8414));
 > RFC 9700 §2.1.1 (authorization servers MUST support PKCE)
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
-> Spring Boot 4.1.0 `spring.security.oauth2.client.provider.*.issuer-uri` and Spring Security
+> Spring Boot 4.1.1 `spring.security.oauth2.client.provider.*.issuer-uri` and Spring Security
 > 7.x `ClientRegistrations.fromIssuerLocation`
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — the JSON below is a structural example assembled from §3's member
 > definitions, not a captured response from any provider.
 

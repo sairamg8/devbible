@@ -10,8 +10,8 @@ sidebar_position: 14
 > Framework → Bean Overriding in Tests* and *Testing → Annotations → `@TestBean`*
 > ([annotation-testbean](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-testbean.html));
 > the factory-method rules and the cross-class `#` syntax are read from that reference.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — Java source only.
 
 **The third override, from `org.springframework.test.context.bean.override.convention`. It is

@@ -11,7 +11,7 @@ sidebar_position: 2
 > *Domain-Driven Design* (2003), Part IV "Strategic Design", cited by concept; and
 > microservices.io *Decompose by subdomain*
 > ([microservices.io](https://microservices.io/patterns/decomposition/decompose-by-subdomain.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The single most useful idea in this topic is that there is no such thing as "the Customer

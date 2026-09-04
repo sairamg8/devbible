@@ -12,7 +12,7 @@ sidebar_position: 23
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePrerequisites.html)); the
 > Java SE 25 specification of `OutOfMemoryError` and thread-pool behaviour as described in
 > the `java.util.concurrent` package documentation.
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > heap dumps, GC logs or failure traces here come from a run.
 
 **Modularity is a compile-time and design-time property. Failure isolation is a runtime

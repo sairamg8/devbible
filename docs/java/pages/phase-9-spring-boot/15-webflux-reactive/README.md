@@ -13,7 +13,7 @@ sidebar_position: 0
 > Context-Propagation Support), the Spring Boot reference *Reactive Web
 > Applications* and `spring.threads.virtual.enabled`, the Spring Boot 4.0
 > migration guide (starter renames, `@MockBean` removal), Spring Security's
-> reactive reference, and JEP 444 / JEP 491. Spring Boot 4.1.0, Spring
+> reactive reference, and JEP 444 / JEP 491. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Reactive web frameworks solved a real problem — a platform thread parked on

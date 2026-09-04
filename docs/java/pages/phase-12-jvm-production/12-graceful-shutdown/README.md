@@ -25,7 +25,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** No cluster was run, no pod was deleted, no container was signalled and no pool
 > was closed. Every number on these pages is a documented default, a value read from named source,
 > or a worked example printed by the documentation itself — attributed in each case.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This topic owns stopping without dropping work. It exists because the intuitive model of a
 shutdown — deregister, drain, exit — describes a sequence that no platform performs, and because

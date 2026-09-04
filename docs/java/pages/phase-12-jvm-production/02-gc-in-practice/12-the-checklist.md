@@ -11,7 +11,7 @@ sidebar_position: 42
 > its evidence. The underlying sources are the **HotSpot Virtual Machine Garbage Collection
 > Tuning Guide, Release 25**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/)) and the JDK 25 HotSpot
-> sources at tag `jdk-25+36`. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> sources at tag `jdk-25+36`. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Somebody says "GC pauses went up after the deploy". This page is the order in which to ask
 questions about that sentence. The ordering is not arbitrary: each step is cheaper than the one

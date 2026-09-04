@@ -13,7 +13,7 @@ sidebar_position: 13
 > ([docs.spring.io/spring-data/mongodb/docs/current/api/…/MongoTransactionManager.html](https://docs.spring.io/spring-data/mongodb/docs/current/api/org/springframework/data/mongodb/MongoTransactionManager.html))
 > and the Spring Boot 4.1 auto-configuration-classes appendix for `spring-boot-data-mongodb`
 > ([docs.spring.io/spring-boot/appendix/auto-configuration-classes/spring-boot-data-mongodb.html](https://docs.spring.io/spring-boot/appendix/auto-configuration-classes/spring-boot-data-mongodb.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB 8.
 
 **The previous chunk was about whether the server can give you a transaction. This one is
 about whether your application ever asks for one. With JPA on the classpath Boot gives you

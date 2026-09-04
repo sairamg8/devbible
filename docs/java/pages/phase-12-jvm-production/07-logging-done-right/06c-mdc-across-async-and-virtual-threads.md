@@ -19,7 +19,7 @@ sidebar_position: 15
 > the **Logback news page** for `logback-scoped-mdc` 1.0.0-rc0
 > ([logback.qos.ch](https://logback.qos.ch/news.html)), and **JEP 506 · Scoped Values**, *"Closed /
 > Delivered"* for **Release 25** ([openjdk.org](https://openjdk.org/jeps/506)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Logback 1.5.34.
 
 **MDC is bound to a thread. The moment work leaves the thread that set it, the context is gone —
 and every asynchronous mechanism in a modern Java service does exactly that. The naive fix is to

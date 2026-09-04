@@ -11,7 +11,7 @@ sidebar_position: 25
 > "Pattern: Saga" ([microservices.io](https://microservices.io/patterns/data/saga.html)), and
 > Chris Richardson, "Dark matter force: minimize runtime coupling"
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the honest table the topic has been building toward. Take any request path and
 classify each hop. Three categories genuinely require the callee's answer before the caller can

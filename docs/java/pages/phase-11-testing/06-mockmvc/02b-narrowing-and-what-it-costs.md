@@ -13,8 +13,8 @@ sidebar_position: 4
 > `AnnotationCustomizableTypeExcludeFilter` and `TypeExcludeFiltersContextCustomizer` in
 > `core/spring-boot-test`; plus the Spring Boot 4.1 reference "Testing Spring Boot Applications"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, **Spring Boot 4.1.0** (sources
-> read at 4.1.1), Spring Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, **Spring Boot 4.1.1** (sources
+> read at 4.1.1), Spring Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **[02](02-webmvctest.md) is the allow-list: which of your beans the slice will scan. This chunk is

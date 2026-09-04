@@ -12,7 +12,7 @@ sidebar_position: 5
 > (docs.spring.io/spring-framework/reference/web/webmvc-cors.html) and *Filters*
 > (`web/webmvc/filters.html`) — the Spring Security 7 reference
 > *Servlet Applications → Architecture*, and the Spring Boot 4.1 reference on
-> `server.compression.*`. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `server.compression.*`. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Do not choose a mechanism by how comfortable it is to write. Choose it by
 answering three questions in order, because each one eliminates layers and the

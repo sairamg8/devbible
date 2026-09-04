@@ -16,7 +16,7 @@ sidebar_position: 6
 > `Arguments::set_heap_size` in
 > [`runtime/arguments.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/arguments.cpp)
 > at tag `jdk-25+36`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`-Xmx` is not wrong. `-Xmx` decided at *image build time* is wrong, because an image is
 deployed at many memory limits and a constant can only be correct at one of them. Worse, it fails

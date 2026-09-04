@@ -8,9 +8,9 @@ sidebar_position: 0
 
 > Verified: 2026-08-27 → 2026-08-28 against the **JUnit 6.0.3 User Guide**
 > ([docs.junit.org/6.0.3](https://docs.junit.org/6.0.3/)) and the Jupiter/Platform javadocs;
-> version spine read from `spring-boot-dependencies:4.1.0`
+> version spine read from `spring-boot-dependencies:4.1.1`
 > ([POM on Maven Central](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)).
-> JDK 25, Spring Boot 4.1.0, **JUnit Jupiter 6.0.3**, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, **JUnit Jupiter 6.0.3**, Spring Framework 7.0.9.
 > **No sandbox** — every claim on these pages is sourced from the guide, the javadoc or the
 > Jupiter sources, never from a fabricated test run.
 

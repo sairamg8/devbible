@@ -14,7 +14,7 @@ sidebar_position: 48
 > ([.../jdbc/datasource/DataSourceTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html))
 > and the HikariCP README
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, Spring Framework 7.0.8, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18.
 
 **Spring's `timeout` attribute is enforced at points Spring controls, which means
 application code can walk around it without trying. The server's timeouts are

@@ -6,8 +6,8 @@ sidebar_position: 0
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-03 against the **W3C Trace Context Level 1 Recommendation** ([w3.org/TR/trace-context/](https://www.w3.org/TR/trace-context/)); **W3C Baggage Specification** ([w3.org/TR/baggage/](https://www.w3.org/TR/baggage/)); **OpenZipkin B3 Propagation Specification**; **OpenTelemetry SDK and Semantic Conventions**; and **Spring Boot 4.1.0 reference** — *Actuator → Tracing* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
+> Verified: 2026-09-03 against the **W3C Trace Context Level 1 Recommendation** ([w3.org/TR/trace-context/](https://www.w3.org/TR/trace-context/)); **W3C Baggage Specification** ([w3.org/TR/baggage/](https://www.w3.org/TR/baggage/)); **OpenZipkin B3 Propagation Specification**; **OpenTelemetry SDK and Semantic Conventions**; and **Spring Boot 4.1.1 reference** — *Actuator → Tracing* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
 > 🔴 **No sandbox run** — specifications, wire formats, sampling algorithms, and framework property configurations verified against upstream documentation.
 
 **Distributed tracing is the observability signal that joins isolated process events into a single causal journey. When an HTTP call crosses six microservices, touches three databases, and publishes to a message broker, metrics only show that an aggregate percentile degraded, and logs sit trapped in disconnected silos. Tracing injects and extracts standard correlation headers across network hops and captures asynchronous handoffs across JVM threads. This topic covers the W3C wire standards, the mechanics of context propagation inside the JVM, how Spring Boot 4.1 auto-configures Micrometer Tracing and OTLP export, and the head and tail sampling math required to keep tracing telemetry economically viable.**

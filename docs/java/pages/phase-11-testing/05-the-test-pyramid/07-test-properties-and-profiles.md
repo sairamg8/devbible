@@ -11,8 +11,8 @@ sidebar_position: 16
 > ([property-sources](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/property-sources.html));
 > the precedence list, the key/value syntaxes, the default-file convention, the inheritance
 > attributes and the cache warning are all read from that page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — Java source and configuration only.
 
 **Test properties are how a test says "in this context, the world is configured like *this*" —

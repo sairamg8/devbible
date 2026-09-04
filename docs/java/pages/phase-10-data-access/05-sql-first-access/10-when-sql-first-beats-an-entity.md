@@ -12,7 +12,7 @@ sidebar_position: 20
 > ([postgresql.org/docs/18/](https://www.postgresql.org/docs/18/index.html)) —
 > and the Spring Framework 7.0 reference *Data Access → JDBC Core Classes*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 1](01-why-sql-first-exists.md) argued the shape: an entity models your
 domain, a result set models your question. This chunk is the practical version —

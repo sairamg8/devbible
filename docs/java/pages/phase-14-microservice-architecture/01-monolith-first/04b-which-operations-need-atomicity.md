@@ -10,7 +10,7 @@ sidebar_position: 11
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); the Spring
 > Modulith reference, *Working with Application Events*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/events.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Modulith
 > **2.1.1**. **No sandbox** — Java and configuration only.
 
 **[10 · The transaction you lose](04-the-transaction-you-lose.md) established that

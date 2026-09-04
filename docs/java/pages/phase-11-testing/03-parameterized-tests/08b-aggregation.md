@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/aggregator/ArgumentsAccessor.html))
 > and `ParameterDeclarations`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/support/ParameterDeclarations.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Aggregation exists because of an arithmetic problem the documentation states plainly: one
 argument, one parameter. Widen the table and you widen the signature, and at about five

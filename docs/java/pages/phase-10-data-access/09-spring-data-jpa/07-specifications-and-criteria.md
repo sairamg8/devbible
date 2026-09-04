@@ -10,7 +10,7 @@ sidebar_position: 34
 > ([jpa/specifications.html](https://docs.spring.io/spring-data/jpa/reference/jpa/specifications.html))
 > — and the 4.1 source of `Specification` and `JpaSpecificationExecutor`
 > ([github.com/spring-projects/spring-data-jpa](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/domain/Specification.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **[02f](02f-where-derived-queries-stop.md) named the wall: a method name is a predicate

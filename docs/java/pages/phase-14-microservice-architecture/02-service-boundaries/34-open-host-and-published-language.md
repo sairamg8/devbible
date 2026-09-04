@@ -9,7 +9,7 @@ sidebar_position: 47
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Open Host Service & Published Language; Martin Fowler *Open Host Service Pattern*
 > ([martinfowler.com](https://martinfowler.com/bliki/OpenHostService.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a bounded context must serve multiple downstream systems, attempting to customize endpoints for each individual consumer creates a combinatorial explosion that paralyzes upstream delivery. Evans' Open Host Service (OHS) pattern solves this by establishing a public, standardized protocol—a fixed set of endpoints and remote procedures—through which all downstream consumers interact with the service on equal terms. Paired with a Published Language (PL)—an open, documented schema such as OpenAPI, JSON Schema, or Protobuf—the provider decouples its development roadmap from consumers. An Open Host Service treats all callers as anonymous subscribers to a stable, versioned contract, trading custom accommodations for enterprise-scale integration velocity.**
 

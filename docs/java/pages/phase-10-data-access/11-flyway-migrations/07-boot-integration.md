@@ -14,7 +14,7 @@ sidebar_position: 19
 > ([docs.spring.io](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/sql/init/dependency/DatabaseInitializationDependencyConfigurer.html))
 > and the Flyway PostgreSQL database reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/database-driver-reference/postgresql-database)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Boot's Flyway integration is small enough to read in an afternoon and it does exactly one
 non-obvious thing. Creating a `Flyway` bean and calling `migrate()` at startup is the easy part.

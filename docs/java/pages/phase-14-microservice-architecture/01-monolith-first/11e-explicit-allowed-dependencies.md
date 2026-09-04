@@ -11,7 +11,7 @@ sidebar_position: 31
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)) —
 > and *Verifying Application Module Structure*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **Out of the box, verification stops a module reaching into another module's *internals* but
 says nothing about which modules may talk to each other at all. Any module may call any

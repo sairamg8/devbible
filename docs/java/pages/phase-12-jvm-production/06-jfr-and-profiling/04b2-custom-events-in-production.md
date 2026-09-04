@@ -15,7 +15,7 @@ sidebar_position: 9
 > ([openjdk.org](https://openjdk.org/jeps/520)).
 > 🔴 **No sandbox** — the Java below is illustrative source. No cost, timing or event count here is
 > a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[04b](04b-custom-events.md) covered defining an event. This page is everything that decides
 whether it is a good idea in production: the guard that controls its cost, the annotation that

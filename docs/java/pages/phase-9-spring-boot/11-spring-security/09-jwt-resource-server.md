@@ -12,7 +12,7 @@ sidebar_position: 9
 > — `issuer-uri`, `jwk-set-uri`, `audiences`, `jws-algorithms`,
 > `NimbusJwtDecoder`, `JwtDecoders`, the four default validations,
 > `JwtValidators.createDefaultWithIssuer`, `DelegatingOAuth2TokenValidator`,
-> `JwtTimestampValidator`, `JwtIssuerValidator`). Spring Boot 4.1.0, Spring
+> `JwtTimestampValidator`, `JwtIssuerValidator`). Spring Boot 4.1.1, Spring
 > Security 7.x, JDK 25.
 
 **A resource server does exactly one job: take a signed token off the request,

@@ -12,7 +12,7 @@ sidebar_position: 3
 > ([jooq.org/doc/latest/manual/sql-building/plain-sql/](https://www.jooq.org/doc/latest/manual/sql-building/plain-sql/))
 > and *Fetching POJOs*
 > ([jooq.org/doc/latest/manual/sql-execution/fetching/pojos/](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/pojos/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Every jOOQ expression you write builds an object — a `Field`, a `Condition`, a `Table`, a
 `Select` — and the statement is a tree of those objects that gets rendered to text only at

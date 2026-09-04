@@ -13,7 +13,7 @@ sidebar_position: 6
 > — the Spring Boot 4.1.x sources `JwtDecoderConfiguration#buildJwkSetUriJwtDecoder` and
 > `JwkSetUriJwtDecoderBuilderCustomizer`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Every JWT that arrives with an unseen `kid` costs your service an outbound HTTP call to
 the authorization server, on a request thread, with a thirty-second timeout. That is the

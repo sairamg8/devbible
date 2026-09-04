@@ -11,7 +11,7 @@ sidebar_position: 3
 > `login_hint` — §2 (ID Token, on `auth_time` being REQUIRED when `max_age` is requested) and
 > §3.1.3.7 rules 12 and 13, at
 > [openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — parameter definitions quoted from the specification; the Java below is
 > illustrative client code, not a captured run.
 

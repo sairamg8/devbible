@@ -10,7 +10,7 @@ sidebar_position: 5
 > Configuration · Type-safe Configuration Properties* (docs.spring.io/spring-boot/reference
 > — JavaBean properties binding, constructor binding, the three documented
 > opt-outs, the `@ConstructorBinding` rule for multiple constructors, the
-> `-parameters` requirement, and records). Spring Boot 4.1.0, Spring
+> `-parameters` requirement, and records). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Configuration is a value, not a mutable component, and the binder will treat

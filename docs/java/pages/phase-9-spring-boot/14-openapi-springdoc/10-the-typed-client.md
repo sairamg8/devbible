@@ -12,7 +12,7 @@ sidebar_position: 10
 > `npmName`, `useSingleRequestParameter` and `enumPropertyNaming` options), the
 > `openapi-generator-maven-plugin` **7.24.0** listing on Maven Central
 > (published 2026-07-20), and springdoc.org/properties.html for
-> `springdoc.api-docs.version`. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> `springdoc.api-docs.version`. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **For a fullstack reader this is why the topic exists. Every decision in the

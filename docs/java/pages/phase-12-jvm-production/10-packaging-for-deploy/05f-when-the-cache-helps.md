@@ -15,8 +15,8 @@ sidebar_position: 21
 > **Spring Boot reference**, "Packaging → AOT Cache"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/aot-cache.html)).
 > 🔴 **No sandbox** — the timing and size figures below are **quoted from JEP 515's own example**
-> and are attributed as such. Nothing on this page was measured here. JDK 25 · Spring Boot 4.1.0 /
-> Spring Framework 7.0.8.
+> and are attributed as such. Nothing on this page was measured here. JDK 25 · Spring Boot 4.1.1 /
+> Spring Framework 7.0.9.
 
 **[05d](05d-the-aot-cache.md) and [05e](05e-aot-modes-and-diagnosis.md) covered how to build a cache
 and how to know it loaded. This chunk is the question a reviewer should ask before either: is this

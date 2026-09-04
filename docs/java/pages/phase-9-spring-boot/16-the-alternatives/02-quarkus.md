@@ -11,7 +11,7 @@ sidebar_position: 2
 > (quarkus.io/guides/config-reference), *Quarkus Extension for Spring DI API*
 > (quarkus.io/guides/spring-di), the Quarkus release page
 > (quarkus.io/releases/) and the Quarkus 3.33 LTS announcement
-> (quarkus.io/blog/quarkus-3-33-released/). Spring Boot 4.1.0 is the comparison
+> (quarkus.io/blog/quarkus-3-33-released/). Spring Boot 4.1.1 is the comparison
 > baseline; JDK 25.
 
 **Quarkus is not "Spring but faster" — it is a build tool that happens to

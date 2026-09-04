@@ -11,7 +11,7 @@ sidebar_position: 4
 > — self-invocation, `AopContext.currentProxy()`, `exposeProxy`, and the CGLIB
 > constraints) and *Core → AOP*, plus the Spring Boot 4.0 release notes and
 > spring-projects/spring-boot#42948 for the `spring-boot-starter-aop` →
-> **`spring-boot-starter-aspectj`** rename. Spring Boot 4.1.0, Spring Framework
+> **`spring-boot-starter-aspectj`** rename. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **AOP is the only one of the three mechanisms that has no idea it is on the web.

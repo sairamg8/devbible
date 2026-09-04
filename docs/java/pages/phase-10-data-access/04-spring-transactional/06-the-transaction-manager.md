@@ -13,7 +13,7 @@ sidebar_position: 15
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/TransactionDefinition.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/TransactionDefinition.html))
 > and the `UnexpectedRollbackException` javadoc
 > ([.../org/springframework/transaction/UnexpectedRollbackException.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/UnexpectedRollbackException.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The interceptor from [chunk 2b](02b-where-the-annotation-lives.md) does not know
 what a database is. It reads your annotation, turns it into a

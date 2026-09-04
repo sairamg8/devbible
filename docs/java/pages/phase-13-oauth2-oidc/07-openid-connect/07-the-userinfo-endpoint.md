@@ -15,7 +15,7 @@ sidebar_position: 11
 > ([rfc-editor.org/rfc/rfc6750](https://www.rfc-editor.org/rfc/rfc6750.txt)); the Spring
 > Security 7.x `OidcUserService` / `DefaultOAuth2UserService` behaviour
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 >
 > ⚠️ **Provenance limit.** OIDC Core **§5.3 (UserInfo Endpoint)** and **§5.3.2 (Successful
 > UserInfo Response)** could not be read in this pass — the published HTML truncates before

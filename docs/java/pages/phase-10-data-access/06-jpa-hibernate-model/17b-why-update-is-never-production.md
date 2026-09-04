@@ -13,7 +13,7 @@ sidebar_position: 37
 > ([github.com/hibernate/hibernate-orm, branch 7.4](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/tool/schema/internal/AbstractSchemaValidator.java))
 > and the Spring Boot 4.1 reference *Data → SQL databases → Database initialization*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **`update` is not a migration tool that occasionally gets things wrong. It is a tool that
 only ever adds, by design — so every schema change that is not purely additive leaves the

@@ -13,7 +13,7 @@ sidebar_position: 27
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/ConvertWith.html))
 > and `ArgumentConverter`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/ArgumentConverter.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08](08-conversion-and-aggregation.md) covered widening and the implicit table;
 [08k](08k-fallback-conversion.md) covered the reflective fallback into your own production code.

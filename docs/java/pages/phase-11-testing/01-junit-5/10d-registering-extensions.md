@@ -10,7 +10,7 @@ sidebar_position: 29
 > ([extensions/registering-extensions](https://docs.junit.org/6.0.3/extensions/registering-extensions.html));
 > javadoc for `@ExtendWith`
 > ([ExtendWith](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtendWith.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[10](10-extensions.md) is the catalogue of extension points and [10b](10b-writing-one.md)
 is a finished extension. Neither is any use until the extension actually reaches the

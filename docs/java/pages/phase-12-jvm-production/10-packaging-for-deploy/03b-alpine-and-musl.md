@@ -15,7 +15,7 @@ sidebar_position: 10
 > and the **JDK 25 tool reference** for
 > [`jstack`](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jstack.html).
 > 🔴 **No sandbox** — no image was built and every size figure below is quoted from JEP 386
-> rather than measured. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> rather than measured. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03](03-base-images.md) argued that the `FROM` line decides which tools you have. On Alpine it
 also decides which *libc* you have, and that is a far larger change than the image-size number

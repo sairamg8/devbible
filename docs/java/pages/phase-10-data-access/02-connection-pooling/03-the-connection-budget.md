@@ -10,7 +10,7 @@ sidebar_position: 3
 > ([github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing](https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing))
 > and the HikariCP 7.0.2 README
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[Chunk 2](02-why-a-small-pool-is-faster.md) argued the pool should be small.
 This chunk is the counterweight, and it is the only argument for making a pool

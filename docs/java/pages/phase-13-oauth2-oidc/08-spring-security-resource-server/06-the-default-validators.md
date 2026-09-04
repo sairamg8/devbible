@@ -18,7 +18,7 @@ sidebar_position: 14
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server))
 > — **RFC 8705** §3.1 (mutual-TLS certificate-bound access tokens)
 > ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc8705)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Ask anyone what a Spring resource server validates by default and you will hear
 "signature, `exp`, `nbf`, `iss`". That answer is now incomplete in one direction and

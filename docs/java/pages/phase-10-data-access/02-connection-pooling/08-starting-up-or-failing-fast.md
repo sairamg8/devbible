@@ -11,7 +11,7 @@ sidebar_position: 22
 > raw at tag `HikariCP-7.0.2`) and the Spring Boot 4.1 reference *Actuator →
 > Endpoints → Kubernetes Probes*
 > ([docs.spring.io/spring-boot/reference/actuator/endpoints.html](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **When a pool is created and the database is unreachable, there are two
 reasonable behaviours. **Refuse to start**, so a broken deployment never replaces

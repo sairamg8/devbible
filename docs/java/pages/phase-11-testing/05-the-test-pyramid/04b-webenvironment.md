@@ -6,13 +6,13 @@ sidebar_position: 7
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-28 against the Spring Boot 4.1.0 reference *Testing → Testing Spring Boot
+> Verified: 2026-08-28 against the Spring Boot 4.1.1 reference *Testing → Testing Spring Boot
 > Applications → Working with Random Ports* and *Testing with a Running Server*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)),
 > and the Boot 4.1.0 javadoc for `SpringBootTest.WebEnvironment` — all four constants quoted
 > from it verbatim.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no server was started to write this page.
 
 **`webEnvironment` is one attribute with four values, and choosing between them is really

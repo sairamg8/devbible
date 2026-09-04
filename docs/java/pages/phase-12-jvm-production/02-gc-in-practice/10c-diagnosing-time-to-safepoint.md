@@ -15,7 +15,7 @@ sidebar_position: 40
 > [`runtime/safepoint.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/safepoint.cpp)
 > for the `# SafepointSynchronize: Finished after` warning. Also **JEP 518 · JFR Cooperative
 > Sampling**, whose Future Work section concedes it *"does not entirely avoid safepoint bias"*.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[10b](10b-what-makes-time-to-safepoint-long.md) covered the counted loop, which is the cause
 everyone has heard of. In production it is frequently not the cause. This page is the rest of the

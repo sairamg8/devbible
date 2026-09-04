@@ -14,7 +14,7 @@ sidebar_position: 11
 > Reactive Stack → Overview → Performance* ("reactive and non-blocking
 > generally do not make applications run faster"), and the Reactor reference
 > for `reactor.schedulers.defaultBoundedElasticOnVirtualThreads`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The reactive stack's entire scalability argument rested on one premise: that
 a thread parked on I/O is an expensive thing to waste. JDK 21 removed that

@@ -15,7 +15,7 @@ sidebar_position: 8
 > dependencies such as `BeanFactory`, `ApplicationContext`, `Environment`) and
 > *Bean Scopes* (docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html
 > — `ObjectFactory`/`ObjectProvider` as the documented way to retrieve a current
-> instance on demand, and `getIfAvailable`/`getIfUnique`). Spring Boot 4.1.0,
+> instance on demand, and `getIfAvailable`/`getIfUnique`). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Everything so far assumed the dependency exists, is unique, and should be

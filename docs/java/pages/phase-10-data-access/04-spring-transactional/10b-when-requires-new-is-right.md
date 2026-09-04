@@ -13,7 +13,7 @@ sidebar_position: 27
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html))
 > and the PostgreSQL 18 manual *Transaction Isolation*
 > ([postgresql.org/docs/18/transaction-iso.html](https://www.postgresql.org/docs/18/transaction-iso.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, HikariCP 7.0.2,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, HikariCP 7.0.2,
 > PostgreSQL 18.
 
 **[Chunk 10](10-requires-new.md) priced `REQUIRES_NEW`: two connections per

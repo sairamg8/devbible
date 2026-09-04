@@ -13,7 +13,7 @@ sidebar_position: 2
 > ([openjdk.org](https://openjdk.org/jeps/520)), and the **JDK 25 `jfr` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jfr.html)).
 > 🔴 **No sandbox** — no recording, event table or measurement below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **JFR is not a profiler that happens to ship with the JDK. It is an event recording framework
 inside the JVM, of which profiling is one use — and that architectural fact explains everything

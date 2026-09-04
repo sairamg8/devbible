@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([docs.spring.io/.../support/KeyHolder.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/support/KeyHolder.html)),
 > and the PostgreSQL 18 manual *INSERT → RETURNING*
 > ([postgresql.org/docs/18/sql-insert.html](https://www.postgresql.org/docs/18/sql-insert.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **Two things about writes are worth more attention than they usually get. The `int`
 that `update()` returns is the only confirmation you will ever receive that your

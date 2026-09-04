@@ -11,7 +11,7 @@ sidebar_position: 17
 > [`SoftAssertions`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/SoftAssertions.java)
 > and the `assertAlso` / `assertAll` / `assertSoftly` declarations on
 > `SoftAssertionsProvider`.
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[06](06-soft-assertions.md) covered the mechanism and the one fatal mistake. This chunk is
 the composition API — how a helper method contributes assertions to the caller's report

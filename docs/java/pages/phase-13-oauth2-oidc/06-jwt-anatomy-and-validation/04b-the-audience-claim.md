@@ -17,7 +17,7 @@ sidebar_position: 10
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt),
 > [rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt),
 > [Spring reference](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **`aud` is the single most consequential claim in a JWT and the one most often left
 unchecked. This chunk is what the claim means and what it defends against; configuring the

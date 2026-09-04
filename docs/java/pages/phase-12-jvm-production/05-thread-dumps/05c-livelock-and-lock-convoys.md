@@ -13,7 +13,7 @@ sidebar_position: 9
 > and the **`java.lang.Thread.State` API documentation**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.State.html)).
 > 🔴 **No sandbox** — every dump fragment below is a marked schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[05b](05b-deadlock.md) covered the failure the JVM hands you on a plate. This page covers its
 two neighbours, which it will never report: livelock, where threads are running and undoing each

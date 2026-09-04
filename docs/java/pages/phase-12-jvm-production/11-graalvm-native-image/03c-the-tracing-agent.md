@@ -13,7 +13,7 @@ sidebar_position: 6
 > ([graalvm.github.io](https://graalvm.github.io/native-build-tools/latest/maven-plugin.html), source checked at tag `1.1.1`);
 > the **Spring Boot reference**, "Advanced Native Images Topics"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/advanced-topics.html)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Native Build Tools 1.1.1**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Native Build Tools 1.1.1**.
 > Documentation-validated; **no sandbox run**.
 
 **The tracing agent attaches to an ordinary JVM run, records every reflective lookup, resource read, proxy creation and serialization it observes, and writes the corresponding metadata files when the JVM exits. It is genuinely the fastest way to get a native build working. It is also the single most over-trusted tool in this topic, because the documentation's own caution — *"the agent observes only executed code"* — means the metadata you ship has exactly the coverage of the run you did, and nothing catches the gap until production.**

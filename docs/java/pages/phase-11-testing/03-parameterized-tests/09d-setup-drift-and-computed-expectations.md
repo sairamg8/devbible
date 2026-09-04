@@ -11,7 +11,7 @@ sidebar_position: 34
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
 > The documented behaviour quoted here is JUnit's; the design argument built on it is a review
 > standard, not a rule the framework enforces.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Two shapes remain, and they are the two that look most like good engineering while they are
 being written: the row that needs its own arrangement, which arrives as a column of lambdas, and

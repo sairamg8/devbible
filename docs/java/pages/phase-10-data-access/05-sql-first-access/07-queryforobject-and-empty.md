@@ -13,7 +13,7 @@ sidebar_position: 16
 > ([docs.spring.io/.../simple/JdbcClient.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/JdbcClient.html))
 > and the `org.springframework.dao` package javadoc
 > ([docs.spring.io/.../dao/package-summary.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/dao/package-summary.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **`jdbcTemplate.queryForObject(sql, mapper, id)` for a row that does not exist
 throws `EmptyResultDataAccessException`. It does not return `null`. Everybody meets

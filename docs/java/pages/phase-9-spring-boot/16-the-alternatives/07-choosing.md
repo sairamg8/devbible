@@ -11,7 +11,7 @@ sidebar_position: 7
 > (docs.spring.io/spring-boot/reference/packaging/), **JEP 483 —
 > Ahead-of-Time Class Loading & Linking** (JDK 24) and **JEP 515 —
 > Ahead-of-Time Method Profiling** (JDK 25) at openjdk.org/jeps/, and the
-> Spring Framework reference on virtual threads. Spring Boot 4.1.0, Spring
+> Spring Framework reference on virtual threads. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **The comparison articles stop before the interesting part. Yes, Spring's

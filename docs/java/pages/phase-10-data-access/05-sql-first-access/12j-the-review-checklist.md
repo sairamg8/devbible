@@ -8,7 +8,7 @@ sidebar_position: 33
 
 > Verified: 2026-08 — this chunk asserts nothing new. Every item links to the chunk of
 > this topic that argues it and carries that chunk's `> Verified:` line.
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Twenty-five chunks of argument compress into a list you can read against a diff. It
 is deliberately long, because the whole trade of SQL-first access is that decisions a

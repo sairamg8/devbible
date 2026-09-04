@@ -6,7 +6,7 @@ sidebar_position: 24
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0** reference at tag `v4.1.0` —
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1** reference at tag `v4.1.0` —
 > [`testing/testcontainers.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/testcontainers.adoc)
 > ("Using Spring Beans", "Using the JUnit Extension", "Lifecycle of Managed Containers") and
 > [`features/dev-services.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/features/dev-services.adoc)
@@ -15,7 +15,7 @@ sidebar_position: 24
 > [`TestcontainersStartup`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot-testcontainers/src/main/java/org/springframework/boot/testcontainers/lifecycle/TestcontainersStartup.java)
 > and [`ImportTestcontainers`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot-testcontainers/src/main/java/org/springframework/boot/testcontainers/context/ImportTestcontainers.java)
 > sources at the same tag.
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.
 

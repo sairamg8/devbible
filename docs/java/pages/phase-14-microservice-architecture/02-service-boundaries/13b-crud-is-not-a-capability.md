@@ -13,7 +13,7 @@ sidebar_position: 21
 > Vaughn Vernon, *Effective Aggregate Design, Part I* (2011)
 > ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/), CC BY-ND 3.0), on
 > commands versus queries on an aggregate.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **You can usually judge a service boundary without seeing the code, from the API alone. A

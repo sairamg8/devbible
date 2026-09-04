@@ -16,7 +16,7 @@ sidebar_position: 14
 > ([Tag](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Tag.html))
 > and `TagFilter`
 > ([TagFilter](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/TagFilter.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Tagging is the only mechanism in JUnit that lets one source tree be several test suites.
 The annotation is Jupiter's; the concept and the filter are the Platform's; and the

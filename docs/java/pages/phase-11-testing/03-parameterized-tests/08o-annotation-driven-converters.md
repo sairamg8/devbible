@@ -14,7 +14,7 @@ sidebar_position: 30
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/AnnotationBasedArgumentConverter.html))
 > and `ConvertWith`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/ConvertWith.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`@ConvertWith`'s `@Target` includes `ANNOTATION_TYPE` ([08l](08l-explicit-conversion.md)), and
 that one element turns explicit conversion from a mechanism into a vocabulary. Instead of

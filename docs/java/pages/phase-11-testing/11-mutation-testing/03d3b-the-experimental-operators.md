@@ -15,7 +15,7 @@ sidebar_position: 21
 > registration read from pitest 1.30.0 source at the `1.30.0` tag:
 > `engine/gregor/config/StandardMutatorGroups.java` and
 > `mutators/experimental/RemoveSwitchMutatorGroup.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Operator behaviour is quoted from pitest's
 > documentation and read from its published source; no mutant count on this page came from a run.
 

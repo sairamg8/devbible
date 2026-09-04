@@ -18,7 +18,7 @@ sidebar_position: 17
 > for the `Humongous regions:` log format string and
 > [`gc/shared/gcCause.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcCause.cpp)
 > for the `G1 Humongous Allocation` and `G1 Compaction Pause` cause strings.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03d](03d-humongous-allocations.md) established what a humongous object is and how it gets
 allocated. This page is the failure it leads to, which is unusual among GC failures in that

@@ -19,7 +19,7 @@ sidebar_position: 6
 > [`runtime/arguments.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/arguments.cpp)
 > (the `special_jvm_flags[]` table and the unrecognised-option path) and
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Most inherited JVM command lines contain at least one flag that no longer does what its
 author intended. The JDK sorts those into three tiers with three completely different

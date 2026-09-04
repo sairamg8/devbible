@@ -12,7 +12,7 @@ sidebar_position: 3
 > [deprecated-list](https://docs.spring.io/spring-data/jpa/docs/current/api/deprecated-list.html)),
 > and the Spring Data JPA 4.1 reference "Defining Repository Interfaces"
 > ([definition.html](https://docs.spring.io/spring-data/jpa/reference/repositories/definition.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2.
 
 **`CrudRepository` and `PagingAndSortingRepository` are store-neutral: nothing on

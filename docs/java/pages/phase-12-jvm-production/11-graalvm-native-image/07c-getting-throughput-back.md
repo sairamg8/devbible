@@ -14,7 +14,7 @@ sidebar_position: 15
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOutput/));
 > all three read from `docs/reference-manual/native-image/` on the **`release/graal-vm/25.3`** branch of
 > [`oracle/graal`](https://github.com/oracle/graal/tree/release/graal-vm/25.3/docs/reference-manual/native-image).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — there is not a single throughput, size or build-time
 > measurement on this page, and every option below is transcribed from documentation rather than exercised.
 

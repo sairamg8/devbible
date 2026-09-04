@@ -9,7 +9,7 @@ sidebar_position: 45
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Conformist; Vaughn Vernon, *Implementing Domain-Driven Design* (Addison-Wesley), Chapter 3:
 > Context Maps.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a downstream team lacks the organizational leverage to demand supplier accommodations and determines that maintaining an Anticorruption Layer is cost-prohibitive, it chooses the Conformist pattern. In this relationship, the downstream team intentionally surrenders its own distinct ubiquitous language and adopts the upstream domain model directly into its bounded context. Conforming is not a failure of domain modeling; it is a pragmatic architectural compromise that trades linguistic independence for zero translation overhead, immediate compatibility, and rapid feature delivery. However, it is an asymmetric and binding commitment: any design bias, structural flaw, or breaking change in the upstream model propagates directly into the downstream domain.**
 

@@ -9,8 +9,8 @@ sidebar_position: 1
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s own documentation
 > ([jacoco.org/jacoco/trunk/doc](https://www.jacoco.org/jacoco/trunk/doc/)) — `counters.html`,
 > `changes.html`, `classids.html`, `faq.html`, `implementation.html` — and the Maven plugin
-> mojo pages. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
+> mojo pages. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
 > Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no build and no test runs on this machine.** Every page in this topic carries
 > Java source, POM and Gradle configuration, and behaviour quoted from documentation —

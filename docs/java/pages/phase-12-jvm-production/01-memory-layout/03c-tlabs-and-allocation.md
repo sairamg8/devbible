@@ -15,7 +15,7 @@ sidebar_position: 11
 > `src/hotspot/share/gc/shared/threadLocalAllocBuffer.inline.hpp` and
 > `threadLocalAllocBuffer.cpp`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/threadLocalAllocBuffer.inline.hpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Eden is shared by every thread in the process, and yet allocation involves no lock, no
 compare-and-swap and no free list. The mechanism is the thread-local allocation buffer: each

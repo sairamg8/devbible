@@ -14,7 +14,7 @@ sidebar_position: 27
 > reference**, "Core Technologies → Ahead of Time Optimizations"
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/aot.html)).
 > 🔴 **No sandbox** — no image was built, no container was run and no property value below was
-> observed. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> observed. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **One image, promoted unchanged from staging to production, differing only in what the environment
 supplies. That is the arrangement everything in this topic has been building toward, and it is worth

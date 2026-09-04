@@ -12,7 +12,7 @@ sidebar_position: 3
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/repositories/query-methods.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/repositories/query-methods.html))
 > and *Value Expressions*
 > ([…/mongodb/value-expressions.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/value-expressions.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0.
 
 **When a derived method name is not enough, JPA gives you JPQL and MongoDB gives you a
 query document written as a JSON string. That is a bigger difference than "another query

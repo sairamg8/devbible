@@ -6,7 +6,7 @@ sidebar_position: 10
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics · Registering Custom Metrics*
 > (docs.spring.io/spring-boot/reference/actuator/metrics.html: `MeterBinder`
 > beans being bound automatically, and the caveat about using the
@@ -14,7 +14,7 @@ sidebar_position: 10
 > Observability* (docs.spring.io/spring-boot/reference/actuator/observability.html:
 > `management.observations.annotations.enabled`, the `aspectjweaver` requirement
 > supplied by `spring-boot-starter-aspectj`, and the duplicate-observation
-> warning for already-instrumented methods). Spring Boot 4.1.0, Spring Framework
+> warning for already-instrumented methods). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Custom instrumentation is easy to add and hard to remove, because the moment

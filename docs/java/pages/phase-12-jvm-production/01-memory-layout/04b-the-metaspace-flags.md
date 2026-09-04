@@ -18,7 +18,7 @@ sidebar_position: 15
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/globals.hpp)).
 > 🔴 **`CompressedClassSpaceSize` appears zero times in the JDK 25 man page**; the source and the
 > Troubleshooting Guide are its only documentation.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Four flags govern the region [04](04-metaspace.md) describes, and three of the four are
 routinely misunderstood: one is unlimited by default, one is a collection trigger that people

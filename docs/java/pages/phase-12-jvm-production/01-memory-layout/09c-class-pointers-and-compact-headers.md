@@ -12,7 +12,7 @@ sidebar_position: 37
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and **HotSpot source at tag `jdk-25+36`** — `globals.hpp` for `CompressedClassSpaceSize` and
 > `UseCompactObjectHeaders`, and `arguments.cpp`'s `special_jvm_flags[]` for the
-> `UseCompressedClassPointers` deprecation. JDK 25 · Spring Boot 4.1.0.
+> `UseCompressedClassPointers` deprecation. JDK 25 · Spring Boot 4.1.1.
 > ⚠️ **`CompressedClassSpaceSize` and the deprecation are NOT in the `java` man page** — the flag
 > does not appear in it at all. Both come from the source.
 > **No sandbox** — flags, quoted documentation and source. No captured JVM output.

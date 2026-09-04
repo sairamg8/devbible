@@ -16,7 +16,7 @@ sidebar_position: 7
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)),
 > and `org.hibernate.cfg.TransactionSettings.ENABLE_LAZY_LOAD_NO_TRANS`
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/TransactionSettings.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/TransactionSettings.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **This is the exception with the worst reputation for environment dependence, and the reason
 is not one setting — it is that a lazy access can succeed for at least ten unrelated

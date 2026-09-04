@@ -13,7 +13,7 @@ sidebar_position: 19
 > both of which list the Common Closure Principle — *"things that change together should be
 > packaged together"* — as a force; *Dark matter force: minimize design-time coupling*
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-design-time-coupling.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The layered split is the first decomposition most teams reach for, because layers are the

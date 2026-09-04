@@ -10,7 +10,7 @@ sidebar_position: 2
 > Scope), §10.3 (Access Token Credentials); RFC 6750 §1 (Bearer); RFC 7009 (Token
 > Revocation); RFC 7662 (Token Introspection); and RFC 8705 (mTLS) — at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **"Why not just use an API key?" is a good question and it deserves a better answer than
 "because OAuth2 is the standard". Both are bearer credentials; both are a string in a

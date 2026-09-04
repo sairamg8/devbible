@@ -11,7 +11,7 @@ sidebar_position: 20
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
 > RFC 6749 §3.1.2.5 (Endpoint Content), §10.5 (Authorization Codes)
 > ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A code in a URL is a code in a log, and the URL that carries it is the one the browser lands
 on. Once the browser is on your callback page, three separate mechanisms start copying that URL

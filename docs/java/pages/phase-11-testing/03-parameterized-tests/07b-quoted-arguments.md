@@ -16,7 +16,7 @@ sidebar_position: 13
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedClass.html))
 > pages, and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[07](07-display-names.md) covered the pattern. This chunk covers what the pattern renders
 *into* it — and that changed in 6.0 in three separate ways, all of which are improvements and

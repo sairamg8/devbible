@@ -11,7 +11,7 @@ sidebar_position: 7
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/template-crud-operations.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-crud-operations.html))
 > and the *Template API* overview
 > ([…/mongodb/template-api.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-api.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
 
 **A JPA repository's `save` on a managed entity is a no-op that lets dirty checking
 compute an `UPDATE` containing only the columns that changed. A MongoDB repository's

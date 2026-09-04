@@ -13,8 +13,8 @@ sidebar_position: 11
 > `AbstractMockMultipartHttpServletRequestBuilder`, `MockMultipartFile`,
 > `MockHttpServletRequestBuilder` and `RequestPostProcessor`, from which every javadoc sentence
 > and code excerpt below is taken.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (docs and sources read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (docs and sources read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **Two things the request builder does that deserve their own page. Multipart, because what it

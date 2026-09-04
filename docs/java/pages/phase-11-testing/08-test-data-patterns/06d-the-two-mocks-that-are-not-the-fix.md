@@ -14,8 +14,8 @@ sidebar_position: 26
 > Mockito behaviour cross-checked against this phase's
 > [11 · Static and final](../04-mockito/11-static-and-final.md) and
 > [03e · Unstubbed defaults](../04-mockito/03e-unstubbed-defaults.md), which own the
-> mechanism. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, **Mockito 5.23.0**, AssertJ 3.27.7.
+> mechanism. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, **Mockito 5.23.0**, AssertJ 3.27.7.
 > **No sandbox** — Java source and documented behaviour only, never a run.
 
 **Every team that reads [06](06-random-and-time.md) and does not want the constructor

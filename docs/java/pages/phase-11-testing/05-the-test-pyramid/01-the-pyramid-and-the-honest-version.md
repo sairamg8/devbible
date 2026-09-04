@@ -9,10 +9,10 @@ sidebar_position: 1
 > Verified: 2026-08-28 against the Spring Framework 7.0.x reference *Testing → Spring
 > TestContext Framework → Context Management → Context Caching*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/caching.html))
-> and the Spring Boot 4.1.0 reference *Testing → Testing Spring Boot Applications*
+> and the Spring Boot 4.1.1 reference *Testing → Testing Spring Boot Applications*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and quotes from the reference, never a
 > fabricated test run.
 

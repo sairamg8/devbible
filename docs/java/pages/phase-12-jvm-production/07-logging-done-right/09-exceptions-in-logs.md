@@ -14,7 +14,7 @@ sidebar_position: 19
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html));
 > and the **Spring Framework 7.0** documentation for `@ExceptionHandler` /
 > `ResponseEntityExceptionHandler` ([docs.spring.io](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-exceptionhandler.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **An exception carries a complete account of what went wrong and where. A log records it once, at
 the place that decided what to do about it. Almost every production log breaks that rule — the

@@ -15,7 +15,7 @@ sidebar_position: 18
 > `disable_compilation_forever`)
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/code/codeCache.cpp)).
 > ⚠️ The man page's Code Heap State Analytics section is **stale** and is flagged as such below.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[05](05-the-code-cache.md) established that the code cache is native, defaults to 240 MB, and
 is three segments rather than one. This page is what the JVM actually does when one of them

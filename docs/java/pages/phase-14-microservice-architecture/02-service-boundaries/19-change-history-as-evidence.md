@@ -19,7 +19,7 @@ sidebar_position: 27
 > Jazayeri, *Detection of logical coupling based on product release history* (ICSM 1998),
 > and is developed for practitioners in Adam Tornhill's *Software Design X-Rays* (2018),
 > both cited by concept.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. **No sandbox** — the
 > commands below are shown so you can run them on your own repository; no output of any run
 > is reproduced anywhere in this topic.

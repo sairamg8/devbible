@@ -13,7 +13,7 @@ sidebar_position: 26
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/DefaultArgumentConverter.html))
 > page, and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[08](08-conversion-and-aggregation.md) covered the two closed mechanisms: widening, and a
 fixed table of about thirty implicit converters. This is the third one, and it is different in

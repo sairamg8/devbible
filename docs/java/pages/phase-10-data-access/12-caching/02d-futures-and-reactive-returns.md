@@ -10,7 +10,7 @@ sidebar_position: 5
 > Declarative Annotation-based Caching* — the `CompletableFuture`/reactive notes under
 > `@Cacheable`, `@CachePut`, `@CacheEvict` and *Synchronized Caching*
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **Since Spring Framework 6.1 the cache annotations adapt to asynchronous return types instead
 of caching the wrapper, which is the behaviour you want in two of the three cases. The third

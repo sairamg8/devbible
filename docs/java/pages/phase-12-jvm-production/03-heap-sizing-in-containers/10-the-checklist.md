@@ -14,7 +14,7 @@ sidebar_position: 16
 > and the **Kubernetes** resource-management documentation
 > ([kubernetes.io](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)).
 > Every claim on this page is argued in full in one of the chunks it links to.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A checklist is only worth having if the order is load-bearing. This one is: each step either
 eliminates a family of causes or produces the input to the next. Run part A before a deploy, part

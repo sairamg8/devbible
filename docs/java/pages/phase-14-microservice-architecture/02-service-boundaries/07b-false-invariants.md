@@ -10,7 +10,7 @@ sidebar_position: 11
 > ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/), CC BY-ND 3.0),
 > whose worked example turns on an aggregate *"designed with false invariants in mind, not
 > real business rules"*; Eric Evans, *Domain-Driven Design* (2003), Ch. 6, cited by concept.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **The invariant is the only binding boundary criterion, which makes a fake one the most

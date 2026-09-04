@@ -10,7 +10,7 @@ sidebar_position: 7
 > ([codegen-ddl](https://www.jooq.org/doc/latest/manual/code-generation/codegen-ddl/))
 > and *Configuration and setup of the generator*
 > ([codegen-configuration](http://www.jooq.org/doc/latest/manual/code-generation/codegen-configuration/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Generating against a database somebody's laptop happens to be running is the version of jOOQ
 that gives the tool a bad reputation: the build is not reproducible, CI needs a server nobody

@@ -13,7 +13,7 @@ sidebar_position: 6
 > Dump", which states that *"Threads in the `RUNNABLE` state might also be blocked"*
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox** — the stack fragments below are labelled schematics, not captured dumps.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the most consequential misreading in thread-dump analysis, and it is built into the API.
 `RUNNABLE` does not mean the thread is running, making progress, or consuming CPU. It means the

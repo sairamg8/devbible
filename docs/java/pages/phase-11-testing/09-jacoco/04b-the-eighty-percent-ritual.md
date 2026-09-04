@@ -8,7 +8,7 @@ sidebar_position: 12
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/counters.html` for what each pattern does
 > to which counter, and `check-mojo.html` for the rule syntax the last pattern exploits.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No build and no test runs on this machine.** Every claim about what a pattern does to a
 > counter follows from the documented counter definitions, not from a measured run.

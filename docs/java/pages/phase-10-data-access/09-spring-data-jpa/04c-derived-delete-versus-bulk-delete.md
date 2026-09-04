@@ -12,7 +12,7 @@ sidebar_position: 24
 > the batch-delete warnings from the `JpaRepository` javadoc
 > ([apidocs](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html));
 > Jakarta Persistence 3.2 §4.11.
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Spring Data gives you two ways to delete a set of rows and they look almost

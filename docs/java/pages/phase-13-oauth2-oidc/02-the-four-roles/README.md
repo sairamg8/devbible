@@ -11,7 +11,7 @@ sidebar_position: 0
 > RFC 7591; RFC 8693; RFC 9700 (§2.1, §2.1.1, §2.1.2, §2.2.1); and the Spring Security 7.x
 > reference — at [datatracker.ietf.org](https://datatracker.ietf.org/) and
 > [docs.spring.io/spring-security/reference](https://docs.spring.io/spring-security/reference/).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — Java source, config and specification-quoted definitions only; no
 > fabricated transcripts and no real tokens.
 

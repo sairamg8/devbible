@@ -12,7 +12,7 @@ sidebar_position: 5
 > the quoted `parameterizedContainer` example and the `SearchStrategy` default
 > of `ALL`) and the Spring Boot reference *Creating Your Own Auto-configuration ·
 > Condition Annotations* (`@ConditionalOnBean`, `@ConditionalOnMissingBean`,
-> `@ConditionalOnSingleCandidate`). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> `@ConditionalOnSingleCandidate`). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **`@ConditionalOnMissingBean` with no attributes answers one question — "is

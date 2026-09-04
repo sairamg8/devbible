@@ -13,8 +13,8 @@ sidebar_position: 16
 > **Spring Boot reference**, "Packaging → AOT Cache"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/aot-cache.html),
 > documented at 4.1.x). 🔴 **No sandbox** — no archive was created, no JVM was started, and no
-> start-up time or archive size below is a measurement. JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8.
+> start-up time or archive size below is a measurement. JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9.
 
 **Almost every article about CDS opens with "how to enable CDS", which is the wrong frame and
 causes real confusion when the measurements come in flat. On a stock JDK 25 image the JVM is

@@ -16,7 +16,7 @@ sidebar_position: 24
 > [Advanced usage](https://pitest.org/quickstart/advanced/) page's *Mutation Result Listener* section,
 > and the [FAQ](https://pitest.org/faq/) entries *"Can I see the source code of the mutants?"* and
 > *"How can I combine all the reports for a project with multiple modules into a single report?"*.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Field lists and element names are read from pitest's
 > published source. **No report file, row or value on this page came from a run.**
 

@@ -14,7 +14,7 @@ sidebar_position: 11
 > 🔴 **No sandbox and no measurements.** Every duration on this page is either a *chosen
 > budget* used to illustrate arithmetic, or a figure attributed to the source it came from.
 > No latency, percentile or throughput figure here was observed on a running system.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Availability is the coupling cost people eventually notice. Latency is the one they notice
 first and misdiagnose longest, because it accumulates in a place nobody owns. The user's

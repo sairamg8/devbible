@@ -8,7 +8,7 @@ sidebar_position: 53
 
 > Verified: 2026-09-04 against Martin Fowler, *MonolithFirst* and *Refactoring to a Modular Monolith*;
 > Oliver Drotbohm, *Spring Modulith Reference Documentation* (2.1.1).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Splitting a large service directly into two separate networked microservices is one of the highest-risk operations in software engineering. If the boundary is misplaced, the team pays the full distributed systems tax — network latency, serialization overhead, eventual consistency edge cases, and distributed tracing complexity — while debugging an unstable boundary. The proven architectural methodology is to split in-process first: refactor the single deployable into strict, isolated logical modules using package encapsulation, decouple database schemas locally, eliminate cross-boundary transactions, and verify the seam with automated boundary tests. Only when the in-process boundary proves clean and stable over multiple production release cycles should physical network extraction be considered.**
 

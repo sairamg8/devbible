@@ -12,7 +12,7 @@ sidebar_position: 26
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the `org.hibernate.annotations.DynamicUpdate` javadoc in the Hibernate 7.4 source
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/tree/7.4)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Dirty checking decides *whether* to write. It does not decide *what* the statement looks
 like. By default Hibernate writes an `UPDATE` that sets every mapped column except the

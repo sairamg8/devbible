@@ -10,9 +10,9 @@ sidebar_position: 1
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html))
 > and the `@ParameterizedTest` javadoc
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedTest.html)),
-> plus `spring-boot-dependencies:4.1.0` and `spring-boot-starter-test:4.1.0` from Maven Central.
-> JDK 25, Spring Boot 4.1.0, **JUnit Jupiter 6.0.3** (via `org.junit:junit-bom:6.0.3`, which
-> `spring-boot-dependencies:4.1.0` imports).
+> plus `spring-boot-dependencies:4.1.1` and `spring-boot-starter-test:4.1.0` from Maven Central.
+> JDK 25, Spring Boot 4.1.1, **JUnit Jupiter 6.0.3** (via `org.junit:junit-bom:6.0.3`, which
+> `spring-boot-dependencies:4.1.1` imports).
 
 **Six test methods that differ only in a literal are one test method with a missing
 parameter. `@ParameterizedTest` supplies that parameter — but the reason to reach for it is

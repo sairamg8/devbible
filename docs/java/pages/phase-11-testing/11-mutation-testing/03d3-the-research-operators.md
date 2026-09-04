@@ -16,7 +16,7 @@ sidebar_position: 20
 > [FAQ](https://pitest.org/faq/) entry *"Can I activate more mutators without relisting all the default
 > ones?"*. Group registration read from pitest 1.30.0 source at the `1.30.0` tag:
 > `engine/gregor/config/Mutator.java` and `engine/gregor/config/StandardMutatorGroups.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Operator behaviour and every table below are quoted
 > from pitest's documentation; no mutant count on this page came from a run.
 

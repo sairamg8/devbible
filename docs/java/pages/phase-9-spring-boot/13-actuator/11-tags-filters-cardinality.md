@@ -6,7 +6,7 @@ sidebar_position: 11
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics · Common Tags* and *Customizing Individual Metrics*
 > (docs.spring.io/spring-boot/reference/actuator/metrics.html:
 > `management.metrics.tags.*`, `MeterRegistryCustomizer` with
@@ -16,7 +16,7 @@ sidebar_position: 11
 > user identifiers or request URLs cause performance problems) and the
 > Micrometer 1.17 `io.micrometer.core.instrument.config.MeterFilter` javadoc
 > for `maximumAllowableTags`, `ignoreTags`, `renameTag` and `denyNameStartsWith`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **🔴 A tag whose values are unbounded will destroy your metrics backend, and it
 will do it quietly, at a rate proportional to your success. Every distinct

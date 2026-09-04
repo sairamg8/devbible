@@ -14,7 +14,7 @@ sidebar_position: 18
 > ([docs.spring.io/spring-boot/maven-plugin/using.html](https://docs.spring.io/spring-boot/maven-plugin/using.html)),
 > and the Hibernate ORM 7.4 *Introduction* §5.6 on proxies
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Spring Data offers two things both called projections, and the reference is precise about
 the difference in a way that most usage is not. A class-based projection is instantiated — the

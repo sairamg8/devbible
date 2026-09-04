@@ -14,7 +14,7 @@ sidebar_position: 17
 > ([docs.spring.io/spring-framework/reference/7.0/data-access.html](https://docs.spring.io/spring-framework/reference/7.0/data-access/jdbc.html)),
 > and the JDK 25 API for `java.sql.Connection` and try-with-resources
 > ([docs.oracle.com/en/java/javase/25/](https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/java/sql/Connection.html)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 6](06-leak-detection.md) covered the detector. This chunk is the other
 two thirds of the job: recognising a leak from the pool's behaviour before the

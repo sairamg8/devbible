@@ -15,7 +15,7 @@ sidebar_position: 13
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)).
 > 🔴 **No sandbox.** No timing, log line or observed default appears here; every property
 > name and every default-or-absence-of-default was read out of the documentation.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A timeout you did not set is not "the framework's sensible default" — on Boot 4.1 it is
 whatever the HTTP library that happened to be on your classpath does, and the reference

@@ -12,7 +12,7 @@ sidebar_position: 22
 > ([with-recursive-clause](http://www.jooq.org/doc/latest/manual/sql-building/sql-statements/with-recursive-clause/))
 > and *SELECT DISTINCT ON*
 > ([select-clause-distinct-on](https://www.jooq.org/doc/latest/manual/sql-building/sql-statements/select-statement/select-clause/select-clause-distinct-on/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Two PostgreSQL features that change what a single query can do. A CTE turns a query with three
 nested subqueries into three named steps read top to bottom — and in its recursive form walks a

@@ -13,7 +13,7 @@ sidebar_position: 3
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/debugging-and-diagnostics/JDWP/));
 > the **Spring Boot reference**, "Introducing GraalVM Native Images"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/introducing-graalvm-native-images.html)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run**.
 
 **Everything else in this topic — reachability metadata, the tracing agent, build-time initialisation, Spring's AOT engine, the absence of JVMTI, the fact that `@ConditionalOnProperty` stops working — is a consequence of one design decision. `native-image` builds a *closed* program: it computes the set of classes, methods and fields your application can possibly touch, includes those, and discards everything else. Anything it could not prove reachable is simply not in the binary, and there is no mechanism at run time to go and get it. Understand this one page and the rest of the topic stops being a list of surprises.**

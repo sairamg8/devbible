@@ -9,7 +9,7 @@ sidebar_position: 36
 > Verified: 2026-09-01 against the **jqwik 1.10.1 user guide**, sections *Collecting and
 > Reporting Statistics*, *Checking Coverage of Collected Statistics* and *Statistics Report
 > Formatting* ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no test run on this machine** — no statistics table below was produced by
 > an execution; the report shapes are described from the guide, and every percentage in the
 > prose is an illustration, never an observed figure.

@@ -17,7 +17,7 @@ sidebar_position: 7
 > ([github.com](https://github.com/spring-projects/spring-security)).
 > Spring Security 7 removed `and()`, `authorizeRequests()` and `antMatchers()`; every
 > snippet here is the 7.x lambda DSL and was checked against the 7.x reference samples.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **A resource server's security configuration is one `@Bean` returning a
 `SecurityFilterChain`. In Spring Security 7 the lambda DSL is not a preference — `and()` was

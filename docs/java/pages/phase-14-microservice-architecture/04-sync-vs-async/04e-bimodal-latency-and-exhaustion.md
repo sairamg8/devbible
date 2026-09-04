@@ -11,7 +11,7 @@ sidebar_position: 16
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)).
 > 🔴 **No sandbox.** The worked example below is **Google's**, reproduced with attribution;
 > every number in it is theirs and is arithmetic within their stated scenario. Nothing here
-> was measured by this page. Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework
+> was measured by this page. Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework
 > 7.0.8.
 
 **Everything before this chunk treats a dependency's failure as costing you exactly that

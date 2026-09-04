@@ -13,8 +13,8 @@ sidebar_position: 17
 > ([env-profiles](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/env-profiles.html));
 > the method contract, the `Supplier` semantics, the precedence claim and the
 > `DynamicPropertyRegistrar` behaviour are read from the first of those.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — Java source only; no container was started.
 
 **[07](07-test-properties-and-profiles.md) covered properties whose values you know when you

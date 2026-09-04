@@ -12,7 +12,7 @@ sidebar_position: 11
 > manual**: *CREATE INDEX*
 > ([sql-createindex](https://www.postgresql.org/docs/18/sql-createindex.html)) and *Statistics Used
 > by the Planner* ([planner-stats](https://www.postgresql.org/docs/18/planner-stats.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing, an `EXPLAIN` output or a test run.

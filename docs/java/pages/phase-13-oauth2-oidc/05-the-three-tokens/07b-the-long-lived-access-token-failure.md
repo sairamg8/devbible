@@ -13,7 +13,7 @@ sidebar_position: 14
 > Note) ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc7009.txt)); RFC 9700 §4.9 (Access
 > Token Leakage at the Resource Server), §4.14 (Refresh Token Protection)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9700.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every specification in this phase assumes access tokens are short-lived, and a large
 fraction of production deployments quietly are not. The failure is not exotic. Somebody had a

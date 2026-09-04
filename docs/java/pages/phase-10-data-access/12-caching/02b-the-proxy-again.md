@@ -12,7 +12,7 @@ sidebar_position: 3
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html))
 > and *Core → AOP → Proxying mechanisms*
 > ([docs.spring.io/spring-framework/reference/core/aop/proxying.html](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **If you already understand why `@Transactional` does nothing on a self-invoked method, you
 already understand this page — it is the same interceptor mechanism, the same

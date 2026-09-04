@@ -10,7 +10,7 @@ sidebar_position: 24
 > ([built-in-extensions](https://docs.junit.org/6.0.3/writing-tests/built-in-extensions.html));
 > javadoc for `@TempDir`
 > ([TempDir](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/io/TempDir.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Jupiter ships exactly two user-facing extensions that are registered by default:
 `TempDirectory` and `AutoCloseExtension`. [09](09-tempdir-and-resources.md) and

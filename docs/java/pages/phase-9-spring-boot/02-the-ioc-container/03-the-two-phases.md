@@ -10,10 +10,10 @@ sidebar_position: 3
 > Container → Container Extension Points* and *Bean Overview*
 > (docs.spring.io/spring-framework/reference/core/beans/ —
 > `BeanFactoryPostProcessor`, `BeanPostProcessor`, `BeanDefinition` contents,
-> the ordering guarantees), and the Framework 7.0.8 Javadoc for
+> the ordering guarantees), and the Framework 7.0.9 Javadoc for
 > `org.springframework.context.support.AbstractApplicationContext#refresh`,
 > `BeanFactoryPostProcessor` and `BeanPostProcessor`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The single most useful thing to know about the Spring container is that it
 works in two completely separate passes, and almost every confusing behaviour

@@ -13,8 +13,8 @@ sidebar_position: 8
 > ([failure-threshold](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/failure-threshold.html));
 > the ten cache-key components and the caching statistics instruction are quoted from that
 > reference verbatim.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no suite was run and no timings appear on this page.
 
 **Starting a Spring context is the expensive thing your test suite does. Running a test is not.

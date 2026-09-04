@@ -10,7 +10,7 @@ sidebar_position: 49
 > ([writing-tests/timeouts](https://docs.junit.org/6.0.3/writing-tests/timeouts.html))
 > and the JUnit 6.0.0 release notes
 > ([release-notes](https://docs.junit.org/6.0.3/release-notes.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **A timeout on every test is a defensible policy — a hung suite blocks a pipeline and nobody is
 watching at 3am. The reason teams do not adopt it is that a fixed timeout also fails every test

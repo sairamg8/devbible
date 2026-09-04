@@ -15,7 +15,7 @@ sidebar_position: 2
 > Hung Process" and "Diagnostic Tools → The jstack Utility"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox** — command syntax and impact levels are quoted from the tool references.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Five mechanisms produce a thread dump, and on JDK 25 the choice between them is no longer a
 matter of taste. `jstack` — the command in every tutorial, every StackOverflow answer and most

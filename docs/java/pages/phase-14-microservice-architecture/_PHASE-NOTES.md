@@ -1,6 +1,6 @@
 # Phase 14 · Microservice architecture — notes every fork in this phase must read
 
-Target stack: **Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud 2025.1.x
+Target stack: **Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Cloud 2025.1.x
 "Oakwood" (every component 5.0.x) · JDK 25**, Kubernetes-first.
 
 > Verified 2026-09-01 against spring.io/projects/spring-cloud, the spring-cloud-release
@@ -12,7 +12,7 @@ Target stack: **Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud 2025.
 | | Pinned for this phase |
 |---|---|
 | JDK | **25** |
-| Spring Boot | **4.1.0** · Spring Framework **7.0.8** |
+| Spring Boot | **4.1.1** · Spring Framework **7.0.9** |
 | **Spring Cloud release train** | 🔴 **2025.1.x — codename `Oakwood`** |
 | Every Spring Cloud component | 🔴 **5.0.x** (Gateway, OpenFeign, Config, Netflix, Consul, Contract, Kubernetes, CircuitBreaker, Stream, Commons, Function, Vault, Task, Zookeeper, Bus) |
 | Spring gRPC | **1.0.3** — supports Boot **4.1.x** |

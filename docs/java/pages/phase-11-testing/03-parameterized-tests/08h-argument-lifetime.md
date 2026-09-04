@@ -13,7 +13,7 @@ sidebar_position: 23
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedTest.html))
 > and `@ParameterizedClass.autoCloseArguments`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedClass.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **An argument is not just a value handed to a method; it is an object with a lifetime that the
 engine manages. JUnit closes the ones that are closeable, once their invocation finishes, by

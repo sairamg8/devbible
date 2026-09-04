@@ -15,7 +15,7 @@ sidebar_position: 8
 > `springdoc.use-management-port`, `springdoc.show-actuator` and
 > `springdoc.show-login-endpoint`, the `swagger-annotations-jakarta` 2.2.52
 > security annotations, and the OpenAPI Specification v3.1.1 Security Scheme
-> Object. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Object. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Two completely separate problems share a word here, and conflating them is how
 services end up with a browsable, executable console of every internal endpoint

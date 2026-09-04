@@ -13,7 +13,7 @@ sidebar_position: 13
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Jakarta Persistence 3.2 `@IdClass` and `@EmbeddedId` javadocs
 > ([jakarta.ee/specifications/persistence/3.2/apidocs/](https://jakarta.ee/specifications/persistence/3.2/apidocs/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **The link table already exists in your database. `@ManyToMany` hides it; a link entity
 maps it. Once you do that, you no longer have a many-to-many mapping at all — you have

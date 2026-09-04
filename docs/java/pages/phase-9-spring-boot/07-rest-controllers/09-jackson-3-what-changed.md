@@ -14,14 +14,14 @@ sidebar_position: 9
 > replacing `MappingJackson2HttpMessageConverter` and implementing
 > `SmartHttpMessageConverter`, and the changed defaults
 > `WRITE_DATES_AS_TIMESTAMPS=false` and `SORT_PROPERTIES_ALPHABETICALLY=true`),
-> the Spring Boot 4.1.0 reference *JSON* chapter (docs.spring.io — the
+> the Spring Boot 4.1.1 reference *JSON* chapter (docs.spring.io — the
 > auto-configured `JsonMapper` bean, `spring.jackson.*` properties,
 > `@JacksonComponent`, `@JacksonMixin`, `JacksonMixinModule`, the
 > `spring.http.converters.preferred-json-mapper` escape hatch, and Jackson 2
 > support being deprecated for removal in a later 4.x), and the Spring Boot 4.0
 > migration guide (the `spring.jackson.read/write` → `spring.jackson.json.read/write`
 > move and the `Jackson2ObjectMapperBuilderCustomizer` →
-> `JsonMapperBuilderCustomizer` rename). Spring Boot 4.1.0, JDK 25.
+> `JsonMapperBuilderCustomizer` rename). Spring Boot 4.1.1, JDK 25.
 
 **Spring Boot 4 changed the JSON library underneath every REST controller, and
 two of Jackson 3's new defaults are visible on the wire. Dates now serialise as

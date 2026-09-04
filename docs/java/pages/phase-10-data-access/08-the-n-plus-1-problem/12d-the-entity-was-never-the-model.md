@@ -15,7 +15,7 @@ sidebar_position: 44
 > ([jakarta.ee/specifications/persistence/3.2](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)),
 > and the Spring Data JPA 4.1 *Projections* reference
 > ([docs.spring.io/spring-data/jpa/reference/repositories/projections.html](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html)).
-> JDK 25, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, Spring Boot 4.1.0.
+> JDK 25, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, Spring Boot 4.1.1.
 
 **Part 3 has been a sequence of increasingly careful answers to the wrong
 question. Join fetches, entity graphs, batch sizes and subselects are all ways of

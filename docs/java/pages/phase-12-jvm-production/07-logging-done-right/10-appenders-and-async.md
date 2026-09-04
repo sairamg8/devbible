@@ -18,7 +18,7 @@ sidebar_position: 21
 > **twelve-factor** logs guidance ([12factor.net/logs](https://12factor.net/logs)) and the
 > **Spring Boot 4.1** logging reference
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/features/logging.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **An appender is the thing that decides where a log event physically goes, and it is the part of
 logging configuration most often inherited from a decade-old template. The template assumes a

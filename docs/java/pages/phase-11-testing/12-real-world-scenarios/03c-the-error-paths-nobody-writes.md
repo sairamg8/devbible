@@ -16,8 +16,8 @@ sidebar_position: 15
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/resilience.html)),
 > **RFC 9110** §10.2.3 *Retry-After* and §15.6 and **RFC 6585** §4 *429 Too Many Requests*
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc6585.txt)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output.
 

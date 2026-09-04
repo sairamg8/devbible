@@ -19,7 +19,7 @@ sidebar_position: 18
 > from JEP 122 in
 > [`../01-memory-layout/04c-the-classloader-leak.md`](../01-memory-layout/04c-the-classloader-leak.md)
 > and is not re-derived here.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Topic 01 owns *why* a classloader leak happens: metaspace is allocated in per-loader arenas and
 freed only when the loader dies. This chunk owns *what you do about it once you have a dump*, which

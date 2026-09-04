@@ -14,7 +14,7 @@ sidebar_position: 22
 > ([postgresql.org](https://www.postgresql.org/docs/18/release-18.html))
 > and Flyway 12's `PostgreSQLParser`
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/flyway-database/flyway-database-postgresql)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08](08-migrating-a-live-service.md) gave the rule. This is the catalogue for the additive half —
 columns, `CHECK` constraints and foreign keys, which is to say everything `NOT VALID` makes cheap.

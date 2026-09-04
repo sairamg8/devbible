@@ -13,7 +13,7 @@ sidebar_position: 26
 > and Chris Richardson, "Dark matter force: minimize runtime coupling"
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
 > 🔴 **No sandbox, and no saga implementation** — phase 15 topic 10 owns that. Version spine:
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Category 2 from [25](06-what-must-be-synchronous.md) is where the genuinely hard architecture
 decisions live: a check that gates a write. The instinct is to reason about consistency, which

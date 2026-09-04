@@ -10,7 +10,7 @@ sidebar_position: 1
 > Pods" ([kubernetes.io](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)) and
 > "Container Lifecycle Hooks" — and the **Spring Boot 4.1** reference "Graceful Shutdown"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 > 🔴 **No sandbox** — no cluster was run and no log line below is a capture; the sequences are
 > derived from the documented behaviour and are labelled as such.
 

@@ -6,8 +6,8 @@ sidebar_position: 9
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-03 against the **Micrometer Tracing 1.7.0 Reference** — *Context Propagation* and *TaskDecorator* ([docs.micrometer.io](https://docs.micrometer.io/tracing/reference/context-propagation.html)); **Spring Boot 4.1.0 reference** — *Task Execution and Scheduling → Context Propagation* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/features/task-execution-and-scheduling.html)); and **Project Reactor 3.7 / Context Propagation 1.1** documentation.
-> Target: **JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
+> Verified: 2026-09-03 against the **Micrometer Tracing 1.7.0 Reference** — *Context Propagation* and *TaskDecorator* ([docs.micrometer.io](https://docs.micrometer.io/tracing/reference/context-propagation.html)); **Spring Boot 4.1.1 reference** — *Task Execution and Scheduling → Context Propagation* ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/features/task-execution-and-scheduling.html)); and **Project Reactor 3.7 / Context Propagation 1.1** documentation.
+> Target: **JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0**.
 > 🔴 **No sandbox run** — code and failure mechanisms verified against framework specifications.
 
 **The defining characteristic of context propagation failure is that nothing ever crashes. The HTTP request returns 200 OK, the database transaction commits, the Kafka message processes, and the logs look normal. But in your distributed tracing UI, the request abruptly stops at an intermediate boundary, or downstream operations appear as orphaned root traces that cannot be correlated with the user who triggered them. In the JVM, context travels in thread-local storage; the moment work crosses a thread boundary without explicit capture and restoration—in an executor, a reactive operator, an async message consumer, or an unmanaged HTTP client—the trace silently severs.**

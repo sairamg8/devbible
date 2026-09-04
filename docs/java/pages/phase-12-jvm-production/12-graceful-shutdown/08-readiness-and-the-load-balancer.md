@@ -20,7 +20,7 @@ sidebar_position: 13
 > **Kubernetes** *Pod Lifecycle* documentation for the termination flow and the 30-second default
 > ([kubernetes.io](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)).
 > 🔴 **No sandbox.** No cluster was run, no pod was deleted and no probe was polled. JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every page in this topic so far has been about what your process does after it receives SIGTERM.
 This one is about the fact that by the time SIGTERM arrives, it is already too late to tell anyone.

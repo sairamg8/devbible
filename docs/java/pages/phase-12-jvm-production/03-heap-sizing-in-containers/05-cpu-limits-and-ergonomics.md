@@ -18,7 +18,7 @@ sidebar_position: 10
 > ([bugs.openjdk.org](https://bugs.openjdk.org/browse/JDK-8281181)); and the **Kubernetes**
 > documentation on resource management
 > ([kubernetes.io](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Memory sizing is what gets a container killed; CPU sizing is what makes it slow in ways nobody
 can attribute. One integer — `os::active_processor_count()` — decides how many GC threads, JIT

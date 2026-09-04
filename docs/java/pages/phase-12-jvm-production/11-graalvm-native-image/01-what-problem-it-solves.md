@@ -12,7 +12,7 @@ sidebar_position: 1
 > "Packaging → GraalVM Native Images → Introducing GraalVM Native Images"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/introducing-graalvm-native-images.html)).
 > Doc text checked against the `release/graal-vm/25.3` branch of `oracle/graal`.
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — every figure on this page is quoted from documentation and attributed.
 
 **A JVM process spends its first second or two doing work that is identical on every run: loading and verifying classes, linking them, running static initialisers, parsing annotations, evaluating conditions, generating proxies, and interpreting bytecode until the JIT catches up. GraalVM Native Image does that work once, at build time, and ships the result as a native executable with no JVM inside it. That is the whole value proposition, and it buys exactly two things — start-up latency and process footprint. It costs you the dynamic runtime that made all of it possible, and this topic is mostly about that bill.**

@@ -13,7 +13,7 @@ sidebar_position: 25
 > ([.../jdbc/core/simple/JdbcClient.MappedQuerySpec.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/JdbcClient.MappedQuerySpec.html))
 > and the `JdbcOperations.queryForStream` javadoc
 > ([.../jdbc/core/JdbcOperations.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcOperations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **Two decisions inside the class from [chunk 12](12-testing-and-the-shape-of-a-repository.md)
 do more damage when they go wrong than the class layout ever could: where the row

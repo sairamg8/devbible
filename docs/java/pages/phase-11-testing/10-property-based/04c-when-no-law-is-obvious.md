@@ -12,7 +12,7 @@ sidebar_position: 16
 > 'private use characters' will not be generated unless you explicitly include them using
 > `@Chars` or `@CharRange`"* ([jqwik.net](https://jqwik.net/docs/current/user-guide.html));
 > and the **AssertJ 3.27.7** API.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **No sandbox and no test run on this machine** — Java source only, never its output.

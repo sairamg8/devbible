@@ -12,7 +12,7 @@ sidebar_position: 1
 > and the PostgreSQL 18 manual *Aggregate Functions* and *UPDATE*
 > ([postgresql.org/docs/18/functions-aggregate.html](https://www.postgresql.org/docs/18/functions-aggregate.html),
 > [.../sql-update.html](https://www.postgresql.org/docs/18/sql-update.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **An ORM maps your *tables* once and reuses that mapping for every query. SQL-first
 maps your *query* — each query, separately, to whatever shape that one answer needs.

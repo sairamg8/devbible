@@ -9,7 +9,7 @@ sidebar_position: 3
 > Verified: 2026-08-20 against the Spring Framework reference *REST Clients* —
 > the `RestClient` creation, fluent-API, error-handling and `exchange` sections
 > (docs.spring.io/spring-framework/reference/integration/rest-clients.html) — and
-> the Spring Framework 7.0.x API for `RestClient.Builder`. Spring Boot 4.1.0,
+> the Spring Framework 7.0.x API for `RestClient.Builder`. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **A `RestClient` call is one chain with exactly one decision in it that matters:

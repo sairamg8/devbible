@@ -14,7 +14,7 @@ sidebar_position: 38
 > ([jpa/transactions.html](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html));
 > plus the Spring Data Commons `main` source of `RepositoryComposition`
 > ([github.com/spring-projects/spring-data-commons](https://github.com/spring-projects/spring-data-commons/blob/main/src/main/java/org/springframework/data/repository/core/support/RepositoryComposition.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Every previous chunk has been about telling Spring Data what query you want. This one

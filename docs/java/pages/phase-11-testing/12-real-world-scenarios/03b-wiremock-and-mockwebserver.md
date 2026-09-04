@@ -16,9 +16,9 @@ sidebar_position: 14
 > `com.squareup.okhttp3:mockwebserver3`, package `mockwebserver3`, JUnit 5 module
 > `mockwebserver3-junit5`); and the **Spring Framework 7.0.x** reference *Testing Client
 > Applications* for the recommendation quoted below.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3.
-> ⚠️ **Neither library is managed by `spring-boot-dependencies:4.1.0`** — I checked the BOM
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3.
+> ⚠️ **Neither library is managed by `spring-boot-dependencies:4.1.1`** — I checked the BOM
 > and there is no `okhttp` or `wiremock` entry. You pin both versions yourself.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source, build configuration and
 > documented behaviour only, never console output.

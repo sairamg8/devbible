@@ -11,7 +11,7 @@ sidebar_position: 7
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and *Core → AOP → Proxying mechanisms*
 > ([docs.spring.io/spring-framework/reference/core/aop/proxying.html](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **Every fix in [chunk 4](04-fixing-self-invocation.md) works the same way: get a
 reference to the proxy into the call. This shape is the one where that is not

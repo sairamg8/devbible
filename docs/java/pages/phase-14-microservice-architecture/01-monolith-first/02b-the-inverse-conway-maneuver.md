@@ -11,7 +11,7 @@ sidebar_position: 5
 > Premium* ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html));
 > Melvin E. Conway, *How Do Committees Invent?* (1968)
 > ([melconway.com](https://www.melconway.com/Home/Committees_Paper.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **There are exactly three things you can do about Conway's law, and only one of them
 involves writing code. Knowing which of the three you are actually doing — and whether you

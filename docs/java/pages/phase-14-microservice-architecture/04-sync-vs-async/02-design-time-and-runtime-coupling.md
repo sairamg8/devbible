@@ -11,7 +11,7 @@ sidebar_position: 2
 > ([microservices.io](https://microservices.io/post/architecture/2023/03/28/microservice-architecture-essentials-loose-coupling.html))
 > and "Dark matter force: minimize runtime coupling"
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud train
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Cloud train
 > 2025.1.x. **No sandbox** — no measured figure appears on this page.
 
 **"Loose coupling" is two different properties wearing one name, and they fail in

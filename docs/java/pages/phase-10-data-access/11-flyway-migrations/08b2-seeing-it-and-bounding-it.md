@@ -19,7 +19,7 @@ sidebar_position: 25
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/documentation/Reference))
 > and Spring Boot 4.1's `FlywayProperties` / `FlywayAutoConfiguration`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08b](08b-locks-and-long-migrations.md) argued that an unbounded lock wait inside a migration is
 an outage waiting for a coincidence. This chunk is the defence, and it is short because PostgreSQL

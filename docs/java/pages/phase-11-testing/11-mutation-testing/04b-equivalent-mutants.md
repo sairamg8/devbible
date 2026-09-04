@@ -16,7 +16,7 @@ sidebar_position: 25
 > `EqualsPerformanceShortcutFilterFactory`, `NullFinalFieldAssignmentFilter(Factory)` and
 > `EmptyReturnsFilter` including its source comment — plus
 > `org.pitest.mutationtest.DetectionStatus`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Filter names and behaviour are read from published
 > source; no mutant count, score or ceiling figure on this page came from a run.

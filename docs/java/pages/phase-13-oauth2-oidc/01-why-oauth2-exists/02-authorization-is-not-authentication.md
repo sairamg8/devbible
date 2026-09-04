@@ -11,7 +11,7 @@ sidebar_position: 2
 > ([datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749));
 > RFC 6750 §1 (Bearer tokens); and OpenID Connect Core 1.0 §2 (ID Token) at
 > [openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Read RFC 6749 end to end and you will not find a way for a client to learn who the user
 is. Not an omission — a deliberate refusal. The specification issues a credential that says

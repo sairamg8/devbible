@@ -17,7 +17,7 @@ sidebar_position: 7
 > for `handle_deprecated_print_gc_flags()` and the `-Xloggc:` handler, and
 > [`runtime/flags/jvmFlag.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/flags/jvmFlag.cpp)
 > for `is_unlocked()` and the locked-flag error messages.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02c](02c-what-was-removed.md) covered the two tiers that announce themselves. This page
 is the third: options that are deprecated, still work, and are therefore never investigated.

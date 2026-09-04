@@ -11,8 +11,8 @@ sidebar_position: 24
 > — class description, "Since: 17", "All Known Implementing Classes", `instant`, `millis`,
 > `withZone`, `fixed`, `offset`, `tick`, `system` — and `java.time.Clock`
 > ([Clock](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/time/Clock.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7. **No sandbox** —
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7. **No sandbox** —
 > Java source and documented behaviour only, never a run.
 
 **[06](06-random-and-time.md) argued that the clock belongs in the constructor. It did not

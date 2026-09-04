@@ -12,7 +12,7 @@ sidebar_position: 17
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); the Spring
 > Modulith reference, *Integration Testing Application Modules*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/testing.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > container output, startup times or memory figures on this page were measured.
 
 **Developer experience is the cost that never appears in a split proposal and shows up in

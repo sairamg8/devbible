@@ -10,7 +10,7 @@ sidebar_position: 1
 > ([Oracle](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)) for the
 > option classes and the unlock flags, and the JVM TI 25 specification
 > ([`JAVA_TOOL_OPTIONS`](https://docs.oracle.com/en/java/javase/25/docs/specs/jvmti.html)).
-> Target: **JDK 25 (LTS)** · Spring Boot 4.1.0. Documentation-validated; **no sandbox run**.
+> Target: **JDK 25 (LTS)** · Spring Boot 4.1.1. Documentation-validated; **no sandbox run**.
 
 **Almost every production Java service runs with a `JAVA_OPTS` string that nobody currently
 employed can fully explain. It was not designed; it accreted — one flag per incident, each

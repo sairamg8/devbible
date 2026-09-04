@@ -11,8 +11,8 @@ sidebar_position: 44
 > and the `@SqlConfig` javadoc
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html)),
 > from which the attribute table and the `ISOLATED` sentence are taken verbatim.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, Testcontainers 2.0.5, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, Testcontainers 2.0.5, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — the page carries Java source and documented configuration only.
 

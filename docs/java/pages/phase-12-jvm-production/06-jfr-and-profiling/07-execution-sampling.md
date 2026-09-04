@@ -12,7 +12,7 @@ sidebar_position: 13
 > (Release 25) for how sampling is implemented and what safepoint bias is
 > ([openjdk.org](https://openjdk.org/jeps/518)).
 > 🔴 **No sandbox** — no profile, percentage or sample count below is a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every sampled profile is an inference: the sampler looked N times, saw a method M times, and you
 conclude the method accounts for M/N of the resource. That inference is only as good as the

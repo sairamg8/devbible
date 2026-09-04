@@ -21,7 +21,7 @@ sidebar_position: 19
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html));
 > and [`gc/shared/gcCause.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcCause.cpp)
 > at tag `jdk-25+36` for the exact cause strings.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"We saw a Full GC" is not a diagnosis, and the four things it can mean have four different
 fixes, only one of which is "add heap". The GC cause string in the log distinguishes them

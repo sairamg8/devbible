@@ -11,7 +11,7 @@ sidebar_position: 3
 > — the class, bean, property, resource, web-application, SpEL and platform
 > condition families, and the nested-`@Configuration` pattern used in its own
 > examples) and the `@ConditionalOnMissingClass` API javadoc (String class
-> names). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> names). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Auto-configuration would be unusable without conditions, because every
 auto-configuration class in every jar on the classpath is imported — all of

@@ -12,8 +12,8 @@ sidebar_position: 43
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html)),
 > and PostgreSQL 18's `TRUNCATE` and `information_schema` documentation
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-truncate.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, Testcontainers 2.0.5, JUnit Jupiter 6.0.3, Flyway 12.4.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, Testcontainers 2.0.5, JUnit Jupiter 6.0.3, Flyway 12.4.0.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — the page carries Java source and documented configuration only.
 

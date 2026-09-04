@@ -13,7 +13,7 @@ sidebar_position: 28
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/FileChannel.html));
 > and the **JDK 25 `java.lang.foreign.Arena`** javadoc
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/foreign/Arena.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[07c](07c-mapped-buffers.md) covered what a mapping is and how it is accounted. This chunk
 covers the two questions that decide whether mapping is the right tool: how much of a mapping is

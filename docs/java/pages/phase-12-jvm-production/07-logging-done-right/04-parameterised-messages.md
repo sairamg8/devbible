@@ -14,7 +14,7 @@ sidebar_position: 7
 > ([logback.qos.ch](https://logback.qos.ch/manual/layouts.html)).
 > 🔴 **No sandbox.** The "factor of at least 30" and "less than 1%" figures below are **SLF4J's own
 > published claims, quoted as such** — not measurements taken here. Nothing on this page was run.
-> JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **A disabled log statement should cost one field read and one comparison. String concatenation
 makes it cost a `StringBuilder`, several `toString()` calls and a garbage-collectable object —

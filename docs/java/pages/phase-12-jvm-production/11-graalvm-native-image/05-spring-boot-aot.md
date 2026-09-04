@@ -11,7 +11,7 @@ sidebar_position: 9
 > and "Advanced Native Images Topics"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/native-image/advanced-topics.html));
 > the published **`spring-boot-starter-parent` 4.1.0 POM** on Maven Central (`native` and `nativeTest` profiles read directly).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Native Build Tools 1.1.1**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Native Build Tools 1.1.1**.
 > Documentation-validated; **no sandbox run**.
 
 **A Spring Boot application is, by design, a program that decides its own shape while starting: it scans, parses, evaluates conditions, resolves profiles and generates proxies. Every one of those is a dynamic feature that a closed world forbids. Spring's answer is to do all of it during the build and write the answers down as ordinary Java source, cglib bytecode and GraalVM hint files. Topic 10 owns what that engine is and how it works on a plain JVM; this page is what it means specifically for the native path, and what it still cannot do for you.**

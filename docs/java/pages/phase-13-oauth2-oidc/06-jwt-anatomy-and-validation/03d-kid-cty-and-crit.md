@@ -14,7 +14,7 @@ sidebar_position: 7
 > ([rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc7517](https://www.rfc-editor.org/rfc/rfc7517.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Three header parameters that are individually small and collectively responsible for a
 disproportionate share of JWT incidents. `kid` looks like a lookup key and is treated as one,

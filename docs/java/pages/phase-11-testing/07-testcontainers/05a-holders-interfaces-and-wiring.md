@@ -8,13 +8,13 @@ sidebar_position: 31
 
 > Verified: 2026-08-31 against the **Testcontainers 2.0.5 source tarball**
 > ([tag `2.0.5`](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)) and the
-> **Spring Boot 4.1.0** sources at [tag `v4.1.0`](https://github.com/spring-projects/spring-boot/tree/v4.1.0) —
+> **Spring Boot 4.1.1** sources at [tag `v4.1.0`](https://github.com/spring-projects/spring-boot/tree/v4.1.0) —
 > `documentation/…/reference/pages/testing/testcontainers.adoc`, its `MyContainers` /
 > `MyTestConfiguration` / `MyIntegrationTests` samples, and
 > `core/spring-boot-testcontainers/src/main/java/org/springframework/boot/testcontainers/context/{ImportTestcontainers,ContainerFieldsImporter}.java`,
 > all read directly. Class-initialisation semantics are quoted verbatim from **JLS SE 25 §12.4.2**
 > ([docs.oracle.com](https://docs.oracle.com/javase/specs/jls/se25/html/jls-12.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

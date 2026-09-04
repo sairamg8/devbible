@@ -17,7 +17,7 @@ sidebar_position: 13
 > `BearerTokenErrors` ([github.com](https://github.com/spring-projects/spring-security));
 > RFC 9449 §7 (DPoP, protecting against downgrade)
 > ([datatracker.ietf.org/doc/html/rfc9449](https://datatracker.ietf.org/doc/html/rfc9449)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · **Spring Security 7.x (7.1.0)**.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · **Spring Security 7.x (7.1.0)**.
 > **No sandbox** — quoted sources and javadoc only; error strings are quoted from the
 > framework, never reconstructed from a run.
 

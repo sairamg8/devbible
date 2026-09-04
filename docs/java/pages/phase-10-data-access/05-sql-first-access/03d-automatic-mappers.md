@@ -12,7 +12,7 @@ sidebar_position: 8
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/package-summary.html)),
 > and the Spring Framework 7.0 reference *Data Access → JDBC Core Classes*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Writing `(rs, n) -> new Actor(rs.getLong("id"), rs.getString("first_name"))` for
 every query gets old, and Spring has four mappers that do it by reflection. They

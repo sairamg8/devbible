@@ -12,7 +12,7 @@ sidebar_position: 16
 > Resource Server), §4.14.1 (Discussion)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9700.txt)); RFC 7662 §2.1 (Introspection
 > Request) ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc7662.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Nobody sets out to send a refresh token to an API. It arrives as "the mobile team keeps
 getting logged out, can the backend handle refresh for them?" — a helpful, reasonable-sounding

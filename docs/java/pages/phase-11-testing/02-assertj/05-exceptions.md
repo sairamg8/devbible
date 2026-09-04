@@ -11,7 +11,7 @@ sidebar_position: 14
 > `assertj-core` 3.27.7 API (`Assertions.assertThatThrownBy`,
 > `assertThatExceptionOfType`, `assertThatCode`, `catchThrowable`,
 > `catchThrowableOfType`, `ThrowableTypeAssert`, `AbstractThrowableAssert`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **JUnit's own `assertThrows` returns the exception and leaves you to assert on it — see
 [01 · assertThrows](../01-junit-5/05-assertthrows.md). AssertJ offers three spellings

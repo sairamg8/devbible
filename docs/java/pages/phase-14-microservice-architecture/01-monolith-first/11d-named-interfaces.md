@@ -9,7 +9,7 @@ sidebar_position: 30
 > Verified: 2026-09-01 against the Spring Modulith reference, *Fundamentals* — "Named
 > Interfaces" and "Customizing Named Interface detection"
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **By default a module has exactly one entrance: its base package. That is usually right and
 occasionally too blunt — a module may legitimately need to expose a second, differently

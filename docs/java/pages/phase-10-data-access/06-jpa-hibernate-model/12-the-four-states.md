@@ -15,7 +15,7 @@ sidebar_position: 19
 > and the Jakarta Persistence 3.2 specification §3.3 *Controlling Transactions and the
 > Entity Lifecycle* and §3.3.7 *Detached Entities*
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **"Is this object managed?" is the question that determines whether a setter call writes
 to the database or does nothing at all. There are four answers, and the state is not a

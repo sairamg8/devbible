@@ -15,7 +15,7 @@ sidebar_position: 6
 > OFFSET*
 > ([postgresql.org/docs/18/queries-table-expressions.html](https://www.postgresql.org/docs/18/queries-table-expressions.html),
 > [.../queries-limit.html](https://www.postgresql.org/docs/18/queries-limit.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **One order with three lines, joined, is three rows. A `RowMapper` is a function
 from one row to one object, so it will hand you three orders. This is not a

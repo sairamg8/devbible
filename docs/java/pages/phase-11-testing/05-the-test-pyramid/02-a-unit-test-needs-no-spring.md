@@ -6,14 +6,14 @@ sidebar_position: 2
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-28 against the Spring Boot 4.1.0 reference *Testing → Test Scope
+> Verified: 2026-08-28 against the Spring Boot 4.1.1 reference *Testing → Test Scope
 > Dependencies* and *Testing Spring Boot Applications*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)),
 > and the Spring Framework 7.0.x reference *Core → Dependency Injection →
 > Constructor-based or setter-based DI?*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > **No sandbox** — Java source only.
 
 **A Spring bean is an ordinary Java object. `@Service`, `@Component` and `@Repository` are

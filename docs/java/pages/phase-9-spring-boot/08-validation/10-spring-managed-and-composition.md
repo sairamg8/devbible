@@ -14,7 +14,7 @@ sidebar_position: 10
 > dependency injection like any other Spring bean"*) and the **Hibernate
 > Validator 9.1 reference**, *Constraint composition* and *Creating custom
 > constraints* (docs.hibernate.org/stable/validator/reference/en-US/html_single/).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A `ConstraintValidator` in a Spring application is a Spring bean, which means
 it can be injected into — and that single fact is simultaneously the most

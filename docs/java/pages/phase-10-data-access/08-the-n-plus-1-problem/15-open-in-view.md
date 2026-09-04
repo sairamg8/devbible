@@ -14,7 +14,7 @@ sidebar_position: 53
 > and the Spring Framework `OpenEntityManagerInViewInterceptor` /
 > `OpenEntityManagerInViewFilter` class documentation
 > ([docs.spring.io/spring-framework/reference/](https://docs.spring.io/spring-framework/reference/data-access.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **Every fix in this topic assumes you can tell when an association is loaded outside the
 plan you wrote. Open-session-in-view removes that signal. It keeps the persistence context

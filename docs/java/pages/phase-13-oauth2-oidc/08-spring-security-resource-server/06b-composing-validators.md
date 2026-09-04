@@ -14,7 +14,7 @@ sidebar_position: 15
 > 7.x reference *OAuth 2.0 Resource Server JWT* §"Configuring Validation",
 > §"Configuring a Custom Validator"
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **`NimbusJwtDecoder` holds exactly one `OAuth2TokenValidator<Jwt>`. `setJwtValidator` sets
 it. Not adds — sets. Every "how do I check the audience" answer that calls

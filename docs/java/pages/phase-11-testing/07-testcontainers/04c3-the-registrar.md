@@ -6,15 +6,15 @@ sidebar_position: 28
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Framework 7.0.8** reference —
+> Verified: 2026-08-31 against the **Spring Framework 7.0.9** reference —
 > [Context Configuration with Dynamic Property Sources](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/dynamic-property-sources.adoc)
 > and [Context Caching](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/caching.adoc) —
 > and the `spring-test` sources at the same tag, read directly:
 > [`DynamicPropertyRegistrar`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-test/src/main/java/org/springframework/test/context/DynamicPropertyRegistrar.java),
 > [`DynamicPropertiesContextCustomizer`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-test/src/main/java/org/springframework/test/context/support/DynamicPropertiesContextCustomizer.java)
 > and `DynamicPropertiesContextCustomizerFactory`. Boot's dev-time registrar sample is from the
-> **Spring Boot 4.1.0** reference at `v4.1.0`.
-> Version spine: JDK 25, Spring Boot 4.1.0 / Spring Framework 7.0.8, **Testcontainers 2.0.5**,
+> **Spring Boot 4.1.1** reference at `v4.1.0`.
+> Version spine: JDK 25, Spring Boot 4.1.1 / Spring Framework 7.0.9, **Testcontainers 2.0.5**,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.

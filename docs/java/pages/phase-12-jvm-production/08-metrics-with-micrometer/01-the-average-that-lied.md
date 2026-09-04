@@ -16,7 +16,7 @@ sidebar_position: 1
 > 🔴 **No sandbox.** No metric value, scrape body, dashboard or latency figure on any page in
 > this topic is a captured run. Every number is either quoted from documentation with
 > attribution, derived from source code that is quoted alongside it, or labelled a schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **A metric is a number that has been aggregated on purpose, and every aggregation throws
 information away. The whole discipline is choosing which information to throw away so that the

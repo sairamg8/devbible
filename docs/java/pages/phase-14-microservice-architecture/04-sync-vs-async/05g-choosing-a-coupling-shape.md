@@ -12,7 +12,7 @@ sidebar_position: 24
 > ([microservices.io](https://microservices.io/patterns/communication-style/messaging.html))
 > and "Pattern: Remote Procedure Invocation (RPI)"
 > ([microservices.io](https://microservices.io/patterns/communication-style/rpi.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Five chunks of shapes, one table. Each shape removes a specific coupling and charges a
 specific price, and the shapes are not on a spectrum from bad to good — they are answers to

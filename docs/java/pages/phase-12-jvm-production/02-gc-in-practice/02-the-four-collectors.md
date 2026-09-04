@@ -22,7 +22,7 @@ sidebar_position: 3
 > [`gc/shared/gcConfig.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcConfig.cpp),
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp)
 > and [`memory/universe.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/memory/universe.cpp).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The collector list is the single most out-of-date thing in circulating Java material. CMS
 was removed in JDK 14 and its flags now fail a launch; non-generational ZGC was removed in

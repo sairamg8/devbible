@@ -12,7 +12,7 @@ sidebar_position: 8
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox** — the dump below is Oracle's published example, reproduced with attribution,
 > not a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Deadlock is the failure this whole topic makes easy. The JVM does the analysis itself — the
 Troubleshooting Guide: *"After printing the thread dump, the HotSpot VM executes a deadlock

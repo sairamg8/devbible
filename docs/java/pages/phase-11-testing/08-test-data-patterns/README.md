@@ -6,16 +6,16 @@ sidebar_position: 0
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Framework 7.0.8** testing reference and javadocs
+> Verified: 2026-08-31 against the **Spring Framework 7.0.9** testing reference and javadocs
 > (`@Sql`, `@SqlConfig`, `@SqlGroup`, `@SqlMergeMode`, `ScriptUtils`, test-managed
-> transactions), the **Spring Boot 4.1.0** javadocs for the test slices and
+> transactions), the **Spring Boot 4.1.1** javadocs for the test slices and
 > `@AutoConfigureTestDatabase`, the **JUnit Jupiter 6.0.3** user guide and javadocs
 > (lifecycle, `MethodOrderer`, `ClassOrderer`, parallel execution), the **JDK 25** javadocs for
 > `java.time` and `java.util.random`, **Project Lombok**'s `@Builder` documentation, the
 > **Gradle** user manual's *Java test fixtures* section, **Awaitility 4.3.0** and
 > **Datafaker**.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
 > Testcontainers 2.0.5, Awaitility 4.3.0.
 > ⚠️ **No Docker, no database and no sandbox on this machine.** Every page carries Java source,
 > SQL and documented configuration — never a test run, a container log or a timing.

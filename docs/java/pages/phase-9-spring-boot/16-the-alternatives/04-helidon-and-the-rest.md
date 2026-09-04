@@ -10,7 +10,7 @@ sidebar_position: 4
 > Introduction* (helidon.io/docs/v4/se/introduction), the Helidon project site
 > (helidon.io), the Helidon GitHub releases page
 > (github.com/helidon-io/helidon/releases), and the MicroProfile 7.1 release
-> announcement and release index (microprofile.io). Spring Boot 4.1.0 is the
+> announcement and release index (microprofile.io). Spring Boot 4.1.1 is the
 > comparison baseline; JDK 25.
 
 **Helidon does not belong in the same sentence as Quarkus and Micronaut, and

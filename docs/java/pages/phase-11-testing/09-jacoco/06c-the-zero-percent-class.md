@@ -8,8 +8,8 @@ sidebar_position: 19
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/classids.html` (quoted on CRC64 class
 > ids, the mismatch behaviour and the Sessions-page diagnosis) and `doc/faq.html` (quoted on
-> missing execution data). Version spine from `spring-boot-dependencies:4.1.0`: JDK 25,
-> Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> missing execution data). Version spine from `spring-boot-dependencies:4.1.1`: JDK 25,
+> Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No build and no test runs on this machine** — documented behaviour and configuration only,
 > never report output.
 

@@ -11,7 +11,7 @@ sidebar_position: 13
 > "Build Options" ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/)) and
 > "Object Header Size in Native Image"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/optimizations-and-performance/ObjectHeaderSize/)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — no heap size, RSS figure or pause time on this page is a measurement.
 
 **"There is no JVM" is a useful slogan and a misleading one for memory. A native executable contains a full memory-management subsystem: a heap that grows and shrinks, generational collection, an automatic sizing policy, and a set of `-XX:` options. What it does not contain is HotSpot's collector set, HotSpot's ergonomics or HotSpot's defaults — and the two things people carry over unchanged, `-XX:MaxRAMPercentage` and the assumption that G1 is available, are exactly the two that behave differently.**

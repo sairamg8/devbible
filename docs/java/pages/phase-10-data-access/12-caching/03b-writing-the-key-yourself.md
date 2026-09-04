@@ -12,7 +12,7 @@ sidebar_position: 7
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html)),
 > and the Spring Framework 6.1 release notes on parameter-name retention
 > ([github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The default key is right for a method whose arguments are exactly what identifies the answer.
 When they are not, you write the key — and you write it as a string that the compiler does not

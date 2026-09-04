@@ -14,7 +14,7 @@ sidebar_position: 43
 > and the Jakarta Persistence 3.2 specification §4.9.2 *Constructor Expressions
 > in the SELECT Clause*
 > ([jakarta.ee/specifications/persistence/3.2](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **A record return type is the clearest way to say "this endpoint does not want
 entities", and Spring Data makes it nearly free by rewriting your query into a

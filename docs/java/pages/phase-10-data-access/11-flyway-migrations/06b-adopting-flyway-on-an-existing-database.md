@@ -14,7 +14,7 @@ sidebar_position: 17
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/commands/baseline)),
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **The mechanics of [06](06-baselining.md) are easy. The decision underneath them is not, and it is
 made once: does your migration set describe the *whole* schema, so that an empty database can be

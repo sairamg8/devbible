@@ -16,7 +16,7 @@ sidebar_position: 5
 > ([nested-tests](https://docs.junit.org/6.0.3/writing-tests/nested-tests.html)); and
 > **JLS SE 25 §8.1.3** on `static` members in inner classes
 > ([jls-8.html](https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **One annotation flips the default from "a new instance per test method" to "one instance
 for the whole class". It is not a style preference. It changes what `static` means in the

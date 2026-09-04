@@ -10,7 +10,7 @@ sidebar_position: 18
 > ([redis.io/docs/latest/develop/data-types/](https://redis.io/docs/latest/develop/data-types/))
 > and the Spring Data Redis 4.1 reference *Redis Repositories · Queries and Query Methods*
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-repositories/queries.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/queries.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Redis 8.
 
 **The Redis documentation opens with four words that decide this entire argument:**
 

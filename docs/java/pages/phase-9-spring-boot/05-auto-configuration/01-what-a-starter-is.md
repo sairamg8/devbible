@@ -12,7 +12,7 @@ sidebar_position: 1
 > `spring-boot-dependencies` split), the **Spring Boot 4.0 Migration Guide**
 > (github.com/spring-projects/spring-boot/wiki — starter renames, the
 > modularization, `spring-boot-starter-classic`), and the Spring Boot 4.0.0
-> release announcement (spring.io/blog, 20 Nov 2025). Spring Boot 4.1.0,
+> release announcement (spring.io/blog, 20 Nov 2025). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **A starter contains no code. Every `spring-boot-starter-*` artifact is an

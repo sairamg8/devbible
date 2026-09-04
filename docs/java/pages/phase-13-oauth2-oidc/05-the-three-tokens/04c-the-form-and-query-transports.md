@@ -14,7 +14,7 @@ sidebar_position: 8
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc7662.txt));
 > `DefaultBearerTokenResolver` source on `main`
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-security)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **RFC 6750 lists three transports and people read that as a menu. It is not: two of the three
 carry `SHOULD NOT`s with stated reasons, and the third — the query parameter — carries a

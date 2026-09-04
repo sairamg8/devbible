@@ -13,7 +13,7 @@ sidebar_position: 16
 > ([value-expressions.html](https://docs.spring.io/spring-data/jpa/reference/jpa/value-expressions.html));
 > `SecurityEvaluationContextExtension` read from the Spring Security source
 > ([spring-security-data](https://github.com/spring-projects/spring-security/blob/main/data/src/main/java/org/springframework/security/data/repository/query/SecurityEvaluationContextExtension.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **A `@Query` is a template as well as a query. Two substitution mechanisms run
 over it before it reaches the provider: SpEL expressions in `#{…}`, and property

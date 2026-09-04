@@ -11,7 +11,7 @@ sidebar_position: 6
 > which classifies subdomains as **Core** (*"key business differentiators"*), **Supporting**
 > (*"related but not distinctive"*) and **Generic** (*"universal functionality"*); Eric
 > Evans, *Domain-Driven Design* (2003), Ch. 15 "Distillation", cited by concept.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Not every part of a system deserves the same care, and pretending otherwise is how teams

@@ -10,7 +10,7 @@ sidebar_position: 25
 > ([sql-execution/transaction-management](https://www.jooq.org/doc/latest/manual/sql-execution/transaction-management/))
 > and Spring Boot 4.1's `JooqAutoConfiguration`
 > ([spring-boot-jooq, v4.1.0 source](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-jooq/src/main/java/org/springframework/boot/jooq/autoconfigure/JooqAutoConfiguration.java)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **jOOQ does not require Spring, so it has to be able to demarcate a transaction on its own. Its
 API is a lambda: `dsl.transaction(trx -> …)`, committed if the lambda returns and rolled back if it

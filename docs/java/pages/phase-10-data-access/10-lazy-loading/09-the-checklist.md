@@ -13,7 +13,7 @@ sidebar_position: 33
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/))
 > and the Spring Boot 4.1 reference
 > ([docs.spring.io/spring-boot/reference/](https://docs.spring.io/spring-boot/reference/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
 > PostgreSQL 18.
 
 **A lazy leak is not a bug inside a method. It is a mismatch between what a method returns and

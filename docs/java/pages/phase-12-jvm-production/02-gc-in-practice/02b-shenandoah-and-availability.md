@@ -13,7 +13,7 @@ sidebar_position: 4
 > ([189](https://openjdk.org/jeps/189), [379](https://openjdk.org/jeps/379),
 > [404](https://openjdk.org/jeps/404), [521](https://openjdk.org/jeps/521),
 > [535](https://openjdk.org/jeps/535)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every "G1 vs ZGC vs Shenandoah" comparison you have read skipped two questions. The first
 is whether Shenandoah is in the JDK you deploy, which is

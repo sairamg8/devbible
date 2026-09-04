@@ -16,7 +16,7 @@ sidebar_position: 33
 > for `UseEpsilonGC`'s `EXPERIMENTAL` classification; and the Micrometer `JvmGcMetrics` binder
 > source on GitHub (`micrometer-core`, `main` branch as of this date) for
 > `jvm.gc.live.data.size` and `jvm.gc.memory.promoted` and their verbatim descriptions.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A measured allocation rate is a number without a verdict. This page is the four comparisons
 that turn it into one, and then the list of places the bytes actually come from — which is

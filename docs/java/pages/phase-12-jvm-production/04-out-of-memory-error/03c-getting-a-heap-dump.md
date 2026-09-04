@@ -18,7 +18,7 @@ sidebar_position: 10
 > and the **JDK 25 HotSpot source at tag `jdk-25+36`** — `services/heapDumper.cpp`,
 > `services/heapDumper.hpp` and `services/diagnosticCommand.hpp`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/services/heapDumper.cpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A heap dump answers one question — what is keeping objects on the Java heap alive — and there
 are five ways to obtain one, all producing the same HPROF format and none producing the same

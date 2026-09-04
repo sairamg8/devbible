@@ -15,7 +15,7 @@ sidebar_position: 10
 > ([openjdk.org](https://openjdk.org/jeps/520)).
 > 🔴 **No sandbox** — no command output is reproduced here except where quoted from JEP 520 and
 > attributed. Nothing below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Analysis does not require a GUI, and the situations where it matters most are exactly the ones
 where a GUI is unavailable: a recording on a production host, over SSH, on a machine with no

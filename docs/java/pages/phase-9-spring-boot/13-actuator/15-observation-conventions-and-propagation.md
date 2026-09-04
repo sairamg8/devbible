@@ -6,7 +6,7 @@ sidebar_position: 15
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Observability* (docs.spring.io/spring-boot/reference/actuator/observability.html:
 > `management.observations.key-values.*` as common tags applied to all
 > observations; `management.observations.enable.<prefix>=false` and the
@@ -21,7 +21,7 @@ sidebar_position: 15
 > `ObservationConvention` supplying names and key values, the precedence of a
 > call-site convention over a `GlobalObservationConvention` over the
 > instrumentation default, and `ObservationFilter` mutating the context).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The Observation API's real leverage is not on the code you write — it is on
 the code you did not. A `GlobalObservationConvention` renames somebody else's

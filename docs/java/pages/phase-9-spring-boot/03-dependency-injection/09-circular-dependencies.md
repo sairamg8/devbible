@@ -15,7 +15,7 @@ sidebar_position: 9
 > (github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes —
 > circular references prohibited by default, and `spring.main.allow-circular-references`
 > restoring the 2.5 behaviour). That default has stood ever since and is the
-> behaviour in Boot 4.1. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> behaviour in Boot 4.1. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A circular dependency is not a container limitation you work around. It is a
 statement about your object graph — A cannot exist before B and B cannot exist

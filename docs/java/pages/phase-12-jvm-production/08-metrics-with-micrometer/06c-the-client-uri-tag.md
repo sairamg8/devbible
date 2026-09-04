@@ -12,10 +12,10 @@ sidebar_position: 17
 > the **Spring Boot 4.1 production-ready reference · Metrics — HTTP Client Metrics** and
 > *Actuator · Tracing*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java)
-> for the `max-uri-tags` default. No JVM was run for this page. JDK 25 · Spring Boot 4.1.0 /
-> Spring Framework 7.0.8 · Micrometer 1.17.0.
+> for the `max-uri-tags` default. No JVM was run for this page. JDK 25 · Spring Boot 4.1.1 /
+> Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **[06b](06b-the-uri-tag.md) showed that Spring normalises the server-side URI tag for you with a
 documented four-step fallback. None of that machinery exists on the client, because there is no

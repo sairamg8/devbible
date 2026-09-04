@@ -17,7 +17,7 @@ sidebar_position: 11
 > and
 > [`java.util.concurrent.ForkJoinPool`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ForkJoinPool.html).
 > Arithmetic below is derived here and labelled.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The processor count is not just a CPU-side number. Every pool it sizes is a pool of *platform
 threads*, and every platform thread reserves a stack — 1024 KB on Linux/x64, 2048 KB on

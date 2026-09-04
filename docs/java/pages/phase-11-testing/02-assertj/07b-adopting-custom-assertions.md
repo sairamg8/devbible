@@ -13,7 +13,7 @@ sidebar_position: 20
 > [`AbstractAssert`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/AbstractAssert.java);
 > plus the AssertJ Core documentation
 > ([assertj.github.io/doc](https://assertj.github.io/doc/)).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[07](07-custom-assertions.md) covered how to write the class. This chunk is why teams
 write one and then stop using it. The obstacle is not difficulty — it is a static-import

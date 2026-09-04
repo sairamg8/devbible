@@ -15,7 +15,7 @@ sidebar_position: 5
 > ([datatype-character](https://www.postgresql.org/docs/18/datatype-character.html)), *Sorting
 > Rows* ([queries-order](https://www.postgresql.org/docs/18/queries-order.html)) and *Collation
 > Support* ([collation](https://www.postgresql.org/docs/18/collation.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing or a test run.

@@ -15,11 +15,11 @@ sidebar_position: 1
 > ([docs.spring.io/spring-data/redis/reference/](https://docs.spring.io/spring-data/redis/reference/index.html)),
 > the Spring Boot 4.1 *Working with NoSQL Technologies* chapter
 > ([docs.spring.io/spring-boot/reference/data/nosql.html](https://docs.spring.io/spring-boot/reference/data/nosql.html)),
-> and the published POMs of `spring-boot-dependencies:4.1.0`
+> and the published POMs of `spring-boot-dependencies:4.1.1`
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom))
 > and `spring-data-bom:2026.0.0`
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/data/spring-data-bom/2026.0.0/spring-data-bom-2026.0.0.pom)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Commons 4.1.0, Spring Data MongoDB 5.1.0,
+> JDK 25, Spring Boot 4.1.1, Spring Data Commons 4.1.0, Spring Data MongoDB 5.1.0,
 > Spring Data Redis 4.1.0.
 
 **Spring Data gives MongoDB and Redis the same repository idiom you already know from

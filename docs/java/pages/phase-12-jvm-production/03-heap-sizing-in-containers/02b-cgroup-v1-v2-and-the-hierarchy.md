@@ -13,7 +13,7 @@ sidebar_position: 3
 > [`cgroupSubsystem_linux.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/os/linux/cgroupSubsystem_linux.cpp);
 > and the **JDK 25 `java` tool reference** for `-Xlog:os+container=trace`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"The JVM reads the cgroup limit" is true but useless when you are trying to work out why it
 read the wrong one. What it actually reads is a small, enumerable set of pseudo-files whose names

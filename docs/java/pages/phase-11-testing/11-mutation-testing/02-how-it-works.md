@@ -12,7 +12,7 @@ sidebar_position: 3
 > source: `org.pitest.help.Help`, `org.pitest.mutationtest.DetectionStatus`,
 > `org.pitest.coverage.analysis.LineMapper`. Release history from the
 > [GitHub releases](https://github.com/hcoles/pitest/releases).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Configuration, Java source and documented or
 > source-read behaviour only — never console output, timings or a score from a run.

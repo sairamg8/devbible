@@ -8,9 +8,9 @@ sidebar_position: 22
 
 > Verified: 2026-08-28 — every claim in the lists below is argued and sourced in the chunk it
 > links to, and this page adds no new claims of its own. Sources are the Spring Framework 7.0.x
-> and Spring Boot 4.1.0 references as cited in each chunk.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0.
+> and Spring Boot 4.1.1 references as cited in each chunk.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0.
 > **No sandbox** — no suite was run.
 
 **The closing chunk of the topic, meant to be used rather than read. A Spring test has a property

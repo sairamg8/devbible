@@ -16,7 +16,7 @@ sidebar_position: 29
 > ([docs.hibernate.org/orm/7.0/javadocs/…/SynchronizeableQuery.html](https://docs.hibernate.org/orm/7.0/javadocs/org/hibernate/query/SynchronizeableQuery.html))
 > and the jOOQ 3.21 manual — *Using jOOQ with JPA*
 > ([sql-execution/alternative-execution-models/using-jooq-with-jpa](https://www.jooq.org/doc/latest/manual/sql-execution/alternative-execution-models/using-jooq-with-jpa/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **This is the failure mode that makes people say "we tried using both and it corrupted data". It is
 one mechanism seen from two ends: Hibernate maintains an in-memory model of rows it believes it

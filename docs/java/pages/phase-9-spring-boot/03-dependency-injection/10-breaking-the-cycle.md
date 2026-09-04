@@ -13,7 +13,7 @@ sidebar_position: 10
 > `@Autowired`*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html
 > — `ApplicationEventPublisher` among the always-resolvable dependencies).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The previous chunk argued that a cycle is a real statement about the graph, so
 this one takes that seriously: if A and B genuinely cannot be ordered, the

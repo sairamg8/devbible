@@ -17,8 +17,8 @@ sidebar_position: 37
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html));
 > and the **Jakarta Messaging 3.1** `Message` javadoc
 > ([jakarta.ee](https://jakarta.ee/specifications/messaging/3.1/apidocs/jakarta.messaging/jakarta/jms/Message.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
 > Awaitility 4.3.0.
 > ⚠️ **No sandbox, no Docker and no broker on this machine** — Java and YAML source and
 > documented behaviour only. 🔴 **No container logs, no run output, no timings anywhere on

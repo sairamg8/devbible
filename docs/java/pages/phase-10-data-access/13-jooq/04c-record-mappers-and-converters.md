@@ -12,7 +12,7 @@ sidebar_position: 17
 > ([fetching/ad-hoc-converter](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/ad-hoc-converter/))
 > and *Matching of forced types*
 > ([codegen-database-forced-types-matching](https://www.jooq.org/doc/latest/manual/code-generation/codegen-advanced/codegen-config-database/codegen-database-forced-types/codegen-database-forced-types-matching/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **`into(Class)` is reflection, and reflection is where jOOQ's compile-time promise stops — that is
 the closing argument of [04 · Mapping results](04-mapping-results.md). This page is the other

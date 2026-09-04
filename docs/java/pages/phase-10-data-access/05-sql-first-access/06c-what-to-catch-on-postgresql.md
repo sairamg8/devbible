@@ -13,7 +13,7 @@ sidebar_position: 15
 > ([docs.spring.io/.../dao/package-summary.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/dao/package-summary.html)),
 > and the PostgreSQL 18 manual *Appendix A · PostgreSQL Error Codes*
 > ([postgresql.org/docs/18/errcodes-appendix.html](https://www.postgresql.org/docs/18/errcodes-appendix.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **Because pgJDBC does not throw the JDBC 4 `SQLException` subclasses and always
 reports `getErrorCode()` as `0`, the entire translation on PostgreSQL comes down to

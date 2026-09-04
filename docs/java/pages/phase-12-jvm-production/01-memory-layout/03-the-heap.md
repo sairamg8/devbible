@@ -15,7 +15,7 @@ sidebar_position: 9
 > `-XX:MaxNewSize`, `-XX:SurvivorRatio`, `-XX:TargetSurvivorRatio`,
 > `-XX:MaxTenuringThreshold`, `-XX:MinHeapFreeRatio`, `-XX:MaxHeapFreeRatio`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A generational heap is a bet: that most objects die young, so if you segregate new objects
 into a small space and collect only that space, you pay in proportion to the *survivors*

@@ -10,7 +10,7 @@ sidebar_position: 4
 > §3.1.2 (Redirection Endpoint), §3.2 (Token Endpoint), §4.1 (Authorization Code Grant),
 > §10.3 (Access Token Credentials) and §10.4 (Refresh Tokens); RFC 9700 §2.1 and §2.1.2 — at
 > [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **The terms "front channel" and "back channel" are OAuth2 folklore rather than RFC 6749
 vocabulary, but the distinction is baked into the design and it explains more than any

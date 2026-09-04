@@ -15,7 +15,7 @@ sidebar_position: 30
 > ([postgresql.org](https://www.postgresql.org/docs/18/functions-admin.html)),
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **A lock is only as useful as the set of things it excludes, and Flyway's excludes a much narrower
 set than its reputation suggests. It is an advisory lock, which PostgreSQL is explicit is not

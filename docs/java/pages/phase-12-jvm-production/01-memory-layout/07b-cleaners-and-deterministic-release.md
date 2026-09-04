@@ -15,7 +15,7 @@ sidebar_position: 26
 > and the attachment field `att`), and
 > `src/jdk.unsupported/share/classes/sun/misc/Unsafe.java` (`invokeCleaner`, its
 > `@Deprecated(since="23", forRemoval=true)` annotation and its replacement text).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[07](07-direct-and-mapped-buffers.md) established that direct memory has a budget and that the
 JVM calls `System.gc()` to defend it. This chunk is about *why* it has to: the release path for a

@@ -9,7 +9,7 @@ sidebar_position: 17
 > Verified: 2026-08 against the Spring Data Redis 4.1 reference *Redis Repositories ·
 > Time To Live*
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-repositories/expirations.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/expirations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0, Redis 8.
 
 **Expiry is the reason most people choose Redis, and `@RedisHash(timeToLive = 3600)` looks
 like the easiest annotation in this topic. It is not. Underneath it sits a chain of

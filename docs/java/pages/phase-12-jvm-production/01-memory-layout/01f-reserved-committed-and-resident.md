@@ -11,7 +11,7 @@ sidebar_position: 6
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)),
 > and the **JDK 25 `java` tool reference** — `-XX:+AlwaysPreTouch`, `-Xms`, `-Xmx`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Reading an NMT report, a `top` output and a container metric in the same conversation
 requires knowing that they measure three different things. Reserved is address space and is

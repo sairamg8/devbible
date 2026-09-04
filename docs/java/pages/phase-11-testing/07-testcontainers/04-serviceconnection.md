@@ -6,12 +6,12 @@ sidebar_position: 19
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0** reference at tag `v4.1.0` —
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1** reference at tag `v4.1.0` —
 > [`testing/testcontainers.adoc`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/testcontainers.adoc)
 > and its `include-code` Java samples — and the **`spring-boot-testcontainers` sources** at the
 > same tag (`ServiceConnection`, `ContainerConnectionSource`, `ContainerConnectionDetailsFactory`,
 > `ConnectionDetailsRegistrar`), read directly.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — Java source and documented configuration only.

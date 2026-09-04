@@ -12,7 +12,7 @@ sidebar_position: 19
 > the Spring Framework 7.0 reference *Data Access → JDBC Core Classes* and
 > *Transaction Management*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **A `JdbcClient` call inside a `@Transactional` method runs on the transaction's
 connection, commits with it and rolls back with it — and there is nothing in the

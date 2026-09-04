@@ -11,7 +11,7 @@ sidebar_position: 23
 > and "Release Notes" ([release-notes](https://docs.junit.org/6.0.3/release-notes.html),
 > the 6.0.0 Jupiter section); javadoc for `@TempDir`
 > ([TempDir](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/io/TempDir.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Creating the directory ([09](09-tempdir-and-resources.md)) is the easy half. Deleting it
 is where the surprises live: the default takes your evidence away at exactly the moment you

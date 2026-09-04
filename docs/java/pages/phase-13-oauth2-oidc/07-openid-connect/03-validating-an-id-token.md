@@ -14,7 +14,7 @@ sidebar_position: 4
 > ([datatracker.ietf.org/doc/html/rfc8725](https://datatracker.ietf.org/doc/html/rfc8725));
 > the Spring Security 7.x `OidcIdTokenValidator` and `OidcIdTokenDecoderFactory` javadocs
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · **Spring Security 7.x**.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · **Spring Security 7.x**.
 > **No sandbox** — the rules are quoted from the specification; the Java is illustrative
 > client code and the tokens shown are structural, never real.
 

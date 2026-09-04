@@ -8,10 +8,10 @@ sidebar_position: 50
 
 > Verified: 2026-08-31 — every item here is a consequence of a fact established and cited in an
 > earlier chunk of this topic, and links to the chunk that establishes it. Sources across the topic:
-> the **Testcontainers 2.0.5** sources and documentation, **Spring Boot 4.1.0**'s Testcontainers and
+> the **Testcontainers 2.0.5** sources and documentation, **Spring Boot 4.1.1**'s Testcontainers and
 > Database Initialization references, and **Spring Framework 7.0**'s transaction and SQL-script
 > testing references.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Testcontainers 2.0.5, JUnit Jupiter 6.0.3, Flyway 12.4.0.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run.

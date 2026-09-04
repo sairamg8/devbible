@@ -10,7 +10,7 @@ sidebar_position: 16
 > (`pool/ProxyLeakTask.java`, `pool/ProxyConnection.java`,
 > `HikariConfig.validateNumerics()`, read at tag `HikariCP-7.0.2`)
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **A leaked connection is one that was borrowed and never returned. The pool
 cannot tell the difference between a leak and a slow operation — from its side

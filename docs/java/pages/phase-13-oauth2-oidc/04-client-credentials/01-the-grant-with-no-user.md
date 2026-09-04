@@ -11,7 +11,7 @@ sidebar_position: 1
 > (Access Token Response), §5.1 (Successful Response), §6 (Refreshing an Access Token) and
 > §2.3 (Client Authentication) — at
 > [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every other grant in OAuth2 exists to answer "how does this application act on a person's
 behalf". Client credentials answers a different question — "how does this application prove

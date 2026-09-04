@@ -14,7 +14,7 @@ sidebar_position: 4
 > `org.assertj.core.util.Objects.areEqual`, `AbstractAssert.isSameAs`,
 > `AbstractComparableAssert.isEqualByComparingTo`, `org.assertj.core.error.ShouldBeSame`),
 > and the `junit-jupiter-api` 6.0.3 sources (`AssertionUtils.objectsAreEqual`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **"Are these the same?" has at least four answers in Java, and AssertJ gives each of them
 a different method. `isEqualTo` asks `equals`. `isSameAs` asks `==`. `isEqualByComparingTo`

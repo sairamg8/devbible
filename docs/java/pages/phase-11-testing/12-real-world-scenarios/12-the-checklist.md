@@ -10,8 +10,8 @@ sidebar_position: 50
 > do, and every fact it summarises is verified on the page it points at, against the Spring
 > Framework 7.0.x reference and javadoc, the Spring Boot 4.1 reference, and the Mockito, WireMock,
 > Awaitility and Testcontainers documentation as cited there.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
 > Awaitility 4.3.0.
 > ⚠️ **No sandbox, no Docker and no test run on this machine.** Nothing on this page or the ones
 > it links to reports the output of a run.

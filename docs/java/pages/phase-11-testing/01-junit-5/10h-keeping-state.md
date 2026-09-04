@@ -14,7 +14,7 @@ sidebar_position: 33
 > ([Store](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.Store.html))
 > and `ExtensionContext.Namespace`
 > ([Namespace](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.Namespace.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **🔴 An extension must never keep per-test state in its own instance fields. Not "should
 not" — the lifetime of an extension instance is not the lifetime you assume, and the guide

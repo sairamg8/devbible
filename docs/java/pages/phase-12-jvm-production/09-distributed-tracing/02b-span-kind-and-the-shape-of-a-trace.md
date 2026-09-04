@@ -13,7 +13,7 @@ sidebar_position: 3
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/7.0/integration/observability.html)).
 > 🔴 **No sandbox** — the waterfall sketch below is an explicitly labelled schematic, not a
 > captured trace.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · OpenTelemetry Java 1.62.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · OpenTelemetry Java 1.62.0.
 
 **Every span carries a kind, and most people never set one, which is why most hand-written
 spans are `Internal`. Kind is what tells a backend that your client span and their server span

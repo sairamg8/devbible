@@ -12,14 +12,14 @@ sidebar_position: 0
 > `JwtTimestampValidator`, `BearerTokenAuthenticationFilter`,
 > `DefaultBearerTokenResolver`, `JwtAuthenticationProvider`, `JwtAuthenticationConverter`
 > ([docs.spring.io/spring-security](https://docs.spring.io/spring-security/reference/));
-> Spring Boot 4.1.0 `OAuth2ResourceServerProperties` and its auto-configuration
+> Spring Boot 4.1.1 `OAuth2ResourceServerProperties` and its auto-configuration
 > ([docs.spring.io/spring-boot](https://docs.spring.io/spring-boot/reference/));
 > RFC 6750 §2 (Authenticated Requests), §3 (`WWW-Authenticate`)
 > ([rfc-editor.org/rfc/rfc6750](https://www.rfc-editor.org/rfc/rfc6750.txt)); RFC 8414 (AS
 > metadata) ([datatracker.ietf.org/doc/html/rfc8414](https://datatracker.ietf.org/doc/html/rfc8414));
 > RFC 9068 §4 ([rfc-editor.org/rfc/rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt));
 > RFC 8725 §3.9 ([datatracker.ietf.org/doc/html/rfc8725](https://datatracker.ietf.org/doc/html/rfc8725)).
-> Target: **JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x**.
+> Target: **JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x**.
 > **No sandbox** — Java source, YAML/properties config and quoted javadoc only; no HTTP
 > transcripts, no real tokens, no real JWKS.
 

@@ -12,7 +12,7 @@ sidebar_position: 12
 > `UrlBasedCorsConfigurationSource` bean, `http.cors(withDefaults())`,
 > per-chain `cors(cors -> cors.configurationSource(...))`, the multiple-bean
 > restriction and the `CorsConfigurer::disable` warning) and the Spring
-> Framework reference on CORS. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> Framework reference on CORS. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > Spring Security 7.x, JDK 25.
 
 **CORS is not a security feature of your server. It is a rule the *browser*

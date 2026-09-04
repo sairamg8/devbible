@@ -15,7 +15,7 @@ sidebar_position: 41
 > javadoc, and the Mockito wiki
 > [FAQ](https://github.com/mockito/mockito/wiki/FAQ) and
 > [Mockito And Private Methods](https://github.com/mockito/mockito/wiki/Mockito-And-Private-Methods).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

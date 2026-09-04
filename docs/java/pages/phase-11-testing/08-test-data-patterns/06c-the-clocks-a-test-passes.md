@@ -16,7 +16,7 @@ sidebar_position: 25
 > Spring Framework issue 24884 *"Provide a Mutable Clock in Spring Test Context Framework"*
 > ([github.com](https://github.com/spring-projects/spring-framework/issues/24884)) is cited
 > only as evidence that no such type is provided. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8,
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9,
 > JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7. **No sandbox** — Java source and
 > documented behaviour only, never a run.
 

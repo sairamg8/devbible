@@ -14,7 +14,7 @@ sidebar_position: 10
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
 > RFC 4648 §5 (Base 64 Encoding with URL and Filename Safe Alphabet)
 > ([rfc-editor.org/rfc/rfc4648](https://www.rfc-editor.org/rfc/rfc4648.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **With `plain`, the code challenge *is* the code verifier, so the secret PKCE depends on is
 published in the authorization request URL — the exact place the attacker is already reading.

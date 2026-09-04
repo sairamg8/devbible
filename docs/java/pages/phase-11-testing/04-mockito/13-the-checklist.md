@@ -9,7 +9,7 @@ sidebar_position: 57
 > Verified: 2026-08-28 — this page states no new facts. Every line links to the chunk that
 > argues it and carries the citation, all of which are validated against the **Mockito 5.23.0**
 > sources on GitHub (tag `v5.23.0`) and the Mockito wiki.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — nothing on this page is a test run.
 
 **A review checklist is only useful if it is ordered by consequence. The first section below

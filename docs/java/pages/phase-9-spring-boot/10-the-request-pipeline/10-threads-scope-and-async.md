@@ -13,7 +13,7 @@ sidebar_position: 10
 > reference *Integration → Observability Support* (context propagation), the
 > `OncePerRequestFilter` javadoc on async dispatches, and spring-projects
 > issues #31130 (the context-propagating decorator) and
-> spring-boot#14655 / #19336 (request scope under `@Async`). Spring Boot 4.1.0,
+> spring-boot#14655 / #19336 (request scope under `@Async`). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Every convenience in this topic is thread-bound state: the MDC, the security

@@ -13,7 +13,7 @@ sidebar_position: 9
 > 2025-05-04 on Maven Central), springdoc.org/properties.html
 > (`springdoc.writer-with-order-by-keys`, `springdoc.pre-loading-enabled`,
 > `springdoc.cache.disabled`), and the springdoc release notes for #3281.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A document that only exists at `http://localhost:8080/v3/api-docs` is not a
 contract — it is a debugging aid. It cannot be reviewed in a pull request,

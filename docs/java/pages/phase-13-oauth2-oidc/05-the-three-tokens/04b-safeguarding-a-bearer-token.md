@@ -13,7 +13,7 @@ sidebar_position: 7
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc6749.txt)); RFC 9700 §4.9 (Access
 > Token Leakage at the Resource Server) and §4.10 (Misuse of Stolen Access Tokens)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9700.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **[04](04-bearer-tokens-and-the-authorization-header.md) established that a bearer token is
 usable by anyone who has it. That single property means there is no detection story and no

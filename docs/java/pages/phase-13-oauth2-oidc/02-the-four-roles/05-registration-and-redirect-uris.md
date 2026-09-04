@@ -11,7 +11,7 @@ sidebar_position: 5
 > RFC 9700 §2.1 (exact string matching); and RFC 7591 (*OAuth 2.0 Dynamic Client
 > Registration Protocol*) — at
 > [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **For a public client the authorization server cannot tell who is calling — §2.3 forbids it
 from relying on client authentication to identify one. So what actually protects the

@@ -15,9 +15,9 @@ sidebar_position: 1
 > `JwtConverterConfiguration`, `OpaqueTokenIntrospectionConfiguration`,
 > `DefaultWebSecurityCondition`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server)).
-> Version spine confirmed from `spring-boot-dependencies:4.1.0`, which pins
+> Version spine confirmed from `spring-boot-dependencies:4.1.1`, which pins
 > `spring-security.version` **7.1.0** and `spring-framework.version` **7.0.8**.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **A resource server is the half of OAuth2 that never talks to a human. It receives a bearer
 token it did not issue, decides whether that token is genuine *and applicable*, turns its

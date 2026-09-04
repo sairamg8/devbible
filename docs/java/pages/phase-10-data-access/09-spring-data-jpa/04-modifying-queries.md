@@ -14,7 +14,7 @@ sidebar_position: 22
 > and the `jakarta.persistence.Query` javadoc for `getResultList()` and
 > `executeUpdate()`
 > ([apidocs](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/query)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **`@Modifying` looks like a marker and behaves like a switch: with it, Spring Data

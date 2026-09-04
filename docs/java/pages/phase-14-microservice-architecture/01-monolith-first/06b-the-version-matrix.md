@@ -12,7 +12,7 @@ sidebar_position: 15
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePrerequisites.html)) and
 > *Microservice Premium*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — the
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — the
 > arithmetic below is arithmetic you can redo, not measurement.
 
 **"What is running in production?" has a one-line answer in a monolith and no answer at all

@@ -15,7 +15,7 @@ sidebar_position: 7
 > OFFSET*
 > ([postgresql.org/docs/18/queries-table-expressions.html](https://www.postgresql.org/docs/18/queries-table-expressions.html),
 > [.../queries-limit.html](https://www.postgresql.org/docs/18/queries-limit.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Assembling a one-to-many from a single join is correct and often the wrong trade.
 Every child row carries a full copy of the parent's columns across the network, so a

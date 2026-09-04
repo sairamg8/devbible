@@ -13,7 +13,7 @@ sidebar_position: 36
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html)),
 > and the `@Transactional` javadoc
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **Spring matches a rollback rule in one of two completely different ways
 depending on which attribute you used. `Class`-valued rules match by type.

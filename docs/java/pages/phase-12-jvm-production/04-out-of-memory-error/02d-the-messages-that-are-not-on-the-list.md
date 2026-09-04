@@ -15,7 +15,7 @@ sidebar_position: 6
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/java.base/share/classes/java/nio/Bits.java)),
 > checked against the **JDK 25 Troubleshooting Guide**'s enumerated list
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshooting-memory-leaks.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The Troubleshooting Guide lists seven detail messages. It is not a complete inventory of what a
 JDK 25 JVM can print after `java.lang.OutOfMemoryError:`, and the gap matters because two of the

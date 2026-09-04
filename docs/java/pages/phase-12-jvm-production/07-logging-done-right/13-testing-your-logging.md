@@ -14,7 +14,7 @@ sidebar_position: 27
 > the **SLF4J** API documentation for `MDC` and `Marker`
 > ([slf4j.org](https://www.slf4j.org/apidocs/org/slf4j/MDC.html)); and **JUnit Jupiter 6.0.3** for
 > the extension model ([junit.org](https://junit.org/junit5/docs/current/user-guide/)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · JUnit Jupiter 6.0.3.
 
 **Most logging is not worth testing, and saying so first is what makes the rest of this page
 credible. Asserting that a method logged "Processing order 42" couples a test to a message nobody

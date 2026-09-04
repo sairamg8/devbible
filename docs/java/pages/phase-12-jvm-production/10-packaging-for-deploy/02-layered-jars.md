@@ -14,7 +14,7 @@ sidebar_position: 5
 > and "Packaging → Efficient Deployments"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/efficient.html)).
 > 🔴 **No sandbox** — no build was run and no image size, layer size or push duration below is a
-> measurement. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> measurement. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[01](01-the-fat-jar.md) established that a Boot jar keeps its dependencies whole and that you
 should extract it before running it in production. This page is the second reason to extract, and

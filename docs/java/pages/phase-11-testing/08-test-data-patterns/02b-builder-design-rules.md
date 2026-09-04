@@ -10,8 +10,8 @@ sidebar_position: 4
 > ([projectlombok.org/features/Builder](https://projectlombok.org/features/Builder)) for what
 > `toBuilder()` produces, and the **JUnit Jupiter 6.0.3** user guide
 > ([docs.junit.org/6.0.3](https://docs.junit.org/6.0.3/user-guide/)) for lifecycle.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output from a suite.
 

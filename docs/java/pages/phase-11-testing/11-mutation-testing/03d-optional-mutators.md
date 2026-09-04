@@ -19,7 +19,7 @@ sidebar_position: 13
 > `mutators/returns/ReturnsMutatorGroup.java`,
 > `mutators/experimental/RemoveSwitchMutatorGroup.java` and
 > `META-INF/services/org.pitest.mutationtest.engine.gregor.config.MutatorGroup`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Operator descriptions are quoted from pitest's
 > documentation; group membership is read from published source. No mutant count or score on this

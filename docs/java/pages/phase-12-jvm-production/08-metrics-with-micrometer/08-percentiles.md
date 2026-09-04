@@ -13,7 +13,7 @@ sidebar_position: 22
 > About Your Tail* ([sre.google](https://sre.google/sre-book/monitoring-distributed-systems/)), and
 > the **Prometheus documentation** — *Querying · Functions* (`histogram_quantile`)
 > ([prometheus.io](https://prometheus.io/docs/prometheus/latest/querying/functions/)).
-> No JVM was run for this page and no latency figures appear below. JDK 25 · Spring Boot 4.1.0 ·
+> No JVM was run for this page and no latency figures appear below. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0 · Prometheus Java client 1.5.1.
 
 **[01 · The average that lied](01-the-average-that-lied.md) argued that you need a percentile. This

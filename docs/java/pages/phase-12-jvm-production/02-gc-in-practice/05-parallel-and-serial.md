@@ -22,7 +22,7 @@ sidebar_position: 24
 > and [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp),
 > which together establish that **`UseAdaptiveSizePolicy` is read by the Parallel collector and
 > by nothing else** (zero references in `g1Arguments.cpp` or `serialArguments.cpp`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Both of these collectors are fully supported on JDK 25 and neither is deprecated, but they
 have acquired a reputation as things you used before G1. That reputation costs real money. A

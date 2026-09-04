@@ -13,7 +13,7 @@ sidebar_position: 54
 > test itself is a test-design pattern, not an API of Mockito or JUnit; nothing on this page is
 > claimed as Mockito documentation. Vocabulary from
 > [01b · Mock, stub, spy, fake](01b-mock-stub-spy-fake.md).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Mockito 5.23.0, **JUnit Jupiter 6.0.3**. **No sandbox** — this page carries Java source, never
 > a fabricated test run.
 

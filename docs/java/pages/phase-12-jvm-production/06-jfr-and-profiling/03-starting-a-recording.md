@@ -14,7 +14,7 @@ sidebar_position: 4
 > ([openjdk.org](https://openjdk.org/jeps/509)).
 > 🔴 **No sandbox** — command output is not reproduced here; only documented syntax, options and
 > defaults.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Two ways in: a flag at launch, or `jcmd` against a running process. The flag is what you
 configure once and forget; `jcmd` is what you reach for at 03:00. Both are documented precisely,

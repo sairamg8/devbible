@@ -11,7 +11,7 @@ sidebar_position: 3
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and *Declarative transaction management*
 > ([.../transaction/declarative.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The proxy from [chunk 2](02-the-proxy.md) does not "apply transactions to the
 bean". Per call, it asks a `TransactionAttributeSource` whether *this specific

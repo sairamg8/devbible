@@ -18,8 +18,8 @@ sidebar_position: 3
 > ([github.com/junit-team](https://github.com/junit-team/junit-framework/wiki/Upgrading-to-JUnit-6.0));
 > the **Spring Framework 7.0 release notes**
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes));
-> and `spring-boot-dependencies:4.1.0`'s own POM.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> and `spring-boot-dependencies:4.1.1`'s own POM.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox, no build and no test run on this machine.** The evidence below is
 > published POMs, published JAR contents and official release notes. Where that evidence
 > cannot settle a question, this page says so instead of guessing.

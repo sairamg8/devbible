@@ -13,7 +13,7 @@ sidebar_position: 6
 > [`AbstractDistributionSummaryBuilder`](https://github.com/micrometer-metrics/micrometer/tree/v1.17.0/micrometer-core/src/main/java/io/micrometer/core/instrument)
 > and the percentile-histogram bucket generation in
 > [`PercentileHistogramBuckets`](https://github.com/micrometer-metrics/micrometer/blob/v1.17.0/micrometer-core/src/main/java/io/micrometer/core/instrument/distribution/PercentileHistogramBuckets.java).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **[03](03-the-meter-types.md) covered the three meters that answer almost every question: counter,
 gauge and timer. This page is the remaining four, each of which exists because one of those three

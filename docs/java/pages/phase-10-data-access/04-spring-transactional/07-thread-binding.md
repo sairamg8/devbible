@@ -13,7 +13,7 @@ sidebar_position: 19
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html))
 > and the `TransactionSynchronizationManager` javadoc
 > ([.../org/springframework/transaction/support/TransactionSynchronizationManager.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, HikariCP 7.0.2,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, HikariCP 7.0.2,
 > PostgreSQL 18.
 
 **Here is the bug. Two lines in the same method, inside the same

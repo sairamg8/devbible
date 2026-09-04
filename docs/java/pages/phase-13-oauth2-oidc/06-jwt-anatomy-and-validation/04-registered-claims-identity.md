@@ -14,7 +14,7 @@ sidebar_position: 9
 > ([rfc7519](https://www.rfc-editor.org/rfc/rfc7519.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt),
 > [rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **RFC 7519 ends every single registered-claim definition with the same four words: *"Use of
 this claim is OPTIONAL."* That is not laxity — RFC 7519 defines a container, and it is the

@@ -19,7 +19,7 @@ sidebar_position: 9
 > [`gc/g1/g1_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/g1/g1_globals.hpp)
 > for `G1RSetUpdatingPauseTimePercent`, `G1ConcRefinementThreads` and `G1UseConcRefinement`
 > (note its `DIAGNOSTIC` classification).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03](03-g1.md) argued that G1's defining property is choosing its own workload. This page
 is the machinery that makes the choice possible and the bill it presents: how the collection

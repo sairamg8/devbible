@@ -16,7 +16,7 @@ sidebar_position: 15
 > documented example; no recording was made and no field value is invented.
 > **Topic 06 · JFR, JMC and async-profiler** *(not written yet)* owns JFR generally; this chunk
 > owns only its use as a leak tool.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Memory Analyzer's documentation states the limitation plainly: *"A heap dump does not contain
 allocation information so it cannot resolve questions like who had created the objects and where

@@ -23,7 +23,7 @@ sidebar_position: 30
 > whose example output is quoted **verbatim from the guide**.
 > 🔴 **No log output on this page was produced by running anything** — every example is a format
 > string from the JDK source or a line quoted from Oracle's documentation.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[07c](07c-reading-a-gc-log.md) covered the one line per collection that `-Xlog:gc` produces.
 This page is the four other lines worth knowing by sight, and each of them answers a question

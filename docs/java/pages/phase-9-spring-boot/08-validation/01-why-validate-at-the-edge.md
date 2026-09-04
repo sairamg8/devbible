@@ -10,7 +10,7 @@ sidebar_position: 1
 > Data Binding, and Type Conversion* and *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/) — and the Spring
 > Boot reference *Validation*
-> (docs.spring.io/spring-boot/reference/io/validation.html). Spring Boot 4.1.0,
+> (docs.spring.io/spring-boot/reference/io/validation.html). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Validation is a boundary concern, and the argument for it is not tidiness —

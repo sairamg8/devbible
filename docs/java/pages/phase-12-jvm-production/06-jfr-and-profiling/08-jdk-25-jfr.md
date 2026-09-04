@@ -13,7 +13,7 @@ sidebar_position: 14
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jfr.html)).
 > 🔴 **No sandbox** — no event output, profile or measurement below is a captured run. The command
 > forms are the JEPs' own examples.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Three JEPs landed in JDK 25 that change what JFR profiling is. One adds a CPU-time sampler that
 sees native code. One rewrites how sampling works so it can no longer crash the JVM. One adds exact

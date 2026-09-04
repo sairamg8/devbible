@@ -6,21 +6,21 @@ sidebar_position: 20
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Sanitize Sensitive Values*
 > (docs.spring.io/spring-boot/reference/actuator/endpoints.html: information from
 > `/env`, `/configprops` and `/quartz` being sanitized by default; `show-values`
 > taking `never` — values *"always fully sanitized (replaced by `******`)"* —
 > `always` and `when-authorized`, each qualified *"as long as no
 > `SanitizingFunction` bean applies"*; and `management.endpoint.env.roles`) and
-> the Spring Boot 4.1.0 how-to — *Actuator*
+> the Spring Boot 4.1.1 how-to — *Actuator*
 > (docs.spring.io/spring-boot/how-to/actuator.html: *"To take control over the
 > sanitization, define a `SanitizingFunction` bean. The `SanitizableData` with
 > which the function is called provides access to the key and value as well as
 > the `PropertySource` from which they came"*, and each function being called in
 > order until one changes the value). The removal of key-list sanitisation in
 > Boot 3.0 is recorded in the Spring Boot issue tracker
-> (spring-projects/spring-boot#33990). Spring Boot 4.1.0, Spring Framework
+> (spring-projects/spring-boot#33990). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **"Secured" and "safe to read" are different questions. An authenticated

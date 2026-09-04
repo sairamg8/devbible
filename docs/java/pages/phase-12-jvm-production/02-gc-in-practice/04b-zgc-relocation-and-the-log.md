@@ -20,7 +20,7 @@ sidebar_position: 21
 > for `ZName`, and
 > [`gc/shared/gcCause.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcCause.cpp)
 > for the ZGC cause strings.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Two passes instead of one is the whole difference. Because ZGC finishes marking before it
 starts relocating, it knows exactly what is live before it moves anything — so it never has to

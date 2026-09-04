@@ -10,7 +10,7 @@ sidebar_position: 40
 > ([writing-tests/test-execution-order](https://docs.junit.org/6.0.3/writing-tests/test-execution-order.html))
 > and "Test Instance Lifecycle"
 > ([writing-tests/test-instance-lifecycle](https://docs.junit.org/6.0.3/writing-tests/test-instance-lifecycle.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[11](11-execution-order.md) and [11c](11c-class-order.md) are the mechanism. This is the
 judgement: when you reach for `@Order`, what have you actually found? The guide itself hedges

@@ -14,7 +14,7 @@ sidebar_position: 8
 > *OAuth 2.0 Resource Server JWT* §"Configuring Authorization"
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html))
 > and the Spring Boot 4.1.x source `DefaultWebSecurityCondition`.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Spring Security evaluates matchers twice, at two different levels, and both are
 first-match-wins. `securityMatcher` chooses which `SecurityFilterChain` handles the request;

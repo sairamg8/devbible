@@ -14,7 +14,7 @@ sidebar_position: 8
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and
 > `spring-boot-starter-parent-4.1.0.pom` on **Maven Central** for the compiler
 > configuration Boot applies.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox, no build and no test run on this machine.** Build configuration below is
 > written from published plugin documentation and published POMs; none of it has been
 > executed here.

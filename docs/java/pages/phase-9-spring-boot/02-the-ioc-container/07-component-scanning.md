@@ -15,7 +15,7 @@ sidebar_position: 7
 > reference *Structuring Your Code* (the default-package warning and the
 > `@SpringBootApplication` scan root), and spring-projects/spring-framework
 > issue #30431 (`spring-context-indexer` deprecated in 6.1 in favour of AOT).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Component scanning has exactly one rule and it explains almost every problem
 people have with it: `@ComponentScan` starts at the package of the class that

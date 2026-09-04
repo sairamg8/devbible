@@ -14,7 +14,7 @@ sidebar_position: 23
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-altertype.html))
 > and Flyway 12's `PostgreSQLParser`
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/flyway-database/flyway-database-postgresql)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08a](08a-adding-things-safely.md) covered the additions that `NOT VALID` makes cheap: columns,
 `CHECK` constraints and foreign keys. This chunk covers the three that it does not help with at all.

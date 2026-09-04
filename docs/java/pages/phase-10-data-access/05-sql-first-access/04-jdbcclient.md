@@ -14,7 +14,7 @@ sidebar_position: 9
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html))
 > and the Spring Boot 4.1 reference *Data → SQL Databases → Using `JdbcClient`*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **`JdbcClient` arrived in Spring Framework 6.1 and it is what a new service should
 use. It is not a new way to talk to a database — it delegates to `JdbcTemplate` and

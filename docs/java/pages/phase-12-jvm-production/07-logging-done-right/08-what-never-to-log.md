@@ -15,7 +15,7 @@ sidebar_position: 17
 > Article 5(1)(c)** (data minimisation) and **Article 32** (security of processing)
 > ([eur-lex.europa.eu](https://eur-lex.europa.eu/eli/reg/2016/679/oj)); and the **SLF4J** and
 > **Logback** documentation for the mechanics quoted here.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A log is a copy of your data with none of your data's protections. It goes to a file with
 different permissions, into a shipping pipeline, into a search index a hundred people can query,

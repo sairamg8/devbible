@@ -12,7 +12,7 @@ sidebar_position: 11
 > Release 18); and the **JDK 25 `java` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)) for
 > `-Xss`. 🔴 **No sandbox** — no container was started, no resolver was queried and no crash
-> below is a transcript. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> below is a transcript. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03b](03b-alpine-and-musl.md) established that choosing Alpine means choosing musl. This chunk
 is the part that decides whether that was a good idea: the specific, documented ways musl behaves

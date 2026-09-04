@@ -14,7 +14,7 @@ sidebar_position: 5
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Hibernate ORM 7.4 *User Guide* §31.4 *Associations*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **One Java field, one foreign-key column, one owning side, no synchronisation problem
 and no collection to go stale. Hibernate's own introduction calls many-to-one "the most

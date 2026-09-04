@@ -10,7 +10,7 @@ sidebar_position: 4
 > Declarative Annotation-based Caching* — the `@CachePut`, `@CacheEvict`, `@Caching` and
 > `@CacheConfig` sections
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **`@Cacheable` is one annotation and three of the remaining four exist to undo it. The
 recurring bug in all of them is not the annotation, it is the key: a write path that puts or

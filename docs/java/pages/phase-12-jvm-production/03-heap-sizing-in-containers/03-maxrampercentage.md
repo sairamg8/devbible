@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and the JDK 25 HotSpot source at tag `jdk-25+36`:
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **There are three RAM-percentage flags, they do not mean what their names suggest, only one of
 them is the knob you want, and the default value of that one is 25 percent — a figure chosen for

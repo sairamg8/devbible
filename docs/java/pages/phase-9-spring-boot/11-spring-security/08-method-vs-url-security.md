@@ -11,7 +11,7 @@ sidebar_position: 8
 > — the `AuthorizationManagerBeforeMethodInterceptor` /
 > `AuthorizationManagerAfterMethodInterceptor` implementation, "built using
 > native Spring AOP", the `offset` attribute for ordering against
-> `@Transactional`, and the unannotated-methods warning). Spring Boot 4.1.0,
+> `@Transactional`, and the unannotated-methods warning). Spring Boot 4.1.1,
 > Spring Security 7.x, JDK 25.
 
 **Method security is Spring AOP wearing a security hat, so every proxy

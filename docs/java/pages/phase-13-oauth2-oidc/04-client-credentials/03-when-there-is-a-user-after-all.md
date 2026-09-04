@@ -11,7 +11,7 @@ sidebar_position: 3
 > §2.4; and the Spring Security 7.x reference (OAuth2 Client) — at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc8693) and
 > [docs.spring.io/spring-security/reference](https://docs.spring.io/spring-security/reference/).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A service token is easy to get and works everywhere, which is exactly why it ends up
 carrying calls it has no authority for. Nothing fails. The resource server sees a valid

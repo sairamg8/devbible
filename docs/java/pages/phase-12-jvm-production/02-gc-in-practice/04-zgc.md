@@ -20,7 +20,7 @@ sidebar_position: 20
 > for the `-Xlog:gc` line format and the `Minor Collection` / `Major Collection` names, and
 > [`gc/z/z_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/z/z_globals.hpp)
 > for the shipped flag defaults.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **ZGC's entire proposition is that pause time is independent of heap size, and it achieves it
 by never doing anything expensive inside a pause: marking, relocation and reference updating

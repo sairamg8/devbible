@@ -13,7 +13,7 @@ sidebar_position: 2
 > RFC 7009 §3 (Implementation Note)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc7009.txt)); OpenID Connect Core 1.0 §2
 > ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Because every tutorial pastes an access token into jwt.io and it decodes, an entire
 generation of client code was written on the assumption that an access token is a JWT. It

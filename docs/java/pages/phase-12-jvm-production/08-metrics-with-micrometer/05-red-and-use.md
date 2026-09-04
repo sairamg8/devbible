@@ -16,7 +16,7 @@ sidebar_position: 13
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
 > **Micrometer 1.17.0 sources** (`ExecutorServiceMetrics`, `JvmGcMetrics`) and **HikariCP's
 > `MicrometerMetricsTracker`** for meter names. No JVM was run for this page; no metric values
-> appear below. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> appear below. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 >
 > ⚠️ RED has no specification document with the standing of Gregg's page or the SRE book. The
 > quotations below are Tom Wilkie's words as reported by Grafana Labs, and are labelled as such.

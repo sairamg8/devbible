@@ -12,7 +12,7 @@ sidebar_position: 42
 > the mode names, the `jcmd VM.native_memory` subcommands, the documented overhead and the
 > category list below are all taken from it — and the **JDK 25 `java` tool reference**
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html))
-> for `-XX:NativeMemoryTracking`. JDK 25 · Spring Boot 4.1.0.
+> for `-XX:NativeMemoryTracking`. JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — this page gives the commands and describes what each reports. It contains
 > **no captured NMT output**; where a report's structure is shown it is described in prose or
 > presented as an explicitly labelled schematic.

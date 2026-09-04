@@ -14,7 +14,7 @@ sidebar_position: 37
 > ([docs.spring.io](https://docs.spring.io/spring-boot/how-to/data-initialization.html))
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18, Testcontainers 2.0.5.
 
 **Every chunk in this topic has argued about what happens when a migration meets a real database:
 locks, transactions, MVCC, advisory locks, `CONCURRENTLY`, PL/pgSQL. The test that protects all of it

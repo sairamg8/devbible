@@ -11,7 +11,7 @@ sidebar_position: 1
 > **Spring Framework 7.0 reference**, "JVM Checkpoint Restore"
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/checkpoint-restore.html)).
 > JVM behaviour cross-checked against the **HotSpot compilation policy** header at tag
-> `jdk-25+36`. Version spine: JDK 25, Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> `jdk-25+36`. Version spine: JDK 25, Spring Boot 4.1.1 / Spring Framework 7.0.9.
 > 🔴 **No sandbox** — no checkpoint was taken and no startup or restore time on these pages is
 > a measurement. The CRaC project publishes comparison graphs; this topic quotes its prose,
 > not numbers read off a chart.

@@ -10,8 +10,8 @@ sidebar_position: 15
 > list lives, since ⚠️ **there is no `doc/filtering.html`** (both `jacoco.org` and `eclemma.org`
 > return 404 for it). Retention verified against the **Jakarta Annotations 3.0** javadoc for
 > `jakarta.annotation.Generated`, and against **Project Lombok**'s configuration documentation
-> for `lombok.addLombokGeneratedAnnotation`. Version spine from `spring-boot-dependencies:4.1.0`:
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> for `lombok.addLombokGeneratedAnnotation`. Version spine from `spring-boot-dependencies:4.1.1`:
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — documented behaviour and configuration only.
 
 **"JaCoCo ignores generated code" is one of those claims that is true enough to repeat and wrong

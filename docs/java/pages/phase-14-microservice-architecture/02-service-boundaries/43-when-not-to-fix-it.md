@@ -8,7 +8,7 @@ sidebar_position: 56
 
 > Verified: 2026-09-04 against Michael Nygard, *Release It!* (2nd ed., Pragmatic Bookshelf);
 > Sam Newman, *Monolith to Microservices* (O'Reilly), Chapter 1: Just Enough Microservices.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Software architecture is an exercise in economic trade-offs, not theoretical perfection. When an engineering team discovers an improper service boundary — characterized by synchronous network chattiness or awkward data dependencies — the immediate instinct of software purists is to schedule a multi-quarter refactoring. In production realities, however, the financial and opportunity cost of redrawing a boundary often far exceeds the operational drag of living with it. If the affected services have low change frequency, stable throughput, or a planned sunset horizon, the rational engineering decision is to contain the boundary through tactical mitigations rather than rewiring production infrastructure.**
 

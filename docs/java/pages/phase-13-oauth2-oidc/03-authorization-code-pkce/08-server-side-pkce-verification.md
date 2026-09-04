@@ -15,7 +15,7 @@ sidebar_position: 11
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
 > RFC 8414 §2 (Authorization Server Metadata)
 > ([datatracker.ietf.org/doc/html/rfc8414](https://datatracker.ietf.org/doc/html/rfc8414)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A client can implement PKCE perfectly against a server that ignores it and get exactly zero
 security, and nothing in the flow will tell you. That asymmetry is why understanding the

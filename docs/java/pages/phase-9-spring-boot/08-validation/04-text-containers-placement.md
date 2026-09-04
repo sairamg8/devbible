@@ -13,7 +13,7 @@ sidebar_position: 4
 > (docs.hibernate.org/stable/validator/reference/en-US/html_single/) — and the
 > Spring Framework reference *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@Email` and `@Pattern` are the two constraints people trust most and should
 trust least: both check shape and neither checks meaning. And an annotation

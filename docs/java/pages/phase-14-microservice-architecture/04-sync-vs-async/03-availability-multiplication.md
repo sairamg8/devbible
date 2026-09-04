@@ -13,7 +13,7 @@ sidebar_position: 5
 > ([microservices.io](https://microservices.io/patterns/communication-style/rpi.html)).
 > 🔴 **Every number on this page is arithmetic, computed from an assumed input, not a
 > measurement.** No system was observed and no latency, error rate or uptime figure here
-> came from a running service. Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework
+> came from a running service. Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework
 > 7.0.8.
 
 **This is the one calculation in microservice architecture that every engineer should be

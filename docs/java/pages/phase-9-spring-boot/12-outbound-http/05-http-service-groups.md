@@ -12,7 +12,7 @@ sidebar_position: 5
 > (docs.spring.io/spring-framework/reference/integration/rest-clients.html), and
 > the Spring Boot reference *Calling REST Services → HTTP Service Clients* for
 > the `spring.http.serviceclient.*` properties
-> (docs.spring.io/spring-boot/reference/io/rest-client.html). Spring Boot 4.1.0,
+> (docs.spring.io/spring-boot/reference/io/rest-client.html). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Declaring an interface is the easy half. The half that decides whether the

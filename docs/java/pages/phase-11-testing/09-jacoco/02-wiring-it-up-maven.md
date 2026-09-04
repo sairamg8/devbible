@@ -8,8 +8,8 @@ sidebar_position: 3
 
 > Verified: 2026-08-31 against the **JaCoCo Maven plugin 0.8.15** mojo documentation —
 > `maven.html`, `prepare-agent-mojo.html`, `report-mojo.html`, `check-mojo.html`,
-> `report-aggregate-mojo.html`. Version spine from `spring-boot-dependencies:4.1.0`: JDK 25,
-> Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Maven Surefire as managed by Boot.
+> `report-aggregate-mojo.html`. Version spine from `spring-boot-dependencies:4.1.1`: JDK 25,
+> Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Maven Surefire as managed by Boot.
 > ⚠️ **No build and no sandbox on this machine** — POM configuration and documented defaults
 > only, never build output.
 > ⚠️ **0.8.15 (released 2026/06/04) is the current release.** Version strings like

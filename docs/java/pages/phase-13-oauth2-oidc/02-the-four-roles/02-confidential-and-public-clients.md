@@ -10,7 +10,7 @@ sidebar_position: 2
 > §2.2 (Client Identifier), §2.3 (Client Authentication), §2.3.1 (Client Password); and
 > RFC 9700 §2.1.1 (PKCE), at
 > [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **RFC 6749 §2.1 splits every client in the world into two categories on one criterion, and
 it is not sensitivity, ownership, platform or importance. It is whether the client can

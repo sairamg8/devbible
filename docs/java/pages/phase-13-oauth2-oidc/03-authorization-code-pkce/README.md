@@ -17,7 +17,7 @@ sidebar_position: 0
 > RFC 8252 (OAuth 2.0 for Native Apps)
 > ([datatracker.ietf.org/doc/html/rfc8252](https://datatracker.ietf.org/doc/html/rfc8252));
 > RFC 3986 §2.3, §6.2.1 ([rfc-editor.org/rfc/rfc3986](https://www.rfc-editor.org/rfc/rfc3986.txt)).
-> Target: **JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x**.
+> Target: **JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x**.
 > **No sandbox** — these pages carry Java source, config and specification-quoted field
 > definitions, never a fabricated HTTP transcript or a real token.
 

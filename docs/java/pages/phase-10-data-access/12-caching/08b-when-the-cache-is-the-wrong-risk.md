@@ -14,7 +14,7 @@ sidebar_position: 31
 > ([docs.spring.io/spring-boot/reference/io/caching.html](https://docs.spring.io/spring-boot/reference/io/caching.html))
 > and the Hibernate ORM 7.4 *Introduction* §8.7 *The second-level cache*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Hibernate ORM 7.4.1, Redis 8, PostgreSQL 18.
 
 **[8](08-when-not-to-cache.md) argues that a cache is the wrong tool for a cost you could have
 removed. This chunk argues the cases where it is the wrong tool no matter how expensive the read is

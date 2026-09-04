@@ -12,7 +12,7 @@ sidebar_position: 24
 > ([reference/data/sql](https://docs.spring.io/spring-boot/reference/data/sql.html)) and the jOOQ
 > 3.21 manual — *Transaction management*
 > ([sql-execution/transaction-management](https://www.jooq.org/doc/latest/manual/sql-execution/transaction-management/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The good news first: `@Transactional` works over jOOQ, and it works because Boot's
 auto-configuration wires jOOQ's connection provider to a `TransactionAwareDataSourceProxy` rather

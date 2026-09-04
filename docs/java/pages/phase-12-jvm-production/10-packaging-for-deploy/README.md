@@ -25,7 +25,7 @@ sidebar_position: 0
 > pages it actually quotes.
 > 🔴 **No sandbox** — nothing in this topic was built, pulled, linked or run. Every size figure and
 > every line of log output is quoted from a specification or JEP and attributed where it appears.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The `.jar` that `mvn package` produces is the *start* of deployment, not the end. Between it
 and a pod that serves traffic sit a dozen decisions — nested or shaded, extracted or not, which

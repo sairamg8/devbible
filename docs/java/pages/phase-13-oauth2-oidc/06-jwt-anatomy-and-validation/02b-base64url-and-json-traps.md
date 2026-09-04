@@ -15,7 +15,7 @@ sidebar_position: 3
 > ([rfc4648](https://www.rfc-editor.org/rfc/rfc4648.txt),
 > [rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Before a single signature is checked, a JWT has already passed through two parsers — a
 base64url decoder and a JSON parser — and both of them have configuration-dependent

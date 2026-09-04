@@ -12,7 +12,7 @@ sidebar_position: 11
 > [.../jdbc/parameter-handling.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/parameter-handling.html)),
 > and the `NamedParameterUtils` source in spring-framework `main`
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/main/spring-jdbc/src/main/java/org/springframework/jdbc/core/namedparam/NamedParameterUtils.java)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **No JDBC driver supports `:name`. PostgreSQL does not support it either. It is a
 Spring-level feature implemented by *parsing your SQL string* and rewriting every

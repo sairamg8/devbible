@@ -13,8 +13,8 @@ sidebar_position: 1
 > [vs end-to-end](https://docs.spring.io/spring-framework/reference/testing/mockmvc/vs-end-to-end-integration-tests.html))
 > — read as asciidoc source at tag `v7.0.9`, plus the `spring-test` 7.0.9 sources
 > (`org.springframework.test.web.servlet.assertj.MockMvcTester`).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source, never a fabricated test run.
 
 **A `MockMvc` test is not an HTTP test. Nothing is serialised onto a wire, nothing is

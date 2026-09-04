@@ -16,7 +16,7 @@ sidebar_position: 32
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/documentation/Reference))
 > and Flyway's *Migration Transaction Handling*
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/migration-transaction-handling-273973399.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[10](10-data-migrations.md) argued that a single large `UPDATE` is a bad idea: it doubles the
 table, holds a row lock per row, blocks the vacuum that would clean up behind it and loses all its

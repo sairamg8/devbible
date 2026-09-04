@@ -15,7 +15,7 @@ sidebar_position: 3
 > the `DispatcherServlet` registration and `spring.mvc.*` properties), and the
 > Framework 7.0 reference sections on annotated controllers (argument
 > resolvers, return-value handlers and `HttpMessageConverter`).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Spring MVC's central design decision is that your application registers
 exactly *one* servlet. `DispatcherServlet` takes every request and then asks a

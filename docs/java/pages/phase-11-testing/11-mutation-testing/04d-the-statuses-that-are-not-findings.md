@@ -17,7 +17,7 @@ sidebar_position: 29
 > `org.pitest.mutationtest.DetectionStatus` (constructor arguments, javadocs and
 > `getForErrorExitCode`), `MutationStatusMap`, `build/MutationTestUnit` and
 > `pitest-html-report/.../ConfidenceMap.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
 > Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no build on this machine.** Status semantics are read from published source and
 > documentation. **No status count, score or timing on this page came from a run.**

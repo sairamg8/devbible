@@ -21,7 +21,7 @@ sidebar_position: 45
 > ([postgresql.org/docs/18/sql-set-transaction.html](https://www.postgresql.org/docs/18/sql-set-transaction.html))
 > and the HikariCP source
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, Spring Framework 7.0.8, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18.
 
 **`@Transactional(isolation = Isolation.SERIALIZABLE)` is a request to open a new
 transaction at that level. If the method is entered while a transaction is already

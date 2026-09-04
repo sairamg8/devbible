@@ -11,7 +11,7 @@ sidebar_position: 10
 > *DSLContext* ([sql-building/dsl-context](https://www.jooq.org/doc/latest/manual/sql-building/dsl-context/)),
 > *QueryParts* ([sql-building/queryparts](https://www.jooq.org/doc/latest/manual/sql-building/queryparts/))
 > and *Fetching* ([sql-execution/fetching](https://www.jooq.org/doc/latest/manual/sql-execution/fetching/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **There are exactly two things to understand before jOOQ's API stops looking like magic. `DSL` is
 a bag of static factory methods that build query *parts* and knows nothing about your database.

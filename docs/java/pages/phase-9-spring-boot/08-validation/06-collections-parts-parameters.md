@@ -13,7 +13,7 @@ sidebar_position: 6
 > rather than a container such as a `Map` or `Collection`", and method
 > validation supporting parameters that are collections, arrays or maps) — and
 > the Spring Boot reference *Validation*
-> (docs.spring.io/spring-boot/reference/io/validation.html). Spring Boot 4.1.0,
+> (docs.spring.io/spring-boot/reference/io/validation.html). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **`@Valid` on a `@RequestBody` works because the parameter is a *command

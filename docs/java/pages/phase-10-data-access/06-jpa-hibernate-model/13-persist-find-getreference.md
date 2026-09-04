@@ -14,7 +14,7 @@ sidebar_position: 20
 > and the Jakarta Persistence 3.2 specification §3.2 *EntityManager Interface* and §3.3.2
 > *Persisting an Entity Instance*, plus the `EntityManager` javadoc
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **The `EntityManager` API looks like a grab-bag of a dozen methods. It is not — it splits
 cleanly into two halves, and the Hibernate Introduction presents it that way in two

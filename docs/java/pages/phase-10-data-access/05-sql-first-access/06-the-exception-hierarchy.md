@@ -11,7 +11,7 @@ sidebar_position: 13
 > ([docs.spring.io/spring-framework/reference/data-access/dao.html](https://docs.spring.io/spring-framework/reference/data-access/dao.html))
 > and the `org.springframework.dao` package javadoc
 > ([docs.spring.io/.../dao/package-summary.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/dao/package-summary.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **Most descriptions of Spring JDBC lead with the removal of boilerplate. That is
 the smaller half. The larger half is that `SQLException` — one checked class

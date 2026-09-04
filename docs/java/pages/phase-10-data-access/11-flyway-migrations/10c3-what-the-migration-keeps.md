@@ -12,7 +12,7 @@ sidebar_position: 36
 > ([postgresql.org](https://www.postgresql.org/docs/18/explicit-locking.html))
 > and Spring Boot 4.1's Flyway auto-configuration
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[10c2](10c2-where-the-work-goes-instead.md) moved the loop into a one-shot job and left an obvious
 hole: a job is not reviewed, ordered, recorded and applied everywhere the way a migration is, so

@@ -12,7 +12,7 @@ sidebar_position: 5
 > ([codegen-gradle](https://www.jooq.org/doc/latest/manual/code-generation/codegen-gradle/))
 > and *Custom generator strategies*
 > ([codegen-generatorstrategy](https://www.jooq.org/doc/latest/manual/code-generation/codegen-generatorstrategy/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The generator has one job and about forty knobs, and two of them decide whether you get a
 usable API or a source tree nobody can navigate: which database objects it reads, and where the

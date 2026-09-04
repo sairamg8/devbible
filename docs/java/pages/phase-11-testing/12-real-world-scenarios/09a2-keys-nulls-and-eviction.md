@@ -6,7 +6,7 @@ sidebar_position: 41
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-01 against the **Spring Framework 7.0.8** reference *Cache Abstraction*,
+> Verified: 2026-09-01 against the **Spring Framework 7.0.9** reference *Cache Abstraction*,
 > read from the `v7.0.8` sources —
 > [`cache/annotations.adoc`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/integration/cache/annotations.adoc)
 > for default key generation, custom keys, `condition`/`unless`, `Optional` handling,
@@ -16,8 +16,8 @@ sidebar_position: 41
 > `v7.0.8` source of
 > [`ConcurrentMapCacheManager`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-context/src/main/java/org/springframework/cache/concurrent/ConcurrentMapCacheManager.java)
 > for the `allowNullValues` default.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output or timings.
 

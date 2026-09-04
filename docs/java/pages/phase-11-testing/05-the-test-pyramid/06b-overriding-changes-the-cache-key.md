@@ -13,8 +13,8 @@ sidebar_position: 12
 > → `@MockitoBean`*
 > ([annotation-mockitobean](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-mockitobean.html))
 > for the statement about qualifiers and separate contexts.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, Mockito 5.23.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, Mockito 5.23.0.
 > **No sandbox** — no suite was run and no timings appear on this page.
 
 **This is the most expensive line in Spring testing that nobody knows they are writing.

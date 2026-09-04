@@ -10,7 +10,7 @@ sidebar_position: 35
 > `@Property` Parameters*, *Generation Modes*, *Exhaustive Generation*, *Data-Driven
 > Properties* and the edge-cases material under *Random Value Generation*
 > ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no test run on this machine** — the generation modes and their
 > selection rules are quoted from the guide, never observed from a run. No seeds, no
 > timings, no sample counts from an actual execution.

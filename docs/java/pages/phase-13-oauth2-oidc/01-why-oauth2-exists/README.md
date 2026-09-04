@@ -11,7 +11,7 @@ sidebar_position: 0
 > (§2.1, §2.1.1, §2.1.2, §2.2.1, §2.4), RFC 8414, RFC 9068 and OpenID Connect Core 1.0 §2 —
 > at [datatracker.ietf.org](https://datatracker.ietf.org/) and
 > [openid.net/specs](https://openid.net/specs/openid-connect-core-1_0.html).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — these pages carry Java source, config and specification-quoted
 > definitions, never a fabricated HTTP transcript or a real token.
 

@@ -12,7 +12,7 @@ sidebar_position: 28
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Jackson annotation sources for `@JsonManagedReference` and `@JsonBackReference`
 > ([github.com/FasterXML/jackson-annotations](https://github.com/FasterXML/jackson-annotations/blob/2.x/src/main/java/com/fasterxml/jackson/annotation/JsonManagedReference.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Return an entity from a controller and the serialiser walks the object graph. A
 bidirectional association is a cycle in that graph, so the walk does not terminate — the

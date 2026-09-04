@@ -14,7 +14,7 @@ sidebar_position: 16
 > and the `Cacheable`, `Cache`, `SimpleCacheErrorHandler` and `TransactionAwareCacheDecorator`
 > javadoc
 > ([docs.spring.io/spring-framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/interceptor/SimpleCacheErrorHandler.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
 
 **A `ConcurrentHashMap` cache clears in constant time, locks per bucket and cannot fail. Replace
 it with Redis and all three stop being true: a bulk evict is an O(N) scan of the whole server's

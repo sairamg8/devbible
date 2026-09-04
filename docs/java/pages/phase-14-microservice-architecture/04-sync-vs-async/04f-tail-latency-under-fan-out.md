@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)).
 > 🔴 **Arithmetic and quoted figures only.** The percentages below are either computed from a
 > stated assumption or reproduced from the paper with attribution. Nothing was measured here.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[07 · Chains, fan-out and composition](03c-chains-fan-out-and-composition.md) says a
 fan-out's latency is the slowest branch, which sounds like good news. It is, until you notice

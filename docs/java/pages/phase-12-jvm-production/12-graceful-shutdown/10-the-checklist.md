@@ -13,7 +13,7 @@ sidebar_position: 16
 > the **Kubernetes** *Pod Lifecycle* and *Container Lifecycle Hooks* documentation
 > ([kubernetes.io](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/)), the
 > **Spring for Apache Kafka** and **Spring AMQP** container references, the **HikariCP** sources,
-> and the **JDK 25** API documentation. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> and the **JDK 25** API documentation. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Somebody says "we drop a few requests on every deploy". This is the order in which to change
 things about that sentence. The ordering is not arbitrary: each step either makes the next one

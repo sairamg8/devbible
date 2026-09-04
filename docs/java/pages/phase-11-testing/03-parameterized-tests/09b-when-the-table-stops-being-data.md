@@ -11,7 +11,7 @@ sidebar_position: 32
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
 > The documented behaviour quoted here is JUnit's; the design argument built on it is a review
 > standard, not a rule the framework enforces.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[09](09-when-not-to-parameterize.md) covered the two cases where a column openly steers the
 method body. These two are subtler: the table still looks like a table, but one has acquired a

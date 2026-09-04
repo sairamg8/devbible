@@ -14,7 +14,7 @@ sidebar_position: 18
 > the Spring Framework 7.0 reference *Data Access → JDBC Core Classes*, and the JDK
 > 25 `java.sql.Statement` API
 > ([docs.oracle.com/en/java/javase/25/docs/api/java.sql/](https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/java/sql/Statement.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18, pgJDBC 42.7.x.
 
 **`JdbcClient`'s javadoc says outright that batch inserts and stored procedure calls
 "may use those lower-level template classes directly, or alternatively

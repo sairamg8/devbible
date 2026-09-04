@@ -15,7 +15,7 @@ sidebar_position: 52
 > ([.../transaction/annotation/Propagation.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html)).
 > The outbox argument below is reasoning about failure windows, not a measured
 > claim; nothing here is a benchmark.
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, PostgreSQL 18.
 
 **`AFTER_COMMIT` guarantees the listener will not run if the transaction failed.
 It guarantees nothing about the listener running if the transaction succeeded.

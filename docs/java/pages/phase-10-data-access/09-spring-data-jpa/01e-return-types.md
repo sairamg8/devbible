@@ -11,7 +11,7 @@ sidebar_position: 5
 > ([query-return-types-reference.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-return-types-reference.html))
 > and "Defining Query Methods"
 > ([query-methods-details.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
 
 **Every query method has two halves: the name or annotation that decides the
 `where` clause, and the return type that decides what happens to the result. The

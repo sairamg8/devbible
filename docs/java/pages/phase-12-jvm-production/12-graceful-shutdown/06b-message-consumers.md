@@ -19,7 +19,7 @@ sidebar_position: 11
 > and the **Spring Boot 4.1** reference · *Graceful Shutdown*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html)).
 > 🔴 **No sandbox.** No broker was run and no container was stopped. Every default and every
-> quoted description is from the reference. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> quoted description is from the reference. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything before this page has been about not dropping work. A message consumer cannot drop
 work — the broker still has it. What a message consumer does instead, when it stops badly, is

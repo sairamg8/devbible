@@ -12,7 +12,7 @@ sidebar_position: 25
 > Execution" ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/testing.html));
 > Martin Fowler, *Microservice Prerequisites*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePrerequisites.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** —
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** —
 > no build durations on this page were measured.
 
 **"The build takes too long" is a genuine constraint, and it is also the one where the gap

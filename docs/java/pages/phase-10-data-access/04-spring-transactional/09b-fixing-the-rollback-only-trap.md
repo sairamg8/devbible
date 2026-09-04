@@ -15,7 +15,7 @@ sidebar_position: 25
 > ([.../transaction/annotation/Propagation.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html))
 > and the PostgreSQL 18 manual *Transaction Isolation*
 > ([postgresql.org/docs/18/transaction-iso.html](https://www.postgresql.org/docs/18/transaction-iso.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 9](09-marked-rollback-only.md) ended with the diagnosis: the exception is
 not the bug, the `catch` is. This chunk is what to do about it. There are three

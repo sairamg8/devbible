@@ -8,10 +8,10 @@ sidebar_position: 1
 
 > Verified: 2026-08-31 against the **JUnit 5 / Jupiter 6.0.3** user guide
 > ([docs.junit.org/6.0.3](https://docs.junit.org/6.0.3/user-guide/)) for test-instance
-> lifecycle and `@BeforeEach` semantics, and the **Spring Framework 7.0.8** testing
+> lifecycle and `@BeforeEach` semantics, and the **Spring Framework 7.0.9** testing
 > reference for what a test class inherits from a context.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — every page in this topic carries
 > Java source and documented behaviour, never console output from a suite.
 

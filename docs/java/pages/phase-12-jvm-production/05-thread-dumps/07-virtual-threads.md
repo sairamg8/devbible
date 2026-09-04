@@ -13,7 +13,7 @@ sidebar_position: 12
 > and **JEP 444 "Virtual Threads"**, from which the stack-chunk and GC-root statements are quoted
 > ([openjdk.org](https://openjdk.org/jeps/444)).
 > 🔴 **No sandbox** — no dump below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything in this topic so far assumed platform threads: one Java thread, one OS thread, one
 block in the dump. Virtual threads break that assumption and they break the tooling with it. A

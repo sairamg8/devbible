@@ -9,7 +9,7 @@ sidebar_position: 42
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
 > Anticorruption Layer; Martin Fowler *Enterprise Service Bus*
 > ([martinfowler.com](https://martinfowler.com/articles/enterpriseServiceBus.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **The most common architectural mistake when implementing an Anticorruption Layer is placing it into a centralized "integration service" or shared middleware proxy rather than inside the downstream bounded context. A translation layer is not shared infrastructure; it represents a specific downstream domain's unique conceptual interpretation of upstream facts. Moving translation into a standalone service creates an operational bottleneck, introduces an orphan repository with no domain owner, and adds unnecessary network hops and failure modes. An ACL belongs strictly inside the downstream deployable, owned by the team whose model is being protected. Furthermore, an ACL is not an eternal fixture: the moment an upstream provider modernizes its API to expose an Open Host Service or published language matching your domain needs, the ACL becomes technical debt and should be dismantled.**
 

@@ -15,7 +15,7 @@ sidebar_position: 23
 > ([docs.spring.io/spring-boot/appendix/application-properties/](https://docs.spring.io/spring-boot/appendix/application-properties/index.html))
 > and the Boot 4.1 test-slice appendix for `@DataMongoTest` and `@DataRedisTest`
 > ([docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html](https://docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, Spring Data Redis 4.1.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, Spring Data Redis 4.1.0.
 
 **The previous chunk was about the persistence context. This one is about everything else
 you stop having: a query language, a schema, constraints, migrations, and a planner. Some

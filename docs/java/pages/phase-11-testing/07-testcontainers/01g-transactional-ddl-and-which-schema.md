@@ -16,7 +16,7 @@ sidebar_position: 8
 > [`HibernateDefaultDdlAutoProvider.java`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-hibernate/src/main/java/org/springframework/boot/hibernate/autoconfigure/HibernateDefaultDdlAutoProvider.java),
 > plus the two `SchemaManagementProvider` implementations that exist at that tag
 > (`FlywaySchemaManagementProvider`, `LiquibaseSchemaManagementProvider`).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Testcontainers 2.0.5,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Testcontainers 2.0.5,
 > **H2 2.4.240**, PostgreSQL JDBC 42.7.11, Flyway 12.4.0, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker, no PostgreSQL and no sandbox on this machine.** Nothing here is a query log, a
 > timing or a test run.

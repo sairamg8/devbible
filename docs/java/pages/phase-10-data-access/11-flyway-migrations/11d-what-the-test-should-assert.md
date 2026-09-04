@@ -12,7 +12,7 @@ sidebar_position: 41
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway)),
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **The database is real ([11b](11b-wiring-the-container.md)), the slice is not silently skipping the
 migrations ([11c](11c-the-slice-that-skips-your-migrations.md)), and now the test needs a body. Most

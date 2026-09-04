@@ -11,8 +11,8 @@ sidebar_position: 6
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/mockmvc/hamcrest.html))
 > — read as asciidoc source at tag `v7.0.9`, with every listing below taken from those pages;
 > plus the `spring-test` 7.0.9 javadoc for `MockMvc`, `ResultActions` and `MvcResult`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7, Hamcrest 3.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7, Hamcrest 3.0.
 > **No sandbox** — this page carries Java source, never a fabricated test run.
 
 **[03](03-mockmvctester.md) covers the AssertJ front end and the reason a Boot 4 codebase will

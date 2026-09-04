@@ -17,7 +17,7 @@ sidebar_position: 6
 > ([migration guide](https://docs.spring.io/spring-security/reference/6.5/migration-7/oauth2.html),
 > [JwtValidators javadoc](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/JwtValidators.html),
 > [rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **This is a real behaviour change between Spring Security 6 and 7, it produces a 401 on the
 day you upgrade against an authorization server that did not change, and the error message

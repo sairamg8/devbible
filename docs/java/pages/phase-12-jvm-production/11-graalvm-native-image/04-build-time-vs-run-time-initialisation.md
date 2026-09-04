@@ -11,7 +11,7 @@ sidebar_position: 7
 > "Native Image Basics" ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/basics/)),
 > "Native Image Compatibility Guide" ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/metadata/Compatibility/))
 > and "Build Options" ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — the two worked examples below are the reference manual's own, and their described outcomes are quoted, not reproduced.
 
 **Java initialises a class the first time it is used. Native Image can instead initialise it while the binary is being built, run its static initialiser on the JVM hosting the build, and store the resulting static fields inside the executable. That is a large, real performance win and it is the mechanism behind a chunk of native image's start-up advantage. It is also the mechanism by which build-machine state — a timestamp, a hostname, an environment variable, a `Random` seed, a file that existed on the CI worker — becomes a permanent property of your artefact. This page is the mechanism; [04b](04b-the-secret-baked-into-the-image.md) is the security failure that follows from it.**

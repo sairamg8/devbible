@@ -13,8 +13,8 @@ sidebar_position: 18
 > the [Maven quick start](https://pitest.org/quickstart/maven/) entries for `mutators`,
 > `targetClasses` and `features`, and the `Feature.named("funmodifiablecollection")` declaration in
 > pitest 1.30.0's `build/intercept/defensive` package. `CrudRepository.save`'s signature from the
-> **Spring Data Commons** javadoc as managed by Spring Boot 4.1.0.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> **Spring Data Commons** javadoc as managed by Spring Boot 4.1.1.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no build on this machine.** Operator behaviour is quoted from pitest's
 > documentation and read from its published source; the Java and XML on this page are illustrative

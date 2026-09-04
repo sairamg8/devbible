@@ -10,7 +10,7 @@ sidebar_position: 36
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
 > Every item below links to the chunk in this topic that argues it and names its source; this page
 > adds no new claims about JUnit's behaviour.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A pull request containing a `@ParameterizedTest` gets reviewed the same way as any other test —
 someone reads the assertion, decides it looks reasonable, and approves. That misses both of the

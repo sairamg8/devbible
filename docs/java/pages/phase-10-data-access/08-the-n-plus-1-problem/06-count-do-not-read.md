@@ -11,7 +11,7 @@ sidebar_position: 12
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the `org.hibernate.stat.Statistics` interface in the Hibernate 7.4 source
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/stat/Statistics.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **N+1 is defined by a number, so the diagnostic should produce a number.
 Hibernate already keeps that number — and it keeps a pair of counters whose

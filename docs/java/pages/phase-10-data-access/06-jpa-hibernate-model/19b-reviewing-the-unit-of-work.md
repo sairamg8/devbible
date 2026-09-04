@@ -15,7 +15,7 @@ sidebar_position: 42
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/data/sql.html)) and the
 > Spring Data JPA 4.1 javadocs
 > ([docs.spring.io/spring-data/jpa/docs/current/api/](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/Modifying.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1,
 > Spring Data JPA 4.1.0.
 
 **[19 · The checklist](19-the-checklist.md) reviews a class. This one reviews a method — and

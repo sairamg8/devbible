@@ -8,7 +8,7 @@ sidebar_position: 54
 
 > Verified: 2026-09-04 against Martin Fowler, *StranglerFigApplication* ([martinfowler.com](https://martinfowler.com/bliki/StranglerFigApplication.html));
 > Sam Newman, *Monolith to Microservices* (O'Reilly), Chapter 3: Splitting the Monolith.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Big-bang rewrites of enterprise monoliths almost universally fail because they freeze business feature delivery, underestimate accumulated legacy edge cases, and attempt to switch 100% of production traffic in a single catastrophic release. Martin Fowler's Strangler Fig pattern replaces the big-bang rewrite with an incremental migration inspired by Australian strangler fig vines, which seed in the canopy of a host tree, grow aerial roots downward, and gradually envelop and replace the host tree over years. In software architecture, a strangler migration places an intercepting API gateway in front of the monolith, extracts bounded capabilities into standalone microservices one at a time, redirects traffic route-by-route, and systematically deprecates legacy paths until the monolith is completely eliminated.**
 

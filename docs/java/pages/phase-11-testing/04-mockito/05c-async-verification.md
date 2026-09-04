@@ -11,7 +11,7 @@ sidebar_position: 20
 > [`Mockito`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/Mockito.java)
 > and the `timeout(long)` and `after(long)` method javadocs on the same class, including the
 > *"timeout() vs. after()"* comparison.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3, Awaitility 4.3.0. **No sandbox** — this page carries
 > Java source, never a fabricated test run.
 

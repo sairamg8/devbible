@@ -11,7 +11,7 @@ sidebar_position: 3
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Hibernate ORM 7.4 user guide §31.2 *Logging*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Most bugs announce themselves. This one has no exception, no wrong answer, no
 slow query, no failing test and no suspicious line of code. It is visible in

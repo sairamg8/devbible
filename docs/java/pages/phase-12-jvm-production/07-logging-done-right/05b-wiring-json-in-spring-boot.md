@@ -17,7 +17,7 @@ sidebar_position: 10
 > `StructuredLogFormatterFactory`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/v4.1.0)).
 > 🔴 **No sandbox.** No output on this page is captured; field lists are read from source.
-> JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Structured logging in Boot is one property per destination. There is no encoder dependency to
 add, no `logback-spring.xml` to write, and — unlike every third-party JSON encoder — no Jackson on

@@ -19,7 +19,7 @@ sidebar_position: 23
 > and [`gc/z/z_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/z/z_globals.hpp)
 > at tag `jdk-25+36`, where `ZUncommitDelay` is `5 * 60` and **`ZFragmentationLimit` is 5.0,
 > which contradicts the man page's stated 25**.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Two of ZGC's most consequential behaviours are governed by flags people set for unrelated
 reasons. Uncommitting unused memory — the feature that makes ZGC a good citizen in a

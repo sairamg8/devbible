@@ -16,7 +16,7 @@ sidebar_position: 9
 > (projectreactor.io/docs/core/release/reference/debugging.html and
 > .../testing.html) — plus the Spring Framework reference on `WebTestClient`
 > and the Spring Boot 4.0 migration guide's replacement of `@MockBean` with
-> `@MockitoBean`. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `@MockitoBean`. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The stack trace is the single largest day-to-day cost of the reactive model,
 and it is not a tooling gap that will be fixed — it is inherent. A stack

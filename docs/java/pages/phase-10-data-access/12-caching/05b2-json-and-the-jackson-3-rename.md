@@ -14,7 +14,7 @@ sidebar_position: 13
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-cache.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-cache.html)),
 > and Jackson 3's `tools.jackson.databind.jsontype.BasicPolymorphicTypeValidator`
 > ([github.com/FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind/blob/3.x/src/main/java/tools/jackson/databind/jsontype/BasicPolymorphicTypeValidator.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1, Redis 8.
 
 **JSON is the right default for a Redis cache, and getting to it on Boot 4 is not a
 find-and-replace. Spring Data Redis 4.0 renamed both JSON serializers for Jackson 3, dropped the

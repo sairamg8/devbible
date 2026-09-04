@@ -11,7 +11,7 @@ sidebar_position: 13
 > `RestClientResponseException`
 > (docs.spring.io/spring-framework/docs/current/javadoc-api/), and RFC 9457
 > *Problem Details for HTTP APIs* as implemented by Spring's `ProblemDetail`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **When a dependency fails, your service has to answer a question the dependency
 cannot: what does this mean *for my caller*? A 500 from the inventory service is

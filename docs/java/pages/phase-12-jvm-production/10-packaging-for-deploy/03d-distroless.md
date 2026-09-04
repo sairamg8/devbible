@@ -15,7 +15,7 @@ sidebar_position: 12
 > ([kubernetes.io](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)).
 > 🔴 **No sandbox** — no image was pulled or built; the two size figures below are quoted from
 > the distroless README, and the image contents are read from the project's own build files
-> rather than from a running container. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> rather than from a running container. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03b](03b-alpine-and-musl.md) and [03c](03c-musl-runtime-differences.md) showed that Alpine
 buys image size with a change of C library. Distroless buys most of the security benefit without

@@ -11,7 +11,7 @@ sidebar_position: 0
 > §2.4); and the Spring Security 7.x reference (OAuth2 Client) — at
 > [datatracker.ietf.org](https://datatracker.ietf.org/) and
 > [docs.spring.io/spring-security/reference](https://docs.spring.io/spring-security/reference/).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — Java source, config and specification-quoted definitions only.
 
 **Client credentials looks like the simplest grant in OAuth2 and it is, but "simple" is not

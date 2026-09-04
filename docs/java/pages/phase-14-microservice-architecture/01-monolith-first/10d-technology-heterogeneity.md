@@ -11,7 +11,7 @@ sidebar_position: 24
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); Martin Fowler,
 > *Microservice Premium*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Modulith
 > 2.1.1. **No sandbox.**
 
 **Richardson's fourth force has two clauses and they behave completely differently. The

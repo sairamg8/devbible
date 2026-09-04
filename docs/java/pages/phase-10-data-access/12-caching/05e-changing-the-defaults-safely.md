@@ -14,7 +14,7 @@ sidebar_position: 18
 > ([docs.spring.io/spring-data/redis](https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/cache/RedisCacheManager.RedisCacheManagerBuilder.html))
 > and the Spring Framework 7.0 reference *Configuring the Cache Storage*
 > ([docs.spring.io/spring-framework/reference/integration/cache/store-configuration.html](https://docs.spring.io/spring-framework/reference/integration/cache/store-configuration.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8.
 
 **Every previous chunk in this section ended with "so set it explicitly", and this is where that
 goes wrong. Boot's cache auto-configuration is a chain of conditionals, and the natural place to

@@ -16,7 +16,7 @@ sidebar_position: 39
 > [`gc/z/zArguments.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/z/zArguments.cpp),
 > which contain the identical `#ifdef COMPILER2` block setting `UseCountedLoopSafepoints` to
 > `true` and `LoopStripMiningIter` to `1000` when those flags are still at their defaults.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[10](10-safepoints.md) established that time-to-safepoint is real, unbounded and invisible in
 the GC log. This page is the classic cause, and it contains the most collector-dependent gotcha in

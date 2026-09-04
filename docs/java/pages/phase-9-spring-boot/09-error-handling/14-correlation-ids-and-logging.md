@@ -15,7 +15,7 @@ sidebar_position: 14
 > `ServerHttpObservationFilter`, and the note that exceptions handled by
 > `@ExceptionHandler` and `ProblemDetail` support are *not* recorded as errors
 > by the observation). `OncePerRequestFilter` per the Spring Framework javadoc.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Hiding detail from clients is only defensible if the detail still exists
 somewhere joinable. A correlation id is that join: the client receives an opaque

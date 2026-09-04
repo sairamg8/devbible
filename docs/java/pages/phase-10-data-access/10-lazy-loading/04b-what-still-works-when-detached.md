@@ -17,7 +17,7 @@ sidebar_position: 11
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/JpaComplianceSettings.html)),
 > and the `7.4` source of `org.hibernate.proxy.AbstractLazyInitializer`
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/proxy/AbstractLazyInitializer.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **"Detached" gets used as a synonym for "broken", and that is wrong in a way that costs
 people whole afternoons and a fetch join they did not need. Detaching clears one field on one

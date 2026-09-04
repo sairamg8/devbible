@@ -12,7 +12,7 @@ sidebar_position: 33
 > and the Google SRE book, "Addressing Cascading Failures"
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)).
 > 🔴 **No sandbox.** No timing or load figure here was measured; the sources' own examples are
-> attributed. Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> attributed. Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 > 🔴 **Phase 16 owns Resilience4j.** This chunk covers the *mechanisms and why they exist*; the
 > library that implements them is [Phase 16 ·
 > Resilience and operations](../../phase-16-resilience-operations/README.md).

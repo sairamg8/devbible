@@ -13,7 +13,7 @@ sidebar_position: 44
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway))
 > and PostgreSQL 18's *Explicit Locking*
 > ([postgresql.org](https://www.postgresql.org/docs/18/explicit-locking.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[12](12-the-checklist.md) reviewed the file and the statement. Everything left is outside the diff
 entirely: the version of your application that is still running when the migration lands, the nine

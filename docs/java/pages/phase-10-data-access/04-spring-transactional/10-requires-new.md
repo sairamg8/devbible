@@ -13,7 +13,7 @@ sidebar_position: 26
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html)),
 > and `JpaTransactionManager.doSuspend` / `doResume` in the Spring Framework source
 > ([github.com/spring-projects/spring-framework/.../orm/jpa/JpaTransactionManager.java](https://github.com/spring-projects/spring-framework/blob/main/spring-orm/src/main/java/org/springframework/orm/jpa/JpaTransactionManager.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, HikariCP 7.0.2,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, HikariCP 7.0.2,
 > PostgreSQL 18.
 
 **`REQUIRES_NEW` is the propagation that does what people already believed

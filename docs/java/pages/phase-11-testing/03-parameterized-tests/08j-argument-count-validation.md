@@ -12,7 +12,7 @@ sidebar_position: 25
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ArgumentCountValidationMode.html))
 > and `@ParameterizedTest.argumentCountValidation`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedTest.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A parameterized test is the only construct in Java where a source and a signature agree by
 convention rather than by type. Nothing checks that a four-column table feeds a four-parameter

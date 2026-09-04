@@ -13,7 +13,7 @@ sidebar_position: 4
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/main/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java)),
 > and the Spring Boot 4.1 reference *Data → SQL Databases → Using `JdbcTemplate`*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **`JdbcTemplate` pushes three settings onto every statement it creates — fetch size,
 max rows and query timeout — and all three default to `-1`, meaning "do not tell the

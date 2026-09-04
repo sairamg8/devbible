@@ -19,7 +19,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** There is no JVM running behind these pages. No GC log line, pause figure,
 > heap number or allocation rate here is a measurement — every quoted string is from documentation
 > or from the HotSpot source, and attributed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[Topic 01](../01-memory-layout/README.md) drew the map of where the bytes are. This topic is
 about the process that moves them, and it makes one argument throughout: the collector is a

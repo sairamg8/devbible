@@ -13,7 +13,7 @@ sidebar_position: 10
 > ([query-keywords-reference.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-keywords-reference.html)),
 > plus the PostgreSQL 18 manual, "LIMIT and OFFSET"
 > ([queries-limit.html](https://www.postgresql.org/docs/18/queries-limit.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, PostgreSQL 18.
 
 **A result limit belongs to the subject of the method name, not the predicate:
 `findTop10By…` is a `find` with a bound on it. Spring Data gives you two ways to

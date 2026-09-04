@@ -13,7 +13,7 @@ sidebar_position: 55
 > ([.../testing/annotations/integration-spring/annotation-mockitobean.html](https://docs.spring.io/spring-framework/reference/testing/annotations/integration-spring/annotation-mockitobean.html))
 > and the reference *Integration → Task execution and scheduling*
 > ([.../integration/scheduling.html](https://docs.spring.io/spring-framework/reference/integration/scheduling.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **The flush problem is the famous one, so it gets fixed. Two quieter ones do not:
 a test body that ran on a different thread from the transaction, and a repository

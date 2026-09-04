@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html));
 > RFC 9068 §6 (Privacy Considerations)
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9068.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Almost every OAuth2 bug that reaches production is a token in the wrong place. A refresh
 token that a resource server can see. An ID token used as an API credential. An access

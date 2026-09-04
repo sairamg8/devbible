@@ -15,7 +15,7 @@ sidebar_position: 17
 > ([EnabledForJreRange](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/condition/EnabledForJreRange.html))
 > and `JRE`
 > ([JRE](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/condition/JRE.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Everything in `org.junit.jupiter.api.condition` is a declarative front-end to the same
 `ExecutionCondition` API that powers `@Disabled` ([07](07-disabling-and-conditions.md)).

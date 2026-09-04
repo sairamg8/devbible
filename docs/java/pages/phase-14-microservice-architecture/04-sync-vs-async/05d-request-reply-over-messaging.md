@@ -13,7 +13,7 @@ sidebar_position: 21
 > Chris Richardson, "Dark matter force: minimize runtime coupling"
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
 > 🔴 **No sandbox, and no broker mechanics** — phase 15 owns those. Version spine: JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the chunk that stops a team from declaring victory too early. Having adopted a
 message broker, it is natural to route existing request/reply calls over it — the client sends

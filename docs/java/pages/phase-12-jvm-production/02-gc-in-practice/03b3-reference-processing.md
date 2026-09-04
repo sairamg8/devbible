@@ -18,7 +18,7 @@ sidebar_position: 11
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and **JEP 421 · Deprecate Finalization for Removal**
 > ([openjdk.org/jeps/421](https://openjdk.org/jeps/421)) as cited by the tuning guide.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The Post Evacuate phase of a G1 pause is mostly reference processing, and its cost is set
 by how many `Reference` objects the application keeps alive. Almost nobody writes

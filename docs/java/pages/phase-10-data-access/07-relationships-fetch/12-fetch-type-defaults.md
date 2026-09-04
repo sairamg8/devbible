@@ -13,7 +13,7 @@ sidebar_position: 21
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Hibernate ORM 7.4 *Introduction* §3.16–3.17 and §5.6
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Four annotations, two defaults, and the split is by multiplicity rather than by
 sense. Singular associations — `@ManyToOne` and `@OneToOne` — default to `EAGER`.

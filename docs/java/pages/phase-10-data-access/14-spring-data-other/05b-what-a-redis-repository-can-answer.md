@@ -11,7 +11,7 @@ sidebar_position: 15
 > ([docs.spring.io/spring-data/redis/reference/redis/redis-repositories/indexes.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/indexes.html))
 > and *Queries and Query Methods*
 > ([…/redis-repositories/queries.html](https://docs.spring.io/spring-data/redis/reference/redis/redis-repositories/queries.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0,
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0,
 > Lettuce 7.5.2, Redis 8.
 
 **The derived-query parser is shared code: `findByFirstnameAndLastname` is parsed by the

@@ -10,11 +10,11 @@ sidebar_position: 8
 > source of every quoted sentence and code example below
 > ([slf4j.org](https://www.slf4j.org/manual.html)), the **Logback manual, "Layouts"**, for the
 > `%kvp` and `%maskedKvp` conversion words
-> ([logback.qos.ch](https://logback.qos.ch/manual/layouts.html)), and the **Spring Boot 4.1.0
+> ([logback.qos.ch](https://logback.qos.ch/manual/layouts.html)), and the **Spring Boot 4.1.1
 > source** for `ElasticCommonSchemaStructuredLogFormatter`, which reads
 > `ILoggingEvent::getKeyValuePairs`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **The classical API can only express a log event as a sentence with values interpolated into it.
 The fluent API, added in SLF4J 2.0.0, lets you build the event piece by piece and attach values as

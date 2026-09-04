@@ -14,7 +14,7 @@ sidebar_position: 16
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/converter/ArgumentConversionException.html))
 > pages, and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`@CsvSource({ "PT3S, 3" })` feeding `void test(Duration timeout, int seconds)` works, and
 nothing in the annotation says how. Three mechanisms are stacked behind that, and they are

@@ -13,8 +13,8 @@ sidebar_position: 32
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)).
 > 🔴 **No sandbox.** The multiplication figures below are **arithmetic from the sources**
 > (243 = 3⁵ in Brooker's example, 64 = 4³ in the SRE book's) and are reproduced with
-> attribution. Nothing was measured here. Version spine: JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8.
+> attribution. Nothing was measured here. Version spine: JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9.
 
 **Retrying is the most natural response to a failed call and the most reliably dangerous one at
 scale. The danger is not the extra request; it is that retries at independent layers *multiply*,

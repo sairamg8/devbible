@@ -17,7 +17,7 @@ sidebar_position: 8
 > and the **`java.lang.Runtime`** javadoc
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runtime.html)).
 > Arithmetic below is derived here and labelled; nothing was measured.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Almost every container-sizing model treats the heap ceiling as the one big number and the
 native side as a fixed overhead. That model is wrong in a specific and expensive way: the

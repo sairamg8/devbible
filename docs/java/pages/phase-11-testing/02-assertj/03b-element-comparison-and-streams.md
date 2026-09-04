@@ -13,7 +13,7 @@ sidebar_position: 7
 > (`AbstractIterableAssert.usingElementComparator`,
 > `usingRecursiveFieldByFieldElementComparator`, the deprecated
 > `usingFieldByFieldElementComparator`, `Assertions.assertThat(Stream)`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **`contains`, `containsExactly` and every other membership assertion ask "is this element
 in there?" — and "is" means whatever `equals` means for your element type. When `equals` is

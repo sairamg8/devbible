@@ -14,7 +14,7 @@ sidebar_position: 44
 > ([ResourceLock](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/parallel/ResourceLock.html))
 > and `@Isolated`
 > ([Isolated](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/parallel/Isolated.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[12c](12c-resource-locks.md) covers the case where you can name the resource and annotate the
 test. This is the two escapes: computing the locks at runtime when annotating every method

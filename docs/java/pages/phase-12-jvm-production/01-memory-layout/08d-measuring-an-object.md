@@ -13,7 +13,7 @@ sidebar_position: 34
 > heap dumps, specification assumptions, etc."* because it uses `Unsafe`, JVMTI and the
 > Serviceability Agent — and against the **JDK 25 `java` tool reference**
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html))
-> for the flags that change layout. JDK 25 · Spring Boot 4.1.0.
+> for the flags that change layout. JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — this page shows the API and describes the report's structure. It contains
 > **no captured JOL output and no measured byte counts**; every size discussed is arithmetic
 > from documented rules, shown as such.

@@ -15,7 +15,7 @@ sidebar_position: 19
 > "Packaging → AOT Cache"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/aot-cache.html),
 > documented at 4.1.x). 🔴 **No sandbox** — nothing was trained, assembled or run. JDK 25 · Spring
-> Boot 4.1.0 / Spring Framework 7.0.8.
+> Boot 4.1.0 / Spring Framework 7.0.9.
 
 **[05](05-class-data-sharing.md) ended with the JDK's own tool reference telling you to *"consider
 using the AOT cache"* instead of CDS, and Spring Boot saying *"we recommend using the AOT cache

@@ -18,7 +18,7 @@ sidebar_position: 0
 > ([sre.google](https://sre.google/workbook/alerting-on-slos/)).
 > 🔴 **No sandbox.** No latency, throughput, cardinality or memory figure on these pages is a
 > measurement. Every kilobyte estimate is Micrometer's own published one, quoted and attributed;
-> every alert expression is the Workbook's. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 ·
+> every alert expression is the Workbook's. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 ·
 > Micrometer 1.17.0.
 
 **Logging asks "what happened to this one request?" and tracing asks "where in the call graph did

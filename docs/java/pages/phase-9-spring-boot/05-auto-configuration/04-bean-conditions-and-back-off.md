@@ -13,7 +13,7 @@ sidebar_position: 4
 > Boot reference *Creating Your Own Auto-configuration · Condition Annotations*
 > (the warning restricting bean conditions to auto-configuration classes) and
 > *Using Spring Boot · Auto-configuration* (auto-configuration described as
-> non-invasive, with the `DataSource` back-off example). Spring Boot 4.1.0,
+> non-invasive, with the `DataSource` back-off example). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **"Define your own bean and Boot backs off" is the behaviour that makes the

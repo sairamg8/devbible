@@ -11,7 +11,7 @@ sidebar_position: 38
 > and the **JDK 25 `jcmd` tool reference and troubleshooting guide**
 > ([docs.oracle.com/en/java/javase/25/troubleshoot/](https://docs.oracle.com/en/java/javase/25/troubleshoot/)),
 > including the documented `VM.native_memory` subcommands and NMT overhead figures.
-> JDK 25 · Spring Boot 4.1.0.
+> JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — this page shows commands to run and describes what each reports. It
 > contains no captured output from any JVM.
 

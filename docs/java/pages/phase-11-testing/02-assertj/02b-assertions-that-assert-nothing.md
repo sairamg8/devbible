@@ -10,7 +10,7 @@ sidebar_position: 3
 > ([assertj.github.io/doc](https://assertj.github.io/doc/#assertj-core-incorrect-usage)) —
 > and the `assertj-core` 3.27.7 sources (`AbstractAssert.satisfies`,
 > `AbstractAssert.satisfiesAnyOf`, `AbstractAssert.isNotNull`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **A test that fails when it should is easy to spot. A test that *passes* when it should
 not is invisible by construction — it is green, it is in the coverage report, and it will

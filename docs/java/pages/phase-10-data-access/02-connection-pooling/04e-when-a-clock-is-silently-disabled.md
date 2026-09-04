@@ -10,7 +10,7 @@ sidebar_position: 13
 > (`HikariConfig.validateNumerics()`, read at tag `HikariCP-7.0.2`) and the
 > HikariCP 7.0.2 README
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1.
 
 **HikariCP checks its own configuration when the pool is built. When it finds a
 combination it cannot honour, it does not refuse to start — it **corrects the

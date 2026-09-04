@@ -12,7 +12,7 @@ sidebar_position: 35
 > ([Store](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.Store.html)),
 > `ExtensionContext.Store.CloseableResource`
 > ([CloseableResource](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.Store.CloseableResource.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **The `Store` is not just a place to put things — it is a place things get *closed*. Store an
 `AutoCloseable` in a method-level store and it closes after that test; store the same object

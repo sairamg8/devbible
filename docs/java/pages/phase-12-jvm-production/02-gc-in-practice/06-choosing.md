@@ -19,7 +19,7 @@ sidebar_position: 26
 > [g1-tuning](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-first-garbage-collector-tuning.html)),
 > and "The Z Garbage Collector"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/z-garbage-collector1.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Most collector changes are made for the wrong reason: someone read that ZGC has
 sub-millisecond pauses, or that G1 is "modern", or that Parallel is "old". None of those is a

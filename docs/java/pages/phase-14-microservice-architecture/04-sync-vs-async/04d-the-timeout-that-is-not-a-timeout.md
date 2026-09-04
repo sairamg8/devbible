@@ -14,7 +14,7 @@ sidebar_position: 15
 > Boot 4.1 properties appendix, and the Spring Framework 7.0.x reference "REST Clients"
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)).
 > 🔴 **No sandbox.** No timing, log or measurement appears here. Version spine: JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"We set a two-second timeout" is a sentence that means less than the person saying it
 thinks. Boot exposes two knobs, `connect-timeout` and `read-timeout`, and between them they

@@ -16,7 +16,7 @@ sidebar_position: 31
 > the layout comment and `klass_bits`, `src/hotspot/share/oops/arrayOop.hpp` for the array length
 > placement, and `globals.hpp` for the flag's `product` declaration
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/oops/markWord.hpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08](08-the-object-header.md) described the header as a mark word plus a class word. Compact
 object headers delete the second one: the class reference is folded into the mark word, and the

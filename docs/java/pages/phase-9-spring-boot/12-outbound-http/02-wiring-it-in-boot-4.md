@@ -10,9 +10,9 @@ sidebar_position: 2
 > (docs.spring.io/spring-boot/reference/io/rest-client.html), the Spring Boot 4.0
 > Migration Guide
 > (github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide)
-> and the Spring Boot 4.1.0 API for `org.springframework.boot.http.client`
+> and the Spring Boot 4.1.1 API for `org.springframework.boot.http.client`
 > (docs.spring.io/spring-boot/api/java/org/springframework/boot/http/client/package-summary.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Everything Boot gives an outbound client — the timeouts, the SSL bundle, the
 proxy, the metrics, the trace propagation — is applied to the auto-configured

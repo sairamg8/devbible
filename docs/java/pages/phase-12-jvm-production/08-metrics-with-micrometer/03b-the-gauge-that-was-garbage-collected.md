@@ -13,7 +13,7 @@ sidebar_position: 4
 > `ref.get()` is null and when the value function throws — the latter logged through a
 > `WarnThenDebugLogger`; and the **Micrometer 1.17 reference** — *Concepts · Gauges*
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/gauges.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **Every other meter type holds its own state. A gauge does not — it holds a reference to something
 in your application and reads it when the registry asks. That single design decision produces the

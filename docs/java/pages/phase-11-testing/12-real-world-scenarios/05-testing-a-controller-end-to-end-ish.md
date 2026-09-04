@@ -6,15 +6,15 @@ sidebar_position: 26
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0** javadoc for `@WebMvcTest`
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1** javadoc for `@WebMvcTest`
 > ([docs.spring.io](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/webmvc/test/autoconfigure/WebMvcTest.html))
 > — 🔴 package `org.springframework.boot.webmvc.test.autoconfigure`, **since 4.0.0**, not
-> the Boot 3 location — the **Spring Framework 7.0.8** `RestTestClient` reference
+> the Boot 3 location — the **Spring Framework 7.0.9** `RestTestClient` reference
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/resttestclient.html)),
 > and the `@MockitoBean` javadoc for `REPLACE_OR_CREATE`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/bean/override/mockito/MockitoBean.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — this page carries Java source and
 > documented behaviour, never console output.
 

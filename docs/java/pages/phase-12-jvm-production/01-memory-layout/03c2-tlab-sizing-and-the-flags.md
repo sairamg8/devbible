@@ -15,7 +15,7 @@ sidebar_position: 12
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/tlab_globals.hpp)).
 > 🔴 **Nine of the eleven flags below appear nowhere in the man page**; the source is the only
 > documentation for them.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03c](03c-tlabs-and-allocation.md) established that a thread allocates inside a private slice
 of eden by bumping a pointer. This page is how big that slice is, who decides, and what happens

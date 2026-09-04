@@ -16,7 +16,7 @@ sidebar_position: 15
 > and the **`java.lang.Thread.State` API documentation**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.State.html)).
 > 🔴 **No sandbox** — this page prescribes commands; it does not report their output.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the page to open during the incident. Everything above it is the reasoning; this is the
 order. It is arranged so each step eliminates as much as possible — CPU splits the problem in

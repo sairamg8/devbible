@@ -13,7 +13,7 @@ sidebar_position: 26
 > ([microservices.io](https://microservices.io/post/architecture/2023/09/19/assemblage-part-3-whats-a-service-architecture.html));
 > the Spring Modulith 2.1.1 reference, *Verifying Application Module Structure*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Every technique in this topic that produces good boundaries needs evidence: invariants

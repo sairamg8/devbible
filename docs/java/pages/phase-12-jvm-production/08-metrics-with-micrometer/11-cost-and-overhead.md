@@ -17,7 +17,7 @@ sidebar_position: 31
 > `management.metrics.enable.*` and `management.metrics.distribution.*` properties
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)).
 > 🔴 **No sandbox.** Every kilobyte figure on this page is Micrometer's own published estimate,
-> quoted as such; nothing here was measured. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> quoted as such; nothing here was measured. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **Every other page in this topic has told you what a metric is worth. This one tells you what it
 costs, and the reason it can is unusual: Micrometer publishes the memory formula for its most

@@ -17,7 +17,7 @@ sidebar_position: 13
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/)).
 > Collector *choice* is owned by **02 · GC in practice** *(not written yet)*; this page covers only
 > what the container makes ergonomics decide for you.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"G1 is the default collector" is true on the machines people benchmark on and not true in a
 small pod. HotSpot decides between G1 and Serial by asking whether it is running on a

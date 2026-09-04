@@ -15,7 +15,7 @@ sidebar_position: 10
 > `JwtAuthenticationProvider#authenticate`/`getJwt`, `JwtAuthenticationConverter#convert`,
 > `FactorGrantedAuthority` (`BEARER_AUTHORITY = "FACTOR_BEARER"`, `@since 7.0`)
 > ([github.com](https://github.com/spring-projects/spring-security)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Every 401 you will ever debug on a resource server happened at one of seven places, and
 they fail in ways that look identical from outside. Knowing the sequence — converter,

@@ -12,7 +12,7 @@ sidebar_position: 29
 > *Service Level Objectives* ([sre.google](https://sre.google/sre-book/service-level-objectives/)).
 > Every burn rate, window and percentage on this page is quoted from the Workbook's own tables and
 > the PromQL is the Workbook's. No alert was fired and no JVM was run for this page.
-> JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **[10](10-alerting-on-what-matters.md) settled *what* to page on: a symptom, expressed as a ratio
 of bad events to total events. This page is the *rule*. The Workbook walks through six attempts at

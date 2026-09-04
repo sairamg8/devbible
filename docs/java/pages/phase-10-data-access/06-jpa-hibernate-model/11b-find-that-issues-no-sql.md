@@ -13,7 +13,7 @@ sidebar_position: 18
 > ([docs.hibernate.org/orm/7.4/userguide/...](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Jakarta Persistence 3.2 specification §3.3.5 *Refreshing an Entity Instance*
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **"Hibernate caches entities so repeated reads are free" is half true and the wrong half
 to remember. The first-level cache exists to guarantee one instance per row; skipping a

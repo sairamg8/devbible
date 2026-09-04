@@ -11,7 +11,7 @@ sidebar_position: 31
 > ([projections.html](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html)),
 > and "Value Expressions"
 > ([jpa/value-expressions.html](https://docs.spring.io/spring-data/jpa/reference/jpa/value-expressions.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **[06](06-projections.md) established that one `@Value` demotes a projection from

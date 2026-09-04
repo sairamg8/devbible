@@ -17,7 +17,7 @@ sidebar_position: 28
 > ([g1-tuning](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-first-garbage-collector-tuning.html),
 > [g1](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-first-g1-garbage-collector1.html),
 > [factors-affecting](https://docs.oracle.com/en/java/javase/25/gctuning/factors-affecting-garbage-collection-performance.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Two things about unified logging change how an incident goes. The first is that its default
 decorators are unusable for correlation — a GC log stamped in seconds-since-start cannot be

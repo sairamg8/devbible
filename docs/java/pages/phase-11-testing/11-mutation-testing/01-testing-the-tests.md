@@ -15,8 +15,8 @@ sidebar_position: 1
 > [Maven quick start](https://pitest.org/quickstart/maven/) and the
 > [FAQ](https://pitest.org/faq/). Behaviour of statuses and scores read from pitest's source:
 > `DetectionStatus.java`, `MutationStatistics.java`, `PercentageCalculator.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7,
 > Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no build and no test runs on this machine.** Every page in this topic carries
 > Java source, POM and Gradle configuration, and documented or source-read behaviour —

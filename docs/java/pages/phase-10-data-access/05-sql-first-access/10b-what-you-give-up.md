@@ -13,7 +13,7 @@ sidebar_position: 21
 > ([docs.hibernate.org/orm/7.0/userguide/](https://docs.hibernate.org/orm/7.0/userguide/html_single/Hibernate_User_Guide.html))
 > and the Spring Framework 7.0 reference *Data Access → JDBC Core Classes*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Framework 7.0.8, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Framework 7.0.9, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **A page arguing for SQL-first access owes you the other column of the ledger.
 Everything a persistence context does is work, and if you are not using one you are

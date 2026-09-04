@@ -15,7 +15,7 @@ sidebar_position: 27
 > (`getMappedBufferPool()` returning the pool named `"mapped"`, `getSyncMappedBufferPool()`
 > returning `"mapped - 'non-volatile memory'"`, and the absence of any call to
 > `Bits.reserveMemory`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A `MappedByteBuffer` looks like a direct buffer and is documented as one — *"Mapped byte buffers
 otherwise behave no differently than ordinary direct byte buffers"* — but its memory comes from a

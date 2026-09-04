@@ -15,7 +15,7 @@ sidebar_position: 24
 > ([docs.spring.io/spring-boot/reference/actuator/metrics.html](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)),
 > and the PostgreSQL 18 documentation for `pg_stat_activity`
 > ([postgresql.org/docs/18/monitoring-stats.html](https://www.postgresql.org/docs/18/monitoring-stats.html)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[Chunk 5](05-connection-is-not-available.md) read the pool's four numbers out of
 an exception, after something had already failed. This chunk is the same four

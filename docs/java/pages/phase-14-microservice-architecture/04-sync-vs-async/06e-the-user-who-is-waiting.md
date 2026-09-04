@@ -10,7 +10,7 @@ sidebar_position: 29
 > (`201 Created`) ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html)), and Chris
 > Richardson, "Dark matter force: minimize runtime coupling"
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-runtime-coupling.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"A user is waiting for the result" is the objection that ends most conversations about making
 an interaction asynchronous, and it is the one worth taking apart most carefully — because it is

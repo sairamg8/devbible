@@ -12,7 +12,7 @@ sidebar_position: 5
 > maker for individual mocks"*) and 54 (*"Mocking/spying without specifying class"*) of
 > [`Mockito`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/Mockito.java),
 > and the `MockSettings#mockMaker(String)` / `Mock#mockMaker()` declarations.
-> JDK 25 · Spring Boot 4.1.0 → Mockito 5.23.0, JUnit Jupiter 6.0.3. **No sandbox** — this page
+> JDK 25 · Spring Boot 4.1.1 → Mockito 5.23.0, JUnit Jupiter 6.0.3. **No sandbox** — this page
 > carries Java and build configuration, never a fabricated test run.
 
 **[02b · The inline mock maker](02b-the-inline-mock-maker.md) is the default and the reason

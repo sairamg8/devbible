@@ -11,7 +11,7 @@ sidebar_position: 14
 > ([microservices.io](https://microservices.io/patterns/microservices.html)); Martin Fowler,
 > *Microservice Prerequisites*
 > ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePrerequisites.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **A monolith has exactly one deploy artefact, so "which order do we release these in?" is
 not a question anybody can ask. Splitting creates the question, and it has to be answered

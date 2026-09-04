@@ -14,7 +14,7 @@ sidebar_position: 36
 > for `UseGCOverheadLimit`, `GCTimeLimit`, `GCHeapFreeLimit` and `GCOverheadLimitThreshold`, and
 > [`gc/shared/gcOverheadChecker.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcOverheadChecker.cpp)
 > for the exact conditions under which the limit fires.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A heap that is nearly full of *live* objects does not fail cleanly. The collector runs, reclaims
 almost nothing, the application allocates again within milliseconds, and the collector runs again

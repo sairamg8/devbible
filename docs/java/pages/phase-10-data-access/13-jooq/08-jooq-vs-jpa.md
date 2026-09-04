@@ -10,7 +10,7 @@ sidebar_position: 26
 > the Hibernate 7.4 user guide, as cited in this phase's JPA topics. **No measurements** — this
 > bible runs no sandbox, so every claim here is about expressiveness, failure modes and
 > maintenance, never about speed.
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18, Hibernate 7.4.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18, Hibernate 7.4.
 
 **The comparison is usually framed as "ORM versus SQL", which explains nothing and settles no
 argument. The useful framing is: what does the library think you are working on? JPA thinks you

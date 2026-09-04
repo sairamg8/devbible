@@ -14,7 +14,7 @@ sidebar_position: 61
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)),
 > and the Spring Boot 4.1 properties appendix for `spring.jpa.open-in-view`
 > ([docs.spring.io/spring-boot/appendix/application-properties/](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Most of the review checklist is only necessary because the project never made a handful of
 decisions. Each of them is made once, costs nothing to keep, and removes a whole category of

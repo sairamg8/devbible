@@ -9,7 +9,7 @@ sidebar_position: 10
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `check-mojo.html` — the full rule and limit
 > structure, the allowed values for `element`, `counter` and `value`, the defaults when
 > unspecified, and `haltOnFailure` — plus the **Gradle user manual**'s `violationRules` DSL.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — configuration and documented behaviour
 > only. No percentage on this page comes from a run.

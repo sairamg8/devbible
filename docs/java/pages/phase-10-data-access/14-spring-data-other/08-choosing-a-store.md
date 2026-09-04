@@ -12,7 +12,7 @@ sidebar_position: 24
 > and the Redis documentation *Redis data types*
 > ([redis.io/docs/latest/develop/data-types/](https://redis.io/docs/latest/develop/data-types/)).
 > Everything else on this page is argument built on the chunks it links, not a documented
-> claim. JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, Spring Data Redis 4.1.0,
+> claim. JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, Spring Data Redis 4.1.0,
 > MongoDB 8, Redis 8.
 
 **Store selection is usually argued about data shape — "our data is hierarchical", "our

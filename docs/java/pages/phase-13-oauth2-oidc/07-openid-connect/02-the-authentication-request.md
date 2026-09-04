@@ -12,7 +12,7 @@ sidebar_position: 2
 > [openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html);
 > RFC 6749 §4.1.1 (Authorization Request)
 > ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 > **No sandbox** — parameter definitions are quoted from the specification; no HTTP
 > transcript here is a capture, and the URLs shown are illustrative constructions.
 

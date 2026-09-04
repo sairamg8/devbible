@@ -9,7 +9,7 @@ sidebar_position: 1
 > Verified: 2026-08-20 against the Spring Framework reference *REST Clients*
 > (docs.spring.io/spring-framework/reference/integration/rest-clients.html) and
 > the Spring Boot reference *Calling REST Services*
-> (docs.spring.io/spring-boot/reference/io/rest-client.html). Spring Boot 4.1.0,
+> (docs.spring.io/spring-boot/reference/io/rest-client.html). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Spring ships four ways to call another HTTP service, and in Framework 7 the

@@ -14,7 +14,7 @@ sidebar_position: 22
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Jakarta Persistence 3.2 `FetchType` javadoc
 > ([.../fetchtype](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/fetchtype)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **`@OneToMany(fetch = FetchType.EAGER)` is not "one slow query". It is a permanent,
 non-negotiable clause added to every query that ever loads this entity, written by

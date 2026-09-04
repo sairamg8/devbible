@@ -11,7 +11,7 @@ sidebar_position: 35
 > the entry for `-XX:-UseCompressedOops`, quoted verbatim below — and the **HotSpot Java
 > Virtual Machine Garbage Collection Tuning Guide** for JDK 25
 > ([docs.oracle.com/en/java/javase/25/gctuning/](https://docs.oracle.com/en/java/javase/25/gctuning/)).
-> JDK 25 · Spring Boot 4.1.0.
+> JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — this page carries Java source, quoted documentation and arithmetic you can
 > redo. It contains no captured JVM output.
 

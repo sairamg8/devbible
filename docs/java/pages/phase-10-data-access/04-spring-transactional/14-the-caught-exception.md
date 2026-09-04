@@ -15,7 +15,7 @@ sidebar_position: 39
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/interceptor/TransactionAspectSupport.html))
 > and the `UnexpectedRollbackException` javadoc
 > ([.../transaction/UnexpectedRollbackException.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/UnexpectedRollbackException.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The rollback rules in [13 · Rollback rules](13-rollback-rules.md) are evaluated
 on the exception that *escapes* your method. If you catch it, nothing escapes.

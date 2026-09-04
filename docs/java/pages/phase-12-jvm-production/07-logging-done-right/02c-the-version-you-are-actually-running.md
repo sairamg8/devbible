@@ -9,12 +9,12 @@ sidebar_position: 4
 > Verified: 2026-09-01 against the **Logback news and release notes page**, which is the source of
 > every release description and CVE reference quoted below
 > ([logback.qos.ch](https://logback.qos.ch/news.html)), and the published Maven poms
-> **`spring-boot-dependencies:4.1.0`** (`<logback.version>1.5.34</logback.version>`) and
+> **`spring-boot-dependencies:4.1.1`** (`<logback.version>1.5.34</logback.version>`) and
 > **`spring-boot-dependencies:4.1.1`** (`<logback.version>1.5.38</logback.version>`)
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)).
 > 🔴 **No sandbox.** No exploit was run and none is described. Version facts come from the poms and
 > the vendor's own release notes.
-> JDK 25 · Spring Boot 4.1.0 / 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34 / 1.5.38.
+> JDK 25 · Spring Boot 4.1.1 / 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34 / 1.5.38.
 
 **Logging libraries are boring right up until they are the CVE, and Logback has had an unusually
 busy year. The pinned version in your BOM decides whether one of your configuration features

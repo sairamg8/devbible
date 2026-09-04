@@ -14,7 +14,7 @@ sidebar_position: 33
 > ([postgresql.org](https://www.postgresql.org/docs/18/routine-vacuuming.html))
 > and *Hot Standby*
 > ([postgresql.org](https://www.postgresql.org/docs/18/hot-standby.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[10b](10b-batching-a-backfill.md) got the loop to commit. That makes the backfill survivable, and
 it does nothing at all for its cost. The loop as written re-derives "what is left to do" from the

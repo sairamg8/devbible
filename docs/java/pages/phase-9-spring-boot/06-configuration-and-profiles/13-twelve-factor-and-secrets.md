@@ -14,7 +14,7 @@ sidebar_position: 13
 > import to skip a parent folder, and binding tree values to `String` or
 > `byte[]`) — and the Actuator reference for `env` / `configprops` value
 > sanitisation via `management.endpoint.env.show-values`. The twelve-factor
-> statement of factor III is from 12factor.net. Spring Boot 4.1.0, Spring
+> statement of factor III is from 12factor.net. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Factor III says one thing — configuration is what varies between deploys, and

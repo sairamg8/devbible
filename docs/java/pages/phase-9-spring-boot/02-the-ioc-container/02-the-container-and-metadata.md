@@ -10,11 +10,11 @@ sidebar_position: 2
 > Container* (docs.spring.io/spring-framework/reference/core/beans/ — the
 > `BeanFactory`/`ApplicationContext` relationship and the additional features
 > `ApplicationContext` contributes, configuration metadata forms), the
-> Framework 7.0.8 Javadoc for
+> Framework 7.0.9 Javadoc for
 > `org.springframework.beans.factory.BeanFactory` and
 > `org.springframework.context.ApplicationContext`, and the Spring Boot
 > reference for `spring.main.lazy-initialization`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The container you actually use is `ApplicationContext`, and the thing it
 reads is not your source code — it is a normalised model of bean definitions

@@ -15,7 +15,7 @@ sidebar_position: 16
 > "Merging Profiles from Multiple Sources", "PGO Frequently Asked Questions" and "Build Options";
 > all read from `docs/reference-manual/native-image/` on the **`release/graal-vm/25.3`** branch of
 > [`oracle/graal`](https://github.com/oracle/graal/tree/release/graal-vm/25.3/docs/reference-manual/native-image).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run**. 🔴 **The reference's own PGO guide contains measured
 > elapsed times and file sizes for a toy "Game of Life" program. None of them are reproduced here** —
 > they are a demonstration on a 120-line single-class program with a CPU clock pinned at 2.5 GHz, and the

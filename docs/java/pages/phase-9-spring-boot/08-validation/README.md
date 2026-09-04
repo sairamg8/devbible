@@ -15,7 +15,7 @@ sidebar_position: 0
 > `DefaultMessageCodesResolver` javadoc
 > (docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/), and the Hibernate
 > Validator 9.1 reference and javadoc (docs.hibernate.org/validator/9.1/).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Bean Validation is an allowlist you have to write, and everything difficult
 about it follows from that one property. A field with no annotation is accepted

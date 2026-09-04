@@ -10,7 +10,7 @@ sidebar_position: 9
 > Methods", sections "Property Expressions" and "Reserved Method Names"
 > ([query-methods-details.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html)).
 > Path-expression join semantics are Jakarta Persistence 3.2's. JDK 25,
-> Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **`findByAddressZipCode` is not one lookup, it is a search. Spring Data splits the
 token on camel-case boundaries and tries the longest match first, so the same

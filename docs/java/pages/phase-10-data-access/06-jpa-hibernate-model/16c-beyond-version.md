@@ -17,7 +17,7 @@ sidebar_position: 35
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/annotations/OptimisticLocking.html))
 > and the Jakarta Persistence 3.2 `LockModeType` javadoc
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **A version column is the right answer often enough that everything else on this page is an
 exception. But three situations defeat it — a legacy schema you cannot alter, a row whose

@@ -10,7 +10,7 @@ sidebar_position: 40
 > **Java Language Specification** on constant expressions and string literal interning, and the
 > **JDK 25 `java` tool reference**
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0.
+> JDK 25 · Spring Boot 4.1.1.
 > ⚠️ Default values for `StringTableSize` are reported inconsistently across secondary sources;
 > **read them off your own JDK with `-XX:+PrintFlagsFinal`** rather than trusting any figure,
 > including one on this page.

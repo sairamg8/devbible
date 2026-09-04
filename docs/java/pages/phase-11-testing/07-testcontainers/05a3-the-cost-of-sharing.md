@@ -6,13 +6,13 @@ sidebar_position: 33
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-31 against the **Spring Boot 4.1.0 reference** at
+> Verified: 2026-08-31 against the **Spring Boot 4.1.1 reference** at
 > [tag `v4.1.0`](https://github.com/spring-projects/spring-boot/tree/v4.1.0),
 > `documentation/spring-boot-docs/src/docs/antora/modules/reference/pages/testing/testcontainers.adoc`
 > — every Boot sentence below is quoted verbatim from it — and the **Testcontainers 2.0.5** sources
 > ([tag `2.0.5`](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)),
 > `modules/junit-jupiter/src/main/java/org/testcontainers/junit/jupiter/{Testcontainers,TestcontainersExtension}.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

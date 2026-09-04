@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([logback.qos.ch](https://logback.qos.ch/manual/mdc.html)).
 > 🔴 **No sandbox.** No log line on this page is a captured run. Where a shape is shown it is
 > either quoted from documentation with attribution or explicitly labelled a schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · SLF4J 2.0.18 · Logback 1.5.34.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Logging is the only observability signal that is written by hand, one statement at a time, by
 people who will not be the ones reading it. Metrics are aggregates you design once. Traces are

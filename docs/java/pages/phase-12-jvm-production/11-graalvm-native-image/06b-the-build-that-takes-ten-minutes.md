@@ -12,7 +12,7 @@ sidebar_position: 12
 > "Build Options" ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/overview/BuildOptions/)) and
 > "Optimizations and Performance"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/optimizations-and-performance/)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — ⚠️ **no build duration on this page is a measurement.** The reference manual does not publish build times, and neither does this page; what follows is the set of documented mechanisms that determine yours.
 
 **A JVM build compiles each class independently and stops. A native build performs a whole-program points-to analysis over your code, your dependencies and the JDK, then compiles every reachable method with the Graal compiler, then links a binary. It is measured in minutes rather than seconds, it is memory-bound before it is CPU-bound, and the builder itself runs on a JVM with its own heap that you can and often must configure. Treating it like another Maven goal is how a native migration takes the whole CI cluster down with it.**

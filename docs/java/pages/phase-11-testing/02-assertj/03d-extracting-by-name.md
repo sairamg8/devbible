@@ -12,7 +12,7 @@ sidebar_position: 9
 > `AbstractObjectAssert.extracting`, `PropertyOrFieldSupport.getSimpleValue`,
 > `org.assertj.core.configuration.Configuration.ALLOW_EXTRACTING_PRIVATE_FIELDS` and
 > `BARE_NAME_PROPERTY_EXTRACTION_ENABLED`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Every `extracting` overload in [03c](03c-extracting.md) has a `String`-named twin that
 looks tidier at the call site and costs you three things: the compiler's check, the element

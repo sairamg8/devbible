@@ -13,7 +13,7 @@ sidebar_position: 11
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html))
 > and the `AnnotationTransactionAspect` source in `spring-aspects`
 > ([github.com/spring-projects/spring-framework/.../AnnotationTransactionAspect.aj](https://github.com/spring-projects/spring-framework/blob/main/spring-aspects/src/main/java/org/springframework/transaction/aspectj/AnnotationTransactionAspect.aj)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The four fixes in [chunk 4](04-fixing-self-invocation.md) and
 [chunk 4b](04b-the-escape-hatches.md) all work by moving where the transaction is

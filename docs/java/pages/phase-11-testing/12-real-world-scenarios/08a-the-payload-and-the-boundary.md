@@ -14,8 +14,8 @@ sidebar_position: 36
 > `@EmbeddedKafka` and `EmbeddedKafkaKraftBroker`; and the **Spring Boot 4.1** reference
 > *Testing · Auto-configured tests* for `@JsonTest` and `JacksonTester`
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no Docker and no broker on this machine** — Java and YAML source and
 > documented behaviour only, never console output or container logs.
 

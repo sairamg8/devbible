@@ -19,7 +19,7 @@ sidebar_position: 16
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html))
 > and the `TransactionAwareDataSourceProxy` javadoc
 > ([.../jdbc/datasource/TransactionAwareDataSourceProxy.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **[Chunk 6](06-the-transaction-manager.md) was the interface. This is the object
 actually behind it: the five implementations, and — because it is the one this

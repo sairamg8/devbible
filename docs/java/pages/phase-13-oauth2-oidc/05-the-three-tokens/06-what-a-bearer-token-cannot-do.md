@@ -16,7 +16,7 @@ sidebar_position: 11
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9449.txt));
 > `OAuth2ResourceServerConfigurer` and `DPoPAuthenticationProvider` sources on `main`
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-security)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every mitigation in [04b](04b-safeguarding-a-bearer-token.md) is about *not losing* the
 token, and every one of them is a process control that a single mistake defeats. The

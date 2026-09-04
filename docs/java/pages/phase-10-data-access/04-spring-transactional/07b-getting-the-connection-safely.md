@@ -16,7 +16,7 @@ sidebar_position: 20
 > and `LazyConnectionDataSourceProxy`
 > ([.../jdbc/datasource/LazyConnectionDataSourceProxy.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.html))
 > javadocs.
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, HikariCP 7.0.2,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, HikariCP 7.0.2,
 > PostgreSQL 18.
 
 **[Chunk 7](07-thread-binding.md) established the rule: the transaction is a

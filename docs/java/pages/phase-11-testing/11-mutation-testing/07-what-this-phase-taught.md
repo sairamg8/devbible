@@ -10,8 +10,8 @@ sidebar_position: 38
 > for phase 11 and every fact it refers to is verified on the topic page it points at — against
 > the JUnit 6 user guide, the Mockito 5.23.0 javadoc, the AssertJ, Testcontainers, JaCoCo, jqwik
 > and pitest documentation, and the Spring Framework 7.0.x / Boot 4.1 references, as cited there.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5.
 > ⚠️ **No sandbox, no Docker and no build on this machine.** Nothing in this phase reports the
 > output of a run.
 

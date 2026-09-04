@@ -13,8 +13,8 @@ sidebar_position: 10
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)), and Marc
 > Brooker, "Timeouts, retries, and backoff with jitter", Amazon Builders' Library
 > ([aws.amazon.com](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)).
-> 🔴 **Arithmetic only, nothing measured.** Version spine: JDK 25 · Spring Boot 4.1.0 /
-> Spring Framework 7.0.8.
+> 🔴 **Arithmetic only, nothing measured.** Version spine: JDK 25 · Spring Boot 4.1.1 /
+> Spring Framework 7.0.9.
 
 **Every hop in your request path is one of two things. A *hard* dependency: without its
 answer, the operation cannot complete and the user gets an error. A *soft* dependency:

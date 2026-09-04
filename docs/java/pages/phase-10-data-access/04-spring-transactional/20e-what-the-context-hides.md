@@ -14,7 +14,7 @@ sidebar_position: 57
 > ([.../boot/jpa/test/autoconfigure/TestEntityManager.html](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/jpa/test/autoconfigure/TestEntityManager.html))
 > and the Jakarta Persistence 3.2 API for the entity-listener callbacks
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **[20d](20d-what-a-test-must-assert.md) gave the rule: flush so the write reaches the
 database, clear so the read comes back from it. This chunk is what that rule protects

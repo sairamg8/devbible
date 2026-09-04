@@ -17,8 +17,8 @@ sidebar_position: 28
 > **JEP 515** ([openjdk.org](https://openjdk.org/jeps/515)).
 > 🔴 **No sandbox** — nothing was built, pulled or timed. **Every number on this page is quoted from a
 > named document and attributed inline**; there are no measurements of a Spring Boot image here,
-> because producing one would require running a build. JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8.
+> because producing one would require running a build. JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9.
 
 **This chunk exists because the previous twenty-odd chunks each claimed to improve "size" or
 "startup", and a reader is entitled to ask which of them to do first. The honest answer is that

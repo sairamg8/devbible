@@ -11,7 +11,7 @@ sidebar_position: 9
 > `ScheduledThreadPoolExecutor`, `ThreadPoolExecutor`, `ForkJoinPool`, `Executors` and `Thread`
 > (same javadoc tree), and the **Spring Framework 7.0 javadoc** for `ThreadPoolTaskScheduler`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/concurrent/ThreadPoolTaskScheduler.html))
-> for the two scheduler policy defaults. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> for the two scheduler policy defaults. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 > 🔴 **No sandbox** — no executor was run for this page.
 
 **Graceful shutdown of the web server ([04](04-spring-graceful-shutdown.md)) finishes the request.

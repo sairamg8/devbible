@@ -12,7 +12,7 @@ sidebar_position: 8
 > `AbstractIterableAssert.flatExtracting`, `AbstractObjectAssert.extracting`,
 > `org.assertj.core.configuration.Configuration.ALLOW_EXTRACTING_PRIVATE_FIELDS`,
 > `PropertyOrFieldSupport.getSimpleValue`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Building expected domain objects just to assert on a list of them is, in the
 documentation's own word, "tedious" — and worse, it means your assertion depends on the

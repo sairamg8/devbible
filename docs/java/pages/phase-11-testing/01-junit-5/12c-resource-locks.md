@@ -12,7 +12,7 @@ sidebar_position: 43
 > ([ResourceLock](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/parallel/ResourceLock.html))
 > and `Resources`
 > ([Resources](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/parallel/Resources.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Some state genuinely cannot be made per-test — the JVM has one set of system properties, one
 default `Locale`, one `System.out`. `@ResourceLock` is Jupiter's answer: you declare which

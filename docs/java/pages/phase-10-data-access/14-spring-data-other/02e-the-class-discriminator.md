@@ -12,7 +12,7 @@ sidebar_position: 6
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/converters-type-mapping.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/converters-type-mapping.html)),
 > and the *Migration guide 4.x to 5.x* for the UUID and BigDecimal representation changes
 > ([…/migration-guide/migration-guide-4.x-to-5.x.html](https://docs.spring.io/spring-data/mongodb/reference/migration-guide/migration-guide-4.x-to-5.x.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
 
 **Spring Data MongoDB has to solve a problem JPA solves with schema: when it reads a
 document back, what Java type should it become? A relational row's type is decided by

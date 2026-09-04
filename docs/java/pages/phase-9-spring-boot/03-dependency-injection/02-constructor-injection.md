@@ -13,7 +13,7 @@ sidebar_position: 2
 > *Using `@Autowired`*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html)
 > for the single-constructor rule and the multiple-constructor requirement.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Constructor injection is not the recommended style — it is the only one that
 uses the type system. The other two ask the container to enforce, at startup, a

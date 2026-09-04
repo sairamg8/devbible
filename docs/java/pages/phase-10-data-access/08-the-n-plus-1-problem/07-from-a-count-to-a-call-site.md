@@ -13,7 +13,7 @@ sidebar_position: 16
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/stat/Statistics.java))
 > and the Hibernate ORM 7.4 *A Short Guide to Hibernate 7* §8.4
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Detection and localisation are different problems and need different tools. A
 counter tells you an endpoint is wrong; it does not tell you which of the forty

@@ -14,7 +14,7 @@ sidebar_position: 52
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)),
 > and the Jakarta Persistence 3.2 specification's `EntityGraph` and JPQL fetch join
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The third service loads one order and renders everything about it: the customer, the
 shipping address, the lines with their products, and the payments. It has the same

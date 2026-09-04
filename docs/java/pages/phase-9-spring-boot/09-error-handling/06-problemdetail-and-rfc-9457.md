@@ -15,7 +15,7 @@ sidebar_position: 6
 > and the Spring Boot reference *Servlet Web Applications · Error Handling*
 > (docs.spring.io/spring-boot/reference/web/servlet.html — *"Spring MVC can
 > produce custom error messages with the `application/problem+json` media
-> type"*). RFC 9457 obsoletes RFC 7807. Spring Boot 4.1.0, Spring Framework
+> type"*). RFC 9457 obsoletes RFC 7807. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **RFC 9457 exists so that a client can parse *any* error from *any* service

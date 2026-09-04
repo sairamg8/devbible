@@ -12,7 +12,7 @@ sidebar_position: 48
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Hibernate ORM 7.4 *Introduction* §9.15 *Using the bytecode enhancer*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Enhancement gives you lazy columns; it does not give you one lazy column. The default
 grouping means touching any lazy basic attribute fetches every lazy basic attribute on that

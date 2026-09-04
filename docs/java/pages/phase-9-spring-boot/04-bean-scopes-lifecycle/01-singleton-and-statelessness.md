@@ -11,7 +11,7 @@ sidebar_position: 1
 > (docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html —
 > the six built-in scopes, "only one shared instance of a singleton bean is
 > managed", and the per-container-per-bean framing that distinguishes it from
-> the Gang of Four pattern). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> the Gang of Four pattern). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every `@Service`, `@Repository` and `@RestController` you write is, by
 default, exactly one object for the life of the application — and that one

@@ -19,7 +19,7 @@ sidebar_position: 32
 > for the region summary the arithmetic below uses; and the Micrometer `JvmGcMetrics` binder
 > source on GitHub (`micrometer-core`, `main` branch as of this date) for the meter names and
 > their verbatim descriptions.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Almost every GC conversation starts with heap size, and heap size is the least predictive
 number in the system. What determines how a collector behaves is how fast the application

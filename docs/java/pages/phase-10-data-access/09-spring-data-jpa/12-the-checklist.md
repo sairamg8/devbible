@@ -11,7 +11,7 @@ sidebar_position: 47
 > the Spring Data JPA 4.1 reference
 > ([docs.spring.io/spring-data/jpa/reference](https://docs.spring.io/spring-data/jpa/reference/))
 > and PostgreSQL 18 ([postgresql.org/docs/18](https://www.postgresql.org/docs/18/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Reviewing a repository interface takes four minutes and catches more production problems

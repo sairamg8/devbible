@@ -17,7 +17,7 @@ sidebar_position: 10
 > (projectreactor.io/docs/core/release/reference/advancedFeatures/context.html)
 > — the Spring Security reference for reactive applications
 > (`ReactiveSecurityContextHolder`), and the Spring Framework reference on
-> `ReactiveTransactionManager` and `TransactionalOperator`. Spring Boot 4.1.0,
+> `ReactiveTransactionManager` and `TransactionalOperator`. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **`ThreadLocal` is how Java has carried per-request state for twenty-five

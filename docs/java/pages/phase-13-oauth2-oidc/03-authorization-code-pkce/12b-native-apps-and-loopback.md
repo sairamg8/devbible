@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([datatracker.ietf.org/doc/html/rfc8252](https://datatracker.ietf.org/doc/html/rfc8252));
 > RFC 9700 §2.1, §4.1.3
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A native app is a public client that cannot host a web server on a domain, so "redirect to a
 URL you control" has to mean something else. RFC 8252 gives three answers, and they are not

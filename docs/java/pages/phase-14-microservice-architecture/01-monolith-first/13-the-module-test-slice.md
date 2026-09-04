@@ -11,7 +11,7 @@ sidebar_position: 39
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/testing.html)) and
 > *Fundamentals* — `@Modulithic`'s `sharedModules`
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** — the
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** — the
 > bootstrap log excerpt quoted below is reproduced from the reference documentation, not
 > produced by a run.
 

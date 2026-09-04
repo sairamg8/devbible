@@ -10,7 +10,7 @@ sidebar_position: 21
 > ([redis.io/docs/latest/develop/using-commands/transactions/](https://redis.io/docs/latest/develop/using-commands/transactions/))
 > and the Spring Data Redis 4.1 reference *Redis Transactions*
 > ([docs.spring.io/spring-data/redis/reference/redis/transactions.html](https://docs.spring.io/spring-data/redis/reference/redis/transactions.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data Redis 4.1.0, Redis 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data Redis 4.1.0, Redis 8.
 
 **`MULTI`/`EXEC` is called a transaction and Spring exposes it through `@Transactional`,
 and between those two facts sits a set of assumptions that are all wrong. Redis gives you

@@ -13,7 +13,7 @@ sidebar_position: 42
 > ([docs.spring.io/spring-data/jpa/reference/repositories/projections.html](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html)),
 > and the Jakarta Persistence 3.2 specification §4.9.2
 > ([jakarta.ee/specifications/persistence/3.2](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **Spring Data offers three projection styles and they are not interchangeable. A
 *closed* interface projection lets it narrow the generated SQL; an *open* one —

@@ -14,7 +14,7 @@ sidebar_position: 10
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/7.0.x/spring-context/src/main/java/org/springframework/cache/support/AbstractValueAdaptingCache.java)),
 > and the Spring Boot 4.1 reference *Caching*
 > ([docs.spring.io/spring-boot/reference/io/caching.html](https://docs.spring.io/spring-boot/reference/io/caching.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **Two attributes decide whether an entry exists, and they are not symmetrical. `condition` is
 evaluated before the invocation and disables the cache in both directions. `unless` is

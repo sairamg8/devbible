@@ -14,7 +14,7 @@ sidebar_position: 5
 > and **JEPs 509 and 520** for the events that are off by default and outside the overhead aim
 > ([openjdk.org](https://openjdk.org/jeps/509)).
 > 🔴 **No sandbox** — no measurement below is taken here.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A recording collects whatever its settings file says and nothing else, so the settings file is
 the single decision that determines both what you can answer afterwards and what it costs to

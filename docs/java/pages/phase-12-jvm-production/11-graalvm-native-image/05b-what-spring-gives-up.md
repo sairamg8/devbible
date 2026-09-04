@@ -14,7 +14,7 @@ sidebar_position: 10
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/basics/)).
 > The full JVM-side restriction inventory, including the three the Framework reference adds, is in topic 10 at
 > [`06c-what-aot-processing-gives-up.md`](../10-packaging-for-deploy/06c-what-aot-processing-gives-up.md) — quoted there, not repeated here.
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run**.
 
 **Every restriction Spring's AOT engine imposes on the JVM applies in a native image, with one difference that changes the whole conversation: on the JVM you chose them and can un-choose them by dropping a profile, and in a native image they are the price of the artefact existing. Add GraalVM's own closed-world rules on top — no runtime classpath, no lazy class loading, no dynamic class definition — and you get a deployment model where the set of beans, the active profile and the enabled features are all decided by whoever ran the build.**

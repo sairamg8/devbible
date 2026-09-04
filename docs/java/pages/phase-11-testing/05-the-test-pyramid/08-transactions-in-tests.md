@@ -11,8 +11,8 @@ sidebar_position: 18
 > ([tx](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html))
 > — the attribute-support table, the lifecycle-method rules and the `@BeforeTransaction` example
 > are read from that page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no database was touched.
 
 **`@Transactional` on a test is not the same annotation as `@Transactional` on a service, even

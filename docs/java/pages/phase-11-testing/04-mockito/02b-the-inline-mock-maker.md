@@ -11,7 +11,7 @@ sidebar_position: 4
 > [`Mockito`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/Mockito.java)
 > (sections 0.2 inline mock making, 0.3 instrumentation on Java 21+, and 39 mocking final
 > types), and [JEP 451](https://openjdk.org/jeps/451).
-> JDK 25 · Spring Boot 4.1.0 → Mockito 5.23.0, JUnit Jupiter 6.0.3. **No sandbox** — this
+> JDK 25 · Spring Boot 4.1.1 → Mockito 5.23.0, JUnit Jupiter 6.0.3. **No sandbox** — this
 > page carries Java and build configuration, never a fabricated test run.
 
 **[02](02-creating-mocks.md) covered how you obtain a mock. This is what the default mock

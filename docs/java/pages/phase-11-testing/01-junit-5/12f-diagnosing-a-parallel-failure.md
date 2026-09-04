@@ -10,7 +10,7 @@ sidebar_position: 46
 > ([writing-tests/parallel-execution](https://docs.junit.org/6.0.3/writing-tests/parallel-execution.html))
 > and "Capturing Standard Output/Error"
 > ([running-tests/capturing-standard-output-error](https://docs.junit.org/6.0.3/running-tests/capturing-standard-output-error.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **A concurrency failure that will not reproduce is not a mystery — it is a configuration
 mismatch, and there are only three of them. This chunk is how to make the failure reproducible,

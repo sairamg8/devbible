@@ -13,7 +13,7 @@ sidebar_position: 26
 > [`CapturingMatcher`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/internal/matchers/CapturingMatcher.java)
 > (`matches`, `toString`, `type`), and
 > [`CaptorAnnotationWithPrimitiveTest`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-extensions/mockito-junit-jupiter/src/test/java/org/mockitousage/annotation/CaptorAnnotationWithPrimitiveTest.java).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

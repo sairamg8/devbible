@@ -11,7 +11,7 @@ sidebar_position: 4
 > Core Features* (signal contract, `doFinally`, cancellation)
 > (projectreactor.io/docs/core/release/reference/) — and the Spring Framework
 > reference *Web on Reactive Stack → WebFlux → Annotated Controllers →
-> Exceptions*. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Exceptions*. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **In a reactive pipeline an error is not thrown, it is *emitted* — a terminal
 signal that travels downstream to the subscriber and ends the sequence for

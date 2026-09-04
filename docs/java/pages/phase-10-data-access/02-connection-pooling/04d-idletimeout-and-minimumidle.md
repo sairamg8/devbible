@@ -10,7 +10,7 @@ sidebar_position: 12
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP),
 > raw at tag `HikariCP-7.0.2`) and its source (`pool/HikariPool.java`
 > `HouseKeeper`, `HikariConfig.validateNumerics()`).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18.
 
 **`idleTimeout` is the most-configured setting in HikariCP that does nothing.
 Out of the box it is inert, and it stays inert no matter what you set it to,

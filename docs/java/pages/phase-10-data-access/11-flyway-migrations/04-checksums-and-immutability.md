@@ -14,7 +14,7 @@ sidebar_position: 8
 > ([SqlMigrationResolver.java](https://github.com/flyway/flyway/blob/main/flyway-core/src/main/java/org/flywaydb/core/internal/resolver/sql/SqlMigrationResolver.java)),
 > and the *Validate* command reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/commands/validate)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Editing a migration that has already run is the one rule everybody repeats and almost nobody
 can justify precisely. The justification is not that Flyway forbids it — Flyway will happily

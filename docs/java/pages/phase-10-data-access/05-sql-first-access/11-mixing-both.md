@@ -12,7 +12,7 @@ sidebar_position: 22
 > ([.../jdbc/datasource/DataSourceUtils.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/DataSourceUtils.html))
 > and the Spring Framework 7.0 reference *Data Access → Transaction Management*
 > ([docs.spring.io/spring-framework/reference/data-access/transaction.html](https://docs.spring.io/spring-framework/reference/data-access/transaction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **Most services that adopt SQL-first access do not abandon JPA — they add
 `JdbcClient` next to it. That works, and the reason it works is worth reading

@@ -12,8 +12,8 @@ sidebar_position: 22
 > [`TestMethodOrder`](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/TestMethodOrder.html)
 > and
 > [`ClassOrderer`](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/ClassOrderer.html).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No database and no sandbox on this machine** — configuration, Java source and
 > documented behaviour only. No run output, no seed value from an actual execution and no
 > pass/fail counts appear on this page.

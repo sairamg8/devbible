@@ -17,7 +17,7 @@ sidebar_position: 9
 > `RequestAttributeSecurityContextRepository`)
 > ([github.com](https://github.com/spring-projects/spring-security)) — **RFC 9700** §2.6
 > (CORS guidance) ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **Three lines that appear in every resource-server example, two of which most people copy
 without a reason and one of which is usually unnecessary. `STATELESS` is load-bearing and

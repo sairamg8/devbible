@@ -13,7 +13,7 @@ sidebar_position: 28
 > Objectives* ([sre.google](https://sre.google/sre-book/service-level-objectives/)).
 > The burn-rate mechanics from the **SRE Workbook** are
 > not covered here. No JVM was run for this page and no alert has been fired to
-> produce any figure below. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> produce any figure below. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **Everything earlier in this topic was about producing numbers. This page is about the small
 minority of them that are allowed to wake somebody. The governing constraint is not technical: a

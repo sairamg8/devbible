@@ -14,7 +14,7 @@ sidebar_position: 31
 > ([codegen-large-schemas](https://www.jooq.org/doc/latest/manual/code-generation/codegen-large-schemas/))
 > and *Generated records*
 > ([codegen-records](https://www.jooq.org/doc/latest/manual/code-generation/codegen-object-types/codegen-records/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Every argument for jOOQ in this topic has been about what the compiler can check. This is the
 invoice. It has six lines, they arrive monthly rather than once, and the first three are structural:

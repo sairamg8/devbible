@@ -12,7 +12,7 @@ sidebar_position: 1
 > *Conway's Law* ([martinfowler.com](https://martinfowler.com/bliki/ConwaysLaw.html)); and
 > Chris Richardson's *Pattern: Monolithic Architecture* and *Pattern: Microservice
 > Architecture* ([microservices.io](https://microservices.io/patterns/monolithic.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Modulith
 > **2.1.1**. **No sandbox** — these pages carry Java, Maven and YAML, never a fabricated
 > run, log line or latency number.
 

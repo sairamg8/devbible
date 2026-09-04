@@ -12,7 +12,7 @@ sidebar_position: 4
 > ([documentation.red-gate.com/fd/migrations-271585107.html](https://documentation.red-gate.com/fd/migrations-271585107.html))
 > and Spring Boot 4.1's `FlywayProperties` source
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **A version number is a coordination protocol between people who are not talking to each other.
 Sequential numbering makes the conflict visible in git, at merge time, where it is cheap.

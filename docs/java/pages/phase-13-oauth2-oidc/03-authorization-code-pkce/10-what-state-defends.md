@@ -14,7 +14,7 @@ sidebar_position: 13
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
 > `MessageDigest.isEqual` javadoc, JDK 25
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/security/MessageDigest.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Your callback endpoint is a public, unauthenticated URL that anyone on the internet can
 navigate any user's browser to, with any query string they like. Without a check, "the user

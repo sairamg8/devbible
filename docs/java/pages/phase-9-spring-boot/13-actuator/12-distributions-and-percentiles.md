@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics · Per-meter Properties*
 > (docs.spring.io/spring-boot/reference/actuator/metrics.html: the
 > `management.metrics.distribution.percentiles-histogram` and `.percentiles`
@@ -16,7 +16,7 @@ sidebar_position: 12
 > (docs.micrometer.io/micrometer/reference/concepts/histogram-quantiles.html:
 > `publishPercentiles` versus `publishPercentileHistogram`, the statement that
 > percentile approximations cannot be aggregated, and the list of systems
-> supporting histogram-based percentile approximations). Spring Boot 4.1.0,
+> supporting histogram-based percentile approximations). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **A `Timer` publishes a count, a total and a max. It does not publish a p99

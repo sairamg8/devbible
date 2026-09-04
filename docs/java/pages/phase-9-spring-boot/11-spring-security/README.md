@@ -11,7 +11,7 @@ sidebar_position: 0
 > Authentication Architecture*, *Authorize HTTP Requests*, *Method Security*,
 > *Session Management*, *OAuth 2.0 Resource Server JWT*, *Password Storage*,
 > *CSRF*, *CORS* and *Concurrency Support* — plus the Spring Security 7.0
-> configuration-migration notes on the removal of `and()`. Spring Boot 4.1.0,
+> configuration-migration notes on the removal of `and()`. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, Spring Security 7.x, JDK 25.
 
 **Spring Security is a filter chain. Almost every question anyone has about it —

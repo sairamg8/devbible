@@ -6,14 +6,14 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-28 against the Spring Boot 4.1.0 *Test Auto-configuration Annotations*
+> Verified: 2026-08-28 against the Spring Boot 4.1.1 *Test Auto-configuration Annotations*
 > appendix ([docs.spring.io](https://docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html)),
 > which in 4.x carries a **Module** column, and the Boot 4.1.0 javadoc for `WebMvcTest`,
 > `DataJpaTest`, `JdbcTest`, `RestClientTest`, `WebClientTest`, `JsonTest` and
 > `AutoConfigureTestDatabase.Replace`; package mapping cross-checked against the javadoc's
 > `type-search-index`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no test run, no build output.
 
 **[03](03-the-slices.md) explained the mechanism and [03b](03b-what-a-slice-excludes.md) the

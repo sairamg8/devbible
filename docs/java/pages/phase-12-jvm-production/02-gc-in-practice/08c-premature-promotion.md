@@ -14,7 +14,7 @@ sidebar_position: 34
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp)
 > for the declared defaults, ranges and descriptions of `SurvivorRatio`, `NewRatio`,
 > `MaxTenuringThreshold`, `InitialTenuringThreshold`, `TargetSurvivorRatio` and `MinSurvivorRatio`.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Premature promotion is the failure where objects that would have died in the young generation
 get copied into the old generation instead, because the survivor space could not hold them or

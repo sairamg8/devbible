@@ -15,7 +15,7 @@ sidebar_position: 31
 > and the `2.x` source of `Hibernate7Serializers`, `Hibernate7SerializerModifier` and
 > `Hibernate7AnnotationIntrospector` in jackson-datatype-hibernate
 > ([github.com/FasterXML/jackson-datatype-hibernate](https://github.com/FasterXML/jackson-datatype-hibernate/blob/2.x/hibernate7/src/main/java/com/fasterxml/jackson/datatype/hibernate7/Hibernate7Serializers.java)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0,
 > Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **The first three chunks in this series were about one field. This one is about the object.

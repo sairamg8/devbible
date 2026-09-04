@@ -12,7 +12,7 @@ sidebar_position: 2
 > per-edition database list, the per-edition Java version floor and the current prices; plus
 > the Spring Boot 4.1 reference *SQL databases · Using jOOQ*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **jOOQ ships in four editions. The Open Source Edition is Apache-2.0 and free, and it works
 with a fixed list of open-source databases — PostgreSQL and MySQL among them. If your

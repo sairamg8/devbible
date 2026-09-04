@@ -15,7 +15,7 @@ sidebar_position: 27
 > and the Hibernate ORM 7.4 *Introduction* §2 *Bidirectional associations* and §8.7 *The
 > second-level cache*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[7](07-invalidation.md) is about an eviction firing at the wrong instant and
 [7c](07c-getting-the-eviction-right.md) is about firing it at two better ones. Both assume you

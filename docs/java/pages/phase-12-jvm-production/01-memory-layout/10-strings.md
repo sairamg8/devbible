@@ -11,7 +11,7 @@ sidebar_position: 39
 > JDK 25**, and the **JDK 25 `java` tool reference**
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html))
 > for `-XX:-CompactStrings`. Concatenation behaviour cross-checked against **JEP 280 · Indify
-> String Concatenation**. JDK 25 · Spring Boot 4.1.0.
+> String Concatenation**. JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — Java source, quoted documentation and arithmetic only. No captured output.
 
 **On almost every heap dump of a business application, `byte[]` and `java.lang.String` are the

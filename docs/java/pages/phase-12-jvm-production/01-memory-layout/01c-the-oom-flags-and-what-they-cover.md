@@ -15,7 +15,7 @@ sidebar_position: 3
 > and the JDK 25 HotSpot source `src/hotspot/share/runtime/globals.hpp` at tag `jdk-25+36`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/runtime/globals.hpp))
 > for `ExitOnOutOfMemoryError` and `CrashOnOutOfMemoryError`, which the man page does not
-> document. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> document. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every production Java checklist tells you to set `-XX:+HeapDumpOnOutOfMemoryError`, and
 almost none of them mention the sentence in the JDK documentation that says it only applies

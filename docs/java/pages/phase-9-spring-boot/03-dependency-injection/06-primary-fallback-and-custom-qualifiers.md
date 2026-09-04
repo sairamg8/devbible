@@ -14,7 +14,7 @@ sidebar_position: 6
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired.html
 > — the note that `jakarta.annotation.Priority` cannot be declared on `@Bean`
 > methods and that its semantics are modelled with `@Order` plus `@Primary` or
-> `@Fallback`). `@Fallback` was introduced in Framework 6.2. Spring Boot 4.1.0,
+> `@Fallback`). `@Fallback` was introduced in Framework 6.2. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **The previous chunk narrowed the match at each injection point. This one moves

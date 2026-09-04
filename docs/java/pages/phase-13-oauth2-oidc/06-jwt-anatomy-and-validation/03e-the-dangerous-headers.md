@@ -15,7 +15,7 @@ sidebar_position: 8
 > ([rfc7515](https://www.rfc-editor.org/rfc/rfc7515.txt),
 > [rfc7517](https://www.rfc-editor.org/rfc/rfc7517.txt),
 > [rfc8725](https://www.rfc-editor.org/rfc/rfc8725.txt))
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Four header parameters exist whose entire function is to tell the verifier where to get the
 key. `jwk` carries the key inline. `jku` and `x5u` carry a URL to fetch it from. `x5c`

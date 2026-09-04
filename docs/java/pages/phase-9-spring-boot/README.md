@@ -4,7 +4,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-> **Target: Spring Boot 4.1.0 (11 Jun 2026) on Spring Framework 7.0, JDK 25.**
+> **Target: Spring Boot 4.1.1 (11 Jun 2026) on Spring Framework 7.0, JDK 25.**
 > ⚠️ Spring Boot **4** renamed `spring-boot-starter-web` to
 > **`spring-boot-starter-webmvc`**, moved to **Jakarta EE 11** and **Jackson 3**,
 > deprecated **`RestTemplate`** in favour of `RestClient`, and removed

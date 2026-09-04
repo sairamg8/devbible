@@ -11,8 +11,8 @@ sidebar_position: 2
 > the `Statistics` API, and the **JUnit Jupiter 6.0.3** user guide
 > ([docs.junit.org/6.0.3](https://docs.junit.org/6.0.3/user-guide/)) for what
 > `@ParameterizedTest` sources can and cannot express.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only.
 

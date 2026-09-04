@@ -13,7 +13,7 @@ sidebar_position: 9
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html))
 > and *Using `@Transactional`*
 > ([.../declarative/annotations.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **There are five fixes in circulation. All of them work, and they are not equally
 good — a neutral list of options is the wrong way to present them, because in

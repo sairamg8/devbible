@@ -12,7 +12,7 @@ sidebar_position: 34
 > ([Store](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.Store.html))
 > and `ExtensionContext`
 > ([ExtensionContext](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/extension/ExtensionContext.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[10h](10h-keeping-state.md) argued that per-test state belongs in the `Store` and showed
 how to scope it with a `Namespace`. This chunk is the single fact that makes the `Store`

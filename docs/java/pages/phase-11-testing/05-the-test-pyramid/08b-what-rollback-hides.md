@@ -10,8 +10,8 @@ sidebar_position: 19
 > Framework → Transaction Management*
 > ([tx](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html))
 > — the `TestTransaction` example and the preemptive-timeout warning are quoted from that page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — no database was touched and no test was run.
 
 **[08](08-transactions-in-tests.md) was the mechanism. This is the part that decides whether a

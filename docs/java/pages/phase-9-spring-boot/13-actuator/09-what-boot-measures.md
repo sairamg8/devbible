@@ -6,7 +6,7 @@ sidebar_position: 9
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Metrics · Supported Metrics and Meters*
 > (docs.spring.io/spring-boot/reference/actuator/metrics.html: the JVM, system,
 > startup, logger, task-execution, HTTP server and client, Tomcat, Jetty, cache,
@@ -14,7 +14,7 @@ sidebar_position: 9
 > Redis and SSL metric families with their prefixes and tags;
 > `management.metrics.enable.*`; `server.tomcat.mbeanregistry.enabled`; the
 > metrics endpoint's `?tag=key:value` drill-down; and the Prometheus endpoint's
-> `micrometer-registry-prometheus` requirement). Spring Boot 4.1.0, Spring
+> `micrometer-registry-prometheus` requirement). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Most of the metrics a service needs already exist before you write a line of

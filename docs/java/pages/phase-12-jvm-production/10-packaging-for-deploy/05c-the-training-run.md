@@ -14,7 +14,7 @@ sidebar_position: 18
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
 > 🔴 **No sandbox** — the one line of log output shown below is **quoted from the `java` tool
 > reference's own example** and is attributed as such; nothing here was executed. JDK 25 · Spring
-> Boot 4.1.0 / Spring Framework 7.0.8.
+> Boot 4.1.0 / Spring Framework 7.0.9.
 
 **[05b](05b-creating-a-cds-archive.md) established that every archive comes from a trial run. This
 chunk answers the two questions that decide whether that trial run is an asset or a liability:

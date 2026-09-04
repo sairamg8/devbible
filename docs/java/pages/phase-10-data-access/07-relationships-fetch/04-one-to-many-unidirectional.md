@@ -11,7 +11,7 @@ sidebar_position: 6
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Hibernate ORM 7.4 *User Guide* §3.8.2 *@OneToMany*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Write `@OneToMany` on a collection, put nothing on the other entity, and you have not
 mapped `book.publisher_id`. Hibernate's documented default for that mapping is a

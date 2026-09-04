@@ -14,7 +14,7 @@ sidebar_position: 16
 > and the `assertSoftly` / `assertAll` / `assertAlso` declarations on
 > `SoftAssertionsProvider`; plus the AssertJ Core documentation
 > ([assertj.github.io/doc](https://assertj.github.io/doc/)).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **A test that stops at its first failed assertion tells you one thing about a run that may
 have gone wrong in five ways. Soft assertions collect them all and report them together —

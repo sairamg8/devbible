@@ -13,7 +13,7 @@ sidebar_position: 1
 > steps quoted below) and *Interception*
 > (`mvc-servlet/handlermapping-interceptor.html`) — and the Jakarta Servlet 6.1
 > javadoc for `jakarta.servlet.Filter`
-> (jakarta.ee/specifications/servlet/6.1/apidocs). Spring Boot 4.1.0, Spring
+> (jakarta.ee/specifications/servlet/6.1/apidocs). Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Filters, interceptors and AOP advice are not three styles of doing the same

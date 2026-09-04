@@ -10,7 +10,7 @@ sidebar_position: 12
 > Aggregates Work Together* (2011), section "Ask Whose Job It Is", and *Part III: Gaining
 > Insight Through Discovery* ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/),
 > CC BY-ND 3.0); the guideline is attributed there to a discussion with Eric Evans.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **When you cannot decide whether two things must be transactionally consistent, every

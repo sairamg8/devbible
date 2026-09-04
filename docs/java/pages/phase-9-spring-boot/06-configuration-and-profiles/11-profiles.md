@@ -14,7 +14,7 @@ sidebar_position: 11
 > `spring.profiles.validate`) and the Spring Framework reference for `@Profile`
 > and profile expressions
 > (docs.spring.io/spring-framework/reference/core/beans/environment.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A profile is a label on the `Environment` and nothing more. Everything that
 looks like profile machinery — `@Profile`, profile-specific files,

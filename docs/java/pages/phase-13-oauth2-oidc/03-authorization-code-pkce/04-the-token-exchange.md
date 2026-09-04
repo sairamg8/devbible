@@ -12,7 +12,7 @@ sidebar_position: 6
 > RFC 7636 §4.5 (Client Sends the Authorization Code and the Code Verifier to the Token
 > Endpoint), §4.6 (Server Verifies code_verifier before Returning the Tokens)
 > ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Everything before this point was the browser carrying opaque strings around. The token
 request is your server talking directly to the authorization server over TLS, presenting

@@ -15,7 +15,7 @@ sidebar_position: 20
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.Builder.OfPlatform.html));
 > and the OpenJDK `jdk-25+36` source `src/hotspot/share/runtime/globals.hpp`
 > (`ThreadStackSize`, `VMThreadStackSize`, `CompilerThreadStackSize`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A Java heap is one allocation the JVM makes; a thread stack is one allocation *per thread*,
 made by the operating system, sized by `-Xss`, and completely invisible to `-Xmx`. That makes

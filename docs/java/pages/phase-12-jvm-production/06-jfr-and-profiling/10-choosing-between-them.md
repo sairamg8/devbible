@@ -13,7 +13,7 @@ sidebar_position: 18
 > ([github.com/async-profiler/async-profiler](https://github.com/async-profiler/async-profiler)),
 > and the **OpenJDK Mission Control README** ([github.com/openjdk/jmc](https://github.com/openjdk/jmc)).
 > 🔴 **No sandbox** — no benchmark or measurement below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every tool in this topic has a blind spot, and they are different blind spots. That is the whole
 basis for choosing: not which is best, but which one cannot see the thing you are looking for. This

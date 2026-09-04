@@ -11,7 +11,7 @@ sidebar_position: 7
 > Premium* ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html));
 > Stefan Tilkov, *Don't start with a monolith*, 9 June 2015
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Monolith-first is stated as an empirical observation, not a preference, and it has
 exactly two supporting arguments: you do not yet know whether the product is worth

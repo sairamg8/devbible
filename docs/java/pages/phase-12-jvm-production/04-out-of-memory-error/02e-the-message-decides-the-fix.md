@@ -15,7 +15,7 @@ sidebar_position: 7
 > **JDK 25 HotSpot source at tag `jdk-25+36`**
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/tree/jdk-25%2B36)).
 > **No sandbox** — commands and their documented behaviour only, no captured output.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **There is one decision to make in the first thirty seconds of an `OutOfMemoryError` incident, and
 it is not which tool to open. It is: which region does this message name? Get that right and the

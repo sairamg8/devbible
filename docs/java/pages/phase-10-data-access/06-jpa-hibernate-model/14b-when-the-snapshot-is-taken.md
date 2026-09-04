@@ -14,7 +14,7 @@ sidebar_position: 24
 > the Jakarta Persistence 3.2 specification §3.3.7.1 *Merging Detached Entity State* and
 > the `EntityManager#getReference` javadoc
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **A snapshot is taken when an instance becomes managed with state that came from a row.
 That qualifier matters: `getReference` makes an instance managed *without* reading a row,

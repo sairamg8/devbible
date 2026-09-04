@@ -15,7 +15,7 @@ sidebar_position: 30
 > and the `JpaTransactionManager`, `AbstractPlatformTransactionManager` and
 > `JdbcTransactionObjectSupport` sources
 > ([github.com/spring-projects/spring-framework/.../orm/jpa/JpaTransactionManager.java](https://github.com/spring-projects/spring-framework/blob/main/spring-orm/src/main/java/org/springframework/orm/jpa/JpaTransactionManager.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 11](11-nested-and-savepoints.md) established what `NESTED` is: one
 physical transaction with savepoints. This chunk is the decision. The short

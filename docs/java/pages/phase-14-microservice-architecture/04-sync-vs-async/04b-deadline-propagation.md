@@ -13,8 +13,8 @@ sidebar_position: 12
 > "Scoped Values" ([openjdk.org](https://openjdk.org/jeps/506)) — *Closed / Delivered*,
 > release **25**, i.e. final API, not preview.
 > 🔴 **No sandbox.** Durations below are chosen to make arithmetic legible, or are quoted
-> from the source they came from. Version spine: JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8 · Spring gRPC 1.0.3.
+> from the source they came from. Version spine: JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9 · Spring gRPC 1.0.3.
 
 **A timeout is a duration each hop invents. A deadline is an instant the whole request tree
 shares. The difference is the difference between six services each waiting two seconds and a

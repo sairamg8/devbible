@@ -13,7 +13,7 @@ sidebar_position: 2
 > the removal of Undertow support), and the Spring Boot reference *Servlet Web
 > Applications* (docs.spring.io/spring-boot/reference/web/servlet.html —
 > `FilterRegistrationBean`, `@ServletComponentScan`).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
 
 **Before Spring gets a say, the container has already offered you two extension
 points of its own: `ServletContext`, which is the application-wide object

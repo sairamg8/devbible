@@ -18,7 +18,7 @@ sidebar_position: 9
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)), and the
 > **JDK 25 Troubleshooting Guide** for the `jhsdb jmap` core-file workflow
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshooting-memory-leaks.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"Always set `-XX:+HeapDumpOnOutOfMemoryError`" is the most-repeated line in production Java
 advice and it is incomplete, because the flag covers only the failures whose code path calls

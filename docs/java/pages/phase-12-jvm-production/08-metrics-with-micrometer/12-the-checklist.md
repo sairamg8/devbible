@@ -13,7 +13,7 @@ sidebar_position: 33
 > **Spring Boot 4.1 production-ready reference · Metrics**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)) and the
 > **Google SRE Workbook**, chapter 5 ([sre.google](https://sre.google/workbook/alerting-on-slos/)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **This is the order to instrument a service in, and the ordering is the content. Two of these
 steps are effectively irreversible after the first deploy — common tags and the cardinality

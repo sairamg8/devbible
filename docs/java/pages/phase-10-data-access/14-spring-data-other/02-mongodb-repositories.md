@@ -13,7 +13,7 @@ sidebar_position: 2
 > ([…/mongodb/repositories/repositories.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/repositories/repositories.html))
 > and *Repository query keywords*
 > ([…/repositories/query-keywords-reference.html](https://docs.spring.io/spring-data/mongodb/reference/repositories/query-keywords-reference.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
 
 **`MongoRepository<T, ID>` extends `PagingAndSortingRepository` and `CrudRepository`, so
 everything you know about deriving `findByStatusAndPlacedAtAfter` from a method name

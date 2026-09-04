@@ -11,7 +11,7 @@ sidebar_position: 5
 > section) and the [Maven quick start](https://pitest.org/quickstart/maven/) entry for
 > `avoidCallsTo`, plus the `Feature.named("FLOGCALL")` declaration in pitest 1.30.0's
 > `org.pitest.mutationtest.build.intercept.logging.LoggingCallsFilterFactory`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Configuration and documented behaviour only.
 

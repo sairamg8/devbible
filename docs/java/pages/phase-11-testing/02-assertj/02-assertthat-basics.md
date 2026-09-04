@@ -11,7 +11,7 @@ sidebar_position: 2
 > ([assertj.github.io/doc](https://assertj.github.io/doc/#assertj-core-quick-start)) —
 > and the `assertj-core` 3.27.7 sources (`org.assertj.core.api.AbstractAssert`,
 > `org.assertj.core.api.Assertions`, `org.assertj.core.api.InstanceOfAssertFactories`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **One static import gives you the whole library, one overload picks the assert type from
 the static type of the argument, and every assertion returns `this` so you can keep going.

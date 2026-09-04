@@ -14,7 +14,7 @@ sidebar_position: 4
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.State.html)).
 > 🔴 **No sandbox.** The one full header line below is quoted from Oracle's documentation; every
 > other fragment is explicitly marked a schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A dump is a header, then one block per thread, then — if the JVM found one — a deadlock section.
 The thread block is the part you read a thousand times, and its first two lines carry more

@@ -12,7 +12,7 @@ sidebar_position: 18
 > ([sql-execution/batch-execution](https://www.jooq.org/doc/latest/manual/sql-execution/batch-execution/))
 > and *Transaction management*
 > ([sql-execution/transaction-management](https://www.jooq.org/doc/latest/manual/sql-execution/transaction-management/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **An ORM writes by loading an object graph, mutating it, and letting a flush work out the
 statements. jOOQ writes by issuing the statement. That sounds like a downgrade until you count the

@@ -19,7 +19,7 @@ sidebar_position: 5
 > default, `server.shutdown=immediate` to disable,
 > `spring.lifecycle.timeout-per-shutdown-phase`; graceful shutdown became the
 > default in **Spring Boot 3.4**) — and the **Spring Boot 2.6 release notes**
-> for circular references being prohibited by default. Spring Boot 4.1.0,
+> for circular references being prohibited by default. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Startup and shutdown are the two moments when the scope and lifecycle

@@ -13,7 +13,7 @@ sidebar_position: 5
 > final in JDK 21), the JDK 25 Core Libraries virtual-threads guide
 > (docs.oracle.com/en/java/javase/25/core/), and spring-projects/spring-boot
 > issue #41937 (enabling virtual threads and the effect on thread-pool limits).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The servlet model's defining property is that a request owns a thread from
 the first byte to the last. That is the reason Spring code is pleasant to write

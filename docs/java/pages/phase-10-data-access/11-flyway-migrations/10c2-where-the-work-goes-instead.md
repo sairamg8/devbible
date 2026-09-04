@@ -14,7 +14,7 @@ sidebar_position: 35
 > ([docs.spring.io](https://docs.spring.io/spring-batch/reference/domain.html))
 > and Kubernetes *Jobs*
 > ([kubernetes.io](https://kubernetes.io/docs/concepts/workloads/controllers/job/)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[10c](10c-when-it-should-not-be-a-migration.md) argued that a row-touching change with any of seven
 properties does not belong in a `V` file. That is only half an answer, because "not a migration" is

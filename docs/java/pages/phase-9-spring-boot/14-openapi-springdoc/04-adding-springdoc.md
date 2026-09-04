@@ -12,7 +12,7 @@ sidebar_position: 4
 > published POMs on Maven Central
 > (repo1.maven.org/maven2/org/springdoc/springdoc-openapi/3.1.0/ and
 > .../springdoc-openapi-starter-webmvc-ui/3.1.0/), springdoc.org and
-> springdoc.org/properties.html. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> springdoc.org/properties.html. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **springdoc-openapi is a community project, not a Spring project, and its

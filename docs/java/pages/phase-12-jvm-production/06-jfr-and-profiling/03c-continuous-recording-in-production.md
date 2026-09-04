@@ -12,7 +12,7 @@ sidebar_position: 6
 > and **JEP 509** for the configurable-detail argument
 > ([openjdk.org](https://openjdk.org/jeps/509)).
 > 🔴 **No sandbox** — no measurement, disk figure or recording below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Incidents are recognised after they start and understood after they end. A recording begun in
 response to one has already missed the cause, which is why continuous recording is not a nicety

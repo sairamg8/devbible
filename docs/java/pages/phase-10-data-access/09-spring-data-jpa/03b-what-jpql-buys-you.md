@@ -12,7 +12,7 @@ sidebar_position: 13
 > Jakarta Persistence 3.2 §4 (the query language, constructor expressions);
 > Hibernate ORM 7.4 User Guide, "A Guide to Hibernate Query Language"
 > ([HQL](https://docs.jboss.org/hibernate/orm/7.0/querylanguage/html_single/Hibernate_Query_Language.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Two lists decide whether `@Query` is the right tool. The first is what the

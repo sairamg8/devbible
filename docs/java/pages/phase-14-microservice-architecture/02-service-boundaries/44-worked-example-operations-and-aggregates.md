@@ -8,7 +8,7 @@ sidebar_position: 57
 
 > Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 6: The Life Cycle of
 > an Object; Vaughn Vernon, *Implementing Domain-Driven Design* (Addison-Wesley), Chapter 10: Aggregates.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Designing resilient microservice boundaries begins with deep domain modeling, not infrastructure diagrams. To demonstrate how domain boundaries are systematically derived from business realities, this worked example analyzes a realistic e-commerce order and fulfillment system. Before proposing any network boundaries, we map out the core business operations, identify candidate aggregate roots, and isolate strict transactional invariants. Identifying where transactional consistency is mandatory versus where eventual consistency is acceptable reveals the natural seams of the system and dictates where microservice boundaries can safely be cut.**
 

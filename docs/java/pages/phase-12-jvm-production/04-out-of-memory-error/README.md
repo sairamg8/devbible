@@ -21,7 +21,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** There is no JVM running behind these pages: no heap dump, no MAT screenshot, no
 > dominator tree, no retained size, no stack trace and no timing was produced by running anything.
 > Every output shape is quoted from documentation and attributed, or is presented as a schematic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Nine different things can print `java.lang.OutOfMemoryError` on a JDK 25 JVM. They share a class
 name and nothing else: not a cause, not a fix, not even the same evidence — one of them takes the

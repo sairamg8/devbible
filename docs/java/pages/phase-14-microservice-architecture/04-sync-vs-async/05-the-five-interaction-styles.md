@@ -11,7 +11,7 @@ sidebar_position: 18
 > and "Pattern: Remote Procedure Invocation (RPI)"
 > ([microservices.io](https://microservices.io/patterns/communication-style/rpi.html)), and
 > RFC 9110 §15.3.3 ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"Sync or async" is a false binary that hides the decision you are actually making. The
 messaging pattern page enumerates five distinct styles, and the useful way to arrange them is

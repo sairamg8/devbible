@@ -8,10 +8,10 @@ sidebar_position: 0
 
 > Verified: 2026-08-28 against the **Spring Framework 7.0.x** reference (TestContext framework:
 > context caching, context pausing, bean overriding, property sources, dynamic property sources,
-> transaction management) and the **Spring Boot 4.1.0** reference and *Test Auto-configuration
+> transaction management) and the **Spring Boot 4.1.1** reference and *Test Auto-configuration
 > Annotations* appendix; each chunk names the exact pages it used.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> **Spring Framework 7.0.8**, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> **Spring Framework 7.0.9**, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > **No sandbox** — these pages carry Java source and quotations from the reference, never a
 > fabricated test run, container log or timing.
 

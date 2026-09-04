@@ -11,7 +11,7 @@ sidebar_position: 29
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)) —
 > and *Verifying Application Module Structure*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **A simple module is protected by the Java language. As soon as it grows sub-packages, that
 protection evaporates — not because Spring Modulith weakens it, but because Java's

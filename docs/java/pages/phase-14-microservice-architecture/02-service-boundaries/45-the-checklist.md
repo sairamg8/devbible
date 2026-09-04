@@ -8,7 +8,7 @@ sidebar_position: 60
 
 > Verified: 2026-09-04 against Neal Ford & Mark Richards, *Software Architecture: The Hard Parts* (O'Reilly);
 > Sam Newman, *Building Microservices* (2nd ed., O'Reilly), Chapter 3; Michael Nygard, *Release It!* (2nd ed.).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Every microservice boundary represents an irreversible operational commitment: once provisioned with a dedicated database, CI/CD pipeline, and public API, collapsing or redrawing that boundary costs months of engineering effort. Architecture review boards and tech leads must subject every proposed service boundary to rigorous, adversarial evaluation before approval. This checklist provides a structured, production-tested rubric across six architectural dimensions—domain integrity, data autonomy, communication coupling, operational viability, team ownership, and blast radius—designed to catch bad boundaries during the design phase rather than in a production post-mortem.**
 

@@ -13,7 +13,7 @@ sidebar_position: 58
 > and the Spring Framework 7.0 reference *Testing → TestContext Framework →
 > Transaction management*
 > ([docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **A `@Transactional` that the proxy never applied does not throw, does not log, and
 does not fail any assertion a normal test makes. Every repository call still succeeds

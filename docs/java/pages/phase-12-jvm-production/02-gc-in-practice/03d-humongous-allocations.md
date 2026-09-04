@@ -23,7 +23,7 @@ sidebar_position: 16
 > [`gc/g1/g1_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/g1/g1_globals.hpp),
 > in which **`G1EagerReclaimHumongousObjects` no longer exists** despite the tuning guide
 > naming it twice.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Humongous allocation is the one G1 pathology that an application programmer can cause with
 a single ordinary line of Java and never suspect. A large `byte[]`, a `StringBuilder` that

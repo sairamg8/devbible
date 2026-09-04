@@ -13,7 +13,7 @@ sidebar_position: 2
 > container `ERROR` dispatch) — and the `ResponseStatusException` javadoc
 > (docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/server/ResponseStatusException.html
 > — subclass of `ErrorResponseException`, implements `ErrorResponse`, the
-> "reason" mapping to `detail`). Spring Boot 4.1.0, Spring Framework 7.0.x,
+> "reason" mapping to `detail`). Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **`@ExceptionHandler` is not a special language feature — it is one

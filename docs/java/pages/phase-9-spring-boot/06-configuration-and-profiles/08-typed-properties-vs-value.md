@@ -13,7 +13,7 @@ sidebar_position: 8
 > properties class are not reflected in the `Environment`) and the Spring
 > Framework reference *Using `@Value`*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/value-annotations.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@Value` is not a smaller version of `@ConfigurationProperties`. It is a
 different mechanism with a different resolver, different naming rules and a

@@ -15,7 +15,7 @@ sidebar_position: 8
 > and the **JDK 25 `java` tool reference** for the documented restriction on
 > `-XX:+HeapDumpOnOutOfMemoryError` and `-XX:OnOutOfMemoryError`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`-XX:+HeapDumpOnOutOfMemoryError`, `-XX:OnOutOfMemoryError`, `-XX:+CrashOnOutOfMemoryError` and
 `-XX:+ExitOnOutOfMemoryError` are not four independent features. They are four `if` statements

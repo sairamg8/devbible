@@ -15,7 +15,7 @@ sidebar_position: 26
 > ([github.com/flyway/flyway](https://github.com/flyway/flyway/tree/main/flyway-core/src/main/java/org/flywaydb/core/internal))
 > and Flyway's *Migration Transaction Handling* reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/migration-transaction-handling-273973399.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[08b2](08b2-seeing-it-and-bounding-it.md) put a bound on the wait. A bound turns a silent outage
 into a failed deployment, which is a strict improvement — but on a table that is never truly idle,

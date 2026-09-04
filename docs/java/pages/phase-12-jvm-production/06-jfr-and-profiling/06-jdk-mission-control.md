@@ -15,7 +15,7 @@ sidebar_position: 11
 > independent of the JDK, and I did not verify a current version number — check your vendor's
 > download page rather than trusting a number written here.
 > 🔴 **No sandbox** — no screenshot, panel output or measurement below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **JDK Mission Control is the graphical client for JFR recordings: pages of aggregated views, a
 call tree, and an automated analysis that applies a set of rules to a recording and reports what

@@ -22,7 +22,7 @@ sidebar_position: 26
 > ([intercepting-invocations](https://docs.junit.org/6.0.3/extensions/intercepting-invocations.html)) and
 > "Relative Execution Order of User Code and Extensions"
 > ([relative-execution-order](https://docs.junit.org/6.0.3/extensions/relative-execution-order-of-user-code-and-extensions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Almost everything you think of as "JUnit" beyond `@Test` and `Assertions` is an
 extension. `@TempDir` is an extension. `@Disabled` is an extension. `@SpringBootTest` works

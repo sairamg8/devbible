@@ -12,9 +12,9 @@ sidebar_position: 18
 > `MockResponse.Builder` and `SocketEffect` renames, and the `RecordedRequest` property
 > changes; plus **WireMock**'s JUnit 5 documentation
 > ([wiremock.org/docs/junit-jupiter](https://wiremock.org/docs/junit-jupiter/)) for the
-> comparison, and `spring-boot-dependencies:4.1.0` (neither library appears in it).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3.
+> comparison, and `spring-boot-dependencies:4.1.1` (neither library appears in it).
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source, build configuration and
 > documented behaviour only, never console output.
 

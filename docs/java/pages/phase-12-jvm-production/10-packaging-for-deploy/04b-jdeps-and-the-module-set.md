@@ -20,7 +20,7 @@ sidebar_position: 15
 > Efficient Deployments"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/efficient.html)).
 > 🔴 **No sandbox** — no analysis was run and no module list below is the output of a tool. JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[04](04-jlink.md) left one decision unmade: what goes in `--add-modules`. The tooling makes this
 look mechanical — `jdeps --print-module-deps` even documents its output as being for

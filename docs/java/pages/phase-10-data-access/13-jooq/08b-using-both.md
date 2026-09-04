@@ -8,7 +8,7 @@ sidebar_position: 27
 
 > Verified: 2026-08 against the jOOQ 3.21 manual — *Different use cases for jOOQ*
 > ([getting-started/use-cases](https://www.jooq.org/doc/latest/manual/getting-started/use-cases/)),
-> the Spring Boot 4.1.0 sources
+> the Spring Boot 4.1.1 sources
 > [`JpaBaseConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-jpa/src/main/java/org/springframework/boot/jpa/autoconfigure/JpaBaseConfiguration.java),
 > [`DataSourceTransactionManagerAutoConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-jdbc/src/main/java/org/springframework/boot/jdbc/autoconfigure/DataSourceTransactionManagerAutoConfiguration.java)
 > and [`JooqAutoConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-jooq/src/main/java/org/springframework/boot/jooq/autoconfigure/JooqAutoConfiguration.java),
@@ -17,7 +17,7 @@ sidebar_position: 27
 > and
 > [`TransactionAwareDataSourceProxy`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.html)
 > javadocs.
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The most common way jOOQ enters a codebase is not a migration — it is an addition. JPA keeps the
 aggregate it was already writing, and jOOQ takes the four reporting queries that were fighting the

@@ -11,7 +11,7 @@ sidebar_position: 5
 > 7.x reference (servlet authentication, session management), at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6749) and
 > [docs.spring.io/spring-security/reference](https://docs.spring.io/spring-security/reference/).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **OAuth2 exists to let a party you do not control act on a resource owner's behalf. Remove
 the third party and you have removed the problem, and what is left is a lot of machinery

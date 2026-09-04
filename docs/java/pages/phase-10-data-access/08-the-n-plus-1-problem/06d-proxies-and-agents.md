@@ -11,7 +11,7 @@ sidebar_position: 15
 > and the `org.hibernate.cfg.JdbcSettings` javadoc for `STATEMENT_INSPECTOR` in
 > the Hibernate 7.4 source
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/cfg/JdbcSettings.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, HikariCP 7.0.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, HikariCP 7.0.2.
 
 **Hibernate's statistics count what Hibernate does. Most real services also issue
 statements Hibernate never sees — a `JdbcClient` report, a second datasource, a

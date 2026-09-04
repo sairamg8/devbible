@@ -17,7 +17,7 @@ sidebar_position: 15
 > ([disabling-tests](https://docs.junit.org/6.0.3/writing-tests/disabling-tests.html));
 > javadoc for `TagFilter`
 > ([TagFilter](https://docs.junit.org/6.0.3/api/org.junit.platform.launcher/org/junit/platform/launcher/TagFilter.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[06d](06d-tagging.md) put the labels on. This chunk is what reads them: a three-operator
 boolean grammar, the three places a real project writes it down, and the one behavioural

@@ -14,7 +14,7 @@ sidebar_position: 1
 > Framework reference *Exceptions*
 > (docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet/exceptionhandlers.html
 > — the container ERROR dispatch). Property renames confirmed against the
-> **Spring Boot 4.0 Configuration Changelog** (GitHub wiki). Spring Boot 4.1.0,
+> **Spring Boot 4.0 Configuration Changelog** (GitHub wiki). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Every response your service can produce is part of its published interface,

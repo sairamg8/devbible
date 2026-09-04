@@ -10,7 +10,7 @@ sidebar_position: 45
 > ([github.com/testcontainers](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)),
 > the **2.0.0 release notes**, and Spring Boot 4.1's **Testcontainers** reference
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Testcontainers 2.0.5, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — the page carries Java source and documented configuration only.

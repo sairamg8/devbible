@@ -13,7 +13,7 @@ sidebar_position: 2
 > (docs.spring.io/spring-security/reference/servlet/integrations/cors.html) and
 > *Session Management*
 > (docs.spring.io/spring-security/reference/servlet/authentication/session-management.html
-> — `SecurityContextHolderFilter` and explicit saving). Spring Boot 4.1.0,
+> — `SecurityContextHolderFilter` and explicit saving). Spring Boot 4.1.1,
 > Spring Security 7.x, JDK 25.
 
 **Inside the winning chain there is a fixed, non-negotiable order, and you do not

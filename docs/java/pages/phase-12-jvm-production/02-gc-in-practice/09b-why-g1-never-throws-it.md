@@ -18,7 +18,7 @@ sidebar_position: 37
 > Also the **HotSpot GC Tuning Guide, Release 25**, whose overhead-limit text appears **only**
 > under "The Parallel Collector"
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/parallel-collector1.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[09](09-gc-overhead-and-the-death-spiral.md) described the mechanism that ends a death spiral.
 This page is the part that changes what you actually do about it: that mechanism belongs to the

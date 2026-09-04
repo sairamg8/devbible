@@ -8,8 +8,8 @@ sidebar_position: 20
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `report-aggregate-mojo.html` (quoted on module
 > selection and scope semantics), `merge-mojo.html` behaviour as documented on `maven.html`, and
-> the **Gradle user manual**'s JaCoCo page. Version spine from `spring-boot-dependencies:4.1.0`:
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> the **Gradle user manual**'s JaCoCo page. Version spine from `spring-boot-dependencies:4.1.1`:
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — configuration and documented behaviour only.
 > ⚠️ The Maven docs do **not** state which module should run the aggregate goal; that guidance
 > below is presented as convention, not as documentation.

@@ -13,7 +13,7 @@ sidebar_position: 23
 > ([docs.hibernate.org/orm/7.4/javadocs/org/hibernate/loader/MultipleBagFetchException.html](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/loader/MultipleBagFetchException.html))
 > and the Hibernate ORM 7.4 *Introduction* §5.6 *Proxies and lazy fetching*
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Eager fetching does not add up. It multiplies. Two eager collections on one entity give
 a result set that is the product of their sizes, not the sum. An eager association whose

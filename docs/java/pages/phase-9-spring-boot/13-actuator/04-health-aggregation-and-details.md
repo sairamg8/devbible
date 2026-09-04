@@ -6,14 +6,14 @@ sidebar_position: 4
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Health* (docs.spring.io/spring-boot/reference/actuator/endpoints.html:
 > `StatusAggregator`, `HttpCodeStatusMapper`, the default status-to-HTTP
 > mapping table, `management.endpoint.health.status.order`,
 > `management.endpoint.health.show-details`, `.show-components`, `.roles`, and
-> the per-group `status.http-mapping` properties) and the Spring Boot 4.1.0 API
+> the per-group `status.http-mapping` properties) and the Spring Boot 4.1.1 API
 > javadoc (`org.springframework.boot.health.actuate.endpoint.StatusAggregator`,
-> `HttpCodeStatusMapper`). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `HttpCodeStatusMapper`). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The second question an aggregate raises is *how disagreement is resolved*, and
 the answer is two pluggable steps most teams never look at: a `StatusAggregator`

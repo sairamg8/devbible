@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([definition.html](https://docs.spring.io/spring-data/jpa/reference/repositories/definition.html))
 > and "Core concepts"
 > ([core-concepts.html](https://docs.spring.io/spring-data/jpa/reference/repositories/core-concepts.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
 
 **`extends JpaRepository<Order, Long>` is a decision to publish roughly two dozen
 methods — including `deleteAllInBatch()`, `flush()` and `getReferenceById()` — to

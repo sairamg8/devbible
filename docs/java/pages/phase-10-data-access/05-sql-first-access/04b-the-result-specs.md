@@ -13,7 +13,7 @@ sidebar_position: 10
 > the `JdbcOperations.queryForStream` javadoc, and the Spring Framework 7.0
 > reference *Data Access → JDBC Core Classes*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, PostgreSQL 18.
 
 **`JdbcTemplate` puts the expected result cardinality in the *method name* —
 `queryForObject` means "exactly one" and `query` means "any number", and you commit

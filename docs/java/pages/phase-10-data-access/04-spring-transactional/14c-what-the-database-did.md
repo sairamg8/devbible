@@ -16,7 +16,7 @@ sidebar_position: 42
 > ([jakarta.ee/specifications/persistence/3.2/apidocs](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/flushmodetype))
 > and the Spring Data JPA `JpaRepository` javadoc
 > ([docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)).
-> JDK 25, Spring Framework 7.0.8, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[Chunk 14](14-the-caught-exception.md) argued from Spring's side: catch the
 exception and the interceptor sees a normal return, so it commits. That is true,

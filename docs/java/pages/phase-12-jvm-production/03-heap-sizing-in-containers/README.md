@@ -22,7 +22,7 @@ sidebar_position: 0
 > ([github.com](https://github.com/paketo-buildpacks/libjvm)).
 > **No sandbox** — every figure here is either quoted from those sources or arithmetic derived on
 > the page and labelled as such. No console output, no measurements.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Container sizing is not a tuning exercise, it is an accounting exercise with one hard
 constraint. The kernel enforces a single number; the JVM divides that number among about twenty

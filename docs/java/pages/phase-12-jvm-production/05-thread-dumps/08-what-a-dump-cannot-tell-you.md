@@ -13,7 +13,7 @@ sidebar_position: 14
 > and the **JDK 25 `jcmd` tool reference** for `Thread.print`'s impact rating
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox** — nothing below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A thread dump is an instant. Everything it is good at follows from that, and so does everything
 it is bad at: it can tell you exactly what every thread was doing at one moment, and it can tell

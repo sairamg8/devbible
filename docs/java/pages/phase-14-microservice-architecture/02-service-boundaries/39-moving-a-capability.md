@@ -8,7 +8,7 @@ sidebar_position: 52
 
 > Verified: 2026-09-04 against Sam Newman, *Monolith to Microservices* (O'Reilly), Chapter 4: Migrating
 > Existing Functionality; Martin Fowler, *Branch by Abstraction* and *Parallel Run*.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **In an evolving distributed system, capability boundaries are not static. As business workflows clarify, an aggregate originally assigned to Service A often proves to have far higher affinity with the domain invariants of Service B. Forcing the aggregate to remain in Service A generates distributed coupling, cross-service synchronous queries, and distributed transactions. Relocating an aggregate across running microservices cannot be done with a stop-the-world maintenance window. It requires a disciplined six-phase Expand-and-Contract migration: implementing the capability in the destination service, establishing continuous data synchronization via Change Data Capture (CDC), backfilling historical state, verifying data parity with shadow traffic, cutting over reads and writes, and decommissioning the legacy schema.**
 

@@ -12,7 +12,7 @@ sidebar_position: 0
 > Container Configuration*
 > (docs.spring.io/spring-framework/reference/core/beans/) — plus the Framework
 > 6.1 deprecation of `CandidateComponentsIndex` and the Framework 7.0 addition
-> of `FullyQualifiedConfigurationBeanNameGenerator`. Spring Boot 4.1.0, Spring
+> of `FullyQualifiedConfigurationBeanNameGenerator`. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **Spring's container is a two-pass program that runs before your first request:

@@ -19,7 +19,7 @@ sidebar_position: 0
 > 🔴 **No sandbox.** There is no JVM, container or profiler run behind these pages. Every figure is
 > quoted from documentation and attributed, or labelled a schematic. No flame graph, event table,
 > percentage or timing here is a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[Topic 05](../05-thread-dumps/README.md) answered "what is blocked". This topic answers "what is
 busy", and they need different tools for a structural reason: a thread dump has no time axis. Three

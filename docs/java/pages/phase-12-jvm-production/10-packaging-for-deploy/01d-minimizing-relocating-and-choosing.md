@@ -14,7 +14,7 @@ sidebar_position: 4
 > **Spring Boot specification**, "Executable Jar Format → Nested JARs"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/specification/executable-jar/nested-jars.html)).
 > 🔴 **No sandbox** — no build was run, and no image size or startup timing below is a measurement.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[01b](01b-why-not-shading.md) and [01c](01c-the-collision-catalogue.md) made the case against
 shading an application. This page finishes it honestly: the size optimisation people reach for

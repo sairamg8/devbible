@@ -13,7 +13,7 @@ sidebar_position: 20
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/documentation/src/main/asciidoc/userguide/chapters/caching/Caching.adoc))
 > and `org.hibernate.cfg.CacheSettings`
 > ([docs.hibernate.org/orm/7.4/javadocs/](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/cfg/CacheSettings.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **[6](06-hibernate-second-level.md) argued that the second-level cache is keyed by identifier and
 does not stop a query running. The query cache is the feature that would — and Hibernate ships it

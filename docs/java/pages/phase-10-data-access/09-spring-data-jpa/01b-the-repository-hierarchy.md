@@ -12,7 +12,7 @@ sidebar_position: 2
 > ([definition.html](https://docs.spring.io/spring-data/jpa/reference/repositories/definition.html))
 > — and the `JpaRepository` javadoc, Spring Data JPA Parent 4.1.0
 > ([docs.spring.io/spring-data/jpa/docs/current/api](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Jakarta Persistence 3.2.
 
 **There are more interfaces here than anyone remembers, and exactly one of them
 is a trap. `PagingAndSortingRepository` has not extended `CrudRepository` since

@@ -11,7 +11,7 @@ sidebar_position: 35
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html)).
 > The documented behaviour quoted here is JUnit's; the review standard built on it is an argument,
 > not a rule the framework enforces.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **[09](09-when-not-to-parameterize.md) through [09d](09d-setup-drift-and-computed-expectations.md)
 described six ways a table stops being data. None of them is an argument against large tables, and

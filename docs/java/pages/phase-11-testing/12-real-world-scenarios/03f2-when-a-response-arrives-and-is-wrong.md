@@ -6,14 +6,14 @@ sidebar_position: 20
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-01 against the **Spring Framework 7.0.8** source of
+> Verified: 2026-09-01 against the **Spring Framework 7.0.9** source of
 > [`DefaultRestClient`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-web/src/main/java/org/springframework/web/client/DefaultRestClient.java)
 > — the body-extraction `catch (UncheckedIOException | IOException | HttpMessageNotReadableException exc)`
 > and the `RestClientException("Error while extracting response for type […] and content type […]")`
 > it throws — and of
 > [`UnknownContentTypeException`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-web/src/main/java/org/springframework/web/client/UnknownContentTypeException.java),
 > whose javadoc reads *"Raised when no suitable `HttpMessageConverter` could be found to
-> extract the response."*; the **Spring Boot 4.1.0** reference *Calling REST Services*
+> extract the response."*; the **Spring Boot 4.1.1** reference *Calling REST Services*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/io/rest-client.html)) for
 > `spring.http.clients` and the client detection order, and the source of
 > [`HttpRedirects`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-http-client/src/main/java/org/springframework/boot/http/client/HttpRedirects.java);
@@ -21,8 +21,8 @@ sidebar_position: 20
 > ([wiremock.org](https://wiremock.org/docs/simulating-faults/)); and the **Spring Framework
 > 7.0.x** `MockRestResponseCreators` javadoc
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/client/response/MockRestResponseCreators.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source, build configuration and
 > documented behaviour only, never console output or timings.
 

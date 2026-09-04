@@ -11,7 +11,7 @@ sidebar_position: 6
 > Lewis, "Microservices"
 > ([martinfowler.com](https://martinfowler.com/articles/microservices.html)).
 > 🔴 **Every number here is arithmetic from an assumed input.** Nothing was measured.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The availability product is interesting; the error budget is actionable. Turn `pⁿ` into
 minutes per month and the argument stops being an architecture opinion and becomes a

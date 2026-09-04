@@ -12,7 +12,7 @@ sidebar_position: 16
 > — the adapted-`FieldError` example, its four error codes and its message
 > arguments) and the `DefaultMessageCodesResolver` javadoc
 > (docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/validation/DefaultMessageCodesResolver.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The second message system does not interpolate anything. It hands Spring a
 *list of codes*, most-specific first, and lets a `MessageSource` pick the first

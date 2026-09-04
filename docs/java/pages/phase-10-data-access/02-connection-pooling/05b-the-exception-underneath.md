@@ -13,7 +13,7 @@ sidebar_position: 15
 > ([docs.oracle.com/en/java/javase/25/docs/api/java.sql/](https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/)),
 > and the PostgreSQL 18 error-code appendix
 > ([postgresql.org/docs/18/errcodes-appendix.html](https://www.postgresql.org/docs/18/errcodes-appendix.html)).
-> JDK 25, HikariCP 7.0.2, PostgreSQL 18, pgjdbc 42.7.13, Spring Framework 7.0.8.
+> JDK 25, HikariCP 7.0.2, PostgreSQL 18, pgjdbc 42.7.13, Spring Framework 7.0.9.
 
 **When HikariCP gives up waiting, it does not invent an error out of nothing. If
 a connection attempt failed recently, it takes that driver exception, **copies

@@ -13,7 +13,7 @@ sidebar_position: 4
 > [Maven quick start](https://pitest.org/quickstart/maven/) (`detectInlinedCode`,
 > `mutateStaticInitializers`) and the [Basic concepts](https://pitest.org/quickstart/basic_concepts/)
 > page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Java source, configuration and documented or
 > source-read behaviour only.

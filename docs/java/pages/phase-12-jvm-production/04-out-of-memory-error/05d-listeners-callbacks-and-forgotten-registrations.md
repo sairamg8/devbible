@@ -14,7 +14,7 @@ sidebar_position: 19
 > and the **Eclipse Memory Analyzer documentation** for GC root types
 > ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/concepts/gcroots.html)).
 > **No sandbox** — the Java below is illustrative source, never a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The observer pattern has a memory contract that nobody writes down: the subject holds a strong
 reference to every observer, the subject usually lives longer than the observer, and the subject

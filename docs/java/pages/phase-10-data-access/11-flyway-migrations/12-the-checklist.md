@@ -13,7 +13,7 @@ sidebar_position: 43
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-altertable.html))
 > and *Explicit Locking*
 > ([postgresql.org](https://www.postgresql.org/docs/18/explicit-locking.html)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **A migration arrives in a pull request as four lines of SQL that any of you could have written, and
 that is exactly why it gets approved in ninety seconds. Almost none of the failures in this topic were

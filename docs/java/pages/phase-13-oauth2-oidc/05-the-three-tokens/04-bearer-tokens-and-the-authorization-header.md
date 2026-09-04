@@ -13,7 +13,7 @@ sidebar_position: 6
 > 7.x reference — OAuth 2.0 Bearer Tokens
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/bearer-tokens.html)),
 > and `DefaultBearerTokenResolver` source on `main`.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **"Bearer" is not branding. It is a precise technical claim about what the token does *not*
 do, and RFC 6750's definition is the most consequential sentence in the whole

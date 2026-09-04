@@ -10,8 +10,8 @@ sidebar_position: 37
 > [FAQ](https://pitest.org/faq/) (the *"PIT is taking forever to run"*, *"How does PIT choose
 > which tests to run?"*, *"I'm seeing a lot of timeouts"* and determinism entries) and the
 > [Maven quick start](https://pitest.org/quickstart/maven/).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** There are **no timings, no mutation scores and
 > no run durations** on this page. Every quantitative statement below is either quoted from
 > pitest's documentation or is arithmetic over the mechanism it describes.

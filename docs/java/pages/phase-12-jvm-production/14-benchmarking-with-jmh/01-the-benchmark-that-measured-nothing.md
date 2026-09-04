@@ -10,7 +10,7 @@ sidebar_position: 1
 > ([github.com/openjdk/jmh](https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples)) —
 > `JMHSample_08_DeadCode`, `JMHSample_10_ConstantFold`, `JMHSample_11_Loops`,
 > `JMHSample_12_Forking`, `JMHSample_13_RunToRun` — and the JMH `README.md` on `master`.
-> Latest released JMH on Maven Central: **1.37**. Version spine: JDK 25, Spring Boot 4.1.0.
+> Latest released JMH on Maven Central: **1.37**. Version spine: JDK 25, Spring Boot 4.1.1.
 > 🔴 **No sandbox** — no benchmark was run for these pages. Every number quoted below comes
 > from the JMH samples' own commentary and is attributed where it appears; nothing is a
 > measurement taken here.

@@ -14,7 +14,7 @@ sidebar_position: 14
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-insert.html))
 > and the *Repeatable migrations* concept page
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/flyway-concepts/migrations/repeatable-migrations)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **A versioned migration describes a *step*: "add this column". A repeatable migration describes a
 *state*: "this view is defined like this". That is the whole test, and it is a better one than any

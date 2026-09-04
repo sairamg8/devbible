@@ -7,16 +7,16 @@ sidebar_position: 30
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08-31 against **Spring Security 7.1.0** (managed by
-> `spring-boot-dependencies:4.1.0`) — the 7.1.0 source of `AuthorizationDeniedException`
+> `spring-boot-dependencies:4.1.1`) — the 7.1.0 source of `AuthorizationDeniedException`
 > ([github.com/spring-projects/spring-security](https://github.com/spring-projects/spring-security/blob/7.1.0/core/src/main/java/org/springframework/security/authorization/AuthorizationDeniedException.java)),
 > whose javadoc reads *"An `AccessDeniedException` that contains the `AuthorizationResult`"*
-> and whose `@since` is **6.3** — and the **Spring Framework 7.0.8** reference for
+> and whose `@since` is **6.3** — and the **Spring Framework 7.0.9** reference for
 > proxy-mode interception semantics
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/aop.html)),
 > which states that *"only external method calls coming in through the proxy are
 > intercepted"*.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, Spring Security 7.1.0, JUnit Jupiter 6.0.3, Mockito 5.23.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, Spring Security 7.1.0, JUnit Jupiter 6.0.3, Mockito 5.23.0.
 > ⚠️ **No sandbox and no test runs on this machine** — this page carries Java source and
 > documented behaviour, never console output.
 

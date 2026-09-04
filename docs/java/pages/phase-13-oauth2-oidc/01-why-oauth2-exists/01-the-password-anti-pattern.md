@@ -9,7 +9,7 @@ sidebar_position: 1
 > Verified: 2026-08-31 against RFC 6749 (*The OAuth 2.0 Authorization Framework*) —
 > the Abstract, §1 (Introduction) and its five enumerated limitations, §1.1 (Roles) —
 > at [datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every design decision in OAuth2 — the redirect, the two-legged token exchange, the scopes,
 the short-lived access token, the refresh token the API never sees — is an answer to one

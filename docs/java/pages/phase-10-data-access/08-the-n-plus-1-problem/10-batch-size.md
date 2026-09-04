@@ -13,7 +13,7 @@ sidebar_position: 35
 > ([docs.hibernate.org/orm/7.4/javadocs](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/annotations/BatchSize.html)),
 > and *A Short Guide to Hibernate 7* §8.5 *Batch fetching and subselect fetching*
 > ([docs.hibernate.org/orm/7.4/introduction](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Hibernate ORM 7.4.1, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Hibernate ORM 7.4.1, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Every fix so far has tried to make the extra queries *not happen* — by joining,
 by planning the fetch, by changing the mapping. Batch fetching accepts that they

@@ -16,7 +16,7 @@ sidebar_position: 7
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)),
 > and the **JDK 25 `jcmd` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This is the lookup table. Every later topic in this phase reads one region of it, and
 every memory incident resolves to "this region grew". For each region the three questions

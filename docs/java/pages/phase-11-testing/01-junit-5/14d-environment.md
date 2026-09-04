@@ -14,7 +14,7 @@ sidebar_position: 56
 > ([TestSocketUtils](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/util/TestSocketUtils.html));
 > the JUnit 6.0.3 User Guide — "Built-in Extensions"
 > ([writing-tests/built-in-extensions](https://docs.junit.org/6.0.3/writing-tests/built-in-extensions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **A test that names a path, a port or a row is making a claim about a resource it does not own.
 On a laptop, running one build, in one checkout, that claim is true often enough to look like a

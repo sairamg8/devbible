@@ -7,7 +7,7 @@ sidebar_position: 0
 <span className="db-tier t-know">Know</span>
 
 > Verified: see each chunk's own `> Verified:` line. Spine: jOOQ **3.21.7**, JDK 25,
-> Spring Boot 4.1.0, PostgreSQL 18.
+> Spring Boot 4.1.1, PostgreSQL 18.
 
 **SQL as a typed Java DSL generated from your real schema — so a wrong column name is a compile
 error, not something a user finds. And the full price of that guarantee.**

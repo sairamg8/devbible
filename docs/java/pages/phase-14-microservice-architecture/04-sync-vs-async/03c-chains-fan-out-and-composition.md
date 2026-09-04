@@ -13,7 +13,7 @@ sidebar_position: 7
 > the Spring Framework 7.0.x reference for `RestClient` and `WebClient`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)).
 > 🔴 **All numbers on this page are arithmetic from assumed inputs, not measurements.**
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **There are two topologies for a request that needs several services: a chain, where A calls
 B which calls C, and a fan-out, where A calls B, C and D itself. They behave completely

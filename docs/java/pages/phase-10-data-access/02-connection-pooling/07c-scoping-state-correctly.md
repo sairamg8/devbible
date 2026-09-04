@@ -13,7 +13,7 @@ sidebar_position: 20
 > ([jdbc.postgresql.org/documentation/use/](https://jdbc.postgresql.org/documentation/use/)),
 > and the HikariCP 7.0.2 README `connectionInitSql`
 > ([github.com/brettwooldridge/HikariCP](https://github.com/brettwooldridge/HikariCP)).
-> JDK 25, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18, Spring Boot 4.1.0.
+> JDK 25, HikariCP 7.0.2, pgjdbc 42.7.13, PostgreSQL 18, Spring Boot 4.1.1.
 
 **[Chunk 7b](07b-what-sql-leaves-behind.md) catalogued what survives a return to
 the pool. Every entry has a mechanical fix, and they are all the same move: stop

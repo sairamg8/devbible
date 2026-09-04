@@ -13,7 +13,7 @@ sidebar_position: 14
 > RFC 9700 §2.1 (Protecting Redirect-Based Flows), §2.1.1 (Authorization Code Grant), §4.5
 > (Authorization Code Injection), §4.7 (Cross-Site Request Forgery)
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **This is the chunk people get wrong in interviews and in production. `state` is a check your
 *client* performs on its *callback*, comparing a value it stored in the browser session — it

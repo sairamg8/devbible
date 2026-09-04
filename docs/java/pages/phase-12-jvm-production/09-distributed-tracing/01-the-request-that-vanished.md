@@ -15,8 +15,8 @@ sidebar_position: 1
 > 🔴 **No sandbox.** No trace waterfall, span table, latency figure or log line on any page in
 > this topic is a captured run; every concrete value is either quoted from a specification with
 > attribution or explicitly labelled a schematic.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8 · Micrometer 1.17.0 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0 ·
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9 · Micrometer 1.17.0 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0 ·
 > Brave 6.3.1.
 
 **A single user request touches six services. It is slow. Every one of the six dashboards says

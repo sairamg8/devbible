@@ -12,7 +12,7 @@ sidebar_position: 45
 > and the Hibernate ORM 7.4 *User Guide* §12.1 *The basics* and §12.7 *Dynamic fetching
 > via Hibernate profiles*
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0,
 > Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Every fix so far attaches the fetch plan to a query. A fetch profile does the opposite:

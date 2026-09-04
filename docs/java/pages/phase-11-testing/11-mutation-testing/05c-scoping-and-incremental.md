@@ -13,7 +13,7 @@ sidebar_position: 35
 > [command line quick start](https://pitest.org/quickstart/commandline/) for `--mutableCodePaths` and
 > `--dependencyDistance`; the [FAQ](https://pitest.org/faq/) entry *"PIT is taking forever to run"*; and
 > the `+auto_threads` and `+CLASSLIMIT` feature strings from pitest 1.30.0's feature declarations.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3,
 > Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no build on this machine.** Behaviour is read from pitest's documentation and the
 > plugins' source. **No timing, speed-up figure or run outcome on this page came from executing

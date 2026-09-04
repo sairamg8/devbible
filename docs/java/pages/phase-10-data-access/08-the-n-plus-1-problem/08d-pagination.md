@@ -16,7 +16,7 @@ sidebar_position: 20
 > and `org.hibernate.query.QueryLogging` and `org.hibernate.cfg.QuerySettings` in
 > the Hibernate 7.4 source
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/query/QueryLogging.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **🔴 For fifteen years the answer to "can I paginate a query with a collection
 fetch join?" was no — Hibernate would fetch every matching row and apply the

@@ -12,7 +12,7 @@ sidebar_position: 38
 > ([MethodOrderer.Random](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/MethodOrderer.Random.html))
 > and `ClassOrderer.Random`
 > ([ClassOrderer.Random](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/ClassOrderer.Random.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every other `MethodOrderer` in [11](11-execution-order.md) exists to impose an order.
 `Random` exists to destroy one — to take the stable-but-nonobvious default and shake it, so

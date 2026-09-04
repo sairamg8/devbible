@@ -17,7 +17,7 @@ sidebar_position: 67
 > ([.../transaction/TransactionDefinition.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/TransactionDefinition.html))
 > and the PostgreSQL 18 manual *Client Connection Defaults*
 > ([postgresql.org/docs/18/runtime-config-client.html](https://www.postgresql.org/docs/18/runtime-config-client.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, PostgreSQL 18.
 
 **[22](22-the-checklist.md) is for a service that is already misbehaving. This one
 is for the review that stops it getting there — nine questions to ask of a

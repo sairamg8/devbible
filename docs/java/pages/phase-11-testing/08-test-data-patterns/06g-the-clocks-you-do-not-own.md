@@ -16,8 +16,8 @@ sidebar_position: 29
 > ([docs.hibernate.org](https://docs.hibernate.org/orm/7.0/javadocs/org/hibernate/annotations/CreationTimestamp.html)),
 > and the PostgreSQL 18 manual *Date/Time Functions and Operators*
 > ([postgresql.org](https://www.postgresql.org/docs/18/functions-datetime.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7, Testcontainers 2.0.5.
 > **No sandbox and no Docker** — Java source, SQL and documented behaviour only, never a run.
 
 **Injecting a `Clock` fixes the timestamps your own code writes. It does not fix the ones

@@ -11,7 +11,7 @@ sidebar_position: 2
 > happens until you subscribe", the `Publisher`/`Subscriber` contract)
 > (projectreactor.io/docs/core/release/reference/coreFeatures.html) — and the
 > Spring Framework reference *Web on Reactive Stack → Reactive Core*.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A reactive pipeline is not a sequence of statements that runs; it is a value
 you assemble that *describes* work, and which does nothing at all until someone

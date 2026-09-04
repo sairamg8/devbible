@@ -15,7 +15,7 @@ sidebar_position: 33
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/))
 > and the Hibernate ORM 7.4 *Introduction* §3.8 *Version attributes* and §5.3
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Optimistic locking is not an API you call. It is a column you map. Put `@Version` on a
 field and every `UPDATE` and `DELETE` Hibernate generates for that entity gains

@@ -16,7 +16,7 @@ sidebar_position: 32
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Spring Data JPA `@Modifying` javadoc
 > ([docs.spring.io/spring-data/jpa/docs/current/api/](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/Modifying.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2.
 
 **Auto-flush protects one direction: your unflushed changes cannot make a JPQL query lie to

@@ -11,7 +11,7 @@ sidebar_position: 8
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html))
 > and *Understanding the Cache Abstraction*
 > ([docs.spring.io/spring-framework/reference/integration/cache/strategies.html](https://docs.spring.io/spring-framework/reference/integration/cache/strategies.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **The reference states the precondition in one sentence: caching "works only for methods that
 are guaranteed to return the same output (result) for a given input (or arguments) no matter

@@ -12,7 +12,7 @@ sidebar_position: 28
 > ([microservices.io](https://microservices.io/articles/dark-energy-dark-matter/dark-matter/minimize-design-time-coupling.html)),
 > which notes that tight design-time coupling produces expensive lockstep changes; Gall,
 > Hajek and Jazayeri (ICSM 1998) and Adam Tornhill, *Software Design X-Rays* (2018), cited by
-> concept. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud
+> concept. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud
 > train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. **No sandbox** — no
 > output of any command in this topic is reproduced.
 

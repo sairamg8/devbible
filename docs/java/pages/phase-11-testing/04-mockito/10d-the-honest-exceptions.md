@@ -12,7 +12,7 @@ sidebar_position: 44
 > sections 13 (*"Spying on real objects"*), 16 (*"Real partial mocks"*) and 30 (*"Spying or
 > mocking abstract classes"*), the `Mockito.CALLS_REAL_METHODS` javadoc, and
 > [`MockSettings#useConstructor`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/MockSettings.java).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source,
 > never a fabricated test run.
 

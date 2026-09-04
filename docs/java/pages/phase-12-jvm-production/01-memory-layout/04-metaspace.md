@@ -13,7 +13,7 @@ sidebar_position: 14
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/)),
 > and the **JDK 25 `java` tool reference**
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Metaspace is where a class's metadata lives once it is loaded: the runtime constant pool, the
 method bytecode, the field and method descriptors, the vtables. It is native memory, so it sits

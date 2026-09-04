@@ -17,7 +17,7 @@ sidebar_position: 18
 > and the **Spring Boot 4.1 production-ready** reference for the auditing support and structured
 > logging configuration
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/auditing.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08](08-what-never-to-log.md) argued that the only reliable control is not producing the line.
 This page is about the two things you still owe after accepting that: a masking layer that limits

@@ -14,7 +14,7 @@ sidebar_position: 1
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshooting-memory-leaks.html)),
 > and the JDK 25 source at tag `jdk-25+36` — `java/util/concurrent/FutureTask.java`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/java.base/share/classes/java/util/concurrent/FutureTask.java)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every part of the type hierarchy above `OutOfMemoryError` is a warning label. `Throwable` →
 `Error` → `VirtualMachineError` → `OutOfMemoryError`, and each level narrows the claim: this is

@@ -13,7 +13,7 @@ sidebar_position: 30
 > "Pattern: Saga" ([microservices.io](https://microservices.io/patterns/data/saga.html)), and
 > RFC 9110 §15.3.3 ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html)).
 > 🔴 **No sandbox, and no saga implementation** — phase 15 topic 10 owns that. Version spine:
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"Self-contained service" is the name for the endpoint of the argument this topic has been
 making. A service is self-contained when it can answer a request using only what it owns: its own

@@ -15,7 +15,7 @@ sidebar_position: 18
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/Parameter.html))
 > pages, and the 6.0.1 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`@ParameterizedTest` gives one method many cases. `@ParameterizedClass` gives one *class*
 many cases: every `@Test` in it runs once per argument set, sharing the arguments as fields or

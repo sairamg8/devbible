@@ -6,7 +6,7 @@ sidebar_position: 0
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: see each chunk's own `> Verified:` line. JDK 25, Spring Boot 4.1.0,
+> Verified: see each chunk's own `> Verified:` line. JDK 25, Spring Boot 4.1.1,
 > Spring Data Commons 4.1.0, Spring Data MongoDB **5.1.0** (one major ahead of the other
 > modules), Spring Data Redis 4.1.0, Spring Data KeyValue 4.1.0, MongoDB Java driver 5.8.0,
 > Lettuce 7.5.2, MongoDB 8, Redis 8.

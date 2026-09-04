@@ -9,7 +9,7 @@ sidebar_position: 50
 > Verified: 2026-09-04 against Sam Newman, *Building Microservices* 2nd ed. (O'Reilly), Chapter 3:
 > Splitting the Monolith; Michael Nygard, *Release It!* 2nd ed. (Pragmatic Bookshelf), Chapter 8:
 > Cascading Failures.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a service boundary is drawn incorrectly, the system does not fail quietly—it screams through unmistakable operational, architectural, and organizational symptoms. You do not need an abstract architectural review to know a boundary is wrong; you need only observe how the team builds, tests, and deploys software. Lockstep deployments where multiple services must be released in exact sequential order, cross-repo pull requests where a single user story modifies four repositories, chatty synchronous networks where fulfilling one user click takes fifteen sequential HTTP hops, and distributed transactions where a failure in Service C corrupts Service A are all definitive proof that an aggregate was severed. Identifying these symptoms early allows teams to repair or merge boundaries before distributed complexity becomes irreversible.**
 

@@ -17,7 +17,7 @@ sidebar_position: 23
 > (`JVM_StartThread`), `src/hotspot/share/runtime/globals.hpp` (`VMThreadStackSize`,
 > `CompilerThreadStackSize`), and `src/hotspot/os/linux/os_linux.cpp` with
 > `src/hotspot/os/linux/globals_linux.hpp` (`AdjustStackSizeForTLS`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **There is no `-XX:MaxThreadStackTotal`. The thread-stack term in a JVM's memory bill is a
 product of two numbers and the JVM owns only one of them: `-Xss` is a flag, but the thread count

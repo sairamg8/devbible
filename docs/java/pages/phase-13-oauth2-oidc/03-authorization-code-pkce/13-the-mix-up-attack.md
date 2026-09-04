@@ -12,7 +12,7 @@ sidebar_position: 18
 > RFC 9207 (OAuth 2.0 Authorization Server Issuer Identification) §2 (Response Parameter
 > `iss`), §2.3 (Providing the Issuer Identifier), §2.4 (Validating the Issuer Identifier)
 > ([datatracker.ietf.org/doc/html/rfc9207](https://datatracker.ietf.org/doc/html/rfc9207)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every check in this topic so far has been about *what* came back. Mix-up is about *where it
 came from*, and nothing in RFC 6749's authorization response says. The response is a redirect

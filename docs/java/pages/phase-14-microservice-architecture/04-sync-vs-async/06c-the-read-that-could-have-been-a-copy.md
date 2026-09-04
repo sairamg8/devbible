@@ -12,7 +12,7 @@ sidebar_position: 27
 > ([microservices.io](https://microservices.io/patterns/data/api-composition.html)) and
 > "Pattern: Event-driven architecture"
 > ([microservices.io](https://microservices.io/patterns/data/event-driven-architecture.html)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **If you read one chunk of this topic, read this one. In a typical service, the majority of
 outbound synchronous calls are reads that fetch reference data belonging to another service so

@@ -16,7 +16,7 @@ sidebar_position: 32
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)).
 > 🔴 **No sandbox.** There is no published bytes-per-series constant and this page does not invent
 > one — it gives you the two commands that measure yours instead. No scrape was performed and no
-> JVM was run for this page. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> JVM was run for this page. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **[11 · Cost and overhead](11-cost-and-overhead.md) costed the heap, which is the cost you can
 compute from a published table. This page is the other two — the scrape, which is the cost you

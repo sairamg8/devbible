@@ -11,11 +11,11 @@ sidebar_position: 13
 > `org.slf4j.MDC` javadoc** for the method contracts and `MDCCloseable`
 > ([slf4j.org](https://www.slf4j.org/api/org/slf4j/MDC.html)), the **Logback manual, "Layouts"**,
 > for the `%mdc` / `%X` conversion word
-> ([logback.qos.ch](https://logback.qos.ch/manual/layouts.html)), and the **Spring Boot 4.1.0
+> ([logback.qos.ch](https://logback.qos.ch/manual/layouts.html)), and the **Spring Boot 4.1.1
 > source** for `ElasticCommonSchemaStructuredLogFormatter`, which emits
 > `ILoggingEvent::getMDCPropertyMap`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/v4.1.0/core/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Every log line in a request needs to say which request it belongs to, and the alternative to MDC
 is passing a context object into every method that might log — through service layers, repositories

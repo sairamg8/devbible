@@ -9,7 +9,7 @@ sidebar_position: 59
 > Verified: 2026-09-04 against Melvin Conway, *How Do Committees Invent?* (1968);
 > Matthew Skelton & Manuel Pais, *Team Topologies* (IT Revolution Press), Chapter 2: Conway's Law and
 > Software Architecture; Sam Newman, *Monolith to Microservices* (O'Reilly).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **The ultimate lesson of service boundary design is that there is no single "correct" technical architecture for a given domain model. Melvin Conway demonstrated in 1968 that software architecture reflects the communication structures of the organization building it. Applying the exact same e-commerce requirements analyzed in previous chapters (`Order`, `Payment`, `Inventory`, and `Shipment`), the optimal boundary layout changes completely depending on team size. For an engineering organization of two teams, a modular monolith or a two-service split is the only sustainable choice. For an organization of twelve teams, a granular microservice architecture is essential to prevent deployment paralysis.**
 

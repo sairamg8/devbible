@@ -13,11 +13,11 @@ sidebar_position: 6
 > `management.tracing.propagation.*` / `management.tracing.export.enabled` entries of the
 > application-properties appendix
 > ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)); and
-> the **Spring Boot 4.1.0 source** for `TracingProperties`, `OpenTelemetryPropagationConfigurations`
+> the **Spring Boot 4.1.1 source** for `TracingProperties`, `OpenTelemetryPropagationConfigurations`
 > and `OnEnabledTracingExportCondition`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/v4.1.0/module/spring-boot-micrometer-tracing-opentelemetry)).
-> 🔴 **No sandbox** — the test below was written, not run. JDK 25 · Spring Boot 4.1.0 / Spring
-> Framework 7.0.8 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0.
+> 🔴 **No sandbox** — the test below was written, not run. JDK 25 · Spring Boot 4.1.1 / Spring
+> Framework 7.0.9 · Micrometer Tracing 1.7.0 · OpenTelemetry Java 1.62.0.
 
 **[03b](03b-the-traceparent-header.md) was the header at rest. This page is the header in
 motion: what a participant is permitted to change, what a receiver must do when the header is

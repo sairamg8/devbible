@@ -16,8 +16,8 @@ sidebar_position: 2
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/mockmvc/hamcrest/async-requests.html))
 > — read as asciidoc source at tag `v7.0.9`, plus the `spring-test` 7.0.9 javadoc for
 > `MockMvcTester`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9 (docs read at 7.0.9), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source, never a fabricated test run.
 
 **[01 · No socket, no server](01-no-socket-no-server.md) argued that `MockMvc` invokes the

@@ -15,7 +15,7 @@ sidebar_position: 3
 > `hotspot/share/memory/universe.cpp` (the pre-allocated message strings) and
 > `java.base/jdk/internal/util/ArraysSupport.java` (`SOFT_MAX_ARRAY_LENGTH`)
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/oops/arrayOop.hpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Seven. Not eight, not nine — the Troubleshooting Guide enumerates exactly seven detail messages
 under "Understand the OutOfMemoryError Exception", and any page that lists a different number is

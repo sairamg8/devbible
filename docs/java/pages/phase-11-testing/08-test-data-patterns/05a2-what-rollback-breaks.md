@@ -11,8 +11,8 @@ sidebar_position: 18
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)) —
 > the "Avoid False Positives When Testing ORM Code" warning and the preemptive-timeout
 > caution are quoted verbatim from that page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > ⚠️ **No database and no sandbox on this machine** — Java source and documented behaviour
 > only, never a test run or an exception transcript.
 

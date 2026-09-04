@@ -11,7 +11,7 @@ sidebar_position: 35
 > §16 (*"Real partial mocks"*), §21 (the three annotations), §13, and the javadoc of
 > `Mockito.spy(Class)`, `Mockito.doCallRealMethod`, `Mockito.CALLS_REAL_METHODS` and
 > [`CallsRealMethods`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/internal/stubbing/answers/CallsRealMethods.java).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source and
 > library source, never a fabricated test run.
 

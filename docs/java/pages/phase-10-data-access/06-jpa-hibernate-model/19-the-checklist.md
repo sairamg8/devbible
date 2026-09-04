@@ -14,7 +14,7 @@ sidebar_position: 41
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html))
 > and the Spring Boot 4.1 / Spring Framework 7.0 references and sources
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **Two of the items below are ordered first because they corrupt data silently rather than
 failing. Everything after them is ordered by how expensive it is to change once the table has

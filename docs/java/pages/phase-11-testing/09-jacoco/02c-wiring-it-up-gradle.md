@@ -8,8 +8,8 @@ sidebar_position: 5
 
 > Verified: 2026-08-31 against the **Gradle user manual**'s JaCoCo plugin page
 > ([docs.gradle.org/current/userguide/jacoco_plugin.html](https://docs.gradle.org/current/userguide/jacoco_plugin.html))
-> and **JaCoCo 0.8.15**'s `changes.html`. Version spine from `spring-boot-dependencies:4.1.0`:
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> and **JaCoCo 0.8.15**'s `changes.html`. Version spine from `spring-boot-dependencies:4.1.1`:
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no sandbox on this machine** — build script and documented behaviour only,
 > never build output. Samples are Kotlin DSL, matching the manual's own examples.
 

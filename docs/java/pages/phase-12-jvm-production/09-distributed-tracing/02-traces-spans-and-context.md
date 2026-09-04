@@ -14,7 +14,7 @@ sidebar_position: 2
 > ([docs.micrometer.io](https://docs.micrometer.io/tracing/reference/glossary.html)).
 > 🔴 **No sandbox** — the JSON below is quoted from the OpenTelemetry documentation, which
 > itself labels it as *"not represent a specific format"*.
-> JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0 / Micrometer Tracing 1.7.0 · OpenTelemetry
+> JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0 / Micrometer Tracing 1.7.0 · OpenTelemetry
 > Java 1.62.0.
 
 **Four words get used interchangeably in every tracing conversation and they are not

@@ -12,7 +12,7 @@ sidebar_position: 41
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/ergonomics.html)), and
 > "Factors Affecting Garbage Collection Performance" for the heap-sizing guidance quoted here
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/factors-affecting-garbage-collection-performance.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **This topic has spent thirty pages on collectors, flags and logs. This page is the argument that
 most of it should stay unused. The collector is a consumer of what your code produces; the

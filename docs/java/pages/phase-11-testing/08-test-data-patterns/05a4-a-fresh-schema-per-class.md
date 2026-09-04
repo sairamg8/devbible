@@ -9,12 +9,12 @@ sidebar_position: 20
 > Verified: 2026-08-31 against the **Spring Framework 7.0.x** testing reference,
 > *Executing SQL Scripts* and *Transaction Management*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)),
-> the Spring Boot 4.1.0 javadoc for
+> the Spring Boot 4.1.1 javadoc for
 > [`AutoConfigureTestDatabase`](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/jdbc/test/autoconfigure/AutoConfigureTestDatabase.html),
 > and the Testcontainers 2.0.5 database-module documentation
 > ([java.testcontainers.org](https://java.testcontainers.org/modules/databases/)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No Docker, no database and no sandbox on this machine** — no timings, no container
 > logs, no measured startup costs appear on this page. Where cost is discussed it is
 > discussed as structure (what has to happen), never as a number.

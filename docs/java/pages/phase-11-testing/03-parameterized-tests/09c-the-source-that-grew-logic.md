@@ -12,7 +12,7 @@ sidebar_position: 33
 > ⚠️ The guide states no requirement that an argument source be deterministic or ordered; the
 > argument that it must be is derived from the documented meaning of the `{index}` placeholder,
 > and is a review standard rather than a framework rule.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`@MethodSource` and `@ArgumentsSource` are ordinary Java ([04](04-methodsource.md),
 [06](06-argumentssource.md)), and ordinary Java is where logic goes to live. This chunk is about

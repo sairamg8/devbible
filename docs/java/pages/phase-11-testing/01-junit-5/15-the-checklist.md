@@ -9,7 +9,7 @@ sidebar_position: 62
 > Verified: 2026-08-28 against the JUnit 6.0.3 User Guide
 > ([docs.junit.org/6.0.3](https://docs.junit.org/6.0.3/)) — every claim in the table below is
 > argued and sourced in the chunk it links to, and this page adds no new claims of its own.
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **This is the closing chunk of the topic and it exists to be used, not read. A test under review
 has one property that production code does not: when it is wrong it is usually still green. So

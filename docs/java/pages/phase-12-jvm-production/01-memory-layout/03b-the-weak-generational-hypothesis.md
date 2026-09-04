@@ -15,7 +15,7 @@ sidebar_position: 10
 > and the JDK 25 HotSpot source `src/hotspot/share/gc/shared/gc_globals.hpp` at tag
 > `jdk-25+36`
 > ([github.com/openjdk/jdk](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[03](03-the-heap.md) described the shape of the heap. This page is the claim that shape is
 an answer to. Generations are not a law of computer science; they are a bet on a measured

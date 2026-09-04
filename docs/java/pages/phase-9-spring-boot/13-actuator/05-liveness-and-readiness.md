@@ -6,7 +6,7 @@ sidebar_position: 5
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Health · Kubernetes Probes*
 > (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the
 > `ApplicationAvailability` interface, `LivenessState` and `ReadinessState`, the
@@ -17,7 +17,7 @@ sidebar_position: 5
 > lifecycle state table) and *How-to · Deploying to the Cloud*
 > (docs.spring.io/spring-boot/how-to/deployment/cloud.html) plus the
 > `CloudPlatform` javadoc for `*_SERVICE_HOST` / `*_SERVICE_PORT` detection and
-> `spring.main.cloud-platform`. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> `spring.main.cloud-platform`. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **A failing liveness probe means "kill this process and start a new one". A

@@ -17,7 +17,7 @@ sidebar_position: 14
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/ParameterizedInvocationConstants.html))
 > pages, and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **`{0}` renders an argument by calling `toString()` on it. For a `String`, a `File` or an enum
 that is fine. For the `Order` your `@MethodSource` built with a test data builder it is

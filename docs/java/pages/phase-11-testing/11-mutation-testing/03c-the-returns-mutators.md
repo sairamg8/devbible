@@ -14,7 +14,7 @@ sidebar_position: 11
 > `NullReturnValsMutator.java`, `BooleanFalseReturnValsMutator.java`,
 > `PrimitiveReturnsMutator.java` and
 > `build/intercept/equivalent/EmptyReturnsFilter.java`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Mutator behaviour is quoted from pitest's
 > documentation and read from its source; the Java on this page is illustrative source, never a run.

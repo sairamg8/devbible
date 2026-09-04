@@ -11,14 +11,14 @@ sidebar_position: 12
 > the **Spring Boot 4.1 production-ready reference** — *Metrics · Customizing Individual Metrics*
 > and *Per-meter Properties*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`MaximumAllowableTagsMeterFilter`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/MaximumAllowableTagsMeterFilter.java),
 > [`WebMvcObservationAutoConfiguration`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-webmvc/src/main/java/org/springframework/boot/webmvc/autoconfigure/WebMvcObservationAutoConfiguration.java),
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java)
 > and
 > [`MeterRegistryPostProcessor`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MeterRegistryPostProcessor.java).
 > No JVM was run for this page; the Java below is quoted from those sources. JDK 25 ·
-> Spring Boot 4.1.0 · Micrometer 1.17.0.
+> Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **[04b](04b-cardinality.md) argued that review-time arithmetic is the only thing that prevents a
 cardinality explosion. This page is the thing that *contains* one when review fails. It is a hard

@@ -10,8 +10,8 @@ sidebar_position: 8
 > enums and final methods"*, §49 *"Mocking object construction (since 3.5.0)"*, §56
 > *"Mocking singletons (like Java enums) (Since 5.22.0)"* — read from
 > `mockito-core-5.23.0-javadoc.jar` on Maven Central.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source and documented behaviour
 > only, never console output.
 

@@ -10,7 +10,7 @@ sidebar_position: 2
 > ([docs.junit.org](https://docs.junit.org/6.0.3/writing-tests/parameterized-classes-and-tests.html))
 > and the `@ValueSource` javadoc
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/ValueSource.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3 (`org.junit:junit-bom:6.0.3`).
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3 (`org.junit:junit-bom:6.0.3`).
 
 **`@ValueSource` takes one array of compile-time literals and hands each element to a
 one-parameter test method. Its limits are not accidents to be worked around — they are the

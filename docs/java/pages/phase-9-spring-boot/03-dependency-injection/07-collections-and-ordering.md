@@ -18,7 +18,7 @@ sidebar_position: 7
 > Qualifiers*
 > (docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired-qualifiers.html
 > — qualifiers on typed collections as filtering criteria that need not be
-> unique). Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> unique). Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The previous chunk treated several candidates for one type as a problem to
 narrow away. This one treats it as the answer: declare the injection point as a

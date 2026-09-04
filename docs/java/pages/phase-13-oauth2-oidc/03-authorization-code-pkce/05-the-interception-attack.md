@@ -14,7 +14,7 @@ sidebar_position: 8
 > ([datatracker.ietf.org/doc/html/rfc8252](https://datatracker.ietf.org/doc/html/rfc8252));
 > RFC 9700 §2.1.1 (Authorization Code Grant)
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **On the web, a redirect URI is a hostname the attacker would have to control DNS and a
 certificate for. On a phone, the equivalent redirect is `com.example.app:/oauth2redirect` —

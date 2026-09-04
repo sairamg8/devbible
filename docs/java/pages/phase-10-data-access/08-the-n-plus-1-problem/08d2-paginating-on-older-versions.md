@@ -13,7 +13,7 @@ sidebar_position: 21
 > ([docs.hibernate.org/orm/7.4/migration-guide/migration-guide.html](https://docs.hibernate.org/orm/7.4/migration-guide/migration-guide.html))
 > and the Spring Data JPA 4.1 reference *JPA Query Methods*
 > ([docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **[Chunk 8d](08d-pagination.md) is the good news. This is what to do if you are
 not on 7.4 yet — which, given how recent it is, is most readers — and what the

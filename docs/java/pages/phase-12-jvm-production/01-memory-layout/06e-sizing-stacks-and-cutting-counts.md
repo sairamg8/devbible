@@ -16,7 +16,7 @@ sidebar_position: 24
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)); and the
 > OpenJDK `jdk-25+36` source `src/hotspot/share/runtime/globals.hpp` (`VMThreadStackSize`,
 > `CompilerThreadStackSize`, both declared `product_pd`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[06d](06d-the-thread-count-arithmetic.md) gave the product; this chunk gives the levers, in the
 order you should actually pull them. `-Xss` is the lever everyone reaches for and the worst one

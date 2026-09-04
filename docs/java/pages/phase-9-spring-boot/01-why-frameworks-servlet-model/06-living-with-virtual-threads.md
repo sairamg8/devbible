@@ -14,7 +14,7 @@ sidebar_position: 6
 > Threads), JEP 491 (Synchronize Virtual Threads without Pinning, JDK 24), the
 > JDK 25 Core Libraries virtual-threads guide, and the Spring Framework 7.0
 > release notes (`@ConcurrencyLimit`, `@EnableResilientMethods`).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **One property turns a Spring Boot service from a few hundred concurrent
 requests to effectively unbounded concurrency, and the second half of that

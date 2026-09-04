@@ -12,7 +12,7 @@ sidebar_position: 1
 > [create-instances.html](https://docs.spring.io/spring-data/jpa/reference/repositories/create-instances.html))
 > and *Custom Repository Implementations*
 > ([custom-implementations.html](https://docs.spring.io/spring-data/jpa/reference/repositories/custom-implementations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2.
 
 **You write an interface with no body and inject it as if it were a bean, because

@@ -12,7 +12,7 @@ sidebar_position: 21
 > result-type selection read from
 > [`NativeJpaQuery.getTypeToQueryFor`](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/repository/query/NativeJpaQuery.java);
 > Jakarta Persistence 3.2 §3.10.16 (`@SqlResultSetMapping`).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **JPQL knows what it selected, because it selected entities and fields. Native SQL

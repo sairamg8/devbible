@@ -16,7 +16,7 @@ sidebar_position: 55
 > ([docs.spring.io/spring-framework/reference/](https://docs.spring.io/spring-framework/reference/data-access.html)),
 > and the Hibernate ORM 7.4 *Introduction* §5.6 *Proxies and lazy fetching*
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **Setting `spring.jpa.open-in-view: false` is one line and it is never the whole job. What
 follows is what actually breaks, in rough order of how often, with the fix for each — and the

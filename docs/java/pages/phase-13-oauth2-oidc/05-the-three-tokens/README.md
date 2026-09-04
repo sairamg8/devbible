@@ -18,7 +18,7 @@ sidebar_position: 0
 > RFC 8705 (mTLS) ([datatracker.ietf.org/doc/html/rfc8705](https://datatracker.ietf.org/doc/html/rfc8705));
 > RFC 9068 (JWT access-token profile) ([rfc-editor.org/rfc/rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt));
 > OpenID Connect Core 1.0 §2, §3.1.3.3 ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html)).
-> Target: **JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x**.
+> Target: **JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x**.
 > **No sandbox** — Java source, config and specification-quoted field definitions only;
 > token *structure* where shown is labelled illustrative, never a real token.
 

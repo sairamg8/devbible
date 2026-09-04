@@ -15,7 +15,7 @@ sidebar_position: 12
 > ([ietf.org](https://www.ietf.org/archive/id/draft-ietf-oauth-browser-based-apps-27.txt));
 > `OAuth2ResourceServerConfigurer` and `DPoPAuthenticationProvider` sources on `main`
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-security)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **[06](06-what-a-bearer-token-cannot-do.md) established the impossibility and the transport-
 layer fix. This chunk is the application-layer fix — the one that works in a browser, which is

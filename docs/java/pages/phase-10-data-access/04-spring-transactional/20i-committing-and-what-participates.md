@@ -12,7 +12,7 @@ sidebar_position: 61
 > the `@Commit` ([.../test/annotation/Commit.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/Commit.html))
 > and `@Rollback` ([.../test/annotation/Rollback.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/Rollback.html))
 > javadocs.
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **The rollback default is free isolation, and [20h](20h-asserting-the-commit.md) showed
 the assertions it makes possible. This chunk is the other side: what you owe when you

@@ -11,7 +11,7 @@ sidebar_position: 12
 > have a Spring MVC application that works fine, there is no need to change",
 > and the recommendation to use `WebClient` from MVC), *Concurrency Model →
 > Invoking a Blocking API*, the Spring Boot reference for
-> `spring.threads.virtual.enabled`, and JEP 444. Spring Boot 4.1.0, Spring
+> `spring.threads.virtual.enabled`, and JEP 444. Spring Boot 4.1.1, Spring
 > Framework 7.0.x, JDK 25.
 
 **There is a right answer for most services and it is no longer the exciting

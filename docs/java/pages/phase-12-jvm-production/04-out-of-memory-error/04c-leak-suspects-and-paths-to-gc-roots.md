@@ -12,7 +12,7 @@ sidebar_position: 14
 > ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/tasks/runningleaksuspectreport.html)).
 > **No sandbox** — no report was generated for this page; every rule, threshold and phrase below is
 > quoted from MAT's own documentation.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **"Run Leak Suspects and see what it says" is reasonable advice that becomes much better advice
 once you know what the report is doing. It is a documented algorithm: start at the dominator tree,

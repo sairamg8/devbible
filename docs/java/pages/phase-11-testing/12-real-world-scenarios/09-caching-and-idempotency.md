@@ -6,7 +6,7 @@ sidebar_position: 39
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-01 against the **Spring Framework 7.0.8** reference *Cache Abstraction*,
+> Verified: 2026-09-01 against the **Spring Framework 7.0.9** reference *Cache Abstraction*,
 > read from the `v7.0.8` sources —
 > [`cache/strategies.adoc`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/integration/cache/strategies.adoc)
 > and
@@ -15,12 +15,12 @@ sidebar_position: 39
 > [`Cache`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-context/src/main/java/org/springframework/cache/Cache.java)
 > and
 > [`NoOpCacheManager`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/spring-context/src/main/java/org/springframework/cache/support/NoOpCacheManager.java);
-> and the **Spring Boot 4.1.0** source of
+> and the **Spring Boot 4.1.1** source of
 > [`AutoConfigureCache`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-cache-test/src/main/java/org/springframework/boot/cache/test/autoconfigure/AutoConfigureCache.java)
 > plus the Boot reference *Caching · Testing*
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/io/caching.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source, build configuration and
 > documented behaviour only, never console output or timings.
 

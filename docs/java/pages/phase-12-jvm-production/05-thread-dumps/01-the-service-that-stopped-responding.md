@@ -15,7 +15,7 @@ sidebar_position: 1
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox.** Every dump fragment on these pages is quoted from Oracle's documentation and
 > attributed, or is explicitly labelled a schematic. Nothing is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The service is up. The health check may even be passing. Requests go in and nothing comes back,
 CPU is near zero, the heap is flat, GC is quiet, and every dashboard you own says the system is

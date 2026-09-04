@@ -27,7 +27,7 @@ sidebar_position: 29
 > 🔴 **No log output on this page was produced by running anything.** Every example is either a
 > format string from the JDK source or a line quoted from Oracle's documentation, and each is
 > labelled as such.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A GC log line is not free-form text; it is a `printf` with a known format string, and reading
 it accurately is a matter of knowing which one. This page takes the four lines you will

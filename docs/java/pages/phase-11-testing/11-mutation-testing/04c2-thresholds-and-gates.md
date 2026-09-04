@@ -16,7 +16,7 @@ sidebar_position: 28
 > `thresholdPrecision` and all four `throwErrorIf…` methods in `execute()`), and
 > `org/pitest/util/PercentageCalculator.java`'s `BigDecimal` overload.
 > Gradle behaviour from `PitestPluginExtension.groovy` on the gradle-pitest-plugin `master` branch.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Parameter behaviour is read from published source and
 > documentation; the worked cases below are pitest's own, quoted. **No build outcome on this page came
 > from a run.**

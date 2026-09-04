@@ -13,7 +13,7 @@ sidebar_position: 26
 > ([microservices.io](https://microservices.io/patterns/monolithic.html)); Stefan Tilkov,
 > *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **[21 · What genuinely does not work](10-what-genuinely-does-not-work.md) is the honest
 list. This is the list of claims that get made anyway, each with the source that

@@ -15,7 +15,7 @@ sidebar_position: 0
 > Metadata*, the GDB and JFR guides) and the GraalVM release calendar; and the
 > Spring Boot reference *Ahead-of-Time Processing With the JVM*, *Class Data
 > Sharing*, *AOT Cache* and *Native Image* sections, plus JEP 483 and JEP 515.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Every framework in this topic solves the same problem as Spring — turning
 annotated classes into a running application — and differs on exactly one axis:

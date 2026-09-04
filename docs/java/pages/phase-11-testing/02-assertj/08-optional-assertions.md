@@ -12,7 +12,7 @@ sidebar_position: 21
 > `containsSame`, `containsInstanceOf`, `hasValueSatisfying`, `get`, `map`,
 > `usingValueComparator` and `usingRecursiveComparison` on
 > [`AbstractOptionalAssert`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/AbstractOptionalAssert.java).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Every repository method that might not find a row returns one, so `Optional` shows up in
 tests constantly, and the reflex — `assertThat(result.get()).isEqualTo(expected)` — is

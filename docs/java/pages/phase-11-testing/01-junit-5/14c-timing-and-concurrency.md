@@ -14,7 +14,7 @@ sidebar_position: 53
 > ([ConditionFactory](https://javadoc.io/doc/org.awaitility/awaitility/4.3.0/org/awaitility/core/ConditionFactory.html))
 > and the Awaitility usage wiki
 > ([awaitility/wiki/Usage](https://github.com/awaitility/awaitility/wiki/Usage)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8, Awaitility 4.3.0.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9, Awaitility 4.3.0.
 
 **Everything in [14](14-flaky-tests.md) and [14b](14b-time-and-determinism.md) is state you can
 see if you look. This family is different: the test and the code are each correct in isolation

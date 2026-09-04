@@ -14,7 +14,7 @@ sidebar_position: 33
 > [`MockSettings.useConstructor`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/MockSettings.java),
 > and `Reporter.cannotInitializeForSpyAnnotation` under
 > `mockito-core/src/main/java/org/mockito/internal/exceptions/`.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — every exception string on this page
 > is assembled from `Reporter`'s own source, never from a console.
 

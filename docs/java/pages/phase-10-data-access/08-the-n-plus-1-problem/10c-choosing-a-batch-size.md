@@ -13,7 +13,7 @@ sidebar_position: 37
 > ([docs.hibernate.org/orm/7.4/javadocs](https://docs.hibernate.org/orm/7.4/javadocs/org/hibernate/annotations/BatchSize.html)),
 > and *A Short Guide to Hibernate 7* §5.8 and §8.5
 > ([docs.hibernate.org/orm/7.4/introduction](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Hibernate ORM 7.4.1, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Hibernate ORM 7.4.1, Spring Boot 4.1.1, PostgreSQL 18.
 > 🔴 There is no database on this machine and this page contains **no
 > measurements** — the arithmetic below is derivation, not benchmarking.
 

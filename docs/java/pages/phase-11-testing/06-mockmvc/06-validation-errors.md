@@ -16,8 +16,8 @@ sidebar_position: 15
 > The validation mechanism itself belongs to
 > [08 · Validation](../../phase-9-spring-boot/08-validation/07-the-failure.md) and
 > [09 · Error handling](../../phase-9-spring-boot/09-error-handling/01-the-error-shape-is-a-contract.md).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9 (sources read at 7.0.9 / 4.1.1), JUnit Jupiter 6.0.3, AssertJ 3.27.7.
 > **No sandbox** — this page carries Java source and library source, never a fabricated test run.
 
 **Validation is the most commonly tested thing in a controller test and the most commonly

@@ -14,7 +14,7 @@ sidebar_position: 28
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)),
 > and the Spring Framework 7.0 `HibernateJpaDialect` and `JpaTransactionManager` sources
 > ([github.com/spring-projects/spring-framework, branch 7.0.x](https://github.com/spring-projects/spring-framework/blob/7.0.x/spring-orm/src/main/java/org/springframework/orm/jpa/vendor/HibernateJpaDialect.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1.
 
 **Read-only, immutable, `FlushMode.MANUAL` and `StatelessSession` all reduce the cost of
 dirty checking, and each one reduces a different part of it. Read-only skips the snapshot.

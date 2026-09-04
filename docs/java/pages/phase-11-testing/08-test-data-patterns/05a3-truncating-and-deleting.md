@@ -13,8 +13,8 @@ sidebar_position: 19
 > [`SqlConfig.TransactionMode`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.TransactionMode.html)
 > — the transaction-mode inference rules below are quoted from it. `TRUNCATE` semantics are
 > PostgreSQL's, not Spring's.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No database, no Docker and no sandbox on this machine** — SQL, Java source and
 > documented behaviour only, never a test run or a timing.
 

@@ -14,7 +14,7 @@ sidebar_position: 15
 > ([rfc-editor.org/rfc/rfc6749](https://www.rfc-editor.org/rfc/rfc6749.txt)); OpenID Connect
 > Core 1.0 §3.1.2.1 (`nonce`), §3.1.3.7 (ID Token Validation)
 > ([openid.net](https://openid.net/specs/openid-connect-core-1_0.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A confidential client with a client secret and a validated `state` is still vulnerable to
 this, and that is the whole point of the chunk. The attacker does not need to authenticate as

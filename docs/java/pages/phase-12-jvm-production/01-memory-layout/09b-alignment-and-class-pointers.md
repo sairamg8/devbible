@@ -10,7 +10,7 @@ sidebar_position: 36
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)) —
 > the entries for `-XX:ObjectAlignmentInBytes` and `-XX:+UseCompactObjectHeaders`, both
 > quoted verbatim below — and **JEP 519 · Compact Object Headers** (product in JDK 25).
-> JDK 25 · Spring Boot 4.1.0.
+> JDK 25 · Spring Boot 4.1.1.
 > **No sandbox** — flags, quoted documentation and arithmetic only. No captured JVM output.
 
 **[09](09-compressed-oops.md) explained why the cliff exists. This chunk is about the one

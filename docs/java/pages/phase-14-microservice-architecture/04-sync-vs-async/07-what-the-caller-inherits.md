@@ -12,7 +12,7 @@ sidebar_position: 31
 > ([aws.amazon.com](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)),
 > and the Google SRE book, "Addressing Cascading Failures"
 > ([sre.google](https://sre.google/sre-book/addressing-cascading-failures/)).
-> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The availability arithmetic is the visible cost of a synchronous hop. This chunk is the
 invisible one: the set of things the caller must now build, decide and operate, none of which the

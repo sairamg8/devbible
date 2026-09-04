@@ -13,7 +13,7 @@ sidebar_position: 14
 > `@EnableResilientMethods`
 > (docs.spring.io/spring-framework/docs/current/javadoc-api/), and the Spring
 > Boot issue tracker for the auto-configuration decision
-> (github.com/spring-projects/spring-boot/issues/46916). Spring Boot 4.1.0,
+> (github.com/spring-projects/spring-boot/issues/46916). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Framework 7 puts retry support in the core framework, which is genuinely good

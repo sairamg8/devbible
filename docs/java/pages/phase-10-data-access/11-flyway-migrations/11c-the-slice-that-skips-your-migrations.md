@@ -16,7 +16,7 @@ sidebar_position: 40
 > ([docs.spring.io](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/jdbc/test/autoconfigure/AutoConfigureTestDatabase.html)),
 > and the `DataJpaTest`, `AutoConfigureDataJpa.imports` and `FlywayAutoConfiguration` sources
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **You have a container ([11b](11b-wiring-the-container.md)) and you want a fast, focused test of the
 repositories against a real schema, so you reach for `@DataJpaTest`. The slice is doing two things

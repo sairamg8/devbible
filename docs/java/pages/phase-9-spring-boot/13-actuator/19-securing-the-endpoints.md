@@ -6,7 +6,7 @@ sidebar_position: 19
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-20 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-20 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Security* (docs.spring.io/spring-boot/reference/actuator/endpoints.html:
 > *"If Spring Security is on the classpath and no other `SecurityFilterChain`
 > bean is present, all actuators other than `/health` are secured by Spring Boot

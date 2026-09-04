@@ -14,7 +14,7 @@ sidebar_position: 0
 > (docs.spring.io/spring-framework/reference/core/beans/environment.html), the
 > Spring Boot 4.0 release notes for `@ConfigurationPropertiesSource` and for
 > Bean Validation no longer arriving transitively, and 12factor.net for the
-> statement of factor III. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> statement of factor III. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Spring Boot does not have "a configuration file". It has an ordered stack of
 property sources, a binder that maps names in those sources onto typed objects,

@@ -12,7 +12,7 @@ sidebar_position: 7
 > exclusions, unconditional classes), and the Actuator API documentation for the
 > `conditions` endpoint (the `contexts`, `positiveMatches`, `negativeMatches`,
 > `unconditionalClasses` and `parentId` fields, and the `condition`/`message`
-> and `notMatched`/`matched` entry shapes). Spring Boot 4.1.0, Spring Framework
+> and `notMatched`/`matched` entry shapes). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Every question of the form "why is this bean not here" has a mechanical answer

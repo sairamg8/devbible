@@ -15,7 +15,7 @@ sidebar_position: 28
 > ([docs.spring.io/spring-boot/api/rest/actuator/caches.html](https://docs.spring.io/spring-boot/api/rest/actuator/caches.html))
 > and the `RedisCacheManager.RedisCacheManagerBuilder` javadoc
 > ([docs.spring.io/spring-data/redis](https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/cache/RedisCacheManager.RedisCacheManagerBuilder.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0, Spring Data Redis 4.1, Redis 8, PostgreSQL 18.
 
 **[7d](07d-the-invalidation-you-forgot.md) is about entries whose keys nobody connected to a write
 you *did* intercept. This chunk is about the writes there is nothing to intercept: a bulk statement,

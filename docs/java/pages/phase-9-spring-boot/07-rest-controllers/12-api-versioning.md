@@ -6,7 +6,7 @@ sidebar_position: 12
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Request Mapping → API Version*
 > (docs.spring.io — the `version` attribute, fixed versus baseline `"1.2+"`
 > matching, the rule that the highest match closest to the request version wins
@@ -20,7 +20,7 @@ sidebar_position: 12
 > `Deprecation`, RFC 8594 `Sunset` and `Link` headers; and
 > `InvalidApiVersionException` producing HTTP 400), plus the Spring Framework
 > 7.0 release notes (API versioning as a new first-class feature across MVC,
-> WebFlux, `RestClient` and `WebClient`). Spring Boot 4.1.0,
+> WebFlux, `RestClient` and `WebClient`). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Spring Framework 7 made API versioning a first-class mapping condition, which

@@ -14,7 +14,7 @@ sidebar_position: 13
 > `ignoringExpectedNullFields`, `usingOverriddenEquals`,
 > `ignoringOverriddenEqualsForTypes`, `withEqualsForFields`, `withComparatorForFields`,
 > `withEqualsForType`, `withComparatorForType`, `withStrictTypeChecking`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **[04](04-recursive-comparison.md) argued that the recursive comparison's danger is being
 complete by default and easy to make incomplete. This chunk is the API that makes it

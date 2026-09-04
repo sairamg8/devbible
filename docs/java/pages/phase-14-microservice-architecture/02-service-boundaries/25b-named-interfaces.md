@@ -8,7 +8,7 @@ sidebar_position: 36
 
 > Verified: 2026-09-04 against Spring Modulith 2.1.1 reference documentation, *Named Interfaces*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html#named-interfaces)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
 
 **Assuming every consumer of a domain module requires the exact same API contract is a design flaw that leads to bloated interfaces and leaky abstractions. In complex bounded contexts, a module often needs to expose one contract for customer-facing order operations, an administrative API for financial reconciliation, and a service-provider interface (SPI) for asynchronous integration. Spring Modulith's `@NamedInterface` allows packages or specific types within a module to declare explicit, named API slices while keeping internal domain logic strictly encapsulated. Consuming modules can then declare targeted dependencies on specific named interfaces (`order::admin`, `order::spi`), preventing downstream services from accumulating accidental coupling to capabilities they have no business invoking.**
 

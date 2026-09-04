@@ -11,7 +11,7 @@ sidebar_position: 22
 > ([docs.spring.io/spring-data/mongodb/reference/](https://docs.spring.io/spring-data/mongodb/reference/index.html)),
 > the Spring Data Redis 4.1 reference *Redis Repositories*
 > ([docs.spring.io/spring-data/redis/reference/](https://docs.spring.io/spring-data/redis/reference/index.html))
-> and the Spring Data Commons 4.1 repository documentation. JDK 25, Spring Boot 4.1.0,
+> and the Spring Data Commons 4.1 repository documentation. JDK 25, Spring Boot 4.1.1,
 > Spring Data Commons 4.1.0, Spring Data MongoDB 5.1.0, Spring Data Redis 4.1.0.
 
 **A developer moving from Spring Data JPA to Spring Data MongoDB writes correct-looking

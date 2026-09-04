@@ -9,11 +9,11 @@ sidebar_position: 17
 > Verified: 2026-08-20 against the Spring Framework reference *Testing → Testing
 > Client Applications*
 > (docs.spring.io/spring-framework/reference/testing/spring-mvc-test-client.html),
-> the Spring Boot 4.1.0 API for
+> the Spring Boot 4.1.1 API for
 > `org.springframework.boot.restclient.test.autoconfigure.RestClientTest`
 > (docs.spring.io/spring-boot/api/java/), the Spring Boot reference *Testing
 > Spring Boot Applications* for `@MockitoBean`, and the Spring Boot 4.0
-> Migration Guide for the removal of `@MockBean`/`@SpyBean`. Spring Boot 4.1.0,
+> Migration Guide for the removal of `@MockBean`/`@SpyBean`. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Spring's in-process client testing works by *replacing the request factory*,

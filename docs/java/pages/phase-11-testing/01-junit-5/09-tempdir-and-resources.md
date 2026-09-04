@@ -11,7 +11,7 @@ sidebar_position: 22
 > and "Release Notes" ([release-notes](https://docs.junit.org/6.0.3/release-notes.html),
 > the 6.0.0 Jupiter section); javadoc for `@TempDir`
 > ([TempDir](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/io/TempDir.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every hard-coded path in a test is a shared mutable global. `/tmp/test-output.csv` is
 shared between two tests in the same class, between two classes running in parallel,

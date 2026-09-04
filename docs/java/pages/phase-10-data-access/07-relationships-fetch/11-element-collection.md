@@ -14,7 +14,7 @@ sidebar_position: 20
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Hibernate ORM 7.4 *User Guide* §3.9.7 *@ElementCollection* and §31.4
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Everything so far has been about associations between entities — things with their own
 identity, their own lifecycle, their own primary key. `@ElementCollection` is the other

@@ -11,7 +11,7 @@ sidebar_position: 6
 > `matchIfMissing`, the "must not be equal to `false`" rule and the
 > all-names-must-pass rule) and the Spring Boot reference *Creating Your Own
 > Auto-configuration · Condition Annotations* (the property, resource, web
-> application, SpEL and platform condition families). Spring Boot 4.1.0,
+> application, SpEL and platform condition families). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **Class and bean conditions fail loudly — a jar is present or it is not, a bean

@@ -18,7 +18,7 @@ sidebar_position: 47
 > ([docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/transaction/autoconfigure/TransactionProperties.html](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/transaction/autoconfigure/TransactionProperties.html))
 > and the PostgreSQL 18 manual *Client Connection Defaults*
 > ([postgresql.org/docs/18/runtime-config-client.html](https://www.postgresql.org/docs/18/runtime-config-client.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, pgjdbc 42.7.13,
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, pgjdbc 42.7.13,
 > PostgreSQL 18.
 
 **`@Transactional(timeout = 5)` does not start a timer that kills your

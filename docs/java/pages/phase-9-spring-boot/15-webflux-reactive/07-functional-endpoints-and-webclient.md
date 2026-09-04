@@ -13,7 +13,7 @@ sidebar_position: 7
 > .../web/webflux-webclient.html), the Spring Framework 7.0 notes on the
 > deprecation of `RestTemplate` in favour of `RestClient`, and the Spring Boot
 > 4 `spring-boot-starter-restclient` / `spring-boot-starter-webclient`
-> starters. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> starters. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The second programming model replaces annotations with values: a
 `RouterFunction` is an object that maps a request to a `HandlerFunction`, and

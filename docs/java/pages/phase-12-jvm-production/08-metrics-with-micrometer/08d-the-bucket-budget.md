@@ -11,13 +11,13 @@ sidebar_position: 25
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/meter-filters.html)),
 > the **Spring Boot 4.1 production-ready reference · Metrics · Per-meter Properties**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java)
 > and
 > [`PropertiesMeterFilter`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/PropertiesMeterFilter.java),
 > whose javadoc supplies the prefix-matching rules quoted below. All series counts are arithmetic
 > on Micrometer's documented bucket counts, shown with their working; no JVM was run. JDK 25 ·
-> Spring Boot 4.1.0 · Micrometer 1.17.0.
+> Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **[08b](08b-histograms-and-buckets.md) established that a percentile histogram costs seventy-six
 series per tag combination and [08c](08c-slos-and-the-bucket-budget.md) that an SLO boundary costs

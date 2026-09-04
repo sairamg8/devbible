@@ -11,7 +11,7 @@ sidebar_position: 9
 > and the bulk-operations section, including its note that lifecycle event publishing is
 > limited for bulk operations
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/template-crud-operations.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/template-crud-operations.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB Java driver 5.8.0.
 
 **`updateFirst` and `updateMulti` are two method names that differ by one word in the
 middle, and one of them writes a single document while the other writes the whole

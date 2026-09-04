@@ -16,7 +16,7 @@ sidebar_position: 6
 > and the Spring Boot 4.1 reference — *Running Behind a Front-end Proxy Server*
 > and *Enable HTTP Response Compression*
 > (docs.spring.io/spring-boot/how-to/webserver.html), *Actuator → Metrics* and
-> *Actuator → Tracing*. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> *Actuator → Tracing*. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Almost every filter written by hand in a Spring application is a worse copy of
 one that is already in the chain. Before you write anything at this layer, the

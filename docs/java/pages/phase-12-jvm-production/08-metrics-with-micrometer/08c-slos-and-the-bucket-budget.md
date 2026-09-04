@@ -11,14 +11,14 @@ sidebar_position: 24
 > ([docs.micrometer.io](https://docs.micrometer.io/micrometer/reference/concepts/histogram-quantiles.html)),
 > the **Spring Boot 4.1 production-ready reference · Metrics · Per-meter Properties**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), the
-> **Spring Boot 4.1.0 sources** at tag `v4.1.0` —
+> **Spring Boot 4.1.1 sources** at tag `v4.1.0` —
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java)
 > and
 > [`PropertiesMeterFilter`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/PropertiesMeterFilter.java)
 > — and the **Google SRE book** — *Monitoring Distributed Systems · The Four Golden Signals*
 > ([sre.google](https://sre.google/sre-book/monitoring-distributed-systems/)) and *Service Level
 > Objectives* ([sre.google](https://sre.google/sre-book/service-level-objectives/)). Series counts are
-> arithmetic on Micrometer's documented bucket counts; no JVM was run. JDK 25 · Spring Boot 4.1.0 ·
+> arithmetic on Micrometer's documented bucket counts; no JVM was run. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0.
 
 **A percentile answers "how slow was the nth request". An SLO answers "how many requests broke the

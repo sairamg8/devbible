@@ -11,8 +11,8 @@ sidebar_position: 0
 > **Spring Boot 4.1.1** reference and how-to guides, the **Spring Security 7.1.1** reference
 > (`servlet/test/mockmvc/*`), and the `spring-framework` / `spring-boot` / `spring-security`
 > sources at those tags — named per chunk on each page's own `> Verified:` line.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7, Spring Security 7.1.1.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, AssertJ 3.27.7, Spring Security 7.1.1.
 > **No sandbox, no Docker, no test run** — these pages carry Java source and library source
 > only. Where a claim is a derivation from source rather than a documented statement, the page
 > says so in those words.

@@ -14,7 +14,7 @@ sidebar_position: 28
 > ([martinfowler.com](https://martinfowler.com/articles/201701-event-driven.html)), and
 > RFC 9110 §15.3.3 ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html)).
 > 🔴 **No sandbox, and no broker mechanics** — phase 15 owns those. Version spine: JDK 25 ·
-> Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[25 · What must be synchronous](06-what-must-be-synchronous.md) produced a table where three
 of fourteen hops were genuinely required. This chunk is the other eleven, sorted into the nine

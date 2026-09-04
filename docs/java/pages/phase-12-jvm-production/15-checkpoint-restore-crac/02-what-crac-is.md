@@ -11,7 +11,7 @@ sidebar_position: 2
 > "User's flow", "API" and "Implementation details" sections — and the **Spring Boot 4.1
 > reference**, "Checkpoint and Restore With the JVM"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/packaging/checkpoint-restore.html)).
-> JDK 25 / Spring Boot 4.1.0. 🔴 **No sandbox** — no checkpoint was created for this page.
+> JDK 25 / Spring Boot 4.1.1. 🔴 **No sandbox** — no checkpoint was created for this page.
 
 **The name is the specification. *Coordinated* Restore at Checkpoint: the checkpoint is
 coordinated with the application, which is what separates it from taking a snapshot of a

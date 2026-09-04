@@ -11,9 +11,9 @@ sidebar_position: 2
 > ([slf4j.org](https://www.slf4j.org/manual.html)), the **SLF4J FAQ**
 > ([slf4j.org](https://www.slf4j.org/faq.html)), the **Logback news page** for the current release
 > series ([logback.qos.ch](https://logback.qos.ch/news.html)), and
-> **`spring-boot-dependencies:4.1.0`** for the managed versions
+> **`spring-boot-dependencies:4.1.1`** for the managed versions
 > ([repo1.maven.org](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)).
-> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.0 · SLF4J 2.0.18 · Logback 1.5.34.
+> 🔴 **No sandbox.** JDK 25 · Spring Boot 4.1.1 · SLF4J 2.0.18 · Logback 1.5.34.
 
 **Your code calls `org.slf4j.Logger`. Nothing in `org.slf4j` writes anything anywhere. The bytes
 reach a file because a separate artifact on the classpath implements that interface, and the two

@@ -13,7 +13,7 @@ sidebar_position: 33
 > the Spring Modulith 2.1.1 reference, *Documenting Application Modules*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/documentation.html)), for
 > the module canvas and C4 component diagram generation.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. **No sandbox** — commands
 > are shown for you to run; no output of any run appears anywhere in this topic.
 

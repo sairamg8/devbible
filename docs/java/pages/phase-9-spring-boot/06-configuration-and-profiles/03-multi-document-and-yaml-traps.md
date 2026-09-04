@@ -13,7 +13,7 @@ sidebar_position: 3
 > `@PropertySource` / `@TestPropertySource`, `spring.config.activate.on-profile`
 > and `on-cloud-platform`, and location groups with `;`), and the YAML 1.1
 > implicit-typing behaviour of SnakeYAML, which Spring uses to parse `.yml`.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A configuration file is not one document, and YAML is not a format that
 stores what you typed. Boot lets a single file hold several independently

@@ -15,7 +15,7 @@ sidebar_position: 9
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700));
 > `java.security.SecureRandom` and `java.util.Base64.getUrlEncoder()` javadocs, JDK 25
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/security/SecureRandom.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **A verifier is 32 bytes from a cryptographically secure random source, base64url-encoded
 without padding, generated fresh for every single authorization request and held in

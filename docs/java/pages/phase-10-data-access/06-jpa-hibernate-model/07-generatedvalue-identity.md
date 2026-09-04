@@ -16,7 +16,7 @@ sidebar_position: 10
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/dialect/identity/PostgreSQLIdentityColumnSupport.java))
 > and the PostgreSQL 18 manual *CREATE TABLE* → identity columns
 > ([postgresql.org/docs/18/sql-createtable.html](https://www.postgresql.org/docs/18/sql-createtable.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18, pgJDBC 42.7.x.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, PostgreSQL 18, pgJDBC 42.7.x.
 
 **`@GeneratedValue(strategy = IDENTITY)` looks like the simplest choice on the menu: the
 database owns the counter, you write nothing, it just works. It does just work. But it

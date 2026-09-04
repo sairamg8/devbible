@@ -13,7 +13,7 @@ sidebar_position: 32
 > `TestcontainersConfiguration.java`, `core/src/main/java/org/testcontainers/DockerClientFactory.java`
 > and `core/src/main/java/org/testcontainers/containers/GenericContainer.java`; plus
 > `docs/features/configuration.md` and `docs/supported_docker_environment/index.md` at the same tag.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine** — nothing below is a container log, a timing or a
 > test run.

@@ -10,7 +10,7 @@ sidebar_position: 42
 > ([jpa/transactions.html](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html))
 > — and PostgreSQL 18 `SET TRANSACTION`
 > ([postgresql.org](https://www.postgresql.org/docs/18/sql-set-transaction.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Every read method you inherit runs with `readOnly = true`

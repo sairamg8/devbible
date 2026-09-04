@@ -11,7 +11,7 @@ sidebar_position: 4
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Hibernate ORM 7.4 user guide §31.3 *JDBC batching*
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, HikariCP 7.0.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, HikariCP 7.0.2, PostgreSQL 18.
 
 **A local database on loopback and a production database across a network are
 not the same machine with different specs — they differ in the one cost that

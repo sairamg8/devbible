@@ -11,7 +11,7 @@ sidebar_position: 51
 > ([docs.spring.io/spring-framework/reference/data-access/transaction/event.html](https://docs.spring.io/spring-framework/reference/data-access/transaction/event.html))
 > and the `TransactionSynchronization` javadoc
 > ([docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **A plain `@EventListener` runs the moment the event is published — inside the
 transaction, before anyone knows whether it will commit. `@TransactionalEventListener`

@@ -14,7 +14,7 @@ sidebar_position: 19
 > declaration in pitest 1.30.0's `build/intercept/defensive` package;
 > `Mutator.fromStrings`'s exclusion handling from `engine/gregor/config/Mutator.java` at the `1.30.0`
 > tag.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, AssertJ 3.27.7, Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no build on this machine.** Configuration and documented or source-read behaviour
 > only — never console output or a score from a run.

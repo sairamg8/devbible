@@ -10,7 +10,7 @@ sidebar_position: 12
 > ([tag `2.0.5`](https://github.com/testcontainers/testcontainers-java/tree/2.0.5)) — the module
 > sources and `build.gradle` were read directly — and the **2.0.0 release notes**, from which the
 > four breaking-change bullets are quoted verbatim.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing on this page is a container log, a
 > timing or a test run; the pages carry Java source and documented configuration only.

@@ -15,7 +15,7 @@ sidebar_position: 5
 > ([docs.spring.io/spring-boot/reference/features/json.html](https://docs.spring.io/spring-boot/reference/features/json.html)),
 > and the Spring Framework `OpenEntityManagerInViewInterceptor` class documentation
 > ([docs.spring.io/spring-framework/reference/data-access.html](https://docs.spring.io/spring-framework/reference/data-access.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **If you go looking for the statement that threw, you will usually find that nobody in your
 team wrote it. The four commonest callers are a JSON serialiser, a template engine, a

@@ -6,17 +6,17 @@ sidebar_position: 3
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints · Health* (docs.spring.io/spring-boot/reference/actuator/endpoints.html:
 > `HealthContributorRegistry`, `HealthIndicator`, `CompositeHealthContributor`,
 > the auto-configured indicator table and its keys,
 > `management.health.defaults.enabled`,
 > `management.endpoint.health.logging.slow-indicator-threshold`, and the
-> reactive variants) and the Spring Boot 4.1.0 API javadoc package paths
+> reactive variants) and the Spring Boot 4.1.1 API javadoc package paths
 > (`org.springframework.boot.health.contributor`,
 > `org.springframework.boot.health.registry`). The SSL `expiringChains` change
 > is from the *Spring Boot 4.0 Release Notes* (github.com/spring-projects/spring-boot/wiki).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`/actuator/health` is an aggregate, and the first of the two questions it
 raises is *who contributes*. Every contributor you accept is a coupling: your

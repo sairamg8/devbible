@@ -14,7 +14,7 @@ sidebar_position: 20
 > stack trace for Java exceptions (0 means all)"*); and the **JDK 25 API documentation** for
 > `Throwable.fillInStackTrace()` and the protected constructor taking `writableStackTrace`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Throwable.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Constructing an exception is cheap. Capturing its stack trace is not — it walks every frame on
 the calling thread — and it happens in the `Throwable` constructor, whether or not anyone ever

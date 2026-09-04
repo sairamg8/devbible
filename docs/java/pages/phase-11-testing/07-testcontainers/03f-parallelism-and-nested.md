@@ -18,7 +18,7 @@ sidebar_position: 18
 > the [JUnit 5 integration doc](https://github.com/testcontainers/testcontainers-java/blob/2.0.5/docs/test_framework_integration/junit_5.md)
 > at the same tag; and the **JUnit 6.0.3 user guide**
 > ([Parallel Execution](https://docs.junit.org/6.0.3/writing-tests/parallel-execution.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — only source that was read and documentation that was quoted.
 

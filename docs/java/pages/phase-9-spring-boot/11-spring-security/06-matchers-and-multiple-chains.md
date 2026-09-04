@@ -11,7 +11,7 @@ sidebar_position: 6
 > the first `SecurityFilterChain` that matches is invoked", `RequestMatcher`)
 > and *Authorize HTTP Requests*
 > (docs.spring.io/spring-security/reference/servlet/authorization/authorize-http-requests.html).
-> Spring Boot 4.1.0, Spring Security 7.x, JDK 25.
+> Spring Boot 4.1.1, Spring Security 7.x, JDK 25.
 
 **There are two matchers in play and confusing them is the single most expensive
 mistake in Spring Security configuration. `securityMatcher` decides *which chain

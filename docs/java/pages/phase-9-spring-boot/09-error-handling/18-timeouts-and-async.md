@@ -16,7 +16,7 @@ sidebar_position: 18
 > docs.spring.io/spring-framework/docs/current/javadoc-api. `@Async` behaviour
 > from the Spring Framework reference *Task Execution and Scheduling*
 > (docs.spring.io/spring-framework/reference/integration/scheduling.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Two async failures behave unlike anything else in this topic, and they behave
 that way for the same reason: the response has already been decided by the time

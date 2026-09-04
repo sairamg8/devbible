@@ -10,11 +10,11 @@ sidebar_position: 4
 > Container → Container Extension Points* and *Customizing the Nature of a
 > Bean* (docs.spring.io/spring-framework/reference/core/beans/ —
 > `BeanPostProcessor` semantics and ordering, initialisation callbacks,
-> `@DependsOn`), the Framework 7.0.8 Javadoc for
+> `@DependsOn`), the Framework 7.0.9 Javadoc for
 > `org.springframework.beans.factory.config.BeanPostProcessor` and
 > `org.springframework.core.annotation.Order`, and the Spring Framework
 > reference on proxying mechanisms.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Phase two is where objects finally exist, and it contains the single most
 consequential piece of machinery in Spring: a callback that is allowed to

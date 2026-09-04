@@ -13,7 +13,7 @@ sidebar_position: 17
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox, no Docker.** No command below was run. Every requirement is quoted from the
 > project's documentation.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything in [09](09-async-profiler.md) assumed you can run the profiler. In a container you
 frequently cannot, and the reason is not a bug — Docker deliberately restricts the syscall the

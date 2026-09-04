@@ -11,7 +11,7 @@ sidebar_position: 8
 > — and the Spring Framework 7.0.x reference for `RestClient` and `WebClient`
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)).
 > 🔴 **No sandbox.** Nothing on this page was executed; there are no timings and no output.
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A fan-out is the right shape for calling three independent services, and on JDK 25 the
 Java for it is unsettled in a way worth knowing about before you copy a sample. Structured

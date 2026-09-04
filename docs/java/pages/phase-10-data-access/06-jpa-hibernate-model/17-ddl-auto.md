@@ -15,7 +15,7 @@ sidebar_position: 36
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html))
 > and Spring Boot's `HibernateProperties` and `HibernateDefaultDdlAutoProvider` sources
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-hibernate/src/main/java/org/springframework/boot/hibernate/autoconfigure/HibernateProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **`spring.jpa.hibernate.ddl-auto` is, in Spring Boot's own words, "a shortcut for the
 `hibernate.hbm2ddl.auto` property". That property asks Hibernate to run its schema tooling

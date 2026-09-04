@@ -11,7 +11,7 @@ sidebar_position: 36
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)) —
 > and *Fundamentals* — "Open Application Modules" and "Excluding Packages"
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** — no
 > violation counts or messages here come from a run.
 
 **Nobody adopts Spring Modulith on a greenfield project; they adopt it on a codebase with

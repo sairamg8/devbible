@@ -14,7 +14,7 @@ sidebar_position: 0
 > RFC 6749 §1.1, RFC 6750 §1, RFC 7519 §4.1
 > ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc6749.txt)); RFC 9700 §2.1.2
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> Target: **JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x**.
+> Target: **JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x**.
 > **No sandbox** — Java source, config and specification-quoted definitions; token structure
 > where shown is illustrative and labelled as such, never a real token.
 >

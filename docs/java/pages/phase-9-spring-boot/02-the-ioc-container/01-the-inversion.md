@@ -11,7 +11,7 @@ sidebar_position: 1
 > (docs.spring.io/spring-framework/reference/core/beans/introduction.html — the
 > definition of a bean, dependency injection as a specialisation of IoC), and
 > *Bean Overview* (docs.spring.io/spring-framework/reference/core/beans/definition.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **A bean is not a special kind of object. It is an ordinary Java object that
 somebody else constructed. That is the entire inversion, and everything else in

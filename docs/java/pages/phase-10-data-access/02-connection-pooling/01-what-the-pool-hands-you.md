@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([docs.oracle.com/en/java/javase/25/docs/api/java.sql/](https://docs.oracle.com/en/java/javase/25/docs/api/java.sql/)),
 > and the Spring Boot reference *SQL Databases → Connection to a Production
 > Database* ([docs.spring.io/spring-boot](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.0, PostgreSQL 18, pgjdbc 42.7.13.
+> JDK 25, HikariCP 7.0.2, Spring Boot 4.1.1, PostgreSQL 18, pgjdbc 42.7.13.
 
 **A connection pool solves one problem, and it is worth being precise about
 which. It does not make opening a PostgreSQL connection faster. Opening one

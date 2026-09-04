@@ -12,7 +12,7 @@ sidebar_position: 1
 > *Web on Servlet Stack* (docs.spring.io/spring-framework/reference/web/), and
 > the Spring Boot 4.0 Migration Guide (github.com/spring-projects/spring-boot
 > wiki — the Servlet 6.1 baseline and the removal of Undertow).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, Jakarta EE 11, JDK 25.
 
 **A servlet container is not a framework. It is four things bolted together: a
 socket that accepts TCP connections, a parser that turns bytes into an

@@ -13,7 +13,7 @@ sidebar_position: 2
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/diagnostic-tools.html)),
 > and the **JDK 25 `java` tool reference** — `-Xmx`, `-XX:MaxDirectMemorySize`
 > ([docs.oracle.com/en/java/javase/25/docs/specs/man/java.html](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`OutOfMemoryError` is the JVM telling you that one of *its* limits was reached; OOMKilled
 is the kernel telling you nothing at all, because `SIGKILL` cannot be handled. The first

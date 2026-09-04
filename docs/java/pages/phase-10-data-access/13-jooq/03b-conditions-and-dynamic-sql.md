@@ -12,7 +12,7 @@ sidebar_position: 11
 > ([true-false-no-condition](https://www.jooq.org/doc/latest/manual/sql-building/conditional-expressions/true-false-no-condition/))
 > and *Dynamic SQL — the NO condition*
 > ([dynamic-sql/no-condition](https://www.jooq.org/doc/latest/manual/sql-building/dynamic-sql/no-condition/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The single most common thing a repository method has to do is build a query whose `WHERE`
 clause depends on which parameters arrived. In a string API that is concatenation, a running

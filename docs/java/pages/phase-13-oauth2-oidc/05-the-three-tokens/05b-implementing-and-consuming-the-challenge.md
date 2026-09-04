@@ -15,7 +15,7 @@ sidebar_position: 10
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-security));
 > Spring Security 7.x reference — Bearer Tokens
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/bearer-tokens.html)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **[05](05-www-authenticate-challenges.md) is the specification's three codes and three
 statuses. This chunk is the two pieces of code that make them real: the entry point that

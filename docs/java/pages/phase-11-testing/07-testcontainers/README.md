@@ -8,11 +8,11 @@ sidebar_position: 7
 
 > Verified: 2026-08-31 against the **Testcontainers 2.0.5** sources and documentation
 > ([tag `2.0.5`](https://github.com/testcontainers/testcontainers-java/tree/2.0.5),
-> [java.testcontainers.org](https://java.testcontainers.org/)), the **Spring Boot 4.1.0**
+> [java.testcontainers.org](https://java.testcontainers.org/)), the **Spring Boot 4.1.1**
 > reference at [tag `v4.1.0`](https://github.com/spring-projects/spring-boot/tree/v4.1.0), the
-> **Spring Framework 7.0.8** testing reference, **H2 2.4.240**'s own grammar and `ErrorCode`
+> **Spring Framework 7.0.9** testing reference, **H2 2.4.240**'s own grammar and `ErrorCode`
 > javadoc, and the **PostgreSQL 18** manual.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3, Flyway 12.4.0, H2 2.4.240, PostgreSQL JDBC 42.7.11.
 > ⚠️ **No Docker, no container runtime and no sandbox on this machine.** Every page carries Java
 > source and documented configuration — never a container log, a timing, a benchmark or a test run.

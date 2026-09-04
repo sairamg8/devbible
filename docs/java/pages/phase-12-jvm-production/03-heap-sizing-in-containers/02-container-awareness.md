@@ -15,7 +15,7 @@ sidebar_position: 2
 > [`os/linux/os_linux.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/os/linux/os_linux.cpp).
 > Also the **`java.lang.Runtime`** javadoc for JDK 25
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Runtime.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Before JDK 10 a JVM in a container sized itself against the host: a 512 MB container on a
 256 GB machine chose a 64 GB heap and died immediately. Container support fixed that by changing

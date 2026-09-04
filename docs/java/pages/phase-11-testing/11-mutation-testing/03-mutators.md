@@ -11,7 +11,7 @@ sidebar_position: 8
 > per-mutator sections — the [FAQ](https://pitest.org/faq/) entry *"Can I activate more mutators
 > without relisting all the default ones?"*, and the
 > [Maven quick start](https://pitest.org/quickstart/maven/) `mutators` parameter.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter
 > 6.0.3.
 > ⚠️ **No sandbox and no build on this machine.** Mutator behaviour, tables and examples are quoted
 > from pitest's documentation; the Java on this page is illustrative source, never a run.

@@ -13,7 +13,7 @@ sidebar_position: 23
 > ([`Modifying.java`](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/repository/Modifying.java));
 > Jakarta Persistence 3.2 §3.10 (`FlushModeType`) and §4.11
 > ([spec](https://jakarta.ee/specifications/persistence/3.2/jakarta-persistence-spec-3.2.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1.
 
 **`@Modifying` has exactly two attributes and both are `false` by default. That is
 worth stating flatly because the folklore usually gets one of them wrong: the

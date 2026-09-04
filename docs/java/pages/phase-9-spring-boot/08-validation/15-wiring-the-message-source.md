@@ -14,7 +14,7 @@ sidebar_position: 15
 > Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html),
 > and the Spring Boot *Application Properties* appendix, `spring.messages.*`
-> group. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> group. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Two bundles for one application is an accident, not a design. Your
 translators are already working on `messages.properties`, and

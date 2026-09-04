@@ -13,7 +13,7 @@ sidebar_position: 2
 > The classical vocabulary is Gerard Meszaros's, as popularised by Martin Fowler's
 > ["Mocks Aren't Stubs"](https://martinfowler.com/articles/mocksArentStubs.html) — named
 > here as the source of the terms, not as a Mockito API reference.
-> JDK 25 · Spring Boot 4.1.0 → Mockito 5.23.0, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → Mockito 5.23.0, JUnit Jupiter 6.0.3.
 
 **"Mock" in casual speech means "any object standing in for a real one". In the vocabulary
 this topic uses, and in Mockito's API, it means something narrower — and two of the five

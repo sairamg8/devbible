@@ -14,7 +14,7 @@ sidebar_position: 23
 > ([array-value-constructor](https://www.jooq.org/doc/latest/manual/sql-building/column-expressions/array-value-constructor/))
 > and *Custom data type bindings*
 > ([custom-data-type-bindings](http://www.jooq.org/doc/latest/manual/code-generation/custom-data-type-bindings/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **PostgreSQL's interesting column types are exactly the ones JDBC has no opinion about. `jsonb`
 is, in the manual's words, a *"pre-processed, binary-stored JSON document"* that *"has no direct

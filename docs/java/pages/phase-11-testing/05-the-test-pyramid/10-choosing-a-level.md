@@ -6,14 +6,14 @@ sidebar_position: 21
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-28 against the Spring Boot 4.1.0 reference *Testing*
+> Verified: 2026-08-28 against the Spring Boot 4.1.1 reference *Testing*
 > ([spring-boot-applications](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html))
 > and the *Test Auto-configuration Annotations* appendix
 > ([slices](https://docs.spring.io/spring-boot/appendix/test-auto-configuration/slices.html));
 > every mechanism referenced here is sourced in the chunk it links to, and this page adds no new
 > claims about the framework.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3.
 > **No sandbox** — Java source only.
 
 **Every other chunk in this topic explains a mechanism. This one is the decision they exist to

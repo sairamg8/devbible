@@ -14,7 +14,7 @@ sidebar_position: 20
 > Architecture* ([microservices.io](https://microservices.io/patterns/microservices.html));
 > Stefan Tilkov, *Don't start with a monolith*
 > ([martinfowler.com](https://martinfowler.com/articles/dont-start-monolith.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — every
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — every
 > figure below is either a count of artefacts or arithmetic you can redo.
 
 **Chunks 10 through 19 each priced one line. This is the invoice. Use it as a review

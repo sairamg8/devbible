@@ -13,8 +13,8 @@ sidebar_position: 0
 > and *Actuator → Metrics*
 > (docs.spring.io/spring-boot/reference/io/rest-client.html), the Spring Boot 4.0
 > Migration Guide and Configuration Changelog, the Spring Framework 7.0.x and
-> Spring Boot 4.1.0 Javadoc, the JDK 25 `java.net.http` API, and the Apache
-> HttpComponents Client 5.x API. Spring Boot 4.1.0, Spring Framework 7.0.x,
+> Spring Boot 4.1.1 Javadoc, the JDK 25 `java.net.http` API, and the Apache
+> HttpComponents Client 5.x API. Spring Boot 4.1.1, Spring Framework 7.0.x,
 > JDK 25.
 
 **Every topic before this one made your service a server. This one makes it a

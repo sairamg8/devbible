@@ -7,10 +7,10 @@ sidebar_position: 8
 <span className="db-tier t-master">Master</span>
 
 > Verified: 2026-08-19 against RFC 9110 *HTTP Semantics* (the `Link` header and
-> the status-code semantics referenced here), the Spring Framework 7.0.8
+> the status-code semantics referenced here), the Spring Framework 7.0.9
 > reference on controller return values (docs.spring.io), and the Spring
 > HATEOAS project documentation for the hypermedia representation model.
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **The response shape of a list endpoint is the least reversible decision in an
 HTTP API. A status code can be corrected, a field can be added, an endpoint can

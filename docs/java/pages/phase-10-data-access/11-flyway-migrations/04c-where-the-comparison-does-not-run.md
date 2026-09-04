@@ -14,7 +14,7 @@ sidebar_position: 10
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/flyway-ignore-migration-patterns-setting-277579006.html))
 > and the *Baseline* command reference
 > ([documentation.red-gate.com](https://documentation.red-gate.com/flyway/reference/commands/baseline)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **[04b](04b-the-edits-nothing-catches.md) was about what Flyway hashes. This is about when Flyway
 does not look at all. Two conditions in `validate()` disable the type, checksum and description

@@ -12,7 +12,7 @@ sidebar_position: 3
 > quoted for the three callbacks, the `postHandle` limitation and the security
 > warning) and *Web MVC → MVC Config → Interceptors*
 > (`mvc-config/interceptors.html`, for `addInterceptors`, `addPathPatterns`,
-> `excludePathPatterns` and the `MappedInterceptor` note). Spring Boot 4.1.0,
+> `excludePathPatterns` and the `MappedInterceptor` note). Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **An interceptor buys you exactly one thing a filter cannot give you: it knows

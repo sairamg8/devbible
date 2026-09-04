@@ -14,7 +14,7 @@ sidebar_position: 35
 > [`gc/shared/gc_globals.hpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gc_globals.hpp),
 > where `AlwaysTenure` is declared *"Always tenure objects in eden (ParallelGC only)"* and
 > `NeverTenure` *"Never tenure objects in eden, may tenure on overflow (ParallelGC only)"*.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08c](08c-premature-promotion.md) established the mechanism and the measurement. This page is
 the response — and its main argument is that the response depends on the collector far more than

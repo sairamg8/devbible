@@ -9,7 +9,7 @@ sidebar_position: 35
 > Verified: 2026-09-04 against the Spring Modulith 2.1.1 reference documentation, *Verifying Application Module Structure*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)) and *Fundamentals*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
 
 **A candidate service boundary drawn on a whiteboard or documented in an architectural wiki is a hypothesis, not an architecture. If a proposed service boundary cannot survive in-process without circular dependencies, illegal imports, or leaking internal models, extracting it into an independent microservice guarantees a distributed monolith with lockstep deployments. Spring Modulith's `ApplicationModules.verify()` enforces three strict architectural rules in a standard JUnit 5 test: no cyclic dependencies between modules, efferent access strictly via API packages, and adherence to explicitly declared allowed dependencies. Verifying candidate boundaries in-process before extraction provides definitive proof that a service boundary is viable before anyone provisions databases, networks, or CI pipelines.**
 

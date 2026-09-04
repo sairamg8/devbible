@@ -17,7 +17,7 @@ sidebar_position: 12
 > `withTemporarySessionIfNeeded()` throw `LazyInitializationException` when the collection has
 > no live session
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/collection/spi/AbstractPersistentCollection.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The previous chunk's list is the reassuring half. This is the half that costs afternoons.
 Every entry here is an operation that reads, at the call site, like a question about an object

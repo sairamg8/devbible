@@ -13,7 +13,7 @@ sidebar_position: 10
 > `createResponseEntity`), the Spring Framework reference *Error Responses*
 > (the "extend it and declare it as an `@ControllerAdvice`" instruction) and the
 > Spring Boot reference *Servlet Web Applications · Error Handling*
-> (`spring.mvc.problemdetails.enabled`). Spring Boot 4.1.0, Spring Framework
+> (`spring.mvc.problemdetails.enabled`). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Spring already knows the correct status for every error it raises itself — 405

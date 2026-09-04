@@ -10,7 +10,7 @@ sidebar_position: 32
 > the *Class-based Projections (DTOs)*, *JPQL Queries*, *DTO Projection JPQL Query
 > Rewriting* and *Native Queries* sections
 > ([projections.html](https://docs.spring.io/spring-data/jpa/reference/repositories/projections.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **The second projection form is a plain value type. It behaves differently from an

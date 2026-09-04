@@ -15,7 +15,7 @@ sidebar_position: 54
 > ([Thread](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.html));
 > the Awaitility 4.3.0 javadoc for `ConditionFactory`
 > ([ConditionFactory](https://javadoc.io/doc/org.awaitility/awaitility/4.3.0/org/awaitility/core/ConditionFactory.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8, Awaitility 4.3.0.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9, Awaitility 4.3.0.
 
 **[14c](14c-timing-and-concurrency.md) is how to wait for asynchronous work without lying about
 timing. This chunk is two things waiting cannot reach: assertions of *absence*, which no finite

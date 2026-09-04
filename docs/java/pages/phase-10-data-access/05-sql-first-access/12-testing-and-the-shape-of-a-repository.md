@@ -13,7 +13,7 @@ sidebar_position: 24
 > ([docs.spring.io/.../jdbc/core/simple/JdbcClient.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/core/simple/JdbcClient.html))
 > and the Spring Boot 4.1 reference *Data → SQL Databases*
 > ([docs.spring.io/spring-boot/reference/data/sql.html](https://docs.spring.io/spring-boot/reference/data/sql.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **Twenty-three chunks have argued about statements. This one is about the class they
 live in. A SQL-first repository is not an interface Spring implements at startup — it

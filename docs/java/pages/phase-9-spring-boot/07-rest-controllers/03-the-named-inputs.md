@@ -6,13 +6,13 @@ sidebar_position: 3
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-08-19 against the Spring Framework 7.0.8 reference,
+> Verified: 2026-08-19 against the Spring Framework 7.0.9 reference,
 > *Web MVC → Annotated Controllers → Handler Methods → Method Arguments*
 > (docs.spring.io — the supported argument type table, `@PathVariable`,
 > `@RequestParam`, `@RequestHeader`, `@CookieValue`, `java.util.Optional`
 > support on annotations carrying a `required` attribute, and the
 > **`-parameters`** compiler-flag requirement for parameter-name resolution).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Argument resolution is a second, independent stage after mapping — a request
 that matched your route can still fail here, with a different status code and a

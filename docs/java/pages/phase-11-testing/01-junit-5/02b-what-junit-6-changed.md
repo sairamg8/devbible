@@ -11,7 +11,7 @@ sidebar_position: 3
 > and "Overview / Supported Java Versions"
 > ([overview](https://docs.junit.org/6.0.3/overview.html)); managed version read from
 > [`spring-boot-dependencies-4.1.0.pom`](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **JUnit 6.0.0 was released on 30 September 2025 and Boot 4.1.0 manages 6.0.3. If you have
 been writing Jupiter tests, essentially none of your test code changes: `@Test`,

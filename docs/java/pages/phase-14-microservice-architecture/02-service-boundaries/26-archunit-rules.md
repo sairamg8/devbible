@@ -8,7 +8,7 @@ sidebar_position: 37
 
 > Verified: 2026-09-04 against ArchUnit 1.4.2 user guide and reference documentation
 > ([archunit.org](https://www.archunit.org/user-guide/html/000_Index.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · ArchUnit 1.4.2 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · ArchUnit 1.4.2 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Spring Modulith is not the only mechanism for verifying bounded contexts in-process, and for non-Spring projects or legacy codebases, it may not even be an option. ArchUnit inspects compiled JVM bytecode directly via a fluent Java DSL in standard JUnit 5 tests, providing boundary enforcement without requiring framework adoption. With ArchUnit, you can mechanically forbid circular dependencies between packages, ban cross-context persistence access, and prevent foreign domains from querying internal repositories. A team that writes their service boundaries into ArchUnit rules has converted architectural principles from human guidelines into an automated build gate.**
 

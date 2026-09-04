@@ -14,7 +14,7 @@ sidebar_position: 56
 > ([docs.hibernate.org/orm/7.4/introduction/](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html))
 > and the Jakarta Persistence 3.2 specification's `FetchType` defaults
 > ([jakarta.ee/specifications/persistence/3.2/](https://jakarta.ee/specifications/persistence/3.2/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **Every other fix in this topic is additive: the mapping stays lazy and a call site asks for
 more. `EAGER` is the only one that goes the other way, and it is a one-way door. Once an

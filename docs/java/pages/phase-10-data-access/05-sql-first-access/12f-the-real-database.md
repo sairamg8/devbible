@@ -13,7 +13,7 @@ sidebar_position: 29
 > [errcodes-appendix](https://www.postgresql.org/docs/18/errcodes-appendix.html))
 > and the Spring Framework 7.0 reference *Data Access → JDBC Core Classes*
 > ([docs.spring.io/.../jdbc/core.html](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18, H2 2.x.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18, H2 2.x.
 
 **The argument for SQL-first, in [chunk 10](10-when-sql-first-beats-an-entity.md), was
 seven queries that use PostgreSQL and not SQL-in-general: `on conflict do update`,

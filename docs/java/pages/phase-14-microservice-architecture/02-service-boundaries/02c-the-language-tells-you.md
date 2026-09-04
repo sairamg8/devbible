@@ -11,7 +11,7 @@ sidebar_position: 4
 > *Domain-Driven Design* (2003), Ch. 2 "Ubiquitous Language", cited by concept;
 > microservices.io *Decompose by business capability*
 > ([microservices.io](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html)).
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Boundary discovery is usually presented as a workshop with sticky notes. It is often

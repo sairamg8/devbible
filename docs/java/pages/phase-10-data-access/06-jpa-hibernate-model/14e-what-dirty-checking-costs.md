@@ -12,7 +12,7 @@ sidebar_position: 27
 > ([docs.hibernate.org/orm/7.4/userguide/html_single/](https://docs.hibernate.org/orm/7.4/userguide/html_single/)),
 > the Hibernate ORM 7.4 *Introduction* §5.1, §5.10 and §6.3
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Every flush walks every managed entity and compares every mapped attribute. Nothing
 about that is proportional to the number of things you changed. And because an

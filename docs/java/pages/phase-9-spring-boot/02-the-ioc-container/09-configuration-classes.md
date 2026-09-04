@@ -13,7 +13,7 @@ sidebar_position: 9
 > mode, `proxyBeanMethods`, CGLIB subclassing of `@Configuration` classes,
 > inter-bean references, the restriction on `final` classes), and the Framework
 > 7.0.8 Javadoc for `org.springframework.context.annotation.Configuration` and
-> `Bean`. Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> `Bean`. Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@Configuration` does something that looks impossible in Java: it makes
 calling a method twice return the same object. A `@Bean` method called from

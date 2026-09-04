@@ -19,7 +19,7 @@ sidebar_position: 22
 > and the `3.x` source of `Hibernate7Module`, `Hibernate7ProxySerializer` and
 > `PersistentCollectionSerializer`
 > ([github.com/FasterXML/jackson-datatype-hibernate](https://github.com/FasterXML/jackson-datatype-hibernate/blob/3.x/hibernate7/src/main/java/tools/jackson/datatype/hibernate7/Hibernate7Module.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **This is the most defensible entry in the whole "not a fix" series, and the one worth
 understanding in detail, because it is genuinely the right tool for the situation it was built

@@ -22,7 +22,7 @@ sidebar_position: 25
 > for `UseAdaptiveSizePolicy`, `GCTimeLimit`, `GCHeapFreeLimit` and `GCOverheadLimitThreshold`.
 > **Zero references to `UseAdaptiveSizePolicy` exist in `g1Arguments.cpp` or
 > `serialArguments.cpp`.**
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The Parallel collector resizes its own generations to meet the goals you state, and the
 machinery is more interesting than its reputation: it grows four times faster than it shrinks,

@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/troubleshoot/troubleshoot-process-hangs-loops.html)).
 > 🔴 **No sandbox.** There is no JVM behind these pages: no flame graph, event table, timing or
 > percentage here is a measurement. Quoted figures are the documentation's own and are attributed.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[Topic 05](../05-thread-dumps/README.md) answered "what is blocked". This topic answers "what is
 busy", and they need different tools for a reason that is structural rather than cultural: a

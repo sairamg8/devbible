@@ -16,7 +16,7 @@ sidebar_position: 16
 > ([documentation.red-gate.com](https://documentation.red-gate.com/fd/baseline-migrations-273973336.html))
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Every migration tool has to answer one awkward question: what do you do about the database that
 already exists? Flyway answers it twice, with two mechanisms that share a word and solve opposite

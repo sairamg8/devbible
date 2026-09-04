@@ -14,7 +14,7 @@ sidebar_position: 4
 > ([codegen-records](https://www.jooq.org/doc/latest/manual/code-generation/codegen-object-types/codegen-records/))
 > and the *jOOQ in 7 steps* tutorial
 > ([step 3](https://www.jooq.org/doc/latest/manual/getting-started/tutorials/jooq-in-7-steps/jooq-in-7-steps-step3/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **The generator connects to a schema, reads its catalogue, and writes a Java class for every
 table, column, key, index and sequence it finds. From that moment your schema is a Java API:

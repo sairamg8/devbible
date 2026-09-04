@@ -15,7 +15,7 @@ sidebar_position: 12
 > [`os/linux/os_linux.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/os/linux/os_linux.cpp).
 > Container mechanics beyond what the JVM reads belong to the Docker and Kubernetes sections of
 > this site; this page covers only the interaction.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **A request is a promise from the scheduler; a limit is a threat from the kernel. The JVM has no
 concept of the first and sizes itself entirely against the second. That asymmetry is the reason

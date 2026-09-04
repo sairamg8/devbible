@@ -11,8 +11,8 @@ sidebar_position: 9
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/executing-sql.html)),
 > and the javadoc for
 > [`org.springframework.test.context.jdbc.Sql`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No database, no Docker and no sandbox on this machine** — this page carries Java
 > source, SQL and documented behaviour, never the output of a test run.
 

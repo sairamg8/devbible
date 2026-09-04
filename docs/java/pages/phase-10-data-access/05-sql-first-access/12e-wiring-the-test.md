@@ -15,7 +15,7 @@ sidebar_position: 28
 > and the Spring Framework 7.0 reference *Testing → TestContext Framework →
 > Transaction management*
 > ([docs.spring.io/.../testcontext-framework/tx.html](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, PostgreSQL 18.
 
 **[Chunk 12d](12d-the-jdbctest-slice.md) covered what the slice contains. Three things
 about wiring a test on top of it are not obvious from the annotation, and each one has

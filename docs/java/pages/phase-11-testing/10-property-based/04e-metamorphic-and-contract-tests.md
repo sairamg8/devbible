@@ -11,7 +11,7 @@ sidebar_position: 18
 > *Assumptions* ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)); and the
 > **JDK 25 javadoc** for `java.lang.Object.equals`/`hashCode` and
 > `java.util.Comparator.compare` for the contracts asserted below.
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **"Metamorphic relation" is a term from the testing literature, not from jqwik's

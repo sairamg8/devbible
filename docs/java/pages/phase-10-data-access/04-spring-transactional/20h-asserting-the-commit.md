@@ -15,7 +15,7 @@ sidebar_position: 60
 > and `TransactionSynchronization`
 > ([.../transaction/support/TransactionSynchronization.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html))
 > javadocs.
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1.
 
 **"The order was rolled back" is not something you can see from inside the
 transaction that was rolled back. Nothing has happened yet — the writes are pending

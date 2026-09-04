@@ -6,12 +6,12 @@ sidebar_position: 1
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-08-19 against the Spring Boot 4.1.0 reference — *Actuator ·
+> Verified: 2026-08-19 against the Spring Boot 4.1.1 reference — *Actuator ·
 > Endpoints* (docs.spring.io/spring-boot/reference/actuator/endpoints.html: the
 > endpoint catalogue table, the `@Endpoint` / `@ReadOperation` /
 > `@WriteOperation` / `@DeleteOperation` contract, `@Selector`, and the
 > technology-specific `@WebEndpoint` / `@JmxEndpoint` /
-> `@EndpointWebExtension` annotations). Spring Boot 4.1.0, Spring Framework
+> `@EndpointWebExtension` annotations). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **Actuator is not "a set of URLs Spring gives you". It is an endpoint

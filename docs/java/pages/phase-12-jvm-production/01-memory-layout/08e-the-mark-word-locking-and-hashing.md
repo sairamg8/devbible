@@ -11,7 +11,7 @@ sidebar_position: 30
 > `jdk-25+36` sources `src/hotspot/share/oops/markWord.hpp` (the lock-state table and the
 > `hash_bits` constant) and `src/hotspot/share/runtime/globals.hpp` (`LockingMode` with its
 > `LM_LIGHTWEIGHT` default and its two `(Deprecated)` values, and `UseObjectMonitorTable`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[08](08-the-object-header.md) laid out the header's fields. This chunk is about the two
 subsystems that fight over them at runtime. Locking writes the two lowest bits of the mark word and,

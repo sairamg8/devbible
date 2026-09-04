@@ -10,7 +10,7 @@ sidebar_position: 8
 > ([docs.spring.io](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/SmartLifecycle.html)) —
 > every quotation below — and the **Spring Boot 4.1** reference for
 > `spring.lifecycle.timeout-per-shutdown-phase` (default `30s`) and the web server's position in
-> the earliest stop phase. Spring Framework 7.0.8 / Spring Boot 4.1.0, JDK 25.
+> the earliest stop phase. Spring Framework 7.0.9 / Spring Boot 4.1.1, JDK 25.
 > 🔴 **No sandbox** — no context was started or closed for this page.
 
 **`@PreDestroy` answers "run this when the bean is destroyed". `SmartLifecycle` answers "run

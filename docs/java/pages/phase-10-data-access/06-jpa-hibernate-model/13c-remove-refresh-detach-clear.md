@@ -14,7 +14,7 @@ sidebar_position: 22
 > ([docs.hibernate.org/orm/7.4/userguide/...](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the Hibernate ORM 7.4 *Introduction* §5.4
 > ([docs.hibernate.org/orm/7.4/introduction/...](https://docs.hibernate.org/orm/7.4/introduction/html_single/Hibernate_Introduction.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2.
 
 **These six are the operations you use when the persistence context's default behaviour is
 wrong for what you are doing. That framing is worth keeping, because the Hibernate

@@ -10,7 +10,7 @@ sidebar_position: 13
 > ([select-statement/implicit-join](https://www.jooq.org/doc/latest/manual/sql-building/sql-statements/select-statement/implicit-join/))
 > and *Joined tables*
 > ([table-expressions/joined-tables](https://www.jooq.org/doc/latest/manual/sql-building/table-expressions/joined-tables/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **`BOOK.author().FIRST_NAME` looks exactly like the `book.getAuthor().getFirstName()` an ORM would
 give you, and it is the opposite thing. There is no proxy, no session, no second query and no

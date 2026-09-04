@@ -16,7 +16,7 @@ sidebar_position: 12
 > ([06](06-jdk-mission-control.md)). This page is how to read the output, not a rule catalogue —
 > read your own version's rule descriptions rather than trusting a list written elsewhere.
 > 🔴 **No sandbox** — no score, finding or output below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Mission Control's Automated Analysis page runs a set of rules over a recording and produces
 ranked findings with scores and a written explanation each. It is the single fastest way to orient

@@ -16,8 +16,8 @@ sidebar_position: 8
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)),
 > and the **Prometheus documentation** — *Concepts · Data model*
 > ([prometheus.io](https://prometheus.io/docs/concepts/data_model/)).
-> No JVM was run for this page; no scrape output appears below. JDK 25 · Spring Boot 4.1.0 /
-> Spring Framework 7.0.8 · Micrometer 1.17.0.
+> No JVM was run for this page; no scrape output appears below. JDK 25 · Spring Boot 4.1.1 /
+> Spring Framework 7.0.9 · Micrometer 1.17.0.
 
 **A meter's identity is its name *plus its tags*, and that single sentence is the entire design.
 Tags are what make a metrics system dimensional: one name, many series, and the backend does the

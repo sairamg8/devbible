@@ -13,7 +13,7 @@ sidebar_position: 29
 > *"Reaction that says 'whenever X happens, we do Y'"*, and a hot spot as a device to
 > *"visualise and capture hot conflicts"*; Alberto Brandolini, *EventStorming*
 > ([eventstorming.com](https://www.eventstorming.com/)), cited by concept.
-> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
+> Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Event storming gets a domain onto a wall in hours instead of weeks, and it does it in the

@@ -11,7 +11,7 @@ sidebar_position: 1
 > (docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html
 > — the Spring team's own recommendation, the "large number of constructor
 > arguments is a bad code smell" note, and the setter-injection guidance).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **Dependency injection is not a Spring feature. It is a plain-Java design
 constraint — *a class never constructs its own collaborators* — and Spring is

@@ -12,7 +12,7 @@ sidebar_position: 10
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/EnumSource.html))
 > and `EnumSource.Mode`
 > ([javadoc](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/EnumSource.Mode.html))
-> pages. JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> pages. JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **Every other source is a list you maintain. `@EnumSource` with no attributes is a list the
 compiler maintains for you: add a constant to the enum and the test runs against it tomorrow.

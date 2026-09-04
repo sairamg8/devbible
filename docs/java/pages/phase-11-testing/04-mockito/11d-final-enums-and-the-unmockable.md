@@ -14,7 +14,7 @@ sidebar_position: 51
 > `isTypeMockable` of
 > [`InlineDelegateByteBuddyMockMaker`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/internal/creation/bytebuddy/InlineDelegateByteBuddyMockMaker.java)
 > plus the `EXCLUDES` set in `InlineBytecodeGenerator` and the `Reporter` message text.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > **Mockito 5.23.0**, JUnit Jupiter 6.0.3. **No sandbox** — this page carries Java source and
 > error text quoted from that source, never a fabricated test run.
 

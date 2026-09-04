@@ -12,7 +12,7 @@ sidebar_position: 6
 > ([docs.spring.io/spring-framework/reference/integration/cache/annotations.html](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html)),
 > and the `SimpleKeyGenerator` / `SimpleKey` sources on the 7.0.x branch
 > ([github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework/blob/7.0.x/spring-context/src/main/java/org/springframework/cache/interceptor/SimpleKeyGenerator.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9.
 
 **A cache is a map. The value is whatever your method returned, and the key is computed for
 you from the arguments — nothing else. Not the method name, not the declaring class, not the

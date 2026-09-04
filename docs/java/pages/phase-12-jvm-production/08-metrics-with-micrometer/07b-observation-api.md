@@ -13,7 +13,7 @@ sidebar_position: 20
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/observability.html)), and
 > the **Spring Framework 7 reference · Integration · Observability**
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/integration/observability.html)).
-> No JVM was run for this page. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 ·
+> No JVM was run for this page. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 ·
 > Micrometer 1.17.0 / Micrometer Tracing 1.7.0.
 
 **Micrometer states the goal in one sentence — *"Instrument code once, and get multiple benefits

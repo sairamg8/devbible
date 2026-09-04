@@ -13,7 +13,7 @@ sidebar_position: 8
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Jakarta Persistence 3.2 `@OneToMany` javadoc
 > ([.../onetomany](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/onetomany)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Two annotations, one foreign key, and a clear division of labour: the child's
 `@ManyToOne` writes the column, the parent's `@OneToMany(mappedBy = …)` reads it back as

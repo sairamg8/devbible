@@ -12,7 +12,7 @@ sidebar_position: 6
 > ([docs.junit.org](https://docs.junit.org/6.0.3/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/CsvFileSource.html)),
 > and the 6.0.0 release notes
 > ([docs.junit.org](https://docs.junit.org/6.0.3/release-notes/index.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 
 **A `@CsvSource` you have to scroll past is a data file that has not admitted it yet.
 `@CsvFileSource` reads that file — from the classpath, from disk, from several at once — with

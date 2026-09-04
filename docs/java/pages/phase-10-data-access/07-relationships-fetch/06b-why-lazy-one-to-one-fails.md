@@ -14,7 +14,7 @@ sidebar_position: 10
 > ([docs.hibernate.org/orm/7.4/introduction/html_single/](https://docs.hibernate.org/orm/7.4/introduction/html_single/))
 > and the Jakarta Persistence 3.2 `FetchType` javadoc
 > ([.../fetchtype](https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/fetchtype)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1, Jakarta Persistence 3.2, PostgreSQL 18.
 
 **You write `fetch = FetchType.LAZY` on the `mappedBy` side of a `@OneToOne`, and
 Hibernate loads it eagerly anyway — with a second query, per row. This is not a bug and

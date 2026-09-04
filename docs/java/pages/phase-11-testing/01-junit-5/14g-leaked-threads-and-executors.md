@@ -16,7 +16,7 @@ sidebar_position: 55
 > ([writing-tests/test-instance-lifecycle](https://docs.junit.org/6.0.3/writing-tests/test-instance-lifecycle.html))
 > and "Built-in Extensions"
 > ([writing-tests/built-in-extensions](https://docs.junit.org/6.0.3/writing-tests/built-in-extensions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[14f](14f-concurrency-you-cannot-wait-out.md) covers races the test exposes. This is the mirror
 image and it is worse, because the evidence points at the wrong test: work started by test 7 that

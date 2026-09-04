@@ -11,7 +11,7 @@ sidebar_position: 33
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)) —
 > and *Verifying Application Module Structure*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **Every module discussed so far has been *closed*: it exposes what it deliberately exposes
 and nothing else. An open module inverts that for one module — internals become

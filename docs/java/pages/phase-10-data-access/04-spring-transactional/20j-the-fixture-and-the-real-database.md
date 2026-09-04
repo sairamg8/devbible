@@ -13,7 +13,7 @@ sidebar_position: 62
 > ([.../test/context/jdbc/SqlConfig.TransactionMode.html](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.TransactionMode.html))
 > and the `@DataJpaTest` javadoc
 > ([.../boot/data/jpa/test/autoconfigure/DataJpaTest.html](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/data/jpa/test/autoconfigure/DataJpaTest.html)).
-> JDK 25, Spring Framework 7.0.8, Spring Boot 4.1.0, PostgreSQL 18.
+> JDK 25, Spring Framework 7.0.9, Spring Boot 4.1.1, PostgreSQL 18.
 
 **Everything from [20d](20d-what-a-test-must-assert.md) onward has been about the
 assertion. Two things upstream of it decide whether the assertion can mean anything at

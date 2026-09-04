@@ -14,7 +14,7 @@ sidebar_position: 5
 > must be removed to use the built-in support added in Framework 6.1) — and
 > *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **`@Valid` is not a constraint. It is the instruction to *descend* — into a
 method argument, or into a field — and run the constraints that are already

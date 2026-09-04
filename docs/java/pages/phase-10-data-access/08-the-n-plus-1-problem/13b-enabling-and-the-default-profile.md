@@ -14,7 +14,7 @@ sidebar_position: 46
 > and the `org.hibernate.Session` javadoc for `enableFetchProfile`,
 > `disableFetchProfile` and `isFetchProfileEnabled`
 > ([docs.jboss.org/hibernate/orm/7.4/javadocs/](https://docs.jboss.org/hibernate/orm/7.4/javadocs/org/hibernate/Session.html)).
-> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1,
+> Documentation build 7.4.6.Final. JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2.
 
 **A declared profile does nothing until something enables it, and the scope of "enable" is

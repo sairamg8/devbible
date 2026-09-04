@@ -11,10 +11,10 @@ sidebar_position: 27
 > *Fundamentals*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html));
 > the published `spring-modulith-core:2.1.1` and `spring-modulith-bom:2.1.1` POMs on Maven
-> Central; the `spring-boot-dependencies:4.1.0` POM; the Spring Modulith 2.1 GA and
+> Central; the `spring-boot-dependencies:4.1.1` POM; the Spring Modulith 2.1 GA and
 > 2.2 M1 / 2.1.1 release announcements on
 > ([spring.io](https://spring.io/blog/2026/06/11/spring-modulith-2-1-ga-2-0-7-and-1-4-12-released/)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Modulith
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Modulith
 > **2.1.1**. **No sandbox** — every version below comes from a published POM or a release
 > announcement, not from a build that was run here.
 

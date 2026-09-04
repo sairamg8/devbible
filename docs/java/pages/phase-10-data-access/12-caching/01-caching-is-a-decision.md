@@ -13,7 +13,7 @@ sidebar_position: 1
 > ([docs.hibernate.org/orm/7.4/userguide/](https://docs.hibernate.org/orm/7.4/userguide/html_single/Hibernate_User_Guide.html))
 > and the PostgreSQL 18 documentation on `shared_buffers`
 > ([postgresql.org/docs/18/runtime-config-resource.html](https://www.postgresql.org/docs/18/runtime-config-resource.html)).
-> JDK 25, Spring Boot 4.1.0, Hibernate ORM 7.4.1.
+> JDK 25, Spring Boot 4.1.1, Hibernate ORM 7.4.1.
 
 **Every cache is the same bargain: you agree to serve an answer that may be out of date,
 in exchange for serving it without doing the work. That bargain is fine — most systems

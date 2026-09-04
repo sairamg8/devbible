@@ -15,7 +15,7 @@ sidebar_position: 24
 > and the `7.4` source of `org.hibernate.proxy.AbstractLazyInitializer` and
 > `org.hibernate.collection.spi.AbstractPersistentCollection` for the exact exception messages
 > ([github.com/hibernate/hibernate-orm](https://github.com/hibernate/hibernate-orm/blob/7.4/hibernate-core/src/main/java/org/hibernate/proxy/AbstractLazyInitializer.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, PostgreSQL 18.
 
 **The failure mode of this migration is doing it in production first, discovering fourteen
 broken endpoints in an afternoon, reverting, and concluding that open-session-in-view is

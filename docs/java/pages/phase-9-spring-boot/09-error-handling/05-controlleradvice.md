@@ -14,7 +14,7 @@ sidebar_position: 5
 > application order of global vs local methods, the `annotations` /
 > `basePackages` / `basePackageClasses` / `assignableTypes` selectors and the
 > runtime-evaluation performance caveat) and *Exceptions (`@ExceptionHandler`)*
-> for the cross-advice priority rule. Spring Boot 4.1.0, Spring Framework
+> for the cross-advice priority rule. Spring Boot 4.1.1, Spring Framework
 > 7.0.x, JDK 25.
 
 **`@ControllerAdvice` is the composition root of your HTTP error contract: one

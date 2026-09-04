@@ -13,11 +13,11 @@ sidebar_position: 23
 > [`PercentileHistogramBuckets`](https://github.com/micrometer-metrics/micrometer/blob/v1.17.0/micrometer-core/src/main/java/io/micrometer/core/instrument/distribution/PercentileHistogramBuckets.java)
 > — the **Spring Boot 4.1 production-ready reference · Metrics · Per-meter Properties**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/actuator/metrics.html)), and the
-> **Spring Boot 4.1.0 sources** —
+> **Spring Boot 4.1.1 sources** —
 > [`MetricsProperties`](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-micrometer-metrics/src/main/java/org/springframework/boot/micrometer/metrics/autoconfigure/MetricsProperties.java)
 > and `PropertiesMeterFilter`, and the **Prometheus documentation** — *Concepts · Metric types*
 > ([prometheus.io](https://prometheus.io/docs/concepts/metric_types/)). Every series count below is arithmetic on Micrometer's own
-> documented bucket counts, shown with its working; no JVM was run. JDK 25 · Spring Boot 4.1.0 ·
+> documented bucket counts, shown with its working; no JVM was run. JDK 25 · Spring Boot 4.1.1 ·
 > Micrometer 1.17.0 · Prometheus Java client 1.5.1.
 
 **[08](08-percentiles.md) concluded that on Prometheus you want a histogram. This page is what a

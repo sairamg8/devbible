@@ -21,7 +21,7 @@ sidebar_position: 9
 > **"Debug Running Pods"** task page
 > ([kubernetes.io](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/)).
 > 🔴 **No sandbox** — nothing here was built or run, and no image size, layer count or tool
-> output below is a measurement. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> output below is a measurement. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[02d](02d-the-cache-variants-of-the-dockerfile.md) finished the question of *what you copy
 into the image*. This chunk is the question underneath it — *what the image already was*. The

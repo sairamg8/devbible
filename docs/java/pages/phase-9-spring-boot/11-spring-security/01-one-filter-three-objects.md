@@ -9,7 +9,7 @@ sidebar_position: 1
 > Verified: 2026-08-19 against the Spring Security reference — *Architecture*
 > (docs.spring.io/spring-security/reference/servlet/architecture.html —
 > `DelegatingFilterProxy`, `FilterChainProxy`, `SecurityFilterChain`, request
-> matching and the `HttpFirewall` note). Spring Boot 4.1.0, Spring Framework
+> matching and the `HttpFirewall` note). Spring Boot 4.1.1, Spring Framework
 > 7.0.x, Spring Security 7.x, JDK 25.
 
 **Spring Security adds exactly one filter to your servlet container, and

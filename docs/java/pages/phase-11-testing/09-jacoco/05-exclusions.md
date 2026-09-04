@@ -9,7 +9,7 @@ sidebar_position: 14
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `doc/faq.html` (quoted on what agent excludes
 > do to a report), `prepare-agent-mojo.html`, `report-mojo.html` and `check-mojo.html` for the
 > three `excludes` parameters, and the **Gradle user manual**'s JaCoCo page. Version spine from
-> `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3.
+> `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — configuration and documented behaviour only.
 
 **Excluding code from coverage is both the most legitimate configuration you will do and the

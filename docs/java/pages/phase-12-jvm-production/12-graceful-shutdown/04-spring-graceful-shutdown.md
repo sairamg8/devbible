@@ -10,7 +10,7 @@ sidebar_position: 5
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html)),
 > and the **Spring Boot application-properties appendix**, which lists `server.shutdown` with
 > default **`graceful`** and `spring.lifecycle.timeout-per-shutdown-phase` with default
-> **`30s`**. Version spine: Spring Boot 4.1.0 / Spring Framework 7.0.8, JDK 25.
+> **`30s`**. Version spine: Spring Boot 4.1.1 / Spring Framework 7.0.9, JDK 25.
 > 🔴 **No sandbox** — no application was started or stopped for this page.
 
 **Two properties, one of which is not the one you think, and a default that changed.**

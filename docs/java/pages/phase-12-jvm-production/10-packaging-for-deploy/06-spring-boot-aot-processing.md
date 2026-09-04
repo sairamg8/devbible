@@ -14,7 +14,7 @@ sidebar_position: 22
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/core/aot.html)). Documented at
 > Spring Boot 4.1.x / Spring Framework 7.0.x. 🔴 **No sandbox** — the one log fragment below is
 > **quoted from the Spring Boot reference** and the generated Java is **quoted from the Spring Boot
-> reference**; nothing here was built or run. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> reference**; nothing here was built or run. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Two completely different things in this topic are called AOT and they are routinely confused. The
 **AOT cache** ([05d](05d-the-aot-cache.md)) is a JVM feature that stores the *results* of work a

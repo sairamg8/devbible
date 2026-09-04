@@ -9,7 +9,7 @@ sidebar_position: 14
 > Verified: 2026-08-19 against the Spring Security reference — *Architecture*,
 > *Authorize HTTP Requests*, *Method Security* and *CORS*
 > (docs.spring.io/spring-security/reference/) — and against the Spring Boot
-> reference for the error-handling interaction. Spring Boot 4.1.0, Spring
+> reference for the error-handling interaction. Spring Boot 4.1.1, Spring
 > Security 7.x, JDK 25.
 
 **Every trap in this chunk is a case where Spring Security does exactly what it

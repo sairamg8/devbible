@@ -16,7 +16,7 @@ sidebar_position: 22
 > [`AsyncAppender`](https://github.com/qos-ch/logback/blob/master/logback-classic/src/main/java/ch/qos/logback/classic/AsyncAppender.java),
 > whose `isDiscardable` returns `level.toInt() <= Level.INFO_INT` and whose `preprocess` calls
 > `getCallerData()` only when `includeCallerData` is set.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`AsyncAppender` is added to configurations as an unqualified good: move logging off the request
 thread, get the latency back. It does do that. It also introduces a bounded queue with a discard

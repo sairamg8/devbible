@@ -12,10 +12,10 @@ sidebar_position: 1
 > [h2database.com/html/advanced.html](https://www.h2database.com/html/advanced.html)) —
 > the Testcontainers 2.0.5 *Database containers* module documentation
 > ([java.testcontainers.org/modules/databases](https://java.testcontainers.org/modules/databases/))
-> and the Spring Boot 4.1.0 `AutoConfigureTestDatabase` source
+> and the Spring Boot 4.1.1 `AutoConfigureTestDatabase` source
 > ([`module/spring-boot-jdbc-test/.../AutoConfigureTestDatabase.java` @ v4.1.0](https://github.com/spring-projects/spring-boot/blob/v4.1.0/module/spring-boot-jdbc-test/src/main/java/org/springframework/boot/jdbc/test/autoconfigure/AutoConfigureTestDatabase.java)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, **Testcontainers 2.0.5**, **H2 2.4.240**, PostgreSQL JDBC
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, **Testcontainers 2.0.5**, **H2 2.4.240**, PostgreSQL JDBC
 > 42.7.11, JUnit Jupiter 6.0.3. **There is no Docker and no sandbox on this machine** —
 > every page in this topic carries Java source and documented configuration, and never a
 > container log, a startup timing or a test run.

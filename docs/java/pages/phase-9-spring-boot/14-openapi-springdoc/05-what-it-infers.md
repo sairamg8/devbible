@@ -12,7 +12,7 @@ sidebar_position: 5
 > `springdoc.model-converters.pageable-converter.enabled`), the constraint
 > handling in `io.swagger.v3.core.jackson.ModelResolver` as published in
 > `swagger-core-jakarta` **2.2.52** (the version pinned by springdoc 3.1.0), and
-> the springdoc release notes for #3239, #3281 and #3293. Spring Boot 4.1.0,
+> the springdoc release notes for #3239, #3281 and #3293. Spring Boot 4.1.1,
 > Spring Framework 7.0.x, JDK 25.
 
 **The reason springdoc is worth adding at all is that a controller written the

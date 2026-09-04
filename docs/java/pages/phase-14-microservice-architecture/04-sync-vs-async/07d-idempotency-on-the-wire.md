@@ -14,7 +14,7 @@ sidebar_position: 34
 > ([datatracker.ietf.org](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/)).
 > ⚠️ **That draft is not an RFC.** As of 2026-09-01 it is at **draft-07, latest revision
 > 2025-10-15, and expired.** The header is widely implemented by convention; it is not a
-> standard. 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework
+> standard. 🔴 **No sandbox.** Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework
 > 7.0.8.
 
 **A retry is only a retry if repeating the request is harmless. Otherwise it is a second

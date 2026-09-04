@@ -16,8 +16,8 @@ sidebar_position: 11
 > for individual mocks"*; and the exception text in
 > [`InlineDelegateByteBuddyMockMaker.java`](https://github.com/mockito/mockito/blob/v5.23.0/mockito-core/src/main/java/org/mockito/internal/creation/bytebuddy/InlineDelegateByteBuddyMockMaker.java)
 > at the same tag. Plus **JEP 451** ([openjdk.org/jeps/451](https://openjdk.org/jeps/451)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, JUnit Jupiter 6.0.3, Mockito 5.23.0.
 > ⚠️ **No sandbox and no test runs on this machine** — Java source, build configuration and
 > documented behaviour only. There are **no timings on this page**, because I have no way to
 > measure them and the documentation does not state any.

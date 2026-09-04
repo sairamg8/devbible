@@ -14,7 +14,7 @@ sidebar_position: 4
 > ([docs.micrometer.io](https://docs.micrometer.io/tracing/reference/configuring.html)), and the
 > **Spring Boot 4.1 reference — Actuator · Tracing and Observability**
 > ([docs.spring.io](https://docs.spring.io/spring-boot/4.1/reference/actuator/tracing.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Micrometer 1.17.0 / Micrometer Tracing
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Micrometer 1.17.0 / Micrometer Tracing
 > 1.7.0 · OpenTelemetry Java 1.62.0.
 
 **"Context propagation" is used for two jobs that share nothing but a word. In-process

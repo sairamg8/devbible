@@ -12,7 +12,7 @@ sidebar_position: 25
 > and the **Spring Boot Maven plugin** reference, "Packaging OCI Images"
 > ([docs.spring.io](https://docs.spring.io/spring-boot/maven-plugin/build-image.html)). Documented at
 > Spring Boot 4.1.x. 🔴 **No sandbox** — no image was built and no build output below is a
-> transcript. JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> transcript. JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Everything from [02c](02c-a-real-layered-dockerfile.md) onward has been a series of decisions:
 which base image, which layers, which user, which archive. Buildpacks are the alternative in which

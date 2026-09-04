@@ -12,7 +12,7 @@ sidebar_position: 6
 > and the `assertj-core` 3.27.7 sources (`org.assertj.core.error.ShouldContain`,
 > `ShouldContainExactly`, `ShouldContainExactlyInAnyOrder`, `ShouldContainOnly`,
 > `Assertions.assertThat(Stream)`).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Collections are where a good assertion library earns its licence, because a wrong
 collection can be wrong in four independent ways — missing elements, extra elements, wrong

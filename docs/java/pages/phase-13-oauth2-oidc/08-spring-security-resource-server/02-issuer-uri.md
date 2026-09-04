@@ -16,7 +16,7 @@ sidebar_position: 2
 > §4 (Validating JWT Access Tokens)
 > ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc9068)) — and the
 > Spring Security sources `JwtIssuerValidator`, `JwtClaimValidator`.
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **One property does two unrelated jobs. `issuer-uri` is the *string* that every incoming
 token's `iss` claim is compared against, and it is separately the *base address* Spring

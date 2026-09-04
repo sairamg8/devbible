@@ -15,7 +15,7 @@ sidebar_position: 8
 > ([docs.spring.io/spring-framework/reference/7.0/core/beans/dependencies/factory-autowire.html](https://docs.spring.io/spring-framework/reference/7.0/core/beans/dependencies/factory-autowire.html)),
 > and the pgjdbc connection-parameter reference
 > ([jdbc.postgresql.org/documentation/use/](https://jdbc.postgresql.org/documentation/use/)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, HikariCP 7.0.2, pgjdbc 42.7.13.
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, HikariCP 7.0.2, pgjdbc 42.7.13.
 
 **[Chunk 3e](03e-two-pools-not-one-bigger.md) argued for two pools. This chunk is
 the mechanics, and it is worth its own page for one reason: the recipe changed,

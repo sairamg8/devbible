@@ -10,7 +10,7 @@ sidebar_position: 12
 > Attributes*, *Setting Defaults for @Property Attributes*, *Additional Reporting Options*,
 > *Platform Reporting with Reporter Object*, *Adding Footnotes to Failure Reports* and
 > *jqwik Configuration* ([jqwik.net](https://jqwik.net/docs/current/user-guide.html)).
-> Version spine: JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, JUnit Jupiter 6.0.3,
+> Version spine: JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, JUnit Jupiter 6.0.3,
 > AssertJ 3.27.7. jqwik 1.10.1 — see
 > [02b · The version collision](02b-the-version-collision.md).
 > ⚠️ **No sandbox and no test run on this machine** — documented attribute semantics and

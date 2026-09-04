@@ -13,7 +13,7 @@ sidebar_position: 31
 > [`/articles/dark-energy-dark-matter/`](https://microservices.io/articles/dark-energy-dark-matter/dark-energy/simple-components.html);
 > the *Microservice Architecture* pattern
 > ([microservices.io](https://microservices.io/patterns/microservices.html)), which lists both
-> sets as forces. Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring
+> sets as forces. Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring
 > Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
 **Most decomposition advice is one-sided: here is why to split, now go and split. Richardson's

@@ -12,7 +12,7 @@ sidebar_position: 57
 > ([ServerSocket](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/ServerSocket.html));
 > the JUnit 6.0.3 User Guide — "Timeouts"
 > ([writing-tests/timeouts](https://docs.junit.org/6.0.3/writing-tests/timeouts.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **[14d](14d-environment.md) is the filesystem. This is the other two shared resources a test
 reaches for — the network stack and the database — and both fail in the same shape: the test

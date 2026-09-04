@@ -14,7 +14,7 @@ sidebar_position: 42
 > ([java.testcontainers.org](https://java.testcontainers.org/modules/databases/jdbc/))
 > and Spring Boot 4.1's `FlywayProperties`
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/tree/main/module/spring-boot-flyway)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Everything in [11d](11d-what-the-test-should-assert.md) is about the schema's construction, and a
 from-empty database is the right fixture for that. It is the wrong fixture for the other half of this

@@ -12,7 +12,7 @@ sidebar_position: 34
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html)) —
 > and *Appendix B: Spring Modulith Configuration Properties*
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/appendix.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox.**
 
 **The default convention — direct sub-packages of the main package — fits a greenfield
 project and almost no existing one. Rather than reorganising a large package tree on day

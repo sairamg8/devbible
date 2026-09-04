@@ -1,7 +1,7 @@
 # Phase 11 · Testing — notes every fork in this phase must read
 
 Target stack: **JUnit (Jupiter) · Mockito · AssertJ · Testcontainers**, on **JDK 25**,
-**Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+**Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 
 ## 🔴 THE VERSION SPINE — verified, do not re-derive and do not quote a project's front page
 

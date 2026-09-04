@@ -14,9 +14,9 @@ sidebar_position: 17
 > `EnabledIfDockerAvailableCondition` and `DockerAvailableDetector`; the **JUnit 6.0.3 user guide**
 > ([Registering Extensions](https://docs.junit.org/6.0.3/extensions/registering-extensions.html),
 > [Relative Execution Order](https://docs.junit.org/6.0.3/extensions/relative-execution-order-of-user-code-and-extensions.html));
-> and the **Spring Framework 7.0.8** reference
+> and the **Spring Framework 7.0.9** reference
 > [`dynamic-property-sources.adoc`](https://github.com/spring-projects/spring-framework/blob/v7.0.8/framework-docs/modules/ROOT/pages/testing/testcontext-framework/ctx-management/dynamic-property-sources.adoc).
-> Version spine: JDK 25, Spring Boot 4.1.0, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
+> Version spine: JDK 25, Spring Boot 4.1.1, **Testcontainers 2.0.5**, JUnit Jupiter 6.0.3.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — only source that was read and documentation that was quoted.
 

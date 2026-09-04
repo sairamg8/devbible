@@ -13,7 +13,7 @@ sidebar_position: 1
 > (Protocol) ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636));
 > RFC 9700 §2.1.1 (Authorization Code Grant)
 > ([datatracker.ietf.org/doc/html/rfc9700](https://datatracker.ietf.org/doc/html/rfc9700)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **There are exactly two channels in this flow and they have different security properties.
 The front channel is the user's browser: everything on it is visible in the address bar,

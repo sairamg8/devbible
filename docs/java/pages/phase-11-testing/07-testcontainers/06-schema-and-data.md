@@ -15,7 +15,7 @@ sidebar_position: 39
 > ([docs.spring.io](https://docs.spring.io/spring-boot/how-to/data-initialization.html)) and its
 > **Testcontainers** reference
 > ([docs.spring.io](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > Testcontainers 2.0.5, JUnit Jupiter 6.0.3, Flyway 12.4.0, PostgreSQL JDBC 42.7.11.
 > ⚠️ **No Docker and no sandbox on this machine.** Nothing here is a container log, a timing or a
 > test run — the page carries Java source and documented configuration only.

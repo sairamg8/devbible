@@ -13,7 +13,7 @@ sidebar_position: 15
 > the deprecation of `org.springframework.data.jpa.repository.Temporal` in 4.0
 > ([deprecated-list](https://docs.spring.io/spring-data/jpa/docs/current/api/deprecated-list.html));
 > Jakarta Persistence 3.2 §4.6 (conditional expressions, `like … escape`).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **Everything a derived query does *to* your arguments — rewriting `null` into

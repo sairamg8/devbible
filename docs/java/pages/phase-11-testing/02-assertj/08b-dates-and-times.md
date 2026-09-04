@@ -15,7 +15,7 @@ sidebar_position: 22
 > [`AbstractTemporalAssert`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/AbstractTemporalAssert.java)
 > (`isCloseTo`, `usingComparator`) and
 > [`AbstractDurationAssert`](https://github.com/assertj/assertj/blob/assertj-build-3.27.7/assertj-core/src/main/java/org/assertj/core/api/AbstractDurationAssert.java).
-> JDK 25 · Spring Boot 4.1.0 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
+> JDK 25 · Spring Boot 4.1.1 → AssertJ Core 3.27.7, JUnit Jupiter 6.0.3.
 
 **Almost every temporal assertion that goes wrong goes wrong the same way: the value came
 from `now()`, the test compares it to another `now()`, and the two are microseconds apart.

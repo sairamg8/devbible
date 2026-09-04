@@ -11,7 +11,7 @@ sidebar_position: 37
 > ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/verification.html));
 > the published `spring-modulith-core:2.1.1` POM (`jmolecules-ddd` 2.0.1,
 > `jmolecules-archunit` 0.33.0, `archunit` 1.4.2, all optional).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith **2.1.1**. **No sandbox** — the
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith **2.1.1**. **No sandbox** — the
 > jMolecules rule set's exact contents are not enumerated in the Spring Modulith reference
 > and are not reproduced from memory here.
 

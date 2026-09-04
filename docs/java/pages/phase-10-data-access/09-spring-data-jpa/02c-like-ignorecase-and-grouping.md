@@ -13,7 +13,7 @@ sidebar_position: 8
 > ([query-keywords-reference.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-keywords-reference.html)),
 > plus the PostgreSQL 18 manual on expression indexes
 > ([indexes-expressional.html](https://www.postgresql.org/docs/18/indexes-expressional.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2, PostgreSQL 18.
 
 **The keyword table tells you which JPQL fragment each keyword becomes. It does

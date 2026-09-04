@@ -12,7 +12,7 @@ sidebar_position: 45
 > ([writing-tests/test-instance-lifecycle](https://docs.junit.org/6.0.3/writing-tests/test-instance-lifecycle.html))
 > and "Built-in Extensions"
 > ([writing-tests/built-in-extensions](https://docs.junit.org/6.0.3/writing-tests/built-in-extensions.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Every failure on this page existed before you enabled `@Execution(CONCURRENT)`. Concurrency
 did not introduce them; it removed the accidental serialisation that was hiding them. That

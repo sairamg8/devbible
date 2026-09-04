@@ -13,7 +13,7 @@ sidebar_position: 20
 > hypothesis and soft-reference policy
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/gctuning/)).
 > **No sandbox** — no heap figure below is measured; the arithmetic shown is arithmetic.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **The guide leads with it: *"This error does not necessarily imply a memory leak. The problem can be
 as simple as a configuration issue, where the specified heap size (or the default size, if it is not

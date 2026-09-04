@@ -16,7 +16,7 @@ sidebar_position: 14
 > [`JvmGcMetrics`](https://github.com/micrometer-metrics/micrometer/blob/v1.17.0/micrometer-core/src/main/java/io/micrometer/core/instrument/binder/jvm/JvmGcMetrics.java)
 > — and **HikariCP's `MicrometerMetricsTracker`** for the pool meter names. Every meter name below
 > was read out of those sources rather than recalled. No JVM was run for this page and no metric
-> values appear. JDK 25 · Spring Boot 4.1.0 · Micrometer 1.17.0.
+> values appear. JDK 25 · Spring Boot 4.1.1 · Micrometer 1.17.0.
 
 **[05](05-red-and-use.md) established the three checklists. This page is the one that is actually
 hard to look up: what "resource" means for a JVM service, which meter is the utilisation and which

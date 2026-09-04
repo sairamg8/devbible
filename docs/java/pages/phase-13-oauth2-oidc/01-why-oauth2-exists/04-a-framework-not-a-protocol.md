@@ -11,7 +11,7 @@ sidebar_position: 4
 > (*OAuth 2.0 Authorization Server Metadata*), RFC 9068 (*JWT Profile for OAuth 2.0 Access
 > Tokens*) and OpenID Connect Discovery 1.0, at
 > [datatracker.ietf.org](https://datatracker.ietf.org/doc/html/rfc6749).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **"We support OAuth2" is not an interoperability claim. It is roughly as informative as "we
 speak over HTTP". The specification says so about itself, in §1.8, in unusually candid

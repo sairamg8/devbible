@@ -13,7 +13,7 @@ sidebar_position: 7
 > ([query-methods.html](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html))
 > and "Query by Example"
 > ([query-by-example.html](https://docs.spring.io/spring-data/jpa/reference/repositories/query-by-example.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > Jakarta Persistence 3.2, PostgreSQL 18.
 
 **Once the subject has decided what kind of statement to build, everything after

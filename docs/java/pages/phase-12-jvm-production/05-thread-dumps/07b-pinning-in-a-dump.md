@@ -13,7 +13,7 @@ sidebar_position: 13
 > reference** for `Thread.vthread_scheduler` and `Thread.print`
 > ([docs.oracle.com](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jcmd.html)).
 > 🔴 **No sandbox** — no dump fragment below is a captured run.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Pinning is what happens when a virtual thread cannot be unmounted from its carrier while it
 blocks, so a platform thread is consumed for the duration — reintroducing exactly the scarcity

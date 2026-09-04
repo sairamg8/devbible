@@ -18,7 +18,7 @@ sidebar_position: 0
 > ([rfc-editor.org/rfc/rfc9068](https://www.rfc-editor.org/rfc/rfc9068.txt)); RFC 4648 §5
 > (base64url); the Spring Security 7.x reference and `NimbusJwtDecoder` javadoc
 > ([docs.spring.io](https://docs.spring.io/spring-security/reference/)).
-> Target: **JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x**.
+> Target: **JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x**.
 > **No sandbox** — Java source, config and specification-quoted definitions; token structure
 > where shown is illustrative and labelled as such, signatures written `<base64url-signature>`.
 

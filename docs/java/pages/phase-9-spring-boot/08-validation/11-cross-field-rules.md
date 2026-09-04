@@ -11,7 +11,7 @@ sidebar_position: 11
 > constraints* (docs.hibernate.org/stable/validator/reference/en-US/html_single/)
 > — and the Spring Framework reference *Java Bean Validation*
 > (docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html).
-> Spring Boot 4.1.0, Spring Framework 7.0.x, JDK 25.
+> Spring Boot 4.1.1, Spring Framework 7.0.x, JDK 25.
 
 **No field-level constraint can see a second field. "End must not be before
 start", "if `channel` is `PARTNER` then `discountCode` is required", "at least

@@ -8,7 +8,7 @@ sidebar_position: 13
 
 > Verified: 2026-08-31 against **JaCoCo 0.8.15**'s `check-mojo.html` for the rule and limit
 > structure and the `value` types, and `doc/counters.html` for what each counter measures.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
 > JUnit Jupiter 6.0.3.
 > ⚠️ **No build and no test runs on this machine** — configuration and documented behaviour
 > only. No percentage on this page comes from a run.

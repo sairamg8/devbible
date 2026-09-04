@@ -13,7 +13,7 @@ sidebar_position: 17
 > thread-local variables ([openjdk.org](https://openjdk.org/jeps/506)), and the **Eclipse Memory
 > Analyzer documentation** for `Thread` as a GC root type
 > ([help.eclipse.org](https://help.eclipse.org/latest/topic/org.eclipse.mat.ui.help/concepts/gcroots.html)).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`ThreadLocal` is safe on a thread you own and dangerous on a thread you borrow, and the reason is
 one sentence in its own javadoc: the value lives as long as the thread does. On a servlet container,

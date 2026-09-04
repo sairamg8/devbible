@@ -12,7 +12,7 @@ sidebar_position: 39
 > ([repositories/custom-implementations.html](https://docs.spring.io/spring-data/jpa/reference/repositories/custom-implementations.html))
 > — plus the `RepositoryFactorySupport` and `RepositoryComposition` source
 > ([spring-data-commons](https://github.com/spring-projects/spring-data-commons/blob/main/src/main/java/org/springframework/data/repository/core/support/RepositoryFactorySupport.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1,
 > PostgreSQL 18.
 
 **[08](08-custom-implementations.md) established the three types and the `Impl` rule. This

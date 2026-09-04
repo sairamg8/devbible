@@ -10,8 +10,8 @@ sidebar_position: 24
 > ([github.com/stripe/stripe-mock](https://github.com/stripe/stripe-mock/blob/master/README.md))
 > — every quoted sentence on this page is from it — and the **Testcontainers 2.0.5**
 > LocalStack module page ([java.testcontainers.org](https://java.testcontainers.org/modules/localstack/)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9, JUnit Jupiter 6.0.3, Testcontainers 2.0.5.
 > ⚠️ **No sandbox and no Docker on this machine** — this page carries Java source and
 > documented behaviour, never container logs, timings or test output.
 

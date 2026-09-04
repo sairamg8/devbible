@@ -14,7 +14,7 @@ sidebar_position: 12
 > OpenID Connect Discovery 1.0 §3 (`subject_types_supported`, whose defined values are
 > `public` and `pairwise`), at
 > [openid.net/specs/openid-connect-discovery-1_0.html](https://openid.net/specs/openid-connect-discovery-1_0.html).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 >
 > ⚠️ **Provenance limit.** OIDC Core **§8 (Subject Identifier Types)** and **§8.1 (Pairwise
 > Identifier Algorithm)** could not be read in this pass — the published HTML truncates before

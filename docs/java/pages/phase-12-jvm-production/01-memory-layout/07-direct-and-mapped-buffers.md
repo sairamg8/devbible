@@ -19,7 +19,7 @@ sidebar_position: 25
 > `src/hotspot/share/runtime/globals.hpp` (`MaxDirectMemorySize`) and
 > `src/hotspot/share/gc/shared/gc_globals.hpp` (`DisableExplicitGC`,
 > `ExplicitGCInvokesConcurrent`).
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **`ByteBuffer.allocateDirect(n)` allocates `n` bytes outside the Java heap and returns a small
 heap object that owns them. Nothing in the language frees those bytes: they are released by a

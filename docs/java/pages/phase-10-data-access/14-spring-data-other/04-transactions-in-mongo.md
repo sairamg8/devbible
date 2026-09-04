@@ -12,7 +12,7 @@ sidebar_position: 12
 > ([docs.spring.io/spring-data/mongodb/reference/mongodb/client-session-transactions.html](https://docs.spring.io/spring-data/mongodb/reference/mongodb/client-session-transactions.html))
 > and the Testcontainers MongoDB module documentation
 > ([java.testcontainers.org/modules/databases/mongodb/](https://java.testcontainers.org/modules/databases/mongodb/)).
-> JDK 25, Spring Boot 4.1.0, Spring Data MongoDB 5.1.0, MongoDB 8.
+> JDK 25, Spring Boot 4.1.1, Spring Data MongoDB 5.1.0, MongoDB 8.
 
 **In Phase 10 so far, `@Transactional` has always worked. You annotated a method, a
 transaction manager was there, and the only questions were about propagation and

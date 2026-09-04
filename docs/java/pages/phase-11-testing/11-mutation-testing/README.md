@@ -12,8 +12,8 @@ sidebar_position: 0
 > [Gradle](https://pitest.org/quickstart/gradle/) quick starts — and against **pitest source read
 > at a version tag** for group membership and operator resolution. Version and JDK-support facts
 > come from Maven Central and pitest's release notes.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring
-> Framework 7.0.8, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring
+> Framework 7.0.9, **JUnit Jupiter 6.0.3**, Mockito 5.23.0, AssertJ 3.27.7.
 > ⚠️ **No sandbox and no build on this machine.** Every page carries Java source, POM and Gradle
 > configuration, and behaviour quoted from documentation — **never a mutation score, a run
 > duration or a report produced by a run here.**

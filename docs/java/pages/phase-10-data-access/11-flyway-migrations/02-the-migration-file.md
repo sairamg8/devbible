@@ -18,7 +18,7 @@ sidebar_position: 2
 > ([documentation.red-gate.com/fd/baseline-migrations-273973336.html](https://documentation.red-gate.com/fd/baseline-migrations-273973336.html))
 > and Spring Boot 4.1's `FlywayProperties` source
 > ([github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot/blob/main/module/spring-boot-flyway/src/main/java/org/springframework/boot/flyway/autoconfigure/FlywayProperties.java)).
-> JDK 25, Spring Boot 4.1.0, Flyway 12.4.0, PostgreSQL 18.
+> JDK 25, Spring Boot 4.1.1, Flyway 12.4.0, PostgreSQL 18.
 
 **Flyway discovers migrations by parsing file names, and the file name is the entire interface.
 There is no manifest, no index, no registration step: a file whose name matches the grammar is a

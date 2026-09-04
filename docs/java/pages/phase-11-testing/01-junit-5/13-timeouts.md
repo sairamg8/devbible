@@ -14,7 +14,7 @@ sidebar_position: 47
 > ([Assertions](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html))
 > and `@Timeout`
 > ([Timeout](https://docs.junit.org/6.0.3/api/org.junit.jupiter.api/org/junit/jupiter/api/Timeout.html)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Three tools that all fail a test for taking too long, and they are not interchangeable. Two
 of them measure and then complain; one of them actually interrupts. Two of them run your code

@@ -14,7 +14,7 @@ sidebar_position: 54
 > ([docs.spring.io/spring-framework/reference/](https://docs.spring.io/spring-framework/reference/data-access.html)),
 > and the Spring Boot 4.1 properties appendix for `spring.jpa.open-in-view`
 > ([docs.spring.io/spring-boot/appendix/application-properties/](https://docs.spring.io/spring-boot/appendix/application-properties/index.html)).
-> JDK 25, Spring Boot 4.1.0, Spring Framework 7.0.8, Hibernate ORM 7.4.1, HikariCP 7.0.2,
+> JDK 25, Spring Boot 4.1.1, Spring Framework 7.0.9, Hibernate ORM 7.4.1, HikariCP 7.0.2,
 > PostgreSQL 18.
 
 **The extra queries are the cost everybody names. They are not the interesting one. Because

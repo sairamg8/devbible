@@ -12,7 +12,7 @@ sidebar_position: 4
 > Fowler, *Conway's Law*
 > ([martinfowler.com](https://martinfowler.com/bliki/ConwaysLaw.html)) and *Microservice
 > Premium* ([martinfowler.com](https://martinfowler.com/bliki/MicroservicePremium.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox.**
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox.**
 
 **Almost every architecture debate about splitting is conducted as if the boundary were a
 free variable that engineers get to choose. It is not. Conway's 1968 paper shows the

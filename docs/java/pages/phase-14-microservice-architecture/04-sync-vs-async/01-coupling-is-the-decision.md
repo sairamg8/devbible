@@ -12,7 +12,7 @@ sidebar_position: 1
 > ([microservices.io](https://microservices.io/patterns/communication-style/messaging.html)) —
 > and Martin Fowler & James Lewis, "Microservices"
 > ([martinfowler.com](https://martinfowler.com/articles/microservices.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8 · Spring Cloud train
+> Version spine: JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9 · Spring Cloud train
 > 2025.1.x (components 5.0.x). **No sandbox** — no measured latency, availability or
 > throughput figure appears anywhere in this topic.
 

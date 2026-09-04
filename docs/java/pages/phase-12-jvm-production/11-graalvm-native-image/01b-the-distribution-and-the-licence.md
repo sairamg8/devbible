@@ -12,7 +12,7 @@ sidebar_position: 2
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/optimizations-and-performance/MemoryManagement/))
 > and "Optimizations and Performance"
 > ([graalvm.org](https://www.graalvm.org/latest/reference-manual/native-image/optimizations-and-performance/)).
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run**.
 
 **"GraalVM" names two products with the same command-line tools and materially different behaviour. Oracle GraalVM is licensed under the GraalVM Free Terms and Conditions; GraalVM Community Edition is GPLv2 with the Classpath Exception. The features that decide whether a native image can compete with a warmed JVM on throughput — profile-guided optimisation, the G1 collector, ML-based profile inference and the `-O3` level — are documented as *not available in GraalVM Community Edition*. If you benchmark CE and conclude native image is slow, you benchmarked the wrong product; if you deploy Oracle GraalVM without reading the licence, you may have made a redistribution decision nobody signed off.**

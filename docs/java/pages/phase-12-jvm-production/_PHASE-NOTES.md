@@ -1,6 +1,6 @@
 # Phase 12 · The JVM in production — notes every fork in this phase must read
 
-Target stack: **JDK 25 (LTS)** · **Spring Boot 4.1.0 / Spring Framework 7.0.8** ·
+Target stack: **JDK 25 (LTS)** · **Spring Boot 4.1.1 / Spring Framework 7.0.9** ·
 Micrometer + OpenTelemetry · Logback/SLF4J · JFR + JDK Mission Control · async-profiler ·
 GraalVM native image · JMH · CRaC.
 
@@ -15,7 +15,7 @@ and you have a shell, a PID and nothing else.
 | | Pinned |
 |---|---|
 | **JDK** | **25**, the LTS (GA September 2025). Every flag, tool and JEP on these pages is checked against JDK 25, not against "Java 17 + whatever the blog said". |
-| Spring Boot / Framework | **4.1.0** / **7.0.8** (`spring-boot-dependencies:4.1.0`) |
+| Spring Boot / Framework | **4.1.1** / **7.0.9** (`spring-boot-dependencies:4.1.0`) |
 | Build | Maven with the Spring Boot plugin; Gradle equivalents named, not re-taught (Phase 8 owns build) |
 
 🔴 **Every page carries a `> Verified:` line naming the actual source**, and the source for

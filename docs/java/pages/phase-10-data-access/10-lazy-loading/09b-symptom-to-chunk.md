@@ -18,7 +18,7 @@ sidebar_position: 34
 > ([github.com/spring-projects](https://github.com/spring-projects/spring-data-jpa/blob/main/spring-data-jpa/src/main/java/org/springframework/data/jpa/repository/JpaRepository.java)),
 > and the `2.19` source of `com.fasterxml.jackson.databind.ser.impl.UnknownSerializer`
 > ([github.com/FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind/blob/2.19/src/main/java/com/fasterxml/jackson/databind/ser/impl/UnknownSerializer.java)).
-> JDK 25, Spring Boot 4.1.0, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
+> JDK 25, Spring Boot 4.1.1, Spring Data JPA 4.1.0, Hibernate ORM 7.4.1, Jakarta Persistence 3.2,
 > PostgreSQL 18.
 
 **[09](09-the-checklist.md) is what you do before a merge. This is what you do when a ticket

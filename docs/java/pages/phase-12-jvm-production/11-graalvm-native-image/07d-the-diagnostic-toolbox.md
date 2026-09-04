@@ -17,7 +17,7 @@ sidebar_position: 17
 > option semantics, the deprecation and the two error strings cross-checked against
 > [`VMInspectionOptions.java`](https://github.com/oracle/graal/blob/release/graal-vm/25.3/substratevm/src/com.oracle.svm.core/src/com/oracle/svm/core/VMInspectionOptions.java)
 > on the **`release/graal-vm/25.3`** branch of `oracle/graal`.
-> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.0 / Spring Framework 7.0.8**.
+> Target: **JDK 25 · GraalVM 25.3.4.1 · Spring Boot 4.1.1 / Spring Framework 7.0.9**.
 > Documentation-validated; **no sandbox run** — no dump was taken, no signal was sent and no report was read.
 > The two quoted error strings are transcribed from the linked source file, not from a terminal.
 

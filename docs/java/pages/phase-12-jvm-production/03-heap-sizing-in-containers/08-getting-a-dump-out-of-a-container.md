@@ -20,7 +20,7 @@ sidebar_position: 14
 > Taking a dump and reading it is **04 · `OutOfMemoryError`** *(not written yet)* and
 > [01d · Taking a heap dump on purpose](../01-memory-layout/01d-taking-a-heap-dump-on-purpose.md);
 > this page is only about getting the file off a container alive.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **Every part of the standard heap-dump advice assumes a machine you can log into and a disk that
 persists. A container has neither. The default dump path is a directory that ceases to exist at

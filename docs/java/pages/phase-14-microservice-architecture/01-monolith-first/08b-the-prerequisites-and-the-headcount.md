@@ -12,7 +12,7 @@ sidebar_position: 18
 > ([teamtopologies.com](https://teamtopologies.com/key-concepts)); Chris Richardson,
 > *Pattern: Monolithic Architecture*
 > ([microservices.io](https://microservices.io/patterns/monolithic.html)).
-> Version spine: JDK 25 · Spring Boot 4.1.0 · Spring Modulith 2.1.1. **No sandbox** — no
+> Version spine: JDK 25 · Spring Boot 4.1.1 · Spring Modulith 2.1.1. **No sandbox** — no
 > headcount figure here is measured; the argument is about which roles must exist, not how
 > many FTE they cost at your company.
 

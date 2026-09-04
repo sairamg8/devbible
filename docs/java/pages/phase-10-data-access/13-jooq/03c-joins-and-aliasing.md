@@ -12,7 +12,7 @@ sidebar_position: 12
 > ([table-expressions/aliased-tables](https://www.jooq.org/doc/latest/manual/sql-building/table-expressions/aliased-tables/))
 > and *Aliased generated tables*
 > ([aliased-generated-tables](https://www.jooq.org/doc/latest/manual/sql-building/table-expressions/aliased-tables/aliased-generated-tables/)).
-> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.0, PostgreSQL 18.
+> jOOQ **3.21.7**, JDK 25, Spring Boot 4.1.1, PostgreSQL 18.
 
 **A single-table query is a nice demo. The place a typed SQL DSL actually pays for itself is a
 five-table join with two aliases of the same table, because that is precisely where a string API

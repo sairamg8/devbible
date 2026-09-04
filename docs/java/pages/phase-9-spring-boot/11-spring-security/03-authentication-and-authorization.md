@@ -12,7 +12,7 @@ sidebar_position: 3
 > — `SecurityContextHolder` and its strategy modes, `SecurityContext`,
 > `Authentication`, `GrantedAuthority`, `AuthenticationManager`,
 > `ProviderManager`, `AuthenticationProvider`, `AbstractAuthenticationProcessingFilter`).
-> Spring Boot 4.1.0, Spring Security 7.x, JDK 25.
+> Spring Boot 4.1.1, Spring Security 7.x, JDK 25.
 
 **Authentication answers "who is calling"; authorization answers "may they do
 this". Spring Security keeps them in different objects, different filters and

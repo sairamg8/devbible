@@ -1,21 +1,21 @@
 # Phase 13 · OAuth2 & OIDC — notes every fork in this phase must read
 
 Target stack: **OAuth 2.0 (RFC 6749) + the RFC 9700 Best Current Practice · OIDC 1.0 ·
-Spring Security 7.x on Spring Boot 4.1.0 / Spring Framework 7.0.8 · JDK 25.**
+Spring Security 7.x on Spring Boot 4.1.1 / Spring Framework 7.0.9 · JDK 25.**
 
 ## 🔴 THE VERSION SPINE — verified, do not re-derive
 
 | | Pinned for this phase |
 |---|---|
 | JDK | **25** |
-| Spring Boot | **4.1.0** |
-| Spring Framework | **7.0.8** |
+| Spring Boot | **4.1.1** |
+| Spring Framework | **7.0.9** |
 | **Spring Security** | 🔴 **7.x** — Boot 4.x manages Security 7, *not* 6 |
 | Nimbus JOSE + JWT | the `NimbusJwtDecoder` / `NimbusJwtEncoder` backing library |
 
 🔴 **The phase README (written 2026-08-17) says "Spring Security 6.x". That is stale.**
 The rest of the Java corpus already pins **7.x** — `phase-9-spring-boot/11-spring-security/`
-says "Spring Boot 4.1.0, Spring Security 7.x, JDK 25" on its `> Verified:` lines. Write
+says "Spring Boot 4.1.1, Spring Security 7.x, JDK 25" on its `> Verified:` lines. Write
 **7.x**. The coordinator fixes the README banner; a fork does not edit the phase README.
 
 ⚠️ **Security 7 removed configuration API that every tutorial still uses.** Before you write

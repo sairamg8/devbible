@@ -13,7 +13,7 @@ sidebar_position: 5
 > — the Spring Boot 4.1.x source `JwtDecoderConfiguration#jwtDecoderByIssuerUri`
 > (returns `SupplierJwtDecoder`) and `JwkSetUriJwtDecoderBuilderCustomizer`
 > ([github.com](https://github.com/spring-projects/spring-boot/tree/4.1.x/module/spring-boot-security-oauth2-resource-server)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x (7.1.0).
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x (7.1.0).
 
 **🔴 This chunk corrects a widely repeated claim, including one on our own
 [phase 9 page](../../phase-9-spring-boot/11-spring-security/09-jwt-resource-server.md),

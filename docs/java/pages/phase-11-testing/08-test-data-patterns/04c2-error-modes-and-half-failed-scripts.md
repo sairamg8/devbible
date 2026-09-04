@@ -12,8 +12,8 @@ sidebar_position: 13
 > [`SqlConfig.TransactionMode`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.TransactionMode.html),
 > and the **Spring Framework 7.0.x** testing reference, *Executing SQL Scripts*
 > ([docs.spring.io](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/executing-sql.html)).
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> Spring Framework 7.0.8.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> Spring Framework 7.0.9.
 > ⚠️ **No database and no sandbox on this machine** — Java source, SQL and documented
 > behaviour only, never the output of a run. One claim on this page is explicitly marked
 > as unconfirmed.

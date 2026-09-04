@@ -11,9 +11,9 @@ sidebar_position: 1
 > ([definitions](https://docs.junit.org/6.0.3/writing-tests/definitions.html)) and
 > "Exception Handling"
 > ([exception-handling](https://docs.junit.org/6.0.3/writing-tests/exception-handling.html));
-> version spine read from `spring-boot-dependencies:4.1.0`
+> version spine read from `spring-boot-dependencies:4.1.1`
 > ([POM on Maven Central](https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.0/spring-boot-dependencies-4.1.0.pom)).
-> JDK 25, Spring Boot 4.1.0, JUnit Jupiter 6.0.3, Spring Framework 7.0.8.
+> JDK 25, Spring Boot 4.1.1, JUnit Jupiter 6.0.3, Spring Framework 7.0.9.
 
 **Everything JUnit does reduces to one mechanism: it invokes your method, and if the
 method returns normally the test passed. There is no "pass" API. A test fails when an

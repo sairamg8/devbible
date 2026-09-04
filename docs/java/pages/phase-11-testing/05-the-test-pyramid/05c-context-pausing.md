@@ -11,8 +11,8 @@ sidebar_position: 10
 > ([context-pausing](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/ctx-management/context-pausing.html))
 > — every `PauseMode` value, the default, the system-property name and the `isPauseable()`
 > opt-out are quoted from that page.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0,
-> **Spring Framework 7.0.8**, JUnit Jupiter 6.0.3.
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1,
+> **Spring Framework 7.0.9**, JUnit Jupiter 6.0.3.
 > **No sandbox** — no suite was run.
 
 **This is new, and it is new in a way that matters: it is a behaviour change in how cached

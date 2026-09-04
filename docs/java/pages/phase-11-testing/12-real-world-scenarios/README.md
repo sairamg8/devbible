@@ -13,7 +13,7 @@ sidebar_position: 0
 > **Mockito 5.23.0** javadoc and source, **JSONassert**, **Awaitility 4.3.0**, the **JDK 25**
 > javadoc (`HttpTimeoutException`, `HttpConnectTimeoutException`, `ScheduledExecutorService`) and
 > **JLS §25 §13.1**, plus **RFC 9110** and **Jakarta Persistence 3.2** / **Jakarta Messaging 3.1**.
-> Version spine from `spring-boot-dependencies:4.1.0`: JDK 25, Spring Boot 4.1.0, Spring Framework
+> Version spine from `spring-boot-dependencies:4.1.1`: JDK 25, Spring Boot 4.1.1, Spring Framework
 > 7.0.8, JUnit Jupiter 6.0.3, Mockito 5.23.0, AssertJ 3.27.7, Testcontainers 2.0.5,
 > Awaitility 4.3.0.
 > ⚠️ **No sandbox, no Docker, no broker and no test run on this machine.** Every chunk carries

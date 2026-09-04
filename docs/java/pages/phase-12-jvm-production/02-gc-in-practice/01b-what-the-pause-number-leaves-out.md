@@ -20,7 +20,7 @@ sidebar_position: 2
 > for `ParallelGCThreads`, `ConcGCThreads` and `HeapSizePerGCThread`, and
 > [`gc/shared/gcTraceTime.cpp`](https://github.com/openjdk/jdk/blob/jdk-25%2B36/src/hotspot/share/gc/shared/gcTraceTime.cpp)
 > for the `gc+cpu` log format string.
-> JDK 25 · Spring Boot 4.1.0 / Spring Framework 7.0.8.
+> JDK 25 · Spring Boot 4.1.1 / Spring Framework 7.0.9.
 
 **[01](01-what-a-collector-actually-promises.md) gave you three axes and two flags for
 stating a preference. This page is the part the flags do not cover: the CPU a concurrent

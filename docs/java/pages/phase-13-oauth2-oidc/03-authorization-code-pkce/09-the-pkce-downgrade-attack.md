@@ -13,7 +13,7 @@ sidebar_position: 12
 > ([datatracker.ietf.org/doc/html/rfc7636](https://datatracker.ietf.org/doc/html/rfc7636));
 > RFC 8414 §2 (Authorization Server Metadata)
 > ([datatracker.ietf.org/doc/html/rfc8414](https://datatracker.ietf.org/doc/html/rfc8414)).
-> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> JDK 25 · Spring Boot 4.1.1 · Spring Framework 7.0.9 · Spring Security 7.x.
 
 **Every optional security feature that fails open is a downgrade attack waiting for someone to
 notice. PKCE was designed to be deployable into an existing ecosystem, so RFC 7636 §5 lets a
