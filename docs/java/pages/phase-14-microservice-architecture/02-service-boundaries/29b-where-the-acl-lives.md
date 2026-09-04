@@ -125,6 +125,52 @@ An Anticorruption Layer is not a permanent monument; it is a temporary structura
 2. **Upstream is decommissioned:** When the legacy mainframe is switched off and replaced by a modern SaaS or internal service, you delete `com.retailer.order.infrastructure.warehouse` and replace it with a new adapter implementing the existing `InventoryReservationPort`. Not a single line of domain code changes.
 3. **Downstream domain merges with upstream:** If organizational restructuring merges the Order and Warehouse teams into a single bounded context, translation between them is no longer required.
 
+## When the "shared ACL" argument is actually right
+
+The blanket rule above has one genuine exception, and refusing to acknowledge it is how the rule gets
+ignored entirely. **Two downstream services with the *same* model of the upstream can share the
+translation — as a library, never as a service.**
+
+The test is whether the two downstreams agree about what the upstream's data *means*, not merely
+about its shape:
+
+| Situation | Share? | Form |
+|---|---|---|
+| Two services both need the vendor's wire types decoded, and each then interprets them differently | ✅ | A thin **client library**: HTTP plumbing, auth, retries, vendor DTOs. **No domain types.** |
+| Two services translate the vendor into the same domain concepts because they are the same bounded context | ✅ | They are one module that was split by accident — see [15 · Too small](15-too-small.md) |
+| Two services translate the vendor into *different* domain concepts | ❌ | Two ACLs. The translation is the part that differs, so sharing it forces one team's model onto the other |
+| "It would be wasteful to write the mapping twice" | ❌ | The duplication is the point: two contexts having different words for the same upstream fact is what a bounded context *is* |
+
+🔴 **The line to hold is between the client and the translation.** A shared `vendor-gateway-client`
+JAR that speaks HTTP and hands back the vendor's own DTOs is a dependency on the *vendor*, which both
+services already have. A shared `vendor-acl` JAR that hands back domain types is a
+[16 · shared model jar](16-the-shared-model-jar.md) with a better name, and it couples the two
+downstreams to each other through a third party neither of them owns.
+
+```java
+// Shared, and fine: the vendor's own shapes, no opinion about your domain
+public interface LegacyGatewayClient {
+    LegacyResponse authorise(String orderRef, long minorUnits);
+    LegacyResponse capture(String authRef);
+}
+
+// NOT shared: this is billing's interpretation, and shipping's differs
+class LegacyPaymentAdapter implements PaymentGatewayPort { /* billing's own translation */ }
+```
+
+## The ACL and the strangler are the same layer at different times
+
+An ACL built against a permanent third party and one built during a migration look identical in
+code and are completely different assets, which is why
+[29c · Mapper or barrier](29c-mapper-or-barrier.md) insists on writing the retirement condition down.
+
+During a [41 · strangler extraction](41-strangler-extraction.md) the ACL points **at the monolith**,
+and the monolith is scheduled for demolition. Every line in that layer has a known end date. Treating
+it as permanent infrastructure — giving it its own repository, its own team, its own roadmap — is how
+a migration's temporary scaffolding outlives the building it was erected against, and the sign that
+it happened is a service whose entire purpose is translating between two systems, one of which no
+longer exists.
+
 ## Gotchas
 
 **★ Symptom: The team creates an independent Git repository and Kubernetes deployment for an "ACL Proxy".**
@@ -138,6 +184,25 @@ Fix: The ACL must strictly translate data between schemas and handle network com
 **★ Symptom: Downstream domain logic breaks when the legacy upstream API changes.**
 Cause: Leaky ACL; the adapter returned raw legacy objects or string status flags directly to domain services.
 Fix: The adapter must only return pure domain value objects and enums defined in the downstream domain package.
+
+**★ Symptom: two teams share an "ACL library" and neither can change their own domain model without the other's approval.**
+Cause: the shared artefact returns **domain** types. The translation — the part that encodes each
+context's interpretation — was the thing extracted, so both contexts now share one interpretation.
+Fix: split the artefact at the line between plumbing and meaning. The shared half speaks the
+vendor's language; the translation stays in each service.
+```java
+// shared library: vendor types only
+LegacyResponse r = legacyGatewayClient.authorise(orderRef, minorUnits);
+
+// each service's own adapter, not shared: this is where meaning is assigned
+PaymentResult result = translate(r);
+```
+
+**★ Symptom: the ACL is a separate deployable and every upstream change now needs two coordinated releases.**
+Cause: the translation lives on the far side of a network boundary from the domain that owns it, so
+a change to a downstream concept requires deploying a service the downstream team may not even own.
+Fix: this is the ESB failure in its operational form. Move the adapter into the downstream
+deployable, where a change to the domain and a change to its translation are the same pull request.
 
 **★ Symptom: The legacy system was replaced two years ago, but the codebase still contains legacy translation code.**
 Cause: Failing to treat the ACL as technical debt with a planned decommissioning phase.
@@ -153,6 +218,23 @@ In an ESB architecture, complex business transformation, message enrichment, and
 
 **★ How does an explicit domain port (interface) facilitate the eventual decommissioning of an ACL?**
 By adhering to Dependency Inversion, the core domain service depends strictly on an interface expressed in its own ubiquitous language (e.g. `InventoryReservationPort`), never on the concrete `LegacyWarehouseAdapter`. When the legacy upstream is decommissioned or modernized, the team writes a new adapter fulfilling that same interface and deletes the legacy ACL package. The core domain logic is untouched.
+
+**★ Two services integrate with the same vendor. What may they share, and what must they not?**
+They may share the **client** — HTTP plumbing, authentication, retry policy, and the vendor's own DTO
+types — because that is a dependency on the vendor which both services already have, and duplicating
+it buys nothing. They must not share the **translation**, because the translation is where each
+bounded context assigns its own meaning to the vendor's data, and extracting it into a common
+artefact forces one team's domain model onto the other through a third party neither owns. The
+practical line is the return type: a shared artefact returning vendor types is a client library, and
+a shared artefact returning domain types is a shared model jar with a better name.
+
+**★ Why is "we would otherwise write the mapping twice" a weak argument against two separate ACLs?**
+Because the duplication it objects to is the pattern working. Two bounded contexts having different
+words, different granularity and different rules for the same upstream fact is the definition of a
+bounded context, not an accident to be normalised away. If the two translations really are identical
+and stay identical under change, that is evidence the two services are one bounded context that was
+split too finely — and the fix is to merge them, not to share a jar. Sharing the translation gets
+you the coupling of one service with the operational cost of two.
 
 **★ Can two different downstream microservices share an Anticorruption Layer JAR?**
 Generally no. Two different downstream services belong to different bounded contexts with different ubiquitous languages. Sharing an ACL library forces both downstream services to agree on a single intermediate model, recreating the very coupling the ACL was designed to prevent. Each downstream service should maintain its own focused translator tailored to its specific needs.
