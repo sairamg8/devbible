@@ -1,7 +1,7 @@
 ---
 title: "else narrows what the handlers own, never what cleanup covers — finally runs over every clause, has no width knob, and no ordinary exit from a try skips it, which is why only cleanup that cannot fail belongs in one"
 sidebar_label: "06h · Where `finally` sits"
-sidebar_position: 149
+sidebar_position: 148
 ---
 
 <span className="db-tier t-understand">Understand</span>

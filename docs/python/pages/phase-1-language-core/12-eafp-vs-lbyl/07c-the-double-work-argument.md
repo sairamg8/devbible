@@ -1,7 +1,7 @@
 ---
 title: "LBYL performs the operation twice and that is a claim about the code rather than the clock — which is why it survives review without a benchmark, and why the size of the duplicated unit, from a second hash lookup to a second network round trip, is the thing that decides whether you care"
 sidebar_label: "07c · The double-work argument"
-sidebar_position: 150
+sidebar_position: 156
 ---
 
 <span className="db-tier t-understand">Understand</span>

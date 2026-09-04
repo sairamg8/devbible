@@ -1,7 +1,7 @@
 ---
 title: "A return, break or continue in a finally block discards the saved exception outright — a wider handler than except BaseException: pass, and one that does not read as a handler at all"
 sidebar_label: "06k · The jump that discards"
-sidebar_position: 150
+sidebar_position: 149
 ---
 
 <span className="db-tier t-understand">Understand</span>

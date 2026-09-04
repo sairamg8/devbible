@@ -1,7 +1,7 @@
 ---
 title: "A cleanup that can fail is a width defect dressed as hygiene — it overwrites the class every handler upstack is matching on, demoting the real failure to __context__ where no except clause can see it"
 sidebar_label: "06i · When cleanup raises"
-sidebar_position: 151
+sidebar_position: 150
 ---
 
 <span className="db-tier t-understand">Understand</span>

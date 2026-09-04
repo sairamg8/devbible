@@ -1,7 +1,7 @@
 ---
 title: "On any path that touches the disk or the network the guard is a rounding error and the duplicated round trip is the whole cost — which is why the standard library gives you one-call spellings and why the spelling only ever matters in a tight in-process loop a profile has named"
 sidebar_label: "07d · Where the cost actually is"
-sidebar_position: 151
+sidebar_position: 157
 ---
 
 <span className="db-tier t-understand">Understand</span>

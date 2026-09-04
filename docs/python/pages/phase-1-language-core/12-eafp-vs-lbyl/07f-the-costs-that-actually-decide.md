@@ -1,7 +1,7 @@
 ---
 title: "The costs that actually decide this choice are paid by the next reader — a handler wide enough to hide a bug, a precondition validated in three layers that disagree, and a guard that runs the property it is guarding — and none of them is measured in seconds"
 sidebar_label: "07f · The costs that decide"
-sidebar_position: 153
+sidebar_position: 159
 ---
 
 <span className="db-tier t-understand">Understand</span>

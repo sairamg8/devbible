@@ -294,4 +294,4 @@ you will meet — the same argument the topic makes about LBYL and concurrency i
 
 ---
 
-← Prev: **Where LBYL is right** *(not written yet)* · Index: [EAFP vs LBYL](README.md) · Next → [A worked width repair](06b-a-worked-width-repair.md)
+← Prev: [Exhaustiveness and `assert_never`](05j-designing-the-failure-channel/10-exhaustiveness-and-assert-never.md) · Index: [EAFP vs LBYL](README.md) · Next → [A worked width repair](06b-a-worked-width-repair.md)

@@ -1,7 +1,7 @@
 ---
 title: "There is no number to look up, so if the decision genuinely needs one you design the harness — sweeping the miss rate, keeping construction out of the timed statement and recording the build beside every figure — and you accept that the result belongs only to the machine that produced it"
 sidebar_label: "07e · Measuring instead of arguing"
-sidebar_position: 152
+sidebar_position: 158
 ---
 
 <span className="db-tier t-understand">Understand</span>

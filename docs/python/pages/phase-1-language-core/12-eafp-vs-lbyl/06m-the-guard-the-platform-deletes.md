@@ -1,7 +1,7 @@
 ---
 title: "The interpreter can delete your check and the filesystem can contradict it — -O removes assert statements from the program entirely, and os.access documents three separate reasons its answer may be wrong before you act on it"
 sidebar_label: "06m · The guard the platform deletes"
-sidebar_position: 154
+sidebar_position: 153
 ---
 
 <span className="db-tier t-understand">Understand</span>

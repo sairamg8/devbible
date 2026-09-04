@@ -1,7 +1,7 @@
 ---
 title: "An if narrows a type for the checker and an except handler is not among the constructs mypy documents for narrowing — which is the one cost in this argument that is genuinely asymmetric, and it belongs third in the order, ahead of speed and behind atomicity"
 sidebar_label: "07g · Provability and the order"
-sidebar_position: 154
+sidebar_position: 160
 ---
 
 <span className="db-tier t-understand">Understand</span>

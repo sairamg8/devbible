@@ -1,7 +1,7 @@
 ---
 title: "A perfectly shaped try can still guard nothing, because whether a call raises at all is sometimes a property of the process rather than of the call — decimal contexts and warning filters are the two in the standard library you will meet first"
 sidebar_label: "06j · Ambient state"
-sidebar_position: 153
+sidebar_position: 152
 ---
 
 <span className="db-tier t-understand">Understand</span>

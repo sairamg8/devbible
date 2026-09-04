@@ -292,4 +292,4 @@ caller to handle, one wording to maintain.
 
 ---
 
-← Prev: [Reports, not first casualties](05h-aggregating-failures.md) · Index: [EAFP vs LBYL](README.md) · Next → **Type checkers and silent APIs** *(not written yet)*
+← Prev: [Reports, not first casualties](05h-aggregating-failures.md) · Index: [EAFP vs LBYL](README.md) · Next → [Designing the failure channel](05j-designing-the-failure-channel/README.md)

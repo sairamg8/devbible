@@ -1,7 +1,7 @@
 ---
 title: "The cost question has one shape that decides it — the miss rate — and you can settle it by counting operations instead of seconds: LBYL pays its extra lookup on the hit, EAFP pays a raise on the miss, and get with a default pays neither"
 sidebar_label: "07b · The miss rate decides"
-sidebar_position: 149
+sidebar_position: 155
 ---
 
 <span className="db-tier t-understand">Understand</span>
