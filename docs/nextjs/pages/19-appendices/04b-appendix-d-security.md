@@ -212,4 +212,4 @@ Yes, and on the assumption that no form was involved. The action accepts whateve
 
 ---
 
-← [Appendix D part 1 · what the official checklist gets wrong](04-appendix-d-production-readiness-checklist-security.md) · [Chapter 19 overview](01-explanation.md) · Next → **Appendix D part 3 · metadata, a11y and the measurements** *(not written yet)*
+← [Appendix D part 1 · what the official checklist gets wrong](04-appendix-d-production-readiness-checklist-security.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md)
