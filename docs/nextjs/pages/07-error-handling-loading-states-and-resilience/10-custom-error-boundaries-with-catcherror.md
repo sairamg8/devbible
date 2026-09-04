@@ -2,7 +2,7 @@
 title: "`catchError` gives you an error boundary that can retry a failed Server Component"
 sidebar_label: "10 · Custom error boundaries with `catchError`"
 sidebar_position: 10
-description: "The 16.3 error boundary API: component-level placement, a retry() that re-runs server rendering, and how retry() differs from the reset() it superseded."
+description: "The 16.3 error boundary API: component-level placement, a retry() that re-runs server rendering, and how retry() differs from the reset() that still sits beside it."
 ---
 
 <span className="db-tier t-master">Master</span>
