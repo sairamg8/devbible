@@ -100,6 +100,38 @@ Do not attempt to merge these classes into a single unified type. That reintrodu
 
 Allowing distinct representations to coexist in separate packages honors their distinct bounded contexts while eliminating the network boundary between them.
 
+## What merging fixes, and what it does not
+
+A merge is worth doing when the boundary was wrong. It is worth *not* doing when the boundary was
+right and something else is broken, and the two are easy to confuse because they produce similar
+complaints.
+
+| Complaint | Merging fixes it | Merging does not |
+|---|---|---|
+| A business invariant spans the two services | ✅ The invariant becomes one transaction again | |
+| The two must always deploy together | ✅ There is now one deployable | |
+| Chatty per-request calls between them | ✅ They become method calls | |
+| The API between them is badly designed | | ❌ A bad interface becomes a bad interface inside one process |
+| One of them is slow | | ❌ You have merged a performance problem with something else |
+| The two teams do not communicate | | ❌ Conway's law runs the other way: one codebase, two teams, and nobody owns it |
+| Operational cost of two deployables | | ⚠️ Real, but the weakest reason on this list — it justifies a merge only when the boundary is *also* wrong |
+
+🔴 **The bottom row deserves its own warning.** "We have too many services to operate" is a true
+statement that produces the wrong merges, because it ranks candidates by operational cost rather than
+by whether the line is in the right place. Merging two correctly-bounded services to save a
+deployment pipeline buys a smaller bill and a worse architecture, and the architecture is the thing
+that is expensive to reverse.
+
+## The decision needs an owner, and it is usually the harder half
+
+The technical procedure above is well-defined. The reason merges do not happen is that **a merge
+implies one of two teams stops owning something**, and no engineering argument settles that.
+
+The version that works: agree the *ownership* outcome before the *technical* work starts — which team
+owns the merged service, who is on its rota, whose roadmap absorbs its backlog. A merge that begins
+before this is agreed reliably stalls at the decommissioning step, leaving both services running,
+which is the worst of the three possible states.
+
 ## Gotchas
 
 **★ Symptom: A "Big Bang" merge over a weekend results in severe data corruption and an emergency rollback.**
@@ -113,6 +145,36 @@ Fix: Recalculate `maximumPoolSize` in `application.yml` to accommodate the aggre
 **★ Symptom: Developers immediately begin cross-querying merged tables using raw SQL joins across boundaries.**
 Cause: Failing to enforce module boundaries after merging into a single database.
 Fix: Use Spring Modulith verification (`MODULES.verify()`) or ArchUnit tests to prevent classes in `order` from accessing repositories in `shipping`.
+
+**★ Symptom: two services were merged to reduce operational cost, and the resulting service is harder to change than either was.**
+Cause: the merge was chosen by infrastructure spend rather than by boundary correctness. Two
+correctly-bounded services became one badly-bounded one.
+Fix: this is expensive to reverse, which is why the ordering matters: establish that the boundary is
+wrong first — lockstep deployment or a cross-boundary invariant, per
+[37 · The tells of a wrong boundary](37-the-tells-of-a-wrong-boundary.md) — and treat operational
+cost as a tie-breaker between candidates, never as the reason.
+
+**★ Symptom: the merge stalls with both services still running in production.**
+Cause: the ownership question was left until after the code work. The technical merge completed and
+nobody would agree to decommission, because decommissioning is the step where one team visibly loses
+something.
+Fix: settle ownership before the first commit — which team owns the result, whose rota, whose
+backlog. 🔴 Both-services-running is worse than either endpoint: double the operational cost, plus a
+boundary that now exists in two places and agrees with itself only by accident.
+
+**★ Symptom: after the merge, the two former services' code still communicates through the old HTTP client, now pointing at localhost.**
+Cause: the merge was performed at the deployment level and not at the code level, so the network hop
+was replaced by a loopback call rather than removed.
+Fix: the collaboration becomes a method call, and the client, the DTOs and the serialisation go.
+Leaving them means paying serialisation cost for no isolation, and keeping a boundary in the code that
+no longer exists in the deployment — the worst of both designs.
+```java
+// after a merge in name only
+PriceQuote q = restClient.get().uri("http://localhost:8082/quote/{sku}", sku).retrieve().body(PriceQuote.class);
+
+// after a merge
+PriceQuote q = pricing.quote(sku);
+```
 
 **★ Symptom: The old service cannot be decommissioned because an unknown external consumer is still calling it.**
 Cause: Undocumented consumers bypassing API Gateways.
@@ -128,6 +190,25 @@ The sequence consists of six steps: (1) copy the secondary service code into a d
 
 **★ How should teams resolve domain model class collisions during a service merge?**
 Teams should avoid creating a unified "shared" class. Instead, keep the models in their separate feature packages (`order.model.Address` vs `shipping.model.Address`). This preserves the distinct ubiquitous language of each context while removing the operational overhead of the network boundary.
+
+**★ When is "we have too many services to operate" a good reason to merge two of them?**
+On its own, never — it is a real problem that selects the wrong candidates, because it ranks services
+by operational cost rather than by whether the line between them is in the right place. Merging two
+correctly-bounded services shrinks the infrastructure bill and produces an architecture that is harder
+to change, which is a bad trade because the bill is easy to reverse and the architecture is not. The
+defensible version uses boundary evidence to decide *whether* to merge — a cross-boundary invariant,
+or services that cannot be deployed independently — and uses operational cost only to decide *which*
+of several equally-wrong boundaries to fix first.
+
+**★ Why do service merges stall more often than they fail technically?**
+Because the technical procedure is well understood and the decision underneath it is not: a merge
+means one of two teams stops owning something, and no engineering argument settles that question. The
+usual failure is not a botched cutover but a merge that reaches the decommissioning step and halts,
+leaving both services in production — which is worse than either outcome, because it doubles the
+operational cost and leaves a boundary that now exists in two places and agrees with itself only by
+coincidence. Agreeing the ownership outcome — team, rota, backlog — before the first commit is what
+prevents it, and it is the part that gets deferred because it is uncomfortable rather than because it
+is hard.
 
 **★ What happens to transaction boundaries when two services are merged?**
 Before the merge, operations spanning both services required eventual consistency, sagas, or two-phase commit. After merging and consolidating the database schemas, the operations can execute within a single JVM thread and participate in a standard, local ACID database transaction (`@Transactional`), providing guaranteed atomicity with zero distributed failure modes.
