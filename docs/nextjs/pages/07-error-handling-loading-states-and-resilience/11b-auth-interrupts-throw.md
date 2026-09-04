@@ -1,7 +1,7 @@
 ---
 title: "The auth interrupts work by throwing, and every way of losing that throw is a silent authorization bypass"
 sidebar_label: "11b · They work by throwing"
-sidebar_position: 13
+sidebar_position: 15
 description: "never return types, try/catch suppression, the un-awaited promise that renders the page anyway, and why neither function works in the root layout."
 ---
 

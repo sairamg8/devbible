@@ -2,18 +2,19 @@
 title: "`catchError` gives you an error boundary that can retry a failed Server Component"
 sidebar_label: "10 · Custom error boundaries with `catchError`"
 sidebar_position: 10
-description: "catchError builds an error boundary that is a component rather than a route segment, with a retry() that re-runs the Server Components inside it."
+description: "The 16.3 error boundary API: component-level placement, a retry() that re-runs server rendering, and how retry() differs from the reset() it superseded."
 ---
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against the Next.js
-> [`catchError` reference](https://nextjs.org/docs/app/api-reference/functions/catchError),
-> the [Error Handling guide](https://nextjs.org/docs/app/getting-started/error-handling),
-> the [`error.js` file-convention reference](https://nextjs.org/docs/app/api-reference/file-conventions/error)
-> (page metadata `version: 16.3.4`, `lastUpdated: 2026-07-10`) and the
-> [Next.js 16.3 release post](https://nextjs.org/blog/next-16-3).
-> Target: **Next.js 16.3.4**, App Router. Documentation-validated; **no sandbox run**.
+> Verified: 2026-09-03 against the Next.js
+> [Error Handling guide](https://nextjs.org/docs/app/getting-started/error-handling),
+> the [`catchError` reference](https://nextjs.org/docs/app/api-reference/functions/catchError)
+> and the [Next.js 16.3 release post](https://nextjs.org/blog/next-16-3).
+> Target: **Next.js 16.3.4**, App Router.
+> Validated: 2026-09-04 · `error`/`reset`/`retry` prop claims re-checked against the
+> [`error.js` reference](https://nextjs.org/docs/app/api-reference/file-conventions/error)
+> (16.3.4, lastUpdated 2026-07-10) · session `bf92d5b6`
 
 **Before 16.3, a React error boundary in a Next.js app had two problems that had nothing to do
 with your code: it interfered with application code calling `notFound()` or `redirect()`, and
@@ -24,16 +25,80 @@ renders receives a **`retry()` that refetches the boundary's children** — incl
 the Server Components inside it. That last capability is the one that changes designs: a
 transient upstream failure inside a server-rendered section stops being a dead page.
 
-## Where this sits relative to `error.js`
+## The file-convention boundary, and what changed
 
-`error.js` is the coarse-grained mechanism and is still the right default: one boundary per
-route segment, errors bubbling to the nearest one. Its reach and its props are the subject of
-the two preceding pages — [08 · Boundary scope and `global-error`](08-errorjs-boundary-scope-and-global-error.md)
-for what a segment boundary does and does not wrap, and
-[09 · `error.js` props](09-errorjs-props-retry-and-reset.md) for `retry()` versus `reset()`.
+`error.js` inside a route segment is still the coarse-grained mechanism, and errors bubble up
+to the nearest parent boundary — so placing `error.tsx` files at different levels of the route
+hierarchy gives you granular handling for free:
 
-`catchError` answers the question those leave open: **what do you do when the granularity you
-need does not correspond to a route segment at all?**
+```tsx filename="app/dashboard/error.tsx"
+'use client' // Error boundaries must be Client Components
+
+import { useEffect } from 'react'
+
+export default function ErrorPage({
+  error,
+  retry,
+}: {
+  error: Error & { digest?: string }
+  retry: () => void
+}) {
+  useEffect(() => {
+    console.error(error)
+  }, [error])
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={() => retry()}>Try again</button>
+    </div>
+  )
+}
+```
+
+🔴 **The prop to reach for is `retry`, not `reset`.** Material written against earlier
+versions — including a great deal of what a search will surface — destructures `reset`. That
+still works, and that is what makes it dangerous: the reference keeps `reset` and describes it
+as clearing the error state and re-rendering the boundary's children **without re-fetching the
+contents**. So a copied pre-16.3 boundary gives you a "Try again" button that re-renders the
+same failed server output, rather than one that does nothing. The docs are explicit about the
+default choice:
+
+> *"In most cases, you should use `retry()` instead. However, if you have a specific reason to
+> clear the error state and re-render the error boundary's children without re-fetching the
+> contents, you can use the `reset()` function."*
+
+The full prop surface — the `retry`/`reset` comparison, the Version History that dates both,
+and what `error.message` and `error.digest` actually carry in production — is
+[09 · `error.js` props](09-errorjs-props-retry-and-reset.md). Where a boundary sits relative to
+layouts is [10c · Where boundaries sit in the hierarchy](10c-where-boundaries-sit-in-the-hierarchy.md),
+and what `global-error` does not inherit is
+[10d · `global-error` and what it does not inherit](10d-global-error-and-what-it-does-not-inherit.md).
+
+`global-error.js` handles failures in the root layout, and works even with internationalized
+routing. Because it replaces the root layout or template when active, **it must define its own
+`<html>` and `<body>` tags**:
+
+```tsx filename="app/global-error.tsx"
+'use client'
+
+export default function GlobalError({
+  error,
+  retry,
+}: {
+  error: Error & { digest?: string }
+  retry: () => void
+}) {
+  return (
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <button onClick={() => retry()}>Try again</button>
+      </body>
+    </html>
+  )
+}
+```
 
 ## `catchError`: boundaries that are not tied to a route segment
 
@@ -89,6 +154,30 @@ replacing the whole page with an apology.
 
 ## Gotchas
 
+### Destructuring `reset` instead of `retry`
+
+**Symptom.** The "Try again" button renders, clicks cleanly, and the same failure comes
+straight back.
+
+**Cause.** `reset()` clears the error state and re-renders the boundary's children **without
+re-fetching**, so a Server Component that failed during rendering is not re-run. Nothing errors
+— the retry is simply hollow.
+
+**Fix.** Destructure `retry`, and audit any error boundary copied from pre-16.3 material — this
+is the single most likely thing to be stale in an existing codebase.
+
+```tsx
+// HOLLOW — re-renders the same failed server output
+export default function Error({ error, reset }) {
+  return <button onClick={() => reset()}>Try again</button>
+}
+
+// GOOD — refetches the boundary's children, Server Components included
+export default function Error({ error, retry }) {
+  return <button onClick={() => retry()}>Try again</button>
+}
+```
+
 ### Expecting a plain React boundary to retry server work
 
 **Symptom.** A user clicks "Try again", the client re-renders, and the same failed server
@@ -118,14 +207,23 @@ function ErrorFallback(props: { title: string }, { error, retry }: ErrorInfo) { 
 export default catchError(ErrorFallback)
 ```
 
-### A `catchError` fallback without `'use client'`
+### Forgetting `<html>` and `<body>` in `global-error.js`
+
+**Symptom.** The global error page renders broken or blank.
+
+**Cause.** `global-error` replaces the root layout or template when active, so nothing else is
+emitting those tags.
+
+**Fix.** Include them in the component, as in the example above.
+
+### Omitting `'use client'` from the boundary
 
 **Symptom.** A build or runtime error when the boundary renders.
 
-**Cause.** **Error boundaries must be Client Components**, and a `catchError` fallback is no
-exception — the module that calls `catchError` needs the directive just as `error.js` does.
+**Cause.** **Error boundaries must be Client Components.** This applies to `error.js`,
+`global-error.js`, and any `catchError` fallback.
 
-**Fix.** Add `'use client'` at the top of the file that defines the fallback.
+**Fix.** Add the directive at the top of the file.
 
 ### One boundary at the top of the app
 
@@ -151,9 +249,21 @@ It refetches the boundary's children, which can include re-rendering Server Comp
 Two arguments: your own props first, then an `ErrorInfo` object with `error` and `retry`. It is
 not a normal one-argument component.
 
+**★ Which prop should an `error.js` component use to offer a retry, and why?**
+`retry()`. `reset()` still exists, but it clears the error state and re-renders the children
+*without re-fetching*, so a failed Server Component render is not re-run. The docs say to use
+`retry()` in most cases and keep `reset()` for the specific case where you do not want a
+refetch.
+
 **★ Where can `catchError` boundaries be placed, versus `error.js`?**
 `error.js` sits at a route segment. A `catchError` boundary is a component and can wrap any
 part of the tree, at any granularity.
+
+**★ Why must `global-error.js` include `<html>` and `<body>`?**
+Because it replaces the root layout or template when active, so nothing else emits those tags.
+
+**★ Must an error boundary be a Client Component?**
+Yes — `error.js`, `global-error.js` and `catchError` fallbacks all require `'use client'`.
 
 **★ Where does an error go if several boundaries are in scope?**
 To the **nearest** parent boundary. That is what makes placement a design decision rather than
@@ -161,4 +271,4 @@ a formality.
 
 ---
 
-← [09 · `error.js` props](09-errorjs-props-retry-and-reset.md) · Next → [10b · What error boundaries do not catch](10b-what-boundaries-do-not-catch.md)
+**Next:** [10b · What error boundaries do not catch](10b-what-boundaries-do-not-catch.md)

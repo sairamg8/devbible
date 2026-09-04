@@ -266,4 +266,4 @@ Render the digest when present, so support can find the log line; log the full e
 
 ---
 
-← [08 · Boundary scope and `global-error`](08-errorjs-boundary-scope-and-global-error.md) · Next → [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md)
+← [07 · SprintDesk gets full error boundary coverage](07-project-milestone-sprintdesk-gets-full-error-boundary-covera.md) · Next → [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md)

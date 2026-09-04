@@ -297,4 +297,4 @@ Avoid `try`/`catch` and throwing; model them as **return values**, surfaced with
 
 ---
 
-**Previous:** [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md)
+**Previous:** [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md) · **Next:** [10c · Where boundaries sit in the hierarchy](10c-where-boundaries-sit-in-the-hierarchy.md)

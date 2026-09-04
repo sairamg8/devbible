@@ -1,7 +1,7 @@
 ---
 title: "`unauthorized()` and `forbidden()` are the 401 and 403 halves of the error model, and where you check decides the status code"
 sidebar_label: "11 · Auth interrupts: 401 and 403"
-sidebar_position: 12
+sidebar_position: 14
 description: "The experimental authInterrupts flag, unauthorized.js and forbidden.js, and the streaming trade-off between a visible shell and a real status code."
 ---
 
