@@ -1,6 +1,6 @@
 ---
 title: "A subdomain is a piece of the business, a bounded context is a piece of your solution, and treating them as synonyms is how teams end up defending an accident of history as if it were a domain truth"
-sidebar_label: "05 · Subdomain vs bounded context"
+sidebar_label: "03 · Subdomain vs bounded context"
 sidebar_position: 5
 ---
 
@@ -96,7 +96,7 @@ problem space tells you when the solution space is due for change.
 **Decision 3 — where do you invest?**
 Subdomains are classified as core, supporting or generic, and that classification drives
 build-versus-buy and how much design effort each deserves. Contexts do not have that
-classification; they inherit it. See [06 · Core, supporting,
+classification; they inherit it. See [03b · Core, supporting,
 generic](03b-core-supporting-generic.md).
 
 **Decision 4 — how do you read a legacy system?**
@@ -144,9 +144,8 @@ com.retailer
 
 That layout is exactly Spring Modulith's default convention — *"each direct sub-package of
 the main package is considered an application module package"* — which means the boundary
-is verifiable by a single test the day you create it. **34 · Verifying the
-boundary** *(not written yet)* shows the test; the framework tour belongs to
-**01 · Monolith first** *(not written yet)*.
+is verifiable by a single test the day you create it. [25 · Verifying the boundary](25-verifying-the-boundary.md) shows the test; the framework tour belongs to
+[01 · Monolith first](../01-monolith-first/11-spring-modulith-what-it-is.md).
 
 ## Gotchas
 
@@ -173,8 +172,7 @@ about the problem space.
 
 **★ Treating "one context per subdomain" as a rule that must be satisfied immediately.**
 It is the target shape, not an entry requirement. Getting from 1:3 to 1:1 is a migration
-with real cost, priced in **42 · The cost of changing a
-boundary** *(not written yet)*, and it is frequently not worth paying for
+with real cost, priced in [42 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md), and it is frequently not worth paying for
 a subdomain nobody is currently blocked on.
 
 ## Interview questions
@@ -222,4 +220,6 @@ precisely why the first implementation should put several subdomains in one depl
 enforced in-process boundaries: the package boundary is cheap to move when your subdomain
 model improves, and a service boundary is not.
 
-{/* FOOTER */}
+---
+
+← [The language tells you](02c-the-language-tells-you.md) · [Topic index](README.md) · Next → [Core, supporting, generic](03b-core-supporting-generic.md)

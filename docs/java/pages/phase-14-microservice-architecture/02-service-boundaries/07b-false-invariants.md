@@ -1,6 +1,6 @@
 ---
 title: "Half the rules that look like invariants are constraints nobody in the business ever asked for, and every one of them glues together state that could have been split — the false invariant is how a boundary gets refused for a reason that does not exist"
-sidebar_label: "11 · False invariants"
+sidebar_label: "07b · False invariants"
 sidebar_position: 11
 ---
 
@@ -264,4 +264,6 @@ arbitrarily. A customer's lifetime value is the same arithmetic shape and nothin
 anything based on it, so it is a read model. The arithmetic does not tell you which one you
 have; the rejection does.
 
-{/* FOOTER */}
+---
+
+← [Finding the invariants](07-finding-the-invariants.md) · [Topic index](README.md) · Next → [Whose job is it?](08-whose-job-is-it.md)

@@ -1,6 +1,6 @@
 ---
 title: "Splitting by technical layer produces services that cannot change alone, because a business change is vertical and the boundaries are horizontal — every feature crosses every service, and the architecture has maximised exactly what it was supposed to minimise"
-sidebar_label: "19 · Splitting by layer"
+sidebar_label: "12 · Splitting by layer"
 sidebar_position: 19
 ---
 
@@ -65,7 +65,7 @@ several subdomains, exposing generic CRUD. This is a layer split with one layer 
 Every domain change still crosses it.
 
 **The "orchestration" or "process service".** Business logic pulled out of the services that
-own the data, into a service that owns none. See [25 · The god
+own the data, into a service that owns none. See [17 · The god
 service](17-the-god-service.md).
 
 **The "API service" or "BFF that grew".** A backend-for-frontend is legitimate when it only
@@ -197,8 +197,7 @@ sides of one subdomain change together whenever the domain changes.
 
 **★ Symptom: an integration service that everybody's changes go through.** Cause: all
 anticorruption layers in one deployable. Fix: an ACL belongs to the downstream context that
-needs the translation, in that context's service — see **41 · Where the ACL
-lives** *(not written yet)*.
+needs the translation, in that context's service — see [29b · Where the ACL lives](29b-where-the-acl-lives.md).
 
 **★ Assuming the layered split is safe because it is easy to reverse.** It is easy to
 reverse technically and hard to reverse politically, because by then three teams own three
@@ -247,4 +246,6 @@ makes the domain testable and the infrastructure replaceable. The error is exclu
 promoting a layer to a deployment boundary: the same line costs nothing when a change crosses
 it inside one build, and costs an ordered multi-repository release when it crosses a network.
 
-{/* FOOTER */}
+---
+
+← [Reasons to break the rule](11-reasons-to-break-the-rule.md) · [Topic index](README.md) · Next → [Entity services](13-entity-services.md)

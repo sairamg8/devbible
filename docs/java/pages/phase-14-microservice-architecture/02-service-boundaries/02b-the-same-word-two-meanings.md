@@ -1,6 +1,6 @@
 ---
 title: "When the same noun means different things to two groups of people, you have found a boundary that already exists — your only decision is whether the code admits it"
-sidebar_label: "03 · The same word, two meanings"
+sidebar_label: "02b · The same word, two meanings"
 sidebar_position: 3
 ---
 
@@ -112,8 +112,7 @@ public final class StockItem {
 `Sku` appears in both, and that is fine — it is an identifier, a shared *value*, not a
 shared model. Sharing identifiers across contexts is normal and necessary; sharing
 behaviour and rules across contexts is what destroys boundaries. The distinction is drawn
-carefully in **28 · Published language vs
-aggregate** *(not written yet)*.
+carefully in [28 · Published language vs aggregate](28-published-language-vs-aggregate.md).
 
 ## Where the shared identifier is also a lie
 
@@ -263,4 +262,6 @@ owned, with the derived states computed from events at the edge: Fulfilment publ
 capture. Each team then adds values without asking anyone, which is precisely what the
 boundary was supposed to buy.
 
-{/* FOOTER */}
+---
+
+← [Bounded context](02-bounded-context.md) · [Topic index](README.md) · Next → [The language tells you](02c-the-language-tells-you.md)

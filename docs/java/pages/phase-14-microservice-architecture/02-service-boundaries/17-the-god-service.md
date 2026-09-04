@@ -1,6 +1,6 @@
 ---
 title: "The orchestrator that owns no data and calls everything is not a coordination layer, it is every other service's business rules relocated into a component that cannot enforce any of them"
-sidebar_label: "25 · The god service"
+sidebar_label: "17 · The god service"
 sidebar_position: 25
 ---
 
@@ -259,4 +259,6 @@ compensation is outstanding — and invokes participant operations that enforce 
 and can refuse. The distinction is not the technology or the framework; it is where the
 decision is made.
 
-{/* FOOTER */}
+---
+
+← [The shared model jar](16-the-shared-model-jar.md) · [Topic index](README.md) · Next → [Boundaries from a whiteboard](18-boundaries-from-a-whiteboard.md)

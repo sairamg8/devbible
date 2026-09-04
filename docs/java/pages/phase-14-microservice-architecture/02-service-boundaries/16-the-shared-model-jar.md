@@ -1,6 +1,6 @@
 ---
 title: "A common-domain jar cancels every service boundary in the system at compile time, because a change to a shared type is a coordinated release of everything that depends on it — the network boundary remains and the independence it was for is gone"
-sidebar_label: "24 · The shared model jar"
+sidebar_label: "16 · The shared model jar"
 sidebar_position: 24
 ---
 
@@ -50,7 +50,7 @@ introduced. It breaks the first time a change is urgent.
 
 **Domain entities and aggregates — catastrophic.** `Order`, `Customer`, `Product`. These are
 each context's own model, and sharing them means the contexts have one model, which means
-there are no contexts. The polysemy in [03 · The same word, two
+there are no contexts. The polysemy in [02b · The same word, two
 meanings](02b-the-same-word-two-meanings.md) says these types *should* differ per context;
 the jar forces them to be identical, so every context's needs accumulate in one class and
 each service ignores the fields it does not use.
@@ -66,8 +66,7 @@ identical. Contract evolution is **05 · Inter-service REST** *(not written yet)
 **Small immutable values and utilities — usually fine.** `Money`, `CountryCode`, `Sku`,
 `Currency`, a `Result` type, a correlation-id holder. They change rarely, they carry no
 business decision, and if they do change everyone genuinely does want the change. This is a
-legitimate shared kernel — with the rules in **45 · Shared
-kernel** *(not written yet)*.
+legitimate shared kernel — with the rules in [33 · Shared kernel](33-shared-kernel.md).
 
 ## The test
 
@@ -249,4 +248,6 @@ is a client library that the *provider* owns and versions, which consumers may l
 several versions. The unacceptable form is a jar shared between peers with no owner, where
 everybody must move at once.
 
-{/* FOOTER */}
+---
+
+← [Too small](15-too-small.md) · [Topic index](README.md) · Next → [The god service](17-the-god-service.md)

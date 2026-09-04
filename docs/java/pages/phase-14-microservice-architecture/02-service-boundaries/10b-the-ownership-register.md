@@ -1,6 +1,6 @@
 ---
 title: "Write the ownership register down as a table of facts, rules and owners, because every unwritten ownership assumption eventually becomes a second writer — and a field with two writers is not a boundary in dispute, it is a defect with a schedule"
-sidebar_label: "17 · The ownership register"
+sidebar_label: "10b · The ownership register"
 sidebar_position: 17
 ---
 
@@ -15,7 +15,7 @@ sidebar_position: 17
 > Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
-**[16 · Who owns the data](10-who-owns-the-data.md) gives the test. This chunk gives the
+**[10 · Who owns the data](10-who-owns-the-data.md) gives the test. This chunk gives the
 artefact and the failure modes, because a test applied in a meeting and never recorded lasts
 about a quarter. The register is a small table, it fits on one page per context, and its
 entire purpose is to make the second writer visible on the day it is proposed rather than in
@@ -47,7 +47,7 @@ somebody will contest.
 exists.
 
 **"Others hold it as"** — reference, replica or query, from
-[16 · Who owns the data](10-who-owns-the-data.md). A blank here means nobody outside knows
+[10 · Who owns the data](10-who-owns-the-data.md). A blank here means nobody outside knows
 about it, which is the healthiest possible state.
 
 **"Update path"** — the named mechanism. If you cannot name it, the replica is a fork.
@@ -112,7 +112,7 @@ dual write named as a dated defect.
 
 A `common-persistence` module with a `CustomerUpdater` used by three services. Every caller
 is a writer, and the rule — if there is one — lives in a jar version rather than in a
-service. See [23 · The shared model jar](16-the-shared-model-jar.md).
+service. See [16 · The shared model jar](16-the-shared-model-jar.md).
 
 ## Making the register enforceable
 
@@ -138,8 +138,8 @@ standing between the register and reality, and because a permission error in a p
 build is a conversation, whereas a silent second writer is an incident.
 
 Within one deployable, the equivalent enforcement is module visibility plus the ArchUnit or
-Spring Modulith rules in [15 · Finding it in the code](09b-finding-it-in-the-code.md) and
-**34 · Verifying the boundary** *(not written yet)*.
+Spring Modulith rules in [09b · Finding it in the code](09b-finding-it-in-the-code.md) and
+[25 · Verifying the boundary](25-verifying-the-boundary.md).
 
 ## Where the register lives
 
@@ -227,4 +227,6 @@ boundary was meant to remove. Recording reads makes the cost visible and usually
 replacing them with an API or an event-fed replica, which restores the owner's freedom to
 change its storage.
 
-{/* FOOTER */}
+---
+
+← [Who owns the data](10-who-owns-the-data.md) · [Topic index](README.md) · Next → [Reasons to break the rule](11-reasons-to-break-the-rule.md)

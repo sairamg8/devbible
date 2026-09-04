@@ -1,6 +1,6 @@
 ---
 title: "The one service, one capability test is the fastest boundary check there is, and it works because a capability is a verb — the moment you can only describe a service with a noun, it is a data store with an HTTP interface"
-sidebar_label: "08 · One service, one capability"
+sidebar_label: "05 · One service, one capability"
 sidebar_position: 8
 ---
 
@@ -35,11 +35,11 @@ Failing completions, with what each one is actually telling you:
 
 | Completion | What it means |
 |---|---|
-| "…store customer data" | Storage is not a capability. This is an entity service — [19 · Entity services](13-entity-services.md). |
+| "…store customer data" | Storage is not a capability. This is an entity service — [13 · Entity services](13-entity-services.md). |
 | "…manage orders" | "Manage" is a verb with no content. Which decisions does it make? |
 | "…expose an API for products" | The boundary is a transport layer, not a capability. |
 | "…take an order **and** send confirmation emails" | Two capabilities, and the second is generic. |
-| "…handle all Kafka messages" | Split by technology — [18 · Splitting by layer](12-splitting-by-layer.md). |
+| "…handle all Kafka messages" | Split by technology — [12 · Splitting by layer](12-splitting-by-layer.md). |
 | "…provide data to the mobile app" | Split by client. That is a gateway or a backend-for-frontend, and it should own no business rules. |
 
 The "and" clause is the highest-yield part of the test. Almost every over-scoped service in
@@ -145,7 +145,7 @@ public interface ProductService {
 The second interface is a table with HTTP in front of it. The tell is that no method encodes
 a rule: every caller receives fields and decides for itself what they mean, which means the
 rules live in the callers, which means the rules are duplicated across the callers, which
-means a rule change is an N-service release. [20 · CRUD is not a
+means a rule change is an N-service release. [13b · CRUD is not a
 capability](13b-crud-is-not-a-capability.md) develops this.
 
 ## The variant worth knowing: "one service, one reason to change"
@@ -234,4 +234,6 @@ understanding the domain first. Three departments filing tickets against one ser
 three roadmaps queueing behind one release process, and that queue is a measurable cost you
 can put in front of people who do not care about domain modelling.
 
-{/* FOOTER */}
+---
+
+← [A service is not a context](04-a-service-is-not-a-context.md) · [Topic index](README.md) · Next → [Invariants are the criterion](06-invariants-are-the-criterion.md)

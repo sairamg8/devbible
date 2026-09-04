@@ -1,6 +1,6 @@
 ---
 title: "A service per entity looks like the most obvious decomposition available and Michael Nygard named it an anti-pattern for a precise reason: real features span entities, so entity services guarantee that every feature is a distributed operation across several of them"
-sidebar_label: "20 · Entity services"
+sidebar_label: "13 · Entity services"
 sidebar_position: 20
 ---
 
@@ -53,7 +53,7 @@ That is the whole failure and it explains every symptom:
 - Why bugs cluster in consumers: the rules are there, duplicated, and the duplicates drift.
 - Why the "orchestrator" appears: someone notices the rules are scattered and builds a
   service to hold them, which owns no data and can enforce nothing —
-  [25 · The god service](17-the-god-service.md).
+  [17 · The god service](17-the-god-service.md).
 
 ## The example, in Java
 
@@ -247,4 +247,6 @@ absorb the rules and become capability services, and the ones left holding nothi
 get merged into whichever capability uses them most. The orchestrator, if there is one,
 shrinks as the rules leave it and is deleted last.
 
-{/* FOOTER */}
+---
+
+← [Splitting by layer](12-splitting-by-layer.md) · [Topic index](README.md) · Next → [CRUD is not a capability](13b-crud-is-not-a-capability.md)

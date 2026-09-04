@@ -1,6 +1,6 @@
 ---
 title: "Every service carries a fixed cost that is independent of how much code is in it, so a boundary drawn too finely pays full price for a service that does almost nothing — and the fixed cost is the item most consistently missing from the decision"
-sidebar_label: "23 · Too small"
+sidebar_label: "15 · Too small"
 sidebar_position: 23
 ---
 
@@ -76,11 +76,11 @@ Recognisable shapes, all real:
 
 **The wrapper service.** A service whose entire job is to call one vendor API and pass the
 result on. It has no rules, no state and no decisions. It is an adapter, and adapters belong
-inside the service that uses them — see [06 · Core, supporting,
+inside the service that uses them — see [03b · Core, supporting,
 generic](03b-core-supporting-generic.md).
 
 **The single-entity service.** `AddressService`. Every operation on it is part of some other
-capability's workflow. [20 · Entity services](13-entity-services.md).
+capability's workflow. [13 · Entity services](13-entity-services.md).
 
 **The utility service.** `IdGeneratorService`, `DateFormatterService`,
 `ValidationService`. Functions promoted to deployables. The network call costs more than the
@@ -250,4 +250,6 @@ occupies a slot in every engineer's model of the system, appears in every incide
 and adds a hop that has to be traversed during diagnosis. Infrastructure is the cheap part and
 it is usually the only part in the estimate.
 
-{/* FOOTER */}
+---
+
+← [Conway and the org chart](14-conway-and-the-org-chart.md) · [Topic index](README.md) · Next → [The shared model jar](16-the-shared-model-jar.md)

@@ -1,6 +1,6 @@
 ---
 title: "Start from what the system can be asked to do, never from what it stores — because a list of system operations and the aggregates each one touches is a decomposition you can derive mechanically, and a data model is a decomposition that will hand you entity services"
-sidebar_label: "30 · System operations first"
+sidebar_label: "21 · System operations first"
 sidebar_position: 30
 ---
 
@@ -92,9 +92,9 @@ One row per operation. Two of the five columns do the work.
 
 **The written column is the constraint.** Every operation that writes more than one aggregate
 is either a real cross-aggregate invariant — pinning those aggregates together — or one of
-Vernon's four exceptions ([18 · Reasons to break the
+Vernon's four exceptions ([11 · Reasons to break the
 rule](11-reasons-to-break-the-rule.md)). Group aggregates by co-written pairs and you have the
-consistency components from [10 · Finding the invariants](07-finding-the-invariants.md),
+consistency components from [07 · Finding the invariants](07-finding-the-invariants.md),
 derived from behaviour rather than from the schema.
 
 **The read column is the cost.** Reading across a boundary is allowed and normal — Vernon:
@@ -112,12 +112,12 @@ With the table in hand the grouping is close to mechanical:
    `Invoice` + `Refund` cluster through `capturePayment` and `refund`.
 2. **Check each cluster with the whose-job question.** `Order` + `StockItem` clusters only
    because `placeOrder` writes both — and whether that write must be atomic is exactly
-   [12 · Whose job is it?](08-whose-job-is-it.md). If it is the system's job, the cluster
+   [08 · Whose job is it?](08-whose-job-is-it.md). If it is the system's job, the cluster
    dissolves and the two are separable.
 3. **Assign every remaining aggregate to exactly one subdomain**, per the Assemblage
    constraint that each subdomain is in one and only one service.
 4. **Name each group with a verb.** A group you cannot name with a business verb is a group
-   of leftovers; look again ([08 · One service, one
+   of leftovers; look again ([05 · One service, one
    capability](05-one-service-one-capability.md)).
 
 Applied to the table above, a first grouping: *take an order* (`Order`), *know where stock
@@ -148,7 +148,7 @@ Starting from the data model, you have entities and relationships. The only grou
 is by association, which produces clusters around whatever the schema happens to link — and
 since the schema links everything within a few hops, you either get one enormous group or you
 give up and make each entity its own service. That is the entity-service anti-pattern arriving
-by a respectable-looking route ([20 · Entity services](13-entity-services.md)).
+by a respectable-looking route ([13 · Entity services](13-entity-services.md)).
 
 Behaviour, by contrast, groups entities by *use*, and use is what the Common Closure Principle
 is about.
@@ -228,4 +228,6 @@ the data-side topic rather than to the boundary decision. What would invalidate 
 is a *command* whose write set spans five services, because that is a distributed transaction
 you cannot have.
 
-{/* FOOTER */}
+---
+
+← [Event storming](20-event-storming.md) · [Topic index](README.md) · Next → [The ten forces](22-the-ten-forces.md)

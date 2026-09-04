@@ -1,6 +1,6 @@
 ---
 title: "Once you know whose job it is, the answer lands in Java as one of exactly two shapes — a single transaction over one aggregate, or a domain event published on commit and consumed by a listener that runs in its own transaction"
-sidebar_label: "13 · The answer, in code"
+sidebar_label: "08b · The answer, in code"
 sidebar_position: 13
 ---
 
@@ -17,7 +17,7 @@ sidebar_position: 13
 > Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
-**[12 · Whose job is it?](08-whose-job-is-it.md) produces one of two answers, and each answer
+**[08 · Whose job is it?](08-whose-job-is-it.md) produces one of two answers, and each answer
 has exactly one honest implementation. "The acting user's job" is a `@Transactional` method
 over a single aggregate, with no boundary inside it. "Another user's or the system's job" is
 a domain event published inside the committing transaction and consumed by a listener that
@@ -118,8 +118,7 @@ class SalesOrderProgressListener {
 While these two modules live in one deployable, that listener is an in-process boundary you
 can verify with a test. When Fulfilment moves to its own service, the same event becomes a
 message and the listener barely changes — which is the argument for drawing the boundary in
-code first, made in **33 · Package structure is the
-boundary** *(not written yet)*.
+code first, made in [24 · Package structure is the boundary](24-package-structure-is-the-boundary.md).
 
 ## When the answer is "it depends on who you ask"
 
@@ -166,7 +165,7 @@ than best-effort.
 **★ Publishing the aggregate inside the event.** `new ShipmentDispatched(shipment)` hands
 the consumer your internal model and makes every field of it a public contract. Publish
 identifiers and the few facts the event is about; see
-**38 · Published language vs aggregate** *(not written yet)*.
+[28 · Published language vs aggregate](28-published-language-vs-aggregate.md).
 
 **★ Symptom: the consumer needs three more fields, so the event grows every sprint.**
 Cause: the event was designed as a data-transfer object rather than as a statement of what
@@ -222,4 +221,6 @@ path an optimisation. Occasionally it means nobody has decided the policy and th
 has been deciding it implicitly for years, in which case the disagreement is the most useful
 thing the exercise produced and it should be escalated rather than resolved by an architect.
 
-{/* FOOTER */}
+---
+
+← [Whose job is it?](08-whose-job-is-it.md) · [Topic index](README.md) · Next → [The transaction boundary](09-the-transaction-boundary.md)

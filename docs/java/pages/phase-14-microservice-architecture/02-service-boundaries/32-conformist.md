@@ -1,0 +1,133 @@
+---
+title: "In a Conformist relationship, the downstream team eliminates translation by adopting the upstream domain model directly — a conscious compromise that trades linguistic purity for integration velocity"
+sidebar_label: "32 · Conformist"
+sidebar_position: 45
+---
+
+<span className="db-tier t-master">Master</span>
+
+> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
+> Conformist; Vaughn Vernon, *Implementing Domain-Driven Design* (Addison-Wesley), Chapter 3:
+> Context Maps.
+> Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
+
+**When a downstream team lacks the organizational leverage to demand supplier accommodations and determines that maintaining an Anticorruption Layer is cost-prohibitive, it chooses the Conformist pattern. In this relationship, the downstream team intentionally surrenders its own distinct ubiquitous language and adopts the upstream domain model directly into its bounded context. Conforming is not a failure of domain modeling; it is a pragmatic architectural compromise that trades linguistic independence for zero translation overhead, immediate compatibility, and rapid feature delivery. However, it is an asymmetric and binding commitment: any design bias, structural flaw, or breaking change in the upstream model propagates directly into the downstream domain.**
+
+## The economics of conforming
+
+Building and maintaining an Anticorruption Layer is expensive:
+- Developers must define separate domain ports, infrastructure adapters, and bidirectional translation mappers.
+- Every incoming payload is mapped to internal value objects, and every outgoing command is translated back.
+- When an upstream API adds ten fields, developers must update both the translator and internal models to benefit.
+
+If the upstream system is a mature industry standard (such as Stripe for payments, AWS for cloud infrastructure, or a high-quality internal IAM service), inventing an internal synonym for "Customer" or "Charge" provides negative business value. The team writes hundreds of lines of boilerplate mapping `UpstreamPayment` to `InternalPayment` when the two models are semantically identical.
+
+In such cases, Evans recommends **Conformist**:
+
+> *"When a downstream context has to use an upstream system, and the upstream team has no motivation to collaborate... the downstream team can eliminate translation by taking the upstream model whole."*
+
+## When to conform vs when to insulate
+
+Conforming is a tool of strategic triage:
+
+| Scenario | Strategic Choice | Rationale |
+|---|---|---|
+| **Upstream is an industry standard (e.g. Stripe, SendGrid)** | **Conformist** | Upstream model is refined by thousands of engineers; translation is wasted effort |
+| **Downstream is a Supporting or Generic subdomain** | **Conformist** | Investment should be concentrated in Core Domains; simplify integration here |
+| **Downstream is a Core Differentiating domain** | **Anticorruption Layer** | Your competitive advantage must never be constrained by external concepts |
+| **Upstream model is poorly designed or legacy** | **Anticorruption Layer** | Conforming imports external technical debt directly into your domain |
+
+## Runnable Java implementation: The Conformist pattern
+
+In a Conformist relationship, the downstream service imports the upstream published contract directly into its application workflows without an intermediary translation layer:
+
+```java
+package com.retailer.fulfillment.service;
+
+import com.retailer.catalog.contract.CatalogProductContract;
+import com.retailer.catalog.contract.DimensionSpec;
+import com.retailer.catalog.contract.WeightSpec;
+import java.util.UUID;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClient;
+
+// Downstream Fulfillment context conforms directly to Upstream Catalog schema
+@Service
+public class PackageAssemblyService {
+
+    private final RestClient catalogClient;
+
+    public PackageAssemblyService(RestClient.Builder builder) {
+        this.catalogClient = builder.baseUrl("http://catalog-service").build();
+    }
+
+    public ShippingBoxRecommendation calculateBoxSize(UUID productId) {
+        // Direct consumption of upstream contract without translation
+        CatalogProductContract product = catalogClient.get()
+            .uri("/v1/products/{id}", productId)
+            .retrieve()
+            .body(CatalogProductContract.class);
+
+        if (product == null) {
+            throw new IllegalArgumentException("Product not found: " + productId);
+        }
+
+        // Downstream logic operates directly on upstream's dimensions and weight models
+        double volumeCm3 = product.dimensions().lengthCm()
+                         * product.dimensions().widthCm()
+                         * product.dimensions().heightCm();
+
+        if (volumeCm3 > 50000 || product.weight().grams() > 10000) {
+            return new ShippingBoxRecommendation("BOX-EXTRA-LARGE", true);
+        }
+        return new ShippingBoxRecommendation("BOX-STANDARD", false);
+    }
+}
+
+// Downstream model directly encapsulates upstream records
+public record ShippingBoxRecommendation(String boxType, boolean requiresFreight) {}
+```
+
+The downstream team accepts that if the `Catalog` team modifies `DimensionSpec` or renames `lengthCm`, the `Fulfillment` service must update its code in response. In exchange, `Fulfillment` avoided writing thousands of lines of redundant domain mapping classes.
+
+## The trap: conforming in a core domain
+
+The disaster scenario for Conformist occurs when a team conforms in its **Core Domain**—the primary business capability that differentiates the business from competitors.
+
+If an e-commerce retailer's core advantage is its dynamic, multi-tier pricing algorithm, conforming to an off-the-shelf ERP's rigid "Retail Price / Wholesale Price" model cripples the business. The core model becomes imprisoned by the ERP's assumptions, preventing developers from implementing novel discount strategies. In a Core Domain, always build an Anticorruption Layer.
+
+## Gotchas
+
+**★ Symptom: Upstream deploys an API change that silently breaks downstream compilation or runtime calculation.**
+Cause: The downstream team conformed to an unstable upstream that lacks strict semantic versioning.
+Fix: Write automated contract tests in the downstream CI pipeline to detect upstream contract changes in staging environments before deploying to production.
+
+**★ Symptom: Core business logic cannot fulfill a strategic business requirement because the upstream vendor's model lacks support for it.**
+Cause: Conforming in a Core Domain rather than insulating the core with an Anticorruption Layer.
+Fix: Refactor the downstream service: define a domain port reflecting your business needs, and move the upstream integration behind an ACL.
+
+**★ Symptom: Developers create an ACL that does nothing but map fields 1:1 with identical names.**
+Cause: Dogmatic adherence to "always use an ACL" without evaluating whether semantic translation is actually occurring.
+Fix: Eliminate the 1:1 pass-through ACL and conform directly to the upstream contract, reducing codebase complexity.
+
+**★ Symptom: Downstream adopts upstream's database schema conventions, including database column naming quirks.**
+Cause: Conforming to an upstream persistence model instead of an upstream Published Language.
+Fix: Conform only to public, versioned API contracts, never to another service's internal database tables.
+
+## Interview questions
+
+**★ What is the Conformist pattern in Domain-Driven Design, and what is its primary justification?**
+Conformist is an asymmetric context mapping pattern where the downstream team chooses to adopt the upstream domain model directly, eliminating translation between contexts. Its primary justification is pragmatic efficiency: when the upstream model is well-designed or an industry standard, and downstream lacks the leverage to request customizations, conforming avoids the high authoring and maintenance cost of an Anticorruption Layer, accelerating delivery.
+
+**★ Why is conforming considered dangerous when applied to a Core Domain?**
+A Core Domain represents an organization's unique competitive advantage and must be free to evolve in response to business innovation. Conforming binds the core domain's language and capabilities to external concepts designed by another team or vendor. If that external model cannot represent new business features, the core domain is paralyzed by constraints it does not control.
+
+**★ How does Conformist differ from Customer-Supplier?**
+In Customer-Supplier, downstream has leverage over upstream; upstream actively negotiates interface contracts and prioritizes downstream requirements in its roadmap. In Conformist, downstream has zero leverage; upstream develops its API independently, and downstream must either accept the upstream contract as-is or bear the cost of an Anticorruption Layer.
+
+**★ When should a team migrate from a Conformist relationship to an Anticorruption Layer?**
+A team should migrate to an ACL when: (1) upstream model quality deteriorates, introducing breaking changes or legacy quirks; (2) downstream domain evolves into a strategic core capability requiring distinct ubiquitous language; or (3) the team prepares to replace the upstream vendor, requiring an abstraction layer to insulate downstream logic during the transition.
+
+---
+
+← [Customer-supplier](31-customer-supplier.md) · [Topic index](README.md) · Next → [Shared kernel](33-shared-kernel.md)

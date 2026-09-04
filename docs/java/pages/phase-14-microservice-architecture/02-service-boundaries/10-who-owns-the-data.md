@@ -1,6 +1,6 @@
 ---
 title: "Ownership of a piece of data belongs to whoever enforces the rules about it, not to whoever created it, stores it, or reads it most — and once you apply that test, most disputed data turns out to have an obvious owner nobody had named"
-sidebar_label: "16 · Who owns the data"
+sidebar_label: "10 · Who owns the data"
 sidebar_position: 16
 ---
 
@@ -230,4 +230,6 @@ may hold copies for display, for filtering, for approximate decisions, provided 
 carry their staleness and are never used to enforce the owner's invariants. The practical
 formulation is that replicas inform and only the owner decides.
 
-{/* FOOTER */}
+---
+
+← [Finding it in the code](09b-finding-it-in-the-code.md) · [Topic index](README.md) · Next → [The ownership register](10b-the-ownership-register.md)

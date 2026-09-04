@@ -44,9 +44,7 @@ The alternative Fowler names is **multiple canonical models**:
 
 Two things in that sentence are load-bearing. "Completely different models" — not
 sub-classes, not optional fields, genuinely different types. And "mechanisms to map" — the
-translation is a first-class piece of software you write and own, not an accident. That
-mechanism is the anticorruption layer in **29 · Anticorruption
-layer** *(not written yet)*.
+translation is a first-class piece of software you write and own, not an accident. That mechanism is the anticorruption layer in [29 · Anticorruption layer](29-anticorruption-layer.md).
 
 ## The boundary is drawn by language, and language is drawn by people
 
@@ -261,4 +259,6 @@ argument, and it belongs to **03 · Database-per-service** *(not written yet)*. 
 purposes the rule here is narrower: a context owns its tables, and "owns" means nobody else
 knows they exist.
 
-{/* FOOTER */}
+---
+
+← [What a boundary is](01-what-a-boundary-is.md) · [Topic index](README.md) · Next → [The same word, two meanings](02b-the-same-word-two-meanings.md)

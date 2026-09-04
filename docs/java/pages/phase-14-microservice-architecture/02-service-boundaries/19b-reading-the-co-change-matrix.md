@@ -1,6 +1,6 @@
 ---
 title: "The co-change matrix has about six recognisable shapes, and the same technique run across repositories rather than packages is the only objective test for whether an existing set of services is really one deployable unit"
-sidebar_label: "28 · Reading the co-change matrix"
+sidebar_label: "19b · Reading the co-change matrix"
 sidebar_position: 28
 ---
 
@@ -16,7 +16,7 @@ sidebar_position: 28
 > train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. **No sandbox** — no
 > output of any command in this topic is reproduced.
 
-**[27 · Change history as evidence](19-change-history-as-evidence.md) produces the numbers.
+**[19 · Change history as evidence](19-change-history-as-evidence.md) produces the numbers.
 This chunk is about reading them, because a matrix of ratios is not yet a finding — the same
 number means different things depending on which shape it sits in. It also extends the
 technique in the direction that matters most for this phase: run it across repositories
@@ -41,8 +41,8 @@ One module coupled to everything, with everything else mutually independent. Thr
 things produce this and they need different responses:
 
 - A **shared kernel** — a values module everyone uses. Fine, if it is small and rule-free
-  (**46 · Shared kernel** *(not written yet)*).
-- A **god module** — it holds rules that belong elsewhere ([25 · The god
+  ([33 · Shared kernel](33-shared-kernel.md)).
+- A **god module** — it holds rules that belong elsewhere ([17 · The god
   service](17-the-god-service.md)).
 - A **cross-cutting concern** — logging, security, an application shell. Usually fine.
 
@@ -75,7 +75,7 @@ every upstream change, which is what an anticorruption layer exists to stop.
 
 **Action:** check whether A has an ACL. If it does, the ACL is not doing its job — most likely
 because A's model mirrors B's rather than being A's own. See
-**41 · Anticorruption layer** *(not written yet)*.
+[29 · Anticorruption layer](29-anticorruption-layer.md).
 
 ### 6. The isolate
 
@@ -88,7 +88,7 @@ any thought on it.
 ## Combining with authorship: the org-chart overlay
 
 The second dataset in the same repository is who changed what. Together with co-change it
-answers the question in [22 · Conway and the org chart](14-conway-and-the-org-chart.md)
+answers the question in [14 · Conway and the org chart](14-conway-and-the-org-chart.md)
 empirically.
 
 ```bash
@@ -240,4 +240,6 @@ harmful. State the constraint explicitly whenever you circulate it, aggregate to
 than individual where you can, and be prepared to drop the analysis rather than let it be
 repurposed.
 
-{/* FOOTER */}
+---
+
+← [Change history as evidence](19-change-history-as-evidence.md) · [Topic index](README.md) · Next → [Event storming](20-event-storming.md)

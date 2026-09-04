@@ -1,6 +1,6 @@
 ---
 title: "A boundary decision worked end to end, including the one that gets rejected — because the useful skill is not scoring a cut you already wanted, it is recognising the gate failure and then finding the axis along which the same system does split"
-sidebar_label: "32 · Scoring one cut"
+sidebar_label: "22b · Scoring one cut"
 sidebar_position: 32
 ---
 
@@ -40,7 +40,7 @@ domain design. Score both.
 
 ### The gate first
 
-The rule from [31 · The ten forces](22-the-ten-forces.md): check *prefer ACID over BASE*
+The rule from [22 · The ten forces](22-the-ten-forces.md): check *prefer ACID over BASE*
 before scoring anything else, because it can end the discussion.
 
 **Which invariants would span the new line?**
@@ -79,7 +79,7 @@ Worth naming, because the same attraction recurs:
 
 All three observations are true. None of them is about the invariant, and the invariant is the
 one that decides. This is exactly the false-invariant test run in reverse: the mistake in
-[11 · False invariants](07b-false-invariants.md) is believing in a rule that does not exist;
+[07b · False invariants](07b-false-invariants.md) is believing in a rule that does not exist;
 the mistake here is not noticing one that does.
 
 ## Proposal B — split by warehouse region
@@ -246,4 +246,6 @@ cancellation flow, the customer communication and the compensation are designed 
 What makes it a defect is when nobody enumerated the invariant and the drift shows up later as
 a reconciliation job.
 
-{/* FOOTER */}
+---
+
+← [The ten forces](22-the-ten-forces.md) · [Topic index](README.md) · Next → [The monolith already told you](23-the-monolith-already-told-you.md)

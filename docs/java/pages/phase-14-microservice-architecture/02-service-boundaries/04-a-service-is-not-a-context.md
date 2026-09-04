@@ -1,6 +1,6 @@
 ---
 title: "Everyone repeats that one service equals one bounded context, and the source everyone cites says something different and more useful: a service is a grouping of one or more subdomains, and a monolith is simply the grouping with one member"
-sidebar_label: "07 · A service is not a context"
+sidebar_label: "04 · A service is not a context"
 sidebar_position: 7
 ---
 
@@ -73,7 +73,7 @@ deployable, which *Service per team* warns against.
 one service, splitting a service means partitioning its subdomains, which is clean if the
 subdomains were properly separated inside it. That is the whole argument for enforcing
 subdomain boundaries in-process before you consider network boundaries — see
-**33 · Package structure is the boundary** *(not written yet)*.
+[24 · Package structure is the boundary](24-package-structure-is-the-boundary.md).
 
 ## Where the folk rule comes from, and when it is right
 
@@ -124,7 +124,7 @@ the error, and it is the one people rarely name. If order capture lives partly i
 `storefront` and partly in `orders`, then every change to order capture is a two-service
 change, and you have paid for a boundary that buys nothing. This is the shape of most
 distributed monoliths, and it is why the split-by-layer and split-by-entity mistakes in
-[18 · Splitting by layer](12-splitting-by-layer.md) and [19 · Entity
+[12 · Splitting by layer](12-splitting-by-layer.md) and [13 · Entity
 services](13-entity-services.md) are so damaging: both of them split subdomains rather than
 partitioning them.
 
@@ -200,7 +200,7 @@ reasons instead.
 **★ Symptom: a capability that two services both claim.** Cause: a subdomain was split
 rather than assigned. Fix: pick one owner and move the rest; there is no version of this
 that works with shared ownership. Which owner is the subject of
-**39 · Moving a capability** *(not written yet)*.
+[39 · Moving a capability](39-moving-a-capability.md).
 
 **★ Putting several subdomains in one service and then not enforcing the internal
 boundary.** This is the failure the folk rule is defending against and it is real. Within
@@ -271,4 +271,6 @@ splitting would add cost. If a team is genuinely blocked by another team's relea
 inside the same deployable, that is the signal, and it is an organisational one before it is
 a technical one.
 
-{/* FOOTER */}
+---
+
+← [Core, supporting, generic](03b-core-supporting-generic.md) · [Topic index](README.md) · Next → [One service, one capability](05-one-service-one-capability.md)

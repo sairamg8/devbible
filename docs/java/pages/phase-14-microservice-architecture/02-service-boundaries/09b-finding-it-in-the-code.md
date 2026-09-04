@@ -1,6 +1,6 @@
 ---
 title: "You can extract the whole transaction map from a Spring codebase mechanically, and then keep it from regressing with an ArchUnit rule — a boundary you discovered once and never enforced will be gone within two quarters"
-sidebar_label: "15 · Finding it in the code"
+sidebar_label: "09b · Finding it in the code"
 sidebar_position: 15
 ---
 
@@ -14,7 +14,7 @@ sidebar_position: 15
 > CC BY-ND 3.0). Version spine: **JDK 25 · Spring Boot 4.1.0 / Framework 7.0.8 · Spring
 > Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
-**[14 · The transaction boundary](09-the-transaction-boundary.md) says the transaction map is
+**[09 · The transaction boundary](09-the-transaction-boundary.md) says the transaction map is
 the most useful artefact in a decomposition exercise. This chunk is how to produce it from a
 codebase you did not write, in an afternoon, and how to turn each decision it produces into
 a test that fails the build when someone quietly undoes it. The second half matters more
@@ -114,7 +114,7 @@ worth adopting anyway.
 ## Step 3 — turn each accepted case into an allow-list
 
 Some multi-aggregate writes are legitimate — Vernon's four reasons, in
-[17 · Reasons to break the rule](11-reasons-to-break-the-rule.md). Legitimate does not mean
+[11 · Reasons to break the rule](11-reasons-to-break-the-rule.md). Legitimate does not mean
 invisible:
 
 ```java
@@ -169,7 +169,7 @@ class ModuleBoundaryTest {
 ```
 
 If you are on Spring Modulith 2.1.1 the equivalent is one line — see
-**34 · Verifying the boundary** *(not written yet)*. Use that instead where you can;
+[25 · Verifying the boundary](25-verifying-the-boundary.md). Use that instead where you can;
 this version exists for the many codebases that cannot adopt it.
 
 ## Step 5 — the other signals worth grepping for once
@@ -270,4 +270,6 @@ quarters later the map has changed and nobody can say when. A failing build is t
 mechanism that costs the person introducing the violation something at the moment they
 introduce it, which is the only moment it is cheap to reconsider.
 
-{/* FOOTER */}
+---
+
+← [The transaction boundary](09-the-transaction-boundary.md) · [Topic index](README.md) · Next → [Who owns the data](10-who-owns-the-data.md)

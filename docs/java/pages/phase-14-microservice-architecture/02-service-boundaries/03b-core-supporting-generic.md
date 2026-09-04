@@ -1,6 +1,6 @@
 ---
 title: "Classifying each subdomain as core, supporting or generic decides where boundaries are worth money — you protect the core with a real model, you keep supporting cheap, and you buy generic rather than modelling it at all"
-sidebar_label: "06 · Core, supporting, generic"
+sidebar_label: "03b · Core, supporting, generic"
 sidebar_position: 6
 ---
 
@@ -187,7 +187,7 @@ they also change in dozens of jurisdictions every year.
 anticorruption layer around a generic subdomain. Fix: the port-and-adapter pair above. The
 test is a grep — if the vendor's package name appears outside one adapter package, the
 insulation is not there. An ArchUnit rule makes it permanent; see
-**26 · ArchUnit rules** *(not written yet)*.
+[26 · ArchUnit rules](26-archunit-rules.md).
 
 **★ Classifying by how interesting the code is.** Core is about business differentiation,
 not technical difficulty. A gnarly distributed scheduler may be entirely generic; a
@@ -243,4 +243,6 @@ vendor leaking in, so it is a thin port plus one adapter, and it is deliberately
 a supporting subdomain the boundary is often just a package, because the thing it supports
 changes with it and Common Closure says keep them together.
 
-{/* FOOTER */}
+---
+
+← [Subdomain vs bounded context](03-subdomain-vs-bounded-context.md) · [Topic index](README.md) · Next → [A service is not a context](04-a-service-is-not-a-context.md)

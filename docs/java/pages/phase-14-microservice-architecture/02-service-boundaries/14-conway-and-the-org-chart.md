@@ -1,6 +1,6 @@
 ---
 title: "Conway's law is not advice, it is an observation that your architecture will end up matching your communication structure whether you plan it or not — so the org chart is either the boundary you chose deliberately or the boundary that will overwrite the one you drew"
-sidebar_label: "22 · Conway and the org chart"
+sidebar_label: "14 · Conway and the org chart"
 sidebar_position: 22
 ---
 
@@ -64,7 +64,7 @@ purchase, not a domain. Building services along it enshrines an accident permane
 
 **The functional split.** A "frontend team" and a "backend team" is a layer split expressed
 as headcount, and letting Conway's law act on it produces exactly the architecture in
-[19 · Splitting by layer](12-splitting-by-layer.md).
+[12 · Splitting by layer](12-splitting-by-layer.md).
 
 **The geography split.** Teams in two time zones with one domain between them. The
 communication structure genuinely is split, so Conway's law will produce a boundary — but the
@@ -127,7 +127,7 @@ order that survives contact with reality:
 2. **Then teams.** Among boundaries that respect the invariants, prefer the partition that
    gives each team sole ownership of what it changes.
 3. **Then change history.** Where team structure is ambiguous or in flux, co-change data
-   ([26 · Change history as evidence](19-change-history-as-evidence.md)) is the tie-breaker,
+   ([19 · Change history as evidence](19-change-history-as-evidence.md)) is the tie-breaker,
    because it measures the communication structure directly rather than through the proxy of
    the org chart.
 
@@ -147,7 +147,7 @@ stay static; it accumulates security debt and its boundary is defended by nobody
 
 **★ Drawing service boundaries along a frontend/backend team split.** This is a layer split
 with headcount attached, and it produces every symptom in
-[19 · Splitting by layer](12-splitting-by-layer.md). The team structure is the thing to
+[12 · Splitting by layer](12-splitting-by-layer.md). The team structure is the thing to
 change here, not the architecture to accommodate it.
 
 **★ Proposing a reorganisation as an architecture deliverable.** It is not yours to make and
@@ -157,7 +157,7 @@ it happens, will happen because someone with authority read that list.
 **★ Symptom: a boundary that erodes gradually with no single decision.** Cause: friction —
 each cross-team change is slightly harder than a local one, so people stop making cross-team
 changes and start making local ones that duplicate. Fix: this is exactly what the build-time
-enforcement in [15 · Finding it in the code](09b-finding-it-in-the-code.md) exists for; the
+enforcement in [09b · Finding it in the code](09b-finding-it-in-the-code.md) exists for; the
 erosion is invisible in review and obvious to a test.
 
 **★ Treating cognitive load as a line count.** A small service with six vendor integrations,
@@ -213,4 +213,6 @@ history catches the slower pattern, where nothing crosses the boundary in code b
 services have started releasing together every time. The first sees the shortcut; the second
 sees the drift. Reviews catch neither reliably, because reviewers are looking at the feature.
 
-{/* FOOTER */}
+---
+
+← [CRUD is not a capability](13b-crud-is-not-a-capability.md) · [Topic index](README.md) · Next → [Too small](15-too-small.md)

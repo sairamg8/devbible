@@ -1,6 +1,6 @@
 ---
 title: "Nobody hands you a list of invariants, so you have to extract them — from the operations the system supports, from every lock and unique constraint already in the schema, and from the question of what a user must never be able to observe"
-sidebar_label: "10 · Finding the invariants"
+sidebar_label: "07 · Finding the invariants"
 sidebar_position: 10
 ---
 
@@ -54,7 +54,7 @@ Worked, for `placeOrder`:
 That third row is the finding. "An order exists without reservations" being a bug means the
 order-creation and the reservation are inside one consistency boundary *unless* the business
 is willing to have orders that later fail — which many retailers are, and which is exactly
-the conversation [12 · Whose job is it](08-whose-job-is-it.md) forces.
+the conversation [08 · Whose job is it](08-whose-job-is-it.md) forces.
 
 ## Source 2 — the concurrency control already in your code
 
@@ -132,7 +132,7 @@ gets partitioned:
 
 Now group the *State involved* column into connected components. Each component is a
 consistency boundary. Any proposed service boundary that cuts a component is a boundary that
-must be justified against the seven-item cost list in [09 · Invariants are the
+must be justified against the seven-item cost list in [06 · Invariants are the
 criterion](06-invariants-are-the-criterion.md).
 
 For the table above the components are: `{order, order_line}` (I1, I2),
@@ -278,4 +278,6 @@ records — low-frequency, hard to reproduce, and expensive to fix once both ser
 their own databases and their own release schedules. The analysis is half a day. The
 recovery is a quarter.
 
-{/* FOOTER */}
+---
+
+← [Invariants are the criterion](06-invariants-are-the-criterion.md) · [Topic index](README.md) · Next → [False invariants](07b-false-invariants.md)

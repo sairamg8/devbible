@@ -1,6 +1,6 @@
 ---
 title: "Before you draw anything, read your own code out loud — qualifier creep, translation methods and a glossary that needs footnotes are boundaries the codebase has already discovered for you"
-sidebar_label: "04 · The language tells you"
+sidebar_label: "02c · The language tells you"
 sidebar_position: 4
 ---
 
@@ -75,7 +75,7 @@ class OrderTranslator {
 The `filter` and the address fallback are business rules. They are Fulfilment's rules, sat
 in a class that neither Sales nor Fulfilment owns. That class is an anticorruption layer
 that has not been given a name or a home. Give it one — see
-**29 · Anticorruption layer** *(not written yet)* — and the boundary becomes explicit
+[29 · Anticorruption layer](29-anticorruption-layer.md) — and the boundary becomes explicit
 without moving a single service.
 
 ## Scar 3 — the glossary with footnotes
@@ -154,8 +154,7 @@ public Money recalculateTotal() { ... }
 A comment restricting a caller is a boundary that the compiler could enforce and does not.
 Java gives you three real enforcement mechanisms — package-private visibility, Spring
 Modulith's internal packages, and JPMS — and a comment is none of them. See
-**26 · ArchUnit rules** *(not written yet)* and **34 · Verifying the
-boundary** *(not written yet)*.
+[26 · ArchUnit rules](26-archunit-rules.md) and [25 · Verifying the boundary](25-verifying-the-boundary.md).
 
 ## Scar 10 — a "utils" or "common" package with domain logic in it
 
@@ -246,4 +245,6 @@ boundaries worth spending money on are the ones where the ambiguity is *currentl
 coordinated changes or production defects, which is exactly what the change-history analysis
 in [19 · Change history as evidence](19-change-history-as-evidence.md) is for.
 
-{/* FOOTER */}
+---
+
+← [The same word, two meanings](02b-the-same-word-two-meanings.md) · [Topic index](README.md) · Next → [Subdomain vs bounded context](03-subdomain-vs-bounded-context.md)

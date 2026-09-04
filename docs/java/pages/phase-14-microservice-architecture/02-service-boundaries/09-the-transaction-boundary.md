@@ -1,6 +1,6 @@
 ---
 title: "The transaction boundary is the hard floor under every service boundary: whatever must commit together must live together, so the real design question is not where to put the line but which transactions you are willing to give up"
-sidebar_label: "14 · The transaction boundary"
+sidebar_label: "09 · The transaction boundary"
 sidebar_position: 14
 ---
 
@@ -119,10 +119,10 @@ answer for it:
 
 - **Sales / Inventory split** — cuts between `orders` and `stockItems`. Costs the reserve
   invariant. Whether that is acceptable is the whose-job question from
-  [12 · Whose job is it?](08-whose-job-is-it.md).
+  [08 · Whose job is it?](08-whose-job-is-it.md).
 - **Sales / Customers split** — cuts between `orders` and `customers`. Look at
   `recordOrderPlaced()`: if it is maintaining a counter for a dashboard, it is a false
-  invariant ([11 · False invariants](07b-false-invariants.md)) and this cut is free. If it
+  invariant ([07b · False invariants](07b-false-invariants.md)) and this cut is free. If it
   is maintaining an outstanding-balance figure that a credit check rejects orders on, it is
   real and the cut is not free.
 
@@ -177,7 +177,7 @@ one aggregate, so any boundary drawn around it is affordable.**
 > later", because later is after the split.
 
 The four documented exceptions are Vernon's, and they are in
-[17 · Reasons to break the rule](11-reasons-to-break-the-rule.md).
+[11 · Reasons to break the rule](11-reasons-to-break-the-rule.md).
 
 ## The read side is not exempt, and it is where isolation bites
 
@@ -275,4 +275,6 @@ is explicit and the compensation is designed as a customer experience. What make
 defect is when it happens because nobody enumerated the invariants and the drift is
 discovered later as a reconciliation job.
 
-{/* FOOTER */}
+---
+
+← [The answer, in code](08b-the-answer-in-code.md) · [Topic index](README.md) · Next → [Finding it in the code](09b-finding-it-in-the-code.md)

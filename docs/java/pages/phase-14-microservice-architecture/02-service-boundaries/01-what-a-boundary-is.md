@@ -150,9 +150,8 @@ often excellent). The boundary is the **contract about what may change independe
 the deployment topology is an implementation of it.
 
 This distinction is why the modular monolith is a legitimate destination and not a
-consolation prize. **33 · Package structure is the
-boundary** *(not written yet)* and
-**34 · Verifying the boundary** *(not written yet)* show a boundary that is
+consolation prize. [24 · Package structure is the boundary](24-package-structure-is-the-boundary.md) and
+[25 · Verifying the boundary](25-verifying-the-boundary.md) show a boundary that is
 enforced by the compiler and a test, with no network anywhere. That boundary is more real
 than a REST API between two services that share a database.
 
@@ -229,4 +228,6 @@ needs cross-team review, the codebase drifts into two half-consistent styles, an
 is accountable when it breaks. If two teams must own one service, that is evidence you
 have found either one boundary too few or one team too many.
 
-{/* FOOTER */}
+---
+
+[Topic index](README.md) · Next → [Bounded context](02-bounded-context.md)

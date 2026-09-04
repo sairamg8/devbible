@@ -1,6 +1,6 @@
 ---
 title: "A greenfield boundary is a guess about a domain nobody understands yet, and the honest response is not better guessing — it is to make the guess cheap to be wrong about by drawing it in code before drawing it in infrastructure"
-sidebar_label: "26 · Boundaries from a whiteboard"
+sidebar_label: "18 · Boundaries from a whiteboard"
 sidebar_position: 26
 ---
 
@@ -55,10 +55,10 @@ It produces the *vocabulary* and the *candidate list*, which are real deliverabl
 
 - A list of candidate subdomains, which is the starting partition.
 - The nouns and their disputed definitions, which is
-  [03 · The same word, two meanings](02b-the-same-word-two-meanings.md) done early and
+  [02b · The same word, two meanings](02b-the-same-word-two-meanings.md) done early and
   cheaply.
 - The system operations people expect to need, which is
-  [29 · System operations first](21-system-operations-first.md)'s input.
+  [21 · System operations first](21-system-operations-first.md)'s input.
 - Disagreements between stakeholders, which are the most valuable output of the session and
   the one most likely to be smoothed over.
 
@@ -79,7 +79,7 @@ Hours, reversible, invisible to anyone outside the team.
 **Wrong service boundary:** migrate data between databases, version and deprecate APIs,
 coordinate with every consumer, run a dual-write window, change team ownership. Weeks to
 quarters, and politically hard because someone's remit shrinks. Priced in
-**54 · The cost of changing a boundary** *(not written yet)*.
+[42 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md).
 
 The starting shape, with the guessed boundaries made real by the compiler and a test:
 
@@ -137,7 +137,7 @@ Wait for one of these, and name which one in the decision record:
 5. **The module has become too large for the team's cognitive capacity, and the split follows
    a boundary the evidence supports.**
 
-Absent any of these, splitting is buying the fixed cost in [23 · Too
+Absent any of these, splitting is buying the fixed cost in [15 · Too
 small](15-too-small.md) for nothing.
 
 ## What to write down on day one
@@ -231,4 +231,6 @@ year: "if catalogue and pricing turn out to change together in most releases, th
 is wrong" is checkable against the commit log. A diagram is not checkable, so a year later the
 team can only rationalise it.
 
-{/* FOOTER */}
+---
+
+← [The god service](17-the-god-service.md) · [Topic index](README.md) · Next → [Change history as evidence](19-change-history-as-evidence.md)

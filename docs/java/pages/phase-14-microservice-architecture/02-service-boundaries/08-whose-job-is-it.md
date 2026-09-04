@@ -1,6 +1,6 @@
 ---
 title: "The single best tie-breaker in boundary design is not technical at all: ask whether it is the job of the user performing this action to make the data consistent, because if it is somebody else's job the system may take its time and the line can go there"
-sidebar_label: "12 · Whose job is it?"
+sidebar_label: "08 · Whose job is it?"
 sidebar_position: 12
 ---
 
@@ -113,7 +113,7 @@ that had been holding a boundary hostage.
 
 
 The two code shapes the answer produces, and the case where two stakeholders answer
-differently, are in [13 · The answer, in code](08b-the-answer-in-code.md).
+differently, are in [08b · The answer, in code](08b-the-answer-in-code.md).
 
 ## Gotchas
 
@@ -190,4 +190,6 @@ what microservices.io's *Self-contained Service* pattern describes. Many busines
 the second once the first is priced, and the ones that do not have told you something real
 about their domain, which is a legitimate architectural constraint rather than an obstacle.
 
-{/* FOOTER */}
+---
+
+← [False invariants](07b-false-invariants.md) · [Topic index](README.md) · Next → [The answer, in code](08b-the-answer-in-code.md)

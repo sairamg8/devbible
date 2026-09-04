@@ -1,6 +1,6 @@
 ---
 title: "Every other criterion for drawing a boundary is advisory; the invariant is the one that is binding, because an aggregate is a transactional consistency boundary and a line drawn through one converts an atomic rule into a distributed workflow you will maintain forever"
-sidebar_label: "09 · Invariants are the criterion"
+sidebar_label: "06 · Invariants are the criterion"
 sidebar_position: 9
 ---
 
@@ -68,8 +68,8 @@ and any state where it is not is a violation. Real ones look like this:
 | An order must have at least one line | Order and its lines | Transactional |
 | Stock available at a warehouse is never negative: `onHand - reserved >= 0` | Fields of one stock item | Transactional |
 | A reservation exists only against stock that was available when it was made | Reservation and stock item | **Transactional — and this is the interesting one** |
-| A customer's lifetime spend equals the sum of their paid orders | Customer and all orders | Not an invariant. See [11 · False invariants](07b-false-invariants.md). |
-| An order cannot ship before payment is captured | Order, payment, shipment | Usually not transactional — see [12 · Whose job is it](08-whose-job-is-it.md) |
+| A customer's lifetime spend equals the sum of their paid orders | Customer and all orders | Not an invariant. See [07b · False invariants](07b-false-invariants.md). |
+| An order cannot ship before payment is captured | Order, payment, shipment | Usually not transactional — see [08 · Whose job is it](08-whose-job-is-it.md) |
 | A promotion may be redeemed at most `n` times in total | Promotion and every redemption | Transactional, and it is a boundary constraint on the promotion aggregate |
 
 The fourth and the last rows are where boundaries get decided. If a reservation and the
@@ -189,7 +189,7 @@ Vernon does not present one-aggregate-per-transaction as an absolute:
 > strict. However, it is a rule of thumb and should be the goal in most cases."*
 
 He then lists four specific reasons to break it, which are covered in
-[17 · Reasons to break the rule](11-reasons-to-break-the-rule.md). Knowing that they exist,
+[11 · Reasons to break the rule](11-reasons-to-break-the-rule.md). Knowing that they exist,
 and that they are four rather than "use judgement", is what keeps this from being dogma.
 
 ## Why this criterion outranks the others
@@ -219,7 +219,7 @@ together.
 **★ Assuming every rule that sounds absolute is transactional.** "An order cannot ship
 before payment" sounds absolute and is usually not — most retailers ship on authorisation,
 not capture, and tolerate a window. Test each candidate with the whose-job-is-it question in
-[12 · Whose job is it](08-whose-job-is-it.md) before treating it as a constraint on your
+[08 · Whose job is it](08-whose-job-is-it.md) before treating it as a constraint on your
 architecture.
 
 **★ Enforcing an invariant with a read-then-write and no lock.** `if (available() >= qty)`
@@ -293,4 +293,6 @@ with the existing code: every optimistic-lock version column, every `SELECT … 
 every unique constraint and every nightly reconciliation job is a place where somebody
 already decided a rule needed protecting.
 
-{/* FOOTER */}
+---
+
+← [One service, one capability](05-one-service-one-capability.md) · [Topic index](README.md) · Next → [Finding the invariants](07-finding-the-invariants.md)

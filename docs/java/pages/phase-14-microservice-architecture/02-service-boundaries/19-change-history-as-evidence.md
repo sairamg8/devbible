@@ -1,6 +1,6 @@
 ---
 title: "Your version control history is the only record of what actually changes together, which makes it the only empirical test of the Common Closure Principle you will ever get — and it is free, already collected, and almost never consulted"
-sidebar_label: "27 · Change history as evidence"
+sidebar_label: "19 · Change history as evidence"
 sidebar_position: 27
 ---
 
@@ -103,7 +103,7 @@ Compute it in both directions, because it is asymmetric and the asymmetry is the
 - **One direction high, the other low.** A changes whenever B does, but B often changes alone.
   That is an upstream/downstream relationship: B is upstream, A is downstream and conformist
   or dependent. This maps directly onto the context-mapping relationships in
-  **43 · Context mapping** *(not written yet)*, and it is derived from data rather than from
+  [30 · Context mapping](30-context-mapping.md), and it is derived from data rather than from
   a workshop.
 - **Both low.** Independent. A boundary here is cheap and probably correct.
 
@@ -139,7 +139,7 @@ independent.
 4. **A recent reorganisation** means the last year's history describes the old team structure.
    Window the analysis to the period since the reorg, accepting a smaller sample.
 5. **New code** has no history. Nothing mitigates this; it is why greenfield boundaries are
-   guesses — [26 · Boundaries from a whiteboard](18-boundaries-from-a-whiteboard.md).
+   guesses — [18 · Boundaries from a whiteboard](18-boundaries-from-a-whiteboard.md).
 
 ## Why this evidence persuades people the domain argument does not
 
@@ -227,4 +227,6 @@ are independent and starts the discussion about what to do. It is also cheap to 
 can be a quarterly health check rather than a one-off study — which matters because boundary
 erosion is gradual and only visible as a trend.
 
-{/* FOOTER */}
+---
+
+← [Boundaries from a whiteboard](18-boundaries-from-a-whiteboard.md) · [Topic index](README.md) · Next → [Reading the co-change matrix](19b-reading-the-co-change-matrix.md)

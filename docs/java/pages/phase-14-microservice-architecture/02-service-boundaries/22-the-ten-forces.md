@@ -1,6 +1,6 @@
 ---
 title: "Chris Richardson's ten forces are the only decomposition framework that names the arguments on both sides, and its real contribution is the insistence that five forces always oppose the split — so a design with no cost listed has simply not finished"
-sidebar_label: "31 · The ten forces"
+sidebar_label: "22 · The ten forces"
 sidebar_position: 31
 ---
 
@@ -76,7 +76,7 @@ round trips?* A boundary that requires fetching a list and then fetching each el
 boundary in the wrong place.
 
 **Prefer ACID over BASE** — *Which currently atomic operations become eventually consistent?*
-This is [09 · Invariants are the criterion](06-invariants-are-the-criterion.md) as a force, and
+This is [06 · Invariants are the criterion](06-invariants-are-the-criterion.md) as a force, and
 it is the one with a hard floor: if the answer includes a real invariant, the boundary is
 rejected rather than scored.
 
@@ -86,7 +86,7 @@ one force among ten.
 
 **Minimize design time coupling** — *What fraction of changes will now need both sides?*
 Answerable from the commit history, which makes this the most evidence-backed force in the
-list ([27 · Change history as evidence](19-change-history-as-evidence.md)).
+list ([19 · Change history as evidence](19-change-history-as-evidence.md)).
 
 ## How to use them without turning it into theatre
 
@@ -150,11 +150,11 @@ Worth saying, because using it as though it were complete leads to specific erro
 - **It has no cost model.** All ten forces are qualitative, so "team autonomy" and "prefer
   ACID" are weighed by judgement. The gate rule above is the patch.
 - **It does not include the fixed per-service cost.** Pipelines, dashboards, on-call, upgrades
-  — the list in [23 · Too small](15-too-small.md) — appears nowhere in the ten. Add it as an
+  — the list in [15 · Too small](15-too-small.md) — appears nowhere in the ten. Add it as an
   eleventh consideration, always against.
 - **It says nothing about migration cost.** The forces score the destination, not the journey,
   and the journey is often the deciding factor
-  (**55 · The cost of changing a boundary** *(not written yet)*).
+  ([42 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md)).
 - **It is symmetric in appearance and not in practice.** Splitting is easy and merging is
   hard, so an equal balance of forces should resolve toward *not* splitting.
 
@@ -233,4 +233,6 @@ operations write aggregates that would span the new line. Add the fixed per-serv
 decide, record the decision with the evidence, and — the part people skip — record what would
 make you revisit it.
 
-{/* FOOTER */}
+---
+
+← [System operations first](21-system-operations-first.md) · [Topic index](README.md) · Next → [Scoring one cut](22b-scoring-one-cut.md)

@@ -1,6 +1,6 @@
 ---
 title: "A monolith that has been running for five years has already discovered most of its own seams, and they are recorded in package structure, schema clustering, deployment fear and the shape of the on-call rota — reading them is faster and more honest than modelling from scratch"
-sidebar_label: "33 · The monolith already told you"
+sidebar_label: "23 · The monolith already told you"
 sidebar_position: 33
 ---
 
@@ -49,7 +49,7 @@ infrastructure or a god module.
 
 ## Signal 2 — the schema's connected components
 
-The schema is misleading about aggregates ([10 · Finding the
+The schema is misleading about aggregates ([07 · Finding the
 invariants](07-finding-the-invariants.md)) and informative about *clusters*.
 
 ```sql
@@ -127,7 +127,7 @@ prioritised.
 
 Who gets paged for what, and who they escalate to. This is the communication structure as it
 actually operates under pressure, which is what Conway's law is about
-([22 · Conway and the org chart](14-conway-and-the-org-chart.md)) — and it is frequently
+([14 · Conway and the org chart](14-conway-and-the-org-chart.md)) — and it is frequently
 different from the org chart, because escalation follows knowledge rather than reporting
 lines.
 
@@ -143,7 +143,7 @@ Every long-lived system has them, and each is a boundary problem with a receipt:
 | A nightly reconciliation job | An invariant already surrendered; the two sides are already effectively separate |
 | A cache with a manual invalidation endpoint | A read dependency somebody wanted to break |
 | A feature flag that has been on for two years | A change that could not be made safely at once |
-| A "sync" job between two tables | Two owners for one fact ([17 · The ownership register](10b-the-ownership-register.md)) |
+| A "sync" job between two tables | Two owners for one fact ([10b · The ownership register](10b-the-ownership-register.md)) |
 | A support runbook for fixing data | An unenforced rule with a known failure rate |
 | A retry loop with a comment about a race | A check-then-act that should be one operation |
 
@@ -243,4 +243,6 @@ analysis, which is why the incident log is the tool that finds them. It is also 
 split along a boundary like that fails: the coupling migrates with the code and reappears as
 two services that go down together.
 
-{/* FOOTER */}
+---
+
+← [Scoring one cut](22b-scoring-one-cut.md) · [Topic index](README.md) · Next → [Package structure is the boundary](24-package-structure-is-the-boundary.md)

@@ -1,6 +1,6 @@
 ---
 title: "Event storming is the fastest way to get a room's model of a domain onto a wall, and its most valuable output is not the events — it is the pink stickers marking the places where the room disagreed"
-sidebar_label: "29 · Event storming"
+sidebar_label: "20 · Event storming"
 sidebar_position: 29
 ---
 
@@ -48,12 +48,12 @@ temptation in a workshop is to resolve them so the wall looks finished. Resist i
 unresolved ones are the most valuable artefact the session produces:
 
 - **A disagreement about what a word means** is a bounded context edge, discovered in the
-  cheapest possible way ([03 · The same word, two
+  cheapest possible way ([02b · The same word, two
   meanings](02b-the-same-word-two-meanings.md)).
 - **A disagreement about who does something** is an ownership question, and it maps directly
-  onto [16 · Who owns the data](10-who-owns-the-data.md).
+  onto [10 · Who owns the data](10-who-owns-the-data.md).
 - **"It depends"** is usually two workflows wearing one name, and it is the whose-job question
-  in [12 · Whose job is it?](08-whose-job-is-it.md) arriving unprompted.
+  in [08 · Whose job is it?](08-whose-job-is-it.md) arriving unprompted.
 - **"Nobody knows"** is a policy gap: the software has been making a business decision
   implicitly, and no one has decided what the decision should be.
 
@@ -150,14 +150,14 @@ Be explicit about this in the room, because otherwise the wall gets treated as a
 architecture.
 
 - **Change frequency.** The wall shows what happens, not what changes. Common Closure needs
-  history ([27 · Change history as evidence](19-change-history-as-evidence.md)).
+  history ([19 · Change history as evidence](19-change-history-as-evidence.md)).
 - **Volume, latency and scale.** Nothing on the wall distinguishes an event that fires twice a
   year from one that fires ten thousand times a second.
 - **Team capacity.** The wall has no headcount on it.
 - **Operational cost.** Every candidate boundary looks free on paper
-  ([23 · Too small](15-too-small.md)).
+  ([15 · Too small](15-too-small.md)).
 - **Whether the invariants are real.** The constraints on the wall are the room's beliefs;
-  sorting true from false invariants is [11 · False invariants](07b-false-invariants.md).
+  sorting true from false invariants is [07b · False invariants](07b-false-invariants.md).
 - **What the current code does.** The wall is the domain as understood, which is frequently
   not the domain as implemented — and the difference is itself worth an afternoon.
 
@@ -237,4 +237,6 @@ the real disagreements live. And a follow-up step that is not a workshop: take t
 boundaries off the wall and test them against the invariants and the commit history, because
 the wall cannot tell you which candidates are affordable.
 
-{/* FOOTER */}
+---
+
+← [Reading the co-change matrix](19b-reading-the-co-change-matrix.md) · [Topic index](README.md) · Next → [System operations first](21-system-operations-first.md)

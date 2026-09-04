@@ -1,6 +1,6 @@
 ---
 title: "One aggregate per transaction is a rule of thumb and its author says so, listing four specific reasons to break it — knowing those four is what stops the rule being either dogma or an excuse"
-sidebar_label: "18 · Reasons to break the rule"
+sidebar_label: "11 · Reasons to break the rule"
 sidebar_position: 18
 ---
 
@@ -166,7 +166,7 @@ aggregate roots in one transaction, the review question is not "is this okay?" �
 answer of "Reason One" that a reviewer can check by asking whether any rule spans the batch.
 Every one of those outcomes is better than a judgement call.
 
-The allow-list in [15 · Finding it in the code](09b-finding-it-in-the-code.md) is where the
+The allow-list in [09b · Finding it in the code](09b-finding-it-in-the-code.md) is where the
 answer gets recorded.
 
 ## Gotchas
@@ -247,4 +247,6 @@ the moment somebody adds the sixteenth one, whereas an exception that must be ad
 file is a change a reviewer sees. The allow-list is a debt register, and it should be
 reviewed on the same cadence as the architecture.
 
-{/* FOOTER */}
+---
+
+← [The ownership register](10b-the-ownership-register.md) · [Topic index](README.md) · Next → [Splitting by layer](12-splitting-by-layer.md)
