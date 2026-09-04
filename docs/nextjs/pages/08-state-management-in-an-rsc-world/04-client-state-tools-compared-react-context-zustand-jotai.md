@@ -1,7 +1,7 @@
 ---
 title: "React Context is dependency injection, not a state manager — and in an RSC app it carries a second constraint nobody mentions: a provider is a client component, so where you mount it decides how much of your tree stops being server-rendered"
 sidebar_label: "04 · Context is not a state manager"
-sidebar_position: 4
+sidebar_position: 23
 description: "What Context actually does and does not do, why 'Context is a state manager' is wrong, the RSC rule that a provider must be a Client Component, and the children slot that keeps the tree below it server-rendered."
 ---
 

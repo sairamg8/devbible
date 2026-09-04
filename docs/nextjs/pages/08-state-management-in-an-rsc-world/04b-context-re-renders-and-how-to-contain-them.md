@@ -1,7 +1,7 @@
 ---
 title: "Context has no selectors: every consumer re-renders when the value changes by Object.is, memoising the value fixes only the spurious half, and React.memo does not help at all — which leaves splitting by change rate as the only cure inside Context"
 sidebar_label: "04b · Context re-renders, and containing them"
-sidebar_position: 131
+sidebar_position: 24
 description: "Why an object literal as a context value re-renders everything, what memoising the value does and does not fix, why React.memo does not stop a context re-render, and the two splits — state from dispatch, and by change frequency — that actually contain the fan-out."
 ---
 

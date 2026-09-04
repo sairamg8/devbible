@@ -1,7 +1,7 @@
 ---
 title: "Put a stable store handle in Context and subscribe to its contents with useSyncExternalStore, and the fan-out never fires — this is the selector API Context lacks, and it is what every client-state library actually is"
 sidebar_label: "04c · useSyncExternalStore, the escape hatch"
-sidebar_position: 132
+sidebar_position: 25
 description: "A sixty-line store with per-selector subscriptions, the two rules useSyncExternalStore enforces — a cached getSnapshot and a getServerSnapshot that matches the server — and why omitting the third argument throws under App Router server rendering."
 ---
 

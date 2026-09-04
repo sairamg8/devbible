@@ -1,7 +1,7 @@
 ---
 title: "An integer position column makes every move a write to every card below it, so cards carry a fractional rank instead — and because the rank is arithmetic, a keyboard menu can produce exactly the same MoveIntent a drag does"
 sidebar_label: "07i · Milestone: ranks and keyboard moves"
-sidebar_position: 167
+sidebar_position: 51
 description: "Chapter 8's capstone, step five concluded: fractional ranks and why they beat integer positions, the precision limit that eventually forces renormalisation, why the client sends an index and the server computes the rank, and the keyboard move path with focus management and a live region."
 ---
 

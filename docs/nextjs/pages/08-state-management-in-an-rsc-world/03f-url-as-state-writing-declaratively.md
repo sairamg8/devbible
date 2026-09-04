@@ -1,7 +1,7 @@
 ---
 title: "A filter chip should be an anchor and a search box should be a GET form — the two declarative writers survive without JavaScript, can be prefetched, and are the only ones a crawler can follow"
 sidebar_label: "03f · Writing the URL declaratively"
-sidebar_position: 124
+sidebar_position: 16
 description: "The four ways to write a query param compared, then Link and next/form in depth: why scroll={false} matters on a filter, the sticky-header scroll trap, and why a GET form silently drops every param it does not carry."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The App Router has no shallow option because it refuses to conflate two decisions — window.history.pushState changes the URL and notifies the client hooks while no Server Component re-renders, and that is the whole feature"
 sidebar_label: "03h · Shallow updates and the History API"
-sidebar_position: 126
+sidebar_position: 18
 description: "Why router.push has no shallow flag, what window.history.pushState and replaceState integrate with, when a shallow URL update is the right answer and when it silently freezes your list, and how back/forward behaves across the two kinds of write."
 ---
 

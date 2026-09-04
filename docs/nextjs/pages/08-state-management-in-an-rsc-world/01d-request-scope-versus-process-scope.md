@@ -1,7 +1,7 @@
 ---
 title: "A module-scope binding is user scope in a browser and process scope on a server — which is why the store idiom that is correct in an SPA is a cross-user data disclosure in the App Router"
 sidebar_label: "01d · Request vs process scope"
-sidebar_position: 102
+sidebar_position: 4
 description: "The module-level store that leaks per-request data across concurrent users, why it survives development and fails under load, the same bug wearing a Zustand store's clothes, and React.cache as the request-scoped replacement — including its documented isolation inside use cache."
 ---
 

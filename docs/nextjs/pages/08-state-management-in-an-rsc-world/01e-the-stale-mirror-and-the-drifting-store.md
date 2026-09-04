@@ -1,7 +1,7 @@
 ---
 title: "useState ignores its argument after the first render and router.refresh() deliberately preserves client state — put those two documented behaviours together and a mirror of server data freezes forever, silently"
 sidebar_label: "01e · Stale mirrors and drift"
-sidebar_position: 103
+sidebar_position: 5
 description: "The three remaining ways the split goes wrong: a useState initialised from a server prop that never updates, a client store seeded from server data that drifts in four distinct ways, and 'use client' at the root layout — each with the fix shown in code and the trade-off named."
 ---
 
@@ -193,7 +193,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 <TaskTitleEditor key={`${task.id}:${task.updatedAt}`} task={task} />
 ```
 
-**★ Symptom: after a mutation the list updates for a second and then reverts.** Cause: an optimistic write into a long-lived store, followed by a re-seed from a payload that was rendered before the mutation landed — commonly because the invalidation used a stale-while-revalidate profile and the action's own re-render did not wait for fresh data. Fix: for an in-flight mutation use `useOptimistic`, whose state is scoped to the Action and released automatically; see **06 · useOptimistic and useActionState** *(not written yet)*, and pick the invalidation function deliberately using [10b](10b-refresh-against-the-alternatives.md).
+[★ Symptom: after a mutation the list updates for a second and then reverts.** Cause: an optimistic write into a long-lived store, followed by a re-seed from a payload that was rendered before the mutation landed — commonly because the invalidation used a stale-while-revalidate profile and the action's own re-render did not wait for fresh data. Fix: for an in-flight mutation use `useOptimistic`, whose state is scoped to the Action and released automatically; see **06 · useOptimistic and useActionState](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md), and pick the invalidation function deliberately using [10b](10b-refresh-against-the-alternatives.md).
 
 ```tsx
 'use client'

@@ -1,7 +1,7 @@
 ---
 title: "An optimistic UI takes one of three shapes — project the next value, render only the pending additions beside the server-rendered list, or hold a boolean — and choosing the wrong one is why rows appear twice or never clear"
 sidebar_label: "06e · Optimistic patterns"
-sidebar_position: 148
+sidebar_position: 40
 description: "Cycling a value optimistically, the pending-only list with useOptimistic([]) beside a server-rendered list, and the useOptimistic(false) data-pending flag published as a CSS hook."
 ---
 

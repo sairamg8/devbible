@@ -1,7 +1,7 @@
 ---
 title: "Because the filter lives in the URL, the framework can render the destination with that filter resolved before the click — and because each such link costs a server invocation, prefetch={true} is a per-link decision, not a default"
 sidebar_label: "03d · Prefetching, and opting out"
-sidebar_position: 122
+sidebar_position: 14
 description: "What Partial Prefetching resolves from a link's URL data, the difference between the App Shell and a route's static shell, the four prefetch values, and the two documented ways to opt a route out of prerendering."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Whether the card stays where the user dropped it is decided by one line in the Server Action — updateTag ships a re-render in the action's own response and revalidateTag under a stale-while-revalidate profile deliberately does not"
 sidebar_label: "07k · Milestone: the action and the tags"
-sidebar_position: 169
+sidebar_position: 53
 description: "Chapter 8's capstone, step six concluded: the moveCard action with validation, authorisation, optimistic-concurrency detection and rank computation; the snap-back bug caused by revalidateTag's stale-while-revalidate profile; the invalidation table for SprintDesk; and what to do when the board read was never cached."
 ---
 

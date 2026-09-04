@@ -1,7 +1,7 @@
 ---
 title: "Filters, sort and pagination are addresses, not component state — the URL is a store you already ship, and in Next.js 16 it arrives at the server as a promise of a plain object whose every value might be an array"
 sidebar_label: "03 · URL as state — the store you already ship"
-sidebar_position: 3
+sidebar_position: 11
 description: "Why filter and sort state belongs in the query string, what the searchParams promise actually resolves to, how repeated keys change the type, and the PageProps helper that types the route but not the query."
 ---
 

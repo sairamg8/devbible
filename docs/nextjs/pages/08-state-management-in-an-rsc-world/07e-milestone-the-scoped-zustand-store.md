@@ -1,7 +1,7 @@
 ---
 title: "A Zustand store created at module scope is a variable shared by every request the server process handles, so the board's store is manufactured per mount by a provider — and the only thing that changes is where the create call sits"
 sidebar_label: "07e · Milestone: the scoped store"
-sidebar_position: 163
+sidebar_position: 47
 description: "Chapter 8's capstone, step four: why a module-level store is cross-user data exposure on the server, createStore from zustand/vanilla behind a per-mount provider factory, the typed selector hook, and the table of what ephemeral UI state is allowed in the store and what is banned from it."
 ---
 

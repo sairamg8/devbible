@@ -1,7 +1,7 @@
 ---
 title: "\"I mutated and the UI did not update\" is the most common reason teams add a client cache, and it is almost never a reason — four cheaper explanations have to be eliminated first"
 sidebar_label: "02b · The symptom that lies"
-sidebar_position: 104
+sidebar_position: 7
 description: "The stale-after-mutation symptom in full: an action that invalidated nothing, invalidation after a redirect, revalidateTag's deliberate skipped re-render, and a browser stale window — plus the navigation-scope and useSearchParams mechanics that produce the same 'it does not work' report."
 ---
 

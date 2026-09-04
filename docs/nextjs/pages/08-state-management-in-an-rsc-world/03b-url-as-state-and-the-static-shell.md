@@ -1,7 +1,7 @@
 ---
 title: "Awaiting searchParams suspends the component you await in, so the await belongs in a leaf behind Suspense — where you put it decides how much of the page a CDN can serve without ever reaching your server"
 sidebar_label: "03b · URL state and the static shell"
-sidebar_position: 120
+sidebar_position: 12
 description: "How searchParams opts a route into dynamic rendering, why a synchronous page component with the await pushed into a leaf restores the static shell, why Suspense is a seam and not a switch, and why layouts never receive searchParams."
 ---
 

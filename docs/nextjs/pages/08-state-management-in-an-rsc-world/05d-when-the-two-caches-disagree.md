@@ -1,7 +1,7 @@
 ---
 title: "The failure that actually hurts is not setup — it is the day the server render and the client cache hold the same row at two different values, and the only reliable cure is a rule about which layer owns which piece of data"
 sidebar_label: "05d · When the two caches disagree"
-sidebar_position: 142
+sidebar_position: 33
 description: "Data ownership between RSC and a client cache, initialData and initialDataUpdatedAt seeded from a Server Component, and choosing between seeding and hydrating."
 ---
 

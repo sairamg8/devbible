@@ -1,7 +1,7 @@
 ---
 title: "The framework hooks cover the entire mutation round trip and nothing outside it — an optimistic value cannot outlive its Transition, an action state cannot be read by a sibling route, and the moment a requirement crosses either boundary a real client store comes back"
 sidebar_label: "06g · Where the hooks stop"
-sidebar_position: 150
+sidebar_position: 42
 description: "Why an optimistic update can look like it stuck when the action's response ships no re-render, the seven requirements useOptimistic and useActionState cannot meet, and what to reach for in each case."
 ---
 

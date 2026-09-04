@@ -1,7 +1,7 @@
 ---
 title: "The drag layer touches no network at all — it turns a finger into one MoveIntent object, and every line of it exists because pointer capture keeps the events coming and pointercancel takes them away"
 sidebar_label: "07g · Milestone: the drag gesture"
-sidebar_position: 165
+sidebar_position: 49
 description: "Chapter 8's capstone, step five: why pointer events rather than a library or HTML5 drag, setPointerCapture, the movement threshold that keeps a card clickable, writing the ghost's transform to the DOM instead of to state, deduping store writes, and cancelling cleanly when the browser takes the gesture."
 ---
 

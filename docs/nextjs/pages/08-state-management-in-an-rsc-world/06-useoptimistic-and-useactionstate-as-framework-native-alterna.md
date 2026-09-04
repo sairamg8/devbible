@@ -1,7 +1,7 @@
 ---
 title: "useActionState is a reducer that is allowed to have side effects — the function you give it receives the previous state first and the payload second, and almost every bug people hit with it is a consequence of forgetting that first argument"
 sidebar_label: "06 · useActionState"
-sidebar_position: 6
+sidebar_position: 36
 description: "The exact signature and return shape of useActionState, the reducerAction contract, the (previousState, formData) argument order, validation state flowing back instead of into a store, and the transition requirement for isPending."
 ---
 

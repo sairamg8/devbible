@@ -1,7 +1,7 @@
 ---
 title: "Prefetching does not have to happen at the top of the route and does not have to be awaited — colocated HydrationBoundaries and dehydrated pending queries let the cache fill while the page streams, at the cost of a server-side waterfall you have to see to avoid"
 sidebar_label: "05c · Nested prefetch and streaming"
-sidebar_position: 141
+sidebar_position: 32
 description: "Multiple HydrationBoundary elements, the cache()-scoped single client, the server-side waterfall a nested prefetch creates, dehydrating pending queries for streaming, serializeData/deserializeData, and the experimental prefetch-less package."
 ---
 

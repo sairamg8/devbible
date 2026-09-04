@@ -1,7 +1,7 @@
 ---
 title: "useActionState is a queue, and its two most surprising behaviours follow from that: dispatches run strictly one at a time so each can receive the previous result, and a reducerAction that throws cancels every dispatch already queued behind it"
 sidebar_label: "06b · Queuing and errors"
-sidebar_position: 145
+sidebar_position: 37
 description: "Sequential dispatch inside useActionState, known errors as state versus thrown errors to an error boundary, and why a thrown action cancels the dispatches queued behind it."
 ---
 

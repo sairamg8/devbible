@@ -1,7 +1,7 @@
 ---
 title: "A board has four kinds of state and only one of them belongs in a store — the milestone is the ownership table, and every bug in this chapter is a row filed under the wrong owner"
 sidebar_label: "07 · Milestone: state ownership"
-sidebar_position: 7
+sidebar_position: 43
 description: "Chapter 8's capstone, act one: enumerating every piece of SprintDesk board state, assigning each to the URL, the server cache, the scoped client store or the optimistic overlay by four yes/no questions, and the build order that falls out of those assignments."
 ---
 
@@ -69,11 +69,11 @@ The milestone assembles four things the chapter has already argued for separatel
 
 | Owner | The chapter topic that argues for it |
 |---|---|
-| URL | **URL as state — `searchParams`, `nuqs`-style patterns, shareable filters** *(not written yet)* |
-| Server cache | **The fundamental split: server state, data on the server, cached** *(not written yet)* and **When RSC data flow is enough** *(not written yet)* |
-| Client store | **Client state tools compared: React Context, Zustand, Jotai** *(not written yet)* |
-| Optimistic overlay | **`useOptimistic` and `useActionState` as framework-native alternatives** *(not written yet)* |
-| The client cache you did *not* need | **TanStack Query / RTK Query in App Router** *(not written yet)* |
+| URL | [URL as state — `searchParams`, `nuqs`-style patterns, shareable filters](03-url-as-state-searchparams-nuqs-style-patterns-shareable-filt.md) |
+| Server cache | [The fundamental split: server state, data on the server, cached](01-the-fundamental-split-server-state-data-on-the-server-cached.md) and [When RSC data flow is enough](02-when-rsc-data-flow-is-enough.md) |
+| Client store | [Client state tools compared: React Context, Zustand, Jotai](04-client-state-tools-compared-react-context-zustand-jotai.md) |
+| Optimistic overlay | [`useOptimistic` and `useActionState` as framework-native alternatives](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md) |
+| The client cache you did *not* need | [TanStack Query / RTK Query in App Router](05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md) |
 
 ## The build order, and why it is this order
 
@@ -185,4 +185,4 @@ Which invalidation the action called. A `revalidateTag` with a stale-while-reval
 
 ---
 
-[Chapter 8 overview](01-explanation.md) · Next → [07b · The filter contract](07b-milestone-filters-on-the-server.md)
+← [06g · Where the hooks stop](06g-where-the-framework-hooks-stop.md) · [Chapter 8 overview](01-explanation.md) · Next → [07b · The filter contract](07b-milestone-filters-on-the-server.md)

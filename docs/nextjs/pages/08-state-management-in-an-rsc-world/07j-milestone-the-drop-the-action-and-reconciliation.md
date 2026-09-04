@@ -1,7 +1,7 @@
 ---
 title: "An optimistic value has no lifetime of its own — it borrows the transition's, and every mistake in this file is a consequence of forgetting that the moment the await resolves, the card is rendered from props again"
 sidebar_label: "07j · Milestone: the optimistic drop"
-sidebar_position: 168
+sidebar_position: 52
 description: "Chapter 8's capstone, step six: useOptimistic with a move reducer that also re-applies the filter predicate, calling the setter inside a transition and the two errors React raises when you do not, why the reducer must compute relative to current state, and animating a rejected move back instead of snapping."
 ---
 

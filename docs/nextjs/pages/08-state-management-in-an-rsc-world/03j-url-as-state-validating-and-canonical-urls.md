@@ -1,7 +1,7 @@
 ---
 title: "A query string is user input with the same trust level as a request body — one zod schema at the page boundary turns any URL a stranger can type into values your code can use, and it still does not authorise anything"
 sidebar_label: "03j · Validating query state, and canonical URLs"
-sidebar_position: 128
+sidebar_position: 20
 description: "A zod schema for searchParams with per-field catch and bounded strings, why validation is not authorisation, the URL length budget set by chat clients rather than browsers, and keeping URLs canonical by omitting defaults and sorting keys."
 ---
 

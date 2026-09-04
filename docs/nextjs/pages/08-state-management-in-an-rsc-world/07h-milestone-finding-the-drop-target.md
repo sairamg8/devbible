@@ -1,7 +1,7 @@
 ---
 title: "Pointer capture suppresses the enter and leave events, so the drop target cannot be discovered by listening — it has to be computed from rectangles you measured yourself, and every bug in this file is a rectangle that went stale"
 sidebar_label: "07h · Milestone: the drop target"
-sidebar_position: 166
+sidebar_position: 50
 description: "Chapter 8's capstone, step five continued: the ref registry of column and card elements, hit-testing pointer coordinates against measured rects, computing an insertion index from card midpoints, why the dragged card needs pointer-events: none, re-measuring on scroll, and suppressing a drop that does not move anything."
 ---
 

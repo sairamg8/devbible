@@ -1,7 +1,7 @@
 ---
 title: "The other three look-alikes are a form's own result, a client ancestor that owns behaviour while the server keeps the data, and a promise handed across the boundary instead of a fetch after mount"
 sidebar_label: "02d · Look-alikes: forms, boundaries, streaming"
-sidebar_position: 106
+sidebar_position: 9
 description: "useActionState for a result that is a message rather than state, lifting the client boundary so client leaves stay leaves without their data entering the bundle, and streaming a pending promise into Suspense instead of fetching on the client."
 ---
 

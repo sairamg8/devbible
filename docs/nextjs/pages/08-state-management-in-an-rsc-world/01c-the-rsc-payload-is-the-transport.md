@@ -1,7 +1,7 @@
 ---
 title: "Props are not function arguments across the RSC boundary — they are input to a serializer, and every strange rule about what may cross falls out of that one fact"
 sidebar_label: "01c · The payload is the transport"
-sidebar_position: 101
+sidebar_position: 3
 description: "Two module graphs and the two things that cross them, what the RSC payload actually contains, React's exact serializable and non-serializable sets, why class instances failing to serialize is a security feature, and why passing rendered elements beats passing data."
 ---
 

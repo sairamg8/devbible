@@ -1,7 +1,7 @@
 ---
 title: "One parser declaration imported by both a Server Component loader and a client hook is the reason to adopt nuqs at all — and it still does not validate, does not authorise, and is not worth a dependency for three parameters read in one place"
 sidebar_label: "03l · nuqs on the server, and when to hand-roll"
-sidebar_position: 130
+sidebar_position: 22
 description: "createLoader and createSearchParamsCache, the nuqs/server import rule, strict mode, and an honest account of what the library costs and the four cases where hand-rolling is still the right answer."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "There are five ways to make the screen show new data and they are not interchangeable — pick by asking what changed, not by which one you remember"
 sidebar_label: "10b · refresh() vs the alternatives"
-sidebar_position: 11
+sidebar_position: 56
 description: "refresh() against router.refresh(), revalidatePath, revalidateTag and updateTag: what each one invalidates, where each may be called, who pays the round trip, and the decision tree."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Nine files and four owners for one screen is a real bill, and it is worth paying only when you can name what each owner buys — here is the price list, the three deviations people reach for, and the same design mapped onto a table that is not a board"
 sidebar_label: "07l · Milestone: the bill"
-sidebar_position: 170
+sidebar_position: 54
 description: "Chapter 8's capstone, closing: what the four-owner design actually costs in round trips, duplicated predicates, privacy and action latency; the three deviations engineers reach for and what each one breaks; and the pattern remapped onto a server-sorted, server-paginated data table."
 ---
 
@@ -57,7 +57,7 @@ Both are in [07c](07c-milestone-reading-filters-in-the-page.md) and [07d](07d-mi
 
 **What happens.** You have a second cache with no invalidation protocol. A move made in another tab never reaches this one. A `revalidateTag` fired by another user's action updates the server cache while the store carries on. Any RSC re-render now races the store for what is displayed, and which one wins depends on render order.
 
-**Then you rebuild the missing protocol** — a focus refetch, a poll, a websocket — and at that point you have written a worse TanStack Query. If you genuinely need a client-owned cache, because the data is fed by a socket or polled independently of navigation, use one and let it own that data outright rather than mirroring the server cache. That trade-off is **TanStack Query / RTK Query in App Router** *(not written yet)*.
+[Then you rebuild the missing protocol** — a focus refetch, a poll, a websocket — and at that point you have written a worse TanStack Query. If you genuinely need a client-owned cache, because the data is fed by a socket or polled independently of navigation, use one and let it own that data outright rather than mirroring the server cache. That trade-off is **TanStack Query / RTK Query in App Router](05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md).
 
 **The narrow version is correct and is what the milestone does:** hold only the move that has not been confirmed yet, for the length of one transition, in `useOptimistic`.
 

@@ -1,7 +1,7 @@
 ---
 title: "There are no numbers, booleans or dates in a URL — only text that resembles them — so URL state needs an encoding you chose on purpose and a normalising read that survives ?flag=false and a repeated key"
 sidebar_label: "03i · Encoding and parsing query state"
-sidebar_position: 127
+sidebar_position: 19
 description: "How to encode arrays, ranges, booleans, numbers and dates into a query string; repeated keys versus comma-separated values; the + and encodeURIComponent hazards; and the four normalising helpers every codebase ends up writing."
 ---
 

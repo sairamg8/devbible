@@ -1,7 +1,7 @@
 ---
 title: "router.replace inside a transition, with the input's value in local state, is the whole recipe for a filter that does not lock up — and the throttle you did not write is the reason it breaks on Safari"
 sidebar_label: "03g · Writing the URL programmatically"
-sidebar_position: 125
+sidebar_position: 17
 description: "useRouter().push and replace, why the input's value must be local state, wrapping the navigation in a transition, debouncing the navigation rather than the field, the browser History API rate limits, and the XSS warning the router reference states outright."
 ---
 

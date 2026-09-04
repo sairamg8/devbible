@@ -1,7 +1,7 @@
 ---
 title: "There are four different sources of a pending flag and they are not interchangeable — useActionState owns the form, useFormStatus owns the parent form from inside it, useTransition owns the hook, and only a per-item flag in an optimistic reducer owns a single row"
 sidebar_label: "06f · Pending feedback"
-sidebar_position: 149
+sidebar_position: 41
 description: "Combining useOptimistic with useActionState, the three documented ways to detect a pending optimistic update, and useFormStatus — its return shape, its react-dom import, and the parent-form rule."
 ---
 

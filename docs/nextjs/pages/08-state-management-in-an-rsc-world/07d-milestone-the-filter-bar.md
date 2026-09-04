@@ -1,7 +1,7 @@
 ---
 title: "The filter bar is the hardest client component in the milestone because it owns nothing — it renders the URL, writes the URL, and the only local state it is allowed is the one React refuses to let a transition control"
 sidebar_label: "07d · Milestone: the filter bar"
-sidebar_position: 162
+sidebar_position: 46
 description: "Chapter 8's capstone, step three: writing filters back with router.replace inside a transition, why a controlled text input cannot live in a transition and needs a second state variable, replace versus push and what each does to the back button, debouncing on top of a transition, and re-syncing the input after a back navigation."
 ---
 

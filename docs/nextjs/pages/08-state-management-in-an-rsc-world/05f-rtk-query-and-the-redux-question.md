@@ -1,7 +1,7 @@
 ---
 title: "RTK Query is a cache bolted to a Redux store, and that changes the App Router answer — Redux's own documentation says the store must be created per request, must never be read by a Server Component, and should hold globally shared mutable data rather than server rows"
 sidebar_label: "05f · RTK Query and Redux"
-sidebar_position: 144
+sidebar_position: 35
 description: "createApi and generated hooks, the per-request makeStore, why RSCs must not touch the store, the client-only recommendation for RTK Query, the Pages-Router-only SSR workflow, and the verdict on adding Redux now."
 ---
 

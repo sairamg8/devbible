@@ -1,7 +1,7 @@
 ---
 title: "The two layers coexist by treating a Server Component as a loader — prefetch into a per-request QueryClient, dehydrate it into a HydrationBoundary, and never let a QueryClient become a module singleton"
 sidebar_label: "05b · Prefetch + HydrationBoundary"
-sidebar_position: 140
+sidebar_position: 31
 description: "Creating a QueryClient per request and per browser session, why the provider must be a Client Component, dehydrate/HydrationBoundary, the query-key match, and the staleTime double-fetch."
 ---
 

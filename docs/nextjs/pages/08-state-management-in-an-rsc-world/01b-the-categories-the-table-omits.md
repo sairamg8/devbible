@@ -1,7 +1,7 @@
 ---
 title: "The three-row table has no row for the session and no row for the DOM — which is why theme flickers, cookie writes that never reach the server, and lost input text keep being filed as state-management problems"
 sidebar_label: "01b · The categories the table omits"
-sidebar_position: 100
+sidebar_position: 2
 description: "Cookie and session state as request input with four documented rules of its own, the platform-owned state React never holds, and a five-question decision procedure you can run against a real value on a real screen."
 ---
 
@@ -11,6 +11,7 @@ description: "Cookie and session state as request input with four documented rul
 > Target: **Next.js 16.3.4** App Router · **React 19.2.8** · TypeScript 7.0.2. Documentation-verified; **no sandbox run**.
 
 **[01](01-the-fundamental-split-server-state-data-on-the-server-cached.md) replaced *where a value lives* with *who is authoritative for it* and *what may destroy it*. Run those two questions across a real application and two whole categories fall out that the server/client/URL table has no row for. The first is the session: a cookie is written by the server, stored by the browser, and read by the server as **request input**, which makes it neither server state nor client state and gives it four documented rules that belong to neither. The second is the state React never holds at all — scroll offset, disclosure, focus, an uncontrolled input's text — owned by the DOM, unserialisable, and routinely reimplemented in a store by people who did not know it was already there. This page closes both gaps and then gives you the decision procedure the whole chapter runs on.**
+
 ## The fourth category: cookie and session state
 
 The three-row table has no row for the value that decides what most of your app renders — the session. It is neither server state nor client state, and forcing it into either row produces a specific class of bug.
@@ -75,7 +76,7 @@ Run these in order against a value in front of you. The first one that answers, 
 | 4 | Does the browser or the DOM already hold it correctly — scroll, focus, disclosure, media position? | **Platform state.** Do nothing. |
 | 5 | Is the browser genuinely authoritative, and can the value be destroyed by a reload without anyone caring? | **Client state.** Now — and only now — choose between `useState`, Context and a store. |
 
-If you reached 5, the follow-up question is **how many components need to agree** — that is what selects between `useState`, lifting the boundary, Context, and a real store, and it is the subject of **04 · Client state tools compared** *(not written yet)*.
+If you reached 5, the follow-up question is [how many components need to agree** — that is what selects between `useState`, lifting the boundary, Context, and a real store, and it is the subject of **04 · Client state tools compared](04-client-state-tools-compared-react-context-zustand-jotai.md).
 
 ### The procedure applied to one screen
 
@@ -184,7 +185,7 @@ export async function listTasksForViewer() {
 }
 ```
 
-**★ Symptom: filters work, but a shared link opens the unfiltered board.** The filter was `useState`, so it existed only in the tab that set it. Cause: question 2 was skipped. Fix: put it in the URL and let the server read it — the full pattern is **03 · URL as state** *(not written yet)*, but the minimum is a `<form>` with `method="get"`, which needs no JavaScript at all.
+[★ Symptom: filters work, but a shared link opens the unfiltered board.** The filter was `useState`, so it existed only in the tab that set it. Cause: question 2 was skipped. Fix: put it in the URL and let the server read it — the full pattern is **03 · URL as state](03-url-as-state-searchparams-nuqs-style-patterns-shareable-filt.md), but the minimum is a `<form>` with `method="get"`, which needs no JavaScript at all.
 
 ```tsx filename="app/board/filters.tsx"
 export function Filters({ status, q }: { status: string; q: string }) {

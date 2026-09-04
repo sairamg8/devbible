@@ -1,7 +1,7 @@
 ---
 title: "A write in a two-cache app has two readers to satisfy and they are invalidated by different calls in different files — and the reads must never go through a Server Action, because the client dispatches those one at a time"
 sidebar_label: "05e · Invalidating both caches"
-sidebar_position: 143
+sidebar_position: 34
 description: "The server-tag and client-key halves of one invalidation, useMutation over a Server Action, the revalidateTag stale-while-revalidate trap, and why a Server Action must never be a queryFn."
 ---
 

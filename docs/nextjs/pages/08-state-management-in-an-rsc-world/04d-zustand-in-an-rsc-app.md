@@ -1,7 +1,7 @@
 ---
 title: "Zustand's default store is module state, and module state on a server is shared across every request that process handles — so the pattern that makes it correct in Next.js is a store factory behind a provider, not the create() call in the README"
 sidebar_label: "04d · Zustand in an RSC app"
-sidebar_position: 133
+sidebar_position: 26
 description: "The Zustand 5.0.15 store model, selector subscriptions and useShallow, and the per-request store factory the maintainers document for Next.js — plus why a module-level singleton holding user data is a cross-request leak rather than a style preference."
 ---
 

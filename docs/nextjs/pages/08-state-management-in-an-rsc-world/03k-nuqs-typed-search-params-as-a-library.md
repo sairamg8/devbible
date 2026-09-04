@@ -1,7 +1,7 @@
 ---
 title: "nuqs turns the seven decisions the previous chunks made by hand into named options on a typed parser object, and its defaults — replace, no scroll, client-first, browser-aware throttle — are exactly what a filter input wants"
 sidebar_label: "03k · nuqs — search params as a library"
-sidebar_position: 129
+sidebar_position: 21
 description: "The client half of nuqs 2.10.1: the adapter, useQueryState and useQueryStates, the built-in parsers, the seven options mapped onto the decisions the previous chunks made by hand, browser-aware throttling and per-call debounce, transitions, and batching."
 ---
 
@@ -249,6 +249,15 @@ Five things, in rough order of value. A single typed parser declaration that bec
 
 **★ Why is `shallow: true` the default, and when must you change it?**
 Because most URL state is display state: sort order, active tab, expanded rows, viewport, density. The client already has what it needs, so notifying the server is pure latency. The default matches that majority. You set `shallow: false` when the parameter changes what the *server* computes — a filter that changes which rows exist, a page in a server-paginated list, a search that queries the database — because only then does a re-render produce a different answer. Getting it wrong in that direction is the quiet bug: the URL changes, the list does not, and it looks like a caching problem.
+
+**★ What does `useQueryStates` solve that repeated `useQueryState` calls do not?**
+Two things. It declares that a group of parameters move together, which is the honest shape for a filter plus its page number, and it gives the whole group one options object, one `urlKeys` remapping and one clear-all setter — `set(null)` wipes exactly those keys and leaves the rest of the query string untouched. It also makes batching explicit rather than incidental: several `setX` calls in one tick already merge into a single URL write, but reading that from three separate hooks is guesswork, whereas one `setBoard({ status, page })` says what was intended. The failure it prevents is the hand-rolled equivalent — two `router.replace` calls in one handler, where the second is built from a stale `searchParams` snapshot and silently discards the first change.
+
+**★ What is `clearOnDefault`, and why did the library change its default between majors?**
+It controls whether a parameter is written to the URL when it equals its default value. With it on — the v2 default — the URL stays short and canonical, so two views that mean the same thing produce the same address, which matters for cache keys, analytics and indexing. With it off — the v1 default — the value is always explicit, so a bookmark records what was actually chosen and cannot change meaning when you later change the default. Both are defensible, which is why the library flipped, and the practical rule is to clear on default for cosmetic parameters and keep the value explicit for anything whose meaning must be frozen at the moment the link was created.
+
+**★ Which upgrade traps does nuqs 2.x carry from 1.x?**
+Two that change runtime behaviour without a type error. `clearOnDefault` flipped from `false` to `true`, so URLs that previously carried an explicit default value now omit it — harmless for display parameters, and a semantic change for anything a user bookmarked. And passing `startTransition` no longer implies `shallow: false`, so a codebase that relied on the v1 coupling silently stops notifying the server: the URL updates, the loading state works, and the Server Component never re-renders. That second one presents as a caching bug and is worth grepping for by hand at upgrade time, because nothing in the type system will point at it.
 
 **★ Why does throttling URL writes matter enough to be a library feature?**
 Because browsers rate-limit the History API, and a control bound to continuous input can exceed the limit trivially. The generally safe floor is around 50 ms; Safari needs about 120 ms and older versions 320 ms. Exceeding it does not merely waste work — the browser may queue or refuse updates, so the URL and the UI diverge, and the bug only reproduces on one browser. That is exactly the sort of per-browser knowledge that decays in a hand-written helper, and it is why "we only need forty lines of this" tends to be wrong by the second quarter.

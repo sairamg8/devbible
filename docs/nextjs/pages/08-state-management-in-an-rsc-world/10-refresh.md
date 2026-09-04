@@ -1,7 +1,7 @@
 ---
 title: "refresh() is the only member of next/cache that invalidates nothing — it re-renders the current route inside the action's own response, which is exactly right when the thing that changed was never in the cache"
 sidebar_label: "10 · refresh()"
-sidebar_position: 10
+sidebar_position: 55
 description: "What refresh() from next/cache does, why it is restricted to Server Actions, how it rides the action's existing round trip, and the failure mode when the page you are refreshing is fully cached."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Where you await searchParams decides how much of the board prerenders, and what you pass to the cached read decides whether the cache is worth having — the filters go in the render, never in the key"
 sidebar_label: "07c · Milestone: filters in the page"
-sidebar_position: 161
+sidebar_position: 45
 description: "Chapter 8's capstone, step two: awaiting searchParams inside a Suspense boundary rather than at the top of the page, passing the promise down un-awaited, the cached-and-tagged board read that takes only a board id, and why a filter change invalidates nothing."
 ---
 

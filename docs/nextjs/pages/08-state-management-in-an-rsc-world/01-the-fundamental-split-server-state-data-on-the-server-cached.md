@@ -11,6 +11,7 @@ description: "Why the three-row server/client/URL table is an orientation and no
 > Target: **Next.js 16.3.4** App Router · **React 19.2.8** · TypeScript 7.0.2. Documentation-verified; **no sandbox run**.
 
 **Every state-management argument in an App Router codebase eventually collapses into one question that nobody asks out loud: when two copies of this value disagree, which one is right? The three-row table — server state, client state, URL state — sorts values by *where they live*, and where a value lives is the least stable fact about it. A user's name lives in Postgres, in a framework cache entry, in the RSC payload, in the HTML, and in a `useState` mirror somebody added last sprint; that is five places and one authority. This page replaces the location axis with the two axes that actually decide the design — **authority** (whose copy wins) and **lifetime** (what event is allowed to destroy the value without anyone noticing) — and applies them to the two categories the table does name. The two it omits are [01b](01b-the-categories-the-table-omits.md).**
+
 ## The table everyone copies, and the axis it picks
 
 The chapter overview opens with this, and it is a fine orientation:

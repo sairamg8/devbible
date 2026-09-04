@@ -1,7 +1,7 @@
 ---
 title: "A needless store fails silently and a missing one fails loudly, which is exactly why the needless one is the more expensive mistake"
 sidebar_label: "02e · The cost of getting it wrong"
-sidebar_position: 107
+sidebar_position: 10
 description: "Six costs of the store you did not need — two authorities, double-shipped data, a hydration surface, a removed guard rail, boundary creep, a lost static shell — five costs of the store you did need, and a seven-row review checklist to run on the PR."
 ---
 
@@ -227,4 +227,4 @@ Yes, and it is defined by the authority flipping. An editor that loads a saved d
 
 ---
 
-← [02d · Look-alikes: forms, boundaries, streaming](02d-look-alikes-forms-boundaries-and-streaming.md) · [Chapter 8 overview](01-explanation.md)
+← [02d · Look-alikes: forms, boundaries, streaming](02d-look-alikes-forms-boundaries-and-streaming.md) · [Chapter 8 overview](01-explanation.md) · Next → [03 · URL as state](03-url-as-state-searchparams-nuqs-style-patterns-shareable-filt.md)

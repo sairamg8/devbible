@@ -1,7 +1,7 @@
 ---
 title: "Jotai's atoms hold no values — a store does — and its provider-less default keeps one global store alive across every server request, which its own documentation calls a source of bugs and security risks"
 sidebar_label: "04e · Jotai in an RSC app"
-sidebar_position: 134
+sidebar_position: 27
 description: "The atom model and why granularity is free, why the implicit global store is a cross-request leak on a server, what the Provider scopes and when remounting it is the reset, and the read/write hook split that decides who re-renders."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Everything around the edges of a form — clearing it after success, closing the dialog on the same frame as the list updates, and surviving a submit that happens before hydration — is three separate mechanisms, and none of them is a method on the hook"
 sidebar_label: "06c · Reset, transitions, permalink"
-sidebar_position: 146
+sidebar_position: 38
 description: "The three ways to reset useActionState, why a state update after an await needs its own startTransition, and what the permalink argument does for progressive enhancement."
 ---
 

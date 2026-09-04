@@ -1,7 +1,7 @@
 ---
 title: "Three of the six cases that get filed as \"we need a state library\" are already solved by the address bar, the cookie jar and one React hook — and each answer removes a store rather than shrinking one"
 sidebar_label: "02c · Look-alikes: URL, cookies, optimistic"
-sidebar_position: 105
+sidebar_position: 8
 description: "searchParams as the state container you already have, cookies as the preference container, and useOptimistic as pending UI with a guaranteed end — with the failure modes of each shown in code."
 ---
 
@@ -10,7 +10,7 @@ description: "searchParams as the state container you already have, cookies as t
 > Verified: 2026-09-05 against [`cookies`](https://nextjs.org/docs/app/api-reference/functions/cookies) (`lastUpdated: 2026-06-09`), [`useOptimistic`](https://react.dev/reference/react/useOptimistic), the [Server Actions guide](https://nextjs.org/docs/app/guides/server-actions), [`updateTag`](https://nextjs.org/docs/app/api-reference/functions/updateTag) and [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (`lastUpdated: 2026-08-25`).
 > Target: **Next.js 16.3.4** App Router · **React 19.2.8** · TypeScript 7.0.2 · `zod` 4.4.3. Documentation-verified; **no sandbox run**.
 
-**Most of the cases that get filed as "we need a state library" are one of six patterns that have a framework-native answer, and each answer removes a store rather than replacing it with a smaller one. This page is those six in code: the URL as the state container, the cookie as the preference container, `useOptimistic` for pending UI, `useActionState` for form results, lifting the client boundary so client leaves stay leaves, and a streamed promise instead of a client-side fetch. If your case is on this list, adding a store is a net loss — you pay the duplication, the payload, the bundle and the invalidation protocol enumerated in [02e](02e-the-cost-of-getting-it-wrong.md) for something the framework already does.**
+**Most of the cases that get filed as "we need a state library" are one of six patterns that have a framework-native answer, and each answer removes a store rather than replacing it with a smaller one. This page is the first three in code — the URL as the state container, the cookie as the preference container, and `useOptimistic` for pending UI; [02d](02d-look-alikes-forms-boundaries-and-streaming.md) is the other three. If your case is on either list, adding a store is a net loss — you pay the duplication, the payload, the bundle and the invalidation protocol enumerated in [02e](02e-the-cost-of-getting-it-wrong.md) for something the framework already does.**
 
 ## 1 · `searchParams` — the state container you already have
 
@@ -54,7 +54,7 @@ export function Filters({ status, q }: { status: string; q: string }) {
 }
 ```
 
-What you get for free that a store never gives you: the back button, a reloadable page, a shareable link, a bookmarkable view, and a server render that already knows the answer. What it costs: the value is public, capped by URL length, and every change is a navigation. Ergonomics — typed params, batching several updates into one navigation — belong to **03 · URL as state** *(not written yet)*.
+What you get for free that a store never gives you: the back button, a reloadable page, a shareable link, a bookmarkable view, and a server render that already knows the answer. What it costs: the value is public, capped by URL length, and every change is a navigation. Ergonomics — typed params, batching several updates into one navigation — belong to [03 · URL as state](03-url-as-state-searchparams-nuqs-style-patterns-shareable-filt.md).
 
 ## 2 · Cookies — the preference container you already have
 
@@ -131,7 +131,7 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
 }
 ```
 
-Three properties make this strictly better than a hand-rolled optimistic write into a store. The optimistic value **cannot outlive the action**, so there is no cleanup path to forget. On failure the component falls back to whatever the parent last passed — documented as: if the Action throws, React renders with whatever `value` currently is, and since the parent only updates `value` on success, the UI shows what it showed before. And the setter is only legal inside an Action: *"The `set` function must be called inside an Action. If you call the setter outside an Action, React will show a warning and the optimistic state will briefly render."* Depth on this belongs to **06 · useOptimistic and useActionState** *(not written yet)*.
+Three properties make this strictly better than a hand-rolled optimistic write into a store. The optimistic value [cannot outlive the action**, so there is no cleanup path to forget. On failure the component falls back to whatever the parent last passed — documented as: if the Action throws, React renders with whatever `value` currently is, and since the parent only updates `value` on success, the UI shows what it showed before. And the setter is only legal inside an Action: *"The `set` function must be called inside an Action. If you call the setter outside an Action, React will show a warning and the optimistic state will briefly render."* Depth on this belongs to **06 · useOptimistic and useActionState](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md).
 
 ## Gotchas
 

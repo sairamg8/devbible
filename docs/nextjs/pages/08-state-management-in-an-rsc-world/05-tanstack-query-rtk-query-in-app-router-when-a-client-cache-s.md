@@ -1,7 +1,7 @@
 ---
 title: "A client cache earns its place in the App Router only when the browser must fetch on its own initiative — polling, focus, sockets, infinite lists and offline queues — and for a plain CRUD screen the honest answer is that you do not need one"
 sidebar_label: "05 · Client caches: do you need one?"
-sidebar_position: 5
+sidebar_position: 30
 description: "What TanStack Query and RTK Query do that the RSC / fetch / use cache layer structurally cannot, what you pay for adding a second cache, and the decision table for when the answer is no."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A correctly scoped store still has three ways to misbehave — a selector that returns a new reference every render, a Set mutated in place, and persisted state that makes the client's first paint disagree with the server's"
 sidebar_label: "07f · Milestone: selectors and resets"
-sidebar_position: 164
+sidebar_position: 48
 description: "Chapter 8's capstone, step four continued: subscribing narrowly with selectors, the v5 stable-output rule and useShallow, reading without subscribing through getState in event handlers, resetting per board by remount rather than by a reset action, and the persist-plus-SSR hydration mismatch."
 ---
 

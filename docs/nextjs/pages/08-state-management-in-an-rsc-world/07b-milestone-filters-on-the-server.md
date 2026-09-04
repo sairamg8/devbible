@@ -1,7 +1,7 @@
 ---
 title: "The query string is the only application state a stranger can type, so the filter contract is one pure module that parses it, defaults it, re-serialises it and predicates on it — and every field falls back rather than throwing"
 sidebar_label: "07b · Milestone: the filter contract"
-sidebar_position: 160
+sidebar_position: 44
 description: "Chapter 8's capstone, step one: the shape searchParams actually resolves to, lib/board/filters.ts as the single parse/serialise/predicate module, why every field ends in .catch() instead of throwing, and the rule that decides between a fallback and a notFound()."
 ---
 

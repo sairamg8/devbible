@@ -1,7 +1,7 @@
 ---
 title: "useOptimistic renders a temporary value for exactly as long as an Action is pending, which is why the single most common bug with it is calling the setter outside a Transition — there is then no pending window to hold the value and it reverts on the next frame"
 sidebar_label: "06d · useOptimistic"
-sidebar_position: 147
+sidebar_position: 39
 description: "The signature and setter of useOptimistic, the Transition requirement, how the optimistic and real values converge in one render, what happens when the action fails, and why a reducer re-bases on changing data where an updater does not."
 ---
 

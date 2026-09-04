@@ -1,7 +1,7 @@
 ---
 title: "useHydrateAtoms is a client hook despite its name, it seeds each atom exactly once per store, and everything that surprises people about Jotai under SSR follows from those two facts plus one more: you cannot return a promise during a server render"
 sidebar_label: "04f · Jotai under SSR"
-sidebar_position: 135
+sidebar_position: 28
 description: "Seeding atoms from server-rendered data with useHydrateAtoms, the once-per-store rule and what to do instead of dangerouslyForceHydrate, why async fetching atoms are the wrong tool in an App Router app, and the browser-storage guard that avoids a hydration mismatch."
 ---
 

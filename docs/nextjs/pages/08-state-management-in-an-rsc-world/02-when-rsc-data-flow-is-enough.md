@@ -1,7 +1,7 @@
 ---
 title: "RSC data flow is enough exactly when every value on screen is a function of the URL, the session and the system of record, and the trigger for every change is a request the user made"
 sidebar_label: "02 · When RSC data flow is enough"
-sidebar_position: 2
+sidebar_position: 6
 description: "The four moves of the RSC loop, the two structural properties that decide its limits — segment granularity and request-driven triggering — the signals that say it suffices, the signals that say it does not, and the one symptom that looks like insufficiency and is really the wrong invalidation call."
 ---
 
@@ -82,13 +82,13 @@ When all seven hold, a client state library adds a second authority, a second co
 ## The signals that it is not enough
 
 **1 · Two client leaves must agree, and their only common ancestor is a Server Component.**
-This is the hard case, and it is hard for a structural reason: you cannot pass a setter down. *"Data crosses through props, and it must be serializable, so functions like event handlers cannot cross."* A Server Component physically cannot hand `setSelected` to its children. Your options are exactly three — put the value in the URL, lift the client boundary above both leaves so they share a client ancestor, or use a store. **04 · Client state tools compared** *(not written yet)* is the third option in detail.
+This is the hard case, and it is hard for a structural reason: you cannot pass a setter down. *"Data crosses through props, and it must be serializable, so functions like event handlers cannot cross."* A Server Component physically cannot hand `setSelected` to its children. Your options are exactly three — put the value in the URL, lift the client boundary above both leaves so they share a client ancestor, or use a store. [04 · Client state tools compared](04-client-state-tools-compared-react-context-zustand-jotai.md) is the third option in detail.
 
 **2 · Optimistic state must be visible outside the action's subtree.**
 `useOptimistic` is scoped to a component and to an in-flight Action: *"Optimistic state only renders while an Action is in progress, otherwise `value` is rendered."* If a header count and a list row must both show the pending value, and they do not share a client ancestor, that is a store.
 
 **3 · Data arrives without a request.**
-Websockets, server-sent events, a poll faster than a user would navigate, a collaborative cursor. The framework cache is not driving any of these; nothing in the four moves fires. This is the canonical case for **05 · TanStack Query / RTK Query in App Router** *(not written yet)*.
+Websockets, server-sent events, a poll faster than a user would navigate, a collaborative cursor. The framework cache is not driving any of these; nothing in the four moves fires. This is the canonical case for [05 · TanStack Query / RTK Query in App Router](05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md).
 
 **4 · A client cache must accumulate across navigations.**
 Infinite scroll where page 4 must still be there after visiting a detail route and coming back; a list whose scroll position and loaded pages are the product of a long session. A server re-render produces the *current* segment, not the accumulation.

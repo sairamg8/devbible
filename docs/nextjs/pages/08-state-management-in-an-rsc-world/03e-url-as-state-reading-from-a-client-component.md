@@ -1,7 +1,7 @@
 ---
 title: "useSearchParams cannot resolve during prerendering, so it client-side renders everything up to the nearest Suspense boundary — and with no boundary, that is the entire route"
 sidebar_label: "03e · Reading the URL from a client component"
-sidebar_position: 123
+sidebar_position: 15
 description: "What useSearchParams returns, why the prerender bailout propagates up to the closest Suspense boundary, why the failure is invisible in next dev, the five navigation hooks that trigger the blocking-prerender insight, and why pushing the read into a leaf beats wrapping the world."
 ---
 

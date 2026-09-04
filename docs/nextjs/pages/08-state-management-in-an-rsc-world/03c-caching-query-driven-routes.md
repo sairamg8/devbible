@@ -1,7 +1,7 @@
 ---
 title: "A cached function cannot read the request, so query-driven caching is a two-layer split: an uncached component extracts the values and a use cache function takes them as arguments, which is what makes them the cache key"
 sidebar_label: "03c · Caching query-driven routes"
-sidebar_position: 121
+sidebar_position: 13
 description: "How use cache keys on extracted searchParams values, why the in-memory default betrays you on serverless, what use cache: remote and use cache: private each change, and how to choose a cache key by cardinality and ownership."
 ---
 

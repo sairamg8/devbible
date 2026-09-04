@@ -1,7 +1,7 @@
 ---
 title: "Choose by asking who owns the value and how often it changes, not by comparing libraries — because for most state in an RSC app the correct answer is none of them, and the ones that survive that filter are decided in about two questions"
 sidebar_label: "04g · Choosing, and when it is none of them"
-sidebar_position: 136
+sidebar_position: 29
 description: "A decision procedure for client state in the App Router: the four questions that eliminate most candidates before any library is named, an honest Context vs hand-rolled store vs Zustand vs Jotai comparison, and the escalation ladder from useState upward."
 ---
 
@@ -50,7 +50,7 @@ Prop-drilling two levels is cheaper than a store; prop-drilling five is the sign
 
 ### 4 · Is it a pending mutation, or optimistic UI?
 
-Then React already has it. `useOptimistic` and `useActionState` cover the "show it before the server confirms" case without any store, and they integrate with Server Actions and error handling in a way a store does not — see **`useOptimistic` and `useActionState` as framework-native alternatives** *(not written yet)*.
+Then React already has it. `useOptimistic` and `useActionState` cover the "show it before the server confirms" case without any store, and they integrate with Server Actions and error handling in a way a store does not — see [`useOptimistic` and `useActionState` as framework-native alternatives](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md).
 
 Building an optimistic layer in a client store means rebuilding rollback-on-error, pending state and concurrent-update reconciliation, all of which the React APIs already have.
 
@@ -92,8 +92,8 @@ Context wins outright when the value changes rarely and is read widely — theme
 |---|---|
 | A store holding a copy of rows fetched from the API | Server Component props, cached with `use cache` ([03c](03c-caching-query-driven-routes.md)) |
 | A store holding the current filter, sort and page | URL state ([03](03-url-as-state-searchparams-nuqs-style-patterns-shareable-filt.md)) |
-| A store holding `isSubmitting` and `error` for a form | `useActionState` — **framework-native mutation state** *(not written yet)* |
-| A store applying an optimistic update then reconciling | `useOptimistic` — **framework-native mutation state** *(not written yet)* |
+| A store holding `isSubmitting` and `error` for a form | `useActionState` — [framework-native mutation state](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md) |
+| A store applying an optimistic update then reconciling | `useOptimistic` — [framework-native mutation state](06-useoptimistic-and-useactionstate-as-framework-native-alterna.md) |
 | A store holding one modal's open flag | `useState` in the component that owns the modal |
 | A store holding the logged-in user | A Server Component read of the session, passed as props |
 | A store holding polling / websocket data | A client cache — [05](05-tanstack-query-rtk-query-in-app-router-when-a-client-cache-s.md) |
