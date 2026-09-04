@@ -1,7 +1,7 @@
 ---
 title: "A service per entity looks like the most obvious decomposition available and Michael Nygard named it an anti-pattern for a precise reason: real features span entities, so entity services guarantee that every feature is a distributed operation across several of them"
 sidebar_label: "13 · Entity services"
-sidebar_position: 20
+sidebar_position: 21
 ---
 
 <span className="db-tier t-master">Master</span>

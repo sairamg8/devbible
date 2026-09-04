@@ -1,7 +1,7 @@
 ---
 title: "A monolith that has been running for five years has already discovered most of its own seams, and they are recorded in package structure, schema clustering, deployment fear and the shape of the on-call rota — reading them is faster and more honest than modelling from scratch"
 sidebar_label: "23 · The monolith already told you"
-sidebar_position: 33
+sidebar_position: 34
 ---
 
 <span className="db-tier t-master">Master</span>

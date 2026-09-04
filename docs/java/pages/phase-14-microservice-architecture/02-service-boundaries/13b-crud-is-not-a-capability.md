@@ -1,7 +1,7 @@
 ---
 title: "The shape of a service's API is the most reliable public evidence about whether its boundary is real: an API of nouns and four verbs cannot enforce anything, and an API of named commands cannot help but tell you what the service is for"
 sidebar_label: "13b · CRUD is not a capability"
-sidebar_position: 21
+sidebar_position: 22
 ---
 
 <span className="db-tier t-master">Master</span>

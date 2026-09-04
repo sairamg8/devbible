@@ -1,7 +1,7 @@
 ---
 title: "Serialising the domain entity directly into JSON or Kafka payloads turns database schema into wire protocol — the moment an internal column migration breaks external consumers, your boundary has ceased to exist"
 sidebar_label: "28b · Never publish the aggregate"
-sidebar_position: 43
+sidebar_position: 44
 ---
 
 <span className="db-tier t-master">Master</span>

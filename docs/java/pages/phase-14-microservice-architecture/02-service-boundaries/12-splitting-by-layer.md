@@ -23,7 +23,6 @@ predictable and total failure — every business change touches all three servic
 required order, so the coordination cost of a monolith is preserved exactly and the
 operational cost of a distributed system is added on top. It is worth understanding in
 detail, because the same mistake reappears in disguises that are much harder to spot.**
-
 ## Why it fails, stated precisely
 
 Business changes are **vertical**. "Add a gift-message field to an order" needs a form field,
@@ -54,6 +53,30 @@ The consequence people actually feel is ordering. To add a field:
 You have acquired the full ceremony of API versioning and compatibility windows — which is
 **05 · Inter-service REST** *(not written yet)*'s subject — as the price for a boundary that
 buys nothing, because none of the three can ever be deployed alone anyway.
+
+## Two of the ten forces name this failure exactly
+
+The page's argument so far is structural. Richardson's force list states the same thing as two named
+costs, and quoting them is useful because they are the vocabulary a design review will actually use:
+
+> **Minimize design time coupling** — reducing the need for synchronised service changes improves
+> development productivity.
+
+> **Simple interactions** — *"an operation that's local to a component or consists of a few simple
+> interactions between components is easier to understand and troubleshoot than a distributed
+> operation."*
+
+🔴 **A layered split maximises design-time coupling by construction.** It is not that the split
+happens to couple things; it is that the split's organising principle *is* "group by what changes for
+technical reasons", which guarantees that anything changing for a **business** reason crosses every
+boundary. Every feature is a distributed operation, and every feature is a synchronised change.
+
+And note which forces a layer split wins on: none of the five dark-energy forces. It does not produce
+*"simple components consisting of few subdomains"* — each layer service touches every subdomain. It
+does not give *"team autonomy"*, because no team can ship alone. It does not let you
+*"segregate by characteristics"*, because each layer carries the whole system's mixed characteristics.
+**A layered decomposition is the one split that pays every cost of distribution and collects none of
+the benefits**, which is why it is worth naming as a mistake rather than as a trade-off.
 
 ## The disguises
 
@@ -172,6 +195,9 @@ The test is the change test: a layer boundary inside a deployable costs nothing 
 crosses it, because one build and one deploy cover all of it. The same boundary between
 deployables costs an ordered multi-repository release. Same line, entirely different price.
 
+Why teams that know all of this still produce layered services, and how to prove the case to an
+organisation that disagrees, are [12b · Why the layering comes back](12b-why-the-layering-comes-back.md).
+
 ## Gotchas
 
 **★ Symptom: every feature ticket has subtasks in three repositories.** Cause: horizontal
@@ -239,6 +265,16 @@ the change history, and then split vertically along whatever the evidence suppor
 re-draw boundaries while maintaining three deployables means doing the hard work with both
 hands tied.
 
+**★ Which of the ten decomposition forces does a layered split actually win on?**
+None of the five dark-energy forces, which is what makes it a mistake rather than a trade-off. It does
+not produce *"simple components consisting of few subdomains"* — every layer service touches every
+subdomain. It does not deliver *"team autonomy"*, because no team can ship a feature alone. It does
+not allow you to *"segregate by characteristics"*, because each layer carries the whole system's mixed
+resource and availability profile. Meanwhile it maximises the dark-matter cost *minimize design time
+coupling* by construction: the split's organising principle is "group by what changes for technical
+reasons", which guarantees that anything changing for a business reason crosses every boundary. It is
+the one decomposition that pays the full cost of distribution and collects none of its benefits.
+
 **★ Are layers ever the right structure?**
 Inside a service, yes, and they are the standard one — a web adapter, a domain model and a
 persistence adapter, with dependencies pointing inward. That is hexagonal architecture and it
@@ -248,4 +284,4 @@ it inside one build, and costs an ordered multi-repository release when it cross
 
 ---
 
-← [Reasons to break the rule](11-reasons-to-break-the-rule.md) · [Topic index](README.md) · Next → [Entity services](13-entity-services.md)
+← [Reasons to break the rule](11-reasons-to-break-the-rule.md) · [Topic index](README.md) · Next → [Why the layering comes back](12b-why-the-layering-comes-back.md)

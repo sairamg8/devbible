@@ -1,7 +1,7 @@
 ---
 title: "An architecture rule that cannot go green on the day it is written gets deleted within a week — the two mechanisms that make boundary enforcement adoptable are a baseline that can only shrink and a default that refuses to pass a rule matching nothing"
 sidebar_label: "26b · Making the rules stick"
-sidebar_position: 40
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>
