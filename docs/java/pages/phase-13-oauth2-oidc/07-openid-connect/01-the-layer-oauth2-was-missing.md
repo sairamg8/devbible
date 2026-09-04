@@ -215,4 +215,4 @@ emit it.
 
 ---
 
-← [Topic index](README.md) · Next topic → [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md)
+← [Topic index](README.md) · Next → [The authentication request](02-the-authentication-request.md)
