@@ -201,4 +201,4 @@ It does not, beyond sharing the word. Every other cache in this chapter is about
 
 ---
 
-← [04 · Revalidation: every way a lifetime ends](04-revalidation-time-based-isr.md) · [Chapter index](01-explanation.md) · Next → **06 · Milestone: cache SprintDesk's dashboard shell** *(not written yet)*
+← [04 · Revalidation: every way a lifetime ends](04-revalidation-time-based-isr.md) · [Chapter index](01-explanation.md) · Next → [06 · Milestone: cache the board shell](06-project-milestone-cache-sprintdesks-team-dashboard-shell-wit.md)

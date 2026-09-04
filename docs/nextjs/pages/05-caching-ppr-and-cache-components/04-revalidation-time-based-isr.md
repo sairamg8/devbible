@@ -209,4 +209,4 @@ Because they express different intentions and the framework acts on the differen
 
 ---
 
-← [03c · Validation, DevTools and CI](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md) · [Chapter index](01-explanation.md) · Next → **05 · Turbopack build caches** *(not written yet)*
+← [03c · Validation, DevTools and CI](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md) · [Chapter index](01-explanation.md) · Next → [05 · Turbopack build caches](05-turbopack-build-caches-persistent-build-cache-and-memory-evi.md)

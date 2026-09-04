@@ -1,130 +1,60 @@
 ---
-sidebar_position: 0
-title: "Overview"
+title: "05 · Caching, PPR and Cache Components"
 sidebar_label: "Overview"
-description: "Chapter 5 overview"
+sidebar_position: 0
+description: "Chapter index: the explicit caching model, custom cacheLife profiles, the three cache directives, Partial Prerendering, the complete revalidation inventory, Turbopack build caches, and the SprintDesk shell milestone."
 ---
 
-# ▲ Caching, PPR, and Cache Components
+<span className="db-tier t-master">Master</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-04 for **Next.js 16.3.4** against [Caching](https://nextjs.org/docs/app/getting-started/caching) (docs `lastUpdated` 2026-08-25), [`cacheComponents`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) (`lastUpdated` 2026-06-22) and [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (`lastUpdated` 2026-08-25).
+> Target: **Next.js 16.3.4**, App Router, Node.js runtime. Documentation-verified; **no sandbox run**.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**This chapter is about one inversion and everything that follows from it. The previous caching model cached by default and made you opt out; Cache Components caches nothing and makes you opt in, and because every cacheable thing is now declared, the framework can check at build time that each route produces a static shell and name the component standing in the way when one does not. That is the trade: you write more annotations and you stop shipping rendering behaviour you did not choose. The cost side is real and under-advertised — `use cache` is a weaker store than the `fetch` Data Cache it replaces, and nothing you can buy survives a deploy — so the chapter treats it as a trade rather than an upgrade throughout.**
 
+## Chunks
 
+| # | Page | Covers |
+|---|---|---|
+| 1 | **[The explicit caching model](01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md)** | The flag, the three experimental flags it replaced, the exact inversion of the `fetch` default, and what mandatory declaration buys in validation |
+| 1b | **[What the model costs](01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md)** | 🔴 The persistence regression against `fetch`/`unstable_cache`, the three physical copies of one value, serverless vs self-hosted, the Node.js floor |
+| 1c | **[Flipping the flag on an existing app](01c-flipping-the-flag-on-an-existing-app.md)** | The migration order, the complete removal table, `instant = false` and its two hard limits, why synchronous IO cannot be deferred |
+| 1d | **[What changes once the flag is on](01d-what-changes-once-the-flag-is-on.md)** | Navigation hooks that suspend, `GET` handlers that throw to bail out, React `<Activity>` preserving state across navigations |
+| 2 | **[Custom `cacheLife` profiles](02-the-use-cache-directive-and-custom-cachelife-profiles.md)** | Defining profiles in `next.config.ts`, redefining built-ins, and 🔴 the three thresholds that silently exclude content from the shell |
+| — | **[The three cache directives](10-the-three-cache-directives/README.md)** | Nine chunks on `use cache`, `use cache: remote` and `use cache: private` — the directive itself, keys, composition and lifetimes |
+| 3 | **[Partial Prerendering](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md)** | What PPR produces, the four shell rules, why `cookies()` no longer costs the route, and why `<Suspense>` makes nothing dynamic |
+| 3b | **[Maximizing the shell, and crawlers](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md)** | The depth rule, static shell vs App Shell, per-link prefetch cost, and 🔴 the bot path that can fail for Googlebot alone |
+| 3c | **[Validation, DevTools and CI](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md)** | Why a page load and a client navigation differ, the Navigation Inspector, and the `instant()` helper that makes a shell a CI assertion |
+| 4 | **[Revalidation: every way a lifetime ends](04-revalidation-time-based-isr.md)** | The full inventory of 15 endings, including 🔴 the two calls that re-render without invalidating anything |
+| 5 | **[Turbopack build caches](05-turbopack-build-caches-persistent-build-cache-and-memory-evi.md)** | The two real config keys, why a containerized CI build gets no benefit, and the tri-state eviction setting that only affects `next dev` |
+| 6 | **[Milestone: cache the board shell](06-project-milestone-cache-sprintdesks-team-dashboard-shell-wit.md)** | SprintDesk's board as a PPR shell with tag-based invalidation, and eight criteria that each fail diagnostically |
 
-> **Source:** current-project backup remapped + improved for exact syllabus title
+## The five facts most likely to catch you
 
-## 1. Under-The-Hood Mechanics
+1. **`use cache` does not survive a deploy** — the build id is part of the cache key, so even a durable `remote` handler starts cold at every release. [01b](01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md)
+2. **A short `cacheLife` profile silently removes content from the static shell.** An `expire` under five minutes or a `stale` under thirty seconds excludes it from prerenders, with no error. [02](02-the-use-cache-directive-and-custom-cachelife-profiles.md)
+3. **A `<Suspense>` boundary does not make anything dynamic.** It permits a hole; it does not create one. Synchronous work completes during the prerender regardless. [03](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md)
+4. **Crawlers do not get the shell.** They are detected by user agent and served a full request-time render, so a shell depending on build-time-only data works for every human and fails for Googlebot. [03b](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md)
+5. **`refresh()` and `router.refresh()` invalidate nothing.** They re-render, which looks like a fix right up until the render reads the same cached value back. [04](04-revalidation-time-based-isr.md)
 
-Next.js's caching is frequently the single most misunderstood part of the framework precisely because it operates as **four distinct, independently-invalidated layers** — a bug is often "the wrong layer was invalidated," not "caching is broken."
+## ⚠️ On the four-layer model
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│ 1. Request Memoization  — per-render, in-memory, React cache()   │
-│    Scope: ONE server render pass. Deduplicates identical fetch()  │
-│    calls made by different components during the SAME request.     │
-├─────────────────────────────────────────────────────────────────┤
-│ 2. Data Cache            — persistent, cross-request, cross-deploy  │
-│    Scope: EVERY request, forever, until revalidated. This is what    │
-│    `fetch(url, { next: { revalidate, tags } })` actually controls.     │
-├─────────────────────────────────────────────────────────────────┤
-│ 3. Full Route Cache      — static HTML + RSC payload, per ROUTE       │
-│    Scope: the rendered OUTPUT of a route, generated at build/ISR time. │
-│    Depends on the Data Cache underneath it, but caches the FINAL        │
-│    rendered result, not just the raw fetched data.                       │
-├─────────────────────────────────────────────────────────────────┤
-│ 4. Router Cache (Client) — in-browser, per SESSION                       │
-│    Scope: visited/prefetched RSC payloads cached in the browser's         │
-│    memory for instant back/forward navigation — NOT invalidated by         │
-│    server-side revalidatePath/revalidateTag automatically.                   │
-└─────────────────────────────────────────────────────────────────┘
-```
+Material written for Next.js 15 and earlier — including earlier revisions of this page — describes caching as four independently-invalidated layers: Request Memoization, the Data Cache, the Full Route Cache and the client Router Cache. **That model is not wrong, but it is not this chapter.** It describes the previous caching model, which is still supported and still what you have if `cacheComponents` is off. It is documented upstream at [Caching and Revalidating (Previous Model)](https://nextjs.org/docs/app/guides/caching-without-cache-components), taught in this corpus at [ch4 · 03](../04-data-fetching-in-the-app-router/03-static-vs-dynamic-rendering-force-dynamic-force-static-reval.md), and its layer-by-layer breakdown lives at [ch6 · 03d](../06-ssg-isr-and-ssr-strategy/03d-the-cache-is-not-one-thing.md).
 
-### Why Four Layers, Not One
-Each layer solves a genuinely different problem: (1) avoids redundant network calls **within** one render; (2) avoids redundant network calls **across** requests/time; (3) avoids redundant **rendering work** (not just fetching) for a whole route; (4) avoids redundant **network round-trips to the server at all** for a client that already has the data from a recent visit. Invalidating layer 2 (a `revalidateTag` call) does not automatically invalidate layer 4 (the client's already-cached Router Cache entry) — this exact gap is the single most common "why isn't my data updating" production question in App Router codebases.
+The reason to be careful about which model you are reading is that the two have **opposite defaults**. A bare `fetch()` leaves a route static and stale under the previous model, and makes it dynamic under Cache Components. Any advice about caching in Next.js is only correct relative to the model it was written for, and most of what is findable online predates this one.
 
-### Layer 4 Specifically: The Router Cache's Own Invalidation Rules
-The client Router Cache persists visited-route RSC payloads for a default duration (30 seconds for dynamic segments, 5 minutes for static ones, as of recent Next.js versions) **regardless** of server-side revalidation — a `router.refresh()` call (or a full page reload) is what forces the client to discard its own cached payload and re-request fresh RSC output from the server.
+## Phase gate
 
----
+You are done with this chapter when you can take any route in an application, say which of its components land in the static shell and which are holes, give the reason for each, move one from either category to the other on purpose, and say what happens to all of it at the next deploy.
 
-## 2. Real-World Engineering Scenario
+## Where this connects
 
-**Scenario**: A Server Action Correctly Revalidating Data on the Server, But the User Still Sees Stale Content.
-A "mark as read" Server Action correctly calls `revalidateTag('notifications')`, and a fresh request to that route confirms the Data Cache is genuinely updated server-side. Yet the user, who had the notifications page open in a background tab from 20 seconds earlier, navigates back to it via the browser's back button and sees the stale, unread state — because the client's Router Cache still holds the RSC payload from their earlier visit, and `revalidateTag` only invalidated the **server-side** Data Cache layer, never touching the client's own cached copy. The fix: pairing the Server Action's `revalidateTag` with a client-side `router.refresh()` call (or navigating via a Link that forces a fresh fetch) at the point the mutation completes.
-
----
-
-## 3. Production-Grade Code Example
-
-```tsx
-// app/notifications/actions.ts
-'use server';
-import { revalidateTag } from 'next/cache';
-
-export async function markAsRead(notificationId: string) {
-  await fetch(`https://api.acme.com/notifications/${notificationId}/read`, { method: 'POST' });
-  revalidateTag('notifications'); // invalidates layer 2 (Data Cache) — server-side only
-}
-```
-
-```tsx
-// components/NotificationItem.tsx — ALSO forcing the client Router Cache (layer 4) to refresh
-'use client';
-import { useRouter } from 'next/navigation';
-import { markAsRead } from '../app/notifications/actions';
-
-export function NotificationItem({ notification }: { notification: Notification }) {
-  const router = useRouter();
-
-  async function handleMarkAsRead() {
-    await markAsRead(notification.id);
-    router.refresh(); // forces the CLIENT to discard its Router Cache entry and re-fetch fresh RSC payload
-  }
-
-  return (
-    <div onClick={handleMarkAsRead} className={notification.read ? 'opacity-50' : ''}>
-      {notification.message}
-    </div>
-  );
-}
-```
-
-```tsx
-// Fetching with all three server-side layers deliberately in mind
-async function getNotifications(userId: string) {
-  // Layer 1 (Request Memoization): identical calls elsewhere in this SAME render reuse this result
-  // Layer 2 (Data Cache): tagged for on-demand invalidation, time-based fallback refresh
-  const res = await fetch(`https://api.acme.com/notifications?user=${userId}`, {
-    next: { tags: ['notifications'], revalidate: 60 },
-  });
-  return res.json();
-}
-```
+- [ch4 · Data fetching in the App Router](../04-data-fetching-in-the-app-router/01-explanation.md) — the previous model, `unstable_cache`, and the SprintDesk scaffold this chapter's milestone extends
+- [ch6 · SSG, ISR and SSR strategy](../06-ssg-isr-and-ssr-strategy/01-explanation.md) — the tuning question: what number to choose, staleness budgets, the stampede, and the cache layers
+- [ch8 · State management in an RSC world](../08-state-management-in-an-rsc-world/10b-refresh-against-the-alternatives.md) — the five-way decision between refresh, updateTag, revalidateTag, revalidatePath and router.refresh
+- [ch15 · Databases and full-stack patterns](../15-databases-apis-and-full-stack-patterns/10d-tenancy-and-caching.md) — tenancy in the cache key and tenant-scoped invalidation
+- [ch16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md) — cache handlers, the Adapters API and self-hosting
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: Assuming `revalidateTag`/`revalidatePath` Updates the Client Immediately Everywhere
-```tsx
-// ❌ WRONG: this ONLY invalidates server-side layers (2 and 3) — any client with this route
-// already in its Router Cache (layer 4) keeps showing the OLD payload until ITS OWN cache
-// naturally expires or a router.refresh()/hard navigation forces a re-fetch
-revalidateTag('notifications'); // alone, in a Server Action
-
-// ✅ CORRECT: pair server-side revalidation with a client-side refresh when the SAME session
-// needs to see the update immediately (not just future visitors/requests)
-revalidateTag('notifications');
-// ...and separately, client-side: router.refresh();
-```
-
-### ⚠️ Pitfall 2: Confusing "Static Route" With "Never Refetches Data"
-A statically-rendered route (Full Route Cache, layer 3) still depends on the Data Cache (layer 2) underneath it — a `revalidate: 60` on the underlying `fetch()` means the route's cached HTML itself gets regenerated in the background roughly every 60 seconds (ISR), even though the route is "static." Treating "static" as synonymous with "frozen forever" leads to unnecessary Dynamic Rendering opt-outs for freshness requirements ISR already satisfies.
-
-### ⚠️ Pitfall 3: Debugging by Assuming Only One Cache Layer Exists
-When data appears stale, checking only the Data Cache (layer 2) and concluding "the tag revalidation worked, so caching isn't the problem" misses that the **client** Router Cache (layer 4) is an entirely separate, independently-timed layer that a correct server-side revalidation doesn't touch. Effective Next.js caching debugging means checking which of the four specific layers is actually serving the stale response, not treating "the cache" as one monolithic thing.
+Start → [01 · The explicit caching model](01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md)

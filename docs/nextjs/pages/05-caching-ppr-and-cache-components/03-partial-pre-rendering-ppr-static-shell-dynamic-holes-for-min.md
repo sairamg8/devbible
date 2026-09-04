@@ -1,7 +1,7 @@
 ---
 title: "Partial Prerendering is not a feature you switch on — it is what one render now produces: a static shell served from a CDN with holes that fill in at request time"
 sidebar_label: "03 · Partial Prerendering (PPR)"
-sidebar_position: 6
+sidebar_position: 7
 description: "What PPR actually is, the four rules that decide what lands in the static shell, why reading cookies() no longer makes a whole route dynamic, and the counter-intuitive fact that a Suspense boundary does not make anything dynamic."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A passing build proves the navigation is instant, not that it is good — and the boundary that satisfies validation on a page load may not exist during a client navigation at all"
 sidebar_label: "03c · Validation, DevTools and CI"
-sidebar_position: 8
+sidebar_position: 9
 description: "Why a direct visit and a client navigation render differently, what instant-navigation validation actually checks, the Navigation Inspector workflow, and the @next/playwright instant() helper that turns a shell into a CI assertion."
 ---
 
@@ -231,4 +231,4 @@ That the definition validation enforces is about structure, measured under warm 
 
 ---
 
-← [03b · Maximizing the shell, and crawlers](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md) · [Chapter index](01-explanation.md) · Next → **04 · Revalidation and ISR** *(not written yet)*
+← [03b · Maximizing the shell, and crawlers](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md) · [Chapter index](01-explanation.md) · Next → [04 · Revalidation: every way a lifetime ends](04-revalidation-time-based-isr.md)

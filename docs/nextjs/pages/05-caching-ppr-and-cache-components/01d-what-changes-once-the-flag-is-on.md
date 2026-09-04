@@ -196,4 +196,4 @@ Because Cache Components renders previous routes through React's `<Activity>` co
 
 ---
 
-← [01c · Flipping the flag on an existing app](01c-flipping-the-flag-on-an-existing-app.md) · [Chapter index](01-explanation.md) · Next → **02 · `use cache` and custom `cacheLife` profiles** *(not written yet)*
+← [01c · Flipping the flag on an existing app](01c-flipping-the-flag-on-an-existing-app.md) · [Chapter index](01-explanation.md) · Next → [02 · Custom cacheLife profiles](02-the-use-cache-directive-and-custom-cachelife-profiles.md)

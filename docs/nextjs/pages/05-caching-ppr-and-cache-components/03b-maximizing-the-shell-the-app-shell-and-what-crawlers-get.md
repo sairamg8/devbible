@@ -1,7 +1,7 @@
 ---
 title: "How much of your page is static is a property of where you put `await` — and the shell a crawler receives is not the shell a browser receives"
 sidebar_label: "03b · Maximizing the shell, and crawlers"
-sidebar_position: 7
+sidebar_position: 8
 description: "The depth rule that decides how much of a page prerenders, the non-async layout pattern that keeps a shell URL-independent, the difference between a static shell and an App Shell, and the bot path that re-renders everything at request time."
 ---
 
