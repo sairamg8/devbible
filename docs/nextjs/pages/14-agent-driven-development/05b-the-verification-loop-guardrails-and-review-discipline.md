@@ -186,4 +186,4 @@ By whether it names what it could not verify. A summary of actions is generated 
 
 ---
 
-← [Agent-authored migrations](05-practical-agent-workflows-agent-authored-migrations.md) · [Chapter 14 overview](01-explanation.md) · Next → **Honest limits: where agents fail in App Router codebases** *(not written yet)*
+← [Agent-authored migrations](05-practical-agent-workflows-agent-authored-migrations.md) · [Chapter 14 overview](01-explanation.md) · Next → [Honest limits: the silent failures](06-honest-limits-where-agents-fail-in-app-router-codebases-cach.md)

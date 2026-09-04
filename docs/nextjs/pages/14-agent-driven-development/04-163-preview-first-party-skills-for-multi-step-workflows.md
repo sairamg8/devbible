@@ -223,4 +223,4 @@ They cover different surfaces of the same loop. [MCP](03-the-nextjs-devtools-mcp
 
 ---
 
-← [The DevTools MCP server](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md) · [Chapter 14 overview](01-explanation.md) · Next → **Practical agent workflows: agent-authored migrations** *(not written yet)*
+← [The DevTools MCP server](03-the-nextjs-devtools-mcp-server-exposing-build-diagnostics-an.md) · [Chapter 14 overview](01-explanation.md) · Next → [Agent-authored migrations](05-practical-agent-workflows-agent-authored-migrations.md)
