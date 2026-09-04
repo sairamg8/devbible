@@ -1,7 +1,7 @@
 ---
 title: "Worked example: analyzing business operations, candidate aggregates, and transactional invariants in an e-commerce order system"
 sidebar_label: "44 · Worked example: operations and aggregates"
-sidebar_position: 63
+sidebar_position: 64
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -137,6 +137,35 @@ Notice the crucial characteristic of these four aggregates:
 
 This separation of immediate transactional invariants from eventual business workflows gives us the freedom to evaluate candidate service cuts in the next chapter.
 
+## Working the method backwards: the same domain, done wrong
+
+The value of a worked example is halved if it only shows the answer. Here is the same domain analysed
+the way it usually is in practice — from the nouns — and where each step diverges from the one above.
+
+**The noun-first pass** produces `Customer`, `Order`, `LineItem`, `Product`, `Inventory`, `Payment`,
+`Shipment`, `Address`. Eight nouns, so eight services, and every one of them looks defensible on a
+diagram.
+
+| Step | Noun-first result | Operation-first result | What the difference cost |
+|---|---|---|---|
+| Identify units | 8 entities → 8 services | 3 aggregates from 4 system operations | Five services that own no rules — [13 · Entity services](13-entity-services.md) |
+| Find the API | CRUD per entity: `PUT /orders/{id}` | Operations: `POST /orders/{id}/cancellation` | The CRUD API publishes that the service enforces nothing — [13b · CRUD is not a capability](13b-crud-is-not-a-capability.md) |
+| Place `LineItem` | Its own service, it has an id and a table | Inside the `Order` aggregate; it has no independent lifecycle | A network hop inside a single invariant |
+| Place `Address` | Its own service; three things reference it | Wherever it is *enforced* — a shipping address and a billing address are different concepts | One service that is a shared table with an HTTP interface |
+| Reserve stock | `Order` calls `Inventory`, both write | The invariant sits inside `Inventory`; `Order` asks and is told | A distributed transaction, or an oversell |
+
+🔴 **Note the row that costs the most, and note that it is not the most obvious one.** Splitting
+`LineItem` is visibly silly once written down. `Address` is not — three aggregates genuinely reference
+it, and "shared data deserves its own service" is a sentence that survives most design reviews. The
+operation-first method rejects it for a reason no noun-based method can reach: **nobody executes an
+operation on an address.** It is data that three different capabilities each enforce different rules
+about, and each of those rule-sets belongs with the capability that owns it.
+
+**The generalisation worth taking away:** a noun with no operation of its own is not a service, and
+the test for "an operation of its own" is whether a *user* or a *scheduled process* ever asks the
+system to do that thing. Nobody asks the system to address. They ask it to place an order, ship a
+parcel, or send an invoice — and each of those already has an owner.
+
 ## Gotchas
 
 **★ Merging Order and Inventory into a single aggregate.**
@@ -148,6 +177,27 @@ If `Order` holds an `@OneToMany` mapping to `PaymentEntity`, Hibernate attempts 
 **★ Treating `LineItem` as an independent aggregate.**
 A line item has no identity or purpose outside of its parent order. Splitting `LineItem` into its own aggregate creates pointless database queries and distributed consistency headaches. It is a classic internal entity within the `Order` aggregate boundary.
 
+**★ `Address` is referenced by Order, Shipment and Billing, so it is given its own service.**
+Cause: shared *reference* was mistaken for shared *ownership*. Three aggregates reading the same data
+is not evidence that the data has its own capability; it is evidence that three capabilities each
+enforce different rules about it — a shipping address must be deliverable, a billing address must
+match the card, a stored address must be editable by the customer.
+Fix: the rules stay with the capability that enforces them, and the data is either duplicated or
+referenced by id. There is no operation called "address", so there is no service:
+```java
+// Shipment owns deliverability; it does not ask an address service whether the parcel can arrive
+record ShippingAddress(String line1, String postcode, String countryCode) {
+    ShippingAddress { if (!Deliverable.to(countryCode)) throw new UndeliverableDestinationException(countryCode); }
+}
+```
+
+**★ The aggregates come out right and the services are still drawn per entity.**
+Cause: the analysis stopped at aggregates. An aggregate is a consistency boundary, not automatically
+a deployment boundary — several aggregates can and often should live in one service.
+Fix: aggregates constrain where a service boundary *may* go; they do not determine where it *should*.
+The invariant analysis tells you which cuts are illegal; the forces in
+[22 · The ten forces](22-the-ten-forces.md) choose among the legal ones.
+
 ## Interview questions
 
 **★ Why is identifying transactional invariants the first step in drawing microservice boundaries?**
@@ -155,6 +205,26 @@ Transactional invariants define what data must change together atomically (ACID)
 
 **★ Why should the Payment aggregate be isolated from the Order aggregate?**
 Payment processing is governed by strict regulatory compliance frameworks (PCI-DSS). If Payment and Order share a database and codebase, the entire order processing infrastructure falls within PCI audit scope, drastically increasing compliance costs and audit overhead. Isolating Payment into a dedicated aggregate and service limits compliance scope to a single, tightly controlled service.
+
+**★ Run this domain noun-first instead of operation-first. What do you get, and which error is the expensive one?**
+Noun-first yields eight entities and therefore eight services, each defensible on a diagram. Most of
+the errors are visibly silly once written down — `LineItem` as its own service puts a network hop
+inside a single invariant. The expensive one is `Address`, because it survives review: three
+aggregates genuinely reference it, and "shared data should have one owner" is a sentence that sounds
+like good design. Operation-first rejects it for a reason nouns cannot reach — **nobody executes an
+operation on an address.** It is data about which three capabilities each enforce different rules, and
+each rule-set belongs with its capability. The general test is whether a user or a scheduled process
+ever asks the system to do that thing; if not, the noun is not a service however many things point
+at it.
+
+**★ Does identifying an aggregate identify a service?**
+No, and conflating the two is the second most common error after entity services. An aggregate is a
+*consistency* boundary — the unit that must be updated transactionally — and a service is a
+*deployment and ownership* boundary. The relationship is one-directional: an invariant may not be
+split across a service boundary, so aggregates determine which cuts are **illegal**. They say nothing
+about which of the legal cuts is best, and several aggregates living in one service is normal and
+frequently correct. Choosing among the legal cuts is what the dark energy and dark matter forces are
+for, which is the next chunk's subject.
 
 **★ How do high-concurrency write requirements influence aggregate boundaries in e-commerce?**
 If multiple customers purchase the same product concurrently, updating an `inventory` column inside an `Order` transaction creates severe database row-lock contention. Isolating inventory into a dedicated `StockAllocation` aggregate allows specialized concurrency techniques (such as optimistic locking with retries, reservation pools, or in-memory redis tokens) without locking order records.

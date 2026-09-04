@@ -1,7 +1,7 @@
 ---
 title: "The same domain produces two radically different architectures depending on team topology — an honest comparison of two teams versus twelve teams"
 sidebar_label: "44c · Worked example: two teams vs twelve"
-sidebar_position: 65
+sidebar_position: 66
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -102,6 +102,46 @@ A **Decoupled Microservice Architecture** with 8 to 12 independent services comm
 | **Primary Failure Mode** | Boundary erosion (prevented by Modulith)| Distributed latency, event out-of-order bugs |
 | **DevOps Overhead** | Minimal (1 container, 1 monitoring target)| High (Service mesh, tracing, K8s operators)|
 
+## The middle, which is where almost everybody actually is
+
+Two teams and twelve teams are the easy cases precisely because they are extremes. The population of
+real organisations sits between them — **four to six teams, thirty to sixty engineers** — and neither
+answer above is right there. It is worth working, because it is the situation most readers of this
+page are in.
+
+**What is true at that size:**
+
+- A single deployable is no longer comfortable. Release coordination between five teams on one
+  artefact costs real time, and one team's bad afternoon blocks four others.
+- A service per team is not yet affordable either. Five services means five pipelines, five on-call
+  rotas, five sets of dashboards — and at thirty engineers those are the same people who were going
+  to build features.
+- 🔴 **The invariants have not changed at all.** The reservation invariant is the same at 10 engineers
+  and at 100. Organisation size decides how *finely* you may cut; it never makes an illegal cut legal.
+
+**What the middle actually looks like, and it is not a compromise between the two:**
+
+| | Extract | Keep in the modular monolith |
+|---|---|---|
+| **Criterion** | The team's release cadence genuinely differs, or its scaling profile genuinely differs | Everything else |
+| **Typical result** | One or two services out of a monolith that keeps the rest | Six or eight modules, one deployable |
+
+The shape that works at this size is **a modular monolith with one or two things extracted**, not a
+uniform architecture. Uniformity is the instinct — every capability treated the same way — and it is
+what produces both failure modes: a monolith straining under five teams, or twelve services run by
+thirty people.
+
+**The two things worth extracting first, at this size, are usually not the interesting ones:**
+
+1. Anything with a **different scaling profile** — the read-heavy catalogue, the batch reporting job.
+   These are cheap to extract because they are usually read-only, and they remove the most load.
+2. Anything with a **different compliance scope** — the payment path. Extracting it shrinks the audit
+   boundary, which is a benefit no amount of module discipline provides.
+
+Neither is the domain's core. That is the pattern: at this size you extract for **operational**
+reasons, and you keep the core together for **correctness** reasons, until the organisation is large
+enough for team autonomy to outweigh coordination cost.
+
 ## Gotchas
 
 **★ Cargo Culting Netflix or Amazon at a 10-person startup.**
@@ -109,6 +149,22 @@ Adopting the architecture of an 80-team organization when you have 8 engineers i
 
 **★ Resisting service extraction when crossing 50+ engineers.**
 When an engineering department grows from 10 to 80 people, attempting to maintain a single monolithic deployable without modular enforcement creates severe release gridlock, long deployment queues, and cross-team developer resentment.
+
+**★ A five-team organisation adopts a uniform architecture — either one deployable or one service per team — and both options hurt.**
+Cause: uniformity was assumed. At this size neither extreme fits, and the instinct to treat every
+capability the same way produces a monolith straining under five teams or twelve services run by
+thirty people.
+Fix: a modular monolith with one or two things extracted, chosen for operational reasons — a different
+scaling profile or a different compliance scope — while the core stays together for correctness
+reasons. The architecture is allowed to be non-uniform; that is what fits an organisation which is
+itself non-uniform.
+
+**★ Team growth is used to justify a cut that splits an invariant.**
+Cause: "we are big enough for microservices now" was applied to a boundary that was never legal.
+Organisation size changes what is affordable, not what is correct.
+Fix: the invariants are identical at ten engineers and at a hundred. Size decides how finely you may
+cut among the **legal** cuts; it never makes an illegal one legal. If the reservation invariant spans
+the line, hiring does not fix it.
 
 **★ Ignoring the "Inverse Conway Maneuver".**
 If your current architecture is a tangled distributed monolith, attempting to fix it by writing technical tickets alone will fail. You must realign team structures (squad responsibilities and communication paths) to match the desired software boundaries.
@@ -121,7 +177,26 @@ Conway's Law states that a system's architecture mirrors the communication chann
 **★ What is the "Inverse Conway Maneuver"?**
 The Inverse Conway Maneuver is the practice of proactively restructuring engineering teams and organizational communication lines to encourage the emergence of the desired software architecture. Instead of waiting for architecture to organically follow broken organizational silos, leadership designs autonomous, cross-functional stream-aligned teams around bounded contexts to foster clean, decoupled service boundaries.
 
-**★ When does a modular monolith become unsustainable for an organization?**
+**★ Your organisation is five teams and thirty engineers — neither of this page's scenarios. What is the answer?**
+A modular monolith with one or two things extracted, and deliberately **not** a uniform architecture.
+At that size a single deployable has become uncomfortable — five teams coordinating releases on one
+artefact loses real time, and one team's bad afternoon blocks four others — while a service per team
+is not affordable, because five pipelines, five rotas and five dashboards are staffed by the same
+thirty people who were going to build features. So you extract selectively, and the first candidates
+are usually not the interesting parts of the domain: something with a different scaling profile
+(read-heavy catalogue, batch reporting) because it is cheap to extract and removes the most load, and
+something with a different compliance scope (the payment path) because extraction shrinks the audit
+boundary in a way module discipline cannot. The core stays together.
+
+**★ Does organisation size ever make a boundary correct that was not correct before?**
+No — and this is the distinction that gets lost in Conway's-law discussions. Size changes what is
+*affordable*: how many deployables you can operate, how much coordination cost you can absorb, whether
+team autonomy is worth more than the overhead of achieving it. It does not change what is *legal*. The
+reservation invariant spans the Order/Inventory line identically at ten engineers and at a hundred,
+and no amount of hiring converts a distributed transaction into a local one. The correct reading is
+that invariants filter the candidate cuts down to the legal ones, and organisation size then chooses
+among those — which is why growing an organisation can justify splitting a service, and can never
+justify splitting an aggregate.
 A modular monolith becomes unsustainable when organizational scale creates developer contention: when dozens of teams compete for merge access to a shared repository, CI test execution takes too long, deploy queue delays paralyze release velocity, or when specific capabilities require radically distinct hardware profiles or strict regulatory isolation (such as PCI DSS).
 
 ---
