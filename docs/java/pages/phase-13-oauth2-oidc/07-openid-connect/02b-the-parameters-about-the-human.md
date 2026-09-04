@@ -1,3 +1,34 @@
+---
+title: "Four of OIDC's request parameters ask a question about the human rather than about the protocol — how recently they authenticated, how strongly, whether you may skip the screen and who you think they already are — and every one of them is a request the authorization server is free to ignore"
+sidebar_label: "02b · Asking about the human"
+sidebar_position: 3
+---
+
+<span className="db-tier t-understand">Understand</span>
+
+> Verified: 2026-09-04 against OpenID Connect Core 1.0 §3.1.2.1 (Authentication Request) —
+> the definitions of `max_age`, `acr_values`, `prompt`, `display`, `id_token_hint` and
+> `login_hint` — §2 (ID Token, on `auth_time` being REQUIRED when `max_age` is requested) and
+> §3.1.3.7 rules 12 and 13, at
+> [openid.net/specs/openid-connect-core-1_0.html](https://openid.net/specs/openid-connect-core-1_0.html).
+> JDK 25 · Spring Boot 4.1.0 · Spring Framework 7.0.8 · Spring Security 7.x.
+> **No sandbox** — parameter definitions quoted from the specification; the Java below is
+> illustrative client code, not a captured run.
+
+**Every parameter on this page is a question, and the authorization server answers it in the
+ID token rather than in the response you were expecting. That asymmetry is the whole reason
+they get implemented wrong: sending `acr_values` feels like enforcing MFA, sending `max_age`
+feels like enforcing freshness, and neither does anything at all until you write the
+comparison on the way back. §3.1.3.7 puts the obligation on the client twice, in rules 12 and
+13, precisely because the request half is the easy half and the check half is the one people
+skip.**
+
+The second thing these parameters share is that they are the *only* place in OAuth2 or OIDC
+where a client can express a policy about the human. Everything else in the request is about
+routing and binding. If your product has a "re-enter your password before transferring money"
+requirement, or a "corporate users must use a hardware key" requirement, this page is where
+it is expressed — and the enforcement lives in your callback handler, not in the URL.
+
 ### `max_age` and `acr_values` — the two step-up levers
 
 > `max_age`: *"OPTIONAL. Maximum Authentication Age. Specifies the allowable elapsed time in

@@ -51,8 +51,10 @@ two backwards will appear to work for a long time before it fails in a way nobod
 | 3 | **[Asking about the human](02b-the-parameters-about-the-human.md)** | <span className="db-tier t-understand">Understand</span> | `max_age`, `acr_values`, `prompt` and the two hints — four requests the AS may ignore, and where enforcement actually lives |
 | 4 | **[Validating an ID token](03-validating-an-id-token.md)** | <span className="db-tier t-master">Master</span> | 🔴 §3.1.3.7's thirteen rules; rules 3 and 6 are the two whose omission is a full bypass |
 | 5 | **[Signature, time and the rest](03b-signature-time-and-the-conditional-checks.md)** | <span className="db-tier t-master">Master</span> | Rule 5's narrow permission to skip the signature, rule 8's `client_secret`-as-HMAC-key trap, and the three checks conditional on your own request |
+| 6 | **[The three bindings](04-nonce-state-and-the-three-bindings.md)** | <span className="db-tier t-master">Master</span> | 🔴 `state`, PKCE and `nonce` — three checkers, three endpoints, three stored values; and the one you cannot verify yourself |
+| 7 | **[Generating and storing them](04b-generating-and-storing-them.md)** | <span className="db-tier t-master">Master</span> | Entropy and lifecycle — why a session-scoped slot breaks on the second tab, and where the pending record lives when you scale out |
 
-## The four things this topic is really about
+## The five things this topic is really about
 
 **1 · One scope value is the entire switch.** §3.1.2.1 marks `scope` REQUIRED and says OIDC
 requests MUST contain `openid`; without it *"the behavior is entirely unspecified"*. Same
@@ -72,7 +74,12 @@ signature and audience — are the difference between a lock and no lock, and th
 conditional on what your own request asked for. Those three are the ones that quietly go
 missing, because nothing in the response tells you a check was owed.
 
-**4 · The ID token is not a session, not an access token and not a live view of the user.**
+**4 · `state`, PKCE and `nonce` are three defences, not three names for one.** Different
+parties check them, at different endpoints, against different stored values, and each is the
+only thing standing between you and its own attack. RFC 9700 §2.1.1's overlap between PKCE
+and `state` is real, narrow and conditional on somebody else's server configuration.
+
+**5 · The ID token is not a session, not an access token and not a live view of the user.**
 It is a statement that an authentication happened at a moment. Your session is your own object
 with its own lifetime; the API's credential is the access token; the current value of a
 user's name comes from UserInfo or your own store, not from a token minted an hour ago.
@@ -82,9 +89,6 @@ user's name comes from UserInfo or your own store, not from a token minted an ho
 The topic's spine — the artefact, the request, and the validation procedure — is complete.
 The following are named in the boundary this phase set for topic 07 and are not written yet:
 
-- **04 · `nonce`, `state` and the three bindings** *(not written yet)* — three different
-  values, three different endpoints, three different attacks, and why none of them replaces
-  another.
 - **05 · Discovery and the `/.well-known` document** *(not written yet)* — Discovery §4's
   path construction, §4.3's three-way issuer identity rule, and which metadata members are
   REQUIRED.
