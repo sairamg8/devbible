@@ -226,4 +226,6 @@ root. Or, indirectly, an open redirector on the client's own domain that lets th
 interpose. Note none of these requires breaking TLS on the network path — which is why "we use
 HTTPS" is not an answer to this question.
 
-{/* FOOTER */}
+---
+
+← [Server-side verification](08-server-side-pkce-verification.md) · [Topic index](README.md) · Next → [What state defends](10-what-state-defends.md)

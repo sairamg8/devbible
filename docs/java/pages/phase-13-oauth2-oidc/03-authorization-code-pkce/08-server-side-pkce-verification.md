@@ -235,4 +235,6 @@ decoded bytes. For `S256` the stored challenge is a public digest, so the leak i
 comparison would let an attacker recover it. It costs nothing to do correctly and it removes a
 whole argument about whether the leak matters.
 
-{/* FOOTER */}
+---
+
+← [S256 vs plain](07-s256-vs-plain.md) · [Topic index](README.md) · Next → [The PKCE downgrade attack](09-the-pkce-downgrade-attack.md)

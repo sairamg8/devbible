@@ -263,4 +263,6 @@ a long TTL converts an IdP outage into a period where you keep serving with the 
 already have. The trade-off on the TTL side is the window in which a retired key is still
 accepted, which is a security decision you can reason about; thread-pool exhaustion is not.
 
-{/* FOOTER */}
+---
+
+← [Startup coupling](03-startup-coupling.md) · [Topic index](README.md) · Next → [The filter chain](04-the-filter-chain.md)

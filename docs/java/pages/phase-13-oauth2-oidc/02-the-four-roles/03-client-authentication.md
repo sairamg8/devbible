@@ -258,4 +258,6 @@ certificate must be passed through in a way the AS trusts and verifies, or the T
 must terminate at the AS itself. This is the most common way mTLS ends up half-configured
 and believed complete.
 
-{/* FOOTER */}
+---
+
+← [Confidential vs public](02-confidential-and-public-clients.md) · [Topic index](README.md) · Next → [Front and back channel](04-front-channel-and-back-channel.md)

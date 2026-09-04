@@ -29,7 +29,7 @@ between a service that validates tokens and a service that merely decodes them.*
 
 ## The role, stated precisely
 
-**02 · The four roles** *(not written yet)* owns the vocabulary; this is the one sentence
+[02 · The four roles](../02-the-four-roles/README.md) owns the vocabulary; this is the one sentence
 that matters here. A **resource server** is an OAuth 2.0 *protected resource*: it holds
 data, it accepts access tokens, and RFC 6750 §2.1 says of the `Authorization: Bearer`
 form —
@@ -52,7 +52,7 @@ misconfigured projects:
 The outbound half — calling *another* service with a token — is **09 · Spring as OAuth2
 client** *(not written yet)*. `@PreAuthorize` expressions are **10 · Method security**
 *(not written yet)*. The JWT wire format, `alg`, JWKS internals and the `alg: none` family
-of attacks are **06 · JWT anatomy and validation** *(not written yet)*.
+of attacks are [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 
 ## The two artifacts, and why one of them is not optional
 
@@ -249,4 +249,6 @@ consumes a credential and enforces an authorization policy. Every one of those o
 responsibilities belongs to the authorization server, and blurring the line is how
 resource servers acquire a login page and a client secret they have no business holding.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [issuer-uri](02-issuer-uri.md)

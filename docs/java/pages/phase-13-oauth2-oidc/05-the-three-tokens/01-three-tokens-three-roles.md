@@ -164,15 +164,14 @@ Each of the three roles has one dominant way teams get it wrong, and each gets a
 ## What this topic does not cover
 
 - **The wire format of a JWT** — header, payload, signature, `alg`, JWKS, `kid` rotation,
-  `alg: none`, HS/RS confusion. That is **06 · JWT anatomy and validation**
-  *(not written yet)*. This topic stops at "the AS may choose JWT" and hands off.
+  `alg: none`, HS/RS confusion. That is [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md). This topic stops at "the AS may choose JWT" and hands off.
 - **OIDC semantics** — `nonce`, discovery, UserInfo, standard scopes and claims, `sub` is
   not an email. That is **07 · OpenID Connect** *(not written yet)*. This topic covers the
   ID token only as a *role*.
 - **The BFF pattern in depth** and the session-versus-token argument — that is
   **13 · Sessions vs tokens, honestly** *(not written yet)*.
 - **Wiring a resource server** — `issuer-uri`, authorities mapping, multi-tenancy — is
-  **08 · Spring Security as resource server** *(not written yet)*.
+  [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 ## Gotchas
 
@@ -266,4 +265,6 @@ be used as unique identifiers. Propagating identity between your own services is
 **12 · Token relay across microservices** *(not written yet)*; the stable-identifier
 argument is **07 · OpenID Connect** *(not written yet)*.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Opaque by contract](02-the-access-token-is-opaque-by-contract.md)

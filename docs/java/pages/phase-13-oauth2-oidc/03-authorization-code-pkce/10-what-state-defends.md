@@ -236,4 +236,6 @@ into server-side session storage that holds the return URL, which is what Spring
 session-backed `AuthorizationRequestRepository` does. If you must be stateless, sign the payload,
 include a random nonce in it, and still validate the URL against an allowlist.
 
-{/* FOOTER */}
+---
+
+← [The PKCE downgrade attack](09-the-pkce-downgrade-attack.md) · [Topic index](README.md) · Next → [state vs PKCE](10b-state-vs-pkce.md)

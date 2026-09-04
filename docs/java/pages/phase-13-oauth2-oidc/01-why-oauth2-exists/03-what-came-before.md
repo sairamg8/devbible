@@ -111,7 +111,7 @@ completion of the flow to the party who started it.
 meaningless in JavaScript in a browser, or in a mobile binary anyone can unzip. As the
 client population shifted from server-side web applications to SPAs and native apps, the
 foundation stopped holding — and OAuth 2.0's public/confidential client distinction is the
-explicit acknowledgement of that, covered in **02 · The four roles** *(being written)*.
+explicit acknowledgement of that, covered in [02 · The four roles](../02-the-four-roles/README.md).
 
 ## What OAuth 2.0 changed, item by item
 
@@ -167,8 +167,7 @@ legacy 1.0a provider, use a maintained library and never hand-roll the base stri
 
 **★ The 1.0 → 1.0a `oauth_verifier` fix is the same lesson PKCE teaches later.**
 Both bind the completion of an authorization flow to the party that started it. Recognising
-the shape means PKCE reads as a repeat rather than a novelty — see **03 · Authorization code
-flow with PKCE** *(being written)*.
+the shape means PKCE reads as a repeat rather than a novelty — see [03 · Authorization code flow with PKCE](../03-authorization-code-pkce/README.md).
 
 **★ Signature verification breaks behind proxies, and the symptom is a mystery 401.**
 If a reverse proxy rewrites the scheme, host, port or path, the base string the server
@@ -237,4 +236,6 @@ DPoP (RFC 9449) if the caller is a browser or mobile client. Both are standardis
 have library and infrastructure support, and neither puts a normalization algorithm in your
 application code.
 
-{/* FOOTER */}
+---
+
+← [Authorization ≠ authentication](02-authorization-is-not-authentication.md) · [Topic index](README.md) · Next → [A framework, not a protocol](04-a-framework-not-a-protocol.md)

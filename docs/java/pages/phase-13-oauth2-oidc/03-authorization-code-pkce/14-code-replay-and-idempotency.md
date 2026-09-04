@@ -236,4 +236,6 @@ exchanging step, because at-least-once — the normal guarantee — is precisely
 scenario. Exchange the code in the request that received it and do the slow work afterwards, with
 the tokens in hand.
 
-{/* FOOTER */}
+---
+
+← [The mix-up attack](13-the-mix-up-attack.md) · [Topic index](README.md) · Next → [Referrer and history leakage](15-referrer-and-history-leakage.md)

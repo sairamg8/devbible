@@ -224,4 +224,6 @@ claims to be a bearer token but is not well-formed is a failed authentication at
 gets `invalid_token` with a 401, so the client knows to obtain a new token rather than to
 prompt for one. Collapsing them either leaks information or misleads the client.
 
-{/* FOOTER */}
+---
+
+← [The token error response](03b-the-token-error-response.md) · [Topic index](README.md) · Next → [Safeguarding a bearer token](04b-safeguarding-a-bearer-token.md)

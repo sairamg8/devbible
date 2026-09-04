@@ -222,4 +222,6 @@ still choose it for SSO, for audit, or because you already run an authorization 
 you should be able to name which of those it is, because you are taking on the operational
 cost either way.
 
-{/* FOOTER */}
+---
+
+← [A framework, not a protocol](04-a-framework-not-a-protocol.md) · [Topic index](README.md) · Next topic → [02 · The four roles](../02-the-four-roles/README.md)

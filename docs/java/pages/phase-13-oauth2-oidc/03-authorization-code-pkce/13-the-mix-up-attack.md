@@ -218,4 +218,6 @@ supports it; strict validation of the ID token's `iss` against the issuer expect
 tenant; and no code path that resolves the token endpoint or client credentials from anything
 other than the registration identified by the callback path.
 
-{/* FOOTER */}
+---
+
+← [Native apps and loopback](12b-native-apps-and-loopback.md) · [Topic index](README.md) · Next → [Replay and idempotency](14-code-replay-and-idempotency.md)

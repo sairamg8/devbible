@@ -182,4 +182,6 @@ DPoP"* — a recommendation, naming two options. §2.2.2 is a `MUST`, but with a
 rotation"*. So the only hard requirement is on public-client refresh tokens, and rotation
 satisfies it, which is why rotation is what almost every deployment actually ships.
 
-{/* FOOTER */}
+---
+
+← [Implementing the challenge](05b-implementing-and-consuming-the-challenge.md) · [Topic index](README.md) · Next → [DPoP and choosing a constraint](06b-dpop-and-choosing-a-constraint.md)

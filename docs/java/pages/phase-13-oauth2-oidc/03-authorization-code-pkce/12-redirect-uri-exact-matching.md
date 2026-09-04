@@ -243,4 +243,6 @@ is the attack it closes: an attacker who obtained a code delivered to a differen
 matching flaw or an open redirector — would otherwise be able to redeem it with your public
 `client_id`. §4.1.3 requires the values in the two requests be identical.
 
-{/* FOOTER */}
+---
+
+← [Code injection](11-authorization-code-injection.md) · [Topic index](README.md) · Next → [Native apps and loopback](12b-native-apps-and-loopback.md)

@@ -238,4 +238,6 @@ version, cannot negotiate and cannot roll back, on deployables (mobile apps) it 
 update. If the round trip genuinely matters, the supported optimisation is for the client's
 own backend to cache the profile keyed by `sub`.
 
-{/* FOOTER */}
+---
+
+← [Opaque by contract](02-the-access-token-is-opaque-by-contract.md) · [Topic index](README.md) · Next → [The token response](03-the-token-response.md)

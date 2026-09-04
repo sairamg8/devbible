@@ -214,4 +214,6 @@ mechanism; RFC 9700 §2.1 later enumerates three acceptable mechanisms. Writing 
 property rather than the implementation is what let the BCP add PKCE and `nonce` as alternatives
 years later without contradicting the original document.
 
-{/* FOOTER */}
+---
+
+← [What state defends](10-what-state-defends.md) · [Topic index](README.md) · Next → [Code injection](11-authorization-code-injection.md)

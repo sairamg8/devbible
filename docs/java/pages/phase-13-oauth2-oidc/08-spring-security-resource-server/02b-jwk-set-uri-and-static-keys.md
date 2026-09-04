@@ -212,4 +212,6 @@ with a shared HMAC secret, compromising any one service lets an attacker forge t
 accepted by every service sharing that secret. Asymmetric signing removes the class of
 attack entirely.
 
-{/* FOOTER */}
+---
+
+← [issuer-uri](02-issuer-uri.md) · [Topic index](README.md) · Next → [Trusted algorithms](02c-trusted-algorithms.md)

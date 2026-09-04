@@ -160,14 +160,13 @@ algorithm, the JWKS mechanics and every classic attack, ending in a concrete Spr
 `NimbusJwtDecoder` configuration. It deliberately stops at four boundaries:
 
 - **How the token was obtained** (authorization code, PKCE, client credentials) is
-  **03 · Authorization code + PKCE** *(not written yet)* and **04 · Client credentials**
-  *(not written yet)*.
+  [03 · Authorization code + PKCE](../03-authorization-code-pkce/README.md) and [04 · Client credentials](../04-client-credentials/README.md).
 - **Which token goes where, refresh rotation and revocation as protocol** is
-  **05 · The three tokens** *(not written yet)*.
+  [05 · The three tokens](../05-the-three-tokens/README.md).
 - **ID-token semantics, `nonce`, discovery and UserInfo** is **07 · OpenID Connect**
   *(not written yet)*.
 - **Wiring a decoder into a `SecurityFilterChain`, authorities mapping and multi-tenancy**
-  is **08 · Spring Security as resource server** *(not written yet)*. The already-written
+  is [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md). The already-written
   [Phase 9 · JWT resource server](../../phase-9-spring-boot/11-spring-security/09-jwt-resource-server.md)
   is the short version of that config.
 
@@ -261,4 +260,6 @@ public key as the secret, or decodes without verifying at all, then editing work
 Those are chunks **11** *(not written yet)*, **11b** *(not written yet)* and
 **11e** *(not written yet)*.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Compact serialization](02-compact-serialization.md)

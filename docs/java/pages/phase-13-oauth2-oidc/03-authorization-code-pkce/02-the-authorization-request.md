@@ -288,4 +288,6 @@ with `OAuth2AuthorizationRequest.getAdditionalParameters()` and the session-back
 against an allowlist before redirecting to it, or you have just built the open redirector
 RFC 9700 §2.1 forbids.
 
-{/* FOOTER */}
+---
+
+← [Why a code at all](01b-why-a-code-at-all.md) · [Topic index](README.md) · Next → [When a parameter is wrong](02b-when-a-parameter-is-wrong.md)

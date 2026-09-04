@@ -259,4 +259,6 @@ browser holds a session cookie and internal callers use tokens has both credenti
 one path; the framework's per-request exemption gives the token callers a pass while keeping
 the cookie callers protected, and `disable()` would give both a pass.
 
-{/* FOOTER */}
+---
+
+← [Matcher and chain order](04b-matcher-order.md) · [Topic index](README.md) · Next → [The request path](05-the-request-path.md)

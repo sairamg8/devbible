@@ -236,4 +236,6 @@ mint a separate, minimally-scoped, very short-lived token for that use; and scru
 `access_token` from access logs at every hop you control. Then write down why, because the
 RFC's own position is that this exists only "to document current use".
 
-{/* FOOTER */}
+---
+
+← [Bearer token resolution](05b-bearer-token-resolution.md) · [Topic index](README.md) · Next → [Step 7 and the debug table](05d-step-7-surprises-and-the-debug-table.md)

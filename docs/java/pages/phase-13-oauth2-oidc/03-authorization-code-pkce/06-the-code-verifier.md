@@ -261,4 +261,6 @@ concatenating two UUIDs — gets the length above the floor but is still improvi
 string generator when `SecureRandom.nextBytes(new byte[32])` is one line and exactly what the
 specification recommends.
 
-{/* FOOTER */}
+---
+
+← [The interception attack](05-the-interception-attack.md) · [Topic index](README.md) · Next → [S256 vs plain](07-s256-vs-plain.md)

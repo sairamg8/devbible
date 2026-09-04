@@ -253,4 +253,6 @@ conformant AS deliberately withholds, because telling a caller *why* a code was 
 an oracle for someone probing codes. If you need that telemetry, it belongs on the AS side
 where the truth lives, not inferred from a string on the client.
 
-{/* FOOTER */}
+---
+
+← [The token response](03-the-token-response.md) · [Topic index](README.md) · Next → [Bearer tokens](04-bearer-tokens-and-the-authorization-header.md)

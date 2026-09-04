@@ -83,7 +83,7 @@ page that genuinely couples startup to the authorization server — see
 [03 · Startup coupling](03-startup-coupling.md).
 
 `alg`, the algorithms themselves and the confusion attacks that motivate pinning them are
-**06 · JWT anatomy and validation** *(not written yet)*.
+[06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 
 ## Where the default comes from
 
@@ -120,7 +120,7 @@ and friendly names such as `RSA` all fail this lookup.
 - **Never derive it from the token.** The `alg` header is attacker-controlled input; the
   point of the list is that the decoder consults *your* configuration, not the token's
   opinion of itself. The attacks that exploit servers doing otherwise are
-  **06 · JWT anatomy and validation** *(not written yet)*.
+  [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 - **Prefer widening to `ES256`/`EdDSA` over widening to anything symmetric.** A JWK set
   can legitimately carry an `oct` key; trusting an HMAC algorithm on a decoder that also
   trusts an RSA JWK set is the shape of the classic algorithm-confusion attack.
@@ -198,4 +198,6 @@ after a "small" customisation; see
 [06b · Composing validators](06b-composing-validators.md) and
 **06d · A validator bean** *(not written yet)* for the two ways out.
 
-{/* FOOTER */}
+---
+
+← [jwk-set-uri and static keys](02b-jwk-set-uri-and-static-keys.md) · [Topic index](README.md) · Next → [Startup coupling](03-startup-coupling.md)

@@ -293,4 +293,6 @@ pressure, and both transports have security consequences the RFC states plainly.
 reviewer, with a place to write down why. That is the framework encoding *"Resource servers
 MAY support this method"* as a decision rather than a setting.
 
-{/* FOOTER */}
+---
+
+← [Safeguarding a bearer token](04b-safeguarding-a-bearer-token.md) · [Topic index](README.md) · Next → [WWW-Authenticate challenges](05-www-authenticate-challenges.md)

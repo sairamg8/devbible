@@ -118,7 +118,7 @@ OIDC Core §3.1.3.3 adds exactly one parameter and makes it mandatory for OIDC f
 So an OIDC token response is an OAuth2 token response plus `id_token`. The ID token's role
 is **17 · The ID token as a token role** *(not written yet)*; its claims and
 validation are **07 · OpenID Connect** *(not written yet)* and
-**06 · JWT anatomy and validation** *(not written yet)*.
+[06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 
 ## How Spring models it
 
@@ -171,7 +171,7 @@ JSON parse. Always subtract a skew — Spring Security's
 
 **★ `refresh_token` is OPTIONAL and its absence is normal, not an error.**
 Client credentials responses should not carry one at all (that is
-**04 · Client credentials** *(not written yet)*), and an AS may decline to issue one for a
+[04 · Client credentials](../04-client-credentials/README.md)), and an AS may decline to issue one for a
 browser client. RFC 9700 §4.14.2 makes this an explicit AS decision: *"Authorization servers
 MUST determine, based on a risk assessment, whether to issue refresh tokens to a certain
 client."*
@@ -245,4 +245,6 @@ is a skew: treat the token as expired early. Spring Security's refresh provider 
 `clock.instant().isAfter(expiresAt.minus(clockSkew))` with a 60-second default, and that
 default exists for exactly this reason.
 
-{/* FOOTER */}
+---
+
+← [What parsing costs you](02b-what-parsing-an-access-token-costs-you.md) · [Topic index](README.md) · Next → [The token error response](03b-the-token-error-response.md)

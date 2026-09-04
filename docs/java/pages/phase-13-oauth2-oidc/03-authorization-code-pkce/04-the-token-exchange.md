@@ -127,8 +127,7 @@ server MUST include the HTTP `Cache-Control` response header field [RFC2616] wit
 well as the `Pragma` response header field [RFC2616] with a value of `no-cache`."* If you put
 an HTTP cache in front of a token endpoint, you have built a token-sharing service.
 
-What the tokens *are*, how long they should live and how refresh works belongs to **05 · The
-three tokens** *(not written yet)*. What the `id_token` contains belongs to **07 · OpenID
+What the tokens *are*, how long they should live and how refresh works belongs to [05 · The three tokens](../05-the-three-tokens/README.md). What the `id_token` contains belongs to **07 · OpenID
 Connect** *(not written yet)*.
 
 ## What the client must do with the response
@@ -254,4 +253,6 @@ token requests can collide on a cache key, handing one user another's access tok
 request is also a POST with a single-use credential in the body, so caching it is meaningless
 even when it is not dangerous.
 
-{/* FOOTER */}
+---
+
+← [The authorization code](03-the-authorization-code.md) · [Topic index](README.md) · Next → [Client authentication](04b-client-authentication.md)

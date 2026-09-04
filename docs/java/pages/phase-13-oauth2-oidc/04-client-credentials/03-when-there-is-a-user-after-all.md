@@ -83,7 +83,7 @@ token and uses it later.
 Note the difference from client credentials — here the refresh token is not only permitted
 but is the entire mechanism, precisely because there *is* an absent resource owner whose
 consent it stands in for. The details of rotation, reuse detection and storage are
-**05 · The three tokens** *(being written)*.
+[05 · The three tokens](../05-the-three-tokens/README.md).
 
 The cost is honest: you are storing a long-lived, per-user credential, which is a meaningful
 security responsibility. Encrypt it, scope it narrowly, and handle revocation — the user can
@@ -216,4 +216,6 @@ authorises it and whether that scope's name reveals that it spans every customer
 scheduled job plus a per-customer path plus a machine token is the shape, and it is invisible
 at runtime because everything succeeds.
 
-{/* FOOTER */}
+---
+
+← [Why not just an API key](02-why-not-just-an-api-key.md) · [Topic index](README.md) · Next topic → [05 · The three tokens](../05-the-three-tokens/README.md)

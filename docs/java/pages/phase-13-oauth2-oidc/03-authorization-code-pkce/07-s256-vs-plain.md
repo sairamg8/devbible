@@ -253,4 +253,6 @@ Separately, read the authorization server's metadata document for
 so clients can detect PKCE support. The provider's prose documentation is not evidence about
 either side.
 
-{/* FOOTER */}
+---
+
+← [The code_verifier](06-the-code-verifier.md) · [Topic index](README.md) · Next → [Server-side verification](08-server-side-pkce-verification.md)

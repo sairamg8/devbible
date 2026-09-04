@@ -240,4 +240,6 @@ asking, for any endpoint that takes a credential, "did the authorization server 
 to this party?"; and cleaning up test fixtures, because a resource-server test that builds a full
 token response including a refresh token is teaching the next developer that it belongs there.
 
-{/* FOOTER */}
+---
+
+← [What refresh tokens are for](08-refresh-tokens-what-they-are-for.md) · [Topic index](README.md) · Next topic → [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md)

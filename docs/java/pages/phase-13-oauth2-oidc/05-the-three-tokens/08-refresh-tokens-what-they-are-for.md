@@ -263,4 +263,6 @@ have. What it does add is a second long-lived secret to store, rotate, audit and
 leak. RFC 6749 §4.4.3 is explicit: *"A refresh token SHOULD NOT be included."* If your AS
 does, ignore it, and do not persist it.
 
-{/* FOOTER */}
+---
+
+← [The long-lived token failure](07b-the-long-lived-access-token-failure.md) · [Topic index](README.md) · Next → [Never at a resource server](08b-why-a-resource-server-must-never-see-one.md)

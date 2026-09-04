@@ -113,7 +113,7 @@ you via an `AuthorizationRequestRepository` — the failure mode to know is that
 misconfigured or missing repository silently disables the check. **`state` defends against
 CSRF on the callback; PKCE defends against code interception. They are different attacks and
 neither substitutes for the other** — the full argument is
-**03 · Authorization code flow with PKCE** *(being written)*.
+[03 · Authorization code flow with PKCE](../03-authorization-code-pkce/README.md).
 
 ## Why back-channel calls need no `state`
 
@@ -235,4 +235,6 @@ separate device that does have one, while the client polls the token endpoint on
 channel. Framed that way it is not a special protocol so much as the same two channels with
 the front one relocated to another device.
 
-{/* FOOTER */}
+---
+
+← [Client authentication](03-client-authentication.md) · [Topic index](README.md) · Next → [Registration and redirect URIs](05-registration-and-redirect-uris.md)

@@ -147,7 +147,7 @@ and
 > or, if that is not feasible, to a small set of resource servers."*
 
 Configuring the resource-server side of that check — a custom `OAuth2TokenValidator` for
-`aud` — is **08 · Spring Security as resource server** *(not written yet)*.
+`aud` — is [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 ## A redaction rule you can actually enforce
 
@@ -281,4 +281,6 @@ with read access, an exposed debug endpoint. It is also the case sender-constrai
 help with even after compromise, since a logged token without the corresponding key is
 useless.
 
-{/* FOOTER */}
+---
+
+← [Bearer tokens](04-bearer-tokens-and-the-authorization-header.md) · [Topic index](README.md) · Next → [The form and query transports](04c-the-form-and-query-transports.md)

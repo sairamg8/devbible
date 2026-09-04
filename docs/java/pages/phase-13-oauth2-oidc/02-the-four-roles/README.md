@@ -86,9 +86,9 @@ breach of you.
 
 ## Where this goes next
 
-**03 · Authorization code flow with PKCE** *(being written)* takes the vocabulary here and
+[03 · Authorization code flow with PKCE](../03-authorization-code-pkce/README.md) takes the vocabulary here and
 walks the flow parameter by parameter, with the attack behind each one — and buries the
 implicit and password grants with the reason each died.
-**05 · The three tokens** *(being written)* takes the front/back-channel argument further:
+[05 · The three tokens](../05-the-three-tokens/README.md) takes the front/back-channel argument further:
 which token may legally appear where, and why a resource server must never see a refresh
 token.

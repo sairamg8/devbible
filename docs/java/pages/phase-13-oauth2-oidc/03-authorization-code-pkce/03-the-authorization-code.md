@@ -169,8 +169,7 @@ specifically; do not rely on a global redaction list that has to know the parame
 
 **★ Storing a code to "exchange it later" is never right.**
 There is no legitimate deferred-exchange pattern. If your architecture needs the token later,
-exchange the code now and store the *refresh token* under the rules of **05 · The three
-tokens** *(not written yet)*.
+exchange the code now and store the *refresh token* under the rules of [05 · The three tokens](../05-the-three-tokens/README.md).
 
 **★ A server that does not revoke on reuse is not obviously non-conforming.**
 Revocation is a `SHOULD`, not a `MUST` — only denial is a `MUST`. So "our provider does not
@@ -231,4 +230,6 @@ against. And exactly one service must attempt the exchange: if the code is publi
 topic with more than one consumer, you have built the double-redemption scenario above on
 purpose.
 
-{/* FOOTER */}
+---
+
+← [When a parameter is wrong](02b-when-a-parameter-is-wrong.md) · [Topic index](README.md) · Next → [The token exchange](04-the-token-exchange.md)

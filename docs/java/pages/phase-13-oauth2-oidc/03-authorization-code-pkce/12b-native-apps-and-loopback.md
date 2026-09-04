@@ -220,4 +220,6 @@ entry when the app's signing certificate rotated will break new installs while a
 installs keep working. The symptom is the callback opening in a browser instead of the app,
 leaving a code in a URL with nothing to consume it.
 
-{/* FOOTER */}
+---
+
+← [Redirect URI exact matching](12-redirect-uri-exact-matching.md) · [Topic index](README.md) · Next → [The mix-up attack](13-the-mix-up-attack.md)

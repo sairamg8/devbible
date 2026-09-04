@@ -250,4 +250,6 @@ guarded by `hasAuthority('SCOPE_orders:read')` deny it — good — while endpoi
 by `authenticated()` allow it. So the blast radius is exactly your set of
 merely-authenticated endpoints, which in most codebases is larger than anyone remembers.
 
-{/* FOOTER */}
+---
+
+← [The header contract and alg](03-the-jose-header.md) · [Topic index](README.md) · Next → [The Spring 7 typ collision](03c-the-spring-7-typ-collision.md)

@@ -55,7 +55,7 @@ that verified this token belongs to the issuer this token names". In a single-is
 server the two collapse, because there is only one key source and it came from the configured
 issuer. In a **multi-issuer** deployment they do not collapse, and getting it wrong means
 issuer A's key can validate a token claiming to be from issuer B. Multi-tenancy is
-**08 · Spring Security as resource server** *(not written yet)*; the trap is worth naming
+[08 · Spring Security as resource server](../08-spring-security-resource-server/README.md); the trap is worth naming
 here because it is invisible until you add the second tenant.
 
 **RFC 9068 §4 makes it exact for access tokens:**
@@ -104,7 +104,7 @@ The other rules about `sub` that get broken:
 - **A client-credentials token's `sub` is the client, not a person.** RFC 9068 §2.2 makes
   `sub` REQUIRED and notes that in the client-credentials case the subject is typically the
   client itself. Code that assumes `sub` resolves to a row in your `users` table will throw or,
-  worse, auto-create a phantom user. **04 · Client credentials** *(not written yet)* owns that
+  worse, auto-create a phantom user. [04 · Client credentials](../04-client-credentials/README.md) owns that
   flow.
 
 In Spring, `jwt.getSubject()` reads it; `JwtClaimNames.SUB` is the constant.
@@ -149,7 +149,7 @@ Reading `iss` before verification to *route* is safe here precisely because the 
 introduce a key: every branch ends at a JWK set you configured, and the post-verification
 `JwtIssuerValidator` re-checks that the token's `iss` matches the branch it took. The full
 wiring — including why `fromTrustedIssuers` and not a `Map` you build yourself — is
-**08 · Spring Security as resource server** *(not written yet)*.
+[08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 ## Gotchas
 
@@ -253,4 +253,6 @@ version of this that goes wrong in production is a service that assumes every `s
 a user row and auto-provisions one when it does not — you end up with a "user" that has the
 machine's privileges and no owner.
 
-{/* FOOTER */}
+---
+
+← [The dangerous headers](03e-the-dangerous-headers.md) · [Topic index](README.md) · Next → [The audience claim](04b-the-audience-claim.md)

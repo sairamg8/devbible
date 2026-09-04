@@ -236,4 +236,6 @@ running it — confidential if yes, public if no, and nothing else bears on that
 a human whose consent is being recorded — if not, there is no resource owner and you are in
 client credentials.
 
-{/* FOOTER */}
+---
+
+← [Registration and redirect URIs](05-registration-and-redirect-uris.md) · [Topic index](README.md) · Next topic → [03 · Authorization code + PKCE](../03-authorization-code-pkce/README.md)

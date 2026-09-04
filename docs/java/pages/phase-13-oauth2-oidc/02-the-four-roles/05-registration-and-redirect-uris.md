@@ -253,4 +253,6 @@ advance. It should be gated behind an initial access token, because an open regi
 endpoint lets anyone create a client on your authorization server — which is why most
 enterprise deployments leave it off.
 
-{/* FOOTER */}
+---
+
+← [Front and back channel](04-front-channel-and-back-channel.md) · [Topic index](README.md) · Next → [Mapping onto your stack](06-mapping-onto-your-stack.md)

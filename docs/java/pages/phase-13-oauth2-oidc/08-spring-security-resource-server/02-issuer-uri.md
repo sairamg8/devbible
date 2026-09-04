@@ -262,4 +262,6 @@ must assert — and `jwk-set-uri: http://keycloak:8080/realms/prod/protocol/open
 for the reachable key endpoint. Setting `issuer-uri` to the internal address makes
 discovery work and every real token fail.
 
-{/* FOOTER */}
+---
+
+← [What the starter gives you](01-what-the-starter-gives-you.md) · [Topic index](README.md) · Next → [jwk-set-uri and static keys](02b-jwk-set-uri-and-static-keys.md)

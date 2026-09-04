@@ -244,4 +244,6 @@ RFC 7009 §2 only makes access-token revocation a `SHOULD` — *"Implementations
 revocation of refresh tokens and SHOULD support the revocation of access tokens"* — so the AS
 may not even offer it.
 
-{/* FOOTER */}
+---
+
+← [DPoP and choosing a constraint](06b-dpop-and-choosing-a-constraint.md) · [Topic index](README.md) · Next → [The long-lived token failure](07b-the-long-lived-access-token-failure.md)

@@ -216,4 +216,6 @@ with multiple tabs. A sustained rate of `state` mismatches from distinct source 
 somebody probing your callback. A failed token exchange is far more likely to be a
 configuration or connectivity problem.
 
-{/* FOOTER */}
+---
+
+← [The authorization request](02-the-authorization-request.md) · [Topic index](README.md) · Next → [The authorization code](03-the-authorization-code.md)

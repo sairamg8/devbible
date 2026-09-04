@@ -67,7 +67,7 @@ would, there is no mechanism — because there is no authority.
 
 **02 · The four roles** [maps this grant's altered role
 table](../02-the-four-roles/06-mapping-onto-your-stack.md) alongside five other
-architectures. **05 · The three tokens** *(being written)* covers refresh tokens where they
+architectures. [05 · The three tokens](../05-the-three-tokens/README.md) covers refresh tokens where they
 *are* permitted — with rotation and reuse detection — which is the mechanism chunk 3 points
 at for offline access. **12 · Token relay across microservices** *(not written yet)* takes up
 the audience problem that makes plain relay dangerous.

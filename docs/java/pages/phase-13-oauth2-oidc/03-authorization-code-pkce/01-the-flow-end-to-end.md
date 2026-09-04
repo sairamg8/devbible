@@ -139,10 +139,10 @@ Removing any one of the three leaves a flow that works perfectly in a demo.
 ## Where this sits in the phase
 
 The vocabulary — resource owner, client, authorization server, resource server,
-confidential vs public — belongs to **02 · The four roles** *(not written yet)*. This topic
+confidential vs public — belongs to [02 · The four roles](../02-the-four-roles/README.md). This topic
 assumes it. What the returned tokens *are*, how long they live and how a refresh token
-rotates belongs to **05 · The three tokens** *(not written yet)*. The JWT wire format and
-its validation algorithm belong to **06 · JWT anatomy and validation** *(not written yet)*.
+rotates belongs to [05 · The three tokens](../05-the-three-tokens/README.md). The JWT wire format and
+its validation algorithm belong to [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 The `nonce` parameter and the ID token belong to **07 · OpenID Connect** *(not written
 yet)* — this topic names `nonce` only where RFC 9700 names it as a code-injection
 countermeasure.
@@ -228,4 +228,6 @@ client into a public one and gives up the binding that stops another client rede
 codes; removing PKCE reopens code injection. The interesting part of this question is that
 one of the three is conditionally redundant and two are not.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Why a code at all](01b-why-a-code-at-all.md)

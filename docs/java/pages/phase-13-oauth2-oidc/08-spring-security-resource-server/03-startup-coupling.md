@@ -207,4 +207,6 @@ the tokens they signed continue to verify locally. It stops as soon as a token a
 a `kid` that is not in the cached set, or the cache expires. It is also a reminder that
 "the resource server is up" and "the IdP is up" are different questions.
 
-{/* FOOTER */}
+---
+
+← [Trusted algorithms](02c-trusted-algorithms.md) · [Topic index](README.md) · Next → [Timeouts and the JWK cache](03b-timeouts-and-the-jwk-cache.md)

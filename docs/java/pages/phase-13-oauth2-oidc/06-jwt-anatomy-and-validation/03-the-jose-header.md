@@ -277,4 +277,6 @@ JOSE are the raw `r||s` concatenation, not the DER encoding, and a hand-rolled v
 selection failure in all three cases, which is why you check the configuration before you
 suspect the token.
 
-{/* FOOTER */}
+---
+
+← [base64url and JSON traps](02b-base64url-and-json-traps.md) · [Topic index](README.md) · Next → [Explicit typing](03b-explicit-typing.md)

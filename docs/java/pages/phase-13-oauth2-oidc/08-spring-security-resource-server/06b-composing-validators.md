@@ -1,7 +1,7 @@
 ---
 title: "setJwtValidator replaces rather than appends, which is why adding one check silently removes three — and createDefaultWithValidators exists precisely so you stop having to remember that"
 sidebar_label: "06b · Composing validators"
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -282,4 +282,6 @@ The supplied `JwtTimestampValidator` suppresses the default one; type and thumbp
 validators are still inserted. Better still on Boot 4: publish the two validators as beans,
 set `audiences` and leave the decoder alone.
 
-{/* FOOTER */}
+---
+
+← [The default validators](06-the-default-validators.md) · [Topic index](README.md) · Next topic → **09 · Spring as OAuth2 client** *(not written yet)*

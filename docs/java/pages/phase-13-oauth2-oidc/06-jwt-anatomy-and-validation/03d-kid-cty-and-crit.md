@@ -227,7 +227,7 @@ reading claims off one.**
 Routing by `kid` or `iss` before verification is sometimes necessary — multi-tenant issuer
 resolution is the legitimate case — but nothing about the routing decision may grant access,
 and the route chosen must not be able to introduce a key you did not already trust.
-Multi-tenancy is **08 · Spring Security as resource server** *(not written yet)*.
+Multi-tenancy is [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 ## Interview questions
 
@@ -282,4 +282,6 @@ rare, and the design question it should raise is why the resource server holds a
 key — usually the answer is that it should not, and the sensitive data should not have been
 in the token.
 
-{/* FOOTER */}
+---
+
+← [The Spring 7 typ collision](03c-the-spring-7-typ-collision.md) · [Topic index](README.md) · Next → [The dangerous headers](03e-the-dangerous-headers.md)

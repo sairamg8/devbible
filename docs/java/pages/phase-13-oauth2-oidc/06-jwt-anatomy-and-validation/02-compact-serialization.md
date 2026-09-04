@@ -278,4 +278,6 @@ serialization has five segments and four dots. RFC 7519 §7.2 makes the check ex
 decoding the header, determine whether the JWT is a JWS or a JWE — the header of a JWE
 carries an `enc` parameter, which a JWS never has. Counting dots is the cheap first test.
 
-{/* FOOTER */}
+---
+
+← [Encoded, not encrypted](01-encoded-not-encrypted.md) · [Topic index](README.md) · Next → [base64url and JSON traps](02b-base64url-and-json-traps.md)

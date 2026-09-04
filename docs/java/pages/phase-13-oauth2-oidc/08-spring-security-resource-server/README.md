@@ -40,7 +40,7 @@ objects between the `Authorization` header and the `SecurityContext`, and knowin
 you are in is the difference between fixing a converter and rewriting a config you did not
 need to touch.
 
-**14 chunks, ~3,452 lines.** Read 01, then 02 and 04 — those three are the shape of the whole
+**15 chunks, ~3,604 lines.** Read 01, then 02 and 04 — those three are the shape of the whole
 topic.
 
 ## Chunks
@@ -59,8 +59,9 @@ topic.
 | 10 | **[The request path](05-the-request-path.md)** | <span className="db-tier t-master">Master</span> | One request, seven objects — the only way to know which component to fix, plus the authority Spring Security 7 adds at the last hop |
 | 11 | **[Bearer token resolution](05b-bearer-token-resolution.md)** | <span className="db-tier t-master">Master</span> | A regex and two switches that default to off, because RFC 6750 §2 spends most of its length explaining why |
 | 12 | **[Alternative token transports](05c-alternative-token-transports.md)** | <span className="db-tier t-master">Master</span> | Form field, query string, custom header — and the ten-line custom resolver that undoes why bearer tokens needed no CSRF |
-| 13 | **[The default validators](06-the-default-validators.md)** | <span className="db-tier t-master">Master</span> | 🔴 Three in Spring Security 7, not two — every page listing `exp`/`nbf`/`iss` describes a version you are not running |
-| 14 | **[Composing validators](06b-composing-validators.md)** | <span className="db-tier t-master">Master</span> | 🔴 `setJwtValidator` **replaces**, so adding one check silently removes three; `createDefaultWithValidators` exists for exactly this |
+| 13 | **[Step 7 and the debug table](05d-step-7-surprises-and-the-debug-table.md)** | <span className="db-tier t-master">Master</span> | The authority merge and the DPoP downgrade rejection nobody configured, plus symptom → step → object → cause |
+| 14 | **[The default validators](06-the-default-validators.md)** | <span className="db-tier t-master">Master</span> | 🔴 Three in Spring Security 7, not two — every page listing `exp`/`nbf`/`iss` describes a version you are not running |
+| 15 | **[Composing validators](06b-composing-validators.md)** | <span className="db-tier t-master">Master</span> | 🔴 `setJwtValidator` **replaces**, so adding one check silently removes three; `createDefaultWithValidators` exists for exactly this |
 
 ## The six things this topic is really about
 

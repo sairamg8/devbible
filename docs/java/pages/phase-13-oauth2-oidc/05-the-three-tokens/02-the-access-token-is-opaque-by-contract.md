@@ -255,4 +255,6 @@ now throws or silently produces nulls, and because clients are deployed independ
 asymmetry — the server breaks loudly and rolls back, the client breaks quietly and cannot —
 is why the prohibition is aimed at clients.
 
-{/* FOOTER */}
+---
+
+← [Three tokens, three roles](01-three-tokens-three-roles.md) · [Topic index](README.md) · Next → [What parsing costs you](02b-what-parsing-an-access-token-costs-you.md)

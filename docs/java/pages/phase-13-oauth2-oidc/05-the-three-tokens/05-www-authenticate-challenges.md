@@ -187,4 +187,6 @@ imply one did. It also avoids leaking anything to an unauthenticated prober. Pra
 lets a client distinguish "I have no session, start login" from "I have a session, refresh
 it", which are different user experiences.
 
-{/* FOOTER */}
+---
+
+← [The form and query transports](04c-the-form-and-query-transports.md) · [Topic index](README.md) · Next → [Implementing the challenge](05b-implementing-and-consuming-the-challenge.md)

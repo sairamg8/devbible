@@ -188,4 +188,6 @@ URI it was delivered to, the attacker can present your `client_id` at the token 
 with their own `redirect_uri` and get tokens. This is RFC 6749 §10.6, and it is why §4.1.3
 makes the AS re-check the URI at redemption rather than only at issuance.
 
-{/* FOOTER */}
+---
+
+← [The flow end to end](01-the-flow-end-to-end.md) · [Topic index](README.md) · Next → [The authorization request](02-the-authorization-request.md)

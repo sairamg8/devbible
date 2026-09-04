@@ -283,4 +283,6 @@ bytes. Those strings have different signing inputs, so they will not carry a val
 for the original key — meaning the attack is not a signature bypass, but it *is* a way to
 evade a naive denylist or a deduplication cache that hashes the decoded payload.
 
-{/* FOOTER */}
+---
+
+← [Compact serialization](02-compact-serialization.md) · [Topic index](README.md) · Next → [The header contract and alg](03-the-jose-header.md)

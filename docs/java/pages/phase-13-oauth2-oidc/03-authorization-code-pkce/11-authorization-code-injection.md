@@ -220,4 +220,6 @@ right now; and a live code from that pipeline is precisely the input this attack
 logging, not the old entries — and check whether the same pipeline captures `Authorization`
 headers or token responses.
 
-{/* FOOTER */}
+---
+
+← [state vs PKCE](10b-state-vs-pkce.md) · [Topic index](README.md) · Next → [Redirect URI exact matching](12-redirect-uri-exact-matching.md)

@@ -109,7 +109,7 @@ Set the five side by side with what OAuth2 issues and the mapping is exact:
 ## The abstract flow, in the specification's own six steps
 
 RFC 6749 §1.2 states the whole framework in six lettered steps. Learn them now as a skeleton;
-**03 · Authorization code flow with PKCE** *(being written)* fills every one of them in
+[03 · Authorization code flow with PKCE](../03-authorization-code-pkce/README.md) fills every one of them in
 with real parameters.
 
 - **(A)** *"The client requests authorization from the resource owner … or preferably
@@ -217,4 +217,6 @@ password credentials grant "MUST NOT be used" precisely because it "insecurely e
 credentials of the resource owner to the client". First-party status changes who you are
 trusting; it does not change any of the five mechanical failures.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Authorization ≠ authentication](02-authorization-is-not-authentication.md)

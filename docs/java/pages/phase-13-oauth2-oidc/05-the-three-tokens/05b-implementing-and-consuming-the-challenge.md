@@ -168,7 +168,7 @@ SecurityFilterChain api(HttpSecurity http) throws Exception {
 That is the Security 7 lambda DSL — there is no `and()` and no `http.oauth2ResourceServer()`
 overload returning the configurer, both of which appear in older tutorials. Wiring the
 decoder, the issuer and the authorities converter is
-**08 · Spring Security as resource server** *(not written yet)*.
+[08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 ## Gotchas
 
@@ -261,4 +261,6 @@ You almost certainly built a plain `OAuth2Error` rather than a `BearerTokenError
 status line says 401, and any conformant client branches on the status. Constructing the error
 through `BearerTokenErrors.insufficientScope(...)` attaches the 403.
 
-{/* FOOTER */}
+---
+
+← [WWW-Authenticate challenges](05-www-authenticate-challenges.md) · [Topic index](README.md) · Next → [What a bearer token cannot do](06-what-a-bearer-token-cannot-do.md)

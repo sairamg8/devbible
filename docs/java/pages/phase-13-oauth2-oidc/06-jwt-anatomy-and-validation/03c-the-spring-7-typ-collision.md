@@ -291,4 +291,6 @@ every individual decision behind it was reasonable. The honest summary for a rev
 vulnerability, a friction, and one you should encode in a test so nobody "fixes" it by
 deleting the validator.
 
-{/* FOOTER */}
+---
+
+← [Explicit typing](03b-explicit-typing.md) · [Topic index](README.md) · Next → [kid, cty and crit](03d-kid-cty-and-crit.md)

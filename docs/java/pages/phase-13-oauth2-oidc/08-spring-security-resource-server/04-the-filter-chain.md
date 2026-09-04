@@ -282,4 +282,6 @@ via the `spring.security.oauth2.resourceserver.jwt.audiences` property, via a
 `JwtAudienceValidator` composed onto the defaults, or via an `OAuth2TokenValidator<Jwt>`
 bean that Boot picks up.
 
-{/* FOOTER */}
+---
+
+← [Timeouts and the JWK cache](03b-timeouts-and-the-jwk-cache.md) · [Topic index](README.md) · Next → [Matcher and chain order](04b-matcher-order.md)

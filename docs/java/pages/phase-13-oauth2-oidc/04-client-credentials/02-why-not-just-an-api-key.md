@@ -187,4 +187,6 @@ CPU operation against a public key cached from a JWKS endpoint — no I/O per re
 shared store, and a resource server that keeps working through an authorization-server
 outage for as long as its cached keys and the tokens remain valid.
 
-{/* FOOTER */}
+---
+
+← [The grant with no user](01-the-grant-with-no-user.md) · [Topic index](README.md) · Next → [When there is a user after all](03-when-there-is-a-user-after-all.md)

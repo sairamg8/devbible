@@ -252,4 +252,6 @@ public one. The classification follows the credential, not the runtime. The mome
 secret is in the response body it is in the user's browser, and it must be rotated and moved
 server-side.
 
-{/* FOOTER */}
+---
+
+← [The four roles](01-the-four-roles.md) · [Topic index](README.md) · Next → [Client authentication](03-client-authentication.md)

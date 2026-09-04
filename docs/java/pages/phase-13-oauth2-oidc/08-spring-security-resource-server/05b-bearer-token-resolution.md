@@ -156,4 +156,6 @@ an access token".
 `BearerTokenAuthenticationEntryPoint`. It is worth knowing this is a *resolution* failure —
 the token was never decoded, so nothing about signatures, issuers or expiry is implicated.
 
-{/* FOOTER */}
+---
+
+← [The request path](05-the-request-path.md) · [Topic index](README.md) · Next → [Alternative token transports](05c-alternative-token-transports.md)

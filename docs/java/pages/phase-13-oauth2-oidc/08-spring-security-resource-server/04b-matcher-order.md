@@ -271,4 +271,6 @@ enforcement, the unauthenticated response (401 versus redirect to a login page),
 authentication filters are installed. Browsers and machine clients want opposite answers to
 every one of them, and a single chain can only give one answer each.
 
-{/* FOOTER */}
+---
+
+← [The filter chain](04-the-filter-chain.md) · [Topic index](README.md) · Next → [STATELESS, CSRF and CORS](04c-stateless-csrf-cors.md)

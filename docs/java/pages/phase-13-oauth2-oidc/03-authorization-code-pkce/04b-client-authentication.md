@@ -92,8 +92,7 @@ The client assertion parameters are `client_assertion_type=urn:ietf:params:oauth
 and `client_assertion=<the-signed-jwt>`, sent in the token request body alongside
 `grant_type` and the rest. The JWT's `iss` and `sub` are both the `client_id`, its `aud` is
 the token endpoint (or the issuer, depending on the profile), and it carries a `jti` so the
-server can reject replays. The JWT wire format and signature validation are **06 · JWT anatomy
-and validation** *(not written yet)*.
+server can reject replays. The JWT wire format and signature validation are [06 · JWT anatomy and validation](../06-jwt-anatomy-and-validation/README.md).
 
 ## PKCE does not replace client authentication, and vice versa
 
@@ -136,7 +135,7 @@ integration, and the property is
 `spring.security.oauth2.client.registration.example.client-secret`.
 
 Where the secret is *stored* — vault, sealed secret, cloud secret manager, and the rotation
-procedure — is out of scope for this topic; **04 · Client credentials** *(not written yet)*
+procedure — is out of scope for this topic; [04 · Client credentials](../04-client-credentials/README.md)
 owns the credential-storage argument, and **09 · Spring as OAuth2 client** *(not written yet)*
 owns the runtime client API.
 
@@ -239,4 +238,6 @@ automatically for that combination — or, better, moving the token exchange to 
 client genuinely is confidential. That second option is the BFF pattern, which **13 · Sessions
 vs tokens, honestly** *(not written yet)* owns.
 
-{/* FOOTER */}
+---
+
+← [The token exchange](04-the-token-exchange.md) · [Topic index](README.md) · Next → [The interception attack](05-the-interception-attack.md)

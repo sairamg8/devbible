@@ -1,7 +1,7 @@
 ---
 title: "The default validator set changed in Spring Security 7 and now contains three validators, not two — every page on the internet that lists the defaults as exp, nbf and iss is describing a version you are not running"
 sidebar_label: "06 · The default validators"
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -236,4 +236,6 @@ extends `BadJwtException`, `JwtAuthenticationProvider` maps that to
 `HttpStatus.UNAUTHORIZED` — matching RFC 6750 §3.1, which says `invalid_token` SHOULD be a
 401 and that the client MAY request a new token and retry.
 
-{/* FOOTER */}
+---
+
+← [Step 7 and the debug table](05d-step-7-surprises-and-the-debug-table.md) · [Topic index](README.md) · Next → [Composing validators](06b-composing-validators.md)

@@ -135,7 +135,7 @@ RestClient inventoryClient(OAuth2AuthorizedClientManager manager) {
 When someone says "the service uses OAuth2", ask **which direction**. Inbound token
 validation and outbound token acquisition are different roles, different configuration,
 different failure modes, and different chapters — inbound is
-**08 · Spring Security as resource server** *(being written)*, outbound is
+[08 · Spring Security as resource server](../08-spring-security-resource-server/README.md), outbound is
 **09 · Spring as OAuth2 client** *(not written yet)*.
 
 ## Gotchas
@@ -244,4 +244,6 @@ expecting a `sub` that identifies a person will get either a client identifier o
 It is the clearest demonstration that "resource owner" is a role that may be absent, rather
 than a synonym for "user".
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Confidential vs public](02-confidential-and-public-clients.md)

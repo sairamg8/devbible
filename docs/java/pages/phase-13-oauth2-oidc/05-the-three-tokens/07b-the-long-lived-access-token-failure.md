@@ -71,7 +71,7 @@ touches.
 
 If the requirement genuinely is a long-lived machine credential, the answer is the client
 credentials grant with short tokens and a securely stored client secret — that is
-**04 · Client credentials** *(not written yet)* — or a real API key with real lookup-based
+[04 · Client credentials](../04-client-credentials/README.md) — or a real API key with real lookup-based
 revocation. Not a long-lived user access token.
 
 ## The tells, in a codebase and in a config
@@ -237,4 +237,6 @@ on the authorization server — because at lifetime `L`, an AS outage becomes a 
 tokens, and a revocation story that does not depend on expiry. What makes the common case a
 failure is not the number; it is that nobody chose it.
 
-{/* FOOTER */}
+---
+
+← [Access-token lifetime](07-access-token-lifetime-as-a-design-decision.md) · [Topic index](README.md) · Next → [What refresh tokens are for](08-refresh-tokens-what-they-are-for.md)

@@ -284,4 +284,6 @@ indicators you either get an AS-decided audience list — often "everything this
 which widens the blast radius — or you get the shared-audience anti-pattern. Without audience
 validation the resource indicator is decoration.
 
-{/* FOOTER */}
+---
+
+← [The audience claim](04b-the-audience-claim.md) · [Topic index](README.md) · Next topic → [07 · OpenID Connect](../07-openid-connect/README.md)

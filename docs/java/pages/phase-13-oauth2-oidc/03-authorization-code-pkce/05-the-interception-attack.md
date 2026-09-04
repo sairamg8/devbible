@@ -230,4 +230,6 @@ client never sees the user's credentials — and it also means the user's existi
 the authorization server is not available, so they must retype credentials, which trains
 exactly the behaviour the protocol was meant to eliminate.
 
-{/* FOOTER */}
+---
+
+← [Client authentication](04b-client-authentication.md) · [Topic index](README.md) · Next → [The code_verifier](06-the-code-verifier.md)

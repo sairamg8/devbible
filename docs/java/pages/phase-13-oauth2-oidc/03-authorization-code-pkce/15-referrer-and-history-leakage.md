@@ -215,4 +215,6 @@ or ingress is producing it. Configure the tracing agent to scrub or exclude that
 whether Actuator's `httpexchanges` endpoint is enabled and exposed, because it holds recent
 request URIs in memory and serves them.
 
-{/* FOOTER */}
+---
+
+← [Replay and idempotency](14-code-replay-and-idempotency.md) · [Topic index](README.md) · Next topic → [04 · Client credentials](../04-client-credentials/README.md)

@@ -265,4 +265,6 @@ handling, because the proof binds `htu` to a URI and the server has to reconstru
 URI the client signed. Neither is exotic, but both are real work, and both are things a
 bearer-token deployment never had to think about.
 
-{/* FOOTER */}
+---
+
+← [What a bearer token cannot do](06-what-a-bearer-token-cannot-do.md) · [Topic index](README.md) · Next → [Access-token lifetime](07-access-token-lifetime-as-a-design-decision.md)

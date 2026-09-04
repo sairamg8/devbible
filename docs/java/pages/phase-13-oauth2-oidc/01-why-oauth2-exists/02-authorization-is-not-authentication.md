@@ -238,4 +238,6 @@ what OAuth2 is for. The distinction to hold onto is that the resource server is 
 explicitly — reading `sub` from a validated token for audit is fine, treating that as a
 login session is not.
 
-{/* FOOTER */}
+---
+
+← [The password anti-pattern](01-the-password-anti-pattern.md) · [Topic index](README.md) · Next → [What came before](03-what-came-before.md)

@@ -186,7 +186,7 @@ different animal: it is a credential the *client* presents to the *authorization
 obtain new access tokens, it is long-lived, and it is not a bearer credential for any API. A
 resource server that ever saw one would be holding something far more dangerous than the access
 token it needs. Keeping refresh tokens off the resource-server path is why a leaked access token
-costs you minutes rather than months. **05 · The three tokens** *(not written yet)* owns the
+costs you minutes rather than months. [05 · The three tokens](../05-the-three-tokens/README.md) owns the
 rest.
 
 **★ Your architect proposes one `aud: internal` value for all twenty microservices, to simplify
@@ -220,4 +220,6 @@ cast to `String` works in development against one issuer and throws in productio
 another. The lesson generalises: a union type in a wire format saves bytes and moves the burden
 onto every implementer, so if you design one, ship a reference parser.
 
-{/* FOOTER */}
+---
+
+← [iss and sub](04-registered-claims-identity.md) · [Topic index](README.md) · Next → [Configuring audience validation](04c-configuring-audience-validation.md)

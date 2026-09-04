@@ -72,7 +72,7 @@ the vendor".
 8414 (AS metadata) and OIDC Discovery add
 `/.well-known/oauth-authorization-server` and `/.well-known/openid-configuration`, and once
 a provider supports one of them, Spring's `issuer-uri` can configure a resource server in a
-single line — that is **08 · Spring Security as resource server** *(being written)*.
+single line — that is [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 **Client registration.** Manual, out of band, in the core. RFC 7591 adds dynamic
 registration; most providers do not enable it.
@@ -80,7 +80,7 @@ registration; most providers do not enable it.
 **Token lifetimes, refresh-token rotation policy, and revocation.** `expires_in` is
 communicated but its value is policy. Whether refresh tokens rotate, whether reuse is
 detected, whether there is a revocation endpoint at all (RFC 7009 is separate) — all
-provider decisions. **05 · The three tokens** *(being written)* has the detail.
+provider decisions. [05 · The three tokens](../05-the-three-tokens/README.md) has the detail.
 
 ## The five grants, and how few of them you should use
 
@@ -138,8 +138,7 @@ Comma-separating scopes is a classic bug that some providers tolerate and others
 **★ A missing `aud` on an access token is common and is not a provider bug.**
 The core specification does not require it. It does mean the resource server must be
 configured to require and check a specific audience explicitly, or it will accept tokens
-minted for a different service in the same realm. See **08 · Spring Security as resource
-server** *(being written)*.
+minted for a different service in the same realm. See [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md).
 
 **★ Do not build refresh logic on one provider's error codes.**
 §5.2 fixes the code list, not the mapping. Handle "the refresh failed for any reason" as one
@@ -204,4 +203,6 @@ comes from profiles — OIDC for identity, RFC 9068 for JWT access tokens, RFC 8
 discovery — and currency comes from RFC 9700, which deprecates grants the core still
 describes as normal. Reading only the core leaves you implementing 2012.
 
-{/* FOOTER */}
+---
+
+← [What came before](03-what-came-before.md) · [Topic index](README.md) · Next → [When you don't need it](05-when-you-do-not-need-oauth2.md)

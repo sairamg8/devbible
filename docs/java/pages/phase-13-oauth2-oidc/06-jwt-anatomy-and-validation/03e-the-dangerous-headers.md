@@ -293,4 +293,6 @@ issuing bound ones. That is a good default — the enforcement arrives with the 
 than needing to be remembered — but it is worth knowing it is there before it produces a 401
 nobody configured.
 
-{/* FOOTER */}
+---
+
+← [kid, cty and crit](03d-kid-cty-and-crit.md) · [Topic index](README.md) · Next → [iss and sub](04-registered-claims-identity.md)

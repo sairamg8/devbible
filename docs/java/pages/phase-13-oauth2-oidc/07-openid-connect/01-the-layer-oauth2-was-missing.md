@@ -213,4 +213,6 @@ presence and meaning vary by provider. Do not require it and do not make authori
 decisions on it; validators that insist on it reject valid tokens from providers that never
 emit it.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next topic → [08 · Spring Security as resource server](../08-spring-security-resource-server/README.md)

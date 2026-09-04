@@ -23,6 +23,10 @@ filter, resolver, `ProviderManager`, provider, decoder, authentication converter
 "the token is rejected" into "the third step rejected it, here is the class". This chunk
 walks the path once, in order, naming what each object is allowed to throw.**
 
+The two behaviours the last step adds on its own — the authority merge and the DPoP downgrade
+rejection — plus the symptom-to-step debugging table are
+[05d · Step 7 and the debug table](05d-step-7-surprises-and-the-debug-table.md).
+
 ## The sequence
 
 The reference numbers it; here it is with the classes and the failure each produces.
@@ -149,65 +153,6 @@ The default `securityContextRepository` on this filter is
 the bearer path is stateless even before you set `SessionCreationPolicy.STATELESS`
 ([04c](04c-stateless-csrf-cors.md) explains what `STATELESS` is actually for).
 
-## Two behaviours in step 7 that will surprise you
-
-**Authorities merge with an already-authenticated request.** Just before installing the
-context:
-
-```java
-Authentication current = this.securityContextHolderStrategy.getContext().getAuthentication();
-if (current != null && current.isAuthenticated() && declaresToBuilder(authenticationResult)) {
-    authenticationResult = authenticationResult.toBuilder().authorities((a) -> {
-        Set<String> newAuthorities = a.stream()
-            .map(GrantedAuthority::getAuthority)
-            .collect(Collectors.toUnmodifiableSet());
-        for (GrantedAuthority currentAuthority : current.getAuthorities()) {
-            if (!newAuthorities.contains(currentAuthority.getAuthority())) {
-                a.add(currentAuthority);
-            }
-        }
-    }).build();
-}
-```
-
-The reference states the same thing in prose: *"Any already-authenticated `Authentication`
-in the `SecurityContextHolder` is loaded and its authorities are added to the returned
-`Authentication`."* This is the multi-factor machinery — a session-authenticated user who
-also presents a bearer token ends up with the union — and on a chain that is genuinely
-stateless it never fires, because there is no pre-existing authentication.
-
-**A DPoP-bound token presented as a plain bearer token is rejected.**
-
-```java
-if (isDPoPBoundAccessToken(authenticationResult)) {
-    // Prevent downgraded usage of DPoP-bound access tokens,
-    // by rejecting a DPoP-bound access token received as a bearer token.
-    BearerTokenError error = BearerTokenErrors.invalidToken("Invalid bearer token");
-    throw new OAuth2AuthenticationException(error);
-}
-```
-
-Sender-constrained tokens (RFC 9449) must not be usable without the proof, so a stolen one
-cannot be replayed through the bearer path. Sender constraining is
-**14 · mTLS and workload identity** *(not written yet)*.
-
-## The whole path as a debugging table
-
-| Symptom | Step | Object | Likely cause |
-|---|---|---|---|
-| 200, principal anonymous | 1 | converter returned `null` | header absent or not `Bearer` |
-| 401 `invalid_request` | 1 | `DefaultBearerTokenResolver` | two tokens in one request |
-| 401 `invalid_token` "Bearer token is malformed" | 1 | resolver regex | stray whitespace, quotes, `Bearer:` |
-| 401 `invalid_token` "Invalid issuer" | 2 | `JwtIssuerAuthenticationManagerResolver` | `iss` not in the trusted list |
-| 401 `invalid_token` "Unsupported algorithm of …" | 4 | `NimbusJwtDecoder` | `alg` not in the trusted set |
-| 401 `invalid_token` "The iss claim is not valid" | 5 | `JwtIssuerValidator` | `issuer-uri` mismatch |
-| 401 `invalid_token` "Jwt expired at …" | 5 | `JwtTimestampValidator` | genuine expiry or clock skew |
-| **500** | 4 | `AuthenticationServiceException` | JWK set unreachable or malformed |
-| 403 `insufficient_scope` | after 7 | `AuthorizationFilter` | authenticated, wrong authorities |
-
-The 500 row is the one people misfile. If your error rate shows 500s rather than 401s during
-an IdP incident, that is the system working as designed and telling you the truth.
-
 ## Gotchas
 
 **★ A missing token is not an error at this layer.**
@@ -216,24 +161,10 @@ anonymously. Whether that is a 401 or a 200 is decided later by `authorizeHttpRe
 `ExceptionTranslationFilter`. Debugging a "401 with no token" at the bearer filter is
 looking in the wrong place.
 
-**★ An unreachable JWK set produces 500, not 401.**
-`JwtException` that is not a `BadJwtException` becomes `AuthenticationServiceException`.
-Alerting that only watches 401s will miss an IdP outage entirely; alerting that treats 500s
-as "our bug" will send the wrong team.
-
 **★ `JwtAuthenticationConverter.convert` is `final`.**
 Subclassing to change the authority mapping does not compile. Set
 `setJwtGrantedAuthoritiesConverter(...)` or `setJwtPrincipalConverter(...)`, or supply a
 completely different `Converter<Jwt, AbstractAuthenticationToken>` to the DSL.
-
-**★ Every bearer-authenticated principal carries `FACTOR_BEARER` in Spring Security 7.**
-It is added unconditionally by the converter. If you assert on the exact authority set in a
-test — `containsExactly("SCOPE_read")` — that test breaks on upgrade to 7.x and the failure
-looks like your converter changed.
-
-**★ A custom `Converter<Jwt, AbstractAuthenticationToken>` supplied to the DSL replaces the
-whole `JwtAuthenticationConverter`, including the `FACTOR_BEARER` addition.**
-If anything in your policy or in a library depends on that authority, it disappears.
 
 **★ The filter's `SecurityContextRepository` is request-scoped by default.**
 `RequestAttributeSecurityContextRepository`. Nothing persists. If you were relying on the
@@ -243,10 +174,6 @@ bearer filter to populate a session for a later request, it never did.
 Step 2 parses the token to pick a manager. That is unavoidable — you cannot verify without
 knowing which keys to use — and it is exactly why the trusted-issuer allow-list is
 mandatory. See **09 · Multi-tenancy** *(not written yet)*.
-
-**★ A DPoP-bound token sent as a bearer token is rejected as `invalid_token`.**
-Deliberately, to prevent downgrade. The client's error message says nothing about DPoP, so
-this reads as an inexplicable rejection of a token the client believes is fine.
 
 ## Interview questions
 
@@ -259,20 +186,6 @@ resolves an `AuthenticationManager` from the request via an `AuthenticationManag
 `JwtAuthenticationConverter` to produce a `JwtAuthenticationToken` whose principal is the
 `Jwt` and whose authorities include the mapped scopes plus `FACTOR_BEARER`. The filter puts
 that on the `SecurityContextHolder` and continues the chain.
-
-**★ Why does an unreachable JWKS endpoint produce a 500 rather than a 401?**
-Because `JwtAuthenticationProvider` distinguishes `BadJwtException` — the token is bad,
-which is the client's problem and maps to `invalid_token`/401 — from every other
-`JwtException`, which it wraps in `AuthenticationServiceException`. An infrastructure
-failure is not evidence that the credential is invalid, so telling the client to get a new
-token would be a lie.
-
-**★ What is `FACTOR_BEARER` and when did it appear?**
-A `FactorGrantedAuthority` constant, `@since 7.0`, added unconditionally by
-`JwtAuthenticationConverter` (and by the opaque-token converter) to every successfully
-authenticated bearer request. It exists so that authorization rules can reason about *how*
-the caller authenticated, which is the foundation of Spring Security 7's step-up and
-multi-factor support.
 
 **★ What happens if a request arrives with no `Authorization` header at all?**
 The converter returns `null`, the bearer filter logs a trace message and calls
@@ -289,12 +202,6 @@ Not by subclassing `JwtAuthenticationConverter` — `convert` is `final`. Either
 remembering that the last option means you are now responsible for adding `FACTOR_BEARER`
 yourself if anything depends on it.
 
-**★ Under what circumstances does the bearer filter merge authorities from an existing
-`Authentication`?**
-When the `SecurityContextHolder` already contains an authenticated `Authentication` when the
-bearer filter runs, and the new result supports `toBuilder()`. The existing authorities that
-are not already present are added. On a `STATELESS` chain this never happens, because
-nothing loaded a context; on a mixed chain it is how a session-authenticated user who also
-sends a token ends up with the union of both.
+---
 
-{/* FOOTER */}
+← [STATELESS, CSRF and CORS](04c-stateless-csrf-cors.md) · [Topic index](README.md) · Next → [Bearer token resolution](05b-bearer-token-resolution.md)

@@ -231,4 +231,6 @@ log; and revocation or rotation is all-or-nothing across the fleet. It is the ma
 equivalent of a shared admin password. One registration per calling service, scoped to what
 that service actually calls.
 
-{/* FOOTER */}
+---
+
+← [Topic index](README.md) · Next → [Why not just an API key](02-why-not-just-an-api-key.md)

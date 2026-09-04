@@ -74,8 +74,8 @@ RFCs rather than one.
 
 ## Where this goes next
 
-**02 · The four roles** *(being written)* turns the vocabulary into a map of your own stack —
+[02 · The four roles](../02-the-four-roles/README.md) turns the vocabulary into a map of your own stack —
 including the confidential/public client split that OAuth 1.0's model could not express.
-**03 · Authorization code flow with PKCE** *(being written)* fills in every one of §1.2's six
+[03 · Authorization code flow with PKCE](../03-authorization-code-pkce/README.md) fills in every one of §1.2's six
 lettered steps with real parameters, and buries the implicit and password grants with the
 attack that killed each.
