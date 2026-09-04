@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: "Instant Navigations is an opt-in suite of five tools that make a server-driven app feel like an SPA, and Vercel has said its behaviours become the default in a future major version"
-sidebar_label: "10 · Instant Navigations"
+sidebar_label: "Overview"
 description: "Index for the Instant Navigations topic: what instant means, Partial Prefetching and the App Shell, per-link prefetching, Instant Insights validation, the Navigation Inspector, and ISR under Cache Components."
 ---
 

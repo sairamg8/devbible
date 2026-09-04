@@ -62,6 +62,11 @@ sidebar_position: <unique, gap-free within the directory>
   🔴 **The separator is a middle dot `·` with spaces**, never a hyphen or a colon.
 - **`sidebar_position`** is unique and gap-free within its directory. A topic
   `README.md` always takes `sidebar_position: 0` and `sidebar_label: "Overview"`.
+  🔴 **Not cosmetic.** Chunks number from 1, so a README given the *topic's* number
+  (`11-javac-flags/README.md` at `11`) sorts **after** the chunks it indexes — the
+  overview lands at the bottom of its own topic. Measured 2026-09-04: 135 of 608 topic
+  READMEs had drifted this way. `0` is the only value that sorts first under both the
+  `1, 2, 3…` and the `topic × 10` chunk schemes in use.
 
 ---
 
@@ -260,6 +265,7 @@ grep -L '^<span className="db-tier' <dir>/*.md   # every page has a tier badge
 grep -L '^> Verified:' <dir>/*.md                # every page has provenance
 grep -rln '^{/\* FOOTER \*/}$' <dir>            # 🔴 must be EMPTY at topic close
 grep -h '^sidebar_position:' <dir>/*.md | sort -n | uniq -d   # must print nothing
+grep -H '^sidebar_\(position\|label\):' <dir>/README.md       # must be 0 and "Overview"
 python3 /mnt/Storage/my-learning/claude/shared/scripts/mdxcheck.py --no-rawtag <dir>
 ```
 
