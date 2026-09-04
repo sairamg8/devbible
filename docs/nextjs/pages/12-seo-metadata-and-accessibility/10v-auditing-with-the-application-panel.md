@@ -1,7 +1,7 @@
 ---
 title: "Chrome's Application panel is what replaced the PWA audit, and its Manifest and Service Workers panes answer questions no automated test can — provided you leave its three checkboxes in the state you found them"
 sidebar_label: "10v · Auditing with the Application panel"
-sidebar_position: 29
+sidebar_position: 53
 description: "The Manifest and Service Workers panes: what each one actually tells you about a Next.js PWA, what a missing Installability section does and does not prove, and the emulation checkboxes that lie to you if left on."
 ---
 
@@ -284,4 +284,4 @@ production is entirely consistent.
 
 ---
 
-← [10u · The Lighthouse PWA category is gone](10u-the-lighthouse-pwa-category-is-gone.md) · Next → [10w · A testable environment](10w-a-testable-environment-https-and-a-production-build.md)
+← [The Lighthouse PWA category is gone](10u-the-lighthouse-pwa-category-is-gone.md) · [Chapter 12 overview](01-explanation.md) · Next → [A testable environment](10w-a-testable-environment-https-and-a-production-build.md)

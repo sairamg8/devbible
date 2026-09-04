@@ -281,4 +281,6 @@ then the segment's `generateMetadata` or `metadata` object, then whatever ancest
 contributed and the child did not override. Within the object layer, resolution runs root to
 leaf with a shallow merge.
 
-{/* FOOTER */}
+---
+
+← [Chapter 12 overview](01-explanation.md) · [Chapter 12 overview](01-explanation.md) · Next → [The title algebra and the viewport export](01b-the-title-algebra-and-the-viewport-export.md)

@@ -1,7 +1,7 @@
 ---
 title: "Almost every PWA technique works on iOS, but only after the user manually adds the app to the Home Screen, and that one condition invalidates most published advice"
 sidebar_label: "10p · iOS and Safari limits"
-sidebar_position: 22
+sidebar_position: 46
 description: "The 16.4 floor, no beforeinstallprompt, push only for Home Screen web apps, the separate storage container, the seven-day script-writable storage cap and its carve-out."
 ---
 
@@ -245,4 +245,4 @@ screenshot of your page used as the icon.
 
 ---
 
-← [10o · Push in the service worker](10o-push-in-the-service-worker.md) · [Chapter 12 overview](01-explanation.md) · Next → [10q · iOS storage and app containers](10q-ios-storage-and-installed-app-containers.md)
+← [Push in the service worker](10o-push-in-the-service-worker.md) · [Chapter 12 overview](01-explanation.md) · Next → [iOS storage and app containers](10q-ios-storage-and-installed-app-containers.md)

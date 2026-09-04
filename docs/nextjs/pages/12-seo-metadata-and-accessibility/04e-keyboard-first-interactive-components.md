@@ -1,7 +1,7 @@
 ---
 title: "The tab sequence is your DOM order and nothing else you can safely change, and a composite widget contributes exactly one tab stop — nine buttons in a toolbar should be one Tab press and eight arrow presses"
 sidebar_label: "04e · Keyboard-first components"
-sidebar_position: 117
+sidebar_position: 22
 description: "tabindex semantics and why positive values are forbidden, DOM order as both tab sequence and reading order, where focus lands on entering each widget class, the roving tabindex algorithm in full, and what aria-activedescendant makes you implement yourself."
 ---
 
@@ -170,4 +170,6 @@ One. The APG states that the tab sequence should include only one focusable elem
 **★ When would you use `aria-activedescendant` instead, and what do you take on?**
 When DOM focus needs to stay somewhere else — the classic case is a combobox where focus must remain in the text input while the user arrows through options, and a virtualised list where the "focused" option may not be in the DOM as a stable element. What you take on is everything the user agent was doing for you: the APG notes that with roving tabindex the browser scrolls the newly focused element into view, and with `aria-activedescendant` nothing has real focus, so you must scroll the active item into view and draw the focus indicator yourself.
 
-{/* FOOTER */}
+---
+
+← [Hydration-safe accessible markup](04d-hydration-safe-accessible-markup.md) · [Chapter 12 overview](01-explanation.md) · Next → [Dialogs, focus restoration and focus visibility](04f-dialogs-focus-restoration-and-focus-visibility.md)

@@ -1,7 +1,7 @@
 ---
 title: "Open Graph is a flat vocabulary of namespaced meta tags and the Metadata API models it as a nested object — every rule for flattening that object back out is a place a social preview silently loses a field"
 sidebar_label: "02 · The Open Graph block"
-sidebar_position: 2
+sidebar_position: 8
 description: "The openGraph block as the Metadata API actually models it: which keys emit which tags, which keys emit several, how type changes the legal field set, the shallow-merge trap that costs a leaf page its site name, and the four properties the protocol requires that Next.js will never make you supply."
 ---
 
@@ -220,4 +220,6 @@ The array emits two separate `<meta property="article:author">` tags, one per el
 **★ Which is authoritative when a segment has both `opengraph-image.png` and `metadata.openGraph.images`?**
 The file. File-based metadata has higher priority than both the `metadata` object and `generateMetadata`. This is the intended design — the docs recommend the file convention precisely so you do not have to keep a config export in sync with files on disk — but it produces a genuinely confusing debugging session when someone dropped an `opengraph-image.png` into a segment months ago and your computed images are being discarded. The check is a file listing of the segment and its ancestors, not a read of the metadata code.
 
-{/* FOOTER */}
+---
+
+← [File metadata, the 404 route and the insight](01g-file-metadata-the-404-route-and-debugging-the-insight.md) · [Chapter 12 overview](01-explanation.md) · Next → [Twitter cards and the companion blocks](02b-twitter-cards-and-the-companion-blocks.md)

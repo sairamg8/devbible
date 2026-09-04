@@ -1,7 +1,7 @@
 ---
 title: "The bug that defines a production PWA — every user stranded on the build you replaced last Tuesday — takes two builds and one open tab to reproduce, and no audit that loads a page once can ever see it"
 sidebar_label: "10x · Reproducing the update bug"
-sidebar_position: 31
+sidebar_position: 55
 description: "Forcing the waiting-worker bug with two builds, forcing the skipWaiting chunk failure, and the harness that tells you which build is actually answering a tab."
 ---
 
@@ -289,4 +289,4 @@ under-reported and hard to attribute.
 
 ---
 
-← [10w · A testable environment](10w-a-testable-environment-https-and-a-production-build.md) · Next → [10y · Testing offline, and what the cache really holds](10y-testing-offline-and-what-the-cache-really-holds.md)
+← [A testable environment](10w-a-testable-environment-https-and-a-production-build.md) · [Chapter 12 overview](01-explanation.md) · Next → [Testing offline and the cache](10y-testing-offline-and-what-the-cache-really-holds.md)

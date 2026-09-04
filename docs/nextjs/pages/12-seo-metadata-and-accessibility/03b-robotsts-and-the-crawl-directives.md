@@ -1,7 +1,7 @@
 ---
 title: "`robots.txt` controls crawling and cannot control indexing, so the file everyone reaches for to hide a page is the one file that guarantees the crawler never sees the `noindex` telling it to"
 sidebar_label: "03b · robots.ts and crawl directives"
-sidebar_position: 111
+sidebar_position: 15
 description: "The MetadataRoute.Robots type, the array form and its required userAgent, the 16.3 `other` field for non-standard directives, why Disallow is not noindex, and the environment-driven robots.ts that keeps a preview deployment out of the index."
 ---
 
@@ -253,4 +253,6 @@ Return a blanket `disallow: '/'` when a build-time environment variable says the
 **★ Where does the per-route `noindex` live, and why is a layout the right place for it?**
 In `metadata.robots` on the segment, which emits `<meta name="robots">` and a separate `<meta name="googlebot">` when the `googleBot` sub-object is set. A layout is right for an authenticated area because metadata inherits: one declaration in `app/dashboard/layout.tsx` covers every route beneath it, and a new page added to that subtree is protected by default rather than by remembering. That is the mirror image of `alternates.canonical`, where inheritance from a layout is the bug — the test is whether the value is a property of the subtree or of the individual page.
 
-{/* FOOTER */}
+---
+
+← [`sitemap.ts`](03-sitemapts-and-robotsts-automation-localized-metadata-for-i18.md) · [Chapter 12 overview](01-explanation.md) · Next → [Splitting a sitemap and the 50,000-URL rule](03c-splitting-a-sitemap-generatesitemaps-and-the-50000-url-rule.md)

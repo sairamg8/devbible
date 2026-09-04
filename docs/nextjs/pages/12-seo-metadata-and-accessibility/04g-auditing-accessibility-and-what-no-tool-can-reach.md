@@ -1,7 +1,7 @@
 ---
 title: "Automated accessibility testing finds a documented minority of problems, Lighthouse's own scoring excludes every manual check from the number, and the checks it excludes are precisely the ones this chapter has been about"
 sidebar_label: "04g · Auditing accessibility"
-sidebar_position: 119
+sidebar_position: 24
 description: "What axe and Playwright actually detect, Lighthouse's weighted-average scoring with no partial credit and its excluded manual list, wiring jsx-a11y after next lint was removed, the keyboard pass that costs five minutes, and building an a11y gate that fails builds."
 ---
 
@@ -189,4 +189,6 @@ Unplug the mouse and Tab from top to bottom. Watch for four things: that you can
 **★ Is it safe to say Next.js ships accessibility linting?**
 No, and this is a case where the documentation contradicts itself. The architecture page, last reviewed in November 2024, says `eslint-plugin-jsx-a11y` is included by default; the current ESLint reference describes `eslint-config-next` without it, while separately warning that jsx-a11y can conflict if you configure it. Without an installed copy to inspect there is no way to settle which is current, so the honest answer is "unresolved". What *is* settled makes the question mostly academic: `next lint` was removed in 16.0 and `next build` no longer lints, so whatever is bundled, nothing runs it during a build. Configure it yourself.
 
-{/* FOOTER */}
+---
+
+← [Dialogs, focus restoration and focus visibility](04f-dialogs-focus-restoration-and-focus-visibility.md) · [Chapter 12 overview](01-explanation.md) · Next → [SEO pitfalls in RSC and streaming setups](05-common-seo-pitfalls-in-rsc-streaming-setups-and-automated-au.md)

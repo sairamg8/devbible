@@ -1,7 +1,7 @@
 ---
 title: "A Next.js PWA is a manifest route, an HTTPS origin and an install affordance — the service worker is a separate decision entirely"
 sidebar_label: "10 · Progressive Web Apps"
-sidebar_position: 7
+sidebar_position: 31
 description: "What actually makes a Next.js app installable: app/manifest.ts as a metadata route, the manifest fields that change behaviour, icons, and why the install prompt is not something you can rely on."
 ---
 
@@ -293,3 +293,7 @@ is relying on an implementation detail; ship one file.
 ---
 
 [Chapter 12 overview](01-explanation.md) · Next → [10b · Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md)
+
+---
+
+← [The a11y pass and the acceptance criteria](06c-the-a11y-pass-and-the-acceptance-criteria.md) · [Chapter 12 overview](01-explanation.md) · Next → [Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md)

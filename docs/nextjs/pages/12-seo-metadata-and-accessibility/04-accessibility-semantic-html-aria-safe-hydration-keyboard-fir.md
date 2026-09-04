@@ -1,7 +1,7 @@
 ---
 title: "Accessibility is a second rendering of your page — the accessibility tree — and semantic HTML is the only way to build it that does not require you to maintain it by hand; the framework contributes almost nothing and its one accessibility page has not been reviewed since 2024"
 sidebar_label: "04 · Semantic HTML and the a11y tree"
-sidebar_position: 4
+sidebar_position: 18
 description: "The accessibility tree and name/role/value, what Next.js actually provides (a route announcer and a linting claim that is now stale), landmarks and why a nameless section is not one, the skip link, and headings as a cross-component contract that RSC makes harder."
 ---
 
@@ -206,4 +206,6 @@ The grouping itself. WCAG 1.3.1 requires that structure and relationships convey
 **★ How do you handle heading levels in a component reused at different depths, and why is the obvious React answer wrong here?**
 Take the level as a prop with a sensible default and build the tag name — `const Heading = \`h${level}\`` — because a heading level is a fact about the page's outline, not about the component. The obvious React answer is a context provider carrying the current depth, and it is wrong in an RSC codebase for a mechanical reason: consuming context requires a Client Component, so every card that reads the level becomes client code and drags its subtree across the boundary. The prop works identically in a Server Component and costs nothing.
 
-{/* FOOTER */}
+---
+
+← [Localized metadata for i18n routes](03d-localized-metadata-for-i18n-routes.md) · [Chapter 12 overview](01-explanation.md) · Next → [Links, buttons, forms and the `alt` decision](04b-links-buttons-forms-and-the-alt-decision.md)

@@ -1,7 +1,7 @@
 ---
 title: "`useOffline` and a service worker solve two different halves of offline, and a team that conflates them ships the one that does not fix their bug"
 sidebar_label: "10i · Offline strategy and the `useOffline` boundary"
-sidebar_position: 15
+sidebar_position: 39
 description: "Why experimental.useOffline stops at the document request, what a service worker has to answer instead, and the offline fallback page that is the honest minimum."
 ---
 
@@ -275,4 +275,4 @@ offline page — which is a legitimate choice, but it should be a choice rather 
 
 ---
 
-← [10h · Update detection and recovery](10h-service-worker-update-detection-and-recovery.md) · [Chapter 12 overview](01-explanation.md) · Next → [10j · Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md)
+← [Update detection and recovery](10h-service-worker-update-detection-and-recovery.md) · [Chapter 12 overview](01-explanation.md) · Next → [Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md)

@@ -1,7 +1,7 @@
 ---
 title: "Four element-level decisions carry most of the accessibility defects in a React codebase — link or button, labelled or placeholdered, table or grid of divs, and what `alt` should say — and none of them are visible in a screenshot"
 sidebar_label: "04b · Links, buttons, forms, alt"
-sidebar_position: 114
+sidebar_position: 19
 description: "Link versus button and why a clickable div fails two success criteria at once, the type=submit default, form labelling and aria-describedby, error announcement with role=alert, table semantics, and the alt decision as a four-way table."
 ---
 
@@ -249,4 +249,6 @@ Because CSS display values do not create semantics in the accessibility tree; th
 **★ You inherit a page with eleven "Read more" links. Why is that a defect, and what is the smallest fix?**
 Because assistive technology offers a links list as a primary navigation mode, and out of context eleven identical names are eleven indistinguishable destinations. WCAG 2.4.4 allows the purpose to come from the link text *or* its programmatically determined context, so a link inside an article whose heading precedes it is arguably passing — but "arguably passing" is not the goal. The smallest real fix is a visually-hidden suffix carrying the subject, which changes the accessible name without changing the design: `Read more<span className="sr-only"> about billing</span>`.
 
-{/* FOOTER */}
+---
+
+← [Accessibility: semantic HTML](04-accessibility-semantic-html-aria-safe-hydration-keyboard-fir.md) · [Chapter 12 overview](01-explanation.md) · Next → [ARIA is a promise you then have to keep](04c-aria-is-a-promise-you-then-have-to-keep.md)

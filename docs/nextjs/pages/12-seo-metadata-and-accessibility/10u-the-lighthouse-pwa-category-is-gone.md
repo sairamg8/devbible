@@ -1,7 +1,7 @@
 ---
 title: "The tool every PWA checklist tells you to run has not had a PWA category since Lighthouse 12, and the reason it was deleted is the same reason most published checklists are now wrong"
 sidebar_label: "10u · The Lighthouse PWA category is gone"
-sidebar_position: 28
+sidebar_position: 52
 description: "Lighthouse 12.0.0 removed the PWA category because Chrome's installability criteria changed, what that does to a CI gate keyed on it, and the three-layer audit that replaces it."
 ---
 
@@ -288,4 +288,4 @@ exactly wrong.
 
 ---
 
-← [10t2 · The foreground floor](10t2-the-foreground-floor-and-draining-without-background-sync.md) · [Chapter 12 overview](01-explanation.md) · Next → [10v · Auditing with the Application panel](10v-auditing-with-the-application-panel.md)
+← [The foreground floor](10t2-the-foreground-floor-and-draining-without-background-sync.md) · [Chapter 12 overview](01-explanation.md) · Next → [Auditing with the Application panel](10v-auditing-with-the-application-panel.md)

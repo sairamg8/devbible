@@ -1,7 +1,7 @@
 ---
 title: "A component that takes focus must give it back, `aria-hidden` on the page behind a modal is the wrong tool because it leaves the background tabbable, and two of WCAG 2.2's new criteria are about the sticky header rather than the component"
 sidebar_label: "04f · Dialogs and focus restoration"
-sidebar_position: 118
+sidebar_position: 23
 description: "The APG modal dialog contract in full, why the native dialog with showModal() is the cheapest correct implementation, inert versus aria-hidden, capturing and restoring the invoker, :focus-visible, WCAG 2.4.11 and 2.5.8, and focus after a client-side route change."
 ---
 
@@ -207,4 +207,6 @@ Because `showModal()` supplies the focus trap, Escape handling, the top layer an
 **★ How should focus be handled after a client-side route change in the App Router?**
 Carefully, and only after testing with a real screen reader. Next.js ships a route announcer that reads the new page's name from `document.title`, then the `<h1>`, then the pathname — but its documentation describes announcement and says nothing about focus, so you should not assume focus is being managed. The common remedy is an Effect keyed on `usePathname` that focuses a `tabIndex={-1}` `<main>`, and the caution is real: it can interrupt the announcer mid-sentence and it overrides the browser's own restoration on a back-navigation. The mechanism that always works and never fights anything is the skip link.
 
-{/* FOOTER */}
+---
+
+← [Keyboard-first interactive components](04e-keyboard-first-interactive-components.md) · [Chapter 12 overview](01-explanation.md) · Next → [Auditing a11y and what no tool can reach](04g-auditing-accessibility-and-what-no-tool-can-reach.md)

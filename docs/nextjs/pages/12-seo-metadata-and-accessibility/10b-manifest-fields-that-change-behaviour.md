@@ -1,7 +1,7 @@
 ---
 title: "Most manifest members are decoration; six of them decide where a launch lands, what the window looks like and whether an update is an update"
 sidebar_label: "10b · Manifest fields that change behaviour"
-sidebar_position: 8
+sidebar_position: 32
 description: "start_url, scope, display, display_override, id, icons and theme_color — the manifest members with real consequences, and the ones that fail silently."
 ---
 
@@ -202,4 +202,4 @@ sit outside a prefix you never explicitly set, because you left `scope` to be in
 
 ---
 
-← [10 · Progressive Web Apps](10-progressive-web-apps.md) · [Chapter 12 overview](01-explanation.md) · Next → [10c · Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md)
+← [Progressive Web Apps](10-progressive-web-apps.md) · [Chapter 12 overview](01-explanation.md) · Next → [Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md)

@@ -1,7 +1,7 @@
 ---
 title: "Streaming sends the status code before it knows the answer, so a 404 in the App Router is a 200 with a `noindex` tag in the body — and the SEO pitfalls of an RSC app are almost all consequences of that one ordering fact"
 sidebar_label: "05 · SEO pitfalls in RSC apps"
-sidebar_position: 5
+sidebar_position: 25
 description: "Why crawlers no longer need SSR arguments, the streamed-404 status code and the noindex Next.js inserts, when the response body starts streaming and where notFound() must go, the shell-versus-request-time-data trap, and the client-only content crawlers do get."
 ---
 
@@ -181,4 +181,6 @@ Not with a normal uptime probe, because the page renders fine for a browser User
 **★ Someone proposes disabling streaming metadata site-wide to make debugging simpler. Argue both sides.**
 For: it makes every response's `<head>` complete before the body, so `curl` with any User-Agent shows the truth, and any scraper outside the bot list gets tags where it expects them — which is the correct fix if you have a real consumer that only parses `<head>`. Against: the documentation is explicit that the blocking path costs TTFB, because the whole document waits on `generateMetadata`, and that cost lands on every dynamically rendered route including the ones no crawler visits. The proportionate move is to fix the specific case — add the agent, or make that route's metadata static — and keep streaming for everything else.
 
-{/* FOOTER */}
+---
+
+← [Auditing a11y and what no tool can reach](04g-auditing-accessibility-and-what-no-tool-can-reach.md) · [Chapter 12 overview](01-explanation.md) · Next → [Canonicals, duplicate URLs and redirect hygiene](05b-canonicals-duplicate-urls-and-redirect-hygiene.md)

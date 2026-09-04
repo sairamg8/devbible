@@ -1,7 +1,7 @@
 ---
 title: "A service worker is a separate program with its own lifecycle that Next.js does not manage for you, and the two places you can put its file behave differently"
 sidebar_label: "10f · Service workers in the App Router"
-sidebar_position: 12
+sidebar_position: 36
 description: "Where the worker file lives, the scope rule and Service-Worker-Allowed, updateViaCache, the install/waiting/activate lifecycle, and why skipWaiting is not a default."
 ---
 
@@ -243,4 +243,4 @@ needs properly issued certificates.
 
 ---
 
-← [10e · Detecting install state](10e-detecting-install-state.md) · [Chapter 12 overview](01-explanation.md) · Next → [10g · The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md)
+← [Detecting install state](10e-detecting-install-state.md) · [Chapter 12 overview](01-explanation.md) · Next → [The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md)

@@ -1,7 +1,7 @@
 ---
 title: "The service worker is the only place a push message can become something a user sees, and both of its handlers have a default that is wrong for an installed app"
 sidebar_label: "10o · Push in the service worker"
-sidebar_position: 21
+sidebar_position: 45
 description: "The push handler and the userVisibleOnly promise, icon versus badge, tag as a collapse key, focusing an existing client on notificationclick, and testing over HTTPS."
 ---
 
@@ -172,4 +172,4 @@ this is development-only and production needs properly issued certificates.
 
 ---
 
-← [10n · Sending push from the server](10n-sending-push-from-the-server.md) · [Chapter 12 overview](01-explanation.md) · Next → [10p · iOS and Safari limits](10p-ios-and-safari-limits.md)
+← [Sending push from the server](10n-sending-push-from-the-server.md) · [Chapter 12 overview](01-explanation.md) · Next → [iOS and Safari limits](10p-ios-and-safari-limits.md)

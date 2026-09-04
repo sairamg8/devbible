@@ -1,7 +1,7 @@
 ---
 title: "An `opengraph-image` file outranks anything you compute in `generateMetadata`, and the moment it becomes a `.tsx` it stops being an image and becomes a cached Route Handler with route segment config, a promise-typed `params` and a size limit that fails the build"
 sidebar_label: "02d · The OG image file conventions"
-sidebar_position: 108
+sidebar_position: 11
 description: "opengraph-image and twitter-image as files and as code: the tags each form emits, the alt.txt companion, the 8MB/5MB build failure, the alt/size/contentType module exports, params as a promise since 16.0, generateImageMetadata, and what 'statically optimized by default' really costs."
 ---
 
@@ -237,4 +237,6 @@ Export `generateImageMetadata` returning an array in which every item has a requ
 **★ A route's OG image renders the word `undefined`. Walk through the diagnosis.**
 Almost always `params`. It became a promise in 16.0, so code migrated from 15 that destructures `{ slug }` directly gets `undefined` and happily renders it — there is no runtime error because `undefined` is a legal React child once interpolated into a string. The second candidate is the opposite mistake: awaiting `params` in a segment that has no dynamic parameters, where it is `undefined` rather than a promise and the `await` throws instead. Both are visible in one line of the file; neither is visible in the built HTML, because the tag only says the image exists.
 
-{/* FOOTER */}
+---
+
+← [JSON-LD and structured data](02c-json-ld-and-structured-data.md) · [Chapter 12 overview](01-explanation.md) · Next → [`ImageResponse` and its hard limits](02e-imageresponse-and-its-hard-limits.md)

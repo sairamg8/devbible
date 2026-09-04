@@ -1,7 +1,7 @@
 ---
 title: "`ImageResponse` renders JSX with an engine that is not a browser — flexbox only, no grid, a 500 KB bundle ceiling and three font formats — so every layout instinct you have from CSS is a hypothesis you cannot test in a browser"
 sidebar_label: "02e · ImageResponse and its limits"
-sidebar_position: 109
+sidebar_position: 12
 description: "What next/og actually is (Satori plus Resvg), the CSS subset it supports, the 500KB bundle ceiling that counts fonts and images, the three legal font formats, loading local assets at module scope, and the options nobody reads — debug, emoji, status and headers."
 ---
 
@@ -206,4 +206,6 @@ Not generate 40,000 images at build. Either pair `opengraph-image.tsx` with `gen
 **★ What is the risk in exposing an `/api/og?title=` route?**
 It is an unauthenticated compute endpoint that renders attacker-supplied text into an image on your origin. The obvious cost is the bill; the less obvious one is that the rendered text appears on a URL under your domain, which makes it a small content-injection surface for anyone who can get someone to click a link. The mitigations are bounding the input, signing the parameters so only URLs your application generated are honoured, and caching hard. Where the input is a route parameter you already control, the file convention avoids the question entirely.
 
-{/* FOOTER */}
+---
+
+← [The `opengraph-image` file conventions](02d-the-opengraph-image-and-twitter-image-file-conventions.md) · [Chapter 12 overview](01-explanation.md) · Next → [What the unfurlers actually fetch](02f-what-the-unfurlers-actually-fetch.md)

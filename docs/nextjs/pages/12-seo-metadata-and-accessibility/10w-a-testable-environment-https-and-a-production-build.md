@@ -1,7 +1,7 @@
 ---
 title: "Almost every 'my PWA does not work' report is a test environment problem: a development server, an origin that is not a secure context, or a zombie worker from a project you stopped working on last March"
 sidebar_label: "10w · A testable environment"
-sidebar_position: 30
+sidebar_position: 54
 description: "Why localhost needs no TLS but your phone does, why offline must be tested against next build && next start, and how to guarantee a genuinely clean origin before every run."
 ---
 
@@ -297,4 +297,4 @@ page as well; the cost is one function call and it converts a silent wrong resul
 
 ---
 
-← [10v · Auditing with the Application panel](10v-auditing-with-the-application-panel.md) · Next → [10x · Reproducing the failures deliberately](10x-reproducing-the-failures-deliberately.md)
+← [Auditing with the Application panel](10v-auditing-with-the-application-panel.md) · [Chapter 12 overview](01-explanation.md) · Next → [Reproducing the update bug](10x-reproducing-the-failures-deliberately.md)

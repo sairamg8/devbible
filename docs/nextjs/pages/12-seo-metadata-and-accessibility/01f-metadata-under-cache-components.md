@@ -1,7 +1,7 @@
 ---
 title: "With Cache Components on, metadata that reaches for request data on an otherwise-static route is a build error — and the fix you pick determines whether the page keeps its static shell"
 sidebar_label: "01f · Metadata under Cache Components"
-sidebar_position: 104
+sidebar_position: 6
 description: "The two blocking-prerender-metadata errors and why they are different; use cache with cacheTag on generateMetadata; the Suspense-wrapped connection() dynamic marker and why the boundary is mandatory; and the _not-found route that no marker can rescue."
 ---
 
@@ -45,7 +45,7 @@ stream, so its dynamic escape is a `<Suspense>` around the document body rather 
 component ([01b](01b-the-title-algebra-and-the-viewport-export.md)). Two consequences of this
 model that are big enough to have their own page — the 404 route that no fix reaches, and the
 file conventions that go dynamic without any code of yours — are in
-**01g · File metadata, the 404 route and debugging the insight** *(not written yet)*.
+[01g · File metadata, the 404 route and the insight](01g-file-metadata-the-404-route-and-debugging-the-insight.md).
 
 ## Fix 1 — make it static
 
@@ -229,4 +229,6 @@ content, which permits the dynamic metadata. The boundary confines that signal: 
 dynamic dependency propagates to the parent and the entire page is treated as blocking, which
 reproduces the original error. With it, everything outside the boundary still prerenders.
 
-{/* FOOTER */}
+---
+
+← [Streaming metadata and HTML-limited bots](01e-streaming-metadata-and-html-limited-bots.md) · [Chapter 12 overview](01-explanation.md) · Next → [File metadata, the 404 route and the insight](01g-file-metadata-the-404-route-and-debugging-the-insight.md)

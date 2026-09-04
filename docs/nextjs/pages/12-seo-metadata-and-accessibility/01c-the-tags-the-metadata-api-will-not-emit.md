@@ -1,7 +1,7 @@
 ---
 title: "Two head tags are always emitted, six are permanently refused, and the refusals are design decisions with a documented replacement each"
 sidebar_label: "01c · The tags the API will not emit"
-sidebar_position: 101
+sidebar_position: 3
 description: "The charset and viewport tags Next always writes; the unsupported-metadata table and why each entry is refused; resource hints through ReactDOM rather than metadata; and the `other` escape hatch, including what it cannot do."
 ---
 
@@ -92,7 +92,7 @@ export default config
 `next/script` component exists to schedule the *execution* of JavaScript. A
 `type="application/ld+json"` block is inert data that the browser never executes, so the
 JSON-LD guide tells you to render a bare `<script>` tag in the component tree — see
-**02c · JSON-LD and structured data** *(not written yet)* for the escaping you must do when you take that
+[02c · JSON-LD and structured data](02c-json-ld-and-structured-data.md) for the escaping you must do when you take that
 route.
 
 ## Resource hints are a React API, not a metadata field
@@ -227,4 +227,6 @@ declared within the first 1024 bytes of the document to be honoured reliably —
 heads get this wrong by putting a non-ASCII `<title>` above it, and the framework emitting it
 first removes the whole failure mode.
 
-{/* FOOTER */}
+---
+
+← [The title algebra and the viewport export](01b-the-title-algebra-and-the-viewport-export.md) · [Chapter 12 overview](01-explanation.md) · Next → [`metadataBase` and the parent promise](01d-metadatabase-url-composition-and-the-parent-promise.md)

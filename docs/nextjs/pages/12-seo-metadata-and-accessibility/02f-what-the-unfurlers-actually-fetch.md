@@ -1,7 +1,7 @@
 ---
 title: "Your preview is stale because a scraper fetched the page once, keyed the image by URL and will not look again — and every debugger you reach for is also a cache-buster, which is why the bug disappears the moment you try to reproduce it"
 sidebar_label: "02f · What the unfurlers fetch"
-sidebar_position: 110
+sidebar_position: 13
 description: "The scraper as a client: which crawlers Next.js gives blocking metadata to, Meta's documented URL-keyed image cache, the 1 MB and few-seconds budgets, why the debugger fixes the bug it is meant to diagnose, and how to cache-bust a generated OG image deliberately."
 ---
 
@@ -169,4 +169,6 @@ Yes, and it is the normal state of things rather than an anomaly. The debugger t
 **★ Your OG image is generated per-post and the pages are dynamically rendered. What is the worst-case cost profile?**
 Every scrape of every share triggers a render of the page's metadata and, if the image handler is also dynamic, a Satori render of a PNG. Scrapes are not once per URL — platforms re-scrape, and every re-share by a new user can trigger one. The mitigation stack is: make the metadata static or cached so the head is cheap; make the image handler statically optimised, or give it explicit long-lived cache headers through `ImageResponse`'s `headers` option ([02e](02e-imageresponse-and-its-hard-limits.md)); and accept a static per-section image for the long tail where per-post branding earns nothing.
 
-{/* FOOTER */}
+---
+
+← [`ImageResponse` and its hard limits](02e-imageresponse-and-its-hard-limits.md) · [Chapter 12 overview](01-explanation.md) · Next → [`sitemap.ts`](03-sitemapts-and-robotsts-automation-localized-metadata-for-i18.md)

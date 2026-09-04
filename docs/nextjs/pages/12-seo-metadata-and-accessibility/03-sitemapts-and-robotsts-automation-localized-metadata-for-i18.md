@@ -1,7 +1,7 @@
 ---
 title: "`sitemap.ts` is a cached Route Handler that returns an array, not a file you maintain — and two of the four fields it lets you set are ignored by the search engine you are writing it for"
 sidebar_label: "03 · sitemap.ts"
-sidebar_position: 3
+sidebar_position: 14
 description: "The MetadataRoute.Sitemap return type field by field, why sitemap.ts is cached by default and what makes it dynamic, which fields Google actually reads, image and video sitemaps, and how to build one from a database without shipping a 50,000-row query."
 ---
 
@@ -231,4 +231,6 @@ Because `metadataBase` composition is a feature of the *metadata* pipeline, appl
 **★ How do you keep a sitemap from advertising URLs that 404?**
 By deriving it from the same predicate the pages use, not from a parallel query. If the blog index renders `published: true, deletedAt: null`, the sitemap must use that same filter — best expressed as one exported function both call. The failure is always divergence: someone adds a `scheduledFor` check to the listing page and not to the sitemap, and six months later the console reports a few hundred URLs returning 404 with no obvious cause. Treating the sitemap as a *view over the same data* rather than a second implementation is the whole discipline.
 
-{/* FOOTER */}
+---
+
+← [What the unfurlers actually fetch](02f-what-the-unfurlers-actually-fetch.md) · [Chapter 12 overview](01-explanation.md) · Next → [`robots.ts` and the crawl directives](03b-robotsts-and-the-crawl-directives.md)

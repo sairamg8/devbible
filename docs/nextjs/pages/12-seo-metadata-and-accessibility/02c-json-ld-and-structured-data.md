@@ -1,7 +1,7 @@
 ---
 title: "JSON-LD is the one piece of SEO markup the Metadata API refuses to emit for you, so you render the `script` tag yourself — and `JSON.stringify` alone makes that an XSS sink the documentation warns about in its own example"
 sidebar_label: "02c · JSON-LD and structured data"
-sidebar_position: 107
+sidebar_position: 10
 description: "Why structured data is a bare script tag in the component tree rather than a metadata field, the escaping the docs mandate and the attack it stops, why next/script is the wrong tool, why metadataBase does not reach inside the payload, and typing with schema-dts."
 ---
 
@@ -206,4 +206,6 @@ When the entities on the page reference each other and you want the relationship
 **★ A page renders JSON-LD inside a `<Suspense>` boundary that waits on a slow review-count query. What is the risk?**
 The script tag is emitted only when that component resolves, so it arrives late in the streamed response. A crawler that executes JavaScript and waits for the full document will see it; one that reads the initial HTML will not, and neither will any consumer whose fetch times out first — Meta's crawler documentation, for example, requires content to be crawlable "within a few seconds". The fix is not to disable streaming; it is to build the structured-data object from data the page already has and render the block outside the boundary, leaving the slow query to affect only the UI it belongs to.
 
-{/* FOOTER */}
+---
+
+← [Twitter cards and the companion blocks](02b-twitter-cards-and-the-companion-blocks.md) · [Chapter 12 overview](01-explanation.md) · Next → [The `opengraph-image` file conventions](02d-the-opengraph-image-and-twitter-image-file-conventions.md)

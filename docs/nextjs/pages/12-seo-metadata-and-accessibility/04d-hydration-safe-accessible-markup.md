@@ -1,7 +1,7 @@
 ---
 title: "React gives no guarantee that mismatched attributes are patched up after hydration, so an `aria-*` value that differs between server and client can stay wrong in the live DOM with nothing but a development warning to show for it"
 sidebar_label: "04d · Hydration-safe a11y markup"
-sidebar_position: 116
+sidebar_position: 21
 description: "useId and why every aria-labelledby needs it, the identical-tree requirement, the attribute-mismatch guarantee React explicitly does not make, suppressHydrationWarning's one-level limit, two-pass rendering, and doing prefers-reduced-motion in CSS instead."
 ---
 
@@ -245,4 +245,6 @@ It is a hydration mismatch by construction — the server has no media queries, 
 **★ Duplicate `id`s no longer fail a WCAG criterion. Does that mean they are fine?**
 No. WCAG 2.2 lists 4.1.1 Parsing as obsolete and removed, so duplicate ids are not a conformance failure in themselves — modern browsers recover from them consistently, which is why the criterion went away. But the *consequences* still fail 4.1.2 Name, Role, Value: `aria-labelledby`, `aria-describedby` and `htmlFor` all resolve to the first matching element, so in a component rendered twice the second instance's relationships silently point at the first instance's elements. The criterion changed; the bug did not.
 
-{/* FOOTER */}
+---
+
+← [ARIA is a promise you then have to keep](04c-aria-is-a-promise-you-then-have-to-keep.md) · [Chapter 12 overview](01-explanation.md) · Next → [Keyboard-first interactive components](04e-keyboard-first-interactive-components.md)

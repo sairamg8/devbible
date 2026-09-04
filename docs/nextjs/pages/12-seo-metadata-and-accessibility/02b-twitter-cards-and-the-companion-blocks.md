@@ -1,7 +1,7 @@
 ---
 title: "The `twitter` block is a second vocabulary rather than a copy of `openGraph`, it uses `name=` where Open Graph uses `property=`, and four smaller blocks ride along in the same object with rules of their own"
 sidebar_label: "02b · Twitter cards and companions"
-sidebar_position: 106
+sidebar_position: 9
 description: "The twitter namespace and why it is not a duplicate of openGraph, the name= versus property= split that breaks hand-written tags and head assertions, the app card's fan-out, and the alternates / facebook / pinterest / robots / other blocks."
 ---
 
@@ -213,4 +213,6 @@ No. `other` emits `<meta name>` and only that. There is no metadata field that e
 **★ Where should `alternates.canonical` be declared, and what goes wrong if you put it in a layout?**
 In the leaf, almost always computed from `params` in `generateMetadata`. Metadata inherits, so a canonical declared in a layout is emitted by every route beneath it, and every one of those routes then tells crawlers that its content really lives at the layout's URL. The visible symptom is a whole section of the site collapsing to a single indexed URL, with the rest reported as duplicates — and because a canonical is a *hint* rather than a directive, the behaviour is inconsistent enough between engines that it is often misdiagnosed as a crawl-budget problem.
 
-{/* FOOTER */}
+---
+
+← [Open Graph](02-open-graph-twitter-cards-structured-json-ld.md) · [Chapter 12 overview](01-explanation.md) · Next → [JSON-LD and structured data](02c-json-ld-and-structured-data.md)

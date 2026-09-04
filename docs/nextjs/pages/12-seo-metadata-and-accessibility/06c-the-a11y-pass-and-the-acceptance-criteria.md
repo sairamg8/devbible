@@ -1,7 +1,7 @@
 ---
 title: "The board is the hardest thing in SprintDesk to make accessible because drag-and-drop has no keyboard equivalent you get for free — and the milestone is not done until a keyboard-only user can move a card, which is a criterion no tool in the pipeline will check"
 sidebar_label: "06c · A11y pass and acceptance"
-sidebar_position: 123
+sidebar_position: 30
 description: "The accessibility pass over SprintDesk's board — headings, landmarks, the column as a labelled region, a keyboard-operable move, live-region announcements — plus the full acceptance criteria for the milestone and the ones only a human can sign off."
 ---
 
@@ -221,4 +221,6 @@ Because the alternative failure is silent and expensive. A default of `http://lo
 **★ How would you convince a team to keep the manual pass after the first release?**
 By making it small and specific rather than a virtue. It is five checks, it takes about five minutes, and it is written down as steps rather than as a principle — unplug the mouse, Tab through the board, move a card, open and close the dialog, watch where focus lands. The argument that lands is the asymmetry: the automated suite catches the failures that are cheap to fix and cheap to find, and this five minutes catches the ones that make the product unusable for a whole class of user. A checklist item with an owner survives; "we care about accessibility" does not.
 
-{/* FOOTER */}
+---
+
+← [The per-route work](06b-the-per-route-work.md) · [Chapter 12 overview](01-explanation.md) · Next → [Progressive Web Apps](10-progressive-web-apps.md)

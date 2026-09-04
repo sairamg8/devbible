@@ -1,7 +1,7 @@
 ---
 title: "The App Router makes it trivially easy to serve one piece of content at an unbounded number of URLs — search params, optional catch-alls, trailing slashes and locale prefixes each multiply the address space, and only one of those multiplications is visible in your route tree"
 sidebar_label: "05b · Canonicals and duplicate URLs"
-sidebar_position: 120
+sidebar_position: 26
 description: "Where duplicate URLs come from in an App Router app, computing a canonical from params, why searchParams must usually be excluded, trailing slash and case, redirect chains, and the difference between a canonical hint and a directive."
 ---
 
@@ -176,4 +176,6 @@ In the leaf `page.tsx`, normally computed from `params` in `generateMetadata`. A
 **★ What is the risk in canonicalising every paginated page to page 1?**
 That the content on pages 2 onward becomes invisible. A canonical is a claim that this URL's content is available at the target address, and for page 7 of a list that claim is false — the items on it are nowhere on page 1. The consequence is that items only reachable through deep pagination stop being discoverable through search entirely. The safe design is that each paginated URL is its own canonical, every page is reachable by following links from page 1, and the sitemap provides a second, flat path to the individual items so that discovery does not depend on how any particular engine treats pagination.
 
-{/* FOOTER */}
+---
+
+← [SEO pitfalls in RSC and streaming setups](05-common-seo-pitfalls-in-rsc-streaming-setups-and-automated-au.md) · [Chapter 12 overview](01-explanation.md) · Next → [Auditing SEO in CI](05c-auditing-seo-in-ci.md)

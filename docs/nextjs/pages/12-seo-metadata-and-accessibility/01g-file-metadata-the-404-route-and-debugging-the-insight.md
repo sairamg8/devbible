@@ -1,7 +1,7 @@
 ---
 title: "File-based metadata goes dynamic without any code of yours, `/_not-found` inherits your root layout's `generateMetadata` and must prerender with no page body for a marker to attach to, and the build flags that tell you which frame is at fault are not on by default"
 sidebar_label: "01g · File metadata and the 404 route"
-sidebar_position: 105
+sidebar_position: 7
 description: "The whole file-based metadata family and its priority over the config object, why an icon inside a dynamic segment is implicitly dynamic, the framework-synthesized /_not-found and /_global-error routes no dynamic marker can rescue, global-not-found as the escape, and debugging with --debug-prerender."
 ---
 
@@ -257,4 +257,6 @@ Everything the root layout was doing. Global styles, fonts, providers, the theme
 **★ File-based metadata outranks `generateMetadata`. Is that the right precedence?**
 Yes, and the reference gives the reason: the file API generates the correct metadata rather than requiring you to keep a config export in sync with actual files. A width, a height and a MIME type declared in code can silently stop matching the asset; derived from the file they cannot. The cost of that precedence is a specific and quite confusing debugging session — a computed `openGraph.images` being discarded by an `opengraph-image.png` someone added months ago — and the reason the first diagnostic step in this area is a file listing rather than a code read.
 
-{/* FOOTER */}
+---
+
+← [Metadata under Cache Components](01f-metadata-under-cache-components.md) · [Chapter 12 overview](01-explanation.md) · Next → [Open Graph](02-open-graph-twitter-cards-structured-json-ld.md)

@@ -1,7 +1,7 @@
 ---
 title: "Since 15.2 a dynamic route's metadata is appended to the body after the UI, and the only reason your Slack unfurl still works is a User-Agent list you did not know existed"
 sidebar_label: "01e · Streaming metadata and HTML-limited bots"
-sidebar_position: 103
+sidebar_position: 5
 description: "What streaming metadata changes about where tags land, the HTML-limited bot list that gets blocking metadata instead, how htmlLimitedBots overrides rather than extends it, when to disable streaming entirely, and why prerendered routes never stream."
 ---
 
@@ -227,4 +227,6 @@ their path still blocks. Browsers do not, because they get the UI first. So stre
 the cost onto exactly the consumers with the tightest timeouts. The fix is to make the metadata
 cacheable rather than to tune the streaming behaviour.
 
-{/* FOOTER */}
+---
+
+← [`metadataBase` and the parent promise](01d-metadatabase-url-composition-and-the-parent-promise.md) · [Chapter 12 overview](01-explanation.md) · Next → [Metadata under Cache Components](01f-metadata-under-cache-components.md)

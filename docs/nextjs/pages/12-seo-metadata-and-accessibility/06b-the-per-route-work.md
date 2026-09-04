@@ -1,7 +1,7 @@
 ---
 title: "The per-route half of the milestone: a leaf that composes its metadata, calls `notFound()` before anything can suspend, emits escaped JSON-LD, and generates an OG image only where per-route branding is worth a render"
 sidebar_label: "06b · The per-route work"
-sidebar_position: 122
+sidebar_position: 29
 description: "The blog leaf's generateMetadata and Article JSON-LD, why getPost is called twice on purpose, the generated OG image and the scoping decision behind it, sitemap and robots driven by the app's own queries, and the noindex the dashboard inherits."
 ---
 
@@ -250,5 +250,6 @@ Two reasons. Mechanically, `robots.ts` is a Route Handler that is cached by defa
 **★ The dashboard is both `Disallow`ed in `robots.ts` and `noindex`ed in its layout. Is that redundant, harmful, or correct?**
 It is correct here and would be harmful elsewhere, and knowing which is the point of the question. The two switches do different jobs: `Disallow` stops the crawl, saving crawl budget on an area no crawler should be spending it in; `noindex` stops the listing. The interaction is that a disallowed URL is never fetched, so its `noindex` is never read — which means for any dashboard URL a crawler learns about from an external link, only the disallow is in effect, and Google's documentation is explicit that a blocked URL can still be listed. For an authenticated area sitting behind a real auth check that is acceptable, because the crawler cannot see content either way. For a public-but-unlisted page it would be exactly wrong, and the `Disallow` would have to go.
 
-{/* FOOTER */}
+---
 
+← [Milestone: SprintDesk fully indexed](06-project-milestone-sprintdesk-public-pages-fully-indexed.md) · [Chapter 12 overview](01-explanation.md) · Next → [The a11y pass and the acceptance criteria](06c-the-a11y-pass-and-the-acceptance-criteria.md)

@@ -1,7 +1,7 @@
 ---
 title: "Offline passes in testing and fails on a train because DevTools cannot emulate a network that answers, and because a cache keyed by URL cannot tell a document from a component stream"
 sidebar_label: "10y · Testing offline and the cache"
-sidebar_position: 32
+sidebar_position: 56
 description: "The two DevTools offline switches and what neither reproduces, soft navigation versus hard reload, and catching an RSC payload cached under a document URL before a user does."
 ---
 
@@ -283,4 +283,4 @@ because the app believes a 200 means its origin answered. Testing only the first
 
 ---
 
-← [10x · Reproducing the update bug](10x-reproducing-the-failures-deliberately.md) · Next → [10z · Automating with Playwright and the pre-release checklist](10z-automating-with-playwright-and-the-pre-release-checklist.md)
+← [Reproducing the update bug](10x-reproducing-the-failures-deliberately.md) · [Chapter 12 overview](01-explanation.md) · Next → [Automating with Playwright](10z-automating-with-playwright-and-the-pre-release-checklist.md)

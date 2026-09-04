@@ -1,7 +1,7 @@
 ---
 title: "A push subscription is a URL the browser's push service hands you, and everything that goes wrong with push goes wrong while you are obtaining or storing that URL"
 sidebar_label: "10l · Web Push: the subscription flow"
-sidebar_position: 18
+sidebar_position: 42
 description: "VAPID keys and which half is public, the user-gesture rule, userVisibleOnly, why the subscription has to be JSON round-tripped before a Server Action sees it, and storing it properly."
 ---
 
@@ -225,4 +225,4 @@ the old private key alive long enough to drain in-flight sends.
 
 ---
 
-← [10k · Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md) · [Chapter 12 overview](01-explanation.md) · Next → [10m · Storing push subscriptions](10m-storing-push-subscriptions.md)
+← [Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md) · [Chapter 12 overview](01-explanation.md) · Next → [Storing push subscriptions](10m-storing-push-subscriptions.md)

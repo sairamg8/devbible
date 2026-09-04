@@ -1,7 +1,7 @@
 ---
 title: "A role is a promise the browser will not keep for you — ARIA changes what a control is announced as and supplies none of the behaviour that announcement implies, which is why no ARIA is better than bad ARIA"
 sidebar_label: "04c · ARIA and its four rules"
-sidebar_position: 115
+sidebar_position: 20
 description: "The four rules of ARIA use verbatim, roles as promises, ARIA cloaking and the tree it destroys, aria-label versus aria-labelledby versus aria-describedby, hidden versus aria-hidden versus inert, live regions, and the state attributes worth knowing."
 ---
 
@@ -257,4 +257,6 @@ The list breaks. `<li>` elements are meaningful because they are children of a l
 **★ When would you deliberately choose `aria-disabled` over the native `disabled` attribute?**
 When you want the control to remain focusable so that a keyboard or screen-reader user can find it and be told why it is unavailable. A natively `disabled` button is skipped in the tab sequence entirely, so a user tabbing through a form never encounters it and cannot discover that a "Submit" exists but is blocked. With `aria-disabled` the control is reachable, announced as disabled, and typically described by an `aria-describedby` explaining the blocker — but because `aria-disabled` announces rather than enforces, you must also refuse the action in the handler. It is a deliberate trade of enforcement for discoverability, not a synonym.
 
-{/* FOOTER */}
+---
+
+← [Links, buttons, forms and the `alt` decision](04b-links-buttons-forms-and-the-alt-decision.md) · [Chapter 12 overview](01-explanation.md) · Next → [Hydration-safe accessible markup](04d-hydration-safe-accessible-markup.md)

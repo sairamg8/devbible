@@ -1,7 +1,7 @@
 ---
 title: "A Playwright suite is the only part of a PWA test plan that survives contact with a sprint, and every assertion in it has to be phrased from inside the page because a service worker is not a page"
 sidebar_label: "10z · Automating with Playwright"
-sidebar_position: 33
+sidebar_position: 57
 description: "A Playwright config that cannot accidentally test a dev server, a suite covering manifest, icons, start_url, offline navigation and cache contents, and the ways such a suite passes while testing nothing."
 ---
 
@@ -282,4 +282,4 @@ behaviour or control has to run inside the page.
 
 ---
 
-← [10y · Testing offline and the cache](10y-testing-offline-and-what-the-cache-really-holds.md) · Next → [10z2 · What no runner can reach](10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md)
+← [Testing offline and the cache](10y-testing-offline-and-what-the-cache-really-holds.md) · [Chapter 12 overview](01-explanation.md) · Next → [The pre-release checklist](10z2-what-no-runner-can-reach-and-the-pre-release-checklist.md)

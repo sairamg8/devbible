@@ -1,7 +1,7 @@
 ---
 title: "Knowing whether the app is already installed is a different question from whether it can be installed, and only one of them has a cross-browser answer"
 sidebar_label: "10e · Detecting install state"
-sidebar_position: 11
+sidebar_position: 35
 description: "display-mode: standalone versus getInstalledRelatedApps(), self-listing in related_applications, and keeping the install button a Client Component leaf."
 ---
 
@@ -171,4 +171,4 @@ handling is a caught, ignored rejection that leaves the component's existing sta
 
 ---
 
-← [10d · Installability and the install prompt](10d-installability-and-the-install-prompt.md) · [Chapter 12 overview](01-explanation.md) · Next → [10f · Service workers in the App Router](10f-service-workers-in-the-app-router.md)
+← [Installability and the install prompt](10d-installability-and-the-install-prompt.md) · [Chapter 12 overview](01-explanation.md) · Next → [Service workers in the App Router](10f-service-workers-in-the-app-router.md)

@@ -1,7 +1,7 @@
 ---
 title: "The manifest members that shape the install surface rather than the running app — and why the Next.js type is a suggestion, not a contract"
 sidebar_label: "10c · Secondary manifest members and typing"
-sidebar_position: 9
+sidebar_position: 33
 description: "screenshots, shortcuts, prefer_related_applications, orientation and categories, plus what MetadataRoute.Manifest does and does not enforce."
 ---
 
@@ -199,4 +199,4 @@ typed base object instead of casting the whole return.
 
 ---
 
-← [10b · Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md) · [Chapter 12 overview](01-explanation.md) · Next → [10d · Installability and the install prompt](10d-installability-and-the-install-prompt.md)
+← [Manifest fields that change behaviour](10b-manifest-fields-that-change-behaviour.md) · [Chapter 12 overview](01-explanation.md) · Next → [Installability and the install prompt](10d-installability-and-the-install-prompt.md)

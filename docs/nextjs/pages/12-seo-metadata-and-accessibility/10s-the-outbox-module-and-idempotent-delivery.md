@@ -1,7 +1,7 @@
 ---
 title: "The outbox store is one module the page and the service worker both import, and the only two things it must get right are minting the key before the first attempt and claiming a record inside the transaction that reads it"
 sidebar_label: "10s · The outbox store"
-sidebar_position: 25
+sidebar_position: 49
 description: "Opening the IndexedDB outbox, enqueueing with the idempotency key, lease-based claiming that survives a killed context, and migrating queued records across a schema bump."
 ---
 
@@ -296,4 +296,4 @@ should have cloned. `add` turns that into a visible error at the moment it happe
 
 ---
 
-← [10r · The offline write queue](10r-the-offline-write-queue-and-the-durable-outbox.md) · [Chapter 12 overview](01-explanation.md) · Next → [10t · Background Sync](10t-background-sync-registering-and-draining.md)
+← [The offline write queue](10r-the-offline-write-queue-and-the-durable-outbox.md) · [Chapter 12 overview](01-explanation.md) · Next → [Background Sync](10t-background-sync-registering-and-draining.md)

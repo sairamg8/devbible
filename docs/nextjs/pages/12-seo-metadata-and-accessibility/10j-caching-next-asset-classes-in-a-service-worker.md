@@ -1,7 +1,7 @@
 ---
 title: "A Next.js origin serves six kinds of request over one set of URLs, and a service worker that does not classify them will hand HTML to the router and an RSC payload to the browser"
 sidebar_label: "10j · Caching Next asset classes in a worker"
-sidebar_position: 16
+sidebar_position: 40
 description: "Immutable build output, /_next/image, document navigations, RSC payloads and the _rsc query, Server Actions, and Route Handlers — one fetch handler that tells them apart."
 ---
 
@@ -212,4 +212,4 @@ should return early for any non-`GET` request, and specifically for a `POST` car
 
 ---
 
-← [10i · Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md) · [Chapter 12 overview](01-explanation.md) · Next → [10k · Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md)
+← [Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md) · [Chapter 12 overview](01-explanation.md) · Next → [Cache budget and eviction](10k-service-worker-cache-budget-and-eviction.md)

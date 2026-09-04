@@ -1,7 +1,7 @@
 ---
 title: "The browser compares your worker byte-for-byte and checks at most once a day for free, so update speed and the ability to recover are both things you build"
 sidebar_label: "10h · Update detection and recovery"
-sidebar_position: 14
+sidebar_position: 38
 description: "registration.update(), the byte-for-byte comparison and its blind spot, the 24-hour cache floor, why controller is null under Shift+reload, and the unregistering worker."
 ---
 
@@ -197,4 +197,4 @@ block every future update.
 
 ---
 
-← [10g · The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md) · [Chapter 12 overview](01-explanation.md) · Next → [10i · Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md)
+← [The service worker update lifecycle](10g-the-service-worker-update-lifecycle.md) · [Chapter 12 overview](01-explanation.md) · Next → [Offline strategy and the `useOffline` boundary](10i-offline-strategy-and-the-useoffline-boundary.md)

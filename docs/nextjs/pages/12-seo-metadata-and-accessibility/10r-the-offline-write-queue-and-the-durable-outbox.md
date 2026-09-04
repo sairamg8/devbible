@@ -1,7 +1,7 @@
 ---
 title: "The user tapped Save while offline, and nothing in Next.js will remember it for them — a mutation only survives a closed tab if you wrote it to disk yourself"
 sidebar_label: "10r · The offline write queue"
-sidebar_position: 24
+sidebar_position: 48
 description: "Why experimental.useOffline's retry loop stops at the tab boundary, what a queued mutation record must actually hold, and why the store has to be IndexedDB."
 ---
 
@@ -262,4 +262,4 @@ the difference between "works offline" and "pretends to".
 
 ---
 
-← [10q · iOS storage and installed app containers](10q-ios-storage-and-installed-app-containers.md) · [Chapter 12 overview](01-explanation.md) · Next → [10s · The outbox store](10s-the-outbox-module-and-idempotent-delivery.md)
+← [iOS storage and app containers](10q-ios-storage-and-installed-app-containers.md) · [Chapter 12 overview](01-explanation.md) · Next → [The outbox store](10s-the-outbox-module-and-idempotent-delivery.md)

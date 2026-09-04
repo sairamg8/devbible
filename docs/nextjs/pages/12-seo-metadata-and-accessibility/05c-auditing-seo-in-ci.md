@@ -1,7 +1,7 @@
 ---
 title: "An SEO regression has no stack trace, no failing request and no error in your logs — so the only way to catch one is a test that fetches your own pages as a crawler and asserts on the tags, and `next build` stopped reporting the numbers a CI gate used to parse"
 sidebar_label: "05c · Auditing SEO in CI"
-sidebar_position: 121
+sidebar_position: 27
 description: "Why SEO defects are silent, asserting on head tags with Playwright and with a crawler User-Agent, validating the sitemap and robots output, structured-data validation, Lighthouse as a trend, and the build-output check that 16.0 made pass vacuously."
 ---
 
@@ -248,4 +248,6 @@ Delete it, after confirming what it is doing. Next.js 16.0 removed `size` and `F
 **★ Is a Lighthouse SEO score worth collecting?**
 As a trend with an owner, yes; as a gate, no. The scoring model is a weighted average of pass/fail audits with no partial credit, so it moves discontinuously and can shift on changes that have nothing to do with the commit under test. It also cannot see the things this chapter is mostly about — whether a preview is cached wrong on a platform, whether a canonical is semantically right, whether the sitemap matches the routes that exist. The specific, attributable assertions are what belong in the pipeline; the score belongs in the same review as the rest of your release metrics, or nowhere.
 
-{/* FOOTER */}
+---
+
+← [Canonicals, duplicate URLs and redirect hygiene](05b-canonicals-duplicate-urls-and-redirect-hygiene.md) · [Chapter 12 overview](01-explanation.md) · Next → [Milestone: SprintDesk fully indexed](06-project-milestone-sprintdesk-public-pages-fully-indexed.md)

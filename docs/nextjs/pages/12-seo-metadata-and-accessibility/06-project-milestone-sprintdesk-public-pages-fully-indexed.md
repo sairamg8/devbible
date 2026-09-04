@@ -1,7 +1,7 @@
 ---
 title: "Make SprintDesk's public pages indexable on purpose rather than by accident — one metadata module, one origin constant, generated OG images where they earn their cost, and an authenticated area that is `noindex` by inheritance"
 sidebar_label: "06 · Milestone: public pages indexed"
-sidebar_position: 6
+sidebar_position: 28
 description: "The chapter 12 milestone, part one — scope and file shape, the single origin constant five different consumers need, why the root layout's metadata must be static, and the metadata module every leaf composes through."
 ---
 
@@ -225,4 +225,6 @@ The pricing page loses `siteName`, `locale` and `type`, because metadata merging
 **★ What would you check first if the site's previews all showed the wrong image after a deploy?**
 Whether the image URL changed. Meta's documentation states that images are cached by URL and are not updated unless the URL changes, so a redeploy that replaces the file at the same path produces exactly this. The diagnosis order matters: `curl` with a crawler User-Agent first to confirm what the HTML actually says, *then* the platform debugger — because the debugger triggers a re-scrape and will fix the symptom before you have learned anything ([02f](02f-what-the-unfurlers-actually-fetch.md)).
 
-{/* FOOTER */}
+---
+
+← [Auditing SEO in CI](05c-auditing-seo-in-ci.md) · [Chapter 12 overview](01-explanation.md) · Next → [The per-route work](06b-the-per-route-work.md)

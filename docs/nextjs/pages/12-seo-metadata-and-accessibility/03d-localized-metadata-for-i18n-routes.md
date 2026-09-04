@@ -1,7 +1,7 @@
 ---
 title: "hreflang has to be declared twice — once in the head and once in the sitemap — and the four metadata files that would most naturally read the locale are Route Handlers, which `next/root-params` does not support"
 sidebar_label: "03d · Localized metadata"
-sidebar_position: 113
+sidebar_position: 17
 description: "alternates.languages versus the sitemap's xhtml:link alternates, x-default, the reciprocity rule, generating per-locale titles and descriptions from a dictionary, html lang, and why sitemap.ts / robots.ts / opengraph-image.ts cannot read root params."
 ---
 
@@ -270,4 +270,6 @@ It names the URL to serve a user whose language does not match any of your alter
 **★ A localised sitemap is being rejected as too large at 30,000 URLs. Why?**
 Because the limit that bound first was 50 MB, not 50,000 URLs. Each `<url>` entry now carries an `xhtml:link` element per locale, so with six locales an entry is roughly seven times the bytes of a bare one and the file crosses the size limit well before the row limit. The fix is to shard on bytes rather than rows — cut the per-shard page size to something like 10,000 — which is the case that makes the byte half of the limit worth remembering at all ([03c](03c-splitting-a-sitemap-generatesitemaps-and-the-50000-url-rule.md)).
 
-{/* FOOTER */}
+---
+
+← [Splitting a sitemap and the 50,000-URL rule](03c-splitting-a-sitemap-generatesitemaps-and-the-50000-url-rule.md) · [Chapter 12 overview](01-explanation.md) · Next → [Accessibility: semantic HTML](04-accessibility-semantic-html-aria-safe-hydration-keyboard-fir.md)

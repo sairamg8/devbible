@@ -1,7 +1,7 @@
 ---
 title: "`title` is the only metadata field with real structure, and `viewport` stopped being metadata in Next.js 14 — both fail silently when you get them wrong"
 sidebar_label: "01b · The title algebra and the viewport export"
-sidebar_position: 100
+sidebar_position: 2
 description: "title.default, title.template and title.absolute and how they compose down a route tree; the separate viewport / generateViewport export, why it cannot stream, and the accessibility trap sitting in its own reference example."
 ---
 
@@ -245,4 +245,6 @@ and desktop while not achieving the thing it was usually copied in to achieve. T
 is normally reached for — iOS zooming in when an input is focused — is caused by an input font
 size under 16px and is fixed in CSS.
 
-{/* FOOTER */}
+---
+
+← [Static and dynamic metadata](01-static-and-dynamic-metadata-metadata-objects-generatemetadat.md) · [Chapter 12 overview](01-explanation.md) · Next → [The tags the API will not emit](01c-the-tags-the-metadata-api-will-not-emit.md)

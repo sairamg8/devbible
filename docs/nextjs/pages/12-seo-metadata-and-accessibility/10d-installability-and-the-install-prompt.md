@@ -1,7 +1,7 @@
 ---
 title: "The install prompt is a Chromium-only event you may capture but must never depend on, and the only cross-browser install signal is a CSS media query"
 sidebar_label: "10d · Installability and the install prompt"
-sidebar_position: 10
+sidebar_position: 34
 description: "beforeinstallprompt, appinstalled, display-mode: standalone detection, getInstalledRelatedApps, and a progressive install component that degrades to real instructions."
 ---
 
@@ -269,4 +269,4 @@ omitted for Chromium to offer an install.
 
 ---
 
-← [10c · Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md) · [Chapter 12 overview](01-explanation.md) · Next → [10e · Detecting install state](10e-detecting-install-state.md)
+← [Secondary manifest members and typing](10c-secondary-manifest-members-and-typing.md) · [Chapter 12 overview](01-explanation.md) · Next → [Detecting install state](10e-detecting-install-state.md)

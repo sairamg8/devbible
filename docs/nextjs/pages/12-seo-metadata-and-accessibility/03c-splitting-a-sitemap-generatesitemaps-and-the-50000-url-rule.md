@@ -1,7 +1,7 @@
 ---
 title: "Past 50,000 URLs a sitemap must be split, `generateSitemaps` is how you split it, and the reference's own example does not typecheck since 16.0 turned the shard id into a promised string"
 sidebar_label: "03c · Splitting a sitemap"
-sidebar_position: 112
+sidebar_position: 16
 description: "The two ways to produce multiple sitemaps, the 50,000-URL and 50MB limits, the generated URL shape and how it changed across 13.3.2 / 15.0 / 16.0, the id-is-a-promise-of-a-string typing bug in the docs, and how to shard a query without loading the table."
 ---
 
@@ -219,4 +219,6 @@ Either list all four in `robots.ts` — the `sitemap` field accepts an array —
 **★ You shard a sitemap and a colleague reports that some products never appear. What is your first hypothesis?**
 An unstable sort in the shard query. `skip`/`take` without a deterministic `orderBy` gives the database freedom to return rows in different orders for different pages, so rows fall between page boundaries and others are duplicated. It is invisible in review, invisible in a single-shard test, and only shows up as a count mismatch across the whole set. The test that catches it is cheap: render two adjacent shards and assert their URL sets are disjoint and that the union across all shards matches the row count.
 
-{/* FOOTER */}
+---
+
+← [`robots.ts` and the crawl directives](03b-robotsts-and-the-crawl-directives.md) · [Chapter 12 overview](01-explanation.md) · Next → [Localized metadata for i18n routes](03d-localized-metadata-for-i18n-routes.md)

@@ -1,7 +1,7 @@
 ---
 title: "Browser storage is evicted per origin and all at once, so every cache you write to needs a bound and every response you store needs a reason"
 sidebar_label: "10k · Cache budget and eviction"
-sidebar_position: 17
+sidebar_position: 41
 description: "Opaque responses and padded quota, bounding the /_next/image cache, navigator.storage.persist(), never caching authenticated documents, and when Serwist is the better answer."
 ---
 
@@ -216,4 +216,4 @@ undo the whole point of versioning the name. Open the specific cache and match a
 
 ---
 
-← [10j · Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md) · [Chapter 12 overview](01-explanation.md) · Next → [10l · Web Push: the subscription flow](10l-web-push-the-subscription-flow.md)
+← [Caching Next asset classes in a worker](10j-caching-next-asset-classes-in-a-service-worker.md) · [Chapter 12 overview](01-explanation.md) · Next → [Web Push: the subscription flow](10l-web-push-the-subscription-flow.md)

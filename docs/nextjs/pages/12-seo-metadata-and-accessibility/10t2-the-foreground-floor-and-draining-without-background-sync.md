@@ -1,7 +1,7 @@
 ---
 title: "Background Sync is the optimisation; the drain your users actually get runs in the page — on app start, on the online event, and on the return to visibility"
 sidebar_label: "10t2 · The foreground floor"
-sidebar_position: 27
+sidebar_position: 51
 description: "The three foreground triggers that drain the outbox without Background Sync, why the online event is not a connectivity test, one drain function in two contexts, and what Workbox and Serwist add."
 ---
 
@@ -295,4 +295,4 @@ be "later" instead of "never".
 
 ---
 
-← [10t · Background Sync](10t-background-sync-registering-and-draining.md) · [Chapter 12 overview](01-explanation.md) · Next → [10u · The Lighthouse PWA category is gone](10u-the-lighthouse-pwa-category-is-gone.md)
+← [Background Sync](10t-background-sync-registering-and-draining.md) · [Chapter 12 overview](01-explanation.md) · Next → [The Lighthouse PWA category is gone](10u-the-lighthouse-pwa-category-is-gone.md)

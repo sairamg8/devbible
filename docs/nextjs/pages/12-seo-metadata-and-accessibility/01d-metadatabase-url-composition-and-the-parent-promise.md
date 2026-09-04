@@ -1,7 +1,7 @@
 ---
 title: "Every URL in metadata must be absolute by the time it reaches the head, and `metadataBase` is the one setting whose absence is a build error rather than a bad preview"
 sidebar_label: "01d · metadataBase and the parent promise"
-sidebar_position: 102
+sidebar_position: 4
 description: "Why og:image must be absolute, what metadataBase composes and what it ignores, the URL-composition table where ../ does not traverse, the environment problem of picking a base URL per deployment, and the ResolvingMetadata parent promise."
 ---
 
@@ -109,7 +109,7 @@ Two failure modes this avoids and one it does not:
   fallback is still a valid absolute URL.
 - 🔴 **Not avoided:** a preview deployment being crawled at all. `metadataBase` fixes the URLs;
   keeping the preview out of the index is `robots.ts` reading the environment, which is
-  **03b · `robots.ts` and the crawl directives** *(not written yet)*.
+  [03b · `robots.ts` and the crawl directives](03b-robotsts-and-the-crawl-directives.md).
 
 ### `metadataBase` and `use cache` do not mix directly
 
@@ -209,7 +209,7 @@ argument when you are actually extending an inherited value.
 **★ `metadataBase` does not apply to URLs inside JSON-LD.** Structured data is a `<script>`
 block you build yourself; nothing composes its URLs. Every `@id`, `url` and `image` in a
 JSON-LD payload must be written absolute — see
-**02c · JSON-LD and structured data** *(not written yet)*.
+[02c · JSON-LD and structured data](02c-json-ld-and-structured-data.md).
 
 **★ `metadataBase` does not apply to `sitemap.ts` or `robots.ts` either.** Those are Route
 Handlers returning their own data structures, not metadata fields. Their URLs must be absolute
@@ -257,4 +257,6 @@ metadata fields, so nothing composes their URLs — they must be absolute and yo
 The same is true of JSON-LD, which is a script block you render yourself. `metadataBase` is
 scoped strictly to the URL-valued fields of the metadata object.
 
-{/* FOOTER */}
+---
+
+← [The tags the API will not emit](01c-the-tags-the-metadata-api-will-not-emit.md) · [Chapter 12 overview](01-explanation.md) · Next → [Streaming metadata and HTML-limited bots](01e-streaming-metadata-and-html-limited-bots.md)
