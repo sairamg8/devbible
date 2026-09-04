@@ -49,7 +49,7 @@ The reference manual lists five claims for an executable produced by Native Imag
 > *- Can be packaged into a lightweight container image for fast and efficient deployment*
 > *- Presents a reduced attack surface"*
 
-⚠️ **"Delivers peak performance immediately, with no warmup" is not the same claim as "delivers a warmed JVM's peak performance."** It says the binary reaches *its own* ceiling at once. Whether that ceiling is above or below a warmed HotSpot depends on the workload and on which GraalVM distribution you built with — **07c · Getting throughput back** *(not written yet)* is the honest version of that sentence and it is the single most over-read line in GraalVM's documentation.
+⚠️ **"Delivers peak performance immediately, with no warmup" is not the same claim as "delivers a warmed JVM's peak performance."** It says the binary reaches *its own* ceiling at once. Whether that ceiling is above or below a warmed HotSpot depends on the workload and on which GraalVM distribution you built with — [07c · Getting throughput back](07c-getting-throughput-back.md) is the honest version of that sentence and it is the single most over-read line in GraalVM's documentation.
 
 Spring Boot's reference frames the same thing from the deployment side:
 
@@ -105,7 +105,7 @@ Not "is native image faster". The decision is: **are you willing to convert a cl
 
 **★ Symptom: the native build is adopted to fix a start-up problem, and start-up barely moves.** Cause: the start-up budget was dominated by I/O — pool creation, migrations, remote config — not by class loading. Native image removes *class loading and initialisation of the framework*, not your own work at run time. Fix: measure the budget first. Time from process start to "Spring context refreshed" versus context-refreshed to "ready" tells you which half you are attacking; only the first half is native image's to take.
 
-**★ Symptom: "peak performance immediately, with no warmup" is read as "faster than a warmed JVM".** Cause: the sentence is about *warm-up curve shape*, not about the ceiling. Fix: read it as "the curve is flat from t=0", then ask separately how high the flat line is — which is **07c · Getting throughput back** *(not written yet)*, and which depends on the distribution you built with.
+**★ Symptom: "peak performance immediately, with no warmup" is read as "faster than a warmed JVM".** Cause: the sentence is about *warm-up curve shape*, not about the ceiling. Fix: read it as "the curve is flat from t=0", then ask separately how high the flat line is — which is [07c · Getting throughput back](07c-getting-throughput-back.md), and which depends on the distribution you built with.
 
 **★ Symptom: a native binary built on a developer laptop will not run on the deployment host.** Cause: *"A GraalVM Native Image is a complete, platform-specific executable"*, and Spring Boot's reference notes that `native-image` **does not support cross-compilation**. Fix: build in a container that matches the target OS, architecture and libc, or use buildpacks, which do exactly that for you — see [06](06-building-one.md).
 

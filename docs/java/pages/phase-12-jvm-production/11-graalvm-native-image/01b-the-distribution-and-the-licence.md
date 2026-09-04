@@ -82,7 +82,7 @@ So **GraalVM 25.3.4.1** means: Java 25 language baseline, third feature train, f
 
 - **Build and test on the distribution you will ship.** A CE build and an Oracle GraalVM build of the same application are not performance-equivalent artefacts, because `-O2`/`-O3`, PGO and the collector all differ. A throughput benchmark that does not name the distribution is not a result.
 - **CE is the right default for learning, for CI correctness checks, and for anything where the closed-world *behaviour* is what you are testing.** Correctness is identical; the metadata, the agent, the build failures and the run-time errors are all the same.
-- **Oracle GraalVM is what you need if throughput matters** — G1, `--pgo`, `-O3`/GraalNN and `--emit build-report` are all on that side of the line, and **07c · Getting throughput back** *(not written yet)* is the argument for why that is not a small difference.
+- **Oracle GraalVM is what you need if throughput matters** — G1, `--pgo`, `-O3`/GraalNN and `--emit build-report` are all on that side of the line, and [07c · Getting throughput back](07c-getting-throughput-back.md) is the argument for why that is not a small difference.
 - **Liberica Native Image Kit** is what Spring Boot's own how-to installs (`sdk install java 25.r25-nik`). It is a third-party distribution with its own licence and its own support terms; do not assume it inherits either of the two positions above. **I did not verify Liberica NIK's licence for this page** — check it yourself before adopting it, and treat Boot's documentation as an installation convenience rather than a licensing endorsement.
 
 ## Gotchas
