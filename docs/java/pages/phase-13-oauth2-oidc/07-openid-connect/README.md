@@ -42,6 +42,8 @@ meet in code within a week: the ID token goes to your client and never to an API
 token goes to the API and is never parsed by your client, and an application that gets those
 two backwards will appear to work for a long time before it fails in a way nobody can debug.
 
+**14 chunks, ~3,270 lines.** Read 01 first; 04 and 04b then 08 are the ones to know cold.
+
 ## Chunks
 
 | # | Chunk | Tier | What it argues |
@@ -58,6 +60,8 @@ two backwards will appear to work for a long time before it fails in a way nobod
 | 10 | **[Standard scopes and claims](06-standard-scopes-and-claims.md)** | <span className="db-tier t-understand">Understand</span> | `openid` is a switch, the other four are bundles — and `email_verified` is the claim that matters, not `email` |
 | 11 | **[The UserInfo endpoint](07-the-userinfo-endpoint.md)** | <span className="db-tier t-understand">Understand</span> | 🔴 The one call your client makes with the *access* token — unsigned, unaddressed, bound to your login only by the `sub` cross-check |
 | 12 | **[`sub` is not an email](08-sub-is-not-an-email.md)** | <span className="db-tier t-master">Master</span> | 🔴 The only claim promised never to be reassigned — key on `(iss, sub)`, and why pairwise identifiers break a second client registration |
+| 13 | **[Response types and modes](09-response-types-and-modes.md)** | <span className="db-tier t-understand">Understand</span> | Seven response types, one answer — and `response_mode=form_post`, which is separate and genuinely useful |
+| 14 | **[Logout](10-logout.md)** | <span className="db-tier t-understand">Understand</span> | Three operations wearing one word, and the one thing logout cannot reach: an access token already issued |
 
 ## The five things this topic is really about
 
@@ -89,15 +93,25 @@ It is a statement that an authentication happened at a moment. Your session is y
 with its own lifetime; the API's credential is the access token; the current value of a
 user's name comes from UserInfo or your own store, not from a token minted an hour ago.
 
-## Still owed in this topic
+## What this topic does not cover, and why
 
-The topic's spine — the artefact, the request, and the validation procedure — is complete.
-The following are named in the boundary this phase set for topic 07 and are not written yet:
+Every row of the boundary this phase set for topic 07 is now written. Two deliberate
+omissions, both provenance rather than scope:
 
-- **09 · Response types and response modes** *(not written yet)* — the hybrid family,
-  `form_post`, and why `code` is the answer.
-- **10 · Logout** *(not written yet)* — RP-initiated logout, `id_token_hint`, and why "log
-  out" means three different things.
+- **OIDC Core §5.1, §5.3, §5.3.2, §5.4 and §8** could not be read — the published HTML of
+  Core 1.0 truncates before §5, and two fetch attempts returned nothing for those sections.
+  Chunks 10, 11 and 12 say so on their own `> Verified:` lines and present the scope→claim
+  mapping, the UserInfo `sub` cross-check and the public/pairwise distinction as
+  well-established practice grounded in the sections that *were* read, rather than as
+  quotations. **A later pass with a readable copy of §5 and §8 should upgrade those three
+  pages to verbatim citation.**
+- **RP-Initiated Logout, Front-Channel Logout, Back-Channel Logout and Session Management**
+  are separate specifications and were not fetched. Chunk 14 describes the three layers and
+  their consequences without quoting parameter tables from those documents.
+
+The natural extension, if this topic is reopened: **`prompt=none` and silent renewal in
+depth**, and **the `claims` request parameter** for per-claim requests rather than
+scope-shaped bundles.
 
 ## Phase gate
 
