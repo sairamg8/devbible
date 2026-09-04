@@ -1,7 +1,7 @@
 ---
 title: "A greenfield boundary is a guess about a domain nobody understands yet, and the honest response is not better guessing — it is to make the guess cheap to be wrong about by drawing it in code before drawing it in infrastructure"
 sidebar_label: "18 · Boundaries from a whiteboard"
-sidebar_position: 30
+sidebar_position: 32
 ---
 
 <span className="db-tier t-master">Master</span>

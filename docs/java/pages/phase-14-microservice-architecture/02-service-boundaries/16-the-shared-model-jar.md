@@ -1,7 +1,7 @@
 ---
 title: "A common-domain jar cancels every service boundary in the system at compile time, because a change to a shared type is a coordinated release of everything that depends on it — the network boundary remains and the independence it was for is gone"
 sidebar_label: "16 · The shared model jar"
-sidebar_position: 28
+sidebar_position: 29
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -172,6 +172,10 @@ static final ArchRule shared_values_hold_no_rules = noClasses()
 
 A shared type that depends on a context is a rule that escaped.
 
+The design argument is above. The operational one — five ways two services on different versions of
+the same type fail, none caught at build time — is
+[16b · What version skew does at runtime](16b-what-version-skew-does-at-runtime.md).
+
 ## Gotchas
 
 **★ Symptom: a release note that says "upgrade common-domain to 1.5.0 in all services".**
@@ -194,14 +198,6 @@ and it is harder to see than a direct table read.
 criteria. Fix: an explicit owner, a written rule (no business decisions, no framework
 dependencies), and review on every addition. Without all three it grows, because adding to it
 is always the locally cheapest option.
-
-**★ Treating a provider-published client library as the same thing.** It is not, provided the
-provider owns it, versions it, and consumers may lag. The danger is a library *shared between
-peers*, where nobody owns it and everyone must move together.
-
-**★ Sharing test fixtures or builders across services.** The same mechanism with less
-visibility: a change to a shared test builder breaks other teams' builds, and now your test
-code has the coupling your production code avoided.
 
 ## Interview questions
 
@@ -238,16 +234,7 @@ classification, and neither cares about the other's. Sharing one class forces bo
 concerns into it and makes every change a joint decision. The duplication people should worry
 about is two services both deciding whether an order can be cancelled.
 
-**★ A team proposes putting the API DTOs in a shared jar so the client and server cannot
-drift. What is your response?**
-That preventing drift is the problem, not the goal. A consumer compiling against the
-provider's DTO class cannot be a tolerant reader — an unknown field becomes a compile or
-deserialisation concern rather than something to ignore — so the provider loses the ability to
-add fields freely, which is the cheapest kind of API evolution there is. The acceptable form
-is a client library that the *provider* owns and versions, which consumers may lag behind by
-several versions. The unacceptable form is a jar shared between peers with no owner, where
-everybody must move at once.
 
 ---
 
-← [Too small](15-too-small.md) · [Topic index](README.md) · Next → [The god service](17-the-god-service.md)
+← [The module is the alternative](15b-the-module-is-the-alternative.md) · [Topic index](README.md) · Next → [What version skew does at runtime](16b-what-version-skew-does-at-runtime.md)

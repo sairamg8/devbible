@@ -1,7 +1,7 @@
 ---
 title: "Partnership and Separate Ways represent the two extremes of context mapping — intense mutual coordination where failure of one is failure of both versus total disconnection where duplication is welcomed to preserve autonomy"
 sidebar_label: "35 · Partnership and separate ways"
-sidebar_position: 58
+sidebar_position: 60
 ---
 
 <span className="db-tier t-master">Master</span>

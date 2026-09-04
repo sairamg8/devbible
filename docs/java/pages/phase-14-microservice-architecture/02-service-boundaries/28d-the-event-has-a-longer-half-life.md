@@ -1,7 +1,7 @@
 ---
 title: "An HTTP response is read and discarded, so publishing your aggregate over REST couples consumers for the length of a request — publishing it to a topic materialises your internal schema inside other teams' databases, where no deployment of yours can ever reach it again"
 sidebar_label: "28d · The event has a longer half-life"
-sidebar_position: 49
+sidebar_position: 51
 ---
 
 <span className="db-tier t-master">Master</span>

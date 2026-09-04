@@ -1,7 +1,7 @@
 ---
 title: "Event storming is the fastest way to get a room's model of a domain onto a wall, and its most valuable output is not the events — it is the pink stickers marking the places where the room disagreed"
 sidebar_label: "20 · Event storming"
-sidebar_position: 33
+sidebar_position: 35
 ---
 
 <span className="db-tier t-master">Master</span>

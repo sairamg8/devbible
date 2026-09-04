@@ -24,7 +24,6 @@ manifests, the same dashboards, the same alert routes, the same dependency upgra
 security patching, the same on-call familiarity and the same contract with every consumer.
 Once that fixed cost is on the page, the question "should this be its own service" gets a
 much sharper answer than "it feels like a separate concern".**
-
 ## The fixed-cost inventory
 
 None of these scale down with the amount of code. Write your own version of this list with
@@ -95,6 +94,44 @@ cannot serve a request without B, and nothing else calls B, then A and B have on
 availability, one latency budget and one release cadence. They are one service with a network
 in the middle. This is the single most reliable test for a boundary that should not exist.
 
+## The forces name both sides of this argument
+
+"Too small" is usually argued as a feeling, and the ten forces give it vocabulary — which matters
+because the *reason* to split small is also on the list and deserves a fair hearing.
+
+**The force that says split:**
+
+> **Simple components** — *"simple components consisting of few subdomains are easier to understand
+> and maintain than complex components"*
+
+That is real. A service you can hold entirely in your head is genuinely easier to work on, and
+somebody arguing for the split is not being foolish.
+
+**The three that say do not:**
+
+> **Simple interactions** — *"an operation that's local to a component or consists of a few simple
+> interactions between components is easier to understand and troubleshoot than a distributed
+> operation"*
+
+> **Efficient interactions** — *"a distributed operation that involves lots of network round trips and
+> large data transfers can be too inefficient"*
+
+> **Minimize runtime coupling** — keeping services tightly integrated maximises availability and
+> reduces operation latency.
+
+🔴 **The asymmetry is what settles it.** *Simple components* is a benefit to whoever is **reading**
+one component. The three opposing forces are costs paid by whoever is **operating the whole system**
+— and there are more of the second group, they compound across every operation, and they land on
+people who were not in the design discussion. A split that makes one component simpler and three
+operations distributed has not simplified anything; it has moved the complexity from a place where a
+compiler can see it to a place where only an incident can.
+
+**The honest formulation to take into the argument:** *simple components* is the only dark-energy
+force a very small service wins on. It does not deliver team autonomy (a service nobody deploys
+independently is not autonomous), it does not need a separate technology stack, and it has no
+distinct scaling characteristics to segregate. One force in favour, three against, and the three are
+the ones that show up at 3am.
+
 ## The test to apply before splitting small
 
 Ask all five. A split needs a convincing answer to at least one, and "no" to all five is a
@@ -114,62 +151,8 @@ module, not a service.
 Note that none of these is "it is a separate concern". Separate concerns are what packages
 are for.
 
-## The module is the alternative, and it is not a consolation prize
-
-Everything a small service was supposed to give you — a clear boundary, an explicit API,
-independent testability, a named owner — is available in-process, at close to zero fixed
-cost:
-
-```java
-// src/main/java/com/retailer/notifications/package-info.java
-//
-// A module with an enforced boundary and a declared dependency list. It has an API,
-// internals nobody may reach, its own tests, and a CODEOWNERS entry — everything the
-// separate service would have given us, minus the pipeline, the dashboards, the
-// on-call surface and the contract with every consumer.
-@org.springframework.modulith.ApplicationModule(
-        allowedDependencies = { "sales :: events", "shared" })
-package com.retailer.notifications;
-```
-
-```java
-// src/test/java/com/retailer/notifications/NotificationsModuleTest.java
-package com.retailer.notifications;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.modulith.test.ApplicationModuleTest;
-
-/// @ApplicationModuleTest bootstraps this module alone — the reference describes it as
-/// running the test "with the bootstrap actually limited to the application module the
-/// test resides in", STANDALONE by default. Independent testability without a network.
-@ApplicationModuleTest
-class NotificationsModuleTest {
-
-    @Test
-    void sendsOnOrderPlaced() {
-        // exercise the module in isolation
-    }
-}
-```
-
-The one thing the module does not give you is independent *deployment*. If that is genuinely
-what you need — because a different team must ship on a different schedule — then the service
-is warranted and the fixed cost is the price of that. If it is not, the module is strictly
-better.
-
-## The other direction: too big is a real failure too
-
-This chunk is not an argument for one large service. microservices.io lists *"Simple
-components — simple components consisting of few subdomains are easier to understand and
-maintain than complex components"* as a dark energy force, and the cognitive-capacity limit in
-*Service per team* is a hard one: a codebase nobody on the team fully understands produces
-slow changes and cautious ones.
-
-The asymmetry worth remembering is in the cost of being wrong. Too big is uncomfortable and
-cheap to fix — extract a module, then a service, incrementally. Too small is comfortable and
-expensive to fix, because merging two services means merging two datastores, two pipelines,
-two contracts and, usually, two teams' sense of ownership. **When uncertain, err large**, and
-keep the internal boundaries enforced so that erring large stays cheap to correct.
+The alternative to a service that is too small is not a bigger service —
+[15b · The module is the alternative](15b-the-module-is-the-alternative.md).
 
 ## Gotchas
 
@@ -195,15 +178,6 @@ place because the right place was not known to exist.
 **★ Assuming small services are individually cheap because each is simple.** The cost is per
 service and mostly fixed, and the interface count grows with the square of the service count.
 The total is not the sum of the code sizes.
-
-**★ Counting only the infrastructure cost.** Pipelines and pods are the cheap part. The
-expensive part is human: onboarding, mental model, incident diagnosis across more hops, and
-the coordination for every contract change.
-
-**★ Treating the module option as a lesser outcome.** An enforced module gives you the API,
-the isolation, the independent test slice and the ownership. It withholds exactly one thing —
-independent deployment. If nobody needs to deploy it independently, it is the better answer,
-not the compromise.
 
 ## Interview questions
 
@@ -242,14 +216,7 @@ slice and its own CODEOWNERS entry. That gives them every property they actually
 independent deployment — and if they do need independent deployment, they should say so and
 we can price it properly.
 
-**★ What costs do teams most often leave out when justifying a split?**
-The per-consumer costs and the human ones. Every consumer needs a client, a timeout policy, a
-retry policy and a degraded-behaviour path, and every breaking change must be coordinated
-with all of them — so interfaces grow faster than services do. On the human side: the service
-occupies a slot in every engineer's model of the system, appears in every incident review,
-and adds a hop that has to be traversed during diagnosis. Infrastructure is the cheap part and
-it is usually the only part in the estimate.
 
 ---
 
-← [Conway and the org chart](14-conway-and-the-org-chart.md) · [Topic index](README.md) · Next → [The shared model jar](16-the-shared-model-jar.md)
+← [One team per service](14b-one-team-per-service.md) · [Topic index](README.md) · Next → [The module is the alternative](15b-the-module-is-the-alternative.md)

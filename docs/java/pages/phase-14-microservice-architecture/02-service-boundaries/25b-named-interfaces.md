@@ -1,7 +1,7 @@
 ---
 title: "A single public API per module is a naive assumption — Spring Modulith's @NamedInterface allows a bounded context to publish distinct contracts for different consumers without exposing its internal implementation"
 sidebar_label: "25b · Named interfaces"
-sidebar_position: 41
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>

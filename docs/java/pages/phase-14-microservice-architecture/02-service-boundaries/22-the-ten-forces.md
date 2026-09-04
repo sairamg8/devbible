@@ -1,7 +1,7 @@
 ---
 title: "Chris Richardson's ten forces are the only decomposition framework that names the arguments on both sides, and its real contribution is the insistence that five forces always oppose the split — so a design with no cost listed has simply not finished"
 sidebar_label: "22 · The ten forces"
-sidebar_position: 35
+sidebar_position: 37
 ---
 
 <span className="db-tier t-master">Master</span>
