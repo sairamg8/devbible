@@ -134,7 +134,8 @@ The rest of Turbopack splits into three concerns, each with its own page:
 |---|---|
 | [01b · Configuring the compile pipeline](01b-configuring-the-turbopack-compile-pipeline.md) | The `turbopack` key, loaders vs plugins, and the Babel rule that reversed in 16 |
 | [01c · Build-time constants and profiling](01c-import-meta-env-and-profiling-the-dev-server.md) | `import.meta.env`, dead-branch elimination, `--internal-trace` |
-| **Migrating from webpack** *(not written yet)* | The behavioural gaps — CSS Module ordering, Lightning CSS precision, the filesystem root |
+| [01d · Migrating from webpack](01d-migrating-from-webpack-the-behavioural-gaps.md) | The behavioural gaps — CSS Module ordering, Lightning CSS precision, the filesystem root |
+| [01e · What Turbopack does not support](01e-what-turbopack-does-not-support-and-how-to-read-the-list.md) | The legacy CSS Modules rules, Yarn PnP, `sassOptions.functions` — and how to read the status column |
 
 ## Gotchas
 
