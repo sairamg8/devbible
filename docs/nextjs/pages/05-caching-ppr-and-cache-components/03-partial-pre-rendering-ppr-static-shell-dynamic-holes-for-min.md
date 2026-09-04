@@ -209,7 +209,7 @@ async function RenderedAt() {
 
 **★ Symptom: a cached component is missing from the shell even though it has `use cache`.** Cause: the inclusion rule is conditional — *"as long as its lifetime isn't too short"* — and a profile with `expire` under five minutes or `stale` under thirty seconds is excluded from prerenders entirely. Fix: check the profile against the threshold table in [02](02-the-use-cache-directive-and-custom-cachelife-profiles.md); this is the single most common cause and it produces no error.
 
-**★ Symptom: a boundary wrapped around a whole page satisfies the build, and every navigation flashes a full-page skeleton.** Cause: a boundary works wherever you put it, but everything inside it leaves the shell. Placing it at the top is the least useful position that still passes. Fix: push boundaries down to the smallest subtree that actually does the deferred work — the technique is **03b · maximizing the shell** *(not written yet)*.
+**★ Symptom: a boundary wrapped around a whole page satisfies the build, and every navigation flashes a full-page skeleton.** Cause: a boundary works wherever you put it, but everything inside it leaves the shell. Placing it at the top is the least useful position that still passes. Fix: push boundaries down to the smallest subtree that actually does the deferred work — the technique is [03b](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md).
 
 ## Interview questions
 
@@ -236,4 +236,4 @@ Because PPR stopped being a feature. In 15 it was `experimental.ppr`, a flag wit
 
 ---
 
-← [10 · The three cache directives](10-the-three-cache-directives/README.md) · [Chapter index](01-explanation.md) · Next → **03b · Maximizing the shell** *(not written yet)*
+← [10 · The three cache directives](10-the-three-cache-directives/README.md) · [Chapter index](01-explanation.md) · Next → [03b · Maximizing the shell, and crawlers](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md)
