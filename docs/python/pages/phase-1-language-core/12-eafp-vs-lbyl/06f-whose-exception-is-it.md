@@ -11,18 +11,74 @@ sidebar_position: 146
 > correct/wrong pair below is PEP 8's own, comments included), the Python 3.14 Language
 > Reference
 > [The `try` statement](https://docs.python.org/3.14/reference/compound_stmts.html#the-try-statement),
-> the [Tutorial — Errors and Exceptions](https://docs.python.org/3.14/tutorial/errors.html),
-> and [`os.access`](https://docs.python.org/3.14/library/os.html#os.access).
+> [Traceback objects](https://docs.python.org/3.14/reference/datamodel.html#traceback-objects),
+> and [`decimal`](https://docs.python.org/3.14/library/decimal.html#decimal.InvalidOperation)
+> (signals, `DefaultContext` traps).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
 **Every exception class is raised by many pieces of code, and an `except` clause matches
-on the class alone — it has no way to ask *who raised this*. So a handler written for
-"the lookup I am testing" also owns the same class raised by anything the guarded suite
-calls, however deep. That is the mechanism behind every width defect in
-[06](06-narrowing-the-try.md), and PEP 8 states it in a comment on its own example. The
-two repairs are mechanical: **hoist the leap** so the `try` suite holds one expression,
-and put the work that consumes the result in **`else`**, which the reference defines as
-being inside the statement and outside the handlers.**
+on the class alone — the reference defines the match as a test against *the class or a
+non-virtual base class of the exception object*, and there is no third thing it can ask.
+So a handler written for "the lookup I am testing" also owns the same class raised by
+anything the guarded suite calls, however deep. That is the mechanism behind every width
+defect in [06](06-narrowing-the-try.md), and PEP 8 states it in a comment on its own
+example. This chunk is the diagnosis — how to recognise the defect and what it does to a
+running system. The two mechanical repairs, `else` and hoisting the assignment, are
+[06g](06g-width-at-a-boundary.md).**
+
+## An `except` clause matches on class, never on origin
+
+The Language Reference describes the whole of the matching rule:
+
+> *"When an exception occurs in the `try` suite, a search for an exception handler is
+> started. This search inspects the `except` clauses in turn until one is found that
+> matches the exception."*
+
+> *"The raised exception matches an `except` clause whose expression evaluates to the
+> class or a non-virtual base class of the exception object, or to a tuple that contains
+> such a class."*
+
+Read what is **not** in those two sentences. No mention of which line raised, which
+function, which module, how deep in the call stack, or whether the frame is one you wrote.
+The predicate is `isinstance`-shaped and nothing else. A clause therefore over-matches
+along two independent axes:
+
+| Axis | What widens the clause | Where it is treated |
+|---|---|---|
+| **Class breadth** | naming a base class — `except OSError` owns `FileNotFoundError`, `PermissionError`, `IsADirectoryError`, `TimeoutError` and the rest | [06c · The breadth of one class](06c-the-breadth-of-one-class.md) |
+| **Origin breadth** | the guarded suite calling code that raises the same class | this page |
+
+The two compound. `except OSError` around a `with` block is wide on both axes at once, and
+that is the shape that eats a truncated file. **Origin breadth is the more dangerous of the
+pair**, because narrowing the class is a visible edit to the clause and narrowing the
+origin is an invisible property of the suite: the clause you are reading looks precise.
+
+### The traceback knows; the clause does not
+
+The information is not lost — it is only unavailable to the match. The reference says *"When
+an exception handler is entered, the stack trace is made available to the program"*, and
+that it is accessible *"as the `__traceback__` attribute of the caught exception"*, with
+`tb_next` being *"the next level in the stack trace (towards the frame where the exception
+occurred)"*. So the raising frame is reachable — but only **after** the match has happened:
+
+```python
+import traceback
+
+try:
+    value = collection[key]
+except KeyError as exc:
+    frames = traceback.extract_tb(exc.__traceback__)   # frames[-1] raised, frames[0] is here
+    logger.warning("KeyError from %s:%d", frames[-1].filename, frames[-1].lineno)
+    raise
+```
+
+🔴 **Diagnose with that, never decide with it.** Branching on `frames[-1].filename` asserts
+a fact about another module's source layout: it breaks on the first refactor, and there is
+no Python frame at all behind a C-level raise. Origin is expressible only as the shape of
+the `try` suite — which is why the repair in [06g](06g-width-at-a-boundary.md) is
+structural rather than conditional. And if a handler swallows the exception and logs only
+`str(exc)`, the frame goes with it —
+[13 · Losing the traceback](../11-exceptions/13-losing-the-traceback.md).
 
 ## PEP 8's own pair — read the comments, they are the argument
 
@@ -57,6 +113,8 @@ Note that the "Correct" half does two things at once, and they are the two repai
    `try` suite.
 2. **The follow-on work moves into `else`** — `handle_value(value)` runs on success,
    outside the handler's reach.
+
+Both are worked in [06g](06g-width-at-a-boundary.md).
 
 ## A worked case: the invoice that came out at zero
 
@@ -130,118 +188,13 @@ def parse_receipt(header: str, body: str) -> Receipt:
     return Receipt(item_count, stamped, total)
 ```
 
-Three times the lines, and each earns its place: the error message now names the field,
 which is the entire content of a support ticket. ⚠️ Note the third clause is
-`decimal.InvalidOperation`, not `ValueError` — `decimal`'s signalling classes are their
-own family, so check what the call you are guarding actually raises rather than assuming
-the builtin. Which class to name is
+`decimal.InvalidOperation`, not `ValueError` — `DecimalException` is *"Base class for other
+signals and a subclass of `ArithmeticError`"*, a family of its own, so check what the call
+you are guarding actually raises rather than assuming the builtin that describes the
+situation in English. Which class to name is
 [06c](06c-the-breadth-of-one-class.md); the `from exc` is
 [exception chaining](../11-exceptions/06b-exception-chaining.md).
-
-## `else` is the narrowing tool, and the docs use it on purpose
-
-The Language Reference:
-
-> *"The optional `else` clause is executed if the control flow leaves the `try` suite, no
-> exception was raised, and no `return`, `continue`, or `break` statement was executed.
-> Exceptions in the `else` clause are not handled by the preceding `except` clauses."*
-
-That last sentence is the whole mechanism: **`else` is inside the statement and outside
-the handlers.** The tutorial states the intent:
-
-> *"It is useful for code that must be executed if the try clause does not raise an
-> exception. The use of the `else` clause is better than adding additional code to the
-> `try` clause because it avoids accidentally catching an exception that wasn't raised by
-> the code being protected by the `try` … `except` statement."*
-
-The `os.access` entry then applies it. Its LBYL original:
-
-```python
-if os.access("myfile", os.R_OK):
-    with open("myfile") as fp:
-        return fp.read()
-return "some default data"
-```
-
-and, in the docs' words, *"is better written as"*:
-
-```python
-try:
-    fp = open("myfile")
-except PermissionError:
-    return "some default data"
-else:
-    with fp:
-        return fp.read()
-```
-
-Read that as a width decision rather than an EAFP demo — there are three of them in six
-lines. Only `open()` is in the `try`. The `with` and the `read()` are in `else`, so a
-`PermissionError` raised by the *read* propagates instead of being answered with default
-data. And the clause is `except PermissionError`, not `except OSError`, so a missing file
-still raises `FileNotFoundError` at the caller. The clause's full semantics — including
-what happens when the `try` suite returns — are
-[topic 11 · the `else` clause](../11-exceptions/02-the-else-clause.md); why the LBYL
-original is a *security* defect is
-[02b · The filesystem and the atomic flag](02b-the-filesystem-and-the-atomic-flag.md).
-
-## Keep the assignment out of the `try`
-
-The subtlest width defect is a single statement that is secretly two operations, and the
-usual shape is an assignment whose right-hand side wraps the leap in a call:
-
-```python
-try:
-    value = compute_discount(cart[coupon_code])   # 🔴 compute_discount is guarded too
-except KeyError:
-    value = Decimal("0")
-```
-
-`cart[coupon_code]` is the leap; `compute_discount(...)` is work that happens to be on
-the same line. Hoist:
-
-```python
-try:
-    coupon = cart[coupon_code]                    # leap
-except KeyError:
-    value = Decimal("0")
-else:
-    value = compute_discount(coupon)              # work
-```
-
-The rule generalises: **the `try` suite should contain the expression that can fail and
-nothing else** — not the call that consumes it, not the `return` that ships it, not the
-logging that describes it. Two more shapes of the same mistake:
-
-```python
-# 🔴 The f-string is inside the guard; a __repr__ that raises becomes a cache miss.
-try:
-    return render(f"hit: {cache[key]}")
-except KeyError:
-    return render("miss")
-
-# 🔴 The whole managed block is guarded, not the acquisition.
-try:
-    with open(path) as fp:
-        return json.load(fp)          # read errors inside the parse are OSErrors too
-except OSError:
-    return {}
-```
-
-The second is worth dwelling on. `except OSError` around a `with` block guards
-*everything the block does*, and because `json.load` reads from the handle, an `OSError`
-mid-read is answered with `{}` — a truncated file becomes an empty config. Narrow it by
-moving the parse where its own failures are visible:
-
-```python
-try:
-    fp = open(path)
-except FileNotFoundError:
-    return {}                          # the one assumption: this file may not exist yet
-else:
-    with fp:
-        return json.load(fp)           # decode and read errors now reach the caller
-```
 
 ## Gotchas
 
@@ -270,63 +223,29 @@ alone; the callee's `KeyError` then escapes with its own frame in the traceback 
 the handler's message asserts one field while its scope covers three. Fix: one `try` per
 conversion, each with a message naming its own field, each chaining with `from exc`.
 
-**★ Symptom: a truncated config file is silently read as an empty config.** Cause:
-`except OSError` wrapped a whole `with open(...)` block, so a read failure partway
-through the parse produced the "file absent" recovery. Fix: guard the acquisition only
-and parse in `else` — shown above.
-
-**Symptom: a handler that returns a default is reached when the *handler's own*
-dependency is broken.** Cause: the `try` suite included the call that builds the fallback,
-so a failure in the fallback path matched the same clause. Fix: build the fallback
-outside the guarded suite.
+**Symptom: `except decimal.InvalidOperation` never fires and totals arrive as `NaN`.**
+Cause: the process installed a `Context` whose `traps` list does not include
+`InvalidOperation`, so the constructor returned `Decimal('NaN')` instead of raising — the
+guard was correct and the leap simply did not fail. Fix: name the trap explicitly at the
+boundary where you parse, or test the result.
 
 ```python
-fallback = DEFAULT_SETTINGS          # constructed before the leap, never inside it
-try:
-    raw = store[tenant_id]
-except KeyError:
-    return fallback
-else:
-    return merge(fallback, decode(raw))
+with decimal.localcontext() as ctx:
+    ctx.traps[decimal.InvalidOperation] = True
+    total = Decimal(body[19:])           # now raises, whatever the ambient context is
 ```
 
-**Symptom: moving code into `else` did not narrow anything, because the `try` suite still
-`return`s.** Cause: the reference is explicit that `else` runs only when *"no `return`,
-`continue`, or `break` statement was executed"* — a `try` suite that returns skips the
-`else` entirely, so the guarded call and the returned expression are still the same
-statement. Fix: assign in the `try`, return in the `else`.
+**Symptom: a handler written for "file missing" also answers "disk full".** Cause: class
+breadth rather than origin breadth — `except OSError` matches *"the class or a non-virtual
+base class of the exception object"*, and the whole errno family descends from `OSError`.
+Fix: name the leaf class; [04 · The exception
+hierarchy](../11-exceptions/04-the-exception-hierarchy.md) is the map.
 
 ```python
 try:
-    value = collection[key]     # assign here
-except KeyError:
-    return None
-else:
-    return transform(value)     # return here
-```
-
-**Symptom: an f-string inside a `try` turned a `__repr__` bug into a cache miss.** Cause:
-formatting runs code — `__str__`, `__repr__`, `__format__` — and its exceptions are
-raised inside the guarded suite. Fix: build the value, leave the suite, then format.
-
-```python
-try:
-    hit = cache[key]
-except KeyError:
-    return render("miss")
-else:
-    return render(f"hit: {hit}")
-```
-
-**Symptom: `except AttributeError` around `config.database.host` reports "not
-configured" for a misspelling of `host`.** Cause: three attribute accesses in one
-expression, one clause, and no way to tell which failed — the same defect as a chained
-subscript. Fix: one access at a time, with the default form where the attribute really is
-optional.
-
-```python
-db = config.database                       # a missing `database` is a real error
-host = getattr(db, "host", "localhost")    # this one is genuinely optional
+    fp = open(path)
+except FileNotFoundError:                # not OSError — ENOSPC still escapes
+    return {}
 ```
 
 ## Interview questions
@@ -340,62 +259,40 @@ now also means "something inside `handle_value` did a failing dict lookup". The 
 changes no exception types and adds no clauses: hoist the subscript so it is the whole
 `try` suite, and move `handle_value(value)` into `else`.
 
-**★ Why does the `else` clause exist, and how does it narrow a handler?**
-Because there is no other way to say "run this only if the guarded operation succeeded,
-but do not guard it". The reference: *"Exceptions in the `else` clause are not handled by
-the preceding `except` clauses."* So moving the follow-on work from `try` to `else`
-removes it from the handler's scope without removing it from the success path. The
-tutorial gives the rationale directly — it *"avoids accidentally catching an exception
-that wasn't raised by the code being protected"*.
+**★ The handler has the exception object in its hand. Why can it not just ask where the
+exception came from?**
+Because the match happens before the handler exists — origin is not part of the predicate,
+so there is no clause you can write that means "a `KeyError` from *this* subscript". Once
+the handler is entered you *can* reach the raising frame through `exc.__traceback__` and
+`tb_next`, but branching on it means asserting facts about another module's file layout,
+which breaks under refactoring and does not exist at all for a C-level raise. The origin is
+expressible only as the shape of the `try` suite, which makes the repair structural.
 
-**★ In the documentation's own EAFP rewrite of the `os.access` example, three separate
-narrowing decisions were made. What are they?**
-First, only `open()` is inside the `try` — the `with` and the `read()` are in `else`, so a
-read failure is not answered with default data. Second, the clause is
-`except PermissionError`, not `except OSError`, so a missing file still raises
-`FileNotFoundError` at the caller. Third, the success-path `return` lives in `else` rather
-than in `try`, which is what makes the first decision expressible at all. It is a faithful
-translation of an `os.R_OK` check, not a catch-all.
+**★ A clause can be too wide in two different ways. Name both and say which is worse.**
+Class breadth — naming a base class, so `except OSError` owns every errno subclass — and
+origin breadth, where the guarded suite calls code that raises the same class. Origin
+breadth is worse in practice, because class breadth is visible in the clause you are
+reading and can be found by grep, while origin breadth is a property of the suite and of
+the entire call tree beneath it. A reviewer scanning for `except Exception` finds the
+first kind and walks straight past the second.
 
-**★ Why should the assignment be outside the `try` when the value is not used until
-afterwards anyway?**
-Because "the assignment" is usually two operations on one line.
-`value = compute_discount(cart[code])` has the leap (`cart[code]`) and the work
-(`compute_discount`) inside the same guard, so the work's exceptions are in the handler's
-scope. Hoisting the leap into a `try` of its own and putting the work in `else` costs two
-lines and removes an entire class of misattributed failure. It is exactly what PEP 8's
-"Correct" example does.
+**Why is `decimal.InvalidOperation` used in the receipt repair rather than `ValueError`?**
+Because `decimal` raises its own signalling classes rather than the builtin.
+`DecimalException` is documented as *"Base class for other signals and a subclass of
+`ArithmeticError`"*, so a clause naming `ValueError` would never catch it while still
+claiming to. It is the general lesson in a specific place: before naming a class, check
+what the call you are guarding is documented to raise. Topic 11's
+[05b · Choosing the type](../11-exceptions/05b-choosing-the-exception-type.md) is the
+reference for catching what the callee documents.
 
-**How do you find out, in review, whether a handler is catching a callee's exception?**
-Ask of every line in the `try` suite: *would I want this handler to fire if this line
-failed?* Then ask it about everything those lines call, transitively — which is the point
-at which you stop and narrow the block, because you cannot audit a call tree you do not
-own. That is why "the `try` suite contains one expression" is a rule rather than a
-preference: it is the only version of the question you can actually answer.
-
-**You moved the follow-on work into `else` and nothing changed. Why?**
-Almost certainly because the `try` suite still contains a `return`. The reference says
-`else` runs only if *"the control flow leaves the `try` suite, no exception was raised,
-and no `return`, `continue`, or `break` statement was executed"* — so a returning `try`
-suite skips `else` altogether, and whatever you moved is unreachable. Assign inside the
-`try`, return inside the `else`.
-
-**Is an f-string inside a `try` really a width problem?**
-Yes, and a common one. Formatting invokes `__str__`, `__repr__` or `__format__`, all of
-which run arbitrary code, so `f"hit: {cache[key]}"` inside a `try` guarded by
-`except KeyError` covers both the lookup and anything the value's `__repr__` does. It is
-the same defect as a call on the right-hand side of an assignment, in a shape people do
-not read as a call.
-
-**Why is `decimal.InvalidOperation` used in the receipt repair rather than
-`ValueError`?**
-Because `decimal` raises its own signalling classes rather than the builtin, so a clause
-naming `ValueError` would not catch it while still claiming to. It is the general lesson
-in a specific place: before naming a class, check what the call you are guarding is
-documented to raise, rather than assuming the builtin that describes the situation. Topic
-11's [05b · Choosing the type](../11-exceptions/05b-choosing-the-exception-type.md) is
-the reference for catching what the callee documents.
+**Does a broad `except Exception` at the top of a request handler have the same defect?**
+No — that one is a deliberate boundary, and topic
+[05c · The quiet boundaries](05c-the-quiet-boundaries.md) is where it belongs. Its scope is
+honest: it says "anything that gets this far becomes a 500", and it logs the traceback
+rather than substituting a plausible value. The defect on this page is the opposite shape —
+a clause that *looks* surgical, names one specific class, and quietly covers a call tree.
+A reader trusts a narrow-looking clause, which is exactly why it does more damage.
 
 ---
 
-← Prev: [Attribute, value and Exception](06e-attribute-value-and-exception.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → **Width at a boundary** *(not written yet)*
+← Prev: [Attribute, value and Exception](06e-attribute-value-and-exception.md) · Index: [EAFP vs LBYL](README.md) · Next → [Width at a boundary](06g-width-at-a-boundary.md)
