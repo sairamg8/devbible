@@ -235,4 +235,4 @@ The root `app/not-found.js` handles both — since v13.3.0 it catches unmatched 
 
 ---
 
-← [04h · `notFound()`](04h-notfound-and-the-not-found-boundary.md) · [Chapter 2 overview](01-explanation.md) · Next → **04j · `usePathname` and `useSearchParams`** *(not written yet)*
+← [04h · `notFound()`](04h-notfound-and-the-not-found-boundary.md) · [Chapter 2 overview](01-explanation.md) · Next → [04j · `usePathname` and `useSearchParams`](04j-usepathname-and-usesearchparams.md)
