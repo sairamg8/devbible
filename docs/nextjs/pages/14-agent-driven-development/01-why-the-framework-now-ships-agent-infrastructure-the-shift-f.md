@@ -135,4 +135,4 @@ Anything about your codebase rather than the framework. Bundled docs make the ag
 
 ---
 
-← [Chapter 14 overview](01-explanation.md) · Next → **`AGENTS.md` and repository context maps** *(not written yet)*
+← [Chapter 14 overview](01-explanation.md) · Next → [`AGENTS.md` and repository context maps](02-agentsmd-and-repository-context-maps-version-matched-bundled.md)
