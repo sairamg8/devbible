@@ -139,7 +139,10 @@ The getting-started guide is explicit that config redirects are the preferred to
 | Question | Page |
 |---|---|
 | The rename rationale, the codemod, what proxy is *for*, and where it runs at all | [07b · Adopting proxy: the rename, the limits and where it runs](07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md) |
-| The matcher, the Server Function trap, header plumbing, the body buffer | [07c · The matcher, and what it silently skips](07c-the-matcher-and-what-it-silently-skips.md) |
+| The matcher syntax, and why a variable in it is ignored | [07c · The matcher syntax](07c-the-matcher-and-what-it-silently-skips.md) |
+| The Server Function trap, `_next/data`, prefetch coverage | [07d · What the matcher skips](07d-what-the-matcher-silently-skips.md) |
+| The signature, `NextResponse`, cookies, header plumbing, RSC | [07e · Inside the proxy function](07e-inside-the-proxy-function.md) |
+| The URL flags, the request-body buffer, unit testing | [07f · Flags, the body buffer, testing](07f-proxy-flags-the-body-buffer-and-testing.md) |
 | A worked multi-tenant proxy with root params | [15 · 10b Tenant routing with proxy and root params](../15-databases-apis-and-full-stack-patterns/10b-tenant-routing-with-proxy-and-root-params.md) |
 | Locale detection and prefixed routes in proxy | [08 · Localized routing](08-localized-routing-i18n-locale-prefixed-routes-locale-detecti.md) |
 
@@ -177,7 +180,7 @@ return NextResponse.next({ request: { headers: requestHeaders } })
 
 **Symptom: you keep `middleware.ts` because you need `edge`, and a deprecation warning appears.** Cause: `middleware` is deprecated but is still the documented path for edge. Verbatim: *"If you want to continue using the `edge` runtime, keep using `middleware`. We will follow up on a minor release with further `edge` runtime instructions."* Fix: this is a supported state, not a mistake — pin the decision in a comment so the next person does not "fix" it by running the codemod.
 
-**Symptom: a `console.log` of `request.headers` in proxy never shows `rsc` or `next-router-state-tree`.** Cause: Next.js deliberately strips them. Verbatim: *"During RSC requests, Next.js strips internal Flight headers from the `request` instance in Proxy. ... This is to prevent accidentally handling an RSC request differently than the HTML request as both need to align."* Fix: do not branch on Flight headers. If you are hand-rolling a rewrite with `fetch()` rather than `NextResponse.rewrite()`, this is exactly where RSC headers go missing — see [07c](07c-the-matcher-and-what-it-silently-skips.md).
+**Symptom: a `console.log` of `request.headers` in proxy never shows `rsc` or `next-router-state-tree`.** Cause: Next.js deliberately strips them. Verbatim: *"During RSC requests, Next.js strips internal Flight headers from the `request` instance in Proxy. ... This is to prevent accidentally handling an RSC request differently than the HTML request as both need to align."* Fix: do not branch on Flight headers. If you are hand-rolling a rewrite with `fetch()` rather than `NextResponse.rewrite()`, this is exactly where RSC headers go missing — see [07e](07e-inside-the-proxy-function.md).
 
 
 ## Interview questions
