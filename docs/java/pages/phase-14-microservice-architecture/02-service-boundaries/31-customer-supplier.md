@@ -1,7 +1,7 @@
 ---
 title: "In a Customer-Supplier relationship, the downstream customer has genuine leverage over the upstream supplier — upstream prioritizes downstream requirements and negotiates delivery dates in sprint planning"
 sidebar_label: "31 · Customer-supplier"
-sidebar_position: 44
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -46,6 +46,7 @@ import org.springframework.web.client.RestClient;
 
 // Downstream customer client expecting negotiated contract
 @Component
+// src/main/java/com/retailer/order/client/CustomerProfileClient.java
 public class CustomerProfileClient {
 
     private final RestClient restClient;
@@ -66,6 +67,7 @@ public class CustomerProfileClient {
 }
 
 // Negotiated contract record authored to meet downstream Order validation needs
+// src/main/java/com/retailer/order/client/CustomerVerification.java
 public record CustomerVerification(
     UUID customerId,
     boolean eligibleForCredit,

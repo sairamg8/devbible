@@ -1,14 +1,16 @@
 ---
 title: "In a Conformist relationship, the downstream team eliminates translation by adopting the upstream domain model directly — a conscious compromise that trades linguistic purity for integration velocity"
 sidebar_label: "32 · Conformist"
-sidebar_position: 45
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
-> Conformist; Vaughn Vernon, *Implementing Domain-Driven Design* (Addison-Wesley), Chapter 3:
-> Context Maps.
+> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design Reference* (2015), *Conformist*,
+> reproduced verbatim in the ddd-crew *Context Mapping Guide*
+> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)); Eric Evans,
+> *Domain-Driven Design* (Addison-Wesley, 2003), Chapter 14 *Maintaining Model Integrity*, for the
+> pattern's original discussion.
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **When a downstream team lacks the organizational leverage to demand supplier accommodations and determines that maintaining an Anticorruption Layer is cost-prohibitive, it chooses the Conformist pattern. In this relationship, the downstream team intentionally surrenders its own distinct ubiquitous language and adopts the upstream domain model directly into its bounded context. Conforming is not a failure of domain modeling; it is a pragmatic architectural compromise that trades linguistic independence for zero translation overhead, immediate compatibility, and rapid feature delivery. However, it is an asymmetric and binding commitment: any design bias, structural flaw, or breaking change in the upstream model propagates directly into the downstream domain.**
@@ -24,7 +26,15 @@ If the upstream system is a mature industry standard (such as Stripe for payment
 
 In such cases, Evans recommends **Conformist**:
 
-> *"When a downstream context has to use an upstream system, and the upstream team has no motivation to collaborate... the downstream team can eliminate translation by taking the upstream model whole."*
+> *"Eliminate the complexity of translation between bounded contexts by slavishly adhering to the model of the upstream team."*
+
+**The word Evans chose is *slavishly*, and it is carrying the whole pattern.** Conformist is not
+"we happened to agree with upstream". It is "we have given up the right to disagree". The
+Reference entry is explicit that this cramps the downstream designers and probably does not yield
+the ideal model for the application — and recommends it anyway, because it *"enormously simplifies
+integration"* and because the downstream then shares a ubiquitous language with the team that is,
+in Evans's phrase, in the driver's seat. Conforming is a decision to stop paying for
+independence you were not going to use.
 
 ## When to conform vs when to insulate
 
@@ -53,6 +63,7 @@ import org.springframework.web.client.RestClient;
 
 // Downstream Fulfillment context conforms directly to Upstream Catalog schema
 @Service
+// src/main/java/com/retailer/fulfillment/service/PackageAssemblyService.java
 public class PackageAssemblyService {
 
     private final RestClient catalogClient;
@@ -85,6 +96,7 @@ public class PackageAssemblyService {
 }
 
 // Downstream model directly encapsulates upstream records
+// src/main/java/com/retailer/fulfillment/service/ShippingBoxRecommendation.java
 public record ShippingBoxRecommendation(String boxType, boolean requiresFreight) {}
 ```
 

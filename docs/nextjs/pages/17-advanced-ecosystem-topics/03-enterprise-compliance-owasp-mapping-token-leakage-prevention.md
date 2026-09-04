@@ -1,7 +1,7 @@
 ---
 title: "Enterprise compliance is a mapping exercise, not a checklist: every OWASP category lands on a specific App Router seam, and the two that bite hardest are the ones RSC invented"
 sidebar_label: "03 · OWASP mapping and token leakage"
-sidebar_position: 3
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>

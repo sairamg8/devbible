@@ -1,7 +1,7 @@
 ---
 title: "Living with an imperfect boundary is often the rational economic choice — mitigating coupling through read replicas, caching, and circuit breakers"
 sidebar_label: "43 · When not to fix it"
-sidebar_position: 56
+sidebar_position: 57
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -70,9 +70,11 @@ import org.springframework.web.client.RestClient;
 
 import java.util.Optional;
 
+// src/main/java/com/example/containment/client/CustomerSummary.java
 public record CustomerSummary(String customerId, String displayName, String tier) {}
 
 @Service
+// src/main/java/com/example/containment/client/ResilientCustomerClient.java
 public class ResilientCustomerClient {
 
     private final RestClient restClient;

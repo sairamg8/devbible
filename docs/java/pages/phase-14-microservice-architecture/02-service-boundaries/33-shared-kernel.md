@@ -1,14 +1,15 @@
 ---
 title: "A Shared Kernel is an explicit, co-owned subset of domain code and schema shared between bounded contexts — the most expensive relationship in DDD, survivable only with strict admission criteria and automated CI gates"
 sidebar_label: "33 · Shared kernel"
-sidebar_position: 46
+sidebar_position: 47
 ---
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
-> Shared Kernel; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
-> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
+> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design Reference* (2015), *Shared Kernel*,
+> reproduced verbatim in the ddd-crew *Context Mapping Guide*
+> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)); Eric Evans,
+> *Domain-Driven Design* (Addison-Wesley, 2003), Chapter 14 *Maintaining Model Integrity*.
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **A Shared Kernel is a deliberately shared subset of the domain model, code, or database schema that two bounded contexts agree to maintain jointly. Unlike an accidental `common-utils` grab bag, a Shared Kernel represents an explicit mutual dependency: neither team can alter any class, method, or database table inside the kernel without consulting the other team and verifying both test suites. Because any change requires dual consultation, synchronized testing, and coordinated deployments, a Shared Kernel is the most expensive relationship pattern in Domain-Driven Design. It is justifiable only when the cost of translating between two closely related subdomains exceeds the high coordination overhead of co-ownership, and it survives only when protected by strict size constraints and automated CI gates.**
@@ -25,9 +26,16 @@ In [16 · The shared model jar](16-the-shared-model-jar.md), we examined the cat
 | **Dependencies** | Heavy dependencies (Spring, Hibernate, Jackson) | Zero external dependencies (pure JDK only) |
 | **Trajectory** | Expands uncontrollably over time | Kept aggressively minimal, with intent to shrink |
 
-Evans warns:
+Evans defines it as a deliberately **small** designation, not a convenience:
 
-> *"The shared kernel cannot be changed as freely as other parts of the system. A change requires consultation with the other team, and both teams' test suites must run on every build."*
+> *"Designate with an explicit boundary some subset of the domain model that the teams agree to share. Keep this kernel small."*
+
+and constrains it in the same entry: the shared subset — model, code and the associated part of
+the database design — has **special status, and shouldn't be changed without consultation with
+the other team.** That consultation clause is the entire cost of the pattern. A Shared Kernel is
+therefore not changeable as freely as the rest of the design, and both teams' builds have to
+prove it still works; the four rules below are what turn that obligation into something a CI
+pipeline enforces rather than something two teams remember to do.
 
 ## The four rules that make a Shared Kernel survivable
 
@@ -146,7 +154,7 @@ Only pure, immutable value objects (e.g. `Money`, `Address`), universal domain i
 Through mandatory dual-ownership: any pull request modifying the kernel must require automated approval from designated code owners representing each collaborating team. Furthermore, CI pipelines must automatically run the full regression test suites of all consuming services against the proposed kernel changes before merging.
 
 **★ Why is code duplication often preferable to a Shared Kernel?**
-In a distributed microservice architecture, team autonomy is paramount. Maintaining a Shared Kernel forces continuous cross-team coordination, meetings, and synchronized releases. Duplicating a 30-line `Money` record into two separate services costs a few minutes of typing, but eliminates 100% of the cross-team coordination overhead, allowing both teams to ship independently.
+In a distributed microservice architecture, team autonomy is paramount. Maintaining a Shared Kernel forces continuous cross-team coordination, meetings, and synchronized releases. Duplicating a 30-line `Money` record into two separate services costs a few minutes of typing, but removes the cross-team coordination overhead entirely, allowing both teams to ship independently.
 
 ---
 

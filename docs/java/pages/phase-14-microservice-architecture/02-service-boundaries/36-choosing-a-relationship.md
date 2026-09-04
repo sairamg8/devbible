@@ -1,7 +1,7 @@
 ---
 title: "Selecting a context mapping pattern is a function of organizational power, domain differentiation, and integration cost — a deterministic decision matrix matching technical architecture to team reality"
 sidebar_label: "36 · Choosing a relationship"
-sidebar_position: 49
+sidebar_position: 50
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -78,7 +78,7 @@ Context relationships are not static contracts; they shift as organizations matu
 
 1. **Customer-Supplier to Open Host Service:** When an internal service expands from supporting two aligned internal teams to supporting thirty microservices across the company, it must terminate bespoke Customer-Supplier negotiations and publish an Open Host Service with strict backwards-compatibility guarantees.
 2. **Conformist to Anticorruption Layer:** If a third-party SaaS vendor is acquired, suffers quality degradation, or announces an incompatible API overhaul, a downstream conformist team must immediately erect an Anticorruption Layer to insulate its business logic.
-3. **Partnership to Service Merge:** When two teams in a Partnership realize that 80% of their pull requests require joint review and synchronized deployments, they should dissolve the artificial microservice boundary and merge into a single bounded context.
+3. **Partnership to Service Merge:** When two teams in a Partnership realize that most of their pull requests require joint review and synchronized deployments, they should dissolve the artificial microservice boundary and merge into a single bounded context.
 
 ## Gotchas
 

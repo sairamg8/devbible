@@ -1,14 +1,16 @@
 ---
 title: "Partnership and Separate Ways represent the two extremes of context mapping — intense mutual coordination where failure of one is failure of both versus total disconnection where duplication is welcomed to preserve autonomy"
 sidebar_label: "35 · Partnership and separate ways"
-sidebar_position: 48
+sidebar_position: 49
 ---
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design* (Addison-Wesley), Chapter 14:
-> Partnership & Separate Ways; Alberto Brandolini and DDD-Crew *Context Mapping Guide*
-> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)).
+> Verified: 2026-09-04 against Eric Evans, *Domain-Driven Design Reference* (2015), *Partnership*
+> and *Separate Ways*, reproduced verbatim in the ddd-crew *Context Mapping Guide*
+> ([github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping)). 🔴 *Partnership*
+> is **not** in *Domain-Driven Design* (Addison-Wesley, 2003) — only *Separate Ways* is, in Chapter 14
+> *Maintaining Model Integrity*.
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **At the two outer poles of context mapping lie Partnership and Separate Ways—the maximum and minimum degrees of organizational coupling. In a Partnership, two teams bind their delivery roadmaps together: neither can succeed without the other, requiring synchronized sprint cadences, joint API design, and coordinated deployments. At the opposite extreme, Separate Ways is an intentional architectural decision to refuse technical integration altogether: teams determine that the operational, cognitive, and coordination costs of connecting their systems exceed the business value of shared data, choosing code duplication or manual handoffs to preserve absolute autonomy. Both patterns are legitimate architectural choices when chosen deliberately, and both become catastrophic failures when fallen into by accident.**
@@ -31,7 +33,18 @@ Architects frequently resist both extremes:
 
 Evans defines Partnership as:
 
-> *"Where development failure for either team means development failure for both, they must cooperate on an equal footing. They must synchronize their release cadences and interface development."*
+> *"Where development failure in either of two contexts would result in delivery failure for both, forge a partnership between the teams in charge of the two contexts."*
+
+🔴 **Do not go looking for this one in the 2003 book — it is not there.** Partnership is one of
+the patterns Evans added in the *Domain-Driven Design Reference* (2015), alongside Big Ball of
+Mud. Chapter 14 of *Domain-Driven Design* has Shared Kernel, Customer/Supplier, Conformist,
+Anticorruption Layer, Separate Ways, Open Host Service and Published Language, and no Partnership.
+A great many context-mapping articles cite it to Chapter 14 anyway; if you are checking this page
+against a source, check it against the Reference.
+
+The Reference entry names the mechanism, and it is two obligations rather than a sentiment:
+institute a process for **coordinated planning** of development, and **joint management of
+integration**.
 
 ### Key dynamics of Partnership
 
@@ -41,13 +54,13 @@ Evans defines Partnership as:
 
 ### The scaling ceiling of Partnership
 
-Partnership works effectively between **two** closely aligned teams within the same business unit. However, Partnership fails to scale to three or more teams. Because communication paths scale quadratically ($n(n-1)/2$), a three-way partnership requires continuous multi-team alignment meetings, paralyzing engineering velocity.
+Partnership works effectively between **two** closely aligned teams within the same business unit. However, Partnership fails to scale to three or more teams. Because communication paths scale quadratically — `n(n-1)/2`, so two teams have one path, three have three, four have six — a three-way partnership requires continuous multi-team alignment meetings, paralyzing engineering velocity.
 
 ## Pattern 2: Separate Ways (Deliberate Independence)
 
 Evans defines Separate Ways as:
 
-> *"Declare that the contexts have nothing to do with each other and allow developers to find simple, specialized solutions in their small scope."*
+> *"Declare a bounded context to have no connection to the others at all, allowing developers to find simple, specialized solutions."*
 
 ### When Separate Ways is the superior strategy
 
@@ -102,11 +115,11 @@ public record CampaignLead(
 }
 ```
 
-The Marketing service has zero dependencies, zero network latency, zero shared libraries, and 100% operational uptime independent of whether the enterprise Customer service is down.
+The Marketing service has zero dependencies, zero network latency and zero shared libraries, and its availability is entirely independent of whether the enterprise Customer service is up.
 
 ## Gotchas
 
-**★ Symptom: Two teams in a "Partnership" spend 50% of every sprint in cross-team coordination meetings.**
+**★ Symptom: Two teams in a "Partnership" spend more of every sprint coordinating with each other than delivering.**
 Cause: The boundary was drawn in the wrong place. The two bounded contexts are actually a single aggregate or bounded context split across two teams.
 Fix: Merge the teams or the services into a single deployable unit, eliminating the cross-boundary coordination penalty.
 

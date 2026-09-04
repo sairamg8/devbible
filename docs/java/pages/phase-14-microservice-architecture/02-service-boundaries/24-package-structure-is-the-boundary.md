@@ -9,11 +9,14 @@ sidebar_position: 34
 > Verified: 2026-09-04 against microservices.io *Decompose by business capability*
 > ([microservices.io](https://microservices.io/patterns/decomposition/decompose-by-business-capability.html));
 > Martin Fowler *Package by Feature* ([martinfowler.com](https://martinfowler.com/bliki/PackageByFeature.html));
-> Spring Framework 7.0.9 documentation on component scanning and constructor injection.
+> the Spring Framework reference, *Using `@Transactional`*
+> ([docs.spring.io](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html));
+> the Spring Modulith reference, *Fundamentals*
+> ([docs.spring.io](https://docs.spring.io/spring-modulith/reference/fundamentals.html));
+> *The State of the Module System* ([openjdk.org](https://openjdk.org/projects/jigsaw/spec/sotms/)).
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
 
 **A package in Java is not a folder for grouping similar technical artifacts; it is the primary encapsulation mechanism provided by the language. When a codebase is structured by layer—controllers, services, repositories—every single domain entity and repository interface must be declared `public`, destroying encapsulation and inviting any class in the system to bypass business invariants. Structuring packages by business feature or bounded context enables package-private visibility to hide internal entities, domain services, and database persistence behind a narrow, explicitly published API. If you cannot prevent illegal cross-boundary coupling using Java's package access modifier in-process, deploying services across a network will not solve the problem—it will merely turn compile-time errors into runtime distributed failures.**
-
 ## The fatal flaw of package-by-layer
 
 Most monolithic applications begin with a package structure organized by technical tier:
@@ -72,13 +75,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 // Public API surface exposed to other packages
+// src/main/java/com/retailer/order/OrderPlacementApi.java
 public interface OrderPlacementApi {
     OrderSummary placeOrder(PlaceOrderCommand command);
 }
 
+// src/main/java/com/retailer/order/PlaceOrderCommand.java
 public record PlaceOrderCommand(UUID customerId, List<OrderItemRequest> items) {}
+// src/main/java/com/retailer/order/OrderItemRequest.java
 public record OrderItemRequest(UUID productId, int quantity, BigDecimal unitPrice) {}
+// src/main/java/com/retailer/order/OrderSummary.java
 public record OrderSummary(UUID orderId, UUID customerId, BigDecimal totalAmount, Instant createdAt) {}
+// src/main/java/com/retailer/order/OrderPlacedEvent.java
 public record OrderPlacedEvent(UUID orderId, UUID customerId, BigDecimal totalAmount) {}
 
 // Package-private implementation details hidden from other packages
@@ -138,25 +146,6 @@ interface OrderRepository extends Repository<Order, UUID> {
     Order save(Order order);
 }
 ```
-
-## The Java subpackage trap
-
-A frequent mistake when transitioning to package-by-feature is introducing subpackages inside the feature:
-
-```text
-com.retailer.order
-├── api
-│   └── OrderPlacementApi.java
-├── internal
-│   ├── OrderPlacementService.java
-│   ├── Order.java
-│   └── OrderRepository.java
-```
-
-According to Java Language Specification §6.6.1, package-private access does not cross package boundaries. In Java, subpackages are strictly namespace conventions; `com.retailer.order.internal` is a completely separate package from `com.retailer.order`.
-
-If `OrderPlacementService` in `.internal` implements `OrderPlacementApi` in `.api`, both the implementation and its internal dependencies must be declared `public` for the service to be instantiated and wired across packages. The moment you introduce technical subpackages, package-private encapsulation collapses and you recreate the problems of package-by-layer. Keep the package flat, or enforce boundaries using [25 · Verifying the boundary](25-verifying-the-boundary.md) or [26 · ArchUnit rules](26-archunit-rules.md).
-
 ## The extraction test
 
 A package structured by feature provides an unambiguous test for microservice readiness:
@@ -166,6 +155,10 @@ A package structured by feature provides an unambiguous test for microservice re
 3. **Database access:** All SQL queries and tables associated with the feature are manipulated exclusively through package-private repositories in this single package.
 
 If a package passes this test in a monolith, extracting it into an independent microservice requires only wrapping the public Java interface in a REST controller or messaging listener, moving the package to its own Git repository, and provisioning its database schema. If a package fails this test in-process, extracting it across a network will produce a distributed monolith.
+
+What this chunk has described is javac's version of the boundary, and it holds for exactly one
+flat package. [24b · When one flat package is not enough](24b-when-one-flat-package-is-not-enough.md)
+picks up where that protection stops.
 
 ## Gotchas
 
@@ -183,9 +176,83 @@ class PaymentReconciliationService {
 }
 ```
 
-**★ Symptom: Creating subpackages like `com.retailer.order.repository` forces repository interfaces to be declared `public`.**
-Cause: Java subpackages do not inherit or share package-private visibility with parent packages.
-Fix: Keep repository interfaces and entity definitions in the root feature package `com.retailer.order` alongside domain services, or enforce subpackage visibility rules using ArchUnit or Spring Modulith named interfaces.
+**★ Symptom: `@Transactional` on a package-private service method silently does nothing — the method runs, and nothing rolls back.**
+Cause: proxy visibility, and the rule changed. The Spring Framework reference states it exactly:
+
+> *"The `@Transactional` annotation is typically used on methods with `public` visibility. As of 6.0,
+> `protected` or package-visible methods can also be made transactional for class-based proxies by
+> default. Note that transactional methods in interface-based proxies must always be `public` and
+> defined in the proxied interface."*
+
+So on Framework **7.0.9** a package-private `@Transactional` method works — **but only behind a
+class-based (CGLIB) proxy.** The moment the bean is proxied through an interface, the annotation on
+a non-public method is not seen. A package-by-feature service implementing a public API interface is
+exactly the shape that can end up interface-proxied.
+Fix: keep the transactional method public **on the API interface** and let the implementation be
+package-private, which is the shape this chunk already recommends — the method is public, the class
+is not:
+```java
+public interface OrderPlacementApi {
+    OrderSummary placeOrder(PlaceOrderCommand command);   // public, on the interface
+}
+
+@Service
+class OrderPlacementService implements OrderPlacementApi {
+    @Override
+    @Transactional                                        // public method, package-private class
+    public OrderSummary placeOrder(PlaceOrderCommand command) {
+        return summarise(orderRepository.save(buildOrder(command)));
+    }
+}
+```
+If you deliberately want non-public transactional methods everywhere, the same page offers
+`publicMethodsOnly` to force the stricter, proxy-independent rule back on.
+
+**★ Symptom: `@Transactional` works when called from a controller and does nothing when called from the class next door in the same package.**
+Cause: not visibility — self-invocation. Verbatim: *"only external method calls coming in through the
+proxy are intercepted. This means that self-invocation … does not lead to an actual transaction at
+runtime even if the invoked method is marked with `@Transactional`."* Package-by-feature makes this
+**more** likely, because collaborators that used to live in another package and had to go through the
+proxy are now sitting inside the same class.
+Fix: keep the transaction boundary on the module's entry point and let internal helpers be plain
+method calls inside it, rather than annotating helpers and hoping.
+```java
+@Service
+class OrderPlacementService implements OrderPlacementApi {
+    @Override
+    @Transactional
+    public OrderSummary placeOrder(PlaceOrderCommand command) {
+        Order order = buildOrder(command);      // plain call: already inside the transaction
+        return summarise(orderRepository.save(order));
+    }
+
+    private Order buildOrder(PlaceOrderCommand c) {   // NOT annotated. Annotating it would be a lie.
+        Order order = new Order(UUID.randomUUID(), c.customerId());
+        c.items().forEach(i -> order.addItem(i.productId(), i.quantity(), i.unitPrice()));
+        return order;
+    }
+}
+```
+
+**★ Symptom: Jackson serialises an empty JSON object for a package-private domain type.**
+Cause: neither the type nor its accessors are reachable under Jackson's default visibility rules, so
+nothing is discovered to serialise.
+Fix: do not solve this by making the aggregate public. It is the API boundary telling you the truth —
+serialise a public record instead, which is exactly what the public `OrderSummary` in this chunk's
+example is for.
+```java
+// wrong: reaching for @JsonAutoDetect to expose the aggregate
+// right: the aggregate never leaves the package
+return new OrderSummary(saved.getId(), saved.getCustomerId(), saved.getTotalAmount(), saved.getCreatedAt());
+```
+
+**★ Symptom: two features both need `Money`, and the proposed fix is a `com.retailer.common` package.**
+Cause: a real shared concept, met with the one structure that cancels every boundary in the system at
+compile time.
+Fix: duplicate the small value type per package first, and promote it to a shared kernel only with an
+explicit owner and the four rules in [33 · Shared kernel](33-shared-kernel.md).
+[16 · The shared model jar](16-the-shared-model-jar.md) is the long version of why the `common`
+package is never free.
 
 **★ Symptom: Domain entities are declared `public` and returned directly from controller or service methods to save authoring DTO classes.**
 Cause: Conflating the internal domain model with the public published language.
@@ -200,15 +267,29 @@ Fix: Package-private entities cannot be referenced in another package's entity m
 **★ Why is package-by-layer considered an anti-pattern when preparing an architecture for microservices?**
 Package-by-layer groups code by technical mechanisms (controllers, services, repositories) rather than business capabilities. Because Java's default access modifier limits visibility to the same package, placing repositories, entities, and services in separate packages forces every class to be marked `public`. This destroys encapsulation, allowing any part of the application to directly access, query, and mutate another domain's data model without traversing business invariants. When teams attempt to decompose a package-by-layer monolith into microservices, they discover that domain logic is tangled across the entire codebase, making extraction without distributed circular dependencies virtually impossible.
 
-**★ How does Java's treatment of subpackages affect modular design?**
-Unlike languages where namespaces or modules provide hierarchical encapsulation, the Java Language Specification treats package names as entirely flat. The package `com.app.order.internal` has no special visibility privileges into `com.app.order`; they are treated as two unrelated packages. Consequently, creating subpackages within a module forces any class that needs to be accessed across those subpackages to be declared `public`, exposing it to the rest of the application as well. Architectural boundaries that span subpackages must therefore be guarded by external tooling such as ArchUnit, Spring Modulith, or the Java Platform Module System (JPMS).
-
 **★ What is the relationship between package-private visibility and microservice boundaries?**
 Package-private visibility is the in-process precursor to a microservice network boundary. A well-designed microservice exposes only a small set of public HTTP endpoints or message schemas while keeping its persistence layer, internal state machines, and helper classes hidden inside the deployment unit. Package-by-feature achieves the exact same encapsulation within a monolithic JVM process: public interfaces and DTOs define the published API, while package-private classes prevent other modules from touching internal domain mechanics. A module that cannot maintain this separation in-process will inevitably fail to maintain it across microservices.
 
 **★ Can Spring Data repositories be declared package-private?**
 Yes. Spring Data and Spring Framework runtime reflection easily inspects and creates dynamic proxies for package-private repository interfaces. Declaring `interface OrderRepository extends Repository<Order, UUID>` without a `public` modifier ensures that only services located in that exact feature package can inject and execute database operations for that aggregate, guaranteeing single-service data ownership.
 
+**★ Does `@Transactional` work on a non-public method?**
+It depends on the proxy, and the answer changed at Framework 6.0. The reference says `protected` and
+package-visible methods *"can also be made transactional for class-based proxies by default"*, while
+*"transactional methods in interface-based proxies must always be `public` and defined in the proxied
+interface."* So: on a CGLIB proxy, yes since 6.0; on a JDK interface proxy, never. The safe design
+does not depend on knowing which one you got — put the transactional method on the public interface
+and keep the implementing class package-private.
+
+**★ What does package-by-feature cost, honestly?**
+Three things. Navigation gets worse before it gets better, because a bounded context in one flat
+package is a long file list with no visual grouping. Cross-cutting technical changes get more
+tedious — "add a Micrometer timer to every repository" is one directory in package-by-layer and
+twelve in package-by-feature. And the structure encodes a domain judgement, so a boundary you got
+wrong is now expressed in the directory tree and costs a move to correct rather than a rename. The
+first two are real and worth paying; the third is the point — the structure is *supposed* to make a
+wrong boundary visible.
+
 ---
 
-← [The monolith already told you](23-the-monolith-already-told-you.md) · [Topic index](README.md) · Next → [Verifying the boundary](25-verifying-the-boundary.md)
+← [The monolith already told you](23-the-monolith-already-told-you.md) · [Topic index](README.md) · Next → [When one flat package is not enough](24b-when-one-flat-package-is-not-enough.md)

@@ -1,7 +1,7 @@
 ---
 title: "A single public API per module is a naive assumption — Spring Modulith's @NamedInterface allows a bounded context to publish distinct contracts for different consumers without exposing its internal implementation"
 sidebar_label: "25b · Named interfaces"
-sidebar_position: 36
+sidebar_position: 37
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -77,10 +77,12 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 // Public interface inside the named "spi" slice
+// src/main/java/com/retailer/order/spi/OrderEventPublisherSpi.java
 public interface OrderEventPublisherSpi {
     void publishOrderCompleted(OrderCompletedPayload payload);
 }
 
+// src/main/java/com/retailer/order/spi/OrderCompletedPayload.java
 public record OrderCompletedPayload(UUID orderId, UUID customerId, BigDecimal totalAmount) {}
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: "Merging two services is a disciplined engineering migration, not a defeat — a six-step procedure that collapses an artificial network boundary back into a modular in-process package without downtime"
 sidebar_label: "38 · Merging two services"
-sidebar_position: 51
+sidebar_position: 52
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -67,7 +67,7 @@ public class OrderFulfillmentCoordinator {
 
     @Transactional
     public void fulfillOrder(UUID orderId) {
-        // Direct local Java method call: 5 microseconds instead of 40ms over HTTP
+        // Direct local Java method call: no serialization, no socket, no timeout budget
         ShippingManifestRecord manifest = shippingService.generateManifest(orderId);
         // Both operations now participate in a single local ACID transaction
     }

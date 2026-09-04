@@ -1,7 +1,7 @@
 ---
 title: "An Anticorruption Layer isolates a pure domain model from an unruly external service — a dedicated adapter and translator that translates foreign concepts into your ubiquitous language at the boundary"
 sidebar_label: "29 · Anticorruption layer"
-sidebar_position: 41
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -63,10 +63,12 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 // 1. Domain Port: Expressed exclusively in downstream ubiquitous language
+// src/main/java/com/retailer/billing/domain/PaymentGatewayPort.java
 public interface PaymentGatewayPort {
     PaymentResult authorizePayment(UUID customerId, BigDecimal amount);
 }
 
+// src/main/java/com/retailer/billing/domain/PaymentResult.java
 public record PaymentResult(
     boolean approved,
     String authorizationCode,
@@ -81,6 +83,7 @@ public record PaymentResult(
     }
 }
 
+// src/main/java/com/retailer/billing/domain/DeclineReason.java
 public enum DeclineReason {
     INSUFFICIENT_FUNDS,
     EXPIRED_CARD,

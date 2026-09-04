@@ -1,7 +1,7 @@
 ---
 title: "A bad service boundary announces itself through concrete operational pathology — lockstep deployments, distributed transactions, chatty network roundtrips, and cross-repo feature branches prove a line was drawn in the wrong place"
 sidebar_label: "37 · The tells of a wrong boundary"
-sidebar_position: 50
+sidebar_position: 51
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -42,8 +42,8 @@ Observe the pull requests required to ship a routine business feature. If a sing
 When microservices are sliced too finely (such as Nygard's entity services), domain logic remains centralized while data is scattered across the network. To execute a single business operation, an orchestrator service must make dozens of synchronous roundtrips to fetch individual fields.
 
 This triggers two catastrophic consequences:
-1. **Latency amplification:** Network roundtrips, serialization, and connection pooling overhead turn a 5ms in-memory method into a 400ms HTTP cascade.
-2. **Availability degradation:** As detailed in the availability arithmetic of microservices, if five sequential services each maintain 99% availability, the composite interaction achieves only $0.99^5 \approx 95.1\%$ availability.
+1. **Latency amplification:** Network roundtrips, serialization, and connection pooling overhead turn an in-memory method call into an HTTP cascade whose latency is set by the number of sequential hops rather than by the work being done.
+2. **Availability degradation:** As detailed in the availability arithmetic of microservices, if five sequential services each maintain 99% availability, the composite interaction achieves only `0.99^5`, or roughly **95.1%** availability.
 
 ### 4. Distributed transactions and compensation hell
 

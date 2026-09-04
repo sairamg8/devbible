@@ -1,7 +1,7 @@
 ---
 title: "An Open Host Service exposes a standardized, public protocol that enables dozens of downstream consumers to integrate without bespoke upstream negotiations — paired with a Published Language to guarantee backwards compatibility"
 sidebar_label: "34 · Open host and published language"
-sidebar_position: 47
+sidebar_position: 48
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -53,6 +53,7 @@ import org.springframework.web.bind.annotation.RestController;
 // 1. Open Host Service: Standardized public protocol for all consumers
 @RestController
 @RequestMapping("/public/v1/products")
+// src/main/java/com/retailer/catalog/web/CatalogOpenHostController.java
 public class CatalogOpenHostController {
 
     private final ProductCatalogQueryService queryService;
@@ -86,6 +87,7 @@ public class CatalogOpenHostController {
 }
 
 // 2. Published Language: Stable, immutable contract independent of internal JPA entities
+// src/main/java/com/retailer/catalog/web/ProductPublishedRepresentation.java
 public record ProductPublishedRepresentation(
     UUID productId,
     String sku,

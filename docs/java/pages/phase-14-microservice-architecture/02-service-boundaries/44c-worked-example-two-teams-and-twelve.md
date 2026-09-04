@@ -1,7 +1,7 @@
 ---
 title: "The same domain produces two radically different architectures depending on team topology — an honest comparison of two teams versus twelve teams"
 sidebar_label: "44c · Worked example: two teams vs twelve"
-sidebar_position: 59
+sidebar_position: 60
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -105,7 +105,7 @@ A **Decoupled Microservice Architecture** with 8 to 12 independent services comm
 ## Gotchas
 
 **★ Cargo Culting Netflix or Amazon at a 10-person startup.**
-Adopting the architecture of an 80-team organization when you have 8 engineers is the number one cause of startup technical bankruptcy. The team spends 80% of its engineering capacity maintaining distributed plumbing instead of shipping features.
+Adopting the architecture of an 80-team organization when you have 8 engineers is the number one cause of startup technical bankruptcy. The team spends the bulk of its engineering capacity maintaining distributed plumbing instead of shipping features.
 
 **★ Resisting service extraction when crossing 50+ engineers.**
 When an engineering department grows from 10 to 80 people, attempting to maintain a single monolithic deployable without modular enforcement creates severe release gridlock, long deployment queues, and cross-team developer resentment.

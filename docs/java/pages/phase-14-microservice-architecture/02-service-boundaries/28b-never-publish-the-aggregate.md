@@ -1,7 +1,7 @@
 ---
 title: "Serialising the domain entity directly into JSON or Kafka payloads turns database schema into wire protocol — the moment an internal column migration breaks external consumers, your boundary has ceased to exist"
 sidebar_label: "28b · Never publish the aggregate"
-sidebar_position: 40
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -62,6 +62,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 // 1. Published Request Contract: Whitelist of allowed input fields
+// src/main/java/com/retailer/order/CreateOrderRequest.java
 public record CreateOrderRequest(
     UUID customerId,
     BigDecimal totalAmount
@@ -75,6 +76,7 @@ public record CreateOrderRequest(
 }
 
 // 2. Published Response Contract: Stable representation independent of database columns
+// src/main/java/com/retailer/order/OrderResponse.java
 public record OrderResponse(
     UUID orderId,
     UUID customerId,

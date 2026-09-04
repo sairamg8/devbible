@@ -1,7 +1,7 @@
 ---
 title: "Scoring candidate service cuts against dark energy and dark matter forces — evaluating four architectures for the order system"
 sidebar_label: "44b · Worked example: candidate cuts"
-sidebar_position: 58
+sidebar_position: 59
 ---
 
 <span className="db-tier t-master">Master</span>

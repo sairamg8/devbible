@@ -1,7 +1,7 @@
 ---
 title: "An Anticorruption Layer belongs inside the downstream service that depends on it, never in a centralised ESB or shared integration middleware — and it should be retired the moment upstream adopts a clean published language"
 sidebar_label: "29b · Where the ACL lives"
-sidebar_position: 42
+sidebar_position: 43
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -15,9 +15,13 @@ sidebar_position: 42
 
 ## The architectural trap: The resurrected ESB
 
-When organizations attempt to integrate a clean microservice with an unruly legacy system, someone inevitably proposes:
+When organizations attempt to integrate a clean microservice with an unruly legacy system, the
+proposal that surfaces in the design review is always a version of the same one — stated here as
+it is usually argued, and **not a quotation from any source**:
 
-> *"Let's build a standalone Integration Proxy service between our modern Order Service and the legacy Warehouse SAP system. That way, the Order team doesn't have to deal with SAP, and the SAP team doesn't have to learn modern JSON."*
+**"Let's build a standalone Integration Proxy service between our modern Order Service and the
+legacy Warehouse SAP system. That way, the Order team doesn't have to deal with SAP, and the SAP
+team doesn't have to learn modern JSON."**
 
 This proposal recreates the Enterprise Service Bus (ESB) under a new name, introducing severe systemic problems:
 
@@ -148,7 +152,7 @@ An ACL represents a specific downstream bounded context's semantic interpretatio
 In an ESB architecture, complex business transformation, message enrichment, and protocol translation are centralized in middle-tier middleware (the "smart pipe"). This concentrates domain logic in an unmaintainable central bottleneck. Placing the ACL in the downstream service pushes translation logic directly into the endpoint that requires it, keeping the underlying transport (HTTP, Kafka, RabbitMQ) purely focused on message delivery.
 
 **★ How does an explicit domain port (interface) facilitate the eventual decommissioning of an ACL?**
-By adhering to Dependency Inversion, the core domain service depends strictly on an interface expressed in its own ubiquitous language (e.g. `InventoryReservationPort`), never on the concrete `LegacyWarehouseAdapter`. When the legacy upstream is decommissioned or modernized, the team writes a new adapter fulfilling that same interface and deletes the legacy ACL package. The core domain logic remains 100% untouched.
+By adhering to Dependency Inversion, the core domain service depends strictly on an interface expressed in its own ubiquitous language (e.g. `InventoryReservationPort`), never on the concrete `LegacyWarehouseAdapter`. When the legacy upstream is decommissioned or modernized, the team writes a new adapter fulfilling that same interface and deletes the legacy ACL package. The core domain logic is untouched.
 
 **★ Can two different downstream microservices share an Anticorruption Layer JAR?**
 Generally no. Two different downstream services belong to different bounded contexts with different ubiquitous languages. Sharing an ACL library forces both downstream services to agree on a single intermediate model, recreating the very coupling the ACL was designed to prevent. Each downstream service should maintain its own focused translator tailored to its specific needs.

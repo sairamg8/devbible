@@ -1,7 +1,7 @@
 ---
 title: "Multi-module builds and JPMS module-info.java enforce boundaries at compile time — Maven and Gradle isolate classpaths between modules while the Java module system eliminates package-private leakage and rogue reflection"
 sidebar_label: "27 · Build modules and JPMS"
-sidebar_position: 38
+sidebar_position: 39
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -94,7 +94,7 @@ module com.retailer.order {
 
 ## Multi-module vs Microservices: the architectural sweet spot
 
-A multi-module architecture with either Gradle `implementation` scoping or JPMS provides 90% of the operational benefits of microservices without the distributed systems penalty:
+A multi-module architecture with either Gradle `implementation` scoping or JPMS provides most of the operational benefits of microservices without the distributed systems penalty:
 
 - **Compilation firewalls:** Accidental cross-domain coupling is rejected at compile time.
 - **Independent team ownership:** Teams own their respective module directories and `pom.xml`/`build.gradle` definitions.
