@@ -261,6 +261,47 @@ export const PINS = {
     note: '@tanstack/query-core and @tanstack/react-query-next-experimental share the version. The docs on main show queryClient.query() and environmentManager.isServer(), which read as unreleased v6 API — they are not; both ship in published 5.102.8.'},
   motion:     {label: 'Motion',          source: 'npm:motion',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['framer-motion'],         names: ['framer motion', 'framer-motion'],
     note: 'Package renamed framer-motion → motion. 14 pages still import the old name.'},
+  // ── Added 2026-09-05 with nextjs ch10 · forms, auth and security hardening ──
+  // 🔴 next-auth is 'major' on cycle 5, NOT 'latest', and the distinction is load-bearing:
+  // npm `latest` resolves to 4.24.15 while the chapter teaches v5. A 'latest' policy would
+  // report these nine pages as stale forever and be ignored when they actually go stale.
+  nextauth: {
+    label: 'Auth.js (NextAuth)', source: 'npm:next-auth', policy: 'major', cycle: '5',
+    pin: '5.0.0-beta.32', checked: '2026-09-05', tracks: ['nextjs'],
+    names: ['next-auth', 'nextauth', 'auth.js'],
+    note: 'v5 is still on the beta dist-tag (published 2026-07-20); npm latest is v4. The project states no date for a stable v5. @auth/core 0.41.3 travels with it and is not installed directly.',
+  },
+  // 🔴 bcrypt was taught across 32 pages of this corpus with NO pin at all — the exact gap
+  // library-scope.md exists to close. Tracks set from a grep of what actually teaches it.
+  bcrypt: {
+    label: 'bcrypt', source: 'npm:bcrypt', policy: 'latest',
+    pin: '6.0.0', checked: '2026-09-05',
+    tracks: ['nextjs', 'nodejs', 'javascript', 'expressjs', 'real-world'],
+    names: ['bcrypt'],
+    note: 'Only the first 72 BYTES of a password are used, not the first 72 characters — a multi-byte password is truncated earlier than it looks.',
+  },
+  reactHookForm: {
+    label: 'React Hook Form', source: 'npm:react-hook-form', policy: 'latest',
+    pin: '7.87.0', checked: '2026-09-05', tracks: ['nextjs', 'react', 'real-world'],
+    names: ['react-hook-form', 'react hook form'],
+    note: '@hookform/resolvers 5.9.1 is the zod bridge and travels with it. RHF documentation never mentions Server Actions.',
+  },
+  jose: {
+    label: 'jose', source: 'npm:jose', policy: 'latest',
+    pin: '6.2.11', checked: '2026-09-05', tracks: ['nextjs', 'real-world'],
+    names: ['jose'],
+    note: 'Unsecured JWTs (alg: none) are never accepted by its verify API — the reason ch10 teaches it over jsonwebtoken 9.0.3.',
+  },
+  clerk: {
+    label: 'Clerk', source: 'npm:@clerk/nextjs', policy: 'latest',
+    pin: '7.9.1', checked: '2026-09-05', tracks: ['nextjs'], names: ['clerk', '@clerk/nextjs'],
+  },
+  supabase: {
+    label: 'Supabase JS', source: 'npm:@supabase/supabase-js', policy: 'latest',
+    pin: '2.115.0', checked: '2026-09-05', tracks: ['nextjs'],
+    names: ['supabase', '@supabase/supabase-js'],
+    note: '@supabase/ssr 0.12.6 travels with it. Its own docs: never trust supabase.auth.getSession() in server code such as Proxy.',
+  },
   // Added 2026-09-05 with nextjs ch08 topic 03: nuqs is taught across two pages as the library
   // that packages typed search-param state, and topic 04 teaches jotai across three.
   nuqs:       {label: 'nuqs',           source: 'npm:nuqs',                    policy: 'latest', pin: '2.10.1', checked: '2026-09-05', tracks: ['nextjs'],            names: ['nuqs'],
