@@ -170,7 +170,7 @@ Finally, accessibility is explicitly yours:
 
 > *"Many users may prefer not having animations on the page. React doesn't automatically disable animations for this case. We recommend always using the `@media (prefers-reduced-motion)` media query to disable animations or tone them down based on user preference."*
 
-The four concrete patterns — shared-element morph, Suspense reveal, directional slides and same-route crossfade — with their CSS and their traps, are **05c · View transition patterns** *(not written yet)*.
+The four concrete patterns — shared-element morph, Suspense reveal, directional slides and same-route crossfade — with their CSS and their traps, are [05c · Morph and Suspense reveal](05c-view-transition-patterns.md).
 
 ## Gotchas
 
@@ -273,4 +273,4 @@ Because a `view-transition-name` present on every candidate element at all times
 
 ---
 
-← [05 · Prefetching fundamentals](05-prefetching-fundamentals-and-the-native-view-transitions-api.md) · [Chapter 2 overview](01-explanation.md) · Next → **05c · View transition patterns** *(not written yet)*
+← [05 · Prefetching fundamentals](05-prefetching-fundamentals-and-the-native-view-transitions-api.md) · [Chapter 2 overview](01-explanation.md) · Next → [05c · Morph and Suspense reveal](05c-view-transition-patterns.md)
