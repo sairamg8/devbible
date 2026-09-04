@@ -102,7 +102,7 @@ So the mapping from card to code is:
 
 🔴 **There is no `stream`, `cache` or `block` value you can assign to any export.** The only route segment enums in this area are `instant` (`true | false | { level?: 'warning' }`) and `prefetch` (`'auto' | 'partial' | 'force-disabled'`). If you write `export const instant = 'stream'`, you have invented an API.
 
-Which card is offered depends on which insight fired, and the cards are not always three. The *runtime data during prerendering* insight — `cookies()`, `headers()`, `params`, `searchParams` read outside `<Suspense>` — offers only **Stream** and **Block**, because caching a per-request value is not a fix. That per-insight variation is the subject of [06b](06b-instant-insights-and-the-fix-cards.md).
+Which card is offered depends on which insight fired, and the cards are not always three. The *runtime data during prerendering* insight — `cookies()`, `headers()`, `params`, `searchParams` read outside `<Suspense>` — offers only **Stream** and **Block**, because caching a per-request value is not a fix. That per-insight variation is the subject of [06b](06b-instant-insights-and-the-fix-cards.md); the fixes themselves are [06c](06c-stream-cache-and-block-in-detail.md) and [06d](06d-block-and-opting-out-honestly.md).
 
 ## Partial Prefetching is not Partial Prerendering
 
@@ -157,7 +157,9 @@ That is the trade you accept when you flip the flag: **N link-shaped prefetches 
 | The `instant` export and `validationLevel` in full | [10 · 04 Instant Insights and validation](10-instant-navigations/04-instant-insights-and-validation.md) |
 | Navigation Inspector, `instant()` tests, the fix loop | [10 · 05 Navigation Inspector and the fix loop](10-instant-navigations/05-the-navigation-inspector-and-the-fix-loop.md) |
 | ISR under Cache Components | [10 · 06 Better ISR](10-instant-navigations/06-better-isr-with-cache-components.md) |
-| Every Insight message and which cards it offers | [06b · Instant Insights and the fix cards](06b-instant-insights-and-the-fix-cards.md) |
+| Every Insight message and which cards it offers | [06b · The Insight catalogue](06b-instant-insights-and-the-fix-cards.md) |
+| The Stream and Cache fixes in full, with their trade-offs | [06c · Stream and Cache in detail](06c-stream-cache-and-block-in-detail.md) |
+| `instant = false`, its precedence rules and its limits | [06d · Block, and opting out honestly](06d-block-and-opting-out-honestly.md) |
 | Prefetch inlining and `<Link>` prefetch control | [13 · Prefetch inlining](13-prefetch-inlining.md), [13b · Prefetch control and link status](13b-prefetch-control-and-link-status.md) |
 
 ## Gotchas
