@@ -1,7 +1,7 @@
 ---
 title: "Swapping a raise for a None return is the most silent breaking change available in Python — nothing raises, no test fails, callers keep building, and their except blocks simply stop running — so the failure channel is versioned by the function name or not at all"
-sidebar_label: "05l · Versioning the failure channel"
-sidebar_position: 140.2
+sidebar_label: "03 · Versioning the failure channel"
+sidebar_position: 3
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -129,7 +129,7 @@ of `get` says exactly why the third exists:
 
 Copying that arrangement means a reader knows the failure channel from the call site
 without opening anything. Which of the three a mapping lookup should use is
-[03 · Mappings, the decision table](03-mappings-the-decision-table.md).
+[03 · Mappings, the decision table](../03-mappings-the-decision-table.md).
 
 **The failure mode is a module with both conventions and no rule.** `find_order` that
 raises and `get_customer` that returns `None`, in the same file, is worse than either
@@ -225,7 +225,7 @@ marker, which is what makes the return type a versioned artefact rather than a p
 Cause: the library stopped raising, so the handler's only remaining source of `KeyError` is
 the caller's own code — the handler did not become dead, it became *wrong*, which is worse.
 Fix: narrow the `try` to the one call, which is the width rule
-[06 · Narrowing the try](06-narrowing-the-try.md) exists for, so a channel change turns the
+[06 · Narrowing the try](../06-narrowing-the-try.md) exists for, so a channel change turns the
 clause dead rather than silently repurposing it.
 
 ```python
@@ -280,7 +280,7 @@ needs a decision that the automated change cannot make: whether this particular 
 narrow the `None` or convert it straight back into a raise. That last point is the one worth
 saying out loud in an interview — a mechanical rewrite that turns every `get_x()` into
 `find_x()` plus `if x is None: raise` has not simplified anything, it has just moved the raise
-into a hundred call sites, which is [05j](05j-type-checkers-and-silent-apis.md)'s arithmetic
+into a hundred call sites, which is [05j](01-type-checkers-and-silent-apis.md)'s arithmetic
 running backwards.
 
 **Your library annotates `-> str | None` and a consumer's checker never complains. Why?**
@@ -294,4 +294,4 @@ versioned part of the API rather than a private note to yourself.
 
 ---
 
-← Prev: [The raising contract](05k-the-raising-contract.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The bill every caller pays](05m-the-bill-every-caller-pays.md)
+← Prev: [The raising contract](02-the-raising-contract.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The bill every caller pays](04-the-bill-every-caller-pays.md)

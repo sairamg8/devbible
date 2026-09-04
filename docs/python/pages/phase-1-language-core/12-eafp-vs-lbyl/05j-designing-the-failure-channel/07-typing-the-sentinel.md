@@ -1,7 +1,7 @@
 ---
 title: "MISSING = object() works perfectly at runtime and destroys the signature, because object is the supertype of everything and the union that admits the sentinel therefore admits every value in the language — PEP 661 names that as the first of three drawbacks and deletes all three in 3.15"
-sidebar_label: "05p · Typing the sentinel"
-sidebar_position: 140.6
+sidebar_label: "07 · Typing the sentinel"
+sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -15,7 +15,7 @@ sidebar_position: 140.6
 > [`copy`](https://docs.python.org/3.14/library/copy.html).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05o](05o-the-sentinel-object.md) got the runtime right: when `None` is a legitimate value
+**[05o](06-the-sentinel-object.md) got the runtime right: when `None` is a legitimate value
 you need a third object. This chunk is about the annotation, which is where the idiom falls
 apart on Python 3.14. `_UNSET = object()` has type `object`, the supertype of everything, so
 the only union that admits it also admits a `list`, a `Decimal` and a `socket` — the sentinel
@@ -39,7 +39,7 @@ def update_profile(user_id: int, bio: str | None | object = _UNSET) -> None:
 and `object` accepts everything. The checker will not object to `update_profile(1, [])`, will
 not object to `update_profile(1, Decimal("2"))`, and will not narrow `bio` to `str | None`
 inside the `if`. **The sentinel is invisible to the type system in exactly the way `-1` was
-in [05n](05n-choosing-a-sentinel.md), for exactly the same reason: it is a member of a type
+in [05n](05-choosing-a-sentinel.md), for exactly the same reason: it is a member of a type
 that is already in the union.**
 
 PEP 661's motivation names this as the first of three drawbacks of the `object()` idiom:
@@ -282,4 +282,4 @@ choice for a value that crosses a plugin or reload boundary.
 
 ---
 
-← Prev: [The sentinel object](05o-the-sentinel-object.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Overloads](05q-overloads.md)
+← Prev: [The sentinel object](06-the-sentinel-object.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Overloads](08-overloads.md)

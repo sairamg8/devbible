@@ -1,7 +1,7 @@
 ---
 title: "A sentinel is only useful if it is not a member of the success type — str.find returns -1 inside the int it is typed to return, so no checker can force anyone to test for it, and that single property is what separates the two famous find() bugs from re.search returning None"
-sidebar_label: "05n · Choosing a sentinel"
-sidebar_position: 140.4
+sidebar_label: "05 · Choosing a sentinel"
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -13,14 +13,14 @@ sidebar_position: 140.4
 > [`dict.get`](https://docs.python.org/3.14/library/stdtypes.html#dict.get).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05m](05m-the-bill-every-caller-pays.md) argued about *whether* to return a sentinel. This
+**[05m](04-the-bill-every-caller-pays.md) argued about *whether* to return a sentinel. This
 chunk is about *which value*, and one rule governs the whole question: a sentinel must not
 be a member of the success type. Break it and the checker has nothing to object to, so
 nobody can be compelled to test for the miss — which is exactly why `str.find` returning
 `-1` produces two famous bugs and `re.search` returning `None` produces none. The corollary
 is the collection case, where a sentinel is not needed at all because `[]` already says it.
 The case where `None` itself becomes a member of the success type is
-[05o](05o-the-sentinel-object.md).**
+[05o](06-the-sentinel-object.md).**
 
 ## An in-band sentinel is invisible to the checker
 
@@ -86,7 +86,7 @@ def tags_for(post_id: int) -> list[str]: ...          # ✅ [] is already "nothi
 An empty list is the correct representation of "nothing found" and it composes: the caller
 can iterate, `len`, or truth-test it with no guard at all. Returning `None` instead forces
 every call site to write `for tag in (tags or []):`, which is a branch that communicates
-nothing and is itself an [empty-versus-missing](../05-truthiness/02-empty-versus-missing.md)
+nothing and is itself an [empty-versus-missing](../../05-truthiness/02-empty-versus-missing.md)
 bug waiting for the caller who needed the distinction.
 
 Keep the union only where "no collection at all" is genuinely a different fact from "an
@@ -150,4 +150,4 @@ keeps the common path free of branches entirely.
 
 ---
 
-← Prev: [The bill every caller pays](05m-the-bill-every-caller-pays.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The sentinel object](05o-the-sentinel-object.md)
+← Prev: [The bill every caller pays](04-the-bill-every-caller-pays.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The sentinel object](06-the-sentinel-object.md)

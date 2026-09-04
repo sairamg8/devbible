@@ -1,7 +1,7 @@
 ---
 title: "typeshed gives dict.get three overloads because whether None can come back depends on an argument rather than on the function — which is the mechanism that stops a None-returning design from taxing the callers who supplied a default and opted out of it"
-sidebar_label: "05q · Overloads"
-sidebar_position: 140.7
+sidebar_label: "08 · Overloads"
+sidebar_position: 8
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -18,10 +18,10 @@ sidebar_position: 140.7
 It is not always one fact. `dict.get` returns `V | None` or `V` depending on whether you
 passed a default — the *same runtime call*, two different contracts, chosen by an argument.
 `@overload` is how that distinction reaches the type system, and it is the direct answer to
-[05m](05m-the-bill-every-caller-pays.md)'s complaint that a `None` return taxes every caller:
+[05m](04-the-bill-every-caller-pays.md)'s complaint that a `None` return taxes every caller:
 with overloads, only the callers who declined to supply a default pay it. The other half of
 this idea — making the checker enforce a distinction about *outcomes* rather than arguments —
-is [05r](05r-union-returns-and-exhaustiveness.md).**
+is [05r](09-union-returns-and-exhaustiveness.md).**
 
 ## The default argument decides the return type
 
@@ -47,7 +47,7 @@ Read it as three promises about the same runtime function:
 | `d.get(k, "n/a")` | third | `V \| str` | the default's own type joins the union |
 
 That middle row is the payoff, and it is a direct answer to the LBYL bill from
-[05m](05m-the-bill-every-caller-pays.md): a caller who supplies a default of the right type
+[05m](04-the-bill-every-caller-pays.md): a caller who supplies a default of the right type
 does **not** have to write `if x is None:`, because the checker can prove the miss was
 already handled. Without overloads the single honest signature would be
 `def get(self, key, default=None) -> _VT | None`, and every call — including
@@ -103,14 +103,14 @@ Three details, each of which is a mistake if you get it wrong:
 
 - **The two overloads express two different failure channels.** `get_setting("port")` raises;
   `get_setting("port", 8080)` cannot. That is the `dict[k]`-versus-`dict.get(k, d)` split
-  from [05l](05l-versioning-the-failure-channel.md), made visible to the checker rather than
+  from [05l](03-versioning-the-failure-channel.md), made visible to the checker rather than
   only to a reader of the docstring.
 - **The implementation signature is not the contract.** It is deliberately loose so it can
   satisfy both overloads; callers never see it. The docs say it *"will be used at runtime but
   should be ignored by a type checker."*
 - **The sentinel is what makes "no default" distinguishable** from `default=None`, which is
-  [05o](05o-the-sentinel-object.md) — and typing that sentinel is
-  [05p](05p-typing-the-sentinel.md).
+  [05o](06-the-sentinel-object.md) — and typing that sentinel is
+  [05p](07-typing-the-sentinel.md).
 
 ## Gotchas
 
@@ -203,4 +203,4 @@ usages is a sign the function should be two functions.
 
 ---
 
-← Prev: [Typing the sentinel](05p-typing-the-sentinel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Union returns](05r-union-returns-and-exhaustiveness.md)
+← Prev: [Typing the sentinel](07-typing-the-sentinel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Union returns](09-union-returns-and-exhaustiveness.md)

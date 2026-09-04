@@ -37,7 +37,7 @@ whole list, and the rest of chunk 05 is those six cases in order.
 | 3 | **A cheap look in front of a catastrophic leap** | the asymmetry pays for two operations, and a lock closes the gap the check leaves open | [05d](05d-irreversible-leaps.md) |
 | 4 | **The check *is* the domain rule** | the guard exists to *create* a domain error, not to dodge a built-in one | [05i](05i-the-check-is-the-rule.md) |
 | 5 | **Failures must be aggregated into a report** | conditions compose into data; a raise ends the loop | [05h](05h-aggregating-failures.md) |
-| 6 | **The checker must be shown a narrowing, or the API never raises** | an `if` is a condition; a handler is not, and some calls answer failure with `None` | [05j](05j-type-checkers-and-silent-apis.md) |
+| 6 | **The checker must be shown a narrowing, or the API never raises** | an `if` is a condition; a handler is not, and some calls answer failure with `None` | [05j](05j-designing-the-failure-channel/01-type-checkers-and-silent-apis.md) |
 
 ## A boundary is where invariants are created, not where they are re-checked
 

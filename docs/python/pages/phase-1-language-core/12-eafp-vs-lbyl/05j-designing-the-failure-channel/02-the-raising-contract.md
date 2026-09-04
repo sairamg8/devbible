@@ -1,7 +1,7 @@
 ---
 title: "The only annotation Python gives the raising channel is Never — it is what stops a guard from losing its narrowing when you factor it into a helper — and everything else about what a function raises lives in a docstring section that PEP 484 named as the alternative to syntax it declined to add"
-sidebar_label: "05k · The raising contract"
-sidebar_position: 140.1
+sidebar_label: "02 · The raising contract"
+sidebar_position: 2
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -13,7 +13,7 @@ sidebar_position: 140.1
 > (*"the recommendation is to put this information in a docstring"*).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05j](05j-type-checkers-and-silent-apis.md) established that Python has no syntax for
+**[05j](01-type-checkers-and-silent-apis.md) established that Python has no syntax for
 declaring what a function raises. This chunk is what you build in the hole that leaves.
 There is exactly one type-level tool — `typing.Never`, which says a call does not return,
 and whose real job is stopping a raising helper from silently destroying a caller's
@@ -59,7 +59,7 @@ middle of a function without every line below it being flagged.
 
 Which constructs narrow at all — `isinstance()`, `is not None`, truthiness, `assert` — and
 why an `except` handler is not among the ones mypy documents is
-[07g · Provability and the order](07g-provability-and-the-order-to-decide.md)'s subject.
+[07g · Provability and the order](../07g-provability-and-the-order-to-decide.md)'s subject.
 What matters here is the interaction, and it bites in a completely ordinary refactor:
 **an inline `if x is None: raise ...` narrows, and factoring that guard into
 `check_present(x)` silently stops narrowing unless the helper is annotated `-> Never`.**
@@ -69,7 +69,7 @@ remembers, and the error appears at the *call site*, several lines below the cha
 ⚠️ **`Never` and `NoReturn` are documented as equivalent for type checkers**, so choosing
 between them is style. `NoReturn` reads naturally in a return position; `Never` is the name
 you want in a *parameter* position, which is how `assert_never` works — that is
-[05s · Exhaustiveness and `assert_never`](05s-exhaustiveness-and-assert-never.md).
+[05s · Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md).
 
 A second, quieter payoff: a checker that understands `Never` can flag code *after* the call
 as unreachable. That turns "this validator always raises, so the `return None` below it is
@@ -104,16 +104,16 @@ Four rules make that section worth reading rather than worth skipping:
 - **Document the ambiguous ones especially.** `GatewayUnavailable` is the entry that earns
   the docstring: the caller cannot know whether a retry is safe unless you say so, and no
   type in any language expresses "possibly applied". That is
-  [05d · Irreversible leaps](05d-irreversible-leaps.md)'s problem arriving as prose because
+  [05d · Irreversible leaps](../05d-irreversible-leaps.md)'s problem arriving as prose because
   it cannot arrive as a type.
 - **Name the attributes the exception carries.** A caller writing
   `except PaymentDeclined as exc:` needs to know `exc.decline_code` exists. That is a
   signature too, and it is equally invisible — putting the data on the exception rather
-  than inside its message is [05i · The check is the rule](05i-the-check-is-the-rule.md).
+  than inside its message is [05i · The check is the rule](../05i-the-check-is-the-rule.md).
 - **Treat the section as an API surface with a version.** Removing an entry is a relaxation
   and is usually safe. *Adding* one is a breaking change for every caller with a `try`
   around your function, even though nothing anywhere will say so. What that migration looks
-  like is [05l · Versioning the failure channel](05l-versioning-the-failure-channel.md).
+  like is [05l · Versioning the failure channel](03-versioning-the-failure-channel.md).
 
 ### What it cannot do, and the one thing that helps
 
@@ -237,7 +237,7 @@ enforces it?**
 Three artefacts, in decreasing order of how much they protect a caller who never reads
 documentation. First, a single base exception class per package, so `except PaymentError:`
 survives every subclass you add later — that is the only structural protection available,
-and it is [05j](05j-type-checkers-and-silent-apis.md)'s subject. Second, a `Raises:` section
+and it is [05j](01-type-checkers-and-silent-apis.md)'s subject. Second, a `Raises:` section
 on every public function, listing what a caller might reasonably catch, naming the
 attributes the exception carries, and saying what each failure implies for a retry. Third,
 tests that pin the load-bearing entries so the docstring cannot silently rot. None of these
@@ -268,4 +268,4 @@ guarantee at runtime.
 
 ---
 
-← Prev: [Type checkers and silent APIs](05j-type-checkers-and-silent-apis.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Versioning the failure channel](05l-versioning-the-failure-channel.md)
+← Prev: [Type checkers and silent APIs](01-type-checkers-and-silent-apis.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Versioning the failure channel](03-versioning-the-failure-channel.md)

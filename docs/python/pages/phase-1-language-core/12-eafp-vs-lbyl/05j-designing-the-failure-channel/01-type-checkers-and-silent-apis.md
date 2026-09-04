@@ -1,7 +1,7 @@
 ---
 title: "A Python signature carries the return type and says nothing whatever about what the function raises — PEP 484 declined to propose that syntax on purpose, so no checker will ever tell a caller that a raise you added yesterday is unhandled"
-sidebar_label: "05j · Type checkers and silent APIs"
-sidebar_position: 140
+sidebar_label: "01 · Type checkers and silent APIs"
+sidebar_position: 1
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -71,7 +71,7 @@ Three compensations are available, and all three are conventions rather than gua
 
 1. **A `Raises:` section in the docstring** — which is what PEP 484 itself recommends in
    the very next sentence. What belongs in one, and why it is versioned,
-   is [05k](05k-the-raising-contract.md).
+   is [05k](02-the-raising-contract.md).
 2. **A test that exercises the failure path**, so *your* expectation of what a dependency
    raises is recorded somewhere executable and breaks loudly when the dependency changes.
 3. **One base exception class per package**, so a caller has something to catch that
@@ -104,7 +104,7 @@ The standard library models this in its own hierarchy: `LookupError` exists so t
 caller who is equally indifferent to `KeyError` and `IndexError` has one name to write, and
 `OSError` collects the errno-shaped failures under a single catchable class. Which
 package's exception a given handler is actually catching, and how wide that catch really
-is, is [06f · Whose exception is it](06f-whose-exception-is-it.md).
+is, is [06f · Whose exception is it](../06f-whose-exception-is-it.md).
 
 ## Gotchas
 
@@ -157,7 +157,7 @@ except httpx.TimeoutException as exc:
 **Symptom: a payload the type checker was happy with arrives with a string where an `int`
 was declared.** Cause: annotations describe what your own code promises, not what a
 stranger sends; nothing checks them at runtime. Fix: a checker is not a boundary — parse at
-the edge with explicit checks, as [05 · Where LBYL is right](05-where-lbyl-is-right.md)
+the edge with explicit checks, as [05 · Where LBYL is right](../05-where-lbyl-is-right.md)
 argues, and let the annotation describe what comes *out* of the parser.
 
 ```python
@@ -201,13 +201,13 @@ sites, including the ninety where the caller had no doubt the user existed. `-> 
 propagate to a handler that already knows what to do with a failed request. So the question
 when designing a signature is not "which is cleaner in my file" but "how much LBYL am I
 about to compel in code I will never read". The arithmetic, and the cases where `None` is
-still exactly right, are [05m](05m-the-bill-every-caller-pays.md).
+still exactly right, are [05m](04-the-bill-every-caller-pays.md).
 
 **What does a type checker prove about data arriving from outside your program?**
 Nothing whatsoever. Annotations are not enforced at runtime; a function annotated `-> int`
 that returns a `str` is a perfectly ordinary Python program that no interpreter objects to.
 What a checker verifies is the internal consistency of the code you gave it, which is
-exactly why the trust boundary in [05 · Where LBYL is right](05-where-lbyl-is-right.md) is a
+exactly why the trust boundary in [05 · Where LBYL is right](../05-where-lbyl-is-right.md) is a
 run of `if` statements rather than a set of annotations. The correct division of labour is
 that the boundary parses untrusted input into a typed object using explicit checks, and the
 annotations then describe the *interior*, where the checker's proofs are worth something
@@ -238,4 +238,4 @@ precisely why the conventions above are not optional.
 
 ---
 
-← Prev: [The check is the rule](05i-the-check-is-the-rule.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The raising contract](05k-the-raising-contract.md)
+← Prev: [The check is the rule](../05i-the-check-is-the-rule.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The raising contract](02-the-raising-contract.md)

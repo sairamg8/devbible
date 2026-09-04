@@ -1,7 +1,7 @@
 ---
 title: "X | None is not a gentler alternative to raising — it is LBYL by decree, a narrowing if compelled by the type checker in every one of your callers, including the ninety who knew perfectly well the value was there"
-sidebar_label: "05m · The bill every caller pays"
-sidebar_position: 140.3
+sidebar_label: "04 · The bill every caller pays"
+sidebar_position: 4
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -49,7 +49,7 @@ operator on types to allow writing `Union[X, Y]` as `X | Y`"* — and `typing.Op
 documented as its equivalent: *"`Optional[X]` is equivalent to `X | None` (or
 `Union[X, None]`)."*
 
-Which constructs actually narrow is [07g](07g-provability-and-the-order-to-decide.md)'s
+Which constructs actually narrow is [07g](../07g-provability-and-the-order-to-decide.md)'s
 subject. What belongs here is the arithmetic, and it is stark:
 
 | Design | What the author writes | What each of N callers writes | Who is forced |
@@ -91,7 +91,7 @@ Three properties make that contract exact:
 2. **The caller chose the sentinel.** `d.get(k, 0)` returns `0` on a miss; the `None` is a
    *default default*, not a fixed part of the contract — and typeshed encodes that choice
    in the type system with `@overload`, which is
-   [05q](05q-overloads.md).
+   [05q](08-overloads.md).
 3. **The caller already knows whether the miss was expected**, because the caller supplied
    the key. `get` is what you reach for when you have decided a miss is ordinary; when it is
    not, `d[k]` is right there raising `KeyError` with the key in the message.
@@ -141,7 +141,7 @@ def find_user(user_id: int, *, viewer_id: int) -> User | None:
 database error is not caught. A `try/except OperationalError: return None` inside a finder is
 the single line that converts an outage into a wrong answer, and it is attractive precisely
 because it makes the signature look tidy. Whose exception that is and where it should be
-translated is [06f](06f-whose-exception-is-it.md).
+translated is [06f](../06f-whose-exception-is-it.md).
 
 **The general test is short:** a `None` return is honest when the function has exactly one
 way to fail and the caller can act on knowing that. When there are several ways to fail,
@@ -237,7 +237,7 @@ is semantic. Truthiness narrows away *every* falsy value, so if the type is `Mon
 where `Money(0)` is falsy, or `list[str] | None` where `[]` is falsy, the branch you wrote for
 the missing case also swallows a perfectly real one. `is None` tests exactly the one value
 that means absence, which is why it is the form to write even though the shorter one passes.
-It is the empty-versus-missing distinction from [05h](05h-aggregating-failures.md) arriving
+It is the empty-versus-missing distinction from [05h](../05h-aggregating-failures.md) arriving
 inside a narrowing.
 
 **★ Is returning `None` the "lighter" option compared to raising?**
@@ -262,4 +262,4 @@ five minutes rather than a coin toss.
 
 ---
 
-← Prev: [Versioning the failure channel](05l-versioning-the-failure-channel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Choosing a sentinel](05n-choosing-a-sentinel.md)
+← Prev: [Versioning the failure channel](03-versioning-the-failure-channel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Choosing a sentinel](05-choosing-a-sentinel.md)
