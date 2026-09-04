@@ -244,4 +244,4 @@ diagnosis as well as the precision.
 
 ---
 
-← Prev: [The breadth of one class](06c-the-breadth-of-one-class.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Attribute, value and Exception](06e-attribute-value-and-exception.md)
+← Prev: [The breadth of one class](06c-the-breadth-of-one-class.md) · Index: [EAFP vs LBYL](README.md) · Next → [Attribute, value and Exception](06e-attribute-value-and-exception.md)

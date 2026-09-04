@@ -228,4 +228,4 @@ one line; use it.
 
 ---
 
-← Prev: [`hasattr` is EAFP in disguise](04-hasattr-is-eafp-in-disguise.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Protocols and structural checks](04c-protocols-and-structural-checks.md)
+← Prev: [`hasattr` is EAFP in disguise](04-hasattr-is-eafp-in-disguise.md) · Index: [EAFP vs LBYL](README.md) · Next → [Protocols and structural checks](04c-protocols-and-structural-checks.md)

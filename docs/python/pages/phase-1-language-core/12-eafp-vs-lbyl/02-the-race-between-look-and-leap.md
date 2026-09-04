@@ -225,4 +225,4 @@ is one operation. When it is not, the lock is not optional.
 
 ---
 
-← Prev: [Why Python leans EAFP](01b-why-python-leans-eafp.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The filesystem and the atomic flag](02b-the-filesystem-and-the-atomic-flag.md)
+← Prev: [Why Python leans EAFP](01b-why-python-leans-eafp.md) · Index: [EAFP vs LBYL](README.md) · Next → [The filesystem and the atomic flag](02b-the-filesystem-and-the-atomic-flag.md)

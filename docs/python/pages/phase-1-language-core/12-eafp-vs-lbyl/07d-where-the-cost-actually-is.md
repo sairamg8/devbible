@@ -222,4 +222,4 @@ useful without measuring anything.
 
 ---
 
-← Prev: [The double-work argument](07c-the-double-work-argument.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Measuring instead of arguing](07e-measuring-instead-of-arguing.md)
+← Prev: [The double-work argument](07c-the-double-work-argument.md) · Index: [EAFP vs LBYL](README.md) · Next → [Measuring instead of arguing](07e-measuring-instead-of-arguing.md)

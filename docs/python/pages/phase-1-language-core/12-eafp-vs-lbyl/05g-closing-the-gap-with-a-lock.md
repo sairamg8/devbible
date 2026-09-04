@@ -232,4 +232,4 @@ and the lock when the invariant spans several operations that no single call can
 
 ---
 
-← Prev: [The asymmetry](05f-the-asymmetry.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Reports, not first casualties](05h-aggregating-failures.md)
+← Prev: [The asymmetry](05f-the-asymmetry.md) · Index: [EAFP vs LBYL](README.md) · Next → [Reports, not first casualties](05h-aggregating-failures.md)

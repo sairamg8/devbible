@@ -289,4 +289,4 @@ to six.
 
 ---
 
-← Prev: [Narrowing the try](06-narrowing-the-try.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The breadth of one class](06c-the-breadth-of-one-class.md)
+← Prev: [Narrowing the try](06-narrowing-the-try.md) · Index: [EAFP vs LBYL](README.md) · Next → [The breadth of one class](06c-the-breadth-of-one-class.md)

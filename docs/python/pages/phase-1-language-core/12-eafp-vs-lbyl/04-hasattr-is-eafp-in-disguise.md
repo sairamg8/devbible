@@ -294,4 +294,4 @@ decision.
 
 ---
 
-← Prev: [Sequences, sets and nesting](03c-sequences-sets-and-nested-lookups.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Duck typing and type-shaped checks](04b-duck-typing-and-the-type-shaped-check.md)
+← Prev: [Sequences, sets and nesting](03c-sequences-sets-and-nested-lookups.md) · Index: [EAFP vs LBYL](README.md) · Next → [Duck typing and type-shaped checks](04b-duck-typing-and-the-type-shaped-check.md)

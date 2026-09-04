@@ -254,4 +254,4 @@ looking at; if they have a remembered ratio, it is folklore with a decimal point
 
 ---
 
-← Prev: **Narrowing the try** *(not written yet)* · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The miss rate decides](07b-the-miss-rate-decides.md)
+← Prev: **Narrowing the try** *(not written yet)* · Index: [EAFP vs LBYL](README.md) · Next → [The miss rate decides](07b-the-miss-rate-decides.md)

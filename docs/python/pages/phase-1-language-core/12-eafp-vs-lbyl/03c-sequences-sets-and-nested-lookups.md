@@ -213,4 +213,4 @@ a helper into a generator frame is such a common bug that Python has a
 
 ---
 
-← Prev: [Writing on a miss](03b-writing-on-a-miss.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Attributes and duck typing](04-hasattr-is-eafp-in-disguise.md)
+← Prev: [Writing on a miss](03b-writing-on-a-miss.md) · Index: [EAFP vs LBYL](README.md) · Next → [Attributes and duck typing](04-hasattr-is-eafp-in-disguise.md)

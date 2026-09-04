@@ -166,4 +166,4 @@ a debugging aid whose disappearance under optimisation changes nothing about cor
 
 ---
 
-← Prev: [Where LBYL is right](05-where-lbyl-is-right.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The quiet boundaries](05c-the-quiet-boundaries.md)
+← Prev: [Where LBYL is right](05-where-lbyl-is-right.md) · Index: [EAFP vs LBYL](README.md) · Next → [The quiet boundaries](05c-the-quiet-boundaries.md)

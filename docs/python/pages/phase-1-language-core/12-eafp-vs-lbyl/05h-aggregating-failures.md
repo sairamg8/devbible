@@ -280,4 +280,4 @@ guessing.
 
 ---
 
-← Prev: [Closing the gap with a lock](05g-closing-the-gap-with-a-lock.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The check is the rule](05i-the-check-is-the-rule.md)
+← Prev: [Closing the gap with a lock](05g-closing-the-gap-with-a-lock.md) · Index: [EAFP vs LBYL](README.md) · Next → [The check is the rule](05i-the-check-is-the-rule.md)

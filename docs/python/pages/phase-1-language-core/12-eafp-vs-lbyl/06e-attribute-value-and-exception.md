@@ -263,4 +263,4 @@ failure it cannot name. That distinction is
 
 ---
 
-← Prev: [The lookup classes](06d-the-lookup-classes.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Whose exception is it?](06f-whose-exception-is-it.md)
+← Prev: [The lookup classes](06d-the-lookup-classes.md) · Index: [EAFP vs LBYL](README.md) · Next → [Whose exception is it?](06f-whose-exception-is-it.md)

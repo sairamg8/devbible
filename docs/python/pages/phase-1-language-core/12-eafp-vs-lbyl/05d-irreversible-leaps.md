@@ -192,4 +192,4 @@ one of them looks at state something else is actively writing. The question to a
 
 ---
 
-← Prev: [The quiet boundaries](05c-the-quiet-boundaries.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Claim, then leap](05e-claim-then-leap.md)
+← Prev: [The quiet boundaries](05c-the-quiet-boundaries.md) · Index: [EAFP vs LBYL](README.md) · Next → [Claim, then leap](05e-claim-then-leap.md)

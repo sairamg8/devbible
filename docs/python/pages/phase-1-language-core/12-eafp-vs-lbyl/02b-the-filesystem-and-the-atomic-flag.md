@@ -273,4 +273,4 @@ the exception *is* the return channel.
 
 ---
 
-← Prev: [The race between look and leap](02-the-race-between-look-and-leap.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Databases, networks and where the race test clears LBYL](02c-databases-queues-and-when-lbyl-clears.md)
+← Prev: [The race between look and leap](02-the-race-between-look-and-leap.md) · Index: [EAFP vs LBYL](README.md) · Next → [Databases, networks and where the race test clears LBYL](02c-databases-queues-and-when-lbyl-clears.md)

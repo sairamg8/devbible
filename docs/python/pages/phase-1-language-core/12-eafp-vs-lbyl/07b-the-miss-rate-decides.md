@@ -240,4 +240,4 @@ you need a unique sentinel rather than `None`.
 
 ---
 
-← Prev: [The cost argument](07-the-cost-argument.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The double-work argument](07c-the-double-work-argument.md)
+← Prev: [The cost argument](07-the-cost-argument.md) · Index: [EAFP vs LBYL](README.md) · Next → [The double-work argument](07c-the-double-work-argument.md)

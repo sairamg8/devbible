@@ -220,4 +220,4 @@ semantic choice wearing a style label.
 
 ---
 
-← **Topic index** *(not written yet)* · Next → [Why Python leans EAFP](01b-why-python-leans-eafp.md)
+← [Topic index](README.md) · Next → [Why Python leans EAFP](01b-why-python-leans-eafp.md)

@@ -156,4 +156,4 @@ that one premise being false; nothing about exceptions changed.
 
 ---
 
-← Prev: [Claim, then leap](05e-claim-then-leap.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Closing the gap with a lock](05g-closing-the-gap-with-a-lock.md)
+← Prev: [Claim, then leap](05e-claim-then-leap.md) · Index: [EAFP vs LBYL](README.md) · Next → [Closing the gap with a lock](05g-closing-the-gap-with-a-lock.md)

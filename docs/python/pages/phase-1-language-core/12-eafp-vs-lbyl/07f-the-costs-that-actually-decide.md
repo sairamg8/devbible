@@ -219,4 +219,4 @@ about whether the miss is an error, so settle that first and the spelling follow
 
 ---
 
-← Prev: [Measuring instead of arguing](07e-measuring-instead-of-arguing.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Provability and the order to decide in](07g-provability-and-the-order-to-decide.md)
+← Prev: [Measuring instead of arguing](07e-measuring-instead-of-arguing.md) · Index: [EAFP vs LBYL](README.md) · Next → [Provability and the order to decide in](07g-provability-and-the-order-to-decide.md)

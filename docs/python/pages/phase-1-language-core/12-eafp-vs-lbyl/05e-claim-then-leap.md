@@ -236,4 +236,4 @@ AlreadyCaptured(order_id)`), which keeps the two meanings separate.
 
 ---
 
-← Prev: [Irreversible leaps](05d-irreversible-leaps.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The asymmetry](05f-the-asymmetry.md)
+← Prev: [Irreversible leaps](05d-irreversible-leaps.md) · Index: [EAFP vs LBYL](README.md) · Next → [The asymmetry](05f-the-asymmetry.md)

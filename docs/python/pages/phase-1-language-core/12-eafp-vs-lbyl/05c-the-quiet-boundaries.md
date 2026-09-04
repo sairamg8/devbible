@@ -296,4 +296,4 @@ fault. The tell that you have this problem: any code path that does
 
 ---
 
-← Prev: [`assert` is not validation](05b-assert-is-not-validation.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Irreversible leaps](05d-irreversible-leaps.md)
+← Prev: [`assert` is not validation](05b-assert-is-not-validation.md) · Index: [EAFP vs LBYL](README.md) · Next → [Irreversible leaps](05d-irreversible-leaps.md)

@@ -251,4 +251,4 @@ default data if I may not read this", not "return default data whatever happens"
 
 ---
 
-← Prev: [The two names](01-the-two-names.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The race between the look and the leap](02-the-race-between-look-and-leap.md)
+← Prev: [The two names](01-the-two-names.md) · Index: [EAFP vs LBYL](README.md) · Next → [The race between the look and the leap](02-the-race-between-look-and-leap.md)

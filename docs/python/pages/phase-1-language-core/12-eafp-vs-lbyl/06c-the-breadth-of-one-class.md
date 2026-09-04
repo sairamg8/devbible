@@ -250,4 +250,4 @@ comparison in every caller. That is
 
 ---
 
-← Prev: [A worked width repair](06b-a-worked-width-repair.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The lookup classes](06d-the-lookup-classes.md)
+← Prev: [A worked width repair](06b-a-worked-width-repair.md) · Index: [EAFP vs LBYL](README.md) · Next → [The lookup classes](06d-the-lookup-classes.md)

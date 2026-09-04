@@ -223,4 +223,4 @@ speed.
 
 ---
 
-← Prev: [The miss rate decides](07b-the-miss-rate-decides.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Where the cost actually is](07d-where-the-cost-actually-is.md)
+← Prev: [The miss rate decides](07b-the-miss-rate-decides.md) · Index: [EAFP vs LBYL](README.md) · Next → [Where the cost actually is](07d-where-the-cost-actually-is.md)

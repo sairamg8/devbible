@@ -213,4 +213,4 @@ version printed beside the figure.
 
 ---
 
-← Prev: [Where the cost actually is](07d-where-the-cost-actually-is.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The costs that actually decide](07f-the-costs-that-actually-decide.md)
+← Prev: [Where the cost actually is](07d-where-the-cost-actually-is.md) · Index: [EAFP vs LBYL](README.md) · Next → [The costs that actually decide](07f-the-costs-that-actually-decide.md)

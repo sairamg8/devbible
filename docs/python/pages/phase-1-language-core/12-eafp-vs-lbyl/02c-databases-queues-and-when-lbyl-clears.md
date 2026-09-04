@@ -238,4 +238,4 @@ succeed.
 
 ---
 
-← Prev: [The filesystem and the atomic flag](02b-the-filesystem-and-the-atomic-flag.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Mappings: the decision table](03-mappings-the-decision-table.md)
+← Prev: [The filesystem and the atomic flag](02b-the-filesystem-and-the-atomic-flag.md) · Index: [EAFP vs LBYL](README.md) · Next → [Mappings: the decision table](03-mappings-the-decision-table.md)

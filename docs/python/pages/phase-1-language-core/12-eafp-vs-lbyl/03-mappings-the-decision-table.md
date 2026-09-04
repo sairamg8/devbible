@@ -192,4 +192,4 @@ subject.
 
 ---
 
-← Prev: [Databases, queues, and when LBYL clears](02c-databases-queues-and-when-lbyl-clears.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Writing on a miss](03b-writing-on-a-miss.md)
+← Prev: [Databases, queues, and when LBYL clears](02c-databases-queues-and-when-lbyl-clears.md) · Index: [EAFP vs LBYL](README.md) · Next → [Writing on a miss](03b-writing-on-a-miss.md)

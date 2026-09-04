@@ -177,4 +177,4 @@ missing, most often the profile.
 
 ---
 
-← Prev: [The costs that decide](07f-the-costs-that-actually-decide.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Unpacking](../13-unpacking/README.md)
+← Prev: [The costs that decide](07f-the-costs-that-actually-decide.md) · Index: [EAFP vs LBYL](README.md) · Next → [Unpacking](../13-unpacking/README.md)

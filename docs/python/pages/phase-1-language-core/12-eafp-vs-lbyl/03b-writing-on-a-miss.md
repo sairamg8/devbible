@@ -273,4 +273,4 @@ find — the failing code is never the code that grew the dict.
 
 ---
 
-← Prev: [Mappings: the decision table](03-mappings-the-decision-table.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Sequences, sets and nesting](03c-sequences-sets-and-nested-lookups.md)
+← Prev: [Mappings: the decision table](03-mappings-the-decision-table.md) · Index: [EAFP vs LBYL](README.md) · Next → [Sequences, sets and nesting](03c-sequences-sets-and-nested-lookups.md)

@@ -233,4 +233,4 @@ reasons that have nothing to do with avoiding an exception.
 
 ---
 
-← Prev: [Duck typing and type-shaped checks](04b-duck-typing-and-the-type-shaped-check.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Where LBYL is right](05-where-lbyl-is-right.md)
+← Prev: [Duck typing and type-shaped checks](04b-duck-typing-and-the-type-shaped-check.md) · Index: [EAFP vs LBYL](README.md) · Next → [Where LBYL is right](05-where-lbyl-is-right.md)
