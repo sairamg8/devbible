@@ -172,7 +172,7 @@ export default async function Page(props: PageProps<'/blog/[slug]'>) {
 }
 ```
 
-`npx @next/codemod@canary next-async-request-api .` does this mechanically across a codebase.
+The official codemod, `npx @next/codemod@latest next-async-request-api .`, rewrites this across a codebase — the docs note it handles `params` and `searchParams` property access in `page.js`, `layout.js`, `route.js` and `default.js` as well as `cookies()`, `headers()` and `draftMode()`.
 
 **Symptom: a build error about two files resolving to the same path, naming `route.ts`.** Cause: `page.tsx` and `route.ts` in the same segment. Fix — move the handler down one segment:
 
