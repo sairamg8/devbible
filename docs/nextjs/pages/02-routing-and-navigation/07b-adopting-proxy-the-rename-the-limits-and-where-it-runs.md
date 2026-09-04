@@ -156,7 +156,11 @@ const publicRoutes = ['/login', '/signup', '/']
 
 export default async function proxy(req: NextRequest) {
   const path = req.nextUrl.pathname
-  const isProtectedRoute = protectedRoutes.includes(path)
+  // `includes` is exact string equality: it would leave /dashboard/billing UNPROTECTED.
+  // Match the prefix, and anchor the segment so /dashboard-public is not caught by /dashboard.
+  const isProtectedRoute = protectedRoutes.some(
+    (r) => path === r || path.startsWith(`${r}/`),
+  )
   const isPublicRoute = publicRoutes.includes(path)
 
   const cookie = req.cookies.get('session')?.value
@@ -177,6 +181,14 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
 }
 ```
+
+⚠️ **The documented snippet uses `protectedRoutes.includes(path)`, and that is exact string
+equality.** With `protectedRoutes = ['/dashboard']` it matches `/dashboard` and **not**
+`/dashboard/billing`, so every nested route under a protected prefix is silently unprotected by
+this filter. The version above matches the prefix instead, anchored on a `/` so `/dashboard-public`
+is not swept in by `/dashboard`. This is exactly why the page's thesis holds: **the proxy is a
+coarse filter and never the authorization boundary** — a bug of this shape in the filter is a UX
+regression when the real check sits at the data layer, and a breach when it does not.
 
 ## Where proxy runs at all
 
