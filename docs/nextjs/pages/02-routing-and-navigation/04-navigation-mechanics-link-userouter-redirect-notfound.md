@@ -57,7 +57,7 @@ Four of those six are covered elsewhere in this chapter, because each belongs to
 | `scroll` | [04b · Scroll on navigation](04b-scroll-behaviour-and-the-navigation-lifecycle.md) |
 | `onNavigate` | [04c · `onNavigate` vs `onClick`](04c-onnavigate-and-blocking-navigation.md) and [04d · Blocking navigation](04d-blocking-navigation-and-what-it-cannot-see.md) |
 | `prefetch` | [13b · Prefetch control and link status](13b-prefetch-control-and-link-status.md), with the mechanics in [05 · Prefetching fundamentals](05-prefetching-fundamentals-and-the-native-view-transitions-api.md) |
-| `transitionTypes` | **05b · The native View Transitions API** *(not written yet)* |
+| `transitionTypes` | [05b · The native View Transitions API](05b-the-native-view-transitions-api.md) |
 
 Version history worth carrying in your head: `transitionTypes` is **v16.2.0**, `onNavigate` is **v15.3.0**, `"auto"` as an explicit alias for the default `prefetch` behaviour is **v15.4.0**, and since **v13.0.0** `<Link>` no longer requires a child `<a>` tag — if you meet `<Link><a>…</a></Link>` in an old codebase, a codemod removes it. Since **v10.0.0**, an `href` pointing at a dynamic route resolves automatically and no longer needs an `as` prop for that purpose.
 
