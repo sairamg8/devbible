@@ -57,6 +57,7 @@ two backwards will appear to work for a long time before it fails in a way nobod
 | 9 | **[The metadata document](05b-the-metadata-document.md)** | <span className="db-tier t-understand">Understand</span> | The seven REQUIRED members, the RS256 guarantee, and why an absent optional member proves nothing |
 | 10 | **[Standard scopes and claims](06-standard-scopes-and-claims.md)** | <span className="db-tier t-understand">Understand</span> | `openid` is a switch, the other four are bundles — and `email_verified` is the claim that matters, not `email` |
 | 11 | **[The UserInfo endpoint](07-the-userinfo-endpoint.md)** | <span className="db-tier t-understand">Understand</span> | 🔴 The one call your client makes with the *access* token — unsigned, unaddressed, bound to your login only by the `sub` cross-check |
+| 12 | **[`sub` is not an email](08-sub-is-not-an-email.md)** | <span className="db-tier t-master">Master</span> | 🔴 The only claim promised never to be reassigned — key on `(iss, sub)`, and why pairwise identifiers break a second client registration |
 
 ## The five things this topic is really about
 
@@ -93,8 +94,6 @@ user's name comes from UserInfo or your own store, not from a token minted an ho
 The topic's spine — the artefact, the request, and the validation procedure — is complete.
 The following are named in the boundary this phase set for topic 07 and are not written yet:
 
-- **08 · `sub` is not an email** *(not written yet)* — the stable-identifier argument,
-  account linking, and public versus pairwise subject identifiers.
 - **09 · Response types and response modes** *(not written yet)* — the hybrid family,
   `form_post`, and why `code` is the answer.
 - **10 · Logout** *(not written yet)* — RP-initiated logout, `id_token_hint`, and why "log
