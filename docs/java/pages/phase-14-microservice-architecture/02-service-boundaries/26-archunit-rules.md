@@ -1,7 +1,7 @@
 ---
 title: "ArchUnit enforces service boundaries without requiring Spring Modulith — plain JUnit assertions against compiled bytecode that catch architectural rot before code reaches review"
 sidebar_label: "26 · ArchUnit rules"
-sidebar_position: 40
+sidebar_position: 41
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "\"Backwards-compatible\" is a word teams use without defining, which is why contracts break anyway — two of the changes that break consumers produce no schema diff at all, and the only way to make a genuinely breaking change safely is to ship both forms and delete the old one on evidence rather than on a date"
 sidebar_label: "28c · Changing a published contract"
-sidebar_position: 45
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -21,6 +21,33 @@ service. Nygard's argument against it is not aesthetic — it is that features a
 like entities. Any interesting feature needs several of them, so an entity decomposition
 converts every feature into a distributed operation, coupling the services both at runtime
 and at design time, and delivering none of the independence the split was for.**
+## "Anti-pattern" is a precise claim here, not an insult
+
+Nygard's post opens by defining the word, and the definition is worth having because it is what makes
+the charge falsifiable rather than rhetorical:
+
+> *"a commonly-rediscovered solution to a problem in a context, that inadvertently creates a
+> resulting context we like less than the original context."*
+
+Three things have to be true for that to apply, and entity services satisfy all three:
+
+1. **Commonly rediscovered.** Nobody reads a paper and adopts entity services; every team derives them
+   independently from their own entity list. That is what makes the pattern worth naming — it will be
+   proposed again in your next design review by someone who has never heard of it.
+2. **A solution to a real problem in a real context.** "How do we decompose this?" is a genuine
+   question and "one service per noun" is a genuine answer to it, which is why it survives review.
+3. 🔴 **A resulting context we like less than the original.** This is the load-bearing clause and the
+   one that makes the claim testable: the assertion is not that entity services are inelegant, it is
+   that they leave you **worse off than the monolith you started with.** If your entity-service
+   architecture is not worse than the monolith it replaced, this page's argument does not apply to
+   you.
+
+⚠️ **Provenance, stated plainly:** Nygard's post diagnoses the problem and **does not propose a
+replacement** — it closes with *"In a future post, we'll look at what to do instead of entity
+services."* Everything below under *The capability version* is this corpus's answer, derived from the
+invariant criterion in [06 · Invariants are the criterion](06-invariants-are-the-criterion.md), and
+it is **not** attributable to Nygard. Nor does his post argue in loose-coupling / high-cohesion terms,
+so do not cite him for that either.
 
 ## The two couplings Nygard names
 
@@ -37,6 +64,24 @@ the entity services declined to hold.
 
 The second is the one that kills you. Operational coupling shows up on a dashboard and can
 be attacked with caching and batching. Semantic coupling shows up as a release calendar.
+
+### The number that makes operational coupling concrete
+
+Nygard's own worked example is a shopping cart price calculation, and it activates *"four of the five
+services in our architecture."* That is the whole argument in one observation: a single, ordinary,
+read-only user action needs almost the entire system to be up.
+
+**The consequence is availability arithmetic, and it compounds silently.** Each service is
+individually excellent; the operation is the product of all of them. Nothing in a per-service SLO
+dashboard shows this, because every service is meeting its target while the *operation* the customer
+cares about is not — which is why an entity-service architecture tends to produce the specific
+complaint "everything is green and the site is broken".
+
+🔴 **Note what makes this different from ordinary distribution.** A capability service also calls
+other services sometimes. The distinguishing property of an entity architecture is that it happens on
+the **common path** rather than the exceptional one: not a rare cross-boundary operation, but every
+page load, because the decomposition guaranteed that no single service can answer a business question
+on its own.
 
 ## The mechanism, in one sentence
 
@@ -103,73 +148,8 @@ jurisdiction applies is split between Accounts and Checkout. And a second consum
 mobile app's basket endpoint, or the quote generator, or the reorder flow — will implement
 all of it again.
 
-## The capability version
-
-```java
-package com.retailer.pricing;
-
-/// One call. The rule about trade pricing, segment discounts, promotion stacking and
-/// tax is inside the service that owns those rules and can change them alone.
-public interface BasketPricing {
-
-    PricedBasket price(PriceBasketCommand command);
-}
-```
-
-```java
-package com.retailer.pricing;
-
-import java.util.List;
-
-/// The command carries facts the caller legitimately knows: what is in the basket and
-/// who is buying. It does not carry prices, because prices are Pricing's answer, not
-/// Pricing's input.
-public record PriceBasketCommand(
-        CustomerId customer,
-        Channel channel,
-        List<BasketLine> lines,
-        List<PromotionCode> codes) {
-
-    public record BasketLine(Sku sku, int quantity) { }
-}
-```
-
-Now the trade-pricing rule lives in one place. Adding "trade customers get free delivery over
-£500" is a change to Pricing and to nothing else, which is the entire objective.
-
-Note also that Pricing became *self-contained* in microservices.io's sense — it can answer a
-synchronous request *"without waiting for the response from any other service"*, because it
-holds replicas of the product prices and customer segments it needs, updated by events. The
-availability arithmetic that motivates that pattern is topic 04's, but the boundary decision
-that makes it possible is this one.
-
-## Why the mistake is so attractive
-
-It is worth being sympathetic, because "don't do the obvious thing" is unhelpful without
-knowing why the obvious thing looks right.
-
-- **The entities already exist.** No analysis required, no meetings with domain experts, no
-  arguments. A decomposition you can derive from the schema in an afternoon.
-- **It looks like single responsibility.** Each service handles one thing. The
-  misapplication is that "one thing" is being measured as one noun rather than one reason to
-  change.
-- **Frameworks make it a ten-minute job.** Spring Data REST, JPA repositories and generated
-  scaffolding will produce a complete entity service before lunch. Nygard notes exactly this:
-  *"Spring may give us the absolute easiest way to create an entity service."* The ease is
-  part of the trap.
-- **It is symmetrical, so it looks like design.** Fifteen services, all the same shape, tidy
-  diagram.
-
-## The one place entity-shaped services are fine
-
-A **generic subdomain** that genuinely is storage — a document store, a media library, a
-key-value settings service — can legitimately have a CRUD-shaped API, because there are no
-domain rules to hold. The distinguishing feature is not the shape of the API; it is whether
-any business rule exists about that data. If nothing anywhere can refuse a change to it for a
-business reason, then there is nothing to encapsulate and CRUD is honest.
-
-The failure is exclusively about entities with rules, which is every entity in your core
-domain.
+The diagnosis is Nygard's. The cure is not — see
+[13c · What to build instead](13c-what-to-build-instead.md).
 
 ## Gotchas
 
@@ -187,21 +167,31 @@ subset, so the response accretes fields. Fix: an entity service cannot escape th
 it cannot know what the caller is asking; a capability service can, because the caller asks a
 question rather than requesting a row.
 
-**★ Renaming without reshaping.** `CustomerService` becoming `CustomerManagementService`, or
-being described as "the customer capability", changes nothing. Judge the API, not the name.
-
 **★ Symptom: an orchestrator appearing to hold rules that "do not fit anywhere".** Cause:
 the entity services refused to hold them. Fix: the rules do fit somewhere — with the state
 they constrain. The orchestrator is a symptom; deleting it without moving the rules just
 scatters them again.
 
-**★ Assuming the fix is fewer, larger entity services.** Merging `Customer` and `Address`
-into one entity service produces a bigger entity service. The axis is wrong, not the
-granularity; the fix is to reshape around capabilities.
+**★ Symptom: every service meets its SLO and customers report the site is broken.**
+Cause: operational coupling. The per-service dashboards measure services; the customer experiences an
+*operation*, which needs several of them, and its availability is the product rather than the minimum.
+Nygard's cart example needs *"four of the five services in our architecture"* for one price
+calculation.
+Fix: measure the operation, not the components. An SLO on `calculateCartPrice` that spans every
+service it touches makes the coupling visible in the only place anybody looks during an incident:
+```java
+// the span that matters is the business operation, not each hop inside it
+@Observed(name = "cart.price.calculate")
+public CartPrice calculate(CartId id) { … }
+```
 
-**★ Accepting a CRUD API because it is "just for internal use".** Internal consumers
-duplicate rules exactly as readily as external ones, and internal APIs are harder to remove
-because nobody is versioning them.
+**★ Symptom: somebody proposes entity services again, eighteen months after they were removed.**
+Cause: the pattern is *"commonly-rediscovered"* by construction — it is derived independently from an
+entity list, so it arrives from people who have never encountered the argument against it.
+Fix: keep the rejection recorded with its reasoning where design proposals are reviewed, and make the
+counter-argument the invariant test rather than an appeal to authority. "Which business rule does this
+service enforce alone?" settles it in one question and does not require anyone to have read a blog
+post.
 
 ## Interview questions
 
@@ -214,13 +204,24 @@ adds; and semantic coupling, where a change to any entity service ripples into i
 The underlying mechanism is that an entity service exposes fields and no decisions, so the
 rules about those fields live in the callers, duplicated once per caller, and they drift.
 
-**★ How do you tell an entity service from a legitimate capability service?**
-Ask what it can refuse and why. A capability service can reject an operation for a business
-reason it owns — a price below the margin floor, a reservation exceeding available stock, a
-cancellation of an already-dispatched order. An entity service can only reject malformed
-input. A related test is whether the callers contain business logic about the returned data:
-if the checkout code decides which of two prices applies, the pricing rule is in checkout,
-which means the pricing service does not own pricing.
+**★ In what precise sense are entity services an "anti-pattern", and what would falsify the claim?**
+Nygard's definition is *"a commonly-rediscovered solution to a problem in a context, that
+inadvertently creates a resulting context we like less than the original context"* — so the claim is
+not aesthetic. It has three testable parts: the pattern is arrived at independently rather than
+learned, it genuinely answers a real question, and it leaves you **worse off than what you had**. The
+last clause is what makes it falsifiable: if an entity-service architecture is not worse than the
+monolith it replaced, the charge does not stick. In practice it usually is worse, and the mechanism is
+named — operational coupling, where one ordinary user action needs most of the system up, and semantic
+coupling, where changes *"ripple through into"* dependants that end up *"brokering between data
+formats"*.
+
+**★ Nygard diagnoses entity services. What does he say to do instead?**
+Nothing — and that is worth knowing before citing him for a solution. The post ends with *"In a
+future post, we'll look at what to do instead of entity services."* Its contribution is the diagnosis
+and the naming of the two couplings. The capability-service answer this page gives comes from
+elsewhere: the invariant criterion, which says a service boundary is legitimate when the service
+enforces a rule by itself, and that a service enforcing no rule alone is a table with an HTTP
+interface. Attributing that conclusion to Nygard's post is a citation that will not check out.
 
 **★ Is a CRUD API ever acceptable for a service?**
 Yes, when there genuinely are no domain rules — a media library, a document store, a settings
@@ -230,23 +231,7 @@ is essentially the definition of a generic subdomain, and those are usually boug
 than built anyway. For anything in your core domain the answer is no, because core domains
 are made of rules.
 
-**★ Why do good teams keep building entity services?**
-Because the entities already exist, so the decomposition needs no analysis; because it looks
-like single responsibility if you measure "responsibility" in nouns rather than in reasons to
-change; because the frameworks make it a ten-minute job — Nygard points at Spring
-specifically as the easiest way to create one; and because the result is symmetrical, which
-reads as design. The counter is not to argue about naming but to apply the change test: take
-three recent features and count how many entity services each touched.
-
-**★ You have an entity-service architecture in production. What is the migration?**
-Not a rewrite. Find the rules that are duplicated across consumers — those are the highest
-value and the clearest evidence — and move each into the service that owns the corresponding
-state, replacing the duplicates with one call. Each move makes one service more capable and
-several consumers simpler, and each is independently shippable. Over time the entity services
-absorb the rules and become capability services, and the ones left holding nothing but fields
-get merged into whichever capability uses them most. The orchestrator, if there is one,
-shrinks as the rules leave it and is deleted last.
 
 ---
 
-← [Splitting by layer](12-splitting-by-layer.md) · [Topic index](README.md) · Next → [CRUD is not a capability](13b-crud-is-not-a-capability.md)
+← [Why the layering comes back](12b-why-the-layering-comes-back.md) · [Topic index](README.md) · Next → [CRUD is not a capability](13b-crud-is-not-a-capability.md)

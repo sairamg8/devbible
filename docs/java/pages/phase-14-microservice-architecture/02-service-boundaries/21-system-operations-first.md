@@ -1,7 +1,7 @@
 ---
 title: "Start from what the system can be asked to do, never from what it stores — because a list of system operations and the aggregates each one touches is a decomposition you can derive mechanically, and a data model is a decomposition that will hand you entity services"
 sidebar_label: "21 · System operations first"
-sidebar_position: 31
+sidebar_position: 32
 ---
 
 <span className="db-tier t-master">Master</span>

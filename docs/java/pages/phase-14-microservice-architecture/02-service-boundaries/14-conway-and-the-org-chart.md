@@ -1,7 +1,7 @@
 ---
 title: "Conway's law is not advice, it is an observation that your architecture will end up matching your communication structure whether you plan it or not — so the org chart is either the boundary you chose deliberately or the boundary that will overwrite the one you drew"
 sidebar_label: "14 · Conway and the org chart"
-sidebar_position: 23
+sidebar_position: 24
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "Your version control history is the only record of what actually changes together, which makes it the only empirical test of the Common Closure Principle you will ever get — and it is free, already collected, and almost never consulted"
 sidebar_label: "19 · Change history as evidence"
-sidebar_position: 28
+sidebar_position: 29
 ---
 
 <span className="db-tier t-master">Master</span>

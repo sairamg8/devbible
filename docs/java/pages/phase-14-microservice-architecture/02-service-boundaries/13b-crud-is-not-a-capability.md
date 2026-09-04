@@ -271,4 +271,4 @@ conventional REST URLs; you cannot build an enforceable one out of full-resource
 
 ---
 
-← [Entity services](13-entity-services.md) · [Topic index](README.md) · Next → [Conway and the org chart](14-conway-and-the-org-chart.md)
+← [Entity services](13-entity-services.md) · [Topic index](README.md) · Next → [What to build instead](13c-what-to-build-instead.md)

@@ -1,7 +1,7 @@
 ---
 title: "A common-domain jar cancels every service boundary in the system at compile time, because a change to a shared type is a coordinated release of everything that depends on it — the network boundary remains and the independence it was for is gone"
 sidebar_label: "16 · The shared model jar"
-sidebar_position: 25
+sidebar_position: 26
 ---
 
 <span className="db-tier t-master">Master</span>
