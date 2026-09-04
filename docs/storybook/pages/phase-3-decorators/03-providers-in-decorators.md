@@ -12,8 +12,9 @@ sidebar_position: 3
 
 This is the topic that decides whether writing a story costs two lines or twenty.
 
-Do it once, properly, and every story afterwards is `export const Default: Story =
-{}`. Do it badly and every story file re-implements your app's root.
+Do it once, properly, and every story afterwards is
+`export const Default: Story = {}`. Do it badly and every story file
+re-implements your app's root.
 
 ## The global provider decorator
 
