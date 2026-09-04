@@ -200,6 +200,41 @@ const q = searchParams?.get('q') ?? ''
 
 **Symptom: a component using `usePathname` returns `null` in a Pages Router route.** Cause: the same compatibility layer — `usePathname` *"may return `null` if the router is not yet initialized"*, in cases such as fallback routes or Automatic Static Optimization. Fix: guard the value in any component shared between the two routers.
 
+**★ Symptom: you added the `Suspense` boundary and now the whole page is client-rendered.** Cause: the boundary was placed around the page rather than around the component that reads the URL. The rule is that the tree *up to the closest boundary* is client-side rendered, so a boundary at the top of the page means the whole page qualifies. Fix: wrap the smallest component that calls the hook — the reference's stated benefit is that this *"will allow any Client Components above it to be prerendered and sent as part of initial HTML."*
+
+```tsx
+// 🚩 everything under here is client-rendered
+<Suspense fallback={<PageSkeleton />}>
+  <Nav />
+  <SearchBar />
+  <Results />
+</Suspense>
+
+// ✅ only the search bar is
+<nav>
+  <Suspense fallback={<SearchBarFallback />}>
+    <SearchBar />
+  </Suspense>
+</nav>
+```
+
+**★ Symptom: a shared component builds fine on one page and fails the build on another.** Cause: the Suspense requirement follows the *route*, not the component. A component calling `useSearchParams` is fine on a dynamically rendered page and fails on a prerendered one, so the same import can be safe in one place and a build error in another. Fix: give the component its own boundary at its own definition site so it is safe everywhere, rather than relying on each consumer to remember.
+
+```tsx title="app/ui/search-bar.tsx"
+import { Suspense } from 'react'
+import { SearchBarInner } from './search-bar-inner' // 'use client'
+
+export function SearchBar() {
+  return (
+    <Suspense fallback={<span className="search-skeleton" />}>
+      <SearchBarInner />
+    </Suspense>
+  )
+}
+```
+
+**Symptom: the page jumps as the search bar hydrates.** Cause: `fallback={null}` renders nothing, so the element has no space in the initial HTML and appears when hydration completes. Fix: give the fallback the same box as the real component — the documented example passes a `SearchBarFallback` placeholder rather than `null` precisely so something occupies that slot in the initial HTML.
+
 ## Interview questions
 
 **★ Does `useSearchParams` force a Suspense boundary? Answer precisely.**
@@ -213,6 +248,12 @@ Because layouts are not re-rendered during navigation — that is what makes cli
 
 **★ Someone hits the `useSearchParams` build error and adds `export const dynamic = 'force-dynamic'`. What is wrong with that?**
 It works and it over-corrects: the whole route is now dynamically rendered, losing prerendering for everything on the page, not just the part that reads the URL. If the component really should be client-rendered, the boundary is the right fix and keeps the rest prerendered. If the route genuinely is dynamic, the docs now prefer `await connection()` in a Server Component, because it ties dynamic rendering to the incoming request rather than to a page-wide flag.
+
+**★ Where exactly do you put the `Suspense` boundary, and why not at the top of the page?**
+Around the smallest component that reads the URL. The rule is that the Client Component tree *up to the closest boundary* gets client-side rendered, so a boundary wrapping the whole page opts the whole page out of prerendering and you have traded a build error for a performance regression. The reference states the benefit of placing it tightly: Client Components above the boundary can still be prerendered and sent in the initial HTML. And give the fallback the same footprint as the real component, or you have swapped a hydration error for layout shift.
+
+**A shared component using `useSearchParams` builds on one page and breaks the build on another. Why?**
+Because the requirement belongs to the route, not to the component. On a dynamically rendered route the hook does not suspend and is available on the server during the initial render; on a prerendered route it forces client-side rendering up to the nearest boundary, and a production build with no boundary fails. So the same import is safe in one place and fatal in another. The robust fix is to ship the boundary *with* the component, at its definition site, rather than documenting a rule every consumer has to remember.
 
 ---
 
