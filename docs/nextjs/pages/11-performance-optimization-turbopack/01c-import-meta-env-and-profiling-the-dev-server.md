@@ -7,7 +7,9 @@ sidebar_position: 101
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-04 against the Next.js [Turbopack API reference](https://nextjs.org/docs/app/api-reference/turbopack)
-> (docs build `version: 16.3.4`, `lastUpdated: 2026-08-03`). Documentation-verified;
+> (docs build `version: 16.3.4`, `lastUpdated: 2026-08-03`) and the
+> [version 16 upgrade guide](https://nextjs.org/docs/app/guides/upgrading/version-16) (`lastUpdated: 2026-08-25`),
+> which is where the trace reader command is documented. Documentation-verified;
 > **no timings, no sandbox run**. Target: **Next.js 16.3.4 · Turbopack default since 16.0**.
 
 **The name `import.meta.env` invites exactly the wrong mental model.** It looks like an environment-variable bag
@@ -127,13 +129,26 @@ next dev --internal-trace
 
 > *"This will produce a `.next-profiles/trace-turbopack.bin` file. Include that file when creating a GitHub issue on the Next.js repo to help us investigate."*
 
-This is the documented path for *"the dev server got slow and I cannot explain it"*. Two things to be clear about
-before you plan a debugging session around it:
+This is the documented path for *"the dev server got slow and I cannot explain it"*.
 
-- **It is a bug-report artefact, not a tool you read.** The file is binary and the documentation describes no local
-  reader for it. Attach it to a GitHub issue; do not expect to analyse it yourself.
+**The file is binary, but it is not opaque — there is a first-party reader**, documented in the version 16 upgrade
+guide rather than on the Turbopack page:
+
+```bash
+npx next internal trace .next-profiles/trace-turbopack.bin
+```
+
+⚠️ **Note the path changed in 16.** `next dev` now writes to `.next/dev`, and the upgrade guide gives the tracing
+command in the form above; a command copied from a pre-16 write-up may point at the wrong file.
+
+Two things to be clear about before you plan a debugging session around it:
+
+- **It is primarily a bug-report artefact.** The Turbopack reference's own framing is to attach it to a GitHub issue
+  so the maintainers can investigate; `next internal` is, as the name says, an internal command, and the docs
+  describe no stable schema for what it prints.
 - **It is not a substitute for local bisection.** Disabling an unnecessary Babel config, clearing a stale `.next`,
-  or removing a suspect loader will identify most self-inflicted slowness faster than a maintainer round-trip.
+  or removing a suspect loader will identify most self-inflicted slowness faster than either a trace or a maintainer
+  round-trip.
 
 ## Gotchas
 
@@ -237,11 +252,13 @@ can prove unreachable. Both branches then survive into the bundle — which is s
 correctly and only the bundle size betrays it.
 
 **What is `--internal-trace` for, and what is it not for?**
-It is for handing the Next.js maintainers a profile when the dev server has performance or memory problems you
-cannot explain; it writes `.next-profiles/trace-turbopack.bin` for attachment to a GitHub issue. It is not a local
-profiling tool — the artefact is binary and the documentation describes no reader — so it does not replace ordinary
-bisection. Check for an unnecessary Babel config, a stale `.next`, or a suspect loader first, because those account
-for most self-inflicted slowness and cost nothing to test.
+It writes `.next-profiles/trace-turbopack.bin` when the dev server has performance or memory problems you cannot
+explain, and the Turbopack reference's framing is to attach that file to a GitHub issue. It is *not* unreadable,
+though — the version 16 upgrade guide documents `npx next internal trace .next-profiles/trace-turbopack.bin`. What
+it is not is a supported profiling workflow: `next internal` is an internal command and no stable schema is
+documented for its output, so treat anything you learn from it as a hint rather than a contract. It also does not
+replace ordinary bisection — an unnecessary Babel config, a stale `.next`, or a suspect loader account for most
+self-inflicted slowness and cost nothing to test.
 
 ---
 
