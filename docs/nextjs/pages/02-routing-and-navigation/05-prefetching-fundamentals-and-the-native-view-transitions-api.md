@@ -267,4 +267,4 @@ So that navigating between siblings can reuse what is already there. Moving from
 
 ---
 
-← [04k · Query state in practice](04k-query-state-in-practice.md) · [Chapter 2 overview](01-explanation.md) · Next → **05b · The native View Transitions API** *(not written yet)*
+← [04k · Query state in practice](04k-query-state-in-practice.md) · [Chapter 2 overview](01-explanation.md) · Next → [05b · The native View Transitions API](05b-the-native-view-transitions-api.md)
