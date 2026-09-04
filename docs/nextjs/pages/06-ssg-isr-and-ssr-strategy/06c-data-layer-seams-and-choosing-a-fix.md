@@ -1,7 +1,7 @@
 ---
 title: "The seams that live in the data layer fail later and louder than the ones in the render tree — a cached function reading the request can pass `next build` and fail under `next start` — and the fix you reach for first should be the cheapest one, not the most architectural"
 sidebar_label: "06c · Data-layer seams, choosing a fix"
-sidebar_position: 38
+sidebar_position: 24
 description: "The remaining seam failures in a mixed Next.js 16.3.4 deployment: a cached function shared by a public page and a private board, searchParams in a shared component, and the three fix patterns with the rule for choosing between them."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The rendering decision is never settled by SEO or by performance, because every option in Next.js 16 satisfies both — it is settled by who controls content velocity, and for marketing pages that answer is a person who does not deploy"
 sidebar_label: "05 · Deciding, and marketing pages"
-sidebar_position: 31
+sidebar_position: 18
 description: "The decision frame for choosing a rendering strategy — requirements, the forcing axis, the pattern, what you gave up, the review trigger — applied end to end to a marketing site, where the answer is on-demand revalidation rather than time-based ISR."
 ---
 

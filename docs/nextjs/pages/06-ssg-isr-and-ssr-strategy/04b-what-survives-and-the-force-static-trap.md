@@ -1,7 +1,7 @@
 ---
 title: "A static export keeps more than teams expect — Server Components, `GET` Route Handlers as a file generator and `next/image` through a custom loader all survive — and the one flag the guide tells you to add is the one that converts a build error into a page showing the signed-out branch"
 sidebar_label: "04b · What survives, and the `force-static` trap"
-sidebar_position: 26
+sidebar_position: 15
 description: "The supported half of Next.js 16.3.4 static export: Server Components executing at build time, GET Route Handlers prerendered into real files, custom image loaders, client-side fetching — and why force-static is more dangerous here than anywhere else."
 ---
 

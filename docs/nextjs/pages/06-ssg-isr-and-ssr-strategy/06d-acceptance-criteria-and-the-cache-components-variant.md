@@ -1,7 +1,7 @@
 ---
 title: "Accept this milestone on properties you can check rather than pages that look right — then build it a second time with Cache Components on, because `v16.0.0` deletes half the config you just wrote and the durable half is the part that lives in the data layer"
 sidebar_label: "06d · Acceptance and the CC variant"
-sidebar_position: 39
+sidebar_position: 25
 description: "The chapter 6 milestone's acceptance checklist as verifiable properties and greps rather than impressions, the phase gate, and the same three-strategy deployment rebuilt with cacheComponents enabled — including what the documentation does not settle about replacing the dynamic = 'error' guarantee."
 ---
 

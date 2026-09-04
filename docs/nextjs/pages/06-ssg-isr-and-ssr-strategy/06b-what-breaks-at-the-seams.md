@@ -1,7 +1,7 @@
 ---
 title: "The blast radius of a request-time read is every route beneath the file it sits in, and every route that imports the component doing it — which is why a theme cookie in the root layout or a session check in a shared header converts a static marketing page into a per-request render with no error and nothing in its own directory to point at"
 sidebar_label: "06b · What breaks at the seams"
-sidebar_position: 37
+sidebar_position: 23
 description: "The render-tree seam failures between static, ISR'd and dynamic areas of one Next.js 16.3.4 deployment — the root layout, a shared header and a layout straddling a public page and a private board — each shown in code with its fix."
 ---
 

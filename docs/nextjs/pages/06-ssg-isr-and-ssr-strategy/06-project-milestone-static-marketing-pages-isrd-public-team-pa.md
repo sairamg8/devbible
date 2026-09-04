@@ -1,7 +1,7 @@
 ---
 title: "Put static marketing pages, ISR'd public team pages and a fully dynamic authenticated board in one SprintDesk deployment — the three strategies are easy in isolation and the entire lesson is what happens where they touch"
 sidebar_label: "06 · Milestone: three strategies, one deploy"
-sidebar_position: 36
+sidebar_position: 22
 description: "The chapter 6 project milestone: the route shape for three rendering strategies in a single Next.js 16.3.4 deployment, the config each segment carries, why the layout hierarchy is the design, and the v16.0.0 removal that deletes half this config under Cache Components."
 ---
 

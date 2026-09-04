@@ -1,7 +1,7 @@
 ---
 title: "\"The cache\" is at least five caches with different owners, different lifetimes and different invalidation stories — and on a self-hosted fleet the default one is per-instance, so tuning a window means nothing until you know which layer answered the request"
 sidebar_label: "03d · The cache is not one thing"
-sidebar_position: 21
+sidebar_position: 13
 description: "The layered cache at enterprise scale: client router cache, CDN, per-instance ISR cache, cacheHandler versus cacheHandlers, shared coordination with updateTags and refreshTags, and how to observe whether your tuning works."
 ---
 

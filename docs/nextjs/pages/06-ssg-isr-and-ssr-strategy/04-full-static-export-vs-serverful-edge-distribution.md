@@ -1,7 +1,7 @@
 ---
 title: "A static export is not a rendering mode, it is a smaller framework — `output: 'export'` removes thirteen documented features, and five of the removals are really just 'move this into your CDN's configuration console'"
 sidebar_label: "04 · Static export: what it removes"
-sidebar_position: 25
+sidebar_position: 14
 description: "What next.config's output: 'export' actually emits in Next.js 16.3.4, the complete verbatim list of thirteen unsupported features, what each one costs, and the Headers entry that means less than it looks."
 ---
 
@@ -195,4 +195,4 @@ That the loss is not correctness, it is the shape of the build. With on-demand g
 
 ---
 
-← [03 · ISR at enterprise level](03-isr-at-enterprise-level-stale-while-revalidate-tuning.md) · [Chapter 6 overview](01-explanation.md) · Next → [04b · What survives, and the `force-static` trap](04b-what-survives-and-the-force-static-trap.md)
+← [03d · The cache is not one thing](03d-the-cache-is-not-one-thing.md) · [Chapter 6 overview](01-explanation.md) · Next → [04b · What survives, and the `force-static` trap](04b-what-survives-and-the-force-static-trap.md)

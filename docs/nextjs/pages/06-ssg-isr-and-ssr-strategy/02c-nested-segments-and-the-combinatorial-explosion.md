@@ -1,7 +1,7 @@
 ---
 title: "Two nested dynamic segments multiply, and the framework will happily prerender the cross product — top-down enumeration is one query per parent, bottom-up is one query total, and a catch-all route has no natural upper bound at all"
 sidebar_label: "02c · Nested segments and combinatorics"
-sidebar_position: 13
+sidebar_position: 8
 description: "Nested dynamic segments at scale: top-down versus bottom-up enumeration, the cross-product bug, catch-all routes with no bound, and why params can be generated above the current segment but never below."
 ---
 

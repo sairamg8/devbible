@@ -1,7 +1,7 @@
 ---
 title: "Static export is the right answer when the artifact has to leave your infrastructure — and a serverful deployment is worth its bill because the docs' minimum is one Node process, with everything above that being performance fidelity rather than correctness"
 sidebar_label: "04c · When export wins, what a server buys"
-sidebar_position: 27
+sidebar_position: 16
 description: "The cases where output: 'export' is genuinely correct — docs sites, embedded artifacts, air-gapped deploys — against what a Node.js server and an edge network actually buy, using Next.js 16.3.4's own functional-vs-performance fidelity framing and its feature and CDN capability matrices."
 ---
 

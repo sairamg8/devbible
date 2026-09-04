@@ -1,7 +1,7 @@
 ---
 title: "Stale-while-revalidate structurally prevents the classic cache stampede on the stale path, because nobody blocks — but the documentation never says whether concurrent requests coalesce into one background regeneration, and the paths that *do* block are named, documented, and the ones you reach for during an incident"
 sidebar_label: "03b · The stampede"
-sidebar_position: 19
+sidebar_position: 11
 description: "What happens when many requests hit one stale path: what SWR guarantees, the deduplication question the docs do not settle, and the four documented blocking paths where a thundering herd is genuinely possible."
 ---
 

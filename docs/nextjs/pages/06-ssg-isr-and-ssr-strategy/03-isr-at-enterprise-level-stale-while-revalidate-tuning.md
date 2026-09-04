@@ -1,7 +1,7 @@
 ---
 title: "A `revalidate` window is not a freshness guarantee — it is a floor under how often you *may* regenerate, and because regeneration is triggered by a request rather than by a clock, the staleness your users actually see is set by your traffic, not by your number"
 sidebar_label: "03 · ISR tuning"
-sidebar_position: 18
+sidebar_position: 10
 description: "Choosing the revalidate number: what the window buys in origin load, what it costs in worst-case staleness, why revalidate is a floor and not a ceiling, and how to derive the number from a product requirement instead of habit."
 ---
 

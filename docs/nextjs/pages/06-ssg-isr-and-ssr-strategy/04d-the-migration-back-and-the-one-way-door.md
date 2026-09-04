@@ -1,7 +1,7 @@
 ---
 title: "Deleting `output: 'export'` takes one line; unwinding the eighteen months of workarounds you built because you did not have those thirteen features is the actual migration, and two of them are one-way doors"
 sidebar_label: "04d · The migration back"
-sidebar_position: 28
+sidebar_position: 17
 description: "What it really costs to discover late that a static export needed a server: the workaround-by-workaround unwind, which decisions are irreversible, and the cheap insurance that keeps the door open from day one."
 ---
 

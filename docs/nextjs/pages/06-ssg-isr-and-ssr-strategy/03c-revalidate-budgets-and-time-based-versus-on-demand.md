@@ -1,7 +1,7 @@
 ---
 title: "On a large site the effective window is the *minimum* across the route, so one helper with a short window sets the budget for a page it does not own — and time-based versus on-demand invalidation is not a feature comparison, it is a choice between an unconditional bound and a production dependency on your publish path"
 sidebar_label: "03c · Budgets and on-demand"
-sidebar_position: 20
+sidebar_position: 12
 description: "Per-route revalidate budgets across a large site: the minimum-wins rule, cacheLife nesting, staleness as a written policy encoded as named profiles, and the operational differences between time-based and on-demand invalidation."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The array `generateStaticParams` returns is a bill your CI pays every deploy, so at scale the function stops being an enumeration and becomes a budget — you pick the hot set, and `dynamicParams` decides whether the tail 404s or renders"
 sidebar_label: "02 · generateStaticParams at scale"
-sidebar_position: 11
+sidebar_position: 6
 description: "generateStaticParams as a build-cost decision: why path count is the axis nobody budgets for, how to pick the hot set, partial enumeration, and what dynamicParams does to everything you left out."
 ---
 

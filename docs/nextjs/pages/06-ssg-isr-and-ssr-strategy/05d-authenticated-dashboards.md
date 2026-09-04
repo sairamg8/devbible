@@ -1,7 +1,7 @@
 ---
 title: "On an authenticated dashboard the rendering decision is subordinate to the authorization decision, because the only failure that matters is serving one tenant's data to another — so the question stops being static-or-dynamic and becomes what is in the cache key"
 sidebar_label: "05d · Authenticated dashboards"
-sidebar_position: 34
+sidebar_position: 21
 description: "The third decision walkthrough: a per-user, per-tenant application where nothing is cacheable at the CDN, the real win is not blocking on the slowest query, and every caching decision has to be justified against a cross-tenant leak."
 ---
 

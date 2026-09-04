@@ -1,7 +1,7 @@
 ---
 title: "Cache Components deletes `dynamicParams` and replaces the enumerate-everything-or-404 choice with an App Shell, which means the scale question stops being *how many paths do I prerender* and becomes *how much of the page is param-free*"
 sidebar_label: "02d · What Cache Components changes"
-sidebar_position: 14
+sidebar_position: 9
 description: "generateStaticParams under Cache Components: the removed dynamicParams flag, App Shells for unlisted params, why an empty array is now a build error, the await-below-the-Suspense-boundary rule, and how prefetch counts as the first visit."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A decomposed article page is not free — it buys a cache entry per article, a hard dependency on cross-instance cache coordination and a p99 owned by cold long-tail reads — and one class of page does not decompose at all"
 sidebar_label: "05c · Operating it at archive scale"
-sidebar_position: 33
+sidebar_position: 20
 description: "The operational half of the content-platform walkthrough: partial enumeration with generateStaticParams, the costs the decomposed design actually incurs, its review triggers, and the test that identifies pages where full SSR is genuinely correct."
 ---
 

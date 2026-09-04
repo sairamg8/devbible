@@ -1,7 +1,7 @@
 ---
 title: "The moment `generateStaticParams` reads a database, `next build` becomes a production data consumer — your CI needs credentials and network reach it never had, and the same commit stops producing the same site"
 sidebar_label: "02b · Enumerating from a database"
-sidebar_position: 12
+sidebar_position: 7
 description: "What it costs to enumerate paths from a database or CMS at build time: CI network and credentials, build reproducibility, deterministic ordering, pagination, timeouts, and what a failed enumeration does to the deploy."
 ---
 

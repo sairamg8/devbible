@@ -1,7 +1,7 @@
 ---
 title: "Content platforms are where teams over-choose SSR, because one per-visitor element — a paywall, a saved badge, a view count — makes a route-level thinker declare the whole article dynamic, and the framework stopped requiring that three majors ago"
 sidebar_label: "05b · Content platforms, and the SSR reflex"
-sidebar_position: 32
+sidebar_position: 19
 description: "The second decision walkthrough: a publishing platform with millions of articles, a paywall, per-user recommendations and live counts. Decomposing the page by element rather than by route, and the one case where full SSR really is correct."
 ---
 
