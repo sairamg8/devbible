@@ -123,7 +123,7 @@ A flag can also **move between these classes across releases**, and that movemen
 most consequential thing in this whole classification. `-XX:+UseCompactObjectHeaders` was
 experimental — requiring an unlock flag — and on JDK 25 is a product option that needs no
 unlock at all. A copied command line carrying the old unlock flag is now carrying a flag it
-does not need. `05e-the-live-list-jdk-25.md` *(not written yet)* covers that specific
+does not need. `05f-the-live-list-jdk-25.md` *(not written yet)* covers that specific
 promotion and what it means for your command line;
 [unlocking diagnostic and experimental](02b-unlocking-diagnostic-and-experimental.md) covers the unlock
 mechanics and the risk you take on when you use one.
