@@ -111,6 +111,44 @@ Pick your own thresholds and state them; the shape of the distribution matters m
 particular cut-off, and a distribution with no high-coupling pairs at all usually means your
 path parsing is wrong rather than that your architecture is perfect.
 
+## 🔴 Renames and moves silently destroy this analysis
+
+Every command on this page groups commits by path, and a path is not a stable identity. The moment a
+module is renamed or a package is moved, git's default output shows a deletion and an addition — so
+the module appears to have been created recently, its history vanishes, and the co-change pair you
+were looking for disappears with it.
+
+**This does not produce an error. It produces a quieter, more confident, wrong answer**, which is the
+worst kind: a module that was renamed eight months ago simply looks stable and uncoupled.
+
+```bash
+# Find the renames before trusting any of the numbers above
+git log --since='2 years ago' --diff-filter=R --find-renames --name-status   | grep '^R' | awk '{print $2" -> "$3}' | sort | uniq -c | sort -rn | head
+
+# Follow one path through its renames, to check whether history is really as short as it looks
+git log --follow --format='%ad %s' --date=short -- src/main/java/com/retailer/pricing | tail -5
+```
+
+⚠️ **`--follow` works for a single file and is not available for the directory-level aggregation these
+commands do.** So the practical procedure is:
+
+1. List the renames over the analysis window with `--diff-filter=R`, as above.
+2. Build a **path alias map** — old path → current path — for the ones that matter.
+3. Rewrite paths through the alias map before aggregating.
+
+```bash
+# Normalise historical paths, then aggregate. Without this, every renamed module reads as new.
+git log --format='%H' --since='2 years ago' --name-only   | sed -e 's#^src/main/java/com/retailer/billing/#src/main/java/com/retailer/invoicing/#'   | awk '/^[0-9a-f]{40}$/ {c=$0; next} NF {split($0,p,"/"); print c, p[5]}'   | sort -u
+```
+
+🔴 **Check the rename list first, every time, and say in the write-up which aliases you applied.**
+An analysis that does not mention renames over a two-year window has either verified there were none
+or has not looked — and a reader cannot tell which, which makes the whole finding unciteable.
+
+**A related trap in the same family:** a module *deleted* during the window contributes co-change up
+to its deletion and then stops. Left in the aggregation it drags a pair's ratio down and makes a real
+coupling look weaker than it is. Exclude paths that do not exist at `HEAD`, or say that you did not.
+
 ## What to do with each finding
 
 | Finding | Action |
@@ -182,6 +220,22 @@ pair.
 subject by definition, which inflates every pair; but a *cross-module* test that changes with
 two modules is real evidence. Decide explicitly and state which you did.
 
+**★ Symptom: a module that everyone knows is deeply coupled shows almost no co-change.**
+Cause: it was renamed or moved inside the analysis window. Grouping by path treats the rename as a
+deletion plus an addition, so its earlier history is attributed to a path that no longer exists.
+Fix: list renames before trusting any number, and normalise historical paths through an alias map:
+```bash
+git log --since='2 years ago' --diff-filter=R --find-renames --name-status | grep '^R'
+```
+🔴 This never errors. It quietly returns a confident, wrong answer, which is why the rename check
+belongs at the start of the procedure rather than in the caveats.
+
+**★ Symptom: a strong coupling reads as weak, and the pair includes a module that was split up last year.**
+Cause: a path deleted mid-window contributes co-change until it disappears and then stops, dragging
+the pair's ratio down for the remainder of the window.
+Fix: restrict the aggregation to paths that exist at `HEAD`, or state explicitly that deleted paths
+were included and over what window — either is defensible; silence is not.
+
 **★ Running it once and never again.** Boundary erosion is a trend, not an event. A quarterly
 re-run is the only way to see a boundary weakening while it is still cheap to correct.
 
@@ -218,6 +272,17 @@ usable. Mechanical commits like formatter runs and dependency bumps touch everyt
 Generated code co-changes with its source and says nothing. A recent reorganisation means the
 history describes the previous team structure. And new code has no history at all, which is
 why greenfield boundaries cannot use this and have to be treated as hypotheses.
+
+**★ What is the first thing you check before trusting any co-change number, and why?**
+The rename list. Every one of these commands groups commits by path, and a path is not a stable
+identity — a renamed or moved module appears in git's default output as a deletion plus an addition,
+so its history vanishes and it reads as recent and uncoupled. The failure mode is what makes it
+dangerous: nothing errors, and the analysis simply returns a quieter, more confident, wrong answer. So
+the procedure starts with `git log --diff-filter=R --find-renames`, builds an alias map from old paths
+to current ones, and normalises historical paths before aggregating. `--follow` handles a single file
+and does not help with the directory-level aggregation, which is why the alias map is manual. The
+write-up should name the aliases applied, because a reader cannot otherwise tell whether the analysis
+checked for renames or merely did not look.
 
 **★ How does this change an architecture conversation?**
 It replaces a claim about a model with a fact about the team's own commits, which is much

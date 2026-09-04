@@ -140,6 +140,39 @@ Wait for one of these, and name which one in the decision record:
 Absent any of these, splitting is buying the fixed cost in [15 · Too
 small](15-too-small.md) for nothing.
 
+## 🔴 Most "greenfield" projects are not greenfield, and that changes everything
+
+The argument above assumes no evidence exists. Check that assumption before accepting it, because the
+single most common greenfield project is a **replacement for a system that already runs**, and that
+system is a five-year record of what actually changes together.
+
+**A rewrite has better evidence available than any workshop can produce, and teams routinely ignore
+it** — partly because the old system is the thing everybody has agreed is bad, so its structure feels
+like the last place to look for guidance. That conflates two different things: the old system's
+*implementation* may be terrible while its *change history* is an honest record of the domain.
+
+| Available in a rewrite | What it tells you | Where |
+|---|---|---|
+| The old system's commit history | Which parts genuinely change together, independent of how badly they were built | [19 · Change history as evidence](19-change-history-as-evidence.md) |
+| Its incident history | Which failures were correlated — a proxy for runtime coupling nobody documented | — |
+| Its support ticket taxonomy | The operations users actually perform, as opposed to the ones the API offered | [13d · Migrating a public CRUD API](13d-migrating-a-public-crud-api.md) |
+| Its slowest and most contended tables | Where the real transactional pressure is | [09b · Finding it in the code](09b-finding-it-in-the-code.md) |
+
+```bash
+# The rewrite's most valuable half-day: what co-changed in the system you are replacing
+git -C ../legacy-system log --format='%H' --since='3 years ago' --name-only   | awk '/^[0-9a-f]{40}$/ {c=$0; next} NF {split($0,p,"/"); print c, p[3]}'   | sort -u | awk '{mods[$1]=mods[$1]" "$2} END {for (c in mods) print mods[c]}'   | tr ' ' '\n' | sort | uniq -c | sort -rn | head -20
+```
+
+⚠️ **One caveat that must travel with this.** The old system's co-change pattern partly reflects its
+own bad structure — modules that changed together because they were tangled, not because the domain
+says so. So it is a **hypothesis generator**, not an answer: it tells you which pairs to ask the
+domain question about, and [19 · Change history as evidence](19-change-history-as-evidence.md)'s
+warnings about interpretation apply in full. It is still enormously better than a whiteboard, because
+a whiteboard generates hypotheses from nothing at all.
+
+**True greenfield — a genuinely new product in a domain nobody here has built — is rarer than the
+word suggests**, and it is the only case where this chunk's original argument applies unmodified.
+
 ## What to write down on day one
 
 A short architecture decision record, kept in the repository, saying:
@@ -182,6 +215,20 @@ domain, org chart and constraints. The vocabulary may transfer; the lines almost
 implement them as modules, ship. The point is that the *deployment* commitment waits, not the
 design.
 
+**★ Symptom: a rewrite designs its boundaries in a workshop while the system it replaces sits in version control.**
+Cause: the old system is the agreed-upon failure, so nobody thinks to look at it for guidance —
+conflating a bad implementation with an uninformative one.
+Fix: run the co-change analysis over the legacy repository before the design session, and bring the
+top pairs into the room as questions. The implementation may be terrible and the change history is
+still an honest record of what the domain couples together.
+
+**★ Symptom: the legacy co-change analysis is treated as the answer and reproduced faithfully.**
+Cause: the opposite error. Some of that co-change exists because the old system was tangled, not
+because the domain requires it.
+Fix: use it to generate the shortlist, then ask the domain question about each pair — is there an
+invariant here, or was this just how it was built? A pair that co-changes with no domain reason is
+exactly the coupling the rewrite exists to remove.
+
 **★ Splitting because the team wants microservices experience.** It is an honest motivation
 and a bad reason, and it should at least be stated out loud so it can be weighed against the
 fixed cost rather than dressed as domain analysis.
@@ -222,6 +269,18 @@ a component handling card data or one that must remain up when the rest is down.
 required different technology. Or cognitive capacity, where the split follows a boundary the
 evidence supports. If none of these applies, the split buys the full per-service fixed cost
 for nothing.
+
+**★ You are rewriting an existing system. Does the "no evidence yet, so start modular" argument still apply?**
+Only partly, and assuming it does wastes the best evidence you will ever have. A rewrite is not
+greenfield: the system being replaced is a multi-year record of what actually changes together, plus
+an incident history showing which failures correlated, a support taxonomy showing which operations
+users really perform, and a set of contended tables showing where the transactional pressure is. Teams
+skip all of it because the old system is the thing everyone agrees was bad — which conflates a bad
+implementation with an uninformative one. The caveat is real and must travel with the finding: some
+co-change in the old system reflects its own tangle rather than the domain, so the analysis is a
+hypothesis generator rather than an answer. It is still far better than a whiteboard, which generates
+hypotheses from nothing. The original argument applies unmodified only to genuinely new products in
+domains nobody present has built, which is rarer than the word "greenfield" suggests.
 
 **★ What should a greenfield design session actually produce?**
 Vocabulary, a candidate list of subdomains, the system operations people expect, and — most
