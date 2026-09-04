@@ -40,7 +40,7 @@ For a request to `/dashboard`, Next.js composes (conceptually): `layout.tsx( loa
 Both wrap child segments identically in terms of position in the tree, but `layout.tsx` **persists** its own React state and DOM across sibling navigations within it (e.g. a sidebar's scroll position survives clicking between dashboard sub-pages), while `template.tsx` **remounts entirely** on every navigation — appropriate specifically when you want fresh state or a re-triggered enter animation on every single navigation, even between visually similar pages.
 
 ### `error.tsx` Must Be a Client Component
-Error boundaries fundamentally require a class component's `componentDidCatch` lifecycle (or React's error boundary primitives), which only exist in the client runtime — `error.tsx` always requires `'use client'` at the top, and receives `error` and a `reset()` function (to attempt re-rendering the segment without a full page reload) as props.
+Error boundaries fundamentally require a class component's `componentDidCatch` lifecycle (or React's error boundary primitives), which only exist in the client runtime — `error.tsx` always requires `'use client'` at the top, and receives `error` plus two recovery functions as props: `retry()`, which re-fetches *and* re-renders the segment, and `reset()`, which re-renders it without re-fetching. `retry()` is the one to reach for — see [09 · `error.js` props](../07-error-handling-loading-states-and-resilience/09-errorjs-props-retry-and-reset.md).
 
 ### `route.ts` Cannot Coexist With `page.tsx` in the Same Segment
 A segment is either a **page** (returns JSX/HTML) or a **Route Handler** (returns an HTTP `Response`, functioning as an API endpoint) — never both, since both would compete to define what a request to that exact path returns.
@@ -83,11 +83,11 @@ export default function DashboardLoading() {
 // app/dashboard/error.tsx — automatic error boundary; MUST be a Client Component
 'use client';
 
-export default function DashboardError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+export default function DashboardError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
   return (
     <div className="p-6 text-rose-400">
       <p>Something went wrong loading the dashboard.</p>
-      <button onClick={() => reset()} className="mt-2 px-3 py-1 bg-slate-800 rounded text-xs">
+      <button onClick={() => retry()} className="mt-2 px-3 py-1 bg-slate-800 rounded text-xs">
         Try again
       </button>
     </div>

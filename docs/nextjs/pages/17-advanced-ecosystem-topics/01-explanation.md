@@ -89,12 +89,12 @@ export function RefreshButton() {
 // app/global-error.tsx — the boundary of last resort; MUST render its own <html>/<body>
 'use client';
 
-export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
+export default function GlobalError({ error, retry }: { error: Error; retry: () => void }) {
   return (
     <html>
       <body>
         <h2>A critical error occurred.</h2>
-        <button onClick={() => reset()}>Try again</button>
+        <button onClick={() => retry()}>Try again</button>
       </body>
     </html>
   );

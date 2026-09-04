@@ -45,11 +45,11 @@ export default function DashboardLoading() {
 // app/dashboard/error.tsx — automatic error boundary; MUST be a Client Component
 'use client';
 
-export default function DashboardError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+export default function DashboardError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
   return (
     <div className="p-6 text-rose-400">
       <p>Something went wrong loading the dashboard.</p>
-      <button onClick={() => reset()} className="mt-2 px-3 py-1 bg-slate-800 rounded text-xs">
+      <button onClick={() => retry()} className="mt-2 px-3 py-1 bg-slate-800 rounded text-xs">
         Try again
       </button>
     </div>

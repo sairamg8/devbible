@@ -35,15 +35,15 @@ app/
 'use client'
 export default function Error({
   error,
-  reset,
+  retry,
 }: {
   error: Error & { digest?: string }
-  reset: () => void
+  retry: () => void
 }) {
   return (
     <div>
       <p>Something went wrong.</p>
-      <button type="button" onClick={reset}>
+      <button type="button" onClick={() => retry()}>
         Retry
       </button>
     </div>
@@ -51,7 +51,10 @@ export default function Error({
 }
 ```
 
-`error.tsx` must be a Client Component (event handlers / reset).
+`error.tsx` must be a Client Component (event handlers / recovery). The boundary receives
+**both** `retry()` and `reset()`: `retry()` re-fetches *and* re-renders the segment, `reset()`
+only re-renders it. Use `retry()` — stable since **v16.3.0** — unless you have a specific
+reason not to re-fetch. See [09 · `error.js` props](09-errorjs-props-retry-and-reset.md).
 
 ### Streaming failures
 
@@ -102,7 +105,7 @@ export type ActionResult<T> =
 
 ### ⚠️ Pitfall 1: `error.tsx` without `'use client'`
 
-Build/runtime failure — reset needs client interactivity.
+Build/runtime failure — the recovery button needs client interactivity.
 
 ### ⚠️ Pitfall 2: Swallowing Server Action errors
 

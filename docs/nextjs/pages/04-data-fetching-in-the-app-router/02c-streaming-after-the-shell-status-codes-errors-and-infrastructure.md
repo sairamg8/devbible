@@ -7,7 +7,7 @@ description: "What happens once streaming has started: the committed HTTP status
 
 <span className="db-tier t-understand">Understand</span>
 
-> Verified: 2026-09-03 for **Next.js 16.3.4** against [Streaming](https://nextjs.org/docs/app/guides/streaming) (docs `lastUpdated` 2026-08-25), [`loading.js`](https://nextjs.org/docs/app/api-reference/file-conventions/loading) (`lastUpdated` 2026-06-08) and [`<Suspense>`](https://react.dev/reference/react/Suspense) on react.dev.
+> Verified: 2026-09-04 for **Next.js 16.3.4** against [Streaming](https://nextjs.org/docs/app/guides/streaming) (docs `lastUpdated` 2026-08-25), [`loading.js`](https://nextjs.org/docs/app/api-reference/file-conventions/loading) (`lastUpdated` 2026-06-08), [`error.js`](https://nextjs.org/docs/app/api-reference/file-conventions/error) (`lastUpdated` 2026-07-10 — the boundary examples use `retry`, stable since v16.3.0) and [`<Suspense>`](https://react.dev/reference/react/Suspense) on react.dev.
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
 
 **Streaming is a trade you make with HTTP, and the price is paid up front: to send the first chunk the server must send the response headers, and once they are sent nothing can change them. Every surprise in this page descends from that one constraint — why a streamed 404 is a `200`, why a mid-stream `redirect()` becomes a client-side navigation, why an error after the shell replaces a section rather than the page, and why a crawler gets a completely different response from a browser. Then there is the other half, which is not about your code at all: a reverse proxy, a CDN, a compression layer or a serverless platform that buffers the response undoes all of it, and the page still works, so nobody notices for months.**
@@ -65,15 +65,15 @@ This is the interaction to hold in your head: **a `<Suspense>` boundary decides 
 
 export default function RecommendationsError({
   error,
-  reset,
+  retry,
 }: {
   error: Error & { digest?: string }
-  reset: () => void
+  retry: () => void
 }) {
   return (
     <div role="alert">
       <p>Recommendations are unavailable right now.</p>
-      <button onClick={reset}>Try again</button>
+      <button onClick={() => retry()}>Try again</button>
     </div>
   )
 }
@@ -178,8 +178,8 @@ return (
 ```tsx
 // app/dashboard/recommendations/error.tsx
 'use client'
-export default function Error({ reset }: { error: Error; reset: () => void }) {
-  return <button onClick={reset}>Reload recommendations</button>
+export default function Error({ retry }: { error: Error; retry: () => void }) {
+  return <button onClick={() => retry()}>Reload recommendations</button>
 }
 ```
 
