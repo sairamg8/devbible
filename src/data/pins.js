@@ -261,6 +261,12 @@ export const PINS = {
     note: '@tanstack/query-core and @tanstack/react-query-next-experimental share the version. The docs on main show queryClient.query() and environmentManager.isServer(), which read as unreleased v6 API — they are not; both ship in published 5.102.8.'},
   motion:     {label: 'Motion',          source: 'npm:motion',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['framer-motion'],         names: ['framer motion', 'framer-motion'],
     note: 'Package renamed framer-motion → motion. 14 pages still import the old name.'},
+  // Added 2026-09-05 with nextjs ch08 topic 03: nuqs is taught across two pages as the library
+  // that packages typed search-param state, and topic 04 teaches jotai across three.
+  nuqs:       {label: 'nuqs',           source: 'npm:nuqs',                    policy: 'latest', pin: '2.10.1', checked: '2026-09-05', tracks: ['nextjs'],            names: ['nuqs'],
+    note: 'Throttles URL writes because browsers rate-limit history calls; Safari is the strict case at 120ms (320ms on older versions). Its server loaders parse but deliberately do not validate.'},
+  jotai:      {label: 'Jotai',          source: 'npm:jotai',                   policy: 'latest', pin: '2.20.3', checked: '2026-09-05', tracks: ['nextjs', 'react'],   names: ['jotai'],
+    note: 'A module-level default store is shared across requests on the server. atomWithHash documents a dependency on Router.events, which the App Router does not expose.'},
   // Added 2026-09-05 with nextjs ch08. Zustand is taught across the whole ch08 milestone
   // (the scoped board store, selectors, hydration) and in topic 04's comparison, so under the
   // library-necessity test it earns a pin rather than being taught with nothing watching it.
