@@ -12,6 +12,7 @@ const node = summarise('nodejs');
 const express = summarise('expressjs');
 const react = summarise('react');
 const angular = summarise('angular');
+const nextjs = summarise('nextjs');
 const postgres = summarise('postgresql');
 const git = summarise('git');
 const mongodb = summarise('mongodb');
@@ -82,6 +83,12 @@ const LAYERS = [
         to: '/docs/react',
         done: true,
         data: react,
+      },
+      {
+        name: 'Next.js',
+        desc: 'App Router, Server Components, the caching model, PPR and Cache Components, deployment — a 19-chapter corpus imported at 16.2 and being refreshed chapter by chapter for 16.3',
+        to: '/docs/nextjs',
+        data: nextjs,
       },
       {
         name: 'Angular',

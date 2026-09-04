@@ -11,8 +11,9 @@ sidebar_position: 0
 > **No sandbox run** — this is an inventory plus an imported corpus, not a fresh authoring pass.
 
 The Next.js track, **imported 2026-09-03** from the frontend-bible corpus at
-`/mnt/Storage/Backup/Code/frontend/docs/nextjs`. **19 chapters, 135 pages**, carried
-across verbatim (140 at import; 5 duplicate appendix pages have since been removed).
+`/mnt/Storage/Backup/Code/frontend/docs/nextjs`. **19 chapters, 140 pages** carried across
+verbatim; 5 duplicate appendix pages were removed and the track has since grown to
+**247 content pages**, of which **121 are authored or re-verified here**.
 
 Next.js is the second React meta-framework in this bible and the one most likely to be the
 thing you actually ship. The React track teaches you components; this track teaches you the
@@ -79,9 +80,21 @@ an `01-explanation.md` overview, then one page per concept.
 The running project throughout is **SprintDesk**, a multi-tenant SaaS task dashboard, with a
 PPR-driven e-commerce storefront as the contrast case study in chapter 18.
 
+## Progress
+
+import Progress from '@site/src/components/Progress';
+
+<Progress lang="nextjs" compact />
+
+🔴 **What the bar counts.** A chapter's `pages` number is the count of pages carrying a
+`> Verified:` line — written or re-written *here*, against the current docs. The imported
+pages still read fine and are still linked; they are simply not yet vouched for, so they
+score zero. That is the same rule Storybook's imported pages are held to, and it is why a
+track with 247 readable pages reads 49 %.
+
 ## What was done, 2026-09-03
 
-The track arrived as 140 imported pages and is now **249**. Four steps ran in one day:
+The track arrived as 140 imported pages and is now **247 content pages** (249 files, counting two chapter READMEs). Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
 2. **De-duplicated** the chapter 18/19 appendices.
@@ -156,11 +169,16 @@ Recorded so they can be fixed deliberately:
 - **Every chapter has two files prefixed `01-`** — `01-explanation.md` alongside
   `01-<first-topic>.md`. Cosmetic only: `sidebar_position` values do not collide, so the
   sidebar renders correctly.
-- **Depth is well below the devbible norm.** 135 files averaging **~70 lines per page**, one
-  file over 300 (`04-data-fetching/01-explanation.md` at 431, inherited unchanged). devbible topics run 250–300 lines per chunk with
-  exhaustive gotchas and interview questions. Reaching that bar is roughly a 5–8× expansion.
-- **No `> Verified:` lines** on the 135 imported pages, and the `[D]`/`[O]`/`[R]` badges
-  have not been re-tiered against devbible's four-tier system.
+- **Depth is well below the devbible norm on the pages nobody has rewritten yet.** The
+  imported pages average **~70 lines**; devbible topics run 250–300 lines per chunk with
+  exhaustive gotchas and interview questions, so reaching the bar is roughly a 5–8×
+  expansion per page. ✅ The last file over the cap — `04-data-fetching/01-explanation.md`
+  at 431 lines — was **split** 2026-09-03, and the track now has **0 files over 300**.
+- 🚧 **No `> Verified:` line and no devbible tier badge on 126 of the 247 pages.** The
+  `[D]`/`[O]`/`[R]` badges the import carried have not been re-tiered against devbible's
+  four-tier system. **Nine chapters are wholly un-backfilled** — 1, 3, 6, 9, 14, 17, 18, 19
+  and the two chapter READMEs — and this backfill is the next piece of work on the track.
+  Chapter 4 is the only fully authored chapter and is the model to copy.
 
 **Changes made to the copied material, in full.** At import (2026-09-03): chapter 1 shipped
 two differing files both at `sidebar_position: 4`, and the shorter moved to `4.5`; 18 broken
