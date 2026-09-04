@@ -1,7 +1,7 @@
 ---
 title: "Appendix B · You do not choose your React version in the App Router — Next.js pins a canary and ships it, and every upgrade decision follows from that one fact"
 sidebar_label: "04 · Appendix B — the React upgrade blueprint"
-sidebar_position: 20
+sidebar_position: 4
 ---
 
 <span className="db-tier t-understand">Understand</span>

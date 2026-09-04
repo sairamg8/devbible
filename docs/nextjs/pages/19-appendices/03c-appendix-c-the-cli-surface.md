@@ -1,7 +1,7 @@
 ---
 title: "Appendix C · part 3 — the CLI surface after 16: eight commands, the two that are new, and the flags that exist purely to make a failing build legible"
 sidebar_label: "09 · Appendix C — the CLI surface"
-sidebar_position: 32
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>

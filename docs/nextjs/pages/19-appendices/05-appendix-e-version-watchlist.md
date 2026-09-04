@@ -1,7 +1,7 @@
 ---
 title: "Appendix E · the watchlist resolved: 16.3 shipped, so this is now a record of what stabilized, what stayed experimental, and the one entry this book had wrong"
 sidebar_label: "13 · Appendix E — the version watchlist"
-sidebar_position: 50
+sidebar_position: 13
 ---
 
 <span className="db-tier t-know">Know</span>

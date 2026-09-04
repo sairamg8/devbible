@@ -1,7 +1,7 @@
 ---
 title: "Appendix D · part 2 — security is the half of the checklist that has not aged, and every item on it assumes a mental model most teams do not have"
 sidebar_label: "11 · Appendix D — security"
-sidebar_position: 41
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>

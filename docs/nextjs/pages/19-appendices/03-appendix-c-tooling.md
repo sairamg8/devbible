@@ -1,7 +1,7 @@
 ---
 title: "Appendix C · part 1 — making an agent read your version instead of its training data: AGENTS.md, the docs bundled inside node_modules, and the same docs over the network"
 sidebar_label: "07 · Appendix C — agent docs and AGENTS.md"
-sidebar_position: 30
+sidebar_position: 7
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "Appendix D · part 3 — metadata, accessibility and the measurements you take before shipping, including the two the framework stopped giving you"
 sidebar_label: "12 · Appendix D — metadata, a11y, measurement"
-sidebar_position: 42
+sidebar_position: 12
 ---
 
 <span className="db-tier t-understand">Understand</span>

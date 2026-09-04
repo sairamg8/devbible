@@ -1,7 +1,7 @@
 ---
 title: "Appendix D · part 1 — the official production checklist is six months behind the release it is stamped with, and here is the corrected rendering and caching half"
 sidebar_label: "10 · Appendix D — what the official checklist gets wrong"
-sidebar_position: 40
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>

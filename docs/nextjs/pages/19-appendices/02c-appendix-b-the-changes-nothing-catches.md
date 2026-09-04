@@ -1,7 +1,7 @@
 ---
 title: "Appendix B · part 3 — the 15 → 16 changes nothing catches: six image defaults that moved, a rename that changes your runtime, and the metrics that quietly stopped existing"
 sidebar_label: "06 · Appendix B — the changes nothing catches"
-sidebar_position: 22
+sidebar_position: 6
 ---
 
 <span className="db-tier t-master">Master</span>

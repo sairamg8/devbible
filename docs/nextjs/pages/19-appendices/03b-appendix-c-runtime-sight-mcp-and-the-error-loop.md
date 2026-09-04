@@ -1,7 +1,7 @@
 ---
 title: "Appendix C · part 2 — giving an agent eyes: the MCP server's nine tools, the browser view it cannot otherwise reach, and the error menu that turns a failure into a prompt"
 sidebar_label: "08 · Appendix C — MCP and the error loop"
-sidebar_position: 31
+sidebar_position: 8
 ---
 
 <span className="db-tier t-understand">Understand</span>

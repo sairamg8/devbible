@@ -494,7 +494,7 @@ export const LANGUAGES = {
       {n: 16, slug: '16-deployment-scaling-and-observability', name: "Deployment, scaling and observability", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 17, slug: '17-advanced-ecosystem-topics', name: "Advanced ecosystem topics", part: 'Refreshed for 16.3', topics: 18, pages: 18},
       {n: 18, slug: '18-capstone-decision-trees-and-outlook', name: "Capstone, decision trees and outlook", part: 'Imported corpus', topics: 5, pages: 0},
-      {n: 19, slug: '19-appendices', name: "Appendices", part: 'Imported corpus', topics: 6, pages: 0},
+      {n: 19, slug: '19-appendices', name: "Appendices", part: 'Refreshed for 16.3', topics: 14, pages: 14},
     ],
   },
   'redux-toolkit': {

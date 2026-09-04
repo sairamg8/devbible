@@ -1,7 +1,7 @@
 ---
 title: "Appendix B · part 2 — the 15 → 16 migration, the half the build catches: three codemods, the removed synchronous APIs, and every removal in one table"
 sidebar_label: "05 · Appendix B — the migration the build catches"
-sidebar_position: 21
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>
