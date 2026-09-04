@@ -1,7 +1,7 @@
 ---
 title: "proxy.ts runs on Node.js and cannot be configured otherwise, so the Edge-runtime constraint everyone still repeats about middleware is gone — what replaced it is a deployment constraint that makes module-level state work perfectly in development and silently do nothing in production"
 sidebar_label: "07 · `proxy.ts`: the deployment boundary"
-sidebar_position: 7
+sidebar_position: 38
 description: "Why setting the runtime export throws even for 'nodejs', the documented escape hatch for anyone who still needs edge, the shared-module and globals trap that works in dev and silently does nothing in production, the two channels that do cross the boundary, and where proxy sits in the eight-step request pipeline."
 ---
 

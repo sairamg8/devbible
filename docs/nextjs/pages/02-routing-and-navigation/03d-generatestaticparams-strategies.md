@@ -1,7 +1,7 @@
 ---
 title: "generateStaticParams tells the build which values a dynamic segment can take, and returning all of them, some of them, or an empty array are three different deployment strategies rather than three ways of writing the same function"
 sidebar_label: "03d · generateStaticParams"
-sidebar_position: 122
+sidebar_position: 15
 description: "Where the function may live, the return shape per segment type, the all/subset/none strategies, why omitting it differs from returning [], and when it runs during dev, build and ISR."
 ---
 

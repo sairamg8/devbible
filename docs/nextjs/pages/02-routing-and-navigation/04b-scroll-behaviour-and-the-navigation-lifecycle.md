@@ -1,7 +1,7 @@
 ---
 title: "The scroll default is maintain-position, not scroll-to-top, and the search that finds the scroll target deliberately walks past sticky and fixed elements — which is why your content ends up underneath your own header"
 sidebar_label: "04b · Scroll on navigation"
-sidebar_position: 140
+sidebar_position: 20
 description: "The documented scroll algorithm on client-side navigation, the conditional that decides whether anything moves at all, why sticky and fixed elements are bypassed, and what scroll-padding-top actually fixes."
 ---
 

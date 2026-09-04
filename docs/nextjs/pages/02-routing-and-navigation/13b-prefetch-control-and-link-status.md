@@ -1,5 +1,5 @@
 ---
-sidebar_position: 14
+sidebar_position: 50
 title: "A prefetch is negotiated between a Link that expresses intent and a destination segment that sets a cost ceiling, and useLinkStatus is the consolation prize for the navigations neither of them could make instant"
 sidebar_label: "13b · Prefetch control and link status"
 description: "The Next.js 16.3 route segment config surface, the three prefetch values and how they interact with the Link prefetch prop, and useLinkStatus — including why the indicator you see in development will never appear in production."

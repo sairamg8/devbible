@@ -1,7 +1,7 @@
 ---
 title: "The middleware-to-proxy rename is a deprecation of the pattern and not just the filename — the documentation says in three separate places that you should avoid relying on this feature, and the codemod that renames your file will not touch the next.config key that renamed with it"
 sidebar_label: "07b · Adopting proxy: rename, limits, platforms"
-sidebar_position: 163
+sidebar_position: 39
 description: "Why middleware became proxy and what the docs are steering you away from, the codemod and the config key it does not rename, the one-file rule, the three documented use cases and the three anti-use-cases, the fetch options that silently do nothing, and the platform support table where static export is a flat No."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A navigation blocker built on onNavigate covers every in-app Link click and nothing else — Back, a typed URL, a tab close and your own router.push calls all walk straight past it, and each needs a different mechanism"
 sidebar_label: "04d · Blocking navigation"
-sidebar_position: 142
+sidebar_position: 22
 description: "The documented Context-based navigation blocker, the prop-spread ordering bug that silently disables it, the full table of departures it cannot see, and the beforeunload and call-site guards that cover the rest."
 ---
 

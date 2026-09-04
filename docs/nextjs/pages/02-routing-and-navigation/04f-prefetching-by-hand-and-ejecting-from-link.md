@@ -1,7 +1,7 @@
 ---
 title: "router.prefetch warms a route no visible Link covers, onInvalidate fires at most once so a warm route needs re-arming, and every step further from Link buys you the maintenance of prefetching, cache invalidation and accessibility"
 sidebar_label: "04f · Prefetching by hand"
-sidebar_position: 144
+sidebar_position: 24
 description: "router.prefetch and its once-per-request onInvalidate callback, the hover-triggered prefetch pattern, extending versus ejecting from Link, and the concrete debt the docs say you take on when you do."
 ---
 

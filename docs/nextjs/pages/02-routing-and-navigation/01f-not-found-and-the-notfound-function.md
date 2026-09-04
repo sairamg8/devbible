@@ -1,7 +1,7 @@
 ---
 title: "notFound() reaches not-found.tsx by throwing an exception, so anything that catches exceptions between the call and the boundary silently deletes your 404 — and once the response has started streaming the status code is already 200"
 sidebar_label: "01f · not-found.tsx"
-sidebar_position: 104
+sidebar_position: 6
 description: "How notFound() propagates to not-found.tsx, why try/catch swallows it, the 200-vs-404 status question, and the root not-found file's double duty."
 ---
 

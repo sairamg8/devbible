@@ -1,7 +1,7 @@
 ---
 title: "Instant Navigations was a 16.3 preview that has since shipped stable, Stream / Cache / Block are the three fix cards in the dev overlay rather than settings you write, and Partial Prefetching is a different thing from Partial Prerendering despite the near-identical name"
 sidebar_label: "06 · Instant Navigations: status and vocabulary"
-sidebar_position: 6
+sidebar_position: 34
 description: "What shipped in 16.3 and what is still under experimental, why the Stream/Cache/Block trio is a remediation taxonomy and not a config enum, the Partial Prefetching versus Partial Prerendering distinction, and where the deep dives live."
 ---
 

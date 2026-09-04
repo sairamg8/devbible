@@ -1,7 +1,7 @@
 ---
 title: "A layout persists and a template remounts, and the only honest reason to reach for template.tsx is that you actively want the state destroyed — a resynchronised effect, a cleared input, or a Suspense fallback that shows on every navigation instead of only the first"
 sidebar_label: "01c · Layout vs template"
-sidebar_position: 101
+sidebar_position: 3
 description: "Why template.tsx remounts and layout.tsx does not, which segment's key change triggers the remount, and the three cases the docs give for actually needing one."
 ---
 

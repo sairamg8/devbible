@@ -1,7 +1,7 @@
 ---
 title: "View transitions work in the App Router with no configuration, but the API doing the work is React's ViewTransition — which react.dev marks as Canary and Experimental only, so what ships without a flag is not a stable React API"
 sidebar_label: "05b · View Transitions"
-sidebar_position: 150
+sidebar_position: 31
 description: "What React's ViewTransition component is, its exact stability status, what activates it and what does not, the four animation triggers, the View Transition Class props, transitionTypes from Link and useRouter, and the documented browser-support limits."
 ---
 

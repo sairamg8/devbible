@@ -1,7 +1,7 @@
 ---
 title: "A segment can generate params for itself and its ancestors but never its descendants, which is the whole reason there are two shapes for a nested route — one flat query on the page, or one enumeration per parent value"
 sidebar_label: "03f · Nested dynamic segments"
-sidebar_position: 124
+sidebar_position: 17
 description: "Generating params for multiple dynamic segments top-down and bottom-up, why the child function runs once per parent value, reading a root param inside a nested generateStaticParams, and prerendering Route Handler responses."
 ---
 

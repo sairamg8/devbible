@@ -1,7 +1,7 @@
 ---
 title: "Inside the proxy function the signature is two arguments and the response API has exactly one distinction worth memorising: NextResponse.next({ request: { headers } }) sends a header upstream into your app, and NextResponse.next({ headers }) sends the same header to the browser instead"
 sidebar_label: "07e · Inside the proxy function"
-sidebar_position: 166
+sidebar_position: 42
 description: "The request and event parameters and the NextProxy shorthand, waitUntil for background work, NextResponse rewrite/redirect/next/json and returning a response directly, the cookies API and its asymmetry, the request-versus-response header distinction, and RSC Flight-header stripping with custom fetch rewrites."
 ---
 

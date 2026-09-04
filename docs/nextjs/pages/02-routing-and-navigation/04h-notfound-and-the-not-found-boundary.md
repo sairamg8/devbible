@@ -1,7 +1,7 @@
 ---
 title: "notFound() is an interrupt, not a return value — it throws NEXT_HTTP_ERROR_FALLBACK;404 and travels up the call stack, so a try/catch around it or an un-awaited promise loses the 404 entirely and the page renders on"
 sidebar_label: "04h · notFound"
-sidebar_position: 146
+sidebar_position: 26
 description: "How notFound throws and where it is legal to call it, the two symmetrical ways to lose the interrupt silently, putting the check in the data-access function, never-type narrowing, and notFound in a Route Handler."
 ---
 

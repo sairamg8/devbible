@@ -1,7 +1,7 @@
 ---
 title: "error.tsx must carry 'use client' and cannot catch the layout beside it, because in the composition order the boundary is nested inside that layout — which is also why global-error.tsx has to render its own document"
 sidebar_label: "01e · error.tsx"
-sidebar_position: 103
+sidebar_position: 5
 description: "error.tsx and the mandatory 'use client', exactly which errors it catches and misses, global-error.tsx, the retry vs reset props, and what error.message and error.digest contain in production."
 ---
 

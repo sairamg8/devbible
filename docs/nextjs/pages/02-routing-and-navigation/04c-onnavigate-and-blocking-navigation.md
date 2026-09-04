@@ -1,7 +1,7 @@
 ---
 title: "onNavigate is not a rename of onClick — it is a hook into the router's own work, so it skips modifier-key clicks, external URLs and downloads, and that single fact decides where analytics and leave-guards belong"
 sidebar_label: "04c · onNavigate vs onClick"
-sidebar_position: 141
+sidebar_position: 21
 description: "The three documented cases where onNavigate and onClick diverge, why the divergence follows from onNavigate being scoped to router-owned navigations, and which of the two each common handler belongs on."
 ---
 

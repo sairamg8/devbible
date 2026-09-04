@@ -1,7 +1,7 @@
 ---
 title: "A parallel-route slot is a folder that becomes a prop on the parent layout rather than a segment in the URL, which is why two slots can navigate independently — and why a conditional layout still renders both of them on the server"
 sidebar_label: "02b · Parallel routes"
-sidebar_position: 106
+sidebar_position: 9
 description: "@folder slots, the implicit children slot, independent loading and error states, useSelectedLayoutSegment with a parallelRouteKey, conditional routes and the authorization trap they hide."
 ---
 

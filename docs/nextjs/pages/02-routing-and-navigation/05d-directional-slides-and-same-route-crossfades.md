@@ -1,7 +1,7 @@
 ---
 title: "A directional slide says the user went somewhere and a crossfade says they did not, so the two are not interchangeable — and both fail in the same quiet way, because the wrapper belongs in every page.tsx and never in a layout"
 sidebar_label: "05d · Slides and crossfades"
-sidebar_position: 152
+sidebar_position: 33
 description: "Tagging navigations with transitionTypes and mapping them to directional animations, why the wrapper cannot live in a layout, anchoring a sticky header, restoring pointer events during a transition, prefers-reduced-motion, and the same-route crossfade that needs a key."
 ---
 

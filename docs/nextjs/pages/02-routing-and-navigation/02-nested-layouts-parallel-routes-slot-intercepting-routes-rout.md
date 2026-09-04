@@ -1,7 +1,7 @@
 ---
 title: "Nesting layouts is automatic and free; the interesting move is decoupling the layout tree from the URL tree, which is what a parenthesised route group buys you — at the price of two failure modes the docs name explicitly"
 sidebar_label: "02 · Nested layouts and route groups"
-sidebar_position: 2
+sidebar_position: 8
 description: "How nested layouts compose and what they persist, route groups that organise without touching the URL, the three folder-name conventions that look alike, and the conflicting-path and full-page-load caveats."
 ---
 

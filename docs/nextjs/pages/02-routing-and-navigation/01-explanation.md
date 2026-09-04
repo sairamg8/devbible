@@ -1,264 +1,117 @@
 ---
-sidebar_position: 0
-title: "Overview"
+title: "02 · Routing and navigation"
 sidebar_label: "Overview"
-description: "Chapter 2 overview"
+sidebar_position: 0
 ---
 
-# ▲ Routing and Navigation
+<span className="db-tier t-master">Master</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-04 against the Next.js file-convention references (`layout`, `template`,
+> `loading`, `error`, `not-found`, `default`, `dynamic-routes`, `proxy`, `instant`, `prefetch`),
+> the [Link](https://nextjs.org/docs/app/api-reference/components/link) and
+> [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router) references, the
+> [prefetching](https://nextjs.org/docs/app/guides/prefetching),
+> [view transitions](https://nextjs.org/docs/app/guides/view-transitions) and
+> [internationalization](https://nextjs.org/docs/app/guides/internationalization) guides, the
+> [version 16 upgrade guide](https://nextjs.org/docs/app/guides/upgrading/version-16)
+> (`lastUpdated: 2026-08-25`) and `react.dev` for `<ViewTransition>`.
+> Documentation-verified; **no timings, no sandbox run**.
+> Target: **Next.js 16.3.4 · React 19.2 · Node 24**.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**Routing is the part of Next.js 16 that changed most and announces it least.** Synchronous
+`params` is gone rather than deprecated. Every parallel-route slot now needs a `default.js` or
+the build fails. `middleware.ts` is `proxy.ts`, it runs on **Node.js** rather than the edge, and
+the globals you relied on there work in development and silently do nothing in production.
+Prefetching was rebuilt around layout deduplication and incremental fetches. None of that
+produces a helpful error at the moment you get it wrong, which is why this chapter is long: the
+failure modes are quiet, and most of what is written about App Router routing predates them.
 
+## Chunks
 
+| # | Page |
+|---|---|
+| 1 | **[01 · Special files](01-file-system-routing-pagetsx.md)** |
+| 2 | **[01b · layout.tsx](01b-layout-and-the-root-layout.md)** |
+| 3 | **[01c · Layout vs template](01c-layout-vs-template.md)** |
+| 4 | **[01d · loading.tsx](01d-loading-tsx-and-the-suspense-boundary.md)** |
+| 5 | **[01e · error.tsx](01e-error-and-not-found-boundaries.md)** |
+| 6 | **[01f · not-found.tsx](01f-not-found-and-the-notfound-function.md)** |
+| 7 | **[01g · global-not-found.js](01g-global-not-found.md)** |
+| 8 | **[02 · Nested layouts and route groups](02-nested-layouts-parallel-routes-slot-intercepting-routes-rout.md)** |
+| 9 | **[02b · Parallel routes](02b-parallel-routes-and-named-slots.md)** |
+| 10 | **[02c · `default.js` required](02c-defaultjs-is-required-in-nextjs-16.md)** 🔴 builds fail without it |
+| 11 | **[02d · Intercepting routes](02d-intercepting-routes-and-the-modal-pattern.md)** |
+| 12 | **[03 · Dynamic routes](03-dynamic-routes-slug-catch-all-optional-catch-all.md)** |
+| 13 | **[03b · Reading params](03b-reading-params.md)** 🔴 `params` is a Promise in 16 |
+| 14 | **[03c · Typing params](03c-typing-params-with-the-generated-helpers.md)** |
+| 15 | **[03d · generateStaticParams](03d-generatestaticparams-strategies.md)** |
+| 16 | **[03e · gSP under Cache Components](03e-generatestaticparams-under-cache-components.md)** |
+| 17 | **[03f · Nested dynamic segments](03f-nested-dynamic-segments-and-route-handlers.md)** |
+| 18 | **[03g · dynamicParams and precedence](03g-dynamicparams-and-route-matching-precedence.md)** ⚠️ precedence is undocumented for `app/` |
+| 19 | **[04 · The Link component](04-navigation-mechanics-link-userouter-redirect-notfound.md)** |
+| 20 | **[04b · Scroll on navigation](04b-scroll-behaviour-and-the-navigation-lifecycle.md)** |
+| 21 | **[04c · onNavigate vs onClick](04c-onnavigate-and-blocking-navigation.md)** |
+| 22 | **[04d · Blocking navigation](04d-blocking-navigation-and-what-it-cannot-see.md)** |
+| 23 | **[04e · useRouter](04e-userouter-programmatic-navigation-and-refresh.md)** |
+| 24 | **[04f · Prefetching by hand](04f-prefetching-by-hand-and-ejecting-from-link.md)** |
+| 25 | **[04g · redirect and permanentRedirect](04g-redirect-and-permanentredirect.md)** 🔴 it throws — never inside `try` |
+| 26 | **[04h · notFound()](04h-notfound-and-the-not-found-boundary.md)** |
+| 27 | **[04i · not-found.js and the status](04i-the-not-found-boundary-and-the-404-status.md)** |
+| 28 | **[04j · usePathname and useSearchParams](04j-usepathname-and-usesearchparams.md)** 🔴 the Suspense requirement |
+| 29 | **[04k · Query state in practice](04k-query-state-in-practice.md)** |
+| 30 | **[05 · Prefetching fundamentals](05-prefetching-fundamentals-and-the-native-view-transitions-api.md)** ⚠️ production only |
+| 31 | **[05b · View Transitions](05b-the-native-view-transitions-api.md)** |
+| 32 | **[05c · Morph and Suspense reveal](05c-view-transition-patterns.md)** |
+| 33 | **[05d · Slides and crossfades](05d-directional-slides-and-same-route-crossfades.md)** |
+| 34 | **[06 · Instant Navigations: status and vocabulary](06-163-preview-instant-navigations-stream-cache-block-and-parti.md)** 🔴 the preview shipped stable |
+| 35 | **[06b · The Insight catalogue](06b-instant-insights-and-the-fix-cards.md)** |
+| 36 | **[06c · Stream and Cache in detail](06c-stream-cache-and-block-in-detail.md)** |
+| 37 | **[06d · Block, and opting out honestly](06d-block-and-opting-out-honestly.md)** |
+| 38 | **[07 · `proxy.ts`: the deployment boundary](07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md)** 🔴 Node.js, not edge |
+| 39 | **[07b · Adopting proxy: rename, limits, platforms](07b-adopting-proxy-the-rename-the-limits-and-where-it-runs.md)** |
+| 40 | **[07c · The matcher syntax](07c-the-matcher-and-what-it-silently-skips.md)** |
+| 41 | **[07d · What the matcher skips](07d-what-the-matcher-silently-skips.md)** 🔴 Server Functions are POSTs |
+| 42 | **[07e · Inside the proxy function](07e-inside-the-proxy-function.md)** |
+| 43 | **[07f · Flags, the body buffer, testing](07f-proxy-flags-the-body-buffer-and-testing.md)** |
+| 44 | **[08 · Localized routing](08-localized-routing-i18n-locale-prefixed-routes-locale-detecti.md)** ⚠️ the `i18n` config is Pages Router only |
+| 45 | **[08b · Dictionaries and the locale](08b-dictionaries-and-reading-the-locale.md)** |
+| 46 | **[08c · Negotiating and redirecting](08c-negotiating-a-locale-and-redirecting.md)** |
+| 47 | **[11 · Root params](11-root-params.md)** |
+| 48 | **[11b · Root params: restrictions and typing](11b-root-params-restrictions-and-typing.md)** |
+| 49 | **[13 · Prefetch inlining](13-prefetch-inlining.md)** |
+| 50 | **[13b · Prefetch control and link status](13b-prefetch-control-and-link-status.md)** |
 
-> **Source:** current-project backup remapped + improved for exact syllabus title
+## Phase gate
 
-## 1. Under-The-Hood Mechanics
+You are done with this chapter when you can **lay out a non-trivial route tree and defend each
+choice**: where a layout ends and a template begins, which segments are dynamic and what their
+`params` cost at prerender time, where a parallel route earns its `default.js`, and what belongs
+in `proxy.ts` versus a Server Component.
 
-The App Router maps a **folder hierarchy** in `app/` directly to URL segments, with a small set of reserved filenames each contributing a specific, composable role to that segment's rendered output — not one monolithic "page component" per route, but a **layered composition**.
+You should also be able to name **what changed in 16 that older writing still gets wrong** —
+synchronous `params` removed rather than deprecated, `default.js` now build-breaking, middleware
+renamed to proxy and moved to Node.js, and prefetching rebuilt around deduplication.
 
-```
-app/dashboard/
-  layout.tsx     ──► persists across navigations WITHIN dashboard/*, wraps children
-  template.tsx    ──► same wrapping role as layout, but REMOUNTS on every navigation
-  loading.tsx      ──► auto Suspense fallback, shown while page.tsx's async work is pending
-  error.tsx          ──► auto Error Boundary, catches errors thrown by page.tsx/children
-  not-found.tsx        ──► rendered on notFound() call, or an unmatched nested segment
-  page.tsx               ──► the actual routable UI for /dashboard
-  route.ts                 ──► API endpoint for /dashboard — MUTUALLY EXCLUSIVE with page.tsx in the same segment
-```
+## 🔴 What this chapter could not confirm, and says so
 
-### Composition Order
-For a request to `/dashboard`, Next.js composes (conceptually): `layout.tsx( loading.tsx-wrapped-Suspense( error.tsx-wrapped-ErrorBoundary( page.tsx ) ) )`. This nesting is why `loading.tsx` and `error.tsx` are **automatic** — you don't manually wrap `<Suspense>`/error boundaries around each page; the file's mere presence in the segment wires it in.
+- **App Router route-matching precedence.** Not documented for `app/` anywhere — proven by
+  grepping the full `llms-full.txt` export, not assumed. Only the Pages Router API-routes doc
+  states it. Written as *"the strong expectation and not a documented guarantee."*
+- **What happens when a parallel-route slot has no `default.js`.** Three live pages disagree —
+  the upgrade guide says builds fail, the Parallel Routes reference still says a 404 renders.
+  All three quoted side by side; the upgrade guide named as the one to act on.
+- **Which patch shipped `export const instant` / `export const prefetch`.** The published
+  version history prints a literal `v16.x.x` placeholder. No version asserted.
+- **How long a browser caches a 308.** Neither Next.js nor MDN states it.
+- **Why the Edge runtime was deprecated.** No rationale published anywhere.
 
-### `layout.tsx` vs `template.tsx`: State Persistence vs Remounting
-Both wrap child segments identically in terms of position in the tree, but `layout.tsx` **persists** its own React state and DOM across sibling navigations within it (e.g. a sidebar's scroll position survives clicking between dashboard sub-pages), while `template.tsx` **remounts entirely** on every navigation — appropriate specifically when you want fresh state or a re-triggered enter animation on every single navigation, even between visually similar pages.
+## Where this connects
 
-### `error.tsx` Must Be a Client Component
-Error boundaries fundamentally require a class component's `componentDidCatch` lifecycle (or React's error boundary primitives), which only exist in the client runtime — `error.tsx` always requires `'use client'` at the top, and receives `error` plus two recovery functions as props: `retry()`, which re-fetches *and* re-renders the segment, and `reset()`, which re-renders it without re-fetching. `retry()` is the one to reach for — see [09 · `error.js` props](../07-error-handling-loading-states-and-resilience/09-errorjs-props-retry-and-reset.md).
-
-### `route.ts` Cannot Coexist With `page.tsx` in the Same Segment
-A segment is either a **page** (returns JSX/HTML) or a **Route Handler** (returns an HTTP `Response`, functioning as an API endpoint) — never both, since both would compete to define what a request to that exact path returns.
-
----
-
-## 2. Real-World Engineering Scenario
-
-**Scenario**: A Multi-Tab Dashboard Where Sidebar State Must Survive Tab Switches, But a Wizard Flow Must Reset Fully Between Steps.
-The main dashboard shell (persistent sidebar navigation, a "currently expanded" state in a tree view) uses `layout.tsx` — switching between `/dashboard/reports` and `/dashboard/settings` keeps the sidebar's expanded/collapsed state and scroll position intact, since the layout never remounts. A separate onboarding wizard at `/onboarding/[step]` uses `template.tsx` instead — each step should visually reset (fade-in animation replaying, any local form step-state cleared) even though steps share the same wrapping chrome, which `template.tsx`'s remount-per-navigation behavior provides for free.
-
----
-
-## 3. Production-Grade Code Example
-
-```tsx
-// app/dashboard/layout.tsx — persists sidebar state across dashboard navigations
-'use client';
-import { useState } from 'react';
-
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const [sidebarExpanded, setSidebarExpanded] = useState(true); // survives navigating between dashboard pages
-  return (
-    <div className="flex">
-      <Sidebar expanded={sidebarExpanded} onToggle={() => setSidebarExpanded((v) => !v)} />
-      <main className="flex-1">{children}</main>
-    </div>
-  );
-}
-```
-
-```tsx
-// app/dashboard/loading.tsx — automatic Suspense fallback while page.tsx's async data resolves
-export default function DashboardLoading() {
-  return <div className="animate-pulse p-6">Loading dashboard…</div>;
-}
-```
-
-```tsx
-// app/dashboard/error.tsx — automatic error boundary; MUST be a Client Component
-'use client';
-
-export default function DashboardError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
-  return (
-    <div className="p-6 text-rose-400">
-      <p>Something went wrong loading the dashboard.</p>
-      <button onClick={() => retry()} className="mt-2 px-3 py-1 bg-slate-800 rounded text-xs">
-        Try again
-      </button>
-    </div>
-  );
-}
-```
-
-```tsx
-// app/dashboard/page.tsx — the actual routed UI; async Server Component
-async function getDashboardData() {
-  const res = await fetch('https://api.acme.com/dashboard');
-  if (!res.ok) throw new Error('Failed to load dashboard'); // caught by error.tsx above
-  return res.json();
-}
-
-export default async function DashboardPage() {
-  const data = await getDashboardData();
-  return <DashboardView data={data} />;
-}
-```
-
-```typescript
-// app/dashboard/route.ts — would CONFLICT if placed alongside page.tsx above in the same segment
-// (shown here as if in a DIFFERENT segment, e.g. app/api/dashboard/route.ts)
-export async function GET() {
-  return Response.json({ status: 'ok' });
-}
-```
+- [03 · Server vs Client Components](../03-server-components-vs-client-components/01-explanation.md) — the boundary every navigation hook runs into
+- [05 · Caching, PPR and Cache Components](../05-caching-ppr-and-cache-components/01-explanation.md) — `cacheComponents`, which `instant` and `partialPrefetching` both require
+- [11 · Performance and Turbopack](../11-performance-optimization-turbopack/01-explanation.md) — where the `runtime = 'edge'` withdrawal is covered in full
+- [12 · SEO, metadata and accessibility](../12-seo-metadata-and-accessibility/01-explanation.md) — localized metadata and canonicals for the routes defined here
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: Placing `route.ts` and `page.tsx` in the Same Segment
-```
-❌ WRONG — Next.js throws a build error: "You cannot have two parallel pages that resolve to the same path"
-app/products/page.tsx
-app/products/route.ts
-
-✅ CORRECT — separate the API endpoint into its own path
-app/products/page.tsx
-app/api/products/route.ts
-```
-
-### ⚠️ Pitfall 2: Forgetting `error.tsx` Only Catches Errors in Its Own Segment and Below
-An error thrown inside `layout.tsx` itself is **not** caught by that same segment's `error.tsx` — a layout's error must be caught by the **nearest parent** segment's `error.tsx` (or `global-error.tsx` at the root). Placing critical data-fetching logic inside a layout rather than its child page can leave errors uncaught by the boundary an engineer assumed was protecting it.
-
-### ⚠️ Pitfall 3: Expecting `template.tsx` to Behave Like `layout.tsx` for Expensive Children
-Because `template.tsx` remounts on every navigation, any expensive child work (a heavy chart re-initializing, a WebSocket reconnecting) inside a template re-executes on every single route change within it — using `template.tsx` where `layout.tsx`'s persistence was actually needed causes visible flicker and wasted re-initialization work that a plain `layout.tsx` would have avoided entirely.
-
----
-
-## 1. Under-The-Hood Mechanics
-
-Beyond static folder-per-segment routing, the App Router supports several bracket-syntax conventions that each solve a genuinely different composition problem.
-
-```
-app/
-  blog/[slug]/page.tsx           ──► /blog/hello-world  → params.slug = 'hello-world'
-  shop/[...slug]/page.tsx          ──► /shop/a/b/c        → params.slug = ['a','b','c']
-  docs/[[...slug]]/page.tsx          ──► /docs AND /docs/a/b → params.slug = undefined | ['a','b']
-  (marketing)/about/page.tsx           ──► /about (group folder invisible in the URL)
-  dashboard/@analytics/page.tsx          ──► rendered in the `analytics` PARALLEL SLOT of dashboard/layout.tsx
-  feed/(.)photo/[id]/page.tsx              ──► INTERCEPTS /photo/[id] when navigated to FROM within feed/
-```
-
-### Dynamic Segments: `[id]` vs `[...slug]` vs `[[...slug]]`
-- `[id]` matches **exactly one** path segment.
-- `[...slug]` (catch-all) matches **one or more** segments, exposed as an array — but does **not** match the base route itself (`/shop` alone would 404 against `shop/[...slug]/page.tsx`).
-- `[[...slug]]` (optional catch-all) additionally matches the base route, with `params.slug` being `undefined` in that case — the only variant of the three that makes the segment itself optional.
-
-### Route Groups `(name)`: Organization Without URL Impact
-Parentheses-wrapped folder names are stripped from the resulting URL entirely — `app/(marketing)/about/page.tsx` still serves `/about`. This exists purely to let large route trees be organized by team/feature/rendering-strategy in the filesystem (e.g. grouping all marketing pages under one shared layout) without that organization leaking into the public URL structure.
-
-### Parallel Routes `@slot`: Multiple Independent Pages, One Layout
-A layout can accept **named slots** (`@analytics`, `@team`) as props, each independently rendered — critically, each slot has its **own** loading/error boundaries and its own independent navigation state, meaning one slot can be mid-navigation (showing a loading state) while a sibling slot stays fully interactive. This is the mechanism behind dashboards showing multiple independently-loading widgets in one layout.
-
-### Intercepting Routes `(.)`/`(..)`: Modal-Over-Feed Pattern
-`(.)folder` intercepts a route **only when navigated to via client-side navigation from within the current layout level** — a direct hard navigation (page refresh, or a bookmarked URL) to that same path instead renders the **actual, non-intercepted** page. This is precisely the mechanism behind "click a photo in a feed, it opens as a modal over the feed; refresh the page at that same URL, get the full standalone photo page instead" — a single pattern that's genuinely hard to replicate outside a framework with first-class support for it.
-
----
-
-## 2. Real-World Engineering Scenario
-
-**Scenario**: A Social Feed Where Clicking a Photo Opens a Modal, But Sharing the Direct Link Shows a Full Page.
-Clicking a photo thumbnail in `/feed` should open a modal overlay (preserving the feed scroll position underneath) — but a user pasting that same photo's URL into a new tab should see a full standalone photo page with related content, not a broken modal with no feed behind it. An intercepting route (`app/feed/(.)photo/[id]/page.tsx`, rendered into a parallel `@modal` slot) handles the client-navigation case as a modal; the same `/photo/[id]` URL hit via direct navigation instead resolves to the plain `app/photo/[id]/page.tsx` — one URL, two entirely different rendering outcomes depending on navigation origin, exactly matching the product requirement.
-
----
-
-## 3. Production-Grade Code Example
-
-```tsx
-// app/feed/layout.tsx — declaring the parallel @modal slot alongside the default feed content
-export default function FeedLayout({
-  children,
-  modal,
-}: {
-  children: React.ReactNode;
-  modal: React.ReactNode; // the @modal slot's content — null when no intercepted route is active
-}) {
-  return (
-    <>
-      {children}
-      {modal}
-    </>
-  );
-}
-```
-
-```tsx
-// app/feed/@modal/(.)photo/[id]/page.tsx — intercepts /photo/[id] ONLY when navigated to from within /feed
-'use client';
-import { useRouter } from 'next/navigation';
-
-export default function PhotoModal({ params }: { params: { id: string } }) {
-  const router = useRouter();
-  return (
-    <div className="fixed inset-0 bg-black/80 flex items-center justify-center" onClick={() => router.back()}>
-      <PhotoDetail id={params.id} />
-    </div>
-  );
-}
-```
-
-```tsx
-// app/photo/[id]/page.tsx — the FULL standalone page, served on direct navigation/hard refresh
-export default function PhotoPage({ params }: { params: { id: string } }) {
-  return (
-    <div className="max-w-3xl mx-auto py-8">
-      <PhotoDetail id={params.id} />
-      <RelatedPhotos currentId={params.id} />
-    </div>
-  );
-}
-```
-
-```tsx
-// app/feed/@modal/default.tsx — REQUIRED: fallback for the slot on a hard navigation elsewhere in /feed
-export default function Default() {
-  return null; // no modal content on initial/hard navigation into /feed itself
-}
-```
-
----
-
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: Forgetting `default.tsx` for a Parallel Route Slot
-```
-❌ WRONG: without app/feed/@modal/default.tsx, a HARD navigation/refresh while a modal-intercepted
-route's URL is active throws a 404 for the @modal slot specifically, since Next.js has no fallback
-UI to render into that slot when the intercepting route itself isn't the one that matched
-
-✅ CORRECT: every parallel slot needs a default.tsx (even just `return null`) as its non-matched fallback
-```
-
-### ⚠️ Pitfall 2: Assuming `[...slug]` Matches the Base Route
-```tsx
-// ❌ WRONG assumption: app/shop/[...slug]/page.tsx does NOT match a bare /shop request — that 404s
-// unless a separate app/shop/page.tsx also exists
-
-// ✅ CORRECT: use the OPTIONAL catch-all if the base route should ALSO be handled by the same page
-// app/shop/[[...slug]]/page.tsx — params.slug is undefined for /shop, an array for /shop/a/b
-```
-
-### ⚠️ Pitfall 3: Route Groups Silently Creating Duplicate/Conflicting Routes
-```
-❌ WRONG: app/(marketing)/about/page.tsx AND app/(shop)/about/page.tsx both resolve to the exact
-same URL /about — Next.js throws a build-time conflict error, but the error message references
-the route groups' STRIPPED path, which can be confusing to trace back to which two files collided
-
-✅ CORRECT: route groups organize the FILESYSTEM, not the URL space — always check the final,
-group-stripped URL for uniqueness across the whole app/ tree, not just within one group folder
-```
+Start → [01 · Special files](01-file-system-routing-pagetsx.md)

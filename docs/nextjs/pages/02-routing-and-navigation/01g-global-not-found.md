@@ -1,7 +1,7 @@
 ---
 title: "global-not-found.js exists for the two shapes where a route-level 404 cannot be composed at all — multiple root layouts, and a root layout under a dynamic segment — and it pays for that by skipping your rendering entirely"
 sidebar_label: "01g · global-not-found.js"
-sidebar_position: 105
+sidebar_position: 7
 description: "The experimental globalNotFound flag, why the file must return a whole HTML document, what it gains over not-found.js and what it gives up."
 ---
 

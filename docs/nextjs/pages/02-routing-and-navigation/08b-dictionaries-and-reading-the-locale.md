@@ -1,7 +1,7 @@
 ---
 title: "Dictionaries stay on the server for free because layouts and pages are Server Components, and next/root-params is what stops the locale being drilled through every layer of the tree that needs it"
 sidebar_label: "08b · Dictionaries and the locale"
-sidebar_position: 126
+sidebar_position: 45
 description: "Per-locale dynamic imports, why hasLocale is a type predicate rather than a cast, why translation files do not reach the client bundle, and how root params let getDictionary take no arguments at all."
 ---
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 47
 title: "next/root-params turns the dynamic segments above your root layout into importable async getters, which ends prop-drilling for locale and makes those params usable inside a use cache scope"
 sidebar_label: "11 · Root params"
 description: "How next/root-params generates a getter per root segment, why only segments above the root layout qualify, how root params interact with generateStaticParams, and why calling a getter inside a cached function keeps the cache key narrow."

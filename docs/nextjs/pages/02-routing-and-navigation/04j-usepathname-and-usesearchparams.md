@@ -1,7 +1,7 @@
 ---
 title: "Both URL hooks are Client-only by design, and both can force a Suspense boundary — useSearchParams fails the production build without one on a prerendered route, and usePathname suspends under Cache Components whenever the params are not known at build time"
 sidebar_label: "04j · usePathname and useSearchParams"
-sidebar_position: 148
+sidebar_position: 28
 description: "Why reading the URL from a Server Component is intentionally unsupported, what each hook returns including the empty-value and repeated-key edge cases, and exactly when each one requires a Suspense boundary — plus why development never shows you."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Stream and Cache are the two fixes that actually make a navigation instant, and both fail in ways that read as \"the fix did not apply\": a cacheLife shorter than the prerender window still fails validation, and connection() has no Cache fix at all by design"
 sidebar_label: "06c · Stream and Cache in detail"
-sidebar_position: 161
+sidebar_position: 36
 description: "The two constructive remediations for a blocking-route Insight in full — the Suspense patterns, the params rule, where to place the boundary, use cache and the short-lived-cache trap, the invalidation obligation it creates, and every gotcha the docs attach to each."
 ---
 

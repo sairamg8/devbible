@@ -1,7 +1,7 @@
 ---
 title: "Link is the default because it renders a real anchor and is the only thing the prefetch scheduler can see, so every router.push in your codebase is a claim that no anchor could have done the job"
 sidebar_label: "04 · The Link component"
-sidebar_position: 4
+sidebar_position: 19
 description: "Why the Link component rather than router.push, the full prop surface and its version history, the object form of href, replace versus push, external links, and prefetching links that a proxy rewrites."
 ---
 

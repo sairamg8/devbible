@@ -1,7 +1,7 @@
 ---
 title: "useRouter is the escape hatch for navigations with no element to click, and its refresh() is narrower than its name — it clears the client cache and preserves your React state, and leaves the server cache untouched"
 sidebar_label: "04e · useRouter"
-sidebar_position: 143
+sidebar_position: 23
 description: "The whole App Router useRouter surface, what refresh() does and does not invalidate, bfcacheId and state across navigations, the next/router migration including the router.events replacement, and the javascript: URL warning."
 ---
 

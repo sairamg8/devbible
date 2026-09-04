@@ -1,7 +1,7 @@
 ---
 title: "Intercepting routes exist so one URL can render two different UIs depending on how you arrived at it — a modal on a soft navigation, the full page on a hard one — and the (..) counting is done in route segments, not folders"
 sidebar_label: "02d · Intercepting routes"
-sidebar_position: 108
+sidebar_position: 11
 description: "The (.), (..), (..)(..) and (...) matchers, why they count segments rather than directories, the full modal pattern with a @modal slot, and what a hard refresh does differently."
 ---
 

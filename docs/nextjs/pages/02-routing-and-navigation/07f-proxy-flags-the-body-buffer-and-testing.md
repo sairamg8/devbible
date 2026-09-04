@@ -1,7 +1,7 @@
 ---
 title: "Adding a proxy.ts changes the memory profile of every uploading route in your application, because the mere existence of the file makes Next.js clone and buffer request bodies in memory with a 10MB ceiling — and going over that ceiling truncates the body and logs a warning rather than rejecting the request"
 sidebar_label: "07f · Flags, the body buffer, testing"
-sidebar_position: 167
+sidebar_position: 43
 description: "skipTrailingSlashRedirect and skipProxyUrlNormalize with the worked examples the docs give, the request-body buffering that turns on the moment a proxy file exists, proxyClientMaxBodySize and its truncation semantics, and unit-testing the proxy function with isRewrite and getRewrittenUrl."
 ---
 

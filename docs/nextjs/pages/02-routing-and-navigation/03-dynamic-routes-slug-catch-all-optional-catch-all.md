@@ -1,7 +1,7 @@
 ---
 title: "A dynamic segment captures one URL segment, a catch-all captures one or more but never zero, and an optional catch-all is the only form that also matches the bare parent path — and in Next.js 16 every one of them arrives as a Promise you must await"
 sidebar_label: "03 · Dynamic routes"
-sidebar_position: 3
+sidebar_position: 12
 description: "The exact matching rules for [slug], [...slug] and [[...slug]], the params shape each one produces, and why synchronous params access was removed in Next.js 16 rather than merely deprecated."
 ---
 

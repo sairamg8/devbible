@@ -1,7 +1,7 @@
 ---
 title: "The App Router has no built-in i18n routing — the next.config i18n block is a Pages Router feature, and localizing an app directory means owning the locale segment, the negotiation and the redirect yourself"
 sidebar_label: "08 · Localized routing"
-sidebar_position: 8
+sidebar_position: 44
 description: "Why the next.config i18n block is a Pages Router feature with no App Router counterpart, the six behaviours you inherit when you give it up, the app/[lang] segment every route has to sit under, and setting html lang yourself."
 ---
 

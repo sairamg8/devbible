@@ -1,7 +1,7 @@
 ---
 title: "instant = false is a validation switch rather than a performance fix — it changes what is reported and not what is rendered, its precedence rule inverts between the two checks that read it, and it does not clear synchronous-IO build errors no matter where you put it"
 sidebar_label: "06d · Block, and opting out honestly"
-sidebar_position: 162
+sidebar_position: 37
 description: "The third fix card in full: when Block is the right answer, the layout-versus-page choice, the inverted precedence rule for static-shell validation, the use cache: private alternative you should try first, the two things instant = false explicitly does not do, and the whole-app codemod."
 ---
 

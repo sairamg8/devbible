@@ -1,7 +1,7 @@
 ---
 title: "The HTTP status a not-found page returns depends on whether the response had already started streaming — 404 if not, 200 if it had — and under Cache Components every dynamic route streams a shell first, so an in-page check can no longer produce a real 404"
 sidebar_label: "04i · not-found.js and the status"
-sidebar_position: 147
+sidebar_position: 27
 description: "Where not-found.js sits in the component hierarchy, how the nearest boundary is chosen, the 200-versus-404 streaming trade-off and the noindex tag that covers it, moving the check into proxy, and experimental global-not-found.js."
 ---
 

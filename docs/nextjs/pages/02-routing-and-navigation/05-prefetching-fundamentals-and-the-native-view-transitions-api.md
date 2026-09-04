@@ -1,7 +1,7 @@
 ---
 title: "Prefetching is only enabled in production, which is why half the reports that it is broken come from developers watching next dev — and how much of a route gets fetched depends on whether it is static, dynamic, or dynamic with a loading.js boundary"
 sidebar_label: "05 · Prefetching fundamentals"
-sidebar_position: 5
+sidebar_position: 30
 description: "What prefetching actually fetches, the viewport and intent triggers and the four-rule scheduler, static versus dynamic routes and their client-cache TTLs, the Next.js 16 layout-deduplication trade, and why development behaves differently."
 ---
 

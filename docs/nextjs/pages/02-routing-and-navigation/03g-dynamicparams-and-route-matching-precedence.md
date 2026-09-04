@@ -1,7 +1,7 @@
 ---
 title: "dynamicParams decides what happens to the values generateStaticParams did not return, it disappears entirely under Cache Components, and its 404 is not a 404 when a catch-all is in play"
 sidebar_label: "03g · dynamicParams and precedence"
-sidebar_position: 125
+sidebar_position: 18
 description: "The two values of dynamicParams and what each does, why it is unavailable with Cache Components, the catch-all caveat in the 404 behaviour, and what the documentation does and does not say about a static segment competing with a dynamic one."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Locale detection is a matching problem you now solve yourself in proxy.ts — and every piece of advice that says to do it in middleware.ts on the edge is wrong twice, because the convention was renamed and the runtime is Node"
 sidebar_label: "08c · Negotiating and redirecting"
-sidebar_position: 127
+sidebar_position: 46
 description: "Reading Accept-Language with Negotiator and @formatjs/intl-localematcher, the NEXT_LOCALE cookie you now have to read yourself, the proxy redirect and its matcher, and generateStaticParams for a fixed set of locales."
 ---
 

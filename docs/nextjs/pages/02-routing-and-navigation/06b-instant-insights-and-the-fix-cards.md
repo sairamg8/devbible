@@ -1,7 +1,7 @@
 ---
 title: "An Instant Insight is a development-only error that never fails the build and only fires on routes you actually open, it comes from a catalogue of sixteen distinct messages, and each message offers only the subset of Stream / Cache / Block that can fix the thing it detected"
 sidebar_label: "06b · The Insight catalogue"
-sidebar_position: 160
+sidebar_position: 35
 description: "When validation runs and on what, the full list of Insight message slugs, the card matrix showing which fixes each Insight offers and why the missing ones are missing, getting the same diagnosis out of next build, and turning the volume down at two scopes."
 ---
 

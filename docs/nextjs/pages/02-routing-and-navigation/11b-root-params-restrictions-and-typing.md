@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 48
 title: "Root param getters are Server-Component-only by design, and the four places they refuse to run each need a different workaround"
 sidebar_label: "11b · Root params: restrictions and typing"
 description: "Why root params throw in Client Components, Server Actions and unstable_cache, why Route Handler support is the one restriction that is temporary, and how the return types change under multiple root layouts and catch-all segments."

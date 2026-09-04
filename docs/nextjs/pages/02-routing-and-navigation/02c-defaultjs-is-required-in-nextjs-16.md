@@ -1,7 +1,7 @@
 ---
 title: "Next.js 16 turned a missing default.js from a runtime 404 into a build failure, so every parallel-route slot in an app upgraded from 15 — including the implicit children slot — now needs a file that in most cases contains four lines"
 sidebar_label: "02c · default.js required"
-sidebar_position: 107
+sidebar_position: 10
 description: "Why default.js exists, what soft and hard navigation do to slot state, the Next.js 16 build-failure change, the two documented bodies for the file, and the doc pages that still disagree about it."
 ---
 

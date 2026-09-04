@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 49
 title: "Prefetch inlining bundles small segment responses into one request and is already on in your app, so the only decisions left are whether to tune its two byte thresholds or turn it off to debug"
 sidebar_label: "13 · Prefetch inlining"
 description: "Why Next.js 16 traded transfer size for request count, what experimental.prefetchInlining bundles and what it deliberately leaves separate, the maxSize and maxBundleSize defaults, and why the behaviour is permanent while the config is experimental."

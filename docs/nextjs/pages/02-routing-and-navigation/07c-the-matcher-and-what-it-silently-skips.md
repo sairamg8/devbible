@@ -1,7 +1,7 @@
 ---
 title: "Without a matcher proxy runs on every request including your CSS, and the matcher that fixes that is compiled at build time — which is why a value built from a variable is not rejected but silently ignored, leaving you back at matching everything"
 sidebar_label: "07c · The matcher syntax"
-sidebar_position: 164
+sidebar_position: 40
 description: "The default when there is no matcher and why it breaks your CSS, the four matcher shapes including the has/missing object form, the five path-to-regexp rules verbatim, why matcher values must be static literals, and negative lookaheads."
 ---
 

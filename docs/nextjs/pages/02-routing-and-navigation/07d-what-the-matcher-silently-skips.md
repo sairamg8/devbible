@@ -1,7 +1,7 @@
 ---
 title: "A Server Function is not a route in the matching chain but a POST to whichever route imported it, so excluding a path also excludes every Server Function called from it — and _next/data runs your proxy even when you exclude it, because Next.js decided that particular hole was too dangerous to let you dig"
 sidebar_label: "07d · What the matcher skips"
-sidebar_position: 165
+sidebar_position: 41
 description: "The Server-Function POST trap that silently removes auth coverage and survives refactors, the deliberate _next/data override of your own configuration, why prefetch requests run proxy too and what that costs, and asserting matcher coverage in a unit test with unstable_doesProxyMatch."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "PageProps, LayoutProps and RouteContext are generated from your route tree rather than exported by the next package, which is why they catch a renamed folder at compile time and why a clean CI checkout cannot resolve them at all"
 sidebar_label: "03c · Typing params"
-sidebar_position: 121
+sidebar_position: 14
 description: "The three literal-keyed typegen helpers, what next typegen actually produces, how to type a nested generateStaticParams against its parent, and how to narrow a string param to a known set without casting."
 ---
 

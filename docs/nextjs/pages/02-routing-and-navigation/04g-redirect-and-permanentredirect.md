@@ -1,7 +1,7 @@
 ---
 title: "redirect() works by throwing, so a try/catch around it swallows the redirect and the page renders on anyway — and the status code it produces is 307, 303 or none at all depending on where you called it and whether JavaScript is available"
 sidebar_label: "04g · redirect"
-sidebar_position: 145
+sidebar_position: 25
 description: "Why redirect throws NEXT_REDIRECT and must be called outside try/catch, where it is legal to call, redirect versus permanentRedirect and their 307/308/303 status codes, the push-versus-replace default that flips inside Server Actions, and the five redirect mechanisms compared."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A layout is cached on the client and never re-renders on navigation, which is simultaneously its whole performance value and the reason it has no searchParams prop and cannot hand data to its children"
 sidebar_label: "01b · layout.tsx"
-sidebar_position: 100
+sidebar_position: 2
 description: "layout.tsx: the children and params props, why there is no searchParams, the root layout's html/body obligation, multiple root layouts and the full page load they cost."
 ---
 

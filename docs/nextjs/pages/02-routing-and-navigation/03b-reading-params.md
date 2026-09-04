@@ -1,7 +1,7 @@
 ---
 title: "Every file convention that renders in response to a URL receives params as a promise, exactly two generate-functions still receive it synchronously, and a Client Component has to unwrap it with use() because it cannot await"
 sidebar_label: "03b · Reading params"
-sidebar_position: 120
+sidebar_position: 13
 description: "Which conventions receive params, why generateStaticParams and generateImageMetadata still get it synchronously, and how use() and useParams read a dynamic segment on the client — including when useParams suspends."
 ---
 

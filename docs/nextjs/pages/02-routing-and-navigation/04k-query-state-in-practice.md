@@ -1,7 +1,7 @@
 ---
 title: "The searchParams prop is the right tool in a Page and does not exist in a Layout, and updating the URL splits into two mechanisms — a navigation the server sees, and a History API push the server never hears about"
 sidebar_label: "04k · Query state in practice"
-sidebar_position: 149
+sidebar_position: 29
 description: "When to use the searchParams prop instead of the hook, why Layouts deliberately do not receive one, router.push versus window.history.pushState, the read-only URLSearchParams and its edge cases, and the rewrite hydration mismatch."
 ---
 

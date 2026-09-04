@@ -1,7 +1,7 @@
 ---
 title: "Under Cache Components your sample params stop being a prerender list and become a build-time test suite, which is why an empty array is an error and why a green build still guarantees nothing about the branches your samples never entered"
 sidebar_label: "03e · gSP under Cache Components"
-sidebar_position: 123
+sidebar_position: 16
 description: "Why generateStaticParams must return at least one param under Cache Components, what build-time validation does and does not cover, the placeholder escape hatch, and what changes on a dynamic route that has no generateStaticParams at all."
 ---
 

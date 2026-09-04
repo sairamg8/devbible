@@ -477,7 +477,7 @@ export const LANGUAGES = {
     pagesPath: '/docs/nextjs/pages',
     phases: [
       {n: 1, slug: '01-introduction-to-next-js', name: "Introduction to Next.js", part: 'Refreshed for 16.3', topics: 9, pages: 9},
-      {n: 2, slug: '02-routing-and-navigation', name: "Routing and navigation", part: 'Refreshed for 16.3', topics: 20, pages: 11, pagesPlanned: 20},
+      {n: 2, slug: '02-routing-and-navigation', name: "Routing and navigation", part: 'Refreshed for 16.3', topics: 51, pages: 51},
       {n: 3, slug: '03-server-components-vs-client-components', name: "Server Components vs Client Components", part: 'Refreshed for 16.3', topics: 10, pages: 10},
       {n: 4, slug: '04-data-fetching-in-the-app-router', name: "Data fetching in the App Router", part: 'Refreshed for 16.3', topics: 39, pages: 39},
       {n: 5, slug: '05-caching-ppr-and-cache-components', name: "Caching, PPR and Cache Components", part: 'Refreshed for 16.3', topics: 21, pages: 21},

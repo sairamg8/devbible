@@ -1,7 +1,7 @@
 ---
 title: "loading.tsx is nothing but a Suspense boundary Next.js writes for you, which is why it covers the page and every segment below it and is structurally incapable of covering the layout in its own folder"
 sidebar_label: "01d · loading.tsx"
-sidebar_position: 102
+sidebar_position: 4
 description: "What loading.tsx actually wraps, why a slow layout defeats it, the 200 status code streaming forces, and when to write a manual Suspense boundary instead."
 ---
 

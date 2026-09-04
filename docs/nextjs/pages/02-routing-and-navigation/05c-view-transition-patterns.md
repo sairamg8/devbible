@@ -1,7 +1,7 @@
 ---
 title: "The shared-element morph and the Suspense reveal are the two patterns that animate inside a page, and the morph carries a hidden dependency — it only forms a pair when the destination renders in the same commit, which in practice means when it was prefetched"
 sidebar_label: "05c · Morph and Suspense reveal"
-sidebar_position: 151
+sidebar_position: 32
 description: "The shared-element morph and why it silently degrades when the destination is not prefetched, customising it with share and default, and the Suspense reveal with the asymmetric timing that makes it read as a handoff rather than a swap."
 ---
 
