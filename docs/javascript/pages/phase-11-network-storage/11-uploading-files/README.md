@@ -1,7 +1,7 @@
 ---
 title: "11 · Uploading files"
 sidebar_label: "Overview"
-sidebar_position: 11
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

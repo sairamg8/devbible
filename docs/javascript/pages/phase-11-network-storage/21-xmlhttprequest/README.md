@@ -1,7 +1,7 @@
 ---
 title: "21 · `XMLHttpRequest`"
 sidebar_label: "Overview"
-sidebar_position: 21
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

@@ -1,7 +1,7 @@
 ---
 title: "`esModuleInterop` and default imports"
-sidebar_label: "09 · esModuleInterop and default imports"
-sidebar_position: 9
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

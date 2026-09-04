@@ -1,7 +1,7 @@
 ---
 title: "02 — `import type` / `export type` and `verbatimModuleSyntax`"
-sidebar_label: "02 · `import type` and `verbatimModuleSyntax`"
-sidebar_position: 2
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-master">Master</span>

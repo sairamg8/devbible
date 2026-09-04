@@ -1,7 +1,7 @@
 ---
 title: "10 · `localStorage` and `sessionStorage`"
 sidebar_label: "Overview"
-sidebar_position: 10
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

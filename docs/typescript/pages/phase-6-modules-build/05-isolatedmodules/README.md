@@ -1,7 +1,7 @@
 ---
 title: "05 — `isolatedModules`"
-sidebar_label: "05 · `isolatedModules`"
-sidebar_position: 5
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

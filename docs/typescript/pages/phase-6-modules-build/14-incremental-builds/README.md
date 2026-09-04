@@ -1,7 +1,7 @@
 ---
 title: "Incremental builds"
-sidebar_label: "14 · Incremental builds"
-sidebar_position: 14
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

@@ -1,7 +1,7 @@
 ---
 title: "15 · Review uploads"
 sidebar_label: "Overview"
-sidebar_position: 15
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

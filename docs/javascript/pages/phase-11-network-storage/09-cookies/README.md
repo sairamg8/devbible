@@ -1,7 +1,7 @@
 ---
 title: "09 · Cookies"
 sidebar_label: "Overview"
-sidebar_position: 9
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

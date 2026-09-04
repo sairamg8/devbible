@@ -1,7 +1,7 @@
 ---
 title: "Authoring `.d.ts` files"
-sidebar_label: "07 · Authoring .d.ts files"
-sidebar_position: 7
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

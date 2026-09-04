@@ -1,7 +1,7 @@
 ---
 title: "13 · WebSocket"
 sidebar_label: "Overview"
-sidebar_position: 13
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>

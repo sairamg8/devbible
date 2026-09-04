@@ -1,7 +1,7 @@
 ---
 title: "Typing non-code imports"
-sidebar_label: "16 · Typing non-code imports"
-sidebar_position: 16
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

@@ -1,7 +1,7 @@
 ---
 title: "03 — Path aliases (`paths`)"
-sidebar_label: "03 · Path aliases — `paths`"
-sidebar_position: 3
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-master">Master</span>

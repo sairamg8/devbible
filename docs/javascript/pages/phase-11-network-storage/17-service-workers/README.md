@@ -1,7 +1,7 @@
 ---
 title: "17 · Service workers and the Cache API"
 sidebar_label: "Overview"
-sidebar_position: 17
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

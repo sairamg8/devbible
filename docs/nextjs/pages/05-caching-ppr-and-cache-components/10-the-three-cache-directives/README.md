@@ -1,6 +1,6 @@
 ---
 title: "The three cache directives"
-sidebar_label: "10 · The three cache directives"
+sidebar_label: "Overview"
 sidebar_position: 0
 description: "use cache, use cache: remote and use cache: private — eight chunks covering the choice, composition, keys, runtime behaviour, lifetimes and tag invalidation."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "18 · Server-sent events"
 sidebar_label: "Overview"
-sidebar_position: 18
+sidebar_position: 0
 ---
 
 <span className="db-tier t-know">Know</span>

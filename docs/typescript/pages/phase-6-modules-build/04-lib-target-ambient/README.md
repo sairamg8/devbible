@@ -1,7 +1,7 @@
 ---
 title: "04 — `lib`, `target` and the ambient environment"
-sidebar_label: "04 · `lib`, `target` and the ambient environment"
-sidebar_position: 4
+sidebar_label: "Overview"
+sidebar_position: 0
 ---
 
 <span className="db-tier t-understand">Understand</span>
