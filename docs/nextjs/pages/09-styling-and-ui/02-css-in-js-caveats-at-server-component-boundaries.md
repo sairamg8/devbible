@@ -55,7 +55,7 @@ This is not speculation; it is precisely the problem the documented setup exists
 > 3. A Client Component that wraps your app with the style registry during initial server-side rendering."*
 > — [How to use CSS-in-JS libraries](https://nextjs.org/docs/app/guides/css-in-js)
 
-Read step 3 again. **The registry is a Client Component.** The framework's own answer to "how do I use runtime CSS-in-JS on the server" begins by putting a client boundary at the top of the tree. There is no server-side version of this pattern, and that is the whole caveat this chapter is named after. What that boundary costs is **02b** *(not written yet)*.
+Read step 3 again. **The registry is a Client Component.** The framework's own answer to "how do I use runtime CSS-in-JS on the server" begins by putting a client boundary at the top of the tree. There is no server-side version of this pattern, and that is the whole caveat this chapter is named after. What that boundary costs is [02b](02b-style-registries-and-what-the-client-boundary-actually-costs.md).
 
 ### Wall 3 — nothing about the library survives serialization
 
@@ -135,7 +135,7 @@ export const Card = styled.div`
 `
 ```
 
-**★ Symptom: the page renders unstyled for a moment and then snaps into place.** Cause: no style registry, so nothing collected the server-rendered rules and flushed them into `<head>`; the styles arrive only when the library's client runtime boots. Fix: install the registry described in **02b** *(not written yet)*. ⚠️ Derived symptom — the documentation states the registry's purpose but not the failure appearance.
+**★ Symptom: the page renders unstyled for a moment and then snaps into place.** Cause: no style registry, so nothing collected the server-rendered rules and flushed them into `<head>`; the styles arrive only when the library's client runtime boots. Fix: install the registry described in [02b](02b-style-registries-and-what-the-client-boundary-actually-costs.md). ⚠️ Derived symptom — the documentation states the registry's purpose but not the failure appearance.
 
 **★ Symptom: "functions cannot be passed directly to Client Components" when styling by prop.** Cause: an interpolation function passed across the server/client boundary. Props crossing that boundary must be serializable, and a function is not. Fix: pass the *data* and keep the function on the client side of the boundary — the corrected example above.
 
@@ -174,4 +174,4 @@ That compatibility is a property of the library's maintenance, not of your confi
 
 ---
 
-← [01c · Tailwind v4 and coexistence](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md) · [Chapter index](01-explanation.md) · Next → **02b · Style registries and the client boundary** *(not written yet)*
+← [01c · Tailwind v4 and coexistence](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md) · [Chapter index](01-explanation.md) · Next → [02b · Style registries and the client boundary](02b-style-registries-and-what-the-client-boundary-actually-costs.md)
