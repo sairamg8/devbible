@@ -1,7 +1,7 @@
 ---
 title: "An Anticorruption Layer belongs inside the downstream service that depends on it, never in a centralised ESB or shared integration middleware — and it should be retired the moment upstream adopts a clean published language"
 sidebar_label: "29b · Where the ACL lives"
-sidebar_position: 45
+sidebar_position: 46
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "The Strangler Fig pattern enables incremental, zero-downtime service extraction from a legacy monolith through proxy-intercepted routing"
 sidebar_label: "41 · Strangler extraction"
-sidebar_position: 57
+sidebar_position: 58
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "The Service Boundary Review Checklist: a rigorous architecture rubric for evaluating proposed boundaries before writing code"
 sidebar_label: "45 · The checklist"
-sidebar_position: 63
+sidebar_position: 64
 ---
 
 <span className="db-tier t-master">Master</span>

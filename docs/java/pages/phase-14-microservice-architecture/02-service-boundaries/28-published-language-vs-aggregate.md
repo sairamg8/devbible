@@ -12,6 +12,26 @@ sidebar_position: 42
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **In Domain-Driven Design, a Bounded Context exists to protect the conceptual integrity of an internal domain model, not to expose it nakedly to external callers. The aggregate root is designed exclusively to enforce transactional business invariants inside the boundary; it was never intended to be serialized over a network or shared across package boundaries. The published language is an explicitly authored, backwards-compatible contract—modeled as immutable Java records or schema definitions—optimized for external consumers. When teams confuse the two by exposing aggregate roots or entities directly as API representations, every internal database migration or domain refactoring becomes a breaking change for external clients, turning autonomous services back into a tightly coupled distributed monolith.**
+## What "published language" actually names
+
+The term is Evans's, and the *DDD Reference* definition is one sentence:
+
+> *"Use a well-documented shared language that can express the necessary domain information as a
+> common medium of communication."*
+
+Two words in it are load-bearing and usually skipped. **Well-documented**: a published language that
+exists only as whatever your serialiser happens to emit is not published, it is leaked. And **common
+medium**: it belongs to the conversation between contexts, not to either side of it — which is why
+it is not your aggregate and not the consumer's view model either.
+
+Its partner pattern says who is allowed to speak it:
+
+> *"A protocol that gives access to your subsystem as a set of services. Open the protocol so that
+> all who need to integrate with you can use it."*
+
+That is [34 · Open host and published language](34-open-host-and-published-language.md)'s subject.
+The division of labour between them is worth holding onto: **Open Host Service is the decision to
+serve all comers through one protocol; Published Language is the vocabulary that protocol speaks.**
 
 ## Two models for two distinct purposes
 
@@ -135,6 +155,9 @@ Because `Order` is decoupled from `OrderSummary`:
 - You can normalize line items into separate database tables or migrate to a document store without altering a single byte of the published API.
 - Wire evolution strategies (tolerant reader, additive fields) apply strictly to the published records, leaving domain logic clean and uncluttered.
 
+What none of this settles is how you change a contract once other teams are reading it — that is
+[28c · Changing a published contract](28c-changing-a-published-contract.md).
+
 ## Gotchas
 
 **★ Symptom: Database schema migration breaks an external consumer's JSON parsing.**
@@ -148,6 +171,19 @@ Fix: Extract all required data into an immutable DTO record *inside* the transac
 **★ Symptom: External clients send JSON payloads that bypass domain constructor validations.**
 Cause: Jackson deserializes incoming JSON directly into an entity using reflection and setters, creating invalid domain objects.
 Fix: Require clients to send explicit command records (`PlaceOrderCommand`), and pass the validated record fields into the aggregate factory or constructor.
+
+**★ Symptom: the DTOs are generated from the entities by a mapper, and every schema change still breaks clients.**
+Cause: a one-to-one generated DTO is the entity with extra steps. The indirection exists in the code
+and not in the design, so the coupling is unchanged — the contract still has exactly the shape of the
+table.
+Fix: the published language is authored, not derived. If the mapper is a field-for-field copy, the
+question to ask is what the *consumer* needs, which is almost never every column and is often a
+different shape entirely.
+```java
+// generated: 14 fields, one per column, and the contract changes when the table does
+// authored: what a consumer actually asked for
+public record OrderSummary(UUID orderId, BigDecimal totalAmount, String status, Instant createdAt) {}
+```
 
 **★ Symptom: Jackson throws `StackOverflowError` during serialization.**
 Cause: Bidirectional JPA relationships (`Order` -> `List<OrderItem>` -> `Order`) create infinite recursion during Jackson reflection.
@@ -163,6 +199,14 @@ A bounded context establishes a linguistic and conceptual boundary inside which 
 
 **★ How does separating the published language from the aggregate support zero-downtime database migrations?**
 When the published language is a decoupled record, the internal database schema and domain aggregate can undergo multi-phase schema migrations (e.g. expand-and-contract, renaming tables, decomposing columns) while the projection method (`toSummary()`) continues to translate internal state into the existing public contract. External clients observe zero breaking changes during or after the database migration.
+
+**★ Why is a mapper that copies every entity field into a DTO not a published language?**
+Because the contract still has the shape of the table; the mapper adds a layer of code without adding
+a layer of decision. The published language is supposed to be *"a well-documented shared language …
+as a common medium of communication"* — authored for what the consumers need, and therefore free to
+stay stable while the table underneath it is renamed, split or normalised. A field-for-field DTO
+gives up exactly that freedom, and you can tell you have one when every database migration still
+produces a client-facing change.
 
 **★ Can a bounded context have multiple published languages?**
 Yes. A bounded context frequently publishes different languages for different communication mediums: an HTTP REST JSON schema for synchronous client queries, a Protobuf schema for high-performance internal RPC, and an Avro or JSON schema for asynchronous event publication over Kafka. All three contracts project from the same underlying domain aggregate.

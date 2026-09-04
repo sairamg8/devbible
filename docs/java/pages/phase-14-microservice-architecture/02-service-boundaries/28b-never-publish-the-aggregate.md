@@ -196,4 +196,4 @@ Creating intermediate DTO records adds short-lived heap allocations. However, in
 
 ---
 
-← [Published language vs aggregate](28-published-language-vs-aggregate.md) · [Topic index](README.md) · Next → [Anticorruption layer](29-anticorruption-layer.md)
+← [Published language vs aggregate](28-published-language-vs-aggregate.md) · [Topic index](README.md) · Next → [Changing a published contract](28c-changing-a-published-contract.md)
