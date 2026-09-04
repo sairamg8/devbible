@@ -121,8 +121,7 @@ Two practical consequences, and the second is the one that bites:
   what an undocumented format is entitled to do between releases. Anything that parses this
   output — a compliance script, a config-drift detector, a startup assertion — is parsing an
   undocumented format and will break silently. For a machine-readable answer on a running
-  process, use `jcmd`, which is documented; `04b-vm-flags-on-a-running-process.md`
-  *(not written yet)* covers it.
+  process, use `jcmd`, which is documented; [VM flags on a running process](04b-vm-flags-on-a-running-process.md) covers it.
 
 The related documented flag is worth knowing for a different job:
 

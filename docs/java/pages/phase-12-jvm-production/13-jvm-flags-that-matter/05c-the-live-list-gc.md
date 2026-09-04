@@ -1,7 +1,7 @@
 ---
 title: "Selecting a collector is a decision you earn with a measurement, not one you inherit — and on JDK 25 the whole -XX:+PrintGC* family is gone, replaced by one -Xlog flag that most inherited strings have never heard of"
-sidebar_label: "05b · The live list — GC"
-sidebar_position: 8
+sidebar_label: "05c · The live list — GC"
+sidebar_position: 9
 ---
 
 <span className="db-tier t-know">Know</span>

@@ -96,14 +96,14 @@ flag, in this order, and the order matters because a "no" at any step ends the e
 1. **Does it still exist on the JVM we actually run?** Not on the JVM the wiki describes.
    This is answerable mechanically and the answer is not a matter of opinion —
    `06-the-retired-list.md` *(not written yet)* holds the inventory, and
-   `04-printflagsfinal.md` *(not written yet)* is how you ask the running JVM directly
+   [`PrintFlagsFinal`](04-printflagsfinal.md) is how you ask the running JVM directly
    rather than trusting any document, this one included.
 2. **What problem was it added for, and does that problem still exist?** A flag added to
    work around a JDK 8 metaspace leak is not a tuning decision on JDK 25; it is a
    fossilised bug report. If nobody can name the incident, the flag has no owner and no
    evidence.
 3. **Is the JVM's own default now better than our number?** Ergonomics moved a long way.
-   `03-ergonomics.md` *(not written yet)* argues this properly: the honest default position
+   [ergonomics](03-ergonomics.md) argues this properly: the honest default position
    on JDK 25 is *fewer* flags, and each one you keep should be able to name its measurement.
 
 **A flag that fails any of the three comes out.** Not "gets reviewed next quarter" — comes
@@ -126,7 +126,7 @@ Four flags where there were nine, and every one of them can name its reason:
 - **`-XX:MaxRAMPercentage=75.0`** — a share of the *cgroup* limit rather than a fixed
   number, so one image is correct at every memory size the platform gives it. Topic 03
   owns the container arithmetic and the OOMKilled-versus-`OutOfMemoryError` distinction;
-  `05-the-live-list-memory.md` *(not written yet)* covers the flag itself.
+  [the heap-sizing live list](05-the-live-list-memory.md) covers the flag itself.
 - **`-XX:+HeapDumpOnOutOfMemoryError` + `-XX:HeapDumpPath`** — the two survivors from the
   original string. They cost nothing until the day they are the only evidence you have.
 - **`-Xlog:gc*`** — unified logging, which replaced the whole `-XX:+PrintGC*` family. Note
@@ -134,7 +134,7 @@ Four flags where there were nine, and every one of them can name its reason:
 
 No collector is selected. **That is deliberate, not an omission.** G1 is the default on
 JDK 25 on most configurations, and choosing a collector is a decision you make after
-measuring a pause-time problem, not one you inherit. `05b-the-live-list-gc.md`
+measuring a pause-time problem, not one you inherit. [the GC live list](05c-the-live-list-gc.md)
 *(not written yet)* covers when that changes.
 
 ## Gotchas
@@ -166,7 +166,7 @@ jcmd <pid> VM.flags        # what the JVM ended up with
 jcmd <pid> VM.command_line # what it was actually launched with
 ```
 
-`04b-vm-flags-on-a-running-process.md` *(not written yet)* covers the difference between
+[VM flags on a running process](04b-vm-flags-on-a-running-process.md) covers the difference between
 those two, which is exactly the difference between what you asked for and what you got.
 
 **★ Symptom: `JAVA_OPTS` is set in the deployment manifest and the JVM ignores it

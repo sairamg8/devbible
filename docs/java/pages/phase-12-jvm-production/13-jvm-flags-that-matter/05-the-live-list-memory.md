@@ -1,26 +1,25 @@
 ---
-title: "The memory flags worth keeping are percentages, not absolutes — and -XX:MaxDirectMemorySize is the one whose default the manual actively hides, because it is a second copy of your heap ceiling that rises every time you raise -Xmx"
-sidebar_label: "05 · The live list — memory"
+title: "Size the heap as a share of a limit the platform already knows, not as a number someone typed — -Xmx is fully supported, does exactly what it says, and is still the wrong instrument in a container"
+sidebar_label: "05 · The live list — heap sizing"
 sidebar_position: 7
 ---
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09 against the JDK 25 `java` tool reference —
-> [`-XX:MaxDirectMemorySize`](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html),
-> quoted verbatim — and the JDK 25 HotSpot GC Tuning Guide
-> ([Ergonomics](https://docs.oracle.com/en/java/javase/25/gctuning/ergonomics.html)) for the
-> default heap fractions. Target: **JDK 25 (LTS)**. Documentation-validated;
-> **no sandbox run**.
+> Verified: 2026-09 against the JDK 25 HotSpot GC Tuning Guide
+> ([Ergonomics](https://docs.oracle.com/en/java/javase/25/gctuning/ergonomics.html)), quoted
+> verbatim for the default heap fractions, and the JDK 25 `java` tool reference
+> ([java](https://docs.oracle.com/en/java/javase/25/docs/specs/man/java.html)).
+> Target: **JDK 25 (LTS)**. Documentation-validated; **no sandbox run**.
 
 **This is the first of four "live lists" — the flags that are still correct on JDK 25 and
-still worth having. The memory group is the one people get most wrong, and not because the
-flags are hard. It is because two things are true at once that sound contradictory: `-Xmx` is
-fully supported and does exactly what it says, *and* it is usually the wrong instrument in a
+still worth having. Heap sizing is the group people get most wrong, and not because the flags
+are hard. It is because two things are true at once that sound contradictory: `-Xmx` is fully
+supported and does exactly what it says, *and* it is usually the wrong instrument in a
 container. The percentage forms exist because a container's memory limit is a moving number
-and an absolute is a copy of it that drifts. Then there is `-XX:MaxDirectMemorySize`, whose
-documented description says the JVM "chooses the size automatically" and does not tell you
-what it chooses — which turns out to be your entire heap ceiling, again.**
+and an absolute is a copy of it that drifts. The ceilings that are **not** the heap —
+metaspace and direct memory — are their own subject and live in
+[the ceilings that are not the heap](05b-the-ceilings-that-are-not-the-heap.md).**
 
 ## The list
 
@@ -30,8 +29,6 @@ what it chooses — which turns out to be your entire heap ceiling, again.**
 | `-XX:InitialRAMPercentage` | ✅ when warm-up pauses matter | Removes the grow-the-heap phase |
 | `-XX:MinRAMPercentage` | ⚠️ rarely, and not what it sounds like | Applies only to *small* memory limits |
 | `-Xmx` / `-Xms` | ⚠️ only outside containers | Absolute numbers that do not travel |
-| `-XX:MaxMetaspaceSize` | ⚠️ as a leak *detector* | Unbounded by default |
-| `-XX:MaxDirectMemorySize` | 🔴 know its default | Silently equals `-Xmx` |
 
 ## The percentage flags, and why they are the default answer
 
@@ -80,7 +77,7 @@ container has a memory limit in the ordinary server range, `MinRAMPercentage` is
 that is affecting you, and setting it will not raise a floor because there is no floor to
 raise. If you want a minimum heap, that is `InitialRAMPercentage` or `-Xms`. Check the
 resolved value on your own JVM rather than trusting any table, this one included —
-`04-printflagsfinal.md` is how.
+[`PrintFlagsFinal`](04-printflagsfinal.md) is how.
 
 ## `-Xmx` and `-Xms` — supported, correct, and usually the wrong tool
 
@@ -98,66 +95,23 @@ it — an `OOMKilled` with no `OutOfMemoryError`, no heap dump and no stack trac
 JVM was never given the chance to notice. Topic 03 owns that distinction in full; it is the
 most misdiagnosed symptom in the phase.
 
-## `-XX:MaxMetaspaceSize` — unbounded by default, and that is the point
+### The gap between initial and maximum
 
-Metaspace holds class metadata and, unlike the heap, **has no default upper bound** — it
-grows until the process runs out of native memory or the container limit is hit.
+*"Initial heap size of 1/64 of physical memory"* and *"Maximum heap size of 1/4"* are both
+ergonomic defaults, and the distance between them is why a JVM grows its heap during warm-up.
+That growth is normal behaviour, not accumulation — but it is not free, because each resize is
+work the collector does while your application is trying to serve traffic.
 
-That makes the flag useful for a reason people find counter-intuitive: you set it not to
-*constrain* metaspace but to **convert a slow container death into a fast, diagnosable Java
-error**.
+Closing the gap deliberately is the standard latency trade. Leaving it open is the standard
+density trade. Both are defensible; what is not defensible is having the gap by accident and
+then reading the warm-up growth on a dashboard as a leak.
 
-```bash
--XX:MaxMetaspaceSize=256m
-```
+## Where the rest of the memory story lives
 
-With this set, a classloader leak — the usual cause, from repeated redeployment or dynamic
-proxy generation — produces `OutOfMemoryError: Metaspace`, which names the problem, is
-catchable, and can trigger a heap dump. Without it, the same leak walks the process past the
-cgroup limit and the kernel kills it, and you are left with a restarted pod and no evidence.
-
-⚠️ **Set it high enough that normal operation never approaches it.** This is a tripwire, not
-a tuning knob. If it fires during ordinary steady-state work, the number is too low and you
-have converted a non-problem into an outage.
-
-## 🔴 `-XX:MaxDirectMemorySize` — the flag whose default the manual hides
-
-The reference says:
-
-> *"Sets the maximum total size (in bytes) of the `java.nio` package, direct-buffer
-> allocations. Append the letter `k` or `K` to indicate kilobytes, `m` or `M` to indicate
-> megabytes, or `g` or `G` to indicate gigabytes. **If not set, the flag is ignored and the
-> JVM chooses the size for NIO direct-buffer allocations automatically.**"*
-
-Read that last sentence carefully. It tells you a choice is made and does not tell you what
-it is.
-
-**The choice is your maximum heap size.** When the flag is unset, HotSpot sets the direct
-memory ceiling from `Runtime.getRuntime().maxMemory()` — the same number `-Xmx` or
-`MaxRAMPercentage` produced. So:
-
-- A JVM with a 3 GiB heap ceiling also permits roughly **3 GiB of direct buffers**, entirely
-  outside the heap.
-- The worst case for the *process* is therefore around **twice** what a reading of `-Xmx`
-  suggests, before metaspace, code cache, thread stacks and the native allocator are counted.
-- 🔴 **Raising `-Xmx` raises the direct-memory ceiling too.** Increasing the heap to fix an
-  `OutOfMemoryError` silently increases the process's other worst case by the same amount —
-  which is one of the mechanisms behind "we gave it more memory and it got OOMKilled sooner".
-
-This matters more than it used to because direct buffers are no longer exotic. Netty, most
-NIO-based HTTP clients and servers, and several serialisation libraries allocate them as a
-matter of course, so any reactive or high-throughput service is using them whether or not
-anyone chose to.
-
-⚠️ **Mapped buffers are bounded by no JVM flag at all.** `MappedByteBuffer` allocations use a
-separate pool that `MaxDirectMemorySize` does not cover. If a service memory-maps files there
-is no JVM-side ceiling to set, and the accounting has to come from Native Memory Tracking —
-`05c-the-live-list-diagnostics.md` *(not written yet)* covers arming it.
-
-**When to set it explicitly:** when you want the direct-buffer ceiling to be a deliberate,
-smaller number than the heap ceiling, so that a direct-buffer leak fails as
-`OutOfMemoryError: Direct buffer memory` rather than as a container kill. Same logic as
-metaspace — a tripwire that converts a silent death into a named error.
+- **Metaspace and direct buffers** — the two bounds that decide whether the *process* survives
+  — are in [the ceilings that are not the heap](05b-the-ceilings-that-are-not-the-heap.md).
+- **The collector** that manages this heap, and the 1792 MB threshold that silently changes it,
+  are in [the GC live list](05c-the-live-list-gc.md) and [ergonomics](03-ergonomics.md).
 
 ## Gotchas
 
@@ -170,55 +124,27 @@ apply at all. Fix: the flag you want is `InitialRAMPercentage`.
 -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=75.0
 ```
 
-**★ Symptom: a pod is OOMKilled and the heap dump shows a healthy, half-empty heap.** Cause:
-the heap was never the problem — the process exceeded the cgroup limit through non-heap
-memory, and direct buffers are the usual suspect precisely because their default ceiling
-equals the heap ceiling and nobody set it. Fix: stop looking at the heap and account for the
-whole process.
-
-```bash
-# Must be armed at launch; it cannot be enabled retroactively.
--XX:NativeMemoryTracking=summary
-# then, on the running process:
-jcmd <pid> VM.native_memory summary
-```
-
-**★ Symptom: raising `-Xmx` from 2g to 3g to fix an `OutOfMemoryError` makes the container die
-sooner and more violently.** Cause: two effects compound. The heap itself now occupies more
-of the limit, and the unset `MaxDirectMemorySize` ceiling rose from 2 GiB to 3 GiB with it, so
-the process's worst case grew by 2 GiB rather than 1. Fix: raise the *share* of a known limit
-rather than an absolute, and bound direct memory explicitly if the service uses NIO buffers
-heavily.
-
 **★ Symptom: `-Xmx3g` is honoured in a 2 GiB container instead of being rejected.** Cause: the
 JVM has no obligation to sanity-check your ceiling against the cgroup limit — you asked for a
 3 GiB heap and it will try to give you one. The kernel enforces the limit, and its enforcement
 is `SIGKILL`. Fix: percentages. There is no in-JVM error to catch here; the failure happens
 outside the JVM.
 
-**★ Symptom: metaspace grows steadily across redeploys until the container is killed, with the
-heap flat throughout.** Cause: a classloader leak, and no `MaxMetaspaceSize`, so metaspace grew
-until the *process* hit the cgroup limit rather than until a Java error was raised. Fix: set the
-tripwire so the failure becomes diagnosable:
+**★ Symptom: a flag string tuned carefully on one instance size performs badly after a
+capacity change, with no code or config change in between.** Cause: absolute flag values do
+not scale with the machine, while every ergonomic default does. The tuning was correct for
+the machine it was measured on and became wrong the moment the machine changed. Fix: prefer
+the percentage-based forms wherever both exist, so a resize carries the tuning with it.
+
+**★ Symptom: heap usage climbs steadily during warm-up and settles, and it reads as a leak on
+a dashboard.** Cause: the gap between the initial heap (*"1/64 of physical memory"*) and the
+maximum (*"1/4"*). The JVM starts small and grows, so early growth is expected behaviour, not
+accumulation. Fix: if the resize work matters, remove the gap deliberately rather than
+treating the growth as a fault:
 
 ```bash
--XX:MaxMetaspaceSize=256m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/app
+-XX:InitialRAMPercentage=75.0 -XX:MaxRAMPercentage=75.0
 ```
-
-The pairing is the point — the bound turns it into an `OutOfMemoryError`, and the dump flag
-means that error leaves evidence.
-
-**★ Symptom: setting `-XX:MaxMetaspaceSize` causes an outage in normal operation.** Cause: it
-was set as a tuning value rather than as a tripwire, low enough that steady-state class loading
-reaches it. Fix: raise it well clear of observed steady state. Its job is to catch unbounded
-growth, not to hold metaspace to a budget.
-
-**★ Symptom: a service that memory-maps files exceeds its container limit and
-`MaxDirectMemorySize` has no effect on it.** Cause: mapped buffers use a separate pool that
-this flag does not bound, and no JVM flag bounds it. Fix: accept that the ceiling must come
-from outside the JVM — the container limit and the code's own mapping discipline — and use
-Native Memory Tracking to see the pool rather than trying to cap it with a flag that does not
-apply.
 
 **★ Symptom: `-XX:MaxRAMPercentage=75` (no decimal point) looks wrong in review and gets
 "corrected" back and forth.** Cause: the flag is `double`-valued and both forms parse, so both
@@ -228,6 +154,24 @@ rather than by preference, and write the decimal form to match what the JVM repo
 ```bash
 java -XX:MaxRAMPercentage=75 -XX:+PrintFlagsFinal -version | grep -i maxrampercentage
 ```
+
+**★ Symptom: both `-Xmx` and `-XX:MaxRAMPercentage` are set, and the team disagrees about
+which one is in force.** Cause: they express the same ceiling two ways, one absolute and one
+derived, so reading the string cannot settle it — and the answer depends on resolution order
+rather than on which looks more specific. Fix: stop reading the string and read the resolved
+value, then delete the loser. Carrying both is how the next person inherits the same argument.
+
+```bash
+java $JAVA_OPTS -XX:+PrintFlagsFinal -version | grep -i 'MaxHeapSize\|MaxRAMPercentage'
+```
+
+**★ Symptom: a percentage that was correct becomes wrong after the service adds a sidecar or
+an agent.** Cause: `MaxRAMPercentage` is a share of the *container's* limit, and anything else
+sharing that limit — a sidecar, a Java agent's own footprint, an init process — reduces what
+is genuinely available to the heap without changing the percentage. Fix: the percentage is a
+decision about headroom, so it has to be revisited when what occupies that headroom changes.
+This is one of the few cases where a working configuration degrades with no change to the
+flag itself.
 
 ## Interview questions
 
@@ -243,29 +187,6 @@ a bad flag being replaced by a good one. `-Xmx` is correct and remains the right
 there is no cgroup limit to read; it is an example of a fully valid flag being the wrong
 instrument for the environment.
 
-**★ What is the default value of `-XX:MaxDirectMemorySize`, and why does it matter?**
-It is your maximum heap size. The tool reference only says that *"if not set, the flag is
-ignored and the JVM chooses the size for NIO direct-buffer allocations automatically"* — it
-states that a choice is made without stating what it is — and the choice HotSpot makes is
-`Runtime.getRuntime().maxMemory()`, the same number `-Xmx` or `MaxRAMPercentage` produced. It
-matters for two reasons. First, the process's worst case is roughly twice what reading `-Xmx`
-suggests, before metaspace, code cache and thread stacks are counted, which is a large error to
-make when sizing a container. Second, and less obvious, raising `-Xmx` raises the direct-memory
-ceiling by the same amount — so the standard response to an `OutOfMemoryError` quietly enlarges
-a second, invisible worst case, which is one real mechanism behind "we gave it more memory and
-it got killed sooner."
-
-**★ Why would you set `-XX:MaxMetaspaceSize` when metaspace is unbounded by default and you do
-not want to constrain it?**
-To change the *failure mode*, not the behaviour. Unbounded metaspace means a classloader leak
-grows until the process hits the container limit, and the kernel kills it — you get a restarted
-pod, no Java-level error, no heap dump, and nothing that names the cause. A bound turns the same
-leak into `OutOfMemoryError: Metaspace`, which names the subsystem, is catchable, and can
-trigger a heap dump that identifies the retained classloaders. The flag is a tripwire rather
-than a budget, which drives how you pick the number: high enough that normal steady-state
-operation never approaches it, because if it fires during ordinary work you have manufactured
-an outage rather than caught a leak.
-
 **★ `MinRAMPercentage` — what does it actually do?**
 It sets the maximum heap as a percentage of available memory, and it applies only when
 available memory is small — below a threshold in the low hundreds of megabytes. It is not a
@@ -278,15 +199,36 @@ will never fire; the flag they wanted was `InitialRAMPercentage` or `-Xms`. Wort
 the exact threshold is not stated in the JDK 25 tool reference, so the honest move is to read
 the resolved value on your own JVM rather than trust a number from any secondary source.
 
-**★ A pod is OOMKilled but the heap dump looks healthy. Where do you look?**
-Outside the heap, and the reframing is the whole answer: `-Xmx` bounds the Java heap while the
-kernel enforces a limit on the *process*. Metaspace, the code cache, thread stacks, GC
-structures, direct and mapped byte buffers and the native allocator all sit between the two and
-none of them appear in a heap dump. Direct buffers are the first place to look on any
-NIO-based service, because their default ceiling equals the heap ceiling and almost nobody sets
-it explicitly, so a service with a 3 GiB heap silently permits another 3 GiB of direct
-allocation. The tool is Native Memory Tracking — `-XX:NativeMemoryTracking=summary` at launch,
-then `jcmd <pid> VM.native_memory summary` — and the catch is that it must be armed before the
-incident, since the accounting is not collected retroactively.
+**★ Why is the default maximum heap only a quarter of available memory?**
+Because `-Xmx` bounds the Java heap and the operating system kills you on the *process*.
+Metaspace, the code cache, thread stacks, GC structures, direct and mapped byte buffers and
+the native allocator all sit outside the heap, and in a container all of it has to fit under
+one cgroup limit. A conservative default leaves headroom so the JVM's own non-heap growth
+does not push the process over the edge, where the failure is an abrupt kernel kill rather
+than a catchable `OutOfMemoryError` with a heap dump. For a dedicated container running a
+single JVM the 25% default is more conservative than it needs to be, which is why raising it
+via `MaxRAMPercentage` is one of the few overrides that is nearly always justified.
+
+**★ Would you set `-Xms` equal to `-Xmx`, and what are you trading?**
+For a latency-sensitive long-running service, usually yes, and the trade is memory for
+predictability. The default gap between an initial heap of a sixty-fourth of memory and a
+maximum of a quarter means the JVM grows the heap during warm-up, and each resize is
+collector work happening while the application is already serving traffic — which shows up as
+early-life latency that disappears once the heap settles, and is easy to misread as a
+warm-up artefact of the application itself. Closing the gap removes that work at the cost of
+holding the full heap from the first second, which matters when you are packing pods onto
+nodes by observed resident set. The wrong version of this decision is having the gap by
+accident and then reading the resulting growth curve on a dashboard as a memory leak.
+
+**★ Someone points out that `-Xmx` has been stable for twenty years while `MaxRAMPercentage`
+is comparatively new. Is that an argument for `-Xmx`?**
+It is an observation about track record rather than an argument about correctness, and the
+tool reference does not support the implied distinction — it applies the same "subject to
+change" language to `-X` and `-XX` alike, so neither flag carries a stronger guarantee than
+the other. The real question is which one expresses the intent, and in a container the intent
+is a share of a limit that the platform owns and can change. Age is a reasonable proxy for
+stability when nothing else is available, but here something else is available: what the flag
+means when the environment changes underneath it. `-Xmx` means the same number; that is
+precisely the problem.
 
 {/* FOOTER */}

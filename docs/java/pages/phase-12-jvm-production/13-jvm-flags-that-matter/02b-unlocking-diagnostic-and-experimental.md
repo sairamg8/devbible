@@ -119,7 +119,7 @@ When you find an unlock flag, work in this order:
 4. **Has the option changed class since it was added?** A promotion to product makes the
    unlock unnecessary; the option keeps working and the gate becomes a false signal in every
    future audit. `-XX:+UseCompactObjectHeaders` is the current live example and
-   `05d-the-live-list-jdk-25.md` *(not written yet)* covers it.
+   `05e-the-live-list-jdk-25.md` *(not written yet)* covers it.
 
 ## Gotchas
 

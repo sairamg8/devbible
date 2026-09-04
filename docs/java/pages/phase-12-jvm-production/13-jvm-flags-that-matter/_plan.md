@@ -18,9 +18,9 @@ recorded once.
 | 4 | `04-printflagsfinal.md` | 🔴 The reader's own verification path; reading `:=` vs `=` |
 | 4b | `04b-vm-flags-on-a-running-process.md` | `jcmd VM.flags`, `VM.command_line`, `VM.system_properties` |
 | 5 | `05-the-live-list-memory.md` | `-Xmx`/`-Xms`, `MaxRAMPercentage`, `MaxMetaspaceSize`, `MaxDirectMemorySize` |
-| 5b | `05b-the-live-list-gc.md` | Collector selection, `MaxGCPauseMillis`, `-Xlog:gc*` |
-| 5c | `05c-the-live-list-diagnostics.md` | `HeapDumpOnOutOfMemoryError`, `HeapDumpPath`, `ExitOnOutOfMemoryError`, `NativeMemoryTracking`, `StartFlightRecording` |
-| 5d | `05d-the-live-list-jdk-25.md` | 🔴 `UseCompactObjectHeaders` (JEP 519), `AOTMode`/`AOTCache` (JEP 514/515) |
+| 5b | `05c-the-live-list-gc.md` | Collector selection, `MaxGCPauseMillis`, `-Xlog:gc*` |
+| 5c | `05d-the-live-list-diagnostics.md` | `HeapDumpOnOutOfMemoryError`, `HeapDumpPath`, `ExitOnOutOfMemoryError`, `NativeMemoryTracking`, `StartFlightRecording` |
+| 5d | `05e-the-live-list-jdk-25.md` | 🔴 `UseCompactObjectHeaders` (JEP 519), `AOTMode`/`AOTCache` (JEP 514/515) |
 | 6 | `06-the-retired-list.md` | 🔴 CMS, PermGen, `-XX:+ZGenerational`, `PrintGCDetails`, `-Xincgc` — and what replaced each |
 | 6b | `06b-the-flag-that-stops-your-jvm-booting.md` | Unrecognised `-XX:` is fatal; `IgnoreUnrecognizedVMOptions` and why it is a trap |
 | 7 | `07-where-flags-come-from.md` | `JAVA_TOOL_OPTIONS`, `JDK_JAVA_OPTIONS`, `_JAVA_OPTIONS`, the command line — and their precedence |

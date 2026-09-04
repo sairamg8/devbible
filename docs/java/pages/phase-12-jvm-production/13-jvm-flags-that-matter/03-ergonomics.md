@@ -61,7 +61,7 @@ that someone has scheduled into a modest container.
 fine in staging on a 4 GiB pod and slow in a cost-reduced environment at 1.5 GiB, and the
 team looks for a memory problem — more GC, more pressure, a smaller heap — because that is
 the obvious hypothesis. The heap is smaller, but the *collector changed*, and nothing in the
-application logs says so. `05b-the-live-list-gc.md` *(not written yet)* covers collector
+application logs says so. [the GC live list](05c-the-live-list-gc.md) covers collector
 selection as a deliberate decision; here the point is only that a default was silently made
 for you and it moved.
 
@@ -89,7 +89,7 @@ limit, where the kernel kills it outright rather than throwing `OutOfMemoryError
 normal shape today. Raising it is one of the few overrides that is nearly always justified —
 via `-XX:MaxRAMPercentage`, not `-Xmx`, so it survives a resize. Topic 03 owns the arithmetic
 and the OOMKilled-versus-`OutOfMemoryError` distinction;
-`05-the-live-list-memory.md` *(not written yet)* covers the flag.
+[the heap-sizing live list](05-the-live-list-memory.md) covers the flag.
 
 *"Initial heap size of 1/64 of physical memory"* is the other half. The gap between initial
 and maximum is why a JVM grows its heap during warm-up, and why `-Xms` set equal to `-Xmx`
@@ -115,7 +115,7 @@ But it has a standing cost that people do not price in:
   chain of these, not a set of independent decisions.
 
 🔴 **The default position on JDK 25 is fewer flags than you have.** Not zero — the diagnostics
-in `05c-the-live-list-diagnostics.md` *(not written yet)* cost nothing and pay for themselves
+in `05d-the-live-list-diagnostics.md` *(not written yet)* cost nothing and pay for themselves
 once — but every flag that overrides an ergonomic decision should be able to name the
 measurement that justified it. `08-the-discipline.md` *(not written yet)* is that rule as a
 practice.
@@ -124,7 +124,7 @@ practice.
 
 You never have to guess which decisions were ergonomic. The JVM reports the origin of every
 flag value, and `{ergonomic}` is one of the origins it distinguishes from `{default}` and
-`{command line}`. That is the subject of `04-printflagsfinal.md` *(not written yet)*, and it
+`{command line}`. That is the subject of [`PrintFlagsFinal`](04-printflagsfinal.md), and it
 is the tool that turns this page from background into something actionable: you can ask a
 running service which of its settings it chose for itself, and which one of your flags is
 overriding a choice it would have made better.
@@ -241,6 +241,6 @@ a command-line override, so you can ask a running service which decisions it mad
 and which of your flags is overriding one. That turns a flag audit from an argument about a
 string into an inspection of resolved state, and it is the only way to find the flag that is
 overriding an ergonomic choice with a worse value.
-`04-printflagsfinal.md` *(not written yet)* is the mechanism.
+[`PrintFlagsFinal`](04-printflagsfinal.md) is the mechanism.
 
 {/* FOOTER */}

@@ -166,7 +166,7 @@ than `summary`. Use `summary` unless you have a reason.
 
 This requires `-XX:NativeMemoryTracking` to have been enabled **at launch**, which is the
 catch: the flag that makes the diagnosis possible is one you must have set before the problem
-appeared. `05c-the-live-list-diagnostics.md` *(not written yet)* argues for enabling it
+appeared. `05d-the-live-list-diagnostics.md` *(not written yet)* argues for enabling it
 pre-emptively. The `baseline` / `summary.diff` pair is the technique for a slow native leak —
 baseline now, compare later — and topic 01 owns the framing that heap is not the process.
 
