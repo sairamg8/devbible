@@ -1,7 +1,7 @@
 ---
 title: "Living with an imperfect boundary is often the rational economic choice — mitigating coupling through read replicas, caching, and circuit breakers"
 sidebar_label: "43 · When not to fix it"
-sidebar_position: 62
+sidebar_position: 63
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -109,6 +109,54 @@ If Service B suffers from N+1 query chattiness (calling Service A once for each 
 ### 4. Quarantine with an Anti-Corruption Layer (ACL)
 To prevent the flawed boundary from contaminating new feature development, build a strict Anti-Corruption Layer inside Service B. All new code talks exclusively to the ACL interface. If the boundary is ever refactored in the future, only the ACL implementation needs to change.
 
+## Containment needs an expiry date, or it becomes the architecture
+
+Every pattern above is a compensation for a boundary you have decided not to move, and all of them
+share one failure: they work. A cache that hides chattiness, a circuit breaker that hides a fragile
+dependency, an ACL that hides an incoherent upstream — each removes the pain that would otherwise
+have forced the decision, and the decision is then never revisited.
+
+**So containment gets recorded like a deprecation, not like an improvement:**
+
+```markdown
+CONTAINMENT: read replica of catalogue product data in pricing
+  Compensating for : pricing makes 40+ synchronous catalogue calls per quote
+  Accepted because : catalogue rewrite is scheduled for FY27; not worth pre-empting
+  Revisit when     : the catalogue rewrite starts, OR a second consumer needs the same replica,
+                     OR staleness causes a customer-visible incident
+  Owner            : pricing team
+  Recorded         : 2026-09
+```
+
+🔴 **The "revisit when" line is the part that makes this honest.** A containment with no trigger is
+not a deliberate decision to tolerate a boundary; it is the boundary becoming permanent while
+everybody describes it as temporary. And the triggers that matter are rarely dates — they are events:
+a second consumer needing the same workaround, an incident caused by the compensation itself, or the
+constraint that justified the decision expiring.
+
+**The strongest signal that containment has become architecture** is a second team adopting the same
+workaround. One team caching another service's data is a local decision; three teams caching it means
+the data has the wrong owner and the boundary should move —
+[10 · Who owns the data](10-who-owns-the-data.md).
+
+## When containment is the wrong answer entirely
+
+Tolerating a bad boundary is a decision about cost, and it stops being available when the boundary is
+wrong in a specific way:
+
+| Situation | Contain? | Why |
+|---|---|---|
+| Chatty reads across the line | ✅ | A replica or a cache genuinely removes the cost |
+| Multiplied unavailability | ✅ | Fallbacks and circuit breakers are the right tool for a dependency you cannot remove |
+| An incoherent upstream model | ✅ | An ACL is the pattern for exactly this, indefinitely |
+| 🔴 **An invariant that must hold transactionally** | ❌ | Nothing compensates for this. A saga schedules the violation; a distributed lock relocates it |
+| 🔴 **Lockstep deployment** | ❌ | A release train makes it comfortable and permanent — the boundary does not exist and no tooling creates one |
+
+**The two ❌ rows are the two conclusive tells from
+[37 · The tells of a wrong boundary](37-the-tells-of-a-wrong-boundary.md)**, and that is not a
+coincidence: a conclusive tell means the line is in the wrong place, and containment compensates for
+costs, not for wrongness. Everything else on the list is a cost you can decide to keep paying.
+
 ## Gotchas
 
 **★ Using caching to paper over broken write invariants.**
@@ -116,6 +164,28 @@ Caching is effective only for read operations that tolerate eventual consistency
 
 **★ Allowing "temporary containment" to degrade into undocumented rot.**
 Teams often implement a local read replica or cache as a "stopgap" but fail to document the known trade-offs. Two years later, new engineers do not understand why data takes 5 seconds to propagate, leading to phantom bug reports. Always document containment trade-offs in an Architecture Decision Record (ADR).
+
+**★ A containment measure is four years old and is now described as 'how the system works'.**
+Cause: it was recorded as an improvement rather than as a deliberate, temporary compensation with a
+revisit trigger. Nothing ever fired, because nothing was ever set to fire.
+Fix: record containment the way you record a deprecation — what it compensates for, why the boundary
+was left alone, and the **event** that should reopen the decision. Event triggers beat dates: a second
+consumer adopting the same workaround, an incident caused by the compensation, or the expiry of the
+constraint that justified it.
+
+**★ Three teams have independently built the same cache of another service's data.**
+Cause: each team made a locally reasonable containment decision. Collectively they have established
+that the data is in the wrong place.
+Fix: stop containing and move the boundary. Repeated identical workarounds by unrelated teams is the
+strongest available evidence about ownership, and it is stronger than any single team's argument
+because none of them coordinated to produce it.
+
+**★ A saga is introduced to contain an invariant that spans the boundary, and inconsistencies persist.**
+Cause: containment was applied to a conclusive tell. A saga is correct for a genuinely long-running
+process that tolerates intermediate states; it cannot make an immediate invariant immediate.
+Fix: this is one of the two cases where tolerating is not on the menu. Either the invariant is not
+really transactional — establish that explicitly and the saga is fine — or the boundary is in the
+wrong place and has to move.
 
 **★ Inconsistent cache invalidation creating ghost records.**
 When caching remote service responses locally, relying solely on TTLs means updates in Service A will be invisible in Service B until the TTL expires. Where possible, pair caches with event-driven invalidation (e.g., Service B listens to Kafka events to evict cached keys immediately).
@@ -130,6 +200,25 @@ Instead of making synchronous REST/gRPC calls for every transaction, the consumi
 
 **★ What is the primary limitation of using Resilience4j circuit breakers to contain a bad boundary?**
 Circuit breakers only protect availability during read operations or non-critical asynchronous actions by returning fallbacks. They cannot fix broken transactional write boundaries. If a business command requires immediate atomic consistency across two services, a circuit breaker fallback cannot safely complete the write without introducing corrupt or partial business state.
+
+**★ Are there boundary defects that cannot be contained, and how do you recognise them?**
+Two, and they are the same two signals that conclusively identify a wrong boundary. An **invariant
+that must hold transactionally across the line** cannot be compensated for: a saga schedules the
+violation rather than preventing it, and a distributed lock relocates it into an availability problem.
+And **lockstep deployment** cannot be compensated for either — a release train makes it comfortable
+and therefore permanent, but no tooling manufactures a boundary that does not exist. Everything else
+on the containment list — chattiness, multiplied unavailability, an incoherent upstream — is a *cost*,
+and costs are exactly what you are allowed to decide to keep paying. Containment answers costs; it
+does not answer wrongness.
+
+**★ How do you keep a deliberate decision to tolerate a bad boundary from silently becoming the architecture?**
+Record it like a deprecation, not like an improvement: what it compensates for, why the boundary was
+left alone, who owns it, and — the load-bearing line — the **event** that should reopen the decision.
+Triggers work better as events than as dates: a second consumer needing the same workaround, an
+incident caused by the compensation itself, or the expiry of whatever constraint justified the
+deferral. The strongest single trigger is repetition by others: one team caching another service's
+data is a local call, three teams doing it independently is evidence about ownership that nobody
+coordinated to produce, and it should move the boundary rather than add a fourth cache.
 
 **★ How does an Anti-Corruption Layer (ACL) protect a system when living with an imperfect boundary?**
 An ACL isolates the consuming service's internal domain model from the awkward, leaked concepts of the imperfect boundary. By translating external legacy structures into clean internal value objects at the entry boundary, new business features can be written cleanly. If the external boundary is later refactored, only the ACL translator requires updating.

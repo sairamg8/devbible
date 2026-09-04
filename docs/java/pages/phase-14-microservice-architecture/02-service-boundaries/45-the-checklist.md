@@ -1,7 +1,7 @@
 ---
 title: "The Service Boundary Review Checklist: a rigorous architecture rubric for evaluating proposed boundaries before writing code"
 sidebar_label: "45 · The checklist"
-sidebar_position: 66
+sidebar_position: 67
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -81,6 +81,39 @@ Before signing an Architecture Decision Record (ADR), compile the review finding
 | **Overall Verdict** | **APPROVED** | Ready for pilot extraction in Sprint 34 |
 ```
 
+## How to run the review, not just what to ask
+
+A rubric that produces a score and no decision is a form. Three rules turn this one into a review
+that changes outcomes.
+
+**1 · Some items are gates, not points.** Scoring lets a proposal average away a fatal defect. These
+three are pass/fail, and a failure ends the review regardless of everything else:
+
+| Gate | Failure means |
+|---|---|
+| 🔴 No business invariant requires immediate consistency across the line | The boundary is in the wrong place — [09 · The transaction boundary](09-the-transaction-boundary.md) |
+| 🔴 Each service can be deployed without deploying the other | There is no boundary here, whatever the diagram says |
+| 🔴 Each service owns its tables; no other service reads them | Data ownership is unresolved, so nothing else has been decided either |
+
+**2 · Every "yes" needs evidence, not assent.** The questions are answerable from artefacts, and
+asking for the artefact is what stops a review from measuring confidence instead of design:
+
+| Question | The artefact |
+|---|---|
+| Does it own its data? | `grep` for its table names outside its module |
+| Can it deploy independently? | The last six months of release history — did they ever have to ship together? |
+| Can it boot alone? | A `STANDALONE` `@ApplicationModuleTest` — [40b · Ready to extract](40b-ready-to-extract.md) |
+| Is the contract stable? | The contract's change history, and who was consulted each time |
+| Does a team own it? | A name, and a rota |
+
+**3 · Record the rejections.** The proposals a review turns down are the most reusable output it
+produces, because the same boundary comes back next quarter with a new sponsor. Two lines — what was
+proposed, which gate it failed — save the argument being had again from the start.
+
+🔴 **Run this before the boundary exists, not after.** Every gate here is cheap to check while the
+module is in-process and expensive to check once there are two deployables, two databases and a
+migration to reverse — [42 · The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md).
+
 ## Gotchas
 
 **★ Approving the "We will separate the database later" compromise.**
@@ -88,6 +121,28 @@ Engineers frequently propose: *"Let's build the microservice first to save time,
 
 **★ Splitting an aggregate root across services.**
 If a proposal places `Order` in Service A and `OrderLine` in Service B, atomic updates require distributed locking or two-phase commit. This violates fundamental DDD principles. Aggregates must remain indivisible.
+
+**★ A proposal scores well overall and shares a transaction with the service next door.**
+Cause: a fatal defect was averaged away by a numeric score. Most rubric items are trade-offs; three
+are not.
+Fix: treat the three gates as pass/fail and evaluate them first. A cross-boundary invariant, an
+inability to deploy independently, or unresolved data ownership each end the review on their own —
+there is no total that compensates, because they are not costs, they are the boundary being in the
+wrong place.
+
+**★ The review is a meeting in which everyone agrees the boundary is fine.**
+Cause: the questions were answered from confidence rather than from artefacts, so the review measured
+how sure the team felt.
+Fix: ask for the evidence rather than the answer. "Does it own its data" becomes a `grep` for its
+table names outside its module; "can it deploy independently" becomes six months of release history;
+"can it boot alone" becomes a `STANDALONE` module test that either passes or does not.
+
+**★ The same rejected boundary proposal returns two quarters later and is argued from scratch.**
+Cause: the rejection was a decision in a meeting and left no artefact, so the reasoning died with the
+attendees.
+Fix: record every rejection in two lines — what was proposed and which gate it failed. Rejections are
+the highest-reuse output of a boundary review, because a boundary that looked appealing once will look
+appealing again to somebody who was not there.
 
 **★ Failing to mandate idempotency in async message consumers.**
 In any distributed broker (Kafka, RabbitMQ, SQS), at-least-once delivery guarantees that duplicate messages will occur during broker rebalances or network retries. Approving an event consumer without an idempotency guard (like a unique event log table or Redis key) guarantees data corruption in production.
@@ -102,6 +157,23 @@ A service has data autonomy if and only if its underlying data store is inaccess
 
 **★ Why must a microservice boundary review verify team ownership and headcount?**
 Operating a microservice incurs a baseline operational tax: dedicated CI/CD, Kubernetes manifests, monitoring dashboards, vulnerability scanning, and on-call rotations. If an engineering team has fewer than 3 to 4 engineers, assigning them multiple microservices causes cognitive overload, context-switching fatigue, and operational neglect. Architecture must align with sustainable team structures.
+
+**★ Which items on a boundary review are gates rather than scored criteria, and why does the distinction matter?**
+Three: no business invariant requires immediate consistency across the line, each service can be
+deployed without the other, and each service owns its own tables. They are gates because a scored
+rubric lets a strong total average away a fatal defect — and these three are not costs to be weighed
+against benefits, they are statements that the boundary is in the wrong place. A proposal that fails
+any one of them does not need the rest of the review; a proposal that passes all three can then be
+argued about on the merits of everything else.
+
+**★ How do you stop a boundary review from becoming a meeting where everyone agrees?**
+By answering every question from an artefact instead of from the room. Ownership of data is a `grep`
+for the service's table names outside its own module. Independent deployability is six months of
+release history showing whether the two ever had to ship together. Bootability is a `STANDALONE`
+module test that passes or fails. Contract stability is the contract's own change history. Team
+ownership is a name and a rota. Each of those can come back with an answer nobody in the room
+expected, which is the entire value of running the review — a review whose answers are all supplied
+by the proposers measures their confidence, not their design.
 
 **★ How does the checklist ensure fault isolation between services?**
 The checklist verifies that all outbound synchronous network calls have strict connection/socket timeouts, circuit breakers, and graceful fallback behaviors. Furthermore, it verifies that message consumers are idempotent and that an outage in a downstream dependency degrades non-critical features rather than triggering cascading failures across the entire system.
