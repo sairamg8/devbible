@@ -1,7 +1,7 @@
 ---
 title: "Give SprintDesk an `AGENTS.md`, connect the diagnostics, and run exactly one agent-executed refactor through human review — because a context file you have never tested against a real change is a document, not infrastructure"
 sidebar_label: "07 · Milestone: SprintDesk gets an `AGENTS.md`"
-sidebar_position: 7
+sidebar_position: 9
 description: "The chapter 14 milestone: the managed block and the half of the file you own, a repository context map made of decisions rather than advice, MCP wired to the dev server, and one scoped refactor with a failing assertion written first — with acceptance criteria you can tick off."
 ---
 

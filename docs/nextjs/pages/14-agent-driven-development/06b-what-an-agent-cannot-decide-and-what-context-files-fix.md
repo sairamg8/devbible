@@ -1,7 +1,7 @@
 ---
 title: "Agent infrastructure has moved the failure boundary from *the agent does not know Next.js 16* to *the agent does not know your product* — which is a much better place for it, and not the same as gone"
 sidebar_label: "06b · What an agent cannot decide"
-sidebar_position: 21
+sidebar_position: 8
 description: "The fix menu hands over options rather than a choice, an authorization check that proves the session and never the relationship, accessibility as behaviour rather than markup, the changed defaults with no diff to review — and exactly what bundled docs and MCP fix."
 ---
 

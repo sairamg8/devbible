@@ -1,7 +1,7 @@
 ---
 title: "An agent asked to make the tests pass has two ways to succeed and cannot tell them apart, which is why the assertion is written first, committed with the change, and kept out of the agent's reach"
 sidebar_label: "05b · The verification loop and review discipline"
-sidebar_position: 20
+sidebar_position: 6
 ---
 
 <span className="db-tier t-master">Master</span>

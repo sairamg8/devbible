@@ -1,7 +1,7 @@
 ---
 title: "Every way an agent fails in an App Router codebase is the same failure wearing different clothes — it changed something whose breakage has no signal, and then verified that the page still works"
 sidebar_label: "06 · Honest limits: the silent failures"
-sidebar_position: 6
+sidebar_position: 7
 description: "Why cache semantics defeat an agent when the type system only checks arity, why boundary placement is tree-global while a diff is file-local, and the failure class that returns 200 with correct HTML and passing tests."
 ---
 
