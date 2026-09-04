@@ -1,7 +1,7 @@
 ---
 title: "A bad service boundary announces itself through concrete operational pathology — lockstep deployments, distributed transactions, chatty network roundtrips, and cross-repo feature branches prove a line was drawn in the wrong place"
 sidebar_label: "37 · The tells of a wrong boundary"
-sidebar_position: 51
+sidebar_position: 52
 ---
 
 <span className="db-tier t-master">Master</span>

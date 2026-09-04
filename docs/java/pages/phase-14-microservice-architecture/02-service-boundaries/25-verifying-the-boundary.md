@@ -81,6 +81,79 @@ If any class in `com.retailer.order` attempts to import a type from `com.retaile
 
 *(The full tour of Spring Modulith's framework capabilities—including domain event publishing, documentation generation, and module test slices—belongs to [01 · Monolith first](../01-monolith-first/11-spring-modulith-what-it-is.md). Here in topic 02, `verify()` is used strictly as the pre-extraction boundary audit tool.)*
 
+## 🔴 Adopting this on a codebase that already exists
+
+Everything above assumes a clean run. On a five-year-old monolith the first `verify()` returns
+**hundreds** of violations, the test is disabled within a day, and nothing is ever enforced. That
+outcome is so common it is worth planning around before you write the test, and Modulith ships two
+mechanisms for it that most introductions skip.
+
+### `detectViolations()` — the ratchet
+
+`verify()` is all-or-nothing: it throws on the first violation set it finds. `detectViolations()`
+hands you the violations as data instead, so you can fail on the ones you have already fixed and
+ignore the ones you have not:
+
+```java
+package com.retailer;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.modulith.core.ApplicationModules;
+
+class BoundaryRatchetTests {
+
+    private static final ApplicationModules MODULES = ApplicationModules.of(RetailApplication.class);
+
+    @Test
+    void noNewViolationsInTheModulesWeHaveAlreadyCleaned() {
+        MODULES.detectViolations()
+            .filter(violation -> violation.getMessage().contains("com.retailer.order"))
+            .throwIfPresent();
+    }
+}
+```
+
+The documented form is exactly this shape:
+
+> ```java
+> ApplicationModules.of(…)
+>   .detectViolations()
+>   .filter(violation -> …)
+>   .throwIfPresent();
+> ```
+
+**The discipline that makes it work:** the filter is an allow-list of modules that are *already
+clean*, and it only ever grows. A module joins the list the day its violations reach zero and never
+leaves. That converts an unwinnable big-bang cleanup into a per-module one, and it is the difference
+between a rule that survives contact with the codebase and a `@Disabled` annotation.
+
+⚠️ ArchUnit's own answer to the same problem is `FreezingArchRule`, which records today's violations
+to a store and fails only on new ones — see [26 · ArchUnit rules](26-archunit-rules.md). Modulith's
+filter is coarser and needs no store; the freeze is finer and needs a file committed to the repo.
+
+### Open modules — the deliberate, temporary exemption
+
+The other lever is to declare a module **open**, which switches rule 2 off for it:
+
+```java
+// src/main/java/com/retailer/legacy/package-info.java
+@org.springframework.modulith.ApplicationModule(type = Type.OPEN)
+package com.retailer.legacy;
+```
+
+Under an open module, access to internals is *"generally allowed"* and every type in every
+sub-package joins the unnamed named interface. The reference is explicit about who it is for —
+*"Intended for legacy applications gradually adopting Spring Modulith"* — and equally explicit
+about what it means if you leave it there:
+
+> *"Using open modules in fully-modularized applications hints at sub-optimal modularization and
+> packaging structures."*
+
+🔴 **Read that as a countdown, not a setting.** An open module is a boundary you have declared you
+are not enforcing yet. If one is still open a year later, the honest description of your
+architecture is that the module has no boundary, and the annotation is the only thing recording
+that you once intended it to have one.
+
 ## What verification failures tell you about your boundaries
 
 When `MODULES.verify()` fails, it is not a lint error; it is a diagnosis of a broken boundary:
@@ -113,6 +186,49 @@ Fix: Move the public interfaces/records to the module root package, or declare a
 Cause: Repeatedly invoking `ApplicationModules.of(...)` re-parses all classpath bytecode on every invocation.
 Fix: Assign `ApplicationModules.of(...)` to a `private static final` field in a single test class or shared test base.
 
+**★ Symptom: the first `verify()` on the existing codebase produces hundreds of violations, and the team's response is to delete the test.**
+Cause: `verify()` is all-or-nothing, and an unmodularised monolith fails it comprehensively. A rule
+that cannot go green on day one does not get fixed; it gets removed.
+Fix: start with `detectViolations()` filtered to the one module you have actually cleaned, and grow
+the filter as modules come clean. Never start with `verify()` on a brownfield codebase.
+```java
+MODULES.detectViolations()
+    .filter(v -> CLEAN_MODULES.stream().anyMatch(m -> v.getMessage().contains(m)))
+    .throwIfPresent();
+```
+
+**★ Symptom: `verify()` is green and the two "independent" modules cannot be deployed separately, because they read each other's tables.**
+Cause: verification is **static analysis of bytecode**. A shared database table is not an import, a
+`@Query` naming another module's table is a string, and neither is a type reference. Modulith cannot
+see either.
+Fix: the boundary check for data is a different check, and it is manual — the ownership register in
+[10b · The ownership register](10b-the-ownership-register.md), plus a schema-per-module convention so
+that a cross-module read needs a grant somebody has to write down.
+
+**★ Symptom: `verify()` is green and a module reaches another module's internals through Spring.**
+Cause: bean lookup by type or name — `context.getBean(SomeInternalThing.class)`, a
+`@Qualifier` string, an SpEL expression in a property — resolves at runtime and leaves no compile-time
+reference for bytecode analysis to find.
+Fix: constructor-inject the module's published API type instead of pulling beans from the context,
+and treat any `getBean` call crossing a module line as the violation it is.
+```java
+// invisible to verify(): resolved by type at runtime
+InventoryInternals internals = context.getBean(InventoryInternals.class);
+
+// visible, and rejected at build time: a real import of an internal type
+InventoryManagement inventory;   // injected via constructor, from inventory's API package
+```
+
+**★ Symptom: Modulith reports one giant module, or no modules at all.**
+Cause: module detection is anchored on the package containing the `@SpringBootApplication` class —
+*"Each direct sub-package of the main package is considered an application module package."* If the
+application class sits at `com.retailer.app.RetailApplication` while the domain lives in
+`com.retailer.order`, the domain packages are not sub-packages of the main package and are not
+modules.
+Fix: move the application class up to the common root package (`com.retailer`), which is what the
+convention assumes. This is worth checking first whenever the module list looks wrong — a
+misdetected root makes every subsequent rule meaningless while still reporting success.
+
 **★ Symptom: Generated code packages (e.g. OpenAPI, jOOQ, Protobuf) trigger spurious module violations.**
 Cause: Modulith scans the entire package hierarchy under the application root and mistakes generated directories for application modules.
 Fix: Filter out generated packages during module model creation using `JavaClass.Predicates`:
@@ -133,6 +249,25 @@ First, no cycles: module dependencies must form a strict directed acyclic graph,
 
 **★ How does Spring Modulith determine what constitutes an "internal" package?**
 By default convention, Spring Modulith considers the base package of an application module (for example, `com.retailer.order`) as its public API package. All subpackages located beneath the base package (such as `com.retailer.order.internal` or `com.retailer.order.repository`) are automatically classified as internal. Any import of a class residing in an internal package by a class in another module (like `com.retailer.billing`) is treated as an architectural violation by `MODULES.verify()`.
+
+**★ What can `ApplicationModules.verify()` not see?**
+Everything that is not a compile-time type reference, which is a larger set than people expect. It
+analyses bytecode, so it sees imports, field types, method signatures and call targets. It does not
+see two modules sharing a database table, a `@Query` that names another module's table as a string,
+a bean fetched by `context.getBean(...)`, a reflective lookup, an HTTP call to your own application,
+or a message topic that two modules agree about by convention. A green `verify()` proves the *code*
+boundary holds. It proves nothing about the *data* boundary, and the data boundary is the one that
+decides whether the module can actually be extracted — see
+[09 · The transaction boundary](09-the-transaction-boundary.md).
+
+**★ How would you introduce boundary verification to a monolith that fails it in hundreds of places?**
+Not with `verify()`. Start with `detectViolations()` filtered to a single module you have cleaned,
+so the build is green on day one and stays green, then add modules to the filter as each reaches
+zero — the filter only ever grows. Use `@ApplicationModule(type = Type.OPEN)` for modules you have
+consciously deferred, and treat each one as a countdown rather than a configuration, because the
+reference itself says an open module in a modularised application *"hints at sub-optimal
+modularization"*. The alternative — turning on the full rule and asking the team to fix four hundred
+violations before the next feature — reliably ends with the test disabled.
 
 **★ How does boundary verification handle domain event listeners?**
 Spring Modulith specifically accommodates event-driven decoupling. When Module A publishes a domain event using Spring's `ApplicationEventPublisher`, Module A has zero dependencies on any consumers. Module B can listen to the event using `@ApplicationModuleListener` by depending only on the public event record published in Module A's API package. The verification engine recognizes this as a clean one-way dependency from Module B to Module A, successfully eliminating the bi-directional cycle that synchronous method invocation would have created.

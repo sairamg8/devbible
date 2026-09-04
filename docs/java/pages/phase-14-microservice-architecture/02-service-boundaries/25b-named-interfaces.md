@@ -160,4 +160,4 @@ Named interfaces are an architectural realization of ISP at the module and bound
 
 ---
 
-← [Verifying the boundary](25-verifying-the-boundary.md) · [Topic index](README.md) · Next → [ArchUnit rules](26-archunit-rules.md)
+← [Verifying the boundary](25-verifying-the-boundary.md) · [Topic index](README.md) · Next → [Can the module boot alone?](25c-can-the-module-boot-alone.md)
