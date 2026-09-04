@@ -1,7 +1,7 @@
 ---
 title: "An offline Server Action resolves later instead of rejecting now, which leaves a button that looks frozen"
 sidebar_label: "12b · Offline actions and testing"
-sidebar_position: 15
+sidebar_position: 17
 description: "Retrying Server Actions with no client code, the queued-navigation surprise, and why offline behaviour must be tested against a production build."
 ---
 
