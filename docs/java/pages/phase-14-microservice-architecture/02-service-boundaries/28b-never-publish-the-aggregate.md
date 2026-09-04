@@ -12,7 +12,6 @@ sidebar_position: 43
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **The fastest way to destroy a service boundary is to configure an HTTP controller or a message producer that serializes domain entities directly over the wire. What looks like developer convenience—saving the effort of writing explicit DTO records and mappers—silently binds every external consumer to your internal database schema, ORM annotations, and table relationships. The moment you rename an internal column, normalize a table, or introduce an internal state transition, you trigger cascading failures in downstream systems. A true service boundary demands that nothing leaves or enters the context except explicitly versioned, immutable transfer contracts, ensuring the internal domain model remains free to evolve without external negotiation.**
-
 ## The illusion of convenience
 
 In Spring Boot, exposing domain entities directly is dangerously easy:
@@ -154,6 +153,45 @@ interface OrderService {
 }
 ```
 
+## Mass assignment: the security failure, not the design failure
+
+`@RequestBody Order` does not merely bypass invariants — it hands the caller a writeable copy of
+every field on the aggregate, including the ones that encode privilege:
+
+```java
+// The client's payload. Nothing here is rejected.
+// { "customerId": "...", "items": [...], "status": "PAID", "discountApproved": true }
+
+@PostMapping
+Order createOrder(@RequestBody Order order) {     // 🔴 the caller set status and discountApproved
+    return repository.save(order);
+}
+```
+
+**A whitelist is structural, not a matter of remembering.** The command record cannot express the
+fields it does not declare, so there is no annotation to forget:
+
+```java
+// The contract admits exactly four things, and status is not one of them.
+public record PlaceOrderCommand(UUID customerId, List<OrderItemDto> items) {
+    public PlaceOrderCommand {
+        if (customerId == null) throw new IllegalArgumentException("Customer ID is required");
+        if (items == null || items.isEmpty()) throw new IllegalArgumentException("Items cannot be empty");
+    }
+}
+
+@PostMapping
+OrderResponse createOrder(@RequestBody PlaceOrderCommand command) {
+    return OrderResponse.from(orderPlacement.placeOrder(command));   // status is set by the domain
+}
+```
+
+⚠️ **`@JsonIgnore` and `@JsonView` are the trap here, not the fix.** Both are blacklists applied to
+a type whose default answer is "expose it". They work perfectly until the day a field is added
+without one, and the failure mode is silent disclosure rather than an error. A DTO's default answer
+is "this field does not exist", which is why the two approaches are not equivalent even when they
+produce identical JSON today.
+
 ## Surviving schema refactoring
 
 With the boundary firmly established by `OrderResponse`:
@@ -161,6 +199,10 @@ With the boundary firmly established by `OrderResponse`:
 - You can rename database columns or alter data types.
 - The `OrderResponse.from(...)` method absorbs the translation logic internally.
 - External clients observe zero broken contracts, zero altered JSON shapes, and zero downtime.
+
+All of this concerns an HTTP response, which is the *transient* version of the mistake.
+[28d · The event has a longer half-life](28d-the-event-has-a-longer-half-life.md) is the version
+that gets stored in other people's databases.
 
 ## Gotchas
 
@@ -175,6 +217,25 @@ Fix: Project the entity into a DTO record inside the `@Transactional` service bo
 **★ Symptom: Client request payload silently overwrites primary keys or modification timestamps.**
 Cause: Binding incoming JSON directly to an `@Entity` allows malicious or malformed payloads containing `"id": "..."` or `"createdAt": "..."` to be applied by Hibernate.
 Fix: Bind HTTP requests to dedicated command records that omit system-managed fields.
+
+**★ Symptom: a caller sets a field they should never have been able to set, and the request succeeds.**
+Cause: the entity is the `@RequestBody`, so every field on the aggregate is caller-writeable —
+including `status`, `discountApproved`, or anything else that encodes a decision the domain was
+supposed to make.
+Fix: a command record that does not declare the field. There is nothing to forget, because the type
+cannot carry the value:
+```java
+public record PlaceOrderCommand(UUID customerId, List<OrderItemDto> items) {}
+```
+`@JsonIgnore` on the entity is the blacklist version of the same idea, and it fails the day someone
+adds a field without it.
+
+**★ Symptom: the JSON contains a `@class` or `$type` field naming a Hibernate proxy.**
+Cause: polymorphic type information is being written from the runtime class, and the runtime class of
+a lazily-loaded entity is a generated proxy subclass rather than the entity itself.
+Fix: do not serialise entities. A record's runtime class is the record, so the problem cannot arise —
+which is a small illustration of a general point: most serialisation configuration in a Spring
+codebase exists to compensate for serialising the wrong types.
 
 **★ Symptom: Changing a database column type from `INTEGER` to `BIGINT` breaks downstream consumers.**
 Cause: Entity serialization directly propagated the Java type change into the JSON wire format.
@@ -191,8 +252,23 @@ When using an entity directly, all fields are exposed by default unless explicit
 **★ What happens to business invariants when an entity is used as a `@RequestBody` parameter?**
 When Jackson deserializes JSON into an entity, it instantiates the class using reflection, default no-arg constructors, and setters. This completely circumvents any domain validation rules, invariant checks, or state transition guards written into domain constructors and factory methods. An external client can inject invalid state (e.g. negative prices, illegal statuses) directly into the entity, corrupting the database.
 
-**★ How does DTO mapping affect memory allocation in high-throughput services?**
-Creating intermediate DTO records adds short-lived heap allocations. However, in modern JVMs (such as JDK 25), small, immutable objects that do not escape thread scope are heavily optimized by escape analysis, scalar replacement, and generational garbage collectors (ZGC/G1). The negligible CPU cost of mapping to records is vastly outweighed by the architectural encapsulation, query efficiency, and security guarantees it provides.
+**★ What does DTO mapping cost, and is the cost ever the deciding factor?**
+It costs short-lived heap allocations per request and the code to write and maintain the mapping. On
+a modern JVM those allocations are the cheapest kind — small, immutable, thread-local — and are the
+category escape analysis and generational collection handle best, but the honest answer is that the
+size of the effect depends entirely on your workload and this page will not invent a number for it.
+The reason it is rarely the deciding factor is different and stronger: the alternative does not
+actually save the work, it defers it. A team that skips DTOs pays instead in `@JsonIgnore`
+annotations, lazy-loading workarounds, serialisation configuration, and a schema it can no longer
+change — and that bill arrives at a much worse time.
+
+**★ Why is a DTO a whitelist and `@JsonIgnore` a blacklist, if they produce the same JSON today?**
+Because they have opposite defaults, and the default is what decides what happens to the *next*
+field somebody adds. A DTO's default is "this field does not exist" — a new column on the entity
+changes nothing on the wire until a human adds it to the contract. `@JsonIgnore`'s default is
+"expose it" — the new column ships to every consumer the moment it is added, and the failure mode is
+silent disclosure rather than an error. Identical output today, opposite behaviour under change, and
+the whole point of a boundary is behaviour under change.
 
 ---
 

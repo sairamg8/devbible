@@ -152,4 +152,4 @@ not evidence.
 
 ---
 
-← [Never publish the aggregate](28b-never-publish-the-aggregate.md) · [Topic index](README.md) · Next → [Anticorruption layer](29-anticorruption-layer.md)
+← [Never publish the aggregate](28b-never-publish-the-aggregate.md) · [Topic index](README.md) · Next → [The event has a longer half-life](28d-the-event-has-a-longer-half-life.md)
