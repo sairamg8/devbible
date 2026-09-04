@@ -1,7 +1,7 @@
 ---
 title: "The 16.3.4 documentation says two different things about what the React Compiler costs your build, the newer of the two is the blunter one, and the experimental Rust port's headline numbers only hold if Babel leaves the pipeline entirely"
 sidebar_label: "02b · What it costs"
-sidebar_position: 110
+sidebar_position: 7
 ---
 
 <span className="db-tier t-master">Master</span>

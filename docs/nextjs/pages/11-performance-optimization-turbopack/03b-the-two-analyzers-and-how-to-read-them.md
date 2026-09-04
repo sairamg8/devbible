@@ -1,7 +1,7 @@
 ---
 title: "There are two bundle analyzers in Next.js 16 and the documentation names them by bundler — the first-party one reads Turbopack's module graph and traces import chains, and the classic plugin's own heading now says \"for Webpack\""
 sidebar_label: "03b · The two analyzers"
-sidebar_position: 114
+sidebar_position: 12
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "The Edge-shaped constraint outlived the Edge runtime: Proxy now defaults to Node.js yet still forbids the `runtime` option outright, and the thing you must design around is where it is deployed, not what APIs it has"
 sidebar_label: "04b · What survives the withdrawal"
-sidebar_position: 120
+sidebar_position: 19
 description: "Proxy's runtime rules and why setting the option throws, the CDN-deployment constraint that replaces the old API-surface constraint, process.env.NEXT_RUNTIME in instrumentation, preferredRegion's successor-less deprecation, and the ordered audit."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Magic comments are the only way to tell the bundler to leave a dynamic import alone, they do nothing at all on a static `import` statement, and `webpackOptional` is the one webpack name Turbopack refuses to accept"
 sidebar_label: "03g · Magic comments"
-sidebar_position: 119
+sidebar_position: 17
 ---
 
 <span className="db-tier t-understand">Understand</span>

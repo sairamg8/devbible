@@ -1,7 +1,7 @@
 ---
 title: "The biggest single client-bundle win is usually not a config flag — it is noticing that a library which exists only to turn data into markup is sitting on the wrong side of the client boundary"
 sidebar_label: "03c · Fixing what it finds"
-sidebar_position: 115
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "Turning the compiler on does not create bugs — it withdraws the accident that was hiding them, which is why the migration checklist is mostly a list of components that were already wrong"
 sidebar_label: "02e · What it surfaces"
-sidebar_position: 113
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>

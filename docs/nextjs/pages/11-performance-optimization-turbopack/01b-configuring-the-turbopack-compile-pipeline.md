@@ -1,7 +1,7 @@
 ---
 title: "Turbopack's configuration surface is small on purpose, and the two things people reach for first — a `webpack()` hook and a Babel config — are the two that behave least like they used to"
 sidebar_label: "01b · Configuring the compile pipeline"
-sidebar_position: 100
+sidebar_position: 2
 ---
 
 <span className="db-tier t-master">Master</span>

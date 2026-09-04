@@ -1,7 +1,7 @@
 ---
 title: "The SprintDesk performance audit is three pieces of work in a fixed order — produce a bundle map and keep the artefact, fix the interaction latency on the board, then instrument what you changed — and the discipline that makes it an audit rather than a refactor is that every step has an acceptance criterion you can check without a stopwatch"
 sidebar_label: "07 · Milestone: performance audit"
-sidebar_position: 7
+sidebar_position: 25
 description: "Chapter 11's capstone, act one: running next experimental-analyze --output, keeping .next/diagnostics/analyze as a diffable artefact, reading the treemap on the SprintDesk board, and the three findings a board application reliably produces — with the fix for each and criteria that do not require a number."
 ---
 

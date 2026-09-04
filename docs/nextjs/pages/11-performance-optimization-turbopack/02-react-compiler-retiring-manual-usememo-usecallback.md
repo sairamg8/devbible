@@ -1,7 +1,7 @@
 ---
 title: "The React Compiler is a build-time memoizer you turn on with one top-level key, it has been stable since Next.js 16, and it is deliberately not on by default"
 sidebar_label: "02 · React Compiler"
-sidebar_position: 2
+sidebar_position: 6
 ---
 
 <span className="db-tier t-master">Master</span>

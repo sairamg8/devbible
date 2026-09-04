@@ -1,7 +1,7 @@
 ---
 title: "`optimizePackageImports` and `serverExternalPackages` sound like the same kind of knob and are opposites — one makes a barrel-file import resolve narrowly, the other stops a server package being bundled at all"
 sidebar_label: "03d · Package imports and server externals"
-sidebar_position: 116
+sidebar_position: 14
 ---
 
 <span className="db-tier t-understand">Understand</span>

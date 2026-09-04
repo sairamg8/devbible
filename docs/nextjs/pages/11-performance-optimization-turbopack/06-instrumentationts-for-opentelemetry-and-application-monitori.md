@@ -1,7 +1,7 @@
 ---
 title: "Instrumentation is not free observation — `register()` runs on the path to server readiness, so everything you put in it is latency added to every cold start, and the client half runs before hydration, which puts your monitoring SDK inside the interaction metric it was installed to measure"
 sidebar_label: "06 · What instrumentation costs"
-sidebar_position: 6
+sidebar_position: 23
 description: "The performance half of instrumentation.ts: register() blocking readiness, why the docs tell you to import inside register rather than at the top, the NEXT_RUNTIME guard, the pre-hydration cost of instrumentation-client, and why the logging config is a development tool that cannot help you in production."
 ---
 

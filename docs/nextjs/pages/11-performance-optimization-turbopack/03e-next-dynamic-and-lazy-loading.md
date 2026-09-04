@@ -1,7 +1,7 @@
 ---
 title: "`next/dynamic` is a composite of `React.lazy()` and Suspense, and every one of its sharp edges comes from the same place — lazy loading is a Client Component feature being invoked from files that may or may not be Client Components"
 sidebar_label: "03e · next/dynamic and lazy loading"
-sidebar_position: 117
+sidebar_position: 15
 ---
 
 <span className="db-tier t-master">Master</span>

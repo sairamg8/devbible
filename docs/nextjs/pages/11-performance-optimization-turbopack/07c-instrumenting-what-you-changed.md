@@ -1,7 +1,7 @@
 ---
 title: "Act three exists because the first two acts moved costs rather than deleting them — the highlighter now runs on your server and the mutation now resolves after the paint, and tracing is the only thing that keeps either of those honest once the audit is over"
 sidebar_label: "07c · Instrumenting what you changed"
-sidebar_position: 132
+sidebar_position: 27
 description: "The last act of the SprintDesk audit: a minimal instrumentation.ts, the span-volume decision for an application whose data layer is not fetch, custom spans around the work the audit created, the report you hand over, and the regression gates that outlive it."
 ---
 

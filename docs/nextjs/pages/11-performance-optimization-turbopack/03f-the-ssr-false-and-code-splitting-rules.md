@@ -1,7 +1,7 @@
 ---
 title: "The four documented rules about `ssr: false` and dynamic imports are the same rule stated four ways — the unit of client-side code splitting is a Client Component, because that is the only thing that ships JavaScript to a browser"
 sidebar_label: "03f · The ssr: false rules"
-sidebar_position: 118
+sidebar_position: 16
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "Next.js 16 deleted the `size` and `First Load JS` columns from the build output because they were inaccurate — which means every CI bundle-size gate that greps that output is now passing without testing anything at all"
 sidebar_label: "03 · Bundle analysis"
-sidebar_position: 3
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>

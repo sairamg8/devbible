@@ -1,7 +1,7 @@
 ---
 title: "The board's interaction latency is not a mystery to be profiled — it is a drag handler doing work proportional to the number of cards, and the audit's job is to prove that from field data first and only then go looking for the loop"
 sidebar_label: "07b · The INP problem on the board"
-sidebar_position: 131
+sidebar_position: 26
 description: "Act two of the SprintDesk audit: collecting INP from real users with useReportWebVitals, why a drag-and-drop surface produces interaction latency by construction, seven candidate causes with the fix for each in code, and acceptance criteria that need no stopwatch."
 ---
 

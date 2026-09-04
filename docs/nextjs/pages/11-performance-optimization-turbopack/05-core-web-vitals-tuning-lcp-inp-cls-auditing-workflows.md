@@ -1,7 +1,7 @@
 ---
 title: "Next.js gives you a metric stream and nothing else — no thresholds, no dashboard, no storage — and the guide that documents it is sixteen months old and still lists a metric the web platform retired"
 sidebar_label: "05 · The Web Vitals stream"
-sidebar_position: 5
+sidebar_position: 20
 description: "What useReportWebVitals actually is, why the analytics guide's metric list cannot be trusted verbatim, the client-boundary confinement rule quoted from the docs, the metric object's fields, the stable-callback trap, and switching on metric.name."
 ---
 

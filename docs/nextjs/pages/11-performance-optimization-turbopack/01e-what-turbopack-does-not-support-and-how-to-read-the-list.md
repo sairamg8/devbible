@@ -1,7 +1,7 @@
 ---
 title: "The unsupported list carries three different promises, and reading them as one list produces either misplaced optimism or an unnecessary rewrite"
 sidebar_label: "01e · What Turbopack does not support"
-sidebar_position: 103
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>

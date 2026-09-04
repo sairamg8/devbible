@@ -486,7 +486,7 @@ export const LANGUAGES = {
       {n: 8, slug: '08-state-management-in-an-rsc-world', name: "State management in an RSC world", part: 'Refreshed for 16.3', topics: 10, pages: 2, pagesPlanned: 10},
       {n: 9, slug: '09-styling-and-ui', name: "Styling and UI", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 10, slug: '10-forms-authentication-and-security-hardening', name: "Forms, authentication and security hardening", part: 'Refreshed for 16.3', topics: 13, pages: 6, pagesPlanned: 13},
-      {n: 11, slug: '11-performance-optimization-turbopack', name: "Performance optimization and Turbopack", part: 'Refreshed for 16.3', topics: 10, pages: 2, pagesPlanned: 10},
+      {n: 11, slug: '11-performance-optimization-turbopack', name: "Performance optimization and Turbopack", part: 'Refreshed for 16.3', topics: 30, pages: 30},
       {n: 12, slug: '12-seo-metadata-and-accessibility', name: "SEO, metadata and accessibility", part: 'Refreshed for 16.3', topics: 59, pages: 59},
       {n: 13, slug: '13-testing-and-developer-experience', name: "Testing and developer experience", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 14, slug: '14-agent-driven-development', name: "Agent-driven development", part: 'Refreshed for 16.3', topics: 10, pages: 10},

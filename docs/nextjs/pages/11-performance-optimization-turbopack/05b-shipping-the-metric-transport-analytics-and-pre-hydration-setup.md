@@ -1,7 +1,7 @@
 ---
 title: "Getting the metric out of the browser is the half that fails: `sendBeacon` exists because a normal `fetch` on a closing page is not delivered, and the analytics wiring around it has three documented details that are easy to get wrong"
 sidebar_label: "05b · Shipping the metric"
-sidebar_position: 121
+sidebar_position: 21
 description: "navigator.sendBeacon with the fetch keepalive fallback, the Google Analytics event shape including the CLS x1000 scale and non_interaction, what a receiving endpoint must store to compute percentiles, and instrumentation-client.js as the pre-hydration setup slot."
 ---
 

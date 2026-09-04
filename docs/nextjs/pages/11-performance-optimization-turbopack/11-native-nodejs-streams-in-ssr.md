@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 29
 title: "App Router SSR moved to native Node.js streams, and the 22% it bought you needed no code change"
 sidebar_label: "11 · Native Node.js streams in SSR"
 description: "The 16.3 rendering-layer change from web streams to native Node.js streams, why conversion overhead existed at all, and why streaming is a property of the whole path rather than the server."
@@ -168,3 +168,7 @@ renders and TTFB collapses to the slowest dependency on the page.
 **★ How would you measure this change honestly?**
 Under load, at saturation — requests per second at a fixed latency and error budget. A single
 request on an idle server leaves the difference inside the noise.
+
+---
+
+← [10 · Glob imports with `import.meta.glob`](10-glob-imports-with-import-meta-glob.md) · [Chapter index](01-explanation.md) · **End of chapter 11**

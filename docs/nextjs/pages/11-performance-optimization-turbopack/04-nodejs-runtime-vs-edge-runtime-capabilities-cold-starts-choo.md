@@ -1,7 +1,7 @@
 ---
 title: "There is no longer a runtime to choose per route — `'edge'` is deprecated, the migration is to delete the line rather than change it, and the documentation offers no rationale you are entitled to repeat"
 sidebar_label: "04 · The withdrawn runtime choice"
-sidebar_position: 4
+sidebar_position: 18
 description: "What is actually deprecated (the value, not the option), why the migration is removal and not substitution, the warning it emits, the Cache Components forcing function, and the claims about isolates, cold starts and API allow-lists that no current documentation supports."
 ---
 

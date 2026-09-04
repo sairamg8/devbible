@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 28
 title: "`import.meta.glob` imports a directory as a module map, and it only exists because Turbopack does"
 sidebar_label: "10 · Glob imports"
 description: "The Vite-compatible glob API in Turbopack: lazy thunks vs eager modules, the import and query options, negation patterns, and why it brings HMR to Server Components that read from disk."
@@ -288,3 +288,7 @@ WASM bindings, where Turbopack does not run at all.
 `Record<string, () => Promise<unknown>>` lazily, `Record<string, unknown>` eagerly, with types
 available automatically under `"moduleResolution": "bundler"`, `"node16"` or `"nodenext"`.
 Because both are `unknown`, validate rather than cast.
+
+---
+
+← [07c · Instrumenting what you changed](07c-instrumenting-what-you-changed.md) · [Chapter index](01-explanation.md) · Next → [11 · Native Node.js streams in SSR](11-native-nodejs-streams-in-ssr.md)

@@ -1,7 +1,7 @@
 ---
 title: "The webpack gaps that matter are not the missing config hooks — they are the four that change what your application renders"
 sidebar_label: "01d · Migrating from webpack"
-sidebar_position: 102
+sidebar_position: 4
 ---
 
 <span className="db-tier t-master">Master</span>

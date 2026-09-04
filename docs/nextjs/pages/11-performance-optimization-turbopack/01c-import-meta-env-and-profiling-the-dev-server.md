@@ -1,7 +1,7 @@
 ---
 title: "`import.meta.env` is not a way to read environment variables — it is five compile-time constants that let Turbopack delete code you never wanted to ship"
 sidebar_label: "01c · Build-time constants and profiling"
-sidebar_position: 101
+sidebar_position: 3
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -262,4 +262,4 @@ self-inflicted slowness and cost nothing to test.
 
 ---
 
-← [01b · Configuring the compile pipeline](01b-configuring-the-turbopack-compile-pipeline.md) · [Chapter index](01-explanation.md) · Next → [02 · React Compiler](02-react-compiler-retiring-manual-usememo-usecallback.md)
+← [01b · Configuring the compile pipeline](01b-configuring-the-turbopack-compile-pipeline.md) · [Chapter index](01-explanation.md) · Next → [01d · Migrating from webpack](01d-migrating-from-webpack-the-behavioural-gaps.md)

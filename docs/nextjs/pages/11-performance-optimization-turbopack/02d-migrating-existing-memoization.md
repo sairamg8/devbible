@@ -1,7 +1,7 @@
 ---
 title: "\"Retiring manual useMemo and useCallback\" is a rule for new code — React's own documentation says removing the memoization you already have can change compilation output, so the cleanup PR is a behavioural change wearing a whitespace change's clothes"
 sidebar_label: "02d · Migrating existing memoization"
-sidebar_position: 112
+sidebar_position: 9
 ---
 
 <span className="db-tier t-master">Master</span>

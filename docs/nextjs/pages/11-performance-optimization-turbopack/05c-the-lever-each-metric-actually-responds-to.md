@@ -1,7 +1,7 @@
 ---
 title: "Each Core Web Vital responds to exactly one class of Next.js decision, and the audit that works is the one that refuses to touch a lever until the field data says which metric moved"
 sidebar_label: "05c · The lever per metric"
-sidebar_position: 122
+sidebar_position: 22
 description: "LCP as a discovery-and-TTFB problem with preload, loading and fetchPriority as its levers; INP as a client-boundary problem; CLS as a reserved-space problem solved by next/font and next/image; and an ordered audit that starts in the field."
 ---
 

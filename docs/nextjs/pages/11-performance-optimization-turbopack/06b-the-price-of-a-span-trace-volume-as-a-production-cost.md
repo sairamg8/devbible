@@ -1,7 +1,7 @@
 ---
 title: "A span is a unit of cost as well as a unit of information — Next.js already traces more than it emits, the switch that reveals the rest is a volume multiplier on a per-event bill, and the one span nobody looks at is the cheapest time-to-first-byte probe you will ever get"
 sidebar_label: "06b · The price of a span"
-sidebar_position: 130
+sidebar_position: 24
 description: "Trace volume as a production cost: NEXT_OTEL_VERBOSE as a multiplier, the per-fetch span and NEXT_OTEL_FETCH_DISABLED, the arithmetic of spans per request, and using the framework's own spans — especially the zero-length start response span — as this chapter's measuring instrument."
 ---
 

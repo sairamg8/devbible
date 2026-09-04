@@ -1,7 +1,7 @@
 ---
 title: "Annotation mode turns the compiler into an opt-in tool you apply one function at a time, and the two directives that drive it fail silently if you put them anywhere but first"
 sidebar_label: "02c · Annotation mode and directives"
-sidebar_position: 111
+sidebar_position: 8
 ---
 
 <span className="db-tier t-understand">Understand</span>
