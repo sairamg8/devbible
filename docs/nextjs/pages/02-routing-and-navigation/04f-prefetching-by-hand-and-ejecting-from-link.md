@@ -246,4 +246,4 @@ So a caller cannot override the one decision the component exists to make. It is
 
 ---
 
-← [04e · `useRouter`](04e-userouter-programmatic-navigation-and-refresh.md) · [Chapter 2 overview](01-explanation.md) · Next → **04g · `redirect` and `permanentRedirect`** *(not written yet)*
+← [04e · `useRouter`](04e-userouter-programmatic-navigation-and-refresh.md) · [Chapter 2 overview](01-explanation.md) · Next → [04g · `redirect` and `permanentRedirect`](04g-redirect-and-permanentredirect.md)
