@@ -252,8 +252,13 @@ export const PINS = {
   rtl:        {label: 'Testing Library', source: 'npm:@testing-library/react',  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['jest-rtl'],              names: ['testing library', 'rtl']},
   playwright: {label: 'Playwright',      source: 'npm:playwright',              policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['playwright'],            names: ['playwright']},
   storybook:  {label: 'Storybook',       source: 'npm:storybook',               policy: 'latest', pin: '10.5.8', checked: '2026-08-31', tracks: ['storybook'],         names: ['storybook']},
-  rtk:        {label: 'Redux Toolkit',   source: 'npm:@reduxjs/toolkit',        policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['redux-toolkit'],         names: ['redux toolkit', 'rtk']},
-  tanstack:   {label: 'TanStack Query',  source: 'npm:@tanstack/react-query',   policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['tanstack-query'],        names: ['tanstack query', 'react query']},
+  // 2026-09-05, nextjs ch08 topic 05: both gained a pin AND the `nextjs` track. The chapter
+  // teaches each across six pages, and an unpinned library is one nothing watches — the same
+  // defect that left bcrypt, helmet, multer and passport taught across 81 pages with zero pins.
+  rtk:        {label: 'Redux Toolkit',   source: 'npm:@reduxjs/toolkit',        policy: 'latest', pin: '2.12.0', checked: '2026-09-05', tracks: ['redux-toolkit', 'nextjs'], names: ['redux toolkit', 'rtk'],
+    note: 'react-redux 9.3.0 travels with it. RTK Query has no documented server-prefetch equivalent of HydrationBoundary; its own docs recommend client-only fetching.'},
+  tanstack:   {label: 'TanStack Query',  source: 'npm:@tanstack/react-query',   policy: 'latest', pin: '5.102.8', checked: '2026-09-05', tracks: ['tanstack-query', 'nextjs'], names: ['tanstack query', 'react query'],
+    note: '@tanstack/query-core and @tanstack/react-query-next-experimental share the version. The docs on main show queryClient.query() and environmentManager.isServer(), which read as unreleased v6 API — they are not; both ship in published 5.102.8.'},
   motion:     {label: 'Motion',          source: 'npm:motion',                  policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['framer-motion'],         names: ['framer motion', 'framer-motion'],
     note: 'Package renamed framer-motion → motion. 14 pages still import the old name.'},
   webVitals:  {label: 'web-vitals',      source: 'npm:web-vitals',              policy: 'latest', pin: null, checked: '2026-08-31', tracks: ['web-vitals-performance'], names: ['web-vitals', 'web vitals']},
