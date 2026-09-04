@@ -6,12 +6,15 @@ sidebar_position: 39
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against ArchUnit 1.4.2 user guide and reference documentation
-> ([archunit.org](https://www.archunit.org/user-guide/html/000_Index.html)).
+> Verified: 2026-09-04 against the ArchUnit user guide
+> ([archunit.org](https://www.archunit.org/userguide/html/000_Index.html)) — the importer and
+> `ImportOption`s, JUnit 5 support, `SlicesRuleDefinition`, `layeredArchitecture` /
+> `onionArchitecture`, `FreezingArchRule` and its `archunit.properties` keys, and the
+> empty-`should` rule. **`ArchUnit 1.4.2` is this project's pin; the user guide is served
+> unversioned, so it is cited as the guide rather than as a version-stamped page.**
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · ArchUnit 1.4.2 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Spring Modulith is not the only mechanism for verifying bounded contexts in-process, and for non-Spring projects or legacy codebases, it may not even be an option. ArchUnit inspects compiled JVM bytecode directly via a fluent Java DSL in standard JUnit 5 tests, providing boundary enforcement without requiring framework adoption. With ArchUnit, you can mechanically forbid circular dependencies between packages, ban cross-context persistence access, and prevent foreign domains from querying internal repositories. A team that writes their service boundaries into ArchUnit rules has converted architectural principles from human guidelines into an automated build gate.**
-
 ## Why ArchUnit for boundary enforcement
 
 Architectural guidelines documented in wikis or discussed in design reviews suffer from inevitable erosion. Under deadline pressure, a developer imports an `OrderRepository` into `BillingService` because "it was just one quick query." Without automated enforcement, the boundary silently collapses.
@@ -96,16 +99,59 @@ public static final ArchRule no_cross_boundary_jpa_relations =
 
 ### 2. Guarding the published language
 
-You can assert that any public class exposed across packages must be an immutable Java record:
+The rule you want is *"nothing in the published API may drag an internal type across the boundary"*,
+and it is best expressed as a prohibition rather than a shape assertion:
 
 ```java
 @ArchTest
-public static final ArchRule public_api_types_must_be_records =
-    classes().that().resideInAPackage("com.retailer.*.api..")
-        .and().arePublic()
-        .should().beRecords()
-        .orShould().beInterfaces();
+public static final ArchRule api_packages_must_not_leak_internals =
+    noClasses().that().resideInAPackage("com.retailer.*.api..")
+        .should().dependOnClassesThat().resideInAPackage("com.retailer..internal..")
+        .as("A published API type must not expose an internal type in its signature");
+
+@ArchTest
+public static final ArchRule api_packages_must_not_carry_persistence =
+    noClasses().that().resideInAPackage("com.retailer.*.api..")
+        .should().beAnnotatedWith("jakarta.persistence.Entity")
+        .as("Published API types are contracts, not entities");
 ```
+
+⚠️ **A note on shape assertions.** It is tempting to write *"every public API type must be a record
+or an interface"*. ArchUnit's DSL is extensible enough to express that, but **the user guide does not
+document a `beRecords()` predicate**, and predicate names differ between versions — so this page does
+not put one in a copyable example. If you want the shape rule, write it as a custom
+`ArchCondition` against `JavaClass`, or check the exact predicate name against the ArchUnit version
+in your own build before relying on it. The prohibition rules above need no such check and catch the
+defect that actually matters.
+
+### 2b. The two library APIs this page would otherwise skip
+
+`slices()` answers *"are my contexts acyclic"*. Two more library rules answer questions that come up
+inside one context, and both are documented forms:
+
+```java
+@ArchTest
+public static final ArchRule layers_are_respected =
+    layeredArchitecture()
+        .consideringAllDependencies()
+        .layer("Controller").definedBy("..controller..")
+        .layer("Service").definedBy("..service..")
+        .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller");
+
+@ArchTest
+public static final ArchRule the_domain_is_at_the_centre =
+    onionArchitecture()
+        .domainModels("com.retailer.order.domain.model..")
+        .domainServices("com.retailer.order.domain.service..")
+        .applicationServices("com.retailer.order.application..")
+        .adapter("persistence", "com.retailer.order.adapter.persistence..");
+```
+
+🔴 **Note what `layeredArchitecture()` is for, and what it is not.** It governs layers *inside* one
+bounded context. Using it to describe the whole application — a Controller layer, a Service layer and
+a Repository layer spanning every domain — is [12 · Splitting by layer](12-splitting-by-layer.md)
+expressed as an architecture test, and it will happily certify a codebase with no service boundaries
+at all as compliant.
 
 ### 3. Hexagonal / Onion architecture within a context
 
@@ -118,14 +164,43 @@ public static final ArchRule domain_must_not_depend_on_spring =
         .should().dependOnClassesThat().resideInAPackage("org.springframework..");
 ```
 
+## The programmatic form, and why you sometimes need it
+
+`@AnalyzeClasses` is the JUnit 5 entry point and takes `ImportOption` **classes**. The programmatic
+importer takes `Predefined` **constants**, and the guide's form is:
+
+```java
+JavaClasses classes = new ClassFileImporter()
+    .withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_JARS)
+    .withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS)
+    .importClasspath();
+
+myRule.check(classes);
+```
+
+Also available: `.importPackages("com.mycompany.myapp")` and `.importPath("/some/path/to/classes")`.
+Reach for this when the rule set is computed rather than declared — one rule per module read from a
+manifest, for instance — or when you want to run the same rules from a build plugin rather than a
+test.
+
+Getting the rules right is half the job. Getting them **adopted** on a codebase that already
+fails them is the other half, and it is where most ArchUnit suites die —
+[26b · Making the rules stick](26b-making-the-rules-stick.md).
+
 ## Gotchas
 
-**★ Symptom: ArchUnit test takes over a minute to run, slowing down local developer builds.**
-Cause: ArchUnit is scanning all `.class` files in third-party JAR dependencies on the classpath.
-Fix: Add `ImportOption.DoNotIncludeJars.class` to `@AnalyzeClasses`:
+**★ Symptom: the ArchUnit test dominates the local build, and it grows worse as dependencies are added.**
+Cause: ArchUnit is scanning `.class` files in third-party JARs on the classpath, so the cost tracks
+your dependency tree rather than your codebase.
+Fix: exclude JARs at the importer. The scan then tracks your own class count, which is the thing you
+control:
 ```java
-@AnalyzeClasses(packages = "com.retailer", importOptions = {ImportOption.DoNotIncludeJars.class})
+@AnalyzeClasses(
+    packages = "com.retailer",
+    importOptions = {ImportOption.DoNotIncludeJars.class, ImportOption.DoNotIncludeTests.class})
 ```
+⚠️ Exclude tests too, or a test class declared in a production package will be analysed as if it were
+production code — see [24b · When one flat package is not enough](24b-when-one-flat-package-is-not-enough.md).
 
 **★ Symptom: Test passes locally in the IDE but fails in Maven / Gradle CI.**
 Cause: Incomplete clean builds. The IDE has stale `.class` files in `target/` or `build/` that were not recompiled, or CI runs with different compiler target flags.
@@ -135,12 +210,32 @@ Fix: Run a clean compile before testing: `mvn test-compile` or `gradle testClass
 Cause: ArchUnit analyzes static bytecode references (imports, field types, method signatures, byte instructions). It cannot detect `applicationContext.getBean("orderRepository")` or reflection.
 Fix: Forbid calls to `ApplicationContext.getBean` in domain code with a dedicated ArchRule, and require constructor injection.
 
-**★ Symptom: Complex rule failure produces a massive, unreadable error message with 50 violations.**
-Cause: Introducing ArchUnit to an existing brownfield codebase all at once.
-Fix: Use ArchUnit's `FreezingArchRule` to baseline existing violations, preventing *new* boundary violations while teams refactor the existing backlog:
+**★ Symptom: the failure message names a rule but nobody can tell what architectural intent it protected.**
+Cause: the generated description restates the DSL, which reads as machinery rather than as a reason.
+Fix: `.as(...)` replaces it, and the guide's own example is exactly this use —
+`classes().that(...).should(...).as("Payload may only be accessed in a secure way")`. Write the
+sentence you would have said in the design review:
 ```java
-FreezingArchRule.freeze(no_cycles_between_domain_slices);
+noClasses().that().resideInAPackage("com.retailer.billing..")
+    .should().dependOnClassesThat().resideInAPackage("com.retailer.order.internal..")
+    .as("Billing reads order state through the order API, never through its internals — "
+      + "this is the line that makes billing extractable");
 ```
+
+**★ Symptom: `slices().matching("com.retailer.(*)..")` reports cycles between things that are not bounded contexts.**
+Cause: the capture group decides what a slice *is*, and one placed at the wrong depth partitions on
+the wrong axis. Capturing the segment after `com.retailer` gives you `order`, `billing`,
+`inventory` — contexts. Capturing one level deeper gives you `order.internal` versus `order.api` and
+reports intra-module structure as if it were an architecture violation.
+Fix: match the capture group to the level your modules actually live at, and assert the slice names
+you expect rather than trusting the regex.
+
+**★ Symptom: two teams each add boundary rules and the suites contradict each other.**
+Cause: rules were written per team rather than per boundary, so the same import is required by one
+suite and forbidden by another.
+Fix: one rule set per bounded context, owned by the context's team and living in that context's
+package, plus a single shared cycle rule for the whole application. Ownership of a rule should match
+ownership of the thing it protects.
 
 ## Interview questions
 
@@ -153,9 +248,23 @@ ArchUnit uses `slices().matching("com.retailer.(*)..").should().beFreeOfCycles()
 **★ Can ArchUnit detect database coupling such as foreign keys or shared tables?**
 ArchUnit cannot inspect database schemas directly, but it effectively prevents database coupling at the code level. It can assert that entity classes in one domain never reference entity classes in another, that repositories in one domain are never accessed by foreign services, and that database transaction annotations (`@Transactional`) do not span multiple domain repositories within a single method.
 
-**★ What is the performance impact of running ArchUnit tests in CI?**
-Because ArchUnit performs in-memory bytecode analysis without starting a JVM runtime environment, web server, or database connection, well-scoped ArchUnit tests typically complete in 1 to 3 seconds. The only significant performance cost arises if JAR scanning is enabled. By configuring `ImportOption.DoNotIncludeJars.class`, scanning is restricted to project classes, making ArchUnit ideal for fast, non-flaky CI pull-request validation gates.
+**★ What is the performance profile of running ArchUnit tests in CI?**
+ArchUnit performs in-memory bytecode analysis and starts no Spring context, web server or database,
+so the cost is dominated by how many `.class` files it reads rather than by anything at runtime. The
+variable that matters is therefore whether JAR scanning is on: with `DoNotIncludeJars` the scan
+tracks your own class count, and without it, it tracks your entire dependency tree. Measure it in
+your own build rather than trusting a figure — the number depends entirely on codebase size, and
+this page will not invent one for you.
+
+**★ When would you reach for `layeredArchitecture()` and when is it the wrong tool?**
+It is the right tool for describing layers *within* one bounded context — the adapters, the
+application service and the domain model of the order module, where a dependency pointing the wrong
+way is a genuine defect. It is the wrong tool for describing the application, because a Controller /
+Service / Repository layering that spans every domain certifies a package-by-layer codebase as
+architecturally sound while it has no service boundaries at all. If you want the whole-application
+rule, that is `slices()` on contexts, not layers.
+
 
 ---
 
-← [Named interfaces](25b-named-interfaces.md) · [Topic index](README.md) · Next → [Build modules and JPMS](27-build-modules-and-jpms.md)
+← [Can the module boot alone?](25c-can-the-module-boot-alone.md) · [Topic index](README.md) · Next → [Making the rules stick](26b-making-the-rules-stick.md)

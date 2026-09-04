@@ -1,7 +1,7 @@
 ---
 title: "In a Customer-Supplier relationship, the downstream customer has genuine leverage over the upstream supplier — upstream prioritizes downstream requirements and negotiates delivery dates in sprint planning"
 sidebar_label: "31 · Customer-supplier"
-sidebar_position: 46
+sidebar_position: 47
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "A Shared Kernel is an explicit, co-owned subset of domain code and schema shared between bounded contexts — the most expensive relationship in DDD, survivable only with strict admission criteria and automated CI gates"
 sidebar_label: "33 · Shared kernel"
-sidebar_position: 48
+sidebar_position: 49
 ---
 
 <span className="db-tier t-master">Master</span>

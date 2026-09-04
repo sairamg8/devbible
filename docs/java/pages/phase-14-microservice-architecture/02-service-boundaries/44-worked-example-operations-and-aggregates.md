@@ -1,7 +1,7 @@
 ---
 title: "Worked example: analyzing business operations, candidate aggregates, and transactional invariants in an e-commerce order system"
 sidebar_label: "44 · Worked example: operations and aggregates"
-sidebar_position: 59
+sidebar_position: 60
 ---
 
 <span className="db-tier t-master">Master</span>

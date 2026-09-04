@@ -1,7 +1,7 @@
 ---
 title: "Redrawing a service boundary incurs severe organizational and technical costs that must be rigorously weighed against the coupling tax of the current design"
 sidebar_label: "42 · The cost of changing a boundary"
-sidebar_position: 57
+sidebar_position: 58
 ---
 
 <span className="db-tier t-master">Master</span>
