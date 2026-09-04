@@ -122,7 +122,7 @@ export function NavigationEvents() {
 }
 ```
 
-and it must be mounted inside a `Suspense` boundary, because `useSearchParams` *"causes client-side rendering up to the closest `Suspense` boundary during prerendering"*. That whole subject is **04i · `usePathname` and `useSearchParams`** *(not written yet)*.
+and it must be mounted inside a `Suspense` boundary, because `useSearchParams` *"causes client-side rendering up to the closest `Suspense` boundary during prerendering"*. That whole subject is [04j · `usePathname` and `useSearchParams`](04j-usepathname-and-usesearchparams.md).
 
 ## The `javascript:` URL warning
 
@@ -192,7 +192,7 @@ return <form key={bfcacheId}>{/* fields */}</form>
 
 **Symptom: `useRouter()` throws or returns nothing in a component that renders on the server.** Cause: it is a Client Component hook. Fix: add `'use client'` to the file that calls it, and keep that file as small as possible so the boundary does not swallow the rest of the tree.
 
-**Symptom: a redirect written as `router.push` inside a Server Component's render does nothing.** Cause: `useRouter` does not exist there at all. Fix: the server-side equivalent is `redirect()` — see **04g · `redirect` and `permanentRedirect`** *(not written yet)*.
+**Symptom: a redirect written as `router.push` inside a Server Component's render does nothing.** Cause: `useRouter` does not exist there at all. Fix: the server-side equivalent is `redirect()` — see [04g · `redirect` and `permanentRedirect`](04g-redirect-and-permanentredirect.md).
 
 ## Interview questions
 
