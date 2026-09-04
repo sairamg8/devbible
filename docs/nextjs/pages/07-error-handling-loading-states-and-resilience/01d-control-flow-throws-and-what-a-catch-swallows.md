@@ -1,7 +1,7 @@
 ---
 title: "`notFound()`, `redirect()` and `permanentRedirect()` throw in order to work, which is why an honest `try`/`catch` is the thing most likely to break them"
 sidebar_label: "01d · Control-flow throws"
-sidebar_position: 102
+sidebar_position: 4
 description: "The third shape of failure — expected errors that use a throw as their transport — the full list of framework calls that rely on it, what a catch block silently swallows, and unstable_rethrow's exact contract at 16.3.4."
 ---
 

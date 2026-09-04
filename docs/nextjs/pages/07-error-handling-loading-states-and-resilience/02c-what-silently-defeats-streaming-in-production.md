@@ -1,7 +1,7 @@
 ---
 title: "Streaming can be perfect on the server and arrive as one blocking response anyway, because five separate layers buffer by default and none of them report it"
 sidebar_label: "02c · What silently defeats streaming"
-sidebar_position: 106
+sidebar_position: 8
 description: "Reverse proxies, CDNs, serverless response streaming, compression, browser buffering and static export — the layers that collect your chunks before the user sees them, and how to verify the response is actually arriving progressively."
 ---
 

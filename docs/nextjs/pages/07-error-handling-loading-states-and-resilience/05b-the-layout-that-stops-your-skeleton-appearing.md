@@ -1,7 +1,7 @@
 ---
 title: "If the layout awaits runtime data, `loading.js` shows no fallback for it and navigation simply blocks — the skeleton you wrote is correct and never renders"
 sidebar_label: "05b · The layout that blocks your skeleton"
-sidebar_position: 120
+sidebar_position: 16
 description: "The documented caveat that explains a skeleton that never appears, how Cache Components turns the same mistake into a build-time error instead of a silent stall, and the push-dynamic-access-down pattern that fixes both."
 ---
 

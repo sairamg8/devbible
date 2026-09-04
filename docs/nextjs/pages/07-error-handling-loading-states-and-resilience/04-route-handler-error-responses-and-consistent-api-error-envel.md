@@ -1,7 +1,7 @@
 ---
 title: "A Route Handler has no error boundary, no `error.js` and no fallback UI — you return the failure yourself or the framework returns a bare 500 on your behalf"
 sidebar_label: "04 · Route Handler error responses"
-sidebar_position: 4
+sidebar_position: 13
 description: "What the route.js reference actually guarantees, why context.params is a promise, why headers are read-only once you are inside a handler, and the three things wrong with the one error example the documentation shows."
 ---
 

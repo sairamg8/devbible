@@ -1,7 +1,7 @@
 ---
 title: "The client sends Server Actions one at a time, so a queued action and a failed action look identical to a user and identical to most telemetry"
 sidebar_label: "03b · Sequential dispatch"
-sidebar_position: 110
+sidebar_position: 10
 description: "Why Promise.all cannot parallelise actions from the client, what a slow action does to every click behind it, and why disabling a pending control is a correctness measure rather than polish."
 ---
 

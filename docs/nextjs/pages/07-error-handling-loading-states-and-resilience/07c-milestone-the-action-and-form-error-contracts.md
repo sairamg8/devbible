@@ -1,7 +1,7 @@
 ---
 title: "Rows 5 and 6 never reach a boundary at all, so the milestone's next step is entirely about return values — and about one optimistic update that has to be able to take itself back"
 sidebar_label: "07c · Milestone: action and form contracts"
-sidebar_position: 131
+sidebar_position: 23
 description: "Chapter 7's capstone, step three: the drag-and-drop reconcile that must revert on rejection and explain itself, why updateTag rather than revalidateTag, ownership enforced in the query, and the card form's validation contract."
 ---
 

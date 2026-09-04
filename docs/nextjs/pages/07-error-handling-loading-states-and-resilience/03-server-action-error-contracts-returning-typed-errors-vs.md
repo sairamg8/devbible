@@ -1,7 +1,7 @@
 ---
 title: "A Server Action's response carries two things at once, and which of them you get back is decided by whether the action revalidated, redirected, or merely returned"
 sidebar_label: "03 · Server Action error contracts"
-sidebar_position: 3
+sidebar_position: 9
 description: "The single-roundtrip response model, the four cache updates and which of them include a re-render, the ordering rule redirect imposes, and where throwing is still the right answer inside an action."
 ---
 

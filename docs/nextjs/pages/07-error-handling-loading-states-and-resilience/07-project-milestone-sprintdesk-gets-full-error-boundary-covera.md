@@ -1,7 +1,7 @@
 ---
 title: "Full boundary coverage is not a file in every folder — it is a failure map, one decision per dependency about what its outage should cost, and boundaries placed to match those decisions rather than to match the directory tree"
 sidebar_label: "07 · Milestone: boundary coverage"
-sidebar_position: 7
+sidebar_position: 21
 description: "Chapter 7's capstone, act one: enumerating SprintDesk's failure modes, choosing a degradation rung per dependency, placing error.tsx and catchError boundaries where the blast radius should stop, and acceptance criteria you can check by reading the tree rather than by breaking production."
 ---
 

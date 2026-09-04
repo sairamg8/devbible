@@ -1,7 +1,7 @@
 ---
 title: "`global-error` renders its own document, so it inherits none of your app — including the theme"
 sidebar_label: "10d · `global-error` and what it does not inherit"
-sidebar_position: 13
+sidebar_position: 30
 description: "The root layout's only boundary: why global-error gets no global styles, fonts or theme, why metadata exports do not work there, and the version history that explains why it often ships unlooked-at."
 ---
 

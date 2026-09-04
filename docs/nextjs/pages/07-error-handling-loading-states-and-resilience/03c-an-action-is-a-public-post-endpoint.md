@@ -1,7 +1,7 @@
 ---
 title: "A Server Action is a POST endpoint that anyone who can reach the page can call, so every check the form performs has to be repeated inside the action"
 sidebar_label: "03c · An action is a public POST endpoint"
-sidebar_position: 111
+sidebar_position: 11
 description: "The four framework-level protections and their exact limits, why render-time gating is not a security boundary, why schema validation cannot answer an ownership question, and when a check should fail loudly rather than silently."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "`unauthorized()` and `forbidden()` are the 401 and 403 halves of the error model, and where you check decides the status code"
 sidebar_label: "11 · Auth interrupts: 401 and 403"
-sidebar_position: 14
+sidebar_position: 31
 description: "The experimental authInterrupts flag, unauthorized.js and forbidden.js, and the streaming trade-off between a visible shell and a real status code."
 ---
 
@@ -262,4 +262,4 @@ guard in the DAL so every entry point passes through it.
 
 ---
 
-**Next:** [11b · They work by throwing, and that breaks four things](11b-auth-interrupts-throw.md)
+**Previous:** [10d · `global-error` and what it does not inherit](10d-global-error-and-what-it-does-not-inherit.md) · **Next:** [11b · They work by throwing, and that breaks four things](11b-auth-interrupts-throw.md)

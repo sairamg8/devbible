@@ -1,7 +1,7 @@
 ---
 title: "The framework gives you one recovery button and no retry policy at all, so backoff, attempt limits and timeouts are things you write or things your app does not have"
 sidebar_label: "06 · Retry, fallback and degradation"
-sidebar_position: 6
+sidebar_position: 18
 description: "What retry() and reset() actually recover, what the documentation pointedly does not specify about retrying, why an unbounded retry button is a load generator, and the degradation ladder that decides what a failing dependency should cost the user."
 ---
 

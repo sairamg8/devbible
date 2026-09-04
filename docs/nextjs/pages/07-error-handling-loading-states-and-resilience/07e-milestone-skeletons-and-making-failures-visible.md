@@ -1,7 +1,7 @@
 ---
 title: "The last step is the one that decides whether any of the previous ones were worth doing: if a mid-stream failure returns 200, the only thing that ever sees it is the boundary you wired to report"
 sidebar_label: "07e · Milestone: making failures visible"
-sidebar_position: 133
+sidebar_position: 25
 description: "Chapter 7's capstone, final step: sizing SprintDesk's skeletons so loading, loaded and error states occupy the same space, deciding against a board-level loading.tsx, and reporting from the boundaries because no status code will ever tell you the board is broken."
 ---
 

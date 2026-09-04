@@ -1,7 +1,7 @@
 ---
 title: "Every Suspense boundary is a layout-shift risk, a hydration unit and a delay on whatever it contains, so the right number of them is the smallest number that does the job"
 sidebar_label: "05c · Skeletons and layout shift"
-sidebar_position: 121
+sidebar_position: 17
 description: "Why a skeleton must match the dimensions of what replaces it, why an LCP element inside a boundary waits for a script even when its image is preloaded, what boundaries do for INP, and React's warning that it may use a boundary you did not expect it to."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A `notFound()` that fires mid-stream cannot be a 404, so Next.js ships a `noindex` meta tag instead — and that is why the existence check belongs before the first `await`"
 sidebar_label: "02b · `notFound()` after the first chunk"
-sidebar_position: 105
+sidebar_position: 7
 description: "The exact rule for when streaming starts, why a streamed 404 is a 200, the noindex tag and soft-404 labelling that follow, how a mid-stream redirect degrades to a client-side one, and the two places you can still set a real status."
 ---
 

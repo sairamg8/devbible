@@ -1,7 +1,7 @@
 ---
 title: "\"You cannot see this board\" is three different facts with three different remedies, and the milestone's job is to stop them collapsing into one unhelpful page"
 sidebar_label: "07d · Milestone: the three auth answers"
-sidebar_position: 132
+sidebar_position: 24
 description: "Routing SprintDesk's missing-board, wrong-team and expired-session cases to their own files, the information-disclosure trade-off hidden in the order of the checks, why none of the three calls may sit inside a try, and the stale-tab error that needs a reload rather than a retry."
 ---
 

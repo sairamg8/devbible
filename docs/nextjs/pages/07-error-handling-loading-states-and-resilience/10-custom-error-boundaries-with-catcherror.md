@@ -1,7 +1,7 @@
 ---
 title: "`catchError` gives you an error boundary that can retry a failed Server Component"
 sidebar_label: "10 · Custom error boundaries with `catchError`"
-sidebar_position: 10
+sidebar_position: 27
 description: "The 16.3 error boundary API: component-level placement, a retry() that re-runs server rendering, and how retry() differs from the reset() that still sits beside it."
 ---
 
@@ -271,4 +271,4 @@ a formality.
 
 ---
 
-**Next:** [10b · What error boundaries do not catch](10b-what-boundaries-do-not-catch.md)
+**Previous:** [09 · `error.js` props: `retry` and `reset`](09-errorjs-props-retry-and-reset.md) · **Next:** [10b · What error boundaries do not catch](10b-what-boundaries-do-not-catch.md)

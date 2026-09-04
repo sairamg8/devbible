@@ -1,7 +1,7 @@
 ---
 title: "The failure map decides the tree: each row names the smallest scope that should survive, and that scope is what tells you whether you need a file, a component, or nothing at all"
 sidebar_label: "07b · Milestone: placing the boundaries"
-sidebar_position: 130
+sidebar_position: 22
 description: "Chapter 7's capstone, step two: the SprintDesk boundary tree with a reason for every file, why three failure-map rows deliberately get no error.tsx, degrading in the component instead of throwing, and an acceptance checklist you can run by reading the tree."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "An offline Server Action resolves later instead of rejecting now, which leaves a button that looks frozen"
 sidebar_label: "12b · Offline actions and testing"
-sidebar_position: 17
+sidebar_position: 34
 description: "Retrying Server Actions with no client code, the queued-navigation surprise, and why offline behaviour must be tested against a production build."
 ---
 
@@ -198,4 +198,4 @@ values, typically through `useActionState`.
 
 ---
 
-**Previous:** [12 · Network resilience and `useOffline`](12-network-resilience-and-useoffline.md)
+**Previous:** [12 · Network resilience and `useOffline`](12-network-resilience-and-useoffline.md) · **Next chapter →** [08 · State management in an RSC world](../08-state-management-in-an-rsc-world/01-explanation.md)

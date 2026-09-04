@@ -1,7 +1,7 @@
 ---
 title: "Once the first chunk is on the wire the status code is spent, so a failure mid-stream is a hole in the page rather than an error response"
 sidebar_label: "02 · Errors in streaming"
-sidebar_position: 2
+sidebar_position: 6
 description: "What actually happens when an async Server Component throws after streaming has started: the nearest boundary swaps in place, the rest of the document survives, and 200 OK is already committed and cannot be taken back."
 ---
 

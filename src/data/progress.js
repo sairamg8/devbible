@@ -482,7 +482,7 @@ export const LANGUAGES = {
       {n: 4, slug: '04-data-fetching-in-the-app-router', name: "Data fetching in the App Router", part: 'Refreshed for 16.3', topics: 39, pages: 39},
       {n: 5, slug: '05-caching-ppr-and-cache-components', name: "Caching, PPR and Cache Components", part: 'Refreshed for 16.3', topics: 21, pages: 21},
       {n: 6, slug: '06-ssg-isr-and-ssr-strategy', name: "SSG, ISR and SSR strategy", part: 'Refreshed for 16.3', topics: 26, pages: 26},
-      {n: 7, slug: '07-error-handling-loading-states-and-resilience', name: "Error handling, loading states and resilience", part: 'Refreshed for 16.3', topics: 17, pages: 9, pagesPlanned: 17},
+      {n: 7, slug: '07-error-handling-loading-states-and-resilience', name: "Error handling, loading states and resilience", part: 'Refreshed for 16.3', topics: 35, pages: 35},
       {n: 8, slug: '08-state-management-in-an-rsc-world', name: "State management in an RSC world", part: 'Refreshed for 16.3', topics: 10, pages: 2, pagesPlanned: 10},
       {n: 9, slug: '09-styling-and-ui', name: "Styling and UI", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 10, slug: '10-forms-authentication-and-security-hardening', name: "Forms, authentication and security hardening", part: 'Refreshed for 16.3', topics: 13, pages: 6, pagesPlanned: 13},

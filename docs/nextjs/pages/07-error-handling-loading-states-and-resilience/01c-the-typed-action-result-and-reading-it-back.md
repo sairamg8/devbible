@@ -1,7 +1,7 @@
 ---
 title: "A discriminated union is the action contract that survives TypeScript, and the form half has three details the documented example carries and everyone drops"
 sidebar_label: "01c · The typed action result"
-sidebar_position: 101
+sidebar_position: 3
 description: "Shaping an action's return value as ActionResult<T>, why null beats a fake initial state, and the useActionState wiring — aria-live, aria-invalid, the pending flag and where useFormStatus actually reads from."
 ---
 

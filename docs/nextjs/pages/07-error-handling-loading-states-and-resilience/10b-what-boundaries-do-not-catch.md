@@ -1,7 +1,7 @@
 ---
 title: "An error boundary catches rendering, and almost nothing else"
 sidebar_label: "10b · What boundaries do not catch"
-sidebar_position: 11
+sidebar_position: 28
 description: "Event handlers, async code, the startTransition exception, why notFound() and redirect() get swallowed, and the line between expected errors and uncaught exceptions."
 ---
 

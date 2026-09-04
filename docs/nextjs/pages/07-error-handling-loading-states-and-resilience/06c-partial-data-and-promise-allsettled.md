@@ -1,7 +1,7 @@
 ---
 title: "`Promise.all` makes a dashboard all-or-nothing, and the fix — `allSettled` — is also the most effective way to make a broken feature invisible"
 sidebar_label: "06c · Partial data with `allSettled`"
-sidebar_position: 126
+sidebar_position: 20
 description: "Rendering what succeeded when one of several independent reads fails, the reporting obligation that comes with a promise that never rejects, and when partial data is dishonest rather than resilient."
 ---
 

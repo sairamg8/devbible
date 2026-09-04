@@ -1,7 +1,7 @@
 ---
 title: "Next.js prescribes no error-response shape for a Route Handler, so the envelope, the status mapping and the correlation id are all yours to design and to enforce"
 sidebar_label: "04b · Designing the error envelope"
-sidebar_position: 115
+sidebar_position: 14
 description: "A minimum useful envelope — machine-readable code, safe message, correlation id — the handler's substitute for error.digest, and why the status code is the only part of your failure that generic infrastructure understands."
 ---
 

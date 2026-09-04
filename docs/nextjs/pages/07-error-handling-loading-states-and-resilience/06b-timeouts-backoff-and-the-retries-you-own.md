@@ -1,7 +1,7 @@
 ---
 title: "The retries that actually keep a page up are the ones around your own data access, where you can bound the wait, back off, and refuse to retry what will never succeed"
 sidebar_label: "06b · Timeouts, backoff and your own retries"
-sidebar_position: 125
+sidebar_position: 19
 description: "AbortSignal.timeout as the deadline the framework does not impose, why only idempotent operations may be retried automatically, full jitter, and the retry budget that stops a partial outage becoming a total one."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A boundary does not wrap the layout it sits beside — which is why the most common placement is the wrong one"
 sidebar_label: "10c · Where boundaries sit in the hierarchy"
-sidebar_position: 12
+sidebar_position: 29
 description: "Where error.js actually sits in the component hierarchy: what it wraps, why a layout's own error escapes the error.tsx next to it, and the two different fixes."
 ---
 

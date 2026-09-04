@@ -1,7 +1,7 @@
 ---
 title: "With `useOffline`, a dropped connection stops being an error and becomes a pending state"
 sidebar_label: "12 · Network resilience and `useOffline`"
-sidebar_position: 16
+sidebar_position: 33
 description: "The experimental useOffline flag, exactly what it covers, why the hook beats navigator.onLine, and the loading state that now means two different things."
 ---
 
@@ -237,4 +237,4 @@ route also prefetched its per-link URL data, in which case they render immediate
 
 ---
 
-**Next:** [12b · Retrying Server Actions, and testing any of this](12b-offline-server-actions-and-testing.md)
+**Previous:** [11b · They work by throwing](11b-auth-interrupts-throw.md) · **Next:** [12b · Retrying Server Actions, and testing any of this](12b-offline-server-actions-and-testing.md)

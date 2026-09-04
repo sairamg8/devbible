@@ -1,7 +1,7 @@
 ---
 title: "The auth interrupts work by throwing, and every way of losing that throw is a silent authorization bypass"
 sidebar_label: "11b · They work by throwing"
-sidebar_position: 15
+sidebar_position: 32
 description: "never return types, try/catch suppression, the un-awaited promise that renders the page anyway, and why neither function works in the root layout."
 ---
 
@@ -203,4 +203,4 @@ a promise that is never awaited.
 
 ---
 
-**Previous:** [11 · Auth interrupts: 401 and 403](11-auth-interrupts-forbidden-and-unauthorized.md)
+**Previous:** [11 · Auth interrupts: 401 and 403](11-auth-interrupts-forbidden-and-unauthorized.md) · **Next:** [12 · Network resilience and `useOffline`](12-network-resilience-and-useoffline.md)

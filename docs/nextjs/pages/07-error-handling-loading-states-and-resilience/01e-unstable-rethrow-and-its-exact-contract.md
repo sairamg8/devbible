@@ -1,7 +1,7 @@
 ---
 title: "`unstable_rethrow` is a repair tool with a precise contract — top of the catch, cleanup in `finally`, and still not recommended for production at 16.3.4"
 sidebar_label: "01e · `unstable_rethrow`"
-sidebar_position: 103
+sidebar_position: 5
 description: "The escape hatch for a catch block that must handle both application errors and framework control-flow throws: the four rules from the reference, why cleanup after the call leaks, and the structural fix the docs prefer to the tool."
 ---
 

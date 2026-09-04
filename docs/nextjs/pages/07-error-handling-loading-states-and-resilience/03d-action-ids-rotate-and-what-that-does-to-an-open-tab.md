@@ -1,7 +1,7 @@
 ---
 title: "Action IDs are build artifacts that rotate at least every fortnight, so an open tab can hold a reference to an action the server no longer has"
 sidebar_label: "03d · Action IDs rotate"
-sidebar_position: 112
+sidebar_position: 12
 description: "Why \"Failed to find Server Action\" appears after a deploy through no fault of the code, the encryption key that makes it intermittent instead of universal, and why the documented fix is a UI decision rather than an ops one."
 ---
 

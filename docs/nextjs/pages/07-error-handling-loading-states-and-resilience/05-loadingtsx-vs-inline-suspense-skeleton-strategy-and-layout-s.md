@@ -1,7 +1,7 @@
 ---
 title: "`loading.tsx` is one `<Suspense>` boundary the framework places for you, in a position you did not choose — which is why the documentation tells you to prefer writing your own"
 sidebar_label: "05 · `loading.tsx` vs inline Suspense"
-sidebar_position: 5
+sidebar_position: 15
 description: "Exactly what loading.js wraps and what it pointedly does not, the documented comparison table, why a loading.js high in the tree satisfies the prerenderer and costs you granular streaming, and when the file convention is still the right answer."
 ---
 

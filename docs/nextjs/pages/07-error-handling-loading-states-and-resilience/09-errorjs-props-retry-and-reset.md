@@ -1,7 +1,7 @@
 ---
 title: "`retry` did not replace `reset` — they are two props that recover from an error in two different ways"
 sidebar_label: "09 · `error.js` props: `retry` and `reset`"
-sidebar_position: 9
+sidebar_position: 26
 description: "retry() re-fetches and re-renders, reset() only re-renders; the version history that dates both; and what error.message and error.digest actually carry in production."
 ---
 
@@ -266,4 +266,4 @@ Render the digest when present, so support can find the log line; log the full e
 
 ---
 
-← [07 · SprintDesk gets full error boundary coverage](07-project-milestone-sprintdesk-gets-full-error-boundary-covera.md) · Next → [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md)
+← [07e · Milestone: making failures visible](07e-milestone-skeletons-and-making-failures-visible.md) · Next → [10 · Custom error boundaries with `catchError`](10-custom-error-boundaries-with-catcherror.md)

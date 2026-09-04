@@ -1,7 +1,7 @@
 ---
 title: "An expected error is data, so it travels the way data travels — as the action's return value, read back through `useActionState`"
 sidebar_label: "01b · Expected errors are return values"
-sidebar_position: 100
+sidebar_position: 2
 description: "Why the documentation tells you to avoid try/catch in Server Functions, the shape of a typed action result, the aria-live and pending details the documented example carries, and what throwing an expected error actually costs you."
 ---
 
