@@ -60,7 +60,7 @@ What a user experiences at the expiry boundary is the part people get wrong. The
 > *"After 60 seconds has passed, the next request will still return the cached (now stale) page"* … *"The cache is invalidated and a new version of the page begins generating in the background"* … *"Once generated successfully, the next request will return the updated page and cache it for subsequent requests"*
 > — [ISR guide](https://nextjs.org/docs/app/guides/incremental-static-regeneration)
 
-So `revalidate: 60` does not mean "at most 60 seconds old". It means "at least 60 seconds old before anyone triggers a refresh, and the trigger*ing* visitor still sees the old one." On a low-traffic route the real staleness is unbounded: no request, no regeneration. The mechanics are [ch5 · revalidation and time-based ISR](../05-caching-ppr-and-cache-components/04-revalidation-time-based-isr.md).
+So `revalidate: 60` does not mean "at most 60 seconds old". It means "at least 60 seconds old before anyone triggers a refresh, and the trigger*ing* visitor still sees the old one." On a low-traffic route the real staleness is unbounded: no request, no regeneration. The mechanics are [ch5 · revalidation and lifetimes](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/05-revalidation-and-lifetimes.md).
 
 ### Rung 2 — on-demand: the writer tells you
 

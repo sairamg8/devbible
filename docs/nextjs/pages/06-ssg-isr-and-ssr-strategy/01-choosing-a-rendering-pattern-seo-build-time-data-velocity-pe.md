@@ -32,7 +32,7 @@ Two consequences follow immediately, and both are load-bearing for every decisio
 > *"Reading `cookies()` here doesn't opt-in the whole route into dynamic rendering, the way the previous rendering model did. The Suspense boundary provides fallback UI where the runtime access streams, while static and cached content still ship in the initial HTML."*
 > — [Caching](https://nextjs.org/docs/app/getting-started/caching)
 
-Everything else on these four chunks is downstream of that sentence. If you are on the previous model, personalization is an all-or-nothing route-level decision and you will make painful trade-offs. If Cache Components is on, personalization is a boundary-placement problem and most of the painful trade-offs disappear. Know which model you are in **before** you argue about rendering patterns; see [ch5 · the explicit caching model](../05-caching-ppr-and-cache-components/01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md).
+Everything else on these four chunks is downstream of that sentence. If you are on the previous model, personalization is an all-or-nothing route-level decision and you will make painful trade-offs. If Cache Components is on, personalization is a boundary-placement problem and most of the painful trade-offs disappear. Know which model you are in **before** you argue about rendering patterns; see [ch5 · choosing a cache directive](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/01-choosing-a-directive.md).
 
 ## The default is a static shell, and the exact list of things that take work out of it
 

@@ -20,7 +20,7 @@ Not part of the ordering, because it changes what the other answers *mean*. Chec
 - **If on:** the unit of the decision is the component. `cookies()` in a boundary is a hole, not a route-wide verdict, and `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` **do not exist** — `v16.0.0` removes them when the flag is enabled. Any answer below phrased as a segment config value has to be re-expressed as `use cache`, `cacheLife`, `cacheTag` and boundary placement.
 - **If off:** the unit is the route, the segment config surface is exactly the API you have, and every "hole" below is really "an all-or-nothing route decision, or a Client Component".
 
-🔴 **This is why a rendering strategy written as a list of segment config exports ages badly.** You are writing down an API the flag deletes. Write the strategy as *"the product grid is cached for an hour and tagged `catalog`; the cart badge is a hole"* — sentences that survive the migration — and let the flags be an implementation detail of the model you happen to be in. [ch5 · the explicit caching model](../05-caching-ppr-and-cache-components/01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md) is the migration surface.
+🔴 **This is why a rendering strategy written as a list of segment config exports ages badly.** You are writing down an API the flag deletes. Write the strategy as *"the product grid is cached for an hour and tagged `catalog`; the cart badge is a hole"* — sentences that survive the migration — and let the flags be an implementation detail of the model you happen to be in. [ch5 · choosing a cache directive](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/01-choosing-a-directive.md) is the migration surface.
 
 ## The eight questions
 
