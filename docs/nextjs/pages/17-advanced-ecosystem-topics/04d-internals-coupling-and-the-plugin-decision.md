@@ -1,7 +1,7 @@
 ---
 title: "Importing from next/dist is the one extension technique that always eventually breaks — and most requests for a Next.js plugin are really a request for a shared config package plus a codemod"
 sidebar_label: "04d · Internals and the decision"
-sidebar_position: 14
+sidebar_position: 17
 ---
 
 <span className="db-tier t-when">When Needed</span>

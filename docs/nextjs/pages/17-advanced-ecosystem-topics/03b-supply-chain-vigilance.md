@@ -1,7 +1,7 @@
 ---
 title: "Supply-chain vigilance: the two worst Next.js vulnerabilities of 2026 were not in Next.js — one arrived through an image codec four levels down the dependency graph, and the other had no workaround at all"
 sidebar_label: "03b · Supply-chain vigilance"
-sidebar_position: 10
+sidebar_position: 13
 ---
 
 <span className="db-tier t-understand">Understand</span>

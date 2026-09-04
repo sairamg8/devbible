@@ -1,7 +1,7 @@
 ---
 title: "Next.js has no plugin API — it has a config object, a function that returns it, and a short list of documented seams; everything people call a 'Next.js plugin' is a function from NextConfig to NextConfig"
 sidebar_label: "04 · Framework extension"
-sidebar_position: 11
+sidebar_position: 14
 ---
 
 <span className="db-tier t-when">When Needed</span>

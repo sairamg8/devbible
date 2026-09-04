@@ -1,14 +1,13 @@
 ---
 title: "The document shell is where a migration stops being mechanical: `next/head` becomes a data export rather than a component, the global-CSS restriction is lifted rather than moved, and every provider that wrapped your whole tree needs a `'use client'` file it never had before"
 sidebar_label: "02f · The shell, metadata and styles"
-sidebar_position: 21
+sidebar_position: 10
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [How to migrate from Pages to the App Router](https://nextjs.org/docs/app/guides/migrating/app-router-migration) (`version: 16.3.4`, `lastUpdated: 2026-08-25`), Steps 2, 3 and 7 and the *Upgrading New Features* section on `next/script` and `next/font`.
 > Target: **Next.js 16.3.4 · React 19.2.8 · Node 20.9 floor**. Documentation-verified; **no sandbox run**.
-> ⚠️ `sidebar_position: 21` is deliberately out of range — see the note at the foot of [02e](02e-the-two-routers-and-the-client-side-hooks.md).
 
 **Two files that every Pages Router codebase has — `_app.tsx` and `_document.tsx` — collapse into one, and the collapse is not a merge. `next/head`, a component you rendered conditionally inside a tree, becomes `metadata`, a value you export from a module. Global stylesheets stop being restricted to one file, which sounds like a relaxation and is actually a new way to create load-order bugs. And every React Context provider that used to wrap `<Component />` in `_app.tsx` now needs a dedicated `'use client'` file, because the root layout is a Server Component. None of these are hard individually. Together they are why the first App Router route takes a week and the second takes an hour.**
 

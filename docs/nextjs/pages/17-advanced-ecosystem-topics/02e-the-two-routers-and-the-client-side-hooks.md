@@ -1,14 +1,13 @@
 ---
 title: "`next/router` and `next/navigation` are two different modules exporting two different `useRouter` hooks, and importing the wrong one is the single most common error in a Pages-to-App migration because the import line still looks correct"
 sidebar_label: "02e · The two routers and the hooks"
-sidebar_position: 20
+sidebar_position: 9
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [How to migrate from Pages to the App Router](https://nextjs.org/docs/app/guides/migrating/app-router-migration) (`version: 16.3.4`, `lastUpdated: 2026-08-25`), Step 5 *Migrating Routing Hooks* and its `next/compat/router` note.
 > Target: **Next.js 16.3.4 · React 19.2.8 · Node 20.9 floor**. Documentation-verified; **no sandbox run**.
-> ⚠️ `sidebar_position: 20` is deliberately out of range — see the note at the foot of this page.
 
 **There are two `useRouter` hooks. One is exported by `next/router` and one by `next/navigation`, they have different APIs, and the only thing distinguishing them at a call site is a string in an import statement that a code reviewer's eye slides straight over. The guide's own wording is that the new hook *"has different behavior"* — not a superset, not a rename. Six properties you relied on are gone outright, `router.query` has split into two separate props, and all three new hooks are Client-Component-only. This is the chunk that decides whether your shared `components/` directory survives the migration, and the escape hatch for that — `next/compat/router` — is the least-known useful thing in the guide.**
 
@@ -276,7 +275,6 @@ More than it looks like. The stated reason is that *"any component that uses the
 
 ---
 
-⚠️ **Position note for the coordinator:** this chunk and its sibling carry `sidebar_position: 20`/`21`/`22` because positions 9–12 in this directory were already taken by `03`, `03b`, `04` and `04b` when they were written. They belong immediately after `02d`. Renumbering them — and cascading `03` onward — requires editing files this session does not own.
 
 ---
 

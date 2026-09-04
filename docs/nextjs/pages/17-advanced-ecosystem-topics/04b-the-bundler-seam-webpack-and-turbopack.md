@@ -1,7 +1,7 @@
 ---
 title: "A webpack() function in next.config.js is not recognised under Turbopack, and Turbopack has been the default bundler since 16.0 — so the most common way to extend a Next.js build silently stopped applying"
 sidebar_label: "04b · The bundler seam"
-sidebar_position: 12
+sidebar_position: 15
 ---
 
 <span className="db-tier t-when">When Needed</span>

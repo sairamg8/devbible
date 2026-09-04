@@ -1,7 +1,7 @@
 ---
 title: "The extension points you will actually use are not config keys at all — they are files whose mere existence rewires the compiler, the server lifecycle, the request path and the document shell"
 sidebar_label: "04c · Seams that are files"
-sidebar_position: 13
+sidebar_position: 16
 ---
 
 <span className="db-tier t-when">When Needed</span>

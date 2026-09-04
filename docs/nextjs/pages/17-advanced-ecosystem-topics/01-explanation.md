@@ -1,143 +1,63 @@
 ---
+title: "The four topics in this chapter share one property: each is a decision about where Next.js ends and something else begins — another deployed application, another router, an auditor's framework, or your own build tooling"
+sidebar_label: "01 · Overview: the chapter map"
 sidebar_position: 0
-title: "Overview"
-sidebar_label: "Overview"
-description: "Chapter 17 overview"
+description: "Chapter index for Advanced Ecosystem Topics: multi-zone architecture, Pages to App Router migration, enterprise compliance and supply-chain risk, and framework extension. What each concept settles, and where the boundary material actually lives."
 ---
 
-# ▲ Advanced Ecosystem Topics
+<span className="db-tier t-know">Know</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-04 for **Next.js 16.3.4 · React 19.2.8 · Node 20.9 floor**. Every page in this
+> chapter was written against documentation whose own metadata reports `version: 16.3.4`; the
+> per-page `> Verified:` lines name the exact sources. Documentation-verified; **no sandbox run** —
+> and note that **`next` is not installed in this checkout**, so no page here rests on a probe of
+> the Next.js package.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**Everything in this chapter is an edge case in the literal sense: a question about the edge of the framework.** Where does one Next.js application stop and the next one start? Where does the router you have stop and the router you want start? Where does the framework's responsibility for security stop and yours start? Where do the documented seams stop and `next/dist` start? None of these are things you reach for weekly, which is why they are here rather than in the chapters on routing, rendering or data. All four are things that, on the day you need them, you need to get right the first time — because each one is expensive to reverse.
 
+## Chunks
 
+| # | Chunk | Covers |
+|---|---|---|
+| 01 | **[Multi-zone architecture](01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md)** | What a zone actually is, and how it differs from runtime-composition micro-frontends. The organisational trade-off: independent deploy cadence bought with duplicated bundles and hard navigations |
+| 01b | **[Routing requests to a zone](01b-routing-requests-to-a-zone.md)** | `basePath`, `assetPrefix` and `rewrites`, and the eight-step route-checking order. 🔴 `basePath` is inlined into client bundles at build time and cannot change without a rebuild |
+| 01c | **[Crossing a zone boundary](01c-crossing-zone-boundaries.md)** | 🔴 Why `next/link` cannot soft-navigate into another zone, and what a hard navigation therefore destroys — router cache, React context, in-memory state |
+| 01d | **[When zones are the wrong answer](01d-when-zones-are-the-wrong-answer.md)** | The honest recommendation for one team wanting "modularity": route groups and a monorepo, not zones |
+| 02 | **[Pages → App migration](02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md)** | The roadmap, coexistence, and sequencing. 🔴 The `app/`-wins precedence rule is **not stated in the 16.3.4 docs** — the page says so and supplies a CI guard rather than asserting it |
+| 02b | **[Translating request-time data](02b-translating-the-data-fetching-contracts.md)** | `getServerSideProps` → an `async` Server Component, and what you lose with it |
+| 02c | **[Translating build-time data](02c-translating-build-time-data.md)** | `getStaticProps` / `getStaticPaths` → `generateStaticParams` and the segment cache |
+| 02d | **[The two APIs with no clean successor](02d-the-two-apis-with-no-clean-successor.md)** | `getInitialProps` and `pages/api` — what genuinely does not port, stated plainly |
+| 02e | **[The two routers and the hooks](02e-the-two-routers-and-the-client-side-hooks.md)** | 🔴 `next/router` and `next/navigation` both export `useRouter` with different APIs. The single most common migration error, and `next/compat/router` as the escape hatch |
+| 02f | **[The shell, metadata and styles](02f-the-document-shell-metadata-and-styles.md)** | `_app` / `_document` → root `layout.tsx`, `next/head` → the Metadata API, and why layout styles do not reach `pages/*` |
+| 02g | **[Codemods, traps and when to stop](02g-codemods-cross-router-traps-and-when-to-stop.md)** | What `@next/codemod` does and does not do, and why a permanent two-router codebase is a legitimate outcome |
+| 03 | **[OWASP mapping and token leakage](03-enterprise-compliance-owasp-mapping-token-leakage-prevention.md)** | Each OWASP category mapped to the App Router seam that actually enforces it. 🔴 The three doors a secret uses to reach the browser, and why door three looks like ordinary React |
+| 03b | **[Supply-chain vigilance](03b-supply-chain-vigilance.md)** | The dependency graph as the real attack surface, why a clean `npm audit` is weak evidence, and what the LTS line does to your dependency policy |
+| 04 | **[Framework extension](04-framework-extension-and-plugin-development.md)** | 🔴 There is no plugin API. A "Next.js plugin" is a function from `NextConfig` to `NextConfig`; the Adapters API is the one typed extension point, and it is for hosting platforms |
+| 04b | **[The bundler seam](04b-the-bundler-seam-webpack-and-turbopack.md)** | 🔴 Turbopack has been the default since 16.0, so a `webpack()` function is **silently not read**. Turbopack implements loaders and does not support webpack plugins |
+| 04c | **[Seams that are files](04c-the-seams-that-are-files.md)** | Extension triggered by a filename: a Babel config disabling SWC, `instrumentation.ts`, `onRequestError`, `proxy.ts` |
+| 04d | **[Internals and the decision](04d-internals-coupling-and-the-plugin-decision.md)** | Reaching into `next/dist`, the two-Reacts mechanism, and choosing between a plugin, a template and a codemod |
 
-> **Source:** current project content kept under exact syllabus title
+## What this chapter is not
 
-## 1. Under-The-Hood Mechanics
+This page previously carried three sections on `'use client'` placement, `<Suspense>` granularity and `error.tsx` nesting. That is rendering-boundary and error-handling material, and it belongs to — and is covered in depth by — chapters 3 and 7:
 
-The advanced patterns in a mature App Router codebase are less about new APIs and more about **deliberate placement** of the boundaries already covered elsewhere in this bible — where exactly `'use client'` starts, where `<Suspense>` boundaries are drawn, and how `error.tsx` boundaries nest.
+- [ch3 · `'use client'`: when and why to opt in](../03-server-components-vs-client-components/02-use-client-when-and-why-to-opt-in-interactivity-browser-apis.md) and [ch3 · bundle-size implications](../03-server-components-vs-client-components/06-bundle-size-implications-and-core-web-vitals-impact.md) — pushing the boundary to the smallest interactive leaf.
+- [ch7 · `loading.tsx` vs inline Suspense](../07-error-handling-loading-states-and-resilience/05-loadingtsx-vs-inline-suspense-skeleton-strategy-and-layout-s.md) — why independent boundaries stream independently.
+- [ch7 · the unified error model](../07-error-handling-loading-states-and-resilience/01-the-unified-error-model-errortsx-boundaries.md) and [ch7 · what boundaries do not catch](../07-error-handling-loading-states-and-resilience/10b-what-boundaries-do-not-catch.md) — `error.tsx`, `global-error.tsx` and the limits of both.
 
-### Pushing `'use client'` As Deep As Possible
-Since the client boundary propagates to everything imported beneath it (see [rendering strategies](../03-server-components-vs-client-components/01-default-architecture-everything-is-a-server-component-rsc.md)), placing `'use client'` at a **high**, coarse level (e.g. an entire page) forces the ENTIRE subtree into the client bundle — even server-only-capable child components that never actually needed interactivity. Pushing the boundary down to the **smallest** actually-interactive leaf component (a single button, a single form) keeps everything else in that subtree as zero-client-JS Server Components.
+🔴 **One rule from the removed material is worth carrying explicitly, because it is the kind of thing people assume backwards.** In the component hierarchy, `error.js` wraps `loading.js`, `not-found.js`, `page.js` **and nested `layout.js` files** — but it does **not** wrap the `layout.js` or `template.js` *above it in the same segment*. So a layout's own failure is caught one segment **up**, never by the `error.tsx` sitting beside it, and an error in the root layout needs `global-error.js`. Verified 2026-09-04 against [`error.js`](https://nextjs.org/docs/app/api-reference/file-conventions/error) (`version: 16.3.4`).
 
-### Granular Streaming: Multiple Independent `<Suspense>` Boundaries
-A single page can have several **independent** Suspense boundaries at different nesting levels, each streaming in as soon as *its own* data resolves — rather than one boundary around the whole page (which would mean the slowest single piece of data blocks everything behind that one boundary from ever streaming early).
+## Phase gate
 
-### Error Boundary Hierarchy: `error.tsx` vs `global-error.tsx`
-`error.tsx` catches errors within its own segment and below, but explicitly **not** errors in its own segment's `layout.tsx` (which must be caught by a parent's `error.tsx`). `global-error.tsx` (at the app root) is the boundary of last resort — it must render its **own** complete `<html>`/`<body>` tags, since it replaces the ENTIRE root layout when triggered, catching even errors the root layout itself throws.
+You are done with this chapter when you can decide, without opening documentation: whether a second team's application should be a zone or a route group; what order you would migrate a `pages/` codebase in and where you would stop; which seam enforces each OWASP category in an App Router app; and whether a request for "a Next.js plugin" should become a config wrapper, an adapter, a shared template or a codemod.
 
----
+## Where this connects
 
-## 2. Real-World Engineering Scenario
-
-**Scenario**: A Dashboard Page With Independently-Loading Widgets, Minimal Client JS, and Isolated Failure Domains.
-A dashboard renders a static header, a slow revenue chart (needs its own loading state), a slow activity feed (needs its own, separately-timed loading state), and one small interactive "refresh" button. Structuring this with `'use client'` on ONLY the refresh button (not the whole page), two separate `<Suspense>` boundaries around the chart and activity feed (so a slow chart doesn't block the activity feed from streaming in first if it resolves faster), and a dedicated `error.tsx` scoped to just the chart's segment (so a chart data failure shows "chart unavailable" without taking down the entire dashboard) — composes several previously-covered primitives into one page that ships minimal client JS, streams progressively, and fails narrowly.
-
----
-
-## 3. Production-Grade Code Example
-
-```tsx
-// app/dashboard/page.tsx — composition: mostly Server Components, ONE small client leaf
-import { Suspense } from 'react';
-
-export default function DashboardPage() {
-  return (
-    <div>
-      <DashboardHeader /> {/* Server Component — static, zero client JS */}
-
-      <Suspense fallback={<ChartSkeleton />}>
-        <RevenueChart /> {/* streams independently once ITS data resolves */}
-      </Suspense>
-
-      <Suspense fallback={<FeedSkeleton />}>
-        <ActivityFeed /> {/* streams independently — doesn't wait on RevenueChart */}
-      </Suspense>
-    </div>
-  );
-}
-```
-
-```tsx
-// app/dashboard/(chart-error-boundary)/RevenueChart.tsx — narrowly-scoped error isolation
-// (conceptually: RevenueChart's OWN error.tsx lives alongside it if it's its own route segment;
-// for a component-level boundary within one page, a manual error boundary component works too)
-async function RevenueChart() {
-  const data = await fetch('https://api.acme.com/revenue', { next: { revalidate: 300 } });
-  if (!data.ok) throw new Error('Revenue data unavailable'); // caught by the nearest error.tsx UP the tree
-  return <ChartView data={await data.json()} />;
-}
-```
-
-```tsx
-// components/RefreshButton.tsx — the ONLY client boundary on this entire page
-'use client';
-import { useRouter } from 'next/navigation';
-
-export function RefreshButton() {
-  const router = useRouter();
-  return <button onClick={() => router.refresh()}>Refresh</button>; // tiny client bundle — just this
-}
-```
-
-```tsx
-// app/global-error.tsx — the boundary of last resort; MUST render its own <html>/<body>
-'use client';
-
-export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
-  return (
-    <html>
-      <body>
-        <h2>A critical error occurred.</h2>
-        <button onClick={() => reset()}>Try again</button>
-      </body>
-    </html>
-  );
-}
-```
+- [ch2 · Routing and navigation](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) — the routing model the migration chapter translates *into*, and the `proxy.ts` layer zones sit behind.
+- [ch10 · Authentication and security hardening](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md) — owns the CVE record and the defence-in-depth argument; chapter 17 draws only the dependency-graph conclusion.
+- [ch16 · The Adapters API](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) — the one typed extension point, covered in depth there rather than here.
+- [ch18 · Capstone and decision trees](../18-capstone-decision-trees-and-outlook/01-explanation.md) — where the migration recipe is applied end to end.
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: A Single `'use client'` at the Page Level "For Convenience"
-```tsx
-// ❌ WRONG: marking the WHOLE page client-side because ONE button needs onClick forces every
-// server-capable child (header, chart, feed) into the client JS bundle unnecessarily
-'use client';
-export default function DashboardPage() {
-  return (<div><DashboardHeader /><RevenueChart /><RefreshButton /></div>);
-}
-
-// ✅ CORRECT: keep the page a Server Component; isolate 'use client' to the actual interactive leaf
-```
-
-### ⚠️ Pitfall 2: One Suspense Boundary Wrapping Multiple Independent Slow Sections
-```tsx
-// ❌ SUBOPTIMAL: the FASTER activity feed can't stream in until the SLOWER chart also resolves,
-// since they share one boundary — the slowest piece gates everything behind that one boundary
-<Suspense fallback={<Skeleton />}>
-  <RevenueChart />
-  <ActivityFeed />
-</Suspense>
-
-// ✅ CORRECT: separate boundaries let each section stream in independently, as soon as ITS data is ready
-<Suspense fallback={<ChartSkeleton />}><RevenueChart /></Suspense>
-<Suspense fallback={<FeedSkeleton />}><ActivityFeed /></Suspense>
-```
-
-### ⚠️ Pitfall 3: Expecting a Segment's Own `error.tsx` to Catch Its Sibling `layout.tsx`'s Errors
-```
-❌ WRONG ASSUMPTION: app/dashboard/error.tsx catches errors from app/dashboard/page.tsx AND
-app/dashboard/layout.tsx equally — it does NOT catch layout.tsx's own errors, only page.tsx
-and further-nested children's errors
-
-✅ CORRECT: an error thrown inside layout.tsx must be caught by the PARENT segment's error.tsx
-(or global-error.tsx at the root) — keep layouts free of risky data-fetching logic where possible,
-or ensure the parent segment's error boundary genuinely covers that failure mode
-```
+Start → [01 · Multi-zone architecture](01-micro-frontends-and-multi-zone-architectures-for-decoupled-t.md)

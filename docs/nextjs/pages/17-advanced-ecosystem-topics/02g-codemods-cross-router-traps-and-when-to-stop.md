@@ -1,14 +1,13 @@
 ---
 title: "Not one of the twenty codemods Next.js publishes at 16.3.4 moves a route from `pages/` to `app/` — the automation exists for version upgrades, the boundaries are yours, and a codebase permanently split across two routers is a legitimate place to finish"
 sidebar_label: "02g · Codemods, traps and when to stop"
-sidebar_position: 22
+sidebar_position: 11
 ---
 
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Codemods](https://nextjs.org/docs/app/guides/upgrading/codemods) (`version: 16.3.4`, `lastUpdated: 2026-08-25`) and [How to migrate from Pages to the App Router](https://nextjs.org/docs/app/guides/migrating/app-router-migration) (`lastUpdated: 2026-08-25`). The claim that no published codemod performs a Pages-to-App route migration is an **enumeration of the complete published list**, not an inference.
 > Target: **Next.js 16.3.4 · React 19.2.8 · Node 20.9 floor**. Documentation-verified; **no sandbox run**.
-> ⚠️ `sidebar_position: 22` is deliberately out of range — see the note at the foot of [02e](02e-the-two-routers-and-the-client-side-hooks.md).
 
 **Every migration plan written by someone who has not read the codemods page contains a line like "run the codemods first". The codemods page at 16.3.4 publishes twenty transforms across nine major versions, and the set of them that converts `getServerSideProps` into a Server Component, rewrites a `next/router` import, or turns `pages/api/x.js` into `app/api/x/route.ts` is empty. What they automate is version upgrades — async request APIs, `middleware` to `proxy`, `next/image` renames — which you need, and which is a different job. The rest of this chunk is the failures that only appear once both routers are live in the same deploy, and the argument that stopping halfway is a defensible engineering outcome rather than an abandoned project.**
 
