@@ -1,7 +1,7 @@
 ---
 title: "A boundary decision worked end to end, including the one that gets rejected — because the useful skill is not scoring a cut you already wanted, it is recognising the gate failure and then finding the axis along which the same system does split"
 sidebar_label: "22b · Scoring one cut"
-sidebar_position: 38
+sidebar_position: 39
 ---
 
 <span className="db-tier t-master">Master</span>

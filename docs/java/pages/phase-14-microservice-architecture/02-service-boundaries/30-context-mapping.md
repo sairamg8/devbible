@@ -1,7 +1,7 @@
 ---
 title: "A Context Map records the political and technical relationships between bounded contexts — classifying interactions as upstream/downstream, mutually dependent, or separate ways before drawing lines in architecture"
 sidebar_label: "30 · Context mapping"
-sidebar_position: 55
+sidebar_position: 56
 ---
 
 <span className="db-tier t-master">Master</span>

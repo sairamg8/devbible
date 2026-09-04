@@ -183,6 +183,9 @@ it call operations that decide for themselves?** The first is a god service. The
 coordinator, and the mechanics of doing it reliably — sagas, compensation, timeouts — belong
 to **phase 15** *(not written yet)*.
 
+The fair objection — *every system has something that calls several services* — is answered in
+[17b · Composing is not deciding](17b-composing-is-not-deciding.md).
+
 ## Gotchas
 
 **★ Symptom: a service that appears in every feature ticket.** Cause: it holds the rules.
@@ -211,10 +214,6 @@ wrong, and it is usually visible in headcount before it is visible in code.
 **★ Deleting the orchestrator without moving the rules.** The rules then scatter back into
 consumers, which is where they were before somebody built the orchestrator. The order is:
 move the rules first, then delete what is left.
-
-**★ Assuming a "saga" is not a god service.** It can be. A saga that reads participants' data
-and makes decisions about it has all three defects; a saga that invokes operations which
-decide for themselves, and holds only its own workflow state, does not.
 
 ## Interview questions
 
@@ -251,14 +250,7 @@ a home and none of the entity services will take a rule about a different entity
 service is created. Nobody makes a bad decision. The error was upstream — decomposing by
 entity — and the orchestrator is the compensating structure the system grows to survive it.
 
-**★ Can a saga be a god service?**
-Yes, and it is the most common modern form. If the saga fetches participants' data and applies
-business rules to it, it has all three defects wearing the name of a pattern. A saga that is
-not a god service holds only its own workflow state — which step, which attempt, what
-compensation is outstanding — and invokes participant operations that enforce their own rules
-and can refuse. The distinction is not the technology or the framework; it is where the
-decision is made.
 
 ---
 
-← [The shared model jar](16-the-shared-model-jar.md) · [Topic index](README.md) · Next → [Boundaries from a whiteboard](18-boundaries-from-a-whiteboard.md)
+← [What version skew does at runtime](16b-what-version-skew-does-at-runtime.md) · [Topic index](README.md) · Next → [Composing is not deciding](17b-composing-is-not-deciding.md)
