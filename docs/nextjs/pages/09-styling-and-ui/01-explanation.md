@@ -1,149 +1,66 @@
 ---
-sidebar_position: 0
-title: "Overview"
+title: "09 · Styling and UI — four built-in mechanisms, and the reason each of them is a contract rather than an optimisation"
 sidebar_label: "Overview"
-description: "Chapter 9 overview"
+sidebar_position: 0
+description: "Chapter 9 index: CSS Modules and Tailwind v4, CSS-in-JS at the server boundary, next/font, next/image, next/script, and the SprintDesk design system milestone — with the chapter's corrected claims listed up front."
 ---
 
-# ▲ Styling and UI
+<span className="db-tier t-master">Master</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-04 against **Next.js 16.3.4** documentation — the [CSS](https://nextjs.org/docs/app/getting-started/css), [Font Module](https://nextjs.org/docs/app/api-reference/components/font), [Image component](https://nextjs.org/docs/app/api-reference/components/image) and [`<Script>`](https://nextjs.org/docs/app/api-reference/components/script) references, plus Tailwind's own Next.js framework guide at **v4.3**. Every chunk below carries its own `> Verified:` line naming the pages and `lastUpdated` values it was written from.
+> Version spine: **Next.js 16.3.4** · React 19.2.8 · Node 20.9 floor. `next` is **not installed in this checkout**, so nothing in this chapter is probed — it is documentation-verified throughout, with **no sandbox run**, no timings and no byte counts.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**Every mechanism in this chapter looks like a performance feature and behaves like a contract. `next/image` is a sizing contract before it is an optimizer — the `width` and `height` it forces on you exist to reserve layout space, and `remotePatterns` is an allow-list deciding whose bytes reach a decoder on your server. `next/font` is a build-time self-hosting step whose zero-layout-shift claim rests on a metric-matched fallback face, not on `font-display`. `next/script` does not choose how fast a script loads; it chooses who injects the tag and when, and only one of its four strategies is rendered by the server. And CSS Modules are not a naming convention — they are a build-time rename, which is why the order of your imports is the order of your stylesheets and why "it works locally" is a CSS bug class in its own right. Read the chapter for the mechanisms; the milestone at the end is where all four land in the same root layout and start interfering with each other.**
 
+## 🔴 What this chapter corrects
 
+Four claims in wide circulation are wrong at 16.3.4, and each is corrected with a verbatim source on the page that owns it:
 
-> **Source:** current-project backup remapped + improved for exact syllabus title
+| Claim you will meet | What the documentation says | Where |
+|---|---|---|
+| Tailwind needs a `tailwind.config.js` and the `@tailwind` triple | v4 is CSS-first: a PostCSS plugin and one `@import 'tailwindcss'`. No config file on the documented path | [01c](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md) |
+| `beforeInteractive` blocks hydration | *"their execution does not block page hydration from occurring"* | [05](05-next-script-loading-strategies-for-third-party-scripts.md) |
+| `priority` marks the LCP image | Deprecated in Next.js 16 in favour of `preload` | [04b](04b-loading-priority-preload-eager-fetchpriority.md) |
+| Naming a hostname in `remotePatterns` is enough | Every omitted field implies `**`, and a redirect is followed without re-validating | [04d](04d-remote-patterns-is-a-security-control.md) |
 
-## 1. Under-The-Hood Mechanics
+## Chunks
 
-Three built-in components each target a specific, historically hard-to-get-right performance problem — automating what would otherwise be manual, error-prone optimization work.
+| # | Chunk | Covers |
+|---|---|---|
+| 1 | **[CSS Modules and global stylesheets](01-css-modules-global-stylesheets-utility-first-tailwind-config.md)** | 🔴 the build-time rename that *is* the scoping mechanism, and what a global stylesheet costs |
+| 2 | **[Import order, chunking and what CSS costs](01b-css-import-order-chunking-and-what-css-costs.md)** | 🔴 `cssChunking` is bundler-split — `'strict'`/`false` are webpack-only, `'graph'` Turbopack-only |
+| 3 | **[Tailwind v4, CSS-first](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md)** | the current setup verified against two primary sources; coexisting with CSS Modules |
+| 4 | **[CSS-in-JS at the server boundary](02-css-in-js-caveats-at-server-component-boundaries.md)** | why runtime CSS-in-JS cannot work in a Server Component — the mechanism, not a missing feature |
+| 5 | **[Style registries and the client boundary](02b-style-registries-and-what-the-client-boundary-actually-costs.md)** | the bill is not the wrapper; it is every component that touches the styling API |
+| 6 | **[next/font and zero layout shift](03-font-optimization-with-next-font-zero-layout-shift.md)** | build-time self-hosting first; the shift is removed by `adjustFontFallback`, not `display` |
+| 7 | **[The loader API](03b-the-loader-api-google-local-and-variable-fonts.md)** | google vs local option sets, and the two unrelated meanings of *variable* |
+| 8 | **[Applying the font](03c-applying-the-font-classname-style-css-variables-and-tailwind.md)** | `className`, `style` and the CSS variable are not interchangeable |
+| 9 | **[Subsetting and preload scope](03d-subsetting-preloading-and-where-the-loader-must-be-called.md)** | 🔴 where you call the loader decides which routes preload the font |
+| 10 | **[next/image as a sizing contract](04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md)** | `width`/`height`/`fill`, and why `sizes` decides the byte count |
+| 11 | **[Loading priority](04b-loading-priority-preload-eager-fetchpriority.md)** | 🔴 `priority` deprecated in 16; `preload`, `loading` and `fetchPriority` |
+| 12 | **[Blur placeholders](04c-blur-placeholders-where-the-bytes-come-from.md)** | who produces the base64 — the build for static imports, nobody for remote URLs |
+| 13 | **[remotePatterns is a security control](04d-remote-patterns-is-a-security-control.md)** | 🔴 omitted fields imply `**`; redirects are not re-validated |
+| 14 | **[next/script strategies](05-next-script-loading-strategies-for-third-party-scripts.md)** | the four strategies, injection point, ordering, and once-per-document |
+| 15 | **[Script handlers](05b-onload-onready-onerror-and-the-client-component-boundary.md)** | 🔴 all three handlers require a Client Component, and the `beforeInteractive` contradiction |
+| 16 | **[Inline scripts and placement](05c-inline-scripts-attribute-forwarding-and-where-the-tag-belongs.md)** | the mandatory `id`, attribute forwarding that carries a nonce, layout-vs-page scope |
+| 17 | **[The worker strategy](05d-the-worker-strategy-partytown-and-what-to-use-instead.md)** | experimental, `pages/`-only, and what to do on the App Router instead |
+| 18 | **[Milestone: design system pass](06-project-milestone-sprintdesk-design-system-pass.md)** | theming with custom properties, the flash fix, one font definitions module |
+| 19 | **[Milestone: avatars, attachments, scripts](06b-avatars-attachments-and-the-scripts-pass.md)** | the allow-list, the header-forwarding trap, the scripts pass, acceptance criteria |
 
-### `next/image`: Automatic Resizing, Lazy Loading & CLS Prevention
-```
-<Image src={...} width={800} height={600} />
-        │
-        ├── Requires width/height (or fill) ──► reserves layout space BEFORE load, preventing CLS
-        ├── Serves resized, format-negotiated (AVIF/WebP) variants per requesting device ──► via a built-in image optimization endpoint
-        ├── loading="lazy" by DEFAULT ──► unless `priority` is set (see LCP pitfalls below)
-        └── `priority` ──► disables lazy-loading AND emits a <link rel="preload"> + fetchpriority="high"
-```
+## Phase gate
 
-### `next/font`: Self-Hosted, Zero-Layout-Shift Font Loading
-Rather than a `<link>` to Google Fonts' CDN (a render-blocking, third-party-origin request with its own connection setup cost), `next/font` downloads the font file **at build time**, self-hosts it alongside the app's own static assets, and automatically computes fallback font metrics to minimize the layout shift a font swap would otherwise cause (see the [Web Vitals CLS doc](../../../web-vitals-performance/pages/06-cls-optimization/01-preventing-cls.md) for the underlying font-metric-mismatch mechanics this solves).
+You are done with this chapter when you can open an unfamiliar App Router root layout and say, for each thing in it — the global stylesheet import, the font `className`, an inline script, a third-party tag — **which routes pay for it, when it executes relative to hydration, and what would change if it moved one level down the tree.** Being able to answer that for the font alone is the common stopping point and it is not the gate.
 
-### `next/script`: Loading Strategy as an Explicit Choice
-Third-party scripts (analytics, chat widgets, ads) each have different urgency — `next/script`'s `strategy` prop makes that urgency an explicit, declared choice instead of an accidental default:
-- `beforeInteractive` — loaded and executed before any page hydration; reserved for scripts genuinely needed before the page is interactive at all (rare).
-- `afterInteractive` (default) — loaded as soon as the page is interactive.
-- `lazyOnload` — loaded during browser idle time, latest possible — for scripts with zero urgency (most analytics).
-- `worker` (experimental) — offloads script execution to a Web Worker via Partytown, keeping the main thread free entirely.
+## Where this connects
 
----
-
-## 2. Real-World Engineering Scenario
-
-**Scenario**: A Marketing Site Loading Google Fonts, a Hero Image, and a Chat Widget — Each With Genuinely Different Urgency.
-The hero image is the LCP element and must be prioritized. The page's heading font must be available immediately to avoid FOIT/FOUT-driven layout shift. A third-party chat widget script is useful but not remotely urgent — it can load whenever the browser has spare idle time, long after the page feels fully loaded. Using `<Image priority>` for the hero, `next/font`'s self-hosted, zero-shift loading for the heading font, and `<Script strategy="lazyOnload">` for the chat widget encodes each element's actual urgency explicitly, rather than treating "load everything as fast as possible" as a single undifferentiated goal that would otherwise have the chat widget competing for bandwidth with the actual LCP resource.
-
----
-
-## 3. Production-Grade Code Example
-
-```tsx
-// app/layout.tsx — next/font: self-hosted, zero-layout-shift font loading
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'], display: 'swap' }); // downloaded at BUILD time, self-hosted
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
-    </html>
-  );
-}
-```
-
-```tsx
-// app/page.tsx — next/image with priority for the actual LCP element
-import Image from 'next/image';
-
-export default function HomePage() {
-  return (
-    <div>
-      <Image
-        src="/hero.avif"
-        alt="Hero"
-        width={1200}
-        height={600}
-        priority // this IS the LCP element — skip lazy-loading, preload, fetchpriority=high
-      />
-      <Image
-        src="/testimonial-avatar.jpg"
-        alt="Customer"
-        width={80}
-        height={80}
-        // no priority — below the fold, correctly lazy-loaded by default
-      />
-    </div>
-  );
-}
-```
-
-```tsx
-// app/layout.tsx — next/script: explicit loading strategy matching actual urgency
-import Script from 'next/script';
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html>
-      <body>
-        {children}
-        <Script src="https://widget.chat-vendor.com/embed.js" strategy="lazyOnload" />
-        <Script id="analytics-init" strategy="afterInteractive">
-          {`window.analytics.init('${process.env.NEXT_PUBLIC_ANALYTICS_KEY}');`}
-        </Script>
-      </body>
-    </html>
-  );
-}
-```
+- [Chapter 3 · Server and Client Components](../03-server-components-vs-client-components/03-composition-patterns-server-to-client-boundaries.md) — the boundary that decides why CSS-in-JS and every `<Script>` handler need a Client Component
+- [Chapter 10 · CSP: nonces and the dynamic-rendering tax](../10-forms-authentication-and-security-hardening/10-content-security-policy-nonces-and-the-dynamic-rendering-tax.md) — the policy that governs every inline script this chapter adds
+- [Chapter 10 · CSP without nonces](../10-forms-authentication-and-security-hardening/11-csp-without-nonces-static-headers-sri-and-third-party-scripts.md) — build-time SRI, and the third-party-script security surface
+- [Chapter 11 · Performance milestone](../11-performance-optimization-turbopack/07-project-milestone-sprintdesk-performance-audit.md) — where the work in this chapter is actually measured
+- [Chapter 12 · SEO, metadata and accessibility](../12-seo-metadata-and-accessibility/01-explanation.md) — structured data, which uses this chapter's inline-script mechanism
+- [Web Vitals · preventing CLS](../../../web-vitals-performance/pages/06-cls-optimization/01-preventing-cls.md) — the font-metric mismatch `adjustFontFallback` exists to solve
+- [Web Vitals · reducing INP](../../../web-vitals-performance/pages/05-inp-optimization/01-reducing-inp.md) — why third-party main-thread work is the metric that moves
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: Forgetting `priority` on the Actual LCP Image
-```tsx
-// ❌ WRONG: next/image lazy-loads by DEFAULT — an above-the-fold hero image without `priority`
-// is actively DELAYED exactly like the "lazy-loading the LCP image" pitfall in the Web Vitals bible
-<Image src="/hero.avif" alt="Hero" width={1200} height={600} />
-
-// ✅ CORRECT: explicitly mark the true LCP candidate as priority
-<Image src="/hero.avif" alt="Hero" width={1200} height={600} priority />
-```
-
-### ⚠️ Pitfall 2: Setting `priority` on Every Image "Just to Be Safe"
-```tsx
-// ❌ WRONG: priority disables lazy-loading and adds a preload hint — marking MANY images
-// priority means they all compete for early bandwidth, diluting the actual LCP resource's
-// advantage (the exact "preloading too many resources" pitfall, applied via next/image)
-<Image src="/img1.jpg" priority /> <Image src="/img2.jpg" priority /> <Image src="/img3.jpg" priority />
-
-// ✅ CORRECT: priority should mark ONLY the genuine LCP candidate, typically one image
-```
-
-### ⚠️ Pitfall 3: Using `beforeInteractive` for Non-Critical Scripts
-```tsx
-// ❌ WRONG: beforeInteractive blocks hydration for a script that doesn't need to run this early —
-// a chat widget or analytics script delaying the page becoming interactive hurts INP for no reason
-<Script src="https://widget.chat-vendor.com/embed.js" strategy="beforeInteractive" />
-
-// ✅ CORRECT: reserve beforeInteractive for scripts that are GENUINELY required before hydration
-// (rare — e.g. a polyfill the app's own code depends on); use lazyOnload for everything else
-<Script src="https://widget.chat-vendor.com/embed.js" strategy="lazyOnload" />
-```
+Start → [01 · CSS Modules and global stylesheets](01-css-modules-global-stylesheets-utility-first-tailwind-config.md)

@@ -1,7 +1,7 @@
 ---
 title: "The `worker` strategy is the one honest answer to main-thread contention and you cannot use it — it is experimental, it is `pages/`-only, and on the App Router the real levers are fewer scripts, later scripts and scripts on fewer routes"
 sidebar_label: "05d · worker and Partytown"
-sidebar_position: 12
+sidebar_position: 17
 description: "What the experimental worker strategy does, the Partytown dependency, why it is unavailable on the App Router at 16.3.4, the component's version history and what it reveals, and the App Router alternatives for getting third-party code off the main thread."
 ---
 

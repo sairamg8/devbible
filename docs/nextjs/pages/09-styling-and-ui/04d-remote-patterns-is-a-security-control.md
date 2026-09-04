@@ -1,7 +1,7 @@
 ---
 title: "`remotePatterns` is not configuration, it is an allow-list deciding who may hand bytes to a native decoder running on your server — and every field you omit widens it to `**`"
 sidebar_label: "04d · remotePatterns"
-sidebar_position: 32
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>

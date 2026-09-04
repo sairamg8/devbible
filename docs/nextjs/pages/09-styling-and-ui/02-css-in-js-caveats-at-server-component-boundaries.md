@@ -1,7 +1,7 @@
 ---
 title: "Runtime CSS-in-JS does not fail in Server Components because someone forgot to add support — it fails because the library's job is to produce styles during a browser render and a Server Component's output is serialized HTML with no render to hook"
 sidebar_label: "02 · Why runtime CSS-in-JS breaks"
-sidebar_position: 8
+sidebar_position: 4
 ---
 
 <span className="db-tier t-understand">Understand</span>

@@ -1,7 +1,7 @@
 ---
 title: "The `priority` prop your syllabus names was deprecated in Next.js 16 — and its replacement, `preload`, is a prop the documentation tells you not to reach for first"
 sidebar_label: "04b · Loading priority"
-sidebar_position: 30
+sidebar_position: 11
 ---
 
 <span className="db-tier t-master">Master</span>

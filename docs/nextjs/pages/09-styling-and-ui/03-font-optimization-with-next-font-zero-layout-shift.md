@@ -1,7 +1,7 @@
 ---
 title: "next/font is a build-time self-hosting step first and a performance feature second — and the layout shift it removes is removed by a metric-matched fallback face, not by font-display"
 sidebar_label: "03 · next/font and layout shift"
-sidebar_position: 15
+sidebar_position: 6
 description: "Why next/font exists: it downloads and self-hosts the font at build time so no request reaches a third-party host, and it generates an adjusted fallback face so the swap does not move the page."
 ---
 

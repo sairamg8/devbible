@@ -1,7 +1,7 @@
 ---
 title: "Where you call the font loader decides which routes preload it, subsets decides what gets a preload tag at all, and both are build-time facts — which is why the call belongs at module scope and nowhere else"
 sidebar_label: "03d · Subsetting and preload scope"
-sidebar_position: 18
+sidebar_position: 9
 description: "The subsets warning, the preload default, the page/layout/root-layout preload scoping rule, and the documented evidence for calling the loader at module scope."
 ---
 

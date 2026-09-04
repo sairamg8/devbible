@@ -1,7 +1,7 @@
 ---
 title: "`next/image` is a sizing contract before it is an optimizer — the `width`/`height` you are forced to supply exist to reserve layout space, and `sizes` is what decides whether the browser downloads a 32px thumbnail or a 3840px original"
 sidebar_label: "04 · next/image sizing"
-sidebar_position: 29
+sidebar_position: 10
 ---
 
 <span className="db-tier t-master">Master</span>

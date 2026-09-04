@@ -1,7 +1,7 @@
 ---
 title: "The `strategy` prop does not choose how fast a third-party script loads — it chooses who injects the tag and at what point in the document lifecycle, and the default is the middle option rather than the safe one"
 sidebar_label: "05 · next/script strategies"
-sidebar_position: 5
+sidebar_position: 14
 description: "The four next/script loading strategies at Next.js 16.3.4 — where each tag is injected, what beforeInteractive does and does not block, the root-layout constraint, the once-per-document rule, and how to pick between them."
 ---
 

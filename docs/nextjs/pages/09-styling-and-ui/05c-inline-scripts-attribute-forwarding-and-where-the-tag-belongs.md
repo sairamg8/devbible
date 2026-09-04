@@ -1,7 +1,7 @@
 ---
 title: "An inline `<Script>` without an `id` is untracked, an undocumented prop is forwarded verbatim to the emitted tag — which is the only reason a nonce works at all — and the file you put the tag in is the file that decides how many routes pay for it"
 sidebar_label: "05c · Inline scripts and placement"
-sidebar_position: 11
+sidebar_position: 16
 description: "Inline scripts and the mandatory id, dangerouslySetInnerHTML, the attribute-forwarding rule that carries nonce and data-* through to the emitted script tag, and the layout-versus-page placement rule with the once-per-visit de-duplication it implies."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The style registry is a Client Component at the top of your tree, and the bill for it is not the wrapper — it is that every component which touches the styling API becomes a Client Component too"
 sidebar_label: "02b · Registries and their cost"
-sidebar_position: 9
+sidebar_position: 5
 ---
 
 <span className="db-tier t-understand">Understand</span>

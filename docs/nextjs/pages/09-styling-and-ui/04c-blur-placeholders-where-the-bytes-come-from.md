@@ -1,7 +1,7 @@
 ---
 title: "A blur placeholder is a base64 image inlined into your HTML, and the only question that matters is who produced those bytes — the build did it for you on a static import, and nobody will do it for a remote URL"
 sidebar_label: "04c · Blur placeholders"
-sidebar_position: 31
+sidebar_position: 12
 ---
 
 <span className="db-tier t-master">Master</span>

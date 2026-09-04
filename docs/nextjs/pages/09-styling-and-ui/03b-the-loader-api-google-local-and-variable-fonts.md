@@ -1,7 +1,7 @@
 ---
 title: "next/font/google and next/font/local are two different loaders with two different option sets, and the word variable means two unrelated things inside the same function call"
 sidebar_label: "03b · Google, local and variable"
-sidebar_position: 16
+sidebar_position: 7
 description: "The next/font option table read as an API: which keys work with which loader, when weight is required, what a variable font changes, and the three ways to apply the returned object."
 ---
 
