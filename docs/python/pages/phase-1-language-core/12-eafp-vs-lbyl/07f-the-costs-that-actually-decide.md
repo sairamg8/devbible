@@ -51,7 +51,7 @@ render(theme)
 
 The second version is longer and that is the point: the extra lines are the ones that say
 which failure was anticipated. Narrowing is the whole subject of
-**06 · Narrowing the try** *(not written yet)*.
+[06 · Narrowing the try](06-narrowing-the-try.md).
 
 ## Cost 2 — the precondition validated in three layers
 

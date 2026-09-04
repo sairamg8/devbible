@@ -82,7 +82,7 @@ Three lookups sit inside one `try`, and the handler cannot tell you which one fa
 whether `TypeError` came from indexing `None` or from a genuinely wrong argument type.
 That is not "assuming the existence of valid keys" — it is declining to say what the
 function requires. EAFP is a claim about *one* operation; a `try` spanning four is an
-absence of claims. **Narrowing the `try`** *(not written yet)* is the repair, and it
+absence of claims. [Narrowing the `try`](06-narrowing-the-try.md) is the repair, and it
 is the single most common defect in code written by someone who has just been told EAFP
 is Pythonic.
 
@@ -99,7 +99,7 @@ def transfer(account, amount: int) -> None:
 Nothing here is racing: `amount` is a local, and the balance check is a *domain rule*
 whose failure must be reported in domain terms, not discovered by letting a debit blow
 up halfway through. The leap is expensive and irreversible, which is exactly the
-territory **where LBYL is right** *(not written yet)* — and a rule this topic
+territory [where LBYL is right](05-where-lbyl-is-right.md) — and a rule this topic
 states as bluntly as it can: **you do not apologise for a money movement.**
 
 
@@ -251,4 +251,4 @@ default data if I may not read this", not "return default data whatever happens"
 
 ---
 
-← Prev: [The two names](01-the-two-names.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → **The race between the look and the leap** *(not written yet)*
+← Prev: [The two names](01-the-two-names.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The race between the look and the leap](02-the-race-between-look-and-leap.md)

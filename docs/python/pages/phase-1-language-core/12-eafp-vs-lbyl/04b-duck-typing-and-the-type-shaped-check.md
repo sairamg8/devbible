@@ -124,8 +124,7 @@ def notify_safe(recipients: str | list[str]) -> None:
         send(r)
 ```
 
-This is a case where LBYL is simply right, and for the reason **where LBYL is right**
-*(not written yet)* gives: the check is about the shape
+This is a case where LBYL is simply right, and for the reason [where LBYL is right](05-where-lbyl-is-right.md) gives: the check is about the shape
 of your own argument, nothing can mutate it between look and leap, and the failure it
 prevents is silent rather than loud.
 

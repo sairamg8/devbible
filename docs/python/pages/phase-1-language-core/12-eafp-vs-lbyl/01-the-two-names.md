@@ -100,8 +100,8 @@ order.
 **1. Can the pre-condition change between the look and the leap?**
 If the state is shared — a `dict` another thread writes, a filesystem, a database, a
 cache, a network peer — the answer is yes, and LBYL is *wrong*, not merely
-unfashionable. The glossary says so directly, and **the race between the look and the
-leap** *(not written yet)* is the whole of the next chunk.
+unfashionable. The glossary says so directly, and [the race between the look and the
+leap](02-the-race-between-look-and-leap.md) is the whole of the next chunk.
 
 **2. Does the check ask exactly the same question as the operation?**
 `hasattr(obj, "read")` asks whether an attribute lookup raises; `obj.read()` asks
@@ -117,7 +117,7 @@ path has to *report*, EAFP hands you the material and LBYL makes you reconstruct
 
 Notice what is not on that list: which one has fewer lines, which one a reviewer called
 Pythonic, and how fast a `try` is. The cost question has a real, documented answer and
-it is smaller than people expect — **the cost argument** *(not written yet)* takes it
+it is smaller than people expect — [the cost argument](07-the-cost-argument.md) takes it
 apart with the only two numbers the CPython documentation actually publishes.
 
 ## Gotchas
@@ -141,7 +141,7 @@ and the dict silently grows.** Cause: `__missing__` inserts and returns instead 
 raising, so there is no exception for EAFP to catch. Fix: use `.get()`, which the
 `collections` docs state *"will, like normal dictionaries, return `None` as a default
 rather than using `default_factory`"* — the mechanism is in
-**mappings** *(not written yet)*.
+[mappings](03-mappings-the-decision-table.md).
 
 **Symptom: two branches of the same function disagree about whether a missing value is
 an error.** Cause: LBYL returned a default and EAFP raised, in the same call path,
@@ -205,8 +205,8 @@ Because a glossary entry is a vocabulary aid, not a design guide — it has to l
 recognise the style in unfamiliar code, and *"many `if` statements"* does that in four
 words. The consequence is that the terms get *applied* by counting keywords too, which
 misclassifies constantly: a `try` spanning four operations looks like EAFP and asserts
-nothing, and a domain-rule guard looks like LBYL and is simply correct. **Why Python
-leans EAFP** *(not written yet)* takes both misreadings
+nothing, and a domain-rule guard looks like LBYL and is simply correct. [Why Python
+leans EAFP](01b-why-python-leans-eafp.md) takes both misreadings
 apart.
 
 **If both forms return the same value for every input, in what sense are they not

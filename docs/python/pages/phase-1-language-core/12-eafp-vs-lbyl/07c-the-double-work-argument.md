@@ -90,8 +90,7 @@ those are also the two cases where the duplicated work is *wrong*, not merely wa
 the answer can change in the gap. That correctness argument is the real one, and it lives
 in [02 · The race between the look and the leap](02-the-race-between-look-and-leap.md)
 and [02c · Databases, queues, and when LBYL clears](02c-databases-queues-and-when-lbyl-clears.md).
-The `hasattr` case is worked through in **04 · `hasattr` is EAFP in disguise**
-*(not written yet)*.
+The `hasattr` case is worked through in [04 · `hasattr` is EAFP in disguise](04-hasattr-is-eafp-in-disguise.md).
 
 ## Gotchas
 

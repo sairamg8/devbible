@@ -83,7 +83,7 @@ def email_of_optional(payload: dict) -> str | None:
 ```
 
 The general rule — one assumption per `try`, and never a handler wider than the
-assumption — is **narrowing the `try`** *(not written yet)*, and mapping chains are
+assumption — is [narrowing the `try`](06-narrowing-the-try.md), and mapping chains are
 where it is broken most often.
 
 ## Gotchas
@@ -213,4 +213,4 @@ a helper into a generator frame is such a common bug that Python has a
 
 ---
 
-← Prev: [Writing on a miss](03b-writing-on-a-miss.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → **Attributes and duck typing** *(not written yet)*
+← Prev: [Writing on a miss](03b-writing-on-a-miss.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Attributes and duck typing](04-hasattr-is-eafp-in-disguise.md)

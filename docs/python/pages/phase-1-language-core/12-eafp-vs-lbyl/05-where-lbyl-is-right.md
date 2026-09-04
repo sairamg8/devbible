@@ -273,4 +273,4 @@ thing that actually deserves the review comment.
 
 ---
 
-← Prev: **hasattr and duck typing** *(not written yet)* · Index: **EAFP vs LBYL** *(not written yet)* · Next → [`assert` is not validation](05b-assert-is-not-validation.md)
+← Prev: [hasattr and duck typing](04c-protocols-and-structural-checks.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [`assert` is not validation](05b-assert-is-not-validation.md)
