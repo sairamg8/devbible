@@ -65,4 +65,4 @@ rather than picking one.
 
 ---
 
-← Prev: **EAFP vs LBYL** *(not written yet)* · Index: [Phase 1 — Language core](../README.md) · Next → **`None` and the "no result" contract** *(not written yet)*
+← Prev: [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [`None` and the "no result" contract](../14-none-and-no-result/README.md)

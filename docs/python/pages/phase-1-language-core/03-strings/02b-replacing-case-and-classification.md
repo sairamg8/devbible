@@ -111,7 +111,7 @@ except ValueError:
     n = None
 ```
 
-That is **EAFP** *(not written yet)*, and this is the textbook case for it.
+That is [EAFP](../12-eafp-vs-lbyl/README.md), and this is the textbook case for it.
 
 The rest of the family: `isalpha`, `isalnum`, `isspace`, `isidentifier`,
 `islower`, `isupper`, `istitle`, `isprintable`, `isascii` (3.7).

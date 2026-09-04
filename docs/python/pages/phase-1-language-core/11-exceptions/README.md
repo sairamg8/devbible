@@ -103,7 +103,7 @@ letting go of the exception object and keeping a string.
 - **[`match`](../10-match-pattern-matching/README.md)** is the statement before
   this one; a `case` that matches nothing raises nothing, which is exactly the
   opposite failure mode.
-- **EAFP vs LBYL** *(not written yet)* is the next topic and takes the argument
+- [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md) is the next topic and takes the argument
   this one sets up: whether to ask permission or apologise. It is deliberately
   written after this topic so its boundary is drawn against what these chunks
   actually say.
@@ -122,4 +122,4 @@ letting go of the exception object and keeping a string.
 
 ---
 
-← Prev: [`match` — structural pattern matching](../10-match-pattern-matching/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → **EAFP vs LBYL** *(not written yet)*
+← Prev: [`match` — structural pattern matching](../10-match-pattern-matching/README.md) · Index: [Phase 1 — Language core](../README.md) · Next → [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md)

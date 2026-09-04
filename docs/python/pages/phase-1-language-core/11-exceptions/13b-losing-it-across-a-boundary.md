@@ -215,4 +215,4 @@ the object, not a string — to arrive where the decision is made.
 
 ---
 
-← Prev: [Losing the traceback](13-losing-the-traceback.md) · Index: [Exceptions](README.md) · Next → **EAFP vs LBYL** *(not written yet)*
+← Prev: [Losing the traceback](13-losing-the-traceback.md) · Index: [Exceptions](README.md) · Next → [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md)

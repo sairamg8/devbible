@@ -250,4 +250,4 @@ attribute names and makes adding a field backwards-compatible.
 
 ---
 
-← Prev: **EAFP vs LBYL** *(not written yet)* · Index: [Unpacking](README.md) · Next → [Starred unpacking](02-starred-unpacking.md)
+← Prev: [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md) · Index: [Unpacking](README.md) · Next → [Starred unpacking](02-starred-unpacking.md)

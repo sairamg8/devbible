@@ -104,7 +104,7 @@ with suppress(KeyError):
 ```
 
 The `if` version is wrong under concurrency and slower in the common case. That
-argument is the subject of the next topic, **EAFP vs LBYL** *(not written yet)*.
+argument is the subject of the next topic, [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md).
 ## When it is the wrong tool
 
 Three tests, and any one of them disqualifies it:
@@ -182,7 +182,7 @@ rather than resumed and the syntax does not look like it.
 Two lookups become one, and the race between the check and the delete
 disappears — between the `in` and the `del`, another thread or another callback
 can remove the key and the `del` raises anyway. It is the EAFP form, and it is
-the subject of **EAFP vs LBYL** *(not written yet)*.
+the subject of [EAFP vs LBYL](../12-eafp-vs-lbyl/README.md).
 
 ---
 
