@@ -11,7 +11,6 @@ sidebar_position: 59
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x "Oakwood"**. Documentation-validated; **no sandbox run**.
 
 **Splitting a large service directly into two separate networked microservices is one of the highest-risk operations in software engineering. If the boundary is misplaced, the team pays the full distributed systems tax — network latency, serialization overhead, eventual consistency edge cases, and distributed tracing complexity — while debugging an unstable boundary. The proven architectural methodology is to split in-process first: refactor the single deployable into strict, isolated logical modules using package encapsulation, decouple database schemas locally, eliminate cross-boundary transactions, and verify the seam with automated boundary tests. Only when the in-process boundary proves clean and stable over multiple production release cycles should physical network extraction be considered.**
-
 ## The Monolith-First and Module-First principle
 
 Martin Fowler's *MonolithFirst* strategy emphasizes that domain boundaries are almost impossible to get right at the outset. When a service grows too large, the instinct is often to immediately spin up a new Git repository, a new Dockerfile, a CI/CD pipeline, and a network API.
@@ -192,6 +191,10 @@ Once the modules run independently in-process with separate database schemas and
 2. Replace Spring's local `ApplicationEventPublisher` with an external message broker (Kafka, RabbitMQ).
 3. Point `billing` to its own dedicated database server.
 
+When the module is finally clean, one judgement remains — whether it is actually ready, and what
+silently stops being true the moment it is on the far side of a network. That is
+[40b · Ready to extract](40b-ready-to-extract.md).
+
 ## Gotchas
 
 **★ Sharing a single `@Transactional` context across boundaries.**
@@ -222,4 +225,4 @@ The in-memory event bus is replaced with an external message broker (Kafka, Rabb
 
 ---
 
-← [Moving a capability](39-moving-a-capability.md) · [Topic index](README.md) · Next → [Strangler extraction](41-strangler-extraction.md)
+← [Moving a capability](39-moving-a-capability.md) · [Topic index](README.md) · Next → [Ready to extract](40b-ready-to-extract.md)
