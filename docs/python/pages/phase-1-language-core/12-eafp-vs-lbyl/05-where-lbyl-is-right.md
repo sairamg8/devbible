@@ -35,9 +35,9 @@ whole list, and the rest of chunk 05 is those six cases in order.
 | 1 | **A trust boundary** | there is no established invariant yet, so nothing will raise on your behalf | this chunk; [05b](05b-assert-is-not-validation.md) for why the check cannot be an `assert`, [05c](05c-the-quiet-boundaries.md) for the boundaries that do not look like edges |
 | 2 | **An irreversible or expensive leap** | a failed attempt cannot be discarded — the check filters almost all bad calls before money moves | [05d](05d-irreversible-leaps.md) |
 | 3 | **A cheap look in front of a catastrophic leap** | the asymmetry pays for two operations, and a lock closes the gap the check leaves open | [05d](05d-irreversible-leaps.md) |
-| 4 | **The check *is* the domain rule** | the guard exists to *create* a domain error, not to dodge a built-in one | [05e](05e-aggregating-failures.md) |
-| 5 | **Failures must be aggregated into a report** | conditions compose into data; a raise ends the loop | [05e](05e-aggregating-failures.md) |
-| 6 | **The checker must be shown a narrowing, or the API never raises** | an `if` is a condition; a handler is not, and some calls answer failure with `None` | [05f](05f-type-checkers-and-silent-apis.md) |
+| 4 | **The check *is* the domain rule** | the guard exists to *create* a domain error, not to dodge a built-in one | [05i](05i-the-check-is-the-rule.md) |
+| 5 | **Failures must be aggregated into a report** | conditions compose into data; a raise ends the loop | [05h](05h-aggregating-failures.md) |
+| 6 | **The checker must be shown a narrowing, or the API never raises** | an `if` is a condition; a handler is not, and some calls answer failure with `None` | [05j](05j-type-checkers-and-silent-apis.md) |
 
 ## A boundary is where invariants are created, not where they are re-checked
 

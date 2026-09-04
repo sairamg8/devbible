@@ -91,7 +91,7 @@ def load_settings(env: dict[str, str] | None = None) -> Settings:
 Four deliberate decisions in that function:
 
 - It collects **all** missing variables before raising, rather than failing on the first —
-  the aggregation argument in miniature, and [05e](05e-aggregating-failures.md)'s subject.
+  the aggregation argument in miniature, and [05h](05h-aggregating-failures.md)'s subject.
 - It mixes a `try` with three `if`s, because the questions have three different exact
   tests. "Is this text an integer" is answered only by `int()`; "is it positive" is
   answered only by a comparison; "is it a boolean word" is answered only by a set.

@@ -121,8 +121,6 @@ So the pre-check earns its place on message quality only where the check is *exa
 membership in a set you defined, a length, a numeric range, a regex you also apply as the
 parser. Where the operation is the only exact test, keep it and translate.
 
-## Who consumes the failure — data or control flow
-
 ## Can EAFP aggregate? Yes — with `ExceptionGroup`
 
 Since 3.11 the language has a first-class way to raise several exceptions at once, so
