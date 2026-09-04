@@ -244,7 +244,7 @@ That five-minute threshold is a hard gate, not a suggestion — the full set of 
 
 **★ Symptom: an auth-dependent nav starts showing logged-in content after the migration, on a page that was previously `force-static`.** Cause: `force-static` blanked `cookies()`, so the read silently returned nothing and the component took the logged-out branch. Removing the export makes the read work. Fix: decide which behaviour was intended. This is a real behaviour change and it belongs in its own commit with its own test, not buried in a migration diff.
 
-**★ Symptom: dev shows insights, CI is green, and a blocking route ships.** Cause: *"Insights don't show up in the HTTP response. An offending route still returns `200` with rendered HTML in dev."* A pipeline that checks status codes cannot see them. Fix: gate on the `instant()` Playwright helper instead, which is the documented machine-checkable form — see **03c · instant-navigation validation** *(not written yet)*.
+**★ Symptom: dev shows insights, CI is green, and a blocking route ships.** Cause: *"Insights don't show up in the HTTP response. An offending route still returns `200` with rendered HTML in dev."* A pipeline that checks status codes cannot see them. Fix: gate on the `instant()` Playwright helper instead, which is the documented machine-checkable form — see [03c](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md).
 
 ## Interview questions
 

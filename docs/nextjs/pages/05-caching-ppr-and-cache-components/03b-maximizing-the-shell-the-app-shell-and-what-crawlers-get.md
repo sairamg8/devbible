@@ -217,4 +217,4 @@ Because prerendering is not free at either end: it increases build time and prod
 
 ---
 
-← [03 · Partial Prerendering](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md) · [Chapter index](01-explanation.md) · Next → **03c · Proving it: validation, DevTools and CI** *(not written yet)*
+← [03 · Partial Prerendering](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md) · [Chapter index](01-explanation.md) · Next → [03c · Validation, DevTools and CI](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md)

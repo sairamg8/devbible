@@ -136,7 +136,7 @@ The insights are identified by name, and knowing them makes the dev overlay sear
 
 > *"Insights don't show up in the HTTP response. An offending route still returns `200` with rendered HTML in dev. The insight only appears in the dev overlay, the dev-server log, or the MCP `get_errors` tool."*
 
-If you want a machine to enforce this, the mechanism is the `instant()` Playwright helper, covered in **03c · instant-navigation validation** *(not written yet)*.
+If you want a machine to enforce this, the mechanism is the `instant()` Playwright helper, covered in [03c](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md).
 
 ## Gotchas
 
@@ -146,7 +146,7 @@ If you want a machine to enforce this, the mechanism is the `instant()` Playwrig
 npx @next/codemod@canary cache-components-instant-false ./app
 ```
 
-**★ Symptom: you cache a value, the dev overlay goes quiet, and you conclude the route is optimised.** Cause: a passing validation means the navigation is *instant*, not that it is *good* — a single `<Suspense>` wrapped around the whole page satisfies validation and replaces the entire page with one spinner. Fix: treat a clean overlay as the floor and inspect what actually lands in the shell; the doc is unambiguous that these are different questions, and the workflow is in **03c · instant-navigation validation** *(not written yet)*.
+**★ Symptom: you cache a value, the dev overlay goes quiet, and you conclude the route is optimised.** Cause: a passing validation means the navigation is *instant*, not that it is *good* — a single `<Suspense>` wrapped around the whole page satisfies validation and replaces the entire page with one spinner. Fix: treat a clean overlay as the floor and inspect what actually lands in the shell; the doc is unambiguous that these are different questions, and the workflow is in [03c](03c-instant-navigation-validation-devtools-and-proving-it-in-ci.md).
 
 **★ Symptom: a colleague insists `fetch()` with no options makes a route dynamic, and the migration diff looks wrong to them.** Cause: they are describing the Cache Components behaviour and applying it to the previous model, where a bare `fetch()` left the route static and stale. Both statements are true — of different models. Fix: name which model you are in before arguing about a default. This chapter is the explicit model; the previous one is documented at [Caching and Revalidating (Previous Model)](https://nextjs.org/docs/app/guides/caching-without-cache-components) and taught at [ch4 · 03](../04-data-fetching-in-the-app-router/03-static-vs-dynamic-rendering-force-dynamic-force-static-reval.md).
 
