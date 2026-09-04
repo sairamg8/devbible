@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 41
 title: "If you can keep the pages static, you can keep a strict CSP: build-time SRI hashes and a header in next.config.js do what nonces do without turning off the CDN"
 sidebar_label: "CSP without nonces: SRI and static headers"
 description: "The two alternatives to nonce-based CSP — a static Content-Security-Policy header in next.config.js, and experimental Subresource Integrity hashing — plus third-party scripts, common violations, and how to choose."

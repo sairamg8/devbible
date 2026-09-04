@@ -1,7 +1,7 @@
 ---
 title: "Every shortcut this milestone refused is a shortcut somebody will propose, so here they all are with the specific thing each one breaks — and the one module you would rewrite if you replaced Auth.js tomorrow"
 sidebar_label: "06m · Milestone: cost and generalisation"
-sidebar_position: 171
+sidebar_position: 39
 description: "Chapter 10's capstone, closing: the eighteen deviations a reader will be tempted into and what each one breaks, what the database-session-plus-DAL design actually costs in queries and code, how the same shape survives swapping Auth.js for Clerk, Supabase or Better Auth, and the audit greps that keep it true."
 ---
 

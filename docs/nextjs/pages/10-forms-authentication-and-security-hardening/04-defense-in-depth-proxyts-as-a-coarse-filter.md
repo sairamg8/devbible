@@ -1,7 +1,7 @@
 ---
 title: "A proxy.ts check runs before the route and knows nothing about what the route will read, so the documentation calls it optimistic and says outright that it must not be your only line of defence"
 sidebar_label: "04 · `proxy.ts` as a coarse filter"
-sidebar_position: 4
+sidebar_position: 20
 description: "What proxy.ts can and cannot see, the optimistic-redirect pattern the docs endorse for UX and explicitly refuse to endorse as a control, why Server Functions are not routes in the matcher chain, the allowlist that rots, and the Edge-runtime argument that is now history."
 ---
 

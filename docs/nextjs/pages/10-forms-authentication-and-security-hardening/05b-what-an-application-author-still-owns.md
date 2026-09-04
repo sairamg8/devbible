@@ -1,7 +1,7 @@
 ---
 title: "The decoder was patched upstream; the encoder is yours — a hand-written DTO projection is the only outward serialization control in this stack you can actually certify, and tainting is a development backstop that is not even present in stable React"
 sidebar_label: "05b · Projection at the boundary"
-sidebar_position: 143
+sidebar_position: 25
 description: "Projection at the boundary, why the docs tell you to use classes, narrowing Client Component prop types so a wide call does not compile, constraining Server Function return values, and the measured state of the React taint APIs on the pinned version."
 ---
 

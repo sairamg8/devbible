@@ -1,7 +1,7 @@
 ---
 title: "A file upload arrives with three attacker-controlled strings — name, type and size — and `z.file().mime()` checks the one the browser was told to send, so the schema is where the UX lives and the server is where the truth is"
 sidebar_label: "02e · File inputs"
-sidebar_position: 107
+sidebar_position: 10
 description: "z.file() and its min/max/mime checks, why File.type is a claim rather than a fact, why the body cap fires before your schema does, never using the client's filename as a storage key, and why serving user uploads from your own origin is a stored-XSS decision."
 ---
 

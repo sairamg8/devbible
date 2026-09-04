@@ -1,7 +1,7 @@
 ---
 title: "A layout that renders a sign-in wall instead of its children has not stopped the children from running — it chose not to display data that is already in the RSC payload, and that distinction is the difference between hiding and protecting"
 sidebar_label: "06e · Milestone: the layout is not a boundary"
-sidebar_position: 163
+sidebar_position: 31
 description: "Chapter 10's capstone, step four: why an auth check in a layout protects nothing and does not even re-run on navigation, what a top-level await on the session costs every page beneath it, and the synchronous layout plus Suspense-wrapped user menu SprintDesk ships instead."
 ---
 

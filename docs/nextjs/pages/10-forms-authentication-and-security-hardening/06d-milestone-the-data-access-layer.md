@@ -1,7 +1,7 @@
 ---
 title: "One module reads the session and every other file in SprintDesk asks it a question — the Data Access Layer is not a folder convention, it is the decision that there is exactly one place where 'who is asking' can be answered"
 sidebar_label: "06d · Milestone: the Data Access Layer"
-sidebar_position: 162
+sidebar_position: 30
 description: "Chapter 10's capstone, step three: the server-only DAL, getCurrentUser() memoised with React's cache(), why it returns a DTO class rather than a database row, the difference between the nullable and the throwing variant, and why no component in the app is allowed to read a cookie."
 ---
 

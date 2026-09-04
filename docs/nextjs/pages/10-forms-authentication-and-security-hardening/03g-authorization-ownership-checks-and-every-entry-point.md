@@ -1,7 +1,7 @@
 ---
 title: "Authentication is the part everybody implements; authorization is the part that gets breached — because a session proves who is calling and says nothing about whether that row is theirs"
 sidebar_label: "Authorization: ownership checks"
-sidebar_position: 125
+sidebar_position: 17
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -171,7 +171,7 @@ export async function GET() {
 
 > *"The example above demonstrates a Route Handler with a two-tier security check. It first checks for an active session, and then verifies if the logged-in user is an 'admin'."*
 
-**Statically rendered routes.** These fetched their data at build time, when there was no request and therefore no session — so a DAL check never ran. The docs: *"for static routes that share data between users, data will be fetched at build time and not at request time. Use Proxy to protect static routes."* That is the one case where the proxy layer is doing real work rather than optimistic filtering; the mechanics belong to **04 · Defence in depth: `proxy.ts` as a coarse filter** *(not written yet)*.
+**Statically rendered routes.** These fetched their data at build time, when there was no request and therefore no session — so a DAL check never ran. The docs: *"for static routes that share data between users, data will be fetched at build time and not at request time. Use Proxy to protect static routes."* That is the one case where the proxy layer is doing real work rather than optimistic filtering; the mechanics belong to [04 · Defence in depth: `proxy.ts` as a coarse filter](04-defense-in-depth-proxyts-as-a-coarse-filter.md).
 
 The other half of the boundary — what a Server Action may accept, what it may return, the CSRF origin check, and the audit checklist the docs publish — is [03h · The trust boundary around a Server Action](03h-the-trust-boundary-around-a-server-action.md).
 

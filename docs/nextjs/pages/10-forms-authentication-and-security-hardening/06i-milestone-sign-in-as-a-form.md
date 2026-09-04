@@ -1,7 +1,7 @@
 ---
 title: "Sign-in has to be a form and not a link, because the whole point of signing in is to set a cookie and a cookie cannot be set while a Server Component renders"
 sidebar_label: "06i · Milestone: sign-in as a form"
-sidebar_position: 167
+sidebar_position: 35
 description: "Chapter 10's capstone, step eight: why sign-in must be a POST, the sign-in page, the email form with zod field errors surfaced through useActionState, the Server Action that calls signIn, the OAuth button as a second form, and why unstable_rethrow is the first line of every catch near a redirect."
 ---
 

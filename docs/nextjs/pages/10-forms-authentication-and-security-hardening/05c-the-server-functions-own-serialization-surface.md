@@ -1,7 +1,7 @@
 ---
 title: "A Server Function serializes more than its arguments — its closures travel to the browser and back, and the export list of a 'use server' file is a public unauthenticated HTTP API whether you meant it to be or not"
 sidebar_label: "05c · The Server Function's serialization surface"
-sidebar_position: 144
+sidebar_position: 26
 description: "Closed-over variables sent to the client and back, why the encryption exists and why the docs tell you not to lean on it, NEXT_SERVER_ACTIONS_ENCRYPTION_KEY on multi-instance deployments and the durable secret it creates, and why exporting a helper from a 'use server' file publishes an endpoint."
 ---
 

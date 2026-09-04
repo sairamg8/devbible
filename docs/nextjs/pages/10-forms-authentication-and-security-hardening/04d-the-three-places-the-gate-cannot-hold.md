@@ -1,7 +1,7 @@
 ---
 title: "A layout that refuses to render its children does not stop them running, the UI that hides a button does not stop the action, and a statically generated route has no request-time read to gate — the three layers people put the gate on that cannot hold it"
 sidebar_label: "04d · The three places the gate cannot hold"
-sidebar_position: 142
+sidebar_position: 23
 description: "Why a layout is not a security boundary and the data reaches the RSC Payload anyway, why the SPA return-null pattern is explicitly not recommended, the one case where the gate correctly moves outward to the proxy, the database layer underneath, and how to read the data-security audit checklist as a statement about layers."
 ---
 

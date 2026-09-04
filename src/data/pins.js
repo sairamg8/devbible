@@ -280,6 +280,11 @@ export const PINS = {
     names: ['bcrypt'],
     note: 'Only the first 72 BYTES of a password are used, not the first 72 characters — a multi-byte password is truncated earlier than it looks.',
   },
+  prisma: {
+    label: 'Prisma', source: 'npm:@prisma/client', policy: 'latest',
+    pin: '7.10.0', checked: '2026-09-05', tracks: ['nextjs'], names: ['prisma', '@prisma/client'],
+    note: '@auth/prisma-adapter 2.11.3 declares "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5 || >=6" — the first clause is unbounded, so Prisma 7 installs with no peer warning despite the ladder stopping at 6.',
+  },
   reactHookForm: {
     label: 'React Hook Form', source: 'npm:react-hook-form', policy: 'latest',
     pin: '7.87.0', checked: '2026-09-05', tracks: ['nextjs', 'react', 'real-world'],

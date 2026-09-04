@@ -1,7 +1,7 @@
 ---
 title: "A 403 is an answer — it tells a stranger the board exists — so SprintDesk hides what a non-member asks for and forbids only what a member is not allowed to do, and the framework's own 403 function is experimental and usually returns a 200 anyway"
 sidebar_label: "06g · Milestone: hide, do not forbid"
-sidebar_position: 165
+sidebar_position: 33
 description: "Chapter 10's capstone, step six: forbidden(), the authInterrupts flag it needs, the three reasons SprintDesk answers a non-member with notFound() instead, the one screen where forbidden() is genuinely right, and why neither function reliably sets the status code you think it does on a streamed page."
 ---
 

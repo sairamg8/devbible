@@ -1,7 +1,7 @@
 ---
 title: "A shared zod schema is not a way to avoid writing validation twice — it is one contract with two consumers, and only the server-side consumer is a control"
 sidebar_label: "02 · The schema as a trust boundary"
-sidebar_position: 2
+sidebar_position: 6
 description: "Why the client copy of a schema is a convenience and the server copy is the gate, the honest table of where each class of check belongs, where the schema module may live without dragging server code into the browser, and what a schema can never decide."
 ---
 

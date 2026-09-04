@@ -1,7 +1,7 @@
 ---
 title: "Sign-out deletes a row and a cookie, and neither of those touches a single cache — so the question the button raises is not 'is the session gone' but 'what is still sitting in memory that was rendered for the person who just left'"
 sidebar_label: "06k · Milestone: sign-out and the caches"
-sidebar_position: 169
+sidebar_position: 37
 description: "Chapter 10's capstone, step ten: sign-out as a POST because a cookie cannot be deleted during render, why the database session strategy makes revocation a DELETE, the 'sign out everywhere' feature it unlocks, what survives sign-out on the server and in the browser, and which of it you actually have to invalidate."
 ---
 

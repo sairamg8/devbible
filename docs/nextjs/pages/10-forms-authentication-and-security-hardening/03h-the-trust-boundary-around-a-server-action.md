@@ -1,7 +1,7 @@
 ---
 title: "An action's boundary has two directions and both leak: what it accepts must never carry authority, and what it returns is serialized straight to the browser"
 sidebar_label: "The trust boundary around an action"
-sidebar_position: 126
+sidebar_position: 18
 ---
 
 <span className="db-tier t-master">Master</span>

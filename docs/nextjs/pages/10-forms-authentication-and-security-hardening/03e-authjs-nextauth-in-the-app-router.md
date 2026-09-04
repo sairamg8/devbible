@@ -1,7 +1,7 @@
 ---
 title: "Auth.js gives you one config object, one route handler and one auth() call — and the thing worth learning is which of its callbacks run in which session strategy, because they are not the same function"
 sidebar_label: "Auth.js (NextAuth) in App Router"
-sidebar_position: 123
+sidebar_position: 15
 ---
 
 <span className="db-tier t-understand">Understand</span>
@@ -79,7 +79,7 @@ and states what it is for:
 
 > *"Add optional Proxy to keep the session alive, this will update the session expiry every time its called."*
 
-🔴 Read that purpose carefully. The documented reason for this line is **session refresh**, not access control. A proxy runs on prefetches, does not run on paths excluded by a matcher, and is not the boundary that protects a Server Action. The coarse-filter role and its mechanics belong to **04 · Defence in depth: `proxy.ts` as a coarse filter** *(not written yet)*; the authorization that actually protects data belongs to the Data Access Layer, covered in [03b](03b-the-data-access-layer-server-only-and-the-dto.md) and [03g](03g-authorization-ownership-checks-and-every-entry-point.md).
+🔴 Read that purpose carefully. The documented reason for this line is **session refresh**, not access control. A proxy runs on prefetches, does not run on paths excluded by a matcher, and is not the boundary that protects a Server Action. The coarse-filter role and its mechanics belong to [04 · Defence in depth: `proxy.ts` as a coarse filter](04-defense-in-depth-proxyts-as-a-coarse-filter.md); the authorization that actually protects data belongs to the Data Access Layer, covered in [03b](03b-the-data-access-layer-server-only-and-the-dto.md) and [03g](03g-authorization-ownership-checks-and-every-entry-point.md).
 
 ## Reading the session
 

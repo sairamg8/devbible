@@ -1,7 +1,7 @@
 ---
 title: "Next.js routes every mutation over POST and compares Origin against Host — which is a real CSRF defence right up until a reverse proxy, a wildcard in allowedOrigins, or a mutation that happens during rendering undoes it"
 sidebar_label: "CSRF, origins and the audit"
-sidebar_position: 127
+sidebar_position: 19
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -132,7 +132,7 @@ Both should return nothing. When they return something, you have found either a 
 
 Six pages, one rule: **the session tells you who, the data tells you whose, and the check belongs next to the data.** Cookie attributes ([03](03-authentication-patterns-authjs-clerk-supabase-jwt-strategies.md)) protect the credential. The Data Access Layer ([03b](03b-the-data-access-layer-server-only-and-the-dto.md)) makes the check unforgettable. Session strategy ([03c](03c-stateless-vs-stateful-sessions-the-revocation-question.md)) decides whether you can revoke. Verification ([03d](03d-verifying-a-token-alg-none-and-algorithm-confusion.md)) decides whether the credential means anything. The library ([03e](03e-authjs-nextauth-in-the-app-router.md), [03f](03f-clerk-and-supabase-the-hosted-identity-trade.md)) decides who operates it. And ownership checks ([03g](03g-authorization-ownership-checks-and-every-entry-point.md)) plus the boundary rules ([03h](03h-the-trust-boundary-around-a-server-action.md)) and this page decide whether any of it holds.
 
-The coarse filter that sits in front of all of it — and which is deliberately *not* the boundary — is **04 · Defence in depth: `proxy.ts` as a coarse filter** *(not written yet)*.
+The coarse filter that sits in front of all of it — and which is deliberately *not* the boundary — is [04 · Defence in depth: `proxy.ts` as a coarse filter](04-defense-in-depth-proxyts-as-a-coarse-filter.md).
 
 ## Gotchas
 

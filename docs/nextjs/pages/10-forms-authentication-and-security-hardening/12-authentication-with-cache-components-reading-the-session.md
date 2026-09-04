@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 42
 title: "With Cache Components on, a session read cannot be prerendered — so authenticated UI stops being part of the page and becomes something that streams into it"
 sidebar_label: "Auth with Cache Components: the session read"
 description: "Why 'use cache' cannot read cookies, what 'use cache: private' is actually for, how to stream authenticated UI behind Suspense without holding the layout, and the instant=false migration valve."
@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
 export default nextConfig
 ```
 
-The directives themselves — plain `'use cache'`, `'use cache: remote'` and `'use cache: private'` — are covered in depth in **chapter 5, the cache directives** *(not written yet)*. What matters here is the one rule that shapes every auth decision: `'use cache'` **forbids** `cookies()`, `headers()` and `searchParams`; `'use cache: private'` **allows** all three but never persists server-side; and `connection()` is prohibited in **both**.
+The directives themselves — plain `'use cache'`, `'use cache: remote'` and `'use cache: private'` — are covered in depth in [chapter 5, the cache directives](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/01-choosing-a-directive.md). What matters here is the one rule that shapes every auth decision: `'use cache'` **forbids** `cookies()`, `headers()` and `searchParams`; `'use cache: private'` **allows** all three but never persists server-side; and `connection()` is prohibited in **both**.
 
 ## Why the server-side directives genuinely cannot do this
 

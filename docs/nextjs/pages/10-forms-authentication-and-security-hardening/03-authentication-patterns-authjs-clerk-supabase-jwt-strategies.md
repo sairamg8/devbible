@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 11
 title: "Before you pick a library, understand what you are actually shipping: a bearer credential in a cookie whose attributes — not your code — are the security control"
 sidebar_label: "Sessions: the cookie is the control"
 description: "What a session is in a Next.js application, every Set-Cookie attribute as the control it actually is, the __Host- prefix, why SameSite=Strict breaks an OAuth callback, and why cookies() cannot be set during a Server Component render."

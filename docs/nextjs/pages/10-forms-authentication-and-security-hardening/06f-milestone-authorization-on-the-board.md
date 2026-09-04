@@ -1,7 +1,7 @@
 ---
 title: "The membership test belongs in the WHERE clause, not in an if-statement after the row is already in memory — because a check the function performs is a check a refactor can remove, and a filter the query carries is not"
 sidebar_label: "06f · Milestone: authorization on reads"
-sidebar_position: 164
+sidebar_position: 32
 description: "Chapter 10's capstone, step five: requireBoardAccess as the only door to a board, why the subject of a check is never a parameter, why membership goes in the query rather than in a check after it, and how request-time authorization composes with a cached-and-tagged board read whose inner function is deliberately unexported."
 ---
 

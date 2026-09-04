@@ -1,7 +1,7 @@
 ---
 title: "Only the Data Access Layer touches process.env, which means the environment is parsed once at boot into a typed object — and the three variables that break production are the one you must copy, the one Vercel hides from you, and the one that is not an Auth.js variable at all"
 sidebar_label: "06c · Milestone: the environment"
-sidebar_position: 161
+sidebar_position: 29
 description: "Chapter 10's capstone, step two: the single server-only module that reads and validates process.env with zod, every environment variable SprintDesk needs with the deployment it belongs to, and why AUTH_SECRET, AUTH_TRUST_HOST and NEXT_SERVER_ACTIONS_ENCRYPTION_KEY are the three that actually bite."
 ---
 

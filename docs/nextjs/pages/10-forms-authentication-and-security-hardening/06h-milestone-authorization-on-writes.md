@@ -1,7 +1,7 @@
 ---
 title: "A Server Action is a POST endpoint that anyone can call, so the page's auth check does not protect it — SprintDesk's actions are three lines each because every one of them delegates to a server-only module that re-authorizes from the session it reads itself"
 sidebar_label: "06h · Milestone: authorization on writes"
-sidebar_position: 166
+sidebar_position: 34
 description: "Chapter 10's capstone, step seven: why a page-level check does not extend to the actions defined on that page, the thin-action / DAL-for-mutations split the docs recommend, chapter 8's moveCard rewritten with ownership derived from the session, what a Server Action may return, and the CSRF protections Next.js gives you for free."
 ---
 

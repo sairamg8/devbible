@@ -1,7 +1,7 @@
 ---
 title: "Defence in depth is not \"check in several places\" — it is the rule that a control belongs at the innermost layer that can see the fact it depends on, and everything outside that layer is a filter"
 sidebar_label: "04c · The innermost layer that can see the fact"
-sidebar_position: 141
+sidebar_position: 22
 description: "The six layers of a Next.js request and what each can genuinely enforce, why the placement rule is a rule rather than a preference, why the innermost layer also has the fewest entry points, and the one control the rule pushes outward instead of inward."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Clerk and Supabase are not two flavours of the same product — one moves your authorization model into a dashboard, the other moves it into Postgres, and that is the decision you are actually making"
 sidebar_label: "Clerk and Supabase"
-sidebar_position: 124
+sidebar_position: 16
 ---
 
 <span className="db-tier t-know">Know</span>

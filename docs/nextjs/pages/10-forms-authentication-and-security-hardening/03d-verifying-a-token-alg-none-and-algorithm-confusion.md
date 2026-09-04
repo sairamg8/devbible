@@ -1,7 +1,7 @@
 ---
 title: "Every JWT mistake that matters happens in the verify call, and every one of them fails open — the token is accepted, nothing is logged, and the application behaves normally"
 sidebar_label: "Verifying a token, correctly"
-sidebar_position: 122
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>

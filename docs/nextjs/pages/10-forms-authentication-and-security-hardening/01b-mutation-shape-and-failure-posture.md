@@ -1,7 +1,7 @@
 ---
 title: "A mutation may never be a render side-effect, a destructive one needs more than a valid session, and the error a failed action returns is itself a disclosure decision"
 sidebar_label: "01b · Mutation shape and failure posture"
-sidebar_position: 100
+sidebar_position: 2
 description: "Why Next.js forbids cookie writes and revalidation during render, what elevated checks and a loud failure mean for a delete, and how to decide what a failed action tells the user versus what it tells the log."
 ---
 

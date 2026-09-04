@@ -1,7 +1,7 @@
 ---
 title: "Every export in a `'use server'` module is a public endpoint and every variable an inline action closes over is shipped to the browser and back — two surfaces most codebases never look at"
 sidebar_label: "01c · What crosses the wire"
-sidebar_position: 101
+sidebar_position: 3
 description: "Why an unimported exported action is still callable, why re-exporting a DAL function publishes it, what closure encryption does and explicitly does not promise, the AES key a multi-instance deployment needs, and bind versus a hidden input."
 ---
 

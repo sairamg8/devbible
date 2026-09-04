@@ -182,6 +182,14 @@ The DAL also has a documented rule about secrets that most projects violate on d
 
 > *"Secret keys should be stored in environment variables, but only the Data Access Layer should access `process.env`."*
 
+## Where this is also covered
+
+This page owns the **action surface**: what an action is as an endpoint, and what that forces on the code that defines it. Three neighbouring pages reach the same ground from other directions, and each owns its angle in full:
+
+- [03b · The Data Access Layer, `server-only` and the DTO](03b-the-data-access-layer-server-only-and-the-dto.md) — the DAL as the single place the check lives, from the **authorization** angle.
+- [03h · The trust boundary around a Server Action](03h-the-trust-boundary-around-a-server-action.md) — the same boundary, drawn around **who the caller is** rather than around what crosses it.
+- [05c · The Server Function's own serialization surface](05c-the-server-functions-own-serialization-surface.md) — what the **render** exposes, rather than what the action accepts.
+
 ## Gotchas
 
 **★ Symptom: a user deletes a row belonging to another team, and the request logs show a clean success.** Cause: the action authenticated the caller and then keyed the write by the ID the caller supplied — `where: { id }` with no ownership predicate. Authentication answered "who", nobody asked "whose". Fix: put ownership in the query, so a foreign row simply is not found.

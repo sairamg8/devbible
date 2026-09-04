@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 40
 title: "A nonce-based CSP forces every page in your application to render dynamically — which is the same as saying it turns off PPR, ISR and CDN caching"
 sidebar_label: "CSP: nonces and the dynamic-rendering tax"
 description: "How Next.js injects CSP nonces during server-side rendering, why nonces require dynamic rendering, the proxy.ts implementation, reading the nonce in a Server Component, and the exact performance consequences the docs enumerate."

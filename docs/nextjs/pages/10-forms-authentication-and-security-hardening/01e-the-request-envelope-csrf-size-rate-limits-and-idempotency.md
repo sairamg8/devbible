@@ -1,7 +1,7 @@
 ---
 title: "The framework gives you an origin check and a 1MB body cap and nothing else, so rate limiting and idempotency are yours to build — and sequential dispatch is a client-side comfort that an attacker with curl does not have"
 sidebar_label: "01e · The request envelope"
-sidebar_position: 103
+sidebar_position: 5
 description: "The Origin-versus-Host CSRF check and what allowedOrigins really widens, the 1MB cap and the multipart bytes people forget, why in-memory rate limiting fails on the second instance, and the idempotency key a retried mutation needs."
 ---
 
@@ -220,6 +220,11 @@ export function CheckoutForm({ cartId }: { cartId: string }) {
 ```
 
 The unique index is what does the work — the pre-check is an optimisation, and the `catch` is the correct path under concurrency. A check-then-create without the constraint is the same race with extra steps.
+
+## Where this is also covered
+
+- [03i · CSRF, the Origin check and the audit](03i-csrf-the-origin-check-and-the-audit.md) takes the same `Origin`/`Host` comparison from the **audit** angle, and carries the checklist to run against an existing codebase.
+- [04d · The three places the gate cannot hold](04d-the-three-places-the-gate-cannot-hold.md) covers what a coarse filter misses, including the Server Function that a matcher change silently stops covering.
 
 ## Gotchas
 

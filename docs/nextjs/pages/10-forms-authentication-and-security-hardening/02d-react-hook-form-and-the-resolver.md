@@ -1,7 +1,7 @@
 ---
 title: "React Hook Form buys you uncontrolled inputs, field arrays and one re-render per touched field — and it costs you the form that works before hydration, so the choice is about which of those the form actually needs"
 sidebar_label: "02d · React Hook Form and the resolver"
-sidebar_position: 106
+sidebar_position: 9
 description: "What zodResolver does, the z.input versus z.output generic clash that the resolvers README documents, why RHF cannot participate in progressive enhancement, the two integration shapes with a Server Action, and mapping server errors back with setError."
 ---
 

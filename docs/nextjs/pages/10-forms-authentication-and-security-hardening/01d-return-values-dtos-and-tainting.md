@@ -1,7 +1,7 @@
 ---
 title: "Whatever a Server Action returns is serialized and shipped to the browser whether or not the UI renders it, which makes the return type a disclosure decision and the DTO the only real control"
 sidebar_label: "01d · Return values, DTOs and tainting"
-sidebar_position: 102
+sidebar_position: 4
 description: "Why returning an ORM record leaks columns nobody added yet, the viewer-shaped DTO, the class trick that turns a leak into a build error, React's serializable set, and why tainting is a tripwire rather than a boundary."
 ---
 

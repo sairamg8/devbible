@@ -1,7 +1,7 @@
 ---
 title: "A sign-in endpoint gives away three things for free unless you stop it — whether an address has an account, your domain as the first hop of a phishing link, and your email provider's sending quota"
 sidebar_label: "06j · Milestone: what sign-in gives away"
-sidebar_position: 168
+sidebar_position: 36
 description: "Chapter 10's capstone, step nine: safeRedirectTarget as an allow-list of shapes rather than a blocklist of strings, why the response must be identical for a known and an unknown address including its timing, and the rate limiter in front of an endpoint that sends email to any address it is given."
 ---
 

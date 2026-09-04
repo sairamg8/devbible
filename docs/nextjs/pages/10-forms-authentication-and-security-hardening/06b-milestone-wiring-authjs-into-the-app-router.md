@@ -1,7 +1,7 @@
 ---
 title: "Auth.js is one config module, one two-line Route Handler and four database tables — and every one of the four tables encodes a decision you will otherwise discover from a support ticket"
 sidebar_label: "06b · Milestone: wiring Auth.js"
-sidebar_position: 160
+sidebar_position: 28
 description: "Chapter 10's capstone, step one: lib/auth.ts with the session strategy written out, the GitHub and Resend providers, the four tables the Prisma adapter requires and the two schema details that cost an afternoon each, and the catch-all Route Handler that mounts a public endpoint you did not write."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Stateless or database sessions is not a performance question — it is settled by whether you can answer 'log this user out, now' with yes"
 sidebar_label: "Stateless vs stateful sessions"
-sidebar_position: 121
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>

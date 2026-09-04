@@ -1,7 +1,7 @@
 ---
 title: "The Data Access Layer is not an abstraction for tidiness — it is the place where the session read, the authorization check and the field filter happen exactly once, and the only place process.env is allowed"
 sidebar_label: "The Data Access Layer"
-sidebar_position: 120
+sidebar_position: 12
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -186,7 +186,7 @@ The DAL is not a replacement for the coarse filter in `proxy.ts`, and the proxy 
 
 > *"While Proxy can be useful for initial checks, it should not be your only line of defense in protecting your data. The majority of security checks should be performed as close as possible to your data source."*
 
-A proxy check runs once per navigation and knows only what is in the cookie. A DAL check runs once per *data access* and can consult the database. The mechanics of the proxy layer — matchers, what it can and cannot see, and why an optimistic redirect there is a UX affordance rather than a boundary — belong to **04 · Defence in depth: `proxy.ts` as a coarse filter** *(not written yet)*.
+A proxy check runs once per navigation and knows only what is in the cookie. A DAL check runs once per *data access* and can consult the database. The mechanics of the proxy layer — matchers, what it can and cannot see, and why an optimistic redirect there is a UX affordance rather than a boundary — belong to [04 · Defence in depth: `proxy.ts` as a coarse filter](04-defense-in-depth-proxyts-as-a-coarse-filter.md).
 
 Under Cache Components the DAL still exists but the session read inside it acquires new rules; those are covered in [12 · Auth with Cache Components: the session read](12-authentication-with-cache-components-reading-the-session.md) and [13 · sharing, caching and mutating](13-authentication-with-cache-components-sharing-caching-and-mutating.md).
 

@@ -1,7 +1,7 @@
 ---
 title: "The action's return value is the form's error API, so design it as a discriminated union keyed by field name — and know which zod formatter throws away the information you need"
 sidebar_label: "02c · Field errors the form can render"
-sidebar_position: 105
+sidebar_position: 8
 description: "The state shape useActionState wants, why flattenError loses array indices and treeifyError does not, why a ZodError cannot cross the boundary, re-populating a form without echoing a password, and the ARIA wiring that makes the error audible."
 ---
 

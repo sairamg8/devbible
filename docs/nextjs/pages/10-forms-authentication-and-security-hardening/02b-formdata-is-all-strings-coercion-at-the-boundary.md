@@ -1,7 +1,7 @@
 ---
 title: "`FormData` has no types — every value is a string or a File — so coercion is part of the schema, and `z.coerce` has three behaviours that turn an empty form field into valid data"
 sidebar_label: "02b · FormData is all strings"
-sidebar_position: 104
+sidebar_position: 7
 description: "Why an empty text input coerces to 0, why z.coerce.boolean() calls \"false\" true, what an unchecked checkbox actually sends, the $ACTION_ keys Object.fromEntries picks up, and the zod 3 API the Next.js forms guide still shows."
 ---
 

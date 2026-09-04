@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 45
 title: "Next.js moved to pre-announced monthly security releases in July 2026 because LLM-assisted vulnerability research changed the arrival rate — and the correct response is a habit, not a heroic upgrade"
 sidebar_label: "The patching habit"
 description: "The Next.js security release program, why it exists, what the Active/Maintenance LTS split is for, how to build a patching cadence around pre-announcements, and the dependency hygiene the 2026 record demands."

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 43
 title: "Once you have the user, everything else is a key: pass the promise not the value, cache on the id not the cookie, and never put anything secret in a cache key or tag"
 sidebar_label: "Auth with Cache Components: sharing and caching"
 description: "Sharing one user promise across Server and Client Components with use(), caching session-derived data by user id, invalidating it with updateTag, keeping authenticated navigations instant, and why cache keys and tags are stored in plain text."

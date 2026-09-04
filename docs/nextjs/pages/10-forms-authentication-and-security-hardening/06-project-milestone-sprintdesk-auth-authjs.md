@@ -1,7 +1,7 @@
 ---
 title: "SprintDesk gets identity: the milestone is not 'add a login page', it is one decision about revocation and one module that becomes the only thing in the app allowed to know who is asking"
 sidebar_label: "06 · Milestone: the two decisions"
-sidebar_position: 6
+sidebar_position: 27
 description: "Chapter 10's capstone, act one: what identity actually adds to the board built in chapter 8, the version reality of adopting Auth.js in 2026, and the JWT-versus-database session decision argued from 'can we revoke this session right now' rather than from convenience."
 ---
 

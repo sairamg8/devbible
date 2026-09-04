@@ -1,7 +1,7 @@
 ---
 title: "The proxy exists so a signed-out user does not watch a dashboard skeleton before being sent to the sign-in page — it is a UX optimisation with a documented hole in it, and the documentation is the one telling you not to rely on it"
 sidebar_label: "06l · Milestone: proxy as UX, not control"
-sidebar_position: 170
+sidebar_position: 38
 description: "Chapter 10's capstone, step eleven: SprintDesk's proxy.ts, the matcher that excludes the auth routes, why the check must read only the cookie and never the database, the Server Function hole the docs name explicitly, the runtime facts that make the old Edge argument stale, and the one job the proxy really is the right tool for."
 ---
 

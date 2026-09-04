@@ -1,7 +1,7 @@
 ---
 title: "The matcher is a hand-maintained allowlist that cannot be computed, which is why it rots — and the Edge-runtime argument everyone still uses to justify moving auth out of the proxy has been four versions out of date since 16.0"
 sidebar_label: "04b · Matchers, runtime and the rename"
-sidebar_position: 140
+sidebar_position: 21
 description: "Why a proxy without a matcher redirects your stylesheets, why matcher values must be build-time literals, the one path Next.js runs proxy on even when you exclude it, the Node.js runtime default since v16.0.0, and what the middleware-to-proxy rename was actually saying."
 ---
 
