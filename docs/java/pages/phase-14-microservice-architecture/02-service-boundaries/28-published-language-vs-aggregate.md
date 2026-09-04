@@ -1,7 +1,7 @@
 ---
 title: "The published language is an explicit public contract while the aggregate is a private implementation detail — conflating the two couples external callers directly to internal database schemas and domain refactorings"
 sidebar_label: "28 · Published language vs aggregate"
-sidebar_position: 44
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>

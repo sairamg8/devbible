@@ -1,7 +1,7 @@
 ---
 title: "The orchestrator that owns no data and calls everything is not a coordination layer, it is every other service's business rules relocated into a component that cannot enforce any of them"
 sidebar_label: "17 · The god service"
-sidebar_position: 27
+sidebar_position: 28
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -13,6 +13,8 @@ sidebar_position: 22
 > Vaughn Vernon, *Effective Aggregate Design, Part I* (2011)
 > ([dddcommunity.org](https://www.dddcommunity.org/library/vernon_2011/), CC BY-ND 3.0), on
 > commands versus queries on an aggregate.
+> Also verified against RFC 9110, *HTTP Semantics*, §9.3.4 (PUT), §9.3.3 (POST) and §9.2.2
+> (idempotent methods), at [rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9110.html).
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train
 > 2025.1.x "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**.
 
@@ -23,6 +25,33 @@ machine, because the caller is allowed to set any field to any value. A
 chunk is about reading that evidence, and about the specific damage a full-replacement update
 does to a boundary — because it is not a style preference, it is a transfer of authority from
 the service to its callers.**
+## The spec agrees with this page, which is worth knowing before the argument starts
+
+This is usually argued as a matter of taste — "intent-based endpoints are nicer" — and it does not
+have to be. RFC 9110 defines the two methods in a way that settles it.
+
+**PUT**, §9.3.4:
+
+> *"requests that the state of the target resource be created or replaced with the state defined by
+> the representation enclosed in the request message content."*
+
+**POST**, §9.3.3:
+
+> *"requests that the target resource process the representation enclosed in the request according to
+> the resource's own specific semantics."*
+
+🔴 **Read those two side by side and the design consequence falls out of the definitions.** `PUT`
+means *the client determines the new state*. `POST` means *the resource decides what the
+representation means*. So `PUT /orders/\{id\}` with a whole order is not merely a stylistic choice —
+by specification it hands the client authority over the order's state, which is exactly the authority
+a service with business rules must keep. A service whose primary write verb is `PUT` has said, in the
+protocol's own terms, that it does not process; it stores.
+
+⚠️ **And `PUT` carries a second obligation people forget.** §9.2.2 makes PUT idempotent — *"multiple
+identical requests will have the same effect as a single request."* That is easy to honour when the
+request is a full replacement and quietly impossible when the operation is really a transition:
+"cancel this order" applied twice is not the same as applied once, so an operation modelled as `PUT`
+is either not idempotent (violating the spec) or not really the operation you meant.
 
 ## What `PUT` of a whole resource actually concedes
 
@@ -114,41 +143,6 @@ Read the endpoint list on its own: place, cancel, change delivery address. That 
 capability, legible from outside, without documentation. Compare with `GET`, `POST`, `PUT`,
 `DELETE` on `/orders`, which tells a reader that orders are stored here and nothing else.
 
-## The anaemic model is the same problem one layer in
-
-An entity with only getters and setters is a service with only CRUD, at class scope: the
-rules cannot live there because there is nowhere for them to live, so they migrate to a
-"service" class, and from there to callers.
-
-```java
-// Anaemic: every rule about an order must be enforced by whoever holds one.
-public class Order {
-    private OrderStatus status;
-    public OrderStatus getStatus() { return status; }
-    public void setStatus(OrderStatus status) { this.status = status; }
-}
-```
-
-```java
-// Behavioural: the rule cannot be bypassed, because there is no setter to bypass it with.
-public final class Order {
-
-    private OrderStatus status;
-
-    public Cancellation cancel(CancellationReason reason, Clock clock) {
-        if (!status.allowsCancellation()) {
-            throw new IllegalOrderTransition(status, OrderStatus.CANCELLED);
-        }
-        this.status = OrderStatus.CANCELLED;
-        return new Cancellation(reason, clock.instant());
-    }
-}
-```
-
-The link to boundaries is direct: an anaemic model cannot be moved behind a network boundary
-without its rules, because it has none. The refactor from anaemic to behavioural is the
-preparation for a split, and it can be done entirely in-process before any boundary is drawn.
-
 ## The API tells you where the rules are — a checklist
 
 Given only an API, three questions locate the rules:
@@ -193,6 +187,9 @@ than validity. There, a `PUT` of the whole thing is the correct API and pretendi
 produces ceremony with no benefit. The distinction is not the shape of the data; it is
 whether anything can refuse a change for a business reason.
 
+Knowing the API is wrong does not tell you what to do about one that already has consumers —
+[13d · Migrating a public CRUD API](13d-migrating-a-public-crud-api.md).
+
 ## Gotchas
 
 **★ Symptom: a service with only `400` and `404` failure responses.** Cause: it enforces no
@@ -222,11 +219,6 @@ an operation as a subordinate resource — `POST /orders/{id}/cancellation` — 
 and intent-revealing. The problem is never the URL style, it is whether the caller can set
 state directly.
 
-**★ Symptom: the domain object is a record with all fields public and no methods.** Cause:
-anaemic model. Fix: records are excellent for values and for events; an aggregate root with
-rules needs behaviour and controlled mutation, and making it a record is choosing
-serialisability over enforceability.
-
 ## Interview questions
 
 **★ How can you assess a service boundary from its API alone?**
@@ -246,13 +238,17 @@ machine is advisory and lives in whichever callers remembered it. It also destro
 concurrency: two callers changing different fields both send whole objects, and one change
 disappears with no error.
 
-**★ Is an anaemic domain model a boundary problem or a code-style problem?**
-Both, and the boundary consequence is the one that costs money. An entity with only getters
-and setters has nowhere for rules to live, so they migrate outward — first into a "service"
-class, then into callers. That means the state and the rules about it are already separated
-before any network is involved, so drawing a service boundary around the state moves the
-data and leaves the rules behind. The refactor from anaemic to behavioural is therefore
-preparation for a split, and it is entirely in-process, which makes it cheap and reversible.
+**★ Does the HTTP specification have anything to say about this, or is it a matter of design taste?**
+It settles it, and knowing that ends the argument faster than any design appeal. RFC 9110 defines
+`PUT` as a request *"that the state of the target resource be created or replaced with the state
+defined by the representation enclosed in the request message content"* — the client determines the
+new state. It defines `POST` as a request *"that the target resource process the representation
+enclosed in the request according to the resource's own specific semantics"* — the resource decides
+what the representation means. So a service whose primary write verb is `PUT` has stated in the
+protocol's own vocabulary that it stores rather than processes, which is the same claim this page
+makes from the design side. There is also a second obligation: §9.2.2 makes PUT idempotent, and most
+real business operations are transitions that are not, so a `PUT`-shaped API is usually violating the
+spec as well as the boundary.
 
 **★ Where is CRUD the right API?**
 Where nothing can refuse a change for a business reason: content, media, saved preferences,
@@ -271,4 +267,4 @@ conventional REST URLs; you cannot build an enforceable one out of full-resource
 
 ---
 
-← [Entity services](13-entity-services.md) · [Topic index](README.md) · Next → [What to build instead](13c-what-to-build-instead.md)
+← [Entity services](13-entity-services.md) · [Topic index](README.md) · Next → [Migrating a public CRUD API](13d-migrating-a-public-crud-api.md)

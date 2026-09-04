@@ -85,6 +85,44 @@ business reason, then there is nothing to encapsulate and CRUD is honest.
 The failure is exclusively about entities with rules, which is every entity in your core
 domain.
 
+## The same problem one layer in: the anaemic model
+
+A capability service with an anaemic domain model has moved the defect rather than fixed it — the
+network boundary is now right and the rules are still outside the thing that owns the data.
+
+An entity with only getters and setters is a service with only CRUD, at class scope: the
+rules cannot live there because there is nowhere for them to live, so they migrate to a
+"service" class, and from there to callers.
+
+```java
+// Anaemic: every rule about an order must be enforced by whoever holds one.
+public class Order {
+    private OrderStatus status;
+    public OrderStatus getStatus() { return status; }
+    public void setStatus(OrderStatus status) { this.status = status; }
+}
+```
+
+```java
+// Behavioural: the rule cannot be bypassed, because there is no setter to bypass it with.
+public final class Order {
+
+    private OrderStatus status;
+
+    public Cancellation cancel(CancellationReason reason, Clock clock) {
+        if (!status.allowsCancellation()) {
+            throw new IllegalOrderTransition(status, OrderStatus.CANCELLED);
+        }
+        this.status = OrderStatus.CANCELLED;
+        return new Cancellation(reason, clock.instant());
+    }
+}
+```
+
+The link to boundaries is direct: an anaemic model cannot be moved behind a network boundary
+without its rules, because it has none. The refactor from anaemic to behavioural is the
+preparation for a split, and it can be done entirely in-process before any boundary is drawn.
+
 ## Gotchas
 
 **★ Assuming the fix is fewer, larger entity services.** Merging `Customer` and `Address`
@@ -97,6 +135,11 @@ being described as "the customer capability", changes nothing. Judge the API, no
 **★ Accepting a CRUD API because it is "just for internal use".** Internal consumers
 duplicate rules exactly as readily as external ones, and internal APIs are harder to remove
 because nobody is versioning them.
+
+**★ Symptom: the domain object is a record with all fields public and no methods.** Cause:
+anaemic model. Fix: records are excellent for values and for events; an aggregate root with
+rules needs behaviour and controlled mutation, and making it a record is choosing
+serialisability over enforceability.
 
 ## Interview questions
 
@@ -125,6 +168,14 @@ absorb the rules and become capability services, and the ones left holding nothi
 get merged into whichever capability uses them most. The orchestrator, if there is one,
 shrinks as the rules leave it and is deleted last.
 
+**★ Is an anaemic domain model a boundary problem or a code-style problem?**
+Both, and the boundary consequence is the one that costs money. An entity with only getters
+and setters has nowhere for rules to live, so they migrate outward — first into a "service"
+class, then into callers. That means the state and the rules about it are already separated
+before any network is involved, so drawing a service boundary around the state moves the
+data and leaves the rules behind. The refactor from anaemic to behavioural is therefore
+preparation for a split, and it is entirely in-process, which makes it cheap and reversible.
+
 ---
 
-← [CRUD is not a capability](13b-crud-is-not-a-capability.md) · [Topic index](README.md) · Next → [Conway and the org chart](14-conway-and-the-org-chart.md)
+← [Migrating a public CRUD API](13d-migrating-a-public-crud-api.md) · [Topic index](README.md) · Next → [Conway and the org chart](14-conway-and-the-org-chart.md)

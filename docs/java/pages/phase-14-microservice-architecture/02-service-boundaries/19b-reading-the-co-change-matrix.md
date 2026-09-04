@@ -1,7 +1,7 @@
 ---
 title: "The co-change matrix has about six recognisable shapes, and the same technique run across repositories rather than packages is the only objective test for whether an existing set of services is really one deployable unit"
 sidebar_label: "19b · Reading the co-change matrix"
-sidebar_position: 30
+sidebar_position: 31
 ---
 
 <span className="db-tier t-master">Master</span>
