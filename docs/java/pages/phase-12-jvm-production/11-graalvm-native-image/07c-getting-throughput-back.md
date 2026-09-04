@@ -204,7 +204,7 @@ Three levers this page also does not own, because earlier chunks do:
 
 **★ Symptom: `--pgo` and `-O3` are both being passed and the build takes even longer.** Cause: redundancy, not a bug — `-O3` is *"Used automatically by Oracle GraalVM for PGO builds (`--pgo` option)"*, and supplying a profile disables ML inference anyway. Fix: pass `--pgo` alone. The level is implied.
 
-**★ Symptom: the throughput conversation has run for two weeks without anyone naming the distribution.** Cause: three of the four levers on this page carry the same footnote and it is the first thing to establish. Fix: settle the distribution before the benchmark ([01b](01b-the-distribution-and-the-licence.md)). On Community Edition, `-O2` with GraalSP *is* the ceiling, and the honest next question is [09 · When it pays](09-when-it-pays.md), not another flag.
+**★ Symptom: the throughput conversation has run for two weeks without anyone naming the distribution.** Cause: three of the four levers on this page carry the same footnote and it is the first thing to establish. Fix: settle the distribution before the benchmark ([01b](01b-the-distribution-and-the-licence.md)). On Community Edition, `-O2` with GraalSP *is* the ceiling, and the honest next question is **09 · When it pays** *(not written yet)*, not another flag.
 
 ## Interview questions
 
