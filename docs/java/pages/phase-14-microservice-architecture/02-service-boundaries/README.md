@@ -15,10 +15,14 @@ sidebar_position: 0
 > [martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html);
 > Michael Nygard, *The Entity Service Antipattern* (2017); the ddd-crew *Context Mapping Guide*, at
 > [github.com/ddd-crew/context-mapping](https://github.com/ddd-crew/context-mapping), which
-> reproduces the *DDD Reference* (2015) pattern definitions verbatim; the Spring Modulith 2.1.1 and
-> ArchUnit reference documentation. Eric Evans, *Domain-Driven Design* (Addison-Wesley, 2003) and
-> Sam Newman's *Building Microservices* / *Monolith to Microservices* are cited by chapter and are
-> **not** independently verifiable here — see *What this topic stands on* below.
+> reproduces the *DDD Reference* (2015) pattern definitions verbatim; the Spring Modulith reference
+> (*Fundamentals*, *Verification*, *Testing*) and the ArchUnit user guide; *The State of the Module
+> System* at [openjdk.org](https://openjdk.org/projects/jigsaw/spec/sotms/); the Gradle
+> `java-library` plugin documentation; the Spring Framework reference on `@Transactional`; and Martin
+> Fowler's *StranglerFigApplication* and *ParallelChange*. Eric Evans, *Domain-Driven Design*
+> (Addison-Wesley, 2003) and Sam Newman's *Building Microservices* / *Monolith to Microservices* are
+> cited by chapter as further reading and are **not** independently verifiable here — see *What this
+> topic stands on* below.
 > Version spine: **JDK 25 · Spring Boot 4.1.1 / Framework 7.0.9 · Spring Cloud train 2025.1.x
 > "Oakwood" (components 5.0.x) · Spring Modulith 2.1.1**. Documentation-validated; **no sandbox run**.
 
@@ -32,7 +36,7 @@ boundaries you do not control, and the migrations for the boundaries you got wro
 
 ## Chunks
 
-Every chunk in this topic is **Master** tier. 🔴 marks the seven that the rest depend on.
+Every chunk in this topic is **Master** tier. 🔴 marks the fourteen that the rest depend on.
 
 | # | Chunk | Tier | What it argues |
 |---|---|---|---|
@@ -70,32 +74,39 @@ Every chunk in this topic is **Master** tier. 🔴 marks the seven that the rest
 | 32 | **[Scoring one cut](22b-scoring-one-cut.md)** | <span className="db-tier t-master">Master</span> | A boundary decision worked end to end — including the candidate that scores badly and gets rejected |
 | 33 | **[The monolith already told you](23-the-monolith-already-told-you.md)** | <span className="db-tier t-master">Master</span> | A monolith that has run for five years has already discovered most of its own seams; the evidence is in the repo, not the workshop |
 | 34 | **[Package structure is the boundary](24-package-structure-is-the-boundary.md)** | <span className="db-tier t-master">Master</span> | A Java package is an encapsulation mechanism, not a folder — the boundary exists in the package tree before it exists on the network |
-| 35 | **[Verifying the boundary](25-verifying-the-boundary.md)** | <span className="db-tier t-master">Master</span> | A drawn boundary is a hypothesis; `ApplicationModules.of(...).verify()` turns it into a CI gate that fails the build |
-| 36 | **[Named interfaces](25b-named-interfaces.md)** | <span className="db-tier t-master">Master</span> | One public API per module is a naive assumption — Modulith `@NamedInterface` exposes different contracts to different consumers without opening the module |
-| 37 | **[ArchUnit rules](26-archunit-rules.md)** | <span className="db-tier t-master">Master</span> | Boundary enforcement without Spring Modulith: bytecode-level rules for non-Spring and legacy codebases, including slice cycle detection |
-| 38 | **[Build modules and JPMS](27-build-modules-and-jpms.md)** | <span className="db-tier t-master">Master</span> | Compiler-enforced boundaries that fail before a test runs — Maven/Gradle module scoping and `module-info.java` |
-| 39 | **[Published language vs aggregate](28-published-language-vs-aggregate.md)** | <span className="db-tier t-master">Master</span> | The published language is a public contract; the aggregate is a private consistency device. Conflating them is how schemas leak |
-| 40 | **[Never publish the aggregate](28b-never-publish-the-aggregate.md)** | <span className="db-tier t-master">Master</span> | Serialising a domain entity straight to JSON or Kafka turns your database schema into everybody else's compile-time dependency |
-| 41 | **[Anticorruption layer](29-anticorruption-layer.md)** | <span className="db-tier t-master">Master</span> | The isolating layer that gives you upstream functionality in *your* domain's terms — the pattern for boundaries you do not control |
-| 42 | **[Where the ACL lives](29b-where-the-acl-lives.md)** | <span className="db-tier t-master">Master</span> | An ACL belongs inside the downstream deployable. Extracted into a shared proxy it is an ESB with a new name, and an orphan with no domain owner |
-| 43 | **[Context mapping](30-context-mapping.md)** | <span className="db-tier t-master">Master</span> | The Context Map records political relationships, not just technical ones — leverage between teams is an architectural input |
-| 44 | **[Customer-supplier](31-customer-supplier.md)** | <span className="db-tier t-master">Master</span> | Only real when downstream has genuine authority: downstream priorities factor into upstream planning, or it is not this pattern |
-| 45 | **[Conformist](32-conformist.md)** | <span className="db-tier t-master">Master</span> | *Slavishly* adhering to the upstream model — giving up the right to disagree, deliberately, to make translation cost zero |
-| 46 | **[Shared kernel](33-shared-kernel.md)** | <span className="db-tier t-master">Master</span> | An explicitly co-owned, deliberately small subset — and the four rules that stop it becoming the shared model jar of chunk 24 |
-| 47 | **[Open host and published language](34-open-host-and-published-language.md)** | <span className="db-tier t-master">Master</span> | One documented protocol for all comers, instead of a bespoke endpoint per consumer and the combinatorial explosion that follows |
-| 48 | **[Partnership and separate ways](35-partnership-and-separate-ways.md)** | <span className="db-tier t-master">Master</span> | The two poles of coupling — and 🔴 Partnership is a *DDD Reference* (2015) pattern, not a 2003 book pattern, however it is usually cited |
-| 49 | **[Choosing a relationship](36-choosing-a-relationship.md)** | <span className="db-tier t-master">Master</span> | Selection is a function of organizational power and domain differentiation; an ACL where Conformist belonged is months of wasted mapping code |
-| 50 | **[The tells of a wrong boundary](37-the-tells-of-a-wrong-boundary.md)** | <span className="db-tier t-master">Master</span> | A bad boundary announces itself: latency amplification, availability multiplied down, lockstep releases, and distributed debugging |
-| 51 | **[Merging two services](38-merging-two-services.md)** | <span className="db-tier t-master">Master</span> | Collapsing two services is a disciplined migration, not an admission of defeat — and sunk cost is not an architectural argument |
-| 52 | **[Moving a capability](39-moving-a-capability.md)** | <span className="db-tier t-master">Master</span> | Relocating an aggregate across a boundary with expand-and-contract, dual-write, parity verification, then contract |
-| 53 | **[Splitting a service](40-splitting-a-service.md)** | <span className="db-tier t-master">Master</span> | 🔴 Split in-process first. If the boundary cannot survive as a module, it will not survive as a network hop — it will just fail more expensively |
-| 54 | **[Strangler extraction](41-strangler-extraction.md)** | <span className="db-tier t-master">Master</span> | Fowler's Strangler Fig: intercept at the gateway, extract one capability, move traffic route by route, retire the legacy path |
-| 55 | **[The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md)** | <span className="db-tier t-master">Master</span> | Six concrete costs — data parity, consumer churn, observability rewiring, infrastructure, ownership, and the dual-run tax |
-| 56 | **[When not to fix it](43-when-not-to-fix-it.md)** | <span className="db-tier t-master">Master</span> | Living with a wrong boundary is often the rational choice; containment patterns buy you the option to never pay for the migration |
-| 57 | **[Worked example: operations and aggregates](44-worked-example-operations-and-aggregates.md)** | <span className="db-tier t-master">Master</span> | One domain taken from system operations to candidate aggregates to transactional invariants |
-| 58 | **[Worked example: candidate cuts](44b-worked-example-candidate-cuts.md)** | <span className="db-tier t-master">Master</span> | The same domain scored against the ten forces, cut by cut, with the rejections shown |
-| 59 | **[Worked example: two teams vs twelve](44c-worked-example-two-teams-and-twelve.md)** | <span className="db-tier t-master">Master</span> | The same domain produces two different correct architectures depending on team topology — the clearest demonstration that Conway is an input |
-| 60 | **[The checklist](45-the-checklist.md)** | <span className="db-tier t-master">Master</span> | The review rubric to run against a proposed boundary before it becomes an irreversible operational commitment |
+| 35 | **[When one flat package is not enough](24b-when-one-flat-package-is-not-enough.md)** | <span className="db-tier t-master">Master</span> | 🔴 javac's protection stops at one flat package, Spring Modulith inverts the sub-package rule, and JPMS is the only mechanism under which `public` means "public to my module" |
+| 36 | **[Verifying the boundary](25-verifying-the-boundary.md)** | <span className="db-tier t-master">Master</span> | A drawn boundary is a hypothesis; `ApplicationModules.of(...).verify()` turns it into a CI gate that fails the build |
+| 37 | **[Named interfaces](25b-named-interfaces.md)** | <span className="db-tier t-master">Master</span> | One public API per module is a naive assumption — Modulith `@NamedInterface` exposes different contracts to different consumers without opening the module |
+| 38 | **[Can the module boot alone?](25c-can-the-module-boot-alone.md)** | <span className="db-tier t-master">Master</span> | 🔴 The question `verify()` never asks. The bootstrap mode you settle for is the finding, and the mock count is the honest coupling metric — the docs say so themselves |
+| 39 | **[ArchUnit rules](26-archunit-rules.md)** | <span className="db-tier t-master">Master</span> | Boundary enforcement without Spring Modulith: bytecode-level rules for non-Spring and legacy codebases, including slice cycle detection |
+| 40 | **[Making the rules stick](26b-making-the-rules-stick.md)** | <span className="db-tier t-master">Master</span> | A rule that cannot go green on day one gets deleted: `FreezingArchRule` with a baseline that can only shrink, and the default that refuses to pass a rule matching nothing |
+| 41 | **[Build modules and JPMS](27-build-modules-and-jpms.md)** | <span className="db-tier t-master">Master</span> | Compiler-enforced boundaries that fail before a test runs — Maven/Gradle module scoping and `module-info.java` |
+| 42 | **[Published language vs aggregate](28-published-language-vs-aggregate.md)** | <span className="db-tier t-master">Master</span> | The published language is a public contract; the aggregate is a private consistency device. Conflating them is how schemas leak |
+| 43 | **[Never publish the aggregate](28b-never-publish-the-aggregate.md)** | <span className="db-tier t-master">Master</span> | Serialising a domain entity straight to JSON or Kafka turns your database schema into everybody else's compile-time dependency |
+| 44 | **[Changing a published contract](28c-changing-a-published-contract.md)** | <span className="db-tier t-master">Master</span> | 🔴 The two changes that break consumers with no schema diff at all — tightening validation, and repurposing a field — plus expand/migrate/contract, whose skipped phase is the middle one |
+| 45 | **[The event has a longer half-life](28d-the-event-has-a-longer-half-life.md)** | <span className="db-tier t-master">Master</span> | An HTTP response is discarded; an event is stored in other teams' databases, where no deployment of yours reaches it. Why a topic cannot be versioned like an endpoint |
+| 46 | **[Anticorruption layer](29-anticorruption-layer.md)** | <span className="db-tier t-master">Master</span> | The isolating layer that gives you upstream functionality in *your* domain's terms — the pattern for boundaries you do not control |
+| 47 | **[Where the ACL lives](29b-where-the-acl-lives.md)** | <span className="db-tier t-master">Master</span> | An ACL belongs inside the downstream deployable. Extracted into a shared proxy it is an ESB with a new name, and an orphan with no domain owner |
+| 48 | **[Mapper or barrier](29c-mapper-or-barrier.md)** | <span className="db-tier t-master">Master</span> | Most ACLs are field-for-field mappers wearing the name — the three questions that tell them apart, and the default branch that decides whether the layer holds |
+| 49 | **[Context mapping](30-context-mapping.md)** | <span className="db-tier t-master">Master</span> | The Context Map records political relationships, not just technical ones — leverage between teams is an architectural input |
+| 50 | **[Customer-supplier](31-customer-supplier.md)** | <span className="db-tier t-master">Master</span> | Only real when downstream has genuine authority: downstream priorities factor into upstream planning, or it is not this pattern |
+| 51 | **[Conformist](32-conformist.md)** | <span className="db-tier t-master">Master</span> | *Slavishly* adhering to the upstream model — giving up the right to disagree, deliberately, to make translation cost zero |
+| 52 | **[Shared kernel](33-shared-kernel.md)** | <span className="db-tier t-master">Master</span> | An explicitly co-owned, deliberately small subset — and the four rules that stop it becoming the shared model jar of chunk 24 |
+| 53 | **[Open host and published language](34-open-host-and-published-language.md)** | <span className="db-tier t-master">Master</span> | One documented protocol for all comers, instead of a bespoke endpoint per consumer and the combinatorial explosion that follows |
+| 54 | **[Partnership and separate ways](35-partnership-and-separate-ways.md)** | <span className="db-tier t-master">Master</span> | The two poles of coupling — and 🔴 Partnership is a *DDD Reference* (2015) pattern, not a 2003 book pattern, however it is usually cited |
+| 55 | **[Choosing a relationship](36-choosing-a-relationship.md)** | <span className="db-tier t-master">Master</span> | Selection is a function of organizational power and domain differentiation; an ACL where Conformist belonged is months of wasted mapping code |
+| 56 | **[The tells of a wrong boundary](37-the-tells-of-a-wrong-boundary.md)** | <span className="db-tier t-master">Master</span> | A bad boundary announces itself: latency amplification, availability multiplied down, lockstep releases, and distributed debugging |
+| 57 | **[Merging two services](38-merging-two-services.md)** | <span className="db-tier t-master">Master</span> | Collapsing two services is a disciplined migration, not an admission of defeat — and sunk cost is not an architectural argument |
+| 58 | **[Moving a capability](39-moving-a-capability.md)** | <span className="db-tier t-master">Master</span> | Relocating an aggregate across a boundary with expand-and-contract, dual-write, parity verification, then contract |
+| 59 | **[Splitting a service](40-splitting-a-service.md)** | <span className="db-tier t-master">Master</span> | 🔴 Split in-process first. If the boundary cannot survive as a module, it will not survive as a network hop — it will just fail more expensively |
+| 60 | **[Ready to extract](40b-ready-to-extract.md)** | <span className="db-tier t-master">Master</span> | 🔴 Four checks instead of a feeling, two of them conclusive — and the four in-process guarantees that stop holding across a network and quietly break correct code |
+| 61 | **[Strangler extraction](41-strangler-extraction.md)** | <span className="db-tier t-master">Master</span> | Fowler's Strangler Fig: intercept at the gateway, extract one capability, move traffic route by route, retire the legacy path |
+| 62 | **[The cost of changing a boundary](42-the-cost-of-changing-a-boundary.md)** | <span className="db-tier t-master">Master</span> | Six concrete costs — data parity, consumer churn, observability rewiring, infrastructure, ownership, and the dual-run tax |
+| 63 | **[When not to fix it](43-when-not-to-fix-it.md)** | <span className="db-tier t-master">Master</span> | Living with a wrong boundary is often the rational choice; containment patterns buy you the option to never pay for the migration |
+| 64 | **[Worked example: operations and aggregates](44-worked-example-operations-and-aggregates.md)** | <span className="db-tier t-master">Master</span> | One domain taken from system operations to candidate aggregates to transactional invariants |
+| 65 | **[Worked example: candidate cuts](44b-worked-example-candidate-cuts.md)** | <span className="db-tier t-master">Master</span> | The same domain scored against the ten forces, cut by cut, with the rejections shown |
+| 66 | **[Worked example: two teams vs twelve](44c-worked-example-two-teams-and-twelve.md)** | <span className="db-tier t-master">Master</span> | The same domain produces two different correct architectures depending on team topology — the clearest demonstration that Conway is an input |
+| 67 | **[The checklist](45-the-checklist.md)** | <span className="db-tier t-master">Master</span> | The review rubric to run against a proposed boundary before it becomes an irreversible operational commitment |
 
 ## Phase gate
 
@@ -119,15 +130,35 @@ You are done with this topic when you can:
 
 ## What this topic stands on
 
-🔴 **The evidence is not uniform across these sixty chunks, and you should know where it is
-thinner.** Chunks 1–33 are built on sources that can be fetched and checked — microservices.io,
-Vernon's *Effective Aggregate Design* (CC BY-ND), Fowler's bliki, Nygard's *Entity Service
-Antipattern*, the ddd-crew guide, and the Spring Modulith and ArchUnit references — and quote them
-directly. Chunks 34–60 lean more on Evans, Newman, and Ford & Richards **by book chapter**, which
-cannot be verified from here. Every pattern definition quoted verbatim on those pages is taken from
-the ddd-crew *Context Mapping Guide*, which reproduces the *DDD Reference* (2015) text; where a page
-needed a claim the Reference does not make, it is stated as prose rather than dressed as a quotation.
-**Treat a book-chapter citation as a pointer to check, not as a settled fact.**
+**Every chunk in this topic is built on a source that can be fetched and checked**, and the ones that
+carry a verbatim quotation cite the URL it came from on their own `> Verified:` line. The sources are
+microservices.io, Vernon's *Effective Aggregate Design* (CC BY-ND), Fowler's bliki
+(*BoundedContext*, *StranglerFigApplication*, *ParallelChange*), Nygard's *Entity Service
+Antipattern*, the ddd-crew *Context Mapping Guide*, the Spring Modulith and Spring Framework
+references, the ArchUnit user guide, *The State of the Module System*, and the Gradle `java-library`
+documentation.
+
+🔴 **Every context-mapping pattern definition on these pages is the *DDD Reference* (2015) text**, as
+reproduced verbatim by the ddd-crew guide — not a paraphrase, and not the 2003 book, which does not
+contain Partnership or Big Ball of Mud at all. Evans, Newman, and Ford & Richards appear as further
+reading; nothing is quoted from them, because a book chapter cannot be checked from here.
+
+**Where a claim could not be settled, the page says so on the page** rather than asserting it. Three
+worth knowing about before you rely on them:
+
+- **Fowler's *StranglerFigApplication* does not discuss event interception or asset capture**, and the
+  microservices.io *Strangler Application* page specifies **no** routing, glue-code or
+  data-replication mechanics. Everything [41 · Strangler extraction](41-strangler-extraction.md) says
+  about gateways and dual-run is engineering practice built on the pattern, and it is labelled as
+  such rather than attributed to either source.
+- **The ArchUnit user guide documents no `beRecords()` predicate**, so
+  [26 · ArchUnit rules](26-archunit-rules.md) expresses shape rules as prohibitions and says why.
+- **The Spring Modulith reference pages are served unversioned**, so they are cited as "the Spring
+  Modulith reference" rather than as version-stamped 2.1.1 pages.
+
+⚠️ **One thing still worth improving, recorded rather than hidden:** chunks 12–23 run thirteen files
+with identical gotcha and question counts. That band predates the depth pass that reworked 34–67 and
+is a candidate for the same treatment.
 
 ## Where this connects
 
