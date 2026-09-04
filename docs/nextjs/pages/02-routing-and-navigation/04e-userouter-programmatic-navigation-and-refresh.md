@@ -42,7 +42,7 @@ export default function Page() {
 | `forward()` | One step forward |
 | `bfcacheId` | An opaque per-segment identity string |
 
-`scroll: false` on `push`/`replace` opts out of managed scrolling — see [04b](04b-scroll-behaviour-and-the-navigation-lifecycle.md). `transitionTypes` on both is passed to `React.addTransitionType` inside the navigation Transition, which is how a view transition knows whether this navigation was "forward" or "back"; see **05b · The native View Transitions API** *(not written yet)*.
+`scroll: false` on `push`/`replace` opts out of managed scrolling — see [04b](04b-scroll-behaviour-and-the-navigation-lifecycle.md). `transitionTypes` on both is passed to `React.addTransitionType` inside the navigation Transition, which is how a view transition knows whether this navigation was "forward" or "back"; see [05b · The native View Transitions API](05b-the-native-view-transitions-api.md).
 
 The three genuine reasons to reach for the hook, from the redirects guide's own framing (*"If you need to redirect inside an event handler in a Client Component"*): a navigation after a mutation completes; a command palette or keyboard shortcut, where there is no anchor under the cursor; and a navigation driven by a timer or a poll. In all three there is no element the browser could treat as a link, so nothing is lost by not using one.
 
