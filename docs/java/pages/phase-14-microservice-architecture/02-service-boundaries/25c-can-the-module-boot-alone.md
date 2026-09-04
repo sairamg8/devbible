@@ -1,7 +1,7 @@
 ---
 title: "A module that passes ApplicationModules.verify() has a legal dependency graph, which is not the same as being extractable — the question that decides extraction is whether it boots on its own, and @ApplicationModuleTest is the one that asks it"
 sidebar_label: "25c · Can the module boot alone?"
-sidebar_position: 41
+sidebar_position: 42
 ---
 
 <span className="db-tier t-master">Master</span>

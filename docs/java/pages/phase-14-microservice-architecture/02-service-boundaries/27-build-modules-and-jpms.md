@@ -1,7 +1,7 @@
 ---
 title: "Multi-module builds and JPMS module-info.java enforce boundaries at compile time — Maven and Gradle isolate classpaths between modules while the Java module system eliminates package-private leakage and rogue reflection"
 sidebar_label: "27 · Build modules and JPMS"
-sidebar_position: 44
+sidebar_position: 45
 ---
 
 <span className="db-tier t-master">Master</span>

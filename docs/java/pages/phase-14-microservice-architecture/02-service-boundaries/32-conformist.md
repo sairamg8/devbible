@@ -1,7 +1,7 @@
 ---
 title: "In a Conformist relationship, the downstream team eliminates translation by adopting the upstream domain model directly — a conscious compromise that trades linguistic purity for integration velocity"
 sidebar_label: "32 · Conformist"
-sidebar_position: 54
+sidebar_position: 55
 ---
 
 <span className="db-tier t-master">Master</span>

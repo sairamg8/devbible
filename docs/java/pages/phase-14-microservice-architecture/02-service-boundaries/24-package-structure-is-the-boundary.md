@@ -1,7 +1,7 @@
 ---
 title: "A service boundary is a package tree before it is a network hop — if the Java compiler cannot prevent one module from touching another's internals, a REST call will not create encapsulation, it will only distribute the coupling"
 sidebar_label: "24 · Package structure is the boundary"
-sidebar_position: 37
+sidebar_position: 38
 ---
 
 <span className="db-tier t-master">Master</span>

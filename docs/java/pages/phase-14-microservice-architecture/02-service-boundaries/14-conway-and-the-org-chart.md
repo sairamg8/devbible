@@ -23,8 +23,41 @@ boundaries disagree, one of them will move, and it will not be the team boundari
 those are enforced by managers, calendars, budgets and performance reviews, and yours are
 enforced by a code review. The practical consequence is that team design is architecture
 work, and doing it second means doing it twice.**
-
 ## What Conway actually claimed
+
+The sentence everyone quotes:
+
+> *"organizations which design systems (in the broad sense used here) are constrained to produce
+> designs which are copies of the communication structures of these organizations."*
+
+And the formal version, which is quoted far less and is the sharper claim:
+
+> *"there is a homomorphism from the linear graph of a system to the linear graph of its design
+> organization."*
+
+🔴 **A homomorphism maps the system onto the organisation, not the other way round — and that
+direction carries a specific consequence.** It means every part of the system maps to some part of the
+organisation, and connected things stay connected. So the system **cannot be more finely structured
+than the communication structure that produced it**: you may end up with more services than teams,
+but the *boundaries that actually hold* cannot be finer than the lines along which people communicate.
+That is a stronger and more useful statement than "architecture mirrors the org chart", because it
+predicts the specific failure — a partition drawn finer than the communication structure does not
+produce fine-grained services, it produces coarse-grained coupling wearing fine-grained deployment.
+
+### What the law does not say
+
+Three misreadings do real damage in design discussions, and each is worth being able to rebut:
+
+| Misreading | What is actually claimed |
+|---|---|
+| *"Your architecture will be bad."* | Nothing about quality. An organisation whose communication structure matches its domain produces a **good** architecture by the same mechanism |
+| *"Reorganise and the architecture follows automatically."* | The law constrains; it does not construct. A reorganisation removes an obstacle to the target design; somebody still has to build it |
+| *"It is a law of nature."* | 🔴 The 1968 paper is an **argument from reasoning about communication cost**, not an empirical study. Treat it as a well-supported heuristic that predicts well, not as a measurement |
+
+⚠️ **The third row matters when someone in the room disputes it.** The honest position is that
+Conway's law is a strong, widely-corroborated heuristic whose mechanism is obvious once stated — and
+that is enough to plan with. Overclaiming it as proven fact invites a fight you do not need and cannot
+win from the source itself.
 
 The paper's argument is about communication cost. Any two components that must fit together
 require the people building them to communicate; the communication that happens is the
@@ -86,53 +119,33 @@ For each of these the right response is the same: keep the subdomains as enforce
 inside one service, and let the team structure change without dragging a deployment topology
 behind it.
 
-## What "one team per service" actually requires
+## Reading the communication structure, not the org chart
 
-microservices.io's *Service per team* is direct about ownership:
+The law is about **communication**, and the org chart is a proxy for it that is often wrong — teams
+are renamed without their interaction patterns changing, and real communication frequently follows
+lines no chart records. Four artefacts describe the actual structure, and all four are available
+without asking anybody:
 
-> *"Each service is owned by a team, which has sole responsibility for making changes."*
+| Artefact | What it reveals |
+|---|---|
+| **The pull-request review graph** | Who is actually required to agree before code ships. The single best proxy |
+| **Incident channel membership** | Who gets pulled in when something breaks — often a very different graph |
+| **Shared on-call rotas** | Which components are operationally one unit regardless of ownership on paper |
+| **Meeting series with standing attendance** | The coordination the organisation has institutionalised |
 
-and about sizing:
+```bash
+# Who reviews whose work: the communication structure the architecture will copy
+gh pr list --repo org/pricing-service --state merged --limit 200   --json author,reviews   --jq '.[] | {a: .author.login, r: [.reviews[].author.login] | unique} | "\(.a) -> \(.r | join(","))"'   | sort | uniq -c | sort -rn | head -20
+```
 
-> *"Its code base is sized so as to not exceed the cognitive capacity of team."*
+🔴 **Where the review graph and the org chart disagree, the review graph wins**, because it is the
+communication that is actually happening. A "capability team" whose members' work is always reviewed
+by the same front-end and back-end specialists has a layered communication structure and will produce
+a layered design, whatever the chart says. This is also the check that tells a real reorganisation
+from a rename — see [12b · Why the layering comes back](12b-why-the-layering-comes-back.md).
 
-and about restraint:
-
-> *"A team should have exactly one service unless there is a proven need."*
-
-Three consequences follow that are frequently ignored.
-
-**More services than teams is a debt.** Every unowned service is a service whose dependencies
-rot, whose alerts route to a rotation that does not understand it, and whose boundary nobody
-defends. If the partition produces more services than teams, either merge some or name the
-proven need.
-
-**Two teams per service does not work.** Every change needs cross-team review, the code
-drifts into two styles, and accountability for incidents is contested. If two teams must own
-one service, you have one boundary too few or one team too many, and it is worth finding out
-which.
-
-**Cognitive capacity is a real limit and it is not measured in lines.** It is measured in how
-many distinct domains, technologies, integrations and failure modes a person must hold. A
-20,000-line service integrating with six vendors may exceed capacity where a 200,000-line
-service in one domain does not.
-
-## The interaction with the domain criteria
-
-Team structure and domain structure are both inputs and they can conflict. The resolution
-order that survives contact with reality:
-
-1. **Invariants first.** A boundary that cuts an invariant is rejected regardless of who
-   wants to own it. Teams can be reorganised; consistency cannot be restored by reorganising.
-2. **Then teams.** Among boundaries that respect the invariants, prefer the partition that
-   gives each team sole ownership of what it changes.
-3. **Then change history.** Where team structure is ambiguous or in flux, co-change data
-   ([19 · Change history as evidence](19-change-history-as-evidence.md)) is the tie-breaker,
-   because it measures the communication structure directly rather than through the proxy of
-   the org chart.
-
-The order matters. Step 2 before step 1 is how a team gets its own service and discovers six
-months later that it cannot enforce a rule it is accountable for.
+What Conway's law implies for the *number* of services you may have, and what owning one actually
+requires of a team, is [14b · One team per service](14b-one-team-per-service.md).
 
 ## Gotchas
 
@@ -140,10 +153,6 @@ months later that it cannot enforce a rule it is accountable for.
 it.** Cause: Conway's law, acting on the new communication structure. Fix: expect it, and
 review the boundary register after every reorg — the change is gradual and nobody announces
 it.
-
-**★ Symptom: a service with no owning team.** Cause: more services than teams, or a
-dissolved project team. Fix: assign it or merge it, this quarter. An unowned service does not
-stay static; it accumulates security debt and its boundary is defended by nobody.
 
 **★ Drawing service boundaries along a frontend/backend team split.** This is a layer split
 with headcount attached, and it produces every symptom in
@@ -160,13 +169,28 @@ changes and start making local ones that duplicate. Fix: this is exactly what th
 enforcement in [09b · Finding it in the code](09b-finding-it-in-the-code.md) exists for; the
 erosion is invisible in review and obvious to a test.
 
-**★ Treating cognitive load as a line count.** A small service with six vendor integrations,
-two datastores and a bespoke protocol can exceed a team's capacity while a large single-domain
-service does not. Count distinct things to know, not lines.
+**★ Symptom: a reorganisation into capability teams, and the architecture does not change.**
+Cause: the org chart changed and the communication structure did not. Reporting lines are not what the
+law is about.
+Fix: check the review graph, the incident channels and the rotas. If the same specialists still gate
+the same kinds of change, the communication structure is unchanged and so is the design it will
+produce. Moving people between boxes is not the intervention; changing who has to agree with whom is.
 
-**★ Assuming a well-communicating pair of teams can hold a non-Conway boundary
-indefinitely.** They can hold it while the communication is cheap. Add a time zone, a
-reorganisation, or a busy quarter, and the boundary starts to move.
+**★ Symptom: a partition into twelve services, drawn by four teams who all review each other's work.**
+Cause: the partition is finer than the communication structure. The homomorphism direction says the
+system's holding boundaries cannot be finer than the lines along which people actually communicate —
+so what you get is not twelve independent services but coarse coupling in twelve deployables.
+Fix: either coarsen the partition to match the communication structure, or change the communication
+structure first. Twelve services drawn across four communicating groups is the most expensive of the
+three available options.
+
+**★ Someone dismisses Conway's law as "not really a law".** They have a point about the wording and
+none about the planning. The 1968 paper argues from communication cost rather than measuring
+outcomes, so it is a heuristic rather than a measured law.
+Fix: do not defend it as proven fact — defend the mechanism, which is uncontroversial: interfaces
+between groups that talk end up clean, interfaces between groups that do not end up messy. That is
+enough to make the planning decision, and it does not require winning an argument about
+epistemology.
 
 ## Interview questions
 
@@ -179,14 +203,25 @@ boundaries disagree, the team boundaries win over time, because they are backed 
 budgets and calendars, whereas yours are backed by a code review. So team design is
 architecture work, and doing it after the fact means doing the architecture twice.
 
-**★ Should service boundaries always follow team boundaries?**
-No — they should follow the invariants first, and then the teams among the options that
-remain. The org chart is a proxy for the communication structure and it fails in identifiable
-ways: teams that exist because of an acquisition, a frontend/backend split, a time-zone
-split, a manager's span of control, or a temporary programme. Building services along any of
-those enshrines something that is not about the domain. The honest sequence is: reject any
-boundary that cuts an invariant; among the survivors, choose the partition that gives each
-team sole ownership; use co-change history to break remaining ties.
+**★ Conway's law is usually stated as "architecture mirrors the org chart". What is the sharper version, and what does it predict?**
+The paper's formal claim is that *"there is a homomorphism from the linear graph of a system to the
+linear graph of its design organization"* — a map **from** the system **to** the organisation. The
+direction matters: every part of the system maps to some part of the organisation and connected
+things stay connected, so the system's boundaries cannot be finer than the communication structure
+that produced it. That predicts a specific failure the loose version does not: a partition drawn
+finer than the communication structure does not yield fine-grained services, it yields coarse-grained
+coupling distributed across more deployables. Twelve services drawn by four teams who all review each
+other's work is the standard instance.
+
+**★ Someone says Conway's law is "not really a law". Are they right, and does it matter?**
+On the wording, partly: the 1968 paper is an argument from reasoning about communication cost rather
+than an empirical study, so calling it a law overstates its epistemic status. It does not matter for
+planning, and the mistake is to defend it as proven fact — that is an argument you cannot win from
+the source. Defend the mechanism instead, which nobody disputes: two components that must fit
+together require their builders to communicate, the communication that happens is the communication
+the organisation makes easy, so interfaces between groups that talk come out clean and interfaces
+between groups that do not come out messy. That is sufficient to justify checking your team structure
+against your intended boundaries, which is all you needed it for.
 
 **★ What is the inverse Conway manoeuvre and what are its limits?**
 Changing the team structure to match the architecture you want, and letting Conway's law
@@ -196,23 +231,7 @@ proposer's decision to make. The version that gets acted on is not "let's reorga
 short list of the specific places where team and service boundaries disagree, with the
 monthly cost of each disagreement in ordered releases and blocked work.
 
-**★ Your partition produces fifteen services and you have six teams. What is wrong?**
-Nine services have no owner, and unowned services do not sit still — dependencies rot, alerts
-route to people who do not understand them, and nobody defends the boundary when someone
-needs a shortcut. microservices.io's guidance is that a team should have exactly one service
-unless there is a proven need for more, so the response is either to merge the partition down
-to something the teams can own, or to name the proven need for each extra one — a genuinely
-different scaling profile, a compliance boundary, a different technology stack. "It felt
-cleaner" is not a proven need.
-
-**★ How do you notice a boundary eroding before it is gone?**
-Two mechanisms, and you want both. Build-time enforcement — Spring Modulith's verification or
-ArchUnit rules — catches the individual violation at the moment it is introduced, which is
-the only moment it is cheap to reconsider. And periodic co-change analysis over the commit
-history catches the slower pattern, where nothing crosses the boundary in code but two
-services have started releasing together every time. The first sees the shortcut; the second
-sees the drift. Reviews catch neither reliably, because reviewers are looking at the feature.
 
 ---
 
-← [CRUD is not a capability](13b-crud-is-not-a-capability.md) · [Topic index](README.md) · Next → [Too small](15-too-small.md)
+← [What to build instead](13c-what-to-build-instead.md) · [Topic index](README.md) · Next → [One team per service](14b-one-team-per-service.md)

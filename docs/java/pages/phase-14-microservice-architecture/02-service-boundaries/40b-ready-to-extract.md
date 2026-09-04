@@ -1,7 +1,7 @@
 ---
 title: "\"The module is ready to extract\" is a judgement teams make by feeling and should make by running four checks — two of which are conclusive on their own, and one of which cannot be fixed by any amount of further preparation"
 sidebar_label: "40b · Ready to extract"
-sidebar_position: 63
+sidebar_position: 64
 ---
 
 <span className="db-tier t-master">Master</span>

@@ -1,7 +1,7 @@
 ---
 title: "Every service carries a fixed cost that is independent of how much code is in it, so a boundary drawn too finely pays full price for a service that does almost nothing — and the fixed cost is the item most consistently missing from the decision"
 sidebar_label: "15 · Too small"
-sidebar_position: 26
+sidebar_position: 27
 ---
 
 <span className="db-tier t-master">Master</span>
