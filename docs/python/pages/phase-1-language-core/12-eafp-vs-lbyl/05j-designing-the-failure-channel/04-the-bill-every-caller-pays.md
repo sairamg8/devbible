@@ -91,7 +91,7 @@ Three properties make that contract exact:
 2. **The caller chose the sentinel.** `d.get(k, 0)` returns `0` on a miss; the `None` is a
    *default default*, not a fixed part of the contract — and typeshed encodes that choice
    in the type system with `@overload`, which is
-   [05q](08-overloads.md).
+   [08](08-overloads.md).
 3. **The caller already knows whether the miss was expected**, because the caller supplied
    the key. `get` is what you reach for when you have decided a miss is ordinary; when it is
    not, `d[k]` is right there raising `KeyError` with the key in the message.
@@ -262,4 +262,4 @@ five minutes rather than a coin toss.
 
 ---
 
-← Prev: [Versioning the failure channel](03-versioning-the-failure-channel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Choosing a sentinel](05-choosing-a-sentinel.md)
+← Prev: [Versioning the failure channel](03-versioning-the-failure-channel.md) · Index: [Designing the failure channel](README.md) · Next → [Choosing a sentinel](05-choosing-a-sentinel.md)

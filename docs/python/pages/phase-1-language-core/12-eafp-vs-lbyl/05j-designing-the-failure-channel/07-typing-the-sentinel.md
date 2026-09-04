@@ -15,7 +15,7 @@ sidebar_position: 7
 > [`copy`](https://docs.python.org/3.14/library/copy.html).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05o](06-the-sentinel-object.md) got the runtime right: when `None` is a legitimate value
+**[06](06-the-sentinel-object.md) got the runtime right: when `None` is a legitimate value
 you need a third object. This chunk is about the annotation, which is where the idiom falls
 apart on Python 3.14. `_UNSET = object()` has type `object`, the supertype of everything, so
 the only union that admits it also admits a `list`, a `Decimal` and a `socket` — the sentinel
@@ -39,7 +39,7 @@ def update_profile(user_id: int, bio: str | None | object = _UNSET) -> None:
 and `object` accepts everything. The checker will not object to `update_profile(1, [])`, will
 not object to `update_profile(1, Decimal("2"))`, and will not narrow `bio` to `str | None`
 inside the `if`. **The sentinel is invisible to the type system in exactly the way `-1` was
-in [05n](05-choosing-a-sentinel.md), for exactly the same reason: it is a member of a type
+in [05](05-choosing-a-sentinel.md), for exactly the same reason: it is a member of a type
 that is already in the union.**
 
 PEP 661's motivation names this as the first of three drawbacks of the `object()` idiom:
@@ -282,4 +282,4 @@ choice for a value that crosses a plugin or reload boundary.
 
 ---
 
-← Prev: [The sentinel object](06-the-sentinel-object.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Overloads](08-overloads.md)
+← Prev: [The sentinel object](06-the-sentinel-object.md) · Index: [Designing the failure channel](README.md) · Next → [Overloads](08-overloads.md)

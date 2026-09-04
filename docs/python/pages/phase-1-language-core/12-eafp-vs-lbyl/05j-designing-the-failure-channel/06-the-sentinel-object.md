@@ -14,14 +14,14 @@ sidebar_position: 6
 > Python-Version **3.15**; *"Each call to `sentinel()` creates a distinct object"*).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05n](05-choosing-a-sentinel.md) established the rule: a sentinel must not be a member of
+**[05](05-choosing-a-sentinel.md) established the rule: a sentinel must not be a member of
 the success type. `None` satisfies that rule for almost everything — until the day `None` is
 a value your function can legitimately store or receive, and then it is *inside* the success
 type and stops distinguishing anything. That day arrives for every cache that can hold a
 null and every PATCH endpoint where "leave it alone" and "clear it" are different requests.
 The answer is a third object whose only job is to be distinguishable — and getting that
 object right at runtime is this chunk. Getting the *annotation* right is harder than it
-looks and is [05p](07-typing-the-sentinel.md).**
+looks and is [07](07-typing-the-sentinel.md).**
 
 ## When `None` is a legitimate value, the sentinel cannot be `None`
 
@@ -89,7 +89,7 @@ def update_profile(user_id: int, bio: str | None | object = _UNSET) -> None:
 the runtime will never tell you about: `object` is the supertype of everything, so the union
 accepts a `list`, a `Decimal`, anything. The signature has stopped meaning anything while the
 code still works perfectly. Why that happens and what to write instead is
-[05p · Typing the sentinel](07-typing-the-sentinel.md).
+[07 · Typing the sentinel](07-typing-the-sentinel.md).
 
 `bio=None` and "no `bio` argument" are two different requests — clear the field versus leave
 it — and only a third value can tell them apart. This is the shape every PATCH endpoint
@@ -206,4 +206,4 @@ the three states.
 
 ---
 
-← Prev: [Choosing a sentinel](05-choosing-a-sentinel.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Typing the sentinel](07-typing-the-sentinel.md)
+← Prev: [Choosing a sentinel](05-choosing-a-sentinel.md) · Index: [Designing the failure channel](README.md) · Next → [Typing the sentinel](07-typing-the-sentinel.md)

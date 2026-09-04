@@ -294,4 +294,4 @@ preference: it is the only version of the question you can actually answer.
 
 ---
 
-← Prev: [Whose exception is it?](06f-whose-exception-is-it.md) · Index: [EAFP vs LBYL](README.md) · Next → [The cost argument](07-the-cost-argument.md)
+← Prev: [Whose exception is it?](06f-whose-exception-is-it.md) · Index: [EAFP vs LBYL](README.md) · Next → [Where `finally` sits](06h-finally-and-the-widest-handler.md)

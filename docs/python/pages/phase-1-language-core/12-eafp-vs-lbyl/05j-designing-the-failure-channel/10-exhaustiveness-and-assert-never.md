@@ -15,7 +15,7 @@ sidebar_position: 10
 > (exhaustiveness checking, `--enable-error-code exhaustive-match`).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**A tagged union return ([05r](09-union-returns-and-exhaustiveness.md)) puts every outcome
+**A tagged union return ([09](09-union-returns-and-exhaustiveness.md)) puts every outcome
 in the signature, which is its whole point — and then quietly loses that guarantee the first
 time somebody adds a variant, because an `if/elif` chain that handled three cases still
 compiles when there are four. It falls off the end and returns `None`, or in a function
@@ -38,7 +38,7 @@ falls into.**
 
 That middle sentence is the whole design. Each handled case *narrows* the value's type,
 removing one member from the union; when every member has been removed, what is left is
-`Never` — the type with no members, which [05k](02-the-raising-contract.md) introduced as
+`Never` — the type with no members, which [02](02-the-raising-contract.md) introduced as
 the return type of a function that only raises. `assert_never` accepts nothing else, so the
 call type-checks precisely when the branches above it were exhaustive.
 
@@ -266,9 +266,9 @@ exactly such an expression. The typing documentation makes this explicit by show
 `def never_call_me(arg: Never) -> None` as the illustration of the bottom type in a parameter
 position, with `assert_never` as the standard-library instance of it. So the two chunks of this
 chapter that mention `Never` are describing the same idea from opposite ends:
-[05k](02-the-raising-contract.md) uses it as a *return* type to say "control stops here", and
+[02](02-the-raising-contract.md) uses it as a *return* type to say "control stops here", and
 this one uses it as a *parameter* type to say "control cannot arrive here".
 
 ---
 
-← Prev: [Union returns](09-union-returns-and-exhaustiveness.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Narrowing the try](../06-narrowing-the-try.md)
+← Prev: [Union returns](09-union-returns-and-exhaustiveness.md) · Index: [Designing the failure channel](README.md) · Next → [Narrowing the try](../06-narrowing-the-try.md)

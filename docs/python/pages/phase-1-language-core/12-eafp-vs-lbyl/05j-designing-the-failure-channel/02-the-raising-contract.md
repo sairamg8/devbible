@@ -13,7 +13,7 @@ sidebar_position: 2
 > (*"the recommendation is to put this information in a docstring"*).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05j](01-type-checkers-and-silent-apis.md) established that Python has no syntax for
+**[01](01-type-checkers-and-silent-apis.md) established that Python has no syntax for
 declaring what a function raises. This chunk is what you build in the hole that leaves.
 There is exactly one type-level tool — `typing.Never`, which says a call does not return,
 and whose real job is stopping a raising helper from silently destroying a caller's
@@ -69,7 +69,7 @@ remembers, and the error appears at the *call site*, several lines below the cha
 ⚠️ **`Never` and `NoReturn` are documented as equivalent for type checkers**, so choosing
 between them is style. `NoReturn` reads naturally in a return position; `Never` is the name
 you want in a *parameter* position, which is how `assert_never` works — that is
-[05s · Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md).
+[10 · Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md).
 
 A second, quieter payoff: a checker that understands `Never` can flag code *after* the call
 as unreachable. That turns "this validator always raises, so the `return None` below it is
@@ -113,7 +113,7 @@ Four rules make that section worth reading rather than worth skipping:
 - **Treat the section as an API surface with a version.** Removing an entry is a relaxation
   and is usually safe. *Adding* one is a breaking change for every caller with a `try`
   around your function, even though nothing anywhere will say so. What that migration looks
-  like is [05l · Versioning the failure channel](03-versioning-the-failure-channel.md).
+  like is [03 · Versioning the failure channel](03-versioning-the-failure-channel.md).
 
 ### What it cannot do, and the one thing that helps
 
@@ -237,7 +237,7 @@ enforces it?**
 Three artefacts, in decreasing order of how much they protect a caller who never reads
 documentation. First, a single base exception class per package, so `except PaymentError:`
 survives every subclass you add later — that is the only structural protection available,
-and it is [05j](01-type-checkers-and-silent-apis.md)'s subject. Second, a `Raises:` section
+and it is [01](01-type-checkers-and-silent-apis.md)'s subject. Second, a `Raises:` section
 on every public function, listing what a caller might reasonably catch, naming the
 attributes the exception carries, and saying what each failure implies for a retry. Third,
 tests that pin the load-bearing entries so the docstring cannot silently rot. None of these
@@ -268,4 +268,4 @@ guarantee at runtime.
 
 ---
 
-← Prev: [Type checkers and silent APIs](01-type-checkers-and-silent-apis.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Versioning the failure channel](03-versioning-the-failure-channel.md)
+← Prev: [Type checkers and silent APIs](01-type-checkers-and-silent-apis.md) · Index: [Designing the failure channel](README.md) · Next → [Versioning the failure channel](03-versioning-the-failure-channel.md)

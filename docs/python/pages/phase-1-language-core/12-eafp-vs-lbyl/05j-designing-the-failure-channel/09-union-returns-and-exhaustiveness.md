@@ -13,16 +13,16 @@ sidebar_position: 9
 > [`match` statements](https://docs.python.org/3.14/reference/compound_stmts.html#the-match-statement).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05q](08-overloads.md) used the type system to record a distinction made by an *argument*.
+**[08](08-overloads.md) used the type system to record a distinction made by an *argument*.
 This chunk records one made by the *outcome*: a tagged union return, where `charge()` gives
 back a `Charged`, a `Declined` or a `GatewayDown` and the caller cannot touch any of them
 without discriminating first. That is genuinely the one thing Python's exception channel
-cannot offer, because [05j](01-type-checkers-and-silent-apis.md) established that raises are
+cannot offer, because [01](01-type-checkers-and-silent-apis.md) established that raises are
 absent from every signature. It is also half-sold, and the four costs are specific to Python:
 there is no propagation operator, nothing forces a caller to inspect the value, the origin of
 a failure is whatever you remembered to attach, and the whole standard library reports
 failure the other two ways. The pattern's own failure mode — extend the union and every
-existing branch keeps compiling — is [05s](10-exhaustiveness-and-assert-never.md).**
+existing branch keeps compiling — is [10](10-exhaustiveness-and-assert-never.md).**
 
 ## The shape
 
@@ -86,7 +86,7 @@ exceptions by hand, with worse ergonomics and no traceback.
 
 Every `match` in this chunk ends with a `case _: assert_never(result)`. That line is not
 decoration and it is not an `assert` — what it does, and why the union return is unsafe
-without it, is [05s · Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md).
+without it, is [10 · Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md).
 
 ## Gotchas
 
@@ -191,4 +191,4 @@ propagated past the layer that should have collapsed it, which is the same mista
 threading a result object through six frames.
 
 
-← Prev: [Overloads](08-overloads.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md)
+← Prev: [Overloads](08-overloads.md) · Index: [Designing the failure channel](README.md) · Next → [Exhaustiveness and `assert_never`](10-exhaustiveness-and-assert-never.md)

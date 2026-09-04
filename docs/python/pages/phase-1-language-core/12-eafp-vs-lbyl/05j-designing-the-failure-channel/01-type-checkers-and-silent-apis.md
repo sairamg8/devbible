@@ -71,7 +71,7 @@ Three compensations are available, and all three are conventions rather than gua
 
 1. **A `Raises:` section in the docstring** — which is what PEP 484 itself recommends in
    the very next sentence. What belongs in one, and why it is versioned,
-   is [05k](02-the-raising-contract.md).
+   is [02](02-the-raising-contract.md).
 2. **A test that exercises the failure path**, so *your* expectation of what a dependency
    raises is recorded somewhere executable and breaks loudly when the dependency changes.
 3. **One base exception class per package**, so a caller has something to catch that
@@ -201,7 +201,7 @@ sites, including the ninety where the caller had no doubt the user existed. `-> 
 propagate to a handler that already knows what to do with a failed request. So the question
 when designing a signature is not "which is cleaner in my file" but "how much LBYL am I
 about to compel in code I will never read". The arithmetic, and the cases where `None` is
-still exactly right, are [05m](04-the-bill-every-caller-pays.md).
+still exactly right, are [04](04-the-bill-every-caller-pays.md).
 
 **What does a type checker prove about data arriving from outside your program?**
 Nothing whatsoever. Annotations are not enforced at runtime; a function annotated `-> int`
@@ -238,4 +238,4 @@ precisely why the conventions above are not optional.
 
 ---
 
-← Prev: [The check is the rule](../05i-the-check-is-the-rule.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The raising contract](02-the-raising-contract.md)
+← Prev: [The check is the rule](../05i-the-check-is-the-rule.md) · Index: [Designing the failure channel](README.md) · Next → [The raising contract](02-the-raising-contract.md)

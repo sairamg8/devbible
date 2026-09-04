@@ -280,7 +280,7 @@ needs a decision that the automated change cannot make: whether this particular 
 narrow the `None` or convert it straight back into a raise. That last point is the one worth
 saying out loud in an interview — a mechanical rewrite that turns every `get_x()` into
 `find_x()` plus `if x is None: raise` has not simplified anything, it has just moved the raise
-into a hundred call sites, which is [05j](01-type-checkers-and-silent-apis.md)'s arithmetic
+into a hundred call sites, which is [01](01-type-checkers-and-silent-apis.md)'s arithmetic
 running backwards.
 
 **Your library annotates `-> str | None` and a consumer's checker never complains. Why?**
@@ -294,4 +294,4 @@ versioned part of the API rather than a private note to yourself.
 
 ---
 
-← Prev: [The raising contract](02-the-raising-contract.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The bill every caller pays](04-the-bill-every-caller-pays.md)
+← Prev: [The raising contract](02-the-raising-contract.md) · Index: [Designing the failure channel](README.md) · Next → [The bill every caller pays](04-the-bill-every-caller-pays.md)

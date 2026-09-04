@@ -13,14 +13,14 @@ sidebar_position: 5
 > [`dict.get`](https://docs.python.org/3.14/library/stdtypes.html#dict.get).
 > Target: **Python 3.14**. Documentation-validated; **no sandbox run**.
 
-**[05m](04-the-bill-every-caller-pays.md) argued about *whether* to return a sentinel. This
+**[04](04-the-bill-every-caller-pays.md) argued about *whether* to return a sentinel. This
 chunk is about *which value*, and one rule governs the whole question: a sentinel must not
 be a member of the success type. Break it and the checker has nothing to object to, so
 nobody can be compelled to test for the miss — which is exactly why `str.find` returning
 `-1` produces two famous bugs and `re.search` returning `None` produces none. The corollary
 is the collection case, where a sentinel is not needed at all because `[]` already says it.
 The case where `None` itself becomes a member of the success type is
-[05o](06-the-sentinel-object.md).**
+[06](06-the-sentinel-object.md).**
 
 ## An in-band sentinel is invisible to the checker
 
@@ -150,4 +150,4 @@ keeps the common path free of branches entirely.
 
 ---
 
-← Prev: [The bill every caller pays](04-the-bill-every-caller-pays.md) · Index: **EAFP vs LBYL** *(not written yet)* · Next → [The sentinel object](06-the-sentinel-object.md)
+← Prev: [The bill every caller pays](04-the-bill-every-caller-pays.md) · Index: [Designing the failure channel](README.md) · Next → [The sentinel object](06-the-sentinel-object.md)
