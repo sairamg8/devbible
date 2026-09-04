@@ -472,11 +472,11 @@ export const LANGUAGES = {
   },
   nextjs: {
     label: 'Next.js',
-    updated: '2026-09-04 18:05',
+    updated: '2026-09-04 21:40',
     docsPath: '/docs/nextjs',
     pagesPath: '/docs/nextjs/pages',
     phases: [
-      {n: 1, slug: '01-introduction-to-next-js', name: "Introduction to Next.js", part: 'Imported corpus', topics: 9, pages: 0},
+      {n: 1, slug: '01-introduction-to-next-js', name: "Introduction to Next.js", part: 'Refreshed for 16.3', topics: 9, pages: 9},
       {n: 2, slug: '02-routing-and-navigation', name: "Routing and navigation", part: 'Refreshed for 16.3', topics: 20, pages: 11, pagesPlanned: 20},
       {n: 3, slug: '03-server-components-vs-client-components', name: "Server Components vs Client Components", part: 'Imported corpus', topics: 7, pages: 0},
       {n: 4, slug: '04-data-fetching-in-the-app-router', name: "Data fetching in the App Router", part: 'Refreshed for 16.3', topics: 39, pages: 39},
@@ -627,7 +627,7 @@ export const LANGUAGES = {
   },
   java: {
     label: 'Java',
-    updated: '2026-09-03 02:30',
+    updated: '2026-09-04 08:42',
     docsPath: '/docs/java',
     pagesPath: '/docs/java/pages',
     phases: [
@@ -645,7 +645,7 @@ export const LANGUAGES = {
       {n: 11, slug: 'phase-11-testing', name: 'Testing', part: 'Production', topics: 12, pages: 12},
       {n: 12, slug: 'phase-12-jvm-production', name: 'The JVM in production', part: 'Production', topics: 15, pages: 12, pagesPlanned: 15},
       {n: 13, slug: 'phase-13-oauth2-oidc', name: 'OAuth2, OIDC and service security', part: 'Distributed', topics: 14, pages: 8},
-      {n: 14, slug: 'phase-14-microservice-architecture', name: 'Microservice architecture', part: 'Distributed', topics: 12, pages: 0},
+      {n: 14, slug: 'phase-14-microservice-architecture', name: 'Microservice architecture', part: 'Distributed', topics: 12, pages: 2, pagesPlanned: 12},
       {n: 15, slug: 'phase-15-messaging-event-driven', name: 'Messaging and event-driven', part: 'Distributed', topics: 14, pages: 0},
       {n: 16, slug: 'phase-16-resilience-operations', name: 'Resilience and operating the fleet', part: 'Distributed', topics: 13, pages: 0},
     ],
