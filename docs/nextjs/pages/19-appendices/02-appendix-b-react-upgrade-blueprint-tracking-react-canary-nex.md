@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 20
 title: "**Appendix B:** React upgrade blueprint (tracking React canary → Next.js stable)."
 sidebar_label: "**Appendix B:** React upgrade blueprint (tracking React canary → Next.js stable)."
 description: "**Appendix B:** React upgrade blueprint (tracking React canary → Next.js stable)."

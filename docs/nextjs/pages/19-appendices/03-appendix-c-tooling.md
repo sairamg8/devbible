@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 30
 title: "**Appendix C:** Tooling"
 sidebar_label: "**Appendix C:** Tooling"
 description: "**Appendix C:** Tooling — editor/agent setups, MCP configuration, CLI wrappers."

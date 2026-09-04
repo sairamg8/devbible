@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 40
 title: "**Appendix D:** Production Readiness Checklist (security, caching, observability, a11y, SEO)."
 sidebar_label: "**Appendix D:** Production Readiness Checklist (security, caching, observability, a11y, SEO)."
 description: "**Appendix D:** Production Readiness Checklist (security, caching, observability, a11y, SEO)."

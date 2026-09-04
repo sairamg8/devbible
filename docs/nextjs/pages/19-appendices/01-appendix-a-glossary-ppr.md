@@ -52,7 +52,7 @@ And enabling the successor is not a rename:
 
 > *"Enabling `cacheComponents` is not a rename-only change: it can surface build errors for uncached data outside of `<Suspense>` and requires adopting the Cache Components model."*
 
-Chapter 5 works the whole model through: [05 · Caching, PPR and Cache Components](../05-caching-ppr-and-cache-components/README.md).
+Chapter 5 works the whole model through: [05 · Caching, PPR and Cache Components](../05-caching-ppr-and-cache-components/01-explanation.md).
 
 ---
 

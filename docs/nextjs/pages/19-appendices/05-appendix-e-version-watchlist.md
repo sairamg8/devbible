@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 50
 title: "**Appendix E:** Version watchlist"
 sidebar_label: "**Appendix E:** Version watchlist"
 description: "**Appendix E:** Version watchlist — every **[16.3 Preview]** feature in this book, with its stabilization status to verify before production use."
