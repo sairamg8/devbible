@@ -117,6 +117,28 @@ public record CampaignLead(
 
 The Marketing service has zero dependencies, zero network latency and zero shared libraries, and its availability is entirely independent of whether the enterprise Customer service is up.
 
+## Separate Ways has one precondition, and it is not "the data is unimportant"
+
+The pattern reads as permission to duplicate, and teams reach for it when integration looks
+expensive. The definition's actual permission is narrower — *"Declare a bounded context to have no
+connection to the others at all"* — and "no connection" is a strong claim with a precondition:
+
+🔴 **The two contexts must not need to agree.** Not "rarely need to agree", not "agree via a nightly
+job". If a discrepancy between the two copies is ever an incident, you have not gone separate ways;
+you have built an undocumented integration whose reconciliation mechanism is a human noticing.
+
+| Situation | Separate Ways? | Why |
+|---|---|---|
+| A campaign micro-site's contact list vs the CRM | ✅ | Nobody reconciles them, and nobody would want to |
+| Product names in a marketing page vs the catalogue | ✅ | Drift is visible, cosmetic and self-correcting |
+| Customer address in billing vs in shipping | ❌ | A discrepancy is a misdelivered parcel — they must agree |
+| A financial figure duplicated in two reports | 🔴 | Two numbers for one fact is the worst outcome available; someone will act on the wrong one |
+
+**The tell that Separate Ways was misapplied** is a reconciliation report. The moment somebody builds
+a job that compares the two copies and flags differences, the contexts *are* connected — badly,
+asynchronously, and with no owner. That is the point to convert the relationship into a real one:
+Customer/Supplier if leverage exists, ACL if it does not.
+
 ## Gotchas
 
 **★ Symptom: Two teams in a "Partnership" spend more of every sprint coordinating with each other than delivering.**
@@ -130,6 +152,22 @@ Fix: Sever the integration. Go Separate Ways, and satisfy the quarterly requirem
 **★ Symptom: Applying Separate Ways to core financial or compliance data.**
 Cause: Misunderstanding the limits of Separate Ways. Financial ledger entries and regulatory compliance must be consistent across the enterprise.
 Fix: Financial facts must be integrated via Open Host Service or Published Language.
+
+**★ Symptom: a reconciliation report exists between two contexts that officially went Separate Ways.**
+Cause: the two copies do need to agree after all, and the disagreement is being managed by a report
+someone reads rather than by an integration someone owns.
+Fix: the report is the evidence that the pattern was misapplied. Convert the relationship into one
+that has an owner — Customer/Supplier if the downstream has leverage, an ACL if it does not — and
+delete the report. 🔴 A reconciliation job is an integration with no contract, no compatibility
+promise and no on-call, which is strictly worse than the integration it was avoiding.
+
+**★ Symptom: two Separate Ways contexts hold a financial figure, and the two numbers differ.**
+Cause: Separate Ways was applied to data where a discrepancy is not drift but a defect. Duplication is
+safe for facts nobody reconciles; it is dangerous for facts somebody will act on.
+Fix: one owner per fact, always — the ownership register in
+[10b · The ownership register](10b-the-ownership-register.md). One context holds the number and the
+other reads it or holds a clearly-labelled projection of it. Two authoritative copies of one figure
+is the outcome the pattern is least suited to.
 
 **★ Symptom: An executive declares a "Partnership" between a dominant internal team and a subordinate team.**
 Cause: Pretending an asymmetric relationship is symmetric.
@@ -145,6 +183,15 @@ Separate Ways acknowledges that integration is expensive, introducing network la
 
 **★ How do you determine whether two teams should form a Partnership or merge their codebases?**
 If two teams find that almost every user story requires joint planning, synchronized pull requests, and lockstep deployments, the boundary between them is false. The two domains share invariants that cannot be separated. The correct solution is to merge the two teams and codebases into a single bounded context rather than maintaining the illusion of separate microservices.
+
+**★ What is the precondition for Separate Ways, and what is the tell that it was misapplied?**
+The precondition is that the two contexts genuinely do not need to agree — the definition's *"no
+connection to the others at all"* is a strong claim, and it fails the moment a discrepancy between the
+two copies would count as an incident. The tell is a **reconciliation report**: as soon as somebody
+builds a job comparing the two copies and flagging differences, the contexts are connected after all,
+just asynchronously and with nobody accountable for the connection. At that point the honest move is
+to convert the edge into a real relationship with an owner, because a reconciliation job is an
+integration with no contract, no compatibility promise and no on-call rota.
 
 **★ What are the risks of using Separate Ways for domain data?**
 The primary risk is data inconsistency and divergence. If both contexts duplicate mutable domain facts without a reconciliation mechanism, customer records or inventory figures can drift apart, leading to customer confusion or accounting discrepancies. Separate Ways is best suited for ephemeral, supporting, or read-only domain representations.

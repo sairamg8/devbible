@@ -80,6 +80,37 @@ Context relationships are not static contracts; they shift as organizations matu
 2. **Conformist to Anticorruption Layer:** If a third-party SaaS vendor is acquired, suffers quality degradation, or announces an incompatible API overhaul, a downstream conformist team must immediately erect an Anticorruption Layer to insulate its business logic.
 3. **Partnership to Service Merge:** When two teams in a Partnership realize that most of their pull requests require joint review and synchronized deployments, they should dissolve the artificial microservice boundary and merge into a single bounded context.
 
+## The decision is the upstream's as well, and the two answers must match
+
+Every framing above is from the downstream's point of view — *what do I do about them*. The upstream
+is making a decision at the same time, from a different list, and a context map is only coherent when
+the two agree.
+
+| Downstream chooses | Upstream must be choosing | If it is not |
+|---|---|---|
+| Customer/Supplier | Customer/Supplier — it accepts downstream items in its plan | Downstream waits forever for a negotiation the upstream never agreed to |
+| Conformist | Anything. Conformist requires no upstream cooperation at all | — |
+| Anticorruption Layer | Anything, including nothing | — |
+| Partnership | Partnership — symmetric by definition, or it is not this pattern | One team plans jointly, the other does not, and every release slips |
+
+🔴 **Note which rows need no upstream agreement: Conformist and ACL.** That is their defining
+advantage and the reason they are the right default when leverage is uncertain. Customer/Supplier and
+Partnership are the only two patterns that require the other team to have chosen the same thing, and
+they are precisely the two that get assigned optimistically in a workshop the other team was not in.
+
+**A practical rule:** if you cannot name the person on the upstream team who agreed to the
+relationship, choose a pattern that does not require their agreement. You can always upgrade later;
+a downstream team blocked for a quarter waiting on an unagreed Customer/Supplier relationship cannot
+get the quarter back.
+
+## Relationships are per-edge, not per-team
+
+One more distinction the matrix hides: **the pattern applies to an integration, not to a pair of
+teams.** Two teams routinely hold different relationships in different directions at once —
+billing may be a Conformist consumer of catalogue's product data while catalogue is a Customer of
+billing's tax calculation. Recording a single pattern per team-pair loses that, and the loss matters
+because the two edges have different owners, different obligations and different failure modes.
+
 ## Gotchas
 
 **★ Symptom: Team spends six months building an Anticorruption Layer for Stripe or AWS S3.**
@@ -93,6 +124,21 @@ Fix: Carve out an Anticorruption Layer. The core domain must speak the language 
 **★ Symptom: Assuming Customer-Supplier leverage exists simply because both teams share an engineering director.**
 Cause: Ignoring organizational reality. If the upstream team's OKRs are tied to a different product launch, downstream has zero actual leverage.
 Fix: Validate leverage before designing contracts. If upstream will not commit sprint capacity, design for Conformist or ACL.
+
+**★ Symptom: the downstream team has planned around Customer/Supplier and the upstream team has never heard of it.**
+Cause: the relationship was chosen unilaterally in a workshop the other team was not in.
+Customer/Supplier and Partnership are the only two patterns that require the *upstream* to have
+chosen them too.
+Fix: name the person who agreed. If you cannot, pick a pattern that needs no agreement — Conformist
+or an ACL — and upgrade later if the conversation happens. This costs a translation layer; the
+alternative costs a quarter.
+
+**★ Symptom: the context map records one relationship per pair of teams, and neither team recognises it.**
+Cause: the pattern belongs to an **edge**, not to a team-pair, and the two directions between the
+same teams are frequently different patterns with different owners.
+Fix: one row per integration, with a direction. Billing conforming to catalogue's product data and
+catalogue being a customer of billing's tax calculation are two facts, and collapsing them into "these
+teams are Customer/Supplier" makes both of them wrong.
 
 **★ Symptom: Attempting a three-way Partnership across distributed teams.**
 Cause: Misunderstanding the communication overhead of symmetric coordination.
@@ -108,6 +154,17 @@ A Core Domain represents the company's primary business differentiator. Conformi
 
 **★ When is an Anticorruption Layer justified in a supporting subdomain?**
 An ACL is justified in a supporting subdomain only when the upstream system is highly volatile, poorly designed, or slated for near-term replacement. In such cases, the cost of authoring a translation layer is lower than the ongoing cost of fixing downstream bugs caused by upstream instability, or the cost of rewriting the downstream domain when the legacy upstream is decommissioned.
+
+**★ Which context-mapping patterns can a downstream team adopt unilaterally, and why does that matter more than it sounds?**
+Conformist and Anticorruption Layer require nothing from the upstream — the downstream can adopt
+either one this afternoon without anybody's agreement. Customer/Supplier and Partnership are
+symmetric commitments that only exist if the other team has also chosen them: one means downstream
+items appear in the upstream's plan, the other means joint planning and synchronised releases. This
+matters because the two patterns needing agreement are exactly the two that get assigned
+optimistically in a workshop the upstream was not in, and the failure is silent — the downstream team
+plans around a field arriving next quarter and blocks, while the upstream has no idea it promised
+anything. The rule that follows is simple: if you cannot name the person who agreed, choose a pattern
+that does not need them.
 
 **★ How does team topology and Conway's Law dictate the transition from Customer-Supplier to Open Host Service?**
 As an upstream service scales to serve more consumers across an enterprise, team communication overhead explodes. A single upstream team cannot maintain multiple customer-supplier negotiations without stalling development. Upstream must transition to Open Host Service—providing a standardized, published protocol that treats all consumers as equal subscribers, decoupling upstream's release cycle from downstream demands.

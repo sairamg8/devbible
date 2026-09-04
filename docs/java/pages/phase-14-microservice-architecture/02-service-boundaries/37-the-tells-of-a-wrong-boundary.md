@@ -71,6 +71,32 @@ If two different services connect to the same PostgreSQL or Oracle database and 
 | **Circular call chains** | Unclear upstream/downstream roles; bi-directional coupling | Invert dependency using asynchronous domain events |
 | **Shared database** | Lack of single-service data ownership | Enforce database-per-service; access data via published APIs |
 
+## The tells are ranked, and most teams read them in the wrong order
+
+Six symptoms is a list; what a team needs at 2am is an ordering. These are not equally diagnostic,
+and the two that matter most are the two that get treated as operational problems rather than
+architectural ones.
+
+| Rank | Tell | Why it ranks here | Commonly misread as |
+|---|---|---|---|
+| **1** | 🔴 **Lockstep deployment** | It is the *definition* of a failed boundary, not evidence of one. Independent deployability is what the boundary was for | "A release-coordination problem" |
+| **2** | 🔴 **A transaction that wants to span the line** | The one hard criterion in this topic is being violated — [09 · The transaction boundary](09-the-transaction-boundary.md) | "A distributed-transaction problem, needing sagas" |
+| **3** | Chatty synchronous calls per request | Strong, but sometimes a caching or API-shape problem instead | "A latency problem" |
+| **4** | Availability multiplied down the chain | Follows from 3; real, but a consequence rather than a cause | "A resilience problem" |
+| **5** | Shared database tables | Decisive when present, but often absent in a genuinely broken boundary | "A data-access problem" |
+| **6** | Cross-service debugging effort | The most *felt* and the least diagnostic — distributed systems are harder to debug even when correct | "An observability problem" |
+
+🔴 **Ranks 1 and 2 are conclusive on their own.** If two services must deploy together, the boundary
+between them does not exist regardless of how clean the code looks; if a business invariant must hold
+across the line, the boundary is in the wrong place regardless of how independently they deploy.
+Everything below them is evidence to be weighed.
+
+**The misreadings in the right-hand column are where the damage happens**, because each has a
+plausible technical remedy that makes the boundary permanent: a release train for rank 1, a saga
+framework for rank 2, a cache for rank 3, a circuit breaker for rank 4. Each of those is a real tool
+that is correct in other situations, and each one, applied here, buys a quarter of relief and
+capitalises the wrong boundary.
+
 ## Merging is not failure
 
 When an architecture exhibits three or more of these tells, continuing to patch the boundary with distributed tracing, retries, and API gateways is an exercise in sunk cost fallacy. The most professional engineering decision is to acknowledge that the boundary was drawn incorrectly, merge the services back into a single modular deployable, and enforce the boundary in-process using package structure and verification tests.
@@ -89,6 +115,32 @@ Fix: Eliminate circular calls. Invert the dependency using asynchronous domain e
 Cause: Severing a single transactional aggregate across two microservices.
 Fix: Move the two entities into the same service and database, using local ACID transactions.
 
+**★ Symptom: a saga framework is introduced to make two services consistent, and consistency bugs continue.**
+Cause: rank 2 misread as a technology gap. A saga is the correct tool for a business process that is
+*genuinely* long-running and *tolerates* intermediate states. It is the wrong tool for an invariant
+that must hold at every instant, because no amount of orchestration makes eventual consistency
+immediate.
+Fix: ask what happens during the window. If the answer is "nothing, it settles" the saga is right; if
+the answer is "we can oversell stock" the invariant is transactional and the boundary is misplaced.
+```java
+// If this must be true at every instant, it cannot span a network boundary.
+// A saga does not fix that -- it schedules the violation.
+if (stock.available() < requested) throw new InsufficientStockException();
+```
+
+**★ Symptom: a cache between two services fixes the latency and the two services still cannot be released separately.**
+Cause: rank 3 was treated and rank 1 was not. The cache removed the symptom that hurt and left the
+one that mattered.
+Fix: measure the boundary by deployability, not by latency. If a change to one service still requires
+a coordinated release of the other, the cache bought response time and changed nothing architectural.
+
+**★ Symptom: everyone agrees the boundary is wrong and nobody can say which of the six tells they are actually seeing.**
+Cause: the tells are being discussed as one undifferentiated feeling of friction.
+Fix: check them in rank order and stop at the first conclusive one. Lockstep deployment and a
+cross-boundary invariant each settle the question by themselves; the remaining four are weighed
+together. This matters because the fix differs — a misplaced invariant means moving the line, while
+chattiness alone may only mean the API is too fine-grained.
+
 **★ Symptom: Staging environments are perpetually broken because services can only be tested when deployed together.**
 Cause: High design-time coupling and lockstep deployments.
 Fix: Decouple services using consumer-driven contract tests, or merge tightly coupled services into a single deployable unit.
@@ -103,6 +155,24 @@ The core promise of microservice architecture is independent deployability—the
 
 **★ How does slicing a system into "entity services" cause chatty network calls?**
 Entity services (e.g. `CustomerService`, `OrderService`, `ProductService`) simply wrap database tables in CRUD HTTP endpoints. Because the services lack business logic, orchestrator services must repeatedly invoke multiple entity endpoints over the network to assemble state, perform computations, and write back results. This replaces local memory lookups with high-latency network roundtrips.
+
+**★ Of the signals that a boundary is wrong, which two are conclusive on their own?**
+Lockstep deployment and a business invariant that wants to span the line. The first is conclusive
+because independent deployability is the property the boundary was drawn to obtain — if two services
+must ship together, the boundary between them does not exist, whatever the code looks like. The
+second is conclusive because it violates the one hard criterion in boundary design: whatever must
+commit together must live together. Everything else — chattiness, multiplied unavailability, shared
+tables, debugging pain — is evidence to be weighed rather than a verdict, partly because distributed
+systems are harder to operate even when the boundaries are right.
+
+**★ Each of the six tells has a plausible technical remedy. Why is reaching for it usually the wrong move?**
+Because every one of those remedies is a real tool that works, which is exactly what makes it
+dangerous here: it removes the symptom and capitalises the wrong boundary. A release train makes
+lockstep deployment comfortable and permanent. A saga framework makes a misplaced invariant survivable
+and permanent. A cache makes chattiness cheap and permanent. A circuit breaker makes a fragile
+dependency chain tolerable and permanent. In each case the team spends a quarter building
+infrastructure whose purpose is to compensate for a line drawn in the wrong place — and afterwards the
+line is harder to move, because the compensating machinery is now load-bearing too.
 
 **★ Under what circumstances should an engineering organization merge two microservices back into one?**
 An organization should merge two services when: (1) they are always deployed together in lockstep; (2) business invariants require atomic consistency across both services' data stores; (3) features consistently require synchronized changes across both codebases; or (4) the operational overhead of running two services exceeds the value of separate deployment.
