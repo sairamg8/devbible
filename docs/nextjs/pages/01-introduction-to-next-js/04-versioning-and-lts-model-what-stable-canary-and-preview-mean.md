@@ -1,7 +1,7 @@
 ---
 title: "Next.js supports major lines, not minors — 16.x is Active LTS and 15.x is Maintenance LTS, and on the maintenance line a semver-minor bump is allowed to break you"
 sidebar_label: "04 · Versioning and the LTS model"
-sidebar_position: 4
+sidebar_position: 5
 description: "The release channels — canary, stable, and what 'preview' actually is — plus the two LTS phases, why the policy's unit is the major version, the two-year maintenance clock, and how to read a release channel before betting a production app on a feature."
 ---
 
@@ -195,4 +195,4 @@ It also updates the documentation bundled inside the package at `node_modules/ne
 
 ---
 
-← Prev [03 · Core philosophy: server-first rendering](03-core-philosophy-server-first-rendering.md) · [Index](01-explanation.md) · Next → [05 · Project setup](05-project-setup-create-next-app-turbopack-defaults-typescript.md)
+← Prev [03b · Hybrid static/dynamic](03b-hybrid-static-dynamic-and-the-cost-model.md) · [Index](01-explanation.md) · Next → [05 · Project setup](05-project-setup-create-next-app-turbopack-defaults-typescript.md)

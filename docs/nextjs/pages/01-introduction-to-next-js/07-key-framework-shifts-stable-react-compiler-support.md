@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: "Key framework shifts: stable React Compiler support, async `params`/`searchParams`, Node.js 20+ r…"
 sidebar_label: "Key framework shifts: stable React Compiler support, async `params`/`searchParams`, Node.js 20+ r…"
 description: "Key framework shifts: stable React Compiler support, async `params`/`searchParams`, Node.js 20+ requirement."

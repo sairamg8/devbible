@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: "Project setup: `create-next-app`, Turbopack defaults, TypeScript, ESLint, Tailwind."
 sidebar_label: "Project setup: `create-next-app`, Turbopack defaults, TypeScript, ESLint, Tailwind."
 description: "Project setup: `create-next-app`, Turbopack defaults, TypeScript, ESLint, Tailwind."

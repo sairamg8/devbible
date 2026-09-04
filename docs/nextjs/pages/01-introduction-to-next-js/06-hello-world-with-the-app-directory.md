@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: "Hello World with the `app/` directory."
 sidebar_label: "Hello World with the `app/` directory."
 description: "Hello World with the `app/` directory."
