@@ -11,6 +11,7 @@ description: "When a remote cache handler earns its cost, when it is strictly wo
 > [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote)
 > and [`use cache`](https://nextjs.org/docs/app/api-reference/directives/use-cache).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **`use cache: remote` is the answer to one specific complaint: cached operations re-running
 more often than they should, and upstream services taking more traffic than the page view
@@ -37,7 +38,11 @@ export default nextConfig
 ```
 
 The handler implementation is configured via **`cacheHandlers`**. Hosting providers should
-typically supply this automatically; **if you self-host, you configure the storage yourself.**
+typically supply this automatically; **if you self-host, you configure the storage yourself —
+and if you do not, the directive silently falls back to the same in-memory LRU that plain
+`use cache` uses.** That configuration surface is [chunk 3b](03b-configuring-cache-handlers.md),
+the handler interface is [chunk 3c](03c-writing-a-cache-handler.md), and the ways a working
+handler still fails are [chunk 3d](03d-cache-handler-failure-modes.md).
 
 ## When it makes sense
 
@@ -221,14 +226,6 @@ could serve stale or malformed data.
 **Fix.** Plan for the spike. If persistence across deploys is genuinely required, use
 `unstable_cache` for non-`fetch` functions, or the `fetch` cache.
 
-### Self-hosting without configuring a handler
-
-**Symptom.** `use cache: remote` behaves like nothing at all.
-
-**Cause.** Hosting providers usually supply the handler; when you self-host, nobody does.
-
-**Fix.** Configure `cacheHandlers` in `next.config.js` and point it at your store.
-
 ### Using it for content that is in the static shell
 
 **Symptom.** Extra latency on prerendered content that was already fast.
@@ -294,4 +291,4 @@ revalidation requests into one.
 
 ---
 
-**Next:** [4 · `use cache: private`](04-use-cache-private.md)
+**Next:** [3b · Configuring `cacheHandlers`](03b-configuring-cache-handlers.md)
