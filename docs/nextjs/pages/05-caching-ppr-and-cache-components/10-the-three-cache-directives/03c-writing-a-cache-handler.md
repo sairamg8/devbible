@@ -1,8 +1,8 @@
 ---
-title: "A cache handler is five methods, and three of them fail in ways the type signature does not warn you about"
+title: "A cache handler is five methods, and the two that look simplest carry contracts the type signature does not state"
 sidebar_label: "3c · Writing a cache handler"
 sidebar_position: 7
-description: "The CacheHandler interface, why set receives a promise, the three meanings of getExpiration's return value, soft tags and revalidatePath, and the asymmetry between a failing get and a failing set."
+description: "The CacheHandler interface, why set receives a promise rather than an entry, the three meanings of getExpiration's return value, and the stream-and-units shape of CacheEntry."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -10,17 +10,18 @@ description: "The CacheHandler interface, why set receives a promise, the three 
 > Verified: 2026-09-05 against the Next.js API reference for
 > [`cacheHandlers`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheHandlers)
 > (page header `version: 16.3.4`, `lastUpdated: 2026-08-25`), sections *API Reference*,
-> *CacheEntry Type*, *Soft Tags*, *Handling Streams* and *Error Handling*.
+> *CacheEntry Type*, *Handling Streams* and *Examples*.
 > Target: **Next.js 16.3.4**, App Router, Cache Components. Documentation-verified; **no sandbox run** — no handler was executed to produce any statement below.
 > Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **If you self-host and want `use cache: remote` to mean anything, somebody has to write the
-handler — and the interface is small enough to look obvious and subtle enough to get wrong
-four different ways.** `set` is handed a promise, not a value. `getExpiration` has a return
-value that is a mode switch rather than data. `get` is the only method the framework does not
-catch exceptions from, so a bad minute in Redis is the difference between a cache miss and a
-500. And the entry's payload is a one-shot stream. This chunk is the interface and those four
-edges. Configuring which slot the handler fills is [chunk 3b](03b-configuring-cache-handlers.md).
+handler — and the interface is small enough to look obvious while quietly carrying three
+contracts nothing type-checks.** `set` is handed a promise, not a value, because the response
+is still streaming when it is called. `getExpiration` has a return value that is a mode switch
+rather than data. And the entry's payload is a one-shot stream carrying two different time
+units. This chunk is the interface and those edges. Configuring which slot the handler fills is
+[chunk 3b](03b-configuring-cache-handlers.md); the ways a working handler still fails at
+runtime are [chunk 3d](03d-cache-handler-failure-modes.md).
 
 ## The interface
 
@@ -140,68 +141,7 @@ concatenated chunks and stores the six fields as JSON, using the entry's `expire
 TTL. The framework does not do any of that for you; a handler that stores the stream object
 itself stores nothing usable.
 
-## Soft tags, and why `revalidatePath` works at all
-
-`revalidatePath` has no separate mechanism. It rides the tag system on tags Next.js generates
-for you:
-
-> *"Soft tags are implicit tags that Next.js automatically generates based on the route path.
-> Every segment in the path gets a layout tag, plus the leaf route itself. For example, the
-> route `/blog/hello` generates soft tags for `/layout`, `/blog/layout`, `/blog/hello/layout`,
-> and `/blog/hello`. These tags are prefixed internally with `_N_T_`."*
-
-They arrive as the second argument to `get`:
-
-> *"Your handler should check whether any soft tag has been invalidated (via `getExpiration()`
-> or direct timestamp comparison) after the cache entry's `timestamp`. If a soft tag was
-> invalidated more recently than the entry was created, the entry should be treated as stale."*
-
-A handler that ignores that argument still compiles, still caches, still passes a smoke
-test — and silently makes `revalidatePath` a no-op against that store.
-
-## Error handling is asymmetric between `get` and `set`
-
-This is the part worth memorising, because the two failures have opposite blast radii:
-
-> *"**`set()` failure**: the response is still served to the user because `set()` is called
-> asynchronously after the response stream is already flowing. The cache entry is lost, and
-> the next request triggers a fresh render."*
-
-> *"**`get()` failure**: your handler should catch internal errors and return `undefined` (the
-> "cache miss" signal). The framework does not wrap `get()` in a try/catch, so an unhandled
-> exception from `get()` will propagate as a render error."*
-
-A Redis outage in `set` costs you cache hits. The same outage in `get` takes the page down —
-unless you wrote the try/catch.
-
-```js filename="cache-handlers/remote-handler.js"
-module.exports = {
-  async get(cacheKey, softTags) {
-    try {
-      return await readFromStore(cacheKey, softTags)
-    } catch {
-      return undefined // a miss, not a 500
-    }
-  },
-  // ...
-}
-```
-
-The third documented rule closes the loop: *"if a cache entry is partially written and then
-read, the behavior is undefined. Use atomic writes or a write-then-rename pattern to avoid
-serving partial entries."*
-
 ## Gotchas
-
-### A `get` that throws
-
-**Symptom.** The cache backend has a bad minute and the route 500s instead of rendering fresh.
-
-**Cause.** The framework does not wrap `get()` in a try/catch, so anything it throws
-propagates as a render error. Every other method is forgiving; this one is not.
-
-**Fix.** Catch everything inside `get` and return `undefined` — the miss signal — as in the
-handler above. A cache that is down should degrade to no cache, never to no site.
 
 ### Storing the entry without awaiting `pendingEntry`
 
@@ -222,18 +162,6 @@ the caller too.
 
 **Fix.** `.tee()` it: one branch to storage, one back to the framework.
 
-### Ignoring `softTags` in `get`
-
-**Symptom.** `revalidatePath('/blog/hello')` appears to do nothing against your handler while
-`revalidateTag` works fine.
-
-**Cause.** `revalidatePath` invalidates through the implicit `_N_T_`-prefixed path tags handed
-to `get` as `softTags`. A handler that never checks them never notices the invalidation.
-
-**Fix.** Compare the soft tags' invalidation timestamps against the entry's `timestamp` and
-treat the entry as stale if any is newer — or return `Infinity` from `getExpiration` and do
-that check inside `get` deliberately.
-
 ### Mixing seconds and milliseconds in an expiry check
 
 **Symptom.** Entries expire instantly, or never.
@@ -242,17 +170,6 @@ that check inside `get` deliberately.
 seconds. The documented check is `now > entry.timestamp + entry.revalidate * 1000`.
 
 **Fix.** Multiply. Every duration on the entry needs `* 1000` before it meets `Date.now()`.
-
-### Keeping a partially written entry
-
-**Symptom.** Users occasionally get a page that stops halfway through, and it is *sticky* —
-the same broken page comes back until the entry expires.
-
-**Cause.** The value stream can error partway through rendering. If your `set` stores what it
-got, the truncation is now cached.
-
-**Fix.** Discard partial entries — the documentation says discarding is safer — and use atomic
-writes or write-then-rename so a reader never observes a half-written entry.
 
 ### A `updateTags` that forgets to touch the timestamps `getExpiration` reads
 
@@ -266,19 +183,6 @@ handler internally inconsistent, and nothing type-checks that relationship.
 **Fix.** Write them together. Either delete matching entries in `updateTags` — the documented
 in-memory approach — or record a timestamp per tag that `getExpiration` then reports.
 
-### Assuming `refreshTags` is called often enough to be your only sync
-
-**Symptom.** In a multi-instance deployment, one instance keeps serving data another instance
-invalidated.
-
-**Cause.** `refreshTags` is documented as *"called periodically before starting a new
-request"*. That is the framework's hook for pulling external tag state; it is not a
-subscription, and the documentation does not specify a frequency you can build a guarantee on.
-
-**Fix.** Make the shared store the source of truth — check tag state in `get` or
-`getExpiration` against it — and treat `refreshTags` as an optimisation that warms a local
-copy, not as the invalidation path itself.
-
 ## Interview questions
 
 **★ Why does `set` take a promise rather than a cache entry?**
@@ -291,18 +195,6 @@ unfinished entry.
 millisecond timestamp — the most recent revalidation across the tags. `Infinity` — a
 declaration that you will check soft tags inside `get` instead.
 
-**★ What are soft tags?**
-Implicit tags Next.js derives from the route path — a layout tag per segment plus the leaf
-route, prefixed `_N_T_` — passed to `get` as `softTags`. They are the mechanism
-`revalidatePath` invalidates through, so a handler that ignores them breaks `revalidatePath`
-without breaking `revalidateTag`.
-
-**★ Which is more dangerous, a failing `get` or a failing `set`?**
-`get`. `set` runs asynchronously after the response stream is already flowing, so a failure
-only loses the entry and the next request re-renders. `get` is not wrapped in a try/catch by
-the framework, so an unhandled exception becomes a render error — your handler must catch and
-return `undefined`.
-
 **★ Why must a handler `tee()` the entry's `value`?**
 `value` is a `ReadableStream<Uint8Array>`, consumable once. To both persist it and hand it back
 to the framework you need two branches.
@@ -311,11 +203,6 @@ to the framework you need two branches.
 `timestamp` is in milliseconds; `stale`, `revalidate` and `expire` are in seconds. The
 documented expiry check multiplies the duration by 1000 before comparing it against
 `Date.now()`.
-
-**★ Should a handler store a partially written entry?**
-No. The stream can error mid-render, and the documentation is explicit that discarding is
-safer because partial entries produce incomplete pages — and a cached incomplete page is
-served repeatedly, not once.
 
 **★ Which of the five methods may legitimately be a no-op?**
 `refreshTags`, for an in-memory cache — it exists to sync tag state from an external service
@@ -327,4 +214,4 @@ delivered separately as the `softTags` argument to `get`.
 
 ---
 
-**Previous:** [3b · Configuring `cacheHandlers`](03b-configuring-cache-handlers.md) · **Next:** [4 · `use cache: private`](04-use-cache-private.md)
+**Previous:** [3b · Configuring `cacheHandlers`](03b-configuring-cache-handlers.md) · **Next:** [3d · Cache handler failure modes](03d-cache-handler-failure-modes.md)
