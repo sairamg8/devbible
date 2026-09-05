@@ -10,6 +10,7 @@ description: "The pattern catalogue for server-to-client boundaries: children-as
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (page header `version: 16.3.4`, `lastUpdated` 2026-08-25), via research banked for this track on 2026-09-04.
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
 > ⚠️ The boundary *rule* itself is established in [chapter 1 · 03](../01-introduction-to-next-js/03-core-philosophy-server-first-rendering.md). This page assumes it and covers the patterns built on top.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Once you know that `'use client'` marks a module-graph boundary, every composition question in the App Router reduces to a single decision: does this component arrive by `import` or by prop? Imports cross into the client bundle; props do not. Almost every "I can't do this in the App Router" problem is an import that should have been a prop, and this page is the catalogue of what that looks like in practice — plus the cases where no amount of rearranging helps and the boundary itself is in the wrong place.**
 
@@ -123,7 +124,10 @@ Props travel inside the RSC payload, so they must survive serialization. In prac
 | plain objects and arrays of the above | class instances |
 | `Date`, `Map`, `Set` (React-serializable) | anything with methods you intend to call |
 | JSX elements (the slot patterns above) | Symbols (except registered ones) |
-| Server Actions | Promises you expect the client to `await` without `use` |
+| Server Actions | component *references* (`Filters`) rather than elements (`<Filters />`) |
+| Promises — read on the client with `use` | anything whose prototype carries behaviour you intend to call |
+
+⚠️ **Promises belong in the left column, and this is worth being exact about.** React lists Promises among the supported types, and Next.js documents the pattern directly: start the request in a Server Component, pass the pending promise as a prop, and *"The Client Component reads the promise as a resource with `use`. While the promise is pending, the nearest Suspense boundary shows its fallback."* What you cannot do is `await` it in the Client Component — *"Since async components are not supported on the client, we await the promise with `use`."* So the constraint is on how the client reads it, not on whether it crosses.
 
 The most common casualty is an ORM result object. `db.user.findFirst()` frequently returns a model instance rather than a plain object, and passing it straight into a Client Component fails at the boundary rather than at the query:
 
@@ -160,7 +164,7 @@ import { Report } from './report'        // Report is now client code
 <Tabs><Report /></Tabs>                  // Report stays server
 ```
 
-**★ Symptom: `Functions cannot be passed directly to Client Components`, on a prop you thought was a component.** Cause: passing a component *reference* rather than an element — `left={Filters}` instead of `left={<Filters />}`. A reference is a function. Fix: pass the element, and type the prop `React.ReactNode` rather than `React.ComponentType`, so the mistake is a type error rather than a runtime one.
+**★ Symptom: the render throws on a prop you thought was a component.** The documented rule is flat — *"Passing a function as a prop from a Server Component to a Client Component throws"* — and a component reference is a function. Cause: passing a component *reference* rather than an element — `left={Filters}` instead of `left={<Filters />}`. A reference is a function. Fix: pass the element, and type the prop `React.ReactNode` rather than `React.ComponentType`, so the mistake is a type error rather than a runtime one.
 
 **★ Symptom: an ORM result fails to serialize at the boundary although the query succeeded.** Cause: many ORMs return model instances, not plain objects, and only plain data survives the RSC payload. Fix: `select` exactly the fields the client needs. This also shrinks the payload, so it is the correct fix rather than a workaround.
 
@@ -172,7 +176,7 @@ import { Report } from './report'        // Report is now client code
 
 **Symptom: passing a `Date` works but a custom class with methods does not.** Cause: serialization preserves data, not behaviour. React handles `Date`, `Map` and `Set`; a class instance loses its prototype. Fix: pass the data and put the behaviour in a function the client already has.
 
-**Symptom: two sibling slots both fetch the same record.** Cause: each Server Component fetches independently, which is the intended design. Fix: this is usually fine — request memoization deduplicates identical `GET` fetches within one render. Verify the calls are genuinely identical, including options, before restructuring.
+**Symptom: two sibling slots both fetch the same record.** Cause: each Server Component fetches independently, which is the intended design. Fix: this is usually fine — *"Identical `fetch` requests are memoized during a server render"*, so two slots asking for the same thing cost one request. "Identical" includes the options, not just the URL, so verify that before restructuring — and note the memoization is React's extension of `fetch`, so a raw ORM call is deduplicated only if you wrap it in React's `cache`.
 
 ## Interview questions
 

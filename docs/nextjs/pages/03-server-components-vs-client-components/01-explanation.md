@@ -9,6 +9,7 @@ description: "Chapter 3 overview: what each page settles, how this chapter divid
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (page header `version: 16.3.4`, `lastUpdated` 2026-08-25), via research banked for this track on 2026-09-04.
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Chapter 1 establishes the rule: `'use client'` marks a boundary between two module graphs, imports cross it and children do not. That rule is short. Its consequences are not, and this chapter is where they live — when to opt in at all, the full catalogue of composition patterns, the React primitives that exist because components now live on both sides of a boundary, how to make a boundary violation a build error rather than a silent leak, and how the whole thing shows up in your Core Web Vitals.**
 

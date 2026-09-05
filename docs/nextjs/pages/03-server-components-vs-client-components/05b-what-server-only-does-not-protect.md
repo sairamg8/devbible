@@ -9,6 +9,7 @@ description: "The five leaks a poison pill is structurally incapable of catching
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (`version: 16.3.4`, `lastUpdated` 2026-08-25) — the RSC payload contents, prop serializability and the `NEXT_PUBLIC_` empty-string substitution are quoted in [chapter 1 · 03](../01-introduction-to-next-js/03-core-philosophy-server-first-rendering.md) — and against the specifier lists and error strings in [`react_server_components.rs`](https://github.com/vercel/next.js/blob/canary/crates/next-custom-transforms/src/transforms/react_server_components.rs) (`canary`, read 2026-09-04).
 > Target: **Next.js 16.3.4**, App Router. Documentation- and source-verified; **no sandbox run**; **no penetration testing performed** — the leaks below are derived from the documented transport, not observed.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **[05](05-enforcing-boundaries-with-server-only-client-only-packages.md) established what the poison pill is: a specifier the compiler refuses inside the client module graph. Read that sentence adversarially and the limit is obvious — it constrains which *modules* are compiled for the browser, and a secret is not a module. Every leak that actually happens in an App Router codebase crosses a different edge: a value serialized into the RSC payload, a module nobody thought to poison, a Server Action returning more than it was asked for, an action invoked by someone who should not have been able to, or a build step that is not `next build`. `server-only` catches none of the five. It is a lint for module topology that people file mentally under security, and that misfiling is how the leak gets through.**
 
@@ -114,7 +115,7 @@ export async function loadProfile(id: string) {
 
 ## 4 · Who is allowed to call the action
 
-This is the row people are most surprised by, and it is the one with the worst consequences. A Server Action is a **network endpoint**. The client holds a reference to it; the runtime encodes that reference into the payload; invoking it is an HTTP request. Being unable to *import* the module tells you nothing about being unable to *call* the function.
+This is the row people are most surprised by, and it is the one with the worst consequences. A Server Action is a **network endpoint**, and React says so in a box labelled Pitfall: *"Server Functions are exposed server endpoints and can be called anywhere in client code."* The client holds a reference to it; the runtime encodes that reference into the payload — *"A Server Function marked with `'use server'` crosses as a reference"* — and invoking it is an HTTP request. Being unable to *import* the module tells you nothing about being unable to *call* the function. 🔴 **This is where the two directives stop looking like mirror images.** `'use client'` restricts a module graph and is enforced at compile time; `'use server'` does the opposite — it *publishes* a function, and the compiler has nothing to check because being reachable is the feature.
 
 ```ts
 'use server'

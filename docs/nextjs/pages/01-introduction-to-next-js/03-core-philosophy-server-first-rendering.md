@@ -9,6 +9,7 @@ description: "Server-first rendering as a default you opt out of: what the 'use 
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (page header `version: 16.3.4`, `lastUpdated` 2026-08-25) and the [16.3 release post](https://nextjs.org/blog/next-16-3).
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Three ideas are usually presented as Next.js's philosophy — server-first rendering, zero client JavaScript where possible, hybrid static/dynamic architectures — and they sound like slogans until you know the one mechanism that implements all three. That mechanism is the `'use client'` boundary, and almost everyone misunderstands it in the same way: they think it marks a file. It marks a boundary between two module graphs, and the difference decides how much JavaScript your users download. This page is about getting that one thing exactly right; [03b](03b-hybrid-static-dynamic-and-the-cost-model.md) covers the hybrid static/dynamic half.**
 
@@ -198,7 +199,7 @@ export default Carousel
 <Modal><Cart /></Modal>
 ```
 
-**★ Symptom: `Functions cannot be passed directly to Client Components`.** Cause: props are carried inside the RSC payload and must be serializable; a function has no serialized form. Fix: make it a Server Action with `'use server'`, which is a reference the runtime can encode — not a workaround but the designed mechanism.
+**★ Symptom: the render throws when a function is passed across the boundary.** The documented behaviour is blunt — *"Passing a function as a prop from a Server Component to a Client Component throws. An event handler like `onClick` cannot cross."* Cause: props are carried inside the RSC payload and must be serializable; a function has no serialized form. Fix: make it a Server Function with `'use server'` — *"A Server Function marked with `'use server'` crosses as a reference"* — which is not a workaround but the designed mechanism.
 
 **★ Symptom: an API call from the browser gets a 401 and the key "looks fine" in the code.** Cause: an unprefixed env var reached client code, and Next.js replaced it with **an empty string** rather than leaving it undefined. Nothing throws; an empty `authorization` header is sent. Fix: `import 'server-only'` at the top of every module that touches a secret, turning the mistake into a build error instead of a runtime mystery.
 

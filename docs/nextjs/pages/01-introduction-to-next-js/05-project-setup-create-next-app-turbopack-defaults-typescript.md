@@ -9,6 +9,7 @@ description: "create-next-app and every prompt it asks, Turbopack as the default
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [installation docs](https://nextjs.org/docs/app/getting-started/installation) (page header `version: 16.3.4`, `lastUpdated` 2026-07-21) and the [16.3 release post](https://nextjs.org/blog/next-16-3) (`publishedAt` August 3rd 2026).
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9, TypeScript >= 5.1.0. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Scaffolding is the part of a framework people skim, and it is where several of Next.js 16's behaviour changes are hiding. Two of them will cost you time if you learned this tooling on an earlier major: `next build` no longer runs your linter, so a CI pipeline that relied on the build to catch lint errors has silently stopped checking them, and the linter itself is now a choice between two tools rather than a given. This page is what the CLI actually does, prompt by prompt, and what each answer commits you to.**
 
@@ -120,7 +121,7 @@ The floor is **`v5.1.0`**. Next.js ships built-in support: rename a file to `.ts
 pnpm add -D typescript@^7
 ```
 
-⚠️ **`experimental.useTypeScriptCli` is not the switch that turns TS 7 on.** This is inherited from this book's earlier verification pass rather than re-derived here, and it is worth stating because the name invites the opposite reading: `next build` already runs your project-local `tsc`, so adopting TS 7 is installing it. The flag is an **opt-out**, and setting it to `false` makes the build exit on TS 7.
+⚠️ **`experimental.useTypeScriptCli` is not the switch that turns TS 7 on.** The name invites the opposite reading, and the reference contradicts it in three sentences: *"By default, `next build` runs the project-local `tsc` command instead of loading the TypeScript JavaScript compiler API. This supports TypeScript 6 and enables TypeScript 7 while its JavaScript API is unavailable."* · *"The CLI checker is enabled by default. To use the TypeScript JavaScript compiler API instead, set `experimental.useTypeScriptCli` to `false`."* · *"If you opt out while using TypeScript 7, `next build` exits because the TypeScript JavaScript compiler API is unavailable."* So adopting TS 7 is installing it; the flag is an **opt-out**, and setting it to `false` is what breaks the build.
 
 There is also a custom TypeScript plugin. In VS Code: command palette → *TypeScript: Select TypeScript Version* → *Use Workspace Version*.
 

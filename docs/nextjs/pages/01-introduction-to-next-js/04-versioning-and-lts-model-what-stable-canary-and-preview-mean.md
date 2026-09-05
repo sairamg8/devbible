@@ -9,6 +9,7 @@ description: "The release channels — canary, stable, and what 'preview' actual
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [Next.js Support Policy](https://nextjs.org/support-policy), the [16.3 release post](https://nextjs.org/blog/next-16-3) (`publishedAt` August 3rd 2026) and the [installation docs](https://nextjs.org/docs/app/getting-started/installation) (page header `version: 16.3.4`, `lastUpdated` 2026-07-21).
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **The question this page answers is the one you have to answer before you can adopt anything else in this book: given a feature you just read about, is it safe to put in production, and how long will the version you are on keep receiving security patches? Next.js answers that with two independent axes that people routinely collapse into one — a *release channel* (where a build comes from) and an *LTS phase* (how long a released line is supported). Getting them confused is how teams end up on a version that still installs fine and quietly stopped receiving patches months ago.**
 

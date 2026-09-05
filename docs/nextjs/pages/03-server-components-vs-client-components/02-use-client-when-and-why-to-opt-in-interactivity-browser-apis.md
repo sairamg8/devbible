@@ -10,8 +10,9 @@ description: "The decision procedure for opting into the client: the four docume
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (page header `version: 16.3.4`, `lastUpdated` 2026-08-25), via research banked for this track on 2026-09-04.
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
 > ⚠️ What the directive *does* to the module graph is established in [chapter 1 · 03](../01-introduction-to-next-js/03-core-philosophy-server-first-rendering.md). This page is the decision procedure for *when* to write it.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
-**The directive is one line and it is almost always added for the wrong reason. Someone hits `You're importing a component that needs useState`, adds `'use client'`, the error goes away, and the work quietly relocates to the browser along with everything that file imports. Nothing looks wrong — the page renders identically. This page is the test to apply before writing it, and the placement rule that limits the damage when the answer is genuinely yes.**
+**The directive is one line and it is almost always added for the wrong reason. Someone hits the compiler error about a hook that only works in a Client Component, adds `'use client'`, the error goes away, and the work quietly relocates to the browser along with everything that file imports. Nothing looks wrong — the page renders identically. This page is the test to apply before writing it, and the placement rule that limits the damage when the answer is genuinely yes.**
 
 ## The four reasons, and they are the whole list
 
@@ -34,10 +35,10 @@ When an error prompts you to add the directive, ask **which of the four this com
 
 If you cannot name one, the error is pointing at something else:
 
-| The error says | What is usually true | The real fix |
+| What failed | What is usually true | The real fix |
 |---|---|---|
-| `useState` is not supported in Server Components | A parent is trying to hold state that belongs in a leaf | Extract the interactive leaf; leave the parent on the server |
-| `window is not defined` | Browser code runs during render | Move it into an effect — or the component genuinely is client |
+| A hook that needs the client, used in a Server Component | A parent is trying to hold state that belongs in a leaf | Extract the interactive leaf; leave the parent on the server |
+| A browser global is undefined during render | Browser code runs during render | Move it into an effect — or the component genuinely is client |
 | A hook from a library fails | The **library** is client-only, not your component | Wrap the library import, not your page |
 | Context is not available | Context is unsupported in Server Components entirely | The provider is client; consumers of it are too — but not their children |
 

@@ -9,6 +9,7 @@ description: "The shifts to internalise before chapter 2: the React Compiler ver
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [16.3 release post](https://nextjs.org/blog/next-16-3) (`publishedAt` August 3rd 2026) and the [installation docs](https://nextjs.org/docs/app/getting-started/installation) (page header `version: 16.3.4`, `lastUpdated` 2026-07-21).
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**; **no benchmarks run** — every performance figure below is Vercel's, measured on their applications, and is quoted as evidence a feature is real rather than as a prediction for yours.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **This page is the set of changes that will trip you up in the next seventeen chapters if you learned React or Next.js more than a year ago. One of them is routinely written up incorrectly even in otherwise careful material — the React Compiler and its Rust port get treated as one feature, when they have different flags, different stability guarantees, and a performance claim that only holds under a condition most projects do not meet.**
 

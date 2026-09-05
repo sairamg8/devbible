@@ -9,6 +9,7 @@ description: "React Router v7 framework mode, Astro, TanStack Start and Remix �
 
 > Verified: 2026-09-04. Next.js claims for **16.3.4** against the [installation docs](https://nextjs.org/docs/app/getting-started/installation) and the [16.3 release post](https://nextjs.org/blog/next-16-3). React Router claims against the [official React Router v7 announcement](https://remix.run/blog/react-router-v7) (primary).
 > ⚠️ **Competitor version and status claims below are sourced to secondary reporting and are explicitly marked where a primary source could not be reached.** Documentation-verified; **no sandbox run**; **no benchmarks run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Framework comparisons age badly because they are usually written as feature tables, and features get copied between frameworks within a release or two. What does not get copied is the architectural centre — what each project decided to make easy at the cost of making something else hard. This page argues the comparison on those centres, so it stays useful after the version numbers on it are wrong. It also has to start with a naming problem, because "Remix" no longer identifies one thing.**
 

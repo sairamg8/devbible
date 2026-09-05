@@ -9,6 +9,7 @@ description: "The minimal App Router application: the two required files, why th
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [installation docs](https://nextjs.org/docs/app/getting-started/installation) (page header `version: 16.3.4`, `lastUpdated` 2026-07-21) and [Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) (`lastUpdated` 2026-08-25).
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **A Hello World is usually a formality. This one is worth reading slowly, because the smallest possible App Router application already demonstrates three things that surprise people later: a page that ships no JavaScript at all, a layout the framework will silently generate on your behalf if you omit it, and a first response that is HTML rather than an empty div waiting for a bundle. Getting the mental model right here saves a lot of confusion in chapters 2 through 7.**
 

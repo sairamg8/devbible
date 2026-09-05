@@ -9,6 +9,7 @@ description: "Why the Pages Router existed and what it structurally could not do
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [installation docs](https://nextjs.org/docs/app/getting-started/installation) (`version: 16.3.4`, `lastUpdated` 2026-07-21) and the [16.3 release post](https://nextjs.org/blog/next-16-3). Router-behaviour claims are cross-checked against this book's own version-history findings, recorded in the chapter 4 pages.
 > Target: **Next.js 16.3.4**, App Router, Node >= 20.9. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Most explanations of this migration present a table of renamed APIs, which makes it look like a matter of taste. It was not. The Pages Router had one structural limitation that could not be fixed without changing where data fetching lives, and everything the App Router does — nested layouts, streaming, Server Components, per-fetch caching — is downstream of fixing it. If you understand the limitation, you can predict most of the App Router's design without being told it.**
 
@@ -94,7 +95,7 @@ It is a statement about defaults and investment, not a deprecation notice. Three
 
 Conflicts to know about:
 
-- **A path cannot exist in both.** `app/about/page.tsx` and `pages/about.tsx` are a build-time conflict, not a silent precedence rule.
+- **Do not define the same path in both.** The migration guide states only that the directories coexist — *"The `app` directory is intentionally designed to work simultaneously with the `pages` directory to allow for incremental page-by-page migration"* — and **does not document a precedence rule for a path present in both**. Next.js reports an overlap rather than silently picking a winner, but because the resolution is unspecified in the docs, do not build on it: delete one side.
 - **`_app.jsx` and `_document.jsx` do not apply to `app/`.** Global styling and providers must be re-established in the root layout. This is the step most often missed, and the symptom — styles missing on new routes only — looks like a CSS problem.
 - **Route Handlers replace API routes**, with different caching semantics. `pages/api/*` handlers and `app/api/*/route.ts` are not interchangeable.
 
@@ -102,8 +103,8 @@ Conflicts to know about:
 
 Material written across the App Router's four majors is all still online and reads as current. Three findings from this book's own verification work, each of which silently changes behaviour:
 
-- **`request.ip` and `request.geo` were removed in v15.0.0** and now read `undefined`. A rate limiter keyed on them does not error — it collapses every caller into a single bucket, which fails open.
-- **Route Handlers are not cached by default**, changed in v15.0.0-RC. Guides still teach the old pitfall ("your handler only logs at build time"), which is now exactly backwards.
+- **`request.ip` and `request.geo` were removed in Next.js 15** — *"The `geo` and `ip` properties on `NextRequest` have been removed as these values are provided by your hosting provider"*, with a codemod to automate the migration. The docs state the removal, not the runtime symptom; reading a property that no longer exists yields `undefined` in JavaScript, so a rate limiter keyed on it collapses every caller into one bucket and fails open. TypeScript users get a compile error instead and never see this.
+- **`GET` Route Handlers are not cached by default**, changed in Next.js 15: *"`GET` functions in Route Handlers are no longer cached by default. To opt `GET` methods into caching, you can use a route config option such as `export const dynamic = 'force-static'` in your Route Handler file."* Guides still teach the old pitfall ("your handler only logs at build time"), which is now exactly backwards. Only `GET` was ever cached, so the inversion never applied to `POST` and friends.
 - **v16.0.0 removes `dynamic`, `dynamicParams`, `revalidate` and `fetchCache`** when Cache Components is enabled.
 
 The defence is structural rather than vigilance-based: prefer the docs bundled at `node_modules/next/dist/docs/`, which match your installed version by construction.
@@ -124,16 +125,16 @@ return <><Header user={user} />
 
 **★ Symptom: global styles and context providers vanish on migrated routes only.** Cause: `_app.jsx` and `_document.jsx` have no effect on `app/`. Routes still served by `pages/` look fine, which makes it read as a routing or CSS bug rather than a missing root layout. Fix: re-establish global imports and providers in `app/layout.tsx`, and check a migrated route specifically rather than the app's home page.
 
-**★ Symptom: a rate limiter lets everyone through after an upgrade, with no error in the logs.** Cause: `request.ip` and `request.geo` were removed in v15.0.0 and read `undefined`, so every request keys to the same bucket. It fails open and silently. Fix: read the client address from the forwarded headers your platform sets, and assert the value exists rather than trusting it.
+**★ Symptom: a rate limiter lets everyone through after an upgrade, with no error in the logs.** Cause: `request.ip` and `request.geo` were removed in Next.js 15, so in plain JavaScript every request keys to `undefined` — the same bucket. It fails open and silently. Fix: take the value from wherever your host provides it — the docs' own instruction is that these *"values are provided by your hosting provider"*, and on Vercel that is `ipAddress()` and `geolocation()` from `@vercel/functions`. Otherwise read the forwarded header your platform sets, and assert the value exists rather than trusting it.
 
 ```ts
 const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
 if (!ip) throw new Error('no client address — rate limiting cannot be trusted here')
 ```
 
-**★ Symptom: a guide's advice about Route Handler caching produces the opposite of what it promises.** Cause: Route Handlers were cached by default before v15.0.0-RC and are not now. The widely-repeated pitfall about a handler "only logging at build time" describes behaviour that no longer exists. Fix: check any caching claim against your installed version's bundled docs; this specific one inverted.
+**★ Symptom: a guide's advice about Route Handler caching produces the opposite of what it promises.** Cause: `GET` Route Handlers were cached by default before Next.js 15 and are not now. The widely-repeated pitfall about a handler "only logging at build time" describes behaviour that no longer exists. Fix: check any caching claim against your installed version's bundled docs; this specific one inverted.
 
-**★ Symptom: `app/about/page.tsx` is added and the build fails on a route that worked yesterday.** Cause: `pages/about.tsx` still exists, and a path present in both routers is a build-time conflict rather than a precedence rule. Fix: delete the Pages version in the same commit that adds the App version — the conflict is the framework refusing to guess, which is the desirable behaviour.
+**★ Symptom: `app/about/page.tsx` is added and the route that worked yesterday now fails or serves the wrong file.** Cause: `pages/about.tsx` still exists. The routers are documented as coexisting per path, but **which one wins for a path defined in both is not specified in the documentation**, so this is not a behaviour to reason about — it is a state to avoid. Fix: delete the Pages version in the same commit that adds the App version, and treat any overlap as a mistake rather than a configuration.
 
 **★ Symptom: pinning React fixes a bug on some routes and not others in one codebase.** Cause: the App Router uses bundled React canary releases; the Pages Router uses the React version from `package.json`. Mid-migration, one pin governs half the app. Fix: track the Next.js version for App Router behaviour, and stop expecting the two halves to answer version questions the same way.
 
@@ -156,7 +157,7 @@ It means three separable things, and only some of them force action. `create-nex
 React version resolution. The App Router uses React canary releases built-in, while the Pages Router uses the React version from `package.json`. So a single `react` pin governs one half of the application and not the other, and a React-level bug you fix by pinning in the Pages Router stays broken in the App Router. Beyond that: `_app`/`_document` have no effect on `app/`, so global styles and providers must be re-established in the root layout, and a path present in both routers is a build-time conflict rather than a precedence rule.
 
 **Why is so much App Router advice on the internet actively harmful rather than merely dated?**
-Because several changes inverted behaviour rather than adding to it, so old advice is not incomplete — it is backwards. Route Handlers were cached by default before v15.0.0-RC and are not now, which makes the popular "your handler only logs at build time" pitfall exactly wrong. `request.ip` and `request.geo` were removed in v15.0.0 and read `undefined`, so a rate limiter built on a 2024 tutorial fails open silently rather than erroring. And v16.0.0 removes several route segment config options under Cache Components. The structural defence is reading the docs bundled in your own `node_modules`, which match the installed version by construction.
+Because several changes inverted behaviour rather than adding to it, so old advice is not incomplete — it is backwards. `GET` Route Handlers were cached by default before Next.js 15 and are not now, which makes the popular "your handler only logs at build time" pitfall exactly wrong. `request.ip` and `request.geo` were removed in Next.js 15 because, in the docs' words, *"these values are provided by your hosting provider"* — so a rate limiter built on a 2024 tutorial reads `undefined` and fails open silently rather than erroring. And v16.0.0 removes several route segment config options under Cache Components. The structural defence is reading the docs bundled in your own `node_modules`, which match the installed version by construction.
 
 **How would you sequence an incremental migration?**
 The routers coexist, routed per path, so this is genuinely incremental. Move read-heavy and marketing routes first — server rendering pays immediately there and the risk is lowest. Re-establish global styles and providers in the root layout early, since that omission produces confusing symptoms on migrated routes only. Leave authenticated, interaction-heavy areas like a dashboard until the team is fluent, because that is where the `'use client'` boundary decisions are hardest. Convert `pages/api` handlers to Route Handlers deliberately rather than mechanically, since their caching semantics differ.
