@@ -47,7 +47,7 @@ dictionary EventSourceInit {
 };
 ```
 
-Read that as a list of what you are *not* given: no method, no body, no headers, no timeout, no reconnect callback, no way to observe the current backoff, no access to the response status. One URL and one boolean. **03g · `fetch` and `ReadableStream`** *(not written yet)* exists entirely because that dictionary has exactly one member.
+Read that as a list of what you are *not* given: no method, no body, no headers, no timeout, no reconnect callback, no way to observe the current backoff, no access to the response status. One URL and one boolean. [03g · `fetch` and `ReadableStream`](03g-fetch-and-readablestream-when-you-need-headers.md) exists entirely because that dictionary has exactly one member.
 
 The constructor's own steps confirm how little is configurable:
 
@@ -128,7 +128,7 @@ From §9.2.3. These steps run in parallel with the page, not as a task:
 6. Set `Last-Event-ID` in the request's header list, if there is one — [03fa](03fa-designing-a-resumable-sse-stream.md).
 7. Fetch the request again.
 
-Step 4 is the one to internalise: **backoff is optional and implementation-defined.** The specification permits a user agent to retry at exactly your `retry:` interval forever. You cannot assume the browser will soften a reconnect storm, so the server has to survive one — see **03h · What silently breaks SSE in production** *(not written yet)* for what a synchronised reconnect does to a function-per-connection deployment.
+Step 4 is the one to internalise: **backoff is optional and implementation-defined.** The specification permits a user agent to retry at exactly your `retry:` interval forever. You cannot assume the browser will soften a reconnect storm, so the server has to survive one — see [03h · What silently breaks SSE in production](03h-what-silently-breaks-sse-in-production.md) for what a synchronised reconnect does to a function-per-connection deployment.
 
 The initial delay is not yours either:
 
@@ -225,7 +225,7 @@ Drop your reference without calling `close()` and the connection stays open, the
 | To abort mid-request | ✅ | `close()` |
 | To run inside a Worker | ✅ | `[Exposed=(Window,Worker)]` — the spec's own answer to the per-domain connection limit |
 
-The header row is the one that decides architectures. If your API is a bearer-token API, `EventSource` cannot call it — the token has to go in the URL, where it lands in access logs, referrers and browser history, or in a cookie. When neither is acceptable you drop to `fetch` and write the client yourself, headers, ticket-minting and all: **03g · `fetch` and `ReadableStream`** *(not written yet)*. The other structural ceiling — how many of these connections a browser will hold open at once, and what a synchronised reconnect after a deploy does to your capacity — is production behaviour rather than API surface, and lives in **03h · What silently breaks SSE in production** *(not written yet)*.
+The header row is the one that decides architectures. If your API is a bearer-token API, `EventSource` cannot call it — the token has to go in the URL, where it lands in access logs, referrers and browser history, or in a cookie. When neither is acceptable you drop to `fetch` and write the client yourself, headers, ticket-minting and all: [03g · `fetch` and `ReadableStream`](03g-fetch-and-readablestream-when-you-need-headers.md). The other structural ceiling — how many of these connections a browser will hold open at once, and what a synchronised reconnect after a deploy does to your capacity — is production behaviour rather than API surface, and lives in [03h · What silently breaks SSE in production](03h-what-silently-breaks-sse-in-production.md).
 
 ## Gotchas
 
