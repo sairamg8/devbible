@@ -20,7 +20,7 @@ PATCH /api/cards/[cardId]     partial update   — send only what changed
 PUT   /api/cards/[cardId]     full replace     — send the whole resource
 ```
 
-Both land on the same row and both go through **the Data Access Layer, topic 04** *(not written yet)*, which owns the ownership predicate — caller must be a member of the team that owns the board that owns the card. Nothing on this page re-checks authorization, because there is exactly one place it lives.
+Both land on the same row and both go through [the Data Access Layer](04-the-data-access-layer.md), which owns [the ownership predicate](04c-the-ownership-predicate.md) — caller must be a member of the team that owns the board that owns the card. Nothing on this page re-checks authorization, because there is exactly one place it lives.
 
 ## What PUT actually promises
 
@@ -170,7 +170,7 @@ await fetch(`/api/cards/${id}`, { method: 'PATCH', body: JSON.stringify({ positi
 
 **★ Symptom: PATCH succeeds with a body the API never intended to accept, like `{"id": "..."}` or `{"createdAt": "..."}`.** Cause: the schema was `z.object`, which ignores unrecognised keys, and the handler spread the parsed object into the `SET` clause. Fix: `z.strictObject` for every request body, so an unknown key is a 400 rather than a silent no-op — and never spread client input into a `SET` clause; map it field by field, which [07b](07b-absent-versus-null.md) does.
 
-**★ Symptom: the API accepts a PATCH that sets `boardId` to a board the caller cannot see.** Cause: the field was validated as a UUID and never authorized. Validation says *this is shaped like a board id*; it does not say *you may put a card there*. Fix: a move across boards is a second authorization — the DAL must check membership on **both** the source and the destination board before the write, and that check lives in **the Data Access Layer, topic 04** *(not written yet)*, not in the handler.
+**★ Symptom: the API accepts a PATCH that sets `boardId` to a board the caller cannot see.** Cause: the field was validated as a UUID and never authorized. Validation says *this is shaped like a board id*; it does not say *you may put a card there*. Fix: a move across boards is a second authorization — the DAL must check membership on **both** the source and the destination board before the write, and that check lives in [the DAL's ownership predicate](04c-the-ownership-predicate.md), not in the handler — a check written in a handler is exactly the placement [04ca](04ca-where-the-check-must-not-live.md) rules out.
 
 **★ Symptom: PATCH returns 200 and the response body shows the old values.** Cause: the handler wrote and then read, and the read went through a cache or a read replica that had not caught up. Fix: return the row the write itself produced. In `drizzle-orm` **0.45.2** the update builder has a `returning` clause for exactly this, and using it means the response cannot disagree with what was committed:
 
@@ -205,4 +205,6 @@ Because it drops unrecognised keys silently. A client that misspells `stauts` ge
 **★ If you could ship only one of PUT and PATCH, which and why?**
 PATCH, for a resource a UI edits field by field — which describes almost every CRUD API. A UI that must send the whole resource has to have read the whole resource recently, and every field it did not touch becomes a chance to overwrite someone else's edit. PUT earns its place when the client genuinely owns the record end to end — an importer, a sync agent, a system that regenerates the resource from its own source of truth — and there the retry safety of an idempotent method is worth real money.
 
-{/* FOOTER */}
+---
+
+← [06g · Conditional requests](06g-conditional-requests-and-etag.md) · [Chapter 16 overview](01-explanation.md) · Next → [07b · Absent vs null](07b-absent-versus-null.md)

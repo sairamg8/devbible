@@ -163,7 +163,7 @@ The 409 body carries the **current** representation on purpose. RFC 9110 §15.5.
 
 > *"The 409 (Conflict) status code indicates that the request could not be completed due to a conflict with the current state of the target resource. This code is used in situations where the user might be able to resolve the conflict and resubmit the request. The server SHOULD generate content that includes enough information for a user to recognize the source of the conflict."*
 
-A 409 with an empty body forces the client to re-`GET`, and a client that must re-`GET` will usually just re-send blindly, which reintroduces the bug you fixed. Send the current row and the client can diff it. The single response envelope this fits into is **the single error envelope, topic 10** *(not written yet)*.
+A 409 with an empty body forces the client to re-`GET`, and a client that must re-`GET` will usually just re-send blindly, which reintroduces the bug you fixed. Send the current row and the client can diff it. The single response envelope this fits into is [10 · errors and one response shape](10-errors-and-one-response-shape.md).
 
 ## What the client is supposed to do with a 409
 
@@ -220,7 +220,7 @@ UPDATE cards SET search_vector = to_tsvector('english', title || ' ' || coalesce
 
 **★ Symptom: a conflict is reported when the client's patch would have changed nothing.** Cause: the version moved because of some other field, and the check is per-row rather than per-field. Fix: this is the accepted cost of a single row version, and the mitigation is to shrink what a write touches rather than to weaken the check. Per-field versioning is possible and is almost never worth the complexity; if two fields genuinely have independent lifecycles, that is a signal they belong in different rows.
 
-**★ Symptom: the version check works through the API and is bypassed by a Server Action.** Cause: the action called `db.update(...)` directly instead of the DAL. Fix: there is one write path; the action calls `updateCardVersioned` like everything else. This is the argument for **the Data Access Layer, topic 04** *(not written yet)* — the guarantee is only as strong as the number of ways around it.
+**★ Symptom: the version check works through the API and is bypassed by a Server Action.** Cause: the action called `db.update(...)` directly instead of the DAL. Fix: there is one write path; the action calls `updateCardVersioned` like everything else. This is the argument for [the Data Access Layer](04-the-data-access-layer.md), and for [one function per use case](04e-function-per-use-case.md) rather than a generic update — the guarantee is only as strong as the number of ways around it.
 
 ## Interview questions
 

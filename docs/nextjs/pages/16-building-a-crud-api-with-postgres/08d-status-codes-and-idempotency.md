@@ -191,7 +191,7 @@ POST /api/cards/[cardId]/archive     { "reason": "duplicate" }
 
 **★ Symptom: the delete endpoint returns 204 and the UI still shows the card until a refresh.** Cause: 204 has no body, so a client doing optimistic UI has nothing to reconcile against, and the cache was not invalidated. Fix: invalidate the tag server-side as part of the delete, and — if the client needs the row — use 200 with the deleted representation. That is exactly the case RFC 9110 reserves 200 for.
 
-**★ Symptom: DELETE succeeds for a caller who should not be able to see the card, and the 204 confirms the card existed.** Cause: authorization was checked on the delete but the response distinguishes "deleted" from "no such card". Fix: the ownership predicate belongs in the DAL's `WHERE` clause so an unauthorised delete affects zero rows and is indistinguishable from a missing one — **the Data Access Layer, topic 04** *(not written yet)*.
+**★ Symptom: DELETE succeeds for a caller who should not be able to see the card, and the 204 confirms the card existed.** Cause: authorization was checked on the delete but the response distinguishes "deleted" from "no such card". Fix: the ownership predicate belongs in the DAL's `WHERE` clause so an unauthorised delete affects zero rows and is indistinguishable from a missing one — [04c · the ownership predicate](04c-the-ownership-predicate.md).
 
 **★ Symptom: DELETE returns 204 and a subsequent GET still returns the card.** Cause: the read path does not carry the soft-delete predicate, or a cache is serving the old representation. Fix: this is the one thing RFC 9110 genuinely requires of a delete — the resource must stop being available. Check the read predicate first, the cache second.
 

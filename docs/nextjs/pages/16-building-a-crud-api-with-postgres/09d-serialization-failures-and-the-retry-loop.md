@@ -121,7 +121,7 @@ Five decisions in that function, each of which is wrong in at least one codebase
 
 **1 · The loop wraps `db.transaction`, not the body.** A retry must start a new transaction; re-running statements inside the aborted one is impossible.
 
-**2 · Only class-40 codes are retried.** Everything else is rethrown untouched, so a unique-violation still reaches **the single error envelope, topic 10** *(not written yet)* as itself and not as `TooManyRetries`.
+**2 · Only class-40 codes are retried.** Everything else is rethrown untouched, so a unique-violation still reaches [10 · errors and one response shape](10-errors-and-one-response-shape.md) as itself and not as `TooManyRetries`.
 
 **3 · Attempts are bounded.** An unbounded retry under sustained contention is a way to convert a hot row into an outage: every retrying request holds a pooled connection, so the loop competes for the resource it needs.
 

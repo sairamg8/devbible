@@ -69,7 +69,7 @@ export async function listBoardCards(boardId: string) {
 }
 ```
 
-Strong *inside* the module and worth nothing outside it. It relies on nobody calling `db.select().from(cards)` directly, which is exactly the guarantee **the Data Access Layer, topic 04** *(not written yet)* exists to make. It does nothing for `psql`, migrations, BI tools, or a colleague's one-off script.
+Strong *inside* the module and worth nothing outside it. It relies on nobody calling `db.select().from(cards)` directly, which is exactly the guarantee [the Data Access Layer](04-the-data-access-layer.md) exists to make. It does nothing for `psql`, migrations, BI tools, or a colleague's one-off script.
 
 ### 3 · A view, so the live set has its own name
 

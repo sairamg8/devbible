@@ -192,4 +192,6 @@ Because it is subject to exactly the same pool arithmetic as a request handler: 
 **★ How does this connect back to the rest of the topic?**
 It is the payoff for every restriction the earlier pages imposed. [09b](09b-the-tx-rule.md) says every query inside must use `tx` — the job insert is the one where a stray `db` silently destroys the guarantee rather than merely losing a row. [09d](09d-serialization-failures-and-the-retry-loop.md) says nothing with an external effect may go inside a retried transaction — an outbox row is not an external effect, so it is the shape that survives a retry. And [09f](09f-transaction-duration-as-pool-occupancy.md) says no network call inside a transaction — the outbox is exactly how you honour that while still guaranteeing the call happens.
 
-{/* FOOTER */}
+---
+
+← [09f · Duration and pool occupancy](09f-transaction-duration-as-pool-occupancy.md) · [Chapter 16 overview](01-explanation.md) · Next → [10 · Errors and one response shape](10-errors-and-one-response-shape.md)

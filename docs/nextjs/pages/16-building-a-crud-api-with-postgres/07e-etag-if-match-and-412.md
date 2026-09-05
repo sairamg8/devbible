@@ -2,7 +2,7 @@
 title: "ETag and If-Match are the same optimistic check expressed in headers instead of in your request body, and the reason to prefer them is that 412 answers a different question from 409 — one is about a precondition the client sent, the other about a conflict the client never mentioned"
 sidebar_label: "07e · ETag, If-Match, 412"
 sidebar_position: 54
-description: "Generating a strong entity tag from the version column, the conditional PATCH and PUT, why RFC 9110 permits a 2xx on a repeated change, the 409-vs-412 rule stated by RFC 5789, and what an intermediary does to your tags."
+description: "Parsing If-Match back to a version, the conditional PATCH and PUT, why RFC 9110 permits a 2xx on a repeated change, the 409-vs-412 rule stated by RFC 5789, and what an intermediary does to your tags."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -19,38 +19,36 @@ RFC 9110 §8.8.3:
 
 > *"The 'ETag' field in a response provides the current entity tag for the selected representation, as determined at the conclusion of handling the request. An entity tag is an opaque validator for differentiating between multiple representations of the same resource … An entity tag consists of an opaque quoted string, possibly prefixed by a weakness indicator."*
 
-*Opaque* is the operative word: the client must not parse it, and you may therefore derive it from anything that changes when the representation changes. The version column already is exactly that, so the tag is one line:
+*Opaque* is the operative word: the client must not parse it, and you may therefore derive it from anything that changes when the representation changes. The version column already is exactly that — and **the tag is minted by `cardETag`, defined once in [06g · Conditional requests](06g-conditional-requests-and-etag.md)** as `"${card.id}.${card.version}"`, on the read side because that is where it is first emitted. This page does not restate it: a tag the writer computes differently from the one the reader served is a precondition no client can ever satisfy, and one definition is the only way to guarantee they agree.
+
+What the write side adds to that same module is the inverse function — turning an `If-Match` value back into the version number the `WHERE` clause needs:
 
 ```ts
-// lib/http/etag.ts
-import type { cards } from '@/db/schema'
-
-/** Strong validator: changes whenever the representation changes. */
-export function cardETag(card: { id: string; version: number }): string {
-  return `"c-${card.id}-${card.version}"`   // the DQUOTEs are part of the grammar
-}
-
+// lib/http/etag.ts — alongside cardETag, which 06g defines
 /** Parse an If-Match value back to a version. Returns null for `*` or garbage. */
 export function versionFromIfMatch(header: string | null, cardId: string): number | null {
   if (!header) return null
-  const m = header.trim().match(/^"c-([0-9a-f-]{36})-(\d+)"$/)
+  const m = header.trim().match(/^"([0-9a-f-]{36})\.(\d+)"$/)
   if (!m || m[1] !== cardId) return null
   return Number(m[2])
 }
 ```
 
-Three grammar details that trip people:
+🔴 **This parser and `cardETag` are one format in two directions, so they belong in one file.** Put the parser in the handler and the next change to the tag format breaks conditional writes with no compile error to show for it.
 
-- **The double quotes are part of the value.** `ETag: abc` is malformed; `ETag: "abc"` is a strong tag; `ETag: W/"abc"` is weak.
-- **Do not put a backslash in a tag.** RFC 9110 notes that under the old `quoted-string` definition *"some recipients might perform backslash unescaping. Servers therefore ought to avoid backslash characters in entity tags."*
+Two grammar details that decide whether the write side works at all:
+
+- **The double quotes are part of the value, and a tag must contain no backslash** — the `opaque-tag = DQUOTE *etagc DQUOTE` grammar and RFC 9110's backslash warning are quoted in [06g](06g-conditional-requests-and-etag.md). A tag emitted without the quotes is not a weaker tag, it is a syntactically invalid one, and nothing the client sends back can match it.
 - **`If-Match` uses strong comparison, always.** RFC 9110 §13.1.1: *"An origin server MUST use the strong comparison function when comparing entity tags for If-Match … since the client intends this precondition to prevent the method from being applied if there have been any changes to the representation data."* A `W/` tag can never satisfy `If-Match`, so a weak tag on the read makes conditional writes impossible.
 
 🔴 **If you serve a weak `ETag` (because you generated it from a hash of a JSON body that includes a timestamp, say), conditional updates silently stop working** — the precondition can never be satisfied and every write returns 412. Derive the tag from the version, not from the serialised body.
 
 ## Emitting it on the read
 
+The read side in full — `If-None-Match`, 304, and what a revalidation costs — is [06g](06g-conditional-requests-and-etag.md)'s subject. Repeated here is only the part the write side depends on, because a client cannot condition a write on a tag it was never handed:
+
 ```ts
-// app/api/cards/[cardId]/route.ts (GET)
+// app/api/cards/[cardId]/route.ts (GET) — the read side of 06g, in brief
 import { readCardForCaller } from '@/lib/dal/cards'
 import { cardETag } from '@/lib/http/etag'
 
@@ -69,7 +67,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ cardId: string
 }
 ```
 
-`private, no-cache` matters: an entity tag is only useful if the client has a *current* one, and a shared cache serving a stale representation hands the client a stale tag, which produces a 412 the user cannot explain. Caching a collection and invalidating it is topic 06's subject; this is only the single-resource case.
+`private, no-cache` matters: an entity tag is only useful if the client has a *current* one, and a shared cache serving a stale representation hands the client a stale tag, which produces a 412 the user cannot explain. Caching a collection and invalidating it is [06e](06e-caching-a-collection.md)'s subject; this is only the single-resource case.
 
 ## The conditional write
 
@@ -151,10 +149,10 @@ Which resolves cleanly onto the two encodings:
 
 | The client sent | The check failed because | Status | Because |
 |---|---|---|---|
-| `If-Match: "c-…-7"` | current version is 8 | **412** | A condition the client stated evaluated false — RFC 9110 §15.5.13: *"one or more conditions given in the request header fields evaluated to false when tested on the server"* |
+| `If-Match: "…-7"` | current version is 8 | **412** | A condition the client stated evaluated false — RFC 9110 §15.5.13: *"one or more conditions given in the request header fields evaluated to false when tested on the server"* |
 | `{"version": 7}` in the body | current version is 8 | **409** | There was no HTTP precondition; the server detected a conflict with current state |
 | nothing conditional | the server refuses on other grounds (a card that cannot move to a done board, say) | **409** | *"a conflict with the current state of the target resource"* |
-| `If-Match: "c-…-7"` | the card does not exist | **404** | There is no representation to condition on |
+| `If-Match: "…-7"` | the card does not exist | **404** | There is no representation to condition on |
 
 **Why the distinction is not pedantry.** A generic HTTP client, an SDK generator or a caching layer that sees 412 knows what happened: *my validator is stale, re-fetch and re-evaluate.* Seeing 409, it knows only that something about the request conflicted with state — which might be a version, a business rule, or a duplicate key from topic 05. The two failures lead to different client code, so conflating them means the client must parse your error body to recover, which is exactly what status codes exist to avoid.
 
@@ -199,7 +197,7 @@ Both mechanisms are the same check. Choose by client.
 
 ## Gotchas
 
-**★ Symptom: every conditional write returns 412, even the first one.** Cause: the `ETag` served on the read is weak (`W/"…"`), and RFC 9110 requires strong comparison for `If-Match`, so no weak tag can ever satisfy it. Fix: emit a strong tag derived from the version — `"c-${id}-${version}"` — and never generate it by hashing a serialised body that contains a timestamp or a field whose order is not stable.
+**★ Symptom: every conditional write returns 412, even the first one.** Cause: the `ETag` served on the read is weak (`W/"…"`), and RFC 9110 requires strong comparison for `If-Match`, so no weak tag can ever satisfy it. Fix: emit a strong tag derived from the version — `cardETag` in [06g](06g-conditional-requests-and-etag.md) does exactly that — and never generate it by hashing a serialised body that contains a timestamp or a field whose order is not stable.
 
 **★ Symptom: `If-Match` never arrives at the handler.** Cause: an intermediary stripped it, or the client library did not forward it on a redirect, or a CORS preflight did not allow it. Fix: for a browser client on another origin, `If-Match` is not a CORS-safelisted request header, so it must be permitted explicitly:
 

@@ -157,7 +157,7 @@ export async function POST(req: Request) {
 
 **★ Symptom: an unrecognised SQLSTATE is guessed at and mapped to a plausible status.** Cause: the mapping has a permissive fallthrough that tries to be helpful. Fix: fall through to `internal`. A wrong-but-specific status is worse than a generic one, because clients build retry logic on it — a `409` for something no retry can fix loops forever.
 
-**★ Symptom: the translation is correct in the DAL and a Route Handler still returns a raw driver error.** Cause: a handler bypassed the DAL and used the driver directly, usually for something "quick". Fix: this is the failure **the Data Access Layer, topic 04** *(not written yet)* exists to prevent, and the enforcement is the same — the driver is imported in exactly one directory, and a lint rule or a review convention says so.
+**★ Symptom: the translation is correct in the DAL and a Route Handler still returns a raw driver error.** Cause: a handler bypassed the DAL and used the driver directly, usually for something "quick". Fix: this is the failure [the Data Access Layer](04-the-data-access-layer.md) exists to prevent, and the enforcement is the same — the driver is imported in exactly one directory, and a lint rule or a review convention says so.
 
 **★ Symptom: development shows helpful database errors and production shows nothing useful in the logs either.** Cause: the helpful behaviour was the framework's dev overlay, not your code, so removing the leak removed the only diagnosis anyone had. Fix: the correlation id plus the logged `pgCode` and `constraint` are the replacement, and they need to exist *before* you close the leak — otherwise closing it feels like a regression and gets reverted.
 
@@ -192,4 +192,4 @@ Because the client posted to a board it named, and the two reasons that board is
 
 ---
 
-← [10 · Errors and one response shape](10-errors-and-one-response-shape.md) · Next → **11 · Ownership on the API surface** *(not written yet)*
+← [10 · Errors and one response shape](10-errors-and-one-response-shape.md) · [Chapter 16 overview](01-explanation.md) · Next → [11 · Ownership on the API surface](11-ownership-on-the-api-surface.md)

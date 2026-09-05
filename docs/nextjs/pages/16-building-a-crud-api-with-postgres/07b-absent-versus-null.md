@@ -143,7 +143,7 @@ Three details that are load-bearing:
 
 1. **`isNull(cards.deletedAt)`** — a soft-deleted card must not be patchable back into existence by accident. That predicate is [08](08-delete.md)'s, and every write repeats it.
 2. **`.returning()`** — in `drizzle-orm` **0.45.2** the update builder's result type is the driver's raw query result *unless* a `returning` clause is present, in which case it is an array of rows. Verified against the published typings for 0.45.2: `PgUpdateBase` extends `QueryPromise<TReturning extends undefined ? PgQueryResultKind<TQueryResult, never> : TReturning[]>`. Taking `[row]` therefore also gives you the affected-row count for free — `undefined` means nothing matched.
-3. **No ownership check here** — it belongs in **the Data Access Layer, topic 04** *(not written yet)*, applied to every entry point, and `callerId` is threaded through for it.
+3. **No ownership check here** — it belongs in [the DAL's ownership predicate](04c-the-ownership-predicate.md), applied to every entry point, and `callerId` is threaded through for it.
 
 ## The `boardId` case, which is not a patch at all
 

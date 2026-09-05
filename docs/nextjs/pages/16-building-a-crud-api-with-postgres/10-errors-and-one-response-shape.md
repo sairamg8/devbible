@@ -17,7 +17,7 @@ description: "Why a CRUD API in the App Router has two renderings of every failu
 
 🔴 **The service layer describes *what went wrong*. The entry point decides *how to say it*.**
 
-Everything else on this page is a consequence of that sentence. It is the same argument **the Data Access Layer, topic 04** *(not written yet)* makes about authorization — one place, so it cannot be forgotten — applied to failure instead of to access.
+Everything else on this page is a consequence of that sentence. It is the same argument [the Data Access Layer](04-the-data-access-layer.md) makes about authorization — one place, so it cannot be forgotten, which is [04c · the ownership predicate](04c-the-ownership-predicate.md) — applied to failure instead of to access.
 
 ```ts
 // lib/errors.ts — the vocabulary, and it mentions neither HTTP nor React
@@ -125,7 +125,7 @@ export function toActionResult<T>(e: unknown): ActionResult<T> {
 }
 ```
 
-⚠️ **`422` for validation is a choice, not a rule.** `400` is equally defensible and widely used; what is not defensible is using both in one API. Pick one, write it in the contract from **the resource contract, topic 01** *(not written yet)*, and let the exhaustive `Record` above enforce it.
+⚠️ **`422` for validation is a choice, not a rule.** `400` is equally defensible and widely used; what is not defensible is using both in one API. Pick one, write it into [01b · the six routes and the codes they commit to](01b-the-six-routes-and-the-codes-they-commit-to.md), and let the exhaustive `Record` above enforce it.
 
 🔴 **`409` and `412` are not interchangeable, and this is the pair that gets confused.** `412` means a precondition the **client sent** did not hold — it sent `If-Match` and the ETag had moved. `409` means the write conflicts with current state and the client never conditioned on anything. Topic 07 owns the mechanism; the taxonomy above owns keeping them distinct, and it can only do that because they are two different `FailureKind`s rather than one `conflict` with a comment.
 
@@ -203,4 +203,6 @@ At the Data Access Layer boundary — the DAL catches it, maps the `SQLSTATE` to
 - [ch7 · expected errors are return values](../07-error-handling-loading-states-and-resilience/01b-expected-errors-are-return-values.md) — why an Action returns rather than throws
 - [ch15 · thin entry points over one rule](../15-databases-apis-and-full-stack-patterns/02n-thin-entry-points-over-one-rule.md) — the same argument at the chapter-15 scale
 
-{/* FOOTER */}
+---
+
+← [09g · The one genuine superpower](09g-the-one-genuine-superpower.md) · [Chapter 16 overview](01-explanation.md) · Next → [10b · Never leak a driver error](10b-never-leak-a-driver-error.md)

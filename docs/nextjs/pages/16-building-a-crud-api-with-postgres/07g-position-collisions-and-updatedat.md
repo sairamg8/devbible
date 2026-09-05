@@ -2,7 +2,7 @@
 title: "Two columns on the cards table are updated by mechanisms rather than by clients — position, which two people can legally set to the same value, and updatedAt, which must be the server's clock or it is worthless as an audit field"
 sidebar_label: "07g · position and updatedAt"
 sidebar_position: 56
-description: "Why a float position is a collision-tolerant design rather than a hack, what precision actually runs out and what to do when it does, why reordering is a move not a patch, and the three ways to maintain updatedAt with the trigger written out."
+description: "Why a tie in position is not corruption and a unique constraint on it is, why the move path is what exhausts float precision and how renormalisation recovers, why reordering is a move not a patch, and the three ways to maintain updatedAt with the trigger written out."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -13,26 +13,11 @@ description: "Why a float position is a collision-tolerant design rather than a 
 
 **`position` and `updatedAt` sit in the same table as `title` and `status` and are not the same kind of column. `position` is written by clients but its *value* is computed from other rows, which makes every reorder a read-modify-write and therefore a lost-update candidate in the sense of [07c](07c-the-lost-update.md) — except that here a collision is often harmless and forcing uniqueness costs more than it saves. `updatedAt` is written by nobody: a client-supplied value is unverifiable, a client's clock is wrong, and an `updated_at` you cannot trust is worse than no column at all because people build sync logic on it. This page settles both.**
 
-## Why `position` is `double precision`
+## The scheme belongs to 05ea; this page is what a *move* does to it
 
-The schema this chapter shares uses:
+`position` is `double precision`, appended cards are seeded `max(position) + 1024`, and a card dropped between two neighbours takes their midpoint. 🔴 **That scheme is defined once, on the create side, in [05ea · the `position` value](05ea-the-position-value-and-concurrent-creates.md)** — the spacing constant, the `between` midpoint, why an integer rank is the wrong shape, the binary64 bound, the renormalisation statement, and the three remedies for two concurrent creates computing the same maximum. None of it is re-derived here, because two statements of one scheme drift.
 
-```ts
-position: doublePrecision('position').notNull(),
-```
-
-The alternative — a contiguous integer rank — makes every insert an `UPDATE` of every card after it. Moving one card in a 200-card column rewrites up to 199 rows, which is 199 rows to lock, 199 rows to version, and 199 rows of WAL. A float lets you insert between any two neighbours by averaging them, touching exactly one row.
-
-**Seed with wide gaps and never with 1, 2, 3.** New cards go at `max(position) + 1024`; an insertion between `a` and `b` takes `(a + b) / 2`.
-
-```sql
--- append to the end of a board
-INSERT INTO cards (board_id, title, position)
-SELECT $1, $2, coalesce(max(position), 0) + 1024 FROM cards
- WHERE board_id = $1 AND deleted_at IS NULL;
-```
-
-⚠️ **That `INSERT … SELECT max(...)` is itself a read-modify-write and two concurrent appends can compute the same maximum.** Under Read Committed each statement sees a snapshot from its own start, so neither sees the other's uncommitted insert. Both land at the same position. Whether that matters is the next section.
+What that page hands to this one is a single fact with consequences for every update: **`position` is neither unique nor dense.** 05ea's collision is a create racing a create — two `SELECT max(...)` statements reading the same snapshot under Read Committed. The rest of the problem is on the write path, and it is this page: what a tie *means* once it exists, what happens when two people drag cards into the same gap, why a reorder must not be expressed as a patch at all, and what every one of those writes owes `updatedAt`.
 
 ## A position collision is usually not a bug
 
@@ -47,7 +32,9 @@ await db.select().from(cards)
 
 `(position, createdAt, id)` is a total order because `id` is unique. Two clients see the same sequence, a refresh does not shuffle the list, and pagination does not skip or repeat a row. **Without the tiebreaker, ties make the order non-deterministic across queries, and that is the actual bug people diagnose as "the board jumps around".**
 
-🔴 **Do not put a unique constraint on `(board_id, position)`.** It converts a harmless tie into a failed request, makes every reorder a potential 409, and forces the shift-everything-after-it algorithm the float was chosen to avoid. If you genuinely need a canonical dense order — for an export, or a numbered display — compute it at read time and leave the stored value alone:
+🔴 **Do not put a unique constraint on `(board_id, position)` if the board supports drag-and-drop.** It converts a harmless tie into a failed request, makes every reorder a potential 409, and forces the shift-everything-after-it algorithm the float was chosen to avoid. ⚠️ [05ea](05ea-the-position-value-and-concurrent-creates.md) offers that same partial unique index as its first create-side remedy, and names this as its cost — the index turns the silent create race into a `23505` you can retry, at the price of making transient ties illegal forever. The two pages are not in disagreement about the mechanism; they are weighing it for different write paths, and a board whose primary interaction is dragging cards is the case where the price is too high. Decide once, for the whole table.
+
+If you genuinely need a canonical dense order — for an export, or a numbered display — compute it at read time and leave the stored value alone:
 
 ```sql
 SELECT id, title,
@@ -56,16 +43,11 @@ SELECT id, title,
  WHERE board_id = $1 AND deleted_at IS NULL;
 ```
 
-## When float precision actually runs out
+## Precision runs out on the move path, not the create path
 
-Halving a gap is exponential, and the manual states the budget:
+[05ea](05ea-the-position-value-and-concurrent-creates.md) states the budget from the type — binary64's 53-bit significand gives roughly fifty successive midpoints in one gap before `(a + b) / 2` returns an endpoint, which is arithmetic on the significand width and not a measurement. It is not restated here.
 
-> *"The `double precision` type has a range of around 1E-307 to 1E+308 with a precision of at least 15 digits."*
-> — [PostgreSQL 18 · 8.1.3](https://www.postgresql.org/docs/18/datatype-numeric.html)
-
-Fifteen significant digits is a lot of halvings — the exact count depends on the starting gap and the magnitude of the values, and I have not measured it — but it is finite, and the failure at the end is specific: `(a + b) / 2` returns `a` or `b`, and the new card lands *on* a neighbour instead of between it. The manual also warns, in the same section, that *"comparing two floating-point values for equality might not always work as expected"*, which is why the exhaustion test below is a gap threshold rather than `a === b`.
-
-**This only happens under adversarial repetition** — dragging a card into the same slot over and over — and it is not a reason to abandon the design. It is a reason to detect it and renormalise:
+What is this page's business is *who spends them*. An append consumes no midpoint at all; only a card dropped **between** two neighbours does, and every drag into an existing gap spends exactly one. So on a board a team reorders all day, exhaustion arrives through the update path or it does not arrive at all — which is why the check belongs inside the function that computes a move, not in a scheduled job. The manual also warns, in the same numeric-types section 05ea quotes, that *"comparing two floating-point values for equality might not always work as expected"*, which is why the test below is a gap threshold rather than `a === b`:
 
 ```ts
 // lib/dal/positions.ts
@@ -97,7 +79,7 @@ export async function renormalize(tx: Tx, boardId: string) {
 }
 ```
 
-Two decisions in there worth naming. `renormalize` bumps `version` on every row it touches, so any client holding an open editor gets a 409 rather than writing a position computed against the old scale — the alternative is a silent reordering. And it runs inside the caller's transaction, so a reader either sees the whole old scale or the whole new one.
+`renormalize` is [05ea](05ea-the-position-value-and-concurrent-creates.md)'s `row_number()` renumbering statement with two additions the update path needs, and both are worth naming. It bumps `version` on every row it touches, so any client holding an open editor gets a 409 rather than writing a position computed against the old scale — the alternative is a silent reordering. And it runs inside the caller's transaction, so a reader either sees the whole old scale or the whole new one.
 
 ⚠️ **`renormalize` rewrites every card on a board.** On a board with thousands of cards that is a long transaction holding many row locks, which is [09f](09f-transaction-duration-as-pool-occupancy.md)'s cost. It is acceptable because it is rare; it stops being acceptable if a bug makes it frequent, so count it.
 
@@ -183,11 +165,11 @@ CREATE TRIGGER cards_moddatetime
 
 **★ Symptom: dragging a card into a specific gap sometimes drops it in a different place.** Cause: the client sent a computed `position` number derived from the list it had rendered, and the list changed. Fix: send the intent instead of the coordinate — `afterCardId` and `beforeCardId` — and let the server compute the number from the rows as they are now.
 
-**★ Symptom: after many reorders, two cards become impossible to separate.** Cause: repeated halving exhausted `double precision`, so `(a + b) / 2` now equals `a`. Fix: detect the exhausted gap and renormalise the board, as `positionBetween` does — and bump `version` on every renormalised row so open editors get a conflict instead of writing against the old scale.
+**★ Symptom: after many reorders, two cards become impossible to separate.** Cause: repeated halving exhausted `double precision`, so `(a + b) / 2` now equals `a` — the bound is [05ea](05ea-the-position-value-and-concurrent-creates.md)'s fifty-midpoint figure, reached here because moves are what spend midpoints. Fix: detect the exhausted gap and renormalise the board, as `positionBetween` does — and bump `version` on every renormalised row so open editors get a conflict instead of writing against the old scale.
 
 **★ Symptom: adding `UNIQUE (board_id, position)` turned reordering into a stream of 409s.** Cause: the constraint makes a benign tie into a failed write, and every insertion between neighbours now risks colliding with a concurrent one. Fix: drop the constraint and use the tiebreaker ordering. If a dense canonical rank is genuinely required, compute it at read time with `row_number()` rather than storing it.
 
-**★ Symptom: two cards appended at the same moment land on the same position.** Cause: both `INSERT … SELECT max(position) + 1024` statements read snapshots taken before either committed, so both computed the same maximum. Fix: accept it — the tiebreaker makes it harmless — or, if the append order must be strictly serialised, lock the board row first, which is the pattern in [07f](07f-pessimistic-locking-and-when-it-is-right.md).
+**★ Symptom: two cards appended at the same moment land on the same position.** Cause: the create-side race — both `max(position)` reads took snapshots before either insert committed. That mechanism and its three remedies are [05ea](05ea-the-position-value-and-concurrent-creates.md)'s. What belongs here is the answer once the tie exists: accept it, because the `(position, created_at, id)` tiebreaker above makes it invisible, or, if append order must be strictly serialised, lock the board row first — the pattern in [07f](07f-pessimistic-locking-and-when-it-is-right.md).
 
 **★ Symptom: a sync client stops receiving changes for a subset of rows and never recovers.** Cause: a client-supplied `updatedAt` was written with a clock that was ahead, so the row's timestamp is in the future and every subsequent `WHERE updated_at > $lastSync` skips it — permanently. Fix: never accept the field from a client. Strip it at the schema boundary and set it in SQL:
 
