@@ -290,4 +290,4 @@ No. Revalidation is triggered by a request, so pages refresh as they are visited
 
 ---
 
-**Previous:** [5 · Revalidation and lifetimes](05-revalidation-and-lifetimes.md)
+**Previous:** [5 · Revalidation and lifetimes](05-revalidation-and-lifetimes.md) · **Next:** [5c · Build hangs and the prerender timeout](05c-build-hangs-and-the-prerender-timeout.md)

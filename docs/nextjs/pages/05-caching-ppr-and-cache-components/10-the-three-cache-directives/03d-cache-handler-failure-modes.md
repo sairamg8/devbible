@@ -33,7 +33,7 @@ for you:
 > route `/blog/hello` generates soft tags for `/layout`, `/blog/layout`, `/blog/hello/layout`,
 > and `/blog/hello`. These tags are prefixed internally with `_N_T_`."*
 
-> *"Soft tags enable [`revalidatePath()`] to work through the same tag-based cache system.
+> *"Soft tags enable `revalidatePath()` to work through the same tag-based cache system.
 > When `revalidatePath('/blog/hello')` is called, it invalidates all cache entries associated
 > with that path's soft tags."*
 

@@ -2,7 +2,7 @@
 title: "Set `cacheLife` explicitly in every cached scope, or the lifetime stops being visible at the call site"
 sidebar_label: "5 · Revalidation and lifetimes"
 sidebar_position: 10
-description: "Time-based and on-demand revalidation, the default profile's real numbers, the nested short-lived cache build failure, and the 50-second prerender timeout."
+description: "Time-based and on-demand revalidation, the default profile's real numbers, the two-branch nesting rule, and the prerendering thresholds that make a cache short-lived."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -291,4 +291,4 @@ configured once and apply in both.
 
 ---
 
-**Previous:** [4 · `use cache: private`](04-use-cache-private.md)
+**Previous:** [4 · `use cache: private`](04-use-cache-private.md) · **Next:** [5b · `revalidateTag` vs `updateTag`](05b-revalidatetag-and-updatetag.md)
