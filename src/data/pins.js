@@ -130,6 +130,17 @@ export const PINS = {
     tracks: ['react', 'jest-rtl', 'storybook', 'redux-toolkit', 'tanstack-query', 'framer-motion', 'real-world'],
     names: ['react', 'react-dom'],
   },
+  vitest: {
+    label: 'Vitest', source: 'npm:vitest', policy: 'latest',
+    // Added 2026-09-05. **92 pages across six tracks taught Vitest with NO pin** — the
+    // gap this rule exists to close: a package nothing watches reports nothing, and
+    // "nothing" renders identically to "no drift" on the currency board.
+    // ⚠️ The registry carries a `V3` dist-tag at 3.2.7 alongside `latest` 5.0.0, so a
+    // reader on an older major has a supported line. Pin the version, never the tag.
+    pin: '5.0.0', checked: '2026-09-05',
+    tracks: ['nextjs', 'jest-rtl', 'react', 'typescript', 'nodejs', 'javascript'],
+    names: ['vitest'],
+  },
   typescript: {
     label: 'TypeScript', source: 'npm:typescript', policy: 'latest',
     pin: '7.0.2', checked: '2026-08-31', tracks: ['typescript', 'real-world'], names: ['typescript'],
