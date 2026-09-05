@@ -1,7 +1,7 @@
 ---
 title: "\"Prepared statement\" names two different mechanisms, only one of which survives a pooler — and knowing which one your ORM uses explains every confusing error it throws in production"
 sidebar_label: "01d · Prepared statements"
-sidebar_position: 103
+sidebar_position: 4
 description: "SQL-level PREPARE as a session-scoped named object versus protocol-level Parse/Bind/Execute, why `prepared statement \"s0\" already exists` means a collision rather than a miss, why `pgbouncer=true` is now the wrong advice, and where parameterisation ends and preparation begins."
 ---
 

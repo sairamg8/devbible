@@ -1,7 +1,7 @@
 ---
 title: "The choice is not ergonomic — ask who is meant to call it, and the answer picks the entry point for you, with a Server Component fetching its own Route Handler being the one combination the documentation tells you outright to stop doing"
 sidebar_label: "02l · The decision rule"
-sidebar_position: 210
+sidebar_position: 26
 description: "A decision table driven by the caller, the three documented data-fetching approaches and the instruction not to mix them, why fetching your own Route Handler from a Server Component fails the build, why actions are the wrong tool for reads, and when both entry points are correct."
 ---
 

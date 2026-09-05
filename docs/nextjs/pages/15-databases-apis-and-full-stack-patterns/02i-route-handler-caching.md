@@ -1,7 +1,7 @@
 ---
 title: "Route Handlers stopped caching by default in v15, and under Cache Components whether a GET is prerendered is decided by what your code touches rather than by what you declared"
 sidebar_label: "02i · Route Handler caching"
-sidebar_position: 207
+sidebar_position: 23
 description: "Why force-dynamic advice from Next 14 is now backwards, opting into static with force-static, the Cache Components model for GET handlers, the exhaustive list of things that stop prerendering, why use cache must live in a helper, and the next-request-in-use-cache failure that passes next build."
 ---
 

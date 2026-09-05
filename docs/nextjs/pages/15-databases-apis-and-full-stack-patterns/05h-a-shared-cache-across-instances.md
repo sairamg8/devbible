@@ -1,7 +1,7 @@
 ---
 title: "`revalidateTag()` invalidates the instance it ran on and no others — so on any deployment with more than one server the default behaviour is that some users see the new content and some do not, and closing that gap is infrastructure you provide rather than a flag you set"
 sidebar_label: "05h · A shared cache across instances"
-sidebar_position: 306
+sidebar_position: 61
 description: "Why revalidation events are local by default, the two handler hooks that make tags propagate, the consistency model Next.js actually promises, and the HTML/RSC pairing that makes a partially-shared cache worse than none."
 ---
 

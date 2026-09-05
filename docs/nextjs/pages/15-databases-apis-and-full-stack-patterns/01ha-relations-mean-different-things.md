@@ -1,7 +1,7 @@
 ---
 title: "A Drizzle `relations()` block creates no foreign key — so a schema can declare a complete, type-checked, correctly-joining relation graph and still produce a database with no referential integrity at all"
 sidebar_label: "01ha · Relations mean different things"
-sidebar_position: 109
+sidebar_position: 10
 description: "Prisma's virtual back-relation versus Drizzle's two separate declarations, why only one of them touches the database, the `defineRelations` API that the docs show and npm does not ship, and what an implicit many-to-many costs you later."
 ---
 

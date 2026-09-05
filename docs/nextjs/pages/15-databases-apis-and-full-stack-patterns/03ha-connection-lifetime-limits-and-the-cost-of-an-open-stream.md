@@ -1,7 +1,7 @@
 ---
 title: "Every SSE connection is on three separate clocks and one counter — an idle timeout, a function duration limit, a deploy, and the six connections a browser will give your domain — and the only correct design is one that expects to be cut"
 sidebar_label: "03ha · Connection lifetime and cost"
-sidebar_position: 170
+sidebar_position: 39
 description: "Idle timeouts and the 15-second comment heartbeat, maxDuration as a hard ceiling you design around, the HTTP/1.1 six-connection-per-domain limit versus HTTP/2 streams, reconnect storms after a deploy, graceful shutdown, and why an idle stream is a running invocation."
 ---
 

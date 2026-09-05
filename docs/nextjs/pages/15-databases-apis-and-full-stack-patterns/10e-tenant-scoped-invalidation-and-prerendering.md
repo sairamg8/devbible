@@ -1,7 +1,7 @@
 ---
 title: "Cache tags are global strings, so an un-namespaced tag makes every tenant's write invalidate every other tenant's cache — correctness survives, your database does not"
 sidebar_label: "10e · Tenant-scoped invalidation"
-sidebar_position: 14
+sidebar_position: 67
 description: "Namespacing cacheTag per tenant, the 128/256 limits, choosing between updateTag, revalidateTag and revalidatePath in a multi-tenant app, revalidatePath under a proxy rewrite, and prerendering tenant shells."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A cache entry's value is a stream you can only read once, and the three ways a handler can fail are not symmetric — a throwing `get()` takes the page down, a throwing `refreshTags()` fails unrelated requests, and a failing `set()` tells nobody at all"
 sidebar_label: "05f · Streams and failure semantics"
-sidebar_position: 304
+sidebar_position: 60
 description: "Why `.tee()` is the answer to storing and returning the same entry, what a partial write does to a page, and the three failure rules that decide whether a cache outage degrades your site or takes it offline."
 ---
 

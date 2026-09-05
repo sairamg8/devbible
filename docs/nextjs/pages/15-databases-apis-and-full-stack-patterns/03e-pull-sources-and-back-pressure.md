@@ -1,7 +1,7 @@
 ---
 title: "A push source has no brake: if the client reads slower than you produce, the stream's internal queue grows inside your process until something dies"
 sidebar_label: "03e · Pull sources and back-pressure"
-sidebar_position: 164
+sidebar_position: 33
 description: "start versus pull, async iterators as pull sources, desiredSize and the high water mark, shedding versus coalescing versus persisting, and the snapshot-plus-delta protocol that makes dropping safe."
 ---
 

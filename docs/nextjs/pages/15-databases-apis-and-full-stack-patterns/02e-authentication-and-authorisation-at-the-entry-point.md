@@ -1,7 +1,7 @@
 ---
 title: "Render-time gating is not a security boundary and a zod schema cannot tell you whether the caller owns the row — every entry point re-authenticates, re-authorises, and lets the database enforce ownership"
 sidebar_label: "02e · Authn and authz per entry point"
-sidebar_position: 203
+sidebar_position: 19
 description: "Why a page-level redirect does not protect the action inside it, the IDOR that survives schema validation, why credentials must come from cookies rather than parameters, loud failure on destructive operations, and the documented audit questions."
 ---
 

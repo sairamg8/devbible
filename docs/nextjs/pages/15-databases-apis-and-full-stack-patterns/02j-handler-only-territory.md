@@ -1,7 +1,7 @@
 ---
 title: "Webhooks, OAuth callbacks and cross-origin clients are Route Handler territory by necessity, not preference — they are callers you do not ship, and a Server Action has no URL to give them"
 sidebar_label: "02j · Handler-only territory"
-sidebar_position: 208
+sidebar_position: 24
 description: "Receiving webhooks and verifying signatures against the raw body, the token-in-the-query-string tension in the docs' own examples, OAuth callback handlers and the open-redirect guard, CORS headers and preflight OPTIONS, and header hygiene when proxying."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Closure variables round-trip through the browser encrypted with a per-build key, and action IDs are build artefacts — which is why actions break at deploy boundaries and across self-hosted replicas"
 sidebar_label: "02c · Closures, IDs and deploys"
-sidebar_position: 201
+sidebar_position: 17
 description: "What closure capture actually sends over the wire, the per-build encryption key and NEXT_SERVER_ACTIONS_ENCRYPTION_KEY, dead code elimination, the 14-day action-ID cache, and recovering from 'Failed to find Server Action' after a rolling deploy."
 ---
 

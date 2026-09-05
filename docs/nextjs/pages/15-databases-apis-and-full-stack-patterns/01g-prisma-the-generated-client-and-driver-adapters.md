@@ -1,7 +1,7 @@
 ---
 title: "Prisma 7 stopped owning the connection: the client is now generated into your repository and the pool belongs to a driver adapter you construct yourself — which moves every knob you knew and breaks every build that forgot to regenerate"
 sidebar_label: "01g · Prisma: client and adapters"
-sidebar_position: 106
+sidebar_position: 7
 description: "What `prisma generate` produces and why `output` became required, what a driver adapter is, which adapter wraps which driver, and where the v6 pooling parameters went — with the two v7 defaults that turn a loud failure into a quiet one."
 ---
 

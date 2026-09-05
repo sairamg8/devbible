@@ -1,7 +1,7 @@
 ---
 title: "A claim is a promise with a deadline: the lease is what turns a dead worker from a permanently stuck job into one that comes back on its own, which is why every statement a worker runs after the claim carries a WHERE clause proving it still owns the row"
 sidebar_label: "04da · Leases and the claim lifetime"
-sidebar_position: 233
+sidebar_position: 46
 description: "The visibility timeout as a lease, the reaper, heartbeats for long jobs, which transaction the work lives in, and the ack that checks it still owns the job."
 ---
 

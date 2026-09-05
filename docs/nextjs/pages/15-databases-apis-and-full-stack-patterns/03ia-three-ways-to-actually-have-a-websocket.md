@@ -1,7 +1,7 @@
 ---
 title: "There are exactly three ways to have a WebSocket alongside a Next.js app — buy one, run one, or use a platform escape hatch — and each trades a different thing you currently take for granted"
 sidebar_label: "03ia · Three ways to have a WebSocket"
-sidebar_position: 172
+sidebar_position: 41
 description: "A managed realtime service and the token-minting Route Handler it needs, a separate long-running Node process and why a custom server is the worse version of that, and the platform upgrade escape hatch with its documented constraints."
 ---
 

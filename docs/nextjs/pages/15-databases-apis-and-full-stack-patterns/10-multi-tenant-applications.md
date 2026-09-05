@@ -1,7 +1,7 @@
 ---
 title: "Multi-tenancy in Next.js is decided by how a request declares its tenant, because only a route segment can be prerendered, cached and read without a request"
 sidebar_label: "10 · Multi-tenant applications"
-sidebar_position: 10
+sidebar_position: 63
 description: "The three isolation models, the four ways a request can identify its tenant, why the App Router pushes you hard towards a tenant route segment, and what subdomain cookies do to your session."
 ---
 

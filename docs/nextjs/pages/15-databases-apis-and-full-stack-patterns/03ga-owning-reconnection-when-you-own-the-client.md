@@ -1,7 +1,7 @@
 ---
 title: "Once you replace EventSource with fetch you have not written a client, you have written half of one — the missing half is a retry loop that knows which failures are worth retrying"
 sidebar_label: "03ga · Owning reconnection"
-sidebar_position: 168
+sidebar_position: 37
 description: "The request half of a hand-rolled SSE client: Authorization headers and POST bodies, the CORS preflight they cost, a failure taxonomy that separates retryable from terminal, exponential backoff with jitter, honouring Retry-After, token refresh inside the loop, and AbortController teardown."
 ---
 

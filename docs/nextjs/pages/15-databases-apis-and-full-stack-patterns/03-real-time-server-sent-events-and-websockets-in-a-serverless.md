@@ -1,7 +1,7 @@
 ---
 title: "Real-time in the App Router is not a feature you turn on — it is a decision about which HTTP shape your platform will hold open, and in a serverless-first deployment there is exactly one first-class answer"
 sidebar_label: "03 · Real-time: the shapes"
-sidebar_position: 160
+sidebar_position: 29
 description: "Polling, Server-Sent Events and WebSockets compared by what the request/response model can actually hold open; what a streaming Route Handler really is; and why SSE is the default answer in Next.js."
 ---
 

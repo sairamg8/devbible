@@ -1,7 +1,7 @@
 ---
 title: "\"Connection pooling\" names three different machines that live in three different places, and picking the wrong one — or two of them at once — is the most common serverless database misconfiguration there is"
 sidebar_label: "01b · Three kinds of pool"
-sidebar_position: 101
+sidebar_position: 2
 description: "Driver-level pool, proxy pool and HTTP/WebSocket driver: what each multiplexes, which of Neon's three limits each one protects, why double pooling hurts, and how to read the error string to know which wall you hit."
 ---
 

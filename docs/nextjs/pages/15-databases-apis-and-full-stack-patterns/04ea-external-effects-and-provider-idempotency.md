@@ -1,7 +1,7 @@
 ---
 title: "An HTTP call cannot join your transaction, so a request that times out has an unknown outcome rather than a failed one — and treating unknown as failed is the single line of reasoning that produces double charges"
 sidebar_label: "04ea · External effects"
-sidebar_position: 236
+sidebar_position: 49
 description: "Why external side effects break the dedupe-table pattern, provider idempotency keys and their expiry window, reconciliation when the provider has no key, email, and the obligations you owe your own webhook consumers."
 ---
 

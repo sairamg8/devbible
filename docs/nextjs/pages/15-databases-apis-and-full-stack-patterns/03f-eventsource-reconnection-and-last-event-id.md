@@ -1,7 +1,7 @@
 ---
 title: "EventSource is a reconnecting client the browser already ships — the specification decides when it retries, when it gives up permanently, and the difference is invisible unless you read readyState"
 sidebar_label: "03f · Reconnection and readyState"
-sidebar_position: 165
+sidebar_position: 34
 description: "The EventSource client as the specification defines it: nineteen lines of IDL, the three-value readyState, the two different failures that both fire error, why a clean end of stream reconnects forever, the retry field, and everything EventSource structurally cannot do."
 ---
 

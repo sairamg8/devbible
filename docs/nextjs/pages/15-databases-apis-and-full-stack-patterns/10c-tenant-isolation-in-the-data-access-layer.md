@@ -1,7 +1,7 @@
 ---
 title: "Tenant isolation is one predicate that must be impossible to forget, which means it belongs in a Data Access Layer and in the database, never in a page"
 sidebar_label: "10c · Isolation in the data access layer"
-sidebar_position: 12
+sidebar_position: 65
 description: "Deriving the tenant from the session rather than the URL, a DAL that cannot issue an unscoped query, row-level security on a pooled connection, and the three contexts where root params are unavailable."
 ---
 

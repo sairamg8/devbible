@@ -1,7 +1,7 @@
 ---
 title: "The framework protections around a Server Action are exactly four, they are all mechanical, and a Route Handler gets none of them — so knowing the list is the difference between defence in depth and misplaced trust"
 sidebar_label: "02d · What the framework gives you"
-sidebar_position: 202
+sidebar_position: 18
 description: "The Origin/Host CSRF comparison and serverActions.allowedOrigins, the 1MB body cap and bodySizeLimit, why both are browser-scoped mechanical checks rather than a security boundary, and the asymmetry with Route Handlers."
 ---
 

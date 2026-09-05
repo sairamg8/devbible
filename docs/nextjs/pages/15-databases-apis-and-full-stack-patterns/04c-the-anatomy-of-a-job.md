@@ -1,7 +1,7 @@
 ---
 title: "A job is a row with a state machine, and the only interesting design decision is whether the row is written in the same transaction as the change that caused it — because if it is not, you have a dual write and one of the two will eventually be lost"
 sidebar_label: "04c · The anatomy of a job"
-sidebar_position: 231
+sidebar_position: 44
 description: "The six responsibilities of any job system, the job state machine, what goes in a payload, the transactional outbox and the dual-write problem, deploy skew, and why queues are not ordered."
 ---
 

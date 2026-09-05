@@ -1,7 +1,7 @@
 ---
 title: "Once the rule lives in a server-only module, an action and a Route Handler each shrink to the thing their transport actually requires — and a third entry point costs nothing"
 sidebar_label: "02n · Thin entry points"
-sidebar_position: 212
+sidebar_position: 28
 description: "Applying the Data Access Layer pattern to mutations, why a 'use server' file can also be server-only, two doors over one rule with the action adding cache invalidation and the handler adding status codes, and the documented audit checklist as a set of greps."
 ---
 

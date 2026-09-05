@@ -1,7 +1,7 @@
 ---
 title: "Prisma writes your types to disk and Drizzle computes them from the table objects — which means one can go stale and the other cannot, and neither of them knows a single thing about the database that is actually running"
 sidebar_label: "01hb · Generated vs inferred types"
-sidebar_position: 110
+sidebar_position: 11
 description: "`$inferSelect` and `$inferInsert` against the generated model type, why both tools narrow on partial selects, the exact ceiling of ORM type safety, and what happens to your types the moment you drop to raw SQL."
 ---
 

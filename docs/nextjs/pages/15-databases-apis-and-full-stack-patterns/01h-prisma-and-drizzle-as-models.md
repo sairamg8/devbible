@@ -1,7 +1,7 @@
 ---
 title: "Prisma and Drizzle disagree about what a schema *is* — one is a DSL you compile into a client, the other is TypeScript you import — and almost everything else about them falls out of that single choice"
 sidebar_label: "01h · Prisma and Drizzle as models"
-sidebar_position: 108
+sidebar_position: 9
 description: "Declaring the same two tables in both languages, the opposite nullability defaults that quietly destroy every NOT NULL constraint you thought you had, and the export rule that makes a table invisible to the migration generator."
 ---
 

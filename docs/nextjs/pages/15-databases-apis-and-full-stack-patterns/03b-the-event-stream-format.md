@@ -1,7 +1,7 @@
 ---
 title: "The event stream format is an ABNF grammar with four field names, and every field the spec does not name is discarded without a word"
 sidebar_label: "03b · The event stream format"
-sidebar_position: 161
+sidebar_position: 30
 description: "text/event-stream as the WHATWG specification defines it: the ABNF, UTF-8, the required MIME type, and exactly what data / event / id / retry each do to the parser's buffers."
 ---
 

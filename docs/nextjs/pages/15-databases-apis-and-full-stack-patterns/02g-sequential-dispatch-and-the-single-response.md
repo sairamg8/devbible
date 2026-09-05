@@ -1,7 +1,7 @@
 ---
 title: "Actions are dispatched one at a time per client and answer with the mutation result and a re-rendered tree in one Flight response — two mechanical facts that decide which work belongs in an action and which does not"
 sidebar_label: "02g · Dispatch and the response"
-sidebar_position: 205
+sidebar_position: 21
 description: "Why Promise.all does not parallelise Server Actions, what the queue buys you, the single-roundtrip response carrying both the return value and a new RSC payload, the four triggers that include a re-render, and the revalidateTag stale-while-revalidate exception."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A migration is the only thing that makes your database agree with your schema file — and the difference between Prisma Migrate and drizzle-kit is not the SQL they emit, it is how much they check before they emit it"
 sidebar_label: "01i · Migrations in each"
-sidebar_position: 112
+sidebar_position: 13
 description: "The generate-then-apply shape both tools share, codebase-first versus database-first, and Prisma's shadow database — a temporary second database that exists to catch drift and data loss before you deploy them."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A WebSocket does not fit a Route Handler because the handshake replaces the response instead of streaming one — and the four things serverless actually constrains are lifetime, affinity, shared memory and cost, not the protocol"
 sidebar_label: "03i · WebSockets vs serverless"
-sidebar_position: 171
+sidebar_position: 40
 description: "Why Next.js exposes no upgrade API, what the serverless request model genuinely forbids, the fifth option nobody considers — SSE down and POST up — and the decision table for choosing between a managed service, a long-running process and not having a WebSocket at all."
 ---
 

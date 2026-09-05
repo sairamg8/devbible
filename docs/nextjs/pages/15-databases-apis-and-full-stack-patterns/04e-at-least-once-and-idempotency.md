@@ -1,7 +1,7 @@
 ---
 title: "Every durable queue delivers at least once, so the handler — not the queue — is where duplicate protection lives, and 'we'll be careful' is not a design: you need either an operation that is naturally repeatable or a key you actually store"
 sidebar_label: "04e · At-least-once and idempotency"
-sidebar_position: 235
+sidebar_position: 48
 description: "Why exactly-once is unavailable, the three routes to safe re-execution, the dedupe table and the ON CONFLICT DO NOTHING RETURNING idiom, where the key comes from, and enqueue-time deduplication."
 ---
 

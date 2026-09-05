@@ -1,7 +1,7 @@
 ---
 title: "SELECT … FOR UPDATE SKIP LOCKED is the single feature that turns an ordinary table into a queue, because it is the only way two workers can ask for 'the next job' at the same moment and get different answers instead of one of them waiting"
 sidebar_label: "04d · Postgres as a queue · SKIP LOCKED"
-sidebar_position: 232
+sidebar_position: 45
 description: "The table, the enqueue, the claim query, why SKIP LOCKED makes concurrent workers safe, what happens without it, the CTE locking trap, the OFFSET trap, and the claim written in TypeScript against a real pool."
 ---
 

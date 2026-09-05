@@ -1,7 +1,7 @@
 ---
 title: "Project milestone — put SprintDesk on Drizzle and Neon with the pooling right, stream board updates over SSE, and move digest emails to a queue: three features that each fail in a way this chapter has already named"
 sidebar_label: "06 · Milestone: SprintDesk full-stack"
-sidebar_position: 6
+sidebar_position: 62
 description: "The build, the four decisions it forces, the six seams where a chapter-15 failure will actually appear, and the acceptance checks that prove each one is closed rather than merely absent."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "An SSE Route Handler is a ReadableStream with a lifecycle, and the half everyone forgets is the teardown — the heartbeat, the abort signal and the cancel callback that stop the work when the client leaves"
 sidebar_label: "03d · Writing the SSE Route Handler"
-sidebar_position: 163
+sidebar_position: 32
 description: "The full handler: authorize before you stream, flush immediately, heartbeat, request.signal, the cancel callback, one idempotent cleanup, and why a leaked interval is the classic SSE production incident."
 ---
 

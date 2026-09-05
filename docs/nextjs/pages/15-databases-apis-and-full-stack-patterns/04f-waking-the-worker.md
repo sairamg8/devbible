@@ -1,7 +1,7 @@
 ---
 title: "A Next.js deployment on serverless has nowhere for a worker loop to live, so you get exactly three options — a long-lived process beside the app, a cron-driven drain bounded by the invocation deadline, or a push queue that invokes a handler per message — and each of them decides your queue's latency floor"
 sidebar_label: "04f · Waking the worker"
-sidebar_position: 237
+sidebar_position: 50
 description: "Where the worker process actually runs, the poll loop with idle backoff, batch size and concurrency against pool max, and a graceful shutdown that returns leases instead of stranding them."
 ---
 

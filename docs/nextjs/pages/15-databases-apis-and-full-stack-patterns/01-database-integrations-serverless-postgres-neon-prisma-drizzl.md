@@ -1,7 +1,7 @@
 ---
 title: "A Postgres connection is an operating-system process on the database server, and a serverless function is a process that appears and vanishes — every hard problem in this topic is those two facts refusing to line up"
 sidebar_label: "01 · Why serverless breaks pooling"
-sidebar_position: 100
+sidebar_position: 1
 description: "The connection lifecycle mismatch at the root of every serverless database failure: what a Postgres backend actually costs, why a driver pool amortises it, and why multiplying pools by function instances is the arithmetic that takes production down."
 ---
 

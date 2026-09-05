@@ -1,7 +1,7 @@
 ---
 title: "after() decouples work from the response, not from the invocation — it has no durable record, no retry, no scheduling and no way to answer 'did it run', which makes it excellent for logging and catastrophic for anything a customer paid for"
 sidebar_label: "04b · after() is not a queue"
-sidebar_position: 230
+sidebar_position: 43
 description: "What after() guarantees, the waitUntil primitive underneath it, the Request-API rules that differ between Route Handlers and Server Components, graceful shutdown drain, and the four properties it does not have."
 ---
 

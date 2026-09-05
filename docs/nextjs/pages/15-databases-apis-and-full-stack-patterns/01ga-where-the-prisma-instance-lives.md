@@ -1,7 +1,7 @@
 ---
 title: "One PrismaClient is one connection pool, so where you construct it is a capacity decision — and the CLI needs a different URL from the application, for a reason that is structural rather than administrative"
 sidebar_label: "01ga · Where the instance lives"
-sidebar_position: 107
+sidebar_position: 8
 description: "The `globalThis` singleton and why hot reloading needs it, the serverless instance-per-function arithmetic, when `$disconnect()` is wrong, `prisma.config.ts`, and why `DATABASE_URL` and `DIRECT_URL` are two different things."
 ---
 

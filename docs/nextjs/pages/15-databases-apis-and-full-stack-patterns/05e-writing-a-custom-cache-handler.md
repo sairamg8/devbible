@@ -1,7 +1,7 @@
 ---
 title: "A cache handler is five methods, and the framework's own advice is that you probably should not write one — but if you run more than one instance the default in-memory LRU is the reason your revalidations do not propagate, and this is the interface that fixes it"
 sidebar_label: "05e · Writing a custom cache handler"
-sidebar_position: 303
+sidebar_position: 59
 description: "The `get`/`set`/`refreshTags`/`getExpiration`/`updateTags` contract, the `CacheEntry` shape, what soft tags are and why your handler receives them, and the named-handler mechanism behind `use cache: <name>`."
 ---
 

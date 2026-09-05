@@ -1,7 +1,7 @@
 ---
 title: "Tenant routing is a proxy rewrite into a [tenant] root segment, and every subtlety lives in the matcher, the header plumbing and the fact that Server Actions cannot read root params"
 sidebar_label: "10b · Tenant routing: proxy + root params"
-sidebar_position: 11
+sidebar_position: 64
 description: "Resolving the tenant in proxy.ts, rewriting to a path segment, matcher coverage for Server Functions, passing values downstream without leaking them to the browser, and making [tenant] a root param."
 ---
 

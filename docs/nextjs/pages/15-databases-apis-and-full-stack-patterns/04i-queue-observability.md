@@ -1,7 +1,7 @@
 ---
 title: "Queue depth is the metric everyone graphs and the one that tells you least — the number that actually means something is the age of the oldest claimable job, because it is measured in the unit your users experience and it is zero whenever you are keeping up"
 sidebar_label: "04i · Knowing the queue is behind"
-sidebar_position: 241
+sidebar_position: 54
 description: "Depth versus oldest-unclaimed age, arrival rate against completion rate, the queries that produce each, the alert that catches a dead worker fleet, tracing across the enqueue boundary, and what to page on."
 ---
 

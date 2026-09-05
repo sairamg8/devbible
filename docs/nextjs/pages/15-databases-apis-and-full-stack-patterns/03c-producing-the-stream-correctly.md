@@ -1,7 +1,7 @@
 ---
 title: "Write exactly one function that serializes an SSE frame, because every framing bug is a missing blank line and no layer in the stack will tell you"
 sidebar_label: "03c · Producing the stream correctly"
-sidebar_position: 162
+sidebar_position: 31
 description: "An encoder that cannot produce an invalid frame, the framing mistakes table, and the four response headers an SSE endpoint must set — with why each one is there."
 ---
 

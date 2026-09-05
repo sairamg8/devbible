@@ -1,7 +1,7 @@
 ---
 title: "`push` is the fastest way to a schema no migration can reproduce, migrations need a session your pooler will not give them, and the only honest answer to \"did it run\" comes from the ledger — plus the Prisma 8 rewrite already visible in the docs"
 sidebar_label: "01ia · push, pooling, proving it ran"
-sidebar_position: 113
+sidebar_position: 14
 description: "Why the prototyping shortcut in both tools creates unreproducible databases, why the migration runner cannot use your pooled connection, how to gate a deploy on the ledger, and what Prisma 8 changes about all of it."
 ---
 

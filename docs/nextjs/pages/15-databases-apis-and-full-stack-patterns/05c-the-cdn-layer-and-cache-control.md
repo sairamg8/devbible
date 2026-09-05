@@ -1,7 +1,7 @@
 ---
 title: "Next.js emits a different `Cache-Control` for every rendering strategy, and the one number that decides both your bill and your staleness window is `s-maxage` — which nothing in your application can shorten once a response has left"
 sidebar_label: "05c · The CDN layer and Cache-Control"
-sidebar_position: 301
+sidebar_position: 57
 description: "The exact headers static, ISR and dynamic pages carry, why `stale-while-revalidate` appears by default, the immutable asset rule, and the reason `revalidateTag()` cannot reach a CDN."
 ---
 

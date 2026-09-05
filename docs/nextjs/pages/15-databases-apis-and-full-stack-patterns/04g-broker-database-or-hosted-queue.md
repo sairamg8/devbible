@@ -1,7 +1,7 @@
 ---
 title: "The choice between Postgres, a Redis broker and a hosted queue is not a feature comparison — it is one question, whether the enqueue can share a transaction with the write that caused it, because that is the only property you cannot rebuild on top of the others"
 sidebar_label: "04g · Broker, database, or hosted"
-sidebar_position: 239
+sidebar_position: 52
 description: "What a shared transaction boundary buys you, what a Postgres queue costs your primary, BullMQ's real strengths and its long-lived-process requirement, hosted queues, and the hybrid that is usually right."
 ---
 

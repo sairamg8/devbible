@@ -1,7 +1,7 @@
 ---
 title: "A Route Handler can return any content type, negotiate on Accept and proxy a backend — but where it runs decides what it may do, and on a lambda host it may not share state, write files, run long, or hold a socket"
 sidebar_label: "02k · Content types and deployment"
-sidebar_position: 209
+sidebar_position: 25
 description: "Serving XML, files and text, the metadata file conventions, content negotiation with rewrites and Vary: Accept, proxying with validation, export mode's GET-only restriction, and the four documented consequences of deploying handlers as lambda functions."
 ---
 

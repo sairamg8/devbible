@@ -1,7 +1,7 @@
 ---
 title: "The Neon HTTP driver does not solve the connection problem, it deletes it — an HTTP query has no session to keep alive, and everything you gain and everything you lose follows from that one substitution"
 sidebar_label: "01e · The HTTP driver"
-sidebar_position: 104
+sidebar_position: 5
 description: "`neon()` one-shot queries: why the query function is template-only, what `arrayMode`, `fullResults` and `fetchOptions` are for, the 64 MB transport ceiling, and exactly what a non-interactive transaction cannot express."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The Edge Runtime is deprecated, so \"global compute\" in Next.js 16 is no longer a runtime you opt into — it is a CDN in front of one Node.js server and a cache handler behind it, and both of those are things you configure rather than declare"
 sidebar_label: "05 · Edge and custom cache structures"
-sidebar_position: 5
+sidebar_position: 55
 description: "Topic index: why `export const runtime = 'edge'` is deprecated, what actually makes an application global now, and how to write the custom cache handler that makes revalidation propagate across instances."
 ---
 

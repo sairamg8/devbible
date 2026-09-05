@@ -1,7 +1,7 @@
 ---
 title: "LISTEN/NOTIFY removes the polling latency floor because a notification fires at COMMIT of the very transaction that enqueued the job — but it is a hint with no replay, so it can only ever be an optimisation on top of polling, never a replacement for it"
 sidebar_label: "04fa · LISTEN/NOTIFY"
-sidebar_position: 238
+sidebar_position: 51
 description: "The transactional delivery rule that makes NOTIFY perfect for an outbox, the dedicated session it requires, the 8000-byte payload limit, the notification queue that can fail every commit in the database, and why polling stays."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Retry is a policy, not a loop: the backoff decides whether a downstream outage recovers or is kept down by your own fleet, and the dead-letter path is what stops one broken job consuming the capacity of every healthy one"
 sidebar_label: "04db · Backoff, dead letters, pruning"
-sidebar_position: 234
+sidebar_position: 47
 description: "Exponential backoff with jitter written in SQL, permanent versus transient errors in the worker, the dead-letter path, the staggered requeue you will need at 3am, and batched pruning."
 ---
 

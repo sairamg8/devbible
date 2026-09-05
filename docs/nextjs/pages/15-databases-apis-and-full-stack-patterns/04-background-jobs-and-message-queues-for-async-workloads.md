@@ -1,7 +1,7 @@
 ---
 title: "A serverless request has a lifetime, and that lifetime ends at the response — so any work that outlives the response has to be handed to something with a different lifetime, which is what a queue is"
 sidebar_label: "04 · Background jobs and queues"
-sidebar_position: 4
+sidebar_position: 42
 description: "Why slow work cannot live in a request handler, what after() actually buys you, the anatomy of a durable job system, and the map of this topic's chunks."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A Server Action and a Route Handler are both POST endpoints on your own origin — the difference is who is meant to call them and what the framework does for you either way, and every real decision in this topic follows from that one sentence"
 sidebar_label: "02 · Hybrid API design"
-sidebar_position: 2
+sidebar_position: 15
 description: "Route Handlers and Server Actions side by side: the compile-time swap and the published URL, the four framework protections and the four application checks, sequential dispatch and the single-response re-render, and the Data Access Layer both entry points share."
 ---
 

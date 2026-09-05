@@ -1,7 +1,7 @@
 ---
 title: "A cron that hits a Route Handler is a public URL that runs your batch job, so the first three lines of that handler are authentication — and the second thing to accept is that cron delivery is best-effort, which makes 'reconcile outstanding work' the only safe shape for the code behind it"
 sidebar_label: "04h · Cron and scheduled work"
-sidebar_position: 240
+sidebar_position: 53
 description: "CRON_SECRET and the Bearer comparison, why the handler must stay dynamic, missed and duplicated ticks, overlapping runs and advisory locks, and why cron should enqueue jobs rather than do work."
 ---
 

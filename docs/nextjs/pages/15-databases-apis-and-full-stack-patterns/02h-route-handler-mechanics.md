@@ -1,7 +1,7 @@
 ---
 title: "A Route Handler is a file that owns every HTTP verb at one path — which is why it cannot sit beside a page, why an unexported method 405s before your code runs, and why the request body can only be read once"
 sidebar_label: "02h · Route Handler mechanics"
-sidebar_position: 206
+sidebar_position: 22
 description: "The route.ts convention, the supported method table and the automatic 405 and OPTIONS, NextRequest and NextResponse, why route.js and page.js collide, the library factory pattern, RouteContext typing and the params promise, and the read-once request body."
 ---
 

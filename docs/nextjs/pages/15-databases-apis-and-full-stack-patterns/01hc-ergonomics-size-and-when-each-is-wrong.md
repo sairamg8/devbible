@@ -1,7 +1,7 @@
 ---
 title: "One is a client that models your data and one is SQL wearing TypeScript — and the bundle-size argument everyone has about them is the wrong argument, because in an App Router codebase neither one should ever reach a browser"
 sidebar_label: "01hc · Ergonomics, size, when each is wrong"
-sidebar_position: 111
+sidebar_position: 12
 description: "The criteria object versus the query builder, Drizzle's prepared-statement API and the pooler that defeats it, what 7.4kb actually buys you on a server, and an honest list of the cases where each tool is the wrong choice."
 ---
 

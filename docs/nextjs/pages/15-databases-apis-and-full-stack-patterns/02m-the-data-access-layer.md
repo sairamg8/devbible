@@ -1,7 +1,7 @@
 ---
 title: "The Data Access Layer is the answer to 'how do I not get this wrong' — one server-only module that authenticates, authorises and returns DTOs, so that adding a second entry point cannot add a second, weaker copy of the rules"
 sidebar_label: "02m · The Data Access Layer"
-sidebar_position: 211
+sidebar_position: 27
 description: "The three documented data-fetching approaches, what a DAL must do, React.cache for per-request identity, why only the DAL reads process.env, what import 'server-only' actually enforces, classes as an accidental-serialisation guard, and thin actions and handlers over one shared rule."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A use cache scope is shared by every user of your deployment, so any tenant-dependent value whose tenant is not in the cache key is a cross-tenant data leak waiting for your second customer"
 sidebar_label: "10d · Tenancy and caching"
-sidebar_position: 13
+sidebar_position: 66
 description: "What a cache key actually contains, the three ways a tenant fails to enter it, why the framework only catches one of them, and the two patterns that are safe by construction."
 ---
 

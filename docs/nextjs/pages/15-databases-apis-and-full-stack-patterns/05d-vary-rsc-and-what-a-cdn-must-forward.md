@@ -1,7 +1,7 @@
 ---
 title: "A CDN that strips the `rsc` header does not break your site — it breaks client-side navigation only, by returning HTML where the router expected a Flight payload, which presents as \"links do a full page load now\" and points at nothing"
 sidebar_label: "05d · Vary, `_rsc` and CDN forwarding"
-sidebar_position: 302
+sidebar_position: 58
 description: "The five Vary headers Next.js sets, why the `_rsc` search parameter exists at all, the 307 hash redirect and the flag that disables it, and the navigation bug a mis-set CDN produces."
 ---
 

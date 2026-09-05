@@ -1,7 +1,7 @@
 ---
 title: "An action's return value is a public API and its invocation rate is unbounded — shape what comes back into a DTO, fail loudly on destructive paths, and build the rate limit yourself because there is no 429 to return"
 sidebar_label: "02f · Return values and limits"
-sidebar_position: 204
+sidebar_position: 20
 description: "Why returning an ORM row leaks columns, React's taint APIs as a second layer, error messages that expose internals, loud failure on destructive operations and authInterrupts, and rate limiting an entry point that cannot set a status code."
 ---
 

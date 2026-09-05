@@ -1,7 +1,7 @@
 ---
 title: "`export const runtime = 'edge'` is deprecated in Next.js 16 and the migration is a deletion — but the docs name no removal version and do not say the build fails, so the urgency is real and the deadline is not"
 sidebar_label: "05b · The Edge Runtime is deprecated"
-sidebar_position: 300
+sidebar_position: 56
 description: "What the deprecation notice actually says, the one line you remove, why Proxy never had the option, and an honest account of what the documentation does not claim."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Transaction-mode pooling buys capacity by refusing to promise you the same backend twice, and every feature it breaks is a feature that assumed the promise"
 sidebar_label: "01c · Transaction pooling"
-sidebar_position: 102
+sidebar_position: 3
 description: "Session vs transaction pool mode, the exact list of what stops working, why a bare statement is its own transaction, and how to carry per-request state — search_path, RLS identity, advisory locks — through a pooler without leaking it to the next tenant."
 ---
 

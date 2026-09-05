@@ -1,7 +1,7 @@
 ---
 title: "The WebSocket transport buys back the session — and with it every lifecycle rule the HTTP driver let you forget, inverted: here the pool must NOT live at module scope"
 sidebar_label: "01f · WebSockets and lifecycle"
-sidebar_position: 105
+sidebar_position: 6
 description: "`Pool` and `Client` over WebSockets, why `neonConfig.webSocketConstructor` must be assigned before the first pool, the rule that a WebSocket cannot outlive a request, and how Prisma and Drizzle wire onto it."
 ---
 

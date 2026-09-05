@@ -1,7 +1,7 @@
 ---
 title: "A Server Action is not a function call — it is a compile-time swap that leaves an encrypted ID in the browser and a POST endpoint on your origin, and every design decision downstream follows from that"
 sidebar_label: "02b · What an action compiles into"
-sidebar_position: 200
+sidebar_position: 16
 description: "The two placements of 'use server', the compile-time swap that replaces the implementation with an action ID plus a dispatcher, why the directive publishes rather than hides, and the three ways React invokes the result."
 ---
 
