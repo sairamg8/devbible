@@ -23,7 +23,7 @@ Next.js states the hosting requirement about as plainly as a framework can:
 
 And it separates correctness from speed explicitly, which is the distinction this whole topic turns on:
 
-> *"Additional infrastructure (CDN caching, edge compute, shared cache) primarily improves **performance** and multi-instance consistency."*
+> *"Additional infrastructure (CDN caching, edge compute, shared cache) primarily improves performance and multi-instance consistency."*
 > *"The \"Edge Stitching\" column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."*
 
 Everything in this topic is therefore optional in the sense that your application works without it, and mandatory in the sense that your application is slow and inconsistent without it. That is a much more useful framing than "should I use the edge runtime", and it is also the reason the deprecation is not a loss.

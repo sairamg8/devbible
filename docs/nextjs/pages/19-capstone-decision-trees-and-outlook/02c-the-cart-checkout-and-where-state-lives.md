@@ -134,9 +134,7 @@ export async function CartBadge() {
 
 ## `use cache: private` is not the free fix it appears to be
 
-When the badge is slow, the directive that reads cookies looks like the answer. It is documented for two situations only — you cannot refactor the runtime read out of the cached scope, or a compliance rule forbids the data resting on a server — and [ch5 · 10 · 04](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/04-use-cache-private.md) records what it costs:
-
-> *"Because it reads runtime data, the function executes on every server render and is excluded from static shell generation."*
+When the badge is slow, the directive that reads cookies looks like the answer. It is documented for two situations only — you cannot refactor the runtime read out of the cached scope, or a compliance rule forbids the data resting on a server — and [ch5 · 10 · 04](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/04-use-cache-private.md) records what it costs: because a `private` scope reads runtime data, the function executes on every server render and is excluded from static shell generation.
 
 Read that against what the storefront is trying to buy. You want the badge cheap *and* the page prerendered. `private` gives you a browser-memory cache — nothing stored server-side, gone on reload, no custom cache handler — and takes the scope out of shell generation. It also has two thresholds that quietly decide whether it does anything at all: `stale` must be at least 30 seconds for per-link prefetching to work, and at least 5 minutes for the content to be included in the route's App Shell. A cart badge with a 5-minute `stale` is a cart badge that shows the wrong number after someone adds something.
 
@@ -146,13 +144,7 @@ Read that against what the storefront is trying to buy. You want the badge cheap
 
 Run [ch6 · 01d](../06-ssg-isr-and-ssr-strategy/01d-the-decision-procedure-and-when-ssr-is-right.md)'s questions over `/checkout` and it stops at question 1: the route decides access to something, and the whole document differs per reader. There is nothing to prerender, no shell worth building, no crawler that should ever see it. **Stop optimising it and go back to the category page.** That is not resignation; it is the positive case that page makes for request-time rendering, and checkout is the textbook instance.
 
-What checkout does need is the thing SprintDesk needed for its digest email, in a harsher form. Placing an order calls a payment provider, and [ch15 · 04ea](../15-databases-apis-and-full-stack-patterns/04ea-external-effects-and-provider-idempotency.md) is unambiguous about what that means:
-
-> *"There is no ordering of a database transaction and an external call that is safe"*
-
-and about the specific reasoning that loses money:
-
-> *"A timeout and a connection reset are not failures; they are the absence of information."*
+What checkout does need is the thing SprintDesk needed for its digest email, in a harsher form. Placing an order calls a payment provider, and [ch15 · 04ea](../15-databases-apis-and-full-stack-patterns/04ea-external-effects-and-provider-idempotency.md) is unambiguous about what that means: **there is no ordering of a database transaction and an external call that is safe.** It is equally blunt about the specific reasoning that loses money — a timeout and a connection reset are not failures, they are the absence of information, and code that treats them as failures has converted "I don't know" into "it didn't happen".
 
 The provider's idempotency key is the only mechanism that closes the window, and the property that catches people is that the saved result includes failures — retrying with the same key after a `500` returns the same `500` forever, so a genuine retry of a genuinely failed request needs a *new* key. The full treatment, including the reconciliation fallback for providers with no key, is on that page and this one does not repeat it. The storefront-specific point is only that **checkout is where the SaaS's queue-and-idempotency chapter becomes a revenue control rather than an email deduplication concern.**
 

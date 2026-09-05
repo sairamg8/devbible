@@ -63,7 +63,7 @@ The reason "no replacement is needed" is true rather than a euphemism is that th
 
 What changes is **where the code can be placed**, and that is a platform question rather than a framework one. The framework's own position is that placement is a performance matter:
 
-> *"Additional infrastructure (CDN caching, edge compute, shared cache) primarily improves **performance** and multi-instance consistency."*
+> *"Additional infrastructure (CDN caching, edge compute, shared cache) primarily improves performance and multi-instance consistency."*
 > *"The \"Edge Stitching\" column is a **performance optimization**, not a correctness requirement. All features work correctly from a single origin server."*
 > — [Next.js · Deploying to Platforms](https://nextjs.org/docs/app/guides/deploying-to-platforms)
 

@@ -63,7 +63,7 @@ export { Badge } from './badge'
 
 **3 · Extracting a shared component.** Moving a style from `page.module.css` into a new `shared-header.module.css` moves it from "emitted late, wins ties" to "emitted early, loses ties". The CSS text is identical; the outcome is not.
 
-The documentation's recommendation list is the countermeasure, quoted in full:
+The documentation's recommendation list is the countermeasure — six of its eight items verbatim below, the other two being the auto-sort warning quoted above and the `cssChunking` option that gets its own section further down:
 
 > *"Try to contain CSS imports to a single JavaScript or TypeScript entry file · Import global styles and Tailwind stylesheets in the root of your application. · **Use Tailwind CSS** for most styling needs as it covers common design patterns with utility classes. · Use CSS Modules for component-specific styles when Tailwind utilities aren't sufficient. · Use a consistent naming convention for your CSS modules. For example, using `<name>.module.css` over `<name>.tsx`. · Extract shared styles into shared components to avoid duplicate imports."*
 > — [Getting Started: CSS](https://nextjs.org/docs/app/getting-started/css)

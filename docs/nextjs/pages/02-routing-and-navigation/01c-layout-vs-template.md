@@ -60,6 +60,7 @@ The reference walks through the key values for the tree `app/{page,template,layo
 > *• Resynchronize `useEffect` on navigation.*
 > *• Reset the state of a child Client Components on navigation. For example, an input field.*
 > *• To change default framework behavior. For example, Suspense boundaries inside layouts only show a fallback on first load, while templates show it on every navigation."*
+> — [`template.js`](https://nextjs.org/docs/app/api-reference/file-conventions/template)
 
 The third is the non-obvious one and the reason most real templates exist. A `Suspense` boundary written inside a layout renders its fallback the first time it mounts and then never again, because the layout is not remounting. Move the same boundary inside a template and it mounts fresh on every navigation, so the fallback shows every time.
 

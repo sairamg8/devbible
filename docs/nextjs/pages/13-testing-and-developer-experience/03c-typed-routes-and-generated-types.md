@@ -176,7 +176,8 @@ Three facts about them that decide how much they are worth:
 
 > *"generates TypeScript definitions for your application's routes without performing a full build."*
 
-> *"It is often undesirable to run these [`next dev` / `next build`] just to type-check, for example in CI/CD environments."*
+> *"The commands `next dev` and `next build` also generate the `next-env.d.ts` file, but it is often
+> undesirable to run these just to type-check, for example in CI/CD environments."*
 
 So the correct type-check command in CI is two commands:
 

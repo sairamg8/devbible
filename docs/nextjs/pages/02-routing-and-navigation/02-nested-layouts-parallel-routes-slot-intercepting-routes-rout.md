@@ -76,6 +76,7 @@ The docs list three use cases, and the third is the one worth memorising because
 > *"• Organizing routes by team, concern, or feature.*
 > *• Defining multiple root layouts.*
 > *• Opting specific route segments into sharing a layout, while keeping others out."*
+> — [Route Groups › Use cases](https://nextjs.org/docs/app/api-reference/file-conventions/route-groups#use-cases)
 
 That third bullet is the escape from an otherwise rigid rule. Layout nesting follows the URL, so ordinarily two sibling routes either share their parent's layout or neither does. A group breaks the tie without renaming anything:
 

@@ -64,13 +64,11 @@ Three claims compressed into three sentences, and each is a consequence of the m
 
 ## Deriving the number from a product requirement
 
-The method is to refuse to write a number until someone has written a sentence. The sentence has a subject, a bound and a consequence:
+The method is to refuse to write a number until someone has written a sentence. The sentence has a subject, a bound and a consequence. Three worked examples — these are illustrations written for this page, not quotations from any documentation:
 
-> *"A price change made in the admin must be visible on the public product page within 15 minutes, because that is what the pricing policy promises to customers."*
-
-> *"A published blog post should appear on the index within an hour. If it takes two, nobody notices."*
-
-> *"The terms-of-service page must show the current version within 24 hours of a legal update, and legal updates are announced in advance."*
+- A price change made in the admin must be visible on the public product page within 15 minutes, because that is what the pricing policy promises to customers.
+- A published blog post should appear on the index within an hour. If it takes two, nobody notices.
+- The terms-of-service page must show the current version within 24 hours of a legal update, and legal updates are announced in advance.
 
 Now the number is a derivation rather than a preference, and the derivation runs backwards through the four terms:
 

@@ -95,7 +95,10 @@ export async function GET() {
 
 ## The mirror-image anti-pattern: actions for reads
 
-> *"[Server Actions'] primary purpose is to mutate data from your frontend client. Server Actions are queued. Using them for data fetching introduces sequential execution."*
+> *"Server Actions let you run server-side code from the client. Their primary purpose is to mutate
+> data from your frontend client."*
+>
+> *"Server Actions are queued. Using them for data fetching introduces sequential execution."*
 
 A component that calls an action on mount to load data has put every read into a per-client FIFO queue shared with every mutation ([02g](02g-sequential-dispatch-and-the-single-response.md)). Four widgets loading in parallel become four requests in series, and a slow one blocks the button the user actually pressed.
 

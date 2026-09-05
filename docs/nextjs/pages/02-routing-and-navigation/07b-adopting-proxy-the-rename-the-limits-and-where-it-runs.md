@@ -24,19 +24,19 @@ The v16 upgrade guide gives the one-line reason:
 
 The reference expands it into something more pointed, and it is worth reading in full because it is the docs telling you not to use the feature:
 
-> *"The reason behind the renaming of `middleware` is that the term 'middleware' can often be confused with Express.js middleware, leading to a misinterpretation of its purpose. Also, Middleware is highly capable, so it may encourage the usage; however, **this feature is recommended to be used as a last resort**."*
+> *"The reason behind the renaming of `middleware` is that the term “middleware” can often be confused with Express.js middleware, leading to a misinterpretation of its purpose. Also, Middleware is highly capable, so it may encourage the usage; however, **this feature is recommended to be used as a last resort**."*
 
 > *"Next.js is moving forward to provide better APIs with better ergonomics so that developers can achieve their goals without Middleware."*
 
 > *"**We recommend users avoid relying on Middleware unless no other options exist.** Our goal is to give them APIs with better ergonomics so they can achieve their goals without Middleware."*
 
-> *"The term 'middleware' often confuses users with Express.js middleware, which can encourage misuse. To clarify our direction, we are renaming the file convention to 'proxy.' This highlights that we are moving away from Middleware, breaking down its overloaded features, and making the Proxy clear in its purpose."*
+> *"The term “middleware” often confuses users with Express.js middleware, which can encourage misuse. To clarify our direction, we are renaming the file convention to “proxy.” This highlights that we are moving away from Middleware, breaking down its overloaded features, and making the Proxy clear in its purpose."*
 
 🔴 **A rename is usually cosmetic; this one is a deprecation of the *pattern*, not just the filename.** The framework is not steering you towards `proxy.ts`, it is steering you away from putting logic in it at all. That is the frame to hold in a design review: every piece of work you push into proxy is work the maintainers expect you to move out again.
 
 And the name itself is an assertion about topology:
 
-> *"The name Proxy clarifies what Middleware is capable of. The term 'proxy' implies a network boundary in front of the app, which is how this feature behaves. **It can run outside of your application's main runtime and handle requests before they reach your app.** These characteristics align better with the term 'proxy' and provide a clearer purpose for the feature."*
+> *"The name Proxy clarifies what Middleware is capable of. The term “proxy” implies a network boundary in front of the app, which is how this feature behaves. **It can run outside of your application's main runtime and handle requests before they reach your app.** These characteristics align better with the term “proxy” and provide a clearer purpose for the feature."*
 
 That sentence is the source of the whole deployment constraint argued in [07](07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md) — the name is not decoration, it is a warning about where the code runs.
 
@@ -246,7 +246,7 @@ if (isProtectedRoute && !session?.userId) {
 ## Interview questions
 
 **★ Why was middleware renamed rather than just left alone?**
-Two stated reasons and one that the docs make plain without labelling it a reason. The published reasons are that *"the term 'middleware' can often be confused with Express.js middleware, leading to a misinterpretation of its purpose"*, and that "proxy" *"implies a network boundary in front of the app, which is how this feature behaves."* The third is that they want you to use it less: *"Middleware is highly capable, so it may encourage the usage; however, this feature is recommended to be used as a last resort"* and *"We recommend users avoid relying on Middleware unless no other options exist."* The migration section says the direction out loud — *"we are moving away from Middleware, breaking down its overloaded features."* The rename is a signpost pointing away from the file, not towards it.
+Two stated reasons and one that the docs make plain without labelling it a reason. The published reasons are that *"the term “middleware” can often be confused with Express.js middleware, leading to a misinterpretation of its purpose"*, and that "proxy" *"implies a network boundary in front of the app, which is how this feature behaves."* The third is that they want you to use it less: *"Middleware is highly capable, so it may encourage the usage; however, this feature is recommended to be used as a last resort"* and *"We recommend users avoid relying on Middleware unless no other options exist."* The migration section says the direction out loud — *"we are moving away from Middleware, breaking down its overloaded features."* The rename is a signpost pointing away from the file, not towards it.
 
 **★ Is proxy an acceptable place to do authorization?**
 Only as an optimistic pre-filter. The getting-started page says it *"should not be used as a full session management or authorization solution"*, and the file convention reference adds that you should *"Always verify authentication and authorization inside each Server Function rather than relying on Proxy alone."* The authentication guide gives the mechanism behind the advice: proxy runs on every route *including prefetched ones*, so *"it's important to only read the session from the cookie (optimistic checks), and avoid database checks to prevent performance issues"* — a database call there is a database call per prefetch. It closes with the architectural rule: *"The majority of security checks should be performed as close as possible to your data source."* So: cookie-shaped redirect in proxy, real check in the data access layer.

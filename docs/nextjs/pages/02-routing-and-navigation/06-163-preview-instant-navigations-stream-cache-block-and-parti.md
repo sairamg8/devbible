@@ -77,9 +77,9 @@ This is the correction most likely to cost you in an interview or a code review,
 
 The blog's section is titled *"Stream, Cache, or Block"* and describes a **choice you make when a route blocks**, expressed as buttons in the development error overlay:
 
-> *"Now, when a route awaits some data on the server, you will be presented with a choice between a few options"*
+> *"Now, when a route `await`s some data on the server, you will be presented with a choice between a few options:"*
 
-> *"To make a navigation instant, you 'turn' an asynchronous operation into something that can be available instantly:"*
+> *"To make a navigation instant, you “turn” an asynchronous operation into something that can be available instantly:"*
 > *"**Stream** with `<Suspense>`. The user will instantly see a loading state (with more UI streaming in after)."*
 > *"**Cache** with `'use cache'`. The user will instantly see a previously cached UI (reused between requests)."*
 > *"In both cases above, the navigation will feel SPA-like and instant to the user."*

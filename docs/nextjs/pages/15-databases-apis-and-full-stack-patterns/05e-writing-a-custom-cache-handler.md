@@ -81,7 +81,11 @@ So `set` is handed a `Promise<CacheEntry>` rather than an entry, because the fra
 
 ### `getExpiration` has three return values and they mean different things
 
-> *"`getExpiration` returns: `0` if none of the tags were ever revalidated; a timestamp (in milliseconds) representing the most recent revalidation; `Infinity` to indicate soft tags should be checked in the `get` method instead."*
+The reference lists them as three bullets under "Returns:" —
+
+> *"`0` if none of the tags were ever revalidated"* · *"A timestamp (in milliseconds) representing
+> the most recent revalidation"* · *"`Infinity` to indicate soft tags should be checked in the `get`
+> method instead"*
 
 `0` means "nothing to compare against, the entry is fine". A timestamp means "compare it with `entry.timestamp` — older loses". `Infinity` is an opt-out: it tells the framework you will handle soft-tag checking yourself inside `get`, which is why `get` receives `softTags` as its second argument at all.
 
