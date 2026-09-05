@@ -12,6 +12,7 @@ description: "The mixed caching strategy on a single page, and the nesting rules
 > [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote) and
 > [`use cache: private`](https://nextjs.org/docs/app/api-reference/directives/use-cache-private).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Picking one directive per application is the wrong granularity — the unit of choice is a
 piece of data, and a single product page has at least three.** The product record is identical
@@ -132,6 +133,12 @@ async function outerRemote() {
 }
 ```
 
+Those four rows are the four combinations the documentation states, and it states no others.
+In particular it does not say what happens when a `'use cache: private'` scope is nested
+inside a plain `use cache` — **treat that as unspecified rather than as permitted**, and note
+that it cannot work in any case: the outer scope is a candidate for prerendering and the inner
+one reads runtime data.
+
 The rule follows from what the two directives promise. `private` guarantees the value never
 rests on a server; `remote` guarantees it does. Nesting either inside the other would make one
 of those promises false, so the framework refuses rather than silently picking a winner.
@@ -180,8 +187,10 @@ async function PersonalisedFeed({ shared }: { shared: Item[] }) {
 
 **Symptom.** Every deploy produces a cold cache and a load spike on the upstream.
 
-**Cause.** The cache key includes the **build ID** — or `deploymentId` when configured — for
-all three directives. This is deliberate: between builds a function's identity hash or return
+**Cause.** The cache key includes the **build ID** — or `deploymentId` when configured — so
+neither `use cache` nor `use cache: remote` carries over to a new deploy. (`private` is listed
+as *"N/A"* for this row, because nothing was stored on a server to survive anything.) This is
+deliberate: between builds a function's identity hash or return
 shape can change (upgrading a CMS client, refactoring the function, changing a dependency), so
 reusing old entries risks serving stale or malformed data.
 

@@ -1,7 +1,7 @@
 ---
 title: "`use cache: private` is the only directive that may read cookies, and the only one that stores nothing on your server"
 sidebar_label: "4 · `use cache: private`"
-sidebar_position: 9
+sidebar_position: 10
 description: "The compliance escape hatch: browser-memory-only caching, the two cacheLife thresholds that decide whether it prefetches at all, and why it is not a safe default."
 ---
 

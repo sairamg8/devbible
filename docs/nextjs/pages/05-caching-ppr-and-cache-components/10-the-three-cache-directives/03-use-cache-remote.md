@@ -1,7 +1,7 @@
 ---
 title: "`use cache: remote` buys a shared, durable cache, and you pay for it in latency and infrastructure"
 sidebar_label: "3 · `use cache: remote`"
-sidebar_position: 5
+sidebar_position: 6
 description: "When a remote cache handler earns its cost, when it is strictly worse than nothing, and how cache-key cardinality decides which it is."
 ---
 

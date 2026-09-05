@@ -1,8 +1,8 @@
 ---
-title: "A slot passes through a cached component untouched, and a captured variable does not"
+title: "A slot passes through a cached component untouched, which is the only reason a cached layout is usable"
 sidebar_label: "1c · Slots and cache keys"
 sidebar_position: 3
-description: "Interleaving children through a cached component, closure capture silently enlarging the cache key, and choosing the dimension you cache on."
+description: "Interleaving children and Server Actions through a cached component, and the two different serialization systems that arguments and return values are held to."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -11,14 +11,16 @@ description: "Interleaving children through a cached component, closure capture 
 > [`use cache`](https://nextjs.org/docs/app/api-reference/directives/use-cache) and
 > [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
-**Two things decide whether a cached component is useful, and both are about what ends up in
-its key.** A slot handed in as `children` does *not* join the key, which is what lets a cached
-layout wrap dynamic content. A variable the body happens to reference from an enclosing scope
-*does* join the key, invisibly, which is what turns a function with one parameter into
-thousands of entries. The first is the composition mechanism you should reach for; the second
-is the bug you will spend an afternoon on. Neither is stated in the function's signature,
-which is why both surprise people.
+**A slot handed in as `children` does *not* join the cache key, and that single fact is what
+makes cached components composable at all.** It is why a cached `layout` can wrap dynamic
+content without freezing it, and why a Server Action can travel through a cached component to
+a client one. The rule has an exact boundary — pass-through holds only while the cached body
+does not *reference* the slot — and a second rule sits beside it that catches people just as
+often: arguments and return values are serializable under two **different** systems, so a value
+you can return is not necessarily a value you can accept. The other half of the key story, what
+*does* join the key and what that costs, is [chunk 1d](01d-cache-keys-and-cardinality.md).
 
 ## Interleaving: slots pass through without joining the key
 
@@ -106,107 +108,7 @@ async function UserProfile({ user }: { user: UserClass }) {
 `URL` being unsupported catches people out, because it looks like a plain value. Pass
 `url.toString()` instead.
 
-## Choosing the dimension you cache on
-
-Every distinct key value is a separate entry, so **cache utilization is decided by
-cardinality**. The winning move is almost always to cache on the low-cardinality dimension a
-high-cardinality one *selects*.
-
-```tsx filename="app/products/[category]/page.tsx"
-async function ProductList({ params, searchParams }) {
-  const { category } = await params
-  const { minPrice } = await searchParams
-
-  // Cache on category (few values); do NOT include the price filter (many values)
-  const products = await getProductsByCategory(category)
-
-  // Filter in memory rather than creating an entry per price
-  const filtered = minPrice
-    ? products.filter((p) => p.price >= parseFloat(minPrice))
-    : products
-
-  return <div>{/* render filtered */}</div>
-}
-
-async function getProductsByCategory(category: string) {
-  'use cache: remote'
-  return db.products.findByCategory(category)
-}
-```
-
-The entry is larger — all products in a category — and that is the trade being made
-deliberately: more storage per entry, in exchange for a hit rate that actually protects the
-backend.
-
-The same logic applies to user data. Instead of caching `getUserProfile(sessionID)` — one
-entry per user — cache `getCMSContent(language)`, which produces perhaps ten to fifty entries
-for any number of users.
-
 ## Gotchas
-
-### Closure capture silently enlarges the cache key
-
-**Symptom.** A cached function has one argument but produces far more entries than that
-argument has distinct values. Hit rate is near zero and memory climbs.
-
-**Cause.** When a cached function references variables from an outer scope, **those variables
-are automatically captured and bound as arguments**, making them part of the cache key. The
-signature does not show it.
-
-```tsx
-async function Component({ userId }: { userId: string }) {
-  const getData = async (filter: string) => {
-    'use cache'
-    // Key includes BOTH userId (captured from closure) and filter (argument)
-    const res = await fetch(`https://api.example.com/users/${userId}/data?filter=${filter}`)
-    return res.json()
-  }
-  return getData('active')
-}
-```
-
-**Fix.** Read the key as *everything the body touches from outside itself*, not just the
-parameter list. Hoist genuinely shared functions to module scope so nothing can be captured
-by accident:
-
-```tsx
-// GOOD — module scope, nothing captured; the key is exactly (userId, filter)
-async function getUserData(userId: string, filter: string) {
-  'use cache'
-  const res = await fetch(`https://api.example.com/users/${userId}/data?filter=${filter}`)
-  return res.json()
-}
-```
-
-**Related and easy to miss:** when a cached function reads root parameters, **only the ones it
-actually reads** become part of its key — so `next/root-params` does not silently fragment
-entries by every root param the route has.
-
-### Assuming a shared cache is a per-user cache
-
-**Symptom.** Users intermittently see another user's content — a name, a basket, a price tier.
-
-**Cause.** `use cache` and `use cache: remote` are **shared across all users**. A per-user
-value either reaches the key and fragments the entry into one-per-user (useless), or it does
-not reach the key and **everyone shares one entry** (a data leak). The second is the dangerous
-one, and it passes single-user testing perfectly.
-
-**Fix.** Never cache a per-user payload in a shared directive.
-
-```tsx
-// BAD — one entry per user at best, cross-user bleed at worst
-async function getUserProfile(sessionId: string) {
-  'use cache: remote'
-  return db.users.findBySession(sessionId)
-}
-
-// GOOD — cache the shared thing the preference selects
-async function getCMSContent(language: string) {
-  'use cache: remote'
-  cacheLife({ expire: 3600 })
-  return cms.getHomeContent(language)   // ~10-50 entries, not thousands
-}
-```
 
 ### Introspecting a slot inside a cached component
 
@@ -264,25 +166,6 @@ except as pass-through.
 Class instances, functions (except as pass-through), symbols, `WeakMap`, `WeakSet`, and `URL`
 instances.
 
-**★ A cached function takes one `filter` argument but you see thousands of entries. Why?**
-Closure capture. Variables referenced from an outer scope are bound as arguments and become
-part of the key, so a captured `userId` multiplies entries by the number of users.
-
-**★ How do you fix closure capture?**
-Hoist the function to module scope and pass everything it needs explicitly, so the key is
-exactly its parameter list.
-
-**★ How do you cache per-user-preference data without one entry per user?**
-Cache on the dimension with few unique values that the preference *selects* — language,
-currency, category — and filter or select the rest in memory.
-
-**★ What is the most dangerous failure mode of a shared cache directive?**
-Caching a per-user payload where the user identifier is *not* in the key. Every user then
-shares one entry. It passes single-user testing and leaks data under real traffic.
-
-**★ If a cached function reads root params, do all of the route's root params enter its key?**
-No — only the ones it actually reads.
-
 ---
 
-**Previous:** [1b · Composing the three](01b-composing-the-three.md)
+**Previous:** [1b · Composing the three](01b-composing-the-three.md) · **Next:** [1d · Cache keys and cardinality](01d-cache-keys-and-cardinality.md)

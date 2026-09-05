@@ -1,7 +1,7 @@
 ---
 title: "Set `cacheLife` explicitly in every cached scope, or the lifetime stops being visible at the call site"
 sidebar_label: "5 · Revalidation and lifetimes"
-sidebar_position: 10
+sidebar_position: 11
 description: "Time-based and on-demand revalidation, the default profile's real numbers, the two-branch nesting rule, and the prerendering thresholds that make a cache short-lived."
 ---
 

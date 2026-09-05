@@ -1,7 +1,7 @@
 ---
 title: "`revalidateTag` now takes a second argument, and `updateTag` is the one that lets a user see their own write"
 sidebar_label: "5b · `revalidateTag` vs `updateTag`"
-sidebar_position: 11
+sidebar_position: 12
 description: "The two-argument signature and its deprecated single-argument form, the profile that decides how long stale is served, and why updateTag is Server-Action-only."
 ---
 

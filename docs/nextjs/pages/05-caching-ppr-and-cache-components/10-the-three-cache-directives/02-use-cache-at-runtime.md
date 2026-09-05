@@ -1,7 +1,7 @@
 ---
 title: "`use cache` is primarily a prerender tool, and its runtime cache depends on where you host"
 sidebar_label: "2 · `use cache` at runtime"
-sidebar_position: 4
+sidebar_position: 5
 description: "The in-memory LRU, why serverless and self-hosted behave differently, the client-side 30-second floor, and the isolation rules that make cached scopes self-contained."
 ---
 
@@ -10,6 +10,7 @@ description: "The in-memory LRU, why serverless and self-hosted behave different
 > Verified: 2026-09-03 against the Next.js API reference for
 > [`use cache`](https://nextjs.org/docs/app/api-reference/directives/use-cache).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **`use cache` is designed first to get uncached data into the static shell, and only second to
 cache at runtime — and the second job works very differently depending on where you deploy.**
@@ -24,7 +25,8 @@ memory lives is how teams end up surprised that their upstream still sees full t
 Outputs are stored by a **cache handler**, in memory by default, and last until they
 revalidate. On the server, entries respect the `revalidate` and `expire` times from the
 `cacheLife` profile. You can replace the storage by configuring `cacheHandlers` in
-`next.config.js`.
+`next.config.js` — the slot plain `use cache` uses is called `default`, and it is covered in
+[chunk 3b](03b-configuring-cache-handlers.md).
 
 | Environment | Runtime caching behaviour |
 |---|---|
@@ -38,9 +40,14 @@ is still fresh.
 This is precisely the gap **`use cache: remote`** exists to close — see
 **[chunk 3](03-use-cache-remote.md)**.
 
-> Even where the server-side hit rate is poor, `use cache` still earns its place: it tells
-> Next.js **what can be prefetched** and **defines stale times for client-side navigation**.
-> Those benefits do not depend on a server-side hit at all.
+Even where the server-side hit rate is poor, `use cache` still earns its place, and the
+documentation says so in as many words:
+
+> *"Note that `use cache` still provides value beyond server-side caching: it informs Next.js
+> what can be prefetched and defines stale times for client-side navigation."*
+> — [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote)
+
+Neither of those benefits depends on a server-side hit at all.
 
 ## The client half, and its 30-second floor
 
@@ -250,4 +257,4 @@ It leaves a hole that resolves at request time instead of being stored in the sh
 
 ---
 
-**Previous:** [1c · Slots and cache keys](01c-slots-and-cache-keys.md)
+**Previous:** [1d · Cache keys and cardinality](01d-cache-keys-and-cardinality.md)

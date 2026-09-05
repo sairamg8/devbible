@@ -182,7 +182,7 @@ Recorded so they can be fixed deliberately:
 - ⚠️ **Chapter 5 is hollow and is the highest-value repair on the track.** Its six top-level
   concept pages are generated stubs — three byte-identical, and **two with completely empty
   bodies** — while `05-caching-ppr-and-cache-components/10-the-three-cache-directives/` holds
-  9 authored, verified pages totalling 2,267 lines. Other chapters cite the stubs as the
+  14 authored, verified pages totalling 3,315 lines. Other chapters cite the stubs as the
   authority for the cache model. There is also **no authored Partial Pre-Rendering page
   anywhere in the track**, and the upstream standalone PPR URL 404s in 16.3.4.
   Chapter 4 is the only fully authored chapter and is the model to copy.

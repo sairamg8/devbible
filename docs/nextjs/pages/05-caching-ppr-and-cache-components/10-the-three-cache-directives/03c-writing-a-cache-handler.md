@@ -1,7 +1,7 @@
 ---
 title: "A cache handler is five methods, and the two that look simplest carry contracts the type signature does not state"
 sidebar_label: "3c · Writing a cache handler"
-sidebar_position: 7
+sidebar_position: 8
 description: "The CacheHandler interface, why set receives a promise rather than an entry, the three meanings of getExpiration's return value, and the stream-and-units shape of CacheEntry."
 ---
 

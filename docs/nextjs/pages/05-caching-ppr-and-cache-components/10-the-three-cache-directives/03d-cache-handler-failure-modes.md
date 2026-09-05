@@ -1,7 +1,7 @@
 ---
 title: "A correct-looking cache handler still has three runtime failure modes, and one of them takes the site down"
 sidebar_label: "3d · Cache handler failure modes"
-sidebar_position: 8
+sidebar_position: 9
 description: "Soft tags and why revalidatePath needs them, the asymmetry between a failing get and a failing set, partial writes, and how far refreshTags can be trusted."
 ---
 

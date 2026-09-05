@@ -1,7 +1,7 @@
 ---
 title: "A build that hangs and a build that fails instantly are two different bugs, and the error you get tells you which"
 sidebar_label: "5c · Build hangs and the prerender timeout"
-sidebar_position: 12
+sidebar_position: 13
 description: "The 50-second cache-fill timeout, the three ways a runtime Promise crosses into a cached scope, and how to tell a timeout apart from next-request-in-use-cache."
 ---
 

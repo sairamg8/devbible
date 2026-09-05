@@ -1,7 +1,7 @@
 ---
 title: "`use cache: remote` is only as remote as `cacheHandlers` makes it, and with no handler configured it is not remote at all"
 sidebar_label: "3b · Configuring `cacheHandlers`"
-sidebar_position: 6
+sidebar_position: 7
 description: "The default and remote handler slots, the silent in-memory fallback when you self-host, named handlers beyond the three directives, and why private can never be redirected."
 ---
 
