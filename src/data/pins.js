@@ -284,6 +284,19 @@ export const PINS = {
     pin: '7.10.0', checked: '2026-09-05', tracks: ['nextjs'], names: ['prisma', '@prisma/client'],
     note: '@auth/prisma-adapter 2.11.3 declares "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5 || >=6" — the first clause is unbounded, so Prisma 7 installs with no peer warning despite the ladder stopping at 6.',
   },
+  // Added 2026-09-05 with nextjs ch15 topic 01. Drizzle is taught with real schema, relation,
+  // type-inference and migration code across 01h/01ha/01hb/01hc/01i/01ia, so under the
+  // library-necessity test it earns a pin rather than being taught with nothing watching it.
+  drizzleOrm: {
+    label: 'Drizzle ORM', source: 'npm:drizzle-orm', policy: 'latest',
+    pin: '0.45.2', checked: '2026-09-05', tracks: ['nextjs'], names: ['drizzle', 'drizzle-orm'],
+    note: 'The published docs at orm.drizzle.team describe the 1.0 RELEASE CANDIDATE (drizzle-orm@rc), not this stable line — and the two differ in the relations API: the rc shows defineRelations, while 0.45.2 typings export relations() and no defineRelations at all (read from unpkg 2026-09-05). Bumping this pin to 1.0 is an API migration, not a version bump.',
+  },
+  drizzleKit: {
+    label: 'Drizzle Kit', source: 'npm:drizzle-kit', policy: 'latest',
+    pin: '0.31.10', checked: '2026-09-05', tracks: ['nextjs'], names: ['drizzle-kit'],
+    note: 'Travels with drizzle-orm and shares its rc split (rc = 1.0.0-rc.4 for both). It has no shadow-database equivalent, so it cannot detect schema drift the way Prisma Migrate can — ch15 01i/01ia teach building that check from drizzle-kit export instead.',
+  },
   reactHookForm: {
     label: 'React Hook Form', source: 'npm:react-hook-form', policy: 'latest',
     pin: '7.87.0', checked: '2026-09-05', tracks: ['nextjs', 'react', 'real-world'],
