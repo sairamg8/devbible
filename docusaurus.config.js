@@ -28,7 +28,34 @@ const config = {
   tagline: 'Frontend to fullstack — MERN and PERN, explained properly',
   favicon: 'img/favicon.ico',
 
-  future: {v4: true},
+  // ⚡ `@docusaurus/faster` has been a dependency since the site was set up but
+  // was never switched on, so 6,797 markdown files went through webpack + Babel.
+  // Turning it on swaps in Rspack, SWC and Lightning CSS — the Rust toolchain —
+  // which matters most on the SERVER compile, the stage that sits near 16% for
+  // an age on a corpus this size.
+  //
+  // ⚠️ The key is `faster`. Docusaurus 3.10.2 RENAMED it from
+  // `experimental_faster` and throws at config load on the old name — which
+  // looks exactly like a crashed build, because nothing is written before it.
+  //
+  // `faster: true` turns on all nine: swcJsLoader, swcJsMinimizer,
+  // swcHtmlMinimizer, lightningCssMinimizer, mdxCrossCompilerCache,
+  // rspackBundler, rspackPersistentCache, ssgWorkerThreads, gitEagerVcs.
+  //
+  // 🔴 ssgWorkerThreads is the reason the tuning in package.json finally does
+  // something. `ssgExecutor.js:139` only spawns SSG workers when that flag is on,
+  // so DOCUSAURUS_SSG_WORKER_THREAD_COUNT and
+  // DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY — set in `yarn build` and in
+  // scripts/ensure-search-index.mjs, with a comment claiming they keep the two
+  // builds in step — were read by nothing at all until now.
+  //
+  // It requires `v4.removeLegacyPostBuildHeadAttribute`, which `v4: true` already
+  // turns on (configValidation.js:81); the build throws by name if that ever
+  // stops being true.
+  //
+  // If a build breaks in a way that smells like the bundler rather than the
+  // content, set this to false to get webpack back and confirm before digging.
+  future: {v4: true, faster: true},
 
   // Published to GitHub Pages as a project site, so the repo name is part of
   // the path: https://sairamg8.github.io/devbible/
@@ -146,9 +173,35 @@ const config = {
         // total output roughly doubled.
         //
         // The cost is real and worth stating: there is no single search that
-        // spans all technologies at once. The search box gets a context
-        // switcher instead, so you pick the technology and search inside it.
+        // spans all technologies at once. You pick a technology by navigating
+        // into it, and the box searches inside that one.
         useAllContextsWithNoSearchContext: false,
+
+        // 🔴 So HIDE the box on routes that match no technology — the homepage,
+        // chiefly. Without this it renders on `/`, fetches the root index, and
+        // returns "No documents were found" for every query ever typed, because
+        // with the split above the root index holds only the pages matching no
+        // context: exactly one. A control that cannot succeed should not be
+        // shown.
+        //
+        // Considered and rejected 2026-09-05: filling that root index with every
+        // page TITLE (~490 KB gzipped at full corpus) to make `/` a site-wide
+        // search. It works, but it is a different search behind the same box —
+        // titles on `/`, full text inside a technology — so `multer`,
+        // `EADDRINUSE` and `ILIKE` return nothing from the homepage and hit
+        // instantly from inside their technology. The user's own reason for
+        // dropping it is the decisive one: you already know which technology a
+        // concept lives in, so you navigate there or start from Google.
+        //
+        // ⚠️ Two knock-on effects, both accepted:
+        //   1. The plugin stops EMITTING search-index.json altogether
+        //      (postBuildFactory.js:28-30 only creates the root bucket when this
+        //      is false), so docs/README.md at /docs — the one page in no
+        //      technology — is no longer searchable anywhere.
+        //   2. /search?q=… with no `ctx` param has no index to fetch. It is
+        //      unreachable by clicking, since the box is hidden exactly where
+        //      `ctx` would be absent; only a hand-typed URL gets there.
+        hideSearchBarWithNoSearchContext: true,
 
         // Both of these earn their keep specifically because the corpus is
         // ~2,900 pages across 15+ technologies, where the same headings

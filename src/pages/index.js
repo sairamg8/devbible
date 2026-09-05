@@ -1,9 +1,31 @@
 import React, {useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import {summarise} from '@site/src/data/progress';
+import {summarise, lastUpdated} from '@site/src/data/progress';
+import {PINS} from '@site/src/data/pins';
 import {LAYERS as STACK} from '@site/src/data/stack';
 import styles from './index.module.css';
+
+/**
+ * The footer's "content verified" month, read off the freshest per-language
+ * `updated` stamp rather than typed in.
+ *
+ * It used to be the literal string "August 2026 · Node 26.7.0 current". Both
+ * halves had gone stale by 2026-09-05 — 1,637 `> Verified:` lines were dated
+ * September, and Node's newest release had moved to 26.8.1 — which is the exact
+ * failure this file's own opening comment says must not happen. A hardcoded
+ * version in a page about being current is a claim nobody re-checks, so the
+ * footer now names only what the repo can prove: the LTS line the corpus is
+ * actually pinned to (`src/data/pins.js`, which `yarn currency` polices) and the
+ * month of the most recent write.
+ */
+const VERIFIED_THROUGH = (() => {
+  const stamp = lastUpdated();
+  if (!stamp) return 'this release';
+  const [y, m] = stamp.date.split('-');
+  const month = new Date(Number(y), Number(m) - 1, 1).toLocaleString('en-GB', {month: 'long'});
+  return `${month} ${y}`;
+})();
 
 /**
  * The stack, with live numbers attached.
@@ -234,9 +256,9 @@ export default function Home() {
 
         {shown.length === 0 && (
           <p className={styles.empty}>
-            Nothing matches “{query}”. The search box reads the technology name
-            and its one-line summary — for anything inside a page, use the site
-            search in the header.
+            Nothing matches “{query}”. This box reads the technology name and
+            its one-line summary — to search the pages themselves, open a
+            technology and use the search box there.
           </p>
         )}
 
@@ -279,7 +301,8 @@ export default function Home() {
         </section>
 
         <footer className={styles.foot}>
-          Content verified August 2026 · Node 26.7.0 current, Node 24 active LTS
+          Content verified {VERIFIED_THROUGH} · Node {PINS.node.pin} active LTS
+          {' '}(cycle {PINS.node.cycle})
         </footer>
       </main>
     </Layout>

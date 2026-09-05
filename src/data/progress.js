@@ -10,6 +10,18 @@
  * `pages`        explanation pages written so far; 0 means not started.
  * `pagesPlanned` set only while a phase is mid-flight, so the bar can show
  *                partial credit. Remove it when the phase is finished.
+ *                🔴 **Omitting it on a mid-flight phase silently inflates the
+ *                site.** `phaseStatus` reads any phase with `pages > 0` and no
+ *                `pagesPlanned` as 'written', and `summarise` then credits it
+ *                its FULL `topics` count — so a phase 8 topics into 14 reports
+ *                as finished. Two phases were doing exactly that when the
+ *                corpus was audited on 2026-09-05 (Java 13, MongoDB 6),
+ *                over-crediting 7 topics between them.
+ *                ⚠️ `pages < topics` is NOT by itself a gap: Node.js phases 0–5
+ *                and React phase 0 deliberately merge pairs of syllabus rows
+ *                onto one page, and each of those phase READMEs carries a
+ *                Coverage table naming every row and the page it landed on.
+ *                Check that table before "fixing" a number here.
  * `updated`      🔴 REQUIRED. Local date and time, `'YYYY-MM-DD HH:MM'`, of when
  *                that language's pages last changed. **Every session updates its
  *                own language's stamp when it finishes a piece of work** — the
@@ -170,7 +182,10 @@ export const LANGUAGES = {
       {n: 3, slug: 'phase-3-schema-design', name: 'Schema design and modelling', part: 'The document model', topics: 6, pages: 6},
       {n: 4, slug: 'phase-4-crud', name: 'CRUD and DML', part: 'Querying', topics: 6, pages: 6},
       {n: 5, slug: 'phase-5-query-operators', name: 'Query operators and projection', part: 'Querying', topics: 6, pages: 6},
-      {n: 6, slug: 'phase-6-aggregation', name: 'The aggregation pipeline', part: 'Querying', topics: 6, pages: 5},
+      // Same trap as Java phase 13: `06-unwind.md` is not on disk, so without
+      // `pagesPlanned` this phase read as finished and credited a 6th topic.
+      // Audited against disk 2026-09-05.
+      {n: 6, slug: 'phase-6-aggregation', name: 'The aggregation pipeline', part: 'Querying', topics: 6, pages: 5, pagesPlanned: 6},
       {n: 7, slug: 'phase-7-indexes', name: 'Indexes and the query planner', part: 'Querying', topics: 6, pages: 0},
       {n: 8, slug: 'phase-8-node-driver', name: 'The Node.js driver, end to end', part: 'From Node', topics: 6, pages: 0},
       {n: 9, slug: 'phase-9-mongoose', name: 'Mongoose', part: 'From Node', topics: 6, pages: 0},
@@ -721,7 +736,11 @@ export const LANGUAGES = {
       {n: 10, slug: 'phase-10-data-access', name: 'Data access', part: 'Application', topics: 14, pages: 14},
       {n: 11, slug: 'phase-11-testing', name: 'Testing', part: 'Production', topics: 12, pages: 12},
       {n: 12, slug: 'phase-12-jvm-production', name: 'The JVM in production', part: 'Production', topics: 15, pages: 12, pagesPlanned: 15},
-      {n: 13, slug: 'phase-13-oauth2-oidc', name: 'OAuth2, OIDC and service security', part: 'Distributed', topics: 14, pages: 8},
+      // `pagesPlanned` is REQUIRED here, not decorative: without it `phaseStatus`
+      // reads any phase with pages > 0 as 'written' and credits ALL 14 topics.
+      // JAVA-BOARD.md has rows 09–14 free with nothing on disk — audited
+      // 2026-09-05, this phase was over-crediting 6 unwritten topics.
+      {n: 13, slug: 'phase-13-oauth2-oidc', name: 'OAuth2, OIDC and service security', part: 'Distributed', topics: 14, pages: 8, pagesPlanned: 14},
       {n: 14, slug: 'phase-14-microservice-architecture', name: 'Microservice architecture', part: 'Distributed', topics: 12, pages: 2, pagesPlanned: 12},
       {n: 15, slug: 'phase-15-messaging-event-driven', name: 'Messaging and event-driven', part: 'Distributed', topics: 14, pages: 0},
       {n: 16, slug: 'phase-16-resilience-operations', name: 'Resilience and operating the fleet', part: 'Distributed', topics: 13, pages: 0},

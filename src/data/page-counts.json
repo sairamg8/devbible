@@ -154,15 +154,15 @@
     }
   },
   "java": {
-    "pages": 2095,
+    "pages": 2036,
     "phases": {
       "phase-0-platform-jvm": 17,
       "phase-1-language-core": 32,
-      "phase-10-data-access": 570,
-      "phase-11-testing": 483,
-      "phase-12-jvm-production": 358,
-      "phase-13-oauth2-oidc": 91,
-      "phase-14-microservice-architecture": 162,
+      "phase-10-data-access": 554,
+      "phase-11-testing": 470,
+      "phase-12-jvm-production": 342,
+      "phase-13-oauth2-oidc": 90,
+      "phase-14-microservice-architecture": 149,
       "phase-15-messaging-event-driven": 0,
       "phase-16-resilience-operations": 0,
       "phase-2-classes-objects": 32,

@@ -29,9 +29,18 @@
  *   reviews/        working records kept next to the content they review, and
  *                   already excluded from the build in docusaurus.config.js.
  *   syllabus/       the topic inventory, not an explanation of anything.
+ *   _*              🔴 files and directories whose name starts with an
+ *                   underscore. `docusaurus.config.js` excludes
+ *                   `**\/_*.{js,jsx,ts,tsx,md,mdx}` and `**\/_*\/**`, so these
+ *                   never become routes. There are 59 of them — Java's `_plan.md`
+ *                   and `_PHASE-NOTES.md` working files — and counting them was
+ *                   this script's first bug: it reported 5,875 where the
+ *                   2026-09-05 corpus audit, measured independently, reported
+ *                   5,816. The difference was exactly those 59.
  *
- * That is the same rule the currency scan uses, so the two agree about what a
- * page is.
+ * That is the same rule the corpus audit and the currency scan use, so all three
+ * agree about what a page is. Keep it that way: a fourth definition of "page" is
+ * how the site ends up quoting two different totals again.
  */
 
 import fs from 'node:fs';
@@ -54,6 +63,7 @@ function countPages(dir) {
     return 0;
   }
   for (const entry of entries) {
+    if (entry.name.startsWith('_')) continue;
     if (entry.isDirectory()) {
       if (entry.name === 'reviews') continue;
       total += countPages(path.join(dir, entry.name));
