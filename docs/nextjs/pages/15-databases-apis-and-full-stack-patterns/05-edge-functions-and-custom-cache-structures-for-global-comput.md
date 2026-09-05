@@ -33,12 +33,11 @@ Everything in this topic is therefore optional in the sense that your applicatio
 | # | Chunk | Covers |
 |---|---|---|
 | 1 | **[The Edge Runtime is deprecated](05b-the-edge-runtime-is-deprecated.md)** | 🔴 what the docs actually say, what to delete, why Proxy is a special case, and what is *not* claimed — there is no announced removal version |
-| 2 | **The CDN layer and `Cache-Control` by rendering strategy** *(not written yet)* | the exact headers Next.js emits for static, ISR and dynamic pages, and why `s-maxage` is the number that decides your bill |
+| 2 | **[The CDN layer and `Cache-Control`](05c-the-cdn-layer-and-cache-control.md)** | the exact headers Next.js emits for static, ISR and dynamic pages, why `s-maxage` is the number that decides your bill, and 🔴 the fact that `revalidateTag()` never reaches a CDN |
 | 3 | **`Vary`, the `_rsc` parameter and what a CDN must forward** *(not written yet)* | the `rsc` header, the 307 hash redirect, and the navigation bug a stripped header produces |
-| 4 | **The on-demand revalidation gap** *(not written yet)* | 🔴 `revalidateTag()` does not reach your CDN, and what to do about it |
-| 5 | **Writing a custom cache handler** *(not written yet)* | the `get`/`set`/`refreshTags`/`getExpiration`/`updateTags` interface and the `CacheEntry` shape |
-| 6 | **Streams, partial writes and failure semantics** *(not written yet)* | `.tee()`, why a throwing `get()` is a render error rather than a miss, and why `set()` failures are invisible |
-| 7 | **[A shared cache across instances](05h-a-shared-cache-across-instances.md)** | 🔴 revalidation is local by default — one instance invalidating its own copy is the default behaviour, not a bug |
+| 4 | **Writing a custom cache handler** *(not written yet)* | the `get`/`set`/`refreshTags`/`getExpiration`/`updateTags` interface and the `CacheEntry` shape |
+| 5 | **Streams, partial writes and failure semantics** *(not written yet)* | `.tee()`, why a throwing `get()` is a render error rather than a miss, and why `set()` failures are invisible |
+| 6 | **[A shared cache across instances](05h-a-shared-cache-across-instances.md)** | 🔴 revalidation is local by default — one instance invalidating its own copy is the default behaviour, not a bug |
 
 ⚠️ **Scope boundary against [ch05](../05-caching-ppr-and-cache-components/01-explanation.md).** That chapter owns the caching *model* — `use cache`, `cacheLife`, PPR, where a cached value physically lives, and what `use cache: remote` means. This topic owns the *infrastructure*: the runtime question, the CDN in front, and the handler you write yourself. Where the two touch, ch05 is the reference and this topic links it.
 

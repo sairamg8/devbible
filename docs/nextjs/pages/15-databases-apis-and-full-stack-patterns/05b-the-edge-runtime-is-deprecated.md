@@ -150,4 +150,4 @@ Take the measurement seriously and the mechanism more seriously. Find out what t
 
 ---
 
-← [05 · Edge and custom cache structures](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → **The CDN layer and `Cache-Control`** *(not written yet)* · Jump → [05h · A shared cache across instances](05h-a-shared-cache-across-instances.md)
+← [05 · Edge and custom cache structures](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [05c · The CDN layer and `Cache-Control`](05c-the-cdn-layer-and-cache-control.md) · Jump → [05h · A shared cache across instances](05h-a-shared-cache-across-instances.md)
