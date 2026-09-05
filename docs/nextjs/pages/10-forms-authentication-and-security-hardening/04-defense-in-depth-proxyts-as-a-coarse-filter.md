@@ -24,7 +24,7 @@ Three sentences from the file-convention reference fix the layer's position, and
 
 Read the third one as an architectural statement rather than a performance tip. The proxy is not a function your route calls; it is a box that may sit in a different process, in a different region, on different hardware. It therefore has exactly one channel to your application:
 
-> *"To pass information from Proxy to your application, use [headers](#setting-headers), [cookies](#using-cookies), [rewrites](/docs/app/api-reference/functions/next-response#rewrite), [redirects](/docs/app/api-reference/functions/next-response#redirect), or the URL."*
+> *"To pass information from Proxy to your application, use [headers](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#setting-headers), [cookies](https://nextjs.org/docs/app/api-reference/file-conventions/proxy#using-cookies), [rewrites](https://nextjs.org/docs/app/api-reference/functions/next-response#rewrite), [redirects](https://nextjs.org/docs/app/api-reference/functions/next-response#redirect), or the URL."*
 
 So the proxy sees: the request method, the path, the query, the headers, the cookies. It does **not** see which Server Component the route will render, which database query that component will run, which row that query will return, or whether the session it just decrypted has since been revoked — the guide tells you not to look that last one up here. Everything it learns must be re-encoded as a string on a header before the route can use it, and a header your proxy sets is a header your route has to *trust*, which is a new problem rather than a solved one.
 
@@ -40,7 +40,7 @@ The authentication guide gives the pattern a name and a scope. Both halves matte
 
 > *"**Optimistic**: Checks if the user is authorized to access a route or perform an action using the session data stored in the cookie. These checks are useful for quick operations, such as showing/hiding UI elements or redirecting users based on permissions or roles."*
 
-> *"However, since Proxy runs on every route, including [prefetched](/docs/app/getting-started/linking-and-navigating#prefetching) routes, it's important to only read the session from the cookie (optimistic checks), and avoid database checks to prevent performance issues."*
+> *"However, since Proxy runs on every route, including [prefetched](https://nextjs.org/docs/app/getting-started/linking-and-navigating#prefetching) routes, it's important to only read the session from the cookie (optimistic checks), and avoid database checks to prevent performance issues."*
 
 And then, unambiguously:
 
@@ -89,9 +89,9 @@ Everything that code establishes is *"a cookie decrypted to something with a `us
 
 This is the single most important paragraph in the proxy reference and it is buried in a *Good to know* under the execution order:
 
-> *"[Server Functions](/docs/app/api-reference/directives/use-server) are not separate routes in this chain. They are handled as POST requests to the route where they are used, so a Proxy matcher that excludes a path will also skip Server Function calls on that path."*
+> *"[Server Functions](https://nextjs.org/docs/app/api-reference/directives/use-server) are not separate routes in this chain. They are handled as POST requests to the route where they are used, so a Proxy matcher that excludes a path will also skip Server Function calls on that path."*
 
-> *"A matcher change or a refactor that moves a Server Function to a different route can silently remove Proxy coverage. Always verify authentication and authorization inside each Server Function rather than relying on Proxy alone. See the [Data Security guide](/docs/app/guides/data-security#authentication-and-authorization) for recommended patterns."*
+> *"A matcher change or a refactor that moves a Server Function to a different route can silently remove Proxy coverage. Always verify authentication and authorization inside each Server Function rather than relying on Proxy alone. See the [Data Security guide](https://nextjs.org/docs/app/guides/data-security#authentication-and-authorization) for recommended patterns."*
 
 Three consequences, in order of how badly each one bites.
 
