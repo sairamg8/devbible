@@ -54,7 +54,9 @@ The trap is assuming a flag is reversible because it is a flag. `cacheComponents
 
 > *"Enabling `cacheComponents` is not a rename-only change: it can surface build errors for uncached data outside of `<Suspense>` and requires adopting the Cache Components model."*
 
-Enabling it removed `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` as controls as of v16.0.0. So turning the flag back off does not restore the application you had — **your code changed, not just your configuration**, and the old vocabulary is no longer available to change back to. [ch5 · what changes once the flag is on](../05-caching-ppr-and-cache-components/01d-what-changes-once-the-flag-is-on.md) is the inventory.
+Enabling it removed `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` as controls as of v16.0.0 — **for as long as the flag is on.**
+
+⚠️ **Be precise here, because the sloppy version of this claim is wrong in a way that matters.** Switching the flag back off *does* re-legalise those four exports, so the **configuration** is genuinely reversible. What is not reversible is the **code**. `use cache`, `cacheLife` and `cacheTag` exist only under the flag, so every scope written against the new model becomes invalid the moment it is off — and an application written under Cache Components from its first caching milestone, as SprintDesk was, has no old-style segment exports to restore, because none were ever written. **The reversal is a rewrite, not a revert**, and that is the honest form of the argument. [ch5 · what changes once the flag is on](../05-caching-ppr-and-cache-components/01d-what-changes-once-the-flag-is-on.md) is the inventory.
 
 The check is one sentence: *if we turned this off tomorrow, what would still be different?* If the answer is "nothing", it is a flag. If the answer names code, it was an adoption wearing a flag's clothing.
 
@@ -114,7 +116,7 @@ An evaluation you did not write down will be redone from memory in six months, w
 
 **★ Symptom: a preview API turns out to be named in ninety files when it moves.** Cause: nobody asked question 2 at adoption time, so the commitment grew silently one call site at a time. Fix: at adoption, decide whether the feature may be named outside a boundary you own, and enforce it with a lint rule or a review convention. Where wrapping is genuinely impossible, record that as the finding it is.
 
-**★ Symptom: "we can just turn the flag off" turns out to be false.** Cause: enabling it changed the code, not only the configuration — `cacheComponents` removed `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` as controls, so there is nothing to turn back *to*. Fix: apply the reversal test before adopting, not after: *if we turned this off tomorrow, what would still be different?* Anything that names code makes this an adoption, not a switch.
+**★ Symptom: "we can just turn the flag off" turns out to be false.** Cause: the configuration is reversible and the code is not, and only the first half gets checked. Turning `cacheComponents` off re-legalises `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` — but `use cache`, `cacheLife` and `cacheTag` exist *only* with the flag, so every cached scope you wrote stops being valid at once, and an application written under the new model from the start has no old-style exports to fall back to. Fix: apply the reversal test before adopting, not after: *if we turned this off tomorrow, what would still be different?* Anything that names code makes this an adoption, not a switch.
 
 **★ Symptom: a team plans a migration against a removal deadline that does not exist.** Cause: a deprecation was read as implying a schedule. The Edge Runtime deprecation names no removal version and does not say the build fails. Fix: quote the documentation's own words in the plan. If it names no version, the plan says *"no removal version published"*, which is honest and still actionable.
 
