@@ -16,9 +16,9 @@ description: "Why a layout is not a security boundary and the data reaches the R
 
 This is the most confidently-held wrong belief in App Router security, and the authentication guide contradicts it in two separate places.
 
-> *"Due to [Partial Rendering](/docs/app/getting-started/linking-and-navigating#client-side-transitions), be cautious when doing checks in [Layouts](/docs/app/api-reference/file-conventions/layout) as these don't re-render on navigation, meaning the user session won't be checked on every route change."*
+> *"Due to [Partial Rendering](https://nextjs.org/docs/app/getting-started/linking-and-navigating#client-side-transitions), be cautious when doing checks in [Layouts](https://nextjs.org/docs/app/api-reference/file-conventions/layout) as these don't re-render on navigation, meaning the user session won't be checked on every route change."*
 
-> *"A layout also does not control whether the rest of the route renders. Route segments and [parallel route slots](/docs/app/api-reference/file-conventions/parallel-routes#conditional-routes) are rendered by the router, so a layout that hides or swaps them does not stop them from running or from appearing in the [RSC Payload](/docs/app/glossary#rsc-payload)."*
+> *"A layout also does not control whether the rest of the route renders. Route segments and [parallel route slots](https://nextjs.org/docs/app/api-reference/file-conventions/parallel-routes#conditional-routes) are rendered by the router, so a layout that hides or swaps them does not stop them from running or from appearing in the [RSC Payload](https://nextjs.org/docs/app/glossary#rsc-payload)."*
 
 Take the second one slowly, because it is much worse than "the check is skipped."
 
@@ -124,7 +124,7 @@ There is a genuine case where the proxy is the control, and it is the placement 
 
 > *"To protect static routes that share data between users (e.g. content behind a paywall)."*
 
-> *"A DAL can be used to protect data fetched at request time. However, for static routes that share data between users, data will be fetched at build time and not at request time. Use [Proxy](#optimistic-checks-with-proxy-optional) to protect static routes."*
+> *"A DAL can be used to protect data fetched at request time. However, for static routes that share data between users, data will be fetched at build time and not at request time. Use [Proxy](https://nextjs.org/docs/app/guides/authentication#optimistic-checks-with-proxy-optional) to protect static routes."*
 
 For that route, the innermost layer that can see **any** fact about the requester is the proxy, because everything below it ran before the requester existed. So the gate goes there.
 
