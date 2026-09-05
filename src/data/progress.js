@@ -484,7 +484,7 @@ export const LANGUAGES = {
       {n: 6, slug: '06-ssg-isr-and-ssr-strategy', name: "SSG, ISR and SSR strategy", part: 'Refreshed for 16.3', topics: 26, pages: 26},
       {n: 7, slug: '07-error-handling-loading-states-and-resilience', name: "Error handling, loading states and resilience", part: 'Refreshed for 16.3', topics: 35, pages: 35},
       {n: 8, slug: '08-state-management-in-an-rsc-world', name: "State management in an RSC world", part: 'Refreshed for 16.3', topics: 57, pages: 57},
-      {n: 9, slug: '09-styling-and-ui', name: "Styling and UI", part: 'Refreshed for 16.3', topics: 20, pages: 20},
+      {n: 9, slug: '09-styling-and-ui', name: "Styling and UI", part: 'Refreshed for 16.3', topics: 6, pages: 23},
       {n: 10, slug: '10-forms-authentication-and-security-hardening', name: "Forms, authentication and security hardening", part: 'Refreshed for 16.3', topics: 46, pages: 46},
       {n: 11, slug: '11-performance-optimization-turbopack', name: "Performance optimization and Turbopack", part: 'Refreshed for 16.3', topics: 30, pages: 30},
       {n: 12, slug: '12-seo-metadata-and-accessibility', name: "SEO, metadata and accessibility", part: 'Refreshed for 16.3', topics: 59, pages: 59},
