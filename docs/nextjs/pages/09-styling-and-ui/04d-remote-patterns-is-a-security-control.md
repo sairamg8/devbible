@@ -1,7 +1,7 @@
 ---
 title: "`remotePatterns` is not configuration, it is an allow-list deciding who may hand bytes to a native decoder running on your server — and every field you omit widens it to `**`"
 sidebar_label: "04d · remotePatterns"
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -210,7 +210,7 @@ The 2026 image-decoder incident — an unauthenticated RCE reached through a nat
 
 **★ Symptom: the allow-list is narrow and the optimizer still fetched a host that is not on it.** Cause: an allowed host returned a redirect, and *"these redirects do not need to satisfy `remotePatterns`"* — the allow-list is only checked on the first hop. Fix: `maximumRedirects: 0`, or accept explicitly that any allowed host can redirect you anywhere.
 
-**★ Symptom: the image cache grows without bound and disk fills on a self-hosted deployment.** Cause: unconstrained cardinality — an omitted `search` lets the same image be requested under unlimited distinct URLs, and each is its own cache entry. Fix: pin `search`, pin `qualities` (see [04](04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md)), and bound the cache with `maximumDiskCacheSize` (see **04e** *(not written yet)*).
+**★ Symptom: the image cache grows without bound and disk fills on a self-hosted deployment.** Cause: unconstrained cardinality — an omitted `search` lets the same image be requested under unlimited distinct URLs, and each is its own cache entry. Fix: pin `search`, pin `qualities` (see [04](04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md)), and bound the cache with `maximumDiskCacheSize` (see [04e · Format negotiation](04e-format-negotiation-and-bounding-the-optimizer.md)).
 
 **★ Symptom: an authenticated image renders as a broken icon through `<Image>` but works when opened directly in the browser.** Cause: your cookie went with the browser request and did not go with the optimizer's — *"the Image Optimization API using the default loader will not forward headers when fetching the `src` image."* Fix: signed URLs the optimizer can fetch anonymously, or `unoptimized` on that image.
 
@@ -258,4 +258,4 @@ For cardinality and for paths that are not really yours. Any route that writes u
 
 ---
 
-← [04c · Blur placeholders](04c-blur-placeholders-where-the-bytes-come-from.md) · [Chapter index](01-explanation.md) · Next → **04e · Format negotiation** *(not written yet)*
+← [04c · Blur placeholders](04c-blur-placeholders-where-the-bytes-come-from.md) · [Chapter index](01-explanation.md) · Next → [04e · Format negotiation](04e-format-negotiation-and-bounding-the-optimizer.md)

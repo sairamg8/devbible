@@ -1,7 +1,7 @@
 ---
 title: "The `strategy` prop does not choose how fast a third-party script loads — it chooses who injects the tag and at what point in the document lifecycle, and the default is the middle option rather than the safe one"
 sidebar_label: "05 · next/script strategies"
-sidebar_position: 14
+sidebar_position: 17
 description: "The four next/script loading strategies at Next.js 16.3.4 — where each tag is injected, what beforeInteractive does and does not block, the root-layout constraint, the once-per-document rule, and how to pick between them."
 ---
 
@@ -253,4 +253,4 @@ Not on the App Router. `worker` is the strategy for it, and its own documentatio
 
 ---
 
-← [04d · remotePatterns](04d-remote-patterns-is-a-security-control.md) · [Chapter index](01-explanation.md) · Next → [05b · Handlers and the client boundary](05b-onload-onready-onerror-and-the-client-component-boundary.md)
+← [04f · When not to optimize](04f-when-not-to-use-the-optimizer.md) · [Chapter index](01-explanation.md) · Next → [05b · Handlers and the client boundary](05b-onload-onready-onerror-and-the-client-component-boundary.md)

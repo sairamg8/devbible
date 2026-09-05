@@ -1,7 +1,7 @@
 ---
 title: "The loader returns three ways to apply a font and they are not interchangeable: className owns typography in the component, style hands you the resolved family string, and the CSS variable is the only one a stylesheet can reach"
 sidebar_label: "03c · Applying the font"
-sidebar_position: 8
+sidebar_position: 9
 description: "className, style and the variable option — what each returns, how Tailwind v4 and v3 consume the CSS variable, and why the font definitions file is a documented requirement rather than a convention."
 ---
 

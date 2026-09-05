@@ -1,7 +1,7 @@
 ---
 title: "Avatars and attachments are the two places SprintDesk hands a URL it does not control to an image optimizer running on its own server — and the scripts pass is where every third-party tag has to justify both its strategy and its route"
 sidebar_label: "06b · Avatars, attachments, scripts"
-sidebar_position: 19
+sidebar_position: 22
 description: "The chapter 9 milestone, part two — user avatars and attachment previews through next/image with a narrow remotePatterns allow-list, the header-forwarding trap for authenticated files, the third-party scripts pass, and the acceptance criteria and phase gate."
 ---
 

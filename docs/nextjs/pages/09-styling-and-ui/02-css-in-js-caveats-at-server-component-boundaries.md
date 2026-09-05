@@ -116,7 +116,7 @@ The consequence is the whole point of this page: **a compile-time library's outp
 
 ## The decision that follows
 
-Three roads, and choosing between them deliberately is **02c** *(not written yet)*: adopt a zero-runtime library, keep the runtime library behind a client boundary and pay for it, or move to CSS Modules and Tailwind, which is what the Next.js CSS documentation recommends by default ([01c](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md)).
+Three roads, and choosing between them deliberately is [02c · Choosing a road](02c-choosing-a-css-in-js-road.md): adopt a zero-runtime library, keep the runtime library behind a client boundary and pay for it, or move to CSS Modules and Tailwind, which is what the Next.js CSS documentation recommends by default ([01c](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md)).
 
 ## Gotchas
 

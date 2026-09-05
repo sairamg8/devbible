@@ -234,4 +234,4 @@ The production HTML source, not the hydrated DOM — the DOM will look right eit
 
 ---
 
-← [02 · Why runtime CSS-in-JS breaks](02-css-in-js-caveats-at-server-component-boundaries.md) · [Chapter index](01-explanation.md) · Next → [03 · Font optimization with `next/font`](03-font-optimization-with-next-font-zero-layout-shift.md)
+← [02 · Why runtime CSS-in-JS breaks](02-css-in-js-caveats-at-server-component-boundaries.md) · [Chapter index](01-explanation.md) · Next → [02c · Choosing a road](02c-choosing-a-css-in-js-road.md)

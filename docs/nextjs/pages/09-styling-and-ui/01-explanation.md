@@ -32,20 +32,23 @@ Four claims in wide circulation are wrong at 16.3.4, and each is corrected with 
 | 3 | **[Tailwind v4, CSS-first](01c-tailwind-v4-css-first-config-and-coexisting-with-css-modules.md)** | the current setup verified against two primary sources; coexisting with CSS Modules |
 | 4 | **[CSS-in-JS at the server boundary](02-css-in-js-caveats-at-server-component-boundaries.md)** | why runtime CSS-in-JS cannot work in a Server Component — the mechanism, not a missing feature |
 | 5 | **[Style registries and the client boundary](02b-style-registries-and-what-the-client-boundary-actually-costs.md)** | the bill is not the wrapper; it is every component that touches the styling API |
-| 6 | **[next/font and zero layout shift](03-font-optimization-with-next-font-zero-layout-shift.md)** | build-time self-hosting first; the shift is removed by `adjustFontFallback`, not `display` |
-| 7 | **[The loader API](03b-the-loader-api-google-local-and-variable-fonts.md)** | google vs local option sets, and the two unrelated meanings of *variable* |
-| 8 | **[Applying the font](03c-applying-the-font-classname-style-css-variables-and-tailwind.md)** | `className`, `style` and the CSS variable are not interchangeable |
-| 9 | **[Subsetting and preload scope](03d-subsetting-preloading-and-where-the-loader-must-be-called.md)** | 🔴 where you call the loader decides which routes preload the font |
-| 10 | **[next/image as a sizing contract](04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md)** | `width`/`height`/`fill`, and why `sizes` decides the byte count |
-| 11 | **[Loading priority](04b-loading-priority-preload-eager-fetchpriority.md)** | 🔴 `priority` deprecated in 16; `preload`, `loading` and `fetchPriority` |
-| 12 | **[Blur placeholders](04c-blur-placeholders-where-the-bytes-come-from.md)** | who produces the base64 — the build for static imports, nobody for remote URLs |
-| 13 | **[remotePatterns is a security control](04d-remote-patterns-is-a-security-control.md)** | 🔴 omitted fields imply `**`; redirects are not re-validated |
-| 14 | **[next/script strategies](05-next-script-loading-strategies-for-third-party-scripts.md)** | the four strategies, injection point, ordering, and once-per-document |
-| 15 | **[Script handlers](05b-onload-onready-onerror-and-the-client-component-boundary.md)** | 🔴 all three handlers require a Client Component, and the `beforeInteractive` contradiction |
-| 16 | **[Inline scripts and placement](05c-inline-scripts-attribute-forwarding-and-where-the-tag-belongs.md)** | the mandatory `id`, attribute forwarding that carries a nonce, layout-vs-page scope |
-| 17 | **[The worker strategy](05d-the-worker-strategy-partytown-and-what-to-use-instead.md)** | experimental, `pages/`-only, and what to do on the App Router instead |
-| 18 | **[Milestone: design system pass](06-project-milestone-sprintdesk-design-system-pass.md)** | theming with custom properties, the flash fix, one font definitions module |
-| 19 | **[Milestone: avatars, attachments, scripts](06b-avatars-attachments-and-the-scripts-pass.md)** | the allow-list, the header-forwarding trap, the scripts pass, acceptance criteria |
+| 6 | **[Choosing a CSS-in-JS road](02c-choosing-a-css-in-js-road.md)** | 🔴 the three exits, and why the choice decides which components may be Server Components — not styling taste |
+| 7 | **[next/font and zero layout shift](03-font-optimization-with-next-font-zero-layout-shift.md)** | build-time self-hosting first; the shift is removed by `adjustFontFallback`, not `display` |
+| 8 | **[The loader API](03b-the-loader-api-google-local-and-variable-fonts.md)** | google vs local option sets, and the two unrelated meanings of *variable* |
+| 9 | **[Applying the font](03c-applying-the-font-classname-style-css-variables-and-tailwind.md)** | `className`, `style` and the CSS variable are not interchangeable |
+| 10 | **[Subsetting and preload scope](03d-subsetting-preloading-and-where-the-loader-must-be-called.md)** | 🔴 where you call the loader decides which routes preload the font |
+| 11 | **[next/image as a sizing contract](04-next-image-priority-blur-placeholders-remote-patterns-avif-w.md)** | `width`/`height`/`fill`, and why `sizes` decides the byte count |
+| 12 | **[Loading priority](04b-loading-priority-preload-eager-fetchpriority.md)** | 🔴 `priority` deprecated in 16; `preload`, `loading` and `fetchPriority` |
+| 13 | **[Blur placeholders](04c-blur-placeholders-where-the-bytes-come-from.md)** | who produces the base64 — the build for static imports, nobody for remote URLs |
+| 14 | **[remotePatterns is a security control](04d-remote-patterns-is-a-security-control.md)** | 🔴 omitted fields imply `**`; redirects are not re-validated |
+| 15 | **[Format negotiation and bounding the optimizer](04e-format-negotiation-and-bounding-the-optimizer.md)** | 🔴 the cache key is source × width × quality × format; AVIF is a priced trade, not a free win |
+| 16 | **[When not to optimize](04f-when-not-to-use-the-optimizer.md)** | the four classes that gain nothing, why authenticated images structurally cannot work, custom loaders |
+| 17 | **[next/script strategies](05-next-script-loading-strategies-for-third-party-scripts.md)** | the four strategies, injection point, ordering, and once-per-document |
+| 18 | **[Script handlers](05b-onload-onready-onerror-and-the-client-component-boundary.md)** | 🔴 all three handlers require a Client Component, and the `beforeInteractive` contradiction |
+| 19 | **[Inline scripts and placement](05c-inline-scripts-attribute-forwarding-and-where-the-tag-belongs.md)** | the mandatory `id`, attribute forwarding that carries a nonce, layout-vs-page scope |
+| 20 | **[The worker strategy](05d-the-worker-strategy-partytown-and-what-to-use-instead.md)** | experimental, `pages/`-only, and what to do on the App Router instead |
+| 21 | **[Milestone: design system pass](06-project-milestone-sprintdesk-design-system-pass.md)** | theming with custom properties, the flash fix, one font definitions module |
+| 22 | **[Milestone: avatars, attachments, scripts](06b-avatars-attachments-and-the-scripts-pass.md)** | the allow-list, the header-forwarding trap, the scripts pass, acceptance criteria |
 
 ## Phase gate
 

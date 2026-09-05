@@ -1,7 +1,7 @@
 ---
 title: "Give SprintDesk a design system: one theme defined as CSS custom properties, one font definitions module the whole app imports, and a theme that is correct on the first painted frame rather than after hydration"
 sidebar_label: "06 · Milestone: design system pass"
-sidebar_position: 18
+sidebar_position: 21
 description: "The chapter 9 project milestone, part one — scope and file shape, the theming pass with CSS custom properties alongside Tailwind v4, the flash-of-wrong-theme fix, and the single font definitions module the one-instance-per-call rule requires."
 ---
 

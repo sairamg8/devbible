@@ -1,7 +1,7 @@
 ---
 title: "`onLoad`, `onReady` and `onError` are the only way to know a third-party script arrived — and all three require a Client Component, which puts the one strategy that most needs a handler out of reach of the one place it is allowed to live"
 sidebar_label: "05b · Script handlers"
-sidebar_position: 15
+sidebar_position: 18
 description: "The three next/script event handlers at 16.3.4 — exact semantics, the Client Component requirement stated four times in the docs, why onReady is not onLoad, and the beforeInteractive contradiction the documentation never reconciles."
 ---
 

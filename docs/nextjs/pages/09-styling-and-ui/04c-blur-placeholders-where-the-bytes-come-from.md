@@ -1,7 +1,7 @@
 ---
 title: "A blur placeholder is a base64 image inlined into your HTML, and the only question that matters is who produced those bytes — the build did it for you on a static import, and nobody will do it for a remote URL"
 sidebar_label: "04c · Blur placeholders"
-sidebar_position: 12
+sidebar_position: 13
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -202,7 +202,7 @@ import hero from '@/assets/hero.png';   // object: has width, height, blurDataUR
 
 **Symptom: `blurDataURL` values were generated once and are now stale after images were re-uploaded in place.** Cause: the URL stayed the same, the bytes changed, and the stored placeholder was not regenerated — so the blur previews the previous image. Fix: regenerate the placeholder in the same transaction that replaces the file, or version the URL so a replacement is a new row.
 
-**Symptom: an SVG avatar has a null placeholder and the conditional renders `placeholder="empty"`, which reviewers flag as inconsistent.** Cause: SVG is genuinely outside the automatic set, and it is also the format you should be serving `unoptimized` anyway — see **04f · when not to use the optimizer** *(not written yet)*. Fix: it is not an inconsistency; give vector images the shared solid-colour placeholder if you want visual uniformity.
+**Symptom: an SVG avatar has a null placeholder and the conditional renders `placeholder="empty"`, which reviewers flag as inconsistent.** Cause: SVG is genuinely outside the automatic set, and it is also the format you should be serving `unoptimized` anyway — see [04f · When not to optimize](04f-when-not-to-use-the-optimizer.md). Fix: it is not an inconsistency; give vector images the shared solid-colour placeholder if you want visual uniformity.
 
 **Symptom: no placeholder appears in an old Safari during QA on a legacy device.** Cause: documented — *"older browsers before Safari 12 will fallback to empty placeholder."* Fix: nothing to fix. It degrades to `empty`, which is the pre-placeholder behaviour.
 
