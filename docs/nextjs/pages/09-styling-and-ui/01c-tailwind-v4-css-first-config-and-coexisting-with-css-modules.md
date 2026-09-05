@@ -87,7 +87,7 @@ export default config;
 
 ## The v3 path still exists, and the documentation says exactly when to take it
 
-> *"**Good to know:** If you need broader browser support for very old browsers, see the [Tailwind CSS v3 setup instructions](/docs/app/guides/tailwind-v3-css)."*
+> *"**Good to know:** If you need broader browser support for very old browsers, see the [Tailwind CSS v3 setup instructions](https://nextjs.org/docs/app/guides/tailwind-v3-css)."*
 > — [Getting Started: CSS](https://nextjs.org/docs/app/getting-started/css)
 
 That is the whole documented criterion: **very old browsers.** Not "if you prefer JavaScript config", not "if you have plugins". ⚠️ **Neither page I fetched enumerates the browser versions v4 requires**, and I did not fetch Tailwind's compatibility page, so I am not going to name a floor. If your product has a hard browser-support contract, read Tailwind's own compatibility documentation before choosing — do not take a version number from a reference page, including this one.

@@ -71,7 +71,7 @@ module.exports = {
 
 > *"To prevent accidental exposure of private data to the client, you can use React Taint APIs: `experimental_taintObjectReference` for data objects. `experimental_taintUniqueValue` for specific values."*
 
-> *"This prevents the tainted objects or values from being passed to the client. However, it's an additional layer of protection, you should still filter and sanitize the data in your [DAL](#data-access-layer) before passing it to React's render context."*
+> *"This prevents the tainted objects or values from being passed to the client. However, it's an additional layer of protection, you should still filter and sanitize the data in your [DAL](https://nextjs.org/docs/app/guides/data-security#data-access-layer) before passing it to React's render context."*
 
 ```ts
 // data/users.ts
