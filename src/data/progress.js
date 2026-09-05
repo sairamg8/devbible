@@ -472,7 +472,7 @@ export const LANGUAGES = {
   },
   nextjs: {
     label: 'Next.js',
-    updated: '2026-09-04 16:10',
+    updated: '2026-09-05 10:15',
     docsPath: '/docs/nextjs',
     pagesPath: '/docs/nextjs/pages',
     phases: [
@@ -494,7 +494,7 @@ export const LANGUAGES = {
       {n: 16, slug: '16-building-a-crud-api-with-postgres', name: "Building a CRUD API with Postgres", part: 'Refreshed for 16.3', topics: 13, pages: 1, pagesPlanned: 13},
       {n: 17, slug: '17-deployment-scaling-and-observability', name: "Deployment, scaling and observability", part: 'Refreshed for 16.3', topics: 20, pages: 20},
       {n: 18, slug: '18-advanced-ecosystem-topics', name: "Advanced ecosystem topics", part: 'Refreshed for 16.3', topics: 18, pages: 18},
-      {n: 19, slug: '19-capstone-decision-trees-and-outlook', name: "Capstone, decision trees and outlook", part: 'Imported corpus', topics: 5, pages: 0},
+      {n: 19, slug: '19-capstone-decision-trees-and-outlook', name: "Capstone, decision trees and outlook", part: 'Refreshed for 16.3', topics: 4, pages: 19},
       {n: 20, slug: '20-appendices', name: "Appendices", part: 'Refreshed for 16.3', topics: 14, pages: 14},
     ],
   },
