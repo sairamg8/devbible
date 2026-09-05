@@ -1,0 +1,161 @@
+/*
+ * The navbar technology dropdown.
+ *
+ * Deliberately not Infima's `.dropdown` / `.navbar__item`: those open on hover,
+ * which is wrong for a 29-item menu you scroll — the pointer leaves the trigger
+ * on the way to the list and it shuts. This one opens on click and closes on
+ * outside-click, Escape or navigation.
+ */
+
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--db-sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--db-ink-2);
+  background: var(--db-surface-2);
+  border: 1px solid var(--db-rule);
+  border-radius: 7px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.trigger:hover {
+  border-color: var(--db-accent);
+  color: var(--db-accent-ink);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--db-accent);
+  outline-offset: 1px;
+}
+
+.triggerLabel {
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Drawn rather than a glyph, so it cannot pick up a fallback font's arrow. */
+.chevron {
+  width: 0;
+  height: 0;
+  flex: none;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.7;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: calc(var(--ifm-z-index-fixed) + 1);
+  width: 264px;
+  max-height: min(70vh, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--db-surface);
+  border: 1px solid var(--db-rule-strong);
+  border-radius: 9px;
+  box-shadow: var(--db-shadow);
+  padding: 0.35rem;
+}
+
+.group {
+  font-family: var(--db-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--db-ink-3);
+  padding: 0.6rem 0.5rem 0.25rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.28rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: var(--db-ink-2);
+  text-decoration: none;
+}
+
+.item:hover {
+  background: var(--db-accent-soft);
+  color: var(--db-accent-ink);
+  text-decoration: none;
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--db-accent);
+  outline-offset: -1px;
+}
+
+.active,
+.active:hover {
+  background: var(--db-accent);
+  color: var(--db-surface);
+  font-weight: 600;
+}
+
+/* The accent is dark in light mode and light in dark mode, so the text on it has
+   to flip too — otherwise the current row is mint-on-mint. */
+[data-theme='dark'] .active,
+[data-theme='dark'] .active:hover {
+  color: #0f161c;
+}
+
+.label {
+  min-width: 0;
+}
+
+.count {
+  flex: none;
+  font-family: var(--db-mono);
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--db-ink-3);
+}
+
+.item:hover .count {
+  color: var(--db-accent-ink);
+}
+
+.active .count {
+  color: inherit;
+  opacity: 0.72;
+}
+
+/* On a narrow navbar the label goes and the chevron alone opens the menu. */
+@media (max-width: 640px) {
+  .triggerLabel {
+    display: none;
+  }
+
+  .menu {
+    width: 232px;
+  }
+}

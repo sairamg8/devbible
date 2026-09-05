@@ -1,7 +1,7 @@
 /*
- * The docs aside: rail | (control bar over page tree).
+ * The docs aside: the collapse/expand-all control bar above the page tree.
  *
- * ── Why the shell carries the navbar clearance ───────────────────────────────
+ * ── Why the wrapper carries the navbar clearance ─────────────────────────────
  * `.sidebarViewport` is `position: sticky; top: 0`, so it starts at the very top
  * of the viewport — underneath the 60px fixed navbar. The theme handles that by
  * putting `padding-top: var(--ifm-navbar-height)` on its own inner sidebar div,
@@ -11,58 +11,40 @@
  * Inserting the control bar broke that assumption. The bar took y = 0–38, wholly
  * behind the navbar, and the theme's padding then pushed the menu to y = 98
  * instead of 60. The buttons were in the DOM, focusable, and invisible to
- * everyone.
+ * everyone — which is why the feature looked missing for weeks while working
+ * perfectly (Expand all takes Java's sidebar from 36 rendered links to 2,186).
  *
- * So the clearance moves up to the shell — the element that is actually first —
- * and the theme's own padding is zeroed to stop it applying twice. The rail then
- * clears the navbar for free, being a child of the same shell.
+ * So the clearance moves up here, to the element that is actually first in the
+ * column, and the theme's own padding is zeroed to stop it applying twice.
  */
 
-.shell {
+.wrapper {
   display: flex;
+  flex-direction: column;
   height: 100%;
+  min-height: 0;
+}
+
+/* The control row never grows; the sidebar below it takes whatever is left. */
+.tools {
+  flex: 0 0 auto;
+}
+
+.wrapper > :not(.tools) {
+  flex: 1 1 auto;
   min-height: 0;
 }
 
 /*
  * Collapsed. The theme shrinks the aside to 30px and clips it, and hides its own
- * inner tree div — but the rail is not that div, so it kept its full 168px and
- * showed as a column of sliced-off technology names down the left edge. Same
- * treatment as the theme uses, applied to everything this component owns.
- *
- * `visibility` rather than `display: none` so the width transition still has
- * something to animate, and so the collapsed strip keeps its layout box.
+ * inner tree div — but not this control bar, which would survive as a clipped
+ * sliver of two half-words. Same treatment as the theme uses, applied to what
+ * this component owns. `visibility` rather than `display: none` so the width
+ * transition still has something to animate.
  */
-.shellHidden {
+.wrapperHidden {
   opacity: 0;
   visibility: hidden;
-}
-
-/* The page-tree column: control bar, then the theme's sidebar taking the rest. */
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
-}
-
-.tools {
-  flex: 0 0 auto;
-}
-
-/*
- * The theme's own sidebar div sets `width: var(--doc-sidebar-width)` — an
- * explicit width, not `100%`. That was harmless while it WAS the whole aside;
- * now that `--doc-sidebar-width` is rail + tree, it renders at the full 468px
- * inside its 300px column and overflows, and the aside clips the labels. So the
- * width is handed back to the flex column.
- */
-.wrapper > :not(.tools) {
-  flex: 1 1 auto;
-  min-height: 0;
-  width: 100%;
-  max-width: 100%;
 }
 
 /*
@@ -71,22 +53,11 @@
  * gap inside a hidden element.
  */
 @media (min-width: 997px) {
-  .shell {
+  .wrapper {
     padding-top: var(--ifm-navbar-height);
   }
 
   .wrapper > :not(.tools) {
     padding-top: 0;
-  }
-}
-
-/*
- * The rail is desktop-only for now. Below 997px the technology switcher is still
- * missing — the drawer is filled through `NavbarSecondaryMenuFiller`, which this
- * component cannot reach, so putting it there is a separate change.
- */
-@media (max-width: 996px) {
-  .shell > nav:first-child {
-    display: none;
   }
 }

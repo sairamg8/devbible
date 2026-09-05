@@ -68,29 +68,6 @@
   --docusaurus-highlighted-code-line-bg: var(--db-accent-soft);
   --ifm-global-radius: 8px;
   --ifm-heading-font-weight: 600;
-
-  /*
-   * The docs aside holds two columns now — the technology rail and the page
-   * tree — so `--doc-sidebar-width` is their sum rather than the theme's 300px.
-   * Both halves are variables because they are read in two places: the theme
-   * sizes the aside from the total, and `TechRail` sizes itself from the rail
-   * half. Deriving the total means they can never disagree.
-   */
-  --db-rail-width: 168px;
-  --db-tree-width: 300px;
-  --doc-sidebar-width: calc(var(--db-rail-width) + var(--db-tree-width));
-}
-
-/*
- * Under ~1380px the article column is what suffers, so the aside gives ground
- * first. Below 997px the aside is hidden entirely by the theme and the rail is
- * display:none'd, so neither value is read.
- */
-@media (max-width: 1379px) {
-  :root {
-    --db-rail-width: 144px;
-    --db-tree-width: 262px;
-  }
 }
 
 [data-theme='dark'] {

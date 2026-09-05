@@ -226,9 +226,18 @@ const config = {
       navbar: {
         title: 'Dev Bible',
         hideOnScroll: false,
-        // No nav items: the homepage is the language picker, and the sidebar
-        // appears once you're inside a language.
-        items: [],
+        // One item: the technology picker. The homepage is still the map, but an
+        // empty navbar meant that once you were inside /docs/java the only route
+        // to /docs/react was back to the homepage and re-pick — on a reference
+        // where the tracks cite each other constantly, the most expensive thing
+        // about the navigation.
+        //
+        // Registered in `src/theme/NavbarItem/ComponentTypes.js` rather than
+        // spelled out here as `type: 'dropdown'`, because a config dropdown takes
+        // a literal array of links and that would restate all 29 technologies in
+        // a second place. The component reads `src/data/stack.js`, which the
+        // homepage reads too.
+        items: [{type: 'custom-techPicker', position: 'left'}],
       },
       footer: {
         style: 'light',
