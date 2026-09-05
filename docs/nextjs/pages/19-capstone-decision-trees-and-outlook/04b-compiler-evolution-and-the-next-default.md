@@ -7,7 +7,7 @@ description: "Turbopack as the shipped default and what its custom-webpack build
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-05 against [How to upgrade to version 16](https://nextjs.org/docs/app/guides/upgrading/version-16) (`lastUpdated: 2026-08-25`, fetched as Markdown 2026-09-04), cross-checked against material already verified in [chapter 11](../11-performance-optimization-turbopack/01-turbopack-in-dev-and-production-fast-refresh.md), [chapter 5](../05-caching-ppr-and-cache-components/01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md) and [Appendix E](../20-appendices/05-appendix-e-version-watchlist.md).
+> Verified: 2026-09-05 against [How to upgrade to version 16](https://nextjs.org/docs/app/guides/upgrading/version-16) (`lastUpdated: 2026-08-25`, fetched as Markdown 2026-09-04), [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack) (`version: 16.3.4`) and the [Next.js 16.3 release post](https://nextjs.org/blog/next-16-3), cross-checked against material already verified in [chapter 11](../11-performance-optimization-turbopack/01-turbopack-in-dev-and-production-fast-refresh.md), [chapter 5](../05-caching-ppr-and-cache-components/01-the-explicit-caching-model-cachecomponents-build-flag-and-th.md) and [Appendix E](../20-appendices/05-appendix-e-version-watchlist.md).
 > Documentation-verified; **no sandbox run, no timings**.
 > Target: **Next.js 16.3.4** · React canary bundled by the App Router · Node.js **24.20.0**.
 
@@ -44,6 +44,8 @@ The compatibility boundary is asymmetric and worth stating plainly:
 
 > *"Turbopack does not support webpack plugins… We do support webpack loaders."*
 
+— [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack#webpack-plugins), `version: 16.3.4`. The elision is one sentence naming the consequence: *"This affects third-party tools that rely on webpack's plugin system for integration."*
+
 So a loader is a migration; a plugin is a redesign. [ch11 · what Turbopack does not support](../11-performance-optimization-turbopack/01e-what-turbopack-does-not-support-and-how-to-read-the-list.md) is how to read that list, and [ch18 · the bundler seam](../18-advanced-ecosystem-topics/04b-the-bundler-seam-webpack-and-turbopack.md) is the plugin-authoring view.
 
 ⚠️ **One platform caveat that is not a preference.** On platforms with no native bindings — FreeBSD and OpenBSD are the documented examples — Next.js falls back to WebAssembly bindings, and those *"do not support Turbopack"*. There the answer is `--webpack`, and it is a hosting constraint rather than a bundler opinion.
@@ -73,13 +75,15 @@ export default nextConfig
 
 This is the one to actually plan around, because it is the only item here with a published statement of intent behind it:
 
-> *"it will become a default in a future major version of Next.js"*
+> *"The behaviors behind Instant Navigations will become the default in a future major version, as they're part of our work over the last year to simplify Next.js back to its roots: dynamic by default, with no hidden or implicit caching."*
 
-That sentence is about `cacheComponents`, and the behaviours behind Instant Navigations ride on it together with `partialPrefetching`. [ch2 · Instant Navigations](../02-routing-and-navigation/10-instant-navigations/README.md) is the full treatment; [ch1 · hybrid static, dynamic and the cost model](../01-introduction-to-next-js/03b-hybrid-static-dynamic-and-the-cost-model.md) is why the framework went this way.
+— [Next.js 16.3](https://nextjs.org/blog/next-16-3) (blog, fetched 2026-09-05). Note what the sentence is and is not about: it commits *the behaviours*, which today ride on `cacheComponents` together with `partialPrefetching`, not the config keys by name. [ch2 · Instant Navigations](../02-routing-and-navigation/10-instant-navigations/README.md) is the full treatment; [ch1 · hybrid static, dynamic and the cost model](../01-introduction-to-next-js/03b-hybrid-static-dynamic-and-the-cost-model.md) is why the framework went this way.
 
 **The reason to plan rather than wait is that this migration has already been made harder on purpose.** Enabling the flag removed the old model's controls rather than layering on top of them:
 
 > *"Enabling `cacheComponents` is not a rename-only change: it can surface build errors for uncached data outside of `<Suspense>` and requires adopting the Cache Components model."*
+
+— [How to upgrade to version 16](https://nextjs.org/docs/app/guides/upgrading/version-16#experimentaldynamicio-and-experimentalusecache), `lastUpdated` 2026-08-25.
 
 As of v16.0.0, `dynamic`, `dynamicParams`, `revalidate` and `fetchCache` are gone under the flag, and `experimental.ppr` / `experimental_ppr` were removed outright. So there is no configuration in which both models are available and you migrate route by route at leisure — the flag is per-application, and the day you flip it every route has to already make sense under the new model. [ch5 · flipping the flag on an existing app](../05-caching-ppr-and-cache-components/01c-flipping-the-flag-on-an-existing-app.md) is the procedure; [ch5 · what changes once the flag is on](../05-caching-ppr-and-cache-components/01d-what-changes-once-the-flag-is-on.md) is the inventory.
 
