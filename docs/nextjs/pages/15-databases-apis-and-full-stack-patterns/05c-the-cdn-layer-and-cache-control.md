@@ -151,4 +151,4 @@ At the `Cache-Control` header the origin actually emits, before touching any CDN
 
 ---
 
-← [05b · The Edge Runtime is deprecated](05b-the-edge-runtime-is-deprecated.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → **`Vary`, `_rsc` and what a CDN must forward** *(not written yet)*
+← [05b · The Edge Runtime is deprecated](05b-the-edge-runtime-is-deprecated.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [05d · `Vary`, `_rsc` and CDN forwarding](05d-vary-rsc-and-what-a-cdn-must-forward.md)
