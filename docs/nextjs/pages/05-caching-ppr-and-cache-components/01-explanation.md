@@ -9,6 +9,7 @@ description: "Chapter index: the explicit caching model, custom cacheLife profil
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Caching](https://nextjs.org/docs/app/getting-started/caching) (docs `lastUpdated` 2026-08-25), [`cacheComponents`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) (`lastUpdated` 2026-06-22) and [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (`lastUpdated` 2026-08-25).
 > Target: **Next.js 16.3.4**, App Router, Node.js runtime. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **This chapter is about one inversion and everything that follows from it. The previous caching model cached by default and made you opt out; Cache Components caches nothing and makes you opt in, and because every cacheable thing is now declared, the framework can check at build time that each route produces a static shell and name the component standing in the way when one does not. That is the trade: you write more annotations and you stop shipping rendering behaviour you did not choose. The cost side is real and under-advertised — `use cache` is a weaker store than the `fetch` Data Cache it replaces, and nothing you can buy survives a deploy — so the chapter treats it as a trade rather than an upgrade throughout.**
 
@@ -35,7 +36,7 @@ description: "Chapter index: the explicit caching model, custom cacheLife profil
 2. **A short `cacheLife` profile silently removes content from the static shell.** An `expire` under five minutes or a `stale` under thirty seconds excludes it from prerenders, with no error. [02](02-the-use-cache-directive-and-custom-cachelife-profiles.md)
 3. **A `<Suspense>` boundary does not make anything dynamic.** It permits a hole; it does not create one. Synchronous work completes during the prerender regardless. [03](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md)
 4. **Crawlers do not get the shell.** They are detected by user agent and served a full request-time render, so a shell depending on build-time-only data works for every human and fails for Googlebot. [03b](03b-maximizing-the-shell-the-app-shell-and-what-crawlers-get.md)
-5. **`refresh()` and `router.refresh()` invalidate nothing.** They re-render, which looks like a fix right up until the render reads the same cached value back. [04](04-revalidation-time-based-isr.md)
+5. **`refresh()` and `router.refresh()` expire no cached data.** They re-render — `refresh()` "allows you to refresh the client router from within a Server Action" and clears the client cache — but no `use cache` entry on the server is expired, so the re-render reads the same cached value back. [04](04-revalidation-time-based-isr.md)
 
 ## ⚠️ On the four-layer model
 

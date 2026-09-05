@@ -9,6 +9,7 @@ description: "What the cacheComponents flag actually turns on, the three experim
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [`cacheComponents`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) (docs `lastUpdated` 2026-06-22), [Caching](https://nextjs.org/docs/app/getting-started/caching) (`lastUpdated` 2026-08-25) and [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (`lastUpdated` 2026-08-25).
 > Target: **Next.js 16.3.4**, App Router, Node.js runtime. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **The previous caching model cached aggressively and made you opt out; Cache Components caches nothing and makes you opt in. That single inversion is the whole chapter, and it is worth understanding as a trade rather than an upgrade — because you are buying something concrete and paying for it with something equally concrete. What you buy is a framework that can *prove*, at build time, that every route produces a static shell, and that names the exact component standing in the way when one does not. What you pay is that `use cache` is a strictly weaker store than the `fetch` Data Cache it replaces — in-memory by default, gone when a serverless instance is torn down, gone again at every deploy. Nobody tells you the second half, and it is where the production surprises live; [01b](01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md) is that half in full. This page is the model itself.**
 
@@ -31,7 +32,10 @@ The documentation's own summary of what that turns on:
 
 > *"Cache Components enables component and function-level caching using the `use cache` directive. Data fetching is dynamic by default, and you choose what to cache at the page, component, or function level. Next.js prerenders a static HTML shell that is served immediately while dynamic content streams in when ready, letting you mix static and dynamic content within a single route."*
 
-Three things arrive with it, and nothing else does: the [`use cache` directive](10-the-three-cache-directives/README.md), the `cacheLife` function, and the `cacheTag` function.
+The reference lists three APIs the flag makes available — *"the `use cache` directive"*, *"the `cacheLife` function with `use cache`"* and *"the `cacheTag` function"* — and that is the list to memorise. It is not the whole delivery, though, and two of the omissions bite later:
+
+- The `use cache` [variants](10-the-three-cache-directives/README.md) come with it. `use cache: remote` and `use cache: private` are part of the same feature; the Caching page introduces the latter as *"another variant that ships with Cache Components"*.
+- **Behaviour** arrives too, not just API. PPR becomes the default rendering model (below), and client navigation starts preserving component state through React's `<Activity>` — a change nothing in your code asked for, covered in [01d](01d-what-changes-once-the-flag-is-on.md).
 
 ### It is one flag standing in for three
 

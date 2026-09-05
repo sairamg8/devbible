@@ -9,6 +9,7 @@ description: "Defining named cache profiles in next.config.ts, redefining the bu
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against the [`cacheLife` config option](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheLife) (docs `lastUpdated` 2026-08-25), the [`cacheLife` function](https://nextjs.org/docs/app/api-reference/functions/cacheLife) (`lastUpdated` 2026-08-25), [Caching](https://nextjs.org/docs/app/getting-started/caching) (`lastUpdated` 2026-08-25) and [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (`lastUpdated` 2026-08-25).
 > Target: **Next.js 16.3.4**, App Router, Cache Components. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **The `use cache` directive itself — what it caches, how the key is built, the three variants and how they compose — is taught in depth across the nine chunks of [10 · The three cache directives](10-the-three-cache-directives/README.md), and this page does not repeat any of it. What that topic does not cover, because it is a different upstream document, is the other half of the pairing: the `cacheLife` **configuration** key, where you name your own profiles. Upstream these are genuinely two pages — [`functions/cacheLife`](https://nextjs.org/docs/app/api-reference/functions/cacheLife) is the call you make in a component, [`config/next-config-js/cacheLife`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheLife) is where a profile comes from. The reason this matters more than a naming convention is that a profile is three numbers, and two of the three are load-bearing in a way the config page never mentions: pick them wrong and your cached content is quietly excluded from the static shell, or from the App Shell, with no error and no warning. You get a slower page and a passing build.**
 
@@ -77,7 +78,11 @@ Read as a decision table, with the consequence in the right-hand column:
 | 30s ≤ `stale` < 5 minutes | prerendered, but **kept out of the App Shell** |
 | `stale` ≥ 5 minutes, `expire` ≥ 5 minutes | prerendered **and** eligible for the App Shell |
 
-**None of these is an error.** The build passes, the page works, and the only symptom is that content you believed was static is being rendered per request — which you will notice as a latency regression weeks later, if at all.
+**None of these is an error, with one documented exception.** In the ordinary case the build passes, the page works, and the only symptom is that content you believed was static is being rendered per request — which you will notice as a latency regression weeks later, if at all. The exception is nesting: if a short-lived cache is used from another `use cache` scope that calls no `cacheLife` of its own, the short lifetime would propagate outwards silently, so the framework refuses instead —
+
+> *"When a short-lived cache is nested inside another `use cache` without an explicit `cacheLife`, the outer cache's lifetime would silently become short too via propagation. To prevent this accidental misconfiguration, Next.js throws an error during prerendering."*
+
+That error is the reason the docs recommend pairing every `use cache` with an explicit `cacheLife`: an explicit outer lifetime is what makes the nesting legal, in either direction. Set a longer one to keep the outer scope prerendered, or set a short one deliberately and wrap the subtree in `<Suspense>`. A **flat** short profile, the case this section is about, gets no such error.
 
 The framework's own presets are almost all safely above the lines, and the documentation says exactly which one is not:
 
@@ -105,7 +110,7 @@ cacheLife: {
 }
 ```
 
-The important observation is that **`revalidate` was never the problem.** Server-side refresh frequency is unconstrained; it is `stale` and `expire` that gate the shell. People tune `revalidate` because it is the number that sounds like freshness, and leave the two that actually decide the rendering strategy at whatever they first typed.
+The important observation is that **`revalidate` was not the problem here.** Any non-zero server-side refresh frequency is ungated — only `revalidate: 0` is itself a threshold — and it is `stale` and `expire` that decide the rest. People tune `revalidate` because it is the number that sounds like freshness, and leave the two that actually decide the rendering strategy at whatever they first typed.
 
 ## Redefining the built-ins
 
@@ -139,7 +144,7 @@ The built-in values this replaces are worth knowing before you overwrite them:
 
 🔴 **Redefining `default` is a whole-codebase change with no diff at the call sites.** Every `use cache` that does not call `cacheLife` — and the framework's own recommendation is to always pair them, precisely because forgetting is easy — takes the new numbers. If your new `default` drops `stale` below 30 seconds, you have just excluded every un-annotated cached value in the application from prerendering, in one line, with a passing build. Redefine `default` when the built-in genuinely does not fit your domain, and check it against the threshold table first.
 
-⚠️ **One more thing writes to `default`'s `stale` from a different config key.** `staleTimes.static` also updates it. Two places in `next.config.ts` can therefore set the same number, and the one you are not looking at wins if it is set later. If `default`'s client-side staleness is not what you configured, check both.
+⚠️ **One more thing writes to `default`'s `stale` from a different config key.** `staleTimes.static` also updates it — *"Updating `staleTimes.static` also updates the `stale` value of the `default` cache profile."* Two keys in `next.config.ts` therefore write the same number. **The documentation does not state which one wins when both are set**, and I could not settle it from the reference; treat the combination as unspecified and set only one. If `default`'s client-side staleness is not the value you configured, check both keys before concluding the profile is being ignored.
 
 ## The types are generated, not hand-written
 
