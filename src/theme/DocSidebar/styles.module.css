@@ -1,49 +1,78 @@
 /*
- * The theme's sidebar fills the sticky aside. Adding the control bar above it means the
- * two have to share that height, so this becomes the flex column and the sidebar takes
- * the remainder.
+ * The docs aside: rail | (control bar over page tree).
  *
- * ── Why the wrapper carries the navbar clearance ─────────────────────────────
- * `.sidebarViewport` is `position: sticky; top: 0`, so it starts at the very top of the
- * viewport — underneath the 60px fixed navbar. The theme handles that by putting
- * `padding-top: var(--ifm-navbar-height)` on its own inner sidebar div, which is the
- * FIRST thing in the column only while nothing has been inserted above it.
+ * ── Why the shell carries the navbar clearance ───────────────────────────────
+ * `.sidebarViewport` is `position: sticky; top: 0`, so it starts at the very top
+ * of the viewport — underneath the 60px fixed navbar. The theme handles that by
+ * putting `padding-top: var(--ifm-navbar-height)` on its own inner sidebar div,
+ * which is the FIRST thing in the column only while nothing has been inserted
+ * above it.
  *
- * Inserting the control bar broke that assumption: the bar took y = 0–38, entirely
- * behind the navbar, and the theme's padding then pushed the menu to y = 98 instead of
- * 60. The buttons were in the DOM, focusable, and invisible to everyone.
+ * Inserting the control bar broke that assumption. The bar took y = 0–38, wholly
+ * behind the navbar, and the theme's padding then pushed the menu to y = 98
+ * instead of 60. The buttons were in the DOM, focusable, and invisible to
+ * everyone.
  *
- * So the clearance moves up here, to the element that is actually first in the column,
- * and the theme's own padding is zeroed to stop it applying twice.
+ * So the clearance moves up to the shell — the element that is actually first —
+ * and the theme's own padding is zeroed to stop it applying twice. The rail then
+ * clears the navbar for free, being a child of the same shell.
  */
-.wrapper {
+
+.shell {
   display: flex;
-  flex-direction: column;
   height: 100%;
   min-height: 0;
 }
 
-/* The control row never grows; the sidebar below it takes whatever is left. */
+/* The page-tree column: control bar, then the theme's sidebar taking the rest. */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
 .tools {
   flex: 0 0 auto;
 }
 
+/*
+ * The theme's own sidebar div sets `width: var(--doc-sidebar-width)` — an
+ * explicit width, not `100%`. That was harmless while it WAS the whole aside;
+ * now that `--doc-sidebar-width` is rail + tree, it renders at the full 468px
+ * inside its 300px column and overflows, and the aside clips the labels. So the
+ * width is handed back to the flex column.
+ */
 .wrapper > :not(.tools) {
   flex: 1 1 auto;
   min-height: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 /*
  * Desktop only. Below 997px this aside is hidden and the sidebar renders into the
- * navbar drawer instead, which does its own spacing — padding here would only add a
- * 60px gap inside a hidden element.
+ * navbar drawer, which does its own spacing — padding here would only add a 60px
+ * gap inside a hidden element.
  */
 @media (min-width: 997px) {
-  .wrapper {
+  .shell {
     padding-top: var(--ifm-navbar-height);
   }
 
   .wrapper > :not(.tools) {
     padding-top: 0;
+  }
+}
+
+/*
+ * The rail is desktop-only for now. Below 997px the technology switcher is still
+ * missing — the drawer is filled through `NavbarSecondaryMenuFiller`, which this
+ * component cannot reach, so putting it there is a separate change.
+ */
+@media (max-width: 996px) {
+  .shell > nav:first-child {
+    display: none;
   }
 }
