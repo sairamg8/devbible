@@ -146,9 +146,35 @@ const config = {
         // total output roughly doubled.
         //
         // The cost is real and worth stating: there is no single search that
-        // spans all technologies at once. The search box gets a context
-        // switcher instead, so you pick the technology and search inside it.
+        // spans all technologies at once. You pick a technology by navigating
+        // into it, and the box searches inside that one.
         useAllContextsWithNoSearchContext: false,
+
+        // 🔴 So HIDE the box on routes that match no technology — the homepage,
+        // chiefly. Without this it renders on `/`, fetches the root index, and
+        // returns "No documents were found" for every query ever typed, because
+        // with the split above the root index holds only the pages matching no
+        // context: exactly one. A control that cannot succeed should not be
+        // shown.
+        //
+        // Considered and rejected 2026-09-05: filling that root index with every
+        // page TITLE (~490 KB gzipped at full corpus) to make `/` a site-wide
+        // search. It works, but it is a different search behind the same box —
+        // titles on `/`, full text inside a technology — so `multer`,
+        // `EADDRINUSE` and `ILIKE` return nothing from the homepage and hit
+        // instantly from inside their technology. The user's own reason for
+        // dropping it is the decisive one: you already know which technology a
+        // concept lives in, so you navigate there or start from Google.
+        //
+        // ⚠️ Two knock-on effects, both accepted:
+        //   1. The plugin stops EMITTING search-index.json altogether
+        //      (postBuildFactory.js:28-30 only creates the root bucket when this
+        //      is false), so docs/README.md at /docs — the one page in no
+        //      technology — is no longer searchable anywhere.
+        //   2. /search?q=… with no `ctx` param has no index to fetch. It is
+        //      unreachable by clicking, since the box is hidden exactly where
+        //      `ctx` would be absent; only a hand-typed URL gets there.
+        hideSearchBarWithNoSearchContext: true,
 
         // Both of these earn their keep specifically because the corpus is
         // ~2,900 pages across 15+ technologies, where the same headings
