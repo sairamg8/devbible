@@ -7,7 +7,7 @@ description: "The two placements of 'use server', the compile-time swap that rep
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-05 against [Next.js · Server Actions and Mutations](https://nextjs.org/docs/app/guides/server-actions), [Next.js · `use server`](https://nextjs.org/docs/app/api-reference/directives/use-server) and [Next.js · Data Security](https://nextjs.org/docs/app/guides/data-security) — all three fetched carrying `version: 16.3.4` in their frontmatter.
+> Verified: 2026-09-05 against [Next.js · Server Actions and Mutations](https://nextjs.org/docs/app/guides/server-actions), [Next.js · `use server`](https://nextjs.org/docs/app/api-reference/directives/use-server) and [Next.js · Data Security](https://nextjs.org/docs/app/guides/data-security) — all three fetched carrying `version: 16.3.4` in their frontmatter — plus [React · Server Functions](https://react.dev/reference/rsc/server-functions) for the pre-hydration replay and permalink guarantees.
 > Documentation-verified; **no sandbox run**. Load-bearing sentences quoted verbatim.
 > Target: **Next.js 16.3.4** · React **19.2.8** · Node **24.20.0**.
 
@@ -141,7 +141,38 @@ export function NewPostForm() {
 }
 ```
 
-Door 1 is the only one that degrades: a form whose `action` prop is a Server Action submits as a real HTML form POST before hydration, so the mutation works with JavaScript disabled or still loading. Doors 2 and 3 require the dispatcher, which requires JavaScript. If progressive enhancement is a requirement, that difference decides the shape of your UI, not your preference about hooks.
+Door 1 is the only one that degrades, and the mechanism is worth stating precisely because it is usually described too loosely. React's Server Functions reference gives two separate guarantees.
+
+The first is **replay**:
+
+> *"When using `useActionState` with Server Functions, React will also automatically replay form submissions entered before hydration finishes. This means users can interact with your app even before the app has hydrated."*
+
+So a click during that window is not lost — it is queued and dispatched once hydration completes. That covers the slow-connection case, not the no-JavaScript case.
+
+The second, for genuinely no-JavaScript operation, is the `useActionState` **permalink**:
+
+> *"Server Functions also support progressive enhancement with the third argument of `useActionState`."*
+
+> *"When the permalink is provided to `useActionState`, React will redirect to the provided URL if the form is submitted before the JavaScript bundle loads."*
+
+```tsx
+'use client'
+import { useActionState } from 'react'
+import { createPostAction } from './actions'
+
+export function NewPost() {
+  // third argument: where a pre-bundle submission lands
+  const [state, formAction] = useActionState(createPostAction, null, '/posts/new')
+  return (
+    <form action={formAction}>
+      <input name="title" />
+      <button>Create</button>
+    </form>
+  )
+}
+```
+
+Doors 2 and 3 have neither property: `formAction` on a button and a `startTransition` call both require the dispatcher, which requires the bundle. If working before hydration is a requirement, that difference decides the shape of your UI, not your preference about hooks.
 
 ## Why a mutation belongs here rather than in render
 
@@ -232,7 +263,7 @@ export function DeleteButton({ id }: { id: string }) {
 }
 ```
 
-**Symptom: a form works in dev and does nothing on a slow production connection before hydration.** Cause: the mutation is wired through `onClick` (door 3) rather than the form's `action` prop (door 1), so it depends on JavaScript that has not arrived. Fix: put the action on the form.
+**Symptom: a form works in dev and does nothing when clicked on a slow production connection before hydration.** Cause: the mutation is wired through `onClick` (door 3) rather than the form's `action` prop (door 1), so it depends on a dispatcher that has not arrived, and there is nothing to replay. Fix: put the action on the form and drive it through `useActionState`, which *"will also automatically replay form submissions entered before hydration finishes."*
 
 ```tsx
 // depends on hydration
@@ -258,8 +289,8 @@ Nothing structural. The implementation stays server-side, but the *address* — 
 **★ An action has no URL of its own. Name three operational consequences.**
 First, edge rules are path-based and an action's path is the page's path, so a WAF or CDN rule cannot distinguish "load the dashboard" from "delete a record on the dashboard" without inspecting the method and the body. Second, `proxy.ts` matchers select pages, not actions, so proxy-level filtering is inherently coarse — it can require a session for a whole route subtree but cannot gate one specific mutation. Third, you cannot publish an action to a third party: there is no stable documented URL, and the action ID is a build artefact that rotates. Anything an external caller must reach needs a Route Handler.
 
-**Which of the three invocation doors survives without JavaScript, and why does it matter?**
-Only a form whose `action` prop is the Server Action. React can render that as a real HTML form targeting the page URL with `POST`, so the browser submits it natively before hydration and the server handles it as an action invocation. `formAction` on a button and a `startTransition` call from an event handler both need the client dispatcher, which needs the bundle to have loaded and hydrated. If your product has to work on a first paint over a bad connection — a checkout, a login, a "mark as read" on a news site — that pushes you to form-shaped mutations, and it is a design constraint, not a style preference.
+**Which of the three invocation doors works before hydration, and what exactly does React guarantee?**
+Only door 1 — the form's `action` prop — and it is two distinct guarantees rather than one. With `useActionState`, React *"will also automatically replay form submissions entered before hydration finishes"*, so a submission during the loading window is queued and dispatched once the bundle arrives; that solves the slow-connection case. For genuine no-JavaScript operation you additionally supply the third argument to `useActionState`, the permalink: *"React will redirect to the provided URL if the form is submitted before the JavaScript bundle loads."* `formAction` on a button and a `startTransition` call from an event handler have neither property, because both need the dispatcher. If your product has to work on a first paint over a bad connection — a checkout, a login, a "mark as read" on a news site — that pushes you to form-shaped mutations, and it is a design constraint, not a style preference.
 
 **Why does Next.js refuse to let you set a cookie or revalidate during render?**
 Because render is not guaranteed to happen exactly once per user intent — it can be re-run, prefetched, streamed, or resumed — so a mutation placed there fires at times nobody asked for. The documentation states the framework *"explicitly prevents setting cookies or triggering cache revalidation within render methods to avoid unintended side effects."* Pushing mutations into actions also forces them onto `POST`, which the docs note *"prevents accidental side-effects from GET requests, reducing Cross-Site Request Forgery (CSRF) risks."* The same reasoning applies to Route Handlers you write by hand: a mutating `GET` will eventually be fired by something that was only trying to look.

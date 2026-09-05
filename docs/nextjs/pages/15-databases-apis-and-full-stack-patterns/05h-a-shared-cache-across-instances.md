@@ -220,4 +220,4 @@ Usually three, and most teams enumerate two. The framework cache, which `revalid
 
 ---
 
-← **Streams, partial writes and failure semantics** *(not written yet)* · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [06 · Project milestone: SprintDesk](06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md)
+← [05f · Streams and failure semantics](05f-streams-and-failure-semantics-in-a-handler.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [06 · Project milestone: SprintDesk](06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md)

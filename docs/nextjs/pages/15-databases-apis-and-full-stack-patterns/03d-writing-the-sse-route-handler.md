@@ -26,7 +26,7 @@ description: "The full handler: authorize before you stream, flush immediately, 
 | You call `controller.close()` | nothing else | the heartbeat, the data subscription |
 | The client navigates away or closes the tab | the stream's `cancel(reason)` callback, and/or an abort on `request.signal` | the heartbeat, the data subscription |
 | The source throws | the stream errors | everything, plus you owe the client a final event |
-| The platform kills the invocation at max duration | possibly nothing at all | whatever the process holds — see **03h** *(not written yet)* |
+| The platform kills the invocation at max duration | possibly nothing at all | whatever the process holds — see [03h](03h-what-silently-breaks-sse-in-production.md) |
 
 MDN defines the second one precisely:
 

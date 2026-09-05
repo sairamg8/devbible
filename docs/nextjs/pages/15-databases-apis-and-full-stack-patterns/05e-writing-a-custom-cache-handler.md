@@ -178,7 +178,7 @@ export default {
 
 Note what `refreshTags` is doing: pulling the shared ledger into a local map so that `getExpiration` — which is called on the hot path, per entry — is a memory lookup rather than a network round trip. The documentation describes `refreshTags` as *"Called periodically before starting a new request to sync with external tag services"*, and that cadence is what makes the trade work.
 
-⚠️ **The example buffers the whole entry, which the docs explicitly caution against for large pages** — see **05f · Streams and failure semantics** *(not written yet)* for `.tee()`, streaming straight to storage, and what to do about partial writes. Buffering is the right starting point and the wrong ending point.
+⚠️ **The example buffers the whole entry, which the docs explicitly caution against for large pages** — see [05f](05f-streams-and-failure-semantics-in-a-handler.md) for `.tee()`, streaming straight to storage, and what to do about partial writes. Buffering is the right starting point and the wrong ending point.
 
 ## Gotchas
 
@@ -223,4 +223,4 @@ That the tests never had two instances. The dev server is a single long-lived pr
 
 ---
 
-← [05d · `Vary`, `_rsc` and CDN forwarding](05d-vary-rsc-and-what-a-cdn-must-forward.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → **Streams and failure semantics in a handler** *(not written yet)*
+← [05d · `Vary`, `_rsc` and CDN forwarding](05d-vary-rsc-and-what-a-cdn-must-forward.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [05f · Streams and failure semantics](05f-streams-and-failure-semantics-in-a-handler.md)

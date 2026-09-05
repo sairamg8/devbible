@@ -31,7 +31,7 @@ That last row is not a stylistic complaint. Vercel's own documentation states it
 > *"Next.js does not expose an API for handling WebSocket upgrades."*
 > — [Vercel · WebSockets](https://vercel.com/docs/functions/websockets)
 
-Everything you will read about "WebSockets in Next.js" is one of three workarounds, and **03i** *(not written yet)* walks each of them.
+Everything you will read about "WebSockets in Next.js" is one of three workarounds, and [03i](03i-websockets-and-the-serverless-request-model.md) walks each of them.
 
 ## What a streaming Route Handler actually is
 
@@ -72,7 +72,7 @@ Server-Sent Events are that same response with two additions: the `Content-Type`
 
 SSE wins by default because it is not a new transport. It is HTTP. It therefore inherits, for free, every piece of infrastructure you already have: your CDN, your reverse proxy, your `Set-Cookie` session, your CORS configuration, your firewall rules, your rate limiter, your access logs. A WebSocket inherits almost none of that, because after the upgrade the frames are opaque to every HTTP-aware box in the path.
 
-It also inherits reconnection. The browser's `EventSource` reconnects on its own and tells the server where it left off — see **03f** *(not written yet)*. You do not write that code.
+It also inherits reconnection. The browser's `EventSource` reconnects on its own and tells the server where it left off — see [03f](03f-eventsource-reconnection-and-last-event-id.md). You do not write that code.
 
 **Choose SSE when the data flows server → client.** Notifications, a live activity feed, job progress, a token stream from a model, "someone else moved this card", presence *broadcasts*. In SprintDesk terms: the board updating when a teammate drags a task is SSE-shaped.
 
@@ -87,7 +87,7 @@ In a long-lived Node process, an open SSE connection costs a socket and a little
 > *"WebSocket connections use Vercel Functions and follow the same limits and pricing model as other Function invocations. This includes Function usage while the connection is active"*
 > — [Vercel · WebSockets](https://vercel.com/docs/functions/websockets)
 
-So: one thousand users with a dashboard open is one thousand concurrently-executing functions, each mostly asleep. That is a real bill and a real concurrency ceiling, and it is the single strongest argument for **polling at a sane interval** for anything that is not genuinely live. It is also why the platform will eventually cut your stream — **03h** *(not written yet)* covers the max-duration cliff.
+So: one thousand users with a dashboard open is one thousand concurrently-executing functions, each mostly asleep. That is a real bill and a real concurrency ceiling, and it is the single strongest argument for **polling at a sane interval** for anything that is not genuinely live. It is also why the platform will eventually cut your stream — [03h](03h-what-silently-breaks-sse-in-production.md) covers the max-duration cliff.
 
 ## What the platform must support for any of this to work
 
@@ -156,7 +156,7 @@ export async function GET() {
 
 See [05](05-edge-functions-and-custom-cache-structures-for-global-comput.md) for the full current framing.
 
-**★ Symptom: you POST to open the stream and the browser will not connect.** Cause: `EventSource` issues a `GET` and cannot be given a method or a body. Fix: put the subscription parameters in the URL, or drop `EventSource` for `fetch` — **03g** *(not written yet)* shows the second option in full.
+**★ Symptom: you POST to open the stream and the browser will not connect.** Cause: `EventSource` issues a `GET` and cannot be given a method or a body. Fix: put the subscription parameters in the URL, or drop `EventSource` for `fetch` — [03g](03g-fetch-and-readablestream-when-you-need-headers.md) shows the second option in full.
 
 **★ Symptom: the feature works with two testers and collapses in staging with fifty.** Cause: you counted requests, not concurrent invocations. Fifty open streams is fifty functions alive at once against a concurrency limit sized for short requests. Fix: either move the fan-out to a hosted realtime service, or reduce the number of open streams — one stream per browser tab multiplexing several topics beats one stream per widget.
 
@@ -169,7 +169,7 @@ Because SSE never stops being HTTP and a WebSocket does. SSE is a normal `200` r
 It is wrong on cost, on failure behaviour, and on infrastructure surface. A poll is a short request: it holds no server resource between polls, so a thousand users at one poll per thirty seconds is roughly thirty-three requests per second, not a thousand live invocations. It survives a proxy that buffers, a CDN that will not pass chunked responses, and a browser that has hit its per-domain connection limit — none of which SSE survives. And it has no resume protocol to get wrong. SSE wins when the acceptable latency is below the poll interval you would otherwise need, or when the payload is large enough that repeatedly fetching it dominates. Below that crossover, polling is the cheaper and more robust engineering choice.
 
 **★ What does "the platform must not buffer the response" actually mean, and how does it break a feature that works locally?**
-Streaming depends on every hop forwarding bytes as they arrive rather than accumulating them and sending one body at the end. `next dev` gives you a single process talking straight to your browser, so there is no hop to buffer. Production inserts a reverse proxy, a CDN and a compression layer, any of which may buffer by default — nginx does, and gzip/Brotli hold bytes until they have enough to compress. The symptom is not an error: the connection succeeds, the client sits silent, and then everything arrives at once, or when the stream closes. That is why the deployment requirements phrase the criterion as "must not buffer the response before sending it to the client" rather than "must support streaming". **03h** *(not written yet)* has the fixes.
+Streaming depends on every hop forwarding bytes as they arrive rather than accumulating them and sending one body at the end. `next dev` gives you a single process talking straight to your browser, so there is no hop to buffer. Production inserts a reverse proxy, a CDN and a compression layer, any of which may buffer by default — nginx does, and gzip/Brotli hold bytes until they have enough to compress. The symptom is not an error: the connection succeeds, the client sits silent, and then everything arrives at once, or when the stream closes. That is why the deployment requirements phrase the criterion as "must not buffer the response before sending it to the client" rather than "must support streaming". [03h](03h-what-silently-breaks-sse-in-production.md) has the fixes.
 
 **★ You are asked to add live cursors to SprintDesk's board. What do you propose and why?**
 Not SSE. Cursor positions are client→server at high frequency, which is the one shape SSE cannot carry — each cursor move would be a separate POST, and the per-request overhead dwarfs the payload. It also needs fan-out across everyone in the room, which means shared state that no single function instance owns. So: a hosted realtime service, or a dedicated long-lived Node process running a WebSocket server next to (not inside) the Next.js app, with presence state in Redis rather than in process memory. Vercel's own guidance for WebSocket state is the same — *"Store durable state, presence, counters, rooms, and pub/sub coordination in an external data store instead of relying on in-memory variables."* The Next.js app then only needs to hand the client a short-lived token to connect with.
@@ -179,4 +179,4 @@ Whether anything is arriving at all versus arriving late. If the connection open
 
 ---
 
-← **02 · Hybrid API design: Route Handlers and Server Actions** *(not written yet)* · [Chapter 15 overview](01-explanation.md) · Next → [03b · The event stream format](03b-the-event-stream-format.md)
+← [02 · Hybrid API design](02-hybrid-api-design-route-handlers-and-server-actions-side-by.md) · [Chapter 15 overview](01-explanation.md) · Next → [03b · The event stream format](03b-the-event-stream-format.md)

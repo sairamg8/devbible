@@ -119,7 +119,7 @@ That string is what the browser sends back in `Last-Event-ID` when it reconnects
 
 > *"Initialize event's … `lastEventId` attribute to the last event ID string of the event source."*
 
-So an event with no `id` of its own still reports the most recent ID the server ever sent. **03f** *(not written yet)* is entirely about exploiting that.
+So an event with no `id` of its own still reports the most recent ID the server ever sent. [03f](03f-eventsource-reconnection-and-last-event-id.md) is entirely about exploiting that.
 
 ### `retry` — sets the reconnection time, in milliseconds
 
@@ -156,7 +156,7 @@ And on the transport:
 > *"Authors are also cautioned that HTTP chunking can have unexpected negative effects on the reliability of this protocol, in particular if the chunking is done by a different layer unaware of the timing requirements."*
 > — §9.2.7
 
-**03h** *(not written yet)* is the operational version of those two sentences.
+[03h](03h-what-silently-breaks-sse-in-production.md) is the operational version of those two sentences.
 
 ## Gotchas
 

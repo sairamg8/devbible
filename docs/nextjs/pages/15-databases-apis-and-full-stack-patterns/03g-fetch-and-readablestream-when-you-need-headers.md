@@ -1,7 +1,7 @@
 ---
 title: "You abandon EventSource for exactly one reason — the request — and the price is that you now own the decoder, the line splitter, the field parser and the dispatch rule the browser was running for you"
 sidebar_label: "03g · fetch + ReadableStream"
-sidebar_position: 166
+sidebar_position: 167
 description: "Reading text/event-stream with fetch, response.body, getReader and TextDecoder: why an Authorization header or a POST body forces it, the multi-byte and frame-boundary problems chunked reading creates, and a complete spec-faithful SSE parser."
 ---
 

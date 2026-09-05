@@ -1,7 +1,7 @@
 ---
 title: "The browser sends Last-Event-ID on every reconnect whether or not your handler reads it — so a stream without a resume path does not fail, it silently loses everything that happened while the socket was down"
 sidebar_label: "03fa · Resumable streams and Last-Event-ID"
-sidebar_position: 169
+sidebar_position: 166
 description: "id: to Last-Event-ID as a resume contract: the buffer that never resets, the value-space constraint, a bounded replay handler, how to choose a cursor, why Last-Event-ID is untrusted input, and why replay forces at-least-once delivery on the client."
 ---
 

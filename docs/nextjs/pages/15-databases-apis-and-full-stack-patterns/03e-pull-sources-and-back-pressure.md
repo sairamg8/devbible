@@ -183,11 +183,11 @@ The 100 ms window is the whole trade: it is added latency in exchange for a boun
 
 ### Persist and resume — for feeds where nothing may be lost
 
-A payments feed, an audit log, anything a user will reconcile against. Do not hold undelivered events in process memory at all: write them durably with a monotonic sequence number, send the `id`, and let a reconnecting client ask for everything after its `Last-Event-ID`. The queue then lives in Postgres, where it is bounded by disk rather than heap and survives the invocation being killed. **03f** *(not written yet)* is that protocol, and **04d** *(not written yet)* is the durable-log shape it rests on.
+A payments feed, an audit log, anything a user will reconcile against. Do not hold undelivered events in process memory at all: write them durably with a monotonic sequence number, send the `id`, and let a reconnecting client ask for everything after its `Last-Event-ID`. The queue then lives in Postgres, where it is bounded by disk rather than heap and survives the invocation being killed. [03f](03f-eventsource-reconnection-and-last-event-id.md) is that protocol, and [04d](04d-postgres-as-a-queue-skip-locked.md) is the durable-log shape it rests on.
 
 ## `tee()` and why fan-out inside one handler is usually wrong
 
-`ReadableStream.tee()` splits one stream into two, and it is genuinely useful in a cache handler (**05h** *(not written yet)* uses it). It is a trap for real-time fan-out, because a `tee` progresses at the speed of its *slowest* branch: the faster reader's chunks are buffered until the slower one catches up. Two subscribers on a teed stream means one slow client throttles — or memory-inflates — the other. Fan-out belongs in a pub/sub layer that owns per-subscriber buffers, not in a stream primitive.
+`ReadableStream.tee()` splits one stream into two, and it is genuinely useful in a cache handler ([05h](05h-a-shared-cache-across-instances.md) uses it). It is a trap for real-time fan-out, because a `tee` progresses at the speed of its *slowest* branch: the faster reader's chunks are buffered until the slower one catches up. Two subscribers on a teed stream means one slow client throttles — or memory-inflates — the other. Fan-out belongs in a pub/sub layer that owns per-subscriber buffers, not in a stream primitive.
 
 ## Gotchas
 
@@ -285,4 +285,4 @@ That the buffer is unbounded and lives in a process shared by every other reques
 
 ---
 
-← [03d · Writing the SSE Route Handler](03d-writing-the-sse-route-handler.md) · [Chapter 15 overview](01-explanation.md) · Next → **03f · Reconnection and `Last-Event-ID`** *(not written yet)*
+← [03d · Writing the SSE Route Handler](03d-writing-the-sse-route-handler.md) · [Chapter 15 overview](01-explanation.md) · Next → [03f · Reconnection and `Last-Event-ID`](03f-eventsource-reconnection-and-last-event-id.md)

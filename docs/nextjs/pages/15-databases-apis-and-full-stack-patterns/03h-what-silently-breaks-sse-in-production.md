@@ -1,7 +1,7 @@
 ---
 title: "SSE almost never fails with an error — it fails by arriving late, arriving all at once, or not arriving, and every one of those is a layer between your handler and the browser deciding to hold the bytes"
 sidebar_label: "03h · What silently breaks SSE"
-sidebar_position: 167
+sidebar_position: 169
 description: "Symptom-first: proxy and CDN buffering, X-Accel-Buffering, gzip and Brotli holding chunks, no-transform, block buffering, Safari's 1024-byte threshold, curl -N, platforms that require streaming to be enabled, and why Content-Length on a stream is proof of buffering."
 ---
 
