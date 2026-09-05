@@ -284,6 +284,14 @@ export const PINS = {
     pin: '7.10.0', checked: '2026-09-05', tracks: ['nextjs'], names: ['prisma', '@prisma/client'],
     note: '@auth/prisma-adapter 2.11.3 declares "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5 || >=6" — the first clause is unbounded, so Prisma 7 installs with no peer warning despite the ladder stopping at 6.',
   },
+  // Added 2026-09-05 with nextjs ch15 topic 04. BullMQ is taught with real code in 04g —
+  // new Queue/new Worker, delayed jobs, the failed handler and a SIGTERM graceful shutdown —
+  // so under the library-necessity test it earns a pin.
+  bullmq: {
+    label: 'BullMQ', source: 'npm:bullmq', policy: 'latest',
+    pin: '6.3.4', checked: '2026-09-05', tracks: ['nextjs'], names: ['bullmq'],
+    note: 'Worker and QueueEvents create DUPLICATED Redis connections internally, so a queue costs more connections than it looks like. worker.close() "will not timeout by itself", so a SIGTERM handler needs its own deadline. A busy CPU can stop a worker renewing its lock, which marks the job stalled and re-runs it — the reason handlers must be idempotent.',
+  },
   // Added 2026-09-05 with nextjs ch15 topic 01. Drizzle is taught with real schema, relation,
   // type-inference and migration code across 01h/01ha/01hb/01hc/01i/01ia, so under the
   // library-necessity test it earns a pin rather than being taught with nothing watching it.
