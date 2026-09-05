@@ -265,4 +265,4 @@ No, and conflating the two is common. The WebSocket transport changes how *your 
 
 ---
 
-← [01e · The HTTP driver](01e-the-http-driver-and-one-shot-queries.md) · Next → **01g · Prisma: the generated client and driver adapters** *(not written yet)*
+← [01e · The HTTP driver](01e-the-http-driver-and-one-shot-queries.md) · Next → [01g · Prisma: client and adapters](01g-prisma-the-generated-client-and-driver-adapters.md)

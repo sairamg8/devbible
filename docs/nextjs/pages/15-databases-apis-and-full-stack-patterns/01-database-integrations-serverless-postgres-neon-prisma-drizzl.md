@@ -143,7 +143,7 @@ There are exactly three structural answers to the mismatch, and the rest of this
 | **Stop using TCP at all** | An HTTP request carries the query; there is no session to keep alive, so there is nothing to pool. | [01d](01e-the-http-driver-and-one-shot-queries.md) |
 | **Make the process long-lived after all** | Warm/fluid compute, or a real server. The classic pool works again. | this page, plus [11 · Node.js runtime vs Edge](../11-performance-optimization-turbopack/04-nodejs-runtime-vs-edge-runtime-capabilities-cold-starts-choo.md) |
 
-Note what is *not* on that list: "use a smaller pool", "call `end()` more", "use a different ORM". None of those change the arithmetic. Prisma, Drizzle and hand-written `pg` all sit on the same three escapes; the ORM choice (**01f** *(not written yet)*) is orthogonal to the connection problem and it is worth being blunt about that, because the internet mostly is not.
+Note what is *not* on that list: "use a smaller pool", "call `end()` more", "use a different ORM". None of those change the arithmetic. Prisma, Drizzle and hand-written `pg` all sit on the same three escapes; the ORM choice (**01h · Prisma and Drizzle as models** *(not written yet)*) is orthogonal to the connection problem and it is worth being blunt about that, because the internet mostly is not.
 
 ## Gotchas
 
