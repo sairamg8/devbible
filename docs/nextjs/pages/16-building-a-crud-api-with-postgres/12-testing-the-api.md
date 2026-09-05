@@ -1,7 +1,7 @@
 ---
 title: "A database-backed HTTP surface only ever asks three questions — does the SQL do what I think, does the boundary render the outcome as the right status, and does the whole thing hold when two clients arrive at once — and almost every wasted test in this chapter is an assertion filed under the wrong one"
 sidebar_label: "12 · Testing the API"
-sidebar_position: 73
+sidebar_position: 56
 description: "The three layers a CRUD-over-Postgres API actually has, which of this chapter's claims are testable at which layer, the two assertions that are pure waste (a status code in a DAL test, a SQL spy in a route test), and the boundary with chapter 13's runners."
 ---
 
@@ -193,4 +193,4 @@ The lowest layer that can make it. Not the lowest layer that *could be made to* 
 
 ---
 
-← [11 · Ownership on the API surface](11-ownership-on-the-api-surface.md) · [Chapter index](01-explanation.md) · Next → [12b · The database is the thing under test](12b-the-database-is-the-thing-under-test.md)
+← [11 · Ownership on the API surface](11-ownership-on-the-api-surface.md) · [Chapter 16 overview](01-explanation.md) · Next → [12b · The database is the thing under test](12b-the-database-is-the-thing-under-test.md)

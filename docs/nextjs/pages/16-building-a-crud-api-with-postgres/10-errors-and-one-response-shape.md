@@ -1,7 +1,7 @@
 ---
 title: "One service layer with two entry points has to render every failure twice — as an HTTP status for a Route Handler and as a typed return value for a Server Action — and the mistake is letting the service layer decide which"
 sidebar_label: "10 · Errors and one response shape"
-sidebar_position: 70
+sidebar_position: 53
 description: "Why a CRUD API in the App Router has two renderings of every failure, the failure taxonomy that makes both derivable from one thing, where the translation layer belongs, and the driver error that must never reach a client."
 ---
 

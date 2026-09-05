@@ -1,7 +1,7 @@
 ---
 title: "Keyset pagination replaces \"give me rows 41 to 60\" with \"give me the rows after this one\", which makes a page cost the same at any depth and makes concurrent writes unable to shift it — and the row-constructor comparison that expresses it is one operator that people reliably expand into a wrong `OR` chain"
 sidebar_label: "06d · Keyset pagination"
-sidebar_position: 41
+sidebar_position: 30
 description: "The tuple comparison in SQL and in Drizzle, why the naive OR expansion is both wrong and unindexable, the composite index the chapter schema already carries, opaque cursors and why they must be validated, and the four things keyset cannot do."
 ---
 

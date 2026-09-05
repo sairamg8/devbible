@@ -1,7 +1,7 @@
 ---
 title: "PUT and PATCH are not two spellings of the same verb — one replaces the resource and is idempotent, the other applies instructions and is not, and a handler that treats an absent field the same way in both has silently picked one and lied about the other"
 sidebar_label: "07 · UPDATE — PUT vs PATCH"
-sidebar_position: 50
+sidebar_position: 34
 description: "What PUT and PATCH actually mean per RFC 9110 and RFC 5789, what each does with a field the client did not send, why PATCH is not idempotent by default, how to make it so, and the two Route Handlers written against one Data Access Layer."
 ---
 

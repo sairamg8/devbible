@@ -1,7 +1,7 @@
 ---
 title: "Module scope in a serverless function runs once per instance and not once per request, so where you write `new Pool()` decides how many Postgres backends your traffic spike opens — and the instance that stops serving does not close them, because it is paused rather than exited"
 sidebar_label: "03 · The connection you get"
-sidebar_position: 18
+sidebar_position: 9
 description: "The invocation lifecycle a pool lives inside, module scope versus per-request construction and the real cost of each, why a paused instance still holds its connections, the pg options that exist for this failure mode, and the four placements ranked."
 ---
 

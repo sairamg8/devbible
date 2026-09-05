@@ -1,7 +1,7 @@
 ---
 title: "A retry loop has two halves that need two entirely different kinds of test — its policy is a pure function you can exercise with a fake that throws on cue, and its trigger is a read/write dependency cycle that only two Serializable transactions can create, and testing one while believing you tested the other is how a loop ships that retries the wrong SQLSTATE forever"
 sidebar_label: "12j · Retry loop and idempotency"
-sidebar_position: 82
+sidebar_position: 66
 description: "Unit-testing the retry policy without a database, forcing a real 40001 with a gated pair of Serializable transactions, proving the loop's body is re-executed and what that costs, the duplicate-POST race against an idempotency key, and where fake timers finally are the right tool."
 ---
 
@@ -272,4 +272,4 @@ Only when the clock being faked is the one the code under test reads. Idempotenc
 
 ---
 
-← [12i · Forcing the interleaving](12i-forcing-the-interleaving.md) · [Chapter index](01-explanation.md) · Next → [12k · Migrations in the test path](12k-migrations-in-the-test-path.md)
+← [12i · Forcing the interleaving](12i-forcing-the-interleaving.md) · [Chapter 16 overview](01-explanation.md) · Next → [12k · Migrations in the test path](12k-migrations-in-the-test-path.md)

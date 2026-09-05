@@ -1,7 +1,7 @@
 ---
 title: "The N+1 on a card list is not written by anyone as a loop of queries — it is written as a `map` over an array with an `await` inside, which reads like data shaping and is twenty round trips, and the join that fixes it introduces a row explosion that the batched query does not"
 sidebar_label: "06f · The N+1 and its fixes"
-sidebar_position: 43
+sidebar_position: 32
 description: "Where the N+1 actually comes from in a Route Handler, the three fixes and what each costs, what drizzle-orm 0.45.2's relational with: clause really emits, the row explosion a naive join produces, and the N+1 hiding inside the ownership check."
 ---
 

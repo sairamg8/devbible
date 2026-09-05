@@ -1,7 +1,7 @@
 ---
 title: "`position` is `NOT NULL` with no default, so somebody has to invent it — and the obvious `max(position) + 1` is a read-modify-write that two concurrent creates both win under READ COMMITTED, producing two cards at the same place and a board whose order changes on every refresh"
 sidebar_label: "05ea · The position value"
-sidebar_position: 37
+sidebar_position: 26
 description: "Why max+1 races, what a single-statement INSERT ... SELECT does and does not fix, the three real remedies, fractional positioning and how many midpoints binary64 actually survives, and why every ORDER BY needs a tiebreaker."
 ---
 

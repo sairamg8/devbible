@@ -1,7 +1,7 @@
 ---
 title: "A cached function cannot read `cookies()`, so the ownership check cannot live inside the cache — which forces the useful split: cache the board-scoped data that is identical for every member, and run the per-caller authorisation outside it, on every request"
 sidebar_label: "06e · Caching a collection"
-sidebar_position: 42
+sidebar_position: 31
 description: "Why use cache must be extracted from a Route Handler body, the runtime-API restriction that dictates where authorisation goes, per-board cacheTag, why updateTag is unavailable on a REST surface, what an invalidation reaches on more than one instance, and the coalescing question the documentation does not answer."
 ---
 

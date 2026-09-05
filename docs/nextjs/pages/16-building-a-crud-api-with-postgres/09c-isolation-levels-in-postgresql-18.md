@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQL implements three isolation levels rather than four, each one prevents a specific named set of anomalies and nothing else, and the level you did not choose — Read Committed — is the one every request in your API is already running at"
 sidebar_label: "09c · Isolation levels"
-sidebar_position: 64
+sidebar_position: 48
 description: "Read Committed, Repeatable Read and Serializable quoted from the PostgreSQL 18 manual, what each actually prevents, the read-only anomaly Repeatable Read still allows, how to set the level in Drizzle 0.45.2, and the rule for choosing per operation."
 ---
 

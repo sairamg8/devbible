@@ -30,23 +30,23 @@ This chapter is organised by *one build*. The same resource carries through ever
 
 ## Chunks
 
-Every topic below is a topic, not a page — each will run to several chunks.
+**Thirteen topics, 71 pages.** Every topic below is a topic, not a page — the count is what it actually runs to on disk, and the link goes to that topic's first chunk.
 
-| # | Topic | Covers |
-|---|---|---|
-| 01 | **The resource contract** *(not written yet)* | What "a CRUD API" means in the App Router; Route Handlers and Server Actions against one shared service layer; writing the contract before the code |
-| 02 | **The schema and the migration story** *(not written yet)* | Table design driven by real access patterns; constraints as the API's first validation layer; migrations that are safe while the old code is still serving |
-| 03 | **The connection you actually get** *(not written yet)* | Pooling inside a function that may be frozen; module-scope client vs per-request; the dev hot-reload connection leak |
-| 04 | **The Data Access Layer** *(not written yet)* | One place every query lives; why a Route Handler never touches the driver; 🔴 where authorization goes so it cannot be forgotten |
-| 05 | **CREATE** *(not written yet)* | POST semantics; validation at the boundary; mapping unique, foreign-key and check violations to status codes; 201 and `Location`; idempotency keys for a retried POST |
-| 06 | **READ** *(not written yet)* | One vs many; filtering and sorting without injection; 🔴 offset vs keyset pagination and why offset degrades; caching a collection and invalidating it |
-| 07 | **UPDATE** *(not written yet)* | PUT vs PATCH; partial updates; the lost-update problem; optimistic concurrency with a version column or `If-Match`; 409 vs 412 |
-| 08 | **DELETE** *(not written yet)* | Hard vs soft; cascades and referential integrity; 204 vs 200; why delete must be idempotent |
-| 09 | **Transactions and multi-table writes** *(not written yet)* | What genuinely needs one; isolation levels in PostgreSQL 18; 🔴 serialization failures and the retry loop; why a transaction cannot span an HTTP boundary |
-| 10 | **Errors and one response shape** *(not written yet)* | A single envelope the client can rely on; never leaking a driver error; logging the cause and returning the code |
-| 11 | **Ownership on the API surface** *(not written yet)* | Every row-returning query scoped to the caller; 401 vs 403 vs answering 404 on purpose |
-| 12 | **Testing the API** *(not written yet)* | What is worth asserting at the HTTP boundary vs in the Data Access Layer; the seed and reset story |
-| 13 | **Project milestone** *(not written yet)* | The finished API wired to the UI and deployed |
+| # | Topic | Pages | Covers |
+|---|---|---:|---|
+| 01 | **[The resource contract](01-the-resource-contract.md)** | 3 | What "a CRUD API" means in the App Router; Route Handlers and Server Actions against one shared service layer; the six routes and the codes they commit to |
+| 02 | **[The schema and the migration story](02-the-schema-and-the-migration-story.md)** | 5 | Table design driven by real access patterns; constraints as the first validation layer; 🔴 the lock a migration actually takes, and expand-and-contract while the old code is still serving |
+| 03 | **[The connection you actually get](03-the-connection-you-actually-get.md)** | 4 | Pooling inside a function that may be frozen; the arithmetic and the three escapes; the dev hot-reload leak; what does not survive the pooler |
+| 04 | **[The Data Access Layer](04-the-data-access-layer.md)** | 6 | One place every query lives; 🔴 where the ownership predicate goes so it cannot be forgotten, and where it must *not* live; projections rather than rows |
+| 05 | **[CREATE](05-create.md)** | 8 | POST semantics; validating at the boundary; mapping SQLSTATE to status codes; idempotency keys for a retried POST; client-supplied ids; the `position` value under concurrent creates |
+| 06 | **[READ](06-read.md)** | 7 | One vs many; filtering and sorting without injection; 🔴 offset vs keyset pagination and why offset degrades; caching a collection; the N+1; conditional requests and `ETag` |
+| 07 | **[UPDATE](07-update.md)** | 7 | PUT vs PATCH; absent vs null; 🔴 the lost update, and optimistic concurrency with a version column; `If-Match` and 412; pessimistic locking and when it is right |
+| 08 | **[DELETE](08-delete.md)** | 5 | Hard vs soft, and what soft delete costs every read; cascades and referential integrity; 204 vs 200 and why delete must be idempotent; restoring a row |
+| 09 | **[Transactions and multi-table writes](09-transactions-and-multi-table-writes.md)** | 7 | What genuinely needs one; isolation levels in PostgreSQL 18; 🔴 serialization failures and the retry loop; why a transaction cannot span an HTTP boundary; duration as pool occupancy |
+| 10 | **[Errors and one response shape](10-errors-and-one-response-shape.md)** | 2 | 🔴 One envelope, **two renderings** — a Route Handler has a status code and a Server Action does not; never leaking a driver error |
+| 11 | **[Ownership on the API surface](11-ownership-on-the-api-surface.md)** | 1 | Every row-returning query scoped to the caller; 401 vs 403 vs answering 404 on purpose |
+| 12 | **[Testing the API](12-testing-the-api.md)** | 12 | The three questions and the three homes; asserting the envelope, not the prose; the ownership negative test; seed and reset; 🔴 forcing the interleaving, because a sequential test of a concurrency fix proves nothing |
+| 13 | **[Project milestone](13-project-milestone-sprintdesk-cards-api.md)** | 4 | The finished API wired to the UI and deployed — the seams, what each fix costs the database, and the acceptance evidence |
 
 ## Phase gate
 
@@ -62,4 +62,4 @@ You are done with this chapter when you can take a resource nobody has modelled 
 
 ---
 
-Start → **The resource contract** *(not written yet)* · [Chapter 15 index](../15-databases-apis-and-full-stack-patterns/01-explanation.md)
+Start → [01 · The resource contract](01-the-resource-contract.md) · [Chapter 15 index](../15-databases-apis-and-full-stack-patterns/01-explanation.md)

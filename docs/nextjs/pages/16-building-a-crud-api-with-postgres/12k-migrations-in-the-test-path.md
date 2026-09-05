@@ -1,7 +1,7 @@
 ---
 title: "Building the test database with `drizzle-kit push` instead of running the migrations means the constraint names in your test database were invented by a diff engine rather than declared in a migration — and this chapter's entire error mapping is keyed on constraint names"
 sidebar_label: "12k · Migrations in the test path"
-sidebar_position: 83
+sidebar_position: 67
 description: "push versus generate-and-migrate for a test database and the six things push hides, why DIRECT_URL rather than the pooler, migrating once into a template, the drift check drizzle-kit has no command for, seeding through raw SQL versus through the DAL, and .env.test."
 ---
 
@@ -230,4 +230,4 @@ Because the migration runner needs a single kept session and a transaction-mode 
 
 ---
 
-← [12j · Retry loop and idempotency](12j-testing-the-retry-loop-and-the-idempotency-key.md) · [Chapter index](01-explanation.md) · Next → **13 · Project milestone** *(not written yet)*
+← [12j · Retry loop and idempotency](12j-testing-the-retry-loop-and-the-idempotency-key.md) · [Chapter 16 overview](01-explanation.md) · Next → [13 · Project milestone](13-project-milestone-sprintdesk-cards-api.md)

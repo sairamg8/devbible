@@ -1,7 +1,7 @@
 ---
 title: "The predicate decides whether a caller may touch a card; this topic decides what the API says when they may not — and 401, 403 and a deliberate 404 are three different promises about what a stranger is allowed to learn"
 sidebar_label: "11 · Ownership on the API surface"
-sidebar_position: 72
+sidebar_position: 55
 description: "401 versus 403 versus answering 404 on purpose, why a 403 on an invisible resource is an existence oracle, the ambiguity of zero affected rows, and why a list endpoint never returns 403."
 ---
 
@@ -194,4 +194,4 @@ At the next query, if the predicate joins `team_members` at query time — which
 
 ---
 
-← [10b · Never leak a driver error](10b-never-leak-a-driver-error.md) · [Chapter 16 overview](01-explanation.md) · Next → **12 · Testing the API** *(not written yet)*
+← [10b · Never leak a driver error](10b-never-leak-a-driver-error.md) · [Chapter 16 overview](01-explanation.md) · Next → [12 · Testing the API](12-testing-the-api.md)

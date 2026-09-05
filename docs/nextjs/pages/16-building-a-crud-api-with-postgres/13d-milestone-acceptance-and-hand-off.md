@@ -1,7 +1,7 @@
 ---
 title: "Acceptance is not \"it works\" — every failure this chapter names is silent, so the deliverable is a piece of evidence per seam that would fail loudly if the seam reopened, plus one naming conflict the chapter leaves you to resolve before you ship"
 sidebar_label: "13d · Milestone: acceptance"
-sidebar_position: 93
+sidebar_position: 71
 description: "Fifteen acceptance questions you must answer without opening anything, the evidence that counts for each seam and the evidence that does not, the one vocabulary conflict this chapter leaves open, what topics 12 and 13 take over, what chapter 17 owns, and what this chapter deliberately did not solve."
 ---
 
@@ -154,4 +154,4 @@ The route table with its status codes and the `403` decision written down with i
 
 ---
 
-← [13c · What it costs the database](13c-milestone-what-it-costs-the-database.md) · [Chapter 16 index](01-explanation.md) · Next chapter → [17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md)
+← [13c · What it costs the database](13c-milestone-what-it-costs-the-database.md) · [Chapter 16 overview](01-explanation.md) · Next chapter → [17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md)

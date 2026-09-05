@@ -1,7 +1,7 @@
 ---
 title: "The database is the last validator in the stack and it speaks SQLSTATE — but in `drizzle-orm` 0.45.2 the code you need is not on the error you catch, which is the precise mechanism behind the `try/catch` that turns every constraint violation into a 500"
 sidebar_label: "05c · Reading a constraint violation"
-sidebar_position: 32
+sidebar_position: 21
 description: "PostgreSQL class 23 in full, the pg DatabaseError fields that carry the SQLSTATE and the constraint name, the DrizzleQueryError wrapper that hides both, how to unwrap it safely, and what the naive catch block actually costs."
 ---
 

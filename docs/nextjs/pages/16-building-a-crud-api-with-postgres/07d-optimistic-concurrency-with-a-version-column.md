@@ -1,7 +1,7 @@
 ---
 title: "Optimistic concurrency is one integer, one extra clause in the WHERE, and a check of the affected-row count — and the whole design rests on PostgreSQL re-evaluating that WHERE clause against the row as it exists at write time"
 sidebar_label: "07d · Optimistic concurrency"
-sidebar_position: 53
+sidebar_position: 37
 description: "The version column, the single UPDATE that both checks and bumps it, why the affected-row count is the signal, how to tell a conflict from a missing row without a second query, the 409 response, and what the client is expected to do with it."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Most of what people wrap in a transaction does not need one, and the writes that genuinely do are the ones where two tables have to agree — so the useful question is never 'should this be transactional' but 'which invariant would be violated if the process died between these two statements'"
 sidebar_label: "09 · Transactions — what needs one"
-sidebar_position: 62
+sidebar_position: 46
 description: "Why a single statement is already atomic, the test that identifies a real transaction boundary, the four multi-table writes in SprintDesk that need one and the three that do not, Drizzle's db.transaction, and what a rollback does and does not undo."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The lost update is the only bug in this chapter with no witness — two clients read the same row, both write, the second overwrites the first, every response is 200, and the only person who ever finds out is the user whose edit vanished"
 sidebar_label: "07c · The lost update"
-sidebar_position: 52
+sidebar_position: 36
 description: "The interleaving drawn out in full, why Read Committed permits it and is not at fault, why a single-statement update is not automatically safe, why no test and no log line catches it, and the three families of fix."
 ---
 

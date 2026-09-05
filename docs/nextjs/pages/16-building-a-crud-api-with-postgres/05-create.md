@@ -1,7 +1,7 @@
 ---
 title: "POST is the verb with no safety net — it is neither safe nor idempotent, the server chooses the identifier, and every one of those properties turns into a decision you have to make explicitly about status codes, the Location header, and what comes back in the body"
 sidebar_label: "05 · CREATE"
-sidebar_position: 30
+sidebar_position: 19
 description: "What POST actually means for the cards collection, why 201 plus Location is the specified response rather than a convention, why RETURNING is not an optimisation, and the four things a create handler must never do."
 ---
 

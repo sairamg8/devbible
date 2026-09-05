@@ -1,7 +1,7 @@
 ---
 title: "Project milestone — assemble the SprintDesk cards API from the twelve topics that built it, and note that nothing you assemble is new: the milestone is not writing six routes, it is being able to name, for each of them, the silent failure it inherits and the page that closes it"
 sidebar_label: "13 · Milestone: the build"
-sidebar_position: 90
+sidebar_position: 68
 description: "What the finished cards API actually is, the two doors over one Data Access Layer, the six decisions the chapter forced and where each is argued, and the three seams that fail before a second user ever exists — the connection, the migration, and the door."
 ---
 
@@ -279,4 +279,4 @@ Because a deploy is a window, not an instant, and during it two versions of your
 
 ---
 
-← [12 · Testing the API](12-testing-the-api.md) · [Chapter 16 index](01-explanation.md) · Next → [13b · The overlap seams](13b-milestone-the-overlap-seams.md)
+← [12k · Migrations in the test path](12k-migrations-in-the-test-path.md) · [Chapter 16 overview](01-explanation.md) · Next → [13b · The overlap seams](13b-milestone-the-overlap-seams.md)

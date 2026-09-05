@@ -1,7 +1,7 @@
 ---
 title: "An `ETag` is worth the trouble only if the client is allowed to store the response it validates — so `Cache-Control: no-store`, which the previous chunk recommended for an authorised list, silently makes every conditional request impossible, and `private, no-cache` is the directive that actually means \"keep it, but always ask me\""
 sidebar_label: "06g · Conditional requests"
-sidebar_position: 44
+sidebar_position: 33
 description: "Strong versus weak validators from the specification, an ETag built from the version column, the exact headers a 304 must carry, the collection ETag problem and two honest answers, the no-store versus no-cache distinction, and where If-Match hands over to topic 07."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A second DELETE of a card that is already gone has achieved the client's goal, and returning 404 for it is a defensible choice that will cost you — this page argues both sides so the decision is deliberate, then handles the delete that races an update"
 sidebar_label: "08d · 204, 200, and idempotent delete"
-sidebar_position: 60
+sidebar_position: 44
 description: "204 vs 200 vs 202 straight from RFC 9110, why DELETE is defined as idempotent and what that does and does not oblige you to return, the honest argument for 404, the conditional delete with If-Match, 410 Gone, and deleting a row another request is mid-update on."
 ---
 

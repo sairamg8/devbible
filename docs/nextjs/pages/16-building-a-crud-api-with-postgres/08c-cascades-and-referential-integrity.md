@@ -1,7 +1,7 @@
 ---
 title: "ON DELETE CASCADE is a delete you wrote once and will execute for the rest of the system's life, in a graph you did not draw — and the reason it is dangerous is that it makes a small correct statement do an unbounded amount of work you never see"
 sidebar_label: "08c · Cascades and integrity"
-sidebar_position: 59
+sidebar_position: 43
 description: "NO ACTION, RESTRICT, CASCADE, SET NULL and SET DEFAULT with the manual's own guidance on choosing, transitive cascades, why a soft delete cascades nothing, what a hard delete does to an audit trail, and how to draw the graph before you rely on it."
 ---
 

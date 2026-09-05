@@ -1,7 +1,7 @@
 ---
 title: "Your schema file is a claim and only an applied migration makes the database agree — so the migration runs once, from one place, on the direct connection, before the new code serves traffic, and a pending migration fails the deploy rather than the first request that touches the new column"
 sidebar_label: "02c · Migration as a release step"
-sidebar_position: 15
+sidebar_position: 6
 description: "generate versus push versus migrate, why the migration runner needs a session your pooler will not give it, the ledger as the only artefact that knows, why application startup is the wrong place in a serverless deployment, and the four-line pipeline that turns a schema mismatch into a failed deploy."
 ---
 

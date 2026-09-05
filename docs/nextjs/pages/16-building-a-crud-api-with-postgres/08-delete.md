@@ -1,7 +1,7 @@
 ---
 title: "Hard delete and soft delete are not a fashion choice between an old way and a modern way — they are a requirements question with an answer per table, and picking soft delete because it feels safer is how a system acquires a predicate that every future query must remember"
 sidebar_label: "08 · DELETE — hard vs soft"
-sidebar_position: 57
+sidebar_position: 41
 description: "What DELETE means in HTTP, what soft delete actually buys — undo, audit, referential survival — what it costs, the four questions that decide it per table, and the shape of the deletedAt column this chapter uses."
 ---
 

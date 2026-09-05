@@ -1,7 +1,7 @@
 ---
 title: "State every status code each verb may produce before you write a handler, because a status code is not a detail of the implementation — it is the only part of your response a proxy, a cache, a retry policy and a monitoring dashboard all agree on"
 sidebar_label: "01b · Six routes, and the codes"
-sidebar_position: 11
+sidebar_position: 2
 description: "The full status table for the six card routes, the RFC 9110 definitions the codes are held to, safe and idempotent as commitments rather than trivia, why 405 and Allow are the framework's business and 404-vs-403 is yours, and the codes this chapter deliberately does not use."
 ---
 

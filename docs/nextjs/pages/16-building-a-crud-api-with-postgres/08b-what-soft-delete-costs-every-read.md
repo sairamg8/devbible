@@ -1,7 +1,7 @@
 ---
 title: "The cost of soft delete is not the column, it is that every query against the table now needs a predicate that nothing enforces — and the query that forgets it does not fail, it returns deleted rows to a user and calls that a 200"
 sidebar_label: "08b · What soft delete costs"
-sidebar_position: 58
+sidebar_position: 42
 description: "Why the predicate spreads to every read, join, count and export, the four containment strategies ranked from weakest to strongest, partial indexes and the planner rule that decides whether yours is used, and RLS as the only mechanism that cannot be bypassed."
 ---
 

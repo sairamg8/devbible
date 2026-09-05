@@ -1,7 +1,7 @@
 ---
 title: "Put the membership test in the WHERE clause and the query cannot return a card the caller may not see — which turns authorization from something the function does, and can therefore forget, into something the function is"
 sidebar_label: "04c · The ownership predicate"
-sidebar_position: 24
+sidebar_position: 15
 description: "The three-hop predicate written once as an EXISTS fragment and reused by every read and every write, the supporting tables and the two indexes that exist only for it, why the subject of a check is never a parameter, and why the same predicate makes 404 the only answer the function is capable of giving."
 ---
 

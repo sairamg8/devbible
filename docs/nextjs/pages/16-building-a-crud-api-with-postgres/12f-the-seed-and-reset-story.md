@@ -1,7 +1,7 @@
 ---
 title: "Wrapping each test in a transaction and rolling it back is the fastest reset available and it is structurally incompatible with the half of this chapter that made the chapter worth writing — a savepoint is not a transaction, a second connection cannot see uncommitted rows, and the isolation level cannot be set after the first statement"
 sidebar_label: "12f · The seed and reset story"
-sidebar_position: 78
+sidebar_position: 61
 description: "The five reset strategies and what each costs, transaction-per-test written out including the connection injection it requires, and the six documented reasons it cannot host a concurrency, retry or idempotency test."
 ---
 
@@ -211,4 +211,4 @@ Because it depends on session affinity: `BEGIN`, the seed, the code under test a
 
 ---
 
-← [12e · The ownership negative test](12e-the-ownership-negative-test.md) · [Chapter index](01-explanation.md) · Next → [12g · TRUNCATE, templates and schema per worker](12g-truncate-templates-and-schema-per-worker.md)
+← [12e · The ownership negative test](12e-the-ownership-negative-test.md) · [Chapter 16 overview](01-explanation.md) · Next → [12g · TRUNCATE, templates and schema per worker](12g-truncate-templates-and-schema-per-worker.md)

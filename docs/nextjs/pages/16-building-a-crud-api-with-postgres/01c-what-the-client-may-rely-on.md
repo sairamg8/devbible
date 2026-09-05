@@ -1,7 +1,7 @@
 ---
 title: "The representation is the half of the contract that has no status code to hide behind — every field you return is a promise about a value's name, its type, its nullability and its meaning, and the ones you never wrote down are the ones a client is already depending on"
 sidebar_label: "01c · What the client may rely on"
-sidebar_position: 12
+sidebar_position: 3
 description: "The card representation field by field, the difference between null and absent, why timestamps are strings and ids are opaque, the collection envelope decided once, additive-only evolution, and the four things this API explicitly refuses to promise."
 ---
 

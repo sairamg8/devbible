@@ -1,7 +1,7 @@
 ---
 title: "The Data Access Layer is the decision that the number of places a rule lives stops depending on the number of entry points — so a Route Handler that imports the driver has not saved a layer, it has created a second copy of every rule that will drift from the first"
 sidebar_label: "04 · The Data Access Layer"
-sidebar_position: 22
+sidebar_position: 13
 description: "The three documented obligations, the cards DAL laid out module by module, server-only and the lint boundary that turns a convention into an import error, the error vocabulary the transports map, what the DAL must never know about, and why the split is the same one that makes mutations testable."
 ---
 

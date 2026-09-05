@@ -1,7 +1,7 @@
 ---
 title: "You do not design a table for the noun, you design it for the six queries the contract has already committed you to — which is why the schema comes after the contract and why every column in it has a request that justifies it"
 sidebar_label: "02 · The schema"
-sidebar_position: 13
+sidebar_position: 4
 description: "The five queries the six routes actually issue, the SprintDesk cards table derived from them, why every column exists including the two whose behaviour other topics own, the composite index that is the cursor written a second time, and the columns deliberately absent."
 ---
 

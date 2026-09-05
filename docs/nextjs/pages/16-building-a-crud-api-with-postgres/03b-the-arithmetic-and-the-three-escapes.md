@@ -1,7 +1,7 @@
 ---
 title: "Instances multiplied by pool max is the only number that predicts whether your API survives a traffic spike, and there are exactly three ways to make it smaller — put a transaction-mode proxy in front, remove the session, or have fewer processes"
 sidebar_label: "03b · The arithmetic, three escapes"
-sidebar_position: 19
+sidebar_position: 10
 description: "The two terms of the exhaustion product and who controls each, Neon's three published limits and the error string each produces, why default_pool_size is per role and per database, the three escapes with the code for each, and the table of which consumer gets which connection string."
 ---
 

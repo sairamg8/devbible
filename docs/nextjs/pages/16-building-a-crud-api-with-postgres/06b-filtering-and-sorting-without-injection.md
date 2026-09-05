@@ -1,7 +1,7 @@
 ---
 title: "A typed query builder removes string concatenation from your `WHERE` clause and does nothing at all for your `ORDER BY` — the real injection risk in this stack is an allow-list that is not an allow-list, and it fails as a lookup that falls through rather than as a quote that escapes"
 sidebar_label: "06b · Filtering and sorting"
-sidebar_position: 39
+sidebar_position: 28
 description: "Where Drizzle parameterises and where it does not, sql versus sql.raw, the allow-list written as a map rather than as an includes check, validating the query string as input, and the filter that quietly bypasses the ownership predicate."
 ---
 

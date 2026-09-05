@@ -1,7 +1,7 @@
 ---
 title: "You cannot hold a transaction open across a client round trip, and there are three independent reasons rather than one — the manual advises against it, the platform may freeze the function that opened it, and behind a pooler the next statement will not reach the same backend anyway"
 sidebar_label: "09e · Transactions and the HTTP boundary"
-sidebar_position: 66
+sidebar_position: 50
 description: "The three mechanisms that each independently forbid a request-spanning transaction, why this is the reason optimistic concurrency exists, the application-level lease that gives you what people actually want, and the idle_in_transaction timeout that limits the damage."
 ---
 

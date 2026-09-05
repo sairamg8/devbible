@@ -1,7 +1,7 @@
 ---
 title: "A transaction's real cost is not CPU, it is one pooled connection multiplied by its duration — which is why an HTTP call inside a transaction is the classic outage: it converts an unrelated third party's latency into your database's concurrency limit"
 sidebar_label: "09f · Duration and pool occupancy"
-sidebar_position: 67
+sidebar_position: 51
 description: "Why transaction duration is the resource, the anatomy of the third-party-slowdown outage, the four rules for what may sit inside a transaction, the timeouts that bound each layer, and how to shorten a transaction that genuinely has work to do."
 ---
 

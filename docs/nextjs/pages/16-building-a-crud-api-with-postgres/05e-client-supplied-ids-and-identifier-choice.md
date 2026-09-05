@@ -1,7 +1,7 @@
 ---
 title: "Who mints the identifier is a protocol decision disguised as a column default — a server-minted id means the client cannot address the resource until the round trip returns, and a client-minted one makes creates idempotent for free while turning your primary key into untrusted input"
 sidebar_label: "05e · Identifier choice"
-sidebar_position: 36
+sidebar_position: 25
 description: "gen_random_uuid() and what defaultRandom() actually emits, uuidv4 versus uuidv7 in PostgreSQL 18, the three things a client-supplied id buys and the three it costs, and why a client id is never a trust boundary."
 ---
 

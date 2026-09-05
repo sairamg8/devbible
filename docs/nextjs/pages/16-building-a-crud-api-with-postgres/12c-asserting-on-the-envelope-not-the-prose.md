@@ -1,7 +1,7 @@
 ---
 title: "The error envelope's `code` is a contract the client is allowed to branch on and its `message` is prose that a designer will rewrite on a Tuesday, so a test that asserts the message string is a test that fails for a reason nobody wanted to be told about"
 sidebar_label: "12c · Asserting on the envelope"
-sidebar_position: 75
+sidebar_position: 58
 description: "Why code is the contract and message is not, the fields that are unstable by construction, when a whole-body toEqual is exactly right rather than brittle, the leak test every error path needs, and asserting a status and a code together because status alone is ambiguous."
 ---
 
@@ -227,4 +227,4 @@ Because an absent assertion and a deliberate omission look identical six months 
 
 ---
 
-← [12b · The database under test](12b-the-database-is-the-thing-under-test.md) · [Chapter index](01-explanation.md) · Next → [12d · Representation assertions and what not to assert](12d-representation-assertions-and-what-not-to-assert.md)
+← [12b · The database under test](12b-the-database-is-the-thing-under-test.md) · [Chapter 16 overview](01-explanation.md) · Next → [12d · Representation assertions and what not to assert](12d-representation-assertions-and-what-not-to-assert.md)

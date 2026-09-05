@@ -1,7 +1,7 @@
 ---
 title: "Hot module replacement swaps modules and leaves globals alone, which is why a pool constructed at module scope is reconstructed on every save and why the developer editing most actively is the one who takes the shared database down — and why the fix is a `globalThis` stash rather than anything clever"
 sidebar_label: "03c · The dev hot-reload leak"
-sidebar_position: 20
+sidebar_position: 11
 description: "Why the leak only happens in development, the arithmetic that reaches max_connections in an afternoon, the globalThis singleton written for Drizzle and pg with every line justified, what the guard is for, the seed-script variant of the same bug, and the four things the singleton does not fix."
 ---
 

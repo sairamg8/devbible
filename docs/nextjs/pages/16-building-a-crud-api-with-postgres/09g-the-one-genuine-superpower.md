@@ -1,7 +1,7 @@
 ---
 title: "Enqueueing a job in the same transaction as the write that causes it is the one thing a database-backed queue can do that no external broker structurally can — and it is worth more than every operational feature a real broker offers, because it removes a class of bug rather than making one easier to survive"
 sidebar_label: "09g · The one genuine superpower"
-sidebar_position: 68
+sidebar_position: 52
 description: "The two-generals problem between a database and a broker, why both orderings are wrong, the transactional outbox written against the chapter's schema, what the pattern does and does not give you, and the honest list of what you give up by not running a broker."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A DAL that returns rows has made every future migration a change to your API, because adding a column widens every response that carries it — in a file nobody edited, with no review, no type error and no deploy note"
 sidebar_label: "04d · Projections, not rows"
-sidebar_position: 26
+sidebar_position: 17
 description: "Why the third DAL obligation is the one people skip, the migration that leaks a column nobody exposed, naming columns in the select and typing the mapper against the contract so a rename is a compile error, two projections for two use cases, field-level predicates, and why classes cannot cross the RSC boundary."
 ---
 

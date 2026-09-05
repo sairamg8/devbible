@@ -1,7 +1,7 @@
 ---
 title: "GET one and GET many are two different problems that share a verb — a missing card is a 404 and an empty board is a 200 with `[]`, the Data Access Layer returns the projection and the handler is forbidden from reshaping it, and every single read carries a soft-delete predicate that is the easiest thing in the codebase to forget"
 sidebar_label: "06 · READ"
-sidebar_position: 38
+sidebar_position: 27
 description: "Why the two GETs have different failure modes, 404 versus an empty collection versus 410, projections that belong to the DAL, the soft-delete predicate and how to make it impossible to omit, and the Date that becomes a string on the wire."
 ---
 

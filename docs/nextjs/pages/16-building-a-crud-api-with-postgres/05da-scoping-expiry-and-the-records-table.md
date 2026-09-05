@@ -1,7 +1,7 @@
 ---
 title: "An idempotency key that is globally unique is an enumerable namespace, one that never expires is a promise you cannot keep, and one stored anywhere but the database it protects can be separated from the row by a single crash"
 sidebar_label: "05da · Scoping, expiry, records"
-sidebar_position: 35
+sidebar_position: 24
 description: "Why the key must be scoped to a boundary the caller already passed, why the expiry policy is part of the published contract, the records table that the key column cannot replace, and why a cache can front idempotency but never own it."
 ---
 

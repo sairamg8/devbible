@@ -1,7 +1,7 @@
 ---
 title: "The ownership predicate is a `WHERE` clause, so deleting it changes no line of coverage and breaks no positive test — which makes the negative test, with a second caller who is a member of a different team, the only assertion in the suite that can detect the chapter's worst failure"
 sidebar_label: "12e · The ownership negative test"
-sidebar_position: 77
+sidebar_position: 60
 description: "Why a positive-only suite cannot see a missing predicate, the six-route by three-caller matrix, the identity assertion that a non-member and a missing card produce the same response, the write-side check a response assertion misses, the two-predicate move, and how to prove the negative test is not decorative."
 ---
 
@@ -257,4 +257,4 @@ Because the type proves the scope was passed into the function, not that it reac
 
 ---
 
-← [12d · Representation and non-assertions](12d-representation-assertions-and-what-not-to-assert.md) · [Chapter index](01-explanation.md) · Next → [12f · The seed and reset story](12f-the-seed-and-reset-story.md)
+← [12d · Representation and non-assertions](12d-representation-assertions-and-what-not-to-assert.md) · [Chapter 16 overview](01-explanation.md) · Next → [12f · The seed and reset story](12f-the-seed-and-reset-story.md)

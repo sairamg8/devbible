@@ -1,7 +1,7 @@
 ---
 title: "A CRUD API in the App Router is never one endpoint set — it is two entry points onto one service layer, and the contract is the thing both of them owe the caller, which is why writing it after the handlers produces a description rather than a contract"
 sidebar_label: "01 · The resource contract"
-sidebar_position: 10
+sidebar_position: 1
 description: "Route Handlers and Server Actions as two doors onto one Data Access Layer, why the honest answer for a real resource is both rather than a choice, what a contract commits you to that a description does not, and the SprintDesk cards resource stated before any code is written."
 ---
 

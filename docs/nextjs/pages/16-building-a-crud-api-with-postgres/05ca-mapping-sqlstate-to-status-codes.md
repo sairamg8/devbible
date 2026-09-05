@@ -1,7 +1,7 @@
 ---
 title: "Four class-23 codes map to four different HTTP responses, and the one everybody reclassifies as a client error — `23502` not_null_violation — is the one that should stay a 500, because the client's request was fine and your schema and your table have drifted apart"
 sidebar_label: "05ca · SQLSTATE to status codes"
-sidebar_position: 33
+sidebar_position: 22
 description: "The mapping table with the reasoning behind each status, why 23503 depends on where the broken reference came from, why 23502 must not become a 4xx, and how to name constraints so the mapping has a key that survives a rename."
 ---
 

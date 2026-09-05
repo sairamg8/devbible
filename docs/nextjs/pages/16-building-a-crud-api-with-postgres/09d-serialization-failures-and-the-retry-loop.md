@@ -1,7 +1,7 @@
 ---
 title: "A Serializable transaction with no retry loop is not safer than Read Committed, it is differently broken — the database is telling you to run the transaction again, and an application that turns that instruction into a 500 has bought the overhead of the level and none of the guarantee"
 sidebar_label: "09d · Serialization failures and retries"
-sidebar_position: 65
+sidebar_position: 49
 description: "SQLSTATE 40001 and 40P01 quoted from the error-code appendix, the retry loop with bounded attempts and jittered backoff written out, why the loop must wrap the whole transaction, which error classes are safe to retry and which are not, and what must never go inside."
 ---
 

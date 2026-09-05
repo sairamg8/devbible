@@ -1,7 +1,7 @@
 ---
 title: "Two columns on the cards table are updated by mechanisms rather than by clients — position, which two people can legally set to the same value, and updatedAt, which must be the server's clock or it is worthless as an audit field"
 sidebar_label: "07g · position and updatedAt"
-sidebar_position: 56
+sidebar_position: 40
 description: "Why a tie in position is not corruption and a unique constraint on it is, why the move path is what exhausts float precision and how renormalisation recovers, why reordering is a move not a patch, and the three ways to maintain updatedAt with the trigger written out."
 ---
 

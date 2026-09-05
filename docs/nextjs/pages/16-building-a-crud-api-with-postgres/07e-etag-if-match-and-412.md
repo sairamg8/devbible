@@ -1,7 +1,7 @@
 ---
 title: "ETag and If-Match are the same optimistic check expressed in headers instead of in your request body, and the reason to prefer them is that 412 answers a different question from 409 — one is about a precondition the client sent, the other about a conflict the client never mentioned"
 sidebar_label: "07e · ETag, If-Match, 412"
-sidebar_position: 54
+sidebar_position: 38
 description: "Parsing If-Match back to a version, the conditional PATCH and PUT, why RFC 9110 permits a 2xx on a repeated change, the 409-vs-412 rule stated by RFC 5789, and what an intermediary does to your tags."
 ---
 

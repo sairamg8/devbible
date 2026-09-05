@@ -1,7 +1,7 @@
 ---
 title: "A migration is not slow because the DDL is slow — it is dangerous because ALTER TABLE takes a lock that conflicts with everything including SELECT, and the documented behaviour of a conflicting request is to wait indefinitely, which is how a one-millisecond statement becomes a ten-minute outage"
 sidebar_label: "02d · The lock it takes"
-sidebar_position: 16
+sidebar_position: 7
 description: "ACCESS EXCLUSIVE and what it conflicts with, which ALTER TABLE forms rewrite and which do not, why ADD COLUMN NOT NULL with no default fails rather than blocks, NOT VALID and VALIDATE CONSTRAINT, CREATE INDEX CONCURRENTLY and why it cannot live in a normal migration, and lock_timeout as the thing that turns an outage into a retry."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A POST that times out has an unknown outcome rather than a failed one, and since the specification forbids the client and every proxy from retrying it, the only place a safe retry can be built is your table — one key column, one unique index, and a replay path that cannot use `RETURNING`"
 sidebar_label: "05d · Idempotency keys"
-sidebar_position: 34
+sidebar_position: 23
 description: "Why the retried POST is the normal case, the Idempotency-Key draft's enforcement outcomes, the key-plus-unique-index mechanism, the ON CONFLICT DO NOTHING plus RETURNING trap that yields zero rows on every replay, and what status a replay should carry."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "A validation schema that folds an absent field and an explicitly null field into the same value cannot express a partial update, and the way it fails is to clear a column nobody asked it to clear"
 sidebar_label: "07b · Absent vs null"
-sidebar_position: 51
+sidebar_position: 35
 description: "Why `undefined` and `null` are two different instructions in a PATCH body, what zod 4.4.3 actually produces for each, how to build a SET map that only contains the keys the client sent, and the three shapes that get this wrong."
 ---
 

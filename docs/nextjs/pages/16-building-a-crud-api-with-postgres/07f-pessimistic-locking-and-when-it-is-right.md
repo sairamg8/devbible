@@ -1,7 +1,7 @@
 ---
 title: "SELECT … FOR UPDATE is the wrong default for an HTTP API not because locking is bad but because the lock's lifetime is a database transaction and the thing you want to protect spans a human — and the narrow case where it is right is the one where nothing human happens in between"
 sidebar_label: "07f · Pessimistic locking"
-sidebar_position: 55
+sidebar_position: 39
 description: "What FOR UPDATE actually locks and for how long, the four costs of holding it across a request, the PostgreSQL warning about SELECT FOR UPDATE that surprises people from other databases, NOWAIT and lock_timeout, and the three cases where pessimistic locking is genuinely correct."
 ---
 

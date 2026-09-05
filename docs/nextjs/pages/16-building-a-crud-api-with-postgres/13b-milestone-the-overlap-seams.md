@@ -1,7 +1,7 @@
 ---
 title: "The overlap seams — five failures that need two requests to appear, all of which answer 200 or 201, plus the one envelope that has to render every one of them twice because a Route Handler has a status code and a Server Action does not"
 sidebar_label: "13b · Milestone: the overlap seams"
-sidebar_position: 91
+sidebar_position: 69
 description: "The lost update and why 412 and 409 are different answers, position collisions on concurrent creates, the retried POST, the delete that races a patch, why a transaction cannot span the interval, and the single error envelope rendered two ways without leaking a driver error."
 ---
 
@@ -220,4 +220,4 @@ Because getting it wrong produces a system that is *uniformly* broken and *indiv
 
 ---
 
-← [13 · Milestone: the build](13-project-milestone-sprintdesk-cards-api.md) · [Chapter 16 index](01-explanation.md) · Next → [13c · What it costs the database](13c-milestone-what-it-costs-the-database.md)
+← [13 · Milestone: the build](13-project-milestone-sprintdesk-cards-api.md) · [Chapter 16 overview](01-explanation.md) · Next → [13c · What it costs the database](13c-milestone-what-it-costs-the-database.md)

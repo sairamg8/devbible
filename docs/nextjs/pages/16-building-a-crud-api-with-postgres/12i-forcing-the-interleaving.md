@@ -1,16 +1,16 @@
 ---
 title: "A lost-update test that runs its two writers one after the other proves that sequential writes work, which was never in doubt — the test only means something if you hold one transaction open at a chosen statement while the other overtakes it, and that requires two connections and a barrier you control"
 sidebar_label: "12i · Forcing the interleaving"
-sidebar_position: 81
-description: "The barrier helper, the lost update demonstrated and then prevented, why the second writer's WHERE clause is re-evaluated against the new row version, asserting the invariant rather than the winner, a deterministic blocking test with NOWAIT, and the teardown that stops one failure poisoning the file."
+sidebar_position: 64
+description: "Why a sequential lost-update test is unfalsifiable, the gate and session helpers, the lost update reproduced deterministically, why the second writer's WHERE clause is re-evaluated against the new row version, and the teardown discipline that stops one failure poisoning the file."
 ---
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-05 against the PostgreSQL 18 documentation — [§13.2.1 Read Committed](https://www.postgresql.org/docs/18/transaction-iso.html), [§13.3.2 Row-Level Locks](https://www.postgresql.org/docs/18/explicit-locking.html), [`SELECT … FOR UPDATE`](https://www.postgresql.org/docs/18/sql-select.html) and [Appendix A · Error Codes](https://www.postgresql.org/docs/18/errcodes-appendix.html) — and [RFC 9110 §15.5.13](https://www.rfc-editor.org/rfc/rfc9110.txt), fetched as raw text. Documentation-verified; **no sandbox run, no timings**.
+> Verified: 2026-09-05 against the PostgreSQL 18 documentation — [§13.2.1 Read Committed](https://www.postgresql.org/docs/18/transaction-iso.html) and [Appendix A · Error Codes](https://www.postgresql.org/docs/18/errcodes-appendix.html) — and [RFC 9110 §15.5.13](https://www.rfc-editor.org/rfc/rfc9110.txt), fetched as raw text from rfc-editor.org. Documentation-verified; **no sandbox run, no timings**.
 > Target: **PostgreSQL 18.4** · `drizzle-orm` **0.45.2** · `pg` **8.23.0** · Vitest **5.0.0** · Node **24.20.0**.
 
-**[07c](07c-the-lost-update.md) is the chapter's pivot: the read-modify-write that silently discards a colleague's edit, and the reason `version` is in the schema at all. It is also the single hardest thing in this chapter to test, because the bug only exists in an interleaving — A reads, B reads, A writes, B writes — and every convenient way to write the test produces A reads, A writes, B reads, B writes, which is not the same program. The sequential version passes whether or not the version guard exists, which makes it the most dangerous kind of test: one that a team believes covers the bug. Getting the real interleaving requires two independent connections and an explicit barrier between them, and once you have that machinery, four of this chapter's claims become testable and none of them were before. This page builds the machinery, then writes the four tests — and closes with the teardown discipline that keeps one failure from poisoning every test after it.**
+**[07c](07c-the-lost-update.md) is the chapter's pivot: the read-modify-write that silently discards a colleague's edit, and the reason `version` is in the schema at all. It is also the single hardest thing in this chapter to test, because the bug only exists in an interleaving — A reads, B reads, A writes, B writes — and every convenient way to write the test produces A reads, A writes, B reads, B writes, which is not the same program. The sequential version passes whether or not the version guard exists, which makes it the most dangerous kind of test: one that a team believes covers the bug. Getting the real interleaving requires two independent connections and an explicit barrier between them, and once you have that machinery, four of this chapter's claims become testable and none of them were before. This page builds the machinery and writes the two tests that are about the lost update itself; [12ia](12ia-invariants-blocking-and-position-races.md) writes the three that use the same machinery for a different kind of claim.**
 
 ## Why the convenient version proves nothing
 
@@ -43,13 +43,30 @@ Both sessions must hold the same stale view before either writes. One connection
 // test/concurrency/support.ts
 import { Pool, type PoolClient } from 'pg'
 
-const pool = new Pool({ connectionString: process.env.DIRECT_URL, max: 4 })
+const pool = new Pool({
+  connectionString: process.env.DIRECT_URL,
+  max: 4,                       // widest test in the file, plus one
+  connectionTimeoutMillis: 5_000,
+})
 
 /** A one-shot gate. `wait()` resolves when someone calls `open()`. */
 export function gate() {
   let open!: () => void
   const waited = new Promise<void>((resolve) => { open = resolve })
   return { open, wait: () => waited }
+}
+
+/** An n-party barrier: every participant blocks until all n have arrived. */
+export function counter(parties: number) {
+  let arrived = 0
+  let release!: () => void
+  const all = new Promise<void>((resolve) => { release = resolve })
+  return {
+    async arriveAndWait() {
+      if (++arrived === parties) release()
+      await all
+    },
+  }
 }
 
 /** Runs `body` on its own dedicated connection, guaranteeing cleanup. */
@@ -67,7 +84,9 @@ export async function session<T>(body: (c: PoolClient) => Promise<T>): Promise<T
 export async function closeSessions() { await pool.end() }
 ```
 
-`gate()` is the whole trick. It is a deferred promise: one session awaits it, the other resolves it, and the ordering between the two is decided by your code rather than by the event loop. No `setTimeout`, no sleeps, no timing.
+`gate()` is the whole trick. It is a deferred promise: one session awaits it, the other resolves it, and the ordering between the two is decided by your code rather than by the event loop. No `setTimeout`, no sleeps, no timing. `counter()` is the same idea for the symmetric case, where neither session leads.
+
+🔴 **Use a raw `PoolClient` and literal `BEGIN`/`COMMIT`, not `db.transaction()`.** The gate has to be awaited *between* two statements of an open transaction, and a callback-style transaction API gives you no place to hand control to another session mid-flight without also risking the nested-transaction-is-a-savepoint behaviour [12f](12f-the-seed-and-reset-story.md) describes. Raw statements make the schedule explicit and readable, which is the entire value of these tests.
 
 ## Test 1 — the lost update, demonstrated
 
@@ -115,7 +134,7 @@ The gates make the schedule exact: B's `SELECT` is guaranteed to happen before A
 
 ## Test 2 — the version guard, and why the second `UPDATE` matches nothing
 
-Change one thing: put `AND version = $3` in both updates. Now B's statement finds no row, and the reason is documented precisely.
+One thing changes: `AND version = $3` in both updates. Now B's statement finds no row, and the reason is documented precisely.
 
 > *"`UPDATE`, `DELETE`, `SELECT FOR UPDATE`, and `SELECT FOR SHARE` commands behave the same as `SELECT` in terms of searching for target rows: they will only find target rows that were committed as of the command start time. However, such a target row might have already been updated (or deleted or locked) by another concurrent transaction by the time it is found. In this case, the would-be updater will wait for the first updating transaction to commit or roll back (if it is still in progress). … If the first updater commits, the second updater will ignore the row if the first updater deleted it, otherwise it will attempt to apply its operation to the updated version of the row. The search condition of the command (the `WHERE` clause) is re-evaluated to see if the updated version of the row still matches the search condition."*
 > — [PostgreSQL 18 · §13.2.1 Read Committed](https://www.postgresql.org/docs/18/transaction-iso.html)
@@ -126,98 +145,47 @@ Change one thing: put `AND version = $3` in both updates. Now B's statement find
 > — [RFC 9110 §15.5.13](https://www.rfc-editor.org/rfc/rfc9110.txt)
 
 ```ts
+// test/concurrency/version-guard.test.ts
 it('the version guard makes the second writer affect zero rows', async () => {
   const card = await seedCommittedCard({ title: 'original' })   // version 1
-  /* …same two gated sessions… */
-  const bResult = await c.query(
-    'UPDATE cards SET title = $1, version = version + 1 WHERE id = $2 AND version = $3',
-    ['B', card.id, 1])
-  expect(bResult.rowCount).toBe(0)                              // 🔴 the whole mechanism
-
-  const final = await readRowDirectly(card.id)
-  expect(final.title).toBe('original + A')                      // A survived
-  expect(final.version).toBe(2)                                 // exactly one bump
-})
-```
-
-## Test 3 — assert the invariant, not the winner
-
-The gated tests above prescribe an order. Some tests should not: what you really want to know about two clients sending `PATCH` with the same `If-Match` is that **exactly one succeeds**, whichever one the scheduler favours.
-
-```ts
-it('exactly one of two concurrent conditional updates succeeds', async () => {
-  const card = await seedCommittedCard({ title: 'original' })
-  const etag = `"c-${card.id}-1"`
-
-  const [x, y] = await Promise.all([
-    patchViaHandler(card.id, { title: 'X' }, { 'if-match': etag }),
-    patchViaHandler(card.id, { title: 'Y' }, { 'if-match': etag }),
-  ])
-
-  const statuses = [x.status, y.status].sort()
-  expect(statuses).toEqual([200, 412])                 // 🔴 not "x wins"
-
-  const final = await readRowDirectly(card.id)
-  expect(final.version).toBe(2)                        // exactly one write landed
-  expect(['X', 'Y']).toContain(final.title)
-})
-```
-
-**This is the more valuable of the two test styles and it is the one usually missing.** It has no ordering assumption, so it cannot flake on scheduling; it fails only when the invariant is genuinely broken — which is what happens if someone removes the guard (both get 200, version becomes 3) or breaks the mapping (both get 412, version stays 1). Both failure modes are caught by two assertions.
-
-⚠️ **`Promise.all` does not guarantee overlap.** It starts both, but if the first completes before the second's first statement reaches the server, they ran sequentially and the test still passes vacuously. That is acceptable here precisely because the assertion is an invariant — it holds under both schedules — but it means this style cannot *demonstrate* a race, only refuse to break under one. Use gates when the point is the demonstration, `Promise.all` when the point is the invariant, and do not confuse the two.
-
-## Test 4 — blocking, without a single timing assertion
-
-[07f](07f-pessimistic-locking-and-when-it-is-right.md) argues for `SELECT … FOR UPDATE` where the work between read and write is genuinely serial. Testing "B blocks until A commits" looks like it needs a sleep. It does not: ask for the lock in a way that fails instead of waiting.
-
-```ts
-it('a row locked FOR UPDATE is not available to a second session', async () => {
-  const card = await seedCommittedCard({ title: 'original' })
-  const aHasLocked = gate()
-  const bHasTried = gate()
+  const bHasRead = gate()
+  const aHasWritten = gate()
+  const GUARDED =
+    'UPDATE cards SET title = $1, version = version + 1 WHERE id = $2 AND version = $3'
 
   const a = session(async (c) => {
     await c.query('BEGIN')
-    await c.query('SELECT * FROM cards WHERE id = $1 FOR UPDATE', [card.id])
-    aHasLocked.open()
-    await bHasTried.wait()
+    const { rows: [before] } = await c.query(
+      'SELECT title, version FROM cards WHERE id = $1', [card.id])
+    await bHasRead.wait()
+    const r = await c.query(GUARDED, [`${before.title} + A`, card.id, before.version])
     await c.query('COMMIT')
+    aHasWritten.open()
+    return r.rowCount
   })
 
   const b = session(async (c) => {
-    await aHasLocked.wait()
-    const err = await c.query('SELECT * FROM cards WHERE id = $1 FOR UPDATE NOWAIT', [card.id])
-      .then(() => null, (e) => e)
-    bHasTried.open()
-    expect(err?.code).toBe('55P03')          // lock_not_available — deterministic, no sleep
+    await c.query('BEGIN')
+    const { rows: [before] } = await c.query(
+      'SELECT title, version FROM cards WHERE id = $1', [card.id])
+    bHasRead.open()
+    await aHasWritten.wait()
+    const r = await c.query(GUARDED, [`${before.title} + B`, card.id, before.version])
+    await c.query('COMMIT')
+    return r.rowCount
   })
 
-  await Promise.all([a, b])
+  const [aRows, bRows] = await Promise.all([a, b])
+  expect(aRows).toBe(1)
+  expect(bRows).toBe(0)                          // 🔴 the whole mechanism, in one number
+
+  const final = await readRowDirectly(card.id)
+  expect(final.title).toBe('original + A')       // A survived
+  expect(final.version).toBe(2)                  // exactly one bump
 })
 ```
 
-`NOWAIT` converts "would have waited" into an immediate, named error, and `55P03 lock_not_available` is in the error-code appendix. **This is the pattern for every blocking assertion in the suite**: never assert that something took time; assert that a non-blocking variant reported unavailability. `lock_timeout` set to a small value on the test role ([12h](12h-parallel-workers-against-one-postgres.md)) gives you the same effect for statements that have no `NOWAIT` form.
-
-## Test 5 — two concurrent creates competing for the same position
-
-[05ea](05ea-the-position-value-and-concurrent-creates.md) computes a new card's position from the board's current contents, which is a read-modify-write with a different shape: both sessions read the same maximum and both write a position derived from it.
-
-```ts
-it('two concurrent appends do not produce two cards at the same position', async () => {
-  const board = await seedCommittedBoard()
-  await Promise.all([
-    createCardAtEnd(board.id, { title: 'first' }),
-    createCardAtEnd(board.id, { title: 'second' }),
-  ])
-  const rows = await db.select().from(cards).where(eq(cards.boardId, board.id))
-  const positions = rows.map((r) => r.position)
-  expect(new Set(positions).size).toBe(positions.length)     // no collision
-  expect(positions.every(Number.isFinite)).toBe(true)
-})
-```
-
-If the strategy chosen in 05ea does not actually prevent the collision — because it computes the maximum in a separate statement at `READ COMMITTED` — this test fails, and that is the point: it tells you whether the mitigation you chose works, rather than whether you wrote it down. If your design accepts occasional collisions and relies on the `id` tiebreaker instead, invert the assertion to say so explicitly, so the file records the decision.
+Note that both sessions read `before.version` rather than hard-coding `1`. That is not cosmetic: a hard-coded version makes the test pass for the wrong reason if the seed helper ever starts at a different value, and it hides the fact that the guard is a comparison against *what this caller read*, which is the property being tested.
 
 ## Teardown is not optional here
 
@@ -225,9 +193,9 @@ Every session in these tests can be interrupted mid-transaction by a failed asse
 
 Three rules keep that from happening:
 
-1. **`ROLLBACK` in a `finally`, ignoring errors** — as in `session()` above. It runs whether the body threw, returned or was cancelled.
+1. **`ROLLBACK` in a `finally`, ignoring errors** — as in `session()` above. It runs whether the body threw, returned or was cancelled, and swallowing the rollback's own error matters because the connection may already be in a state where it is a no-op.
 2. **Never `await` an assertion while holding a gate the other session is waiting on.** If the assertion throws, the partner waits forever and the test times out with no diagnostic. Collect results, join with `Promise.all`, assert afterwards.
-3. **Bound the whole test.** A Vitest per-test timeout plus `idle_in_transaction_session_timeout` on the role means a deadlocked pair fails in seconds with a named error instead of hanging the worker.
+3. **Bound the whole test.** A Vitest per-test timeout plus `idle_in_transaction_session_timeout` on the role ([12h](12h-parallel-workers-against-one-postgres.md)) means a stuck pair fails in seconds with a named error instead of hanging the worker.
 
 ```ts
 // ❌ if this throws, session A is still waiting on bHasTried and never commits
@@ -253,21 +221,19 @@ expect(bErr?.code).toBe('55P03')
 
 **★ Symptom: the lost-update test passes with and without the version guard.** Cause: the two reads and two writes ran in sequence on one connection, so neither writer ever held a stale view. Fix: two connections and a gate that forces B's `SELECT` before A's `UPDATE`. The check that this is real is the same as for the ownership tests — remove the guard and the test must change colour.
 
-**★ Symptom: a concurrency test hangs until the suite times out and reports nothing useful.** Cause: an assertion threw inside a session while its partner was awaiting a gate that is now never opened. Fix: open gates before asserting, return values from sessions, and do all assertions after `Promise.all`. Add a per-test timeout so the failure at least arrives.
+**★ Symptom: a concurrency test hangs until the suite times out and reports nothing useful.** Cause: an assertion threw inside a session while its partner was awaiting a gate that is now never opened. Fix: open gates before asserting, return values from sessions, and do all assertions after `Promise.all`. Add a per-test timeout so a failure at least arrives.
 
-**★ Symptom: after one concurrency test fails, the next several fail with lock errors.** Cause: the failed test left a transaction open holding row locks. Fix: `ROLLBACK` in a `finally` before `release()`, swallowing errors from the rollback itself — the connection may already be in a state where the rollback is a no-op, and that must not mask the real failure.
-
-**★ Symptom: a `Promise.all` race test never actually overlaps.** Cause: `Promise.all` starts both promises but does not synchronise their statements; a fast first request can finish before the second's first round trip. Fix: nothing, if the assertion is an invariant — it is valid under both schedules. If the test is meant to *demonstrate* the race, it needs gates; a `Promise.all` test that claims to demonstrate one is claiming more than it proves.
-
-**★ Symptom: a blocking test flakes on CI.** Cause: it asserted elapsed time, or it slept a fixed interval and hoped the other session had progressed. Fix: `FOR UPDATE NOWAIT` and an assertion on `55P03`, or a small `lock_timeout` and an assertion on the resulting error. Neither contains a duration.
-
-**★ Symptom: the concurrency file passes alone and fails in the full suite.** Cause: it ran in parallel with other workers writing the same rows, so an unrelated transaction interfered with the schedule. Fix: `fileParallelism: false` on the concurrency project, and its own database ([12g](12g-truncate-templates-and-schema-per-worker.md)). These tests are about contention, so any contention you did not create is noise.
+**★ Symptom: after one concurrency test fails, the next several fail with lock errors.** Cause: the failed test left a transaction open holding row locks. Fix: `ROLLBACK` in a `finally` before `release()`, swallowing errors from the rollback itself — the connection may already be aborted, and that must not mask the real failure.
 
 **★ Symptom: the seed row is invisible to the second session.** Cause: the seed ran inside a wrapper transaction that has not committed. Fix: seed with an explicit commit, from a helper that is not routed through the DAL's injected context. `seedCommittedCard` exists as a separate helper for exactly this reason, and its name is the documentation.
 
-**★ Symptom: the pool is exhausted halfway through the concurrency file.** Cause: `session()` acquires a dedicated connection and a test that starts three sessions against a pool of two waits forever. Fix: size the concurrency pool for the widest test in the file plus one, and set `connectionTimeoutMillis` so exhaustion fails rather than hangs.
-
 **★ Symptom: both writers succeed and `version` ended at 3.** Cause: the guard was written as a read-then-check in application code rather than as a conjunct in the `UPDATE`'s `WHERE`. The check passed for both because both read before either wrote. Fix: the comparison belongs in the statement, so PostgreSQL re-evaluates it against the committed row version — that re-evaluation is the documented behaviour the whole mechanism rests on, and application code cannot reproduce it.
+
+**★ Symptom: the test deadlocks at the gates and neither session ever proceeds.** Cause: a circular wait written by hand — A awaits a gate B opens after awaiting a gate A opens. The gates are promises, so nothing detects it and PostgreSQL's deadlock detector never sees it either, because the cycle is in your JavaScript rather than in the lock table. Fix: draw the schedule as the two-line diagram above before writing the code; every gate must be opened by a session that is not, at that moment, awaiting one the other has not opened.
+
+**★ Symptom: the version-guard test passes even after the guard is removed.** Cause: the version was hard-coded as `1` in the update parameters, and the seed happened to produce a state where the unguarded statement gave the same visible result. Fix: read the version in the same session that will use it, and assert on `rowCount` rather than only on the final row — `rowCount` is the direct observation of the guard doing its job.
+
+**★ Symptom: using `db.transaction()` inside a gated session produced confusing isolation behaviour.** Cause: a nested `transaction()` is a savepoint, and a callback-style API leaves no clean point to yield to the other session mid-transaction. Fix: raw `PoolClient` with literal `BEGIN` and `COMMIT` in these tests. It is more verbose and it is the only form in which the schedule is legible.
 
 ## Interview questions
 
@@ -277,18 +243,18 @@ Because the bug is an interleaving, not a sequence. The defect requires both wri
 **★ Explain, from the documentation, why the second writer's `UPDATE` affects zero rows.**
 At Read Committed, an `UPDATE` finds rows committed as of command start; if a target row is concurrently locked, the second updater waits for the first to finish. When the first commits, the manual says the second *"will attempt to apply its operation to the updated version of the row"* and that *"the search condition of the command (the `WHERE` clause) is re-evaluated to see if the updated version of the row still matches"*. Since the first writer incremented `version`, the second's `AND version = 1` no longer matches the new row version, so it affects nothing. That re-evaluation is what makes a version column work without any explicit locking, and it is a property of the database rather than of the ORM.
 
-**★ When should a concurrency test prescribe an order and when should it assert an invariant?**
-Prescribe an order when the point is to demonstrate a specific failure — the lost update needs A-read, B-read, A-write, B-write and nothing else shows the loss. Assert an invariant when the point is that the outcome is safe under *any* order: two conditional updates must produce exactly one 200 and one 412, and which client wins is not part of the contract. The invariant form is more robust because it cannot flake on scheduling, and it is usually the one missing from a suite, because it is less obvious that it is testing anything.
-
-**★ How do you assert that a session blocked on a row lock, without asserting on time?**
-Ask for the lock in a form that refuses to wait. `SELECT … FOR UPDATE NOWAIT` raises `55P03 lock_not_available` immediately when the row is locked, so the assertion is on an error code rather than on a duration and it is fully deterministic. Where a statement has no `NOWAIT` form, a small `lock_timeout` on the test role gives the same shape: the wait becomes a named error in a bounded time. Asserting elapsed milliseconds is measuring a shared CI runner and will flake.
-
 **★ What is the specific teardown hazard in a gated concurrency test?**
 An assertion throwing inside one session while the other is awaiting a gate that will now never open. The partner hangs, the test times out with no diagnostic, and — worse — the throwing session's transaction is still open holding row locks, so subsequent tests fail on lock waits. The discipline is to open every gate before asserting anything, return results from the sessions, join with `Promise.all`, and assert afterwards; plus an unconditional `ROLLBACK` in a `finally` so a failed session cannot hold locks past its own lifetime.
 
 **★ Why can these tests not run under the transaction-per-test harness, in one sentence each for the two reasons?**
 The seed row lives in an uncommitted transaction, so the second session cannot see it at any isolation level; and the sessions must commit for real to observe each other, which the harness's `ROLLBACK` neither prevents nor cleans up, so the tests would both prove nothing and leave residue.
 
+**★ Why use a raw `PoolClient` with literal `BEGIN` and `COMMIT` rather than the ORM's transaction API here?**
+Because the gate has to be awaited between two statements of an open transaction, and a callback-style transaction API gives no clean point to hand control to another session mid-flight. There is also a correctness trap: a nested `transaction()` call becomes a savepoint rather than a transaction, so a harness that already opened one silently changes the semantics of the code under test. Raw statements make the schedule explicit, which is the whole value of the test — someone reading it should be able to see the interleaving without reconstructing it from the ORM's behaviour.
+
+**★ The gates are promises, so what happens if you write a circular wait between two sessions?**
+Nothing detects it. PostgreSQL's deadlock detector only sees cycles in its lock table, and this cycle is in JavaScript — two promises each awaiting the other's resolution — so the test simply hangs until the runner's timeout fires, typically with no useful message. That is why the schedule is worth drawing as two timelines before it is written as code: the invariant to check is that every gate is opened by a session which, at that moment, is not itself awaiting a gate the other has not yet opened.
+
 ---
 
-← [12h · Parallel workers, one Postgres](12h-parallel-workers-against-one-postgres.md) · [Chapter index](01-explanation.md) · Next → [12j · The retry loop and the idempotency key](12j-testing-the-retry-loop-and-the-idempotency-key.md)
+← [12h · Parallel workers, one Postgres](12h-parallel-workers-against-one-postgres.md) · [Chapter index](01-explanation.md) · Next → [12ia · Invariants, blocking and position races](12ia-invariants-blocking-and-position-races.md)

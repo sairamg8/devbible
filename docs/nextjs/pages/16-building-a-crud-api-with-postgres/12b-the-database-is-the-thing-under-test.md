@@ -1,7 +1,7 @@
 ---
 title: "Every argument this chapter made lives inside PostgreSQL, so a suite that swaps the database for a fake or for SQLite is not a faster version of the same suite — it is a suite that has deleted its own subject and kept the assertions"
 sidebar_label: "12b · The database under test"
-sidebar_position: 74
+sidebar_position: 57
 description: "The ten things a fake or in-memory database silently stops checking, why SQLite is not a fast PostgreSQL, the three places where a mock is exactly right, and the seam rule that decides which is which."
 ---
 
@@ -213,4 +213,4 @@ Keep the real database and make the reset cheap. A transaction-per-test rollback
 
 ---
 
-← [12 · Testing the API](12-testing-the-api.md) · [Chapter index](01-explanation.md) · Next → [12c · Asserting on the envelope, not the prose](12c-asserting-on-the-envelope-not-the-prose.md)
+← [12 · Testing the API](12-testing-the-api.md) · [Chapter 16 overview](01-explanation.md) · Next → [12c · Asserting on the envelope, not the prose](12c-asserting-on-the-envelope-not-the-prose.md)

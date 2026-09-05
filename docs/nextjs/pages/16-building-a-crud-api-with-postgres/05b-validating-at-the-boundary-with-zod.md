@@ -1,7 +1,7 @@
 ---
 title: "The schema that validates a request body is not the schema that describes a card, and conflating them is how clients get to set `version`, `createdAt` and `id` — parse at the boundary, into a type the rest of the application is allowed to trust"
 sidebar_label: "05b · Validation at the boundary"
-sidebar_position: 31
+sidebar_position: 20
 description: "Request schema vs domain schema, why z.object() strips silently and when that is wrong, the coercion and refinement-ordering traps probed on zod 4.4.3, and the three classes of rule a schema structurally cannot check."
 ---
 

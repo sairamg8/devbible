@@ -1,7 +1,7 @@
 ---
 title: "During every deploy there are two versions of your code running against one database, so the only migrations that are safe are the ones both versions can live with — which makes renaming a column two deploys, dropping one the last step rather than the first, and rolling back a thing you have to earn days in advance"
 sidebar_label: "02e · Expand and contract"
-sidebar_position: 17
+sidebar_position: 8
 description: "The overlap window that makes additive-only a hard rule, the four phases worked through for a rename, a NOT NULL, a drop, an enum value and a type change, why a backfill is batched and idempotent, and the API-side version of exactly the same discipline."
 ---
 

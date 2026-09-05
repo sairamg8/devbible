@@ -1,7 +1,7 @@
 ---
 title: "One query inside a transaction callback written against db instead of tx runs on a different connection, commits on its own, and survives the rollback — and because both objects have the same methods and the same types, nothing in the language, the linter or the test suite will tell you"
 sidebar_label: "09b · The tx rule"
-sidebar_position: 63
+sidebar_position: 47
 description: "Why db and tx are different connections, the four shapes the bug takes, why TypeScript cannot catch it as written, and three mechanisms that make it structurally impossible — a Tx-only DAL signature, a proxy that throws, and an ESLint rule."
 ---
 

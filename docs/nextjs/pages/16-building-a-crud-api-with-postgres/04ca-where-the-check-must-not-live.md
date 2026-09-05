@@ -1,7 +1,7 @@
 ---
 title: "Read-then-check is correct today and structurally weaker forever — it leaves a row in memory before it is allowed to, a window between the check and the act, and a branch a refactor can delete, and a check written in a handler acquires one more copy every time you add a door"
 sidebar_label: "04ca · Where it must not live"
-sidebar_position: 25
+sidebar_position: 16
 description: "The three defects of read-then-check in order of visibility, the copies-per-entry-point arithmetic, the IDOR the documentation names and why shape validation is orthogonal to it, and the three placements that look like enforcement and are not — the layout, the proxy, and a database view."
 ---
 

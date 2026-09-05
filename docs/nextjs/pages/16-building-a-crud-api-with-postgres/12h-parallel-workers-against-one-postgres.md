@@ -1,7 +1,7 @@
 ---
 title: "Eight test workers each holding a ten-connection pool is eighty connections against a server whose default limit is a hundred, and that is the least subtle of the four ways a parallel suite collides inside one PostgreSQL instance"
 sidebar_label: "12h · Parallel workers, one Postgres"
-sidebar_position: 80
+sidebar_position: 63
 description: "The connection arithmetic and SQLSTATE 53300, the global assertions that are wrong the moment a second worker exists, cross-worker deadlocks appearing as random failures, the four timeouts that turn a hung suite into a fast failure, and the leaked pool that stops the worker exiting."
 ---
 
@@ -188,4 +188,4 @@ An unclosed `Pool`. A live socket keeps the worker's event loop alive after the 
 
 ---
 
-← [12g · TRUNCATE, templates, schemas](12g-truncate-templates-and-schema-per-worker.md) · [Chapter index](01-explanation.md) · Next → [12i · Forcing the interleaving](12i-forcing-the-interleaving.md)
+← [12g · TRUNCATE, templates, schemas](12g-truncate-templates-and-schema-per-worker.md) · [Chapter 16 overview](01-explanation.md) · Next → [12i · Forcing the interleaving](12i-forcing-the-interleaving.md)

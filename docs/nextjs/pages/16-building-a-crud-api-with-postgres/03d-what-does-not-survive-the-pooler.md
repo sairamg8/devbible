@@ -1,7 +1,7 @@
 ---
 title: "Two consecutive queries with no BEGIN between them are two transactions, and a transaction-mode pooler is free to run them on two different backends — so every feature that stores something on the server between statements silently stops working, non-deterministically, under load and not in development"
 sidebar_label: "03d · What the pooler removes"
-sidebar_position: 21
+sidebar_position: 12
 description: "Why a bare statement is its own transaction, Neon's verbatim list of what stops working, the three fixes for SET in preference order, the two mechanisms the phrase prepared statement covers and why only one survives, and what after() does to a connection once the response has already gone."
 ---
 

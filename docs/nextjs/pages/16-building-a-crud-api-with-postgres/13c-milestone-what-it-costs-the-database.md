@@ -1,7 +1,7 @@
 ---
 title: "Every correctness fix in this chapter is paid for on the database, and the milestone is not complete until you can name the bill — the retry loop that consumes connections, the transaction that occupies one for its whole life, the predicate every read now carries, and the two pages of this chapter that appear to give you opposite caching advice"
 sidebar_label: "13c · Milestone: what it costs"
-sidebar_position: 92
+sidebar_position: 70
 description: "Transaction duration as pool occupancy and the classic outage, the serialization retry loop and what it may not contain, the tx-versus-db trap, soft delete's partial index and the planner rule that decides whether it is used, the N+1 on a card list, keyset over offset, and the no-store versus no-cache contradiction the chapter deliberately contains."
 ---
 
@@ -179,4 +179,4 @@ Because the enqueue and the write become a single atomic fact. If the transactio
 
 ---
 
-← [13b · The overlap seams](13b-milestone-the-overlap-seams.md) · [Chapter 16 index](01-explanation.md) · Next → [13d · Acceptance and hand-off](13d-milestone-acceptance-and-hand-off.md)
+← [13b · The overlap seams](13b-milestone-the-overlap-seams.md) · [Chapter 16 overview](01-explanation.md) · Next → [13d · Acceptance and hand-off](13d-milestone-acceptance-and-hand-off.md)

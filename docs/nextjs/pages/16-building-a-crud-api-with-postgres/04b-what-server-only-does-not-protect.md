@@ -1,7 +1,7 @@
 ---
 title: "`server-only` guards exactly one edge — a module specifier entering the client graph — and a Route Handler is not on the far side of that edge, so the pill that everybody reaches for to enforce the Data Access Layer cannot enforce it at all"
 sidebar_label: "04b · What it does not protect"
-sidebar_position: 23
+sidebar_position: 14
 description: "The one edge the poison pill guards drawn precisely, why it is silent about a Route Handler importing the driver, the four leaks it is structurally incapable of catching applied to the cards API, and the checks that actually cover each one including the build step your test suite is not."
 ---
 

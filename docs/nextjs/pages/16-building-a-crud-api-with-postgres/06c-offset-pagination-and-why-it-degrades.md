@@ -1,7 +1,7 @@
 ---
 title: "`OFFSET n` makes the server produce and discard `n` rows, so page 500 costs five hundred pages of work — but the performance problem is the one you will notice second, because a single insert between two requests shifts every subsequent page and the client silently receives duplicates and misses rows"
 sidebar_label: "06c · Offset pagination"
-sidebar_position: 40
+sidebar_position: 29
 description: "What OFFSET actually does per the reference, the drift problem that no index fixes, the total-count query that costs as much as the page, and the three cases where offset is nevertheless the right answer."
 ---
 

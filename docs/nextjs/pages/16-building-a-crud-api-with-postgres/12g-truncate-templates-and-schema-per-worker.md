@@ -1,7 +1,7 @@
 ---
 title: "`TRUNCATE` takes an `ACCESS EXCLUSIVE` lock that blocks every other operation on the table, so the reset strategy most suites reach for second is the one that quietly converts a parallel suite into a serial one — and the three strategies that do not have that problem each buy their parallelism with a different setup cost"
 sidebar_label: "12g · TRUNCATE, templates, schemas"
-sidebar_position: 79
+sidebar_position: 62
 description: "TRUNCATE's four documented properties and the two that matter to a suite, why CASCADE is mandatory here and dangerous everywhere, template databases and the no-other-sessions rule, schema per worker and what search_path costs behind a pooler, and Neon branches."
 ---
 
@@ -206,4 +206,4 @@ They need real commits visible from a second session, so the transaction wrapper
 
 ---
 
-← [12f · The seed and reset story](12f-the-seed-and-reset-story.md) · [Chapter index](01-explanation.md) · Next → [12h · Parallel workers against one Postgres](12h-parallel-workers-against-one-postgres.md)
+← [12f · The seed and reset story](12f-the-seed-and-reset-story.md) · [Chapter 16 overview](01-explanation.md) · Next → [12h · Parallel workers against one Postgres](12h-parallel-workers-against-one-postgres.md)

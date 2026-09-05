@@ -1,7 +1,7 @@
 ---
 title: "`now()` does not advance inside a transaction, a double does not round-trip through JSON the way you expect, and an ETag is only stable because it was derived from a version rather than from a body — so three of the fields in a card's representation cannot be asserted the obvious way"
 sidebar_label: "12d · Representation and non-assertions"
-sidebar_position: 76
+sidebar_position: 59
 description: "Why updatedAt > createdAt is a flaky assertion, how to assert time without asserting a clock, ETag stability across serialisations and the strong-comparison test, floating-point position assertions, and the four things a functional suite must never assert."
 ---
 
@@ -215,4 +215,4 @@ It is measuring a shared CI runner, a possibly-cold database and a JIT, so the t
 
 ---
 
-← [12c · Asserting on the envelope](12c-asserting-on-the-envelope-not-the-prose.md) · [Chapter index](01-explanation.md) · Next → [12e · The ownership negative test](12e-the-ownership-negative-test.md)
+← [12c · Asserting on the envelope](12c-asserting-on-the-envelope-not-the-prose.md) · [Chapter 16 overview](01-explanation.md) · Next → [12e · The ownership negative test](12e-the-ownership-negative-test.md)

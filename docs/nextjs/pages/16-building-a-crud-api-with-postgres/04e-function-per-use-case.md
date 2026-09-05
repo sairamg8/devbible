@@ -1,7 +1,7 @@
 ---
 title: "A generic `findCards(where, orderBy, limit)` is not a Data Access Layer with fewer functions — it is the driver with an extra import, because every parameter it accepts hands a decision back to the caller that the layer existed to take away"
 sidebar_label: "04e · One function per use case"
-sidebar_position: 27
+sidebar_position: 18
 description: "The seven things a generic passthrough re-opens, the complete list of card functions and why it is exactly that long, the options-object middle ground and the line it must not cross, what is legitimately parameterisable, and the counting test that tells you which kind of layer you have."
 ---
 

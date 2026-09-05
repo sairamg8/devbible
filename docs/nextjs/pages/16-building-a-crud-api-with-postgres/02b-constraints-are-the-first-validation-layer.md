@@ -1,7 +1,7 @@
 ---
 title: "A NOT NULL, a CHECK, a unique index and a foreign key each reject a whole class of bad request before a line of your code runs — and each one arrives back as a different SQLSTATE, which is the only part of a database error that is safe to branch on"
 sidebar_label: "02b · Constraints as validation"
-sidebar_position: 14
+sidebar_position: 5
 description: "Why the constraint is the last line rather than a duplicate of zod, the four SQLSTATEs this API maps, the protocol error fields the driver surfaces and the two you must not branch on, naming constraints so the mapping is stable, and why a check constraint cannot produce a message a user should read."
 ---
 

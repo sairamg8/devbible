@@ -1,7 +1,7 @@
 ---
 title: "A driver error is a schema disclosure with a stack trace attached, and the reason it reaches clients is never a decision — it is the one code path nobody wrote a test for"
 sidebar_label: "10b · Never leak a driver error"
-sidebar_position: 71
+sidebar_position: 54
 description: "What a Postgres error object actually contains, why the same SQLSTATE means different things in different queries, converting at the DAL boundary, logging the cause without logging the row, and the paths the translator never sees."
 ---
 

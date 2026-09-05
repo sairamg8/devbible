@@ -1,7 +1,7 @@
 ---
 title: "Restore is the operation soft delete was bought for and the one nobody implements until it is needed — and it fails on a uniqueness constraint the deleted row still occupies, which is why the constraint has to be partial before the delete, not after the restore"
 sidebar_label: "08e · Restore and partial uniqueness"
-sidebar_position: 61
+sidebar_position: 45
 description: "Why a deleted row still holds a unique key, the partial unique index that fixes it with the manual's own example, the migration that gets there without downtime, restore as its own endpoint with its own authorization, and what restoring does to children and to the retention window."
 ---
 
