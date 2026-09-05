@@ -270,4 +270,4 @@ Because the N+1 is a shape people reach for naturally, and fixing one instance d
 
 ---
 
-← [06e · Caching a collection](06e-caching-a-collection.md) · Next → [06g · Conditional requests and ETag](06g-conditional-requests-and-etag.md)
+← [06e · Caching a collection](06e-caching-a-collection.md) · [Chapter 16 overview](01-explanation.md) · Next → [06g · Conditional requests and ETag](06g-conditional-requests-and-etag.md)

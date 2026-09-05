@@ -163,4 +163,4 @@ By removing the alternative rather than documenting it. One `server-only` module
 
 ---
 
-← [03b · The arithmetic, three escapes](03b-the-arithmetic-and-the-three-escapes.md) · Next → [03d · What does not survive the pooler](03d-what-does-not-survive-the-pooler.md)
+← [03b · The arithmetic, three escapes](03b-the-arithmetic-and-the-three-escapes.md) · [Chapter 16 overview](01-explanation.md) · Next → [03d · What does not survive the pooler](03d-what-does-not-survive-the-pooler.md)

@@ -261,4 +261,4 @@ Two things, and both only in production. The header is a list — §13.1.2's own
 
 ---
 
-← [06f · The N+1 on a card list](06f-the-n-plus-1-on-a-card-list.md) · [Chapter index](01-explanation.md) · Next → [07 · UPDATE — PUT vs PATCH](07-update.md)
+← [06f · The N+1 on a card list](06f-the-n-plus-1-on-a-card-list.md) · [Chapter 16 overview](01-explanation.md) · Next → [07 · UPDATE — PUT vs PATCH](07-update.md)

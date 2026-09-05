@@ -133,4 +133,4 @@ Because the two checks answer different questions and only one of them is about 
 
 ---
 
-← [04c · The ownership predicate](04c-the-ownership-predicate.md) · Next → [04d · Projections, not rows](04d-projections-not-rows.md)
+← [04c · The ownership predicate](04c-the-ownership-predicate.md) · [Chapter 16 overview](01-explanation.md) · Next → [04d · Projections, not rows](04d-projections-not-rows.md)

@@ -260,4 +260,4 @@ Because they have different shapes, not different arguments. `callerOwnsCard` is
 
 ---
 
-← [04b · What it does not protect](04b-what-server-only-does-not-protect.md) · Next → [04ca · Where the check must not live](04ca-where-the-check-must-not-live.md)
+← [04b · What it does not protect](04b-what-server-only-does-not-protect.md) · [Chapter 16 overview](01-explanation.md) · Next → [04ca · Where the check must not live](04ca-where-the-check-must-not-live.md)

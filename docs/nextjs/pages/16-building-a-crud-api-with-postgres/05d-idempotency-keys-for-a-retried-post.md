@@ -255,4 +255,4 @@ Because it changes the row, and a replay must not. The point of a replay is to h
 
 ---
 
-← [05ca · SQLSTATE to status codes](05ca-mapping-sqlstate-to-status-codes.md) · Next → [05da · Scoping, expiry and the records table](05da-scoping-expiry-and-the-records-table.md)
+← [05ca · SQLSTATE to status codes](05ca-mapping-sqlstate-to-status-codes.md) · [Chapter 16 overview](01-explanation.md) · Next → [05da · Scoping, expiry and the records table](05da-scoping-expiry-and-the-records-table.md)

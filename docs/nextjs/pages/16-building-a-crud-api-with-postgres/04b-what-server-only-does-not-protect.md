@@ -204,4 +204,4 @@ Four commands and one review habit. `grep -L "^import 'server-only'" lib/dal/*.t
 
 ---
 
-← [04 · The Data Access Layer](04-the-data-access-layer.md) · Next → [04c · The ownership predicate](04c-the-ownership-predicate.md)
+← [04 · The Data Access Layer](04-the-data-access-layer.md) · [Chapter 16 overview](01-explanation.md) · Next → [04c · The ownership predicate](04c-the-ownership-predicate.md)

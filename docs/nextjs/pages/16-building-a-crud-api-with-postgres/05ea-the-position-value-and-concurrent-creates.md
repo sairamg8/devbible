@@ -266,4 +266,4 @@ An `integer` position with a renumbering `UPDATE` on every reorder. It is the de
 
 ---
 
-← [05e · Identifier choice](05e-client-supplied-ids-and-identifier-choice.md) · Next → [06 · READ](06-read.md)
+← [05e · Identifier choice](05e-client-supplied-ids-and-identifier-choice.md) · [Chapter 16 overview](01-explanation.md) · Next → [06 · READ](06-read.md)

@@ -241,4 +241,4 @@ It turns every comment insert into a write to the card row, which serialises con
 
 ---
 
-← [01c · What the client may rely on](01c-what-the-client-may-rely-on.md) · Next → [02b · Constraints are the first validation layer](02b-constraints-are-the-first-validation-layer.md)
+← [01c · What the client may rely on](01c-what-the-client-may-rely-on.md) · [Chapter 16 overview](01-explanation.md) · Next → [02b · Constraints are the first validation layer](02b-constraints-are-the-first-validation-layer.md)

@@ -215,4 +215,4 @@ It is a contract failure, and the server usually owns the prevention even when t
 
 ---
 
-← [05d · Idempotency keys](05d-idempotency-keys-for-a-retried-post.md) · Next → [05e · Identifier choice](05e-client-supplied-ids-and-identifier-choice.md)
+← [05d · Idempotency keys](05d-idempotency-keys-for-a-retried-post.md) · [Chapter 16 overview](01-explanation.md) · Next → [05e · Identifier choice](05e-client-supplied-ids-and-identifier-choice.md)

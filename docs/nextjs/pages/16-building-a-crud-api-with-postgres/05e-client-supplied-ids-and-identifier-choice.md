@@ -156,4 +156,4 @@ Add a `clientRef` field: the client mints a UUID, sends it with the create, and 
 
 ---
 
-← [05da · Scoping, expiry and the records table](05da-scoping-expiry-and-the-records-table.md) · Next → [05ea · The position value and concurrent creates](05ea-the-position-value-and-concurrent-creates.md)
+← [05da · Scoping, expiry and the records table](05da-scoping-expiry-and-the-records-table.md) · [Chapter 16 overview](01-explanation.md) · Next → [05ea · The position value and concurrent creates](05ea-the-position-value-and-concurrent-creates.md)

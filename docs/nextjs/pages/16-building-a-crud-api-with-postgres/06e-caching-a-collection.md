@@ -245,4 +245,4 @@ Because "not secret within the team" is a statement about *who* may read it, and
 
 ---
 
-← [06d · Keyset pagination](06d-keyset-pagination.md) · Next → [06f · The N+1 on a card list](06f-the-n-plus-1-on-a-card-list.md)
+← [06d · Keyset pagination](06d-keyset-pagination.md) · [Chapter 16 overview](01-explanation.md) · Next → [06f · The N+1 on a card list](06f-the-n-plus-1-on-a-card-list.md)

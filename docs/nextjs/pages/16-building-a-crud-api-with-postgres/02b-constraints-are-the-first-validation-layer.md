@@ -238,4 +238,4 @@ It does not fit in Class 23 at all. Sending `status = 'blocked'` against `card_s
 
 ---
 
-← [02 · The schema](02-the-schema-and-the-migration-story.md) · Next → [02c · The migration is a release step](02c-the-migration-is-a-release-step.md)
+← [02 · The schema](02-the-schema-and-the-migration-story.md) · [Chapter 16 overview](01-explanation.md) · Next → [02c · The migration is a release step](02c-the-migration-is-a-release-step.md)

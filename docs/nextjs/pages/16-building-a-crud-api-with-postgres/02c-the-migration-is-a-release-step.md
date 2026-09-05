@@ -243,4 +243,4 @@ It walks the generated migrations looking for collisions — two files claiming 
 
 ---
 
-← [02b · Constraints as validation](02b-constraints-are-the-first-validation-layer.md) · Next → [02d · The lock a migration actually takes](02d-the-lock-a-migration-actually-takes.md)
+← [02b · Constraints as validation](02b-constraints-are-the-first-validation-layer.md) · [Chapter 16 overview](01-explanation.md) · Next → [02d · The lock a migration actually takes](02d-the-lock-a-migration-actually-takes.md)

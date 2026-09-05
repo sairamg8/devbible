@@ -253,4 +253,4 @@ None of them, which is the point. The schema did its job — it confirmed the in
 
 ---
 
-← [05 · CREATE](05-create.md) · Next → [05c · Constraint violations and SQLSTATE](05c-constraint-violations-and-sqlstate.md)
+← [05 · CREATE](05-create.md) · [Chapter 16 overview](01-explanation.md) · Next → [05c · Constraint violations and SQLSTATE](05c-constraint-violations-and-sqlstate.md)

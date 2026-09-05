@@ -231,4 +231,4 @@ When the workload is dominated by interactive transactions, because that is the 
 
 ---
 
-← [03 · The connection you get](03-the-connection-you-actually-get.md) · Next → [03c · The dev hot-reload leak](03c-the-dev-hot-reload-leak.md)
+← [03 · The connection you get](03-the-connection-you-actually-get.md) · [Chapter 16 overview](01-explanation.md) · Next → [03c · The dev hot-reload leak](03c-the-dev-hot-reload-leak.md)

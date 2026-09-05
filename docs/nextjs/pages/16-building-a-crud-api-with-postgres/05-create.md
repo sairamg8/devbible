@@ -259,4 +259,4 @@ Because the caching decision in Next.js is per method, not per file. The Route H
 
 ---
 
-← [04e · One function per use case](04e-function-per-use-case.md) · [Chapter index](01-explanation.md) · Next → [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md)
+← [04e · One function per use case](04e-function-per-use-case.md) · [Chapter 16 overview](01-explanation.md) · Next → [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md)

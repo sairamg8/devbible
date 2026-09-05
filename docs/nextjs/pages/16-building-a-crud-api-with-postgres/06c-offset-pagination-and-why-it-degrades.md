@@ -202,4 +202,4 @@ An admin table over a bounded dataset where someone genuinely jumps to page 40. 
 
 ---
 
-← [06b · Filtering and sorting](06b-filtering-and-sorting-without-injection.md) · Next → [06d · Keyset pagination](06d-keyset-pagination.md)
+← [06b · Filtering and sorting](06b-filtering-and-sorting-without-injection.md) · [Chapter 16 overview](01-explanation.md) · Next → [06d · Keyset pagination](06d-keyset-pagination.md)

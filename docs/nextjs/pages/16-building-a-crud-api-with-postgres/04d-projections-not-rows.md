@@ -227,4 +227,4 @@ Three greps and one habit. Grep for `db.select()` with no argument and for `find
 
 ---
 
-← [04ca · Where it must not live](04ca-where-the-check-must-not-live.md) · Next → [04e · One function per use case](04e-function-per-use-case.md)
+← [04ca · Where it must not live](04ca-where-the-check-must-not-live.md) · [Chapter 16 overview](01-explanation.md) · Next → [04e · One function per use case](04e-function-per-use-case.md)

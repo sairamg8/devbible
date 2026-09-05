@@ -241,4 +241,4 @@ Because the only question a next-page control actually asks is *is there anythin
 
 ---
 
-← [06c · Offset pagination](06c-offset-pagination-and-why-it-degrades.md) · Next → [06e · Caching a collection](06e-caching-a-collection.md)
+← [06c · Offset pagination](06c-offset-pagination-and-why-it-degrades.md) · [Chapter 16 overview](01-explanation.md) · Next → [06e · Caching a collection](06e-caching-a-collection.md)

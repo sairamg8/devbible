@@ -228,4 +228,4 @@ More than it looks, because it is a behavioural change to responses clients alre
 
 ---
 
-← [01 · The resource contract](01-the-resource-contract.md) · Next → [01c · What the client may rely on](01c-what-the-client-may-rely-on.md)
+← [01 · The resource contract](01-the-resource-contract.md) · [Chapter 16 overview](01-explanation.md) · Next → [01c · What the client may rely on](01c-what-the-client-may-rely-on.md)

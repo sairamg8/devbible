@@ -282,4 +282,4 @@ Because it is not part of any documented contract. Nothing in the Drizzle docume
 
 ---
 
-← [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md) · Next → [05ca · Mapping SQLSTATE to status codes](05ca-mapping-sqlstate-to-status-codes.md)
+← [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md) · [Chapter 16 overview](01-explanation.md) · Next → [05ca · Mapping SQLSTATE to status codes](05ca-mapping-sqlstate-to-status-codes.md)

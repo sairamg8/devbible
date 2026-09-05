@@ -218,4 +218,4 @@ First, what is *blocking* it rather than what it is doing — the migration is a
 
 ---
 
-← [02c · Migration as a release step](02c-the-migration-is-a-release-step.md) · Next → [02e · Expand and contract](02e-expand-and-contract.md)
+← [02c · Migration as a release step](02c-the-migration-is-a-release-step.md) · [Chapter 16 overview](01-explanation.md) · Next → [02e · Expand and contract](02e-expand-and-contract.md)

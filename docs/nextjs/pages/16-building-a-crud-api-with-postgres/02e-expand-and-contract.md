@@ -257,4 +257,4 @@ When there is genuinely no overlap window and you have proven it: a maintenance 
 
 ---
 
-← [02d · The lock it takes](02d-the-lock-a-migration-actually-takes.md) · Next → [03 · The connection you actually get](03-the-connection-you-actually-get.md)
+← [02d · The lock it takes](02d-the-lock-a-migration-actually-takes.md) · [Chapter 16 overview](01-explanation.md) · Next → [03 · The connection you actually get](03-the-connection-you-actually-get.md)

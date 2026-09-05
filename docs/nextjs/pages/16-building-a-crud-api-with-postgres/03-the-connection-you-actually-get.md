@@ -215,4 +215,4 @@ Because on a serverless deployment the scarce resource is backends, and a statem
 
 ---
 
-← [02e · Expand and contract](02e-expand-and-contract.md) · Next → [03b · The arithmetic and the three escapes](03b-the-arithmetic-and-the-three-escapes.md)
+← [02e · Expand and contract](02e-expand-and-contract.md) · [Chapter 16 overview](01-explanation.md) · Next → [03b · The arithmetic and the three escapes](03b-the-arithmetic-and-the-three-escapes.md)
