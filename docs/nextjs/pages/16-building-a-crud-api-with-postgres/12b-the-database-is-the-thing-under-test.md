@@ -80,7 +80,7 @@ it('deleting a board deletes its cards', async () => {
 
 ### 5 · Isolation, locking and the whole of topic 09
 
-`SELECT ... FOR UPDATE` blocking, `40001`, `40P01`, `SET TRANSACTION ISOLATION LEVEL SERIALIZABLE`, predicate locks. A fake has one thread and no concept of a snapshot. This is not "a fake is less accurate here"; it is that the subject does not exist in a fake. [12i](12i-forcing-the-interleaving.md) and [12j](12j-testing-the-retry-loop-and-the-idempotency-key.md) are entirely un-fakeable.
+`SELECT ... FOR UPDATE` blocking, `40001`, `40P01`, `SET TRANSACTION ISOLATION LEVEL SERIALIZABLE`, predicate locks. A fake has one thread and no concept of a snapshot. This is not "a fake is less accurate here"; it is that the subject does not exist in a fake. [12i](12i-forcing-the-interleaving.md), [12ia](12ia-invariants-blocking-and-position-races.md) and [12j](12j-testing-the-retry-loop-and-the-idempotency-key.md) are entirely un-fakeable.
 
 ### 6 · `timestamptz` and server-side time
 

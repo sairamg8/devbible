@@ -257,4 +257,4 @@ Nothing detects it. PostgreSQL's deadlock detector only sees cycles in its lock 
 
 ---
 
-← [12h · Parallel workers, one Postgres](12h-parallel-workers-against-one-postgres.md) · [Chapter index](01-explanation.md) · Next → [12ia · Invariants, blocking and position races](12ia-invariants-blocking-and-position-races.md)
+← [12h · Parallel workers, one Postgres](12h-parallel-workers-against-one-postgres.md) · [Chapter 16 overview](01-explanation.md) · Next → [12ia · Invariants and blocking](12ia-invariants-blocking-and-position-races.md)

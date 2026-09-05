@@ -211,4 +211,4 @@ Because Serializable Snapshot Isolation aborts whichever transactions it must to
 
 ---
 
-← [12i · Forcing the interleaving](12i-forcing-the-interleaving.md) · [Chapter index](01-explanation.md) · Next → [12j · Retry loop and idempotency](12j-testing-the-retry-loop-and-the-idempotency-key.md)
+← [12i · Forcing the interleaving](12i-forcing-the-interleaving.md) · [Chapter 16 overview](01-explanation.md) · Next → [12j · Retry loop and idempotency](12j-testing-the-retry-loop-and-the-idempotency-key.md)

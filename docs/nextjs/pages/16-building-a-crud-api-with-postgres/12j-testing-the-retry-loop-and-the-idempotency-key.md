@@ -272,4 +272,4 @@ Only when the clock being faked is the one the code under test reads. Idempotenc
 
 ---
 
-← [12i · Forcing the interleaving](12i-forcing-the-interleaving.md) · [Chapter 16 overview](01-explanation.md) · Next → [12k · Migrations in the test path](12k-migrations-in-the-test-path.md)
+← [12ia · Invariants and blocking](12ia-invariants-blocking-and-position-races.md) · [Chapter 16 overview](01-explanation.md) · Next → [12k · Migrations in the test path](12k-migrations-in-the-test-path.md)
