@@ -165,7 +165,7 @@ Four notes, because a limiter written casually is worse than none.
 
 **★ Symptom: the redirect validator rejects `//evil.com` and is bypassed by `/\evil.com`.** Cause: a blocklist. Browsers and URL parsers have historically treated backslashes as slashes in the authority position, so a rule that names `//` misses `/\`, `\\` and `\/`. Fix: stop enumerating. Require a single leading `/`, reject anything else outright, then parse against a dummy origin and reject the result if the origin changed — a positive test that does not need to know the trick.
 
-**★ Symptom: the validator passes and a header appears in the response that you did not set.** Cause: carriage-return or line-feed characters smuggled through the redirect target. Fix: reject control characters before the parse, not after — the `/[-]/` test in `safeRedirectTarget` above.
+**★ Symptom: the validator passes and a header appears in the response that you did not set.** Cause: carriage-return or line-feed characters smuggled through the redirect target. Fix: reject control characters before the parse, not after — the `/[\u0000-\u001f\u007f]/` test in `safeRedirectTarget` above.
 
 **★ Symptom: an attacker can enumerate which email addresses have accounts.** Cause: the form says "No account found" for unknown addresses and "Check your email" for known ones. Fix: one message for both outcomes, worded so it is true in both — *"If that address has an account, a sign-in link is on its way."*
 
