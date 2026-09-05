@@ -160,7 +160,7 @@ So the honest ranking is:
 | Taint APIs | an experimental flag, a canary build, per-router | No |
 | Closure encryption ([05c](05c-the-server-functions-own-serialization-surface.md)) | Next.js, per build | The docs tell you not to |
 
-Tainting belongs in the development loop, where turning a future refactor into a loud failure is exactly what you want; [ch19 · Appendix D](../19-appendices/04b-appendix-d-security.md) shows the `taintObjectReference` call in place and [01d](01d-return-values-dtos-and-tainting.md) covers it from the action side. It does not belong in the sentence you write to an auditor. That sentence is about the projection.
+Tainting belongs in the development loop, where turning a future refactor into a loud failure is exactly what you want; [ch20 · Appendix D](../20-appendices/04b-appendix-d-security.md) shows the `taintObjectReference` call in place and [01d](01d-return-values-dtos-and-tainting.md) covers it from the action side. It does not belong in the sentence you write to an auditor. That sentence is about the projection.
 
 ## Gotchas
 

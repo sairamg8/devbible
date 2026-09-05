@@ -132,7 +132,7 @@ Everything below is documented and named in the reference. If your extension doe
 | Route Handlers | `app/**/route.ts` | per request | [04c](04c-the-seams-that-are-files.md) |
 | Root `layout.tsx` (App) · `_app` / `_document` (Pages) | `app/` or `pages/` | per render | [04c](04c-the-seams-that-are-files.md) |
 | `transpilePackages` | `next.config.js` | build | [04d](04d-internals-coupling-and-the-plugin-decision.md) |
-| **Adapters API** — `modifyConfig`, `onBuildComplete` | an adapter module | build | [ch16 · The Adapters API](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) |
+| **Adapters API** — `modifyConfig`, `onBuildComplete` | an adapter module | build | [ch17 · The Adapters API](../17-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) |
 | Codemods (`@next/codemod`) | your source tree, once | authoring time | [04d](04d-internals-coupling-and-the-plugin-decision.md) |
 
 **That table is short on purpose.** Compare it to Vite's plugin hook list and the difference in ambition is the point: Next.js exposes the places where extension is *safe*, and closes the rest so it can keep changing the compiler, the router and the renderer between minors.
@@ -146,7 +146,7 @@ It is worth knowing about for two reasons, even though you will almost certainly
 1. **It is the shape a real Next.js plugin API takes** — a module the framework loads by path, exporting named lifecycle functions, receiving a typed context object. If you find yourself designing something like that for application concerns, you are designing the wrong thing.
 2. **It is where a build-time integration belongs if it is genuinely about deployment output** — asset immutability, function packaging, routing manifests.
 
-This corpus already covers it in depth and it is not re-derived here: start at [ch16 · The Adapters API — why it exists](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) and [ch16 · `modifyConfig` and `onBuildComplete`](../16-deployment-scaling-and-observability/11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md).
+This corpus already covers it in depth and it is not re-derived here: start at [ch17 · The Adapters API — why it exists](../17-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) and [ch17 · `modifyConfig` and `onBuildComplete`](../17-deployment-scaling-and-observability/11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md).
 
 ## Typed config is the cheapest correctness check available
 

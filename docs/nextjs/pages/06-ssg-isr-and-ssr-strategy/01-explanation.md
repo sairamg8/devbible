@@ -13,7 +13,7 @@ description: "Chapter index for SSG, ISR and SSR strategy: choosing a rendering 
 > **no sandbox run** — and note that **`next` is not installed in this checkout**, so no page here
 > rests on a probe of the Next.js package.
 
-**This chapter is the strategy layer, and it deliberately owns none of the mechanics.** How `dynamic`, `revalidate`, `fetchCache` and `dynamicParams` behave is [chapter 4's segment config surface](../04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md); what the cache directives do is [chapter 5's three-directives topic](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md); where the bytes are served from is [chapter 16](../16-deployment-scaling-and-observability/01-vercel-automated-deployments-edge-network-preview-branches.md). What none of those answer is the question you actually face: **given this page, with these requirements, which pattern — and what did that cost you?** That is this chapter, and it is worth being explicit that the honest default is *static until something forces otherwise*, because in most codebases the thing that forced otherwise was an accident nobody reviewed.
+**This chapter is the strategy layer, and it deliberately owns none of the mechanics.** How `dynamic`, `revalidate`, `fetchCache` and `dynamicParams` behave is [chapter 4's segment config surface](../04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md); what the cache directives do is [chapter 5's three-directives topic](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md); where the bytes are served from is [chapter 17](../17-deployment-scaling-and-observability/01-vercel-automated-deployments-edge-network-preview-branches.md). What none of those answer is the question you actually face: **given this page, with these requirements, which pattern — and what did that cost you?** That is this chapter, and it is worth being explicit that the honest default is *static until something forces otherwise*, because in most codebases the thing that forced otherwise was an accident nobody reviewed.
 
 ## Chunks
 
@@ -50,7 +50,7 @@ description: "Chapter index for SSG, ISR and SSR strategy: choosing a rendering 
 - [ch4 · static vs dynamic rendering](../04-data-fetching-in-the-app-router/03-static-vs-dynamic-rendering-force-dynamic-force-static-reval.md) and [ch4 · the segment config surface](../04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md) — the mechanics of `dynamic`, `revalidate`, `fetchCache` and `dynamicParams`, including `generateStaticParams`'s timing rules.
 - [ch4 · diagnosing stale and unexpectedly dynamic routes](../04-data-fetching-in-the-app-router/03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md) — reading what the build actually decided.
 - [ch5 · the three cache directives](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/README.md) — `use cache`, `cacheLife`, `revalidateTag`/`updateTag`, cache keys and directive choice.
-- [ch16 · deployment and cost](../16-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) — topology and the bill.
+- [ch17 · deployment and cost](../17-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) — topology and the bill.
 
 ⚠️ **A gap worth knowing about, recorded rather than hidden.** There is **no authored Partial Pre-Rendering page anywhere in this track**, and the standalone upstream PPR URL 404s in 16.3.4 — PPR is documented inside the Caching page. Chapter 5's PPR page is still a generated stub, so [01c](01c-personalization-without-going-dynamic.md)'s deferral for the shell-and-holes mechanics currently points at a page thinner than the one linking to it.
 
@@ -62,7 +62,7 @@ You are done with this chapter when you can take a page you have never seen, sta
 
 - [ch2 · Routing and navigation](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) — the segments these strategies are applied to.
 - [ch7 · Error handling and resilience](../07-error-handling-loading-states-and-resilience/01-explanation.md) — what happens when a regeneration fails.
-- [ch17 · Advanced ecosystem topics](../17-advanced-ecosystem-topics/01-explanation.md) — multi-zone architecture, where two applications make these choices independently.
+- [ch18 · Advanced ecosystem topics](../18-advanced-ecosystem-topics/01-explanation.md) — multi-zone architecture, where two applications make these choices independently.
 
 ---
 

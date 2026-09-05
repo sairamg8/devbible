@@ -235,4 +235,4 @@ Right when the site genuinely has no server-side needs — documentation, market
 
 ---
 
-← [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md) · [Chapter 16 overview](01-explanation.md) · Next → [Immutable static assets](18-immutable-static-assets-across-deployments.md)
+← [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md) · [Chapter 17 overview](01-explanation.md) · Next → [Immutable static assets](18-immutable-static-assets-across-deployments.md)

@@ -178,7 +178,7 @@ the edge is reduced to terminating TLS closer to the user. That is not nothing, 
 what the edge is sold as.
 
 **Origin compute scales with active users**, not with content. This is the cost curve you chose,
-and it is the one where [ch16 · cost engineering](../16-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)
+and it is the one where [ch17 · cost engineering](../17-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)
 earns its place — the lever is query cost per widget, not cache hit ratio.
 
 **A cold cache on every deploy.** Cache entries are keyed by build ID, so the org-metrics entry

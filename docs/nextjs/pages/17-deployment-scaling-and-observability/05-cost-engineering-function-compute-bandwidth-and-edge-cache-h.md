@@ -127,7 +127,7 @@ next experimental-analyze --output .next/diagnostics/analyze
 
 It is Turbopack-native and *"Does not produce build artifacts"*, so it is an analysis pass rather than a build you then have to discard.
 
-⚠️ If you reach for `@next/bundle-analyzer` instead, note that Turbopack has been the default bundler since 16.0 — a `webpack()` function in `next.config` is silently not read, which is exactly how a bundle-analysis setup ends up producing nothing while appearing to be configured. See [Appendix C · the CLI surface](../19-appendices/03c-appendix-c-the-cli-surface.md).
+⚠️ If you reach for `@next/bundle-analyzer` instead, note that Turbopack has been the default bundler since 16.0 — a `webpack()` function in `next.config` is silently not read, which is exactly how a bundle-analysis setup ends up producing nothing while appearing to be configured. See [Appendix C · the CLI surface](../20-appendices/03c-appendix-c-the-cli-surface.md).
 
 ## Region changes the rate
 
@@ -230,4 +230,4 @@ Not from the invoice, which is per-project. Use the trace attributes: the root s
 
 ---
 
-← [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md) · [Chapter 16 overview](01-explanation.md) · Next → [Milestone: SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md)
+← [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md) · [Chapter 17 overview](01-explanation.md) · Next → [Milestone: SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md)

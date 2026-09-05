@@ -271,4 +271,4 @@ No. The feature matrix marks "Edge Stitching" as *optional* for Partial Prerende
 
 ---
 
-← [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md) · [Chapter 16 overview](01-explanation.md) · Next → [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md)
+← [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md) · [Chapter 17 overview](01-explanation.md) · Next → [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md)

@@ -63,7 +63,7 @@ which turns every `<Suspense>` boundary in your application into decoration: the
 shows, because the browser receives nothing until everything is ready. Time-to-first-byte
 regresses to the slowest thing on the page and no log anywhere says why.
 
-See **[16 · Choosing a deployment target](../16-deployment-scaling-and-observability/17-choosing-a-deployment-target-beyond-vercel.md)**
+See **[16 · Choosing a deployment target](../17-deployment-scaling-and-observability/17-choosing-a-deployment-target-beyond-vercel.md)**
 for the platform requirements and the nginx configuration.
 
 ## What this does not change

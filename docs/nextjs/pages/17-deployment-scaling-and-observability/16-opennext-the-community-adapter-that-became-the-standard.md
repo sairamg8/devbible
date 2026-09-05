@@ -181,4 +181,4 @@ Because OpenNext had already demonstrated both the demand and the shape of the s
 
 ---
 
-← [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md) · [Chapter 16 overview](01-explanation.md) · Next → [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md)
+← [Testing adapters, verified status](15-testing-adapters-and-the-verified-adapter-contract.md) · [Chapter 17 overview](01-explanation.md) · Next → [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md)

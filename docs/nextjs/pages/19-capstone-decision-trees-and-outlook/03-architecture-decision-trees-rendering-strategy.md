@@ -7,7 +7,7 @@ description: "Architecture decision trees: rendering strategy, caching strategy,
 
 # ▲ Architecture decision trees: rendering strategy, caching strategy, state placement, runtime selec…
 
-> **Syllabus chapter:** 18. Capstone, Decision Trees, and Outlook  
+> **Syllabus chapter:** 19. Capstone, Decision Trees, and Outlook  
 > **Exact concept:** Architecture decision trees: rendering strategy, caching strategy, state placement, runtime selection.  
 > **Source:** adapted from existing chapter overview content
 

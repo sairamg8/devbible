@@ -2,7 +2,7 @@
 title: "Deploy SprintDesk twice from one repository — once on Vercel, once as a Docker container behind a proxy — because the second deployment is the only thing that tells you which of your assumptions were the framework's and which were the platform's"
 sidebar_label: "06 · Milestone: deployed twice"
 sidebar_position: 10
-description: "The chapter 16 milestone: one codebase, two targets, one instrumentation file. Shared observability through instrumentation.ts, the differences that are real versus the ones that are configuration, and an acceptance checklist you can tick off."
+description: "The chapter 17 milestone: one codebase, two targets, one instrumentation file. Shared observability through instrumentation.ts, the differences that are real versus the ones that are configuration, and an acceptance checklist you can tick off."
 ---
 
 <span className="db-tier t-know">Know</span>
@@ -27,7 +27,7 @@ description: "The chapter 16 milestone: one codebase, two targets, one instrumen
 | Immutable static assets and `?dpl` | [18 · Immutable static assets](18-immutable-static-assets-across-deployments.md) |
 | CI pipelines and test strategy | [chapter 13 · testing and DX](../13-testing-and-developer-experience/01-explanation.md) |
 | Auth, CSP and secrets hygiene | [chapter 10 · forms, auth and security](../10-forms-authentication-and-security-hardening/01-explanation.md) |
-| The security, a11y and SEO readiness checklist | [Appendix D · production readiness](../19-appendices/04-appendix-d-production-readiness-checklist-security.md) |
+| The security, a11y and SEO readiness checklist | [Appendix D · production readiness](../20-appendices/04-appendix-d-production-readiness-checklist-security.md) |
 
 ## One config, two targets
 
@@ -269,4 +269,4 @@ Whatever the application depends on that a container does not provide by default
 
 ---
 
-← [Cost engineering](05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) · [Chapter 16 overview](01-explanation.md) · Next → [The Adapters API](10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md)
+← [Cost engineering](05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) · [Chapter 17 overview](01-explanation.md) · Next → [The Adapters API](10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md)

@@ -220,4 +220,4 @@ Because the point of the suite for a platform is early warning. Testing the rele
 
 ---
 
-← [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md) · [Chapter 16 overview](01-explanation.md) · Next → [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md)
+← [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md) · [Chapter 17 overview](01-explanation.md) · Next → [OpenNext](16-opennext-the-community-adapter-that-became-the-standard.md)

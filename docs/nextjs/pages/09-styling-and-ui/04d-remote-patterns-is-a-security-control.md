@@ -14,7 +14,7 @@ sidebar_position: 13
 > Target: **Next.js 16.3.4 · React 19.2.8 · Node 20.9 floor**.
 > 🔴 `next` is **not installed in this checkout** — no T1 probe was possible; every rule below
 > is quoted. **No sandbox run, no requests issued.** The 2026 image-decoder incident itself is
-> owned by [ch17 · supply-chain vigilance](../17-advanced-ecosystem-topics/03b-supply-chain-vigilance.md)
+> owned by [ch18 · supply-chain vigilance](../18-advanced-ecosystem-topics/03b-supply-chain-vigilance.md)
 > and the CVE record by ch10; this page draws the operational conclusion and does not re-derive them.
 
 **Writing `hostname: '**'` to make a 400 go away is the most consequential line most Next.js developers ever add to a config file, and it is usually added at 11pm during a demo. `/_next/image` is a public, unauthenticated endpoint that takes a URL from the query string, fetches it, and feeds the response to a native image decoder inside your server process. `remotePatterns` is the only thing standing between that decoder and the entire internet. It is an access-control list wearing the costume of a build setting, and the reference's own wording — "allow images from specific external paths and block all others" — is the language of an allow-list, not of a convenience.**
@@ -194,7 +194,7 @@ The phrase *"shared between multiple tenants"* is the reason. `domains: ['storag
 
 ## The operational conclusion
 
-The 2026 image-decoder incident — an unauthenticated RCE reached through a native AVIF decoder under `sharp`, mitigated upstream by disabling AVIF optimization — is written up in [ch17 · supply-chain vigilance](../17-advanced-ecosystem-topics/03b-supply-chain-vigilance.md), and the CVE record itself in [ch10 · the 2026 CVE record](../10-forms-authentication-and-security-hardening/14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md). **Do not re-derive it here.** The single conclusion this page needs from it:
+The 2026 image-decoder incident — an unauthenticated RCE reached through a native AVIF decoder under `sharp`, mitigated upstream by disabling AVIF optimization — is written up in [ch18 · supply-chain vigilance](../18-advanced-ecosystem-topics/03b-supply-chain-vigilance.md), and the CVE record itself in [ch10 · the 2026 CVE record](../10-forms-authentication-and-security-hardening/14-the-2026-cve-record-eleven-vulnerabilities-and-what-each-one-teaches.md). **Do not re-derive it here.** The single conclusion this page needs from it:
 
 🔴 **`remotePatterns` does not prevent decoder vulnerabilities. It decides how many parties can reach one.** A narrow allow-list turns "any host on the internet can trigger this" into "our own CDN can trigger this" — which is the difference between a page-out at 3am and an upgrade scheduled for Tuesday. The coarse-filter argument generalises in [ch10 · defense in depth](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md).
 

@@ -207,4 +207,4 @@ For the App Router that split is illusory: the React that renders comes with Nex
 
 ---
 
-← [Glossary, part 3 — the A–Z](01c-appendix-a-glossary-the-a-to-z.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix B part 2 · the migration the build catches](02b-appendix-b-the-15-to-16-migration-mechanically.md)
+← [Glossary, part 3 — the A–Z](01c-appendix-a-glossary-the-a-to-z.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix B part 2 · the migration the build catches](02b-appendix-b-the-15-to-16-migration-mechanically.md)

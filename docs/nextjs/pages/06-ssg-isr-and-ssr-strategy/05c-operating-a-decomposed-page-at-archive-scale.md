@@ -62,7 +62,7 @@ inconvenience. The documented behaviour:
 > *"Without shared cache, each instance maintains its own cache independently — features still work correctly on each instance, but revalidation events don't propagate across instances."*
 
 See [04c](04c-when-export-wins-and-what-a-server-buys.md) for the full matrix and
-[ch16 · multi-region and data locality](../16-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md)
+[ch17 · multi-region and data locality](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md)
 for the topology.
 
 **The first visitor to a cold article pays the full render.** With hundreds of thousands of

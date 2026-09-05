@@ -225,4 +225,4 @@ Every `NEXT_PUBLIC_` value is three things at once: a public string, a build inp
 
 ---
 
-← [Vercel: deploys, previews, protection](01-vercel-automated-deployments-edge-network-preview-branches.md) · [Chapter 16 overview](01-explanation.md) · Next → [The edge network and skew protection](01c-the-edge-network-and-skew-protection.md)
+← [Vercel: deploys, previews, protection](01-vercel-automated-deployments-edge-network-preview-branches.md) · [Chapter 17 overview](01-explanation.md) · Next → [The edge network and skew protection](01c-the-edge-network-and-skew-protection.md)

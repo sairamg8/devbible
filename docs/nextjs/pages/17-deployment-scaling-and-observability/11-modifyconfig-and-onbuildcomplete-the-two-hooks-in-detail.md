@@ -271,4 +271,4 @@ Because it is not guaranteed to change per deployment. From 16.2, when `deployme
 
 ---
 
-← [The Adapters API — why it exists](10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) · [Chapter 16 overview](01-explanation.md) · Next → [Adapter output types](12-adapter-output-types-what-a-build-actually-is.md)
+← [The Adapters API — why it exists](10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) · [Chapter 17 overview](01-explanation.md) · Next → [Adapter output types](12-adapter-output-types-what-a-build-actually-is.md)

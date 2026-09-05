@@ -19,7 +19,7 @@ The 16.3 notes retired the *earlier* Skills — the ones that existed to carry c
 
 That is the whole distinction, and it is a good one. A **lookup** is "what are the arguments to `revalidateTag`?" — a question the agent only asks if it already suspects it does not know. A **workflow** is "migrate this app to Cache Components" — twelve coordinated edits across route segments, data functions and config, in an order where getting step three wrong makes step seven fail somewhere unrelated. No amount of reference documentation makes that reliable, because the failure is not ignorance of an API; it is sequencing.
 
-🔴 **Why the distinction is worth this much space:** a reader who believes Skills were withdrawn will hand-drive the Cache Components migration, and there is a published Skill for it. This corpus itself carried the wrong statement — [Appendix E](../19-appendices/05-appendix-e-version-watchlist.md) said "Withdrawn" until it was corrected on 2026-09-04.
+🔴 **Why the distinction is worth this much space:** a reader who believes Skills were withdrawn will hand-drive the Cache Components migration, and there is a published Skill for it. This corpus itself carried the wrong statement — [Appendix E](../20-appendices/05-appendix-e-version-watchlist.md) said "Withdrawn" until it was corrected on 2026-09-04.
 
 ## The four Skills, and what installing one actually gives you
 
@@ -108,7 +108,7 @@ next build --debug-prerender
 
 It turns on server source maps and continues past the first failure instead of stopping there. Both halves matter for agent work: source maps make the error name a real file, and continuing past the first failure means one build yields the whole list rather than one item at a time. Ten sequential builds to discover ten errors is how a session's budget disappears.
 
-The rest of the CLI surface — including the flags that scope a build to particular routes — is enumerated in [Appendix C part 3](../19-appendices/03c-appendix-c-the-cli-surface.md).
+The rest of the CLI surface — including the flags that scope a build to particular routes — is enumerated in [Appendix C part 3](../20-appendices/03c-appendix-c-the-cli-surface.md).
 
 ## Gotchas
 

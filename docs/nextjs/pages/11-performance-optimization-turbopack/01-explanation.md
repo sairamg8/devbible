@@ -87,7 +87,7 @@ best-known "facts" fall there, and the pages say so explicitly rather than repea
   FileSystem cache and what a warm build actually reuses
 - [13 · Testing and developer experience](../13-testing-and-developer-experience/01-explanation.md) — Turborepo,
   remote caching, and the CI pipeline this chapter's gates run in
-- [16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md) — owns
+- [16 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — owns
   telemetry's **contracts**: `register()`, `onRequestError`, the span catalogue. This chapter owns only its cost.
 - [03 · Server vs Client Components](../03-server-components-vs-client-components/01-explanation.md) — the boundary
   that decides what ends up in the client bundle in the first place

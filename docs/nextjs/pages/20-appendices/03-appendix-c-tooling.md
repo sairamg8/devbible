@@ -197,4 +197,4 @@ Rarely, and not for tidiness. Vercel's stated position is that the default is ri
 
 ---
 
-← [Appendix B part 3 · the changes nothing catches](02c-appendix-b-the-changes-nothing-catches.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix C part 2 · MCP and the error loop](03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md)
+← [Appendix B part 3 · the changes nothing catches](02c-appendix-b-the-changes-nothing-catches.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix C part 2 · MCP and the error loop](03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md)

@@ -10,11 +10,11 @@ description: "The performance half of instrumentation.ts: register() blocking re
 > Verified: 2026-09-04 against [`instrumentation.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation) (`version: 16.3.4`, `lastUpdated: 2026-06-09`), [How to set up instrumentation](https://nextjs.org/docs/app/guides/instrumentation) (`2026-08-25`), [`instrumentation-client.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client) (`2026-07-28`), [OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry) (`2026-08-25`) and [`logging`](https://nextjs.org/docs/app/api-reference/config/next-config-js/logging) (`2026-02-12`).
 > Target: **Next.js 16.3.4**. Documentation-verified, **no sandbox run** — no cold-start timings, span counts or log output are reproduced here, because nothing in this pass ran the server.
 
-**Every other page in this chapter makes the application faster. This one is about the thing you add *last*, that makes it slower, and that you cannot ship production performance work without. `register()` is documented to run once per new server instance and to complete *before the server is ready to handle requests* — which is exactly the guarantee that makes it the right place to install an SDK, and exactly why an `await` on a network call there is added to every cold start you will ever have. `instrumentation-client.ts` runs after the document loads and before React hydration, which puts it in front of interactivity: a monitoring SDK installed there is measured by the very INP number it was installed to report. And the `logging` block in `next.config.js` — the one that looks like production log configuration — is scoped to development mode in its own title. This page is the cost side. The contracts themselves belong to chapter 16 and are linked, not repeated.**
+**Every other page in this chapter makes the application faster. This one is about the thing you add *last*, that makes it slower, and that you cannot ship production performance work without. `register()` is documented to run once per new server instance and to complete *before the server is ready to handle requests* — which is exactly the guarantee that makes it the right place to install an SDK, and exactly why an `await` on a network call there is added to every cold start you will ever have. `instrumentation-client.ts` runs after the document loads and before React hydration, which puts it in front of interactivity: a monitoring SDK installed there is measured by the very INP number it was installed to report. And the `logging` block in `next.config.js` — the one that looks like production log configuration — is scoped to development mode in its own title. This page is the cost side. The contracts themselves belong to chapter 17 and are linked, not repeated.**
 
 ## What this page owns, and what it hands over
 
-Chapter 16 closed this material as observability. This page keeps only the part that is a performance decision.
+Chapter 17 closed this material as observability. This page keeps only the part that is a performance decision.
 
 | Question | Where it is answered |
 |---|---|
@@ -22,11 +22,11 @@ Chapter 16 closed this material as observability. This page keeps only the part 
 | Why the docs say to import *inside* `register` | here |
 | What `instrumentation-client.ts` costs before hydration | here |
 | What a trace costs per request, and how to read spans as measurements | [06b · The price of a span](06b-the-price-of-a-span-trace-volume-as-a-production-cost.md) |
-| The full `register` / `onRequestError` contract, the `digest` trap | [ch16 · 04 · Telemetry and `instrumentation.ts`](../16-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md) |
-| `@vercel/otel` vs `NodeSDK`, the full span catalogue, `next.*` attributes | [ch16 · 04b · OpenTelemetry and the span catalogue](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md) |
+| The full `register` / `onRequestError` contract, the `digest` trap | [ch17 · 04 · Telemetry and `instrumentation.ts`](../17-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md) |
+| `@vercel/otel` vs `NodeSDK`, the full span catalogue, `next.*` attributes | [ch17 · 04b · OpenTelemetry and the span catalogue](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md) |
 | Which metrics to report from the browser and how | [05 · Core Web Vitals](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) |
 
-If you are here to *set up* telemetry, start with chapter 16 and come back. If you are here because telemetry made something slower, you are in the right place.
+If you are here to *set up* telemetry, start with chapter 17 and come back. If you are here because telemetry made something slower, you are in the right place.
 
 ## `register()` is on the critical path to readiness
 
@@ -169,7 +169,7 @@ ErrorReporter.install({ dsn: process.env.NEXT_PUBLIC_ERROR_DSN })
 void import('./lib/product-analytics').then((m) => m.start())
 ```
 
-The full contract — `onRouterTransitionStart`, `instrumentationClientInject` ordering, the double-initialisation trap — is [ch16 · 04](../16-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md). Reporting Web Vitals from the browser is [05](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md), and it belongs in its own client component rather than here.
+The full contract — `onRouterTransitionStart`, `instrumentationClientInject` ordering, the double-initialisation trap — is [ch17 · 04](../17-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md). Reporting Web Vitals from the browser is [05](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md), and it belongs in its own client component rather than here.
 
 ## 🔴 The `logging` config cannot help you in production
 
@@ -218,7 +218,7 @@ export async function register() {
 
 **★ Symptom: registration "works" locally and silently does nothing in production, with no error anywhere.** Cause: the file is not where the convention requires it. It must be *"in the **root** of your application or inside a `src` folder"*, and *"not inside the `app` or `pages` directory"*; if `pageExtensions` adds a suffix, *"you will also need to update the `instrumentation` filename to match"*. Fix: move it and rename it. There is no warning for this — the absence of a convention file is indistinguishable from not wanting one.
 
-**★ Symptom: a cold start is fast in staging and slow in production, same image.** Cause: registration depends on something that resolves differently per environment — a collector hostname that fails DNS and falls back, an exporter endpoint behind a private link. Any of those turn a construction call into a network wait. Fix: never let the exporter's connectivity block `register`; construct the exporter and let it buffer or drop. If your SDK's constructor connects eagerly, that is an argument for the batching-processor setup described in [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
+**★ Symptom: a cold start is fast in staging and slow in production, same image.** Cause: registration depends on something that resolves differently per environment — a collector hostname that fails DNS and falls back, an exporter endpoint behind a private link. Any of those turn a construction call into a network wait. Fix: never let the exporter's connectivity block `register`; construct the exporter and let it buffer or drop. If your SDK's constructor connects eagerly, that is an argument for the batching-processor setup described in [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
 
 **★ Symptom: INP got worse on the release that added client monitoring, and the monitoring says INP got worse.** Cause: `instrumentation-client.ts` runs *"before React hydration begins"* and *"before user interactions are possible"*, so a heavy synchronous SDK install delays the moment the page can respond at all — and the tool reporting the regression is the thing causing part of it. Fix: keep only what must be listening before hydration synchronous, and make the rest fire-and-forget, accepting the documented gap.
 

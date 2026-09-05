@@ -264,4 +264,4 @@ It changes the baseline you are comparing against. The release notes attribute u
 
 ---
 
-← [The cache across containers](02b-caching-and-the-cachehandler-when-you-run-more-than-one-container.md) · [Chapter 16 overview](01-explanation.md) · Next → [Telemetry via `instrumentation.ts`](04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md)
+← [The cache across containers](02b-caching-and-the-cachehandler-when-you-run-more-than-one-container.md) · [Chapter 17 overview](01-explanation.md) · Next → [Telemetry via `instrumentation.ts`](04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md)

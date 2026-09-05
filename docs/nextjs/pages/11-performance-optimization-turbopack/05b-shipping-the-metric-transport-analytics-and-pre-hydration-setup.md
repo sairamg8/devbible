@@ -7,7 +7,7 @@ description: "navigator.sendBeacon with the fetch keepalive fallback, the Google
 
 <span className="db-tier t-master">Master</span>
 
-> Verified: 2026-09-04 against the Next.js [Analytics guide](https://nextjs.org/docs/app/guides/analytics) (`version: 16.3.4`, ⚠️ `lastUpdated: 2025-05-13` — see [05](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) on what that staleness affects). `instrumentation-client.js` timing rules reused from the corpus's chapter 16 verification of [`instrumentation-client.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client) (`version: 16.3.4`, `lastUpdated: 2026-07-28`) — not re-fetched here.
+> Verified: 2026-09-04 against the Next.js [Analytics guide](https://nextjs.org/docs/app/guides/analytics) (`version: 16.3.4`, ⚠️ `lastUpdated: 2025-05-13` — see [05](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) on what that staleness affects). `instrumentation-client.js` timing rules reused from the corpus's chapter 17 verification of [`instrumentation-client.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client) (`version: 16.3.4`, `lastUpdated: 2026-07-28`) — not re-fetched here.
 > Target: **Next.js 16.3.4**. Documentation-verified; **no sandbox run**, **no measurements**. `navigator.sendBeacon` semantics are a browser API, not a Next.js API — where this page explains *why* it is used, the authority is the web platform, and that is said in the text.
 
 **[05](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) ended with a metric object in a callback. This page is the rest of the journey, and it is where a home-grown vitals pipeline actually breaks — not in the hook, which is three lines, but in the transport, where the most valuable measurements are the ones taken as the user leaves. That is the whole reason the documentation reaches for `navigator.sendBeacon` before `fetch`: a request issued from a page that is being torn down is not reliably sent, and the metrics that finalise last — CLS after the final shift, INP after the slowest interaction — are precisely the ones issued then. The rest of the page is the analytics wiring the documentation spells out, three details of which will silently corrupt your data if you skip them, and `instrumentation-client.js`, which is the only documented place to have your analytics SDK ready before any of this fires.**
@@ -198,7 +198,7 @@ import('./lib/analytics').then((m) => {
 
 ⚠️ The 16 ms figure is a **development-mode warning threshold**, not a production budget the framework enforces. It is a signal that you have put too much in the file — it does not mean production silently fails at 17 ms. Treat it as a lint rule with a good justification behind it: 16 ms is roughly one frame.
 
-The full contract of `instrumentation-client.ts`, alongside `register()` and `onRequestError`, is [chapter 16 · 04](../16-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md). What it costs at boot is [06](06-instrumentationts-for-opentelemetry-and-application-monitori.md) in this chapter.
+The full contract of `instrumentation-client.ts`, alongside `register()` and `onRequestError`, is [chapter 17 · 04](../17-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md). What it costs at boot is [06](06-instrumentationts-for-opentelemetry-and-application-monitori.md) in this chapter.
 
 ## Gotchas
 

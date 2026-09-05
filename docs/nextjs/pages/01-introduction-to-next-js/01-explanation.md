@@ -101,7 +101,7 @@ That `page.tsx` ships **zero JavaScript** to the browser for its own sake. Not "
 
 ## The running example
 
-Chapters use **SprintDesk**, a multi-tenant SaaS task dashboard, so that examples accumulate into one system rather than restarting each chapter. It is deliberately a shape with tension in it: tenant isolation, per-user data that must never be cached wrongly, a dashboard that should stream, and marketing pages that should be fully static. Chapter 18 contrasts it with a PPR-driven storefront, where the trade-offs land differently.
+Chapters use **SprintDesk**, a multi-tenant SaaS task dashboard, so that examples accumulate into one system rather than restarting each chapter. It is deliberately a shape with tension in it: tenant isolation, per-user data that must never be cached wrongly, a dashboard that should stream, and marketing pages that should be fully static. Chapter 19 contrasts it with a PPR-driven storefront, where the trade-offs land differently.
 
 ## Gotchas
 

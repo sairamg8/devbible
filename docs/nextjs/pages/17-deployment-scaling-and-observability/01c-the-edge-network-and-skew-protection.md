@@ -229,4 +229,4 @@ Entirely. Pinning a client to "the deployment that served their page" is only me
 
 ---
 
-← [Environments and the build-time/runtime split](01b-vercel-environments-and-the-build-time-runtime-split.md) · [Chapter 16 overview](01-explanation.md) · Next → [Self-hosting: standalone output and Docker](02-self-hosting-docker-containerization.md)
+← [Environments and the build-time/runtime split](01b-vercel-environments-and-the-build-time-runtime-split.md) · [Chapter 17 overview](01-explanation.md) · Next → [Self-hosting: standalone output and Docker](02-self-hosting-docker-containerization.md)

@@ -54,7 +54,7 @@ No transcript is reproduced here — there is no sandbox for this page and inven
 | What you were reaching into `next/dist` for | The documented seam |
 |---|---|
 | The internal webpack config Next.js builds | `webpack(config, options)` under `--webpack`, or `turbopack.rules` ([04b](04b-the-bundler-seam-webpack-and-turbopack.md)) |
-| Reading the build's route/manifest output | An adapter's `onBuildComplete` ([ch16](../16-deployment-scaling-and-observability/11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md)) |
+| Reading the build's route/manifest output | An adapter's `onBuildComplete` ([ch17](../17-deployment-scaling-and-observability/11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md)) |
 | Running code before the server serves traffic | `register` in `instrumentation.ts` ([04c](04c-the-seams-that-are-files.md)) |
 | Catching every server error | `onRequestError` ([04c](04c-the-seams-that-are-files.md)) |
 | Intercepting requests | `proxy.ts` ([ch2](../02-routing-and-navigation/07-the-proxyts-layer-successor-to-middlewarets-request-intercep.md)) |
@@ -160,7 +160,7 @@ Almost every "we need a Next.js plugin" is one of three cheaper things:
 | Twelve apps should share one config, lint setup and tsconfig | A **shared package** the apps import and compose (`withSprintdesk(baseConfig)`), plus `transpilePackages` if it ships TSX | Same result; no framework coupling; version it yourself |
 | New apps should start the same way | A **template repository** or an internal `create-*` generator | A plugin cannot create files; scaffolding is a one-time act |
 | Existing apps must all move to a new pattern | A **codemod** | A plugin would have to keep re-doing at build time what a codemod does once, in a reviewable commit |
-| A platform must consume the build output | An **adapter** ([ch16](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md)) | This is the one case with a real API |
+| A platform must consume the build output | An **adapter** ([ch17](../17-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md)) | This is the one case with a real API |
 | Every request needs a header, a check or a rewrite | `proxy.ts`, shipped in the shared package and re-exported | Nothing to build-time about it |
 
 Next.js's own migrations are codemods, and the pattern is worth copying verbatim — the Turbopack reference ships one for its own config rename:
@@ -249,4 +249,4 @@ When the alternative is not shipping, the coupling is confined to one module, th
 
 ---
 
-← [04c · Seams that are files](04c-the-seams-that-are-files.md) · [Chapter index](01-explanation.md) · Next → [Capstone: decision trees and outlook](../18-capstone-decision-trees-and-outlook/01-explanation.md)
+← [04c · Seams that are files](04c-the-seams-that-are-files.md) · [Chapter index](01-explanation.md) · Next → [Capstone: decision trees and outlook](../19-capstone-decision-trees-and-outlook/01-explanation.md)

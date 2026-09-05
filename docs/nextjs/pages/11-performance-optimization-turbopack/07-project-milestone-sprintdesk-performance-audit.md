@@ -37,7 +37,7 @@ Three of those five are bundle problems waiting to happen, and one is an interac
 | The mechanics of `next/dynamic` and `optimizePackageImports` | [03 · Bundle analysis and lazy loading](03-bundle-analysis-dynamic-imports-lazy-loading.md) |
 | Which vitals to collect and how to report them | [05 · Core Web Vitals](05-core-web-vitals-tuning-lcp-inp-cls-auditing-workflows.md) |
 | What instrumentation itself costs | [06 · What instrumentation costs](06-instrumentationts-for-opentelemetry-and-application-monitori.md) |
-| Deploying, self-hosting, and where the collector runs | [ch16 · deployment and observability](../16-deployment-scaling-and-observability/01-explanation.md) |
+| Deploying, self-hosting, and where the collector runs | [ch17 · deployment and observability](../17-deployment-scaling-and-observability/01-explanation.md) |
 
 ## The rule that makes it an audit
 

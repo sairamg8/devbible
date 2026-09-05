@@ -10,7 +10,7 @@ description: "Trace volume as a production cost: NEXT_OTEL_VERBOSE as a multipli
 > Verified: 2026-09-04 against [How to set up instrumentation with OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry) (`version: 16.3.4`, `lastUpdated: 2026-08-25`) and [`instrumentation.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation) (`2026-06-09`).
 > Target: **Next.js 16.3.4**. Documentation-verified, **no sandbox run** — every span name and environment variable below is quoted from the reference; no trace, waterfall or span count was observed to write this page.
 
-**Once instrumentation is installed, its cost stops being a startup cost and becomes a per-request one, and the documentation gives you the two levers in a single sentence each. Next.js *"traces more spans than are emitted by default"*, and the switch that reveals them is `NEXT_OTEL_VERBOSE=1` — which is a multiplier applied to every request you serve, on backends that bill per event. Meanwhile the `fetch` span, one per outbound request your server code makes, is the largest single contributor on any fan-out route, and it has a documented off switch. Those decisions are the price side. The return side is that a handful of the spans Next.js emits for free answer questions the rest of this chapter asks: `start response` is a first-byte marker, the arrangement of `fetch` spans is a waterfall diagram, and `resolve segment modules` is what module-loading cost looks like from the server. The catalogue itself belongs to [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md); this page is what to do with it when the job is performance.**
+**Once instrumentation is installed, its cost stops being a startup cost and becomes a per-request one, and the documentation gives you the two levers in a single sentence each. Next.js *"traces more spans than are emitted by default"*, and the switch that reveals them is `NEXT_OTEL_VERBOSE=1` — which is a multiplier applied to every request you serve, on backends that bill per event. Meanwhile the `fetch` span, one per outbound request your server code makes, is the largest single contributor on any fan-out route, and it has a documented off switch. Those decisions are the price side. The return side is that a handful of the spans Next.js emits for free answer questions the rest of this chapter asks: `start response` is a first-byte marker, the arrangement of `fetch` spans is a waterfall diagram, and `resolve segment modules` is what module-loading cost looks like from the server. The catalogue itself belongs to [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md); this page is what to do with it when the job is performance.**
 
 ## Three different things called "the cost of tracing"
 
@@ -22,7 +22,7 @@ They fail differently and are fixed in different places, so keep them apart:
 | **Export** | Also inside the request, if you export synchronously | The span processor. A batching processor moves it off the request path; the documented `SimpleSpanProcessor` does not |
 | **Ingest** | Your observability bill, monthly | Span count × request volume, then sampling |
 
-The middle one is the one that turns tracing into a latency regression rather than a line item, and it is covered in [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md) — `SimpleSpanProcessor` *"exports each span as it ends"*, which puts your collector's availability inside your request path. This page is about the first and third.
+The middle one is the one that turns tracing into a latency regression rather than a line item, and it is covered in [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md) — `SimpleSpanProcessor` *"exports each span as it ends"*, which puts your collector's availability inside your request path. This page is about the first and third.
 
 ## Verbose is a multiplier, not a detail level
 
@@ -110,7 +110,7 @@ The decision sequence, in the order it survives contact with an invoice:
 
 ## Gotchas
 
-**★ Symptom: enabling tracing added measurable latency to every request.** Cause: the span processor exports synchronously — the documented manual setup uses `SimpleSpanProcessor`, which *"exports each span as it ends"* — so your collector is now inside the request path. Fix: use a batching processor in production; this is one of the main reasons to take the manual `NodeSDK` route rather than the default, and it is covered in [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
+**★ Symptom: enabling tracing added measurable latency to every request.** Cause: the span processor exports synchronously — the documented manual setup uses `SimpleSpanProcessor`, which *"exports each span as it ends"* — so your collector is now inside the request path. Fix: use a batching processor in production; this is one of the main reasons to take the manual `NodeSDK` route rather than the default, and it is covered in [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
 
 **★ Symptom: the observability bill after the first full month is several times the estimate.** Cause: the estimate counted user page views; the traces counted requests, and RSC prefetches are requests. Fix: split on `next.rsc` in the backend to see the ratio, then sample prefetch traces far more aggressively than user-initiated ones — a prefetch has no user waiting, so a 1% sample is enough to spot a regression.
 
@@ -143,7 +143,7 @@ export async function loadBoard(teamId: string) {
 }
 ```
 
-**Symptom: layout timings average two unrelated files together.** Cause: grouping on `next.page`, which the docs say *"can be used as a unique identifier only when paired with `next.route`"*. Fix: group by both. Full attribute notes are in [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
+**Symptom: layout timings average two unrelated files together.** Cause: grouping on `next.page`, which the docs say *"can be used as a unique identifier only when paired with `next.route`"*. Fix: group by both. Full attribute notes are in [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
 
 ## Interview questions
 

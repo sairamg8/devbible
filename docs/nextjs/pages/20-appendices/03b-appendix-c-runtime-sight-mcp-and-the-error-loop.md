@@ -216,4 +216,4 @@ Not from MCP — that is the framework's view, and pending boundaries are a brow
 
 ---
 
-← [Appendix C part 1 · agent docs and AGENTS.md](03-appendix-c-tooling.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix C part 3 · the CLI surface](03c-appendix-c-the-cli-surface.md)
+← [Appendix C part 1 · agent docs and AGENTS.md](03-appendix-c-tooling.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix C part 3 · the CLI surface](03c-appendix-c-the-cli-surface.md)

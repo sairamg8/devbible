@@ -26,7 +26,7 @@ This corpus was authored against **Next.js 16.2, with 16.3 still in preview**, a
 as-is. A verification pass on **2026-09-03** found the version layer had drifted.
 
 ✅ **Steps 1–2 of the refresh were applied 2026-09-03.** **13 pages now carry an inline
-correction callout** naming what changed upstream, and the chapter 18/19 appendix duplication
+correction callout** naming what changed upstream, and the chapter 19/20 appendix duplication
 is fixed. **The structure is sound; the corrected facts are flagged in place.** What remains
 is additive — see *Still open* below.
 
@@ -75,10 +75,10 @@ an `01-explanation.md` overview, then one page per concept.
 | **2 · Data, Rendering & Resilience** | 4–7 | Fetching, caching and PPR, rendering strategy, error handling |
 | **3 · State, Styling & UX** | 8–10 | State in an RSC world, styling, forms and security |
 | **4 · Advanced Architecture & Performance** | 11–14 | Turbopack, SEO, testing, agent-driven development |
-| **5 · Full-Stack, Deployment & Production** | 15–19 | Databases, deployment, ecosystem, capstone, appendices |
+| **5 · Full-Stack, Deployment & Production** | 15–20 | Databases, the CRUD API build, deployment, ecosystem, capstone, appendices |
 
 The running project throughout is **SprintDesk**, a multi-tenant SaaS task dashboard, with a
-PPR-driven e-commerce storefront as the contrast case study in chapter 18.
+PPR-driven e-commerce storefront as the contrast case study in chapter 19.
 
 ## Progress
 
@@ -97,7 +97,7 @@ track with 287 readable pages reads 65 %.
 The track arrived as 140 imported pages and is now **247 content pages** (249 files, counting two chapter READMEs). Four steps ran in one day:
 
 1. **Corrected** the facts upstream contradicted — 13 pages carry an inline callout.
-2. **De-duplicated** the chapter 18/19 appendices.
+2. **De-duplicated** the chapter 19/20 appendices.
 3. **Absorbed** what 16.3 shipped: the three cache directives (8 chunks), `catchError` and the
    error model, auth interrupts, `useOffline`, Instant Navigations (6 chunks), root params,
    prefetch inlining, the `instant()` helper, TypeScript 7.
@@ -153,7 +153,7 @@ release that disabled AVIF — so a future 16.3.x is not treated mechanically.
 - **Absorb the ten features that shipped in 16.3** into the chapters that already have a home
   for them: `catchError` + `retry()` (§7), root params (§2), the real Instant Navigations
   names (§2), the `instant()` Playwright helper and TypeScript 7 (§13), glob imports,
-  prefetch inlining, immutable static assets, Node.js-streams SSR (§11/§16), `useOffline` (§7).
+  prefetch inlining, immutable static assets, Node.js-streams SSR (§11/§17), `useOffline` (§7).
 - **Extend to the ~15 documented concepts with no bullet anywhere**: `use cache: private` /
   `use cache: remote` (the largest single gap), `forbidden()`/`unauthorized()` +
   `authInterrupts`, Draft Mode, CSP, Authentication with Cache Components, Multi-tenant,
@@ -163,8 +163,8 @@ release that disabled AVIF — so a future 16.3.x is not treated mechanically.
 
 Recorded so they can be fixed deliberately:
 
-- ✅ ~~**Chapters 18 and 19 duplicate the appendices.**~~ **Fixed 2026-09-03** — chapter 18's
-  five byte-identical copies were deleted (0 inbound links). Appendices live in chapter 19
+- ✅ ~~**Chapters 19 and 20 duplicate the appendices.**~~ **Fixed 2026-09-03** — chapter 19's
+  five byte-identical copies were deleted (0 inbound links). Appendices live in chapter 20
   only, and **Appendix E was rewritten from a watchlist into a shipped/withdrawn record**.
 - **Every chapter has two files prefixed `01-`** — `01-explanation.md` alongside
   `01-<first-topic>.md`. Cosmetic only: `sidebar_position` values do not collide, so the
@@ -176,9 +176,9 @@ Recorded so they can be fixed deliberately:
   at 431 lines — was **split** 2026-09-03, and the track now has **0 files over 300**.
 - 🚧 **No `> Verified:` line and no devbible tier badge on 100 of the 287 pages.** The
   `[D]`/`[O]`/`[R]` badges the import carried have not been re-tiered against devbible's
-  four-tier system. **Four chapters are wholly un-backfilled** — 9, 14, 18, 19 — and this
-  backfill is the next piece of work on the track. Chapters **1, 3, 4, 6 and 17 are fully
-  authored**; 6 and 17 were closed 2026-09-04 and are, with 4, the models to copy.
+  four-tier system. **Four chapters are wholly un-backfilled** — 9, 14, 19, 20 — and this
+  backfill is the next piece of work on the track. Chapters **1, 3, 4, 6 and 18 are fully
+  authored**; 6 and 18 were closed 2026-09-04 and are, with 4, the models to copy.
 - ⚠️ **Chapter 5 is hollow and is the highest-value repair on the track.** Its six top-level
   concept pages are generated stubs — three byte-identical, and **two with completely empty
   bodies** — while `05-caching-ppr-and-cache-components/10-the-three-cache-directives/` holds
@@ -191,4 +191,4 @@ Recorded so they can be fixed deliberately:
 two differing files both at `sidebar_position: 4`, and the shorter moved to `4.5`; 18 broken
 relative links were repointed (13 already broken in the source, 5 broken by the move).
 Then, under steps 1–2: **13 pages gained a correction callout** and **5 duplicate appendix
-pages were deleted from chapter 18**. No other prose was edited.
+pages were deleted from chapter 19**. No other prose was edited.

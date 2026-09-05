@@ -218,4 +218,4 @@ The harness requires the logs script to print a `NEXT_SUPPORTS_IMMUTABLE_ASSETS:
 
 ---
 
-← [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md) · [Chapter 16 overview](01-explanation.md)
+← [Deploying beyond Vercel](17-choosing-a-deployment-target-beyond-vercel.md) · [Chapter 17 overview](01-explanation.md)

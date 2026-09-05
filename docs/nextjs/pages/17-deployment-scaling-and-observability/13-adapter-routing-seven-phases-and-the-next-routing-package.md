@@ -199,4 +199,4 @@ Whether `/_next/data/<buildId>/...` URLs are normalized during matching. It affe
 
 ---
 
-← [Adapter output types](12-adapter-output-types-what-a-build-actually-is.md) · [Chapter 16 overview](01-explanation.md) · Next → [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md)
+← [Adapter output types](12-adapter-output-types-what-a-build-actually-is.md) · [Chapter 17 overview](01-explanation.md) · Next → [Invoking entrypoints, and PPR resume](14-invoking-entrypoints-runtime-integration-and-ppr-resume.md)

@@ -130,7 +130,7 @@ export async function renderDescription(source: string) {
 
 Act one's trade was explicit — client bytes for server CPU — and this span is the receipt. If the card route's render time is now dominated by `renderDescription`, the answer is to cache the rendered HTML by content, not to move the library back to the browser.
 
-Two conventions, both from the framework's side: use `startActiveSpan` so the span nests under the request rather than becoming a detached root, and namespace your attributes (`sprintdesk.*`) because `next.*` belongs to Next.js. The catalogue of what the framework already emits is [ch16 · 04b](../16-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
+Two conventions, both from the framework's side: use `startActiveSpan` so the span nests under the request rather than becoming a detached root, and namespace your attributes (`sprintdesk.*`) because `next.*` belongs to Next.js. The catalogue of what the framework already emits is [ch17 · 04b](../17-deployment-scaling-and-observability/04b-opentelemetry-the-span-catalogue-and-trace-volume.md).
 
 ## Reading the trace as the audit's final check
 

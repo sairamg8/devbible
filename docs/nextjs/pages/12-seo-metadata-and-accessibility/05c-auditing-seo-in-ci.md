@@ -183,7 +183,7 @@ A common older gate parsed `next build` output for the per-route bundle sizes an
 
 A gate that greps for those columns now finds nothing, extracts no numbers, and — depending on how it was written — either compares an empty set successfully or silently reports zero.
 
-If you inherited such a check, it is not protecting you. The current replacements are `next experimental-analyze` and the deployment platform's own reporting; the details belong to chapter 11 and chapter 16, not here. What belongs here is the warning: **a green gate that parses text is only green while the text exists.**
+If you inherited such a check, it is not protecting you. The current replacements are `next experimental-analyze` and the deployment platform's own reporting; the details belong to chapter 11 and chapter 17, not here. What belongs here is the warning: **a green gate that parses text is only green while the text exists.**
 
 ## What CI cannot tell you
 

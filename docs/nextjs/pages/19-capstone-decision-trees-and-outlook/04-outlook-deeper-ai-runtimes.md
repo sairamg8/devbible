@@ -7,7 +7,7 @@ description: "Outlook: deeper AI runtimes, compiler evolution, and how to evalua
 
 # ▲ Outlook: deeper AI runtimes, compiler evolution, and how to evaluate preview features without bet…
 
-> **Syllabus chapter:** 18. Capstone, Decision Trees, and Outlook  
+> **Syllabus chapter:** 19. Capstone, Decision Trees, and Outlook  
 > **Exact concept:** Outlook: deeper AI runtimes, compiler evolution, and how to evaluate preview features without betting production on them.  
 > **Source:** authored for exact syllabus concept name
 

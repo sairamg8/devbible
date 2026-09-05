@@ -135,7 +135,7 @@ contents, so a given URL's bytes never change. That is what makes cache-first co
 almost nowhere else — there is no staleness to reason about, only storage to reclaim. The
 deployment-side consequences of that immutability, including what happens to a client holding
 URLs from a previous build, are in
-[immutable static assets across deployments](../16-deployment-scaling-and-observability/18-immutable-static-assets-across-deployments.md).
+[immutable static assets across deployments](../17-deployment-scaling-and-observability/18-immutable-static-assets-across-deployments.md).
 
 The mirror image is `public/`: those files are **not** content-addressed, and Next serves them
 with `Cache-Control: public, max-age=0`. Cache-first on `public/` means you have taken

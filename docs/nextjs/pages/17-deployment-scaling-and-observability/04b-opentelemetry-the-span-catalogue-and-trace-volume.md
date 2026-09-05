@@ -197,4 +197,4 @@ Only who runs the collector. `@vercel/otel` works both on Vercel and when self-h
 
 ---
 
-← [Telemetry and `instrumentation.ts`](04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md) · [Chapter 16 overview](01-explanation.md) · Next → [Cost engineering](05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)
+← [Telemetry and `instrumentation.ts`](04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md) · [Chapter 17 overview](01-explanation.md) · Next → [Cost engineering](05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)

@@ -61,9 +61,9 @@ The common stopping point is a passing suite with a high coverage number. That n
 - [Chapter 3 · Server vs Client Components](../03-server-components-vs-client-components/01-explanation.md) — the eligibility boundary that decides what a jsdom runner can render at all
 - [Chapter 10 · Forms, auth and security hardening](../10-forms-authentication-and-security-hardening/02-boundary-validation-react-hook-form-zod-schemas-shared-acros.md) — the same Zod boundary from the security side, including what a schema does not check
 - [Chapter 14 · Agent-driven development](../14-agent-driven-development/05b-the-verification-loop-guardrails-and-review-discipline.md) — why the failing assertion is written first, and what a test that got *easier* tells you
-- [Chapter 16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01c-the-edge-network-and-skew-protection.md) — why CI must target the commit preview URL rather than the branch one
-- [Appendix C · the CLI surface](../19-appendices/03c-appendix-c-the-cli-surface.md) — `next typegen`, `next build --debug-prerender`, and the codemods this chapter runs
-- [Appendix D · production readiness](../19-appendices/04-appendix-d-production-readiness-checklist-security.md) — the gate this chapter deliberately does not duplicate
+- [Chapter 17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01c-the-edge-network-and-skew-protection.md) — why CI must target the commit preview URL rather than the branch one
+- [Appendix C · the CLI surface](../20-appendices/03c-appendix-c-the-cli-surface.md) — `next typegen`, `next build --debug-prerender`, and the codemods this chapter runs
+- [Appendix D · production readiness](../20-appendices/04-appendix-d-production-readiness-checklist-security.md) — the gate this chapter deliberately does not duplicate
 
 ---
 

@@ -49,7 +49,7 @@ sidebar_position: 3
 
 ## E
 
-**Environment Variables** — *"Configuration values accessible at build time or request time. In Next.js, variables prefixed with `NEXT_PUBLIC_` are exposed to the browser, while others are only available server-side."* 🔴 In 16, `serverRuntimeConfig` and `publicRuntimeConfig` were **removed**; env vars are the replacement. → [ch 16](../16-deployment-scaling-and-observability/01-explanation.md), [Appendix D](04-appendix-d-production-readiness-checklist-security.md).
+**Environment Variables** — *"Configuration values accessible at build time or request time. In Next.js, variables prefixed with `NEXT_PUBLIC_` are exposed to the browser, while others are only available server-side."* 🔴 In 16, `serverRuntimeConfig` and `publicRuntimeConfig` were **removed**; env vars are the replacement. → [ch 17](../17-deployment-scaling-and-observability/01-explanation.md), [Appendix D](04-appendix-d-production-readiness-checklist-security.md).
 
 **Error Boundary** — *"A React component that catches JavaScript errors in its child component tree and displays a fallback UI. In Next.js, create an `error.js` file to automatically wrap a route segment in an error boundary."* → [ch 7](../07-error-handling-loading-states-and-resilience/01-explanation.md).
 
@@ -119,7 +119,7 @@ sidebar_position: 3
 
 **Revalidation** — *"The process of updating cached data. Can be time-based (using `cacheLife()`…) or on-demand (using `cacheTag()` to tag data, then `updateTag()` to invalidate)."* → [ch 5](../05-caching-ppr-and-cache-components/01-explanation.md).
 
-**Rewrite** — *"Mapping an incoming request path to a different destination path without changing the URL in the browser."* → [ch 17](../17-advanced-ecosystem-topics/01-explanation.md).
+**Rewrite** — *"Mapping an incoming request path to a different destination path without changing the URL in the browser."* → [ch 18](../18-advanced-ecosystem-topics/01-explanation.md).
 
 **Route Groups** — *"A way to organize routes without affecting the URL structure. Created by wrapping a folder name in parentheses (e.g., `(marketing)`)."* → [ch 2](../02-routing-and-navigation/01-explanation.md).
 
@@ -139,7 +139,7 @@ sidebar_position: 3
 
 **Server Function** — *"An asynchronous function that runs on the server, marked with the `"use server"` directive."* → [part 1](01-appendix-a-glossary-ppr.md), [ch 10](../10-forms-authentication-and-security-hardening/01-explanation.md).
 
-**Static Assets** — *"Files such as images, fonts, videos, and other media that are served directly without processing. Static assets are typically stored in the `public` directory."* → [ch 16](../16-deployment-scaling-and-observability/01-explanation.md).
+**Static Assets** — *"Files such as images, fonts, videos, and other media that are served directly without processing. Static assets are typically stored in the `public` directory."* → [ch 17](../17-deployment-scaling-and-observability/01-explanation.md).
 
 **Static Export** — *"A deployment mode that generates a fully static site with HTML, CSS, and JavaScript files. Enabled by setting `output: 'export'`… can be hosted on any static file server without a Node.js server."* → [ch 6](../06-ssg-isr-and-ssr-strategy/01-explanation.md).
 
@@ -169,7 +169,7 @@ sidebar_position: 3
 
 ## V
 
-**Version skew** — *"After a new version of your application is deployed, clients that are still active may reference JavaScript, CSS, or data from an older build… it can cause missing assets, Server Action errors, and navigation failures. Next.js uses `deploymentId` to detect and handle version skew."* → [part 2](01b-appendix-a-glossary-turbopack-mcp-instant.md), [ch 16](../16-deployment-scaling-and-observability/01-explanation.md).
+**Version skew** — *"After a new version of your application is deployed, clients that are still active may reference JavaScript, CSS, or data from an older build… it can cause missing assets, Server Action errors, and navigation failures. Next.js uses `deploymentId` to detect and handle version skew."* → [part 2](01b-appendix-a-glossary-turbopack-mcp-instant.md), [ch 17](../17-deployment-scaling-and-observability/01-explanation.md).
 
 ---
 
@@ -182,9 +182,9 @@ Each is a real, documented feature. The glossary simply has no entry, so these d
 | **MCP** | [`/docs/app/guides/mcp`](https://nextjs.org/docs/app/guides/mcp) | The Model Context Protocol support built into `next dev` at `/_next/mcp`, plus the separate `next-devtools-mcp` package an agent runs to reach it. [part 2](01b-appendix-a-glossary-turbopack-mcp-instant.md) |
 | **Instant Navigations** | 16.3 release material | Umbrella name for `cacheComponents` + `partialPrefetching` + instant navigation validation. [part 2](01b-appendix-a-glossary-turbopack-mcp-instant.md) |
 | **`AGENTS.md`** | [`/docs/app/guides/ai-agents`](https://nextjs.org/docs/app/guides/ai-agents) | A root file, with a Next.js-managed block, that points coding agents at the version-matched docs bundled in `node_modules/next/dist/docs/`. [Appendix C](03-appendix-c-tooling.md) |
-| **Adapter** | [`/docs/app/api-reference/adapters`](https://nextjs.org/docs/app/api-reference/adapters) | The build-time contract a deployment platform implements — a typed description of the build, stable across minors. [ch 16](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) |
+| **Adapter** | [`/docs/app/api-reference/adapters`](https://nextjs.org/docs/app/api-reference/adapters) | The build-time contract a deployment platform implements — a typed description of the build, stable across minors. [ch 17](../17-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) |
 | **Skill** | [`/docs/app/guides/ai-agents`](https://nextjs.org/docs/app/guides/ai-agents) | A packaged multi-step agent workflow (`next-dev-loop`, `next-cache-components-adoption`, …), installed with `npx skills add`. 🔴 **Not** a docs replacement. [Appendix C](03-appendix-c-tooling.md) |
-| **`deploymentId`** | [`/docs/app/api-reference/config/next-config-js/deploymentId`](https://nextjs.org/docs/app/api-reference/config/next-config-js/deploymentId) | The build identifier Next.js uses to detect version skew. [ch 16](../16-deployment-scaling-and-observability/01-explanation.md) |
+| **`deploymentId`** | [`/docs/app/api-reference/config/next-config-js/deploymentId`](https://nextjs.org/docs/app/api-reference/config/next-config-js/deploymentId) | The build identifier Next.js uses to detect version skew. [ch 17](../17-deployment-scaling-and-observability/01-explanation.md) |
 
 ## Gotchas
 
@@ -252,4 +252,4 @@ As a vocabulary check on the description more than the diff. If a PR says "made 
 
 ---
 
-← [Glossary, part 2 — Turbopack, MCP, Instant Navigations](01b-appendix-a-glossary-turbopack-mcp-instant.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix B · The React upgrade blueprint](02-appendix-b-react-upgrade-blueprint-tracking-react-canary-nex.md)
+← [Glossary, part 2 — Turbopack, MCP, Instant Navigations](01b-appendix-a-glossary-turbopack-mcp-instant.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix B · The React upgrade blueprint](02-appendix-b-react-upgrade-blueprint-tracking-react-canary-nex.md)

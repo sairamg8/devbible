@@ -192,7 +192,7 @@ Not in this appendix's title, but it belongs on this page because it is a *build
 
 > **Version skew** — *"After a new version of your application is deployed, clients that are still active may reference JavaScript, CSS, or data from an older build. This mismatch between client and server versions is called version skew, and it can cause missing assets, Server Action errors, and navigation failures. Next.js uses `deploymentId` to detect and handle version skew."*
 
-Read the failure list carefully: **missing assets, Server Action errors, navigation failures.** All three look like unrelated bugs in an error tracker, all three are unreproducible locally, and all three cluster in the minutes after a deploy. The deployment mechanics are chapter 16's: [16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md).
+Read the failure list carefully: **missing assets, Server Action errors, navigation failures.** All three look like unrelated bugs in an error tracker, all three are unreproducible locally, and all three cluster in the minutes after a deploy. The deployment mechanics are chapter 17's: [16 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md).
 
 ## Gotchas
 
@@ -228,7 +228,7 @@ export default nextConfig
 
 **★ Symptom: your agent cannot see any errors and reports the MCP server is not connected.** Cause: almost always no dev server, or one started before the agent loaded its config. Fix: work the documented list in order — Next.js 16 or above, `next-devtools-mcp` present in `.mcp.json`, `npm run dev` running, and restart the dev server if it was already running when you added the config.
 
-**★ Symptom: you ask an agent to diagnose a production incident through MCP and it returns nothing useful.** Cause: every MCP capability is a dev-server capability; there is no production surface. Fix: use the telemetry path instead — `instrumentation.ts`, `onRequestError` and an OpenTelemetry exporter, covered in [chapter 16](../16-deployment-scaling-and-observability/01-explanation.md). Do not expect MCP to substitute for it.
+**★ Symptom: you ask an agent to diagnose a production incident through MCP and it returns nothing useful.** Cause: every MCP capability is a dev-server capability; there is no production surface. Fix: use the telemetry path instead — `instrumentation.ts`, `onRequestError` and an OpenTelemetry exporter, covered in [chapter 17](../17-deployment-scaling-and-observability/01-explanation.md). Do not expect MCP to substitute for it.
 
 **★ Symptom: `get_compilation_issues` or `compile_route` is missing from the agent's tool list.** Cause: both are documented **Turbopack only**. If the project builds with `--webpack`, they do not exist. Fix: either move the project to Turbopack or stop depending on those two tools in your workflow.
 
@@ -290,4 +290,4 @@ That field tells you nothing about the page. It is the docs build number and is 
 
 ---
 
-← [Glossary, part 1 — PPR, RSC, Cache Components](01-appendix-a-glossary-ppr.md) · [Chapter 19 overview](01-explanation.md) · Next → [Glossary, part 3 — the A–Z](01c-appendix-a-glossary-the-a-to-z.md)
+← [Glossary, part 1 — PPR, RSC, Cache Components](01-appendix-a-glossary-ppr.md) · [Chapter 20 overview](01-explanation.md) · Next → [Glossary, part 3 — the A–Z](01c-appendix-a-glossary-the-a-to-z.md)

@@ -227,4 +227,4 @@ Look for its five specific outputs: a top-level `turbopack` key rather than `exp
 
 ---
 
-← [Appendix B part 1 · the React canary model](02-appendix-b-react-upgrade-blueprint-tracking-react-canary-nex.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix B part 3 · the changes nothing catches](02c-appendix-b-the-changes-nothing-catches.md)
+← [Appendix B part 1 · the React canary model](02-appendix-b-react-upgrade-blueprint-tracking-react-canary-nex.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix B part 3 · the changes nothing catches](02c-appendix-b-the-changes-nothing-catches.md)

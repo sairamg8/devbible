@@ -282,4 +282,4 @@ Because an install at deploy time can resolve a different dependency tree than t
 
 ---
 
-← [The edge network and skew protection](01c-the-edge-network-and-skew-protection.md) · [Chapter 16 overview](01-explanation.md) · Next → [Caching and the `CacheHandler` across containers](02b-caching-and-the-cachehandler-when-you-run-more-than-one-container.md)
+← [The edge network and skew protection](01c-the-edge-network-and-skew-protection.md) · [Chapter 17 overview](01-explanation.md) · Next → [Caching and the `CacheHandler` across containers](02b-caching-and-the-cachehandler-when-you-run-more-than-one-container.md)

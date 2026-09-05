@@ -7,7 +7,7 @@ sidebar_position: 5
 > Verified: 2026-09-03 against the [live docs navigation](https://nextjs.org/docs) and the
 > [Next.js blog](https://nextjs.org/blog).
 > ⚠️ Imported syllabus verbatim; drift flagged inline.
-> ✅ **The chapter 18/19 appendix duplication was FIXED on 2026-09-03**; Appendix E has been
+> ✅ **The chapter 19/20 appendix duplication was FIXED on 2026-09-03**; Appendix E has been
 > rewritten from a watchlist into a shipped/withdrawn record.
 
 ## 15 · Databases, APIs, and Full-Stack Patterns
@@ -20,7 +20,28 @@ sidebar_position: 5
 - **Project Milestone:** SprintDesk on Drizzle + Neon with pooling; SSE-powered live board updates; a background job for digest emails.
   - ➕ **Missing:** the **Multi-tenant** guide — which is what SprintDesk *is*, unnamed for 18 chapters — plus Custom Server and Environment Variables.
 
-## 16 · Deployment, Scaling, and Observability
+## 16 · Building a CRUD API with Postgres
+
+> ➕ **Added 2026-09-05 on the user's instruction**, as a full chapter rather than a topic inside
+> chapter 15. Chapters 16–19 were renumbered to 17–20 to make room; nothing was merged or dropped.
+> Chapter 15 is the survey of full-stack *patterns*; this chapter is **one build**, carried end to
+> end against a real Postgres database.
+
+- The resource contract: what "a CRUD API" means in the App Router, and Route Handlers and Server Actions against one shared service layer.
+- The schema and the migration story: constraints as the API's first validation layer; migrations that are safe while old code still serves.
+- The connection you actually get: pooling inside a function that may be frozen, and the dev hot-reload connection leak.
+- The Data Access Layer: one place every query lives, and where authorization goes so it cannot be forgotten.
+- **CREATE:** POST semantics, validation at the boundary, constraint violations as status codes, idempotency for a retried POST.
+- **READ:** filtering and sorting without injection; offset vs keyset pagination; caching a collection and invalidating it.
+- **UPDATE:** PUT vs PATCH, the lost-update problem, optimistic concurrency, 409 vs 412.
+- **DELETE:** hard vs soft, cascades and referential integrity, why delete must be idempotent.
+- Transactions and multi-table writes: isolation levels in PostgreSQL 18, serialization failures and the retry loop.
+- Errors and one response shape the client can rely on.
+- Ownership on the API surface: every row-returning query scoped to the caller.
+- Testing the API, and the seed/reset story.
+- **Project Milestone:** the finished API wired to the UI and deployed.
+
+## 17 · Deployment, Scaling, and Observability
 
 - Vercel: automated deployments, edge network, preview branches.
 - Self-hosting: Docker containerization, the stable Build Adapters API, deploying beyond Vercel.
@@ -36,7 +57,7 @@ sidebar_position: 5
     by definition, therefore skew-proof, and a real cache-hit-rate lever.
 - **Project Milestone:** SprintDesk deployed twice — Vercel and a Dockerized self-host — with shared observability.
 
-## 17 · Advanced Ecosystem Topics
+## 18 · Advanced Ecosystem Topics
 
 - Micro-frontends and multi-zone architectures for decoupled teams.
 - Pages Router → App Router migration roadmaps for legacy codebases.
@@ -47,7 +68,7 @@ sidebar_position: 5
     framework's own code was never at fault — that is the supply-chain lesson.
 - Framework extension and plugin development.
 
-## 18 · Capstone, Decision Trees, and Outlook
+## 19 · Capstone, Decision Trees, and Outlook
 
 - **SprintDesk retrospective:** the finished multi-tenant SaaS reviewed end-to-end against the Production Readiness Checklist.
 - **Case Study 2 (contrast):** a PPR-driven e-commerce storefront — different rendering, caching, and state decisions, and why.
@@ -61,12 +82,12 @@ sidebar_position: 5
     migration. And the honest counter-example: the **retired Skills** (chapter 14) — a
     previewed feature withdrawn rather than stabilized.
 - **Appendices A–E.**
-  - ✅ **FIXED 2026-09-03.** Chapter 18 used to close by listing Appendices A–E in full while
-    chapter 19 repeated all five **verbatim** — five byte-identical duplicate pages. Chapter
-    18's copies were deleted (0 inbound links); **the appendices now live in chapter 19
+  - ✅ **FIXED 2026-09-03.** Chapter 19 used to close by listing Appendices A–E in full while
+    chapter 20 repeated all five **verbatim** — five byte-identical duplicate pages. Chapter
+    19's copies were deleted (0 inbound links); **the appendices now live in chapter 20
     only.**
 
-## 19 · Appendices
+## 20 · Appendices
 
 - **Appendix A:** Glossary (PPR, RSC, Turbopack, Cache Components, MCP, Instant Navigations).
   - ➕ Add: App Shell, Partial Prefetching, root params, Active/Maintenance LTS, adapter.

@@ -66,7 +66,7 @@ This is the class that defeats code review entirely, because there is no code.
 
 16 changed `minimumCacheTTL` from `60` seconds to **4 hours**, cut `qualities` to `[75]` only (so *"a `quality` prop of 80, is coerced to 75"*), removed `16` from the default `imageSizes`, capped `maximumRedirects` at **3** from unlimited, and blocked local-IP optimization behind `images.dangerouslyAllowLocalIP`. It also *"removes the `size` and `First Load JS` metrics from the `next build` output"* — so a CI gate that parsed those numbers now passes because it finds nothing to compare.
 
-A project that never set any of those options has **zero diff** across all of it. The agent did not change them; nobody changed them; the behaviour changed anyway. An agent reviewing its own migration reviews its patch, and the patch is silent here. The only artefact that carries this information is the upgrade guide's own list, which is why a migration review starts from [the guide's changed-defaults section](../19-appendices/02c-appendix-b-the-changes-nothing-catches.md) rather than from the diff.
+A project that never set any of those options has **zero diff** across all of it. The agent did not change them; nobody changed them; the behaviour changed anyway. An agent reviewing its own migration reviews its patch, and the patch is silent here. The only artefact that carries this information is the upgrade guide's own list, which is why a migration review starts from [the guide's changed-defaults section](../20-appendices/02c-appendix-b-the-changes-nothing-catches.md) rather than from the diff.
 
 ## What context files actually fix, and where the line is
 

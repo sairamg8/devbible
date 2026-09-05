@@ -7,7 +7,7 @@ description: "**Case Study 2 (contrast):** a PPR-driven e-commerce storefront �
 
 # ▲ **Case Study 2 (contrast):** a PPR-driven e-commerce storefront
 
-> **Syllabus chapter:** 18. Capstone, Decision Trees, and Outlook  
+> **Syllabus chapter:** 19. Capstone, Decision Trees, and Outlook  
 > **Exact concept:** **Case Study 2 (contrast):** a PPR-driven e-commerce storefront — different rendering, caching, and state decisions, and why.  
 > **Source:** adapted from existing chapter overview content
 

@@ -50,8 +50,8 @@ The common stopping point is a file full of good advice about Server Components.
 - [Chapter 13 · Testing and developer experience](../13-testing-and-developer-experience/10-the-instant-playwright-helper.md) — the `instant()` helper the verification loop is built on, and the linter you must restore yourself after 16
 - [Chapter 10 · Forms, auth and security hardening](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md) — why an action's session check is not an authorization check
 - [Chapter 12 · SEO, metadata and accessibility](../12-seo-metadata-and-accessibility/01-explanation.md) — accessibility as behaviour under assistive technology, which is the limit case for agent-authored markup
-- [Appendix B · the changes nothing catches](../19-appendices/02c-appendix-b-the-changes-nothing-catches.md) — the changed defaults with no diff, which a migration review must start from
-- [Appendix C · tooling](../19-appendices/03-appendix-c-tooling.md) — the reference half of this chapter: MCP tools, the CLI surface, the codemods
+- [Appendix B · the changes nothing catches](../20-appendices/02c-appendix-b-the-changes-nothing-catches.md) — the changed defaults with no diff, which a migration review must start from
+- [Appendix C · tooling](../20-appendices/03-appendix-c-tooling.md) — the reference half of this chapter: MCP tools, the CLI surface, the codemods
 
 ---
 

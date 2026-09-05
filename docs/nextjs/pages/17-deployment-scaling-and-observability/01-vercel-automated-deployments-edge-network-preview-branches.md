@@ -212,4 +212,4 @@ Because it means an artefact under investigation cannot change while you are inv
 
 ---
 
-← [Chapter 16 overview](01-explanation.md) · Next → [Environments and the build-time/runtime split](01b-vercel-environments-and-the-build-time-runtime-split.md)
+← [Chapter 17 overview](01-explanation.md) · Next → [Environments and the build-time/runtime split](01b-vercel-environments-and-the-build-time-runtime-split.md)

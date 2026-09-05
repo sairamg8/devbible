@@ -154,7 +154,7 @@ PORT=4000 next dev   # works
 next start --keepAliveTimeout 70000
 ```
 
-That failure — intermittent 502s under load, unreproducible locally, worse at low traffic when connections idle longer — is one of the highest-value single flags in the CLI. [Chapter 16](../16-deployment-scaling-and-observability/01-explanation.md) covers the deployment side.
+That failure — intermittent 502s under load, unreproducible locally, worse at low traffic when connections idle longer — is one of the highest-value single flags in the CLI. [Chapter 17](../17-deployment-scaling-and-observability/01-explanation.md) covers the deployment side.
 
 ## The codemods, and where they are not the CLI
 
@@ -238,4 +238,4 @@ At the keep-alive timeouts. If Node's is shorter than the proxy's, Node closes a
 
 ---
 
-← [Appendix C part 2 · MCP and the error loop](03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix D · The production readiness checklist](04-appendix-d-production-readiness-checklist-security.md)
+← [Appendix C part 2 · MCP and the error loop](03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix D · The production readiness checklist](04-appendix-d-production-readiness-checklist-security.md)

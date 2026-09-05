@@ -1,0 +1,10 @@
+{
+  "label": "16. Building a CRUD API with Postgres",
+  "position": 16,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "▲ 16. Building a CRUD API with Postgres",
+    "description": "Chapter 16: one resource, one schema, every verb, and every failure mode — the build that chapter 15 supplies the parts for."
+  }
+}

@@ -67,7 +67,7 @@ fi
 
 That script is worth more than the precedence rule would have been, because it fails in CI on the commit that introduced the ambiguity rather than at whatever runtime the ambiguity happens to resolve to.
 
-⚠️ **Note for anyone citing this page** — including [ch18 · decision trees](../18-capstone-decision-trees-and-outlook/01-explanation.md), which links here for exactly this rule: cite it as *"unspecified in the 16.3.4 docs; enforced by convention"*, not as *"app wins"*. If a later docs revision states the rule, this section is where it lands.
+⚠️ **Note for anyone citing this page** — including [ch19 · decision trees](../19-capstone-decision-trees-and-outlook/01-explanation.md), which links here for exactly this rule: cite it as *"unspecified in the 16.3.4 docs; enforced by convention"*, not as *"app wins"*. If a later docs revision states the rule, this section is where it lands.
 
 ## The seam that is documented, and it is the one that hurts
 

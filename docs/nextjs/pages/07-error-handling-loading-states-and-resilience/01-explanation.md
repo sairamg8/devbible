@@ -88,7 +88,7 @@ actually receive — and explain why your existing monitoring would or would not
 - [04 · Data fetching](../04-data-fetching-in-the-app-router/01-explanation.md) — where the failures this chapter catches originate
 - [05 · Caching, PPR and Cache Components](../05-caching-ppr-and-cache-components/01-explanation.md) — the mode that turns the layout trap from silent into a build error
 - [10 · Forms, authentication and security hardening](../10-forms-authentication-and-security-hardening/01-explanation.md) — the security half of the Server Action contract
-- [16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md) — where the errors reported here are collected
+- [16 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — where the errors reported here are collected
 
 ---
 

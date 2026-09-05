@@ -9,7 +9,7 @@ sidebar_position: 3
 > Verified: 2026-09-04 against [Enabling Next.js MCP Server for Coding Agents](https://nextjs.org/docs/app/guides/mcp) (`lastUpdated: 2026-07-08`) and [How to set up your Next.js project for AI coding agents](https://nextjs.org/docs/app/guides/ai-agents) (`lastUpdated: 2026-08-25`).
 > Target: **Next.js 16.3.4** · requires **Next.js 16 or above** and a running dev server. Documentation-verified; **no sandbox run, no timings**.
 
-**An agent editing your app without MCP is doing something no competent engineer would accept: proposing fixes for errors it has not seen, on routes it has not enumerated, verifying nothing. Everything it knows comes from reading source files, and a running Next.js application knows a great deal that is not in any source file — which routes actually exist, whether the project currently compiles, what the dev server logged thirty seconds ago, and which source function a Server Action ID belongs to. This page is about working with that surface: what to ask, what the answers are good for, and the two places it stops. [Appendix C part 2](../19-appendices/03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md) is the reference; this is the practice.**
+**An agent editing your app without MCP is doing something no competent engineer would accept: proposing fixes for errors it has not seen, on routes it has not enumerated, verifying nothing. Everything it knows comes from reading source files, and a running Next.js application knows a great deal that is not in any source file — which routes actually exist, whether the project currently compiles, what the dev server logged thirty seconds ago, and which source function a Server Action ID belongs to. This page is about working with that surface: what to ask, what the answers are good for, and the two places it stops. [Appendix C part 2](../20-appendices/03b-appendix-c-runtime-sight-mcp-and-the-error-loop.md) is the reference; this is the practice.**
 
 ## Setting it up, in one file
 
@@ -87,7 +87,7 @@ Step 5 is the one that makes the loop viable. A cycle gated on `next build` cost
 
 ## Where it stops
 
-**It is dev-only.** Every capability is a dev-server capability: build errors, runtime errors, type errors, dev logs, compilation issues, route tables. There is no production surface, and the requirements are *"Next.js 16 or above"* plus a running dev server. Production observability is a completely different mechanism — `instrumentation.ts`, `onRequestError`, an OpenTelemetry exporter — covered in [chapter 16](../16-deployment-scaling-and-observability/01-explanation.md).
+**It is dev-only.** Every capability is a dev-server capability: build errors, runtime errors, type errors, dev logs, compilation issues, route tables. There is no production surface, and the requirements are *"Next.js 16 or above"* plus a running dev server. Production observability is a completely different mechanism — `instrumentation.ts`, `onRequestError`, an OpenTelemetry exporter — covered in [chapter 17](../17-deployment-scaling-and-observability/01-explanation.md).
 
 **It is the framework's view, not the browser's.** Rendered output, the DOM, client console state, Web Vitals and which Suspense boundaries are still pending are not in it. That is [page 04](04-163-preview-first-party-skills-for-multi-step-workflows.md)'s subject.
 

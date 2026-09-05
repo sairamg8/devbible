@@ -1,8 +1,8 @@
 ---
-title: "16 · Deployment, scaling and observability — every default on this list is correct for exactly one instance in exactly one region, and the chapter is the list of what stops being true the moment there are two of anything"
+title: "17 · Deployment, scaling and observability — every default on this list is correct for exactly one instance in exactly one region, and the chapter is the list of what stops being true the moment there are two of anything"
 sidebar_label: "Overview"
 sidebar_position: 0
-description: "Chapter 16 index: Vercel deployments, environments and skew protection, self-hosting with standalone output and Docker, the cache across containers, multi-region and data locality, instrumentation.ts and OpenTelemetry, cost engineering, the deployed-twice milestone, and the Adapters API."
+description: "Chapter 18 index: Vercel deployments, environments and skew protection, self-hosting with standalone output and Docker, the cache across containers, multi-region and data locality, instrumentation.ts and OpenTelemetry, cost engineering, the deployed-twice milestone, and the Adapters API."
 ---
 
 <span className="db-tier t-master">Master</span>
@@ -65,8 +65,8 @@ The common stopping point is being able to write a Dockerfile. That is chunk 4 o
 - [Chapter 10 · Forms, auth and security hardening](../10-forms-authentication-and-security-hardening/01-explanation.md) — Server Actions, whose encryption key must be shared across instances
 - [Chapter 11 · Native Node.js streams in SSR](../11-performance-optimization-turbopack/11-native-nodejs-streams-in-ssr.md) — the 16.3 change that invalidates pre-16.3 capacity models
 - [Chapter 13 · Testing and developer experience](../13-testing-and-developer-experience/01-explanation.md) — why CI must target the commit preview URL and not the branch one
-- [Appendix C · the CLI surface](../19-appendices/03c-appendix-c-the-cli-surface.md) — `next start` flags, `next experimental-analyze`, `next upgrade`
-- [Appendix D · production readiness checklist](../19-appendices/04-appendix-d-production-readiness-checklist-security.md) — the security, accessibility and SEO gate this chapter deliberately does not duplicate
+- [Appendix C · the CLI surface](../20-appendices/03c-appendix-c-the-cli-surface.md) — `next start` flags, `next experimental-analyze`, `next upgrade`
+- [Appendix D · production readiness checklist](../20-appendices/04-appendix-d-production-readiness-checklist-security.md) — the security, accessibility and SEO gate this chapter deliberately does not duplicate
 
 ---
 

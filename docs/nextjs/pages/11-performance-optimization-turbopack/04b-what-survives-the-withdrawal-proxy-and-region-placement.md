@@ -7,7 +7,7 @@ description: "Proxy's runtime rules and why setting the option throws, the CDN-d
 
 <span className="db-tier t-know">Know</span>
 
-> Verified: 2026-09-04 against the Next.js documentation — [`proxy.js`](https://nextjs.org/docs/app/api-reference/file-conventions/proxy) (`version: 16.3.4`, `lastUpdated: 2026-08-25`, fetched for this page), the [`runtime` segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/runtime) and [Route Segment Config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config) (`lastUpdated: 2026-04-30`). `NEXT_RUNTIME` and `register()` quotes reused from the corpus's chapter 16 verification of [`instrumentation.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation) (`lastUpdated: 2026-06-09`) — not re-fetched here.
+> Verified: 2026-09-04 against the Next.js documentation — [`proxy.js`](https://nextjs.org/docs/app/api-reference/file-conventions/proxy) (`version: 16.3.4`, `lastUpdated: 2026-08-25`, fetched for this page), the [`runtime` segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config/runtime) and [Route Segment Config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config) (`lastUpdated: 2026-04-30`). `NEXT_RUNTIME` and `register()` quotes reused from the corpus's chapter 17 verification of [`instrumentation.js`](https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation) (`lastUpdated: 2026-06-09`) — not re-fetched here.
 > Target: **Next.js 16.3.4**. Documentation-verified; **no sandbox run**, **no timings**.
 
 **[04](04-nodejs-runtime-vs-edge-runtime-capabilities-cold-starts-choo.md) closed the per-route runtime choice. This page is about the three places where something Edge-shaped still governs how you write code, and the surprise is that none of them is an API allow-list. Proxy is the sharpest case: as of v16.0 it *defaults to the Node.js runtime*, so the old "you cannot use Node APIs in middleware" rule is gone — and yet the `runtime` option is more restricted there than anywhere else, because setting it does not warn, it throws. What actually constrains Proxy now is a deployment property the documentation states plainly: it may be running somewhere your application is not. Then there is `process.env.NEXT_RUNTIME`, still branching in the documentation's own instrumentation examples, and `preferredRegion`, deprecated alongside `runtime = 'edge'` with no framework-level successor at all.**
@@ -144,7 +144,7 @@ export async function register() {
 - The branch is a **guard**, not a fork. With `'edge'` deprecated for routes and Proxy defaulting to Node.js, the `'nodejs'` side is what you should expect to execute. It is still correct to write it, because you do not control every environment your instrumentation file is loaded in and the pattern costs nothing.
 - 🔴 **What I could not confirm:** the documentation does not enumerate the full set of values `NEXT_RUNTIME` can take on 16.3.4, nor state what it is set to during a build. Do not write an `else` branch that assumes it is `'edge'` whenever it is not `'nodejs'`; write the positive check and let everything else fall through.
 
-The full treatment of `register()`, `onRequestError` and OpenTelemetry belongs to [chapter 16 · 04](../16-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md); what instrumentation *costs* is [06 · `instrumentation.ts`](06-instrumentationts-for-opentelemetry-and-application-monitori.md) in this chapter.
+The full treatment of `register()`, `onRequestError` and OpenTelemetry belongs to [chapter 17 · 04](../17-deployment-scaling-and-observability/04-telemetry-sentry-logtail-datadog-integration-via-instrumenta.md); what instrumentation *costs* is [06 · `instrumentation.ts`](06-instrumentationts-for-opentelemetry-and-application-monitori.md) in this chapter.
 
 ## `preferredRegion`: deprecated, with nothing behind it
 
@@ -154,7 +154,7 @@ The second deprecated row in the options table is the one that hurts, because it
 
 **The two deprecations are one deprecation.** Region pinning was tied to the Edge value; the Edge value went, and the region export went with it. The documentation names **no framework-level successor** — region placement is now entirely a platform concern, configured wherever you deploy. Do not go looking for a new export, and do not invent one in a design document.
 
-That leaves the interesting half of the problem untouched: *should* you place compute in multiple regions at all? Usually not, and the arithmetic for why is [chapter 16 · 03](../16-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
+That leaves the interesting half of the problem untouched: *should* you place compute in multiple regions at all? Usually not, and the arithmetic for why is [chapter 17 · 03](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
 
 ## The audit, in the order that avoids self-inflicted failures
 
@@ -196,7 +196,7 @@ export async function register() {
 }
 ```
 
-**Symptom: you removed `preferredRegion` and now cannot find where to set the region.** Cause: there is no replacement export; the documentation names none. Fix: configure regions on the deployment platform, and re-check whether you want multiple regions at all before you do — see [chapter 16 · 03](../16-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
+**Symptom: you removed `preferredRegion` and now cannot find where to set the region.** Cause: there is no replacement export; the documentation names none. Fix: configure regions on the deployment platform, and re-check whether you want multiple regions at all before you do — see [chapter 17 · 03](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
 
 **Symptom: Proxy is not running for a route you thought it covered, so an auth check silently disappears.** Cause: `matcher` scoping, and specifically Server Functions — *"Server Functions are not separate routes in this chain. They are handled as POST requests to the route where they are used, so a Proxy matcher that excludes a path will also skip Server Function calls on that path."* Fix: the documentation's own instruction — *"Always verify authentication and authorization inside each Server Function rather than relying on Proxy alone."* Chapter 10 owns this: [04 · Proxy as a coarse filter](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md).
 

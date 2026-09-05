@@ -69,7 +69,7 @@ A full production build on a large app is minutes. `next build --debug-build-pat
 next build --debug-build-paths="app/(app)/board/page.tsx"
 ```
 
-That converts "verify after the migration" into "verify after each route", which is the whole difference between a reviewable session and an unreviewable one. The flag is enumerated in [Appendix C part 3](../19-appendices/03c-appendix-c-the-cli-surface.md), and [chapter 4](../04-data-fetching-in-the-app-router/03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md) uses it as the first step of diagnosing a route whose caching behaviour changed — which is exactly the diagnosis you need mid-migration.
+That converts "verify after the migration" into "verify after each route", which is the whole difference between a reviewable session and an unreviewable one. The flag is enumerated in [Appendix C part 3](../20-appendices/03c-appendix-c-the-cli-surface.md), and [chapter 4](../04-data-fetching-in-the-app-router/03c-diagnosing-stale-and-unexpectedly-dynamic-routes.md) uses it as the first step of diagnosing a route whose caching behaviour changed — which is exactly the diagnosis you need mid-migration.
 
 ⚠️ **One documented limit, worth knowing before you build a workflow on it: `--debug-build-paths` does not narrow type checking.** Since `next build` shells out to the project-local `tsc`, the type check covers the whole project selected by your `tsconfig` regardless of the flag, and combining the two produces a warning — see [chapter 13](../13-testing-and-developer-experience/12-typescript-7-and-build-type-checking.md). The route build is scoped; the type check is not.
 

@@ -297,4 +297,4 @@ Because a Server Component runs only on the server, so it can hold credentials, 
 
 ---
 
-← [Chapter 19 overview](01-explanation.md) · Next → [Glossary, part 2 — Turbopack, MCP, Instant Navigations](01b-appendix-a-glossary-turbopack-mcp-instant.md)
+← [Chapter 20 overview](01-explanation.md) · Next → [Glossary, part 2 — Turbopack, MCP, Instant Navigations](01b-appendix-a-glossary-turbopack-mcp-instant.md)

@@ -144,7 +144,7 @@ The checklist's supplementary tools are still fine for the narrower question of 
 | 11 | Bundle understood, not just measured | `next experimental-analyze` |
 | 12 | No CI gate silently passing | 🔴 anything parsing `size`/`First Load JS` is now vacuous |
 | 13 | Browser floor checked against analytics | Chrome/Edge/Firefox 111+, Safari 16.4+ |
-| 14 | `keepAliveTimeout` above the proxy's, if self-hosting | [chapter 16](../16-deployment-scaling-and-observability/01-explanation.md) |
+| 14 | `keepAliveTimeout` above the proxy's, if self-hosting | [chapter 17](../17-deployment-scaling-and-observability/01-explanation.md) |
 
 ## Gotchas
 
@@ -198,4 +198,4 @@ Automatable: the type check including routes, lint once it is actually wired, a 
 
 ---
 
-← [Appendix D part 2 · security](04b-appendix-d-security.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix E · The version watchlist](05-appendix-e-version-watchlist.md)
+← [Appendix D part 2 · security](04b-appendix-d-security.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix E · The version watchlist](05-appendix-e-version-watchlist.md)

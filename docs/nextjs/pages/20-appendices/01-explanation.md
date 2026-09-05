@@ -1,5 +1,5 @@
 ---
-title: "19 · Appendices — the reference half of the book: a glossary that disambiguates rather than defines, an upgrade blueprint, the agent and CLI tooling, a corrected production checklist, and the watchlist that resolved"
+title: "20 · Appendices — the reference half of the book: a glossary that disambiguates rather than defines, an upgrade blueprint, the agent and CLI tooling, a corrected production checklist, and the watchlist that resolved"
 sidebar_label: "Overview"
 sidebar_position: 0
 ---
@@ -58,7 +58,7 @@ You are done with this chapter when you can do four things without opening a bro
 - [05 · Caching, PPR and Cache Components](../05-caching-ppr-and-cache-components/01-explanation.md) — the model Appendix A's vocabulary describes
 - [12 · SEO, metadata and accessibility](../12-seo-metadata-and-accessibility/01-explanation.md) — the depth behind Appendix D part 3
 - [14 · Agent-driven development](../14-agent-driven-development/01-explanation.md) — the chapter Appendix C is the reference half of
-- [16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md) — where `keepAliveTimeout`, version skew and `deploymentId` are worked through
+- [16 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — where `keepAliveTimeout`, version skew and `deploymentId` are worked through
 
 ---
 

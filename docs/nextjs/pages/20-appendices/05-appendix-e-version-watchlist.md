@@ -54,7 +54,7 @@ Two out of a large cohort is a good hit rate, and it is the right prior to carry
 
 | Item | State |
 |---|---|
-| `preferredRegion` | **deprecated** — and [chapter 16](../16-deployment-scaling-and-observability/01-explanation.md) records that the documentation names **no framework-level successor**; placement became platform configuration |
+| `preferredRegion` | **deprecated** — and [chapter 17](../17-deployment-scaling-and-observability/01-explanation.md) records that the documentation names **no framework-level successor**; placement became platform configuration |
 | `next lint` | **removed** in 16, and `next build` no longer lints |
 | `experimental.ppr` / `experimental_ppr` | **removed** — superseded by `cacheComponents` |
 | `experimental.dynamicIO` / `experimental.useCache` | **removed** — superseded by `cacheComponents` |
@@ -89,7 +89,7 @@ This page's contents expire. The method does not.
 
 **★ Symptom: someone removes `middleware.ts` because it is deprecated, and loses edge-runtime behaviour.** Cause: reading a deprecation as an instruction. Fix: the docs say to keep `middleware` if you need the edge runtime, because `proxy` runs on Node.js and cannot be configured otherwise. Deprecated does not always mean "migrate now" — read for the stated exception.
 
-**★ Symptom: `preferredRegion` is removed from the codebase and nothing replaces it.** Cause: assuming a deprecation implies a successor. Fix: there is no framework-level successor — the documentation names none. Region placement moved to platform configuration, and [chapter 16](../16-deployment-scaling-and-observability/01-explanation.md) records that gap explicitly rather than inventing a replacement.
+**★ Symptom: `preferredRegion` is removed from the codebase and nothing replaces it.** Cause: assuming a deprecation implies a successor. Fix: there is no framework-level successor — the documentation names none. Region placement moved to platform configuration, and [chapter 17](../17-deployment-scaling-and-observability/01-explanation.md) records that gap explicitly rather than inventing a replacement.
 
 **★ Symptom: `cacheComponents` adoption keeps being deferred as "an experiment we might not need."** Cause: reading a future default as an optional feature. Fix: Vercel states these behaviours will flip to default in a future major, so the work is scheduled either way. Doing it now costs one focused migration; doing it at the major costs that migration plus everything else in the release, simultaneously.
 
@@ -121,4 +121,4 @@ A plausible summary was recorded without being checked against the source that o
 
 ---
 
-← [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md) · [Chapter 19 overview](01-explanation.md)
+← [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md) · [Chapter 20 overview](01-explanation.md)

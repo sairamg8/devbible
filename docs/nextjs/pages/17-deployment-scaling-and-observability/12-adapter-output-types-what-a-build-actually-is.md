@@ -257,4 +257,4 @@ Support it if it must, but not build for it. The output-types reference annotate
 
 ---
 
-← [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md) · [Chapter 16 overview](01-explanation.md) · Next → [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md)
+← [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md) · [Chapter 17 overview](01-explanation.md) · Next → [Adapter routing and @next/routing](13-adapter-routing-seven-phases-and-the-next-routing-package.md)

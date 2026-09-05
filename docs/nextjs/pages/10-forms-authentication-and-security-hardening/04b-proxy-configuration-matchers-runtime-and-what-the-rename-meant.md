@@ -109,7 +109,7 @@ The version history dates it precisely:
 | `v15.5.0` | *"Middleware can now use the Node.js runtime (stable)"* |
 | `v15.2.0` | *"Middleware can now use the Node.js runtime (experimental)"* |
 
-The `runtime = 'edge'` **route segment value** is separately deprecated in 16.x — [ch05 · 01b](../05-caching-ppr-and-cache-components/01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md) quotes the Cache Components requirement (*"Migrate any routes that set the deprecated `runtime = 'edge'` export"*) and [ch16 · 03](../16-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md) quotes the region reference saying the same thing from the other side. So neither half of the old story survives: proxy is Node, and edge *rendering* is on the way out.
+The `runtime = 'edge'` **route segment value** is separately deprecated in 16.x — [ch05 · 01b](../05-caching-ppr-and-cache-components/01b-what-the-model-costs-persistence-storage-and-the-runtime-floor.md) quotes the Cache Components requirement (*"Migrate any routes that set the deprecated `runtime = 'edge'` export"*) and [ch17 · 03](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md) quotes the region reference saying the same thing from the other side. So neither half of the old story survives: proxy is Node, and edge *rendering* is on the way out.
 
 ⚠️ **This changes the reason, not the recommendation.** Do not now conclude "proxy runs on Node, so I can do a database session lookup there." You still should not — because it runs on every prefetched route, and because it is documented as something that may be deployed to a CDN away from your database. The auth guide's practical version:
 

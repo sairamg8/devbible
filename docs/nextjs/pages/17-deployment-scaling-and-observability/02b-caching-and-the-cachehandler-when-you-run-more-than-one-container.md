@@ -292,4 +292,4 @@ First, count the replicas — with more than one and no shared handler, the beha
 
 ---
 
-← [Self-hosting: standalone and Docker](02-self-hosting-docker-containerization.md) · [Chapter 16 overview](01-explanation.md) · Next → [Multi-region strategies and data locality](03-multi-region-strategies-and-data-locality-patterns.md)
+← [Self-hosting: standalone and Docker](02-self-hosting-docker-containerization.md) · [Chapter 17 overview](01-explanation.md) · Next → [Multi-region strategies and data locality](03-multi-region-strategies-and-data-locality-patterns.md)

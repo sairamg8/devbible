@@ -8,7 +8,7 @@ description: "The cases where output: 'export' is genuinely correct — docs sit
 <span className="db-tier t-understand">Understand</span>
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Deploying to Platforms](https://nextjs.org/docs/app/guides/deploying-to-platforms) (docs `lastUpdated` 2026-03-30), [Rendering Philosophy](https://nextjs.org/docs/app/guides/rendering-philosophy) (`lastUpdated` 2026-03-30), [Deploying](https://nextjs.org/docs/app/getting-started/deploying) (`lastUpdated` 2026-08-25) and [How to create a static export](https://nextjs.org/docs/app/guides/static-exports) (`lastUpdated` 2026-08-25).
-> Target: **Next.js 16.3.4**, App Router. Documentation-verified (T2); `next` is **not installed in this checkout**, so **no package probe and no sandbox run**. 🔴 **No prices, no benchmark figures and no invoice comparisons appear on this page** — the cost sections name what drives a bill, and [ch16 · cost engineering](../16-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) owns the mechanics.
+> Target: **Next.js 16.3.4**, App Router. Documentation-verified (T2); `next` is **not installed in this checkout**, so **no package probe and no sandbox run**. 🔴 **No prices, no benchmark figures and no invoice comparisons appear on this page** — the cost sections name what drives a bill, and [ch17 · cost engineering](../17-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) owns the mechanics.
 
 **[04](04-full-static-export-vs-serverful-edge-distribution.md) and [04b](04b-what-survives-and-the-force-static-trap.md) made the trade concrete. Now the honest half: static export is sometimes exactly right, and the cases share one property — the artifact has to survive outside your infrastructure. A docs site that ships in a release tarball, an admin UI baked into a device image, a build handed to a regulated customer who will host it themselves: none of these can depend on a process you operate. Everywhere else, read the documentation's own minimum before assuming a server is expensive: *"To run Next.js, your platform needs a Node.js server. That's it."* One `next start` process is documented to handle every feature correctly. Everything a CDN or edge network adds on top of that is, in the docs' own vocabulary, performance fidelity — not correctness.**
 
@@ -76,7 +76,7 @@ And the deployment support table from [Deploying](https://nextjs.org/docs/app/ge
 
 That table is the load-bearing one for this whole chunk. A container is not a compromise
 position between export and a managed platform — it is a full-fidelity target. See
-[ch16 · self-hosting with Docker](../16-deployment-scaling-and-observability/02-self-hosting-docker-containerization.md).
+[ch17 · self-hosting with Docker](../17-deployment-scaling-and-observability/02-self-hosting-docker-containerization.md).
 
 ### Functional fidelity vs performance fidelity — the distinction to argue with
 
@@ -115,7 +115,7 @@ Read the second one twice before you scale a self-hosted deployment from one ins
 It is the single most common surprise in self-hosted ISR: a `revalidateTag` served by instance
 A leaves instances B and C stale, and the user's next request lands on B. See
 [ch5 · revalidation and lifetimes](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/05-revalidation-and-lifetimes.md)
-and [ch16 · multi-region and data locality](../16-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
+and [ch17 · multi-region and data locality](../17-deployment-scaling-and-observability/03-multi-region-strategies-and-data-locality-patterns.md).
 
 The cache configuration splits in two, and the split matters when you wire a Redis behind it:
 `cacheHandler` (singular) *"covers server cache paths like ISR, route handlers, patched
@@ -145,7 +145,7 @@ CDN nodes worldwide, dynamic work executed at an origin (or a regional function)
 static shell of a PPR page potentially served from the node while the dynamic holes stream from
 origin. The last of those is the part that is *"still emerging and may require bespoke platform
 work"* per the docs. See [ch5 · composing static, ISR and dynamic on one page](../05-caching-ppr-and-cache-components/10-the-three-cache-directives/01b-composing-the-three.md)
-and [ch16 · Vercel and the edge network](../16-deployment-scaling-and-observability/01-vercel-automated-deployments-edge-network-preview-branches.md).
+and [ch17 · Vercel and the edge network](../17-deployment-scaling-and-observability/01-vercel-automated-deployments-edge-network-preview-branches.md).
 
 ### Why the model demands this in the first place
 
@@ -192,12 +192,12 @@ miss. That is why "static export to save money" is often the wrong optimisation:
 are cacheable, ISR already gets you the static bill, *and* keeps the thirteen features. If they
 are not cacheable, an export could not have served them anyway.
 
-[ch16 · cost engineering](../16-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)
+[ch17 · cost engineering](../17-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md)
 owns the mechanics of all of the above; this page only draws the rendering consequence.
 
 ## Gotchas
 
-**★ Symptom: a team chooses static export to reduce hosting cost, and the bill barely moves.** Cause: egress bandwidth was the dominant line, and it is identical under both models. Compute was small because the pages were already cacheable. Fix: measure which meter dominates before choosing — if the answer is bandwidth, the rendering strategy is not the lever, and [ch16 · cost engineering](../16-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) has the ones that are.
+**★ Symptom: a team chooses static export to reduce hosting cost, and the bill barely moves.** Cause: egress bandwidth was the dominant line, and it is identical under both models. Compute was small because the pages were already cacheable. Fix: measure which meter dominates before choosing — if the answer is bandwidth, the rendering strategy is not the lever, and [ch17 · cost engineering](../17-deployment-scaling-and-observability/05-cost-engineering-function-compute-bandwidth-and-edge-cache-h.md) has the ones that are.
 
 **★ Symptom: "we need the edge" turns into a six-week platform project for a product with users in one country.** Cause: conflating functional fidelity with performance fidelity. Every feature works correctly from a single origin server — the docs say so about the Edge Stitching column explicitly. Fix: name the latency requirement first, in milliseconds and for a named user population, and only then decide whether edge distribution is what closes it. Often a CDN in front of an origin closes it without any Next.js-specific integration.
 
@@ -205,7 +205,7 @@ owns the mechanics of all of the above; this page only draws the rendering conse
 
 **★ Symptom: a build succeeds on the platform but streams nothing — the whole page arrives at once and PPR appears to do nothing.** Cause: the platform buffers responses. The docs are explicit that streaming means chunked transfer encoding or HTTP/2 streaming *and* not buffering; without it *"responses are buffered and sent as a whole, which still works but loses the streaming performance benefit."* Fix: check for a buffering reverse proxy in front of the app — this is a platform property, not an application bug, and no amount of Suspense boundary tuning will fix it.
 
-**★ Symptom: image optimization fails only in the container, and only in production.** Cause: `sharp` is documented as the one additional dependency for Image Optimization, and it is a native module — output file tracing does not always include native binaries. Fix: add it explicitly, as the `output` reference itself suggests, with an `outputFileTracingIncludes` entry such as `'/*': ['node_modules/sharp/**/*']`. See [ch16 · self-hosting with Docker](../16-deployment-scaling-and-observability/02-self-hosting-docker-containerization.md).
+**★ Symptom: image optimization fails only in the container, and only in production.** Cause: `sharp` is documented as the one additional dependency for Image Optimization, and it is a native module — output file tracing does not always include native binaries. Fix: add it explicitly, as the `output` reference itself suggests, with an `outputFileTracingIncludes` entry such as `'/*': ['node_modules/sharp/**/*']`. See [ch17 · self-hosting with Docker](../17-deployment-scaling-and-observability/02-self-hosting-docker-containerization.md).
 
 **★ Symptom: the docs site's CI job doubles in duration after a content migration, and nobody changed the pipeline.** Cause: export makes build minutes proportional to content count. A CMS import of a few thousand legacy pages is a build-time change disguised as a content change. Fix: this is the review trigger for the whole decision — when content volume becomes a build-time variable you do not control, the case for export in item 2 above has expired.
 

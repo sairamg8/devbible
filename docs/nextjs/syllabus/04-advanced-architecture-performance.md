@@ -19,7 +19,7 @@ sidebar_position: 4
 - Bundle analysis, dynamic imports, lazy loading.
 - Node.js runtime vs. Edge runtime: capabilities, cold starts, choosing per route.
   - ⚠️ **`preferredRegion` is now marked deprecated** in the route segment config — audit
-    this bullet and chapter 16's multi-region material against current guidance.
+    this bullet and chapter 17's multi-region material against current guidance.
 - Core Web Vitals tuning: LCP, INP, CLS auditing workflows.
 - `instrumentation.ts` for OpenTelemetry and application monitoring.
   - ➕ **Missing, all free on upgrade:** App Router SSR moved from web streams to **native

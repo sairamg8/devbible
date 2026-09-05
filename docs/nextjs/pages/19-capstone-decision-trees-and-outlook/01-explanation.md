@@ -2,7 +2,7 @@
 sidebar_position: 0
 title: "Overview"
 sidebar_label: "Overview"
-description: "Chapter 18 overview"
+description: "Chapter 20 overview"
 ---
 
 # ▲ Capstone, Decision Trees, and Outlook
@@ -20,9 +20,9 @@ description: "Chapter 18 overview"
 
 ## 1. Under-The-Hood Mechanics
 
-Next.js supports `app/` and `pages/` **coexisting in the same project** specifically to make this an incremental migration rather than a big-bang rewrite (see [file conventions](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) and the [migration roadmap](../17-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md) for the coexistence caveats this recipe builds on). This means you can migrate one route, ship it, verify it, and move to the next — the rest of the app keeps working unmodified on `pages/` throughout.
+Next.js supports `app/` and `pages/` **coexisting in the same project** specifically to make this an incremental migration rather than a big-bang rewrite (see [file conventions](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) and the [migration roadmap](../18-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md) for the coexistence caveats this recipe builds on). This means you can migrate one route, ship it, verify it, and move to the next — the rest of the app keeps working unmodified on `pages/` throughout.
 
-🔴 **Do not rely on a precedence rule for a path defined in *both* directories.** The familiar sentence "the App Router takes priority over the Pages Router" is from the Next.js 13 documentation and is **not present in the 16.3.4 docs** — see [ch17 · the precedence rule](../17-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md), which checked at source and supplies a CI guard. This recipe never needs it: the commit that adds an `app/` route **deletes** the `pages/` route it replaces, so no path is ever defined twice. The documented caveat that does affect this recipe is different and real — **navigating between routes served by the two routers is a hard navigation, and `next/link` will not prefetch across them.**
+🔴 **Do not rely on a precedence rule for a path defined in *both* directories.** The familiar sentence "the App Router takes priority over the Pages Router" is from the Next.js 13 documentation and is **not present in the 16.3.4 docs** — see [ch18 · the precedence rule](../18-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md), which checked at source and supplies a CI guard. This recipe never needs it: the commit that adds an `app/` route **deletes** the `pages/` route it replaces, so no path is ever defined twice. The documented caveat that does affect this recipe is different and real — **navigating between routes served by the two routers is a hard navigation, and `next/link` will not prefetch across them.**
 
 The migration is really four separate, mostly-independent translations happening per route:
 

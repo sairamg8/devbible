@@ -189,4 +189,4 @@ Whose data it is. `revalidateTag`, which now requires a `cacheLife` profile as i
 
 ---
 
-← [Appendix C part 3 · the CLI surface](03c-appendix-c-the-cli-surface.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix D part 2 · security](04b-appendix-d-security.md)
+← [Appendix C part 3 · the CLI surface](03c-appendix-c-the-cli-surface.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix D part 2 · security](04b-appendix-d-security.md)

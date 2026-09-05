@@ -209,4 +209,4 @@ An observability or build-audit adapter implements `onBuildComplete` alone: it r
 
 ---
 
-← [**Project Milestone:** SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md) · [Chapter 16 overview](01-explanation.md) · Next → [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md)
+← [**Project Milestone:** SprintDesk deployed twice](06-project-milestone-sprintdesk-deployed-twice.md) · [Chapter 17 overview](01-explanation.md) · Next → [The two adapter hooks in detail](11-modifyconfig-and-onbuildcomplete-the-two-hooks-in-detail.md)

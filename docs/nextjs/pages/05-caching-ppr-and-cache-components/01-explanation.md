@@ -53,7 +53,7 @@ You are done with this chapter when you can take any route in an application, sa
 - [ch6 · SSG, ISR and SSR strategy](../06-ssg-isr-and-ssr-strategy/01-explanation.md) — the tuning question: what number to choose, staleness budgets, the stampede, and the cache layers
 - [ch8 · State management in an RSC world](../08-state-management-in-an-rsc-world/10b-refresh-against-the-alternatives.md) — the five-way decision between refresh, updateTag, revalidateTag, revalidatePath and router.refresh
 - [ch15 · Databases and full-stack patterns](../15-databases-apis-and-full-stack-patterns/10d-tenancy-and-caching.md) — tenancy in the cache key and tenant-scoped invalidation
-- [ch16 · Deployment, scaling and observability](../16-deployment-scaling-and-observability/01-explanation.md) — cache handlers, the Adapters API and self-hosting
+- [ch17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — cache handlers, the Adapters API and self-hosting
 
 ---
 

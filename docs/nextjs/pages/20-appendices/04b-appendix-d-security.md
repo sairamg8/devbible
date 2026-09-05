@@ -135,7 +135,7 @@ export default async function Page() {
 
 🔴 **The failure mode here is silent and environment-specific.** On a developer's machine, build-time and runtime values are usually identical, so a naive migration works locally and freezes a staging value into a production build.
 
-**Docker build arguments are the same trap wearing different clothes.** Anything referenced during `next build` is in the image; anything read at runtime is not. [Chapter 16](../16-deployment-scaling-and-observability/01-explanation.md) covers the containerization side.
+**Docker build arguments are the same trap wearing different clothes.** Anything referenced during `next build` is in the image; anything read at runtime is not. [Chapter 17](../17-deployment-scaling-and-observability/01-explanation.md) covers the containerization side.
 
 ## 4 · Content Security Policy
 
@@ -212,4 +212,4 @@ Yes, and on the assumption that no form was involved. The action accepts whateve
 
 ---
 
-← [Appendix D part 1 · what the official checklist gets wrong](04-appendix-d-production-readiness-checklist-security.md) · [Chapter 19 overview](01-explanation.md) · Next → [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md)
+← [Appendix D part 1 · what the official checklist gets wrong](04-appendix-d-production-readiness-checklist-security.md) · [Chapter 20 overview](01-explanation.md) · Next → [Appendix D part 3 · metadata, a11y and the measurements](04c-appendix-d-metadata-a11y-and-the-measurements.md)

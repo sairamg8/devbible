@@ -101,8 +101,8 @@ The common stopping point is a page that renders correctly in a browser. Almost 
 - [Chapter 9 · `next/image`](../09-styling-and-ui/04d-remote-patterns-is-a-security-control.md) — the allow-list that also governs what an OG image may reference
 - [Chapter 13 · Testing and developer experience](../13-testing-and-developer-experience/13-linting-after-next-lint.md) — restoring the linter that used to run your a11y rules
 - [Chapter 14 · Agent-driven development](../14-agent-driven-development/06b-what-an-agent-cannot-decide-and-what-context-files-fix.md) — accessibility as the limit case for agent-authored markup
-- [Chapter 16 · Deployment](../16-deployment-scaling-and-observability/01c-the-edge-network-and-skew-protection.md) — why `metadataBase` is an environment problem, not a constant
-- [Appendix D · metadata, a11y and the measurements](../19-appendices/04c-appendix-d-metadata-a11y-and-the-measurements.md) — the readiness gate this chapter feeds
+- [Chapter 17 · Deployment](../17-deployment-scaling-and-observability/01c-the-edge-network-and-skew-protection.md) — why `metadataBase` is an environment problem, not a constant
+- [Appendix D · metadata, a11y and the measurements](../20-appendices/04c-appendix-d-metadata-a11y-and-the-measurements.md) — the readiness gate this chapter feeds
 
 ---
 

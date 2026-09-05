@@ -54,9 +54,9 @@ You are done with this chapter when you can decide, without opening documentatio
 ## Where this connects
 
 - [ch2 · Routing and navigation](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) — the routing model the migration chapter translates *into*, and the `proxy.ts` layer zones sit behind.
-- [ch10 · Authentication and security hardening](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md) — owns the CVE record and the defence-in-depth argument; chapter 17 draws only the dependency-graph conclusion.
-- [ch16 · The Adapters API](../16-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) — the one typed extension point, covered in depth there rather than here.
-- [ch18 · Capstone and decision trees](../18-capstone-decision-trees-and-outlook/01-explanation.md) — where the migration recipe is applied end to end.
+- [ch10 · Authentication and security hardening](../10-forms-authentication-and-security-hardening/04-defense-in-depth-proxyts-as-a-coarse-filter.md) — owns the CVE record and the defence-in-depth argument; chapter 18 draws only the dependency-graph conclusion.
+- [ch17 · The Adapters API](../17-deployment-scaling-and-observability/10-the-adapters-api-why-it-exists-and-how-a-platform-wires-one-in.md) — the one typed extension point, covered in depth there rather than here.
+- [ch19 · Capstone and decision trees](../19-capstone-decision-trees-and-outlook/01-explanation.md) — where the migration recipe is applied end to end.
 
 ---
 

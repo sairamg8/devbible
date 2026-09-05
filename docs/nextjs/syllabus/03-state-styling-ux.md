@@ -46,7 +46,7 @@ sidebar_position: 3
     **CVE-2026-75604 / GHSA-p293-qw3h-jr36** — unauthenticated RCE on **Windows-hosted**
     servers running Pages Router *and* App Router **without** Cache Components. Linux and
     macOS unaffected; **no known workaround**. A concrete argument for finishing the
-    Pages→App migration in chapter 17.
+    Pages→App migration in chapter 18.
   - ➕ **Also missing:** Content Security Policy, the Data Security guide, and the
     *Authentication with Cache Components* guide.
 - **Project Milestone:** SprintDesk auth (Auth.js), team-scoped authorization in the data layer, hardened Server Actions with Zod at every boundary.

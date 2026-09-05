@@ -7,7 +7,7 @@ description: "**SprintDesk retrospective:** the finished multi-tenant SaaS revie
 
 # ▲ **SprintDesk retrospective:** the finished multi-tenant SaaS reviewed end-to-end against the Prod…
 
-> **Syllabus chapter:** 18. Capstone, Decision Trees, and Outlook  
+> **Syllabus chapter:** 19. Capstone, Decision Trees, and Outlook  
 > **Exact concept:** **SprintDesk retrospective:** the finished multi-tenant SaaS reviewed end-to-end against the Production Readiness Checklist.  
 > **Source:** authored for exact syllabus concept name
 

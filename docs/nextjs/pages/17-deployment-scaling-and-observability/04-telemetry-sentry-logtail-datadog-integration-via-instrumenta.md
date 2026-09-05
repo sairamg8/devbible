@@ -232,4 +232,4 @@ Ordering. It executes after the document loads but *before* React hydration begi
 
 ---
 
-← [Multi-region and data locality](03-multi-region-strategies-and-data-locality-patterns.md) · [Chapter 16 overview](01-explanation.md) · Next → [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md)
+← [Multi-region and data locality](03-multi-region-strategies-and-data-locality-patterns.md) · [Chapter 17 overview](01-explanation.md) · Next → [OpenTelemetry and the span catalogue](04b-opentelemetry-the-span-catalogue-and-trace-volume.md)
