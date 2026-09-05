@@ -28,7 +28,34 @@ const config = {
   tagline: 'Frontend to fullstack — MERN and PERN, explained properly',
   favicon: 'img/favicon.ico',
 
-  future: {v4: true},
+  // ⚡ `@docusaurus/faster` has been a dependency since the site was set up but
+  // was never switched on, so 6,797 markdown files went through webpack + Babel.
+  // Turning it on swaps in Rspack, SWC and Lightning CSS — the Rust toolchain —
+  // which matters most on the SERVER compile, the stage that sits near 16% for
+  // an age on a corpus this size.
+  //
+  // ⚠️ The key is `faster`. Docusaurus 3.10.2 RENAMED it from
+  // `experimental_faster` and throws at config load on the old name — which
+  // looks exactly like a crashed build, because nothing is written before it.
+  //
+  // `faster: true` turns on all nine: swcJsLoader, swcJsMinimizer,
+  // swcHtmlMinimizer, lightningCssMinimizer, mdxCrossCompilerCache,
+  // rspackBundler, rspackPersistentCache, ssgWorkerThreads, gitEagerVcs.
+  //
+  // 🔴 ssgWorkerThreads is the reason the tuning in package.json finally does
+  // something. `ssgExecutor.js:139` only spawns SSG workers when that flag is on,
+  // so DOCUSAURUS_SSG_WORKER_THREAD_COUNT and
+  // DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY — set in `yarn build` and in
+  // scripts/ensure-search-index.mjs, with a comment claiming they keep the two
+  // builds in step — were read by nothing at all until now.
+  //
+  // It requires `v4.removeLegacyPostBuildHeadAttribute`, which `v4: true` already
+  // turns on (configValidation.js:81); the build throws by name if that ever
+  // stops being true.
+  //
+  // If a build breaks in a way that smells like the bundler rather than the
+  // content, set this to false to get webpack back and confirm before digging.
+  future: {v4: true, faster: true},
 
   // Published to GitHub Pages as a project site, so the repo name is part of
   // the path: https://sairamg8.github.io/devbible/
