@@ -9,6 +9,7 @@ description: "The order of operations for a real migration — every route segme
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Migrating to Cache Components](https://nextjs.org/docs/app/guides/migrating-to-cache-components) (docs `lastUpdated` 2026-08-25), [`cacheComponents`](https://nextjs.org/docs/app/api-reference/config/next-config-js/cacheComponents) (`lastUpdated` 2026-06-22) and [Ensuring instant navigations](https://nextjs.org/docs/app/guides/instant-navigation) (`lastUpdated` 2026-08-25).
 > Target: **Next.js 16.3.4**, App Router, Node.js runtime. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Turning the flag on in a greenfield app is a one-line change. Turning it on in an application that already serves traffic is a scheduling problem, because the flag is global, immediate, and converts three widely-used route segment exports into build errors the moment it flips. The migration guide's actual advice is not "fix everything" — it is "get the app building again first, with validation deferred, then convert one route at a time." That order matters, and there is exactly one class of problem the deferral does not cover. This page is the sequence, the complete removal table, and the two things `instant = false` will not save you from.**
 
@@ -56,7 +57,11 @@ Three of these are worth more than a table row.
 
 ### `dynamic = 'force-static'` is the one that can silently change behaviour
 
-The other removals are mechanical. This one is not, because `force-static` did two things and only one of them has a replacement. It made the route prerender, and it **blanked** `cookies()` and `headers()` — a documented behaviour the corpus flags at [ch4 · 03b](../04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md), where an auth check reading a blanked cookie silently takes the logged-out branch. The migration guidance says so directly:
+The other removals are mechanical. This one is not, because `force-static` did two things and only one of them has a replacement. It made the route prerender, and it **blanked** the runtime APIs. That is still documented, in the previous-model guide, in the `dynamic` option's own description:
+
+> *"**`'force-static'`**: Force prerendering and cache the data of a layout or page by forcing `cookies`, `headers()` and `useSearchParams()` to return empty values."*
+
+— [Caching and Revalidating (Previous Model)](https://nextjs.org/docs/app/guides/caching-without-cache-components#dynamic), `lastUpdated` 2026-08-25. The corpus flags the consequence at [ch4 · 03b](../04-data-fetching-in-the-app-router/03b-the-segment-config-surface.md): an auth check reading a blanked cookie silently takes the logged-out branch. The migration guidance addresses it directly:
 
 > *"For runtime data access (`cookies()`, `headers()`, etc.), errors will direct you to wrap it with `<Suspense>`. Since you started by using `force-static`, you must remove the runtime data access to prevent any request time work."*
 
@@ -158,7 +163,7 @@ The documented pattern is to return a slice rather than everything — one param
 
 > *"Paths you don't return are still served. Next.js prerenders a static shell for the unknown params and streams the rest at request time."*
 
-⚠️ There is a documented placeholder escape hatch (`[{ slug: '__placeholder__' }]`), and the docs themselves warn it *"prevents build time validation from working effectively and may cause runtime errors."* Treat it as a last resort for a route whose params genuinely do not exist at build time, not as the default answer to the error. The scale version of this decision is [ch6 · 02d](../06-ssg-isr-and-ssr-strategy/02d-when-the-path-set-changes-and-what-cache-components-changes.md).
+⚠️ There is a documented placeholder escape hatch — the [`generateStaticParams` reference](https://nextjs.org/docs/app/api-reference/functions/generate-static-params#with-cache-components) (`lastUpdated` 2026-08-25) says *"If you don't know the actual param values at build time, you can return a placeholder param (e.g., `[{ slug: '__placeholder__' }]`) for validation, then handle it in your page with `notFound()`. However, this prevents build time validation from working effectively and may cause runtime errors."* Treat it as a last resort for a route whose params genuinely do not exist at build time, not as the default answer to the error. The scale version of this decision is [ch6 · 02d](../06-ssg-isr-and-ssr-strategy/02d-when-the-path-set-changes-and-what-cache-components-changes.md).
 
 ## `instant = false`, and the two things it will not do
 

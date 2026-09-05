@@ -9,6 +9,7 @@ description: "The depth rule that decides how much of a page prerenders, the non
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [Caching](https://nextjs.org/docs/app/getting-started/caching) (docs `lastUpdated` 2026-08-25) and [ISR with Cache Components](https://nextjs.org/docs/app/guides/incremental-static-regeneration-cache-components) (`lastUpdated` 2026-08-03).
 > Target: **Next.js 16.3.4**, App Router, Cache Components. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe. Every quote on this page re-checked verbatim, including the crawler paragraph (Caching, `lastUpdated: 2026-08-25`) and the 16.3 App-Shell version gate (ISR with Cache Components, `lastUpdated: 2026-08-03`). One addition: [`partialPrefetching`](https://nextjs.org/docs/app/api-reference/config/next-config-js/partialPrefetching) (`lastUpdated: 2026-08-25`) — its default is `false`, which the prefetching section did not say.
 
 **[03](03-partial-pre-rendering-ppr-static-shell-dynamic-holes-for-min.md) establishes that a route produces a shell with holes in it. This page is about the two questions that follow, and both have answers that are more mechanical than they first appear. The first is *how much* ends up in the shell, which turns out to be almost entirely a question of how deep in the tree your `await` calls sit — one `await params` at the top of a layout can cost you the whole page, and moving it three components down can recover it. The second is *whose* shell, because there are two different ones: a static shell tied to a known URL, and an App Shell that is deliberately URL-independent. And there is a third audience nobody plans for, which gets neither: a crawler is detected by user agent and served a full dynamic render, which means a page that works perfectly for every human can fail for Googlebot.**
 
@@ -150,11 +151,20 @@ The App Shell is not only a fallback for unlisted URLs; under Partial Prefetchin
 
 > *"With Partial Prefetching enabled, the router prefetches each route's App Shell by default. The App Shell includes static content and session data derived from `cookies()` and `headers()`. To also prefetch cached content that depends on a link's **URL data**, such as `searchParams` or dynamic `params`, set `prefetch={true}` on that link."*
 
+🔴 **Partial Prefetching is opt-in, and this section does not describe stock behaviour until you turn it on.** The config reference is unambiguous about the default:
+
+| Value | Description |
+|---|---|
+| `true` | *"Enables Partial Prefetching across the app."* |
+| `false` | *"Default. No change to prefetch behavior."* |
+
+It also has a hard dependency — *"`partialPrefetching` requires `cacheComponents`. Without it, `next dev` and `next build` throw at config validation."* Without the flag you get the older per-link behaviour: *"a page with N links to N routes produced ~N route prefetches as those links entered the viewport."* With it, one reusable App Shell per route is fetched and *"App Shells are cached on the client, so links to the same route reuse one prefetch."* Everything below assumes `partialPrefetching: true`.
+
 So there are two tiers, and the second one is not free:
 
 > *"This per-link prefetch includes cached content that resolves after the destination URL is known. It costs a server invocation per prefetchable link."*
 
-🔴 **Per link, not per route.** A page listing sixty tasks, each a `<Link prefetch>` to its detail route, is sixty server invocations as the list scrolls into view. That is a defensible spend on a three-item primary nav and an indefensible one on a feed. The default — App Shell only, shared across links to the same route — is the right choice almost everywhere, which is why `prefetch={true}` is opt-in.
+🔴 **Per link, not per route.** A page listing sixty tasks, each a `<Link prefetch>` to its detail route, is sixty server invocations as the list scrolls into view. That is a defensible spend on a three-item primary nav and an indefensible one on a feed. Partial Prefetching's own default — App Shell only, shared across links to the same route — is the right choice almost everywhere, which is why `prefetch={true}` is a per-link opt-in on top of it.
 
 ⚠️ A prefetch also has a side effect people do not expect: *"A prefetch counts as that first visit."* For an unlisted param, the background upgrade starts when the link enters the viewport rather than when it is clicked. That is usually the point. It also means a page of links to unlisted URLs will trigger upgrades for all of them merely by being scrolled past.
 
