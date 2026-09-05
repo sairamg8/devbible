@@ -12,6 +12,12 @@ sidebar_position: 38
 > ([docs.oracle.com/en/java/javase/25/troubleshoot/](https://docs.oracle.com/en/java/javase/25/troubleshoot/)),
 > including the documented `VM.native_memory` subcommands and NMT overhead figures.
 > JDK 25 · Spring Boot 4.1.1.
+>
+> ⚠️ **Corrected 2026-09-05:** this page previously taught the pre-JDK-25 `:=` marker for
+> non-default flags. JDK 25 prints a plain `=` on every row and reports the origin as a
+> separate brace-delimited token. See
+> [`../13-jvm-flags-that-matter/04-printflagsfinal.md`](../13-jvm-flags-that-matter/04-printflagsfinal.md),
+> which owns this flag.
 > **No sandbox** — this page shows commands to run and describes what each reports. It
 > contains no captured output from any JVM.
 
@@ -35,18 +41,48 @@ java -XX:+PrintFlagsFinal -version \
 This prints every flag's **final** value — after your command line, after ergonomics, and
 after any flag that sets another as a side effect.
 
-🔴 **Read the operator, not just the value.** The output separates the name from the value
-with either `=` or `:=`:
+🔴 **Read the origin, not just the value.** On JDK 25 the separator is a plain `=` on every
+line regardless of where the value came from, and the origin is a **separate brace-delimited
+token at the end of the row**:
 
-| Operator | Means |
+```text
+     uintx MaxHeapSize                 = 2147483648   {product} {ergonomic}
+      bool UseCompressedOops            = true         {product} {ergonomic}
+      bool UseCompactObjectHeaders      = false        {product} {default}
+     uintx ObjectAlignmentInBytes       = 8            {product} {command line}
+```
+
+*(Illustrative — this shows the shape of the columns, not output captured from a run, and
+the numbers are not measurements.)*
+
+| Origin token | Means |
 |---|---|
-| `=` | The value is the built-in default. Nothing changed it. |
-| `:=` | Something set it — your command line, ergonomics, or another flag's side effect. |
+| `{default}` | Nobody touched it — the value compiled into the JVM. |
+| `{ergonomic}` | 🔴 The JVM chose it by inspecting the machine — the container's CPUs and memory limit. |
+| `{command line}` | You, or something that built your command line, set it explicitly. |
 
-That distinction is the entire reason `PrintFlagsFinal` exists and is the fastest way to
-answer "did my flag actually take effect, or did something override it?" A flag you passed
-that still shows `=` did not reach the JVM. A flag you never passed that shows `:=` was set
-by ergonomics or by a second flag, and finding out which is the next question.
+⚠️ **The complete set of origin tokens is not enumerated in the JDK 25 tool reference**, and
+this page does not assert one — others exist for values arriving from the environment and
+from runtime management operations. Treat the three above as the ones that carry the audit
+signal, and read whatever else appears rather than assuming the list is closed.
+
+That origin column is the entire reason `PrintFlagsFinal` earns a place in an incident, and
+it is the fastest way to answer "did my flag actually take effect, or did something override
+it?" A flag you passed that shows `{default}` did not reach the JVM. A flag you never passed
+that shows `{ergonomic}` was chosen for you by the machine's shape, and a flag showing
+`{command line}` that you cannot find in your own manifest arrived from an entrypoint script
+or an environment variable — finding out which is the next question.
+
+🔴 **Older HotSpot printed `:=` instead of `=` on any non-default flag, and most material
+online still teaches that reading. It does not exist on JDK 25.** The consequence is worse
+than a cosmetic mismatch: the classic audit idiom
+`java -XX:+PrintFlagsFinal -version | grep ':='` matches **nothing** on a modern JDK, and
+empty output reads exactly like "nothing is overridden" rather than "you grepped for a
+marker that is no longer printed". Grep the origin token instead:
+
+```bash
+java -XX:+PrintFlagsFinal -version | grep -E '\{(ergonomic|command line)\}'
+```
 
 **13 · JVM flags that matter** *(not written yet)* owns `PrintFlagsFinal` in
 general, including the product/diagnostic/experimental distinction that governs which flags
@@ -142,10 +178,13 @@ Ergonomics depends on the container's CPU and memory limits, and several of thes
 set by ergonomics. Run it inside the same container shape, or use `jcmd VM.flags` against the
 real process, or you are reading a different JVM's decisions than the one you care about.
 
-**★ `=` and `:=` in `PrintFlagsFinal` output are not decoration.** `:=` means the value was
-changed from the default by *something* — possibly a flag you did not know was setting it as
-a side effect. A flag you passed that still shows `=` never reached the JVM. When two flags
-disagree, this operator is how you find out which one won.
+**★ The origin token in `PrintFlagsFinal` output is not decoration, and the `:=` marker you
+were taught to grep for is not printed on JDK 25.** `{ergonomic}` or `{command line}` means
+the value was changed from the default by *something* — possibly a flag you did not know was
+setting it as a side effect. A flag you passed that still shows `{default}` never reached the
+JVM. When two flags disagree, the origin column is how you find out which one won. The trap
+is that the pre-JDK-25 idiom `grep ':='` returns no rows at all, and an empty result is read
+as "clean" rather than "wrong query" — so the audit silently passes a JVM nobody checked.
 
 **★ You cannot deduce the encoding mode from `-Xmx`.** Staying under 32 GB gets you
 compression; it does not get you zero-based mode, which additionally depends on where the OS
@@ -184,7 +223,9 @@ owns the retired-flag inventory.
 
 **★ How do you verify what a running JVM actually chose?**
 `java -XX:+PrintFlagsFinal -version | grep UseCompressedOops` for whether compression is on
-and at what alignment — reading `:=` versus `=` to see whether anything set it.
+and at what alignment — reading the trailing origin token (`{default}` versus `{ergonomic}`
+versus `{command line}`) to see whether anything set it, because on JDK 25 the value is
+always printed with a plain `=`.
 `-Xlog:gc+heap+coops=info` at startup for the encoding mode, base and shift, which is the
 only direct evidence of the mode. `jcmd <pid> VM.flags` and `jcmd <pid> VM.command_line` for
 a process already running, the latter showing what actually reached the JVM after the
@@ -201,14 +242,21 @@ null check on top of the shift. The flags are identical; the outcome is not. Thi
 `gc+heap+coops` log tag exists, and why "we set the same flags" is not evidence of the same
 behaviour.
 
-**★ What is the difference between `=` and `:=` in `PrintFlagsFinal` output, and when does it
-matter?**
-`=` means the flag still holds its built-in default; `:=` means something changed it. It
-matters in exactly the two cases where people get confused. First, you passed a flag and it
-shows `=` — it did not reach the JVM, so the problem is in the entrypoint or the manifest,
-not in the JVM. Second, you did not pass a flag and it shows `:=` — ergonomics or another
-flag set it, which is how you discover that, say, selecting a collector changed several
-sizing defaults underneath you.
+**★ How do you tell from `PrintFlagsFinal` output whether a flag holds its default, and what
+changed if it does not?**
+Read the brace-delimited **origin token** at the end of the row: `{default}` means the flag
+still holds its built-in value, `{ergonomic}` means the JVM chose it by inspecting the
+machine, and `{command line}` means it was imposed. It matters in exactly the two cases where
+people get confused. First, you passed a flag and it shows `{default}` — it did not reach the
+JVM, so the problem is in the entrypoint or the manifest, not in the JVM. Second, you did not
+pass a flag and it shows `{ergonomic}` — the machine's shape set it, which is how you discover
+that, say, selecting a collector changed several sizing defaults underneath you.
+
+🔴 **The follow-up that catches people:** many candidates answer this with the `:=` marker,
+because that is what a decade of blog posts describe. On JDK 25 the value is printed with a
+plain `=` whatever its origin, and `grep ':='` returns nothing — which is far more dangerous
+than an error, because empty output looks like a clean audit. Knowing that the marker moved
+into its own column is the difference between an audit and a reassuring illusion.
 
 **★ A colleague says "we definitely have compressed oops on, it's in the Helm chart." How do
 you respond?**
