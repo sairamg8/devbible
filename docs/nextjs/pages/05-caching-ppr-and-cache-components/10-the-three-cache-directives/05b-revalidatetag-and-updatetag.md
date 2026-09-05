@@ -1,7 +1,7 @@
 ---
 title: "`revalidateTag` now takes a second argument, and `updateTag` is the one that lets a user see their own write"
 sidebar_label: "5b · `revalidateTag` vs `updateTag`"
-sidebar_position: 8
+sidebar_position: 11
 description: "The two-argument signature and its deprecated single-argument form, the profile that decides how long stale is served, and why updateTag is Server-Action-only."
 ---
 
@@ -11,6 +11,7 @@ description: "The two-argument signature and its deprecated single-argument form
 > [`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag) and
 > [`updateTag`](https://nextjs.org/docs/app/api-reference/functions/updateTag).
 > Target: **Next.js 16.3.4**, App Router.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs, plus the [`cacheTag`](https://nextjs.org/docs/app/api-reference/functions/cacheTag) limits section · session d2e9b9fe
 
 **Almost every `revalidateTag` call you will find in existing code, tutorials and this book's
 own imported chapters is written in a form the docs now call deprecated.** The function takes
@@ -64,6 +65,7 @@ export default async function submit() {
 ```
 
 ```ts filename="app/api/revalidate/route.ts"
+import type { NextRequest } from 'next/server'
 import { revalidateTag } from 'next/cache'
 
 export async function GET(request: NextRequest) {
@@ -136,11 +138,23 @@ async function getData() {
 ```
 
 🔴 **Tags are case-sensitive and must not exceed 256 characters. A tag over the limit is never
-assigned to cached data at all — so revalidating it silently does nothing.**
+assigned to cached data at all — so revalidating it does nothing.** There is a second limit on
+the `cacheTag` side that is easy to hit when tags are generated in a loop:
+
+> *"A single `cacheTag()` call accepts up to 128 tags, each with a maximum length of 256
+> characters. Tags longer than 256 characters are skipped, and any tags past the 128th in one
+> call are dropped. Both cases log a console warning."*
+> — [`cacheTag`](https://nextjs.org/docs/app/api-reference/functions/cacheTag)
+
+So the failure is not completely invisible: it is announced once, as a console warning, at the
+moment the tag is **assigned** — and then never mentioned again at the moment it fails to
+invalidate.
 
 ## Revalidation is pull, not push
 
-> A revalidation is triggered by a **request**, not by the `revalidateTag` call.
+> *"A revalidation is triggered by a request, not by the `revalidateTag` call, so pages using
+> the tag revalidate as they are visited rather than all at once."*
+> — [`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag)
 
 Pages using the tag revalidate **as they are visited**, not all at once. A call that
 invalidates a thousand pages does not produce a thousand upstream requests; it produces one per
@@ -193,13 +207,16 @@ reason it exists.
 
 ### A tag longer than 256 characters
 
-**Symptom.** Revalidation does nothing, with no error anywhere.
+**Symptom.** Revalidation does nothing, and the `revalidateTag` call reports no error.
 
 **Cause.** A tag over the limit is **never assigned to cached data**, so there is nothing for
-the call to invalidate. The failure is at write time and silent at read time.
+the call to invalidate. The failure happens at *write* time, where `cacheTag` skips it and logs
+a console warning, and is completely silent at *read* time. If nobody was watching the server
+log when the entry was first cached, there is no signal at all.
 
 **Fix.** Keep tags short and structured — `post-${id}`, not a serialized object. Watch out for
-tags built from user input or long slugs.
+tags built from user input or long slugs, and for loops that push more than 128 tags into a
+single `cacheTag()` call — everything past the 128th is dropped the same way.
 
 ### Case-mismatched tags
 
@@ -263,8 +280,10 @@ it, rather than the stale cached copy.
 `'use cache'` scope.
 
 **★ What are the limits on a tag?**
-Case-sensitive, maximum 256 characters. A longer tag is **never assigned**, so revalidating it
-does nothing and reports no error.
+Case-sensitive, maximum 256 characters, and at most 128 tags in a single `cacheTag()` call.
+A longer tag is skipped and a 129th tag is dropped — both log a console warning at assignment
+time — and neither is ever attached to cached data, so revalidating it later does nothing and
+reports no error at that end.
 
 **★ Does `revalidateTag` refresh every affected page immediately?**
 No. Revalidation is triggered by a request, so pages refresh as they are visited.

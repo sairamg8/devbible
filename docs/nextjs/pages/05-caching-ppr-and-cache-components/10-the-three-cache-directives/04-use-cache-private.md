@@ -1,7 +1,7 @@
 ---
 title: "`use cache: private` is the only directive that may read cookies, and the only one that stores nothing on your server"
 sidebar_label: "4 · `use cache: private`"
-sidebar_position: 6
+sidebar_position: 9
 description: "The compliance escape hatch: browser-memory-only caching, the two cacheLife thresholds that decide whether it prefetches at all, and why it is not a safe default."
 ---
 
@@ -11,6 +11,7 @@ description: "The compliance escape hatch: browser-memory-only caching, the two 
 > [`use cache: private`](https://nextjs.org/docs/app/api-reference/directives/use-cache-private)
 > and [`use cache`](https://nextjs.org/docs/app/api-reference/directives/use-cache).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **`use cache: private` exists for two situations and no others: you cannot refactor the
 runtime read out of the cached scope, or a compliance rule forbids the data resting on a
@@ -103,6 +104,11 @@ to clear the relevant bar.
 
 That last row is the one with a performance price attached. A `private` scope is permanently
 outside prerendering, so it can never contribute to a prerendered page.
+
+One precision on the second row: the documentation states the scope as *"Per-client
+(browser)"* and says results *"do not persist across page reloads"*. It does not say anything
+about two tabs of the same browser, so do not build on either answer — an entry that dies with
+the document cannot be relied on to outlive it in a sibling tab.
 
 ## Where it sits in a mixed page
 
@@ -273,4 +279,4 @@ belongs in the data access layer.
 
 ---
 
-**Previous:** [3 · `use cache: remote`](03-use-cache-remote.md)
+**Previous:** [3d · Cache handler failure modes](03d-cache-handler-failure-modes.md)
