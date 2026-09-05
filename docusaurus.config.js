@@ -38,7 +38,10 @@ const config = {
   projectName: 'devbible',
   trailingSlash: false,
 
-  onBrokenLinks: 'warn',
+  // 'throw' since 2026-09-05: run 33960724317 was the first build to report ZERO broken
+  // links, so the gate can hold the line from here. A warn-only setting cannot — it is
+  // how the 17 unresolved warnings that were fixed that morning survived for weeks.
+  onBrokenLinks: 'throw',
 
   markdown: {
     hooks: {onBrokenMarkdownLinks: 'warn'},
