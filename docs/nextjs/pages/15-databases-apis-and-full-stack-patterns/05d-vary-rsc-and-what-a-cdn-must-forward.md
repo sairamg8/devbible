@@ -98,4 +98,4 @@ Exercise both representations from a real client. Request a route normally and c
 
 ---
 
-← [05c · The CDN layer and `Cache-Control`](05c-the-cdn-layer-and-cache-control.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → **Writing a custom cache handler** *(not written yet)*
+← [05c · The CDN layer and `Cache-Control`](05c-the-cdn-layer-and-cache-control.md) · [Topic index](05-edge-functions-and-custom-cache-structures-for-global-comput.md) · Next → [05e · Writing a custom cache handler](05e-writing-a-custom-cache-handler.md)

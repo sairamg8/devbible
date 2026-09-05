@@ -35,7 +35,7 @@ Everything in this topic is therefore optional in the sense that your applicatio
 | 1 | **[The Edge Runtime is deprecated](05b-the-edge-runtime-is-deprecated.md)** | 🔴 what the docs actually say, what to delete, why Proxy is a special case, and what is *not* claimed — there is no announced removal version |
 | 2 | **[The CDN layer and `Cache-Control`](05c-the-cdn-layer-and-cache-control.md)** | the exact headers Next.js emits for static, ISR and dynamic pages, why `s-maxage` is the number that decides your bill, and 🔴 the fact that `revalidateTag()` never reaches a CDN |
 | 3 | **[`Vary`, `_rsc` and CDN forwarding](05d-vary-rsc-and-what-a-cdn-must-forward.md)** | the five headers that change the response, the 307 hash redirect, and the silent navigation bug a stripped `rsc` header produces |
-| 4 | **Writing a custom cache handler** *(not written yet)* | the `get`/`set`/`refreshTags`/`getExpiration`/`updateTags` interface and the `CacheEntry` shape |
+| 4 | **[Writing a custom cache handler](05e-writing-a-custom-cache-handler.md)** | the `get`/`set`/`refreshTags`/`getExpiration`/`updateTags` interface, the `CacheEntry` shape, soft tags, and named handlers |
 | 5 | **Streams, partial writes and failure semantics** *(not written yet)* | `.tee()`, why a throwing `get()` is a render error rather than a miss, and why `set()` failures are invisible |
 | 6 | **[A shared cache across instances](05h-a-shared-cache-across-instances.md)** | 🔴 revalidation is local by default — one instance invalidating its own copy is the default behaviour, not a bug |
 
