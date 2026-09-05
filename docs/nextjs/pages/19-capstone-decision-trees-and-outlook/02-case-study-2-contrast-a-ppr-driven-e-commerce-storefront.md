@@ -1,7 +1,7 @@
 ---
 title: "A PPR-driven storefront and a multi-tenant SaaS are the same framework producing opposite architectures, because on a storefront the personal parts are small holes inside large shared pages and on SprintDesk the shared parts are small holes inside large personal pages"
 sidebar_label: "02 · Case study 2: the storefront"
-sidebar_position: 20
+sidebar_position: 7
 description: "The contrast case: the traffic shape a storefront actually has, the route map it produces, which surfaces are shared and which are personal, and the single inversion against SprintDesk that drives every rendering, caching and state decision in the rest of this topic."
 ---
 
@@ -143,4 +143,4 @@ The guidelines are tuned for data that cannot be shared and must be correct unde
 **★ What is the argument that the cart badge, which is a few characters of text, is an architectural concern?**
 Because it appears in the header on every route, and a runtime read in a shared header is a runtime read on the whole catalogue. Under the pre-Cache-Components model that made every one of those routes dynamic outright. Under PPR the badge can be a hole — but only if the read stays inside a boundary and nothing above it awaits runtime data. So a component whose entire output is a number decides whether the most-visited pages on the site are served from a CDN or rendered per request. It is the smallest piece of UI on the page and the largest single lever on the hosting bill.
 
-{/* FOOTER */}
+← [01e · What SprintDesk still does not have](01e-what-sprintdesk-still-does-not-have.md) · [Chapter 19 overview](01-explanation.md) · Next → [02b · Rendering and caching](02b-the-storefronts-rendering-and-caching-decisions.md)

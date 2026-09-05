@@ -1,7 +1,7 @@
 ---
 title: "A capstone decision tree earns its place only by doing four things a chapter tree is not allowed to do — cross chapters, name the question that actually settles the branch, price what the branch costs you eighteen months later, and mark the one-way doors — and here is that tree for rendering"
 sidebar_label: "03 · The rendering tree"
-sidebar_position: 40
+sidebar_position: 11
 description: "The first of five capstone trees: the four-things rule that makes a synthesis tree worth more than the chapter procedure it summarises, then the rendering tree itself, answered per layout subtree rather than per page."
 ---
 
@@ -226,4 +226,4 @@ When the route is behind authentication. No crawler will ever request it, so the
 **Cache Components is off in your codebase. How much of this tree still applies?**
 The ordering does, and Q1 and Q4 still identify the right constraints — but the terminals change, because there are no holes. A request read anywhere in the subtree makes the whole route request-time, so Q2's "hoist it out" branch is even more valuable, and the fallback for un-hoistable per-user content is a Client Component fetching after hydration, with a visible flash as its price. Q0 exists precisely so that this difference is stated before anyone argues from the wrong model.
 
-{/* FOOTER */}
+← [02d · The two applications side by side](02d-the-two-applications-side-by-side.md) · [Chapter 19 overview](01-explanation.md) · Next → [03b · The caching tree](03b-the-caching-tree.md)

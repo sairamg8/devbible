@@ -1,7 +1,7 @@
 ---
 title: "The outlook on AI runtimes is not a prediction about agents getting better — it is that Next.js 16 moved framework knowledge out of a model's training data and into your `node_modules`, and that inversion is what a team has to be positioned for"
 sidebar_label: "04 · Outlook: AI runtimes"
-sidebar_position: 60
+sidebar_position: 16
 description: "What the framework has already committed to publicly, the retrieval-to-always-available-context inversion and its consequences for a codebase, what an agent still cannot decide, and the direction claim this book itself got wrong."
 ---
 
@@ -142,4 +142,4 @@ By separating what has shipped from what has been stated as intent from what the
 - [Appendix C · tooling](../20-appendices/03-appendix-c-tooling.md) — the MCP configuration and the CLI surface
 - [Appendix E · the version watchlist](../20-appendices/05-appendix-e-version-watchlist.md) — where the Skills correction is recorded in full
 
-{/* FOOTER */}
+← [03e · The runtime and deployment-target tree](03e-the-runtime-and-deployment-target-tree.md) · [Chapter 19 overview](01-explanation.md) · Next → [04b · Compiler evolution and the next default](04b-compiler-evolution-and-the-next-default.md)

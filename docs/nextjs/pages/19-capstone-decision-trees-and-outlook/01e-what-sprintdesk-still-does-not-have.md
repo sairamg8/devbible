@@ -1,7 +1,7 @@
 ---
 title: "The half of a retrospective everybody skips is the honest list of what the application still cannot do — and it is only useful if every entry is marked as a deferral, which is a decision, or a gap, which is an absence, because the two belong in completely different places"
 sidebar_label: "01e · What SprintDesk does not have"
-sidebar_position: 13
+sidebar_position: 6
 description: "Six deferrals with the reason and the trigger that would end each, seven gaps with the cost and the missing owner, and the classification rule that stops a team relitigating settled questions while never scheduling real work."
 ---
 
@@ -172,4 +172,4 @@ Both are phrased as "consider" — consider rate limiting for expensive operatio
 **★ How do you keep this list from becoming a demoralising thirty-item backlog nobody reads?**
 Only list absences that an earlier decision, chapter or checklist implies you should have had. A gap is the absence of something needed; everything else is software not yet written, and there is an unlimited supply of that. Then classify every entry, give it its required fields, and move the deferrals out of the list entirely into the decision record — they are not work, and leaving them among the work is what makes the list feel infinite. What remains is a small ordered set of tickets with owners, which is a backlog rather than a confession.
 
-{/* FOOTER */}
+← [01d · Checklist pass: security and the data access layer](01d-the-checklist-pass-security-and-the-data-access-layer.md) · [Chapter 19 overview](01-explanation.md) · Next topic → [02 · Case study 2: the storefront](02-case-study-2-contrast-a-ppr-driven-e-commerce-storefront.md)

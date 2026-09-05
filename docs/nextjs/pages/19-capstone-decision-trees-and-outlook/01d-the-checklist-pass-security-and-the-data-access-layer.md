@@ -1,7 +1,7 @@
 ---
 title: "The security half of the checklist has not aged a day, and running it over SprintDesk turns four short bullets into eleven findings — because every clause in them assumes a mental model the application had to build on purpose"
 sidebar_label: "01d · Checklist pass: security"
-sidebar_position: 12
+sidebar_position: 5
 description: "The Server Actions bullet expanded clause by clause against what SprintDesk actually built, the tenancy predicate as the highest-value invariant in the codebase, tainting, environment variables, rate limiting, and what sign-out does not clear."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The caching tree is not about which directive — it asks what invalidates this data and who gets to see the invalidation, and its answer depends on how many cache layers your deployment has rather than on anything in your source code"
 sidebar_label: "03b · The caching tree"
-sidebar_position: 41
+sidebar_position: 12
 description: "Time-based versus event-based invalidation, the required second argument to revalidateTag, updateTag for read-your-own-writes, and the layer count that turns a correct invalidation into a production bug."
 ---
 

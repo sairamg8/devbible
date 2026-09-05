@@ -1,7 +1,7 @@
 ---
 title: "Choosing between `use cache`, `use cache: remote`, `use cache: private` and no directive is settled by two questions asked in a fixed order — whether the scope reads request data, and whether the data may rest on a server — and the first correct move is almost never a change of directive"
 sidebar_label: "03c · The cache directive tree"
-sidebar_position: 42
+sidebar_position: 13
 description: "The fourth tree: hoisting the request read before touching a directive, the conjunction that justifies remote, the price list for private, and the two failure shapes that look like one bug."
 ---
 

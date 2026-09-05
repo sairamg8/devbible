@@ -1,227 +1,63 @@
 ---
-sidebar_position: 0
-title: "Overview"
+title: "19 · Capstone, decision trees and outlook — the chapter that introduces nothing new, and is the only one allowed to say how the other eighteen constrain each other"
 sidebar_label: "Overview"
-description: "Chapter 20 overview"
+sidebar_position: 0
+description: "The capstone: SprintDesk reviewed as a set of commitments rather than features, a PPR storefront as the contrast case, five decision trees that cross chapters, and an outlook written so a later reader can check it rather than believe it."
 ---
 
-# ▲ Capstone, Decision Trees, and Outlook
+<span className="db-tier t-master">Master</span>
 
-> **Page priority:** 🟢 `[D]` **Daily driver / Must Master**
+> Verified: 2026-09-05 — this chapter composes material already verified across chapters 1 through 18 against the Next.js 16.3.4 documentation, plus [How to upgrade to version 16](https://nextjs.org/docs/app/guides/upgrading/version-16), [How to set up your Next.js project for AI coding agents](https://nextjs.org/docs/app/guides/ai-agents) and [the production checklist](https://nextjs.org/docs/app/guides/production-checklist) as **corrected** in [Appendix D](../20-appendices/04-appendix-d-production-readiness-checklist-security.md). 🔴 **It introduces no new framework claims of its own** — every branch of every tree terminates in a page that already argues it.
+> Documentation-verified; **no sandbox run, no timings**.
+> Target: **Next.js 16.3.4** · React canary bundled by the App Router · Node.js **24.20.0**.
 
-> **Priority Badges Legend:**  
-> 🟢 `[D]` **Daily driver / Must Master** — expect to use weekly or more; own this cold  
-> 🟡 `[O]` **Occasional / Must Learn** — monthly-ish, situational but expected  
-> 🔴 `[R]` **Rare-but-critical / Must Understand** — rarely touch it, but it saves you when things break  
+**Every other chapter in this book is only permitted to argue its own subject, and that restriction is what makes this one necessary. Chapter 6 may not tell you that the rendering answer decides whether the caching question is even reachable. Chapter 8 may not tell you that moving a filter into the URL re-decides chapter 6's answer for that route. Chapter 5 may not tell you that the number of cache layers a mutation has to reach is a property of chapter 17's deployment rather than of your code. Those constraints are real, they are where production actually breaks, and this is the only chapter allowed to state them. So the capstone teaches nothing new on purpose: it reviews an application you watched being built, contrasts it with one shaped the opposite way, turns the accumulated arguments into five trees you can answer at 2am, and closes with an outlook written so that a reader in a year can check it rather than believe it.**
 
+## The four topics
 
+| # | Topic | What it settles |
+|---|---|---|
+| 01 | **[SprintDesk retrospective](01-sprintdesk-retrospective-the-finished-multi-tenant-saas-revi.md)** | Thirteen milestones read back as one system, sorted into free / load-bearing / inherited — and 🔴 why a working application is the weakest evidence available |
+| 02 | **[Case study 2: a PPR storefront](02-case-study-2-contrast-a-ppr-driven-e-commerce-storefront.md)** | The same framework producing the opposite architecture, and the one inversion that drives every difference |
+| 03 | **[The architecture decision trees](03-architecture-decision-trees-rendering-strategy.md)** | Five trees — rendering, caching, cache directive, state placement, runtime — each crossing chapters and marking its one-way doors |
+| 04 | **[Outlook](04-outlook-deeper-ai-runtimes.md)** | What has shipped versus what has been stated, the three-compiler ladder, and how to price a preview feature |
 
-> **Source:** current project content kept under exact syllabus title
+## The chunks
 
-## 1. Under-The-Hood Mechanics
+| # | Chunk | Covers |
+|---|---|---|
+| 1 | **[SprintDesk retrospective](01-sprintdesk-retrospective-the-finished-multi-tenant-saas-revi.md)** | the thirteen milestones as *commitments* rather than capabilities; the three piles; 🔴 why "it works in production" is compatible with every failure this book names |
+| 2 | **[The decisions that are now load-bearing](01b-the-decisions-that-are-now-load-bearing.md)** | the sort done for real, with cost of reversal counted in files — and why the ORM choice is far freer than it looks |
+| 3 | **[The inherited pile](01ba-the-inherited-pile.md)** | 🔴 the decisions nobody made: defaults the team believes were chosen, and what would reveal each one |
+| 4 | **[Checklist pass: rendering, caching, the build](01c-the-checklist-pass-rendering-caching-and-the-build.md)** | the corrected checklist applied, each item carrying the observation that separates *working* from *configured* |
+| 5 | **[Checklist pass: security and the data access layer](01d-the-checklist-pass-security-and-the-data-access-layer.md)** | the half of the official checklist that has not aged, expanded into the mechanism each bullet assumes |
+| 6 | **[What SprintDesk still does not have](01e-what-sprintdesk-still-does-not-have.md)** | the honest gaps, each marked **deferral** (chosen) or **gap** (never considered) — and why confusing the two wastes a quarter |
+| 7 | **[Case study 2: the storefront](02-case-study-2-contrast-a-ppr-driven-e-commerce-storefront.md)** | traffic shape as the architectural input; 🔴 personal parts as small holes in shared pages, and the inverse |
+| 8 | **[The storefront's rendering and caching](02b-the-storefronts-rendering-and-caching-decisions.md)** | catalogue enumeration and its combinatorial ceiling, staleness budgets for price and stock, where `use cache: remote` finally earns its cost |
+| 9 | **[The cart, checkout and where state lives](02c-the-cart-checkout-and-where-state-lives.md)** | the same four state owners landing in different places; the cart badge as the usual prerender-killer; why checkout is dynamic and should not be fought |
+| 10 | **[The two applications side by side](02d-the-two-applications-side-by-side.md)** | 🔴 three decisions that produce identical code and mean different things, two that look different and are one problem, and what to do when your app is honestly both |
+| 11 | **[The rendering tree](03-architecture-decision-trees-rendering-strategy.md)** | the four-things rule a capstone tree owes you, and 🔴 rendering answered per **layout subtree**, never per page |
+| 12 | **[The caching tree](03b-the-caching-tree.md)** | what invalidates this and who sees it; the layer count as a property of your deployment rather than your code |
+| 13 | **[The cache directive tree](03c-the-cache-directive-tree.md)** | `use cache` vs `remote` vs `private` vs none — placement, not performance; and why `private` is not the fix for the error it silences |
+| 14 | **[The state placement tree](03d-the-state-placement-tree.md)** | the four owners, with the *specific reproducible bug* named beside each mis-filing |
+| 15 | **[The runtime and deployment-target tree](03e-the-runtime-and-deployment-target-tree.md)** | the deprecated Edge Runtime with no published removal version, `preferredRegion` with no successor, and how the five trees constrain one another |
+| 16 | **[Outlook: AI runtimes](04-outlook-deeper-ai-runtimes.md)** | framework knowledge moved from training data into `node_modules`; what an agent structurally cannot decide; the direction claim this book got wrong |
+| 17 | **[Compiler evolution and the next default](04b-compiler-evolution-and-the-next-default.md)** | three compilers on three rungs, and 🔴 the config key as the maturity signal — top-level means stable, `experimental.` does not |
+| 18 | **[Evaluating a preview feature](04c-evaluating-a-preview-feature.md)** | the observed base rate, the four questions, surface area as the variable you control, and reading a deprecation without inventing a deadline |
 
-Next.js supports `app/` and `pages/` **coexisting in the same project** specifically to make this an incremental migration rather than a big-bang rewrite (see [file conventions](../02-routing-and-navigation/01-file-system-routing-pagetsx.md) and the [migration roadmap](../18-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md) for the coexistence caveats this recipe builds on). This means you can migrate one route, ship it, verify it, and move to the next — the rest of the app keeps working unmodified on `pages/` throughout.
+## Phase gate
 
-🔴 **Do not rely on a precedence rule for a path defined in *both* directories.** The familiar sentence "the App Router takes priority over the Pages Router" is from the Next.js 13 documentation and is **not present in the 16.3.4 docs** — see [ch18 · the precedence rule](../18-advanced-ecosystem-topics/02-pages-router-app-router-migration-roadmaps-for-legacy-codeba.md), which checked at source and supplies a CI guard. This recipe never needs it: the commit that adds an `app/` route **deletes** the `pages/` route it replaces, so no path is ever defined twice. The documented caveat that does affect this recipe is different and real — **navigating between routes served by the two routers is a hard navigation, and `next/link` will not prefetch across them.**
+You are done with this chapter when you can take an App Router application you did **not** build and, without running it, produce three things: the list of decisions it is standing on with the cost of reversing each counted in files; the branch it took on all five trees, marking which branches were chosen and which were inherited from a default; and the observation — not the assurance — that would demonstrate each of its silent failure modes is closed rather than merely unreported.
 
-The migration is really four separate, mostly-independent translations happening per route:
+⚠️ **The gate is deliberately not "you can build SprintDesk."** You could do that after chapter 15. Reading someone else's architecture is the harder skill and the one this chapter exists for.
 
-```text
-pages/products/[id].js                          app/products/[id]/page.tsx
-├── getStaticProps           ──translates to──►  Server Component body: `await fetch(...)` directly
-├── getStaticPaths           ──translates to──►  generateStaticParams()
-├── getServerSideProps       ──translates to──►  Server Component body (dynamic APIs make it dynamic automatically)
-└── export default Page      ──translates to──►  export default async function Page(...)
+## Where this connects
 
-pages/_app.js                ──translates to──►  app/layout.tsx (root layout)
-pages/_document.js           ──translates to──►  app/layout.tsx's <html>/<body> + the Metadata API
-```
-
-### Why This Isn't a Mechanical Find-and-Replace
-The App Router's data model is fundamentally different, not just renamed: Pages Router functions **return props to a separate component**; App Router Server Components **fetch inline and render in the same function**. A page that used `getServerSideProps` for auth-gating plus three parallel `Promise.all`-batched calls needs that logic re-expressed as plain `await`s inside the component — usually simpler, but not a search-and-replace.
-
----
-
-## 2. Real-World Engineering Scenario
-
-**Scenario**: An E-Commerce Site Migrating Its Highest-Traffic, Simplest Routes First.
-Rather than attempting the whole site at once, the team picks a migration order by risk and value: static marketing pages (`/about`, `/pricing` — no data fetching, near-zero risk) first to validate the App Router build/deploy pipeline works in this project, then the product listing page (`getStaticProps` + ISR — moderate complexity, high traffic, big perf win from streaming), leaving the most complex page (a `getServerSideProps`-driven checkout flow with cookie-based auth and multiple sequential API calls) for last, once the team has migration experience on lower-stakes routes.
-
----
-
-## 3. Production-Grade Migration Sequence
-
-### Step 1 — Static page with ISR: `getStaticProps` + `getStaticPaths` → Server Component
-
-```javascript
-// BEFORE: pages/products/[id].js
-export async function getStaticPaths() {
-  const products = await fetch('https://api.acme.com/products/ids').then((r) => r.json());
-  return {
-    paths: products.map((p) => ({ params: { id: p.id } })),
-    fallback: 'blocking', // params NOT pre-rendered are generated on-demand, then cached
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const product = await fetch(`https://api.acme.com/products/${params.id}`).then((r) => r.json());
-  if (!product) return { notFound: true };
-  return { props: { product }, revalidate: 3600 };
-}
-
-export default function ProductPage({ product }) {
-  return <ProductView product={product} />;
-}
-```
-
-```tsx
-// AFTER: app/products/[id]/page.tsx
-import { notFound } from 'next/navigation';
-
-// getStaticPaths' path list -> generateStaticParams()
-export async function generateStaticParams() {
-  const products = await fetch('https://api.acme.com/products/ids').then((r) => r.json());
-  return products.map((p: { id: string }) => ({ id: p.id }));
-}
-
-// fallback: 'blocking' equivalent — params NOT returned above still render on-demand & cache,
-// because dynamicParams defaults to true. Set `export const dynamicParams = false` for the
-// fallback: false equivalent (unlisted params 404 instead of rendering on-demand).
-
-async function getProduct(id: string) {
-  const res = await fetch(`https://api.acme.com/products/${id}`, {
-    next: { revalidate: 3600 }, // getStaticProps' `revalidate` -> next.revalidate on the fetch itself
-  });
-  if (res.status === 404) return null;
-  return res.json();
-}
-
-export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const product = await getProduct(id);
-  if (!product) notFound(); // getStaticProps' `{ notFound: true }` -> calling notFound()
-
-  return <ProductView product={product} />;
-}
-```
-
-### Step 2 — Dynamic, auth-gated page: `getServerSideProps` → Server Component
-
-```javascript
-// BEFORE: pages/dashboard.js
-export async function getServerSideProps({ req, res }) {
-  const token = req.cookies.session_token;
-  if (!token) {
-    return { redirect: { destination: '/login', permanent: false } };
-  }
-  const dashboardData = await fetch('https://api.acme.com/dashboard', {
-    headers: { Authorization: `Bearer ${token}` },
-  }).then((r) => r.json());
-  return { props: { dashboardData } };
-}
-
-export default function Dashboard({ dashboardData }) {
-  return <DashboardView data={dashboardData} />;
-}
-```
-
-```tsx
-// AFTER: app/dashboard/page.tsx
-import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
-
-export default async function DashboardPage() {
-  const token = (await cookies()).get('session_token')?.value;
-  if (!token) {
-    redirect('/login'); // getServerSideProps' `{ redirect: {...} }` -> calling redirect()
-  }
-
-  // Calling cookies() above already forces this route to render dynamically — no separate
-  // "always per-request" declaration needed, unlike getServerSideProps' explicit contract
-  const dashboardData = await fetch('https://api.acme.com/dashboard', {
-    headers: { Authorization: `Bearer ${token}` },
-  }).then((r) => r.json());
-
-  return <DashboardView data={dashboardData} />;
-}
-```
-
-### Step 3 — Global wrapper: `_app.js` + `_document.js` → root `layout.tsx`
-
-```javascript
-// BEFORE: pages/_app.js
-import '../styles/globals.css';
-export default function MyApp({ Component, pageProps }) {
-  return (
-    <GlobalThemeProvider>
-      <Component {...pageProps} />
-    </GlobalThemeProvider>
-  );
-}
-
-// BEFORE: pages/_document.js
-import { Html, Head, Main, NextScript } from 'next/document';
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head><link rel="preload" href="/fonts/acme-sans.woff2" as="font" crossOrigin="" /></Head>
-      <body><Main /><NextScript /></body>
-    </Html>
-  );
-}
-```
-
-```tsx
-// AFTER: app/layout.tsx — merges BOTH _app.js and _document.js into one file
-import '../styles/globals.css';
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en"> {/* _document.js's <Html lang> */}
-      <head>
-        <link rel="preload" href="/fonts/acme-sans.woff2" as="font" crossOrigin="" /> {/* _document.js's preload */}
-      </head>
-      <body>
-        <GlobalThemeProvider>{children}</GlobalThemeProvider> {/* _app.js's wrapper */}
-      </body>
-    </html>
-  );
-}
-```
+- [ch15 · the SprintDesk milestone](../15-databases-apis-and-full-stack-patterns/06-project-milestone-sprintdesk-on-drizzle-neon-with-pooling.md) — the six named seams this chapter reviews
+- [ch16 · Building a CRUD API with Postgres](../16-building-a-crud-api-with-postgres/01-explanation.md) — chapter 15 answers *which*, chapter 16 answers *how, and what breaks when two requests overlap*
+- [ch17 · Deployment, scaling and observability](../17-deployment-scaling-and-observability/01-explanation.md) — the platform half of the runtime tree
+- [ch20 · Appendices](../20-appendices/01-explanation.md) — the glossary, the corrected production checklist, and the version watchlist this chapter leans on
 
 ---
 
-## 4. Senior Engineer Edge Cases & Pitfalls
-
-### ⚠️ Pitfall 1: A Migrated Route Silently Not Taking Effect
-```text
-❌ Both exist for the same conceptual route during migration:
-pages/products/[id].js
-app/products/[id]/page.tsx
-
-Next.js serves the app/ version with ZERO warning that pages/products/[id].js is now dead code —
-a teammate editing the old file wonders why their changes never show up
-```
-**Fix**: delete the `pages/` file in the **same PR** that adds its `app/` replacement — never leave both alive "just in case."
-
-### ⚠️ Pitfall 2: The `getLayout` Per-Page Pattern Has No Direct Equivalent
-A common Pages Router pattern attaches a layout function per page (`Page.getLayout = (page) => <Shell>{page}</Shell>`, read by a custom `_app.js`). The App Router has **no per-page-opt-in layout mechanism** — layouts are structural, driven by folder nesting. The migration path is to restructure routes that need different shells into different route groups (`(marketing)/`, `(dashboard)/`), each with its own `layout.tsx`, rather than looking for a prop-based equivalent that doesn't exist.
-
-### ⚠️ Pitfall 3: Assuming Every Page Component Still Needs `'use client'`
-Pages Router components could always use hooks/browser APIs directly — there was no server/client distinction. A naive migration wraps every migrated page in `'use client'` just to "make the errors go away," which defeats the entire point of the App Router (zero client JS for content that doesn't need interactivity). Migrate the data-fetching shell as a Server Component first, and push `'use client'` down to only the specific interactive leaf components (a button, a form) that actually need it — not the whole page.
-
-### ⚠️ Pitfall 4: Losing a Redirect's Status Code Semantics
-```javascript
-// Pages Router distinguished these explicitly:
-return { redirect: { destination: '/login', permanent: false } }; // temporary
-return { redirect: { destination: '/new-url', permanent: true } };  // permanent
-```
-```tsx
-// App Router's redirect() (next/navigation) is a TEMPORARY redirect — for a genuinely
-// PERMANENT redirect (the old getServerSideProps `permanent: true` case), use
-// permanentRedirect() instead. Silently using redirect() everywhere loses that distinction,
-// which matters for search engines updating their index to the new URL rather than
-// re-checking the old one on every crawl.
-import { permanentRedirect } from 'next/navigation';
-permanentRedirect('/new-url');
-```
+Start → [01 · SprintDesk retrospective](01-sprintdesk-retrospective-the-finished-multi-tenant-saas-revi.md)

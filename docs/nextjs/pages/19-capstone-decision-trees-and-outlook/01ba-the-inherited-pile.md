@@ -1,7 +1,7 @@
 ---
 title: "The third pile is the one you cannot grep for, because it consists entirely of lines nobody wrote — SprintDesk's inherited decisions, what each default actually is, and the specific observation that would reveal it"
 sidebar_label: "01ba · The inherited pile"
-sidebar_position: 14
+sidebar_position: 3
 description: "Eight framework defaults SprintDesk depends on and never chose — prefetch behaviour, prerender status, pool max, the 30-second client floor, the image cache TTL, the default cacheLife profile and the two config keys that write the same number — each with the check that surfaces it."
 ---
 

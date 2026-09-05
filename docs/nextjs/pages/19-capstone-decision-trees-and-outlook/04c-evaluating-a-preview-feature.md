@@ -1,7 +1,7 @@
 ---
 title: "Evaluating a preview feature is not a question about the feature — it is four questions about your own codebase, and the one that decides it is how many files would have to change if the API moved"
 sidebar_label: "04c · Evaluating a preview feature"
-sidebar_position: 62
+sidebar_position: 18
 description: "The base rate that makes blanket caution wrong, the four questions that price the bet, surface area as the variable nobody measures, how to read a deprecation without inventing a deadline, and the watchlist as a dated artefact."
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Running the corrected production checklist over SprintDesk, item by item — where the application passes, where it passes for the wrong reason, and the four 16-era items the published checklist does not ask about at all"
 sidebar_label: "01c · Checklist pass: rendering and caching"
-sidebar_position: 11
+sidebar_position: 4
 description: "The rendering, caching and build halves of Appendix D applied to a specific application, with the observation that distinguishes 'working' from 'configured' recorded for every item."
 ---
 

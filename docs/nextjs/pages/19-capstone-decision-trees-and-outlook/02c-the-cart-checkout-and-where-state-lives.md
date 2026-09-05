@@ -1,7 +1,7 @@
 ---
 title: "Run the storefront's state through SprintDesk's four ownership questions and every answer lands somewhere different — the facets go in the URL for one extra reason, the cart has no clean owner at all, and checkout is the one flow you should stop trying to make static"
 sidebar_label: "02c · Cart, checkout and state"
-sidebar_position: 22
+sidebar_position: 9
 description: "The four state owners applied to a storefront: shareable and indexable facet URLs, anonymous cart identity, why the cart badge is the single most common destroyer of a prerender, what use cache: private actually forfeits, and why checkout and the order confirmation are correctly dynamic end to end."
 ---
 

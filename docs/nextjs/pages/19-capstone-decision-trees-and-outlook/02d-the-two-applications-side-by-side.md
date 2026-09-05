@@ -1,7 +1,7 @@
 ---
 title: "Put the SaaS and the storefront in one table and the useful part is not the differences — it is the three decisions that look identical in both and are not, the two that look different and are the same decision twice, and the single shared layout read that collapses the boundary when an application is honestly both"
 sidebar_label: "02d · The two side by side"
-sidebar_position: 23
+sidebar_position: 10
 description: "The payoff comparison across traffic shape, rendering strategy, cache placement, state ownership, authorization, outage cost, deploy pipeline, the business metric and the worst failure — then the decisions that are deceptively the same or deceptively different, and how to run both shapes in one codebase without losing either."
 ---
 
@@ -155,4 +155,4 @@ The SaaS, decisively. People expect the storefront to suffer more because it has
 **★ What would make you conclude that a comparison like this had taught you nothing?**
 If the takeaway were a list of settings. The two column headings are not configurations to copy; they are the output of running the same decision procedures — the eight rendering questions and the four ownership questions — against two different products. The transferable artefact is the procedures and the reasons, because the next application you build will be neither of these two, and the only thing that survives is the ability to ask what varies the value, who is waiting for the result, and whether two readers would accept the same bytes.
 
-{/* FOOTER */}
+← [02c · The cart, checkout and where state lives](02c-the-cart-checkout-and-where-state-lives.md) · [Chapter 19 overview](01-explanation.md) · Next topic → [03 · The rendering tree](03-architecture-decision-trees-rendering-strategy.md)

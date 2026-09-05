@@ -1,7 +1,7 @@
 ---
 title: "Sorting SprintDesk's decisions into free and load-bearing is done by counting files rather than by arguing about importance — and the count says the caching model and the data access layer are structural, while the ORM everybody spent a week debating is very nearly free"
 sidebar_label: "01b · The load-bearing decisions"
-sidebar_position: 10
+sidebar_position: 2
 description: "The cost-of-reversal test made mechanical, the seven decisions SprintDesk is now standing on with the grep that counts each one, the five that turned out to be free, and the finding that one decision bought the freedom of three others."
 ---
 
@@ -214,4 +214,4 @@ Because the two costs are independent. Reversing it is expensive — every route
 **★ Board filters in the URL — the grep finds a handful of files. Where is the real cost?**
 Outside the repository. Every board URL anyone has pasted into a ticket, a chat message or a bookmark encodes a view, and moving filters into a client store means all of them stop selecting that view. No migration recovers it, no redirect approximates it, and nothing in CI notices. It is a product promise the code happens to implement, which puts it on the invariant axis rather than the file-count one — and it is the entry most likely to be mis-sorted by a team that only counts files.
 
-{/* FOOTER */}
+← [01 · SprintDesk retrospective](01-sprintdesk-retrospective-the-finished-multi-tenant-saas-revi.md) · [Chapter 19 overview](01-explanation.md) · Next → [01ba · The inherited pile](01ba-the-inherited-pile.md)

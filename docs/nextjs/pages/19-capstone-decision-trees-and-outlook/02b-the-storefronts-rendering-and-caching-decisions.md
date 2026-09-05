@@ -1,7 +1,7 @@
 ---
 title: "The storefront's rendering decisions are all one decision asked five times — what may complete before a request exists — and the answers differ from SprintDesk's because a catalogue is shared, unbounded, and read mostly by people who are not logged in"
 sidebar_label: "02b · Rendering and caching"
-sidebar_position: 21
+sidebar_position: 8
 description: "Enumeration as a budget over category × facet × page, five staleness velocities on one product page, the blocking paths a stampede still uses, the shell/hole split for price and stock, the crawler's dynamic-render budget, where use cache: remote finally earns its round trip, and revalidateTag versus updateTag when a merchandiser publishes."
 ---
 

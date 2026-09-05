@@ -1,7 +1,7 @@
 ---
 title: "Three compilers are moving at once and they are at three different points on the same ladder — the bundler has landed, the optimizing compiler is stable and switched off, and the rendering model is opt-in with a stated future as the default"
 sidebar_label: "04b · Compiler evolution and the next default"
-sidebar_position: 61
+sidebar_position: 17
 description: "Turbopack as the shipped default and what its custom-webpack build failure really tells you, the React Compiler's stable-but-off state and why the config key is the tell, and Cache Components plus Partial Prefetching as a migration to plan rather than a feature to watch."
 ---
 

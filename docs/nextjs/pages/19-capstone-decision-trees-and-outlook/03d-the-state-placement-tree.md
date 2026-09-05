@@ -1,7 +1,7 @@
 ---
 title: "State has four possible owners and filing a value under the wrong one does not produce vague slowness — it produces a specific, reproducible bug you can name in advance, which is what makes this tree usable at two in the morning"
 sidebar_label: "03d · The state placement tree"
-sidebar_position: 43
+sidebar_position: 14
 description: "The URL, the server, a scoped client store and an optimistic overlay: the questions that assign an owner, the named bug each mis-filing produces, and why putting state in the URL re-decides the rendering tree."
 ---
 

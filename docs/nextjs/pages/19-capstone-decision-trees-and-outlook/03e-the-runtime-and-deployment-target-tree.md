@@ -1,7 +1,7 @@
 ---
 title: "The runtime branch of this tree has collapsed to a single answer — the Edge Runtime is deprecated and the migration is a deletion — so the interesting question moved to the deployment target, which is what decides how many cache layers every other tree has to reach"
 sidebar_label: "03e · The runtime and target tree"
-sidebar_position: 44
+sidebar_position: 15
 description: "The fifth tree: why runtime selection is now one answer, what proxy took over, preferredRegion's deprecation with no successor, the four deployment targets, and how all five trees constrain one another."
 ---
 
@@ -194,4 +194,4 @@ Deploy the same repository a second time onto a different target. Everything tha
 **Is the deployment-target choice a one-way door?**
 Mostly no, and deliberately so — that is what the Adapters API exists for, and it is why a community adapter could become a standard route off the native platform. What is close to irreversible is not the target but the assumptions you built while on it: code that relies on a cache handler existing, on a CDN purging on deploy, or on regions being configured somewhere you never looked. Those are unwound one by one, exactly like the static-export migration, which is the pattern to notice — the framework-level change is small and the accumulated dependence on it is the real bill.
 
-{/* FOOTER */}
+← [03d · The state placement tree](03d-the-state-placement-tree.md) · [Chapter 19 overview](01-explanation.md) · Next topic → [04 · Outlook: AI runtimes](04-outlook-deeper-ai-runtimes.md)

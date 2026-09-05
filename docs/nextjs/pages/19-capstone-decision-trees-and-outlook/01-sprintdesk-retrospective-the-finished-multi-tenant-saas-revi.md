@@ -67,7 +67,7 @@ The review that follows sorts every decision SprintDesk has made into one of thr
 
 **Pile 3 · Inherited.** Never decided. A default that has held so far because nothing has stressed it. These are the dangerous ones, because the team believes a decision was made.
 
-**01b · The decisions that are now load-bearing** *(not written yet)* does that sort for real, decision by decision. **01c** and **01d**, the checklist passes *(not written yet)*, run the corrected checklist over the application. **01e · What SprintDesk still does not have** *(not written yet)* is the half of a retrospective everybody skips: the honest list of what the application still cannot do, and which of those gaps is a decision rather than a to-do.
+[01b](01b-the-decisions-that-are-now-load-bearing.md) does that sort for real, decision by decision, and [01ba](01ba-the-inherited-pile.md) takes the third pile on its own — an inherited decision is not an appendix to the other two, it is the one nobody can point at. [01c](01c-the-checklist-pass-rendering-caching-and-the-build.md) and [01d](01d-the-checklist-pass-security-and-the-data-access-layer.md) run the corrected checklist over the application. [01e](01e-what-sprintdesk-still-does-not-have.md) is the half of a retrospective everybody skips: the honest list of what the application still cannot do, and which of those gaps is a decision rather than a to-do.
 
 ## How to run this on an application that is not SprintDesk
 
@@ -97,7 +97,7 @@ Step 4 is the one that produces work. Steps 1 and 5 are the ones that produce ar
 
 **★ Symptom: every commitment in the table above reads as obviously correct, and the exercise feels pointless.** Cause: you are reading them with the chapters that argued them still fresh. Fix: do the exercise on a codebase you did not build. The commitments are obvious in retrospect and invisible in a diff, which is exactly why they need writing down — the person who needs them is the one who arrives in eight months.
 
-**★ Symptom: the "inherited" pile is empty.** Cause: nobody looked for it, because an inherited decision does not appear anywhere — it is the absence of a line in a config file. Fix: enumerate the framework defaults the application relies on and ask of each *when did we choose this?* SprintDesk's inherited pile is not empty, and **01b** *(not written yet)* names its members.
+**★ Symptom: the "inherited" pile is empty.** Cause: nobody looked for it, because an inherited decision does not appear anywhere — it is the absence of a line in a config file. Fix: enumerate the framework defaults the application relies on and ask of each *when did we choose this?* SprintDesk's inherited pile is not empty, and [01ba](01ba-the-inherited-pile.md) names its members.
 
 ## Interview questions
 
@@ -121,10 +121,10 @@ Put the load-bearing pile where the next change has to read it — the repositor
 
 ## Where this connects
 
-- [Appendix D · the corrected checklist](../20-appendices/04-appendix-d-production-readiness-checklist-security.md) — the instrument the checklist passes of this topic run
+- [Appendix D · the corrected checklist](../20-appendices/04-appendix-d-production-readiness-checklist-security.md) — the instrument [01c](01c-the-checklist-pass-rendering-caching-and-the-build.md) and [01d](01d-the-checklist-pass-security-and-the-data-access-layer.md) run
 - [ch14 · the context file as decisions](../14-agent-driven-development/06b-what-an-agent-cannot-decide-and-what-context-files-fix.md) — where the load-bearing pile belongs afterwards
-- **02 · the contrast case study** — the same review method against a differently-shaped application
+- [02 · the contrast case study](02-case-study-2-contrast-a-ppr-driven-e-commerce-storefront.md) — the same review method against a differently-shaped application
 
 ---
 
-{/* FOOTER */}
+← [Chapter 19 overview](01-explanation.md) · Next → [01b · The decisions that are now load-bearing](01b-the-decisions-that-are-now-load-bearing.md)
