@@ -21,14 +21,6 @@
  * filename and every rebuild would orphan the copy). The query string is ignored
  * when serving a static file, so a slightly stale hash costs nothing.
  *
- * The site-wide index
- * -------------------
- * The build alone leaves the ROOT index — the one the search box uses on `/`,
- * where no technology context matches — holding a single page. This script runs
- * `scripts/merge-root-index.mjs` over the scratch build before copying, which
- * fills it with every page title in the corpus. Read that file's header for why
- * titles and not headings.
- *
  * Freshness
  * ---------
  * The copy is a snapshot. Pages written after it was generated will not appear
@@ -196,25 +188,6 @@ try {
     '[search] often another session mid-write (a duplicate route, a missing import) rather',
   );
   console.error('[search] than anything wrong here — wait and retry.');
-  process.exit(1);
-}
-
-// Gives the ROOT index its site-wide content, exactly as `yarn build` does. Both
-// call sites or neither: wiring only package.json produces a dev server whose
-// homepage search is empty while production's works — the same divergence the
-// build tuning above had to be brought back into step over.
-try {
-  execFileSync(process.execPath, [
-    path.join(root, 'scripts', 'merge-root-index.mjs'),
-    tmpOutDir,
-  ], {cwd: root, stdio: 'inherit'});
-} catch {
-  console.error(
-    '[search] the per-technology indexes were built, but merging them into the site-wide',
-  );
-  console.error(
-    '[search] root index failed. static/ was left untouched — see the error above.',
-  );
   process.exit(1);
 }
 

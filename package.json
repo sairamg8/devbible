@@ -9,7 +9,7 @@
     "start:no-search": "docusaurus start",
     "search:index": "node scripts/ensure-search-index.mjs --force",
     "status": "node scripts/status.mjs",
-    "build": "DOCUSAURUS_SSG_WORKER_THREAD_COUNT=4 DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 docusaurus build && node scripts/merge-root-index.mjs build",
+    "build": "DOCUSAURUS_SSG_WORKER_THREAD_COUNT=4 DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 docusaurus build",
     "build:fast": "FAST_BUILD=true DOCUSAURUS_SSG_WORKER_THREAD_COUNT=4 DOCUSAURUS_SSG_WORKER_THREAD_RECYCLER_MAX_MEMORY=500000000 docusaurus build --no-minify",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
