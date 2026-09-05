@@ -9,8 +9,10 @@ sidebar_position: 2
 > Verified: 2026-09-04 against the Next.js [Turbopack API reference](https://nextjs.org/docs/app/api-reference/turbopack)
 > (docs build `version: 16.3.4`, `lastUpdated: 2026-08-03`). Documentation-verified;
 > **no timings, no sandbox run**. Target: **Next.js 16.3.4 · Turbopack default since 16.0**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
+> — the config-option table now comes from the [`turbopack` config reference](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack) (`lastUpdated: 2026-08-25`), which is three weeks newer than the overview this page was written against and is the list that is maintained.
 
-**Turbopack's stable configuration surface is five keys, and that is the design rather than an omission.** A single
+**Turbopack's stable configuration surface is small — five keys in the maintained option table, plus `ignoreIssue` documented separately — and that is the design rather than an omission.** A single
 unified module graph does not expose a compiler lifecycle, so the extension points webpack offered — a `webpack()`
 function, a plugin array — have no counterpart and cannot get one. What survives is the subset that maps onto
 per-module work: loaders, aliases, extensions, a resolution root. This page covers that surface, the Babel rule that
@@ -69,13 +71,29 @@ module.exports = {
 }
 ```
 
-| Key | What it does |
-|---|---|
-| `rules` | Define additional **webpack loaders** for file transformations |
-| `resolveAlias` | Manual aliases, *"similar to `webpack.resolve.alias`"* |
-| `resolveExtensions` | Change or extend extensions for module resolution |
-| `ignoreIssue` | *"Suppress specific Turbopack errors and warnings from the CLI output and error overlay"* |
-| `root` | The filesystem root used for module resolution |
+| Key | What it does | Where it is documented |
+|---|---|---|
+| `root` | *"Sets the application root directory. Should be an absolute path."* | config reference |
+| `rules` | *"List of supported webpack loaders to apply when running with Turbopack."* | config reference |
+| `resolveAlias` | *"Map aliased imports to modules to load in their place."* | config reference |
+| `resolveExtensions` | *"List of extensions to resolve when importing files."* | config reference |
+| `debugIds` | *"Enable generation of debug IDs in JavaScript bundles and source maps."* Added in **16.0.0** | config reference |
+| `ignoreIssue` | *"Suppress specific Turbopack errors and warnings from the CLI output and error overlay"* | **overview page only** — see below |
+
+⚠️ **The two Turbopack doc pages disagree about this list, and it is worth knowing which to trust for what.**
+The dedicated [`turbopack` config reference](https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack)
+(`version: 16.3.4`, `lastUpdated: 2026-08-25`) has an Options table of **five** entries — `root`, `rules`,
+`resolveAlias`, `resolveExtensions`, `debugIds` — and **`ignoreIssue` is not among them**. The
+[Turbopack overview](https://nextjs.org/docs/app/api-reference/turbopack) (`lastUpdated: **2026-08-03**`, three weeks
+older) lists **four** under its Configuration heading — `rules`, `resolveAlias`, `resolveExtensions` and
+`ignoreIssue`, the last linking to its own `turbopackIgnoreIssue` reference page — and mentions neither `root` nor
+`debugIds` there.
+
+🔴 **Neither list is wrong; the config reference is simply the one that is maintained as the option table.** The
+practical rule: **take the option table from the config reference, and treat the overview's Configuration section as
+prose that lags it.** `ignoreIssue` is real — it has a reference page of its own — but a page that reproduces the
+overview's four and stops will silently omit `debugIds` and `root`, which is how this table was wrong before this
+validation pass.
 
 🔴 **Note what `rules` accepts: webpack *loaders*.** Loaders are supported; plugins are not, and the docs say so
 flatly:
