@@ -19,6 +19,10 @@ description: "Why a CRUD API in the App Router has two renderings of every failu
 
 Everything else on this page is a consequence of that sentence. It is the same argument [the Data Access Layer](04-the-data-access-layer.md) makes about authorization — one place, so it cannot be forgotten, which is [04c · the ownership predicate](04c-the-ownership-predicate.md) — applied to failure instead of to access.
 
+🔴 **This supersedes the two earlier error vocabularies in the chapter, and that is by design rather than by accident.** [04](04-the-data-access-layer.md) introduced DAL-local classes (`Unauthorized`, `NotFound`, `DomainInvalid`, `Conflict`, `VersionConflict`, `Retryable`) because a page about the Data Access Layer needs a way to *name* a failure before the reader has met an envelope. [05ca](05ca-mapping-sqlstate-to-status-codes.md) introduced `DomainError(status, code, message, field)` because a SQLSTATE translation needs something to carry its result. **Ship one of the three, and make it this one.**
+
+The reason is the argument this whole page is built on: `DomainError` carries a `status`, and a `status` is an HTTP concept. A service layer that hands back `{ status: 409 }` has decided that HTTP is its only caller — so the Server Action importing it has to reverse-engineer an HTTP status out of a function call in its own process, which is the exact coupling the two-renderings split exists to prevent. `ApiFailure` carries a `kind`; the Route Handler turns a kind into a status and the Server Action turns the same kind into a typed return value. The mapping tables on the earlier pages stay correct and useful — it is only the carrier that consolidates here.
+
 ```ts
 // lib/errors.ts — the vocabulary, and it mentions neither HTTP nor React
 export type FailureKind =

@@ -121,12 +121,15 @@ export class DomainInvalid extends Error {}
 /** The current state of the resource makes this impossible. → 409 */
 export class Conflict extends Error {}
 
-/** A stated precondition was false. → 412 */
+/** A precondition stated in a REQUEST HEADER was false — If-Match. → 412 */
+/** A version passed as an argument or a body field that no longer matches is a `Conflict`. → 409 */
 export class VersionConflict extends Error {}
 
 /** Transient. The DAL retries; if it reaches a transport, something is wrong. */
 export class Retryable extends Error {}
 ```
+
+⚠️ **This is the DAL's *local* vocabulary, and it is not the shape that goes on the wire.** The chapter defines exactly one response envelope and it belongs to [10 · Errors and one response shape](10-errors-and-one-response-shape.md), which supersedes both this class list and the `DomainError` carrier introduced in [05ca](05ca-mapping-sqlstate-to-status-codes.md). The progression is deliberate rather than three competing designs — this page needs a way to *name* failures before the reader has met the envelope, and topic 05 needs one to carry a SQLSTATE translation. Topic 10 then unifies all of them into `ApiFailure`, and its argument for doing so is the reason to prefer it: a class that carries `status: 409` has already decided HTTP is its only caller, which is exactly what a Server Action cannot use. 🔴 **In real code, define the envelope once, topic 10's way.** These classes are how the idea is introduced, not a second design to maintain.
 
 **`NotFound` covers two situations on purpose** — the card is gone, and the card is not yours. That collapse is the disclosure decision from [01b](01b-the-six-routes-and-the-codes-they-commit-to.md), and putting it in the type means no transport can un-collapse it even if the author wanted to.
 
@@ -261,4 +264,4 @@ It moves the majority of the logic into plain async functions, which are the onl
 
 ---
 
-← [03d · What the pooler removes](03d-what-does-not-survive-the-pooler.md) · Next → [04b · What `server-only` does not protect](04b-what-server-only-does-not-protect.md)
+← [03d · What the pooler removes](03d-what-does-not-survive-the-pooler.md) · [Chapter 16 overview](01-explanation.md) · Next → [04b · What `server-only` does not protect](04b-what-server-only-does-not-protect.md)

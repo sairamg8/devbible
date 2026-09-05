@@ -16,11 +16,9 @@ description: "The mapping table with the reasoning behind each status, why 23503
 
 ## The mapping
 
-```ts
-// lib/db/constraint-map.ts
-import 'server-only'
-import { asPgError } from './pg-error'
+⚠️ **`DomainError` is topic 05's local carrier for a SQLSTATE translation, not the chapter's envelope.** The single response shape is [10 · Errors and one response shape](10-errors-and-one-response-shape.md)'s `ApiFailure`, and it supersedes this class and the DAL-local error classes in [04](04-the-data-access-layer.md). What is durable on this page is the *mapping* — which SQLSTATE means which outcome — and that survives whatever type carries it. 🔴 **Do not ship two error types.** Read the translation here, then define it once on topic 10's shape.
 
+```ts
 export class DomainError extends Error {
   constructor(
     readonly status: number,
@@ -209,4 +207,4 @@ Because it decides what "already exists" means to a user. A plain `UNIQUE (board
 
 ---
 
-← [05c · Reading a constraint violation](05c-constraint-violations-and-sqlstate.md) · Next → [05d · Idempotency keys for a retried POST](05d-idempotency-keys-for-a-retried-post.md)
+← [05c · Reading a constraint violation](05c-constraint-violations-and-sqlstate.md) · [Chapter 16 overview](01-explanation.md) · Next → [05d · Idempotency keys for a retried POST](05d-idempotency-keys-for-a-retried-post.md)
