@@ -187,7 +187,7 @@ For cards the calculus is different and worth stating: a `CardRepresentation` is
 
 **★ Symptom: a column nobody exposed appears in an API response after an unrelated migration.** Cause: the DAL returns rows, so `SELECT *` widened. Nobody edited a TypeScript file and no review mentioned the API. Fix: name the columns in one shared object and map through a function typed against the contract — then a new column requires an edit to be exposed and no edit to stay hidden.
 
-**★ Symptom: `deletedAt` is visible to clients.** Cause: it is on the table and the projection was `select()`. Fix: it is deliberately absent from `CARD_COLUMNS`, which is what lets **topic 08 · DELETE** *(not written yet)* change how soft delete works without touching the contract. A column the contract never mentioned is a column you are still free to redesign.
+**★ Symptom: `deletedAt` is visible to clients.** Cause: it is on the table and the projection was `select()`. Fix: it is deliberately absent from `CARD_COLUMNS`, which is what lets [topic 08 · DELETE](08-delete.md) change how soft delete works without touching the contract. A column the contract never mentioned is a column you are still free to redesign.
 
 **★ Symptom: the list endpoint and the item endpoint return different field sets and nobody decided that.** Cause: two queries each wrote their own column list. Fix: one exported `CARD_COLUMNS` object that both spread. If they genuinely should differ, that is two named projections and a line in the contract, not two ad-hoc selects.
 

@@ -152,6 +152,8 @@ function between(before: number | null, after: number | null): number {
 
 This makes a reorder a **single-row update** rather than a renumbering of every card below the insertion point, which is the whole reason `position` is `double precision` rather than `integer` in the schema. It also removes the `max + 1` race for insertions in the middle, because the two neighbours are values the client already read and sent — though it introduces its own conflict, where two users drop cards into the same gap and both compute the same midpoint.
 
+🔴 **The sparse-double scheme is defined here, on the create side, because this is where the value is first minted** — the spacing constant, the `between` midpoint, the binary64 bound below and the renormalisation statement are all stated once, in this chunk. What happens when a *move* collides rather than a create — why a tie between two reordered cards is usually harmless rather than a bug, and why a reorder is a move rather than a patch — is [07g · `position` and `updatedAt`](07g-position-collisions-and-updatedat.md), which builds on this section rather than restating it.
+
 ## How many midpoints a `double precision` column actually survives
 
 The PostgreSQL numeric-types reference is explicit about what the column is:
@@ -189,6 +191,8 @@ if ((before !== null && mid <= before) || (after !== null && mid >= after)) {
 ```
 
 The wider spacing constant matters here too. Starting at `1024` rather than `1` buys ten free midpoints before any renormalisation is needed on freshly-appended cards, at no storage cost.
+
+The same 53-bit bound governs the update path, where midpoints are consumed much faster than on create because every drag into an existing gap spends one — that is [07g](07g-position-collisions-and-updatedat.md), and the renormalisation statement above is the one it calls.
 
 ## Every `ORDER BY` on `position` needs a tiebreaker anyway
 

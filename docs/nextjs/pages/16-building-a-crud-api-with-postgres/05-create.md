@@ -91,9 +91,9 @@ Four things about that file are deliberate.
 
 **The `try` around `request.json()` is not defensive padding.** `Request.json()` rejects on a syntactically invalid body, and that rejection happens *before* any schema sees the input. Without the catch, a truncated body produces an unhandled rejection and a 500 for what is unambiguously a client error.
 
-**The handler shapes no data.** `createCard` returns the projection the Data Access Layer chose; the handler serialises it and stops. That is the rule the chapter is built on — see **the Data Access Layer, topic 04** *(not written yet)*.
+**The handler shapes no data.** `createCard` returns the projection the Data Access Layer chose; the handler serialises it and stops. That is the rule the chapter is built on — see [04 · The Data Access Layer](04-the-data-access-layer.md).
 
-**The error bodies here are illustrative of status choice, not the chapter's canonical envelope.** The shape a client should actually rely on — machine-readable `code`, a safe `message`, a correlation id — is argued in [ch7 · Designing the error envelope](../07-error-handling-loading-states-and-resilience/04b-designing-the-error-envelope.md), and where the translation from a thrown domain error to that envelope lives is **the single error envelope, topic 10** *(not written yet)*. Do not build a second one here.
+**The error bodies here are illustrative of status choice, not the chapter's canonical envelope.** The shape a client should actually rely on — machine-readable `code`, a safe `message`, a correlation id — is argued in [ch7 · Designing the error envelope](../07-error-handling-loading-states-and-resilience/04b-designing-the-error-envelope.md), and where the translation from a thrown domain error to that envelope lives is [10 · Errors and one response shape](10-errors-and-one-response-shape.md). Do not build a second one here.
 
 ## The DAL side, and where `RETURNING` earns its place
 
@@ -257,4 +257,6 @@ Yes, when the row does not exist by the time you respond. §15.3.3 describes 202
 **★ Why is it safe to put a cached `GET` and this `POST` in the same `route.ts`?**
 Because the caching decision in Next.js is per method, not per file. The Route Handlers guide states it twice, the second time specifically to close this question: *"Other supported HTTP methods are **not** cached, even if they are placed alongside a `GET` method that is cached, in the same file."* The file is a routing artefact; the method exports are independent handlers with independent caching semantics. What you cannot do is put a `route.js` at the same path as a `page.js` — that is a hard conflict.
 
-{/* FOOTER */}
+---
+
+← [04e · One function per use case](04e-function-per-use-case.md) · [Chapter index](01-explanation.md) · Next → [05b · Validation at the boundary](05b-validating-at-the-boundary-with-zod.md)

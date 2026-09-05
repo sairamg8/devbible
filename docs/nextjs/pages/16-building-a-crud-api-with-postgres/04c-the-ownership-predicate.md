@@ -219,7 +219,7 @@ export async function setCardStatus(
 }
 ```
 
-⚠️ **That last function has a genuine ambiguity and it is worth naming rather than hiding.** Zero rows can mean three things: no such card, not your card, or the version did not match. The first two must be indistinguishable; the third should be a `412`, not a `404`. Resolving it needs a second, predicate-scoped read to ask "does this card exist *for you*?" and only then to conclude the version was stale. **Topic 07 · UPDATE** *(not written yet)* owns that resolution; what this page owns is the reason the ambiguity exists at all, which is that the predicate deliberately makes two of the three cases identical.
+⚠️ **That last function has a genuine ambiguity and it is worth naming rather than hiding.** Zero rows can mean three things: no such card, not your card, or the version did not match. The first two must be indistinguishable; the third is a `409`, not a `404` — and 🔴 **not a `412` either.** RFC 9110 defines 412 narrowly: *"one or more conditions given in the request header fields evaluated to false when tested on the server"*. A version arriving as a function argument or a body field is not a request header field, so the precondition machinery never ran; 409's own section names this exact case, *"if versioning were being used and the representation being PUT included changes to a resource that conflict with those made by an earlier (third-party) request"*. `412` is reserved for the `If-Match` path in [07e](07e-etag-if-match-and-412.md). Resolving it needs a second, predicate-scoped read to ask "does this card exist *for you*?" and only then to conclude the version was stale. [Topic 07d · Optimistic concurrency with a version column](07d-optimistic-concurrency-with-a-version-column.md) owns that resolution; what this page owns is the reason the ambiguity exists at all, which is that the predicate deliberately makes two of the three cases identical.
 
 ## Gotchas
 
@@ -239,7 +239,7 @@ export async function setCardStatus(
 
 **★ Symptom: the collection route returns nothing for a board the caller is definitely on.** Cause: the wrong helper. `callerOwnsCard` correlates on `cards.board_id`, and a list query filtered by a board id needs the uncorrelated `callerOwnsBoard`, which takes the id directly. Fix: two helpers with two shapes and names that say which is which — this is the one place where "just make it generic" costs more than it saves.
 
-**★ Symptom: a soft-deleted card is returned to its owner.** Cause: `isNull(cards.deletedAt)` is not part of the predicate helper and was omitted from that one query. Fix: it is deliberately *not* in the helper, because a restore endpoint legitimately needs to see deleted rows — so it belongs in each query, and a DAL function that reads live cards without it is a review failure. **Topic 08 · DELETE** *(not written yet)* owns the semantics.
+**★ Symptom: a soft-deleted card is returned to its owner.** Cause: `isNull(cards.deletedAt)` is not part of the predicate helper and was omitted from that one query. Fix: it is deliberately *not* in the helper, because a restore endpoint legitimately needs to see deleted rows — so it belongs in each query, and a DAL function that reads live cards without it is a review failure. [Topic 08 · DELETE](08-delete.md) owns the semantics, and what that predicate costs every read is [08b](08b-what-soft-delete-costs-every-read.md).
 
 ## Interview questions
 

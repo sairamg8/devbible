@@ -118,7 +118,7 @@ Illegitimate, because each changes the shape:
 { skipOwnershipCheck: boolean }   // no comment
 ```
 
-The `sort` field is the instructive case, because it is a parameter that *looks* like `orderBy` and is not: it is a member of a closed set that the function maps to a specific `ORDER BY` it wrote itself, so every value produces a query shape you have enumerated and can index. A string that becomes SQL is a different thing wearing the same name. **Topic 06 · READ** *(not written yet)* owns the sorting and filtering surface in full.
+The `sort` field is the instructive case, because it is a parameter that *looks* like `orderBy` and is not: it is a member of a closed set that the function maps to a specific `ORDER BY` it wrote itself, so every value produces a query shape you have enumerated and can index. A string that becomes SQL is a different thing wearing the same name. [Topic 06b · Filtering and sorting without injection](06b-filtering-and-sorting-without-injection.md) owns the sorting and filtering surface in full.
 
 ⚠️ **`includeDeleted` deserves a specific warning**, because it is the most reasonable-looking item on that list. A boolean that toggles `deleted_at IS NULL` means every caller decides soft-delete semantics, and the caller who gets it wrong is the one whose endpoint shows deleted cards to customers. `restoreCard` and an explicit `listDeletedBoardCards` are two functions with two names and no flag — and the reason the list is nine functions long rather than six.
 
@@ -183,4 +183,6 @@ Only after checking whether the two orderings imply different cursors and differ
 **★ What is the single strongest argument for this shape, if you had to pick one?**
 That it makes the security question answerable by reading one file. Every other benefit — indexability, error specificity, testability, a contract that cannot drift — is real and is a consequence of the same property: the set of things that can happen to this resource is written down, in one place, as an export list. A layer whose behaviour depends on what callers pass has replaced a readable artefact with an investigation, and investigations do not happen on a Tuesday afternoon when someone is adding an endpoint.
 
-{/* FOOTER */}
+---
+
+← [04d · Projections, not rows](04d-projections-not-rows.md) · [Chapter index](01-explanation.md) · Next → [05 · CREATE](05-create.md)

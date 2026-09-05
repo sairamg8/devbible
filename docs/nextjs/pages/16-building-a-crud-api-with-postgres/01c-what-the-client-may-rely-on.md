@@ -123,7 +123,7 @@ Two decisions, both worth making now because both are painful to change.
 
 **A wrapper, not a top-level array.** A bare `[…]` has nowhere to put pagination, nowhere to put a count, and nowhere to put anything you have not thought of yet — so the first time you need one of those, you break every client. The wrapper costs one level of indirection and buys unlimited additive room.
 
-**A cursor, not an offset.** The cursor is opaque by contract, which is what lets topic 06 change it from an encoded `(createdAt, id)` pair to something else without a version bump. Offset pagination is the thing that looks simpler and degrades at depth; that argument, and the keyset query, is **topic 06 · READ** *(not written yet)*.
+**A cursor, not an offset.** The cursor is opaque by contract, which is what lets topic 06 change it from an encoded `(createdAt, id)` pair to something else without a version bump. Offset pagination is the thing that looks simpler and degrades at depth; that argument is [06c](06c-offset-pagination-and-why-it-degrades.md), and the keyset query is [06d](06d-keyset-pagination.md).
 
 Note that the ordering the cursor encodes is the same `(created_at, id)` the index in [02](02-the-schema-and-the-migration-story.md) is built on. That is not a coincidence — the contract's ordering promise, the pagination mechanism and the index are one decision written in three places, and if they ever disagree the symptom is a page that silently skips rows.
 

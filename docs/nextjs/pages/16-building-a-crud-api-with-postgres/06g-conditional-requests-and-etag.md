@@ -27,7 +27,7 @@ And on how to build a strong one:
 
 > *"The best are based on strict revision control, wherein each change to a representation always results in a unique node name and revision identifier being assigned before the representation is made accessible to GET."*
 
-🔴 **That sentence describes the `version` column the chapter schema already carries.** `version integer NOT NULL DEFAULT 1`, incremented on every update by topic 07's optimistic-concurrency machinery, is a revision identifier assigned before the new state is readable. It is exactly the shape §8.8.1 names as best.
+🔴 **That sentence describes the `version` column the chapter schema already carries.** `version integer NOT NULL DEFAULT 1`, incremented on every update by the optimistic-concurrency machinery of [07d](07d-optimistic-concurrency-with-a-version-column.md), is a revision identifier assigned before the new state is readable. It is exactly the shape §8.8.1 names as best.
 
 But §8.8.1 adds the caveat that decides strong versus weak here:
 
@@ -38,6 +38,8 @@ If `GET /api/cards/{id}` has exactly one representation, `version` is a strong v
 > *"If an origin server provides an entity tag for a representation and the generation of that entity tag does not satisfy all of the characteristics of a strong validator (Section 8.8.1), then the origin server MUST mark the entity tag as weak by prefixing its opaque value with 'W/' (case-sensitive)."*
 
 ## A card's `ETag`
+
+🔴 **This is the chapter's only definition of the tag.** `lib/http/etag.ts` is written here, on the read side, because this is where the tag is first emitted — and the write side imports the same function rather than restating it. [07e · ETag, If-Match, 412](07e-etag-if-match-and-412.md) calls `cardETag` to fill the `ETag` header on a successful PATCH and on the 412 it returns when the precondition fails; if the two sides ever computed a tag differently, a client would revalidate against a value the writer never minted.
 
 ```ts
 // lib/http/etag.ts
@@ -203,7 +205,7 @@ export function cardPageETag(items: { id: string; version: number }[]): string {
 
 ## Where `If-Match` hands over
 
-`If-None-Match` is the read-side precondition. Its write-side sibling, `If-Match`, is the mechanism for *"do not apply this update unless the resource is still in the state I read"*, and it produces `412 Precondition Failed` rather than 409. **That is topic 07's material** — the lost-update problem, the `version` column, and the 409-versus-412 argument — and this page deliberately stops at the boundary.
+`If-None-Match` is the read-side precondition. Its write-side sibling, `If-Match`, is the mechanism for *"do not apply this update unless the resource is still in the state I read"*, and it produces `412 Precondition Failed` rather than 409. **That is [07e · ETag, If-Match, 412](07e-etag-if-match-and-412.md)** — the lost-update problem of [07c](07c-the-lost-update.md), the `version` column of [07d](07d-optimistic-concurrency-with-a-version-column.md), and the 409-versus-412 argument — and this page deliberately stops at the boundary, handing over `cardETag` rather than a second copy of it.
 
 One thing worth carrying across: §13.1.2 notes that `If-None-Match: *` also serves a write purpose —
 
@@ -233,7 +235,7 @@ One thing worth carrying across: §13.1.2 notes that `If-None-Match: *` also ser
 
 **★ Symptom: `Vary` was omitted and a shared cache served a compressed body to a client that cannot decompress it.** Cause: the representation depends on `Accept-Encoding` and nothing said so. Fix: send `Vary` naming every request header that selects the representation. This matters even under `private`, because a private cache is still a cache and still keys on what you tell it to.
 
-**★ Symptom: `If-Match` was implemented on the GET endpoint and does nothing useful.** Cause: `If-Match` is a precondition for unsafe methods — it exists to make an update conditional on the resource not having changed. Fix: it belongs on PATCH and PUT and produces 412, which is topic 07's material. On a read, the precondition you want is `If-None-Match`.
+**★ Symptom: `If-Match` was implemented on the GET endpoint and does nothing useful.** Cause: `If-Match` is a precondition for unsafe methods — it exists to make an update conditional on the resource not having changed. Fix: it belongs on PATCH and PUT and produces 412, which is [07e](07e-etag-if-match-and-412.md). On a read, the precondition you want is `If-None-Match`.
 
 **★ Symptom: a client uses the `ETag` value as a version number and starts incrementing it.** Cause: the tag was constructed transparently as `"<id>.<version>"`, so its structure invited interpretation. §8.8.3 is explicit that *"Since the value is opaque, there is no need for the client to be aware of how each entity tag is constructed."* Fix: document it as opaque, and if the coupling would be expensive to break, hash it so there is nothing to parse. The readable form is a debugging convenience you are trading for a contract you did not intend to offer.
 
@@ -255,6 +257,8 @@ Because a collection has no revision identifier. A card has `version`, increment
 Two things, and both only in production. The header is a list — §13.1.2's own examples include `If-None-Match: "xyzzy", "r2d2xxxx", "c3piozzzz"` — so a client holding several cached representations of the resource sends all of them, and a whole-string comparison matches none. And the comparison function is wrong: §13.1.2 says a recipient *"MUST use the weak comparison function when comparing entity tags for If-None-Match"*, which ignores the `W/` prefix on either side, so a client returning `W/"abc"` against a stored `"abc"` should match and will not. Both failures degrade silently to a 200, which is why the implementation passes every test written against a single-tag client and quietly never fires for real ones. The third case worth handling is `*`, which §13.1.2 defines as false *"if the origin server has a current representation for the target resource"* — so for an existing card, `*` means send the 304.
 
 **★ Where does `If-Match` fit, and why is it not on this page?**
-`If-Match` is the write-side precondition: it makes an unsafe method conditional on the resource still being in the state the client read, which is the standardised solution to the lost-update problem and produces `412 Precondition Failed` when it does not hold. That is topic 07's territory — PUT versus PATCH, the `version` column as an optimistic-concurrency token, and the argument about when a conflict is 409 and when it is 412 — and splitting it across two pages would give the reader two half-answers. What does belong here is the read-side sibling and one write-side special case: §13.1.2 notes that `If-None-Match: *` prevents an unsafe method from *"inadvertently modifying an existing representation of the target resource when the client believes that the resource does not have a current representation"*, which is the specification's own answer to *create-only, never replace* — the exact question a client-supplied identifier raises in [05e](05e-client-supplied-ids-and-identifier-choice.md).
+`If-Match` is the write-side precondition: it makes an unsafe method conditional on the resource still being in the state the client read, which is the standardised solution to the lost-update problem and produces `412 Precondition Failed` when it does not hold. That is [07e](07e-etag-if-match-and-412.md) — PUT versus PATCH, the `version` column as an optimistic-concurrency token, and the argument about when a conflict is 409 and when it is 412 — and splitting it across two pages would give the reader two half-answers. What does belong here is the read-side sibling and one write-side special case: §13.1.2 notes that `If-None-Match: *` prevents an unsafe method from *"inadvertently modifying an existing representation of the target resource when the client believes that the resource does not have a current representation"*, which is the specification's own answer to *create-only, never replace* — the exact question a client-supplied identifier raises in [05e](05e-client-supplied-ids-and-identifier-choice.md).
 
-{/* FOOTER */}
+---
+
+← [06f · The N+1 on a card list](06f-the-n-plus-1-on-a-card-list.md) · [Chapter index](01-explanation.md) · Next → [07 · UPDATE — PUT vs PATCH](07-update.md)

@@ -228,7 +228,7 @@ export async function POST(request: NextRequest, ctx: RouteContext<'/api/boards/
 }
 ```
 
-The two log calls are the point as much as the two responses: a constraint rejection is **information**, not an incident, and it must not share a severity with a bug. Where that translation lives so it is not repeated per handler is **the single error envelope, topic 10** *(not written yet)*; the shape of `errorResponse` is [ch7 · Designing the error envelope](../07-error-handling-loading-states-and-resilience/04b-designing-the-error-envelope.md).
+The two log calls are the point as much as the two responses: a constraint rejection is **information**, not an incident, and it must not share a severity with a bug. Where that translation lives so it is not repeated per handler is [10 · Errors and one response shape](10-errors-and-one-response-shape.md); the shape of `errorResponse` is [ch7 · Designing the error envelope](../07-error-handling-loading-states-and-resilience/04b-designing-the-error-envelope.md).
 
 ## Gotchas
 

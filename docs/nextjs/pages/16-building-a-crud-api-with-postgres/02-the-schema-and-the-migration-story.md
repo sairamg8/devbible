@@ -81,7 +81,7 @@ Three separate things in one line.
 
 **`references`** — a real `FOREIGN KEY` constraint, so a `POST` naming a board that does not exist is rejected by the database as `23503 foreign_key_violation` before any application code has an opinion. That is the subject of [02b](02b-constraints-are-the-first-validation-layer.md).
 
-**`onDelete: 'cascade'`** — deleting a board deletes its cards. This is the one clause in the schema with a genuine argument against it: cascade is a data-loss primitive, and it fires from a statement that never mentions `cards`. It is right here because a card outside a board is meaningless — there is no orphan state to preserve — but it is worth knowing that the alternative, `restrict`, turns "delete this board" into "delete every card first", which is a client-visible workflow rather than a schema detail. **Topic 08 · DELETE** *(not written yet)* owns the behaviour; the schema owns the choice.
+**`onDelete: 'cascade'`** — deleting a board deletes its cards. This is the one clause in the schema with a genuine argument against it: cascade is a data-loss primitive, and it fires from a statement that never mentions `cards`. It is right here because a card outside a board is meaningless — there is no orphan state to preserve — but it is worth knowing that the alternative, `restrict`, turns "delete this board" into "delete every card first", which is a client-visible workflow rather than a schema detail. [Topic 08c · Cascades and referential integrity](08c-cascades-and-referential-integrity.md) owns the behaviour; the schema owns the choice.
 
 🔴 **A foreign key needs an index on the referencing side, and Postgres does not create one for you.** It creates a unique index for the *referenced* primary key, not for `cards.board_id`. Without one, every delete of a board scans `cards` to check the constraint, and every ownership join does the same. Here the composite index below happens to lead with `board_id`, so it serves that purpose — which is worth noticing rather than assuming, because on a table where the FK column is not the leading column of any index, this is a silent full-scan on every parent delete.
 
@@ -121,7 +121,7 @@ The reason for a float rather than an integer is one query: inserting a card bet
 
 ### `version: integer().notNull().default(1)`
 
-Optimistic concurrency. The column exists here because it is schema; **topic 07 · UPDATE** *(not written yet)* owns what it means. The two things the schema commits to are that it starts at 1 and that it is `NOT NULL`, so that `WHERE id = $1 AND version = $2` is never a comparison against null — which would match nothing and produce a `412` that no client could explain.
+Optimistic concurrency. The column exists here because it is schema; [topic 07d · Optimistic concurrency with a version column](07d-optimistic-concurrency-with-a-version-column.md) owns what it means. The two things the schema commits to are that it starts at 1 and that it is `NOT NULL`, so that `WHERE id = $1 AND version = $2` is never a comparison against null — which would match nothing and produce a `409` that no client could explain. (A version supplied as a body field is a `409`, not a `412`: RFC 9110 scopes 412 to *"conditions given in the request header fields"*, which is the `If-Match` path in [07e](07e-etag-if-match-and-412.md).)
 
 ### `createdAt` / `updatedAt: timestamp({ withTimezone: true })`
 
@@ -138,7 +138,7 @@ Optimistic concurrency. The column exists here because it is schema; **topic 07 
 
 ### `deletedAt: timestamp({ withTimezone: true })` — nullable, and the index it implies
 
-Soft delete. **Topic 08 · DELETE** *(not written yet)* owns the semantics; the schema's contribution is the column and one consequence people miss: **once `deleted_at` exists, every read query in the API gains `AND deleted_at IS NULL`**, which means the index below is answering a filtered query it was not built for. The remedy is a partial index, and the reason it is not in the canonical block above is that it only pays once soft delete is actually in use:
+Soft delete. [Topic 08 · DELETE](08-delete.md) owns the semantics and [08b](08b-what-soft-delete-costs-every-read.md) owns the cost; the schema's contribution is the column and one consequence people miss: **once `deleted_at` exists, every read query in the API gains `AND deleted_at IS NULL`**, which means the index below is answering a filtered query it was not built for. The remedy is a partial index, and the reason it is not in the canonical block above is that it only pays once soft delete is actually in use:
 
 ```sql
 -- The index the list query wants once soft delete exists.

@@ -127,7 +127,7 @@ Both codes are correct English and only one of them is correct here.
 
 `403` tells an unauthenticated stranger *"this card exists and you may not see it"*. That is a disclosure: it turns your API into an oracle for card ids, which for a UUID matters less than it does for a sequential id but still leaks the existence of boards, and by extension of customers. `404` tells them nothing.
 
-The rule this chapter follows, argued in full in [ch10 · 06g](../10-forms-authentication-and-security-hardening/06g-milestone-hide-do-not-forbid.md) and carried into **topic 11 · Ownership on the API surface** *(not written yet)*:
+The rule this chapter follows, argued in full in [ch10 · 06g](../10-forms-authentication-and-security-hardening/06g-milestone-hide-do-not-forbid.md) and carried into [topic 11 · Ownership on the API surface](11-ownership-on-the-api-surface.md):
 
 - **`401`** — you have not told me who you are. Recoverable by signing in.
 - **`404`** — you have told me who you are, and for you this resource does not exist. Not recoverable, and deliberately indistinguishable from a card that was never created.
@@ -181,7 +181,7 @@ function toResponse(reason: unknown): Response {
 
 No `PUT`, `PATCH` or `POST` is exported from that file yet — those are topics 05 and 07 — and the framework will already answer them with `405` and an `Allow` header naming `GET` and `DELETE`. That is the contract holding before the implementation exists, which is the whole argument of [01](01-the-resource-contract.md) in one observable behaviour.
 
-The body of an error response is **the single error envelope, topic 10** *(not written yet)*. This page commits to the codes; that topic commits to what travels with them.
+The body of an error response is [the single error envelope, topic 10](10-errors-and-one-response-shape.md). This page commits to the codes; that topic commits to what travels with them.
 
 ## Gotchas
 

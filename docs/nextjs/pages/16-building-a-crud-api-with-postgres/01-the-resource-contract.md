@@ -200,4 +200,6 @@ Only the parts you are willing to be unable to change. A field's name, type, nul
 **★ What does it mean for the contract file to have no imports?**
 That it can be consumed by things that cannot run your server — a test, a client SDK, a documentation build, another team's repository. The moment the contract imports the Drizzle schema, it is no longer a statement about the API; it is a statement about the database that happens to be reachable over HTTP, and it stops compiling anywhere the driver does not. The DAL's return types are derived from the schema, which is correct and covered in [04d](04d-projections-not-rows.md); the contract is the other direction, and keeping the two apart is what lets you change one without the other.
 
-{/* FOOTER */}
+---
+
+← [Chapter index](01-explanation.md) · Next → [01b · Six routes, and the codes](01b-the-six-routes-and-the-codes-they-commit-to.md)

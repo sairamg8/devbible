@@ -180,7 +180,7 @@ CHECK (position = position)
 CHECK (position > '-Infinity'::float8 AND position < 'Infinity'::float8)
 ```
 
-**★ Symptom: two entry points disagree about the status for the same violation.** Cause: the mapping was written inside the Route Handler, so the Server Action grew its own copy that drifted. Fix: `toDomainError` returns a `DomainError` carrying a status and a code; the handler renders it as an HTTP response and the action renders it as a typed return value. One mapping, two renderings — which is exactly the split **the single error envelope, topic 10** *(not written yet)* formalises.
+**★ Symptom: two entry points disagree about the status for the same violation.** Cause: the mapping was written inside the Route Handler, so the Server Action grew its own copy that drifted. Fix: `toDomainError` returns a `DomainError` carrying a status and a code; the handler renders it as an HTTP response and the action renders it as a typed return value. One mapping, two renderings — which is exactly the split [10 · Errors and one response shape](10-errors-and-one-response-shape.md) formalises.
 
 **★ Symptom: an unknown SQLSTATE reaches the client as a 409.** Cause: the `switch` had a catch-all arm that returned a `DomainError` instead of `null`, so serialization failures (`40001`), deadlocks (`40P01`) and disk-full conditions were all reported as conflicts the user could resolve by retrying with different input. Fix: the default arm returns `null` and the caller turns `null` into a logged 500. Only codes you have deliberately reasoned about get a 4xx. `40001` in particular is a *retry* signal, not a client error, and topic 09 owns it.
 

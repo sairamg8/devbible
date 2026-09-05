@@ -158,7 +158,7 @@ This is the part that decides whether topic 05c exists, and it does.
 
 > *"Schema validation (zod or similar) only checks the *shape* of the input. A well-formed `Item` object can still refer to a row the caller does not own."*
 
-A perfectly valid `boardId` belonging to another team passes every check in `CreateCardRequest`. The ownership predicate lives in **the Data Access Layer, topic 04** *(not written yet)*, and no amount of schema work substitutes for it.
+A perfectly valid `boardId` belonging to another team passes every check in `CreateCardRequest`. The ownership predicate lives in the Data Access Layer — [04c · The ownership predicate](04c-the-ownership-predicate.md) — and no amount of schema work substitutes for it.
 
 **So the database is your last validator, and it speaks SQLSTATE.** That is [05c](05c-constraint-violations-and-sqlstate.md).
 
@@ -189,7 +189,7 @@ export async function createCardAction(boardId: string, form: FormData) {
 }
 ```
 
-🔴 **Note the asymmetry, because it is the reason topic 10 exists.** The same validation failure is an HTTP 422 on one path and a plain object on the other; a Server Action has no status code to return. Both call the same `createCard`, so the *rule* is shared and only the *rendering* differs. How that rendering is centralised is **the single error envelope, topic 10** *(not written yet)*.
+🔴 **Note the asymmetry, because it is the reason topic 10 exists.** The same validation failure is an HTTP 422 on one path and a plain object on the other; a Server Action has no status code to return. Both call the same `createCard`, so the *rule* is shared and only the *rendering* differs. How that rendering is centralised is [10 · Errors and one response shape](10-errors-and-one-response-shape.md).
 
 Note also that `FormData` values are strings or `File`, never numbers — this is the one place `z.coerce` is defensible, and it is precisely because the transport has no types, not because coercion is generally good.
 

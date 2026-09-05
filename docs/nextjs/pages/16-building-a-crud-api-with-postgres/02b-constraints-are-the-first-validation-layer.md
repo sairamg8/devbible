@@ -175,7 +175,7 @@ Three properties of that function are worth naming, because each one is a decisi
 
 **It returns the original for anything it does not recognise.** The temptation is a `default:` that produces a `422`, and that is exactly wrong — an unrecognised database error is a bug, and a bug that comes back as a client error never gets logged and never gets fixed.
 
-**`40001` and `40P01` become `Retryable`, not `Conflict`.** Class 40 is transient by definition; the whole point of a serialization failure is that the same transaction may succeed on the next attempt. Turning it into a client-visible `409` throws away a retry the server should have done itself. **Topic 09 · Transactions** *(not written yet)* owns the loop.
+**`40001` and `40P01` become `Retryable`, not `Conflict`.** Class 40 is transient by definition; the whole point of a serialization failure is that the same transaction may succeed on the next attempt. Turning it into a client-visible `409` throws away a retry the server should have done itself. [Topic 09d · Serialization failures and the retry loop](09d-serialization-failures-and-the-retry-loop.md) owns the loop.
 
 ## Where each layer catches what
 
@@ -195,7 +195,7 @@ That third point is the one to keep. `23503` means "no such board", which for a 
 
 **★ Symptom: error handling stops working after a server is deployed with a non-English locale.** Cause: the code matched on message text — `message.includes('duplicate key value')` — and messages are localized. Fix: branch on `code`. The documentation says so directly: *"Applications that need to know which error condition has occurred should usually test the error code, rather than looking at the textual error message."*
 
-**★ Symptom: a duplicate-key error surfaces to the user with the conflicting value in it.** Cause: `detail` was included in the response body. `detail` for `23505` names the key and its values, which is a disclosure — it tells an unauthenticated caller that a particular title, email or idempotency key already exists. Fix: log `detail`, return the code. The envelope for that is **the single error envelope, topic 10** *(not written yet)*.
+**★ Symptom: a duplicate-key error surfaces to the user with the conflicting value in it.** Cause: `detail` was included in the response body. `detail` for `23505` names the key and its values, which is a disclosure — it tells an unauthenticated caller that a particular title, email or idempotency key already exists. Fix: log `detail`, return the code. The envelope for that is [the single error envelope, topic 10](10-errors-and-one-response-shape.md); not letting the driver's own text out at all is [10b](10b-never-leak-a-driver-error.md).
 
 **★ Symptom: a check violation is mapped to the wrong message after a later migration.** Cause: the mapping keyed on a system-generated constraint name, and the constraint was dropped and re-added, so the generated name changed. Fix: name every constraint explicitly in the migration, and treat the name as part of the interface between the schema and the application.
 

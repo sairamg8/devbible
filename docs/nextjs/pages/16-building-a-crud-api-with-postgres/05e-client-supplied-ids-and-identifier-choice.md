@@ -99,7 +99,7 @@ This is worth stating flatly because it is the failure that follows client ids a
 
 **A UUID in a URL is not authorisation.** Whether it was minted by `gen_random_uuid()` or by the client, `GET /api/cards/{id}` must still check that the caller is a member of the team that owns the board that owns the card. Unguessability is a defence against enumeration, not against a leaked link, a shared screenshot, a browser history sync, a referrer header, or a former employee's notes.
 
-With server-minted v4 ids there is at least a floor: the values are random, so an attacker cannot walk the space. With client-minted ids even that floor is gone, because you cannot make clients generate randomness they have no incentive to generate. The mitigation is the same in both cases and it is not about the id at all — the ownership predicate lives in **the Data Access Layer, topic 04** *(not written yet)*, and every row-returning query is scoped by it.
+With server-minted v4 ids there is at least a floor: the values are random, so an attacker cannot walk the space. With client-minted ids even that floor is gone, because you cannot make clients generate randomness they have no incentive to generate. The mitigation is the same in both cases and it is not about the id at all — the ownership predicate lives in the Data Access Layer — [04c · The ownership predicate](04c-the-ownership-predicate.md) — and every row-returning query is scoped by it.
 
 ## The middle path
 
