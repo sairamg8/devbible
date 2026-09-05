@@ -25,21 +25,11 @@ import styles from './styles.module.css';
  * Parked entries (GraphQL, tRPC, Kubernetes) are skipped: they carry no `key`
  * because they have no pages, and a rail is a set of destinations.
  *
- * 🔴 There is no page count beside each name, and the omission is deliberate.
- * The design called for one — "how big is the thing I am about to enter" is most
- * of why a rail beats a dropdown. The only number available is
- * `summarise(key).pagesWritten`, and on 2026-09-05 it was measured against the
- * files on disk and found to have drifted badly: it declares 2,831 leaf pages
- * corpus-wide where there are 5,875. Java reads 187 against 2,095 actual, Python
- * 37 against 412, and Nginx is the one over-report at 46 against 32. PostgreSQL
- * and the eleven imported toolchain tracks are exact.
- *
- * Those numbers are hand-maintained per phase, and several sessions own their own
- * language's rows, so this is not the place to correct them. Counting from disk
- * instead would be accurate and self-maintaining — but then the rail and the
- * homepage card would print different totals for the same track, which is the
- * exact failure this file's shared-data design exists to prevent. Better no
- * number than two.
+ * The page count beside each name answers "how big is the thing I am about to
+ * enter", which is most of why a rail beats a dropdown. It comes from
+ * `summarise(key).pagesWritten`, which since 2026-09-05 is generated from disk by
+ * `scripts/page-counts.mjs` — so it is the same number the homepage card prints,
+ * and neither can drift from the files.
  */
 
 /**
@@ -61,6 +51,7 @@ const GROUPS = LAYERS.filter((layer) => !layer.parked)
           // column; everything else uses the canonical name from progress.js.
           label: item.short ?? data.label,
           to: data.docsPath,
+          pages: data.pagesWritten,
         };
       }),
   }))
@@ -125,6 +116,7 @@ export default function TechRail() {
                     className={clsx(styles.item, active && styles.active)}
                     aria-current={active ? 'page' : undefined}>
                     <span className={styles.label}>{item.label}</span>
+                    <span className={styles.count}>{item.pages.toLocaleString()}</span>
                   </Link>
                 </li>
               );

@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import DocSidebar from '@theme-original/DocSidebar';
 import SidebarCollapseAll from '@site/src/components/SidebarCollapseAll';
 import TechRail from '@site/src/components/TechRail';
@@ -31,10 +32,23 @@ import styles from './styles.module.css';
  * theme fills the navbar drawer through `NavbarSecondaryMenuFiller` instead, so
  * whatever renders here renders into a hidden element. The rail is display:none'd
  * there rather than left to build 29 links nobody can reach.
+ *
+ * ── `isHidden` ───────────────────────────────────────────────────────────────
+ * The theme hides the collapsed sidebar by shrinking the aside to
+ * `--doc-sidebar-hidden-width` (30px) with `clip-path: inset(0)`, and separately
+ * setting `opacity: 0; visibility: hidden` on ITS OWN inner sidebar div — which
+ * is only the page tree. The rail is not that div, so on collapse it kept its
+ * full 168px, got clipped to 30, and left a column of sliced-off technology names
+ * down the left edge instead of a clean strip with a toggle.
+ *
+ * `isHidden` is a real prop on `DocSidebar` — the theme passes it from
+ * `DocRoot/Layout/Sidebar` — so the whole shell can take the same treatment. The
+ * `ExpandButton` that brings the sidebar back is a SIBLING of this component, not
+ * a child, so hiding everything here leaves the toggle reachable.
  */
 export default function DocSidebarWrapper(props) {
   return (
-    <div className={styles.shell}>
+    <div className={clsx(styles.shell, props.isHidden && styles.shellHidden)}>
       <TechRail />
       <div className={styles.wrapper}>
         <div className={styles.tools}>

@@ -51,6 +51,48 @@
  *                memory store (passes F0–F3).
  */
 
+import PAGE_COUNTS from './page-counts.json';
+
+/**
+ * 🔴 `pages` above is NOT a file count, and printing it as one was a bug.
+ *
+ * It counts *topics whose explanation is written*, which is what the completion
+ * model needs — `phaseStatus`, `topicsDone`, the percentage all read it. The
+ * 300-line file cap means one topic routinely becomes eight files, so the two
+ * numbers diverge by design: Java phase 4 is `topics: 13, pages: 13` while
+ * `phase-4-lambdas-streams/` holds 28 files. Corpus-wide it was 2,831 declared
+ * against 5,875 real, and the Java card was printing "187 pages" for a track with
+ * 2,095.
+ *
+ * So the two measures are now separate. `pages` keeps driving the model; every
+ * page count the site *displays* comes from `page-counts.json`, generated from
+ * disk by `scripts/page-counts.mjs` and therefore incapable of drifting.
+ *
+ *   yarn page-counts          # regenerate
+ *   yarn page-counts --check  # fail if stale
+ *
+ * `yarn start` and `yarn build` regenerate it first, so it is current in any
+ * served output whether or not anyone remembered.
+ */
+
+/** Real pages in a track, from disk. */
+function trackFiles(docsPath) {
+  return PAGE_COUNTS[docsPath.replace(/^\/docs\//, '')]?.pages ?? 0;
+}
+
+/**
+ * Real pages in one phase, from disk.
+ *
+ * 0 when the phase has no directory yet — which is every phase still at
+ * `pages: 0`, and correct for them. Storybook is the one track whose phase list
+ * and directory names genuinely disagree (its imported chapters are named
+ * `01-core-concepts`, not `phase-4-documentation`), so its per-phase figures read
+ * 0 while its track total stays right.
+ */
+function phaseFiles(docsPath, slug) {
+  return PAGE_COUNTS[docsPath.replace(/^\/docs\//, '')]?.phases?.[slug] ?? 0;
+}
+
 export const LANGUAGES = {
   css: {
     label: 'CSS',
@@ -742,7 +784,13 @@ export function phaseStatus(p) {
  */
 export function summarise(langKey) {
   const lang = LANGUAGES[langKey];
-  const phases = lang.phases;
+  // Every phase carries `files` — its real page count from disk — alongside the
+  // hand-maintained `pages` the model runs on. The Progress component prints the
+  // first and reasons about the second.
+  const phases = lang.phases.map((p) => ({
+    ...p,
+    files: phaseFiles(lang.docsPath, p.slug),
+  }));
   // Parked phases are out of the active queue, so they sit outside every
   // ratio here — otherwise a language whose scheduled work is finished can
   // never reach 100%. They are reported on their own instead.
@@ -757,7 +805,14 @@ export function summarise(langKey) {
     if (status === 'validating') return sum + p.verified;
     return sum;
   }, 0);
-  const pagesWritten = phases.reduce((sum, p) => sum + p.pages, 0);
+  // The displayed page count, straight from disk. Taken on the track rather than
+  // summed from the phases: a track can hold loose pages under `pages/` that
+  // belong to no phase directory, and Storybook's imported chapters do not match
+  // its phase slugs at all — both would go missing from a sum.
+  const pagesWritten = trackFiles(lang.docsPath);
+  // What the hand-maintained numbers claim, kept so the gap stays visible rather
+  // than being quietly papered over by the generated count.
+  const topicsCovered = phases.reduce((sum, p) => sum + p.pages, 0);
   // An imported chapter part-way through its conversion is the same kind of
   // "currently being worked on" as a phase mid-write, so both feed `inFlight`.
   const inFlight =
@@ -770,10 +825,13 @@ export function summarise(langKey) {
     topicsTotal,
     topicsDone: Math.round(topicsDone),
     pagesWritten,
+    topicsCovered,
     // Pages carrying a tier badge and a dated `> Verified:` line. On a track
     // written here every page has them by contract, so this equals
-    // `pagesWritten`; on an imported one it is the number that moves.
-    pagesValidated: phases.reduce((sum, p) => sum + (p.verified ?? p.pages), 0),
+    // `pagesWritten`; on an imported one it is the number that moves. Falls back
+    // to the disk count, not to `pages`, so it stays in the same unit as the
+    // total it is shown against.
+    pagesValidated: phases.reduce((sum, p) => sum + (p.verified ?? p.files), 0),
     percent: Math.round((topicsDone / topicsTotal) * 100),
     parkedPhases: parked.length,
     parkedTopicsLeft: parked.reduce((sum, p) => sum + (p.topics - p.pages), 0),

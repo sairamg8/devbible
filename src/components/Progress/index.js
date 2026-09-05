@@ -113,14 +113,22 @@ export default function Progress({lang = 'nodejs', compact = false}) {
                   )}
                 </span>
                 <span className={styles.phaseMeta}>
+                  {/*
+                   * `files` is the real page count from disk; `pages` is the
+                   * hand-maintained topics-covered number the status model runs
+                   * on. Anything worded "pages" reads the first, and the
+                   * in-progress ratio is relabelled to the unit it was always
+                   * counting — otherwise a phase reads "585 of ~15 pages".
+                   */}
                   {status === 'written' &&
                     (p.verified === undefined
-                      ? `${p.pages} pages`
-                      : `${p.pages} ${p.pages === 1 ? 'page' : 'pages'} · validated`)}
-                  {status === 'writing' && `${p.pages} of ~${p.pagesPlanned} pages`}
-                  {status === 'validating' && `${p.verified} of ${p.pages} pages validated`}
+                      ? `${p.files} ${p.files === 1 ? 'page' : 'pages'}`
+                      : `${p.files} ${p.files === 1 ? 'page' : 'pages'} · validated`)}
+                  {status === 'writing' &&
+                    `${p.files} ${p.files === 1 ? 'page' : 'pages'} · ${p.pages} of ~${p.pagesPlanned} topics`}
+                  {status === 'validating' && `${p.verified} of ${p.files} pages validated`}
                   {status === 'imported' &&
-                    `${p.pages} ${p.pages === 1 ? 'page' : 'pages'} · not yet validated`}
+                    `${p.files} ${p.files === 1 ? 'page' : 'pages'} · not yet validated`}
                   {status === 'parked' && `${p.pages} of ${p.topics} topics · rest set aside`}
                   {status === 'planned' && `${p.topics} topics`}
                 </span>

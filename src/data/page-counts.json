@@ -1,0 +1,513 @@
+{
+  "angular": {
+    "pages": 0,
+    "phases": {
+      "phase-0-how-angular-runs": 0
+    }
+  },
+  "babel": {
+    "pages": 16,
+    "phases": {
+      "01-why-babel-and-the-compiler-landscape": 1,
+      "02-core-compilation-pipeline": 1,
+      "03-configuration-system": 1,
+      "04-presets": 1,
+      "05-plugin-ecosystem": 1,
+      "06-authoring-custom-plugins": 1,
+      "07-typescript-and-jsx-handling": 1,
+      "08-build-tool-integration": 1,
+      "09-linter-and-type-checker-interop": 1,
+      "10-source-maps-and-debugging": 1,
+      "11-performance-and-caching": 1,
+      "12-monorepo-and-multi-package-strategies": 1,
+      "13-cli-and-programmatic-tooling": 1,
+      "14-nodejs-backend-usage": 1,
+      "15-migration-and-decision-recipes": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  },
+  "css": {
+    "pages": 80,
+    "phases": {
+      "phase-0-how-css-runs": 12,
+      "phase-1-selectors": 16,
+      "phase-10-scss": 8,
+      "phase-2-cascade": 5,
+      "phase-3-custom-properties": 4,
+      "phase-4-flexbox": 12,
+      "phase-5-grid": 10,
+      "phase-6-container-queries": 3,
+      "phase-7-positioning": 4,
+      "phase-8-color-theming": 3,
+      "phase-9-motion": 3
+    }
+  },
+  "docker": {
+    "pages": 225,
+    "phases": {
+      "phase-0-what-a-container-is": 14,
+      "phase-1-running-containers": 16,
+      "phase-10-production": 22,
+      "phase-11-podman-in-depth": 20,
+      "phase-12-delivery-and-ci": 14,
+      "phase-2-images-and-registries": 15,
+      "phase-3-dockerfile": 17,
+      "phase-4-build-strategy": 16,
+      "phase-5-image-quality": 13,
+      "phase-6-storage": 17,
+      "phase-7-networking": 14,
+      "phase-8-compose": 22,
+      "phase-9-mern-pern-stack": 25
+    }
+  },
+  "eslint-oxlint": {
+    "pages": 21,
+    "phases": {
+      "01-linting-landscape-and-tooling-decisions": 1,
+      "02-eslint-core-architecture": 1,
+      "03-eslint-flat-config": 1,
+      "04-eslint-language-options-globals-and-parsing": 1,
+      "05-eslint-rules-system": 1,
+      "06-eslint-plugin-ecosystem": 1,
+      "07-typescript-eslint": 1,
+      "08-eslint-cli-output-cache-and-fixes": 1,
+      "09-eslint-suppressions-ignores-and-governance": 1,
+      "10-custom-eslint-rules-and-processors": 1,
+      "11-eslint-editor-and-local-workflow": 1,
+      "12-oxlint-core-architecture": 1,
+      "13-oxlint-installation-cli-and-config-files": 1,
+      "14-oxlint-native-plugins-and-rule-coverage": 1,
+      "15-oxlint-type-aware-linting-and-multi-file-analysis": 1,
+      "16-oxlint-js-plugins-and-extensibility": 1,
+      "17-oxlint-fixes-ignores-and-diagnostics": 1,
+      "18-coexistence-eslint-and-oxlint": 1,
+      "19-migration-paths": 1,
+      "20-ci-monorepos-and-performance-engineering": 1,
+      "21-real-world-workflows-and-recipes": 1
+    }
+  },
+  "expressjs": {
+    "pages": 142,
+    "phases": {
+      "phase-0-express-basics": 16,
+      "phase-1-routing": 13,
+      "phase-10-app-factory": 9,
+      "phase-2-middleware": 12,
+      "phase-3-requests": 14,
+      "phase-4-responses": 12,
+      "phase-5-errors": 16,
+      "phase-6-rest-surface": 15,
+      "phase-7-layering": 9,
+      "phase-8-validation-authz": 18,
+      "phase-9-hardening": 8
+    }
+  },
+  "framer-motion": {
+    "pages": 16,
+    "phases": {
+      "01-core-concepts": 1,
+      "02-basic-animation-props": 1,
+      "03-transition-types": 1,
+      "04-variants": 1,
+      "05-gestures": 1,
+      "06-animatepresence": 1,
+      "07-layout-animations": 1,
+      "08-scroll-linked-animations": 1,
+      "09-motion-values": 1,
+      "10-animation-controls": 1,
+      "11-keyframes": 1,
+      "12-svg-animations": 1,
+      "13-orchestration-and-staggering": 1,
+      "14-performance-considerations": 1,
+      "15-advanced-patterns": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  },
+  "frontend-architecture": {
+    "pages": 15,
+    "phases": {
+      "01-project-structure-and-organization": 1,
+      "02-component-architecture": 1,
+      "03-state-management-decision-tree": 1,
+      "04-data-layer-and-api-architecture": 1,
+      "05-routing-and-navigation-architecture": 1,
+      "06-styling-architecture": 1,
+      "07-monorepo-and-multi-app-strategy": 1,
+      "08-environment-and-configuration-management": 1,
+      "09-authentication-and-authorization-architecture": 1,
+      "10-error-handling-and-resilience": 1,
+      "11-observability-and-monitoring": 1,
+      "12-ci-cd-pipeline-design": 1,
+      "13-testing-strategy": 1,
+      "14-performance-and-scalability-patterns": 1,
+      "15-team-and-collaboration-practices": 1
+    }
+  },
+  "git": {
+    "pages": 57,
+    "phases": {
+      "phase-0-how-git-stores-things": 14,
+      "phase-1-everyday-loop": 17,
+      "phase-2-branching-merging": 10,
+      "phase-4-remotes": 8,
+      "phase-5-undo-recover": 8
+    }
+  },
+  "java": {
+    "pages": 2095,
+    "phases": {
+      "phase-0-platform-jvm": 17,
+      "phase-1-language-core": 32,
+      "phase-10-data-access": 570,
+      "phase-11-testing": 483,
+      "phase-12-jvm-production": 358,
+      "phase-13-oauth2-oidc": 91,
+      "phase-14-microservice-architecture": 162,
+      "phase-15-messaging-event-driven": 0,
+      "phase-16-resilience-operations": 0,
+      "phase-2-classes-objects": 32,
+      "phase-3-generics-collections": 26,
+      "phase-4-lambdas-streams": 22,
+      "phase-5-exceptions": 16,
+      "phase-6-concurrency": 35,
+      "phase-7-io-time-stdlib": 18,
+      "phase-8-build-dependencies": 41,
+      "phase-9-spring-boot": 192
+    }
+  },
+  "javascript": {
+    "pages": 526,
+    "phases": {
+      "docs": 0,
+      "phase-0-how-javascript-runs": 12,
+      "phase-1-values-and-coercion": 17,
+      "phase-10-events": 20,
+      "phase-11-network-storage": 43,
+      "phase-12-browser-platform": 49,
+      "phase-13-complexity": 6,
+      "phase-14-data-structures": 10,
+      "phase-15-algorithm-patterns": 10,
+      "phase-16-dynamic-programming": 6,
+      "phase-17-machine-coding": 36,
+      "phase-18-storefront": 21,
+      "phase-2-operators": 15,
+      "phase-3-functions": 36,
+      "phase-4-objects-and-classes": 44,
+      "phase-5-built-in-library": 52,
+      "phase-6-iteration-and-destructuring": 26,
+      "phase-7-async": 49,
+      "phase-8-modules-errors": 35,
+      "phase-9-dom": 39
+    }
+  },
+  "jest-rtl": {
+    "pages": 16,
+    "phases": {
+      "01-jest-core-concepts": 1,
+      "02-assertions-and-matchers": 1,
+      "03-mocking": 1,
+      "04-async-testing": 1,
+      "05-snapshot-testing": 1,
+      "06-coverage-and-configuration": 1,
+      "07-rtl-core-philosophy": 1,
+      "08-rtl-queries": 1,
+      "09-user-interaction": 1,
+      "10-async-utilities": 1,
+      "11-custom-render": 1,
+      "12-mocking-network-requests": 1,
+      "13-testing-hooks": 1,
+      "14-accessibility-testing": 1,
+      "15-debugging-tests": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  },
+  "mongodb": {
+    "pages": 40,
+    "phases": {
+      "phase-0-how-mongodb-runs": 5,
+      "phase-1-documents-and-bson": 6,
+      "phase-2-mongosh": 5,
+      "phase-3-schema-design": 6,
+      "phase-4-crud": 6,
+      "phase-5-query-operators": 6,
+      "phase-6-aggregation": 6
+    }
+  },
+  "nextjs": {
+    "pages": 657,
+    "phases": {
+      "01-introduction-to-next-js": 9,
+      "02-routing-and-navigation": 57,
+      "03-server-components-vs-client-components": 10,
+      "04-data-fetching-in-the-app-router": 39,
+      "05-caching-ppr-and-cache-components": 25,
+      "06-ssg-isr-and-ssr-strategy": 26,
+      "07-error-handling-loading-states-and-resilience": 35,
+      "08-state-management-in-an-rsc-world": 57,
+      "09-styling-and-ui": 23,
+      "10-forms-authentication-and-security-hardening": 46,
+      "11-performance-optimization-turbopack": 30,
+      "12-seo-metadata-and-accessibility": 59,
+      "13-testing-and-developer-experience": 20,
+      "14-agent-driven-development": 10,
+      "15-databases-apis-and-full-stack-patterns": 68,
+      "16-building-a-crud-api-with-postgres": 72,
+      "17-deployment-scaling-and-observability": 20,
+      "18-advanced-ecosystem-topics": 18,
+      "19-capstone-decision-trees-and-outlook": 19,
+      "20-appendices": 14
+    }
+  },
+  "nginx": {
+    "pages": 32,
+    "phases": {
+      "phase-0-process-model": 10,
+      "phase-1-configuration-language": 12,
+      "phase-2-server-and-location": 10
+    }
+  },
+  "nodejs": {
+    "pages": 234,
+    "phases": {
+      "phase-0-runtime-model": 10,
+      "phase-1-modules": 14,
+      "phase-10-observability": 23,
+      "phase-11-deployment": 14,
+      "phase-12-native": 10,
+      "phase-2-async": 22,
+      "phase-3-buffers-streams": 20,
+      "phase-4-filesystem": 14,
+      "phase-5-http-processes": 26,
+      "phase-6-data-access": 16,
+      "phase-7-background-work": 16,
+      "phase-8-security": 29,
+      "phase-9-testing": 20
+    }
+  },
+  "playwright": {
+    "pages": 16,
+    "phases": {
+      "01-core-architecture": 1,
+      "02-test-runner": 1,
+      "03-locators": 1,
+      "04-actions-and-interactions": 1,
+      "05-auto-waiting-and-assertions": 1,
+      "06-navigation-and-network": 1,
+      "07-authentication-and-state": 1,
+      "08-fixtures-and-test-isolation": 1,
+      "09-visual-and-screenshot-testing": 1,
+      "10-debugging-tools": 1,
+      "11-parallelism-and-sharding": 1,
+      "12-component-testing": 1,
+      "13-api-testing": 1,
+      "14-ci-integration": 1,
+      "15-advanced-patterns": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  },
+  "postgresql": {
+    "pages": 298,
+    "phases": {
+      "phase-0-architecture": 13,
+      "phase-1-psql": 15,
+      "phase-10-indexes": 18,
+      "phase-11-mvcc": 16,
+      "phase-12-beyond-tables": 21,
+      "phase-13-ops": 40,
+      "phase-2-types": 19,
+      "phase-3-ddl": 22,
+      "phase-4-crud": 22,
+      "phase-5-joins": 16,
+      "phase-6-aggregation": 40,
+      "phase-7-pg-driver": 16,
+      "phase-8-schema-from-node": 16,
+      "phase-9-api-crud": 24
+    }
+  },
+  "python": {
+    "pages": 412,
+    "phases": {
+      "phase-0-runtime": 121,
+      "phase-1-language-core": 264,
+      "phase-2-functions": 27
+    }
+  },
+  "react": {
+    "pages": 277,
+    "phases": {
+      "docs": 0,
+      "patterns": 18,
+      "phase-0-how-react-runs": 14,
+      "phase-1-jsx": 16,
+      "phase-10-server-components": 21,
+      "phase-11-ssr-hydration": 24,
+      "phase-14-correctness": 21,
+      "phase-2-components": 27,
+      "phase-3-state": 18,
+      "phase-4-effects": 24,
+      "phase-5-refs-context-reducers": 17,
+      "phase-6-performance": 17,
+      "phase-7-custom-hooks": 25,
+      "phase-8-concurrent-suspense": 20,
+      "phase-9-forms-actions": 15
+    }
+  },
+  "real-world": {
+    "pages": 225,
+    "phases": {
+      "phase-0-the-app": 3,
+      "phase-1-database": 14,
+      "phase-2-node-services": 10,
+      "phase-3-express-api": 13,
+      "phase-4-react-ui": 12,
+      "phase-5-js-functions": 12,
+      "phase-6-typescript": 66,
+      "phase-7-css-recipes": 32,
+      "phase-8-mongodb-mirror": 63
+    }
+  },
+  "redis": {
+    "pages": 4,
+    "phases": {
+      "phase-0-how-redis-runs": 4
+    }
+  },
+  "redux-toolkit": {
+    "pages": 16,
+    "phases": {
+      "01-store-setup": 1,
+      "02-slices-and-actions": 2,
+      "03-async-thunks": 1,
+      "04-rtk-query": 2,
+      "05-selectors-and-normalization": 2,
+      "06-middleware": 1,
+      "07-react-redux-integration": 1,
+      "08-immutability-and-immer": 1,
+      "09-typescript-integration": 1,
+      "10-devtools-and-debugging": 1,
+      "11-code-splitting": 1,
+      "12-testing": 1,
+      "13-migration": 1
+    }
+  },
+  "storybook": {
+    "pages": 44,
+    "phases": {
+      "01-core-concepts": 1,
+      "02-story-anatomy": 1,
+      "03-addons-ecosystem": 2,
+      "04-controls-and-args": 1,
+      "05-interaction-testing": 1,
+      "06-visual-testing": 1,
+      "07-accessibility-testing": 1,
+      "08-documentation": 1,
+      "09-decorators": 1,
+      "10-composition-and-design-systems": 1,
+      "11-testing-integration": 1,
+      "12-multi-framework-support": 1,
+      "13-build-and-configuration": 3,
+      "14-publishing-and-deployment": 1,
+      "15-advanced-patterns": 1,
+      "16-real-world-workflows-and-recipes": 2,
+      "17-theming-colors-and-fonts": 2,
+      "phase-0-how-storybook-runs": 5,
+      "phase-1-story-format": 6,
+      "phase-2-args-and-controls": 6,
+      "phase-3-decorators": 5
+    }
+  },
+  "tanstack-query": {
+    "pages": 16,
+    "phases": {
+      "01-core-concepts": 1,
+      "02-usequery-deep-dive": 1,
+      "03-query-states": 1,
+      "04-caching-and-invalidation": 1,
+      "05-usemutation": 1,
+      "06-background-refetching": 1,
+      "07-pagination-and-infinite-queries": 1,
+      "08-dependent-and-parallel-queries": 1,
+      "09-prefetching-and-ssr": 1,
+      "10-suspense-integration": 1,
+      "11-devtools": 1,
+      "12-query-cancellation": 1,
+      "13-global-configuration": 1,
+      "14-optimistic-updates-patterns": 1,
+      "15-testing-tanstack-query": 1,
+      "16-migration-recipes": 1
+    }
+  },
+  "typescript": {
+    "pages": 347,
+    "phases": {
+      "phase-0-how-typescript-runs": 13,
+      "phase-1-type-vocabulary": 17,
+      "phase-10-strictness": 58,
+      "phase-12-tooling": 26,
+      "phase-2-narrowing": 17,
+      "phase-3-generics": 23,
+      "phase-4-classes-declarations": 24,
+      "phase-5-type-level": 54,
+      "phase-6-modules-build": 99,
+      "phase-7-server": 16
+    }
+  },
+  "vite": {
+    "pages": 16,
+    "phases": {
+      "01-core-architecture": 1,
+      "02-cli-and-scaffolding": 1,
+      "03-configuration": 1,
+      "04-dev-server-mechanics": 1,
+      "05-build-system-rollup": 1,
+      "06-asset-handling": 1,
+      "07-env-variables-and-modes": 1,
+      "08-plugin-system": 1,
+      "09-css-handling": 1,
+      "10-ssr-support": 1,
+      "11-optimization-and-performance": 1,
+      "12-path-resolution-and-aliases": 1,
+      "13-worker-and-wasm-support": 1,
+      "14-testing-integration": 1,
+      "15-deployment-considerations": 1,
+      "16-migration-recipes": 1
+    }
+  },
+  "web-vitals-performance": {
+    "pages": 11,
+    "phases": {
+      "01-core-web-vitals": 1,
+      "02-legacy-and-lab-measurement": 1,
+      "03-real-user-monitoring": 1,
+      "04-lcp-optimization": 1,
+      "05-inp-optimization": 1,
+      "06-cls-optimization": 1,
+      "07-loading-and-rendering-performance": 1,
+      "08-bundle-and-media-optimization": 1,
+      "09-caching-and-production-monitoring": 1,
+      "10-budgets-and-advanced-diagnostics": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  },
+  "webpack": {
+    "pages": 21,
+    "phases": {
+      "01-core-concepts": 1,
+      "02-configuration": 1,
+      "03-module-resolution": 1,
+      "04-loaders": 2,
+      "05-asset-modules": 1,
+      "06-plugins": 1,
+      "07-code-splitting": 1,
+      "08-optimization": 1,
+      "09-dev-server-and-hmr": 1,
+      "10-caching-strategies": 1,
+      "11-module-federation": 5,
+      "12-source-maps": 1,
+      "13-multi-config-and-environment": 1,
+      "14-performance-analysis": 1,
+      "15-advanced-custom-tooling": 1,
+      "16-real-world-workflows-and-recipes": 1
+    }
+  }
+}
