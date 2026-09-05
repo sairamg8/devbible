@@ -1,0 +1,2009 @@
+<title>Four Ways Through 6,797 Pages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ------------------------------------------------------------------ tokens
+   Palette lifted from the project's own src/css/custom.css so every mockup
+   below is the real thing, not an impression of it. */
+:root {
+  --ground:      #f2f5f7;
+  --surface:     #ffffff;
+  --surface-2:   #e9eef2;
+  --surface-3:   #dfe7ed;
+  --ink:         #14202a;
+  --ink-2:       #4a5b66;
+  --ink-3:       #77878f;
+  --rule:        #d8e0e6;
+  --rule-2:      #bfccd5;
+  --pine:        #0b6e5b;
+  --pine-ink:    #0b6e5b;
+  --pine-soft:   rgba(11, 110, 91, 0.10);
+  --pine-soft-2: rgba(11, 110, 91, 0.18);
+  --on-pine:     #ffffff;
+  --amber:       #8a5a11;
+  --amber-soft:  rgba(138, 90, 17, 0.12);
+  --shadow:      0 1px 2px rgba(20,32,42,.05), 0 10px 28px -16px rgba(20,32,42,.28);
+  --shadow-lift: 0 2px 6px rgba(20,32,42,.07), 0 18px 40px -20px rgba(20,32,42,.35);
+
+  --serif: 'Newsreader', ui-serif, 'Iowan Old Style', Georgia, serif;
+  --sans:  system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --mono:  'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0f161c;
+    --surface:     #161f27;
+    --surface-2:   #1d2831;
+    --surface-3:   #243039;
+    --ink:         #e6edf2;
+    --ink-2:       #a3b1bc;
+    --ink-3:       #74838f;
+    --rule:        #27343e;
+    --rule-2:      #36454f;
+    --pine:        #55c3a3;
+    --pine-ink:    #7bd6bb;
+    --pine-soft:   rgba(85, 195, 163, 0.14);
+    --pine-soft-2: rgba(85, 195, 163, 0.24);
+    --on-pine:     #0f161c;
+    --amber:       #d3a051;
+    --amber-soft:  rgba(211, 160, 81, 0.14);
+    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+    --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 18px 40px -20px rgba(0,0,0,.8);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground:      #0f161c;
+  --surface:     #161f27;
+  --surface-2:   #1d2831;
+  --surface-3:   #243039;
+  --ink:         #e6edf2;
+  --ink-2:       #a3b1bc;
+  --ink-3:       #74838f;
+  --rule:        #27343e;
+  --rule-2:      #36454f;
+  --pine:        #55c3a3;
+  --pine-ink:    #7bd6bb;
+  --pine-soft:   rgba(85, 195, 163, 0.14);
+  --pine-soft-2: rgba(85, 195, 163, 0.24);
+  --on-pine:     #0f161c;
+  --amber:       #d3a051;
+  --amber-soft:  rgba(211, 160, 81, 0.14);
+  --shadow:      0 1px 2px rgba(0,0,0,.4), 0 10px 28px -16px rgba(0,0,0,.7);
+  --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 18px 40px -20px rgba(0,0,0,.8);
+}
+
+/* -------------------------------------------------------------------- base */
+* { box-sizing: border-box; }
+
+body {
+  background: var(--ground);
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 6rem;
+}
+
+h1, h2, h3, h4 { color: var(--ink); text-wrap: balance; margin: 0; }
+
+a { color: var(--pine-ink); text-underline-offset: 2px; text-decoration-thickness: 1px; }
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--pine-ink);
+  margin: 0 0 1rem;
+}
+
+/* ---------------------------------------------------------------- masthead */
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.6vw, 3.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  margin-bottom: 1.1rem;
+}
+
+.lede {
+  font-size: 1.06rem;
+  line-height: 1.6;
+  max-width: 64ch;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lede strong { color: var(--ink); font-weight: 600; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 1px;
+  margin-top: 2.25rem;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.stat {
+  background: var(--surface);
+  padding: 0.95rem 1.05rem;
+}
+
+.stat b {
+  display: block;
+  font-family: var(--mono);
+  font-size: 1.32rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.stat span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  margin-top: 0.3rem;
+}
+
+/* ------------------------------------------------------------------ blocks */
+.block { margin-bottom: 4.5rem; }
+
+.block > h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.95rem;
+  letter-spacing: -0.016em;
+  margin-bottom: 0.6rem;
+}
+
+.block > .sub {
+  max-width: 66ch;
+  margin: 0 0 2rem;
+  color: var(--ink-2);
+}
+
+/* --------------------------------------------------------------- findings */
+.findings {
+  display: grid;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.finding {
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0 1rem;
+  padding: 1.05rem 1.25rem;
+  align-items: start;
+}
+
+.finding-n {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--pine-ink);
+  background: var(--pine-soft);
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.18rem 0;
+  line-height: 1.5;
+}
+
+.finding h3 {
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 0.3rem;
+}
+
+.finding p { margin: 0; font-size: 0.9rem; }
+
+.ev {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.71rem;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.06em 0.42em;
+  white-space: nowrap;
+}
+
+.finding.is-bug .finding-n { color: var(--amber); background: var(--amber-soft); }
+
+/* ---------------------------------------------------------------- options */
+.opt {
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 2.25rem;
+}
+
+.opt-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0 1.15rem;
+  align-items: start;
+  padding: 1.5rem 1.6rem 1.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.opt-letter {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pine);
+  color: var(--on-pine);
+}
+
+.opt-head h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.014em;
+  line-height: 1.15;
+}
+
+.opt-char {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  margin: 0.35rem 0 0.55rem;
+}
+
+.opt-thesis { margin: 0; max-width: 62ch; font-size: 0.95rem; }
+
+.effort { text-align: right; }
+
+.effort-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.effort-bar { display: flex; gap: 3px; justify-content: flex-end; }
+
+.effort-bar i {
+  width: 22px;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--surface-3);
+}
+
+.effort-bar i.on { background: var(--pine); }
+
+.effort-note {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-2);
+  margin: 0.45rem 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.opt-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2.25rem;
+  padding: 1.5rem 1.6rem 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+
+.opt-detail h4 {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.opt-detail ul { margin: 0; padding-left: 1.05rem; }
+.opt-detail li { margin-bottom: 0.45rem; font-size: 0.9rem; }
+.opt-detail li:last-child { margin-bottom: 0; }
+.opt-detail code {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05em 0.32em;
+  color: var(--ink);
+}
+
+.opt-foot {
+  padding: 0.9rem 1.6rem;
+  border-top: 1px solid var(--rule);
+  background: var(--surface-2);
+  font-family: var(--mono);
+  font-size: 0.71rem;
+  color: var(--ink-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--pine-soft);
+  color: var(--pine-ink);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  font-weight: 500;
+}
+
+.pill.warn { background: var(--amber-soft); color: var(--amber); }
+
+/* ------------------------------------------------------- mockup: the frame */
+.mockwrap {
+  padding: 1.35rem 1.6rem;
+  background: var(--ground);
+  overflow-x: auto;
+}
+
+.mock {
+  min-width: 620px;
+  border: 1px solid var(--rule-2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  position: relative;
+}
+
+.m-bar {
+  height: 38px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 0.75rem;
+  position: relative;
+  z-index: 3;
+}
+
+.m-brand {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.m-spacer { flex: 1; }
+
+.m-search {
+  width: 150px;
+  height: 22px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  gap: 0.3rem;
+  color: var(--ink-3);
+  font-size: 10.5px;
+}
+
+.m-kbd {
+  font-family: var(--mono);
+  font-size: 9px;
+  border: 1px solid var(--rule-2);
+  border-radius: 3px;
+  padding: 0 3px;
+  color: var(--ink-3);
+  background: var(--surface);
+}
+
+.m-body {
+  display: grid;
+  height: 344px;
+}
+
+.m-side {
+  border-right: 1px solid var(--rule);
+  background: var(--surface);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.m-main {
+  background: var(--ground);
+  padding: 0.9rem 1rem;
+  overflow-y: auto;
+}
+
+.m-toc {
+  border-left: 1px solid var(--rule);
+  padding: 0.9rem 0.7rem;
+  background: var(--surface);
+  overflow-y: auto;
+}
+
+.m-toc-h {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  margin-bottom: 0.5rem;
+}
+
+.m-toc-i { color: var(--ink-3); font-size: 10.5px; padding: 0.16rem 0; line-height: 1.35; }
+.m-toc-i.on { color: var(--pine-ink); font-weight: 600; }
+
+/* article stand-in */
+.m-crumbs {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--ink-3);
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.03em;
+}
+
+.m-h1 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.017em;
+  margin-bottom: 0.5rem;
+}
+
+.m-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  padding: 0.18em 0.5em;
+  border-radius: 3px;
+  background: var(--pine);
+  color: var(--on-pine);
+  margin-bottom: 0.55rem;
+}
+
+.m-verified {
+  border-left: 2px solid var(--pine);
+  background: var(--pine-soft);
+  border-radius: 0 4px 4px 0;
+  padding: 0.4rem 0.55rem;
+  font-size: 10px;
+  color: var(--ink-2);
+  margin-bottom: 0.65rem;
+  line-height: 1.45;
+}
+
+.m-line { height: 6px; border-radius: 3px; background: var(--surface-3); margin-bottom: 6px; }
+.m-line.w90 { width: 90%; } .m-line.w75 { width: 75%; } .m-line.w60 { width: 60%; }
+.m-line.w100 { width: 100%; }
+
+/* ------------------------------------------------------ mockup: sidebar rows */
+.m-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 3.5px 0.55rem;
+  cursor: default;
+  line-height: 1.3;
+  border-radius: 4px;
+  margin: 0 0.35rem;
+}
+
+.m-row .lbl { flex: 1; min-width: 0; }
+
+/* depth tiers get REAL hierarchy — this is the point of the redesign */
+.m-row.lvl-phase .lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.m-row.lvl-chapter .lbl {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+.m-row.lvl-page .lbl {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-2);
+}
+
+.m-row.on { background: var(--pine-soft); }
+.m-row.on .lbl { color: var(--pine-ink); font-weight: 600; }
+
+.m-row .caret {
+  width: 9px;
+  color: var(--ink-3);
+  font-size: 8px;
+  flex: none;
+  text-align: center;
+  transition: transform .15s ease;
+}
+.m-row.open .caret { transform: rotate(90deg); }
+
+.m-row .count {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+
+.ind-1 { padding-left: 0.5rem; }
+.ind-2 { padding-left: 1.2rem; }
+.ind-3 { padding-left: 1.85rem; }
+
+/* tier dots */
+.dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+.dot.master     { background: var(--pine); }
+.dot.understand { background: transparent; box-shadow: inset 0 0 0 1.5px var(--pine); }
+.dot.know       { background: var(--amber); }
+.dot.when       { background: var(--rule-2); }
+
+/* the CURRENT sidebar, reproduced honestly for contrast */
+.m-row.legacy .lbl {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.m-row.legacy.leaf .lbl {
+  font-family: var(--sans);
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-2);
+}
+
+/* ------------------------------------------------------- mockup: side tools */
+.m-tools {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 2;
+}
+
+.m-filter {
+  width: 100%;
+  height: 24px;
+  border-radius: 5px;
+  border: 1px solid var(--rule-2);
+  background: var(--surface-2);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 11px;
+  padding: 0 0.5rem;
+}
+.m-filter::placeholder { color: var(--ink-3); }
+.m-filter:focus { outline: none; border-color: var(--pine); box-shadow: 0 0 0 3px var(--pine-soft); }
+
+.m-hint {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  color: var(--ink-3);
+  margin-top: 0.35rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.m-empty {
+  padding: 1rem 0.75rem;
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+
+/* technology dropdown (option A) */
+.m-tech {
+  position: relative;
+}
+
+.m-techbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  padding: 0.18rem 0.5rem;
+  cursor: pointer;
+}
+.m-techbtn:hover { border-color: var(--pine); color: var(--pine-ink); }
+
+.m-techmenu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 250px;
+  max-height: 230px;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--rule-2);
+  border-radius: 7px;
+  box-shadow: var(--shadow-lift);
+  padding: 0.35rem;
+  z-index: 20;
+}
+.m-techmenu[hidden] { display: none; }
+
+.m-techgrp {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  padding: 0.45rem 0.45rem 0.2rem;
+}
+
+.m-techitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.24rem 0.45rem;
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--ink-2);
+  cursor: pointer;
+  border: 0;
+  background: none;
+  width: 100%;
+  font-family: var(--sans);
+  text-align: left;
+}
+.m-techitem:hover { background: var(--pine-soft); color: var(--pine-ink); }
+.m-techitem.on { background: var(--pine-soft); color: var(--pine-ink); font-weight: 600; }
+.m-techitem .count { font-family: var(--mono); font-size: 9px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------- mockup: the rail */
+.m-rail {
+  border-right: 1px solid var(--rule);
+  background: var(--surface-2);
+  overflow-y: auto;
+  padding: 0.4rem 0;
+}
+
+.m-railgrp {
+  font-family: var(--mono);
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  padding: 0.6rem 0.6rem 0.25rem;
+}
+
+.m-railitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  width: calc(100% - 0.7rem);
+  margin: 0 0.35rem;
+  padding: 0.22rem 0.4rem;
+  border: 0;
+  background: none;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  color: var(--ink-2);
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.3;
+}
+.m-railitem:hover { background: var(--pine-soft); color: var(--pine-ink); }
+.m-railitem.on { background: var(--pine); color: var(--on-pine); font-weight: 600; }
+.m-railitem .count { font-family: var(--mono); font-size: 8.5px; opacity: .7; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------- mockup: the palette */
+.m-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(20,32,42,.42);
+  z-index: 30;
+  display: grid;
+  place-items: start center;
+  padding-top: 42px;
+}
+.m-scrim[hidden] { display: none; }
+
+.m-pal {
+  width: 84%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--rule-2);
+  border-radius: 9px;
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+}
+
+.m-palinput {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  padding: 0.6rem 0.75rem;
+}
+.m-palinput:focus { outline: none; }
+.m-palinput::placeholder { color: var(--ink-3); }
+
+.m-pallist { max-height: 210px; overflow-y: auto; padding: 0.3rem; }
+
+.m-palrow {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 5px;
+  font-size: 11px;
+  color: var(--ink-2);
+  line-height: 1.35;
+}
+.m-palrow:first-child { background: var(--pine-soft); color: var(--pine-ink); }
+.m-palrow .tech {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  flex: none;
+  width: 62px;
+  text-align: right;
+}
+.m-palrow .t { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.m-palfoot {
+  border-top: 1px solid var(--rule);
+  padding: 0.35rem 0.7rem;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  display: flex;
+  gap: 0.9rem;
+  background: var(--surface-2);
+}
+
+/* -------------------------------------------------- mockup: tier / study mode */
+.m-seg {
+  display: flex;
+  gap: 2px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.m-segbtn {
+  flex: 1;
+  border: 0;
+  background: none;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 500;
+  color: var(--ink-2);
+  padding: 0.24rem 0.1rem;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.m-segbtn:hover { color: var(--pine-ink); }
+.m-segbtn.on { background: var(--pine); color: var(--on-pine); }
+
+.ring { flex: none; }
+.ring circle { fill: none; stroke-width: 2.5; }
+.ring .bg { stroke: var(--surface-3); }
+.ring .fg { stroke: var(--pine); stroke-linecap: round; }
+
+.tick { flex: none; width: 9px; color: var(--pine); font-size: 9px; text-align: center; }
+.tick.off { color: var(--rule-2); }
+
+.m-resume {
+  margin: 0.45rem 0.6rem 0;
+  padding: 0.4rem 0.5rem;
+  border: 1px dashed var(--pine);
+  border-radius: 5px;
+  background: var(--pine-soft);
+  font-size: 10px;
+  color: var(--pine-ink);
+  line-height: 1.4;
+}
+.m-resume b { display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; opacity: .8; margin-bottom: 2px; }
+
+/* ----------------------------------------------------------------- matrix */
+.matrix-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 9px; background: var(--surface); }
+
+table.matrix {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+table.matrix th, table.matrix td {
+  padding: 0.62rem 0.85rem;
+  text-align: left;
+  border-top: 1px solid var(--rule);
+  vertical-align: middle;
+}
+
+table.matrix thead th {
+  border-top: 0;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--ink-3);
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+
+table.matrix tbody th {
+  font-weight: 500;
+  color: var(--ink-2);
+  font-size: 0.86rem;
+  max-width: 340px;
+}
+
+table.matrix td { text-align: center; width: 78px; }
+
+.mk { font-family: var(--mono); font-size: 0.95rem; line-height: 1; }
+.mk.yes  { color: var(--pine-ink); }
+.mk.part { color: var(--amber); }
+.mk.no   { color: var(--rule-2); }
+
+/* ------------------------------------------------------------------ verdict */
+.verdict {
+  border: 1px solid var(--pine);
+  border-radius: 12px;
+  background: var(--pine-soft);
+  padding: 1.6rem 1.75rem;
+}
+
+.verdict h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.014em;
+}
+
+.verdict p { margin: 0 0 0.85rem; max-width: 68ch; }
+.verdict p:last-child { margin-bottom: 0; }
+.verdict strong { color: var(--ink); font-weight: 640; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-3);
+  margin-top: 1rem;
+  align-items: center;
+}
+.legend span { display: inline-flex; align-items: center; gap: 0.35rem; }
+
+.foot {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .opt-head { grid-template-columns: auto 1fr; }
+  .effort { grid-column: 2; text-align: left; margin-top: 0.75rem; }
+  .effort-bar { justify-content: flex-start; }
+  .opt-detail { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">Dev Bible · navigation proposal · 5 Sept 2026</p>
+    <h1>Four ways through 6,797 pages</h1>
+    <p class="lede">
+      The homepage already does its job — 31 cards, filterable, honest about what is
+      written. <strong>Everything after the click is where it falls apart.</strong> Below:
+      what I measured in the running site, then four navigation architectures with
+      working mockups. They are different in kind, not degrees of the same idea. Pick one.
+    </p>
+    <div class="stats">
+      <div class="stat"><b>6,797</b><span>Pages</span></div>
+      <div class="stat"><b>1,047</b><span>Categories</span></div>
+      <div class="stat"><b>31</b><span>Technologies</span></div>
+      <div class="stat"><b>2,240</b><span>In Java alone</span></div>
+      <div class="stat"><b>6</b><span>Levels deep</span></div>
+      <div class="stat"><b>0</b><span>Navbar items</span></div>
+    </div>
+  </header>
+
+  <!-- =========================================================== diagnosis -->
+  <section class="block">
+    <h2>What I found in the running site</h2>
+    <p class="sub">
+      Measured against the corpus and the dev server on :3100, not guessed. Each finding
+      names its evidence.
+    </p>
+
+    <div class="findings">
+
+      <div class="finding">
+        <div class="finding-n">01</div>
+        <div>
+          <h3>Once you are inside a technology, you cannot reach another one</h3>
+          <p>
+            The navbar is deliberately empty — <span class="ev">navbar.items: []</span> — so
+            the only route from Java to React is back to the homepage and re-pick. For a
+            reference where React, Next.js and TypeScript constantly cite each other, this
+            is the most expensive thing on the list.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">02</div>
+        <div>
+          <h3>A technology opens on furniture, not content</h3>
+          <p>
+            <span class="ev">/docs/java</span> shows three sidebar entries: Overview,
+            Syllabus, Explanations. The 17 phases are one level further down. Two clicks
+            before you see a single topic.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">03</div>
+        <div>
+          <h3>The tier system — the spine of the whole project — is invisible in navigation</h3>
+          <p>
+            <strong>6,519 of 6,797 pages carry a tier badge.</strong> Java alone: 831 Master,
+            1,008 Understand, 244 Know, 97 When&nbsp;Needed. None of it reaches the sidebar.
+            You cannot ask "show me the Master-tier pages in phase 4" — the metadata exists
+            and nothing reads it.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding is-bug">
+        <div class="finding-n">04</div>
+        <div>
+          <h3>Collapse&nbsp;all / Expand&nbsp;all is in the DOM but nobody can see it</h3>
+          <p>
+            The swizzled bar renders at <span class="ev">top: 0</span> inside the sidebar
+            viewport — which starts underneath the 60px fixed navbar. The buttons sit at
+            y&nbsp;=&nbsp;8–31, behind the header. The one sidebar control that exists today
+            is painted under the navbar. That is a live bug, not a design opinion.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">05</div>
+        <div>
+          <h3>Every category at every depth is styled identically</h3>
+          <p>
+            <span class="ev">.menu__list-item-collapsible .menu__link</span> sets 0.72rem
+            uppercase mono in <span class="ev">--db-ink-3</span>, the palest ink in the
+            palette — applied the same to a top-level phase and a fourth-level chapter. All
+            17 Java phase labels wrap onto two lines, and a wall of identical grey small-caps
+            gives the eye nothing to land on.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">06</div>
+        <div>
+          <h3>The tree gives a 585-page phase the same weight as a 1-page phase</h3>
+          <p>
+            Java's Data&nbsp;access is 585 pages; Messaging is 1. Both are one row of the
+            same height with no number on them. Nothing in the sidebar tells you how much is
+            behind a caret before you open it.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">07</div>
+        <div>
+          <h3>Nesting reaches six levels, and the indent eats the label</h3>
+          <p>
+            <span class="ev">python/pages/phase-1-language-core/12-eafp-vs-lbyl/05j-designing-the-failure-channel/</span>
+            — by that depth a 300px sidebar has roughly 150px of usable text width for
+            labels like "3&nbsp;·&nbsp;Composition and checked exceptions".
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-n">08</div>
+        <div>
+          <h3>Nothing remembers you were here</h3>
+          <p>
+            No visited marks, no resume point, no scroll restoration, no per-technology
+            collapse memory. On a corpus this size that is the difference between a reference
+            you can work through and one you re-orient yourself in every session.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================= options -->
+  <section class="block">
+    <h2>Four architectures</h2>
+    <p class="sub">
+      Every mockup below is live — type in the filters, open the dropdown, hit the palette,
+      move the tier control. They use the real Java tree and the real page counts, in the
+      project's own palette, so what you see is what it would look like.
+    </p>
+
+    <!-- ---------------------------------------------------------- OPTION A -->
+    <article class="opt" id="opt-a">
+      <div class="opt-head">
+        <div class="opt-letter">A</div>
+        <div>
+          <h2>Tuned Classic</h2>
+          <p class="opt-char">Character · an instrument panel</p>
+          <p class="opt-thesis">
+            Same three-column room, properly equipped. A filter box over the tree, tier dots
+            on every page, page counts on every category, real typographic hierarchy by depth,
+            and a technology dropdown in the navbar. Nothing about the shape of the site changes.
+          </p>
+        </div>
+        <div class="effort">
+          <span class="effort-label">Effort</span>
+          <div class="effort-bar"><i class="on"></i><i></i><i></i><i></i></div>
+          <p class="effort-note">~4 components<br>swizzle-only</p>
+        </div>
+      </div>
+
+      <div class="mockwrap"><div class="mock" id="mock-a"></div></div>
+
+      <div class="opt-detail">
+        <div>
+          <h4>What changes</h4>
+          <ul>
+            <li>Filter box at the top of the sidebar — matches labels across the whole tree and auto-expands to the hits.</li>
+            <li>Tier dot on every page row; solid pine = Master, ring = Understand, amber = Know, grey = When&nbsp;Needed.</li>
+            <li>Page count on every category, so a 585-page phase looks like one.</li>
+            <li>Three real type levels for phase / chapter / page instead of one grey.</li>
+            <li>Technology dropdown in the navbar, grouped by the layers the homepage already defines.</li>
+            <li>Collapse&nbsp;all / Expand&nbsp;all moved where it can actually be seen, and its state persisted.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What it costs</h4>
+          <ul>
+            <li>Swizzle <code>DocSidebar</code>, <code>DocSidebarItems</code>, <code>NavbarItem</code>. No route changes, no build-step changes.</li>
+            <li>Tier dots need tier in sidebar metadata — a one-off script writing <code>sidebar_custom_props</code>, or read from the badge at build time.</li>
+            <li>The tree is still a tree. Java is still 2,240 items; you can now search it, but you cannot reduce it.</li>
+            <li>Still no answer to "I am in Java and want React".<em> The dropdown helps; it is not a switcher you can see.</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="opt-foot">
+        <span class="pill">Fixes 02 · 03 · 04 · 05 · 06 · 07</span>
+        <span>Partially fixes 01</span>
+        <span>Leaves 08 open</span>
+      </div>
+    </article>
+
+    <!-- ---------------------------------------------------------- OPTION B -->
+    <article class="opt" id="opt-b">
+      <div class="opt-head">
+        <div class="opt-letter">B</div>
+        <div>
+          <h2>Workspace Rail</h2>
+          <p class="opt-char">Character · you can see the whole building from any room</p>
+          <p class="opt-thesis">
+            Everything in A, plus a permanent left rail listing all 31 technologies grouped by
+            layer. The page tree becomes the second column. You switch from Java to React in
+            one click from anywhere in the site, and you always know how big the thing you
+            are standing in is.
+          </p>
+        </div>
+        <div class="effort">
+          <span class="effort-label">Effort</span>
+          <div class="effort-bar"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+          <p class="effort-note">A + layout work<br>4 breakpoints</p>
+        </div>
+      </div>
+
+      <div class="mockwrap"><div class="mock" id="mock-b"></div></div>
+
+      <div class="opt-detail">
+        <div>
+          <h4>What changes</h4>
+          <ul>
+            <li>A 170px rail, always visible in <code>/docs</code>, driven by the same <code>LAYERS</code> array the homepage uses — one source of truth for the stack.</li>
+            <li>Live page count next to each technology, straight out of <code>progress.js</code>.</li>
+            <li>Collapses to initials under 1280px, folds into the mobile drawer below 996px.</li>
+            <li>The homepage stops being a toll gate and becomes what it should be: the dashboard you visit on purpose.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What it costs</h4>
+          <ul>
+            <li>Swizzle <code>DocRoot/Layout</code> — the one piece of real layout surgery here. Breakpoints need testing at 996 / 1280 / 1600.</li>
+            <li>~170px of horizontal width, permanently. On a 1440px screen that is the TOC's worth of room.</li>
+            <li>31 items means the rail itself scrolls. Honest, but it is another scrolling column.</li>
+            <li>Same as A on the tree: Java is still 2,240 items.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="opt-foot">
+        <span class="pill">Fixes 01 · 02 · 03 · 04 · 05 · 06 · 07</span>
+        <span>Leaves 08 open</span>
+      </div>
+    </article>
+
+    <!-- ---------------------------------------------------------- OPTION C -->
+    <article class="opt" id="opt-c">
+      <div class="opt-head">
+        <div class="opt-letter">C</div>
+        <div>
+          <h2>Command First</h2>
+          <p class="opt-char">Character · a terminal</p>
+          <p class="opt-thesis">
+            Stop asking the sidebar to hold 2,240 items. It shows only your neighbourhood —
+            the current phase expanded, its siblings as one line each. Everything else is
+            reached by typing: <span class="ev">⌘K</span> over all 6,797 page titles, every
+            technology, and tier filters, in one box.
+          </p>
+        </div>
+        <div class="effort">
+          <span class="effort-label">Effort</span>
+          <div class="effort-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+          <p class="effort-note">palette + index<br>~6,800 titles</p>
+        </div>
+      </div>
+
+      <div class="mockwrap"><div class="mock" id="mock-c"></div></div>
+
+      <div class="opt-detail">
+        <div>
+          <h4>What changes</h4>
+          <ul>
+            <li>Sidebar becomes short and legible at every depth — siblings collapse to one row, so indent never eats the label.</li>
+            <li>⌘K fuzzy-matches titles across <em>all</em> technologies, which is the one thing the split search index cannot do today.</li>
+            <li>Modes in the same box: <code>&gt;</code> jump to technology, <code>#</code> filter by tier, plain text searches titles, recents on open.</li>
+            <li>Titles-only index — roughly 400KB for the whole corpus, versus the 94.7MB full-text index that forced the per-technology split.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What it costs</h4>
+          <ul>
+            <li>A new generated artifact: a titles index built in <code>postBuild</code>, next to the existing search indexes. New build step, new thing to keep current.</li>
+            <li>Genuinely opinionated. Superb once you know the corpus; a stranger gets less to browse.</li>
+            <li>Discoverability rests on a keyboard shortcut. Needs a visible affordance in the navbar, not just ⌘K.</li>
+            <li>Contextual sidebars make "where am I in the whole thing" harder, so breadcrumbs have to carry more weight.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="opt-foot">
+        <span class="pill">Fixes 01 · 02 · 05 · 06 · 07</span>
+        <span>Partially fixes 03 · 08</span>
+        <span class="pill warn">Also fixes cross-technology search</span>
+      </div>
+    </article>
+
+    <!-- ---------------------------------------------------------- OPTION D -->
+    <article class="opt" id="opt-d">
+      <div class="opt-head">
+        <div class="opt-letter">D</div>
+        <div>
+          <h2>Study Mode</h2>
+          <p class="opt-char">Character · a curriculum, not a filing cabinet</p>
+          <p class="opt-thesis">
+            The tier system becomes navigation. A control sets your tier floor and the whole
+            sidebar filters to it — Java drops from 2,240 pages to 831 at Master&#8209;only.
+            Add visited marks, per-phase progress rings, and a resume point per technology.
+            This is what the four tiers were always implying.
+          </p>
+        </div>
+        <div class="effort">
+          <span class="effort-label">Effort</span>
+          <div class="effort-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          <p class="effort-note">needs tier in<br>frontmatter first</p>
+        </div>
+      </div>
+
+      <div class="mockwrap"><div class="mock" id="mock-d"></div></div>
+
+      <div class="opt-detail">
+        <div>
+          <h4>What changes</h4>
+          <ul>
+            <li>Tier floor control filters the tree live. Counts update; empty categories disappear.</li>
+            <li>Progress ring per phase from pages you have actually opened, stored per technology.</li>
+            <li>Resume card at the top of the sidebar — the page you left, and the next unread one at your tier.</li>
+            <li>"Next unread at this tier" in the pagination footer, so reading a track becomes a straight line.</li>
+            <li>Reuses <code>progress.js</code>, which already computes exactly this shape for the homepage.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What it costs</h4>
+          <ul>
+            <li><strong>Tier must move out of the page body first.</strong> Today it is a <code>&lt;span class="db-tier"&gt;</code> in MDX. It has to become frontmatter or <code>sidebar_custom_props</code> across 6,519 pages — a scripted migration, and a house-style change the authoring skills have to learn.</li>
+            <li>The 289 pages with no badge need a rule: shown always, or hidden at Master-only.</li>
+            <li>Reading state is per-browser <code>localStorage</code>. It does not follow you to another machine.</li>
+            <li>Biggest behavioural change of the four — worth agreeing before it is built, not after.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="opt-foot">
+        <span class="pill">Fixes 02 · 03 · 05 · 06 · 07 · 08</span>
+        <span>Needs A or B alongside it for 01 · 04</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============================================================== matrix -->
+  <section class="block">
+    <h2>Side by side</h2>
+    <p class="sub">Findings down the left, options across the top.</p>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Finding</th>
+            <th>A · Classic</th>
+            <th>B · Rail</th>
+            <th>C · Command</th>
+            <th>D · Study</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>01 · Stranded inside one technology</th>
+            <td><span class="mk part">◐</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk no">○</span></td></tr>
+          <tr><th>02 · Opens on furniture, not content</th>
+            <td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>03 · Tier invisible in navigation</th>
+            <td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk part">◐</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>04 · Collapse-all hidden behind the navbar</th>
+            <td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk no">○</span></td></tr>
+          <tr><th>05 · Every depth styled identically</th>
+            <td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>06 · No sense of a category's size</th>
+            <td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td><td><span class="mk part">◐</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>07 · Six levels of indent eat the label</th>
+            <td><span class="mk part">◐</span></td><td><span class="mk part">◐</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>08 · Nothing remembers you were here</th>
+            <td><span class="mk no">○</span></td><td><span class="mk no">○</span></td><td><span class="mk part">◐</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>Cuts Java's 2,240-item tree down</th>
+            <td><span class="mk no">○</span></td><td><span class="mk no">○</span></td><td><span class="mk yes">●</span></td><td><span class="mk yes">●</span></td></tr>
+          <tr><th>Search that spans all technologies</th>
+            <td><span class="mk no">○</span></td><td><span class="mk no">○</span></td><td><span class="mk yes">●</span></td><td><span class="mk no">○</span></td></tr>
+          <tr><th>Needs a content migration first</th>
+            <td><span class="mk no">○</span></td><td><span class="mk no">○</span></td><td><span class="mk no">○</span></td><td><span class="mk part">◐</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span><span class="mk yes">●</span> solves it</span>
+      <span><span class="mk part">◐</span> partly</span>
+      <span><span class="mk no">○</span> untouched</span>
+    </div>
+  </section>
+
+  <!-- ============================================================= verdict -->
+  <section class="block">
+    <div class="verdict">
+      <h2>What I would pick, and why</h2>
+      <p>
+        <strong>B, then D.</strong> B is the honest floor: it contains all of A, and A alone
+        leaves the single most expensive problem — being stranded in one technology — only
+        half solved. B is one piece of layout surgery and everything else is swizzle work.
+      </p>
+      <p>
+        Then D, separately, once the tier migration is done. D is the only option that
+        actually shrinks the tree, and the tier data is already written on 6,519 pages — it
+        is sitting in the corpus doing nothing. But it needs tier moved into frontmatter
+        first, which touches the authoring contract, so it should be its own decision rather
+        than a rider on a sidebar change.
+      </p>
+      <p>
+        <strong>C is the interesting outlier.</strong> It is the only one that gives back
+        cross-technology search, which the 94.7MB index problem took away by necessity — and
+        a titles-only index is cheap enough to sidestep it entirely. If you navigate more by
+        recall than by browsing, C beats B for you specifically. It is the pick I would make
+        second-guessing myself about.
+      </p>
+      <p>
+        Finding 04 — the collapse control painted under the navbar — I would fix regardless of
+        which of these you choose. It is a few lines.
+      </p>
+    </div>
+  </section>
+
+  <p class="foot">
+    Worktree <span class="ev">.claude/worktrees/ui-redesign</span> on branch
+    <span class="ev">worktree-ui-redesign</span>, branched from main at 46f68b97 · nothing
+    committed yet<br>
+    Counts measured 5 Sept 2026 against the corpus and a dev server on :3100 · palette and
+    type from <span class="ev">src/css/custom.css</span>
+  </p>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------- real data */
+
+  // Java's 17 phases with their measured page counts. The spread is the point:
+  // Data access is 585 pages, Messaging is 1, and today they are the same row.
+  var PHASES = [
+    {n: '00', label: 'The platform and the JVM',    pages: 20,  master: 9},
+    {n: '01', label: 'Language core',               pages: 42,  master: 35},
+    {n: '02', label: 'Classes and objects',         pages: 42,  master: 36},
+    {n: '03', label: 'Generics and collections',    pages: 32,  master: 21},
+    {n: '04', label: 'Lambdas, streams, Optional',  pages: 28,  master: 20, open: true},
+    {n: '05', label: 'Exceptions and failure design', pages: 21, master: 17},
+    {n: '06', label: 'Concurrency',                 pages: 46,  master: 22},
+    {n: '07', label: 'I/O, time, everyday stdlib',  pages: 21,  master: 10},
+    {n: '08', label: 'Maven, Gradle, dependencies', pages: 53,  master: 11},
+    {n: '09', label: 'Spring Boot and the web',     pages: 209, master: 71},
+    {n: '10', label: 'Data access',                 pages: 585, master: 182},
+    {n: '11', label: 'Testing',                     pages: 496, master: 176},
+    {n: '12', label: 'The JVM in production',       pages: 372, master: 30},
+    {n: '13', label: 'OAuth2, OIDC, service security', pages: 100, master: 80},
+    {n: '14', label: 'Microservice architecture',   pages: 164, master: 112},
+    {n: '15', label: 'Messaging and event-driven',  pages: 1,   master: 1},
+    {n: '16', label: 'Resilience and the fleet',    pages: 1,   master: 1}
+  ];
+
+  // The real contents of phase 4.
+  var CHAPTERS = [
+    {n: '01', label: 'Lambdas and functional interfaces', pages: 4, open: true, leaves: [
+      {label: '1 · Syntax, capture and this',             tier: 'master',     seen: true},
+      {label: '2 · The function vocabulary',              tier: 'master',     seen: true, active: true},
+      {label: '3 · Composition and checked exceptions',   tier: 'master',     seen: false}
+    ]},
+    {n: '02', label: 'Method references',                 pages: 1, leaves: []},
+    {n: '03', label: 'The stream pipeline',               pages: 4, leaves: [
+      {label: '1 · Sources, intermediates, terminals',    tier: 'master',     seen: false},
+      {label: '2 · Laziness and short-circuiting',        tier: 'understand', seen: false},
+      {label: '3 · Parallel streams and when not to',     tier: 'know',       seen: false}
+    ]},
+    {n: '04', label: 'map, filter, flatMap and friends',  pages: 3, leaves: []},
+    {n: '05', label: 'Collectors',                        pages: 4, leaves: [
+      {label: '1 · Everyday collectors',                  tier: 'master',     seen: false},
+      {label: '2 · Grouping and partitioning',            tier: 'understand', seen: false},
+      {label: '3 · The machine underneath',               tier: 'when',       seen: false}
+    ]},
+    {n: '06', label: 'Infinite streams',                  pages: 1, leaves: []},
+    {n: '07', label: 'Optional used correctly',           pages: 4, leaves: []}
+  ];
+
+  // The stack, grouped exactly as the homepage groups it, with measured page counts.
+  var STACK = [
+    {group: 'Frontend', items: [
+      {name: 'CSS', pages: 102}, {name: 'JavaScript', pages: 763},
+      {name: 'TypeScript', pages: 424}, {name: 'React', pages: 338},
+      {name: 'Next.js', pages: 665}, {name: 'Angular', pages: 9}
+    ]},
+    {group: 'Backend', items: [
+      {name: 'Node.js', pages: 255}, {name: 'Express', pages: 188}
+    ]},
+    {group: 'Data', items: [
+      {name: 'MongoDB', pages: 53}, {name: 'PostgreSQL', pages: 361}, {name: 'Redis', pages: 12}
+    ]},
+    {group: 'Infrastructure', items: [
+      {name: 'Docker & Podman', pages: 271}, {name: 'Nginx', pages: 47}
+    ]},
+    {group: 'Workflow', items: [{name: 'Git', pages: 70}]},
+    {group: 'Beyond the JS stack', items: [
+      {name: 'Java', pages: 2240, current: true}, {name: 'Python', pages: 460}
+    ]},
+    {group: 'Real world', items: [{name: 'Real World', pages: 260}]},
+    {group: 'Frontend toolchain', items: [
+      {name: 'Vite', pages: 18}, {name: 'Webpack', pages: 23}, {name: 'Babel', pages: 18},
+      {name: 'ESLint & Oxlint', pages: 23}, {name: 'Jest & RTL', pages: 40},
+      {name: 'Playwright', pages: 18}, {name: 'Storybook', pages: 54},
+      {name: 'Redux Toolkit', pages: 18}, {name: 'TanStack Query', pages: 18},
+      {name: 'Framer Motion', pages: 18}, {name: 'Web Vitals', pages: 13},
+      {name: 'Frontend Architecture', pages: 17}
+    ]}
+  ];
+
+  // Real page titles from across the corpus, for the palette.
+  var TITLES = [
+    {tech: 'Java',    t: '2 · The function vocabulary'},
+    {tech: 'Java',    t: '1 · Syntax, capture and this'},
+    {tech: 'Java',    t: '3 · Composition and checked exceptions'},
+    {tech: 'Java',    t: 'Grouping and partitioning'},
+    {tech: 'Java',    t: 'The machine underneath'},
+    {tech: 'Java',    t: 'Everyday collectors'},
+    {tech: 'Java',    t: 'Optional used correctly'},
+    {tech: 'Java',    t: 'Infinite streams'},
+    {tech: 'React',   t: 'The RSC payload'},
+    {tech: 'React',   t: 'Two module graphs'},
+    {tech: 'React',   t: 'What crosses the boundary'},
+    {tech: 'React',   t: 'Server components as children'},
+    {tech: 'React',   t: 'Async components'},
+    {tech: 'React',   t: 'Composition rules'},
+    {tech: 'React',   t: 'Taint APIs'},
+    {tech: 'React',   t: 'When RSC is wrong'},
+    {tech: 'React',   t: 'Progressive enhancement'},
+    {tech: 'React',   t: 'Data fetching in RSC'},
+    {tech: 'Next.js', t: '02d · The two APIs with no clean successor'},
+    {tech: 'Next.js', t: 'Manifest fields that change behaviour'},
+    {tech: 'Python',  t: 'Designing the failure channel'},
+    {tech: 'Python',  t: 'Typing the sentinel'},
+    {tech: 'Python',  t: 'Union returns and exhaustiveness'},
+    {tech: 'Python',  t: 'Exhaustiveness and assert never'},
+    {tech: 'Python',  t: 'Choosing a sentinel'},
+    {tech: 'Python',  t: 'The bill every caller pays'},
+    {tech: 'Postgres',t: 'MVCC and the visibility map'},
+    {tech: 'Docker',  t: 'Namespaces and cgroups'},
+    {tech: 'Node.js', t: 'The event loop, phase by phase'},
+    {tech: 'Git',     t: 'The object model'}
+  ];
+
+  var TIER_ORDER = {master: 0, understand: 1, know: 2, when: 3};
+
+  /* ---------------------------------------------------------------- helpers */
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function dot(tier) {
+    var d = el('span', 'dot ' + tier);
+    d.setAttribute('role', 'img');
+    d.setAttribute('aria-label', tier + ' tier');
+    return d;
+  }
+
+  // The site's own article stand-in, identical in all four frames so the only
+  // thing that differs between mockups is the navigation.
+  function article() {
+    var m = el('div', 'm-main');
+    m.appendChild(el('div', 'm-crumbs',
+      'Explanations  ›  04 · Lambdas, streams, Optional  ›  01 · Lambdas and functional interfaces'));
+    m.appendChild(el('span', 'm-badge', 'Master'));
+    m.appendChild(el('div', 'm-h1', 'The java.util.function vocabulary'));
+    m.appendChild(el('div', 'm-verified',
+      'Verified: 2026-08 against the java.util.function package Javadoc (JDK 25 API documentation).'));
+    ['w100', 'w90', 'w100', 'w75', 'w100', 'w60'].forEach(function (w) {
+      m.appendChild(el('div', 'm-line ' + w));
+    });
+    return m;
+  }
+
+  function toc() {
+    var t = el('div', 'm-toc');
+    t.appendChild(el('div', 'm-toc-h', 'On this page'));
+    [['The core six', true], ['The primitive variants', false],
+     ['@FunctionalInterface', false], ['Write your own?', false],
+     ['Gotchas', false], ['Interview questions', false]].forEach(function (p) {
+      t.appendChild(el('div', 'm-toc-i' + (p[1] ? ' on' : ''), p[0]));
+    });
+    return t;
+  }
+
+  function navbar(extra) {
+    var bar = el('div', 'm-bar');
+    bar.appendChild(el('div', 'm-brand', 'Dev Bible'));
+    if (extra) bar.appendChild(extra);
+    bar.appendChild(el('div', 'm-spacer'));
+    var s = el('div', 'm-search');
+    s.appendChild(el('span', null, 'Search Java'));
+    var sp = el('div', 'm-spacer'); sp.style.flex = '1'; s.appendChild(sp);
+    s.appendChild(el('span', 'm-kbd', 'K'));
+    bar.appendChild(s);
+    return bar;
+  }
+
+  /* ------------------------------------------- the tuned tree, shared by A/B/D */
+
+  // Builds the phase/chapter/page tree. `opts.tierFloor` filters (study mode),
+  // `opts.rings` adds progress rings, `opts.ticks` adds visited marks.
+  function buildTree(host, opts) {
+    opts = opts || {};
+    host.textContent = '';
+
+    var floor = opts.tierFloor == null ? 3 : opts.tierFloor;
+    var shown = 0;
+
+    PHASES.forEach(function (p) {
+      // In study mode a phase's count is its Master count when the floor is Master.
+      var count = floor === 0 ? p.master : p.pages;
+      if (count === 0) return;
+      shown += count;
+
+      var row = el('div', 'm-row lvl-phase ind-1' + (p.open ? ' open' : ''));
+      row.appendChild(el('span', 'caret', '▶'));
+      if (opts.rings) row.appendChild(ring(p));
+      row.appendChild(el('span', 'lbl', p.n + ' · ' + p.label));
+      row.appendChild(el('span', 'count', String(count)));
+      host.appendChild(row);
+
+      if (!p.open) return;
+
+      CHAPTERS.forEach(function (c) {
+        var leaves = c.leaves.filter(function (l) { return TIER_ORDER[l.tier] <= floor; });
+        if (c.leaves.length && !leaves.length) return;
+
+        var crow = el('div', 'm-row lvl-chapter ind-2' + (c.open ? ' open' : ''));
+        crow.appendChild(el('span', 'caret', '▶'));
+        crow.appendChild(el('span', 'lbl', c.n + ' · ' + c.label));
+        crow.appendChild(el('span', 'count', String(leaves.length || c.pages)));
+        host.appendChild(crow);
+
+        if (!c.open) return;
+
+        leaves.forEach(function (l) {
+          var lrow = el('div', 'm-row lvl-page ind-3' + (l.active ? ' on' : ''));
+          if (opts.ticks) {
+            var tk = el('span', 'tick' + (l.seen ? '' : ' off'), l.seen ? '✓' : '·');
+            lrow.appendChild(tk);
+          }
+          lrow.appendChild(dot(l.tier));
+          lrow.appendChild(el('span', 'lbl', l.label));
+          host.appendChild(lrow);
+        });
+      });
+    });
+
+    return shown;
+  }
+
+  function ring(p) {
+    var pct = Math.min(1, p.master / Math.max(p.pages, 1));
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'ring');
+    svg.setAttribute('width', '12'); svg.setAttribute('height', '12');
+    svg.setAttribute('viewBox', '0 0 12 12');
+    svg.setAttribute('aria-hidden', 'true');
+    var C = 2 * Math.PI * 4.5;
+    var bg = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    bg.setAttribute('class', 'bg'); bg.setAttribute('cx', '6'); bg.setAttribute('cy', '6'); bg.setAttribute('r', '4.5');
+    var fg = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    fg.setAttribute('class', 'fg'); fg.setAttribute('cx', '6'); fg.setAttribute('cy', '6'); fg.setAttribute('r', '4.5');
+    fg.setAttribute('stroke-dasharray', C);
+    fg.setAttribute('stroke-dashoffset', C * (1 - pct * 0.45));
+    fg.setAttribute('transform', 'rotate(-90 6 6)');
+    svg.appendChild(bg); svg.appendChild(fg);
+    return svg;
+  }
+
+  /* -------------------------------------------------- filtering (A, B tools) */
+
+  function attachFilter(input, hint, treeHost, rebuild) {
+    function run() {
+      var q = input.value.trim().toLowerCase();
+      rebuild();
+      if (!q) {
+        hint.textContent = '2,240 pages · 145 categories';
+        return;
+      }
+      var rows = Array.prototype.slice.call(treeHost.querySelectorAll('.m-row'));
+      var hits = 0;
+      rows.forEach(function (r) {
+        var lbl = r.querySelector('.lbl');
+        var match = lbl && lbl.textContent.toLowerCase().indexOf(q) !== -1;
+        if (match) { hits++; } else { r.remove(); }
+      });
+      hint.textContent = hits + (hits === 1 ? ' match' : ' matches') + ' · Esc to clear';
+      if (!hits) {
+        treeHost.appendChild(el('div', 'm-empty', 'Nothing in Java matches “' + input.value.trim() + '”.'));
+      }
+    }
+    input.addEventListener('input', run);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { input.value = ''; run(); }
+    });
+    run();
+  }
+
+  /* ================================================================ MOCKUP A */
+
+  (function () {
+    var root = document.getElementById('mock-a');
+
+    // technology dropdown in the navbar
+    var tech = el('div', 'm-tech');
+    var btn = el('button', 'm-techbtn');
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.appendChild(el('span', null, 'Java'));
+    btn.appendChild(el('span', null, '▾'));
+    var menu = el('div', 'm-techmenu');
+    menu.hidden = true;
+    STACK.forEach(function (g) {
+      menu.appendChild(el('div', 'm-techgrp', g.group));
+      g.items.forEach(function (it) {
+        var b = el('button', 'm-techitem' + (it.current ? ' on' : ''));
+        b.type = 'button';
+        b.appendChild(el('span', null, it.name));
+        b.appendChild(el('span', 'count', it.pages.toLocaleString()));
+        menu.appendChild(b);
+      });
+    });
+    btn.addEventListener('click', function () {
+      var open = menu.hidden;
+      menu.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    tech.appendChild(btn);
+    tech.appendChild(menu);
+
+    root.appendChild(navbar(tech));
+
+    var body = el('div', 'm-body');
+    body.style.gridTemplateColumns = '258px 1fr 146px';
+
+    var side = el('div', 'm-side');
+    var tools = el('div', 'm-tools');
+    var input = el('input', 'm-filter');
+    input.type = 'search';
+    input.placeholder = 'Filter Java — try “collect”';
+    input.setAttribute('aria-label', 'Filter the Java sidebar');
+    var hint = el('div', 'm-hint');
+    tools.appendChild(input);
+    tools.appendChild(hint);
+    side.appendChild(tools);
+
+    var treeHost = el('div');
+    treeHost.style.paddingBottom = '0.5rem';
+    side.appendChild(treeHost);
+
+    attachFilter(input, hint, treeHost, function () { buildTree(treeHost, {}); });
+
+    body.appendChild(side);
+    body.appendChild(article());
+    body.appendChild(toc());
+    root.appendChild(body);
+  }());
+
+  /* ================================================================ MOCKUP B */
+
+  (function () {
+    var root = document.getElementById('mock-b');
+    root.appendChild(navbar(null));
+
+    var body = el('div', 'm-body');
+    body.style.gridTemplateColumns = '156px 240px 1fr 128px';
+
+    var rail = el('div', 'm-rail');
+    var current = null;
+    STACK.forEach(function (g) {
+      rail.appendChild(el('div', 'm-railgrp', g.group));
+      g.items.forEach(function (it) {
+        var b = el('button', 'm-railitem' + (it.current ? ' on' : ''));
+        b.type = 'button';
+        b.appendChild(el('span', null, it.name));
+        b.appendChild(el('span', 'count', it.pages.toLocaleString()));
+        if (it.current) current = b;
+        b.addEventListener('click', function () {
+          if (current) current.classList.remove('on');
+          b.classList.add('on');
+          current = b;
+          hint.textContent = it.pages.toLocaleString() + ' pages in ' + it.name;
+        });
+        rail.appendChild(b);
+      });
+    });
+
+    var side = el('div', 'm-side');
+    var tools = el('div', 'm-tools');
+    var input = el('input', 'm-filter');
+    input.type = 'search';
+    input.placeholder = 'Filter — try “stream”';
+    input.setAttribute('aria-label', 'Filter the sidebar');
+    var hint = el('div', 'm-hint');
+    tools.appendChild(input);
+    tools.appendChild(hint);
+    side.appendChild(tools);
+
+    var treeHost = el('div');
+    treeHost.style.paddingBottom = '0.5rem';
+    side.appendChild(treeHost);
+    attachFilter(input, hint, treeHost, function () { buildTree(treeHost, {}); });
+
+    body.appendChild(rail);
+    body.appendChild(side);
+    body.appendChild(article());
+    body.appendChild(toc());
+    root.appendChild(body);
+
+    // Open with the technology you are actually in centred, the way the real rail
+    // would restore itself — otherwise Java sits below the fold and the active
+    // state is invisible.
+    if (current) {
+      rail.scrollTop = Math.max(0, current.offsetTop - rail.clientHeight / 2 + 12);
+    }
+  }());
+
+  /* ================================================================ MOCKUP C */
+
+  (function () {
+    var root = document.getElementById('mock-c');
+
+    var kbtn = el('button', 'm-techbtn');
+    kbtn.type = 'button';
+    kbtn.appendChild(el('span', null, 'Jump to…'));
+    kbtn.appendChild(el('span', 'm-kbd', 'K'));
+
+    root.appendChild(navbar(kbtn));
+
+    var body = el('div', 'm-body');
+    body.style.gridTemplateColumns = '236px 1fr 150px';
+
+    // The contextual sidebar: siblings collapse to one row each.
+    var side = el('div', 'm-side');
+    var head = el('div', 'm-tools');
+    var crumb = el('div', 'm-hint');
+    crumb.textContent = 'JAVA · PHASE 04 OF 17';
+    head.appendChild(crumb);
+    side.appendChild(head);
+
+    var tree = el('div');
+    tree.style.padding = '0.35rem 0 0.5rem';
+
+    var before = el('div', 'm-row lvl-chapter ind-1');
+    before.appendChild(el('span', 'caret', '▲'));
+    before.appendChild(el('span', 'lbl', '4 earlier phases'));
+    before.appendChild(el('span', 'count', '136'));
+    tree.appendChild(before);
+
+    var here = el('div', 'm-row lvl-phase ind-1 open');
+    here.appendChild(el('span', 'caret', '▶'));
+    here.appendChild(el('span', 'lbl', '04 · Lambdas, streams, Optional'));
+    here.appendChild(el('span', 'count', '28'));
+    tree.appendChild(here);
+
+    CHAPTERS.forEach(function (c) {
+      var crow = el('div', 'm-row lvl-chapter ind-2' + (c.open ? ' open' : ''));
+      crow.appendChild(el('span', 'caret', '▶'));
+      crow.appendChild(el('span', 'lbl', c.n + ' · ' + c.label));
+      crow.appendChild(el('span', 'count', String(c.pages)));
+      tree.appendChild(crow);
+      if (!c.open) return;
+      c.leaves.forEach(function (l) {
+        var lrow = el('div', 'm-row lvl-page ind-3' + (l.active ? ' on' : ''));
+        lrow.appendChild(dot(l.tier));
+        lrow.appendChild(el('span', 'lbl', l.label));
+        tree.appendChild(lrow);
+      });
+    });
+
+    var after = el('div', 'm-row lvl-chapter ind-1');
+    after.appendChild(el('span', 'caret', '▼'));
+    after.appendChild(el('span', 'lbl', '12 later phases'));
+    after.appendChild(el('span', 'count', '2,076'));
+    tree.appendChild(after);
+
+    side.appendChild(tree);
+
+    body.appendChild(side);
+    body.appendChild(article());
+    body.appendChild(toc());
+    root.appendChild(body);
+
+    // the palette
+    var scrim = el('div', 'm-scrim');
+    scrim.hidden = true;
+    var pal = el('div', 'm-pal');
+    var pin = el('input', 'm-palinput');
+    pin.type = 'text';
+    pin.placeholder = 'Search 6,797 pages —  >  technology   #  tier';
+    pin.setAttribute('aria-label', 'Search all pages');
+    var list = el('div', 'm-pallist');
+    var pfoot = el('div', 'm-palfoot');
+    pfoot.appendChild(el('span', null, '↑↓ move'));
+    pfoot.appendChild(el('span', null, '↵ open'));
+    pfoot.appendChild(el('span', null, 'esc close'));
+    pal.appendChild(pin); pal.appendChild(list); pal.appendChild(pfoot);
+    scrim.appendChild(pal);
+    root.appendChild(scrim);
+
+    function render() {
+      var q = pin.value.trim().toLowerCase();
+      list.textContent = '';
+      var rows;
+      if (q.charAt(0) === '>') {
+        var tq = q.slice(1).trim();
+        rows = [];
+        STACK.forEach(function (g) {
+          g.items.forEach(function (it) {
+            if (!tq || it.name.toLowerCase().indexOf(tq) !== -1) {
+              rows.push({tech: g.group, t: it.name + ' · ' + it.pages.toLocaleString() + ' pages'});
+            }
+          });
+        });
+      } else if (q.charAt(0) === '#') {
+        rows = [
+          {tech: 'tier', t: 'Master — 2,833 pages across the corpus'},
+          {tech: 'tier', t: 'Understand — 2,768 pages'},
+          {tech: 'tier', t: 'Know — 734 pages'},
+          {tech: 'tier', t: 'When Needed — 179 pages'}
+        ];
+      } else {
+        rows = TITLES.filter(function (r) {
+          return !q || (r.t + ' ' + r.tech).toLowerCase().indexOf(q) !== -1;
+        });
+      }
+      if (!rows.length) {
+        list.appendChild(el('div', 'm-empty', 'No page title matches “' + pin.value.trim() + '”.'));
+        return;
+      }
+      rows.slice(0, 40).forEach(function (r) {
+        var row = el('div', 'm-palrow');
+        row.appendChild(el('span', 'tech', r.tech));
+        row.appendChild(el('span', 't', r.t));
+        list.appendChild(row);
+      });
+    }
+
+    function open() {
+      scrim.hidden = false;
+      pin.value = '';
+      render();
+      pin.focus();
+    }
+    function close() { scrim.hidden = true; }
+
+    kbtn.addEventListener('click', open);
+    pin.addEventListener('input', render);
+    pin.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    scrim.addEventListener('click', function (e) { if (e.target === scrim) close(); });
+    render();
+  }());
+
+  /* ================================================================ MOCKUP D */
+
+  (function () {
+    var root = document.getElementById('mock-d');
+    root.appendChild(navbar(null));
+
+    var body = el('div', 'm-body');
+    body.style.gridTemplateColumns = '258px 1fr 146px';
+
+    var side = el('div', 'm-side');
+    var tools = el('div', 'm-tools');
+
+    var seg = el('div', 'm-seg');
+    seg.setAttribute('role', 'group');
+    seg.setAttribute('aria-label', 'Tier floor');
+    var LEVELS = [
+      {label: 'Master', floor: 0, total: 831},
+      {label: '+ Understand', floor: 1, total: 1839},
+      {label: 'Everything', floor: 3, total: 2240}
+    ];
+    var hint = el('div', 'm-hint');
+    var treeHost = el('div');
+    treeHost.style.paddingBottom = '0.5rem';
+
+    var buttons = LEVELS.map(function (lv, i) {
+      var b = el('button', 'm-segbtn' + (i === 2 ? ' on' : ''), lv.label);
+      b.type = 'button';
+      b.setAttribute('aria-pressed', String(i === 2));
+      b.addEventListener('click', function () {
+        buttons.forEach(function (o) { o.classList.remove('on'); o.setAttribute('aria-pressed', 'false'); });
+        b.classList.add('on');
+        b.setAttribute('aria-pressed', 'true');
+        buildTree(treeHost, {tierFloor: lv.floor, rings: true, ticks: true});
+        hint.textContent = lv.total.toLocaleString() + ' of 2,240 pages · 12 read';
+      });
+      return b;
+    });
+    buttons.forEach(function (b) { seg.appendChild(b); });
+
+    tools.appendChild(seg);
+    tools.appendChild(hint);
+    side.appendChild(tools);
+
+    var resume = el('div', 'm-resume');
+    resume.appendChild(el('b', null, 'Resume Java'));
+    resume.appendChild(el('span', null, '3 · Composition and checked exceptions — next unread at Master'));
+    side.appendChild(resume);
+
+    side.appendChild(treeHost);
+    buildTree(treeHost, {tierFloor: 3, rings: true, ticks: true});
+    hint.textContent = '2,240 of 2,240 pages · 12 read';
+
+    body.appendChild(side);
+    body.appendChild(article());
+    body.appendChild(toc());
+    root.appendChild(body);
+  }());
+
+}());
+</script>

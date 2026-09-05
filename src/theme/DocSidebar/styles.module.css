@@ -2,6 +2,19 @@
  * The theme's sidebar fills the sticky aside. Adding the control bar above it means the
  * two have to share that height, so this becomes the flex column and the sidebar takes
  * the remainder.
+ *
+ * ── Why the wrapper carries the navbar clearance ─────────────────────────────
+ * `.sidebarViewport` is `position: sticky; top: 0`, so it starts at the very top of the
+ * viewport — underneath the 60px fixed navbar. The theme handles that by putting
+ * `padding-top: var(--ifm-navbar-height)` on its own inner sidebar div, which is the
+ * FIRST thing in the column only while nothing has been inserted above it.
+ *
+ * Inserting the control bar broke that assumption: the bar took y = 0–38, entirely
+ * behind the navbar, and the theme's padding then pushed the menu to y = 98 instead of
+ * 60. The buttons were in the DOM, focusable, and invisible to everyone.
+ *
+ * So the clearance moves up here, to the element that is actually first in the column,
+ * and the theme's own padding is zeroed to stop it applying twice.
  */
 .wrapper {
   display: flex;
@@ -10,8 +23,27 @@
   min-height: 0;
 }
 
-.wrapper > :global(.theme-doc-sidebar-container),
-.wrapper > div:last-child {
+/* The control row never grows; the sidebar below it takes whatever is left. */
+.tools {
+  flex: 0 0 auto;
+}
+
+.wrapper > :not(.tools) {
   flex: 1 1 auto;
   min-height: 0;
+}
+
+/*
+ * Desktop only. Below 997px this aside is hidden and the sidebar renders into the
+ * navbar drawer instead, which does its own spacing — padding here would only add a
+ * 60px gap inside a hidden element.
+ */
+@media (min-width: 997px) {
+  .wrapper {
+    padding-top: var(--ifm-navbar-height);
+  }
+
+  .wrapper > :not(.tools) {
+    padding-top: 0;
+  }
 }
