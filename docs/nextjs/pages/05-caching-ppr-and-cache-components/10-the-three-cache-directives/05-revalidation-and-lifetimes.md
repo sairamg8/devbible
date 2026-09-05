@@ -1,7 +1,7 @@
 ---
 title: "Set `cacheLife` explicitly in every cached scope, or the lifetime stops being visible at the call site"
 sidebar_label: "5 · Revalidation and lifetimes"
-sidebar_position: 7
+sidebar_position: 10
 description: "Time-based and on-demand revalidation, the default profile's real numbers, the nested short-lived cache build failure, and the 50-second prerender timeout."
 ---
 
@@ -11,6 +11,7 @@ description: "Time-based and on-demand revalidation, the default profile's real 
 > [`use cache`](https://nextjs.org/docs/app/api-reference/directives/use-cache)
 > and the [`cacheLife`](https://nextjs.org/docs/app/api-reference/functions/cacheLife) reference.
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs ([`cacheLife`](https://nextjs.org/docs/app/api-reference/functions/cacheLife), `lastUpdated: 2026-08-25`) · session d2e9b9fe
 
 **A cached scope without an explicit `cacheLife` still has a lifetime — you just cannot see it
 where you are reading.** It inherits the `default` profile, whose numbers are not obvious
@@ -82,15 +83,60 @@ Recall the two floors from the neighbouring chunks: the **client router enforces
 minimum stale time** whatever you configure, and for `use cache: private`, `stale` must be
 **≥ 30s** to prefetch and **≥ 5 minutes** to reach the App Shell.
 
-## Nesting: the inner lifetime is not local
+## Nesting: whether the inner lifetime escapes depends on the outer one
 
-An inner cached function's lifetime affects the entry around it. Concretely:
+The rule has two branches, and collapsing them into "the inner lifetime wins" is the usual
+mistake. **With an explicit `cacheLife` on the outer scope**, the outer lifetime wins outright:
+
+> *"The outer cache uses its own lifetime, regardless of inner cache lifetimes. When the outer
+> cache hits, it returns the complete output including all nested data. An explicit
+> `cacheLife` always takes precedence, whether it's longer or shorter than inner lifetimes."*
+> — [`cacheLife` › Nested caching behavior](https://nextjs.org/docs/app/api-reference/functions/cacheLife)
+
+**Without one**, the outer scope sits on `default` and the inner scope can pull it down but
+never up:
+
+> *"If you don't call `cacheLife` in the outer cache, it uses the `default` profile (15 min
+> revalidate). Inner caches with shorter lifetimes can reduce the outer cache's `default`
+> lifetime. Inner caches with longer lifetimes cannot extend it beyond the default."*
+
+```tsx
+export default async function Dashboard() {
+  'use cache'
+  // No cacheLife call - uses default (15 min)
+  // If Widget has 5 min  → Dashboard becomes 5 min
+  // If Widget has 1 hour → Dashboard stays 15 min
+  return <Widget />
+}
+```
+
+That asymmetry is the argument for stating a lifetime everywhere: without one, a lifetime you
+never wrote can be pulled into your page by a component someone else wrote.
+
+### What counts as "short-lived"
+
+The thresholds are stated on `cacheLife`, and they are about **prerendering**, not about speed:
+
+| Lifetime | Consequence |
+|---|---|
+| `revalidate` of `0`, or `expire` **under 5 minutes** | Excluded from prerenders — a dynamic hole resolved at request time |
+| `stale` **under 30 seconds** | Excluded from prerenders, because a prefetch would expire before the user could click |
+| `stale` **≥ 30 seconds but under 5 minutes** | Prerendered, but excluded from the route's App Shell |
+
+> *"Of the presets, only `seconds` falls under any of these thresholds: its `expire` of 1
+> minute excludes it from prerenders."*
+
+### The short-lived nesting case is a build error, not a silent inheritance
 
 🔴 **Nesting a short-lived `use cache` inside one that has no explicit `cacheLife` fails the
-build during prerendering.**
+build during prerendering** — deliberately:
 
-The fix is to state the lifetime on the outer scope, rather than letting it fall through to
-`default` and collide with the inner one.
+> *"When a short-lived cache is nested inside another `use cache` without an explicit
+> `cacheLife`, the outer cache's lifetime would silently become short too via propagation. To
+> prevent this accidental misconfiguration, Next.js throws an error during prerendering."*
+
+> *"Note that the nested cache may not be obvious — it could be in an imported module or even
+> a third-party dependency"*
 
 ```tsx
 // BAD — outer has no explicit cacheLife, inner is short-lived → build failure
@@ -103,14 +149,46 @@ async function inner() {
   cacheLife('seconds')
   return getData()
 }
+```
 
-// GOOD — the outer lifetime is stated, so the relationship is explicit
-async function outer() {
+There are **two** documented fixes and they produce different pages. Choose by asking whether
+the outer scope should still be prerendered.
+
+**Fix A — keep the outer scope static.** Any explicit non-short lifetime clears the error, and
+`'default'` is the minimum-commitment way to say "I meant this":
+
+```tsx
+export default async function Page() {
   'use cache'
-  cacheLife('seconds')
-  return await inner()
+  cacheLife('default')          // explicit → no error, still prerendered
+  return <ShortLivedWidget />
 }
 ```
+
+**Fix B — make the outer scope short-lived on purpose.** State it, and wrap the scope in a
+`<Suspense>` boundary, because it is now a dynamic hole with a gap to fill:
+
+```tsx
+async function Content() {
+  'use cache: remote'
+  cacheLife('seconds')          // explicit → intentionally short-lived
+  return <ShortLivedWidget />
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <Content />
+    </Suspense>
+  )
+}
+```
+
+The docs use `'use cache: remote'` in Fix B rather than plain `use cache`, and say why:
+
+> *"This example uses `"use cache: remote"` because runtime caching in serverless deployments
+> doesn't persist across requests with the default in-memory cache. For self-hosted
+> environments, `"use cache"` may be sufficient."*
 
 ## Caching does not have to be all-or-nothing within a module
 
@@ -146,61 +224,6 @@ filled one, `db.orders.findMany` does not run and those orders become part of th
 output. Inside `getOrderSummary`, the totals query runs only when that function runs, on the
 `'hours'` lifetime set there.
 
-## The 50-second prerender timeout
-
-If a build hangs, the cause is a cached scope awaiting a Promise that resolves to uncached or
-runtime data created **outside** the cache boundary. It cannot resolve during the build, and
-the fill times out after **50 seconds** with:
-
-> Error: Filling a cache during prerender timed out, likely because request-specific arguments
-> such as params, searchParams, cookies() or uncached data were used inside "use cache".
-
-Three ways it happens:
-
-**1 · Passing a runtime Promise as a prop**
-
-```tsx
-async function Dynamic() {
-  const cookieStore = cookies()          // not awaited
-  return <Cached promise={cookieStore} /> // build hangs
-}
-
-async function Cached({ promise }: { promise: Promise<unknown> }) {
-  'use cache'
-  const data = await promise             // waits forever during build
-  return <p>..</p>
-}
-```
-
-Await the store in `Dynamic` and pass a **value** into `Cached`.
-
-**2 · Reaching it through a closure** — the same problem with the Promise captured rather than
-passed.
-
-**3 · Retrieving it from shared storage**
-
-```tsx
-const cache = new Map<string, Promise<string>>()
-
-async function Dynamic({ id }: { id: string }) {
-  cache.set(id, fetch(`https://api.example.com/${id}`).then((r) => r.text()))
-  return <p>Dynamic</p>
-}
-
-async function Cached({ id }: { id: string }) {
-  'use cache'
-  return <p>{await cache.get(id)}</p>    // build hangs
-}
-```
-
-Use Next.js's built-in `fetch` deduplication, or keep separate Maps for cached and uncached
-contexts.
-
-🔴 **Directly calling `cookies()` or `headers()` inside `use cache` fails immediately with
-`next-request-in-use-cache` — a different error, not a timeout.** A hang means an *indirect*
-dependency on runtime data; an immediate failure means a direct read. The two have different
-fixes, and the error you get tells you which you have.
-
 ## Gotchas
 
 ### Omitting `cacheLife` and inheriting numbers you did not choose
@@ -219,38 +242,13 @@ precisely so behaviour does not depend on a default or on a surrounding cache.
 was previously uncached.
 
 **Cause.** Nesting a short-lived `use cache` inside one without an explicit `cacheLife` is a
-build-time error.
+build-time error, thrown so the outer lifetime cannot silently become short by propagation.
+The inner cache may be in an imported module or a third-party dependency, which is why the
+stack does not always point at your own code.
 
-**Fix.** State the lifetime on the outer scope.
-
-### Reading a build hang as a slow build
-
-**Symptom.** The build sits still, then fails after roughly 50 seconds.
-
-**Cause.** A cached scope is awaiting a Promise for runtime or uncached data created outside
-the boundary — passed as a prop, captured in a closure, or fetched from a shared Map.
-
-**Fix.** Resolve the Promise **outside** the cached scope and pass the resulting value in.
-
-### Confusing the timeout with the direct-read error
-
-**Symptom.** You search for the wrong problem.
-
-**Cause.** Two distinct failures. A direct `cookies()`/`headers()` call inside `use cache`
-fails **immediately** with `next-request-in-use-cache`. An indirect dependency on runtime data
-**hangs and times out** after 50 seconds.
-
-**Fix.** Read the error. Immediate → find the direct read. Timeout → find the Promise crossing
-the boundary.
-
-### Using a shared `Map` to deduplicate across cached and uncached code
-
-**Symptom.** Intermittent build hangs that depend on render order.
-
-**Cause.** The Map hands a dynamic Promise to cached code, which then awaits something that
-cannot resolve at build time.
-
-**Fix.** Use `fetch` deduplication, or keep cached and uncached contexts in separate stores.
+**Fix.** State the lifetime on the outer scope — `cacheLife('default')` to stay prerendered,
+or an explicitly short profile plus a `<Suspense>` boundary if the outer scope really should
+be a dynamic hole.
 
 ## Interview questions
 
@@ -266,18 +264,22 @@ So the lifetime is explicit at the call site rather than depending on the defaul
 on a surrounding cache.
 
 **★ What happens when you nest a short-lived cache inside one with no explicit lifetime?**
-The build fails during prerendering. State the lifetime on the outer scope.
+The build fails during prerendering. Next.js throws rather than letting the outer lifetime
+become short by propagation. Fix it by stating the outer lifetime: `cacheLife('default')` keeps
+the outer scope prerendered, an explicitly short profile plus `<Suspense>` accepts the dynamic
+hole.
 
-**★ A build hangs and fails after ~50 seconds. What is happening?**
-A cached scope is awaiting a Promise that resolves to runtime or uncached data created outside
-the cache boundary, so it cannot resolve during prerendering.
+**★ Does an inner cached function's lifetime affect the cache around it?**
+Only when the outer scope has no explicit `cacheLife`. With one, the outer lifetime always
+takes precedence, longer or shorter. Without one, the outer scope is on `default` and an inner
+cache with a *shorter* lifetime reduces it — but an inner cache with a longer one cannot extend
+it beyond the default.
 
-**★ How do you tell that apart from a direct request-API read?**
-A direct `cookies()`/`headers()` call inside `use cache` fails **immediately** with
-`next-request-in-use-cache`. The indirect case **times out**.
-
-**★ Three ways a runtime Promise reaches a cached scope?**
-Passed as a prop, captured through a closure, or retrieved from shared storage such as a Map.
+**★ What makes a cache "short-lived" for prerendering purposes?**
+`revalidate` of `0` or `expire` under 5 minutes excludes it from prerenders entirely; `stale`
+under 30 seconds does the same, because a prefetch would expire before the click; `stale`
+between 30 seconds and 5 minutes is prerendered but kept out of the App Shell. Of the presets
+only `seconds` crosses any of those lines.
 
 **★ Can uncached and cached functions coexist in one module?**
 Yes. An uncached function called from inside a cached one runs only when the cached one runs,
