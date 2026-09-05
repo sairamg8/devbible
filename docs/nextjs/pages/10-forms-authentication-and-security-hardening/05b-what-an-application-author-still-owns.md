@@ -144,7 +144,7 @@ module.exports = {
 }
 ```
 
-> *"This prevents the tainted objects or values from being passed to the client. However, it's an additional layer of protection, you should still filter and sanitize the data in your [DAL](#data-access-layer) before passing it to React's render context."*
+> *"This prevents the tainted objects or values from being passed to the client. However, it's an additional layer of protection, you should still filter and sanitize the data in your [DAL](https://nextjs.org/docs/app/guides/data-security#data-access-layer) before passing it to React's render context."*
 
 **What a probe of the installed package says.** On this checkout, `react` resolves to **19.2.8** — the version this corpus pins — and `Object.keys(require('react'))` contains **no `experimental_taint*` export at all**. Stable React does not ship these APIs. In an App Router application the import resolves through the React canary that Next.js bundles for the server graph; a Pages Router import of the same specifier gets `undefined`.
 
