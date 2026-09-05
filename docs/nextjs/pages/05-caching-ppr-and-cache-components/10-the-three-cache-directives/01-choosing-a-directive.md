@@ -12,6 +12,7 @@ description: "use cache, use cache: remote and use cache: private — what each 
 > [`use cache: remote`](https://nextjs.org/docs/app/api-reference/directives/use-cache-remote) and
 > [`use cache: private`](https://nextjs.org/docs/app/api-reference/directives/use-cache-private).
 > Target: **Next.js 16.3.4**, App Router, Cache Components.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Next.js ships three caching directives, not one, and choosing between them is not a
 performance tuning exercise — it is a decision about where a piece of data is allowed to

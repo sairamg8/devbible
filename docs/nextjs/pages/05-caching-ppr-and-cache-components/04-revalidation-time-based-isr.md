@@ -9,6 +9,7 @@ description: "The complete inventory of things that stop a cached value being se
 
 > Verified: 2026-09-04 for **Next.js 16.3.4** against [How revalidation works](https://nextjs.org/docs/app/guides/how-revalidation-works) (docs `lastUpdated` 2026-06-01), [`cacheLife`](https://nextjs.org/docs/app/api-reference/functions/cacheLife) (`lastUpdated` 2026-08-25), [`revalidateTag`](https://nextjs.org/docs/app/api-reference/functions/revalidateTag), [`updateTag`](https://nextjs.org/docs/app/api-reference/functions/updateTag), [`refresh`](https://nextjs.org/docs/app/api-reference/functions/refresh) (`lastUpdated` 2026-06-25), [`useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router) and the [Server Actions guide](https://nextjs.org/docs/app/guides/server-actions).
 > Target: **Next.js 16.3.4**, App Router, Cache Components. Documentation-verified; **no sandbox run**.
+> Validated: 2026-09-05 · claims + version spine re-checked against the Next.js 16.3.4 docs · session d2e9b9fe
 
 **Chapter 5 is about declaring that a value may be reused. This page is the other half of that contract: the complete list of events that end the reuse. It exists because the list is longer than almost anyone assumes — people know the four invalidation APIs and stop there, when in practice the four most common causes of "my cached data vanished" are environmental and nobody called anything at all. It also exists because two of the calls people reach for during a mutation, `refresh()` and `router.refresh()`, do not invalidate any cache — they re-render, which looks identical until the render reads the same cached value back and the bug survives the fix.**
 
@@ -55,14 +56,14 @@ These are covered in depth at [10 · 05b](10-the-three-cache-directives/05b-reva
 
 **`revalidateTag(tag, profile)`** takes a required profile that decides the answer:
 
-- `'max'` — *"requests always served stale while revalidating"*. Nobody waits. This is the stampede-safe choice.
-- `{ expire: 0 }` — *"stale never served; next request is a blocking revalidate/cache miss."*
+- `'max'` — *"A one year window, long enough that requests are always served stale content while the revalidation runs."* Nobody waits. This is the stampede-safe choice.
+- `{ expire: 0 }` — *"Stale content is never served, so the next request is a blocking revalidate/cache miss."*
 
 ⚠️ The bare single-argument `revalidateTag(tag)` is **deprecated and behaves like `{ expire: 0 }`** — the blocking one. Code written before the second argument existed is therefore doing the expensive thing, silently, and will keep doing it until someone reads this sentence.
 
 **`updateTag(tag)`** is the read-your-own-writes call, and it is deliberately blocking: *"`updateTag` immediately expires the cached data for the specified tag. The next request will wait to fetch fresh data rather than serving stale content from the cache."* It can **only** be called from a Server Action.
 
-**`revalidatePath(path, type)`** rides the tag system through auto-generated soft tags prefixed `_N_T_`, and it is lazy: *"`revalidatePath` invalidates the cache entries but regeneration happens on the next request."* Its blast radius is wider than it looks and is worked through at [ch6 · 03c](../06-ssg-isr-and-ssr-strategy/03c-revalidate-budgets-and-time-based-versus-on-demand.md).
+**`revalidatePath(path, type)`** rides the tag system through auto-generated soft tags prefixed `_N_T_`, and from a Route Handler it is lazy: *"Marks the path for revalidation. The revalidation is done on the next visit to the specified path."* From a Server Function the docs claim more — *"Updates the UI immediately (if viewing the affected path)"* — because that is one of the calls that ships a re-render with the action's response. Its blast radius is wider than it looks and is worked through at [ch6 · 03c](../06-ssg-isr-and-ssr-strategy/03c-revalidate-budgets-and-time-based-versus-on-demand.md).
 
 ## 🔴 The two that invalidate nothing (7–8)
 
